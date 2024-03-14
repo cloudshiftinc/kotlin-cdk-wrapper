@@ -1,6 +1,5 @@
 name: 'Build Kotlin AWS CDK DSL'
 on:
-  push: {}
   pull_request: {}
 env:
   GRADLE_BUILD_ACTION_CACHE_DEBUG_ENABLED: 'false'
