@@ -27,6 +27,8 @@ dependencies {
     implementation(libs.aspectj.tools)
     implementation(libs.javaparser.core)
 
+    implementation("net.pearx.kasechange:kasechange:1.4.1")
+
     // release management
     implementation("io.github.z4kn4fein:semver:1.4.2")
     // implementation(plugin("org.ajoberstar.grgit.service", "5.2.0"))

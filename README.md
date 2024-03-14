@@ -5,18 +5,20 @@
 Use the AWS CDK with all the power of a native Kotlin DSL!
 
 ```kotlin
-val bucket = s3.bucket(scope = stack, id = "TestBucket") {
-            bucketName("test-bucket")
-        }
+val app = App()
+val stack = Stack(scope = app, id = "TestStack")
+val bucket = Bucket(scope = stack, id = "TestBucket") { bucketName("test-bucket") }
 
 bucket.addCorsRule {
     allowedHeaders("Test-Header")
     allowedMethods(HttpMethods.HEAD)
     allowedOrigins("abc")
 }
+
+app.synth()
 ```
 
-The Kotlin DSL wraps the AWS CDK Java library, directly using the builders exposed there.  Any construct / object that has a builder has a corresponding DSL.
+The Kotlin DSL is fully Kotlin - no import from the Java CDK.  Any construct / object that has a builder has a corresponding DSL.
 
 This provides the basis for powerful Kotlin extensions to the DSL to supercharge your CDK code.
 
@@ -24,11 +26,11 @@ This provides the basis for powerful Kotlin extensions to the DSL to supercharge
 
 For the core DSL add this dependency to your Gradle script:
 
-`implementation("io.cloudshiftdev.awscdk-dsl-kotlin:dsl:0.4.2")`
+`implementation("io.cloudshiftdev.awscdk-dsl-kotlin:dsl:0.7.0")`
 
 Alternately, to use the extensions (recommended), use this dependency instead:
 
-`implementation("io.cloudshiftdev.awscdk-dsl-kotlin:dsl-extensions:0.4.2")`
+`implementation("io.cloudshiftdev.awscdk-dsl-kotlin:dsl-extensions:0.7.0")`
 
 # Extensions
 

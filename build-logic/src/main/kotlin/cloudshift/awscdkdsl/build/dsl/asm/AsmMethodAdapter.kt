@@ -17,6 +17,9 @@ import org.objectweb.asm.Type
 import org.objectweb.asm.tree.AnnotationNode
 import org.objectweb.asm.tree.MethodNode
 
+internal class AsmEnumFieldAdapter(override val name : String) : CdkClass.EnumField {
+}
+
 internal class AsmMethodAdapter(
     private val delegate: MethodNode,
     private val sourceMethod: CdkSourceMethod? = null
@@ -63,16 +66,14 @@ internal class AsmMethodAdapter(
                                 // first index is 'this' for instance methods, skip it
                                 else -> delegate.localVariables[index + 1].name
                             }
-                        else -> "arg$index"
+                        else -> sourceMethod?.parameterNames?.get(index) ?: "arg$index"
+
                     }
                 var theType: TypeName = type.toTypeName()
                 if (genericParams.isNotEmpty()) {
                     theType = genericParams[index]
                 }
 
-                // TODO - there don't appear to be any builder methods that use nullability
-                // annotations
-                //   if we find a use for these annotations we have them...
                 val visibleAnnotations =
                     delegate.visibleParameterAnnotations?.get(index) ?: emptyList()
                 val invisibleAnnotations =
@@ -90,6 +91,7 @@ internal class AsmMethodAdapter(
 
     override val returnType: TypeName by
         lazy(LazyThreadSafetyMode.NONE) {
+//            println("${delegate.name} ${delegate.signature} ${annotations} ${delegate.allAnnotations.map { it.desc }}")
             when (delegate.signature) {
                 null -> Type.getReturnType(delegate.desc).toTypeName()
                 else ->
@@ -99,10 +101,15 @@ internal class AsmMethodAdapter(
                         .toTypeName()
             }.copy(nullable = annotations.any { it.toString().lowercase().contains("nullable") })
         }
+    override val isStatic: Boolean
+        get() = delegate.accessFlags.isStatic()
+    override val isFinal: Boolean
+        get() = delegate.accessFlags.isFinal()
+    override val isAbstract: Boolean
+        get() = delegate.accessFlags.isAbstract()
+
     override val comment: String?
-        get() {
-            return sourceMethod?.comment
-        }
+        get() = sourceMethod?.comment
 
     override fun toString(): String {
         return "AsmMethodAdapter(name=$name; desc=${delegate.desc})"

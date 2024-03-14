@@ -63,7 +63,7 @@ internal object SourceParser {
                         method.comment.getOrNull()?.let { convertJavadocComment(it.content) }
                     CdkSourceMethod(
                         name = method.name.identifier,
-                        parameterCount = method.parameters.size,
+                        parameterNames = method.parameters.map { it.name.identifier },
                         comment = comment
                     )
                 }
@@ -121,6 +121,7 @@ internal object SourceParser {
 
     private val replaceMap =
         mapOf(
+            "software.amazon.awscdk" to "io.cloudshiftdev.awscdk",
             "<blockquote>" to "",
             "</blockquote>" to "",
             "<pre>" to "```",
