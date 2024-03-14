@@ -5,83 +5,67 @@ import kotlin.String
 import kotlin.Unit
 
 public interface VirtualGatewayAttributes {
-  /**
-   * The Mesh that the VirtualGateway belongs to.
-   */
-  public fun mesh(): IMesh
+    /** The Mesh that the VirtualGateway belongs to. */
+    public fun mesh(): IMesh
 
-  /**
-   * The name of the VirtualGateway.
-   */
-  public fun virtualGatewayName(): String
+    /** The name of the VirtualGateway. */
+    public fun virtualGatewayName(): String
 
-  /**
-   * A builder for [VirtualGatewayAttributes]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param mesh The Mesh that the VirtualGateway belongs to. 
-     */
-    public fun mesh(mesh: IMesh)
+    /** A builder for [VirtualGatewayAttributes] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param mesh The Mesh that the VirtualGateway belongs to. */
+        public fun mesh(mesh: IMesh)
 
-    /**
-     * @param virtualGatewayName The name of the VirtualGateway. 
-     */
-    public fun virtualGatewayName(virtualGatewayName: String)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes.Builder
-        = software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes.builder()
-
-    /**
-     * @param mesh The Mesh that the VirtualGateway belongs to. 
-     */
-    override fun mesh(mesh: IMesh) {
-      cdkBuilder.mesh(mesh.let(IMesh::unwrap))
+        /** @param virtualGatewayName The name of the VirtualGateway. */
+        public fun virtualGatewayName(virtualGatewayName: String)
     }
 
-    /**
-     * @param virtualGatewayName The name of the VirtualGateway. 
-     */
-    override fun virtualGatewayName(virtualGatewayName: String) {
-      cdkBuilder.virtualGatewayName(virtualGatewayName)
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes.Builder =
+            software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes.builder()
+
+        /** @param mesh The Mesh that the VirtualGateway belongs to. */
+        override fun mesh(mesh: IMesh) {
+            cdkBuilder.mesh(mesh.let(IMesh::unwrap))
+        }
+
+        /** @param virtualGatewayName The name of the VirtualGateway. */
+        override fun virtualGatewayName(virtualGatewayName: String) {
+            cdkBuilder.virtualGatewayName(virtualGatewayName)
+        }
+
+        public fun build(): software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes =
+            cdkBuilder.build()
     }
 
-    public fun build(): software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes =
-        cdkBuilder.build()
-  }
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes,
+    ) : VirtualGatewayAttributes {
+        /** The Mesh that the VirtualGateway belongs to. */
+        override fun mesh(): IMesh = unwrap(this).getMesh().let(IMesh::wrap)
 
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes,
-  ) : VirtualGatewayAttributes {
-    /**
-     * The Mesh that the VirtualGateway belongs to.
-     */
-    override fun mesh(): IMesh = unwrap(this).getMesh().let(IMesh::wrap)
-
-    /**
-     * The name of the VirtualGateway.
-     */
-    override fun virtualGatewayName(): String = unwrap(this).getVirtualGatewayName()
-  }
-
-  public companion object {
-    init {
-
+        /** The name of the VirtualGateway. */
+        override fun virtualGatewayName(): String = unwrap(this).getVirtualGatewayName()
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): VirtualGatewayAttributes {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): VirtualGatewayAttributes {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes
+        ): VirtualGatewayAttributes = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: VirtualGatewayAttributes
+        ): software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes =
+            (wrapped as Wrapper).cdkObject
     }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes):
-        VirtualGatewayAttributes = Wrapper(cdkObject)
-
-    internal fun unwrap(wrapped: VirtualGatewayAttributes):
-        software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes = (wrapped as
-        Wrapper).cdkObject
-  }
 }

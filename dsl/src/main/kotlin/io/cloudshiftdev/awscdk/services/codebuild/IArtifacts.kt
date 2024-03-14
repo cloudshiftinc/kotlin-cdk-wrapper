@@ -4,61 +4,59 @@ import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 
 public interface IArtifacts {
-  /**
-   * Callback when an Artifacts class is used in a CodeBuild Project.
-   *
-   * @param scope a root Construct that allows creating new Constructs. 
-   * @param project the Project this Artifacts is used in. 
-   */
-  public fun bind(scope: Construct, project: IProject): ArtifactsConfig
-
-  /**
-   * The artifact identifier.
-   *
-   * This property is required on secondary artifacts.
-   */
-  public fun identifier(): String? = unwrap(this).getIdentifier()
-
-  /**
-   * The CodeBuild type of this artifact.
-   */
-  public fun type(): String
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.codebuild.IArtifacts,
-  ) : IArtifacts {
     /**
      * Callback when an Artifacts class is used in a CodeBuild Project.
      *
-     * @param scope a root Construct that allows creating new Constructs. 
-     * @param project the Project this Artifacts is used in. 
+     * @param scope a root Construct that allows creating new Constructs.
+     * @param project the Project this Artifacts is used in.
      */
-    override fun bind(scope: Construct, project: IProject): ArtifactsConfig =
-        unwrap(this).bind(scope.let(Construct::unwrap),
-        project.let(IProject::unwrap)).let(ArtifactsConfig::wrap)
+    public fun bind(scope: Construct, project: IProject): ArtifactsConfig
 
     /**
      * The artifact identifier.
      *
      * This property is required on secondary artifacts.
      */
-    override fun identifier(): String? = unwrap(this).getIdentifier()
+    public fun identifier(): String? = unwrap(this).getIdentifier()
 
-    /**
-     * The CodeBuild type of this artifact.
-     */
-    override fun type(): String = unwrap(this).getType()
-  }
+    /** The CodeBuild type of this artifact. */
+    public fun type(): String
 
-  public companion object {
-    init {
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.codebuild.IArtifacts,
+    ) : IArtifacts {
+        /**
+         * Callback when an Artifacts class is used in a CodeBuild Project.
+         *
+         * @param scope a root Construct that allows creating new Constructs.
+         * @param project the Project this Artifacts is used in.
+         */
+        override fun bind(scope: Construct, project: IProject): ArtifactsConfig =
+            unwrap(this)
+                .bind(scope.let(Construct::unwrap), project.let(IProject::unwrap))
+                .let(ArtifactsConfig::wrap)
 
+        /**
+         * The artifact identifier.
+         *
+         * This property is required on secondary artifacts.
+         */
+        override fun identifier(): String? = unwrap(this).getIdentifier()
+
+        /** The CodeBuild type of this artifact. */
+        override fun type(): String = unwrap(this).getType()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.IArtifacts): IArtifacts =
-        Wrapper(cdkObject)
+    public companion object {
+        init {}
 
-    internal fun unwrap(wrapped: IArtifacts): software.amazon.awscdk.services.codebuild.IArtifacts =
-        (wrapped as Wrapper).cdkObject
-  }
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.codebuild.IArtifacts
+        ): IArtifacts = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: IArtifacts
+        ): software.amazon.awscdk.services.codebuild.IArtifacts = (wrapped as Wrapper).cdkObject
+    }
 }

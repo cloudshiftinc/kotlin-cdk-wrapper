@@ -6,239 +6,228 @@ import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnWorkflow internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.glue.CfnWorkflow,
+public open class CfnWorkflow
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.glue.CfnWorkflow,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
-  /**
-   *
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
+    /**  */
+    public open fun attrId(): String = unwrap(this).getAttrId()
 
-  /**
-   * A collection of properties to be used as part of each execution of the workflow.
-   */
-  public open fun defaultRunProperties(): Any? = unwrap(this).getDefaultRunProperties()
+    /** A collection of properties to be used as part of each execution of the workflow. */
+    public open fun defaultRunProperties(): Any? = unwrap(this).getDefaultRunProperties()
 
-  /**
-   * A collection of properties to be used as part of each execution of the workflow.
-   */
-  public open fun defaultRunProperties(`value`: Any) {
-    unwrap(this).setDefaultRunProperties(`value`)
-  }
+    /** A collection of properties to be used as part of each execution of the workflow. */
+    public open fun defaultRunProperties(`value`: Any) {
+        unwrap(this).setDefaultRunProperties(`value`)
+    }
 
-  /**
-   * A description of the workflow.
-   */
-  public open fun description(): String? = unwrap(this).getDescription()
+    /** A description of the workflow. */
+    public open fun description(): String? = unwrap(this).getDescription()
 
-  /**
-   * A description of the workflow.
-   */
-  public open fun description(`value`: String) {
-    unwrap(this).setDescription(`value`)
-  }
-
-  /**
-   * Examines the CloudFormation resource and discloses attributes.
-   *
-   * @param inspector tree inspector to collect and process attributes. 
-   */
-  public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-  }
-
-  /**
-   * You can use this parameter to prevent unwanted multiple updates to data, to control costs, or
-   * in some cases, to prevent exceeding the maximum number of concurrent runs of any of the component
-   * jobs.
-   */
-  public open fun maxConcurrentRuns(): Number? = unwrap(this).getMaxConcurrentRuns()
-
-  /**
-   * You can use this parameter to prevent unwanted multiple updates to data, to control costs, or
-   * in some cases, to prevent exceeding the maximum number of concurrent runs of any of the component
-   * jobs.
-   */
-  public open fun maxConcurrentRuns(`value`: Number) {
-    unwrap(this).setMaxConcurrentRuns(`value`)
-  }
-
-  /**
-   * The name of the workflow representing the flow.
-   */
-  public open fun name(): String? = unwrap(this).getName()
-
-  /**
-   * The name of the workflow representing the flow.
-   */
-  public open fun name(`value`: String) {
-    unwrap(this).setName(`value`)
-  }
-
-  /**
-   * Tag Manager which manages the tags for this resource.
-   */
-  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
-
-  /**
-   * The tags to use with this workflow.
-   */
-  public open fun tagsRaw(): Any? = unwrap(this).getTagsRaw()
-
-  /**
-   * The tags to use with this workflow.
-   */
-  public open fun tagsRaw(`value`: Any) {
-    unwrap(this).setTagsRaw(`value`)
-  }
-
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.glue.CfnWorkflow].
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * A collection of properties to be used as part of each execution of the workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-defaultrunproperties)
-     * @param defaultRunProperties A collection of properties to be used as part of each execution
-     * of the workflow. 
-     */
-    public fun defaultRunProperties(defaultRunProperties: Any)
-
-    /**
-     * A description of the workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-description)
-     * @param description A description of the workflow. 
-     */
-    public fun description(description: String)
-
-    /**
-     * You can use this parameter to prevent unwanted multiple updates to data, to control costs, or
-     * in some cases, to prevent exceeding the maximum number of concurrent runs of any of the
-     * component jobs.
-     *
-     * If you leave this parameter blank, there is no limit to the number of concurrent workflow
-     * runs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-maxconcurrentruns)
-     * @param maxConcurrentRuns You can use this parameter to prevent unwanted multiple updates to
-     * data, to control costs, or in some cases, to prevent exceeding the maximum number of concurrent
-     * runs of any of the component jobs. 
-     */
-    public fun maxConcurrentRuns(maxConcurrentRuns: Number)
-
-    /**
-     * The name of the workflow representing the flow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-name)
-     * @param name The name of the workflow representing the flow. 
-     */
-    public fun name(name: String)
-
-    /**
-     * The tags to use with this workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-tags)
-     * @param tags The tags to use with this workflow. 
-     */
-    public fun tags(tags: Any)
-  }
-
-  private class BuilderImpl(
-    scope: SoftwareConstructsConstruct,
-    id: String,
-  ) : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.glue.CfnWorkflow.Builder =
-        software.amazon.awscdk.services.glue.CfnWorkflow.Builder.create(scope, id)
-
-    /**
-     * A collection of properties to be used as part of each execution of the workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-defaultrunproperties)
-     * @param defaultRunProperties A collection of properties to be used as part of each execution
-     * of the workflow. 
-     */
-    override fun defaultRunProperties(defaultRunProperties: Any) {
-      cdkBuilder.defaultRunProperties(defaultRunProperties)
+    /** A description of the workflow. */
+    public open fun description(`value`: String) {
+        unwrap(this).setDescription(`value`)
     }
 
     /**
-     * A description of the workflow.
+     * Examines the CloudFormation resource and discloses attributes.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-description)
-     * @param description A description of the workflow. 
+     * @param inspector tree inspector to collect and process attributes.
      */
-    override fun description(description: String) {
-      cdkBuilder.description(description)
+    public override fun inspect(inspector: TreeInspector) {
+        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
     }
 
     /**
      * You can use this parameter to prevent unwanted multiple updates to data, to control costs, or
      * in some cases, to prevent exceeding the maximum number of concurrent runs of any of the
      * component jobs.
-     *
-     * If you leave this parameter blank, there is no limit to the number of concurrent workflow
-     * runs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-maxconcurrentruns)
-     * @param maxConcurrentRuns You can use this parameter to prevent unwanted multiple updates to
-     * data, to control costs, or in some cases, to prevent exceeding the maximum number of concurrent
-     * runs of any of the component jobs. 
      */
-    override fun maxConcurrentRuns(maxConcurrentRuns: Number) {
-      cdkBuilder.maxConcurrentRuns(maxConcurrentRuns)
-    }
+    public open fun maxConcurrentRuns(): Number? = unwrap(this).getMaxConcurrentRuns()
 
     /**
-     * The name of the workflow representing the flow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-name)
-     * @param name The name of the workflow representing the flow. 
+     * You can use this parameter to prevent unwanted multiple updates to data, to control costs, or
+     * in some cases, to prevent exceeding the maximum number of concurrent runs of any of the
+     * component jobs.
      */
-    override fun name(name: String) {
-      cdkBuilder.name(name)
+    public open fun maxConcurrentRuns(`value`: Number) {
+        unwrap(this).setMaxConcurrentRuns(`value`)
     }
 
-    /**
-     * The tags to use with this workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-tags)
-     * @param tags The tags to use with this workflow. 
-     */
-    override fun tags(tags: Any) {
-      cdkBuilder.tags(tags)
+    /** The name of the workflow representing the flow. */
+    public open fun name(): String? = unwrap(this).getName()
+
+    /** The name of the workflow representing the flow. */
+    public open fun name(`value`: String) {
+        unwrap(this).setName(`value`)
     }
 
-    public fun build(): software.amazon.awscdk.services.glue.CfnWorkflow = cdkBuilder.build()
-  }
+    /** Tag Manager which manages the tags for this resource. */
+    public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
-  public companion object {
-    init {
+    /** The tags to use with this workflow. */
+    public open fun tagsRaw(): Any? = unwrap(this).getTagsRaw()
 
+    /** The tags to use with this workflow. */
+    public open fun tagsRaw(`value`: Any) {
+        unwrap(this).setTagsRaw(`value`)
     }
 
-    public operator fun invoke(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      block: Builder.() -> Unit = {},
-    ): CfnWorkflow {
-      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-      return CfnWorkflow(builderImpl.apply(block).build())
+    /** A fluent builder for [io.cloudshiftdev.awscdk.services.glue.CfnWorkflow]. */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * A collection of properties to be used as part of each execution of the workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-defaultrunproperties)
+         *
+         * @param defaultRunProperties A collection of properties to be used as part of each
+         *   execution of the workflow.
+         */
+        public fun defaultRunProperties(defaultRunProperties: Any)
+
+        /**
+         * A description of the workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-description)
+         *
+         * @param description A description of the workflow.
+         */
+        public fun description(description: String)
+
+        /**
+         * You can use this parameter to prevent unwanted multiple updates to data, to control
+         * costs, or in some cases, to prevent exceeding the maximum number of concurrent runs of
+         * any of the component jobs.
+         *
+         * If you leave this parameter blank, there is no limit to the number of concurrent workflow
+         * runs.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-maxconcurrentruns)
+         *
+         * @param maxConcurrentRuns You can use this parameter to prevent unwanted multiple updates
+         *   to data, to control costs, or in some cases, to prevent exceeding the maximum number of
+         *   concurrent runs of any of the component jobs.
+         */
+        public fun maxConcurrentRuns(maxConcurrentRuns: Number)
+
+        /**
+         * The name of the workflow representing the flow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-name)
+         *
+         * @param name The name of the workflow representing the flow.
+         */
+        public fun name(name: String)
+
+        /**
+         * The tags to use with this workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-tags)
+         *
+         * @param tags The tags to use with this workflow.
+         */
+        public fun tags(tags: Any)
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnWorkflow): CfnWorkflow =
-        CfnWorkflow(cdkObject)
+    private class BuilderImpl(
+        scope: SoftwareConstructsConstruct,
+        id: String,
+    ) : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.glue.CfnWorkflow.Builder =
+            software.amazon.awscdk.services.glue.CfnWorkflow.Builder.create(scope, id)
 
-    internal fun unwrap(wrapped: CfnWorkflow): software.amazon.awscdk.services.glue.CfnWorkflow =
-        wrapped.cdkObject
-  }
+        /**
+         * A collection of properties to be used as part of each execution of the workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-defaultrunproperties)
+         *
+         * @param defaultRunProperties A collection of properties to be used as part of each
+         *   execution of the workflow.
+         */
+        override fun defaultRunProperties(defaultRunProperties: Any) {
+            cdkBuilder.defaultRunProperties(defaultRunProperties)
+        }
+
+        /**
+         * A description of the workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-description)
+         *
+         * @param description A description of the workflow.
+         */
+        override fun description(description: String) {
+            cdkBuilder.description(description)
+        }
+
+        /**
+         * You can use this parameter to prevent unwanted multiple updates to data, to control
+         * costs, or in some cases, to prevent exceeding the maximum number of concurrent runs of
+         * any of the component jobs.
+         *
+         * If you leave this parameter blank, there is no limit to the number of concurrent workflow
+         * runs.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-maxconcurrentruns)
+         *
+         * @param maxConcurrentRuns You can use this parameter to prevent unwanted multiple updates
+         *   to data, to control costs, or in some cases, to prevent exceeding the maximum number of
+         *   concurrent runs of any of the component jobs.
+         */
+        override fun maxConcurrentRuns(maxConcurrentRuns: Number) {
+            cdkBuilder.maxConcurrentRuns(maxConcurrentRuns)
+        }
+
+        /**
+         * The name of the workflow representing the flow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-name)
+         *
+         * @param name The name of the workflow representing the flow.
+         */
+        override fun name(name: String) {
+            cdkBuilder.name(name)
+        }
+
+        /**
+         * The tags to use with this workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-workflow.html#cfn-glue-workflow-tags)
+         *
+         * @param tags The tags to use with this workflow.
+         */
+        override fun tags(tags: Any) {
+            cdkBuilder.tags(tags)
+        }
+
+        public fun build(): software.amazon.awscdk.services.glue.CfnWorkflow = cdkBuilder.build()
+    }
+
+    public companion object {
+        init {}
+
+        public operator fun invoke(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            block: Builder.() -> Unit = {},
+        ): CfnWorkflow {
+            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+            return CfnWorkflow(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.glue.CfnWorkflow
+        ): CfnWorkflow = CfnWorkflow(cdkObject)
+
+        internal fun unwrap(
+            wrapped: CfnWorkflow
+        ): software.amazon.awscdk.services.glue.CfnWorkflow = wrapped.cdkObject
+    }
 }

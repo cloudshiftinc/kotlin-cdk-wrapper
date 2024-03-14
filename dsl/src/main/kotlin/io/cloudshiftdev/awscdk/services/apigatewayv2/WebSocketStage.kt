@@ -6,262 +6,266 @@ import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Suppress
 import kotlin.Unit
 import kotlin.jvm.JvmName
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class WebSocketStage internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketStage,
+public open class WebSocketStage
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketStage,
 ) : Resource(cdkObject), IWebSocketStage, IStage {
-  /**
-   * The API this stage is associated to.
-   */
-  public override fun api(): IWebSocketApi = unwrap(this).getApi().let(IWebSocketApi::wrap)
+    /** The API this stage is associated to. */
+    public override fun api(): IWebSocketApi = unwrap(this).getApi().let(IWebSocketApi::wrap)
 
-  /**
-   * The callback URL to this stage.
-   */
-  public override fun callbackUrl(): String = unwrap(this).getCallbackUrl()
+    /** The callback URL to this stage. */
+    public override fun callbackUrl(): String = unwrap(this).getCallbackUrl()
 
-  /**
-   * Grant access to the API Gateway management API for this WebSocket API Stage to an IAM principal
-   * (Role/Group/User).
-   *
-   * @param identity The principal. 
-   */
-  public open fun grantManagementApiAccess(identity: IGrantable): Grant =
-      unwrap(this).grantManagementApiAccess(identity.let(IGrantable::unwrap)).let(Grant::wrap)
-
-  /**
-   * Return the given named metric for this HTTP Api Gateway Stage.
-   *
-   * @param metricName 
-   * @param props
-   */
-  public override fun metric(metricName: String): Metric =
-      unwrap(this).metric(metricName).let(Metric::wrap)
-
-  /**
-   * Return the given named metric for this HTTP Api Gateway Stage.
-   *
-   * @param metricName 
-   * @param props
-   */
-  public override fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
-
-  /**
-   * Return the given named metric for this HTTP Api Gateway Stage.
-   *
-   * @param metricName 
-   * @param props
-   */
-  @Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("629ccc2b9ed0d0686ac72be3c432836a76a92f56ab45dae83dc2e318f17ba80c")
-  public override fun metric(metricName: String, props: MetricOptions.Builder.() -> Unit): Metric =
-      metric(metricName, MetricOptions(props))
-
-  /**
-   * The name of the stage;
-   *
-   * its primary identifier.
-   */
-  public override fun stageName(): String = unwrap(this).getStageName()
-
-  /**
-   * The websocket URL to this stage.
-   */
-  public override fun url(): String = unwrap(this).getUrl()
-
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.apigatewayv2.WebSocketStage].
-   */
-  @CdkDslMarker
-  public interface Builder {
     /**
-     * Whether updates to an API automatically trigger a new deployment.
+     * Grant access to the API Gateway management API for this WebSocket API Stage to an IAM
+     * principal (Role/Group/User).
      *
-     * Default: false
-     *
-     * @param autoDeploy Whether updates to an API automatically trigger a new deployment. 
+     * @param identity The principal.
      */
-    public fun autoDeploy(autoDeploy: Boolean)
+    public open fun grantManagementApiAccess(identity: IGrantable): Grant =
+        unwrap(this).grantManagementApiAccess(identity.let(IGrantable::unwrap)).let(Grant::wrap)
 
     /**
-     * The options for custom domain and api mapping.
+     * Return the given named metric for this HTTP Api Gateway Stage.
      *
-     * Default: - no custom domain and api mapping configuration
-     *
-     * @param domainMapping The options for custom domain and api mapping. 
+     * @param metricName
+     * @param props
      */
-    public fun domainMapping(domainMapping: DomainMappingOptions)
+    public override fun metric(metricName: String): Metric =
+        unwrap(this).metric(metricName).let(Metric::wrap)
 
     /**
-     * The options for custom domain and api mapping.
+     * Return the given named metric for this HTTP Api Gateway Stage.
      *
-     * Default: - no custom domain and api mapping configuration
+     * @param metricName
+     * @param props
+     */
+    public override fun metric(metricName: String, props: MetricOptions): Metric =
+        unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+
+    /**
+     * Return the given named metric for this HTTP Api Gateway Stage.
      *
-     * @param domainMapping The options for custom domain and api mapping. 
+     * @param metricName
+     * @param props
      */
     @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("8e1ea7ecc4ff868f7a8daa92e628e6ab20aa0cb643b7873bde51b041705ca8b9")
-    public fun domainMapping(domainMapping: DomainMappingOptions.Builder.() -> Unit)
+    @JvmName("629ccc2b9ed0d0686ac72be3c432836a76a92f56ab45dae83dc2e318f17ba80c")
+    public override fun metric(
+        metricName: String,
+        props: MetricOptions.Builder.() -> Unit
+    ): Metric = metric(metricName, MetricOptions(props))
 
     /**
-     * The name of the stage.
+     * The name of the stage;
      *
-     * @param stageName The name of the stage. 
+     * its primary identifier.
      */
-    public fun stageName(stageName: String)
+    public override fun stageName(): String = unwrap(this).getStageName()
 
-    /**
-     * Throttle settings for the routes of this stage.
-     *
-     * Default: - no throttling configuration
-     *
-     * @param throttle Throttle settings for the routes of this stage. 
-     */
-    public fun throttle(throttle: ThrottleSettings)
+    /** The websocket URL to this stage. */
+    public override fun url(): String = unwrap(this).getUrl()
 
-    /**
-     * Throttle settings for the routes of this stage.
-     *
-     * Default: - no throttling configuration
-     *
-     * @param throttle Throttle settings for the routes of this stage. 
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("e065974bb2dee52f6d529fde0b2997b9658f6379a4b616e18359056a4f373114")
-    public fun throttle(throttle: ThrottleSettings.Builder.() -> Unit)
+    /** A fluent builder for [io.cloudshiftdev.awscdk.services.apigatewayv2.WebSocketStage]. */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * Whether updates to an API automatically trigger a new deployment.
+         *
+         * Default: false
+         *
+         * @param autoDeploy Whether updates to an API automatically trigger a new deployment.
+         */
+        public fun autoDeploy(autoDeploy: Boolean)
 
-    /**
-     * The WebSocket API to which this stage is associated.
-     *
-     * @param webSocketApi The WebSocket API to which this stage is associated. 
-     */
-    public fun webSocketApi(webSocketApi: IWebSocketApi)
-  }
+        /**
+         * The options for custom domain and api mapping.
+         *
+         * Default: - no custom domain and api mapping configuration
+         *
+         * @param domainMapping The options for custom domain and api mapping.
+         */
+        public fun domainMapping(domainMapping: DomainMappingOptions)
 
-  private class BuilderImpl(
-    scope: SoftwareConstructsConstruct,
-    id: String,
-  ) : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.WebSocketStage.Builder =
-        software.amazon.awscdk.services.apigatewayv2.WebSocketStage.Builder.create(scope, id)
+        /**
+         * The options for custom domain and api mapping.
+         *
+         * Default: - no custom domain and api mapping configuration
+         *
+         * @param domainMapping The options for custom domain and api mapping.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("8e1ea7ecc4ff868f7a8daa92e628e6ab20aa0cb643b7873bde51b041705ca8b9")
+        public fun domainMapping(domainMapping: DomainMappingOptions.Builder.() -> Unit)
 
-    /**
-     * Whether updates to an API automatically trigger a new deployment.
-     *
-     * Default: false
-     *
-     * @param autoDeploy Whether updates to an API automatically trigger a new deployment. 
-     */
-    override fun autoDeploy(autoDeploy: Boolean) {
-      cdkBuilder.autoDeploy(autoDeploy)
+        /**
+         * The name of the stage.
+         *
+         * @param stageName The name of the stage.
+         */
+        public fun stageName(stageName: String)
+
+        /**
+         * Throttle settings for the routes of this stage.
+         *
+         * Default: - no throttling configuration
+         *
+         * @param throttle Throttle settings for the routes of this stage.
+         */
+        public fun throttle(throttle: ThrottleSettings)
+
+        /**
+         * Throttle settings for the routes of this stage.
+         *
+         * Default: - no throttling configuration
+         *
+         * @param throttle Throttle settings for the routes of this stage.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("e065974bb2dee52f6d529fde0b2997b9658f6379a4b616e18359056a4f373114")
+        public fun throttle(throttle: ThrottleSettings.Builder.() -> Unit)
+
+        /**
+         * The WebSocket API to which this stage is associated.
+         *
+         * @param webSocketApi The WebSocket API to which this stage is associated.
+         */
+        public fun webSocketApi(webSocketApi: IWebSocketApi)
     }
 
-    /**
-     * The options for custom domain and api mapping.
-     *
-     * Default: - no custom domain and api mapping configuration
-     *
-     * @param domainMapping The options for custom domain and api mapping. 
-     */
-    override fun domainMapping(domainMapping: DomainMappingOptions) {
-      cdkBuilder.domainMapping(domainMapping.let(DomainMappingOptions::unwrap))
+    private class BuilderImpl(
+        scope: SoftwareConstructsConstruct,
+        id: String,
+    ) : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.apigatewayv2.WebSocketStage.Builder =
+            software.amazon.awscdk.services.apigatewayv2.WebSocketStage.Builder.create(scope, id)
+
+        /**
+         * Whether updates to an API automatically trigger a new deployment.
+         *
+         * Default: false
+         *
+         * @param autoDeploy Whether updates to an API automatically trigger a new deployment.
+         */
+        override fun autoDeploy(autoDeploy: Boolean) {
+            cdkBuilder.autoDeploy(autoDeploy)
+        }
+
+        /**
+         * The options for custom domain and api mapping.
+         *
+         * Default: - no custom domain and api mapping configuration
+         *
+         * @param domainMapping The options for custom domain and api mapping.
+         */
+        override fun domainMapping(domainMapping: DomainMappingOptions) {
+            cdkBuilder.domainMapping(domainMapping.let(DomainMappingOptions::unwrap))
+        }
+
+        /**
+         * The options for custom domain and api mapping.
+         *
+         * Default: - no custom domain and api mapping configuration
+         *
+         * @param domainMapping The options for custom domain and api mapping.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("8e1ea7ecc4ff868f7a8daa92e628e6ab20aa0cb643b7873bde51b041705ca8b9")
+        override fun domainMapping(domainMapping: DomainMappingOptions.Builder.() -> Unit): Unit =
+            domainMapping(DomainMappingOptions(domainMapping))
+
+        /**
+         * The name of the stage.
+         *
+         * @param stageName The name of the stage.
+         */
+        override fun stageName(stageName: String) {
+            cdkBuilder.stageName(stageName)
+        }
+
+        /**
+         * Throttle settings for the routes of this stage.
+         *
+         * Default: - no throttling configuration
+         *
+         * @param throttle Throttle settings for the routes of this stage.
+         */
+        override fun throttle(throttle: ThrottleSettings) {
+            cdkBuilder.throttle(throttle.let(ThrottleSettings::unwrap))
+        }
+
+        /**
+         * Throttle settings for the routes of this stage.
+         *
+         * Default: - no throttling configuration
+         *
+         * @param throttle Throttle settings for the routes of this stage.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("e065974bb2dee52f6d529fde0b2997b9658f6379a4b616e18359056a4f373114")
+        override fun throttle(throttle: ThrottleSettings.Builder.() -> Unit): Unit =
+            throttle(ThrottleSettings(throttle))
+
+        /**
+         * The WebSocket API to which this stage is associated.
+         *
+         * @param webSocketApi The WebSocket API to which this stage is associated.
+         */
+        override fun webSocketApi(webSocketApi: IWebSocketApi) {
+            cdkBuilder.webSocketApi(webSocketApi.let(IWebSocketApi::unwrap))
+        }
+
+        public fun build(): software.amazon.awscdk.services.apigatewayv2.WebSocketStage =
+            cdkBuilder.build()
     }
 
-    /**
-     * The options for custom domain and api mapping.
-     *
-     * Default: - no custom domain and api mapping configuration
-     *
-     * @param domainMapping The options for custom domain and api mapping. 
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("8e1ea7ecc4ff868f7a8daa92e628e6ab20aa0cb643b7873bde51b041705ca8b9")
-    override fun domainMapping(domainMapping: DomainMappingOptions.Builder.() -> Unit): Unit =
-        domainMapping(DomainMappingOptions(domainMapping))
+    public companion object {
+        public fun fromWebSocketStageAttributes(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            attrs: WebSocketStageAttributes,
+        ): IWebSocketStage =
+            software.amazon.awscdk.services.apigatewayv2.WebSocketStage
+                .fromWebSocketStageAttributes(
+                    scope.let(CloudshiftdevConstructsConstruct::unwrap),
+                    id,
+                    attrs.let(WebSocketStageAttributes::unwrap)
+                )
+                .let(IWebSocketStage::wrap)
 
-    /**
-     * The name of the stage.
-     *
-     * @param stageName The name of the stage. 
-     */
-    override fun stageName(stageName: String) {
-      cdkBuilder.stageName(stageName)
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("c320f7b4d1d5bee302dc541be02f23840ba27f0abd2928c85a7bfccdb92aa57d")
+        public fun fromWebSocketStageAttributes(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            attrs: WebSocketStageAttributes.Builder.() -> Unit,
+        ): IWebSocketStage =
+            fromWebSocketStageAttributes(scope, id, WebSocketStageAttributes(attrs))
+
+        public operator fun invoke(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            block: Builder.() -> Unit = {},
+        ): WebSocketStage {
+            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+            return WebSocketStage(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketStage
+        ): WebSocketStage = WebSocketStage(cdkObject)
+
+        internal fun unwrap(
+            wrapped: WebSocketStage
+        ): software.amazon.awscdk.services.apigatewayv2.WebSocketStage = wrapped.cdkObject
     }
-
-    /**
-     * Throttle settings for the routes of this stage.
-     *
-     * Default: - no throttling configuration
-     *
-     * @param throttle Throttle settings for the routes of this stage. 
-     */
-    override fun throttle(throttle: ThrottleSettings) {
-      cdkBuilder.throttle(throttle.let(ThrottleSettings::unwrap))
-    }
-
-    /**
-     * Throttle settings for the routes of this stage.
-     *
-     * Default: - no throttling configuration
-     *
-     * @param throttle Throttle settings for the routes of this stage. 
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("e065974bb2dee52f6d529fde0b2997b9658f6379a4b616e18359056a4f373114")
-    override fun throttle(throttle: ThrottleSettings.Builder.() -> Unit): Unit =
-        throttle(ThrottleSettings(throttle))
-
-    /**
-     * The WebSocket API to which this stage is associated.
-     *
-     * @param webSocketApi The WebSocket API to which this stage is associated. 
-     */
-    override fun webSocketApi(webSocketApi: IWebSocketApi) {
-      cdkBuilder.webSocketApi(webSocketApi.let(IWebSocketApi::unwrap))
-    }
-
-    public fun build(): software.amazon.awscdk.services.apigatewayv2.WebSocketStage =
-        cdkBuilder.build()
-  }
-
-  public companion object {
-    public fun fromWebSocketStageAttributes(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      attrs: WebSocketStageAttributes,
-    ): IWebSocketStage =
-        software.amazon.awscdk.services.apigatewayv2.WebSocketStage.fromWebSocketStageAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(WebSocketStageAttributes::unwrap)).let(IWebSocketStage::wrap)
-
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("c320f7b4d1d5bee302dc541be02f23840ba27f0abd2928c85a7bfccdb92aa57d")
-    public fun fromWebSocketStageAttributes(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      attrs: WebSocketStageAttributes.Builder.() -> Unit,
-    ): IWebSocketStage = fromWebSocketStageAttributes(scope, id, WebSocketStageAttributes(attrs))
-
-    public operator fun invoke(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      block: Builder.() -> Unit = {},
-    ): WebSocketStage {
-      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-      return WebSocketStage(builderImpl.apply(block).build())
-    }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketStage):
-        WebSocketStage = WebSocketStage(cdkObject)
-
-    internal fun unwrap(wrapped: WebSocketStage):
-        software.amazon.awscdk.services.apigatewayv2.WebSocketStage = wrapped.cdkObject
-  }
 }

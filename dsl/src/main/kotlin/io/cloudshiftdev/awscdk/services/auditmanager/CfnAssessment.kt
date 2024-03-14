@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -15,1605 +16,1541 @@ import kotlin.Suppress
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnAssessment internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment,
+public open class CfnAssessment
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
-  /**
-   * The destination that evidence reports are stored in for the assessment.
-   */
-  public open fun assessmentReportsDestination(): Any? =
-      unwrap(this).getAssessmentReportsDestination()
+    /** The destination that evidence reports are stored in for the assessment. */
+    public open fun assessmentReportsDestination(): Any? =
+        unwrap(this).getAssessmentReportsDestination()
 
-  /**
-   * The destination that evidence reports are stored in for the assessment.
-   */
-  public open fun assessmentReportsDestination(`value`: IResolvable) {
-    unwrap(this).setAssessmentReportsDestination(`value`.let(IResolvable::unwrap))
-  }
+    /** The destination that evidence reports are stored in for the assessment. */
+    public open fun assessmentReportsDestination(`value`: IResolvable) {
+        unwrap(this).setAssessmentReportsDestination(`value`.let(IResolvable::unwrap))
+    }
 
-  /**
-   * The destination that evidence reports are stored in for the assessment.
-   */
-  public open fun assessmentReportsDestination(`value`: AssessmentReportsDestinationProperty) {
-    unwrap(this).setAssessmentReportsDestination(`value`.let(AssessmentReportsDestinationProperty::unwrap))
-  }
+    /** The destination that evidence reports are stored in for the assessment. */
+    public open fun assessmentReportsDestination(`value`: AssessmentReportsDestinationProperty) {
+        unwrap(this)
+            .setAssessmentReportsDestination(
+                `value`.let(AssessmentReportsDestinationProperty::unwrap)
+            )
+    }
 
-  /**
-   * The destination that evidence reports are stored in for the assessment.
-   */
-  @Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("2787eccfcc4317d2da4bce1af29c28e964f176f12a7eee9c41b942f2ab78976e")
-  public open
-      fun assessmentReportsDestination(`value`: AssessmentReportsDestinationProperty.Builder.() -> Unit):
-      Unit = assessmentReportsDestination(AssessmentReportsDestinationProperty(`value`))
-
-  /**
-   * The Amazon Resource Name (ARN) of the assessment.
-   */
-  public open fun attrArn(): String = unwrap(this).getAttrArn()
-
-  /**
-   * The unique identifier for the assessment.
-   */
-  public open fun attrAssessmentId(): String = unwrap(this).getAttrAssessmentId()
-
-  /**
-   * Specifies when the assessment was created.
-   */
-  public open fun attrCreationTime(): IResolvable =
-      unwrap(this).getAttrCreationTime().let(IResolvable::wrap)
-
-  /**
-   * The AWS account that's associated with the assessment.
-   */
-  public open fun awsAccount(): Any? = unwrap(this).getAwsAccount()
-
-  /**
-   * The AWS account that's associated with the assessment.
-   */
-  public open fun awsAccount(`value`: IResolvable) {
-    unwrap(this).setAwsAccount(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * The AWS account that's associated with the assessment.
-   */
-  public open fun awsAccount(`value`: AWSAccountProperty) {
-    unwrap(this).setAwsAccount(`value`.let(AWSAccountProperty::unwrap))
-  }
-
-  /**
-   * The AWS account that's associated with the assessment.
-   */
-  @Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("dfc0f6942aad9e32e254c317a5204fdbbbb760c5770988556472ab851f1f7614")
-  public open fun awsAccount(`value`: AWSAccountProperty.Builder.() -> Unit): Unit =
-      awsAccount(AWSAccountProperty(`value`))
-
-  /**
-   * The delegations that are associated with the assessment.
-   */
-  public open fun delegations(): Any? = unwrap(this).getDelegations()
-
-  /**
-   * The delegations that are associated with the assessment.
-   */
-  public open fun delegations(`value`: IResolvable) {
-    unwrap(this).setDelegations(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * The delegations that are associated with the assessment.
-   */
-  public open fun delegations(__idx_ac66f0: List<Any>) {
-    unwrap(this).setDelegations(__idx_ac66f0)
-  }
-
-  /**
-   * The delegations that are associated with the assessment.
-   */
-  public open fun delegations(vararg __idx_ac66f0: Any): Unit = delegations(__idx_ac66f0.toList())
-
-  /**
-   * The description of the assessment.
-   */
-  public open fun description(): String? = unwrap(this).getDescription()
-
-  /**
-   * The description of the assessment.
-   */
-  public open fun description(`value`: String) {
-    unwrap(this).setDescription(`value`)
-  }
-
-  /**
-   * The unique identifier for the framework.
-   */
-  public open fun frameworkId(): String? = unwrap(this).getFrameworkId()
-
-  /**
-   * The unique identifier for the framework.
-   */
-  public open fun frameworkId(`value`: String) {
-    unwrap(this).setFrameworkId(`value`)
-  }
-
-  /**
-   * Examines the CloudFormation resource and discloses attributes.
-   *
-   * @param inspector tree inspector to collect and process attributes. 
-   */
-  public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-  }
-
-  /**
-   * The name of the assessment.
-   */
-  public open fun name(): String? = unwrap(this).getName()
-
-  /**
-   * The name of the assessment.
-   */
-  public open fun name(`value`: String) {
-    unwrap(this).setName(`value`)
-  }
-
-  /**
-   * The roles that are associated with the assessment.
-   */
-  public open fun roles(): Any? = unwrap(this).getRoles()
-
-  /**
-   * The roles that are associated with the assessment.
-   */
-  public open fun roles(`value`: IResolvable) {
-    unwrap(this).setRoles(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * The roles that are associated with the assessment.
-   */
-  public open fun roles(__idx_ac66f0: List<Any>) {
-    unwrap(this).setRoles(__idx_ac66f0)
-  }
-
-  /**
-   * The roles that are associated with the assessment.
-   */
-  public open fun roles(vararg __idx_ac66f0: Any): Unit = roles(__idx_ac66f0.toList())
-
-  /**
-   * The wrapper of AWS accounts and services that are in scope for the assessment.
-   */
-  public open fun scope(): Any? = unwrap(this).getScope()
-
-  /**
-   * The wrapper of AWS accounts and services that are in scope for the assessment.
-   */
-  public open fun scope(`value`: IResolvable) {
-    unwrap(this).setScope(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * The wrapper of AWS accounts and services that are in scope for the assessment.
-   */
-  public open fun scope(`value`: ScopeProperty) {
-    unwrap(this).setScope(`value`.let(ScopeProperty::unwrap))
-  }
-
-  /**
-   * The wrapper of AWS accounts and services that are in scope for the assessment.
-   */
-  @Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("927ed310f9222539748590577d39de037ad1ff1e8d04b788db09c97045459b17")
-  public open fun scope(`value`: ScopeProperty.Builder.() -> Unit): Unit =
-      scope(ScopeProperty(`value`))
-
-  /**
-   * The overall status of the assessment.
-   */
-  public open fun status(): String? = unwrap(this).getStatus()
-
-  /**
-   * The overall status of the assessment.
-   */
-  public open fun status(`value`: String) {
-    unwrap(this).setStatus(`value`)
-  }
-
-  /**
-   * Tag Manager which manages the tags for this resource.
-   */
-  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
-
-  /**
-   * The tags that are associated with the assessment.
-   */
-  public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
-      emptyList()
-
-  /**
-   * The tags that are associated with the assessment.
-   */
-  public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
-  }
-
-  /**
-   * The tags that are associated with the assessment.
-   */
-  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
-
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.auditmanager.CfnAssessment].
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * The destination that evidence reports are stored in for the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-assessmentreportsdestination)
-     * @param assessmentReportsDestination The destination that evidence reports are stored in for
-     * the assessment. 
-     */
-    public fun assessmentReportsDestination(assessmentReportsDestination: IResolvable)
-
-    /**
-     * The destination that evidence reports are stored in for the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-assessmentreportsdestination)
-     * @param assessmentReportsDestination The destination that evidence reports are stored in for
-     * the assessment. 
-     */
-    public
-        fun assessmentReportsDestination(assessmentReportsDestination: AssessmentReportsDestinationProperty)
-
-    /**
-     * The destination that evidence reports are stored in for the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-assessmentreportsdestination)
-     * @param assessmentReportsDestination The destination that evidence reports are stored in for
-     * the assessment. 
-     */
+    /** The destination that evidence reports are stored in for the assessment. */
     @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("2291bdad9e377b5b15886106ecdd4ad5cacac6721cc3864c84ce221e4f985f7b")
-    public
-        fun assessmentReportsDestination(assessmentReportsDestination: AssessmentReportsDestinationProperty.Builder.() -> Unit)
+    @JvmName("2787eccfcc4317d2da4bce1af29c28e964f176f12a7eee9c41b942f2ab78976e")
+    public open fun assessmentReportsDestination(
+        `value`: AssessmentReportsDestinationProperty.Builder.() -> Unit
+    ): Unit = assessmentReportsDestination(AssessmentReportsDestinationProperty(`value`))
 
-    /**
-     * The AWS account that's associated with the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-awsaccount)
-     * @param awsAccount The AWS account that's associated with the assessment. 
-     */
-    public fun awsAccount(awsAccount: IResolvable)
+    /** The Amazon Resource Name (ARN) of the assessment. */
+    public open fun attrArn(): String = unwrap(this).getAttrArn()
 
-    /**
-     * The AWS account that's associated with the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-awsaccount)
-     * @param awsAccount The AWS account that's associated with the assessment. 
-     */
-    public fun awsAccount(awsAccount: AWSAccountProperty)
+    /** The unique identifier for the assessment. */
+    public open fun attrAssessmentId(): String = unwrap(this).getAttrAssessmentId()
 
-    /**
-     * The AWS account that's associated with the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-awsaccount)
-     * @param awsAccount The AWS account that's associated with the assessment. 
-     */
+    /** Specifies when the assessment was created. */
+    public open fun attrCreationTime(): IResolvable =
+        unwrap(this).getAttrCreationTime().let(IResolvable::wrap)
+
+    /** The AWS account that's associated with the assessment. */
+    public open fun awsAccount(): Any? = unwrap(this).getAwsAccount()
+
+    /** The AWS account that's associated with the assessment. */
+    public open fun awsAccount(`value`: IResolvable) {
+        unwrap(this).setAwsAccount(`value`.let(IResolvable::unwrap))
+    }
+
+    /** The AWS account that's associated with the assessment. */
+    public open fun awsAccount(`value`: AWSAccountProperty) {
+        unwrap(this).setAwsAccount(`value`.let(AWSAccountProperty::unwrap))
+    }
+
+    /** The AWS account that's associated with the assessment. */
     @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("1580483e9c07085cc822510773463770606f203d1f70bd8575549ccf14ef7a91")
-    public fun awsAccount(awsAccount: AWSAccountProperty.Builder.() -> Unit)
+    @JvmName("dfc0f6942aad9e32e254c317a5204fdbbbb760c5770988556472ab851f1f7614")
+    public open fun awsAccount(`value`: AWSAccountProperty.Builder.() -> Unit): Unit =
+        awsAccount(AWSAccountProperty(`value`))
+
+    /** The delegations that are associated with the assessment. */
+    public open fun delegations(): Any? = unwrap(this).getDelegations()
+
+    /** The delegations that are associated with the assessment. */
+    public open fun delegations(`value`: IResolvable) {
+        unwrap(this).setDelegations(`value`.let(IResolvable::unwrap))
+    }
+
+    /** The delegations that are associated with the assessment. */
+    public open fun delegations(__idx_ac66f0: List<Any>) {
+        unwrap(this).setDelegations(__idx_ac66f0)
+    }
+
+    /** The delegations that are associated with the assessment. */
+    public open fun delegations(vararg __idx_ac66f0: Any): Unit = delegations(__idx_ac66f0.toList())
+
+    /** The description of the assessment. */
+    public open fun description(): String? = unwrap(this).getDescription()
+
+    /** The description of the assessment. */
+    public open fun description(`value`: String) {
+        unwrap(this).setDescription(`value`)
+    }
+
+    /** The unique identifier for the framework. */
+    public open fun frameworkId(): String? = unwrap(this).getFrameworkId()
+
+    /** The unique identifier for the framework. */
+    public open fun frameworkId(`value`: String) {
+        unwrap(this).setFrameworkId(`value`)
+    }
 
     /**
-     * The delegations that are associated with the assessment.
+     * Examines the CloudFormation resource and discloses attributes.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-delegations)
-     * @param delegations The delegations that are associated with the assessment. 
+     * @param inspector tree inspector to collect and process attributes.
      */
-    public fun delegations(delegations: IResolvable)
+    public override fun inspect(inspector: TreeInspector) {
+        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    }
 
-    /**
-     * The delegations that are associated with the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-delegations)
-     * @param delegations The delegations that are associated with the assessment. 
-     */
-    public fun delegations(delegations: List<Any>)
+    /** The name of the assessment. */
+    public open fun name(): String? = unwrap(this).getName()
 
-    /**
-     * The delegations that are associated with the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-delegations)
-     * @param delegations The delegations that are associated with the assessment. 
-     */
-    public fun delegations(vararg delegations: Any)
+    /** The name of the assessment. */
+    public open fun name(`value`: String) {
+        unwrap(this).setName(`value`)
+    }
 
-    /**
-     * The description of the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-description)
-     * @param description The description of the assessment. 
-     */
-    public fun description(description: String)
+    /** The roles that are associated with the assessment. */
+    public open fun roles(): Any? = unwrap(this).getRoles()
 
-    /**
-     * The unique identifier for the framework.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-frameworkid)
-     * @param frameworkId The unique identifier for the framework. 
-     */
-    public fun frameworkId(frameworkId: String)
+    /** The roles that are associated with the assessment. */
+    public open fun roles(`value`: IResolvable) {
+        unwrap(this).setRoles(`value`.let(IResolvable::unwrap))
+    }
 
-    /**
-     * The name of the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-name)
-     * @param name The name of the assessment. 
-     */
-    public fun name(name: String)
+    /** The roles that are associated with the assessment. */
+    public open fun roles(__idx_ac66f0: List<Any>) {
+        unwrap(this).setRoles(__idx_ac66f0)
+    }
 
-    /**
-     * The roles that are associated with the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-roles)
-     * @param roles The roles that are associated with the assessment. 
-     */
-    public fun roles(roles: IResolvable)
+    /** The roles that are associated with the assessment. */
+    public open fun roles(vararg __idx_ac66f0: Any): Unit = roles(__idx_ac66f0.toList())
 
-    /**
-     * The roles that are associated with the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-roles)
-     * @param roles The roles that are associated with the assessment. 
-     */
-    public fun roles(roles: List<Any>)
+    /** The wrapper of AWS accounts and services that are in scope for the assessment. */
+    public open fun scope(): Any? = unwrap(this).getScope()
 
-    /**
-     * The roles that are associated with the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-roles)
-     * @param roles The roles that are associated with the assessment. 
-     */
-    public fun roles(vararg roles: Any)
+    /** The wrapper of AWS accounts and services that are in scope for the assessment. */
+    public open fun scope(`value`: IResolvable) {
+        unwrap(this).setScope(`value`.let(IResolvable::unwrap))
+    }
 
-    /**
-     * The wrapper of AWS accounts and services that are in scope for the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-scope)
-     * @param scope The wrapper of AWS accounts and services that are in scope for the assessment. 
-     */
-    public fun scope(scope: IResolvable)
+    /** The wrapper of AWS accounts and services that are in scope for the assessment. */
+    public open fun scope(`value`: ScopeProperty) {
+        unwrap(this).setScope(`value`.let(ScopeProperty::unwrap))
+    }
 
-    /**
-     * The wrapper of AWS accounts and services that are in scope for the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-scope)
-     * @param scope The wrapper of AWS accounts and services that are in scope for the assessment. 
-     */
-    public fun scope(scope: ScopeProperty)
-
-    /**
-     * The wrapper of AWS accounts and services that are in scope for the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-scope)
-     * @param scope The wrapper of AWS accounts and services that are in scope for the assessment. 
-     */
+    /** The wrapper of AWS accounts and services that are in scope for the assessment. */
     @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("6cd79e98afe771933cfa678ad4e6945e8c8b781c2bead15848ae7da762a4a333")
-    public fun scope(scope: ScopeProperty.Builder.() -> Unit)
+    @JvmName("927ed310f9222539748590577d39de037ad1ff1e8d04b788db09c97045459b17")
+    public open fun scope(`value`: ScopeProperty.Builder.() -> Unit): Unit =
+        scope(ScopeProperty(`value`))
 
-    /**
-     * The overall status of the assessment.
-     *
-     * When you create a new assessment, the initial `Status` value is always `ACTIVE` . When you
-     * create an assessment, even if you specify the value as `INACTIVE` , the value overrides to
-     * `ACTIVE` .
-     *
-     * After you create an assessment, you can change the value of the `Status` property at any
-     * time. For example, when you want to stop collecting evidence for your assessment, you can change
-     * the assessment status to `INACTIVE` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-status)
-     * @param status The overall status of the assessment. 
-     */
-    public fun status(status: String)
+    /** The overall status of the assessment. */
+    public open fun status(): String? = unwrap(this).getStatus()
 
-    /**
-     * The tags that are associated with the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-tags)
-     * @param tags The tags that are associated with the assessment. 
-     */
-    public fun tags(tags: List<CfnTag>)
-
-    /**
-     * The tags that are associated with the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-tags)
-     * @param tags The tags that are associated with the assessment. 
-     */
-    public fun tags(vararg tags: CfnTag)
-  }
-
-  private class BuilderImpl(
-    scope: SoftwareConstructsConstruct,
-    id: String,
-  ) : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.auditmanager.CfnAssessment.Builder =
-        software.amazon.awscdk.services.auditmanager.CfnAssessment.Builder.create(scope, id)
-
-    /**
-     * The destination that evidence reports are stored in for the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-assessmentreportsdestination)
-     * @param assessmentReportsDestination The destination that evidence reports are stored in for
-     * the assessment. 
-     */
-    override fun assessmentReportsDestination(assessmentReportsDestination: IResolvable) {
-      cdkBuilder.assessmentReportsDestination(assessmentReportsDestination.let(IResolvable::unwrap))
+    /** The overall status of the assessment. */
+    public open fun status(`value`: String) {
+        unwrap(this).setStatus(`value`)
     }
 
-    /**
-     * The destination that evidence reports are stored in for the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-assessmentreportsdestination)
-     * @param assessmentReportsDestination The destination that evidence reports are stored in for
-     * the assessment. 
-     */
-    override
-        fun assessmentReportsDestination(assessmentReportsDestination: AssessmentReportsDestinationProperty) {
-      cdkBuilder.assessmentReportsDestination(assessmentReportsDestination.let(AssessmentReportsDestinationProperty::unwrap))
+    /** Tag Manager which manages the tags for this resource. */
+    public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+
+    /** The tags that are associated with the assessment. */
+    public open fun tagsRaw(): List<CfnTag> =
+        unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?: emptyList()
+
+    /** The tags that are associated with the assessment. */
+    public open fun tagsRaw(`value`: List<CfnTag>) {
+        unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
     }
 
-    /**
-     * The destination that evidence reports are stored in for the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-assessmentreportsdestination)
-     * @param assessmentReportsDestination The destination that evidence reports are stored in for
-     * the assessment. 
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("2291bdad9e377b5b15886106ecdd4ad5cacac6721cc3864c84ce221e4f985f7b")
-    override
-        fun assessmentReportsDestination(assessmentReportsDestination: AssessmentReportsDestinationProperty.Builder.() -> Unit):
-        Unit =
-        assessmentReportsDestination(AssessmentReportsDestinationProperty(assessmentReportsDestination))
+    /** The tags that are associated with the assessment. */
+    public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
-    /**
-     * The AWS account that's associated with the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-awsaccount)
-     * @param awsAccount The AWS account that's associated with the assessment. 
-     */
-    override fun awsAccount(awsAccount: IResolvable) {
-      cdkBuilder.awsAccount(awsAccount.let(IResolvable::unwrap))
-    }
-
-    /**
-     * The AWS account that's associated with the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-awsaccount)
-     * @param awsAccount The AWS account that's associated with the assessment. 
-     */
-    override fun awsAccount(awsAccount: AWSAccountProperty) {
-      cdkBuilder.awsAccount(awsAccount.let(AWSAccountProperty::unwrap))
-    }
-
-    /**
-     * The AWS account that's associated with the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-awsaccount)
-     * @param awsAccount The AWS account that's associated with the assessment. 
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("1580483e9c07085cc822510773463770606f203d1f70bd8575549ccf14ef7a91")
-    override fun awsAccount(awsAccount: AWSAccountProperty.Builder.() -> Unit): Unit =
-        awsAccount(AWSAccountProperty(awsAccount))
-
-    /**
-     * The delegations that are associated with the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-delegations)
-     * @param delegations The delegations that are associated with the assessment. 
-     */
-    override fun delegations(delegations: IResolvable) {
-      cdkBuilder.delegations(delegations.let(IResolvable::unwrap))
-    }
-
-    /**
-     * The delegations that are associated with the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-delegations)
-     * @param delegations The delegations that are associated with the assessment. 
-     */
-    override fun delegations(delegations: List<Any>) {
-      cdkBuilder.delegations(delegations)
-    }
-
-    /**
-     * The delegations that are associated with the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-delegations)
-     * @param delegations The delegations that are associated with the assessment. 
-     */
-    override fun delegations(vararg delegations: Any): Unit = delegations(delegations.toList())
-
-    /**
-     * The description of the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-description)
-     * @param description The description of the assessment. 
-     */
-    override fun description(description: String) {
-      cdkBuilder.description(description)
-    }
-
-    /**
-     * The unique identifier for the framework.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-frameworkid)
-     * @param frameworkId The unique identifier for the framework. 
-     */
-    override fun frameworkId(frameworkId: String) {
-      cdkBuilder.frameworkId(frameworkId)
-    }
-
-    /**
-     * The name of the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-name)
-     * @param name The name of the assessment. 
-     */
-    override fun name(name: String) {
-      cdkBuilder.name(name)
-    }
-
-    /**
-     * The roles that are associated with the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-roles)
-     * @param roles The roles that are associated with the assessment. 
-     */
-    override fun roles(roles: IResolvable) {
-      cdkBuilder.roles(roles.let(IResolvable::unwrap))
-    }
-
-    /**
-     * The roles that are associated with the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-roles)
-     * @param roles The roles that are associated with the assessment. 
-     */
-    override fun roles(roles: List<Any>) {
-      cdkBuilder.roles(roles)
-    }
-
-    /**
-     * The roles that are associated with the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-roles)
-     * @param roles The roles that are associated with the assessment. 
-     */
-    override fun roles(vararg roles: Any): Unit = roles(roles.toList())
-
-    /**
-     * The wrapper of AWS accounts and services that are in scope for the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-scope)
-     * @param scope The wrapper of AWS accounts and services that are in scope for the assessment. 
-     */
-    override fun scope(scope: IResolvable) {
-      cdkBuilder.scope(scope.let(IResolvable::unwrap))
-    }
-
-    /**
-     * The wrapper of AWS accounts and services that are in scope for the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-scope)
-     * @param scope The wrapper of AWS accounts and services that are in scope for the assessment. 
-     */
-    override fun scope(scope: ScopeProperty) {
-      cdkBuilder.scope(scope.let(ScopeProperty::unwrap))
-    }
-
-    /**
-     * The wrapper of AWS accounts and services that are in scope for the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-scope)
-     * @param scope The wrapper of AWS accounts and services that are in scope for the assessment. 
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("6cd79e98afe771933cfa678ad4e6945e8c8b781c2bead15848ae7da762a4a333")
-    override fun scope(scope: ScopeProperty.Builder.() -> Unit): Unit = scope(ScopeProperty(scope))
-
-    /**
-     * The overall status of the assessment.
-     *
-     * When you create a new assessment, the initial `Status` value is always `ACTIVE` . When you
-     * create an assessment, even if you specify the value as `INACTIVE` , the value overrides to
-     * `ACTIVE` .
-     *
-     * After you create an assessment, you can change the value of the `Status` property at any
-     * time. For example, when you want to stop collecting evidence for your assessment, you can change
-     * the assessment status to `INACTIVE` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-status)
-     * @param status The overall status of the assessment. 
-     */
-    override fun status(status: String) {
-      cdkBuilder.status(status)
-    }
-
-    /**
-     * The tags that are associated with the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-tags)
-     * @param tags The tags that are associated with the assessment. 
-     */
-    override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
-    }
-
-    /**
-     * The tags that are associated with the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-tags)
-     * @param tags The tags that are associated with the assessment. 
-     */
-    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
-
-    public fun build(): software.amazon.awscdk.services.auditmanager.CfnAssessment =
-        cdkBuilder.build()
-  }
-
-  public companion object {
-    init {
-
-    }
-
-    public operator fun invoke(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      block: Builder.() -> Unit = {},
-    ): CfnAssessment {
-      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-      return CfnAssessment(builderImpl.apply(block).build())
-    }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment):
-        CfnAssessment = CfnAssessment(cdkObject)
-
-    internal fun unwrap(wrapped: CfnAssessment):
-        software.amazon.awscdk.services.auditmanager.CfnAssessment = wrapped.cdkObject
-  }
-
-  public interface AWSAccountProperty {
-    /**
-     * The email address that's associated with the AWS account .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsaccount.html#cfn-auditmanager-assessment-awsaccount-emailaddress)
-     */
-    public fun emailAddress(): String? = unwrap(this).getEmailAddress()
-
-    /**
-     * The identifier for the AWS account .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsaccount.html#cfn-auditmanager-assessment-awsaccount-id)
-     */
-    public fun id(): String? = unwrap(this).getId()
-
-    /**
-     * The name of the AWS account .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsaccount.html#cfn-auditmanager-assessment-awsaccount-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
-
-    /**
-     * A builder for [AWSAccountProperty]
-     */
+    /** A fluent builder for [io.cloudshiftdev.awscdk.services.auditmanager.CfnAssessment]. */
     @CdkDslMarker
     public interface Builder {
-      /**
-       * @param emailAddress The email address that's associated with the AWS account .
-       */
-      public fun emailAddress(emailAddress: String)
+        /**
+         * The destination that evidence reports are stored in for the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-assessmentreportsdestination)
+         *
+         * @param assessmentReportsDestination The destination that evidence reports are stored in
+         *   for the assessment.
+         */
+        public fun assessmentReportsDestination(assessmentReportsDestination: IResolvable)
 
-      /**
-       * @param id The identifier for the AWS account .
-       */
-      public fun id(id: String)
+        /**
+         * The destination that evidence reports are stored in for the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-assessmentreportsdestination)
+         *
+         * @param assessmentReportsDestination The destination that evidence reports are stored in
+         *   for the assessment.
+         */
+        public fun assessmentReportsDestination(
+            assessmentReportsDestination: AssessmentReportsDestinationProperty
+        )
 
-      /**
-       * @param name The name of the AWS account .
-       */
-      public fun name(name: String)
+        /**
+         * The destination that evidence reports are stored in for the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-assessmentreportsdestination)
+         *
+         * @param assessmentReportsDestination The destination that evidence reports are stored in
+         *   for the assessment.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("2291bdad9e377b5b15886106ecdd4ad5cacac6721cc3864c84ce221e4f985f7b")
+        public fun assessmentReportsDestination(
+            assessmentReportsDestination: AssessmentReportsDestinationProperty.Builder.() -> Unit
+        )
+
+        /**
+         * The AWS account that's associated with the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-awsaccount)
+         *
+         * @param awsAccount The AWS account that's associated with the assessment.
+         */
+        public fun awsAccount(awsAccount: IResolvable)
+
+        /**
+         * The AWS account that's associated with the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-awsaccount)
+         *
+         * @param awsAccount The AWS account that's associated with the assessment.
+         */
+        public fun awsAccount(awsAccount: AWSAccountProperty)
+
+        /**
+         * The AWS account that's associated with the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-awsaccount)
+         *
+         * @param awsAccount The AWS account that's associated with the assessment.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("1580483e9c07085cc822510773463770606f203d1f70bd8575549ccf14ef7a91")
+        public fun awsAccount(awsAccount: AWSAccountProperty.Builder.() -> Unit)
+
+        /**
+         * The delegations that are associated with the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-delegations)
+         *
+         * @param delegations The delegations that are associated with the assessment.
+         */
+        public fun delegations(delegations: IResolvable)
+
+        /**
+         * The delegations that are associated with the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-delegations)
+         *
+         * @param delegations The delegations that are associated with the assessment.
+         */
+        public fun delegations(delegations: List<Any>)
+
+        /**
+         * The delegations that are associated with the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-delegations)
+         *
+         * @param delegations The delegations that are associated with the assessment.
+         */
+        public fun delegations(vararg delegations: Any)
+
+        /**
+         * The description of the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-description)
+         *
+         * @param description The description of the assessment.
+         */
+        public fun description(description: String)
+
+        /**
+         * The unique identifier for the framework.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-frameworkid)
+         *
+         * @param frameworkId The unique identifier for the framework.
+         */
+        public fun frameworkId(frameworkId: String)
+
+        /**
+         * The name of the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-name)
+         *
+         * @param name The name of the assessment.
+         */
+        public fun name(name: String)
+
+        /**
+         * The roles that are associated with the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-roles)
+         *
+         * @param roles The roles that are associated with the assessment.
+         */
+        public fun roles(roles: IResolvable)
+
+        /**
+         * The roles that are associated with the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-roles)
+         *
+         * @param roles The roles that are associated with the assessment.
+         */
+        public fun roles(roles: List<Any>)
+
+        /**
+         * The roles that are associated with the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-roles)
+         *
+         * @param roles The roles that are associated with the assessment.
+         */
+        public fun roles(vararg roles: Any)
+
+        /**
+         * The wrapper of AWS accounts and services that are in scope for the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-scope)
+         *
+         * @param scope The wrapper of AWS accounts and services that are in scope for the
+         *   assessment.
+         */
+        public fun scope(scope: IResolvable)
+
+        /**
+         * The wrapper of AWS accounts and services that are in scope for the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-scope)
+         *
+         * @param scope The wrapper of AWS accounts and services that are in scope for the
+         *   assessment.
+         */
+        public fun scope(scope: ScopeProperty)
+
+        /**
+         * The wrapper of AWS accounts and services that are in scope for the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-scope)
+         *
+         * @param scope The wrapper of AWS accounts and services that are in scope for the
+         *   assessment.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("6cd79e98afe771933cfa678ad4e6945e8c8b781c2bead15848ae7da762a4a333")
+        public fun scope(scope: ScopeProperty.Builder.() -> Unit)
+
+        /**
+         * The overall status of the assessment.
+         *
+         * When you create a new assessment, the initial `Status` value is always `ACTIVE` . When
+         * you create an assessment, even if you specify the value as `INACTIVE` , the value
+         * overrides to `ACTIVE` .
+         *
+         * After you create an assessment, you can change the value of the `Status` property at any
+         * time. For example, when you want to stop collecting evidence for your assessment, you can
+         * change the assessment status to `INACTIVE` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-status)
+         *
+         * @param status The overall status of the assessment.
+         */
+        public fun status(status: String)
+
+        /**
+         * The tags that are associated with the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-tags)
+         *
+         * @param tags The tags that are associated with the assessment.
+         */
+        public fun tags(tags: List<CfnTag>)
+
+        /**
+         * The tags that are associated with the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-tags)
+         *
+         * @param tags The tags that are associated with the assessment.
+         */
+        public fun tags(vararg tags: CfnTag)
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty.Builder =
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty.builder()
+    private class BuilderImpl(
+        scope: SoftwareConstructsConstruct,
+        id: String,
+    ) : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.auditmanager.CfnAssessment.Builder =
+            software.amazon.awscdk.services.auditmanager.CfnAssessment.Builder.create(scope, id)
 
-      /**
-       * @param emailAddress The email address that's associated with the AWS account .
-       */
-      override fun emailAddress(emailAddress: String) {
-        cdkBuilder.emailAddress(emailAddress)
-      }
+        /**
+         * The destination that evidence reports are stored in for the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-assessmentreportsdestination)
+         *
+         * @param assessmentReportsDestination The destination that evidence reports are stored in
+         *   for the assessment.
+         */
+        override fun assessmentReportsDestination(assessmentReportsDestination: IResolvable) {
+            cdkBuilder.assessmentReportsDestination(
+                assessmentReportsDestination.let(IResolvable::unwrap)
+            )
+        }
 
-      /**
-       * @param id The identifier for the AWS account .
-       */
-      override fun id(id: String) {
-        cdkBuilder.id(id)
-      }
+        /**
+         * The destination that evidence reports are stored in for the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-assessmentreportsdestination)
+         *
+         * @param assessmentReportsDestination The destination that evidence reports are stored in
+         *   for the assessment.
+         */
+        override fun assessmentReportsDestination(
+            assessmentReportsDestination: AssessmentReportsDestinationProperty
+        ) {
+            cdkBuilder.assessmentReportsDestination(
+                assessmentReportsDestination.let(AssessmentReportsDestinationProperty::unwrap)
+            )
+        }
 
-      /**
-       * @param name The name of the AWS account .
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
+        /**
+         * The destination that evidence reports are stored in for the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-assessmentreportsdestination)
+         *
+         * @param assessmentReportsDestination The destination that evidence reports are stored in
+         *   for the assessment.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("2291bdad9e377b5b15886106ecdd4ad5cacac6721cc3864c84ce221e4f985f7b")
+        override fun assessmentReportsDestination(
+            assessmentReportsDestination: AssessmentReportsDestinationProperty.Builder.() -> Unit
+        ): Unit =
+            assessmentReportsDestination(
+                AssessmentReportsDestinationProperty(assessmentReportsDestination)
+            )
 
-      public fun build():
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty =
-          cdkBuilder.build()
-    }
+        /**
+         * The AWS account that's associated with the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-awsaccount)
+         *
+         * @param awsAccount The AWS account that's associated with the assessment.
+         */
+        override fun awsAccount(awsAccount: IResolvable) {
+            cdkBuilder.awsAccount(awsAccount.let(IResolvable::unwrap))
+        }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty,
-    ) : AWSAccountProperty {
-      /**
-       * The email address that's associated with the AWS account .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsaccount.html#cfn-auditmanager-assessment-awsaccount-emailaddress)
-       */
-      override fun emailAddress(): String? = unwrap(this).getEmailAddress()
+        /**
+         * The AWS account that's associated with the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-awsaccount)
+         *
+         * @param awsAccount The AWS account that's associated with the assessment.
+         */
+        override fun awsAccount(awsAccount: AWSAccountProperty) {
+            cdkBuilder.awsAccount(awsAccount.let(AWSAccountProperty::unwrap))
+        }
 
-      /**
-       * The identifier for the AWS account .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsaccount.html#cfn-auditmanager-assessment-awsaccount-id)
-       */
-      override fun id(): String? = unwrap(this).getId()
+        /**
+         * The AWS account that's associated with the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-awsaccount)
+         *
+         * @param awsAccount The AWS account that's associated with the assessment.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("1580483e9c07085cc822510773463770606f203d1f70bd8575549ccf14ef7a91")
+        override fun awsAccount(awsAccount: AWSAccountProperty.Builder.() -> Unit): Unit =
+            awsAccount(AWSAccountProperty(awsAccount))
 
-      /**
-       * The name of the AWS account .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsaccount.html#cfn-auditmanager-assessment-awsaccount-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
+        /**
+         * The delegations that are associated with the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-delegations)
+         *
+         * @param delegations The delegations that are associated with the assessment.
+         */
+        override fun delegations(delegations: IResolvable) {
+            cdkBuilder.delegations(delegations.let(IResolvable::unwrap))
+        }
+
+        /**
+         * The delegations that are associated with the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-delegations)
+         *
+         * @param delegations The delegations that are associated with the assessment.
+         */
+        override fun delegations(delegations: List<Any>) {
+            cdkBuilder.delegations(delegations)
+        }
+
+        /**
+         * The delegations that are associated with the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-delegations)
+         *
+         * @param delegations The delegations that are associated with the assessment.
+         */
+        override fun delegations(vararg delegations: Any): Unit = delegations(delegations.toList())
+
+        /**
+         * The description of the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-description)
+         *
+         * @param description The description of the assessment.
+         */
+        override fun description(description: String) {
+            cdkBuilder.description(description)
+        }
+
+        /**
+         * The unique identifier for the framework.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-frameworkid)
+         *
+         * @param frameworkId The unique identifier for the framework.
+         */
+        override fun frameworkId(frameworkId: String) {
+            cdkBuilder.frameworkId(frameworkId)
+        }
+
+        /**
+         * The name of the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-name)
+         *
+         * @param name The name of the assessment.
+         */
+        override fun name(name: String) {
+            cdkBuilder.name(name)
+        }
+
+        /**
+         * The roles that are associated with the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-roles)
+         *
+         * @param roles The roles that are associated with the assessment.
+         */
+        override fun roles(roles: IResolvable) {
+            cdkBuilder.roles(roles.let(IResolvable::unwrap))
+        }
+
+        /**
+         * The roles that are associated with the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-roles)
+         *
+         * @param roles The roles that are associated with the assessment.
+         */
+        override fun roles(roles: List<Any>) {
+            cdkBuilder.roles(roles)
+        }
+
+        /**
+         * The roles that are associated with the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-roles)
+         *
+         * @param roles The roles that are associated with the assessment.
+         */
+        override fun roles(vararg roles: Any): Unit = roles(roles.toList())
+
+        /**
+         * The wrapper of AWS accounts and services that are in scope for the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-scope)
+         *
+         * @param scope The wrapper of AWS accounts and services that are in scope for the
+         *   assessment.
+         */
+        override fun scope(scope: IResolvable) {
+            cdkBuilder.scope(scope.let(IResolvable::unwrap))
+        }
+
+        /**
+         * The wrapper of AWS accounts and services that are in scope for the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-scope)
+         *
+         * @param scope The wrapper of AWS accounts and services that are in scope for the
+         *   assessment.
+         */
+        override fun scope(scope: ScopeProperty) {
+            cdkBuilder.scope(scope.let(ScopeProperty::unwrap))
+        }
+
+        /**
+         * The wrapper of AWS accounts and services that are in scope for the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-scope)
+         *
+         * @param scope The wrapper of AWS accounts and services that are in scope for the
+         *   assessment.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("6cd79e98afe771933cfa678ad4e6945e8c8b781c2bead15848ae7da762a4a333")
+        override fun scope(scope: ScopeProperty.Builder.() -> Unit): Unit =
+            scope(ScopeProperty(scope))
+
+        /**
+         * The overall status of the assessment.
+         *
+         * When you create a new assessment, the initial `Status` value is always `ACTIVE` . When
+         * you create an assessment, even if you specify the value as `INACTIVE` , the value
+         * overrides to `ACTIVE` .
+         *
+         * After you create an assessment, you can change the value of the `Status` property at any
+         * time. For example, when you want to stop collecting evidence for your assessment, you can
+         * change the assessment status to `INACTIVE` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-status)
+         *
+         * @param status The overall status of the assessment.
+         */
+        override fun status(status: String) {
+            cdkBuilder.status(status)
+        }
+
+        /**
+         * The tags that are associated with the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-tags)
+         *
+         * @param tags The tags that are associated with the assessment.
+         */
+        override fun tags(tags: List<CfnTag>) {
+            cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        }
+
+        /**
+         * The tags that are associated with the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-auditmanager-assessment.html#cfn-auditmanager-assessment-tags)
+         *
+         * @param tags The tags that are associated with the assessment.
+         */
+        override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+        public fun build(): software.amazon.awscdk.services.auditmanager.CfnAssessment =
+            cdkBuilder.build()
     }
 
     public companion object {
-      init {
+        init {}
 
-      }
+        public operator fun invoke(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            block: Builder.() -> Unit = {},
+        ): CfnAssessment {
+            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+            return CfnAssessment(builderImpl.apply(block).build())
+        }
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): AWSAccountProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment
+        ): CfnAssessment = CfnAssessment(cdkObject)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty):
-          AWSAccountProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AWSAccountProperty):
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty = (wrapped
-          as Wrapper).cdkObject
-    }
-  }
-
-  public interface DelegationProperty {
-    /**
-     * The identifier for the assessment that's associated with the delegation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-assessmentid)
-     */
-    public fun assessmentId(): String? = unwrap(this).getAssessmentId()
-
-    /**
-     * The name of the assessment that's associated with the delegation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-assessmentname)
-     */
-    public fun assessmentName(): String? = unwrap(this).getAssessmentName()
-
-    /**
-     * The comment that's related to the delegation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-comment)
-     */
-    public fun comment(): String? = unwrap(this).getComment()
-
-    /**
-     * The identifier for the control set that's associated with the delegation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-controlsetid)
-     */
-    public fun controlSetId(): String? = unwrap(this).getControlSetId()
-
-    /**
-     * The user or role that created the delegation.
-     *
-     * *Minimum* : `1`
-     *
-     * *Maximum* : `100`
-     *
-     * *Pattern* : `^[a-zA-Z0-9-_()\\[\\]\\s]+$`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-createdby)
-     */
-    public fun createdBy(): String? = unwrap(this).getCreatedBy()
-
-    /**
-     * Specifies when the delegation was created.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-creationtime)
-     */
-    public fun creationTime(): Number? = unwrap(this).getCreationTime()
-
-    /**
-     * The unique identifier for the delegation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-id)
-     */
-    public fun id(): String? = unwrap(this).getId()
-
-    /**
-     * Specifies when the delegation was last updated.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-lastupdated)
-     */
-    public fun lastUpdated(): Number? = unwrap(this).getLastUpdated()
-
-    /**
-     * The Amazon Resource Name (ARN) of the IAM role.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-rolearn)
-     */
-    public fun roleArn(): String? = unwrap(this).getRoleArn()
-
-    /**
-     * The type of customer persona.
-     *
-     *
-     * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
-     *
-     * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
-     *
-     * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-roletype)
-     */
-    public fun roleType(): String? = unwrap(this).getRoleType()
-
-    /**
-     * The status of the delegation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-status)
-     */
-    public fun status(): String? = unwrap(this).getStatus()
-
-    /**
-     * A builder for [DelegationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param assessmentId The identifier for the assessment that's associated with the
-       * delegation.
-       */
-      public fun assessmentId(assessmentId: String)
-
-      /**
-       * @param assessmentName The name of the assessment that's associated with the delegation.
-       */
-      public fun assessmentName(assessmentName: String)
-
-      /**
-       * @param comment The comment that's related to the delegation.
-       */
-      public fun comment(comment: String)
-
-      /**
-       * @param controlSetId The identifier for the control set that's associated with the
-       * delegation.
-       */
-      public fun controlSetId(controlSetId: String)
-
-      /**
-       * @param createdBy The user or role that created the delegation.
-       * *Minimum* : `1`
-       *
-       * *Maximum* : `100`
-       *
-       * *Pattern* : `^[a-zA-Z0-9-_()\\[\\]\\s]+$`
-       */
-      public fun createdBy(createdBy: String)
-
-      /**
-       * @param creationTime Specifies when the delegation was created.
-       */
-      public fun creationTime(creationTime: Number)
-
-      /**
-       * @param id The unique identifier for the delegation.
-       */
-      public fun id(id: String)
-
-      /**
-       * @param lastUpdated Specifies when the delegation was last updated.
-       */
-      public fun lastUpdated(lastUpdated: Number)
-
-      /**
-       * @param roleArn The Amazon Resource Name (ARN) of the IAM role.
-       */
-      public fun roleArn(roleArn: String)
-
-      /**
-       * @param roleType The type of customer persona.
-       *
-       * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
-       *
-       * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
-       *
-       * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
-       */
-      public fun roleType(roleType: String)
-
-      /**
-       * @param status The status of the delegation.
-       */
-      public fun status(status: String)
+        internal fun unwrap(
+            wrapped: CfnAssessment
+        ): software.amazon.awscdk.services.auditmanager.CfnAssessment = wrapped.cdkObject
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.DelegationProperty.Builder =
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.DelegationProperty.builder()
+    public interface AWSAccountProperty {
+        /**
+         * The email address that's associated with the AWS account .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsaccount.html#cfn-auditmanager-assessment-awsaccount-emailaddress)
+         */
+        public fun emailAddress(): String? = unwrap(this).getEmailAddress()
 
-      /**
-       * @param assessmentId The identifier for the assessment that's associated with the
-       * delegation.
-       */
-      override fun assessmentId(assessmentId: String) {
-        cdkBuilder.assessmentId(assessmentId)
-      }
+        /**
+         * The identifier for the AWS account .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsaccount.html#cfn-auditmanager-assessment-awsaccount-id)
+         */
+        public fun id(): String? = unwrap(this).getId()
 
-      /**
-       * @param assessmentName The name of the assessment that's associated with the delegation.
-       */
-      override fun assessmentName(assessmentName: String) {
-        cdkBuilder.assessmentName(assessmentName)
-      }
+        /**
+         * The name of the AWS account .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsaccount.html#cfn-auditmanager-assessment-awsaccount-name)
+         */
+        public fun name(): String? = unwrap(this).getName()
 
-      /**
-       * @param comment The comment that's related to the delegation.
-       */
-      override fun comment(comment: String) {
-        cdkBuilder.comment(comment)
-      }
+        /** A builder for [AWSAccountProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param emailAddress The email address that's associated with the AWS account . */
+            public fun emailAddress(emailAddress: String)
 
-      /**
-       * @param controlSetId The identifier for the control set that's associated with the
-       * delegation.
-       */
-      override fun controlSetId(controlSetId: String) {
-        cdkBuilder.controlSetId(controlSetId)
-      }
+            /** @param id The identifier for the AWS account . */
+            public fun id(id: String)
 
-      /**
-       * @param createdBy The user or role that created the delegation.
-       * *Minimum* : `1`
-       *
-       * *Maximum* : `100`
-       *
-       * *Pattern* : `^[a-zA-Z0-9-_()\\[\\]\\s]+$`
-       */
-      override fun createdBy(createdBy: String) {
-        cdkBuilder.createdBy(createdBy)
-      }
+            /** @param name The name of the AWS account . */
+            public fun name(name: String)
+        }
 
-      /**
-       * @param creationTime Specifies when the delegation was created.
-       */
-      override fun creationTime(creationTime: Number) {
-        cdkBuilder.creationTime(creationTime)
-      }
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty.Builder =
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty
+                    .builder()
 
-      /**
-       * @param id The unique identifier for the delegation.
-       */
-      override fun id(id: String) {
-        cdkBuilder.id(id)
-      }
+            /** @param emailAddress The email address that's associated with the AWS account . */
+            override fun emailAddress(emailAddress: String) {
+                cdkBuilder.emailAddress(emailAddress)
+            }
 
-      /**
-       * @param lastUpdated Specifies when the delegation was last updated.
-       */
-      override fun lastUpdated(lastUpdated: Number) {
-        cdkBuilder.lastUpdated(lastUpdated)
-      }
+            /** @param id The identifier for the AWS account . */
+            override fun id(id: String) {
+                cdkBuilder.id(id)
+            }
 
-      /**
-       * @param roleArn The Amazon Resource Name (ARN) of the IAM role.
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
+            /** @param name The name of the AWS account . */
+            override fun name(name: String) {
+                cdkBuilder.name(name)
+            }
 
-      /**
-       * @param roleType The type of customer persona.
-       *
-       * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
-       *
-       * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
-       *
-       * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
-       */
-      override fun roleType(roleType: String) {
-        cdkBuilder.roleType(roleType)
-      }
+            public fun build():
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty =
+                cdkBuilder.build()
+        }
 
-      /**
-       * @param status The status of the delegation.
-       */
-      override fun status(status: String) {
-        cdkBuilder.status(status)
-      }
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty,
+        ) : AWSAccountProperty {
+            /**
+             * The email address that's associated with the AWS account .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsaccount.html#cfn-auditmanager-assessment-awsaccount-emailaddress)
+             */
+            override fun emailAddress(): String? = unwrap(this).getEmailAddress()
 
-      public fun build():
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.DelegationProperty =
-          cdkBuilder.build()
+            /**
+             * The identifier for the AWS account .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsaccount.html#cfn-auditmanager-assessment-awsaccount-id)
+             */
+            override fun id(): String? = unwrap(this).getId()
+
+            /**
+             * The name of the AWS account .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsaccount.html#cfn-auditmanager-assessment-awsaccount-name)
+             */
+            override fun name(): String? = unwrap(this).getName()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): AWSAccountProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty
+            ): AWSAccountProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: AWSAccountProperty
+            ): software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.DelegationProperty,
-    ) : DelegationProperty {
-      /**
-       * The identifier for the assessment that's associated with the delegation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-assessmentid)
-       */
-      override fun assessmentId(): String? = unwrap(this).getAssessmentId()
+    public interface DelegationProperty {
+        /**
+         * The identifier for the assessment that's associated with the delegation.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-assessmentid)
+         */
+        public fun assessmentId(): String? = unwrap(this).getAssessmentId()
 
-      /**
-       * The name of the assessment that's associated with the delegation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-assessmentname)
-       */
-      override fun assessmentName(): String? = unwrap(this).getAssessmentName()
+        /**
+         * The name of the assessment that's associated with the delegation.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-assessmentname)
+         */
+        public fun assessmentName(): String? = unwrap(this).getAssessmentName()
 
-      /**
-       * The comment that's related to the delegation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-comment)
-       */
-      override fun comment(): String? = unwrap(this).getComment()
+        /**
+         * The comment that's related to the delegation.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-comment)
+         */
+        public fun comment(): String? = unwrap(this).getComment()
 
-      /**
-       * The identifier for the control set that's associated with the delegation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-controlsetid)
-       */
-      override fun controlSetId(): String? = unwrap(this).getControlSetId()
+        /**
+         * The identifier for the control set that's associated with the delegation.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-controlsetid)
+         */
+        public fun controlSetId(): String? = unwrap(this).getControlSetId()
 
-      /**
-       * The user or role that created the delegation.
-       *
-       * *Minimum* : `1`
-       *
-       * *Maximum* : `100`
-       *
-       * *Pattern* : `^[a-zA-Z0-9-_()\\[\\]\\s]+$`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-createdby)
-       */
-      override fun createdBy(): String? = unwrap(this).getCreatedBy()
+        /**
+         * The user or role that created the delegation.
+         *
+         * *Minimum* : `1`
+         *
+         * *Maximum* : `100`
+         *
+         * *Pattern* : `^[a-zA-Z0-9-_()\\[\\]\\s]+$`
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-createdby)
+         */
+        public fun createdBy(): String? = unwrap(this).getCreatedBy()
 
-      /**
-       * Specifies when the delegation was created.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-creationtime)
-       */
-      override fun creationTime(): Number? = unwrap(this).getCreationTime()
+        /**
+         * Specifies when the delegation was created.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-creationtime)
+         */
+        public fun creationTime(): Number? = unwrap(this).getCreationTime()
 
-      /**
-       * The unique identifier for the delegation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-id)
-       */
-      override fun id(): String? = unwrap(this).getId()
+        /**
+         * The unique identifier for the delegation.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-id)
+         */
+        public fun id(): String? = unwrap(this).getId()
 
-      /**
-       * Specifies when the delegation was last updated.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-lastupdated)
-       */
-      override fun lastUpdated(): Number? = unwrap(this).getLastUpdated()
+        /**
+         * Specifies when the delegation was last updated.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-lastupdated)
+         */
+        public fun lastUpdated(): Number? = unwrap(this).getLastUpdated()
 
-      /**
-       * The Amazon Resource Name (ARN) of the IAM role.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-rolearn)
-       */
-      override fun roleArn(): String? = unwrap(this).getRoleArn()
+        /**
+         * The Amazon Resource Name (ARN) of the IAM role.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-rolearn)
+         */
+        public fun roleArn(): String? = unwrap(this).getRoleArn()
 
-      /**
-       * The type of customer persona.
-       *
-       *
-       * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
-       *
-       * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
-       *
-       * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-roletype)
-       */
-      override fun roleType(): String? = unwrap(this).getRoleType()
+        /**
+         * The type of customer persona.
+         *
+         * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
+         *
+         * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
+         *
+         * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-roletype)
+         */
+        public fun roleType(): String? = unwrap(this).getRoleType()
 
-      /**
-       * The status of the delegation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-status)
-       */
-      override fun status(): String? = unwrap(this).getStatus()
+        /**
+         * The status of the delegation.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-status)
+         */
+        public fun status(): String? = unwrap(this).getStatus()
+
+        /** A builder for [DelegationProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param assessmentId The identifier for the assessment that's associated with the
+             *   delegation.
+             */
+            public fun assessmentId(assessmentId: String)
+
+            /**
+             * @param assessmentName The name of the assessment that's associated with the
+             *   delegation.
+             */
+            public fun assessmentName(assessmentName: String)
+
+            /** @param comment The comment that's related to the delegation. */
+            public fun comment(comment: String)
+
+            /**
+             * @param controlSetId The identifier for the control set that's associated with the
+             *   delegation.
+             */
+            public fun controlSetId(controlSetId: String)
+
+            /**
+             * @param createdBy The user or role that created the delegation. *Minimum* : `1`
+             *
+             * *Maximum* : `100`
+             *
+             * *Pattern* : `^[a-zA-Z0-9-_()\\[\\]\\s]+$`
+             */
+            public fun createdBy(createdBy: String)
+
+            /** @param creationTime Specifies when the delegation was created. */
+            public fun creationTime(creationTime: Number)
+
+            /** @param id The unique identifier for the delegation. */
+            public fun id(id: String)
+
+            /** @param lastUpdated Specifies when the delegation was last updated. */
+            public fun lastUpdated(lastUpdated: Number)
+
+            /** @param roleArn The Amazon Resource Name (ARN) of the IAM role. */
+            public fun roleArn(roleArn: String)
+
+            /**
+             * @param roleType The type of customer persona.
+             *
+             * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
+             *
+             * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
+             *
+             * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
+             */
+            public fun roleType(roleType: String)
+
+            /** @param status The status of the delegation. */
+            public fun status(status: String)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.DelegationProperty.Builder =
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.DelegationProperty
+                    .builder()
+
+            /**
+             * @param assessmentId The identifier for the assessment that's associated with the
+             *   delegation.
+             */
+            override fun assessmentId(assessmentId: String) {
+                cdkBuilder.assessmentId(assessmentId)
+            }
+
+            /**
+             * @param assessmentName The name of the assessment that's associated with the
+             *   delegation.
+             */
+            override fun assessmentName(assessmentName: String) {
+                cdkBuilder.assessmentName(assessmentName)
+            }
+
+            /** @param comment The comment that's related to the delegation. */
+            override fun comment(comment: String) {
+                cdkBuilder.comment(comment)
+            }
+
+            /**
+             * @param controlSetId The identifier for the control set that's associated with the
+             *   delegation.
+             */
+            override fun controlSetId(controlSetId: String) {
+                cdkBuilder.controlSetId(controlSetId)
+            }
+
+            /**
+             * @param createdBy The user or role that created the delegation. *Minimum* : `1`
+             *
+             * *Maximum* : `100`
+             *
+             * *Pattern* : `^[a-zA-Z0-9-_()\\[\\]\\s]+$`
+             */
+            override fun createdBy(createdBy: String) {
+                cdkBuilder.createdBy(createdBy)
+            }
+
+            /** @param creationTime Specifies when the delegation was created. */
+            override fun creationTime(creationTime: Number) {
+                cdkBuilder.creationTime(creationTime)
+            }
+
+            /** @param id The unique identifier for the delegation. */
+            override fun id(id: String) {
+                cdkBuilder.id(id)
+            }
+
+            /** @param lastUpdated Specifies when the delegation was last updated. */
+            override fun lastUpdated(lastUpdated: Number) {
+                cdkBuilder.lastUpdated(lastUpdated)
+            }
+
+            /** @param roleArn The Amazon Resource Name (ARN) of the IAM role. */
+            override fun roleArn(roleArn: String) {
+                cdkBuilder.roleArn(roleArn)
+            }
+
+            /**
+             * @param roleType The type of customer persona.
+             *
+             * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
+             *
+             * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
+             *
+             * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
+             */
+            override fun roleType(roleType: String) {
+                cdkBuilder.roleType(roleType)
+            }
+
+            /** @param status The status of the delegation. */
+            override fun status(status: String) {
+                cdkBuilder.status(status)
+            }
+
+            public fun build():
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.DelegationProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.DelegationProperty,
+        ) : DelegationProperty {
+            /**
+             * The identifier for the assessment that's associated with the delegation.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-assessmentid)
+             */
+            override fun assessmentId(): String? = unwrap(this).getAssessmentId()
+
+            /**
+             * The name of the assessment that's associated with the delegation.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-assessmentname)
+             */
+            override fun assessmentName(): String? = unwrap(this).getAssessmentName()
+
+            /**
+             * The comment that's related to the delegation.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-comment)
+             */
+            override fun comment(): String? = unwrap(this).getComment()
+
+            /**
+             * The identifier for the control set that's associated with the delegation.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-controlsetid)
+             */
+            override fun controlSetId(): String? = unwrap(this).getControlSetId()
+
+            /**
+             * The user or role that created the delegation.
+             *
+             * *Minimum* : `1`
+             *
+             * *Maximum* : `100`
+             *
+             * *Pattern* : `^[a-zA-Z0-9-_()\\[\\]\\s]+$`
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-createdby)
+             */
+            override fun createdBy(): String? = unwrap(this).getCreatedBy()
+
+            /**
+             * Specifies when the delegation was created.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-creationtime)
+             */
+            override fun creationTime(): Number? = unwrap(this).getCreationTime()
+
+            /**
+             * The unique identifier for the delegation.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-id)
+             */
+            override fun id(): String? = unwrap(this).getId()
+
+            /**
+             * Specifies when the delegation was last updated.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-lastupdated)
+             */
+            override fun lastUpdated(): Number? = unwrap(this).getLastUpdated()
+
+            /**
+             * The Amazon Resource Name (ARN) of the IAM role.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-rolearn)
+             */
+            override fun roleArn(): String? = unwrap(this).getRoleArn()
+
+            /**
+             * The type of customer persona.
+             *
+             * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
+             *
+             * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
+             *
+             * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-roletype)
+             */
+            override fun roleType(): String? = unwrap(this).getRoleType()
+
+            /**
+             * The status of the delegation.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-delegation.html#cfn-auditmanager-assessment-delegation-status)
+             */
+            override fun status(): String? = unwrap(this).getStatus()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): DelegationProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.auditmanager.CfnAssessment.DelegationProperty
+            ): DelegationProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: DelegationProperty
+            ): software.amazon.awscdk.services.auditmanager.CfnAssessment.DelegationProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface AssessmentReportsDestinationProperty {
+        /**
+         * The destination bucket where Audit Manager stores assessment reports.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-assessmentreportsdestination.html#cfn-auditmanager-assessment-assessmentreportsdestination-destination)
+         */
+        public fun destination(): String? = unwrap(this).getDestination()
 
-      }
+        /**
+         * The destination type, such as Amazon S3.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-assessmentreportsdestination.html#cfn-auditmanager-assessment-assessmentreportsdestination-destinationtype)
+         */
+        public fun destinationType(): String? = unwrap(this).getDestinationType()
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): DelegationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /** A builder for [AssessmentReportsDestinationProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param destination The destination bucket where Audit Manager stores assessment
+             *   reports.
+             */
+            public fun destination(destination: String)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.DelegationProperty):
-          DelegationProperty = Wrapper(cdkObject)
+            /** @param destinationType The destination type, such as Amazon S3. */
+            public fun destinationType(destinationType: String)
+        }
 
-      internal fun unwrap(wrapped: DelegationProperty):
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.DelegationProperty = (wrapped
-          as Wrapper).cdkObject
-    }
-  }
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty.Builder =
+                software.amazon.awscdk.services.auditmanager.CfnAssessment
+                    .AssessmentReportsDestinationProperty
+                    .builder()
 
-  public interface AssessmentReportsDestinationProperty {
-    /**
-     * The destination bucket where Audit Manager stores assessment reports.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-assessmentreportsdestination.html#cfn-auditmanager-assessment-assessmentreportsdestination-destination)
-     */
-    public fun destination(): String? = unwrap(this).getDestination()
+            /**
+             * @param destination The destination bucket where Audit Manager stores assessment
+             *   reports.
+             */
+            override fun destination(destination: String) {
+                cdkBuilder.destination(destination)
+            }
 
-    /**
-     * The destination type, such as Amazon S3.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-assessmentreportsdestination.html#cfn-auditmanager-assessment-assessmentreportsdestination-destinationtype)
-     */
-    public fun destinationType(): String? = unwrap(this).getDestinationType()
+            /** @param destinationType The destination type, such as Amazon S3. */
+            override fun destinationType(destinationType: String) {
+                cdkBuilder.destinationType(destinationType)
+            }
 
-    /**
-     * A builder for [AssessmentReportsDestinationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param destination The destination bucket where Audit Manager stores assessment reports.
-       */
-      public fun destination(destination: String)
+            public fun build():
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty =
+                cdkBuilder.build()
+        }
 
-      /**
-       * @param destinationType The destination type, such as Amazon S3.
-       */
-      public fun destinationType(destinationType: String)
-    }
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty,
+        ) : AssessmentReportsDestinationProperty {
+            /**
+             * The destination bucket where Audit Manager stores assessment reports.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-assessmentreportsdestination.html#cfn-auditmanager-assessment-assessmentreportsdestination-destination)
+             */
+            override fun destination(): String? = unwrap(this).getDestination()
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty.Builder
-          =
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty.builder()
+            /**
+             * The destination type, such as Amazon S3.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-assessmentreportsdestination.html#cfn-auditmanager-assessment-assessmentreportsdestination-destinationtype)
+             */
+            override fun destinationType(): String? = unwrap(this).getDestinationType()
+        }
 
-      /**
-       * @param destination The destination bucket where Audit Manager stores assessment reports.
-       */
-      override fun destination(destination: String) {
-        cdkBuilder.destination(destination)
-      }
+        public companion object {
+            init {}
 
-      /**
-       * @param destinationType The destination type, such as Amazon S3.
-       */
-      override fun destinationType(destinationType: String) {
-        cdkBuilder.destinationType(destinationType)
-      }
+            public operator fun invoke(
+                block: Builder.() -> Unit = {}
+            ): AssessmentReportsDestinationProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-      public fun build():
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty
-          = cdkBuilder.build()
-    }
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty
+            ): AssessmentReportsDestinationProperty = Wrapper(cdkObject)
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty,
-    ) : AssessmentReportsDestinationProperty {
-      /**
-       * The destination bucket where Audit Manager stores assessment reports.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-assessmentreportsdestination.html#cfn-auditmanager-assessment-assessmentreportsdestination-destination)
-       */
-      override fun destination(): String? = unwrap(this).getDestination()
-
-      /**
-       * The destination type, such as Amazon S3.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-assessmentreportsdestination.html#cfn-auditmanager-assessment-assessmentreportsdestination-destinationtype)
-       */
-      override fun destinationType(): String? = unwrap(this).getDestinationType()
-    }
-
-    public companion object {
-      init {
-
-      }
-
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          AssessmentReportsDestinationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty):
-          AssessmentReportsDestinationProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AssessmentReportsDestinationProperty):
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty
-          = (wrapped as Wrapper).cdkObject
-    }
-  }
-
-  public interface ScopeProperty {
-    /**
-     * The AWS accounts that are included in the scope of the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-scope.html#cfn-auditmanager-assessment-scope-awsaccounts)
-     */
-    public fun awsAccounts(): Any? = unwrap(this).getAwsAccounts()
-
-    /**
-     * The AWS services that are included in the scope of the assessment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-scope.html#cfn-auditmanager-assessment-scope-awsservices)
-     */
-    public fun awsServices(): Any? = unwrap(this).getAwsServices()
-
-    /**
-     * A builder for [ScopeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param awsAccounts The AWS accounts that are included in the scope of the assessment.
-       */
-      public fun awsAccounts(awsAccounts: IResolvable)
-
-      /**
-       * @param awsAccounts The AWS accounts that are included in the scope of the assessment.
-       */
-      public fun awsAccounts(awsAccounts: List<Any>)
-
-      /**
-       * @param awsAccounts The AWS accounts that are included in the scope of the assessment.
-       */
-      public fun awsAccounts(vararg awsAccounts: Any)
-
-      /**
-       * @param awsServices The AWS services that are included in the scope of the assessment.
-       */
-      public fun awsServices(awsServices: IResolvable)
-
-      /**
-       * @param awsServices The AWS services that are included in the scope of the assessment.
-       */
-      public fun awsServices(awsServices: List<Any>)
-
-      /**
-       * @param awsServices The AWS services that are included in the scope of the assessment.
-       */
-      public fun awsServices(vararg awsServices: Any)
+            internal fun unwrap(
+                wrapped: AssessmentReportsDestinationProperty
+            ): software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty.Builder =
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty.builder()
+    public interface ScopeProperty {
+        /**
+         * The AWS accounts that are included in the scope of the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-scope.html#cfn-auditmanager-assessment-scope-awsaccounts)
+         */
+        public fun awsAccounts(): Any? = unwrap(this).getAwsAccounts()
 
-      /**
-       * @param awsAccounts The AWS accounts that are included in the scope of the assessment.
-       */
-      override fun awsAccounts(awsAccounts: IResolvable) {
-        cdkBuilder.awsAccounts(awsAccounts.let(IResolvable::unwrap))
-      }
+        /**
+         * The AWS services that are included in the scope of the assessment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-scope.html#cfn-auditmanager-assessment-scope-awsservices)
+         */
+        public fun awsServices(): Any? = unwrap(this).getAwsServices()
 
-      /**
-       * @param awsAccounts The AWS accounts that are included in the scope of the assessment.
-       */
-      override fun awsAccounts(awsAccounts: List<Any>) {
-        cdkBuilder.awsAccounts(awsAccounts)
-      }
+        /** A builder for [ScopeProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param awsAccounts The AWS accounts that are included in the scope of the assessment.
+             */
+            public fun awsAccounts(awsAccounts: IResolvable)
 
-      /**
-       * @param awsAccounts The AWS accounts that are included in the scope of the assessment.
-       */
-      override fun awsAccounts(vararg awsAccounts: Any): Unit = awsAccounts(awsAccounts.toList())
+            /**
+             * @param awsAccounts The AWS accounts that are included in the scope of the assessment.
+             */
+            public fun awsAccounts(awsAccounts: List<Any>)
 
-      /**
-       * @param awsServices The AWS services that are included in the scope of the assessment.
-       */
-      override fun awsServices(awsServices: IResolvable) {
-        cdkBuilder.awsServices(awsServices.let(IResolvable::unwrap))
-      }
+            /**
+             * @param awsAccounts The AWS accounts that are included in the scope of the assessment.
+             */
+            public fun awsAccounts(vararg awsAccounts: Any)
 
-      /**
-       * @param awsServices The AWS services that are included in the scope of the assessment.
-       */
-      override fun awsServices(awsServices: List<Any>) {
-        cdkBuilder.awsServices(awsServices)
-      }
+            /**
+             * @param awsServices The AWS services that are included in the scope of the assessment.
+             */
+            public fun awsServices(awsServices: IResolvable)
 
-      /**
-       * @param awsServices The AWS services that are included in the scope of the assessment.
-       */
-      override fun awsServices(vararg awsServices: Any): Unit = awsServices(awsServices.toList())
+            /**
+             * @param awsServices The AWS services that are included in the scope of the assessment.
+             */
+            public fun awsServices(awsServices: List<Any>)
 
-      public fun build(): software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty =
-          cdkBuilder.build()
+            /**
+             * @param awsServices The AWS services that are included in the scope of the assessment.
+             */
+            public fun awsServices(vararg awsServices: Any)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty.Builder =
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty.builder()
+
+            /**
+             * @param awsAccounts The AWS accounts that are included in the scope of the assessment.
+             */
+            override fun awsAccounts(awsAccounts: IResolvable) {
+                cdkBuilder.awsAccounts(awsAccounts.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param awsAccounts The AWS accounts that are included in the scope of the assessment.
+             */
+            override fun awsAccounts(awsAccounts: List<Any>) {
+                cdkBuilder.awsAccounts(awsAccounts)
+            }
+
+            /**
+             * @param awsAccounts The AWS accounts that are included in the scope of the assessment.
+             */
+            override fun awsAccounts(vararg awsAccounts: Any): Unit =
+                awsAccounts(awsAccounts.toList())
+
+            /**
+             * @param awsServices The AWS services that are included in the scope of the assessment.
+             */
+            override fun awsServices(awsServices: IResolvable) {
+                cdkBuilder.awsServices(awsServices.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param awsServices The AWS services that are included in the scope of the assessment.
+             */
+            override fun awsServices(awsServices: List<Any>) {
+                cdkBuilder.awsServices(awsServices)
+            }
+
+            /**
+             * @param awsServices The AWS services that are included in the scope of the assessment.
+             */
+            override fun awsServices(vararg awsServices: Any): Unit =
+                awsServices(awsServices.toList())
+
+            public fun build():
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty,
+        ) : ScopeProperty {
+            /**
+             * The AWS accounts that are included in the scope of the assessment.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-scope.html#cfn-auditmanager-assessment-scope-awsaccounts)
+             */
+            override fun awsAccounts(): Any? = unwrap(this).getAwsAccounts()
+
+            /**
+             * The AWS services that are included in the scope of the assessment.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-scope.html#cfn-auditmanager-assessment-scope-awsservices)
+             */
+            override fun awsServices(): Any? = unwrap(this).getAwsServices()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): ScopeProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty
+            ): ScopeProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: ScopeProperty
+            ): software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty,
-    ) : ScopeProperty {
-      /**
-       * The AWS accounts that are included in the scope of the assessment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-scope.html#cfn-auditmanager-assessment-scope-awsaccounts)
-       */
-      override fun awsAccounts(): Any? = unwrap(this).getAwsAccounts()
+    public interface RoleProperty {
+        /**
+         * The Amazon Resource Name (ARN) of the IAM role.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-role.html#cfn-auditmanager-assessment-role-rolearn)
+         */
+        public fun roleArn(): String? = unwrap(this).getRoleArn()
 
-      /**
-       * The AWS services that are included in the scope of the assessment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-scope.html#cfn-auditmanager-assessment-scope-awsservices)
-       */
-      override fun awsServices(): Any? = unwrap(this).getAwsServices()
+        /**
+         * The type of customer persona.
+         *
+         * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
+         *
+         * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
+         *
+         * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-role.html#cfn-auditmanager-assessment-role-roletype)
+         */
+        public fun roleType(): String? = unwrap(this).getRoleType()
+
+        /** A builder for [RoleProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param roleArn The Amazon Resource Name (ARN) of the IAM role. */
+            public fun roleArn(roleArn: String)
+
+            /**
+             * @param roleType The type of customer persona.
+             *
+             * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
+             *
+             * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
+             *
+             * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
+             */
+            public fun roleType(roleType: String)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty.Builder =
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty.builder()
+
+            /** @param roleArn The Amazon Resource Name (ARN) of the IAM role. */
+            override fun roleArn(roleArn: String) {
+                cdkBuilder.roleArn(roleArn)
+            }
+
+            /**
+             * @param roleType The type of customer persona.
+             *
+             * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
+             *
+             * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
+             *
+             * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
+             */
+            override fun roleType(roleType: String) {
+                cdkBuilder.roleType(roleType)
+            }
+
+            public fun build():
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty,
+        ) : RoleProperty {
+            /**
+             * The Amazon Resource Name (ARN) of the IAM role.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-role.html#cfn-auditmanager-assessment-role-rolearn)
+             */
+            override fun roleArn(): String? = unwrap(this).getRoleArn()
+
+            /**
+             * The type of customer persona.
+             *
+             * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
+             *
+             * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
+             *
+             * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-role.html#cfn-auditmanager-assessment-role-roletype)
+             */
+            override fun roleType(): String? = unwrap(this).getRoleType()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): RoleProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty
+            ): RoleProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: RoleProperty
+            ): software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface AWSServiceProperty {
+        /**
+         * The name of the AWS service .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsservice.html#cfn-auditmanager-assessment-awsservice-servicename)
+         */
+        public fun serviceName(): String? = unwrap(this).getServiceName()
 
-      }
+        /** A builder for [AWSServiceProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param serviceName The name of the AWS service . */
+            public fun serviceName(serviceName: String)
+        }
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): ScopeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty.Builder =
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty
+                    .builder()
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty):
-          ScopeProperty = Wrapper(cdkObject)
+            /** @param serviceName The name of the AWS service . */
+            override fun serviceName(serviceName: String) {
+                cdkBuilder.serviceName(serviceName)
+            }
 
-      internal fun unwrap(wrapped: ScopeProperty):
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty = (wrapped as
-          Wrapper).cdkObject
+            public fun build():
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty,
+        ) : AWSServiceProperty {
+            /**
+             * The name of the AWS service .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsservice.html#cfn-auditmanager-assessment-awsservice-servicename)
+             */
+            override fun serviceName(): String? = unwrap(this).getServiceName()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): AWSServiceProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty
+            ): AWSServiceProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: AWSServiceProperty
+            ): software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
-  }
-
-  public interface RoleProperty {
-    /**
-     * The Amazon Resource Name (ARN) of the IAM role.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-role.html#cfn-auditmanager-assessment-role-rolearn)
-     */
-    public fun roleArn(): String? = unwrap(this).getRoleArn()
-
-    /**
-     * The type of customer persona.
-     *
-     *
-     * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
-     *
-     * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
-     *
-     * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-role.html#cfn-auditmanager-assessment-role-roletype)
-     */
-    public fun roleType(): String? = unwrap(this).getRoleType()
-
-    /**
-     * A builder for [RoleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param roleArn The Amazon Resource Name (ARN) of the IAM role.
-       */
-      public fun roleArn(roleArn: String)
-
-      /**
-       * @param roleType The type of customer persona.
-       *
-       * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
-       *
-       * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
-       *
-       * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
-       */
-      public fun roleType(roleType: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty.Builder =
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty.builder()
-
-      /**
-       * @param roleArn The Amazon Resource Name (ARN) of the IAM role.
-       */
-      override fun roleArn(roleArn: String) {
-        cdkBuilder.roleArn(roleArn)
-      }
-
-      /**
-       * @param roleType The type of customer persona.
-       *
-       * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
-       *
-       * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
-       *
-       * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
-       */
-      override fun roleType(roleType: String) {
-        cdkBuilder.roleType(roleType)
-      }
-
-      public fun build(): software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty,
-    ) : RoleProperty {
-      /**
-       * The Amazon Resource Name (ARN) of the IAM role.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-role.html#cfn-auditmanager-assessment-role-rolearn)
-       */
-      override fun roleArn(): String? = unwrap(this).getRoleArn()
-
-      /**
-       * The type of customer persona.
-       *
-       *
-       * In `CreateAssessment` , `roleType` can only be `PROCESS_OWNER` .
-       *
-       * In `UpdateSettings` , `roleType` can only be `PROCESS_OWNER` .
-       *
-       * In `BatchCreateDelegationByAssessment` , `roleType` can only be `RESOURCE_OWNER` .
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-role.html#cfn-auditmanager-assessment-role-roletype)
-       */
-      override fun roleType(): String? = unwrap(this).getRoleType()
-    }
-
-    public companion object {
-      init {
-
-      }
-
-      public operator fun invoke(block: Builder.() -> Unit = {}): RoleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty):
-          RoleProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RoleProperty):
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty = (wrapped as
-          Wrapper).cdkObject
-    }
-  }
-
-  public interface AWSServiceProperty {
-    /**
-     * The name of the AWS service .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsservice.html#cfn-auditmanager-assessment-awsservice-servicename)
-     */
-    public fun serviceName(): String? = unwrap(this).getServiceName()
-
-    /**
-     * A builder for [AWSServiceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param serviceName The name of the AWS service .
-       */
-      public fun serviceName(serviceName: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty.Builder =
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty.builder()
-
-      /**
-       * @param serviceName The name of the AWS service .
-       */
-      override fun serviceName(serviceName: String) {
-        cdkBuilder.serviceName(serviceName)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty,
-    ) : AWSServiceProperty {
-      /**
-       * The name of the AWS service .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-auditmanager-assessment-awsservice.html#cfn-auditmanager-assessment-awsservice-servicename)
-       */
-      override fun serviceName(): String? = unwrap(this).getServiceName()
-    }
-
-    public companion object {
-      init {
-
-      }
-
-      public operator fun invoke(block: Builder.() -> Unit = {}): AWSServiceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty):
-          AWSServiceProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AWSServiceProperty):
-          software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty = (wrapped
-          as Wrapper).cdkObject
-    }
-  }
 }

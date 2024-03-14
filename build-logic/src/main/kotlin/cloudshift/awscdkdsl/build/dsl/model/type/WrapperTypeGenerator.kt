@@ -146,6 +146,18 @@ internal object WrapperTypeGenerator {
             ctx,
         )
 
+        if(cdkClass.className == Construct) {
+            // protected constructor(scope: Construct, id: String) : this(software.constructs.Construct(unwrap(scope), id))
+            val constructConstructor = FunSpec.constructorBuilder()
+                .addParameter("scope", Construct.mappedClassName())
+                .addParameter("id", String::class)
+                .addModifiers(KModifier.PROTECTED)
+                .callThisConstructor(CodeBlock.of("%T(unwrap(scope), id)", Construct))
+                .build()
+
+            typeBuilder.addFunction(constructConstructor)
+        }
+
         typeBuilder
             .addSuperinterfaces(
                 cdkClass.interfaces.filter { !it.isJssiClass }
@@ -343,9 +355,9 @@ internal object WrapperTypeGenerator {
         return wrapperBuilder.build()
     }
 
-    private const
-    val CdkObjectName = "cdkObject"
+    private const val CdkObjectName = "cdkObject"
     private val IConstruct = ClassName("software.constructs", "IConstruct")
+    private val Construct = ClassName("software.constructs", "Construct")
 }
 
 private fun TypeSpec.Builder.wrappedClassConstructor(

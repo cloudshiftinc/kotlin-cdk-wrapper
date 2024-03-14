@@ -7,488 +7,445 @@ import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnWorkflow internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.omics.CfnWorkflow,
+public open class CfnWorkflow
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.omics.CfnWorkflow,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
-  /**
-   *
-   */
-  public open fun accelerators(): String? = unwrap(this).getAccelerators()
+    /**  */
+    public open fun accelerators(): String? = unwrap(this).getAccelerators()
 
-  /**
-   *
-   */
-  public open fun accelerators(`value`: String) {
-    unwrap(this).setAccelerators(`value`)
-  }
+    /**  */
+    public open fun accelerators(`value`: String) {
+        unwrap(this).setAccelerators(`value`)
+    }
 
-  /**
-   * The ARN for the workflow.
-   */
-  public open fun attrArn(): String = unwrap(this).getAttrArn()
+    /** The ARN for the workflow. */
+    public open fun attrArn(): String = unwrap(this).getAttrArn()
 
-  /**
-   * When the workflow was created.
-   */
-  public open fun attrCreationTime(): String = unwrap(this).getAttrCreationTime()
+    /** When the workflow was created. */
+    public open fun attrCreationTime(): String = unwrap(this).getAttrCreationTime()
 
-  /**
-   * The workflow's ID.
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
+    /** The workflow's ID. */
+    public open fun attrId(): String = unwrap(this).getAttrId()
 
-  /**
-   * The workflow's status.
-   */
-  public open fun attrStatus(): String = unwrap(this).getAttrStatus()
+    /** The workflow's status. */
+    public open fun attrStatus(): String = unwrap(this).getAttrStatus()
 
-  /**
-   * The workflow's type.
-   */
-  public open fun attrType(): String = unwrap(this).getAttrType()
+    /** The workflow's type. */
+    public open fun attrType(): String = unwrap(this).getAttrType()
 
-  /**
-   * The URI of a definition for the workflow.
-   */
-  public open fun definitionUri(): String? = unwrap(this).getDefinitionUri()
+    /** The URI of a definition for the workflow. */
+    public open fun definitionUri(): String? = unwrap(this).getDefinitionUri()
 
-  /**
-   * The URI of a definition for the workflow.
-   */
-  public open fun definitionUri(`value`: String) {
-    unwrap(this).setDefinitionUri(`value`)
-  }
+    /** The URI of a definition for the workflow. */
+    public open fun definitionUri(`value`: String) {
+        unwrap(this).setDefinitionUri(`value`)
+    }
 
-  /**
-   * The parameter's description.
-   */
-  public open fun description(): String? = unwrap(this).getDescription()
+    /** The parameter's description. */
+    public open fun description(): String? = unwrap(this).getDescription()
 
-  /**
-   * The parameter's description.
-   */
-  public open fun description(`value`: String) {
-    unwrap(this).setDescription(`value`)
-  }
+    /** The parameter's description. */
+    public open fun description(`value`: String) {
+        unwrap(this).setDescription(`value`)
+    }
 
-  /**
-   * An engine for the workflow.
-   */
-  public open fun engine(): String? = unwrap(this).getEngine()
+    /** An engine for the workflow. */
+    public open fun engine(): String? = unwrap(this).getEngine()
 
-  /**
-   * An engine for the workflow.
-   */
-  public open fun engine(`value`: String) {
-    unwrap(this).setEngine(`value`)
-  }
-
-  /**
-   * Examines the CloudFormation resource and discloses attributes.
-   *
-   * @param inspector tree inspector to collect and process attributes. 
-   */
-  public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-  }
-
-  /**
-   * The path of the main definition file for the workflow.
-   */
-  public open fun main(): String? = unwrap(this).getMain()
-
-  /**
-   * The path of the main definition file for the workflow.
-   */
-  public open fun main(`value`: String) {
-    unwrap(this).setMain(`value`)
-  }
-
-  /**
-   * The workflow's name.
-   */
-  public open fun name(): String? = unwrap(this).getName()
-
-  /**
-   * The workflow's name.
-   */
-  public open fun name(`value`: String) {
-    unwrap(this).setName(`value`)
-  }
-
-  /**
-   * The workflow's parameter template.
-   */
-  public open fun parameterTemplate(): Any? = unwrap(this).getParameterTemplate()
-
-  /**
-   * The workflow's parameter template.
-   */
-  public open fun parameterTemplate(`value`: IResolvable) {
-    unwrap(this).setParameterTemplate(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * The workflow's parameter template.
-   */
-  public open fun parameterTemplate(__item_ac66f0: Map<String, Any>) {
-    unwrap(this).setParameterTemplate(__item_ac66f0)
-  }
-
-  /**
-   * A storage capacity for the workflow in gibibytes.
-   */
-  public open fun storageCapacity(): Number? = unwrap(this).getStorageCapacity()
-
-  /**
-   * A storage capacity for the workflow in gibibytes.
-   */
-  public open fun storageCapacity(`value`: Number) {
-    unwrap(this).setStorageCapacity(`value`)
-  }
-
-  /**
-   * Tag Manager which manages the tags for this resource.
-   */
-  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
-
-  /**
-   * Tags for the workflow.
-   */
-  public open fun tagsRaw(): Map<String, String> = unwrap(this).getTagsRaw() ?: emptyMap()
-
-  /**
-   * Tags for the workflow.
-   */
-  public open fun tagsRaw(`value`: Map<String, String>) {
-    unwrap(this).setTagsRaw(`value`)
-  }
-
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.omics.CfnWorkflow].
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-accelerators)
-     * @param accelerators 
-     */
-    public fun accelerators(accelerators: String)
-
-    /**
-     * The URI of a definition for the workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-definitionuri)
-     * @param definitionUri The URI of a definition for the workflow. 
-     */
-    public fun definitionUri(definitionUri: String)
-
-    /**
-     * The parameter's description.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-description)
-     * @param description The parameter's description. 
-     */
-    public fun description(description: String)
-
-    /**
-     * An engine for the workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-engine)
-     * @param engine An engine for the workflow. 
-     */
-    public fun engine(engine: String)
-
-    /**
-     * The path of the main definition file for the workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-main)
-     * @param main The path of the main definition file for the workflow. 
-     */
-    public fun main(main: String)
-
-    /**
-     * The workflow's name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-name)
-     * @param name The workflow's name. 
-     */
-    public fun name(name: String)
-
-    /**
-     * The workflow's parameter template.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-parametertemplate)
-     * @param parameterTemplate The workflow's parameter template. 
-     */
-    public fun parameterTemplate(parameterTemplate: IResolvable)
-
-    /**
-     * The workflow's parameter template.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-parametertemplate)
-     * @param parameterTemplate The workflow's parameter template. 
-     */
-    public fun parameterTemplate(parameterTemplate: Map<String, Any>)
-
-    /**
-     * A storage capacity for the workflow in gibibytes.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-storagecapacity)
-     * @param storageCapacity A storage capacity for the workflow in gibibytes. 
-     */
-    public fun storageCapacity(storageCapacity: Number)
-
-    /**
-     * Tags for the workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-tags)
-     * @param tags Tags for the workflow. 
-     */
-    public fun tags(tags: Map<String, String>)
-  }
-
-  private class BuilderImpl(
-    scope: SoftwareConstructsConstruct,
-    id: String,
-  ) : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.omics.CfnWorkflow.Builder =
-        software.amazon.awscdk.services.omics.CfnWorkflow.Builder.create(scope, id)
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-accelerators)
-     * @param accelerators 
-     */
-    override fun accelerators(accelerators: String) {
-      cdkBuilder.accelerators(accelerators)
+    /** An engine for the workflow. */
+    public open fun engine(`value`: String) {
+        unwrap(this).setEngine(`value`)
     }
 
     /**
-     * The URI of a definition for the workflow.
+     * Examines the CloudFormation resource and discloses attributes.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-definitionuri)
-     * @param definitionUri The URI of a definition for the workflow. 
+     * @param inspector tree inspector to collect and process attributes.
      */
-    override fun definitionUri(definitionUri: String) {
-      cdkBuilder.definitionUri(definitionUri)
+    public override fun inspect(inspector: TreeInspector) {
+        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
     }
 
-    /**
-     * The parameter's description.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-description)
-     * @param description The parameter's description. 
-     */
-    override fun description(description: String) {
-      cdkBuilder.description(description)
+    /** The path of the main definition file for the workflow. */
+    public open fun main(): String? = unwrap(this).getMain()
+
+    /** The path of the main definition file for the workflow. */
+    public open fun main(`value`: String) {
+        unwrap(this).setMain(`value`)
     }
 
-    /**
-     * An engine for the workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-engine)
-     * @param engine An engine for the workflow. 
-     */
-    override fun engine(engine: String) {
-      cdkBuilder.engine(engine)
+    /** The workflow's name. */
+    public open fun name(): String? = unwrap(this).getName()
+
+    /** The workflow's name. */
+    public open fun name(`value`: String) {
+        unwrap(this).setName(`value`)
     }
 
-    /**
-     * The path of the main definition file for the workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-main)
-     * @param main The path of the main definition file for the workflow. 
-     */
-    override fun main(main: String) {
-      cdkBuilder.main(main)
+    /** The workflow's parameter template. */
+    public open fun parameterTemplate(): Any? = unwrap(this).getParameterTemplate()
+
+    /** The workflow's parameter template. */
+    public open fun parameterTemplate(`value`: IResolvable) {
+        unwrap(this).setParameterTemplate(`value`.let(IResolvable::unwrap))
     }
 
-    /**
-     * The workflow's name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-name)
-     * @param name The workflow's name. 
-     */
-    override fun name(name: String) {
-      cdkBuilder.name(name)
+    /** The workflow's parameter template. */
+    public open fun parameterTemplate(__item_ac66f0: Map<String, Any>) {
+        unwrap(this).setParameterTemplate(__item_ac66f0)
     }
 
-    /**
-     * The workflow's parameter template.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-parametertemplate)
-     * @param parameterTemplate The workflow's parameter template. 
-     */
-    override fun parameterTemplate(parameterTemplate: IResolvable) {
-      cdkBuilder.parameterTemplate(parameterTemplate.let(IResolvable::unwrap))
+    /** A storage capacity for the workflow in gibibytes. */
+    public open fun storageCapacity(): Number? = unwrap(this).getStorageCapacity()
+
+    /** A storage capacity for the workflow in gibibytes. */
+    public open fun storageCapacity(`value`: Number) {
+        unwrap(this).setStorageCapacity(`value`)
     }
 
-    /**
-     * The workflow's parameter template.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-parametertemplate)
-     * @param parameterTemplate The workflow's parameter template. 
-     */
-    override fun parameterTemplate(parameterTemplate: Map<String, Any>) {
-      cdkBuilder.parameterTemplate(parameterTemplate)
+    /** Tag Manager which manages the tags for this resource. */
+    public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+
+    /** Tags for the workflow. */
+    public open fun tagsRaw(): Map<String, String> = unwrap(this).getTagsRaw() ?: emptyMap()
+
+    /** Tags for the workflow. */
+    public open fun tagsRaw(`value`: Map<String, String>) {
+        unwrap(this).setTagsRaw(`value`)
     }
 
-    /**
-     * A storage capacity for the workflow in gibibytes.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-storagecapacity)
-     * @param storageCapacity A storage capacity for the workflow in gibibytes. 
-     */
-    override fun storageCapacity(storageCapacity: Number) {
-      cdkBuilder.storageCapacity(storageCapacity)
-    }
-
-    /**
-     * Tags for the workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-tags)
-     * @param tags Tags for the workflow. 
-     */
-    override fun tags(tags: Map<String, String>) {
-      cdkBuilder.tags(tags)
-    }
-
-    public fun build(): software.amazon.awscdk.services.omics.CfnWorkflow = cdkBuilder.build()
-  }
-
-  public companion object {
-    init {
-
-    }
-
-    public operator fun invoke(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      block: Builder.() -> Unit = {},
-    ): CfnWorkflow {
-      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-      return CfnWorkflow(builderImpl.apply(block).build())
-    }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnWorkflow): CfnWorkflow =
-        CfnWorkflow(cdkObject)
-
-    internal fun unwrap(wrapped: CfnWorkflow): software.amazon.awscdk.services.omics.CfnWorkflow =
-        wrapped.cdkObject
-  }
-
-  public interface WorkflowParameterProperty {
-    /**
-     * The parameter's description.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-workflow-workflowparameter.html#cfn-omics-workflow-workflowparameter-description)
-     */
-    public fun description(): String? = unwrap(this).getDescription()
-
-    /**
-     * Whether the parameter is optional.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-workflow-workflowparameter.html#cfn-omics-workflow-workflowparameter-optional)
-     */
-    public fun optional(): Any? = unwrap(this).getOptional()
-
-    /**
-     * A builder for [WorkflowParameterProperty]
-     */
+    /** A fluent builder for [io.cloudshiftdev.awscdk.services.omics.CfnWorkflow]. */
     @CdkDslMarker
     public interface Builder {
-      /**
-       * @param description The parameter's description.
-       */
-      public fun description(description: String)
+        /**
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-accelerators)
+         *
+         * @param accelerators
+         */
+        public fun accelerators(accelerators: String)
 
-      /**
-       * @param optional Whether the parameter is optional.
-       */
-      public fun optional(optional: Boolean)
+        /**
+         * The URI of a definition for the workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-definitionuri)
+         *
+         * @param definitionUri The URI of a definition for the workflow.
+         */
+        public fun definitionUri(definitionUri: String)
 
-      /**
-       * @param optional Whether the parameter is optional.
-       */
-      public fun optional(optional: IResolvable)
+        /**
+         * The parameter's description.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-description)
+         *
+         * @param description The parameter's description.
+         */
+        public fun description(description: String)
+
+        /**
+         * An engine for the workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-engine)
+         *
+         * @param engine An engine for the workflow.
+         */
+        public fun engine(engine: String)
+
+        /**
+         * The path of the main definition file for the workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-main)
+         *
+         * @param main The path of the main definition file for the workflow.
+         */
+        public fun main(main: String)
+
+        /**
+         * The workflow's name.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-name)
+         *
+         * @param name The workflow's name.
+         */
+        public fun name(name: String)
+
+        /**
+         * The workflow's parameter template.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-parametertemplate)
+         *
+         * @param parameterTemplate The workflow's parameter template.
+         */
+        public fun parameterTemplate(parameterTemplate: IResolvable)
+
+        /**
+         * The workflow's parameter template.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-parametertemplate)
+         *
+         * @param parameterTemplate The workflow's parameter template.
+         */
+        public fun parameterTemplate(parameterTemplate: Map<String, Any>)
+
+        /**
+         * A storage capacity for the workflow in gibibytes.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-storagecapacity)
+         *
+         * @param storageCapacity A storage capacity for the workflow in gibibytes.
+         */
+        public fun storageCapacity(storageCapacity: Number)
+
+        /**
+         * Tags for the workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-tags)
+         *
+         * @param tags Tags for the workflow.
+         */
+        public fun tags(tags: Map<String, String>)
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.omics.CfnWorkflow.WorkflowParameterProperty.Builder =
-          software.amazon.awscdk.services.omics.CfnWorkflow.WorkflowParameterProperty.builder()
+    private class BuilderImpl(
+        scope: SoftwareConstructsConstruct,
+        id: String,
+    ) : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.omics.CfnWorkflow.Builder =
+            software.amazon.awscdk.services.omics.CfnWorkflow.Builder.create(scope, id)
 
-      /**
-       * @param description The parameter's description.
-       */
-      override fun description(description: String) {
-        cdkBuilder.description(description)
-      }
+        /**
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-accelerators)
+         *
+         * @param accelerators
+         */
+        override fun accelerators(accelerators: String) {
+            cdkBuilder.accelerators(accelerators)
+        }
 
-      /**
-       * @param optional Whether the parameter is optional.
-       */
-      override fun optional(optional: Boolean) {
-        cdkBuilder.optional(optional)
-      }
+        /**
+         * The URI of a definition for the workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-definitionuri)
+         *
+         * @param definitionUri The URI of a definition for the workflow.
+         */
+        override fun definitionUri(definitionUri: String) {
+            cdkBuilder.definitionUri(definitionUri)
+        }
 
-      /**
-       * @param optional Whether the parameter is optional.
-       */
-      override fun optional(optional: IResolvable) {
-        cdkBuilder.optional(optional.let(IResolvable::unwrap))
-      }
+        /**
+         * The parameter's description.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-description)
+         *
+         * @param description The parameter's description.
+         */
+        override fun description(description: String) {
+            cdkBuilder.description(description)
+        }
 
-      public fun build():
-          software.amazon.awscdk.services.omics.CfnWorkflow.WorkflowParameterProperty =
-          cdkBuilder.build()
-    }
+        /**
+         * An engine for the workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-engine)
+         *
+         * @param engine An engine for the workflow.
+         */
+        override fun engine(engine: String) {
+            cdkBuilder.engine(engine)
+        }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.omics.CfnWorkflow.WorkflowParameterProperty,
-    ) : WorkflowParameterProperty {
-      /**
-       * The parameter's description.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-workflow-workflowparameter.html#cfn-omics-workflow-workflowparameter-description)
-       */
-      override fun description(): String? = unwrap(this).getDescription()
+        /**
+         * The path of the main definition file for the workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-main)
+         *
+         * @param main The path of the main definition file for the workflow.
+         */
+        override fun main(main: String) {
+            cdkBuilder.main(main)
+        }
 
-      /**
-       * Whether the parameter is optional.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-workflow-workflowparameter.html#cfn-omics-workflow-workflowparameter-optional)
-       */
-      override fun optional(): Any? = unwrap(this).getOptional()
+        /**
+         * The workflow's name.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-name)
+         *
+         * @param name The workflow's name.
+         */
+        override fun name(name: String) {
+            cdkBuilder.name(name)
+        }
+
+        /**
+         * The workflow's parameter template.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-parametertemplate)
+         *
+         * @param parameterTemplate The workflow's parameter template.
+         */
+        override fun parameterTemplate(parameterTemplate: IResolvable) {
+            cdkBuilder.parameterTemplate(parameterTemplate.let(IResolvable::unwrap))
+        }
+
+        /**
+         * The workflow's parameter template.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-parametertemplate)
+         *
+         * @param parameterTemplate The workflow's parameter template.
+         */
+        override fun parameterTemplate(parameterTemplate: Map<String, Any>) {
+            cdkBuilder.parameterTemplate(parameterTemplate)
+        }
+
+        /**
+         * A storage capacity for the workflow in gibibytes.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-storagecapacity)
+         *
+         * @param storageCapacity A storage capacity for the workflow in gibibytes.
+         */
+        override fun storageCapacity(storageCapacity: Number) {
+            cdkBuilder.storageCapacity(storageCapacity)
+        }
+
+        /**
+         * Tags for the workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-tags)
+         *
+         * @param tags Tags for the workflow.
+         */
+        override fun tags(tags: Map<String, String>) {
+            cdkBuilder.tags(tags)
+        }
+
+        public fun build(): software.amazon.awscdk.services.omics.CfnWorkflow = cdkBuilder.build()
     }
 
     public companion object {
-      init {
+        init {}
 
-      }
+        public operator fun invoke(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            block: Builder.() -> Unit = {},
+        ): CfnWorkflow {
+            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+            return CfnWorkflow(builderImpl.apply(block).build())
+        }
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): WorkflowParameterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.omics.CfnWorkflow
+        ): CfnWorkflow = CfnWorkflow(cdkObject)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnWorkflow.WorkflowParameterProperty):
-          WorkflowParameterProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: WorkflowParameterProperty):
-          software.amazon.awscdk.services.omics.CfnWorkflow.WorkflowParameterProperty = (wrapped as
-          Wrapper).cdkObject
+        internal fun unwrap(
+            wrapped: CfnWorkflow
+        ): software.amazon.awscdk.services.omics.CfnWorkflow = wrapped.cdkObject
     }
-  }
+
+    public interface WorkflowParameterProperty {
+        /**
+         * The parameter's description.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-workflow-workflowparameter.html#cfn-omics-workflow-workflowparameter-description)
+         */
+        public fun description(): String? = unwrap(this).getDescription()
+
+        /**
+         * Whether the parameter is optional.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-workflow-workflowparameter.html#cfn-omics-workflow-workflowparameter-optional)
+         */
+        public fun optional(): Any? = unwrap(this).getOptional()
+
+        /** A builder for [WorkflowParameterProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param description The parameter's description. */
+            public fun description(description: String)
+
+            /** @param optional Whether the parameter is optional. */
+            public fun optional(optional: Boolean)
+
+            /** @param optional Whether the parameter is optional. */
+            public fun optional(optional: IResolvable)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.omics.CfnWorkflow.WorkflowParameterProperty.Builder =
+                software.amazon.awscdk.services.omics.CfnWorkflow.WorkflowParameterProperty
+                    .builder()
+
+            /** @param description The parameter's description. */
+            override fun description(description: String) {
+                cdkBuilder.description(description)
+            }
+
+            /** @param optional Whether the parameter is optional. */
+            override fun optional(optional: Boolean) {
+                cdkBuilder.optional(optional)
+            }
+
+            /** @param optional Whether the parameter is optional. */
+            override fun optional(optional: IResolvable) {
+                cdkBuilder.optional(optional.let(IResolvable::unwrap))
+            }
+
+            public fun build():
+                software.amazon.awscdk.services.omics.CfnWorkflow.WorkflowParameterProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.omics.CfnWorkflow.WorkflowParameterProperty,
+        ) : WorkflowParameterProperty {
+            /**
+             * The parameter's description.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-workflow-workflowparameter.html#cfn-omics-workflow-workflowparameter-description)
+             */
+            override fun description(): String? = unwrap(this).getDescription()
+
+            /**
+             * Whether the parameter is optional.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-omics-workflow-workflowparameter.html#cfn-omics-workflow-workflowparameter-optional)
+             */
+            override fun optional(): Any? = unwrap(this).getOptional()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): WorkflowParameterProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.omics.CfnWorkflow.WorkflowParameterProperty
+            ): WorkflowParameterProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: WorkflowParameterProperty
+            ): software.amazon.awscdk.services.omics.CfnWorkflow.WorkflowParameterProperty =
+                (wrapped as Wrapper).cdkObject
+        }
+    }
 }

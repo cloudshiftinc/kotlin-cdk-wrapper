@@ -6,126 +6,22 @@ import kotlin.String
 import kotlin.Unit
 
 public interface CloudFormationProductVersion {
-  /**
-   * The S3 template that points to the provisioning version template.
-   */
-  public fun cloudFormationTemplate(): CloudFormationTemplate
-
-  /**
-   * The description of the product version.
-   *
-   * Default: - No description provided
-   */
-  public fun description(): String? = unwrap(this).getDescription()
-
-  /**
-   * The name of the product version.
-   *
-   * Default: - No product version name provided
-   */
-  public fun productVersionName(): String? = unwrap(this).getProductVersionName()
-
-  /**
-   * Whether the specified product template will be validated by CloudFormation.
-   *
-   * If turned off, an invalid template configuration can be stored.
-   *
-   * Default: true
-   */
-  public fun validateTemplate(): Boolean? = unwrap(this).getValidateTemplate()
-
-  /**
-   * A builder for [CloudFormationProductVersion]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param cloudFormationTemplate The S3 template that points to the provisioning version
-     * template. 
-     */
-    public fun cloudFormationTemplate(cloudFormationTemplate: CloudFormationTemplate)
-
-    /**
-     * @param description The description of the product version.
-     */
-    public fun description(description: String)
-
-    /**
-     * @param productVersionName The name of the product version.
-     */
-    public fun productVersionName(productVersionName: String)
-
-    /**
-     * @param validateTemplate Whether the specified product template will be validated by
-     * CloudFormation.
-     * If turned off, an invalid template configuration can be stored.
-     */
-    public fun validateTemplate(validateTemplate: Boolean)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder:
-        software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion.Builder =
-        software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion.builder()
-
-    /**
-     * @param cloudFormationTemplate The S3 template that points to the provisioning version
-     * template. 
-     */
-    override fun cloudFormationTemplate(cloudFormationTemplate: CloudFormationTemplate) {
-      cdkBuilder.cloudFormationTemplate(cloudFormationTemplate.let(CloudFormationTemplate::unwrap))
-    }
-
-    /**
-     * @param description The description of the product version.
-     */
-    override fun description(description: String) {
-      cdkBuilder.description(description)
-    }
-
-    /**
-     * @param productVersionName The name of the product version.
-     */
-    override fun productVersionName(productVersionName: String) {
-      cdkBuilder.productVersionName(productVersionName)
-    }
-
-    /**
-     * @param validateTemplate Whether the specified product template will be validated by
-     * CloudFormation.
-     * If turned off, an invalid template configuration can be stored.
-     */
-    override fun validateTemplate(validateTemplate: Boolean) {
-      cdkBuilder.validateTemplate(validateTemplate)
-    }
-
-    public fun build(): software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion
-        = cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject:
-        software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion,
-  ) : CloudFormationProductVersion {
-    /**
-     * The S3 template that points to the provisioning version template.
-     */
-    override fun cloudFormationTemplate(): CloudFormationTemplate =
-        unwrap(this).getCloudFormationTemplate().let(CloudFormationTemplate::wrap)
+    /** The S3 template that points to the provisioning version template. */
+    public fun cloudFormationTemplate(): CloudFormationTemplate
 
     /**
      * The description of the product version.
      *
      * Default: - No description provided
      */
-    override fun description(): String? = unwrap(this).getDescription()
+    public fun description(): String? = unwrap(this).getDescription()
 
     /**
      * The name of the product version.
      *
      * Default: - No product version name provided
      */
-    override fun productVersionName(): String? = unwrap(this).getProductVersionName()
+    public fun productVersionName(): String? = unwrap(this).getProductVersionName()
 
     /**
      * Whether the specified product template will be validated by CloudFormation.
@@ -134,25 +30,116 @@ public interface CloudFormationProductVersion {
      *
      * Default: true
      */
-    override fun validateTemplate(): Boolean? = unwrap(this).getValidateTemplate()
-  }
+    public fun validateTemplate(): Boolean? = unwrap(this).getValidateTemplate()
 
-  public companion object {
-    init {
+    /** A builder for [CloudFormationProductVersion] */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * @param cloudFormationTemplate The S3 template that points to the provisioning version
+         *   template.
+         */
+        public fun cloudFormationTemplate(cloudFormationTemplate: CloudFormationTemplate)
 
+        /** @param description The description of the product version. */
+        public fun description(description: String)
+
+        /** @param productVersionName The name of the product version. */
+        public fun productVersionName(productVersionName: String)
+
+        /**
+         * @param validateTemplate Whether the specified product template will be validated by
+         *   CloudFormation. If turned off, an invalid template configuration can be stored.
+         */
+        public fun validateTemplate(validateTemplate: Boolean)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): CloudFormationProductVersion {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion.Builder =
+            software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion.builder()
+
+        /**
+         * @param cloudFormationTemplate The S3 template that points to the provisioning version
+         *   template.
+         */
+        override fun cloudFormationTemplate(cloudFormationTemplate: CloudFormationTemplate) {
+            cdkBuilder.cloudFormationTemplate(
+                cloudFormationTemplate.let(CloudFormationTemplate::unwrap)
+            )
+        }
+
+        /** @param description The description of the product version. */
+        override fun description(description: String) {
+            cdkBuilder.description(description)
+        }
+
+        /** @param productVersionName The name of the product version. */
+        override fun productVersionName(productVersionName: String) {
+            cdkBuilder.productVersionName(productVersionName)
+        }
+
+        /**
+         * @param validateTemplate Whether the specified product template will be validated by
+         *   CloudFormation. If turned off, an invalid template configuration can be stored.
+         */
+        override fun validateTemplate(validateTemplate: Boolean) {
+            cdkBuilder.validateTemplate(validateTemplate)
+        }
+
+        public fun build():
+            software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion =
+            cdkBuilder.build()
     }
 
-    internal
-        fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion):
-        CloudFormationProductVersion = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject:
+            software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion,
+    ) : CloudFormationProductVersion {
+        /** The S3 template that points to the provisioning version template. */
+        override fun cloudFormationTemplate(): CloudFormationTemplate =
+            unwrap(this).getCloudFormationTemplate().let(CloudFormationTemplate::wrap)
 
-    internal fun unwrap(wrapped: CloudFormationProductVersion):
-        software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion = (wrapped as
-        Wrapper).cdkObject
-  }
+        /**
+         * The description of the product version.
+         *
+         * Default: - No description provided
+         */
+        override fun description(): String? = unwrap(this).getDescription()
+
+        /**
+         * The name of the product version.
+         *
+         * Default: - No product version name provided
+         */
+        override fun productVersionName(): String? = unwrap(this).getProductVersionName()
+
+        /**
+         * Whether the specified product template will be validated by CloudFormation.
+         *
+         * If turned off, an invalid template configuration can be stored.
+         *
+         * Default: true
+         */
+        override fun validateTemplate(): Boolean? = unwrap(this).getValidateTemplate()
+    }
+
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): CloudFormationProductVersion {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion
+        ): CloudFormationProductVersion = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: CloudFormationProductVersion
+        ): software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion =
+            (wrapped as Wrapper).cdkObject
+    }
 }

@@ -3,23 +3,22 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 import kotlin.String
 import kotlin.collections.List
 
-public open class CachedMethods internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.cloudfront.CachedMethods,
+public open class CachedMethods
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.cloudfront.CachedMethods,
 ) {
-  /**
-   * HTTP methods supported.
-   */
-  public open fun methods(): List<String> = unwrap(this).getMethods()
+    /** HTTP methods supported. */
+    public open fun methods(): List<String> = unwrap(this).getMethods()
 
-  public companion object {
-    init {
+    public companion object {
+        init {}
 
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.cloudfront.CachedMethods
+        ): CachedMethods = CachedMethods(cdkObject)
+
+        internal fun unwrap(
+            wrapped: CachedMethods
+        ): software.amazon.awscdk.services.cloudfront.CachedMethods = wrapped.cdkObject
     }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CachedMethods):
-        CachedMethods = CachedMethods(cdkObject)
-
-    internal fun unwrap(wrapped: CachedMethods):
-        software.amazon.awscdk.services.cloudfront.CachedMethods = wrapped.cdkObject
-  }
 }

@@ -133,9 +133,10 @@ private class DelegatedCall(
             type is ParameterizedTypeName -> when {
                 type.isMapWithCdkListValue() -> {
                     val listType =
-                        (type as ParameterizedTypeName).typeArguments[1] as ParameterizedTypeName
+                        type.typeArguments[1] as ParameterizedTypeName
+                    val nullableMapSuffix = if (type.isNullable) " ?: emptyMap()" else ""
                     CallSegment(
-                        "$nullable.mapValues{it.value.map(%T::wrap)} ?: emptyMap()",
+                        "$nullable.mapValues{it.value.map(%T::wrap)}$nullableMapSuffix",
                         listOf(listType.typeArguments[0].mapClassName().copy(nullable = false)),
                     )
                 }
@@ -145,10 +146,13 @@ private class DelegatedCall(
                     emptyList(),
                 )
 
-                type.isMapWithCdkValue() -> CallSegment(
-                    "$nullable.mapValues{%T.wrap(it.value)} ?: emptyMap()",
-                    listOf(type.typeArguments[1].mapClassName().copy(nullable = false)),
-                )
+                type.isMapWithCdkValue() -> {
+                    val nullableMapSuffix = if (type.isNullable) " ?: emptyMap()" else ""
+                    CallSegment(
+                        "$nullable.mapValues{%T.wrap(it.value)}$nullableMapSuffix",
+                        listOf(type.typeArguments[1].mapClassName().copy(nullable = false)),
+                    )
+                }
 
                 type.isListOfCdkObject() -> {
                     val nullableSuffix = if (type.isNullable) " ?: emptyList()" else ""

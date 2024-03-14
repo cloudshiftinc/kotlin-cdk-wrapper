@@ -4,276 +4,279 @@ import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
+import io.cloudshiftdev.awscdk.services.cloudwatch.Unit as CloudwatchUnit
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Number
 import kotlin.String
 import kotlin.Suppress
+import kotlin.Unit as KotlinUnit
 import kotlin.collections.Map
 import kotlin.jvm.JvmName
-import io.cloudshiftdev.awscdk.services.cloudwatch.Unit as CloudwatchUnit
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
-import kotlin.Unit as KotlinUnit
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class MetricFilter internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.logs.MetricFilter,
+public open class MetricFilter
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.logs.MetricFilter,
 ) : Resource(cdkObject) {
-  /**
-   * Return the given named metric for this Metric Filter.
-   *
-   * Default: avg over 5 minutes
-   *
-   * @param props
-   */
-  public open fun metric(): Metric = unwrap(this).metric().let(Metric::wrap)
-
-  /**
-   * Return the given named metric for this Metric Filter.
-   *
-   * Default: avg over 5 minutes
-   *
-   * @param props
-   */
-  public open fun metric(props: MetricOptions): Metric =
-      unwrap(this).metric(props.let(MetricOptions::unwrap)).let(Metric::wrap)
-
-  /**
-   * Return the given named metric for this Metric Filter.
-   *
-   * Default: avg over 5 minutes
-   *
-   * @param props
-   */
-  @Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("ec693c07b949f7893ac3c8fd5763a478f511c0166cc34b95609db468d9ef6414")
-  public open fun metric(props: MetricOptions.Builder.() -> KotlinUnit): Metric =
-      metric(MetricOptions(props))
-
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.logs.MetricFilter].
-   */
-  @CdkDslMarker
-  public interface Builder {
     /**
-     * The value to emit if the pattern does not match a particular event.
+     * Return the given named metric for this Metric Filter.
      *
-     * Default: No metric emitted.
+     * Default: avg over 5 minutes
      *
-     * @param defaultValue The value to emit if the pattern does not match a particular event. 
+     * @param props
      */
-    public fun defaultValue(defaultValue: Number)
+    public open fun metric(): Metric = unwrap(this).metric().let(Metric::wrap)
 
     /**
-     * The fields to use as dimensions for the metric.
+     * Return the given named metric for this Metric Filter.
      *
-     * One metric filter can include as many as three dimensions.
+     * Default: avg over 5 minutes
      *
-     * Default: - No dimensions attached to metrics.
-     *
-     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-logs-metricfilter-metrictransformation-dimensions)
-     * @param dimensions The fields to use as dimensions for the metric. 
+     * @param props
      */
-    public fun dimensions(dimensions: Map<String, String>)
+    public open fun metric(props: MetricOptions): Metric =
+        unwrap(this).metric(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     /**
-     * The name of the metric filter.
+     * Return the given named metric for this Metric Filter.
      *
-     * Default: - Cloudformation generated name.
+     * Default: avg over 5 minutes
      *
-     * @param filterName The name of the metric filter. 
+     * @param props
      */
-    public fun filterName(filterName: String)
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ec693c07b949f7893ac3c8fd5763a478f511c0166cc34b95609db468d9ef6414")
+    public open fun metric(props: MetricOptions.Builder.() -> KotlinUnit): Metric =
+        metric(MetricOptions(props))
 
-    /**
-     * Pattern to search for log events.
-     *
-     * @param filterPattern Pattern to search for log events. 
-     */
-    public fun filterPattern(filterPattern: IFilterPattern)
+    /** A fluent builder for [io.cloudshiftdev.awscdk.services.logs.MetricFilter]. */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * The value to emit if the pattern does not match a particular event.
+         *
+         * Default: No metric emitted.
+         *
+         * @param defaultValue The value to emit if the pattern does not match a particular event.
+         */
+        public fun defaultValue(defaultValue: Number)
 
-    /**
-     * The log group to create the filter on.
-     *
-     * @param logGroup The log group to create the filter on. 
-     */
-    public fun logGroup(logGroup: ILogGroup)
+        /**
+         * The fields to use as dimensions for the metric.
+         *
+         * One metric filter can include as many as three dimensions.
+         *
+         * Default: - No dimensions attached to metrics.
+         *
+         * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-logs-metricfilter-metrictransformation-dimensions)
+         *
+         * @param dimensions The fields to use as dimensions for the metric.
+         */
+        public fun dimensions(dimensions: Map<String, String>)
 
-    /**
-     * The name of the metric to emit.
-     *
-     * @param metricName The name of the metric to emit. 
-     */
-    public fun metricName(metricName: String)
+        /**
+         * The name of the metric filter.
+         *
+         * Default: - Cloudformation generated name.
+         *
+         * @param filterName The name of the metric filter.
+         */
+        public fun filterName(filterName: String)
 
-    /**
-     * The namespace of the metric to emit.
-     *
-     * @param metricNamespace The namespace of the metric to emit. 
-     */
-    public fun metricNamespace(metricNamespace: String)
+        /**
+         * Pattern to search for log events.
+         *
+         * @param filterPattern Pattern to search for log events.
+         */
+        public fun filterPattern(filterPattern: IFilterPattern)
 
-    /**
-     * The value to emit for the metric.
-     *
-     * Can either be a literal number (typically "1"), or the name of a field in the structure
-     * to take the value from the matched event. If you are using a field value, the field
-     * value must have been matched using the pattern.
-     *
-     * If you want to specify a field from a matched JSON structure, use '$.fieldName',
-     * and make sure the field is in the pattern (if only as '$.fieldName = *').
-     *
-     * If you want to specify a field from a matched space-delimited structure,
-     * use '$fieldName'.
-     *
-     * Default: "1"
-     *
-     * @param metricValue The value to emit for the metric. 
-     */
-    public fun metricValue(metricValue: String)
+        /**
+         * The log group to create the filter on.
+         *
+         * @param logGroup The log group to create the filter on.
+         */
+        public fun logGroup(logGroup: ILogGroup)
 
-    /**
-     * The unit to assign to the metric.
-     *
-     * Default: - No unit attached to metrics.
-     *
-     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-logs-metricfilter-metrictransformation-unit)
-     * @param unit The unit to assign to the metric. 
-     */
-    public fun unit(unit: CloudwatchUnit)
-  }
+        /**
+         * The name of the metric to emit.
+         *
+         * @param metricName The name of the metric to emit.
+         */
+        public fun metricName(metricName: String)
 
-  private class BuilderImpl(
-    scope: SoftwareConstructsConstruct,
-    id: String,
-  ) : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.logs.MetricFilter.Builder =
-        software.amazon.awscdk.services.logs.MetricFilter.Builder.create(scope, id)
+        /**
+         * The namespace of the metric to emit.
+         *
+         * @param metricNamespace The namespace of the metric to emit.
+         */
+        public fun metricNamespace(metricNamespace: String)
 
-    /**
-     * The value to emit if the pattern does not match a particular event.
-     *
-     * Default: No metric emitted.
-     *
-     * @param defaultValue The value to emit if the pattern does not match a particular event. 
-     */
-    override fun defaultValue(defaultValue: Number) {
-      cdkBuilder.defaultValue(defaultValue)
+        /**
+         * The value to emit for the metric.
+         *
+         * Can either be a literal number (typically "1"), or the name of a field in the structure
+         * to take the value from the matched event. If you are using a field value, the field value
+         * must have been matched using the pattern.
+         *
+         * If you want to specify a field from a matched JSON structure, use '$.fieldName', and make
+         * sure the field is in the pattern (if only as '$.fieldName = *').
+         *
+         * If you want to specify a field from a matched space-delimited structure, use
+         * '$fieldName'.
+         *
+         * Default: "1"
+         *
+         * @param metricValue The value to emit for the metric.
+         */
+        public fun metricValue(metricValue: String)
+
+        /**
+         * The unit to assign to the metric.
+         *
+         * Default: - No unit attached to metrics.
+         *
+         * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-logs-metricfilter-metrictransformation-unit)
+         *
+         * @param unit The unit to assign to the metric.
+         */
+        public fun unit(unit: CloudwatchUnit)
     }
 
-    /**
-     * The fields to use as dimensions for the metric.
-     *
-     * One metric filter can include as many as three dimensions.
-     *
-     * Default: - No dimensions attached to metrics.
-     *
-     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-logs-metricfilter-metrictransformation-dimensions)
-     * @param dimensions The fields to use as dimensions for the metric. 
-     */
-    override fun dimensions(dimensions: Map<String, String>) {
-      cdkBuilder.dimensions(dimensions)
+    private class BuilderImpl(
+        scope: SoftwareConstructsConstruct,
+        id: String,
+    ) : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.logs.MetricFilter.Builder =
+            software.amazon.awscdk.services.logs.MetricFilter.Builder.create(scope, id)
+
+        /**
+         * The value to emit if the pattern does not match a particular event.
+         *
+         * Default: No metric emitted.
+         *
+         * @param defaultValue The value to emit if the pattern does not match a particular event.
+         */
+        override fun defaultValue(defaultValue: Number) {
+            cdkBuilder.defaultValue(defaultValue)
+        }
+
+        /**
+         * The fields to use as dimensions for the metric.
+         *
+         * One metric filter can include as many as three dimensions.
+         *
+         * Default: - No dimensions attached to metrics.
+         *
+         * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-logs-metricfilter-metrictransformation-dimensions)
+         *
+         * @param dimensions The fields to use as dimensions for the metric.
+         */
+        override fun dimensions(dimensions: Map<String, String>) {
+            cdkBuilder.dimensions(dimensions)
+        }
+
+        /**
+         * The name of the metric filter.
+         *
+         * Default: - Cloudformation generated name.
+         *
+         * @param filterName The name of the metric filter.
+         */
+        override fun filterName(filterName: String) {
+            cdkBuilder.filterName(filterName)
+        }
+
+        /**
+         * Pattern to search for log events.
+         *
+         * @param filterPattern Pattern to search for log events.
+         */
+        override fun filterPattern(filterPattern: IFilterPattern) {
+            cdkBuilder.filterPattern(filterPattern.let(IFilterPattern::unwrap))
+        }
+
+        /**
+         * The log group to create the filter on.
+         *
+         * @param logGroup The log group to create the filter on.
+         */
+        override fun logGroup(logGroup: ILogGroup) {
+            cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
+        }
+
+        /**
+         * The name of the metric to emit.
+         *
+         * @param metricName The name of the metric to emit.
+         */
+        override fun metricName(metricName: String) {
+            cdkBuilder.metricName(metricName)
+        }
+
+        /**
+         * The namespace of the metric to emit.
+         *
+         * @param metricNamespace The namespace of the metric to emit.
+         */
+        override fun metricNamespace(metricNamespace: String) {
+            cdkBuilder.metricNamespace(metricNamespace)
+        }
+
+        /**
+         * The value to emit for the metric.
+         *
+         * Can either be a literal number (typically "1"), or the name of a field in the structure
+         * to take the value from the matched event. If you are using a field value, the field value
+         * must have been matched using the pattern.
+         *
+         * If you want to specify a field from a matched JSON structure, use '$.fieldName', and make
+         * sure the field is in the pattern (if only as '$.fieldName = *').
+         *
+         * If you want to specify a field from a matched space-delimited structure, use
+         * '$fieldName'.
+         *
+         * Default: "1"
+         *
+         * @param metricValue The value to emit for the metric.
+         */
+        override fun metricValue(metricValue: String) {
+            cdkBuilder.metricValue(metricValue)
+        }
+
+        /**
+         * The unit to assign to the metric.
+         *
+         * Default: - No unit attached to metrics.
+         *
+         * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-logs-metricfilter-metrictransformation-unit)
+         *
+         * @param unit The unit to assign to the metric.
+         */
+        override fun unit(unit: CloudwatchUnit) {
+            cdkBuilder.unit(unit.let(CloudwatchUnit::unwrap))
+        }
+
+        public fun build(): software.amazon.awscdk.services.logs.MetricFilter = cdkBuilder.build()
     }
 
-    /**
-     * The name of the metric filter.
-     *
-     * Default: - Cloudformation generated name.
-     *
-     * @param filterName The name of the metric filter. 
-     */
-    override fun filterName(filterName: String) {
-      cdkBuilder.filterName(filterName)
+    public companion object {
+        init {}
+
+        public operator fun invoke(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            block: Builder.() -> KotlinUnit = {},
+        ): MetricFilter {
+            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+            return MetricFilter(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.logs.MetricFilter
+        ): MetricFilter = MetricFilter(cdkObject)
+
+        internal fun unwrap(
+            wrapped: MetricFilter
+        ): software.amazon.awscdk.services.logs.MetricFilter = wrapped.cdkObject
     }
-
-    /**
-     * Pattern to search for log events.
-     *
-     * @param filterPattern Pattern to search for log events. 
-     */
-    override fun filterPattern(filterPattern: IFilterPattern) {
-      cdkBuilder.filterPattern(filterPattern.let(IFilterPattern::unwrap))
-    }
-
-    /**
-     * The log group to create the filter on.
-     *
-     * @param logGroup The log group to create the filter on. 
-     */
-    override fun logGroup(logGroup: ILogGroup) {
-      cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
-    }
-
-    /**
-     * The name of the metric to emit.
-     *
-     * @param metricName The name of the metric to emit. 
-     */
-    override fun metricName(metricName: String) {
-      cdkBuilder.metricName(metricName)
-    }
-
-    /**
-     * The namespace of the metric to emit.
-     *
-     * @param metricNamespace The namespace of the metric to emit. 
-     */
-    override fun metricNamespace(metricNamespace: String) {
-      cdkBuilder.metricNamespace(metricNamespace)
-    }
-
-    /**
-     * The value to emit for the metric.
-     *
-     * Can either be a literal number (typically "1"), or the name of a field in the structure
-     * to take the value from the matched event. If you are using a field value, the field
-     * value must have been matched using the pattern.
-     *
-     * If you want to specify a field from a matched JSON structure, use '$.fieldName',
-     * and make sure the field is in the pattern (if only as '$.fieldName = *').
-     *
-     * If you want to specify a field from a matched space-delimited structure,
-     * use '$fieldName'.
-     *
-     * Default: "1"
-     *
-     * @param metricValue The value to emit for the metric. 
-     */
-    override fun metricValue(metricValue: String) {
-      cdkBuilder.metricValue(metricValue)
-    }
-
-    /**
-     * The unit to assign to the metric.
-     *
-     * Default: - No unit attached to metrics.
-     *
-     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-logs-metricfilter-metrictransformation.html#cfn-logs-metricfilter-metrictransformation-unit)
-     * @param unit The unit to assign to the metric. 
-     */
-    override fun unit(unit: CloudwatchUnit) {
-      cdkBuilder.unit(unit.let(CloudwatchUnit::unwrap))
-    }
-
-    public fun build(): software.amazon.awscdk.services.logs.MetricFilter = cdkBuilder.build()
-  }
-
-  public companion object {
-    init {
-
-    }
-
-    public operator fun invoke(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      block: Builder.() -> KotlinUnit = {},
-    ): MetricFilter {
-      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-      return MetricFilter(builderImpl.apply(block).build())
-    }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.MetricFilter): MetricFilter =
-        MetricFilter(cdkObject)
-
-    internal fun unwrap(wrapped: MetricFilter): software.amazon.awscdk.services.logs.MetricFilter =
-        wrapped.cdkObject
-  }
 }

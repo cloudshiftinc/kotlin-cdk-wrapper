@@ -7,206 +7,191 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 
-public open class Action internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.appconfig.Action,
+public open class Action
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.appconfig.Action,
 ) {
-  /**
-   * The action points that will trigger the extension action.
-   */
-  public open fun actionPoints(): List<ActionPoint> =
-      unwrap(this).getActionPoints().map(ActionPoint::wrap)
+    /** The action points that will trigger the extension action. */
+    public open fun actionPoints(): List<ActionPoint> =
+        unwrap(this).getActionPoints().map(ActionPoint::wrap)
 
-  /**
-   * The description for the action.
-   */
-  public open fun description(): String? = unwrap(this).getDescription()
+    /** The description for the action. */
+    public open fun description(): String? = unwrap(this).getDescription()
 
-  /**
-   * The event destination for the action.
-   */
-  public open fun eventDestination(): IEventDestination =
-      unwrap(this).getEventDestination().let(IEventDestination::wrap)
+    /** The event destination for the action. */
+    public open fun eventDestination(): IEventDestination =
+        unwrap(this).getEventDestination().let(IEventDestination::wrap)
 
-  /**
-   * The execution role for the action.
-   */
-  public open fun executionRole(): IRole? = unwrap(this).getExecutionRole()?.let(IRole::wrap)
+    /** The execution role for the action. */
+    public open fun executionRole(): IRole? = unwrap(this).getExecutionRole()?.let(IRole::wrap)
 
-  /**
-   * The flag that specifies whether to create the execution role.
-   */
-  public open fun invokeWithoutExecutionRole(): Boolean? =
-      unwrap(this).getInvokeWithoutExecutionRole()
+    /** The flag that specifies whether to create the execution role. */
+    public open fun invokeWithoutExecutionRole(): Boolean? =
+        unwrap(this).getInvokeWithoutExecutionRole()
 
-  /**
-   * The name for the action.
-   */
-  public open fun name(): String? = unwrap(this).getName()
+    /** The name for the action. */
+    public open fun name(): String? = unwrap(this).getName()
 
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.appconfig.Action].
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * The action points that will trigger the extension action.
-     *
-     * @param actionPoints The action points that will trigger the extension action. 
-     */
-    public fun actionPoints(actionPoints: List<ActionPoint>)
+    /** A fluent builder for [io.cloudshiftdev.awscdk.services.appconfig.Action]. */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * The action points that will trigger the extension action.
+         *
+         * @param actionPoints The action points that will trigger the extension action.
+         */
+        public fun actionPoints(actionPoints: List<ActionPoint>)
 
-    /**
-     * The action points that will trigger the extension action.
-     *
-     * @param actionPoints The action points that will trigger the extension action. 
-     */
-    public fun actionPoints(vararg actionPoints: ActionPoint)
+        /**
+         * The action points that will trigger the extension action.
+         *
+         * @param actionPoints The action points that will trigger the extension action.
+         */
+        public fun actionPoints(vararg actionPoints: ActionPoint)
 
-    /**
-     * The description for the action.
-     *
-     * Default: - No description.
-     *
-     * @param description The description for the action. 
-     */
-    public fun description(description: String)
+        /**
+         * The description for the action.
+         *
+         * Default: - No description.
+         *
+         * @param description The description for the action.
+         */
+        public fun description(description: String)
 
-    /**
-     * The event destination for the action.
-     *
-     * @param eventDestination The event destination for the action. 
-     */
-    public fun eventDestination(eventDestination: IEventDestination)
+        /**
+         * The event destination for the action.
+         *
+         * @param eventDestination The event destination for the action.
+         */
+        public fun eventDestination(eventDestination: IEventDestination)
 
-    /**
-     * The execution role for the action.
-     *
-     * Default: - A role is generated.
-     *
-     * @param executionRole The execution role for the action. 
-     */
-    public fun executionRole(executionRole: IRole)
+        /**
+         * The execution role for the action.
+         *
+         * Default: - A role is generated.
+         *
+         * @param executionRole The execution role for the action.
+         */
+        public fun executionRole(executionRole: IRole)
 
-    /**
-     * The flag that specifies whether or not to create the execution role.
-     *
-     * If set to true, then the role will not be auto-generated under the assumption
-     * there is already the corresponding resource-based policy attached to the event
-     * destination. If false, the execution role will be generated if not provided.
-     *
-     * Default: false
-     *
-     * @param invokeWithoutExecutionRole The flag that specifies whether or not to create the
-     * execution role. 
-     */
-    public fun invokeWithoutExecutionRole(invokeWithoutExecutionRole: Boolean)
+        /**
+         * The flag that specifies whether or not to create the execution role.
+         *
+         * If set to true, then the role will not be auto-generated under the assumption there is
+         * already the corresponding resource-based policy attached to the event destination. If
+         * false, the execution role will be generated if not provided.
+         *
+         * Default: false
+         *
+         * @param invokeWithoutExecutionRole The flag that specifies whether or not to create the
+         *   execution role.
+         */
+        public fun invokeWithoutExecutionRole(invokeWithoutExecutionRole: Boolean)
 
-    /**
-     * The name for the action.
-     *
-     * Default: - A name is generated.
-     *
-     * @param name The name for the action. 
-     */
-    public fun name(name: String)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.appconfig.Action.Builder =
-        software.amazon.awscdk.services.appconfig.Action.Builder.create()
-
-    /**
-     * The action points that will trigger the extension action.
-     *
-     * @param actionPoints The action points that will trigger the extension action. 
-     */
-    override fun actionPoints(actionPoints: List<ActionPoint>) {
-      cdkBuilder.actionPoints(actionPoints.map(ActionPoint::unwrap))
+        /**
+         * The name for the action.
+         *
+         * Default: - A name is generated.
+         *
+         * @param name The name for the action.
+         */
+        public fun name(name: String)
     }
 
-    /**
-     * The action points that will trigger the extension action.
-     *
-     * @param actionPoints The action points that will trigger the extension action. 
-     */
-    override fun actionPoints(vararg actionPoints: ActionPoint): Unit =
-        actionPoints(actionPoints.toList())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.appconfig.Action.Builder =
+            software.amazon.awscdk.services.appconfig.Action.Builder.create()
 
-    /**
-     * The description for the action.
-     *
-     * Default: - No description.
-     *
-     * @param description The description for the action. 
-     */
-    override fun description(description: String) {
-      cdkBuilder.description(description)
+        /**
+         * The action points that will trigger the extension action.
+         *
+         * @param actionPoints The action points that will trigger the extension action.
+         */
+        override fun actionPoints(actionPoints: List<ActionPoint>) {
+            cdkBuilder.actionPoints(actionPoints.map(ActionPoint::unwrap))
+        }
+
+        /**
+         * The action points that will trigger the extension action.
+         *
+         * @param actionPoints The action points that will trigger the extension action.
+         */
+        override fun actionPoints(vararg actionPoints: ActionPoint): Unit =
+            actionPoints(actionPoints.toList())
+
+        /**
+         * The description for the action.
+         *
+         * Default: - No description.
+         *
+         * @param description The description for the action.
+         */
+        override fun description(description: String) {
+            cdkBuilder.description(description)
+        }
+
+        /**
+         * The event destination for the action.
+         *
+         * @param eventDestination The event destination for the action.
+         */
+        override fun eventDestination(eventDestination: IEventDestination) {
+            cdkBuilder.eventDestination(eventDestination.let(IEventDestination::unwrap))
+        }
+
+        /**
+         * The execution role for the action.
+         *
+         * Default: - A role is generated.
+         *
+         * @param executionRole The execution role for the action.
+         */
+        override fun executionRole(executionRole: IRole) {
+            cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
+        }
+
+        /**
+         * The flag that specifies whether or not to create the execution role.
+         *
+         * If set to true, then the role will not be auto-generated under the assumption there is
+         * already the corresponding resource-based policy attached to the event destination. If
+         * false, the execution role will be generated if not provided.
+         *
+         * Default: false
+         *
+         * @param invokeWithoutExecutionRole The flag that specifies whether or not to create the
+         *   execution role.
+         */
+        override fun invokeWithoutExecutionRole(invokeWithoutExecutionRole: Boolean) {
+            cdkBuilder.invokeWithoutExecutionRole(invokeWithoutExecutionRole)
+        }
+
+        /**
+         * The name for the action.
+         *
+         * Default: - A name is generated.
+         *
+         * @param name The name for the action.
+         */
+        override fun name(name: String) {
+            cdkBuilder.name(name)
+        }
+
+        public fun build(): software.amazon.awscdk.services.appconfig.Action = cdkBuilder.build()
     }
 
-    /**
-     * The event destination for the action.
-     *
-     * @param eventDestination The event destination for the action. 
-     */
-    override fun eventDestination(eventDestination: IEventDestination) {
-      cdkBuilder.eventDestination(eventDestination.let(IEventDestination::unwrap))
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): Action {
+            val builderImpl = BuilderImpl()
+            return Action(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.Action): Action =
+            Action(cdkObject)
+
+        internal fun unwrap(wrapped: Action): software.amazon.awscdk.services.appconfig.Action =
+            wrapped.cdkObject
     }
-
-    /**
-     * The execution role for the action.
-     *
-     * Default: - A role is generated.
-     *
-     * @param executionRole The execution role for the action. 
-     */
-    override fun executionRole(executionRole: IRole) {
-      cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
-    }
-
-    /**
-     * The flag that specifies whether or not to create the execution role.
-     *
-     * If set to true, then the role will not be auto-generated under the assumption
-     * there is already the corresponding resource-based policy attached to the event
-     * destination. If false, the execution role will be generated if not provided.
-     *
-     * Default: false
-     *
-     * @param invokeWithoutExecutionRole The flag that specifies whether or not to create the
-     * execution role. 
-     */
-    override fun invokeWithoutExecutionRole(invokeWithoutExecutionRole: Boolean) {
-      cdkBuilder.invokeWithoutExecutionRole(invokeWithoutExecutionRole)
-    }
-
-    /**
-     * The name for the action.
-     *
-     * Default: - A name is generated.
-     *
-     * @param name The name for the action. 
-     */
-    override fun name(name: String) {
-      cdkBuilder.name(name)
-    }
-
-    public fun build(): software.amazon.awscdk.services.appconfig.Action = cdkBuilder.build()
-  }
-
-  public companion object {
-    init {
-
-    }
-
-    public operator fun invoke(block: Builder.() -> Unit = {}): Action {
-      val builderImpl = BuilderImpl()
-      return Action(builderImpl.apply(block).build())
-    }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.Action): Action =
-        Action(cdkObject)
-
-    internal fun unwrap(wrapped: Action): software.amazon.awscdk.services.appconfig.Action =
-        wrapped.cdkObject
-  }
 }

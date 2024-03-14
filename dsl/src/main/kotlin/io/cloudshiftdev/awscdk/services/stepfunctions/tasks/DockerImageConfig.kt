@@ -5,63 +5,54 @@ import kotlin.String
 import kotlin.Unit
 
 public interface DockerImageConfig {
-  /**
-   * The fully qualified URI of the Docker image.
-   */
-  public fun imageUri(): String
+    /** The fully qualified URI of the Docker image. */
+    public fun imageUri(): String
 
-  /**
-   * A builder for [DockerImageConfig]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param imageUri The fully qualified URI of the Docker image. 
-     */
-    public fun imageUri(imageUri: String)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder:
-        software.amazon.awscdk.services.stepfunctions.tasks.DockerImageConfig.Builder =
-        software.amazon.awscdk.services.stepfunctions.tasks.DockerImageConfig.builder()
-
-    /**
-     * @param imageUri The fully qualified URI of the Docker image. 
-     */
-    override fun imageUri(imageUri: String) {
-      cdkBuilder.imageUri(imageUri)
+    /** A builder for [DockerImageConfig] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param imageUri The fully qualified URI of the Docker image. */
+        public fun imageUri(imageUri: String)
     }
 
-    public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.DockerImageConfig =
-        cdkBuilder.build()
-  }
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.stepfunctions.tasks.DockerImageConfig.Builder =
+            software.amazon.awscdk.services.stepfunctions.tasks.DockerImageConfig.builder()
 
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DockerImageConfig,
-  ) : DockerImageConfig {
-    /**
-     * The fully qualified URI of the Docker image.
-     */
-    override fun imageUri(): String = unwrap(this).getImageUri()
-  }
+        /** @param imageUri The fully qualified URI of the Docker image. */
+        override fun imageUri(imageUri: String) {
+            cdkBuilder.imageUri(imageUri)
+        }
 
-  public companion object {
-    init {
-
+        public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.DockerImageConfig =
+            cdkBuilder.build()
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): DockerImageConfig {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject:
+            software.amazon.awscdk.services.stepfunctions.tasks.DockerImageConfig,
+    ) : DockerImageConfig {
+        /** The fully qualified URI of the Docker image. */
+        override fun imageUri(): String = unwrap(this).getImageUri()
     }
 
-    internal
-        fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DockerImageConfig):
-        DockerImageConfig = Wrapper(cdkObject)
+    public companion object {
+        init {}
 
-    internal fun unwrap(wrapped: DockerImageConfig):
-        software.amazon.awscdk.services.stepfunctions.tasks.DockerImageConfig = (wrapped as
-        Wrapper).cdkObject
-  }
+        public operator fun invoke(block: Builder.() -> Unit = {}): DockerImageConfig {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DockerImageConfig
+        ): DockerImageConfig = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: DockerImageConfig
+        ): software.amazon.awscdk.services.stepfunctions.tasks.DockerImageConfig =
+            (wrapped as Wrapper).cdkObject
+    }
 }

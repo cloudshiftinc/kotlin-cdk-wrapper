@@ -5,86 +5,73 @@ import kotlin.String
 import kotlin.Unit
 
 public interface DistributionAttributes {
-  /**
-   * The distribution ID for this distribution.
-   */
-  public fun distributionId(): String
+    /** The distribution ID for this distribution. */
+    public fun distributionId(): String
 
-  /**
-   * The generated domain name of the Distribution, such as d111111abcdef8.cloudfront.net.
-   */
-  public fun domainName(): String
+    /** The generated domain name of the Distribution, such as d111111abcdef8.cloudfront.net. */
+    public fun domainName(): String
 
-  /**
-   * A builder for [DistributionAttributes]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param distributionId The distribution ID for this distribution. 
-     */
-    public fun distributionId(distributionId: String)
+    /** A builder for [DistributionAttributes] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param distributionId The distribution ID for this distribution. */
+        public fun distributionId(distributionId: String)
 
-    /**
-     * @param domainName The generated domain name of the Distribution, such as
-     * d111111abcdef8.cloudfront.net. 
-     */
-    public fun domainName(domainName: String)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder:
-        software.amazon.awscdk.services.cloudfront.DistributionAttributes.Builder =
-        software.amazon.awscdk.services.cloudfront.DistributionAttributes.builder()
-
-    /**
-     * @param distributionId The distribution ID for this distribution. 
-     */
-    override fun distributionId(distributionId: String) {
-      cdkBuilder.distributionId(distributionId)
+        /**
+         * @param domainName The generated domain name of the Distribution, such as
+         *   d111111abcdef8.cloudfront.net.
+         */
+        public fun domainName(domainName: String)
     }
 
-    /**
-     * @param domainName The generated domain name of the Distribution, such as
-     * d111111abcdef8.cloudfront.net. 
-     */
-    override fun domainName(domainName: String) {
-      cdkBuilder.domainName(domainName)
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.cloudfront.DistributionAttributes.Builder =
+            software.amazon.awscdk.services.cloudfront.DistributionAttributes.builder()
+
+        /** @param distributionId The distribution ID for this distribution. */
+        override fun distributionId(distributionId: String) {
+            cdkBuilder.distributionId(distributionId)
+        }
+
+        /**
+         * @param domainName The generated domain name of the Distribution, such as
+         *   d111111abcdef8.cloudfront.net.
+         */
+        override fun domainName(domainName: String) {
+            cdkBuilder.domainName(domainName)
+        }
+
+        public fun build(): software.amazon.awscdk.services.cloudfront.DistributionAttributes =
+            cdkBuilder.build()
     }
 
-    public fun build(): software.amazon.awscdk.services.cloudfront.DistributionAttributes =
-        cdkBuilder.build()
-  }
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.cloudfront.DistributionAttributes,
+    ) : DistributionAttributes {
+        /** The distribution ID for this distribution. */
+        override fun distributionId(): String = unwrap(this).getDistributionId()
 
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.cloudfront.DistributionAttributes,
-  ) : DistributionAttributes {
-    /**
-     * The distribution ID for this distribution.
-     */
-    override fun distributionId(): String = unwrap(this).getDistributionId()
-
-    /**
-     * The generated domain name of the Distribution, such as d111111abcdef8.cloudfront.net.
-     */
-    override fun domainName(): String = unwrap(this).getDomainName()
-  }
-
-  public companion object {
-    init {
-
+        /** The generated domain name of the Distribution, such as d111111abcdef8.cloudfront.net. */
+        override fun domainName(): String = unwrap(this).getDomainName()
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): DistributionAttributes {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): DistributionAttributes {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.cloudfront.DistributionAttributes
+        ): DistributionAttributes = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: DistributionAttributes
+        ): software.amazon.awscdk.services.cloudfront.DistributionAttributes =
+            (wrapped as Wrapper).cdkObject
     }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.DistributionAttributes):
-        DistributionAttributes = Wrapper(cdkObject)
-
-    internal fun unwrap(wrapped: DistributionAttributes):
-        software.amazon.awscdk.services.cloudfront.DistributionAttributes = (wrapped as
-        Wrapper).cdkObject
-  }
 }

@@ -5,6 +5,7 @@ import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -13,2534 +14,2416 @@ import kotlin.Suppress
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnTable internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.glue.CfnTable,
+public open class CfnTable
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.glue.CfnTable,
 ) : CfnResource(cdkObject), IInspectable {
-  /**
-   *
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
+    /**  */
+    public open fun attrId(): String = unwrap(this).getAttrId()
 
-  /**
-   * The ID of the Data Catalog in which to create the `Table` .
-   */
-  public open fun catalogId(): String = unwrap(this).getCatalogId()
+    /** The ID of the Data Catalog in which to create the `Table` . */
+    public open fun catalogId(): String = unwrap(this).getCatalogId()
 
-  /**
-   * The ID of the Data Catalog in which to create the `Table` .
-   */
-  public open fun catalogId(`value`: String) {
-    unwrap(this).setCatalogId(`value`)
-  }
+    /** The ID of the Data Catalog in which to create the `Table` . */
+    public open fun catalogId(`value`: String) {
+        unwrap(this).setCatalogId(`value`)
+    }
 
-  /**
-   * The name of the database where the table metadata resides.
-   */
-  public open fun databaseName(): String = unwrap(this).getDatabaseName()
+    /** The name of the database where the table metadata resides. */
+    public open fun databaseName(): String = unwrap(this).getDatabaseName()
 
-  /**
-   * The name of the database where the table metadata resides.
-   */
-  public open fun databaseName(`value`: String) {
-    unwrap(this).setDatabaseName(`value`)
-  }
-
-  /**
-   * Examines the CloudFormation resource and discloses attributes.
-   *
-   * @param inspector tree inspector to collect and process attributes. 
-   */
-  public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-  }
-
-  /**
-   * Specifies an `OpenTableFormatInput` structure when creating an open format table.
-   */
-  public open fun openTableFormatInput(): Any? = unwrap(this).getOpenTableFormatInput()
-
-  /**
-   * Specifies an `OpenTableFormatInput` structure when creating an open format table.
-   */
-  public open fun openTableFormatInput(`value`: IResolvable) {
-    unwrap(this).setOpenTableFormatInput(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * Specifies an `OpenTableFormatInput` structure when creating an open format table.
-   */
-  public open fun openTableFormatInput(`value`: OpenTableFormatInputProperty) {
-    unwrap(this).setOpenTableFormatInput(`value`.let(OpenTableFormatInputProperty::unwrap))
-  }
-
-  /**
-   * Specifies an `OpenTableFormatInput` structure when creating an open format table.
-   */
-  @Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("11fe2e18d5fffdbe6cf5bc00b869ce67bcf18389a9143b5c0b0ba9f0e3e62676")
-  public open fun openTableFormatInput(`value`: OpenTableFormatInputProperty.Builder.() -> Unit):
-      Unit = openTableFormatInput(OpenTableFormatInputProperty(`value`))
-
-  /**
-   * A structure used to define a table.
-   */
-  public open fun tableInput(): Any = unwrap(this).getTableInput()
-
-  /**
-   * A structure used to define a table.
-   */
-  public open fun tableInput(`value`: IResolvable) {
-    unwrap(this).setTableInput(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * A structure used to define a table.
-   */
-  public open fun tableInput(`value`: TableInputProperty) {
-    unwrap(this).setTableInput(`value`.let(TableInputProperty::unwrap))
-  }
-
-  /**
-   * A structure used to define a table.
-   */
-  @Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("3e638cb9c322af54329f162e9be8bb6388f3779d8aeb6a2d7a6a9645cf7822ab")
-  public open fun tableInput(`value`: TableInputProperty.Builder.() -> Unit): Unit =
-      tableInput(TableInputProperty(`value`))
-
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.glue.CfnTable].
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * The ID of the Data Catalog in which to create the `Table` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-catalogid)
-     * @param catalogId The ID of the Data Catalog in which to create the `Table` . 
-     */
-    public fun catalogId(catalogId: String)
+    /** The name of the database where the table metadata resides. */
+    public open fun databaseName(`value`: String) {
+        unwrap(this).setDatabaseName(`value`)
+    }
 
     /**
-     * The name of the database where the table metadata resides.
+     * Examines the CloudFormation resource and discloses attributes.
      *
-     * For Hive compatibility, this must be all lowercase.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-databasename)
-     * @param databaseName The name of the database where the table metadata resides. 
+     * @param inspector tree inspector to collect and process attributes.
      */
-    public fun databaseName(databaseName: String)
+    public override fun inspect(inspector: TreeInspector) {
+        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    }
 
-    /**
-     * Specifies an `OpenTableFormatInput` structure when creating an open format table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-opentableformatinput)
-     * @param openTableFormatInput Specifies an `OpenTableFormatInput` structure when creating an
-     * open format table. 
-     */
-    public fun openTableFormatInput(openTableFormatInput: IResolvable)
+    /** Specifies an `OpenTableFormatInput` structure when creating an open format table. */
+    public open fun openTableFormatInput(): Any? = unwrap(this).getOpenTableFormatInput()
 
-    /**
-     * Specifies an `OpenTableFormatInput` structure when creating an open format table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-opentableformatinput)
-     * @param openTableFormatInput Specifies an `OpenTableFormatInput` structure when creating an
-     * open format table. 
-     */
-    public fun openTableFormatInput(openTableFormatInput: OpenTableFormatInputProperty)
+    /** Specifies an `OpenTableFormatInput` structure when creating an open format table. */
+    public open fun openTableFormatInput(`value`: IResolvable) {
+        unwrap(this).setOpenTableFormatInput(`value`.let(IResolvable::unwrap))
+    }
 
-    /**
-     * Specifies an `OpenTableFormatInput` structure when creating an open format table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-opentableformatinput)
-     * @param openTableFormatInput Specifies an `OpenTableFormatInput` structure when creating an
-     * open format table. 
-     */
+    /** Specifies an `OpenTableFormatInput` structure when creating an open format table. */
+    public open fun openTableFormatInput(`value`: OpenTableFormatInputProperty) {
+        unwrap(this).setOpenTableFormatInput(`value`.let(OpenTableFormatInputProperty::unwrap))
+    }
+
+    /** Specifies an `OpenTableFormatInput` structure when creating an open format table. */
     @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("f8a1ce0206fa476f9741b875788859f70d5a35a996dc5005de444f861511e06d")
-    public
-        fun openTableFormatInput(openTableFormatInput: OpenTableFormatInputProperty.Builder.() -> Unit)
+    @JvmName("11fe2e18d5fffdbe6cf5bc00b869ce67bcf18389a9143b5c0b0ba9f0e3e62676")
+    public open fun openTableFormatInput(
+        `value`: OpenTableFormatInputProperty.Builder.() -> Unit
+    ): Unit = openTableFormatInput(OpenTableFormatInputProperty(`value`))
 
-    /**
-     * A structure used to define a table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-tableinput)
-     * @param tableInput A structure used to define a table. 
-     */
-    public fun tableInput(tableInput: IResolvable)
+    /** A structure used to define a table. */
+    public open fun tableInput(): Any = unwrap(this).getTableInput()
 
-    /**
-     * A structure used to define a table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-tableinput)
-     * @param tableInput A structure used to define a table. 
-     */
-    public fun tableInput(tableInput: TableInputProperty)
+    /** A structure used to define a table. */
+    public open fun tableInput(`value`: IResolvable) {
+        unwrap(this).setTableInput(`value`.let(IResolvable::unwrap))
+    }
 
-    /**
-     * A structure used to define a table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-tableinput)
-     * @param tableInput A structure used to define a table. 
-     */
+    /** A structure used to define a table. */
+    public open fun tableInput(`value`: TableInputProperty) {
+        unwrap(this).setTableInput(`value`.let(TableInputProperty::unwrap))
+    }
+
+    /** A structure used to define a table. */
     @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("1e4d6f4a371dc83ceaf52f80f085408dbc5ced0bf91865c754ab74ee3ace17d1")
-    public fun tableInput(tableInput: TableInputProperty.Builder.() -> Unit)
-  }
+    @JvmName("3e638cb9c322af54329f162e9be8bb6388f3779d8aeb6a2d7a6a9645cf7822ab")
+    public open fun tableInput(`value`: TableInputProperty.Builder.() -> Unit): Unit =
+        tableInput(TableInputProperty(`value`))
 
-  private class BuilderImpl(
-    scope: SoftwareConstructsConstruct,
-    id: String,
-  ) : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.glue.CfnTable.Builder =
-        software.amazon.awscdk.services.glue.CfnTable.Builder.create(scope, id)
-
-    /**
-     * The ID of the Data Catalog in which to create the `Table` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-catalogid)
-     * @param catalogId The ID of the Data Catalog in which to create the `Table` . 
-     */
-    override fun catalogId(catalogId: String) {
-      cdkBuilder.catalogId(catalogId)
-    }
-
-    /**
-     * The name of the database where the table metadata resides.
-     *
-     * For Hive compatibility, this must be all lowercase.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-databasename)
-     * @param databaseName The name of the database where the table metadata resides. 
-     */
-    override fun databaseName(databaseName: String) {
-      cdkBuilder.databaseName(databaseName)
-    }
-
-    /**
-     * Specifies an `OpenTableFormatInput` structure when creating an open format table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-opentableformatinput)
-     * @param openTableFormatInput Specifies an `OpenTableFormatInput` structure when creating an
-     * open format table. 
-     */
-    override fun openTableFormatInput(openTableFormatInput: IResolvable) {
-      cdkBuilder.openTableFormatInput(openTableFormatInput.let(IResolvable::unwrap))
-    }
-
-    /**
-     * Specifies an `OpenTableFormatInput` structure when creating an open format table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-opentableformatinput)
-     * @param openTableFormatInput Specifies an `OpenTableFormatInput` structure when creating an
-     * open format table. 
-     */
-    override fun openTableFormatInput(openTableFormatInput: OpenTableFormatInputProperty) {
-      cdkBuilder.openTableFormatInput(openTableFormatInput.let(OpenTableFormatInputProperty::unwrap))
-    }
-
-    /**
-     * Specifies an `OpenTableFormatInput` structure when creating an open format table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-opentableformatinput)
-     * @param openTableFormatInput Specifies an `OpenTableFormatInput` structure when creating an
-     * open format table. 
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("f8a1ce0206fa476f9741b875788859f70d5a35a996dc5005de444f861511e06d")
-    override
-        fun openTableFormatInput(openTableFormatInput: OpenTableFormatInputProperty.Builder.() -> Unit):
-        Unit = openTableFormatInput(OpenTableFormatInputProperty(openTableFormatInput))
-
-    /**
-     * A structure used to define a table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-tableinput)
-     * @param tableInput A structure used to define a table. 
-     */
-    override fun tableInput(tableInput: IResolvable) {
-      cdkBuilder.tableInput(tableInput.let(IResolvable::unwrap))
-    }
-
-    /**
-     * A structure used to define a table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-tableinput)
-     * @param tableInput A structure used to define a table. 
-     */
-    override fun tableInput(tableInput: TableInputProperty) {
-      cdkBuilder.tableInput(tableInput.let(TableInputProperty::unwrap))
-    }
-
-    /**
-     * A structure used to define a table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-tableinput)
-     * @param tableInput A structure used to define a table. 
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("1e4d6f4a371dc83ceaf52f80f085408dbc5ced0bf91865c754ab74ee3ace17d1")
-    override fun tableInput(tableInput: TableInputProperty.Builder.() -> Unit): Unit =
-        tableInput(TableInputProperty(tableInput))
-
-    public fun build(): software.amazon.awscdk.services.glue.CfnTable = cdkBuilder.build()
-  }
-
-  public companion object {
-    init {
-
-    }
-
-    public operator fun invoke(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      block: Builder.() -> Unit = {},
-    ): CfnTable {
-      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-      return CfnTable(builderImpl.apply(block).build())
-    }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable): CfnTable =
-        CfnTable(cdkObject)
-
-    internal fun unwrap(wrapped: CfnTable): software.amazon.awscdk.services.glue.CfnTable =
-        wrapped.cdkObject
-  }
-
-  public interface StorageDescriptorProperty {
-    /**
-     * A list of reducer grouping columns, clustering columns, and bucketing columns in the table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-bucketcolumns)
-     */
-    public fun bucketColumns(): List<String> = unwrap(this).getBucketColumns() ?: emptyList()
-
-    /**
-     * A list of the `Columns` in the table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-columns)
-     */
-    public fun columns(): Any? = unwrap(this).getColumns()
-
-    /**
-     * `True` if the data in the table is compressed, or `False` if not.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-compressed)
-     */
-    public fun compressed(): Any? = unwrap(this).getCompressed()
-
-    /**
-     * The input format: `SequenceFileInputFormat` (binary), or `TextInputFormat` , or a custom
-     * format.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-inputformat)
-     */
-    public fun inputFormat(): String? = unwrap(this).getInputFormat()
-
-    /**
-     * The physical location of the table.
-     *
-     * By default, this takes the form of the warehouse location, followed by the database location
-     * in the warehouse, followed by the table name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-location)
-     */
-    public fun location(): String? = unwrap(this).getLocation()
-
-    /**
-     * Must be specified if the table contains any dimension columns.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-numberofbuckets)
-     */
-    public fun numberOfBuckets(): Number? = unwrap(this).getNumberOfBuckets()
-
-    /**
-     * The output format: `SequenceFileOutputFormat` (binary), or `IgnoreKeyTextOutputFormat` , or a
-     * custom format.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-outputformat)
-     */
-    public fun outputFormat(): String? = unwrap(this).getOutputFormat()
-
-    /**
-     * The user-supplied properties in key-value form.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-parameters)
-     */
-    public fun parameters(): Any? = unwrap(this).getParameters()
-
-    /**
-     * An object that references a schema stored in the AWS Glue Schema Registry.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-schemareference)
-     */
-    public fun schemaReference(): Any? = unwrap(this).getSchemaReference()
-
-    /**
-     * The serialization/deserialization (SerDe) information.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-serdeinfo)
-     */
-    public fun serdeInfo(): Any? = unwrap(this).getSerdeInfo()
-
-    /**
-     * The information about values that appear frequently in a column (skewed values).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-skewedinfo)
-     */
-    public fun skewedInfo(): Any? = unwrap(this).getSkewedInfo()
-
-    /**
-     * A list specifying the sort order of each bucket in the table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-sortcolumns)
-     */
-    public fun sortColumns(): Any? = unwrap(this).getSortColumns()
-
-    /**
-     * `True` if the table data is stored in subdirectories, or `False` if not.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-storedassubdirectories)
-     */
-    public fun storedAsSubDirectories(): Any? = unwrap(this).getStoredAsSubDirectories()
-
-    /**
-     * A builder for [StorageDescriptorProperty]
-     */
+    /** A fluent builder for [io.cloudshiftdev.awscdk.services.glue.CfnTable]. */
     @CdkDslMarker
     public interface Builder {
-      /**
-       * @param bucketColumns A list of reducer grouping columns, clustering columns, and bucketing
-       * columns in the table.
-       */
-      public fun bucketColumns(bucketColumns: List<String>)
+        /**
+         * The ID of the Data Catalog in which to create the `Table` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-catalogid)
+         *
+         * @param catalogId The ID of the Data Catalog in which to create the `Table` .
+         */
+        public fun catalogId(catalogId: String)
 
-      /**
-       * @param bucketColumns A list of reducer grouping columns, clustering columns, and bucketing
-       * columns in the table.
-       */
-      public fun bucketColumns(vararg bucketColumns: String)
+        /**
+         * The name of the database where the table metadata resides.
+         *
+         * For Hive compatibility, this must be all lowercase.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-databasename)
+         *
+         * @param databaseName The name of the database where the table metadata resides.
+         */
+        public fun databaseName(databaseName: String)
 
-      /**
-       * @param columns A list of the `Columns` in the table.
-       */
-      public fun columns(columns: IResolvable)
+        /**
+         * Specifies an `OpenTableFormatInput` structure when creating an open format table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-opentableformatinput)
+         *
+         * @param openTableFormatInput Specifies an `OpenTableFormatInput` structure when creating
+         *   an open format table.
+         */
+        public fun openTableFormatInput(openTableFormatInput: IResolvable)
 
-      /**
-       * @param columns A list of the `Columns` in the table.
-       */
-      public fun columns(columns: List<Any>)
+        /**
+         * Specifies an `OpenTableFormatInput` structure when creating an open format table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-opentableformatinput)
+         *
+         * @param openTableFormatInput Specifies an `OpenTableFormatInput` structure when creating
+         *   an open format table.
+         */
+        public fun openTableFormatInput(openTableFormatInput: OpenTableFormatInputProperty)
 
-      /**
-       * @param columns A list of the `Columns` in the table.
-       */
-      public fun columns(vararg columns: Any)
+        /**
+         * Specifies an `OpenTableFormatInput` structure when creating an open format table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-opentableformatinput)
+         *
+         * @param openTableFormatInput Specifies an `OpenTableFormatInput` structure when creating
+         *   an open format table.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("f8a1ce0206fa476f9741b875788859f70d5a35a996dc5005de444f861511e06d")
+        public fun openTableFormatInput(
+            openTableFormatInput: OpenTableFormatInputProperty.Builder.() -> Unit
+        )
 
-      /**
-       * @param compressed `True` if the data in the table is compressed, or `False` if not.
-       */
-      public fun compressed(compressed: Boolean)
+        /**
+         * A structure used to define a table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-tableinput)
+         *
+         * @param tableInput A structure used to define a table.
+         */
+        public fun tableInput(tableInput: IResolvable)
 
-      /**
-       * @param compressed `True` if the data in the table is compressed, or `False` if not.
-       */
-      public fun compressed(compressed: IResolvable)
+        /**
+         * A structure used to define a table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-tableinput)
+         *
+         * @param tableInput A structure used to define a table.
+         */
+        public fun tableInput(tableInput: TableInputProperty)
 
-      /**
-       * @param inputFormat The input format: `SequenceFileInputFormat` (binary), or
-       * `TextInputFormat` , or a custom format.
-       */
-      public fun inputFormat(inputFormat: String)
-
-      /**
-       * @param location The physical location of the table.
-       * By default, this takes the form of the warehouse location, followed by the database
-       * location in the warehouse, followed by the table name.
-       */
-      public fun location(location: String)
-
-      /**
-       * @param numberOfBuckets Must be specified if the table contains any dimension columns.
-       */
-      public fun numberOfBuckets(numberOfBuckets: Number)
-
-      /**
-       * @param outputFormat The output format: `SequenceFileOutputFormat` (binary), or
-       * `IgnoreKeyTextOutputFormat` , or a custom format.
-       */
-      public fun outputFormat(outputFormat: String)
-
-      /**
-       * @param parameters The user-supplied properties in key-value form.
-       */
-      public fun parameters(parameters: Any)
-
-      /**
-       * @param schemaReference An object that references a schema stored in the AWS Glue Schema
-       * Registry.
-       */
-      public fun schemaReference(schemaReference: IResolvable)
-
-      /**
-       * @param schemaReference An object that references a schema stored in the AWS Glue Schema
-       * Registry.
-       */
-      public fun schemaReference(schemaReference: SchemaReferenceProperty)
-
-      /**
-       * @param schemaReference An object that references a schema stored in the AWS Glue Schema
-       * Registry.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("da5e942beacf9cf335ff658999fff79422fdc7bf7cd4256314d18849988a9648")
-      public fun schemaReference(schemaReference: SchemaReferenceProperty.Builder.() -> Unit)
-
-      /**
-       * @param serdeInfo The serialization/deserialization (SerDe) information.
-       */
-      public fun serdeInfo(serdeInfo: IResolvable)
-
-      /**
-       * @param serdeInfo The serialization/deserialization (SerDe) information.
-       */
-      public fun serdeInfo(serdeInfo: SerdeInfoProperty)
-
-      /**
-       * @param serdeInfo The serialization/deserialization (SerDe) information.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("11d04ede27877c042f8a31a30de79399591e90dd4a64a080f93acccbd4779395")
-      public fun serdeInfo(serdeInfo: SerdeInfoProperty.Builder.() -> Unit)
-
-      /**
-       * @param skewedInfo The information about values that appear frequently in a column (skewed
-       * values).
-       */
-      public fun skewedInfo(skewedInfo: IResolvable)
-
-      /**
-       * @param skewedInfo The information about values that appear frequently in a column (skewed
-       * values).
-       */
-      public fun skewedInfo(skewedInfo: SkewedInfoProperty)
-
-      /**
-       * @param skewedInfo The information about values that appear frequently in a column (skewed
-       * values).
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2202e46e0497ddccdb231fcb92fd088f818c533569e70f9091b006a0c4b2b8eb")
-      public fun skewedInfo(skewedInfo: SkewedInfoProperty.Builder.() -> Unit)
-
-      /**
-       * @param sortColumns A list specifying the sort order of each bucket in the table.
-       */
-      public fun sortColumns(sortColumns: IResolvable)
-
-      /**
-       * @param sortColumns A list specifying the sort order of each bucket in the table.
-       */
-      public fun sortColumns(sortColumns: List<Any>)
-
-      /**
-       * @param sortColumns A list specifying the sort order of each bucket in the table.
-       */
-      public fun sortColumns(vararg sortColumns: Any)
-
-      /**
-       * @param storedAsSubDirectories `True` if the table data is stored in subdirectories, or
-       * `False` if not.
-       */
-      public fun storedAsSubDirectories(storedAsSubDirectories: Boolean)
-
-      /**
-       * @param storedAsSubDirectories `True` if the table data is stored in subdirectories, or
-       * `False` if not.
-       */
-      public fun storedAsSubDirectories(storedAsSubDirectories: IResolvable)
+        /**
+         * A structure used to define a table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-tableinput)
+         *
+         * @param tableInput A structure used to define a table.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("1e4d6f4a371dc83ceaf52f80f085408dbc5ced0bf91865c754ab74ee3ace17d1")
+        public fun tableInput(tableInput: TableInputProperty.Builder.() -> Unit)
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnTable.StorageDescriptorProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnTable.StorageDescriptorProperty.builder()
+    private class BuilderImpl(
+        scope: SoftwareConstructsConstruct,
+        id: String,
+    ) : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.glue.CfnTable.Builder =
+            software.amazon.awscdk.services.glue.CfnTable.Builder.create(scope, id)
 
-      /**
-       * @param bucketColumns A list of reducer grouping columns, clustering columns, and bucketing
-       * columns in the table.
-       */
-      override fun bucketColumns(bucketColumns: List<String>) {
-        cdkBuilder.bucketColumns(bucketColumns)
-      }
+        /**
+         * The ID of the Data Catalog in which to create the `Table` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-catalogid)
+         *
+         * @param catalogId The ID of the Data Catalog in which to create the `Table` .
+         */
+        override fun catalogId(catalogId: String) {
+            cdkBuilder.catalogId(catalogId)
+        }
 
-      /**
-       * @param bucketColumns A list of reducer grouping columns, clustering columns, and bucketing
-       * columns in the table.
-       */
-      override fun bucketColumns(vararg bucketColumns: String): Unit =
-          bucketColumns(bucketColumns.toList())
+        /**
+         * The name of the database where the table metadata resides.
+         *
+         * For Hive compatibility, this must be all lowercase.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-databasename)
+         *
+         * @param databaseName The name of the database where the table metadata resides.
+         */
+        override fun databaseName(databaseName: String) {
+            cdkBuilder.databaseName(databaseName)
+        }
 
-      /**
-       * @param columns A list of the `Columns` in the table.
-       */
-      override fun columns(columns: IResolvable) {
-        cdkBuilder.columns(columns.let(IResolvable::unwrap))
-      }
+        /**
+         * Specifies an `OpenTableFormatInput` structure when creating an open format table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-opentableformatinput)
+         *
+         * @param openTableFormatInput Specifies an `OpenTableFormatInput` structure when creating
+         *   an open format table.
+         */
+        override fun openTableFormatInput(openTableFormatInput: IResolvable) {
+            cdkBuilder.openTableFormatInput(openTableFormatInput.let(IResolvable::unwrap))
+        }
 
-      /**
-       * @param columns A list of the `Columns` in the table.
-       */
-      override fun columns(columns: List<Any>) {
-        cdkBuilder.columns(columns)
-      }
+        /**
+         * Specifies an `OpenTableFormatInput` structure when creating an open format table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-opentableformatinput)
+         *
+         * @param openTableFormatInput Specifies an `OpenTableFormatInput` structure when creating
+         *   an open format table.
+         */
+        override fun openTableFormatInput(openTableFormatInput: OpenTableFormatInputProperty) {
+            cdkBuilder.openTableFormatInput(
+                openTableFormatInput.let(OpenTableFormatInputProperty::unwrap)
+            )
+        }
 
-      /**
-       * @param columns A list of the `Columns` in the table.
-       */
-      override fun columns(vararg columns: Any): Unit = columns(columns.toList())
+        /**
+         * Specifies an `OpenTableFormatInput` structure when creating an open format table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-opentableformatinput)
+         *
+         * @param openTableFormatInput Specifies an `OpenTableFormatInput` structure when creating
+         *   an open format table.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("f8a1ce0206fa476f9741b875788859f70d5a35a996dc5005de444f861511e06d")
+        override fun openTableFormatInput(
+            openTableFormatInput: OpenTableFormatInputProperty.Builder.() -> Unit
+        ): Unit = openTableFormatInput(OpenTableFormatInputProperty(openTableFormatInput))
 
-      /**
-       * @param compressed `True` if the data in the table is compressed, or `False` if not.
-       */
-      override fun compressed(compressed: Boolean) {
-        cdkBuilder.compressed(compressed)
-      }
+        /**
+         * A structure used to define a table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-tableinput)
+         *
+         * @param tableInput A structure used to define a table.
+         */
+        override fun tableInput(tableInput: IResolvable) {
+            cdkBuilder.tableInput(tableInput.let(IResolvable::unwrap))
+        }
 
-      /**
-       * @param compressed `True` if the data in the table is compressed, or `False` if not.
-       */
-      override fun compressed(compressed: IResolvable) {
-        cdkBuilder.compressed(compressed.let(IResolvable::unwrap))
-      }
+        /**
+         * A structure used to define a table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-tableinput)
+         *
+         * @param tableInput A structure used to define a table.
+         */
+        override fun tableInput(tableInput: TableInputProperty) {
+            cdkBuilder.tableInput(tableInput.let(TableInputProperty::unwrap))
+        }
 
-      /**
-       * @param inputFormat The input format: `SequenceFileInputFormat` (binary), or
-       * `TextInputFormat` , or a custom format.
-       */
-      override fun inputFormat(inputFormat: String) {
-        cdkBuilder.inputFormat(inputFormat)
-      }
+        /**
+         * A structure used to define a table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-tableinput)
+         *
+         * @param tableInput A structure used to define a table.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("1e4d6f4a371dc83ceaf52f80f085408dbc5ced0bf91865c754ab74ee3ace17d1")
+        override fun tableInput(tableInput: TableInputProperty.Builder.() -> Unit): Unit =
+            tableInput(TableInputProperty(tableInput))
 
-      /**
-       * @param location The physical location of the table.
-       * By default, this takes the form of the warehouse location, followed by the database
-       * location in the warehouse, followed by the table name.
-       */
-      override fun location(location: String) {
-        cdkBuilder.location(location)
-      }
-
-      /**
-       * @param numberOfBuckets Must be specified if the table contains any dimension columns.
-       */
-      override fun numberOfBuckets(numberOfBuckets: Number) {
-        cdkBuilder.numberOfBuckets(numberOfBuckets)
-      }
-
-      /**
-       * @param outputFormat The output format: `SequenceFileOutputFormat` (binary), or
-       * `IgnoreKeyTextOutputFormat` , or a custom format.
-       */
-      override fun outputFormat(outputFormat: String) {
-        cdkBuilder.outputFormat(outputFormat)
-      }
-
-      /**
-       * @param parameters The user-supplied properties in key-value form.
-       */
-      override fun parameters(parameters: Any) {
-        cdkBuilder.parameters(parameters)
-      }
-
-      /**
-       * @param schemaReference An object that references a schema stored in the AWS Glue Schema
-       * Registry.
-       */
-      override fun schemaReference(schemaReference: IResolvable) {
-        cdkBuilder.schemaReference(schemaReference.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param schemaReference An object that references a schema stored in the AWS Glue Schema
-       * Registry.
-       */
-      override fun schemaReference(schemaReference: SchemaReferenceProperty) {
-        cdkBuilder.schemaReference(schemaReference.let(SchemaReferenceProperty::unwrap))
-      }
-
-      /**
-       * @param schemaReference An object that references a schema stored in the AWS Glue Schema
-       * Registry.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("da5e942beacf9cf335ff658999fff79422fdc7bf7cd4256314d18849988a9648")
-      override fun schemaReference(schemaReference: SchemaReferenceProperty.Builder.() -> Unit):
-          Unit = schemaReference(SchemaReferenceProperty(schemaReference))
-
-      /**
-       * @param serdeInfo The serialization/deserialization (SerDe) information.
-       */
-      override fun serdeInfo(serdeInfo: IResolvable) {
-        cdkBuilder.serdeInfo(serdeInfo.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param serdeInfo The serialization/deserialization (SerDe) information.
-       */
-      override fun serdeInfo(serdeInfo: SerdeInfoProperty) {
-        cdkBuilder.serdeInfo(serdeInfo.let(SerdeInfoProperty::unwrap))
-      }
-
-      /**
-       * @param serdeInfo The serialization/deserialization (SerDe) information.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("11d04ede27877c042f8a31a30de79399591e90dd4a64a080f93acccbd4779395")
-      override fun serdeInfo(serdeInfo: SerdeInfoProperty.Builder.() -> Unit): Unit =
-          serdeInfo(SerdeInfoProperty(serdeInfo))
-
-      /**
-       * @param skewedInfo The information about values that appear frequently in a column (skewed
-       * values).
-       */
-      override fun skewedInfo(skewedInfo: IResolvable) {
-        cdkBuilder.skewedInfo(skewedInfo.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param skewedInfo The information about values that appear frequently in a column (skewed
-       * values).
-       */
-      override fun skewedInfo(skewedInfo: SkewedInfoProperty) {
-        cdkBuilder.skewedInfo(skewedInfo.let(SkewedInfoProperty::unwrap))
-      }
-
-      /**
-       * @param skewedInfo The information about values that appear frequently in a column (skewed
-       * values).
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2202e46e0497ddccdb231fcb92fd088f818c533569e70f9091b006a0c4b2b8eb")
-      override fun skewedInfo(skewedInfo: SkewedInfoProperty.Builder.() -> Unit): Unit =
-          skewedInfo(SkewedInfoProperty(skewedInfo))
-
-      /**
-       * @param sortColumns A list specifying the sort order of each bucket in the table.
-       */
-      override fun sortColumns(sortColumns: IResolvable) {
-        cdkBuilder.sortColumns(sortColumns.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param sortColumns A list specifying the sort order of each bucket in the table.
-       */
-      override fun sortColumns(sortColumns: List<Any>) {
-        cdkBuilder.sortColumns(sortColumns)
-      }
-
-      /**
-       * @param sortColumns A list specifying the sort order of each bucket in the table.
-       */
-      override fun sortColumns(vararg sortColumns: Any): Unit = sortColumns(sortColumns.toList())
-
-      /**
-       * @param storedAsSubDirectories `True` if the table data is stored in subdirectories, or
-       * `False` if not.
-       */
-      override fun storedAsSubDirectories(storedAsSubDirectories: Boolean) {
-        cdkBuilder.storedAsSubDirectories(storedAsSubDirectories)
-      }
-
-      /**
-       * @param storedAsSubDirectories `True` if the table data is stored in subdirectories, or
-       * `False` if not.
-       */
-      override fun storedAsSubDirectories(storedAsSubDirectories: IResolvable) {
-        cdkBuilder.storedAsSubDirectories(storedAsSubDirectories.let(IResolvable::unwrap))
-      }
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnTable.StorageDescriptorProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.glue.CfnTable.StorageDescriptorProperty,
-    ) : StorageDescriptorProperty {
-      /**
-       * A list of reducer grouping columns, clustering columns, and bucketing columns in the table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-bucketcolumns)
-       */
-      override fun bucketColumns(): List<String> = unwrap(this).getBucketColumns() ?: emptyList()
-
-      /**
-       * A list of the `Columns` in the table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-columns)
-       */
-      override fun columns(): Any? = unwrap(this).getColumns()
-
-      /**
-       * `True` if the data in the table is compressed, or `False` if not.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-compressed)
-       */
-      override fun compressed(): Any? = unwrap(this).getCompressed()
-
-      /**
-       * The input format: `SequenceFileInputFormat` (binary), or `TextInputFormat` , or a custom
-       * format.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-inputformat)
-       */
-      override fun inputFormat(): String? = unwrap(this).getInputFormat()
-
-      /**
-       * The physical location of the table.
-       *
-       * By default, this takes the form of the warehouse location, followed by the database
-       * location in the warehouse, followed by the table name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-location)
-       */
-      override fun location(): String? = unwrap(this).getLocation()
-
-      /**
-       * Must be specified if the table contains any dimension columns.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-numberofbuckets)
-       */
-      override fun numberOfBuckets(): Number? = unwrap(this).getNumberOfBuckets()
-
-      /**
-       * The output format: `SequenceFileOutputFormat` (binary), or `IgnoreKeyTextOutputFormat` , or
-       * a custom format.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-outputformat)
-       */
-      override fun outputFormat(): String? = unwrap(this).getOutputFormat()
-
-      /**
-       * The user-supplied properties in key-value form.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-parameters)
-       */
-      override fun parameters(): Any? = unwrap(this).getParameters()
-
-      /**
-       * An object that references a schema stored in the AWS Glue Schema Registry.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-schemareference)
-       */
-      override fun schemaReference(): Any? = unwrap(this).getSchemaReference()
-
-      /**
-       * The serialization/deserialization (SerDe) information.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-serdeinfo)
-       */
-      override fun serdeInfo(): Any? = unwrap(this).getSerdeInfo()
-
-      /**
-       * The information about values that appear frequently in a column (skewed values).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-skewedinfo)
-       */
-      override fun skewedInfo(): Any? = unwrap(this).getSkewedInfo()
-
-      /**
-       * A list specifying the sort order of each bucket in the table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-sortcolumns)
-       */
-      override fun sortColumns(): Any? = unwrap(this).getSortColumns()
-
-      /**
-       * `True` if the table data is stored in subdirectories, or `False` if not.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-storedassubdirectories)
-       */
-      override fun storedAsSubDirectories(): Any? = unwrap(this).getStoredAsSubDirectories()
+        public fun build(): software.amazon.awscdk.services.glue.CfnTable = cdkBuilder.build()
     }
 
     public companion object {
-      init {
+        init {}
 
-      }
+        public operator fun invoke(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            block: Builder.() -> Unit = {},
+        ): CfnTable {
+            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+            return CfnTable(builderImpl.apply(block).build())
+        }
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): StorageDescriptorProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable): CfnTable =
+            CfnTable(cdkObject)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable.StorageDescriptorProperty):
-          StorageDescriptorProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: StorageDescriptorProperty):
-          software.amazon.awscdk.services.glue.CfnTable.StorageDescriptorProperty = (wrapped as
-          Wrapper).cdkObject
-    }
-  }
-
-  public interface OpenTableFormatInputProperty {
-    /**
-     * Specifies an `IcebergInput` structure that defines an Apache Iceberg metadata table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-opentableformatinput.html#cfn-glue-table-opentableformatinput-iceberginput)
-     */
-    public fun icebergInput(): Any? = unwrap(this).getIcebergInput()
-
-    /**
-     * A builder for [OpenTableFormatInputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param icebergInput Specifies an `IcebergInput` structure that defines an Apache Iceberg
-       * metadata table.
-       */
-      public fun icebergInput(icebergInput: IResolvable)
-
-      /**
-       * @param icebergInput Specifies an `IcebergInput` structure that defines an Apache Iceberg
-       * metadata table.
-       */
-      public fun icebergInput(icebergInput: IcebergInputProperty)
-
-      /**
-       * @param icebergInput Specifies an `IcebergInput` structure that defines an Apache Iceberg
-       * metadata table.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1dabdd8870b197acdacd5ca509199e8896ee45cc3920d4d67e7624b2f6cec6e2")
-      public fun icebergInput(icebergInput: IcebergInputProperty.Builder.() -> Unit)
+        internal fun unwrap(wrapped: CfnTable): software.amazon.awscdk.services.glue.CfnTable =
+            wrapped.cdkObject
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnTable.OpenTableFormatInputProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnTable.OpenTableFormatInputProperty.builder()
+    public interface StorageDescriptorProperty {
+        /**
+         * A list of reducer grouping columns, clustering columns, and bucketing columns in the
+         * table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-bucketcolumns)
+         */
+        public fun bucketColumns(): List<String> = unwrap(this).getBucketColumns() ?: emptyList()
 
-      /**
-       * @param icebergInput Specifies an `IcebergInput` structure that defines an Apache Iceberg
-       * metadata table.
-       */
-      override fun icebergInput(icebergInput: IResolvable) {
-        cdkBuilder.icebergInput(icebergInput.let(IResolvable::unwrap))
-      }
+        /**
+         * A list of the `Columns` in the table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-columns)
+         */
+        public fun columns(): Any? = unwrap(this).getColumns()
 
-      /**
-       * @param icebergInput Specifies an `IcebergInput` structure that defines an Apache Iceberg
-       * metadata table.
-       */
-      override fun icebergInput(icebergInput: IcebergInputProperty) {
-        cdkBuilder.icebergInput(icebergInput.let(IcebergInputProperty::unwrap))
-      }
+        /**
+         * `True` if the data in the table is compressed, or `False` if not.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-compressed)
+         */
+        public fun compressed(): Any? = unwrap(this).getCompressed()
 
-      /**
-       * @param icebergInput Specifies an `IcebergInput` structure that defines an Apache Iceberg
-       * metadata table.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1dabdd8870b197acdacd5ca509199e8896ee45cc3920d4d67e7624b2f6cec6e2")
-      override fun icebergInput(icebergInput: IcebergInputProperty.Builder.() -> Unit): Unit =
-          icebergInput(IcebergInputProperty(icebergInput))
+        /**
+         * The input format: `SequenceFileInputFormat` (binary), or `TextInputFormat` , or a custom
+         * format.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-inputformat)
+         */
+        public fun inputFormat(): String? = unwrap(this).getInputFormat()
 
-      public fun build(): software.amazon.awscdk.services.glue.CfnTable.OpenTableFormatInputProperty
-          = cdkBuilder.build()
+        /**
+         * The physical location of the table.
+         *
+         * By default, this takes the form of the warehouse location, followed by the database
+         * location in the warehouse, followed by the table name.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-location)
+         */
+        public fun location(): String? = unwrap(this).getLocation()
+
+        /**
+         * Must be specified if the table contains any dimension columns.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-numberofbuckets)
+         */
+        public fun numberOfBuckets(): Number? = unwrap(this).getNumberOfBuckets()
+
+        /**
+         * The output format: `SequenceFileOutputFormat` (binary), or `IgnoreKeyTextOutputFormat` ,
+         * or a custom format.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-outputformat)
+         */
+        public fun outputFormat(): String? = unwrap(this).getOutputFormat()
+
+        /**
+         * The user-supplied properties in key-value form.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-parameters)
+         */
+        public fun parameters(): Any? = unwrap(this).getParameters()
+
+        /**
+         * An object that references a schema stored in the AWS Glue Schema Registry.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-schemareference)
+         */
+        public fun schemaReference(): Any? = unwrap(this).getSchemaReference()
+
+        /**
+         * The serialization/deserialization (SerDe) information.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-serdeinfo)
+         */
+        public fun serdeInfo(): Any? = unwrap(this).getSerdeInfo()
+
+        /**
+         * The information about values that appear frequently in a column (skewed values).
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-skewedinfo)
+         */
+        public fun skewedInfo(): Any? = unwrap(this).getSkewedInfo()
+
+        /**
+         * A list specifying the sort order of each bucket in the table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-sortcolumns)
+         */
+        public fun sortColumns(): Any? = unwrap(this).getSortColumns()
+
+        /**
+         * `True` if the table data is stored in subdirectories, or `False` if not.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-storedassubdirectories)
+         */
+        public fun storedAsSubDirectories(): Any? = unwrap(this).getStoredAsSubDirectories()
+
+        /** A builder for [StorageDescriptorProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param bucketColumns A list of reducer grouping columns, clustering columns, and
+             *   bucketing columns in the table.
+             */
+            public fun bucketColumns(bucketColumns: List<String>)
+
+            /**
+             * @param bucketColumns A list of reducer grouping columns, clustering columns, and
+             *   bucketing columns in the table.
+             */
+            public fun bucketColumns(vararg bucketColumns: String)
+
+            /** @param columns A list of the `Columns` in the table. */
+            public fun columns(columns: IResolvable)
+
+            /** @param columns A list of the `Columns` in the table. */
+            public fun columns(columns: List<Any>)
+
+            /** @param columns A list of the `Columns` in the table. */
+            public fun columns(vararg columns: Any)
+
+            /**
+             * @param compressed `True` if the data in the table is compressed, or `False` if not.
+             */
+            public fun compressed(compressed: Boolean)
+
+            /**
+             * @param compressed `True` if the data in the table is compressed, or `False` if not.
+             */
+            public fun compressed(compressed: IResolvable)
+
+            /**
+             * @param inputFormat The input format: `SequenceFileInputFormat` (binary), or
+             *   `TextInputFormat` , or a custom format.
+             */
+            public fun inputFormat(inputFormat: String)
+
+            /**
+             * @param location The physical location of the table. By default, this takes the form
+             *   of the warehouse location, followed by the database location in the warehouse,
+             *   followed by the table name.
+             */
+            public fun location(location: String)
+
+            /**
+             * @param numberOfBuckets Must be specified if the table contains any dimension columns.
+             */
+            public fun numberOfBuckets(numberOfBuckets: Number)
+
+            /**
+             * @param outputFormat The output format: `SequenceFileOutputFormat` (binary), or
+             *   `IgnoreKeyTextOutputFormat` , or a custom format.
+             */
+            public fun outputFormat(outputFormat: String)
+
+            /** @param parameters The user-supplied properties in key-value form. */
+            public fun parameters(parameters: Any)
+
+            /**
+             * @param schemaReference An object that references a schema stored in the AWS Glue
+             *   Schema Registry.
+             */
+            public fun schemaReference(schemaReference: IResolvable)
+
+            /**
+             * @param schemaReference An object that references a schema stored in the AWS Glue
+             *   Schema Registry.
+             */
+            public fun schemaReference(schemaReference: SchemaReferenceProperty)
+
+            /**
+             * @param schemaReference An object that references a schema stored in the AWS Glue
+             *   Schema Registry.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("da5e942beacf9cf335ff658999fff79422fdc7bf7cd4256314d18849988a9648")
+            public fun schemaReference(schemaReference: SchemaReferenceProperty.Builder.() -> Unit)
+
+            /** @param serdeInfo The serialization/deserialization (SerDe) information. */
+            public fun serdeInfo(serdeInfo: IResolvable)
+
+            /** @param serdeInfo The serialization/deserialization (SerDe) information. */
+            public fun serdeInfo(serdeInfo: SerdeInfoProperty)
+
+            /** @param serdeInfo The serialization/deserialization (SerDe) information. */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("11d04ede27877c042f8a31a30de79399591e90dd4a64a080f93acccbd4779395")
+            public fun serdeInfo(serdeInfo: SerdeInfoProperty.Builder.() -> Unit)
+
+            /**
+             * @param skewedInfo The information about values that appear frequently in a column
+             *   (skewed values).
+             */
+            public fun skewedInfo(skewedInfo: IResolvable)
+
+            /**
+             * @param skewedInfo The information about values that appear frequently in a column
+             *   (skewed values).
+             */
+            public fun skewedInfo(skewedInfo: SkewedInfoProperty)
+
+            /**
+             * @param skewedInfo The information about values that appear frequently in a column
+             *   (skewed values).
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("2202e46e0497ddccdb231fcb92fd088f818c533569e70f9091b006a0c4b2b8eb")
+            public fun skewedInfo(skewedInfo: SkewedInfoProperty.Builder.() -> Unit)
+
+            /** @param sortColumns A list specifying the sort order of each bucket in the table. */
+            public fun sortColumns(sortColumns: IResolvable)
+
+            /** @param sortColumns A list specifying the sort order of each bucket in the table. */
+            public fun sortColumns(sortColumns: List<Any>)
+
+            /** @param sortColumns A list specifying the sort order of each bucket in the table. */
+            public fun sortColumns(vararg sortColumns: Any)
+
+            /**
+             * @param storedAsSubDirectories `True` if the table data is stored in subdirectories,
+             *   or `False` if not.
+             */
+            public fun storedAsSubDirectories(storedAsSubDirectories: Boolean)
+
+            /**
+             * @param storedAsSubDirectories `True` if the table data is stored in subdirectories,
+             *   or `False` if not.
+             */
+            public fun storedAsSubDirectories(storedAsSubDirectories: IResolvable)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.glue.CfnTable.StorageDescriptorProperty.Builder =
+                software.amazon.awscdk.services.glue.CfnTable.StorageDescriptorProperty.builder()
+
+            /**
+             * @param bucketColumns A list of reducer grouping columns, clustering columns, and
+             *   bucketing columns in the table.
+             */
+            override fun bucketColumns(bucketColumns: List<String>) {
+                cdkBuilder.bucketColumns(bucketColumns)
+            }
+
+            /**
+             * @param bucketColumns A list of reducer grouping columns, clustering columns, and
+             *   bucketing columns in the table.
+             */
+            override fun bucketColumns(vararg bucketColumns: String): Unit =
+                bucketColumns(bucketColumns.toList())
+
+            /** @param columns A list of the `Columns` in the table. */
+            override fun columns(columns: IResolvable) {
+                cdkBuilder.columns(columns.let(IResolvable::unwrap))
+            }
+
+            /** @param columns A list of the `Columns` in the table. */
+            override fun columns(columns: List<Any>) {
+                cdkBuilder.columns(columns)
+            }
+
+            /** @param columns A list of the `Columns` in the table. */
+            override fun columns(vararg columns: Any): Unit = columns(columns.toList())
+
+            /**
+             * @param compressed `True` if the data in the table is compressed, or `False` if not.
+             */
+            override fun compressed(compressed: Boolean) {
+                cdkBuilder.compressed(compressed)
+            }
+
+            /**
+             * @param compressed `True` if the data in the table is compressed, or `False` if not.
+             */
+            override fun compressed(compressed: IResolvable) {
+                cdkBuilder.compressed(compressed.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param inputFormat The input format: `SequenceFileInputFormat` (binary), or
+             *   `TextInputFormat` , or a custom format.
+             */
+            override fun inputFormat(inputFormat: String) {
+                cdkBuilder.inputFormat(inputFormat)
+            }
+
+            /**
+             * @param location The physical location of the table. By default, this takes the form
+             *   of the warehouse location, followed by the database location in the warehouse,
+             *   followed by the table name.
+             */
+            override fun location(location: String) {
+                cdkBuilder.location(location)
+            }
+
+            /**
+             * @param numberOfBuckets Must be specified if the table contains any dimension columns.
+             */
+            override fun numberOfBuckets(numberOfBuckets: Number) {
+                cdkBuilder.numberOfBuckets(numberOfBuckets)
+            }
+
+            /**
+             * @param outputFormat The output format: `SequenceFileOutputFormat` (binary), or
+             *   `IgnoreKeyTextOutputFormat` , or a custom format.
+             */
+            override fun outputFormat(outputFormat: String) {
+                cdkBuilder.outputFormat(outputFormat)
+            }
+
+            /** @param parameters The user-supplied properties in key-value form. */
+            override fun parameters(parameters: Any) {
+                cdkBuilder.parameters(parameters)
+            }
+
+            /**
+             * @param schemaReference An object that references a schema stored in the AWS Glue
+             *   Schema Registry.
+             */
+            override fun schemaReference(schemaReference: IResolvable) {
+                cdkBuilder.schemaReference(schemaReference.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param schemaReference An object that references a schema stored in the AWS Glue
+             *   Schema Registry.
+             */
+            override fun schemaReference(schemaReference: SchemaReferenceProperty) {
+                cdkBuilder.schemaReference(schemaReference.let(SchemaReferenceProperty::unwrap))
+            }
+
+            /**
+             * @param schemaReference An object that references a schema stored in the AWS Glue
+             *   Schema Registry.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("da5e942beacf9cf335ff658999fff79422fdc7bf7cd4256314d18849988a9648")
+            override fun schemaReference(
+                schemaReference: SchemaReferenceProperty.Builder.() -> Unit
+            ): Unit = schemaReference(SchemaReferenceProperty(schemaReference))
+
+            /** @param serdeInfo The serialization/deserialization (SerDe) information. */
+            override fun serdeInfo(serdeInfo: IResolvable) {
+                cdkBuilder.serdeInfo(serdeInfo.let(IResolvable::unwrap))
+            }
+
+            /** @param serdeInfo The serialization/deserialization (SerDe) information. */
+            override fun serdeInfo(serdeInfo: SerdeInfoProperty) {
+                cdkBuilder.serdeInfo(serdeInfo.let(SerdeInfoProperty::unwrap))
+            }
+
+            /** @param serdeInfo The serialization/deserialization (SerDe) information. */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("11d04ede27877c042f8a31a30de79399591e90dd4a64a080f93acccbd4779395")
+            override fun serdeInfo(serdeInfo: SerdeInfoProperty.Builder.() -> Unit): Unit =
+                serdeInfo(SerdeInfoProperty(serdeInfo))
+
+            /**
+             * @param skewedInfo The information about values that appear frequently in a column
+             *   (skewed values).
+             */
+            override fun skewedInfo(skewedInfo: IResolvable) {
+                cdkBuilder.skewedInfo(skewedInfo.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param skewedInfo The information about values that appear frequently in a column
+             *   (skewed values).
+             */
+            override fun skewedInfo(skewedInfo: SkewedInfoProperty) {
+                cdkBuilder.skewedInfo(skewedInfo.let(SkewedInfoProperty::unwrap))
+            }
+
+            /**
+             * @param skewedInfo The information about values that appear frequently in a column
+             *   (skewed values).
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("2202e46e0497ddccdb231fcb92fd088f818c533569e70f9091b006a0c4b2b8eb")
+            override fun skewedInfo(skewedInfo: SkewedInfoProperty.Builder.() -> Unit): Unit =
+                skewedInfo(SkewedInfoProperty(skewedInfo))
+
+            /** @param sortColumns A list specifying the sort order of each bucket in the table. */
+            override fun sortColumns(sortColumns: IResolvable) {
+                cdkBuilder.sortColumns(sortColumns.let(IResolvable::unwrap))
+            }
+
+            /** @param sortColumns A list specifying the sort order of each bucket in the table. */
+            override fun sortColumns(sortColumns: List<Any>) {
+                cdkBuilder.sortColumns(sortColumns)
+            }
+
+            /** @param sortColumns A list specifying the sort order of each bucket in the table. */
+            override fun sortColumns(vararg sortColumns: Any): Unit =
+                sortColumns(sortColumns.toList())
+
+            /**
+             * @param storedAsSubDirectories `True` if the table data is stored in subdirectories,
+             *   or `False` if not.
+             */
+            override fun storedAsSubDirectories(storedAsSubDirectories: Boolean) {
+                cdkBuilder.storedAsSubDirectories(storedAsSubDirectories)
+            }
+
+            /**
+             * @param storedAsSubDirectories `True` if the table data is stored in subdirectories,
+             *   or `False` if not.
+             */
+            override fun storedAsSubDirectories(storedAsSubDirectories: IResolvable) {
+                cdkBuilder.storedAsSubDirectories(storedAsSubDirectories.let(IResolvable::unwrap))
+            }
+
+            public fun build():
+                software.amazon.awscdk.services.glue.CfnTable.StorageDescriptorProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.glue.CfnTable.StorageDescriptorProperty,
+        ) : StorageDescriptorProperty {
+            /**
+             * A list of reducer grouping columns, clustering columns, and bucketing columns in the
+             * table.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-bucketcolumns)
+             */
+            override fun bucketColumns(): List<String> =
+                unwrap(this).getBucketColumns() ?: emptyList()
+
+            /**
+             * A list of the `Columns` in the table.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-columns)
+             */
+            override fun columns(): Any? = unwrap(this).getColumns()
+
+            /**
+             * `True` if the data in the table is compressed, or `False` if not.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-compressed)
+             */
+            override fun compressed(): Any? = unwrap(this).getCompressed()
+
+            /**
+             * The input format: `SequenceFileInputFormat` (binary), or `TextInputFormat` , or a
+             * custom format.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-inputformat)
+             */
+            override fun inputFormat(): String? = unwrap(this).getInputFormat()
+
+            /**
+             * The physical location of the table.
+             *
+             * By default, this takes the form of the warehouse location, followed by the database
+             * location in the warehouse, followed by the table name.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-location)
+             */
+            override fun location(): String? = unwrap(this).getLocation()
+
+            /**
+             * Must be specified if the table contains any dimension columns.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-numberofbuckets)
+             */
+            override fun numberOfBuckets(): Number? = unwrap(this).getNumberOfBuckets()
+
+            /**
+             * The output format: `SequenceFileOutputFormat` (binary), or
+             * `IgnoreKeyTextOutputFormat` , or a custom format.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-outputformat)
+             */
+            override fun outputFormat(): String? = unwrap(this).getOutputFormat()
+
+            /**
+             * The user-supplied properties in key-value form.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-parameters)
+             */
+            override fun parameters(): Any? = unwrap(this).getParameters()
+
+            /**
+             * An object that references a schema stored in the AWS Glue Schema Registry.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-schemareference)
+             */
+            override fun schemaReference(): Any? = unwrap(this).getSchemaReference()
+
+            /**
+             * The serialization/deserialization (SerDe) information.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-serdeinfo)
+             */
+            override fun serdeInfo(): Any? = unwrap(this).getSerdeInfo()
+
+            /**
+             * The information about values that appear frequently in a column (skewed values).
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-skewedinfo)
+             */
+            override fun skewedInfo(): Any? = unwrap(this).getSkewedInfo()
+
+            /**
+             * A list specifying the sort order of each bucket in the table.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-sortcolumns)
+             */
+            override fun sortColumns(): Any? = unwrap(this).getSortColumns()
+
+            /**
+             * `True` if the table data is stored in subdirectories, or `False` if not.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-storagedescriptor.html#cfn-glue-table-storagedescriptor-storedassubdirectories)
+             */
+            override fun storedAsSubDirectories(): Any? = unwrap(this).getStoredAsSubDirectories()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): StorageDescriptorProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject: software.amazon.awscdk.services.glue.CfnTable.StorageDescriptorProperty
+            ): StorageDescriptorProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: StorageDescriptorProperty
+            ): software.amazon.awscdk.services.glue.CfnTable.StorageDescriptorProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.glue.CfnTable.OpenTableFormatInputProperty,
-    ) : OpenTableFormatInputProperty {
-      /**
-       * Specifies an `IcebergInput` structure that defines an Apache Iceberg metadata table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-opentableformatinput.html#cfn-glue-table-opentableformatinput-iceberginput)
-       */
-      override fun icebergInput(): Any? = unwrap(this).getIcebergInput()
+    public interface OpenTableFormatInputProperty {
+        /**
+         * Specifies an `IcebergInput` structure that defines an Apache Iceberg metadata table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-opentableformatinput.html#cfn-glue-table-opentableformatinput-iceberginput)
+         */
+        public fun icebergInput(): Any? = unwrap(this).getIcebergInput()
+
+        /** A builder for [OpenTableFormatInputProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param icebergInput Specifies an `IcebergInput` structure that defines an Apache
+             *   Iceberg metadata table.
+             */
+            public fun icebergInput(icebergInput: IResolvable)
+
+            /**
+             * @param icebergInput Specifies an `IcebergInput` structure that defines an Apache
+             *   Iceberg metadata table.
+             */
+            public fun icebergInput(icebergInput: IcebergInputProperty)
+
+            /**
+             * @param icebergInput Specifies an `IcebergInput` structure that defines an Apache
+             *   Iceberg metadata table.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("1dabdd8870b197acdacd5ca509199e8896ee45cc3920d4d67e7624b2f6cec6e2")
+            public fun icebergInput(icebergInput: IcebergInputProperty.Builder.() -> Unit)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.glue.CfnTable.OpenTableFormatInputProperty.Builder =
+                software.amazon.awscdk.services.glue.CfnTable.OpenTableFormatInputProperty.builder()
+
+            /**
+             * @param icebergInput Specifies an `IcebergInput` structure that defines an Apache
+             *   Iceberg metadata table.
+             */
+            override fun icebergInput(icebergInput: IResolvable) {
+                cdkBuilder.icebergInput(icebergInput.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param icebergInput Specifies an `IcebergInput` structure that defines an Apache
+             *   Iceberg metadata table.
+             */
+            override fun icebergInput(icebergInput: IcebergInputProperty) {
+                cdkBuilder.icebergInput(icebergInput.let(IcebergInputProperty::unwrap))
+            }
+
+            /**
+             * @param icebergInput Specifies an `IcebergInput` structure that defines an Apache
+             *   Iceberg metadata table.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("1dabdd8870b197acdacd5ca509199e8896ee45cc3920d4d67e7624b2f6cec6e2")
+            override fun icebergInput(icebergInput: IcebergInputProperty.Builder.() -> Unit): Unit =
+                icebergInput(IcebergInputProperty(icebergInput))
+
+            public fun build():
+                software.amazon.awscdk.services.glue.CfnTable.OpenTableFormatInputProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.glue.CfnTable.OpenTableFormatInputProperty,
+        ) : OpenTableFormatInputProperty {
+            /**
+             * Specifies an `IcebergInput` structure that defines an Apache Iceberg metadata table.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-opentableformatinput.html#cfn-glue-table-opentableformatinput-iceberginput)
+             */
+            override fun icebergInput(): Any? = unwrap(this).getIcebergInput()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(
+                block: Builder.() -> Unit = {}
+            ): OpenTableFormatInputProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.glue.CfnTable.OpenTableFormatInputProperty
+            ): OpenTableFormatInputProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: OpenTableFormatInputProperty
+            ): software.amazon.awscdk.services.glue.CfnTable.OpenTableFormatInputProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface SchemaReferenceProperty {
+        /**
+         * A structure that contains schema identity fields.
+         *
+         * Either this or the `SchemaVersionId` has to be provided.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemareference.html#cfn-glue-table-schemareference-schemaid)
+         */
+        public fun schemaId(): Any? = unwrap(this).getSchemaId()
 
-      }
+        /**
+         * The unique ID assigned to a version of the schema.
+         *
+         * Either this or the `SchemaId` has to be provided.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemareference.html#cfn-glue-table-schemareference-schemaversionid)
+         */
+        public fun schemaVersionId(): String? = unwrap(this).getSchemaVersionId()
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): OpenTableFormatInputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /**
+         * The version number of the schema.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemareference.html#cfn-glue-table-schemareference-schemaversionnumber)
+         */
+        public fun schemaVersionNumber(): Number? = unwrap(this).getSchemaVersionNumber()
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable.OpenTableFormatInputProperty):
-          OpenTableFormatInputProperty = Wrapper(cdkObject)
+        /** A builder for [SchemaReferenceProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param schemaId A structure that contains schema identity fields. Either this or the
+             *   `SchemaVersionId` has to be provided.
+             */
+            public fun schemaId(schemaId: IResolvable)
 
-      internal fun unwrap(wrapped: OpenTableFormatInputProperty):
-          software.amazon.awscdk.services.glue.CfnTable.OpenTableFormatInputProperty = (wrapped as
-          Wrapper).cdkObject
-    }
-  }
+            /**
+             * @param schemaId A structure that contains schema identity fields. Either this or the
+             *   `SchemaVersionId` has to be provided.
+             */
+            public fun schemaId(schemaId: SchemaIdProperty)
 
-  public interface SchemaReferenceProperty {
-    /**
-     * A structure that contains schema identity fields.
-     *
-     * Either this or the `SchemaVersionId` has to be
-     * provided.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemareference.html#cfn-glue-table-schemareference-schemaid)
-     */
-    public fun schemaId(): Any? = unwrap(this).getSchemaId()
+            /**
+             * @param schemaId A structure that contains schema identity fields. Either this or the
+             *   `SchemaVersionId` has to be provided.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("9d16db282fc361cca1004a18f2a4b3646e53a680b0e48f5046406cea621d158b")
+            public fun schemaId(schemaId: SchemaIdProperty.Builder.() -> Unit)
 
-    /**
-     * The unique ID assigned to a version of the schema.
-     *
-     * Either this or the `SchemaId` has to be provided.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemareference.html#cfn-glue-table-schemareference-schemaversionid)
-     */
-    public fun schemaVersionId(): String? = unwrap(this).getSchemaVersionId()
+            /**
+             * @param schemaVersionId The unique ID assigned to a version of the schema. Either this
+             *   or the `SchemaId` has to be provided.
+             */
+            public fun schemaVersionId(schemaVersionId: String)
 
-    /**
-     * The version number of the schema.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemareference.html#cfn-glue-table-schemareference-schemaversionnumber)
-     */
-    public fun schemaVersionNumber(): Number? = unwrap(this).getSchemaVersionNumber()
+            /** @param schemaVersionNumber The version number of the schema. */
+            public fun schemaVersionNumber(schemaVersionNumber: Number)
+        }
 
-    /**
-     * A builder for [SchemaReferenceProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param schemaId A structure that contains schema identity fields.
-       * Either this or the `SchemaVersionId` has to be
-       * provided.
-       */
-      public fun schemaId(schemaId: IResolvable)
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.glue.CfnTable.SchemaReferenceProperty.Builder =
+                software.amazon.awscdk.services.glue.CfnTable.SchemaReferenceProperty.builder()
 
-      /**
-       * @param schemaId A structure that contains schema identity fields.
-       * Either this or the `SchemaVersionId` has to be
-       * provided.
-       */
-      public fun schemaId(schemaId: SchemaIdProperty)
+            /**
+             * @param schemaId A structure that contains schema identity fields. Either this or the
+             *   `SchemaVersionId` has to be provided.
+             */
+            override fun schemaId(schemaId: IResolvable) {
+                cdkBuilder.schemaId(schemaId.let(IResolvable::unwrap))
+            }
 
-      /**
-       * @param schemaId A structure that contains schema identity fields.
-       * Either this or the `SchemaVersionId` has to be
-       * provided.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9d16db282fc361cca1004a18f2a4b3646e53a680b0e48f5046406cea621d158b")
-      public fun schemaId(schemaId: SchemaIdProperty.Builder.() -> Unit)
+            /**
+             * @param schemaId A structure that contains schema identity fields. Either this or the
+             *   `SchemaVersionId` has to be provided.
+             */
+            override fun schemaId(schemaId: SchemaIdProperty) {
+                cdkBuilder.schemaId(schemaId.let(SchemaIdProperty::unwrap))
+            }
 
-      /**
-       * @param schemaVersionId The unique ID assigned to a version of the schema.
-       * Either this or the `SchemaId` has to be provided.
-       */
-      public fun schemaVersionId(schemaVersionId: String)
+            /**
+             * @param schemaId A structure that contains schema identity fields. Either this or the
+             *   `SchemaVersionId` has to be provided.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("9d16db282fc361cca1004a18f2a4b3646e53a680b0e48f5046406cea621d158b")
+            override fun schemaId(schemaId: SchemaIdProperty.Builder.() -> Unit): Unit =
+                schemaId(SchemaIdProperty(schemaId))
 
-      /**
-       * @param schemaVersionNumber The version number of the schema.
-       */
-      public fun schemaVersionNumber(schemaVersionNumber: Number)
-    }
+            /**
+             * @param schemaVersionId The unique ID assigned to a version of the schema. Either this
+             *   or the `SchemaId` has to be provided.
+             */
+            override fun schemaVersionId(schemaVersionId: String) {
+                cdkBuilder.schemaVersionId(schemaVersionId)
+            }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnTable.SchemaReferenceProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnTable.SchemaReferenceProperty.builder()
+            /** @param schemaVersionNumber The version number of the schema. */
+            override fun schemaVersionNumber(schemaVersionNumber: Number) {
+                cdkBuilder.schemaVersionNumber(schemaVersionNumber)
+            }
 
-      /**
-       * @param schemaId A structure that contains schema identity fields.
-       * Either this or the `SchemaVersionId` has to be
-       * provided.
-       */
-      override fun schemaId(schemaId: IResolvable) {
-        cdkBuilder.schemaId(schemaId.let(IResolvable::unwrap))
-      }
+            public fun build():
+                software.amazon.awscdk.services.glue.CfnTable.SchemaReferenceProperty =
+                cdkBuilder.build()
+        }
 
-      /**
-       * @param schemaId A structure that contains schema identity fields.
-       * Either this or the `SchemaVersionId` has to be
-       * provided.
-       */
-      override fun schemaId(schemaId: SchemaIdProperty) {
-        cdkBuilder.schemaId(schemaId.let(SchemaIdProperty::unwrap))
-      }
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.glue.CfnTable.SchemaReferenceProperty,
+        ) : SchemaReferenceProperty {
+            /**
+             * A structure that contains schema identity fields.
+             *
+             * Either this or the `SchemaVersionId` has to be provided.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemareference.html#cfn-glue-table-schemareference-schemaid)
+             */
+            override fun schemaId(): Any? = unwrap(this).getSchemaId()
 
-      /**
-       * @param schemaId A structure that contains schema identity fields.
-       * Either this or the `SchemaVersionId` has to be
-       * provided.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("9d16db282fc361cca1004a18f2a4b3646e53a680b0e48f5046406cea621d158b")
-      override fun schemaId(schemaId: SchemaIdProperty.Builder.() -> Unit): Unit =
-          schemaId(SchemaIdProperty(schemaId))
+            /**
+             * The unique ID assigned to a version of the schema.
+             *
+             * Either this or the `SchemaId` has to be provided.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemareference.html#cfn-glue-table-schemareference-schemaversionid)
+             */
+            override fun schemaVersionId(): String? = unwrap(this).getSchemaVersionId()
 
-      /**
-       * @param schemaVersionId The unique ID assigned to a version of the schema.
-       * Either this or the `SchemaId` has to be provided.
-       */
-      override fun schemaVersionId(schemaVersionId: String) {
-        cdkBuilder.schemaVersionId(schemaVersionId)
-      }
+            /**
+             * The version number of the schema.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemareference.html#cfn-glue-table-schemareference-schemaversionnumber)
+             */
+            override fun schemaVersionNumber(): Number? = unwrap(this).getSchemaVersionNumber()
+        }
 
-      /**
-       * @param schemaVersionNumber The version number of the schema.
-       */
-      override fun schemaVersionNumber(schemaVersionNumber: Number) {
-        cdkBuilder.schemaVersionNumber(schemaVersionNumber)
-      }
+        public companion object {
+            init {}
 
-      public fun build(): software.amazon.awscdk.services.glue.CfnTable.SchemaReferenceProperty =
-          cdkBuilder.build()
-    }
+            public operator fun invoke(block: Builder.() -> Unit = {}): SchemaReferenceProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject: software.amazon.awscdk.services.glue.CfnTable.SchemaReferenceProperty,
-    ) : SchemaReferenceProperty {
-      /**
-       * A structure that contains schema identity fields.
-       *
-       * Either this or the `SchemaVersionId` has to be
-       * provided.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemareference.html#cfn-glue-table-schemareference-schemaid)
-       */
-      override fun schemaId(): Any? = unwrap(this).getSchemaId()
+            internal fun wrap(
+                cdkObject: software.amazon.awscdk.services.glue.CfnTable.SchemaReferenceProperty
+            ): SchemaReferenceProperty = Wrapper(cdkObject)
 
-      /**
-       * The unique ID assigned to a version of the schema.
-       *
-       * Either this or the `SchemaId` has to be provided.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemareference.html#cfn-glue-table-schemareference-schemaversionid)
-       */
-      override fun schemaVersionId(): String? = unwrap(this).getSchemaVersionId()
-
-      /**
-       * The version number of the schema.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemareference.html#cfn-glue-table-schemareference-schemaversionnumber)
-       */
-      override fun schemaVersionNumber(): Number? = unwrap(this).getSchemaVersionNumber()
+            internal fun unwrap(
+                wrapped: SchemaReferenceProperty
+            ): software.amazon.awscdk.services.glue.CfnTable.SchemaReferenceProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface TableInputProperty {
+        /**
+         * A description of the table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-description)
+         */
+        public fun description(): String? = unwrap(this).getDescription()
 
-      }
+        /**
+         * The table name.
+         *
+         * For Hive compatibility, this is folded to lowercase when it is stored.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-name)
+         */
+        public fun name(): String? = unwrap(this).getName()
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): SchemaReferenceProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /**
+         * The table owner.
+         *
+         * Included for Apache Hive compatibility. Not used in the normal course of AWS Glue
+         * operations.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-owner)
+         */
+        public fun owner(): String? = unwrap(this).getOwner()
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable.SchemaReferenceProperty):
-          SchemaReferenceProperty = Wrapper(cdkObject)
+        /**
+         * These key-value pairs define properties associated with the table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-parameters)
+         */
+        public fun parameters(): Any? = unwrap(this).getParameters()
 
-      internal fun unwrap(wrapped: SchemaReferenceProperty):
-          software.amazon.awscdk.services.glue.CfnTable.SchemaReferenceProperty = (wrapped as
-          Wrapper).cdkObject
-    }
-  }
+        /**
+         * A list of columns by which the table is partitioned. Only primitive types are supported
+         * as partition keys.
+         *
+         * When you create a table used by Amazon Athena, and you do not specify any `partitionKeys`
+         * , you must at least set the value of `partitionKeys` to an empty list. For example:
+         *
+         * `"PartitionKeys": []`
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-partitionkeys)
+         */
+        public fun partitionKeys(): Any? = unwrap(this).getPartitionKeys()
 
-  public interface TableInputProperty {
-    /**
-     * A description of the table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-description)
-     */
-    public fun description(): String? = unwrap(this).getDescription()
+        /**
+         * The retention time for this table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-retention)
+         */
+        public fun retention(): Number? = unwrap(this).getRetention()
 
-    /**
-     * The table name.
-     *
-     * For Hive compatibility, this is folded to lowercase when it is stored.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
+        /**
+         * A storage descriptor containing information about the physical storage of this table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-storagedescriptor)
+         */
+        public fun storageDescriptor(): Any? = unwrap(this).getStorageDescriptor()
 
-    /**
-     * The table owner.
-     *
-     * Included for Apache Hive compatibility. Not used in the normal course of AWS Glue operations.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-owner)
-     */
-    public fun owner(): String? = unwrap(this).getOwner()
+        /**
+         * The type of this table.
+         *
+         * AWS Glue will create tables with the `EXTERNAL_TABLE` type. Other services, such as
+         * Athena, may create tables with additional table types.
+         *
+         * AWS Glue related table types:
+         * * **EXTERNAL_TABLE** - Hive compatible attribute - indicates a non-Hive managed table.
+         * * **GOVERNED** - Used by AWS Lake Formation . The AWS Glue Data Catalog understands
+         *   `GOVERNED` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-tabletype)
+         */
+        public fun tableType(): String? = unwrap(this).getTableType()
 
-    /**
-     * These key-value pairs define properties associated with the table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-parameters)
-     */
-    public fun parameters(): Any? = unwrap(this).getParameters()
+        /**
+         * A `TableIdentifier` structure that describes a target table for resource linking.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-targettable)
+         */
+        public fun targetTable(): Any? = unwrap(this).getTargetTable()
 
-    /**
-     * A list of columns by which the table is partitioned. Only primitive types are supported as
-     * partition keys.
-     *
-     * When you create a table used by Amazon Athena, and you do not specify any `partitionKeys` ,
-     * you must at least set the value of `partitionKeys` to an empty list. For example:
-     *
-     * `"PartitionKeys": []`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-partitionkeys)
-     */
-    public fun partitionKeys(): Any? = unwrap(this).getPartitionKeys()
+        /**
+         * Included for Apache Hive compatibility.
+         *
+         * Not used in the normal course of AWS Glue operations.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-viewexpandedtext)
+         */
+        public fun viewExpandedText(): String? = unwrap(this).getViewExpandedText()
 
-    /**
-     * The retention time for this table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-retention)
-     */
-    public fun retention(): Number? = unwrap(this).getRetention()
+        /**
+         * Included for Apache Hive compatibility.
+         *
+         * Not used in the normal course of AWS Glue operations. If the table is a `VIRTUAL_VIEW` ,
+         * certain Athena configuration encoded in base64.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-vieworiginaltext)
+         */
+        public fun viewOriginalText(): String? = unwrap(this).getViewOriginalText()
 
-    /**
-     * A storage descriptor containing information about the physical storage of this table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-storagedescriptor)
-     */
-    public fun storageDescriptor(): Any? = unwrap(this).getStorageDescriptor()
+        /** A builder for [TableInputProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param description A description of the table. */
+            public fun description(description: String)
 
-    /**
-     * The type of this table.
-     *
-     * AWS Glue will create tables with the `EXTERNAL_TABLE` type. Other services, such as Athena,
-     * may create tables with additional table types.
-     *
-     * AWS Glue related table types:
-     *
-     * * **EXTERNAL_TABLE** - Hive compatible attribute - indicates a non-Hive managed table.
-     * * **GOVERNED** - Used by AWS Lake Formation . The AWS Glue Data Catalog understands
-     * `GOVERNED` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-tabletype)
-     */
-    public fun tableType(): String? = unwrap(this).getTableType()
+            /**
+             * @param name The table name. For Hive compatibility, this is folded to lowercase when
+             *   it is stored.
+             */
+            public fun name(name: String)
 
-    /**
-     * A `TableIdentifier` structure that describes a target table for resource linking.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-targettable)
-     */
-    public fun targetTable(): Any? = unwrap(this).getTargetTable()
+            /**
+             * @param owner The table owner. Included for Apache Hive compatibility. Not used in the
+             *   normal course of AWS Glue operations.
+             */
+            public fun owner(owner: String)
 
-    /**
-     * Included for Apache Hive compatibility.
-     *
-     * Not used in the normal course of AWS Glue operations.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-viewexpandedtext)
-     */
-    public fun viewExpandedText(): String? = unwrap(this).getViewExpandedText()
+            /**
+             * @param parameters These key-value pairs define properties associated with the table.
+             */
+            public fun parameters(parameters: Any)
 
-    /**
-     * Included for Apache Hive compatibility.
-     *
-     * Not used in the normal course of AWS Glue operations. If the table is a `VIRTUAL_VIEW` ,
-     * certain Athena configuration encoded in base64.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-vieworiginaltext)
-     */
-    public fun viewOriginalText(): String? = unwrap(this).getViewOriginalText()
+            /**
+             * @param partitionKeys A list of columns by which the table is partitioned. Only
+             *   primitive types are supported as partition keys. When you create a table used by
+             *   Amazon Athena, and you do not specify any `partitionKeys` , you must at least set
+             *   the value of `partitionKeys` to an empty list. For example:
+             *
+             * `"PartitionKeys": []`
+             */
+            public fun partitionKeys(partitionKeys: IResolvable)
 
-    /**
-     * A builder for [TableInputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param description A description of the table.
-       */
-      public fun description(description: String)
+            /**
+             * @param partitionKeys A list of columns by which the table is partitioned. Only
+             *   primitive types are supported as partition keys. When you create a table used by
+             *   Amazon Athena, and you do not specify any `partitionKeys` , you must at least set
+             *   the value of `partitionKeys` to an empty list. For example:
+             *
+             * `"PartitionKeys": []`
+             */
+            public fun partitionKeys(partitionKeys: List<Any>)
 
-      /**
-       * @param name The table name.
-       * For Hive compatibility, this is folded to lowercase when it is stored.
-       */
-      public fun name(name: String)
+            /**
+             * @param partitionKeys A list of columns by which the table is partitioned. Only
+             *   primitive types are supported as partition keys. When you create a table used by
+             *   Amazon Athena, and you do not specify any `partitionKeys` , you must at least set
+             *   the value of `partitionKeys` to an empty list. For example:
+             *
+             * `"PartitionKeys": []`
+             */
+            public fun partitionKeys(vararg partitionKeys: Any)
 
-      /**
-       * @param owner The table owner.
-       * Included for Apache Hive compatibility. Not used in the normal course of AWS Glue
-       * operations.
-       */
-      public fun owner(owner: String)
+            /** @param retention The retention time for this table. */
+            public fun retention(retention: Number)
 
-      /**
-       * @param parameters These key-value pairs define properties associated with the table.
-       */
-      public fun parameters(parameters: Any)
+            /**
+             * @param storageDescriptor A storage descriptor containing information about the
+             *   physical storage of this table.
+             */
+            public fun storageDescriptor(storageDescriptor: IResolvable)
 
-      /**
-       * @param partitionKeys A list of columns by which the table is partitioned. Only primitive
-       * types are supported as partition keys.
-       * When you create a table used by Amazon Athena, and you do not specify any `partitionKeys` ,
-       * you must at least set the value of `partitionKeys` to an empty list. For example:
-       *
-       * `"PartitionKeys": []`
-       */
-      public fun partitionKeys(partitionKeys: IResolvable)
+            /**
+             * @param storageDescriptor A storage descriptor containing information about the
+             *   physical storage of this table.
+             */
+            public fun storageDescriptor(storageDescriptor: StorageDescriptorProperty)
 
-      /**
-       * @param partitionKeys A list of columns by which the table is partitioned. Only primitive
-       * types are supported as partition keys.
-       * When you create a table used by Amazon Athena, and you do not specify any `partitionKeys` ,
-       * you must at least set the value of `partitionKeys` to an empty list. For example:
-       *
-       * `"PartitionKeys": []`
-       */
-      public fun partitionKeys(partitionKeys: List<Any>)
+            /**
+             * @param storageDescriptor A storage descriptor containing information about the
+             *   physical storage of this table.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("2b6c9a4cc9b5aec52f3b2756da1f1dbf002620d455a76472b85570ded6b8c74a")
+            public fun storageDescriptor(
+                storageDescriptor: StorageDescriptorProperty.Builder.() -> Unit
+            )
 
-      /**
-       * @param partitionKeys A list of columns by which the table is partitioned. Only primitive
-       * types are supported as partition keys.
-       * When you create a table used by Amazon Athena, and you do not specify any `partitionKeys` ,
-       * you must at least set the value of `partitionKeys` to an empty list. For example:
-       *
-       * `"PartitionKeys": []`
-       */
-      public fun partitionKeys(vararg partitionKeys: Any)
+            /**
+             * @param tableType The type of this table. AWS Glue will create tables with the
+             *   `EXTERNAL_TABLE` type. Other services, such as Athena, may create tables with
+             *   additional table types.
+             *
+             * AWS Glue related table types:
+             * * **EXTERNAL_TABLE** - Hive compatible attribute - indicates a non-Hive managed
+             *   table.
+             * * **GOVERNED** - Used by AWS Lake Formation . The AWS Glue Data Catalog understands
+             *   `GOVERNED` .
+             */
+            public fun tableType(tableType: String)
 
-      /**
-       * @param retention The retention time for this table.
-       */
-      public fun retention(retention: Number)
+            /**
+             * @param targetTable A `TableIdentifier` structure that describes a target table for
+             *   resource linking.
+             */
+            public fun targetTable(targetTable: IResolvable)
 
-      /**
-       * @param storageDescriptor A storage descriptor containing information about the physical
-       * storage of this table.
-       */
-      public fun storageDescriptor(storageDescriptor: IResolvable)
+            /**
+             * @param targetTable A `TableIdentifier` structure that describes a target table for
+             *   resource linking.
+             */
+            public fun targetTable(targetTable: TableIdentifierProperty)
 
-      /**
-       * @param storageDescriptor A storage descriptor containing information about the physical
-       * storage of this table.
-       */
-      public fun storageDescriptor(storageDescriptor: StorageDescriptorProperty)
+            /**
+             * @param targetTable A `TableIdentifier` structure that describes a target table for
+             *   resource linking.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("e244fadecf32f732dd9674fd91e548f3b7dd67fa134be4457fe24a18c9e5c53c")
+            public fun targetTable(targetTable: TableIdentifierProperty.Builder.() -> Unit)
 
-      /**
-       * @param storageDescriptor A storage descriptor containing information about the physical
-       * storage of this table.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2b6c9a4cc9b5aec52f3b2756da1f1dbf002620d455a76472b85570ded6b8c74a")
-      public fun storageDescriptor(storageDescriptor: StorageDescriptorProperty.Builder.() -> Unit)
+            /**
+             * @param viewExpandedText Included for Apache Hive compatibility. Not used in the
+             *   normal course of AWS Glue operations.
+             */
+            public fun viewExpandedText(viewExpandedText: String)
 
-      /**
-       * @param tableType The type of this table.
-       * AWS Glue will create tables with the `EXTERNAL_TABLE` type. Other services, such as Athena,
-       * may create tables with additional table types.
-       *
-       * AWS Glue related table types:
-       *
-       * * **EXTERNAL_TABLE** - Hive compatible attribute - indicates a non-Hive managed table.
-       * * **GOVERNED** - Used by AWS Lake Formation . The AWS Glue Data Catalog understands
-       * `GOVERNED` .
-       */
-      public fun tableType(tableType: String)
+            /**
+             * @param viewOriginalText Included for Apache Hive compatibility. Not used in the
+             *   normal course of AWS Glue operations. If the table is a `VIRTUAL_VIEW` , certain
+             *   Athena configuration encoded in base64.
+             */
+            public fun viewOriginalText(viewOriginalText: String)
+        }
 
-      /**
-       * @param targetTable A `TableIdentifier` structure that describes a target table for resource
-       * linking.
-       */
-      public fun targetTable(targetTable: IResolvable)
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.glue.CfnTable.TableInputProperty.Builder =
+                software.amazon.awscdk.services.glue.CfnTable.TableInputProperty.builder()
 
-      /**
-       * @param targetTable A `TableIdentifier` structure that describes a target table for resource
-       * linking.
-       */
-      public fun targetTable(targetTable: TableIdentifierProperty)
+            /** @param description A description of the table. */
+            override fun description(description: String) {
+                cdkBuilder.description(description)
+            }
 
-      /**
-       * @param targetTable A `TableIdentifier` structure that describes a target table for resource
-       * linking.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e244fadecf32f732dd9674fd91e548f3b7dd67fa134be4457fe24a18c9e5c53c")
-      public fun targetTable(targetTable: TableIdentifierProperty.Builder.() -> Unit)
+            /**
+             * @param name The table name. For Hive compatibility, this is folded to lowercase when
+             *   it is stored.
+             */
+            override fun name(name: String) {
+                cdkBuilder.name(name)
+            }
 
-      /**
-       * @param viewExpandedText Included for Apache Hive compatibility.
-       * Not used in the normal course of AWS Glue operations.
-       */
-      public fun viewExpandedText(viewExpandedText: String)
+            /**
+             * @param owner The table owner. Included for Apache Hive compatibility. Not used in the
+             *   normal course of AWS Glue operations.
+             */
+            override fun owner(owner: String) {
+                cdkBuilder.owner(owner)
+            }
 
-      /**
-       * @param viewOriginalText Included for Apache Hive compatibility.
-       * Not used in the normal course of AWS Glue operations. If the table is a `VIRTUAL_VIEW` ,
-       * certain Athena configuration encoded in base64.
-       */
-      public fun viewOriginalText(viewOriginalText: String)
-    }
+            /**
+             * @param parameters These key-value pairs define properties associated with the table.
+             */
+            override fun parameters(parameters: Any) {
+                cdkBuilder.parameters(parameters)
+            }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnTable.TableInputProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnTable.TableInputProperty.builder()
+            /**
+             * @param partitionKeys A list of columns by which the table is partitioned. Only
+             *   primitive types are supported as partition keys. When you create a table used by
+             *   Amazon Athena, and you do not specify any `partitionKeys` , you must at least set
+             *   the value of `partitionKeys` to an empty list. For example:
+             *
+             * `"PartitionKeys": []`
+             */
+            override fun partitionKeys(partitionKeys: IResolvable) {
+                cdkBuilder.partitionKeys(partitionKeys.let(IResolvable::unwrap))
+            }
 
-      /**
-       * @param description A description of the table.
-       */
-      override fun description(description: String) {
-        cdkBuilder.description(description)
-      }
+            /**
+             * @param partitionKeys A list of columns by which the table is partitioned. Only
+             *   primitive types are supported as partition keys. When you create a table used by
+             *   Amazon Athena, and you do not specify any `partitionKeys` , you must at least set
+             *   the value of `partitionKeys` to an empty list. For example:
+             *
+             * `"PartitionKeys": []`
+             */
+            override fun partitionKeys(partitionKeys: List<Any>) {
+                cdkBuilder.partitionKeys(partitionKeys)
+            }
 
-      /**
-       * @param name The table name.
-       * For Hive compatibility, this is folded to lowercase when it is stored.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
+            /**
+             * @param partitionKeys A list of columns by which the table is partitioned. Only
+             *   primitive types are supported as partition keys. When you create a table used by
+             *   Amazon Athena, and you do not specify any `partitionKeys` , you must at least set
+             *   the value of `partitionKeys` to an empty list. For example:
+             *
+             * `"PartitionKeys": []`
+             */
+            override fun partitionKeys(vararg partitionKeys: Any): Unit =
+                partitionKeys(partitionKeys.toList())
 
-      /**
-       * @param owner The table owner.
-       * Included for Apache Hive compatibility. Not used in the normal course of AWS Glue
-       * operations.
-       */
-      override fun owner(owner: String) {
-        cdkBuilder.owner(owner)
-      }
+            /** @param retention The retention time for this table. */
+            override fun retention(retention: Number) {
+                cdkBuilder.retention(retention)
+            }
 
-      /**
-       * @param parameters These key-value pairs define properties associated with the table.
-       */
-      override fun parameters(parameters: Any) {
-        cdkBuilder.parameters(parameters)
-      }
+            /**
+             * @param storageDescriptor A storage descriptor containing information about the
+             *   physical storage of this table.
+             */
+            override fun storageDescriptor(storageDescriptor: IResolvable) {
+                cdkBuilder.storageDescriptor(storageDescriptor.let(IResolvable::unwrap))
+            }
 
-      /**
-       * @param partitionKeys A list of columns by which the table is partitioned. Only primitive
-       * types are supported as partition keys.
-       * When you create a table used by Amazon Athena, and you do not specify any `partitionKeys` ,
-       * you must at least set the value of `partitionKeys` to an empty list. For example:
-       *
-       * `"PartitionKeys": []`
-       */
-      override fun partitionKeys(partitionKeys: IResolvable) {
-        cdkBuilder.partitionKeys(partitionKeys.let(IResolvable::unwrap))
-      }
+            /**
+             * @param storageDescriptor A storage descriptor containing information about the
+             *   physical storage of this table.
+             */
+            override fun storageDescriptor(storageDescriptor: StorageDescriptorProperty) {
+                cdkBuilder.storageDescriptor(
+                    storageDescriptor.let(StorageDescriptorProperty::unwrap)
+                )
+            }
 
-      /**
-       * @param partitionKeys A list of columns by which the table is partitioned. Only primitive
-       * types are supported as partition keys.
-       * When you create a table used by Amazon Athena, and you do not specify any `partitionKeys` ,
-       * you must at least set the value of `partitionKeys` to an empty list. For example:
-       *
-       * `"PartitionKeys": []`
-       */
-      override fun partitionKeys(partitionKeys: List<Any>) {
-        cdkBuilder.partitionKeys(partitionKeys)
-      }
+            /**
+             * @param storageDescriptor A storage descriptor containing information about the
+             *   physical storage of this table.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("2b6c9a4cc9b5aec52f3b2756da1f1dbf002620d455a76472b85570ded6b8c74a")
+            override fun storageDescriptor(
+                storageDescriptor: StorageDescriptorProperty.Builder.() -> Unit
+            ): Unit = storageDescriptor(StorageDescriptorProperty(storageDescriptor))
 
-      /**
-       * @param partitionKeys A list of columns by which the table is partitioned. Only primitive
-       * types are supported as partition keys.
-       * When you create a table used by Amazon Athena, and you do not specify any `partitionKeys` ,
-       * you must at least set the value of `partitionKeys` to an empty list. For example:
-       *
-       * `"PartitionKeys": []`
-       */
-      override fun partitionKeys(vararg partitionKeys: Any): Unit =
-          partitionKeys(partitionKeys.toList())
+            /**
+             * @param tableType The type of this table. AWS Glue will create tables with the
+             *   `EXTERNAL_TABLE` type. Other services, such as Athena, may create tables with
+             *   additional table types.
+             *
+             * AWS Glue related table types:
+             * * **EXTERNAL_TABLE** - Hive compatible attribute - indicates a non-Hive managed
+             *   table.
+             * * **GOVERNED** - Used by AWS Lake Formation . The AWS Glue Data Catalog understands
+             *   `GOVERNED` .
+             */
+            override fun tableType(tableType: String) {
+                cdkBuilder.tableType(tableType)
+            }
 
-      /**
-       * @param retention The retention time for this table.
-       */
-      override fun retention(retention: Number) {
-        cdkBuilder.retention(retention)
-      }
+            /**
+             * @param targetTable A `TableIdentifier` structure that describes a target table for
+             *   resource linking.
+             */
+            override fun targetTable(targetTable: IResolvable) {
+                cdkBuilder.targetTable(targetTable.let(IResolvable::unwrap))
+            }
 
-      /**
-       * @param storageDescriptor A storage descriptor containing information about the physical
-       * storage of this table.
-       */
-      override fun storageDescriptor(storageDescriptor: IResolvable) {
-        cdkBuilder.storageDescriptor(storageDescriptor.let(IResolvable::unwrap))
-      }
+            /**
+             * @param targetTable A `TableIdentifier` structure that describes a target table for
+             *   resource linking.
+             */
+            override fun targetTable(targetTable: TableIdentifierProperty) {
+                cdkBuilder.targetTable(targetTable.let(TableIdentifierProperty::unwrap))
+            }
 
-      /**
-       * @param storageDescriptor A storage descriptor containing information about the physical
-       * storage of this table.
-       */
-      override fun storageDescriptor(storageDescriptor: StorageDescriptorProperty) {
-        cdkBuilder.storageDescriptor(storageDescriptor.let(StorageDescriptorProperty::unwrap))
-      }
+            /**
+             * @param targetTable A `TableIdentifier` structure that describes a target table for
+             *   resource linking.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("e244fadecf32f732dd9674fd91e548f3b7dd67fa134be4457fe24a18c9e5c53c")
+            override fun targetTable(
+                targetTable: TableIdentifierProperty.Builder.() -> Unit
+            ): Unit = targetTable(TableIdentifierProperty(targetTable))
 
-      /**
-       * @param storageDescriptor A storage descriptor containing information about the physical
-       * storage of this table.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("2b6c9a4cc9b5aec52f3b2756da1f1dbf002620d455a76472b85570ded6b8c74a")
-      override
-          fun storageDescriptor(storageDescriptor: StorageDescriptorProperty.Builder.() -> Unit):
-          Unit = storageDescriptor(StorageDescriptorProperty(storageDescriptor))
+            /**
+             * @param viewExpandedText Included for Apache Hive compatibility. Not used in the
+             *   normal course of AWS Glue operations.
+             */
+            override fun viewExpandedText(viewExpandedText: String) {
+                cdkBuilder.viewExpandedText(viewExpandedText)
+            }
 
-      /**
-       * @param tableType The type of this table.
-       * AWS Glue will create tables with the `EXTERNAL_TABLE` type. Other services, such as Athena,
-       * may create tables with additional table types.
-       *
-       * AWS Glue related table types:
-       *
-       * * **EXTERNAL_TABLE** - Hive compatible attribute - indicates a non-Hive managed table.
-       * * **GOVERNED** - Used by AWS Lake Formation . The AWS Glue Data Catalog understands
-       * `GOVERNED` .
-       */
-      override fun tableType(tableType: String) {
-        cdkBuilder.tableType(tableType)
-      }
+            /**
+             * @param viewOriginalText Included for Apache Hive compatibility. Not used in the
+             *   normal course of AWS Glue operations. If the table is a `VIRTUAL_VIEW` , certain
+             *   Athena configuration encoded in base64.
+             */
+            override fun viewOriginalText(viewOriginalText: String) {
+                cdkBuilder.viewOriginalText(viewOriginalText)
+            }
 
-      /**
-       * @param targetTable A `TableIdentifier` structure that describes a target table for resource
-       * linking.
-       */
-      override fun targetTable(targetTable: IResolvable) {
-        cdkBuilder.targetTable(targetTable.let(IResolvable::unwrap))
-      }
+            public fun build(): software.amazon.awscdk.services.glue.CfnTable.TableInputProperty =
+                cdkBuilder.build()
+        }
 
-      /**
-       * @param targetTable A `TableIdentifier` structure that describes a target table for resource
-       * linking.
-       */
-      override fun targetTable(targetTable: TableIdentifierProperty) {
-        cdkBuilder.targetTable(targetTable.let(TableIdentifierProperty::unwrap))
-      }
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.glue.CfnTable.TableInputProperty,
+        ) : TableInputProperty {
+            /**
+             * A description of the table.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-description)
+             */
+            override fun description(): String? = unwrap(this).getDescription()
 
-      /**
-       * @param targetTable A `TableIdentifier` structure that describes a target table for resource
-       * linking.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e244fadecf32f732dd9674fd91e548f3b7dd67fa134be4457fe24a18c9e5c53c")
-      override fun targetTable(targetTable: TableIdentifierProperty.Builder.() -> Unit): Unit =
-          targetTable(TableIdentifierProperty(targetTable))
+            /**
+             * The table name.
+             *
+             * For Hive compatibility, this is folded to lowercase when it is stored.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-name)
+             */
+            override fun name(): String? = unwrap(this).getName()
 
-      /**
-       * @param viewExpandedText Included for Apache Hive compatibility.
-       * Not used in the normal course of AWS Glue operations.
-       */
-      override fun viewExpandedText(viewExpandedText: String) {
-        cdkBuilder.viewExpandedText(viewExpandedText)
-      }
+            /**
+             * The table owner.
+             *
+             * Included for Apache Hive compatibility. Not used in the normal course of AWS Glue
+             * operations.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-owner)
+             */
+            override fun owner(): String? = unwrap(this).getOwner()
 
-      /**
-       * @param viewOriginalText Included for Apache Hive compatibility.
-       * Not used in the normal course of AWS Glue operations. If the table is a `VIRTUAL_VIEW` ,
-       * certain Athena configuration encoded in base64.
-       */
-      override fun viewOriginalText(viewOriginalText: String) {
-        cdkBuilder.viewOriginalText(viewOriginalText)
-      }
+            /**
+             * These key-value pairs define properties associated with the table.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-parameters)
+             */
+            override fun parameters(): Any? = unwrap(this).getParameters()
 
-      public fun build(): software.amazon.awscdk.services.glue.CfnTable.TableInputProperty =
-          cdkBuilder.build()
-    }
+            /**
+             * A list of columns by which the table is partitioned. Only primitive types are
+             * supported as partition keys.
+             *
+             * When you create a table used by Amazon Athena, and you do not specify any
+             * `partitionKeys` , you must at least set the value of `partitionKeys` to an empty
+             * list. For example:
+             *
+             * `"PartitionKeys": []`
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-partitionkeys)
+             */
+            override fun partitionKeys(): Any? = unwrap(this).getPartitionKeys()
 
-    private class Wrapper internal constructor(
-      internal val cdkObject: software.amazon.awscdk.services.glue.CfnTable.TableInputProperty,
-    ) : TableInputProperty {
-      /**
-       * A description of the table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-description)
-       */
-      override fun description(): String? = unwrap(this).getDescription()
+            /**
+             * The retention time for this table.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-retention)
+             */
+            override fun retention(): Number? = unwrap(this).getRetention()
 
-      /**
-       * The table name.
-       *
-       * For Hive compatibility, this is folded to lowercase when it is stored.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
+            /**
+             * A storage descriptor containing information about the physical storage of this table.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-storagedescriptor)
+             */
+            override fun storageDescriptor(): Any? = unwrap(this).getStorageDescriptor()
 
-      /**
-       * The table owner.
-       *
-       * Included for Apache Hive compatibility. Not used in the normal course of AWS Glue
-       * operations.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-owner)
-       */
-      override fun owner(): String? = unwrap(this).getOwner()
+            /**
+             * The type of this table.
+             *
+             * AWS Glue will create tables with the `EXTERNAL_TABLE` type. Other services, such as
+             * Athena, may create tables with additional table types.
+             *
+             * AWS Glue related table types:
+             * * **EXTERNAL_TABLE** - Hive compatible attribute - indicates a non-Hive managed
+             *   table.
+             * * **GOVERNED** - Used by AWS Lake Formation . The AWS Glue Data Catalog understands
+             *   `GOVERNED` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-tabletype)
+             */
+            override fun tableType(): String? = unwrap(this).getTableType()
 
-      /**
-       * These key-value pairs define properties associated with the table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-parameters)
-       */
-      override fun parameters(): Any? = unwrap(this).getParameters()
+            /**
+             * A `TableIdentifier` structure that describes a target table for resource linking.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-targettable)
+             */
+            override fun targetTable(): Any? = unwrap(this).getTargetTable()
 
-      /**
-       * A list of columns by which the table is partitioned. Only primitive types are supported as
-       * partition keys.
-       *
-       * When you create a table used by Amazon Athena, and you do not specify any `partitionKeys` ,
-       * you must at least set the value of `partitionKeys` to an empty list. For example:
-       *
-       * `"PartitionKeys": []`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-partitionkeys)
-       */
-      override fun partitionKeys(): Any? = unwrap(this).getPartitionKeys()
+            /**
+             * Included for Apache Hive compatibility.
+             *
+             * Not used in the normal course of AWS Glue operations.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-viewexpandedtext)
+             */
+            override fun viewExpandedText(): String? = unwrap(this).getViewExpandedText()
 
-      /**
-       * The retention time for this table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-retention)
-       */
-      override fun retention(): Number? = unwrap(this).getRetention()
+            /**
+             * Included for Apache Hive compatibility.
+             *
+             * Not used in the normal course of AWS Glue operations. If the table is a
+             * `VIRTUAL_VIEW` , certain Athena configuration encoded in base64.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-vieworiginaltext)
+             */
+            override fun viewOriginalText(): String? = unwrap(this).getViewOriginalText()
+        }
 
-      /**
-       * A storage descriptor containing information about the physical storage of this table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-storagedescriptor)
-       */
-      override fun storageDescriptor(): Any? = unwrap(this).getStorageDescriptor()
+        public companion object {
+            init {}
 
-      /**
-       * The type of this table.
-       *
-       * AWS Glue will create tables with the `EXTERNAL_TABLE` type. Other services, such as Athena,
-       * may create tables with additional table types.
-       *
-       * AWS Glue related table types:
-       *
-       * * **EXTERNAL_TABLE** - Hive compatible attribute - indicates a non-Hive managed table.
-       * * **GOVERNED** - Used by AWS Lake Formation . The AWS Glue Data Catalog understands
-       * `GOVERNED` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-tabletype)
-       */
-      override fun tableType(): String? = unwrap(this).getTableType()
+            public operator fun invoke(block: Builder.() -> Unit = {}): TableInputProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-      /**
-       * A `TableIdentifier` structure that describes a target table for resource linking.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-targettable)
-       */
-      override fun targetTable(): Any? = unwrap(this).getTargetTable()
+            internal fun wrap(
+                cdkObject: software.amazon.awscdk.services.glue.CfnTable.TableInputProperty
+            ): TableInputProperty = Wrapper(cdkObject)
 
-      /**
-       * Included for Apache Hive compatibility.
-       *
-       * Not used in the normal course of AWS Glue operations.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-viewexpandedtext)
-       */
-      override fun viewExpandedText(): String? = unwrap(this).getViewExpandedText()
-
-      /**
-       * Included for Apache Hive compatibility.
-       *
-       * Not used in the normal course of AWS Glue operations. If the table is a `VIRTUAL_VIEW` ,
-       * certain Athena configuration encoded in base64.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-vieworiginaltext)
-       */
-      override fun viewOriginalText(): String? = unwrap(this).getViewOriginalText()
+            internal fun unwrap(
+                wrapped: TableInputProperty
+            ): software.amazon.awscdk.services.glue.CfnTable.TableInputProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface SkewedInfoProperty {
+        /**
+         * A list of names of columns that contain skewed values.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-skewedinfo.html#cfn-glue-table-skewedinfo-skewedcolumnnames)
+         */
+        public fun skewedColumnNames(): List<String> =
+            unwrap(this).getSkewedColumnNames() ?: emptyList()
 
-      }
+        /**
+         * A mapping of skewed values to the columns that contain them.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-skewedinfo.html#cfn-glue-table-skewedinfo-skewedcolumnvaluelocationmaps)
+         */
+        public fun skewedColumnValueLocationMaps(): Any? =
+            unwrap(this).getSkewedColumnValueLocationMaps()
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): TableInputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /**
+         * A list of values that appear so frequently as to be considered skewed.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-skewedinfo.html#cfn-glue-table-skewedinfo-skewedcolumnvalues)
+         */
+        public fun skewedColumnValues(): List<String> =
+            unwrap(this).getSkewedColumnValues() ?: emptyList()
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable.TableInputProperty):
-          TableInputProperty = Wrapper(cdkObject)
+        /** A builder for [SkewedInfoProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param skewedColumnNames A list of names of columns that contain skewed values. */
+            public fun skewedColumnNames(skewedColumnNames: List<String>)
 
-      internal fun unwrap(wrapped: TableInputProperty):
-          software.amazon.awscdk.services.glue.CfnTable.TableInputProperty = (wrapped as
-          Wrapper).cdkObject
-    }
-  }
+            /** @param skewedColumnNames A list of names of columns that contain skewed values. */
+            public fun skewedColumnNames(vararg skewedColumnNames: String)
 
-  public interface SkewedInfoProperty {
-    /**
-     * A list of names of columns that contain skewed values.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-skewedinfo.html#cfn-glue-table-skewedinfo-skewedcolumnnames)
-     */
-    public fun skewedColumnNames(): List<String> = unwrap(this).getSkewedColumnNames() ?:
-        emptyList()
+            /**
+             * @param skewedColumnValueLocationMaps A mapping of skewed values to the columns that
+             *   contain them.
+             */
+            public fun skewedColumnValueLocationMaps(skewedColumnValueLocationMaps: Any)
 
-    /**
-     * A mapping of skewed values to the columns that contain them.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-skewedinfo.html#cfn-glue-table-skewedinfo-skewedcolumnvaluelocationmaps)
-     */
-    public fun skewedColumnValueLocationMaps(): Any? =
-        unwrap(this).getSkewedColumnValueLocationMaps()
+            /**
+             * @param skewedColumnValues A list of values that appear so frequently as to be
+             *   considered skewed.
+             */
+            public fun skewedColumnValues(skewedColumnValues: List<String>)
 
-    /**
-     * A list of values that appear so frequently as to be considered skewed.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-skewedinfo.html#cfn-glue-table-skewedinfo-skewedcolumnvalues)
-     */
-    public fun skewedColumnValues(): List<String> = unwrap(this).getSkewedColumnValues() ?:
-        emptyList()
+            /**
+             * @param skewedColumnValues A list of values that appear so frequently as to be
+             *   considered skewed.
+             */
+            public fun skewedColumnValues(vararg skewedColumnValues: String)
+        }
 
-    /**
-     * A builder for [SkewedInfoProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param skewedColumnNames A list of names of columns that contain skewed values.
-       */
-      public fun skewedColumnNames(skewedColumnNames: List<String>)
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.glue.CfnTable.SkewedInfoProperty.Builder =
+                software.amazon.awscdk.services.glue.CfnTable.SkewedInfoProperty.builder()
 
-      /**
-       * @param skewedColumnNames A list of names of columns that contain skewed values.
-       */
-      public fun skewedColumnNames(vararg skewedColumnNames: String)
+            /** @param skewedColumnNames A list of names of columns that contain skewed values. */
+            override fun skewedColumnNames(skewedColumnNames: List<String>) {
+                cdkBuilder.skewedColumnNames(skewedColumnNames)
+            }
 
-      /**
-       * @param skewedColumnValueLocationMaps A mapping of skewed values to the columns that contain
-       * them.
-       */
-      public fun skewedColumnValueLocationMaps(skewedColumnValueLocationMaps: Any)
+            /** @param skewedColumnNames A list of names of columns that contain skewed values. */
+            override fun skewedColumnNames(vararg skewedColumnNames: String): Unit =
+                skewedColumnNames(skewedColumnNames.toList())
 
-      /**
-       * @param skewedColumnValues A list of values that appear so frequently as to be considered
-       * skewed.
-       */
-      public fun skewedColumnValues(skewedColumnValues: List<String>)
+            /**
+             * @param skewedColumnValueLocationMaps A mapping of skewed values to the columns that
+             *   contain them.
+             */
+            override fun skewedColumnValueLocationMaps(skewedColumnValueLocationMaps: Any) {
+                cdkBuilder.skewedColumnValueLocationMaps(skewedColumnValueLocationMaps)
+            }
 
-      /**
-       * @param skewedColumnValues A list of values that appear so frequently as to be considered
-       * skewed.
-       */
-      public fun skewedColumnValues(vararg skewedColumnValues: String)
-    }
+            /**
+             * @param skewedColumnValues A list of values that appear so frequently as to be
+             *   considered skewed.
+             */
+            override fun skewedColumnValues(skewedColumnValues: List<String>) {
+                cdkBuilder.skewedColumnValues(skewedColumnValues)
+            }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnTable.SkewedInfoProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnTable.SkewedInfoProperty.builder()
+            /**
+             * @param skewedColumnValues A list of values that appear so frequently as to be
+             *   considered skewed.
+             */
+            override fun skewedColumnValues(vararg skewedColumnValues: String): Unit =
+                skewedColumnValues(skewedColumnValues.toList())
 
-      /**
-       * @param skewedColumnNames A list of names of columns that contain skewed values.
-       */
-      override fun skewedColumnNames(skewedColumnNames: List<String>) {
-        cdkBuilder.skewedColumnNames(skewedColumnNames)
-      }
+            public fun build(): software.amazon.awscdk.services.glue.CfnTable.SkewedInfoProperty =
+                cdkBuilder.build()
+        }
 
-      /**
-       * @param skewedColumnNames A list of names of columns that contain skewed values.
-       */
-      override fun skewedColumnNames(vararg skewedColumnNames: String): Unit =
-          skewedColumnNames(skewedColumnNames.toList())
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.glue.CfnTable.SkewedInfoProperty,
+        ) : SkewedInfoProperty {
+            /**
+             * A list of names of columns that contain skewed values.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-skewedinfo.html#cfn-glue-table-skewedinfo-skewedcolumnnames)
+             */
+            override fun skewedColumnNames(): List<String> =
+                unwrap(this).getSkewedColumnNames() ?: emptyList()
 
-      /**
-       * @param skewedColumnValueLocationMaps A mapping of skewed values to the columns that contain
-       * them.
-       */
-      override fun skewedColumnValueLocationMaps(skewedColumnValueLocationMaps: Any) {
-        cdkBuilder.skewedColumnValueLocationMaps(skewedColumnValueLocationMaps)
-      }
+            /**
+             * A mapping of skewed values to the columns that contain them.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-skewedinfo.html#cfn-glue-table-skewedinfo-skewedcolumnvaluelocationmaps)
+             */
+            override fun skewedColumnValueLocationMaps(): Any? =
+                unwrap(this).getSkewedColumnValueLocationMaps()
 
-      /**
-       * @param skewedColumnValues A list of values that appear so frequently as to be considered
-       * skewed.
-       */
-      override fun skewedColumnValues(skewedColumnValues: List<String>) {
-        cdkBuilder.skewedColumnValues(skewedColumnValues)
-      }
+            /**
+             * A list of values that appear so frequently as to be considered skewed.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-skewedinfo.html#cfn-glue-table-skewedinfo-skewedcolumnvalues)
+             */
+            override fun skewedColumnValues(): List<String> =
+                unwrap(this).getSkewedColumnValues() ?: emptyList()
+        }
 
-      /**
-       * @param skewedColumnValues A list of values that appear so frequently as to be considered
-       * skewed.
-       */
-      override fun skewedColumnValues(vararg skewedColumnValues: String): Unit =
-          skewedColumnValues(skewedColumnValues.toList())
+        public companion object {
+            init {}
 
-      public fun build(): software.amazon.awscdk.services.glue.CfnTable.SkewedInfoProperty =
-          cdkBuilder.build()
-    }
+            public operator fun invoke(block: Builder.() -> Unit = {}): SkewedInfoProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject: software.amazon.awscdk.services.glue.CfnTable.SkewedInfoProperty,
-    ) : SkewedInfoProperty {
-      /**
-       * A list of names of columns that contain skewed values.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-skewedinfo.html#cfn-glue-table-skewedinfo-skewedcolumnnames)
-       */
-      override fun skewedColumnNames(): List<String> = unwrap(this).getSkewedColumnNames() ?:
-          emptyList()
+            internal fun wrap(
+                cdkObject: software.amazon.awscdk.services.glue.CfnTable.SkewedInfoProperty
+            ): SkewedInfoProperty = Wrapper(cdkObject)
 
-      /**
-       * A mapping of skewed values to the columns that contain them.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-skewedinfo.html#cfn-glue-table-skewedinfo-skewedcolumnvaluelocationmaps)
-       */
-      override fun skewedColumnValueLocationMaps(): Any? =
-          unwrap(this).getSkewedColumnValueLocationMaps()
-
-      /**
-       * A list of values that appear so frequently as to be considered skewed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-skewedinfo.html#cfn-glue-table-skewedinfo-skewedcolumnvalues)
-       */
-      override fun skewedColumnValues(): List<String> = unwrap(this).getSkewedColumnValues() ?:
-          emptyList()
+            internal fun unwrap(
+                wrapped: SkewedInfoProperty
+            ): software.amazon.awscdk.services.glue.CfnTable.SkewedInfoProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface SerdeInfoProperty {
+        /**
+         * Name of the SerDe.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-serdeinfo.html#cfn-glue-table-serdeinfo-name)
+         */
+        public fun name(): String? = unwrap(this).getName()
 
-      }
+        /**
+         * These key-value pairs define initialization parameters for the SerDe.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-serdeinfo.html#cfn-glue-table-serdeinfo-parameters)
+         */
+        public fun parameters(): Any? = unwrap(this).getParameters()
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): SkewedInfoProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /**
+         * Usually the class that implements the SerDe.
+         *
+         * An example is `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-serdeinfo.html#cfn-glue-table-serdeinfo-serializationlibrary)
+         */
+        public fun serializationLibrary(): String? = unwrap(this).getSerializationLibrary()
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable.SkewedInfoProperty):
-          SkewedInfoProperty = Wrapper(cdkObject)
+        /** A builder for [SerdeInfoProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param name Name of the SerDe. */
+            public fun name(name: String)
 
-      internal fun unwrap(wrapped: SkewedInfoProperty):
-          software.amazon.awscdk.services.glue.CfnTable.SkewedInfoProperty = (wrapped as
-          Wrapper).cdkObject
-    }
-  }
+            /**
+             * @param parameters These key-value pairs define initialization parameters for the
+             *   SerDe.
+             */
+            public fun parameters(parameters: Any)
 
-  public interface SerdeInfoProperty {
-    /**
-     * Name of the SerDe.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-serdeinfo.html#cfn-glue-table-serdeinfo-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
+            /**
+             * @param serializationLibrary Usually the class that implements the SerDe. An example
+             *   is `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe` .
+             */
+            public fun serializationLibrary(serializationLibrary: String)
+        }
 
-    /**
-     * These key-value pairs define initialization parameters for the SerDe.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-serdeinfo.html#cfn-glue-table-serdeinfo-parameters)
-     */
-    public fun parameters(): Any? = unwrap(this).getParameters()
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.glue.CfnTable.SerdeInfoProperty.Builder =
+                software.amazon.awscdk.services.glue.CfnTable.SerdeInfoProperty.builder()
 
-    /**
-     * Usually the class that implements the SerDe.
-     *
-     * An example is `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-serdeinfo.html#cfn-glue-table-serdeinfo-serializationlibrary)
-     */
-    public fun serializationLibrary(): String? = unwrap(this).getSerializationLibrary()
+            /** @param name Name of the SerDe. */
+            override fun name(name: String) {
+                cdkBuilder.name(name)
+            }
 
-    /**
-     * A builder for [SerdeInfoProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name Name of the SerDe.
-       */
-      public fun name(name: String)
+            /**
+             * @param parameters These key-value pairs define initialization parameters for the
+             *   SerDe.
+             */
+            override fun parameters(parameters: Any) {
+                cdkBuilder.parameters(parameters)
+            }
 
-      /**
-       * @param parameters These key-value pairs define initialization parameters for the SerDe.
-       */
-      public fun parameters(parameters: Any)
+            /**
+             * @param serializationLibrary Usually the class that implements the SerDe. An example
+             *   is `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe` .
+             */
+            override fun serializationLibrary(serializationLibrary: String) {
+                cdkBuilder.serializationLibrary(serializationLibrary)
+            }
 
-      /**
-       * @param serializationLibrary Usually the class that implements the SerDe.
-       * An example is `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe` .
-       */
-      public fun serializationLibrary(serializationLibrary: String)
-    }
+            public fun build(): software.amazon.awscdk.services.glue.CfnTable.SerdeInfoProperty =
+                cdkBuilder.build()
+        }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnTable.SerdeInfoProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnTable.SerdeInfoProperty.builder()
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject: software.amazon.awscdk.services.glue.CfnTable.SerdeInfoProperty,
+        ) : SerdeInfoProperty {
+            /**
+             * Name of the SerDe.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-serdeinfo.html#cfn-glue-table-serdeinfo-name)
+             */
+            override fun name(): String? = unwrap(this).getName()
 
-      /**
-       * @param name Name of the SerDe.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
+            /**
+             * These key-value pairs define initialization parameters for the SerDe.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-serdeinfo.html#cfn-glue-table-serdeinfo-parameters)
+             */
+            override fun parameters(): Any? = unwrap(this).getParameters()
 
-      /**
-       * @param parameters These key-value pairs define initialization parameters for the SerDe.
-       */
-      override fun parameters(parameters: Any) {
-        cdkBuilder.parameters(parameters)
-      }
+            /**
+             * Usually the class that implements the SerDe.
+             *
+             * An example is `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-serdeinfo.html#cfn-glue-table-serdeinfo-serializationlibrary)
+             */
+            override fun serializationLibrary(): String? = unwrap(this).getSerializationLibrary()
+        }
 
-      /**
-       * @param serializationLibrary Usually the class that implements the SerDe.
-       * An example is `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe` .
-       */
-      override fun serializationLibrary(serializationLibrary: String) {
-        cdkBuilder.serializationLibrary(serializationLibrary)
-      }
+        public companion object {
+            init {}
 
-      public fun build(): software.amazon.awscdk.services.glue.CfnTable.SerdeInfoProperty =
-          cdkBuilder.build()
-    }
+            public operator fun invoke(block: Builder.() -> Unit = {}): SerdeInfoProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject: software.amazon.awscdk.services.glue.CfnTable.SerdeInfoProperty,
-    ) : SerdeInfoProperty {
-      /**
-       * Name of the SerDe.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-serdeinfo.html#cfn-glue-table-serdeinfo-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
+            internal fun wrap(
+                cdkObject: software.amazon.awscdk.services.glue.CfnTable.SerdeInfoProperty
+            ): SerdeInfoProperty = Wrapper(cdkObject)
 
-      /**
-       * These key-value pairs define initialization parameters for the SerDe.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-serdeinfo.html#cfn-glue-table-serdeinfo-parameters)
-       */
-      override fun parameters(): Any? = unwrap(this).getParameters()
-
-      /**
-       * Usually the class that implements the SerDe.
-       *
-       * An example is `org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-serdeinfo.html#cfn-glue-table-serdeinfo-serializationlibrary)
-       */
-      override fun serializationLibrary(): String? = unwrap(this).getSerializationLibrary()
+            internal fun unwrap(
+                wrapped: SerdeInfoProperty
+            ): software.amazon.awscdk.services.glue.CfnTable.SerdeInfoProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface TableIdentifierProperty {
+        /**
+         * The ID of the Data Catalog in which the table resides.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html#cfn-glue-table-tableidentifier-catalogid)
+         */
+        public fun catalogId(): String? = unwrap(this).getCatalogId()
 
-      }
+        /**
+         * The name of the catalog database that contains the target table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html#cfn-glue-table-tableidentifier-databasename)
+         */
+        public fun databaseName(): String? = unwrap(this).getDatabaseName()
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): SerdeInfoProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /**
+         * The name of the target table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html#cfn-glue-table-tableidentifier-name)
+         */
+        public fun name(): String? = unwrap(this).getName()
 
-      internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable.SerdeInfoProperty):
-          SerdeInfoProperty = Wrapper(cdkObject)
+        /**
+         * The Region of the table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html#cfn-glue-table-tableidentifier-region)
+         */
+        public fun region(): String? = unwrap(this).getRegion()
 
-      internal fun unwrap(wrapped: SerdeInfoProperty):
-          software.amazon.awscdk.services.glue.CfnTable.SerdeInfoProperty = (wrapped as
-          Wrapper).cdkObject
-    }
-  }
+        /** A builder for [TableIdentifierProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param catalogId The ID of the Data Catalog in which the table resides. */
+            public fun catalogId(catalogId: String)
 
-  public interface TableIdentifierProperty {
-    /**
-     * The ID of the Data Catalog in which the table resides.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html#cfn-glue-table-tableidentifier-catalogid)
-     */
-    public fun catalogId(): String? = unwrap(this).getCatalogId()
+            /**
+             * @param databaseName The name of the catalog database that contains the target table.
+             */
+            public fun databaseName(databaseName: String)
 
-    /**
-     * The name of the catalog database that contains the target table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html#cfn-glue-table-tableidentifier-databasename)
-     */
-    public fun databaseName(): String? = unwrap(this).getDatabaseName()
+            /** @param name The name of the target table. */
+            public fun name(name: String)
 
-    /**
-     * The name of the target table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html#cfn-glue-table-tableidentifier-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
+            /** @param region The Region of the table. */
+            public fun region(region: String)
+        }
 
-    /**
-     * The Region of the table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html#cfn-glue-table-tableidentifier-region)
-     */
-    public fun region(): String? = unwrap(this).getRegion()
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.glue.CfnTable.TableIdentifierProperty.Builder =
+                software.amazon.awscdk.services.glue.CfnTable.TableIdentifierProperty.builder()
 
-    /**
-     * A builder for [TableIdentifierProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param catalogId The ID of the Data Catalog in which the table resides.
-       */
-      public fun catalogId(catalogId: String)
+            /** @param catalogId The ID of the Data Catalog in which the table resides. */
+            override fun catalogId(catalogId: String) {
+                cdkBuilder.catalogId(catalogId)
+            }
 
-      /**
-       * @param databaseName The name of the catalog database that contains the target table.
-       */
-      public fun databaseName(databaseName: String)
+            /**
+             * @param databaseName The name of the catalog database that contains the target table.
+             */
+            override fun databaseName(databaseName: String) {
+                cdkBuilder.databaseName(databaseName)
+            }
 
-      /**
-       * @param name The name of the target table.
-       */
-      public fun name(name: String)
+            /** @param name The name of the target table. */
+            override fun name(name: String) {
+                cdkBuilder.name(name)
+            }
 
-      /**
-       * @param region The Region of the table.
-       */
-      public fun region(region: String)
-    }
+            /** @param region The Region of the table. */
+            override fun region(region: String) {
+                cdkBuilder.region(region)
+            }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnTable.TableIdentifierProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnTable.TableIdentifierProperty.builder()
+            public fun build():
+                software.amazon.awscdk.services.glue.CfnTable.TableIdentifierProperty =
+                cdkBuilder.build()
+        }
 
-      /**
-       * @param catalogId The ID of the Data Catalog in which the table resides.
-       */
-      override fun catalogId(catalogId: String) {
-        cdkBuilder.catalogId(catalogId)
-      }
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.glue.CfnTable.TableIdentifierProperty,
+        ) : TableIdentifierProperty {
+            /**
+             * The ID of the Data Catalog in which the table resides.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html#cfn-glue-table-tableidentifier-catalogid)
+             */
+            override fun catalogId(): String? = unwrap(this).getCatalogId()
 
-      /**
-       * @param databaseName The name of the catalog database that contains the target table.
-       */
-      override fun databaseName(databaseName: String) {
-        cdkBuilder.databaseName(databaseName)
-      }
+            /**
+             * The name of the catalog database that contains the target table.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html#cfn-glue-table-tableidentifier-databasename)
+             */
+            override fun databaseName(): String? = unwrap(this).getDatabaseName()
 
-      /**
-       * @param name The name of the target table.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
+            /**
+             * The name of the target table.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html#cfn-glue-table-tableidentifier-name)
+             */
+            override fun name(): String? = unwrap(this).getName()
 
-      /**
-       * @param region The Region of the table.
-       */
-      override fun region(region: String) {
-        cdkBuilder.region(region)
-      }
+            /**
+             * The Region of the table.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html#cfn-glue-table-tableidentifier-region)
+             */
+            override fun region(): String? = unwrap(this).getRegion()
+        }
 
-      public fun build(): software.amazon.awscdk.services.glue.CfnTable.TableIdentifierProperty =
-          cdkBuilder.build()
-    }
+        public companion object {
+            init {}
 
-    private class Wrapper internal constructor(
-      internal val cdkObject: software.amazon.awscdk.services.glue.CfnTable.TableIdentifierProperty,
-    ) : TableIdentifierProperty {
-      /**
-       * The ID of the Data Catalog in which the table resides.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html#cfn-glue-table-tableidentifier-catalogid)
-       */
-      override fun catalogId(): String? = unwrap(this).getCatalogId()
+            public operator fun invoke(block: Builder.() -> Unit = {}): TableIdentifierProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-      /**
-       * The name of the catalog database that contains the target table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html#cfn-glue-table-tableidentifier-databasename)
-       */
-      override fun databaseName(): String? = unwrap(this).getDatabaseName()
+            internal fun wrap(
+                cdkObject: software.amazon.awscdk.services.glue.CfnTable.TableIdentifierProperty
+            ): TableIdentifierProperty = Wrapper(cdkObject)
 
-      /**
-       * The name of the target table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html#cfn-glue-table-tableidentifier-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * The Region of the table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableidentifier.html#cfn-glue-table-tableidentifier-region)
-       */
-      override fun region(): String? = unwrap(this).getRegion()
+            internal fun unwrap(
+                wrapped: TableIdentifierProperty
+            ): software.amazon.awscdk.services.glue.CfnTable.TableIdentifierProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface OrderProperty {
+        /**
+         * The name of the column.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-order.html#cfn-glue-table-order-column)
+         */
+        public fun column(): String
 
-      }
+        /**
+         * Indicates that the column is sorted in ascending order ( `== 1` ), or in descending order
+         * ( `==0` ).
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-order.html#cfn-glue-table-order-sortorder)
+         */
+        public fun sortOrder(): Number
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): TableIdentifierProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /** A builder for [OrderProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param column The name of the column. */
+            public fun column(column: String)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable.TableIdentifierProperty):
-          TableIdentifierProperty = Wrapper(cdkObject)
+            /**
+             * @param sortOrder Indicates that the column is sorted in ascending order ( `== 1` ),
+             *   or in descending order ( `==0` ).
+             */
+            public fun sortOrder(sortOrder: Number)
+        }
 
-      internal fun unwrap(wrapped: TableIdentifierProperty):
-          software.amazon.awscdk.services.glue.CfnTable.TableIdentifierProperty = (wrapped as
-          Wrapper).cdkObject
-    }
-  }
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.glue.CfnTable.OrderProperty.Builder =
+                software.amazon.awscdk.services.glue.CfnTable.OrderProperty.builder()
 
-  public interface OrderProperty {
-    /**
-     * The name of the column.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-order.html#cfn-glue-table-order-column)
-     */
-    public fun column(): String
+            /** @param column The name of the column. */
+            override fun column(column: String) {
+                cdkBuilder.column(column)
+            }
 
-    /**
-     * Indicates that the column is sorted in ascending order ( `== 1` ), or in descending order (
-     * `==0` ).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-order.html#cfn-glue-table-order-sortorder)
-     */
-    public fun sortOrder(): Number
+            /**
+             * @param sortOrder Indicates that the column is sorted in ascending order ( `== 1` ),
+             *   or in descending order ( `==0` ).
+             */
+            override fun sortOrder(sortOrder: Number) {
+                cdkBuilder.sortOrder(sortOrder)
+            }
 
-    /**
-     * A builder for [OrderProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param column The name of the column. 
-       */
-      public fun column(column: String)
+            public fun build(): software.amazon.awscdk.services.glue.CfnTable.OrderProperty =
+                cdkBuilder.build()
+        }
 
-      /**
-       * @param sortOrder Indicates that the column is sorted in ascending order ( `== 1` ), or in
-       * descending order ( `==0` ). 
-       */
-      public fun sortOrder(sortOrder: Number)
-    }
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject: software.amazon.awscdk.services.glue.CfnTable.OrderProperty,
+        ) : OrderProperty {
+            /**
+             * The name of the column.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-order.html#cfn-glue-table-order-column)
+             */
+            override fun column(): String = unwrap(this).getColumn()
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder: software.amazon.awscdk.services.glue.CfnTable.OrderProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnTable.OrderProperty.builder()
+            /**
+             * Indicates that the column is sorted in ascending order ( `== 1` ), or in descending
+             * order ( `==0` ).
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-order.html#cfn-glue-table-order-sortorder)
+             */
+            override fun sortOrder(): Number = unwrap(this).getSortOrder()
+        }
 
-      /**
-       * @param column The name of the column. 
-       */
-      override fun column(column: String) {
-        cdkBuilder.column(column)
-      }
+        public companion object {
+            init {}
 
-      /**
-       * @param sortOrder Indicates that the column is sorted in ascending order ( `== 1` ), or in
-       * descending order ( `==0` ). 
-       */
-      override fun sortOrder(sortOrder: Number) {
-        cdkBuilder.sortOrder(sortOrder)
-      }
+            public operator fun invoke(block: Builder.() -> Unit = {}): OrderProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-      public fun build(): software.amazon.awscdk.services.glue.CfnTable.OrderProperty =
-          cdkBuilder.build()
-    }
+            internal fun wrap(
+                cdkObject: software.amazon.awscdk.services.glue.CfnTable.OrderProperty
+            ): OrderProperty = Wrapper(cdkObject)
 
-    private class Wrapper internal constructor(
-      internal val cdkObject: software.amazon.awscdk.services.glue.CfnTable.OrderProperty,
-    ) : OrderProperty {
-      /**
-       * The name of the column.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-order.html#cfn-glue-table-order-column)
-       */
-      override fun column(): String = unwrap(this).getColumn()
-
-      /**
-       * Indicates that the column is sorted in ascending order ( `== 1` ), or in descending order (
-       * `==0` ).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-order.html#cfn-glue-table-order-sortorder)
-       */
-      override fun sortOrder(): Number = unwrap(this).getSortOrder()
+            internal fun unwrap(
+                wrapped: OrderProperty
+            ): software.amazon.awscdk.services.glue.CfnTable.OrderProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface SchemaIdProperty {
+        /**
+         * The name of the schema registry that contains the schema.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemaid.html#cfn-glue-table-schemaid-registryname)
+         */
+        public fun registryName(): String? = unwrap(this).getRegistryName()
 
-      }
+        /**
+         * The Amazon Resource Name (ARN) of the schema.
+         *
+         * One of `SchemaArn` or `SchemaName` has to be provided.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemaid.html#cfn-glue-table-schemaid-schemaarn)
+         */
+        public fun schemaArn(): String? = unwrap(this).getSchemaArn()
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): OrderProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /**
+         * The name of the schema.
+         *
+         * One of `SchemaArn` or `SchemaName` has to be provided.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemaid.html#cfn-glue-table-schemaid-schemaname)
+         */
+        public fun schemaName(): String? = unwrap(this).getSchemaName()
 
-      internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable.OrderProperty):
-          OrderProperty = Wrapper(cdkObject)
+        /** A builder for [SchemaIdProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param registryName The name of the schema registry that contains the schema. */
+            public fun registryName(registryName: String)
 
-      internal fun unwrap(wrapped: OrderProperty):
-          software.amazon.awscdk.services.glue.CfnTable.OrderProperty = (wrapped as
-          Wrapper).cdkObject
-    }
-  }
+            /**
+             * @param schemaArn The Amazon Resource Name (ARN) of the schema. One of `SchemaArn` or
+             *   `SchemaName` has to be provided.
+             */
+            public fun schemaArn(schemaArn: String)
 
-  public interface SchemaIdProperty {
-    /**
-     * The name of the schema registry that contains the schema.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemaid.html#cfn-glue-table-schemaid-registryname)
-     */
-    public fun registryName(): String? = unwrap(this).getRegistryName()
+            /**
+             * @param schemaName The name of the schema. One of `SchemaArn` or `SchemaName` has to
+             *   be provided.
+             */
+            public fun schemaName(schemaName: String)
+        }
 
-    /**
-     * The Amazon Resource Name (ARN) of the schema.
-     *
-     * One of `SchemaArn` or `SchemaName` has to be
-     * provided.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemaid.html#cfn-glue-table-schemaid-schemaarn)
-     */
-    public fun schemaArn(): String? = unwrap(this).getSchemaArn()
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.glue.CfnTable.SchemaIdProperty.Builder =
+                software.amazon.awscdk.services.glue.CfnTable.SchemaIdProperty.builder()
 
-    /**
-     * The name of the schema.
-     *
-     * One of `SchemaArn` or `SchemaName` has to be provided.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemaid.html#cfn-glue-table-schemaid-schemaname)
-     */
-    public fun schemaName(): String? = unwrap(this).getSchemaName()
+            /** @param registryName The name of the schema registry that contains the schema. */
+            override fun registryName(registryName: String) {
+                cdkBuilder.registryName(registryName)
+            }
 
-    /**
-     * A builder for [SchemaIdProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param registryName The name of the schema registry that contains the schema.
-       */
-      public fun registryName(registryName: String)
+            /**
+             * @param schemaArn The Amazon Resource Name (ARN) of the schema. One of `SchemaArn` or
+             *   `SchemaName` has to be provided.
+             */
+            override fun schemaArn(schemaArn: String) {
+                cdkBuilder.schemaArn(schemaArn)
+            }
 
-      /**
-       * @param schemaArn The Amazon Resource Name (ARN) of the schema.
-       * One of `SchemaArn` or `SchemaName` has to be
-       * provided.
-       */
-      public fun schemaArn(schemaArn: String)
+            /**
+             * @param schemaName The name of the schema. One of `SchemaArn` or `SchemaName` has to
+             *   be provided.
+             */
+            override fun schemaName(schemaName: String) {
+                cdkBuilder.schemaName(schemaName)
+            }
 
-      /**
-       * @param schemaName The name of the schema.
-       * One of `SchemaArn` or `SchemaName` has to be provided.
-       */
-      public fun schemaName(schemaName: String)
-    }
+            public fun build(): software.amazon.awscdk.services.glue.CfnTable.SchemaIdProperty =
+                cdkBuilder.build()
+        }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder: software.amazon.awscdk.services.glue.CfnTable.SchemaIdProperty.Builder
-          = software.amazon.awscdk.services.glue.CfnTable.SchemaIdProperty.builder()
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject: software.amazon.awscdk.services.glue.CfnTable.SchemaIdProperty,
+        ) : SchemaIdProperty {
+            /**
+             * The name of the schema registry that contains the schema.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemaid.html#cfn-glue-table-schemaid-registryname)
+             */
+            override fun registryName(): String? = unwrap(this).getRegistryName()
 
-      /**
-       * @param registryName The name of the schema registry that contains the schema.
-       */
-      override fun registryName(registryName: String) {
-        cdkBuilder.registryName(registryName)
-      }
+            /**
+             * The Amazon Resource Name (ARN) of the schema.
+             *
+             * One of `SchemaArn` or `SchemaName` has to be provided.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemaid.html#cfn-glue-table-schemaid-schemaarn)
+             */
+            override fun schemaArn(): String? = unwrap(this).getSchemaArn()
 
-      /**
-       * @param schemaArn The Amazon Resource Name (ARN) of the schema.
-       * One of `SchemaArn` or `SchemaName` has to be
-       * provided.
-       */
-      override fun schemaArn(schemaArn: String) {
-        cdkBuilder.schemaArn(schemaArn)
-      }
+            /**
+             * The name of the schema.
+             *
+             * One of `SchemaArn` or `SchemaName` has to be provided.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemaid.html#cfn-glue-table-schemaid-schemaname)
+             */
+            override fun schemaName(): String? = unwrap(this).getSchemaName()
+        }
 
-      /**
-       * @param schemaName The name of the schema.
-       * One of `SchemaArn` or `SchemaName` has to be provided.
-       */
-      override fun schemaName(schemaName: String) {
-        cdkBuilder.schemaName(schemaName)
-      }
+        public companion object {
+            init {}
 
-      public fun build(): software.amazon.awscdk.services.glue.CfnTable.SchemaIdProperty =
-          cdkBuilder.build()
-    }
+            public operator fun invoke(block: Builder.() -> Unit = {}): SchemaIdProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject: software.amazon.awscdk.services.glue.CfnTable.SchemaIdProperty,
-    ) : SchemaIdProperty {
-      /**
-       * The name of the schema registry that contains the schema.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemaid.html#cfn-glue-table-schemaid-registryname)
-       */
-      override fun registryName(): String? = unwrap(this).getRegistryName()
+            internal fun wrap(
+                cdkObject: software.amazon.awscdk.services.glue.CfnTable.SchemaIdProperty
+            ): SchemaIdProperty = Wrapper(cdkObject)
 
-      /**
-       * The Amazon Resource Name (ARN) of the schema.
-       *
-       * One of `SchemaArn` or `SchemaName` has to be
-       * provided.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemaid.html#cfn-glue-table-schemaid-schemaarn)
-       */
-      override fun schemaArn(): String? = unwrap(this).getSchemaArn()
-
-      /**
-       * The name of the schema.
-       *
-       * One of `SchemaArn` or `SchemaName` has to be provided.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-schemaid.html#cfn-glue-table-schemaid-schemaname)
-       */
-      override fun schemaName(): String? = unwrap(this).getSchemaName()
+            internal fun unwrap(
+                wrapped: SchemaIdProperty
+            ): software.amazon.awscdk.services.glue.CfnTable.SchemaIdProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface IcebergInputProperty {
+        /**
+         * A required metadata operation.
+         *
+         * Can only be set to CREATE.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-iceberginput.html#cfn-glue-table-iceberginput-metadataoperation)
+         */
+        public fun metadataOperation(): String? = unwrap(this).getMetadataOperation()
 
-      }
+        /**
+         * The table version for the Iceberg table.
+         *
+         * Defaults to 2.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-iceberginput.html#cfn-glue-table-iceberginput-version)
+         */
+        public fun version(): String? = unwrap(this).getVersion()
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): SchemaIdProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /** A builder for [IcebergInputProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param metadataOperation A required metadata operation. Can only be set to CREATE.
+             */
+            public fun metadataOperation(metadataOperation: String)
 
-      internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable.SchemaIdProperty):
-          SchemaIdProperty = Wrapper(cdkObject)
+            /** @param version The table version for the Iceberg table. Defaults to 2. */
+            public fun version(version: String)
+        }
 
-      internal fun unwrap(wrapped: SchemaIdProperty):
-          software.amazon.awscdk.services.glue.CfnTable.SchemaIdProperty = (wrapped as
-          Wrapper).cdkObject
-    }
-  }
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.glue.CfnTable.IcebergInputProperty.Builder =
+                software.amazon.awscdk.services.glue.CfnTable.IcebergInputProperty.builder()
 
-  public interface IcebergInputProperty {
-    /**
-     * A required metadata operation.
-     *
-     * Can only be set to CREATE.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-iceberginput.html#cfn-glue-table-iceberginput-metadataoperation)
-     */
-    public fun metadataOperation(): String? = unwrap(this).getMetadataOperation()
+            /**
+             * @param metadataOperation A required metadata operation. Can only be set to CREATE.
+             */
+            override fun metadataOperation(metadataOperation: String) {
+                cdkBuilder.metadataOperation(metadataOperation)
+            }
 
-    /**
-     * The table version for the Iceberg table.
-     *
-     * Defaults to 2.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-iceberginput.html#cfn-glue-table-iceberginput-version)
-     */
-    public fun version(): String? = unwrap(this).getVersion()
+            /** @param version The table version for the Iceberg table. Defaults to 2. */
+            override fun version(version: String) {
+                cdkBuilder.version(version)
+            }
 
-    /**
-     * A builder for [IcebergInputProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param metadataOperation A required metadata operation.
-       * Can only be set to CREATE.
-       */
-      public fun metadataOperation(metadataOperation: String)
+            public fun build(): software.amazon.awscdk.services.glue.CfnTable.IcebergInputProperty =
+                cdkBuilder.build()
+        }
 
-      /**
-       * @param version The table version for the Iceberg table.
-       * Defaults to 2.
-       */
-      public fun version(version: String)
-    }
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.glue.CfnTable.IcebergInputProperty,
+        ) : IcebergInputProperty {
+            /**
+             * A required metadata operation.
+             *
+             * Can only be set to CREATE.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-iceberginput.html#cfn-glue-table-iceberginput-metadataoperation)
+             */
+            override fun metadataOperation(): String? = unwrap(this).getMetadataOperation()
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.glue.CfnTable.IcebergInputProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnTable.IcebergInputProperty.builder()
+            /**
+             * The table version for the Iceberg table.
+             *
+             * Defaults to 2.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-iceberginput.html#cfn-glue-table-iceberginput-version)
+             */
+            override fun version(): String? = unwrap(this).getVersion()
+        }
 
-      /**
-       * @param metadataOperation A required metadata operation.
-       * Can only be set to CREATE.
-       */
-      override fun metadataOperation(metadataOperation: String) {
-        cdkBuilder.metadataOperation(metadataOperation)
-      }
+        public companion object {
+            init {}
 
-      /**
-       * @param version The table version for the Iceberg table.
-       * Defaults to 2.
-       */
-      override fun version(version: String) {
-        cdkBuilder.version(version)
-      }
+            public operator fun invoke(block: Builder.() -> Unit = {}): IcebergInputProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-      public fun build(): software.amazon.awscdk.services.glue.CfnTable.IcebergInputProperty =
-          cdkBuilder.build()
-    }
+            internal fun wrap(
+                cdkObject: software.amazon.awscdk.services.glue.CfnTable.IcebergInputProperty
+            ): IcebergInputProperty = Wrapper(cdkObject)
 
-    private class Wrapper internal constructor(
-      internal val cdkObject: software.amazon.awscdk.services.glue.CfnTable.IcebergInputProperty,
-    ) : IcebergInputProperty {
-      /**
-       * A required metadata operation.
-       *
-       * Can only be set to CREATE.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-iceberginput.html#cfn-glue-table-iceberginput-metadataoperation)
-       */
-      override fun metadataOperation(): String? = unwrap(this).getMetadataOperation()
-
-      /**
-       * The table version for the Iceberg table.
-       *
-       * Defaults to 2.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-iceberginput.html#cfn-glue-table-iceberginput-version)
-       */
-      override fun version(): String? = unwrap(this).getVersion()
+            internal fun unwrap(
+                wrapped: IcebergInputProperty
+            ): software.amazon.awscdk.services.glue.CfnTable.IcebergInputProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface ColumnProperty {
+        /**
+         * A free-form text comment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-column.html#cfn-glue-table-column-comment)
+         */
+        public fun comment(): String? = unwrap(this).getComment()
 
-      }
+        /**
+         * The name of the `Column` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-column.html#cfn-glue-table-column-name)
+         */
+        public fun name(): String
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): IcebergInputProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /**
+         * The data type of the `Column` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-column.html#cfn-glue-table-column-type)
+         */
+        public fun type(): String? = unwrap(this).getType()
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable.IcebergInputProperty):
-          IcebergInputProperty = Wrapper(cdkObject)
+        /** A builder for [ColumnProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param comment A free-form text comment. */
+            public fun comment(comment: String)
 
-      internal fun unwrap(wrapped: IcebergInputProperty):
-          software.amazon.awscdk.services.glue.CfnTable.IcebergInputProperty = (wrapped as
-          Wrapper).cdkObject
+            /** @param name The name of the `Column` . */
+            public fun name(name: String)
+
+            /** @param type The data type of the `Column` . */
+            public fun type(type: String)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.glue.CfnTable.ColumnProperty.Builder =
+                software.amazon.awscdk.services.glue.CfnTable.ColumnProperty.builder()
+
+            /** @param comment A free-form text comment. */
+            override fun comment(comment: String) {
+                cdkBuilder.comment(comment)
+            }
+
+            /** @param name The name of the `Column` . */
+            override fun name(name: String) {
+                cdkBuilder.name(name)
+            }
+
+            /** @param type The data type of the `Column` . */
+            override fun type(type: String) {
+                cdkBuilder.type(type)
+            }
+
+            public fun build(): software.amazon.awscdk.services.glue.CfnTable.ColumnProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject: software.amazon.awscdk.services.glue.CfnTable.ColumnProperty,
+        ) : ColumnProperty {
+            /**
+             * A free-form text comment.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-column.html#cfn-glue-table-column-comment)
+             */
+            override fun comment(): String? = unwrap(this).getComment()
+
+            /**
+             * The name of the `Column` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-column.html#cfn-glue-table-column-name)
+             */
+            override fun name(): String = unwrap(this).getName()
+
+            /**
+             * The data type of the `Column` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-column.html#cfn-glue-table-column-type)
+             */
+            override fun type(): String? = unwrap(this).getType()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): ColumnProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject: software.amazon.awscdk.services.glue.CfnTable.ColumnProperty
+            ): ColumnProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: ColumnProperty
+            ): software.amazon.awscdk.services.glue.CfnTable.ColumnProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
-  }
-
-  public interface ColumnProperty {
-    /**
-     * A free-form text comment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-column.html#cfn-glue-table-column-comment)
-     */
-    public fun comment(): String? = unwrap(this).getComment()
-
-    /**
-     * The name of the `Column` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-column.html#cfn-glue-table-column-name)
-     */
-    public fun name(): String
-
-    /**
-     * The data type of the `Column` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-column.html#cfn-glue-table-column-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
-
-    /**
-     * A builder for [ColumnProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param comment A free-form text comment.
-       */
-      public fun comment(comment: String)
-
-      /**
-       * @param name The name of the `Column` . 
-       */
-      public fun name(name: String)
-
-      /**
-       * @param type The data type of the `Column` .
-       */
-      public fun type(type: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder: software.amazon.awscdk.services.glue.CfnTable.ColumnProperty.Builder =
-          software.amazon.awscdk.services.glue.CfnTable.ColumnProperty.builder()
-
-      /**
-       * @param comment A free-form text comment.
-       */
-      override fun comment(comment: String) {
-        cdkBuilder.comment(comment)
-      }
-
-      /**
-       * @param name The name of the `Column` . 
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
-
-      /**
-       * @param type The data type of the `Column` .
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
-
-      public fun build(): software.amazon.awscdk.services.glue.CfnTable.ColumnProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper internal constructor(
-      internal val cdkObject: software.amazon.awscdk.services.glue.CfnTable.ColumnProperty,
-    ) : ColumnProperty {
-      /**
-       * A free-form text comment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-column.html#cfn-glue-table-column-comment)
-       */
-      override fun comment(): String? = unwrap(this).getComment()
-
-      /**
-       * The name of the `Column` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-column.html#cfn-glue-table-column-name)
-       */
-      override fun name(): String = unwrap(this).getName()
-
-      /**
-       * The data type of the `Column` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-column.html#cfn-glue-table-column-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
-    }
-
-    public companion object {
-      init {
-
-      }
-
-      public operator fun invoke(block: Builder.() -> Unit = {}): ColumnProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable.ColumnProperty):
-          ColumnProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ColumnProperty):
-          software.amazon.awscdk.services.glue.CfnTable.ColumnProperty = (wrapped as
-          Wrapper).cdkObject
-    }
-  }
 }

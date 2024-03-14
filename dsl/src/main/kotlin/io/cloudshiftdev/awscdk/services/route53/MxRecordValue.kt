@@ -6,81 +6,65 @@ import kotlin.String
 import kotlin.Unit
 
 public interface MxRecordValue {
-  /**
-   * The mail server host name.
-   */
-  public fun hostName(): String
+    /** The mail server host name. */
+    public fun hostName(): String
 
-  /**
-   * The priority.
-   */
-  public fun priority(): Number
+    /** The priority. */
+    public fun priority(): Number
 
-  /**
-   * A builder for [MxRecordValue]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param hostName The mail server host name. 
-     */
-    public fun hostName(hostName: String)
+    /** A builder for [MxRecordValue] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param hostName The mail server host name. */
+        public fun hostName(hostName: String)
 
-    /**
-     * @param priority The priority. 
-     */
-    public fun priority(priority: Number)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.route53.MxRecordValue.Builder =
-        software.amazon.awscdk.services.route53.MxRecordValue.builder()
-
-    /**
-     * @param hostName The mail server host name. 
-     */
-    override fun hostName(hostName: String) {
-      cdkBuilder.hostName(hostName)
+        /** @param priority The priority. */
+        public fun priority(priority: Number)
     }
 
-    /**
-     * @param priority The priority. 
-     */
-    override fun priority(priority: Number) {
-      cdkBuilder.priority(priority)
+    private class BuilderImpl : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.route53.MxRecordValue.Builder =
+            software.amazon.awscdk.services.route53.MxRecordValue.builder()
+
+        /** @param hostName The mail server host name. */
+        override fun hostName(hostName: String) {
+            cdkBuilder.hostName(hostName)
+        }
+
+        /** @param priority The priority. */
+        override fun priority(priority: Number) {
+            cdkBuilder.priority(priority)
+        }
+
+        public fun build(): software.amazon.awscdk.services.route53.MxRecordValue =
+            cdkBuilder.build()
     }
 
-    public fun build(): software.amazon.awscdk.services.route53.MxRecordValue = cdkBuilder.build()
-  }
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.route53.MxRecordValue,
+    ) : MxRecordValue {
+        /** The mail server host name. */
+        override fun hostName(): String = unwrap(this).getHostName()
 
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.route53.MxRecordValue,
-  ) : MxRecordValue {
-    /**
-     * The mail server host name.
-     */
-    override fun hostName(): String = unwrap(this).getHostName()
-
-    /**
-     * The priority.
-     */
-    override fun priority(): Number = unwrap(this).getPriority()
-  }
-
-  public companion object {
-    init {
-
+        /** The priority. */
+        override fun priority(): Number = unwrap(this).getPriority()
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): MxRecordValue {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): MxRecordValue {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.route53.MxRecordValue
+        ): MxRecordValue = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: MxRecordValue
+        ): software.amazon.awscdk.services.route53.MxRecordValue = (wrapped as Wrapper).cdkObject
     }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.MxRecordValue):
-        MxRecordValue = Wrapper(cdkObject)
-
-    internal fun unwrap(wrapped: MxRecordValue):
-        software.amazon.awscdk.services.route53.MxRecordValue = (wrapped as Wrapper).cdkObject
-  }
 }

@@ -5,60 +5,53 @@ import kotlin.String
 import kotlin.Unit
 
 public interface DlqDestinationConfig {
-  /**
-   * The Amazon Resource Name (ARN) of the destination resource.
-   */
-  public fun destination(): String
+    /** The Amazon Resource Name (ARN) of the destination resource. */
+    public fun destination(): String
 
-  /**
-   * A builder for [DlqDestinationConfig]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param destination The Amazon Resource Name (ARN) of the destination resource. 
-     */
-    public fun destination(destination: String)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.lambda.DlqDestinationConfig.Builder =
-        software.amazon.awscdk.services.lambda.DlqDestinationConfig.builder()
-
-    /**
-     * @param destination The Amazon Resource Name (ARN) of the destination resource. 
-     */
-    override fun destination(destination: String) {
-      cdkBuilder.destination(destination)
+    /** A builder for [DlqDestinationConfig] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param destination The Amazon Resource Name (ARN) of the destination resource. */
+        public fun destination(destination: String)
     }
 
-    public fun build(): software.amazon.awscdk.services.lambda.DlqDestinationConfig =
-        cdkBuilder.build()
-  }
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.lambda.DlqDestinationConfig.Builder =
+            software.amazon.awscdk.services.lambda.DlqDestinationConfig.builder()
 
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.lambda.DlqDestinationConfig,
-  ) : DlqDestinationConfig {
-    /**
-     * The Amazon Resource Name (ARN) of the destination resource.
-     */
-    override fun destination(): String = unwrap(this).getDestination()
-  }
+        /** @param destination The Amazon Resource Name (ARN) of the destination resource. */
+        override fun destination(destination: String) {
+            cdkBuilder.destination(destination)
+        }
 
-  public companion object {
-    init {
-
+        public fun build(): software.amazon.awscdk.services.lambda.DlqDestinationConfig =
+            cdkBuilder.build()
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): DlqDestinationConfig {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.lambda.DlqDestinationConfig,
+    ) : DlqDestinationConfig {
+        /** The Amazon Resource Name (ARN) of the destination resource. */
+        override fun destination(): String = unwrap(this).getDestination()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.DlqDestinationConfig):
-        DlqDestinationConfig = Wrapper(cdkObject)
+    public companion object {
+        init {}
 
-    internal fun unwrap(wrapped: DlqDestinationConfig):
-        software.amazon.awscdk.services.lambda.DlqDestinationConfig = (wrapped as Wrapper).cdkObject
-  }
+        public operator fun invoke(block: Builder.() -> Unit = {}): DlqDestinationConfig {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.lambda.DlqDestinationConfig
+        ): DlqDestinationConfig = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: DlqDestinationConfig
+        ): software.amazon.awscdk.services.lambda.DlqDestinationConfig =
+            (wrapped as Wrapper).cdkObject
+    }
 }

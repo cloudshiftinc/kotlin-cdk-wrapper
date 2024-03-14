@@ -6,61 +6,57 @@ import kotlin.Unit
 import kotlin.collections.Map
 
 public interface RuntimeInfo {
-  /**
-   * The list of libraries loaded in the application, associated with their versions.
-   */
-  public fun libraries(): Map<String, String>
+    /** The list of libraries loaded in the application, associated with their versions. */
+    public fun libraries(): Map<String, String>
 
-  /**
-   * A builder for [RuntimeInfo]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param libraries The list of libraries loaded in the application, associated with their
-     * versions. 
-     */
-    public fun libraries(libraries: Map<String, String>)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.amazon.awscdk.cloudassembly.schema.RuntimeInfo.Builder =
-        software.amazon.awscdk.cloudassembly.schema.RuntimeInfo.builder()
-
-    /**
-     * @param libraries The list of libraries loaded in the application, associated with their
-     * versions. 
-     */
-    override fun libraries(libraries: Map<String, String>) {
-      cdkBuilder.libraries(libraries)
+    /** A builder for [RuntimeInfo] */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * @param libraries The list of libraries loaded in the application, associated with their
+         *   versions.
+         */
+        public fun libraries(libraries: Map<String, String>)
     }
 
-    public fun build(): software.amazon.awscdk.cloudassembly.schema.RuntimeInfo = cdkBuilder.build()
-  }
+    private class BuilderImpl : Builder {
+        private val cdkBuilder: software.amazon.awscdk.cloudassembly.schema.RuntimeInfo.Builder =
+            software.amazon.awscdk.cloudassembly.schema.RuntimeInfo.builder()
 
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.cloudassembly.schema.RuntimeInfo,
-  ) : RuntimeInfo {
-    /**
-     * The list of libraries loaded in the application, associated with their versions.
-     */
-    override fun libraries(): Map<String, String> = unwrap(this).getLibraries() ?: emptyMap()
-  }
+        /**
+         * @param libraries The list of libraries loaded in the application, associated with their
+         *   versions.
+         */
+        override fun libraries(libraries: Map<String, String>) {
+            cdkBuilder.libraries(libraries)
+        }
 
-  public companion object {
-    init {
-
+        public fun build(): software.amazon.awscdk.cloudassembly.schema.RuntimeInfo =
+            cdkBuilder.build()
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): RuntimeInfo {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.cloudassembly.schema.RuntimeInfo,
+    ) : RuntimeInfo {
+        /** The list of libraries loaded in the application, associated with their versions. */
+        override fun libraries(): Map<String, String> = unwrap(this).getLibraries() ?: emptyMap()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.RuntimeInfo):
-        RuntimeInfo = Wrapper(cdkObject)
+    public companion object {
+        init {}
 
-    internal fun unwrap(wrapped: RuntimeInfo):
-        software.amazon.awscdk.cloudassembly.schema.RuntimeInfo = (wrapped as Wrapper).cdkObject
-  }
+        public operator fun invoke(block: Builder.() -> Unit = {}): RuntimeInfo {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.cloudassembly.schema.RuntimeInfo
+        ): RuntimeInfo = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: RuntimeInfo
+        ): software.amazon.awscdk.cloudassembly.schema.RuntimeInfo = (wrapped as Wrapper).cdkObject
+    }
 }

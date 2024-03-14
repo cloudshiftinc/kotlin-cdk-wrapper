@@ -4,245 +4,249 @@ import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnVpcEndpoint internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpoint,
+public open class CfnVpcEndpoint
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpoint,
 ) : CfnResource(cdkObject), IInspectable {
-  /**
-   * The unique identifier of the endpoint.
-   *
-   * For example, `vpce-050f79086ee71ac05` .
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
-
-  /**
-   * Examines the CloudFormation resource and discloses attributes.
-   *
-   * @param inspector tree inspector to collect and process attributes. 
-   */
-  public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-  }
-
-  /**
-   * The name of the endpoint.
-   */
-  public open fun name(): String = unwrap(this).getName()
-
-  /**
-   * The name of the endpoint.
-   */
-  public open fun name(`value`: String) {
-    unwrap(this).setName(`value`)
-  }
-
-  /**
-   * The unique identifiers of the security groups that define the ports, protocols, and sources for
-   * inbound traffic that you are authorizing into your endpoint.
-   */
-  public open fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
-      emptyList()
-
-  /**
-   * The unique identifiers of the security groups that define the ports, protocols, and sources for
-   * inbound traffic that you are authorizing into your endpoint.
-   */
-  public open fun securityGroupIds(`value`: List<String>) {
-    unwrap(this).setSecurityGroupIds(`value`)
-  }
-
-  /**
-   * The unique identifiers of the security groups that define the ports, protocols, and sources for
-   * inbound traffic that you are authorizing into your endpoint.
-   */
-  public open fun securityGroupIds(vararg `value`: String): Unit =
-      securityGroupIds(`value`.toList())
-
-  /**
-   * The ID of the subnets from which you access OpenSearch Serverless.
-   */
-  public open fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
-
-  /**
-   * The ID of the subnets from which you access OpenSearch Serverless.
-   */
-  public open fun subnetIds(`value`: List<String>) {
-    unwrap(this).setSubnetIds(`value`)
-  }
-
-  /**
-   * The ID of the subnets from which you access OpenSearch Serverless.
-   */
-  public open fun subnetIds(vararg `value`: String): Unit = subnetIds(`value`.toList())
-
-  /**
-   * The ID of the VPC from which you access OpenSearch Serverless.
-   */
-  public open fun vpcId(): String = unwrap(this).getVpcId()
-
-  /**
-   * The ID of the VPC from which you access OpenSearch Serverless.
-   */
-  public open fun vpcId(`value`: String) {
-    unwrap(this).setVpcId(`value`)
-  }
-
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.opensearchserverless.CfnVpcEndpoint].
-   */
-  @CdkDslMarker
-  public interface Builder {
     /**
-     * The name of the endpoint.
+     * The unique identifier of the endpoint.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-name)
-     * @param name The name of the endpoint. 
+     * For example, `vpce-050f79086ee71ac05` .
      */
-    public fun name(name: String)
+    public open fun attrId(): String = unwrap(this).getAttrId()
 
     /**
-     * The unique identifiers of the security groups that define the ports, protocols, and sources
-     * for inbound traffic that you are authorizing into your endpoint.
+     * Examines the CloudFormation resource and discloses attributes.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-securitygroupids)
-     * @param securityGroupIds The unique identifiers of the security groups that define the ports,
-     * protocols, and sources for inbound traffic that you are authorizing into your endpoint. 
+     * @param inspector tree inspector to collect and process attributes.
      */
-    public fun securityGroupIds(securityGroupIds: List<String>)
+    public override fun inspect(inspector: TreeInspector) {
+        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    }
 
-    /**
-     * The unique identifiers of the security groups that define the ports, protocols, and sources
-     * for inbound traffic that you are authorizing into your endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-securitygroupids)
-     * @param securityGroupIds The unique identifiers of the security groups that define the ports,
-     * protocols, and sources for inbound traffic that you are authorizing into your endpoint. 
-     */
-    public fun securityGroupIds(vararg securityGroupIds: String)
+    /** The name of the endpoint. */
+    public open fun name(): String = unwrap(this).getName()
 
-    /**
-     * The ID of the subnets from which you access OpenSearch Serverless.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-subnetids)
-     * @param subnetIds The ID of the subnets from which you access OpenSearch Serverless. 
-     */
-    public fun subnetIds(subnetIds: List<String>)
-
-    /**
-     * The ID of the subnets from which you access OpenSearch Serverless.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-subnetids)
-     * @param subnetIds The ID of the subnets from which you access OpenSearch Serverless. 
-     */
-    public fun subnetIds(vararg subnetIds: String)
-
-    /**
-     * The ID of the VPC from which you access OpenSearch Serverless.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-vpcid)
-     * @param vpcId The ID of the VPC from which you access OpenSearch Serverless. 
-     */
-    public fun vpcId(vpcId: String)
-  }
-
-  private class BuilderImpl(
-    scope: SoftwareConstructsConstruct,
-    id: String,
-  ) : Builder {
-    private val cdkBuilder:
-        software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpoint.Builder =
-        software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpoint.Builder.create(scope,
-        id)
-
-    /**
-     * The name of the endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-name)
-     * @param name The name of the endpoint. 
-     */
-    override fun name(name: String) {
-      cdkBuilder.name(name)
+    /** The name of the endpoint. */
+    public open fun name(`value`: String) {
+        unwrap(this).setName(`value`)
     }
 
     /**
      * The unique identifiers of the security groups that define the ports, protocols, and sources
      * for inbound traffic that you are authorizing into your endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-securitygroupids)
-     * @param securityGroupIds The unique identifiers of the security groups that define the ports,
-     * protocols, and sources for inbound traffic that you are authorizing into your endpoint. 
      */
-    override fun securityGroupIds(securityGroupIds: List<String>) {
-      cdkBuilder.securityGroupIds(securityGroupIds)
+    public open fun securityGroupIds(): List<String> =
+        unwrap(this).getSecurityGroupIds() ?: emptyList()
+
+    /**
+     * The unique identifiers of the security groups that define the ports, protocols, and sources
+     * for inbound traffic that you are authorizing into your endpoint.
+     */
+    public open fun securityGroupIds(`value`: List<String>) {
+        unwrap(this).setSecurityGroupIds(`value`)
     }
 
     /**
      * The unique identifiers of the security groups that define the ports, protocols, and sources
      * for inbound traffic that you are authorizing into your endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-securitygroupids)
-     * @param securityGroupIds The unique identifiers of the security groups that define the ports,
-     * protocols, and sources for inbound traffic that you are authorizing into your endpoint. 
      */
-    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
-        securityGroupIds(securityGroupIds.toList())
+    public open fun securityGroupIds(vararg `value`: String): Unit =
+        securityGroupIds(`value`.toList())
 
-    /**
-     * The ID of the subnets from which you access OpenSearch Serverless.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-subnetids)
-     * @param subnetIds The ID of the subnets from which you access OpenSearch Serverless. 
-     */
-    override fun subnetIds(subnetIds: List<String>) {
-      cdkBuilder.subnetIds(subnetIds)
+    /** The ID of the subnets from which you access OpenSearch Serverless. */
+    public open fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
+
+    /** The ID of the subnets from which you access OpenSearch Serverless. */
+    public open fun subnetIds(`value`: List<String>) {
+        unwrap(this).setSubnetIds(`value`)
+    }
+
+    /** The ID of the subnets from which you access OpenSearch Serverless. */
+    public open fun subnetIds(vararg `value`: String): Unit = subnetIds(`value`.toList())
+
+    /** The ID of the VPC from which you access OpenSearch Serverless. */
+    public open fun vpcId(): String = unwrap(this).getVpcId()
+
+    /** The ID of the VPC from which you access OpenSearch Serverless. */
+    public open fun vpcId(`value`: String) {
+        unwrap(this).setVpcId(`value`)
     }
 
     /**
-     * The ID of the subnets from which you access OpenSearch Serverless.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-subnetids)
-     * @param subnetIds The ID of the subnets from which you access OpenSearch Serverless. 
+     * A fluent builder for [io.cloudshiftdev.awscdk.services.opensearchserverless.CfnVpcEndpoint].
      */
-    override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * The name of the endpoint.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-name)
+         *
+         * @param name The name of the endpoint.
+         */
+        public fun name(name: String)
 
-    /**
-     * The ID of the VPC from which you access OpenSearch Serverless.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-vpcid)
-     * @param vpcId The ID of the VPC from which you access OpenSearch Serverless. 
-     */
-    override fun vpcId(vpcId: String) {
-      cdkBuilder.vpcId(vpcId)
+        /**
+         * The unique identifiers of the security groups that define the ports, protocols, and
+         * sources for inbound traffic that you are authorizing into your endpoint.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-securitygroupids)
+         *
+         * @param securityGroupIds The unique identifiers of the security groups that define the
+         *   ports, protocols, and sources for inbound traffic that you are authorizing into your
+         *   endpoint.
+         */
+        public fun securityGroupIds(securityGroupIds: List<String>)
+
+        /**
+         * The unique identifiers of the security groups that define the ports, protocols, and
+         * sources for inbound traffic that you are authorizing into your endpoint.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-securitygroupids)
+         *
+         * @param securityGroupIds The unique identifiers of the security groups that define the
+         *   ports, protocols, and sources for inbound traffic that you are authorizing into your
+         *   endpoint.
+         */
+        public fun securityGroupIds(vararg securityGroupIds: String)
+
+        /**
+         * The ID of the subnets from which you access OpenSearch Serverless.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-subnetids)
+         *
+         * @param subnetIds The ID of the subnets from which you access OpenSearch Serverless.
+         */
+        public fun subnetIds(subnetIds: List<String>)
+
+        /**
+         * The ID of the subnets from which you access OpenSearch Serverless.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-subnetids)
+         *
+         * @param subnetIds The ID of the subnets from which you access OpenSearch Serverless.
+         */
+        public fun subnetIds(vararg subnetIds: String)
+
+        /**
+         * The ID of the VPC from which you access OpenSearch Serverless.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-vpcid)
+         *
+         * @param vpcId The ID of the VPC from which you access OpenSearch Serverless.
+         */
+        public fun vpcId(vpcId: String)
     }
 
-    public fun build(): software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpoint =
-        cdkBuilder.build()
-  }
+    private class BuilderImpl(
+        scope: SoftwareConstructsConstruct,
+        id: String,
+    ) : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpoint.Builder =
+            software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpoint.Builder.create(
+                scope,
+                id
+            )
 
-  public companion object {
-    init {
+        /**
+         * The name of the endpoint.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-name)
+         *
+         * @param name The name of the endpoint.
+         */
+        override fun name(name: String) {
+            cdkBuilder.name(name)
+        }
 
+        /**
+         * The unique identifiers of the security groups that define the ports, protocols, and
+         * sources for inbound traffic that you are authorizing into your endpoint.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-securitygroupids)
+         *
+         * @param securityGroupIds The unique identifiers of the security groups that define the
+         *   ports, protocols, and sources for inbound traffic that you are authorizing into your
+         *   endpoint.
+         */
+        override fun securityGroupIds(securityGroupIds: List<String>) {
+            cdkBuilder.securityGroupIds(securityGroupIds)
+        }
+
+        /**
+         * The unique identifiers of the security groups that define the ports, protocols, and
+         * sources for inbound traffic that you are authorizing into your endpoint.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-securitygroupids)
+         *
+         * @param securityGroupIds The unique identifiers of the security groups that define the
+         *   ports, protocols, and sources for inbound traffic that you are authorizing into your
+         *   endpoint.
+         */
+        override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+            securityGroupIds(securityGroupIds.toList())
+
+        /**
+         * The ID of the subnets from which you access OpenSearch Serverless.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-subnetids)
+         *
+         * @param subnetIds The ID of the subnets from which you access OpenSearch Serverless.
+         */
+        override fun subnetIds(subnetIds: List<String>) {
+            cdkBuilder.subnetIds(subnetIds)
+        }
+
+        /**
+         * The ID of the subnets from which you access OpenSearch Serverless.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-subnetids)
+         *
+         * @param subnetIds The ID of the subnets from which you access OpenSearch Serverless.
+         */
+        override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+
+        /**
+         * The ID of the VPC from which you access OpenSearch Serverless.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-vpcendpoint.html#cfn-opensearchserverless-vpcendpoint-vpcid)
+         *
+         * @param vpcId The ID of the VPC from which you access OpenSearch Serverless.
+         */
+        override fun vpcId(vpcId: String) {
+            cdkBuilder.vpcId(vpcId)
+        }
+
+        public fun build(): software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpoint =
+            cdkBuilder.build()
     }
 
-    public operator fun invoke(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      block: Builder.() -> Unit = {},
-    ): CfnVpcEndpoint {
-      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-      return CfnVpcEndpoint(builderImpl.apply(block).build())
+    public companion object {
+        init {}
+
+        public operator fun invoke(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            block: Builder.() -> Unit = {},
+        ): CfnVpcEndpoint {
+            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+            return CfnVpcEndpoint(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpoint
+        ): CfnVpcEndpoint = CfnVpcEndpoint(cdkObject)
+
+        internal fun unwrap(
+            wrapped: CfnVpcEndpoint
+        ): software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpoint = wrapped.cdkObject
     }
-
-    internal
-        fun wrap(cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpoint):
-        CfnVpcEndpoint = CfnVpcEndpoint(cdkObject)
-
-    internal fun unwrap(wrapped: CfnVpcEndpoint):
-        software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpoint = wrapped.cdkObject
-  }
 }

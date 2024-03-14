@@ -5,70 +5,71 @@ import kotlin.Number
 import kotlin.Unit
 
 public interface CfnCodeDeployBlueGreenAdditionalOptions {
-  /**
-   * Specifies time to wait, in minutes, before terminating the blue resources.
-   *
-   * Default: - 5 minutes
-   */
-  public fun terminationWaitTimeInMinutes(): Number? =
-      unwrap(this).getTerminationWaitTimeInMinutes()
-
-  /**
-   * A builder for [CfnCodeDeployBlueGreenAdditionalOptions]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param terminationWaitTimeInMinutes Specifies time to wait, in minutes, before terminating
-     * the blue resources.
-     */
-    public fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions.Builder =
-        software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions.builder()
-
-    /**
-     * @param terminationWaitTimeInMinutes Specifies time to wait, in minutes, before terminating
-     * the blue resources.
-     */
-    override fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number) {
-      cdkBuilder.terminationWaitTimeInMinutes(terminationWaitTimeInMinutes)
-    }
-
-    public fun build(): software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions =
-        cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions,
-  ) : CfnCodeDeployBlueGreenAdditionalOptions {
     /**
      * Specifies time to wait, in minutes, before terminating the blue resources.
      *
      * Default: - 5 minutes
      */
-    override fun terminationWaitTimeInMinutes(): Number? =
+    public fun terminationWaitTimeInMinutes(): Number? =
         unwrap(this).getTerminationWaitTimeInMinutes()
-  }
 
-  public companion object {
-    init {
-
+    /** A builder for [CfnCodeDeployBlueGreenAdditionalOptions] */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * @param terminationWaitTimeInMinutes Specifies time to wait, in minutes, before
+         *   terminating the blue resources.
+         */
+        public fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}):
-        CfnCodeDeployBlueGreenAdditionalOptions {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions.Builder =
+            software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions.builder()
+
+        /**
+         * @param terminationWaitTimeInMinutes Specifies time to wait, in minutes, before
+         *   terminating the blue resources.
+         */
+        override fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number) {
+            cdkBuilder.terminationWaitTimeInMinutes(terminationWaitTimeInMinutes)
+        }
+
+        public fun build(): software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions =
+            cdkBuilder.build()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions):
-        CfnCodeDeployBlueGreenAdditionalOptions = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions,
+    ) : CfnCodeDeployBlueGreenAdditionalOptions {
+        /**
+         * Specifies time to wait, in minutes, before terminating the blue resources.
+         *
+         * Default: - 5 minutes
+         */
+        override fun terminationWaitTimeInMinutes(): Number? =
+            unwrap(this).getTerminationWaitTimeInMinutes()
+    }
 
-    internal fun unwrap(wrapped: CfnCodeDeployBlueGreenAdditionalOptions):
-        software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions = (wrapped as
-        Wrapper).cdkObject
-  }
+    public companion object {
+        init {}
+
+        public operator fun invoke(
+            block: Builder.() -> Unit = {}
+        ): CfnCodeDeployBlueGreenAdditionalOptions {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions
+        ): CfnCodeDeployBlueGreenAdditionalOptions = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: CfnCodeDeployBlueGreenAdditionalOptions
+        ): software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions =
+            (wrapped as Wrapper).cdkObject
+    }
 }

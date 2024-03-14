@@ -6,129 +6,19 @@ import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
 import kotlin.Unit
 
 public interface RotationMultiUserOptions {
-  /**
-   * Specifies the number of days after the previous rotation before Secrets Manager triggers the
-   * next automatic rotation.
-   *
-   * Default: Duration.days(30)
-   */
-  public fun automaticallyAfter(): Duration? =
-      unwrap(this).getAutomaticallyAfter()?.let(Duration::wrap)
-
-  /**
-   * The secret to rotate.
-   *
-   * It must be a JSON string with the following format:
-   *
-   * ```
-   * {
-   * "engine": &lt;required: must be set to 'mongo'&gt;,
-   * "host": &lt;required: instance host name&gt;,
-   * "username": &lt;required: username&gt;,
-   * "password": &lt;required: password&gt;,
-   * "dbname": &lt;optional: database name&gt;,
-   * "port": &lt;optional: if not specified, default port 27017 will be used&gt;,
-   * "masterarn": &lt;required: the arn of the master secret which will be used to create
-   * users/change passwords&gt;
-   * "ssl": &lt;optional: if not specified, defaults to false. This must be true if being used for
-   * DocumentDB rotations
-   * where the cluster has TLS enabled&gt;
-   * }
-   * ```
-   */
-  public fun secret(): ISecret
-
-  /**
-   * A builder for [RotationMultiUserOptions]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param automaticallyAfter Specifies the number of days after the previous rotation before
-     * Secrets Manager triggers the next automatic rotation.
-     */
-    public fun automaticallyAfter(automaticallyAfter: Duration)
-
-    /**
-     * @param secret The secret to rotate. 
-     * It must be a JSON string with the following format:
-     *
-     * ```
-     * {
-     * "engine": &lt;required: must be set to 'mongo'&gt;,
-     * "host": &lt;required: instance host name&gt;,
-     * "username": &lt;required: username&gt;,
-     * "password": &lt;required: password&gt;,
-     * "dbname": &lt;optional: database name&gt;,
-     * "port": &lt;optional: if not specified, default port 27017 will be used&gt;,
-     * "masterarn": &lt;required: the arn of the master secret which will be used to create
-     * users/change passwords&gt;
-     * "ssl": &lt;optional: if not specified, defaults to false. This must be true if being used for
-     * DocumentDB rotations
-     * where the cluster has TLS enabled&gt;
-     * }
-     * ```
-     */
-    public fun secret(secret: ISecret)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.docdb.RotationMultiUserOptions.Builder =
-        software.amazon.awscdk.services.docdb.RotationMultiUserOptions.builder()
-
-    /**
-     * @param automaticallyAfter Specifies the number of days after the previous rotation before
-     * Secrets Manager triggers the next automatic rotation.
-     */
-    override fun automaticallyAfter(automaticallyAfter: Duration) {
-      cdkBuilder.automaticallyAfter(automaticallyAfter.let(Duration::unwrap))
-    }
-
-    /**
-     * @param secret The secret to rotate. 
-     * It must be a JSON string with the following format:
-     *
-     * ```
-     * {
-     * "engine": &lt;required: must be set to 'mongo'&gt;,
-     * "host": &lt;required: instance host name&gt;,
-     * "username": &lt;required: username&gt;,
-     * "password": &lt;required: password&gt;,
-     * "dbname": &lt;optional: database name&gt;,
-     * "port": &lt;optional: if not specified, default port 27017 will be used&gt;,
-     * "masterarn": &lt;required: the arn of the master secret which will be used to create
-     * users/change passwords&gt;
-     * "ssl": &lt;optional: if not specified, defaults to false. This must be true if being used for
-     * DocumentDB rotations
-     * where the cluster has TLS enabled&gt;
-     * }
-     * ```
-     */
-    override fun secret(secret: ISecret) {
-      cdkBuilder.secret(secret.let(ISecret::unwrap))
-    }
-
-    public fun build(): software.amazon.awscdk.services.docdb.RotationMultiUserOptions =
-        cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.docdb.RotationMultiUserOptions,
-  ) : RotationMultiUserOptions {
     /**
      * Specifies the number of days after the previous rotation before Secrets Manager triggers the
      * next automatic rotation.
      *
      * Default: Duration.days(30)
      */
-    override fun automaticallyAfter(): Duration? =
+    public fun automaticallyAfter(): Duration? =
         unwrap(this).getAutomaticallyAfter()?.let(Duration::wrap)
 
     /**
      * The secret to rotate.
      *
      * It must be a JSON string with the following format:
-     *
      * ```
      * {
      * "engine": &lt;required: must be set to 'mongo'&gt;,
@@ -145,24 +35,128 @@ public interface RotationMultiUserOptions {
      * }
      * ```
      */
-    override fun secret(): ISecret = unwrap(this).getSecret().let(ISecret::wrap)
-  }
+    public fun secret(): ISecret
 
-  public companion object {
-    init {
+    /** A builder for [RotationMultiUserOptions] */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * @param automaticallyAfter Specifies the number of days after the previous rotation before
+         *   Secrets Manager triggers the next automatic rotation.
+         */
+        public fun automaticallyAfter(automaticallyAfter: Duration)
 
+        /**
+         * @param secret The secret to rotate. It must be a JSON string with the following format:
+         * ```
+         * {
+         * "engine": &lt;required: must be set to 'mongo'&gt;,
+         * "host": &lt;required: instance host name&gt;,
+         * "username": &lt;required: username&gt;,
+         * "password": &lt;required: password&gt;,
+         * "dbname": &lt;optional: database name&gt;,
+         * "port": &lt;optional: if not specified, default port 27017 will be used&gt;,
+         * "masterarn": &lt;required: the arn of the master secret which will be used to create
+         * users/change passwords&gt;
+         * "ssl": &lt;optional: if not specified, defaults to false. This must be true if being used for
+         * DocumentDB rotations
+         * where the cluster has TLS enabled&gt;
+         * }
+         * ```
+         */
+        public fun secret(secret: ISecret)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): RotationMultiUserOptions {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.docdb.RotationMultiUserOptions.Builder =
+            software.amazon.awscdk.services.docdb.RotationMultiUserOptions.builder()
+
+        /**
+         * @param automaticallyAfter Specifies the number of days after the previous rotation before
+         *   Secrets Manager triggers the next automatic rotation.
+         */
+        override fun automaticallyAfter(automaticallyAfter: Duration) {
+            cdkBuilder.automaticallyAfter(automaticallyAfter.let(Duration::unwrap))
+        }
+
+        /**
+         * @param secret The secret to rotate. It must be a JSON string with the following format:
+         * ```
+         * {
+         * "engine": &lt;required: must be set to 'mongo'&gt;,
+         * "host": &lt;required: instance host name&gt;,
+         * "username": &lt;required: username&gt;,
+         * "password": &lt;required: password&gt;,
+         * "dbname": &lt;optional: database name&gt;,
+         * "port": &lt;optional: if not specified, default port 27017 will be used&gt;,
+         * "masterarn": &lt;required: the arn of the master secret which will be used to create
+         * users/change passwords&gt;
+         * "ssl": &lt;optional: if not specified, defaults to false. This must be true if being used for
+         * DocumentDB rotations
+         * where the cluster has TLS enabled&gt;
+         * }
+         * ```
+         */
+        override fun secret(secret: ISecret) {
+            cdkBuilder.secret(secret.let(ISecret::unwrap))
+        }
+
+        public fun build(): software.amazon.awscdk.services.docdb.RotationMultiUserOptions =
+            cdkBuilder.build()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.docdb.RotationMultiUserOptions):
-        RotationMultiUserOptions = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.docdb.RotationMultiUserOptions,
+    ) : RotationMultiUserOptions {
+        /**
+         * Specifies the number of days after the previous rotation before Secrets Manager triggers
+         * the next automatic rotation.
+         *
+         * Default: Duration.days(30)
+         */
+        override fun automaticallyAfter(): Duration? =
+            unwrap(this).getAutomaticallyAfter()?.let(Duration::wrap)
 
-    internal fun unwrap(wrapped: RotationMultiUserOptions):
-        software.amazon.awscdk.services.docdb.RotationMultiUserOptions = (wrapped as
-        Wrapper).cdkObject
-  }
+        /**
+         * The secret to rotate.
+         *
+         * It must be a JSON string with the following format:
+         * ```
+         * {
+         * "engine": &lt;required: must be set to 'mongo'&gt;,
+         * "host": &lt;required: instance host name&gt;,
+         * "username": &lt;required: username&gt;,
+         * "password": &lt;required: password&gt;,
+         * "dbname": &lt;optional: database name&gt;,
+         * "port": &lt;optional: if not specified, default port 27017 will be used&gt;,
+         * "masterarn": &lt;required: the arn of the master secret which will be used to create
+         * users/change passwords&gt;
+         * "ssl": &lt;optional: if not specified, defaults to false. This must be true if being used for
+         * DocumentDB rotations
+         * where the cluster has TLS enabled&gt;
+         * }
+         * ```
+         */
+        override fun secret(): ISecret = unwrap(this).getSecret().let(ISecret::wrap)
+    }
+
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): RotationMultiUserOptions {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.docdb.RotationMultiUserOptions
+        ): RotationMultiUserOptions = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: RotationMultiUserOptions
+        ): software.amazon.awscdk.services.docdb.RotationMultiUserOptions =
+            (wrapped as Wrapper).cdkObject
+    }
 }

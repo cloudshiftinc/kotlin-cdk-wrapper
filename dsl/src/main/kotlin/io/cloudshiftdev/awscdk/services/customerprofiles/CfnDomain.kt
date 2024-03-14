@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -16,2386 +17,2358 @@ import kotlin.Suppress
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnDomain internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain,
+public open class CfnDomain
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
-  /**
-   * The timestamp of when the domain was created.
-   */
-  public open fun attrCreatedAt(): String = unwrap(this).getAttrCreatedAt()
+    /** The timestamp of when the domain was created. */
+    public open fun attrCreatedAt(): String = unwrap(this).getAttrCreatedAt()
 
-  /**
-   * The timestamp of when the domain was most recently edited.
-   */
-  public open fun attrLastUpdatedAt(): String = unwrap(this).getAttrLastUpdatedAt()
+    /** The timestamp of when the domain was most recently edited. */
+    public open fun attrLastUpdatedAt(): String = unwrap(this).getAttrLastUpdatedAt()
 
-  /**
-   * The status of rule-based matching rule.
-   */
-  public open fun attrRuleBasedMatchingStatus(): String =
-      unwrap(this).getAttrRuleBasedMatchingStatus()
+    /** The status of rule-based matching rule. */
+    public open fun attrRuleBasedMatchingStatus(): String =
+        unwrap(this).getAttrRuleBasedMatchingStatus()
 
-  /**
-   * Usage-specific statistics about the domain.
-   */
-  public open fun attrStats(): IResolvable = unwrap(this).getAttrStats().let(IResolvable::wrap)
-
-  /**
-   * The URL of the SQS dead letter queue, which is used for reporting errors associated with
-   * ingesting data from third party applications.
-   */
-  public open fun deadLetterQueueUrl(): String? = unwrap(this).getDeadLetterQueueUrl()
-
-  /**
-   * The URL of the SQS dead letter queue, which is used for reporting errors associated with
-   * ingesting data from third party applications.
-   */
-  public open fun deadLetterQueueUrl(`value`: String) {
-    unwrap(this).setDeadLetterQueueUrl(`value`)
-  }
-
-  /**
-   * The default encryption key, which is an AWS managed key, is used when no specific type of
-   * encryption key is specified.
-   */
-  public open fun defaultEncryptionKey(): String? = unwrap(this).getDefaultEncryptionKey()
-
-  /**
-   * The default encryption key, which is an AWS managed key, is used when no specific type of
-   * encryption key is specified.
-   */
-  public open fun defaultEncryptionKey(`value`: String) {
-    unwrap(this).setDefaultEncryptionKey(`value`)
-  }
-
-  /**
-   * The default number of days until the data within the domain expires.
-   */
-  public open fun defaultExpirationDays(): Number = unwrap(this).getDefaultExpirationDays()
-
-  /**
-   * The default number of days until the data within the domain expires.
-   */
-  public open fun defaultExpirationDays(`value`: Number) {
-    unwrap(this).setDefaultExpirationDays(`value`)
-  }
-
-  /**
-   * The unique name of the domain.
-   */
-  public open fun domainName(): String = unwrap(this).getDomainName()
-
-  /**
-   * The unique name of the domain.
-   */
-  public open fun domainName(`value`: String) {
-    unwrap(this).setDomainName(`value`)
-  }
-
-  /**
-   * Examines the CloudFormation resource and discloses attributes.
-   *
-   * @param inspector tree inspector to collect and process attributes. 
-   */
-  public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-  }
-
-  /**
-   * The process of matching duplicate profiles.
-   */
-  public open fun matching(): Any? = unwrap(this).getMatching()
-
-  /**
-   * The process of matching duplicate profiles.
-   */
-  public open fun matching(`value`: IResolvable) {
-    unwrap(this).setMatching(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * The process of matching duplicate profiles.
-   */
-  public open fun matching(`value`: MatchingProperty) {
-    unwrap(this).setMatching(`value`.let(MatchingProperty::unwrap))
-  }
-
-  /**
-   * The process of matching duplicate profiles.
-   */
-  @Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("79b5098f940539e246e8bd2177c27653a198e3a5968b8a66e091896480569b87")
-  public open fun matching(`value`: MatchingProperty.Builder.() -> Unit): Unit =
-      matching(MatchingProperty(`value`))
-
-  /**
-   * The process of matching duplicate profiles using Rule-Based matching.
-   */
-  public open fun ruleBasedMatching(): Any? = unwrap(this).getRuleBasedMatching()
-
-  /**
-   * The process of matching duplicate profiles using Rule-Based matching.
-   */
-  public open fun ruleBasedMatching(`value`: IResolvable) {
-    unwrap(this).setRuleBasedMatching(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * The process of matching duplicate profiles using Rule-Based matching.
-   */
-  public open fun ruleBasedMatching(`value`: RuleBasedMatchingProperty) {
-    unwrap(this).setRuleBasedMatching(`value`.let(RuleBasedMatchingProperty::unwrap))
-  }
-
-  /**
-   * The process of matching duplicate profiles using Rule-Based matching.
-   */
-  @Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("8d664378f35733db769b89be93076878909cb45db0a43a2f608ea1f8d4a99348")
-  public open fun ruleBasedMatching(`value`: RuleBasedMatchingProperty.Builder.() -> Unit): Unit =
-      ruleBasedMatching(RuleBasedMatchingProperty(`value`))
-
-  /**
-   * Tag Manager which manages the tags for this resource.
-   */
-  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
-
-  /**
-   * The tags used to organize, track, or control access for this resource.
-   */
-  public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
-      emptyList()
-
-  /**
-   * The tags used to organize, track, or control access for this resource.
-   */
-  public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
-  }
-
-  /**
-   * The tags used to organize, track, or control access for this resource.
-   */
-  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
-
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.customerprofiles.CfnDomain].
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * The URL of the SQS dead letter queue, which is used for reporting errors associated with
-     * ingesting data from third party applications.
-     *
-     * You must set up a policy on the `DeadLetterQueue` for the `SendMessage` operation to enable
-     * Amazon Connect Customer Profiles to send messages to the `DeadLetterQueue` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-deadletterqueueurl)
-     * @param deadLetterQueueUrl The URL of the SQS dead letter queue, which is used for reporting
-     * errors associated with ingesting data from third party applications. 
-     */
-    public fun deadLetterQueueUrl(deadLetterQueueUrl: String)
-
-    /**
-     * The default encryption key, which is an AWS managed key, is used when no specific type of
-     * encryption key is specified.
-     *
-     * It is used to encrypt all data before it is placed in permanent or semi-permanent storage.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-defaultencryptionkey)
-     * @param defaultEncryptionKey The default encryption key, which is an AWS managed key, is used
-     * when no specific type of encryption key is specified. 
-     */
-    public fun defaultEncryptionKey(defaultEncryptionKey: String)
-
-    /**
-     * The default number of days until the data within the domain expires.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-defaultexpirationdays)
-     * @param defaultExpirationDays The default number of days until the data within the domain
-     * expires. 
-     */
-    public fun defaultExpirationDays(defaultExpirationDays: Number)
-
-    /**
-     * The unique name of the domain.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-domainname)
-     * @param domainName The unique name of the domain. 
-     */
-    public fun domainName(domainName: String)
-
-    /**
-     * The process of matching duplicate profiles.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-matching)
-     * @param matching The process of matching duplicate profiles. 
-     */
-    public fun matching(matching: IResolvable)
-
-    /**
-     * The process of matching duplicate profiles.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-matching)
-     * @param matching The process of matching duplicate profiles. 
-     */
-    public fun matching(matching: MatchingProperty)
-
-    /**
-     * The process of matching duplicate profiles.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-matching)
-     * @param matching The process of matching duplicate profiles. 
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("e38458ae34c1765a7a7e49301316b30b82fdfd804502c05ef8e5ec16df7b4655")
-    public fun matching(matching: MatchingProperty.Builder.() -> Unit)
-
-    /**
-     * The process of matching duplicate profiles using Rule-Based matching.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-rulebasedmatching)
-     * @param ruleBasedMatching The process of matching duplicate profiles using Rule-Based
-     * matching. 
-     */
-    public fun ruleBasedMatching(ruleBasedMatching: IResolvable)
-
-    /**
-     * The process of matching duplicate profiles using Rule-Based matching.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-rulebasedmatching)
-     * @param ruleBasedMatching The process of matching duplicate profiles using Rule-Based
-     * matching. 
-     */
-    public fun ruleBasedMatching(ruleBasedMatching: RuleBasedMatchingProperty)
-
-    /**
-     * The process of matching duplicate profiles using Rule-Based matching.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-rulebasedmatching)
-     * @param ruleBasedMatching The process of matching duplicate profiles using Rule-Based
-     * matching. 
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("ad6c8326479fec31d0175a3f92ce3ffe573427cf4bb03162d5bf5e7ced4837bc")
-    public fun ruleBasedMatching(ruleBasedMatching: RuleBasedMatchingProperty.Builder.() -> Unit)
-
-    /**
-     * The tags used to organize, track, or control access for this resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-tags)
-     * @param tags The tags used to organize, track, or control access for this resource. 
-     */
-    public fun tags(tags: List<CfnTag>)
-
-    /**
-     * The tags used to organize, track, or control access for this resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-tags)
-     * @param tags The tags used to organize, track, or control access for this resource. 
-     */
-    public fun tags(vararg tags: CfnTag)
-  }
-
-  private class BuilderImpl(
-    scope: SoftwareConstructsConstruct,
-    id: String,
-  ) : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.customerprofiles.CfnDomain.Builder =
-        software.amazon.awscdk.services.customerprofiles.CfnDomain.Builder.create(scope, id)
+    /** Usage-specific statistics about the domain. */
+    public open fun attrStats(): IResolvable = unwrap(this).getAttrStats().let(IResolvable::wrap)
 
     /**
      * The URL of the SQS dead letter queue, which is used for reporting errors associated with
      * ingesting data from third party applications.
-     *
-     * You must set up a policy on the `DeadLetterQueue` for the `SendMessage` operation to enable
-     * Amazon Connect Customer Profiles to send messages to the `DeadLetterQueue` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-deadletterqueueurl)
-     * @param deadLetterQueueUrl The URL of the SQS dead letter queue, which is used for reporting
-     * errors associated with ingesting data from third party applications. 
      */
-    override fun deadLetterQueueUrl(deadLetterQueueUrl: String) {
-      cdkBuilder.deadLetterQueueUrl(deadLetterQueueUrl)
+    public open fun deadLetterQueueUrl(): String? = unwrap(this).getDeadLetterQueueUrl()
+
+    /**
+     * The URL of the SQS dead letter queue, which is used for reporting errors associated with
+     * ingesting data from third party applications.
+     */
+    public open fun deadLetterQueueUrl(`value`: String) {
+        unwrap(this).setDeadLetterQueueUrl(`value`)
     }
 
     /**
      * The default encryption key, which is an AWS managed key, is used when no specific type of
      * encryption key is specified.
-     *
-     * It is used to encrypt all data before it is placed in permanent or semi-permanent storage.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-defaultencryptionkey)
-     * @param defaultEncryptionKey The default encryption key, which is an AWS managed key, is used
-     * when no specific type of encryption key is specified. 
      */
-    override fun defaultEncryptionKey(defaultEncryptionKey: String) {
-      cdkBuilder.defaultEncryptionKey(defaultEncryptionKey)
+    public open fun defaultEncryptionKey(): String? = unwrap(this).getDefaultEncryptionKey()
+
+    /**
+     * The default encryption key, which is an AWS managed key, is used when no specific type of
+     * encryption key is specified.
+     */
+    public open fun defaultEncryptionKey(`value`: String) {
+        unwrap(this).setDefaultEncryptionKey(`value`)
+    }
+
+    /** The default number of days until the data within the domain expires. */
+    public open fun defaultExpirationDays(): Number = unwrap(this).getDefaultExpirationDays()
+
+    /** The default number of days until the data within the domain expires. */
+    public open fun defaultExpirationDays(`value`: Number) {
+        unwrap(this).setDefaultExpirationDays(`value`)
+    }
+
+    /** The unique name of the domain. */
+    public open fun domainName(): String = unwrap(this).getDomainName()
+
+    /** The unique name of the domain. */
+    public open fun domainName(`value`: String) {
+        unwrap(this).setDomainName(`value`)
     }
 
     /**
-     * The default number of days until the data within the domain expires.
+     * Examines the CloudFormation resource and discloses attributes.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-defaultexpirationdays)
-     * @param defaultExpirationDays The default number of days until the data within the domain
-     * expires. 
+     * @param inspector tree inspector to collect and process attributes.
      */
-    override fun defaultExpirationDays(defaultExpirationDays: Number) {
-      cdkBuilder.defaultExpirationDays(defaultExpirationDays)
+    public override fun inspect(inspector: TreeInspector) {
+        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
     }
 
-    /**
-     * The unique name of the domain.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-domainname)
-     * @param domainName The unique name of the domain. 
-     */
-    override fun domainName(domainName: String) {
-      cdkBuilder.domainName(domainName)
+    /** The process of matching duplicate profiles. */
+    public open fun matching(): Any? = unwrap(this).getMatching()
+
+    /** The process of matching duplicate profiles. */
+    public open fun matching(`value`: IResolvable) {
+        unwrap(this).setMatching(`value`.let(IResolvable::unwrap))
     }
 
-    /**
-     * The process of matching duplicate profiles.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-matching)
-     * @param matching The process of matching duplicate profiles. 
-     */
-    override fun matching(matching: IResolvable) {
-      cdkBuilder.matching(matching.let(IResolvable::unwrap))
+    /** The process of matching duplicate profiles. */
+    public open fun matching(`value`: MatchingProperty) {
+        unwrap(this).setMatching(`value`.let(MatchingProperty::unwrap))
     }
 
-    /**
-     * The process of matching duplicate profiles.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-matching)
-     * @param matching The process of matching duplicate profiles. 
-     */
-    override fun matching(matching: MatchingProperty) {
-      cdkBuilder.matching(matching.let(MatchingProperty::unwrap))
-    }
-
-    /**
-     * The process of matching duplicate profiles.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-matching)
-     * @param matching The process of matching duplicate profiles. 
-     */
+    /** The process of matching duplicate profiles. */
     @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("e38458ae34c1765a7a7e49301316b30b82fdfd804502c05ef8e5ec16df7b4655")
-    override fun matching(matching: MatchingProperty.Builder.() -> Unit): Unit =
-        matching(MatchingProperty(matching))
+    @JvmName("79b5098f940539e246e8bd2177c27653a198e3a5968b8a66e091896480569b87")
+    public open fun matching(`value`: MatchingProperty.Builder.() -> Unit): Unit =
+        matching(MatchingProperty(`value`))
 
-    /**
-     * The process of matching duplicate profiles using Rule-Based matching.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-rulebasedmatching)
-     * @param ruleBasedMatching The process of matching duplicate profiles using Rule-Based
-     * matching. 
-     */
-    override fun ruleBasedMatching(ruleBasedMatching: IResolvable) {
-      cdkBuilder.ruleBasedMatching(ruleBasedMatching.let(IResolvable::unwrap))
+    /** The process of matching duplicate profiles using Rule-Based matching. */
+    public open fun ruleBasedMatching(): Any? = unwrap(this).getRuleBasedMatching()
+
+    /** The process of matching duplicate profiles using Rule-Based matching. */
+    public open fun ruleBasedMatching(`value`: IResolvable) {
+        unwrap(this).setRuleBasedMatching(`value`.let(IResolvable::unwrap))
     }
 
-    /**
-     * The process of matching duplicate profiles using Rule-Based matching.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-rulebasedmatching)
-     * @param ruleBasedMatching The process of matching duplicate profiles using Rule-Based
-     * matching. 
-     */
-    override fun ruleBasedMatching(ruleBasedMatching: RuleBasedMatchingProperty) {
-      cdkBuilder.ruleBasedMatching(ruleBasedMatching.let(RuleBasedMatchingProperty::unwrap))
+    /** The process of matching duplicate profiles using Rule-Based matching. */
+    public open fun ruleBasedMatching(`value`: RuleBasedMatchingProperty) {
+        unwrap(this).setRuleBasedMatching(`value`.let(RuleBasedMatchingProperty::unwrap))
     }
 
-    /**
-     * The process of matching duplicate profiles using Rule-Based matching.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-rulebasedmatching)
-     * @param ruleBasedMatching The process of matching duplicate profiles using Rule-Based
-     * matching. 
-     */
+    /** The process of matching duplicate profiles using Rule-Based matching. */
     @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("ad6c8326479fec31d0175a3f92ce3ffe573427cf4bb03162d5bf5e7ced4837bc")
-    override fun ruleBasedMatching(ruleBasedMatching: RuleBasedMatchingProperty.Builder.() -> Unit):
-        Unit = ruleBasedMatching(RuleBasedMatchingProperty(ruleBasedMatching))
+    @JvmName("8d664378f35733db769b89be93076878909cb45db0a43a2f608ea1f8d4a99348")
+    public open fun ruleBasedMatching(`value`: RuleBasedMatchingProperty.Builder.() -> Unit): Unit =
+        ruleBasedMatching(RuleBasedMatchingProperty(`value`))
 
-    /**
-     * The tags used to organize, track, or control access for this resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-tags)
-     * @param tags The tags used to organize, track, or control access for this resource. 
-     */
-    override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+    /** Tag Manager which manages the tags for this resource. */
+    public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+
+    /** The tags used to organize, track, or control access for this resource. */
+    public open fun tagsRaw(): List<CfnTag> =
+        unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?: emptyList()
+
+    /** The tags used to organize, track, or control access for this resource. */
+    public open fun tagsRaw(`value`: List<CfnTag>) {
+        unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
     }
 
-    /**
-     * The tags used to organize, track, or control access for this resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-tags)
-     * @param tags The tags used to organize, track, or control access for this resource. 
-     */
-    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+    /** The tags used to organize, track, or control access for this resource. */
+    public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
-    public fun build(): software.amazon.awscdk.services.customerprofiles.CfnDomain =
-        cdkBuilder.build()
-  }
-
-  public companion object {
-    init {
-
-    }
-
-    public operator fun invoke(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      block: Builder.() -> Unit = {},
-    ): CfnDomain {
-      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-      return CfnDomain(builderImpl.apply(block).build())
-    }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain):
-        CfnDomain = CfnDomain(cdkObject)
-
-    internal fun unwrap(wrapped: CfnDomain):
-        software.amazon.awscdk.services.customerprofiles.CfnDomain = wrapped.cdkObject
-  }
-
-  public interface S3ExportingConfigProperty {
-    /**
-     * The name of the S3 bucket where Identity Resolution Jobs write result files.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-s3exportingconfig.html#cfn-customerprofiles-domain-s3exportingconfig-s3bucketname)
-     */
-    public fun s3BucketName(): String
-
-    /**
-     * The S3 key name of the location where Identity Resolution Jobs write result files.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-s3exportingconfig.html#cfn-customerprofiles-domain-s3exportingconfig-s3keyname)
-     */
-    public fun s3KeyName(): String? = unwrap(this).getS3KeyName()
-
-    /**
-     * A builder for [S3ExportingConfigProperty]
-     */
+    /** A fluent builder for [io.cloudshiftdev.awscdk.services.customerprofiles.CfnDomain]. */
     @CdkDslMarker
     public interface Builder {
-      /**
-       * @param s3BucketName The name of the S3 bucket where Identity Resolution Jobs write result
-       * files. 
-       */
-      public fun s3BucketName(s3BucketName: String)
+        /**
+         * The URL of the SQS dead letter queue, which is used for reporting errors associated with
+         * ingesting data from third party applications.
+         *
+         * You must set up a policy on the `DeadLetterQueue` for the `SendMessage` operation to
+         * enable Amazon Connect Customer Profiles to send messages to the `DeadLetterQueue` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-deadletterqueueurl)
+         *
+         * @param deadLetterQueueUrl The URL of the SQS dead letter queue, which is used for
+         *   reporting errors associated with ingesting data from third party applications.
+         */
+        public fun deadLetterQueueUrl(deadLetterQueueUrl: String)
 
-      /**
-       * @param s3KeyName The S3 key name of the location where Identity Resolution Jobs write
-       * result files.
-       */
-      public fun s3KeyName(s3KeyName: String)
+        /**
+         * The default encryption key, which is an AWS managed key, is used when no specific type of
+         * encryption key is specified.
+         *
+         * It is used to encrypt all data before it is placed in permanent or semi-permanent
+         * storage.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-defaultencryptionkey)
+         *
+         * @param defaultEncryptionKey The default encryption key, which is an AWS managed key, is
+         *   used when no specific type of encryption key is specified.
+         */
+        public fun defaultEncryptionKey(defaultEncryptionKey: String)
+
+        /**
+         * The default number of days until the data within the domain expires.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-defaultexpirationdays)
+         *
+         * @param defaultExpirationDays The default number of days until the data within the domain
+         *   expires.
+         */
+        public fun defaultExpirationDays(defaultExpirationDays: Number)
+
+        /**
+         * The unique name of the domain.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-domainname)
+         *
+         * @param domainName The unique name of the domain.
+         */
+        public fun domainName(domainName: String)
+
+        /**
+         * The process of matching duplicate profiles.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-matching)
+         *
+         * @param matching The process of matching duplicate profiles.
+         */
+        public fun matching(matching: IResolvable)
+
+        /**
+         * The process of matching duplicate profiles.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-matching)
+         *
+         * @param matching The process of matching duplicate profiles.
+         */
+        public fun matching(matching: MatchingProperty)
+
+        /**
+         * The process of matching duplicate profiles.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-matching)
+         *
+         * @param matching The process of matching duplicate profiles.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("e38458ae34c1765a7a7e49301316b30b82fdfd804502c05ef8e5ec16df7b4655")
+        public fun matching(matching: MatchingProperty.Builder.() -> Unit)
+
+        /**
+         * The process of matching duplicate profiles using Rule-Based matching.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-rulebasedmatching)
+         *
+         * @param ruleBasedMatching The process of matching duplicate profiles using Rule-Based
+         *   matching.
+         */
+        public fun ruleBasedMatching(ruleBasedMatching: IResolvable)
+
+        /**
+         * The process of matching duplicate profiles using Rule-Based matching.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-rulebasedmatching)
+         *
+         * @param ruleBasedMatching The process of matching duplicate profiles using Rule-Based
+         *   matching.
+         */
+        public fun ruleBasedMatching(ruleBasedMatching: RuleBasedMatchingProperty)
+
+        /**
+         * The process of matching duplicate profiles using Rule-Based matching.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-rulebasedmatching)
+         *
+         * @param ruleBasedMatching The process of matching duplicate profiles using Rule-Based
+         *   matching.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("ad6c8326479fec31d0175a3f92ce3ffe573427cf4bb03162d5bf5e7ced4837bc")
+        public fun ruleBasedMatching(
+            ruleBasedMatching: RuleBasedMatchingProperty.Builder.() -> Unit
+        )
+
+        /**
+         * The tags used to organize, track, or control access for this resource.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-tags)
+         *
+         * @param tags The tags used to organize, track, or control access for this resource.
+         */
+        public fun tags(tags: List<CfnTag>)
+
+        /**
+         * The tags used to organize, track, or control access for this resource.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-tags)
+         *
+         * @param tags The tags used to organize, track, or control access for this resource.
+         */
+        public fun tags(vararg tags: CfnTag)
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.S3ExportingConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.S3ExportingConfigProperty.builder()
+    private class BuilderImpl(
+        scope: SoftwareConstructsConstruct,
+        id: String,
+    ) : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.customerprofiles.CfnDomain.Builder =
+            software.amazon.awscdk.services.customerprofiles.CfnDomain.Builder.create(scope, id)
 
-      /**
-       * @param s3BucketName The name of the S3 bucket where Identity Resolution Jobs write result
-       * files. 
-       */
-      override fun s3BucketName(s3BucketName: String) {
-        cdkBuilder.s3BucketName(s3BucketName)
-      }
+        /**
+         * The URL of the SQS dead letter queue, which is used for reporting errors associated with
+         * ingesting data from third party applications.
+         *
+         * You must set up a policy on the `DeadLetterQueue` for the `SendMessage` operation to
+         * enable Amazon Connect Customer Profiles to send messages to the `DeadLetterQueue` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-deadletterqueueurl)
+         *
+         * @param deadLetterQueueUrl The URL of the SQS dead letter queue, which is used for
+         *   reporting errors associated with ingesting data from third party applications.
+         */
+        override fun deadLetterQueueUrl(deadLetterQueueUrl: String) {
+            cdkBuilder.deadLetterQueueUrl(deadLetterQueueUrl)
+        }
 
-      /**
-       * @param s3KeyName The S3 key name of the location where Identity Resolution Jobs write
-       * result files.
-       */
-      override fun s3KeyName(s3KeyName: String) {
-        cdkBuilder.s3KeyName(s3KeyName)
-      }
+        /**
+         * The default encryption key, which is an AWS managed key, is used when no specific type of
+         * encryption key is specified.
+         *
+         * It is used to encrypt all data before it is placed in permanent or semi-permanent
+         * storage.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-defaultencryptionkey)
+         *
+         * @param defaultEncryptionKey The default encryption key, which is an AWS managed key, is
+         *   used when no specific type of encryption key is specified.
+         */
+        override fun defaultEncryptionKey(defaultEncryptionKey: String) {
+            cdkBuilder.defaultEncryptionKey(defaultEncryptionKey)
+        }
 
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.S3ExportingConfigProperty =
-          cdkBuilder.build()
-    }
+        /**
+         * The default number of days until the data within the domain expires.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-defaultexpirationdays)
+         *
+         * @param defaultExpirationDays The default number of days until the data within the domain
+         *   expires.
+         */
+        override fun defaultExpirationDays(defaultExpirationDays: Number) {
+            cdkBuilder.defaultExpirationDays(defaultExpirationDays)
+        }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.S3ExportingConfigProperty,
-    ) : S3ExportingConfigProperty {
-      /**
-       * The name of the S3 bucket where Identity Resolution Jobs write result files.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-s3exportingconfig.html#cfn-customerprofiles-domain-s3exportingconfig-s3bucketname)
-       */
-      override fun s3BucketName(): String = unwrap(this).getS3BucketName()
+        /**
+         * The unique name of the domain.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-domainname)
+         *
+         * @param domainName The unique name of the domain.
+         */
+        override fun domainName(domainName: String) {
+            cdkBuilder.domainName(domainName)
+        }
 
-      /**
-       * The S3 key name of the location where Identity Resolution Jobs write result files.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-s3exportingconfig.html#cfn-customerprofiles-domain-s3exportingconfig-s3keyname)
-       */
-      override fun s3KeyName(): String? = unwrap(this).getS3KeyName()
+        /**
+         * The process of matching duplicate profiles.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-matching)
+         *
+         * @param matching The process of matching duplicate profiles.
+         */
+        override fun matching(matching: IResolvable) {
+            cdkBuilder.matching(matching.let(IResolvable::unwrap))
+        }
+
+        /**
+         * The process of matching duplicate profiles.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-matching)
+         *
+         * @param matching The process of matching duplicate profiles.
+         */
+        override fun matching(matching: MatchingProperty) {
+            cdkBuilder.matching(matching.let(MatchingProperty::unwrap))
+        }
+
+        /**
+         * The process of matching duplicate profiles.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-matching)
+         *
+         * @param matching The process of matching duplicate profiles.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("e38458ae34c1765a7a7e49301316b30b82fdfd804502c05ef8e5ec16df7b4655")
+        override fun matching(matching: MatchingProperty.Builder.() -> Unit): Unit =
+            matching(MatchingProperty(matching))
+
+        /**
+         * The process of matching duplicate profiles using Rule-Based matching.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-rulebasedmatching)
+         *
+         * @param ruleBasedMatching The process of matching duplicate profiles using Rule-Based
+         *   matching.
+         */
+        override fun ruleBasedMatching(ruleBasedMatching: IResolvable) {
+            cdkBuilder.ruleBasedMatching(ruleBasedMatching.let(IResolvable::unwrap))
+        }
+
+        /**
+         * The process of matching duplicate profiles using Rule-Based matching.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-rulebasedmatching)
+         *
+         * @param ruleBasedMatching The process of matching duplicate profiles using Rule-Based
+         *   matching.
+         */
+        override fun ruleBasedMatching(ruleBasedMatching: RuleBasedMatchingProperty) {
+            cdkBuilder.ruleBasedMatching(ruleBasedMatching.let(RuleBasedMatchingProperty::unwrap))
+        }
+
+        /**
+         * The process of matching duplicate profiles using Rule-Based matching.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-rulebasedmatching)
+         *
+         * @param ruleBasedMatching The process of matching duplicate profiles using Rule-Based
+         *   matching.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("ad6c8326479fec31d0175a3f92ce3ffe573427cf4bb03162d5bf5e7ced4837bc")
+        override fun ruleBasedMatching(
+            ruleBasedMatching: RuleBasedMatchingProperty.Builder.() -> Unit
+        ): Unit = ruleBasedMatching(RuleBasedMatchingProperty(ruleBasedMatching))
+
+        /**
+         * The tags used to organize, track, or control access for this resource.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-tags)
+         *
+         * @param tags The tags used to organize, track, or control access for this resource.
+         */
+        override fun tags(tags: List<CfnTag>) {
+            cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        }
+
+        /**
+         * The tags used to organize, track, or control access for this resource.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-domain.html#cfn-customerprofiles-domain-tags)
+         *
+         * @param tags The tags used to organize, track, or control access for this resource.
+         */
+        override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+        public fun build(): software.amazon.awscdk.services.customerprofiles.CfnDomain =
+            cdkBuilder.build()
     }
 
     public companion object {
-      init {
+        init {}
 
-      }
+        public operator fun invoke(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            block: Builder.() -> Unit = {},
+        ): CfnDomain {
+            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+            return CfnDomain(builderImpl.apply(block).build())
+        }
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3ExportingConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain
+        ): CfnDomain = CfnDomain(cdkObject)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.S3ExportingConfigProperty):
-          S3ExportingConfigProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3ExportingConfigProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.S3ExportingConfigProperty =
-          (wrapped as Wrapper).cdkObject
-    }
-  }
-
-  public interface AutoMergingProperty {
-    /**
-     * Determines how the auto-merging process should resolve conflicts between different profiles.
-     *
-     * For example, if Profile A and Profile B have the same `FirstName` and `LastName` ,
-     * `ConflictResolution` specifies which `EmailAddress` should be used.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-automerging.html#cfn-customerprofiles-domain-automerging-conflictresolution)
-     */
-    public fun conflictResolution(): Any? = unwrap(this).getConflictResolution()
-
-    /**
-     * A list of matching attributes that represent matching criteria.
-     *
-     * If two profiles meet at least one of the requirements in the matching attributes list, they
-     * will be merged.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-automerging.html#cfn-customerprofiles-domain-automerging-consolidation)
-     */
-    public fun consolidation(): Any? = unwrap(this).getConsolidation()
-
-    /**
-     * The flag that enables the auto-merging of duplicate profiles.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-automerging.html#cfn-customerprofiles-domain-automerging-enabled)
-     */
-    public fun enabled(): Any
-
-    /**
-     * A number between 0 and 1 that represents the minimum confidence score required for profiles
-     * within a matching group to be merged during the auto-merge process.
-     *
-     * A higher score means that a higher similarity is required to merge profiles.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-automerging.html#cfn-customerprofiles-domain-automerging-minallowedconfidencescoreformerging)
-     */
-    public fun minAllowedConfidenceScoreForMerging(): Number? =
-        unwrap(this).getMinAllowedConfidenceScoreForMerging()
-
-    /**
-     * A builder for [AutoMergingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param conflictResolution Determines how the auto-merging process should resolve conflicts
-       * between different profiles.
-       * For example, if Profile A and Profile B have the same `FirstName` and `LastName` ,
-       * `ConflictResolution` specifies which `EmailAddress` should be used.
-       */
-      public fun conflictResolution(conflictResolution: IResolvable)
-
-      /**
-       * @param conflictResolution Determines how the auto-merging process should resolve conflicts
-       * between different profiles.
-       * For example, if Profile A and Profile B have the same `FirstName` and `LastName` ,
-       * `ConflictResolution` specifies which `EmailAddress` should be used.
-       */
-      public fun conflictResolution(conflictResolution: ConflictResolutionProperty)
-
-      /**
-       * @param conflictResolution Determines how the auto-merging process should resolve conflicts
-       * between different profiles.
-       * For example, if Profile A and Profile B have the same `FirstName` and `LastName` ,
-       * `ConflictResolution` specifies which `EmailAddress` should be used.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a5ccb8bda605b8c0ced514db1ddecb795bb5dafb1a21230a08e064f1dcf1bd7e")
-      public
-          fun conflictResolution(conflictResolution: ConflictResolutionProperty.Builder.() -> Unit)
-
-      /**
-       * @param consolidation A list of matching attributes that represent matching criteria.
-       * If two profiles meet at least one of the requirements in the matching attributes list, they
-       * will be merged.
-       */
-      public fun consolidation(consolidation: IResolvable)
-
-      /**
-       * @param consolidation A list of matching attributes that represent matching criteria.
-       * If two profiles meet at least one of the requirements in the matching attributes list, they
-       * will be merged.
-       */
-      public fun consolidation(consolidation: ConsolidationProperty)
-
-      /**
-       * @param consolidation A list of matching attributes that represent matching criteria.
-       * If two profiles meet at least one of the requirements in the matching attributes list, they
-       * will be merged.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("588475a49e8665372eaaf66d60a9ace54fcd7d2dcd66c30f0ad94144aa78d90d")
-      public fun consolidation(consolidation: ConsolidationProperty.Builder.() -> Unit)
-
-      /**
-       * @param enabled The flag that enables the auto-merging of duplicate profiles. 
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled The flag that enables the auto-merging of duplicate profiles. 
-       */
-      public fun enabled(enabled: IResolvable)
-
-      /**
-       * @param minAllowedConfidenceScoreForMerging A number between 0 and 1 that represents the
-       * minimum confidence score required for profiles within a matching group to be merged during the
-       * auto-merge process.
-       * A higher score means that a higher similarity is required to merge profiles.
-       */
-      public fun minAllowedConfidenceScoreForMerging(minAllowedConfidenceScoreForMerging: Number)
+        internal fun unwrap(
+            wrapped: CfnDomain
+        ): software.amazon.awscdk.services.customerprofiles.CfnDomain = wrapped.cdkObject
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.AutoMergingProperty.Builder =
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.AutoMergingProperty.builder()
+    public interface S3ExportingConfigProperty {
+        /**
+         * The name of the S3 bucket where Identity Resolution Jobs write result files.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-s3exportingconfig.html#cfn-customerprofiles-domain-s3exportingconfig-s3bucketname)
+         */
+        public fun s3BucketName(): String
 
-      /**
-       * @param conflictResolution Determines how the auto-merging process should resolve conflicts
-       * between different profiles.
-       * For example, if Profile A and Profile B have the same `FirstName` and `LastName` ,
-       * `ConflictResolution` specifies which `EmailAddress` should be used.
-       */
-      override fun conflictResolution(conflictResolution: IResolvable) {
-        cdkBuilder.conflictResolution(conflictResolution.let(IResolvable::unwrap))
-      }
+        /**
+         * The S3 key name of the location where Identity Resolution Jobs write result files.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-s3exportingconfig.html#cfn-customerprofiles-domain-s3exportingconfig-s3keyname)
+         */
+        public fun s3KeyName(): String? = unwrap(this).getS3KeyName()
 
-      /**
-       * @param conflictResolution Determines how the auto-merging process should resolve conflicts
-       * between different profiles.
-       * For example, if Profile A and Profile B have the same `FirstName` and `LastName` ,
-       * `ConflictResolution` specifies which `EmailAddress` should be used.
-       */
-      override fun conflictResolution(conflictResolution: ConflictResolutionProperty) {
-        cdkBuilder.conflictResolution(conflictResolution.let(ConflictResolutionProperty::unwrap))
-      }
+        /** A builder for [S3ExportingConfigProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param s3BucketName The name of the S3 bucket where Identity Resolution Jobs write
+             *   result files.
+             */
+            public fun s3BucketName(s3BucketName: String)
 
-      /**
-       * @param conflictResolution Determines how the auto-merging process should resolve conflicts
-       * between different profiles.
-       * For example, if Profile A and Profile B have the same `FirstName` and `LastName` ,
-       * `ConflictResolution` specifies which `EmailAddress` should be used.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("a5ccb8bda605b8c0ced514db1ddecb795bb5dafb1a21230a08e064f1dcf1bd7e")
-      override
-          fun conflictResolution(conflictResolution: ConflictResolutionProperty.Builder.() -> Unit):
-          Unit = conflictResolution(ConflictResolutionProperty(conflictResolution))
+            /**
+             * @param s3KeyName The S3 key name of the location where Identity Resolution Jobs write
+             *   result files.
+             */
+            public fun s3KeyName(s3KeyName: String)
+        }
 
-      /**
-       * @param consolidation A list of matching attributes that represent matching criteria.
-       * If two profiles meet at least one of the requirements in the matching attributes list, they
-       * will be merged.
-       */
-      override fun consolidation(consolidation: IResolvable) {
-        cdkBuilder.consolidation(consolidation.let(IResolvable::unwrap))
-      }
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.S3ExportingConfigProperty.Builder =
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.S3ExportingConfigProperty
+                    .builder()
 
-      /**
-       * @param consolidation A list of matching attributes that represent matching criteria.
-       * If two profiles meet at least one of the requirements in the matching attributes list, they
-       * will be merged.
-       */
-      override fun consolidation(consolidation: ConsolidationProperty) {
-        cdkBuilder.consolidation(consolidation.let(ConsolidationProperty::unwrap))
-      }
+            /**
+             * @param s3BucketName The name of the S3 bucket where Identity Resolution Jobs write
+             *   result files.
+             */
+            override fun s3BucketName(s3BucketName: String) {
+                cdkBuilder.s3BucketName(s3BucketName)
+            }
 
-      /**
-       * @param consolidation A list of matching attributes that represent matching criteria.
-       * If two profiles meet at least one of the requirements in the matching attributes list, they
-       * will be merged.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("588475a49e8665372eaaf66d60a9ace54fcd7d2dcd66c30f0ad94144aa78d90d")
-      override fun consolidation(consolidation: ConsolidationProperty.Builder.() -> Unit): Unit =
-          consolidation(ConsolidationProperty(consolidation))
+            /**
+             * @param s3KeyName The S3 key name of the location where Identity Resolution Jobs write
+             *   result files.
+             */
+            override fun s3KeyName(s3KeyName: String) {
+                cdkBuilder.s3KeyName(s3KeyName)
+            }
 
-      /**
-       * @param enabled The flag that enables the auto-merging of duplicate profiles. 
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
+            public fun build():
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.S3ExportingConfigProperty =
+                cdkBuilder.build()
+        }
 
-      /**
-       * @param enabled The flag that enables the auto-merging of duplicate profiles. 
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.S3ExportingConfigProperty,
+        ) : S3ExportingConfigProperty {
+            /**
+             * The name of the S3 bucket where Identity Resolution Jobs write result files.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-s3exportingconfig.html#cfn-customerprofiles-domain-s3exportingconfig-s3bucketname)
+             */
+            override fun s3BucketName(): String = unwrap(this).getS3BucketName()
 
-      /**
-       * @param minAllowedConfidenceScoreForMerging A number between 0 and 1 that represents the
-       * minimum confidence score required for profiles within a matching group to be merged during the
-       * auto-merge process.
-       * A higher score means that a higher similarity is required to merge profiles.
-       */
-      override
-          fun minAllowedConfidenceScoreForMerging(minAllowedConfidenceScoreForMerging: Number) {
-        cdkBuilder.minAllowedConfidenceScoreForMerging(minAllowedConfidenceScoreForMerging)
-      }
+            /**
+             * The S3 key name of the location where Identity Resolution Jobs write result files.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-s3exportingconfig.html#cfn-customerprofiles-domain-s3exportingconfig-s3keyname)
+             */
+            override fun s3KeyName(): String? = unwrap(this).getS3KeyName()
+        }
 
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.AutoMergingProperty =
-          cdkBuilder.build()
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): S3ExportingConfigProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.customerprofiles.CfnDomain.S3ExportingConfigProperty
+            ): S3ExportingConfigProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: S3ExportingConfigProperty
+            ): software.amazon.awscdk.services.customerprofiles.CfnDomain.S3ExportingConfigProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.AutoMergingProperty,
-    ) : AutoMergingProperty {
-      /**
-       * Determines how the auto-merging process should resolve conflicts between different
-       * profiles.
-       *
-       * For example, if Profile A and Profile B have the same `FirstName` and `LastName` ,
-       * `ConflictResolution` specifies which `EmailAddress` should be used.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-automerging.html#cfn-customerprofiles-domain-automerging-conflictresolution)
-       */
-      override fun conflictResolution(): Any? = unwrap(this).getConflictResolution()
+    public interface AutoMergingProperty {
+        /**
+         * Determines how the auto-merging process should resolve conflicts between different
+         * profiles.
+         *
+         * For example, if Profile A and Profile B have the same `FirstName` and `LastName` ,
+         * `ConflictResolution` specifies which `EmailAddress` should be used.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-automerging.html#cfn-customerprofiles-domain-automerging-conflictresolution)
+         */
+        public fun conflictResolution(): Any? = unwrap(this).getConflictResolution()
 
-      /**
-       * A list of matching attributes that represent matching criteria.
-       *
-       * If two profiles meet at least one of the requirements in the matching attributes list, they
-       * will be merged.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-automerging.html#cfn-customerprofiles-domain-automerging-consolidation)
-       */
-      override fun consolidation(): Any? = unwrap(this).getConsolidation()
+        /**
+         * A list of matching attributes that represent matching criteria.
+         *
+         * If two profiles meet at least one of the requirements in the matching attributes list,
+         * they will be merged.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-automerging.html#cfn-customerprofiles-domain-automerging-consolidation)
+         */
+        public fun consolidation(): Any? = unwrap(this).getConsolidation()
 
-      /**
-       * The flag that enables the auto-merging of duplicate profiles.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-automerging.html#cfn-customerprofiles-domain-automerging-enabled)
-       */
-      override fun enabled(): Any = unwrap(this).getEnabled()
+        /**
+         * The flag that enables the auto-merging of duplicate profiles.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-automerging.html#cfn-customerprofiles-domain-automerging-enabled)
+         */
+        public fun enabled(): Any
 
-      /**
-       * A number between 0 and 1 that represents the minimum confidence score required for profiles
-       * within a matching group to be merged during the auto-merge process.
-       *
-       * A higher score means that a higher similarity is required to merge profiles.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-automerging.html#cfn-customerprofiles-domain-automerging-minallowedconfidencescoreformerging)
-       */
-      override fun minAllowedConfidenceScoreForMerging(): Number? =
-          unwrap(this).getMinAllowedConfidenceScoreForMerging()
+        /**
+         * A number between 0 and 1 that represents the minimum confidence score required for
+         * profiles within a matching group to be merged during the auto-merge process.
+         *
+         * A higher score means that a higher similarity is required to merge profiles.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-automerging.html#cfn-customerprofiles-domain-automerging-minallowedconfidencescoreformerging)
+         */
+        public fun minAllowedConfidenceScoreForMerging(): Number? =
+            unwrap(this).getMinAllowedConfidenceScoreForMerging()
+
+        /** A builder for [AutoMergingProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param conflictResolution Determines how the auto-merging process should resolve
+             *   conflicts between different profiles. For example, if Profile A and Profile B have
+             *   the same `FirstName` and `LastName` , `ConflictResolution` specifies which
+             *   `EmailAddress` should be used.
+             */
+            public fun conflictResolution(conflictResolution: IResolvable)
+
+            /**
+             * @param conflictResolution Determines how the auto-merging process should resolve
+             *   conflicts between different profiles. For example, if Profile A and Profile B have
+             *   the same `FirstName` and `LastName` , `ConflictResolution` specifies which
+             *   `EmailAddress` should be used.
+             */
+            public fun conflictResolution(conflictResolution: ConflictResolutionProperty)
+
+            /**
+             * @param conflictResolution Determines how the auto-merging process should resolve
+             *   conflicts between different profiles. For example, if Profile A and Profile B have
+             *   the same `FirstName` and `LastName` , `ConflictResolution` specifies which
+             *   `EmailAddress` should be used.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("a5ccb8bda605b8c0ced514db1ddecb795bb5dafb1a21230a08e064f1dcf1bd7e")
+            public fun conflictResolution(
+                conflictResolution: ConflictResolutionProperty.Builder.() -> Unit
+            )
+
+            /**
+             * @param consolidation A list of matching attributes that represent matching criteria.
+             *   If two profiles meet at least one of the requirements in the matching attributes
+             *   list, they will be merged.
+             */
+            public fun consolidation(consolidation: IResolvable)
+
+            /**
+             * @param consolidation A list of matching attributes that represent matching criteria.
+             *   If two profiles meet at least one of the requirements in the matching attributes
+             *   list, they will be merged.
+             */
+            public fun consolidation(consolidation: ConsolidationProperty)
+
+            /**
+             * @param consolidation A list of matching attributes that represent matching criteria.
+             *   If two profiles meet at least one of the requirements in the matching attributes
+             *   list, they will be merged.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("588475a49e8665372eaaf66d60a9ace54fcd7d2dcd66c30f0ad94144aa78d90d")
+            public fun consolidation(consolidation: ConsolidationProperty.Builder.() -> Unit)
+
+            /** @param enabled The flag that enables the auto-merging of duplicate profiles. */
+            public fun enabled(enabled: Boolean)
+
+            /** @param enabled The flag that enables the auto-merging of duplicate profiles. */
+            public fun enabled(enabled: IResolvable)
+
+            /**
+             * @param minAllowedConfidenceScoreForMerging A number between 0 and 1 that represents
+             *   the minimum confidence score required for profiles within a matching group to be
+             *   merged during the auto-merge process. A higher score means that a higher similarity
+             *   is required to merge profiles.
+             */
+            public fun minAllowedConfidenceScoreForMerging(
+                minAllowedConfidenceScoreForMerging: Number
+            )
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.AutoMergingProperty.Builder =
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.AutoMergingProperty
+                    .builder()
+
+            /**
+             * @param conflictResolution Determines how the auto-merging process should resolve
+             *   conflicts between different profiles. For example, if Profile A and Profile B have
+             *   the same `FirstName` and `LastName` , `ConflictResolution` specifies which
+             *   `EmailAddress` should be used.
+             */
+            override fun conflictResolution(conflictResolution: IResolvable) {
+                cdkBuilder.conflictResolution(conflictResolution.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param conflictResolution Determines how the auto-merging process should resolve
+             *   conflicts between different profiles. For example, if Profile A and Profile B have
+             *   the same `FirstName` and `LastName` , `ConflictResolution` specifies which
+             *   `EmailAddress` should be used.
+             */
+            override fun conflictResolution(conflictResolution: ConflictResolutionProperty) {
+                cdkBuilder.conflictResolution(
+                    conflictResolution.let(ConflictResolutionProperty::unwrap)
+                )
+            }
+
+            /**
+             * @param conflictResolution Determines how the auto-merging process should resolve
+             *   conflicts between different profiles. For example, if Profile A and Profile B have
+             *   the same `FirstName` and `LastName` , `ConflictResolution` specifies which
+             *   `EmailAddress` should be used.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("a5ccb8bda605b8c0ced514db1ddecb795bb5dafb1a21230a08e064f1dcf1bd7e")
+            override fun conflictResolution(
+                conflictResolution: ConflictResolutionProperty.Builder.() -> Unit
+            ): Unit = conflictResolution(ConflictResolutionProperty(conflictResolution))
+
+            /**
+             * @param consolidation A list of matching attributes that represent matching criteria.
+             *   If two profiles meet at least one of the requirements in the matching attributes
+             *   list, they will be merged.
+             */
+            override fun consolidation(consolidation: IResolvable) {
+                cdkBuilder.consolidation(consolidation.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param consolidation A list of matching attributes that represent matching criteria.
+             *   If two profiles meet at least one of the requirements in the matching attributes
+             *   list, they will be merged.
+             */
+            override fun consolidation(consolidation: ConsolidationProperty) {
+                cdkBuilder.consolidation(consolidation.let(ConsolidationProperty::unwrap))
+            }
+
+            /**
+             * @param consolidation A list of matching attributes that represent matching criteria.
+             *   If two profiles meet at least one of the requirements in the matching attributes
+             *   list, they will be merged.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("588475a49e8665372eaaf66d60a9ace54fcd7d2dcd66c30f0ad94144aa78d90d")
+            override fun consolidation(
+                consolidation: ConsolidationProperty.Builder.() -> Unit
+            ): Unit = consolidation(ConsolidationProperty(consolidation))
+
+            /** @param enabled The flag that enables the auto-merging of duplicate profiles. */
+            override fun enabled(enabled: Boolean) {
+                cdkBuilder.enabled(enabled)
+            }
+
+            /** @param enabled The flag that enables the auto-merging of duplicate profiles. */
+            override fun enabled(enabled: IResolvable) {
+                cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param minAllowedConfidenceScoreForMerging A number between 0 and 1 that represents
+             *   the minimum confidence score required for profiles within a matching group to be
+             *   merged during the auto-merge process. A higher score means that a higher similarity
+             *   is required to merge profiles.
+             */
+            override fun minAllowedConfidenceScoreForMerging(
+                minAllowedConfidenceScoreForMerging: Number
+            ) {
+                cdkBuilder.minAllowedConfidenceScoreForMerging(minAllowedConfidenceScoreForMerging)
+            }
+
+            public fun build():
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.AutoMergingProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.AutoMergingProperty,
+        ) : AutoMergingProperty {
+            /**
+             * Determines how the auto-merging process should resolve conflicts between different
+             * profiles.
+             *
+             * For example, if Profile A and Profile B have the same `FirstName` and `LastName` ,
+             * `ConflictResolution` specifies which `EmailAddress` should be used.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-automerging.html#cfn-customerprofiles-domain-automerging-conflictresolution)
+             */
+            override fun conflictResolution(): Any? = unwrap(this).getConflictResolution()
+
+            /**
+             * A list of matching attributes that represent matching criteria.
+             *
+             * If two profiles meet at least one of the requirements in the matching attributes
+             * list, they will be merged.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-automerging.html#cfn-customerprofiles-domain-automerging-consolidation)
+             */
+            override fun consolidation(): Any? = unwrap(this).getConsolidation()
+
+            /**
+             * The flag that enables the auto-merging of duplicate profiles.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-automerging.html#cfn-customerprofiles-domain-automerging-enabled)
+             */
+            override fun enabled(): Any = unwrap(this).getEnabled()
+
+            /**
+             * A number between 0 and 1 that represents the minimum confidence score required for
+             * profiles within a matching group to be merged during the auto-merge process.
+             *
+             * A higher score means that a higher similarity is required to merge profiles.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-automerging.html#cfn-customerprofiles-domain-automerging-minallowedconfidencescoreformerging)
+             */
+            override fun minAllowedConfidenceScoreForMerging(): Number? =
+                unwrap(this).getMinAllowedConfidenceScoreForMerging()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): AutoMergingProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.customerprofiles.CfnDomain.AutoMergingProperty
+            ): AutoMergingProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: AutoMergingProperty
+            ): software.amazon.awscdk.services.customerprofiles.CfnDomain.AutoMergingProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
-
-      }
-
-      public operator fun invoke(block: Builder.() -> Unit = {}): AutoMergingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.AutoMergingProperty):
-          AutoMergingProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AutoMergingProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.AutoMergingProperty = (wrapped
-          as Wrapper).cdkObject
-    }
-  }
-
-  public interface RuleBasedMatchingProperty {
-    /**
-     * Configures information about the `AttributeTypesSelector` where the rule-based identity
-     * resolution uses to match profiles.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-attributetypesselector)
-     */
-    public fun attributeTypesSelector(): Any? = unwrap(this).getAttributeTypesSelector()
-
-    /**
-     * Determines how the auto-merging process should resolve conflicts between different profiles.
-     *
-     * For example, if Profile A and Profile B have the same `FirstName` and `LastName` ,
-     * `ConflictResolution` specifies which `EmailAddress` should be used.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-conflictresolution)
-     */
-    public fun conflictResolution(): Any? = unwrap(this).getConflictResolution()
-
-    /**
-     * The flag that enables the matching process of duplicate profiles.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-enabled)
-     */
-    public fun enabled(): Any
-
-    /**
-     * The S3 location where Identity Resolution Jobs write result files.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-exportingconfig)
-     */
-    public fun exportingConfig(): Any? = unwrap(this).getExportingConfig()
-
-    /**
-     * Configures how the rule-based matching process should match profiles.
-     *
-     * You can have up to 15 `MatchingRule` in the `MatchingRules` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-matchingrules)
-     */
-    public fun matchingRules(): Any? = unwrap(this).getMatchingRules()
-
-    /**
-     * Indicates the maximum allowed rule level for matching.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-maxallowedrulelevelformatching)
-     */
-    public fun maxAllowedRuleLevelForMatching(): Number? =
-        unwrap(this).getMaxAllowedRuleLevelForMatching()
-
-    /**
-     * Indicates the maximum allowed rule level for merging.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-maxallowedrulelevelformerging)
-     */
-    public fun maxAllowedRuleLevelForMerging(): Number? =
-        unwrap(this).getMaxAllowedRuleLevelForMerging()
-
-    /**
-     * The status of rule-based matching rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-status)
-     */
-    public fun status(): String? = unwrap(this).getStatus()
-
-    /**
-     * A builder for [RuleBasedMatchingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param attributeTypesSelector Configures information about the `AttributeTypesSelector`
-       * where the rule-based identity resolution uses to match profiles.
-       */
-      public fun attributeTypesSelector(attributeTypesSelector: IResolvable)
-
-      /**
-       * @param attributeTypesSelector Configures information about the `AttributeTypesSelector`
-       * where the rule-based identity resolution uses to match profiles.
-       */
-      public fun attributeTypesSelector(attributeTypesSelector: AttributeTypesSelectorProperty)
-
-      /**
-       * @param attributeTypesSelector Configures information about the `AttributeTypesSelector`
-       * where the rule-based identity resolution uses to match profiles.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("384295a2d64f6e20fa9fdd4eff187f211054525d9c5899874c59c253ef9b3909")
-      public
-          fun attributeTypesSelector(attributeTypesSelector: AttributeTypesSelectorProperty.Builder.() -> Unit)
-
-      /**
-       * @param conflictResolution Determines how the auto-merging process should resolve conflicts
-       * between different profiles.
-       * For example, if Profile A and Profile B have the same `FirstName` and `LastName` ,
-       * `ConflictResolution` specifies which `EmailAddress` should be used.
-       */
-      public fun conflictResolution(conflictResolution: IResolvable)
-
-      /**
-       * @param conflictResolution Determines how the auto-merging process should resolve conflicts
-       * between different profiles.
-       * For example, if Profile A and Profile B have the same `FirstName` and `LastName` ,
-       * `ConflictResolution` specifies which `EmailAddress` should be used.
-       */
-      public fun conflictResolution(conflictResolution: ConflictResolutionProperty)
-
-      /**
-       * @param conflictResolution Determines how the auto-merging process should resolve conflicts
-       * between different profiles.
-       * For example, if Profile A and Profile B have the same `FirstName` and `LastName` ,
-       * `ConflictResolution` specifies which `EmailAddress` should be used.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("93ec69cbddffcd12af33b57f49d61f338305f823b557ca488dc39f2b24b247bf")
-      public
-          fun conflictResolution(conflictResolution: ConflictResolutionProperty.Builder.() -> Unit)
-
-      /**
-       * @param enabled The flag that enables the matching process of duplicate profiles. 
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled The flag that enables the matching process of duplicate profiles. 
-       */
-      public fun enabled(enabled: IResolvable)
-
-      /**
-       * @param exportingConfig The S3 location where Identity Resolution Jobs write result files.
-       */
-      public fun exportingConfig(exportingConfig: IResolvable)
-
-      /**
-       * @param exportingConfig The S3 location where Identity Resolution Jobs write result files.
-       */
-      public fun exportingConfig(exportingConfig: ExportingConfigProperty)
-
-      /**
-       * @param exportingConfig The S3 location where Identity Resolution Jobs write result files.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3ae8dd681fa699bfc90a4ced2542f77bd9e133e50290bb6967915d30a976a5b7")
-      public fun exportingConfig(exportingConfig: ExportingConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param matchingRules Configures how the rule-based matching process should match profiles.
-       * You can have up to 15 `MatchingRule` in the `MatchingRules` .
-       */
-      public fun matchingRules(matchingRules: IResolvable)
-
-      /**
-       * @param matchingRules Configures how the rule-based matching process should match profiles.
-       * You can have up to 15 `MatchingRule` in the `MatchingRules` .
-       */
-      public fun matchingRules(matchingRules: List<Any>)
-
-      /**
-       * @param matchingRules Configures how the rule-based matching process should match profiles.
-       * You can have up to 15 `MatchingRule` in the `MatchingRules` .
-       */
-      public fun matchingRules(vararg matchingRules: Any)
-
-      /**
-       * @param maxAllowedRuleLevelForMatching Indicates the maximum allowed rule level for
-       * matching.
-       */
-      public fun maxAllowedRuleLevelForMatching(maxAllowedRuleLevelForMatching: Number)
-
-      /**
-       * @param maxAllowedRuleLevelForMerging Indicates the maximum allowed rule level for merging.
-       */
-      public fun maxAllowedRuleLevelForMerging(maxAllowedRuleLevelForMerging: Number)
-
-      /**
-       * @param status The status of rule-based matching rule.
-       */
-      public fun status(status: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.RuleBasedMatchingProperty.Builder
-          =
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.RuleBasedMatchingProperty.builder()
-
-      /**
-       * @param attributeTypesSelector Configures information about the `AttributeTypesSelector`
-       * where the rule-based identity resolution uses to match profiles.
-       */
-      override fun attributeTypesSelector(attributeTypesSelector: IResolvable) {
-        cdkBuilder.attributeTypesSelector(attributeTypesSelector.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param attributeTypesSelector Configures information about the `AttributeTypesSelector`
-       * where the rule-based identity resolution uses to match profiles.
-       */
-      override fun attributeTypesSelector(attributeTypesSelector: AttributeTypesSelectorProperty) {
-        cdkBuilder.attributeTypesSelector(attributeTypesSelector.let(AttributeTypesSelectorProperty::unwrap))
-      }
-
-      /**
-       * @param attributeTypesSelector Configures information about the `AttributeTypesSelector`
-       * where the rule-based identity resolution uses to match profiles.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("384295a2d64f6e20fa9fdd4eff187f211054525d9c5899874c59c253ef9b3909")
-      override
-          fun attributeTypesSelector(attributeTypesSelector: AttributeTypesSelectorProperty.Builder.() -> Unit):
-          Unit = attributeTypesSelector(AttributeTypesSelectorProperty(attributeTypesSelector))
-
-      /**
-       * @param conflictResolution Determines how the auto-merging process should resolve conflicts
-       * between different profiles.
-       * For example, if Profile A and Profile B have the same `FirstName` and `LastName` ,
-       * `ConflictResolution` specifies which `EmailAddress` should be used.
-       */
-      override fun conflictResolution(conflictResolution: IResolvable) {
-        cdkBuilder.conflictResolution(conflictResolution.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param conflictResolution Determines how the auto-merging process should resolve conflicts
-       * between different profiles.
-       * For example, if Profile A and Profile B have the same `FirstName` and `LastName` ,
-       * `ConflictResolution` specifies which `EmailAddress` should be used.
-       */
-      override fun conflictResolution(conflictResolution: ConflictResolutionProperty) {
-        cdkBuilder.conflictResolution(conflictResolution.let(ConflictResolutionProperty::unwrap))
-      }
-
-      /**
-       * @param conflictResolution Determines how the auto-merging process should resolve conflicts
-       * between different profiles.
-       * For example, if Profile A and Profile B have the same `FirstName` and `LastName` ,
-       * `ConflictResolution` specifies which `EmailAddress` should be used.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("93ec69cbddffcd12af33b57f49d61f338305f823b557ca488dc39f2b24b247bf")
-      override
-          fun conflictResolution(conflictResolution: ConflictResolutionProperty.Builder.() -> Unit):
-          Unit = conflictResolution(ConflictResolutionProperty(conflictResolution))
-
-      /**
-       * @param enabled The flag that enables the matching process of duplicate profiles. 
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
-
-      /**
-       * @param enabled The flag that enables the matching process of duplicate profiles. 
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param exportingConfig The S3 location where Identity Resolution Jobs write result files.
-       */
-      override fun exportingConfig(exportingConfig: IResolvable) {
-        cdkBuilder.exportingConfig(exportingConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param exportingConfig The S3 location where Identity Resolution Jobs write result files.
-       */
-      override fun exportingConfig(exportingConfig: ExportingConfigProperty) {
-        cdkBuilder.exportingConfig(exportingConfig.let(ExportingConfigProperty::unwrap))
-      }
-
-      /**
-       * @param exportingConfig The S3 location where Identity Resolution Jobs write result files.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("3ae8dd681fa699bfc90a4ced2542f77bd9e133e50290bb6967915d30a976a5b7")
-      override fun exportingConfig(exportingConfig: ExportingConfigProperty.Builder.() -> Unit):
-          Unit = exportingConfig(ExportingConfigProperty(exportingConfig))
-
-      /**
-       * @param matchingRules Configures how the rule-based matching process should match profiles.
-       * You can have up to 15 `MatchingRule` in the `MatchingRules` .
-       */
-      override fun matchingRules(matchingRules: IResolvable) {
-        cdkBuilder.matchingRules(matchingRules.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param matchingRules Configures how the rule-based matching process should match profiles.
-       * You can have up to 15 `MatchingRule` in the `MatchingRules` .
-       */
-      override fun matchingRules(matchingRules: List<Any>) {
-        cdkBuilder.matchingRules(matchingRules)
-      }
-
-      /**
-       * @param matchingRules Configures how the rule-based matching process should match profiles.
-       * You can have up to 15 `MatchingRule` in the `MatchingRules` .
-       */
-      override fun matchingRules(vararg matchingRules: Any): Unit =
-          matchingRules(matchingRules.toList())
-
-      /**
-       * @param maxAllowedRuleLevelForMatching Indicates the maximum allowed rule level for
-       * matching.
-       */
-      override fun maxAllowedRuleLevelForMatching(maxAllowedRuleLevelForMatching: Number) {
-        cdkBuilder.maxAllowedRuleLevelForMatching(maxAllowedRuleLevelForMatching)
-      }
-
-      /**
-       * @param maxAllowedRuleLevelForMerging Indicates the maximum allowed rule level for merging.
-       */
-      override fun maxAllowedRuleLevelForMerging(maxAllowedRuleLevelForMerging: Number) {
-        cdkBuilder.maxAllowedRuleLevelForMerging(maxAllowedRuleLevelForMerging)
-      }
-
-      /**
-       * @param status The status of rule-based matching rule.
-       */
-      override fun status(status: String) {
-        cdkBuilder.status(status)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.RuleBasedMatchingProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.RuleBasedMatchingProperty,
-    ) : RuleBasedMatchingProperty {
-      /**
-       * Configures information about the `AttributeTypesSelector` where the rule-based identity
-       * resolution uses to match profiles.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-attributetypesselector)
-       */
-      override fun attributeTypesSelector(): Any? = unwrap(this).getAttributeTypesSelector()
-
-      /**
-       * Determines how the auto-merging process should resolve conflicts between different
-       * profiles.
-       *
-       * For example, if Profile A and Profile B have the same `FirstName` and `LastName` ,
-       * `ConflictResolution` specifies which `EmailAddress` should be used.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-conflictresolution)
-       */
-      override fun conflictResolution(): Any? = unwrap(this).getConflictResolution()
-
-      /**
-       * The flag that enables the matching process of duplicate profiles.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-enabled)
-       */
-      override fun enabled(): Any = unwrap(this).getEnabled()
-
-      /**
-       * The S3 location where Identity Resolution Jobs write result files.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-exportingconfig)
-       */
-      override fun exportingConfig(): Any? = unwrap(this).getExportingConfig()
-
-      /**
-       * Configures how the rule-based matching process should match profiles.
-       *
-       * You can have up to 15 `MatchingRule` in the `MatchingRules` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-matchingrules)
-       */
-      override fun matchingRules(): Any? = unwrap(this).getMatchingRules()
-
-      /**
-       * Indicates the maximum allowed rule level for matching.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-maxallowedrulelevelformatching)
-       */
-      override fun maxAllowedRuleLevelForMatching(): Number? =
-          unwrap(this).getMaxAllowedRuleLevelForMatching()
-
-      /**
-       * Indicates the maximum allowed rule level for merging.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-maxallowedrulelevelformerging)
-       */
-      override fun maxAllowedRuleLevelForMerging(): Number? =
-          unwrap(this).getMaxAllowedRuleLevelForMerging()
-
-      /**
-       * The status of rule-based matching rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-status)
-       */
-      override fun status(): String? = unwrap(this).getStatus()
-    }
-
-    public companion object {
-      init {
-
-      }
-
-      public operator fun invoke(block: Builder.() -> Unit = {}): RuleBasedMatchingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.RuleBasedMatchingProperty):
-          RuleBasedMatchingProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: RuleBasedMatchingProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.RuleBasedMatchingProperty =
-          (wrapped as Wrapper).cdkObject
-    }
-  }
-
-  public interface MatchingProperty {
-    /**
-     * Configuration information about the auto-merging process.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-matching.html#cfn-customerprofiles-domain-matching-automerging)
-     */
-    public fun autoMerging(): Any? = unwrap(this).getAutoMerging()
-
-    /**
-     * The flag that enables the matching process of duplicate profiles.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-matching.html#cfn-customerprofiles-domain-matching-enabled)
-     */
-    public fun enabled(): Any
-
-    /**
-     * The S3 location where Identity Resolution Jobs write result files.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-matching.html#cfn-customerprofiles-domain-matching-exportingconfig)
-     */
-    public fun exportingConfig(): Any? = unwrap(this).getExportingConfig()
-
-    /**
-     * The day and time when do you want to start the Identity Resolution Job every week.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-matching.html#cfn-customerprofiles-domain-matching-jobschedule)
-     */
-    public fun jobSchedule(): Any? = unwrap(this).getJobSchedule()
-
-    /**
-     * A builder for [MatchingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param autoMerging Configuration information about the auto-merging process.
-       */
-      public fun autoMerging(autoMerging: IResolvable)
-
-      /**
-       * @param autoMerging Configuration information about the auto-merging process.
-       */
-      public fun autoMerging(autoMerging: AutoMergingProperty)
-
-      /**
-       * @param autoMerging Configuration information about the auto-merging process.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("006c8afb155ab17de412e5eced95bbf709a1b974ded50cbc76bfc3401e13b256")
-      public fun autoMerging(autoMerging: AutoMergingProperty.Builder.() -> Unit)
-
-      /**
-       * @param enabled The flag that enables the matching process of duplicate profiles. 
-       */
-      public fun enabled(enabled: Boolean)
-
-      /**
-       * @param enabled The flag that enables the matching process of duplicate profiles. 
-       */
-      public fun enabled(enabled: IResolvable)
-
-      /**
-       * @param exportingConfig The S3 location where Identity Resolution Jobs write result files.
-       */
-      public fun exportingConfig(exportingConfig: IResolvable)
-
-      /**
-       * @param exportingConfig The S3 location where Identity Resolution Jobs write result files.
-       */
-      public fun exportingConfig(exportingConfig: ExportingConfigProperty)
-
-      /**
-       * @param exportingConfig The S3 location where Identity Resolution Jobs write result files.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e4cec075da95f0eaaee5ce2d281806dd984b8c1307ef88f39332d60fb47da8dc")
-      public fun exportingConfig(exportingConfig: ExportingConfigProperty.Builder.() -> Unit)
-
-      /**
-       * @param jobSchedule The day and time when do you want to start the Identity Resolution Job
-       * every week.
-       */
-      public fun jobSchedule(jobSchedule: IResolvable)
-
-      /**
-       * @param jobSchedule The day and time when do you want to start the Identity Resolution Job
-       * every week.
-       */
-      public fun jobSchedule(jobSchedule: JobScheduleProperty)
-
-      /**
-       * @param jobSchedule The day and time when do you want to start the Identity Resolution Job
-       * every week.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c9b628426b7ed68c60c13c72d013513ebf9e5810bee900c1197cfa87ba054cc1")
-      public fun jobSchedule(jobSchedule: JobScheduleProperty.Builder.() -> Unit)
+    public interface RuleBasedMatchingProperty {
+        /**
+         * Configures information about the `AttributeTypesSelector` where the rule-based identity
+         * resolution uses to match profiles.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-attributetypesselector)
+         */
+        public fun attributeTypesSelector(): Any? = unwrap(this).getAttributeTypesSelector()
+
+        /**
+         * Determines how the auto-merging process should resolve conflicts between different
+         * profiles.
+         *
+         * For example, if Profile A and Profile B have the same `FirstName` and `LastName` ,
+         * `ConflictResolution` specifies which `EmailAddress` should be used.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-conflictresolution)
+         */
+        public fun conflictResolution(): Any? = unwrap(this).getConflictResolution()
+
+        /**
+         * The flag that enables the matching process of duplicate profiles.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-enabled)
+         */
+        public fun enabled(): Any
+
+        /**
+         * The S3 location where Identity Resolution Jobs write result files.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-exportingconfig)
+         */
+        public fun exportingConfig(): Any? = unwrap(this).getExportingConfig()
+
+        /**
+         * Configures how the rule-based matching process should match profiles.
+         *
+         * You can have up to 15 `MatchingRule` in the `MatchingRules` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-matchingrules)
+         */
+        public fun matchingRules(): Any? = unwrap(this).getMatchingRules()
+
+        /**
+         * Indicates the maximum allowed rule level for matching.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-maxallowedrulelevelformatching)
+         */
+        public fun maxAllowedRuleLevelForMatching(): Number? =
+            unwrap(this).getMaxAllowedRuleLevelForMatching()
+
+        /**
+         * Indicates the maximum allowed rule level for merging.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-maxallowedrulelevelformerging)
+         */
+        public fun maxAllowedRuleLevelForMerging(): Number? =
+            unwrap(this).getMaxAllowedRuleLevelForMerging()
+
+        /**
+         * The status of rule-based matching rule.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-status)
+         */
+        public fun status(): String? = unwrap(this).getStatus()
+
+        /** A builder for [RuleBasedMatchingProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param attributeTypesSelector Configures information about the
+             *   `AttributeTypesSelector` where the rule-based identity resolution uses to match
+             *   profiles.
+             */
+            public fun attributeTypesSelector(attributeTypesSelector: IResolvable)
+
+            /**
+             * @param attributeTypesSelector Configures information about the
+             *   `AttributeTypesSelector` where the rule-based identity resolution uses to match
+             *   profiles.
+             */
+            public fun attributeTypesSelector(
+                attributeTypesSelector: AttributeTypesSelectorProperty
+            )
+
+            /**
+             * @param attributeTypesSelector Configures information about the
+             *   `AttributeTypesSelector` where the rule-based identity resolution uses to match
+             *   profiles.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("384295a2d64f6e20fa9fdd4eff187f211054525d9c5899874c59c253ef9b3909")
+            public fun attributeTypesSelector(
+                attributeTypesSelector: AttributeTypesSelectorProperty.Builder.() -> Unit
+            )
+
+            /**
+             * @param conflictResolution Determines how the auto-merging process should resolve
+             *   conflicts between different profiles. For example, if Profile A and Profile B have
+             *   the same `FirstName` and `LastName` , `ConflictResolution` specifies which
+             *   `EmailAddress` should be used.
+             */
+            public fun conflictResolution(conflictResolution: IResolvable)
+
+            /**
+             * @param conflictResolution Determines how the auto-merging process should resolve
+             *   conflicts between different profiles. For example, if Profile A and Profile B have
+             *   the same `FirstName` and `LastName` , `ConflictResolution` specifies which
+             *   `EmailAddress` should be used.
+             */
+            public fun conflictResolution(conflictResolution: ConflictResolutionProperty)
+
+            /**
+             * @param conflictResolution Determines how the auto-merging process should resolve
+             *   conflicts between different profiles. For example, if Profile A and Profile B have
+             *   the same `FirstName` and `LastName` , `ConflictResolution` specifies which
+             *   `EmailAddress` should be used.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("93ec69cbddffcd12af33b57f49d61f338305f823b557ca488dc39f2b24b247bf")
+            public fun conflictResolution(
+                conflictResolution: ConflictResolutionProperty.Builder.() -> Unit
+            )
+
+            /** @param enabled The flag that enables the matching process of duplicate profiles. */
+            public fun enabled(enabled: Boolean)
+
+            /** @param enabled The flag that enables the matching process of duplicate profiles. */
+            public fun enabled(enabled: IResolvable)
+
+            /**
+             * @param exportingConfig The S3 location where Identity Resolution Jobs write result
+             *   files.
+             */
+            public fun exportingConfig(exportingConfig: IResolvable)
+
+            /**
+             * @param exportingConfig The S3 location where Identity Resolution Jobs write result
+             *   files.
+             */
+            public fun exportingConfig(exportingConfig: ExportingConfigProperty)
+
+            /**
+             * @param exportingConfig The S3 location where Identity Resolution Jobs write result
+             *   files.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("3ae8dd681fa699bfc90a4ced2542f77bd9e133e50290bb6967915d30a976a5b7")
+            public fun exportingConfig(exportingConfig: ExportingConfigProperty.Builder.() -> Unit)
+
+            /**
+             * @param matchingRules Configures how the rule-based matching process should match
+             *   profiles. You can have up to 15 `MatchingRule` in the `MatchingRules` .
+             */
+            public fun matchingRules(matchingRules: IResolvable)
+
+            /**
+             * @param matchingRules Configures how the rule-based matching process should match
+             *   profiles. You can have up to 15 `MatchingRule` in the `MatchingRules` .
+             */
+            public fun matchingRules(matchingRules: List<Any>)
+
+            /**
+             * @param matchingRules Configures how the rule-based matching process should match
+             *   profiles. You can have up to 15 `MatchingRule` in the `MatchingRules` .
+             */
+            public fun matchingRules(vararg matchingRules: Any)
+
+            /**
+             * @param maxAllowedRuleLevelForMatching Indicates the maximum allowed rule level for
+             *   matching.
+             */
+            public fun maxAllowedRuleLevelForMatching(maxAllowedRuleLevelForMatching: Number)
+
+            /**
+             * @param maxAllowedRuleLevelForMerging Indicates the maximum allowed rule level for
+             *   merging.
+             */
+            public fun maxAllowedRuleLevelForMerging(maxAllowedRuleLevelForMerging: Number)
+
+            /** @param status The status of rule-based matching rule. */
+            public fun status(status: String)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.RuleBasedMatchingProperty.Builder =
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.RuleBasedMatchingProperty
+                    .builder()
+
+            /**
+             * @param attributeTypesSelector Configures information about the
+             *   `AttributeTypesSelector` where the rule-based identity resolution uses to match
+             *   profiles.
+             */
+            override fun attributeTypesSelector(attributeTypesSelector: IResolvable) {
+                cdkBuilder.attributeTypesSelector(attributeTypesSelector.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param attributeTypesSelector Configures information about the
+             *   `AttributeTypesSelector` where the rule-based identity resolution uses to match
+             *   profiles.
+             */
+            override fun attributeTypesSelector(
+                attributeTypesSelector: AttributeTypesSelectorProperty
+            ) {
+                cdkBuilder.attributeTypesSelector(
+                    attributeTypesSelector.let(AttributeTypesSelectorProperty::unwrap)
+                )
+            }
+
+            /**
+             * @param attributeTypesSelector Configures information about the
+             *   `AttributeTypesSelector` where the rule-based identity resolution uses to match
+             *   profiles.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("384295a2d64f6e20fa9fdd4eff187f211054525d9c5899874c59c253ef9b3909")
+            override fun attributeTypesSelector(
+                attributeTypesSelector: AttributeTypesSelectorProperty.Builder.() -> Unit
+            ): Unit = attributeTypesSelector(AttributeTypesSelectorProperty(attributeTypesSelector))
+
+            /**
+             * @param conflictResolution Determines how the auto-merging process should resolve
+             *   conflicts between different profiles. For example, if Profile A and Profile B have
+             *   the same `FirstName` and `LastName` , `ConflictResolution` specifies which
+             *   `EmailAddress` should be used.
+             */
+            override fun conflictResolution(conflictResolution: IResolvable) {
+                cdkBuilder.conflictResolution(conflictResolution.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param conflictResolution Determines how the auto-merging process should resolve
+             *   conflicts between different profiles. For example, if Profile A and Profile B have
+             *   the same `FirstName` and `LastName` , `ConflictResolution` specifies which
+             *   `EmailAddress` should be used.
+             */
+            override fun conflictResolution(conflictResolution: ConflictResolutionProperty) {
+                cdkBuilder.conflictResolution(
+                    conflictResolution.let(ConflictResolutionProperty::unwrap)
+                )
+            }
+
+            /**
+             * @param conflictResolution Determines how the auto-merging process should resolve
+             *   conflicts between different profiles. For example, if Profile A and Profile B have
+             *   the same `FirstName` and `LastName` , `ConflictResolution` specifies which
+             *   `EmailAddress` should be used.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("93ec69cbddffcd12af33b57f49d61f338305f823b557ca488dc39f2b24b247bf")
+            override fun conflictResolution(
+                conflictResolution: ConflictResolutionProperty.Builder.() -> Unit
+            ): Unit = conflictResolution(ConflictResolutionProperty(conflictResolution))
+
+            /** @param enabled The flag that enables the matching process of duplicate profiles. */
+            override fun enabled(enabled: Boolean) {
+                cdkBuilder.enabled(enabled)
+            }
+
+            /** @param enabled The flag that enables the matching process of duplicate profiles. */
+            override fun enabled(enabled: IResolvable) {
+                cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param exportingConfig The S3 location where Identity Resolution Jobs write result
+             *   files.
+             */
+            override fun exportingConfig(exportingConfig: IResolvable) {
+                cdkBuilder.exportingConfig(exportingConfig.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param exportingConfig The S3 location where Identity Resolution Jobs write result
+             *   files.
+             */
+            override fun exportingConfig(exportingConfig: ExportingConfigProperty) {
+                cdkBuilder.exportingConfig(exportingConfig.let(ExportingConfigProperty::unwrap))
+            }
+
+            /**
+             * @param exportingConfig The S3 location where Identity Resolution Jobs write result
+             *   files.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("3ae8dd681fa699bfc90a4ced2542f77bd9e133e50290bb6967915d30a976a5b7")
+            override fun exportingConfig(
+                exportingConfig: ExportingConfigProperty.Builder.() -> Unit
+            ): Unit = exportingConfig(ExportingConfigProperty(exportingConfig))
+
+            /**
+             * @param matchingRules Configures how the rule-based matching process should match
+             *   profiles. You can have up to 15 `MatchingRule` in the `MatchingRules` .
+             */
+            override fun matchingRules(matchingRules: IResolvable) {
+                cdkBuilder.matchingRules(matchingRules.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param matchingRules Configures how the rule-based matching process should match
+             *   profiles. You can have up to 15 `MatchingRule` in the `MatchingRules` .
+             */
+            override fun matchingRules(matchingRules: List<Any>) {
+                cdkBuilder.matchingRules(matchingRules)
+            }
+
+            /**
+             * @param matchingRules Configures how the rule-based matching process should match
+             *   profiles. You can have up to 15 `MatchingRule` in the `MatchingRules` .
+             */
+            override fun matchingRules(vararg matchingRules: Any): Unit =
+                matchingRules(matchingRules.toList())
+
+            /**
+             * @param maxAllowedRuleLevelForMatching Indicates the maximum allowed rule level for
+             *   matching.
+             */
+            override fun maxAllowedRuleLevelForMatching(maxAllowedRuleLevelForMatching: Number) {
+                cdkBuilder.maxAllowedRuleLevelForMatching(maxAllowedRuleLevelForMatching)
+            }
+
+            /**
+             * @param maxAllowedRuleLevelForMerging Indicates the maximum allowed rule level for
+             *   merging.
+             */
+            override fun maxAllowedRuleLevelForMerging(maxAllowedRuleLevelForMerging: Number) {
+                cdkBuilder.maxAllowedRuleLevelForMerging(maxAllowedRuleLevelForMerging)
+            }
+
+            /** @param status The status of rule-based matching rule. */
+            override fun status(status: String) {
+                cdkBuilder.status(status)
+            }
+
+            public fun build():
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.RuleBasedMatchingProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.RuleBasedMatchingProperty,
+        ) : RuleBasedMatchingProperty {
+            /**
+             * Configures information about the `AttributeTypesSelector` where the rule-based
+             * identity resolution uses to match profiles.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-attributetypesselector)
+             */
+            override fun attributeTypesSelector(): Any? = unwrap(this).getAttributeTypesSelector()
+
+            /**
+             * Determines how the auto-merging process should resolve conflicts between different
+             * profiles.
+             *
+             * For example, if Profile A and Profile B have the same `FirstName` and `LastName` ,
+             * `ConflictResolution` specifies which `EmailAddress` should be used.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-conflictresolution)
+             */
+            override fun conflictResolution(): Any? = unwrap(this).getConflictResolution()
+
+            /**
+             * The flag that enables the matching process of duplicate profiles.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-enabled)
+             */
+            override fun enabled(): Any = unwrap(this).getEnabled()
+
+            /**
+             * The S3 location where Identity Resolution Jobs write result files.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-exportingconfig)
+             */
+            override fun exportingConfig(): Any? = unwrap(this).getExportingConfig()
+
+            /**
+             * Configures how the rule-based matching process should match profiles.
+             *
+             * You can have up to 15 `MatchingRule` in the `MatchingRules` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-matchingrules)
+             */
+            override fun matchingRules(): Any? = unwrap(this).getMatchingRules()
+
+            /**
+             * Indicates the maximum allowed rule level for matching.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-maxallowedrulelevelformatching)
+             */
+            override fun maxAllowedRuleLevelForMatching(): Number? =
+                unwrap(this).getMaxAllowedRuleLevelForMatching()
+
+            /**
+             * Indicates the maximum allowed rule level for merging.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-maxallowedrulelevelformerging)
+             */
+            override fun maxAllowedRuleLevelForMerging(): Number? =
+                unwrap(this).getMaxAllowedRuleLevelForMerging()
+
+            /**
+             * The status of rule-based matching rule.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-rulebasedmatching.html#cfn-customerprofiles-domain-rulebasedmatching-status)
+             */
+            override fun status(): String? = unwrap(this).getStatus()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): RuleBasedMatchingProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.customerprofiles.CfnDomain.RuleBasedMatchingProperty
+            ): RuleBasedMatchingProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: RuleBasedMatchingProperty
+            ): software.amazon.awscdk.services.customerprofiles.CfnDomain.RuleBasedMatchingProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingProperty.Builder =
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingProperty.builder()
+    public interface MatchingProperty {
+        /**
+         * Configuration information about the auto-merging process.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-matching.html#cfn-customerprofiles-domain-matching-automerging)
+         */
+        public fun autoMerging(): Any? = unwrap(this).getAutoMerging()
 
-      /**
-       * @param autoMerging Configuration information about the auto-merging process.
-       */
-      override fun autoMerging(autoMerging: IResolvable) {
-        cdkBuilder.autoMerging(autoMerging.let(IResolvable::unwrap))
-      }
+        /**
+         * The flag that enables the matching process of duplicate profiles.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-matching.html#cfn-customerprofiles-domain-matching-enabled)
+         */
+        public fun enabled(): Any
 
-      /**
-       * @param autoMerging Configuration information about the auto-merging process.
-       */
-      override fun autoMerging(autoMerging: AutoMergingProperty) {
-        cdkBuilder.autoMerging(autoMerging.let(AutoMergingProperty::unwrap))
-      }
+        /**
+         * The S3 location where Identity Resolution Jobs write result files.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-matching.html#cfn-customerprofiles-domain-matching-exportingconfig)
+         */
+        public fun exportingConfig(): Any? = unwrap(this).getExportingConfig()
 
-      /**
-       * @param autoMerging Configuration information about the auto-merging process.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("006c8afb155ab17de412e5eced95bbf709a1b974ded50cbc76bfc3401e13b256")
-      override fun autoMerging(autoMerging: AutoMergingProperty.Builder.() -> Unit): Unit =
-          autoMerging(AutoMergingProperty(autoMerging))
+        /**
+         * The day and time when do you want to start the Identity Resolution Job every week.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-matching.html#cfn-customerprofiles-domain-matching-jobschedule)
+         */
+        public fun jobSchedule(): Any? = unwrap(this).getJobSchedule()
 
-      /**
-       * @param enabled The flag that enables the matching process of duplicate profiles. 
-       */
-      override fun enabled(enabled: Boolean) {
-        cdkBuilder.enabled(enabled)
-      }
+        /** A builder for [MatchingProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param autoMerging Configuration information about the auto-merging process. */
+            public fun autoMerging(autoMerging: IResolvable)
 
-      /**
-       * @param enabled The flag that enables the matching process of duplicate profiles. 
-       */
-      override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
-      }
+            /** @param autoMerging Configuration information about the auto-merging process. */
+            public fun autoMerging(autoMerging: AutoMergingProperty)
 
-      /**
-       * @param exportingConfig The S3 location where Identity Resolution Jobs write result files.
-       */
-      override fun exportingConfig(exportingConfig: IResolvable) {
-        cdkBuilder.exportingConfig(exportingConfig.let(IResolvable::unwrap))
-      }
+            /** @param autoMerging Configuration information about the auto-merging process. */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("006c8afb155ab17de412e5eced95bbf709a1b974ded50cbc76bfc3401e13b256")
+            public fun autoMerging(autoMerging: AutoMergingProperty.Builder.() -> Unit)
 
-      /**
-       * @param exportingConfig The S3 location where Identity Resolution Jobs write result files.
-       */
-      override fun exportingConfig(exportingConfig: ExportingConfigProperty) {
-        cdkBuilder.exportingConfig(exportingConfig.let(ExportingConfigProperty::unwrap))
-      }
+            /** @param enabled The flag that enables the matching process of duplicate profiles. */
+            public fun enabled(enabled: Boolean)
 
-      /**
-       * @param exportingConfig The S3 location where Identity Resolution Jobs write result files.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("e4cec075da95f0eaaee5ce2d281806dd984b8c1307ef88f39332d60fb47da8dc")
-      override fun exportingConfig(exportingConfig: ExportingConfigProperty.Builder.() -> Unit):
-          Unit = exportingConfig(ExportingConfigProperty(exportingConfig))
+            /** @param enabled The flag that enables the matching process of duplicate profiles. */
+            public fun enabled(enabled: IResolvable)
 
-      /**
-       * @param jobSchedule The day and time when do you want to start the Identity Resolution Job
-       * every week.
-       */
-      override fun jobSchedule(jobSchedule: IResolvable) {
-        cdkBuilder.jobSchedule(jobSchedule.let(IResolvable::unwrap))
-      }
+            /**
+             * @param exportingConfig The S3 location where Identity Resolution Jobs write result
+             *   files.
+             */
+            public fun exportingConfig(exportingConfig: IResolvable)
 
-      /**
-       * @param jobSchedule The day and time when do you want to start the Identity Resolution Job
-       * every week.
-       */
-      override fun jobSchedule(jobSchedule: JobScheduleProperty) {
-        cdkBuilder.jobSchedule(jobSchedule.let(JobScheduleProperty::unwrap))
-      }
+            /**
+             * @param exportingConfig The S3 location where Identity Resolution Jobs write result
+             *   files.
+             */
+            public fun exportingConfig(exportingConfig: ExportingConfigProperty)
 
-      /**
-       * @param jobSchedule The day and time when do you want to start the Identity Resolution Job
-       * every week.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("c9b628426b7ed68c60c13c72d013513ebf9e5810bee900c1197cfa87ba054cc1")
-      override fun jobSchedule(jobSchedule: JobScheduleProperty.Builder.() -> Unit): Unit =
-          jobSchedule(JobScheduleProperty(jobSchedule))
+            /**
+             * @param exportingConfig The S3 location where Identity Resolution Jobs write result
+             *   files.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("e4cec075da95f0eaaee5ce2d281806dd984b8c1307ef88f39332d60fb47da8dc")
+            public fun exportingConfig(exportingConfig: ExportingConfigProperty.Builder.() -> Unit)
 
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingProperty =
-          cdkBuilder.build()
+            /**
+             * @param jobSchedule The day and time when do you want to start the Identity Resolution
+             *   Job every week.
+             */
+            public fun jobSchedule(jobSchedule: IResolvable)
+
+            /**
+             * @param jobSchedule The day and time when do you want to start the Identity Resolution
+             *   Job every week.
+             */
+            public fun jobSchedule(jobSchedule: JobScheduleProperty)
+
+            /**
+             * @param jobSchedule The day and time when do you want to start the Identity Resolution
+             *   Job every week.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("c9b628426b7ed68c60c13c72d013513ebf9e5810bee900c1197cfa87ba054cc1")
+            public fun jobSchedule(jobSchedule: JobScheduleProperty.Builder.() -> Unit)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingProperty.Builder =
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingProperty
+                    .builder()
+
+            /** @param autoMerging Configuration information about the auto-merging process. */
+            override fun autoMerging(autoMerging: IResolvable) {
+                cdkBuilder.autoMerging(autoMerging.let(IResolvable::unwrap))
+            }
+
+            /** @param autoMerging Configuration information about the auto-merging process. */
+            override fun autoMerging(autoMerging: AutoMergingProperty) {
+                cdkBuilder.autoMerging(autoMerging.let(AutoMergingProperty::unwrap))
+            }
+
+            /** @param autoMerging Configuration information about the auto-merging process. */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("006c8afb155ab17de412e5eced95bbf709a1b974ded50cbc76bfc3401e13b256")
+            override fun autoMerging(autoMerging: AutoMergingProperty.Builder.() -> Unit): Unit =
+                autoMerging(AutoMergingProperty(autoMerging))
+
+            /** @param enabled The flag that enables the matching process of duplicate profiles. */
+            override fun enabled(enabled: Boolean) {
+                cdkBuilder.enabled(enabled)
+            }
+
+            /** @param enabled The flag that enables the matching process of duplicate profiles. */
+            override fun enabled(enabled: IResolvable) {
+                cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param exportingConfig The S3 location where Identity Resolution Jobs write result
+             *   files.
+             */
+            override fun exportingConfig(exportingConfig: IResolvable) {
+                cdkBuilder.exportingConfig(exportingConfig.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param exportingConfig The S3 location where Identity Resolution Jobs write result
+             *   files.
+             */
+            override fun exportingConfig(exportingConfig: ExportingConfigProperty) {
+                cdkBuilder.exportingConfig(exportingConfig.let(ExportingConfigProperty::unwrap))
+            }
+
+            /**
+             * @param exportingConfig The S3 location where Identity Resolution Jobs write result
+             *   files.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("e4cec075da95f0eaaee5ce2d281806dd984b8c1307ef88f39332d60fb47da8dc")
+            override fun exportingConfig(
+                exportingConfig: ExportingConfigProperty.Builder.() -> Unit
+            ): Unit = exportingConfig(ExportingConfigProperty(exportingConfig))
+
+            /**
+             * @param jobSchedule The day and time when do you want to start the Identity Resolution
+             *   Job every week.
+             */
+            override fun jobSchedule(jobSchedule: IResolvable) {
+                cdkBuilder.jobSchedule(jobSchedule.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param jobSchedule The day and time when do you want to start the Identity Resolution
+             *   Job every week.
+             */
+            override fun jobSchedule(jobSchedule: JobScheduleProperty) {
+                cdkBuilder.jobSchedule(jobSchedule.let(JobScheduleProperty::unwrap))
+            }
+
+            /**
+             * @param jobSchedule The day and time when do you want to start the Identity Resolution
+             *   Job every week.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("c9b628426b7ed68c60c13c72d013513ebf9e5810bee900c1197cfa87ba054cc1")
+            override fun jobSchedule(jobSchedule: JobScheduleProperty.Builder.() -> Unit): Unit =
+                jobSchedule(JobScheduleProperty(jobSchedule))
+
+            public fun build():
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingProperty,
+        ) : MatchingProperty {
+            /**
+             * Configuration information about the auto-merging process.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-matching.html#cfn-customerprofiles-domain-matching-automerging)
+             */
+            override fun autoMerging(): Any? = unwrap(this).getAutoMerging()
+
+            /**
+             * The flag that enables the matching process of duplicate profiles.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-matching.html#cfn-customerprofiles-domain-matching-enabled)
+             */
+            override fun enabled(): Any = unwrap(this).getEnabled()
+
+            /**
+             * The S3 location where Identity Resolution Jobs write result files.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-matching.html#cfn-customerprofiles-domain-matching-exportingconfig)
+             */
+            override fun exportingConfig(): Any? = unwrap(this).getExportingConfig()
+
+            /**
+             * The day and time when do you want to start the Identity Resolution Job every week.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-matching.html#cfn-customerprofiles-domain-matching-jobschedule)
+             */
+            override fun jobSchedule(): Any? = unwrap(this).getJobSchedule()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): MatchingProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingProperty
+            ): MatchingProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: MatchingProperty
+            ): software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingProperty,
-    ) : MatchingProperty {
-      /**
-       * Configuration information about the auto-merging process.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-matching.html#cfn-customerprofiles-domain-matching-automerging)
-       */
-      override fun autoMerging(): Any? = unwrap(this).getAutoMerging()
+    public interface ConflictResolutionProperty {
+        /**
+         * How the auto-merging process should resolve conflicts between different profiles.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-conflictresolution.html#cfn-customerprofiles-domain-conflictresolution-conflictresolvingmodel)
+         */
+        public fun conflictResolvingModel(): String
 
-      /**
-       * The flag that enables the matching process of duplicate profiles.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-matching.html#cfn-customerprofiles-domain-matching-enabled)
-       */
-      override fun enabled(): Any = unwrap(this).getEnabled()
+        /**
+         * The `ObjectType` name that is used to resolve profile merging conflicts when choosing
+         * `SOURCE` as the `ConflictResolvingModel` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-conflictresolution.html#cfn-customerprofiles-domain-conflictresolution-sourcename)
+         */
+        public fun sourceName(): String? = unwrap(this).getSourceName()
 
-      /**
-       * The S3 location where Identity Resolution Jobs write result files.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-matching.html#cfn-customerprofiles-domain-matching-exportingconfig)
-       */
-      override fun exportingConfig(): Any? = unwrap(this).getExportingConfig()
+        /** A builder for [ConflictResolutionProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param conflictResolvingModel How the auto-merging process should resolve conflicts
+             *   between different profiles.
+             */
+            public fun conflictResolvingModel(conflictResolvingModel: String)
 
-      /**
-       * The day and time when do you want to start the Identity Resolution Job every week.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-matching.html#cfn-customerprofiles-domain-matching-jobschedule)
-       */
-      override fun jobSchedule(): Any? = unwrap(this).getJobSchedule()
+            /**
+             * @param sourceName The `ObjectType` name that is used to resolve profile merging
+             *   conflicts when choosing `SOURCE` as the `ConflictResolvingModel` .
+             */
+            public fun sourceName(sourceName: String)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.ConflictResolutionProperty.Builder =
+                software.amazon.awscdk.services.customerprofiles.CfnDomain
+                    .ConflictResolutionProperty
+                    .builder()
+
+            /**
+             * @param conflictResolvingModel How the auto-merging process should resolve conflicts
+             *   between different profiles.
+             */
+            override fun conflictResolvingModel(conflictResolvingModel: String) {
+                cdkBuilder.conflictResolvingModel(conflictResolvingModel)
+            }
+
+            /**
+             * @param sourceName The `ObjectType` name that is used to resolve profile merging
+             *   conflicts when choosing `SOURCE` as the `ConflictResolvingModel` .
+             */
+            override fun sourceName(sourceName: String) {
+                cdkBuilder.sourceName(sourceName)
+            }
+
+            public fun build():
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.ConflictResolutionProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.ConflictResolutionProperty,
+        ) : ConflictResolutionProperty {
+            /**
+             * How the auto-merging process should resolve conflicts between different profiles.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-conflictresolution.html#cfn-customerprofiles-domain-conflictresolution-conflictresolvingmodel)
+             */
+            override fun conflictResolvingModel(): String = unwrap(this).getConflictResolvingModel()
+
+            /**
+             * The `ObjectType` name that is used to resolve profile merging conflicts when choosing
+             * `SOURCE` as the `ConflictResolvingModel` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-conflictresolution.html#cfn-customerprofiles-domain-conflictresolution-sourcename)
+             */
+            override fun sourceName(): String? = unwrap(this).getSourceName()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): ConflictResolutionProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.customerprofiles.CfnDomain.ConflictResolutionProperty
+            ): ConflictResolutionProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: ConflictResolutionProperty
+            ): software.amazon.awscdk.services.customerprofiles.CfnDomain.ConflictResolutionProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface ExportingConfigProperty {
+        /**
+         * The S3 location where Identity Resolution Jobs write result files.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-exportingconfig.html#cfn-customerprofiles-domain-exportingconfig-s3exporting)
+         */
+        public fun s3Exporting(): Any? = unwrap(this).getS3Exporting()
 
-      }
+        /** A builder for [ExportingConfigProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param s3Exporting The S3 location where Identity Resolution Jobs write result files.
+             */
+            public fun s3Exporting(s3Exporting: IResolvable)
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): MatchingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+            /**
+             * @param s3Exporting The S3 location where Identity Resolution Jobs write result files.
+             */
+            public fun s3Exporting(s3Exporting: S3ExportingConfigProperty)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingProperty):
-          MatchingProperty = Wrapper(cdkObject)
+            /**
+             * @param s3Exporting The S3 location where Identity Resolution Jobs write result files.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("98229fa0b36a910e2b9314fa9ee3e949dfbc31df45f06105683d17c08005dede")
+            public fun s3Exporting(s3Exporting: S3ExportingConfigProperty.Builder.() -> Unit)
+        }
 
-      internal fun unwrap(wrapped: MatchingProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingProperty = (wrapped as
-          Wrapper).cdkObject
-    }
-  }
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.ExportingConfigProperty.Builder =
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.ExportingConfigProperty
+                    .builder()
 
-  public interface ConflictResolutionProperty {
-    /**
-     * How the auto-merging process should resolve conflicts between different profiles.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-conflictresolution.html#cfn-customerprofiles-domain-conflictresolution-conflictresolvingmodel)
-     */
-    public fun conflictResolvingModel(): String
+            /**
+             * @param s3Exporting The S3 location where Identity Resolution Jobs write result files.
+             */
+            override fun s3Exporting(s3Exporting: IResolvable) {
+                cdkBuilder.s3Exporting(s3Exporting.let(IResolvable::unwrap))
+            }
 
-    /**
-     * The `ObjectType` name that is used to resolve profile merging conflicts when choosing
-     * `SOURCE` as the `ConflictResolvingModel` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-conflictresolution.html#cfn-customerprofiles-domain-conflictresolution-sourcename)
-     */
-    public fun sourceName(): String? = unwrap(this).getSourceName()
+            /**
+             * @param s3Exporting The S3 location where Identity Resolution Jobs write result files.
+             */
+            override fun s3Exporting(s3Exporting: S3ExportingConfigProperty) {
+                cdkBuilder.s3Exporting(s3Exporting.let(S3ExportingConfigProperty::unwrap))
+            }
 
-    /**
-     * A builder for [ConflictResolutionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param conflictResolvingModel How the auto-merging process should resolve conflicts between
-       * different profiles. 
-       */
-      public fun conflictResolvingModel(conflictResolvingModel: String)
+            /**
+             * @param s3Exporting The S3 location where Identity Resolution Jobs write result files.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("98229fa0b36a910e2b9314fa9ee3e949dfbc31df45f06105683d17c08005dede")
+            override fun s3Exporting(
+                s3Exporting: S3ExportingConfigProperty.Builder.() -> Unit
+            ): Unit = s3Exporting(S3ExportingConfigProperty(s3Exporting))
 
-      /**
-       * @param sourceName The `ObjectType` name that is used to resolve profile merging conflicts
-       * when choosing `SOURCE` as the `ConflictResolvingModel` .
-       */
-      public fun sourceName(sourceName: String)
-    }
+            public fun build():
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.ExportingConfigProperty =
+                cdkBuilder.build()
+        }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.ConflictResolutionProperty.Builder
-          =
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.ConflictResolutionProperty.builder()
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.ExportingConfigProperty,
+        ) : ExportingConfigProperty {
+            /**
+             * The S3 location where Identity Resolution Jobs write result files.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-exportingconfig.html#cfn-customerprofiles-domain-exportingconfig-s3exporting)
+             */
+            override fun s3Exporting(): Any? = unwrap(this).getS3Exporting()
+        }
 
-      /**
-       * @param conflictResolvingModel How the auto-merging process should resolve conflicts between
-       * different profiles. 
-       */
-      override fun conflictResolvingModel(conflictResolvingModel: String) {
-        cdkBuilder.conflictResolvingModel(conflictResolvingModel)
-      }
+        public companion object {
+            init {}
 
-      /**
-       * @param sourceName The `ObjectType` name that is used to resolve profile merging conflicts
-       * when choosing `SOURCE` as the `ConflictResolvingModel` .
-       */
-      override fun sourceName(sourceName: String) {
-        cdkBuilder.sourceName(sourceName)
-      }
+            public operator fun invoke(block: Builder.() -> Unit = {}): ExportingConfigProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.ConflictResolutionProperty =
-          cdkBuilder.build()
-    }
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.customerprofiles.CfnDomain.ExportingConfigProperty
+            ): ExportingConfigProperty = Wrapper(cdkObject)
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.ConflictResolutionProperty,
-    ) : ConflictResolutionProperty {
-      /**
-       * How the auto-merging process should resolve conflicts between different profiles.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-conflictresolution.html#cfn-customerprofiles-domain-conflictresolution-conflictresolvingmodel)
-       */
-      override fun conflictResolvingModel(): String = unwrap(this).getConflictResolvingModel()
-
-      /**
-       * The `ObjectType` name that is used to resolve profile merging conflicts when choosing
-       * `SOURCE` as the `ConflictResolvingModel` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-conflictresolution.html#cfn-customerprofiles-domain-conflictresolution-sourcename)
-       */
-      override fun sourceName(): String? = unwrap(this).getSourceName()
+            internal fun unwrap(
+                wrapped: ExportingConfigProperty
+            ): software.amazon.awscdk.services.customerprofiles.CfnDomain.ExportingConfigProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface AttributeTypesSelectorProperty {
+        /**
+         * The `Address` type.
+         *
+         * You can choose from `Address` , `BusinessAddress` , `MaillingAddress` , and
+         * `ShippingAddress` . You only can use the `Address` type in the `MatchingRule` . For
+         * example, if you want to match a profile based on `BusinessAddress.City` or
+         * `MaillingAddress.City` , you can choose the `BusinessAddress` and the `MaillingAddress`
+         * to represent the `Address` type and specify the `Address.City` on the matching rule.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-attributetypesselector.html#cfn-customerprofiles-domain-attributetypesselector-address)
+         */
+        public fun address(): List<String> = unwrap(this).getAddress() ?: emptyList()
 
-      }
+        /**
+         * Configures the `AttributeMatchingModel` , you can either choose `ONE_TO_ONE` or
+         * `MANY_TO_MANY` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-attributetypesselector.html#cfn-customerprofiles-domain-attributetypesselector-attributematchingmodel)
+         */
+        public fun attributeMatchingModel(): String
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): ConflictResolutionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /**
+         * The Email type.
+         *
+         * You can choose from `EmailAddress` , `BusinessEmailAddress` and `PersonalEmailAddress` .
+         * You only can use the `EmailAddress` type in the `MatchingRule` . For example, if you want
+         * to match profile based on `PersonalEmailAddress` or `BusinessEmailAddress` , you can
+         * choose the `PersonalEmailAddress` and the `BusinessEmailAddress` to represent the
+         * `EmailAddress` type and only specify the `EmailAddress` on the matching rule.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-attributetypesselector.html#cfn-customerprofiles-domain-attributetypesselector-emailaddress)
+         */
+        public fun emailAddress(): List<String> = unwrap(this).getEmailAddress() ?: emptyList()
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.ConflictResolutionProperty):
-          ConflictResolutionProperty = Wrapper(cdkObject)
+        /**
+         * The `PhoneNumber` type.
+         *
+         * You can choose from `PhoneNumber` , `HomePhoneNumber` , and `MobilePhoneNumber` . You
+         * only can use the `PhoneNumber` type in the `MatchingRule` . For example, if you want to
+         * match a profile based on `Phone` or `HomePhone` , you can choose the `Phone` and the
+         * `HomePhone` to represent the `PhoneNumber` type and only specify the `PhoneNumber` on the
+         * matching rule.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-attributetypesselector.html#cfn-customerprofiles-domain-attributetypesselector-phonenumber)
+         */
+        public fun phoneNumber(): List<String> = unwrap(this).getPhoneNumber() ?: emptyList()
 
-      internal fun unwrap(wrapped: ConflictResolutionProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.ConflictResolutionProperty =
-          (wrapped as Wrapper).cdkObject
-    }
-  }
+        /** A builder for [AttributeTypesSelectorProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param address The `Address` type. You can choose from `Address` , `BusinessAddress`
+             *   , `MaillingAddress` , and `ShippingAddress` . You only can use the `Address` type
+             *   in the `MatchingRule` . For example, if you want to match a profile based on
+             *   `BusinessAddress.City` or `MaillingAddress.City` , you can choose the
+             *   `BusinessAddress` and the `MaillingAddress` to represent the `Address` type and
+             *   specify the `Address.City` on the matching rule.
+             */
+            public fun address(address: List<String>)
 
-  public interface ExportingConfigProperty {
-    /**
-     * The S3 location where Identity Resolution Jobs write result files.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-exportingconfig.html#cfn-customerprofiles-domain-exportingconfig-s3exporting)
-     */
-    public fun s3Exporting(): Any? = unwrap(this).getS3Exporting()
+            /**
+             * @param address The `Address` type. You can choose from `Address` , `BusinessAddress`
+             *   , `MaillingAddress` , and `ShippingAddress` . You only can use the `Address` type
+             *   in the `MatchingRule` . For example, if you want to match a profile based on
+             *   `BusinessAddress.City` or `MaillingAddress.City` , you can choose the
+             *   `BusinessAddress` and the `MaillingAddress` to represent the `Address` type and
+             *   specify the `Address.City` on the matching rule.
+             */
+            public fun address(vararg address: String)
 
-    /**
-     * A builder for [ExportingConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param s3Exporting The S3 location where Identity Resolution Jobs write result files.
-       */
-      public fun s3Exporting(s3Exporting: IResolvable)
+            /**
+             * @param attributeMatchingModel Configures the `AttributeMatchingModel` , you can
+             *   either choose `ONE_TO_ONE` or `MANY_TO_MANY` .
+             */
+            public fun attributeMatchingModel(attributeMatchingModel: String)
 
-      /**
-       * @param s3Exporting The S3 location where Identity Resolution Jobs write result files.
-       */
-      public fun s3Exporting(s3Exporting: S3ExportingConfigProperty)
+            /**
+             * @param emailAddress The Email type. You can choose from `EmailAddress` ,
+             *   `BusinessEmailAddress` and `PersonalEmailAddress` . You only can use the
+             *   `EmailAddress` type in the `MatchingRule` . For example, if you want to match
+             *   profile based on `PersonalEmailAddress` or `BusinessEmailAddress` , you can choose
+             *   the `PersonalEmailAddress` and the `BusinessEmailAddress` to represent the
+             *   `EmailAddress` type and only specify the `EmailAddress` on the matching rule.
+             */
+            public fun emailAddress(emailAddress: List<String>)
 
-      /**
-       * @param s3Exporting The S3 location where Identity Resolution Jobs write result files.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("98229fa0b36a910e2b9314fa9ee3e949dfbc31df45f06105683d17c08005dede")
-      public fun s3Exporting(s3Exporting: S3ExportingConfigProperty.Builder.() -> Unit)
-    }
+            /**
+             * @param emailAddress The Email type. You can choose from `EmailAddress` ,
+             *   `BusinessEmailAddress` and `PersonalEmailAddress` . You only can use the
+             *   `EmailAddress` type in the `MatchingRule` . For example, if you want to match
+             *   profile based on `PersonalEmailAddress` or `BusinessEmailAddress` , you can choose
+             *   the `PersonalEmailAddress` and the `BusinessEmailAddress` to represent the
+             *   `EmailAddress` type and only specify the `EmailAddress` on the matching rule.
+             */
+            public fun emailAddress(vararg emailAddress: String)
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.ExportingConfigProperty.Builder
-          =
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.ExportingConfigProperty.builder()
+            /**
+             * @param phoneNumber The `PhoneNumber` type. You can choose from `PhoneNumber` ,
+             *   `HomePhoneNumber` , and `MobilePhoneNumber` . You only can use the `PhoneNumber`
+             *   type in the `MatchingRule` . For example, if you want to match a profile based on
+             *   `Phone` or `HomePhone` , you can choose the `Phone` and the `HomePhone` to
+             *   represent the `PhoneNumber` type and only specify the `PhoneNumber` on the matching
+             *   rule.
+             */
+            public fun phoneNumber(phoneNumber: List<String>)
 
-      /**
-       * @param s3Exporting The S3 location where Identity Resolution Jobs write result files.
-       */
-      override fun s3Exporting(s3Exporting: IResolvable) {
-        cdkBuilder.s3Exporting(s3Exporting.let(IResolvable::unwrap))
-      }
+            /**
+             * @param phoneNumber The `PhoneNumber` type. You can choose from `PhoneNumber` ,
+             *   `HomePhoneNumber` , and `MobilePhoneNumber` . You only can use the `PhoneNumber`
+             *   type in the `MatchingRule` . For example, if you want to match a profile based on
+             *   `Phone` or `HomePhone` , you can choose the `Phone` and the `HomePhone` to
+             *   represent the `PhoneNumber` type and only specify the `PhoneNumber` on the matching
+             *   rule.
+             */
+            public fun phoneNumber(vararg phoneNumber: String)
+        }
 
-      /**
-       * @param s3Exporting The S3 location where Identity Resolution Jobs write result files.
-       */
-      override fun s3Exporting(s3Exporting: S3ExportingConfigProperty) {
-        cdkBuilder.s3Exporting(s3Exporting.let(S3ExportingConfigProperty::unwrap))
-      }
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.AttributeTypesSelectorProperty.Builder =
+                software.amazon.awscdk.services.customerprofiles.CfnDomain
+                    .AttributeTypesSelectorProperty
+                    .builder()
 
-      /**
-       * @param s3Exporting The S3 location where Identity Resolution Jobs write result files.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("98229fa0b36a910e2b9314fa9ee3e949dfbc31df45f06105683d17c08005dede")
-      override fun s3Exporting(s3Exporting: S3ExportingConfigProperty.Builder.() -> Unit): Unit =
-          s3Exporting(S3ExportingConfigProperty(s3Exporting))
+            /**
+             * @param address The `Address` type. You can choose from `Address` , `BusinessAddress`
+             *   , `MaillingAddress` , and `ShippingAddress` . You only can use the `Address` type
+             *   in the `MatchingRule` . For example, if you want to match a profile based on
+             *   `BusinessAddress.City` or `MaillingAddress.City` , you can choose the
+             *   `BusinessAddress` and the `MaillingAddress` to represent the `Address` type and
+             *   specify the `Address.City` on the matching rule.
+             */
+            override fun address(address: List<String>) {
+                cdkBuilder.address(address)
+            }
 
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.ExportingConfigProperty =
-          cdkBuilder.build()
-    }
+            /**
+             * @param address The `Address` type. You can choose from `Address` , `BusinessAddress`
+             *   , `MaillingAddress` , and `ShippingAddress` . You only can use the `Address` type
+             *   in the `MatchingRule` . For example, if you want to match a profile based on
+             *   `BusinessAddress.City` or `MaillingAddress.City` , you can choose the
+             *   `BusinessAddress` and the `MaillingAddress` to represent the `Address` type and
+             *   specify the `Address.City` on the matching rule.
+             */
+            override fun address(vararg address: String): Unit = address(address.toList())
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.ExportingConfigProperty,
-    ) : ExportingConfigProperty {
-      /**
-       * The S3 location where Identity Resolution Jobs write result files.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-exportingconfig.html#cfn-customerprofiles-domain-exportingconfig-s3exporting)
-       */
-      override fun s3Exporting(): Any? = unwrap(this).getS3Exporting()
-    }
+            /**
+             * @param attributeMatchingModel Configures the `AttributeMatchingModel` , you can
+             *   either choose `ONE_TO_ONE` or `MANY_TO_MANY` .
+             */
+            override fun attributeMatchingModel(attributeMatchingModel: String) {
+                cdkBuilder.attributeMatchingModel(attributeMatchingModel)
+            }
 
-    public companion object {
-      init {
+            /**
+             * @param emailAddress The Email type. You can choose from `EmailAddress` ,
+             *   `BusinessEmailAddress` and `PersonalEmailAddress` . You only can use the
+             *   `EmailAddress` type in the `MatchingRule` . For example, if you want to match
+             *   profile based on `PersonalEmailAddress` or `BusinessEmailAddress` , you can choose
+             *   the `PersonalEmailAddress` and the `BusinessEmailAddress` to represent the
+             *   `EmailAddress` type and only specify the `EmailAddress` on the matching rule.
+             */
+            override fun emailAddress(emailAddress: List<String>) {
+                cdkBuilder.emailAddress(emailAddress)
+            }
 
-      }
+            /**
+             * @param emailAddress The Email type. You can choose from `EmailAddress` ,
+             *   `BusinessEmailAddress` and `PersonalEmailAddress` . You only can use the
+             *   `EmailAddress` type in the `MatchingRule` . For example, if you want to match
+             *   profile based on `PersonalEmailAddress` or `BusinessEmailAddress` , you can choose
+             *   the `PersonalEmailAddress` and the `BusinessEmailAddress` to represent the
+             *   `EmailAddress` type and only specify the `EmailAddress` on the matching rule.
+             */
+            override fun emailAddress(vararg emailAddress: String): Unit =
+                emailAddress(emailAddress.toList())
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): ExportingConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+            /**
+             * @param phoneNumber The `PhoneNumber` type. You can choose from `PhoneNumber` ,
+             *   `HomePhoneNumber` , and `MobilePhoneNumber` . You only can use the `PhoneNumber`
+             *   type in the `MatchingRule` . For example, if you want to match a profile based on
+             *   `Phone` or `HomePhone` , you can choose the `Phone` and the `HomePhone` to
+             *   represent the `PhoneNumber` type and only specify the `PhoneNumber` on the matching
+             *   rule.
+             */
+            override fun phoneNumber(phoneNumber: List<String>) {
+                cdkBuilder.phoneNumber(phoneNumber)
+            }
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.ExportingConfigProperty):
-          ExportingConfigProperty = Wrapper(cdkObject)
+            /**
+             * @param phoneNumber The `PhoneNumber` type. You can choose from `PhoneNumber` ,
+             *   `HomePhoneNumber` , and `MobilePhoneNumber` . You only can use the `PhoneNumber`
+             *   type in the `MatchingRule` . For example, if you want to match a profile based on
+             *   `Phone` or `HomePhone` , you can choose the `Phone` and the `HomePhone` to
+             *   represent the `PhoneNumber` type and only specify the `PhoneNumber` on the matching
+             *   rule.
+             */
+            override fun phoneNumber(vararg phoneNumber: String): Unit =
+                phoneNumber(phoneNumber.toList())
 
-      internal fun unwrap(wrapped: ExportingConfigProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.ExportingConfigProperty =
-          (wrapped as Wrapper).cdkObject
-    }
-  }
+            public fun build():
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.AttributeTypesSelectorProperty =
+                cdkBuilder.build()
+        }
 
-  public interface AttributeTypesSelectorProperty {
-    /**
-     * The `Address` type.
-     *
-     * You can choose from `Address` , `BusinessAddress` , `MaillingAddress` , and `ShippingAddress`
-     * . You only can use the `Address` type in the `MatchingRule` . For example, if you want to match
-     * a profile based on `BusinessAddress.City` or `MaillingAddress.City` , you can choose the
-     * `BusinessAddress` and the `MaillingAddress` to represent the `Address` type and specify the
-     * `Address.City` on the matching rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-attributetypesselector.html#cfn-customerprofiles-domain-attributetypesselector-address)
-     */
-    public fun address(): List<String> = unwrap(this).getAddress() ?: emptyList()
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.AttributeTypesSelectorProperty,
+        ) : AttributeTypesSelectorProperty {
+            /**
+             * The `Address` type.
+             *
+             * You can choose from `Address` , `BusinessAddress` , `MaillingAddress` , and
+             * `ShippingAddress` . You only can use the `Address` type in the `MatchingRule` . For
+             * example, if you want to match a profile based on `BusinessAddress.City` or
+             * `MaillingAddress.City` , you can choose the `BusinessAddress` and the
+             * `MaillingAddress` to represent the `Address` type and specify the `Address.City` on
+             * the matching rule.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-attributetypesselector.html#cfn-customerprofiles-domain-attributetypesselector-address)
+             */
+            override fun address(): List<String> = unwrap(this).getAddress() ?: emptyList()
 
-    /**
-     * Configures the `AttributeMatchingModel` , you can either choose `ONE_TO_ONE` or
-     * `MANY_TO_MANY` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-attributetypesselector.html#cfn-customerprofiles-domain-attributetypesselector-attributematchingmodel)
-     */
-    public fun attributeMatchingModel(): String
+            /**
+             * Configures the `AttributeMatchingModel` , you can either choose `ONE_TO_ONE` or
+             * `MANY_TO_MANY` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-attributetypesselector.html#cfn-customerprofiles-domain-attributetypesselector-attributematchingmodel)
+             */
+            override fun attributeMatchingModel(): String = unwrap(this).getAttributeMatchingModel()
 
-    /**
-     * The Email type.
-     *
-     * You can choose from `EmailAddress` , `BusinessEmailAddress` and `PersonalEmailAddress` . You
-     * only can use the `EmailAddress` type in the `MatchingRule` . For example, if you want to match
-     * profile based on `PersonalEmailAddress` or `BusinessEmailAddress` , you can choose the
-     * `PersonalEmailAddress` and the `BusinessEmailAddress` to represent the `EmailAddress` type and
-     * only specify the `EmailAddress` on the matching rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-attributetypesselector.html#cfn-customerprofiles-domain-attributetypesselector-emailaddress)
-     */
-    public fun emailAddress(): List<String> = unwrap(this).getEmailAddress() ?: emptyList()
+            /**
+             * The Email type.
+             *
+             * You can choose from `EmailAddress` , `BusinessEmailAddress` and
+             * `PersonalEmailAddress` . You only can use the `EmailAddress` type in the
+             * `MatchingRule` . For example, if you want to match profile based on
+             * `PersonalEmailAddress` or `BusinessEmailAddress` , you can choose the
+             * `PersonalEmailAddress` and the `BusinessEmailAddress` to represent the `EmailAddress`
+             * type and only specify the `EmailAddress` on the matching rule.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-attributetypesselector.html#cfn-customerprofiles-domain-attributetypesselector-emailaddress)
+             */
+            override fun emailAddress(): List<String> =
+                unwrap(this).getEmailAddress() ?: emptyList()
 
-    /**
-     * The `PhoneNumber` type.
-     *
-     * You can choose from `PhoneNumber` , `HomePhoneNumber` , and `MobilePhoneNumber` . You only
-     * can use the `PhoneNumber` type in the `MatchingRule` . For example, if you want to match a
-     * profile based on `Phone` or `HomePhone` , you can choose the `Phone` and the `HomePhone` to
-     * represent the `PhoneNumber` type and only specify the `PhoneNumber` on the matching rule.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-attributetypesselector.html#cfn-customerprofiles-domain-attributetypesselector-phonenumber)
-     */
-    public fun phoneNumber(): List<String> = unwrap(this).getPhoneNumber() ?: emptyList()
+            /**
+             * The `PhoneNumber` type.
+             *
+             * You can choose from `PhoneNumber` , `HomePhoneNumber` , and `MobilePhoneNumber` . You
+             * only can use the `PhoneNumber` type in the `MatchingRule` . For example, if you want
+             * to match a profile based on `Phone` or `HomePhone` , you can choose the `Phone` and
+             * the `HomePhone` to represent the `PhoneNumber` type and only specify the
+             * `PhoneNumber` on the matching rule.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-attributetypesselector.html#cfn-customerprofiles-domain-attributetypesselector-phonenumber)
+             */
+            override fun phoneNumber(): List<String> = unwrap(this).getPhoneNumber() ?: emptyList()
+        }
 
-    /**
-     * A builder for [AttributeTypesSelectorProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param address The `Address` type.
-       * You can choose from `Address` , `BusinessAddress` , `MaillingAddress` , and
-       * `ShippingAddress` . You only can use the `Address` type in the `MatchingRule` . For example,
-       * if you want to match a profile based on `BusinessAddress.City` or `MaillingAddress.City` , you
-       * can choose the `BusinessAddress` and the `MaillingAddress` to represent the `Address` type and
-       * specify the `Address.City` on the matching rule.
-       */
-      public fun address(address: List<String>)
+        public companion object {
+            init {}
 
-      /**
-       * @param address The `Address` type.
-       * You can choose from `Address` , `BusinessAddress` , `MaillingAddress` , and
-       * `ShippingAddress` . You only can use the `Address` type in the `MatchingRule` . For example,
-       * if you want to match a profile based on `BusinessAddress.City` or `MaillingAddress.City` , you
-       * can choose the `BusinessAddress` and the `MaillingAddress` to represent the `Address` type and
-       * specify the `Address.City` on the matching rule.
-       */
-      public fun address(vararg address: String)
+            public operator fun invoke(
+                block: Builder.() -> Unit = {}
+            ): AttributeTypesSelectorProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-      /**
-       * @param attributeMatchingModel Configures the `AttributeMatchingModel` , you can either
-       * choose `ONE_TO_ONE` or `MANY_TO_MANY` . 
-       */
-      public fun attributeMatchingModel(attributeMatchingModel: String)
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.customerprofiles.CfnDomain.AttributeTypesSelectorProperty
+            ): AttributeTypesSelectorProperty = Wrapper(cdkObject)
 
-      /**
-       * @param emailAddress The Email type.
-       * You can choose from `EmailAddress` , `BusinessEmailAddress` and `PersonalEmailAddress` .
-       * You only can use the `EmailAddress` type in the `MatchingRule` . For example, if you want to
-       * match profile based on `PersonalEmailAddress` or `BusinessEmailAddress` , you can choose the
-       * `PersonalEmailAddress` and the `BusinessEmailAddress` to represent the `EmailAddress` type and
-       * only specify the `EmailAddress` on the matching rule.
-       */
-      public fun emailAddress(emailAddress: List<String>)
-
-      /**
-       * @param emailAddress The Email type.
-       * You can choose from `EmailAddress` , `BusinessEmailAddress` and `PersonalEmailAddress` .
-       * You only can use the `EmailAddress` type in the `MatchingRule` . For example, if you want to
-       * match profile based on `PersonalEmailAddress` or `BusinessEmailAddress` , you can choose the
-       * `PersonalEmailAddress` and the `BusinessEmailAddress` to represent the `EmailAddress` type and
-       * only specify the `EmailAddress` on the matching rule.
-       */
-      public fun emailAddress(vararg emailAddress: String)
-
-      /**
-       * @param phoneNumber The `PhoneNumber` type.
-       * You can choose from `PhoneNumber` , `HomePhoneNumber` , and `MobilePhoneNumber` . You only
-       * can use the `PhoneNumber` type in the `MatchingRule` . For example, if you want to match a
-       * profile based on `Phone` or `HomePhone` , you can choose the `Phone` and the `HomePhone` to
-       * represent the `PhoneNumber` type and only specify the `PhoneNumber` on the matching rule.
-       */
-      public fun phoneNumber(phoneNumber: List<String>)
-
-      /**
-       * @param phoneNumber The `PhoneNumber` type.
-       * You can choose from `PhoneNumber` , `HomePhoneNumber` , and `MobilePhoneNumber` . You only
-       * can use the `PhoneNumber` type in the `MatchingRule` . For example, if you want to match a
-       * profile based on `Phone` or `HomePhone` , you can choose the `Phone` and the `HomePhone` to
-       * represent the `PhoneNumber` type and only specify the `PhoneNumber` on the matching rule.
-       */
-      public fun phoneNumber(vararg phoneNumber: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.AttributeTypesSelectorProperty.Builder
-          =
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.AttributeTypesSelectorProperty.builder()
-
-      /**
-       * @param address The `Address` type.
-       * You can choose from `Address` , `BusinessAddress` , `MaillingAddress` , and
-       * `ShippingAddress` . You only can use the `Address` type in the `MatchingRule` . For example,
-       * if you want to match a profile based on `BusinessAddress.City` or `MaillingAddress.City` , you
-       * can choose the `BusinessAddress` and the `MaillingAddress` to represent the `Address` type and
-       * specify the `Address.City` on the matching rule.
-       */
-      override fun address(address: List<String>) {
-        cdkBuilder.address(address)
-      }
-
-      /**
-       * @param address The `Address` type.
-       * You can choose from `Address` , `BusinessAddress` , `MaillingAddress` , and
-       * `ShippingAddress` . You only can use the `Address` type in the `MatchingRule` . For example,
-       * if you want to match a profile based on `BusinessAddress.City` or `MaillingAddress.City` , you
-       * can choose the `BusinessAddress` and the `MaillingAddress` to represent the `Address` type and
-       * specify the `Address.City` on the matching rule.
-       */
-      override fun address(vararg address: String): Unit = address(address.toList())
-
-      /**
-       * @param attributeMatchingModel Configures the `AttributeMatchingModel` , you can either
-       * choose `ONE_TO_ONE` or `MANY_TO_MANY` . 
-       */
-      override fun attributeMatchingModel(attributeMatchingModel: String) {
-        cdkBuilder.attributeMatchingModel(attributeMatchingModel)
-      }
-
-      /**
-       * @param emailAddress The Email type.
-       * You can choose from `EmailAddress` , `BusinessEmailAddress` and `PersonalEmailAddress` .
-       * You only can use the `EmailAddress` type in the `MatchingRule` . For example, if you want to
-       * match profile based on `PersonalEmailAddress` or `BusinessEmailAddress` , you can choose the
-       * `PersonalEmailAddress` and the `BusinessEmailAddress` to represent the `EmailAddress` type and
-       * only specify the `EmailAddress` on the matching rule.
-       */
-      override fun emailAddress(emailAddress: List<String>) {
-        cdkBuilder.emailAddress(emailAddress)
-      }
-
-      /**
-       * @param emailAddress The Email type.
-       * You can choose from `EmailAddress` , `BusinessEmailAddress` and `PersonalEmailAddress` .
-       * You only can use the `EmailAddress` type in the `MatchingRule` . For example, if you want to
-       * match profile based on `PersonalEmailAddress` or `BusinessEmailAddress` , you can choose the
-       * `PersonalEmailAddress` and the `BusinessEmailAddress` to represent the `EmailAddress` type and
-       * only specify the `EmailAddress` on the matching rule.
-       */
-      override fun emailAddress(vararg emailAddress: String): Unit =
-          emailAddress(emailAddress.toList())
-
-      /**
-       * @param phoneNumber The `PhoneNumber` type.
-       * You can choose from `PhoneNumber` , `HomePhoneNumber` , and `MobilePhoneNumber` . You only
-       * can use the `PhoneNumber` type in the `MatchingRule` . For example, if you want to match a
-       * profile based on `Phone` or `HomePhone` , you can choose the `Phone` and the `HomePhone` to
-       * represent the `PhoneNumber` type and only specify the `PhoneNumber` on the matching rule.
-       */
-      override fun phoneNumber(phoneNumber: List<String>) {
-        cdkBuilder.phoneNumber(phoneNumber)
-      }
-
-      /**
-       * @param phoneNumber The `PhoneNumber` type.
-       * You can choose from `PhoneNumber` , `HomePhoneNumber` , and `MobilePhoneNumber` . You only
-       * can use the `PhoneNumber` type in the `MatchingRule` . For example, if you want to match a
-       * profile based on `Phone` or `HomePhone` , you can choose the `Phone` and the `HomePhone` to
-       * represent the `PhoneNumber` type and only specify the `PhoneNumber` on the matching rule.
-       */
-      override fun phoneNumber(vararg phoneNumber: String): Unit = phoneNumber(phoneNumber.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.AttributeTypesSelectorProperty
-          = cdkBuilder.build()
+            internal fun unwrap(
+                wrapped: AttributeTypesSelectorProperty
+            ): software.amazon.awscdk.services.customerprofiles.CfnDomain.AttributeTypesSelectorProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.AttributeTypesSelectorProperty,
-    ) : AttributeTypesSelectorProperty {
-      /**
-       * The `Address` type.
-       *
-       * You can choose from `Address` , `BusinessAddress` , `MaillingAddress` , and
-       * `ShippingAddress` . You only can use the `Address` type in the `MatchingRule` . For example,
-       * if you want to match a profile based on `BusinessAddress.City` or `MaillingAddress.City` , you
-       * can choose the `BusinessAddress` and the `MaillingAddress` to represent the `Address` type and
-       * specify the `Address.City` on the matching rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-attributetypesselector.html#cfn-customerprofiles-domain-attributetypesselector-address)
-       */
-      override fun address(): List<String> = unwrap(this).getAddress() ?: emptyList()
+    public interface ConsolidationProperty {
+        /**
+         * A list of matching criteria.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-consolidation.html#cfn-customerprofiles-domain-consolidation-matchingattributeslist)
+         */
+        public fun matchingAttributesList(): Any
 
-      /**
-       * Configures the `AttributeMatchingModel` , you can either choose `ONE_TO_ONE` or
-       * `MANY_TO_MANY` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-attributetypesselector.html#cfn-customerprofiles-domain-attributetypesselector-attributematchingmodel)
-       */
-      override fun attributeMatchingModel(): String = unwrap(this).getAttributeMatchingModel()
+        /** A builder for [ConsolidationProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param matchingAttributesList A list of matching criteria. */
+            public fun matchingAttributesList(matchingAttributesList: IResolvable)
 
-      /**
-       * The Email type.
-       *
-       * You can choose from `EmailAddress` , `BusinessEmailAddress` and `PersonalEmailAddress` .
-       * You only can use the `EmailAddress` type in the `MatchingRule` . For example, if you want to
-       * match profile based on `PersonalEmailAddress` or `BusinessEmailAddress` , you can choose the
-       * `PersonalEmailAddress` and the `BusinessEmailAddress` to represent the `EmailAddress` type and
-       * only specify the `EmailAddress` on the matching rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-attributetypesselector.html#cfn-customerprofiles-domain-attributetypesselector-emailaddress)
-       */
-      override fun emailAddress(): List<String> = unwrap(this).getEmailAddress() ?: emptyList()
+            /** @param matchingAttributesList A list of matching criteria. */
+            public fun matchingAttributesList(matchingAttributesList: List<List<String>>)
 
-      /**
-       * The `PhoneNumber` type.
-       *
-       * You can choose from `PhoneNumber` , `HomePhoneNumber` , and `MobilePhoneNumber` . You only
-       * can use the `PhoneNumber` type in the `MatchingRule` . For example, if you want to match a
-       * profile based on `Phone` or `HomePhone` , you can choose the `Phone` and the `HomePhone` to
-       * represent the `PhoneNumber` type and only specify the `PhoneNumber` on the matching rule.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-attributetypesselector.html#cfn-customerprofiles-domain-attributetypesselector-phonenumber)
-       */
-      override fun phoneNumber(): List<String> = unwrap(this).getPhoneNumber() ?: emptyList()
+            /** @param matchingAttributesList A list of matching criteria. */
+            public fun matchingAttributesList(vararg matchingAttributesList: List<String>)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.ConsolidationProperty.Builder =
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.ConsolidationProperty
+                    .builder()
+
+            /** @param matchingAttributesList A list of matching criteria. */
+            override fun matchingAttributesList(matchingAttributesList: IResolvable) {
+                cdkBuilder.matchingAttributesList(matchingAttributesList.let(IResolvable::unwrap))
+            }
+
+            /** @param matchingAttributesList A list of matching criteria. */
+            override fun matchingAttributesList(matchingAttributesList: List<List<String>>) {
+                cdkBuilder.matchingAttributesList(matchingAttributesList)
+            }
+
+            /** @param matchingAttributesList A list of matching criteria. */
+            override fun matchingAttributesList(vararg matchingAttributesList: List<String>): Unit =
+                matchingAttributesList(matchingAttributesList.toList())
+
+            public fun build():
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.ConsolidationProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.ConsolidationProperty,
+        ) : ConsolidationProperty {
+            /**
+             * A list of matching criteria.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-consolidation.html#cfn-customerprofiles-domain-consolidation-matchingattributeslist)
+             */
+            override fun matchingAttributesList(): Any = unwrap(this).getMatchingAttributesList()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): ConsolidationProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.customerprofiles.CfnDomain.ConsolidationProperty
+            ): ConsolidationProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: ConsolidationProperty
+            ): software.amazon.awscdk.services.customerprofiles.CfnDomain.ConsolidationProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface JobScheduleProperty {
+        /**
+         * The day when the Identity Resolution Job should run every week.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-jobschedule.html#cfn-customerprofiles-domain-jobschedule-dayoftheweek)
+         */
+        public fun dayOfTheWeek(): String
 
-      }
+        /**
+         * The time when the Identity Resolution Job should run every week.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-jobschedule.html#cfn-customerprofiles-domain-jobschedule-time)
+         */
+        public fun time(): String
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): AttributeTypesSelectorProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /** A builder for [JobScheduleProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param dayOfTheWeek The day when the Identity Resolution Job should run every week.
+             */
+            public fun dayOfTheWeek(dayOfTheWeek: String)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.AttributeTypesSelectorProperty):
-          AttributeTypesSelectorProperty = Wrapper(cdkObject)
+            /** @param time The time when the Identity Resolution Job should run every week. */
+            public fun time(time: String)
+        }
 
-      internal fun unwrap(wrapped: AttributeTypesSelectorProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.AttributeTypesSelectorProperty
-          = (wrapped as Wrapper).cdkObject
-    }
-  }
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.JobScheduleProperty.Builder =
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.JobScheduleProperty
+                    .builder()
 
-  public interface ConsolidationProperty {
-    /**
-     * A list of matching criteria.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-consolidation.html#cfn-customerprofiles-domain-consolidation-matchingattributeslist)
-     */
-    public fun matchingAttributesList(): Any
+            /**
+             * @param dayOfTheWeek The day when the Identity Resolution Job should run every week.
+             */
+            override fun dayOfTheWeek(dayOfTheWeek: String) {
+                cdkBuilder.dayOfTheWeek(dayOfTheWeek)
+            }
 
-    /**
-     * A builder for [ConsolidationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param matchingAttributesList A list of matching criteria. 
-       */
-      public fun matchingAttributesList(matchingAttributesList: IResolvable)
+            /** @param time The time when the Identity Resolution Job should run every week. */
+            override fun time(time: String) {
+                cdkBuilder.time(time)
+            }
 
-      /**
-       * @param matchingAttributesList A list of matching criteria. 
-       */
-      public fun matchingAttributesList(matchingAttributesList: List<List<String>>)
+            public fun build():
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.JobScheduleProperty =
+                cdkBuilder.build()
+        }
 
-      /**
-       * @param matchingAttributesList A list of matching criteria. 
-       */
-      public fun matchingAttributesList(vararg matchingAttributesList: List<String>)
-    }
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.JobScheduleProperty,
+        ) : JobScheduleProperty {
+            /**
+             * The day when the Identity Resolution Job should run every week.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-jobschedule.html#cfn-customerprofiles-domain-jobschedule-dayoftheweek)
+             */
+            override fun dayOfTheWeek(): String = unwrap(this).getDayOfTheWeek()
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.ConsolidationProperty.Builder =
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.ConsolidationProperty.builder()
+            /**
+             * The time when the Identity Resolution Job should run every week.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-jobschedule.html#cfn-customerprofiles-domain-jobschedule-time)
+             */
+            override fun time(): String = unwrap(this).getTime()
+        }
 
-      /**
-       * @param matchingAttributesList A list of matching criteria. 
-       */
-      override fun matchingAttributesList(matchingAttributesList: IResolvable) {
-        cdkBuilder.matchingAttributesList(matchingAttributesList.let(IResolvable::unwrap))
-      }
+        public companion object {
+            init {}
 
-      /**
-       * @param matchingAttributesList A list of matching criteria. 
-       */
-      override fun matchingAttributesList(matchingAttributesList: List<List<String>>) {
-        cdkBuilder.matchingAttributesList(matchingAttributesList)
-      }
+            public operator fun invoke(block: Builder.() -> Unit = {}): JobScheduleProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-      /**
-       * @param matchingAttributesList A list of matching criteria. 
-       */
-      override fun matchingAttributesList(vararg matchingAttributesList: List<String>): Unit =
-          matchingAttributesList(matchingAttributesList.toList())
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.customerprofiles.CfnDomain.JobScheduleProperty
+            ): JobScheduleProperty = Wrapper(cdkObject)
 
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.ConsolidationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.ConsolidationProperty,
-    ) : ConsolidationProperty {
-      /**
-       * A list of matching criteria.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-consolidation.html#cfn-customerprofiles-domain-consolidation-matchingattributeslist)
-       */
-      override fun matchingAttributesList(): Any = unwrap(this).getMatchingAttributesList()
-    }
-
-    public companion object {
-      init {
-
-      }
-
-      public operator fun invoke(block: Builder.() -> Unit = {}): ConsolidationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.ConsolidationProperty):
-          ConsolidationProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ConsolidationProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.ConsolidationProperty =
-          (wrapped as Wrapper).cdkObject
-    }
-  }
-
-  public interface JobScheduleProperty {
-    /**
-     * The day when the Identity Resolution Job should run every week.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-jobschedule.html#cfn-customerprofiles-domain-jobschedule-dayoftheweek)
-     */
-    public fun dayOfTheWeek(): String
-
-    /**
-     * The time when the Identity Resolution Job should run every week.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-jobschedule.html#cfn-customerprofiles-domain-jobschedule-time)
-     */
-    public fun time(): String
-
-    /**
-     * A builder for [JobScheduleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param dayOfTheWeek The day when the Identity Resolution Job should run every week. 
-       */
-      public fun dayOfTheWeek(dayOfTheWeek: String)
-
-      /**
-       * @param time The time when the Identity Resolution Job should run every week. 
-       */
-      public fun time(time: String)
+            internal fun unwrap(
+                wrapped: JobScheduleProperty
+            ): software.amazon.awscdk.services.customerprofiles.CfnDomain.JobScheduleProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.JobScheduleProperty.Builder =
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.JobScheduleProperty.builder()
+    public interface MatchingRuleProperty {
+        /**
+         * A single rule level of the `MatchRules` .
+         *
+         * Configures how the rule-based matching process should match profiles.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-matchingrule.html#cfn-customerprofiles-domain-matchingrule-rule)
+         */
+        public fun rule(): List<String>
 
-      /**
-       * @param dayOfTheWeek The day when the Identity Resolution Job should run every week. 
-       */
-      override fun dayOfTheWeek(dayOfTheWeek: String) {
-        cdkBuilder.dayOfTheWeek(dayOfTheWeek)
-      }
+        /** A builder for [MatchingRuleProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param rule A single rule level of the `MatchRules` . Configures how the rule-based
+             *   matching process should match profiles.
+             */
+            public fun rule(rule: List<String>)
 
-      /**
-       * @param time The time when the Identity Resolution Job should run every week. 
-       */
-      override fun time(time: String) {
-        cdkBuilder.time(time)
-      }
+            /**
+             * @param rule A single rule level of the `MatchRules` . Configures how the rule-based
+             *   matching process should match profiles.
+             */
+            public fun rule(vararg rule: String)
+        }
 
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.JobScheduleProperty =
-          cdkBuilder.build()
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingRuleProperty.Builder =
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingRuleProperty
+                    .builder()
+
+            /**
+             * @param rule A single rule level of the `MatchRules` . Configures how the rule-based
+             *   matching process should match profiles.
+             */
+            override fun rule(rule: List<String>) {
+                cdkBuilder.rule(rule)
+            }
+
+            /**
+             * @param rule A single rule level of the `MatchRules` . Configures how the rule-based
+             *   matching process should match profiles.
+             */
+            override fun rule(vararg rule: String): Unit = rule(rule.toList())
+
+            public fun build():
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingRuleProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingRuleProperty,
+        ) : MatchingRuleProperty {
+            /**
+             * A single rule level of the `MatchRules` .
+             *
+             * Configures how the rule-based matching process should match profiles.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-matchingrule.html#cfn-customerprofiles-domain-matchingrule-rule)
+             */
+            override fun rule(): List<String> = unwrap(this).getRule()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): MatchingRuleProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingRuleProperty
+            ): MatchingRuleProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: MatchingRuleProperty
+            ): software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingRuleProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.JobScheduleProperty,
-    ) : JobScheduleProperty {
-      /**
-       * The day when the Identity Resolution Job should run every week.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-jobschedule.html#cfn-customerprofiles-domain-jobschedule-dayoftheweek)
-       */
-      override fun dayOfTheWeek(): String = unwrap(this).getDayOfTheWeek()
+    public interface DomainStatsProperty {
+        /**
+         * The number of profiles that you are currently paying for in the domain.
+         *
+         * If you have more than 100 objects associated with a single profile, that profile counts
+         * as two profiles. If you have more than 200 objects, that profile counts as three, and so
+         * on.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-domainstats.html#cfn-customerprofiles-domain-domainstats-meteringprofilecount)
+         */
+        public fun meteringProfileCount(): Number? = unwrap(this).getMeteringProfileCount()
 
-      /**
-       * The time when the Identity Resolution Job should run every week.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-jobschedule.html#cfn-customerprofiles-domain-jobschedule-time)
-       */
-      override fun time(): String = unwrap(this).getTime()
+        /**
+         * The total number of objects in domain.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-domainstats.html#cfn-customerprofiles-domain-domainstats-objectcount)
+         */
+        public fun objectCount(): Number? = unwrap(this).getObjectCount()
+
+        /**
+         * The total number of profiles currently in the domain.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-domainstats.html#cfn-customerprofiles-domain-domainstats-profilecount)
+         */
+        public fun profileCount(): Number? = unwrap(this).getProfileCount()
+
+        /**
+         * The total size, in bytes, of all objects in the domain.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-domainstats.html#cfn-customerprofiles-domain-domainstats-totalsize)
+         */
+        public fun totalSize(): Number? = unwrap(this).getTotalSize()
+
+        /** A builder for [DomainStatsProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param meteringProfileCount The number of profiles that you are currently paying for
+             *   in the domain. If you have more than 100 objects associated with a single profile,
+             *   that profile counts as two profiles. If you have more than 200 objects, that
+             *   profile counts as three, and so on.
+             */
+            public fun meteringProfileCount(meteringProfileCount: Number)
+
+            /** @param objectCount The total number of objects in domain. */
+            public fun objectCount(objectCount: Number)
+
+            /** @param profileCount The total number of profiles currently in the domain. */
+            public fun profileCount(profileCount: Number)
+
+            /** @param totalSize The total size, in bytes, of all objects in the domain. */
+            public fun totalSize(totalSize: Number)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.DomainStatsProperty.Builder =
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.DomainStatsProperty
+                    .builder()
+
+            /**
+             * @param meteringProfileCount The number of profiles that you are currently paying for
+             *   in the domain. If you have more than 100 objects associated with a single profile,
+             *   that profile counts as two profiles. If you have more than 200 objects, that
+             *   profile counts as three, and so on.
+             */
+            override fun meteringProfileCount(meteringProfileCount: Number) {
+                cdkBuilder.meteringProfileCount(meteringProfileCount)
+            }
+
+            /** @param objectCount The total number of objects in domain. */
+            override fun objectCount(objectCount: Number) {
+                cdkBuilder.objectCount(objectCount)
+            }
+
+            /** @param profileCount The total number of profiles currently in the domain. */
+            override fun profileCount(profileCount: Number) {
+                cdkBuilder.profileCount(profileCount)
+            }
+
+            /** @param totalSize The total size, in bytes, of all objects in the domain. */
+            override fun totalSize(totalSize: Number) {
+                cdkBuilder.totalSize(totalSize)
+            }
+
+            public fun build():
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.DomainStatsProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.customerprofiles.CfnDomain.DomainStatsProperty,
+        ) : DomainStatsProperty {
+            /**
+             * The number of profiles that you are currently paying for in the domain.
+             *
+             * If you have more than 100 objects associated with a single profile, that profile
+             * counts as two profiles. If you have more than 200 objects, that profile counts as
+             * three, and so on.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-domainstats.html#cfn-customerprofiles-domain-domainstats-meteringprofilecount)
+             */
+            override fun meteringProfileCount(): Number? = unwrap(this).getMeteringProfileCount()
+
+            /**
+             * The total number of objects in domain.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-domainstats.html#cfn-customerprofiles-domain-domainstats-objectcount)
+             */
+            override fun objectCount(): Number? = unwrap(this).getObjectCount()
+
+            /**
+             * The total number of profiles currently in the domain.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-domainstats.html#cfn-customerprofiles-domain-domainstats-profilecount)
+             */
+            override fun profileCount(): Number? = unwrap(this).getProfileCount()
+
+            /**
+             * The total size, in bytes, of all objects in the domain.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-domainstats.html#cfn-customerprofiles-domain-domainstats-totalsize)
+             */
+            override fun totalSize(): Number? = unwrap(this).getTotalSize()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): DomainStatsProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.customerprofiles.CfnDomain.DomainStatsProperty
+            ): DomainStatsProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: DomainStatsProperty
+            ): software.amazon.awscdk.services.customerprofiles.CfnDomain.DomainStatsProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
-
-    public companion object {
-      init {
-
-      }
-
-      public operator fun invoke(block: Builder.() -> Unit = {}): JobScheduleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.JobScheduleProperty):
-          JobScheduleProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: JobScheduleProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.JobScheduleProperty = (wrapped
-          as Wrapper).cdkObject
-    }
-  }
-
-  public interface MatchingRuleProperty {
-    /**
-     * A single rule level of the `MatchRules` .
-     *
-     * Configures how the rule-based matching process should match profiles.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-matchingrule.html#cfn-customerprofiles-domain-matchingrule-rule)
-     */
-    public fun rule(): List<String>
-
-    /**
-     * A builder for [MatchingRuleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param rule A single rule level of the `MatchRules` . 
-       * Configures how the rule-based matching process should match profiles.
-       */
-      public fun rule(rule: List<String>)
-
-      /**
-       * @param rule A single rule level of the `MatchRules` . 
-       * Configures how the rule-based matching process should match profiles.
-       */
-      public fun rule(vararg rule: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingRuleProperty.Builder =
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingRuleProperty.builder()
-
-      /**
-       * @param rule A single rule level of the `MatchRules` . 
-       * Configures how the rule-based matching process should match profiles.
-       */
-      override fun rule(rule: List<String>) {
-        cdkBuilder.rule(rule)
-      }
-
-      /**
-       * @param rule A single rule level of the `MatchRules` . 
-       * Configures how the rule-based matching process should match profiles.
-       */
-      override fun rule(vararg rule: String): Unit = rule(rule.toList())
-
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingRuleProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingRuleProperty,
-    ) : MatchingRuleProperty {
-      /**
-       * A single rule level of the `MatchRules` .
-       *
-       * Configures how the rule-based matching process should match profiles.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-matchingrule.html#cfn-customerprofiles-domain-matchingrule-rule)
-       */
-      override fun rule(): List<String> = unwrap(this).getRule()
-    }
-
-    public companion object {
-      init {
-
-      }
-
-      public operator fun invoke(block: Builder.() -> Unit = {}): MatchingRuleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingRuleProperty):
-          MatchingRuleProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: MatchingRuleProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingRuleProperty = (wrapped
-          as Wrapper).cdkObject
-    }
-  }
-
-  public interface DomainStatsProperty {
-    /**
-     * The number of profiles that you are currently paying for in the domain.
-     *
-     * If you have more than 100 objects associated with a single profile, that profile counts as
-     * two profiles. If you have more than 200 objects, that profile counts as three, and so on.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-domainstats.html#cfn-customerprofiles-domain-domainstats-meteringprofilecount)
-     */
-    public fun meteringProfileCount(): Number? = unwrap(this).getMeteringProfileCount()
-
-    /**
-     * The total number of objects in domain.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-domainstats.html#cfn-customerprofiles-domain-domainstats-objectcount)
-     */
-    public fun objectCount(): Number? = unwrap(this).getObjectCount()
-
-    /**
-     * The total number of profiles currently in the domain.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-domainstats.html#cfn-customerprofiles-domain-domainstats-profilecount)
-     */
-    public fun profileCount(): Number? = unwrap(this).getProfileCount()
-
-    /**
-     * The total size, in bytes, of all objects in the domain.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-domainstats.html#cfn-customerprofiles-domain-domainstats-totalsize)
-     */
-    public fun totalSize(): Number? = unwrap(this).getTotalSize()
-
-    /**
-     * A builder for [DomainStatsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param meteringProfileCount The number of profiles that you are currently paying for in the
-       * domain.
-       * If you have more than 100 objects associated with a single profile, that profile counts as
-       * two profiles. If you have more than 200 objects, that profile counts as three, and so on.
-       */
-      public fun meteringProfileCount(meteringProfileCount: Number)
-
-      /**
-       * @param objectCount The total number of objects in domain.
-       */
-      public fun objectCount(objectCount: Number)
-
-      /**
-       * @param profileCount The total number of profiles currently in the domain.
-       */
-      public fun profileCount(profileCount: Number)
-
-      /**
-       * @param totalSize The total size, in bytes, of all objects in the domain.
-       */
-      public fun totalSize(totalSize: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.DomainStatsProperty.Builder =
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.DomainStatsProperty.builder()
-
-      /**
-       * @param meteringProfileCount The number of profiles that you are currently paying for in the
-       * domain.
-       * If you have more than 100 objects associated with a single profile, that profile counts as
-       * two profiles. If you have more than 200 objects, that profile counts as three, and so on.
-       */
-      override fun meteringProfileCount(meteringProfileCount: Number) {
-        cdkBuilder.meteringProfileCount(meteringProfileCount)
-      }
-
-      /**
-       * @param objectCount The total number of objects in domain.
-       */
-      override fun objectCount(objectCount: Number) {
-        cdkBuilder.objectCount(objectCount)
-      }
-
-      /**
-       * @param profileCount The total number of profiles currently in the domain.
-       */
-      override fun profileCount(profileCount: Number) {
-        cdkBuilder.profileCount(profileCount)
-      }
-
-      /**
-       * @param totalSize The total size, in bytes, of all objects in the domain.
-       */
-      override fun totalSize(totalSize: Number) {
-        cdkBuilder.totalSize(totalSize)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.DomainStatsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.DomainStatsProperty,
-    ) : DomainStatsProperty {
-      /**
-       * The number of profiles that you are currently paying for in the domain.
-       *
-       * If you have more than 100 objects associated with a single profile, that profile counts as
-       * two profiles. If you have more than 200 objects, that profile counts as three, and so on.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-domainstats.html#cfn-customerprofiles-domain-domainstats-meteringprofilecount)
-       */
-      override fun meteringProfileCount(): Number? = unwrap(this).getMeteringProfileCount()
-
-      /**
-       * The total number of objects in domain.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-domainstats.html#cfn-customerprofiles-domain-domainstats-objectcount)
-       */
-      override fun objectCount(): Number? = unwrap(this).getObjectCount()
-
-      /**
-       * The total number of profiles currently in the domain.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-domainstats.html#cfn-customerprofiles-domain-domainstats-profilecount)
-       */
-      override fun profileCount(): Number? = unwrap(this).getProfileCount()
-
-      /**
-       * The total size, in bytes, of all objects in the domain.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-customerprofiles-domain-domainstats.html#cfn-customerprofiles-domain-domainstats-totalsize)
-       */
-      override fun totalSize(): Number? = unwrap(this).getTotalSize()
-    }
-
-    public companion object {
-      init {
-
-      }
-
-      public operator fun invoke(block: Builder.() -> Unit = {}): DomainStatsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.DomainStatsProperty):
-          DomainStatsProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: DomainStatsProperty):
-          software.amazon.awscdk.services.customerprofiles.CfnDomain.DomainStatsProperty = (wrapped
-          as Wrapper).cdkObject
-    }
-  }
 }

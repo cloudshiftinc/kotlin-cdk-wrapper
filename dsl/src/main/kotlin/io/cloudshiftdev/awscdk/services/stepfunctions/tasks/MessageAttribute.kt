@@ -5,63 +5,6 @@ import kotlin.Any
 import kotlin.Unit
 
 public interface MessageAttribute {
-  /**
-   * The data type for the attribute.
-   *
-   * Default: determined by type inspection if possible, fallback is String
-   *
-   * [Documentation](https://docs.aws.amazon.com/sns/latest/dg/sns-message-attributes.html#SNSMessageAttributes.DataTypes)
-   */
-  public fun dataType(): MessageAttributeDataType? =
-      unwrap(this).getDataType()?.let(MessageAttributeDataType::wrap)
-
-  /**
-   * The value of the attribute.
-   */
-  public fun `value`(): Any
-
-  /**
-   * A builder for [MessageAttribute]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param dataType The data type for the attribute.
-     */
-    public fun dataType(dataType: MessageAttributeDataType)
-
-    /**
-     * @param value The value of the attribute. 
-     */
-    public fun `value`(`value`: Any)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder:
-        software.amazon.awscdk.services.stepfunctions.tasks.MessageAttribute.Builder =
-        software.amazon.awscdk.services.stepfunctions.tasks.MessageAttribute.builder()
-
-    /**
-     * @param dataType The data type for the attribute.
-     */
-    override fun dataType(dataType: MessageAttributeDataType) {
-      cdkBuilder.dataType(dataType.let(MessageAttributeDataType::unwrap))
-    }
-
-    /**
-     * @param value The value of the attribute. 
-     */
-    override fun `value`(`value`: Any) {
-      cdkBuilder.`value`(`value`)
-    }
-
-    public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.MessageAttribute =
-        cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.MessageAttribute,
-  ) : MessageAttribute {
     /**
      * The data type for the attribute.
      *
@@ -69,31 +12,75 @@ public interface MessageAttribute {
      *
      * [Documentation](https://docs.aws.amazon.com/sns/latest/dg/sns-message-attributes.html#SNSMessageAttributes.DataTypes)
      */
-    override fun dataType(): MessageAttributeDataType? =
+    public fun dataType(): MessageAttributeDataType? =
         unwrap(this).getDataType()?.let(MessageAttributeDataType::wrap)
 
-    /**
-     * The value of the attribute.
-     */
-    override fun `value`(): Any = unwrap(this).getValue()
-  }
+    /** The value of the attribute. */
+    public fun `value`(): Any
 
-  public companion object {
-    init {
+    /** A builder for [MessageAttribute] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param dataType The data type for the attribute. */
+        public fun dataType(dataType: MessageAttributeDataType)
 
+        /** @param value The value of the attribute. */
+        public fun `value`(`value`: Any)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): MessageAttribute {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.stepfunctions.tasks.MessageAttribute.Builder =
+            software.amazon.awscdk.services.stepfunctions.tasks.MessageAttribute.builder()
+
+        /** @param dataType The data type for the attribute. */
+        override fun dataType(dataType: MessageAttributeDataType) {
+            cdkBuilder.dataType(dataType.let(MessageAttributeDataType::unwrap))
+        }
+
+        /** @param value The value of the attribute. */
+        override fun `value`(`value`: Any) {
+            cdkBuilder.`value`(`value`)
+        }
+
+        public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.MessageAttribute =
+            cdkBuilder.build()
     }
 
-    internal
-        fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.MessageAttribute):
-        MessageAttribute = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject:
+            software.amazon.awscdk.services.stepfunctions.tasks.MessageAttribute,
+    ) : MessageAttribute {
+        /**
+         * The data type for the attribute.
+         *
+         * Default: determined by type inspection if possible, fallback is String
+         *
+         * [Documentation](https://docs.aws.amazon.com/sns/latest/dg/sns-message-attributes.html#SNSMessageAttributes.DataTypes)
+         */
+        override fun dataType(): MessageAttributeDataType? =
+            unwrap(this).getDataType()?.let(MessageAttributeDataType::wrap)
 
-    internal fun unwrap(wrapped: MessageAttribute):
-        software.amazon.awscdk.services.stepfunctions.tasks.MessageAttribute = (wrapped as
-        Wrapper).cdkObject
-  }
+        /** The value of the attribute. */
+        override fun `value`(): Any = unwrap(this).getValue()
+    }
+
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): MessageAttribute {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.MessageAttribute
+        ): MessageAttribute = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: MessageAttribute
+        ): software.amazon.awscdk.services.stepfunctions.tasks.MessageAttribute =
+            (wrapped as Wrapper).cdkObject
+    }
 }

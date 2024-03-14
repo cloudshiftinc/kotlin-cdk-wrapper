@@ -5,65 +5,61 @@ import kotlin.Boolean
 import kotlin.Unit
 
 public interface FindStateOptions {
-  /**
-   * Whether or not to follow error-handling transitions.
-   *
-   * Default: false
-   */
-  public fun includeErrorHandlers(): Boolean? = unwrap(this).getIncludeErrorHandlers()
-
-  /**
-   * A builder for [FindStateOptions]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param includeErrorHandlers Whether or not to follow error-handling transitions.
-     */
-    public fun includeErrorHandlers(includeErrorHandlers: Boolean)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.FindStateOptions.Builder =
-        software.amazon.awscdk.services.stepfunctions.FindStateOptions.builder()
-
-    /**
-     * @param includeErrorHandlers Whether or not to follow error-handling transitions.
-     */
-    override fun includeErrorHandlers(includeErrorHandlers: Boolean) {
-      cdkBuilder.includeErrorHandlers(includeErrorHandlers)
-    }
-
-    public fun build(): software.amazon.awscdk.services.stepfunctions.FindStateOptions =
-        cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.stepfunctions.FindStateOptions,
-  ) : FindStateOptions {
     /**
      * Whether or not to follow error-handling transitions.
      *
      * Default: false
      */
-    override fun includeErrorHandlers(): Boolean? = unwrap(this).getIncludeErrorHandlers()
-  }
+    public fun includeErrorHandlers(): Boolean? = unwrap(this).getIncludeErrorHandlers()
 
-  public companion object {
-    init {
-
+    /** A builder for [FindStateOptions] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param includeErrorHandlers Whether or not to follow error-handling transitions. */
+        public fun includeErrorHandlers(includeErrorHandlers: Boolean)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): FindStateOptions {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.stepfunctions.FindStateOptions.Builder =
+            software.amazon.awscdk.services.stepfunctions.FindStateOptions.builder()
+
+        /** @param includeErrorHandlers Whether or not to follow error-handling transitions. */
+        override fun includeErrorHandlers(includeErrorHandlers: Boolean) {
+            cdkBuilder.includeErrorHandlers(includeErrorHandlers)
+        }
+
+        public fun build(): software.amazon.awscdk.services.stepfunctions.FindStateOptions =
+            cdkBuilder.build()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.FindStateOptions):
-        FindStateOptions = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.stepfunctions.FindStateOptions,
+    ) : FindStateOptions {
+        /**
+         * Whether or not to follow error-handling transitions.
+         *
+         * Default: false
+         */
+        override fun includeErrorHandlers(): Boolean? = unwrap(this).getIncludeErrorHandlers()
+    }
 
-    internal fun unwrap(wrapped: FindStateOptions):
-        software.amazon.awscdk.services.stepfunctions.FindStateOptions = (wrapped as
-        Wrapper).cdkObject
-  }
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): FindStateOptions {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.stepfunctions.FindStateOptions
+        ): FindStateOptions = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: FindStateOptions
+        ): software.amazon.awscdk.services.stepfunctions.FindStateOptions =
+            (wrapped as Wrapper).cdkObject
+    }
 }

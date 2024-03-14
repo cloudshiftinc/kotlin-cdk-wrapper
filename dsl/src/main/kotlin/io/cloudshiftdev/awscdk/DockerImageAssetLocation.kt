@@ -5,109 +5,88 @@ import kotlin.String
 import kotlin.Unit
 
 public interface DockerImageAssetLocation {
-  /**
-   * The tag of the image in Amazon ECR.
-   *
-   * Default: - the hash of the asset, or the `dockerTagPrefix` concatenated with the asset hash if
-   * a `dockerTagPrefix` is specified in the stack synthesizer
-   */
-  public fun imageTag(): String? = unwrap(this).getImageTag()
-
-  /**
-   * The URI of the image in Amazon ECR (including a tag).
-   */
-  public fun imageUri(): String
-
-  /**
-   * The name of the ECR repository.
-   */
-  public fun repositoryName(): String
-
-  /**
-   * A builder for [DockerImageAssetLocation]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param imageTag The tag of the image in Amazon ECR.
-     */
-    public fun imageTag(imageTag: String)
-
-    /**
-     * @param imageUri The URI of the image in Amazon ECR (including a tag). 
-     */
-    public fun imageUri(imageUri: String)
-
-    /**
-     * @param repositoryName The name of the ECR repository. 
-     */
-    public fun repositoryName(repositoryName: String)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.amazon.awscdk.DockerImageAssetLocation.Builder =
-        software.amazon.awscdk.DockerImageAssetLocation.builder()
-
-    /**
-     * @param imageTag The tag of the image in Amazon ECR.
-     */
-    override fun imageTag(imageTag: String) {
-      cdkBuilder.imageTag(imageTag)
-    }
-
-    /**
-     * @param imageUri The URI of the image in Amazon ECR (including a tag). 
-     */
-    override fun imageUri(imageUri: String) {
-      cdkBuilder.imageUri(imageUri)
-    }
-
-    /**
-     * @param repositoryName The name of the ECR repository. 
-     */
-    override fun repositoryName(repositoryName: String) {
-      cdkBuilder.repositoryName(repositoryName)
-    }
-
-    public fun build(): software.amazon.awscdk.DockerImageAssetLocation = cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.DockerImageAssetLocation,
-  ) : DockerImageAssetLocation {
     /**
      * The tag of the image in Amazon ECR.
      *
      * Default: - the hash of the asset, or the `dockerTagPrefix` concatenated with the asset hash
      * if a `dockerTagPrefix` is specified in the stack synthesizer
      */
-    override fun imageTag(): String? = unwrap(this).getImageTag()
+    public fun imageTag(): String? = unwrap(this).getImageTag()
 
-    /**
-     * The URI of the image in Amazon ECR (including a tag).
-     */
-    override fun imageUri(): String = unwrap(this).getImageUri()
+    /** The URI of the image in Amazon ECR (including a tag). */
+    public fun imageUri(): String
 
-    /**
-     * The name of the ECR repository.
-     */
-    override fun repositoryName(): String = unwrap(this).getRepositoryName()
-  }
+    /** The name of the ECR repository. */
+    public fun repositoryName(): String
 
-  public companion object {
-    init {
+    /** A builder for [DockerImageAssetLocation] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param imageTag The tag of the image in Amazon ECR. */
+        public fun imageTag(imageTag: String)
 
+        /** @param imageUri The URI of the image in Amazon ECR (including a tag). */
+        public fun imageUri(imageUri: String)
+
+        /** @param repositoryName The name of the ECR repository. */
+        public fun repositoryName(repositoryName: String)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): DockerImageAssetLocation {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder: software.amazon.awscdk.DockerImageAssetLocation.Builder =
+            software.amazon.awscdk.DockerImageAssetLocation.builder()
+
+        /** @param imageTag The tag of the image in Amazon ECR. */
+        override fun imageTag(imageTag: String) {
+            cdkBuilder.imageTag(imageTag)
+        }
+
+        /** @param imageUri The URI of the image in Amazon ECR (including a tag). */
+        override fun imageUri(imageUri: String) {
+            cdkBuilder.imageUri(imageUri)
+        }
+
+        /** @param repositoryName The name of the ECR repository. */
+        override fun repositoryName(repositoryName: String) {
+            cdkBuilder.repositoryName(repositoryName)
+        }
+
+        public fun build(): software.amazon.awscdk.DockerImageAssetLocation = cdkBuilder.build()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.DockerImageAssetLocation):
-        DockerImageAssetLocation = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.DockerImageAssetLocation,
+    ) : DockerImageAssetLocation {
+        /**
+         * The tag of the image in Amazon ECR.
+         *
+         * Default: - the hash of the asset, or the `dockerTagPrefix` concatenated with the asset
+         * hash if a `dockerTagPrefix` is specified in the stack synthesizer
+         */
+        override fun imageTag(): String? = unwrap(this).getImageTag()
 
-    internal fun unwrap(wrapped: DockerImageAssetLocation):
-        software.amazon.awscdk.DockerImageAssetLocation = (wrapped as Wrapper).cdkObject
-  }
+        /** The URI of the image in Amazon ECR (including a tag). */
+        override fun imageUri(): String = unwrap(this).getImageUri()
+
+        /** The name of the ECR repository. */
+        override fun repositoryName(): String = unwrap(this).getRepositoryName()
+    }
+
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): DockerImageAssetLocation {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.DockerImageAssetLocation
+        ): DockerImageAssetLocation = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: DockerImageAssetLocation
+        ): software.amazon.awscdk.DockerImageAssetLocation = (wrapped as Wrapper).cdkObject
+    }
 }

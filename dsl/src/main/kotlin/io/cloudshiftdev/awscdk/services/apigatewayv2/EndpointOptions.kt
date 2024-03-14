@@ -6,151 +6,12 @@ import kotlin.String
 import kotlin.Unit
 
 public interface EndpointOptions {
-  /**
-   * The ACM certificate for this domain name.
-   *
-   * Certificate can be both ACM issued or imported.
-   */
-  public fun certificate(): ICertificate
-
-  /**
-   * The user-friendly name of the certificate that will be used by the endpoint for this domain
-   * name.
-   *
-   * Default: - No friendly certificate name
-   */
-  public fun certificateName(): String? = unwrap(this).getCertificateName()
-
-  /**
-   * The type of endpoint for this DomainName.
-   *
-   * Default: EndpointType.REGIONAL
-   */
-  public fun endpointType(): EndpointType? = unwrap(this).getEndpointType()?.let(EndpointType::wrap)
-
-  /**
-   * A public certificate issued by ACM to validate that you own a custom domain.
-   *
-   * This parameter is required
-   * only when you configure mutual TLS authentication and you specify an ACM imported or private CA
-   * certificate
-   * for `certificate`. The ownership certificate validates that you have permissions to use the
-   * domain name.
-   *
-   * Default: - only required when configuring mTLS
-   */
-  public fun ownershipCertificate(): ICertificate? =
-      unwrap(this).getOwnershipCertificate()?.let(ICertificate::wrap)
-
-  /**
-   * The Transport Layer Security (TLS) version + cipher suite for this domain name.
-   *
-   * Default: SecurityPolicy.TLS_1_2
-   */
-  public fun securityPolicy(): SecurityPolicy? =
-      unwrap(this).getSecurityPolicy()?.let(SecurityPolicy::wrap)
-
-  /**
-   * A builder for [EndpointOptions]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param certificate The ACM certificate for this domain name. 
-     * Certificate can be both ACM issued or imported.
-     */
-    public fun certificate(certificate: ICertificate)
-
-    /**
-     * @param certificateName The user-friendly name of the certificate that will be used by the
-     * endpoint for this domain name.
-     */
-    public fun certificateName(certificateName: String)
-
-    /**
-     * @param endpointType The type of endpoint for this DomainName.
-     */
-    public fun endpointType(endpointType: EndpointType)
-
-    /**
-     * @param ownershipCertificate A public certificate issued by ACM to validate that you own a
-     * custom domain.
-     * This parameter is required
-     * only when you configure mutual TLS authentication and you specify an ACM imported or private
-     * CA certificate
-     * for `certificate`. The ownership certificate validates that you have permissions to use the
-     * domain name.
-     */
-    public fun ownershipCertificate(ownershipCertificate: ICertificate)
-
-    /**
-     * @param securityPolicy The Transport Layer Security (TLS) version + cipher suite for this
-     * domain name.
-     */
-    public fun securityPolicy(securityPolicy: SecurityPolicy)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.EndpointOptions.Builder =
-        software.amazon.awscdk.services.apigatewayv2.EndpointOptions.builder()
-
-    /**
-     * @param certificate The ACM certificate for this domain name. 
-     * Certificate can be both ACM issued or imported.
-     */
-    override fun certificate(certificate: ICertificate) {
-      cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
-    }
-
-    /**
-     * @param certificateName The user-friendly name of the certificate that will be used by the
-     * endpoint for this domain name.
-     */
-    override fun certificateName(certificateName: String) {
-      cdkBuilder.certificateName(certificateName)
-    }
-
-    /**
-     * @param endpointType The type of endpoint for this DomainName.
-     */
-    override fun endpointType(endpointType: EndpointType) {
-      cdkBuilder.endpointType(endpointType.let(EndpointType::unwrap))
-    }
-
-    /**
-     * @param ownershipCertificate A public certificate issued by ACM to validate that you own a
-     * custom domain.
-     * This parameter is required
-     * only when you configure mutual TLS authentication and you specify an ACM imported or private
-     * CA certificate
-     * for `certificate`. The ownership certificate validates that you have permissions to use the
-     * domain name.
-     */
-    override fun ownershipCertificate(ownershipCertificate: ICertificate) {
-      cdkBuilder.ownershipCertificate(ownershipCertificate.let(ICertificate::unwrap))
-    }
-
-    /**
-     * @param securityPolicy The Transport Layer Security (TLS) version + cipher suite for this
-     * domain name.
-     */
-    override fun securityPolicy(securityPolicy: SecurityPolicy) {
-      cdkBuilder.securityPolicy(securityPolicy.let(SecurityPolicy::unwrap))
-    }
-
-    public fun build(): software.amazon.awscdk.services.apigatewayv2.EndpointOptions =
-        cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.EndpointOptions,
-  ) : EndpointOptions {
     /**
      * The ACM certificate for this domain name.
      *
      * Certificate can be both ACM issued or imported.
      */
-    override fun certificate(): ICertificate = unwrap(this).getCertificate().let(ICertificate::wrap)
+    public fun certificate(): ICertificate
 
     /**
      * The user-friendly name of the certificate that will be used by the endpoint for this domain
@@ -158,28 +19,26 @@ public interface EndpointOptions {
      *
      * Default: - No friendly certificate name
      */
-    override fun certificateName(): String? = unwrap(this).getCertificateName()
+    public fun certificateName(): String? = unwrap(this).getCertificateName()
 
     /**
      * The type of endpoint for this DomainName.
      *
      * Default: EndpointType.REGIONAL
      */
-    override fun endpointType(): EndpointType? =
+    public fun endpointType(): EndpointType? =
         unwrap(this).getEndpointType()?.let(EndpointType::wrap)
 
     /**
      * A public certificate issued by ACM to validate that you own a custom domain.
      *
-     * This parameter is required
-     * only when you configure mutual TLS authentication and you specify an ACM imported or private
-     * CA certificate
-     * for `certificate`. The ownership certificate validates that you have permissions to use the
-     * domain name.
+     * This parameter is required only when you configure mutual TLS authentication and you specify
+     * an ACM imported or private CA certificate for `certificate`. The ownership certificate
+     * validates that you have permissions to use the domain name.
      *
      * Default: - only required when configuring mTLS
      */
-    override fun ownershipCertificate(): ICertificate? =
+    public fun ownershipCertificate(): ICertificate? =
         unwrap(this).getOwnershipCertificate()?.let(ICertificate::wrap)
 
     /**
@@ -187,25 +46,156 @@ public interface EndpointOptions {
      *
      * Default: SecurityPolicy.TLS_1_2
      */
-    override fun securityPolicy(): SecurityPolicy? =
+    public fun securityPolicy(): SecurityPolicy? =
         unwrap(this).getSecurityPolicy()?.let(SecurityPolicy::wrap)
-  }
 
-  public companion object {
-    init {
+    /** A builder for [EndpointOptions] */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * @param certificate The ACM certificate for this domain name. Certificate can be both ACM
+         *   issued or imported.
+         */
+        public fun certificate(certificate: ICertificate)
 
+        /**
+         * @param certificateName The user-friendly name of the certificate that will be used by the
+         *   endpoint for this domain name.
+         */
+        public fun certificateName(certificateName: String)
+
+        /** @param endpointType The type of endpoint for this DomainName. */
+        public fun endpointType(endpointType: EndpointType)
+
+        /**
+         * @param ownershipCertificate A public certificate issued by ACM to validate that you own a
+         *   custom domain. This parameter is required only when you configure mutual TLS
+         *   authentication and you specify an ACM imported or private CA certificate for
+         *   `certificate`. The ownership certificate validates that you have permissions to use the
+         *   domain name.
+         */
+        public fun ownershipCertificate(ownershipCertificate: ICertificate)
+
+        /**
+         * @param securityPolicy The Transport Layer Security (TLS) version + cipher suite for this
+         *   domain name.
+         */
+        public fun securityPolicy(securityPolicy: SecurityPolicy)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): EndpointOptions {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.apigatewayv2.EndpointOptions.Builder =
+            software.amazon.awscdk.services.apigatewayv2.EndpointOptions.builder()
+
+        /**
+         * @param certificate The ACM certificate for this domain name. Certificate can be both ACM
+         *   issued or imported.
+         */
+        override fun certificate(certificate: ICertificate) {
+            cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
+        }
+
+        /**
+         * @param certificateName The user-friendly name of the certificate that will be used by the
+         *   endpoint for this domain name.
+         */
+        override fun certificateName(certificateName: String) {
+            cdkBuilder.certificateName(certificateName)
+        }
+
+        /** @param endpointType The type of endpoint for this DomainName. */
+        override fun endpointType(endpointType: EndpointType) {
+            cdkBuilder.endpointType(endpointType.let(EndpointType::unwrap))
+        }
+
+        /**
+         * @param ownershipCertificate A public certificate issued by ACM to validate that you own a
+         *   custom domain. This parameter is required only when you configure mutual TLS
+         *   authentication and you specify an ACM imported or private CA certificate for
+         *   `certificate`. The ownership certificate validates that you have permissions to use the
+         *   domain name.
+         */
+        override fun ownershipCertificate(ownershipCertificate: ICertificate) {
+            cdkBuilder.ownershipCertificate(ownershipCertificate.let(ICertificate::unwrap))
+        }
+
+        /**
+         * @param securityPolicy The Transport Layer Security (TLS) version + cipher suite for this
+         *   domain name.
+         */
+        override fun securityPolicy(securityPolicy: SecurityPolicy) {
+            cdkBuilder.securityPolicy(securityPolicy.let(SecurityPolicy::unwrap))
+        }
+
+        public fun build(): software.amazon.awscdk.services.apigatewayv2.EndpointOptions =
+            cdkBuilder.build()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.EndpointOptions):
-        EndpointOptions = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.EndpointOptions,
+    ) : EndpointOptions {
+        /**
+         * The ACM certificate for this domain name.
+         *
+         * Certificate can be both ACM issued or imported.
+         */
+        override fun certificate(): ICertificate =
+            unwrap(this).getCertificate().let(ICertificate::wrap)
 
-    internal fun unwrap(wrapped: EndpointOptions):
-        software.amazon.awscdk.services.apigatewayv2.EndpointOptions = (wrapped as
-        Wrapper).cdkObject
-  }
+        /**
+         * The user-friendly name of the certificate that will be used by the endpoint for this
+         * domain name.
+         *
+         * Default: - No friendly certificate name
+         */
+        override fun certificateName(): String? = unwrap(this).getCertificateName()
+
+        /**
+         * The type of endpoint for this DomainName.
+         *
+         * Default: EndpointType.REGIONAL
+         */
+        override fun endpointType(): EndpointType? =
+            unwrap(this).getEndpointType()?.let(EndpointType::wrap)
+
+        /**
+         * A public certificate issued by ACM to validate that you own a custom domain.
+         *
+         * This parameter is required only when you configure mutual TLS authentication and you
+         * specify an ACM imported or private CA certificate for `certificate`. The ownership
+         * certificate validates that you have permissions to use the domain name.
+         *
+         * Default: - only required when configuring mTLS
+         */
+        override fun ownershipCertificate(): ICertificate? =
+            unwrap(this).getOwnershipCertificate()?.let(ICertificate::wrap)
+
+        /**
+         * The Transport Layer Security (TLS) version + cipher suite for this domain name.
+         *
+         * Default: SecurityPolicy.TLS_1_2
+         */
+        override fun securityPolicy(): SecurityPolicy? =
+            unwrap(this).getSecurityPolicy()?.let(SecurityPolicy::wrap)
+    }
+
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): EndpointOptions {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.apigatewayv2.EndpointOptions
+        ): EndpointOptions = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: EndpointOptions
+        ): software.amazon.awscdk.services.apigatewayv2.EndpointOptions =
+            (wrapped as Wrapper).cdkObject
+    }
 }

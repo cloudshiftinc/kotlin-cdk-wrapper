@@ -5,67 +5,6 @@ import kotlin.String
 import kotlin.Unit
 
 public interface FixedResponseOptions {
-  /**
-   * Content Type of the response.
-   *
-   * Valid Values: text/plain | text/css | text/html | application/javascript | application/json
-   *
-   * Default: - Automatically determined
-   */
-  public fun contentType(): String? = unwrap(this).getContentType()
-
-  /**
-   * The response body.
-   *
-   * Default: - No body
-   */
-  public fun messageBody(): String? = unwrap(this).getMessageBody()
-
-  /**
-   * A builder for [FixedResponseOptions]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param contentType Content Type of the response.
-     * Valid Values: text/plain | text/css | text/html | application/javascript | application/json
-     */
-    public fun contentType(contentType: String)
-
-    /**
-     * @param messageBody The response body.
-     */
-    public fun messageBody(messageBody: String)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder:
-        software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions.Builder =
-        software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions.builder()
-
-    /**
-     * @param contentType Content Type of the response.
-     * Valid Values: text/plain | text/css | text/html | application/javascript | application/json
-     */
-    override fun contentType(contentType: String) {
-      cdkBuilder.contentType(contentType)
-    }
-
-    /**
-     * @param messageBody The response body.
-     */
-    override fun messageBody(messageBody: String) {
-      cdkBuilder.messageBody(messageBody)
-    }
-
-    public fun build(): software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions
-        = cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions,
-  ) : FixedResponseOptions {
     /**
      * Content Type of the response.
      *
@@ -73,32 +12,89 @@ public interface FixedResponseOptions {
      *
      * Default: - Automatically determined
      */
-    override fun contentType(): String? = unwrap(this).getContentType()
+    public fun contentType(): String? = unwrap(this).getContentType()
 
     /**
      * The response body.
      *
      * Default: - No body
      */
-    override fun messageBody(): String? = unwrap(this).getMessageBody()
-  }
+    public fun messageBody(): String? = unwrap(this).getMessageBody()
 
-  public companion object {
-    init {
+    /** A builder for [FixedResponseOptions] */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * @param contentType Content Type of the response. Valid Values: text/plain | text/css |
+         *   text/html | application/javascript | application/json
+         */
+        public fun contentType(contentType: String)
 
+        /** @param messageBody The response body. */
+        public fun messageBody(messageBody: String)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): FixedResponseOptions {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions.Builder =
+            software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions.builder()
+
+        /**
+         * @param contentType Content Type of the response. Valid Values: text/plain | text/css |
+         *   text/html | application/javascript | application/json
+         */
+        override fun contentType(contentType: String) {
+            cdkBuilder.contentType(contentType)
+        }
+
+        /** @param messageBody The response body. */
+        override fun messageBody(messageBody: String) {
+            cdkBuilder.messageBody(messageBody)
+        }
+
+        public fun build():
+            software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions =
+            cdkBuilder.build()
     }
 
-    internal
-        fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions):
-        FixedResponseOptions = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject:
+            software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions,
+    ) : FixedResponseOptions {
+        /**
+         * Content Type of the response.
+         *
+         * Valid Values: text/plain | text/css | text/html | application/javascript |
+         * application/json
+         *
+         * Default: - Automatically determined
+         */
+        override fun contentType(): String? = unwrap(this).getContentType()
 
-    internal fun unwrap(wrapped: FixedResponseOptions):
-        software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions = (wrapped as
-        Wrapper).cdkObject
-  }
+        /**
+         * The response body.
+         *
+         * Default: - No body
+         */
+        override fun messageBody(): String? = unwrap(this).getMessageBody()
+    }
+
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): FixedResponseOptions {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions
+        ): FixedResponseOptions = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: FixedResponseOptions
+        ): software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions =
+            (wrapped as Wrapper).cdkObject
+    }
 }

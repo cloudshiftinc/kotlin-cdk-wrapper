@@ -8,782 +8,764 @@ import io.cloudshiftdev.awscdk.ITaggableV2
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnFramework internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.backup.CfnFramework,
+public open class CfnFramework
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.backup.CfnFramework,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
-  /**
-   * The UTC time when you created your framework.
-   */
-  public open fun attrCreationTime(): String = unwrap(this).getAttrCreationTime()
-
-  /**
-   * Depolyment status refers to whether your framework has completed deployment.
-   *
-   * This status is usually `Completed` , but might also be `Create in progress` or another status.
-   * For a list of statuses, see [Framework compliance
-   * status](https://docs.aws.amazon.com/aws-backup/latest/devguide/viewing-frameworks.html) in the
-   * *Developer Guide* .
-   */
-  public open fun attrDeploymentStatus(): String = unwrap(this).getAttrDeploymentStatus()
-
-  /**
-   * The Amazon Resource Name (ARN) of your framework.
-   */
-  public open fun attrFrameworkArn(): String = unwrap(this).getAttrFrameworkArn()
-
-  /**
-   * Framework status refers to whether you have turned on resource tracking for all of your
-   * resources.
-   *
-   * This status is `Active` when you turn on all resources the framework evaluates. For other
-   * statuses and steps to correct them, see [Framework compliance
-   * status](https://docs.aws.amazon.com/aws-backup/latest/devguide/viewing-frameworks.html) in the
-   * *Developer Guide* .
-   */
-  public open fun attrFrameworkStatus(): String = unwrap(this).getAttrFrameworkStatus()
-
-  /**
-   * Tag Manager which manages the tags for this resource.
-   */
-  public override fun cdkTagManager(): TagManager =
-      unwrap(this).getCdkTagManager().let(TagManager::wrap)
-
-  /**
-   * Contains detailed information about all of the controls of a framework.
-   */
-  public open fun frameworkControls(): Any = unwrap(this).getFrameworkControls()
-
-  /**
-   * Contains detailed information about all of the controls of a framework.
-   */
-  public open fun frameworkControls(`value`: IResolvable) {
-    unwrap(this).setFrameworkControls(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * Contains detailed information about all of the controls of a framework.
-   */
-  public open fun frameworkControls(__idx_ac66f0: List<Any>) {
-    unwrap(this).setFrameworkControls(__idx_ac66f0)
-  }
-
-  /**
-   * Contains detailed information about all of the controls of a framework.
-   */
-  public open fun frameworkControls(vararg __idx_ac66f0: Any): Unit =
-      frameworkControls(__idx_ac66f0.toList())
-
-  /**
-   * An optional description of the framework with a maximum 1,024 characters.
-   */
-  public open fun frameworkDescription(): String? = unwrap(this).getFrameworkDescription()
-
-  /**
-   * An optional description of the framework with a maximum 1,024 characters.
-   */
-  public open fun frameworkDescription(`value`: String) {
-    unwrap(this).setFrameworkDescription(`value`)
-  }
-
-  /**
-   * The unique name of a framework.
-   */
-  public open fun frameworkName(): String? = unwrap(this).getFrameworkName()
-
-  /**
-   * The unique name of a framework.
-   */
-  public open fun frameworkName(`value`: String) {
-    unwrap(this).setFrameworkName(`value`)
-  }
-
-  /**
-   * A list of tags with which to tag your framework.
-   */
-  public open fun frameworkTags(): List<CfnTag> = unwrap(this).getFrameworkTags()?.map(CfnTag::wrap)
-      ?: emptyList()
-
-  /**
-   * A list of tags with which to tag your framework.
-   */
-  public open fun frameworkTags(`value`: List<CfnTag>) {
-    unwrap(this).setFrameworkTags(`value`.map(CfnTag::unwrap))
-  }
-
-  /**
-   * A list of tags with which to tag your framework.
-   */
-  public open fun frameworkTags(vararg `value`: CfnTag): Unit = frameworkTags(`value`.toList())
-
-  /**
-   * Examines the CloudFormation resource and discloses attributes.
-   *
-   * @param inspector tree inspector to collect and process attributes. 
-   */
-  public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-  }
-
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.backup.CfnFramework].
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * Contains detailed information about all of the controls of a framework.
-     *
-     * Each framework must contain at least one control.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkcontrols)
-     * @param frameworkControls Contains detailed information about all of the controls of a
-     * framework. 
-     */
-    public fun frameworkControls(frameworkControls: IResolvable)
+    /** The UTC time when you created your framework. */
+    public open fun attrCreationTime(): String = unwrap(this).getAttrCreationTime()
 
     /**
-     * Contains detailed information about all of the controls of a framework.
+     * Depolyment status refers to whether your framework has completed deployment.
      *
-     * Each framework must contain at least one control.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkcontrols)
-     * @param frameworkControls Contains detailed information about all of the controls of a
-     * framework. 
+     * This status is usually `Completed` , but might also be `Create in progress` or another
+     * status. For a list of statuses, see
+     * [Framework compliance status](https://docs.aws.amazon.com/aws-backup/latest/devguide/viewing-frameworks.html)
+     * in the *Developer Guide* .
      */
-    public fun frameworkControls(frameworkControls: List<Any>)
+    public open fun attrDeploymentStatus(): String = unwrap(this).getAttrDeploymentStatus()
+
+    /** The Amazon Resource Name (ARN) of your framework. */
+    public open fun attrFrameworkArn(): String = unwrap(this).getAttrFrameworkArn()
 
     /**
-     * Contains detailed information about all of the controls of a framework.
+     * Framework status refers to whether you have turned on resource tracking for all of your
+     * resources.
      *
-     * Each framework must contain at least one control.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkcontrols)
-     * @param frameworkControls Contains detailed information about all of the controls of a
-     * framework. 
+     * This status is `Active` when you turn on all resources the framework evaluates. For other
+     * statuses and steps to correct them, see
+     * [Framework compliance status](https://docs.aws.amazon.com/aws-backup/latest/devguide/viewing-frameworks.html)
+     * in the *Developer Guide* .
      */
-    public fun frameworkControls(vararg frameworkControls: Any)
+    public open fun attrFrameworkStatus(): String = unwrap(this).getAttrFrameworkStatus()
 
-    /**
-     * An optional description of the framework with a maximum 1,024 characters.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkdescription)
-     * @param frameworkDescription An optional description of the framework with a maximum 1,024
-     * characters. 
-     */
-    public fun frameworkDescription(frameworkDescription: String)
+    /** Tag Manager which manages the tags for this resource. */
+    public override fun cdkTagManager(): TagManager =
+        unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
-    /**
-     * The unique name of a framework.
-     *
-     * This name is between 1 and 256 characters, starting with a letter, and consisting of letters
-     * (a-z, A-Z), numbers (0-9), and underscores (_).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkname)
-     * @param frameworkName The unique name of a framework. 
-     */
-    public fun frameworkName(frameworkName: String)
+    /** Contains detailed information about all of the controls of a framework. */
+    public open fun frameworkControls(): Any = unwrap(this).getFrameworkControls()
 
-    /**
-     * A list of tags with which to tag your framework.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworktags)
-     * @param frameworkTags A list of tags with which to tag your framework. 
-     */
-    public fun frameworkTags(frameworkTags: List<CfnTag>)
-
-    /**
-     * A list of tags with which to tag your framework.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworktags)
-     * @param frameworkTags A list of tags with which to tag your framework. 
-     */
-    public fun frameworkTags(vararg frameworkTags: CfnTag)
-  }
-
-  private class BuilderImpl(
-    scope: SoftwareConstructsConstruct,
-    id: String,
-  ) : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.backup.CfnFramework.Builder =
-        software.amazon.awscdk.services.backup.CfnFramework.Builder.create(scope, id)
-
-    /**
-     * Contains detailed information about all of the controls of a framework.
-     *
-     * Each framework must contain at least one control.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkcontrols)
-     * @param frameworkControls Contains detailed information about all of the controls of a
-     * framework. 
-     */
-    override fun frameworkControls(frameworkControls: IResolvable) {
-      cdkBuilder.frameworkControls(frameworkControls.let(IResolvable::unwrap))
+    /** Contains detailed information about all of the controls of a framework. */
+    public open fun frameworkControls(`value`: IResolvable) {
+        unwrap(this).setFrameworkControls(`value`.let(IResolvable::unwrap))
     }
 
-    /**
-     * Contains detailed information about all of the controls of a framework.
-     *
-     * Each framework must contain at least one control.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkcontrols)
-     * @param frameworkControls Contains detailed information about all of the controls of a
-     * framework. 
-     */
-    override fun frameworkControls(frameworkControls: List<Any>) {
-      cdkBuilder.frameworkControls(frameworkControls)
+    /** Contains detailed information about all of the controls of a framework. */
+    public open fun frameworkControls(__idx_ac66f0: List<Any>) {
+        unwrap(this).setFrameworkControls(__idx_ac66f0)
     }
 
-    /**
-     * Contains detailed information about all of the controls of a framework.
-     *
-     * Each framework must contain at least one control.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkcontrols)
-     * @param frameworkControls Contains detailed information about all of the controls of a
-     * framework. 
-     */
-    override fun frameworkControls(vararg frameworkControls: Any): Unit =
-        frameworkControls(frameworkControls.toList())
+    /** Contains detailed information about all of the controls of a framework. */
+    public open fun frameworkControls(vararg __idx_ac66f0: Any): Unit =
+        frameworkControls(__idx_ac66f0.toList())
 
-    /**
-     * An optional description of the framework with a maximum 1,024 characters.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkdescription)
-     * @param frameworkDescription An optional description of the framework with a maximum 1,024
-     * characters. 
-     */
-    override fun frameworkDescription(frameworkDescription: String) {
-      cdkBuilder.frameworkDescription(frameworkDescription)
+    /** An optional description of the framework with a maximum 1,024 characters. */
+    public open fun frameworkDescription(): String? = unwrap(this).getFrameworkDescription()
+
+    /** An optional description of the framework with a maximum 1,024 characters. */
+    public open fun frameworkDescription(`value`: String) {
+        unwrap(this).setFrameworkDescription(`value`)
     }
 
-    /**
-     * The unique name of a framework.
-     *
-     * This name is between 1 and 256 characters, starting with a letter, and consisting of letters
-     * (a-z, A-Z), numbers (0-9), and underscores (_).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkname)
-     * @param frameworkName The unique name of a framework. 
-     */
-    override fun frameworkName(frameworkName: String) {
-      cdkBuilder.frameworkName(frameworkName)
+    /** The unique name of a framework. */
+    public open fun frameworkName(): String? = unwrap(this).getFrameworkName()
+
+    /** The unique name of a framework. */
+    public open fun frameworkName(`value`: String) {
+        unwrap(this).setFrameworkName(`value`)
     }
 
-    /**
-     * A list of tags with which to tag your framework.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworktags)
-     * @param frameworkTags A list of tags with which to tag your framework. 
-     */
-    override fun frameworkTags(frameworkTags: List<CfnTag>) {
-      cdkBuilder.frameworkTags(frameworkTags.map(CfnTag::unwrap))
+    /** A list of tags with which to tag your framework. */
+    public open fun frameworkTags(): List<CfnTag> =
+        unwrap(this).getFrameworkTags()?.map(CfnTag::wrap) ?: emptyList()
+
+    /** A list of tags with which to tag your framework. */
+    public open fun frameworkTags(`value`: List<CfnTag>) {
+        unwrap(this).setFrameworkTags(`value`.map(CfnTag::unwrap))
     }
 
+    /** A list of tags with which to tag your framework. */
+    public open fun frameworkTags(vararg `value`: CfnTag): Unit = frameworkTags(`value`.toList())
+
     /**
-     * A list of tags with which to tag your framework.
+     * Examines the CloudFormation resource and discloses attributes.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworktags)
-     * @param frameworkTags A list of tags with which to tag your framework. 
+     * @param inspector tree inspector to collect and process attributes.
      */
-    override fun frameworkTags(vararg frameworkTags: CfnTag): Unit =
-        frameworkTags(frameworkTags.toList())
-
-    public fun build(): software.amazon.awscdk.services.backup.CfnFramework = cdkBuilder.build()
-  }
-
-  public companion object {
-    init {
-
+    public override fun inspect(inspector: TreeInspector) {
+        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
     }
 
-    public operator fun invoke(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      block: Builder.() -> Unit = {},
-    ): CfnFramework {
-      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-      return CfnFramework(builderImpl.apply(block).build())
-    }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnFramework): CfnFramework
-        = CfnFramework(cdkObject)
-
-    internal fun unwrap(wrapped: CfnFramework): software.amazon.awscdk.services.backup.CfnFramework
-        = wrapped.cdkObject
-  }
-
-  public interface FrameworkControlProperty {
-    /**
-     * A list of `ParameterName` and `ParameterValue` pairs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlinputparameters)
-     */
-    public fun controlInputParameters(): Any? = unwrap(this).getControlInputParameters()
-
-    /**
-     * The name of a control.
-     *
-     * This name is between 1 and 256 characters.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlname)
-     */
-    public fun controlName(): String
-
-    /**
-     * The scope of a control.
-     *
-     * The control scope defines what the control will evaluate. Three examples of control scopes
-     * are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
-     *
-     * For more information, see [`ControlScope`
-     * .](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_ControlScope.html)
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlscope)
-     */
-    public fun controlScope(): Any? = unwrap(this).getControlScope()
-
-    /**
-     * A builder for [FrameworkControlProperty]
-     */
+    /** A fluent builder for [io.cloudshiftdev.awscdk.services.backup.CfnFramework]. */
     @CdkDslMarker
     public interface Builder {
-      /**
-       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
-       */
-      public fun controlInputParameters(controlInputParameters: IResolvable)
+        /**
+         * Contains detailed information about all of the controls of a framework.
+         *
+         * Each framework must contain at least one control.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkcontrols)
+         *
+         * @param frameworkControls Contains detailed information about all of the controls of a
+         *   framework.
+         */
+        public fun frameworkControls(frameworkControls: IResolvable)
 
-      /**
-       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
-       */
-      public fun controlInputParameters(controlInputParameters: List<Any>)
+        /**
+         * Contains detailed information about all of the controls of a framework.
+         *
+         * Each framework must contain at least one control.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkcontrols)
+         *
+         * @param frameworkControls Contains detailed information about all of the controls of a
+         *   framework.
+         */
+        public fun frameworkControls(frameworkControls: List<Any>)
 
-      /**
-       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
-       */
-      public fun controlInputParameters(vararg controlInputParameters: Any)
+        /**
+         * Contains detailed information about all of the controls of a framework.
+         *
+         * Each framework must contain at least one control.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkcontrols)
+         *
+         * @param frameworkControls Contains detailed information about all of the controls of a
+         *   framework.
+         */
+        public fun frameworkControls(vararg frameworkControls: Any)
 
-      /**
-       * @param controlName The name of a control. 
-       * This name is between 1 and 256 characters.
-       */
-      public fun controlName(controlName: String)
+        /**
+         * An optional description of the framework with a maximum 1,024 characters.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkdescription)
+         *
+         * @param frameworkDescription An optional description of the framework with a maximum 1,024
+         *   characters.
+         */
+        public fun frameworkDescription(frameworkDescription: String)
 
-      /**
-       * @param controlScope The scope of a control.
-       * The control scope defines what the control will evaluate. Three examples of control scopes
-       * are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
-       *
-       * For more information, see [`ControlScope`
-       * .](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_ControlScope.html)
-       */
-      public fun controlScope(controlScope: Any)
+        /**
+         * The unique name of a framework.
+         *
+         * This name is between 1 and 256 characters, starting with a letter, and consisting of
+         * letters (a-z, A-Z), numbers (0-9), and underscores (_).
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkname)
+         *
+         * @param frameworkName The unique name of a framework.
+         */
+        public fun frameworkName(frameworkName: String)
+
+        /**
+         * A list of tags with which to tag your framework.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworktags)
+         *
+         * @param frameworkTags A list of tags with which to tag your framework.
+         */
+        public fun frameworkTags(frameworkTags: List<CfnTag>)
+
+        /**
+         * A list of tags with which to tag your framework.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworktags)
+         *
+         * @param frameworkTags A list of tags with which to tag your framework.
+         */
+        public fun frameworkTags(vararg frameworkTags: CfnTag)
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty.Builder =
-          software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty.builder()
+    private class BuilderImpl(
+        scope: SoftwareConstructsConstruct,
+        id: String,
+    ) : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.backup.CfnFramework.Builder =
+            software.amazon.awscdk.services.backup.CfnFramework.Builder.create(scope, id)
 
-      /**
-       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
-       */
-      override fun controlInputParameters(controlInputParameters: IResolvable) {
-        cdkBuilder.controlInputParameters(controlInputParameters.let(IResolvable::unwrap))
-      }
+        /**
+         * Contains detailed information about all of the controls of a framework.
+         *
+         * Each framework must contain at least one control.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkcontrols)
+         *
+         * @param frameworkControls Contains detailed information about all of the controls of a
+         *   framework.
+         */
+        override fun frameworkControls(frameworkControls: IResolvable) {
+            cdkBuilder.frameworkControls(frameworkControls.let(IResolvable::unwrap))
+        }
 
-      /**
-       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
-       */
-      override fun controlInputParameters(controlInputParameters: List<Any>) {
-        cdkBuilder.controlInputParameters(controlInputParameters)
-      }
+        /**
+         * Contains detailed information about all of the controls of a framework.
+         *
+         * Each framework must contain at least one control.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkcontrols)
+         *
+         * @param frameworkControls Contains detailed information about all of the controls of a
+         *   framework.
+         */
+        override fun frameworkControls(frameworkControls: List<Any>) {
+            cdkBuilder.frameworkControls(frameworkControls)
+        }
 
-      /**
-       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
-       */
-      override fun controlInputParameters(vararg controlInputParameters: Any): Unit =
-          controlInputParameters(controlInputParameters.toList())
+        /**
+         * Contains detailed information about all of the controls of a framework.
+         *
+         * Each framework must contain at least one control.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkcontrols)
+         *
+         * @param frameworkControls Contains detailed information about all of the controls of a
+         *   framework.
+         */
+        override fun frameworkControls(vararg frameworkControls: Any): Unit =
+            frameworkControls(frameworkControls.toList())
 
-      /**
-       * @param controlName The name of a control. 
-       * This name is between 1 and 256 characters.
-       */
-      override fun controlName(controlName: String) {
-        cdkBuilder.controlName(controlName)
-      }
+        /**
+         * An optional description of the framework with a maximum 1,024 characters.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkdescription)
+         *
+         * @param frameworkDescription An optional description of the framework with a maximum 1,024
+         *   characters.
+         */
+        override fun frameworkDescription(frameworkDescription: String) {
+            cdkBuilder.frameworkDescription(frameworkDescription)
+        }
 
-      /**
-       * @param controlScope The scope of a control.
-       * The control scope defines what the control will evaluate. Three examples of control scopes
-       * are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
-       *
-       * For more information, see [`ControlScope`
-       * .](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_ControlScope.html)
-       */
-      override fun controlScope(controlScope: Any) {
-        cdkBuilder.controlScope(controlScope)
-      }
+        /**
+         * The unique name of a framework.
+         *
+         * This name is between 1 and 256 characters, starting with a letter, and consisting of
+         * letters (a-z, A-Z), numbers (0-9), and underscores (_).
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworkname)
+         *
+         * @param frameworkName The unique name of a framework.
+         */
+        override fun frameworkName(frameworkName: String) {
+            cdkBuilder.frameworkName(frameworkName)
+        }
 
-      public fun build():
-          software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty =
-          cdkBuilder.build()
-    }
+        /**
+         * A list of tags with which to tag your framework.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworktags)
+         *
+         * @param frameworkTags A list of tags with which to tag your framework.
+         */
+        override fun frameworkTags(frameworkTags: List<CfnTag>) {
+            cdkBuilder.frameworkTags(frameworkTags.map(CfnTag::unwrap))
+        }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty,
-    ) : FrameworkControlProperty {
-      /**
-       * A list of `ParameterName` and `ParameterValue` pairs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlinputparameters)
-       */
-      override fun controlInputParameters(): Any? = unwrap(this).getControlInputParameters()
+        /**
+         * A list of tags with which to tag your framework.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworktags)
+         *
+         * @param frameworkTags A list of tags with which to tag your framework.
+         */
+        override fun frameworkTags(vararg frameworkTags: CfnTag): Unit =
+            frameworkTags(frameworkTags.toList())
 
-      /**
-       * The name of a control.
-       *
-       * This name is between 1 and 256 characters.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlname)
-       */
-      override fun controlName(): String = unwrap(this).getControlName()
-
-      /**
-       * The scope of a control.
-       *
-       * The control scope defines what the control will evaluate. Three examples of control scopes
-       * are: a specific backup plan, all backup plans with a specific tag, or all backup plans.
-       *
-       * For more information, see [`ControlScope`
-       * .](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_ControlScope.html)
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlscope)
-       */
-      override fun controlScope(): Any? = unwrap(this).getControlScope()
+        public fun build(): software.amazon.awscdk.services.backup.CfnFramework = cdkBuilder.build()
     }
 
     public companion object {
-      init {
+        init {}
 
-      }
+        public operator fun invoke(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            block: Builder.() -> Unit = {},
+        ): CfnFramework {
+            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+            return CfnFramework(builderImpl.apply(block).build())
+        }
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): FrameworkControlProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.backup.CfnFramework
+        ): CfnFramework = CfnFramework(cdkObject)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty):
-          FrameworkControlProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: FrameworkControlProperty):
-          software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty = (wrapped as
-          Wrapper).cdkObject
-    }
-  }
-
-  public interface ControlScopeProperty {
-    /**
-     * The ID of the only AWS resource that you want your control scope to contain.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlscope.html#cfn-backup-framework-controlscope-complianceresourceids)
-     */
-    public fun complianceResourceIds(): List<String> = unwrap(this).getComplianceResourceIds() ?:
-        emptyList()
-
-    /**
-     * Describes whether the control scope includes one or more types of resources, such as `EFS` or
-     * `RDS` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlscope.html#cfn-backup-framework-controlscope-complianceresourcetypes)
-     */
-    public fun complianceResourceTypes(): List<String> = unwrap(this).getComplianceResourceTypes()
-        ?: emptyList()
-
-    /**
-     * The tag key-value pair applied to those AWS resources that you want to trigger an evaluation
-     * for a rule.
-     *
-     * A maximum of one key-value pair can be provided. The tag value is optional, but it cannot be
-     * an empty string if you are creating or editing a framework from the console (though the value
-     * can be an empty string when included in a CloudFormation template).
-     *
-     * The structure to assign a tag is: `[{"Key":"string","Value":"string"}]` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlscope.html#cfn-backup-framework-controlscope-tags)
-     */
-    public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
-
-    /**
-     * A builder for [ControlScopeProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param complianceResourceIds The ID of the only AWS resource that you want your control
-       * scope to contain.
-       */
-      public fun complianceResourceIds(complianceResourceIds: List<String>)
-
-      /**
-       * @param complianceResourceIds The ID of the only AWS resource that you want your control
-       * scope to contain.
-       */
-      public fun complianceResourceIds(vararg complianceResourceIds: String)
-
-      /**
-       * @param complianceResourceTypes Describes whether the control scope includes one or more
-       * types of resources, such as `EFS` or `RDS` .
-       */
-      public fun complianceResourceTypes(complianceResourceTypes: List<String>)
-
-      /**
-       * @param complianceResourceTypes Describes whether the control scope includes one or more
-       * types of resources, such as `EFS` or `RDS` .
-       */
-      public fun complianceResourceTypes(vararg complianceResourceTypes: String)
-
-      /**
-       * @param tags The tag key-value pair applied to those AWS resources that you want to trigger
-       * an evaluation for a rule.
-       * A maximum of one key-value pair can be provided. The tag value is optional, but it cannot
-       * be an empty string if you are creating or editing a framework from the console (though the
-       * value can be an empty string when included in a CloudFormation template).
-       *
-       * The structure to assign a tag is: `[{"Key":"string","Value":"string"}]` .
-       */
-      public fun tags(tags: List<CfnTag>)
-
-      /**
-       * @param tags The tag key-value pair applied to those AWS resources that you want to trigger
-       * an evaluation for a rule.
-       * A maximum of one key-value pair can be provided. The tag value is optional, but it cannot
-       * be an empty string if you are creating or editing a framework from the console (though the
-       * value can be an empty string when included in a CloudFormation template).
-       *
-       * The structure to assign a tag is: `[{"Key":"string","Value":"string"}]` .
-       */
-      public fun tags(vararg tags: CfnTag)
+        internal fun unwrap(
+            wrapped: CfnFramework
+        ): software.amazon.awscdk.services.backup.CfnFramework = wrapped.cdkObject
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty.Builder =
-          software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty.builder()
+    public interface FrameworkControlProperty {
+        /**
+         * A list of `ParameterName` and `ParameterValue` pairs.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlinputparameters)
+         */
+        public fun controlInputParameters(): Any? = unwrap(this).getControlInputParameters()
 
-      /**
-       * @param complianceResourceIds The ID of the only AWS resource that you want your control
-       * scope to contain.
-       */
-      override fun complianceResourceIds(complianceResourceIds: List<String>) {
-        cdkBuilder.complianceResourceIds(complianceResourceIds)
-      }
+        /**
+         * The name of a control.
+         *
+         * This name is between 1 and 256 characters.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlname)
+         */
+        public fun controlName(): String
 
-      /**
-       * @param complianceResourceIds The ID of the only AWS resource that you want your control
-       * scope to contain.
-       */
-      override fun complianceResourceIds(vararg complianceResourceIds: String): Unit =
-          complianceResourceIds(complianceResourceIds.toList())
+        /**
+         * The scope of a control.
+         *
+         * The control scope defines what the control will evaluate. Three examples of control
+         * scopes are: a specific backup plan, all backup plans with a specific tag, or all backup
+         * plans.
+         *
+         * For more information, see
+         * [`ControlScope` .](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_ControlScope.html)
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlscope)
+         */
+        public fun controlScope(): Any? = unwrap(this).getControlScope()
 
-      /**
-       * @param complianceResourceTypes Describes whether the control scope includes one or more
-       * types of resources, such as `EFS` or `RDS` .
-       */
-      override fun complianceResourceTypes(complianceResourceTypes: List<String>) {
-        cdkBuilder.complianceResourceTypes(complianceResourceTypes)
-      }
+        /** A builder for [FrameworkControlProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
+             */
+            public fun controlInputParameters(controlInputParameters: IResolvable)
 
-      /**
-       * @param complianceResourceTypes Describes whether the control scope includes one or more
-       * types of resources, such as `EFS` or `RDS` .
-       */
-      override fun complianceResourceTypes(vararg complianceResourceTypes: String): Unit =
-          complianceResourceTypes(complianceResourceTypes.toList())
+            /**
+             * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
+             */
+            public fun controlInputParameters(controlInputParameters: List<Any>)
 
-      /**
-       * @param tags The tag key-value pair applied to those AWS resources that you want to trigger
-       * an evaluation for a rule.
-       * A maximum of one key-value pair can be provided. The tag value is optional, but it cannot
-       * be an empty string if you are creating or editing a framework from the console (though the
-       * value can be an empty string when included in a CloudFormation template).
-       *
-       * The structure to assign a tag is: `[{"Key":"string","Value":"string"}]` .
-       */
-      override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
-      }
+            /**
+             * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
+             */
+            public fun controlInputParameters(vararg controlInputParameters: Any)
 
-      /**
-       * @param tags The tag key-value pair applied to those AWS resources that you want to trigger
-       * an evaluation for a rule.
-       * A maximum of one key-value pair can be provided. The tag value is optional, but it cannot
-       * be an empty string if you are creating or editing a framework from the console (though the
-       * value can be an empty string when included in a CloudFormation template).
-       *
-       * The structure to assign a tag is: `[{"Key":"string","Value":"string"}]` .
-       */
-      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+            /**
+             * @param controlName The name of a control. This name is between 1 and 256 characters.
+             */
+            public fun controlName(controlName: String)
 
-      public fun build(): software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty =
-          cdkBuilder.build()
+            /**
+             * @param controlScope The scope of a control. The control scope defines what the
+             *   control will evaluate. Three examples of control scopes are: a specific backup
+             *   plan, all backup plans with a specific tag, or all backup plans.
+             *
+             * For more information, see
+             * [`ControlScope` .](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_ControlScope.html)
+             */
+            public fun controlScope(controlScope: Any)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty.Builder =
+                software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty
+                    .builder()
+
+            /**
+             * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
+             */
+            override fun controlInputParameters(controlInputParameters: IResolvable) {
+                cdkBuilder.controlInputParameters(controlInputParameters.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
+             */
+            override fun controlInputParameters(controlInputParameters: List<Any>) {
+                cdkBuilder.controlInputParameters(controlInputParameters)
+            }
+
+            /**
+             * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
+             */
+            override fun controlInputParameters(vararg controlInputParameters: Any): Unit =
+                controlInputParameters(controlInputParameters.toList())
+
+            /**
+             * @param controlName The name of a control. This name is between 1 and 256 characters.
+             */
+            override fun controlName(controlName: String) {
+                cdkBuilder.controlName(controlName)
+            }
+
+            /**
+             * @param controlScope The scope of a control. The control scope defines what the
+             *   control will evaluate. Three examples of control scopes are: a specific backup
+             *   plan, all backup plans with a specific tag, or all backup plans.
+             *
+             * For more information, see
+             * [`ControlScope` .](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_ControlScope.html)
+             */
+            override fun controlScope(controlScope: Any) {
+                cdkBuilder.controlScope(controlScope)
+            }
+
+            public fun build():
+                software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty,
+        ) : FrameworkControlProperty {
+            /**
+             * A list of `ParameterName` and `ParameterValue` pairs.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlinputparameters)
+             */
+            override fun controlInputParameters(): Any? = unwrap(this).getControlInputParameters()
+
+            /**
+             * The name of a control.
+             *
+             * This name is between 1 and 256 characters.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlname)
+             */
+            override fun controlName(): String = unwrap(this).getControlName()
+
+            /**
+             * The scope of a control.
+             *
+             * The control scope defines what the control will evaluate. Three examples of control
+             * scopes are: a specific backup plan, all backup plans with a specific tag, or all
+             * backup plans.
+             *
+             * For more information, see
+             * [`ControlScope` .](https://docs.aws.amazon.com/aws-backup/latest/devguide/API_ControlScope.html)
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlscope)
+             */
+            override fun controlScope(): Any? = unwrap(this).getControlScope()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): FrameworkControlProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty
+            ): FrameworkControlProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: FrameworkControlProperty
+            ): software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty,
-    ) : ControlScopeProperty {
-      /**
-       * The ID of the only AWS resource that you want your control scope to contain.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlscope.html#cfn-backup-framework-controlscope-complianceresourceids)
-       */
-      override fun complianceResourceIds(): List<String> = unwrap(this).getComplianceResourceIds()
-          ?: emptyList()
+    public interface ControlScopeProperty {
+        /**
+         * The ID of the only AWS resource that you want your control scope to contain.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlscope.html#cfn-backup-framework-controlscope-complianceresourceids)
+         */
+        public fun complianceResourceIds(): List<String> =
+            unwrap(this).getComplianceResourceIds() ?: emptyList()
 
-      /**
-       * Describes whether the control scope includes one or more types of resources, such as `EFS`
-       * or `RDS` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlscope.html#cfn-backup-framework-controlscope-complianceresourcetypes)
-       */
-      override fun complianceResourceTypes(): List<String> =
-          unwrap(this).getComplianceResourceTypes() ?: emptyList()
+        /**
+         * Describes whether the control scope includes one or more types of resources, such as
+         * `EFS` or `RDS` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlscope.html#cfn-backup-framework-controlscope-complianceresourcetypes)
+         */
+        public fun complianceResourceTypes(): List<String> =
+            unwrap(this).getComplianceResourceTypes() ?: emptyList()
 
-      /**
-       * The tag key-value pair applied to those AWS resources that you want to trigger an
-       * evaluation for a rule.
-       *
-       * A maximum of one key-value pair can be provided. The tag value is optional, but it cannot
-       * be an empty string if you are creating or editing a framework from the console (though the
-       * value can be an empty string when included in a CloudFormation template).
-       *
-       * The structure to assign a tag is: `[{"Key":"string","Value":"string"}]` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlscope.html#cfn-backup-framework-controlscope-tags)
-       */
-      override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+        /**
+         * The tag key-value pair applied to those AWS resources that you want to trigger an
+         * evaluation for a rule.
+         *
+         * A maximum of one key-value pair can be provided. The tag value is optional, but it cannot
+         * be an empty string if you are creating or editing a framework from the console (though
+         * the value can be an empty string when included in a CloudFormation template).
+         *
+         * The structure to assign a tag is: `[{"Key":"string","Value":"string"}]` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlscope.html#cfn-backup-framework-controlscope-tags)
+         */
+        public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+        /** A builder for [ControlScopeProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param complianceResourceIds The ID of the only AWS resource that you want your
+             *   control scope to contain.
+             */
+            public fun complianceResourceIds(complianceResourceIds: List<String>)
+
+            /**
+             * @param complianceResourceIds The ID of the only AWS resource that you want your
+             *   control scope to contain.
+             */
+            public fun complianceResourceIds(vararg complianceResourceIds: String)
+
+            /**
+             * @param complianceResourceTypes Describes whether the control scope includes one or
+             *   more types of resources, such as `EFS` or `RDS` .
+             */
+            public fun complianceResourceTypes(complianceResourceTypes: List<String>)
+
+            /**
+             * @param complianceResourceTypes Describes whether the control scope includes one or
+             *   more types of resources, such as `EFS` or `RDS` .
+             */
+            public fun complianceResourceTypes(vararg complianceResourceTypes: String)
+
+            /**
+             * @param tags The tag key-value pair applied to those AWS resources that you want to
+             *   trigger an evaluation for a rule. A maximum of one key-value pair can be provided.
+             *   The tag value is optional, but it cannot be an empty string if you are creating or
+             *   editing a framework from the console (though the value can be an empty string when
+             *   included in a CloudFormation template).
+             *
+             * The structure to assign a tag is: `[{"Key":"string","Value":"string"}]` .
+             */
+            public fun tags(tags: List<CfnTag>)
+
+            /**
+             * @param tags The tag key-value pair applied to those AWS resources that you want to
+             *   trigger an evaluation for a rule. A maximum of one key-value pair can be provided.
+             *   The tag value is optional, but it cannot be an empty string if you are creating or
+             *   editing a framework from the console (though the value can be an empty string when
+             *   included in a CloudFormation template).
+             *
+             * The structure to assign a tag is: `[{"Key":"string","Value":"string"}]` .
+             */
+            public fun tags(vararg tags: CfnTag)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty.Builder =
+                software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty.builder()
+
+            /**
+             * @param complianceResourceIds The ID of the only AWS resource that you want your
+             *   control scope to contain.
+             */
+            override fun complianceResourceIds(complianceResourceIds: List<String>) {
+                cdkBuilder.complianceResourceIds(complianceResourceIds)
+            }
+
+            /**
+             * @param complianceResourceIds The ID of the only AWS resource that you want your
+             *   control scope to contain.
+             */
+            override fun complianceResourceIds(vararg complianceResourceIds: String): Unit =
+                complianceResourceIds(complianceResourceIds.toList())
+
+            /**
+             * @param complianceResourceTypes Describes whether the control scope includes one or
+             *   more types of resources, such as `EFS` or `RDS` .
+             */
+            override fun complianceResourceTypes(complianceResourceTypes: List<String>) {
+                cdkBuilder.complianceResourceTypes(complianceResourceTypes)
+            }
+
+            /**
+             * @param complianceResourceTypes Describes whether the control scope includes one or
+             *   more types of resources, such as `EFS` or `RDS` .
+             */
+            override fun complianceResourceTypes(vararg complianceResourceTypes: String): Unit =
+                complianceResourceTypes(complianceResourceTypes.toList())
+
+            /**
+             * @param tags The tag key-value pair applied to those AWS resources that you want to
+             *   trigger an evaluation for a rule. A maximum of one key-value pair can be provided.
+             *   The tag value is optional, but it cannot be an empty string if you are creating or
+             *   editing a framework from the console (though the value can be an empty string when
+             *   included in a CloudFormation template).
+             *
+             * The structure to assign a tag is: `[{"Key":"string","Value":"string"}]` .
+             */
+            override fun tags(tags: List<CfnTag>) {
+                cdkBuilder.tags(tags.map(CfnTag::unwrap))
+            }
+
+            /**
+             * @param tags The tag key-value pair applied to those AWS resources that you want to
+             *   trigger an evaluation for a rule. A maximum of one key-value pair can be provided.
+             *   The tag value is optional, but it cannot be an empty string if you are creating or
+             *   editing a framework from the console (though the value can be an empty string when
+             *   included in a CloudFormation template).
+             *
+             * The structure to assign a tag is: `[{"Key":"string","Value":"string"}]` .
+             */
+            override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+            public fun build():
+                software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty,
+        ) : ControlScopeProperty {
+            /**
+             * The ID of the only AWS resource that you want your control scope to contain.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlscope.html#cfn-backup-framework-controlscope-complianceresourceids)
+             */
+            override fun complianceResourceIds(): List<String> =
+                unwrap(this).getComplianceResourceIds() ?: emptyList()
+
+            /**
+             * Describes whether the control scope includes one or more types of resources, such as
+             * `EFS` or `RDS` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlscope.html#cfn-backup-framework-controlscope-complianceresourcetypes)
+             */
+            override fun complianceResourceTypes(): List<String> =
+                unwrap(this).getComplianceResourceTypes() ?: emptyList()
+
+            /**
+             * The tag key-value pair applied to those AWS resources that you want to trigger an
+             * evaluation for a rule.
+             *
+             * A maximum of one key-value pair can be provided. The tag value is optional, but it
+             * cannot be an empty string if you are creating or editing a framework from the console
+             * (though the value can be an empty string when included in a CloudFormation template).
+             *
+             * The structure to assign a tag is: `[{"Key":"string","Value":"string"}]` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlscope.html#cfn-backup-framework-controlscope-tags)
+             */
+            override fun tags(): List<CfnTag> =
+                unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): ControlScopeProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject: software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty
+            ): ControlScopeProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: ControlScopeProperty
+            ): software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface ControlInputParameterProperty {
+        /**
+         * The name of a parameter, for example, `BackupPlanFrequency` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlinputparameter.html#cfn-backup-framework-controlinputparameter-parametername)
+         */
+        public fun parameterName(): String
 
-      }
+        /**
+         * The value of parameter, for example, `hourly` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlinputparameter.html#cfn-backup-framework-controlinputparameter-parametervalue)
+         */
+        public fun parameterValue(): String
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): ControlScopeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /** A builder for [ControlInputParameterProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param parameterName The name of a parameter, for example, `BackupPlanFrequency` .
+             */
+            public fun parameterName(parameterName: String)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty):
-          ControlScopeProperty = Wrapper(cdkObject)
+            /** @param parameterValue The value of parameter, for example, `hourly` . */
+            public fun parameterValue(parameterValue: String)
+        }
 
-      internal fun unwrap(wrapped: ControlScopeProperty):
-          software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty = (wrapped as
-          Wrapper).cdkObject
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty.Builder =
+                software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty
+                    .builder()
+
+            /**
+             * @param parameterName The name of a parameter, for example, `BackupPlanFrequency` .
+             */
+            override fun parameterName(parameterName: String) {
+                cdkBuilder.parameterName(parameterName)
+            }
+
+            /** @param parameterValue The value of parameter, for example, `hourly` . */
+            override fun parameterValue(parameterValue: String) {
+                cdkBuilder.parameterValue(parameterValue)
+            }
+
+            public fun build():
+                software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty,
+        ) : ControlInputParameterProperty {
+            /**
+             * The name of a parameter, for example, `BackupPlanFrequency` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlinputparameter.html#cfn-backup-framework-controlinputparameter-parametername)
+             */
+            override fun parameterName(): String = unwrap(this).getParameterName()
+
+            /**
+             * The value of parameter, for example, `hourly` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlinputparameter.html#cfn-backup-framework-controlinputparameter-parametervalue)
+             */
+            override fun parameterValue(): String = unwrap(this).getParameterValue()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(
+                block: Builder.() -> Unit = {}
+            ): ControlInputParameterProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty
+            ): ControlInputParameterProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: ControlInputParameterProperty
+            ): software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
-  }
-
-  public interface ControlInputParameterProperty {
-    /**
-     * The name of a parameter, for example, `BackupPlanFrequency` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlinputparameter.html#cfn-backup-framework-controlinputparameter-parametername)
-     */
-    public fun parameterName(): String
-
-    /**
-     * The value of parameter, for example, `hourly` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlinputparameter.html#cfn-backup-framework-controlinputparameter-parametervalue)
-     */
-    public fun parameterValue(): String
-
-    /**
-     * A builder for [ControlInputParameterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param parameterName The name of a parameter, for example, `BackupPlanFrequency` . 
-       */
-      public fun parameterName(parameterName: String)
-
-      /**
-       * @param parameterValue The value of parameter, for example, `hourly` . 
-       */
-      public fun parameterValue(parameterValue: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty.Builder
-          =
-          software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty.builder()
-
-      /**
-       * @param parameterName The name of a parameter, for example, `BackupPlanFrequency` . 
-       */
-      override fun parameterName(parameterName: String) {
-        cdkBuilder.parameterName(parameterName)
-      }
-
-      /**
-       * @param parameterValue The value of parameter, for example, `hourly` . 
-       */
-      override fun parameterValue(parameterValue: String) {
-        cdkBuilder.parameterValue(parameterValue)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty,
-    ) : ControlInputParameterProperty {
-      /**
-       * The name of a parameter, for example, `BackupPlanFrequency` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlinputparameter.html#cfn-backup-framework-controlinputparameter-parametername)
-       */
-      override fun parameterName(): String = unwrap(this).getParameterName()
-
-      /**
-       * The value of parameter, for example, `hourly` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-controlinputparameter.html#cfn-backup-framework-controlinputparameter-parametervalue)
-       */
-      override fun parameterValue(): String = unwrap(this).getParameterValue()
-    }
-
-    public companion object {
-      init {
-
-      }
-
-      public operator fun invoke(block: Builder.() -> Unit = {}): ControlInputParameterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty):
-          ControlInputParameterProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ControlInputParameterProperty):
-          software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty =
-          (wrapped as Wrapper).cdkObject
-    }
-  }
 }

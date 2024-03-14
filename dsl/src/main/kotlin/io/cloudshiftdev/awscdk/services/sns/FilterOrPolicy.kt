@@ -4,39 +4,44 @@ import kotlin.Boolean
 import kotlin.String
 import kotlin.collections.Map
 
-public abstract class FilterOrPolicy internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.sns.FilterOrPolicy,
+public abstract class FilterOrPolicy
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.sns.FilterOrPolicy,
 ) {
-  /**
-   * Check if instance is `Filter` type.
-   */
-  public open fun isFilter(): Boolean = unwrap(this).isFilter()
+    /** Check if instance is `Filter` type. */
+    public open fun isFilter(): Boolean = unwrap(this).isFilter()
 
-  /**
-   * Check if instance is `Policy` type.
-   */
-  public open fun isPolicy(): Boolean = unwrap(this).isPolicy()
+    /** Check if instance is `Policy` type. */
+    public open fun isPolicy(): Boolean = unwrap(this).isPolicy()
 
-  /**
-   * Type switch for disambiguating between subclasses.
-   */
-  public open fun type(): FilterOrPolicyType = unwrap(this).getType().let(FilterOrPolicyType::wrap)
+    /** Type switch for disambiguating between subclasses. */
+    public open fun type(): FilterOrPolicyType =
+        unwrap(this).getType().let(FilterOrPolicyType::wrap)
 
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.sns.FilterOrPolicy,
-  ) : FilterOrPolicy(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.sns.FilterOrPolicy,
+    ) : FilterOrPolicy(cdkObject)
 
-  public companion object {
-    public fun filter(filter: SubscriptionFilter): Filter =
-        software.amazon.awscdk.services.sns.FilterOrPolicy.filter(filter.let(SubscriptionFilter::unwrap)).let(Filter::wrap)
+    public companion object {
+        public fun filter(filter: SubscriptionFilter): Filter =
+            software.amazon.awscdk.services.sns.FilterOrPolicy.filter(
+                    filter.let(SubscriptionFilter::unwrap)
+                )
+                .let(Filter::wrap)
 
-    public fun policy(policy: Map<String, FilterOrPolicy>): Policy =
-        software.amazon.awscdk.services.sns.FilterOrPolicy.policy(policy.mapValues{FilterOrPolicy.unwrap(it.value)}).let(Policy::wrap)
+        public fun policy(policy: Map<String, FilterOrPolicy>): Policy =
+            software.amazon.awscdk.services.sns.FilterOrPolicy.policy(
+                    policy.mapValues { FilterOrPolicy.unwrap(it.value) }
+                )
+                .let(Policy::wrap)
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.sns.FilterOrPolicy): FilterOrPolicy
-        = Wrapper(cdkObject)
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.sns.FilterOrPolicy
+        ): FilterOrPolicy = Wrapper(cdkObject)
 
-    internal fun unwrap(wrapped: FilterOrPolicy): software.amazon.awscdk.services.sns.FilterOrPolicy
-        = (wrapped as Wrapper).cdkObject
-  }
+        internal fun unwrap(
+            wrapped: FilterOrPolicy
+        ): software.amazon.awscdk.services.sns.FilterOrPolicy = (wrapped as Wrapper).cdkObject
+    }
 }

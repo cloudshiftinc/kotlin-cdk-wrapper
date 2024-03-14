@@ -7,68 +7,67 @@ import kotlin.Unit
 import kotlin.collections.List
 
 public interface MetadataEntry {
-  public fun `data`(): Any
+    public fun `data`(): Any
 
-  public fun trace(): List<String> = unwrap(this).getTrace() ?: emptyList()
+    public fun trace(): List<String> = unwrap(this).getTrace() ?: emptyList()
 
-  public fun type(): String
+    public fun type(): String
 
-  @CdkDslMarker
-  public interface Builder {
-    public fun `data`(`data`: Any)
+    @CdkDslMarker
+    public interface Builder {
+        public fun `data`(`data`: Any)
 
-    public fun trace(trace: List<String>)
+        public fun trace(trace: List<String>)
 
-    public fun trace(vararg trace: String)
+        public fun trace(vararg trace: String)
 
-    public fun type(type: String)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.constructs.MetadataEntry.Builder =
-        software.constructs.MetadataEntry.builder()
-
-    override fun `data`(`data`: Any) {
-      cdkBuilder.`data`(`data`)
+        public fun type(type: String)
     }
 
-    override fun trace(trace: List<String>) {
-      cdkBuilder.trace(trace)
+    private class BuilderImpl : Builder {
+        private val cdkBuilder: software.constructs.MetadataEntry.Builder =
+            software.constructs.MetadataEntry.builder()
+
+        override fun `data`(`data`: Any) {
+            cdkBuilder.`data`(`data`)
+        }
+
+        override fun trace(trace: List<String>) {
+            cdkBuilder.trace(trace)
+        }
+
+        override fun trace(vararg trace: String): Unit = trace(trace.toList())
+
+        override fun type(type: String) {
+            cdkBuilder.type(type)
+        }
+
+        public fun build(): software.constructs.MetadataEntry = cdkBuilder.build()
     }
 
-    override fun trace(vararg trace: String): Unit = trace(trace.toList())
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.constructs.MetadataEntry,
+    ) : MetadataEntry {
+        override fun `data`(): Any = unwrap(this).getData()
 
-    override fun type(type: String) {
-      cdkBuilder.type(type)
+        override fun trace(): List<String> = unwrap(this).getTrace() ?: emptyList()
+
+        override fun type(): String = unwrap(this).getType()
     }
 
-    public fun build(): software.constructs.MetadataEntry = cdkBuilder.build()
-  }
+    public companion object {
+        init {}
 
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.constructs.MetadataEntry,
-  ) : MetadataEntry {
-    override fun `data`(): Any = unwrap(this).getData()
+        public operator fun invoke(block: Builder.() -> Unit = {}): MetadataEntry {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
 
-    override fun trace(): List<String> = unwrap(this).getTrace() ?: emptyList()
+        internal fun wrap(cdkObject: software.constructs.MetadataEntry): MetadataEntry =
+            Wrapper(cdkObject)
 
-    override fun type(): String = unwrap(this).getType()
-  }
-
-  public companion object {
-    init {
-
+        internal fun unwrap(wrapped: MetadataEntry): software.constructs.MetadataEntry =
+            (wrapped as Wrapper).cdkObject
     }
-
-    public operator fun invoke(block: Builder.() -> Unit = {}): MetadataEntry {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
-    }
-
-    internal fun wrap(cdkObject: software.constructs.MetadataEntry): MetadataEntry =
-        Wrapper(cdkObject)
-
-    internal fun unwrap(wrapped: MetadataEntry): software.constructs.MetadataEntry = (wrapped as
-        Wrapper).cdkObject
-  }
 }

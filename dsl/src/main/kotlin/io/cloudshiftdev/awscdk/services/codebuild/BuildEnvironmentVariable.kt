@@ -5,137 +5,119 @@ import kotlin.Any
 import kotlin.Unit
 
 public interface BuildEnvironmentVariable {
-  /**
-   * The type of environment variable.
-   *
-   * Default: PlainText
-   */
-  public fun type(): BuildEnvironmentVariableType? =
-      unwrap(this).getType()?.let(BuildEnvironmentVariableType::wrap)
-
-  /**
-   * The value of the environment variable.
-   *
-   * For plain-text variables (the default), this is the literal value of variable.
-   * For SSM parameter variables, pass the name of the parameter here (`parameterName` property of
-   * `IParameter`).
-   * For SecretsManager variables secrets, pass either the secret name (`secretName` property of
-   * `ISecret`)
-   * or the secret ARN (`secretArn` property of `ISecret`) here,
-   * along with optional SecretsManager qualifiers separated by ':', like the JSON key, or the
-   * version or stage
-   * (see
-   * https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec.env.secrets-manager
-   * for details).
-   */
-  public fun `value`(): Any
-
-  /**
-   * A builder for [BuildEnvironmentVariable]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param type The type of environment variable.
-     */
-    public fun type(type: BuildEnvironmentVariableType)
-
-    /**
-     * @param value The value of the environment variable. 
-     * For plain-text variables (the default), this is the literal value of variable.
-     * For SSM parameter variables, pass the name of the parameter here (`parameterName` property of
-     * `IParameter`).
-     * For SecretsManager variables secrets, pass either the secret name (`secretName` property of
-     * `ISecret`)
-     * or the secret ARN (`secretArn` property of `ISecret`) here,
-     * along with optional SecretsManager qualifiers separated by ':', like the JSON key, or the
-     * version or stage
-     * (see
-     * https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec.env.secrets-manager
-     * for details).
-     */
-    public fun `value`(`value`: Any)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder:
-        software.amazon.awscdk.services.codebuild.BuildEnvironmentVariable.Builder =
-        software.amazon.awscdk.services.codebuild.BuildEnvironmentVariable.builder()
-
-    /**
-     * @param type The type of environment variable.
-     */
-    override fun type(type: BuildEnvironmentVariableType) {
-      cdkBuilder.type(type.let(BuildEnvironmentVariableType::unwrap))
-    }
-
-    /**
-     * @param value The value of the environment variable. 
-     * For plain-text variables (the default), this is the literal value of variable.
-     * For SSM parameter variables, pass the name of the parameter here (`parameterName` property of
-     * `IParameter`).
-     * For SecretsManager variables secrets, pass either the secret name (`secretName` property of
-     * `ISecret`)
-     * or the secret ARN (`secretArn` property of `ISecret`) here,
-     * along with optional SecretsManager qualifiers separated by ':', like the JSON key, or the
-     * version or stage
-     * (see
-     * https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec.env.secrets-manager
-     * for details).
-     */
-    override fun `value`(`value`: Any) {
-      cdkBuilder.`value`(`value`)
-    }
-
-    public fun build(): software.amazon.awscdk.services.codebuild.BuildEnvironmentVariable =
-        cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.codebuild.BuildEnvironmentVariable,
-  ) : BuildEnvironmentVariable {
     /**
      * The type of environment variable.
      *
      * Default: PlainText
      */
-    override fun type(): BuildEnvironmentVariableType? =
+    public fun type(): BuildEnvironmentVariableType? =
         unwrap(this).getType()?.let(BuildEnvironmentVariableType::wrap)
 
     /**
      * The value of the environment variable.
      *
-     * For plain-text variables (the default), this is the literal value of variable.
-     * For SSM parameter variables, pass the name of the parameter here (`parameterName` property of
-     * `IParameter`).
-     * For SecretsManager variables secrets, pass either the secret name (`secretName` property of
-     * `ISecret`)
-     * or the secret ARN (`secretArn` property of `ISecret`) here,
-     * along with optional SecretsManager qualifiers separated by ':', like the JSON key, or the
-     * version or stage
-     * (see
+     * For plain-text variables (the default), this is the literal value of variable. For SSM
+     * parameter variables, pass the name of the parameter here (`parameterName` property of
+     * `IParameter`). For SecretsManager variables secrets, pass either the secret name
+     * (`secretName` property of `ISecret`) or the secret ARN (`secretArn` property of `ISecret`)
+     * here, along with optional SecretsManager qualifiers separated by ':', like the JSON key, or
+     * the version or stage (see
      * https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec.env.secrets-manager
      * for details).
      */
-    override fun `value`(): Any = unwrap(this).getValue()
-  }
+    public fun `value`(): Any
 
-  public companion object {
-    init {
+    /** A builder for [BuildEnvironmentVariable] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param type The type of environment variable. */
+        public fun type(type: BuildEnvironmentVariableType)
 
+        /**
+         * @param value The value of the environment variable. For plain-text variables (the
+         *   default), this is the literal value of variable. For SSM parameter variables, pass the
+         *   name of the parameter here (`parameterName` property of `IParameter`). For
+         *   SecretsManager variables secrets, pass either the secret name (`secretName` property of
+         *   `ISecret`) or the secret ARN (`secretArn` property of `ISecret`) here, along with
+         *   optional SecretsManager qualifiers separated by ':', like the JSON key, or the version
+         *   or stage (see
+         *   https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec.env.secrets-manager
+         *   for details).
+         */
+        public fun `value`(`value`: Any)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): BuildEnvironmentVariable {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.codebuild.BuildEnvironmentVariable.Builder =
+            software.amazon.awscdk.services.codebuild.BuildEnvironmentVariable.builder()
+
+        /** @param type The type of environment variable. */
+        override fun type(type: BuildEnvironmentVariableType) {
+            cdkBuilder.type(type.let(BuildEnvironmentVariableType::unwrap))
+        }
+
+        /**
+         * @param value The value of the environment variable. For plain-text variables (the
+         *   default), this is the literal value of variable. For SSM parameter variables, pass the
+         *   name of the parameter here (`parameterName` property of `IParameter`). For
+         *   SecretsManager variables secrets, pass either the secret name (`secretName` property of
+         *   `ISecret`) or the secret ARN (`secretArn` property of `ISecret`) here, along with
+         *   optional SecretsManager qualifiers separated by ':', like the JSON key, or the version
+         *   or stage (see
+         *   https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec.env.secrets-manager
+         *   for details).
+         */
+        override fun `value`(`value`: Any) {
+            cdkBuilder.`value`(`value`)
+        }
+
+        public fun build(): software.amazon.awscdk.services.codebuild.BuildEnvironmentVariable =
+            cdkBuilder.build()
     }
 
-    internal
-        fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.BuildEnvironmentVariable):
-        BuildEnvironmentVariable = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.codebuild.BuildEnvironmentVariable,
+    ) : BuildEnvironmentVariable {
+        /**
+         * The type of environment variable.
+         *
+         * Default: PlainText
+         */
+        override fun type(): BuildEnvironmentVariableType? =
+            unwrap(this).getType()?.let(BuildEnvironmentVariableType::wrap)
 
-    internal fun unwrap(wrapped: BuildEnvironmentVariable):
-        software.amazon.awscdk.services.codebuild.BuildEnvironmentVariable = (wrapped as
-        Wrapper).cdkObject
-  }
+        /**
+         * The value of the environment variable.
+         *
+         * For plain-text variables (the default), this is the literal value of variable. For SSM
+         * parameter variables, pass the name of the parameter here (`parameterName` property of
+         * `IParameter`). For SecretsManager variables secrets, pass either the secret name
+         * (`secretName` property of `ISecret`) or the secret ARN (`secretArn` property of
+         * `ISecret`) here, along with optional SecretsManager qualifiers separated by ':', like the
+         * JSON key, or the version or stage (see
+         * https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html#build-spec.env.secrets-manager
+         * for details).
+         */
+        override fun `value`(): Any = unwrap(this).getValue()
+    }
+
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): BuildEnvironmentVariable {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.codebuild.BuildEnvironmentVariable
+        ): BuildEnvironmentVariable = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: BuildEnvironmentVariable
+        ): software.amazon.awscdk.services.codebuild.BuildEnvironmentVariable =
+            (wrapped as Wrapper).cdkObject
+    }
 }

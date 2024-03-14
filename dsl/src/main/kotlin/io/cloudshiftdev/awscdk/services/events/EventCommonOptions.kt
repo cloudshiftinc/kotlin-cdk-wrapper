@@ -8,139 +8,6 @@ import kotlin.Unit
 import kotlin.jvm.JvmName
 
 public interface EventCommonOptions {
-  /**
-   * The scope to use if the source of the rule and its target are in different Stacks (but in the
-   * same account &amp; region).
-   *
-   * This helps dealing with cycles that often arise in these situations.
-   *
-   * Default: - none (the main scope will be used, even for cross-stack Events)
-   */
-  public fun crossStackScope(): Construct? = unwrap(this).getCrossStackScope()?.let(Construct::wrap)
-
-  /**
-   * A description of the rule's purpose.
-   *
-   * Default: - No description
-   */
-  public fun description(): String? = unwrap(this).getDescription()
-
-  /**
-   * Additional restrictions for the event to route to the specified target.
-   *
-   * The method that generates the rule probably imposes some type of event
-   * filtering. The filtering implied by what you pass here is added
-   * on top of that filtering.
-   *
-   * Default: - No additional filtering based on an event pattern.
-   *
-   * [Documentation](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html)
-   */
-  public fun eventPattern(): EventPattern? = unwrap(this).getEventPattern()?.let(EventPattern::wrap)
-
-  /**
-   * A name for the rule.
-   *
-   * Default: AWS CloudFormation generates a unique physical ID.
-   */
-  public fun ruleName(): String? = unwrap(this).getRuleName()
-
-  /**
-   * A builder for [EventCommonOptions]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param crossStackScope The scope to use if the source of the rule and its target are in
-     * different Stacks (but in the same account &amp; region).
-     * This helps dealing with cycles that often arise in these situations.
-     */
-    public fun crossStackScope(crossStackScope: Construct)
-
-    /**
-     * @param description A description of the rule's purpose.
-     */
-    public fun description(description: String)
-
-    /**
-     * @param eventPattern Additional restrictions for the event to route to the specified target.
-     * The method that generates the rule probably imposes some type of event
-     * filtering. The filtering implied by what you pass here is added
-     * on top of that filtering.
-     */
-    public fun eventPattern(eventPattern: EventPattern)
-
-    /**
-     * @param eventPattern Additional restrictions for the event to route to the specified target.
-     * The method that generates the rule probably imposes some type of event
-     * filtering. The filtering implied by what you pass here is added
-     * on top of that filtering.
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("049d7415c09e92ccc71acf1adf00a5e512d9443464a486f308048d6ca94e848e")
-    public fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit)
-
-    /**
-     * @param ruleName A name for the rule.
-     */
-    public fun ruleName(ruleName: String)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.events.EventCommonOptions.Builder =
-        software.amazon.awscdk.services.events.EventCommonOptions.builder()
-
-    /**
-     * @param crossStackScope The scope to use if the source of the rule and its target are in
-     * different Stacks (but in the same account &amp; region).
-     * This helps dealing with cycles that often arise in these situations.
-     */
-    override fun crossStackScope(crossStackScope: Construct) {
-      cdkBuilder.crossStackScope(crossStackScope.let(Construct::unwrap))
-    }
-
-    /**
-     * @param description A description of the rule's purpose.
-     */
-    override fun description(description: String) {
-      cdkBuilder.description(description)
-    }
-
-    /**
-     * @param eventPattern Additional restrictions for the event to route to the specified target.
-     * The method that generates the rule probably imposes some type of event
-     * filtering. The filtering implied by what you pass here is added
-     * on top of that filtering.
-     */
-    override fun eventPattern(eventPattern: EventPattern) {
-      cdkBuilder.eventPattern(eventPattern.let(EventPattern::unwrap))
-    }
-
-    /**
-     * @param eventPattern Additional restrictions for the event to route to the specified target.
-     * The method that generates the rule probably imposes some type of event
-     * filtering. The filtering implied by what you pass here is added
-     * on top of that filtering.
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("049d7415c09e92ccc71acf1adf00a5e512d9443464a486f308048d6ca94e848e")
-    override fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit): Unit =
-        eventPattern(EventPattern(eventPattern))
-
-    /**
-     * @param ruleName A name for the rule.
-     */
-    override fun ruleName(ruleName: String) {
-      cdkBuilder.ruleName(ruleName)
-    }
-
-    public fun build(): software.amazon.awscdk.services.events.EventCommonOptions =
-        cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.events.EventCommonOptions,
-  ) : EventCommonOptions {
     /**
      * The scope to use if the source of the rule and its target are in different Stacks (but in the
      * same account &amp; region).
@@ -149,7 +16,7 @@ public interface EventCommonOptions {
      *
      * Default: - none (the main scope will be used, even for cross-stack Events)
      */
-    override fun crossStackScope(): Construct? =
+    public fun crossStackScope(): Construct? =
         unwrap(this).getCrossStackScope()?.let(Construct::wrap)
 
     /**
@@ -157,20 +24,19 @@ public interface EventCommonOptions {
      *
      * Default: - No description
      */
-    override fun description(): String? = unwrap(this).getDescription()
+    public fun description(): String? = unwrap(this).getDescription()
 
     /**
      * Additional restrictions for the event to route to the specified target.
      *
-     * The method that generates the rule probably imposes some type of event
-     * filtering. The filtering implied by what you pass here is added
-     * on top of that filtering.
+     * The method that generates the rule probably imposes some type of event filtering. The
+     * filtering implied by what you pass here is added on top of that filtering.
      *
      * Default: - No additional filtering based on an event pattern.
      *
      * [Documentation](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html)
      */
-    override fun eventPattern(): EventPattern? =
+    public fun eventPattern(): EventPattern? =
         unwrap(this).getEventPattern()?.let(EventPattern::wrap)
 
     /**
@@ -178,23 +44,149 @@ public interface EventCommonOptions {
      *
      * Default: AWS CloudFormation generates a unique physical ID.
      */
-    override fun ruleName(): String? = unwrap(this).getRuleName()
-  }
+    public fun ruleName(): String? = unwrap(this).getRuleName()
 
-  public companion object {
-    init {
+    /** A builder for [EventCommonOptions] */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * @param crossStackScope The scope to use if the source of the rule and its target are in
+         *   different Stacks (but in the same account &amp; region). This helps dealing with cycles
+         *   that often arise in these situations.
+         */
+        public fun crossStackScope(crossStackScope: Construct)
 
+        /** @param description A description of the rule's purpose. */
+        public fun description(description: String)
+
+        /**
+         * @param eventPattern Additional restrictions for the event to route to the specified
+         *   target. The method that generates the rule probably imposes some type of event
+         *   filtering. The filtering implied by what you pass here is added on top of that
+         *   filtering.
+         */
+        public fun eventPattern(eventPattern: EventPattern)
+
+        /**
+         * @param eventPattern Additional restrictions for the event to route to the specified
+         *   target. The method that generates the rule probably imposes some type of event
+         *   filtering. The filtering implied by what you pass here is added on top of that
+         *   filtering.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("049d7415c09e92ccc71acf1adf00a5e512d9443464a486f308048d6ca94e848e")
+        public fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit)
+
+        /** @param ruleName A name for the rule. */
+        public fun ruleName(ruleName: String)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): EventCommonOptions {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.events.EventCommonOptions.Builder =
+            software.amazon.awscdk.services.events.EventCommonOptions.builder()
+
+        /**
+         * @param crossStackScope The scope to use if the source of the rule and its target are in
+         *   different Stacks (but in the same account &amp; region). This helps dealing with cycles
+         *   that often arise in these situations.
+         */
+        override fun crossStackScope(crossStackScope: Construct) {
+            cdkBuilder.crossStackScope(crossStackScope.let(Construct::unwrap))
+        }
+
+        /** @param description A description of the rule's purpose. */
+        override fun description(description: String) {
+            cdkBuilder.description(description)
+        }
+
+        /**
+         * @param eventPattern Additional restrictions for the event to route to the specified
+         *   target. The method that generates the rule probably imposes some type of event
+         *   filtering. The filtering implied by what you pass here is added on top of that
+         *   filtering.
+         */
+        override fun eventPattern(eventPattern: EventPattern) {
+            cdkBuilder.eventPattern(eventPattern.let(EventPattern::unwrap))
+        }
+
+        /**
+         * @param eventPattern Additional restrictions for the event to route to the specified
+         *   target. The method that generates the rule probably imposes some type of event
+         *   filtering. The filtering implied by what you pass here is added on top of that
+         *   filtering.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("049d7415c09e92ccc71acf1adf00a5e512d9443464a486f308048d6ca94e848e")
+        override fun eventPattern(eventPattern: EventPattern.Builder.() -> Unit): Unit =
+            eventPattern(EventPattern(eventPattern))
+
+        /** @param ruleName A name for the rule. */
+        override fun ruleName(ruleName: String) {
+            cdkBuilder.ruleName(ruleName)
+        }
+
+        public fun build(): software.amazon.awscdk.services.events.EventCommonOptions =
+            cdkBuilder.build()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.events.EventCommonOptions):
-        EventCommonOptions = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.events.EventCommonOptions,
+    ) : EventCommonOptions {
+        /**
+         * The scope to use if the source of the rule and its target are in different Stacks (but in
+         * the same account &amp; region).
+         *
+         * This helps dealing with cycles that often arise in these situations.
+         *
+         * Default: - none (the main scope will be used, even for cross-stack Events)
+         */
+        override fun crossStackScope(): Construct? =
+            unwrap(this).getCrossStackScope()?.let(Construct::wrap)
 
-    internal fun unwrap(wrapped: EventCommonOptions):
-        software.amazon.awscdk.services.events.EventCommonOptions = (wrapped as Wrapper).cdkObject
-  }
+        /**
+         * A description of the rule's purpose.
+         *
+         * Default: - No description
+         */
+        override fun description(): String? = unwrap(this).getDescription()
+
+        /**
+         * Additional restrictions for the event to route to the specified target.
+         *
+         * The method that generates the rule probably imposes some type of event filtering. The
+         * filtering implied by what you pass here is added on top of that filtering.
+         *
+         * Default: - No additional filtering based on an event pattern.
+         *
+         * [Documentation](https://docs.aws.amazon.com/eventbridge/latest/userguide/eventbridge-and-event-patterns.html)
+         */
+        override fun eventPattern(): EventPattern? =
+            unwrap(this).getEventPattern()?.let(EventPattern::wrap)
+
+        /**
+         * A name for the rule.
+         *
+         * Default: AWS CloudFormation generates a unique physical ID.
+         */
+        override fun ruleName(): String? = unwrap(this).getRuleName()
+    }
+
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): EventCommonOptions {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.events.EventCommonOptions
+        ): EventCommonOptions = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: EventCommonOptions
+        ): software.amazon.awscdk.services.events.EventCommonOptions =
+            (wrapped as Wrapper).cdkObject
+    }
 }

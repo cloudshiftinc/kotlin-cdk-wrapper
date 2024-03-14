@@ -5,63 +5,54 @@ import kotlin.String
 import kotlin.Unit
 
 public interface S3LocationConfig {
-  /**
-   * Uniquely identifies the resource in Amazon S3.
-   */
-  public fun uri(): String
+    /** Uniquely identifies the resource in Amazon S3. */
+    public fun uri(): String
 
-  /**
-   * A builder for [S3LocationConfig]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param uri Uniquely identifies the resource in Amazon S3. 
-     */
-    public fun uri(uri: String)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder:
-        software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig.Builder =
-        software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig.builder()
-
-    /**
-     * @param uri Uniquely identifies the resource in Amazon S3. 
-     */
-    override fun uri(uri: String) {
-      cdkBuilder.uri(uri)
+    /** A builder for [S3LocationConfig] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param uri Uniquely identifies the resource in Amazon S3. */
+        public fun uri(uri: String)
     }
 
-    public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig =
-        cdkBuilder.build()
-  }
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig.Builder =
+            software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig.builder()
 
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig,
-  ) : S3LocationConfig {
-    /**
-     * Uniquely identifies the resource in Amazon S3.
-     */
-    override fun uri(): String = unwrap(this).getUri()
-  }
+        /** @param uri Uniquely identifies the resource in Amazon S3. */
+        override fun uri(uri: String) {
+            cdkBuilder.uri(uri)
+        }
 
-  public companion object {
-    init {
-
+        public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig =
+            cdkBuilder.build()
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): S3LocationConfig {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject:
+            software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig,
+    ) : S3LocationConfig {
+        /** Uniquely identifies the resource in Amazon S3. */
+        override fun uri(): String = unwrap(this).getUri()
     }
 
-    internal
-        fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig):
-        S3LocationConfig = Wrapper(cdkObject)
+    public companion object {
+        init {}
 
-    internal fun unwrap(wrapped: S3LocationConfig):
-        software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig = (wrapped as
-        Wrapper).cdkObject
-  }
+        public operator fun invoke(block: Builder.() -> Unit = {}): S3LocationConfig {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig
+        ): S3LocationConfig = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: S3LocationConfig
+        ): software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig =
+            (wrapped as Wrapper).cdkObject
+    }
 }

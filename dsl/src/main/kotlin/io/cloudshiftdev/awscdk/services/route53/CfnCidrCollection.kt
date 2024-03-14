@@ -5,279 +5,264 @@ import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnCidrCollection internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.route53.CfnCidrCollection,
+public open class CfnCidrCollection
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.route53.CfnCidrCollection,
 ) : CfnResource(cdkObject), IInspectable {
-  /**
-   * "The Amazon resource name (ARN) to uniquely identify the AWS resource.
-   */
-  public open fun attrArn(): String = unwrap(this).getAttrArn()
+    /** "The Amazon resource name (ARN) to uniquely identify the AWS resource. */
+    public open fun attrArn(): String = unwrap(this).getAttrArn()
 
-  /**
-   * The UUID of the CIDR collection.
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
-
-  /**
-   * Examines the CloudFormation resource and discloses attributes.
-   *
-   * @param inspector tree inspector to collect and process attributes. 
-   */
-  public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-  }
-
-  /**
-   * A complex type that contains information about the list of CIDR locations.
-   */
-  public open fun locations(): Any? = unwrap(this).getLocations()
-
-  /**
-   * A complex type that contains information about the list of CIDR locations.
-   */
-  public open fun locations(`value`: IResolvable) {
-    unwrap(this).setLocations(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * A complex type that contains information about the list of CIDR locations.
-   */
-  public open fun locations(__idx_ac66f0: List<Any>) {
-    unwrap(this).setLocations(__idx_ac66f0)
-  }
-
-  /**
-   * A complex type that contains information about the list of CIDR locations.
-   */
-  public open fun locations(vararg __idx_ac66f0: Any): Unit = locations(__idx_ac66f0.toList())
-
-  /**
-   * The name of a CIDR collection.
-   */
-  public open fun name(): String = unwrap(this).getName()
-
-  /**
-   * The name of a CIDR collection.
-   */
-  public open fun name(`value`: String) {
-    unwrap(this).setName(`value`)
-  }
-
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.route53.CfnCidrCollection].
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * A complex type that contains information about the list of CIDR locations.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-locations)
-     * @param locations A complex type that contains information about the list of CIDR locations. 
-     */
-    public fun locations(locations: IResolvable)
+    /** The UUID of the CIDR collection. */
+    public open fun attrId(): String = unwrap(this).getAttrId()
 
     /**
-     * A complex type that contains information about the list of CIDR locations.
+     * Examines the CloudFormation resource and discloses attributes.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-locations)
-     * @param locations A complex type that contains information about the list of CIDR locations. 
+     * @param inspector tree inspector to collect and process attributes.
      */
-    public fun locations(locations: List<Any>)
-
-    /**
-     * A complex type that contains information about the list of CIDR locations.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-locations)
-     * @param locations A complex type that contains information about the list of CIDR locations. 
-     */
-    public fun locations(vararg locations: Any)
-
-    /**
-     * The name of a CIDR collection.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-name)
-     * @param name The name of a CIDR collection. 
-     */
-    public fun name(name: String)
-  }
-
-  private class BuilderImpl(
-    scope: SoftwareConstructsConstruct,
-    id: String,
-  ) : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.route53.CfnCidrCollection.Builder =
-        software.amazon.awscdk.services.route53.CfnCidrCollection.Builder.create(scope, id)
-
-    /**
-     * A complex type that contains information about the list of CIDR locations.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-locations)
-     * @param locations A complex type that contains information about the list of CIDR locations. 
-     */
-    override fun locations(locations: IResolvable) {
-      cdkBuilder.locations(locations.let(IResolvable::unwrap))
+    public override fun inspect(inspector: TreeInspector) {
+        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
     }
 
-    /**
-     * A complex type that contains information about the list of CIDR locations.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-locations)
-     * @param locations A complex type that contains information about the list of CIDR locations. 
-     */
-    override fun locations(locations: List<Any>) {
-      cdkBuilder.locations(locations)
+    /** A complex type that contains information about the list of CIDR locations. */
+    public open fun locations(): Any? = unwrap(this).getLocations()
+
+    /** A complex type that contains information about the list of CIDR locations. */
+    public open fun locations(`value`: IResolvable) {
+        unwrap(this).setLocations(`value`.let(IResolvable::unwrap))
     }
 
-    /**
-     * A complex type that contains information about the list of CIDR locations.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-locations)
-     * @param locations A complex type that contains information about the list of CIDR locations. 
-     */
-    override fun locations(vararg locations: Any): Unit = locations(locations.toList())
-
-    /**
-     * The name of a CIDR collection.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-name)
-     * @param name The name of a CIDR collection. 
-     */
-    override fun name(name: String) {
-      cdkBuilder.name(name)
+    /** A complex type that contains information about the list of CIDR locations. */
+    public open fun locations(__idx_ac66f0: List<Any>) {
+        unwrap(this).setLocations(__idx_ac66f0)
     }
 
-    public fun build(): software.amazon.awscdk.services.route53.CfnCidrCollection =
-        cdkBuilder.build()
-  }
+    /** A complex type that contains information about the list of CIDR locations. */
+    public open fun locations(vararg __idx_ac66f0: Any): Unit = locations(__idx_ac66f0.toList())
 
-  public companion object {
-    init {
+    /** The name of a CIDR collection. */
+    public open fun name(): String = unwrap(this).getName()
 
+    /** The name of a CIDR collection. */
+    public open fun name(`value`: String) {
+        unwrap(this).setName(`value`)
     }
 
-    public operator fun invoke(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      block: Builder.() -> Unit = {},
-    ): CfnCidrCollection {
-      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-      return CfnCidrCollection(builderImpl.apply(block).build())
-    }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnCidrCollection):
-        CfnCidrCollection = CfnCidrCollection(cdkObject)
-
-    internal fun unwrap(wrapped: CfnCidrCollection):
-        software.amazon.awscdk.services.route53.CfnCidrCollection = wrapped.cdkObject
-  }
-
-  public interface LocationProperty {
-    /**
-     * List of CIDR blocks.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-cidrcollection-location.html#cfn-route53-cidrcollection-location-cidrlist)
-     */
-    public fun cidrList(): List<String>
-
-    /**
-     * The CIDR collection location name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-cidrcollection-location.html#cfn-route53-cidrcollection-location-locationname)
-     */
-    public fun locationName(): String
-
-    /**
-     * A builder for [LocationProperty]
-     */
+    /** A fluent builder for [io.cloudshiftdev.awscdk.services.route53.CfnCidrCollection]. */
     @CdkDslMarker
     public interface Builder {
-      /**
-       * @param cidrList List of CIDR blocks. 
-       */
-      public fun cidrList(cidrList: List<String>)
+        /**
+         * A complex type that contains information about the list of CIDR locations.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-locations)
+         *
+         * @param locations A complex type that contains information about the list of CIDR
+         *   locations.
+         */
+        public fun locations(locations: IResolvable)
 
-      /**
-       * @param cidrList List of CIDR blocks. 
-       */
-      public fun cidrList(vararg cidrList: String)
+        /**
+         * A complex type that contains information about the list of CIDR locations.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-locations)
+         *
+         * @param locations A complex type that contains information about the list of CIDR
+         *   locations.
+         */
+        public fun locations(locations: List<Any>)
 
-      /**
-       * @param locationName The CIDR collection location name. 
-       */
-      public fun locationName(locationName: String)
+        /**
+         * A complex type that contains information about the list of CIDR locations.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-locations)
+         *
+         * @param locations A complex type that contains information about the list of CIDR
+         *   locations.
+         */
+        public fun locations(vararg locations: Any)
+
+        /**
+         * The name of a CIDR collection.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-name)
+         *
+         * @param name The name of a CIDR collection.
+         */
+        public fun name(name: String)
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.route53.CfnCidrCollection.LocationProperty.Builder =
-          software.amazon.awscdk.services.route53.CfnCidrCollection.LocationProperty.builder()
+    private class BuilderImpl(
+        scope: SoftwareConstructsConstruct,
+        id: String,
+    ) : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.route53.CfnCidrCollection.Builder =
+            software.amazon.awscdk.services.route53.CfnCidrCollection.Builder.create(scope, id)
 
-      /**
-       * @param cidrList List of CIDR blocks. 
-       */
-      override fun cidrList(cidrList: List<String>) {
-        cdkBuilder.cidrList(cidrList)
-      }
+        /**
+         * A complex type that contains information about the list of CIDR locations.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-locations)
+         *
+         * @param locations A complex type that contains information about the list of CIDR
+         *   locations.
+         */
+        override fun locations(locations: IResolvable) {
+            cdkBuilder.locations(locations.let(IResolvable::unwrap))
+        }
 
-      /**
-       * @param cidrList List of CIDR blocks. 
-       */
-      override fun cidrList(vararg cidrList: String): Unit = cidrList(cidrList.toList())
+        /**
+         * A complex type that contains information about the list of CIDR locations.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-locations)
+         *
+         * @param locations A complex type that contains information about the list of CIDR
+         *   locations.
+         */
+        override fun locations(locations: List<Any>) {
+            cdkBuilder.locations(locations)
+        }
 
-      /**
-       * @param locationName The CIDR collection location name. 
-       */
-      override fun locationName(locationName: String) {
-        cdkBuilder.locationName(locationName)
-      }
+        /**
+         * A complex type that contains information about the list of CIDR locations.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-locations)
+         *
+         * @param locations A complex type that contains information about the list of CIDR
+         *   locations.
+         */
+        override fun locations(vararg locations: Any): Unit = locations(locations.toList())
 
-      public fun build(): software.amazon.awscdk.services.route53.CfnCidrCollection.LocationProperty
-          = cdkBuilder.build()
-    }
+        /**
+         * The name of a CIDR collection.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-cidrcollection.html#cfn-route53-cidrcollection-name)
+         *
+         * @param name The name of a CIDR collection.
+         */
+        override fun name(name: String) {
+            cdkBuilder.name(name)
+        }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.route53.CfnCidrCollection.LocationProperty,
-    ) : LocationProperty {
-      /**
-       * List of CIDR blocks.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-cidrcollection-location.html#cfn-route53-cidrcollection-location-cidrlist)
-       */
-      override fun cidrList(): List<String> = unwrap(this).getCidrList()
-
-      /**
-       * The CIDR collection location name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-cidrcollection-location.html#cfn-route53-cidrcollection-location-locationname)
-       */
-      override fun locationName(): String = unwrap(this).getLocationName()
+        public fun build(): software.amazon.awscdk.services.route53.CfnCidrCollection =
+            cdkBuilder.build()
     }
 
     public companion object {
-      init {
+        init {}
 
-      }
+        public operator fun invoke(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            block: Builder.() -> Unit = {},
+        ): CfnCidrCollection {
+            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+            return CfnCidrCollection(builderImpl.apply(block).build())
+        }
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): LocationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.route53.CfnCidrCollection
+        ): CfnCidrCollection = CfnCidrCollection(cdkObject)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnCidrCollection.LocationProperty):
-          LocationProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LocationProperty):
-          software.amazon.awscdk.services.route53.CfnCidrCollection.LocationProperty = (wrapped as
-          Wrapper).cdkObject
+        internal fun unwrap(
+            wrapped: CfnCidrCollection
+        ): software.amazon.awscdk.services.route53.CfnCidrCollection = wrapped.cdkObject
     }
-  }
+
+    public interface LocationProperty {
+        /**
+         * List of CIDR blocks.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-cidrcollection-location.html#cfn-route53-cidrcollection-location-cidrlist)
+         */
+        public fun cidrList(): List<String>
+
+        /**
+         * The CIDR collection location name.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-cidrcollection-location.html#cfn-route53-cidrcollection-location-locationname)
+         */
+        public fun locationName(): String
+
+        /** A builder for [LocationProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param cidrList List of CIDR blocks. */
+            public fun cidrList(cidrList: List<String>)
+
+            /** @param cidrList List of CIDR blocks. */
+            public fun cidrList(vararg cidrList: String)
+
+            /** @param locationName The CIDR collection location name. */
+            public fun locationName(locationName: String)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.route53.CfnCidrCollection.LocationProperty.Builder =
+                software.amazon.awscdk.services.route53.CfnCidrCollection.LocationProperty.builder()
+
+            /** @param cidrList List of CIDR blocks. */
+            override fun cidrList(cidrList: List<String>) {
+                cdkBuilder.cidrList(cidrList)
+            }
+
+            /** @param cidrList List of CIDR blocks. */
+            override fun cidrList(vararg cidrList: String): Unit = cidrList(cidrList.toList())
+
+            /** @param locationName The CIDR collection location name. */
+            override fun locationName(locationName: String) {
+                cdkBuilder.locationName(locationName)
+            }
+
+            public fun build():
+                software.amazon.awscdk.services.route53.CfnCidrCollection.LocationProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.route53.CfnCidrCollection.LocationProperty,
+        ) : LocationProperty {
+            /**
+             * List of CIDR blocks.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-cidrcollection-location.html#cfn-route53-cidrcollection-location-cidrlist)
+             */
+            override fun cidrList(): List<String> = unwrap(this).getCidrList()
+
+            /**
+             * The CIDR collection location name.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-cidrcollection-location.html#cfn-route53-cidrcollection-location-locationname)
+             */
+            override fun locationName(): String = unwrap(this).getLocationName()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): LocationProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.route53.CfnCidrCollection.LocationProperty
+            ): LocationProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: LocationProperty
+            ): software.amazon.awscdk.services.route53.CfnCidrCollection.LocationProperty =
+                (wrapped as Wrapper).cdkObject
+        }
+    }
 }

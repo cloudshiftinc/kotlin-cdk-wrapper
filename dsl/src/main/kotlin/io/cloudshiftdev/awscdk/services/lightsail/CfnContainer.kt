@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -16,2109 +17,2055 @@ import kotlin.Suppress
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnContainer internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer,
+public open class CfnContainer
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
-  /**
-   * The Amazon Resource Name (ARN) of the container.
-   */
-  public open fun attrContainerArn(): String = unwrap(this).getAttrContainerArn()
+    /** The Amazon Resource Name (ARN) of the container. */
+    public open fun attrContainerArn(): String = unwrap(this).getAttrContainerArn()
 
-  /**
-   * The principle Amazon Resource Name (ARN) of the role.
-   */
-  public open fun attrPrincipalArn(): String = unwrap(this).getAttrPrincipalArn()
+    /** The principle Amazon Resource Name (ARN) of the role. */
+    public open fun attrPrincipalArn(): String = unwrap(this).getAttrPrincipalArn()
 
-  /**
-   * The principle Amazon Resource Name (ARN) of the role.
-   */
-  public open fun attrPrivateRegistryAccessEcrImagePullerRolePrincipalArn(): String =
-      unwrap(this).getAttrPrivateRegistryAccessEcrImagePullerRolePrincipalArn()
+    /** The principle Amazon Resource Name (ARN) of the role. */
+    public open fun attrPrivateRegistryAccessEcrImagePullerRolePrincipalArn(): String =
+        unwrap(this).getAttrPrivateRegistryAccessEcrImagePullerRolePrincipalArn()
 
-  /**
-   * The publicly accessible URL of the container service.
-   *
-   * If no public endpoint is specified in the current deployment, this URL returns a 404 response.
-   */
-  public open fun attrUrl(): String = unwrap(this).getAttrUrl()
-
-  /**
-   * An object that describes the current container deployment of the container service.
-   */
-  public open fun containerServiceDeployment(): Any? = unwrap(this).getContainerServiceDeployment()
-
-  /**
-   * An object that describes the current container deployment of the container service.
-   */
-  public open fun containerServiceDeployment(`value`: IResolvable) {
-    unwrap(this).setContainerServiceDeployment(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * An object that describes the current container deployment of the container service.
-   */
-  public open fun containerServiceDeployment(`value`: ContainerServiceDeploymentProperty) {
-    unwrap(this).setContainerServiceDeployment(`value`.let(ContainerServiceDeploymentProperty::unwrap))
-  }
-
-  /**
-   * An object that describes the current container deployment of the container service.
-   */
-  @Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("f054c56b7195a01dbd63be82d391c716c6500d8a63ffcbd1007cec40f6745569")
-  public open
-      fun containerServiceDeployment(`value`: ContainerServiceDeploymentProperty.Builder.() -> Unit):
-      Unit = containerServiceDeployment(ContainerServiceDeploymentProperty(`value`))
-
-  /**
-   * Examines the CloudFormation resource and discloses attributes.
-   *
-   * @param inspector tree inspector to collect and process attributes. 
-   */
-  public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-  }
-
-  /**
-   * A Boolean value indicating whether the container service is disabled.
-   */
-  public open fun isDisabled(): Any? = unwrap(this).getIsDisabled()
-
-  /**
-   * A Boolean value indicating whether the container service is disabled.
-   */
-  public open fun isDisabled(`value`: Boolean) {
-    unwrap(this).setIsDisabled(`value`)
-  }
-
-  /**
-   * A Boolean value indicating whether the container service is disabled.
-   */
-  public open fun isDisabled(`value`: IResolvable) {
-    unwrap(this).setIsDisabled(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * The power specification of the container service.
-   */
-  public open fun power(): String = unwrap(this).getPower()
-
-  /**
-   * The power specification of the container service.
-   */
-  public open fun power(`value`: String) {
-    unwrap(this).setPower(`value`)
-  }
-
-  /**
-   * An object that describes the configuration for the container service to access private
-   * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR ) private
-   * repositories.
-   */
-  public open fun privateRegistryAccess(): Any? = unwrap(this).getPrivateRegistryAccess()
-
-  /**
-   * An object that describes the configuration for the container service to access private
-   * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR ) private
-   * repositories.
-   */
-  public open fun privateRegistryAccess(`value`: IResolvable) {
-    unwrap(this).setPrivateRegistryAccess(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * An object that describes the configuration for the container service to access private
-   * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR ) private
-   * repositories.
-   */
-  public open fun privateRegistryAccess(`value`: PrivateRegistryAccessProperty) {
-    unwrap(this).setPrivateRegistryAccess(`value`.let(PrivateRegistryAccessProperty::unwrap))
-  }
-
-  /**
-   * An object that describes the configuration for the container service to access private
-   * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR ) private
-   * repositories.
-   */
-  @Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("38482a3fa868b9cf1aeb015531e2d0b7ac0ee30c2bc62b924eb011a5d4b93605")
-  public open fun privateRegistryAccess(`value`: PrivateRegistryAccessProperty.Builder.() -> Unit):
-      Unit = privateRegistryAccess(PrivateRegistryAccessProperty(`value`))
-
-  /**
-   * The public domain name of the container service, such as `example.com` and `www.example.com` .
-   */
-  public open fun publicDomainNames(): Any? = unwrap(this).getPublicDomainNames()
-
-  /**
-   * The public domain name of the container service, such as `example.com` and `www.example.com` .
-   */
-  public open fun publicDomainNames(`value`: IResolvable) {
-    unwrap(this).setPublicDomainNames(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * The public domain name of the container service, such as `example.com` and `www.example.com` .
-   */
-  public open fun publicDomainNames(__idx_ac66f0: List<Any>) {
-    unwrap(this).setPublicDomainNames(__idx_ac66f0)
-  }
-
-  /**
-   * The public domain name of the container service, such as `example.com` and `www.example.com` .
-   */
-  public open fun publicDomainNames(vararg __idx_ac66f0: Any): Unit =
-      publicDomainNames(__idx_ac66f0.toList())
-
-  /**
-   * The scale specification of the container service.
-   */
-  public open fun scale(): Number = unwrap(this).getScale()
-
-  /**
-   * The scale specification of the container service.
-   */
-  public open fun scale(`value`: Number) {
-    unwrap(this).setScale(`value`)
-  }
-
-  /**
-   * The name of the container service.
-   */
-  public open fun serviceName(): String = unwrap(this).getServiceName()
-
-  /**
-   * The name of the container service.
-   */
-  public open fun serviceName(`value`: String) {
-    unwrap(this).setServiceName(`value`)
-  }
-
-  /**
-   * Tag Manager which manages the tags for this resource.
-   */
-  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
-
-  /**
-   * An array of key-value pairs to apply to this resource.
-   */
-  public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
-      emptyList()
-
-  /**
-   * An array of key-value pairs to apply to this resource.
-   */
-  public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
-  }
-
-  /**
-   * An array of key-value pairs to apply to this resource.
-   */
-  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
-
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.lightsail.CfnContainer].
-   */
-  @CdkDslMarker
-  public interface Builder {
     /**
-     * An object that describes the current container deployment of the container service.
+     * The publicly accessible URL of the container service.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-containerservicedeployment)
-     * @param containerServiceDeployment An object that describes the current container deployment
-     * of the container service. 
+     * If no public endpoint is specified in the current deployment, this URL returns a 404
+     * response.
      */
-    public fun containerServiceDeployment(containerServiceDeployment: IResolvable)
+    public open fun attrUrl(): String = unwrap(this).getAttrUrl()
+
+    /** An object that describes the current container deployment of the container service. */
+    public open fun containerServiceDeployment(): Any? =
+        unwrap(this).getContainerServiceDeployment()
+
+    /** An object that describes the current container deployment of the container service. */
+    public open fun containerServiceDeployment(`value`: IResolvable) {
+        unwrap(this).setContainerServiceDeployment(`value`.let(IResolvable::unwrap))
+    }
+
+    /** An object that describes the current container deployment of the container service. */
+    public open fun containerServiceDeployment(`value`: ContainerServiceDeploymentProperty) {
+        unwrap(this)
+            .setContainerServiceDeployment(`value`.let(ContainerServiceDeploymentProperty::unwrap))
+    }
+
+    /** An object that describes the current container deployment of the container service. */
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("f054c56b7195a01dbd63be82d391c716c6500d8a63ffcbd1007cec40f6745569")
+    public open fun containerServiceDeployment(
+        `value`: ContainerServiceDeploymentProperty.Builder.() -> Unit
+    ): Unit = containerServiceDeployment(ContainerServiceDeploymentProperty(`value`))
 
     /**
-     * An object that describes the current container deployment of the container service.
+     * Examines the CloudFormation resource and discloses attributes.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-containerservicedeployment)
-     * @param containerServiceDeployment An object that describes the current container deployment
-     * of the container service. 
+     * @param inspector tree inspector to collect and process attributes.
      */
-    public
-        fun containerServiceDeployment(containerServiceDeployment: ContainerServiceDeploymentProperty)
+    public override fun inspect(inspector: TreeInspector) {
+        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    }
+
+    /** A Boolean value indicating whether the container service is disabled. */
+    public open fun isDisabled(): Any? = unwrap(this).getIsDisabled()
+
+    /** A Boolean value indicating whether the container service is disabled. */
+    public open fun isDisabled(`value`: Boolean) {
+        unwrap(this).setIsDisabled(`value`)
+    }
+
+    /** A Boolean value indicating whether the container service is disabled. */
+    public open fun isDisabled(`value`: IResolvable) {
+        unwrap(this).setIsDisabled(`value`.let(IResolvable::unwrap))
+    }
+
+    /** The power specification of the container service. */
+    public open fun power(): String = unwrap(this).getPower()
+
+    /** The power specification of the container service. */
+    public open fun power(`value`: String) {
+        unwrap(this).setPower(`value`)
+    }
 
     /**
-     * An object that describes the current container deployment of the container service.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-containerservicedeployment)
-     * @param containerServiceDeployment An object that describes the current container deployment
-     * of the container service. 
+     * An object that describes the configuration for the container service to access private
+     * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR )
+     * private repositories.
+     */
+    public open fun privateRegistryAccess(): Any? = unwrap(this).getPrivateRegistryAccess()
+
+    /**
+     * An object that describes the configuration for the container service to access private
+     * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR )
+     * private repositories.
+     */
+    public open fun privateRegistryAccess(`value`: IResolvable) {
+        unwrap(this).setPrivateRegistryAccess(`value`.let(IResolvable::unwrap))
+    }
+
+    /**
+     * An object that describes the configuration for the container service to access private
+     * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR )
+     * private repositories.
+     */
+    public open fun privateRegistryAccess(`value`: PrivateRegistryAccessProperty) {
+        unwrap(this).setPrivateRegistryAccess(`value`.let(PrivateRegistryAccessProperty::unwrap))
+    }
+
+    /**
+     * An object that describes the configuration for the container service to access private
+     * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR )
+     * private repositories.
      */
     @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("910de1d67437b07873e857602657233912e64a04b1bd95e036f3e6b94de73148")
-    public
-        fun containerServiceDeployment(containerServiceDeployment: ContainerServiceDeploymentProperty.Builder.() -> Unit)
-
-    /**
-     * A Boolean value indicating whether the container service is disabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-isdisabled)
-     * @param isDisabled A Boolean value indicating whether the container service is disabled. 
-     */
-    public fun isDisabled(isDisabled: Boolean)
-
-    /**
-     * A Boolean value indicating whether the container service is disabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-isdisabled)
-     * @param isDisabled A Boolean value indicating whether the container service is disabled. 
-     */
-    public fun isDisabled(isDisabled: IResolvable)
-
-    /**
-     * The power specification of the container service.
-     *
-     * The power specifies the amount of RAM, the number of vCPUs, and the base price of the
-     * container service.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-power)
-     * @param power The power specification of the container service. 
-     */
-    public fun power(power: String)
-
-    /**
-     * An object that describes the configuration for the container service to access private
-     * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR ) private
-     * repositories.
-     *
-     * For more information, see [Configuring access to an Amazon ECR private repository for an
-     * Amazon Lightsail container
-     * service](https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-container-service-ecr-private-repo-access)
-     * in the *Amazon Lightsail Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-privateregistryaccess)
-     * @param privateRegistryAccess An object that describes the configuration for the container
-     * service to access private container image repositories, such as Amazon Elastic Container
-     * Registry ( Amazon ECR ) private repositories. 
-     */
-    public fun privateRegistryAccess(privateRegistryAccess: IResolvable)
-
-    /**
-     * An object that describes the configuration for the container service to access private
-     * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR ) private
-     * repositories.
-     *
-     * For more information, see [Configuring access to an Amazon ECR private repository for an
-     * Amazon Lightsail container
-     * service](https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-container-service-ecr-private-repo-access)
-     * in the *Amazon Lightsail Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-privateregistryaccess)
-     * @param privateRegistryAccess An object that describes the configuration for the container
-     * service to access private container image repositories, such as Amazon Elastic Container
-     * Registry ( Amazon ECR ) private repositories. 
-     */
-    public fun privateRegistryAccess(privateRegistryAccess: PrivateRegistryAccessProperty)
-
-    /**
-     * An object that describes the configuration for the container service to access private
-     * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR ) private
-     * repositories.
-     *
-     * For more information, see [Configuring access to an Amazon ECR private repository for an
-     * Amazon Lightsail container
-     * service](https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-container-service-ecr-private-repo-access)
-     * in the *Amazon Lightsail Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-privateregistryaccess)
-     * @param privateRegistryAccess An object that describes the configuration for the container
-     * service to access private container image repositories, such as Amazon Elastic Container
-     * Registry ( Amazon ECR ) private repositories. 
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("51d988934b3c0025c7ccb6fe2246ff1029e269c5028299f7e8ee97c8f8ce44eb")
-    public
-        fun privateRegistryAccess(privateRegistryAccess: PrivateRegistryAccessProperty.Builder.() -> Unit)
+    @JvmName("38482a3fa868b9cf1aeb015531e2d0b7ac0ee30c2bc62b924eb011a5d4b93605")
+    public open fun privateRegistryAccess(
+        `value`: PrivateRegistryAccessProperty.Builder.() -> Unit
+    ): Unit = privateRegistryAccess(PrivateRegistryAccessProperty(`value`))
 
     /**
      * The public domain name of the container service, such as `example.com` and `www.example.com`
      * .
-     *
-     * You can specify up to four public domain names for a container service. The domain names that
-     * you specify are used when you create a deployment with a container that is configured as the
-     * public endpoint of your container service.
-     *
-     * If you don't specify public domain names, then you can use the default domain of the
-     * container service.
-     *
-     *
-     * You must create and validate an SSL/TLS certificate before you can use public domain names
-     * with your container service. Use the
-     * [AWS::Lightsail::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-certificate.html)
-     * resource to create a certificate for the public domain names that you want to use with your
-     * container service.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-publicdomainnames)
-     * @param publicDomainNames The public domain name of the container service, such as
-     * `example.com` and `www.example.com` . 
      */
-    public fun publicDomainNames(publicDomainNames: IResolvable)
+    public open fun publicDomainNames(): Any? = unwrap(this).getPublicDomainNames()
 
     /**
      * The public domain name of the container service, such as `example.com` and `www.example.com`
      * .
-     *
-     * You can specify up to four public domain names for a container service. The domain names that
-     * you specify are used when you create a deployment with a container that is configured as the
-     * public endpoint of your container service.
-     *
-     * If you don't specify public domain names, then you can use the default domain of the
-     * container service.
-     *
-     *
-     * You must create and validate an SSL/TLS certificate before you can use public domain names
-     * with your container service. Use the
-     * [AWS::Lightsail::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-certificate.html)
-     * resource to create a certificate for the public domain names that you want to use with your
-     * container service.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-publicdomainnames)
-     * @param publicDomainNames The public domain name of the container service, such as
-     * `example.com` and `www.example.com` . 
      */
-    public fun publicDomainNames(publicDomainNames: List<Any>)
-
-    /**
-     * The public domain name of the container service, such as `example.com` and `www.example.com`
-     * .
-     *
-     * You can specify up to four public domain names for a container service. The domain names that
-     * you specify are used when you create a deployment with a container that is configured as the
-     * public endpoint of your container service.
-     *
-     * If you don't specify public domain names, then you can use the default domain of the
-     * container service.
-     *
-     *
-     * You must create and validate an SSL/TLS certificate before you can use public domain names
-     * with your container service. Use the
-     * [AWS::Lightsail::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-certificate.html)
-     * resource to create a certificate for the public domain names that you want to use with your
-     * container service.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-publicdomainnames)
-     * @param publicDomainNames The public domain name of the container service, such as
-     * `example.com` and `www.example.com` . 
-     */
-    public fun publicDomainNames(vararg publicDomainNames: Any)
-
-    /**
-     * The scale specification of the container service.
-     *
-     * The scale specifies the allocated compute nodes of the container service.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-scale)
-     * @param scale The scale specification of the container service. 
-     */
-    public fun scale(scale: Number)
-
-    /**
-     * The name of the container service.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-servicename)
-     * @param serviceName The name of the container service. 
-     */
-    public fun serviceName(serviceName: String)
-
-    /**
-     * An array of key-value pairs to apply to this resource.
-     *
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * in the *AWS CloudFormation User Guide* .
-     *
-     *
-     * The `Value` of `Tags` is optional for Lightsail resources.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-tags)
-     * @param tags An array of key-value pairs to apply to this resource. 
-     */
-    public fun tags(tags: List<CfnTag>)
-
-    /**
-     * An array of key-value pairs to apply to this resource.
-     *
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * in the *AWS CloudFormation User Guide* .
-     *
-     *
-     * The `Value` of `Tags` is optional for Lightsail resources.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-tags)
-     * @param tags An array of key-value pairs to apply to this resource. 
-     */
-    public fun tags(vararg tags: CfnTag)
-  }
-
-  private class BuilderImpl(
-    scope: SoftwareConstructsConstruct,
-    id: String,
-  ) : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.lightsail.CfnContainer.Builder =
-        software.amazon.awscdk.services.lightsail.CfnContainer.Builder.create(scope, id)
-
-    /**
-     * An object that describes the current container deployment of the container service.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-containerservicedeployment)
-     * @param containerServiceDeployment An object that describes the current container deployment
-     * of the container service. 
-     */
-    override fun containerServiceDeployment(containerServiceDeployment: IResolvable) {
-      cdkBuilder.containerServiceDeployment(containerServiceDeployment.let(IResolvable::unwrap))
-    }
-
-    /**
-     * An object that describes the current container deployment of the container service.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-containerservicedeployment)
-     * @param containerServiceDeployment An object that describes the current container deployment
-     * of the container service. 
-     */
-    override
-        fun containerServiceDeployment(containerServiceDeployment: ContainerServiceDeploymentProperty) {
-      cdkBuilder.containerServiceDeployment(containerServiceDeployment.let(ContainerServiceDeploymentProperty::unwrap))
-    }
-
-    /**
-     * An object that describes the current container deployment of the container service.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-containerservicedeployment)
-     * @param containerServiceDeployment An object that describes the current container deployment
-     * of the container service. 
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("910de1d67437b07873e857602657233912e64a04b1bd95e036f3e6b94de73148")
-    override
-        fun containerServiceDeployment(containerServiceDeployment: ContainerServiceDeploymentProperty.Builder.() -> Unit):
-        Unit =
-        containerServiceDeployment(ContainerServiceDeploymentProperty(containerServiceDeployment))
-
-    /**
-     * A Boolean value indicating whether the container service is disabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-isdisabled)
-     * @param isDisabled A Boolean value indicating whether the container service is disabled. 
-     */
-    override fun isDisabled(isDisabled: Boolean) {
-      cdkBuilder.isDisabled(isDisabled)
-    }
-
-    /**
-     * A Boolean value indicating whether the container service is disabled.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-isdisabled)
-     * @param isDisabled A Boolean value indicating whether the container service is disabled. 
-     */
-    override fun isDisabled(isDisabled: IResolvable) {
-      cdkBuilder.isDisabled(isDisabled.let(IResolvable::unwrap))
-    }
-
-    /**
-     * The power specification of the container service.
-     *
-     * The power specifies the amount of RAM, the number of vCPUs, and the base price of the
-     * container service.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-power)
-     * @param power The power specification of the container service. 
-     */
-    override fun power(power: String) {
-      cdkBuilder.power(power)
-    }
-
-    /**
-     * An object that describes the configuration for the container service to access private
-     * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR ) private
-     * repositories.
-     *
-     * For more information, see [Configuring access to an Amazon ECR private repository for an
-     * Amazon Lightsail container
-     * service](https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-container-service-ecr-private-repo-access)
-     * in the *Amazon Lightsail Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-privateregistryaccess)
-     * @param privateRegistryAccess An object that describes the configuration for the container
-     * service to access private container image repositories, such as Amazon Elastic Container
-     * Registry ( Amazon ECR ) private repositories. 
-     */
-    override fun privateRegistryAccess(privateRegistryAccess: IResolvable) {
-      cdkBuilder.privateRegistryAccess(privateRegistryAccess.let(IResolvable::unwrap))
-    }
-
-    /**
-     * An object that describes the configuration for the container service to access private
-     * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR ) private
-     * repositories.
-     *
-     * For more information, see [Configuring access to an Amazon ECR private repository for an
-     * Amazon Lightsail container
-     * service](https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-container-service-ecr-private-repo-access)
-     * in the *Amazon Lightsail Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-privateregistryaccess)
-     * @param privateRegistryAccess An object that describes the configuration for the container
-     * service to access private container image repositories, such as Amazon Elastic Container
-     * Registry ( Amazon ECR ) private repositories. 
-     */
-    override fun privateRegistryAccess(privateRegistryAccess: PrivateRegistryAccessProperty) {
-      cdkBuilder.privateRegistryAccess(privateRegistryAccess.let(PrivateRegistryAccessProperty::unwrap))
-    }
-
-    /**
-     * An object that describes the configuration for the container service to access private
-     * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR ) private
-     * repositories.
-     *
-     * For more information, see [Configuring access to an Amazon ECR private repository for an
-     * Amazon Lightsail container
-     * service](https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-container-service-ecr-private-repo-access)
-     * in the *Amazon Lightsail Developer Guide* .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-privateregistryaccess)
-     * @param privateRegistryAccess An object that describes the configuration for the container
-     * service to access private container image repositories, such as Amazon Elastic Container
-     * Registry ( Amazon ECR ) private repositories. 
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("51d988934b3c0025c7ccb6fe2246ff1029e269c5028299f7e8ee97c8f8ce44eb")
-    override
-        fun privateRegistryAccess(privateRegistryAccess: PrivateRegistryAccessProperty.Builder.() -> Unit):
-        Unit = privateRegistryAccess(PrivateRegistryAccessProperty(privateRegistryAccess))
-
-    /**
-     * The public domain name of the container service, such as `example.com` and `www.example.com`
-     * .
-     *
-     * You can specify up to four public domain names for a container service. The domain names that
-     * you specify are used when you create a deployment with a container that is configured as the
-     * public endpoint of your container service.
-     *
-     * If you don't specify public domain names, then you can use the default domain of the
-     * container service.
-     *
-     *
-     * You must create and validate an SSL/TLS certificate before you can use public domain names
-     * with your container service. Use the
-     * [AWS::Lightsail::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-certificate.html)
-     * resource to create a certificate for the public domain names that you want to use with your
-     * container service.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-publicdomainnames)
-     * @param publicDomainNames The public domain name of the container service, such as
-     * `example.com` and `www.example.com` . 
-     */
-    override fun publicDomainNames(publicDomainNames: IResolvable) {
-      cdkBuilder.publicDomainNames(publicDomainNames.let(IResolvable::unwrap))
+    public open fun publicDomainNames(`value`: IResolvable) {
+        unwrap(this).setPublicDomainNames(`value`.let(IResolvable::unwrap))
     }
 
     /**
      * The public domain name of the container service, such as `example.com` and `www.example.com`
      * .
-     *
-     * You can specify up to four public domain names for a container service. The domain names that
-     * you specify are used when you create a deployment with a container that is configured as the
-     * public endpoint of your container service.
-     *
-     * If you don't specify public domain names, then you can use the default domain of the
-     * container service.
-     *
-     *
-     * You must create and validate an SSL/TLS certificate before you can use public domain names
-     * with your container service. Use the
-     * [AWS::Lightsail::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-certificate.html)
-     * resource to create a certificate for the public domain names that you want to use with your
-     * container service.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-publicdomainnames)
-     * @param publicDomainNames The public domain name of the container service, such as
-     * `example.com` and `www.example.com` . 
      */
-    override fun publicDomainNames(publicDomainNames: List<Any>) {
-      cdkBuilder.publicDomainNames(publicDomainNames)
+    public open fun publicDomainNames(__idx_ac66f0: List<Any>) {
+        unwrap(this).setPublicDomainNames(__idx_ac66f0)
     }
 
     /**
      * The public domain name of the container service, such as `example.com` and `www.example.com`
      * .
-     *
-     * You can specify up to four public domain names for a container service. The domain names that
-     * you specify are used when you create a deployment with a container that is configured as the
-     * public endpoint of your container service.
-     *
-     * If you don't specify public domain names, then you can use the default domain of the
-     * container service.
-     *
-     *
-     * You must create and validate an SSL/TLS certificate before you can use public domain names
-     * with your container service. Use the
-     * [AWS::Lightsail::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-certificate.html)
-     * resource to create a certificate for the public domain names that you want to use with your
-     * container service.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-publicdomainnames)
-     * @param publicDomainNames The public domain name of the container service, such as
-     * `example.com` and `www.example.com` . 
      */
-    override fun publicDomainNames(vararg publicDomainNames: Any): Unit =
-        publicDomainNames(publicDomainNames.toList())
+    public open fun publicDomainNames(vararg __idx_ac66f0: Any): Unit =
+        publicDomainNames(__idx_ac66f0.toList())
 
-    /**
-     * The scale specification of the container service.
-     *
-     * The scale specifies the allocated compute nodes of the container service.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-scale)
-     * @param scale The scale specification of the container service. 
-     */
-    override fun scale(scale: Number) {
-      cdkBuilder.scale(scale)
+    /** The scale specification of the container service. */
+    public open fun scale(): Number = unwrap(this).getScale()
+
+    /** The scale specification of the container service. */
+    public open fun scale(`value`: Number) {
+        unwrap(this).setScale(`value`)
     }
 
-    /**
-     * The name of the container service.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-servicename)
-     * @param serviceName The name of the container service. 
-     */
-    override fun serviceName(serviceName: String) {
-      cdkBuilder.serviceName(serviceName)
+    /** The name of the container service. */
+    public open fun serviceName(): String = unwrap(this).getServiceName()
+
+    /** The name of the container service. */
+    public open fun serviceName(`value`: String) {
+        unwrap(this).setServiceName(`value`)
     }
 
-    /**
-     * An array of key-value pairs to apply to this resource.
-     *
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * in the *AWS CloudFormation User Guide* .
-     *
-     *
-     * The `Value` of `Tags` is optional for Lightsail resources.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-tags)
-     * @param tags An array of key-value pairs to apply to this resource. 
-     */
-    override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+    /** Tag Manager which manages the tags for this resource. */
+    public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+
+    /** An array of key-value pairs to apply to this resource. */
+    public open fun tagsRaw(): List<CfnTag> =
+        unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?: emptyList()
+
+    /** An array of key-value pairs to apply to this resource. */
+    public open fun tagsRaw(`value`: List<CfnTag>) {
+        unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
     }
 
-    /**
-     * An array of key-value pairs to apply to this resource.
-     *
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * in the *AWS CloudFormation User Guide* .
-     *
-     *
-     * The `Value` of `Tags` is optional for Lightsail resources.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-tags)
-     * @param tags An array of key-value pairs to apply to this resource. 
-     */
-    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+    /** An array of key-value pairs to apply to this resource. */
+    public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
-    public fun build(): software.amazon.awscdk.services.lightsail.CfnContainer = cdkBuilder.build()
-  }
-
-  public companion object {
-    init {
-
-    }
-
-    public operator fun invoke(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      block: Builder.() -> Unit = {},
-    ): CfnContainer {
-      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-      return CfnContainer(builderImpl.apply(block).build())
-    }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer):
-        CfnContainer = CfnContainer(cdkObject)
-
-    internal fun unwrap(wrapped: CfnContainer):
-        software.amazon.awscdk.services.lightsail.CfnContainer = wrapped.cdkObject
-  }
-
-  public interface PrivateRegistryAccessProperty {
-    /**
-     * An object that describes the activation status of the role that you can use to grant a
-     * Lightsail container service access to Amazon ECR private repositories.
-     *
-     * If the role is activated, the Amazon Resource Name (ARN) of the role is also listed.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-privateregistryaccess.html#cfn-lightsail-container-privateregistryaccess-ecrimagepullerrole)
-     */
-    public fun ecrImagePullerRole(): Any? = unwrap(this).getEcrImagePullerRole()
-
-    /**
-     * A builder for [PrivateRegistryAccessProperty]
-     */
+    /** A fluent builder for [io.cloudshiftdev.awscdk.services.lightsail.CfnContainer]. */
     @CdkDslMarker
     public interface Builder {
-      /**
-       * @param ecrImagePullerRole An object that describes the activation status of the role that
-       * you can use to grant a Lightsail container service access to Amazon ECR private repositories.
-       * If the role is activated, the Amazon Resource Name (ARN) of the role is also listed.
-       */
-      public fun ecrImagePullerRole(ecrImagePullerRole: IResolvable)
+        /**
+         * An object that describes the current container deployment of the container service.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-containerservicedeployment)
+         *
+         * @param containerServiceDeployment An object that describes the current container
+         *   deployment of the container service.
+         */
+        public fun containerServiceDeployment(containerServiceDeployment: IResolvable)
 
-      /**
-       * @param ecrImagePullerRole An object that describes the activation status of the role that
-       * you can use to grant a Lightsail container service access to Amazon ECR private repositories.
-       * If the role is activated, the Amazon Resource Name (ARN) of the role is also listed.
-       */
-      public fun ecrImagePullerRole(ecrImagePullerRole: EcrImagePullerRoleProperty)
+        /**
+         * An object that describes the current container deployment of the container service.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-containerservicedeployment)
+         *
+         * @param containerServiceDeployment An object that describes the current container
+         *   deployment of the container service.
+         */
+        public fun containerServiceDeployment(
+            containerServiceDeployment: ContainerServiceDeploymentProperty
+        )
 
-      /**
-       * @param ecrImagePullerRole An object that describes the activation status of the role that
-       * you can use to grant a Lightsail container service access to Amazon ECR private repositories.
-       * If the role is activated, the Amazon Resource Name (ARN) of the role is also listed.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("fa629e212b634adb107bf727e15842e667ed1f17f336bacee57bd0201774c2b2")
-      public
-          fun ecrImagePullerRole(ecrImagePullerRole: EcrImagePullerRoleProperty.Builder.() -> Unit)
+        /**
+         * An object that describes the current container deployment of the container service.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-containerservicedeployment)
+         *
+         * @param containerServiceDeployment An object that describes the current container
+         *   deployment of the container service.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("910de1d67437b07873e857602657233912e64a04b1bd95e036f3e6b94de73148")
+        public fun containerServiceDeployment(
+            containerServiceDeployment: ContainerServiceDeploymentProperty.Builder.() -> Unit
+        )
+
+        /**
+         * A Boolean value indicating whether the container service is disabled.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-isdisabled)
+         *
+         * @param isDisabled A Boolean value indicating whether the container service is disabled.
+         */
+        public fun isDisabled(isDisabled: Boolean)
+
+        /**
+         * A Boolean value indicating whether the container service is disabled.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-isdisabled)
+         *
+         * @param isDisabled A Boolean value indicating whether the container service is disabled.
+         */
+        public fun isDisabled(isDisabled: IResolvable)
+
+        /**
+         * The power specification of the container service.
+         *
+         * The power specifies the amount of RAM, the number of vCPUs, and the base price of the
+         * container service.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-power)
+         *
+         * @param power The power specification of the container service.
+         */
+        public fun power(power: String)
+
+        /**
+         * An object that describes the configuration for the container service to access private
+         * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR )
+         * private repositories.
+         *
+         * For more information, see
+         * [Configuring access to an Amazon ECR private repository for an Amazon Lightsail container service](https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-container-service-ecr-private-repo-access)
+         * in the *Amazon Lightsail Developer Guide* .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-privateregistryaccess)
+         *
+         * @param privateRegistryAccess An object that describes the configuration for the container
+         *   service to access private container image repositories, such as Amazon Elastic
+         *   Container Registry ( Amazon ECR ) private repositories.
+         */
+        public fun privateRegistryAccess(privateRegistryAccess: IResolvable)
+
+        /**
+         * An object that describes the configuration for the container service to access private
+         * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR )
+         * private repositories.
+         *
+         * For more information, see
+         * [Configuring access to an Amazon ECR private repository for an Amazon Lightsail container service](https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-container-service-ecr-private-repo-access)
+         * in the *Amazon Lightsail Developer Guide* .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-privateregistryaccess)
+         *
+         * @param privateRegistryAccess An object that describes the configuration for the container
+         *   service to access private container image repositories, such as Amazon Elastic
+         *   Container Registry ( Amazon ECR ) private repositories.
+         */
+        public fun privateRegistryAccess(privateRegistryAccess: PrivateRegistryAccessProperty)
+
+        /**
+         * An object that describes the configuration for the container service to access private
+         * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR )
+         * private repositories.
+         *
+         * For more information, see
+         * [Configuring access to an Amazon ECR private repository for an Amazon Lightsail container service](https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-container-service-ecr-private-repo-access)
+         * in the *Amazon Lightsail Developer Guide* .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-privateregistryaccess)
+         *
+         * @param privateRegistryAccess An object that describes the configuration for the container
+         *   service to access private container image repositories, such as Amazon Elastic
+         *   Container Registry ( Amazon ECR ) private repositories.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("51d988934b3c0025c7ccb6fe2246ff1029e269c5028299f7e8ee97c8f8ce44eb")
+        public fun privateRegistryAccess(
+            privateRegistryAccess: PrivateRegistryAccessProperty.Builder.() -> Unit
+        )
+
+        /**
+         * The public domain name of the container service, such as `example.com` and
+         * `www.example.com` .
+         *
+         * You can specify up to four public domain names for a container service. The domain names
+         * that you specify are used when you create a deployment with a container that is
+         * configured as the public endpoint of your container service.
+         *
+         * If you don't specify public domain names, then you can use the default domain of the
+         * container service.
+         *
+         * You must create and validate an SSL/TLS certificate before you can use public domain
+         * names with your container service. Use the
+         * [AWS::Lightsail::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-certificate.html)
+         * resource to create a certificate for the public domain names that you want to use with
+         * your container service.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-publicdomainnames)
+         *
+         * @param publicDomainNames The public domain name of the container service, such as
+         *   `example.com` and `www.example.com` .
+         */
+        public fun publicDomainNames(publicDomainNames: IResolvable)
+
+        /**
+         * The public domain name of the container service, such as `example.com` and
+         * `www.example.com` .
+         *
+         * You can specify up to four public domain names for a container service. The domain names
+         * that you specify are used when you create a deployment with a container that is
+         * configured as the public endpoint of your container service.
+         *
+         * If you don't specify public domain names, then you can use the default domain of the
+         * container service.
+         *
+         * You must create and validate an SSL/TLS certificate before you can use public domain
+         * names with your container service. Use the
+         * [AWS::Lightsail::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-certificate.html)
+         * resource to create a certificate for the public domain names that you want to use with
+         * your container service.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-publicdomainnames)
+         *
+         * @param publicDomainNames The public domain name of the container service, such as
+         *   `example.com` and `www.example.com` .
+         */
+        public fun publicDomainNames(publicDomainNames: List<Any>)
+
+        /**
+         * The public domain name of the container service, such as `example.com` and
+         * `www.example.com` .
+         *
+         * You can specify up to four public domain names for a container service. The domain names
+         * that you specify are used when you create a deployment with a container that is
+         * configured as the public endpoint of your container service.
+         *
+         * If you don't specify public domain names, then you can use the default domain of the
+         * container service.
+         *
+         * You must create and validate an SSL/TLS certificate before you can use public domain
+         * names with your container service. Use the
+         * [AWS::Lightsail::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-certificate.html)
+         * resource to create a certificate for the public domain names that you want to use with
+         * your container service.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-publicdomainnames)
+         *
+         * @param publicDomainNames The public domain name of the container service, such as
+         *   `example.com` and `www.example.com` .
+         */
+        public fun publicDomainNames(vararg publicDomainNames: Any)
+
+        /**
+         * The scale specification of the container service.
+         *
+         * The scale specifies the allocated compute nodes of the container service.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-scale)
+         *
+         * @param scale The scale specification of the container service.
+         */
+        public fun scale(scale: Number)
+
+        /**
+         * The name of the container service.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-servicename)
+         *
+         * @param serviceName The name of the container service.
+         */
+        public fun serviceName(serviceName: String)
+
+        /**
+         * An array of key-value pairs to apply to this resource.
+         *
+         * For more information, see
+         * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+         * in the *AWS CloudFormation User Guide* .
+         *
+         * The `Value` of `Tags` is optional for Lightsail resources.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-tags)
+         *
+         * @param tags An array of key-value pairs to apply to this resource.
+         */
+        public fun tags(tags: List<CfnTag>)
+
+        /**
+         * An array of key-value pairs to apply to this resource.
+         *
+         * For more information, see
+         * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+         * in the *AWS CloudFormation User Guide* .
+         *
+         * The `Value` of `Tags` is optional for Lightsail resources.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-tags)
+         *
+         * @param tags An array of key-value pairs to apply to this resource.
+         */
+        public fun tags(vararg tags: CfnTag)
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lightsail.CfnContainer.PrivateRegistryAccessProperty.Builder
-          =
-          software.amazon.awscdk.services.lightsail.CfnContainer.PrivateRegistryAccessProperty.builder()
+    private class BuilderImpl(
+        scope: SoftwareConstructsConstruct,
+        id: String,
+    ) : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.lightsail.CfnContainer.Builder =
+            software.amazon.awscdk.services.lightsail.CfnContainer.Builder.create(scope, id)
 
-      /**
-       * @param ecrImagePullerRole An object that describes the activation status of the role that
-       * you can use to grant a Lightsail container service access to Amazon ECR private repositories.
-       * If the role is activated, the Amazon Resource Name (ARN) of the role is also listed.
-       */
-      override fun ecrImagePullerRole(ecrImagePullerRole: IResolvable) {
-        cdkBuilder.ecrImagePullerRole(ecrImagePullerRole.let(IResolvable::unwrap))
-      }
+        /**
+         * An object that describes the current container deployment of the container service.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-containerservicedeployment)
+         *
+         * @param containerServiceDeployment An object that describes the current container
+         *   deployment of the container service.
+         */
+        override fun containerServiceDeployment(containerServiceDeployment: IResolvable) {
+            cdkBuilder.containerServiceDeployment(
+                containerServiceDeployment.let(IResolvable::unwrap)
+            )
+        }
 
-      /**
-       * @param ecrImagePullerRole An object that describes the activation status of the role that
-       * you can use to grant a Lightsail container service access to Amazon ECR private repositories.
-       * If the role is activated, the Amazon Resource Name (ARN) of the role is also listed.
-       */
-      override fun ecrImagePullerRole(ecrImagePullerRole: EcrImagePullerRoleProperty) {
-        cdkBuilder.ecrImagePullerRole(ecrImagePullerRole.let(EcrImagePullerRoleProperty::unwrap))
-      }
+        /**
+         * An object that describes the current container deployment of the container service.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-containerservicedeployment)
+         *
+         * @param containerServiceDeployment An object that describes the current container
+         *   deployment of the container service.
+         */
+        override fun containerServiceDeployment(
+            containerServiceDeployment: ContainerServiceDeploymentProperty
+        ) {
+            cdkBuilder.containerServiceDeployment(
+                containerServiceDeployment.let(ContainerServiceDeploymentProperty::unwrap)
+            )
+        }
 
-      /**
-       * @param ecrImagePullerRole An object that describes the activation status of the role that
-       * you can use to grant a Lightsail container service access to Amazon ECR private repositories.
-       * If the role is activated, the Amazon Resource Name (ARN) of the role is also listed.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("fa629e212b634adb107bf727e15842e667ed1f17f336bacee57bd0201774c2b2")
-      override
-          fun ecrImagePullerRole(ecrImagePullerRole: EcrImagePullerRoleProperty.Builder.() -> Unit):
-          Unit = ecrImagePullerRole(EcrImagePullerRoleProperty(ecrImagePullerRole))
+        /**
+         * An object that describes the current container deployment of the container service.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-containerservicedeployment)
+         *
+         * @param containerServiceDeployment An object that describes the current container
+         *   deployment of the container service.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("910de1d67437b07873e857602657233912e64a04b1bd95e036f3e6b94de73148")
+        override fun containerServiceDeployment(
+            containerServiceDeployment: ContainerServiceDeploymentProperty.Builder.() -> Unit
+        ): Unit =
+            containerServiceDeployment(
+                ContainerServiceDeploymentProperty(containerServiceDeployment)
+            )
 
-      public fun build():
-          software.amazon.awscdk.services.lightsail.CfnContainer.PrivateRegistryAccessProperty =
-          cdkBuilder.build()
-    }
+        /**
+         * A Boolean value indicating whether the container service is disabled.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-isdisabled)
+         *
+         * @param isDisabled A Boolean value indicating whether the container service is disabled.
+         */
+        override fun isDisabled(isDisabled: Boolean) {
+            cdkBuilder.isDisabled(isDisabled)
+        }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnContainer.PrivateRegistryAccessProperty,
-    ) : PrivateRegistryAccessProperty {
-      /**
-       * An object that describes the activation status of the role that you can use to grant a
-       * Lightsail container service access to Amazon ECR private repositories.
-       *
-       * If the role is activated, the Amazon Resource Name (ARN) of the role is also listed.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-privateregistryaccess.html#cfn-lightsail-container-privateregistryaccess-ecrimagepullerrole)
-       */
-      override fun ecrImagePullerRole(): Any? = unwrap(this).getEcrImagePullerRole()
+        /**
+         * A Boolean value indicating whether the container service is disabled.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-isdisabled)
+         *
+         * @param isDisabled A Boolean value indicating whether the container service is disabled.
+         */
+        override fun isDisabled(isDisabled: IResolvable) {
+            cdkBuilder.isDisabled(isDisabled.let(IResolvable::unwrap))
+        }
+
+        /**
+         * The power specification of the container service.
+         *
+         * The power specifies the amount of RAM, the number of vCPUs, and the base price of the
+         * container service.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-power)
+         *
+         * @param power The power specification of the container service.
+         */
+        override fun power(power: String) {
+            cdkBuilder.power(power)
+        }
+
+        /**
+         * An object that describes the configuration for the container service to access private
+         * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR )
+         * private repositories.
+         *
+         * For more information, see
+         * [Configuring access to an Amazon ECR private repository for an Amazon Lightsail container service](https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-container-service-ecr-private-repo-access)
+         * in the *Amazon Lightsail Developer Guide* .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-privateregistryaccess)
+         *
+         * @param privateRegistryAccess An object that describes the configuration for the container
+         *   service to access private container image repositories, such as Amazon Elastic
+         *   Container Registry ( Amazon ECR ) private repositories.
+         */
+        override fun privateRegistryAccess(privateRegistryAccess: IResolvable) {
+            cdkBuilder.privateRegistryAccess(privateRegistryAccess.let(IResolvable::unwrap))
+        }
+
+        /**
+         * An object that describes the configuration for the container service to access private
+         * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR )
+         * private repositories.
+         *
+         * For more information, see
+         * [Configuring access to an Amazon ECR private repository for an Amazon Lightsail container service](https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-container-service-ecr-private-repo-access)
+         * in the *Amazon Lightsail Developer Guide* .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-privateregistryaccess)
+         *
+         * @param privateRegistryAccess An object that describes the configuration for the container
+         *   service to access private container image repositories, such as Amazon Elastic
+         *   Container Registry ( Amazon ECR ) private repositories.
+         */
+        override fun privateRegistryAccess(privateRegistryAccess: PrivateRegistryAccessProperty) {
+            cdkBuilder.privateRegistryAccess(
+                privateRegistryAccess.let(PrivateRegistryAccessProperty::unwrap)
+            )
+        }
+
+        /**
+         * An object that describes the configuration for the container service to access private
+         * container image repositories, such as Amazon Elastic Container Registry ( Amazon ECR )
+         * private repositories.
+         *
+         * For more information, see
+         * [Configuring access to an Amazon ECR private repository for an Amazon Lightsail container service](https://docs.aws.amazon.com/lightsail/latest/userguide/amazon-lightsail-container-service-ecr-private-repo-access)
+         * in the *Amazon Lightsail Developer Guide* .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-privateregistryaccess)
+         *
+         * @param privateRegistryAccess An object that describes the configuration for the container
+         *   service to access private container image repositories, such as Amazon Elastic
+         *   Container Registry ( Amazon ECR ) private repositories.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("51d988934b3c0025c7ccb6fe2246ff1029e269c5028299f7e8ee97c8f8ce44eb")
+        override fun privateRegistryAccess(
+            privateRegistryAccess: PrivateRegistryAccessProperty.Builder.() -> Unit
+        ): Unit = privateRegistryAccess(PrivateRegistryAccessProperty(privateRegistryAccess))
+
+        /**
+         * The public domain name of the container service, such as `example.com` and
+         * `www.example.com` .
+         *
+         * You can specify up to four public domain names for a container service. The domain names
+         * that you specify are used when you create a deployment with a container that is
+         * configured as the public endpoint of your container service.
+         *
+         * If you don't specify public domain names, then you can use the default domain of the
+         * container service.
+         *
+         * You must create and validate an SSL/TLS certificate before you can use public domain
+         * names with your container service. Use the
+         * [AWS::Lightsail::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-certificate.html)
+         * resource to create a certificate for the public domain names that you want to use with
+         * your container service.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-publicdomainnames)
+         *
+         * @param publicDomainNames The public domain name of the container service, such as
+         *   `example.com` and `www.example.com` .
+         */
+        override fun publicDomainNames(publicDomainNames: IResolvable) {
+            cdkBuilder.publicDomainNames(publicDomainNames.let(IResolvable::unwrap))
+        }
+
+        /**
+         * The public domain name of the container service, such as `example.com` and
+         * `www.example.com` .
+         *
+         * You can specify up to four public domain names for a container service. The domain names
+         * that you specify are used when you create a deployment with a container that is
+         * configured as the public endpoint of your container service.
+         *
+         * If you don't specify public domain names, then you can use the default domain of the
+         * container service.
+         *
+         * You must create and validate an SSL/TLS certificate before you can use public domain
+         * names with your container service. Use the
+         * [AWS::Lightsail::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-certificate.html)
+         * resource to create a certificate for the public domain names that you want to use with
+         * your container service.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-publicdomainnames)
+         *
+         * @param publicDomainNames The public domain name of the container service, such as
+         *   `example.com` and `www.example.com` .
+         */
+        override fun publicDomainNames(publicDomainNames: List<Any>) {
+            cdkBuilder.publicDomainNames(publicDomainNames)
+        }
+
+        /**
+         * The public domain name of the container service, such as `example.com` and
+         * `www.example.com` .
+         *
+         * You can specify up to four public domain names for a container service. The domain names
+         * that you specify are used when you create a deployment with a container that is
+         * configured as the public endpoint of your container service.
+         *
+         * If you don't specify public domain names, then you can use the default domain of the
+         * container service.
+         *
+         * You must create and validate an SSL/TLS certificate before you can use public domain
+         * names with your container service. Use the
+         * [AWS::Lightsail::Certificate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-certificate.html)
+         * resource to create a certificate for the public domain names that you want to use with
+         * your container service.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-publicdomainnames)
+         *
+         * @param publicDomainNames The public domain name of the container service, such as
+         *   `example.com` and `www.example.com` .
+         */
+        override fun publicDomainNames(vararg publicDomainNames: Any): Unit =
+            publicDomainNames(publicDomainNames.toList())
+
+        /**
+         * The scale specification of the container service.
+         *
+         * The scale specifies the allocated compute nodes of the container service.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-scale)
+         *
+         * @param scale The scale specification of the container service.
+         */
+        override fun scale(scale: Number) {
+            cdkBuilder.scale(scale)
+        }
+
+        /**
+         * The name of the container service.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-servicename)
+         *
+         * @param serviceName The name of the container service.
+         */
+        override fun serviceName(serviceName: String) {
+            cdkBuilder.serviceName(serviceName)
+        }
+
+        /**
+         * An array of key-value pairs to apply to this resource.
+         *
+         * For more information, see
+         * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+         * in the *AWS CloudFormation User Guide* .
+         *
+         * The `Value` of `Tags` is optional for Lightsail resources.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-tags)
+         *
+         * @param tags An array of key-value pairs to apply to this resource.
+         */
+        override fun tags(tags: List<CfnTag>) {
+            cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        }
+
+        /**
+         * An array of key-value pairs to apply to this resource.
+         *
+         * For more information, see
+         * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+         * in the *AWS CloudFormation User Guide* .
+         *
+         * The `Value` of `Tags` is optional for Lightsail resources.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-container.html#cfn-lightsail-container-tags)
+         *
+         * @param tags An array of key-value pairs to apply to this resource.
+         */
+        override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+        public fun build(): software.amazon.awscdk.services.lightsail.CfnContainer =
+            cdkBuilder.build()
     }
 
     public companion object {
-      init {
+        init {}
 
-      }
+        public operator fun invoke(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            block: Builder.() -> Unit = {},
+        ): CfnContainer {
+            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+            return CfnContainer(builderImpl.apply(block).build())
+        }
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): PrivateRegistryAccessProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer
+        ): CfnContainer = CfnContainer(cdkObject)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.PrivateRegistryAccessProperty):
-          PrivateRegistryAccessProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PrivateRegistryAccessProperty):
-          software.amazon.awscdk.services.lightsail.CfnContainer.PrivateRegistryAccessProperty =
-          (wrapped as Wrapper).cdkObject
-    }
-  }
-
-  public interface EnvironmentVariableProperty {
-    /**
-     * The environment variable value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-environmentvariable.html#cfn-lightsail-container-environmentvariable-value)
-     */
-    public fun `value`(): String? = unwrap(this).getValue()
-
-    /**
-     * The environment variable key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-environmentvariable.html#cfn-lightsail-container-environmentvariable-variable)
-     */
-    public fun variable(): String? = unwrap(this).getVariable()
-
-    /**
-     * A builder for [EnvironmentVariableProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param value The environment variable value.
-       */
-      public fun `value`(`value`: String)
-
-      /**
-       * @param variable The environment variable key.
-       */
-      public fun variable(variable: String)
+        internal fun unwrap(
+            wrapped: CfnContainer
+        ): software.amazon.awscdk.services.lightsail.CfnContainer = wrapped.cdkObject
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lightsail.CfnContainer.EnvironmentVariableProperty.Builder
-          =
-          software.amazon.awscdk.services.lightsail.CfnContainer.EnvironmentVariableProperty.builder()
+    public interface PrivateRegistryAccessProperty {
+        /**
+         * An object that describes the activation status of the role that you can use to grant a
+         * Lightsail container service access to Amazon ECR private repositories.
+         *
+         * If the role is activated, the Amazon Resource Name (ARN) of the role is also listed.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-privateregistryaccess.html#cfn-lightsail-container-privateregistryaccess-ecrimagepullerrole)
+         */
+        public fun ecrImagePullerRole(): Any? = unwrap(this).getEcrImagePullerRole()
 
-      /**
-       * @param value The environment variable value.
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
+        /** A builder for [PrivateRegistryAccessProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param ecrImagePullerRole An object that describes the activation status of the role
+             *   that you can use to grant a Lightsail container service access to Amazon ECR
+             *   private repositories. If the role is activated, the Amazon Resource Name (ARN) of
+             *   the role is also listed.
+             */
+            public fun ecrImagePullerRole(ecrImagePullerRole: IResolvable)
 
-      /**
-       * @param variable The environment variable key.
-       */
-      override fun variable(variable: String) {
-        cdkBuilder.variable(variable)
-      }
+            /**
+             * @param ecrImagePullerRole An object that describes the activation status of the role
+             *   that you can use to grant a Lightsail container service access to Amazon ECR
+             *   private repositories. If the role is activated, the Amazon Resource Name (ARN) of
+             *   the role is also listed.
+             */
+            public fun ecrImagePullerRole(ecrImagePullerRole: EcrImagePullerRoleProperty)
 
-      public fun build():
-          software.amazon.awscdk.services.lightsail.CfnContainer.EnvironmentVariableProperty =
-          cdkBuilder.build()
+            /**
+             * @param ecrImagePullerRole An object that describes the activation status of the role
+             *   that you can use to grant a Lightsail container service access to Amazon ECR
+             *   private repositories. If the role is activated, the Amazon Resource Name (ARN) of
+             *   the role is also listed.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("fa629e212b634adb107bf727e15842e667ed1f17f336bacee57bd0201774c2b2")
+            public fun ecrImagePullerRole(
+                ecrImagePullerRole: EcrImagePullerRoleProperty.Builder.() -> Unit
+            )
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.lightsail.CfnContainer.PrivateRegistryAccessProperty.Builder =
+                software.amazon.awscdk.services.lightsail.CfnContainer.PrivateRegistryAccessProperty
+                    .builder()
+
+            /**
+             * @param ecrImagePullerRole An object that describes the activation status of the role
+             *   that you can use to grant a Lightsail container service access to Amazon ECR
+             *   private repositories. If the role is activated, the Amazon Resource Name (ARN) of
+             *   the role is also listed.
+             */
+            override fun ecrImagePullerRole(ecrImagePullerRole: IResolvable) {
+                cdkBuilder.ecrImagePullerRole(ecrImagePullerRole.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param ecrImagePullerRole An object that describes the activation status of the role
+             *   that you can use to grant a Lightsail container service access to Amazon ECR
+             *   private repositories. If the role is activated, the Amazon Resource Name (ARN) of
+             *   the role is also listed.
+             */
+            override fun ecrImagePullerRole(ecrImagePullerRole: EcrImagePullerRoleProperty) {
+                cdkBuilder.ecrImagePullerRole(
+                    ecrImagePullerRole.let(EcrImagePullerRoleProperty::unwrap)
+                )
+            }
+
+            /**
+             * @param ecrImagePullerRole An object that describes the activation status of the role
+             *   that you can use to grant a Lightsail container service access to Amazon ECR
+             *   private repositories. If the role is activated, the Amazon Resource Name (ARN) of
+             *   the role is also listed.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("fa629e212b634adb107bf727e15842e667ed1f17f336bacee57bd0201774c2b2")
+            override fun ecrImagePullerRole(
+                ecrImagePullerRole: EcrImagePullerRoleProperty.Builder.() -> Unit
+            ): Unit = ecrImagePullerRole(EcrImagePullerRoleProperty(ecrImagePullerRole))
+
+            public fun build():
+                software.amazon.awscdk.services.lightsail.CfnContainer.PrivateRegistryAccessProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.lightsail.CfnContainer.PrivateRegistryAccessProperty,
+        ) : PrivateRegistryAccessProperty {
+            /**
+             * An object that describes the activation status of the role that you can use to grant
+             * a Lightsail container service access to Amazon ECR private repositories.
+             *
+             * If the role is activated, the Amazon Resource Name (ARN) of the role is also listed.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-privateregistryaccess.html#cfn-lightsail-container-privateregistryaccess-ecrimagepullerrole)
+             */
+            override fun ecrImagePullerRole(): Any? = unwrap(this).getEcrImagePullerRole()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(
+                block: Builder.() -> Unit = {}
+            ): PrivateRegistryAccessProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.lightsail.CfnContainer.PrivateRegistryAccessProperty
+            ): PrivateRegistryAccessProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: PrivateRegistryAccessProperty
+            ): software.amazon.awscdk.services.lightsail.CfnContainer.PrivateRegistryAccessProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnContainer.EnvironmentVariableProperty,
-    ) : EnvironmentVariableProperty {
-      /**
-       * The environment variable value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-environmentvariable.html#cfn-lightsail-container-environmentvariable-value)
-       */
-      override fun `value`(): String? = unwrap(this).getValue()
+    public interface EnvironmentVariableProperty {
+        /**
+         * The environment variable value.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-environmentvariable.html#cfn-lightsail-container-environmentvariable-value)
+         */
+        public fun `value`(): String? = unwrap(this).getValue()
 
-      /**
-       * The environment variable key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-environmentvariable.html#cfn-lightsail-container-environmentvariable-variable)
-       */
-      override fun variable(): String? = unwrap(this).getVariable()
+        /**
+         * The environment variable key.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-environmentvariable.html#cfn-lightsail-container-environmentvariable-variable)
+         */
+        public fun variable(): String? = unwrap(this).getVariable()
+
+        /** A builder for [EnvironmentVariableProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param value The environment variable value. */
+            public fun `value`(`value`: String)
+
+            /** @param variable The environment variable key. */
+            public fun variable(variable: String)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.lightsail.CfnContainer.EnvironmentVariableProperty.Builder =
+                software.amazon.awscdk.services.lightsail.CfnContainer.EnvironmentVariableProperty
+                    .builder()
+
+            /** @param value The environment variable value. */
+            override fun `value`(`value`: String) {
+                cdkBuilder.`value`(`value`)
+            }
+
+            /** @param variable The environment variable key. */
+            override fun variable(variable: String) {
+                cdkBuilder.variable(variable)
+            }
+
+            public fun build():
+                software.amazon.awscdk.services.lightsail.CfnContainer.EnvironmentVariableProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.lightsail.CfnContainer.EnvironmentVariableProperty,
+        ) : EnvironmentVariableProperty {
+            /**
+             * The environment variable value.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-environmentvariable.html#cfn-lightsail-container-environmentvariable-value)
+             */
+            override fun `value`(): String? = unwrap(this).getValue()
+
+            /**
+             * The environment variable key.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-environmentvariable.html#cfn-lightsail-container-environmentvariable-variable)
+             */
+            override fun variable(): String? = unwrap(this).getVariable()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(
+                block: Builder.() -> Unit = {}
+            ): EnvironmentVariableProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.lightsail.CfnContainer.EnvironmentVariableProperty
+            ): EnvironmentVariableProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: EnvironmentVariableProperty
+            ): software.amazon.awscdk.services.lightsail.CfnContainer.EnvironmentVariableProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface PublicDomainNameProperty {
+        /**
+         * The name of the certificate for the public domains.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-publicdomainname.html#cfn-lightsail-container-publicdomainname-certificatename)
+         */
+        public fun certificateName(): String? = unwrap(this).getCertificateName()
 
-      }
+        /**
+         * The public domain names to use with the container service.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-publicdomainname.html#cfn-lightsail-container-publicdomainname-domainnames)
+         */
+        public fun domainNames(): List<String> = unwrap(this).getDomainNames() ?: emptyList()
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): EnvironmentVariableProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /** A builder for [PublicDomainNameProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param certificateName The name of the certificate for the public domains. */
+            public fun certificateName(certificateName: String)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.EnvironmentVariableProperty):
-          EnvironmentVariableProperty = Wrapper(cdkObject)
+            /** @param domainNames The public domain names to use with the container service. */
+            public fun domainNames(domainNames: List<String>)
 
-      internal fun unwrap(wrapped: EnvironmentVariableProperty):
-          software.amazon.awscdk.services.lightsail.CfnContainer.EnvironmentVariableProperty =
-          (wrapped as Wrapper).cdkObject
-    }
-  }
+            /** @param domainNames The public domain names to use with the container service. */
+            public fun domainNames(vararg domainNames: String)
+        }
 
-  public interface PublicDomainNameProperty {
-    /**
-     * The name of the certificate for the public domains.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-publicdomainname.html#cfn-lightsail-container-publicdomainname-certificatename)
-     */
-    public fun certificateName(): String? = unwrap(this).getCertificateName()
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.lightsail.CfnContainer.PublicDomainNameProperty.Builder =
+                software.amazon.awscdk.services.lightsail.CfnContainer.PublicDomainNameProperty
+                    .builder()
 
-    /**
-     * The public domain names to use with the container service.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-publicdomainname.html#cfn-lightsail-container-publicdomainname-domainnames)
-     */
-    public fun domainNames(): List<String> = unwrap(this).getDomainNames() ?: emptyList()
+            /** @param certificateName The name of the certificate for the public domains. */
+            override fun certificateName(certificateName: String) {
+                cdkBuilder.certificateName(certificateName)
+            }
 
-    /**
-     * A builder for [PublicDomainNameProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param certificateName The name of the certificate for the public domains.
-       */
-      public fun certificateName(certificateName: String)
+            /** @param domainNames The public domain names to use with the container service. */
+            override fun domainNames(domainNames: List<String>) {
+                cdkBuilder.domainNames(domainNames)
+            }
 
-      /**
-       * @param domainNames The public domain names to use with the container service.
-       */
-      public fun domainNames(domainNames: List<String>)
+            /** @param domainNames The public domain names to use with the container service. */
+            override fun domainNames(vararg domainNames: String): Unit =
+                domainNames(domainNames.toList())
 
-      /**
-       * @param domainNames The public domain names to use with the container service.
-       */
-      public fun domainNames(vararg domainNames: String)
-    }
+            public fun build():
+                software.amazon.awscdk.services.lightsail.CfnContainer.PublicDomainNameProperty =
+                cdkBuilder.build()
+        }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lightsail.CfnContainer.PublicDomainNameProperty.Builder =
-          software.amazon.awscdk.services.lightsail.CfnContainer.PublicDomainNameProperty.builder()
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.lightsail.CfnContainer.PublicDomainNameProperty,
+        ) : PublicDomainNameProperty {
+            /**
+             * The name of the certificate for the public domains.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-publicdomainname.html#cfn-lightsail-container-publicdomainname-certificatename)
+             */
+            override fun certificateName(): String? = unwrap(this).getCertificateName()
 
-      /**
-       * @param certificateName The name of the certificate for the public domains.
-       */
-      override fun certificateName(certificateName: String) {
-        cdkBuilder.certificateName(certificateName)
-      }
+            /**
+             * The public domain names to use with the container service.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-publicdomainname.html#cfn-lightsail-container-publicdomainname-domainnames)
+             */
+            override fun domainNames(): List<String> = unwrap(this).getDomainNames() ?: emptyList()
+        }
 
-      /**
-       * @param domainNames The public domain names to use with the container service.
-       */
-      override fun domainNames(domainNames: List<String>) {
-        cdkBuilder.domainNames(domainNames)
-      }
+        public companion object {
+            init {}
 
-      /**
-       * @param domainNames The public domain names to use with the container service.
-       */
-      override fun domainNames(vararg domainNames: String): Unit = domainNames(domainNames.toList())
+            public operator fun invoke(block: Builder.() -> Unit = {}): PublicDomainNameProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-      public fun build():
-          software.amazon.awscdk.services.lightsail.CfnContainer.PublicDomainNameProperty =
-          cdkBuilder.build()
-    }
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.lightsail.CfnContainer.PublicDomainNameProperty
+            ): PublicDomainNameProperty = Wrapper(cdkObject)
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnContainer.PublicDomainNameProperty,
-    ) : PublicDomainNameProperty {
-      /**
-       * The name of the certificate for the public domains.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-publicdomainname.html#cfn-lightsail-container-publicdomainname-certificatename)
-       */
-      override fun certificateName(): String? = unwrap(this).getCertificateName()
-
-      /**
-       * The public domain names to use with the container service.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-publicdomainname.html#cfn-lightsail-container-publicdomainname-domainnames)
-       */
-      override fun domainNames(): List<String> = unwrap(this).getDomainNames() ?: emptyList()
+            internal fun unwrap(
+                wrapped: PublicDomainNameProperty
+            ): software.amazon.awscdk.services.lightsail.CfnContainer.PublicDomainNameProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface EcrImagePullerRoleProperty {
+        /**
+         * A boolean value that indicates whether the `ECRImagePullerRole` is active.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-ecrimagepullerrole.html#cfn-lightsail-container-ecrimagepullerrole-isactive)
+         */
+        public fun isActive(): Any? = unwrap(this).getIsActive()
 
-      }
+        /**
+         * The principle Amazon Resource Name (ARN) of the role.
+         *
+         * This property is read-only.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-ecrimagepullerrole.html#cfn-lightsail-container-ecrimagepullerrole-principalarn)
+         */
+        public fun principalArn(): String? = unwrap(this).getPrincipalArn()
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): PublicDomainNameProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /** A builder for [EcrImagePullerRoleProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param isActive A boolean value that indicates whether the `ECRImagePullerRole` is
+             *   active.
+             */
+            public fun isActive(isActive: Boolean)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.PublicDomainNameProperty):
-          PublicDomainNameProperty = Wrapper(cdkObject)
+            /**
+             * @param isActive A boolean value that indicates whether the `ECRImagePullerRole` is
+             *   active.
+             */
+            public fun isActive(isActive: IResolvable)
 
-      internal fun unwrap(wrapped: PublicDomainNameProperty):
-          software.amazon.awscdk.services.lightsail.CfnContainer.PublicDomainNameProperty = (wrapped
-          as Wrapper).cdkObject
-    }
-  }
+            /**
+             * @param principalArn The principle Amazon Resource Name (ARN) of the role. This
+             *   property is read-only.
+             */
+            public fun principalArn(principalArn: String)
+        }
 
-  public interface EcrImagePullerRoleProperty {
-    /**
-     * A boolean value that indicates whether the `ECRImagePullerRole` is active.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-ecrimagepullerrole.html#cfn-lightsail-container-ecrimagepullerrole-isactive)
-     */
-    public fun isActive(): Any? = unwrap(this).getIsActive()
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.lightsail.CfnContainer.EcrImagePullerRoleProperty.Builder =
+                software.amazon.awscdk.services.lightsail.CfnContainer.EcrImagePullerRoleProperty
+                    .builder()
 
-    /**
-     * The principle Amazon Resource Name (ARN) of the role.
-     *
-     * This property is read-only.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-ecrimagepullerrole.html#cfn-lightsail-container-ecrimagepullerrole-principalarn)
-     */
-    public fun principalArn(): String? = unwrap(this).getPrincipalArn()
+            /**
+             * @param isActive A boolean value that indicates whether the `ECRImagePullerRole` is
+             *   active.
+             */
+            override fun isActive(isActive: Boolean) {
+                cdkBuilder.isActive(isActive)
+            }
 
-    /**
-     * A builder for [EcrImagePullerRoleProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param isActive A boolean value that indicates whether the `ECRImagePullerRole` is active.
-       */
-      public fun isActive(isActive: Boolean)
+            /**
+             * @param isActive A boolean value that indicates whether the `ECRImagePullerRole` is
+             *   active.
+             */
+            override fun isActive(isActive: IResolvable) {
+                cdkBuilder.isActive(isActive.let(IResolvable::unwrap))
+            }
 
-      /**
-       * @param isActive A boolean value that indicates whether the `ECRImagePullerRole` is active.
-       */
-      public fun isActive(isActive: IResolvable)
+            /**
+             * @param principalArn The principle Amazon Resource Name (ARN) of the role. This
+             *   property is read-only.
+             */
+            override fun principalArn(principalArn: String) {
+                cdkBuilder.principalArn(principalArn)
+            }
 
-      /**
-       * @param principalArn The principle Amazon Resource Name (ARN) of the role.
-       * This property is read-only.
-       */
-      public fun principalArn(principalArn: String)
-    }
+            public fun build():
+                software.amazon.awscdk.services.lightsail.CfnContainer.EcrImagePullerRoleProperty =
+                cdkBuilder.build()
+        }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lightsail.CfnContainer.EcrImagePullerRoleProperty.Builder
-          =
-          software.amazon.awscdk.services.lightsail.CfnContainer.EcrImagePullerRoleProperty.builder()
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.lightsail.CfnContainer.EcrImagePullerRoleProperty,
+        ) : EcrImagePullerRoleProperty {
+            /**
+             * A boolean value that indicates whether the `ECRImagePullerRole` is active.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-ecrimagepullerrole.html#cfn-lightsail-container-ecrimagepullerrole-isactive)
+             */
+            override fun isActive(): Any? = unwrap(this).getIsActive()
 
-      /**
-       * @param isActive A boolean value that indicates whether the `ECRImagePullerRole` is active.
-       */
-      override fun isActive(isActive: Boolean) {
-        cdkBuilder.isActive(isActive)
-      }
+            /**
+             * The principle Amazon Resource Name (ARN) of the role.
+             *
+             * This property is read-only.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-ecrimagepullerrole.html#cfn-lightsail-container-ecrimagepullerrole-principalarn)
+             */
+            override fun principalArn(): String? = unwrap(this).getPrincipalArn()
+        }
 
-      /**
-       * @param isActive A boolean value that indicates whether the `ECRImagePullerRole` is active.
-       */
-      override fun isActive(isActive: IResolvable) {
-        cdkBuilder.isActive(isActive.let(IResolvable::unwrap))
-      }
+        public companion object {
+            init {}
 
-      /**
-       * @param principalArn The principle Amazon Resource Name (ARN) of the role.
-       * This property is read-only.
-       */
-      override fun principalArn(principalArn: String) {
-        cdkBuilder.principalArn(principalArn)
-      }
+            public operator fun invoke(block: Builder.() -> Unit = {}): EcrImagePullerRoleProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-      public fun build():
-          software.amazon.awscdk.services.lightsail.CfnContainer.EcrImagePullerRoleProperty =
-          cdkBuilder.build()
-    }
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.lightsail.CfnContainer.EcrImagePullerRoleProperty
+            ): EcrImagePullerRoleProperty = Wrapper(cdkObject)
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnContainer.EcrImagePullerRoleProperty,
-    ) : EcrImagePullerRoleProperty {
-      /**
-       * A boolean value that indicates whether the `ECRImagePullerRole` is active.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-ecrimagepullerrole.html#cfn-lightsail-container-ecrimagepullerrole-isactive)
-       */
-      override fun isActive(): Any? = unwrap(this).getIsActive()
-
-      /**
-       * The principle Amazon Resource Name (ARN) of the role.
-       *
-       * This property is read-only.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-ecrimagepullerrole.html#cfn-lightsail-container-ecrimagepullerrole-principalarn)
-       */
-      override fun principalArn(): String? = unwrap(this).getPrincipalArn()
-    }
-
-    public companion object {
-      init {
-
-      }
-
-      public operator fun invoke(block: Builder.() -> Unit = {}): EcrImagePullerRoleProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.EcrImagePullerRoleProperty):
-          EcrImagePullerRoleProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: EcrImagePullerRoleProperty):
-          software.amazon.awscdk.services.lightsail.CfnContainer.EcrImagePullerRoleProperty =
-          (wrapped as Wrapper).cdkObject
-    }
-  }
-
-  public interface PortInfoProperty {
-    /**
-     * The open firewall ports of the container.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-portinfo.html#cfn-lightsail-container-portinfo-port)
-     */
-    public fun port(): String? = unwrap(this).getPort()
-
-    /**
-     * The protocol name for the open ports.
-     *
-     * *Allowed values* : `HTTP` | `HTTPS` | `TCP` | `UDP`
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-portinfo.html#cfn-lightsail-container-portinfo-protocol)
-     */
-    public fun protocol(): String? = unwrap(this).getProtocol()
-
-    /**
-     * A builder for [PortInfoProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param port The open firewall ports of the container.
-       */
-      public fun port(port: String)
-
-      /**
-       * @param protocol The protocol name for the open ports.
-       * *Allowed values* : `HTTP` | `HTTPS` | `TCP` | `UDP`
-       */
-      public fun protocol(protocol: String)
+            internal fun unwrap(
+                wrapped: EcrImagePullerRoleProperty
+            ): software.amazon.awscdk.services.lightsail.CfnContainer.EcrImagePullerRoleProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lightsail.CfnContainer.PortInfoProperty.Builder =
-          software.amazon.awscdk.services.lightsail.CfnContainer.PortInfoProperty.builder()
+    public interface PortInfoProperty {
+        /**
+         * The open firewall ports of the container.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-portinfo.html#cfn-lightsail-container-portinfo-port)
+         */
+        public fun port(): String? = unwrap(this).getPort()
 
-      /**
-       * @param port The open firewall ports of the container.
-       */
-      override fun port(port: String) {
-        cdkBuilder.port(port)
-      }
+        /**
+         * The protocol name for the open ports.
+         *
+         * *Allowed values* : `HTTP` | `HTTPS` | `TCP` | `UDP`
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-portinfo.html#cfn-lightsail-container-portinfo-protocol)
+         */
+        public fun protocol(): String? = unwrap(this).getProtocol()
 
-      /**
-       * @param protocol The protocol name for the open ports.
-       * *Allowed values* : `HTTP` | `HTTPS` | `TCP` | `UDP`
-       */
-      override fun protocol(protocol: String) {
-        cdkBuilder.protocol(protocol)
-      }
+        /** A builder for [PortInfoProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param port The open firewall ports of the container. */
+            public fun port(port: String)
 
-      public fun build(): software.amazon.awscdk.services.lightsail.CfnContainer.PortInfoProperty =
-          cdkBuilder.build()
+            /**
+             * @param protocol The protocol name for the open ports. *Allowed values* : `HTTP` |
+             *   `HTTPS` | `TCP` | `UDP`
+             */
+            public fun protocol(protocol: String)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.lightsail.CfnContainer.PortInfoProperty.Builder =
+                software.amazon.awscdk.services.lightsail.CfnContainer.PortInfoProperty.builder()
+
+            /** @param port The open firewall ports of the container. */
+            override fun port(port: String) {
+                cdkBuilder.port(port)
+            }
+
+            /**
+             * @param protocol The protocol name for the open ports. *Allowed values* : `HTTP` |
+             *   `HTTPS` | `TCP` | `UDP`
+             */
+            override fun protocol(protocol: String) {
+                cdkBuilder.protocol(protocol)
+            }
+
+            public fun build():
+                software.amazon.awscdk.services.lightsail.CfnContainer.PortInfoProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.lightsail.CfnContainer.PortInfoProperty,
+        ) : PortInfoProperty {
+            /**
+             * The open firewall ports of the container.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-portinfo.html#cfn-lightsail-container-portinfo-port)
+             */
+            override fun port(): String? = unwrap(this).getPort()
+
+            /**
+             * The protocol name for the open ports.
+             *
+             * *Allowed values* : `HTTP` | `HTTPS` | `TCP` | `UDP`
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-portinfo.html#cfn-lightsail-container-portinfo-protocol)
+             */
+            override fun protocol(): String? = unwrap(this).getProtocol()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): PortInfoProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.PortInfoProperty
+            ): PortInfoProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: PortInfoProperty
+            ): software.amazon.awscdk.services.lightsail.CfnContainer.PortInfoProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnContainer.PortInfoProperty,
-    ) : PortInfoProperty {
-      /**
-       * The open firewall ports of the container.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-portinfo.html#cfn-lightsail-container-portinfo-port)
-       */
-      override fun port(): String? = unwrap(this).getPort()
+    public interface ContainerProperty {
+        /**
+         * The launch command for the container.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-container.html#cfn-lightsail-container-container-command)
+         */
+        public fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
 
-      /**
-       * The protocol name for the open ports.
-       *
-       * *Allowed values* : `HTTP` | `HTTPS` | `TCP` | `UDP`
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-portinfo.html#cfn-lightsail-container-portinfo-protocol)
-       */
-      override fun protocol(): String? = unwrap(this).getProtocol()
+        /**
+         * The name of the container.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-container.html#cfn-lightsail-container-container-containername)
+         */
+        public fun containerName(): String? = unwrap(this).getContainerName()
+
+        /**
+         * The environment variables of the container.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-container.html#cfn-lightsail-container-container-environment)
+         */
+        public fun environment(): Any? = unwrap(this).getEnvironment()
+
+        /**
+         * The name of the image used for the container.
+         *
+         * Container images that are sourced from (registered and stored on) your container service
+         * start with a colon ( `:` ). For example, if your container service name is
+         * `container-service-1` , the container image label is `mystaticsite` , and you want to use
+         * the third version ( `3` ) of the registered container image, then you should specify
+         * `:container-service-1.mystaticsite.3` . To use the latest version of a container image,
+         * specify `latest` instead of a version number (for example,
+         * `:container-service-1.mystaticsite.latest` ). Your container service will automatically
+         * use the highest numbered version of the registered container image.
+         *
+         * Container images that are sourced from a public registry like Docker Hub don’t start with
+         * a colon. For example, `nginx:latest` or `nginx` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-container.html#cfn-lightsail-container-container-image)
+         */
+        public fun image(): String? = unwrap(this).getImage()
+
+        /**
+         * An object that describes the open firewall ports and protocols of the container.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-container.html#cfn-lightsail-container-container-ports)
+         */
+        public fun ports(): Any? = unwrap(this).getPorts()
+
+        /** A builder for [ContainerProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param command The launch command for the container. */
+            public fun command(command: List<String>)
+
+            /** @param command The launch command for the container. */
+            public fun command(vararg command: String)
+
+            /** @param containerName The name of the container. */
+            public fun containerName(containerName: String)
+
+            /** @param environment The environment variables of the container. */
+            public fun environment(environment: IResolvable)
+
+            /** @param environment The environment variables of the container. */
+            public fun environment(environment: List<Any>)
+
+            /** @param environment The environment variables of the container. */
+            public fun environment(vararg environment: Any)
+
+            /**
+             * @param image The name of the image used for the container. Container images that are
+             *   sourced from (registered and stored on) your container service start with a colon (
+             *   `:` ). For example, if your container service name is `container-service-1` , the
+             *   container image label is `mystaticsite` , and you want to use the third version (
+             *   `3` ) of the registered container image, then you should specify
+             *   `:container-service-1.mystaticsite.3` . To use the latest version of a container
+             *   image, specify `latest` instead of a version number (for example,
+             *   `:container-service-1.mystaticsite.latest` ). Your container service will
+             *   automatically use the highest numbered version of the registered container image.
+             *
+             * Container images that are sourced from a public registry like Docker Hub don’t start
+             * with a colon. For example, `nginx:latest` or `nginx` .
+             */
+            public fun image(image: String)
+
+            /**
+             * @param ports An object that describes the open firewall ports and protocols of the
+             *   container.
+             */
+            public fun ports(ports: IResolvable)
+
+            /**
+             * @param ports An object that describes the open firewall ports and protocols of the
+             *   container.
+             */
+            public fun ports(ports: List<Any>)
+
+            /**
+             * @param ports An object that describes the open firewall ports and protocols of the
+             *   container.
+             */
+            public fun ports(vararg ports: Any)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.lightsail.CfnContainer.ContainerProperty.Builder =
+                software.amazon.awscdk.services.lightsail.CfnContainer.ContainerProperty.builder()
+
+            /** @param command The launch command for the container. */
+            override fun command(command: List<String>) {
+                cdkBuilder.command(command)
+            }
+
+            /** @param command The launch command for the container. */
+            override fun command(vararg command: String): Unit = command(command.toList())
+
+            /** @param containerName The name of the container. */
+            override fun containerName(containerName: String) {
+                cdkBuilder.containerName(containerName)
+            }
+
+            /** @param environment The environment variables of the container. */
+            override fun environment(environment: IResolvable) {
+                cdkBuilder.environment(environment.let(IResolvable::unwrap))
+            }
+
+            /** @param environment The environment variables of the container. */
+            override fun environment(environment: List<Any>) {
+                cdkBuilder.environment(environment)
+            }
+
+            /** @param environment The environment variables of the container. */
+            override fun environment(vararg environment: Any): Unit =
+                environment(environment.toList())
+
+            /**
+             * @param image The name of the image used for the container. Container images that are
+             *   sourced from (registered and stored on) your container service start with a colon (
+             *   `:` ). For example, if your container service name is `container-service-1` , the
+             *   container image label is `mystaticsite` , and you want to use the third version (
+             *   `3` ) of the registered container image, then you should specify
+             *   `:container-service-1.mystaticsite.3` . To use the latest version of a container
+             *   image, specify `latest` instead of a version number (for example,
+             *   `:container-service-1.mystaticsite.latest` ). Your container service will
+             *   automatically use the highest numbered version of the registered container image.
+             *
+             * Container images that are sourced from a public registry like Docker Hub don’t start
+             * with a colon. For example, `nginx:latest` or `nginx` .
+             */
+            override fun image(image: String) {
+                cdkBuilder.image(image)
+            }
+
+            /**
+             * @param ports An object that describes the open firewall ports and protocols of the
+             *   container.
+             */
+            override fun ports(ports: IResolvable) {
+                cdkBuilder.ports(ports.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param ports An object that describes the open firewall ports and protocols of the
+             *   container.
+             */
+            override fun ports(ports: List<Any>) {
+                cdkBuilder.ports(ports)
+            }
+
+            /**
+             * @param ports An object that describes the open firewall ports and protocols of the
+             *   container.
+             */
+            override fun ports(vararg ports: Any): Unit = ports(ports.toList())
+
+            public fun build():
+                software.amazon.awscdk.services.lightsail.CfnContainer.ContainerProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.lightsail.CfnContainer.ContainerProperty,
+        ) : ContainerProperty {
+            /**
+             * The launch command for the container.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-container.html#cfn-lightsail-container-container-command)
+             */
+            override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
+
+            /**
+             * The name of the container.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-container.html#cfn-lightsail-container-container-containername)
+             */
+            override fun containerName(): String? = unwrap(this).getContainerName()
+
+            /**
+             * The environment variables of the container.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-container.html#cfn-lightsail-container-container-environment)
+             */
+            override fun environment(): Any? = unwrap(this).getEnvironment()
+
+            /**
+             * The name of the image used for the container.
+             *
+             * Container images that are sourced from (registered and stored on) your container
+             * service start with a colon ( `:` ). For example, if your container service name is
+             * `container-service-1` , the container image label is `mystaticsite` , and you want to
+             * use the third version ( `3` ) of the registered container image, then you should
+             * specify `:container-service-1.mystaticsite.3` . To use the latest version of a
+             * container image, specify `latest` instead of a version number (for example,
+             * `:container-service-1.mystaticsite.latest` ). Your container service will
+             * automatically use the highest numbered version of the registered container image.
+             *
+             * Container images that are sourced from a public registry like Docker Hub don’t start
+             * with a colon. For example, `nginx:latest` or `nginx` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-container.html#cfn-lightsail-container-container-image)
+             */
+            override fun image(): String? = unwrap(this).getImage()
+
+            /**
+             * An object that describes the open firewall ports and protocols of the container.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-container.html#cfn-lightsail-container-container-ports)
+             */
+            override fun ports(): Any? = unwrap(this).getPorts()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): ContainerProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.ContainerProperty
+            ): ContainerProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: ContainerProperty
+            ): software.amazon.awscdk.services.lightsail.CfnContainer.ContainerProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface HealthCheckConfigProperty {
+        /**
+         * The number of consecutive health check successes required before moving the container to
+         * the `Healthy` state.
+         *
+         * The default value is `2` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-healthythreshold)
+         */
+        public fun healthyThreshold(): Number? = unwrap(this).getHealthyThreshold()
 
-      }
+        /**
+         * The approximate interval, in seconds, between health checks of an individual container.
+         *
+         * You can specify between `5` and `300` seconds. The default value is `5` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-intervalseconds)
+         */
+        public fun intervalSeconds(): Number? = unwrap(this).getIntervalSeconds()
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): PortInfoProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /**
+         * The path on the container on which to perform the health check.
+         *
+         * The default value is `/` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-path)
+         */
+        public fun path(): String? = unwrap(this).getPath()
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.PortInfoProperty):
-          PortInfoProperty = Wrapper(cdkObject)
+        /**
+         * The HTTP codes to use when checking for a successful response from a container.
+         *
+         * You can specify values between `200` and `499` . You can specify multiple values (for
+         * example, `200,202` ) or a range of values (for example, `200-299` ).
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-successcodes)
+         */
+        public fun successCodes(): String? = unwrap(this).getSuccessCodes()
 
-      internal fun unwrap(wrapped: PortInfoProperty):
-          software.amazon.awscdk.services.lightsail.CfnContainer.PortInfoProperty = (wrapped as
-          Wrapper).cdkObject
-    }
-  }
+        /**
+         * The amount of time, in seconds, during which no response means a failed health check.
+         *
+         * You can specify between `2` and `60` seconds. The default value is `2` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-timeoutseconds)
+         */
+        public fun timeoutSeconds(): Number? = unwrap(this).getTimeoutSeconds()
 
-  public interface ContainerProperty {
-    /**
-     * The launch command for the container.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-container.html#cfn-lightsail-container-container-command)
-     */
-    public fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
+        /**
+         * The number of consecutive health check failures required before moving the container to
+         * the `Unhealthy` state.
+         *
+         * The default value is `2` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-unhealthythreshold)
+         */
+        public fun unhealthyThreshold(): Number? = unwrap(this).getUnhealthyThreshold()
 
-    /**
-     * The name of the container.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-container.html#cfn-lightsail-container-container-containername)
-     */
-    public fun containerName(): String? = unwrap(this).getContainerName()
+        /** A builder for [HealthCheckConfigProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param healthyThreshold The number of consecutive health check successes required
+             *   before moving the container to the `Healthy` state. The default value is `2` .
+             */
+            public fun healthyThreshold(healthyThreshold: Number)
 
-    /**
-     * The environment variables of the container.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-container.html#cfn-lightsail-container-container-environment)
-     */
-    public fun environment(): Any? = unwrap(this).getEnvironment()
+            /**
+             * @param intervalSeconds The approximate interval, in seconds, between health checks of
+             *   an individual container. You can specify between `5` and `300` seconds. The default
+             *   value is `5` .
+             */
+            public fun intervalSeconds(intervalSeconds: Number)
 
-    /**
-     * The name of the image used for the container.
-     *
-     * Container images that are sourced from (registered and stored on) your container service
-     * start with a colon ( `:` ). For example, if your container service name is `container-service-1`
-     * , the container image label is `mystaticsite` , and you want to use the third version ( `3` ) of
-     * the registered container image, then you should specify `:container-service-1.mystaticsite.3` .
-     * To use the latest version of a container image, specify `latest` instead of a version number
-     * (for example, `:container-service-1.mystaticsite.latest` ). Your container service will
-     * automatically use the highest numbered version of the registered container image.
-     *
-     * Container images that are sourced from a public registry like Docker Hub don’t start with a
-     * colon. For example, `nginx:latest` or `nginx` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-container.html#cfn-lightsail-container-container-image)
-     */
-    public fun image(): String? = unwrap(this).getImage()
+            /**
+             * @param path The path on the container on which to perform the health check. The
+             *   default value is `/` .
+             */
+            public fun path(path: String)
 
-    /**
-     * An object that describes the open firewall ports and protocols of the container.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-container.html#cfn-lightsail-container-container-ports)
-     */
-    public fun ports(): Any? = unwrap(this).getPorts()
+            /**
+             * @param successCodes The HTTP codes to use when checking for a successful response
+             *   from a container. You can specify values between `200` and `499` . You can specify
+             *   multiple values (for example, `200,202` ) or a range of values (for example,
+             *   `200-299` ).
+             */
+            public fun successCodes(successCodes: String)
 
-    /**
-     * A builder for [ContainerProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param command The launch command for the container.
-       */
-      public fun command(command: List<String>)
+            /**
+             * @param timeoutSeconds The amount of time, in seconds, during which no response means
+             *   a failed health check. You can specify between `2` and `60` seconds. The default
+             *   value is `2` .
+             */
+            public fun timeoutSeconds(timeoutSeconds: Number)
 
-      /**
-       * @param command The launch command for the container.
-       */
-      public fun command(vararg command: String)
+            /**
+             * @param unhealthyThreshold The number of consecutive health check failures required
+             *   before moving the container to the `Unhealthy` state. The default value is `2` .
+             */
+            public fun unhealthyThreshold(unhealthyThreshold: Number)
+        }
 
-      /**
-       * @param containerName The name of the container.
-       */
-      public fun containerName(containerName: String)
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.lightsail.CfnContainer.HealthCheckConfigProperty.Builder =
+                software.amazon.awscdk.services.lightsail.CfnContainer.HealthCheckConfigProperty
+                    .builder()
 
-      /**
-       * @param environment The environment variables of the container.
-       */
-      public fun environment(environment: IResolvable)
+            /**
+             * @param healthyThreshold The number of consecutive health check successes required
+             *   before moving the container to the `Healthy` state. The default value is `2` .
+             */
+            override fun healthyThreshold(healthyThreshold: Number) {
+                cdkBuilder.healthyThreshold(healthyThreshold)
+            }
 
-      /**
-       * @param environment The environment variables of the container.
-       */
-      public fun environment(environment: List<Any>)
+            /**
+             * @param intervalSeconds The approximate interval, in seconds, between health checks of
+             *   an individual container. You can specify between `5` and `300` seconds. The default
+             *   value is `5` .
+             */
+            override fun intervalSeconds(intervalSeconds: Number) {
+                cdkBuilder.intervalSeconds(intervalSeconds)
+            }
 
-      /**
-       * @param environment The environment variables of the container.
-       */
-      public fun environment(vararg environment: Any)
+            /**
+             * @param path The path on the container on which to perform the health check. The
+             *   default value is `/` .
+             */
+            override fun path(path: String) {
+                cdkBuilder.path(path)
+            }
 
-      /**
-       * @param image The name of the image used for the container.
-       * Container images that are sourced from (registered and stored on) your container service
-       * start with a colon ( `:` ). For example, if your container service name is
-       * `container-service-1` , the container image label is `mystaticsite` , and you want to use the
-       * third version ( `3` ) of the registered container image, then you should specify
-       * `:container-service-1.mystaticsite.3` . To use the latest version of a container image,
-       * specify `latest` instead of a version number (for example,
-       * `:container-service-1.mystaticsite.latest` ). Your container service will automatically use
-       * the highest numbered version of the registered container image.
-       *
-       * Container images that are sourced from a public registry like Docker Hub don’t start with a
-       * colon. For example, `nginx:latest` or `nginx` .
-       */
-      public fun image(image: String)
+            /**
+             * @param successCodes The HTTP codes to use when checking for a successful response
+             *   from a container. You can specify values between `200` and `499` . You can specify
+             *   multiple values (for example, `200,202` ) or a range of values (for example,
+             *   `200-299` ).
+             */
+            override fun successCodes(successCodes: String) {
+                cdkBuilder.successCodes(successCodes)
+            }
 
-      /**
-       * @param ports An object that describes the open firewall ports and protocols of the
-       * container.
-       */
-      public fun ports(ports: IResolvable)
+            /**
+             * @param timeoutSeconds The amount of time, in seconds, during which no response means
+             *   a failed health check. You can specify between `2` and `60` seconds. The default
+             *   value is `2` .
+             */
+            override fun timeoutSeconds(timeoutSeconds: Number) {
+                cdkBuilder.timeoutSeconds(timeoutSeconds)
+            }
 
-      /**
-       * @param ports An object that describes the open firewall ports and protocols of the
-       * container.
-       */
-      public fun ports(ports: List<Any>)
+            /**
+             * @param unhealthyThreshold The number of consecutive health check failures required
+             *   before moving the container to the `Unhealthy` state. The default value is `2` .
+             */
+            override fun unhealthyThreshold(unhealthyThreshold: Number) {
+                cdkBuilder.unhealthyThreshold(unhealthyThreshold)
+            }
 
-      /**
-       * @param ports An object that describes the open firewall ports and protocols of the
-       * container.
-       */
-      public fun ports(vararg ports: Any)
-    }
+            public fun build():
+                software.amazon.awscdk.services.lightsail.CfnContainer.HealthCheckConfigProperty =
+                cdkBuilder.build()
+        }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lightsail.CfnContainer.ContainerProperty.Builder =
-          software.amazon.awscdk.services.lightsail.CfnContainer.ContainerProperty.builder()
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.lightsail.CfnContainer.HealthCheckConfigProperty,
+        ) : HealthCheckConfigProperty {
+            /**
+             * The number of consecutive health check successes required before moving the container
+             * to the `Healthy` state.
+             *
+             * The default value is `2` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-healthythreshold)
+             */
+            override fun healthyThreshold(): Number? = unwrap(this).getHealthyThreshold()
 
-      /**
-       * @param command The launch command for the container.
-       */
-      override fun command(command: List<String>) {
-        cdkBuilder.command(command)
-      }
+            /**
+             * The approximate interval, in seconds, between health checks of an individual
+             * container.
+             *
+             * You can specify between `5` and `300` seconds. The default value is `5` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-intervalseconds)
+             */
+            override fun intervalSeconds(): Number? = unwrap(this).getIntervalSeconds()
 
-      /**
-       * @param command The launch command for the container.
-       */
-      override fun command(vararg command: String): Unit = command(command.toList())
+            /**
+             * The path on the container on which to perform the health check.
+             *
+             * The default value is `/` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-path)
+             */
+            override fun path(): String? = unwrap(this).getPath()
 
-      /**
-       * @param containerName The name of the container.
-       */
-      override fun containerName(containerName: String) {
-        cdkBuilder.containerName(containerName)
-      }
+            /**
+             * The HTTP codes to use when checking for a successful response from a container.
+             *
+             * You can specify values between `200` and `499` . You can specify multiple values (for
+             * example, `200,202` ) or a range of values (for example, `200-299` ).
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-successcodes)
+             */
+            override fun successCodes(): String? = unwrap(this).getSuccessCodes()
 
-      /**
-       * @param environment The environment variables of the container.
-       */
-      override fun environment(environment: IResolvable) {
-        cdkBuilder.environment(environment.let(IResolvable::unwrap))
-      }
+            /**
+             * The amount of time, in seconds, during which no response means a failed health check.
+             *
+             * You can specify between `2` and `60` seconds. The default value is `2` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-timeoutseconds)
+             */
+            override fun timeoutSeconds(): Number? = unwrap(this).getTimeoutSeconds()
 
-      /**
-       * @param environment The environment variables of the container.
-       */
-      override fun environment(environment: List<Any>) {
-        cdkBuilder.environment(environment)
-      }
+            /**
+             * The number of consecutive health check failures required before moving the container
+             * to the `Unhealthy` state.
+             *
+             * The default value is `2` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-unhealthythreshold)
+             */
+            override fun unhealthyThreshold(): Number? = unwrap(this).getUnhealthyThreshold()
+        }
 
-      /**
-       * @param environment The environment variables of the container.
-       */
-      override fun environment(vararg environment: Any): Unit = environment(environment.toList())
+        public companion object {
+            init {}
 
-      /**
-       * @param image The name of the image used for the container.
-       * Container images that are sourced from (registered and stored on) your container service
-       * start with a colon ( `:` ). For example, if your container service name is
-       * `container-service-1` , the container image label is `mystaticsite` , and you want to use the
-       * third version ( `3` ) of the registered container image, then you should specify
-       * `:container-service-1.mystaticsite.3` . To use the latest version of a container image,
-       * specify `latest` instead of a version number (for example,
-       * `:container-service-1.mystaticsite.latest` ). Your container service will automatically use
-       * the highest numbered version of the registered container image.
-       *
-       * Container images that are sourced from a public registry like Docker Hub don’t start with a
-       * colon. For example, `nginx:latest` or `nginx` .
-       */
-      override fun image(image: String) {
-        cdkBuilder.image(image)
-      }
+            public operator fun invoke(block: Builder.() -> Unit = {}): HealthCheckConfigProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-      /**
-       * @param ports An object that describes the open firewall ports and protocols of the
-       * container.
-       */
-      override fun ports(ports: IResolvable) {
-        cdkBuilder.ports(ports.let(IResolvable::unwrap))
-      }
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.lightsail.CfnContainer.HealthCheckConfigProperty
+            ): HealthCheckConfigProperty = Wrapper(cdkObject)
 
-      /**
-       * @param ports An object that describes the open firewall ports and protocols of the
-       * container.
-       */
-      override fun ports(ports: List<Any>) {
-        cdkBuilder.ports(ports)
-      }
-
-      /**
-       * @param ports An object that describes the open firewall ports and protocols of the
-       * container.
-       */
-      override fun ports(vararg ports: Any): Unit = ports(ports.toList())
-
-      public fun build(): software.amazon.awscdk.services.lightsail.CfnContainer.ContainerProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnContainer.ContainerProperty,
-    ) : ContainerProperty {
-      /**
-       * The launch command for the container.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-container.html#cfn-lightsail-container-container-command)
-       */
-      override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
-
-      /**
-       * The name of the container.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-container.html#cfn-lightsail-container-container-containername)
-       */
-      override fun containerName(): String? = unwrap(this).getContainerName()
-
-      /**
-       * The environment variables of the container.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-container.html#cfn-lightsail-container-container-environment)
-       */
-      override fun environment(): Any? = unwrap(this).getEnvironment()
-
-      /**
-       * The name of the image used for the container.
-       *
-       * Container images that are sourced from (registered and stored on) your container service
-       * start with a colon ( `:` ). For example, if your container service name is
-       * `container-service-1` , the container image label is `mystaticsite` , and you want to use the
-       * third version ( `3` ) of the registered container image, then you should specify
-       * `:container-service-1.mystaticsite.3` . To use the latest version of a container image,
-       * specify `latest` instead of a version number (for example,
-       * `:container-service-1.mystaticsite.latest` ). Your container service will automatically use
-       * the highest numbered version of the registered container image.
-       *
-       * Container images that are sourced from a public registry like Docker Hub don’t start with a
-       * colon. For example, `nginx:latest` or `nginx` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-container.html#cfn-lightsail-container-container-image)
-       */
-      override fun image(): String? = unwrap(this).getImage()
-
-      /**
-       * An object that describes the open firewall ports and protocols of the container.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-container.html#cfn-lightsail-container-container-ports)
-       */
-      override fun ports(): Any? = unwrap(this).getPorts()
+            internal fun unwrap(
+                wrapped: HealthCheckConfigProperty
+            ): software.amazon.awscdk.services.lightsail.CfnContainer.HealthCheckConfigProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface ContainerServiceDeploymentProperty {
+        /**
+         * An object that describes the configuration for the containers of the deployment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-containerservicedeployment.html#cfn-lightsail-container-containerservicedeployment-containers)
+         */
+        public fun containers(): Any? = unwrap(this).getContainers()
 
-      }
+        /**
+         * An object that describes the endpoint of the deployment.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-containerservicedeployment.html#cfn-lightsail-container-containerservicedeployment-publicendpoint)
+         */
+        public fun publicEndpoint(): Any? = unwrap(this).getPublicEndpoint()
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): ContainerProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /** A builder for [ContainerServiceDeploymentProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param containers An object that describes the configuration for the containers of
+             *   the deployment.
+             */
+            public fun containers(containers: IResolvable)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.ContainerProperty):
-          ContainerProperty = Wrapper(cdkObject)
+            /**
+             * @param containers An object that describes the configuration for the containers of
+             *   the deployment.
+             */
+            public fun containers(containers: List<Any>)
 
-      internal fun unwrap(wrapped: ContainerProperty):
-          software.amazon.awscdk.services.lightsail.CfnContainer.ContainerProperty = (wrapped as
-          Wrapper).cdkObject
-    }
-  }
+            /**
+             * @param containers An object that describes the configuration for the containers of
+             *   the deployment.
+             */
+            public fun containers(vararg containers: Any)
 
-  public interface HealthCheckConfigProperty {
-    /**
-     * The number of consecutive health check successes required before moving the container to the
-     * `Healthy` state.
-     *
-     * The default value is `2` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-healthythreshold)
-     */
-    public fun healthyThreshold(): Number? = unwrap(this).getHealthyThreshold()
+            /** @param publicEndpoint An object that describes the endpoint of the deployment. */
+            public fun publicEndpoint(publicEndpoint: IResolvable)
 
-    /**
-     * The approximate interval, in seconds, between health checks of an individual container.
-     *
-     * You can specify between `5` and `300` seconds. The default value is `5` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-intervalseconds)
-     */
-    public fun intervalSeconds(): Number? = unwrap(this).getIntervalSeconds()
+            /** @param publicEndpoint An object that describes the endpoint of the deployment. */
+            public fun publicEndpoint(publicEndpoint: PublicEndpointProperty)
 
-    /**
-     * The path on the container on which to perform the health check.
-     *
-     * The default value is `/` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-path)
-     */
-    public fun path(): String? = unwrap(this).getPath()
+            /** @param publicEndpoint An object that describes the endpoint of the deployment. */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("4c45185e4c5081a7a57c2048a7d30a43fc4200b5d930c77ba5f693d10f5ced8b")
+            public fun publicEndpoint(publicEndpoint: PublicEndpointProperty.Builder.() -> Unit)
+        }
 
-    /**
-     * The HTTP codes to use when checking for a successful response from a container.
-     *
-     * You can specify values between `200` and `499` . You can specify multiple values (for
-     * example, `200,202` ) or a range of values (for example, `200-299` ).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-successcodes)
-     */
-    public fun successCodes(): String? = unwrap(this).getSuccessCodes()
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.lightsail.CfnContainer.ContainerServiceDeploymentProperty.Builder =
+                software.amazon.awscdk.services.lightsail.CfnContainer
+                    .ContainerServiceDeploymentProperty
+                    .builder()
 
-    /**
-     * The amount of time, in seconds, during which no response means a failed health check.
-     *
-     * You can specify between `2` and `60` seconds. The default value is `2` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-timeoutseconds)
-     */
-    public fun timeoutSeconds(): Number? = unwrap(this).getTimeoutSeconds()
+            /**
+             * @param containers An object that describes the configuration for the containers of
+             *   the deployment.
+             */
+            override fun containers(containers: IResolvable) {
+                cdkBuilder.containers(containers.let(IResolvable::unwrap))
+            }
 
-    /**
-     * The number of consecutive health check failures required before moving the container to the
-     * `Unhealthy` state.
-     *
-     * The default value is `2` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-unhealthythreshold)
-     */
-    public fun unhealthyThreshold(): Number? = unwrap(this).getUnhealthyThreshold()
+            /**
+             * @param containers An object that describes the configuration for the containers of
+             *   the deployment.
+             */
+            override fun containers(containers: List<Any>) {
+                cdkBuilder.containers(containers)
+            }
 
-    /**
-     * A builder for [HealthCheckConfigProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param healthyThreshold The number of consecutive health check successes required before
-       * moving the container to the `Healthy` state.
-       * The default value is `2` .
-       */
-      public fun healthyThreshold(healthyThreshold: Number)
+            /**
+             * @param containers An object that describes the configuration for the containers of
+             *   the deployment.
+             */
+            override fun containers(vararg containers: Any): Unit = containers(containers.toList())
 
-      /**
-       * @param intervalSeconds The approximate interval, in seconds, between health checks of an
-       * individual container.
-       * You can specify between `5` and `300` seconds. The default value is `5` .
-       */
-      public fun intervalSeconds(intervalSeconds: Number)
+            /** @param publicEndpoint An object that describes the endpoint of the deployment. */
+            override fun publicEndpoint(publicEndpoint: IResolvable) {
+                cdkBuilder.publicEndpoint(publicEndpoint.let(IResolvable::unwrap))
+            }
 
-      /**
-       * @param path The path on the container on which to perform the health check.
-       * The default value is `/` .
-       */
-      public fun path(path: String)
+            /** @param publicEndpoint An object that describes the endpoint of the deployment. */
+            override fun publicEndpoint(publicEndpoint: PublicEndpointProperty) {
+                cdkBuilder.publicEndpoint(publicEndpoint.let(PublicEndpointProperty::unwrap))
+            }
 
-      /**
-       * @param successCodes The HTTP codes to use when checking for a successful response from a
-       * container.
-       * You can specify values between `200` and `499` . You can specify multiple values (for
-       * example, `200,202` ) or a range of values (for example, `200-299` ).
-       */
-      public fun successCodes(successCodes: String)
+            /** @param publicEndpoint An object that describes the endpoint of the deployment. */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("4c45185e4c5081a7a57c2048a7d30a43fc4200b5d930c77ba5f693d10f5ced8b")
+            override fun publicEndpoint(
+                publicEndpoint: PublicEndpointProperty.Builder.() -> Unit
+            ): Unit = publicEndpoint(PublicEndpointProperty(publicEndpoint))
 
-      /**
-       * @param timeoutSeconds The amount of time, in seconds, during which no response means a
-       * failed health check.
-       * You can specify between `2` and `60` seconds. The default value is `2` .
-       */
-      public fun timeoutSeconds(timeoutSeconds: Number)
+            public fun build():
+                software.amazon.awscdk.services.lightsail.CfnContainer.ContainerServiceDeploymentProperty =
+                cdkBuilder.build()
+        }
 
-      /**
-       * @param unhealthyThreshold The number of consecutive health check failures required before
-       * moving the container to the `Unhealthy` state.
-       * The default value is `2` .
-       */
-      public fun unhealthyThreshold(unhealthyThreshold: Number)
-    }
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.lightsail.CfnContainer.ContainerServiceDeploymentProperty,
+        ) : ContainerServiceDeploymentProperty {
+            /**
+             * An object that describes the configuration for the containers of the deployment.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-containerservicedeployment.html#cfn-lightsail-container-containerservicedeployment-containers)
+             */
+            override fun containers(): Any? = unwrap(this).getContainers()
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lightsail.CfnContainer.HealthCheckConfigProperty.Builder =
-          software.amazon.awscdk.services.lightsail.CfnContainer.HealthCheckConfigProperty.builder()
+            /**
+             * An object that describes the endpoint of the deployment.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-containerservicedeployment.html#cfn-lightsail-container-containerservicedeployment-publicendpoint)
+             */
+            override fun publicEndpoint(): Any? = unwrap(this).getPublicEndpoint()
+        }
 
-      /**
-       * @param healthyThreshold The number of consecutive health check successes required before
-       * moving the container to the `Healthy` state.
-       * The default value is `2` .
-       */
-      override fun healthyThreshold(healthyThreshold: Number) {
-        cdkBuilder.healthyThreshold(healthyThreshold)
-      }
+        public companion object {
+            init {}
 
-      /**
-       * @param intervalSeconds The approximate interval, in seconds, between health checks of an
-       * individual container.
-       * You can specify between `5` and `300` seconds. The default value is `5` .
-       */
-      override fun intervalSeconds(intervalSeconds: Number) {
-        cdkBuilder.intervalSeconds(intervalSeconds)
-      }
+            public operator fun invoke(
+                block: Builder.() -> Unit = {}
+            ): ContainerServiceDeploymentProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-      /**
-       * @param path The path on the container on which to perform the health check.
-       * The default value is `/` .
-       */
-      override fun path(path: String) {
-        cdkBuilder.path(path)
-      }
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.lightsail.CfnContainer.ContainerServiceDeploymentProperty
+            ): ContainerServiceDeploymentProperty = Wrapper(cdkObject)
 
-      /**
-       * @param successCodes The HTTP codes to use when checking for a successful response from a
-       * container.
-       * You can specify values between `200` and `499` . You can specify multiple values (for
-       * example, `200,202` ) or a range of values (for example, `200-299` ).
-       */
-      override fun successCodes(successCodes: String) {
-        cdkBuilder.successCodes(successCodes)
-      }
-
-      /**
-       * @param timeoutSeconds The amount of time, in seconds, during which no response means a
-       * failed health check.
-       * You can specify between `2` and `60` seconds. The default value is `2` .
-       */
-      override fun timeoutSeconds(timeoutSeconds: Number) {
-        cdkBuilder.timeoutSeconds(timeoutSeconds)
-      }
-
-      /**
-       * @param unhealthyThreshold The number of consecutive health check failures required before
-       * moving the container to the `Unhealthy` state.
-       * The default value is `2` .
-       */
-      override fun unhealthyThreshold(unhealthyThreshold: Number) {
-        cdkBuilder.unhealthyThreshold(unhealthyThreshold)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.lightsail.CfnContainer.HealthCheckConfigProperty =
-          cdkBuilder.build()
+            internal fun unwrap(
+                wrapped: ContainerServiceDeploymentProperty
+            ): software.amazon.awscdk.services.lightsail.CfnContainer.ContainerServiceDeploymentProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnContainer.HealthCheckConfigProperty,
-    ) : HealthCheckConfigProperty {
-      /**
-       * The number of consecutive health check successes required before moving the container to
-       * the `Healthy` state.
-       *
-       * The default value is `2` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-healthythreshold)
-       */
-      override fun healthyThreshold(): Number? = unwrap(this).getHealthyThreshold()
+    public interface PublicEndpointProperty {
+        /**
+         * The name of the container entry of the deployment that the endpoint configuration applies
+         * to.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-publicendpoint.html#cfn-lightsail-container-publicendpoint-containername)
+         */
+        public fun containerName(): String? = unwrap(this).getContainerName()
 
-      /**
-       * The approximate interval, in seconds, between health checks of an individual container.
-       *
-       * You can specify between `5` and `300` seconds. The default value is `5` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-intervalseconds)
-       */
-      override fun intervalSeconds(): Number? = unwrap(this).getIntervalSeconds()
+        /**
+         * The port of the specified container to which traffic is forwarded to.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-publicendpoint.html#cfn-lightsail-container-publicendpoint-containerport)
+         */
+        public fun containerPort(): Number? = unwrap(this).getContainerPort()
 
-      /**
-       * The path on the container on which to perform the health check.
-       *
-       * The default value is `/` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-path)
-       */
-      override fun path(): String? = unwrap(this).getPath()
+        /**
+         * An object that describes the health check configuration of the container.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-publicendpoint.html#cfn-lightsail-container-publicendpoint-healthcheckconfig)
+         */
+        public fun healthCheckConfig(): Any? = unwrap(this).getHealthCheckConfig()
 
-      /**
-       * The HTTP codes to use when checking for a successful response from a container.
-       *
-       * You can specify values between `200` and `499` . You can specify multiple values (for
-       * example, `200,202` ) or a range of values (for example, `200-299` ).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-successcodes)
-       */
-      override fun successCodes(): String? = unwrap(this).getSuccessCodes()
+        /** A builder for [PublicEndpointProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param containerName The name of the container entry of the deployment that the
+             *   endpoint configuration applies to.
+             */
+            public fun containerName(containerName: String)
 
-      /**
-       * The amount of time, in seconds, during which no response means a failed health check.
-       *
-       * You can specify between `2` and `60` seconds. The default value is `2` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-timeoutseconds)
-       */
-      override fun timeoutSeconds(): Number? = unwrap(this).getTimeoutSeconds()
+            /**
+             * @param containerPort The port of the specified container to which traffic is
+             *   forwarded to.
+             */
+            public fun containerPort(containerPort: Number)
 
-      /**
-       * The number of consecutive health check failures required before moving the container to the
-       * `Unhealthy` state.
-       *
-       * The default value is `2` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-healthcheckconfig.html#cfn-lightsail-container-healthcheckconfig-unhealthythreshold)
-       */
-      override fun unhealthyThreshold(): Number? = unwrap(this).getUnhealthyThreshold()
+            /**
+             * @param healthCheckConfig An object that describes the health check configuration of
+             *   the container.
+             */
+            public fun healthCheckConfig(healthCheckConfig: IResolvable)
+
+            /**
+             * @param healthCheckConfig An object that describes the health check configuration of
+             *   the container.
+             */
+            public fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty)
+
+            /**
+             * @param healthCheckConfig An object that describes the health check configuration of
+             *   the container.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("44fa4e095f5a171e0db397ff2351377f66c7e234035c5d0f7629259cf0298758")
+            public fun healthCheckConfig(
+                healthCheckConfig: HealthCheckConfigProperty.Builder.() -> Unit
+            )
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.lightsail.CfnContainer.PublicEndpointProperty.Builder =
+                software.amazon.awscdk.services.lightsail.CfnContainer.PublicEndpointProperty
+                    .builder()
+
+            /**
+             * @param containerName The name of the container entry of the deployment that the
+             *   endpoint configuration applies to.
+             */
+            override fun containerName(containerName: String) {
+                cdkBuilder.containerName(containerName)
+            }
+
+            /**
+             * @param containerPort The port of the specified container to which traffic is
+             *   forwarded to.
+             */
+            override fun containerPort(containerPort: Number) {
+                cdkBuilder.containerPort(containerPort)
+            }
+
+            /**
+             * @param healthCheckConfig An object that describes the health check configuration of
+             *   the container.
+             */
+            override fun healthCheckConfig(healthCheckConfig: IResolvable) {
+                cdkBuilder.healthCheckConfig(healthCheckConfig.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param healthCheckConfig An object that describes the health check configuration of
+             *   the container.
+             */
+            override fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty) {
+                cdkBuilder.healthCheckConfig(
+                    healthCheckConfig.let(HealthCheckConfigProperty::unwrap)
+                )
+            }
+
+            /**
+             * @param healthCheckConfig An object that describes the health check configuration of
+             *   the container.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("44fa4e095f5a171e0db397ff2351377f66c7e234035c5d0f7629259cf0298758")
+            override fun healthCheckConfig(
+                healthCheckConfig: HealthCheckConfigProperty.Builder.() -> Unit
+            ): Unit = healthCheckConfig(HealthCheckConfigProperty(healthCheckConfig))
+
+            public fun build():
+                software.amazon.awscdk.services.lightsail.CfnContainer.PublicEndpointProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.lightsail.CfnContainer.PublicEndpointProperty,
+        ) : PublicEndpointProperty {
+            /**
+             * The name of the container entry of the deployment that the endpoint configuration
+             * applies to.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-publicendpoint.html#cfn-lightsail-container-publicendpoint-containername)
+             */
+            override fun containerName(): String? = unwrap(this).getContainerName()
+
+            /**
+             * The port of the specified container to which traffic is forwarded to.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-publicendpoint.html#cfn-lightsail-container-publicendpoint-containerport)
+             */
+            override fun containerPort(): Number? = unwrap(this).getContainerPort()
+
+            /**
+             * An object that describes the health check configuration of the container.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-publicendpoint.html#cfn-lightsail-container-publicendpoint-healthcheckconfig)
+             */
+            override fun healthCheckConfig(): Any? = unwrap(this).getHealthCheckConfig()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): PublicEndpointProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.lightsail.CfnContainer.PublicEndpointProperty
+            ): PublicEndpointProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: PublicEndpointProperty
+            ): software.amazon.awscdk.services.lightsail.CfnContainer.PublicEndpointProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
-
-    public companion object {
-      init {
-
-      }
-
-      public operator fun invoke(block: Builder.() -> Unit = {}): HealthCheckConfigProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.HealthCheckConfigProperty):
-          HealthCheckConfigProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: HealthCheckConfigProperty):
-          software.amazon.awscdk.services.lightsail.CfnContainer.HealthCheckConfigProperty =
-          (wrapped as Wrapper).cdkObject
-    }
-  }
-
-  public interface ContainerServiceDeploymentProperty {
-    /**
-     * An object that describes the configuration for the containers of the deployment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-containerservicedeployment.html#cfn-lightsail-container-containerservicedeployment-containers)
-     */
-    public fun containers(): Any? = unwrap(this).getContainers()
-
-    /**
-     * An object that describes the endpoint of the deployment.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-containerservicedeployment.html#cfn-lightsail-container-containerservicedeployment-publicendpoint)
-     */
-    public fun publicEndpoint(): Any? = unwrap(this).getPublicEndpoint()
-
-    /**
-     * A builder for [ContainerServiceDeploymentProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param containers An object that describes the configuration for the containers of the
-       * deployment.
-       */
-      public fun containers(containers: IResolvable)
-
-      /**
-       * @param containers An object that describes the configuration for the containers of the
-       * deployment.
-       */
-      public fun containers(containers: List<Any>)
-
-      /**
-       * @param containers An object that describes the configuration for the containers of the
-       * deployment.
-       */
-      public fun containers(vararg containers: Any)
-
-      /**
-       * @param publicEndpoint An object that describes the endpoint of the deployment.
-       */
-      public fun publicEndpoint(publicEndpoint: IResolvable)
-
-      /**
-       * @param publicEndpoint An object that describes the endpoint of the deployment.
-       */
-      public fun publicEndpoint(publicEndpoint: PublicEndpointProperty)
-
-      /**
-       * @param publicEndpoint An object that describes the endpoint of the deployment.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4c45185e4c5081a7a57c2048a7d30a43fc4200b5d930c77ba5f693d10f5ced8b")
-      public fun publicEndpoint(publicEndpoint: PublicEndpointProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lightsail.CfnContainer.ContainerServiceDeploymentProperty.Builder
-          =
-          software.amazon.awscdk.services.lightsail.CfnContainer.ContainerServiceDeploymentProperty.builder()
-
-      /**
-       * @param containers An object that describes the configuration for the containers of the
-       * deployment.
-       */
-      override fun containers(containers: IResolvable) {
-        cdkBuilder.containers(containers.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param containers An object that describes the configuration for the containers of the
-       * deployment.
-       */
-      override fun containers(containers: List<Any>) {
-        cdkBuilder.containers(containers)
-      }
-
-      /**
-       * @param containers An object that describes the configuration for the containers of the
-       * deployment.
-       */
-      override fun containers(vararg containers: Any): Unit = containers(containers.toList())
-
-      /**
-       * @param publicEndpoint An object that describes the endpoint of the deployment.
-       */
-      override fun publicEndpoint(publicEndpoint: IResolvable) {
-        cdkBuilder.publicEndpoint(publicEndpoint.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param publicEndpoint An object that describes the endpoint of the deployment.
-       */
-      override fun publicEndpoint(publicEndpoint: PublicEndpointProperty) {
-        cdkBuilder.publicEndpoint(publicEndpoint.let(PublicEndpointProperty::unwrap))
-      }
-
-      /**
-       * @param publicEndpoint An object that describes the endpoint of the deployment.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("4c45185e4c5081a7a57c2048a7d30a43fc4200b5d930c77ba5f693d10f5ced8b")
-      override fun publicEndpoint(publicEndpoint: PublicEndpointProperty.Builder.() -> Unit): Unit =
-          publicEndpoint(PublicEndpointProperty(publicEndpoint))
-
-      public fun build():
-          software.amazon.awscdk.services.lightsail.CfnContainer.ContainerServiceDeploymentProperty
-          = cdkBuilder.build()
-    }
-
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnContainer.ContainerServiceDeploymentProperty,
-    ) : ContainerServiceDeploymentProperty {
-      /**
-       * An object that describes the configuration for the containers of the deployment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-containerservicedeployment.html#cfn-lightsail-container-containerservicedeployment-containers)
-       */
-      override fun containers(): Any? = unwrap(this).getContainers()
-
-      /**
-       * An object that describes the endpoint of the deployment.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-containerservicedeployment.html#cfn-lightsail-container-containerservicedeployment-publicendpoint)
-       */
-      override fun publicEndpoint(): Any? = unwrap(this).getPublicEndpoint()
-    }
-
-    public companion object {
-      init {
-
-      }
-
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ContainerServiceDeploymentProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.ContainerServiceDeploymentProperty):
-          ContainerServiceDeploymentProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ContainerServiceDeploymentProperty):
-          software.amazon.awscdk.services.lightsail.CfnContainer.ContainerServiceDeploymentProperty
-          = (wrapped as Wrapper).cdkObject
-    }
-  }
-
-  public interface PublicEndpointProperty {
-    /**
-     * The name of the container entry of the deployment that the endpoint configuration applies to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-publicendpoint.html#cfn-lightsail-container-publicendpoint-containername)
-     */
-    public fun containerName(): String? = unwrap(this).getContainerName()
-
-    /**
-     * The port of the specified container to which traffic is forwarded to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-publicendpoint.html#cfn-lightsail-container-publicendpoint-containerport)
-     */
-    public fun containerPort(): Number? = unwrap(this).getContainerPort()
-
-    /**
-     * An object that describes the health check configuration of the container.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-publicendpoint.html#cfn-lightsail-container-publicendpoint-healthcheckconfig)
-     */
-    public fun healthCheckConfig(): Any? = unwrap(this).getHealthCheckConfig()
-
-    /**
-     * A builder for [PublicEndpointProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param containerName The name of the container entry of the deployment that the endpoint
-       * configuration applies to.
-       */
-      public fun containerName(containerName: String)
-
-      /**
-       * @param containerPort The port of the specified container to which traffic is forwarded to.
-       */
-      public fun containerPort(containerPort: Number)
-
-      /**
-       * @param healthCheckConfig An object that describes the health check configuration of the
-       * container.
-       */
-      public fun healthCheckConfig(healthCheckConfig: IResolvable)
-
-      /**
-       * @param healthCheckConfig An object that describes the health check configuration of the
-       * container.
-       */
-      public fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty)
-
-      /**
-       * @param healthCheckConfig An object that describes the health check configuration of the
-       * container.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("44fa4e095f5a171e0db397ff2351377f66c7e234035c5d0f7629259cf0298758")
-      public fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.lightsail.CfnContainer.PublicEndpointProperty.Builder =
-          software.amazon.awscdk.services.lightsail.CfnContainer.PublicEndpointProperty.builder()
-
-      /**
-       * @param containerName The name of the container entry of the deployment that the endpoint
-       * configuration applies to.
-       */
-      override fun containerName(containerName: String) {
-        cdkBuilder.containerName(containerName)
-      }
-
-      /**
-       * @param containerPort The port of the specified container to which traffic is forwarded to.
-       */
-      override fun containerPort(containerPort: Number) {
-        cdkBuilder.containerPort(containerPort)
-      }
-
-      /**
-       * @param healthCheckConfig An object that describes the health check configuration of the
-       * container.
-       */
-      override fun healthCheckConfig(healthCheckConfig: IResolvable) {
-        cdkBuilder.healthCheckConfig(healthCheckConfig.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param healthCheckConfig An object that describes the health check configuration of the
-       * container.
-       */
-      override fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty) {
-        cdkBuilder.healthCheckConfig(healthCheckConfig.let(HealthCheckConfigProperty::unwrap))
-      }
-
-      /**
-       * @param healthCheckConfig An object that describes the health check configuration of the
-       * container.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("44fa4e095f5a171e0db397ff2351377f66c7e234035c5d0f7629259cf0298758")
-      override
-          fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty.Builder.() -> Unit):
-          Unit = healthCheckConfig(HealthCheckConfigProperty(healthCheckConfig))
-
-      public fun build():
-          software.amazon.awscdk.services.lightsail.CfnContainer.PublicEndpointProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.lightsail.CfnContainer.PublicEndpointProperty,
-    ) : PublicEndpointProperty {
-      /**
-       * The name of the container entry of the deployment that the endpoint configuration applies
-       * to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-publicendpoint.html#cfn-lightsail-container-publicendpoint-containername)
-       */
-      override fun containerName(): String? = unwrap(this).getContainerName()
-
-      /**
-       * The port of the specified container to which traffic is forwarded to.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-publicendpoint.html#cfn-lightsail-container-publicendpoint-containerport)
-       */
-      override fun containerPort(): Number? = unwrap(this).getContainerPort()
-
-      /**
-       * An object that describes the health check configuration of the container.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-container-publicendpoint.html#cfn-lightsail-container-publicendpoint-healthcheckconfig)
-       */
-      override fun healthCheckConfig(): Any? = unwrap(this).getHealthCheckConfig()
-    }
-
-    public companion object {
-      init {
-
-      }
-
-      public operator fun invoke(block: Builder.() -> Unit = {}): PublicEndpointProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnContainer.PublicEndpointProperty):
-          PublicEndpointProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PublicEndpointProperty):
-          software.amazon.awscdk.services.lightsail.CfnContainer.PublicEndpointProperty = (wrapped
-          as Wrapper).cdkObject
-    }
-  }
 }

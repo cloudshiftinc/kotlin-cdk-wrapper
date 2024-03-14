@@ -5,62 +5,53 @@ import kotlin.Number
 import kotlin.Unit
 
 public interface ShuffleConfig {
-  /**
-   * Determines the shuffling order.
-   */
-  public fun seed(): Number
+    /** Determines the shuffling order. */
+    public fun seed(): Number
 
-  /**
-   * A builder for [ShuffleConfig]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param seed Determines the shuffling order. 
-     */
-    public fun seed(seed: Number)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder:
-        software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig.Builder =
-        software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig.builder()
-
-    /**
-     * @param seed Determines the shuffling order. 
-     */
-    override fun seed(seed: Number) {
-      cdkBuilder.seed(seed)
+    /** A builder for [ShuffleConfig] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param seed Determines the shuffling order. */
+        public fun seed(seed: Number)
     }
 
-    public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig =
-        cdkBuilder.build()
-  }
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig.Builder =
+            software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig.builder()
 
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig,
-  ) : ShuffleConfig {
-    /**
-     * Determines the shuffling order.
-     */
-    override fun seed(): Number = unwrap(this).getSeed()
-  }
+        /** @param seed Determines the shuffling order. */
+        override fun seed(seed: Number) {
+            cdkBuilder.seed(seed)
+        }
 
-  public companion object {
-    init {
-
+        public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig =
+            cdkBuilder.build()
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): ShuffleConfig {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig,
+    ) : ShuffleConfig {
+        /** Determines the shuffling order. */
+        override fun seed(): Number = unwrap(this).getSeed()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig):
-        ShuffleConfig = Wrapper(cdkObject)
+    public companion object {
+        init {}
 
-    internal fun unwrap(wrapped: ShuffleConfig):
-        software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig = (wrapped as
-        Wrapper).cdkObject
-  }
+        public operator fun invoke(block: Builder.() -> Unit = {}): ShuffleConfig {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig
+        ): ShuffleConfig = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: ShuffleConfig
+        ): software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig =
+            (wrapped as Wrapper).cdkObject
+    }
 }

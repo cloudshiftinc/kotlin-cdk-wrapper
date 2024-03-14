@@ -10,184 +10,17 @@ import kotlin.collections.List
 import kotlin.collections.Map
 
 public interface OptionConfiguration {
-  /**
-   * The name of the option.
-   */
-  public fun name(): String
-
-  /**
-   * The port number that this option uses.
-   *
-   * If `port` is specified then `vpc`
-   * must also be specified.
-   *
-   * Default: - no port
-   */
-  public fun port(): Number? = unwrap(this).getPort()
-
-  /**
-   * Optional list of security groups to use for this option, if `vpc` is specified.
-   *
-   * If no groups are provided, a default one will be created.
-   *
-   * Default: - a default group will be created if `port` or `vpc` are specified.
-   */
-  public fun securityGroups(): List<ISecurityGroup> =
-      unwrap(this).getSecurityGroups()?.map(ISecurityGroup::wrap) ?: emptyList()
-
-  /**
-   * The settings for the option.
-   *
-   * Default: - no settings
-   */
-  public fun settings(): Map<String, String> = unwrap(this).getSettings() ?: emptyMap()
-
-  /**
-   * The version for the option.
-   *
-   * Default: - no version
-   */
-  public fun version(): String? = unwrap(this).getVersion()
-
-  /**
-   * The VPC where a security group should be created for this option.
-   *
-   * If `vpc`
-   * is specified then `port` must also be specified.
-   *
-   * Default: - no VPC
-   */
-  public fun vpc(): IVpc? = unwrap(this).getVpc()?.let(IVpc::wrap)
-
-  /**
-   * A builder for [OptionConfiguration]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param name The name of the option. 
-     */
-    public fun name(name: String)
-
-    /**
-     * @param port The port number that this option uses.
-     * If `port` is specified then `vpc`
-     * must also be specified.
-     */
-    public fun port(port: Number)
-
-    /**
-     * @param securityGroups Optional list of security groups to use for this option, if `vpc` is
-     * specified.
-     * If no groups are provided, a default one will be created.
-     */
-    public fun securityGroups(securityGroups: List<ISecurityGroup>)
-
-    /**
-     * @param securityGroups Optional list of security groups to use for this option, if `vpc` is
-     * specified.
-     * If no groups are provided, a default one will be created.
-     */
-    public fun securityGroups(vararg securityGroups: ISecurityGroup)
-
-    /**
-     * @param settings The settings for the option.
-     */
-    public fun tings(settings: Map<String, String>)
-
-    /**
-     * @param version The version for the option.
-     */
-    public fun version(version: String)
-
-    /**
-     * @param vpc The VPC where a security group should be created for this option.
-     * If `vpc`
-     * is specified then `port` must also be specified.
-     */
-    public fun vpc(vpc: IVpc)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.rds.OptionConfiguration.Builder =
-        software.amazon.awscdk.services.rds.OptionConfiguration.builder()
-
-    /**
-     * @param name The name of the option. 
-     */
-    override fun name(name: String) {
-      cdkBuilder.name(name)
-    }
-
-    /**
-     * @param port The port number that this option uses.
-     * If `port` is specified then `vpc`
-     * must also be specified.
-     */
-    override fun port(port: Number) {
-      cdkBuilder.port(port)
-    }
-
-    /**
-     * @param securityGroups Optional list of security groups to use for this option, if `vpc` is
-     * specified.
-     * If no groups are provided, a default one will be created.
-     */
-    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
-    }
-
-    /**
-     * @param securityGroups Optional list of security groups to use for this option, if `vpc` is
-     * specified.
-     * If no groups are provided, a default one will be created.
-     */
-    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
-        securityGroups(securityGroups.toList())
-
-    /**
-     * @param settings The settings for the option.
-     */
-    override fun tings(settings: Map<String, String>) {
-      cdkBuilder.settings(settings)
-    }
-
-    /**
-     * @param version The version for the option.
-     */
-    override fun version(version: String) {
-      cdkBuilder.version(version)
-    }
-
-    /**
-     * @param vpc The VPC where a security group should be created for this option.
-     * If `vpc`
-     * is specified then `port` must also be specified.
-     */
-    override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
-    }
-
-    public fun build(): software.amazon.awscdk.services.rds.OptionConfiguration = cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.rds.OptionConfiguration,
-  ) : OptionConfiguration {
-    /**
-     * The name of the option.
-     */
-    override fun name(): String = unwrap(this).getName()
+    /** The name of the option. */
+    public fun name(): String
 
     /**
      * The port number that this option uses.
      *
-     * If `port` is specified then `vpc`
-     * must also be specified.
+     * If `port` is specified then `vpc` must also be specified.
      *
      * Default: - no port
      */
-    override fun port(): Number? = unwrap(this).getPort()
+    public fun port(): Number? = unwrap(this).getPort()
 
     /**
      * Optional list of security groups to use for this option, if `vpc` is specified.
@@ -196,7 +29,7 @@ public interface OptionConfiguration {
      *
      * Default: - a default group will be created if `port` or `vpc` are specified.
      */
-    override fun securityGroups(): List<ISecurityGroup> =
+    public fun securityGroups(): List<ISecurityGroup> =
         unwrap(this).getSecurityGroups()?.map(ISecurityGroup::wrap) ?: emptyList()
 
     /**
@@ -204,40 +37,179 @@ public interface OptionConfiguration {
      *
      * Default: - no settings
      */
-    override fun settings(): Map<String, String> = unwrap(this).getSettings() ?: emptyMap()
+    public fun settings(): Map<String, String> = unwrap(this).getSettings() ?: emptyMap()
 
     /**
      * The version for the option.
      *
      * Default: - no version
      */
-    override fun version(): String? = unwrap(this).getVersion()
+    public fun version(): String? = unwrap(this).getVersion()
 
     /**
      * The VPC where a security group should be created for this option.
      *
-     * If `vpc`
-     * is specified then `port` must also be specified.
+     * If `vpc` is specified then `port` must also be specified.
      *
      * Default: - no VPC
      */
-    override fun vpc(): IVpc? = unwrap(this).getVpc()?.let(IVpc::wrap)
-  }
+    public fun vpc(): IVpc? = unwrap(this).getVpc()?.let(IVpc::wrap)
 
-  public companion object {
-    init {
+    /** A builder for [OptionConfiguration] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param name The name of the option. */
+        public fun name(name: String)
 
+        /**
+         * @param port The port number that this option uses. If `port` is specified then `vpc` must
+         *   also be specified.
+         */
+        public fun port(port: Number)
+
+        /**
+         * @param securityGroups Optional list of security groups to use for this option, if `vpc`
+         *   is specified. If no groups are provided, a default one will be created.
+         */
+        public fun securityGroups(securityGroups: List<ISecurityGroup>)
+
+        /**
+         * @param securityGroups Optional list of security groups to use for this option, if `vpc`
+         *   is specified. If no groups are provided, a default one will be created.
+         */
+        public fun securityGroups(vararg securityGroups: ISecurityGroup)
+
+        /** @param settings The settings for the option. */
+        public fun tings(settings: Map<String, String>)
+
+        /** @param version The version for the option. */
+        public fun version(version: String)
+
+        /**
+         * @param vpc The VPC where a security group should be created for this option. If `vpc` is
+         *   specified then `port` must also be specified.
+         */
+        public fun vpc(vpc: IVpc)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): OptionConfiguration {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.rds.OptionConfiguration.Builder =
+            software.amazon.awscdk.services.rds.OptionConfiguration.builder()
+
+        /** @param name The name of the option. */
+        override fun name(name: String) {
+            cdkBuilder.name(name)
+        }
+
+        /**
+         * @param port The port number that this option uses. If `port` is specified then `vpc` must
+         *   also be specified.
+         */
+        override fun port(port: Number) {
+            cdkBuilder.port(port)
+        }
+
+        /**
+         * @param securityGroups Optional list of security groups to use for this option, if `vpc`
+         *   is specified. If no groups are provided, a default one will be created.
+         */
+        override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+            cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+        }
+
+        /**
+         * @param securityGroups Optional list of security groups to use for this option, if `vpc`
+         *   is specified. If no groups are provided, a default one will be created.
+         */
+        override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+            securityGroups(securityGroups.toList())
+
+        /** @param settings The settings for the option. */
+        override fun tings(settings: Map<String, String>) {
+            cdkBuilder.settings(settings)
+        }
+
+        /** @param version The version for the option. */
+        override fun version(version: String) {
+            cdkBuilder.version(version)
+        }
+
+        /**
+         * @param vpc The VPC where a security group should be created for this option. If `vpc` is
+         *   specified then `port` must also be specified.
+         */
+        override fun vpc(vpc: IVpc) {
+            cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+        }
+
+        public fun build(): software.amazon.awscdk.services.rds.OptionConfiguration =
+            cdkBuilder.build()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.OptionConfiguration):
-        OptionConfiguration = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.rds.OptionConfiguration,
+    ) : OptionConfiguration {
+        /** The name of the option. */
+        override fun name(): String = unwrap(this).getName()
 
-    internal fun unwrap(wrapped: OptionConfiguration):
-        software.amazon.awscdk.services.rds.OptionConfiguration = (wrapped as Wrapper).cdkObject
-  }
+        /**
+         * The port number that this option uses.
+         *
+         * If `port` is specified then `vpc` must also be specified.
+         *
+         * Default: - no port
+         */
+        override fun port(): Number? = unwrap(this).getPort()
+
+        /**
+         * Optional list of security groups to use for this option, if `vpc` is specified.
+         *
+         * If no groups are provided, a default one will be created.
+         *
+         * Default: - a default group will be created if `port` or `vpc` are specified.
+         */
+        override fun securityGroups(): List<ISecurityGroup> =
+            unwrap(this).getSecurityGroups()?.map(ISecurityGroup::wrap) ?: emptyList()
+
+        /**
+         * The settings for the option.
+         *
+         * Default: - no settings
+         */
+        override fun settings(): Map<String, String> = unwrap(this).getSettings() ?: emptyMap()
+
+        /**
+         * The version for the option.
+         *
+         * Default: - no version
+         */
+        override fun version(): String? = unwrap(this).getVersion()
+
+        /**
+         * The VPC where a security group should be created for this option.
+         *
+         * If `vpc` is specified then `port` must also be specified.
+         *
+         * Default: - no VPC
+         */
+        override fun vpc(): IVpc? = unwrap(this).getVpc()?.let(IVpc::wrap)
+    }
+
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): OptionConfiguration {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.rds.OptionConfiguration
+        ): OptionConfiguration = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: OptionConfiguration
+        ): software.amazon.awscdk.services.rds.OptionConfiguration = (wrapped as Wrapper).cdkObject
+    }
 }

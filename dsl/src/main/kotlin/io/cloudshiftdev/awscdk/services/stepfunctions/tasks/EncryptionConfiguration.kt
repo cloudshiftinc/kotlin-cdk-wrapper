@@ -5,97 +5,88 @@ import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Unit
 
 public interface EncryptionConfiguration {
-  /**
-   * KMS key ARN or ID.
-   *
-   * Default: - No KMS key for Encryption Option SSE_S3 and default master key for Encryption Option
-   * SSE_KMS and CSE_KMS
-   */
-  public fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
-
-  /**
-   * Type of S3 server-side encryption enabled.
-   *
-   * Default: EncryptionOption.S3_MANAGED
-   */
-  public fun encryptionOption(): EncryptionOption
-
-  /**
-   * A builder for [EncryptionConfiguration]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param encryptionKey KMS key ARN or ID.
-     */
-    public fun encryptionKey(encryptionKey: IKey)
-
-    /**
-     * @param encryptionOption Type of S3 server-side encryption enabled. 
-     */
-    public fun encryptionOption(encryptionOption: EncryptionOption)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder:
-        software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration.Builder =
-        software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration.builder()
-
-    /**
-     * @param encryptionKey KMS key ARN or ID.
-     */
-    override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
-    }
-
-    /**
-     * @param encryptionOption Type of S3 server-side encryption enabled. 
-     */
-    override fun encryptionOption(encryptionOption: EncryptionOption) {
-      cdkBuilder.encryptionOption(encryptionOption.let(EncryptionOption::unwrap))
-    }
-
-    public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration
-        = cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration,
-  ) : EncryptionConfiguration {
     /**
      * KMS key ARN or ID.
      *
      * Default: - No KMS key for Encryption Option SSE_S3 and default master key for Encryption
      * Option SSE_KMS and CSE_KMS
      */
-    override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
+    public fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
 
     /**
      * Type of S3 server-side encryption enabled.
      *
      * Default: EncryptionOption.S3_MANAGED
      */
-    override fun encryptionOption(): EncryptionOption =
-        unwrap(this).getEncryptionOption().let(EncryptionOption::wrap)
-  }
+    public fun encryptionOption(): EncryptionOption
 
-  public companion object {
-    init {
+    /** A builder for [EncryptionConfiguration] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param encryptionKey KMS key ARN or ID. */
+        public fun encryptionKey(encryptionKey: IKey)
 
+        /** @param encryptionOption Type of S3 server-side encryption enabled. */
+        public fun encryptionOption(encryptionOption: EncryptionOption)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionConfiguration {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration.Builder =
+            software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration.builder()
+
+        /** @param encryptionKey KMS key ARN or ID. */
+        override fun encryptionKey(encryptionKey: IKey) {
+            cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+        }
+
+        /** @param encryptionOption Type of S3 server-side encryption enabled. */
+        override fun encryptionOption(encryptionOption: EncryptionOption) {
+            cdkBuilder.encryptionOption(encryptionOption.let(EncryptionOption::unwrap))
+        }
+
+        public fun build():
+            software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration =
+            cdkBuilder.build()
     }
 
-    internal
-        fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration):
-        EncryptionConfiguration = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject:
+            software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration,
+    ) : EncryptionConfiguration {
+        /**
+         * KMS key ARN or ID.
+         *
+         * Default: - No KMS key for Encryption Option SSE_S3 and default master key for Encryption
+         * Option SSE_KMS and CSE_KMS
+         */
+        override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
 
-    internal fun unwrap(wrapped: EncryptionConfiguration):
-        software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration = (wrapped as
-        Wrapper).cdkObject
-  }
+        /**
+         * Type of S3 server-side encryption enabled.
+         *
+         * Default: EncryptionOption.S3_MANAGED
+         */
+        override fun encryptionOption(): EncryptionOption =
+            unwrap(this).getEncryptionOption().let(EncryptionOption::wrap)
+    }
+
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): EncryptionConfiguration {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration
+        ): EncryptionConfiguration = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: EncryptionConfiguration
+        ): software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration =
+            (wrapped as Wrapper).cdkObject
+    }
 }

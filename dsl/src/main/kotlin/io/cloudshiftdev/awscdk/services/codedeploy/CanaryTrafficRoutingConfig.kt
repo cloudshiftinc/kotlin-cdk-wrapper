@@ -5,91 +5,91 @@ import kotlin.Number
 import kotlin.Unit
 
 public interface CanaryTrafficRoutingConfig {
-  /**
-   * The number of minutes between the first and second traffic shifts of a `TimeBasedCanary`
-   * deployment.
-   */
-  public fun canaryInterval(): Number
-
-  /**
-   * The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
-   */
-  public fun canaryPercentage(): Number
-
-  /**
-   * A builder for [CanaryTrafficRoutingConfig]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param canaryInterval The number of minutes between the first and second traffic shifts of a
-     * `TimeBasedCanary` deployment. 
-     */
-    public fun canaryInterval(canaryInterval: Number)
-
-    /**
-     * @param canaryPercentage The percentage of traffic to shift in the first increment of a
-     * `TimeBasedCanary` deployment. 
-     */
-    public fun canaryPercentage(canaryPercentage: Number)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder:
-        software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig.Builder =
-        software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig.builder()
-
-    /**
-     * @param canaryInterval The number of minutes between the first and second traffic shifts of a
-     * `TimeBasedCanary` deployment. 
-     */
-    override fun canaryInterval(canaryInterval: Number) {
-      cdkBuilder.canaryInterval(canaryInterval)
-    }
-
-    /**
-     * @param canaryPercentage The percentage of traffic to shift in the first increment of a
-     * `TimeBasedCanary` deployment. 
-     */
-    override fun canaryPercentage(canaryPercentage: Number) {
-      cdkBuilder.canaryPercentage(canaryPercentage)
-    }
-
-    public fun build(): software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig =
-        cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig,
-  ) : CanaryTrafficRoutingConfig {
     /**
      * The number of minutes between the first and second traffic shifts of a `TimeBasedCanary`
      * deployment.
      */
-    override fun canaryInterval(): Number = unwrap(this).getCanaryInterval()
+    public fun canaryInterval(): Number
 
     /**
      * The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
      */
-    override fun canaryPercentage(): Number = unwrap(this).getCanaryPercentage()
-  }
+    public fun canaryPercentage(): Number
 
-  public companion object {
-    init {
+    /** A builder for [CanaryTrafficRoutingConfig] */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * @param canaryInterval The number of minutes between the first and second traffic shifts
+         *   of a `TimeBasedCanary` deployment.
+         */
+        public fun canaryInterval(canaryInterval: Number)
 
+        /**
+         * @param canaryPercentage The percentage of traffic to shift in the first increment of a
+         *   `TimeBasedCanary` deployment.
+         */
+        public fun canaryPercentage(canaryPercentage: Number)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): CanaryTrafficRoutingConfig {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig.Builder =
+            software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig.builder()
+
+        /**
+         * @param canaryInterval The number of minutes between the first and second traffic shifts
+         *   of a `TimeBasedCanary` deployment.
+         */
+        override fun canaryInterval(canaryInterval: Number) {
+            cdkBuilder.canaryInterval(canaryInterval)
+        }
+
+        /**
+         * @param canaryPercentage The percentage of traffic to shift in the first increment of a
+         *   `TimeBasedCanary` deployment.
+         */
+        override fun canaryPercentage(canaryPercentage: Number) {
+            cdkBuilder.canaryPercentage(canaryPercentage)
+        }
+
+        public fun build(): software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig =
+            cdkBuilder.build()
     }
 
-    internal
-        fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig):
-        CanaryTrafficRoutingConfig = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject:
+            software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig,
+    ) : CanaryTrafficRoutingConfig {
+        /**
+         * The number of minutes between the first and second traffic shifts of a `TimeBasedCanary`
+         * deployment.
+         */
+        override fun canaryInterval(): Number = unwrap(this).getCanaryInterval()
 
-    internal fun unwrap(wrapped: CanaryTrafficRoutingConfig):
-        software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig = (wrapped as
-        Wrapper).cdkObject
-  }
+        /**
+         * The percentage of traffic to shift in the first increment of a `TimeBasedCanary`
+         * deployment.
+         */
+        override fun canaryPercentage(): Number = unwrap(this).getCanaryPercentage()
+    }
+
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): CanaryTrafficRoutingConfig {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig
+        ): CanaryTrafficRoutingConfig = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: CanaryTrafficRoutingConfig
+        ): software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig =
+            (wrapped as Wrapper).cdkObject
+    }
 }

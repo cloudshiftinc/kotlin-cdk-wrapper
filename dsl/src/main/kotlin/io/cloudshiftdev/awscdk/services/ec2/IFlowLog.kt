@@ -8,65 +8,57 @@ import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
 public interface IFlowLog : IResource {
-  /**
-   * The Id of the VPC Flow Log.
-   */
-  public fun flowLogId(): String
+    /** The Id of the VPC Flow Log. */
+    public fun flowLogId(): String
 
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.ec2.IFlowLog,
-  ) : IFlowLog {
-    /**
-     * Apply the given removal policy to this resource.
-     *
-     * The Removal Policy controls what happens to this resource when it stops
-     * being managed by CloudFormation, either because you've removed it from the
-     * CDK application or because you've made a change that requires the resource
-     * to be replaced.
-     *
-     * The resource can be deleted (`RemovalPolicy.DESTROY`), or left in your AWS
-     * account for data recovery and cleanup later (`RemovalPolicy.RETAIN`).
-     *
-     * @param policy 
-     */
-    override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.ec2.IFlowLog,
+    ) : IFlowLog {
+        /**
+         * Apply the given removal policy to this resource.
+         *
+         * The Removal Policy controls what happens to this resource when it stops being managed by
+         * CloudFormation, either because you've removed it from the CDK application or because
+         * you've made a change that requires the resource to be replaced.
+         *
+         * The resource can be deleted (`RemovalPolicy.DESTROY`), or left in your AWS account for
+         * data recovery and cleanup later (`RemovalPolicy.RETAIN`).
+         *
+         * @param policy
+         */
+        override fun applyRemovalPolicy(policy: RemovalPolicy) {
+            unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+        }
+
+        /**
+         * The environment this resource belongs to.
+         *
+         * For resources that are created and managed by the CDK (generally, those created by
+         * creating new class instances like Role, Bucket, etc.), this is always the same as the
+         * environment of the stack they belong to; however, for imported resources (those obtained
+         * from static methods like fromRoleArn, fromBucketName, etc.), that might be different than
+         * the stack they were imported into.
+         */
+        override fun env(): ResourceEnvironment =
+            unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+
+        /** The Id of the VPC Flow Log. */
+        override fun flowLogId(): String = unwrap(this).getFlowLogId()
+
+        override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+
+        /** The stack in which this resource is defined. */
+        override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
     }
 
-    /**
-     * The environment this resource belongs to.
-     *
-     * For resources that are created and managed by the CDK
-     * (generally, those created by creating new class instances like Role, Bucket, etc.),
-     * this is always the same as the environment of the stack they belong to;
-     * however, for imported resources
-     * (those obtained from static methods like fromRoleArn, fromBucketName, etc.),
-     * that might be different than the stack they were imported into.
-     */
-    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+    public companion object {
+        init {}
 
-    /**
-     * The Id of the VPC Flow Log.
-     */
-    override fun flowLogId(): String = unwrap(this).getFlowLogId()
+        internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.IFlowLog): IFlowLog =
+            Wrapper(cdkObject)
 
-    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
-
-    /**
-     * The stack in which this resource is defined.
-     */
-    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
-  }
-
-  public companion object {
-    init {
-
+        internal fun unwrap(wrapped: IFlowLog): software.amazon.awscdk.services.ec2.IFlowLog =
+            (wrapped as Wrapper).cdkObject
     }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.IFlowLog): IFlowLog =
-        Wrapper(cdkObject)
-
-    internal fun unwrap(wrapped: IFlowLog): software.amazon.awscdk.services.ec2.IFlowLog = (wrapped
-        as Wrapper).cdkObject
-  }
 }

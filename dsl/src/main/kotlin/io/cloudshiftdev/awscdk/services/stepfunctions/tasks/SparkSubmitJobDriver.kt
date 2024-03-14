@@ -6,101 +6,12 @@ import kotlin.String
 import kotlin.Unit
 
 public interface SparkSubmitJobDriver {
-  /**
-   * The entry point of job application.
-   *
-   * Length Constraints: Minimum length of 1. Maximum length of 256.
-   */
-  public fun entryPoint(): TaskInput
-
-  /**
-   * The arguments for a job application in a task input object containing an array of strings.
-   *
-   * Length Constraints: Minimum length of 1. Maximum length of 10280.
-   *
-   * Default: - No arguments defined
-   */
-  public fun entryPointArguments(): TaskInput? =
-      unwrap(this).getEntryPointArguments()?.let(TaskInput::wrap)
-
-  /**
-   * The Spark submit parameters that are used for job runs.
-   *
-   * Length Constraints: Minimum length of 1. Maximum length of 102400.
-   *
-   * Default: - No spark submit parameters
-   */
-  public fun sparkSubmitParameters(): String? = unwrap(this).getSparkSubmitParameters()
-
-  /**
-   * A builder for [SparkSubmitJobDriver]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param entryPoint The entry point of job application. 
-     * Length Constraints: Minimum length of 1. Maximum length of 256.
-     */
-    public fun entryPoint(entryPoint: TaskInput)
-
-    /**
-     * @param entryPointArguments The arguments for a job application in a task input object
-     * containing an array of strings.
-     * Length Constraints: Minimum length of 1. Maximum length of 10280.
-     */
-    public fun entryPointArguments(entryPointArguments: TaskInput)
-
-    /**
-     * @param sparkSubmitParameters The Spark submit parameters that are used for job runs.
-     * Length Constraints: Minimum length of 1. Maximum length of 102400.
-     */
-    public fun sparkSubmitParameters(sparkSubmitParameters: String)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder:
-        software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver.Builder =
-        software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver.builder()
-
-    /**
-     * @param entryPoint The entry point of job application. 
-     * Length Constraints: Minimum length of 1. Maximum length of 256.
-     */
-    override fun entryPoint(entryPoint: TaskInput) {
-      cdkBuilder.entryPoint(entryPoint.let(TaskInput::unwrap))
-    }
-
-    /**
-     * @param entryPointArguments The arguments for a job application in a task input object
-     * containing an array of strings.
-     * Length Constraints: Minimum length of 1. Maximum length of 10280.
-     */
-    override fun entryPointArguments(entryPointArguments: TaskInput) {
-      cdkBuilder.entryPointArguments(entryPointArguments.let(TaskInput::unwrap))
-    }
-
-    /**
-     * @param sparkSubmitParameters The Spark submit parameters that are used for job runs.
-     * Length Constraints: Minimum length of 1. Maximum length of 102400.
-     */
-    override fun sparkSubmitParameters(sparkSubmitParameters: String) {
-      cdkBuilder.sparkSubmitParameters(sparkSubmitParameters)
-    }
-
-    public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver =
-        cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject:
-        software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver,
-  ) : SparkSubmitJobDriver {
     /**
      * The entry point of job application.
      *
      * Length Constraints: Minimum length of 1. Maximum length of 256.
      */
-    override fun entryPoint(): TaskInput = unwrap(this).getEntryPoint().let(TaskInput::wrap)
+    public fun entryPoint(): TaskInput
 
     /**
      * The arguments for a job application in a task input object containing an array of strings.
@@ -109,7 +20,7 @@ public interface SparkSubmitJobDriver {
      *
      * Default: - No arguments defined
      */
-    override fun entryPointArguments(): TaskInput? =
+    public fun entryPointArguments(): TaskInput? =
         unwrap(this).getEntryPointArguments()?.let(TaskInput::wrap)
 
     /**
@@ -119,25 +30,114 @@ public interface SparkSubmitJobDriver {
      *
      * Default: - No spark submit parameters
      */
-    override fun sparkSubmitParameters(): String? = unwrap(this).getSparkSubmitParameters()
-  }
+    public fun sparkSubmitParameters(): String? = unwrap(this).getSparkSubmitParameters()
 
-  public companion object {
-    init {
+    /** A builder for [SparkSubmitJobDriver] */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * @param entryPoint The entry point of job application. Length Constraints: Minimum length
+         *   of 1. Maximum length of 256.
+         */
+        public fun entryPoint(entryPoint: TaskInput)
 
+        /**
+         * @param entryPointArguments The arguments for a job application in a task input object
+         *   containing an array of strings. Length Constraints: Minimum length of 1. Maximum length
+         *   of 10280.
+         */
+        public fun entryPointArguments(entryPointArguments: TaskInput)
+
+        /**
+         * @param sparkSubmitParameters The Spark submit parameters that are used for job runs.
+         *   Length Constraints: Minimum length of 1. Maximum length of 102400.
+         */
+        public fun sparkSubmitParameters(sparkSubmitParameters: String)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): SparkSubmitJobDriver {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver.Builder =
+            software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver.builder()
+
+        /**
+         * @param entryPoint The entry point of job application. Length Constraints: Minimum length
+         *   of 1. Maximum length of 256.
+         */
+        override fun entryPoint(entryPoint: TaskInput) {
+            cdkBuilder.entryPoint(entryPoint.let(TaskInput::unwrap))
+        }
+
+        /**
+         * @param entryPointArguments The arguments for a job application in a task input object
+         *   containing an array of strings. Length Constraints: Minimum length of 1. Maximum length
+         *   of 10280.
+         */
+        override fun entryPointArguments(entryPointArguments: TaskInput) {
+            cdkBuilder.entryPointArguments(entryPointArguments.let(TaskInput::unwrap))
+        }
+
+        /**
+         * @param sparkSubmitParameters The Spark submit parameters that are used for job runs.
+         *   Length Constraints: Minimum length of 1. Maximum length of 102400.
+         */
+        override fun sparkSubmitParameters(sparkSubmitParameters: String) {
+            cdkBuilder.sparkSubmitParameters(sparkSubmitParameters)
+        }
+
+        public fun build():
+            software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver =
+            cdkBuilder.build()
     }
 
-    internal
-        fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver):
-        SparkSubmitJobDriver = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject:
+            software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver,
+    ) : SparkSubmitJobDriver {
+        /**
+         * The entry point of job application.
+         *
+         * Length Constraints: Minimum length of 1. Maximum length of 256.
+         */
+        override fun entryPoint(): TaskInput = unwrap(this).getEntryPoint().let(TaskInput::wrap)
 
-    internal fun unwrap(wrapped: SparkSubmitJobDriver):
-        software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver = (wrapped as
-        Wrapper).cdkObject
-  }
+        /**
+         * The arguments for a job application in a task input object containing an array of
+         * strings.
+         *
+         * Length Constraints: Minimum length of 1. Maximum length of 10280.
+         *
+         * Default: - No arguments defined
+         */
+        override fun entryPointArguments(): TaskInput? =
+            unwrap(this).getEntryPointArguments()?.let(TaskInput::wrap)
+
+        /**
+         * The Spark submit parameters that are used for job runs.
+         *
+         * Length Constraints: Minimum length of 1. Maximum length of 102400.
+         *
+         * Default: - No spark submit parameters
+         */
+        override fun sparkSubmitParameters(): String? = unwrap(this).getSparkSubmitParameters()
+    }
+
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): SparkSubmitJobDriver {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver
+        ): SparkSubmitJobDriver = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: SparkSubmitJobDriver
+        ): software.amazon.awscdk.services.stepfunctions.tasks.SparkSubmitJobDriver =
+            (wrapped as Wrapper).cdkObject
+    }
 }

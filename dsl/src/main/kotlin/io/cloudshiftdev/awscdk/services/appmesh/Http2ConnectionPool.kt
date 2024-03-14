@@ -5,64 +5,61 @@ import kotlin.Number
 import kotlin.Unit
 
 public interface Http2ConnectionPool {
-  /**
-   * The maximum requests in the pool.
-   *
-   * Default: - none
-   */
-  public fun maxRequests(): Number
-
-  /**
-   * A builder for [Http2ConnectionPool]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param maxRequests The maximum requests in the pool. 
-     */
-    public fun maxRequests(maxRequests: Number)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.appmesh.Http2ConnectionPool.Builder =
-        software.amazon.awscdk.services.appmesh.Http2ConnectionPool.builder()
-
-    /**
-     * @param maxRequests The maximum requests in the pool. 
-     */
-    override fun maxRequests(maxRequests: Number) {
-      cdkBuilder.maxRequests(maxRequests)
-    }
-
-    public fun build(): software.amazon.awscdk.services.appmesh.Http2ConnectionPool =
-        cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.appmesh.Http2ConnectionPool,
-  ) : Http2ConnectionPool {
     /**
      * The maximum requests in the pool.
      *
      * Default: - none
      */
-    override fun maxRequests(): Number = unwrap(this).getMaxRequests()
-  }
+    public fun maxRequests(): Number
 
-  public companion object {
-    init {
-
+    /** A builder for [Http2ConnectionPool] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param maxRequests The maximum requests in the pool. */
+        public fun maxRequests(maxRequests: Number)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): Http2ConnectionPool {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.appmesh.Http2ConnectionPool.Builder =
+            software.amazon.awscdk.services.appmesh.Http2ConnectionPool.builder()
+
+        /** @param maxRequests The maximum requests in the pool. */
+        override fun maxRequests(maxRequests: Number) {
+            cdkBuilder.maxRequests(maxRequests)
+        }
+
+        public fun build(): software.amazon.awscdk.services.appmesh.Http2ConnectionPool =
+            cdkBuilder.build()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.Http2ConnectionPool):
-        Http2ConnectionPool = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.appmesh.Http2ConnectionPool,
+    ) : Http2ConnectionPool {
+        /**
+         * The maximum requests in the pool.
+         *
+         * Default: - none
+         */
+        override fun maxRequests(): Number = unwrap(this).getMaxRequests()
+    }
 
-    internal fun unwrap(wrapped: Http2ConnectionPool):
-        software.amazon.awscdk.services.appmesh.Http2ConnectionPool = (wrapped as Wrapper).cdkObject
-  }
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): Http2ConnectionPool {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.appmesh.Http2ConnectionPool
+        ): Http2ConnectionPool = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: Http2ConnectionPool
+        ): software.amazon.awscdk.services.appmesh.Http2ConnectionPool =
+            (wrapped as Wrapper).cdkObject
+    }
 }

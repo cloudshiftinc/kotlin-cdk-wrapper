@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -15,660 +16,625 @@ import kotlin.Suppress
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnVirtualRouter internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter,
+public open class CfnVirtualRouter
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
-  /**
-   * The full Amazon Resource Name (ARN) for the virtual router.
-   */
-  public open fun attrArn(): String = unwrap(this).getAttrArn()
+    /** The full Amazon Resource Name (ARN) for the virtual router. */
+    public open fun attrArn(): String = unwrap(this).getAttrArn()
 
-  /**
-   *
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
+    /**  */
+    public open fun attrId(): String = unwrap(this).getAttrId()
 
-  /**
-   * The name of the service mesh that the virtual router resides in.
-   */
-  public open fun attrMeshName(): String = unwrap(this).getAttrMeshName()
-
-  /**
-   * The AWS IAM account ID of the service mesh owner.
-   *
-   * If the account ID is not your own, then it's the ID of the account that shared the mesh with
-   * your account. For more information about mesh sharing, see [Working with Shared
-   * Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html) .
-   */
-  public open fun attrMeshOwner(): String = unwrap(this).getAttrMeshOwner()
-
-  /**
-   * The AWS IAM account ID of the resource owner.
-   *
-   * If the account ID is not your own, then it's the ID of the mesh owner or of another account
-   * that the mesh is shared with. For more information about mesh sharing, see [Working with Shared
-   * Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html) .
-   */
-  public open fun attrResourceOwner(): String = unwrap(this).getAttrResourceOwner()
-
-  /**
-   * The unique identifier for the virtual router.
-   */
-  public open fun attrUid(): String = unwrap(this).getAttrUid()
-
-  /**
-   * The name of the virtual router.
-   */
-  public open fun attrVirtualRouterName(): String = unwrap(this).getAttrVirtualRouterName()
-
-  /**
-   * Examines the CloudFormation resource and discloses attributes.
-   *
-   * @param inspector tree inspector to collect and process attributes. 
-   */
-  public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-  }
-
-  /**
-   * The name of the service mesh to create the virtual router in.
-   */
-  public open fun meshName(): String = unwrap(this).getMeshName()
-
-  /**
-   * The name of the service mesh to create the virtual router in.
-   */
-  public open fun meshName(`value`: String) {
-    unwrap(this).setMeshName(`value`)
-  }
-
-  /**
-   * The AWS IAM account ID of the service mesh owner.
-   */
-  public open fun meshOwner(): String? = unwrap(this).getMeshOwner()
-
-  /**
-   * The AWS IAM account ID of the service mesh owner.
-   */
-  public open fun meshOwner(`value`: String) {
-    unwrap(this).setMeshOwner(`value`)
-  }
-
-  /**
-   * The virtual router specification to apply.
-   */
-  public open fun spec(): Any = unwrap(this).getSpec()
-
-  /**
-   * The virtual router specification to apply.
-   */
-  public open fun spec(`value`: IResolvable) {
-    unwrap(this).setSpec(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * The virtual router specification to apply.
-   */
-  public open fun spec(`value`: VirtualRouterSpecProperty) {
-    unwrap(this).setSpec(`value`.let(VirtualRouterSpecProperty::unwrap))
-  }
-
-  /**
-   * The virtual router specification to apply.
-   */
-  @Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("614f3bb2c4544dc6f7fa0ced8b25da933abd3e3b21800f970d645a38eeda9bb6")
-  public open fun spec(`value`: VirtualRouterSpecProperty.Builder.() -> Unit): Unit =
-      spec(VirtualRouterSpecProperty(`value`))
-
-  /**
-   * Tag Manager which manages the tags for this resource.
-   */
-  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
-
-  /**
-   * Optional metadata that you can apply to the virtual router to assist with categorization and
-   * organization.
-   */
-  public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
-      emptyList()
-
-  /**
-   * Optional metadata that you can apply to the virtual router to assist with categorization and
-   * organization.
-   */
-  public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
-  }
-
-  /**
-   * Optional metadata that you can apply to the virtual router to assist with categorization and
-   * organization.
-   */
-  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
-
-  /**
-   * The name to use for the virtual router.
-   */
-  public open fun virtualRouterName(): String? = unwrap(this).getVirtualRouterName()
-
-  /**
-   * The name to use for the virtual router.
-   */
-  public open fun virtualRouterName(`value`: String) {
-    unwrap(this).setVirtualRouterName(`value`)
-  }
-
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.appmesh.CfnVirtualRouter].
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * The name of the service mesh to create the virtual router in.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-meshname)
-     * @param meshName The name of the service mesh to create the virtual router in. 
-     */
-    public fun meshName(meshName: String)
+    /** The name of the service mesh that the virtual router resides in. */
+    public open fun attrMeshName(): String = unwrap(this).getAttrMeshName()
 
     /**
      * The AWS IAM account ID of the service mesh owner.
      *
-     * If the account ID is not your own, then the account that you specify must share the mesh with
-     * your account before you can create the resource in the service mesh. For more information about
-     * mesh sharing, see [Working with shared
-     * meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-meshowner)
-     * @param meshOwner The AWS IAM account ID of the service mesh owner. 
+     * If the account ID is not your own, then it's the ID of the account that shared the mesh with
+     * your account. For more information about mesh sharing, see
+     * [Working with Shared Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)
+     * .
      */
-    public fun meshOwner(meshOwner: String)
+    public open fun attrMeshOwner(): String = unwrap(this).getAttrMeshOwner()
 
     /**
-     * The virtual router specification to apply.
+     * The AWS IAM account ID of the resource owner.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-spec)
-     * @param spec The virtual router specification to apply. 
+     * If the account ID is not your own, then it's the ID of the mesh owner or of another account
+     * that the mesh is shared with. For more information about mesh sharing, see
+     * [Working with Shared Meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)
+     * .
      */
-    public fun spec(spec: IResolvable)
+    public open fun attrResourceOwner(): String = unwrap(this).getAttrResourceOwner()
+
+    /** The unique identifier for the virtual router. */
+    public open fun attrUid(): String = unwrap(this).getAttrUid()
+
+    /** The name of the virtual router. */
+    public open fun attrVirtualRouterName(): String = unwrap(this).getAttrVirtualRouterName()
 
     /**
-     * The virtual router specification to apply.
+     * Examines the CloudFormation resource and discloses attributes.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-spec)
-     * @param spec The virtual router specification to apply. 
+     * @param inspector tree inspector to collect and process attributes.
      */
-    public fun spec(spec: VirtualRouterSpecProperty)
+    public override fun inspect(inspector: TreeInspector) {
+        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    }
 
-    /**
-     * The virtual router specification to apply.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-spec)
-     * @param spec The virtual router specification to apply. 
-     */
+    /** The name of the service mesh to create the virtual router in. */
+    public open fun meshName(): String = unwrap(this).getMeshName()
+
+    /** The name of the service mesh to create the virtual router in. */
+    public open fun meshName(`value`: String) {
+        unwrap(this).setMeshName(`value`)
+    }
+
+    /** The AWS IAM account ID of the service mesh owner. */
+    public open fun meshOwner(): String? = unwrap(this).getMeshOwner()
+
+    /** The AWS IAM account ID of the service mesh owner. */
+    public open fun meshOwner(`value`: String) {
+        unwrap(this).setMeshOwner(`value`)
+    }
+
+    /** The virtual router specification to apply. */
+    public open fun spec(): Any = unwrap(this).getSpec()
+
+    /** The virtual router specification to apply. */
+    public open fun spec(`value`: IResolvable) {
+        unwrap(this).setSpec(`value`.let(IResolvable::unwrap))
+    }
+
+    /** The virtual router specification to apply. */
+    public open fun spec(`value`: VirtualRouterSpecProperty) {
+        unwrap(this).setSpec(`value`.let(VirtualRouterSpecProperty::unwrap))
+    }
+
+    /** The virtual router specification to apply. */
     @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("4adab77e464f114a3a2b32d80657205875f60e4232a06251eff7019e7d50b4ea")
-    public fun spec(spec: VirtualRouterSpecProperty.Builder.() -> Unit)
+    @JvmName("614f3bb2c4544dc6f7fa0ced8b25da933abd3e3b21800f970d645a38eeda9bb6")
+    public open fun spec(`value`: VirtualRouterSpecProperty.Builder.() -> Unit): Unit =
+        spec(VirtualRouterSpecProperty(`value`))
+
+    /** Tag Manager which manages the tags for this resource. */
+    public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
     /**
      * Optional metadata that you can apply to the virtual router to assist with categorization and
      * organization.
-     *
-     * Each tag consists of a key and an optional value, both of which you define. Tag keys can have
-     * a maximum character length of 128 characters, and tag values can have a maximum length of 256
-     * characters.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-tags)
-     * @param tags Optional metadata that you can apply to the virtual router to assist with
-     * categorization and organization. 
      */
-    public fun tags(tags: List<CfnTag>)
+    public open fun tagsRaw(): List<CfnTag> =
+        unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
      * Optional metadata that you can apply to the virtual router to assist with categorization and
      * organization.
-     *
-     * Each tag consists of a key and an optional value, both of which you define. Tag keys can have
-     * a maximum character length of 128 characters, and tag values can have a maximum length of 256
-     * characters.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-tags)
-     * @param tags Optional metadata that you can apply to the virtual router to assist with
-     * categorization and organization. 
      */
-    public fun tags(vararg tags: CfnTag)
-
-    /**
-     * The name to use for the virtual router.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-virtualroutername)
-     * @param virtualRouterName The name to use for the virtual router. 
-     */
-    public fun virtualRouterName(virtualRouterName: String)
-  }
-
-  private class BuilderImpl(
-    scope: SoftwareConstructsConstruct,
-    id: String,
-  ) : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.appmesh.CfnVirtualRouter.Builder =
-        software.amazon.awscdk.services.appmesh.CfnVirtualRouter.Builder.create(scope, id)
-
-    /**
-     * The name of the service mesh to create the virtual router in.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-meshname)
-     * @param meshName The name of the service mesh to create the virtual router in. 
-     */
-    override fun meshName(meshName: String) {
-      cdkBuilder.meshName(meshName)
-    }
-
-    /**
-     * The AWS IAM account ID of the service mesh owner.
-     *
-     * If the account ID is not your own, then the account that you specify must share the mesh with
-     * your account before you can create the resource in the service mesh. For more information about
-     * mesh sharing, see [Working with shared
-     * meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-meshowner)
-     * @param meshOwner The AWS IAM account ID of the service mesh owner. 
-     */
-    override fun meshOwner(meshOwner: String) {
-      cdkBuilder.meshOwner(meshOwner)
-    }
-
-    /**
-     * The virtual router specification to apply.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-spec)
-     * @param spec The virtual router specification to apply. 
-     */
-    override fun spec(spec: IResolvable) {
-      cdkBuilder.spec(spec.let(IResolvable::unwrap))
-    }
-
-    /**
-     * The virtual router specification to apply.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-spec)
-     * @param spec The virtual router specification to apply. 
-     */
-    override fun spec(spec: VirtualRouterSpecProperty) {
-      cdkBuilder.spec(spec.let(VirtualRouterSpecProperty::unwrap))
-    }
-
-    /**
-     * The virtual router specification to apply.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-spec)
-     * @param spec The virtual router specification to apply. 
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("4adab77e464f114a3a2b32d80657205875f60e4232a06251eff7019e7d50b4ea")
-    override fun spec(spec: VirtualRouterSpecProperty.Builder.() -> Unit): Unit =
-        spec(VirtualRouterSpecProperty(spec))
-
-    /**
-     * Optional metadata that you can apply to the virtual router to assist with categorization and
-     * organization.
-     *
-     * Each tag consists of a key and an optional value, both of which you define. Tag keys can have
-     * a maximum character length of 128 characters, and tag values can have a maximum length of 256
-     * characters.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-tags)
-     * @param tags Optional metadata that you can apply to the virtual router to assist with
-     * categorization and organization. 
-     */
-    override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+    public open fun tagsRaw(`value`: List<CfnTag>) {
+        unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
     }
 
     /**
      * Optional metadata that you can apply to the virtual router to assist with categorization and
      * organization.
-     *
-     * Each tag consists of a key and an optional value, both of which you define. Tag keys can have
-     * a maximum character length of 128 characters, and tag values can have a maximum length of 256
-     * characters.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-tags)
-     * @param tags Optional metadata that you can apply to the virtual router to assist with
-     * categorization and organization. 
      */
-    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+    public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
-    /**
-     * The name to use for the virtual router.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-virtualroutername)
-     * @param virtualRouterName The name to use for the virtual router. 
-     */
-    override fun virtualRouterName(virtualRouterName: String) {
-      cdkBuilder.virtualRouterName(virtualRouterName)
+    /** The name to use for the virtual router. */
+    public open fun virtualRouterName(): String? = unwrap(this).getVirtualRouterName()
+
+    /** The name to use for the virtual router. */
+    public open fun virtualRouterName(`value`: String) {
+        unwrap(this).setVirtualRouterName(`value`)
     }
 
-    public fun build(): software.amazon.awscdk.services.appmesh.CfnVirtualRouter =
-        cdkBuilder.build()
-  }
-
-  public companion object {
-    init {
-
-    }
-
-    public operator fun invoke(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      block: Builder.() -> Unit = {},
-    ): CfnVirtualRouter {
-      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-      return CfnVirtualRouter(builderImpl.apply(block).build())
-    }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter):
-        CfnVirtualRouter = CfnVirtualRouter(cdkObject)
-
-    internal fun unwrap(wrapped: CfnVirtualRouter):
-        software.amazon.awscdk.services.appmesh.CfnVirtualRouter = wrapped.cdkObject
-  }
-
-  public interface VirtualRouterSpecProperty {
-    /**
-     * The listeners that the virtual router is expected to receive inbound traffic from.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-virtualrouterspec.html#cfn-appmesh-virtualrouter-virtualrouterspec-listeners)
-     */
-    public fun listeners(): Any
-
-    /**
-     * A builder for [VirtualRouterSpecProperty]
-     */
+    /** A fluent builder for [io.cloudshiftdev.awscdk.services.appmesh.CfnVirtualRouter]. */
     @CdkDslMarker
     public interface Builder {
-      /**
-       * @param listeners The listeners that the virtual router is expected to receive inbound
-       * traffic from. 
-       */
-      public fun listeners(listeners: IResolvable)
+        /**
+         * The name of the service mesh to create the virtual router in.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-meshname)
+         *
+         * @param meshName The name of the service mesh to create the virtual router in.
+         */
+        public fun meshName(meshName: String)
 
-      /**
-       * @param listeners The listeners that the virtual router is expected to receive inbound
-       * traffic from. 
-       */
-      public fun listeners(listeners: List<Any>)
+        /**
+         * The AWS IAM account ID of the service mesh owner.
+         *
+         * If the account ID is not your own, then the account that you specify must share the mesh
+         * with your account before you can create the resource in the service mesh. For more
+         * information about mesh sharing, see
+         * [Working with shared meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)
+         * .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-meshowner)
+         *
+         * @param meshOwner The AWS IAM account ID of the service mesh owner.
+         */
+        public fun meshOwner(meshOwner: String)
 
-      /**
-       * @param listeners The listeners that the virtual router is expected to receive inbound
-       * traffic from. 
-       */
-      public fun listeners(vararg listeners: Any)
+        /**
+         * The virtual router specification to apply.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-spec)
+         *
+         * @param spec The virtual router specification to apply.
+         */
+        public fun spec(spec: IResolvable)
+
+        /**
+         * The virtual router specification to apply.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-spec)
+         *
+         * @param spec The virtual router specification to apply.
+         */
+        public fun spec(spec: VirtualRouterSpecProperty)
+
+        /**
+         * The virtual router specification to apply.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-spec)
+         *
+         * @param spec The virtual router specification to apply.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("4adab77e464f114a3a2b32d80657205875f60e4232a06251eff7019e7d50b4ea")
+        public fun spec(spec: VirtualRouterSpecProperty.Builder.() -> Unit)
+
+        /**
+         * Optional metadata that you can apply to the virtual router to assist with categorization
+         * and organization.
+         *
+         * Each tag consists of a key and an optional value, both of which you define. Tag keys can
+         * have a maximum character length of 128 characters, and tag values can have a maximum
+         * length of 256 characters.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-tags)
+         *
+         * @param tags Optional metadata that you can apply to the virtual router to assist with
+         *   categorization and organization.
+         */
+        public fun tags(tags: List<CfnTag>)
+
+        /**
+         * Optional metadata that you can apply to the virtual router to assist with categorization
+         * and organization.
+         *
+         * Each tag consists of a key and an optional value, both of which you define. Tag keys can
+         * have a maximum character length of 128 characters, and tag values can have a maximum
+         * length of 256 characters.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-tags)
+         *
+         * @param tags Optional metadata that you can apply to the virtual router to assist with
+         *   categorization and organization.
+         */
+        public fun tags(vararg tags: CfnTag)
+
+        /**
+         * The name to use for the virtual router.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-virtualroutername)
+         *
+         * @param virtualRouterName The name to use for the virtual router.
+         */
+        public fun virtualRouterName(virtualRouterName: String)
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty.builder()
+    private class BuilderImpl(
+        scope: SoftwareConstructsConstruct,
+        id: String,
+    ) : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.appmesh.CfnVirtualRouter.Builder =
+            software.amazon.awscdk.services.appmesh.CfnVirtualRouter.Builder.create(scope, id)
 
-      /**
-       * @param listeners The listeners that the virtual router is expected to receive inbound
-       * traffic from. 
-       */
-      override fun listeners(listeners: IResolvable) {
-        cdkBuilder.listeners(listeners.let(IResolvable::unwrap))
-      }
+        /**
+         * The name of the service mesh to create the virtual router in.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-meshname)
+         *
+         * @param meshName The name of the service mesh to create the virtual router in.
+         */
+        override fun meshName(meshName: String) {
+            cdkBuilder.meshName(meshName)
+        }
 
-      /**
-       * @param listeners The listeners that the virtual router is expected to receive inbound
-       * traffic from. 
-       */
-      override fun listeners(listeners: List<Any>) {
-        cdkBuilder.listeners(listeners)
-      }
+        /**
+         * The AWS IAM account ID of the service mesh owner.
+         *
+         * If the account ID is not your own, then the account that you specify must share the mesh
+         * with your account before you can create the resource in the service mesh. For more
+         * information about mesh sharing, see
+         * [Working with shared meshes](https://docs.aws.amazon.com/app-mesh/latest/userguide/sharing.html)
+         * .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-meshowner)
+         *
+         * @param meshOwner The AWS IAM account ID of the service mesh owner.
+         */
+        override fun meshOwner(meshOwner: String) {
+            cdkBuilder.meshOwner(meshOwner)
+        }
 
-      /**
-       * @param listeners The listeners that the virtual router is expected to receive inbound
-       * traffic from. 
-       */
-      override fun listeners(vararg listeners: Any): Unit = listeners(listeners.toList())
+        /**
+         * The virtual router specification to apply.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-spec)
+         *
+         * @param spec The virtual router specification to apply.
+         */
+        override fun spec(spec: IResolvable) {
+            cdkBuilder.spec(spec.let(IResolvable::unwrap))
+        }
 
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty =
-          cdkBuilder.build()
-    }
+        /**
+         * The virtual router specification to apply.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-spec)
+         *
+         * @param spec The virtual router specification to apply.
+         */
+        override fun spec(spec: VirtualRouterSpecProperty) {
+            cdkBuilder.spec(spec.let(VirtualRouterSpecProperty::unwrap))
+        }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty,
-    ) : VirtualRouterSpecProperty {
-      /**
-       * The listeners that the virtual router is expected to receive inbound traffic from.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-virtualrouterspec.html#cfn-appmesh-virtualrouter-virtualrouterspec-listeners)
-       */
-      override fun listeners(): Any = unwrap(this).getListeners()
+        /**
+         * The virtual router specification to apply.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-spec)
+         *
+         * @param spec The virtual router specification to apply.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("4adab77e464f114a3a2b32d80657205875f60e4232a06251eff7019e7d50b4ea")
+        override fun spec(spec: VirtualRouterSpecProperty.Builder.() -> Unit): Unit =
+            spec(VirtualRouterSpecProperty(spec))
+
+        /**
+         * Optional metadata that you can apply to the virtual router to assist with categorization
+         * and organization.
+         *
+         * Each tag consists of a key and an optional value, both of which you define. Tag keys can
+         * have a maximum character length of 128 characters, and tag values can have a maximum
+         * length of 256 characters.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-tags)
+         *
+         * @param tags Optional metadata that you can apply to the virtual router to assist with
+         *   categorization and organization.
+         */
+        override fun tags(tags: List<CfnTag>) {
+            cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        }
+
+        /**
+         * Optional metadata that you can apply to the virtual router to assist with categorization
+         * and organization.
+         *
+         * Each tag consists of a key and an optional value, both of which you define. Tag keys can
+         * have a maximum character length of 128 characters, and tag values can have a maximum
+         * length of 256 characters.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-tags)
+         *
+         * @param tags Optional metadata that you can apply to the virtual router to assist with
+         *   categorization and organization.
+         */
+        override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+        /**
+         * The name to use for the virtual router.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appmesh-virtualrouter.html#cfn-appmesh-virtualrouter-virtualroutername)
+         *
+         * @param virtualRouterName The name to use for the virtual router.
+         */
+        override fun virtualRouterName(virtualRouterName: String) {
+            cdkBuilder.virtualRouterName(virtualRouterName)
+        }
+
+        public fun build(): software.amazon.awscdk.services.appmesh.CfnVirtualRouter =
+            cdkBuilder.build()
     }
 
     public companion object {
-      init {
+        init {}
 
-      }
+        public operator fun invoke(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            block: Builder.() -> Unit = {},
+        ): CfnVirtualRouter {
+            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+            return CfnVirtualRouter(builderImpl.apply(block).build())
+        }
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): VirtualRouterSpecProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter
+        ): CfnVirtualRouter = CfnVirtualRouter(cdkObject)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty):
-          VirtualRouterSpecProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualRouterSpecProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty =
-          (wrapped as Wrapper).cdkObject
-    }
-  }
-
-  public interface PortMappingProperty {
-    /**
-     * The port used for the port mapping.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-portmapping.html#cfn-appmesh-virtualrouter-portmapping-port)
-     */
-    public fun port(): Number
-
-    /**
-     * The protocol used for the port mapping.
-     *
-     * Specify one protocol.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-portmapping.html#cfn-appmesh-virtualrouter-portmapping-protocol)
-     */
-    public fun protocol(): String
-
-    /**
-     * A builder for [PortMappingProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param port The port used for the port mapping. 
-       */
-      public fun port(port: Number)
-
-      /**
-       * @param protocol The protocol used for the port mapping. 
-       * Specify one protocol.
-       */
-      public fun protocol(protocol: String)
+        internal fun unwrap(
+            wrapped: CfnVirtualRouter
+        ): software.amazon.awscdk.services.appmesh.CfnVirtualRouter = wrapped.cdkObject
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.PortMappingProperty.Builder =
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.PortMappingProperty.builder()
+    public interface VirtualRouterSpecProperty {
+        /**
+         * The listeners that the virtual router is expected to receive inbound traffic from.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-virtualrouterspec.html#cfn-appmesh-virtualrouter-virtualrouterspec-listeners)
+         */
+        public fun listeners(): Any
 
-      /**
-       * @param port The port used for the port mapping. 
-       */
-      override fun port(port: Number) {
-        cdkBuilder.port(port)
-      }
+        /** A builder for [VirtualRouterSpecProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param listeners The listeners that the virtual router is expected to receive inbound
+             *   traffic from.
+             */
+            public fun listeners(listeners: IResolvable)
 
-      /**
-       * @param protocol The protocol used for the port mapping. 
-       * Specify one protocol.
-       */
-      override fun protocol(protocol: String) {
-        cdkBuilder.protocol(protocol)
-      }
+            /**
+             * @param listeners The listeners that the virtual router is expected to receive inbound
+             *   traffic from.
+             */
+            public fun listeners(listeners: List<Any>)
 
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.PortMappingProperty =
-          cdkBuilder.build()
+            /**
+             * @param listeners The listeners that the virtual router is expected to receive inbound
+             *   traffic from.
+             */
+            public fun listeners(vararg listeners: Any)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty.Builder =
+                software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty
+                    .builder()
+
+            /**
+             * @param listeners The listeners that the virtual router is expected to receive inbound
+             *   traffic from.
+             */
+            override fun listeners(listeners: IResolvable) {
+                cdkBuilder.listeners(listeners.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param listeners The listeners that the virtual router is expected to receive inbound
+             *   traffic from.
+             */
+            override fun listeners(listeners: List<Any>) {
+                cdkBuilder.listeners(listeners)
+            }
+
+            /**
+             * @param listeners The listeners that the virtual router is expected to receive inbound
+             *   traffic from.
+             */
+            override fun listeners(vararg listeners: Any): Unit = listeners(listeners.toList())
+
+            public fun build():
+                software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty,
+        ) : VirtualRouterSpecProperty {
+            /**
+             * The listeners that the virtual router is expected to receive inbound traffic from.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-virtualrouterspec.html#cfn-appmesh-virtualrouter-virtualrouterspec-listeners)
+             */
+            override fun listeners(): Any = unwrap(this).getListeners()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): VirtualRouterSpecProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty
+            ): VirtualRouterSpecProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: VirtualRouterSpecProperty
+            ): software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.PortMappingProperty,
-    ) : PortMappingProperty {
-      /**
-       * The port used for the port mapping.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-portmapping.html#cfn-appmesh-virtualrouter-portmapping-port)
-       */
-      override fun port(): Number = unwrap(this).getPort()
+    public interface PortMappingProperty {
+        /**
+         * The port used for the port mapping.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-portmapping.html#cfn-appmesh-virtualrouter-portmapping-port)
+         */
+        public fun port(): Number
 
-      /**
-       * The protocol used for the port mapping.
-       *
-       * Specify one protocol.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-portmapping.html#cfn-appmesh-virtualrouter-portmapping-protocol)
-       */
-      override fun protocol(): String = unwrap(this).getProtocol()
+        /**
+         * The protocol used for the port mapping.
+         *
+         * Specify one protocol.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-portmapping.html#cfn-appmesh-virtualrouter-portmapping-protocol)
+         */
+        public fun protocol(): String
+
+        /** A builder for [PortMappingProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param port The port used for the port mapping. */
+            public fun port(port: Number)
+
+            /** @param protocol The protocol used for the port mapping. Specify one protocol. */
+            public fun protocol(protocol: String)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.appmesh.CfnVirtualRouter.PortMappingProperty.Builder =
+                software.amazon.awscdk.services.appmesh.CfnVirtualRouter.PortMappingProperty
+                    .builder()
+
+            /** @param port The port used for the port mapping. */
+            override fun port(port: Number) {
+                cdkBuilder.port(port)
+            }
+
+            /** @param protocol The protocol used for the port mapping. Specify one protocol. */
+            override fun protocol(protocol: String) {
+                cdkBuilder.protocol(protocol)
+            }
+
+            public fun build():
+                software.amazon.awscdk.services.appmesh.CfnVirtualRouter.PortMappingProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.appmesh.CfnVirtualRouter.PortMappingProperty,
+        ) : PortMappingProperty {
+            /**
+             * The port used for the port mapping.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-portmapping.html#cfn-appmesh-virtualrouter-portmapping-port)
+             */
+            override fun port(): Number = unwrap(this).getPort()
+
+            /**
+             * The protocol used for the port mapping.
+             *
+             * Specify one protocol.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-portmapping.html#cfn-appmesh-virtualrouter-portmapping-protocol)
+             */
+            override fun protocol(): String = unwrap(this).getProtocol()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): PortMappingProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.appmesh.CfnVirtualRouter.PortMappingProperty
+            ): PortMappingProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: PortMappingProperty
+            ): software.amazon.awscdk.services.appmesh.CfnVirtualRouter.PortMappingProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface VirtualRouterListenerProperty {
+        /**
+         * The port mapping information for the listener.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-virtualrouterlistener.html#cfn-appmesh-virtualrouter-virtualrouterlistener-portmapping)
+         */
+        public fun portMapping(): Any
 
-      }
+        /** A builder for [VirtualRouterListenerProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param portMapping The port mapping information for the listener. */
+            public fun portMapping(portMapping: IResolvable)
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): PortMappingProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+            /** @param portMapping The port mapping information for the listener. */
+            public fun portMapping(portMapping: PortMappingProperty)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter.PortMappingProperty):
-          PortMappingProperty = Wrapper(cdkObject)
+            /** @param portMapping The port mapping information for the listener. */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("259fa42bf718471f6642c0dbaf6dbebf61498fe145bb69ea893b2762040d3d80")
+            public fun portMapping(portMapping: PortMappingProperty.Builder.() -> Unit)
+        }
 
-      internal fun unwrap(wrapped: PortMappingProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.PortMappingProperty = (wrapped as
-          Wrapper).cdkObject
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterListenerProperty.Builder =
+                software.amazon.awscdk.services.appmesh.CfnVirtualRouter
+                    .VirtualRouterListenerProperty
+                    .builder()
+
+            /** @param portMapping The port mapping information for the listener. */
+            override fun portMapping(portMapping: IResolvable) {
+                cdkBuilder.portMapping(portMapping.let(IResolvable::unwrap))
+            }
+
+            /** @param portMapping The port mapping information for the listener. */
+            override fun portMapping(portMapping: PortMappingProperty) {
+                cdkBuilder.portMapping(portMapping.let(PortMappingProperty::unwrap))
+            }
+
+            /** @param portMapping The port mapping information for the listener. */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("259fa42bf718471f6642c0dbaf6dbebf61498fe145bb69ea893b2762040d3d80")
+            override fun portMapping(portMapping: PortMappingProperty.Builder.() -> Unit): Unit =
+                portMapping(PortMappingProperty(portMapping))
+
+            public fun build():
+                software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterListenerProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterListenerProperty,
+        ) : VirtualRouterListenerProperty {
+            /**
+             * The port mapping information for the listener.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-virtualrouterlistener.html#cfn-appmesh-virtualrouter-virtualrouterlistener-portmapping)
+             */
+            override fun portMapping(): Any = unwrap(this).getPortMapping()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(
+                block: Builder.() -> Unit = {}
+            ): VirtualRouterListenerProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterListenerProperty
+            ): VirtualRouterListenerProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: VirtualRouterListenerProperty
+            ): software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterListenerProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
-  }
-
-  public interface VirtualRouterListenerProperty {
-    /**
-     * The port mapping information for the listener.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-virtualrouterlistener.html#cfn-appmesh-virtualrouter-virtualrouterlistener-portmapping)
-     */
-    public fun portMapping(): Any
-
-    /**
-     * A builder for [VirtualRouterListenerProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param portMapping The port mapping information for the listener. 
-       */
-      public fun portMapping(portMapping: IResolvable)
-
-      /**
-       * @param portMapping The port mapping information for the listener. 
-       */
-      public fun portMapping(portMapping: PortMappingProperty)
-
-      /**
-       * @param portMapping The port mapping information for the listener. 
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("259fa42bf718471f6642c0dbaf6dbebf61498fe145bb69ea893b2762040d3d80")
-      public fun portMapping(portMapping: PortMappingProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterListenerProperty.Builder
-          =
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterListenerProperty.builder()
-
-      /**
-       * @param portMapping The port mapping information for the listener. 
-       */
-      override fun portMapping(portMapping: IResolvable) {
-        cdkBuilder.portMapping(portMapping.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param portMapping The port mapping information for the listener. 
-       */
-      override fun portMapping(portMapping: PortMappingProperty) {
-        cdkBuilder.portMapping(portMapping.let(PortMappingProperty::unwrap))
-      }
-
-      /**
-       * @param portMapping The port mapping information for the listener. 
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("259fa42bf718471f6642c0dbaf6dbebf61498fe145bb69ea893b2762040d3d80")
-      override fun portMapping(portMapping: PortMappingProperty.Builder.() -> Unit): Unit =
-          portMapping(PortMappingProperty(portMapping))
-
-      public fun build():
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterListenerProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterListenerProperty,
-    ) : VirtualRouterListenerProperty {
-      /**
-       * The port mapping information for the listener.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appmesh-virtualrouter-virtualrouterlistener.html#cfn-appmesh-virtualrouter-virtualrouterlistener-portmapping)
-       */
-      override fun portMapping(): Any = unwrap(this).getPortMapping()
-    }
-
-    public companion object {
-      init {
-
-      }
-
-      public operator fun invoke(block: Builder.() -> Unit = {}): VirtualRouterListenerProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterListenerProperty):
-          VirtualRouterListenerProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: VirtualRouterListenerProperty):
-          software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterListenerProperty =
-          (wrapped as Wrapper).cdkObject
-    }
-  }
 }

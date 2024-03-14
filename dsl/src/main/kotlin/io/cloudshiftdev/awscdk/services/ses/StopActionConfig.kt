@@ -5,70 +5,12 @@ import kotlin.String
 import kotlin.Unit
 
 public interface StopActionConfig {
-  /**
-   * The scope of the StopAction.
-   *
-   * The only acceptable value is RuleSet.
-   */
-  public fun scope(): String
-
-  /**
-   * The Amazon Resource Name (ARN) of the Amazon SNS topic to notify when the stop action is taken.
-   *
-   * Default: - No notification is sent to SNS.
-   */
-  public fun topicArn(): String? = unwrap(this).getTopicArn()
-
-  /**
-   * A builder for [StopActionConfig]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param scope The scope of the StopAction. 
-     * The only acceptable value is RuleSet.
-     */
-    public fun scope(scope: String)
-
-    /**
-     * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS topic to notify when the
-     * stop action is taken.
-     */
-    public fun topicArn(topicArn: String)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.ses.StopActionConfig.Builder =
-        software.amazon.awscdk.services.ses.StopActionConfig.builder()
-
-    /**
-     * @param scope The scope of the StopAction. 
-     * The only acceptable value is RuleSet.
-     */
-    override fun scope(scope: String) {
-      cdkBuilder.scope(scope)
-    }
-
-    /**
-     * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS topic to notify when the
-     * stop action is taken.
-     */
-    override fun topicArn(topicArn: String) {
-      cdkBuilder.topicArn(topicArn)
-    }
-
-    public fun build(): software.amazon.awscdk.services.ses.StopActionConfig = cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.ses.StopActionConfig,
-  ) : StopActionConfig {
     /**
      * The scope of the StopAction.
      *
      * The only acceptable value is RuleSet.
      */
-    override fun scope(): String = unwrap(this).getScope()
+    public fun scope(): String
 
     /**
      * The Amazon Resource Name (ARN) of the Amazon SNS topic to notify when the stop action is
@@ -76,23 +18,76 @@ public interface StopActionConfig {
      *
      * Default: - No notification is sent to SNS.
      */
-    override fun topicArn(): String? = unwrap(this).getTopicArn()
-  }
+    public fun topicArn(): String? = unwrap(this).getTopicArn()
 
-  public companion object {
-    init {
+    /** A builder for [StopActionConfig] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param scope The scope of the StopAction. The only acceptable value is RuleSet. */
+        public fun scope(scope: String)
 
+        /**
+         * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS topic to notify when the
+         *   stop action is taken.
+         */
+        public fun topicArn(topicArn: String)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): StopActionConfig {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.ses.StopActionConfig.Builder =
+            software.amazon.awscdk.services.ses.StopActionConfig.builder()
+
+        /** @param scope The scope of the StopAction. The only acceptable value is RuleSet. */
+        override fun scope(scope: String) {
+            cdkBuilder.scope(scope)
+        }
+
+        /**
+         * @param topicArn The Amazon Resource Name (ARN) of the Amazon SNS topic to notify when the
+         *   stop action is taken.
+         */
+        override fun topicArn(topicArn: String) {
+            cdkBuilder.topicArn(topicArn)
+        }
+
+        public fun build(): software.amazon.awscdk.services.ses.StopActionConfig =
+            cdkBuilder.build()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.StopActionConfig):
-        StopActionConfig = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.ses.StopActionConfig,
+    ) : StopActionConfig {
+        /**
+         * The scope of the StopAction.
+         *
+         * The only acceptable value is RuleSet.
+         */
+        override fun scope(): String = unwrap(this).getScope()
 
-    internal fun unwrap(wrapped: StopActionConfig):
-        software.amazon.awscdk.services.ses.StopActionConfig = (wrapped as Wrapper).cdkObject
-  }
+        /**
+         * The Amazon Resource Name (ARN) of the Amazon SNS topic to notify when the stop action is
+         * taken.
+         *
+         * Default: - No notification is sent to SNS.
+         */
+        override fun topicArn(): String? = unwrap(this).getTopicArn()
+    }
+
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): StopActionConfig {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.ses.StopActionConfig
+        ): StopActionConfig = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: StopActionConfig
+        ): software.amazon.awscdk.services.ses.StopActionConfig = (wrapped as Wrapper).cdkObject
+    }
 }

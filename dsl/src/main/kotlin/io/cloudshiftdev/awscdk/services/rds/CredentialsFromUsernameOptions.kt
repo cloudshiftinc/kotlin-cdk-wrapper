@@ -9,124 +9,6 @@ import kotlin.Unit
 import kotlin.collections.List
 
 public interface CredentialsFromUsernameOptions : CredentialsBaseOptions {
-  /**
-   * Password.
-   *
-   * Do not put passwords in your CDK code directly.
-   *
-   * Default: - a Secrets Manager generated password
-   */
-  public fun password(): SecretValue? = unwrap(this).getPassword()?.let(SecretValue::wrap)
-
-  /**
-   * A builder for [CredentialsFromUsernameOptions]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param encryptionKey KMS encryption key to encrypt the generated secret.
-     */
-    public fun encryptionKey(encryptionKey: IKey)
-
-    /**
-     * @param excludeCharacters The characters to exclude from the generated password.
-     * Has no effect if `password` has been provided.
-     */
-    public fun excludeCharacters(excludeCharacters: String)
-
-    /**
-     * @param password Password.
-     * Do not put passwords in your CDK code directly.
-     */
-    public fun password(password: SecretValue)
-
-    /**
-     * @param replicaRegions A list of regions where to replicate this secret.
-     */
-    public fun replicaRegions(replicaRegions: List<ReplicaRegion>)
-
-    /**
-     * @param replicaRegions A list of regions where to replicate this secret.
-     */
-    public fun replicaRegions(vararg replicaRegions: ReplicaRegion)
-
-    /**
-     * @param secretName The name of the secret.
-     */
-    public fun secretName(secretName: String)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder:
-        software.amazon.awscdk.services.rds.CredentialsFromUsernameOptions.Builder =
-        software.amazon.awscdk.services.rds.CredentialsFromUsernameOptions.builder()
-
-    /**
-     * @param encryptionKey KMS encryption key to encrypt the generated secret.
-     */
-    override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
-    }
-
-    /**
-     * @param excludeCharacters The characters to exclude from the generated password.
-     * Has no effect if `password` has been provided.
-     */
-    override fun excludeCharacters(excludeCharacters: String) {
-      cdkBuilder.excludeCharacters(excludeCharacters)
-    }
-
-    /**
-     * @param password Password.
-     * Do not put passwords in your CDK code directly.
-     */
-    override fun password(password: SecretValue) {
-      cdkBuilder.password(password.let(SecretValue::unwrap))
-    }
-
-    /**
-     * @param replicaRegions A list of regions where to replicate this secret.
-     */
-    override fun replicaRegions(replicaRegions: List<ReplicaRegion>) {
-      cdkBuilder.replicaRegions(replicaRegions.map(ReplicaRegion::unwrap))
-    }
-
-    /**
-     * @param replicaRegions A list of regions where to replicate this secret.
-     */
-    override fun replicaRegions(vararg replicaRegions: ReplicaRegion): Unit =
-        replicaRegions(replicaRegions.toList())
-
-    /**
-     * @param secretName The name of the secret.
-     */
-    override fun secretName(secretName: String) {
-      cdkBuilder.secretName(secretName)
-    }
-
-    public fun build(): software.amazon.awscdk.services.rds.CredentialsFromUsernameOptions =
-        cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.rds.CredentialsFromUsernameOptions,
-  ) : CredentialsFromUsernameOptions {
-    /**
-     * KMS encryption key to encrypt the generated secret.
-     *
-     * Default: - default master key
-     */
-    override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
-
-    /**
-     * The characters to exclude from the generated password.
-     *
-     * Has no effect if `password` has been provided.
-     *
-     * Default: - the DatabaseSecret default exclude character set (" %+~`#$&*()|[]{}:;<>?!'/@\"\\")
-     */
-    override fun excludeCharacters(): String? = unwrap(this).getExcludeCharacters()
-
     /**
      * Password.
      *
@@ -134,40 +16,135 @@ public interface CredentialsFromUsernameOptions : CredentialsBaseOptions {
      *
      * Default: - a Secrets Manager generated password
      */
-    override fun password(): SecretValue? = unwrap(this).getPassword()?.let(SecretValue::wrap)
+    public fun password(): SecretValue? = unwrap(this).getPassword()?.let(SecretValue::wrap)
 
-    /**
-     * A list of regions where to replicate this secret.
-     *
-     * Default: - Secret is not replicated
-     */
-    override fun replicaRegions(): List<ReplicaRegion> =
-        unwrap(this).getReplicaRegions()?.map(ReplicaRegion::wrap) ?: emptyList()
+    /** A builder for [CredentialsFromUsernameOptions] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param encryptionKey KMS encryption key to encrypt the generated secret. */
+        public fun encryptionKey(encryptionKey: IKey)
 
-    /**
-     * The name of the secret.
-     *
-     * Default: - A name is generated by CloudFormation.
-     */
-    override fun secretName(): String? = unwrap(this).getSecretName()
-  }
+        /**
+         * @param excludeCharacters The characters to exclude from the generated password. Has no
+         *   effect if `password` has been provided.
+         */
+        public fun excludeCharacters(excludeCharacters: String)
 
-  public companion object {
-    init {
+        /** @param password Password. Do not put passwords in your CDK code directly. */
+        public fun password(password: SecretValue)
 
+        /** @param replicaRegions A list of regions where to replicate this secret. */
+        public fun replicaRegions(replicaRegions: List<ReplicaRegion>)
+
+        /** @param replicaRegions A list of regions where to replicate this secret. */
+        public fun replicaRegions(vararg replicaRegions: ReplicaRegion)
+
+        /** @param secretName The name of the secret. */
+        public fun secretName(secretName: String)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): CredentialsFromUsernameOptions {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.rds.CredentialsFromUsernameOptions.Builder =
+            software.amazon.awscdk.services.rds.CredentialsFromUsernameOptions.builder()
+
+        /** @param encryptionKey KMS encryption key to encrypt the generated secret. */
+        override fun encryptionKey(encryptionKey: IKey) {
+            cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+        }
+
+        /**
+         * @param excludeCharacters The characters to exclude from the generated password. Has no
+         *   effect if `password` has been provided.
+         */
+        override fun excludeCharacters(excludeCharacters: String) {
+            cdkBuilder.excludeCharacters(excludeCharacters)
+        }
+
+        /** @param password Password. Do not put passwords in your CDK code directly. */
+        override fun password(password: SecretValue) {
+            cdkBuilder.password(password.let(SecretValue::unwrap))
+        }
+
+        /** @param replicaRegions A list of regions where to replicate this secret. */
+        override fun replicaRegions(replicaRegions: List<ReplicaRegion>) {
+            cdkBuilder.replicaRegions(replicaRegions.map(ReplicaRegion::unwrap))
+        }
+
+        /** @param replicaRegions A list of regions where to replicate this secret. */
+        override fun replicaRegions(vararg replicaRegions: ReplicaRegion): Unit =
+            replicaRegions(replicaRegions.toList())
+
+        /** @param secretName The name of the secret. */
+        override fun secretName(secretName: String) {
+            cdkBuilder.secretName(secretName)
+        }
+
+        public fun build(): software.amazon.awscdk.services.rds.CredentialsFromUsernameOptions =
+            cdkBuilder.build()
     }
 
-    internal
-        fun wrap(cdkObject: software.amazon.awscdk.services.rds.CredentialsFromUsernameOptions):
-        CredentialsFromUsernameOptions = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.rds.CredentialsFromUsernameOptions,
+    ) : CredentialsFromUsernameOptions {
+        /**
+         * KMS encryption key to encrypt the generated secret.
+         *
+         * Default: - default master key
+         */
+        override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
 
-    internal fun unwrap(wrapped: CredentialsFromUsernameOptions):
-        software.amazon.awscdk.services.rds.CredentialsFromUsernameOptions = (wrapped as
-        Wrapper).cdkObject
-  }
+        /**
+         * The characters to exclude from the generated password.
+         *
+         * Has no effect if `password` has been provided.
+         *
+         * Default: - the DatabaseSecret default exclude character set ("
+         * %+~`#$&*()|[]{}:;<>?!'/@\"\\")
+         */
+        override fun excludeCharacters(): String? = unwrap(this).getExcludeCharacters()
+
+        /**
+         * Password.
+         *
+         * Do not put passwords in your CDK code directly.
+         *
+         * Default: - a Secrets Manager generated password
+         */
+        override fun password(): SecretValue? = unwrap(this).getPassword()?.let(SecretValue::wrap)
+
+        /**
+         * A list of regions where to replicate this secret.
+         *
+         * Default: - Secret is not replicated
+         */
+        override fun replicaRegions(): List<ReplicaRegion> =
+            unwrap(this).getReplicaRegions()?.map(ReplicaRegion::wrap) ?: emptyList()
+
+        /**
+         * The name of the secret.
+         *
+         * Default: - A name is generated by CloudFormation.
+         */
+        override fun secretName(): String? = unwrap(this).getSecretName()
+    }
+
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): CredentialsFromUsernameOptions {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.rds.CredentialsFromUsernameOptions
+        ): CredentialsFromUsernameOptions = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: CredentialsFromUsernameOptions
+        ): software.amazon.awscdk.services.rds.CredentialsFromUsernameOptions =
+            (wrapped as Wrapper).cdkObject
+    }
 }

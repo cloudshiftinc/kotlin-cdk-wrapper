@@ -4,22 +4,22 @@ import kotlin.String
 import kotlin.collections.List
 
 public interface IValidation {
-  public fun validate(): List<String>
+    public fun validate(): List<String>
 
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.constructs.IValidation,
-  ) : IValidation {
-    override fun validate(): List<String> = unwrap(this).validate()
-  }
-
-  public companion object {
-    init {
-
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.constructs.IValidation,
+    ) : IValidation {
+        override fun validate(): List<String> = unwrap(this).validate()
     }
 
-    internal fun wrap(cdkObject: software.constructs.IValidation): IValidation = Wrapper(cdkObject)
+    public companion object {
+        init {}
 
-    internal fun unwrap(wrapped: IValidation): software.constructs.IValidation = (wrapped as
-        Wrapper).cdkObject
-  }
+        internal fun wrap(cdkObject: software.constructs.IValidation): IValidation =
+            Wrapper(cdkObject)
+
+        internal fun unwrap(wrapped: IValidation): software.constructs.IValidation =
+            (wrapped as Wrapper).cdkObject
+    }
 }

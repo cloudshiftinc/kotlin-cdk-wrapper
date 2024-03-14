@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -15,666 +16,657 @@ import kotlin.Suppress
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnPipeline internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline,
+public open class CfnPipeline
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
-  /**
-   * Examines the CloudFormation resource and discloses attributes.
-   *
-   * @param inspector tree inspector to collect and process attributes. 
-   */
-  public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-  }
-
-  /**
-   * The parallelism configuration applied to the pipeline.
-   */
-  public open fun parallelismConfiguration(): Any? = unwrap(this).getParallelismConfiguration()
-
-  /**
-   * The parallelism configuration applied to the pipeline.
-   */
-  public open fun parallelismConfiguration(`value`: Any) {
-    unwrap(this).setParallelismConfiguration(`value`)
-  }
-
-  /**
-   * The definition of the pipeline.
-   */
-  public open fun pipelineDefinition(): Any = unwrap(this).getPipelineDefinition()
-
-  /**
-   * The definition of the pipeline.
-   */
-  public open fun pipelineDefinition(`value`: Any) {
-    unwrap(this).setPipelineDefinition(`value`)
-  }
-
-  /**
-   * The description of the pipeline.
-   */
-  public open fun pipelineDescription(): String? = unwrap(this).getPipelineDescription()
-
-  /**
-   * The description of the pipeline.
-   */
-  public open fun pipelineDescription(`value`: String) {
-    unwrap(this).setPipelineDescription(`value`)
-  }
-
-  /**
-   * The display name of the pipeline.
-   */
-  public open fun pipelineDisplayName(): String? = unwrap(this).getPipelineDisplayName()
-
-  /**
-   * The display name of the pipeline.
-   */
-  public open fun pipelineDisplayName(`value`: String) {
-    unwrap(this).setPipelineDisplayName(`value`)
-  }
-
-  /**
-   * The name of the pipeline.
-   */
-  public open fun pipelineName(): String = unwrap(this).getPipelineName()
-
-  /**
-   * The name of the pipeline.
-   */
-  public open fun pipelineName(`value`: String) {
-    unwrap(this).setPipelineName(`value`)
-  }
-
-  /**
-   * The Amazon Resource Name (ARN) of the IAM role used to execute the pipeline.
-   */
-  public open fun roleArn(): String = unwrap(this).getRoleArn()
-
-  /**
-   * The Amazon Resource Name (ARN) of the IAM role used to execute the pipeline.
-   */
-  public open fun roleArn(`value`: String) {
-    unwrap(this).setRoleArn(`value`)
-  }
-
-  /**
-   * Tag Manager which manages the tags for this resource.
-   */
-  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
-
-  /**
-   * The tags of the pipeline.
-   */
-  public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
-      emptyList()
-
-  /**
-   * The tags of the pipeline.
-   */
-  public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
-  }
-
-  /**
-   * The tags of the pipeline.
-   */
-  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
-
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.sagemaker.CfnPipeline].
-   */
-  @CdkDslMarker
-  public interface Builder {
     /**
-     * The parallelism configuration applied to the pipeline.
+     * Examines the CloudFormation resource and discloses attributes.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-parallelismconfiguration)
-     * @param parallelismConfiguration The parallelism configuration applied to the pipeline. 
+     * @param inspector tree inspector to collect and process attributes.
      */
-    public fun parallelismConfiguration(parallelismConfiguration: Any)
-
-    /**
-     * The definition of the pipeline.
-     *
-     * This can be either a JSON string or an Amazon S3 location.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-pipelinedefinition)
-     * @param pipelineDefinition The definition of the pipeline. 
-     */
-    public fun pipelineDefinition(pipelineDefinition: Any)
-
-    /**
-     * The description of the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-pipelinedescription)
-     * @param pipelineDescription The description of the pipeline. 
-     */
-    public fun pipelineDescription(pipelineDescription: String)
-
-    /**
-     * The display name of the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-pipelinedisplayname)
-     * @param pipelineDisplayName The display name of the pipeline. 
-     */
-    public fun pipelineDisplayName(pipelineDisplayName: String)
-
-    /**
-     * The name of the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-pipelinename)
-     * @param pipelineName The name of the pipeline. 
-     */
-    public fun pipelineName(pipelineName: String)
-
-    /**
-     * The Amazon Resource Name (ARN) of the IAM role used to execute the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-rolearn)
-     * @param roleArn The Amazon Resource Name (ARN) of the IAM role used to execute the pipeline. 
-     */
-    public fun roleArn(roleArn: String)
-
-    /**
-     * The tags of the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-tags)
-     * @param tags The tags of the pipeline. 
-     */
-    public fun tags(tags: List<CfnTag>)
-
-    /**
-     * The tags of the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-tags)
-     * @param tags The tags of the pipeline. 
-     */
-    public fun tags(vararg tags: CfnTag)
-  }
-
-  private class BuilderImpl(
-    scope: SoftwareConstructsConstruct,
-    id: String,
-  ) : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.sagemaker.CfnPipeline.Builder =
-        software.amazon.awscdk.services.sagemaker.CfnPipeline.Builder.create(scope, id)
-
-    /**
-     * The parallelism configuration applied to the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-parallelismconfiguration)
-     * @param parallelismConfiguration The parallelism configuration applied to the pipeline. 
-     */
-    override fun parallelismConfiguration(parallelismConfiguration: Any) {
-      cdkBuilder.parallelismConfiguration(parallelismConfiguration)
+    public override fun inspect(inspector: TreeInspector) {
+        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
     }
 
-    /**
-     * The definition of the pipeline.
-     *
-     * This can be either a JSON string or an Amazon S3 location.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-pipelinedefinition)
-     * @param pipelineDefinition The definition of the pipeline. 
-     */
-    override fun pipelineDefinition(pipelineDefinition: Any) {
-      cdkBuilder.pipelineDefinition(pipelineDefinition)
+    /** The parallelism configuration applied to the pipeline. */
+    public open fun parallelismConfiguration(): Any? = unwrap(this).getParallelismConfiguration()
+
+    /** The parallelism configuration applied to the pipeline. */
+    public open fun parallelismConfiguration(`value`: Any) {
+        unwrap(this).setParallelismConfiguration(`value`)
     }
 
-    /**
-     * The description of the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-pipelinedescription)
-     * @param pipelineDescription The description of the pipeline. 
-     */
-    override fun pipelineDescription(pipelineDescription: String) {
-      cdkBuilder.pipelineDescription(pipelineDescription)
+    /** The definition of the pipeline. */
+    public open fun pipelineDefinition(): Any = unwrap(this).getPipelineDefinition()
+
+    /** The definition of the pipeline. */
+    public open fun pipelineDefinition(`value`: Any) {
+        unwrap(this).setPipelineDefinition(`value`)
     }
 
-    /**
-     * The display name of the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-pipelinedisplayname)
-     * @param pipelineDisplayName The display name of the pipeline. 
-     */
-    override fun pipelineDisplayName(pipelineDisplayName: String) {
-      cdkBuilder.pipelineDisplayName(pipelineDisplayName)
+    /** The description of the pipeline. */
+    public open fun pipelineDescription(): String? = unwrap(this).getPipelineDescription()
+
+    /** The description of the pipeline. */
+    public open fun pipelineDescription(`value`: String) {
+        unwrap(this).setPipelineDescription(`value`)
     }
 
-    /**
-     * The name of the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-pipelinename)
-     * @param pipelineName The name of the pipeline. 
-     */
-    override fun pipelineName(pipelineName: String) {
-      cdkBuilder.pipelineName(pipelineName)
+    /** The display name of the pipeline. */
+    public open fun pipelineDisplayName(): String? = unwrap(this).getPipelineDisplayName()
+
+    /** The display name of the pipeline. */
+    public open fun pipelineDisplayName(`value`: String) {
+        unwrap(this).setPipelineDisplayName(`value`)
     }
 
-    /**
-     * The Amazon Resource Name (ARN) of the IAM role used to execute the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-rolearn)
-     * @param roleArn The Amazon Resource Name (ARN) of the IAM role used to execute the pipeline. 
-     */
-    override fun roleArn(roleArn: String) {
-      cdkBuilder.roleArn(roleArn)
+    /** The name of the pipeline. */
+    public open fun pipelineName(): String = unwrap(this).getPipelineName()
+
+    /** The name of the pipeline. */
+    public open fun pipelineName(`value`: String) {
+        unwrap(this).setPipelineName(`value`)
     }
 
-    /**
-     * The tags of the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-tags)
-     * @param tags The tags of the pipeline. 
-     */
-    override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+    /** The Amazon Resource Name (ARN) of the IAM role used to execute the pipeline. */
+    public open fun roleArn(): String = unwrap(this).getRoleArn()
+
+    /** The Amazon Resource Name (ARN) of the IAM role used to execute the pipeline. */
+    public open fun roleArn(`value`: String) {
+        unwrap(this).setRoleArn(`value`)
     }
 
-    /**
-     * The tags of the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-tags)
-     * @param tags The tags of the pipeline. 
-     */
-    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+    /** Tag Manager which manages the tags for this resource. */
+    public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
-    public fun build(): software.amazon.awscdk.services.sagemaker.CfnPipeline = cdkBuilder.build()
-  }
+    /** The tags of the pipeline. */
+    public open fun tagsRaw(): List<CfnTag> =
+        unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?: emptyList()
 
-  public companion object {
-    init {
-
+    /** The tags of the pipeline. */
+    public open fun tagsRaw(`value`: List<CfnTag>) {
+        unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
     }
 
-    public operator fun invoke(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      block: Builder.() -> Unit = {},
-    ): CfnPipeline {
-      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-      return CfnPipeline(builderImpl.apply(block).build())
-    }
+    /** The tags of the pipeline. */
+    public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline): CfnPipeline
-        = CfnPipeline(cdkObject)
-
-    internal fun unwrap(wrapped: CfnPipeline): software.amazon.awscdk.services.sagemaker.CfnPipeline
-        = wrapped.cdkObject
-  }
-
-  public interface S3LocationProperty {
-    /**
-     * The name of the S3 bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-bucket)
-     */
-    public fun bucket(): String
-
-    /**
-     * A file checksum of the pipeline definition file.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-etag)
-     */
-    public fun eTag(): String? = unwrap(this).getETag()
-
-    /**
-     * The object key (or key name) which uniquely identifies the object in an S3 bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-key)
-     */
-    public fun key(): String
-
-    /**
-     * The version ID of the pipeline definition file.
-     *
-     * If not specified, Amazon SageMaker will retrieve the latest version.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-version)
-     */
-    public fun version(): String? = unwrap(this).getVersion()
-
-    /**
-     * A builder for [S3LocationProperty]
-     */
+    /** A fluent builder for [io.cloudshiftdev.awscdk.services.sagemaker.CfnPipeline]. */
     @CdkDslMarker
     public interface Builder {
-      /**
-       * @param bucket The name of the S3 bucket. 
-       */
-      public fun bucket(bucket: String)
+        /**
+         * The parallelism configuration applied to the pipeline.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-parallelismconfiguration)
+         *
+         * @param parallelismConfiguration The parallelism configuration applied to the pipeline.
+         */
+        public fun parallelismConfiguration(parallelismConfiguration: Any)
 
-      /**
-       * @param eTag A file checksum of the pipeline definition file.
-       */
-      public fun eTag(eTag: String)
+        /**
+         * The definition of the pipeline.
+         *
+         * This can be either a JSON string or an Amazon S3 location.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-pipelinedefinition)
+         *
+         * @param pipelineDefinition The definition of the pipeline.
+         */
+        public fun pipelineDefinition(pipelineDefinition: Any)
 
-      /**
-       * @param key The object key (or key name) which uniquely identifies the object in an S3
-       * bucket. 
-       */
-      public fun key(key: String)
+        /**
+         * The description of the pipeline.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-pipelinedescription)
+         *
+         * @param pipelineDescription The description of the pipeline.
+         */
+        public fun pipelineDescription(pipelineDescription: String)
 
-      /**
-       * @param version The version ID of the pipeline definition file.
-       * If not specified, Amazon SageMaker will retrieve the latest version.
-       */
-      public fun version(version: String)
+        /**
+         * The display name of the pipeline.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-pipelinedisplayname)
+         *
+         * @param pipelineDisplayName The display name of the pipeline.
+         */
+        public fun pipelineDisplayName(pipelineDisplayName: String)
+
+        /**
+         * The name of the pipeline.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-pipelinename)
+         *
+         * @param pipelineName The name of the pipeline.
+         */
+        public fun pipelineName(pipelineName: String)
+
+        /**
+         * The Amazon Resource Name (ARN) of the IAM role used to execute the pipeline.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-rolearn)
+         *
+         * @param roleArn The Amazon Resource Name (ARN) of the IAM role used to execute the
+         *   pipeline.
+         */
+        public fun roleArn(roleArn: String)
+
+        /**
+         * The tags of the pipeline.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-tags)
+         *
+         * @param tags The tags of the pipeline.
+         */
+        public fun tags(tags: List<CfnTag>)
+
+        /**
+         * The tags of the pipeline.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-tags)
+         *
+         * @param tags The tags of the pipeline.
+         */
+        public fun tags(vararg tags: CfnTag)
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty.builder()
+    private class BuilderImpl(
+        scope: SoftwareConstructsConstruct,
+        id: String,
+    ) : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.sagemaker.CfnPipeline.Builder =
+            software.amazon.awscdk.services.sagemaker.CfnPipeline.Builder.create(scope, id)
 
-      /**
-       * @param bucket The name of the S3 bucket. 
-       */
-      override fun bucket(bucket: String) {
-        cdkBuilder.bucket(bucket)
-      }
+        /**
+         * The parallelism configuration applied to the pipeline.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-parallelismconfiguration)
+         *
+         * @param parallelismConfiguration The parallelism configuration applied to the pipeline.
+         */
+        override fun parallelismConfiguration(parallelismConfiguration: Any) {
+            cdkBuilder.parallelismConfiguration(parallelismConfiguration)
+        }
 
-      /**
-       * @param eTag A file checksum of the pipeline definition file.
-       */
-      override fun eTag(eTag: String) {
-        cdkBuilder.eTag(eTag)
-      }
+        /**
+         * The definition of the pipeline.
+         *
+         * This can be either a JSON string or an Amazon S3 location.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-pipelinedefinition)
+         *
+         * @param pipelineDefinition The definition of the pipeline.
+         */
+        override fun pipelineDefinition(pipelineDefinition: Any) {
+            cdkBuilder.pipelineDefinition(pipelineDefinition)
+        }
 
-      /**
-       * @param key The object key (or key name) which uniquely identifies the object in an S3
-       * bucket. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
+        /**
+         * The description of the pipeline.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-pipelinedescription)
+         *
+         * @param pipelineDescription The description of the pipeline.
+         */
+        override fun pipelineDescription(pipelineDescription: String) {
+            cdkBuilder.pipelineDescription(pipelineDescription)
+        }
 
-      /**
-       * @param version The version ID of the pipeline definition file.
-       * If not specified, Amazon SageMaker will retrieve the latest version.
-       */
-      override fun version(version: String) {
-        cdkBuilder.version(version)
-      }
+        /**
+         * The display name of the pipeline.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-pipelinedisplayname)
+         *
+         * @param pipelineDisplayName The display name of the pipeline.
+         */
+        override fun pipelineDisplayName(pipelineDisplayName: String) {
+            cdkBuilder.pipelineDisplayName(pipelineDisplayName)
+        }
 
-      public fun build(): software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty =
-          cdkBuilder.build()
-    }
+        /**
+         * The name of the pipeline.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-pipelinename)
+         *
+         * @param pipelineName The name of the pipeline.
+         */
+        override fun pipelineName(pipelineName: String) {
+            cdkBuilder.pipelineName(pipelineName)
+        }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty,
-    ) : S3LocationProperty {
-      /**
-       * The name of the S3 bucket.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-bucket)
-       */
-      override fun bucket(): String = unwrap(this).getBucket()
+        /**
+         * The Amazon Resource Name (ARN) of the IAM role used to execute the pipeline.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-rolearn)
+         *
+         * @param roleArn The Amazon Resource Name (ARN) of the IAM role used to execute the
+         *   pipeline.
+         */
+        override fun roleArn(roleArn: String) {
+            cdkBuilder.roleArn(roleArn)
+        }
 
-      /**
-       * A file checksum of the pipeline definition file.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-etag)
-       */
-      override fun eTag(): String? = unwrap(this).getETag()
+        /**
+         * The tags of the pipeline.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-tags)
+         *
+         * @param tags The tags of the pipeline.
+         */
+        override fun tags(tags: List<CfnTag>) {
+            cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        }
 
-      /**
-       * The object key (or key name) which uniquely identifies the object in an S3 bucket.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
+        /**
+         * The tags of the pipeline.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-pipeline.html#cfn-sagemaker-pipeline-tags)
+         *
+         * @param tags The tags of the pipeline.
+         */
+        override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
-      /**
-       * The version ID of the pipeline definition file.
-       *
-       * If not specified, Amazon SageMaker will retrieve the latest version.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-version)
-       */
-      override fun version(): String? = unwrap(this).getVersion()
+        public fun build(): software.amazon.awscdk.services.sagemaker.CfnPipeline =
+            cdkBuilder.build()
     }
 
     public companion object {
-      init {
+        init {}
 
-      }
+        public operator fun invoke(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            block: Builder.() -> Unit = {},
+        ): CfnPipeline {
+            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+            return CfnPipeline(builderImpl.apply(block).build())
+        }
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3LocationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline
+        ): CfnPipeline = CfnPipeline(cdkObject)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty):
-          S3LocationProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3LocationProperty):
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty = (wrapped as
-          Wrapper).cdkObject
-    }
-  }
-
-  public interface PipelineDefinitionProperty {
-    /**
-     * The [JSON pipeline
-     * definition](https://docs.aws.amazon.com/https://aws-sagemaker-mlops.github.io/sagemaker-model-building-pipeline-definition-JSON-schema/)
-     * of the pipeline.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-pipelinedefinition.html#cfn-sagemaker-pipeline-pipelinedefinition-pipelinedefinitionbody)
-     */
-    public fun pipelineDefinitionBody(): String
-
-    /**
-     * The location of the pipeline definition stored in Amazon S3.
-     *
-     * If specified, SageMaker retrieves the pipeline definition from this location.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-pipelinedefinition.html#cfn-sagemaker-pipeline-pipelinedefinition-pipelinedefinitions3location)
-     */
-    public fun pipelineDefinitionS3Location(): Any? = unwrap(this).getPipelineDefinitionS3Location()
-
-    /**
-     * A builder for [PipelineDefinitionProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param pipelineDefinitionBody The [JSON pipeline
-       * definition](https://docs.aws.amazon.com/https://aws-sagemaker-mlops.github.io/sagemaker-model-building-pipeline-definition-JSON-schema/)
-       * of the pipeline. 
-       */
-      public fun pipelineDefinitionBody(pipelineDefinitionBody: String)
-
-      /**
-       * @param pipelineDefinitionS3Location The location of the pipeline definition stored in
-       * Amazon S3.
-       * If specified, SageMaker retrieves the pipeline definition from this location.
-       */
-      public fun pipelineDefinitionS3Location(pipelineDefinitionS3Location: IResolvable)
-
-      /**
-       * @param pipelineDefinitionS3Location The location of the pipeline definition stored in
-       * Amazon S3.
-       * If specified, SageMaker retrieves the pipeline definition from this location.
-       */
-      public fun pipelineDefinitionS3Location(pipelineDefinitionS3Location: S3LocationProperty)
-
-      /**
-       * @param pipelineDefinitionS3Location The location of the pipeline definition stored in
-       * Amazon S3.
-       * If specified, SageMaker retrieves the pipeline definition from this location.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1df0e687c3066c62629cdd1b718c8d4ebdc9be95b8c663f15f623c857c772010")
-      public
-          fun pipelineDefinitionS3Location(pipelineDefinitionS3Location: S3LocationProperty.Builder.() -> Unit)
+        internal fun unwrap(
+            wrapped: CfnPipeline
+        ): software.amazon.awscdk.services.sagemaker.CfnPipeline = wrapped.cdkObject
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty.Builder =
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty.builder()
+    public interface S3LocationProperty {
+        /**
+         * The name of the S3 bucket.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-bucket)
+         */
+        public fun bucket(): String
 
-      /**
-       * @param pipelineDefinitionBody The [JSON pipeline
-       * definition](https://docs.aws.amazon.com/https://aws-sagemaker-mlops.github.io/sagemaker-model-building-pipeline-definition-JSON-schema/)
-       * of the pipeline. 
-       */
-      override fun pipelineDefinitionBody(pipelineDefinitionBody: String) {
-        cdkBuilder.pipelineDefinitionBody(pipelineDefinitionBody)
-      }
+        /**
+         * A file checksum of the pipeline definition file.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-etag)
+         */
+        public fun eTag(): String? = unwrap(this).getETag()
 
-      /**
-       * @param pipelineDefinitionS3Location The location of the pipeline definition stored in
-       * Amazon S3.
-       * If specified, SageMaker retrieves the pipeline definition from this location.
-       */
-      override fun pipelineDefinitionS3Location(pipelineDefinitionS3Location: IResolvable) {
-        cdkBuilder.pipelineDefinitionS3Location(pipelineDefinitionS3Location.let(IResolvable::unwrap))
-      }
+        /**
+         * The object key (or key name) which uniquely identifies the object in an S3 bucket.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-key)
+         */
+        public fun key(): String
 
-      /**
-       * @param pipelineDefinitionS3Location The location of the pipeline definition stored in
-       * Amazon S3.
-       * If specified, SageMaker retrieves the pipeline definition from this location.
-       */
-      override fun pipelineDefinitionS3Location(pipelineDefinitionS3Location: S3LocationProperty) {
-        cdkBuilder.pipelineDefinitionS3Location(pipelineDefinitionS3Location.let(S3LocationProperty::unwrap))
-      }
+        /**
+         * The version ID of the pipeline definition file.
+         *
+         * If not specified, Amazon SageMaker will retrieve the latest version.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-version)
+         */
+        public fun version(): String? = unwrap(this).getVersion()
 
-      /**
-       * @param pipelineDefinitionS3Location The location of the pipeline definition stored in
-       * Amazon S3.
-       * If specified, SageMaker retrieves the pipeline definition from this location.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("1df0e687c3066c62629cdd1b718c8d4ebdc9be95b8c663f15f623c857c772010")
-      override
-          fun pipelineDefinitionS3Location(pipelineDefinitionS3Location: S3LocationProperty.Builder.() -> Unit):
-          Unit = pipelineDefinitionS3Location(S3LocationProperty(pipelineDefinitionS3Location))
+        /** A builder for [S3LocationProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param bucket The name of the S3 bucket. */
+            public fun bucket(bucket: String)
 
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty =
-          cdkBuilder.build()
+            /** @param eTag A file checksum of the pipeline definition file. */
+            public fun eTag(eTag: String)
+
+            /**
+             * @param key The object key (or key name) which uniquely identifies the object in an S3
+             *   bucket.
+             */
+            public fun key(key: String)
+
+            /**
+             * @param version The version ID of the pipeline definition file. If not specified,
+             *   Amazon SageMaker will retrieve the latest version.
+             */
+            public fun version(version: String)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty.Builder =
+                software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty.builder()
+
+            /** @param bucket The name of the S3 bucket. */
+            override fun bucket(bucket: String) {
+                cdkBuilder.bucket(bucket)
+            }
+
+            /** @param eTag A file checksum of the pipeline definition file. */
+            override fun eTag(eTag: String) {
+                cdkBuilder.eTag(eTag)
+            }
+
+            /**
+             * @param key The object key (or key name) which uniquely identifies the object in an S3
+             *   bucket.
+             */
+            override fun key(key: String) {
+                cdkBuilder.key(key)
+            }
+
+            /**
+             * @param version The version ID of the pipeline definition file. If not specified,
+             *   Amazon SageMaker will retrieve the latest version.
+             */
+            override fun version(version: String) {
+                cdkBuilder.version(version)
+            }
+
+            public fun build():
+                software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty,
+        ) : S3LocationProperty {
+            /**
+             * The name of the S3 bucket.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-bucket)
+             */
+            override fun bucket(): String = unwrap(this).getBucket()
+
+            /**
+             * A file checksum of the pipeline definition file.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-etag)
+             */
+            override fun eTag(): String? = unwrap(this).getETag()
+
+            /**
+             * The object key (or key name) which uniquely identifies the object in an S3 bucket.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-key)
+             */
+            override fun key(): String = unwrap(this).getKey()
+
+            /**
+             * The version ID of the pipeline definition file.
+             *
+             * If not specified, Amazon SageMaker will retrieve the latest version.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-s3location.html#cfn-sagemaker-pipeline-s3location-version)
+             */
+            override fun version(): String? = unwrap(this).getVersion()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): S3LocationProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty
+            ): S3LocationProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: S3LocationProperty
+            ): software.amazon.awscdk.services.sagemaker.CfnPipeline.S3LocationProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty,
-    ) : PipelineDefinitionProperty {
-      /**
-       * The [JSON pipeline
-       * definition](https://docs.aws.amazon.com/https://aws-sagemaker-mlops.github.io/sagemaker-model-building-pipeline-definition-JSON-schema/)
-       * of the pipeline.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-pipelinedefinition.html#cfn-sagemaker-pipeline-pipelinedefinition-pipelinedefinitionbody)
-       */
-      override fun pipelineDefinitionBody(): String = unwrap(this).getPipelineDefinitionBody()
+    public interface PipelineDefinitionProperty {
+        /**
+         * The
+         * [JSON pipeline definition](https://docs.aws.amazon.com/https://aws-sagemaker-mlops.github.io/sagemaker-model-building-pipeline-definition-JSON-schema/)
+         * of the pipeline.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-pipelinedefinition.html#cfn-sagemaker-pipeline-pipelinedefinition-pipelinedefinitionbody)
+         */
+        public fun pipelineDefinitionBody(): String
 
-      /**
-       * The location of the pipeline definition stored in Amazon S3.
-       *
-       * If specified, SageMaker retrieves the pipeline definition from this location.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-pipelinedefinition.html#cfn-sagemaker-pipeline-pipelinedefinition-pipelinedefinitions3location)
-       */
-      override fun pipelineDefinitionS3Location(): Any? =
-          unwrap(this).getPipelineDefinitionS3Location()
+        /**
+         * The location of the pipeline definition stored in Amazon S3.
+         *
+         * If specified, SageMaker retrieves the pipeline definition from this location.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-pipelinedefinition.html#cfn-sagemaker-pipeline-pipelinedefinition-pipelinedefinitions3location)
+         */
+        public fun pipelineDefinitionS3Location(): Any? =
+            unwrap(this).getPipelineDefinitionS3Location()
+
+        /** A builder for [PipelineDefinitionProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param pipelineDefinitionBody The
+             *   [JSON pipeline definition](https://docs.aws.amazon.com/https://aws-sagemaker-mlops.github.io/sagemaker-model-building-pipeline-definition-JSON-schema/)
+             *   of the pipeline.
+             */
+            public fun pipelineDefinitionBody(pipelineDefinitionBody: String)
+
+            /**
+             * @param pipelineDefinitionS3Location The location of the pipeline definition stored in
+             *   Amazon S3. If specified, SageMaker retrieves the pipeline definition from this
+             *   location.
+             */
+            public fun pipelineDefinitionS3Location(pipelineDefinitionS3Location: IResolvable)
+
+            /**
+             * @param pipelineDefinitionS3Location The location of the pipeline definition stored in
+             *   Amazon S3. If specified, SageMaker retrieves the pipeline definition from this
+             *   location.
+             */
+            public fun pipelineDefinitionS3Location(
+                pipelineDefinitionS3Location: S3LocationProperty
+            )
+
+            /**
+             * @param pipelineDefinitionS3Location The location of the pipeline definition stored in
+             *   Amazon S3. If specified, SageMaker retrieves the pipeline definition from this
+             *   location.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("1df0e687c3066c62629cdd1b718c8d4ebdc9be95b8c663f15f623c857c772010")
+            public fun pipelineDefinitionS3Location(
+                pipelineDefinitionS3Location: S3LocationProperty.Builder.() -> Unit
+            )
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty.Builder =
+                software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty
+                    .builder()
+
+            /**
+             * @param pipelineDefinitionBody The
+             *   [JSON pipeline definition](https://docs.aws.amazon.com/https://aws-sagemaker-mlops.github.io/sagemaker-model-building-pipeline-definition-JSON-schema/)
+             *   of the pipeline.
+             */
+            override fun pipelineDefinitionBody(pipelineDefinitionBody: String) {
+                cdkBuilder.pipelineDefinitionBody(pipelineDefinitionBody)
+            }
+
+            /**
+             * @param pipelineDefinitionS3Location The location of the pipeline definition stored in
+             *   Amazon S3. If specified, SageMaker retrieves the pipeline definition from this
+             *   location.
+             */
+            override fun pipelineDefinitionS3Location(pipelineDefinitionS3Location: IResolvable) {
+                cdkBuilder.pipelineDefinitionS3Location(
+                    pipelineDefinitionS3Location.let(IResolvable::unwrap)
+                )
+            }
+
+            /**
+             * @param pipelineDefinitionS3Location The location of the pipeline definition stored in
+             *   Amazon S3. If specified, SageMaker retrieves the pipeline definition from this
+             *   location.
+             */
+            override fun pipelineDefinitionS3Location(
+                pipelineDefinitionS3Location: S3LocationProperty
+            ) {
+                cdkBuilder.pipelineDefinitionS3Location(
+                    pipelineDefinitionS3Location.let(S3LocationProperty::unwrap)
+                )
+            }
+
+            /**
+             * @param pipelineDefinitionS3Location The location of the pipeline definition stored in
+             *   Amazon S3. If specified, SageMaker retrieves the pipeline definition from this
+             *   location.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("1df0e687c3066c62629cdd1b718c8d4ebdc9be95b8c663f15f623c857c772010")
+            override fun pipelineDefinitionS3Location(
+                pipelineDefinitionS3Location: S3LocationProperty.Builder.() -> Unit
+            ): Unit = pipelineDefinitionS3Location(S3LocationProperty(pipelineDefinitionS3Location))
+
+            public fun build():
+                software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty,
+        ) : PipelineDefinitionProperty {
+            /**
+             * The
+             * [JSON pipeline definition](https://docs.aws.amazon.com/https://aws-sagemaker-mlops.github.io/sagemaker-model-building-pipeline-definition-JSON-schema/)
+             * of the pipeline.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-pipelinedefinition.html#cfn-sagemaker-pipeline-pipelinedefinition-pipelinedefinitionbody)
+             */
+            override fun pipelineDefinitionBody(): String = unwrap(this).getPipelineDefinitionBody()
+
+            /**
+             * The location of the pipeline definition stored in Amazon S3.
+             *
+             * If specified, SageMaker retrieves the pipeline definition from this location.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-pipelinedefinition.html#cfn-sagemaker-pipeline-pipelinedefinition-pipelinedefinitions3location)
+             */
+            override fun pipelineDefinitionS3Location(): Any? =
+                unwrap(this).getPipelineDefinitionS3Location()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): PipelineDefinitionProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty
+            ): PipelineDefinitionProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: PipelineDefinitionProperty
+            ): software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface ParallelismConfigurationProperty {
+        /**
+         * The max number of steps that can be executed in parallel.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-parallelismconfiguration.html#cfn-sagemaker-pipeline-parallelismconfiguration-maxparallelexecutionsteps)
+         */
+        public fun maxParallelExecutionSteps(): Number
 
-      }
+        /** A builder for [ParallelismConfigurationProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param maxParallelExecutionSteps The max number of steps that can be executed in
+             *   parallel.
+             */
+            public fun maxParallelExecutionSteps(maxParallelExecutionSteps: Number)
+        }
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): PipelineDefinitionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty.Builder =
+                software.amazon.awscdk.services.sagemaker.CfnPipeline
+                    .ParallelismConfigurationProperty
+                    .builder()
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty):
-          PipelineDefinitionProperty = Wrapper(cdkObject)
+            /**
+             * @param maxParallelExecutionSteps The max number of steps that can be executed in
+             *   parallel.
+             */
+            override fun maxParallelExecutionSteps(maxParallelExecutionSteps: Number) {
+                cdkBuilder.maxParallelExecutionSteps(maxParallelExecutionSteps)
+            }
 
-      internal fun unwrap(wrapped: PipelineDefinitionProperty):
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.PipelineDefinitionProperty =
-          (wrapped as Wrapper).cdkObject
+            public fun build():
+                software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty,
+        ) : ParallelismConfigurationProperty {
+            /**
+             * The max number of steps that can be executed in parallel.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-parallelismconfiguration.html#cfn-sagemaker-pipeline-parallelismconfiguration-maxparallelexecutionsteps)
+             */
+            override fun maxParallelExecutionSteps(): Number =
+                unwrap(this).getMaxParallelExecutionSteps()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(
+                block: Builder.() -> Unit = {}
+            ): ParallelismConfigurationProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty
+            ): ParallelismConfigurationProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: ParallelismConfigurationProperty
+            ): software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
-  }
-
-  public interface ParallelismConfigurationProperty {
-    /**
-     * The max number of steps that can be executed in parallel.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-parallelismconfiguration.html#cfn-sagemaker-pipeline-parallelismconfiguration-maxparallelexecutionsteps)
-     */
-    public fun maxParallelExecutionSteps(): Number
-
-    /**
-     * A builder for [ParallelismConfigurationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param maxParallelExecutionSteps The max number of steps that can be executed in parallel. 
-       */
-      public fun maxParallelExecutionSteps(maxParallelExecutionSteps: Number)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty.Builder
-          =
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty.builder()
-
-      /**
-       * @param maxParallelExecutionSteps The max number of steps that can be executed in parallel. 
-       */
-      override fun maxParallelExecutionSteps(maxParallelExecutionSteps: Number) {
-        cdkBuilder.maxParallelExecutionSteps(maxParallelExecutionSteps)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty,
-    ) : ParallelismConfigurationProperty {
-      /**
-       * The max number of steps that can be executed in parallel.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-pipeline-parallelismconfiguration.html#cfn-sagemaker-pipeline-parallelismconfiguration-maxparallelexecutionsteps)
-       */
-      override fun maxParallelExecutionSteps(): Number = unwrap(this).getMaxParallelExecutionSteps()
-    }
-
-    public companion object {
-      init {
-
-      }
-
-      public operator fun invoke(block: Builder.() -> Unit = {}): ParallelismConfigurationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty):
-          ParallelismConfigurationProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ParallelismConfigurationProperty):
-          software.amazon.awscdk.services.sagemaker.CfnPipeline.ParallelismConfigurationProperty =
-          (wrapped as Wrapper).cdkObject
-    }
-  }
 }

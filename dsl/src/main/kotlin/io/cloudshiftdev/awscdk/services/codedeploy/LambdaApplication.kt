@@ -2,91 +2,97 @@ package io.cloudshiftdev.awscdk.services.codedeploy
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.String
 import kotlin.Unit
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class LambdaApplication internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.codedeploy.LambdaApplication,
+public open class LambdaApplication
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.codedeploy.LambdaApplication,
 ) : Resource(cdkObject), ILambdaApplication {
-  /**
-   *
-   */
-  public override fun applicationArn(): String = unwrap(this).getApplicationArn()
+    /**  */
+    public override fun applicationArn(): String = unwrap(this).getApplicationArn()
 
-  /**
-   *
-   */
-  public override fun applicationName(): String = unwrap(this).getApplicationName()
+    /**  */
+    public override fun applicationName(): String = unwrap(this).getApplicationName()
 
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.codedeploy.LambdaApplication].
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * The physical, human-readable name of the CodeDeploy Application.
-     *
-     * Default: an auto-generated name will be used
-     *
-     * @param applicationName The physical, human-readable name of the CodeDeploy Application. 
-     */
-    public fun applicationName(applicationName: String)
-  }
-
-  private class BuilderImpl(
-    scope: SoftwareConstructsConstruct,
-    id: String,
-  ) : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.codedeploy.LambdaApplication.Builder =
-        software.amazon.awscdk.services.codedeploy.LambdaApplication.Builder.create(scope, id)
-
-    /**
-     * The physical, human-readable name of the CodeDeploy Application.
-     *
-     * Default: an auto-generated name will be used
-     *
-     * @param applicationName The physical, human-readable name of the CodeDeploy Application. 
-     */
-    override fun applicationName(applicationName: String) {
-      cdkBuilder.applicationName(applicationName)
+    /** A fluent builder for [io.cloudshiftdev.awscdk.services.codedeploy.LambdaApplication]. */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * The physical, human-readable name of the CodeDeploy Application.
+         *
+         * Default: an auto-generated name will be used
+         *
+         * @param applicationName The physical, human-readable name of the CodeDeploy Application.
+         */
+        public fun applicationName(applicationName: String)
     }
 
-    public fun build(): software.amazon.awscdk.services.codedeploy.LambdaApplication =
-        cdkBuilder.build()
-  }
+    private class BuilderImpl(
+        scope: SoftwareConstructsConstruct,
+        id: String,
+    ) : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.codedeploy.LambdaApplication.Builder =
+            software.amazon.awscdk.services.codedeploy.LambdaApplication.Builder.create(scope, id)
 
-  public companion object {
-    public fun fromLambdaApplicationArn(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      lambdaApplicationArn: String,
-    ): ILambdaApplication =
-        software.amazon.awscdk.services.codedeploy.LambdaApplication.fromLambdaApplicationArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, lambdaApplicationArn).let(ILambdaApplication::wrap)
+        /**
+         * The physical, human-readable name of the CodeDeploy Application.
+         *
+         * Default: an auto-generated name will be used
+         *
+         * @param applicationName The physical, human-readable name of the CodeDeploy Application.
+         */
+        override fun applicationName(applicationName: String) {
+            cdkBuilder.applicationName(applicationName)
+        }
 
-    public fun fromLambdaApplicationName(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      lambdaApplicationName: String,
-    ): ILambdaApplication =
-        software.amazon.awscdk.services.codedeploy.LambdaApplication.fromLambdaApplicationName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, lambdaApplicationName).let(ILambdaApplication::wrap)
-
-    public operator fun invoke(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      block: Builder.() -> Unit = {},
-    ): LambdaApplication {
-      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-      return LambdaApplication(builderImpl.apply(block).build())
+        public fun build(): software.amazon.awscdk.services.codedeploy.LambdaApplication =
+            cdkBuilder.build()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.LambdaApplication):
-        LambdaApplication = LambdaApplication(cdkObject)
+    public companion object {
+        public fun fromLambdaApplicationArn(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            lambdaApplicationArn: String,
+        ): ILambdaApplication =
+            software.amazon.awscdk.services.codedeploy.LambdaApplication.fromLambdaApplicationArn(
+                    scope.let(CloudshiftdevConstructsConstruct::unwrap),
+                    id,
+                    lambdaApplicationArn
+                )
+                .let(ILambdaApplication::wrap)
 
-    internal fun unwrap(wrapped: LambdaApplication):
-        software.amazon.awscdk.services.codedeploy.LambdaApplication = wrapped.cdkObject
-  }
+        public fun fromLambdaApplicationName(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            lambdaApplicationName: String,
+        ): ILambdaApplication =
+            software.amazon.awscdk.services.codedeploy.LambdaApplication.fromLambdaApplicationName(
+                    scope.let(CloudshiftdevConstructsConstruct::unwrap),
+                    id,
+                    lambdaApplicationName
+                )
+                .let(ILambdaApplication::wrap)
+
+        public operator fun invoke(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            block: Builder.() -> Unit = {},
+        ): LambdaApplication {
+            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+            return LambdaApplication(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.codedeploy.LambdaApplication
+        ): LambdaApplication = LambdaApplication(cdkObject)
+
+        internal fun unwrap(
+            wrapped: LambdaApplication
+        ): software.amazon.awscdk.services.codedeploy.LambdaApplication = wrapped.cdkObject
+    }
 }

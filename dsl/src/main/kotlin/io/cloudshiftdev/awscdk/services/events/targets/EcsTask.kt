@@ -22,555 +22,543 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
-public open class EcsTask internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.events.targets.EcsTask,
+public open class EcsTask
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.events.targets.EcsTask,
 ) : IRuleTarget {
-  /**
-   * Allows using tasks as target of EventBridge events.
-   *
-   * @param _rule 
-   * @param _id
-   */
-  public override fun bind(_rule: IRule): RuleTargetConfig =
-      unwrap(this).bind(_rule.let(IRule::unwrap)).let(RuleTargetConfig::wrap)
-
-  /**
-   * Allows using tasks as target of EventBridge events.
-   *
-   * @param _rule 
-   * @param _id
-   */
-  public override fun bind(_rule: IRule, _id: String): RuleTargetConfig =
-      unwrap(this).bind(_rule.let(IRule::unwrap), _id).let(RuleTargetConfig::wrap)
-
-  /**
-   * The security groups associated with the task.
-   *
-   * Only applicable with awsvpc network mode.
-   *
-   * Default: - A new security group is created.
-   */
-  public open fun securityGroups(): List<ISecurityGroup> =
-      unwrap(this).getSecurityGroups()?.map(ISecurityGroup::wrap) ?: emptyList()
-
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.events.targets.EcsTask].
-   */
-  @CdkDslMarker
-  public interface Builder {
     /**
-     * Specifies whether the task's elastic network interface receives a public IP address.
+     * Allows using tasks as target of EventBridge events.
      *
-     * You can specify true only when LaunchType is set to FARGATE.
-     *
-     * Default: - true if the subnet type is PUBLIC, otherwise false
-     *
-     * @param assignPublicIp Specifies whether the task's elastic network interface receives a
-     * public IP address. 
+     * @param _rule
+     * @param _id
      */
-    public fun assignPublicIp(assignPublicIp: Boolean)
+    public override fun bind(_rule: IRule): RuleTargetConfig =
+        unwrap(this).bind(_rule.let(IRule::unwrap)).let(RuleTargetConfig::wrap)
 
     /**
-     * Cluster where service will be deployed.
+     * Allows using tasks as target of EventBridge events.
      *
-     * @param cluster Cluster where service will be deployed. 
+     * @param _rule
+     * @param _id
      */
-    public fun cluster(cluster: ICluster)
+    public override fun bind(_rule: IRule, _id: String): RuleTargetConfig =
+        unwrap(this).bind(_rule.let(IRule::unwrap), _id).let(RuleTargetConfig::wrap)
 
     /**
-     * Container setting overrides.
+     * The security groups associated with the task.
      *
-     * Key is the name of the container to override, value is the
-     * values you want to override.
+     * Only applicable with awsvpc network mode.
      *
-     * @param containerOverrides Container setting overrides. 
+     * Default: - A new security group is created.
      */
-    public fun containerOverrides(containerOverrides: List<ContainerOverride>)
+    public open fun securityGroups(): List<ISecurityGroup> =
+        unwrap(this).getSecurityGroups()?.map(ISecurityGroup::wrap) ?: emptyList()
 
-    /**
-     * Container setting overrides.
-     *
-     * Key is the name of the container to override, value is the
-     * values you want to override.
-     *
-     * @param containerOverrides Container setting overrides. 
-     */
-    public fun containerOverrides(vararg containerOverrides: ContainerOverride)
+    /** A fluent builder for [io.cloudshiftdev.awscdk.services.events.targets.EcsTask]. */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * Specifies whether the task's elastic network interface receives a public IP address.
+         *
+         * You can specify true only when LaunchType is set to FARGATE.
+         *
+         * Default: - true if the subnet type is PUBLIC, otherwise false
+         *
+         * @param assignPublicIp Specifies whether the task's elastic network interface receives a
+         *   public IP address.
+         */
+        public fun assignPublicIp(assignPublicIp: Boolean)
 
-    /**
-     * The SQS queue to be used as deadLetterQueue. Check out the [considerations for using a
-     * dead-letter
-     * queue](https://docs.aws.amazon.com/eventbridge/latest/userguide/rule-dlq.html#dlq-considerations).
-     *
-     * The events not successfully delivered are automatically retried for a specified period of
-     * time,
-     * depending on the retry policy of the target.
-     * If an event is not delivered before all retry attempts are exhausted, it will be sent to the
-     * dead letter queue.
-     *
-     * Default: - no dead-letter queue
-     *
-     * @param deadLetterQueue The SQS queue to be used as deadLetterQueue. Check out the
-     * [considerations for using a dead-letter
-     * queue](https://docs.aws.amazon.com/eventbridge/latest/userguide/rule-dlq.html#dlq-considerations).
-     * 
-     */
-    public fun deadLetterQueue(deadLetterQueue: IQueue)
+        /**
+         * Cluster where service will be deployed.
+         *
+         * @param cluster Cluster where service will be deployed.
+         */
+        public fun cluster(cluster: ICluster)
 
-    /**
-     * Whether or not to enable the execute command functionality for the containers in this task.
-     *
-     * If true, this enables execute command functionality on all containers in the task.
-     *
-     * Default: - false
-     *
-     * @param enableExecuteCommand Whether or not to enable the execute command functionality for
-     * the containers in this task. 
-     */
-    public fun enableExecuteCommand(enableExecuteCommand: Boolean)
+        /**
+         * Container setting overrides.
+         *
+         * Key is the name of the container to override, value is the values you want to override.
+         *
+         * @param containerOverrides Container setting overrides.
+         */
+        public fun containerOverrides(containerOverrides: List<ContainerOverride>)
 
-    /**
-     * Specifies the launch type on which your task is running.
-     *
-     * The launch type that you specify here
-     * must match one of the launch type (compatibilities) of the target task.
-     *
-     * Default: - 'EC2' if `isEc2Compatible` for the `taskDefinition` is true, otherwise 'FARGATE'
-     *
-     * @param launchType Specifies the launch type on which your task is running. 
-     */
-    public fun launchType(launchType: LaunchType)
+        /**
+         * Container setting overrides.
+         *
+         * Key is the name of the container to override, value is the values you want to override.
+         *
+         * @param containerOverrides Container setting overrides.
+         */
+        public fun containerOverrides(vararg containerOverrides: ContainerOverride)
 
-    /**
-     * The maximum age of a request that Lambda sends to a function for processing.
-     *
-     * Minimum value of 60.
-     * Maximum value of 86400.
-     *
-     * Default: Duration.hours(24)
-     *
-     * @param maxEventAge The maximum age of a request that Lambda sends to a function for
-     * processing. 
-     */
-    public fun maxEventAge(maxEventAge: Duration)
+        /**
+         * The SQS queue to be used as deadLetterQueue. Check out the
+         * [considerations for using a dead-letter queue](https://docs.aws.amazon.com/eventbridge/latest/userguide/rule-dlq.html#dlq-considerations).
+         *
+         * The events not successfully delivered are automatically retried for a specified period of
+         * time, depending on the retry policy of the target. If an event is not delivered before
+         * all retry attempts are exhausted, it will be sent to the dead letter queue.
+         *
+         * Default: - no dead-letter queue
+         *
+         * @param deadLetterQueue The SQS queue to be used as deadLetterQueue. Check out the
+         *   [considerations for using a dead-letter queue](https://docs.aws.amazon.com/eventbridge/latest/userguide/rule-dlq.html#dlq-considerations).
+         */
+        public fun deadLetterQueue(deadLetterQueue: IQueue)
 
-    /**
-     * The platform version on which to run your task.
-     *
-     * Unless you have specific compatibility requirements, you don't need to specify this.
-     *
-     * Default: - ECS will set the Fargate platform version to 'LATEST'
-     *
-     * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html)
-     * @param platformVersion The platform version on which to run your task. 
-     */
-    public fun platformVersion(platformVersion: FargatePlatformVersion)
+        /**
+         * Whether or not to enable the execute command functionality for the containers in this
+         * task.
+         *
+         * If true, this enables execute command functionality on all containers in the task.
+         *
+         * Default: - false
+         *
+         * @param enableExecuteCommand Whether or not to enable the execute command functionality
+         *   for the containers in this task.
+         */
+        public fun enableExecuteCommand(enableExecuteCommand: Boolean)
 
-    /**
-     * Specifies whether to propagate the tags from the task definition to the task.
-     *
-     * If no value is specified, the tags are not propagated.
-     *
-     * Default: - Tags will not be propagated
-     *
-     * @param propagateTags Specifies whether to propagate the tags from the task definition to the
-     * task. 
-     */
-    public fun propagateTags(propagateTags: PropagatedTagSource)
+        /**
+         * Specifies the launch type on which your task is running.
+         *
+         * The launch type that you specify here must match one of the launch type (compatibilities)
+         * of the target task.
+         *
+         * Default: - 'EC2' if `isEc2Compatible` for the `taskDefinition` is true, otherwise
+         * 'FARGATE'
+         *
+         * @param launchType Specifies the launch type on which your task is running.
+         */
+        public fun launchType(launchType: LaunchType)
 
-    /**
-     * The maximum number of times to retry when the function returns an error.
-     *
-     * Minimum value of 0.
-     * Maximum value of 185.
-     *
-     * Default: 185
-     *
-     * @param retryAttempts The maximum number of times to retry when the function returns an error.
-     * 
-     */
-    public fun retryAttempts(retryAttempts: Number)
+        /**
+         * The maximum age of a request that Lambda sends to a function for processing.
+         *
+         * Minimum value of 60. Maximum value of 86400.
+         *
+         * Default: Duration.hours(24)
+         *
+         * @param maxEventAge The maximum age of a request that Lambda sends to a function for
+         *   processing.
+         */
+        public fun maxEventAge(maxEventAge: Duration)
 
-    /**
-     * Existing IAM role to run the ECS task.
-     *
-     * Default: A new IAM role is created
-     *
-     * @param role Existing IAM role to run the ECS task. 
-     */
-    public fun role(role: IRole)
+        /**
+         * The platform version on which to run your task.
+         *
+         * Unless you have specific compatibility requirements, you don't need to specify this.
+         *
+         * Default: - ECS will set the Fargate platform version to 'LATEST'
+         *
+         * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html)
+         *
+         * @param platformVersion The platform version on which to run your task.
+         */
+        public fun platformVersion(platformVersion: FargatePlatformVersion)
 
-    /**
-     * Existing security groups to use for the task's ENIs.
-     *
-     * (Only applicable in case the TaskDefinition is configured for AwsVpc networking)
-     *
-     * Default: A new security group is created
-     *
-     * @param securityGroups Existing security groups to use for the task's ENIs. 
-     */
-    public fun securityGroups(securityGroups: List<ISecurityGroup>)
+        /**
+         * Specifies whether to propagate the tags from the task definition to the task.
+         *
+         * If no value is specified, the tags are not propagated.
+         *
+         * Default: - Tags will not be propagated
+         *
+         * @param propagateTags Specifies whether to propagate the tags from the task definition to
+         *   the task.
+         */
+        public fun propagateTags(propagateTags: PropagatedTagSource)
 
-    /**
-     * Existing security groups to use for the task's ENIs.
-     *
-     * (Only applicable in case the TaskDefinition is configured for AwsVpc networking)
-     *
-     * Default: A new security group is created
-     *
-     * @param securityGroups Existing security groups to use for the task's ENIs. 
-     */
-    public fun securityGroups(vararg securityGroups: ISecurityGroup)
+        /**
+         * The maximum number of times to retry when the function returns an error.
+         *
+         * Minimum value of 0. Maximum value of 185.
+         *
+         * Default: 185
+         *
+         * @param retryAttempts The maximum number of times to retry when the function returns an
+         *   error.
+         */
+        public fun retryAttempts(retryAttempts: Number)
 
-    /**
-     * In what subnets to place the task's ENIs.
-     *
-     * (Only applicable in case the TaskDefinition is configured for AwsVpc networking)
-     *
-     * Default: Private subnets
-     *
-     * @param subnetSelection In what subnets to place the task's ENIs. 
-     */
-    public fun subnetSelection(subnetSelection: SubnetSelection)
+        /**
+         * Existing IAM role to run the ECS task.
+         *
+         * Default: A new IAM role is created
+         *
+         * @param role Existing IAM role to run the ECS task.
+         */
+        public fun role(role: IRole)
 
-    /**
-     * In what subnets to place the task's ENIs.
-     *
-     * (Only applicable in case the TaskDefinition is configured for AwsVpc networking)
-     *
-     * Default: Private subnets
-     *
-     * @param subnetSelection In what subnets to place the task's ENIs. 
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("0054ca9d3ff7caa7352474696ceec73e2cbea31199c76ebc26b86fdc9cc0475b")
-    public fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit)
+        /**
+         * Existing security groups to use for the task's ENIs.
+         *
+         * (Only applicable in case the TaskDefinition is configured for AwsVpc networking)
+         *
+         * Default: A new security group is created
+         *
+         * @param securityGroups Existing security groups to use for the task's ENIs.
+         */
+        public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
-    /**
-     * The metadata that you apply to the task to help you categorize and organize them.
-     *
-     * Each tag consists of a key and an optional value, both of which you define.
-     *
-     * Default: - No additional tags are applied to the task
-     *
-     * @param tags The metadata that you apply to the task to help you categorize and organize them.
-     * 
-     */
-    public fun tags(tags: List<Tag>)
+        /**
+         * Existing security groups to use for the task's ENIs.
+         *
+         * (Only applicable in case the TaskDefinition is configured for AwsVpc networking)
+         *
+         * Default: A new security group is created
+         *
+         * @param securityGroups Existing security groups to use for the task's ENIs.
+         */
+        public fun securityGroups(vararg securityGroups: ISecurityGroup)
 
-    /**
-     * The metadata that you apply to the task to help you categorize and organize them.
-     *
-     * Each tag consists of a key and an optional value, both of which you define.
-     *
-     * Default: - No additional tags are applied to the task
-     *
-     * @param tags The metadata that you apply to the task to help you categorize and organize them.
-     * 
-     */
-    public fun tags(vararg tags: Tag)
+        /**
+         * In what subnets to place the task's ENIs.
+         *
+         * (Only applicable in case the TaskDefinition is configured for AwsVpc networking)
+         *
+         * Default: Private subnets
+         *
+         * @param subnetSelection In what subnets to place the task's ENIs.
+         */
+        public fun subnetSelection(subnetSelection: SubnetSelection)
 
-    /**
-     * How many tasks should be started when this event is triggered.
-     *
-     * Default: 1
-     *
-     * @param taskCount How many tasks should be started when this event is triggered. 
-     */
-    public fun taskCount(taskCount: Number)
+        /**
+         * In what subnets to place the task's ENIs.
+         *
+         * (Only applicable in case the TaskDefinition is configured for AwsVpc networking)
+         *
+         * Default: Private subnets
+         *
+         * @param subnetSelection In what subnets to place the task's ENIs.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("0054ca9d3ff7caa7352474696ceec73e2cbea31199c76ebc26b86fdc9cc0475b")
+        public fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit)
 
-    /**
-     * Task Definition of the task that should be started.
-     *
-     * @param taskDefinition Task Definition of the task that should be started. 
-     */
-    public fun taskDefinition(taskDefinition: ITaskDefinition)
-  }
+        /**
+         * The metadata that you apply to the task to help you categorize and organize them.
+         *
+         * Each tag consists of a key and an optional value, both of which you define.
+         *
+         * Default: - No additional tags are applied to the task
+         *
+         * @param tags The metadata that you apply to the task to help you categorize and organize
+         *   them.
+         */
+        public fun tags(tags: List<Tag>)
 
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.events.targets.EcsTask.Builder =
-        software.amazon.awscdk.services.events.targets.EcsTask.Builder.create()
+        /**
+         * The metadata that you apply to the task to help you categorize and organize them.
+         *
+         * Each tag consists of a key and an optional value, both of which you define.
+         *
+         * Default: - No additional tags are applied to the task
+         *
+         * @param tags The metadata that you apply to the task to help you categorize and organize
+         *   them.
+         */
+        public fun tags(vararg tags: Tag)
 
-    /**
-     * Specifies whether the task's elastic network interface receives a public IP address.
-     *
-     * You can specify true only when LaunchType is set to FARGATE.
-     *
-     * Default: - true if the subnet type is PUBLIC, otherwise false
-     *
-     * @param assignPublicIp Specifies whether the task's elastic network interface receives a
-     * public IP address. 
-     */
-    override fun assignPublicIp(assignPublicIp: Boolean) {
-      cdkBuilder.assignPublicIp(assignPublicIp)
+        /**
+         * How many tasks should be started when this event is triggered.
+         *
+         * Default: 1
+         *
+         * @param taskCount How many tasks should be started when this event is triggered.
+         */
+        public fun taskCount(taskCount: Number)
+
+        /**
+         * Task Definition of the task that should be started.
+         *
+         * @param taskDefinition Task Definition of the task that should be started.
+         */
+        public fun taskDefinition(taskDefinition: ITaskDefinition)
     }
 
-    /**
-     * Cluster where service will be deployed.
-     *
-     * @param cluster Cluster where service will be deployed. 
-     */
-    override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+    private class BuilderImpl : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.events.targets.EcsTask.Builder =
+            software.amazon.awscdk.services.events.targets.EcsTask.Builder.create()
+
+        /**
+         * Specifies whether the task's elastic network interface receives a public IP address.
+         *
+         * You can specify true only when LaunchType is set to FARGATE.
+         *
+         * Default: - true if the subnet type is PUBLIC, otherwise false
+         *
+         * @param assignPublicIp Specifies whether the task's elastic network interface receives a
+         *   public IP address.
+         */
+        override fun assignPublicIp(assignPublicIp: Boolean) {
+            cdkBuilder.assignPublicIp(assignPublicIp)
+        }
+
+        /**
+         * Cluster where service will be deployed.
+         *
+         * @param cluster Cluster where service will be deployed.
+         */
+        override fun cluster(cluster: ICluster) {
+            cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+        }
+
+        /**
+         * Container setting overrides.
+         *
+         * Key is the name of the container to override, value is the values you want to override.
+         *
+         * @param containerOverrides Container setting overrides.
+         */
+        override fun containerOverrides(containerOverrides: List<ContainerOverride>) {
+            cdkBuilder.containerOverrides(containerOverrides.map(ContainerOverride::unwrap))
+        }
+
+        /**
+         * Container setting overrides.
+         *
+         * Key is the name of the container to override, value is the values you want to override.
+         *
+         * @param containerOverrides Container setting overrides.
+         */
+        override fun containerOverrides(vararg containerOverrides: ContainerOverride): Unit =
+            containerOverrides(containerOverrides.toList())
+
+        /**
+         * The SQS queue to be used as deadLetterQueue. Check out the
+         * [considerations for using a dead-letter queue](https://docs.aws.amazon.com/eventbridge/latest/userguide/rule-dlq.html#dlq-considerations).
+         *
+         * The events not successfully delivered are automatically retried for a specified period of
+         * time, depending on the retry policy of the target. If an event is not delivered before
+         * all retry attempts are exhausted, it will be sent to the dead letter queue.
+         *
+         * Default: - no dead-letter queue
+         *
+         * @param deadLetterQueue The SQS queue to be used as deadLetterQueue. Check out the
+         *   [considerations for using a dead-letter queue](https://docs.aws.amazon.com/eventbridge/latest/userguide/rule-dlq.html#dlq-considerations).
+         */
+        override fun deadLetterQueue(deadLetterQueue: IQueue) {
+            cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+        }
+
+        /**
+         * Whether or not to enable the execute command functionality for the containers in this
+         * task.
+         *
+         * If true, this enables execute command functionality on all containers in the task.
+         *
+         * Default: - false
+         *
+         * @param enableExecuteCommand Whether or not to enable the execute command functionality
+         *   for the containers in this task.
+         */
+        override fun enableExecuteCommand(enableExecuteCommand: Boolean) {
+            cdkBuilder.enableExecuteCommand(enableExecuteCommand)
+        }
+
+        /**
+         * Specifies the launch type on which your task is running.
+         *
+         * The launch type that you specify here must match one of the launch type (compatibilities)
+         * of the target task.
+         *
+         * Default: - 'EC2' if `isEc2Compatible` for the `taskDefinition` is true, otherwise
+         * 'FARGATE'
+         *
+         * @param launchType Specifies the launch type on which your task is running.
+         */
+        override fun launchType(launchType: LaunchType) {
+            cdkBuilder.launchType(launchType.let(LaunchType::unwrap))
+        }
+
+        /**
+         * The maximum age of a request that Lambda sends to a function for processing.
+         *
+         * Minimum value of 60. Maximum value of 86400.
+         *
+         * Default: Duration.hours(24)
+         *
+         * @param maxEventAge The maximum age of a request that Lambda sends to a function for
+         *   processing.
+         */
+        override fun maxEventAge(maxEventAge: Duration) {
+            cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+        }
+
+        /**
+         * The platform version on which to run your task.
+         *
+         * Unless you have specific compatibility requirements, you don't need to specify this.
+         *
+         * Default: - ECS will set the Fargate platform version to 'LATEST'
+         *
+         * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html)
+         *
+         * @param platformVersion The platform version on which to run your task.
+         */
+        override fun platformVersion(platformVersion: FargatePlatformVersion) {
+            cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion::unwrap))
+        }
+
+        /**
+         * Specifies whether to propagate the tags from the task definition to the task.
+         *
+         * If no value is specified, the tags are not propagated.
+         *
+         * Default: - Tags will not be propagated
+         *
+         * @param propagateTags Specifies whether to propagate the tags from the task definition to
+         *   the task.
+         */
+        override fun propagateTags(propagateTags: PropagatedTagSource) {
+            cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
+        }
+
+        /**
+         * The maximum number of times to retry when the function returns an error.
+         *
+         * Minimum value of 0. Maximum value of 185.
+         *
+         * Default: 185
+         *
+         * @param retryAttempts The maximum number of times to retry when the function returns an
+         *   error.
+         */
+        override fun retryAttempts(retryAttempts: Number) {
+            cdkBuilder.retryAttempts(retryAttempts)
+        }
+
+        /**
+         * Existing IAM role to run the ECS task.
+         *
+         * Default: A new IAM role is created
+         *
+         * @param role Existing IAM role to run the ECS task.
+         */
+        override fun role(role: IRole) {
+            cdkBuilder.role(role.let(IRole::unwrap))
+        }
+
+        /**
+         * Existing security groups to use for the task's ENIs.
+         *
+         * (Only applicable in case the TaskDefinition is configured for AwsVpc networking)
+         *
+         * Default: A new security group is created
+         *
+         * @param securityGroups Existing security groups to use for the task's ENIs.
+         */
+        override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+            cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+        }
+
+        /**
+         * Existing security groups to use for the task's ENIs.
+         *
+         * (Only applicable in case the TaskDefinition is configured for AwsVpc networking)
+         *
+         * Default: A new security group is created
+         *
+         * @param securityGroups Existing security groups to use for the task's ENIs.
+         */
+        override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+            securityGroups(securityGroups.toList())
+
+        /**
+         * In what subnets to place the task's ENIs.
+         *
+         * (Only applicable in case the TaskDefinition is configured for AwsVpc networking)
+         *
+         * Default: Private subnets
+         *
+         * @param subnetSelection In what subnets to place the task's ENIs.
+         */
+        override fun subnetSelection(subnetSelection: SubnetSelection) {
+            cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
+        }
+
+        /**
+         * In what subnets to place the task's ENIs.
+         *
+         * (Only applicable in case the TaskDefinition is configured for AwsVpc networking)
+         *
+         * Default: Private subnets
+         *
+         * @param subnetSelection In what subnets to place the task's ENIs.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("0054ca9d3ff7caa7352474696ceec73e2cbea31199c76ebc26b86fdc9cc0475b")
+        override fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit): Unit =
+            subnetSelection(SubnetSelection(subnetSelection))
+
+        /**
+         * The metadata that you apply to the task to help you categorize and organize them.
+         *
+         * Each tag consists of a key and an optional value, both of which you define.
+         *
+         * Default: - No additional tags are applied to the task
+         *
+         * @param tags The metadata that you apply to the task to help you categorize and organize
+         *   them.
+         */
+        override fun tags(tags: List<Tag>) {
+            cdkBuilder.tags(tags.map(Tag::unwrap))
+        }
+
+        /**
+         * The metadata that you apply to the task to help you categorize and organize them.
+         *
+         * Each tag consists of a key and an optional value, both of which you define.
+         *
+         * Default: - No additional tags are applied to the task
+         *
+         * @param tags The metadata that you apply to the task to help you categorize and organize
+         *   them.
+         */
+        override fun tags(vararg tags: Tag): Unit = tags(tags.toList())
+
+        /**
+         * How many tasks should be started when this event is triggered.
+         *
+         * Default: 1
+         *
+         * @param taskCount How many tasks should be started when this event is triggered.
+         */
+        override fun taskCount(taskCount: Number) {
+            cdkBuilder.taskCount(taskCount)
+        }
+
+        /**
+         * Task Definition of the task that should be started.
+         *
+         * @param taskDefinition Task Definition of the task that should be started.
+         */
+        override fun taskDefinition(taskDefinition: ITaskDefinition) {
+            cdkBuilder.taskDefinition(taskDefinition.let(ITaskDefinition::unwrap))
+        }
+
+        public fun build(): software.amazon.awscdk.services.events.targets.EcsTask =
+            cdkBuilder.build()
     }
 
-    /**
-     * Container setting overrides.
-     *
-     * Key is the name of the container to override, value is the
-     * values you want to override.
-     *
-     * @param containerOverrides Container setting overrides. 
-     */
-    override fun containerOverrides(containerOverrides: List<ContainerOverride>) {
-      cdkBuilder.containerOverrides(containerOverrides.map(ContainerOverride::unwrap))
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): EcsTask {
+            val builderImpl = BuilderImpl()
+            return EcsTask(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.events.targets.EcsTask
+        ): EcsTask = EcsTask(cdkObject)
+
+        internal fun unwrap(
+            wrapped: EcsTask
+        ): software.amazon.awscdk.services.events.targets.EcsTask = wrapped.cdkObject
     }
-
-    /**
-     * Container setting overrides.
-     *
-     * Key is the name of the container to override, value is the
-     * values you want to override.
-     *
-     * @param containerOverrides Container setting overrides. 
-     */
-    override fun containerOverrides(vararg containerOverrides: ContainerOverride): Unit =
-        containerOverrides(containerOverrides.toList())
-
-    /**
-     * The SQS queue to be used as deadLetterQueue. Check out the [considerations for using a
-     * dead-letter
-     * queue](https://docs.aws.amazon.com/eventbridge/latest/userguide/rule-dlq.html#dlq-considerations).
-     *
-     * The events not successfully delivered are automatically retried for a specified period of
-     * time,
-     * depending on the retry policy of the target.
-     * If an event is not delivered before all retry attempts are exhausted, it will be sent to the
-     * dead letter queue.
-     *
-     * Default: - no dead-letter queue
-     *
-     * @param deadLetterQueue The SQS queue to be used as deadLetterQueue. Check out the
-     * [considerations for using a dead-letter
-     * queue](https://docs.aws.amazon.com/eventbridge/latest/userguide/rule-dlq.html#dlq-considerations).
-     * 
-     */
-    override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
-    }
-
-    /**
-     * Whether or not to enable the execute command functionality for the containers in this task.
-     *
-     * If true, this enables execute command functionality on all containers in the task.
-     *
-     * Default: - false
-     *
-     * @param enableExecuteCommand Whether or not to enable the execute command functionality for
-     * the containers in this task. 
-     */
-    override fun enableExecuteCommand(enableExecuteCommand: Boolean) {
-      cdkBuilder.enableExecuteCommand(enableExecuteCommand)
-    }
-
-    /**
-     * Specifies the launch type on which your task is running.
-     *
-     * The launch type that you specify here
-     * must match one of the launch type (compatibilities) of the target task.
-     *
-     * Default: - 'EC2' if `isEc2Compatible` for the `taskDefinition` is true, otherwise 'FARGATE'
-     *
-     * @param launchType Specifies the launch type on which your task is running. 
-     */
-    override fun launchType(launchType: LaunchType) {
-      cdkBuilder.launchType(launchType.let(LaunchType::unwrap))
-    }
-
-    /**
-     * The maximum age of a request that Lambda sends to a function for processing.
-     *
-     * Minimum value of 60.
-     * Maximum value of 86400.
-     *
-     * Default: Duration.hours(24)
-     *
-     * @param maxEventAge The maximum age of a request that Lambda sends to a function for
-     * processing. 
-     */
-    override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
-    }
-
-    /**
-     * The platform version on which to run your task.
-     *
-     * Unless you have specific compatibility requirements, you don't need to specify this.
-     *
-     * Default: - ECS will set the Fargate platform version to 'LATEST'
-     *
-     * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html)
-     * @param platformVersion The platform version on which to run your task. 
-     */
-    override fun platformVersion(platformVersion: FargatePlatformVersion) {
-      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion::unwrap))
-    }
-
-    /**
-     * Specifies whether to propagate the tags from the task definition to the task.
-     *
-     * If no value is specified, the tags are not propagated.
-     *
-     * Default: - Tags will not be propagated
-     *
-     * @param propagateTags Specifies whether to propagate the tags from the task definition to the
-     * task. 
-     */
-    override fun propagateTags(propagateTags: PropagatedTagSource) {
-      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
-    }
-
-    /**
-     * The maximum number of times to retry when the function returns an error.
-     *
-     * Minimum value of 0.
-     * Maximum value of 185.
-     *
-     * Default: 185
-     *
-     * @param retryAttempts The maximum number of times to retry when the function returns an error.
-     * 
-     */
-    override fun retryAttempts(retryAttempts: Number) {
-      cdkBuilder.retryAttempts(retryAttempts)
-    }
-
-    /**
-     * Existing IAM role to run the ECS task.
-     *
-     * Default: A new IAM role is created
-     *
-     * @param role Existing IAM role to run the ECS task. 
-     */
-    override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
-    }
-
-    /**
-     * Existing security groups to use for the task's ENIs.
-     *
-     * (Only applicable in case the TaskDefinition is configured for AwsVpc networking)
-     *
-     * Default: A new security group is created
-     *
-     * @param securityGroups Existing security groups to use for the task's ENIs. 
-     */
-    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
-    }
-
-    /**
-     * Existing security groups to use for the task's ENIs.
-     *
-     * (Only applicable in case the TaskDefinition is configured for AwsVpc networking)
-     *
-     * Default: A new security group is created
-     *
-     * @param securityGroups Existing security groups to use for the task's ENIs. 
-     */
-    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
-        securityGroups(securityGroups.toList())
-
-    /**
-     * In what subnets to place the task's ENIs.
-     *
-     * (Only applicable in case the TaskDefinition is configured for AwsVpc networking)
-     *
-     * Default: Private subnets
-     *
-     * @param subnetSelection In what subnets to place the task's ENIs. 
-     */
-    override fun subnetSelection(subnetSelection: SubnetSelection) {
-      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
-    }
-
-    /**
-     * In what subnets to place the task's ENIs.
-     *
-     * (Only applicable in case the TaskDefinition is configured for AwsVpc networking)
-     *
-     * Default: Private subnets
-     *
-     * @param subnetSelection In what subnets to place the task's ENIs. 
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("0054ca9d3ff7caa7352474696ceec73e2cbea31199c76ebc26b86fdc9cc0475b")
-    override fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit): Unit =
-        subnetSelection(SubnetSelection(subnetSelection))
-
-    /**
-     * The metadata that you apply to the task to help you categorize and organize them.
-     *
-     * Each tag consists of a key and an optional value, both of which you define.
-     *
-     * Default: - No additional tags are applied to the task
-     *
-     * @param tags The metadata that you apply to the task to help you categorize and organize them.
-     * 
-     */
-    override fun tags(tags: List<Tag>) {
-      cdkBuilder.tags(tags.map(Tag::unwrap))
-    }
-
-    /**
-     * The metadata that you apply to the task to help you categorize and organize them.
-     *
-     * Each tag consists of a key and an optional value, both of which you define.
-     *
-     * Default: - No additional tags are applied to the task
-     *
-     * @param tags The metadata that you apply to the task to help you categorize and organize them.
-     * 
-     */
-    override fun tags(vararg tags: Tag): Unit = tags(tags.toList())
-
-    /**
-     * How many tasks should be started when this event is triggered.
-     *
-     * Default: 1
-     *
-     * @param taskCount How many tasks should be started when this event is triggered. 
-     */
-    override fun taskCount(taskCount: Number) {
-      cdkBuilder.taskCount(taskCount)
-    }
-
-    /**
-     * Task Definition of the task that should be started.
-     *
-     * @param taskDefinition Task Definition of the task that should be started. 
-     */
-    override fun taskDefinition(taskDefinition: ITaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(ITaskDefinition::unwrap))
-    }
-
-    public fun build(): software.amazon.awscdk.services.events.targets.EcsTask = cdkBuilder.build()
-  }
-
-  public companion object {
-    init {
-
-    }
-
-    public operator fun invoke(block: Builder.() -> Unit = {}): EcsTask {
-      val builderImpl = BuilderImpl()
-      return EcsTask(builderImpl.apply(block).build())
-    }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.EcsTask): EcsTask =
-        EcsTask(cdkObject)
-
-    internal fun unwrap(wrapped: EcsTask): software.amazon.awscdk.services.events.targets.EcsTask =
-        wrapped.cdkObject
-  }
 }

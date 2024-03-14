@@ -8,515 +8,495 @@ import io.cloudshiftdev.awscdk.ITaggableV2
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnSchemaMapping internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.entityresolution.CfnSchemaMapping,
+public open class CfnSchemaMapping
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.entityresolution.CfnSchemaMapping,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
-  /**
-   * The time of this SchemaMapping got created.
-   */
-  public open fun attrCreatedAt(): String = unwrap(this).getAttrCreatedAt()
-
-  /**
-   * The boolean value that indicates whether or not a SchemaMapping has MatchingWorkflows that are
-   * associated with.
-   */
-  public open fun attrHasWorkflows(): IResolvable =
-      unwrap(this).getAttrHasWorkflows().let(IResolvable::wrap)
-
-  /**
-   * The SchemaMapping arn associated with the Schema.
-   */
-  public open fun attrSchemaArn(): String = unwrap(this).getAttrSchemaArn()
-
-  /**
-   * The time of this SchemaMapping got last updated at.
-   */
-  public open fun attrUpdatedAt(): String = unwrap(this).getAttrUpdatedAt()
-
-  /**
-   * Tag Manager which manages the tags for this resource.
-   */
-  public override fun cdkTagManager(): TagManager =
-      unwrap(this).getCdkTagManager().let(TagManager::wrap)
-
-  /**
-   * A description of the schema.
-   */
-  public open fun description(): String? = unwrap(this).getDescription()
-
-  /**
-   * A description of the schema.
-   */
-  public open fun description(`value`: String) {
-    unwrap(this).setDescription(`value`)
-  }
-
-  /**
-   * Examines the CloudFormation resource and discloses attributes.
-   *
-   * @param inspector tree inspector to collect and process attributes. 
-   */
-  public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-  }
-
-  /**
-   * A list of `MappedInputFields` .
-   */
-  public open fun mappedInputFields(): Any = unwrap(this).getMappedInputFields()
-
-  /**
-   * A list of `MappedInputFields` .
-   */
-  public open fun mappedInputFields(`value`: IResolvable) {
-    unwrap(this).setMappedInputFields(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * A list of `MappedInputFields` .
-   */
-  public open fun mappedInputFields(__idx_ac66f0: List<Any>) {
-    unwrap(this).setMappedInputFields(__idx_ac66f0)
-  }
-
-  /**
-   * A list of `MappedInputFields` .
-   */
-  public open fun mappedInputFields(vararg __idx_ac66f0: Any): Unit =
-      mappedInputFields(__idx_ac66f0.toList())
-
-  /**
-   * The name of the schema.
-   */
-  public open fun schemaName(): String = unwrap(this).getSchemaName()
-
-  /**
-   * The name of the schema.
-   */
-  public open fun schemaName(`value`: String) {
-    unwrap(this).setSchemaName(`value`)
-  }
-
-  /**
-   * The tags used to organize, track, or control access for this resource.
-   */
-  public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
-
-  /**
-   * The tags used to organize, track, or control access for this resource.
-   */
-  public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
-  }
-
-  /**
-   * The tags used to organize, track, or control access for this resource.
-   */
-  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
-
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.entityresolution.CfnSchemaMapping].
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * A description of the schema.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-description)
-     * @param description A description of the schema. 
-     */
-    public fun description(description: String)
+    /** The time of this SchemaMapping got created. */
+    public open fun attrCreatedAt(): String = unwrap(this).getAttrCreatedAt()
 
     /**
-     * A list of `MappedInputFields` .
-     *
-     * Each `MappedInputField` corresponds to a column the source data table, and contains column
-     * name plus additional information that AWS Entity Resolution uses for matching.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-mappedinputfields)
-     * @param mappedInputFields A list of `MappedInputFields` . 
+     * The boolean value that indicates whether or not a SchemaMapping has MatchingWorkflows that
+     * are associated with.
      */
-    public fun mappedInputFields(mappedInputFields: IResolvable)
+    public open fun attrHasWorkflows(): IResolvable =
+        unwrap(this).getAttrHasWorkflows().let(IResolvable::wrap)
 
-    /**
-     * A list of `MappedInputFields` .
-     *
-     * Each `MappedInputField` corresponds to a column the source data table, and contains column
-     * name plus additional information that AWS Entity Resolution uses for matching.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-mappedinputfields)
-     * @param mappedInputFields A list of `MappedInputFields` . 
-     */
-    public fun mappedInputFields(mappedInputFields: List<Any>)
+    /** The SchemaMapping arn associated with the Schema. */
+    public open fun attrSchemaArn(): String = unwrap(this).getAttrSchemaArn()
 
-    /**
-     * A list of `MappedInputFields` .
-     *
-     * Each `MappedInputField` corresponds to a column the source data table, and contains column
-     * name plus additional information that AWS Entity Resolution uses for matching.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-mappedinputfields)
-     * @param mappedInputFields A list of `MappedInputFields` . 
-     */
-    public fun mappedInputFields(vararg mappedInputFields: Any)
+    /** The time of this SchemaMapping got last updated at. */
+    public open fun attrUpdatedAt(): String = unwrap(this).getAttrUpdatedAt()
 
-    /**
-     * The name of the schema.
-     *
-     * There can't be multiple `SchemaMappings` with the same name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-schemaname)
-     * @param schemaName The name of the schema. 
-     */
-    public fun schemaName(schemaName: String)
+    /** Tag Manager which manages the tags for this resource. */
+    public override fun cdkTagManager(): TagManager =
+        unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
-    /**
-     * The tags used to organize, track, or control access for this resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-tags)
-     * @param tags The tags used to organize, track, or control access for this resource. 
-     */
-    public fun tags(tags: List<CfnTag>)
+    /** A description of the schema. */
+    public open fun description(): String? = unwrap(this).getDescription()
 
-    /**
-     * The tags used to organize, track, or control access for this resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-tags)
-     * @param tags The tags used to organize, track, or control access for this resource. 
-     */
-    public fun tags(vararg tags: CfnTag)
-  }
-
-  private class BuilderImpl(
-    scope: SoftwareConstructsConstruct,
-    id: String,
-  ) : Builder {
-    private val cdkBuilder:
-        software.amazon.awscdk.services.entityresolution.CfnSchemaMapping.Builder =
-        software.amazon.awscdk.services.entityresolution.CfnSchemaMapping.Builder.create(scope, id)
-
-    /**
-     * A description of the schema.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-description)
-     * @param description A description of the schema. 
-     */
-    override fun description(description: String) {
-      cdkBuilder.description(description)
+    /** A description of the schema. */
+    public open fun description(`value`: String) {
+        unwrap(this).setDescription(`value`)
     }
 
     /**
-     * A list of `MappedInputFields` .
+     * Examines the CloudFormation resource and discloses attributes.
      *
-     * Each `MappedInputField` corresponds to a column the source data table, and contains column
-     * name plus additional information that AWS Entity Resolution uses for matching.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-mappedinputfields)
-     * @param mappedInputFields A list of `MappedInputFields` . 
+     * @param inspector tree inspector to collect and process attributes.
      */
-    override fun mappedInputFields(mappedInputFields: IResolvable) {
-      cdkBuilder.mappedInputFields(mappedInputFields.let(IResolvable::unwrap))
+    public override fun inspect(inspector: TreeInspector) {
+        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
     }
 
-    /**
-     * A list of `MappedInputFields` .
-     *
-     * Each `MappedInputField` corresponds to a column the source data table, and contains column
-     * name plus additional information that AWS Entity Resolution uses for matching.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-mappedinputfields)
-     * @param mappedInputFields A list of `MappedInputFields` . 
-     */
-    override fun mappedInputFields(mappedInputFields: List<Any>) {
-      cdkBuilder.mappedInputFields(mappedInputFields)
+    /** A list of `MappedInputFields` . */
+    public open fun mappedInputFields(): Any = unwrap(this).getMappedInputFields()
+
+    /** A list of `MappedInputFields` . */
+    public open fun mappedInputFields(`value`: IResolvable) {
+        unwrap(this).setMappedInputFields(`value`.let(IResolvable::unwrap))
     }
 
-    /**
-     * A list of `MappedInputFields` .
-     *
-     * Each `MappedInputField` corresponds to a column the source data table, and contains column
-     * name plus additional information that AWS Entity Resolution uses for matching.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-mappedinputfields)
-     * @param mappedInputFields A list of `MappedInputFields` . 
-     */
-    override fun mappedInputFields(vararg mappedInputFields: Any): Unit =
-        mappedInputFields(mappedInputFields.toList())
-
-    /**
-     * The name of the schema.
-     *
-     * There can't be multiple `SchemaMappings` with the same name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-schemaname)
-     * @param schemaName The name of the schema. 
-     */
-    override fun schemaName(schemaName: String) {
-      cdkBuilder.schemaName(schemaName)
+    /** A list of `MappedInputFields` . */
+    public open fun mappedInputFields(__idx_ac66f0: List<Any>) {
+        unwrap(this).setMappedInputFields(__idx_ac66f0)
     }
 
-    /**
-     * The tags used to organize, track, or control access for this resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-tags)
-     * @param tags The tags used to organize, track, or control access for this resource. 
-     */
-    override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+    /** A list of `MappedInputFields` . */
+    public open fun mappedInputFields(vararg __idx_ac66f0: Any): Unit =
+        mappedInputFields(__idx_ac66f0.toList())
+
+    /** The name of the schema. */
+    public open fun schemaName(): String = unwrap(this).getSchemaName()
+
+    /** The name of the schema. */
+    public open fun schemaName(`value`: String) {
+        unwrap(this).setSchemaName(`value`)
     }
 
-    /**
-     * The tags used to organize, track, or control access for this resource.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-tags)
-     * @param tags The tags used to organize, track, or control access for this resource. 
-     */
-    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+    /** The tags used to organize, track, or control access for this resource. */
+    public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
-    public fun build(): software.amazon.awscdk.services.entityresolution.CfnSchemaMapping =
-        cdkBuilder.build()
-  }
-
-  public companion object {
-    init {
-
+    /** The tags used to organize, track, or control access for this resource. */
+    public open fun tags(`value`: List<CfnTag>) {
+        unwrap(this).setTags(`value`.map(CfnTag::unwrap))
     }
 
-    public operator fun invoke(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      block: Builder.() -> Unit = {},
-    ): CfnSchemaMapping {
-      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-      return CfnSchemaMapping(builderImpl.apply(block).build())
-    }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnSchemaMapping):
-        CfnSchemaMapping = CfnSchemaMapping(cdkObject)
-
-    internal fun unwrap(wrapped: CfnSchemaMapping):
-        software.amazon.awscdk.services.entityresolution.CfnSchemaMapping = wrapped.cdkObject
-  }
-
-  public interface SchemaInputAttributeProperty {
-    /**
-     * A string containing the field name.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-fieldname)
-     */
-    public fun fieldName(): String
+    /** The tags used to organize, track, or control access for this resource. */
+    public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
     /**
-     * Instruct AWS Entity Resolution to combine several columns into a unified column with the
-     * identical attribute type.
-     *
-     * For example, when working with columns such as first_name, middle_name, and last_name,
-     * assigning them a common `GroupName` will prompt AWS Entity Resolution to concatenate them into a
-     * single value.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-groupname)
-     */
-    public fun groupName(): String? = unwrap(this).getGroupName()
-
-    /**
-     * A key that allows grouping of multiple input attributes into a unified matching group.
-     *
-     * For example, let's consider a scenario where the source table contains various addresses,
-     * such as `business_address` and `shipping_address` . By assigning the `MatchKey` *Address* to
-     * both attributes, AWS Entity Resolution will match records across these fields to create a
-     * consolidated matching group. If no `MatchKey` is specified for a column, it won't be utilized
-     * for matching purposes but will still be included in the output table.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-matchkey)
-     */
-    public fun matchKey(): String? = unwrap(this).getMatchKey()
-
-    /**
-     * The subtype of the attribute, selected from a list of values.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-subtype)
-     */
-    public fun subType(): String? = unwrap(this).getSubType()
-
-    /**
-     * The type of the attribute, selected from a list of values.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [SchemaInputAttributeProperty]
+     * A fluent builder for [io.cloudshiftdev.awscdk.services.entityresolution.CfnSchemaMapping].
      */
     @CdkDslMarker
     public interface Builder {
-      /**
-       * @param fieldName A string containing the field name. 
-       */
-      public fun fieldName(fieldName: String)
+        /**
+         * A description of the schema.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-description)
+         *
+         * @param description A description of the schema.
+         */
+        public fun description(description: String)
 
-      /**
-       * @param groupName Instruct AWS Entity Resolution to combine several columns into a unified
-       * column with the identical attribute type.
-       * For example, when working with columns such as first_name, middle_name, and last_name,
-       * assigning them a common `GroupName` will prompt AWS Entity Resolution to concatenate them into
-       * a single value.
-       */
-      public fun groupName(groupName: String)
+        /**
+         * A list of `MappedInputFields` .
+         *
+         * Each `MappedInputField` corresponds to a column the source data table, and contains
+         * column name plus additional information that AWS Entity Resolution uses for matching.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-mappedinputfields)
+         *
+         * @param mappedInputFields A list of `MappedInputFields` .
+         */
+        public fun mappedInputFields(mappedInputFields: IResolvable)
 
-      /**
-       * @param matchKey A key that allows grouping of multiple input attributes into a unified
-       * matching group.
-       * For example, let's consider a scenario where the source table contains various addresses,
-       * such as `business_address` and `shipping_address` . By assigning the `MatchKey` *Address* to
-       * both attributes, AWS Entity Resolution will match records across these fields to create a
-       * consolidated matching group. If no `MatchKey` is specified for a column, it won't be utilized
-       * for matching purposes but will still be included in the output table.
-       */
-      public fun matchKey(matchKey: String)
+        /**
+         * A list of `MappedInputFields` .
+         *
+         * Each `MappedInputField` corresponds to a column the source data table, and contains
+         * column name plus additional information that AWS Entity Resolution uses for matching.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-mappedinputfields)
+         *
+         * @param mappedInputFields A list of `MappedInputFields` .
+         */
+        public fun mappedInputFields(mappedInputFields: List<Any>)
 
-      /**
-       * @param subType The subtype of the attribute, selected from a list of values.
-       */
-      public fun subType(subType: String)
+        /**
+         * A list of `MappedInputFields` .
+         *
+         * Each `MappedInputField` corresponds to a column the source data table, and contains
+         * column name plus additional information that AWS Entity Resolution uses for matching.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-mappedinputfields)
+         *
+         * @param mappedInputFields A list of `MappedInputFields` .
+         */
+        public fun mappedInputFields(vararg mappedInputFields: Any)
 
-      /**
-       * @param type The type of the attribute, selected from a list of values. 
-       */
-      public fun type(type: String)
+        /**
+         * The name of the schema.
+         *
+         * There can't be multiple `SchemaMappings` with the same name.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-schemaname)
+         *
+         * @param schemaName The name of the schema.
+         */
+        public fun schemaName(schemaName: String)
+
+        /**
+         * The tags used to organize, track, or control access for this resource.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-tags)
+         *
+         * @param tags The tags used to organize, track, or control access for this resource.
+         */
+        public fun tags(tags: List<CfnTag>)
+
+        /**
+         * The tags used to organize, track, or control access for this resource.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-tags)
+         *
+         * @param tags The tags used to organize, track, or control access for this resource.
+         */
+        public fun tags(vararg tags: CfnTag)
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.entityresolution.CfnSchemaMapping.SchemaInputAttributeProperty.Builder
-          =
-          software.amazon.awscdk.services.entityresolution.CfnSchemaMapping.SchemaInputAttributeProperty.builder()
+    private class BuilderImpl(
+        scope: SoftwareConstructsConstruct,
+        id: String,
+    ) : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.entityresolution.CfnSchemaMapping.Builder =
+            software.amazon.awscdk.services.entityresolution.CfnSchemaMapping.Builder.create(
+                scope,
+                id
+            )
 
-      /**
-       * @param fieldName A string containing the field name. 
-       */
-      override fun fieldName(fieldName: String) {
-        cdkBuilder.fieldName(fieldName)
-      }
+        /**
+         * A description of the schema.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-description)
+         *
+         * @param description A description of the schema.
+         */
+        override fun description(description: String) {
+            cdkBuilder.description(description)
+        }
 
-      /**
-       * @param groupName Instruct AWS Entity Resolution to combine several columns into a unified
-       * column with the identical attribute type.
-       * For example, when working with columns such as first_name, middle_name, and last_name,
-       * assigning them a common `GroupName` will prompt AWS Entity Resolution to concatenate them into
-       * a single value.
-       */
-      override fun groupName(groupName: String) {
-        cdkBuilder.groupName(groupName)
-      }
+        /**
+         * A list of `MappedInputFields` .
+         *
+         * Each `MappedInputField` corresponds to a column the source data table, and contains
+         * column name plus additional information that AWS Entity Resolution uses for matching.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-mappedinputfields)
+         *
+         * @param mappedInputFields A list of `MappedInputFields` .
+         */
+        override fun mappedInputFields(mappedInputFields: IResolvable) {
+            cdkBuilder.mappedInputFields(mappedInputFields.let(IResolvable::unwrap))
+        }
 
-      /**
-       * @param matchKey A key that allows grouping of multiple input attributes into a unified
-       * matching group.
-       * For example, let's consider a scenario where the source table contains various addresses,
-       * such as `business_address` and `shipping_address` . By assigning the `MatchKey` *Address* to
-       * both attributes, AWS Entity Resolution will match records across these fields to create a
-       * consolidated matching group. If no `MatchKey` is specified for a column, it won't be utilized
-       * for matching purposes but will still be included in the output table.
-       */
-      override fun matchKey(matchKey: String) {
-        cdkBuilder.matchKey(matchKey)
-      }
+        /**
+         * A list of `MappedInputFields` .
+         *
+         * Each `MappedInputField` corresponds to a column the source data table, and contains
+         * column name plus additional information that AWS Entity Resolution uses for matching.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-mappedinputfields)
+         *
+         * @param mappedInputFields A list of `MappedInputFields` .
+         */
+        override fun mappedInputFields(mappedInputFields: List<Any>) {
+            cdkBuilder.mappedInputFields(mappedInputFields)
+        }
 
-      /**
-       * @param subType The subtype of the attribute, selected from a list of values.
-       */
-      override fun subType(subType: String) {
-        cdkBuilder.subType(subType)
-      }
+        /**
+         * A list of `MappedInputFields` .
+         *
+         * Each `MappedInputField` corresponds to a column the source data table, and contains
+         * column name plus additional information that AWS Entity Resolution uses for matching.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-mappedinputfields)
+         *
+         * @param mappedInputFields A list of `MappedInputFields` .
+         */
+        override fun mappedInputFields(vararg mappedInputFields: Any): Unit =
+            mappedInputFields(mappedInputFields.toList())
 
-      /**
-       * @param type The type of the attribute, selected from a list of values. 
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
+        /**
+         * The name of the schema.
+         *
+         * There can't be multiple `SchemaMappings` with the same name.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-schemaname)
+         *
+         * @param schemaName The name of the schema.
+         */
+        override fun schemaName(schemaName: String) {
+            cdkBuilder.schemaName(schemaName)
+        }
 
-      public fun build():
-          software.amazon.awscdk.services.entityresolution.CfnSchemaMapping.SchemaInputAttributeProperty
-          = cdkBuilder.build()
-    }
+        /**
+         * The tags used to organize, track, or control access for this resource.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-tags)
+         *
+         * @param tags The tags used to organize, track, or control access for this resource.
+         */
+        override fun tags(tags: List<CfnTag>) {
+            cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.entityresolution.CfnSchemaMapping.SchemaInputAttributeProperty,
-    ) : SchemaInputAttributeProperty {
-      /**
-       * A string containing the field name.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-fieldname)
-       */
-      override fun fieldName(): String = unwrap(this).getFieldName()
+        /**
+         * The tags used to organize, track, or control access for this resource.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-schemamapping.html#cfn-entityresolution-schemamapping-tags)
+         *
+         * @param tags The tags used to organize, track, or control access for this resource.
+         */
+        override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
-      /**
-       * Instruct AWS Entity Resolution to combine several columns into a unified column with the
-       * identical attribute type.
-       *
-       * For example, when working with columns such as first_name, middle_name, and last_name,
-       * assigning them a common `GroupName` will prompt AWS Entity Resolution to concatenate them into
-       * a single value.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-groupname)
-       */
-      override fun groupName(): String? = unwrap(this).getGroupName()
-
-      /**
-       * A key that allows grouping of multiple input attributes into a unified matching group.
-       *
-       * For example, let's consider a scenario where the source table contains various addresses,
-       * such as `business_address` and `shipping_address` . By assigning the `MatchKey` *Address* to
-       * both attributes, AWS Entity Resolution will match records across these fields to create a
-       * consolidated matching group. If no `MatchKey` is specified for a column, it won't be utilized
-       * for matching purposes but will still be included in the output table.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-matchkey)
-       */
-      override fun matchKey(): String? = unwrap(this).getMatchKey()
-
-      /**
-       * The subtype of the attribute, selected from a list of values.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-subtype)
-       */
-      override fun subType(): String? = unwrap(this).getSubType()
-
-      /**
-       * The type of the attribute, selected from a list of values.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-type)
-       */
-      override fun type(): String = unwrap(this).getType()
+        public fun build(): software.amazon.awscdk.services.entityresolution.CfnSchemaMapping =
+            cdkBuilder.build()
     }
 
     public companion object {
-      init {
+        init {}
 
-      }
+        public operator fun invoke(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            block: Builder.() -> Unit = {},
+        ): CfnSchemaMapping {
+            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+            return CfnSchemaMapping(builderImpl.apply(block).build())
+        }
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): SchemaInputAttributeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.entityresolution.CfnSchemaMapping
+        ): CfnSchemaMapping = CfnSchemaMapping(cdkObject)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnSchemaMapping.SchemaInputAttributeProperty):
-          SchemaInputAttributeProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SchemaInputAttributeProperty):
-          software.amazon.awscdk.services.entityresolution.CfnSchemaMapping.SchemaInputAttributeProperty
-          = (wrapped as Wrapper).cdkObject
+        internal fun unwrap(
+            wrapped: CfnSchemaMapping
+        ): software.amazon.awscdk.services.entityresolution.CfnSchemaMapping = wrapped.cdkObject
     }
-  }
+
+    public interface SchemaInputAttributeProperty {
+        /**
+         * A string containing the field name.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-fieldname)
+         */
+        public fun fieldName(): String
+
+        /**
+         * Instruct AWS Entity Resolution to combine several columns into a unified column with the
+         * identical attribute type.
+         *
+         * For example, when working with columns such as first_name, middle_name, and last_name,
+         * assigning them a common `GroupName` will prompt AWS Entity Resolution to concatenate them
+         * into a single value.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-groupname)
+         */
+        public fun groupName(): String? = unwrap(this).getGroupName()
+
+        /**
+         * A key that allows grouping of multiple input attributes into a unified matching group.
+         *
+         * For example, let's consider a scenario where the source table contains various addresses,
+         * such as `business_address` and `shipping_address` . By assigning the `MatchKey` *Address*
+         * to both attributes, AWS Entity Resolution will match records across these fields to
+         * create a consolidated matching group. If no `MatchKey` is specified for a column, it
+         * won't be utilized for matching purposes but will still be included in the output table.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-matchkey)
+         */
+        public fun matchKey(): String? = unwrap(this).getMatchKey()
+
+        /**
+         * The subtype of the attribute, selected from a list of values.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-subtype)
+         */
+        public fun subType(): String? = unwrap(this).getSubType()
+
+        /**
+         * The type of the attribute, selected from a list of values.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-type)
+         */
+        public fun type(): String
+
+        /** A builder for [SchemaInputAttributeProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param fieldName A string containing the field name. */
+            public fun fieldName(fieldName: String)
+
+            /**
+             * @param groupName Instruct AWS Entity Resolution to combine several columns into a
+             *   unified column with the identical attribute type. For example, when working with
+             *   columns such as first_name, middle_name, and last_name, assigning them a common
+             *   `GroupName` will prompt AWS Entity Resolution to concatenate them into a single
+             *   value.
+             */
+            public fun groupName(groupName: String)
+
+            /**
+             * @param matchKey A key that allows grouping of multiple input attributes into a
+             *   unified matching group. For example, let's consider a scenario where the source
+             *   table contains various addresses, such as `business_address` and `shipping_address`
+             *   . By assigning the `MatchKey` *Address* to both attributes, AWS Entity Resolution
+             *   will match records across these fields to create a consolidated matching group. If
+             *   no `MatchKey` is specified for a column, it won't be utilized for matching purposes
+             *   but will still be included in the output table.
+             */
+            public fun matchKey(matchKey: String)
+
+            /** @param subType The subtype of the attribute, selected from a list of values. */
+            public fun subType(subType: String)
+
+            /** @param type The type of the attribute, selected from a list of values. */
+            public fun type(type: String)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.entityresolution.CfnSchemaMapping.SchemaInputAttributeProperty.Builder =
+                software.amazon.awscdk.services.entityresolution.CfnSchemaMapping
+                    .SchemaInputAttributeProperty
+                    .builder()
+
+            /** @param fieldName A string containing the field name. */
+            override fun fieldName(fieldName: String) {
+                cdkBuilder.fieldName(fieldName)
+            }
+
+            /**
+             * @param groupName Instruct AWS Entity Resolution to combine several columns into a
+             *   unified column with the identical attribute type. For example, when working with
+             *   columns such as first_name, middle_name, and last_name, assigning them a common
+             *   `GroupName` will prompt AWS Entity Resolution to concatenate them into a single
+             *   value.
+             */
+            override fun groupName(groupName: String) {
+                cdkBuilder.groupName(groupName)
+            }
+
+            /**
+             * @param matchKey A key that allows grouping of multiple input attributes into a
+             *   unified matching group. For example, let's consider a scenario where the source
+             *   table contains various addresses, such as `business_address` and `shipping_address`
+             *   . By assigning the `MatchKey` *Address* to both attributes, AWS Entity Resolution
+             *   will match records across these fields to create a consolidated matching group. If
+             *   no `MatchKey` is specified for a column, it won't be utilized for matching purposes
+             *   but will still be included in the output table.
+             */
+            override fun matchKey(matchKey: String) {
+                cdkBuilder.matchKey(matchKey)
+            }
+
+            /** @param subType The subtype of the attribute, selected from a list of values. */
+            override fun subType(subType: String) {
+                cdkBuilder.subType(subType)
+            }
+
+            /** @param type The type of the attribute, selected from a list of values. */
+            override fun type(type: String) {
+                cdkBuilder.type(type)
+            }
+
+            public fun build():
+                software.amazon.awscdk.services.entityresolution.CfnSchemaMapping.SchemaInputAttributeProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.entityresolution.CfnSchemaMapping.SchemaInputAttributeProperty,
+        ) : SchemaInputAttributeProperty {
+            /**
+             * A string containing the field name.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-fieldname)
+             */
+            override fun fieldName(): String = unwrap(this).getFieldName()
+
+            /**
+             * Instruct AWS Entity Resolution to combine several columns into a unified column with
+             * the identical attribute type.
+             *
+             * For example, when working with columns such as first_name, middle_name, and
+             * last_name, assigning them a common `GroupName` will prompt AWS Entity Resolution to
+             * concatenate them into a single value.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-groupname)
+             */
+            override fun groupName(): String? = unwrap(this).getGroupName()
+
+            /**
+             * A key that allows grouping of multiple input attributes into a unified matching
+             * group.
+             *
+             * For example, let's consider a scenario where the source table contains various
+             * addresses, such as `business_address` and `shipping_address` . By assigning the
+             * `MatchKey` *Address* to both attributes, AWS Entity Resolution will match records
+             * across these fields to create a consolidated matching group. If no `MatchKey` is
+             * specified for a column, it won't be utilized for matching purposes but will still be
+             * included in the output table.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-matchkey)
+             */
+            override fun matchKey(): String? = unwrap(this).getMatchKey()
+
+            /**
+             * The subtype of the attribute, selected from a list of values.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-subtype)
+             */
+            override fun subType(): String? = unwrap(this).getSubType()
+
+            /**
+             * The type of the attribute, selected from a list of values.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-type)
+             */
+            override fun type(): String = unwrap(this).getType()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(
+                block: Builder.() -> Unit = {}
+            ): SchemaInputAttributeProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.entityresolution.CfnSchemaMapping.SchemaInputAttributeProperty
+            ): SchemaInputAttributeProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: SchemaInputAttributeProperty
+            ): software.amazon.awscdk.services.entityresolution.CfnSchemaMapping.SchemaInputAttributeProperty =
+                (wrapped as Wrapper).cdkObject
+        }
+    }
 }

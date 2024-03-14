@@ -7,94 +7,97 @@ import kotlin.Unit
 import kotlin.jvm.JvmName
 
 public interface IScalableTableAttribute {
-  /**
-   * Add scheduled scaling for this scaling attribute.
-   *
-   * @param id 
-   * @param actions 
-   */
-  public fun scaleOnSchedule(id: String, actions: ScalingSchedule)
-
-  /**
-   * Add scheduled scaling for this scaling attribute.
-   *
-   * @param id 
-   * @param actions 
-   */
-  @Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("0e652746809f3e4412c49544d1500446974784d78cd2e4c1d569436b4931291f")
-  public fun scaleOnSchedule(id: String, actions: ScalingSchedule.Builder.() -> Unit)
-
-  /**
-   * Scale out or in to keep utilization at a given level.
-   *
-   * @param props 
-   */
-  public fun scaleOnUtilization(props: UtilizationScalingProps)
-
-  /**
-   * Scale out or in to keep utilization at a given level.
-   *
-   * @param props 
-   */
-  @Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("df7aa7d44150d61decd5c4ccb502479fe291ac38d35d0eed8af5ae5676750e45")
-  public fun scaleOnUtilization(props: UtilizationScalingProps.Builder.() -> Unit)
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.dynamodb.IScalableTableAttribute,
-  ) : IScalableTableAttribute {
     /**
      * Add scheduled scaling for this scaling attribute.
      *
-     * @param id 
-     * @param actions 
+     * @param id
+     * @param actions
      */
-    override fun scaleOnSchedule(id: String, actions: ScalingSchedule) {
-      unwrap(this).scaleOnSchedule(id, actions.let(ScalingSchedule::unwrap))
-    }
+    public fun scaleOnSchedule(id: String, actions: ScalingSchedule)
 
     /**
      * Add scheduled scaling for this scaling attribute.
      *
-     * @param id 
-     * @param actions 
+     * @param id
+     * @param actions
      */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0e652746809f3e4412c49544d1500446974784d78cd2e4c1d569436b4931291f")
-    override fun scaleOnSchedule(id: String, actions: ScalingSchedule.Builder.() -> Unit): Unit =
-        scaleOnSchedule(id, ScalingSchedule(actions))
+    public fun scaleOnSchedule(id: String, actions: ScalingSchedule.Builder.() -> Unit)
 
     /**
      * Scale out or in to keep utilization at a given level.
      *
-     * @param props 
+     * @param props
      */
-    override fun scaleOnUtilization(props: UtilizationScalingProps) {
-      unwrap(this).scaleOnUtilization(props.let(UtilizationScalingProps::unwrap))
-    }
+    public fun scaleOnUtilization(props: UtilizationScalingProps)
 
     /**
      * Scale out or in to keep utilization at a given level.
      *
-     * @param props 
+     * @param props
      */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("df7aa7d44150d61decd5c4ccb502479fe291ac38d35d0eed8af5ae5676750e45")
-    override fun scaleOnUtilization(props: UtilizationScalingProps.Builder.() -> Unit): Unit =
-        scaleOnUtilization(UtilizationScalingProps(props))
-  }
+    public fun scaleOnUtilization(props: UtilizationScalingProps.Builder.() -> Unit)
 
-  public companion object {
-    init {
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.dynamodb.IScalableTableAttribute,
+    ) : IScalableTableAttribute {
+        /**
+         * Add scheduled scaling for this scaling attribute.
+         *
+         * @param id
+         * @param actions
+         */
+        override fun scaleOnSchedule(id: String, actions: ScalingSchedule) {
+            unwrap(this).scaleOnSchedule(id, actions.let(ScalingSchedule::unwrap))
+        }
 
+        /**
+         * Add scheduled scaling for this scaling attribute.
+         *
+         * @param id
+         * @param actions
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("0e652746809f3e4412c49544d1500446974784d78cd2e4c1d569436b4931291f")
+        override fun scaleOnSchedule(
+            id: String,
+            actions: ScalingSchedule.Builder.() -> Unit
+        ): Unit = scaleOnSchedule(id, ScalingSchedule(actions))
+
+        /**
+         * Scale out or in to keep utilization at a given level.
+         *
+         * @param props
+         */
+        override fun scaleOnUtilization(props: UtilizationScalingProps) {
+            unwrap(this).scaleOnUtilization(props.let(UtilizationScalingProps::unwrap))
+        }
+
+        /**
+         * Scale out or in to keep utilization at a given level.
+         *
+         * @param props
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("df7aa7d44150d61decd5c4ccb502479fe291ac38d35d0eed8af5ae5676750e45")
+        override fun scaleOnUtilization(props: UtilizationScalingProps.Builder.() -> Unit): Unit =
+            scaleOnUtilization(UtilizationScalingProps(props))
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.IScalableTableAttribute):
-        IScalableTableAttribute = Wrapper(cdkObject)
+    public companion object {
+        init {}
 
-    internal fun unwrap(wrapped: IScalableTableAttribute):
-        software.amazon.awscdk.services.dynamodb.IScalableTableAttribute = (wrapped as
-        Wrapper).cdkObject
-  }
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.dynamodb.IScalableTableAttribute
+        ): IScalableTableAttribute = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: IScalableTableAttribute
+        ): software.amazon.awscdk.services.dynamodb.IScalableTableAttribute =
+            (wrapped as Wrapper).cdkObject
+    }
 }

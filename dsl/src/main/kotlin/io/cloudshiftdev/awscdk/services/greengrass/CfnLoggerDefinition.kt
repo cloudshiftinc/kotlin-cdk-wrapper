@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -14,641 +15,614 @@ import kotlin.Suppress
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnLoggerDefinition internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.greengrass.CfnLoggerDefinition,
+public open class CfnLoggerDefinition
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.greengrass.CfnLoggerDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
-  /**
-   * The Amazon Resource Name (ARN) of the `LoggerDefinition` , such as
-   * `arn:aws:greengrass:us-east-1: 
-   * :/greengrass/definition/loggers/1234a5b6-78cd-901e-2fgh-3i45j6k178l9` .
-   */
-  public open fun attrArn(): String = unwrap(this).getAttrArn()
-
-  /**
-   * The ID of the `LoggerDefinition` , such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9` .
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
-
-  /**
-   * The ARN of the last `LoggerDefinitionVersion` that was added to the `LoggerDefinition` , such
-   * as `arn:aws:greengrass:us-east-1: 
-   * :/greengrass/definition/loggers/1234a5b6-78cd-901e-2fgh-3i45j6k178l9/versions/9876ac30-4bdb-4f9d-95af-b5fdb66be1a2`
-   * .
-   */
-  public open fun attrLatestVersionArn(): String = unwrap(this).getAttrLatestVersionArn()
-
-  /**
-   * The name of the `LoggerDefinition` , such as `MyLoggerDefinition` .
-   */
-  public open fun attrName(): String = unwrap(this).getAttrName()
-
-  /**
-   * The logger definition version to include when the logger definition is created.
-   */
-  public open fun initialVersion(): Any? = unwrap(this).getInitialVersion()
-
-  /**
-   * The logger definition version to include when the logger definition is created.
-   */
-  public open fun initialVersion(`value`: IResolvable) {
-    unwrap(this).setInitialVersion(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * The logger definition version to include when the logger definition is created.
-   */
-  public open fun initialVersion(`value`: LoggerDefinitionVersionProperty) {
-    unwrap(this).setInitialVersion(`value`.let(LoggerDefinitionVersionProperty::unwrap))
-  }
-
-  /**
-   * The logger definition version to include when the logger definition is created.
-   */
-  @Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("dfcae09ab4c5beede673395f0bf853578b20abb2afd40416d10f0e28e7eaf4bc")
-  public open fun initialVersion(`value`: LoggerDefinitionVersionProperty.Builder.() -> Unit): Unit
-      = initialVersion(LoggerDefinitionVersionProperty(`value`))
-
-  /**
-   * Examines the CloudFormation resource and discloses attributes.
-   *
-   * @param inspector tree inspector to collect and process attributes. 
-   */
-  public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-  }
-
-  /**
-   * The name of the logger definition.
-   */
-  public open fun name(): String = unwrap(this).getName()
-
-  /**
-   * The name of the logger definition.
-   */
-  public open fun name(`value`: String) {
-    unwrap(this).setName(`value`)
-  }
-
-  /**
-   * Tag Manager which manages the tags for this resource.
-   */
-  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
-
-  /**
-   * Application-specific metadata to attach to the logger definition.
-   */
-  public open fun tagsRaw(): Any? = unwrap(this).getTagsRaw()
-
-  /**
-   * Application-specific metadata to attach to the logger definition.
-   */
-  public open fun tagsRaw(`value`: Any) {
-    unwrap(this).setTagsRaw(`value`)
-  }
-
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.greengrass.CfnLoggerDefinition].
-   */
-  @CdkDslMarker
-  public interface Builder {
     /**
-     * The logger definition version to include when the logger definition is created.
-     *
-     * A logger definition version contains a list of
-     * [`logger`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html)
-     * property types.
-     *
-     *
-     * To associate a logger definition version after the logger definition is created, create an
-     * [`AWS::Greengrass::LoggerDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html)
-     * resource and specify the ID of this logger definition.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-initialversion)
-     * @param initialVersion The logger definition version to include when the logger definition is
-     * created. 
+     * The Amazon Resource Name (ARN) of the `LoggerDefinition` , such as
+     * `arn:aws:greengrass:us-east-1:
+     * :/greengrass/definition/loggers/1234a5b6-78cd-901e-2fgh-3i45j6k178l9` .
      */
-    public fun initialVersion(initialVersion: IResolvable)
+    public open fun attrArn(): String = unwrap(this).getAttrArn()
+
+    /** The ID of the `LoggerDefinition` , such as `1234a5b6-78cd-901e-2fgh-3i45j6k178l9` . */
+    public open fun attrId(): String = unwrap(this).getAttrId()
 
     /**
-     * The logger definition version to include when the logger definition is created.
-     *
-     * A logger definition version contains a list of
-     * [`logger`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html)
-     * property types.
-     *
-     *
-     * To associate a logger definition version after the logger definition is created, create an
-     * [`AWS::Greengrass::LoggerDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html)
-     * resource and specify the ID of this logger definition.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-initialversion)
-     * @param initialVersion The logger definition version to include when the logger definition is
-     * created. 
+     * The ARN of the last `LoggerDefinitionVersion` that was added to the `LoggerDefinition` , such
+     * as `arn:aws:greengrass:us-east-1:
+     * :/greengrass/definition/loggers/1234a5b6-78cd-901e-2fgh-3i45j6k178l9/versions/9876ac30-4bdb-4f9d-95af-b5fdb66be1a2`
+     * .
      */
-    public fun initialVersion(initialVersion: LoggerDefinitionVersionProperty)
+    public open fun attrLatestVersionArn(): String = unwrap(this).getAttrLatestVersionArn()
 
-    /**
-     * The logger definition version to include when the logger definition is created.
-     *
-     * A logger definition version contains a list of
-     * [`logger`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html)
-     * property types.
-     *
-     *
-     * To associate a logger definition version after the logger definition is created, create an
-     * [`AWS::Greengrass::LoggerDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html)
-     * resource and specify the ID of this logger definition.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-initialversion)
-     * @param initialVersion The logger definition version to include when the logger definition is
-     * created. 
-     */
+    /** The name of the `LoggerDefinition` , such as `MyLoggerDefinition` . */
+    public open fun attrName(): String = unwrap(this).getAttrName()
+
+    /** The logger definition version to include when the logger definition is created. */
+    public open fun initialVersion(): Any? = unwrap(this).getInitialVersion()
+
+    /** The logger definition version to include when the logger definition is created. */
+    public open fun initialVersion(`value`: IResolvable) {
+        unwrap(this).setInitialVersion(`value`.let(IResolvable::unwrap))
+    }
+
+    /** The logger definition version to include when the logger definition is created. */
+    public open fun initialVersion(`value`: LoggerDefinitionVersionProperty) {
+        unwrap(this).setInitialVersion(`value`.let(LoggerDefinitionVersionProperty::unwrap))
+    }
+
+    /** The logger definition version to include when the logger definition is created. */
     @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("ff51c6a522dd0e33bb35210369ae1aabab9f410e36ef84e09d2939d7cfd3b367")
-    public fun initialVersion(initialVersion: LoggerDefinitionVersionProperty.Builder.() -> Unit)
+    @JvmName("dfcae09ab4c5beede673395f0bf853578b20abb2afd40416d10f0e28e7eaf4bc")
+    public open fun initialVersion(
+        `value`: LoggerDefinitionVersionProperty.Builder.() -> Unit
+    ): Unit = initialVersion(LoggerDefinitionVersionProperty(`value`))
 
     /**
-     * The name of the logger definition.
+     * Examines the CloudFormation resource and discloses attributes.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-name)
-     * @param name The name of the logger definition. 
+     * @param inspector tree inspector to collect and process attributes.
      */
-    public fun name(name: String)
-
-    /**
-     * Application-specific metadata to attach to the logger definition.
-     *
-     * You can use tags in IAM policies to control access to AWS IoT Greengrass resources. You can
-     * also use tags to categorize your resources. For more information, see [Tagging Your AWS IoT
-     * Greengrass Resources](https://docs.aws.amazon.com/greengrass/v1/developerguide/tagging.html) in
-     * the *Developer Guide* .
-     *
-     * This `Json` property type is processed as a map of key-value pairs. It uses the following
-     * format, which is different from most `Tags` implementations in AWS CloudFormation templates.
-     *
-     * ```
-     * "Tags": { "KeyName0": "value", "KeyName1": "value", "KeyName2": "value"
-     * }
-     * ```
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-tags)
-     * @param tags Application-specific metadata to attach to the logger definition. 
-     */
-    public fun tags(tags: Any)
-  }
-
-  private class BuilderImpl(
-    scope: SoftwareConstructsConstruct,
-    id: String,
-  ) : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.Builder =
-        software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.Builder.create(scope, id)
-
-    /**
-     * The logger definition version to include when the logger definition is created.
-     *
-     * A logger definition version contains a list of
-     * [`logger`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html)
-     * property types.
-     *
-     *
-     * To associate a logger definition version after the logger definition is created, create an
-     * [`AWS::Greengrass::LoggerDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html)
-     * resource and specify the ID of this logger definition.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-initialversion)
-     * @param initialVersion The logger definition version to include when the logger definition is
-     * created. 
-     */
-    override fun initialVersion(initialVersion: IResolvable) {
-      cdkBuilder.initialVersion(initialVersion.let(IResolvable::unwrap))
+    public override fun inspect(inspector: TreeInspector) {
+        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
     }
 
-    /**
-     * The logger definition version to include when the logger definition is created.
-     *
-     * A logger definition version contains a list of
-     * [`logger`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html)
-     * property types.
-     *
-     *
-     * To associate a logger definition version after the logger definition is created, create an
-     * [`AWS::Greengrass::LoggerDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html)
-     * resource and specify the ID of this logger definition.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-initialversion)
-     * @param initialVersion The logger definition version to include when the logger definition is
-     * created. 
-     */
-    override fun initialVersion(initialVersion: LoggerDefinitionVersionProperty) {
-      cdkBuilder.initialVersion(initialVersion.let(LoggerDefinitionVersionProperty::unwrap))
+    /** The name of the logger definition. */
+    public open fun name(): String = unwrap(this).getName()
+
+    /** The name of the logger definition. */
+    public open fun name(`value`: String) {
+        unwrap(this).setName(`value`)
     }
 
-    /**
-     * The logger definition version to include when the logger definition is created.
-     *
-     * A logger definition version contains a list of
-     * [`logger`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html)
-     * property types.
-     *
-     *
-     * To associate a logger definition version after the logger definition is created, create an
-     * [`AWS::Greengrass::LoggerDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html)
-     * resource and specify the ID of this logger definition.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-initialversion)
-     * @param initialVersion The logger definition version to include when the logger definition is
-     * created. 
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("ff51c6a522dd0e33bb35210369ae1aabab9f410e36ef84e09d2939d7cfd3b367")
-    override fun initialVersion(initialVersion: LoggerDefinitionVersionProperty.Builder.() -> Unit):
-        Unit = initialVersion(LoggerDefinitionVersionProperty(initialVersion))
+    /** Tag Manager which manages the tags for this resource. */
+    public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
-    /**
-     * The name of the logger definition.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-name)
-     * @param name The name of the logger definition. 
-     */
-    override fun name(name: String) {
-      cdkBuilder.name(name)
+    /** Application-specific metadata to attach to the logger definition. */
+    public open fun tagsRaw(): Any? = unwrap(this).getTagsRaw()
+
+    /** Application-specific metadata to attach to the logger definition. */
+    public open fun tagsRaw(`value`: Any) {
+        unwrap(this).setTagsRaw(`value`)
     }
 
-    /**
-     * Application-specific metadata to attach to the logger definition.
-     *
-     * You can use tags in IAM policies to control access to AWS IoT Greengrass resources. You can
-     * also use tags to categorize your resources. For more information, see [Tagging Your AWS IoT
-     * Greengrass Resources](https://docs.aws.amazon.com/greengrass/v1/developerguide/tagging.html) in
-     * the *Developer Guide* .
-     *
-     * This `Json` property type is processed as a map of key-value pairs. It uses the following
-     * format, which is different from most `Tags` implementations in AWS CloudFormation templates.
-     *
-     * ```
-     * "Tags": { "KeyName0": "value", "KeyName1": "value", "KeyName2": "value"
-     * }
-     * ```
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-tags)
-     * @param tags Application-specific metadata to attach to the logger definition. 
-     */
-    override fun tags(tags: Any) {
-      cdkBuilder.tags(tags)
-    }
-
-    public fun build(): software.amazon.awscdk.services.greengrass.CfnLoggerDefinition =
-        cdkBuilder.build()
-  }
-
-  public companion object {
-    init {
-
-    }
-
-    public operator fun invoke(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      block: Builder.() -> Unit = {},
-    ): CfnLoggerDefinition {
-      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-      return CfnLoggerDefinition(builderImpl.apply(block).build())
-    }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnLoggerDefinition):
-        CfnLoggerDefinition = CfnLoggerDefinition(cdkObject)
-
-    internal fun unwrap(wrapped: CfnLoggerDefinition):
-        software.amazon.awscdk.services.greengrass.CfnLoggerDefinition = wrapped.cdkObject
-  }
-
-  public interface LoggerDefinitionVersionProperty {
-    /**
-     * The loggers in this version.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-loggerdefinitionversion.html#cfn-greengrass-loggerdefinition-loggerdefinitionversion-loggers)
-     */
-    public fun loggers(): Any
-
-    /**
-     * A builder for [LoggerDefinitionVersionProperty]
-     */
+    /** A fluent builder for [io.cloudshiftdev.awscdk.services.greengrass.CfnLoggerDefinition]. */
     @CdkDslMarker
     public interface Builder {
-      /**
-       * @param loggers The loggers in this version. 
-       */
-      public fun loggers(loggers: IResolvable)
+        /**
+         * The logger definition version to include when the logger definition is created.
+         *
+         * A logger definition version contains a list of
+         * [`logger`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html)
+         * property types.
+         *
+         * To associate a logger definition version after the logger definition is created, create
+         * an
+         * [`AWS::Greengrass::LoggerDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html)
+         * resource and specify the ID of this logger definition.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-initialversion)
+         *
+         * @param initialVersion The logger definition version to include when the logger definition
+         *   is created.
+         */
+        public fun initialVersion(initialVersion: IResolvable)
 
-      /**
-       * @param loggers The loggers in this version. 
-       */
-      public fun loggers(loggers: List<Any>)
+        /**
+         * The logger definition version to include when the logger definition is created.
+         *
+         * A logger definition version contains a list of
+         * [`logger`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html)
+         * property types.
+         *
+         * To associate a logger definition version after the logger definition is created, create
+         * an
+         * [`AWS::Greengrass::LoggerDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html)
+         * resource and specify the ID of this logger definition.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-initialversion)
+         *
+         * @param initialVersion The logger definition version to include when the logger definition
+         *   is created.
+         */
+        public fun initialVersion(initialVersion: LoggerDefinitionVersionProperty)
 
-      /**
-       * @param loggers The loggers in this version. 
-       */
-      public fun loggers(vararg loggers: Any)
+        /**
+         * The logger definition version to include when the logger definition is created.
+         *
+         * A logger definition version contains a list of
+         * [`logger`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html)
+         * property types.
+         *
+         * To associate a logger definition version after the logger definition is created, create
+         * an
+         * [`AWS::Greengrass::LoggerDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html)
+         * resource and specify the ID of this logger definition.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-initialversion)
+         *
+         * @param initialVersion The logger definition version to include when the logger definition
+         *   is created.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("ff51c6a522dd0e33bb35210369ae1aabab9f410e36ef84e09d2939d7cfd3b367")
+        public fun initialVersion(
+            initialVersion: LoggerDefinitionVersionProperty.Builder.() -> Unit
+        )
+
+        /**
+         * The name of the logger definition.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-name)
+         *
+         * @param name The name of the logger definition.
+         */
+        public fun name(name: String)
+
+        /**
+         * Application-specific metadata to attach to the logger definition.
+         *
+         * You can use tags in IAM policies to control access to AWS IoT Greengrass resources. You
+         * can also use tags to categorize your resources. For more information, see
+         * [Tagging Your AWS IoT Greengrass Resources](https://docs.aws.amazon.com/greengrass/v1/developerguide/tagging.html)
+         * in the *Developer Guide* .
+         *
+         * This `Json` property type is processed as a map of key-value pairs. It uses the following
+         * format, which is different from most `Tags` implementations in AWS CloudFormation
+         * templates.
+         *
+         * ```
+         * "Tags": { "KeyName0": "value", "KeyName1": "value", "KeyName2": "value"
+         * }
+         * ```
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-tags)
+         *
+         * @param tags Application-specific metadata to attach to the logger definition.
+         */
+        public fun tags(tags: Any)
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerDefinitionVersionProperty.Builder
-          =
-          software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerDefinitionVersionProperty.builder()
+    private class BuilderImpl(
+        scope: SoftwareConstructsConstruct,
+        id: String,
+    ) : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.Builder =
+            software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.Builder.create(scope, id)
 
-      /**
-       * @param loggers The loggers in this version. 
-       */
-      override fun loggers(loggers: IResolvable) {
-        cdkBuilder.loggers(loggers.let(IResolvable::unwrap))
-      }
+        /**
+         * The logger definition version to include when the logger definition is created.
+         *
+         * A logger definition version contains a list of
+         * [`logger`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html)
+         * property types.
+         *
+         * To associate a logger definition version after the logger definition is created, create
+         * an
+         * [`AWS::Greengrass::LoggerDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html)
+         * resource and specify the ID of this logger definition.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-initialversion)
+         *
+         * @param initialVersion The logger definition version to include when the logger definition
+         *   is created.
+         */
+        override fun initialVersion(initialVersion: IResolvable) {
+            cdkBuilder.initialVersion(initialVersion.let(IResolvable::unwrap))
+        }
 
-      /**
-       * @param loggers The loggers in this version. 
-       */
-      override fun loggers(loggers: List<Any>) {
-        cdkBuilder.loggers(loggers)
-      }
+        /**
+         * The logger definition version to include when the logger definition is created.
+         *
+         * A logger definition version contains a list of
+         * [`logger`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html)
+         * property types.
+         *
+         * To associate a logger definition version after the logger definition is created, create
+         * an
+         * [`AWS::Greengrass::LoggerDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html)
+         * resource and specify the ID of this logger definition.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-initialversion)
+         *
+         * @param initialVersion The logger definition version to include when the logger definition
+         *   is created.
+         */
+        override fun initialVersion(initialVersion: LoggerDefinitionVersionProperty) {
+            cdkBuilder.initialVersion(initialVersion.let(LoggerDefinitionVersionProperty::unwrap))
+        }
 
-      /**
-       * @param loggers The loggers in this version. 
-       */
-      override fun loggers(vararg loggers: Any): Unit = loggers(loggers.toList())
+        /**
+         * The logger definition version to include when the logger definition is created.
+         *
+         * A logger definition version contains a list of
+         * [`logger`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html)
+         * property types.
+         *
+         * To associate a logger definition version after the logger definition is created, create
+         * an
+         * [`AWS::Greengrass::LoggerDefinitionVersion`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinitionversion.html)
+         * resource and specify the ID of this logger definition.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-initialversion)
+         *
+         * @param initialVersion The logger definition version to include when the logger definition
+         *   is created.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("ff51c6a522dd0e33bb35210369ae1aabab9f410e36ef84e09d2939d7cfd3b367")
+        override fun initialVersion(
+            initialVersion: LoggerDefinitionVersionProperty.Builder.() -> Unit
+        ): Unit = initialVersion(LoggerDefinitionVersionProperty(initialVersion))
 
-      public fun build():
-          software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerDefinitionVersionProperty
-          = cdkBuilder.build()
-    }
+        /**
+         * The name of the logger definition.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-name)
+         *
+         * @param name The name of the logger definition.
+         */
+        override fun name(name: String) {
+            cdkBuilder.name(name)
+        }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerDefinitionVersionProperty,
-    ) : LoggerDefinitionVersionProperty {
-      /**
-       * The loggers in this version.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-loggerdefinitionversion.html#cfn-greengrass-loggerdefinition-loggerdefinitionversion-loggers)
-       */
-      override fun loggers(): Any = unwrap(this).getLoggers()
+        /**
+         * Application-specific metadata to attach to the logger definition.
+         *
+         * You can use tags in IAM policies to control access to AWS IoT Greengrass resources. You
+         * can also use tags to categorize your resources. For more information, see
+         * [Tagging Your AWS IoT Greengrass Resources](https://docs.aws.amazon.com/greengrass/v1/developerguide/tagging.html)
+         * in the *Developer Guide* .
+         *
+         * This `Json` property type is processed as a map of key-value pairs. It uses the following
+         * format, which is different from most `Tags` implementations in AWS CloudFormation
+         * templates.
+         *
+         * ```
+         * "Tags": { "KeyName0": "value", "KeyName1": "value", "KeyName2": "value"
+         * }
+         * ```
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-greengrass-loggerdefinition.html#cfn-greengrass-loggerdefinition-tags)
+         *
+         * @param tags Application-specific metadata to attach to the logger definition.
+         */
+        override fun tags(tags: Any) {
+            cdkBuilder.tags(tags)
+        }
+
+        public fun build(): software.amazon.awscdk.services.greengrass.CfnLoggerDefinition =
+            cdkBuilder.build()
     }
 
     public companion object {
-      init {
+        init {}
 
-      }
+        public operator fun invoke(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            block: Builder.() -> Unit = {},
+        ): CfnLoggerDefinition {
+            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+            return CfnLoggerDefinition(builderImpl.apply(block).build())
+        }
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): LoggerDefinitionVersionProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.greengrass.CfnLoggerDefinition
+        ): CfnLoggerDefinition = CfnLoggerDefinition(cdkObject)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerDefinitionVersionProperty):
-          LoggerDefinitionVersionProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LoggerDefinitionVersionProperty):
-          software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerDefinitionVersionProperty
-          = (wrapped as Wrapper).cdkObject
-    }
-  }
-
-  public interface LoggerProperty {
-    /**
-     * The source of the log event.
-     *
-     * Valid values are `GreengrassSystem` or `Lambda` . When `GreengrassSystem` is used, events
-     * from Greengrass system components are logged. When `Lambda` is used, events from user-defined
-     * Lambda functions are logged.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-component)
-     */
-    public fun component(): String
-
-    /**
-     * A descriptive or arbitrary ID for the logger.
-     *
-     * This value must be unique within the logger definition version. Maximum length is 128
-     * characters with pattern `[a-zA-Z0-9:_-]+` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-id)
-     */
-    public fun id(): String
-
-    /**
-     * The log-level threshold.
-     *
-     * Log events below this threshold are filtered out and aren't stored. Valid values are `DEBUG`
-     * , `INFO` (recommended), `WARN` , `ERROR` , or `FATAL` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-level)
-     */
-    public fun level(): String
-
-    /**
-     * The amount of file space (in KB) to use when writing logs to the local file system.
-     *
-     * This property does not apply for CloudWatch Logs .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-space)
-     */
-    public fun space(): Number? = unwrap(this).getSpace()
-
-    /**
-     * The storage mechanism for log events.
-     *
-     * Valid values are `FileSystem` or `AWSCloudWatch` . When `AWSCloudWatch` is used, log events
-     * are sent to CloudWatch Logs . When `FileSystem` is used, log events are stored on the local file
-     * system.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [LoggerProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param component The source of the log event. 
-       * Valid values are `GreengrassSystem` or `Lambda` . When `GreengrassSystem` is used, events
-       * from Greengrass system components are logged. When `Lambda` is used, events from user-defined
-       * Lambda functions are logged.
-       */
-      public fun component(component: String)
-
-      /**
-       * @param id A descriptive or arbitrary ID for the logger. 
-       * This value must be unique within the logger definition version. Maximum length is 128
-       * characters with pattern `[a-zA-Z0-9:_-]+` .
-       */
-      public fun id(id: String)
-
-      /**
-       * @param level The log-level threshold. 
-       * Log events below this threshold are filtered out and aren't stored. Valid values are
-       * `DEBUG` , `INFO` (recommended), `WARN` , `ERROR` , or `FATAL` .
-       */
-      public fun level(level: String)
-
-      /**
-       * @param space The amount of file space (in KB) to use when writing logs to the local file
-       * system.
-       * This property does not apply for CloudWatch Logs .
-       */
-      public fun space(space: Number)
-
-      /**
-       * @param type The storage mechanism for log events. 
-       * Valid values are `FileSystem` or `AWSCloudWatch` . When `AWSCloudWatch` is used, log events
-       * are sent to CloudWatch Logs . When `FileSystem` is used, log events are stored on the local
-       * file system.
-       */
-      public fun type(type: String)
+        internal fun unwrap(
+            wrapped: CfnLoggerDefinition
+        ): software.amazon.awscdk.services.greengrass.CfnLoggerDefinition = wrapped.cdkObject
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerProperty.Builder =
-          software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerProperty.builder()
+    public interface LoggerDefinitionVersionProperty {
+        /**
+         * The loggers in this version.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-loggerdefinitionversion.html#cfn-greengrass-loggerdefinition-loggerdefinitionversion-loggers)
+         */
+        public fun loggers(): Any
 
-      /**
-       * @param component The source of the log event. 
-       * Valid values are `GreengrassSystem` or `Lambda` . When `GreengrassSystem` is used, events
-       * from Greengrass system components are logged. When `Lambda` is used, events from user-defined
-       * Lambda functions are logged.
-       */
-      override fun component(component: String) {
-        cdkBuilder.component(component)
-      }
+        /** A builder for [LoggerDefinitionVersionProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param loggers The loggers in this version. */
+            public fun loggers(loggers: IResolvable)
 
-      /**
-       * @param id A descriptive or arbitrary ID for the logger. 
-       * This value must be unique within the logger definition version. Maximum length is 128
-       * characters with pattern `[a-zA-Z0-9:_-]+` .
-       */
-      override fun id(id: String) {
-        cdkBuilder.id(id)
-      }
+            /** @param loggers The loggers in this version. */
+            public fun loggers(loggers: List<Any>)
 
-      /**
-       * @param level The log-level threshold. 
-       * Log events below this threshold are filtered out and aren't stored. Valid values are
-       * `DEBUG` , `INFO` (recommended), `WARN` , `ERROR` , or `FATAL` .
-       */
-      override fun level(level: String) {
-        cdkBuilder.level(level)
-      }
+            /** @param loggers The loggers in this version. */
+            public fun loggers(vararg loggers: Any)
+        }
 
-      /**
-       * @param space The amount of file space (in KB) to use when writing logs to the local file
-       * system.
-       * This property does not apply for CloudWatch Logs .
-       */
-      override fun space(space: Number) {
-        cdkBuilder.space(space)
-      }
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerDefinitionVersionProperty.Builder =
+                software.amazon.awscdk.services.greengrass.CfnLoggerDefinition
+                    .LoggerDefinitionVersionProperty
+                    .builder()
 
-      /**
-       * @param type The storage mechanism for log events. 
-       * Valid values are `FileSystem` or `AWSCloudWatch` . When `AWSCloudWatch` is used, log events
-       * are sent to CloudWatch Logs . When `FileSystem` is used, log events are stored on the local
-       * file system.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
+            /** @param loggers The loggers in this version. */
+            override fun loggers(loggers: IResolvable) {
+                cdkBuilder.loggers(loggers.let(IResolvable::unwrap))
+            }
 
-      public fun build():
-          software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerProperty =
-          cdkBuilder.build()
+            /** @param loggers The loggers in this version. */
+            override fun loggers(loggers: List<Any>) {
+                cdkBuilder.loggers(loggers)
+            }
+
+            /** @param loggers The loggers in this version. */
+            override fun loggers(vararg loggers: Any): Unit = loggers(loggers.toList())
+
+            public fun build():
+                software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerDefinitionVersionProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerDefinitionVersionProperty,
+        ) : LoggerDefinitionVersionProperty {
+            /**
+             * The loggers in this version.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-loggerdefinitionversion.html#cfn-greengrass-loggerdefinition-loggerdefinitionversion-loggers)
+             */
+            override fun loggers(): Any = unwrap(this).getLoggers()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(
+                block: Builder.() -> Unit = {}
+            ): LoggerDefinitionVersionProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerDefinitionVersionProperty
+            ): LoggerDefinitionVersionProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: LoggerDefinitionVersionProperty
+            ): software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerDefinitionVersionProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerProperty,
-    ) : LoggerProperty {
-      /**
-       * The source of the log event.
-       *
-       * Valid values are `GreengrassSystem` or `Lambda` . When `GreengrassSystem` is used, events
-       * from Greengrass system components are logged. When `Lambda` is used, events from user-defined
-       * Lambda functions are logged.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-component)
-       */
-      override fun component(): String = unwrap(this).getComponent()
+    public interface LoggerProperty {
+        /**
+         * The source of the log event.
+         *
+         * Valid values are `GreengrassSystem` or `Lambda` . When `GreengrassSystem` is used, events
+         * from Greengrass system components are logged. When `Lambda` is used, events from
+         * user-defined Lambda functions are logged.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-component)
+         */
+        public fun component(): String
 
-      /**
-       * A descriptive or arbitrary ID for the logger.
-       *
-       * This value must be unique within the logger definition version. Maximum length is 128
-       * characters with pattern `[a-zA-Z0-9:_-]+` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-id)
-       */
-      override fun id(): String = unwrap(this).getId()
+        /**
+         * A descriptive or arbitrary ID for the logger.
+         *
+         * This value must be unique within the logger definition version. Maximum length is 128
+         * characters with pattern `[a-zA-Z0-9:_-]+` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-id)
+         */
+        public fun id(): String
 
-      /**
-       * The log-level threshold.
-       *
-       * Log events below this threshold are filtered out and aren't stored. Valid values are
-       * `DEBUG` , `INFO` (recommended), `WARN` , `ERROR` , or `FATAL` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-level)
-       */
-      override fun level(): String = unwrap(this).getLevel()
+        /**
+         * The log-level threshold.
+         *
+         * Log events below this threshold are filtered out and aren't stored. Valid values are
+         * `DEBUG` , `INFO` (recommended), `WARN` , `ERROR` , or `FATAL` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-level)
+         */
+        public fun level(): String
 
-      /**
-       * The amount of file space (in KB) to use when writing logs to the local file system.
-       *
-       * This property does not apply for CloudWatch Logs .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-space)
-       */
-      override fun space(): Number? = unwrap(this).getSpace()
+        /**
+         * The amount of file space (in KB) to use when writing logs to the local file system.
+         *
+         * This property does not apply for CloudWatch Logs .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-space)
+         */
+        public fun space(): Number? = unwrap(this).getSpace()
 
-      /**
-       * The storage mechanism for log events.
-       *
-       * Valid values are `FileSystem` or `AWSCloudWatch` . When `AWSCloudWatch` is used, log events
-       * are sent to CloudWatch Logs . When `FileSystem` is used, log events are stored on the local
-       * file system.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-type)
-       */
-      override fun type(): String = unwrap(this).getType()
+        /**
+         * The storage mechanism for log events.
+         *
+         * Valid values are `FileSystem` or `AWSCloudWatch` . When `AWSCloudWatch` is used, log
+         * events are sent to CloudWatch Logs . When `FileSystem` is used, log events are stored on
+         * the local file system.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-type)
+         */
+        public fun type(): String
+
+        /** A builder for [LoggerProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param component The source of the log event. Valid values are `GreengrassSystem` or
+             *   `Lambda` . When `GreengrassSystem` is used, events from Greengrass system
+             *   components are logged. When `Lambda` is used, events from user-defined Lambda
+             *   functions are logged.
+             */
+            public fun component(component: String)
+
+            /**
+             * @param id A descriptive or arbitrary ID for the logger. This value must be unique
+             *   within the logger definition version. Maximum length is 128 characters with pattern
+             *   `[a-zA-Z0-9:_-]+` .
+             */
+            public fun id(id: String)
+
+            /**
+             * @param level The log-level threshold. Log events below this threshold are filtered
+             *   out and aren't stored. Valid values are `DEBUG` , `INFO` (recommended), `WARN` ,
+             *   `ERROR` , or `FATAL` .
+             */
+            public fun level(level: String)
+
+            /**
+             * @param space The amount of file space (in KB) to use when writing logs to the local
+             *   file system. This property does not apply for CloudWatch Logs .
+             */
+            public fun space(space: Number)
+
+            /**
+             * @param type The storage mechanism for log events. Valid values are `FileSystem` or
+             *   `AWSCloudWatch` . When `AWSCloudWatch` is used, log events are sent to CloudWatch
+             *   Logs . When `FileSystem` is used, log events are stored on the local file system.
+             */
+            public fun type(type: String)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerProperty.Builder =
+                software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerProperty
+                    .builder()
+
+            /**
+             * @param component The source of the log event. Valid values are `GreengrassSystem` or
+             *   `Lambda` . When `GreengrassSystem` is used, events from Greengrass system
+             *   components are logged. When `Lambda` is used, events from user-defined Lambda
+             *   functions are logged.
+             */
+            override fun component(component: String) {
+                cdkBuilder.component(component)
+            }
+
+            /**
+             * @param id A descriptive or arbitrary ID for the logger. This value must be unique
+             *   within the logger definition version. Maximum length is 128 characters with pattern
+             *   `[a-zA-Z0-9:_-]+` .
+             */
+            override fun id(id: String) {
+                cdkBuilder.id(id)
+            }
+
+            /**
+             * @param level The log-level threshold. Log events below this threshold are filtered
+             *   out and aren't stored. Valid values are `DEBUG` , `INFO` (recommended), `WARN` ,
+             *   `ERROR` , or `FATAL` .
+             */
+            override fun level(level: String) {
+                cdkBuilder.level(level)
+            }
+
+            /**
+             * @param space The amount of file space (in KB) to use when writing logs to the local
+             *   file system. This property does not apply for CloudWatch Logs .
+             */
+            override fun space(space: Number) {
+                cdkBuilder.space(space)
+            }
+
+            /**
+             * @param type The storage mechanism for log events. Valid values are `FileSystem` or
+             *   `AWSCloudWatch` . When `AWSCloudWatch` is used, log events are sent to CloudWatch
+             *   Logs . When `FileSystem` is used, log events are stored on the local file system.
+             */
+            override fun type(type: String) {
+                cdkBuilder.type(type)
+            }
+
+            public fun build():
+                software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerProperty,
+        ) : LoggerProperty {
+            /**
+             * The source of the log event.
+             *
+             * Valid values are `GreengrassSystem` or `Lambda` . When `GreengrassSystem` is used,
+             * events from Greengrass system components are logged. When `Lambda` is used, events
+             * from user-defined Lambda functions are logged.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-component)
+             */
+            override fun component(): String = unwrap(this).getComponent()
+
+            /**
+             * A descriptive or arbitrary ID for the logger.
+             *
+             * This value must be unique within the logger definition version. Maximum length is 128
+             * characters with pattern `[a-zA-Z0-9:_-]+` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-id)
+             */
+            override fun id(): String = unwrap(this).getId()
+
+            /**
+             * The log-level threshold.
+             *
+             * Log events below this threshold are filtered out and aren't stored. Valid values are
+             * `DEBUG` , `INFO` (recommended), `WARN` , `ERROR` , or `FATAL` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-level)
+             */
+            override fun level(): String = unwrap(this).getLevel()
+
+            /**
+             * The amount of file space (in KB) to use when writing logs to the local file system.
+             *
+             * This property does not apply for CloudWatch Logs .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-space)
+             */
+            override fun space(): Number? = unwrap(this).getSpace()
+
+            /**
+             * The storage mechanism for log events.
+             *
+             * Valid values are `FileSystem` or `AWSCloudWatch` . When `AWSCloudWatch` is used, log
+             * events are sent to CloudWatch Logs . When `FileSystem` is used, log events are stored
+             * on the local file system.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-greengrass-loggerdefinition-logger.html#cfn-greengrass-loggerdefinition-logger-type)
+             */
+            override fun type(): String = unwrap(this).getType()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): LoggerProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerProperty
+            ): LoggerProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: LoggerProperty
+            ): software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
-
-    public companion object {
-      init {
-
-      }
-
-      public operator fun invoke(block: Builder.() -> Unit = {}): LoggerProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerProperty):
-          LoggerProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: LoggerProperty):
-          software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerProperty = (wrapped
-          as Wrapper).cdkObject
-    }
-  }
 }

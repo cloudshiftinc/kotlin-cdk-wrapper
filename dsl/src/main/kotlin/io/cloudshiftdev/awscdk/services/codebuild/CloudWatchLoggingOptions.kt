@@ -7,119 +7,111 @@ import kotlin.String
 import kotlin.Unit
 
 public interface CloudWatchLoggingOptions {
-  /**
-   * The current status of the logs in Amazon CloudWatch Logs for a build project.
-   *
-   * Default: true
-   */
-  public fun enabled(): Boolean? = unwrap(this).getEnabled()
-
-  /**
-   * The Log Group to send logs to.
-   *
-   * Default: - no log group specified
-   */
-  public fun logGroup(): ILogGroup? = unwrap(this).getLogGroup()?.let(ILogGroup::wrap)
-
-  /**
-   * The prefix of the stream name of the Amazon CloudWatch Logs.
-   *
-   * Default: - no prefix
-   */
-  public fun prefix(): String? = unwrap(this).getPrefix()
-
-  /**
-   * A builder for [CloudWatchLoggingOptions]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param enabled The current status of the logs in Amazon CloudWatch Logs for a build project.
-     */
-    public fun enabled(enabled: Boolean)
-
-    /**
-     * @param logGroup The Log Group to send logs to.
-     */
-    public fun logGroup(logGroup: ILogGroup)
-
-    /**
-     * @param prefix The prefix of the stream name of the Amazon CloudWatch Logs.
-     */
-    public fun prefix(prefix: String)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder:
-        software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions.Builder =
-        software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions.builder()
-
-    /**
-     * @param enabled The current status of the logs in Amazon CloudWatch Logs for a build project.
-     */
-    override fun enabled(enabled: Boolean) {
-      cdkBuilder.enabled(enabled)
-    }
-
-    /**
-     * @param logGroup The Log Group to send logs to.
-     */
-    override fun logGroup(logGroup: ILogGroup) {
-      cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
-    }
-
-    /**
-     * @param prefix The prefix of the stream name of the Amazon CloudWatch Logs.
-     */
-    override fun prefix(prefix: String) {
-      cdkBuilder.prefix(prefix)
-    }
-
-    public fun build(): software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions =
-        cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions,
-  ) : CloudWatchLoggingOptions {
     /**
      * The current status of the logs in Amazon CloudWatch Logs for a build project.
      *
      * Default: true
      */
-    override fun enabled(): Boolean? = unwrap(this).getEnabled()
+    public fun enabled(): Boolean? = unwrap(this).getEnabled()
 
     /**
      * The Log Group to send logs to.
      *
      * Default: - no log group specified
      */
-    override fun logGroup(): ILogGroup? = unwrap(this).getLogGroup()?.let(ILogGroup::wrap)
+    public fun logGroup(): ILogGroup? = unwrap(this).getLogGroup()?.let(ILogGroup::wrap)
 
     /**
      * The prefix of the stream name of the Amazon CloudWatch Logs.
      *
      * Default: - no prefix
      */
-    override fun prefix(): String? = unwrap(this).getPrefix()
-  }
+    public fun prefix(): String? = unwrap(this).getPrefix()
 
-  public companion object {
-    init {
+    /** A builder for [CloudWatchLoggingOptions] */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * @param enabled The current status of the logs in Amazon CloudWatch Logs for a build
+         *   project.
+         */
+        public fun enabled(enabled: Boolean)
 
+        /** @param logGroup The Log Group to send logs to. */
+        public fun logGroup(logGroup: ILogGroup)
+
+        /** @param prefix The prefix of the stream name of the Amazon CloudWatch Logs. */
+        public fun prefix(prefix: String)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchLoggingOptions {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions.Builder =
+            software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions.builder()
+
+        /**
+         * @param enabled The current status of the logs in Amazon CloudWatch Logs for a build
+         *   project.
+         */
+        override fun enabled(enabled: Boolean) {
+            cdkBuilder.enabled(enabled)
+        }
+
+        /** @param logGroup The Log Group to send logs to. */
+        override fun logGroup(logGroup: ILogGroup) {
+            cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
+        }
+
+        /** @param prefix The prefix of the stream name of the Amazon CloudWatch Logs. */
+        override fun prefix(prefix: String) {
+            cdkBuilder.prefix(prefix)
+        }
+
+        public fun build(): software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions =
+            cdkBuilder.build()
     }
 
-    internal
-        fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions):
-        CloudWatchLoggingOptions = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions,
+    ) : CloudWatchLoggingOptions {
+        /**
+         * The current status of the logs in Amazon CloudWatch Logs for a build project.
+         *
+         * Default: true
+         */
+        override fun enabled(): Boolean? = unwrap(this).getEnabled()
 
-    internal fun unwrap(wrapped: CloudWatchLoggingOptions):
-        software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions = (wrapped as
-        Wrapper).cdkObject
-  }
+        /**
+         * The Log Group to send logs to.
+         *
+         * Default: - no log group specified
+         */
+        override fun logGroup(): ILogGroup? = unwrap(this).getLogGroup()?.let(ILogGroup::wrap)
+
+        /**
+         * The prefix of the stream name of the Amazon CloudWatch Logs.
+         *
+         * Default: - no prefix
+         */
+        override fun prefix(): String? = unwrap(this).getPrefix()
+    }
+
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchLoggingOptions {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions
+        ): CloudWatchLoggingOptions = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: CloudWatchLoggingOptions
+        ): software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions =
+            (wrapped as Wrapper).cdkObject
+    }
 }

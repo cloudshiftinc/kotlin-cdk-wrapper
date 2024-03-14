@@ -5,68 +5,69 @@ import kotlin.String
 import kotlin.Unit
 
 public interface LambdaDeploymentConfigImportProps {
-  /**
-   * The physical, human-readable name of the custom CodeDeploy Lambda Deployment Configuration that
-   * we are referencing.
-   */
-  public fun deploymentConfigName(): String
-
-  /**
-   * A builder for [LambdaDeploymentConfigImportProps]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param deploymentConfigName The physical, human-readable name of the custom CodeDeploy Lambda
-     * Deployment Configuration that we are referencing. 
-     */
-    public fun deploymentConfigName(deploymentConfigName: String)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder:
-        software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps.Builder =
-        software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps.builder()
-
-    /**
-     * @param deploymentConfigName The physical, human-readable name of the custom CodeDeploy Lambda
-     * Deployment Configuration that we are referencing. 
-     */
-    override fun deploymentConfigName(deploymentConfigName: String) {
-      cdkBuilder.deploymentConfigName(deploymentConfigName)
-    }
-
-    public fun build(): software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps
-        = cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject:
-        software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps,
-  ) : LambdaDeploymentConfigImportProps {
     /**
      * The physical, human-readable name of the custom CodeDeploy Lambda Deployment Configuration
      * that we are referencing.
      */
-    override fun deploymentConfigName(): String = unwrap(this).getDeploymentConfigName()
-  }
+    public fun deploymentConfigName(): String
 
-  public companion object {
-    init {
-
+    /** A builder for [LambdaDeploymentConfigImportProps] */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * @param deploymentConfigName The physical, human-readable name of the custom CodeDeploy
+         *   Lambda Deployment Configuration that we are referencing.
+         */
+        public fun deploymentConfigName(deploymentConfigName: String)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): LambdaDeploymentConfigImportProps {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps.Builder =
+            software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps.builder()
+
+        /**
+         * @param deploymentConfigName The physical, human-readable name of the custom CodeDeploy
+         *   Lambda Deployment Configuration that we are referencing.
+         */
+        override fun deploymentConfigName(deploymentConfigName: String) {
+            cdkBuilder.deploymentConfigName(deploymentConfigName)
+        }
+
+        public fun build():
+            software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps =
+            cdkBuilder.build()
     }
 
-    internal
-        fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps):
-        LambdaDeploymentConfigImportProps = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject:
+            software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps,
+    ) : LambdaDeploymentConfigImportProps {
+        /**
+         * The physical, human-readable name of the custom CodeDeploy Lambda Deployment
+         * Configuration that we are referencing.
+         */
+        override fun deploymentConfigName(): String = unwrap(this).getDeploymentConfigName()
+    }
 
-    internal fun unwrap(wrapped: LambdaDeploymentConfigImportProps):
-        software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps = (wrapped as
-        Wrapper).cdkObject
-  }
+    public companion object {
+        init {}
+
+        public operator fun invoke(
+            block: Builder.() -> Unit = {}
+        ): LambdaDeploymentConfigImportProps {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps
+        ): LambdaDeploymentConfigImportProps = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: LambdaDeploymentConfigImportProps
+        ): software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps =
+            (wrapped as Wrapper).cdkObject
+    }
 }

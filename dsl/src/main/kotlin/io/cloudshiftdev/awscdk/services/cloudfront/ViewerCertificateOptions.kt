@@ -6,124 +6,19 @@ import kotlin.Unit
 import kotlin.collections.List
 
 public interface ViewerCertificateOptions {
-  /**
-   * Domain names on the certificate (both main domain name and Subject Alternative names).
-   */
-  public fun aliases(): List<String> = unwrap(this).getAliases() ?: emptyList()
-
-  /**
-   * The minimum version of the SSL protocol that you want CloudFront to use for HTTPS connections.
-   *
-   * CloudFront serves your objects only to browsers or devices that support at
-   * least the SSL version that you specify.
-   *
-   * Default: - SSLv3 if sslMethod VIP, TLSv1 if sslMethod SNI
-   */
-  public fun securityPolicy(): SecurityPolicyProtocol? =
-      unwrap(this).getSecurityPolicy()?.let(SecurityPolicyProtocol::wrap)
-
-  /**
-   * How CloudFront should serve HTTPS requests.
-   *
-   * See the notes on SSLMethod if you wish to use other SSL termination types.
-   *
-   * Default: SSLMethod.SNI
-   *
-   * [Documentation](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ViewerCertificate.html)
-   */
-  public fun sslMethod(): SSLMethod? = unwrap(this).getSslMethod()?.let(SSLMethod::wrap)
-
-  /**
-   * A builder for [ViewerCertificateOptions]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param aliases Domain names on the certificate (both main domain name and Subject Alternative
-     * names).
-     */
-    public fun aliases(aliases: List<String>)
-
-    /**
-     * @param aliases Domain names on the certificate (both main domain name and Subject Alternative
-     * names).
-     */
-    public fun aliases(vararg aliases: String)
-
-    /**
-     * @param securityPolicy The minimum version of the SSL protocol that you want CloudFront to use
-     * for HTTPS connections.
-     * CloudFront serves your objects only to browsers or devices that support at
-     * least the SSL version that you specify.
-     */
-    public fun securityPolicy(securityPolicy: SecurityPolicyProtocol)
-
-    /**
-     * @param sslMethod How CloudFront should serve HTTPS requests.
-     * See the notes on SSLMethod if you wish to use other SSL termination types.
-     */
-    public fun sslMethod(sslMethod: SSLMethod)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder:
-        software.amazon.awscdk.services.cloudfront.ViewerCertificateOptions.Builder =
-        software.amazon.awscdk.services.cloudfront.ViewerCertificateOptions.builder()
-
-    /**
-     * @param aliases Domain names on the certificate (both main domain name and Subject Alternative
-     * names).
-     */
-    override fun aliases(aliases: List<String>) {
-      cdkBuilder.aliases(aliases)
-    }
-
-    /**
-     * @param aliases Domain names on the certificate (both main domain name and Subject Alternative
-     * names).
-     */
-    override fun aliases(vararg aliases: String): Unit = aliases(aliases.toList())
-
-    /**
-     * @param securityPolicy The minimum version of the SSL protocol that you want CloudFront to use
-     * for HTTPS connections.
-     * CloudFront serves your objects only to browsers or devices that support at
-     * least the SSL version that you specify.
-     */
-    override fun securityPolicy(securityPolicy: SecurityPolicyProtocol) {
-      cdkBuilder.securityPolicy(securityPolicy.let(SecurityPolicyProtocol::unwrap))
-    }
-
-    /**
-     * @param sslMethod How CloudFront should serve HTTPS requests.
-     * See the notes on SSLMethod if you wish to use other SSL termination types.
-     */
-    override fun sslMethod(sslMethod: SSLMethod) {
-      cdkBuilder.sslMethod(sslMethod.let(SSLMethod::unwrap))
-    }
-
-    public fun build(): software.amazon.awscdk.services.cloudfront.ViewerCertificateOptions =
-        cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.cloudfront.ViewerCertificateOptions,
-  ) : ViewerCertificateOptions {
-    /**
-     * Domain names on the certificate (both main domain name and Subject Alternative names).
-     */
-    override fun aliases(): List<String> = unwrap(this).getAliases() ?: emptyList()
+    /** Domain names on the certificate (both main domain name and Subject Alternative names). */
+    public fun aliases(): List<String> = unwrap(this).getAliases() ?: emptyList()
 
     /**
      * The minimum version of the SSL protocol that you want CloudFront to use for HTTPS
      * connections.
      *
-     * CloudFront serves your objects only to browsers or devices that support at
-     * least the SSL version that you specify.
+     * CloudFront serves your objects only to browsers or devices that support at least the SSL
+     * version that you specify.
      *
      * Default: - SSLv3 if sslMethod VIP, TLSv1 if sslMethod SNI
      */
-    override fun securityPolicy(): SecurityPolicyProtocol? =
+    public fun securityPolicy(): SecurityPolicyProtocol? =
         unwrap(this).getSecurityPolicy()?.let(SecurityPolicyProtocol::wrap)
 
     /**
@@ -135,25 +30,125 @@ public interface ViewerCertificateOptions {
      *
      * [Documentation](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ViewerCertificate.html)
      */
-    override fun sslMethod(): SSLMethod? = unwrap(this).getSslMethod()?.let(SSLMethod::wrap)
-  }
+    public fun sslMethod(): SSLMethod? = unwrap(this).getSslMethod()?.let(SSLMethod::wrap)
 
-  public companion object {
-    init {
+    /** A builder for [ViewerCertificateOptions] */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * @param aliases Domain names on the certificate (both main domain name and Subject
+         *   Alternative names).
+         */
+        public fun aliases(aliases: List<String>)
 
+        /**
+         * @param aliases Domain names on the certificate (both main domain name and Subject
+         *   Alternative names).
+         */
+        public fun aliases(vararg aliases: String)
+
+        /**
+         * @param securityPolicy The minimum version of the SSL protocol that you want CloudFront to
+         *   use for HTTPS connections. CloudFront serves your objects only to browsers or devices
+         *   that support at least the SSL version that you specify.
+         */
+        public fun securityPolicy(securityPolicy: SecurityPolicyProtocol)
+
+        /**
+         * @param sslMethod How CloudFront should serve HTTPS requests. See the notes on SSLMethod
+         *   if you wish to use other SSL termination types.
+         */
+        public fun sslMethod(sslMethod: SSLMethod)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): ViewerCertificateOptions {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.cloudfront.ViewerCertificateOptions.Builder =
+            software.amazon.awscdk.services.cloudfront.ViewerCertificateOptions.builder()
+
+        /**
+         * @param aliases Domain names on the certificate (both main domain name and Subject
+         *   Alternative names).
+         */
+        override fun aliases(aliases: List<String>) {
+            cdkBuilder.aliases(aliases)
+        }
+
+        /**
+         * @param aliases Domain names on the certificate (both main domain name and Subject
+         *   Alternative names).
+         */
+        override fun aliases(vararg aliases: String): Unit = aliases(aliases.toList())
+
+        /**
+         * @param securityPolicy The minimum version of the SSL protocol that you want CloudFront to
+         *   use for HTTPS connections. CloudFront serves your objects only to browsers or devices
+         *   that support at least the SSL version that you specify.
+         */
+        override fun securityPolicy(securityPolicy: SecurityPolicyProtocol) {
+            cdkBuilder.securityPolicy(securityPolicy.let(SecurityPolicyProtocol::unwrap))
+        }
+
+        /**
+         * @param sslMethod How CloudFront should serve HTTPS requests. See the notes on SSLMethod
+         *   if you wish to use other SSL termination types.
+         */
+        override fun sslMethod(sslMethod: SSLMethod) {
+            cdkBuilder.sslMethod(sslMethod.let(SSLMethod::unwrap))
+        }
+
+        public fun build(): software.amazon.awscdk.services.cloudfront.ViewerCertificateOptions =
+            cdkBuilder.build()
     }
 
-    internal
-        fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.ViewerCertificateOptions):
-        ViewerCertificateOptions = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.cloudfront.ViewerCertificateOptions,
+    ) : ViewerCertificateOptions {
+        /**
+         * Domain names on the certificate (both main domain name and Subject Alternative names).
+         */
+        override fun aliases(): List<String> = unwrap(this).getAliases() ?: emptyList()
 
-    internal fun unwrap(wrapped: ViewerCertificateOptions):
-        software.amazon.awscdk.services.cloudfront.ViewerCertificateOptions = (wrapped as
-        Wrapper).cdkObject
-  }
+        /**
+         * The minimum version of the SSL protocol that you want CloudFront to use for HTTPS
+         * connections.
+         *
+         * CloudFront serves your objects only to browsers or devices that support at least the SSL
+         * version that you specify.
+         *
+         * Default: - SSLv3 if sslMethod VIP, TLSv1 if sslMethod SNI
+         */
+        override fun securityPolicy(): SecurityPolicyProtocol? =
+            unwrap(this).getSecurityPolicy()?.let(SecurityPolicyProtocol::wrap)
+
+        /**
+         * How CloudFront should serve HTTPS requests.
+         *
+         * See the notes on SSLMethod if you wish to use other SSL termination types.
+         *
+         * Default: SSLMethod.SNI
+         *
+         * [Documentation](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_ViewerCertificate.html)
+         */
+        override fun sslMethod(): SSLMethod? = unwrap(this).getSslMethod()?.let(SSLMethod::wrap)
+    }
+
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): ViewerCertificateOptions {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.cloudfront.ViewerCertificateOptions
+        ): ViewerCertificateOptions = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: ViewerCertificateOptions
+        ): software.amazon.awscdk.services.cloudfront.ViewerCertificateOptions =
+            (wrapped as Wrapper).cdkObject
+    }
 }

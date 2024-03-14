@@ -4,140 +4,138 @@ import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnResourcePolicy internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.lex.CfnResourcePolicy,
+public open class CfnResourcePolicy
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.lex.CfnResourcePolicy,
 ) : CfnResource(cdkObject), IInspectable {
-  /**
-   * The identifier of the resource policy.
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
+    /** The identifier of the resource policy. */
+    public open fun attrId(): String = unwrap(this).getAttrId()
 
-  /**
-   * Specifies the current revision of a resource policy.
-   */
-  public open fun attrRevisionId(): String = unwrap(this).getAttrRevisionId()
-
-  /**
-   * Examines the CloudFormation resource and discloses attributes.
-   *
-   * @param inspector tree inspector to collect and process attributes. 
-   */
-  public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-  }
-
-  /**
-   * A resource policy to add to the resource.
-   */
-  public open fun policy(): Any = unwrap(this).getPolicy()
-
-  /**
-   * A resource policy to add to the resource.
-   */
-  public open fun policy(`value`: Any) {
-    unwrap(this).setPolicy(`value`)
-  }
-
-  /**
-   * The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy is attached to.
-   */
-  public open fun resourceArn(): String = unwrap(this).getResourceArn()
-
-  /**
-   * The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy is attached to.
-   */
-  public open fun resourceArn(`value`: String) {
-    unwrap(this).setResourceArn(`value`)
-  }
-
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.lex.CfnResourcePolicy].
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * A resource policy to add to the resource.
-     *
-     * The policy is a JSON structure that contains one or more statements that define the policy.
-     * The policy must follow IAM syntax. If the policy isn't valid, Amazon Lex returns a validation
-     * exception.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-resourcepolicy.html#cfn-lex-resourcepolicy-policy)
-     * @param policy A resource policy to add to the resource. 
-     */
-    public fun policy(policy: Any)
+    /** Specifies the current revision of a resource policy. */
+    public open fun attrRevisionId(): String = unwrap(this).getAttrRevisionId()
 
     /**
-     * The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy is attached
-     * to.
+     * Examines the CloudFormation resource and discloses attributes.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-resourcepolicy.html#cfn-lex-resourcepolicy-resourcearn)
-     * @param resourceArn The Amazon Resource Name (ARN) of the bot or bot alias that the resource
-     * policy is attached to. 
+     * @param inspector tree inspector to collect and process attributes.
      */
-    public fun resourceArn(resourceArn: String)
-  }
+    public override fun inspect(inspector: TreeInspector) {
+        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    }
 
-  private class BuilderImpl(
-    scope: SoftwareConstructsConstruct,
-    id: String,
-  ) : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.lex.CfnResourcePolicy.Builder =
-        software.amazon.awscdk.services.lex.CfnResourcePolicy.Builder.create(scope, id)
+    /** A resource policy to add to the resource. */
+    public open fun policy(): Any = unwrap(this).getPolicy()
 
-    /**
-     * A resource policy to add to the resource.
-     *
-     * The policy is a JSON structure that contains one or more statements that define the policy.
-     * The policy must follow IAM syntax. If the policy isn't valid, Amazon Lex returns a validation
-     * exception.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-resourcepolicy.html#cfn-lex-resourcepolicy-policy)
-     * @param policy A resource policy to add to the resource. 
-     */
-    override fun policy(policy: Any) {
-      cdkBuilder.policy(policy)
+    /** A resource policy to add to the resource. */
+    public open fun policy(`value`: Any) {
+        unwrap(this).setPolicy(`value`)
     }
 
     /**
      * The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy is attached
      * to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-resourcepolicy.html#cfn-lex-resourcepolicy-resourcearn)
-     * @param resourceArn The Amazon Resource Name (ARN) of the bot or bot alias that the resource
-     * policy is attached to. 
      */
-    override fun resourceArn(resourceArn: String) {
-      cdkBuilder.resourceArn(resourceArn)
+    public open fun resourceArn(): String = unwrap(this).getResourceArn()
+
+    /**
+     * The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy is attached
+     * to.
+     */
+    public open fun resourceArn(`value`: String) {
+        unwrap(this).setResourceArn(`value`)
     }
 
-    public fun build(): software.amazon.awscdk.services.lex.CfnResourcePolicy = cdkBuilder.build()
-  }
+    /** A fluent builder for [io.cloudshiftdev.awscdk.services.lex.CfnResourcePolicy]. */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * A resource policy to add to the resource.
+         *
+         * The policy is a JSON structure that contains one or more statements that define the
+         * policy. The policy must follow IAM syntax. If the policy isn't valid, Amazon Lex returns
+         * a validation exception.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-resourcepolicy.html#cfn-lex-resourcepolicy-policy)
+         *
+         * @param policy A resource policy to add to the resource.
+         */
+        public fun policy(policy: Any)
 
-  public companion object {
-    init {
-
+        /**
+         * The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy is
+         * attached to.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-resourcepolicy.html#cfn-lex-resourcepolicy-resourcearn)
+         *
+         * @param resourceArn The Amazon Resource Name (ARN) of the bot or bot alias that the
+         *   resource policy is attached to.
+         */
+        public fun resourceArn(resourceArn: String)
     }
 
-    public operator fun invoke(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      block: Builder.() -> Unit = {},
-    ): CfnResourcePolicy {
-      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-      return CfnResourcePolicy(builderImpl.apply(block).build())
+    private class BuilderImpl(
+        scope: SoftwareConstructsConstruct,
+        id: String,
+    ) : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.lex.CfnResourcePolicy.Builder =
+            software.amazon.awscdk.services.lex.CfnResourcePolicy.Builder.create(scope, id)
+
+        /**
+         * A resource policy to add to the resource.
+         *
+         * The policy is a JSON structure that contains one or more statements that define the
+         * policy. The policy must follow IAM syntax. If the policy isn't valid, Amazon Lex returns
+         * a validation exception.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-resourcepolicy.html#cfn-lex-resourcepolicy-policy)
+         *
+         * @param policy A resource policy to add to the resource.
+         */
+        override fun policy(policy: Any) {
+            cdkBuilder.policy(policy)
+        }
+
+        /**
+         * The Amazon Resource Name (ARN) of the bot or bot alias that the resource policy is
+         * attached to.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lex-resourcepolicy.html#cfn-lex-resourcepolicy-resourcearn)
+         *
+         * @param resourceArn The Amazon Resource Name (ARN) of the bot or bot alias that the
+         *   resource policy is attached to.
+         */
+        override fun resourceArn(resourceArn: String) {
+            cdkBuilder.resourceArn(resourceArn)
+        }
+
+        public fun build(): software.amazon.awscdk.services.lex.CfnResourcePolicy =
+            cdkBuilder.build()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnResourcePolicy):
-        CfnResourcePolicy = CfnResourcePolicy(cdkObject)
+    public companion object {
+        init {}
 
-    internal fun unwrap(wrapped: CfnResourcePolicy):
-        software.amazon.awscdk.services.lex.CfnResourcePolicy = wrapped.cdkObject
-  }
+        public operator fun invoke(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            block: Builder.() -> Unit = {},
+        ): CfnResourcePolicy {
+            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+            return CfnResourcePolicy(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.lex.CfnResourcePolicy
+        ): CfnResourcePolicy = CfnResourcePolicy(cdkObject)
+
+        internal fun unwrap(
+            wrapped: CfnResourcePolicy
+        ): software.amazon.awscdk.services.lex.CfnResourcePolicy = wrapped.cdkObject
+    }
 }

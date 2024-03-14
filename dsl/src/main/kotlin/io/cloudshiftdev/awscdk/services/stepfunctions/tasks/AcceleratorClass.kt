@@ -2,23 +2,24 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import kotlin.String
 
-public open class AcceleratorClass internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorClass,
+public open class AcceleratorClass
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorClass,
 ) {
-  /**
-   * * Elastic Inference accelerator generation.
-   */
-  public open fun version(): String = unwrap(this).getVersion()
+    /** * Elastic Inference accelerator generation. */
+    public open fun version(): String = unwrap(this).getVersion()
 
-  public companion object {
-    public fun of(version: String): AcceleratorClass =
-        software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorClass.of(version).let(AcceleratorClass::wrap)
+    public companion object {
+        public fun of(version: String): AcceleratorClass =
+            software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorClass.of(version)
+                .let(AcceleratorClass::wrap)
 
-    internal
-        fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorClass):
-        AcceleratorClass = AcceleratorClass(cdkObject)
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorClass
+        ): AcceleratorClass = AcceleratorClass(cdkObject)
 
-    internal fun unwrap(wrapped: AcceleratorClass):
-        software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorClass = wrapped.cdkObject
-  }
+        internal fun unwrap(
+            wrapped: AcceleratorClass
+        ): software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorClass = wrapped.cdkObject
+    }
 }

@@ -9,204 +9,172 @@ import kotlin.Unit
 import kotlin.collections.List
 
 public interface ServerlessClusterAttributes {
-  /**
-   * Cluster endpoint address.
-   *
-   * Default: - no endpoint address
-   */
-  public fun clusterEndpointAddress(): String? = unwrap(this).getClusterEndpointAddress()
-
-  /**
-   * Identifier for the cluster.
-   */
-  public fun clusterIdentifier(): String
-
-  /**
-   * The database port.
-   *
-   * Default: - none
-   */
-  public fun port(): Number? = unwrap(this).getPort()
-
-  /**
-   * Reader endpoint address.
-   *
-   * Default: - no reader address
-   */
-  public fun readerEndpointAddress(): String? = unwrap(this).getReaderEndpointAddress()
-
-  /**
-   * The secret attached to the database cluster.
-   *
-   * Default: - no secret
-   */
-  public fun secret(): ISecret? = unwrap(this).getSecret()?.let(ISecret::wrap)
-
-  /**
-   * The security groups of the database cluster.
-   *
-   * Default: - no security groups
-   */
-  public fun securityGroups(): List<ISecurityGroup> =
-      unwrap(this).getSecurityGroups()?.map(ISecurityGroup::wrap) ?: emptyList()
-
-  /**
-   * A builder for [ServerlessClusterAttributes]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param clusterEndpointAddress Cluster endpoint address.
-     */
-    public fun clusterEndpointAddress(clusterEndpointAddress: String)
-
-    /**
-     * @param clusterIdentifier Identifier for the cluster. 
-     */
-    public fun clusterIdentifier(clusterIdentifier: String)
-
-    /**
-     * @param port The database port.
-     */
-    public fun port(port: Number)
-
-    /**
-     * @param readerEndpointAddress Reader endpoint address.
-     */
-    public fun readerEndpointAddress(readerEndpointAddress: String)
-
-    /**
-     * @param secret The secret attached to the database cluster.
-     */
-    public fun secret(secret: ISecret)
-
-    /**
-     * @param securityGroups The security groups of the database cluster.
-     */
-    public fun securityGroups(securityGroups: List<ISecurityGroup>)
-
-    /**
-     * @param securityGroups The security groups of the database cluster.
-     */
-    public fun securityGroups(vararg securityGroups: ISecurityGroup)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.rds.ServerlessClusterAttributes.Builder
-        = software.amazon.awscdk.services.rds.ServerlessClusterAttributes.builder()
-
-    /**
-     * @param clusterEndpointAddress Cluster endpoint address.
-     */
-    override fun clusterEndpointAddress(clusterEndpointAddress: String) {
-      cdkBuilder.clusterEndpointAddress(clusterEndpointAddress)
-    }
-
-    /**
-     * @param clusterIdentifier Identifier for the cluster. 
-     */
-    override fun clusterIdentifier(clusterIdentifier: String) {
-      cdkBuilder.clusterIdentifier(clusterIdentifier)
-    }
-
-    /**
-     * @param port The database port.
-     */
-    override fun port(port: Number) {
-      cdkBuilder.port(port)
-    }
-
-    /**
-     * @param readerEndpointAddress Reader endpoint address.
-     */
-    override fun readerEndpointAddress(readerEndpointAddress: String) {
-      cdkBuilder.readerEndpointAddress(readerEndpointAddress)
-    }
-
-    /**
-     * @param secret The secret attached to the database cluster.
-     */
-    override fun secret(secret: ISecret) {
-      cdkBuilder.secret(secret.let(ISecret::unwrap))
-    }
-
-    /**
-     * @param securityGroups The security groups of the database cluster.
-     */
-    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
-    }
-
-    /**
-     * @param securityGroups The security groups of the database cluster.
-     */
-    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
-        securityGroups(securityGroups.toList())
-
-    public fun build(): software.amazon.awscdk.services.rds.ServerlessClusterAttributes =
-        cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.rds.ServerlessClusterAttributes,
-  ) : ServerlessClusterAttributes {
     /**
      * Cluster endpoint address.
      *
      * Default: - no endpoint address
      */
-    override fun clusterEndpointAddress(): String? = unwrap(this).getClusterEndpointAddress()
+    public fun clusterEndpointAddress(): String? = unwrap(this).getClusterEndpointAddress()
 
-    /**
-     * Identifier for the cluster.
-     */
-    override fun clusterIdentifier(): String = unwrap(this).getClusterIdentifier()
+    /** Identifier for the cluster. */
+    public fun clusterIdentifier(): String
 
     /**
      * The database port.
      *
      * Default: - none
      */
-    override fun port(): Number? = unwrap(this).getPort()
+    public fun port(): Number? = unwrap(this).getPort()
 
     /**
      * Reader endpoint address.
      *
      * Default: - no reader address
      */
-    override fun readerEndpointAddress(): String? = unwrap(this).getReaderEndpointAddress()
+    public fun readerEndpointAddress(): String? = unwrap(this).getReaderEndpointAddress()
 
     /**
      * The secret attached to the database cluster.
      *
      * Default: - no secret
      */
-    override fun secret(): ISecret? = unwrap(this).getSecret()?.let(ISecret::wrap)
+    public fun secret(): ISecret? = unwrap(this).getSecret()?.let(ISecret::wrap)
 
     /**
      * The security groups of the database cluster.
      *
      * Default: - no security groups
      */
-    override fun securityGroups(): List<ISecurityGroup> =
+    public fun securityGroups(): List<ISecurityGroup> =
         unwrap(this).getSecurityGroups()?.map(ISecurityGroup::wrap) ?: emptyList()
-  }
 
-  public companion object {
-    init {
+    /** A builder for [ServerlessClusterAttributes] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param clusterEndpointAddress Cluster endpoint address. */
+        public fun clusterEndpointAddress(clusterEndpointAddress: String)
 
+        /** @param clusterIdentifier Identifier for the cluster. */
+        public fun clusterIdentifier(clusterIdentifier: String)
+
+        /** @param port The database port. */
+        public fun port(port: Number)
+
+        /** @param readerEndpointAddress Reader endpoint address. */
+        public fun readerEndpointAddress(readerEndpointAddress: String)
+
+        /** @param secret The secret attached to the database cluster. */
+        public fun secret(secret: ISecret)
+
+        /** @param securityGroups The security groups of the database cluster. */
+        public fun securityGroups(securityGroups: List<ISecurityGroup>)
+
+        /** @param securityGroups The security groups of the database cluster. */
+        public fun securityGroups(vararg securityGroups: ISecurityGroup)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): ServerlessClusterAttributes {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.rds.ServerlessClusterAttributes.Builder =
+            software.amazon.awscdk.services.rds.ServerlessClusterAttributes.builder()
+
+        /** @param clusterEndpointAddress Cluster endpoint address. */
+        override fun clusterEndpointAddress(clusterEndpointAddress: String) {
+            cdkBuilder.clusterEndpointAddress(clusterEndpointAddress)
+        }
+
+        /** @param clusterIdentifier Identifier for the cluster. */
+        override fun clusterIdentifier(clusterIdentifier: String) {
+            cdkBuilder.clusterIdentifier(clusterIdentifier)
+        }
+
+        /** @param port The database port. */
+        override fun port(port: Number) {
+            cdkBuilder.port(port)
+        }
+
+        /** @param readerEndpointAddress Reader endpoint address. */
+        override fun readerEndpointAddress(readerEndpointAddress: String) {
+            cdkBuilder.readerEndpointAddress(readerEndpointAddress)
+        }
+
+        /** @param secret The secret attached to the database cluster. */
+        override fun secret(secret: ISecret) {
+            cdkBuilder.secret(secret.let(ISecret::unwrap))
+        }
+
+        /** @param securityGroups The security groups of the database cluster. */
+        override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+            cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+        }
+
+        /** @param securityGroups The security groups of the database cluster. */
+        override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+            securityGroups(securityGroups.toList())
+
+        public fun build(): software.amazon.awscdk.services.rds.ServerlessClusterAttributes =
+            cdkBuilder.build()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.ServerlessClusterAttributes):
-        ServerlessClusterAttributes = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.rds.ServerlessClusterAttributes,
+    ) : ServerlessClusterAttributes {
+        /**
+         * Cluster endpoint address.
+         *
+         * Default: - no endpoint address
+         */
+        override fun clusterEndpointAddress(): String? = unwrap(this).getClusterEndpointAddress()
 
-    internal fun unwrap(wrapped: ServerlessClusterAttributes):
-        software.amazon.awscdk.services.rds.ServerlessClusterAttributes = (wrapped as
-        Wrapper).cdkObject
-  }
+        /** Identifier for the cluster. */
+        override fun clusterIdentifier(): String = unwrap(this).getClusterIdentifier()
+
+        /**
+         * The database port.
+         *
+         * Default: - none
+         */
+        override fun port(): Number? = unwrap(this).getPort()
+
+        /**
+         * Reader endpoint address.
+         *
+         * Default: - no reader address
+         */
+        override fun readerEndpointAddress(): String? = unwrap(this).getReaderEndpointAddress()
+
+        /**
+         * The secret attached to the database cluster.
+         *
+         * Default: - no secret
+         */
+        override fun secret(): ISecret? = unwrap(this).getSecret()?.let(ISecret::wrap)
+
+        /**
+         * The security groups of the database cluster.
+         *
+         * Default: - no security groups
+         */
+        override fun securityGroups(): List<ISecurityGroup> =
+            unwrap(this).getSecurityGroups()?.map(ISecurityGroup::wrap) ?: emptyList()
+    }
+
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): ServerlessClusterAttributes {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.rds.ServerlessClusterAttributes
+        ): ServerlessClusterAttributes = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: ServerlessClusterAttributes
+        ): software.amazon.awscdk.services.rds.ServerlessClusterAttributes =
+            (wrapped as Wrapper).cdkObject
+    }
 }

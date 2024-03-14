@@ -6,78 +6,65 @@ import kotlin.Unit
 import kotlin.jvm.JvmName
 
 public interface VirtualNodeListenerConfig {
-  /**
-   * Single listener config for a VirtualNode.
-   */
-  public fun listener(): CfnVirtualNode.ListenerProperty
+    /** Single listener config for a VirtualNode. */
+    public fun listener(): CfnVirtualNode.ListenerProperty
 
-  /**
-   * A builder for [VirtualNodeListenerConfig]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param listener Single listener config for a VirtualNode. 
-     */
-    public fun listener(listener: CfnVirtualNode.ListenerProperty)
+    /** A builder for [VirtualNodeListenerConfig] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param listener Single listener config for a VirtualNode. */
+        public fun listener(listener: CfnVirtualNode.ListenerProperty)
 
-    /**
-     * @param listener Single listener config for a VirtualNode. 
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("0a3f8b2f835cee2bab65592bbbe7a640bd1efacf36487c07f3a471b288d59450")
-    public fun listener(listener: CfnVirtualNode.ListenerProperty.Builder.() -> Unit)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder:
-        software.amazon.awscdk.services.appmesh.VirtualNodeListenerConfig.Builder =
-        software.amazon.awscdk.services.appmesh.VirtualNodeListenerConfig.builder()
-
-    /**
-     * @param listener Single listener config for a VirtualNode. 
-     */
-    override fun listener(listener: CfnVirtualNode.ListenerProperty) {
-      cdkBuilder.listener(listener.let(CfnVirtualNode.ListenerProperty::unwrap))
+        /** @param listener Single listener config for a VirtualNode. */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("0a3f8b2f835cee2bab65592bbbe7a640bd1efacf36487c07f3a471b288d59450")
+        public fun listener(listener: CfnVirtualNode.ListenerProperty.Builder.() -> Unit)
     }
 
-    /**
-     * @param listener Single listener config for a VirtualNode. 
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("0a3f8b2f835cee2bab65592bbbe7a640bd1efacf36487c07f3a471b288d59450")
-    override fun listener(listener: CfnVirtualNode.ListenerProperty.Builder.() -> Unit): Unit =
-        listener(CfnVirtualNode.ListenerProperty(listener))
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.appmesh.VirtualNodeListenerConfig.Builder =
+            software.amazon.awscdk.services.appmesh.VirtualNodeListenerConfig.builder()
 
-    public fun build(): software.amazon.awscdk.services.appmesh.VirtualNodeListenerConfig =
-        cdkBuilder.build()
-  }
+        /** @param listener Single listener config for a VirtualNode. */
+        override fun listener(listener: CfnVirtualNode.ListenerProperty) {
+            cdkBuilder.listener(listener.let(CfnVirtualNode.ListenerProperty::unwrap))
+        }
 
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.appmesh.VirtualNodeListenerConfig,
-  ) : VirtualNodeListenerConfig {
-    /**
-     * Single listener config for a VirtualNode.
-     */
-    override fun listener(): CfnVirtualNode.ListenerProperty =
-        unwrap(this).getListener().let(CfnVirtualNode.ListenerProperty::wrap)
-  }
+        /** @param listener Single listener config for a VirtualNode. */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("0a3f8b2f835cee2bab65592bbbe7a640bd1efacf36487c07f3a471b288d59450")
+        override fun listener(listener: CfnVirtualNode.ListenerProperty.Builder.() -> Unit): Unit =
+            listener(CfnVirtualNode.ListenerProperty(listener))
 
-  public companion object {
-    init {
-
+        public fun build(): software.amazon.awscdk.services.appmesh.VirtualNodeListenerConfig =
+            cdkBuilder.build()
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): VirtualNodeListenerConfig {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.appmesh.VirtualNodeListenerConfig,
+    ) : VirtualNodeListenerConfig {
+        /** Single listener config for a VirtualNode. */
+        override fun listener(): CfnVirtualNode.ListenerProperty =
+            unwrap(this).getListener().let(CfnVirtualNode.ListenerProperty::wrap)
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.VirtualNodeListenerConfig):
-        VirtualNodeListenerConfig = Wrapper(cdkObject)
+    public companion object {
+        init {}
 
-    internal fun unwrap(wrapped: VirtualNodeListenerConfig):
-        software.amazon.awscdk.services.appmesh.VirtualNodeListenerConfig = (wrapped as
-        Wrapper).cdkObject
-  }
+        public operator fun invoke(block: Builder.() -> Unit = {}): VirtualNodeListenerConfig {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.appmesh.VirtualNodeListenerConfig
+        ): VirtualNodeListenerConfig = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: VirtualNodeListenerConfig
+        ): software.amazon.awscdk.services.appmesh.VirtualNodeListenerConfig =
+            (wrapped as Wrapper).cdkObject
+    }
 }

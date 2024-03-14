@@ -6,126 +6,13 @@ import kotlin.Unit
 import kotlin.jvm.JvmName
 
 public interface CfnTrafficRoutingConfig {
-  /**
-   * The configuration for traffic routing when `type` is `CfnTrafficRoutingType.TIME_BASED_CANARY`.
-   *
-   * Default: - none
-   */
-  public fun timeBasedCanary(): CfnTrafficRoutingTimeBasedCanary? =
-      unwrap(this).getTimeBasedCanary()?.let(CfnTrafficRoutingTimeBasedCanary::wrap)
-
-  /**
-   * The configuration for traffic routing when `type` is `CfnTrafficRoutingType.TIME_BASED_LINEAR`.
-   *
-   * Default: - none
-   */
-  public fun timeBasedLinear(): CfnTrafficRoutingTimeBasedLinear? =
-      unwrap(this).getTimeBasedLinear()?.let(CfnTrafficRoutingTimeBasedLinear::wrap)
-
-  /**
-   * The type of traffic shifting used by the blue-green deployment configuration.
-   */
-  public fun type(): CfnTrafficRoutingType
-
-  /**
-   * A builder for [CfnTrafficRoutingConfig]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param timeBasedCanary The configuration for traffic routing when `type` is
-     * `CfnTrafficRoutingType.TIME_BASED_CANARY`.
-     */
-    public fun timeBasedCanary(timeBasedCanary: CfnTrafficRoutingTimeBasedCanary)
-
-    /**
-     * @param timeBasedCanary The configuration for traffic routing when `type` is
-     * `CfnTrafficRoutingType.TIME_BASED_CANARY`.
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("c2f18a4c00dee6b1717fe36ccb423739ed976d7942ee012bb49626ecfa8f6d32")
-    public fun timeBasedCanary(timeBasedCanary: CfnTrafficRoutingTimeBasedCanary.Builder.() -> Unit)
-
-    /**
-     * @param timeBasedLinear The configuration for traffic routing when `type` is
-     * `CfnTrafficRoutingType.TIME_BASED_LINEAR`.
-     */
-    public fun timeBasedLinear(timeBasedLinear: CfnTrafficRoutingTimeBasedLinear)
-
-    /**
-     * @param timeBasedLinear The configuration for traffic routing when `type` is
-     * `CfnTrafficRoutingType.TIME_BASED_LINEAR`.
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("4673ccdf5a8b5ba95ef4c0e7c337fca978ab5873ea1eddbdc5b40984ac4bbb70")
-    public fun timeBasedLinear(timeBasedLinear: CfnTrafficRoutingTimeBasedLinear.Builder.() -> Unit)
-
-    /**
-     * @param type The type of traffic shifting used by the blue-green deployment configuration. 
-     */
-    public fun type(type: CfnTrafficRoutingType)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.amazon.awscdk.CfnTrafficRoutingConfig.Builder =
-        software.amazon.awscdk.CfnTrafficRoutingConfig.builder()
-
-    /**
-     * @param timeBasedCanary The configuration for traffic routing when `type` is
-     * `CfnTrafficRoutingType.TIME_BASED_CANARY`.
-     */
-    override fun timeBasedCanary(timeBasedCanary: CfnTrafficRoutingTimeBasedCanary) {
-      cdkBuilder.timeBasedCanary(timeBasedCanary.let(CfnTrafficRoutingTimeBasedCanary::unwrap))
-    }
-
-    /**
-     * @param timeBasedCanary The configuration for traffic routing when `type` is
-     * `CfnTrafficRoutingType.TIME_BASED_CANARY`.
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("c2f18a4c00dee6b1717fe36ccb423739ed976d7942ee012bb49626ecfa8f6d32")
-    override
-        fun timeBasedCanary(timeBasedCanary: CfnTrafficRoutingTimeBasedCanary.Builder.() -> Unit):
-        Unit = timeBasedCanary(CfnTrafficRoutingTimeBasedCanary(timeBasedCanary))
-
-    /**
-     * @param timeBasedLinear The configuration for traffic routing when `type` is
-     * `CfnTrafficRoutingType.TIME_BASED_LINEAR`.
-     */
-    override fun timeBasedLinear(timeBasedLinear: CfnTrafficRoutingTimeBasedLinear) {
-      cdkBuilder.timeBasedLinear(timeBasedLinear.let(CfnTrafficRoutingTimeBasedLinear::unwrap))
-    }
-
-    /**
-     * @param timeBasedLinear The configuration for traffic routing when `type` is
-     * `CfnTrafficRoutingType.TIME_BASED_LINEAR`.
-     */
-    @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("4673ccdf5a8b5ba95ef4c0e7c337fca978ab5873ea1eddbdc5b40984ac4bbb70")
-    override
-        fun timeBasedLinear(timeBasedLinear: CfnTrafficRoutingTimeBasedLinear.Builder.() -> Unit):
-        Unit = timeBasedLinear(CfnTrafficRoutingTimeBasedLinear(timeBasedLinear))
-
-    /**
-     * @param type The type of traffic shifting used by the blue-green deployment configuration. 
-     */
-    override fun type(type: CfnTrafficRoutingType) {
-      cdkBuilder.type(type.let(CfnTrafficRoutingType::unwrap))
-    }
-
-    public fun build(): software.amazon.awscdk.CfnTrafficRoutingConfig = cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.CfnTrafficRoutingConfig,
-  ) : CfnTrafficRoutingConfig {
     /**
      * The configuration for traffic routing when `type` is
      * `CfnTrafficRoutingType.TIME_BASED_CANARY`.
      *
      * Default: - none
      */
-    override fun timeBasedCanary(): CfnTrafficRoutingTimeBasedCanary? =
+    public fun timeBasedCanary(): CfnTrafficRoutingTimeBasedCanary? =
         unwrap(this).getTimeBasedCanary()?.let(CfnTrafficRoutingTimeBasedCanary::wrap)
 
     /**
@@ -134,30 +21,148 @@ public interface CfnTrafficRoutingConfig {
      *
      * Default: - none
      */
-    override fun timeBasedLinear(): CfnTrafficRoutingTimeBasedLinear? =
+    public fun timeBasedLinear(): CfnTrafficRoutingTimeBasedLinear? =
         unwrap(this).getTimeBasedLinear()?.let(CfnTrafficRoutingTimeBasedLinear::wrap)
 
-    /**
-     * The type of traffic shifting used by the blue-green deployment configuration.
-     */
-    override fun type(): CfnTrafficRoutingType =
-        unwrap(this).getType().let(CfnTrafficRoutingType::wrap)
-  }
+    /** The type of traffic shifting used by the blue-green deployment configuration. */
+    public fun type(): CfnTrafficRoutingType
 
-  public companion object {
-    init {
+    /** A builder for [CfnTrafficRoutingConfig] */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * @param timeBasedCanary The configuration for traffic routing when `type` is
+         *   `CfnTrafficRoutingType.TIME_BASED_CANARY`.
+         */
+        public fun timeBasedCanary(timeBasedCanary: CfnTrafficRoutingTimeBasedCanary)
 
+        /**
+         * @param timeBasedCanary The configuration for traffic routing when `type` is
+         *   `CfnTrafficRoutingType.TIME_BASED_CANARY`.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("c2f18a4c00dee6b1717fe36ccb423739ed976d7942ee012bb49626ecfa8f6d32")
+        public fun timeBasedCanary(
+            timeBasedCanary: CfnTrafficRoutingTimeBasedCanary.Builder.() -> Unit
+        )
+
+        /**
+         * @param timeBasedLinear The configuration for traffic routing when `type` is
+         *   `CfnTrafficRoutingType.TIME_BASED_LINEAR`.
+         */
+        public fun timeBasedLinear(timeBasedLinear: CfnTrafficRoutingTimeBasedLinear)
+
+        /**
+         * @param timeBasedLinear The configuration for traffic routing when `type` is
+         *   `CfnTrafficRoutingType.TIME_BASED_LINEAR`.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("4673ccdf5a8b5ba95ef4c0e7c337fca978ab5873ea1eddbdc5b40984ac4bbb70")
+        public fun timeBasedLinear(
+            timeBasedLinear: CfnTrafficRoutingTimeBasedLinear.Builder.() -> Unit
+        )
+
+        /**
+         * @param type The type of traffic shifting used by the blue-green deployment configuration.
+         */
+        public fun type(type: CfnTrafficRoutingType)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): CfnTrafficRoutingConfig {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder: software.amazon.awscdk.CfnTrafficRoutingConfig.Builder =
+            software.amazon.awscdk.CfnTrafficRoutingConfig.builder()
+
+        /**
+         * @param timeBasedCanary The configuration for traffic routing when `type` is
+         *   `CfnTrafficRoutingType.TIME_BASED_CANARY`.
+         */
+        override fun timeBasedCanary(timeBasedCanary: CfnTrafficRoutingTimeBasedCanary) {
+            cdkBuilder.timeBasedCanary(
+                timeBasedCanary.let(CfnTrafficRoutingTimeBasedCanary::unwrap)
+            )
+        }
+
+        /**
+         * @param timeBasedCanary The configuration for traffic routing when `type` is
+         *   `CfnTrafficRoutingType.TIME_BASED_CANARY`.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("c2f18a4c00dee6b1717fe36ccb423739ed976d7942ee012bb49626ecfa8f6d32")
+        override fun timeBasedCanary(
+            timeBasedCanary: CfnTrafficRoutingTimeBasedCanary.Builder.() -> Unit
+        ): Unit = timeBasedCanary(CfnTrafficRoutingTimeBasedCanary(timeBasedCanary))
+
+        /**
+         * @param timeBasedLinear The configuration for traffic routing when `type` is
+         *   `CfnTrafficRoutingType.TIME_BASED_LINEAR`.
+         */
+        override fun timeBasedLinear(timeBasedLinear: CfnTrafficRoutingTimeBasedLinear) {
+            cdkBuilder.timeBasedLinear(
+                timeBasedLinear.let(CfnTrafficRoutingTimeBasedLinear::unwrap)
+            )
+        }
+
+        /**
+         * @param timeBasedLinear The configuration for traffic routing when `type` is
+         *   `CfnTrafficRoutingType.TIME_BASED_LINEAR`.
+         */
+        @Suppress("INAPPLICABLE_JVM_NAME")
+        @JvmName("4673ccdf5a8b5ba95ef4c0e7c337fca978ab5873ea1eddbdc5b40984ac4bbb70")
+        override fun timeBasedLinear(
+            timeBasedLinear: CfnTrafficRoutingTimeBasedLinear.Builder.() -> Unit
+        ): Unit = timeBasedLinear(CfnTrafficRoutingTimeBasedLinear(timeBasedLinear))
+
+        /**
+         * @param type The type of traffic shifting used by the blue-green deployment configuration.
+         */
+        override fun type(type: CfnTrafficRoutingType) {
+            cdkBuilder.type(type.let(CfnTrafficRoutingType::unwrap))
+        }
+
+        public fun build(): software.amazon.awscdk.CfnTrafficRoutingConfig = cdkBuilder.build()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.CfnTrafficRoutingConfig):
-        CfnTrafficRoutingConfig = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.CfnTrafficRoutingConfig,
+    ) : CfnTrafficRoutingConfig {
+        /**
+         * The configuration for traffic routing when `type` is
+         * `CfnTrafficRoutingType.TIME_BASED_CANARY`.
+         *
+         * Default: - none
+         */
+        override fun timeBasedCanary(): CfnTrafficRoutingTimeBasedCanary? =
+            unwrap(this).getTimeBasedCanary()?.let(CfnTrafficRoutingTimeBasedCanary::wrap)
 
-    internal fun unwrap(wrapped: CfnTrafficRoutingConfig):
-        software.amazon.awscdk.CfnTrafficRoutingConfig = (wrapped as Wrapper).cdkObject
-  }
+        /**
+         * The configuration for traffic routing when `type` is
+         * `CfnTrafficRoutingType.TIME_BASED_LINEAR`.
+         *
+         * Default: - none
+         */
+        override fun timeBasedLinear(): CfnTrafficRoutingTimeBasedLinear? =
+            unwrap(this).getTimeBasedLinear()?.let(CfnTrafficRoutingTimeBasedLinear::wrap)
+
+        /** The type of traffic shifting used by the blue-green deployment configuration. */
+        override fun type(): CfnTrafficRoutingType =
+            unwrap(this).getType().let(CfnTrafficRoutingType::wrap)
+    }
+
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): CfnTrafficRoutingConfig {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.CfnTrafficRoutingConfig
+        ): CfnTrafficRoutingConfig = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: CfnTrafficRoutingConfig
+        ): software.amazon.awscdk.CfnTrafficRoutingConfig = (wrapped as Wrapper).cdkObject
+    }
 }

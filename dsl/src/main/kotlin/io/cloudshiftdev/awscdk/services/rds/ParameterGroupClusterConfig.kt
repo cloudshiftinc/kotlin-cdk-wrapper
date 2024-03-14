@@ -5,61 +5,53 @@ import kotlin.String
 import kotlin.Unit
 
 public interface ParameterGroupClusterConfig {
-  /**
-   * The name of this parameter group.
-   */
-  public fun parameterGroupName(): String
+    /** The name of this parameter group. */
+    public fun parameterGroupName(): String
 
-  /**
-   * A builder for [ParameterGroupClusterConfig]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param parameterGroupName The name of this parameter group. 
-     */
-    public fun parameterGroupName(parameterGroupName: String)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.rds.ParameterGroupClusterConfig.Builder
-        = software.amazon.awscdk.services.rds.ParameterGroupClusterConfig.builder()
-
-    /**
-     * @param parameterGroupName The name of this parameter group. 
-     */
-    override fun parameterGroupName(parameterGroupName: String) {
-      cdkBuilder.parameterGroupName(parameterGroupName)
+    /** A builder for [ParameterGroupClusterConfig] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param parameterGroupName The name of this parameter group. */
+        public fun parameterGroupName(parameterGroupName: String)
     }
 
-    public fun build(): software.amazon.awscdk.services.rds.ParameterGroupClusterConfig =
-        cdkBuilder.build()
-  }
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.rds.ParameterGroupClusterConfig.Builder =
+            software.amazon.awscdk.services.rds.ParameterGroupClusterConfig.builder()
 
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.rds.ParameterGroupClusterConfig,
-  ) : ParameterGroupClusterConfig {
-    /**
-     * The name of this parameter group.
-     */
-    override fun parameterGroupName(): String = unwrap(this).getParameterGroupName()
-  }
+        /** @param parameterGroupName The name of this parameter group. */
+        override fun parameterGroupName(parameterGroupName: String) {
+            cdkBuilder.parameterGroupName(parameterGroupName)
+        }
 
-  public companion object {
-    init {
-
+        public fun build(): software.amazon.awscdk.services.rds.ParameterGroupClusterConfig =
+            cdkBuilder.build()
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): ParameterGroupClusterConfig {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.rds.ParameterGroupClusterConfig,
+    ) : ParameterGroupClusterConfig {
+        /** The name of this parameter group. */
+        override fun parameterGroupName(): String = unwrap(this).getParameterGroupName()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.ParameterGroupClusterConfig):
-        ParameterGroupClusterConfig = Wrapper(cdkObject)
+    public companion object {
+        init {}
 
-    internal fun unwrap(wrapped: ParameterGroupClusterConfig):
-        software.amazon.awscdk.services.rds.ParameterGroupClusterConfig = (wrapped as
-        Wrapper).cdkObject
-  }
+        public operator fun invoke(block: Builder.() -> Unit = {}): ParameterGroupClusterConfig {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.rds.ParameterGroupClusterConfig
+        ): ParameterGroupClusterConfig = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: ParameterGroupClusterConfig
+        ): software.amazon.awscdk.services.rds.ParameterGroupClusterConfig =
+            (wrapped as Wrapper).cdkObject
+    }
 }

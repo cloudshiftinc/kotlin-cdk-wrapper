@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -15,2395 +16,2284 @@ import kotlin.Suppress
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnWorkflow internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow,
+public open class CfnWorkflow
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
-  /**
-   * Specifies the unique Amazon Resource Name (ARN) for the workflow.
-   */
-  public open fun attrArn(): String = unwrap(this).getAttrArn()
+    /** Specifies the unique Amazon Resource Name (ARN) for the workflow. */
+    public open fun attrArn(): String = unwrap(this).getAttrArn()
 
-  /**
-   * A unique identifier for a workflow.
-   */
-  public open fun attrWorkflowId(): String = unwrap(this).getAttrWorkflowId()
+    /** A unique identifier for a workflow. */
+    public open fun attrWorkflowId(): String = unwrap(this).getAttrWorkflowId()
 
-  /**
-   * Specifies the text description for the workflow.
-   */
-  public open fun description(): String? = unwrap(this).getDescription()
+    /** Specifies the text description for the workflow. */
+    public open fun description(): String? = unwrap(this).getDescription()
 
-  /**
-   * Specifies the text description for the workflow.
-   */
-  public open fun description(`value`: String) {
-    unwrap(this).setDescription(`value`)
-  }
-
-  /**
-   * Examines the CloudFormation resource and discloses attributes.
-   *
-   * @param inspector tree inspector to collect and process attributes. 
-   */
-  public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-  }
-
-  /**
-   * Specifies the steps (actions) to take if errors are encountered during execution of the
-   * workflow.
-   */
-  public open fun onExceptionSteps(): Any? = unwrap(this).getOnExceptionSteps()
-
-  /**
-   * Specifies the steps (actions) to take if errors are encountered during execution of the
-   * workflow.
-   */
-  public open fun onExceptionSteps(`value`: IResolvable) {
-    unwrap(this).setOnExceptionSteps(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * Specifies the steps (actions) to take if errors are encountered during execution of the
-   * workflow.
-   */
-  public open fun onExceptionSteps(__idx_ac66f0: List<Any>) {
-    unwrap(this).setOnExceptionSteps(__idx_ac66f0)
-  }
-
-  /**
-   * Specifies the steps (actions) to take if errors are encountered during execution of the
-   * workflow.
-   */
-  public open fun onExceptionSteps(vararg __idx_ac66f0: Any): Unit =
-      onExceptionSteps(__idx_ac66f0.toList())
-
-  /**
-   * Specifies the details for the steps that are in the specified workflow.
-   */
-  public open fun steps(): Any = unwrap(this).getSteps()
-
-  /**
-   * Specifies the details for the steps that are in the specified workflow.
-   */
-  public open fun steps(`value`: IResolvable) {
-    unwrap(this).setSteps(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * Specifies the details for the steps that are in the specified workflow.
-   */
-  public open fun steps(__idx_ac66f0: List<Any>) {
-    unwrap(this).setSteps(__idx_ac66f0)
-  }
-
-  /**
-   * Specifies the details for the steps that are in the specified workflow.
-   */
-  public open fun steps(vararg __idx_ac66f0: Any): Unit = steps(__idx_ac66f0.toList())
-
-  /**
-   * Tag Manager which manages the tags for this resource.
-   */
-  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
-
-  /**
-   * Key-value pairs that can be used to group and search for workflows.
-   */
-  public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
-      emptyList()
-
-  /**
-   * Key-value pairs that can be used to group and search for workflows.
-   */
-  public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
-  }
-
-  /**
-   * Key-value pairs that can be used to group and search for workflows.
-   */
-  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
-
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.transfer.CfnWorkflow].
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * Specifies the text description for the workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-description)
-     * @param description Specifies the text description for the workflow. 
-     */
-    public fun description(description: String)
+    /** Specifies the text description for the workflow. */
+    public open fun description(`value`: String) {
+        unwrap(this).setDescription(`value`)
+    }
 
     /**
-     * Specifies the steps (actions) to take if errors are encountered during execution of the
-     * workflow.
+     * Examines the CloudFormation resource and discloses attributes.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-onexceptionsteps)
-     * @param onExceptionSteps Specifies the steps (actions) to take if errors are encountered
-     * during execution of the workflow. 
+     * @param inspector tree inspector to collect and process attributes.
      */
-    public fun onExceptionSteps(onExceptionSteps: IResolvable)
-
-    /**
-     * Specifies the steps (actions) to take if errors are encountered during execution of the
-     * workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-onexceptionsteps)
-     * @param onExceptionSteps Specifies the steps (actions) to take if errors are encountered
-     * during execution of the workflow. 
-     */
-    public fun onExceptionSteps(onExceptionSteps: List<Any>)
-
-    /**
-     * Specifies the steps (actions) to take if errors are encountered during execution of the
-     * workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-onexceptionsteps)
-     * @param onExceptionSteps Specifies the steps (actions) to take if errors are encountered
-     * during execution of the workflow. 
-     */
-    public fun onExceptionSteps(vararg onExceptionSteps: Any)
-
-    /**
-     * Specifies the details for the steps that are in the specified workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-steps)
-     * @param steps Specifies the details for the steps that are in the specified workflow. 
-     */
-    public fun steps(steps: IResolvable)
-
-    /**
-     * Specifies the details for the steps that are in the specified workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-steps)
-     * @param steps Specifies the details for the steps that are in the specified workflow. 
-     */
-    public fun steps(steps: List<Any>)
-
-    /**
-     * Specifies the details for the steps that are in the specified workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-steps)
-     * @param steps Specifies the details for the steps that are in the specified workflow. 
-     */
-    public fun steps(vararg steps: Any)
-
-    /**
-     * Key-value pairs that can be used to group and search for workflows.
-     *
-     * Tags are metadata attached to workflows for any purpose.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-tags)
-     * @param tags Key-value pairs that can be used to group and search for workflows. 
-     */
-    public fun tags(tags: List<CfnTag>)
-
-    /**
-     * Key-value pairs that can be used to group and search for workflows.
-     *
-     * Tags are metadata attached to workflows for any purpose.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-tags)
-     * @param tags Key-value pairs that can be used to group and search for workflows. 
-     */
-    public fun tags(vararg tags: CfnTag)
-  }
-
-  private class BuilderImpl(
-    scope: SoftwareConstructsConstruct,
-    id: String,
-  ) : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.transfer.CfnWorkflow.Builder =
-        software.amazon.awscdk.services.transfer.CfnWorkflow.Builder.create(scope, id)
-
-    /**
-     * Specifies the text description for the workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-description)
-     * @param description Specifies the text description for the workflow. 
-     */
-    override fun description(description: String) {
-      cdkBuilder.description(description)
+    public override fun inspect(inspector: TreeInspector) {
+        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
     }
 
     /**
      * Specifies the steps (actions) to take if errors are encountered during execution of the
      * workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-onexceptionsteps)
-     * @param onExceptionSteps Specifies the steps (actions) to take if errors are encountered
-     * during execution of the workflow. 
      */
-    override fun onExceptionSteps(onExceptionSteps: IResolvable) {
-      cdkBuilder.onExceptionSteps(onExceptionSteps.let(IResolvable::unwrap))
+    public open fun onExceptionSteps(): Any? = unwrap(this).getOnExceptionSteps()
+
+    /**
+     * Specifies the steps (actions) to take if errors are encountered during execution of the
+     * workflow.
+     */
+    public open fun onExceptionSteps(`value`: IResolvable) {
+        unwrap(this).setOnExceptionSteps(`value`.let(IResolvable::unwrap))
     }
 
     /**
      * Specifies the steps (actions) to take if errors are encountered during execution of the
      * workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-onexceptionsteps)
-     * @param onExceptionSteps Specifies the steps (actions) to take if errors are encountered
-     * during execution of the workflow. 
      */
-    override fun onExceptionSteps(onExceptionSteps: List<Any>) {
-      cdkBuilder.onExceptionSteps(onExceptionSteps)
+    public open fun onExceptionSteps(__idx_ac66f0: List<Any>) {
+        unwrap(this).setOnExceptionSteps(__idx_ac66f0)
     }
 
     /**
      * Specifies the steps (actions) to take if errors are encountered during execution of the
      * workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-onexceptionsteps)
-     * @param onExceptionSteps Specifies the steps (actions) to take if errors are encountered
-     * during execution of the workflow. 
      */
-    override fun onExceptionSteps(vararg onExceptionSteps: Any): Unit =
-        onExceptionSteps(onExceptionSteps.toList())
+    public open fun onExceptionSteps(vararg __idx_ac66f0: Any): Unit =
+        onExceptionSteps(__idx_ac66f0.toList())
 
-    /**
-     * Specifies the details for the steps that are in the specified workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-steps)
-     * @param steps Specifies the details for the steps that are in the specified workflow. 
-     */
-    override fun steps(steps: IResolvable) {
-      cdkBuilder.steps(steps.let(IResolvable::unwrap))
+    /** Specifies the details for the steps that are in the specified workflow. */
+    public open fun steps(): Any = unwrap(this).getSteps()
+
+    /** Specifies the details for the steps that are in the specified workflow. */
+    public open fun steps(`value`: IResolvable) {
+        unwrap(this).setSteps(`value`.let(IResolvable::unwrap))
     }
 
-    /**
-     * Specifies the details for the steps that are in the specified workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-steps)
-     * @param steps Specifies the details for the steps that are in the specified workflow. 
-     */
-    override fun steps(steps: List<Any>) {
-      cdkBuilder.steps(steps)
+    /** Specifies the details for the steps that are in the specified workflow. */
+    public open fun steps(__idx_ac66f0: List<Any>) {
+        unwrap(this).setSteps(__idx_ac66f0)
     }
 
-    /**
-     * Specifies the details for the steps that are in the specified workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-steps)
-     * @param steps Specifies the details for the steps that are in the specified workflow. 
-     */
-    override fun steps(vararg steps: Any): Unit = steps(steps.toList())
+    /** Specifies the details for the steps that are in the specified workflow. */
+    public open fun steps(vararg __idx_ac66f0: Any): Unit = steps(__idx_ac66f0.toList())
 
-    /**
-     * Key-value pairs that can be used to group and search for workflows.
-     *
-     * Tags are metadata attached to workflows for any purpose.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-tags)
-     * @param tags Key-value pairs that can be used to group and search for workflows. 
-     */
-    override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+    /** Tag Manager which manages the tags for this resource. */
+    public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+
+    /** Key-value pairs that can be used to group and search for workflows. */
+    public open fun tagsRaw(): List<CfnTag> =
+        unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?: emptyList()
+
+    /** Key-value pairs that can be used to group and search for workflows. */
+    public open fun tagsRaw(`value`: List<CfnTag>) {
+        unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
     }
 
-    /**
-     * Key-value pairs that can be used to group and search for workflows.
-     *
-     * Tags are metadata attached to workflows for any purpose.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-tags)
-     * @param tags Key-value pairs that can be used to group and search for workflows. 
-     */
-    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+    /** Key-value pairs that can be used to group and search for workflows. */
+    public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
-    public fun build(): software.amazon.awscdk.services.transfer.CfnWorkflow = cdkBuilder.build()
-  }
-
-  public companion object {
-    init {
-
-    }
-
-    public operator fun invoke(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      block: Builder.() -> Unit = {},
-    ): CfnWorkflow {
-      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-      return CfnWorkflow(builderImpl.apply(block).build())
-    }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow): CfnWorkflow
-        = CfnWorkflow(cdkObject)
-
-    internal fun unwrap(wrapped: CfnWorkflow): software.amazon.awscdk.services.transfer.CfnWorkflow
-        = wrapped.cdkObject
-  }
-
-  public interface InputFileLocationProperty {
-    /**
-     * Specifies the details for the Amazon Elastic File System (Amazon EFS) file that's being
-     * decrypted.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-inputfilelocation.html#cfn-transfer-workflow-inputfilelocation-efsfilelocation)
-     */
-    public fun efsFileLocation(): Any? = unwrap(this).getEfsFileLocation()
-
-    /**
-     * Specifies the details for the Amazon S3 file that's being copied or decrypted.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-inputfilelocation.html#cfn-transfer-workflow-inputfilelocation-s3filelocation)
-     */
-    public fun s3FileLocation(): Any? = unwrap(this).getS3FileLocation()
-
-    /**
-     * A builder for [InputFileLocationProperty]
-     */
+    /** A fluent builder for [io.cloudshiftdev.awscdk.services.transfer.CfnWorkflow]. */
     @CdkDslMarker
     public interface Builder {
-      /**
-       * @param efsFileLocation Specifies the details for the Amazon Elastic File System (Amazon
-       * EFS) file that's being decrypted.
-       */
-      public fun efsFileLocation(efsFileLocation: IResolvable)
+        /**
+         * Specifies the text description for the workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-description)
+         *
+         * @param description Specifies the text description for the workflow.
+         */
+        public fun description(description: String)
 
-      /**
-       * @param efsFileLocation Specifies the details for the Amazon Elastic File System (Amazon
-       * EFS) file that's being decrypted.
-       */
-      public fun efsFileLocation(efsFileLocation: EfsInputFileLocationProperty)
+        /**
+         * Specifies the steps (actions) to take if errors are encountered during execution of the
+         * workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-onexceptionsteps)
+         *
+         * @param onExceptionSteps Specifies the steps (actions) to take if errors are encountered
+         *   during execution of the workflow.
+         */
+        public fun onExceptionSteps(onExceptionSteps: IResolvable)
 
-      /**
-       * @param efsFileLocation Specifies the details for the Amazon Elastic File System (Amazon
-       * EFS) file that's being decrypted.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("49397a7dcf7bcd8b504d41c0da5636a27f6146c4157ffa3e9c52044a3e8b0799")
-      public fun efsFileLocation(efsFileLocation: EfsInputFileLocationProperty.Builder.() -> Unit)
+        /**
+         * Specifies the steps (actions) to take if errors are encountered during execution of the
+         * workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-onexceptionsteps)
+         *
+         * @param onExceptionSteps Specifies the steps (actions) to take if errors are encountered
+         *   during execution of the workflow.
+         */
+        public fun onExceptionSteps(onExceptionSteps: List<Any>)
 
-      /**
-       * @param s3FileLocation Specifies the details for the Amazon S3 file that's being copied or
-       * decrypted.
-       */
-      public fun s3FileLocation(s3FileLocation: IResolvable)
+        /**
+         * Specifies the steps (actions) to take if errors are encountered during execution of the
+         * workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-onexceptionsteps)
+         *
+         * @param onExceptionSteps Specifies the steps (actions) to take if errors are encountered
+         *   during execution of the workflow.
+         */
+        public fun onExceptionSteps(vararg onExceptionSteps: Any)
 
-      /**
-       * @param s3FileLocation Specifies the details for the Amazon S3 file that's being copied or
-       * decrypted.
-       */
-      public fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty)
+        /**
+         * Specifies the details for the steps that are in the specified workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-steps)
+         *
+         * @param steps Specifies the details for the steps that are in the specified workflow.
+         */
+        public fun steps(steps: IResolvable)
 
-      /**
-       * @param s3FileLocation Specifies the details for the Amazon S3 file that's being copied or
-       * decrypted.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5be4718862fbc7c4ff9af0f039f9438fbe20f35876c9c4245e4d8ea4a2bb719f")
-      public fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty.Builder.() -> Unit)
+        /**
+         * Specifies the details for the steps that are in the specified workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-steps)
+         *
+         * @param steps Specifies the details for the steps that are in the specified workflow.
+         */
+        public fun steps(steps: List<Any>)
+
+        /**
+         * Specifies the details for the steps that are in the specified workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-steps)
+         *
+         * @param steps Specifies the details for the steps that are in the specified workflow.
+         */
+        public fun steps(vararg steps: Any)
+
+        /**
+         * Key-value pairs that can be used to group and search for workflows.
+         *
+         * Tags are metadata attached to workflows for any purpose.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-tags)
+         *
+         * @param tags Key-value pairs that can be used to group and search for workflows.
+         */
+        public fun tags(tags: List<CfnTag>)
+
+        /**
+         * Key-value pairs that can be used to group and search for workflows.
+         *
+         * Tags are metadata attached to workflows for any purpose.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-tags)
+         *
+         * @param tags Key-value pairs that can be used to group and search for workflows.
+         */
+        public fun tags(vararg tags: CfnTag)
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.InputFileLocationProperty.Builder =
-          software.amazon.awscdk.services.transfer.CfnWorkflow.InputFileLocationProperty.builder()
+    private class BuilderImpl(
+        scope: SoftwareConstructsConstruct,
+        id: String,
+    ) : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.transfer.CfnWorkflow.Builder =
+            software.amazon.awscdk.services.transfer.CfnWorkflow.Builder.create(scope, id)
 
-      /**
-       * @param efsFileLocation Specifies the details for the Amazon Elastic File System (Amazon
-       * EFS) file that's being decrypted.
-       */
-      override fun efsFileLocation(efsFileLocation: IResolvable) {
-        cdkBuilder.efsFileLocation(efsFileLocation.let(IResolvable::unwrap))
-      }
+        /**
+         * Specifies the text description for the workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-description)
+         *
+         * @param description Specifies the text description for the workflow.
+         */
+        override fun description(description: String) {
+            cdkBuilder.description(description)
+        }
 
-      /**
-       * @param efsFileLocation Specifies the details for the Amazon Elastic File System (Amazon
-       * EFS) file that's being decrypted.
-       */
-      override fun efsFileLocation(efsFileLocation: EfsInputFileLocationProperty) {
-        cdkBuilder.efsFileLocation(efsFileLocation.let(EfsInputFileLocationProperty::unwrap))
-      }
+        /**
+         * Specifies the steps (actions) to take if errors are encountered during execution of the
+         * workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-onexceptionsteps)
+         *
+         * @param onExceptionSteps Specifies the steps (actions) to take if errors are encountered
+         *   during execution of the workflow.
+         */
+        override fun onExceptionSteps(onExceptionSteps: IResolvable) {
+            cdkBuilder.onExceptionSteps(onExceptionSteps.let(IResolvable::unwrap))
+        }
 
-      /**
-       * @param efsFileLocation Specifies the details for the Amazon Elastic File System (Amazon
-       * EFS) file that's being decrypted.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("49397a7dcf7bcd8b504d41c0da5636a27f6146c4157ffa3e9c52044a3e8b0799")
-      override
-          fun efsFileLocation(efsFileLocation: EfsInputFileLocationProperty.Builder.() -> Unit):
-          Unit = efsFileLocation(EfsInputFileLocationProperty(efsFileLocation))
+        /**
+         * Specifies the steps (actions) to take if errors are encountered during execution of the
+         * workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-onexceptionsteps)
+         *
+         * @param onExceptionSteps Specifies the steps (actions) to take if errors are encountered
+         *   during execution of the workflow.
+         */
+        override fun onExceptionSteps(onExceptionSteps: List<Any>) {
+            cdkBuilder.onExceptionSteps(onExceptionSteps)
+        }
 
-      /**
-       * @param s3FileLocation Specifies the details for the Amazon S3 file that's being copied or
-       * decrypted.
-       */
-      override fun s3FileLocation(s3FileLocation: IResolvable) {
-        cdkBuilder.s3FileLocation(s3FileLocation.let(IResolvable::unwrap))
-      }
+        /**
+         * Specifies the steps (actions) to take if errors are encountered during execution of the
+         * workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-onexceptionsteps)
+         *
+         * @param onExceptionSteps Specifies the steps (actions) to take if errors are encountered
+         *   during execution of the workflow.
+         */
+        override fun onExceptionSteps(vararg onExceptionSteps: Any): Unit =
+            onExceptionSteps(onExceptionSteps.toList())
 
-      /**
-       * @param s3FileLocation Specifies the details for the Amazon S3 file that's being copied or
-       * decrypted.
-       */
-      override fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty) {
-        cdkBuilder.s3FileLocation(s3FileLocation.let(S3InputFileLocationProperty::unwrap))
-      }
+        /**
+         * Specifies the details for the steps that are in the specified workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-steps)
+         *
+         * @param steps Specifies the details for the steps that are in the specified workflow.
+         */
+        override fun steps(steps: IResolvable) {
+            cdkBuilder.steps(steps.let(IResolvable::unwrap))
+        }
 
-      /**
-       * @param s3FileLocation Specifies the details for the Amazon S3 file that's being copied or
-       * decrypted.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5be4718862fbc7c4ff9af0f039f9438fbe20f35876c9c4245e4d8ea4a2bb719f")
-      override fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty.Builder.() -> Unit):
-          Unit = s3FileLocation(S3InputFileLocationProperty(s3FileLocation))
+        /**
+         * Specifies the details for the steps that are in the specified workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-steps)
+         *
+         * @param steps Specifies the details for the steps that are in the specified workflow.
+         */
+        override fun steps(steps: List<Any>) {
+            cdkBuilder.steps(steps)
+        }
 
-      public fun build():
-          software.amazon.awscdk.services.transfer.CfnWorkflow.InputFileLocationProperty =
-          cdkBuilder.build()
-    }
+        /**
+         * Specifies the details for the steps that are in the specified workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-steps)
+         *
+         * @param steps Specifies the details for the steps that are in the specified workflow.
+         */
+        override fun steps(vararg steps: Any): Unit = steps(steps.toList())
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.InputFileLocationProperty,
-    ) : InputFileLocationProperty {
-      /**
-       * Specifies the details for the Amazon Elastic File System (Amazon EFS) file that's being
-       * decrypted.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-inputfilelocation.html#cfn-transfer-workflow-inputfilelocation-efsfilelocation)
-       */
-      override fun efsFileLocation(): Any? = unwrap(this).getEfsFileLocation()
+        /**
+         * Key-value pairs that can be used to group and search for workflows.
+         *
+         * Tags are metadata attached to workflows for any purpose.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-tags)
+         *
+         * @param tags Key-value pairs that can be used to group and search for workflows.
+         */
+        override fun tags(tags: List<CfnTag>) {
+            cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        }
 
-      /**
-       * Specifies the details for the Amazon S3 file that's being copied or decrypted.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-inputfilelocation.html#cfn-transfer-workflow-inputfilelocation-s3filelocation)
-       */
-      override fun s3FileLocation(): Any? = unwrap(this).getS3FileLocation()
+        /**
+         * Key-value pairs that can be used to group and search for workflows.
+         *
+         * Tags are metadata attached to workflows for any purpose.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-workflow.html#cfn-transfer-workflow-tags)
+         *
+         * @param tags Key-value pairs that can be used to group and search for workflows.
+         */
+        override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+        public fun build(): software.amazon.awscdk.services.transfer.CfnWorkflow =
+            cdkBuilder.build()
     }
 
     public companion object {
-      init {
+        init {}
 
-      }
+        public operator fun invoke(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            block: Builder.() -> Unit = {},
+        ): CfnWorkflow {
+            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+            return CfnWorkflow(builderImpl.apply(block).build())
+        }
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): InputFileLocationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow
+        ): CfnWorkflow = CfnWorkflow(cdkObject)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.InputFileLocationProperty):
-          InputFileLocationProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: InputFileLocationProperty):
-          software.amazon.awscdk.services.transfer.CfnWorkflow.InputFileLocationProperty = (wrapped
-          as Wrapper).cdkObject
-    }
-  }
-
-  public interface EfsInputFileLocationProperty {
-    /**
-     * The identifier of the file system, assigned by Amazon EFS.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-efsinputfilelocation.html#cfn-transfer-workflow-efsinputfilelocation-filesystemid)
-     */
-    public fun fileSystemId(): String? = unwrap(this).getFileSystemId()
-
-    /**
-     * The pathname for the folder being used by a workflow.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-efsinputfilelocation.html#cfn-transfer-workflow-efsinputfilelocation-path)
-     */
-    public fun path(): String? = unwrap(this).getPath()
-
-    /**
-     * A builder for [EfsInputFileLocationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param fileSystemId The identifier of the file system, assigned by Amazon EFS.
-       */
-      public fun fileSystemId(fileSystemId: String)
-
-      /**
-       * @param path The pathname for the folder being used by a workflow.
-       */
-      public fun path(path: String)
+        internal fun unwrap(
+            wrapped: CfnWorkflow
+        ): software.amazon.awscdk.services.transfer.CfnWorkflow = wrapped.cdkObject
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.EfsInputFileLocationProperty.Builder
-          =
-          software.amazon.awscdk.services.transfer.CfnWorkflow.EfsInputFileLocationProperty.builder()
+    public interface InputFileLocationProperty {
+        /**
+         * Specifies the details for the Amazon Elastic File System (Amazon EFS) file that's being
+         * decrypted.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-inputfilelocation.html#cfn-transfer-workflow-inputfilelocation-efsfilelocation)
+         */
+        public fun efsFileLocation(): Any? = unwrap(this).getEfsFileLocation()
 
-      /**
-       * @param fileSystemId The identifier of the file system, assigned by Amazon EFS.
-       */
-      override fun fileSystemId(fileSystemId: String) {
-        cdkBuilder.fileSystemId(fileSystemId)
-      }
+        /**
+         * Specifies the details for the Amazon S3 file that's being copied or decrypted.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-inputfilelocation.html#cfn-transfer-workflow-inputfilelocation-s3filelocation)
+         */
+        public fun s3FileLocation(): Any? = unwrap(this).getS3FileLocation()
 
-      /**
-       * @param path The pathname for the folder being used by a workflow.
-       */
-      override fun path(path: String) {
-        cdkBuilder.path(path)
-      }
+        /** A builder for [InputFileLocationProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param efsFileLocation Specifies the details for the Amazon Elastic File System
+             *   (Amazon EFS) file that's being decrypted.
+             */
+            public fun efsFileLocation(efsFileLocation: IResolvable)
 
-      public fun build():
-          software.amazon.awscdk.services.transfer.CfnWorkflow.EfsInputFileLocationProperty =
-          cdkBuilder.build()
+            /**
+             * @param efsFileLocation Specifies the details for the Amazon Elastic File System
+             *   (Amazon EFS) file that's being decrypted.
+             */
+            public fun efsFileLocation(efsFileLocation: EfsInputFileLocationProperty)
+
+            /**
+             * @param efsFileLocation Specifies the details for the Amazon Elastic File System
+             *   (Amazon EFS) file that's being decrypted.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("49397a7dcf7bcd8b504d41c0da5636a27f6146c4157ffa3e9c52044a3e8b0799")
+            public fun efsFileLocation(
+                efsFileLocation: EfsInputFileLocationProperty.Builder.() -> Unit
+            )
+
+            /**
+             * @param s3FileLocation Specifies the details for the Amazon S3 file that's being
+             *   copied or decrypted.
+             */
+            public fun s3FileLocation(s3FileLocation: IResolvable)
+
+            /**
+             * @param s3FileLocation Specifies the details for the Amazon S3 file that's being
+             *   copied or decrypted.
+             */
+            public fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty)
+
+            /**
+             * @param s3FileLocation Specifies the details for the Amazon S3 file that's being
+             *   copied or decrypted.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("5be4718862fbc7c4ff9af0f039f9438fbe20f35876c9c4245e4d8ea4a2bb719f")
+            public fun s3FileLocation(
+                s3FileLocation: S3InputFileLocationProperty.Builder.() -> Unit
+            )
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.transfer.CfnWorkflow.InputFileLocationProperty.Builder =
+                software.amazon.awscdk.services.transfer.CfnWorkflow.InputFileLocationProperty
+                    .builder()
+
+            /**
+             * @param efsFileLocation Specifies the details for the Amazon Elastic File System
+             *   (Amazon EFS) file that's being decrypted.
+             */
+            override fun efsFileLocation(efsFileLocation: IResolvable) {
+                cdkBuilder.efsFileLocation(efsFileLocation.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param efsFileLocation Specifies the details for the Amazon Elastic File System
+             *   (Amazon EFS) file that's being decrypted.
+             */
+            override fun efsFileLocation(efsFileLocation: EfsInputFileLocationProperty) {
+                cdkBuilder.efsFileLocation(
+                    efsFileLocation.let(EfsInputFileLocationProperty::unwrap)
+                )
+            }
+
+            /**
+             * @param efsFileLocation Specifies the details for the Amazon Elastic File System
+             *   (Amazon EFS) file that's being decrypted.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("49397a7dcf7bcd8b504d41c0da5636a27f6146c4157ffa3e9c52044a3e8b0799")
+            override fun efsFileLocation(
+                efsFileLocation: EfsInputFileLocationProperty.Builder.() -> Unit
+            ): Unit = efsFileLocation(EfsInputFileLocationProperty(efsFileLocation))
+
+            /**
+             * @param s3FileLocation Specifies the details for the Amazon S3 file that's being
+             *   copied or decrypted.
+             */
+            override fun s3FileLocation(s3FileLocation: IResolvable) {
+                cdkBuilder.s3FileLocation(s3FileLocation.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param s3FileLocation Specifies the details for the Amazon S3 file that's being
+             *   copied or decrypted.
+             */
+            override fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty) {
+                cdkBuilder.s3FileLocation(s3FileLocation.let(S3InputFileLocationProperty::unwrap))
+            }
+
+            /**
+             * @param s3FileLocation Specifies the details for the Amazon S3 file that's being
+             *   copied or decrypted.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("5be4718862fbc7c4ff9af0f039f9438fbe20f35876c9c4245e4d8ea4a2bb719f")
+            override fun s3FileLocation(
+                s3FileLocation: S3InputFileLocationProperty.Builder.() -> Unit
+            ): Unit = s3FileLocation(S3InputFileLocationProperty(s3FileLocation))
+
+            public fun build():
+                software.amazon.awscdk.services.transfer.CfnWorkflow.InputFileLocationProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.transfer.CfnWorkflow.InputFileLocationProperty,
+        ) : InputFileLocationProperty {
+            /**
+             * Specifies the details for the Amazon Elastic File System (Amazon EFS) file that's
+             * being decrypted.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-inputfilelocation.html#cfn-transfer-workflow-inputfilelocation-efsfilelocation)
+             */
+            override fun efsFileLocation(): Any? = unwrap(this).getEfsFileLocation()
+
+            /**
+             * Specifies the details for the Amazon S3 file that's being copied or decrypted.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-inputfilelocation.html#cfn-transfer-workflow-inputfilelocation-s3filelocation)
+             */
+            override fun s3FileLocation(): Any? = unwrap(this).getS3FileLocation()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): InputFileLocationProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.transfer.CfnWorkflow.InputFileLocationProperty
+            ): InputFileLocationProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: InputFileLocationProperty
+            ): software.amazon.awscdk.services.transfer.CfnWorkflow.InputFileLocationProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.EfsInputFileLocationProperty,
-    ) : EfsInputFileLocationProperty {
-      /**
-       * The identifier of the file system, assigned by Amazon EFS.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-efsinputfilelocation.html#cfn-transfer-workflow-efsinputfilelocation-filesystemid)
-       */
-      override fun fileSystemId(): String? = unwrap(this).getFileSystemId()
+    public interface EfsInputFileLocationProperty {
+        /**
+         * The identifier of the file system, assigned by Amazon EFS.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-efsinputfilelocation.html#cfn-transfer-workflow-efsinputfilelocation-filesystemid)
+         */
+        public fun fileSystemId(): String? = unwrap(this).getFileSystemId()
 
-      /**
-       * The pathname for the folder being used by a workflow.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-efsinputfilelocation.html#cfn-transfer-workflow-efsinputfilelocation-path)
-       */
-      override fun path(): String? = unwrap(this).getPath()
+        /**
+         * The pathname for the folder being used by a workflow.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-efsinputfilelocation.html#cfn-transfer-workflow-efsinputfilelocation-path)
+         */
+        public fun path(): String? = unwrap(this).getPath()
+
+        /** A builder for [EfsInputFileLocationProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param fileSystemId The identifier of the file system, assigned by Amazon EFS. */
+            public fun fileSystemId(fileSystemId: String)
+
+            /** @param path The pathname for the folder being used by a workflow. */
+            public fun path(path: String)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.transfer.CfnWorkflow.EfsInputFileLocationProperty.Builder =
+                software.amazon.awscdk.services.transfer.CfnWorkflow.EfsInputFileLocationProperty
+                    .builder()
+
+            /** @param fileSystemId The identifier of the file system, assigned by Amazon EFS. */
+            override fun fileSystemId(fileSystemId: String) {
+                cdkBuilder.fileSystemId(fileSystemId)
+            }
+
+            /** @param path The pathname for the folder being used by a workflow. */
+            override fun path(path: String) {
+                cdkBuilder.path(path)
+            }
+
+            public fun build():
+                software.amazon.awscdk.services.transfer.CfnWorkflow.EfsInputFileLocationProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.transfer.CfnWorkflow.EfsInputFileLocationProperty,
+        ) : EfsInputFileLocationProperty {
+            /**
+             * The identifier of the file system, assigned by Amazon EFS.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-efsinputfilelocation.html#cfn-transfer-workflow-efsinputfilelocation-filesystemid)
+             */
+            override fun fileSystemId(): String? = unwrap(this).getFileSystemId()
+
+            /**
+             * The pathname for the folder being used by a workflow.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-efsinputfilelocation.html#cfn-transfer-workflow-efsinputfilelocation-path)
+             */
+            override fun path(): String? = unwrap(this).getPath()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(
+                block: Builder.() -> Unit = {}
+            ): EfsInputFileLocationProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.transfer.CfnWorkflow.EfsInputFileLocationProperty
+            ): EfsInputFileLocationProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: EfsInputFileLocationProperty
+            ): software.amazon.awscdk.services.transfer.CfnWorkflow.EfsInputFileLocationProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface DecryptStepDetailsProperty {
+        /**
+         * Specifies the location for the file being decrypted.
+         *
+         * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
+         * destination prefix by username or uploaded date.
+         * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to decrypt
+         *   uploaded files to an Amazon S3 bucket that is prefixed with the name of the Transfer
+         *   Family user that uploaded the file.
+         * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to decrypt
+         *   uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
+         *
+         * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date the
+         * file is uploaded in UTC.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-destinationfilelocation)
+         */
+        public fun destinationFileLocation(): Any? = unwrap(this).getDestinationFileLocation()
 
-      }
+        /**
+         * The name of the step, used as an identifier.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-name)
+         */
+        public fun name(): String? = unwrap(this).getName()
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): EfsInputFileLocationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /**
+         * A flag that indicates whether to overwrite an existing file of the same name. The default
+         * is `FALSE` .
+         *
+         * If the workflow is processing a file that has the same name as an existing file, the
+         * behavior is as follows:
+         * * If `OverwriteExisting` is `TRUE` , the existing file is replaced with the file being
+         *   processed.
+         * * If `OverwriteExisting` is `FALSE` , nothing happens, and the workflow processing stops.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-overwriteexisting)
+         */
+        public fun overwriteExisting(): String? = unwrap(this).getOverwriteExisting()
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.EfsInputFileLocationProperty):
-          EfsInputFileLocationProperty = Wrapper(cdkObject)
+        /**
+         * Specifies which file to use as input to the workflow step: either the output from the
+         * previous step, or the originally uploaded file for the workflow.
+         * * To use the previous file as the input, enter `${previous.file}` . In this case, this
+         *   workflow step uses the output file from the previous workflow step as input. This is
+         *   the default value.
+         * * To use the originally uploaded file location as input for this step, enter
+         *   `${original.file}` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-sourcefilelocation)
+         */
+        public fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
 
-      internal fun unwrap(wrapped: EfsInputFileLocationProperty):
-          software.amazon.awscdk.services.transfer.CfnWorkflow.EfsInputFileLocationProperty =
-          (wrapped as Wrapper).cdkObject
-    }
-  }
+        /**
+         * The type of encryption used.
+         *
+         * Currently, this value must be `PGP` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-type)
+         */
+        public fun type(): String? = unwrap(this).getType()
 
-  public interface DecryptStepDetailsProperty {
-    /**
-     * Specifies the location for the file being decrypted.
-     *
-     * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
-     * destination prefix by username or uploaded date.
-     *
-     * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to decrypt uploaded
-     * files to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that
-     * uploaded the file.
-     * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to decrypt uploaded
-     * files to an Amazon S3 bucket that is prefixed with the date of the upload.
-     *
-     *
-     * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date the
-     * file is uploaded in UTC.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-destinationfilelocation)
-     */
-    public fun destinationFileLocation(): Any? = unwrap(this).getDestinationFileLocation()
+        /** A builder for [DecryptStepDetailsProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param destinationFileLocation Specifies the location for the file being decrypted.
+             *   Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize
+             *   the destination prefix by username or uploaded date.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to decrypt
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the name of the
+             *   Transfer Family user that uploaded the file.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to decrypt
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
+             *
+             * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date
+             * the file is uploaded in UTC.
+             */
+            public fun destinationFileLocation(destinationFileLocation: IResolvable)
 
-    /**
-     * The name of the step, used as an identifier.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
+            /**
+             * @param destinationFileLocation Specifies the location for the file being decrypted.
+             *   Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize
+             *   the destination prefix by username or uploaded date.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to decrypt
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the name of the
+             *   Transfer Family user that uploaded the file.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to decrypt
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
+             *
+             * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date
+             * the file is uploaded in UTC.
+             */
+            public fun destinationFileLocation(destinationFileLocation: InputFileLocationProperty)
 
-    /**
-     * A flag that indicates whether to overwrite an existing file of the same name. The default is
-     * `FALSE` .
-     *
-     * If the workflow is processing a file that has the same name as an existing file, the behavior
-     * is as follows:
-     *
-     * * If `OverwriteExisting` is `TRUE` , the existing file is replaced with the file being
-     * processed.
-     * * If `OverwriteExisting` is `FALSE` , nothing happens, and the workflow processing stops.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-overwriteexisting)
-     */
-    public fun overwriteExisting(): String? = unwrap(this).getOverwriteExisting()
+            /**
+             * @param destinationFileLocation Specifies the location for the file being decrypted.
+             *   Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize
+             *   the destination prefix by username or uploaded date.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to decrypt
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the name of the
+             *   Transfer Family user that uploaded the file.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to decrypt
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
+             *
+             * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date
+             * the file is uploaded in UTC.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("28d206b1fd4837a7686be621f37592cc66f513ac0d25d20a550e090b4817ddba")
+            public fun destinationFileLocation(
+                destinationFileLocation: InputFileLocationProperty.Builder.() -> Unit
+            )
 
-    /**
-     * Specifies which file to use as input to the workflow step: either the output from the
-     * previous step, or the originally uploaded file for the workflow.
-     *
-     * * To use the previous file as the input, enter `${previous.file}` . In this case, this
-     * workflow step uses the output file from the previous workflow step as input. This is the default
-     * value.
-     * * To use the originally uploaded file location as input for this step, enter
-     * `${original.file}` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-sourcefilelocation)
-     */
-    public fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
+            /** @param name The name of the step, used as an identifier. */
+            public fun name(name: String)
 
-    /**
-     * The type of encryption used.
-     *
-     * Currently, this value must be `PGP` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
+            /**
+             * @param overwriteExisting A flag that indicates whether to overwrite an existing file
+             *   of the same name. The default is `FALSE` . If the workflow is processing a file
+             *   that has the same name as an existing file, the behavior is as follows:
+             * * If `OverwriteExisting` is `TRUE` , the existing file is replaced with the file
+             *   being processed.
+             * * If `OverwriteExisting` is `FALSE` , nothing happens, and the workflow processing
+             *   stops.
+             */
+            public fun overwriteExisting(overwriteExisting: String)
 
-    /**
-     * A builder for [DecryptStepDetailsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param destinationFileLocation Specifies the location for the file being decrypted.
-       * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
-       * destination prefix by username or uploaded date.
-       *
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to decrypt uploaded
-       * files to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that
-       * uploaded the file.
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to decrypt
-       * uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
-       *
-       *
-       * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date the
-       * file is uploaded in UTC.
-       */
-      public fun destinationFileLocation(destinationFileLocation: IResolvable)
+            /**
+             * @param sourceFileLocation Specifies which file to use as input to the workflow step:
+             *   either the output from the previous step, or the originally uploaded file for the
+             *   workflow.
+             * * To use the previous file as the input, enter `${previous.file}` . In this case,
+             *   this workflow step uses the output file from the previous workflow step as input.
+             *   This is the default value.
+             * * To use the originally uploaded file location as input for this step, enter
+             *   `${original.file}` .
+             */
+            public fun sourceFileLocation(sourceFileLocation: String)
 
-      /**
-       * @param destinationFileLocation Specifies the location for the file being decrypted.
-       * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
-       * destination prefix by username or uploaded date.
-       *
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to decrypt uploaded
-       * files to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that
-       * uploaded the file.
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to decrypt
-       * uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
-       *
-       *
-       * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date the
-       * file is uploaded in UTC.
-       */
-      public fun destinationFileLocation(destinationFileLocation: InputFileLocationProperty)
+            /** @param type The type of encryption used. Currently, this value must be `PGP` . */
+            public fun type(type: String)
+        }
 
-      /**
-       * @param destinationFileLocation Specifies the location for the file being decrypted.
-       * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
-       * destination prefix by username or uploaded date.
-       *
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to decrypt uploaded
-       * files to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that
-       * uploaded the file.
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to decrypt
-       * uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
-       *
-       *
-       * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date the
-       * file is uploaded in UTC.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("28d206b1fd4837a7686be621f37592cc66f513ac0d25d20a550e090b4817ddba")
-      public
-          fun destinationFileLocation(destinationFileLocation: InputFileLocationProperty.Builder.() -> Unit)
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.transfer.CfnWorkflow.DecryptStepDetailsProperty.Builder =
+                software.amazon.awscdk.services.transfer.CfnWorkflow.DecryptStepDetailsProperty
+                    .builder()
 
-      /**
-       * @param name The name of the step, used as an identifier.
-       */
-      public fun name(name: String)
+            /**
+             * @param destinationFileLocation Specifies the location for the file being decrypted.
+             *   Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize
+             *   the destination prefix by username or uploaded date.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to decrypt
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the name of the
+             *   Transfer Family user that uploaded the file.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to decrypt
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
+             *
+             * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date
+             * the file is uploaded in UTC.
+             */
+            override fun destinationFileLocation(destinationFileLocation: IResolvable) {
+                cdkBuilder.destinationFileLocation(destinationFileLocation.let(IResolvable::unwrap))
+            }
 
-      /**
-       * @param overwriteExisting A flag that indicates whether to overwrite an existing file of the
-       * same name. The default is `FALSE` .
-       * If the workflow is processing a file that has the same name as an existing file, the
-       * behavior is as follows:
-       *
-       * * If `OverwriteExisting` is `TRUE` , the existing file is replaced with the file being
-       * processed.
-       * * If `OverwriteExisting` is `FALSE` , nothing happens, and the workflow processing stops.
-       */
-      public fun overwriteExisting(overwriteExisting: String)
+            /**
+             * @param destinationFileLocation Specifies the location for the file being decrypted.
+             *   Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize
+             *   the destination prefix by username or uploaded date.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to decrypt
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the name of the
+             *   Transfer Family user that uploaded the file.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to decrypt
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
+             *
+             * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date
+             * the file is uploaded in UTC.
+             */
+            override fun destinationFileLocation(
+                destinationFileLocation: InputFileLocationProperty
+            ) {
+                cdkBuilder.destinationFileLocation(
+                    destinationFileLocation.let(InputFileLocationProperty::unwrap)
+                )
+            }
 
-      /**
-       * @param sourceFileLocation Specifies which file to use as input to the workflow step: either
-       * the output from the previous step, or the originally uploaded file for the workflow.
-       * * To use the previous file as the input, enter `${previous.file}` . In this case, this
-       * workflow step uses the output file from the previous workflow step as input. This is the
-       * default value.
-       * * To use the originally uploaded file location as input for this step, enter
-       * `${original.file}` .
-       */
-      public fun sourceFileLocation(sourceFileLocation: String)
+            /**
+             * @param destinationFileLocation Specifies the location for the file being decrypted.
+             *   Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize
+             *   the destination prefix by username or uploaded date.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to decrypt
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the name of the
+             *   Transfer Family user that uploaded the file.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to decrypt
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
+             *
+             * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date
+             * the file is uploaded in UTC.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("28d206b1fd4837a7686be621f37592cc66f513ac0d25d20a550e090b4817ddba")
+            override fun destinationFileLocation(
+                destinationFileLocation: InputFileLocationProperty.Builder.() -> Unit
+            ): Unit = destinationFileLocation(InputFileLocationProperty(destinationFileLocation))
 
-      /**
-       * @param type The type of encryption used.
-       * Currently, this value must be `PGP` .
-       */
-      public fun type(type: String)
-    }
+            /** @param name The name of the step, used as an identifier. */
+            override fun name(name: String) {
+                cdkBuilder.name(name)
+            }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.DecryptStepDetailsProperty.Builder =
-          software.amazon.awscdk.services.transfer.CfnWorkflow.DecryptStepDetailsProperty.builder()
+            /**
+             * @param overwriteExisting A flag that indicates whether to overwrite an existing file
+             *   of the same name. The default is `FALSE` . If the workflow is processing a file
+             *   that has the same name as an existing file, the behavior is as follows:
+             * * If `OverwriteExisting` is `TRUE` , the existing file is replaced with the file
+             *   being processed.
+             * * If `OverwriteExisting` is `FALSE` , nothing happens, and the workflow processing
+             *   stops.
+             */
+            override fun overwriteExisting(overwriteExisting: String) {
+                cdkBuilder.overwriteExisting(overwriteExisting)
+            }
 
-      /**
-       * @param destinationFileLocation Specifies the location for the file being decrypted.
-       * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
-       * destination prefix by username or uploaded date.
-       *
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to decrypt uploaded
-       * files to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that
-       * uploaded the file.
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to decrypt
-       * uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
-       *
-       *
-       * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date the
-       * file is uploaded in UTC.
-       */
-      override fun destinationFileLocation(destinationFileLocation: IResolvable) {
-        cdkBuilder.destinationFileLocation(destinationFileLocation.let(IResolvable::unwrap))
-      }
+            /**
+             * @param sourceFileLocation Specifies which file to use as input to the workflow step:
+             *   either the output from the previous step, or the originally uploaded file for the
+             *   workflow.
+             * * To use the previous file as the input, enter `${previous.file}` . In this case,
+             *   this workflow step uses the output file from the previous workflow step as input.
+             *   This is the default value.
+             * * To use the originally uploaded file location as input for this step, enter
+             *   `${original.file}` .
+             */
+            override fun sourceFileLocation(sourceFileLocation: String) {
+                cdkBuilder.sourceFileLocation(sourceFileLocation)
+            }
 
-      /**
-       * @param destinationFileLocation Specifies the location for the file being decrypted.
-       * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
-       * destination prefix by username or uploaded date.
-       *
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to decrypt uploaded
-       * files to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that
-       * uploaded the file.
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to decrypt
-       * uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
-       *
-       *
-       * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date the
-       * file is uploaded in UTC.
-       */
-      override fun destinationFileLocation(destinationFileLocation: InputFileLocationProperty) {
-        cdkBuilder.destinationFileLocation(destinationFileLocation.let(InputFileLocationProperty::unwrap))
-      }
+            /** @param type The type of encryption used. Currently, this value must be `PGP` . */
+            override fun type(type: String) {
+                cdkBuilder.type(type)
+            }
 
-      /**
-       * @param destinationFileLocation Specifies the location for the file being decrypted.
-       * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
-       * destination prefix by username or uploaded date.
-       *
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to decrypt uploaded
-       * files to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that
-       * uploaded the file.
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to decrypt
-       * uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
-       *
-       *
-       * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date the
-       * file is uploaded in UTC.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("28d206b1fd4837a7686be621f37592cc66f513ac0d25d20a550e090b4817ddba")
-      override
-          fun destinationFileLocation(destinationFileLocation: InputFileLocationProperty.Builder.() -> Unit):
-          Unit = destinationFileLocation(InputFileLocationProperty(destinationFileLocation))
+            public fun build():
+                software.amazon.awscdk.services.transfer.CfnWorkflow.DecryptStepDetailsProperty =
+                cdkBuilder.build()
+        }
 
-      /**
-       * @param name The name of the step, used as an identifier.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.transfer.CfnWorkflow.DecryptStepDetailsProperty,
+        ) : DecryptStepDetailsProperty {
+            /**
+             * Specifies the location for the file being decrypted.
+             *
+             * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize
+             * the destination prefix by username or uploaded date.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to decrypt
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the name of the
+             *   Transfer Family user that uploaded the file.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to decrypt
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
+             *
+             * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date
+             * the file is uploaded in UTC.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-destinationfilelocation)
+             */
+            override fun destinationFileLocation(): Any? = unwrap(this).getDestinationFileLocation()
 
-      /**
-       * @param overwriteExisting A flag that indicates whether to overwrite an existing file of the
-       * same name. The default is `FALSE` .
-       * If the workflow is processing a file that has the same name as an existing file, the
-       * behavior is as follows:
-       *
-       * * If `OverwriteExisting` is `TRUE` , the existing file is replaced with the file being
-       * processed.
-       * * If `OverwriteExisting` is `FALSE` , nothing happens, and the workflow processing stops.
-       */
-      override fun overwriteExisting(overwriteExisting: String) {
-        cdkBuilder.overwriteExisting(overwriteExisting)
-      }
+            /**
+             * The name of the step, used as an identifier.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-name)
+             */
+            override fun name(): String? = unwrap(this).getName()
 
-      /**
-       * @param sourceFileLocation Specifies which file to use as input to the workflow step: either
-       * the output from the previous step, or the originally uploaded file for the workflow.
-       * * To use the previous file as the input, enter `${previous.file}` . In this case, this
-       * workflow step uses the output file from the previous workflow step as input. This is the
-       * default value.
-       * * To use the originally uploaded file location as input for this step, enter
-       * `${original.file}` .
-       */
-      override fun sourceFileLocation(sourceFileLocation: String) {
-        cdkBuilder.sourceFileLocation(sourceFileLocation)
-      }
+            /**
+             * A flag that indicates whether to overwrite an existing file of the same name. The
+             * default is `FALSE` .
+             *
+             * If the workflow is processing a file that has the same name as an existing file, the
+             * behavior is as follows:
+             * * If `OverwriteExisting` is `TRUE` , the existing file is replaced with the file
+             *   being processed.
+             * * If `OverwriteExisting` is `FALSE` , nothing happens, and the workflow processing
+             *   stops.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-overwriteexisting)
+             */
+            override fun overwriteExisting(): String? = unwrap(this).getOverwriteExisting()
 
-      /**
-       * @param type The type of encryption used.
-       * Currently, this value must be `PGP` .
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
+            /**
+             * Specifies which file to use as input to the workflow step: either the output from the
+             * previous step, or the originally uploaded file for the workflow.
+             * * To use the previous file as the input, enter `${previous.file}` . In this case,
+             *   this workflow step uses the output file from the previous workflow step as input.
+             *   This is the default value.
+             * * To use the originally uploaded file location as input for this step, enter
+             *   `${original.file}` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-sourcefilelocation)
+             */
+            override fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
 
-      public fun build():
-          software.amazon.awscdk.services.transfer.CfnWorkflow.DecryptStepDetailsProperty =
-          cdkBuilder.build()
-    }
+            /**
+             * The type of encryption used.
+             *
+             * Currently, this value must be `PGP` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-type)
+             */
+            override fun type(): String? = unwrap(this).getType()
+        }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.DecryptStepDetailsProperty,
-    ) : DecryptStepDetailsProperty {
-      /**
-       * Specifies the location for the file being decrypted.
-       *
-       * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
-       * destination prefix by username or uploaded date.
-       *
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to decrypt uploaded
-       * files to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that
-       * uploaded the file.
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to decrypt
-       * uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
-       *
-       *
-       * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date the
-       * file is uploaded in UTC.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-destinationfilelocation)
-       */
-      override fun destinationFileLocation(): Any? = unwrap(this).getDestinationFileLocation()
+        public companion object {
+            init {}
 
-      /**
-       * The name of the step, used as an identifier.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
+            public operator fun invoke(block: Builder.() -> Unit = {}): DecryptStepDetailsProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-      /**
-       * A flag that indicates whether to overwrite an existing file of the same name. The default
-       * is `FALSE` .
-       *
-       * If the workflow is processing a file that has the same name as an existing file, the
-       * behavior is as follows:
-       *
-       * * If `OverwriteExisting` is `TRUE` , the existing file is replaced with the file being
-       * processed.
-       * * If `OverwriteExisting` is `FALSE` , nothing happens, and the workflow processing stops.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-overwriteexisting)
-       */
-      override fun overwriteExisting(): String? = unwrap(this).getOverwriteExisting()
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.transfer.CfnWorkflow.DecryptStepDetailsProperty
+            ): DecryptStepDetailsProperty = Wrapper(cdkObject)
 
-      /**
-       * Specifies which file to use as input to the workflow step: either the output from the
-       * previous step, or the originally uploaded file for the workflow.
-       *
-       * * To use the previous file as the input, enter `${previous.file}` . In this case, this
-       * workflow step uses the output file from the previous workflow step as input. This is the
-       * default value.
-       * * To use the originally uploaded file location as input for this step, enter
-       * `${original.file}` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-sourcefilelocation)
-       */
-      override fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
-
-      /**
-       * The type of encryption used.
-       *
-       * Currently, this value must be `PGP` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
+            internal fun unwrap(
+                wrapped: DecryptStepDetailsProperty
+            ): software.amazon.awscdk.services.transfer.CfnWorkflow.DecryptStepDetailsProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface DeleteStepDetailsProperty {
+        /**
+         * The name of the step, used as an identifier.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-deletestepdetails.html#cfn-transfer-workflow-deletestepdetails-name)
+         */
+        public fun name(): String? = unwrap(this).getName()
 
-      }
+        /**
+         * Specifies which file to use as input to the workflow step: either the output from the
+         * previous step, or the originally uploaded file for the workflow.
+         * * To use the previous file as the input, enter `${previous.file}` . In this case, this
+         *   workflow step uses the output file from the previous workflow step as input. This is
+         *   the default value.
+         * * To use the originally uploaded file location as input for this step, enter
+         *   `${original.file}` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-deletestepdetails.html#cfn-transfer-workflow-deletestepdetails-sourcefilelocation)
+         */
+        public fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): DecryptStepDetailsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /** A builder for [DeleteStepDetailsProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param name The name of the step, used as an identifier. */
+            public fun name(name: String)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.DecryptStepDetailsProperty):
-          DecryptStepDetailsProperty = Wrapper(cdkObject)
+            /**
+             * @param sourceFileLocation Specifies which file to use as input to the workflow step:
+             *   either the output from the previous step, or the originally uploaded file for the
+             *   workflow.
+             * * To use the previous file as the input, enter `${previous.file}` . In this case,
+             *   this workflow step uses the output file from the previous workflow step as input.
+             *   This is the default value.
+             * * To use the originally uploaded file location as input for this step, enter
+             *   `${original.file}` .
+             */
+            public fun sourceFileLocation(sourceFileLocation: String)
+        }
 
-      internal fun unwrap(wrapped: DecryptStepDetailsProperty):
-          software.amazon.awscdk.services.transfer.CfnWorkflow.DecryptStepDetailsProperty = (wrapped
-          as Wrapper).cdkObject
-    }
-  }
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.transfer.CfnWorkflow.DeleteStepDetailsProperty.Builder =
+                software.amazon.awscdk.services.transfer.CfnWorkflow.DeleteStepDetailsProperty
+                    .builder()
 
-  public interface DeleteStepDetailsProperty {
-    /**
-     * The name of the step, used as an identifier.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-deletestepdetails.html#cfn-transfer-workflow-deletestepdetails-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
+            /** @param name The name of the step, used as an identifier. */
+            override fun name(name: String) {
+                cdkBuilder.name(name)
+            }
 
-    /**
-     * Specifies which file to use as input to the workflow step: either the output from the
-     * previous step, or the originally uploaded file for the workflow.
-     *
-     * * To use the previous file as the input, enter `${previous.file}` . In this case, this
-     * workflow step uses the output file from the previous workflow step as input. This is the default
-     * value.
-     * * To use the originally uploaded file location as input for this step, enter
-     * `${original.file}` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-deletestepdetails.html#cfn-transfer-workflow-deletestepdetails-sourcefilelocation)
-     */
-    public fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
+            /**
+             * @param sourceFileLocation Specifies which file to use as input to the workflow step:
+             *   either the output from the previous step, or the originally uploaded file for the
+             *   workflow.
+             * * To use the previous file as the input, enter `${previous.file}` . In this case,
+             *   this workflow step uses the output file from the previous workflow step as input.
+             *   This is the default value.
+             * * To use the originally uploaded file location as input for this step, enter
+             *   `${original.file}` .
+             */
+            override fun sourceFileLocation(sourceFileLocation: String) {
+                cdkBuilder.sourceFileLocation(sourceFileLocation)
+            }
 
-    /**
-     * A builder for [DeleteStepDetailsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the step, used as an identifier.
-       */
-      public fun name(name: String)
+            public fun build():
+                software.amazon.awscdk.services.transfer.CfnWorkflow.DeleteStepDetailsProperty =
+                cdkBuilder.build()
+        }
 
-      /**
-       * @param sourceFileLocation Specifies which file to use as input to the workflow step: either
-       * the output from the previous step, or the originally uploaded file for the workflow.
-       * * To use the previous file as the input, enter `${previous.file}` . In this case, this
-       * workflow step uses the output file from the previous workflow step as input. This is the
-       * default value.
-       * * To use the originally uploaded file location as input for this step, enter
-       * `${original.file}` .
-       */
-      public fun sourceFileLocation(sourceFileLocation: String)
-    }
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.transfer.CfnWorkflow.DeleteStepDetailsProperty,
+        ) : DeleteStepDetailsProperty {
+            /**
+             * The name of the step, used as an identifier.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-deletestepdetails.html#cfn-transfer-workflow-deletestepdetails-name)
+             */
+            override fun name(): String? = unwrap(this).getName()
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.DeleteStepDetailsProperty.Builder =
-          software.amazon.awscdk.services.transfer.CfnWorkflow.DeleteStepDetailsProperty.builder()
+            /**
+             * Specifies which file to use as input to the workflow step: either the output from the
+             * previous step, or the originally uploaded file for the workflow.
+             * * To use the previous file as the input, enter `${previous.file}` . In this case,
+             *   this workflow step uses the output file from the previous workflow step as input.
+             *   This is the default value.
+             * * To use the originally uploaded file location as input for this step, enter
+             *   `${original.file}` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-deletestepdetails.html#cfn-transfer-workflow-deletestepdetails-sourcefilelocation)
+             */
+            override fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
+        }
 
-      /**
-       * @param name The name of the step, used as an identifier.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
+        public companion object {
+            init {}
 
-      /**
-       * @param sourceFileLocation Specifies which file to use as input to the workflow step: either
-       * the output from the previous step, or the originally uploaded file for the workflow.
-       * * To use the previous file as the input, enter `${previous.file}` . In this case, this
-       * workflow step uses the output file from the previous workflow step as input. This is the
-       * default value.
-       * * To use the originally uploaded file location as input for this step, enter
-       * `${original.file}` .
-       */
-      override fun sourceFileLocation(sourceFileLocation: String) {
-        cdkBuilder.sourceFileLocation(sourceFileLocation)
-      }
+            public operator fun invoke(block: Builder.() -> Unit = {}): DeleteStepDetailsProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-      public fun build():
-          software.amazon.awscdk.services.transfer.CfnWorkflow.DeleteStepDetailsProperty =
-          cdkBuilder.build()
-    }
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.transfer.CfnWorkflow.DeleteStepDetailsProperty
+            ): DeleteStepDetailsProperty = Wrapper(cdkObject)
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.DeleteStepDetailsProperty,
-    ) : DeleteStepDetailsProperty {
-      /**
-       * The name of the step, used as an identifier.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-deletestepdetails.html#cfn-transfer-workflow-deletestepdetails-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
-
-      /**
-       * Specifies which file to use as input to the workflow step: either the output from the
-       * previous step, or the originally uploaded file for the workflow.
-       *
-       * * To use the previous file as the input, enter `${previous.file}` . In this case, this
-       * workflow step uses the output file from the previous workflow step as input. This is the
-       * default value.
-       * * To use the originally uploaded file location as input for this step, enter
-       * `${original.file}` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-deletestepdetails.html#cfn-transfer-workflow-deletestepdetails-sourcefilelocation)
-       */
-      override fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
+            internal fun unwrap(
+                wrapped: DeleteStepDetailsProperty
+            ): software.amazon.awscdk.services.transfer.CfnWorkflow.DeleteStepDetailsProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface CopyStepDetailsProperty {
+        /**
+         * Specifies the location for the file being copied.
+         *
+         * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
+         * destination prefix by username or uploaded date.
+         * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to copy uploaded
+         *   files to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user
+         *   that uploaded the file.
+         * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to copy uploaded
+         *   files to an Amazon S3 bucket that is prefixed with the date of the upload.
+         *
+         * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date the
+         * file is uploaded in UTC.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-copystepdetails.html#cfn-transfer-workflow-copystepdetails-destinationfilelocation)
+         */
+        public fun destinationFileLocation(): Any? = unwrap(this).getDestinationFileLocation()
 
-      }
+        /**
+         * The name of the step, used as an identifier.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-copystepdetails.html#cfn-transfer-workflow-copystepdetails-name)
+         */
+        public fun name(): String? = unwrap(this).getName()
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): DeleteStepDetailsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /**
+         * A flag that indicates whether to overwrite an existing file of the same name. The default
+         * is `FALSE` .
+         *
+         * If the workflow is processing a file that has the same name as an existing file, the
+         * behavior is as follows:
+         * * If `OverwriteExisting` is `TRUE` , the existing file is replaced with the file being
+         *   processed.
+         * * If `OverwriteExisting` is `FALSE` , nothing happens, and the workflow processing stops.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-copystepdetails.html#cfn-transfer-workflow-copystepdetails-overwriteexisting)
+         */
+        public fun overwriteExisting(): String? = unwrap(this).getOverwriteExisting()
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.DeleteStepDetailsProperty):
-          DeleteStepDetailsProperty = Wrapper(cdkObject)
+        /**
+         * Specifies which file to use as input to the workflow step: either the output from the
+         * previous step, or the originally uploaded file for the workflow.
+         * * To use the previous file as the input, enter `${previous.file}` . In this case, this
+         *   workflow step uses the output file from the previous workflow step as input. This is
+         *   the default value.
+         * * To use the originally uploaded file location as input for this step, enter
+         *   `${original.file}` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-copystepdetails.html#cfn-transfer-workflow-copystepdetails-sourcefilelocation)
+         */
+        public fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
 
-      internal fun unwrap(wrapped: DeleteStepDetailsProperty):
-          software.amazon.awscdk.services.transfer.CfnWorkflow.DeleteStepDetailsProperty = (wrapped
-          as Wrapper).cdkObject
-    }
-  }
+        /** A builder for [CopyStepDetailsProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param destinationFileLocation Specifies the location for the file being copied. Use
+             *   `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
+             *   destination prefix by username or uploaded date.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to copy
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the name of the
+             *   Transfer Family user that uploaded the file.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to copy
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
+             *
+             * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date
+             * the file is uploaded in UTC.
+             */
+            public fun destinationFileLocation(destinationFileLocation: IResolvable)
 
-  public interface CopyStepDetailsProperty {
-    /**
-     * Specifies the location for the file being copied.
-     *
-     * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
-     * destination prefix by username or uploaded date.
-     *
-     * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to copy uploaded files
-     * to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that uploaded
-     * the file.
-     * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to copy uploaded
-     * files to an Amazon S3 bucket that is prefixed with the date of the upload.
-     *
-     *
-     * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date the
-     * file is uploaded in UTC.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-copystepdetails.html#cfn-transfer-workflow-copystepdetails-destinationfilelocation)
-     */
-    public fun destinationFileLocation(): Any? = unwrap(this).getDestinationFileLocation()
+            /**
+             * @param destinationFileLocation Specifies the location for the file being copied. Use
+             *   `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
+             *   destination prefix by username or uploaded date.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to copy
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the name of the
+             *   Transfer Family user that uploaded the file.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to copy
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
+             *
+             * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date
+             * the file is uploaded in UTC.
+             */
+            public fun destinationFileLocation(destinationFileLocation: S3FileLocationProperty)
 
-    /**
-     * The name of the step, used as an identifier.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-copystepdetails.html#cfn-transfer-workflow-copystepdetails-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
+            /**
+             * @param destinationFileLocation Specifies the location for the file being copied. Use
+             *   `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
+             *   destination prefix by username or uploaded date.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to copy
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the name of the
+             *   Transfer Family user that uploaded the file.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to copy
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
+             *
+             * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date
+             * the file is uploaded in UTC.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("7cd6d54a8f85b9454d405adbac4c046f5d96acab55ffa21a0dd2794316ff0b22")
+            public fun destinationFileLocation(
+                destinationFileLocation: S3FileLocationProperty.Builder.() -> Unit
+            )
 
-    /**
-     * A flag that indicates whether to overwrite an existing file of the same name. The default is
-     * `FALSE` .
-     *
-     * If the workflow is processing a file that has the same name as an existing file, the behavior
-     * is as follows:
-     *
-     * * If `OverwriteExisting` is `TRUE` , the existing file is replaced with the file being
-     * processed.
-     * * If `OverwriteExisting` is `FALSE` , nothing happens, and the workflow processing stops.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-copystepdetails.html#cfn-transfer-workflow-copystepdetails-overwriteexisting)
-     */
-    public fun overwriteExisting(): String? = unwrap(this).getOverwriteExisting()
+            /** @param name The name of the step, used as an identifier. */
+            public fun name(name: String)
 
-    /**
-     * Specifies which file to use as input to the workflow step: either the output from the
-     * previous step, or the originally uploaded file for the workflow.
-     *
-     * * To use the previous file as the input, enter `${previous.file}` . In this case, this
-     * workflow step uses the output file from the previous workflow step as input. This is the default
-     * value.
-     * * To use the originally uploaded file location as input for this step, enter
-     * `${original.file}` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-copystepdetails.html#cfn-transfer-workflow-copystepdetails-sourcefilelocation)
-     */
-    public fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
+            /**
+             * @param overwriteExisting A flag that indicates whether to overwrite an existing file
+             *   of the same name. The default is `FALSE` . If the workflow is processing a file
+             *   that has the same name as an existing file, the behavior is as follows:
+             * * If `OverwriteExisting` is `TRUE` , the existing file is replaced with the file
+             *   being processed.
+             * * If `OverwriteExisting` is `FALSE` , nothing happens, and the workflow processing
+             *   stops.
+             */
+            public fun overwriteExisting(overwriteExisting: String)
 
-    /**
-     * A builder for [CopyStepDetailsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param destinationFileLocation Specifies the location for the file being copied.
-       * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
-       * destination prefix by username or uploaded date.
-       *
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to copy uploaded
-       * files to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that
-       * uploaded the file.
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to copy uploaded
-       * files to an Amazon S3 bucket that is prefixed with the date of the upload.
-       *
-       *
-       * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date the
-       * file is uploaded in UTC.
-       */
-      public fun destinationFileLocation(destinationFileLocation: IResolvable)
+            /**
+             * @param sourceFileLocation Specifies which file to use as input to the workflow step:
+             *   either the output from the previous step, or the originally uploaded file for the
+             *   workflow.
+             * * To use the previous file as the input, enter `${previous.file}` . In this case,
+             *   this workflow step uses the output file from the previous workflow step as input.
+             *   This is the default value.
+             * * To use the originally uploaded file location as input for this step, enter
+             *   `${original.file}` .
+             */
+            public fun sourceFileLocation(sourceFileLocation: String)
+        }
 
-      /**
-       * @param destinationFileLocation Specifies the location for the file being copied.
-       * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
-       * destination prefix by username or uploaded date.
-       *
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to copy uploaded
-       * files to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that
-       * uploaded the file.
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to copy uploaded
-       * files to an Amazon S3 bucket that is prefixed with the date of the upload.
-       *
-       *
-       * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date the
-       * file is uploaded in UTC.
-       */
-      public fun destinationFileLocation(destinationFileLocation: S3FileLocationProperty)
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.transfer.CfnWorkflow.CopyStepDetailsProperty.Builder =
+                software.amazon.awscdk.services.transfer.CfnWorkflow.CopyStepDetailsProperty
+                    .builder()
 
-      /**
-       * @param destinationFileLocation Specifies the location for the file being copied.
-       * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
-       * destination prefix by username or uploaded date.
-       *
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to copy uploaded
-       * files to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that
-       * uploaded the file.
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to copy uploaded
-       * files to an Amazon S3 bucket that is prefixed with the date of the upload.
-       *
-       *
-       * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date the
-       * file is uploaded in UTC.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7cd6d54a8f85b9454d405adbac4c046f5d96acab55ffa21a0dd2794316ff0b22")
-      public
-          fun destinationFileLocation(destinationFileLocation: S3FileLocationProperty.Builder.() -> Unit)
+            /**
+             * @param destinationFileLocation Specifies the location for the file being copied. Use
+             *   `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
+             *   destination prefix by username or uploaded date.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to copy
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the name of the
+             *   Transfer Family user that uploaded the file.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to copy
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
+             *
+             * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date
+             * the file is uploaded in UTC.
+             */
+            override fun destinationFileLocation(destinationFileLocation: IResolvable) {
+                cdkBuilder.destinationFileLocation(destinationFileLocation.let(IResolvable::unwrap))
+            }
 
-      /**
-       * @param name The name of the step, used as an identifier.
-       */
-      public fun name(name: String)
+            /**
+             * @param destinationFileLocation Specifies the location for the file being copied. Use
+             *   `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
+             *   destination prefix by username or uploaded date.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to copy
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the name of the
+             *   Transfer Family user that uploaded the file.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to copy
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
+             *
+             * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date
+             * the file is uploaded in UTC.
+             */
+            override fun destinationFileLocation(destinationFileLocation: S3FileLocationProperty) {
+                cdkBuilder.destinationFileLocation(
+                    destinationFileLocation.let(S3FileLocationProperty::unwrap)
+                )
+            }
 
-      /**
-       * @param overwriteExisting A flag that indicates whether to overwrite an existing file of the
-       * same name. The default is `FALSE` .
-       * If the workflow is processing a file that has the same name as an existing file, the
-       * behavior is as follows:
-       *
-       * * If `OverwriteExisting` is `TRUE` , the existing file is replaced with the file being
-       * processed.
-       * * If `OverwriteExisting` is `FALSE` , nothing happens, and the workflow processing stops.
-       */
-      public fun overwriteExisting(overwriteExisting: String)
+            /**
+             * @param destinationFileLocation Specifies the location for the file being copied. Use
+             *   `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
+             *   destination prefix by username or uploaded date.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to copy
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the name of the
+             *   Transfer Family user that uploaded the file.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to copy
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
+             *
+             * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date
+             * the file is uploaded in UTC.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("7cd6d54a8f85b9454d405adbac4c046f5d96acab55ffa21a0dd2794316ff0b22")
+            override fun destinationFileLocation(
+                destinationFileLocation: S3FileLocationProperty.Builder.() -> Unit
+            ): Unit = destinationFileLocation(S3FileLocationProperty(destinationFileLocation))
 
-      /**
-       * @param sourceFileLocation Specifies which file to use as input to the workflow step: either
-       * the output from the previous step, or the originally uploaded file for the workflow.
-       * * To use the previous file as the input, enter `${previous.file}` . In this case, this
-       * workflow step uses the output file from the previous workflow step as input. This is the
-       * default value.
-       * * To use the originally uploaded file location as input for this step, enter
-       * `${original.file}` .
-       */
-      public fun sourceFileLocation(sourceFileLocation: String)
-    }
+            /** @param name The name of the step, used as an identifier. */
+            override fun name(name: String) {
+                cdkBuilder.name(name)
+            }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.CopyStepDetailsProperty.Builder =
-          software.amazon.awscdk.services.transfer.CfnWorkflow.CopyStepDetailsProperty.builder()
+            /**
+             * @param overwriteExisting A flag that indicates whether to overwrite an existing file
+             *   of the same name. The default is `FALSE` . If the workflow is processing a file
+             *   that has the same name as an existing file, the behavior is as follows:
+             * * If `OverwriteExisting` is `TRUE` , the existing file is replaced with the file
+             *   being processed.
+             * * If `OverwriteExisting` is `FALSE` , nothing happens, and the workflow processing
+             *   stops.
+             */
+            override fun overwriteExisting(overwriteExisting: String) {
+                cdkBuilder.overwriteExisting(overwriteExisting)
+            }
 
-      /**
-       * @param destinationFileLocation Specifies the location for the file being copied.
-       * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
-       * destination prefix by username or uploaded date.
-       *
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to copy uploaded
-       * files to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that
-       * uploaded the file.
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to copy uploaded
-       * files to an Amazon S3 bucket that is prefixed with the date of the upload.
-       *
-       *
-       * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date the
-       * file is uploaded in UTC.
-       */
-      override fun destinationFileLocation(destinationFileLocation: IResolvable) {
-        cdkBuilder.destinationFileLocation(destinationFileLocation.let(IResolvable::unwrap))
-      }
+            /**
+             * @param sourceFileLocation Specifies which file to use as input to the workflow step:
+             *   either the output from the previous step, or the originally uploaded file for the
+             *   workflow.
+             * * To use the previous file as the input, enter `${previous.file}` . In this case,
+             *   this workflow step uses the output file from the previous workflow step as input.
+             *   This is the default value.
+             * * To use the originally uploaded file location as input for this step, enter
+             *   `${original.file}` .
+             */
+            override fun sourceFileLocation(sourceFileLocation: String) {
+                cdkBuilder.sourceFileLocation(sourceFileLocation)
+            }
 
-      /**
-       * @param destinationFileLocation Specifies the location for the file being copied.
-       * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
-       * destination prefix by username or uploaded date.
-       *
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to copy uploaded
-       * files to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that
-       * uploaded the file.
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to copy uploaded
-       * files to an Amazon S3 bucket that is prefixed with the date of the upload.
-       *
-       *
-       * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date the
-       * file is uploaded in UTC.
-       */
-      override fun destinationFileLocation(destinationFileLocation: S3FileLocationProperty) {
-        cdkBuilder.destinationFileLocation(destinationFileLocation.let(S3FileLocationProperty::unwrap))
-      }
+            public fun build():
+                software.amazon.awscdk.services.transfer.CfnWorkflow.CopyStepDetailsProperty =
+                cdkBuilder.build()
+        }
 
-      /**
-       * @param destinationFileLocation Specifies the location for the file being copied.
-       * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
-       * destination prefix by username or uploaded date.
-       *
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to copy uploaded
-       * files to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that
-       * uploaded the file.
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to copy uploaded
-       * files to an Amazon S3 bucket that is prefixed with the date of the upload.
-       *
-       *
-       * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date the
-       * file is uploaded in UTC.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("7cd6d54a8f85b9454d405adbac4c046f5d96acab55ffa21a0dd2794316ff0b22")
-      override
-          fun destinationFileLocation(destinationFileLocation: S3FileLocationProperty.Builder.() -> Unit):
-          Unit = destinationFileLocation(S3FileLocationProperty(destinationFileLocation))
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.transfer.CfnWorkflow.CopyStepDetailsProperty,
+        ) : CopyStepDetailsProperty {
+            /**
+             * Specifies the location for the file being copied.
+             *
+             * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize
+             * the destination prefix by username or uploaded date.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to copy
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the name of the
+             *   Transfer Family user that uploaded the file.
+             * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to copy
+             *   uploaded files to an Amazon S3 bucket that is prefixed with the date of the upload.
+             *
+             * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date
+             * the file is uploaded in UTC.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-copystepdetails.html#cfn-transfer-workflow-copystepdetails-destinationfilelocation)
+             */
+            override fun destinationFileLocation(): Any? = unwrap(this).getDestinationFileLocation()
 
-      /**
-       * @param name The name of the step, used as an identifier.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
+            /**
+             * The name of the step, used as an identifier.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-copystepdetails.html#cfn-transfer-workflow-copystepdetails-name)
+             */
+            override fun name(): String? = unwrap(this).getName()
 
-      /**
-       * @param overwriteExisting A flag that indicates whether to overwrite an existing file of the
-       * same name. The default is `FALSE` .
-       * If the workflow is processing a file that has the same name as an existing file, the
-       * behavior is as follows:
-       *
-       * * If `OverwriteExisting` is `TRUE` , the existing file is replaced with the file being
-       * processed.
-       * * If `OverwriteExisting` is `FALSE` , nothing happens, and the workflow processing stops.
-       */
-      override fun overwriteExisting(overwriteExisting: String) {
-        cdkBuilder.overwriteExisting(overwriteExisting)
-      }
+            /**
+             * A flag that indicates whether to overwrite an existing file of the same name. The
+             * default is `FALSE` .
+             *
+             * If the workflow is processing a file that has the same name as an existing file, the
+             * behavior is as follows:
+             * * If `OverwriteExisting` is `TRUE` , the existing file is replaced with the file
+             *   being processed.
+             * * If `OverwriteExisting` is `FALSE` , nothing happens, and the workflow processing
+             *   stops.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-copystepdetails.html#cfn-transfer-workflow-copystepdetails-overwriteexisting)
+             */
+            override fun overwriteExisting(): String? = unwrap(this).getOverwriteExisting()
 
-      /**
-       * @param sourceFileLocation Specifies which file to use as input to the workflow step: either
-       * the output from the previous step, or the originally uploaded file for the workflow.
-       * * To use the previous file as the input, enter `${previous.file}` . In this case, this
-       * workflow step uses the output file from the previous workflow step as input. This is the
-       * default value.
-       * * To use the originally uploaded file location as input for this step, enter
-       * `${original.file}` .
-       */
-      override fun sourceFileLocation(sourceFileLocation: String) {
-        cdkBuilder.sourceFileLocation(sourceFileLocation)
-      }
+            /**
+             * Specifies which file to use as input to the workflow step: either the output from the
+             * previous step, or the originally uploaded file for the workflow.
+             * * To use the previous file as the input, enter `${previous.file}` . In this case,
+             *   this workflow step uses the output file from the previous workflow step as input.
+             *   This is the default value.
+             * * To use the originally uploaded file location as input for this step, enter
+             *   `${original.file}` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-copystepdetails.html#cfn-transfer-workflow-copystepdetails-sourcefilelocation)
+             */
+            override fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
+        }
 
-      public fun build():
-          software.amazon.awscdk.services.transfer.CfnWorkflow.CopyStepDetailsProperty =
-          cdkBuilder.build()
-    }
+        public companion object {
+            init {}
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.CopyStepDetailsProperty,
-    ) : CopyStepDetailsProperty {
-      /**
-       * Specifies the location for the file being copied.
-       *
-       * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
-       * destination prefix by username or uploaded date.
-       *
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UserName}` to copy uploaded
-       * files to an Amazon S3 bucket that is prefixed with the name of the Transfer Family user that
-       * uploaded the file.
-       * * Set the value of `DestinationFileLocation` to `${Transfer:UploadDate}` to copy uploaded
-       * files to an Amazon S3 bucket that is prefixed with the date of the upload.
-       *
-       *
-       * The system resolves `UploadDate` to a date format of *YYYY-MM-DD* , based on the date the
-       * file is uploaded in UTC.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-copystepdetails.html#cfn-transfer-workflow-copystepdetails-destinationfilelocation)
-       */
-      override fun destinationFileLocation(): Any? = unwrap(this).getDestinationFileLocation()
+            public operator fun invoke(block: Builder.() -> Unit = {}): CopyStepDetailsProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-      /**
-       * The name of the step, used as an identifier.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-copystepdetails.html#cfn-transfer-workflow-copystepdetails-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.transfer.CfnWorkflow.CopyStepDetailsProperty
+            ): CopyStepDetailsProperty = Wrapper(cdkObject)
 
-      /**
-       * A flag that indicates whether to overwrite an existing file of the same name. The default
-       * is `FALSE` .
-       *
-       * If the workflow is processing a file that has the same name as an existing file, the
-       * behavior is as follows:
-       *
-       * * If `OverwriteExisting` is `TRUE` , the existing file is replaced with the file being
-       * processed.
-       * * If `OverwriteExisting` is `FALSE` , nothing happens, and the workflow processing stops.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-copystepdetails.html#cfn-transfer-workflow-copystepdetails-overwriteexisting)
-       */
-      override fun overwriteExisting(): String? = unwrap(this).getOverwriteExisting()
-
-      /**
-       * Specifies which file to use as input to the workflow step: either the output from the
-       * previous step, or the originally uploaded file for the workflow.
-       *
-       * * To use the previous file as the input, enter `${previous.file}` . In this case, this
-       * workflow step uses the output file from the previous workflow step as input. This is the
-       * default value.
-       * * To use the originally uploaded file location as input for this step, enter
-       * `${original.file}` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-copystepdetails.html#cfn-transfer-workflow-copystepdetails-sourcefilelocation)
-       */
-      override fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
+            internal fun unwrap(
+                wrapped: CopyStepDetailsProperty
+            ): software.amazon.awscdk.services.transfer.CfnWorkflow.CopyStepDetailsProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface CustomStepDetailsProperty {
+        /**
+         * The name of the step, used as an identifier.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-customstepdetails.html#cfn-transfer-workflow-customstepdetails-name)
+         */
+        public fun name(): String? = unwrap(this).getName()
 
-      }
+        /**
+         * Specifies which file to use as input to the workflow step: either the output from the
+         * previous step, or the originally uploaded file for the workflow.
+         * * To use the previous file as the input, enter `${previous.file}` . In this case, this
+         *   workflow step uses the output file from the previous workflow step as input. This is
+         *   the default value.
+         * * To use the originally uploaded file location as input for this step, enter
+         *   `${original.file}` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-customstepdetails.html#cfn-transfer-workflow-customstepdetails-sourcefilelocation)
+         */
+        public fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): CopyStepDetailsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /**
+         * The ARN for the Lambda function that is being called.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-customstepdetails.html#cfn-transfer-workflow-customstepdetails-target)
+         */
+        public fun target(): String? = unwrap(this).getTarget()
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.CopyStepDetailsProperty):
-          CopyStepDetailsProperty = Wrapper(cdkObject)
+        /**
+         * Timeout, in seconds, for the step.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-customstepdetails.html#cfn-transfer-workflow-customstepdetails-timeoutseconds)
+         */
+        public fun timeoutSeconds(): Number? = unwrap(this).getTimeoutSeconds()
 
-      internal fun unwrap(wrapped: CopyStepDetailsProperty):
-          software.amazon.awscdk.services.transfer.CfnWorkflow.CopyStepDetailsProperty = (wrapped as
-          Wrapper).cdkObject
-    }
-  }
+        /** A builder for [CustomStepDetailsProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param name The name of the step, used as an identifier. */
+            public fun name(name: String)
 
-  public interface CustomStepDetailsProperty {
-    /**
-     * The name of the step, used as an identifier.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-customstepdetails.html#cfn-transfer-workflow-customstepdetails-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
+            /**
+             * @param sourceFileLocation Specifies which file to use as input to the workflow step:
+             *   either the output from the previous step, or the originally uploaded file for the
+             *   workflow.
+             * * To use the previous file as the input, enter `${previous.file}` . In this case,
+             *   this workflow step uses the output file from the previous workflow step as input.
+             *   This is the default value.
+             * * To use the originally uploaded file location as input for this step, enter
+             *   `${original.file}` .
+             */
+            public fun sourceFileLocation(sourceFileLocation: String)
 
-    /**
-     * Specifies which file to use as input to the workflow step: either the output from the
-     * previous step, or the originally uploaded file for the workflow.
-     *
-     * * To use the previous file as the input, enter `${previous.file}` . In this case, this
-     * workflow step uses the output file from the previous workflow step as input. This is the default
-     * value.
-     * * To use the originally uploaded file location as input for this step, enter
-     * `${original.file}` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-customstepdetails.html#cfn-transfer-workflow-customstepdetails-sourcefilelocation)
-     */
-    public fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
+            /** @param target The ARN for the Lambda function that is being called. */
+            public fun target(target: String)
 
-    /**
-     * The ARN for the Lambda function that is being called.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-customstepdetails.html#cfn-transfer-workflow-customstepdetails-target)
-     */
-    public fun target(): String? = unwrap(this).getTarget()
+            /** @param timeoutSeconds Timeout, in seconds, for the step. */
+            public fun timeoutSeconds(timeoutSeconds: Number)
+        }
 
-    /**
-     * Timeout, in seconds, for the step.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-customstepdetails.html#cfn-transfer-workflow-customstepdetails-timeoutseconds)
-     */
-    public fun timeoutSeconds(): Number? = unwrap(this).getTimeoutSeconds()
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.transfer.CfnWorkflow.CustomStepDetailsProperty.Builder =
+                software.amazon.awscdk.services.transfer.CfnWorkflow.CustomStepDetailsProperty
+                    .builder()
 
-    /**
-     * A builder for [CustomStepDetailsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the step, used as an identifier.
-       */
-      public fun name(name: String)
+            /** @param name The name of the step, used as an identifier. */
+            override fun name(name: String) {
+                cdkBuilder.name(name)
+            }
 
-      /**
-       * @param sourceFileLocation Specifies which file to use as input to the workflow step: either
-       * the output from the previous step, or the originally uploaded file for the workflow.
-       * * To use the previous file as the input, enter `${previous.file}` . In this case, this
-       * workflow step uses the output file from the previous workflow step as input. This is the
-       * default value.
-       * * To use the originally uploaded file location as input for this step, enter
-       * `${original.file}` .
-       */
-      public fun sourceFileLocation(sourceFileLocation: String)
+            /**
+             * @param sourceFileLocation Specifies which file to use as input to the workflow step:
+             *   either the output from the previous step, or the originally uploaded file for the
+             *   workflow.
+             * * To use the previous file as the input, enter `${previous.file}` . In this case,
+             *   this workflow step uses the output file from the previous workflow step as input.
+             *   This is the default value.
+             * * To use the originally uploaded file location as input for this step, enter
+             *   `${original.file}` .
+             */
+            override fun sourceFileLocation(sourceFileLocation: String) {
+                cdkBuilder.sourceFileLocation(sourceFileLocation)
+            }
 
-      /**
-       * @param target The ARN for the Lambda function that is being called.
-       */
-      public fun target(target: String)
+            /** @param target The ARN for the Lambda function that is being called. */
+            override fun target(target: String) {
+                cdkBuilder.target(target)
+            }
 
-      /**
-       * @param timeoutSeconds Timeout, in seconds, for the step.
-       */
-      public fun timeoutSeconds(timeoutSeconds: Number)
-    }
+            /** @param timeoutSeconds Timeout, in seconds, for the step. */
+            override fun timeoutSeconds(timeoutSeconds: Number) {
+                cdkBuilder.timeoutSeconds(timeoutSeconds)
+            }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.CustomStepDetailsProperty.Builder =
-          software.amazon.awscdk.services.transfer.CfnWorkflow.CustomStepDetailsProperty.builder()
+            public fun build():
+                software.amazon.awscdk.services.transfer.CfnWorkflow.CustomStepDetailsProperty =
+                cdkBuilder.build()
+        }
 
-      /**
-       * @param name The name of the step, used as an identifier.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.transfer.CfnWorkflow.CustomStepDetailsProperty,
+        ) : CustomStepDetailsProperty {
+            /**
+             * The name of the step, used as an identifier.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-customstepdetails.html#cfn-transfer-workflow-customstepdetails-name)
+             */
+            override fun name(): String? = unwrap(this).getName()
 
-      /**
-       * @param sourceFileLocation Specifies which file to use as input to the workflow step: either
-       * the output from the previous step, or the originally uploaded file for the workflow.
-       * * To use the previous file as the input, enter `${previous.file}` . In this case, this
-       * workflow step uses the output file from the previous workflow step as input. This is the
-       * default value.
-       * * To use the originally uploaded file location as input for this step, enter
-       * `${original.file}` .
-       */
-      override fun sourceFileLocation(sourceFileLocation: String) {
-        cdkBuilder.sourceFileLocation(sourceFileLocation)
-      }
+            /**
+             * Specifies which file to use as input to the workflow step: either the output from the
+             * previous step, or the originally uploaded file for the workflow.
+             * * To use the previous file as the input, enter `${previous.file}` . In this case,
+             *   this workflow step uses the output file from the previous workflow step as input.
+             *   This is the default value.
+             * * To use the originally uploaded file location as input for this step, enter
+             *   `${original.file}` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-customstepdetails.html#cfn-transfer-workflow-customstepdetails-sourcefilelocation)
+             */
+            override fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
 
-      /**
-       * @param target The ARN for the Lambda function that is being called.
-       */
-      override fun target(target: String) {
-        cdkBuilder.target(target)
-      }
+            /**
+             * The ARN for the Lambda function that is being called.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-customstepdetails.html#cfn-transfer-workflow-customstepdetails-target)
+             */
+            override fun target(): String? = unwrap(this).getTarget()
 
-      /**
-       * @param timeoutSeconds Timeout, in seconds, for the step.
-       */
-      override fun timeoutSeconds(timeoutSeconds: Number) {
-        cdkBuilder.timeoutSeconds(timeoutSeconds)
-      }
+            /**
+             * Timeout, in seconds, for the step.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-customstepdetails.html#cfn-transfer-workflow-customstepdetails-timeoutseconds)
+             */
+            override fun timeoutSeconds(): Number? = unwrap(this).getTimeoutSeconds()
+        }
 
-      public fun build():
-          software.amazon.awscdk.services.transfer.CfnWorkflow.CustomStepDetailsProperty =
-          cdkBuilder.build()
-    }
+        public companion object {
+            init {}
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.CustomStepDetailsProperty,
-    ) : CustomStepDetailsProperty {
-      /**
-       * The name of the step, used as an identifier.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-customstepdetails.html#cfn-transfer-workflow-customstepdetails-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
+            public operator fun invoke(block: Builder.() -> Unit = {}): CustomStepDetailsProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-      /**
-       * Specifies which file to use as input to the workflow step: either the output from the
-       * previous step, or the originally uploaded file for the workflow.
-       *
-       * * To use the previous file as the input, enter `${previous.file}` . In this case, this
-       * workflow step uses the output file from the previous workflow step as input. This is the
-       * default value.
-       * * To use the originally uploaded file location as input for this step, enter
-       * `${original.file}` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-customstepdetails.html#cfn-transfer-workflow-customstepdetails-sourcefilelocation)
-       */
-      override fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.transfer.CfnWorkflow.CustomStepDetailsProperty
+            ): CustomStepDetailsProperty = Wrapper(cdkObject)
 
-      /**
-       * The ARN for the Lambda function that is being called.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-customstepdetails.html#cfn-transfer-workflow-customstepdetails-target)
-       */
-      override fun target(): String? = unwrap(this).getTarget()
-
-      /**
-       * Timeout, in seconds, for the step.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-customstepdetails.html#cfn-transfer-workflow-customstepdetails-timeoutseconds)
-       */
-      override fun timeoutSeconds(): Number? = unwrap(this).getTimeoutSeconds()
+            internal fun unwrap(
+                wrapped: CustomStepDetailsProperty
+            ): software.amazon.awscdk.services.transfer.CfnWorkflow.CustomStepDetailsProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface WorkflowStepProperty {
+        /**
+         * Details for a step that performs a file copy.
+         *
+         * Consists of the following values:
+         * * A description
+         * * An Amazon S3 location for the destination of the file copy.
+         * * A flag that indicates whether to overwrite an existing file of the same name. The
+         *   default is `FALSE` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-copystepdetails)
+         */
+        public fun copyStepDetails(): Any? = unwrap(this).getCopyStepDetails()
 
-      }
+        /**
+         * Details for a step that invokes an AWS Lambda function.
+         *
+         * Consists of the Lambda function's name, target, and timeout (in seconds).
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-customstepdetails)
+         */
+        public fun customStepDetails(): Any? = unwrap(this).getCustomStepDetails()
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): CustomStepDetailsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /**
+         * Details for a step that decrypts an encrypted file.
+         *
+         * Consists of the following values:
+         * * A descriptive name
+         * * An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source file to
+         *   decrypt.
+         * * An S3 or Amazon EFS location for the destination of the file decryption.
+         * * A flag that indicates whether to overwrite an existing file of the same name. The
+         *   default is `FALSE` .
+         * * The type of encryption that's used. Currently, only PGP encryption is supported.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-decryptstepdetails)
+         */
+        public fun decryptStepDetails(): Any? = unwrap(this).getDecryptStepDetails()
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.CustomStepDetailsProperty):
-          CustomStepDetailsProperty = Wrapper(cdkObject)
+        /**
+         * Details for a step that deletes the file.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-deletestepdetails)
+         */
+        public fun deleteStepDetails(): Any? = unwrap(this).getDeleteStepDetails()
 
-      internal fun unwrap(wrapped: CustomStepDetailsProperty):
-          software.amazon.awscdk.services.transfer.CfnWorkflow.CustomStepDetailsProperty = (wrapped
-          as Wrapper).cdkObject
-    }
-  }
+        /**
+         * Details for a step that creates one or more tags.
+         *
+         * You specify one or more tags. Each tag contains a key-value pair.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-tagstepdetails)
+         */
+        public fun tagStepDetails(): Any? = unwrap(this).getTagStepDetails()
 
-  public interface WorkflowStepProperty {
-    /**
-     * Details for a step that performs a file copy.
-     *
-     * Consists of the following values:
-     *
-     * * A description
-     * * An Amazon S3 location for the destination of the file copy.
-     * * A flag that indicates whether to overwrite an existing file of the same name. The default
-     * is `FALSE` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-copystepdetails)
-     */
-    public fun copyStepDetails(): Any? = unwrap(this).getCopyStepDetails()
+        /**
+         * Currently, the following step types are supported.
+         * * *`COPY`* - Copy the file to another location.
+         * * *`CUSTOM`* - Perform a custom step with an AWS Lambda function target.
+         * * *`DECRYPT`* - Decrypt a file that was encrypted before it was uploaded.
+         * * *`DELETE`* - Delete the file.
+         * * *`TAG`* - Add a tag to the file.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-type)
+         */
+        public fun type(): String? = unwrap(this).getType()
 
-    /**
-     * Details for a step that invokes an AWS Lambda function.
-     *
-     * Consists of the Lambda function's name, target, and timeout (in seconds).
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-customstepdetails)
-     */
-    public fun customStepDetails(): Any? = unwrap(this).getCustomStepDetails()
+        /** A builder for [WorkflowStepProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param copyStepDetails Details for a step that performs a file copy. Consists of the
+             *   following values:
+             * * A description
+             * * An Amazon S3 location for the destination of the file copy.
+             * * A flag that indicates whether to overwrite an existing file of the same name. The
+             *   default is `FALSE` .
+             */
+            public fun copyStepDetails(copyStepDetails: Any)
 
-    /**
-     * Details for a step that decrypts an encrypted file.
-     *
-     * Consists of the following values:
-     *
-     * * A descriptive name
-     * * An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source file to
-     * decrypt.
-     * * An S3 or Amazon EFS location for the destination of the file decryption.
-     * * A flag that indicates whether to overwrite an existing file of the same name. The default
-     * is `FALSE` .
-     * * The type of encryption that's used. Currently, only PGP encryption is supported.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-decryptstepdetails)
-     */
-    public fun decryptStepDetails(): Any? = unwrap(this).getDecryptStepDetails()
+            /**
+             * @param customStepDetails Details for a step that invokes an AWS Lambda function.
+             *   Consists of the Lambda function's name, target, and timeout (in seconds).
+             */
+            public fun customStepDetails(customStepDetails: Any)
 
-    /**
-     * Details for a step that deletes the file.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-deletestepdetails)
-     */
-    public fun deleteStepDetails(): Any? = unwrap(this).getDeleteStepDetails()
+            /**
+             * @param decryptStepDetails Details for a step that decrypts an encrypted file.
+             *   Consists of the following values:
+             * * A descriptive name
+             * * An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source
+             *   file to decrypt.
+             * * An S3 or Amazon EFS location for the destination of the file decryption.
+             * * A flag that indicates whether to overwrite an existing file of the same name. The
+             *   default is `FALSE` .
+             * * The type of encryption that's used. Currently, only PGP encryption is supported.
+             */
+            public fun decryptStepDetails(decryptStepDetails: IResolvable)
 
-    /**
-     * Details for a step that creates one or more tags.
-     *
-     * You specify one or more tags. Each tag contains a key-value pair.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-tagstepdetails)
-     */
-    public fun tagStepDetails(): Any? = unwrap(this).getTagStepDetails()
+            /**
+             * @param decryptStepDetails Details for a step that decrypts an encrypted file.
+             *   Consists of the following values:
+             * * A descriptive name
+             * * An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source
+             *   file to decrypt.
+             * * An S3 or Amazon EFS location for the destination of the file decryption.
+             * * A flag that indicates whether to overwrite an existing file of the same name. The
+             *   default is `FALSE` .
+             * * The type of encryption that's used. Currently, only PGP encryption is supported.
+             */
+            public fun decryptStepDetails(decryptStepDetails: DecryptStepDetailsProperty)
 
-    /**
-     * Currently, the following step types are supported.
-     *
-     * * *`COPY`* - Copy the file to another location.
-     * * *`CUSTOM`* - Perform a custom step with an AWS Lambda function target.
-     * * *`DECRYPT`* - Decrypt a file that was encrypted before it was uploaded.
-     * * *`DELETE`* - Delete the file.
-     * * *`TAG`* - Add a tag to the file.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-type)
-     */
-    public fun type(): String? = unwrap(this).getType()
+            /**
+             * @param decryptStepDetails Details for a step that decrypts an encrypted file.
+             *   Consists of the following values:
+             * * A descriptive name
+             * * An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source
+             *   file to decrypt.
+             * * An S3 or Amazon EFS location for the destination of the file decryption.
+             * * A flag that indicates whether to overwrite an existing file of the same name. The
+             *   default is `FALSE` .
+             * * The type of encryption that's used. Currently, only PGP encryption is supported.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("d1ecb1c1adfefb87617f71a28b53753de53b6cc237ff4207bf5e639516a5e34a")
+            public fun decryptStepDetails(
+                decryptStepDetails: DecryptStepDetailsProperty.Builder.() -> Unit
+            )
 
-    /**
-     * A builder for [WorkflowStepProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param copyStepDetails Details for a step that performs a file copy.
-       * Consists of the following values:
-       *
-       * * A description
-       * * An Amazon S3 location for the destination of the file copy.
-       * * A flag that indicates whether to overwrite an existing file of the same name. The default
-       * is `FALSE` .
-       */
-      public fun copyStepDetails(copyStepDetails: Any)
+            /** @param deleteStepDetails Details for a step that deletes the file. */
+            public fun deleteStepDetails(deleteStepDetails: Any)
 
-      /**
-       * @param customStepDetails Details for a step that invokes an AWS Lambda function.
-       * Consists of the Lambda function's name, target, and timeout (in seconds).
-       */
-      public fun customStepDetails(customStepDetails: Any)
+            /**
+             * @param tagStepDetails Details for a step that creates one or more tags. You specify
+             *   one or more tags. Each tag contains a key-value pair.
+             */
+            public fun tagStepDetails(tagStepDetails: Any)
 
-      /**
-       * @param decryptStepDetails Details for a step that decrypts an encrypted file.
-       * Consists of the following values:
-       *
-       * * A descriptive name
-       * * An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source file to
-       * decrypt.
-       * * An S3 or Amazon EFS location for the destination of the file decryption.
-       * * A flag that indicates whether to overwrite an existing file of the same name. The default
-       * is `FALSE` .
-       * * The type of encryption that's used. Currently, only PGP encryption is supported.
-       */
-      public fun decryptStepDetails(decryptStepDetails: IResolvable)
+            /**
+             * @param type Currently, the following step types are supported.
+             * * *`COPY`* - Copy the file to another location.
+             * * *`CUSTOM`* - Perform a custom step with an AWS Lambda function target.
+             * * *`DECRYPT`* - Decrypt a file that was encrypted before it was uploaded.
+             * * *`DELETE`* - Delete the file.
+             * * *`TAG`* - Add a tag to the file.
+             */
+            public fun type(type: String)
+        }
 
-      /**
-       * @param decryptStepDetails Details for a step that decrypts an encrypted file.
-       * Consists of the following values:
-       *
-       * * A descriptive name
-       * * An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source file to
-       * decrypt.
-       * * An S3 or Amazon EFS location for the destination of the file decryption.
-       * * A flag that indicates whether to overwrite an existing file of the same name. The default
-       * is `FALSE` .
-       * * The type of encryption that's used. Currently, only PGP encryption is supported.
-       */
-      public fun decryptStepDetails(decryptStepDetails: DecryptStepDetailsProperty)
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.transfer.CfnWorkflow.WorkflowStepProperty.Builder =
+                software.amazon.awscdk.services.transfer.CfnWorkflow.WorkflowStepProperty.builder()
 
-      /**
-       * @param decryptStepDetails Details for a step that decrypts an encrypted file.
-       * Consists of the following values:
-       *
-       * * A descriptive name
-       * * An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source file to
-       * decrypt.
-       * * An S3 or Amazon EFS location for the destination of the file decryption.
-       * * A flag that indicates whether to overwrite an existing file of the same name. The default
-       * is `FALSE` .
-       * * The type of encryption that's used. Currently, only PGP encryption is supported.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d1ecb1c1adfefb87617f71a28b53753de53b6cc237ff4207bf5e639516a5e34a")
-      public
-          fun decryptStepDetails(decryptStepDetails: DecryptStepDetailsProperty.Builder.() -> Unit)
+            /**
+             * @param copyStepDetails Details for a step that performs a file copy. Consists of the
+             *   following values:
+             * * A description
+             * * An Amazon S3 location for the destination of the file copy.
+             * * A flag that indicates whether to overwrite an existing file of the same name. The
+             *   default is `FALSE` .
+             */
+            override fun copyStepDetails(copyStepDetails: Any) {
+                cdkBuilder.copyStepDetails(copyStepDetails)
+            }
 
-      /**
-       * @param deleteStepDetails Details for a step that deletes the file.
-       */
-      public fun deleteStepDetails(deleteStepDetails: Any)
+            /**
+             * @param customStepDetails Details for a step that invokes an AWS Lambda function.
+             *   Consists of the Lambda function's name, target, and timeout (in seconds).
+             */
+            override fun customStepDetails(customStepDetails: Any) {
+                cdkBuilder.customStepDetails(customStepDetails)
+            }
 
-      /**
-       * @param tagStepDetails Details for a step that creates one or more tags.
-       * You specify one or more tags. Each tag contains a key-value pair.
-       */
-      public fun tagStepDetails(tagStepDetails: Any)
+            /**
+             * @param decryptStepDetails Details for a step that decrypts an encrypted file.
+             *   Consists of the following values:
+             * * A descriptive name
+             * * An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source
+             *   file to decrypt.
+             * * An S3 or Amazon EFS location for the destination of the file decryption.
+             * * A flag that indicates whether to overwrite an existing file of the same name. The
+             *   default is `FALSE` .
+             * * The type of encryption that's used. Currently, only PGP encryption is supported.
+             */
+            override fun decryptStepDetails(decryptStepDetails: IResolvable) {
+                cdkBuilder.decryptStepDetails(decryptStepDetails.let(IResolvable::unwrap))
+            }
 
-      /**
-       * @param type Currently, the following step types are supported.
-       * * *`COPY`* - Copy the file to another location.
-       * * *`CUSTOM`* - Perform a custom step with an AWS Lambda function target.
-       * * *`DECRYPT`* - Decrypt a file that was encrypted before it was uploaded.
-       * * *`DELETE`* - Delete the file.
-       * * *`TAG`* - Add a tag to the file.
-       */
-      public fun type(type: String)
-    }
+            /**
+             * @param decryptStepDetails Details for a step that decrypts an encrypted file.
+             *   Consists of the following values:
+             * * A descriptive name
+             * * An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source
+             *   file to decrypt.
+             * * An S3 or Amazon EFS location for the destination of the file decryption.
+             * * A flag that indicates whether to overwrite an existing file of the same name. The
+             *   default is `FALSE` .
+             * * The type of encryption that's used. Currently, only PGP encryption is supported.
+             */
+            override fun decryptStepDetails(decryptStepDetails: DecryptStepDetailsProperty) {
+                cdkBuilder.decryptStepDetails(
+                    decryptStepDetails.let(DecryptStepDetailsProperty::unwrap)
+                )
+            }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.WorkflowStepProperty.Builder =
-          software.amazon.awscdk.services.transfer.CfnWorkflow.WorkflowStepProperty.builder()
+            /**
+             * @param decryptStepDetails Details for a step that decrypts an encrypted file.
+             *   Consists of the following values:
+             * * A descriptive name
+             * * An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source
+             *   file to decrypt.
+             * * An S3 or Amazon EFS location for the destination of the file decryption.
+             * * A flag that indicates whether to overwrite an existing file of the same name. The
+             *   default is `FALSE` .
+             * * The type of encryption that's used. Currently, only PGP encryption is supported.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("d1ecb1c1adfefb87617f71a28b53753de53b6cc237ff4207bf5e639516a5e34a")
+            override fun decryptStepDetails(
+                decryptStepDetails: DecryptStepDetailsProperty.Builder.() -> Unit
+            ): Unit = decryptStepDetails(DecryptStepDetailsProperty(decryptStepDetails))
 
-      /**
-       * @param copyStepDetails Details for a step that performs a file copy.
-       * Consists of the following values:
-       *
-       * * A description
-       * * An Amazon S3 location for the destination of the file copy.
-       * * A flag that indicates whether to overwrite an existing file of the same name. The default
-       * is `FALSE` .
-       */
-      override fun copyStepDetails(copyStepDetails: Any) {
-        cdkBuilder.copyStepDetails(copyStepDetails)
-      }
+            /** @param deleteStepDetails Details for a step that deletes the file. */
+            override fun deleteStepDetails(deleteStepDetails: Any) {
+                cdkBuilder.deleteStepDetails(deleteStepDetails)
+            }
 
-      /**
-       * @param customStepDetails Details for a step that invokes an AWS Lambda function.
-       * Consists of the Lambda function's name, target, and timeout (in seconds).
-       */
-      override fun customStepDetails(customStepDetails: Any) {
-        cdkBuilder.customStepDetails(customStepDetails)
-      }
+            /**
+             * @param tagStepDetails Details for a step that creates one or more tags. You specify
+             *   one or more tags. Each tag contains a key-value pair.
+             */
+            override fun tagStepDetails(tagStepDetails: Any) {
+                cdkBuilder.tagStepDetails(tagStepDetails)
+            }
 
-      /**
-       * @param decryptStepDetails Details for a step that decrypts an encrypted file.
-       * Consists of the following values:
-       *
-       * * A descriptive name
-       * * An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source file to
-       * decrypt.
-       * * An S3 or Amazon EFS location for the destination of the file decryption.
-       * * A flag that indicates whether to overwrite an existing file of the same name. The default
-       * is `FALSE` .
-       * * The type of encryption that's used. Currently, only PGP encryption is supported.
-       */
-      override fun decryptStepDetails(decryptStepDetails: IResolvable) {
-        cdkBuilder.decryptStepDetails(decryptStepDetails.let(IResolvable::unwrap))
-      }
+            /**
+             * @param type Currently, the following step types are supported.
+             * * *`COPY`* - Copy the file to another location.
+             * * *`CUSTOM`* - Perform a custom step with an AWS Lambda function target.
+             * * *`DECRYPT`* - Decrypt a file that was encrypted before it was uploaded.
+             * * *`DELETE`* - Delete the file.
+             * * *`TAG`* - Add a tag to the file.
+             */
+            override fun type(type: String) {
+                cdkBuilder.type(type)
+            }
 
-      /**
-       * @param decryptStepDetails Details for a step that decrypts an encrypted file.
-       * Consists of the following values:
-       *
-       * * A descriptive name
-       * * An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source file to
-       * decrypt.
-       * * An S3 or Amazon EFS location for the destination of the file decryption.
-       * * A flag that indicates whether to overwrite an existing file of the same name. The default
-       * is `FALSE` .
-       * * The type of encryption that's used. Currently, only PGP encryption is supported.
-       */
-      override fun decryptStepDetails(decryptStepDetails: DecryptStepDetailsProperty) {
-        cdkBuilder.decryptStepDetails(decryptStepDetails.let(DecryptStepDetailsProperty::unwrap))
-      }
+            public fun build():
+                software.amazon.awscdk.services.transfer.CfnWorkflow.WorkflowStepProperty =
+                cdkBuilder.build()
+        }
 
-      /**
-       * @param decryptStepDetails Details for a step that decrypts an encrypted file.
-       * Consists of the following values:
-       *
-       * * A descriptive name
-       * * An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source file to
-       * decrypt.
-       * * An S3 or Amazon EFS location for the destination of the file decryption.
-       * * A flag that indicates whether to overwrite an existing file of the same name. The default
-       * is `FALSE` .
-       * * The type of encryption that's used. Currently, only PGP encryption is supported.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("d1ecb1c1adfefb87617f71a28b53753de53b6cc237ff4207bf5e639516a5e34a")
-      override
-          fun decryptStepDetails(decryptStepDetails: DecryptStepDetailsProperty.Builder.() -> Unit):
-          Unit = decryptStepDetails(DecryptStepDetailsProperty(decryptStepDetails))
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.transfer.CfnWorkflow.WorkflowStepProperty,
+        ) : WorkflowStepProperty {
+            /**
+             * Details for a step that performs a file copy.
+             *
+             * Consists of the following values:
+             * * A description
+             * * An Amazon S3 location for the destination of the file copy.
+             * * A flag that indicates whether to overwrite an existing file of the same name. The
+             *   default is `FALSE` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-copystepdetails)
+             */
+            override fun copyStepDetails(): Any? = unwrap(this).getCopyStepDetails()
 
-      /**
-       * @param deleteStepDetails Details for a step that deletes the file.
-       */
-      override fun deleteStepDetails(deleteStepDetails: Any) {
-        cdkBuilder.deleteStepDetails(deleteStepDetails)
-      }
+            /**
+             * Details for a step that invokes an AWS Lambda function.
+             *
+             * Consists of the Lambda function's name, target, and timeout (in seconds).
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-customstepdetails)
+             */
+            override fun customStepDetails(): Any? = unwrap(this).getCustomStepDetails()
 
-      /**
-       * @param tagStepDetails Details for a step that creates one or more tags.
-       * You specify one or more tags. Each tag contains a key-value pair.
-       */
-      override fun tagStepDetails(tagStepDetails: Any) {
-        cdkBuilder.tagStepDetails(tagStepDetails)
-      }
+            /**
+             * Details for a step that decrypts an encrypted file.
+             *
+             * Consists of the following values:
+             * * A descriptive name
+             * * An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source
+             *   file to decrypt.
+             * * An S3 or Amazon EFS location for the destination of the file decryption.
+             * * A flag that indicates whether to overwrite an existing file of the same name. The
+             *   default is `FALSE` .
+             * * The type of encryption that's used. Currently, only PGP encryption is supported.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-decryptstepdetails)
+             */
+            override fun decryptStepDetails(): Any? = unwrap(this).getDecryptStepDetails()
 
-      /**
-       * @param type Currently, the following step types are supported.
-       * * *`COPY`* - Copy the file to another location.
-       * * *`CUSTOM`* - Perform a custom step with an AWS Lambda function target.
-       * * *`DECRYPT`* - Decrypt a file that was encrypted before it was uploaded.
-       * * *`DELETE`* - Delete the file.
-       * * *`TAG`* - Add a tag to the file.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
+            /**
+             * Details for a step that deletes the file.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-deletestepdetails)
+             */
+            override fun deleteStepDetails(): Any? = unwrap(this).getDeleteStepDetails()
 
-      public fun build(): software.amazon.awscdk.services.transfer.CfnWorkflow.WorkflowStepProperty
-          = cdkBuilder.build()
-    }
+            /**
+             * Details for a step that creates one or more tags.
+             *
+             * You specify one or more tags. Each tag contains a key-value pair.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-tagstepdetails)
+             */
+            override fun tagStepDetails(): Any? = unwrap(this).getTagStepDetails()
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.WorkflowStepProperty,
-    ) : WorkflowStepProperty {
-      /**
-       * Details for a step that performs a file copy.
-       *
-       * Consists of the following values:
-       *
-       * * A description
-       * * An Amazon S3 location for the destination of the file copy.
-       * * A flag that indicates whether to overwrite an existing file of the same name. The default
-       * is `FALSE` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-copystepdetails)
-       */
-      override fun copyStepDetails(): Any? = unwrap(this).getCopyStepDetails()
+            /**
+             * Currently, the following step types are supported.
+             * * *`COPY`* - Copy the file to another location.
+             * * *`CUSTOM`* - Perform a custom step with an AWS Lambda function target.
+             * * *`DECRYPT`* - Decrypt a file that was encrypted before it was uploaded.
+             * * *`DELETE`* - Delete the file.
+             * * *`TAG`* - Add a tag to the file.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-type)
+             */
+            override fun type(): String? = unwrap(this).getType()
+        }
 
-      /**
-       * Details for a step that invokes an AWS Lambda function.
-       *
-       * Consists of the Lambda function's name, target, and timeout (in seconds).
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-customstepdetails)
-       */
-      override fun customStepDetails(): Any? = unwrap(this).getCustomStepDetails()
+        public companion object {
+            init {}
 
-      /**
-       * Details for a step that decrypts an encrypted file.
-       *
-       * Consists of the following values:
-       *
-       * * A descriptive name
-       * * An Amazon S3 or Amazon Elastic File System (Amazon EFS) location for the source file to
-       * decrypt.
-       * * An S3 or Amazon EFS location for the destination of the file decryption.
-       * * A flag that indicates whether to overwrite an existing file of the same name. The default
-       * is `FALSE` .
-       * * The type of encryption that's used. Currently, only PGP encryption is supported.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-decryptstepdetails)
-       */
-      override fun decryptStepDetails(): Any? = unwrap(this).getDecryptStepDetails()
+            public operator fun invoke(block: Builder.() -> Unit = {}): WorkflowStepProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-      /**
-       * Details for a step that deletes the file.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-deletestepdetails)
-       */
-      override fun deleteStepDetails(): Any? = unwrap(this).getDeleteStepDetails()
+            internal fun wrap(
+                cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.WorkflowStepProperty
+            ): WorkflowStepProperty = Wrapper(cdkObject)
 
-      /**
-       * Details for a step that creates one or more tags.
-       *
-       * You specify one or more tags. Each tag contains a key-value pair.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-tagstepdetails)
-       */
-      override fun tagStepDetails(): Any? = unwrap(this).getTagStepDetails()
-
-      /**
-       * Currently, the following step types are supported.
-       *
-       * * *`COPY`* - Copy the file to another location.
-       * * *`CUSTOM`* - Perform a custom step with an AWS Lambda function target.
-       * * *`DECRYPT`* - Decrypt a file that was encrypted before it was uploaded.
-       * * *`DELETE`* - Delete the file.
-       * * *`TAG`* - Add a tag to the file.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-workflowstep.html#cfn-transfer-workflow-workflowstep-type)
-       */
-      override fun type(): String? = unwrap(this).getType()
+            internal fun unwrap(
+                wrapped: WorkflowStepProperty
+            ): software.amazon.awscdk.services.transfer.CfnWorkflow.WorkflowStepProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface S3InputFileLocationProperty {
+        /**
+         * Specifies the S3 bucket for the customer input file.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-s3inputfilelocation.html#cfn-transfer-workflow-s3inputfilelocation-bucket)
+         */
+        public fun bucket(): String? = unwrap(this).getBucket()
 
-      }
+        /**
+         * The name assigned to the file when it was created in Amazon S3.
+         *
+         * You use the object key to retrieve the object.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-s3inputfilelocation.html#cfn-transfer-workflow-s3inputfilelocation-key)
+         */
+        public fun key(): String? = unwrap(this).getKey()
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): WorkflowStepProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /** A builder for [S3InputFileLocationProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param bucket Specifies the S3 bucket for the customer input file. */
+            public fun bucket(bucket: String)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.WorkflowStepProperty):
-          WorkflowStepProperty = Wrapper(cdkObject)
+            /**
+             * @param key The name assigned to the file when it was created in Amazon S3. You use
+             *   the object key to retrieve the object.
+             */
+            public fun key(key: String)
+        }
 
-      internal fun unwrap(wrapped: WorkflowStepProperty):
-          software.amazon.awscdk.services.transfer.CfnWorkflow.WorkflowStepProperty = (wrapped as
-          Wrapper).cdkObject
-    }
-  }
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.transfer.CfnWorkflow.S3InputFileLocationProperty.Builder =
+                software.amazon.awscdk.services.transfer.CfnWorkflow.S3InputFileLocationProperty
+                    .builder()
 
-  public interface S3InputFileLocationProperty {
-    /**
-     * Specifies the S3 bucket for the customer input file.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-s3inputfilelocation.html#cfn-transfer-workflow-s3inputfilelocation-bucket)
-     */
-    public fun bucket(): String? = unwrap(this).getBucket()
+            /** @param bucket Specifies the S3 bucket for the customer input file. */
+            override fun bucket(bucket: String) {
+                cdkBuilder.bucket(bucket)
+            }
 
-    /**
-     * The name assigned to the file when it was created in Amazon S3.
-     *
-     * You use the object key to retrieve the object.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-s3inputfilelocation.html#cfn-transfer-workflow-s3inputfilelocation-key)
-     */
-    public fun key(): String? = unwrap(this).getKey()
+            /**
+             * @param key The name assigned to the file when it was created in Amazon S3. You use
+             *   the object key to retrieve the object.
+             */
+            override fun key(key: String) {
+                cdkBuilder.key(key)
+            }
 
-    /**
-     * A builder for [S3InputFileLocationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param bucket Specifies the S3 bucket for the customer input file.
-       */
-      public fun bucket(bucket: String)
+            public fun build():
+                software.amazon.awscdk.services.transfer.CfnWorkflow.S3InputFileLocationProperty =
+                cdkBuilder.build()
+        }
 
-      /**
-       * @param key The name assigned to the file when it was created in Amazon S3.
-       * You use the object key to retrieve the object.
-       */
-      public fun key(key: String)
-    }
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.transfer.CfnWorkflow.S3InputFileLocationProperty,
+        ) : S3InputFileLocationProperty {
+            /**
+             * Specifies the S3 bucket for the customer input file.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-s3inputfilelocation.html#cfn-transfer-workflow-s3inputfilelocation-bucket)
+             */
+            override fun bucket(): String? = unwrap(this).getBucket()
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.S3InputFileLocationProperty.Builder =
-          software.amazon.awscdk.services.transfer.CfnWorkflow.S3InputFileLocationProperty.builder()
+            /**
+             * The name assigned to the file when it was created in Amazon S3.
+             *
+             * You use the object key to retrieve the object.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-s3inputfilelocation.html#cfn-transfer-workflow-s3inputfilelocation-key)
+             */
+            override fun key(): String? = unwrap(this).getKey()
+        }
 
-      /**
-       * @param bucket Specifies the S3 bucket for the customer input file.
-       */
-      override fun bucket(bucket: String) {
-        cdkBuilder.bucket(bucket)
-      }
+        public companion object {
+            init {}
 
-      /**
-       * @param key The name assigned to the file when it was created in Amazon S3.
-       * You use the object key to retrieve the object.
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
+            public operator fun invoke(
+                block: Builder.() -> Unit = {}
+            ): S3InputFileLocationProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-      public fun build():
-          software.amazon.awscdk.services.transfer.CfnWorkflow.S3InputFileLocationProperty =
-          cdkBuilder.build()
-    }
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.transfer.CfnWorkflow.S3InputFileLocationProperty
+            ): S3InputFileLocationProperty = Wrapper(cdkObject)
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.S3InputFileLocationProperty,
-    ) : S3InputFileLocationProperty {
-      /**
-       * Specifies the S3 bucket for the customer input file.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-s3inputfilelocation.html#cfn-transfer-workflow-s3inputfilelocation-bucket)
-       */
-      override fun bucket(): String? = unwrap(this).getBucket()
-
-      /**
-       * The name assigned to the file when it was created in Amazon S3.
-       *
-       * You use the object key to retrieve the object.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-s3inputfilelocation.html#cfn-transfer-workflow-s3inputfilelocation-key)
-       */
-      override fun key(): String? = unwrap(this).getKey()
+            internal fun unwrap(
+                wrapped: S3InputFileLocationProperty
+            ): software.amazon.awscdk.services.transfer.CfnWorkflow.S3InputFileLocationProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface S3TagProperty {
+        /**
+         * The name assigned to the tag that you create.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-s3tag.html#cfn-transfer-workflow-s3tag-key)
+         */
+        public fun key(): String
 
-      }
+        /**
+         * The value that corresponds to the key.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-s3tag.html#cfn-transfer-workflow-s3tag-value)
+         */
+        public fun `value`(): String
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3InputFileLocationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /** A builder for [S3TagProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param key The name assigned to the tag that you create. */
+            public fun key(key: String)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.S3InputFileLocationProperty):
-          S3InputFileLocationProperty = Wrapper(cdkObject)
+            /** @param value The value that corresponds to the key. */
+            public fun `value`(`value`: String)
+        }
 
-      internal fun unwrap(wrapped: S3InputFileLocationProperty):
-          software.amazon.awscdk.services.transfer.CfnWorkflow.S3InputFileLocationProperty =
-          (wrapped as Wrapper).cdkObject
-    }
-  }
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.transfer.CfnWorkflow.S3TagProperty.Builder =
+                software.amazon.awscdk.services.transfer.CfnWorkflow.S3TagProperty.builder()
 
-  public interface S3TagProperty {
-    /**
-     * The name assigned to the tag that you create.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-s3tag.html#cfn-transfer-workflow-s3tag-key)
-     */
-    public fun key(): String
+            /** @param key The name assigned to the tag that you create. */
+            override fun key(key: String) {
+                cdkBuilder.key(key)
+            }
 
-    /**
-     * The value that corresponds to the key.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-s3tag.html#cfn-transfer-workflow-s3tag-value)
-     */
-    public fun `value`(): String
+            /** @param value The value that corresponds to the key. */
+            override fun `value`(`value`: String) {
+                cdkBuilder.`value`(`value`)
+            }
 
-    /**
-     * A builder for [S3TagProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param key The name assigned to the tag that you create. 
-       */
-      public fun key(key: String)
+            public fun build(): software.amazon.awscdk.services.transfer.CfnWorkflow.S3TagProperty =
+                cdkBuilder.build()
+        }
 
-      /**
-       * @param value The value that corresponds to the key. 
-       */
-      public fun `value`(`value`: String)
-    }
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.transfer.CfnWorkflow.S3TagProperty,
+        ) : S3TagProperty {
+            /**
+             * The name assigned to the tag that you create.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-s3tag.html#cfn-transfer-workflow-s3tag-key)
+             */
+            override fun key(): String = unwrap(this).getKey()
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.S3TagProperty.Builder =
-          software.amazon.awscdk.services.transfer.CfnWorkflow.S3TagProperty.builder()
+            /**
+             * The value that corresponds to the key.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-s3tag.html#cfn-transfer-workflow-s3tag-value)
+             */
+            override fun `value`(): String = unwrap(this).getValue()
+        }
 
-      /**
-       * @param key The name assigned to the tag that you create. 
-       */
-      override fun key(key: String) {
-        cdkBuilder.key(key)
-      }
+        public companion object {
+            init {}
 
-      /**
-       * @param value The value that corresponds to the key. 
-       */
-      override fun `value`(`value`: String) {
-        cdkBuilder.`value`(`value`)
-      }
+            public operator fun invoke(block: Builder.() -> Unit = {}): S3TagProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-      public fun build(): software.amazon.awscdk.services.transfer.CfnWorkflow.S3TagProperty =
-          cdkBuilder.build()
-    }
+            internal fun wrap(
+                cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.S3TagProperty
+            ): S3TagProperty = Wrapper(cdkObject)
 
-    private class Wrapper internal constructor(
-      internal val cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.S3TagProperty,
-    ) : S3TagProperty {
-      /**
-       * The name assigned to the tag that you create.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-s3tag.html#cfn-transfer-workflow-s3tag-key)
-       */
-      override fun key(): String = unwrap(this).getKey()
-
-      /**
-       * The value that corresponds to the key.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-s3tag.html#cfn-transfer-workflow-s3tag-value)
-       */
-      override fun `value`(): String = unwrap(this).getValue()
+            internal fun unwrap(
+                wrapped: S3TagProperty
+            ): software.amazon.awscdk.services.transfer.CfnWorkflow.S3TagProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface TagStepDetailsProperty {
+        /**
+         * The name of the step, used as an identifier.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-tagstepdetails.html#cfn-transfer-workflow-tagstepdetails-name)
+         */
+        public fun name(): String? = unwrap(this).getName()
 
-      }
+        /**
+         * Specifies which file to use as input to the workflow step: either the output from the
+         * previous step, or the originally uploaded file for the workflow.
+         * * To use the previous file as the input, enter `${previous.file}` . In this case, this
+         *   workflow step uses the output file from the previous workflow step as input. This is
+         *   the default value.
+         * * To use the originally uploaded file location as input for this step, enter
+         *   `${original.file}` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-tagstepdetails.html#cfn-transfer-workflow-tagstepdetails-sourcefilelocation)
+         */
+        public fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3TagProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        /**
+         * Array that contains from 1 to 10 key/value pairs.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-tagstepdetails.html#cfn-transfer-workflow-tagstepdetails-tags)
+         */
+        public fun tags(): List<S3TagProperty> =
+            unwrap(this).getTags()?.map(S3TagProperty::wrap) ?: emptyList()
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.S3TagProperty):
-          S3TagProperty = Wrapper(cdkObject)
+        /** A builder for [TagStepDetailsProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param name The name of the step, used as an identifier. */
+            public fun name(name: String)
 
-      internal fun unwrap(wrapped: S3TagProperty):
-          software.amazon.awscdk.services.transfer.CfnWorkflow.S3TagProperty = (wrapped as
-          Wrapper).cdkObject
-    }
-  }
+            /**
+             * @param sourceFileLocation Specifies which file to use as input to the workflow step:
+             *   either the output from the previous step, or the originally uploaded file for the
+             *   workflow.
+             * * To use the previous file as the input, enter `${previous.file}` . In this case,
+             *   this workflow step uses the output file from the previous workflow step as input.
+             *   This is the default value.
+             * * To use the originally uploaded file location as input for this step, enter
+             *   `${original.file}` .
+             */
+            public fun sourceFileLocation(sourceFileLocation: String)
 
-  public interface TagStepDetailsProperty {
-    /**
-     * The name of the step, used as an identifier.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-tagstepdetails.html#cfn-transfer-workflow-tagstepdetails-name)
-     */
-    public fun name(): String? = unwrap(this).getName()
+            /** @param tags Array that contains from 1 to 10 key/value pairs. */
+            public fun tags(tags: List<S3TagProperty>)
 
-    /**
-     * Specifies which file to use as input to the workflow step: either the output from the
-     * previous step, or the originally uploaded file for the workflow.
-     *
-     * * To use the previous file as the input, enter `${previous.file}` . In this case, this
-     * workflow step uses the output file from the previous workflow step as input. This is the default
-     * value.
-     * * To use the originally uploaded file location as input for this step, enter
-     * `${original.file}` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-tagstepdetails.html#cfn-transfer-workflow-tagstepdetails-sourcefilelocation)
-     */
-    public fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
+            /** @param tags Array that contains from 1 to 10 key/value pairs. */
+            public fun tags(vararg tags: S3TagProperty)
+        }
 
-    /**
-     * Array that contains from 1 to 10 key/value pairs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-tagstepdetails.html#cfn-transfer-workflow-tagstepdetails-tags)
-     */
-    public fun tags(): List<S3TagProperty> = unwrap(this).getTags()?.map(S3TagProperty::wrap) ?:
-        emptyList()
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.transfer.CfnWorkflow.TagStepDetailsProperty.Builder =
+                software.amazon.awscdk.services.transfer.CfnWorkflow.TagStepDetailsProperty
+                    .builder()
 
-    /**
-     * A builder for [TagStepDetailsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param name The name of the step, used as an identifier.
-       */
-      public fun name(name: String)
+            /** @param name The name of the step, used as an identifier. */
+            override fun name(name: String) {
+                cdkBuilder.name(name)
+            }
 
-      /**
-       * @param sourceFileLocation Specifies which file to use as input to the workflow step: either
-       * the output from the previous step, or the originally uploaded file for the workflow.
-       * * To use the previous file as the input, enter `${previous.file}` . In this case, this
-       * workflow step uses the output file from the previous workflow step as input. This is the
-       * default value.
-       * * To use the originally uploaded file location as input for this step, enter
-       * `${original.file}` .
-       */
-      public fun sourceFileLocation(sourceFileLocation: String)
+            /**
+             * @param sourceFileLocation Specifies which file to use as input to the workflow step:
+             *   either the output from the previous step, or the originally uploaded file for the
+             *   workflow.
+             * * To use the previous file as the input, enter `${previous.file}` . In this case,
+             *   this workflow step uses the output file from the previous workflow step as input.
+             *   This is the default value.
+             * * To use the originally uploaded file location as input for this step, enter
+             *   `${original.file}` .
+             */
+            override fun sourceFileLocation(sourceFileLocation: String) {
+                cdkBuilder.sourceFileLocation(sourceFileLocation)
+            }
 
-      /**
-       * @param tags Array that contains from 1 to 10 key/value pairs.
-       */
-      public fun tags(tags: List<S3TagProperty>)
+            /** @param tags Array that contains from 1 to 10 key/value pairs. */
+            override fun tags(tags: List<S3TagProperty>) {
+                cdkBuilder.tags(tags.map(S3TagProperty::unwrap))
+            }
 
-      /**
-       * @param tags Array that contains from 1 to 10 key/value pairs.
-       */
-      public fun tags(vararg tags: S3TagProperty)
-    }
+            /** @param tags Array that contains from 1 to 10 key/value pairs. */
+            override fun tags(vararg tags: S3TagProperty): Unit = tags(tags.toList())
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.TagStepDetailsProperty.Builder =
-          software.amazon.awscdk.services.transfer.CfnWorkflow.TagStepDetailsProperty.builder()
+            public fun build():
+                software.amazon.awscdk.services.transfer.CfnWorkflow.TagStepDetailsProperty =
+                cdkBuilder.build()
+        }
 
-      /**
-       * @param name The name of the step, used as an identifier.
-       */
-      override fun name(name: String) {
-        cdkBuilder.name(name)
-      }
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.transfer.CfnWorkflow.TagStepDetailsProperty,
+        ) : TagStepDetailsProperty {
+            /**
+             * The name of the step, used as an identifier.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-tagstepdetails.html#cfn-transfer-workflow-tagstepdetails-name)
+             */
+            override fun name(): String? = unwrap(this).getName()
 
-      /**
-       * @param sourceFileLocation Specifies which file to use as input to the workflow step: either
-       * the output from the previous step, or the originally uploaded file for the workflow.
-       * * To use the previous file as the input, enter `${previous.file}` . In this case, this
-       * workflow step uses the output file from the previous workflow step as input. This is the
-       * default value.
-       * * To use the originally uploaded file location as input for this step, enter
-       * `${original.file}` .
-       */
-      override fun sourceFileLocation(sourceFileLocation: String) {
-        cdkBuilder.sourceFileLocation(sourceFileLocation)
-      }
+            /**
+             * Specifies which file to use as input to the workflow step: either the output from the
+             * previous step, or the originally uploaded file for the workflow.
+             * * To use the previous file as the input, enter `${previous.file}` . In this case,
+             *   this workflow step uses the output file from the previous workflow step as input.
+             *   This is the default value.
+             * * To use the originally uploaded file location as input for this step, enter
+             *   `${original.file}` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-tagstepdetails.html#cfn-transfer-workflow-tagstepdetails-sourcefilelocation)
+             */
+            override fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
 
-      /**
-       * @param tags Array that contains from 1 to 10 key/value pairs.
-       */
-      override fun tags(tags: List<S3TagProperty>) {
-        cdkBuilder.tags(tags.map(S3TagProperty::unwrap))
-      }
+            /**
+             * Array that contains from 1 to 10 key/value pairs.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-tagstepdetails.html#cfn-transfer-workflow-tagstepdetails-tags)
+             */
+            override fun tags(): List<S3TagProperty> =
+                unwrap(this).getTags()?.map(S3TagProperty::wrap) ?: emptyList()
+        }
 
-      /**
-       * @param tags Array that contains from 1 to 10 key/value pairs.
-       */
-      override fun tags(vararg tags: S3TagProperty): Unit = tags(tags.toList())
+        public companion object {
+            init {}
 
-      public fun build():
-          software.amazon.awscdk.services.transfer.CfnWorkflow.TagStepDetailsProperty =
-          cdkBuilder.build()
-    }
+            public operator fun invoke(block: Builder.() -> Unit = {}): TagStepDetailsProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.TagStepDetailsProperty,
-    ) : TagStepDetailsProperty {
-      /**
-       * The name of the step, used as an identifier.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-tagstepdetails.html#cfn-transfer-workflow-tagstepdetails-name)
-       */
-      override fun name(): String? = unwrap(this).getName()
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.transfer.CfnWorkflow.TagStepDetailsProperty
+            ): TagStepDetailsProperty = Wrapper(cdkObject)
 
-      /**
-       * Specifies which file to use as input to the workflow step: either the output from the
-       * previous step, or the originally uploaded file for the workflow.
-       *
-       * * To use the previous file as the input, enter `${previous.file}` . In this case, this
-       * workflow step uses the output file from the previous workflow step as input. This is the
-       * default value.
-       * * To use the originally uploaded file location as input for this step, enter
-       * `${original.file}` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-tagstepdetails.html#cfn-transfer-workflow-tagstepdetails-sourcefilelocation)
-       */
-      override fun sourceFileLocation(): String? = unwrap(this).getSourceFileLocation()
-
-      /**
-       * Array that contains from 1 to 10 key/value pairs.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-tagstepdetails.html#cfn-transfer-workflow-tagstepdetails-tags)
-       */
-      override fun tags(): List<S3TagProperty> = unwrap(this).getTags()?.map(S3TagProperty::wrap) ?:
-          emptyList()
+            internal fun unwrap(
+                wrapped: TagStepDetailsProperty
+            ): software.amazon.awscdk.services.transfer.CfnWorkflow.TagStepDetailsProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    public companion object {
-      init {
+    public interface S3FileLocationProperty {
+        /**
+         * Specifies the details for the file location for the file that's being used in the
+         * workflow.
+         *
+         * Only applicable if you are using Amazon S3 storage.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-s3filelocation.html#cfn-transfer-workflow-s3filelocation-s3filelocation)
+         */
+        public fun s3FileLocation(): Any? = unwrap(this).getS3FileLocation()
 
-      }
+        /** A builder for [S3FileLocationProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param s3FileLocation Specifies the details for the file location for the file that's
+             *   being used in the workflow. Only applicable if you are using Amazon S3 storage.
+             */
+            public fun s3FileLocation(s3FileLocation: IResolvable)
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): TagStepDetailsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+            /**
+             * @param s3FileLocation Specifies the details for the file location for the file that's
+             *   being used in the workflow. Only applicable if you are using Amazon S3 storage.
+             */
+            public fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.TagStepDetailsProperty):
-          TagStepDetailsProperty = Wrapper(cdkObject)
+            /**
+             * @param s3FileLocation Specifies the details for the file location for the file that's
+             *   being used in the workflow. Only applicable if you are using Amazon S3 storage.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("5deeba364254a7436d45af464edae04e28b4856f11f3df8dbc74f70fcaf2cd5d")
+            public fun s3FileLocation(
+                s3FileLocation: S3InputFileLocationProperty.Builder.() -> Unit
+            )
+        }
 
-      internal fun unwrap(wrapped: TagStepDetailsProperty):
-          software.amazon.awscdk.services.transfer.CfnWorkflow.TagStepDetailsProperty = (wrapped as
-          Wrapper).cdkObject
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.transfer.CfnWorkflow.S3FileLocationProperty.Builder =
+                software.amazon.awscdk.services.transfer.CfnWorkflow.S3FileLocationProperty
+                    .builder()
+
+            /**
+             * @param s3FileLocation Specifies the details for the file location for the file that's
+             *   being used in the workflow. Only applicable if you are using Amazon S3 storage.
+             */
+            override fun s3FileLocation(s3FileLocation: IResolvable) {
+                cdkBuilder.s3FileLocation(s3FileLocation.let(IResolvable::unwrap))
+            }
+
+            /**
+             * @param s3FileLocation Specifies the details for the file location for the file that's
+             *   being used in the workflow. Only applicable if you are using Amazon S3 storage.
+             */
+            override fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty) {
+                cdkBuilder.s3FileLocation(s3FileLocation.let(S3InputFileLocationProperty::unwrap))
+            }
+
+            /**
+             * @param s3FileLocation Specifies the details for the file location for the file that's
+             *   being used in the workflow. Only applicable if you are using Amazon S3 storage.
+             */
+            @Suppress("INAPPLICABLE_JVM_NAME")
+            @JvmName("5deeba364254a7436d45af464edae04e28b4856f11f3df8dbc74f70fcaf2cd5d")
+            override fun s3FileLocation(
+                s3FileLocation: S3InputFileLocationProperty.Builder.() -> Unit
+            ): Unit = s3FileLocation(S3InputFileLocationProperty(s3FileLocation))
+
+            public fun build():
+                software.amazon.awscdk.services.transfer.CfnWorkflow.S3FileLocationProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.transfer.CfnWorkflow.S3FileLocationProperty,
+        ) : S3FileLocationProperty {
+            /**
+             * Specifies the details for the file location for the file that's being used in the
+             * workflow.
+             *
+             * Only applicable if you are using Amazon S3 storage.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-s3filelocation.html#cfn-transfer-workflow-s3filelocation-s3filelocation)
+             */
+            override fun s3FileLocation(): Any? = unwrap(this).getS3FileLocation()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): S3FileLocationProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.transfer.CfnWorkflow.S3FileLocationProperty
+            ): S3FileLocationProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: S3FileLocationProperty
+            ): software.amazon.awscdk.services.transfer.CfnWorkflow.S3FileLocationProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
-  }
-
-  public interface S3FileLocationProperty {
-    /**
-     * Specifies the details for the file location for the file that's being used in the workflow.
-     *
-     * Only applicable if you are using Amazon S3 storage.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-s3filelocation.html#cfn-transfer-workflow-s3filelocation-s3filelocation)
-     */
-    public fun s3FileLocation(): Any? = unwrap(this).getS3FileLocation()
-
-    /**
-     * A builder for [S3FileLocationProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param s3FileLocation Specifies the details for the file location for the file that's being
-       * used in the workflow.
-       * Only applicable if you are using Amazon S3 storage.
-       */
-      public fun s3FileLocation(s3FileLocation: IResolvable)
-
-      /**
-       * @param s3FileLocation Specifies the details for the file location for the file that's being
-       * used in the workflow.
-       * Only applicable if you are using Amazon S3 storage.
-       */
-      public fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty)
-
-      /**
-       * @param s3FileLocation Specifies the details for the file location for the file that's being
-       * used in the workflow.
-       * Only applicable if you are using Amazon S3 storage.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5deeba364254a7436d45af464edae04e28b4856f11f3df8dbc74f70fcaf2cd5d")
-      public fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.S3FileLocationProperty.Builder =
-          software.amazon.awscdk.services.transfer.CfnWorkflow.S3FileLocationProperty.builder()
-
-      /**
-       * @param s3FileLocation Specifies the details for the file location for the file that's being
-       * used in the workflow.
-       * Only applicable if you are using Amazon S3 storage.
-       */
-      override fun s3FileLocation(s3FileLocation: IResolvable) {
-        cdkBuilder.s3FileLocation(s3FileLocation.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param s3FileLocation Specifies the details for the file location for the file that's being
-       * used in the workflow.
-       * Only applicable if you are using Amazon S3 storage.
-       */
-      override fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty) {
-        cdkBuilder.s3FileLocation(s3FileLocation.let(S3InputFileLocationProperty::unwrap))
-      }
-
-      /**
-       * @param s3FileLocation Specifies the details for the file location for the file that's being
-       * used in the workflow.
-       * Only applicable if you are using Amazon S3 storage.
-       */
-      @Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5deeba364254a7436d45af464edae04e28b4856f11f3df8dbc74f70fcaf2cd5d")
-      override fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty.Builder.() -> Unit):
-          Unit = s3FileLocation(S3InputFileLocationProperty(s3FileLocation))
-
-      public fun build():
-          software.amazon.awscdk.services.transfer.CfnWorkflow.S3FileLocationProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.transfer.CfnWorkflow.S3FileLocationProperty,
-    ) : S3FileLocationProperty {
-      /**
-       * Specifies the details for the file location for the file that's being used in the workflow.
-       *
-       * Only applicable if you are using Amazon S3 storage.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-s3filelocation.html#cfn-transfer-workflow-s3filelocation-s3filelocation)
-       */
-      override fun s3FileLocation(): Any? = unwrap(this).getS3FileLocation()
-    }
-
-    public companion object {
-      init {
-
-      }
-
-      public operator fun invoke(block: Builder.() -> Unit = {}): S3FileLocationProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnWorkflow.S3FileLocationProperty):
-          S3FileLocationProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: S3FileLocationProperty):
-          software.amazon.awscdk.services.transfer.CfnWorkflow.S3FileLocationProperty = (wrapped as
-          Wrapper).cdkObject
-    }
-  }
 }

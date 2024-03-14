@@ -5,64 +5,60 @@ import kotlin.Number
 import kotlin.Unit
 
 public interface GrpcConnectionPool {
-  /**
-   * The maximum requests in the pool.
-   *
-   * Default: - none
-   */
-  public fun maxRequests(): Number
-
-  /**
-   * A builder for [GrpcConnectionPool]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param maxRequests The maximum requests in the pool. 
-     */
-    public fun maxRequests(maxRequests: Number)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.appmesh.GrpcConnectionPool.Builder =
-        software.amazon.awscdk.services.appmesh.GrpcConnectionPool.builder()
-
-    /**
-     * @param maxRequests The maximum requests in the pool. 
-     */
-    override fun maxRequests(maxRequests: Number) {
-      cdkBuilder.maxRequests(maxRequests)
-    }
-
-    public fun build(): software.amazon.awscdk.services.appmesh.GrpcConnectionPool =
-        cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.appmesh.GrpcConnectionPool,
-  ) : GrpcConnectionPool {
     /**
      * The maximum requests in the pool.
      *
      * Default: - none
      */
-    override fun maxRequests(): Number = unwrap(this).getMaxRequests()
-  }
+    public fun maxRequests(): Number
 
-  public companion object {
-    init {
-
+    /** A builder for [GrpcConnectionPool] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param maxRequests The maximum requests in the pool. */
+        public fun maxRequests(maxRequests: Number)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): GrpcConnectionPool {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.appmesh.GrpcConnectionPool.Builder =
+            software.amazon.awscdk.services.appmesh.GrpcConnectionPool.builder()
+
+        /** @param maxRequests The maximum requests in the pool. */
+        override fun maxRequests(maxRequests: Number) {
+            cdkBuilder.maxRequests(maxRequests)
+        }
+
+        public fun build(): software.amazon.awscdk.services.appmesh.GrpcConnectionPool =
+            cdkBuilder.build()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.GrpcConnectionPool):
-        GrpcConnectionPool = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.appmesh.GrpcConnectionPool,
+    ) : GrpcConnectionPool {
+        /**
+         * The maximum requests in the pool.
+         *
+         * Default: - none
+         */
+        override fun maxRequests(): Number = unwrap(this).getMaxRequests()
+    }
 
-    internal fun unwrap(wrapped: GrpcConnectionPool):
-        software.amazon.awscdk.services.appmesh.GrpcConnectionPool = (wrapped as Wrapper).cdkObject
-  }
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): GrpcConnectionPool {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.appmesh.GrpcConnectionPool
+        ): GrpcConnectionPool = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: GrpcConnectionPool
+        ): software.amazon.awscdk.services.appmesh.GrpcConnectionPool =
+            (wrapped as Wrapper).cdkObject
+    }
 }

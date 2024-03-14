@@ -6,93 +6,11 @@ import kotlin.String
 import kotlin.Unit
 
 public interface CognitoOptions {
-  /**
-   * The Amazon Cognito identity pool ID that you want Amazon OpenSearch Service to use for
-   * OpenSearch Dashboards authentication.
-   */
-  public fun identityPoolId(): String
-
-  /**
-   * A role that allows Amazon OpenSearch Service to configure your user pool and identity pool.
-   *
-   * It must have the `AmazonESCognitoAccess` policy attached to it.
-   *
-   * [Documentation](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html#cognito-auth-prereq)
-   */
-  public fun role(): IRole
-
-  /**
-   * The Amazon Cognito user pool ID that you want Amazon OpenSearch Service to use for OpenSearch
-   * Dashboards authentication.
-   */
-  public fun userPoolId(): String
-
-  /**
-   * A builder for [CognitoOptions]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param identityPoolId The Amazon Cognito identity pool ID that you want Amazon OpenSearch
-     * Service to use for OpenSearch Dashboards authentication. 
-     */
-    public fun identityPoolId(identityPoolId: String)
-
-    /**
-     * @param role A role that allows Amazon OpenSearch Service to configure your user pool and
-     * identity pool. 
-     * It must have the `AmazonESCognitoAccess` policy attached to it.
-     */
-    public fun role(role: IRole)
-
-    /**
-     * @param userPoolId The Amazon Cognito user pool ID that you want Amazon OpenSearch Service to
-     * use for OpenSearch Dashboards authentication. 
-     */
-    public fun userPoolId(userPoolId: String)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.opensearchservice.CognitoOptions.Builder
-        = software.amazon.awscdk.services.opensearchservice.CognitoOptions.builder()
-
-    /**
-     * @param identityPoolId The Amazon Cognito identity pool ID that you want Amazon OpenSearch
-     * Service to use for OpenSearch Dashboards authentication. 
-     */
-    override fun identityPoolId(identityPoolId: String) {
-      cdkBuilder.identityPoolId(identityPoolId)
-    }
-
-    /**
-     * @param role A role that allows Amazon OpenSearch Service to configure your user pool and
-     * identity pool. 
-     * It must have the `AmazonESCognitoAccess` policy attached to it.
-     */
-    override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
-    }
-
-    /**
-     * @param userPoolId The Amazon Cognito user pool ID that you want Amazon OpenSearch Service to
-     * use for OpenSearch Dashboards authentication. 
-     */
-    override fun userPoolId(userPoolId: String) {
-      cdkBuilder.userPoolId(userPoolId)
-    }
-
-    public fun build(): software.amazon.awscdk.services.opensearchservice.CognitoOptions =
-        cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.opensearchservice.CognitoOptions,
-  ) : CognitoOptions {
     /**
      * The Amazon Cognito identity pool ID that you want Amazon OpenSearch Service to use for
      * OpenSearch Dashboards authentication.
      */
-    override fun identityPoolId(): String = unwrap(this).getIdentityPoolId()
+    public fun identityPoolId(): String
 
     /**
      * A role that allows Amazon OpenSearch Service to configure your user pool and identity pool.
@@ -101,30 +19,111 @@ public interface CognitoOptions {
      *
      * [Documentation](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html#cognito-auth-prereq)
      */
-    override fun role(): IRole = unwrap(this).getRole().let(IRole::wrap)
+    public fun role(): IRole
 
     /**
      * The Amazon Cognito user pool ID that you want Amazon OpenSearch Service to use for OpenSearch
      * Dashboards authentication.
      */
-    override fun userPoolId(): String = unwrap(this).getUserPoolId()
-  }
+    public fun userPoolId(): String
 
-  public companion object {
-    init {
+    /** A builder for [CognitoOptions] */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * @param identityPoolId The Amazon Cognito identity pool ID that you want Amazon OpenSearch
+         *   Service to use for OpenSearch Dashboards authentication.
+         */
+        public fun identityPoolId(identityPoolId: String)
 
+        /**
+         * @param role A role that allows Amazon OpenSearch Service to configure your user pool and
+         *   identity pool. It must have the `AmazonESCognitoAccess` policy attached to it.
+         */
+        public fun role(role: IRole)
+
+        /**
+         * @param userPoolId The Amazon Cognito user pool ID that you want Amazon OpenSearch Service
+         *   to use for OpenSearch Dashboards authentication.
+         */
+        public fun userPoolId(userPoolId: String)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): CognitoOptions {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.opensearchservice.CognitoOptions.Builder =
+            software.amazon.awscdk.services.opensearchservice.CognitoOptions.builder()
+
+        /**
+         * @param identityPoolId The Amazon Cognito identity pool ID that you want Amazon OpenSearch
+         *   Service to use for OpenSearch Dashboards authentication.
+         */
+        override fun identityPoolId(identityPoolId: String) {
+            cdkBuilder.identityPoolId(identityPoolId)
+        }
+
+        /**
+         * @param role A role that allows Amazon OpenSearch Service to configure your user pool and
+         *   identity pool. It must have the `AmazonESCognitoAccess` policy attached to it.
+         */
+        override fun role(role: IRole) {
+            cdkBuilder.role(role.let(IRole::unwrap))
+        }
+
+        /**
+         * @param userPoolId The Amazon Cognito user pool ID that you want Amazon OpenSearch Service
+         *   to use for OpenSearch Dashboards authentication.
+         */
+        override fun userPoolId(userPoolId: String) {
+            cdkBuilder.userPoolId(userPoolId)
+        }
+
+        public fun build(): software.amazon.awscdk.services.opensearchservice.CognitoOptions =
+            cdkBuilder.build()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CognitoOptions):
-        CognitoOptions = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.opensearchservice.CognitoOptions,
+    ) : CognitoOptions {
+        /**
+         * The Amazon Cognito identity pool ID that you want Amazon OpenSearch Service to use for
+         * OpenSearch Dashboards authentication.
+         */
+        override fun identityPoolId(): String = unwrap(this).getIdentityPoolId()
 
-    internal fun unwrap(wrapped: CognitoOptions):
-        software.amazon.awscdk.services.opensearchservice.CognitoOptions = (wrapped as
-        Wrapper).cdkObject
-  }
+        /**
+         * A role that allows Amazon OpenSearch Service to configure your user pool and identity
+         * pool.
+         *
+         * It must have the `AmazonESCognitoAccess` policy attached to it.
+         *
+         * [Documentation](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cognito-auth.html#cognito-auth-prereq)
+         */
+        override fun role(): IRole = unwrap(this).getRole().let(IRole::wrap)
+
+        /**
+         * The Amazon Cognito user pool ID that you want Amazon OpenSearch Service to use for
+         * OpenSearch Dashboards authentication.
+         */
+        override fun userPoolId(): String = unwrap(this).getUserPoolId()
+    }
+
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): CognitoOptions {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.opensearchservice.CognitoOptions
+        ): CognitoOptions = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: CognitoOptions
+        ): software.amazon.awscdk.services.opensearchservice.CognitoOptions =
+            (wrapped as Wrapper).cdkObject
+    }
 }

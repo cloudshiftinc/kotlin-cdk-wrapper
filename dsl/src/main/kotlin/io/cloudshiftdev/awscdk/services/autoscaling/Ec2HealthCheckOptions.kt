@@ -5,70 +5,69 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Unit
 
 public interface Ec2HealthCheckOptions {
-  /**
-   * Specified the time Auto Scaling waits before checking the health status of an EC2 instance that
-   * has come into service.
-   *
-   * Default: Duration.seconds(0)
-   */
-  public fun grace(): Duration? = unwrap(this).getGrace()?.let(Duration::wrap)
-
-  /**
-   * A builder for [Ec2HealthCheckOptions]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param grace Specified the time Auto Scaling waits before checking the health status of an
-     * EC2 instance that has come into service.
-     */
-    public fun grace(grace: Duration)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder:
-        software.amazon.awscdk.services.autoscaling.Ec2HealthCheckOptions.Builder =
-        software.amazon.awscdk.services.autoscaling.Ec2HealthCheckOptions.builder()
-
-    /**
-     * @param grace Specified the time Auto Scaling waits before checking the health status of an
-     * EC2 instance that has come into service.
-     */
-    override fun grace(grace: Duration) {
-      cdkBuilder.grace(grace.let(Duration::unwrap))
-    }
-
-    public fun build(): software.amazon.awscdk.services.autoscaling.Ec2HealthCheckOptions =
-        cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.autoscaling.Ec2HealthCheckOptions,
-  ) : Ec2HealthCheckOptions {
     /**
      * Specified the time Auto Scaling waits before checking the health status of an EC2 instance
      * that has come into service.
      *
      * Default: Duration.seconds(0)
      */
-    override fun grace(): Duration? = unwrap(this).getGrace()?.let(Duration::wrap)
-  }
+    public fun grace(): Duration? = unwrap(this).getGrace()?.let(Duration::wrap)
 
-  public companion object {
-    init {
-
+    /** A builder for [Ec2HealthCheckOptions] */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * @param grace Specified the time Auto Scaling waits before checking the health status of
+         *   an EC2 instance that has come into service.
+         */
+        public fun grace(grace: Duration)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): Ec2HealthCheckOptions {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.autoscaling.Ec2HealthCheckOptions.Builder =
+            software.amazon.awscdk.services.autoscaling.Ec2HealthCheckOptions.builder()
+
+        /**
+         * @param grace Specified the time Auto Scaling waits before checking the health status of
+         *   an EC2 instance that has come into service.
+         */
+        override fun grace(grace: Duration) {
+            cdkBuilder.grace(grace.let(Duration::unwrap))
+        }
+
+        public fun build(): software.amazon.awscdk.services.autoscaling.Ec2HealthCheckOptions =
+            cdkBuilder.build()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.Ec2HealthCheckOptions):
-        Ec2HealthCheckOptions = Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.autoscaling.Ec2HealthCheckOptions,
+    ) : Ec2HealthCheckOptions {
+        /**
+         * Specified the time Auto Scaling waits before checking the health status of an EC2
+         * instance that has come into service.
+         *
+         * Default: Duration.seconds(0)
+         */
+        override fun grace(): Duration? = unwrap(this).getGrace()?.let(Duration::wrap)
+    }
 
-    internal fun unwrap(wrapped: Ec2HealthCheckOptions):
-        software.amazon.awscdk.services.autoscaling.Ec2HealthCheckOptions = (wrapped as
-        Wrapper).cdkObject
-  }
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): Ec2HealthCheckOptions {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.autoscaling.Ec2HealthCheckOptions
+        ): Ec2HealthCheckOptions = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: Ec2HealthCheckOptions
+        ): software.amazon.awscdk.services.autoscaling.Ec2HealthCheckOptions =
+            (wrapped as Wrapper).cdkObject
+    }
 }

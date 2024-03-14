@@ -7,132 +7,19 @@ import kotlin.String
 import kotlin.Unit
 
 public interface Login {
-  /**
-   * Specifies characters to not include in generated passwords.
-   *
-   * Default: "\"@/"
-   */
-  public fun excludeCharacters(): String? = unwrap(this).getExcludeCharacters()
-
-  /**
-   * KMS encryption key to encrypt the generated secret.
-   *
-   * Default: default master key
-   */
-  public fun kmsKey(): IKey? = unwrap(this).getKmsKey()?.let(IKey::wrap)
-
-  /**
-   * Password.
-   *
-   * Do not put passwords in your CDK code directly.
-   *
-   * Default: a Secrets Manager generated password
-   */
-  public fun password(): SecretValue? = unwrap(this).getPassword()?.let(SecretValue::wrap)
-
-  /**
-   * The physical name of the secret, that will be generated.
-   *
-   * Default: Secretsmanager will generate a physical name for the secret
-   */
-  public fun secretName(): String? = unwrap(this).getSecretName()
-
-  /**
-   * Username.
-   */
-  public fun username(): String
-
-  /**
-   * A builder for [Login]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param excludeCharacters Specifies characters to not include in generated passwords.
-     */
-    public fun excludeCharacters(excludeCharacters: String)
-
-    /**
-     * @param kmsKey KMS encryption key to encrypt the generated secret.
-     */
-    public fun kmsKey(kmsKey: IKey)
-
-    /**
-     * @param password Password.
-     * Do not put passwords in your CDK code directly.
-     */
-    public fun password(password: SecretValue)
-
-    /**
-     * @param secretName The physical name of the secret, that will be generated.
-     */
-    public fun secretName(secretName: String)
-
-    /**
-     * @param username Username. 
-     */
-    public fun username(username: String)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.docdb.Login.Builder =
-        software.amazon.awscdk.services.docdb.Login.builder()
-
-    /**
-     * @param excludeCharacters Specifies characters to not include in generated passwords.
-     */
-    override fun excludeCharacters(excludeCharacters: String) {
-      cdkBuilder.excludeCharacters(excludeCharacters)
-    }
-
-    /**
-     * @param kmsKey KMS encryption key to encrypt the generated secret.
-     */
-    override fun kmsKey(kmsKey: IKey) {
-      cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
-    }
-
-    /**
-     * @param password Password.
-     * Do not put passwords in your CDK code directly.
-     */
-    override fun password(password: SecretValue) {
-      cdkBuilder.password(password.let(SecretValue::unwrap))
-    }
-
-    /**
-     * @param secretName The physical name of the secret, that will be generated.
-     */
-    override fun secretName(secretName: String) {
-      cdkBuilder.secretName(secretName)
-    }
-
-    /**
-     * @param username Username. 
-     */
-    override fun username(username: String) {
-      cdkBuilder.username(username)
-    }
-
-    public fun build(): software.amazon.awscdk.services.docdb.Login = cdkBuilder.build()
-  }
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.docdb.Login,
-  ) : Login {
     /**
      * Specifies characters to not include in generated passwords.
      *
      * Default: "\"@/"
      */
-    override fun excludeCharacters(): String? = unwrap(this).getExcludeCharacters()
+    public fun excludeCharacters(): String? = unwrap(this).getExcludeCharacters()
 
     /**
      * KMS encryption key to encrypt the generated secret.
      *
      * Default: default master key
      */
-    override fun kmsKey(): IKey? = unwrap(this).getKmsKey()?.let(IKey::wrap)
+    public fun kmsKey(): IKey? = unwrap(this).getKmsKey()?.let(IKey::wrap)
 
     /**
      * Password.
@@ -141,35 +28,119 @@ public interface Login {
      *
      * Default: a Secrets Manager generated password
      */
-    override fun password(): SecretValue? = unwrap(this).getPassword()?.let(SecretValue::wrap)
+    public fun password(): SecretValue? = unwrap(this).getPassword()?.let(SecretValue::wrap)
 
     /**
      * The physical name of the secret, that will be generated.
      *
      * Default: Secretsmanager will generate a physical name for the secret
      */
-    override fun secretName(): String? = unwrap(this).getSecretName()
+    public fun secretName(): String? = unwrap(this).getSecretName()
 
-    /**
-     * Username.
-     */
-    override fun username(): String = unwrap(this).getUsername()
-  }
+    /** Username. */
+    public fun username(): String
 
-  public companion object {
-    init {
+    /** A builder for [Login] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param excludeCharacters Specifies characters to not include in generated passwords. */
+        public fun excludeCharacters(excludeCharacters: String)
 
+        /** @param kmsKey KMS encryption key to encrypt the generated secret. */
+        public fun kmsKey(kmsKey: IKey)
+
+        /** @param password Password. Do not put passwords in your CDK code directly. */
+        public fun password(password: SecretValue)
+
+        /** @param secretName The physical name of the secret, that will be generated. */
+        public fun secretName(secretName: String)
+
+        /** @param username Username. */
+        public fun username(username: String)
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): Login {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class BuilderImpl : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.docdb.Login.Builder =
+            software.amazon.awscdk.services.docdb.Login.builder()
+
+        /** @param excludeCharacters Specifies characters to not include in generated passwords. */
+        override fun excludeCharacters(excludeCharacters: String) {
+            cdkBuilder.excludeCharacters(excludeCharacters)
+        }
+
+        /** @param kmsKey KMS encryption key to encrypt the generated secret. */
+        override fun kmsKey(kmsKey: IKey) {
+            cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
+        }
+
+        /** @param password Password. Do not put passwords in your CDK code directly. */
+        override fun password(password: SecretValue) {
+            cdkBuilder.password(password.let(SecretValue::unwrap))
+        }
+
+        /** @param secretName The physical name of the secret, that will be generated. */
+        override fun secretName(secretName: String) {
+            cdkBuilder.secretName(secretName)
+        }
+
+        /** @param username Username. */
+        override fun username(username: String) {
+            cdkBuilder.username(username)
+        }
+
+        public fun build(): software.amazon.awscdk.services.docdb.Login = cdkBuilder.build()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.docdb.Login): Login =
-        Wrapper(cdkObject)
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.docdb.Login,
+    ) : Login {
+        /**
+         * Specifies characters to not include in generated passwords.
+         *
+         * Default: "\"@/"
+         */
+        override fun excludeCharacters(): String? = unwrap(this).getExcludeCharacters()
 
-    internal fun unwrap(wrapped: Login): software.amazon.awscdk.services.docdb.Login = (wrapped as
-        Wrapper).cdkObject
-  }
+        /**
+         * KMS encryption key to encrypt the generated secret.
+         *
+         * Default: default master key
+         */
+        override fun kmsKey(): IKey? = unwrap(this).getKmsKey()?.let(IKey::wrap)
+
+        /**
+         * Password.
+         *
+         * Do not put passwords in your CDK code directly.
+         *
+         * Default: a Secrets Manager generated password
+         */
+        override fun password(): SecretValue? = unwrap(this).getPassword()?.let(SecretValue::wrap)
+
+        /**
+         * The physical name of the secret, that will be generated.
+         *
+         * Default: Secretsmanager will generate a physical name for the secret
+         */
+        override fun secretName(): String? = unwrap(this).getSecretName()
+
+        /** Username. */
+        override fun username(): String = unwrap(this).getUsername()
+    }
+
+    public companion object {
+        init {}
+
+        public operator fun invoke(block: Builder.() -> Unit = {}): Login {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(cdkObject: software.amazon.awscdk.services.docdb.Login): Login =
+            Wrapper(cdkObject)
+
+        internal fun unwrap(wrapped: Login): software.amazon.awscdk.services.docdb.Login =
+            (wrapped as Wrapper).cdkObject
+    }
 }

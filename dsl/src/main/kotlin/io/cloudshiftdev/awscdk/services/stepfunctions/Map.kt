@@ -2,6 +2,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import com.fasterxml.jackson.databind.node.ObjectNode
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Any
 import kotlin.Deprecated
 import kotlin.Number
@@ -9,459 +10,465 @@ import kotlin.String
 import kotlin.Suppress
 import kotlin.Unit
 import kotlin.jvm.JvmName
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class Map internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.stepfunctions.Map,
+public open class Map
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.stepfunctions.Map,
 ) : MapBase(cdkObject), INextable {
-  /**
-   * Add a recovery handler for this state.
-   *
-   * When a particular error occurs, execution will continue at the error
-   * handler instead of failing the state machine execution.
-   *
-   * @param handler 
-   * @param props
-   */
-  public open fun addCatch(handler: IChainable): Map =
-      unwrap(this).addCatch(handler.let(IChainable::unwrap)).let(Map::wrap)
-
-  /**
-   * Add a recovery handler for this state.
-   *
-   * When a particular error occurs, execution will continue at the error
-   * handler instead of failing the state machine execution.
-   *
-   * @param handler 
-   * @param props
-   */
-  public open fun addCatch(handler: IChainable, props: CatchProps): Map =
-      unwrap(this).addCatch(handler.let(IChainable::unwrap),
-      props.let(CatchProps::unwrap)).let(Map::wrap)
-
-  /**
-   * Add a recovery handler for this state.
-   *
-   * When a particular error occurs, execution will continue at the error
-   * handler instead of failing the state machine execution.
-   *
-   * @param handler 
-   * @param props
-   */
-  @Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("649d9f3291ef4d0ef63a8c5a0298abac7d1de4b3e19759ec17eebcb73c9b5546")
-  public open fun addCatch(handler: IChainable, props: CatchProps.Builder.() -> Unit): Map =
-      addCatch(handler, CatchProps(props))
-
-  /**
-   * Add retry configuration for this state.
-   *
-   * This controls if and how the execution will be retried if a particular
-   * error occurs.
-   *
-   * @param props
-   */
-  public open fun addRetry(): Map = unwrap(this).addRetry().let(Map::wrap)
-
-  /**
-   * Add retry configuration for this state.
-   *
-   * This controls if and how the execution will be retried if a particular
-   * error occurs.
-   *
-   * @param props
-   */
-  public open fun addRetry(props: RetryProps): Map =
-      unwrap(this).addRetry(props.let(RetryProps::unwrap)).let(Map::wrap)
-
-  /**
-   * Add retry configuration for this state.
-   *
-   * This controls if and how the execution will be retried if a particular
-   * error occurs.
-   *
-   * @param props
-   */
-  @Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("661fedc3f68f12ca44a055f347012794aff87d8bc21e2414b45d66eeec8cda0f")
-  public open fun addRetry(props: RetryProps.Builder.() -> Unit): Map = addRetry(RetryProps(props))
-
-  /**
-   * Define item processor in Map.
-   *
-   * A Map must either have a non-empty iterator or a non-empty item processor (mutually exclusive 
-   * with `iterator`).
-   *
-   * @param processor 
-   * @param config
-   */
-  public open fun itemProcessor(processor: IChainable): Map =
-      unwrap(this).itemProcessor(processor.let(IChainable::unwrap)).let(Map::wrap)
-
-  /**
-   * Define item processor in Map.
-   *
-   * A Map must either have a non-empty iterator or a non-empty item processor (mutually exclusive 
-   * with `iterator`).
-   *
-   * @param processor 
-   * @param config
-   */
-  public open fun itemProcessor(processor: IChainable, config: ProcessorConfig): Map =
-      unwrap(this).itemProcessor(processor.let(IChainable::unwrap),
-      config.let(ProcessorConfig::unwrap)).let(Map::wrap)
-
-  /**
-   * Define item processor in Map.
-   *
-   * A Map must either have a non-empty iterator or a non-empty item processor (mutually exclusive 
-   * with `iterator`).
-   *
-   * @param processor 
-   * @param config
-   */
-  @Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("71a7ba7c6943da14aead58a96c7a9536157cdb72a42de33acb42a1e121af8bfd")
-  public open fun itemProcessor(processor: IChainable, config: ProcessorConfig.Builder.() -> Unit):
-      Map = itemProcessor(processor, ProcessorConfig(config))
-
-  /**
-   * (deprecated) Define iterator state machine in Map.
-   *
-   * A Map must either have a non-empty iterator or a non-empty item processor (mutually exclusive 
-   * with `itemProcessor`).
-   *
-   * * use `itemProcessor` instead.
-   * @param iterator 
-   */
-  @Deprecated(message = "deprecated in CDK")
-  public open fun iterator(iterator: IChainable): Map =
-      unwrap(this).iterator(iterator.let(IChainable::unwrap)).let(Map::wrap)
-
-  /**
-   * Return the Amazon States Language object for this state.
-   */
-  public override fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
-
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.Map].
-   */
-  @CdkDslMarker
-  public interface Builder {
     /**
-     * An optional description for this state.
+     * Add a recovery handler for this state.
      *
-     * Default: No comment
+     * When a particular error occurs, execution will continue at the error handler instead of
+     * failing the state machine execution.
      *
-     * @param comment An optional description for this state. 
+     * @param handler
+     * @param props
      */
-    public fun comment(comment: String)
+    public open fun addCatch(handler: IChainable): Map =
+        unwrap(this).addCatch(handler.let(IChainable::unwrap)).let(Map::wrap)
 
     /**
-     * JSONPath expression to select part of the state to be the input to this state.
+     * Add a recovery handler for this state.
      *
-     * May also be the special value JsonPath.DISCARD, which will cause the effective
-     * input to be the empty object {}.
+     * When a particular error occurs, execution will continue at the error handler instead of
+     * failing the state machine execution.
      *
-     * Default: $
-     *
-     * @param inputPath JSONPath expression to select part of the state to be the input to this
-     * state. 
+     * @param handler
+     * @param props
      */
-    public fun inputPath(inputPath: String)
+    public open fun addCatch(handler: IChainable, props: CatchProps): Map =
+        unwrap(this)
+            .addCatch(handler.let(IChainable::unwrap), props.let(CatchProps::unwrap))
+            .let(Map::wrap)
 
     /**
-     * The JSON that you want to override your default iteration input (mutually exclusive  with
-     * `parameters`).
+     * Add a recovery handler for this state.
      *
-     * Default: $
+     * When a particular error occurs, execution will continue at the error handler instead of
+     * failing the state machine execution.
      *
-     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-itemselector.html)
-     * @param itemSelector The JSON that you want to override your default iteration input (mutually
-     * exclusive  with `parameters`). 
+     * @param handler
+     * @param props
      */
-    public fun itemSelector(itemSelector: kotlin.collections.Map<String, Any>)
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("649d9f3291ef4d0ef63a8c5a0298abac7d1de4b3e19759ec17eebcb73c9b5546")
+    public open fun addCatch(handler: IChainable, props: CatchProps.Builder.() -> Unit): Map =
+        addCatch(handler, CatchProps(props))
 
     /**
-     * JSONPath expression to select the array to iterate over.
+     * Add retry configuration for this state.
      *
-     * Default: $
+     * This controls if and how the execution will be retried if a particular error occurs.
      *
-     * @param itemsPath JSONPath expression to select the array to iterate over. 
+     * @param props
      */
-    public fun itemsPath(itemsPath: String)
+    public open fun addRetry(): Map = unwrap(this).addRetry().let(Map::wrap)
 
     /**
-     * MaxConcurrency.
+     * Add retry configuration for this state.
      *
-     * An upper bound on the number of iterations you want running at once.
+     * This controls if and how the execution will be retried if a particular error occurs.
      *
-     * Default: - full concurrency
-     *
-     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-asl-use-map-state-inline.html#map-state-inline-additional-fields)
-     * @param maxConcurrency MaxConcurrency. 
+     * @param props
      */
-    public fun maxConcurrency(maxConcurrency: Number)
+    public open fun addRetry(props: RetryProps): Map =
+        unwrap(this).addRetry(props.let(RetryProps::unwrap)).let(Map::wrap)
 
     /**
-     * MaxConcurrencyPath.
+     * Add retry configuration for this state.
      *
-     * A JsonPath that specifies the maximum concurrency dynamically from the state input.
+     * This controls if and how the execution will be retried if a particular error occurs.
      *
-     * Default: - full concurrency
-     *
-     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-asl-use-map-state-inline.html#map-state-inline-additional-fields)
-     * @param maxConcurrencyPath MaxConcurrencyPath. 
+     * @param props
      */
-    public fun maxConcurrencyPath(maxConcurrencyPath: String)
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("661fedc3f68f12ca44a055f347012794aff87d8bc21e2414b45d66eeec8cda0f")
+    public open fun addRetry(props: RetryProps.Builder.() -> Unit): Map =
+        addRetry(RetryProps(props))
 
     /**
-     * JSONPath expression to select part of the state to be the output to this state.
+     * Define item processor in Map.
      *
-     * May also be the special value JsonPath.DISCARD, which will cause the effective
-     * output to be the empty object {}.
+     * A Map must either have a non-empty iterator or a non-empty item processor (mutually exclusive
+     * with `iterator`).
      *
-     * Default: $
-     *
-     * @param outputPath JSONPath expression to select part of the state to be the output to this
-     * state. 
+     * @param processor
+     * @param config
      */
-    public fun outputPath(outputPath: String)
+    public open fun itemProcessor(processor: IChainable): Map =
+        unwrap(this).itemProcessor(processor.let(IChainable::unwrap)).let(Map::wrap)
 
     /**
-     * (deprecated) The JSON that you want to override your default iteration input (mutually
-     * exclusive  with `itemSelector`).
+     * Define item processor in Map.
      *
-     * Default: $
+     * A Map must either have a non-empty iterator or a non-empty item processor (mutually exclusive
+     * with `iterator`).
      *
-     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-itemselector.html)
-     * @deprecated Step Functions has deprecated the `parameters` field in favor of
-     * the new `itemSelector` field
-     * @param parameters The JSON that you want to override your default iteration input (mutually
-     * exclusive  with `itemSelector`). 
+     * @param processor
+     * @param config
+     */
+    public open fun itemProcessor(processor: IChainable, config: ProcessorConfig): Map =
+        unwrap(this)
+            .itemProcessor(processor.let(IChainable::unwrap), config.let(ProcessorConfig::unwrap))
+            .let(Map::wrap)
+
+    /**
+     * Define item processor in Map.
+     *
+     * A Map must either have a non-empty iterator or a non-empty item processor (mutually exclusive
+     * with `iterator`).
+     *
+     * @param processor
+     * @param config
+     */
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("71a7ba7c6943da14aead58a96c7a9536157cdb72a42de33acb42a1e121af8bfd")
+    public open fun itemProcessor(
+        processor: IChainable,
+        config: ProcessorConfig.Builder.() -> Unit
+    ): Map = itemProcessor(processor, ProcessorConfig(config))
+
+    /**
+     * (deprecated) Define iterator state machine in Map.
+     *
+     * A Map must either have a non-empty iterator or a non-empty item processor (mutually exclusive
+     * with `itemProcessor`).
+     * * use `itemProcessor` instead.
+     *
+     * @param iterator
      */
     @Deprecated(message = "deprecated in CDK")
-    public fun parameters(parameters: kotlin.collections.Map<String, Any>)
+    public open fun iterator(iterator: IChainable): Map =
+        unwrap(this).iterator(iterator.let(IChainable::unwrap)).let(Map::wrap)
 
-    /**
-     * JSONPath expression to indicate where to inject the state's output.
-     *
-     * May also be the special value JsonPath.DISCARD, which will cause the state's
-     * input to become its output.
-     *
-     * Default: $
-     *
-     * @param resultPath JSONPath expression to indicate where to inject the state's output. 
-     */
-    public fun resultPath(resultPath: String)
+    /** Return the Amazon States Language object for this state. */
+    public override fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
 
-    /**
-     * The JSON that will replace the state's raw result and become the effective result before
-     * ResultPath is applied.
-     *
-     * You can use ResultSelector to create a payload with values that are static
-     * or selected from the state's raw result.
-     *
-     * Default: - None
-     *
-     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-inputpath-params.html#input-output-resultselector)
-     * @param resultSelector The JSON that will replace the state's raw result and become the
-     * effective result before ResultPath is applied. 
-     */
-    public fun resultSelector(resultSelector: kotlin.collections.Map<String, Any>)
+    /** A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.Map]. */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * An optional description for this state.
+         *
+         * Default: No comment
+         *
+         * @param comment An optional description for this state.
+         */
+        public fun comment(comment: String)
 
-    /**
-     * Optional name for this state.
-     *
-     * Default: - The construct ID will be used as state name
-     *
-     * @param stateName Optional name for this state. 
-     */
-    public fun stateName(stateName: String)
-  }
+        /**
+         * JSONPath expression to select part of the state to be the input to this state.
+         *
+         * May also be the special value JsonPath.DISCARD, which will cause the effective input to
+         * be the empty object {}.
+         *
+         * Default: $
+         *
+         * @param inputPath JSONPath expression to select part of the state to be the input to this
+         *   state.
+         */
+        public fun inputPath(inputPath: String)
 
-  private class BuilderImpl(
-    scope: SoftwareConstructsConstruct,
-    id: String,
-  ) : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.Map.Builder =
-        software.amazon.awscdk.services.stepfunctions.Map.Builder.create(scope, id)
+        /**
+         * The JSON that you want to override your default iteration input (mutually exclusive with
+         * `parameters`).
+         *
+         * Default: $
+         *
+         * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-itemselector.html)
+         *
+         * @param itemSelector The JSON that you want to override your default iteration input
+         *   (mutually exclusive with `parameters`).
+         */
+        public fun itemSelector(itemSelector: kotlin.collections.Map<String, Any>)
 
-    /**
-     * An optional description for this state.
-     *
-     * Default: No comment
-     *
-     * @param comment An optional description for this state. 
-     */
-    override fun comment(comment: String) {
-      cdkBuilder.comment(comment)
+        /**
+         * JSONPath expression to select the array to iterate over.
+         *
+         * Default: $
+         *
+         * @param itemsPath JSONPath expression to select the array to iterate over.
+         */
+        public fun itemsPath(itemsPath: String)
+
+        /**
+         * MaxConcurrency.
+         *
+         * An upper bound on the number of iterations you want running at once.
+         *
+         * Default: - full concurrency
+         *
+         * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-asl-use-map-state-inline.html#map-state-inline-additional-fields)
+         *
+         * @param maxConcurrency MaxConcurrency.
+         */
+        public fun maxConcurrency(maxConcurrency: Number)
+
+        /**
+         * MaxConcurrencyPath.
+         *
+         * A JsonPath that specifies the maximum concurrency dynamically from the state input.
+         *
+         * Default: - full concurrency
+         *
+         * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-asl-use-map-state-inline.html#map-state-inline-additional-fields)
+         *
+         * @param maxConcurrencyPath MaxConcurrencyPath.
+         */
+        public fun maxConcurrencyPath(maxConcurrencyPath: String)
+
+        /**
+         * JSONPath expression to select part of the state to be the output to this state.
+         *
+         * May also be the special value JsonPath.DISCARD, which will cause the effective output to
+         * be the empty object {}.
+         *
+         * Default: $
+         *
+         * @param outputPath JSONPath expression to select part of the state to be the output to
+         *   this state.
+         */
+        public fun outputPath(outputPath: String)
+
+        /**
+         * (deprecated) The JSON that you want to override your default iteration input (mutually
+         * exclusive with `itemSelector`).
+         *
+         * Default: $
+         *
+         * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-itemselector.html)
+         *
+         * @param parameters The JSON that you want to override your default iteration input
+         *   (mutually exclusive with `itemSelector`).
+         * @deprecated Step Functions has deprecated the `parameters` field in favor of the new
+         *   `itemSelector` field
+         */
+        @Deprecated(message = "deprecated in CDK")
+        public fun parameters(parameters: kotlin.collections.Map<String, Any>)
+
+        /**
+         * JSONPath expression to indicate where to inject the state's output.
+         *
+         * May also be the special value JsonPath.DISCARD, which will cause the state's input to
+         * become its output.
+         *
+         * Default: $
+         *
+         * @param resultPath JSONPath expression to indicate where to inject the state's output.
+         */
+        public fun resultPath(resultPath: String)
+
+        /**
+         * The JSON that will replace the state's raw result and become the effective result before
+         * ResultPath is applied.
+         *
+         * You can use ResultSelector to create a payload with values that are static or selected
+         * from the state's raw result.
+         *
+         * Default: - None
+         *
+         * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-inputpath-params.html#input-output-resultselector)
+         *
+         * @param resultSelector The JSON that will replace the state's raw result and become the
+         *   effective result before ResultPath is applied.
+         */
+        public fun resultSelector(resultSelector: kotlin.collections.Map<String, Any>)
+
+        /**
+         * Optional name for this state.
+         *
+         * Default: - The construct ID will be used as state name
+         *
+         * @param stateName Optional name for this state.
+         */
+        public fun stateName(stateName: String)
     }
 
-    /**
-     * JSONPath expression to select part of the state to be the input to this state.
-     *
-     * May also be the special value JsonPath.DISCARD, which will cause the effective
-     * input to be the empty object {}.
-     *
-     * Default: $
-     *
-     * @param inputPath JSONPath expression to select part of the state to be the input to this
-     * state. 
-     */
-    override fun inputPath(inputPath: String) {
-      cdkBuilder.inputPath(inputPath)
+    private class BuilderImpl(
+        scope: SoftwareConstructsConstruct,
+        id: String,
+    ) : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.Map.Builder =
+            software.amazon.awscdk.services.stepfunctions.Map.Builder.create(scope, id)
+
+        /**
+         * An optional description for this state.
+         *
+         * Default: No comment
+         *
+         * @param comment An optional description for this state.
+         */
+        override fun comment(comment: String) {
+            cdkBuilder.comment(comment)
+        }
+
+        /**
+         * JSONPath expression to select part of the state to be the input to this state.
+         *
+         * May also be the special value JsonPath.DISCARD, which will cause the effective input to
+         * be the empty object {}.
+         *
+         * Default: $
+         *
+         * @param inputPath JSONPath expression to select part of the state to be the input to this
+         *   state.
+         */
+        override fun inputPath(inputPath: String) {
+            cdkBuilder.inputPath(inputPath)
+        }
+
+        /**
+         * The JSON that you want to override your default iteration input (mutually exclusive with
+         * `parameters`).
+         *
+         * Default: $
+         *
+         * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-itemselector.html)
+         *
+         * @param itemSelector The JSON that you want to override your default iteration input
+         *   (mutually exclusive with `parameters`).
+         */
+        override fun itemSelector(itemSelector: kotlin.collections.Map<String, Any>) {
+            cdkBuilder.itemSelector(itemSelector)
+        }
+
+        /**
+         * JSONPath expression to select the array to iterate over.
+         *
+         * Default: $
+         *
+         * @param itemsPath JSONPath expression to select the array to iterate over.
+         */
+        override fun itemsPath(itemsPath: String) {
+            cdkBuilder.itemsPath(itemsPath)
+        }
+
+        /**
+         * MaxConcurrency.
+         *
+         * An upper bound on the number of iterations you want running at once.
+         *
+         * Default: - full concurrency
+         *
+         * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-asl-use-map-state-inline.html#map-state-inline-additional-fields)
+         *
+         * @param maxConcurrency MaxConcurrency.
+         */
+        override fun maxConcurrency(maxConcurrency: Number) {
+            cdkBuilder.maxConcurrency(maxConcurrency)
+        }
+
+        /**
+         * MaxConcurrencyPath.
+         *
+         * A JsonPath that specifies the maximum concurrency dynamically from the state input.
+         *
+         * Default: - full concurrency
+         *
+         * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-asl-use-map-state-inline.html#map-state-inline-additional-fields)
+         *
+         * @param maxConcurrencyPath MaxConcurrencyPath.
+         */
+        override fun maxConcurrencyPath(maxConcurrencyPath: String) {
+            cdkBuilder.maxConcurrencyPath(maxConcurrencyPath)
+        }
+
+        /**
+         * JSONPath expression to select part of the state to be the output to this state.
+         *
+         * May also be the special value JsonPath.DISCARD, which will cause the effective output to
+         * be the empty object {}.
+         *
+         * Default: $
+         *
+         * @param outputPath JSONPath expression to select part of the state to be the output to
+         *   this state.
+         */
+        override fun outputPath(outputPath: String) {
+            cdkBuilder.outputPath(outputPath)
+        }
+
+        /**
+         * (deprecated) The JSON that you want to override your default iteration input (mutually
+         * exclusive with `itemSelector`).
+         *
+         * Default: $
+         *
+         * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-itemselector.html)
+         *
+         * @param parameters The JSON that you want to override your default iteration input
+         *   (mutually exclusive with `itemSelector`).
+         * @deprecated Step Functions has deprecated the `parameters` field in favor of the new
+         *   `itemSelector` field
+         */
+        @Deprecated(message = "deprecated in CDK")
+        override fun parameters(parameters: kotlin.collections.Map<String, Any>) {
+            cdkBuilder.parameters(parameters)
+        }
+
+        /**
+         * JSONPath expression to indicate where to inject the state's output.
+         *
+         * May also be the special value JsonPath.DISCARD, which will cause the state's input to
+         * become its output.
+         *
+         * Default: $
+         *
+         * @param resultPath JSONPath expression to indicate where to inject the state's output.
+         */
+        override fun resultPath(resultPath: String) {
+            cdkBuilder.resultPath(resultPath)
+        }
+
+        /**
+         * The JSON that will replace the state's raw result and become the effective result before
+         * ResultPath is applied.
+         *
+         * You can use ResultSelector to create a payload with values that are static or selected
+         * from the state's raw result.
+         *
+         * Default: - None
+         *
+         * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-inputpath-params.html#input-output-resultselector)
+         *
+         * @param resultSelector The JSON that will replace the state's raw result and become the
+         *   effective result before ResultPath is applied.
+         */
+        override fun resultSelector(resultSelector: kotlin.collections.Map<String, Any>) {
+            cdkBuilder.resultSelector(resultSelector)
+        }
+
+        /**
+         * Optional name for this state.
+         *
+         * Default: - The construct ID will be used as state name
+         *
+         * @param stateName Optional name for this state.
+         */
+        override fun stateName(stateName: String) {
+            cdkBuilder.stateName(stateName)
+        }
+
+        public fun build(): software.amazon.awscdk.services.stepfunctions.Map = cdkBuilder.build()
     }
 
-    /**
-     * The JSON that you want to override your default iteration input (mutually exclusive  with
-     * `parameters`).
-     *
-     * Default: $
-     *
-     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-itemselector.html)
-     * @param itemSelector The JSON that you want to override your default iteration input (mutually
-     * exclusive  with `parameters`). 
-     */
-    override fun itemSelector(itemSelector: kotlin.collections.Map<String, Any>) {
-      cdkBuilder.itemSelector(itemSelector)
+    public companion object {
+        init {}
+
+        public operator fun invoke(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            block: Builder.() -> Unit = {},
+        ): Map {
+            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+            return Map(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.Map): Map =
+            Map(cdkObject)
+
+        internal fun unwrap(wrapped: Map): software.amazon.awscdk.services.stepfunctions.Map =
+            wrapped.cdkObject
     }
-
-    /**
-     * JSONPath expression to select the array to iterate over.
-     *
-     * Default: $
-     *
-     * @param itemsPath JSONPath expression to select the array to iterate over. 
-     */
-    override fun itemsPath(itemsPath: String) {
-      cdkBuilder.itemsPath(itemsPath)
-    }
-
-    /**
-     * MaxConcurrency.
-     *
-     * An upper bound on the number of iterations you want running at once.
-     *
-     * Default: - full concurrency
-     *
-     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-asl-use-map-state-inline.html#map-state-inline-additional-fields)
-     * @param maxConcurrency MaxConcurrency. 
-     */
-    override fun maxConcurrency(maxConcurrency: Number) {
-      cdkBuilder.maxConcurrency(maxConcurrency)
-    }
-
-    /**
-     * MaxConcurrencyPath.
-     *
-     * A JsonPath that specifies the maximum concurrency dynamically from the state input.
-     *
-     * Default: - full concurrency
-     *
-     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-asl-use-map-state-inline.html#map-state-inline-additional-fields)
-     * @param maxConcurrencyPath MaxConcurrencyPath. 
-     */
-    override fun maxConcurrencyPath(maxConcurrencyPath: String) {
-      cdkBuilder.maxConcurrencyPath(maxConcurrencyPath)
-    }
-
-    /**
-     * JSONPath expression to select part of the state to be the output to this state.
-     *
-     * May also be the special value JsonPath.DISCARD, which will cause the effective
-     * output to be the empty object {}.
-     *
-     * Default: $
-     *
-     * @param outputPath JSONPath expression to select part of the state to be the output to this
-     * state. 
-     */
-    override fun outputPath(outputPath: String) {
-      cdkBuilder.outputPath(outputPath)
-    }
-
-    /**
-     * (deprecated) The JSON that you want to override your default iteration input (mutually
-     * exclusive  with `itemSelector`).
-     *
-     * Default: $
-     *
-     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-itemselector.html)
-     * @deprecated Step Functions has deprecated the `parameters` field in favor of
-     * the new `itemSelector` field
-     * @param parameters The JSON that you want to override your default iteration input (mutually
-     * exclusive  with `itemSelector`). 
-     */
-    @Deprecated(message = "deprecated in CDK")
-    override fun parameters(parameters: kotlin.collections.Map<String, Any>) {
-      cdkBuilder.parameters(parameters)
-    }
-
-    /**
-     * JSONPath expression to indicate where to inject the state's output.
-     *
-     * May also be the special value JsonPath.DISCARD, which will cause the state's
-     * input to become its output.
-     *
-     * Default: $
-     *
-     * @param resultPath JSONPath expression to indicate where to inject the state's output. 
-     */
-    override fun resultPath(resultPath: String) {
-      cdkBuilder.resultPath(resultPath)
-    }
-
-    /**
-     * The JSON that will replace the state's raw result and become the effective result before
-     * ResultPath is applied.
-     *
-     * You can use ResultSelector to create a payload with values that are static
-     * or selected from the state's raw result.
-     *
-     * Default: - None
-     *
-     * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/input-output-inputpath-params.html#input-output-resultselector)
-     * @param resultSelector The JSON that will replace the state's raw result and become the
-     * effective result before ResultPath is applied. 
-     */
-    override fun resultSelector(resultSelector: kotlin.collections.Map<String, Any>) {
-      cdkBuilder.resultSelector(resultSelector)
-    }
-
-    /**
-     * Optional name for this state.
-     *
-     * Default: - The construct ID will be used as state name
-     *
-     * @param stateName Optional name for this state. 
-     */
-    override fun stateName(stateName: String) {
-      cdkBuilder.stateName(stateName)
-    }
-
-    public fun build(): software.amazon.awscdk.services.stepfunctions.Map = cdkBuilder.build()
-  }
-
-  public companion object {
-    init {
-
-    }
-
-    public operator fun invoke(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      block: Builder.() -> Unit = {},
-    ): Map {
-      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-      return Map(builderImpl.apply(block).build())
-    }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.Map): Map =
-        Map(cdkObject)
-
-    internal fun unwrap(wrapped: Map): software.amazon.awscdk.services.stepfunctions.Map =
-        wrapped.cdkObject
-  }
 }

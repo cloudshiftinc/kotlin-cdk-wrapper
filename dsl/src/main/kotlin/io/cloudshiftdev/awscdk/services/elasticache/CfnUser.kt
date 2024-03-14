@@ -8,523 +8,506 @@ import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnUser internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.elasticache.CfnUser,
+public open class CfnUser
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.elasticache.CfnUser,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
-  /**
-   * Access permissions string used for this user.
-   */
-  public open fun accessString(): String? = unwrap(this).getAccessString()
+    /** Access permissions string used for this user. */
+    public open fun accessString(): String? = unwrap(this).getAccessString()
 
-  /**
-   * Access permissions string used for this user.
-   */
-  public open fun accessString(`value`: String) {
-    unwrap(this).setAccessString(`value`)
-  }
+    /** Access permissions string used for this user. */
+    public open fun accessString(`value`: String) {
+        unwrap(this).setAccessString(`value`)
+    }
 
-  /**
-   * The Amazon Resource Name (ARN) of the user.
-   */
-  public open fun attrArn(): String = unwrap(this).getAttrArn()
-
-  /**
-   * Indicates the user status.
-   *
-   * Can be "active", "modifying" or "deleting".
-   */
-  public open fun attrStatus(): String = unwrap(this).getAttrStatus()
-
-  /**
-   * Specifies the authentication mode to use.
-   *
-   * Below is an example of the possible JSON values:.
-   */
-  public open fun authenticationMode(): Any? = unwrap(this).getAuthenticationMode()
-
-  /**
-   * Specifies the authentication mode to use.
-   *
-   * Below is an example of the possible JSON values:.
-   */
-  public open fun authenticationMode(`value`: Any) {
-    unwrap(this).setAuthenticationMode(`value`)
-  }
-
-  /**
-   * The current supported value is redis.
-   */
-  public open fun engine(): String = unwrap(this).getEngine()
-
-  /**
-   * The current supported value is redis.
-   */
-  public open fun engine(`value`: String) {
-    unwrap(this).setEngine(`value`)
-  }
-
-  /**
-   * Examines the CloudFormation resource and discloses attributes.
-   *
-   * @param inspector tree inspector to collect and process attributes. 
-   */
-  public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-  }
-
-  /**
-   * Indicates a password is not required for this user.
-   */
-  public open fun noPasswordRequired(): Any? = unwrap(this).getNoPasswordRequired()
-
-  /**
-   * Indicates a password is not required for this user.
-   */
-  public open fun noPasswordRequired(`value`: Boolean) {
-    unwrap(this).setNoPasswordRequired(`value`)
-  }
-
-  /**
-   * Indicates a password is not required for this user.
-   */
-  public open fun noPasswordRequired(`value`: IResolvable) {
-    unwrap(this).setNoPasswordRequired(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * Passwords used for this user.
-   */
-  public open fun passwords(): List<String> = unwrap(this).getPasswords() ?: emptyList()
-
-  /**
-   * Passwords used for this user.
-   */
-  public open fun passwords(`value`: List<String>) {
-    unwrap(this).setPasswords(`value`)
-  }
-
-  /**
-   * Passwords used for this user.
-   */
-  public open fun passwords(vararg `value`: String): Unit = passwords(`value`.toList())
-
-  /**
-   * Tag Manager which manages the tags for this resource.
-   */
-  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
-
-  /**
-   * An array of key-value pairs to apply to this user.
-   */
-  public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
-      emptyList()
-
-  /**
-   * An array of key-value pairs to apply to this user.
-   */
-  public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
-  }
-
-  /**
-   * An array of key-value pairs to apply to this user.
-   */
-  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
-
-  /**
-   * The ID of the user.
-   */
-  public open fun userId(): String = unwrap(this).getUserId()
-
-  /**
-   * The ID of the user.
-   */
-  public open fun userId(`value`: String) {
-    unwrap(this).setUserId(`value`)
-  }
-
-  /**
-   * The username of the user.
-   */
-  public open fun userName(): String = unwrap(this).getUserName()
-
-  /**
-   * The username of the user.
-   */
-  public open fun userName(`value`: String) {
-    unwrap(this).setUserName(`value`)
-  }
-
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.elasticache.CfnUser].
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * Access permissions string used for this user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-accessstring)
-     * @param accessString Access permissions string used for this user. 
-     */
-    public fun accessString(accessString: String)
+    /** The Amazon Resource Name (ARN) of the user. */
+    public open fun attrArn(): String = unwrap(this).getAttrArn()
 
     /**
-     * Specifies the authentication mode to use. Below is an example of the possible JSON values:.
+     * Indicates the user status.
      *
-     * ```
-     * { Passwords: ["*****", "******"] // If Type is password.
-     * }
-     * ```
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-authenticationmode)
-     * @param authenticationMode Specifies the authentication mode to use. Below is an example of
-     * the possible JSON values:. 
+     * Can be "active", "modifying" or "deleting".
      */
-    public fun authenticationMode(authenticationMode: Any)
+    public open fun attrStatus(): String = unwrap(this).getAttrStatus()
 
     /**
-     * The current supported value is redis.
+     * Specifies the authentication mode to use.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-engine)
-     * @param engine The current supported value is redis. 
+     * Below is an example of the possible JSON values:.
      */
-    public fun engine(engine: String)
+    public open fun authenticationMode(): Any? = unwrap(this).getAuthenticationMode()
 
     /**
-     * Indicates a password is not required for this user.
+     * Specifies the authentication mode to use.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-nopasswordrequired)
-     * @param noPasswordRequired Indicates a password is not required for this user. 
+     * Below is an example of the possible JSON values:.
      */
-    public fun noPasswordRequired(noPasswordRequired: Boolean)
+    public open fun authenticationMode(`value`: Any) {
+        unwrap(this).setAuthenticationMode(`value`)
+    }
 
-    /**
-     * Indicates a password is not required for this user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-nopasswordrequired)
-     * @param noPasswordRequired Indicates a password is not required for this user. 
-     */
-    public fun noPasswordRequired(noPasswordRequired: IResolvable)
+    /** The current supported value is redis. */
+    public open fun engine(): String = unwrap(this).getEngine()
 
-    /**
-     * Passwords used for this user.
-     *
-     * You can create up to two passwords for each user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-passwords)
-     * @param passwords Passwords used for this user. 
-     */
-    public fun passwords(passwords: List<String>)
-
-    /**
-     * Passwords used for this user.
-     *
-     * You can create up to two passwords for each user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-passwords)
-     * @param passwords Passwords used for this user. 
-     */
-    public fun passwords(vararg passwords: String)
-
-    /**
-     * An array of key-value pairs to apply to this user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-tags)
-     * @param tags An array of key-value pairs to apply to this user. 
-     */
-    public fun tags(tags: List<CfnTag>)
-
-    /**
-     * An array of key-value pairs to apply to this user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-tags)
-     * @param tags An array of key-value pairs to apply to this user. 
-     */
-    public fun tags(vararg tags: CfnTag)
-
-    /**
-     * The ID of the user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-userid)
-     * @param userId The ID of the user. 
-     */
-    public fun userId(userId: String)
-
-    /**
-     * The username of the user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-username)
-     * @param userName The username of the user. 
-     */
-    public fun userName(userName: String)
-  }
-
-  private class BuilderImpl(
-    scope: SoftwareConstructsConstruct,
-    id: String,
-  ) : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.elasticache.CfnUser.Builder =
-        software.amazon.awscdk.services.elasticache.CfnUser.Builder.create(scope, id)
-
-    /**
-     * Access permissions string used for this user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-accessstring)
-     * @param accessString Access permissions string used for this user. 
-     */
-    override fun accessString(accessString: String) {
-      cdkBuilder.accessString(accessString)
+    /** The current supported value is redis. */
+    public open fun engine(`value`: String) {
+        unwrap(this).setEngine(`value`)
     }
 
     /**
-     * Specifies the authentication mode to use. Below is an example of the possible JSON values:.
+     * Examines the CloudFormation resource and discloses attributes.
      *
-     * ```
-     * { Passwords: ["*****", "******"] // If Type is password.
-     * }
-     * ```
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-authenticationmode)
-     * @param authenticationMode Specifies the authentication mode to use. Below is an example of
-     * the possible JSON values:. 
+     * @param inspector tree inspector to collect and process attributes.
      */
-    override fun authenticationMode(authenticationMode: Any) {
-      cdkBuilder.authenticationMode(authenticationMode)
+    public override fun inspect(inspector: TreeInspector) {
+        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
     }
 
-    /**
-     * The current supported value is redis.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-engine)
-     * @param engine The current supported value is redis. 
-     */
-    override fun engine(engine: String) {
-      cdkBuilder.engine(engine)
+    /** Indicates a password is not required for this user. */
+    public open fun noPasswordRequired(): Any? = unwrap(this).getNoPasswordRequired()
+
+    /** Indicates a password is not required for this user. */
+    public open fun noPasswordRequired(`value`: Boolean) {
+        unwrap(this).setNoPasswordRequired(`value`)
     }
 
-    /**
-     * Indicates a password is not required for this user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-nopasswordrequired)
-     * @param noPasswordRequired Indicates a password is not required for this user. 
-     */
-    override fun noPasswordRequired(noPasswordRequired: Boolean) {
-      cdkBuilder.noPasswordRequired(noPasswordRequired)
+    /** Indicates a password is not required for this user. */
+    public open fun noPasswordRequired(`value`: IResolvable) {
+        unwrap(this).setNoPasswordRequired(`value`.let(IResolvable::unwrap))
     }
 
-    /**
-     * Indicates a password is not required for this user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-nopasswordrequired)
-     * @param noPasswordRequired Indicates a password is not required for this user. 
-     */
-    override fun noPasswordRequired(noPasswordRequired: IResolvable) {
-      cdkBuilder.noPasswordRequired(noPasswordRequired.let(IResolvable::unwrap))
+    /** Passwords used for this user. */
+    public open fun passwords(): List<String> = unwrap(this).getPasswords() ?: emptyList()
+
+    /** Passwords used for this user. */
+    public open fun passwords(`value`: List<String>) {
+        unwrap(this).setPasswords(`value`)
     }
 
-    /**
-     * Passwords used for this user.
-     *
-     * You can create up to two passwords for each user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-passwords)
-     * @param passwords Passwords used for this user. 
-     */
-    override fun passwords(passwords: List<String>) {
-      cdkBuilder.passwords(passwords)
+    /** Passwords used for this user. */
+    public open fun passwords(vararg `value`: String): Unit = passwords(`value`.toList())
+
+    /** Tag Manager which manages the tags for this resource. */
+    public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+
+    /** An array of key-value pairs to apply to this user. */
+    public open fun tagsRaw(): List<CfnTag> =
+        unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?: emptyList()
+
+    /** An array of key-value pairs to apply to this user. */
+    public open fun tagsRaw(`value`: List<CfnTag>) {
+        unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
     }
 
-    /**
-     * Passwords used for this user.
-     *
-     * You can create up to two passwords for each user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-passwords)
-     * @param passwords Passwords used for this user. 
-     */
-    override fun passwords(vararg passwords: String): Unit = passwords(passwords.toList())
+    /** An array of key-value pairs to apply to this user. */
+    public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
-    /**
-     * An array of key-value pairs to apply to this user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-tags)
-     * @param tags An array of key-value pairs to apply to this user. 
-     */
-    override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+    /** The ID of the user. */
+    public open fun userId(): String = unwrap(this).getUserId()
+
+    /** The ID of the user. */
+    public open fun userId(`value`: String) {
+        unwrap(this).setUserId(`value`)
     }
 
-    /**
-     * An array of key-value pairs to apply to this user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-tags)
-     * @param tags An array of key-value pairs to apply to this user. 
-     */
-    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+    /** The username of the user. */
+    public open fun userName(): String = unwrap(this).getUserName()
 
-    /**
-     * The ID of the user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-userid)
-     * @param userId The ID of the user. 
-     */
-    override fun userId(userId: String) {
-      cdkBuilder.userId(userId)
+    /** The username of the user. */
+    public open fun userName(`value`: String) {
+        unwrap(this).setUserName(`value`)
     }
 
-    /**
-     * The username of the user.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-username)
-     * @param userName The username of the user. 
-     */
-    override fun userName(userName: String) {
-      cdkBuilder.userName(userName)
-    }
-
-    public fun build(): software.amazon.awscdk.services.elasticache.CfnUser = cdkBuilder.build()
-  }
-
-  public companion object {
-    init {
-
-    }
-
-    public operator fun invoke(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      block: Builder.() -> Unit = {},
-    ): CfnUser {
-      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-      return CfnUser(builderImpl.apply(block).build())
-    }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnUser): CfnUser =
-        CfnUser(cdkObject)
-
-    internal fun unwrap(wrapped: CfnUser): software.amazon.awscdk.services.elasticache.CfnUser =
-        wrapped.cdkObject
-  }
-
-  public interface AuthenticationModeProperty {
-    /**
-     * Specifies the passwords to use for authentication if `Type` is set to `password` .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-user-authenticationmode.html#cfn-elasticache-user-authenticationmode-passwords)
-     */
-    public fun passwords(): List<String> = unwrap(this).getPasswords() ?: emptyList()
-
-    /**
-     * Specifies the authentication type.
-     *
-     * Possible options are IAM authentication, password and no password.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-user-authenticationmode.html#cfn-elasticache-user-authenticationmode-type)
-     */
-    public fun type(): String
-
-    /**
-     * A builder for [AuthenticationModeProperty]
-     */
+    /** A fluent builder for [io.cloudshiftdev.awscdk.services.elasticache.CfnUser]. */
     @CdkDslMarker
     public interface Builder {
-      /**
-       * @param passwords Specifies the passwords to use for authentication if `Type` is set to
-       * `password` .
-       */
-      public fun passwords(passwords: List<String>)
+        /**
+         * Access permissions string used for this user.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-accessstring)
+         *
+         * @param accessString Access permissions string used for this user.
+         */
+        public fun accessString(accessString: String)
 
-      /**
-       * @param passwords Specifies the passwords to use for authentication if `Type` is set to
-       * `password` .
-       */
-      public fun passwords(vararg passwords: String)
+        /**
+         * Specifies the authentication mode to use. Below is an example of the possible JSON
+         * values:.
+         *
+         * ```
+         * { Passwords: ["*****", "******"] // If Type is password.
+         * }
+         * ```
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-authenticationmode)
+         *
+         * @param authenticationMode Specifies the authentication mode to use. Below is an example
+         *   of the possible JSON values:.
+         */
+        public fun authenticationMode(authenticationMode: Any)
 
-      /**
-       * @param type Specifies the authentication type. 
-       * Possible options are IAM authentication, password and no password.
-       */
-      public fun type(type: String)
+        /**
+         * The current supported value is redis.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-engine)
+         *
+         * @param engine The current supported value is redis.
+         */
+        public fun engine(engine: String)
+
+        /**
+         * Indicates a password is not required for this user.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-nopasswordrequired)
+         *
+         * @param noPasswordRequired Indicates a password is not required for this user.
+         */
+        public fun noPasswordRequired(noPasswordRequired: Boolean)
+
+        /**
+         * Indicates a password is not required for this user.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-nopasswordrequired)
+         *
+         * @param noPasswordRequired Indicates a password is not required for this user.
+         */
+        public fun noPasswordRequired(noPasswordRequired: IResolvable)
+
+        /**
+         * Passwords used for this user.
+         *
+         * You can create up to two passwords for each user.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-passwords)
+         *
+         * @param passwords Passwords used for this user.
+         */
+        public fun passwords(passwords: List<String>)
+
+        /**
+         * Passwords used for this user.
+         *
+         * You can create up to two passwords for each user.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-passwords)
+         *
+         * @param passwords Passwords used for this user.
+         */
+        public fun passwords(vararg passwords: String)
+
+        /**
+         * An array of key-value pairs to apply to this user.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-tags)
+         *
+         * @param tags An array of key-value pairs to apply to this user.
+         */
+        public fun tags(tags: List<CfnTag>)
+
+        /**
+         * An array of key-value pairs to apply to this user.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-tags)
+         *
+         * @param tags An array of key-value pairs to apply to this user.
+         */
+        public fun tags(vararg tags: CfnTag)
+
+        /**
+         * The ID of the user.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-userid)
+         *
+         * @param userId The ID of the user.
+         */
+        public fun userId(userId: String)
+
+        /**
+         * The username of the user.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-username)
+         *
+         * @param userName The username of the user.
+         */
+        public fun userName(userName: String)
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.elasticache.CfnUser.AuthenticationModeProperty.Builder =
-          software.amazon.awscdk.services.elasticache.CfnUser.AuthenticationModeProperty.builder()
+    private class BuilderImpl(
+        scope: SoftwareConstructsConstruct,
+        id: String,
+    ) : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.elasticache.CfnUser.Builder =
+            software.amazon.awscdk.services.elasticache.CfnUser.Builder.create(scope, id)
 
-      /**
-       * @param passwords Specifies the passwords to use for authentication if `Type` is set to
-       * `password` .
-       */
-      override fun passwords(passwords: List<String>) {
-        cdkBuilder.passwords(passwords)
-      }
+        /**
+         * Access permissions string used for this user.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-accessstring)
+         *
+         * @param accessString Access permissions string used for this user.
+         */
+        override fun accessString(accessString: String) {
+            cdkBuilder.accessString(accessString)
+        }
 
-      /**
-       * @param passwords Specifies the passwords to use for authentication if `Type` is set to
-       * `password` .
-       */
-      override fun passwords(vararg passwords: String): Unit = passwords(passwords.toList())
+        /**
+         * Specifies the authentication mode to use. Below is an example of the possible JSON
+         * values:.
+         *
+         * ```
+         * { Passwords: ["*****", "******"] // If Type is password.
+         * }
+         * ```
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-authenticationmode)
+         *
+         * @param authenticationMode Specifies the authentication mode to use. Below is an example
+         *   of the possible JSON values:.
+         */
+        override fun authenticationMode(authenticationMode: Any) {
+            cdkBuilder.authenticationMode(authenticationMode)
+        }
 
-      /**
-       * @param type Specifies the authentication type. 
-       * Possible options are IAM authentication, password and no password.
-       */
-      override fun type(type: String) {
-        cdkBuilder.type(type)
-      }
+        /**
+         * The current supported value is redis.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-engine)
+         *
+         * @param engine The current supported value is redis.
+         */
+        override fun engine(engine: String) {
+            cdkBuilder.engine(engine)
+        }
 
-      public fun build():
-          software.amazon.awscdk.services.elasticache.CfnUser.AuthenticationModeProperty =
-          cdkBuilder.build()
-    }
+        /**
+         * Indicates a password is not required for this user.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-nopasswordrequired)
+         *
+         * @param noPasswordRequired Indicates a password is not required for this user.
+         */
+        override fun noPasswordRequired(noPasswordRequired: Boolean) {
+            cdkBuilder.noPasswordRequired(noPasswordRequired)
+        }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.elasticache.CfnUser.AuthenticationModeProperty,
-    ) : AuthenticationModeProperty {
-      /**
-       * Specifies the passwords to use for authentication if `Type` is set to `password` .
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-user-authenticationmode.html#cfn-elasticache-user-authenticationmode-passwords)
-       */
-      override fun passwords(): List<String> = unwrap(this).getPasswords() ?: emptyList()
+        /**
+         * Indicates a password is not required for this user.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-nopasswordrequired)
+         *
+         * @param noPasswordRequired Indicates a password is not required for this user.
+         */
+        override fun noPasswordRequired(noPasswordRequired: IResolvable) {
+            cdkBuilder.noPasswordRequired(noPasswordRequired.let(IResolvable::unwrap))
+        }
 
-      /**
-       * Specifies the authentication type.
-       *
-       * Possible options are IAM authentication, password and no password.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-user-authenticationmode.html#cfn-elasticache-user-authenticationmode-type)
-       */
-      override fun type(): String = unwrap(this).getType()
+        /**
+         * Passwords used for this user.
+         *
+         * You can create up to two passwords for each user.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-passwords)
+         *
+         * @param passwords Passwords used for this user.
+         */
+        override fun passwords(passwords: List<String>) {
+            cdkBuilder.passwords(passwords)
+        }
+
+        /**
+         * Passwords used for this user.
+         *
+         * You can create up to two passwords for each user.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-passwords)
+         *
+         * @param passwords Passwords used for this user.
+         */
+        override fun passwords(vararg passwords: String): Unit = passwords(passwords.toList())
+
+        /**
+         * An array of key-value pairs to apply to this user.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-tags)
+         *
+         * @param tags An array of key-value pairs to apply to this user.
+         */
+        override fun tags(tags: List<CfnTag>) {
+            cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        }
+
+        /**
+         * An array of key-value pairs to apply to this user.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-tags)
+         *
+         * @param tags An array of key-value pairs to apply to this user.
+         */
+        override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+        /**
+         * The ID of the user.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-userid)
+         *
+         * @param userId The ID of the user.
+         */
+        override fun userId(userId: String) {
+            cdkBuilder.userId(userId)
+        }
+
+        /**
+         * The username of the user.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-username)
+         *
+         * @param userName The username of the user.
+         */
+        override fun userName(userName: String) {
+            cdkBuilder.userName(userName)
+        }
+
+        public fun build(): software.amazon.awscdk.services.elasticache.CfnUser = cdkBuilder.build()
     }
 
     public companion object {
-      init {
+        init {}
 
-      }
+        public operator fun invoke(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            block: Builder.() -> Unit = {},
+        ): CfnUser {
+            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+            return CfnUser(builderImpl.apply(block).build())
+        }
 
-      public operator fun invoke(block: Builder.() -> Unit = {}): AuthenticationModeProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        internal fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnUser): CfnUser =
+            CfnUser(cdkObject)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnUser.AuthenticationModeProperty):
-          AuthenticationModeProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: AuthenticationModeProperty):
-          software.amazon.awscdk.services.elasticache.CfnUser.AuthenticationModeProperty = (wrapped
-          as Wrapper).cdkObject
+        internal fun unwrap(wrapped: CfnUser): software.amazon.awscdk.services.elasticache.CfnUser =
+            wrapped.cdkObject
     }
-  }
+
+    public interface AuthenticationModeProperty {
+        /**
+         * Specifies the passwords to use for authentication if `Type` is set to `password` .
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-user-authenticationmode.html#cfn-elasticache-user-authenticationmode-passwords)
+         */
+        public fun passwords(): List<String> = unwrap(this).getPasswords() ?: emptyList()
+
+        /**
+         * Specifies the authentication type.
+         *
+         * Possible options are IAM authentication, password and no password.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-user-authenticationmode.html#cfn-elasticache-user-authenticationmode-type)
+         */
+        public fun type(): String
+
+        /** A builder for [AuthenticationModeProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param passwords Specifies the passwords to use for authentication if `Type` is set
+             *   to `password` .
+             */
+            public fun passwords(passwords: List<String>)
+
+            /**
+             * @param passwords Specifies the passwords to use for authentication if `Type` is set
+             *   to `password` .
+             */
+            public fun passwords(vararg passwords: String)
+
+            /**
+             * @param type Specifies the authentication type. Possible options are IAM
+             *   authentication, password and no password.
+             */
+            public fun type(type: String)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.elasticache.CfnUser.AuthenticationModeProperty.Builder =
+                software.amazon.awscdk.services.elasticache.CfnUser.AuthenticationModeProperty
+                    .builder()
+
+            /**
+             * @param passwords Specifies the passwords to use for authentication if `Type` is set
+             *   to `password` .
+             */
+            override fun passwords(passwords: List<String>) {
+                cdkBuilder.passwords(passwords)
+            }
+
+            /**
+             * @param passwords Specifies the passwords to use for authentication if `Type` is set
+             *   to `password` .
+             */
+            override fun passwords(vararg passwords: String): Unit = passwords(passwords.toList())
+
+            /**
+             * @param type Specifies the authentication type. Possible options are IAM
+             *   authentication, password and no password.
+             */
+            override fun type(type: String) {
+                cdkBuilder.type(type)
+            }
+
+            public fun build():
+                software.amazon.awscdk.services.elasticache.CfnUser.AuthenticationModeProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.elasticache.CfnUser.AuthenticationModeProperty,
+        ) : AuthenticationModeProperty {
+            /**
+             * Specifies the passwords to use for authentication if `Type` is set to `password` .
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-user-authenticationmode.html#cfn-elasticache-user-authenticationmode-passwords)
+             */
+            override fun passwords(): List<String> = unwrap(this).getPasswords() ?: emptyList()
+
+            /**
+             * Specifies the authentication type.
+             *
+             * Possible options are IAM authentication, password and no password.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-user-authenticationmode.html#cfn-elasticache-user-authenticationmode-type)
+             */
+            override fun type(): String = unwrap(this).getType()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(block: Builder.() -> Unit = {}): AuthenticationModeProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.elasticache.CfnUser.AuthenticationModeProperty
+            ): AuthenticationModeProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: AuthenticationModeProperty
+            ): software.amazon.awscdk.services.elasticache.CfnUser.AuthenticationModeProperty =
+                (wrapped as Wrapper).cdkObject
+        }
+    }
 }

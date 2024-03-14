@@ -4,43 +4,41 @@ import kotlin.Any
 import kotlin.String
 
 public interface IEndpoint {
-  /**
-   * The region where the endpoint is located.
-   *
-   * If the region cannot be determined, `undefined` is returned
-   */
-  public fun region(): String? = unwrap(this).getRegion()
-
-  /**
-   * Render the endpoint to an endpoint configuration.
-   */
-  public fun renderEndpointConfiguration(): Any
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.globalaccelerator.IEndpoint,
-  ) : IEndpoint {
     /**
      * The region where the endpoint is located.
      *
      * If the region cannot be determined, `undefined` is returned
      */
-    override fun region(): String? = unwrap(this).getRegion()
+    public fun region(): String? = unwrap(this).getRegion()
 
-    /**
-     * Render the endpoint to an endpoint configuration.
-     */
-    override fun renderEndpointConfiguration(): Any = unwrap(this).renderEndpointConfiguration()
-  }
+    /** Render the endpoint to an endpoint configuration. */
+    public fun renderEndpointConfiguration(): Any
 
-  public companion object {
-    init {
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.globalaccelerator.IEndpoint,
+    ) : IEndpoint {
+        /**
+         * The region where the endpoint is located.
+         *
+         * If the region cannot be determined, `undefined` is returned
+         */
+        override fun region(): String? = unwrap(this).getRegion()
 
+        /** Render the endpoint to an endpoint configuration. */
+        override fun renderEndpointConfiguration(): Any = unwrap(this).renderEndpointConfiguration()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.IEndpoint):
-        IEndpoint = Wrapper(cdkObject)
+    public companion object {
+        init {}
 
-    internal fun unwrap(wrapped: IEndpoint):
-        software.amazon.awscdk.services.globalaccelerator.IEndpoint = (wrapped as Wrapper).cdkObject
-  }
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.globalaccelerator.IEndpoint
+        ): IEndpoint = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: IEndpoint
+        ): software.amazon.awscdk.services.globalaccelerator.IEndpoint =
+            (wrapped as Wrapper).cdkObject
+    }
 }

@@ -5,591 +5,564 @@ import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnConformancePack internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.config.CfnConformancePack,
+public open class CfnConformancePack
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.config.CfnConformancePack,
 ) : CfnResource(cdkObject), IInspectable {
-  /**
-   * A list of ConformancePackInputParameter objects.
-   */
-  public open fun conformancePackInputParameters(): Any? =
-      unwrap(this).getConformancePackInputParameters()
+    /** A list of ConformancePackInputParameter objects. */
+    public open fun conformancePackInputParameters(): Any? =
+        unwrap(this).getConformancePackInputParameters()
 
-  /**
-   * A list of ConformancePackInputParameter objects.
-   */
-  public open fun conformancePackInputParameters(`value`: IResolvable) {
-    unwrap(this).setConformancePackInputParameters(`value`.let(IResolvable::unwrap))
-  }
+    /** A list of ConformancePackInputParameter objects. */
+    public open fun conformancePackInputParameters(`value`: IResolvable) {
+        unwrap(this).setConformancePackInputParameters(`value`.let(IResolvable::unwrap))
+    }
 
-  /**
-   * A list of ConformancePackInputParameter objects.
-   */
-  public open fun conformancePackInputParameters(__idx_ac66f0: List<Any>) {
-    unwrap(this).setConformancePackInputParameters(__idx_ac66f0)
-  }
+    /** A list of ConformancePackInputParameter objects. */
+    public open fun conformancePackInputParameters(__idx_ac66f0: List<Any>) {
+        unwrap(this).setConformancePackInputParameters(__idx_ac66f0)
+    }
 
-  /**
-   * A list of ConformancePackInputParameter objects.
-   */
-  public open fun conformancePackInputParameters(vararg __idx_ac66f0: Any): Unit =
-      conformancePackInputParameters(__idx_ac66f0.toList())
+    /** A list of ConformancePackInputParameter objects. */
+    public open fun conformancePackInputParameters(vararg __idx_ac66f0: Any): Unit =
+        conformancePackInputParameters(__idx_ac66f0.toList())
 
-  /**
-   * Name of the conformance pack you want to create.
-   */
-  public open fun conformancePackName(): String = unwrap(this).getConformancePackName()
+    /** Name of the conformance pack you want to create. */
+    public open fun conformancePackName(): String = unwrap(this).getConformancePackName()
 
-  /**
-   * Name of the conformance pack you want to create.
-   */
-  public open fun conformancePackName(`value`: String) {
-    unwrap(this).setConformancePackName(`value`)
-  }
+    /** Name of the conformance pack you want to create. */
+    public open fun conformancePackName(`value`: String) {
+        unwrap(this).setConformancePackName(`value`)
+    }
 
-  /**
-   * The name of the Amazon S3 bucket where AWS Config stores conformance pack templates.
-   */
-  public open fun deliveryS3Bucket(): String? = unwrap(this).getDeliveryS3Bucket()
+    /** The name of the Amazon S3 bucket where AWS Config stores conformance pack templates. */
+    public open fun deliveryS3Bucket(): String? = unwrap(this).getDeliveryS3Bucket()
 
-  /**
-   * The name of the Amazon S3 bucket where AWS Config stores conformance pack templates.
-   */
-  public open fun deliveryS3Bucket(`value`: String) {
-    unwrap(this).setDeliveryS3Bucket(`value`)
-  }
+    /** The name of the Amazon S3 bucket where AWS Config stores conformance pack templates. */
+    public open fun deliveryS3Bucket(`value`: String) {
+        unwrap(this).setDeliveryS3Bucket(`value`)
+    }
 
-  /**
-   * The prefix for the Amazon S3 bucket.
-   */
-  public open fun deliveryS3KeyPrefix(): String? = unwrap(this).getDeliveryS3KeyPrefix()
+    /** The prefix for the Amazon S3 bucket. */
+    public open fun deliveryS3KeyPrefix(): String? = unwrap(this).getDeliveryS3KeyPrefix()
 
-  /**
-   * The prefix for the Amazon S3 bucket.
-   */
-  public open fun deliveryS3KeyPrefix(`value`: String) {
-    unwrap(this).setDeliveryS3KeyPrefix(`value`)
-  }
-
-  /**
-   * Examines the CloudFormation resource and discloses attributes.
-   *
-   * @param inspector tree inspector to collect and process attributes. 
-   */
-  public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-  }
-
-  /**
-   * A string containing full conformance pack template body.
-   */
-  public open fun templateBody(): String? = unwrap(this).getTemplateBody()
-
-  /**
-   * A string containing full conformance pack template body.
-   */
-  public open fun templateBody(`value`: String) {
-    unwrap(this).setTemplateBody(`value`)
-  }
-
-  /**
-   * Location of file containing the template body (s3://bucketname/prefix).
-   */
-  public open fun templateS3Uri(): String? = unwrap(this).getTemplateS3Uri()
-
-  /**
-   * Location of file containing the template body (s3://bucketname/prefix).
-   */
-  public open fun templateS3Uri(`value`: String) {
-    unwrap(this).setTemplateS3Uri(`value`)
-  }
-
-  /**
-   * An object that contains the name or Amazon Resource Name (ARN) of the AWS Systems Manager
-   * document (SSM document) and the version of the SSM document that is used to create a conformance
-   * pack.
-   */
-  public open fun templateSsmDocumentDetails(): Any? = unwrap(this).getTemplateSsmDocumentDetails()
-
-  /**
-   * An object that contains the name or Amazon Resource Name (ARN) of the AWS Systems Manager
-   * document (SSM document) and the version of the SSM document that is used to create a conformance
-   * pack.
-   */
-  public open fun templateSsmDocumentDetails(`value`: Any) {
-    unwrap(this).setTemplateSsmDocumentDetails(`value`)
-  }
-
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.config.CfnConformancePack].
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * A list of ConformancePackInputParameter objects.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-conformancepackinputparameters)
-     * @param conformancePackInputParameters A list of ConformancePackInputParameter objects. 
-     */
-    public fun conformancePackInputParameters(conformancePackInputParameters: IResolvable)
-
-    /**
-     * A list of ConformancePackInputParameter objects.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-conformancepackinputparameters)
-     * @param conformancePackInputParameters A list of ConformancePackInputParameter objects. 
-     */
-    public fun conformancePackInputParameters(conformancePackInputParameters: List<Any>)
-
-    /**
-     * A list of ConformancePackInputParameter objects.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-conformancepackinputparameters)
-     * @param conformancePackInputParameters A list of ConformancePackInputParameter objects. 
-     */
-    public fun conformancePackInputParameters(vararg conformancePackInputParameters: Any)
-
-    /**
-     * Name of the conformance pack you want to create.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-conformancepackname)
-     * @param conformancePackName Name of the conformance pack you want to create. 
-     */
-    public fun conformancePackName(conformancePackName: String)
-
-    /**
-     * The name of the Amazon S3 bucket where AWS Config stores conformance pack templates.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-deliverys3bucket)
-     * @param deliveryS3Bucket The name of the Amazon S3 bucket where AWS Config stores conformance
-     * pack templates. 
-     */
-    public fun deliveryS3Bucket(deliveryS3Bucket: String)
-
-    /**
-     * The prefix for the Amazon S3 bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-deliverys3keyprefix)
-     * @param deliveryS3KeyPrefix The prefix for the Amazon S3 bucket. 
-     */
-    public fun deliveryS3KeyPrefix(deliveryS3KeyPrefix: String)
-
-    /**
-     * A string containing full conformance pack template body.
-     *
-     * Structure containing the template body with a minimum length of 1 byte and a maximum length
-     * of 51,200 bytes.
-     *
-     *
-     * You can only use a YAML template with two resource types: config rule (
-     * `AWS::Config::ConfigRule` ) and a remediation action ( `AWS::Config::RemediationConfiguration`
-     * ).
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-templatebody)
-     * @param templateBody A string containing full conformance pack template body. 
-     */
-    public fun templateBody(templateBody: String)
-
-    /**
-     * Location of file containing the template body (s3://bucketname/prefix).
-     *
-     * The uri must point to the conformance pack template (max size: 300 KB) that is located in an
-     * Amazon S3 bucket.
-     *
-     *
-     * You must have access to read Amazon S3 bucket.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-templates3uri)
-     * @param templateS3Uri Location of file containing the template body (s3://bucketname/prefix). 
-     */
-    public fun templateS3Uri(templateS3Uri: String)
-
-    /**
-     * An object that contains the name or Amazon Resource Name (ARN) of the AWS Systems Manager
-     * document (SSM document) and the version of the SSM document that is used to create a conformance
-     * pack.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-templatessmdocumentdetails)
-     * @param templateSsmDocumentDetails An object that contains the name or Amazon Resource Name
-     * (ARN) of the AWS Systems Manager document (SSM document) and the version of the SSM document
-     * that is used to create a conformance pack. 
-     */
-    public fun templateSsmDocumentDetails(templateSsmDocumentDetails: Any)
-  }
-
-  private class BuilderImpl(
-    scope: SoftwareConstructsConstruct,
-    id: String,
-  ) : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.config.CfnConformancePack.Builder =
-        software.amazon.awscdk.services.config.CfnConformancePack.Builder.create(scope, id)
-
-    /**
-     * A list of ConformancePackInputParameter objects.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-conformancepackinputparameters)
-     * @param conformancePackInputParameters A list of ConformancePackInputParameter objects. 
-     */
-    override fun conformancePackInputParameters(conformancePackInputParameters: IResolvable) {
-      cdkBuilder.conformancePackInputParameters(conformancePackInputParameters.let(IResolvable::unwrap))
+    /** The prefix for the Amazon S3 bucket. */
+    public open fun deliveryS3KeyPrefix(`value`: String) {
+        unwrap(this).setDeliveryS3KeyPrefix(`value`)
     }
 
     /**
-     * A list of ConformancePackInputParameter objects.
+     * Examines the CloudFormation resource and discloses attributes.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-conformancepackinputparameters)
-     * @param conformancePackInputParameters A list of ConformancePackInputParameter objects. 
+     * @param inspector tree inspector to collect and process attributes.
      */
-    override fun conformancePackInputParameters(conformancePackInputParameters: List<Any>) {
-      cdkBuilder.conformancePackInputParameters(conformancePackInputParameters)
+    public override fun inspect(inspector: TreeInspector) {
+        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
     }
 
-    /**
-     * A list of ConformancePackInputParameter objects.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-conformancepackinputparameters)
-     * @param conformancePackInputParameters A list of ConformancePackInputParameter objects. 
-     */
-    override fun conformancePackInputParameters(vararg conformancePackInputParameters: Any): Unit =
-        conformancePackInputParameters(conformancePackInputParameters.toList())
+    /** A string containing full conformance pack template body. */
+    public open fun templateBody(): String? = unwrap(this).getTemplateBody()
 
-    /**
-     * Name of the conformance pack you want to create.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-conformancepackname)
-     * @param conformancePackName Name of the conformance pack you want to create. 
-     */
-    override fun conformancePackName(conformancePackName: String) {
-      cdkBuilder.conformancePackName(conformancePackName)
+    /** A string containing full conformance pack template body. */
+    public open fun templateBody(`value`: String) {
+        unwrap(this).setTemplateBody(`value`)
     }
 
-    /**
-     * The name of the Amazon S3 bucket where AWS Config stores conformance pack templates.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-deliverys3bucket)
-     * @param deliveryS3Bucket The name of the Amazon S3 bucket where AWS Config stores conformance
-     * pack templates. 
-     */
-    override fun deliveryS3Bucket(deliveryS3Bucket: String) {
-      cdkBuilder.deliveryS3Bucket(deliveryS3Bucket)
-    }
+    /** Location of file containing the template body (s3://bucketname/prefix). */
+    public open fun templateS3Uri(): String? = unwrap(this).getTemplateS3Uri()
 
-    /**
-     * The prefix for the Amazon S3 bucket.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-deliverys3keyprefix)
-     * @param deliveryS3KeyPrefix The prefix for the Amazon S3 bucket. 
-     */
-    override fun deliveryS3KeyPrefix(deliveryS3KeyPrefix: String) {
-      cdkBuilder.deliveryS3KeyPrefix(deliveryS3KeyPrefix)
-    }
-
-    /**
-     * A string containing full conformance pack template body.
-     *
-     * Structure containing the template body with a minimum length of 1 byte and a maximum length
-     * of 51,200 bytes.
-     *
-     *
-     * You can only use a YAML template with two resource types: config rule (
-     * `AWS::Config::ConfigRule` ) and a remediation action ( `AWS::Config::RemediationConfiguration`
-     * ).
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-templatebody)
-     * @param templateBody A string containing full conformance pack template body. 
-     */
-    override fun templateBody(templateBody: String) {
-      cdkBuilder.templateBody(templateBody)
-    }
-
-    /**
-     * Location of file containing the template body (s3://bucketname/prefix).
-     *
-     * The uri must point to the conformance pack template (max size: 300 KB) that is located in an
-     * Amazon S3 bucket.
-     *
-     *
-     * You must have access to read Amazon S3 bucket.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-templates3uri)
-     * @param templateS3Uri Location of file containing the template body (s3://bucketname/prefix). 
-     */
-    override fun templateS3Uri(templateS3Uri: String) {
-      cdkBuilder.templateS3Uri(templateS3Uri)
+    /** Location of file containing the template body (s3://bucketname/prefix). */
+    public open fun templateS3Uri(`value`: String) {
+        unwrap(this).setTemplateS3Uri(`value`)
     }
 
     /**
      * An object that contains the name or Amazon Resource Name (ARN) of the AWS Systems Manager
-     * document (SSM document) and the version of the SSM document that is used to create a conformance
-     * pack.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-templatessmdocumentdetails)
-     * @param templateSsmDocumentDetails An object that contains the name or Amazon Resource Name
-     * (ARN) of the AWS Systems Manager document (SSM document) and the version of the SSM document
-     * that is used to create a conformance pack. 
+     * document (SSM document) and the version of the SSM document that is used to create a
+     * conformance pack.
      */
-    override fun templateSsmDocumentDetails(templateSsmDocumentDetails: Any) {
-      cdkBuilder.templateSsmDocumentDetails(templateSsmDocumentDetails)
-    }
-
-    public fun build(): software.amazon.awscdk.services.config.CfnConformancePack =
-        cdkBuilder.build()
-  }
-
-  public companion object {
-    init {
-
-    }
-
-    public operator fun invoke(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      block: Builder.() -> Unit = {},
-    ): CfnConformancePack {
-      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-      return CfnConformancePack(builderImpl.apply(block).build())
-    }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConformancePack):
-        CfnConformancePack = CfnConformancePack(cdkObject)
-
-    internal fun unwrap(wrapped: CfnConformancePack):
-        software.amazon.awscdk.services.config.CfnConformancePack = wrapped.cdkObject
-  }
-
-  public interface TemplateSSMDocumentDetailsProperty {
-    /**
-     * The name or Amazon Resource Name (ARN) of the SSM document to use to create a conformance
-     * pack.
-     *
-     * If you use the document name, AWS Config checks only your account and AWS Region for the SSM
-     * document.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-templatessmdocumentdetails.html#cfn-config-conformancepack-templatessmdocumentdetails-documentname)
-     */
-    public fun documentName(): String? = unwrap(this).getDocumentName()
+    public open fun templateSsmDocumentDetails(): Any? =
+        unwrap(this).getTemplateSsmDocumentDetails()
 
     /**
-     * The version of the SSM document to use to create a conformance pack.
-     *
-     * By default, AWS Config uses the latest version.
-     *
-     *
-     * This field is optional.
-     *
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-templatessmdocumentdetails.html#cfn-config-conformancepack-templatessmdocumentdetails-documentversion)
+     * An object that contains the name or Amazon Resource Name (ARN) of the AWS Systems Manager
+     * document (SSM document) and the version of the SSM document that is used to create a
+     * conformance pack.
      */
-    public fun documentVersion(): String? = unwrap(this).getDocumentVersion()
+    public open fun templateSsmDocumentDetails(`value`: Any) {
+        unwrap(this).setTemplateSsmDocumentDetails(`value`)
+    }
 
-    /**
-     * A builder for [TemplateSSMDocumentDetailsProperty]
-     */
+    /** A fluent builder for [io.cloudshiftdev.awscdk.services.config.CfnConformancePack]. */
     @CdkDslMarker
     public interface Builder {
-      /**
-       * @param documentName The name or Amazon Resource Name (ARN) of the SSM document to use to
-       * create a conformance pack.
-       * If you use the document name, AWS Config checks only your account and AWS Region for the
-       * SSM document.
-       */
-      public fun documentName(documentName: String)
+        /**
+         * A list of ConformancePackInputParameter objects.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-conformancepackinputparameters)
+         *
+         * @param conformancePackInputParameters A list of ConformancePackInputParameter objects.
+         */
+        public fun conformancePackInputParameters(conformancePackInputParameters: IResolvable)
 
-      /**
-       * @param documentVersion The version of the SSM document to use to create a conformance pack.
-       * By default, AWS Config uses the latest version.
-       *
-       *
-       * This field is optional.
-       */
-      public fun documentVersion(documentVersion: String)
+        /**
+         * A list of ConformancePackInputParameter objects.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-conformancepackinputparameters)
+         *
+         * @param conformancePackInputParameters A list of ConformancePackInputParameter objects.
+         */
+        public fun conformancePackInputParameters(conformancePackInputParameters: List<Any>)
+
+        /**
+         * A list of ConformancePackInputParameter objects.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-conformancepackinputparameters)
+         *
+         * @param conformancePackInputParameters A list of ConformancePackInputParameter objects.
+         */
+        public fun conformancePackInputParameters(vararg conformancePackInputParameters: Any)
+
+        /**
+         * Name of the conformance pack you want to create.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-conformancepackname)
+         *
+         * @param conformancePackName Name of the conformance pack you want to create.
+         */
+        public fun conformancePackName(conformancePackName: String)
+
+        /**
+         * The name of the Amazon S3 bucket where AWS Config stores conformance pack templates.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-deliverys3bucket)
+         *
+         * @param deliveryS3Bucket The name of the Amazon S3 bucket where AWS Config stores
+         *   conformance pack templates.
+         */
+        public fun deliveryS3Bucket(deliveryS3Bucket: String)
+
+        /**
+         * The prefix for the Amazon S3 bucket.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-deliverys3keyprefix)
+         *
+         * @param deliveryS3KeyPrefix The prefix for the Amazon S3 bucket.
+         */
+        public fun deliveryS3KeyPrefix(deliveryS3KeyPrefix: String)
+
+        /**
+         * A string containing full conformance pack template body.
+         *
+         * Structure containing the template body with a minimum length of 1 byte and a maximum
+         * length of 51,200 bytes.
+         *
+         * You can only use a YAML template with two resource types: config rule (
+         * `AWS::Config::ConfigRule` ) and a remediation action (
+         * `AWS::Config::RemediationConfiguration` ).
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-templatebody)
+         *
+         * @param templateBody A string containing full conformance pack template body.
+         */
+        public fun templateBody(templateBody: String)
+
+        /**
+         * Location of file containing the template body (s3://bucketname/prefix).
+         *
+         * The uri must point to the conformance pack template (max size: 300 KB) that is located in
+         * an Amazon S3 bucket.
+         *
+         * You must have access to read Amazon S3 bucket.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-templates3uri)
+         *
+         * @param templateS3Uri Location of file containing the template body
+         *   (s3://bucketname/prefix).
+         */
+        public fun templateS3Uri(templateS3Uri: String)
+
+        /**
+         * An object that contains the name or Amazon Resource Name (ARN) of the AWS Systems Manager
+         * document (SSM document) and the version of the SSM document that is used to create a
+         * conformance pack.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-templatessmdocumentdetails)
+         *
+         * @param templateSsmDocumentDetails An object that contains the name or Amazon Resource
+         *   Name (ARN) of the AWS Systems Manager document (SSM document) and the version of the
+         *   SSM document that is used to create a conformance pack.
+         */
+        public fun templateSsmDocumentDetails(templateSsmDocumentDetails: Any)
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty.Builder
-          =
-          software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty.builder()
+    private class BuilderImpl(
+        scope: SoftwareConstructsConstruct,
+        id: String,
+    ) : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.config.CfnConformancePack.Builder =
+            software.amazon.awscdk.services.config.CfnConformancePack.Builder.create(scope, id)
 
-      /**
-       * @param documentName The name or Amazon Resource Name (ARN) of the SSM document to use to
-       * create a conformance pack.
-       * If you use the document name, AWS Config checks only your account and AWS Region for the
-       * SSM document.
-       */
-      override fun documentName(documentName: String) {
-        cdkBuilder.documentName(documentName)
-      }
+        /**
+         * A list of ConformancePackInputParameter objects.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-conformancepackinputparameters)
+         *
+         * @param conformancePackInputParameters A list of ConformancePackInputParameter objects.
+         */
+        override fun conformancePackInputParameters(conformancePackInputParameters: IResolvable) {
+            cdkBuilder.conformancePackInputParameters(
+                conformancePackInputParameters.let(IResolvable::unwrap)
+            )
+        }
 
-      /**
-       * @param documentVersion The version of the SSM document to use to create a conformance pack.
-       * By default, AWS Config uses the latest version.
-       *
-       *
-       * This field is optional.
-       */
-      override fun documentVersion(documentVersion: String) {
-        cdkBuilder.documentVersion(documentVersion)
-      }
+        /**
+         * A list of ConformancePackInputParameter objects.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-conformancepackinputparameters)
+         *
+         * @param conformancePackInputParameters A list of ConformancePackInputParameter objects.
+         */
+        override fun conformancePackInputParameters(conformancePackInputParameters: List<Any>) {
+            cdkBuilder.conformancePackInputParameters(conformancePackInputParameters)
+        }
 
-      public fun build():
-          software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty
-          = cdkBuilder.build()
-    }
+        /**
+         * A list of ConformancePackInputParameter objects.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-conformancepackinputparameters)
+         *
+         * @param conformancePackInputParameters A list of ConformancePackInputParameter objects.
+         */
+        override fun conformancePackInputParameters(
+            vararg conformancePackInputParameters: Any
+        ): Unit = conformancePackInputParameters(conformancePackInputParameters.toList())
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty,
-    ) : TemplateSSMDocumentDetailsProperty {
-      /**
-       * The name or Amazon Resource Name (ARN) of the SSM document to use to create a conformance
-       * pack.
-       *
-       * If you use the document name, AWS Config checks only your account and AWS Region for the
-       * SSM document.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-templatessmdocumentdetails.html#cfn-config-conformancepack-templatessmdocumentdetails-documentname)
-       */
-      override fun documentName(): String? = unwrap(this).getDocumentName()
+        /**
+         * Name of the conformance pack you want to create.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-conformancepackname)
+         *
+         * @param conformancePackName Name of the conformance pack you want to create.
+         */
+        override fun conformancePackName(conformancePackName: String) {
+            cdkBuilder.conformancePackName(conformancePackName)
+        }
 
-      /**
-       * The version of the SSM document to use to create a conformance pack.
-       *
-       * By default, AWS Config uses the latest version.
-       *
-       *
-       * This field is optional.
-       *
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-templatessmdocumentdetails.html#cfn-config-conformancepack-templatessmdocumentdetails-documentversion)
-       */
-      override fun documentVersion(): String? = unwrap(this).getDocumentVersion()
+        /**
+         * The name of the Amazon S3 bucket where AWS Config stores conformance pack templates.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-deliverys3bucket)
+         *
+         * @param deliveryS3Bucket The name of the Amazon S3 bucket where AWS Config stores
+         *   conformance pack templates.
+         */
+        override fun deliveryS3Bucket(deliveryS3Bucket: String) {
+            cdkBuilder.deliveryS3Bucket(deliveryS3Bucket)
+        }
+
+        /**
+         * The prefix for the Amazon S3 bucket.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-deliverys3keyprefix)
+         *
+         * @param deliveryS3KeyPrefix The prefix for the Amazon S3 bucket.
+         */
+        override fun deliveryS3KeyPrefix(deliveryS3KeyPrefix: String) {
+            cdkBuilder.deliveryS3KeyPrefix(deliveryS3KeyPrefix)
+        }
+
+        /**
+         * A string containing full conformance pack template body.
+         *
+         * Structure containing the template body with a minimum length of 1 byte and a maximum
+         * length of 51,200 bytes.
+         *
+         * You can only use a YAML template with two resource types: config rule (
+         * `AWS::Config::ConfigRule` ) and a remediation action (
+         * `AWS::Config::RemediationConfiguration` ).
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-templatebody)
+         *
+         * @param templateBody A string containing full conformance pack template body.
+         */
+        override fun templateBody(templateBody: String) {
+            cdkBuilder.templateBody(templateBody)
+        }
+
+        /**
+         * Location of file containing the template body (s3://bucketname/prefix).
+         *
+         * The uri must point to the conformance pack template (max size: 300 KB) that is located in
+         * an Amazon S3 bucket.
+         *
+         * You must have access to read Amazon S3 bucket.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-templates3uri)
+         *
+         * @param templateS3Uri Location of file containing the template body
+         *   (s3://bucketname/prefix).
+         */
+        override fun templateS3Uri(templateS3Uri: String) {
+            cdkBuilder.templateS3Uri(templateS3Uri)
+        }
+
+        /**
+         * An object that contains the name or Amazon Resource Name (ARN) of the AWS Systems Manager
+         * document (SSM document) and the version of the SSM document that is used to create a
+         * conformance pack.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-conformancepack.html#cfn-config-conformancepack-templatessmdocumentdetails)
+         *
+         * @param templateSsmDocumentDetails An object that contains the name or Amazon Resource
+         *   Name (ARN) of the AWS Systems Manager document (SSM document) and the version of the
+         *   SSM document that is used to create a conformance pack.
+         */
+        override fun templateSsmDocumentDetails(templateSsmDocumentDetails: Any) {
+            cdkBuilder.templateSsmDocumentDetails(templateSsmDocumentDetails)
+        }
+
+        public fun build(): software.amazon.awscdk.services.config.CfnConformancePack =
+            cdkBuilder.build()
     }
 
     public companion object {
-      init {
+        init {}
 
-      }
+        public operator fun invoke(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            block: Builder.() -> Unit = {},
+        ): CfnConformancePack {
+            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+            return CfnConformancePack(builderImpl.apply(block).build())
+        }
 
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          TemplateSSMDocumentDetailsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.config.CfnConformancePack
+        ): CfnConformancePack = CfnConformancePack(cdkObject)
 
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty):
-          TemplateSSMDocumentDetailsProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: TemplateSSMDocumentDetailsProperty):
-          software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty
-          = (wrapped as Wrapper).cdkObject
-    }
-  }
-
-  public interface ConformancePackInputParameterProperty {
-    /**
-     * One part of a key-value pair.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-conformancepackinputparameter.html#cfn-config-conformancepack-conformancepackinputparameter-parametername)
-     */
-    public fun parameterName(): String
-
-    /**
-     * Another part of the key-value pair.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-conformancepackinputparameter.html#cfn-config-conformancepack-conformancepackinputparameter-parametervalue)
-     */
-    public fun parameterValue(): String
-
-    /**
-     * A builder for [ConformancePackInputParameterProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param parameterName One part of a key-value pair. 
-       */
-      public fun parameterName(parameterName: String)
-
-      /**
-       * @param parameterValue Another part of the key-value pair. 
-       */
-      public fun parameterValue(parameterValue: String)
+        internal fun unwrap(
+            wrapped: CfnConformancePack
+        ): software.amazon.awscdk.services.config.CfnConformancePack = wrapped.cdkObject
     }
 
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty.Builder
-          =
-          software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty.builder()
+    public interface TemplateSSMDocumentDetailsProperty {
+        /**
+         * The name or Amazon Resource Name (ARN) of the SSM document to use to create a conformance
+         * pack.
+         *
+         * If you use the document name, AWS Config checks only your account and AWS Region for the
+         * SSM document.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-templatessmdocumentdetails.html#cfn-config-conformancepack-templatessmdocumentdetails-documentname)
+         */
+        public fun documentName(): String? = unwrap(this).getDocumentName()
 
-      /**
-       * @param parameterName One part of a key-value pair. 
-       */
-      override fun parameterName(parameterName: String) {
-        cdkBuilder.parameterName(parameterName)
-      }
+        /**
+         * The version of the SSM document to use to create a conformance pack.
+         *
+         * By default, AWS Config uses the latest version.
+         *
+         * This field is optional.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-templatessmdocumentdetails.html#cfn-config-conformancepack-templatessmdocumentdetails-documentversion)
+         */
+        public fun documentVersion(): String? = unwrap(this).getDocumentVersion()
 
-      /**
-       * @param parameterValue Another part of the key-value pair. 
-       */
-      override fun parameterValue(parameterValue: String) {
-        cdkBuilder.parameterValue(parameterValue)
-      }
+        /** A builder for [TemplateSSMDocumentDetailsProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /**
+             * @param documentName The name or Amazon Resource Name (ARN) of the SSM document to use
+             *   to create a conformance pack. If you use the document name, AWS Config checks only
+             *   your account and AWS Region for the SSM document.
+             */
+            public fun documentName(documentName: String)
 
-      public fun build():
-          software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty
-          = cdkBuilder.build()
+            /**
+             * @param documentVersion The version of the SSM document to use to create a conformance
+             *   pack. By default, AWS Config uses the latest version.
+             *
+             * This field is optional.
+             */
+            public fun documentVersion(documentVersion: String)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty.Builder =
+                software.amazon.awscdk.services.config.CfnConformancePack
+                    .TemplateSSMDocumentDetailsProperty
+                    .builder()
+
+            /**
+             * @param documentName The name or Amazon Resource Name (ARN) of the SSM document to use
+             *   to create a conformance pack. If you use the document name, AWS Config checks only
+             *   your account and AWS Region for the SSM document.
+             */
+            override fun documentName(documentName: String) {
+                cdkBuilder.documentName(documentName)
+            }
+
+            /**
+             * @param documentVersion The version of the SSM document to use to create a conformance
+             *   pack. By default, AWS Config uses the latest version.
+             *
+             * This field is optional.
+             */
+            override fun documentVersion(documentVersion: String) {
+                cdkBuilder.documentVersion(documentVersion)
+            }
+
+            public fun build():
+                software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty,
+        ) : TemplateSSMDocumentDetailsProperty {
+            /**
+             * The name or Amazon Resource Name (ARN) of the SSM document to use to create a
+             * conformance pack.
+             *
+             * If you use the document name, AWS Config checks only your account and AWS Region for
+             * the SSM document.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-templatessmdocumentdetails.html#cfn-config-conformancepack-templatessmdocumentdetails-documentname)
+             */
+            override fun documentName(): String? = unwrap(this).getDocumentName()
+
+            /**
+             * The version of the SSM document to use to create a conformance pack.
+             *
+             * By default, AWS Config uses the latest version.
+             *
+             * This field is optional.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-templatessmdocumentdetails.html#cfn-config-conformancepack-templatessmdocumentdetails-documentversion)
+             */
+            override fun documentVersion(): String? = unwrap(this).getDocumentVersion()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(
+                block: Builder.() -> Unit = {}
+            ): TemplateSSMDocumentDetailsProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty
+            ): TemplateSSMDocumentDetailsProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: TemplateSSMDocumentDetailsProperty
+            ): software.amazon.awscdk.services.config.CfnConformancePack.TemplateSSMDocumentDetailsProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
 
-    private class Wrapper internal constructor(
-      internal val cdkObject:
-          software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty,
-    ) : ConformancePackInputParameterProperty {
-      /**
-       * One part of a key-value pair.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-conformancepackinputparameter.html#cfn-config-conformancepack-conformancepackinputparameter-parametername)
-       */
-      override fun parameterName(): String = unwrap(this).getParameterName()
+    public interface ConformancePackInputParameterProperty {
+        /**
+         * One part of a key-value pair.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-conformancepackinputparameter.html#cfn-config-conformancepack-conformancepackinputparameter-parametername)
+         */
+        public fun parameterName(): String
 
-      /**
-       * Another part of the key-value pair.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-conformancepackinputparameter.html#cfn-config-conformancepack-conformancepackinputparameter-parametervalue)
-       */
-      override fun parameterValue(): String = unwrap(this).getParameterValue()
+        /**
+         * Another part of the key-value pair.
+         *
+         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-conformancepackinputparameter.html#cfn-config-conformancepack-conformancepackinputparameter-parametervalue)
+         */
+        public fun parameterValue(): String
+
+        /** A builder for [ConformancePackInputParameterProperty] */
+        @CdkDslMarker
+        public interface Builder {
+            /** @param parameterName One part of a key-value pair. */
+            public fun parameterName(parameterName: String)
+
+            /** @param parameterValue Another part of the key-value pair. */
+            public fun parameterValue(parameterValue: String)
+        }
+
+        private class BuilderImpl : Builder {
+            private val cdkBuilder:
+                software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty.Builder =
+                software.amazon.awscdk.services.config.CfnConformancePack
+                    .ConformancePackInputParameterProperty
+                    .builder()
+
+            /** @param parameterName One part of a key-value pair. */
+            override fun parameterName(parameterName: String) {
+                cdkBuilder.parameterName(parameterName)
+            }
+
+            /** @param parameterValue Another part of the key-value pair. */
+            override fun parameterValue(parameterValue: String) {
+                cdkBuilder.parameterValue(parameterValue)
+            }
+
+            public fun build():
+                software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty =
+                cdkBuilder.build()
+        }
+
+        private class Wrapper
+        internal constructor(
+            internal val cdkObject:
+                software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty,
+        ) : ConformancePackInputParameterProperty {
+            /**
+             * One part of a key-value pair.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-conformancepackinputparameter.html#cfn-config-conformancepack-conformancepackinputparameter-parametername)
+             */
+            override fun parameterName(): String = unwrap(this).getParameterName()
+
+            /**
+             * Another part of the key-value pair.
+             *
+             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-conformancepack-conformancepackinputparameter.html#cfn-config-conformancepack-conformancepackinputparameter-parametervalue)
+             */
+            override fun parameterValue(): String = unwrap(this).getParameterValue()
+        }
+
+        public companion object {
+            init {}
+
+            public operator fun invoke(
+                block: Builder.() -> Unit = {}
+            ): ConformancePackInputParameterProperty {
+                val builderImpl = BuilderImpl()
+                return Wrapper(builderImpl.apply(block).build())
+            }
+
+            internal fun wrap(
+                cdkObject:
+                    software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty
+            ): ConformancePackInputParameterProperty = Wrapper(cdkObject)
+
+            internal fun unwrap(
+                wrapped: ConformancePackInputParameterProperty
+            ): software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty =
+                (wrapped as Wrapper).cdkObject
+        }
     }
-
-    public companion object {
-      init {
-
-      }
-
-      public operator fun invoke(block: Builder.() -> Unit = {}):
-          ConformancePackInputParameterProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty):
-          ConformancePackInputParameterProperty = Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: ConformancePackInputParameterProperty):
-          software.amazon.awscdk.services.config.CfnConformancePack.ConformancePackInputParameterProperty
-          = (wrapped as Wrapper).cdkObject
-    }
-  }
 }

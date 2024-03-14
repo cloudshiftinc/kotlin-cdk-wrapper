@@ -5,237 +5,236 @@ import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
 import io.cloudshiftdev.awscdk.services.secretsmanager.ReplicaRegion
 import io.cloudshiftdev.awscdk.services.secretsmanager.Secret
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class DatabaseSecret internal constructor(
-  private val cdkObject: software.amazon.awscdk.services.rds.DatabaseSecret,
+public open class DatabaseSecret
+internal constructor(
+    private val cdkObject: software.amazon.awscdk.services.rds.DatabaseSecret,
 ) : Secret(cdkObject) {
-  /**
-   * A fluent builder for [io.cloudshiftdev.awscdk.services.rds.DatabaseSecret].
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * The database name, if not using the default one.
-     *
-     * Default: - whatever the secret generates after the attach method is run
-     *
-     * @param dbname The database name, if not using the default one. 
-     */
-    public fun dbname(dbname: String)
+    /** A fluent builder for [io.cloudshiftdev.awscdk.services.rds.DatabaseSecret]. */
+    @CdkDslMarker
+    public interface Builder {
+        /**
+         * The database name, if not using the default one.
+         *
+         * Default: - whatever the secret generates after the attach method is run
+         *
+         * @param dbname The database name, if not using the default one.
+         */
+        public fun dbname(dbname: String)
 
-    /**
-     * The KMS key to use to encrypt the secret.
-     *
-     * Default: default master key
-     *
-     * @param encryptionKey The KMS key to use to encrypt the secret. 
-     */
-    public fun encryptionKey(encryptionKey: IKey)
+        /**
+         * The KMS key to use to encrypt the secret.
+         *
+         * Default: default master key
+         *
+         * @param encryptionKey The KMS key to use to encrypt the secret.
+         */
+        public fun encryptionKey(encryptionKey: IKey)
 
-    /**
-     * Characters to not include in the generated password.
-     *
-     * Default: " %+~`#$&*()|[]{}:;<>?!'/@\"\\"
-     *
-     * @param excludeCharacters Characters to not include in the generated password. 
-     */
-    public fun excludeCharacters(excludeCharacters: String)
+        /**
+         * Characters to not include in the generated password.
+         *
+         * Default: " %+~`#$&*()|[]{}:;<>?!'/@\"\\"
+         *
+         * @param excludeCharacters Characters to not include in the generated password.
+         */
+        public fun excludeCharacters(excludeCharacters: String)
 
-    /**
-     * The master secret which will be used to rotate this secret.
-     *
-     * Default: - no master secret information will be included
-     *
-     * @param masterSecret The master secret which will be used to rotate this secret. 
-     */
-    public fun masterSecret(masterSecret: ISecret)
+        /**
+         * The master secret which will be used to rotate this secret.
+         *
+         * Default: - no master secret information will be included
+         *
+         * @param masterSecret The master secret which will be used to rotate this secret.
+         */
+        public fun masterSecret(masterSecret: ISecret)
 
-    /**
-     * Whether to replace this secret when the criteria for the password change.
-     *
-     * This is achieved by overriding the logical id of the AWS::SecretsManager::Secret
-     * with a hash of the options that influence the password generation. This
-     * way a new secret will be created when the password is regenerated and the
-     * cluster or instance consuming this secret will have its credentials updated.
-     *
-     * Default: false
-     *
-     * @param replaceOnPasswordCriteriaChanges Whether to replace this secret when the criteria for
-     * the password change. 
-     */
-    public fun replaceOnPasswordCriteriaChanges(replaceOnPasswordCriteriaChanges: Boolean)
+        /**
+         * Whether to replace this secret when the criteria for the password change.
+         *
+         * This is achieved by overriding the logical id of the AWS::SecretsManager::Secret with a
+         * hash of the options that influence the password generation. This way a new secret will be
+         * created when the password is regenerated and the cluster or instance consuming this
+         * secret will have its credentials updated.
+         *
+         * Default: false
+         *
+         * @param replaceOnPasswordCriteriaChanges Whether to replace this secret when the criteria
+         *   for the password change.
+         */
+        public fun replaceOnPasswordCriteriaChanges(replaceOnPasswordCriteriaChanges: Boolean)
 
-    /**
-     * A list of regions where to replicate this secret.
-     *
-     * Default: - Secret is not replicated
-     *
-     * @param replicaRegions A list of regions where to replicate this secret. 
-     */
-    public fun replicaRegions(replicaRegions: List<ReplicaRegion>)
+        /**
+         * A list of regions where to replicate this secret.
+         *
+         * Default: - Secret is not replicated
+         *
+         * @param replicaRegions A list of regions where to replicate this secret.
+         */
+        public fun replicaRegions(replicaRegions: List<ReplicaRegion>)
 
-    /**
-     * A list of regions where to replicate this secret.
-     *
-     * Default: - Secret is not replicated
-     *
-     * @param replicaRegions A list of regions where to replicate this secret. 
-     */
-    public fun replicaRegions(vararg replicaRegions: ReplicaRegion)
+        /**
+         * A list of regions where to replicate this secret.
+         *
+         * Default: - Secret is not replicated
+         *
+         * @param replicaRegions A list of regions where to replicate this secret.
+         */
+        public fun replicaRegions(vararg replicaRegions: ReplicaRegion)
 
-    /**
-     * A name for the secret.
-     *
-     * Default: - A name is generated by CloudFormation.
-     *
-     * @param secretName A name for the secret. 
-     */
-    public fun secretName(secretName: String)
+        /**
+         * A name for the secret.
+         *
+         * Default: - A name is generated by CloudFormation.
+         *
+         * @param secretName A name for the secret.
+         */
+        public fun secretName(secretName: String)
 
-    /**
-     * The username.
-     *
-     * @param username The username. 
-     */
-    public fun username(username: String)
-  }
-
-  private class BuilderImpl(
-    scope: SoftwareConstructsConstruct,
-    id: String,
-  ) : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.rds.DatabaseSecret.Builder =
-        software.amazon.awscdk.services.rds.DatabaseSecret.Builder.create(scope, id)
-
-    /**
-     * The database name, if not using the default one.
-     *
-     * Default: - whatever the secret generates after the attach method is run
-     *
-     * @param dbname The database name, if not using the default one. 
-     */
-    override fun dbname(dbname: String) {
-      cdkBuilder.dbname(dbname)
+        /**
+         * The username.
+         *
+         * @param username The username.
+         */
+        public fun username(username: String)
     }
 
-    /**
-     * The KMS key to use to encrypt the secret.
-     *
-     * Default: default master key
-     *
-     * @param encryptionKey The KMS key to use to encrypt the secret. 
-     */
-    override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+    private class BuilderImpl(
+        scope: SoftwareConstructsConstruct,
+        id: String,
+    ) : Builder {
+        private val cdkBuilder: software.amazon.awscdk.services.rds.DatabaseSecret.Builder =
+            software.amazon.awscdk.services.rds.DatabaseSecret.Builder.create(scope, id)
+
+        /**
+         * The database name, if not using the default one.
+         *
+         * Default: - whatever the secret generates after the attach method is run
+         *
+         * @param dbname The database name, if not using the default one.
+         */
+        override fun dbname(dbname: String) {
+            cdkBuilder.dbname(dbname)
+        }
+
+        /**
+         * The KMS key to use to encrypt the secret.
+         *
+         * Default: default master key
+         *
+         * @param encryptionKey The KMS key to use to encrypt the secret.
+         */
+        override fun encryptionKey(encryptionKey: IKey) {
+            cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+        }
+
+        /**
+         * Characters to not include in the generated password.
+         *
+         * Default: " %+~`#$&*()|[]{}:;<>?!'/@\"\\"
+         *
+         * @param excludeCharacters Characters to not include in the generated password.
+         */
+        override fun excludeCharacters(excludeCharacters: String) {
+            cdkBuilder.excludeCharacters(excludeCharacters)
+        }
+
+        /**
+         * The master secret which will be used to rotate this secret.
+         *
+         * Default: - no master secret information will be included
+         *
+         * @param masterSecret The master secret which will be used to rotate this secret.
+         */
+        override fun masterSecret(masterSecret: ISecret) {
+            cdkBuilder.masterSecret(masterSecret.let(ISecret::unwrap))
+        }
+
+        /**
+         * Whether to replace this secret when the criteria for the password change.
+         *
+         * This is achieved by overriding the logical id of the AWS::SecretsManager::Secret with a
+         * hash of the options that influence the password generation. This way a new secret will be
+         * created when the password is regenerated and the cluster or instance consuming this
+         * secret will have its credentials updated.
+         *
+         * Default: false
+         *
+         * @param replaceOnPasswordCriteriaChanges Whether to replace this secret when the criteria
+         *   for the password change.
+         */
+        override fun replaceOnPasswordCriteriaChanges(replaceOnPasswordCriteriaChanges: Boolean) {
+            cdkBuilder.replaceOnPasswordCriteriaChanges(replaceOnPasswordCriteriaChanges)
+        }
+
+        /**
+         * A list of regions where to replicate this secret.
+         *
+         * Default: - Secret is not replicated
+         *
+         * @param replicaRegions A list of regions where to replicate this secret.
+         */
+        override fun replicaRegions(replicaRegions: List<ReplicaRegion>) {
+            cdkBuilder.replicaRegions(replicaRegions.map(ReplicaRegion::unwrap))
+        }
+
+        /**
+         * A list of regions where to replicate this secret.
+         *
+         * Default: - Secret is not replicated
+         *
+         * @param replicaRegions A list of regions where to replicate this secret.
+         */
+        override fun replicaRegions(vararg replicaRegions: ReplicaRegion): Unit =
+            replicaRegions(replicaRegions.toList())
+
+        /**
+         * A name for the secret.
+         *
+         * Default: - A name is generated by CloudFormation.
+         *
+         * @param secretName A name for the secret.
+         */
+        override fun secretName(secretName: String) {
+            cdkBuilder.secretName(secretName)
+        }
+
+        /**
+         * The username.
+         *
+         * @param username The username.
+         */
+        override fun username(username: String) {
+            cdkBuilder.username(username)
+        }
+
+        public fun build(): software.amazon.awscdk.services.rds.DatabaseSecret = cdkBuilder.build()
     }
 
-    /**
-     * Characters to not include in the generated password.
-     *
-     * Default: " %+~`#$&*()|[]{}:;<>?!'/@\"\\"
-     *
-     * @param excludeCharacters Characters to not include in the generated password. 
-     */
-    override fun excludeCharacters(excludeCharacters: String) {
-      cdkBuilder.excludeCharacters(excludeCharacters)
+    public companion object {
+        init {}
+
+        public operator fun invoke(
+            scope: CloudshiftdevConstructsConstruct,
+            id: String,
+            block: Builder.() -> Unit = {},
+        ): DatabaseSecret {
+            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+            return DatabaseSecret(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.rds.DatabaseSecret
+        ): DatabaseSecret = DatabaseSecret(cdkObject)
+
+        internal fun unwrap(
+            wrapped: DatabaseSecret
+        ): software.amazon.awscdk.services.rds.DatabaseSecret = wrapped.cdkObject
     }
-
-    /**
-     * The master secret which will be used to rotate this secret.
-     *
-     * Default: - no master secret information will be included
-     *
-     * @param masterSecret The master secret which will be used to rotate this secret. 
-     */
-    override fun masterSecret(masterSecret: ISecret) {
-      cdkBuilder.masterSecret(masterSecret.let(ISecret::unwrap))
-    }
-
-    /**
-     * Whether to replace this secret when the criteria for the password change.
-     *
-     * This is achieved by overriding the logical id of the AWS::SecretsManager::Secret
-     * with a hash of the options that influence the password generation. This
-     * way a new secret will be created when the password is regenerated and the
-     * cluster or instance consuming this secret will have its credentials updated.
-     *
-     * Default: false
-     *
-     * @param replaceOnPasswordCriteriaChanges Whether to replace this secret when the criteria for
-     * the password change. 
-     */
-    override fun replaceOnPasswordCriteriaChanges(replaceOnPasswordCriteriaChanges: Boolean) {
-      cdkBuilder.replaceOnPasswordCriteriaChanges(replaceOnPasswordCriteriaChanges)
-    }
-
-    /**
-     * A list of regions where to replicate this secret.
-     *
-     * Default: - Secret is not replicated
-     *
-     * @param replicaRegions A list of regions where to replicate this secret. 
-     */
-    override fun replicaRegions(replicaRegions: List<ReplicaRegion>) {
-      cdkBuilder.replicaRegions(replicaRegions.map(ReplicaRegion::unwrap))
-    }
-
-    /**
-     * A list of regions where to replicate this secret.
-     *
-     * Default: - Secret is not replicated
-     *
-     * @param replicaRegions A list of regions where to replicate this secret. 
-     */
-    override fun replicaRegions(vararg replicaRegions: ReplicaRegion): Unit =
-        replicaRegions(replicaRegions.toList())
-
-    /**
-     * A name for the secret.
-     *
-     * Default: - A name is generated by CloudFormation.
-     *
-     * @param secretName A name for the secret. 
-     */
-    override fun secretName(secretName: String) {
-      cdkBuilder.secretName(secretName)
-    }
-
-    /**
-     * The username.
-     *
-     * @param username The username. 
-     */
-    override fun username(username: String) {
-      cdkBuilder.username(username)
-    }
-
-    public fun build(): software.amazon.awscdk.services.rds.DatabaseSecret = cdkBuilder.build()
-  }
-
-  public companion object {
-    init {
-
-    }
-
-    public operator fun invoke(
-      scope: CloudshiftdevConstructsConstruct,
-      id: String,
-      block: Builder.() -> Unit = {},
-    ): DatabaseSecret {
-      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-      return DatabaseSecret(builderImpl.apply(block).build())
-    }
-
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.DatabaseSecret): DatabaseSecret
-        = DatabaseSecret(cdkObject)
-
-    internal fun unwrap(wrapped: DatabaseSecret): software.amazon.awscdk.services.rds.DatabaseSecret
-        = wrapped.cdkObject
-  }
 }

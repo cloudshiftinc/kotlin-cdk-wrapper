@@ -1,32 +1,29 @@
 package io.cloudshiftdev.awscdk.services.secretsmanager
 
 public interface ISecretAttachmentTarget {
-  /**
-   * Renders the target specifications.
-   */
-  public fun asSecretAttachmentTarget(): SecretAttachmentTargetProps
+    /** Renders the target specifications. */
+    public fun asSecretAttachmentTarget(): SecretAttachmentTargetProps
 
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget,
-  ) : ISecretAttachmentTarget {
-    /**
-     * Renders the target specifications.
-     */
-    override fun asSecretAttachmentTarget(): SecretAttachmentTargetProps =
-        unwrap(this).asSecretAttachmentTarget().let(SecretAttachmentTargetProps::wrap)
-  }
-
-  public companion object {
-    init {
-
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject:
+            software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget,
+    ) : ISecretAttachmentTarget {
+        /** Renders the target specifications. */
+        override fun asSecretAttachmentTarget(): SecretAttachmentTargetProps =
+            unwrap(this).asSecretAttachmentTarget().let(SecretAttachmentTargetProps::wrap)
     }
 
-    internal
-        fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget):
-        ISecretAttachmentTarget = Wrapper(cdkObject)
+    public companion object {
+        init {}
 
-    internal fun unwrap(wrapped: ISecretAttachmentTarget):
-        software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget = (wrapped as
-        Wrapper).cdkObject
-  }
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget
+        ): ISecretAttachmentTarget = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: ISecretAttachmentTarget
+        ): software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget =
+            (wrapped as Wrapper).cdkObject
+    }
 }

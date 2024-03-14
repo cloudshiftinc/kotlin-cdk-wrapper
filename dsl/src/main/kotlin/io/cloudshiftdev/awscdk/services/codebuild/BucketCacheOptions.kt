@@ -5,61 +5,53 @@ import kotlin.String
 import kotlin.Unit
 
 public interface BucketCacheOptions {
-  /**
-   * The prefix to use to store the cache in the bucket.
-   */
-  public fun prefix(): String? = unwrap(this).getPrefix()
+    /** The prefix to use to store the cache in the bucket. */
+    public fun prefix(): String? = unwrap(this).getPrefix()
 
-  /**
-   * A builder for [BucketCacheOptions]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param prefix The prefix to use to store the cache in the bucket.
-     */
-    public fun prefix(prefix: String)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder: software.amazon.awscdk.services.codebuild.BucketCacheOptions.Builder =
-        software.amazon.awscdk.services.codebuild.BucketCacheOptions.builder()
-
-    /**
-     * @param prefix The prefix to use to store the cache in the bucket.
-     */
-    override fun prefix(prefix: String) {
-      cdkBuilder.prefix(prefix)
+    /** A builder for [BucketCacheOptions] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param prefix The prefix to use to store the cache in the bucket. */
+        public fun prefix(prefix: String)
     }
 
-    public fun build(): software.amazon.awscdk.services.codebuild.BucketCacheOptions =
-        cdkBuilder.build()
-  }
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.services.codebuild.BucketCacheOptions.Builder =
+            software.amazon.awscdk.services.codebuild.BucketCacheOptions.builder()
 
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.codebuild.BucketCacheOptions,
-  ) : BucketCacheOptions {
-    /**
-     * The prefix to use to store the cache in the bucket.
-     */
-    override fun prefix(): String? = unwrap(this).getPrefix()
-  }
+        /** @param prefix The prefix to use to store the cache in the bucket. */
+        override fun prefix(prefix: String) {
+            cdkBuilder.prefix(prefix)
+        }
 
-  public companion object {
-    init {
-
+        public fun build(): software.amazon.awscdk.services.codebuild.BucketCacheOptions =
+            cdkBuilder.build()
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): BucketCacheOptions {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.codebuild.BucketCacheOptions,
+    ) : BucketCacheOptions {
+        /** The prefix to use to store the cache in the bucket. */
+        override fun prefix(): String? = unwrap(this).getPrefix()
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.BucketCacheOptions):
-        BucketCacheOptions = Wrapper(cdkObject)
+    public companion object {
+        init {}
 
-    internal fun unwrap(wrapped: BucketCacheOptions):
-        software.amazon.awscdk.services.codebuild.BucketCacheOptions = (wrapped as
-        Wrapper).cdkObject
-  }
+        public operator fun invoke(block: Builder.() -> Unit = {}): BucketCacheOptions {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.codebuild.BucketCacheOptions
+        ): BucketCacheOptions = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: BucketCacheOptions
+        ): software.amazon.awscdk.services.codebuild.BucketCacheOptions =
+            (wrapped as Wrapper).cdkObject
+    }
 }

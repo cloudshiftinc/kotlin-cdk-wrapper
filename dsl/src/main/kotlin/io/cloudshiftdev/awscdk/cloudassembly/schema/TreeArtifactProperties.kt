@@ -5,63 +5,53 @@ import kotlin.String
 import kotlin.Unit
 
 public interface TreeArtifactProperties {
-  /**
-   * Filename of the tree artifact.
-   */
-  public fun `file`(): String
+    /** Filename of the tree artifact. */
+    public fun `file`(): String
 
-  /**
-   * A builder for [TreeArtifactProperties]
-   */
-  @CdkDslMarker
-  public interface Builder {
-    /**
-     * @param file Filename of the tree artifact. 
-     */
-    public fun `file`(`file`: String)
-  }
-
-  private class BuilderImpl : Builder {
-    private val cdkBuilder:
-        software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties.Builder =
-        software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties.builder()
-
-    /**
-     * @param file Filename of the tree artifact. 
-     */
-    override fun `file`(`file`: String) {
-      cdkBuilder.`file`(`file`)
+    /** A builder for [TreeArtifactProperties] */
+    @CdkDslMarker
+    public interface Builder {
+        /** @param file Filename of the tree artifact. */
+        public fun `file`(`file`: String)
     }
 
-    public fun build(): software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties =
-        cdkBuilder.build()
-  }
+    private class BuilderImpl : Builder {
+        private val cdkBuilder:
+            software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties.Builder =
+            software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties.builder()
 
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties,
-  ) : TreeArtifactProperties {
-    /**
-     * Filename of the tree artifact.
-     */
-    override fun `file`(): String = unwrap(this).getFile()
-  }
+        /** @param file Filename of the tree artifact. */
+        override fun `file`(`file`: String) {
+            cdkBuilder.`file`(`file`)
+        }
 
-  public companion object {
-    init {
-
+        public fun build(): software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties =
+            cdkBuilder.build()
     }
 
-    public operator fun invoke(block: Builder.() -> Unit = {}): TreeArtifactProperties {
-      val builderImpl = BuilderImpl()
-      return Wrapper(builderImpl.apply(block).build())
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties,
+    ) : TreeArtifactProperties {
+        /** Filename of the tree artifact. */
+        override fun `file`(): String = unwrap(this).getFile()
     }
 
-    internal
-        fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties):
-        TreeArtifactProperties = Wrapper(cdkObject)
+    public companion object {
+        init {}
 
-    internal fun unwrap(wrapped: TreeArtifactProperties):
-        software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties = (wrapped as
-        Wrapper).cdkObject
-  }
+        public operator fun invoke(block: Builder.() -> Unit = {}): TreeArtifactProperties {
+            val builderImpl = BuilderImpl()
+            return Wrapper(builderImpl.apply(block).build())
+        }
+
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties
+        ): TreeArtifactProperties = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: TreeArtifactProperties
+        ): software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties =
+            (wrapped as Wrapper).cdkObject
+    }
 }

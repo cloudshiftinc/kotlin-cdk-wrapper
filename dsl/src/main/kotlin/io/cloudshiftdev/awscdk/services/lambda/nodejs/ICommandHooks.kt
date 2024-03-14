@@ -4,62 +4,25 @@ import kotlin.String
 import kotlin.collections.List
 
 public interface ICommandHooks {
-  /**
-   * Returns commands to run after bundling.
-   *
-   * Commands are chained with `&amp;&amp;`.
-   *
-   * @param inputDir 
-   * @param outputDir 
-   */
-  public fun afterBundling(inputDir: String, outputDir: String): List<String>
-
-  /**
-   * Returns commands to run before bundling.
-   *
-   * Commands are chained with `&amp;&amp;`.
-   *
-   * @param inputDir 
-   * @param outputDir 
-   */
-  public fun beforeBundling(inputDir: String, outputDir: String): List<String>
-
-  /**
-   * Returns commands to run before installing node modules.
-   *
-   * This hook only runs when node modules are installed.
-   *
-   * Commands are chained with `&amp;&amp;`.
-   *
-   * @param inputDir 
-   * @param outputDir 
-   */
-  public fun beforeInstall(inputDir: String, outputDir: String): List<String>
-
-  private class Wrapper internal constructor(
-    internal val cdkObject: software.amazon.awscdk.services.lambda.nodejs.ICommandHooks,
-  ) : ICommandHooks {
     /**
      * Returns commands to run after bundling.
      *
      * Commands are chained with `&amp;&amp;`.
      *
-     * @param inputDir 
-     * @param outputDir 
+     * @param inputDir
+     * @param outputDir
      */
-    override fun afterBundling(inputDir: String, outputDir: String): List<String> =
-        unwrap(this).afterBundling(inputDir, outputDir)
+    public fun afterBundling(inputDir: String, outputDir: String): List<String>
 
     /**
      * Returns commands to run before bundling.
      *
      * Commands are chained with `&amp;&amp;`.
      *
-     * @param inputDir 
-     * @param outputDir 
+     * @param inputDir
+     * @param outputDir
      */
-    override fun beforeBundling(inputDir: String, outputDir: String): List<String> =
-        unwrap(this).beforeBundling(inputDir, outputDir)
+    public fun beforeBundling(inputDir: String, outputDir: String): List<String>
 
     /**
      * Returns commands to run before installing node modules.
@@ -68,22 +31,61 @@ public interface ICommandHooks {
      *
      * Commands are chained with `&amp;&amp;`.
      *
-     * @param inputDir 
-     * @param outputDir 
+     * @param inputDir
+     * @param outputDir
      */
-    override fun beforeInstall(inputDir: String, outputDir: String): List<String> =
-        unwrap(this).beforeInstall(inputDir, outputDir)
-  }
+    public fun beforeInstall(inputDir: String, outputDir: String): List<String>
 
-  public companion object {
-    init {
+    private class Wrapper
+    internal constructor(
+        internal val cdkObject: software.amazon.awscdk.services.lambda.nodejs.ICommandHooks,
+    ) : ICommandHooks {
+        /**
+         * Returns commands to run after bundling.
+         *
+         * Commands are chained with `&amp;&amp;`.
+         *
+         * @param inputDir
+         * @param outputDir
+         */
+        override fun afterBundling(inputDir: String, outputDir: String): List<String> =
+            unwrap(this).afterBundling(inputDir, outputDir)
 
+        /**
+         * Returns commands to run before bundling.
+         *
+         * Commands are chained with `&amp;&amp;`.
+         *
+         * @param inputDir
+         * @param outputDir
+         */
+        override fun beforeBundling(inputDir: String, outputDir: String): List<String> =
+            unwrap(this).beforeBundling(inputDir, outputDir)
+
+        /**
+         * Returns commands to run before installing node modules.
+         *
+         * This hook only runs when node modules are installed.
+         *
+         * Commands are chained with `&amp;&amp;`.
+         *
+         * @param inputDir
+         * @param outputDir
+         */
+        override fun beforeInstall(inputDir: String, outputDir: String): List<String> =
+            unwrap(this).beforeInstall(inputDir, outputDir)
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.nodejs.ICommandHooks):
-        ICommandHooks = Wrapper(cdkObject)
+    public companion object {
+        init {}
 
-    internal fun unwrap(wrapped: ICommandHooks):
-        software.amazon.awscdk.services.lambda.nodejs.ICommandHooks = (wrapped as Wrapper).cdkObject
-  }
+        internal fun wrap(
+            cdkObject: software.amazon.awscdk.services.lambda.nodejs.ICommandHooks
+        ): ICommandHooks = Wrapper(cdkObject)
+
+        internal fun unwrap(
+            wrapped: ICommandHooks
+        ): software.amazon.awscdk.services.lambda.nodejs.ICommandHooks =
+            (wrapped as Wrapper).cdkObject
+    }
 }
