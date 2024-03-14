@@ -18,6 +18,24 @@ public open class AdotLambdaLayerJavaAutoInstrumentationVersion internal constru
       unwrap(this).layerArn(scope.let(IConstruct::unwrap), architecture.let(Architecture::unwrap))
 
   public companion object {
+    public val LATEST: AdotLambdaLayerJavaAutoInstrumentationVersion =
+        AdotLambdaLayerJavaAutoInstrumentationVersion.wrap(software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaAutoInstrumentationVersion.LATEST)
+
+    public val V1_19_2: AdotLambdaLayerJavaAutoInstrumentationVersion =
+        AdotLambdaLayerJavaAutoInstrumentationVersion.wrap(software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaAutoInstrumentationVersion.V1_19_2)
+
+    public val V1_28_1: AdotLambdaLayerJavaAutoInstrumentationVersion =
+        AdotLambdaLayerJavaAutoInstrumentationVersion.wrap(software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaAutoInstrumentationVersion.V1_28_1)
+
+    public val V1_30_0: AdotLambdaLayerJavaAutoInstrumentationVersion =
+        AdotLambdaLayerJavaAutoInstrumentationVersion.wrap(software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaAutoInstrumentationVersion.V1_30_0)
+
+    public val V1_31_0: AdotLambdaLayerJavaAutoInstrumentationVersion =
+        AdotLambdaLayerJavaAutoInstrumentationVersion.wrap(software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaAutoInstrumentationVersion.V1_31_0)
+
+    public val V1_32_0: AdotLambdaLayerJavaAutoInstrumentationVersion =
+        AdotLambdaLayerJavaAutoInstrumentationVersion.wrap(software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaAutoInstrumentationVersion.V1_32_0)
+
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaAutoInstrumentationVersion):
         AdotLambdaLayerJavaAutoInstrumentationVersion =

@@ -7,6 +7,18 @@ public open class CaCertificate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.CaCertificate,
 ) : CdkObject(cdkObject) {
   public companion object {
+    public val RDS_CA_2019: CaCertificate =
+        CaCertificate.wrap(software.amazon.awscdk.services.rds.CaCertificate.RDS_CA_2019)
+
+    public val RDS_CA_ECC384_G1: CaCertificate =
+        CaCertificate.wrap(software.amazon.awscdk.services.rds.CaCertificate.RDS_CA_ECC384_G1)
+
+    public val RDS_CA_RDS2048_G1: CaCertificate =
+        CaCertificate.wrap(software.amazon.awscdk.services.rds.CaCertificate.RDS_CA_RDS2048_G1)
+
+    public val RDS_CA_RDS4096_G1: CaCertificate =
+        CaCertificate.wrap(software.amazon.awscdk.services.rds.CaCertificate.RDS_CA_RDS4096_G1)
+
     public fun of(identifier: String): CaCertificate =
         software.amazon.awscdk.services.rds.CaCertificate.of(identifier).let(CaCertificate::wrap)
 

@@ -1,0 +1,136 @@
+package io.cloudshiftdev.awscdk.services.cloudfront
+
+import io.cloudshiftdev.awscdk.CdkObject
+import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import kotlin.Any
+import kotlin.Suppress
+import kotlin.Unit
+import kotlin.jvm.JvmName
+
+public interface CfnPublicKeyProps {
+  /**
+   * Configuration information about a public key that you can use with [signed URLs and signed
+   * cookies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html) ,
+   * or with [field-level
+   * encryption](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/field-level-encryption.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-publickey.html#cfn-cloudfront-publickey-publickeyconfig)
+   */
+  public fun publicKeyConfig(): Any
+
+  /**
+   * A builder for [CfnPublicKeyProps]
+   */
+  @CdkDslMarker
+  public interface Builder {
+    /**
+     * @param publicKeyConfig Configuration information about a public key that you can use with
+     * [signed URLs and signed
+     * cookies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html)
+     * , or with [field-level
+     * encryption](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/field-level-encryption.html)
+     * . 
+     */
+    public fun publicKeyConfig(publicKeyConfig: IResolvable)
+
+    /**
+     * @param publicKeyConfig Configuration information about a public key that you can use with
+     * [signed URLs and signed
+     * cookies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html)
+     * , or with [field-level
+     * encryption](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/field-level-encryption.html)
+     * . 
+     */
+    public fun publicKeyConfig(publicKeyConfig: CfnPublicKey.PublicKeyConfigProperty)
+
+    /**
+     * @param publicKeyConfig Configuration information about a public key that you can use with
+     * [signed URLs and signed
+     * cookies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html)
+     * , or with [field-level
+     * encryption](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/field-level-encryption.html)
+     * . 
+     */
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("668258ebd243d2e60b2cac045f934d9bece5add5db46f94c9cb13c6c8fcadafd")
+    public
+        fun publicKeyConfig(publicKeyConfig: CfnPublicKey.PublicKeyConfigProperty.Builder.() -> Unit)
+  }
+
+  private class BuilderImpl : Builder {
+    private val cdkBuilder: software.amazon.awscdk.services.cloudfront.CfnPublicKeyProps.Builder =
+        software.amazon.awscdk.services.cloudfront.CfnPublicKeyProps.builder()
+
+    /**
+     * @param publicKeyConfig Configuration information about a public key that you can use with
+     * [signed URLs and signed
+     * cookies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html)
+     * , or with [field-level
+     * encryption](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/field-level-encryption.html)
+     * . 
+     */
+    override fun publicKeyConfig(publicKeyConfig: IResolvable) {
+      cdkBuilder.publicKeyConfig(publicKeyConfig.let(IResolvable::unwrap))
+    }
+
+    /**
+     * @param publicKeyConfig Configuration information about a public key that you can use with
+     * [signed URLs and signed
+     * cookies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html)
+     * , or with [field-level
+     * encryption](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/field-level-encryption.html)
+     * . 
+     */
+    override fun publicKeyConfig(publicKeyConfig: CfnPublicKey.PublicKeyConfigProperty) {
+      cdkBuilder.publicKeyConfig(publicKeyConfig.let(CfnPublicKey.PublicKeyConfigProperty::unwrap))
+    }
+
+    /**
+     * @param publicKeyConfig Configuration information about a public key that you can use with
+     * [signed URLs and signed
+     * cookies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html)
+     * , or with [field-level
+     * encryption](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/field-level-encryption.html)
+     * . 
+     */
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("668258ebd243d2e60b2cac045f934d9bece5add5db46f94c9cb13c6c8fcadafd")
+    override
+        fun publicKeyConfig(publicKeyConfig: CfnPublicKey.PublicKeyConfigProperty.Builder.() -> Unit):
+        Unit = publicKeyConfig(CfnPublicKey.PublicKeyConfigProperty(publicKeyConfig))
+
+    public fun build(): software.amazon.awscdk.services.cloudfront.CfnPublicKeyProps =
+        cdkBuilder.build()
+  }
+
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.cloudfront.CfnPublicKeyProps,
+  ) : CdkObject(cdkObject), CfnPublicKeyProps {
+    /**
+     * Configuration information about a public key that you can use with [signed URLs and signed
+     * cookies](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html)
+     * , or with [field-level
+     * encryption](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/field-level-encryption.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-publickey.html#cfn-cloudfront-publickey-publickeyconfig)
+     */
+    override fun publicKeyConfig(): Any = unwrap(this).getPublicKeyConfig()
+  }
+
+  public companion object {
+    public operator fun invoke(block: Builder.() -> Unit = {}): CfnPublicKeyProps {
+      val builderImpl = BuilderImpl()
+      return Wrapper(builderImpl.apply(block).build())
+    }
+
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnPublicKeyProps):
+        CfnPublicKeyProps = Wrapper(cdkObject)
+
+    internal fun unwrap(wrapped: CfnPublicKeyProps):
+        software.amazon.awscdk.services.cloudfront.CfnPublicKeyProps = (wrapped as
+        CdkObject).cdkObject as software.amazon.awscdk.services.cloudfront.CfnPublicKeyProps
+  }
+}

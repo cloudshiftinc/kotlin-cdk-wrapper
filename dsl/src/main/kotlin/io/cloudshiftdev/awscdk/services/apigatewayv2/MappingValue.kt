@@ -12,6 +12,9 @@ public open class MappingValue internal constructor(
   public override fun `value`(): String = unwrap(this).getValue()
 
   public companion object {
+    public val NONE: MappingValue =
+        MappingValue.wrap(software.amazon.awscdk.services.apigatewayv2.MappingValue.NONE)
+
     public fun contextVariable(variableName: String): MappingValue =
         software.amazon.awscdk.services.apigatewayv2.MappingValue.contextVariable(variableName).let(MappingValue::wrap)
 

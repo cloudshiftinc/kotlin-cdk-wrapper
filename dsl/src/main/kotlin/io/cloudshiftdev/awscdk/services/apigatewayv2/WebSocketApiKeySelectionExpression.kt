@@ -13,6 +13,12 @@ public open class WebSocketApiKeySelectionExpression internal constructor(
   public open fun customApiKeySelector(): String = unwrap(this).getCustomApiKeySelector()
 
   public companion object {
+    public val AUTHORIZER_USAGE_IDENTIFIER_KEY: WebSocketApiKeySelectionExpression =
+        WebSocketApiKeySelectionExpression.wrap(software.amazon.awscdk.services.apigatewayv2.WebSocketApiKeySelectionExpression.AUTHORIZER_USAGE_IDENTIFIER_KEY)
+
+    public val HEADER_X_API_KEY: WebSocketApiKeySelectionExpression =
+        WebSocketApiKeySelectionExpression.wrap(software.amazon.awscdk.services.apigatewayv2.WebSocketApiKeySelectionExpression.HEADER_X_API_KEY)
+
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketApiKeySelectionExpression):
         WebSocketApiKeySelectionExpression = WebSocketApiKeySelectionExpression(cdkObject)

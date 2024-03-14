@@ -12,6 +12,54 @@ public open class KubernetesVersion internal constructor(
   public open fun version(): String = unwrap(this).getVersion()
 
   public companion object {
+    public val V1_14: KubernetesVersion =
+        KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_14)
+
+    public val V1_15: KubernetesVersion =
+        KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_15)
+
+    public val V1_16: KubernetesVersion =
+        KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_16)
+
+    public val V1_17: KubernetesVersion =
+        KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_17)
+
+    public val V1_18: KubernetesVersion =
+        KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_18)
+
+    public val V1_19: KubernetesVersion =
+        KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_19)
+
+    public val V1_20: KubernetesVersion =
+        KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_20)
+
+    public val V1_21: KubernetesVersion =
+        KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_21)
+
+    public val V1_22: KubernetesVersion =
+        KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_22)
+
+    public val V1_23: KubernetesVersion =
+        KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_23)
+
+    public val V1_24: KubernetesVersion =
+        KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_24)
+
+    public val V1_25: KubernetesVersion =
+        KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_25)
+
+    public val V1_26: KubernetesVersion =
+        KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_26)
+
+    public val V1_27: KubernetesVersion =
+        KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_27)
+
+    public val V1_28: KubernetesVersion =
+        KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_28)
+
+    public val V1_29: KubernetesVersion =
+        KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_29)
+
     public fun of(version: String): KubernetesVersion =
         software.amazon.awscdk.services.eks.KubernetesVersion.of(version).let(KubernetesVersion::wrap)
 

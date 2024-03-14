@@ -1,6 +1,7 @@
 package cloudshift.awscdkdsl.build.dsl
 
 import cloudshift.awscdkdsl.build.dsl.asm.AsmClassLoader2
+import cloudshift.awscdkdsl.build.dsl.model.source.CdkSourceModel
 import cloudshift.awscdkdsl.build.dsl.model.type.WrapperTypeGenerator
 import com.squareup.kotlinpoet.AnnotationSpec
 import com.squareup.kotlinpoet.ClassName
@@ -57,51 +58,21 @@ constructor(
 
         val outDir = dslDir.get().asFile
 
-
-//        logger.lifecycle("Parsing sources...")
-//        val cdkSourceModel = SourceParser.parse(sourcesDir)
-//        logger.lifecycle("Sources: ${sources.get().map { it.name }}")
-
-//        logger.lifecycle("Loading AWS CDK classes from ${classpath.get()}")
-//        val cdkClasses = AsmClassLoader.loadClasses(classpath.get(), cdkSourceModel.classMap)
-//        val cdkModel = CdkModelFactory.createModel(cdkClasses)
-
-//        logger.lifecycle("Generating builders...")
-//        BuilderGenerator.generate(cdkModel.builders).forEach { it.writeTo(outDir) }
-//
-//        logger.lifecycle("Generating namespace objects...")
-//        NamespaceObjectGenerator().generate(cdkModel).forEach { it.writeTo(outDir) }
-//
-//        logger.lifecycle("Generating extension functions...")
-//        writeExtensionFunctions(
-//            BuildableLastArgumentExtensionGenerator().generate(cdkModel),
-//            "_BuildableLastArgumentExtensions"
-//        )
-
         logger.lifecycle("Parsing sources...")
-        val cdkSourceModel = SourceParser.parse(sourcesDir)
-//        val cdkSourceModel = CdkSourceModel(
-//            classMap = emptyMap(),
-//            classes = emptyList()
-//        )
+        val dev = false
+        val cdkSourceModel =when {
+            dev -> CdkSourceModel(
+                classMap = emptyMap(),
+                classes = emptyList()
+            )
+            else -> SourceParser.parse(sourcesDir)
+        }
         logger.lifecycle("Sources: ${sources.get().map { it.name }}")
 
         logger.lifecycle("Loading AWS CDK classes from ${classpath.get()}")
         val cdkClasses2 = AsmClassLoader2.loadClasses(classpath.get(), cdkSourceModel.classMap)
         val cdkModel2 = CdkModelFactory.createModel(cdkClasses2)
         WrapperTypeGenerator.generate(cdkModel2).forEach { it.writeTo(outDir) }
-    }
-
-    private fun writeExtensionFunctions(
-        extensionFunctions: Map<String, List<ExtensionFunctionSpec>>,
-        targetFile: String
-    ) {
-        extensionFunctions.forEach { (packageName, funSpecs) ->
-            val builder = FileSpec.builder(packageName, targetFile)
-            builder.suppressWarningTypes(SUPPRESSIONS)
-            funSpecs.sorted().forEach { funSpec -> builder.addFunction(funSpec.funSpec) }
-            builder.build().writeTo(dslDir.get().asFile)
-        }
     }
 }
 

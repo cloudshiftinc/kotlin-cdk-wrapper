@@ -15,6 +15,7 @@ import com.squareup.kotlinpoet.FunSpec
 import com.squareup.kotlinpoet.KModifier
 import com.squareup.kotlinpoet.LambdaTypeName
 import com.squareup.kotlinpoet.ParameterSpec
+import com.squareup.kotlinpoet.ParameterizedTypeName
 import com.squareup.kotlinpoet.PropertySpec
 import com.squareup.kotlinpoet.TypeSpec
 import com.squareup.kotlinpoet.UNIT
@@ -25,34 +26,16 @@ internal object WrapperTypeGenerator {
     private val logger = Logging.getLogger(WrapperTypeGenerator::class.java)
 
     fun generate(model: CdkModel): List<FileSpec> {
-        val constructs =
-            model.classes.filter { it.concreteClass && IConstruct in model.superTypesOf(it.className) }
+        val outerClasses =
+            model.classes.filter { it.isOuterClass }
         //   .filter { it.className.packageName.startsWith("software.amazon.awscdk.services.elasticloadbalancingv2") }
 
-        logger.lifecycle("Generating ${constructs.size} construct classes")
+        logger.lifecycle("Generating ${outerClasses.size} classes")
 
         val ctx = TypeGeneratorContext(model)
-        val constructSpecs = constructs.map {
+        val specs = outerClasses.map {
             generateWrapperTypeFile(it, ctx)
         }
-        ctx.referencedType(ClassName("software.amazon.awscdk", "Tags"))
-        ctx.referencedType(ClassName("software.amazon.awscdk", "Arn"))
-
-        val specs = mutableListOf<FileSpec>()
-        specs.addAll(constructSpecs)
-        var pass = 1
-        var remaining = ctx.referencedClasses.filter { it !in ctx.generatedClasses }
-
-        while (remaining.isNotEmpty()) {
-            logger.lifecycle("Pass $pass; generating ${remaining.size} classes")
-            specs.addAll(
-                remaining.map { model.resolveClass(it) }
-                    .map { generateWrapperTypeFile(it, ctx) },
-            )
-            remaining = ctx.referencedClasses.filter { it !in ctx.generatedClasses }
-            pass++
-        }
-
 
         return specs + generateCdkObject()
     }
@@ -63,7 +46,6 @@ internal object WrapperTypeGenerator {
     ): FileSpec {
         val className = cdkClass.className.mappedClassName()
         val fileBuilder = FileSpec.builder(className)
-        ctx.generatedClass(cdkClass.className)
         fileBuilder.addType(generateWrapperType(className, cdkClass, ctx))
 
         return fileBuilder.build()
@@ -74,8 +56,6 @@ internal object WrapperTypeGenerator {
         cdkClass: CdkClass,
         ctx: TypeGeneratorContext
     ): TypeSpec {
-        ctx.referencedType(cdkClass.superClass)
-        ctx.referencedTypes(cdkClass.interfaces)
 
         return when {
             cdkClass.isEnum -> EnumTypeGenerator.generateEnum(
@@ -140,6 +120,26 @@ internal object WrapperTypeGenerator {
         return generator.generate(enclosingClass, methods)
     }
 
+    private fun staticPublicFields(cdkClass : CdkClass): List<PropertySpec> {
+        return cdkClass.publicStaticFields.map {
+            val builder = PropertySpec.builder(it.name, it.type.mapClassName())
+                .addModifiers(KModifier.PUBLIC)
+            val type = it.type
+            when {
+                type is ParameterizedTypeName && type.typeArguments.first().isCdkClass -> {
+                    builder.initializer("%T.%N.map(%T::wrap)",cdkClass.className, it.name, type.typeArguments.first().mapClassName())
+                }
+                type.isCdkClass -> {
+                    builder.initializer("%T.wrap(%T.%N)",it.type.mapClassName(),cdkClass.className, it.name)
+                }
+                else -> {
+                    builder.initializer("%T.%N",cdkClass.className, it.name)
+                }
+            }
+            builder.build()
+        }
+    }
+
     private fun generateClassOrInterface(
         typeBuilder: TypeSpec.Builder,
         cdkClass: CdkClass,
@@ -186,6 +186,7 @@ internal object WrapperTypeGenerator {
             x.build()
         }
         companionBuilder.addFunctions(companionMethods)
+        companionBuilder.addProperties(staticPublicFields(cdkClass))
 
         val cdkBuilder = ctx.model.builderFor(cdkClass.className)
 
@@ -206,8 +207,6 @@ internal object WrapperTypeGenerator {
                 "block",
                 LambdaTypeName.get(receiver = builderClass, returnType = UNIT),
             ).defaultValue("{}").build()
-
-            ctx.referencedTypes(cdkBuilder.builderFactoryFunction.parameters.map { it.type })
 
             val formatArgs = mutableListOf<Any>()
             val paramFormat = buildString {
@@ -385,7 +384,6 @@ internal object WrapperTypeGenerator {
 
     private const val CdkObjectName = "cdkObject"
     private val CdkObject = ClassName("io.cloudshiftdev.awscdk", "CdkObject")
-    private val IConstruct = ClassName("software.constructs", "IConstruct")
     private val Construct = ClassName("software.constructs", "Construct")
 }
 

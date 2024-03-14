@@ -9,6 +9,7 @@ internal interface CdkClass {
     val className: ClassName
     val publicMemberFunctions: List<Method>
     val publicStaticFunctions: List<Method>
+    val publicStaticFields: List<StaticField>
     val deprecated: Boolean
     val comment: String?
     val concreteClass: Boolean
@@ -51,6 +52,11 @@ internal interface CdkClass {
 
     interface EnumField {
         val name: String
+    }
+
+    interface StaticField {
+        val name : String
+        val type: TypeName
     }
 }
 

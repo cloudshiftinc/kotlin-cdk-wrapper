@@ -12,6 +12,12 @@ public open class RepositoryEncryption internal constructor(
   public open fun `value`(): String = unwrap(this).getValue()
 
   public companion object {
+    public val AES_256: RepositoryEncryption =
+        RepositoryEncryption.wrap(software.amazon.awscdk.services.ecr.RepositoryEncryption.AES_256)
+
+    public val KMS: RepositoryEncryption =
+        RepositoryEncryption.wrap(software.amazon.awscdk.services.ecr.RepositoryEncryption.KMS)
+
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecr.RepositoryEncryption):
         RepositoryEncryption = RepositoryEncryption(cdkObject)
 

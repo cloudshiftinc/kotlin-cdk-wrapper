@@ -17,6 +17,21 @@ public open class OAuthScope internal constructor(
   public open fun scopeName(): String = unwrap(this).getScopeName()
 
   public companion object {
+    public val COGNITO_ADMIN: OAuthScope =
+        OAuthScope.wrap(software.amazon.awscdk.services.cognito.OAuthScope.COGNITO_ADMIN)
+
+    public val EMAIL: OAuthScope =
+        OAuthScope.wrap(software.amazon.awscdk.services.cognito.OAuthScope.EMAIL)
+
+    public val OPENID: OAuthScope =
+        OAuthScope.wrap(software.amazon.awscdk.services.cognito.OAuthScope.OPENID)
+
+    public val PHONE: OAuthScope =
+        OAuthScope.wrap(software.amazon.awscdk.services.cognito.OAuthScope.PHONE)
+
+    public val PROFILE: OAuthScope =
+        OAuthScope.wrap(software.amazon.awscdk.services.cognito.OAuthScope.PROFILE)
+
     public fun custom(name: String): OAuthScope =
         software.amazon.awscdk.services.cognito.OAuthScope.custom(name).let(OAuthScope::wrap)
 

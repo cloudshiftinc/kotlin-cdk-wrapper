@@ -14,6 +14,21 @@ public open class UserPoolClientIdentityProvider internal constructor(
   public open fun name(): String = unwrap(this).getName()
 
   public companion object {
+    public val AMAZON: UserPoolClientIdentityProvider =
+        UserPoolClientIdentityProvider.wrap(software.amazon.awscdk.services.cognito.UserPoolClientIdentityProvider.AMAZON)
+
+    public val APPLE: UserPoolClientIdentityProvider =
+        UserPoolClientIdentityProvider.wrap(software.amazon.awscdk.services.cognito.UserPoolClientIdentityProvider.APPLE)
+
+    public val COGNITO: UserPoolClientIdentityProvider =
+        UserPoolClientIdentityProvider.wrap(software.amazon.awscdk.services.cognito.UserPoolClientIdentityProvider.COGNITO)
+
+    public val FACEBOOK: UserPoolClientIdentityProvider =
+        UserPoolClientIdentityProvider.wrap(software.amazon.awscdk.services.cognito.UserPoolClientIdentityProvider.FACEBOOK)
+
+    public val GOOGLE: UserPoolClientIdentityProvider =
+        UserPoolClientIdentityProvider.wrap(software.amazon.awscdk.services.cognito.UserPoolClientIdentityProvider.GOOGLE)
+
     public fun custom(name: String): UserPoolClientIdentityProvider =
         software.amazon.awscdk.services.cognito.UserPoolClientIdentityProvider.custom(name).let(UserPoolClientIdentityProvider::wrap)
 

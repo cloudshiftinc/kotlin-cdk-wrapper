@@ -16,6 +16,7 @@ import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.constructs.IDependable
 import kotlin.Boolean
+import kotlin.Number
 import kotlin.String
 import kotlin.Suppress
 import kotlin.Unit
@@ -624,6 +625,8 @@ public open class FileSystem internal constructor(
   }
 
   public companion object {
+    public val DEFAULT_PORT: Number = software.amazon.awscdk.services.efs.FileSystem.DEFAULT_PORT
+
     public fun fromFileSystemAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

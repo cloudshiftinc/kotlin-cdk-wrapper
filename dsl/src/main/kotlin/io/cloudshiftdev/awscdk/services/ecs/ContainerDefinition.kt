@@ -1490,6 +1490,9 @@ public open class ContainerDefinition internal constructor(
   }
 
   public companion object {
+    public val CONTAINER_PORT_USE_RANGE: Number =
+        software.amazon.awscdk.services.ecs.ContainerDefinition.CONTAINER_PORT_USE_RANGE
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

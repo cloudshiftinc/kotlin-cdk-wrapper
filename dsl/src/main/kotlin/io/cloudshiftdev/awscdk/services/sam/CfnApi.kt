@@ -1227,6 +1227,12 @@ public open class CfnApi internal constructor(
   }
 
   public companion object {
+    public val CFN_RESOURCE_TYPE_NAME: String =
+        software.amazon.awscdk.services.sam.CfnApi.CFN_RESOURCE_TYPE_NAME
+
+    public val REQUIRED_TRANSFORM: String =
+        software.amazon.awscdk.services.sam.CfnApi.REQUIRED_TRANSFORM
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

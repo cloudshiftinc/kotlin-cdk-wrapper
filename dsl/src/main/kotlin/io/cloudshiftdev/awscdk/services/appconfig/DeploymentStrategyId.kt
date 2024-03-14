@@ -16,6 +16,18 @@ public abstract class DeploymentStrategyId internal constructor(
   ) : DeploymentStrategyId(cdkObject)
 
   public companion object {
+    public val ALL_AT_ONCE: DeploymentStrategyId =
+        DeploymentStrategyId.wrap(software.amazon.awscdk.services.appconfig.DeploymentStrategyId.ALL_AT_ONCE)
+
+    public val CANARY_10_PERCENT_20_MINUTES: DeploymentStrategyId =
+        DeploymentStrategyId.wrap(software.amazon.awscdk.services.appconfig.DeploymentStrategyId.CANARY_10_PERCENT_20_MINUTES)
+
+    public val LINEAR_20_PERCENT_EVERY_6_MINUTES: DeploymentStrategyId =
+        DeploymentStrategyId.wrap(software.amazon.awscdk.services.appconfig.DeploymentStrategyId.LINEAR_20_PERCENT_EVERY_6_MINUTES)
+
+    public val LINEAR_50_PERCENT_EVERY_30_SECONDS: DeploymentStrategyId =
+        DeploymentStrategyId.wrap(software.amazon.awscdk.services.appconfig.DeploymentStrategyId.LINEAR_50_PERCENT_EVERY_30_SECONDS)
+
     public fun fromString(deploymentStrategyId: String): DeploymentStrategyId =
         software.amazon.awscdk.services.appconfig.DeploymentStrategyId.fromString(deploymentStrategyId).let(DeploymentStrategyId::wrap)
 

@@ -23,6 +23,9 @@ public open class AwsCustomResourcePolicy internal constructor(
       unwrap(this).getStatements().map(PolicyStatement::wrap)
 
   public companion object {
+    public val ANY_RESOURCE: List<String> =
+        software.amazon.awscdk.customresources.AwsCustomResourcePolicy.ANY_RESOURCE
+
     public fun fromSdkCalls(options: SdkCallsPolicyOptions): AwsCustomResourcePolicy =
         software.amazon.awscdk.customresources.AwsCustomResourcePolicy.fromSdkCalls(options.let(SdkCallsPolicyOptions::unwrap)).let(AwsCustomResourcePolicy::wrap)
 

@@ -78,6 +78,33 @@ public open class LambdaDeploymentConfig internal constructor(
   }
 
   public companion object {
+    public val ALL_AT_ONCE: ILambdaDeploymentConfig =
+        ILambdaDeploymentConfig.wrap(software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig.ALL_AT_ONCE)
+
+    public val CANARY_10_PERCENT_10_MINUTES: ILambdaDeploymentConfig =
+        ILambdaDeploymentConfig.wrap(software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig.CANARY_10_PERCENT_10_MINUTES)
+
+    public val CANARY_10_PERCENT_15_MINUTES: ILambdaDeploymentConfig =
+        ILambdaDeploymentConfig.wrap(software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig.CANARY_10_PERCENT_15_MINUTES)
+
+    public val CANARY_10_PERCENT_30_MINUTES: ILambdaDeploymentConfig =
+        ILambdaDeploymentConfig.wrap(software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig.CANARY_10_PERCENT_30_MINUTES)
+
+    public val CANARY_10_PERCENT_5_MINUTES: ILambdaDeploymentConfig =
+        ILambdaDeploymentConfig.wrap(software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig.CANARY_10_PERCENT_5_MINUTES)
+
+    public val LINEAR_10_PERCENT_EVERY_10_MINUTES: ILambdaDeploymentConfig =
+        ILambdaDeploymentConfig.wrap(software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig.LINEAR_10_PERCENT_EVERY_10_MINUTES)
+
+    public val LINEAR_10_PERCENT_EVERY_1_MINUTE: ILambdaDeploymentConfig =
+        ILambdaDeploymentConfig.wrap(software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig.LINEAR_10_PERCENT_EVERY_1_MINUTE)
+
+    public val LINEAR_10_PERCENT_EVERY_2_MINUTES: ILambdaDeploymentConfig =
+        ILambdaDeploymentConfig.wrap(software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig.LINEAR_10_PERCENT_EVERY_2_MINUTES)
+
+    public val LINEAR_10_PERCENT_EVERY_3_MINUTES: ILambdaDeploymentConfig =
+        ILambdaDeploymentConfig.wrap(software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig.LINEAR_10_PERCENT_EVERY_3_MINUTES)
+
     @Deprecated(message = "deprecated in CDK")
     public fun doImport(
       _scope: CloudshiftdevConstructsConstruct,

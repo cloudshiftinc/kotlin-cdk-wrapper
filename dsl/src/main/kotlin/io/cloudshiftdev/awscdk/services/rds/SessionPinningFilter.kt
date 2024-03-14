@@ -12,6 +12,9 @@ public open class SessionPinningFilter internal constructor(
   public open fun filterName(): String = unwrap(this).getFilterName()
 
   public companion object {
+    public val EXCLUDE_VARIABLE_SETS: SessionPinningFilter =
+        SessionPinningFilter.wrap(software.amazon.awscdk.services.rds.SessionPinningFilter.EXCLUDE_VARIABLE_SETS)
+
     public fun of(filterName: String): SessionPinningFilter =
         software.amazon.awscdk.services.rds.SessionPinningFilter.of(filterName).let(SessionPinningFilter::wrap)
 

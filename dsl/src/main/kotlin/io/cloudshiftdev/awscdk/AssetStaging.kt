@@ -361,6 +361,10 @@ public open class AssetStaging internal constructor(
   }
 
   public companion object {
+    public val BUNDLING_INPUT_DIR: String = software.amazon.awscdk.AssetStaging.BUNDLING_INPUT_DIR
+
+    public val BUNDLING_OUTPUT_DIR: String = software.amazon.awscdk.AssetStaging.BUNDLING_OUTPUT_DIR
+
     public fun clearAssetHashCache() {
       software.amazon.awscdk.AssetStaging.clearAssetHashCache()
     }

@@ -1089,6 +1089,15 @@ public open class Vpc internal constructor(
   }
 
   public companion object {
+    public val DEFAULT_CIDR_RANGE: String =
+        software.amazon.awscdk.services.ec2.Vpc.DEFAULT_CIDR_RANGE
+
+    public val DEFAULT_SUBNETS: List<SubnetConfiguration> =
+        software.amazon.awscdk.services.ec2.Vpc.DEFAULT_SUBNETS.map(SubnetConfiguration::wrap)
+
+    public val DEFAULT_SUBNETS_NO_NAT: List<SubnetConfiguration> =
+        software.amazon.awscdk.services.ec2.Vpc.DEFAULT_SUBNETS_NO_NAT.map(SubnetConfiguration::wrap)
+
     public fun fromLookup(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

@@ -9,6 +9,15 @@ public open class Reason internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.Reason,
 ) : CdkObject(cdkObject) {
   public companion object {
+    public val CANNOT_PULL_CONTAINER: Reason =
+        Reason.wrap(software.amazon.awscdk.services.batch.Reason.CANNOT_PULL_CONTAINER)
+
+    public val NON_ZERO_EXIT_CODE: Reason =
+        Reason.wrap(software.amazon.awscdk.services.batch.Reason.NON_ZERO_EXIT_CODE)
+
+    public val SPOT_INSTANCE_RECLAIMED: Reason =
+        Reason.wrap(software.amazon.awscdk.services.batch.Reason.SPOT_INSTANCE_RECLAIMED)
+
     public fun custom(customReasonProps: CustomReason): Reason =
         software.amazon.awscdk.services.batch.Reason.custom(customReasonProps.let(CustomReason::unwrap)).let(Reason::wrap)
 

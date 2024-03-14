@@ -1,5 +1,3 @@
-@file:OptIn(ExperimentalContracts::class)
-
 package cloudshift.awscdkdsl.build.dsl.model.type
 
 import cloudshift.awscdkdsl.build.dsl.isCdkClass
@@ -14,7 +12,6 @@ import com.squareup.kotlinpoet.MAP
 import com.squareup.kotlinpoet.ParameterizedTypeName
 import com.squareup.kotlinpoet.TypeName
 import com.squareup.kotlinpoet.UNIT
-import kotlin.contracts.ExperimentalContracts
 
 internal class DelegateCallGenerator(
     private val context: TypeGeneratorContext,
@@ -23,8 +20,6 @@ internal class DelegateCallGenerator(
 ) {
 
     fun delegateMethodCall(spec: MethodSpec): CodeBlock {
-        context.referencedTypes(spec.parameters.map { it.type })
-        context.referencedType(spec.returnType)
 
         val returnType = when {
             spec.omitReturnType -> UNIT
@@ -129,6 +124,7 @@ private class DelegatedCall(
             "$nullable.let(%T::wrap)",
             listOf(type.mapClassName().copy(nullable = false)),
         )
+        val nullableListSuffix = if (type.isNullable) " ?: emptyList()" else ""
         return when {
             type is ParameterizedTypeName -> when {
                 type.isMapWithCdkListValue() -> {
@@ -151,6 +147,17 @@ private class DelegatedCall(
                     CallSegment(
                         "$nullable.mapValues{%T.wrap(it.value)}$nullableMapSuffix",
                         listOf(type.typeArguments[1].mapClassName().copy(nullable = false)),
+                    )
+                }
+
+                type.isListOfListsOfCdkObject() -> {
+                    val listType =
+                        type.typeArguments[0] as ParameterizedTypeName
+                    CallSegment(
+                        "$nullable.map{ it.map(%T::wrap) }$nullableListSuffix",
+                        listOf(
+                            listType.typeArguments[0].mapClassName().copy(nullable = false),
+                        ),
                     )
                 }
 

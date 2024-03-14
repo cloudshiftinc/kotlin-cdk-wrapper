@@ -142,6 +142,12 @@ public open class BlockPublicAccess internal constructor(
   }
 
   public companion object {
+    public val BLOCK_ACLS: BlockPublicAccess =
+        BlockPublicAccess.wrap(software.amazon.awscdk.services.s3.BlockPublicAccess.BLOCK_ACLS)
+
+    public val BLOCK_ALL: BlockPublicAccess =
+        BlockPublicAccess.wrap(software.amazon.awscdk.services.s3.BlockPublicAccess.BLOCK_ALL)
+
     public operator fun invoke(block: Builder.() -> Unit = {}): BlockPublicAccess {
       val builderImpl = BuilderImpl()
       return BlockPublicAccess(builderImpl.apply(block).build())
