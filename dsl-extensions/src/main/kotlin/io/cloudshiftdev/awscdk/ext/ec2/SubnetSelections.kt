@@ -3,26 +3,24 @@
 package io.cloudshiftdev.awscdk.ext.ec2
 
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
-import io.cloudshiftdev.awscdkdsl.services.ec2.ec2
-import software.amazon.awscdk.services.ec2.SubnetSelection
-import software.amazon.awscdk.services.ec2.SubnetType
+import io.cloudshiftdev.awscdk.services.ec2.SubnetType
 
 public interface SubnetSelections {
     public val PublicSubnets: SubnetSelection
     public val PrivateSubnets: SubnetSelection
     public val IsolatedSubnets: SubnetSelection
 
-    public fun named(name: String): SubnetSelection = ec2.subnetSelection { subnetGroupName(name) }
+    public fun named(name: String): SubnetSelection = SubnetSelection { subnetGroupName(name) }
 }
 
 private object SubnetSelectionsImpl : SubnetSelections {
     override val PublicSubnets: SubnetSelection =
-        ec2.subnetSelection { subnetType(SubnetType.PUBLIC) }
+        SubnetSelection { subnetType(SubnetType.PUBLIC) }
     override val PrivateSubnets: SubnetSelection =
-        ec2.subnetSelection { subnetType(SubnetType.PRIVATE_WITH_EGRESS) }
+        SubnetSelection { subnetType(SubnetType.PRIVATE_WITH_EGRESS) }
     override val IsolatedSubnets: SubnetSelection =
-        ec2.subnetSelection { subnetType(SubnetType.PRIVATE_ISOLATED) }
+        SubnetSelection { subnetType(SubnetType.PRIVATE_ISOLATED) }
 }
 
-public val ec2.SubnetSelections: SubnetSelections
+public val subnetSelections: SubnetSelections
     get() = SubnetSelectionsImpl
