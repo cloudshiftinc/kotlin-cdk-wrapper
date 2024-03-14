@@ -576,6 +576,8 @@ public open class CfnComputeEnvironment internal constructor(
 
       public fun ec2Configuration(ec2Configuration: List<Any>)
 
+      public fun ec2Configuration(vararg ec2Configuration: Any)
+
       public fun ec2KeyPair(ec2KeyPair: String)
 
       public fun imageId(imageId: String)
@@ -583,6 +585,8 @@ public open class CfnComputeEnvironment internal constructor(
       public fun instanceRole(instanceRole: String)
 
       public fun instanceTypes(instanceTypes: List<String>)
+
+      public fun instanceTypes(vararg instanceTypes: String)
 
       public fun launchTemplate(launchTemplate: IResolvable)
 
@@ -601,9 +605,13 @@ public open class CfnComputeEnvironment internal constructor(
 
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun spotIamFleetRole(spotIamFleetRole: String)
 
       public fun subnets(subnets: List<String>)
+
+      public fun subnets(vararg subnets: String)
 
       public fun tags(tags: Map<String, String>)
 
@@ -640,6 +648,9 @@ public open class CfnComputeEnvironment internal constructor(
         cdkBuilder.ec2Configuration(ec2Configuration)
       }
 
+      override fun ec2Configuration(vararg ec2Configuration: Any): Unit =
+          ec2Configuration(ec2Configuration.toList())
+
       override fun ec2KeyPair(ec2KeyPair: String) {
         cdkBuilder.ec2KeyPair(ec2KeyPair)
       }
@@ -655,6 +666,9 @@ public open class CfnComputeEnvironment internal constructor(
       override fun instanceTypes(instanceTypes: List<String>) {
         cdkBuilder.instanceTypes(instanceTypes)
       }
+
+      override fun instanceTypes(vararg instanceTypes: String): Unit =
+          instanceTypes(instanceTypes.toList())
 
       override fun launchTemplate(launchTemplate: IResolvable) {
         cdkBuilder.launchTemplate(launchTemplate.let(IResolvable::unwrap))
@@ -686,6 +700,9 @@ public open class CfnComputeEnvironment internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun spotIamFleetRole(spotIamFleetRole: String) {
         cdkBuilder.spotIamFleetRole(spotIamFleetRole)
       }
@@ -693,6 +710,8 @@ public open class CfnComputeEnvironment internal constructor(
       override fun subnets(subnets: List<String>) {
         cdkBuilder.subnets(subnets)
       }
+
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
 
       override fun tags(tags: Map<String, String>) {
         cdkBuilder.tags(tags)
@@ -748,7 +767,7 @@ public open class CfnComputeEnvironment internal constructor(
 
       override fun spotIamFleetRole(): String? = unwrap(this).getSpotIamFleetRole()
 
-      override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+      override fun subnets(): List<String> = unwrap(this).getSubnets()
 
       override fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
 

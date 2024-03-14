@@ -24,6 +24,9 @@ public open class CfnLayerVersion internal constructor(
     unwrap(this).setCompatibleRuntimes(`value`)
   }
 
+  public open fun compatibleRuntimes(vararg `value`: String): Unit =
+      compatibleRuntimes(`value`.toList())
+
   public open fun contentUri(): Any? = unwrap(this).getContentUri()
 
   public open fun contentUri(`value`: String) {
@@ -74,6 +77,8 @@ public open class CfnLayerVersion internal constructor(
   public interface Builder {
     public fun compatibleRuntimes(compatibleRuntimes: List<String>)
 
+    public fun compatibleRuntimes(vararg compatibleRuntimes: String)
+
     public fun contentUri(contentUri: String)
 
     public fun contentUri(contentUri: IResolvable)
@@ -103,6 +108,9 @@ public open class CfnLayerVersion internal constructor(
     override fun compatibleRuntimes(compatibleRuntimes: List<String>) {
       cdkBuilder.compatibleRuntimes(compatibleRuntimes)
     }
+
+    override fun compatibleRuntimes(vararg compatibleRuntimes: String): Unit =
+        compatibleRuntimes(compatibleRuntimes.toList())
 
     override fun contentUri(contentUri: String) {
       cdkBuilder.contentUri(contentUri)

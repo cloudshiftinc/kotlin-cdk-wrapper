@@ -98,6 +98,8 @@ public open class CfnSamplingRule internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     @Deprecated(message = "deprecated in CDK")
     public fun ruleName(ruleName: String)
@@ -133,6 +135,8 @@ public open class CfnSamplingRule internal constructor(
     public fun samplingRuleUpdate(samplingRuleUpdate: SamplingRuleUpdateProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -197,6 +201,8 @@ public open class CfnSamplingRule internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.xray.CfnSamplingRule = cdkBuilder.build()
   }

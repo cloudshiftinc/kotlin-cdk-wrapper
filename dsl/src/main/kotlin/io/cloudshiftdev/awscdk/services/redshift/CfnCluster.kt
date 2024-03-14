@@ -110,6 +110,9 @@ public open class CfnCluster internal constructor(
     unwrap(this).setClusterSecurityGroups(`value`)
   }
 
+  public open fun clusterSecurityGroups(vararg `value`: String): Unit =
+      clusterSecurityGroups(`value`.toList())
+
   public open fun clusterSubnetGroupName(): String? = unwrap(this).getClusterSubnetGroupName()
 
   public open fun clusterSubnetGroupName(`value`: String) {
@@ -228,6 +231,8 @@ public open class CfnCluster internal constructor(
   public open fun iamRoles(`value`: List<String>) {
     unwrap(this).setIamRoles(`value`)
   }
+
+  public open fun iamRoles(vararg `value`: String): Unit = iamRoles(`value`.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -419,12 +424,17 @@ public open class CfnCluster internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun vpcSecurityGroupIds(): List<String> = unwrap(this).getVpcSecurityGroupIds() ?:
       emptyList()
 
   public open fun vpcSecurityGroupIds(`value`: List<String>) {
     unwrap(this).setVpcSecurityGroupIds(`value`)
   }
+
+  public open fun vpcSecurityGroupIds(vararg `value`: String): Unit =
+      vpcSecurityGroupIds(`value`.toList())
 
   public interface Builder {
     public fun allowVersionUpgrade(allowVersionUpgrade: Boolean)
@@ -452,6 +462,8 @@ public open class CfnCluster internal constructor(
     public fun clusterParameterGroupName(clusterParameterGroupName: String)
 
     public fun clusterSecurityGroups(clusterSecurityGroups: List<String>)
+
+    public fun clusterSecurityGroups(vararg clusterSecurityGroups: String)
 
     public fun clusterSubnetGroupName(clusterSubnetGroupName: String)
 
@@ -496,6 +508,8 @@ public open class CfnCluster internal constructor(
     public fun hsmConfigurationIdentifier(hsmConfigurationIdentifier: String)
 
     public fun iamRoles(iamRoles: List<String>)
+
+    public fun iamRoles(vararg iamRoles: String)
 
     public fun kmsKeyId(kmsKeyId: String)
 
@@ -563,7 +577,11 @@ public open class CfnCluster internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>)
+
+    public fun vpcSecurityGroupIds(vararg vpcSecurityGroupIds: String)
   }
 
   private class BuilderImpl(
@@ -624,6 +642,9 @@ public open class CfnCluster internal constructor(
     override fun clusterSecurityGroups(clusterSecurityGroups: List<String>) {
       cdkBuilder.clusterSecurityGroups(clusterSecurityGroups)
     }
+
+    override fun clusterSecurityGroups(vararg clusterSecurityGroups: String): Unit =
+        clusterSecurityGroups(clusterSecurityGroups.toList())
 
     override fun clusterSubnetGroupName(clusterSubnetGroupName: String) {
       cdkBuilder.clusterSubnetGroupName(clusterSubnetGroupName)
@@ -709,6 +730,8 @@ public open class CfnCluster internal constructor(
     override fun iamRoles(iamRoles: List<String>) {
       cdkBuilder.iamRoles(iamRoles)
     }
+
+    override fun iamRoles(vararg iamRoles: String): Unit = iamRoles(iamRoles.toList())
 
     override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
@@ -839,9 +862,14 @@ public open class CfnCluster internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
       cdkBuilder.vpcSecurityGroupIds(vpcSecurityGroupIds)
     }
+
+    override fun vpcSecurityGroupIds(vararg vpcSecurityGroupIds: String): Unit =
+        vpcSecurityGroupIds(vpcSecurityGroupIds.toList())
 
     public fun build(): software.amazon.awscdk.services.redshift.CfnCluster = cdkBuilder.build()
   }

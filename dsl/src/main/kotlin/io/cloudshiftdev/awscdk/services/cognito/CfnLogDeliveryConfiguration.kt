@@ -32,6 +32,9 @@ public open class CfnLogDeliveryConfiguration internal constructor(
     unwrap(this).setLogConfigurations(__idx_ac66f0)
   }
 
+  public open fun logConfigurations(vararg __idx_ac66f0: Any): Unit =
+      logConfigurations(__idx_ac66f0.toList())
+
   public open fun userPoolId(): String = unwrap(this).getUserPoolId()
 
   public open fun userPoolId(`value`: String) {
@@ -42,6 +45,8 @@ public open class CfnLogDeliveryConfiguration internal constructor(
     public fun logConfigurations(logConfigurations: IResolvable)
 
     public fun logConfigurations(logConfigurations: List<Any>)
+
+    public fun logConfigurations(vararg logConfigurations: Any)
 
     public fun userPoolId(userPoolId: String)
   }
@@ -62,6 +67,9 @@ public open class CfnLogDeliveryConfiguration internal constructor(
     override fun logConfigurations(logConfigurations: List<Any>) {
       cdkBuilder.logConfigurations(logConfigurations)
     }
+
+    override fun logConfigurations(vararg logConfigurations: Any): Unit =
+        logConfigurations(logConfigurations.toList())
 
     override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)

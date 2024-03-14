@@ -139,6 +139,8 @@ public open class CfnStep internal constructor(
     public interface Builder {
       public fun args(args: List<String>)
 
+      public fun args(vararg args: String)
+
       public fun jar(jar: String)
 
       public fun mainClass(mainClass: String)
@@ -146,6 +148,8 @@ public open class CfnStep internal constructor(
       public fun stepProperties(stepProperties: IResolvable)
 
       public fun stepProperties(stepProperties: List<Any>)
+
+      public fun stepProperties(vararg stepProperties: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -156,6 +160,8 @@ public open class CfnStep internal constructor(
       override fun args(args: List<String>) {
         cdkBuilder.args(args)
       }
+
+      override fun args(vararg args: String): Unit = args(args.toList())
 
       override fun jar(jar: String) {
         cdkBuilder.jar(jar)
@@ -172,6 +178,9 @@ public open class CfnStep internal constructor(
       override fun stepProperties(stepProperties: List<Any>) {
         cdkBuilder.stepProperties(stepProperties)
       }
+
+      override fun stepProperties(vararg stepProperties: Any): Unit =
+          stepProperties(stepProperties.toList())
 
       public fun build(): software.amazon.awscdk.services.emr.CfnStep.HadoopJarStepConfigProperty =
           cdkBuilder.build()

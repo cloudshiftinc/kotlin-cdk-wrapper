@@ -60,6 +60,8 @@ public open class Group internal constructor(
 
     public fun managedPolicies(managedPolicies: List<IManagedPolicy>)
 
+    public fun managedPolicies(vararg managedPolicies: IManagedPolicy)
+
     public fun path(path: String)
   }
 
@@ -77,6 +79,9 @@ public open class Group internal constructor(
     override fun managedPolicies(managedPolicies: List<IManagedPolicy>) {
       cdkBuilder.managedPolicies(managedPolicies.map(IManagedPolicy::unwrap))
     }
+
+    override fun managedPolicies(vararg managedPolicies: IManagedPolicy): Unit =
+        managedPolicies(managedPolicies.toList())
 
     override fun path(path: String) {
       cdkBuilder.path(path)

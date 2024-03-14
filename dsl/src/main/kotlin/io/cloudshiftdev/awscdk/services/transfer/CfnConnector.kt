@@ -69,6 +69,8 @@ public open class CfnConnector internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun url(): String = unwrap(this).getUrl()
 
   public open fun url(`value`: String) {
@@ -91,6 +93,8 @@ public open class CfnConnector internal constructor(
     public fun sftpConfig(sftpConfig: SftpConfigProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun url(url: String)
   }
@@ -131,6 +135,8 @@ public open class CfnConnector internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun url(url: String) {
       cdkBuilder.url(url)
     }
@@ -167,6 +173,8 @@ public open class CfnConnector internal constructor(
     public interface Builder {
       public fun trustedHostKeys(trustedHostKeys: List<String>)
 
+      public fun trustedHostKeys(vararg trustedHostKeys: String)
+
       public fun userSecretId(userSecretId: String)
     }
 
@@ -178,6 +186,9 @@ public open class CfnConnector internal constructor(
       override fun trustedHostKeys(trustedHostKeys: List<String>) {
         cdkBuilder.trustedHostKeys(trustedHostKeys)
       }
+
+      override fun trustedHostKeys(vararg trustedHostKeys: String): Unit =
+          trustedHostKeys(trustedHostKeys.toList())
 
       override fun userSecretId(userSecretId: String) {
         cdkBuilder.userSecretId(userSecretId)

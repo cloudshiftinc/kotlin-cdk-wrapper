@@ -14,6 +14,8 @@ public interface SourceApiOptions {
     public fun mergedApiExecutionRole(mergedApiExecutionRole: Role)
 
     public fun sourceApis(sourceApis: List<SourceApi>)
+
+    public fun sourceApis(vararg sourceApis: SourceApi)
   }
 
   private class BuilderImpl : Builder {
@@ -27,6 +29,8 @@ public interface SourceApiOptions {
     override fun sourceApis(sourceApis: List<SourceApi>) {
       cdkBuilder.sourceApis(sourceApis.map(SourceApi::unwrap))
     }
+
+    override fun sourceApis(vararg sourceApis: SourceApi): Unit = sourceApis(sourceApis.toList())
 
     public fun build(): software.amazon.awscdk.services.appsync.SourceApiOptions =
         cdkBuilder.build()

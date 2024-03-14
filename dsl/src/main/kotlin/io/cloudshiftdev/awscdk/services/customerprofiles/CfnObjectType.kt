@@ -69,6 +69,8 @@ public open class CfnObjectType internal constructor(
     unwrap(this).setFields(__idx_ac66f0)
   }
 
+  public open fun fields(vararg __idx_ac66f0: Any): Unit = fields(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -82,6 +84,8 @@ public open class CfnObjectType internal constructor(
   public open fun keys(__idx_ac66f0: List<Any>) {
     unwrap(this).setKeys(__idx_ac66f0)
   }
+
+  public open fun keys(vararg __idx_ac66f0: Any): Unit = keys(__idx_ac66f0.toList())
 
   public open fun objectTypeName(): String = unwrap(this).getObjectTypeName()
 
@@ -104,6 +108,8 @@ public open class CfnObjectType internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun templateId(): String? = unwrap(this).getTemplateId()
 
@@ -128,15 +134,21 @@ public open class CfnObjectType internal constructor(
 
     public fun fields(fields: List<Any>)
 
+    public fun fields(vararg fields: Any)
+
     public fun keys(keys: IResolvable)
 
     public fun keys(keys: List<Any>)
+
+    public fun keys(vararg keys: Any)
 
     public fun objectTypeName(objectTypeName: String)
 
     public fun sourceLastUpdatedTimestampFormat(sourceLastUpdatedTimestampFormat: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun templateId(templateId: String)
   }
@@ -180,6 +192,8 @@ public open class CfnObjectType internal constructor(
       cdkBuilder.fields(fields)
     }
 
+    override fun fields(vararg fields: Any): Unit = fields(fields.toList())
+
     override fun keys(keys: IResolvable) {
       cdkBuilder.keys(keys.let(IResolvable::unwrap))
     }
@@ -187,6 +201,8 @@ public open class CfnObjectType internal constructor(
     override fun keys(keys: List<Any>) {
       cdkBuilder.keys(keys)
     }
+
+    override fun keys(vararg keys: Any): Unit = keys(keys.toList())
 
     override fun objectTypeName(objectTypeName: String) {
       cdkBuilder.objectTypeName(objectTypeName)
@@ -199,6 +215,8 @@ public open class CfnObjectType internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun templateId(templateId: String) {
       cdkBuilder.templateId(templateId)
@@ -238,7 +256,11 @@ public open class CfnObjectType internal constructor(
     public interface Builder {
       public fun fieldNames(fieldNames: List<String>)
 
+      public fun fieldNames(vararg fieldNames: String)
+
       public fun standardIdentifiers(standardIdentifiers: List<String>)
+
+      public fun standardIdentifiers(vararg standardIdentifiers: String)
     }
 
     private class BuilderImpl : Builder {
@@ -251,9 +273,14 @@ public open class CfnObjectType internal constructor(
         cdkBuilder.fieldNames(fieldNames)
       }
 
+      override fun fieldNames(vararg fieldNames: String): Unit = fieldNames(fieldNames.toList())
+
       override fun standardIdentifiers(standardIdentifiers: List<String>) {
         cdkBuilder.standardIdentifiers(standardIdentifiers)
       }
+
+      override fun standardIdentifiers(vararg standardIdentifiers: String): Unit =
+          standardIdentifiers(standardIdentifiers.toList())
 
       public fun build():
           software.amazon.awscdk.services.customerprofiles.CfnObjectType.ObjectTypeKeyProperty =
@@ -443,6 +470,8 @@ public open class CfnObjectType internal constructor(
       public fun objectTypeKeyList(objectTypeKeyList: IResolvable)
 
       public fun objectTypeKeyList(objectTypeKeyList: List<Any>)
+
+      public fun objectTypeKeyList(vararg objectTypeKeyList: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -461,6 +490,9 @@ public open class CfnObjectType internal constructor(
       override fun objectTypeKeyList(objectTypeKeyList: List<Any>) {
         cdkBuilder.objectTypeKeyList(objectTypeKeyList)
       }
+
+      override fun objectTypeKeyList(vararg objectTypeKeyList: Any): Unit =
+          objectTypeKeyList(objectTypeKeyList.toList())
 
       public fun build():
           software.amazon.awscdk.services.customerprofiles.CfnObjectType.KeyMapProperty =

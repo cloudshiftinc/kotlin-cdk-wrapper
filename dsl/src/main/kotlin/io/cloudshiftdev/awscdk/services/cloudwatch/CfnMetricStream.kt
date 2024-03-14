@@ -36,6 +36,9 @@ public open class CfnMetricStream internal constructor(
     unwrap(this).setExcludeFilters(__idx_ac66f0)
   }
 
+  public open fun excludeFilters(vararg __idx_ac66f0: Any): Unit =
+      excludeFilters(__idx_ac66f0.toList())
+
   public open fun firehoseArn(): String = unwrap(this).getFirehoseArn()
 
   public open fun firehoseArn(`value`: String) {
@@ -51,6 +54,9 @@ public open class CfnMetricStream internal constructor(
   public open fun includeFilters(__idx_ac66f0: List<Any>) {
     unwrap(this).setIncludeFilters(__idx_ac66f0)
   }
+
+  public open fun includeFilters(vararg __idx_ac66f0: Any): Unit =
+      includeFilters(__idx_ac66f0.toList())
 
   public open fun includeLinkedAccountsMetrics(): Any? =
       unwrap(this).getIncludeLinkedAccountsMetrics()
@@ -95,6 +101,9 @@ public open class CfnMetricStream internal constructor(
     unwrap(this).setStatisticsConfigurations(__idx_ac66f0)
   }
 
+  public open fun statisticsConfigurations(vararg __idx_ac66f0: Any): Unit =
+      statisticsConfigurations(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -104,16 +113,22 @@ public open class CfnMetricStream internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun excludeFilters(excludeFilters: IResolvable)
 
     public fun excludeFilters(excludeFilters: List<Any>)
+
+    public fun excludeFilters(vararg excludeFilters: Any)
 
     public fun firehoseArn(firehoseArn: String)
 
     public fun includeFilters(includeFilters: IResolvable)
 
     public fun includeFilters(includeFilters: List<Any>)
+
+    public fun includeFilters(vararg includeFilters: Any)
 
     public fun includeLinkedAccountsMetrics(includeLinkedAccountsMetrics: Boolean)
 
@@ -129,7 +144,11 @@ public open class CfnMetricStream internal constructor(
 
     public fun statisticsConfigurations(statisticsConfigurations: List<Any>)
 
+    public fun statisticsConfigurations(vararg statisticsConfigurations: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -147,6 +166,9 @@ public open class CfnMetricStream internal constructor(
       cdkBuilder.excludeFilters(excludeFilters)
     }
 
+    override fun excludeFilters(vararg excludeFilters: Any): Unit =
+        excludeFilters(excludeFilters.toList())
+
     override fun firehoseArn(firehoseArn: String) {
       cdkBuilder.firehoseArn(firehoseArn)
     }
@@ -158,6 +180,9 @@ public open class CfnMetricStream internal constructor(
     override fun includeFilters(includeFilters: List<Any>) {
       cdkBuilder.includeFilters(includeFilters)
     }
+
+    override fun includeFilters(vararg includeFilters: Any): Unit =
+        includeFilters(includeFilters.toList())
 
     override fun includeLinkedAccountsMetrics(includeLinkedAccountsMetrics: Boolean) {
       cdkBuilder.includeLinkedAccountsMetrics(includeLinkedAccountsMetrics)
@@ -187,9 +212,14 @@ public open class CfnMetricStream internal constructor(
       cdkBuilder.statisticsConfigurations(statisticsConfigurations)
     }
 
+    override fun statisticsConfigurations(vararg statisticsConfigurations: Any): Unit =
+        statisticsConfigurations(statisticsConfigurations.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.cloudwatch.CfnMetricStream =
         cdkBuilder.build()
@@ -224,9 +254,13 @@ public open class CfnMetricStream internal constructor(
     public interface Builder {
       public fun additionalStatistics(additionalStatistics: List<String>)
 
+      public fun additionalStatistics(vararg additionalStatistics: String)
+
       public fun includeMetrics(includeMetrics: IResolvable)
 
       public fun includeMetrics(includeMetrics: List<Any>)
+
+      public fun includeMetrics(vararg includeMetrics: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -239,6 +273,9 @@ public open class CfnMetricStream internal constructor(
         cdkBuilder.additionalStatistics(additionalStatistics)
       }
 
+      override fun additionalStatistics(vararg additionalStatistics: String): Unit =
+          additionalStatistics(additionalStatistics.toList())
+
       override fun includeMetrics(includeMetrics: IResolvable) {
         cdkBuilder.includeMetrics(includeMetrics.let(IResolvable::unwrap))
       }
@@ -246,6 +283,9 @@ public open class CfnMetricStream internal constructor(
       override fun includeMetrics(includeMetrics: List<Any>) {
         cdkBuilder.includeMetrics(includeMetrics)
       }
+
+      override fun includeMetrics(vararg includeMetrics: Any): Unit =
+          includeMetrics(includeMetrics.toList())
 
       public fun build():
           software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty
@@ -256,8 +296,7 @@ public open class CfnMetricStream internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty,
     ) : MetricStreamStatisticsConfigurationProperty {
-      override fun additionalStatistics(): List<String> = unwrap(this).getAdditionalStatistics() ?:
-          emptyList()
+      override fun additionalStatistics(): List<String> = unwrap(this).getAdditionalStatistics()
 
       override fun includeMetrics(): Any = unwrap(this).getIncludeMetrics()
     }
@@ -351,6 +390,8 @@ public open class CfnMetricStream internal constructor(
     public interface Builder {
       public fun metricNames(metricNames: List<String>)
 
+      public fun metricNames(vararg metricNames: String)
+
       public fun namespace(namespace: String)
     }
 
@@ -363,6 +404,8 @@ public open class CfnMetricStream internal constructor(
       override fun metricNames(metricNames: List<String>) {
         cdkBuilder.metricNames(metricNames)
       }
+
+      override fun metricNames(vararg metricNames: String): Unit = metricNames(metricNames.toList())
 
       override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)

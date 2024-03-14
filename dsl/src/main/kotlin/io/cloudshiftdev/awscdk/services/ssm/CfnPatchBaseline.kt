@@ -42,6 +42,8 @@ public open class CfnPatchBaseline internal constructor(
     unwrap(this).setApprovedPatches(`value`)
   }
 
+  public open fun approvedPatches(vararg `value`: String): Unit = approvedPatches(`value`.toList())
+
   public open fun approvedPatchesComplianceLevel(): String? =
       unwrap(this).getApprovedPatchesComplianceLevel()
 
@@ -115,11 +117,15 @@ public open class CfnPatchBaseline internal constructor(
     unwrap(this).setPatchGroups(`value`)
   }
 
+  public open fun patchGroups(vararg `value`: String): Unit = patchGroups(`value`.toList())
+
   public open fun rejectedPatches(): List<String> = unwrap(this).getRejectedPatches() ?: emptyList()
 
   public open fun rejectedPatches(`value`: List<String>) {
     unwrap(this).setRejectedPatches(`value`)
   }
+
+  public open fun rejectedPatches(vararg `value`: String): Unit = rejectedPatches(`value`.toList())
 
   public open fun rejectedPatchesAction(): String? = unwrap(this).getRejectedPatchesAction()
 
@@ -137,6 +143,8 @@ public open class CfnPatchBaseline internal constructor(
     unwrap(this).setSources(__idx_ac66f0)
   }
 
+  public open fun sources(vararg __idx_ac66f0: Any): Unit = sources(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -145,6 +153,8 @@ public open class CfnPatchBaseline internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public interface Builder {
     public fun approvalRules(approvalRules: IResolvable)
@@ -156,6 +166,8 @@ public open class CfnPatchBaseline internal constructor(
     public fun approvalRules(approvalRules: RuleGroupProperty.Builder.() -> Unit)
 
     public fun approvedPatches(approvedPatches: List<String>)
+
+    public fun approvedPatches(vararg approvedPatches: String)
 
     public fun approvedPatchesComplianceLevel(approvedPatchesComplianceLevel: String)
 
@@ -183,7 +195,11 @@ public open class CfnPatchBaseline internal constructor(
 
     public fun patchGroups(patchGroups: List<String>)
 
+    public fun patchGroups(vararg patchGroups: String)
+
     public fun rejectedPatches(rejectedPatches: List<String>)
+
+    public fun rejectedPatches(vararg rejectedPatches: String)
 
     public fun rejectedPatchesAction(rejectedPatchesAction: String)
 
@@ -191,7 +207,11 @@ public open class CfnPatchBaseline internal constructor(
 
     public fun sources(sources: List<Any>)
 
+    public fun sources(vararg sources: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -217,6 +237,9 @@ public open class CfnPatchBaseline internal constructor(
     override fun approvedPatches(approvedPatches: List<String>) {
       cdkBuilder.approvedPatches(approvedPatches)
     }
+
+    override fun approvedPatches(vararg approvedPatches: String): Unit =
+        approvedPatches(approvedPatches.toList())
 
     override fun approvedPatchesComplianceLevel(approvedPatchesComplianceLevel: String) {
       cdkBuilder.approvedPatchesComplianceLevel(approvedPatchesComplianceLevel)
@@ -267,9 +290,14 @@ public open class CfnPatchBaseline internal constructor(
       cdkBuilder.patchGroups(patchGroups)
     }
 
+    override fun patchGroups(vararg patchGroups: String): Unit = patchGroups(patchGroups.toList())
+
     override fun rejectedPatches(rejectedPatches: List<String>) {
       cdkBuilder.rejectedPatches(rejectedPatches)
     }
+
+    override fun rejectedPatches(vararg rejectedPatches: String): Unit =
+        rejectedPatches(rejectedPatches.toList())
 
     override fun rejectedPatchesAction(rejectedPatchesAction: String) {
       cdkBuilder.rejectedPatchesAction(rejectedPatchesAction)
@@ -283,9 +311,13 @@ public open class CfnPatchBaseline internal constructor(
       cdkBuilder.sources(sources)
     }
 
+    override fun sources(vararg sources: Any): Unit = sources(sources.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ssm.CfnPatchBaseline = cdkBuilder.build()
   }
@@ -320,6 +352,8 @@ public open class CfnPatchBaseline internal constructor(
       public fun key(key: String)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -334,6 +368,8 @@ public open class CfnPatchBaseline internal constructor(
       override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build(): software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterProperty =
           cdkBuilder.build()
@@ -375,6 +411,8 @@ public open class CfnPatchBaseline internal constructor(
       public fun patchFilters(patchFilters: IResolvable)
 
       public fun patchFilters(patchFilters: List<Any>)
+
+      public fun patchFilters(vararg patchFilters: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -389,6 +427,9 @@ public open class CfnPatchBaseline internal constructor(
       override fun patchFilters(patchFilters: List<Any>) {
         cdkBuilder.patchFilters(patchFilters)
       }
+
+      override fun patchFilters(vararg patchFilters: Any): Unit =
+          patchFilters(patchFilters.toList())
 
       public fun build():
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty =
@@ -435,6 +476,8 @@ public open class CfnPatchBaseline internal constructor(
       public fun name(name: String)
 
       public fun products(products: List<String>)
+
+      public fun products(vararg products: String)
     }
 
     private class BuilderImpl : Builder {
@@ -453,6 +496,8 @@ public open class CfnPatchBaseline internal constructor(
       override fun products(products: List<String>) {
         cdkBuilder.products(products)
       }
+
+      override fun products(vararg products: String): Unit = products(products.toList())
 
       public fun build(): software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchSourceProperty =
           cdkBuilder.build()
@@ -603,6 +648,8 @@ public open class CfnPatchBaseline internal constructor(
       public fun patchRules(patchRules: IResolvable)
 
       public fun patchRules(patchRules: List<Any>)
+
+      public fun patchRules(vararg patchRules: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -617,6 +664,8 @@ public open class CfnPatchBaseline internal constructor(
       override fun patchRules(patchRules: List<Any>) {
         cdkBuilder.patchRules(patchRules)
       }
+
+      override fun patchRules(vararg patchRules: Any): Unit = patchRules(patchRules.toList())
 
       public fun build(): software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty =
           cdkBuilder.build()

@@ -24,11 +24,9 @@ public open class CfnAccelerator internal constructor(
 
   public open fun attrDualStackDnsName(): String = unwrap(this).getAttrDualStackDnsName()
 
-  public open fun attrIpv4Addresses(): List<String> = unwrap(this).getAttrIpv4Addresses() ?:
-      emptyList()
+  public open fun attrIpv4Addresses(): List<String> = unwrap(this).getAttrIpv4Addresses()
 
-  public open fun attrIpv6Addresses(): List<String> = unwrap(this).getAttrIpv6Addresses() ?:
-      emptyList()
+  public open fun attrIpv6Addresses(): List<String> = unwrap(this).getAttrIpv6Addresses()
 
   public open fun enabled(): Any? = unwrap(this).getEnabled()
 
@@ -56,6 +54,8 @@ public open class CfnAccelerator internal constructor(
     unwrap(this).setIpAddresses(`value`)
   }
 
+  public open fun ipAddresses(vararg `value`: String): Unit = ipAddresses(`value`.toList())
+
   public open fun name(): String = unwrap(this).getName()
 
   public open fun name(`value`: String) {
@@ -71,6 +71,8 @@ public open class CfnAccelerator internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun enabled(enabled: Boolean)
 
@@ -80,9 +82,13 @@ public open class CfnAccelerator internal constructor(
 
     public fun ipAddresses(ipAddresses: List<String>)
 
+    public fun ipAddresses(vararg ipAddresses: String)
+
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -108,6 +114,8 @@ public open class CfnAccelerator internal constructor(
       cdkBuilder.ipAddresses(ipAddresses)
     }
 
+    override fun ipAddresses(vararg ipAddresses: String): Unit = ipAddresses(ipAddresses.toList())
+
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -115,6 +123,8 @@ public open class CfnAccelerator internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.globalaccelerator.CfnAccelerator =
         cdkBuilder.build()

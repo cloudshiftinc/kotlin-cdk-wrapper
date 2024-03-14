@@ -12,7 +12,11 @@ public interface GitPushFilter {
   public interface Builder {
     public fun tagsExcludes(tagsExcludes: List<String>)
 
+    public fun tagsExcludes(vararg tagsExcludes: String)
+
     public fun tagsIncludes(tagsIncludes: List<String>)
+
+    public fun tagsIncludes(vararg tagsIncludes: String)
   }
 
   private class BuilderImpl : Builder {
@@ -23,9 +27,15 @@ public interface GitPushFilter {
       cdkBuilder.tagsExcludes(tagsExcludes)
     }
 
+    override fun tagsExcludes(vararg tagsExcludes: String): Unit =
+        tagsExcludes(tagsExcludes.toList())
+
     override fun tagsIncludes(tagsIncludes: List<String>) {
       cdkBuilder.tagsIncludes(tagsIncludes)
     }
+
+    override fun tagsIncludes(vararg tagsIncludes: String): Unit =
+        tagsIncludes(tagsIncludes.toList())
 
     public fun build(): software.amazon.awscdk.services.codepipeline.GitPushFilter =
         cdkBuilder.build()

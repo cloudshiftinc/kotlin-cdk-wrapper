@@ -7,7 +7,7 @@ public open class IamResource internal constructor(
   private val cdkObject: software.amazon.awscdk.services.appsync.IamResource,
 ) {
   public open fun resourceArns(api: GraphqlApiBase): List<String> =
-      unwrap(this).resourceArns(api.let(GraphqlApiBase::unwrap)) ?: emptyList()
+      unwrap(this).resourceArns(api.let(GraphqlApiBase::unwrap))
 
   public companion object {
     public open fun all(): IamResource =

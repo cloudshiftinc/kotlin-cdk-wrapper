@@ -43,6 +43,8 @@ public open class CfnModelManifest internal constructor(
     unwrap(this).setNodes(`value`)
   }
 
+  public open fun nodes(vararg `value`: String): Unit = nodes(`value`.toList())
+
   public open fun signalCatalogArn(): String = unwrap(this).getSignalCatalogArn()
 
   public open fun signalCatalogArn(`value`: String) {
@@ -64,6 +66,8 @@ public open class CfnModelManifest internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun description(description: String)
 
@@ -71,11 +75,15 @@ public open class CfnModelManifest internal constructor(
 
     public fun nodes(nodes: List<String>)
 
+    public fun nodes(vararg nodes: String)
+
     public fun signalCatalogArn(signalCatalogArn: String)
 
     public fun status(status: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -97,6 +105,8 @@ public open class CfnModelManifest internal constructor(
       cdkBuilder.nodes(nodes)
     }
 
+    override fun nodes(vararg nodes: String): Unit = nodes(nodes.toList())
+
     override fun signalCatalogArn(signalCatalogArn: String) {
       cdkBuilder.signalCatalogArn(signalCatalogArn)
     }
@@ -108,6 +118,8 @@ public open class CfnModelManifest internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.iotfleetwise.CfnModelManifest =
         cdkBuilder.build()

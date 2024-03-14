@@ -26,6 +26,9 @@ public open class CfnProactiveEngagement internal constructor(
     unwrap(this).setEmergencyContactList(__idx_ac66f0)
   }
 
+  public open fun emergencyContactList(vararg __idx_ac66f0: Any): Unit =
+      emergencyContactList(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -40,6 +43,8 @@ public open class CfnProactiveEngagement internal constructor(
     public fun emergencyContactList(emergencyContactList: IResolvable)
 
     public fun emergencyContactList(emergencyContactList: List<Any>)
+
+    public fun emergencyContactList(vararg emergencyContactList: Any)
 
     public fun proactiveEngagementStatus(proactiveEngagementStatus: String)
   }
@@ -58,6 +63,9 @@ public open class CfnProactiveEngagement internal constructor(
     override fun emergencyContactList(emergencyContactList: List<Any>) {
       cdkBuilder.emergencyContactList(emergencyContactList)
     }
+
+    override fun emergencyContactList(vararg emergencyContactList: Any): Unit =
+        emergencyContactList(emergencyContactList.toList())
 
     override fun proactiveEngagementStatus(proactiveEngagementStatus: String) {
       cdkBuilder.proactiveEngagementStatus(proactiveEngagementStatus)

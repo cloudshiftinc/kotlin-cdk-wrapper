@@ -16,9 +16,15 @@ public interface StackSteps {
   public interface Builder {
     public fun changeSet(changeSet: List<Step>)
 
+    public fun changeSet(vararg changeSet: Step)
+
     public fun post(post: List<Step>)
 
+    public fun post(vararg post: Step)
+
     public fun pre(pre: List<Step>)
+
+    public fun pre(vararg pre: Step)
 
     public fun stack(stack: Stack)
   }
@@ -31,13 +37,19 @@ public interface StackSteps {
       cdkBuilder.changeSet(changeSet.map(Step::unwrap))
     }
 
+    override fun changeSet(vararg changeSet: Step): Unit = changeSet(changeSet.toList())
+
     override fun post(post: List<Step>) {
       cdkBuilder.post(post.map(Step::unwrap))
     }
 
+    override fun post(vararg post: Step): Unit = post(post.toList())
+
     override fun pre(pre: List<Step>) {
       cdkBuilder.pre(pre.map(Step::unwrap))
     }
+
+    override fun pre(vararg pre: Step): Unit = pre(pre.toList())
 
     override fun stack(stack: Stack) {
       cdkBuilder.stack(stack.let(Stack::unwrap))

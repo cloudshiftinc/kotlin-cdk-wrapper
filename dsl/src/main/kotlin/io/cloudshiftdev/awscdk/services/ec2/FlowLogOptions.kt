@@ -21,6 +21,8 @@ public interface FlowLogOptions {
 
     public fun logFormat(logFormat: List<LogFormat>)
 
+    public fun logFormat(vararg logFormat: LogFormat)
+
     public fun maxAggregationInterval(maxAggregationInterval: FlowLogMaxAggregationInterval)
 
     public fun trafficType(trafficType: FlowLogTrafficType)
@@ -37,6 +39,8 @@ public interface FlowLogOptions {
     override fun logFormat(logFormat: List<LogFormat>) {
       cdkBuilder.logFormat(logFormat.map(LogFormat::unwrap))
     }
+
+    override fun logFormat(vararg logFormat: LogFormat): Unit = logFormat(logFormat.toList())
 
     override fun maxAggregationInterval(maxAggregationInterval: FlowLogMaxAggregationInterval) {
       cdkBuilder.maxAggregationInterval(maxAggregationInterval.let(FlowLogMaxAggregationInterval::unwrap))

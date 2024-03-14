@@ -64,6 +64,8 @@ public open class SlackChannelConfiguration internal constructor(
   public interface Builder {
     public fun guardrailPolicies(guardrailPolicies: List<IManagedPolicy>)
 
+    public fun guardrailPolicies(vararg guardrailPolicies: IManagedPolicy)
+
     public fun logRetention(logRetention: RetentionDays)
 
     public fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions)
@@ -78,6 +80,8 @@ public open class SlackChannelConfiguration internal constructor(
     public fun loggingLevel(loggingLevel: LoggingLevel)
 
     public fun notificationTopics(notificationTopics: List<ITopic>)
+
+    public fun notificationTopics(vararg notificationTopics: ITopic)
 
     public fun role(role: IRole)
 
@@ -99,6 +103,9 @@ public open class SlackChannelConfiguration internal constructor(
     override fun guardrailPolicies(guardrailPolicies: List<IManagedPolicy>) {
       cdkBuilder.guardrailPolicies(guardrailPolicies.map(IManagedPolicy::unwrap))
     }
+
+    override fun guardrailPolicies(vararg guardrailPolicies: IManagedPolicy): Unit =
+        guardrailPolicies(guardrailPolicies.toList())
 
     override fun logRetention(logRetention: RetentionDays) {
       cdkBuilder.logRetention(logRetention.let(RetentionDays::unwrap))
@@ -125,6 +132,9 @@ public open class SlackChannelConfiguration internal constructor(
     override fun notificationTopics(notificationTopics: List<ITopic>) {
       cdkBuilder.notificationTopics(notificationTopics.map(ITopic::unwrap))
     }
+
+    override fun notificationTopics(vararg notificationTopics: ITopic): Unit =
+        notificationTopics(notificationTopics.toList())
 
     override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))

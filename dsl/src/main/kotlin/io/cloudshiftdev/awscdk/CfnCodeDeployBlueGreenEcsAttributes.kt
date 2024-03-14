@@ -16,7 +16,11 @@ public interface CfnCodeDeployBlueGreenEcsAttributes {
   public interface Builder {
     public fun taskDefinitions(taskDefinitions: List<String>)
 
+    public fun taskDefinitions(vararg taskDefinitions: String)
+
     public fun taskSets(taskSets: List<String>)
+
+    public fun taskSets(vararg taskSets: String)
 
     public fun trafficRouting(trafficRouting: CfnTrafficRouting)
 
@@ -33,9 +37,14 @@ public interface CfnCodeDeployBlueGreenEcsAttributes {
       cdkBuilder.taskDefinitions(taskDefinitions)
     }
 
+    override fun taskDefinitions(vararg taskDefinitions: String): Unit =
+        taskDefinitions(taskDefinitions.toList())
+
     override fun taskSets(taskSets: List<String>) {
       cdkBuilder.taskSets(taskSets)
     }
+
+    override fun taskSets(vararg taskSets: String): Unit = taskSets(taskSets.toList())
 
     override fun trafficRouting(trafficRouting: CfnTrafficRouting) {
       cdkBuilder.trafficRouting(trafficRouting.let(CfnTrafficRouting::unwrap))
@@ -53,9 +62,9 @@ public interface CfnCodeDeployBlueGreenEcsAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenEcsAttributes,
   ) : CfnCodeDeployBlueGreenEcsAttributes {
-    override fun taskDefinitions(): List<String> = unwrap(this).getTaskDefinitions() ?: emptyList()
+    override fun taskDefinitions(): List<String> = unwrap(this).getTaskDefinitions()
 
-    override fun taskSets(): List<String> = unwrap(this).getTaskSets() ?: emptyList()
+    override fun taskSets(): List<String> = unwrap(this).getTaskSets()
 
     override fun trafficRouting(): CfnTrafficRouting =
         unwrap(this).getTrafficRouting().let(CfnTrafficRouting::wrap)

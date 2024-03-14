@@ -54,6 +54,8 @@ public open class CfnUserProfile internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun userProfileName(): String = unwrap(this).getUserProfileName()
 
   public open fun userProfileName(`value`: String) {
@@ -83,6 +85,8 @@ public open class CfnUserProfile internal constructor(
     public fun singleSignOnUserValue(singleSignOnUserValue: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun userProfileName(userProfileName: String)
 
@@ -117,6 +121,8 @@ public open class CfnUserProfile internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun userProfileName(userProfileName: String) {
       cdkBuilder.userProfileName(userProfileName)
@@ -532,6 +538,8 @@ public open class CfnUserProfile internal constructor(
 
       public fun customFileSystemConfigs(customFileSystemConfigs: List<Any>)
 
+      public fun customFileSystemConfigs(vararg customFileSystemConfigs: Any)
+
       public fun customPosixUserConfig(customPosixUserConfig: IResolvable)
 
       public fun customPosixUserConfig(customPosixUserConfig: CustomPosixUserConfigProperty)
@@ -586,6 +594,8 @@ public open class CfnUserProfile internal constructor(
 
       public fun securityGroups(securityGroups: List<String>)
 
+      public fun securityGroups(vararg securityGroups: String)
+
       public fun sharingSettings(sharingSettings: IResolvable)
 
       public fun sharingSettings(sharingSettings: SharingSettingsProperty)
@@ -632,6 +642,9 @@ public open class CfnUserProfile internal constructor(
       override fun customFileSystemConfigs(customFileSystemConfigs: List<Any>) {
         cdkBuilder.customFileSystemConfigs(customFileSystemConfigs)
       }
+
+      override fun customFileSystemConfigs(vararg customFileSystemConfigs: Any): Unit =
+          customFileSystemConfigs(customFileSystemConfigs.toList())
 
       override fun customPosixUserConfig(customPosixUserConfig: IResolvable) {
         cdkBuilder.customPosixUserConfig(customPosixUserConfig.let(IResolvable::unwrap))
@@ -720,6 +733,9 @@ public open class CfnUserProfile internal constructor(
       override fun securityGroups(securityGroups: List<String>) {
         cdkBuilder.securityGroups(securityGroups)
       }
+
+      override fun securityGroups(vararg securityGroups: String): Unit =
+          securityGroups(securityGroups.toList())
 
       override fun sharingSettings(sharingSettings: IResolvable) {
         cdkBuilder.sharingSettings(sharingSettings.let(IResolvable::unwrap))
@@ -942,9 +958,13 @@ public open class CfnUserProfile internal constructor(
 
       public fun codeRepositories(codeRepositories: List<Any>)
 
+      public fun codeRepositories(vararg codeRepositories: Any)
+
       public fun customImages(customImages: IResolvable)
 
       public fun customImages(customImages: List<Any>)
+
+      public fun customImages(vararg customImages: Any)
 
       public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
 
@@ -955,6 +975,8 @@ public open class CfnUserProfile internal constructor(
       public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
 
       public fun lifecycleConfigArns(lifecycleConfigArns: List<String>)
+
+      public fun lifecycleConfigArns(vararg lifecycleConfigArns: String)
     }
 
     private class BuilderImpl : Builder {
@@ -971,6 +993,9 @@ public open class CfnUserProfile internal constructor(
         cdkBuilder.codeRepositories(codeRepositories)
       }
 
+      override fun codeRepositories(vararg codeRepositories: Any): Unit =
+          codeRepositories(codeRepositories.toList())
+
       override fun customImages(customImages: IResolvable) {
         cdkBuilder.customImages(customImages.let(IResolvable::unwrap))
       }
@@ -978,6 +1003,9 @@ public open class CfnUserProfile internal constructor(
       override fun customImages(customImages: List<Any>) {
         cdkBuilder.customImages(customImages)
       }
+
+      override fun customImages(vararg customImages: Any): Unit =
+          customImages(customImages.toList())
 
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
@@ -996,6 +1024,9 @@ public open class CfnUserProfile internal constructor(
       override fun lifecycleConfigArns(lifecycleConfigArns: List<String>) {
         cdkBuilder.lifecycleConfigArns(lifecycleConfigArns)
       }
+
+      override fun lifecycleConfigArns(vararg lifecycleConfigArns: String): Unit =
+          lifecycleConfigArns(lifecycleConfigArns.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnUserProfile.JupyterLabAppSettingsProperty =
@@ -1046,6 +1077,8 @@ public open class CfnUserProfile internal constructor(
 
       public fun customImages(customImages: List<Any>)
 
+      public fun customImages(vararg customImages: Any)
+
       public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
 
       public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
@@ -1068,6 +1101,9 @@ public open class CfnUserProfile internal constructor(
       override fun customImages(customImages: List<Any>) {
         cdkBuilder.customImages(customImages)
       }
+
+      override fun customImages(vararg customImages: Any): Unit =
+          customImages(customImages.toList())
 
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
@@ -1247,6 +1283,8 @@ public open class CfnUserProfile internal constructor(
       public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
 
       public fun lifecycleConfigArns(lifecycleConfigArns: List<String>)
+
+      public fun lifecycleConfigArns(vararg lifecycleConfigArns: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1272,6 +1310,9 @@ public open class CfnUserProfile internal constructor(
       override fun lifecycleConfigArns(lifecycleConfigArns: List<String>) {
         cdkBuilder.lifecycleConfigArns(lifecycleConfigArns)
       }
+
+      override fun lifecycleConfigArns(vararg lifecycleConfigArns: String): Unit =
+          lifecycleConfigArns(lifecycleConfigArns.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnUserProfile.CodeEditorAppSettingsProperty =

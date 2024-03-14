@@ -46,6 +46,9 @@ public open class CfnLoadBalancer internal constructor(
     unwrap(this).setAppCookieStickinessPolicy(__idx_ac66f0)
   }
 
+  public open fun appCookieStickinessPolicy(vararg __idx_ac66f0: Any): Unit =
+      appCookieStickinessPolicy(__idx_ac66f0.toList())
+
   public open fun attrCanonicalHostedZoneName(): String =
       unwrap(this).getAttrCanonicalHostedZoneName()
 
@@ -68,6 +71,9 @@ public open class CfnLoadBalancer internal constructor(
   public open fun availabilityZones(`value`: List<String>) {
     unwrap(this).setAvailabilityZones(`value`)
   }
+
+  public open fun availabilityZones(vararg `value`: String): Unit =
+      availabilityZones(`value`.toList())
 
   public open fun connectionDrainingPolicy(): Any? = unwrap(this).getConnectionDrainingPolicy()
 
@@ -135,6 +141,8 @@ public open class CfnLoadBalancer internal constructor(
     unwrap(this).setInstances(`value`)
   }
 
+  public open fun instances(vararg `value`: String): Unit = instances(`value`.toList())
+
   public open fun lbCookieStickinessPolicy(): Any? = unwrap(this).getLbCookieStickinessPolicy()
 
   public open fun lbCookieStickinessPolicy(`value`: IResolvable) {
@@ -145,6 +153,9 @@ public open class CfnLoadBalancer internal constructor(
     unwrap(this).setLbCookieStickinessPolicy(__idx_ac66f0)
   }
 
+  public open fun lbCookieStickinessPolicy(vararg __idx_ac66f0: Any): Unit =
+      lbCookieStickinessPolicy(__idx_ac66f0.toList())
+
   public open fun listeners(): Any = unwrap(this).getListeners()
 
   public open fun listeners(`value`: IResolvable) {
@@ -154,6 +165,8 @@ public open class CfnLoadBalancer internal constructor(
   public open fun listeners(__idx_ac66f0: List<Any>) {
     unwrap(this).setListeners(__idx_ac66f0)
   }
+
+  public open fun listeners(vararg __idx_ac66f0: Any): Unit = listeners(__idx_ac66f0.toList())
 
   public open fun loadBalancerName(): String? = unwrap(this).getLoadBalancerName()
 
@@ -171,6 +184,8 @@ public open class CfnLoadBalancer internal constructor(
     unwrap(this).setPolicies(__idx_ac66f0)
   }
 
+  public open fun policies(vararg __idx_ac66f0: Any): Unit = policies(__idx_ac66f0.toList())
+
   public open fun scheme(): String? = unwrap(this).getScheme()
 
   public open fun scheme(`value`: String) {
@@ -183,11 +198,15 @@ public open class CfnLoadBalancer internal constructor(
     unwrap(this).setSecurityGroups(`value`)
   }
 
+  public open fun securityGroups(vararg `value`: String): Unit = securityGroups(`value`.toList())
+
   public open fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
 
   public open fun subnets(`value`: List<String>) {
     unwrap(this).setSubnets(`value`)
   }
+
+  public open fun subnets(vararg `value`: String): Unit = subnets(`value`.toList())
 
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
@@ -197,6 +216,8 @@ public open class CfnLoadBalancer internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public interface Builder {
     public fun accessLoggingPolicy(accessLoggingPolicy: IResolvable)
@@ -212,7 +233,11 @@ public open class CfnLoadBalancer internal constructor(
 
     public fun appCookieStickinessPolicy(appCookieStickinessPolicy: List<Any>)
 
+    public fun appCookieStickinessPolicy(vararg appCookieStickinessPolicy: Any)
+
     public fun availabilityZones(availabilityZones: List<String>)
+
+    public fun availabilityZones(vararg availabilityZones: String)
 
     public fun connectionDrainingPolicy(connectionDrainingPolicy: IResolvable)
 
@@ -245,13 +270,19 @@ public open class CfnLoadBalancer internal constructor(
 
     public fun instances(instances: List<String>)
 
+    public fun instances(vararg instances: String)
+
     public fun lbCookieStickinessPolicy(lbCookieStickinessPolicy: IResolvable)
 
     public fun lbCookieStickinessPolicy(lbCookieStickinessPolicy: List<Any>)
 
+    public fun lbCookieStickinessPolicy(vararg lbCookieStickinessPolicy: Any)
+
     public fun listeners(listeners: IResolvable)
 
     public fun listeners(listeners: List<Any>)
+
+    public fun listeners(vararg listeners: Any)
 
     public fun loadBalancerName(loadBalancerName: String)
 
@@ -259,13 +290,21 @@ public open class CfnLoadBalancer internal constructor(
 
     public fun policies(policies: List<Any>)
 
+    public fun policies(vararg policies: Any)
+
     public fun scheme(scheme: String)
 
     public fun securityGroups(securityGroups: List<String>)
 
+    public fun securityGroups(vararg securityGroups: String)
+
     public fun subnets(subnets: List<String>)
 
+    public fun subnets(vararg subnets: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -299,9 +338,15 @@ public open class CfnLoadBalancer internal constructor(
       cdkBuilder.appCookieStickinessPolicy(appCookieStickinessPolicy)
     }
 
+    override fun appCookieStickinessPolicy(vararg appCookieStickinessPolicy: Any): Unit =
+        appCookieStickinessPolicy(appCookieStickinessPolicy.toList())
+
     override fun availabilityZones(availabilityZones: List<String>) {
       cdkBuilder.availabilityZones(availabilityZones)
     }
+
+    override fun availabilityZones(vararg availabilityZones: String): Unit =
+        availabilityZones(availabilityZones.toList())
 
     override fun connectionDrainingPolicy(connectionDrainingPolicy: IResolvable) {
       cdkBuilder.connectionDrainingPolicy(connectionDrainingPolicy.let(IResolvable::unwrap))
@@ -357,6 +402,8 @@ public open class CfnLoadBalancer internal constructor(
       cdkBuilder.instances(instances)
     }
 
+    override fun instances(vararg instances: String): Unit = instances(instances.toList())
+
     override fun lbCookieStickinessPolicy(lbCookieStickinessPolicy: IResolvable) {
       cdkBuilder.lbCookieStickinessPolicy(lbCookieStickinessPolicy.let(IResolvable::unwrap))
     }
@@ -365,6 +412,9 @@ public open class CfnLoadBalancer internal constructor(
       cdkBuilder.lbCookieStickinessPolicy(lbCookieStickinessPolicy)
     }
 
+    override fun lbCookieStickinessPolicy(vararg lbCookieStickinessPolicy: Any): Unit =
+        lbCookieStickinessPolicy(lbCookieStickinessPolicy.toList())
+
     override fun listeners(listeners: IResolvable) {
       cdkBuilder.listeners(listeners.let(IResolvable::unwrap))
     }
@@ -372,6 +422,8 @@ public open class CfnLoadBalancer internal constructor(
     override fun listeners(listeners: List<Any>) {
       cdkBuilder.listeners(listeners)
     }
+
+    override fun listeners(vararg listeners: Any): Unit = listeners(listeners.toList())
 
     override fun loadBalancerName(loadBalancerName: String) {
       cdkBuilder.loadBalancerName(loadBalancerName)
@@ -385,6 +437,8 @@ public open class CfnLoadBalancer internal constructor(
       cdkBuilder.policies(policies)
     }
 
+    override fun policies(vararg policies: Any): Unit = policies(policies.toList())
+
     override fun scheme(scheme: String) {
       cdkBuilder.scheme(scheme)
     }
@@ -393,13 +447,20 @@ public open class CfnLoadBalancer internal constructor(
       cdkBuilder.securityGroups(securityGroups)
     }
 
+    override fun securityGroups(vararg securityGroups: String): Unit =
+        securityGroups(securityGroups.toList())
+
     override fun subnets(subnets: List<String>) {
       cdkBuilder.subnets(subnets)
     }
 
+    override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer =
         cdkBuilder.build()
@@ -442,11 +503,17 @@ public open class CfnLoadBalancer internal constructor(
     public interface Builder {
       public fun attributes(attributes: List<Any>)
 
+      public fun attributes(vararg attributes: Any)
+
       public fun attributes(attributes: IResolvable)
 
       public fun instancePorts(instancePorts: List<String>)
 
+      public fun instancePorts(vararg instancePorts: String)
+
       public fun loadBalancerPorts(loadBalancerPorts: List<String>)
+
+      public fun loadBalancerPorts(vararg loadBalancerPorts: String)
 
       public fun policyName(policyName: String)
 
@@ -463,6 +530,8 @@ public open class CfnLoadBalancer internal constructor(
         cdkBuilder.attributes(attributes)
       }
 
+      override fun attributes(vararg attributes: Any): Unit = attributes(attributes.toList())
+
       override fun attributes(attributes: IResolvable) {
         cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
       }
@@ -471,9 +540,15 @@ public open class CfnLoadBalancer internal constructor(
         cdkBuilder.instancePorts(instancePorts)
       }
 
+      override fun instancePorts(vararg instancePorts: String): Unit =
+          instancePorts(instancePorts.toList())
+
       override fun loadBalancerPorts(loadBalancerPorts: List<String>) {
         cdkBuilder.loadBalancerPorts(loadBalancerPorts)
       }
+
+      override fun loadBalancerPorts(vararg loadBalancerPorts: String): Unit =
+          loadBalancerPorts(loadBalancerPorts.toList())
 
       override fun policyName(policyName: String) {
         cdkBuilder.policyName(policyName)
@@ -750,6 +825,8 @@ public open class CfnLoadBalancer internal constructor(
 
       public fun policyNames(policyNames: List<String>)
 
+      public fun policyNames(vararg policyNames: String)
+
       public fun protocol(protocol: String)
 
       public fun sslCertificateId(sslCertificateId: String)
@@ -776,6 +853,8 @@ public open class CfnLoadBalancer internal constructor(
       override fun policyNames(policyNames: List<String>) {
         cdkBuilder.policyNames(policyNames)
       }
+
+      override fun policyNames(vararg policyNames: String): Unit = policyNames(policyNames.toList())
 
       override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)

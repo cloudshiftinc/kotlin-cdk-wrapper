@@ -22,6 +22,8 @@ public interface VpcLinkProps {
   public interface Builder {
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
+
     public fun subnets(subnets: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -40,6 +42,9 @@ public interface VpcLinkProps {
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun subnets(subnets: SubnetSelection) {
       cdkBuilder.subnets(subnets.let(SubnetSelection::unwrap))

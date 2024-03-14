@@ -61,6 +61,8 @@ public open class CfnSchema internal constructor(
     unwrap(this).setTagsRaw(`value`.map(TagsEntryProperty::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: TagsEntryProperty): Unit = tagsRaw(`value`.toList())
+
   public open fun type(): String = unwrap(this).getType()
 
   public open fun type(`value`: String) {
@@ -77,6 +79,8 @@ public open class CfnSchema internal constructor(
     public fun schemaName(schemaName: String)
 
     public fun tags(tags: List<TagsEntryProperty>)
+
+    public fun tags(vararg tags: TagsEntryProperty)
 
     public fun type(type: String)
   }
@@ -107,6 +111,8 @@ public open class CfnSchema internal constructor(
     override fun tags(tags: List<TagsEntryProperty>) {
       cdkBuilder.tags(tags.map(TagsEntryProperty::unwrap))
     }
+
+    override fun tags(vararg tags: TagsEntryProperty): Unit = tags(tags.toList())
 
     override fun type(type: String) {
       cdkBuilder.type(type)

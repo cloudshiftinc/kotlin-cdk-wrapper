@@ -49,6 +49,8 @@ public open class DynamoGetItem internal constructor(
 
     public fun projectionExpression(projectionExpression: List<DynamoProjectionExpression>)
 
+    public fun projectionExpression(vararg projectionExpression: DynamoProjectionExpression)
+
     public fun resultPath(resultPath: String)
 
     public fun resultSelector(resultSelector: Map<String, Any>)
@@ -122,6 +124,9 @@ public open class DynamoGetItem internal constructor(
     override fun projectionExpression(projectionExpression: List<DynamoProjectionExpression>) {
       cdkBuilder.projectionExpression(projectionExpression.map(DynamoProjectionExpression::unwrap))
     }
+
+    override fun projectionExpression(vararg projectionExpression: DynamoProjectionExpression): Unit
+        = projectionExpression(projectionExpression.toList())
 
     override fun resultPath(resultPath: String) {
       cdkBuilder.resultPath(resultPath)

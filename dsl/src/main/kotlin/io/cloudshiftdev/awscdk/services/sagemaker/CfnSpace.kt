@@ -100,6 +100,8 @@ public open class CfnSpace internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun domainId(domainId: String)
 
@@ -133,6 +135,8 @@ public open class CfnSpace internal constructor(
         fun spaceSharingSettings(spaceSharingSettings: SpaceSharingSettingsProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -197,6 +201,8 @@ public open class CfnSpace internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.sagemaker.CfnSpace = cdkBuilder.build()
   }
@@ -392,6 +398,8 @@ public open class CfnSpace internal constructor(
 
       public fun codeRepositories(codeRepositories: List<Any>)
 
+      public fun codeRepositories(vararg codeRepositories: Any)
+
       public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
 
       public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
@@ -414,6 +422,9 @@ public open class CfnSpace internal constructor(
       override fun codeRepositories(codeRepositories: List<Any>) {
         cdkBuilder.codeRepositories(codeRepositories)
       }
+
+      override fun codeRepositories(vararg codeRepositories: Any): Unit =
+          codeRepositories(codeRepositories.toList())
 
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
@@ -705,6 +716,8 @@ public open class CfnSpace internal constructor(
 
       public fun customFileSystems(customFileSystems: List<Any>)
 
+      public fun customFileSystems(vararg customFileSystems: Any)
+
       public fun jupyterLabAppSettings(jupyterLabAppSettings: IResolvable)
 
       public fun jupyterLabAppSettings(jupyterLabAppSettings: SpaceJupyterLabAppSettingsProperty)
@@ -775,6 +788,9 @@ public open class CfnSpace internal constructor(
       override fun customFileSystems(customFileSystems: List<Any>) {
         cdkBuilder.customFileSystems(customFileSystems)
       }
+
+      override fun customFileSystems(vararg customFileSystems: Any): Unit =
+          customFileSystems(customFileSystems.toList())
 
       override fun jupyterLabAppSettings(jupyterLabAppSettings: IResolvable) {
         cdkBuilder.jupyterLabAppSettings(jupyterLabAppSettings.let(IResolvable::unwrap))
@@ -1085,6 +1101,8 @@ public open class CfnSpace internal constructor(
 
       public fun customImages(customImages: List<Any>)
 
+      public fun customImages(vararg customImages: Any)
+
       public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
 
       public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
@@ -1107,6 +1125,9 @@ public open class CfnSpace internal constructor(
       override fun customImages(customImages: List<Any>) {
         cdkBuilder.customImages(customImages)
       }
+
+      override fun customImages(vararg customImages: Any): Unit =
+          customImages(customImages.toList())
 
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))

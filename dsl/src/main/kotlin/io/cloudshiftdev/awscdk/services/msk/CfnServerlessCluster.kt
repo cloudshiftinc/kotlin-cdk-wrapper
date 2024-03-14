@@ -65,6 +65,8 @@ public open class CfnServerlessCluster internal constructor(
     unwrap(this).setVpcConfigs(__idx_ac66f0)
   }
 
+  public open fun vpcConfigs(vararg __idx_ac66f0: Any): Unit = vpcConfigs(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun clientAuthentication(clientAuthentication: IResolvable)
 
@@ -82,6 +84,8 @@ public open class CfnServerlessCluster internal constructor(
     public fun vpcConfigs(vpcConfigs: IResolvable)
 
     public fun vpcConfigs(vpcConfigs: List<Any>)
+
+    public fun vpcConfigs(vararg vpcConfigs: Any)
   }
 
   private class BuilderImpl(
@@ -121,6 +125,8 @@ public open class CfnServerlessCluster internal constructor(
       cdkBuilder.vpcConfigs(vpcConfigs)
     }
 
+    override fun vpcConfigs(vararg vpcConfigs: Any): Unit = vpcConfigs(vpcConfigs.toList())
+
     public fun build(): software.amazon.awscdk.services.msk.CfnServerlessCluster =
         cdkBuilder.build()
   }
@@ -154,7 +160,11 @@ public open class CfnServerlessCluster internal constructor(
     public interface Builder {
       public fun securityGroups(securityGroups: List<String>)
 
+      public fun securityGroups(vararg securityGroups: String)
+
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -166,9 +176,14 @@ public open class CfnServerlessCluster internal constructor(
         cdkBuilder.securityGroups(securityGroups)
       }
 
+      override fun securityGroups(vararg securityGroups: String): Unit =
+          securityGroups(securityGroups.toList())
+
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       public fun build(): software.amazon.awscdk.services.msk.CfnServerlessCluster.VpcConfigProperty
           = cdkBuilder.build()
@@ -180,7 +195,7 @@ public open class CfnServerlessCluster internal constructor(
     ) : VpcConfigProperty {
       override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
 
-      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
     }
 
     public companion object {

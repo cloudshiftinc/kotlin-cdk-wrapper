@@ -37,8 +37,7 @@ public open class Stack internal constructor(
 
   public open fun artifactId(): String = unwrap(this).getArtifactId()
 
-  public open fun availabilityZones(): List<String> = unwrap(this).getAvailabilityZones() ?:
-      emptyList()
+  public open fun availabilityZones(): List<String> = unwrap(this).getAvailabilityZones()
 
   public open fun bundlingRequired(): Boolean = unwrap(this).getBundlingRequired()
 
@@ -47,11 +46,11 @@ public open class Stack internal constructor(
   public open fun environment(): String = unwrap(this).getEnvironment()
 
   public open fun exportStringListValue(exportedValue: Any): List<String> =
-      unwrap(this).exportStringListValue(exportedValue) ?: emptyList()
+      unwrap(this).exportStringListValue(exportedValue)
 
   public open fun exportStringListValue(exportedValue: Any, options: ExportValueOptions):
       List<String> = unwrap(this).exportStringListValue(exportedValue,
-      options.let(ExportValueOptions::unwrap)) ?: emptyList()
+      options.let(ExportValueOptions::unwrap))
 
   @Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("c97ef011f5520b889c1c1e0226ad73cc2af75d212f5dd7ed23287f54f3df3eca")
@@ -88,8 +87,7 @@ public open class Stack internal constructor(
   public open fun nestedStackResource(): CfnResource? =
       unwrap(this).getNestedStackResource()?.let(CfnResource::wrap)
 
-  public open fun notificationArns(): List<String> = unwrap(this).getNotificationArns() ?:
-      emptyList()
+  public open fun notificationArns(): List<String> = unwrap(this).getNotificationArns()
 
   public open fun partition(): String = unwrap(this).getPartition()
 

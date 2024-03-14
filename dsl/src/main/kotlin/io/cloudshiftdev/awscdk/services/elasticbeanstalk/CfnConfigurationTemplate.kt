@@ -50,6 +50,9 @@ public open class CfnConfigurationTemplate internal constructor(
     unwrap(this).setOptionSettings(__idx_ac66f0)
   }
 
+  public open fun optionSettings(vararg __idx_ac66f0: Any): Unit =
+      optionSettings(__idx_ac66f0.toList())
+
   public open fun platformArn(): String? = unwrap(this).getPlatformArn()
 
   public open fun platformArn(`value`: String) {
@@ -87,6 +90,8 @@ public open class CfnConfigurationTemplate internal constructor(
     public fun optionSettings(optionSettings: IResolvable)
 
     public fun optionSettings(optionSettings: List<Any>)
+
+    public fun optionSettings(vararg optionSettings: Any)
 
     public fun platformArn(platformArn: String)
 
@@ -130,6 +135,9 @@ public open class CfnConfigurationTemplate internal constructor(
     override fun optionSettings(optionSettings: List<Any>) {
       cdkBuilder.optionSettings(optionSettings)
     }
+
+    override fun optionSettings(vararg optionSettings: Any): Unit =
+        optionSettings(optionSettings.toList())
 
     override fun platformArn(platformArn: String) {
       cdkBuilder.platformArn(platformArn)

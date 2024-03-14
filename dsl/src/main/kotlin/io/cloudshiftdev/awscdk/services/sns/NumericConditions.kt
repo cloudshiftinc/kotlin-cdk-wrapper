@@ -25,6 +25,8 @@ public interface NumericConditions {
   public interface Builder {
     public fun allowlist(allowlist: List<Number>)
 
+    public fun allowlist(vararg allowlist: Number)
+
     public fun between(between: BetweenCondition)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -53,6 +55,8 @@ public interface NumericConditions {
     override fun allowlist(allowlist: List<Number>) {
       cdkBuilder.allowlist(allowlist)
     }
+
+    override fun allowlist(vararg allowlist: Number): Unit = allowlist(allowlist.toList())
 
     override fun between(between: BetweenCondition) {
       cdkBuilder.between(between.let(BetweenCondition::unwrap))

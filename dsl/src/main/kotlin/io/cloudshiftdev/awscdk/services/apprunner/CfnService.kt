@@ -148,6 +148,8 @@ public open class CfnService internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun autoScalingConfigurationArn(autoScalingConfigurationArn: String)
 
@@ -209,6 +211,8 @@ public open class CfnService internal constructor(
         fun sourceConfiguration(sourceConfiguration: SourceConfigurationProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -316,6 +320,8 @@ public open class CfnService internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.apprunner.CfnService = cdkBuilder.build()
   }
@@ -878,9 +884,13 @@ public open class CfnService internal constructor(
 
       public fun runtimeEnvironmentSecrets(runtimeEnvironmentSecrets: List<Any>)
 
+      public fun runtimeEnvironmentSecrets(vararg runtimeEnvironmentSecrets: Any)
+
       public fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: IResolvable)
 
       public fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: List<Any>)
+
+      public fun runtimeEnvironmentVariables(vararg runtimeEnvironmentVariables: Any)
 
       public fun startCommand(startCommand: String)
     }
@@ -902,6 +912,9 @@ public open class CfnService internal constructor(
         cdkBuilder.runtimeEnvironmentSecrets(runtimeEnvironmentSecrets)
       }
 
+      override fun runtimeEnvironmentSecrets(vararg runtimeEnvironmentSecrets: Any): Unit =
+          runtimeEnvironmentSecrets(runtimeEnvironmentSecrets.toList())
+
       override fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: IResolvable) {
         cdkBuilder.runtimeEnvironmentVariables(runtimeEnvironmentVariables.let(IResolvable::unwrap))
       }
@@ -909,6 +922,9 @@ public open class CfnService internal constructor(
       override fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: List<Any>) {
         cdkBuilder.runtimeEnvironmentVariables(runtimeEnvironmentVariables)
       }
+
+      override fun runtimeEnvironmentVariables(vararg runtimeEnvironmentVariables: Any): Unit =
+          runtimeEnvironmentVariables(runtimeEnvironmentVariables.toList())
 
       override fun startCommand(startCommand: String) {
         cdkBuilder.startCommand(startCommand)
@@ -1037,9 +1053,13 @@ public open class CfnService internal constructor(
 
       public fun runtimeEnvironmentSecrets(runtimeEnvironmentSecrets: List<Any>)
 
+      public fun runtimeEnvironmentSecrets(vararg runtimeEnvironmentSecrets: Any)
+
       public fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: IResolvable)
 
       public fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: List<Any>)
+
+      public fun runtimeEnvironmentVariables(vararg runtimeEnvironmentVariables: Any)
 
       public fun startCommand(startCommand: String)
     }
@@ -1070,6 +1090,9 @@ public open class CfnService internal constructor(
         cdkBuilder.runtimeEnvironmentSecrets(runtimeEnvironmentSecrets)
       }
 
+      override fun runtimeEnvironmentSecrets(vararg runtimeEnvironmentSecrets: Any): Unit =
+          runtimeEnvironmentSecrets(runtimeEnvironmentSecrets.toList())
+
       override fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: IResolvable) {
         cdkBuilder.runtimeEnvironmentVariables(runtimeEnvironmentVariables.let(IResolvable::unwrap))
       }
@@ -1077,6 +1100,9 @@ public open class CfnService internal constructor(
       override fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: List<Any>) {
         cdkBuilder.runtimeEnvironmentVariables(runtimeEnvironmentVariables)
       }
+
+      override fun runtimeEnvironmentVariables(vararg runtimeEnvironmentVariables: Any): Unit =
+          runtimeEnvironmentVariables(runtimeEnvironmentVariables.toList())
 
       override fun startCommand(startCommand: String) {
         cdkBuilder.startCommand(startCommand)

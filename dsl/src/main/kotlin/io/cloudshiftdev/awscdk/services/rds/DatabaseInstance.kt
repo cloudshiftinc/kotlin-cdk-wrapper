@@ -99,6 +99,8 @@ public open class DatabaseInstance internal constructor(
 
     public fun cloudwatchLogsExports(cloudwatchLogsExports: List<String>)
 
+    public fun cloudwatchLogsExports(vararg cloudwatchLogsExports: String)
+
     public fun cloudwatchLogsRetention(cloudwatchLogsRetention: RetentionDays)
 
     public fun cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole: IRole)
@@ -169,13 +171,19 @@ public open class DatabaseInstance internal constructor(
 
     public fun s3ExportBuckets(s3ExportBuckets: List<IBucket>)
 
+    public fun s3ExportBuckets(vararg s3ExportBuckets: IBucket)
+
     public fun s3ExportRole(s3ExportRole: IRole)
 
     public fun s3ImportBuckets(s3ImportBuckets: List<IBucket>)
 
+    public fun s3ImportBuckets(vararg s3ImportBuckets: IBucket)
+
     public fun s3ImportRole(s3ImportRole: IRole)
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
+
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
 
     public fun storageEncrypted(storageEncrypted: Boolean)
 
@@ -236,6 +244,9 @@ public open class DatabaseInstance internal constructor(
     override fun cloudwatchLogsExports(cloudwatchLogsExports: List<String>) {
       cdkBuilder.cloudwatchLogsExports(cloudwatchLogsExports)
     }
+
+    override fun cloudwatchLogsExports(vararg cloudwatchLogsExports: String): Unit =
+        cloudwatchLogsExports(cloudwatchLogsExports.toList())
 
     override fun cloudwatchLogsRetention(cloudwatchLogsRetention: RetentionDays) {
       cdkBuilder.cloudwatchLogsRetention(cloudwatchLogsRetention.let(RetentionDays::unwrap))
@@ -375,6 +386,9 @@ public open class DatabaseInstance internal constructor(
       cdkBuilder.s3ExportBuckets(s3ExportBuckets.map(IBucket::unwrap))
     }
 
+    override fun s3ExportBuckets(vararg s3ExportBuckets: IBucket): Unit =
+        s3ExportBuckets(s3ExportBuckets.toList())
+
     override fun s3ExportRole(s3ExportRole: IRole) {
       cdkBuilder.s3ExportRole(s3ExportRole.let(IRole::unwrap))
     }
@@ -383,6 +397,9 @@ public open class DatabaseInstance internal constructor(
       cdkBuilder.s3ImportBuckets(s3ImportBuckets.map(IBucket::unwrap))
     }
 
+    override fun s3ImportBuckets(vararg s3ImportBuckets: IBucket): Unit =
+        s3ImportBuckets(s3ImportBuckets.toList())
+
     override fun s3ImportRole(s3ImportRole: IRole) {
       cdkBuilder.s3ImportRole(s3ImportRole.let(IRole::unwrap))
     }
@@ -390,6 +407,9 @@ public open class DatabaseInstance internal constructor(
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun storageEncrypted(storageEncrypted: Boolean) {
       cdkBuilder.storageEncrypted(storageEncrypted)

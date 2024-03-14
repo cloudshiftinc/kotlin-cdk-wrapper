@@ -25,6 +25,8 @@ public interface AmiContextQuery {
 
     public fun owners(owners: List<String>)
 
+    public fun owners(vararg owners: String)
+
     public fun region(region: String)
   }
 
@@ -47,6 +49,8 @@ public interface AmiContextQuery {
     override fun owners(owners: List<String>) {
       cdkBuilder.owners(owners)
     }
+
+    override fun owners(vararg owners: String): Unit = owners(owners.toList())
 
     override fun region(region: String) {
       cdkBuilder.region(region)

@@ -46,6 +46,9 @@ public open class CfnView internal constructor(
     unwrap(this).setIncludedProperties(__idx_ac66f0)
   }
 
+  public open fun includedProperties(vararg __idx_ac66f0: Any): Unit =
+      includedProperties(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -83,6 +86,8 @@ public open class CfnView internal constructor(
 
     public fun includedProperties(includedProperties: List<Any>)
 
+    public fun includedProperties(vararg includedProperties: Any)
+
     public fun scope(scope: String)
 
     public fun tags(tags: Map<String, String>)
@@ -117,6 +122,9 @@ public open class CfnView internal constructor(
     override fun includedProperties(includedProperties: List<Any>) {
       cdkBuilder.includedProperties(includedProperties)
     }
+
+    override fun includedProperties(vararg includedProperties: Any): Unit =
+        includedProperties(includedProperties.toList())
 
     override fun scope(scope: String) {
       cdkBuilder.scope(scope)

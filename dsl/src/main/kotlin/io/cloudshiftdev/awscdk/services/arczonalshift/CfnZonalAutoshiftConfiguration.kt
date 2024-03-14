@@ -135,15 +135,23 @@ public open class CfnZonalAutoshiftConfiguration internal constructor(
     public interface Builder {
       public fun blockedDates(blockedDates: List<String>)
 
+      public fun blockedDates(vararg blockedDates: String)
+
       public fun blockedWindows(blockedWindows: List<String>)
+
+      public fun blockedWindows(vararg blockedWindows: String)
 
       public fun blockingAlarms(blockingAlarms: IResolvable)
 
       public fun blockingAlarms(blockingAlarms: List<Any>)
 
+      public fun blockingAlarms(vararg blockingAlarms: Any)
+
       public fun outcomeAlarms(outcomeAlarms: IResolvable)
 
       public fun outcomeAlarms(outcomeAlarms: List<Any>)
+
+      public fun outcomeAlarms(vararg outcomeAlarms: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -156,9 +164,15 @@ public open class CfnZonalAutoshiftConfiguration internal constructor(
         cdkBuilder.blockedDates(blockedDates)
       }
 
+      override fun blockedDates(vararg blockedDates: String): Unit =
+          blockedDates(blockedDates.toList())
+
       override fun blockedWindows(blockedWindows: List<String>) {
         cdkBuilder.blockedWindows(blockedWindows)
       }
+
+      override fun blockedWindows(vararg blockedWindows: String): Unit =
+          blockedWindows(blockedWindows.toList())
 
       override fun blockingAlarms(blockingAlarms: IResolvable) {
         cdkBuilder.blockingAlarms(blockingAlarms.let(IResolvable::unwrap))
@@ -168,6 +182,9 @@ public open class CfnZonalAutoshiftConfiguration internal constructor(
         cdkBuilder.blockingAlarms(blockingAlarms)
       }
 
+      override fun blockingAlarms(vararg blockingAlarms: Any): Unit =
+          blockingAlarms(blockingAlarms.toList())
+
       override fun outcomeAlarms(outcomeAlarms: IResolvable) {
         cdkBuilder.outcomeAlarms(outcomeAlarms.let(IResolvable::unwrap))
       }
@@ -175,6 +192,9 @@ public open class CfnZonalAutoshiftConfiguration internal constructor(
       override fun outcomeAlarms(outcomeAlarms: List<Any>) {
         cdkBuilder.outcomeAlarms(outcomeAlarms)
       }
+
+      override fun outcomeAlarms(vararg outcomeAlarms: Any): Unit =
+          outcomeAlarms(outcomeAlarms.toList())
 
       public fun build():
           software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration.PracticeRunConfigurationProperty

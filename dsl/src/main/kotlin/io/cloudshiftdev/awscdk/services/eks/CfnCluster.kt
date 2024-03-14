@@ -66,6 +66,9 @@ public open class CfnCluster internal constructor(
     unwrap(this).setEncryptionConfig(__idx_ac66f0)
   }
 
+  public open fun encryptionConfig(vararg __idx_ac66f0: Any): Unit =
+      encryptionConfig(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -152,6 +155,8 @@ public open class CfnCluster internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun version(): String? = unwrap(this).getVersion()
 
   public open fun version(`value`: String) {
@@ -170,6 +175,8 @@ public open class CfnCluster internal constructor(
     public fun encryptionConfig(encryptionConfig: IResolvable)
 
     public fun encryptionConfig(encryptionConfig: List<Any>)
+
+    public fun encryptionConfig(vararg encryptionConfig: Any)
 
     public fun kubernetesNetworkConfig(kubernetesNetworkConfig: IResolvable)
 
@@ -210,6 +217,8 @@ public open class CfnCluster internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun version(version: String)
   }
 
@@ -240,6 +249,9 @@ public open class CfnCluster internal constructor(
     override fun encryptionConfig(encryptionConfig: List<Any>) {
       cdkBuilder.encryptionConfig(encryptionConfig)
     }
+
+    override fun encryptionConfig(vararg encryptionConfig: Any): Unit =
+        encryptionConfig(encryptionConfig.toList())
 
     override fun kubernetesNetworkConfig(kubernetesNetworkConfig: IResolvable) {
       cdkBuilder.kubernetesNetworkConfig(kubernetesNetworkConfig.let(IResolvable::unwrap))
@@ -306,6 +318,8 @@ public open class CfnCluster internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun version(version: String) {
       cdkBuilder.version(version)
@@ -458,6 +472,8 @@ public open class CfnCluster internal constructor(
       public fun enabledTypes(enabledTypes: IResolvable)
 
       public fun enabledTypes(enabledTypes: List<Any>)
+
+      public fun enabledTypes(vararg enabledTypes: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -472,6 +488,9 @@ public open class CfnCluster internal constructor(
       override fun enabledTypes(enabledTypes: List<Any>) {
         cdkBuilder.enabledTypes(enabledTypes)
       }
+
+      override fun enabledTypes(vararg enabledTypes: Any): Unit =
+          enabledTypes(enabledTypes.toList())
 
       public fun build(): software.amazon.awscdk.services.eks.CfnCluster.ClusterLoggingProperty =
           cdkBuilder.build()
@@ -526,9 +545,15 @@ public open class CfnCluster internal constructor(
 
       public fun publicAccessCidrs(publicAccessCidrs: List<String>)
 
+      public fun publicAccessCidrs(vararg publicAccessCidrs: String)
+
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -556,13 +581,21 @@ public open class CfnCluster internal constructor(
         cdkBuilder.publicAccessCidrs(publicAccessCidrs)
       }
 
+      override fun publicAccessCidrs(vararg publicAccessCidrs: String): Unit =
+          publicAccessCidrs(publicAccessCidrs.toList())
+
       override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       public fun build(): software.amazon.awscdk.services.eks.CfnCluster.ResourcesVpcConfigProperty
           = cdkBuilder.build()
@@ -582,7 +615,7 @@ public open class CfnCluster internal constructor(
       override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
     }
 
     public companion object {
@@ -729,6 +762,8 @@ public open class CfnCluster internal constructor(
           fun controlPlanePlacement(controlPlanePlacement: ControlPlanePlacementProperty.Builder.() -> Unit)
 
       public fun outpostArns(outpostArns: List<String>)
+
+      public fun outpostArns(vararg outpostArns: String)
     }
 
     private class BuilderImpl : Builder {
@@ -758,6 +793,8 @@ public open class CfnCluster internal constructor(
         cdkBuilder.outpostArns(outpostArns)
       }
 
+      override fun outpostArns(vararg outpostArns: String): Unit = outpostArns(outpostArns.toList())
+
       public fun build(): software.amazon.awscdk.services.eks.CfnCluster.OutpostConfigProperty =
           cdkBuilder.build()
     }
@@ -769,7 +806,7 @@ public open class CfnCluster internal constructor(
 
       override fun controlPlanePlacement(): Any? = unwrap(this).getControlPlanePlacement()
 
-      override fun outpostArns(): List<String> = unwrap(this).getOutpostArns() ?: emptyList()
+      override fun outpostArns(): List<String> = unwrap(this).getOutpostArns()
     }
 
     public companion object {
@@ -922,6 +959,8 @@ public open class CfnCluster internal constructor(
       public fun provider(provider: ProviderProperty.Builder.() -> Unit)
 
       public fun resources(resources: List<String>)
+
+      public fun resources(vararg resources: String)
     }
 
     private class BuilderImpl : Builder {
@@ -945,6 +984,8 @@ public open class CfnCluster internal constructor(
       override fun resources(resources: List<String>) {
         cdkBuilder.resources(resources)
       }
+
+      override fun resources(vararg resources: String): Unit = resources(resources.toList())
 
       public fun build(): software.amazon.awscdk.services.eks.CfnCluster.EncryptionConfigProperty =
           cdkBuilder.build()

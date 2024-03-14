@@ -32,6 +32,8 @@ public open class FlowLog internal constructor(
 
     public fun logFormat(logFormat: List<LogFormat>)
 
+    public fun logFormat(vararg logFormat: LogFormat)
+
     public fun maxAggregationInterval(maxAggregationInterval: FlowLogMaxAggregationInterval)
 
     public fun resourceType(resourceType: FlowLogResourceType)
@@ -57,6 +59,8 @@ public open class FlowLog internal constructor(
     override fun logFormat(logFormat: List<LogFormat>) {
       cdkBuilder.logFormat(logFormat.map(LogFormat::unwrap))
     }
+
+    override fun logFormat(vararg logFormat: LogFormat): Unit = logFormat(logFormat.toList())
 
     override fun maxAggregationInterval(maxAggregationInterval: FlowLogMaxAggregationInterval) {
       cdkBuilder.maxAggregationInterval(maxAggregationInterval.let(FlowLogMaxAggregationInterval::unwrap))

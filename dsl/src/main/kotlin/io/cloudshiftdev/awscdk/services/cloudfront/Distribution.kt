@@ -225,6 +225,8 @@ public open class Distribution internal constructor(
 
     public fun domainNames(domainNames: List<String>)
 
+    public fun domainNames(vararg domainNames: String)
+
     public fun enableIpv6(enableIpv6: Boolean)
 
     public fun enableLogging(enableLogging: Boolean)
@@ -232,6 +234,8 @@ public open class Distribution internal constructor(
     public fun enabled(enabled: Boolean)
 
     public fun errorResponses(errorResponses: List<ErrorResponse>)
+
+    public fun errorResponses(vararg errorResponses: ErrorResponse)
 
     public fun geoRestriction(geoRestriction: GeoRestriction)
 
@@ -290,6 +294,8 @@ public open class Distribution internal constructor(
       cdkBuilder.domainNames(domainNames)
     }
 
+    override fun domainNames(vararg domainNames: String): Unit = domainNames(domainNames.toList())
+
     override fun enableIpv6(enableIpv6: Boolean) {
       cdkBuilder.enableIpv6(enableIpv6)
     }
@@ -305,6 +311,9 @@ public open class Distribution internal constructor(
     override fun errorResponses(errorResponses: List<ErrorResponse>) {
       cdkBuilder.errorResponses(errorResponses.map(ErrorResponse::unwrap))
     }
+
+    override fun errorResponses(vararg errorResponses: ErrorResponse): Unit =
+        errorResponses(errorResponses.toList())
 
     override fun geoRestriction(geoRestriction: GeoRestriction) {
       cdkBuilder.geoRestriction(geoRestriction.let(GeoRestriction::unwrap))

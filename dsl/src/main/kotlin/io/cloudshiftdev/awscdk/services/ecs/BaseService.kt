@@ -79,6 +79,9 @@ public abstract class BaseService internal constructor(
     unwrap(this).enableDeploymentAlarms(alarmNames)
   }
 
+  public open fun enableDeploymentAlarms(vararg alarmNames: String): Unit =
+      enableDeploymentAlarms(alarmNames.toList())
+
   public open fun enableDeploymentAlarms(alarmNames: List<String>,
       options: DeploymentAlarmOptions) {
     unwrap(this).enableDeploymentAlarms(alarmNames, options.let(DeploymentAlarmOptions::unwrap))

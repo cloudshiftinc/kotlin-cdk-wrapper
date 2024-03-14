@@ -202,6 +202,8 @@ public open class CfnLoggingConfiguration internal constructor(
       public fun logDestinationConfigs(logDestinationConfigs: IResolvable)
 
       public fun logDestinationConfigs(logDestinationConfigs: List<Any>)
+
+      public fun logDestinationConfigs(vararg logDestinationConfigs: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -217,6 +219,9 @@ public open class CfnLoggingConfiguration internal constructor(
       override fun logDestinationConfigs(logDestinationConfigs: List<Any>) {
         cdkBuilder.logDestinationConfigs(logDestinationConfigs)
       }
+
+      override fun logDestinationConfigs(vararg logDestinationConfigs: Any): Unit =
+          logDestinationConfigs(logDestinationConfigs.toList())
 
       public fun build():
           software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration.LoggingConfigurationProperty

@@ -35,11 +35,15 @@ public open class UserPoolIdentityProviderOidc internal constructor(
 
     public fun identifiers(identifiers: List<String>)
 
+    public fun identifiers(vararg identifiers: String)
+
     public fun issuerUrl(issuerUrl: String)
 
     public fun name(name: String)
 
     public fun scopes(scopes: List<String>)
+
+    public fun scopes(vararg scopes: String)
 
     public fun userPool(userPool: IUserPool)
   }
@@ -87,6 +91,8 @@ public open class UserPoolIdentityProviderOidc internal constructor(
       cdkBuilder.identifiers(identifiers)
     }
 
+    override fun identifiers(vararg identifiers: String): Unit = identifiers(identifiers.toList())
+
     override fun issuerUrl(issuerUrl: String) {
       cdkBuilder.issuerUrl(issuerUrl)
     }
@@ -98,6 +104,8 @@ public open class UserPoolIdentityProviderOidc internal constructor(
     override fun scopes(scopes: List<String>) {
       cdkBuilder.scopes(scopes)
     }
+
+    override fun scopes(vararg scopes: String): Unit = scopes(scopes.toList())
 
     override fun userPool(userPool: IUserPool) {
       cdkBuilder.userPool(userPool.let(IUserPool::unwrap))

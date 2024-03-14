@@ -23,11 +23,15 @@ public interface ContainerOverride {
   public interface Builder {
     public fun command(command: List<String>)
 
+    public fun command(vararg command: String)
+
     public fun containerDefinition(containerDefinition: ContainerDefinition)
 
     public fun cpu(cpu: Number)
 
     public fun environment(environment: List<TaskEnvironmentVariable>)
+
+    public fun environment(vararg environment: TaskEnvironmentVariable)
 
     public fun memoryLimit(memoryLimit: Number)
 
@@ -43,6 +47,8 @@ public interface ContainerOverride {
       cdkBuilder.command(command)
     }
 
+    override fun command(vararg command: String): Unit = command(command.toList())
+
     override fun containerDefinition(containerDefinition: ContainerDefinition) {
       cdkBuilder.containerDefinition(containerDefinition.let(ContainerDefinition::unwrap))
     }
@@ -54,6 +60,9 @@ public interface ContainerOverride {
     override fun environment(environment: List<TaskEnvironmentVariable>) {
       cdkBuilder.environment(environment.map(TaskEnvironmentVariable::unwrap))
     }
+
+    override fun environment(vararg environment: TaskEnvironmentVariable): Unit =
+        environment(environment.toList())
 
     override fun memoryLimit(memoryLimit: Number) {
       cdkBuilder.memoryLimit(memoryLimit)

@@ -71,6 +71,9 @@ public open class CfnInstance internal constructor(
     unwrap(this).setBlockDeviceMappings(__idx_ac66f0)
   }
 
+  public open fun blockDeviceMappings(vararg __idx_ac66f0: Any): Unit =
+      blockDeviceMappings(__idx_ac66f0.toList())
+
   public open fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
 
   public open fun ebsOptimized(`value`: Boolean) {
@@ -86,6 +89,8 @@ public open class CfnInstance internal constructor(
   public open fun elasticIps(`value`: List<String>) {
     unwrap(this).setElasticIps(`value`)
   }
+
+  public open fun elasticIps(vararg `value`: String): Unit = elasticIps(`value`.toList())
 
   public open fun hostname(): String? = unwrap(this).getHostname()
 
@@ -113,11 +118,13 @@ public open class CfnInstance internal constructor(
     unwrap(this).setInstanceType(`value`)
   }
 
-  public open fun layerIds(): List<String> = unwrap(this).getLayerIds() ?: emptyList()
+  public open fun layerIds(): List<String> = unwrap(this).getLayerIds()
 
   public open fun layerIds(`value`: List<String>) {
     unwrap(this).setLayerIds(`value`)
   }
+
+  public open fun layerIds(vararg `value`: String): Unit = layerIds(`value`.toList())
 
   public open fun os(): String? = unwrap(this).getOs()
 
@@ -182,6 +189,8 @@ public open class CfnInstance internal constructor(
     unwrap(this).setVolumes(`value`)
   }
 
+  public open fun volumes(vararg `value`: String): Unit = volumes(`value`.toList())
+
   public interface Builder {
     public fun agentVersion(agentVersion: String)
 
@@ -197,11 +206,15 @@ public open class CfnInstance internal constructor(
 
     public fun blockDeviceMappings(blockDeviceMappings: List<Any>)
 
+    public fun blockDeviceMappings(vararg blockDeviceMappings: Any)
+
     public fun ebsOptimized(ebsOptimized: Boolean)
 
     public fun ebsOptimized(ebsOptimized: IResolvable)
 
     public fun elasticIps(elasticIps: List<String>)
+
+    public fun elasticIps(vararg elasticIps: String)
 
     public fun hostname(hostname: String)
 
@@ -212,6 +225,8 @@ public open class CfnInstance internal constructor(
     public fun instanceType(instanceType: String)
 
     public fun layerIds(layerIds: List<String>)
+
+    public fun layerIds(vararg layerIds: String)
 
     public fun os(os: String)
 
@@ -237,6 +252,8 @@ public open class CfnInstance internal constructor(
     public fun virtualizationType(virtualizationType: String)
 
     public fun volumes(volumes: List<String>)
+
+    public fun volumes(vararg volumes: String)
   }
 
   private class BuilderImpl(
@@ -274,6 +291,9 @@ public open class CfnInstance internal constructor(
       cdkBuilder.blockDeviceMappings(blockDeviceMappings)
     }
 
+    override fun blockDeviceMappings(vararg blockDeviceMappings: Any): Unit =
+        blockDeviceMappings(blockDeviceMappings.toList())
+
     override fun ebsOptimized(ebsOptimized: Boolean) {
       cdkBuilder.ebsOptimized(ebsOptimized)
     }
@@ -285,6 +305,8 @@ public open class CfnInstance internal constructor(
     override fun elasticIps(elasticIps: List<String>) {
       cdkBuilder.elasticIps(elasticIps)
     }
+
+    override fun elasticIps(vararg elasticIps: String): Unit = elasticIps(elasticIps.toList())
 
     override fun hostname(hostname: String) {
       cdkBuilder.hostname(hostname)
@@ -305,6 +327,8 @@ public open class CfnInstance internal constructor(
     override fun layerIds(layerIds: List<String>) {
       cdkBuilder.layerIds(layerIds)
     }
+
+    override fun layerIds(vararg layerIds: String): Unit = layerIds(layerIds.toList())
 
     override fun os(os: String) {
       cdkBuilder.os(os)
@@ -351,6 +375,8 @@ public open class CfnInstance internal constructor(
     override fun volumes(volumes: List<String>) {
       cdkBuilder.volumes(volumes)
     }
+
+    override fun volumes(vararg volumes: String): Unit = volumes(volumes.toList())
 
     public fun build(): software.amazon.awscdk.services.opsworks.CfnInstance = cdkBuilder.build()
   }

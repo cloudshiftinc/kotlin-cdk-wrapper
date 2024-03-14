@@ -23,11 +23,15 @@ public open class NotificationRule internal constructor(
 
     public fun events(events: List<String>)
 
+    public fun events(vararg events: String)
+
     public fun notificationRuleName(notificationRuleName: String)
 
     public fun source(source: INotificationRuleSource)
 
     public fun targets(targets: List<INotificationRuleTarget>)
+
+    public fun targets(vararg targets: INotificationRuleTarget)
   }
 
   private class BuilderImpl(
@@ -51,6 +55,8 @@ public open class NotificationRule internal constructor(
       cdkBuilder.events(events)
     }
 
+    override fun events(vararg events: String): Unit = events(events.toList())
+
     override fun notificationRuleName(notificationRuleName: String) {
       cdkBuilder.notificationRuleName(notificationRuleName)
     }
@@ -62,6 +68,8 @@ public open class NotificationRule internal constructor(
     override fun targets(targets: List<INotificationRuleTarget>) {
       cdkBuilder.targets(targets.map(INotificationRuleTarget::unwrap))
     }
+
+    override fun targets(vararg targets: INotificationRuleTarget): Unit = targets(targets.toList())
 
     public fun build(): software.amazon.awscdk.services.codestarnotifications.NotificationRule =
         cdkBuilder.build()

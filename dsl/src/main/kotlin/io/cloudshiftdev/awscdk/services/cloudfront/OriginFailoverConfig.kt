@@ -13,6 +13,8 @@ public interface OriginFailoverConfig {
     public fun failoverOrigin(failoverOrigin: IOrigin)
 
     public fun statusCodes(statusCodes: List<Number>)
+
+    public fun statusCodes(vararg statusCodes: Number)
   }
 
   private class BuilderImpl : Builder {
@@ -26,6 +28,8 @@ public interface OriginFailoverConfig {
     override fun statusCodes(statusCodes: List<Number>) {
       cdkBuilder.statusCodes(statusCodes)
     }
+
+    override fun statusCodes(vararg statusCodes: Number): Unit = statusCodes(statusCodes.toList())
 
     public fun build(): software.amazon.awscdk.services.cloudfront.OriginFailoverConfig =
         cdkBuilder.build()

@@ -30,6 +30,8 @@ public open class CfnResponsePlan internal constructor(
     unwrap(this).setActions(__idx_ac66f0)
   }
 
+  public open fun actions(vararg __idx_ac66f0: Any): Unit = actions(__idx_ac66f0.toList())
+
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   public open fun chatChannel(): Any? = unwrap(this).getChatChannel()
@@ -58,6 +60,8 @@ public open class CfnResponsePlan internal constructor(
   public open fun engagements(`value`: List<String>) {
     unwrap(this).setEngagements(`value`)
   }
+
+  public open fun engagements(vararg `value`: String): Unit = engagements(`value`.toList())
 
   public open fun incidentTemplate(): Any = unwrap(this).getIncidentTemplate()
 
@@ -88,6 +92,8 @@ public open class CfnResponsePlan internal constructor(
     unwrap(this).setIntegrations(__idx_ac66f0)
   }
 
+  public open fun integrations(vararg __idx_ac66f0: Any): Unit = integrations(__idx_ac66f0.toList())
+
   public open fun name(): String = unwrap(this).getName()
 
   public open fun name(`value`: String) {
@@ -103,10 +109,14 @@ public open class CfnResponsePlan internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun actions(actions: IResolvable)
 
     public fun actions(actions: List<Any>)
+
+    public fun actions(vararg actions: Any)
 
     public fun chatChannel(chatChannel: IResolvable)
 
@@ -120,6 +130,8 @@ public open class CfnResponsePlan internal constructor(
 
     public fun engagements(engagements: List<String>)
 
+    public fun engagements(vararg engagements: String)
+
     public fun incidentTemplate(incidentTemplate: IResolvable)
 
     public fun incidentTemplate(incidentTemplate: IncidentTemplateProperty)
@@ -132,9 +144,13 @@ public open class CfnResponsePlan internal constructor(
 
     public fun integrations(integrations: List<Any>)
 
+    public fun integrations(vararg integrations: Any)
+
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -151,6 +167,8 @@ public open class CfnResponsePlan internal constructor(
     override fun actions(actions: List<Any>) {
       cdkBuilder.actions(actions)
     }
+
+    override fun actions(vararg actions: Any): Unit = actions(actions.toList())
 
     override fun chatChannel(chatChannel: IResolvable) {
       cdkBuilder.chatChannel(chatChannel.let(IResolvable::unwrap))
@@ -173,6 +191,8 @@ public open class CfnResponsePlan internal constructor(
       cdkBuilder.engagements(engagements)
     }
 
+    override fun engagements(vararg engagements: String): Unit = engagements(engagements.toList())
+
     override fun incidentTemplate(incidentTemplate: IResolvable) {
       cdkBuilder.incidentTemplate(incidentTemplate.let(IResolvable::unwrap))
     }
@@ -194,6 +214,8 @@ public open class CfnResponsePlan internal constructor(
       cdkBuilder.integrations(integrations)
     }
 
+    override fun integrations(vararg integrations: Any): Unit = integrations(integrations.toList())
+
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -201,6 +223,8 @@ public open class CfnResponsePlan internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ssmincidents.CfnResponsePlan =
         cdkBuilder.build()
@@ -236,6 +260,8 @@ public open class CfnResponsePlan internal constructor(
       public fun key(key: String)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -252,6 +278,8 @@ public open class CfnResponsePlan internal constructor(
         cdkBuilder.values(values)
       }
 
+      override fun values(vararg values: String): Unit = values(values.toList())
+
       public fun build():
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.SsmParameterProperty =
           cdkBuilder.build()
@@ -263,7 +291,7 @@ public open class CfnResponsePlan internal constructor(
     ) : SsmParameterProperty {
       override fun key(): String = unwrap(this).getKey()
 
-      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues()
     }
 
     public companion object {
@@ -422,9 +450,13 @@ public open class CfnResponsePlan internal constructor(
 
       public fun dynamicParameters(dynamicParameters: List<Any>)
 
+      public fun dynamicParameters(vararg dynamicParameters: Any)
+
       public fun parameters(parameters: IResolvable)
 
       public fun parameters(parameters: List<Any>)
+
+      public fun parameters(vararg parameters: Any)
 
       public fun roleArn(roleArn: String)
 
@@ -453,6 +485,9 @@ public open class CfnResponsePlan internal constructor(
         cdkBuilder.dynamicParameters(dynamicParameters)
       }
 
+      override fun dynamicParameters(vararg dynamicParameters: Any): Unit =
+          dynamicParameters(dynamicParameters.toList())
+
       override fun parameters(parameters: IResolvable) {
         cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
       }
@@ -460,6 +495,8 @@ public open class CfnResponsePlan internal constructor(
       override fun parameters(parameters: List<Any>) {
         cdkBuilder.parameters(parameters)
       }
+
+      override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
 
       override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
@@ -769,9 +806,13 @@ public open class CfnResponsePlan internal constructor(
 
       public fun incidentTags(incidentTags: List<Any>)
 
+      public fun incidentTags(vararg incidentTags: Any)
+
       public fun notificationTargets(notificationTargets: IResolvable)
 
       public fun notificationTargets(notificationTargets: List<Any>)
+
+      public fun notificationTargets(vararg notificationTargets: Any)
 
       public fun summary(summary: String)
 
@@ -800,6 +841,9 @@ public open class CfnResponsePlan internal constructor(
         cdkBuilder.incidentTags(incidentTags)
       }
 
+      override fun incidentTags(vararg incidentTags: Any): Unit =
+          incidentTags(incidentTags.toList())
+
       override fun notificationTargets(notificationTargets: IResolvable) {
         cdkBuilder.notificationTargets(notificationTargets.let(IResolvable::unwrap))
       }
@@ -807,6 +851,9 @@ public open class CfnResponsePlan internal constructor(
       override fun notificationTargets(notificationTargets: List<Any>) {
         cdkBuilder.notificationTargets(notificationTargets)
       }
+
+      override fun notificationTargets(vararg notificationTargets: Any): Unit =
+          notificationTargets(notificationTargets.toList())
 
       override fun summary(summary: String) {
         cdkBuilder.summary(summary)
@@ -863,6 +910,8 @@ public open class CfnResponsePlan internal constructor(
 
     public interface Builder {
       public fun chatbotSns(chatbotSns: List<String>)
+
+      public fun chatbotSns(vararg chatbotSns: String)
     }
 
     private class BuilderImpl : Builder {
@@ -873,6 +922,8 @@ public open class CfnResponsePlan internal constructor(
       override fun chatbotSns(chatbotSns: List<String>) {
         cdkBuilder.chatbotSns(chatbotSns)
       }
+
+      override fun chatbotSns(vararg chatbotSns: String): Unit = chatbotSns(chatbotSns.toList())
 
       public fun build():
           software.amazon.awscdk.services.ssmincidents.CfnResponsePlan.ChatChannelProperty =

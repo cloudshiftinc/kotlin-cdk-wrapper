@@ -13,6 +13,8 @@ public interface CsvOptions {
     public fun delimiter(delimiter: String)
 
     public fun headerList(headerList: List<String>)
+
+    public fun headerList(vararg headerList: String)
   }
 
   private class BuilderImpl : Builder {
@@ -26,6 +28,8 @@ public interface CsvOptions {
     override fun headerList(headerList: List<String>) {
       cdkBuilder.headerList(headerList)
     }
+
+    override fun headerList(vararg headerList: String): Unit = headerList(headerList.toList())
 
     public fun build(): software.amazon.awscdk.services.dynamodb.CsvOptions = cdkBuilder.build()
   }

@@ -26,6 +26,8 @@ public interface ConfigurationOptions {
   public interface Builder {
     public fun deployTo(deployTo: List<IEnvironment>)
 
+    public fun deployTo(vararg deployTo: IEnvironment)
+
     public fun deploymentKey(deploymentKey: IKey)
 
     public fun deploymentStrategy(deploymentStrategy: IDeploymentStrategy)
@@ -37,6 +39,8 @@ public interface ConfigurationOptions {
     public fun type(type: ConfigurationType)
 
     public fun validators(validators: List<IValidator>)
+
+    public fun validators(vararg validators: IValidator)
   }
 
   private class BuilderImpl : Builder {
@@ -46,6 +50,8 @@ public interface ConfigurationOptions {
     override fun deployTo(deployTo: List<IEnvironment>) {
       cdkBuilder.deployTo(deployTo.map(IEnvironment::unwrap))
     }
+
+    override fun deployTo(vararg deployTo: IEnvironment): Unit = deployTo(deployTo.toList())
 
     override fun deploymentKey(deploymentKey: IKey) {
       cdkBuilder.deploymentKey(deploymentKey.let(IKey::unwrap))
@@ -70,6 +76,8 @@ public interface ConfigurationOptions {
     override fun validators(validators: List<IValidator>) {
       cdkBuilder.validators(validators.map(IValidator::unwrap))
     }
+
+    override fun validators(vararg validators: IValidator): Unit = validators(validators.toList())
 
     public fun build(): software.amazon.awscdk.services.appconfig.ConfigurationOptions =
         cdkBuilder.build()

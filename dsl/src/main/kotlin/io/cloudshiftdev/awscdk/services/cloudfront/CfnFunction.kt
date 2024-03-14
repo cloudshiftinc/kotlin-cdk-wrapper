@@ -241,6 +241,8 @@ public open class CfnFunction internal constructor(
 
       public fun keyValueStoreAssociations(keyValueStoreAssociations: List<Any>)
 
+      public fun keyValueStoreAssociations(vararg keyValueStoreAssociations: Any)
+
       public fun runtime(runtime: String)
     }
 
@@ -260,6 +262,9 @@ public open class CfnFunction internal constructor(
       override fun keyValueStoreAssociations(keyValueStoreAssociations: List<Any>) {
         cdkBuilder.keyValueStoreAssociations(keyValueStoreAssociations)
       }
+
+      override fun keyValueStoreAssociations(vararg keyValueStoreAssociations: Any): Unit =
+          keyValueStoreAssociations(keyValueStoreAssociations.toList())
 
       override fun runtime(runtime: String) {
         cdkBuilder.runtime(runtime)

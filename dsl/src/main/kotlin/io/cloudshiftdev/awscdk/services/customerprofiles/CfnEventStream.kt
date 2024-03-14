@@ -55,6 +55,8 @@ public open class CfnEventStream internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public open fun uri(): String = unwrap(this).getUri()
 
   public open fun uri(`value`: String) {
@@ -67,6 +69,8 @@ public open class CfnEventStream internal constructor(
     public fun eventStreamName(eventStreamName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun uri(uri: String)
   }
@@ -89,6 +93,8 @@ public open class CfnEventStream internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun uri(uri: String) {
       cdkBuilder.uri(uri)

@@ -17,6 +17,8 @@ public open class KeyGroup internal constructor(
 
     public fun items(items: List<IPublicKey>)
 
+    public fun items(vararg items: IPublicKey)
+
     public fun keyGroupName(keyGroupName: String)
   }
 
@@ -34,6 +36,8 @@ public open class KeyGroup internal constructor(
     override fun items(items: List<IPublicKey>) {
       cdkBuilder.items(items.map(IPublicKey::unwrap))
     }
+
+    override fun items(vararg items: IPublicKey): Unit = items(items.toList())
 
     override fun keyGroupName(keyGroupName: String) {
       cdkBuilder.keyGroupName(keyGroupName)

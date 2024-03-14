@@ -25,7 +25,7 @@ public open class CfnEndpointAuthorization internal constructor(
   public open fun attrAllowedAllVpCs(): IResolvable =
       unwrap(this).getAttrAllowedAllVpCs().let(IResolvable::wrap)
 
-  public open fun attrAllowedVpCs(): List<String> = unwrap(this).getAttrAllowedVpCs() ?: emptyList()
+  public open fun attrAllowedVpCs(): List<String> = unwrap(this).getAttrAllowedVpCs()
 
   public open fun attrAuthorizeTime(): String = unwrap(this).getAttrAuthorizeTime()
 
@@ -65,6 +65,8 @@ public open class CfnEndpointAuthorization internal constructor(
     unwrap(this).setVpcIds(`value`)
   }
 
+  public open fun vpcIds(vararg `value`: String): Unit = vpcIds(`value`.toList())
+
   public interface Builder {
     public fun account(account: String)
 
@@ -75,6 +77,8 @@ public open class CfnEndpointAuthorization internal constructor(
     public fun force(force: IResolvable)
 
     public fun vpcIds(vpcIds: List<String>)
+
+    public fun vpcIds(vararg vpcIds: String)
   }
 
   private class BuilderImpl(
@@ -104,6 +108,8 @@ public open class CfnEndpointAuthorization internal constructor(
     override fun vpcIds(vpcIds: List<String>) {
       cdkBuilder.vpcIds(vpcIds)
     }
+
+    override fun vpcIds(vararg vpcIds: String): Unit = vpcIds(vpcIds.toList())
 
     public fun build(): software.amazon.awscdk.services.redshift.CfnEndpointAuthorization =
         cdkBuilder.build()

@@ -38,11 +38,15 @@ public open class AssetApiDefinition internal constructor(
 
     public fun exclude(exclude: List<String>)
 
+    public fun exclude(vararg exclude: String)
+
     public fun followSymlinks(followSymlinks: SymlinkFollowMode)
 
     public fun ignoreMode(ignoreMode: IgnoreMode)
 
     public fun readers(readers: List<IGrantable>)
+
+    public fun readers(vararg readers: IGrantable)
   }
 
   private class BuilderImpl(
@@ -76,6 +80,8 @@ public open class AssetApiDefinition internal constructor(
       cdkBuilder.exclude(exclude)
     }
 
+    override fun exclude(vararg exclude: String): Unit = exclude(exclude.toList())
+
     override fun followSymlinks(followSymlinks: SymlinkFollowMode) {
       cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode::unwrap))
     }
@@ -87,6 +93,8 @@ public open class AssetApiDefinition internal constructor(
     override fun readers(readers: List<IGrantable>) {
       cdkBuilder.readers(readers.map(IGrantable::unwrap))
     }
+
+    override fun readers(vararg readers: IGrantable): Unit = readers(readers.toList())
 
     public fun build(): software.amazon.awscdk.services.apigateway.AssetApiDefinition =
         cdkBuilder.build()

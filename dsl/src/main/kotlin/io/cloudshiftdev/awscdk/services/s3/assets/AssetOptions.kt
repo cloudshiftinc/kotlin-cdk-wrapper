@@ -34,11 +34,15 @@ public interface AssetOptions : io.cloudshiftdev.awscdk.AssetOptions, FileCopyOp
 
     public fun exclude(exclude: List<String>)
 
+    public fun exclude(vararg exclude: String)
+
     public fun followSymlinks(followSymlinks: SymlinkFollowMode)
 
     public fun ignoreMode(ignoreMode: IgnoreMode)
 
     public fun readers(readers: List<IGrantable>)
+
+    public fun readers(vararg readers: IGrantable)
   }
 
   private class BuilderImpl : Builder {
@@ -70,6 +74,8 @@ public interface AssetOptions : io.cloudshiftdev.awscdk.AssetOptions, FileCopyOp
       cdkBuilder.exclude(exclude)
     }
 
+    override fun exclude(vararg exclude: String): Unit = exclude(exclude.toList())
+
     override fun followSymlinks(followSymlinks: SymlinkFollowMode) {
       cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode::unwrap))
     }
@@ -81,6 +87,8 @@ public interface AssetOptions : io.cloudshiftdev.awscdk.AssetOptions, FileCopyOp
     override fun readers(readers: List<IGrantable>) {
       cdkBuilder.readers(readers.map(IGrantable::unwrap))
     }
+
+    override fun readers(vararg readers: IGrantable): Unit = readers(readers.toList())
 
     public fun build(): software.amazon.awscdk.services.s3.assets.AssetOptions = cdkBuilder.build()
   }

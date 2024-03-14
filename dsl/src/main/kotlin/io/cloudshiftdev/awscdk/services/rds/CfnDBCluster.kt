@@ -37,6 +37,9 @@ public open class CfnDBCluster internal constructor(
     unwrap(this).setAssociatedRoles(__idx_ac66f0)
   }
 
+  public open fun associatedRoles(vararg __idx_ac66f0: Any): Unit =
+      associatedRoles(__idx_ac66f0.toList())
+
   public open fun attrDbClusterArn(): String = unwrap(this).getAttrDbClusterArn()
 
   public open fun attrDbClusterResourceId(): String = unwrap(this).getAttrDbClusterResourceId()
@@ -72,6 +75,9 @@ public open class CfnDBCluster internal constructor(
   public open fun availabilityZones(`value`: List<String>) {
     unwrap(this).setAvailabilityZones(`value`)
   }
+
+  public open fun availabilityZones(vararg `value`: String): Unit =
+      availabilityZones(`value`.toList())
 
   public open fun backtrackWindow(): Number? = unwrap(this).getBacktrackWindow()
 
@@ -167,6 +173,9 @@ public open class CfnDBCluster internal constructor(
   public open fun enableCloudwatchLogsExports(`value`: List<String>) {
     unwrap(this).setEnableCloudwatchLogsExports(`value`)
   }
+
+  public open fun enableCloudwatchLogsExports(vararg `value`: String): Unit =
+      enableCloudwatchLogsExports(`value`.toList())
 
   public open fun enableGlobalWriteForwarding(): Any? =
       unwrap(this).getEnableGlobalWriteForwarding()
@@ -443,6 +452,8 @@ public open class CfnDBCluster internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun useLatestRestorableTime(): Any? = unwrap(this).getUseLatestRestorableTime()
 
   public open fun useLatestRestorableTime(`value`: Boolean) {
@@ -460,6 +471,9 @@ public open class CfnDBCluster internal constructor(
     unwrap(this).setVpcSecurityGroupIds(`value`)
   }
 
+  public open fun vpcSecurityGroupIds(vararg `value`: String): Unit =
+      vpcSecurityGroupIds(`value`.toList())
+
   public interface Builder {
     public fun allocatedStorage(allocatedStorage: Number)
 
@@ -467,11 +481,15 @@ public open class CfnDBCluster internal constructor(
 
     public fun associatedRoles(associatedRoles: List<Any>)
 
+    public fun associatedRoles(vararg associatedRoles: Any)
+
     public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean)
 
     public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable)
 
     public fun availabilityZones(availabilityZones: List<String>)
+
+    public fun availabilityZones(vararg availabilityZones: String)
 
     public fun backtrackWindow(backtrackWindow: Number)
 
@@ -504,6 +522,8 @@ public open class CfnDBCluster internal constructor(
     public fun domainIamRoleName(domainIamRoleName: String)
 
     public fun enableCloudwatchLogsExports(enableCloudwatchLogsExports: List<String>)
+
+    public fun enableCloudwatchLogsExports(vararg enableCloudwatchLogsExports: String)
 
     public fun enableGlobalWriteForwarding(enableGlobalWriteForwarding: Boolean)
 
@@ -608,11 +628,15 @@ public open class CfnDBCluster internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun useLatestRestorableTime(useLatestRestorableTime: Boolean)
 
     public fun useLatestRestorableTime(useLatestRestorableTime: IResolvable)
 
     public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>)
+
+    public fun vpcSecurityGroupIds(vararg vpcSecurityGroupIds: String)
   }
 
   private class BuilderImpl(
@@ -634,6 +658,9 @@ public open class CfnDBCluster internal constructor(
       cdkBuilder.associatedRoles(associatedRoles)
     }
 
+    override fun associatedRoles(vararg associatedRoles: Any): Unit =
+        associatedRoles(associatedRoles.toList())
+
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
     }
@@ -645,6 +672,9 @@ public open class CfnDBCluster internal constructor(
     override fun availabilityZones(availabilityZones: List<String>) {
       cdkBuilder.availabilityZones(availabilityZones)
     }
+
+    override fun availabilityZones(vararg availabilityZones: String): Unit =
+        availabilityZones(availabilityZones.toList())
 
     override fun backtrackWindow(backtrackWindow: Number) {
       cdkBuilder.backtrackWindow(backtrackWindow)
@@ -709,6 +739,9 @@ public open class CfnDBCluster internal constructor(
     override fun enableCloudwatchLogsExports(enableCloudwatchLogsExports: List<String>) {
       cdkBuilder.enableCloudwatchLogsExports(enableCloudwatchLogsExports)
     }
+
+    override fun enableCloudwatchLogsExports(vararg enableCloudwatchLogsExports: String): Unit =
+        enableCloudwatchLogsExports(enableCloudwatchLogsExports.toList())
 
     override fun enableGlobalWriteForwarding(enableGlobalWriteForwarding: Boolean) {
       cdkBuilder.enableGlobalWriteForwarding(enableGlobalWriteForwarding)
@@ -905,6 +938,8 @@ public open class CfnDBCluster internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun useLatestRestorableTime(useLatestRestorableTime: Boolean) {
       cdkBuilder.useLatestRestorableTime(useLatestRestorableTime)
     }
@@ -916,6 +951,9 @@ public open class CfnDBCluster internal constructor(
     override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
       cdkBuilder.vpcSecurityGroupIds(vpcSecurityGroupIds)
     }
+
+    override fun vpcSecurityGroupIds(vararg vpcSecurityGroupIds: String): Unit =
+        vpcSecurityGroupIds(vpcSecurityGroupIds.toList())
 
     public fun build(): software.amazon.awscdk.services.rds.CfnDBCluster = cdkBuilder.build()
   }

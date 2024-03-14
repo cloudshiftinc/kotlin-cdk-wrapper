@@ -75,12 +75,18 @@ public open class CfnBucket internal constructor(
     unwrap(this).setReadOnlyAccessAccounts(`value`)
   }
 
+  public open fun readOnlyAccessAccounts(vararg `value`: String): Unit =
+      readOnlyAccessAccounts(`value`.toList())
+
   public open fun resourcesReceivingAccess(): List<String> =
       unwrap(this).getResourcesReceivingAccess() ?: emptyList()
 
   public open fun resourcesReceivingAccess(`value`: List<String>) {
     unwrap(this).setResourcesReceivingAccess(`value`)
   }
+
+  public open fun resourcesReceivingAccess(vararg `value`: String): Unit =
+      resourcesReceivingAccess(`value`.toList())
 
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
@@ -90,6 +96,8 @@ public open class CfnBucket internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public interface Builder {
     public fun accessRules(accessRules: IResolvable)
@@ -110,9 +118,15 @@ public open class CfnBucket internal constructor(
 
     public fun readOnlyAccessAccounts(readOnlyAccessAccounts: List<String>)
 
+    public fun readOnlyAccessAccounts(vararg readOnlyAccessAccounts: String)
+
     public fun resourcesReceivingAccess(resourcesReceivingAccess: List<String>)
 
+    public fun resourcesReceivingAccess(vararg resourcesReceivingAccess: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -155,13 +169,21 @@ public open class CfnBucket internal constructor(
       cdkBuilder.readOnlyAccessAccounts(readOnlyAccessAccounts)
     }
 
+    override fun readOnlyAccessAccounts(vararg readOnlyAccessAccounts: String): Unit =
+        readOnlyAccessAccounts(readOnlyAccessAccounts.toList())
+
     override fun resourcesReceivingAccess(resourcesReceivingAccess: List<String>) {
       cdkBuilder.resourcesReceivingAccess(resourcesReceivingAccess)
     }
 
+    override fun resourcesReceivingAccess(vararg resourcesReceivingAccess: String): Unit =
+        resourcesReceivingAccess(resourcesReceivingAccess.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.lightsail.CfnBucket = cdkBuilder.build()
   }

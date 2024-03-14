@@ -86,6 +86,8 @@ public open class CfnConfigurationSet internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public open fun trackingOptions(): Any? = unwrap(this).getTrackingOptions()
 
   public open fun trackingOptions(`value`: IResolvable) {
@@ -129,6 +131,8 @@ public open class CfnConfigurationSet internal constructor(
     public fun sendingOptions(sendingOptions: SendingOptionsProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun trackingOptions(trackingOptions: IResolvable)
 
@@ -193,6 +197,8 @@ public open class CfnConfigurationSet internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun trackingOptions(trackingOptions: IResolvable) {
       cdkBuilder.trackingOptions(trackingOptions.let(IResolvable::unwrap))

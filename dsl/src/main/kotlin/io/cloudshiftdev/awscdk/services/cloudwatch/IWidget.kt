@@ -30,7 +30,7 @@ public interface IWidget {
       unwrap(this).position(arg0, arg1)
     }
 
-    override fun toJson(): List<Any> = unwrap(this).toJson() ?: emptyList()
+    override fun toJson(): List<Any> = unwrap(this).toJson()
 
     @Deprecated(message = "deprecated in CDK")
     override fun warnings(): List<String> = unwrap(this).getWarnings() ?: emptyList()

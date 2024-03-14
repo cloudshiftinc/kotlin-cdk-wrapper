@@ -61,6 +61,9 @@ public open class CfnInstance internal constructor(
     unwrap(this).setBlockDeviceMappings(__idx_ac66f0)
   }
 
+  public open fun blockDeviceMappings(vararg __idx_ac66f0: Any): Unit =
+      blockDeviceMappings(__idx_ac66f0.toList())
+
   public open fun cpuOptions(): Any? = unwrap(this).getCpuOptions()
 
   public open fun cpuOptions(`value`: IResolvable) {
@@ -121,6 +124,9 @@ public open class CfnInstance internal constructor(
     unwrap(this).setElasticGpuSpecifications(__idx_ac66f0)
   }
 
+  public open fun elasticGpuSpecifications(vararg __idx_ac66f0: Any): Unit =
+      elasticGpuSpecifications(__idx_ac66f0.toList())
+
   public open fun elasticInferenceAccelerators(): Any? =
       unwrap(this).getElasticInferenceAccelerators()
 
@@ -131,6 +137,9 @@ public open class CfnInstance internal constructor(
   public open fun elasticInferenceAccelerators(__idx_ac66f0: List<Any>) {
     unwrap(this).setElasticInferenceAccelerators(__idx_ac66f0)
   }
+
+  public open fun elasticInferenceAccelerators(vararg __idx_ac66f0: Any): Unit =
+      elasticInferenceAccelerators(__idx_ac66f0.toList())
 
   public open fun enclaveOptions(): Any? = unwrap(this).getEnclaveOptions()
 
@@ -219,6 +228,9 @@ public open class CfnInstance internal constructor(
     unwrap(this).setIpv6Addresses(__idx_ac66f0)
   }
 
+  public open fun ipv6Addresses(vararg __idx_ac66f0: Any): Unit =
+      ipv6Addresses(__idx_ac66f0.toList())
+
   public open fun kernelId(): String? = unwrap(this).getKernelId()
 
   public open fun kernelId(`value`: String) {
@@ -256,6 +268,9 @@ public open class CfnInstance internal constructor(
     unwrap(this).setLicenseSpecifications(__idx_ac66f0)
   }
 
+  public open fun licenseSpecifications(vararg __idx_ac66f0: Any): Unit =
+      licenseSpecifications(__idx_ac66f0.toList())
+
   public open fun monitoring(): Any? = unwrap(this).getMonitoring()
 
   public open fun monitoring(`value`: Boolean) {
@@ -275,6 +290,9 @@ public open class CfnInstance internal constructor(
   public open fun networkInterfaces(__idx_ac66f0: List<Any>) {
     unwrap(this).setNetworkInterfaces(__idx_ac66f0)
   }
+
+  public open fun networkInterfaces(vararg __idx_ac66f0: Any): Unit =
+      networkInterfaces(__idx_ac66f0.toList())
 
   public open fun placementGroupName(): String? = unwrap(this).getPlacementGroupName()
 
@@ -327,11 +345,16 @@ public open class CfnInstance internal constructor(
     unwrap(this).setSecurityGroupIds(`value`)
   }
 
+  public open fun securityGroupIds(vararg `value`: String): Unit =
+      securityGroupIds(`value`.toList())
+
   public open fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
 
   public open fun securityGroups(`value`: List<String>) {
     unwrap(this).setSecurityGroups(`value`)
   }
+
+  public open fun securityGroups(vararg `value`: String): Unit = securityGroups(`value`.toList())
 
   public open fun sourceDestCheck(): Any? = unwrap(this).getSourceDestCheck()
 
@@ -353,6 +376,9 @@ public open class CfnInstance internal constructor(
     unwrap(this).setSsmAssociations(__idx_ac66f0)
   }
 
+  public open fun ssmAssociations(vararg __idx_ac66f0: Any): Unit =
+      ssmAssociations(__idx_ac66f0.toList())
+
   public open fun subnetId(): String? = unwrap(this).getSubnetId()
 
   public open fun subnetId(`value`: String) {
@@ -367,6 +393,8 @@ public open class CfnInstance internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun tenancy(): String? = unwrap(this).getTenancy()
 
@@ -390,6 +418,8 @@ public open class CfnInstance internal constructor(
     unwrap(this).setVolumes(__idx_ac66f0)
   }
 
+  public open fun volumes(vararg __idx_ac66f0: Any): Unit = volumes(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun additionalInfo(additionalInfo: String)
 
@@ -400,6 +430,8 @@ public open class CfnInstance internal constructor(
     public fun blockDeviceMappings(blockDeviceMappings: IResolvable)
 
     public fun blockDeviceMappings(blockDeviceMappings: List<Any>)
+
+    public fun blockDeviceMappings(vararg blockDeviceMappings: Any)
 
     public fun cpuOptions(cpuOptions: IResolvable)
 
@@ -430,9 +462,13 @@ public open class CfnInstance internal constructor(
 
     public fun elasticGpuSpecifications(elasticGpuSpecifications: List<Any>)
 
+    public fun elasticGpuSpecifications(vararg elasticGpuSpecifications: Any)
+
     public fun elasticInferenceAccelerators(elasticInferenceAccelerators: IResolvable)
 
     public fun elasticInferenceAccelerators(elasticInferenceAccelerators: List<Any>)
+
+    public fun elasticInferenceAccelerators(vararg elasticInferenceAccelerators: Any)
 
     public fun enclaveOptions(enclaveOptions: IResolvable)
 
@@ -468,6 +504,8 @@ public open class CfnInstance internal constructor(
 
     public fun ipv6Addresses(ipv6Addresses: List<Any>)
 
+    public fun ipv6Addresses(vararg ipv6Addresses: Any)
+
     public fun kernelId(kernelId: String)
 
     public fun keyName(keyName: String)
@@ -485,6 +523,8 @@ public open class CfnInstance internal constructor(
 
     public fun licenseSpecifications(licenseSpecifications: List<Any>)
 
+    public fun licenseSpecifications(vararg licenseSpecifications: Any)
+
     public fun monitoring(monitoring: Boolean)
 
     public fun monitoring(monitoring: IResolvable)
@@ -492,6 +532,8 @@ public open class CfnInstance internal constructor(
     public fun networkInterfaces(networkInterfaces: IResolvable)
 
     public fun networkInterfaces(networkInterfaces: List<Any>)
+
+    public fun networkInterfaces(vararg networkInterfaces: Any)
 
     public fun placementGroupName(placementGroupName: String)
 
@@ -514,7 +556,11 @@ public open class CfnInstance internal constructor(
 
     public fun securityGroupIds(securityGroupIds: List<String>)
 
+    public fun securityGroupIds(vararg securityGroupIds: String)
+
     public fun securityGroups(securityGroups: List<String>)
+
+    public fun securityGroups(vararg securityGroups: String)
 
     public fun sourceDestCheck(sourceDestCheck: Boolean)
 
@@ -524,9 +570,13 @@ public open class CfnInstance internal constructor(
 
     public fun ssmAssociations(ssmAssociations: List<Any>)
 
+    public fun ssmAssociations(vararg ssmAssociations: Any)
+
     public fun subnetId(subnetId: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun tenancy(tenancy: String)
 
@@ -535,6 +585,8 @@ public open class CfnInstance internal constructor(
     public fun volumes(volumes: IResolvable)
 
     public fun volumes(volumes: List<Any>)
+
+    public fun volumes(vararg volumes: Any)
   }
 
   private class BuilderImpl(
@@ -563,6 +615,9 @@ public open class CfnInstance internal constructor(
     override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
       cdkBuilder.blockDeviceMappings(blockDeviceMappings)
     }
+
+    override fun blockDeviceMappings(vararg blockDeviceMappings: Any): Unit =
+        blockDeviceMappings(blockDeviceMappings.toList())
 
     override fun cpuOptions(cpuOptions: IResolvable) {
       cdkBuilder.cpuOptions(cpuOptions.let(IResolvable::unwrap))
@@ -615,6 +670,9 @@ public open class CfnInstance internal constructor(
       cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications)
     }
 
+    override fun elasticGpuSpecifications(vararg elasticGpuSpecifications: Any): Unit =
+        elasticGpuSpecifications(elasticGpuSpecifications.toList())
+
     override fun elasticInferenceAccelerators(elasticInferenceAccelerators: IResolvable) {
       cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators.let(IResolvable::unwrap))
     }
@@ -622,6 +680,9 @@ public open class CfnInstance internal constructor(
     override fun elasticInferenceAccelerators(elasticInferenceAccelerators: List<Any>) {
       cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators)
     }
+
+    override fun elasticInferenceAccelerators(vararg elasticInferenceAccelerators: Any): Unit =
+        elasticInferenceAccelerators(elasticInferenceAccelerators.toList())
 
     override fun enclaveOptions(enclaveOptions: IResolvable) {
       cdkBuilder.enclaveOptions(enclaveOptions.let(IResolvable::unwrap))
@@ -686,6 +747,9 @@ public open class CfnInstance internal constructor(
       cdkBuilder.ipv6Addresses(ipv6Addresses)
     }
 
+    override fun ipv6Addresses(vararg ipv6Addresses: Any): Unit =
+        ipv6Addresses(ipv6Addresses.toList())
+
     override fun kernelId(kernelId: String) {
       cdkBuilder.kernelId(kernelId)
     }
@@ -716,6 +780,9 @@ public open class CfnInstance internal constructor(
       cdkBuilder.licenseSpecifications(licenseSpecifications)
     }
 
+    override fun licenseSpecifications(vararg licenseSpecifications: Any): Unit =
+        licenseSpecifications(licenseSpecifications.toList())
+
     override fun monitoring(monitoring: Boolean) {
       cdkBuilder.monitoring(monitoring)
     }
@@ -731,6 +798,9 @@ public open class CfnInstance internal constructor(
     override fun networkInterfaces(networkInterfaces: List<Any>) {
       cdkBuilder.networkInterfaces(networkInterfaces)
     }
+
+    override fun networkInterfaces(vararg networkInterfaces: Any): Unit =
+        networkInterfaces(networkInterfaces.toList())
 
     override fun placementGroupName(placementGroupName: String) {
       cdkBuilder.placementGroupName(placementGroupName)
@@ -770,9 +840,15 @@ public open class CfnInstance internal constructor(
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
+
     override fun securityGroups(securityGroups: List<String>) {
       cdkBuilder.securityGroups(securityGroups)
     }
+
+    override fun securityGroups(vararg securityGroups: String): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun sourceDestCheck(sourceDestCheck: Boolean) {
       cdkBuilder.sourceDestCheck(sourceDestCheck)
@@ -790,6 +866,9 @@ public open class CfnInstance internal constructor(
       cdkBuilder.ssmAssociations(ssmAssociations)
     }
 
+    override fun ssmAssociations(vararg ssmAssociations: Any): Unit =
+        ssmAssociations(ssmAssociations.toList())
+
     override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }
@@ -797,6 +876,8 @@ public open class CfnInstance internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun tenancy(tenancy: String) {
       cdkBuilder.tenancy(tenancy)
@@ -813,6 +894,8 @@ public open class CfnInstance internal constructor(
     override fun volumes(volumes: List<Any>) {
       cdkBuilder.volumes(volumes)
     }
+
+    override fun volumes(vararg volumes: Any): Unit = volumes(volumes.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.CfnInstance = cdkBuilder.build()
   }
@@ -1490,11 +1573,15 @@ public open class CfnInstance internal constructor(
 
       public fun groupSet(groupSet: List<String>)
 
+      public fun groupSet(vararg groupSet: String)
+
       public fun ipv6AddressCount(ipv6AddressCount: Number)
 
       public fun ipv6Addresses(ipv6Addresses: IResolvable)
 
       public fun ipv6Addresses(ipv6Addresses: List<Any>)
+
+      public fun ipv6Addresses(vararg ipv6Addresses: Any)
 
       public fun networkInterfaceId(networkInterfaceId: String)
 
@@ -1503,6 +1590,8 @@ public open class CfnInstance internal constructor(
       public fun privateIpAddresses(privateIpAddresses: IResolvable)
 
       public fun privateIpAddresses(privateIpAddresses: List<Any>)
+
+      public fun privateIpAddresses(vararg privateIpAddresses: Any)
 
       public fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number)
 
@@ -1550,6 +1639,8 @@ public open class CfnInstance internal constructor(
         cdkBuilder.groupSet(groupSet)
       }
 
+      override fun groupSet(vararg groupSet: String): Unit = groupSet(groupSet.toList())
+
       override fun ipv6AddressCount(ipv6AddressCount: Number) {
         cdkBuilder.ipv6AddressCount(ipv6AddressCount)
       }
@@ -1561,6 +1652,9 @@ public open class CfnInstance internal constructor(
       override fun ipv6Addresses(ipv6Addresses: List<Any>) {
         cdkBuilder.ipv6Addresses(ipv6Addresses)
       }
+
+      override fun ipv6Addresses(vararg ipv6Addresses: Any): Unit =
+          ipv6Addresses(ipv6Addresses.toList())
 
       override fun networkInterfaceId(networkInterfaceId: String) {
         cdkBuilder.networkInterfaceId(networkInterfaceId)
@@ -1577,6 +1671,9 @@ public open class CfnInstance internal constructor(
       override fun privateIpAddresses(privateIpAddresses: List<Any>) {
         cdkBuilder.privateIpAddresses(privateIpAddresses)
       }
+
+      override fun privateIpAddresses(vararg privateIpAddresses: Any): Unit =
+          privateIpAddresses(privateIpAddresses.toList())
 
       override fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number) {
         cdkBuilder.secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount)
@@ -1651,6 +1748,8 @@ public open class CfnInstance internal constructor(
       public fun key(key: String)
 
       public fun `value`(`value`: List<String>)
+
+      public fun `value`(vararg `value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1666,6 +1765,8 @@ public open class CfnInstance internal constructor(
         cdkBuilder.`value`(`value`)
       }
 
+      override fun `value`(vararg `value`: String): Unit = `value`(`value`.toList())
+
       public fun build():
           software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty =
           cdkBuilder.build()
@@ -1677,7 +1778,7 @@ public open class CfnInstance internal constructor(
     ) : AssociationParameterProperty {
       override fun key(): String = unwrap(this).getKey()
 
-      override fun `value`(): List<String> = unwrap(this).getValue() ?: emptyList()
+      override fun `value`(): List<String> = unwrap(this).getValue()
     }
 
     public companion object {
@@ -1816,6 +1917,8 @@ public open class CfnInstance internal constructor(
 
       public fun associationParameters(associationParameters: List<Any>)
 
+      public fun associationParameters(vararg associationParameters: Any)
+
       public fun documentName(documentName: String)
     }
 
@@ -1831,6 +1934,9 @@ public open class CfnInstance internal constructor(
       override fun associationParameters(associationParameters: List<Any>) {
         cdkBuilder.associationParameters(associationParameters)
       }
+
+      override fun associationParameters(vararg associationParameters: Any): Unit =
+          associationParameters(associationParameters.toList())
 
       override fun documentName(documentName: String) {
         cdkBuilder.documentName(documentName)

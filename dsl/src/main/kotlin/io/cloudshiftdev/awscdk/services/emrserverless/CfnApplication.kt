@@ -88,6 +88,9 @@ public open class CfnApplication internal constructor(
     unwrap(this).setInitialCapacity(__idx_ac66f0)
   }
 
+  public open fun initialCapacity(vararg __idx_ac66f0: Any): Unit =
+      initialCapacity(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -160,6 +163,9 @@ public open class CfnApplication internal constructor(
     unwrap(this).setRuntimeConfiguration(__idx_ac66f0)
   }
 
+  public open fun runtimeConfiguration(vararg __idx_ac66f0: Any): Unit =
+      runtimeConfiguration(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -168,6 +174,8 @@ public open class CfnApplication internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun type(): String = unwrap(this).getType()
 
@@ -219,6 +227,8 @@ public open class CfnApplication internal constructor(
 
     public fun initialCapacity(initialCapacity: List<Any>)
 
+    public fun initialCapacity(vararg initialCapacity: Any)
+
     public fun maximumCapacity(maximumCapacity: IResolvable)
 
     public fun maximumCapacity(maximumCapacity: MaximumAllowedResourcesProperty)
@@ -253,7 +263,11 @@ public open class CfnApplication internal constructor(
 
     public fun runtimeConfiguration(runtimeConfiguration: List<Any>)
 
+    public fun runtimeConfiguration(vararg runtimeConfiguration: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun type(type: String)
 
@@ -323,6 +337,9 @@ public open class CfnApplication internal constructor(
       cdkBuilder.initialCapacity(initialCapacity)
     }
 
+    override fun initialCapacity(vararg initialCapacity: Any): Unit =
+        initialCapacity(initialCapacity.toList())
+
     override fun maximumCapacity(maximumCapacity: IResolvable) {
       cdkBuilder.maximumCapacity(maximumCapacity.let(IResolvable::unwrap))
     }
@@ -381,9 +398,14 @@ public open class CfnApplication internal constructor(
       cdkBuilder.runtimeConfiguration(runtimeConfiguration)
     }
 
+    override fun runtimeConfiguration(vararg runtimeConfiguration: Any): Unit =
+        runtimeConfiguration(runtimeConfiguration.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun type(type: String) {
       cdkBuilder.type(type)
@@ -716,6 +738,8 @@ public open class CfnApplication internal constructor(
       public fun logTypeMap(logTypeMap: IResolvable)
 
       public fun logTypeMap(logTypeMap: List<Any>)
+
+      public fun logTypeMap(vararg logTypeMap: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -751,6 +775,8 @@ public open class CfnApplication internal constructor(
       override fun logTypeMap(logTypeMap: List<Any>) {
         cdkBuilder.logTypeMap(logTypeMap)
       }
+
+      override fun logTypeMap(vararg logTypeMap: Any): Unit = logTypeMap(logTypeMap.toList())
 
       public fun build():
           software.amazon.awscdk.services.emrserverless.CfnApplication.CloudWatchLoggingConfigurationProperty
@@ -801,7 +827,11 @@ public open class CfnApplication internal constructor(
     public interface Builder {
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -814,9 +844,14 @@ public open class CfnApplication internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       public fun build():
           software.amazon.awscdk.services.emrserverless.CfnApplication.NetworkConfigurationProperty
@@ -867,6 +902,8 @@ public open class CfnApplication internal constructor(
 
       public fun configurations(configurations: List<Any>)
 
+      public fun configurations(vararg configurations: Any)
+
       public fun properties(properties: IResolvable)
 
       public fun properties(properties: Map<String, String>)
@@ -889,6 +926,9 @@ public open class CfnApplication internal constructor(
       override fun configurations(configurations: List<Any>) {
         cdkBuilder.configurations(configurations)
       }
+
+      override fun configurations(vararg configurations: Any): Unit =
+          configurations(configurations.toList())
 
       override fun properties(properties: IResolvable) {
         cdkBuilder.properties(properties.let(IResolvable::unwrap))
@@ -1460,6 +1500,8 @@ public open class CfnApplication internal constructor(
       public fun key(key: String)
 
       public fun `value`(`value`: List<String>)
+
+      public fun `value`(vararg `value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1476,6 +1518,8 @@ public open class CfnApplication internal constructor(
         cdkBuilder.`value`(`value`)
       }
 
+      override fun `value`(vararg `value`: String): Unit = `value`(`value`.toList())
+
       public fun build():
           software.amazon.awscdk.services.emrserverless.CfnApplication.LogTypeMapKeyValuePairProperty
           = cdkBuilder.build()
@@ -1487,7 +1531,7 @@ public open class CfnApplication internal constructor(
     ) : LogTypeMapKeyValuePairProperty {
       override fun key(): String = unwrap(this).getKey()
 
-      override fun `value`(): List<String> = unwrap(this).getValue() ?: emptyList()
+      override fun `value`(): List<String> = unwrap(this).getValue()
     }
 
     public companion object {

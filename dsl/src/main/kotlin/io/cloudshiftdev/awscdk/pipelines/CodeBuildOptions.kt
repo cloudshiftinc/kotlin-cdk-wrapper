@@ -53,6 +53,8 @@ public interface CodeBuildOptions {
 
     public fun fileSystemLocations(fileSystemLocations: List<IFileSystemLocation>)
 
+    public fun fileSystemLocations(vararg fileSystemLocations: IFileSystemLocation)
+
     public fun logging(logging: LoggingOptions)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -63,7 +65,11 @@ public interface CodeBuildOptions {
 
     public fun rolePolicy(rolePolicy: List<PolicyStatement>)
 
+    public fun rolePolicy(vararg rolePolicy: PolicyStatement)
+
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
+
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
 
     public fun subnetSelection(subnetSelection: SubnetSelection)
 
@@ -97,6 +103,9 @@ public interface CodeBuildOptions {
       cdkBuilder.fileSystemLocations(fileSystemLocations.map(IFileSystemLocation::unwrap))
     }
 
+    override fun fileSystemLocations(vararg fileSystemLocations: IFileSystemLocation): Unit =
+        fileSystemLocations(fileSystemLocations.toList())
+
     override fun logging(logging: LoggingOptions) {
       cdkBuilder.logging(logging.let(LoggingOptions::unwrap))
     }
@@ -114,9 +123,15 @@ public interface CodeBuildOptions {
       cdkBuilder.rolePolicy(rolePolicy.map(PolicyStatement::unwrap))
     }
 
+    override fun rolePolicy(vararg rolePolicy: PolicyStatement): Unit =
+        rolePolicy(rolePolicy.toList())
+
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun subnetSelection(subnetSelection: SubnetSelection) {
       cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))

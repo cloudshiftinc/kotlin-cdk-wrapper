@@ -49,6 +49,8 @@ public open class CfnStackSet internal constructor(
     unwrap(this).setCapabilities(`value`)
   }
 
+  public open fun capabilities(vararg `value`: String): Unit = capabilities(`value`.toList())
+
   public open fun description(): String? = unwrap(this).getDescription()
 
   public open fun description(`value`: String) {
@@ -96,6 +98,8 @@ public open class CfnStackSet internal constructor(
     unwrap(this).setParameters(__idx_ac66f0)
   }
 
+  public open fun parameters(vararg __idx_ac66f0: Any): Unit = parameters(__idx_ac66f0.toList())
+
   public open fun permissionModel(): String = unwrap(this).getPermissionModel()
 
   public open fun permissionModel(`value`: String) {
@@ -112,6 +116,9 @@ public open class CfnStackSet internal constructor(
     unwrap(this).setStackInstancesGroup(__idx_ac66f0)
   }
 
+  public open fun stackInstancesGroup(vararg __idx_ac66f0: Any): Unit =
+      stackInstancesGroup(__idx_ac66f0.toList())
+
   public open fun stackSetName(): String = unwrap(this).getStackSetName()
 
   public open fun stackSetName(`value`: String) {
@@ -126,6 +133,8 @@ public open class CfnStackSet internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun templateBody(): String? = unwrap(this).getTemplateBody()
 
@@ -154,6 +163,8 @@ public open class CfnStackSet internal constructor(
 
     public fun capabilities(capabilities: List<String>)
 
+    public fun capabilities(vararg capabilities: String)
+
     public fun description(description: String)
 
     public fun executionRoleName(executionRoleName: String)
@@ -173,15 +184,21 @@ public open class CfnStackSet internal constructor(
 
     public fun parameters(parameters: List<Any>)
 
+    public fun parameters(vararg parameters: Any)
+
     public fun permissionModel(permissionModel: String)
 
     public fun stackInstancesGroup(stackInstancesGroup: IResolvable)
 
     public fun stackInstancesGroup(stackInstancesGroup: List<Any>)
 
+    public fun stackInstancesGroup(vararg stackInstancesGroup: Any)
+
     public fun stackSetName(stackSetName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun templateBody(templateBody: String)
 
@@ -220,6 +237,9 @@ public open class CfnStackSet internal constructor(
       cdkBuilder.capabilities(capabilities)
     }
 
+    override fun capabilities(vararg capabilities: String): Unit =
+        capabilities(capabilities.toList())
+
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
@@ -254,6 +274,8 @@ public open class CfnStackSet internal constructor(
       cdkBuilder.parameters(parameters)
     }
 
+    override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
+
     override fun permissionModel(permissionModel: String) {
       cdkBuilder.permissionModel(permissionModel)
     }
@@ -266,6 +288,9 @@ public open class CfnStackSet internal constructor(
       cdkBuilder.stackInstancesGroup(stackInstancesGroup)
     }
 
+    override fun stackInstancesGroup(vararg stackInstancesGroup: Any): Unit =
+        stackInstancesGroup(stackInstancesGroup.toList())
+
     override fun stackSetName(stackSetName: String) {
       cdkBuilder.stackSetName(stackSetName)
     }
@@ -273,6 +298,8 @@ public open class CfnStackSet internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun templateBody(templateBody: String) {
       cdkBuilder.templateBody(templateBody)
@@ -437,9 +464,13 @@ public open class CfnStackSet internal constructor(
 
       public fun accounts(accounts: List<String>)
 
+      public fun accounts(vararg accounts: String)
+
       public fun accountsUrl(accountsUrl: String)
 
       public fun organizationalUnitIds(organizationalUnitIds: List<String>)
+
+      public fun organizationalUnitIds(vararg organizationalUnitIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -454,6 +485,8 @@ public open class CfnStackSet internal constructor(
         cdkBuilder.accounts(accounts)
       }
 
+      override fun accounts(vararg accounts: String): Unit = accounts(accounts.toList())
+
       override fun accountsUrl(accountsUrl: String) {
         cdkBuilder.accountsUrl(accountsUrl)
       }
@@ -461,6 +494,9 @@ public open class CfnStackSet internal constructor(
       override fun organizationalUnitIds(organizationalUnitIds: List<String>) {
         cdkBuilder.organizationalUnitIds(organizationalUnitIds)
       }
+
+      override fun organizationalUnitIds(vararg organizationalUnitIds: String): Unit =
+          organizationalUnitIds(organizationalUnitIds.toList())
 
       public fun build(): software.amazon.awscdk.CfnStackSet.DeploymentTargetsProperty =
           cdkBuilder.build()
@@ -575,6 +611,8 @@ public open class CfnStackSet internal constructor(
       public fun regionConcurrencyType(regionConcurrencyType: String)
 
       public fun regionOrder(regionOrder: List<String>)
+
+      public fun regionOrder(vararg regionOrder: String)
     }
 
     private class BuilderImpl : Builder {
@@ -605,6 +643,8 @@ public open class CfnStackSet internal constructor(
       override fun regionOrder(regionOrder: List<String>) {
         cdkBuilder.regionOrder(regionOrder)
       }
+
+      override fun regionOrder(vararg regionOrder: String): Unit = regionOrder(regionOrder.toList())
 
       public fun build(): software.amazon.awscdk.CfnStackSet.OperationPreferencesProperty =
           cdkBuilder.build()
@@ -666,7 +706,11 @@ public open class CfnStackSet internal constructor(
 
       public fun parameterOverrides(parameterOverrides: List<Any>)
 
+      public fun parameterOverrides(vararg parameterOverrides: Any)
+
       public fun regions(regions: List<String>)
+
+      public fun regions(vararg regions: String)
     }
 
     private class BuilderImpl : Builder {
@@ -695,9 +739,14 @@ public open class CfnStackSet internal constructor(
         cdkBuilder.parameterOverrides(parameterOverrides)
       }
 
+      override fun parameterOverrides(vararg parameterOverrides: Any): Unit =
+          parameterOverrides(parameterOverrides.toList())
+
       override fun regions(regions: List<String>) {
         cdkBuilder.regions(regions)
       }
+
+      override fun regions(vararg regions: String): Unit = regions(regions.toList())
 
       public fun build(): software.amazon.awscdk.CfnStackSet.StackInstancesProperty =
           cdkBuilder.build()
@@ -710,7 +759,7 @@ public open class CfnStackSet internal constructor(
 
       override fun parameterOverrides(): Any? = unwrap(this).getParameterOverrides()
 
-      override fun regions(): List<String> = unwrap(this).getRegions() ?: emptyList()
+      override fun regions(): List<String> = unwrap(this).getRegions()
     }
 
     public companion object {

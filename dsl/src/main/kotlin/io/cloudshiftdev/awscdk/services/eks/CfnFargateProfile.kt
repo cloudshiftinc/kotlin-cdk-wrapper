@@ -51,11 +51,15 @@ public open class CfnFargateProfile internal constructor(
     unwrap(this).setSelectors(__idx_ac66f0)
   }
 
+  public open fun selectors(vararg __idx_ac66f0: Any): Unit = selectors(__idx_ac66f0.toList())
+
   public open fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
 
   public open fun subnets(`value`: List<String>) {
     unwrap(this).setSubnets(`value`)
   }
+
+  public open fun subnets(vararg `value`: String): Unit = subnets(`value`.toList())
 
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
@@ -65,6 +69,8 @@ public open class CfnFargateProfile internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public interface Builder {
     public fun clusterName(clusterName: String)
@@ -77,9 +83,15 @@ public open class CfnFargateProfile internal constructor(
 
     public fun selectors(selectors: List<Any>)
 
+    public fun selectors(vararg selectors: Any)
+
     public fun subnets(subnets: List<String>)
 
+    public fun subnets(vararg subnets: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -109,13 +121,19 @@ public open class CfnFargateProfile internal constructor(
       cdkBuilder.selectors(selectors)
     }
 
+    override fun selectors(vararg selectors: Any): Unit = selectors(selectors.toList())
+
     override fun subnets(subnets: List<String>) {
       cdkBuilder.subnets(subnets)
     }
 
+    override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.eks.CfnFargateProfile = cdkBuilder.build()
   }
@@ -207,6 +225,8 @@ public open class CfnFargateProfile internal constructor(
 
       public fun labels(labels: List<Any>)
 
+      public fun labels(vararg labels: Any)
+
       public fun namespace(namespace: String)
     }
 
@@ -222,6 +242,8 @@ public open class CfnFargateProfile internal constructor(
       override fun labels(labels: List<Any>) {
         cdkBuilder.labels(labels)
       }
+
+      override fun labels(vararg labels: Any): Unit = labels(labels.toList())
 
       override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)

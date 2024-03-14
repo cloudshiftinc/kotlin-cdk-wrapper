@@ -9,14 +9,14 @@ import kotlin.collections.List
 public open class Intrinsic internal constructor(
   private val cdkObject: software.amazon.awscdk.Intrinsic,
 ) : IResolvable {
-  public override fun creationStack(): List<String> = unwrap(this).getCreationStack() ?: emptyList()
+  public override fun creationStack(): List<String> = unwrap(this).getCreationStack()
 
   public override fun resolve(_context: IResolveContext): Any =
       unwrap(this).resolve(_context.let(IResolveContext::unwrap))
 
   public open fun toJson(): Any = unwrap(this).toJSON()
 
-  public open fun toStringList(): List<String> = unwrap(this).toStringList() ?: emptyList()
+  public open fun toStringList(): List<String> = unwrap(this).toStringList()
 
   public override fun typeHint(): ResolutionTypeHint? =
       unwrap(this).getTypeHint()?.let(ResolutionTypeHint::wrap)

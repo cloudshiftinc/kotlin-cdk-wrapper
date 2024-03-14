@@ -61,6 +61,8 @@ public open class BackupVault internal constructor(
 
     public fun notificationEvents(notificationEvents: List<BackupVaultEvents>)
 
+    public fun notificationEvents(vararg notificationEvents: BackupVaultEvents)
+
     public fun notificationTopic(notificationTopic: ITopic)
 
     public fun removalPolicy(removalPolicy: RemovalPolicy)
@@ -106,6 +108,9 @@ public open class BackupVault internal constructor(
     override fun notificationEvents(notificationEvents: List<BackupVaultEvents>) {
       cdkBuilder.notificationEvents(notificationEvents.map(BackupVaultEvents::unwrap))
     }
+
+    override fun notificationEvents(vararg notificationEvents: BackupVaultEvents): Unit =
+        notificationEvents(notificationEvents.toList())
 
     override fun notificationTopic(notificationTopic: ITopic) {
       cdkBuilder.notificationTopic(notificationTopic.let(ITopic::unwrap))

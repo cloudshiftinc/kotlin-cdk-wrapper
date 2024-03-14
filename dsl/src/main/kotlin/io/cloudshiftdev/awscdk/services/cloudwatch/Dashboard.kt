@@ -36,7 +36,11 @@ public open class Dashboard internal constructor(
 
     public fun variables(variables: List<IVariable>)
 
+    public fun variables(vararg variables: IVariable)
+
     public fun widgets(widgets: List<List<IWidget>>)
+
+    public fun widgets(vararg widgets: List<IWidget>)
   }
 
   private class BuilderImpl(
@@ -70,9 +74,13 @@ public open class Dashboard internal constructor(
       cdkBuilder.variables(variables.map(IVariable::unwrap))
     }
 
+    override fun variables(vararg variables: IVariable): Unit = variables(variables.toList())
+
     override fun widgets(widgets: List<List<IWidget>>) {
       cdkBuilder.widgets(widgets.map{ it.map(IWidget::unwrap) })
     }
+
+    override fun widgets(vararg widgets: List<IWidget>): Unit = widgets(widgets.toList())
 
     public fun build(): software.amazon.awscdk.services.cloudwatch.Dashboard = cdkBuilder.build()
   }

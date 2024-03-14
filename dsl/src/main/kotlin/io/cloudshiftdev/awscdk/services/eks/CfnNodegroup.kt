@@ -73,6 +73,8 @@ public open class CfnNodegroup internal constructor(
     unwrap(this).setInstanceTypes(`value`)
   }
 
+  public open fun instanceTypes(vararg `value`: String): Unit = instanceTypes(`value`.toList())
+
   public open fun labels(): Any? = unwrap(this).getLabels()
 
   public open fun labels(`value`: IResolvable) {
@@ -146,11 +148,13 @@ public open class CfnNodegroup internal constructor(
   public open fun scalingConfig(`value`: ScalingConfigProperty.Builder.() -> Unit): Unit =
       scalingConfig(ScalingConfigProperty(`value`))
 
-  public open fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+  public open fun subnets(): List<String> = unwrap(this).getSubnets()
 
   public open fun subnets(`value`: List<String>) {
     unwrap(this).setSubnets(`value`)
   }
+
+  public open fun subnets(vararg `value`: String): Unit = subnets(`value`.toList())
 
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
@@ -169,6 +173,8 @@ public open class CfnNodegroup internal constructor(
   public open fun taints(__idx_ac66f0: List<Any>) {
     unwrap(this).setTaints(__idx_ac66f0)
   }
+
+  public open fun taints(vararg __idx_ac66f0: Any): Unit = taints(__idx_ac66f0.toList())
 
   public open fun updateConfig(): Any? = unwrap(this).getUpdateConfig()
 
@@ -205,6 +211,8 @@ public open class CfnNodegroup internal constructor(
     public fun forceUpdateEnabled(forceUpdateEnabled: IResolvable)
 
     public fun instanceTypes(instanceTypes: List<String>)
+
+    public fun instanceTypes(vararg instanceTypes: String)
 
     public fun labels(labels: IResolvable)
 
@@ -243,11 +251,15 @@ public open class CfnNodegroup internal constructor(
 
     public fun subnets(subnets: List<String>)
 
+    public fun subnets(vararg subnets: String)
+
     public fun tags(tags: Map<String, String>)
 
     public fun taints(taints: IResolvable)
 
     public fun taints(taints: List<Any>)
+
+    public fun taints(vararg taints: Any)
 
     public fun updateConfig(updateConfig: IResolvable)
 
@@ -294,6 +306,9 @@ public open class CfnNodegroup internal constructor(
     override fun instanceTypes(instanceTypes: List<String>) {
       cdkBuilder.instanceTypes(instanceTypes)
     }
+
+    override fun instanceTypes(vararg instanceTypes: String): Unit =
+        instanceTypes(instanceTypes.toList())
 
     override fun labels(labels: IResolvable) {
       cdkBuilder.labels(labels.let(IResolvable::unwrap))
@@ -359,6 +374,8 @@ public open class CfnNodegroup internal constructor(
       cdkBuilder.subnets(subnets)
     }
 
+    override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
+
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
@@ -370,6 +387,8 @@ public open class CfnNodegroup internal constructor(
     override fun taints(taints: List<Any>) {
       cdkBuilder.taints(taints)
     }
+
+    override fun taints(vararg taints: Any): Unit = taints(taints.toList())
 
     override fun updateConfig(updateConfig: IResolvable) {
       cdkBuilder.updateConfig(updateConfig.let(IResolvable::unwrap))
@@ -556,6 +575,8 @@ public open class CfnNodegroup internal constructor(
       public fun ec2SshKey(ec2SshKey: String)
 
       public fun sourceSecurityGroups(sourceSecurityGroups: List<String>)
+
+      public fun sourceSecurityGroups(vararg sourceSecurityGroups: String)
     }
 
     private class BuilderImpl : Builder {
@@ -570,6 +591,9 @@ public open class CfnNodegroup internal constructor(
       override fun sourceSecurityGroups(sourceSecurityGroups: List<String>) {
         cdkBuilder.sourceSecurityGroups(sourceSecurityGroups)
       }
+
+      override fun sourceSecurityGroups(vararg sourceSecurityGroups: String): Unit =
+          sourceSecurityGroups(sourceSecurityGroups.toList())
 
       public fun build(): software.amazon.awscdk.services.eks.CfnNodegroup.RemoteAccessProperty =
           cdkBuilder.build()

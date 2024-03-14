@@ -40,6 +40,8 @@ public open class FargateTaskDefinition internal constructor(
     public fun taskRole(taskRole: IRole)
 
     public fun volumes(volumes: List<Volume>)
+
+    public fun volumes(vararg volumes: Volume)
   }
 
   private class BuilderImpl(
@@ -89,6 +91,8 @@ public open class FargateTaskDefinition internal constructor(
     override fun volumes(volumes: List<Volume>) {
       cdkBuilder.volumes(volumes.map(Volume::unwrap))
     }
+
+    override fun volumes(vararg volumes: Volume): Unit = volumes(volumes.toList())
 
     public fun build(): software.amazon.awscdk.services.ecs.FargateTaskDefinition =
         cdkBuilder.build()

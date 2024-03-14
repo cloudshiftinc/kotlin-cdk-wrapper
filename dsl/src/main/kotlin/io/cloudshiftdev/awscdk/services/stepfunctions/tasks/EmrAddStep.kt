@@ -24,6 +24,8 @@ public open class EmrAddStep internal constructor(
 
     public fun args(args: List<String>)
 
+    public fun args(vararg args: String)
+
     public fun clusterId(clusterId: String)
 
     public fun comment(comment: String)
@@ -81,6 +83,8 @@ public open class EmrAddStep internal constructor(
     override fun args(args: List<String>) {
       cdkBuilder.args(args)
     }
+
+    override fun args(vararg args: String): Unit = args(args.toList())
 
     override fun clusterId(clusterId: String) {
       cdkBuilder.clusterId(clusterId)

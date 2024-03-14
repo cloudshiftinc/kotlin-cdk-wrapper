@@ -30,7 +30,7 @@ public open class CfnIpAccessSettings internal constructor(
   }
 
   public open fun attrAssociatedPortalArns(): List<String> =
-      unwrap(this).getAttrAssociatedPortalArns() ?: emptyList()
+      unwrap(this).getAttrAssociatedPortalArns()
 
   public open fun attrCreationDate(): String = unwrap(this).getAttrCreationDate()
 
@@ -71,11 +71,15 @@ public open class CfnIpAccessSettings internal constructor(
     unwrap(this).setIpRules(__idx_ac66f0)
   }
 
+  public open fun ipRules(vararg __idx_ac66f0: Any): Unit = ipRules(__idx_ac66f0.toList())
+
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   public interface Builder {
     public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
@@ -92,7 +96,11 @@ public open class CfnIpAccessSettings internal constructor(
 
     public fun ipRules(ipRules: List<Any>)
 
+    public fun ipRules(vararg ipRules: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -131,9 +139,13 @@ public open class CfnIpAccessSettings internal constructor(
       cdkBuilder.ipRules(ipRules)
     }
 
+    override fun ipRules(vararg ipRules: Any): Unit = ipRules(ipRules.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.workspacesweb.CfnIpAccessSettings =
         cdkBuilder.build()

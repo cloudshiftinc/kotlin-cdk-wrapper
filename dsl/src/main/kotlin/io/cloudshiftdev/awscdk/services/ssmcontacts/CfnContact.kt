@@ -46,6 +46,8 @@ public open class CfnContact internal constructor(
     unwrap(this).setPlan(__idx_ac66f0)
   }
 
+  public open fun plan(vararg __idx_ac66f0: Any): Unit = plan(__idx_ac66f0.toList())
+
   public open fun type(): String = unwrap(this).getType()
 
   public open fun type(`value`: String) {
@@ -60,6 +62,8 @@ public open class CfnContact internal constructor(
     public fun plan(plan: IResolvable)
 
     public fun plan(plan: List<Any>)
+
+    public fun plan(vararg plan: Any)
 
     public fun type(type: String)
   }
@@ -86,6 +90,8 @@ public open class CfnContact internal constructor(
     override fun plan(plan: List<Any>) {
       cdkBuilder.plan(plan)
     }
+
+    override fun plan(vararg plan: Any): Unit = plan(plan.toList())
 
     override fun type(type: String) {
       cdkBuilder.type(type)
@@ -127,9 +133,13 @@ public open class CfnContact internal constructor(
 
       public fun rotationIds(rotationIds: List<String>)
 
+      public fun rotationIds(vararg rotationIds: String)
+
       public fun targets(targets: IResolvable)
 
       public fun targets(targets: List<Any>)
+
+      public fun targets(vararg targets: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -145,6 +155,8 @@ public open class CfnContact internal constructor(
         cdkBuilder.rotationIds(rotationIds)
       }
 
+      override fun rotationIds(vararg rotationIds: String): Unit = rotationIds(rotationIds.toList())
+
       override fun targets(targets: IResolvable) {
         cdkBuilder.targets(targets.let(IResolvable::unwrap))
       }
@@ -152,6 +164,8 @@ public open class CfnContact internal constructor(
       override fun targets(targets: List<Any>) {
         cdkBuilder.targets(targets)
       }
+
+      override fun targets(vararg targets: Any): Unit = targets(targets.toList())
 
       public fun build(): software.amazon.awscdk.services.ssmcontacts.CfnContact.StageProperty =
           cdkBuilder.build()

@@ -31,6 +31,8 @@ public open class CfnUsagePlan internal constructor(
     unwrap(this).setApiStages(__idx_ac66f0)
   }
 
+  public open fun apiStages(vararg __idx_ac66f0: Any): Unit = apiStages(__idx_ac66f0.toList())
+
   public open fun attrId(): String = unwrap(this).getAttrId()
 
   public open fun description(): String? = unwrap(this).getDescription()
@@ -67,6 +69,8 @@ public open class CfnUsagePlan internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun throttle(): Any? = unwrap(this).getThrottle()
 
   public open fun throttle(`value`: IResolvable) {
@@ -93,6 +97,8 @@ public open class CfnUsagePlan internal constructor(
 
     public fun apiStages(apiStages: List<Any>)
 
+    public fun apiStages(vararg apiStages: Any)
+
     public fun description(description: String)
 
     public fun quota(quota: IResolvable)
@@ -104,6 +110,8 @@ public open class CfnUsagePlan internal constructor(
     public fun quota(quota: QuotaSettingsProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun throttle(throttle: IResolvable)
 
@@ -131,6 +139,8 @@ public open class CfnUsagePlan internal constructor(
       cdkBuilder.apiStages(apiStages)
     }
 
+    override fun apiStages(vararg apiStages: Any): Unit = apiStages(apiStages.toList())
+
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
@@ -151,6 +161,8 @@ public open class CfnUsagePlan internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun throttle(throttle: IResolvable) {
       cdkBuilder.throttle(throttle.let(IResolvable::unwrap))

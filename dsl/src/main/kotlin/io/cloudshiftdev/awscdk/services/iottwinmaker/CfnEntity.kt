@@ -398,6 +398,8 @@ public open class CfnEntity internal constructor(
 
       public fun allowedValues(allowedValues: List<Any>)
 
+      public fun allowedValues(vararg allowedValues: Any)
+
       public fun nestedType(nestedType: IResolvable)
 
       public fun nestedType(nestedType: DataTypeProperty)
@@ -431,6 +433,9 @@ public open class CfnEntity internal constructor(
       override fun allowedValues(allowedValues: List<Any>) {
         cdkBuilder.allowedValues(allowedValues)
       }
+
+      override fun allowedValues(vararg allowedValues: Any): Unit =
+          allowedValues(allowedValues.toList())
 
       override fun nestedType(nestedType: IResolvable) {
         cdkBuilder.nestedType(nestedType.let(IResolvable::unwrap))
@@ -1002,6 +1007,8 @@ public open class CfnEntity internal constructor(
 
       public fun listValue(listValue: List<Any>)
 
+      public fun listValue(vararg listValue: Any)
+
       public fun longValue(longValue: Number)
 
       public fun mapValue(mapValue: IResolvable)
@@ -1045,6 +1052,8 @@ public open class CfnEntity internal constructor(
       override fun listValue(listValue: List<Any>) {
         cdkBuilder.listValue(listValue)
       }
+
+      override fun listValue(vararg listValue: Any): Unit = listValue(listValue.toList())
 
       override fun longValue(longValue: Number) {
         cdkBuilder.longValue(longValue)
@@ -1258,6 +1267,8 @@ public open class CfnEntity internal constructor(
       public fun groupType(groupType: String)
 
       public fun propertyNames(propertyNames: List<String>)
+
+      public fun propertyNames(vararg propertyNames: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1272,6 +1283,9 @@ public open class CfnEntity internal constructor(
       override fun propertyNames(propertyNames: List<String>) {
         cdkBuilder.propertyNames(propertyNames)
       }
+
+      override fun propertyNames(vararg propertyNames: String): Unit =
+          propertyNames(propertyNames.toList())
 
       public fun build():
           software.amazon.awscdk.services.iottwinmaker.CfnEntity.PropertyGroupProperty =

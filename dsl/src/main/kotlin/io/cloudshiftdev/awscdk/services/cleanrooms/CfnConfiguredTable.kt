@@ -20,11 +20,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnConfiguredTable internal constructor(
   private val cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
-  public open fun allowedColumns(): List<String> = unwrap(this).getAllowedColumns() ?: emptyList()
+  public open fun allowedColumns(): List<String> = unwrap(this).getAllowedColumns()
 
   public open fun allowedColumns(`value`: List<String>) {
     unwrap(this).setAllowedColumns(`value`)
   }
+
+  public open fun allowedColumns(vararg `value`: String): Unit = allowedColumns(`value`.toList())
 
   public open fun analysisMethod(): String = unwrap(this).getAnalysisMethod()
 
@@ -41,6 +43,9 @@ public open class CfnConfiguredTable internal constructor(
   public open fun analysisRules(__idx_ac66f0: List<Any>) {
     unwrap(this).setAnalysisRules(__idx_ac66f0)
   }
+
+  public open fun analysisRules(vararg __idx_ac66f0: Any): Unit =
+      analysisRules(__idx_ac66f0.toList())
 
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
@@ -87,14 +92,20 @@ public open class CfnConfiguredTable internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun allowedColumns(allowedColumns: List<String>)
+
+    public fun allowedColumns(vararg allowedColumns: String)
 
     public fun analysisMethod(analysisMethod: String)
 
     public fun analysisRules(analysisRules: IResolvable)
 
     public fun analysisRules(analysisRules: List<Any>)
+
+    public fun analysisRules(vararg analysisRules: Any)
 
     public fun description(description: String)
 
@@ -109,6 +120,8 @@ public open class CfnConfiguredTable internal constructor(
     public fun tableReference(tableReference: TableReferenceProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -122,6 +135,9 @@ public open class CfnConfiguredTable internal constructor(
       cdkBuilder.allowedColumns(allowedColumns)
     }
 
+    override fun allowedColumns(vararg allowedColumns: String): Unit =
+        allowedColumns(allowedColumns.toList())
+
     override fun analysisMethod(analysisMethod: String) {
       cdkBuilder.analysisMethod(analysisMethod)
     }
@@ -133,6 +149,9 @@ public open class CfnConfiguredTable internal constructor(
     override fun analysisRules(analysisRules: List<Any>) {
       cdkBuilder.analysisRules(analysisRules)
     }
+
+    override fun analysisRules(vararg analysisRules: Any): Unit =
+        analysisRules(analysisRules.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -158,6 +177,8 @@ public open class CfnConfiguredTable internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable =
         cdkBuilder.build()
@@ -338,11 +359,19 @@ public open class CfnConfiguredTable internal constructor(
 
       public fun aggregateColumns(aggregateColumns: List<Any>)
 
+      public fun aggregateColumns(vararg aggregateColumns: Any)
+
       public fun allowedJoinOperators(allowedJoinOperators: List<String>)
+
+      public fun allowedJoinOperators(vararg allowedJoinOperators: String)
 
       public fun dimensionColumns(dimensionColumns: List<String>)
 
+      public fun dimensionColumns(vararg dimensionColumns: String)
+
       public fun joinColumns(joinColumns: List<String>)
+
+      public fun joinColumns(vararg joinColumns: String)
 
       public fun joinRequired(joinRequired: String)
 
@@ -350,7 +379,11 @@ public open class CfnConfiguredTable internal constructor(
 
       public fun outputConstraints(outputConstraints: List<Any>)
 
+      public fun outputConstraints(vararg outputConstraints: Any)
+
       public fun scalarFunctions(scalarFunctions: List<String>)
+
+      public fun scalarFunctions(vararg scalarFunctions: String)
     }
 
     private class BuilderImpl : Builder {
@@ -367,17 +400,28 @@ public open class CfnConfiguredTable internal constructor(
         cdkBuilder.aggregateColumns(aggregateColumns)
       }
 
+      override fun aggregateColumns(vararg aggregateColumns: Any): Unit =
+          aggregateColumns(aggregateColumns.toList())
+
       override fun allowedJoinOperators(allowedJoinOperators: List<String>) {
         cdkBuilder.allowedJoinOperators(allowedJoinOperators)
       }
+
+      override fun allowedJoinOperators(vararg allowedJoinOperators: String): Unit =
+          allowedJoinOperators(allowedJoinOperators.toList())
 
       override fun dimensionColumns(dimensionColumns: List<String>) {
         cdkBuilder.dimensionColumns(dimensionColumns)
       }
 
+      override fun dimensionColumns(vararg dimensionColumns: String): Unit =
+          dimensionColumns(dimensionColumns.toList())
+
       override fun joinColumns(joinColumns: List<String>) {
         cdkBuilder.joinColumns(joinColumns)
       }
+
+      override fun joinColumns(vararg joinColumns: String): Unit = joinColumns(joinColumns.toList())
 
       override fun joinRequired(joinRequired: String) {
         cdkBuilder.joinRequired(joinRequired)
@@ -391,9 +435,15 @@ public open class CfnConfiguredTable internal constructor(
         cdkBuilder.outputConstraints(outputConstraints)
       }
 
+      override fun outputConstraints(vararg outputConstraints: Any): Unit =
+          outputConstraints(outputConstraints.toList())
+
       override fun scalarFunctions(scalarFunctions: List<String>) {
         cdkBuilder.scalarFunctions(scalarFunctions)
       }
+
+      override fun scalarFunctions(vararg scalarFunctions: String): Unit =
+          scalarFunctions(scalarFunctions.toList())
 
       public fun build():
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleAggregationProperty
@@ -409,17 +459,15 @@ public open class CfnConfiguredTable internal constructor(
       override fun allowedJoinOperators(): List<String> = unwrap(this).getAllowedJoinOperators() ?:
           emptyList()
 
-      override fun dimensionColumns(): List<String> = unwrap(this).getDimensionColumns() ?:
-          emptyList()
+      override fun dimensionColumns(): List<String> = unwrap(this).getDimensionColumns()
 
-      override fun joinColumns(): List<String> = unwrap(this).getJoinColumns() ?: emptyList()
+      override fun joinColumns(): List<String> = unwrap(this).getJoinColumns()
 
       override fun joinRequired(): String? = unwrap(this).getJoinRequired()
 
       override fun outputConstraints(): Any = unwrap(this).getOutputConstraints()
 
-      override fun scalarFunctions(): List<String> = unwrap(this).getScalarFunctions() ?:
-          emptyList()
+      override fun scalarFunctions(): List<String> = unwrap(this).getScalarFunctions()
     }
 
     public companion object {
@@ -451,7 +499,11 @@ public open class CfnConfiguredTable internal constructor(
     public interface Builder {
       public fun allowedAnalyses(allowedAnalyses: List<String>)
 
+      public fun allowedAnalyses(vararg allowedAnalyses: String)
+
       public fun allowedAnalysisProviders(allowedAnalysisProviders: List<String>)
+
+      public fun allowedAnalysisProviders(vararg allowedAnalysisProviders: String)
     }
 
     private class BuilderImpl : Builder {
@@ -464,9 +516,15 @@ public open class CfnConfiguredTable internal constructor(
         cdkBuilder.allowedAnalyses(allowedAnalyses)
       }
 
+      override fun allowedAnalyses(vararg allowedAnalyses: String): Unit =
+          allowedAnalyses(allowedAnalyses.toList())
+
       override fun allowedAnalysisProviders(allowedAnalysisProviders: List<String>) {
         cdkBuilder.allowedAnalysisProviders(allowedAnalysisProviders)
       }
+
+      override fun allowedAnalysisProviders(vararg allowedAnalysisProviders: String): Unit =
+          allowedAnalysisProviders(allowedAnalysisProviders.toList())
 
       public fun build():
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleCustomProperty =
@@ -477,8 +535,7 @@ public open class CfnConfiguredTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleCustomProperty,
     ) : AnalysisRuleCustomProperty {
-      override fun allowedAnalyses(): List<String> = unwrap(this).getAllowedAnalyses() ?:
-          emptyList()
+      override fun allowedAnalyses(): List<String> = unwrap(this).getAllowedAnalyses()
 
       override fun allowedAnalysisProviders(): List<String> =
           unwrap(this).getAllowedAnalysisProviders() ?: emptyList()
@@ -512,6 +569,8 @@ public open class CfnConfiguredTable internal constructor(
     public interface Builder {
       public fun columnNames(columnNames: List<String>)
 
+      public fun columnNames(vararg columnNames: String)
+
       public fun function(function: String)
     }
 
@@ -524,6 +583,8 @@ public open class CfnConfiguredTable internal constructor(
       override fun columnNames(columnNames: List<String>) {
         cdkBuilder.columnNames(columnNames)
       }
+
+      override fun columnNames(vararg columnNames: String): Unit = columnNames(columnNames.toList())
 
       override fun function(function: String) {
         cdkBuilder.function(function)
@@ -538,7 +599,7 @@ public open class CfnConfiguredTable internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregateColumnProperty,
     ) : AggregateColumnProperty {
-      override fun columnNames(): List<String> = unwrap(this).getColumnNames() ?: emptyList()
+      override fun columnNames(): List<String> = unwrap(this).getColumnNames()
 
       override fun function(): String = unwrap(this).getFunction()
     }
@@ -698,9 +759,15 @@ public open class CfnConfiguredTable internal constructor(
     public interface Builder {
       public fun allowedJoinOperators(allowedJoinOperators: List<String>)
 
+      public fun allowedJoinOperators(vararg allowedJoinOperators: String)
+
       public fun joinColumns(joinColumns: List<String>)
 
+      public fun joinColumns(vararg joinColumns: String)
+
       public fun listColumns(listColumns: List<String>)
+
+      public fun listColumns(vararg listColumns: String)
     }
 
     private class BuilderImpl : Builder {
@@ -713,13 +780,20 @@ public open class CfnConfiguredTable internal constructor(
         cdkBuilder.allowedJoinOperators(allowedJoinOperators)
       }
 
+      override fun allowedJoinOperators(vararg allowedJoinOperators: String): Unit =
+          allowedJoinOperators(allowedJoinOperators.toList())
+
       override fun joinColumns(joinColumns: List<String>) {
         cdkBuilder.joinColumns(joinColumns)
       }
 
+      override fun joinColumns(vararg joinColumns: String): Unit = joinColumns(joinColumns.toList())
+
       override fun listColumns(listColumns: List<String>) {
         cdkBuilder.listColumns(listColumns)
       }
+
+      override fun listColumns(vararg listColumns: String): Unit = listColumns(listColumns.toList())
 
       public fun build():
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleListProperty =
@@ -733,9 +807,9 @@ public open class CfnConfiguredTable internal constructor(
       override fun allowedJoinOperators(): List<String> = unwrap(this).getAllowedJoinOperators() ?:
           emptyList()
 
-      override fun joinColumns(): List<String> = unwrap(this).getJoinColumns() ?: emptyList()
+      override fun joinColumns(): List<String> = unwrap(this).getJoinColumns()
 
-      override fun listColumns(): List<String> = unwrap(this).getListColumns() ?: emptyList()
+      override fun listColumns(): List<String> = unwrap(this).getListColumns()
     }
 
     public companion object {

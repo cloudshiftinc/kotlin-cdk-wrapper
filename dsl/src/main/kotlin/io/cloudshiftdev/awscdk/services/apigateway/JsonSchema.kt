@@ -93,6 +93,8 @@ public interface JsonSchema {
   public interface Builder {
     public fun additionalItems(additionalItems: List<JsonSchema>)
 
+    public fun additionalItems(vararg additionalItems: JsonSchema)
+
     public fun additionalProperties(additionalProperties: Boolean)
 
     public fun additionalProperties(additionalProperties: JsonSchema)
@@ -103,7 +105,11 @@ public interface JsonSchema {
 
     public fun allOf(allOf: List<JsonSchema>)
 
+    public fun allOf(vararg allOf: JsonSchema)
+
     public fun anyOf(anyOf: List<JsonSchema>)
+
+    public fun anyOf(vararg anyOf: JsonSchema)
 
     public fun contains(contains: JsonSchema)
 
@@ -112,6 +118,8 @@ public interface JsonSchema {
     public fun contains(contains: Builder.() -> Unit)
 
     public fun contains(contains: List<JsonSchema>)
+
+    public fun contains(vararg contains: JsonSchema)
 
     public fun defaultValue(defaultValue: Any)
 
@@ -122,6 +130,8 @@ public interface JsonSchema {
     public fun description(description: String)
 
     public fun enumValue(enumValue: List<Any>)
+
+    public fun enumValue(vararg enumValue: Any)
 
     public fun exclusiveMaximum(exclusiveMaximum: Boolean)
 
@@ -138,6 +148,8 @@ public interface JsonSchema {
     public fun items(items: Builder.() -> Unit)
 
     public fun items(items: List<JsonSchema>)
+
+    public fun items(vararg items: JsonSchema)
 
     public fun maxItems(maxItems: Number)
 
@@ -165,6 +177,8 @@ public interface JsonSchema {
 
     public fun oneOf(oneOf: List<JsonSchema>)
 
+    public fun oneOf(vararg oneOf: JsonSchema)
+
     public fun pattern(pattern: String)
 
     public fun patternProperties(patternProperties: Map<String, JsonSchema>)
@@ -181,6 +195,8 @@ public interface JsonSchema {
 
     public fun required(required: List<String>)
 
+    public fun required(vararg required: String)
+
     public fun schema(schema: JsonSchemaVersion)
 
     public fun title(title: String)
@@ -188,6 +204,8 @@ public interface JsonSchema {
     public fun type(type: JsonSchemaType)
 
     public fun type(type: List<JsonSchemaType>)
+
+    public fun type(vararg type: JsonSchemaType)
 
     public fun uniqueItems(uniqueItems: Boolean)
   }
@@ -199,6 +217,9 @@ public interface JsonSchema {
     override fun additionalItems(additionalItems: List<JsonSchema>) {
       cdkBuilder.additionalItems(additionalItems.map(JsonSchema::unwrap))
     }
+
+    override fun additionalItems(vararg additionalItems: JsonSchema): Unit =
+        additionalItems(additionalItems.toList())
 
     override fun additionalProperties(additionalProperties: Boolean) {
       cdkBuilder.additionalProperties(additionalProperties)
@@ -217,9 +238,13 @@ public interface JsonSchema {
       cdkBuilder.allOf(allOf.map(JsonSchema::unwrap))
     }
 
+    override fun allOf(vararg allOf: JsonSchema): Unit = allOf(allOf.toList())
+
     override fun anyOf(anyOf: List<JsonSchema>) {
       cdkBuilder.anyOf(anyOf.map(JsonSchema::unwrap))
     }
+
+    override fun anyOf(vararg anyOf: JsonSchema): Unit = anyOf(anyOf.toList())
 
     override fun contains(contains: JsonSchema) {
       cdkBuilder.contains(contains.let(JsonSchema::unwrap))
@@ -232,6 +257,8 @@ public interface JsonSchema {
     override fun contains(contains: List<JsonSchema>) {
       cdkBuilder.contains(contains.map(JsonSchema::unwrap))
     }
+
+    override fun contains(vararg contains: JsonSchema): Unit = contains(contains.toList())
 
     override fun defaultValue(defaultValue: Any) {
       cdkBuilder.defaultValue(defaultValue)
@@ -252,6 +279,8 @@ public interface JsonSchema {
     override fun enumValue(enumValue: List<Any>) {
       cdkBuilder.enumValue(enumValue)
     }
+
+    override fun enumValue(vararg enumValue: Any): Unit = enumValue(enumValue.toList())
 
     override fun exclusiveMaximum(exclusiveMaximum: Boolean) {
       cdkBuilder.exclusiveMaximum(exclusiveMaximum)
@@ -280,6 +309,8 @@ public interface JsonSchema {
     override fun items(items: List<JsonSchema>) {
       cdkBuilder.items(items.map(JsonSchema::unwrap))
     }
+
+    override fun items(vararg items: JsonSchema): Unit = items(items.toList())
 
     override fun maxItems(maxItems: Number) {
       cdkBuilder.maxItems(maxItems)
@@ -329,6 +360,8 @@ public interface JsonSchema {
       cdkBuilder.oneOf(oneOf.map(JsonSchema::unwrap))
     }
 
+    override fun oneOf(vararg oneOf: JsonSchema): Unit = oneOf(oneOf.toList())
+
     override fun pattern(pattern: String) {
       cdkBuilder.pattern(pattern)
     }
@@ -358,6 +391,8 @@ public interface JsonSchema {
       cdkBuilder.required(required)
     }
 
+    override fun required(vararg required: String): Unit = required(required.toList())
+
     override fun schema(schema: JsonSchemaVersion) {
       cdkBuilder.schema(schema.let(JsonSchemaVersion::unwrap))
     }
@@ -373,6 +408,8 @@ public interface JsonSchema {
     override fun type(type: List<JsonSchemaType>) {
       cdkBuilder.type(type.map(JsonSchemaType::unwrap))
     }
+
+    override fun type(vararg type: JsonSchemaType): Unit = type(type.toList())
 
     override fun uniqueItems(uniqueItems: Boolean) {
       cdkBuilder.uniqueItems(uniqueItems)

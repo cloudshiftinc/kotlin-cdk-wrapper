@@ -106,6 +106,9 @@ public open class CfnStage internal constructor(
     unwrap(this).setMethodSettings(__idx_ac66f0)
   }
 
+  public open fun methodSettings(vararg __idx_ac66f0: Any): Unit =
+      methodSettings(__idx_ac66f0.toList())
+
   public open fun restApiId(): String = unwrap(this).getRestApiId()
 
   public open fun restApiId(`value`: String) {
@@ -126,6 +129,8 @@ public open class CfnStage internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun tracingEnabled(): Any? = unwrap(this).getTracingEnabled()
 
@@ -182,11 +187,15 @@ public open class CfnStage internal constructor(
 
     public fun methodSettings(methodSettings: List<Any>)
 
+    public fun methodSettings(vararg methodSettings: Any)
+
     public fun restApiId(restApiId: String)
 
     public fun stageName(stageName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun tracingEnabled(tracingEnabled: Boolean)
 
@@ -266,6 +275,9 @@ public open class CfnStage internal constructor(
       cdkBuilder.methodSettings(methodSettings)
     }
 
+    override fun methodSettings(vararg methodSettings: Any): Unit =
+        methodSettings(methodSettings.toList())
+
     override fun restApiId(restApiId: String) {
       cdkBuilder.restApiId(restApiId)
     }
@@ -277,6 +289,8 @@ public open class CfnStage internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun tracingEnabled(tracingEnabled: Boolean) {
       cdkBuilder.tracingEnabled(tracingEnabled)

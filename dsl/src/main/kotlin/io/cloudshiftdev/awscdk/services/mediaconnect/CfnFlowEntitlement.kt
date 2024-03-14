@@ -69,11 +69,13 @@ public open class CfnFlowEntitlement internal constructor(
     unwrap(this).setName(`value`)
   }
 
-  public open fun subscribers(): List<String> = unwrap(this).getSubscribers() ?: emptyList()
+  public open fun subscribers(): List<String> = unwrap(this).getSubscribers()
 
   public open fun subscribers(`value`: List<String>) {
     unwrap(this).setSubscribers(`value`)
   }
+
+  public open fun subscribers(vararg `value`: String): Unit = subscribers(`value`.toList())
 
   public interface Builder {
     public fun dataTransferSubscriberFeePercent(dataTransferSubscriberFeePercent: Number)
@@ -95,6 +97,8 @@ public open class CfnFlowEntitlement internal constructor(
     public fun name(name: String)
 
     public fun subscribers(subscribers: List<String>)
+
+    public fun subscribers(vararg subscribers: String)
   }
 
   private class BuilderImpl(
@@ -140,6 +144,8 @@ public open class CfnFlowEntitlement internal constructor(
     override fun subscribers(subscribers: List<String>) {
       cdkBuilder.subscribers(subscribers)
     }
+
+    override fun subscribers(vararg subscribers: String): Unit = subscribers(subscribers.toList())
 
     public fun build(): software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement =
         cdkBuilder.build()

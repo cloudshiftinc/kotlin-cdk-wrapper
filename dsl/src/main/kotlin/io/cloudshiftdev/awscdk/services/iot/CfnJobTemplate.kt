@@ -41,6 +41,9 @@ public open class CfnJobTemplate internal constructor(
     unwrap(this).setDestinationPackageVersions(`value`)
   }
 
+  public open fun destinationPackageVersions(vararg `value`: String): Unit =
+      destinationPackageVersions(`value`.toList())
+
   public open fun document(): String? = unwrap(this).getDocument()
 
   public open fun document(`value`: String) {
@@ -101,6 +104,9 @@ public open class CfnJobTemplate internal constructor(
     unwrap(this).setMaintenanceWindows(__idx_ac66f0)
   }
 
+  public open fun maintenanceWindows(vararg __idx_ac66f0: Any): Unit =
+      maintenanceWindows(__idx_ac66f0.toList())
+
   public open fun presignedUrlConfig(): Any? = unwrap(this).getPresignedUrlConfig()
 
   public open fun presignedUrlConfig(`value`: Any) {
@@ -116,6 +122,8 @@ public open class CfnJobTemplate internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun timeoutConfig(): Any? = unwrap(this).getTimeoutConfig()
 
   public open fun timeoutConfig(`value`: Any) {
@@ -128,6 +136,8 @@ public open class CfnJobTemplate internal constructor(
     public fun description(description: String)
 
     public fun destinationPackageVersions(destinationPackageVersions: List<String>)
+
+    public fun destinationPackageVersions(vararg destinationPackageVersions: String)
 
     public fun document(document: String)
 
@@ -152,9 +162,13 @@ public open class CfnJobTemplate internal constructor(
 
     public fun maintenanceWindows(maintenanceWindows: List<Any>)
 
+    public fun maintenanceWindows(vararg maintenanceWindows: Any)
+
     public fun presignedUrlConfig(presignedUrlConfig: Any)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun timeoutConfig(timeoutConfig: Any)
   }
@@ -177,6 +191,9 @@ public open class CfnJobTemplate internal constructor(
     override fun destinationPackageVersions(destinationPackageVersions: List<String>) {
       cdkBuilder.destinationPackageVersions(destinationPackageVersions)
     }
+
+    override fun destinationPackageVersions(vararg destinationPackageVersions: String): Unit =
+        destinationPackageVersions(destinationPackageVersions.toList())
 
     override fun document(document: String) {
       cdkBuilder.document(document)
@@ -221,6 +238,9 @@ public open class CfnJobTemplate internal constructor(
       cdkBuilder.maintenanceWindows(maintenanceWindows)
     }
 
+    override fun maintenanceWindows(vararg maintenanceWindows: Any): Unit =
+        maintenanceWindows(maintenanceWindows.toList())
+
     override fun presignedUrlConfig(presignedUrlConfig: Any) {
       cdkBuilder.presignedUrlConfig(presignedUrlConfig)
     }
@@ -228,6 +248,8 @@ public open class CfnJobTemplate internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun timeoutConfig(timeoutConfig: Any) {
       cdkBuilder.timeoutConfig(timeoutConfig)
@@ -524,6 +546,8 @@ public open class CfnJobTemplate internal constructor(
       public fun retryCriteriaList(retryCriteriaList: IResolvable)
 
       public fun retryCriteriaList(retryCriteriaList: List<Any>)
+
+      public fun retryCriteriaList(vararg retryCriteriaList: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -539,6 +563,9 @@ public open class CfnJobTemplate internal constructor(
       override fun retryCriteriaList(retryCriteriaList: List<Any>) {
         cdkBuilder.retryCriteriaList(retryCriteriaList)
       }
+
+      override fun retryCriteriaList(vararg retryCriteriaList: Any): Unit =
+          retryCriteriaList(retryCriteriaList.toList())
 
       public fun build():
           software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty =
@@ -695,6 +722,8 @@ public open class CfnJobTemplate internal constructor(
       public fun criteriaList(criteriaList: IResolvable)
 
       public fun criteriaList(criteriaList: List<Any>)
+
+      public fun criteriaList(vararg criteriaList: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -709,6 +738,9 @@ public open class CfnJobTemplate internal constructor(
       override fun criteriaList(criteriaList: List<Any>) {
         cdkBuilder.criteriaList(criteriaList)
       }
+
+      override fun criteriaList(vararg criteriaList: Any): Unit =
+          criteriaList(criteriaList.toList())
 
       public fun build(): software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty =
           cdkBuilder.build()

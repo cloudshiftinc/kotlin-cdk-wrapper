@@ -35,6 +35,9 @@ public open class CfnRestoreTestingSelection internal constructor(
     unwrap(this).setProtectedResourceArns(`value`)
   }
 
+  public open fun protectedResourceArns(vararg `value`: String): Unit =
+      protectedResourceArns(`value`.toList())
+
   public open fun protectedResourceConditions(): Any? =
       unwrap(this).getProtectedResourceConditions()
 
@@ -92,6 +95,8 @@ public open class CfnRestoreTestingSelection internal constructor(
 
     public fun protectedResourceArns(protectedResourceArns: List<String>)
 
+    public fun protectedResourceArns(vararg protectedResourceArns: String)
+
     public fun protectedResourceConditions(protectedResourceConditions: IResolvable)
 
     public
@@ -130,6 +135,9 @@ public open class CfnRestoreTestingSelection internal constructor(
     override fun protectedResourceArns(protectedResourceArns: List<String>) {
       cdkBuilder.protectedResourceArns(protectedResourceArns)
     }
+
+    override fun protectedResourceArns(vararg protectedResourceArns: String): Unit =
+        protectedResourceArns(protectedResourceArns.toList())
 
     override fun protectedResourceConditions(protectedResourceConditions: IResolvable) {
       cdkBuilder.protectedResourceConditions(protectedResourceConditions.let(IResolvable::unwrap))
@@ -206,9 +214,13 @@ public open class CfnRestoreTestingSelection internal constructor(
 
       public fun stringEquals(stringEquals: List<Any>)
 
+      public fun stringEquals(vararg stringEquals: Any)
+
       public fun stringNotEquals(stringNotEquals: IResolvable)
 
       public fun stringNotEquals(stringNotEquals: List<Any>)
+
+      public fun stringNotEquals(vararg stringNotEquals: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -225,6 +237,9 @@ public open class CfnRestoreTestingSelection internal constructor(
         cdkBuilder.stringEquals(stringEquals)
       }
 
+      override fun stringEquals(vararg stringEquals: Any): Unit =
+          stringEquals(stringEquals.toList())
+
       override fun stringNotEquals(stringNotEquals: IResolvable) {
         cdkBuilder.stringNotEquals(stringNotEquals.let(IResolvable::unwrap))
       }
@@ -232,6 +247,9 @@ public open class CfnRestoreTestingSelection internal constructor(
       override fun stringNotEquals(stringNotEquals: List<Any>) {
         cdkBuilder.stringNotEquals(stringNotEquals)
       }
+
+      override fun stringNotEquals(vararg stringNotEquals: Any): Unit =
+          stringNotEquals(stringNotEquals.toList())
 
       public fun build():
           software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.ProtectedResourceConditionsProperty

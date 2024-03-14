@@ -88,12 +88,17 @@ public open class CfnInstanceProfile internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public open fun vpcSecurityGroups(): List<String> = unwrap(this).getVpcSecurityGroups() ?:
       emptyList()
 
   public open fun vpcSecurityGroups(`value`: List<String>) {
     unwrap(this).setVpcSecurityGroups(`value`)
   }
+
+  public open fun vpcSecurityGroups(vararg `value`: String): Unit =
+      vpcSecurityGroups(`value`.toList())
 
   public interface Builder {
     public fun availabilityZone(availabilityZone: String)
@@ -116,7 +121,11 @@ public open class CfnInstanceProfile internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun vpcSecurityGroups(vpcSecurityGroups: List<String>)
+
+    public fun vpcSecurityGroups(vararg vpcSecurityGroups: String)
   }
 
   private class BuilderImpl(
@@ -166,9 +175,14 @@ public open class CfnInstanceProfile internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun vpcSecurityGroups(vpcSecurityGroups: List<String>) {
       cdkBuilder.vpcSecurityGroups(vpcSecurityGroups)
     }
+
+    override fun vpcSecurityGroups(vararg vpcSecurityGroups: String): Unit =
+        vpcSecurityGroups(vpcSecurityGroups.toList())
 
     public fun build(): software.amazon.awscdk.services.dms.CfnInstanceProfile = cdkBuilder.build()
   }

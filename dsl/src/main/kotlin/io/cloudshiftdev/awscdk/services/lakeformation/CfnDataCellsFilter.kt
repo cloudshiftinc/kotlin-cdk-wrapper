@@ -22,6 +22,8 @@ public open class CfnDataCellsFilter internal constructor(
     unwrap(this).setColumnNames(`value`)
   }
 
+  public open fun columnNames(vararg `value`: String): Unit = columnNames(`value`.toList())
+
   public open fun columnWildcard(): Any? = unwrap(this).getColumnWildcard()
 
   public open fun columnWildcard(`value`: IResolvable) {
@@ -83,6 +85,8 @@ public open class CfnDataCellsFilter internal constructor(
   public interface Builder {
     public fun columnNames(columnNames: List<String>)
 
+    public fun columnNames(vararg columnNames: String)
+
     public fun columnWildcard(columnWildcard: IResolvable)
 
     public fun columnWildcard(columnWildcard: ColumnWildcardProperty)
@@ -118,6 +122,8 @@ public open class CfnDataCellsFilter internal constructor(
     override fun columnNames(columnNames: List<String>) {
       cdkBuilder.columnNames(columnNames)
     }
+
+    override fun columnNames(vararg columnNames: String): Unit = columnNames(columnNames.toList())
 
     override fun columnWildcard(columnWildcard: IResolvable) {
       cdkBuilder.columnWildcard(columnWildcard.let(IResolvable::unwrap))
@@ -192,6 +198,8 @@ public open class CfnDataCellsFilter internal constructor(
 
     public interface Builder {
       public fun excludedColumnNames(excludedColumnNames: List<String>)
+
+      public fun excludedColumnNames(vararg excludedColumnNames: String)
     }
 
     private class BuilderImpl : Builder {
@@ -203,6 +211,9 @@ public open class CfnDataCellsFilter internal constructor(
       override fun excludedColumnNames(excludedColumnNames: List<String>) {
         cdkBuilder.excludedColumnNames(excludedColumnNames)
       }
+
+      override fun excludedColumnNames(vararg excludedColumnNames: String): Unit =
+          excludedColumnNames(excludedColumnNames.toList())
 
       public fun build():
           software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter.ColumnWildcardProperty =

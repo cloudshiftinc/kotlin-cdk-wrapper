@@ -47,6 +47,8 @@ public open class CfnAccount internal constructor(
     unwrap(this).setParentIds(`value`)
   }
 
+  public open fun parentIds(vararg `value`: String): Unit = parentIds(`value`.toList())
+
   public open fun roleName(): String? = unwrap(this).getRoleName()
 
   public open fun roleName(`value`: String) {
@@ -62,6 +64,8 @@ public open class CfnAccount internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun accountName(accountName: String)
 
@@ -69,9 +73,13 @@ public open class CfnAccount internal constructor(
 
     public fun parentIds(parentIds: List<String>)
 
+    public fun parentIds(vararg parentIds: String)
+
     public fun roleName(roleName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -93,6 +101,8 @@ public open class CfnAccount internal constructor(
       cdkBuilder.parentIds(parentIds)
     }
 
+    override fun parentIds(vararg parentIds: String): Unit = parentIds(parentIds.toList())
+
     override fun roleName(roleName: String) {
       cdkBuilder.roleName(roleName)
     }
@@ -100,6 +110,8 @@ public open class CfnAccount internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.organizations.CfnAccount =
         cdkBuilder.build()

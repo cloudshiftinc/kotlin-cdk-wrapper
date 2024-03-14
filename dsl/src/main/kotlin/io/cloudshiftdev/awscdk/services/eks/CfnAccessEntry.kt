@@ -29,6 +29,9 @@ public open class CfnAccessEntry internal constructor(
     unwrap(this).setAccessPolicies(__idx_ac66f0)
   }
 
+  public open fun accessPolicies(vararg __idx_ac66f0: Any): Unit =
+      accessPolicies(__idx_ac66f0.toList())
+
   public open fun attrAccessEntryArn(): String = unwrap(this).getAttrAccessEntryArn()
 
   public override fun cdkTagManager(): TagManager =
@@ -51,6 +54,9 @@ public open class CfnAccessEntry internal constructor(
     unwrap(this).setKubernetesGroups(`value`)
   }
 
+  public open fun kubernetesGroups(vararg `value`: String): Unit =
+      kubernetesGroups(`value`.toList())
+
   public open fun principalArn(): String = unwrap(this).getPrincipalArn()
 
   public open fun principalArn(`value`: String) {
@@ -62,6 +68,8 @@ public open class CfnAccessEntry internal constructor(
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   public open fun type(): String? = unwrap(this).getType()
 
@@ -80,13 +88,19 @@ public open class CfnAccessEntry internal constructor(
 
     public fun accessPolicies(accessPolicies: List<Any>)
 
+    public fun accessPolicies(vararg accessPolicies: Any)
+
     public fun clusterName(clusterName: String)
 
     public fun kubernetesGroups(kubernetesGroups: List<String>)
 
+    public fun kubernetesGroups(vararg kubernetesGroups: String)
+
     public fun principalArn(principalArn: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun type(type: String)
 
@@ -108,6 +122,9 @@ public open class CfnAccessEntry internal constructor(
       cdkBuilder.accessPolicies(accessPolicies)
     }
 
+    override fun accessPolicies(vararg accessPolicies: Any): Unit =
+        accessPolicies(accessPolicies.toList())
+
     override fun clusterName(clusterName: String) {
       cdkBuilder.clusterName(clusterName)
     }
@@ -116,6 +133,9 @@ public open class CfnAccessEntry internal constructor(
       cdkBuilder.kubernetesGroups(kubernetesGroups)
     }
 
+    override fun kubernetesGroups(vararg kubernetesGroups: String): Unit =
+        kubernetesGroups(kubernetesGroups.toList())
+
     override fun principalArn(principalArn: String) {
       cdkBuilder.principalArn(principalArn)
     }
@@ -123,6 +143,8 @@ public open class CfnAccessEntry internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun type(type: String) {
       cdkBuilder.type(type)
@@ -164,6 +186,8 @@ public open class CfnAccessEntry internal constructor(
     public interface Builder {
       public fun namespaces(namespaces: List<String>)
 
+      public fun namespaces(vararg namespaces: String)
+
       public fun type(type: String)
     }
 
@@ -175,6 +199,8 @@ public open class CfnAccessEntry internal constructor(
       override fun namespaces(namespaces: List<String>) {
         cdkBuilder.namespaces(namespaces)
       }
+
+      override fun namespaces(vararg namespaces: String): Unit = namespaces(namespaces.toList())
 
       override fun type(type: String) {
         cdkBuilder.type(type)

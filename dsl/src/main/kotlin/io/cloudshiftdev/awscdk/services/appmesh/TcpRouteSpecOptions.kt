@@ -21,6 +21,8 @@ public interface TcpRouteSpecOptions : RouteSpecOptionsBase {
     public fun timeout(timeout: TcpTimeout.Builder.() -> Unit)
 
     public fun weightedTargets(weightedTargets: List<WeightedTarget>)
+
+    public fun weightedTargets(vararg weightedTargets: WeightedTarget)
   }
 
   private class BuilderImpl : Builder {
@@ -43,6 +45,9 @@ public interface TcpRouteSpecOptions : RouteSpecOptionsBase {
     override fun weightedTargets(weightedTargets: List<WeightedTarget>) {
       cdkBuilder.weightedTargets(weightedTargets.map(WeightedTarget::unwrap))
     }
+
+    override fun weightedTargets(vararg weightedTargets: WeightedTarget): Unit =
+        weightedTargets(weightedTargets.toList())
 
     public fun build(): software.amazon.awscdk.services.appmesh.TcpRouteSpecOptions =
         cdkBuilder.build()

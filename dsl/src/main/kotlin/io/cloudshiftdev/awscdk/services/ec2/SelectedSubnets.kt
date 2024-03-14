@@ -22,6 +22,8 @@ public interface SelectedSubnets {
   public interface Builder {
     public fun availabilityZones(availabilityZones: List<String>)
 
+    public fun availabilityZones(vararg availabilityZones: String)
+
     public fun hasPublic(hasPublic: Boolean)
 
     public fun internetConnectivityEstablished(internetConnectivityEstablished: IDependable)
@@ -30,7 +32,11 @@ public interface SelectedSubnets {
 
     public fun subnetIds(subnetIds: List<String>)
 
+    public fun subnetIds(vararg subnetIds: String)
+
     public fun subnets(subnets: List<ISubnet>)
+
+    public fun subnets(vararg subnets: ISubnet)
   }
 
   private class BuilderImpl : Builder {
@@ -40,6 +46,9 @@ public interface SelectedSubnets {
     override fun availabilityZones(availabilityZones: List<String>) {
       cdkBuilder.availabilityZones(availabilityZones)
     }
+
+    override fun availabilityZones(vararg availabilityZones: String): Unit =
+        availabilityZones(availabilityZones.toList())
 
     override fun hasPublic(hasPublic: Boolean) {
       cdkBuilder.hasPublic(hasPublic)
@@ -57,9 +66,13 @@ public interface SelectedSubnets {
       cdkBuilder.subnetIds(subnetIds)
     }
 
+    override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+
     override fun subnets(subnets: List<ISubnet>) {
       cdkBuilder.subnets(subnets.map(ISubnet::unwrap))
     }
+
+    override fun subnets(vararg subnets: ISubnet): Unit = subnets(subnets.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.SelectedSubnets = cdkBuilder.build()
   }
@@ -67,8 +80,7 @@ public interface SelectedSubnets {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.SelectedSubnets,
   ) : SelectedSubnets {
-    override fun availabilityZones(): List<String> = unwrap(this).getAvailabilityZones() ?:
-        emptyList()
+    override fun availabilityZones(): List<String> = unwrap(this).getAvailabilityZones()
 
     override fun hasPublic(): Boolean = unwrap(this).getHasPublic()
 
@@ -77,7 +89,7 @@ public interface SelectedSubnets {
 
     override fun isPendingLookup(): Boolean? = unwrap(this).getIsPendingLookup()
 
-    override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+    override fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
 
     override fun subnets(): List<ISubnet> = unwrap(this).getSubnets().map(ISubnet::wrap)
   }

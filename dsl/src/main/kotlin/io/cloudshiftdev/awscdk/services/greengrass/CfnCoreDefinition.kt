@@ -217,6 +217,8 @@ public open class CfnCoreDefinition internal constructor(
       public fun cores(cores: IResolvable)
 
       public fun cores(cores: List<Any>)
+
+      public fun cores(vararg cores: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -232,6 +234,8 @@ public open class CfnCoreDefinition internal constructor(
       override fun cores(cores: List<Any>) {
         cdkBuilder.cores(cores)
       }
+
+      override fun cores(vararg cores: Any): Unit = cores(cores.toList())
 
       public fun build():
           software.amazon.awscdk.services.greengrass.CfnCoreDefinition.CoreDefinitionVersionProperty

@@ -23,7 +23,7 @@ public open class PolicyDocument internal constructor(
   public open fun addStatements(statement: PolicyStatement.Builder.() -> Unit): Unit =
       addStatements(PolicyStatement(statement))
 
-  public override fun creationStack(): List<String> = unwrap(this).getCreationStack() ?: emptyList()
+  public override fun creationStack(): List<String> = unwrap(this).getCreationStack()
 
   public open fun isEmpty(): Boolean = unwrap(this).getIsEmpty()
 
@@ -34,14 +34,13 @@ public open class PolicyDocument internal constructor(
 
   public open fun toJson(): Any = unwrap(this).toJSON()
 
-  public open fun validateForAnyPolicy(): List<String> = unwrap(this).validateForAnyPolicy() ?:
-      emptyList()
+  public open fun validateForAnyPolicy(): List<String> = unwrap(this).validateForAnyPolicy()
 
   public open fun validateForIdentityPolicy(): List<String> =
-      unwrap(this).validateForIdentityPolicy() ?: emptyList()
+      unwrap(this).validateForIdentityPolicy()
 
   public open fun validateForResourcePolicy(): List<String> =
-      unwrap(this).validateForResourcePolicy() ?: emptyList()
+      unwrap(this).validateForResourcePolicy()
 
   public interface Builder {
     public fun assignSids(assignSids: Boolean)
@@ -49,6 +48,8 @@ public open class PolicyDocument internal constructor(
     public fun minimize(minimize: Boolean)
 
     public fun statements(statements: List<PolicyStatement>)
+
+    public fun statements(vararg statements: PolicyStatement)
   }
 
   private class BuilderImpl : Builder {
@@ -66,6 +67,9 @@ public open class PolicyDocument internal constructor(
     override fun statements(statements: List<PolicyStatement>) {
       cdkBuilder.statements(statements.map(PolicyStatement::unwrap))
     }
+
+    override fun statements(vararg statements: PolicyStatement): Unit =
+        statements(statements.toList())
 
     public fun build(): software.amazon.awscdk.services.iam.PolicyDocument = cdkBuilder.build()
   }

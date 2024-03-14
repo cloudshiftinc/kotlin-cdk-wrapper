@@ -12,6 +12,8 @@ public interface GitConfiguration {
   public interface Builder {
     public fun pushFilter(pushFilter: List<GitPushFilter>)
 
+    public fun pushFilter(vararg pushFilter: GitPushFilter)
+
     public fun sourceAction(sourceAction: IAction)
   }
 
@@ -22,6 +24,9 @@ public interface GitConfiguration {
     override fun pushFilter(pushFilter: List<GitPushFilter>) {
       cdkBuilder.pushFilter(pushFilter.map(GitPushFilter::unwrap))
     }
+
+    override fun pushFilter(vararg pushFilter: GitPushFilter): Unit =
+        pushFilter(pushFilter.toList())
 
     override fun sourceAction(sourceAction: IAction) {
       cdkBuilder.sourceAction(sourceAction.let(IAction::unwrap))

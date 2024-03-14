@@ -45,6 +45,8 @@ public open class CfnAnomalyDetector internal constructor(
     unwrap(this).setDimensions(__idx_ac66f0)
   }
 
+  public open fun dimensions(vararg __idx_ac66f0: Any): Unit = dimensions(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -113,6 +115,8 @@ public open class CfnAnomalyDetector internal constructor(
 
     public fun dimensions(dimensions: List<Any>)
 
+    public fun dimensions(vararg dimensions: Any)
+
     public fun metricMathAnomalyDetector(metricMathAnomalyDetector: IResolvable)
 
     public
@@ -167,6 +171,8 @@ public open class CfnAnomalyDetector internal constructor(
     override fun dimensions(dimensions: List<Any>) {
       cdkBuilder.dimensions(dimensions)
     }
+
+    override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
 
     override fun metricMathAnomalyDetector(metricMathAnomalyDetector: IResolvable) {
       cdkBuilder.metricMathAnomalyDetector(metricMathAnomalyDetector.let(IResolvable::unwrap))
@@ -381,6 +387,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       public fun dimensions(dimensions: List<Any>)
 
+      public fun dimensions(vararg dimensions: Any)
+
       public fun metricName(metricName: String)
 
       public fun namespace(namespace: String)
@@ -401,6 +409,8 @@ public open class CfnAnomalyDetector internal constructor(
       override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
+
+      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
 
       override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)
@@ -611,6 +621,8 @@ public open class CfnAnomalyDetector internal constructor(
       public fun metricDataQueries(metricDataQueries: IResolvable)
 
       public fun metricDataQueries(metricDataQueries: List<Any>)
+
+      public fun metricDataQueries(vararg metricDataQueries: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -626,6 +638,9 @@ public open class CfnAnomalyDetector internal constructor(
       override fun metricDataQueries(metricDataQueries: List<Any>) {
         cdkBuilder.metricDataQueries(metricDataQueries)
       }
+
+      override fun metricDataQueries(vararg metricDataQueries: Any): Unit =
+          metricDataQueries(metricDataQueries.toList())
 
       public fun build():
           software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector.MetricMathAnomalyDetectorProperty
@@ -670,6 +685,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       public fun excludedTimeRanges(excludedTimeRanges: List<Any>)
 
+      public fun excludedTimeRanges(vararg excludedTimeRanges: Any)
+
       public fun metricTimeZone(metricTimeZone: String)
     }
 
@@ -686,6 +703,9 @@ public open class CfnAnomalyDetector internal constructor(
       override fun excludedTimeRanges(excludedTimeRanges: List<Any>) {
         cdkBuilder.excludedTimeRanges(excludedTimeRanges)
       }
+
+      override fun excludedTimeRanges(vararg excludedTimeRanges: Any): Unit =
+          excludedTimeRanges(excludedTimeRanges.toList())
 
       override fun metricTimeZone(metricTimeZone: String) {
         cdkBuilder.metricTimeZone(metricTimeZone)
@@ -737,6 +757,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       public fun dimensions(dimensions: List<Any>)
 
+      public fun dimensions(vararg dimensions: Any)
+
       public fun metricName(metricName: String)
 
       public fun namespace(namespace: String)
@@ -754,6 +776,8 @@ public open class CfnAnomalyDetector internal constructor(
       override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
+
+      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
 
       override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)

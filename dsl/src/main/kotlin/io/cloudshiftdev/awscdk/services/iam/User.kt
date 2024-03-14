@@ -62,7 +62,11 @@ public open class User internal constructor(
   public interface Builder {
     public fun groups(groups: List<IGroup>)
 
+    public fun groups(vararg groups: IGroup)
+
     public fun managedPolicies(managedPolicies: List<IManagedPolicy>)
+
+    public fun managedPolicies(vararg managedPolicies: IManagedPolicy)
 
     public fun password(password: SecretValue)
 
@@ -86,9 +90,14 @@ public open class User internal constructor(
       cdkBuilder.groups(groups.map(IGroup::unwrap))
     }
 
+    override fun groups(vararg groups: IGroup): Unit = groups(groups.toList())
+
     override fun managedPolicies(managedPolicies: List<IManagedPolicy>) {
       cdkBuilder.managedPolicies(managedPolicies.map(IManagedPolicy::unwrap))
     }
+
+    override fun managedPolicies(vararg managedPolicies: IManagedPolicy): Unit =
+        managedPolicies(managedPolicies.toList())
 
     override fun password(password: SecretValue) {
       cdkBuilder.password(password.let(SecretValue::unwrap))

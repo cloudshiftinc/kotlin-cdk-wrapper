@@ -42,6 +42,8 @@ public open class CfnPrefixList internal constructor(
     unwrap(this).setEntries(__idx_ac66f0)
   }
 
+  public open fun entries(vararg __idx_ac66f0: Any): Unit = entries(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -67,6 +69,8 @@ public open class CfnPrefixList internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun addressFamily(addressFamily: String)
 
@@ -74,11 +78,15 @@ public open class CfnPrefixList internal constructor(
 
     public fun entries(entries: List<Any>)
 
+    public fun entries(vararg entries: Any)
+
     public fun maxEntries(maxEntries: Number)
 
     public fun prefixListName(prefixListName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -100,6 +108,8 @@ public open class CfnPrefixList internal constructor(
       cdkBuilder.entries(entries)
     }
 
+    override fun entries(vararg entries: Any): Unit = entries(entries.toList())
+
     override fun maxEntries(maxEntries: Number) {
       cdkBuilder.maxEntries(maxEntries)
     }
@@ -111,6 +121,8 @@ public open class CfnPrefixList internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.CfnPrefixList = cdkBuilder.build()
   }

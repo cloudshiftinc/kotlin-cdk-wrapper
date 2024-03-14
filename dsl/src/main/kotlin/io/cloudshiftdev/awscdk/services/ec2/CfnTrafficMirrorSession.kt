@@ -55,6 +55,8 @@ public open class CfnTrafficMirrorSession internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun trafficMirrorFilterId(): String = unwrap(this).getTrafficMirrorFilterId()
 
   public open fun trafficMirrorFilterId(`value`: String) {
@@ -83,6 +85,8 @@ public open class CfnTrafficMirrorSession internal constructor(
     public fun sessionNumber(sessionNumber: Number)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun trafficMirrorFilterId(trafficMirrorFilterId: String)
 
@@ -117,6 +121,8 @@ public open class CfnTrafficMirrorSession internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun trafficMirrorFilterId(trafficMirrorFilterId: String) {
       cdkBuilder.trafficMirrorFilterId(trafficMirrorFilterId)

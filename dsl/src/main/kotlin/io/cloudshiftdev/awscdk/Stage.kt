@@ -55,6 +55,8 @@ public open class Stage internal constructor(
 
     public fun policyValidationBeta1(policyValidationBeta1: List<IPolicyValidationPluginBeta1>)
 
+    public fun policyValidationBeta1(vararg policyValidationBeta1: IPolicyValidationPluginBeta1)
+
     public fun stageName(stageName: String)
   }
 
@@ -84,6 +86,9 @@ public open class Stage internal constructor(
     override fun policyValidationBeta1(policyValidationBeta1: List<IPolicyValidationPluginBeta1>) {
       cdkBuilder.policyValidationBeta1(policyValidationBeta1.map(IPolicyValidationPluginBeta1::unwrap))
     }
+
+    override fun policyValidationBeta1(vararg policyValidationBeta1: IPolicyValidationPluginBeta1):
+        Unit = policyValidationBeta1(policyValidationBeta1.toList())
 
     override fun stageName(stageName: String) {
       cdkBuilder.stageName(stageName)

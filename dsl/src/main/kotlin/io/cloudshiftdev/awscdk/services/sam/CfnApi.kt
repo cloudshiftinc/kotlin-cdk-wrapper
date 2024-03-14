@@ -67,6 +67,9 @@ public open class CfnApi internal constructor(
     unwrap(this).setBinaryMediaTypes(`value`)
   }
 
+  public open fun binaryMediaTypes(vararg `value`: String): Unit =
+      binaryMediaTypes(`value`.toList())
+
   public open fun cacheClusterEnabled(): Any? = unwrap(this).getCacheClusterEnabled()
 
   public open fun cacheClusterEnabled(`value`: Boolean) {
@@ -208,6 +211,8 @@ public open class CfnApi internal constructor(
     unwrap(this).setMethodSettings(`this`)
   }
 
+  public open fun methodSettings(vararg `this`: Any): Unit = methodSettings(`this`.toList())
+
   public open fun methodSettings(`value`: IResolvable) {
     unwrap(this).setMethodSettings(`value`.let(IResolvable::unwrap))
   }
@@ -293,6 +298,8 @@ public open class CfnApi internal constructor(
 
     public fun binaryMediaTypes(binaryMediaTypes: List<String>)
 
+    public fun binaryMediaTypes(vararg binaryMediaTypes: String)
+
     public fun cacheClusterEnabled(cacheClusterEnabled: Boolean)
 
     public fun cacheClusterEnabled(cacheClusterEnabled: IResolvable)
@@ -357,6 +364,8 @@ public open class CfnApi internal constructor(
     public fun gatewayResponses(gatewayResponses: Any)
 
     public fun methodSettings(methodSettings: List<Any>)
+
+    public fun methodSettings(vararg methodSettings: Any)
 
     public fun methodSettings(methodSettings: IResolvable)
 
@@ -424,6 +433,9 @@ public open class CfnApi internal constructor(
     override fun binaryMediaTypes(binaryMediaTypes: List<String>) {
       cdkBuilder.binaryMediaTypes(binaryMediaTypes)
     }
+
+    override fun binaryMediaTypes(vararg binaryMediaTypes: String): Unit =
+        binaryMediaTypes(binaryMediaTypes.toList())
 
     override fun cacheClusterEnabled(cacheClusterEnabled: Boolean) {
       cdkBuilder.cacheClusterEnabled(cacheClusterEnabled)
@@ -538,6 +550,9 @@ public open class CfnApi internal constructor(
     override fun methodSettings(methodSettings: List<Any>) {
       cdkBuilder.methodSettings(methodSettings)
     }
+
+    override fun methodSettings(vararg methodSettings: Any): Unit =
+        methodSettings(methodSettings.toList())
 
     override fun methodSettings(methodSettings: IResolvable) {
       cdkBuilder.methodSettings(methodSettings.let(IResolvable::unwrap))
@@ -840,6 +855,8 @@ public open class CfnApi internal constructor(
     public interface Builder {
       public fun basePath(basePath: List<String>)
 
+      public fun basePath(vararg basePath: String)
+
       public fun certificateArn(certificateArn: String)
 
       public fun domainName(domainName: String)
@@ -876,6 +893,8 @@ public open class CfnApi internal constructor(
       override fun basePath(basePath: List<String>) {
         cdkBuilder.basePath(basePath)
       }
+
+      override fun basePath(vararg basePath: String): Unit = basePath(basePath.toList())
 
       override fun certificateArn(certificateArn: String) {
         cdkBuilder.certificateArn(certificateArn)
@@ -1119,6 +1138,8 @@ public open class CfnApi internal constructor(
       public fun type(type: String)
 
       public fun vpcEndpointIds(vpcEndpointIds: List<String>)
+
+      public fun vpcEndpointIds(vararg vpcEndpointIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1133,6 +1154,9 @@ public open class CfnApi internal constructor(
       override fun vpcEndpointIds(vpcEndpointIds: List<String>) {
         cdkBuilder.vpcEndpointIds(vpcEndpointIds)
       }
+
+      override fun vpcEndpointIds(vararg vpcEndpointIds: String): Unit =
+          vpcEndpointIds(vpcEndpointIds.toList())
 
       public fun build(): software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty =
           cdkBuilder.build()

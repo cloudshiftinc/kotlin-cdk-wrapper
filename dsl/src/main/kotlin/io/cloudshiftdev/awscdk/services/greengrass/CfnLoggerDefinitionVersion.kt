@@ -37,12 +37,16 @@ public open class CfnLoggerDefinitionVersion internal constructor(
     unwrap(this).setLoggers(__idx_ac66f0)
   }
 
+  public open fun loggers(vararg __idx_ac66f0: Any): Unit = loggers(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun loggerDefinitionId(loggerDefinitionId: String)
 
     public fun loggers(loggers: IResolvable)
 
     public fun loggers(loggers: List<Any>)
+
+    public fun loggers(vararg loggers: Any)
   }
 
   private class BuilderImpl(
@@ -65,6 +69,8 @@ public open class CfnLoggerDefinitionVersion internal constructor(
     override fun loggers(loggers: List<Any>) {
       cdkBuilder.loggers(loggers)
     }
+
+    override fun loggers(vararg loggers: Any): Unit = loggers(loggers.toList())
 
     public fun build(): software.amazon.awscdk.services.greengrass.CfnLoggerDefinitionVersion =
         cdkBuilder.build()

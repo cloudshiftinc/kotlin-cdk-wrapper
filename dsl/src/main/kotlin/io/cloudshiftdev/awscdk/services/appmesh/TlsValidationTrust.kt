@@ -19,6 +19,9 @@ public abstract class TlsValidationTrust internal constructor(
     public open fun acm(certificateAuthorities: List<ICertificateAuthority>): TlsValidationTrust =
         software.amazon.awscdk.services.appmesh.TlsValidationTrust.acm(certificateAuthorities.map(ICertificateAuthority::unwrap)).let(TlsValidationTrust::wrap)
 
+    public open fun acm(vararg certificateAuthorities: ICertificateAuthority): TlsValidationTrust =
+        acm(certificateAuthorities.toList())
+
     public open fun `file`(certificateChain: String): MutualTlsValidationTrust =
         software.amazon.awscdk.services.appmesh.TlsValidationTrust.`file`(certificateChain).let(MutualTlsValidationTrust::wrap)
 

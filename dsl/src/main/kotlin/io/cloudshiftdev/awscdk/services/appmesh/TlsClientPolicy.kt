@@ -24,6 +24,8 @@ public interface TlsClientPolicy {
 
     public fun ports(ports: List<Number>)
 
+    public fun ports(vararg ports: Number)
+
     public fun validation(validation: TlsValidation)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -46,6 +48,8 @@ public interface TlsClientPolicy {
     override fun ports(ports: List<Number>) {
       cdkBuilder.ports(ports)
     }
+
+    override fun ports(vararg ports: Number): Unit = ports(ports.toList())
 
     override fun validation(validation: TlsValidation) {
       cdkBuilder.validation(validation.let(TlsValidation::unwrap))

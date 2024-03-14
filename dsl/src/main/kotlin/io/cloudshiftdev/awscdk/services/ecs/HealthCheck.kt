@@ -20,6 +20,8 @@ public interface HealthCheck {
   public interface Builder {
     public fun command(command: List<String>)
 
+    public fun command(vararg command: String)
+
     public fun interval(interval: Duration)
 
     public fun retries(retries: Number)
@@ -36,6 +38,8 @@ public interface HealthCheck {
     override fun command(command: List<String>) {
       cdkBuilder.command(command)
     }
+
+    override fun command(vararg command: String): Unit = command(command.toList())
 
     override fun interval(interval: Duration) {
       cdkBuilder.interval(interval.let(Duration::unwrap))
@@ -59,7 +63,7 @@ public interface HealthCheck {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.HealthCheck,
   ) : HealthCheck {
-    override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
+    override fun command(): List<String> = unwrap(this).getCommand()
 
     override fun interval(): Duration? = unwrap(this).getInterval()?.let(Duration::wrap)
 

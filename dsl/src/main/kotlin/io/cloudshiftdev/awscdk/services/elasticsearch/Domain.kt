@@ -337,6 +337,9 @@ public open class Domain internal constructor(
     public fun accessPolicies(accessPolicies: List<PolicyStatement>)
 
     @Deprecated(message = "deprecated in CDK")
+    public fun accessPolicies(vararg accessPolicies: PolicyStatement)
+
+    @Deprecated(message = "deprecated in CDK")
     public fun advancedOptions(advancedOptions: Map<String, String>)
 
     @Deprecated(message = "deprecated in CDK")
@@ -418,6 +421,9 @@ public open class Domain internal constructor(
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
     @Deprecated(message = "deprecated in CDK")
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
+
+    @Deprecated(message = "deprecated in CDK")
     public fun tlsSecurityPolicy(tlsSecurityPolicy: TLSSecurityPolicy)
 
     @Deprecated(message = "deprecated in CDK")
@@ -431,6 +437,9 @@ public open class Domain internal constructor(
 
     @Deprecated(message = "deprecated in CDK")
     public fun vpcSubnets(vpcSubnets: List<SubnetSelection>)
+
+    @Deprecated(message = "deprecated in CDK")
+    public fun vpcSubnets(vararg vpcSubnets: SubnetSelection)
 
     @Deprecated(message = "deprecated in CDK")
     public fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig)
@@ -452,6 +461,10 @@ public open class Domain internal constructor(
     override fun accessPolicies(accessPolicies: List<PolicyStatement>) {
       cdkBuilder.accessPolicies(accessPolicies.map(PolicyStatement::unwrap))
     }
+
+    @Deprecated(message = "deprecated in CDK")
+    override fun accessPolicies(vararg accessPolicies: PolicyStatement): Unit =
+        accessPolicies(accessPolicies.toList())
 
     @Deprecated(message = "deprecated in CDK")
     override fun advancedOptions(advancedOptions: Map<String, String>) {
@@ -571,6 +584,10 @@ public open class Domain internal constructor(
     }
 
     @Deprecated(message = "deprecated in CDK")
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
+
+    @Deprecated(message = "deprecated in CDK")
     override fun tlsSecurityPolicy(tlsSecurityPolicy: TLSSecurityPolicy) {
       cdkBuilder.tlsSecurityPolicy(tlsSecurityPolicy.let(TLSSecurityPolicy::unwrap))
     }
@@ -594,6 +611,10 @@ public open class Domain internal constructor(
     override fun vpcSubnets(vpcSubnets: List<SubnetSelection>) {
       cdkBuilder.vpcSubnets(vpcSubnets.map(SubnetSelection::unwrap))
     }
+
+    @Deprecated(message = "deprecated in CDK")
+    override fun vpcSubnets(vararg vpcSubnets: SubnetSelection): Unit =
+        vpcSubnets(vpcSubnets.toList())
 
     @Deprecated(message = "deprecated in CDK")
     override fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig) {

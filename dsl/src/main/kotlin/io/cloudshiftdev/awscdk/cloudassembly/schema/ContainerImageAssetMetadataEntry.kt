@@ -56,6 +56,8 @@ public interface ContainerImageAssetMetadataEntry {
 
     public fun cacheFrom(cacheFrom: List<ContainerImageAssetCacheOption>)
 
+    public fun cacheFrom(vararg cacheFrom: ContainerImageAssetCacheOption)
+
     public fun cacheTo(cacheTo: ContainerImageAssetCacheOption)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -71,6 +73,8 @@ public interface ContainerImageAssetMetadataEntry {
     public fun networkMode(networkMode: String)
 
     public fun outputs(outputs: List<String>)
+
+    public fun outputs(vararg outputs: String)
 
     public fun packaging(packaging: String)
 
@@ -110,6 +114,9 @@ public interface ContainerImageAssetMetadataEntry {
       cdkBuilder.cacheFrom(cacheFrom.map(ContainerImageAssetCacheOption::unwrap))
     }
 
+    override fun cacheFrom(vararg cacheFrom: ContainerImageAssetCacheOption): Unit =
+        cacheFrom(cacheFrom.toList())
+
     override fun cacheTo(cacheTo: ContainerImageAssetCacheOption) {
       cdkBuilder.cacheTo(cacheTo.let(ContainerImageAssetCacheOption::unwrap))
     }
@@ -138,6 +145,8 @@ public interface ContainerImageAssetMetadataEntry {
     override fun outputs(outputs: List<String>) {
       cdkBuilder.outputs(outputs)
     }
+
+    override fun outputs(vararg outputs: String): Unit = outputs(outputs.toList())
 
     override fun packaging(packaging: String) {
       cdkBuilder.packaging(packaging)

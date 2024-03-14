@@ -165,6 +165,8 @@ public open class CfnModelBiasJobDefinition internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun endpointName(endpointName: String)
 
@@ -233,6 +235,8 @@ public open class CfnModelBiasJobDefinition internal constructor(
     public fun stoppingCondition(stoppingCondition: StoppingConditionProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -357,6 +361,8 @@ public open class CfnModelBiasJobDefinition internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     public fun build(): software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition =
         cdkBuilder.build()
   }
@@ -455,7 +461,11 @@ public open class CfnModelBiasJobDefinition internal constructor(
     public interface Builder {
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnets(subnets: List<String>)
+
+      public fun subnets(vararg subnets: String)
     }
 
     private class BuilderImpl : Builder {
@@ -468,9 +478,14 @@ public open class CfnModelBiasJobDefinition internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnets(subnets: List<String>) {
         cdkBuilder.subnets(subnets)
       }
+
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.VpcConfigProperty =
@@ -481,10 +496,9 @@ public open class CfnModelBiasJobDefinition internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.VpcConfigProperty,
     ) : VpcConfigProperty {
-      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
-          emptyList()
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
 
-      override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+      override fun subnets(): List<String> = unwrap(this).getSubnets()
     }
 
     public companion object {
@@ -1359,6 +1373,8 @@ public open class CfnModelBiasJobDefinition internal constructor(
       public fun monitoringOutputs(monitoringOutputs: IResolvable)
 
       public fun monitoringOutputs(monitoringOutputs: List<Any>)
+
+      public fun monitoringOutputs(vararg monitoringOutputs: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1378,6 +1394,9 @@ public open class CfnModelBiasJobDefinition internal constructor(
       override fun monitoringOutputs(monitoringOutputs: List<Any>) {
         cdkBuilder.monitoringOutputs(monitoringOutputs)
       }
+
+      override fun monitoringOutputs(vararg monitoringOutputs: Any): Unit =
+          monitoringOutputs(monitoringOutputs.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.MonitoringOutputConfigProperty

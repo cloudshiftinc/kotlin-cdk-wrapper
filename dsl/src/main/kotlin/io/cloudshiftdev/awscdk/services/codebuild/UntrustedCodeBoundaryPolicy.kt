@@ -14,6 +14,8 @@ public open class UntrustedCodeBoundaryPolicy internal constructor(
   public interface Builder {
     public fun additionalStatements(additionalStatements: List<PolicyStatement>)
 
+    public fun additionalStatements(vararg additionalStatements: PolicyStatement)
+
     public fun managedPolicyName(managedPolicyName: String)
   }
 
@@ -29,6 +31,9 @@ public open class UntrustedCodeBoundaryPolicy internal constructor(
     override fun additionalStatements(additionalStatements: List<PolicyStatement>) {
       cdkBuilder.additionalStatements(additionalStatements.map(PolicyStatement::unwrap))
     }
+
+    override fun additionalStatements(vararg additionalStatements: PolicyStatement): Unit =
+        additionalStatements(additionalStatements.toList())
 
     override fun managedPolicyName(managedPolicyName: String) {
       cdkBuilder.managedPolicyName(managedPolicyName)

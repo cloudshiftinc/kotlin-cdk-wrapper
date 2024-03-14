@@ -79,6 +79,8 @@ public open class CfnCluster internal constructor(
     unwrap(this).setSubnetIds(`value`)
   }
 
+  public open fun subnetIds(vararg `value`: String): Unit = subnetIds(`value`.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -88,12 +90,17 @@ public open class CfnCluster internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun vpcSecurityGroupIds(): List<String> = unwrap(this).getVpcSecurityGroupIds() ?:
       emptyList()
 
   public open fun vpcSecurityGroupIds(`value`: List<String>) {
     unwrap(this).setVpcSecurityGroupIds(`value`)
   }
+
+  public open fun vpcSecurityGroupIds(vararg `value`: String): Unit =
+      vpcSecurityGroupIds(`value`.toList())
 
   public interface Builder {
     public fun adminUserName(adminUserName: String)
@@ -114,9 +121,15 @@ public open class CfnCluster internal constructor(
 
     public fun subnetIds(subnetIds: List<String>)
 
+    public fun subnetIds(vararg subnetIds: String)
+
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>)
+
+    public fun vpcSecurityGroupIds(vararg vpcSecurityGroupIds: String)
   }
 
   private class BuilderImpl(
@@ -162,13 +175,20 @@ public open class CfnCluster internal constructor(
       cdkBuilder.subnetIds(subnetIds)
     }
 
+    override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
       cdkBuilder.vpcSecurityGroupIds(vpcSecurityGroupIds)
     }
+
+    override fun vpcSecurityGroupIds(vararg vpcSecurityGroupIds: String): Unit =
+        vpcSecurityGroupIds(vpcSecurityGroupIds.toList())
 
     public fun build(): software.amazon.awscdk.services.docdbelastic.CfnCluster = cdkBuilder.build()
   }

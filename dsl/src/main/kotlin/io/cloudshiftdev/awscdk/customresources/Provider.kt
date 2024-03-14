@@ -47,6 +47,8 @@ public open class Provider internal constructor(
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
+
     public fun totalTimeout(totalTimeout: Duration)
 
     public fun vpc(vpc: IVpc)
@@ -100,6 +102,9 @@ public open class Provider internal constructor(
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun totalTimeout(totalTimeout: Duration) {
       cdkBuilder.totalTimeout(totalTimeout.let(Duration::unwrap))

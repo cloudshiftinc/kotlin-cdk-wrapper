@@ -26,11 +26,15 @@ public open class ApplicationListenerRule internal constructor(
 
     public fun conditions(conditions: List<ListenerCondition>)
 
+    public fun conditions(vararg conditions: ListenerCondition)
+
     public fun listener(listener: IApplicationListener)
 
     public fun priority(priority: Number)
 
     public fun targetGroups(targetGroups: List<IApplicationTargetGroup>)
+
+    public fun targetGroups(vararg targetGroups: IApplicationTargetGroup)
   }
 
   private class BuilderImpl(
@@ -50,6 +54,9 @@ public open class ApplicationListenerRule internal constructor(
       cdkBuilder.conditions(conditions.map(ListenerCondition::unwrap))
     }
 
+    override fun conditions(vararg conditions: ListenerCondition): Unit =
+        conditions(conditions.toList())
+
     override fun listener(listener: IApplicationListener) {
       cdkBuilder.listener(listener.let(IApplicationListener::unwrap))
     }
@@ -61,6 +68,9 @@ public open class ApplicationListenerRule internal constructor(
     override fun targetGroups(targetGroups: List<IApplicationTargetGroup>) {
       cdkBuilder.targetGroups(targetGroups.map(IApplicationTargetGroup::unwrap))
     }
+
+    override fun targetGroups(vararg targetGroups: IApplicationTargetGroup): Unit =
+        targetGroups(targetGroups.toList())
 
     public fun build():
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerRule =

@@ -25,6 +25,8 @@ public open class CallAwsService internal constructor(
 
     public fun additionalIamStatements(additionalIamStatements: List<PolicyStatement>)
 
+    public fun additionalIamStatements(vararg additionalIamStatements: PolicyStatement)
+
     public fun comment(comment: String)
 
     public fun credentials(credentials: Credentials)
@@ -41,6 +43,8 @@ public open class CallAwsService internal constructor(
     public fun iamAction(iamAction: String)
 
     public fun iamResources(iamResources: List<String>)
+
+    public fun iamResources(vararg iamResources: String)
 
     public fun inputPath(inputPath: String)
 
@@ -80,6 +84,9 @@ public open class CallAwsService internal constructor(
       cdkBuilder.additionalIamStatements(additionalIamStatements.map(PolicyStatement::unwrap))
     }
 
+    override fun additionalIamStatements(vararg additionalIamStatements: PolicyStatement): Unit =
+        additionalIamStatements(additionalIamStatements.toList())
+
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
@@ -109,6 +116,9 @@ public open class CallAwsService internal constructor(
     override fun iamResources(iamResources: List<String>) {
       cdkBuilder.iamResources(iamResources)
     }
+
+    override fun iamResources(vararg iamResources: String): Unit =
+        iamResources(iamResources.toList())
 
     override fun inputPath(inputPath: String) {
       cdkBuilder.inputPath(inputPath)

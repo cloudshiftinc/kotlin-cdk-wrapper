@@ -103,6 +103,8 @@ public open class CfnService internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun type(): String? = unwrap(this).getType()
 
   public open fun type(`value`: String) {
@@ -142,6 +144,8 @@ public open class CfnService internal constructor(
     public fun namespaceId(namespaceId: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun type(type: String)
   }
@@ -208,6 +212,8 @@ public open class CfnService internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun type(type: String) {
       cdkBuilder.type(type)
@@ -319,6 +325,8 @@ public open class CfnService internal constructor(
 
       public fun dnsRecords(dnsRecords: List<Any>)
 
+      public fun dnsRecords(vararg dnsRecords: Any)
+
       public fun namespaceId(namespaceId: String)
 
       public fun routingPolicy(routingPolicy: String)
@@ -336,6 +344,8 @@ public open class CfnService internal constructor(
       override fun dnsRecords(dnsRecords: List<Any>) {
         cdkBuilder.dnsRecords(dnsRecords)
       }
+
+      override fun dnsRecords(vararg dnsRecords: Any): Unit = dnsRecords(dnsRecords.toList())
 
       override fun namespaceId(namespaceId: String) {
         cdkBuilder.namespaceId(namespaceId)

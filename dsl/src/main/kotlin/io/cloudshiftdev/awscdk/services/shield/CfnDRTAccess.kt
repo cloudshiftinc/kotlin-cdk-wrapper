@@ -24,6 +24,8 @@ public open class CfnDRTAccess internal constructor(
     unwrap(this).setLogBucketList(`value`)
   }
 
+  public open fun logBucketList(vararg `value`: String): Unit = logBucketList(`value`.toList())
+
   public open fun roleArn(): String = unwrap(this).getRoleArn()
 
   public open fun roleArn(`value`: String) {
@@ -32,6 +34,8 @@ public open class CfnDRTAccess internal constructor(
 
   public interface Builder {
     public fun logBucketList(logBucketList: List<String>)
+
+    public fun logBucketList(vararg logBucketList: String)
 
     public fun roleArn(roleArn: String)
   }
@@ -46,6 +50,9 @@ public open class CfnDRTAccess internal constructor(
     override fun logBucketList(logBucketList: List<String>) {
       cdkBuilder.logBucketList(logBucketList)
     }
+
+    override fun logBucketList(vararg logBucketList: String): Unit =
+        logBucketList(logBucketList.toList())
 
     override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)

@@ -195,6 +195,8 @@ public open class CfnSolution internal constructor(
       public fun metricName(metricName: String)
 
       public fun recipeList(recipeList: List<String>)
+
+      public fun recipeList(vararg recipeList: String)
     }
 
     private class BuilderImpl : Builder {
@@ -209,6 +211,8 @@ public open class CfnSolution internal constructor(
       override fun recipeList(recipeList: List<String>) {
         cdkBuilder.recipeList(recipeList)
       }
+
+      override fun recipeList(vararg recipeList: String): Unit = recipeList(recipeList.toList())
 
       public fun build():
           software.amazon.awscdk.services.personalize.CfnSolution.AutoMLConfigProperty =
@@ -258,13 +262,19 @@ public open class CfnSolution internal constructor(
 
       public fun categoricalHyperParameterRanges(categoricalHyperParameterRanges: List<Any>)
 
+      public fun categoricalHyperParameterRanges(vararg categoricalHyperParameterRanges: Any)
+
       public fun continuousHyperParameterRanges(continuousHyperParameterRanges: IResolvable)
 
       public fun continuousHyperParameterRanges(continuousHyperParameterRanges: List<Any>)
 
+      public fun continuousHyperParameterRanges(vararg continuousHyperParameterRanges: Any)
+
       public fun integerHyperParameterRanges(integerHyperParameterRanges: IResolvable)
 
       public fun integerHyperParameterRanges(integerHyperParameterRanges: List<Any>)
+
+      public fun integerHyperParameterRanges(vararg integerHyperParameterRanges: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -281,6 +291,9 @@ public open class CfnSolution internal constructor(
         cdkBuilder.categoricalHyperParameterRanges(categoricalHyperParameterRanges)
       }
 
+      override fun categoricalHyperParameterRanges(vararg categoricalHyperParameterRanges: Any):
+          Unit = categoricalHyperParameterRanges(categoricalHyperParameterRanges.toList())
+
       override fun continuousHyperParameterRanges(continuousHyperParameterRanges: IResolvable) {
         cdkBuilder.continuousHyperParameterRanges(continuousHyperParameterRanges.let(IResolvable::unwrap))
       }
@@ -289,6 +302,9 @@ public open class CfnSolution internal constructor(
         cdkBuilder.continuousHyperParameterRanges(continuousHyperParameterRanges)
       }
 
+      override fun continuousHyperParameterRanges(vararg continuousHyperParameterRanges: Any): Unit
+          = continuousHyperParameterRanges(continuousHyperParameterRanges.toList())
+
       override fun integerHyperParameterRanges(integerHyperParameterRanges: IResolvable) {
         cdkBuilder.integerHyperParameterRanges(integerHyperParameterRanges.let(IResolvable::unwrap))
       }
@@ -296,6 +312,9 @@ public open class CfnSolution internal constructor(
       override fun integerHyperParameterRanges(integerHyperParameterRanges: List<Any>) {
         cdkBuilder.integerHyperParameterRanges(integerHyperParameterRanges)
       }
+
+      override fun integerHyperParameterRanges(vararg integerHyperParameterRanges: Any): Unit =
+          integerHyperParameterRanges(integerHyperParameterRanges.toList())
 
       public fun build():
           software.amazon.awscdk.services.personalize.CfnSolution.AlgorithmHyperParameterRangesProperty
@@ -416,6 +435,8 @@ public open class CfnSolution internal constructor(
       public fun name(name: String)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -431,6 +452,8 @@ public open class CfnSolution internal constructor(
       override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.personalize.CfnSolution.CategoricalHyperParameterRangeProperty

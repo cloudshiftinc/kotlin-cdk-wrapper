@@ -164,6 +164,8 @@ public open class CfnConfigurationRecorder internal constructor(
       public fun recordingModeOverrides(recordingModeOverrides: IResolvable)
 
       public fun recordingModeOverrides(recordingModeOverrides: List<Any>)
+
+      public fun recordingModeOverrides(vararg recordingModeOverrides: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -183,6 +185,9 @@ public open class CfnConfigurationRecorder internal constructor(
       override fun recordingModeOverrides(recordingModeOverrides: List<Any>) {
         cdkBuilder.recordingModeOverrides(recordingModeOverrides)
       }
+
+      override fun recordingModeOverrides(vararg recordingModeOverrides: Any): Unit =
+          recordingModeOverrides(recordingModeOverrides.toList())
 
       public fun build():
           software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeProperty =
@@ -306,6 +311,8 @@ public open class CfnConfigurationRecorder internal constructor(
       public fun recordingStrategy(recordingStrategy: RecordingStrategyProperty.Builder.() -> Unit)
 
       public fun resourceTypes(resourceTypes: List<String>)
+
+      public fun resourceTypes(vararg resourceTypes: String)
     }
 
     private class BuilderImpl : Builder {
@@ -364,6 +371,9 @@ public open class CfnConfigurationRecorder internal constructor(
         cdkBuilder.resourceTypes(resourceTypes)
       }
 
+      override fun resourceTypes(vararg resourceTypes: String): Unit =
+          resourceTypes(resourceTypes.toList())
+
       public fun build():
           software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingGroupProperty =
           cdkBuilder.build()
@@ -409,6 +419,8 @@ public open class CfnConfigurationRecorder internal constructor(
 
     public interface Builder {
       public fun resourceTypes(resourceTypes: List<String>)
+
+      public fun resourceTypes(vararg resourceTypes: String)
     }
 
     private class BuilderImpl : Builder {
@@ -421,6 +433,9 @@ public open class CfnConfigurationRecorder internal constructor(
         cdkBuilder.resourceTypes(resourceTypes)
       }
 
+      override fun resourceTypes(vararg resourceTypes: String): Unit =
+          resourceTypes(resourceTypes.toList())
+
       public fun build():
           software.amazon.awscdk.services.config.CfnConfigurationRecorder.ExclusionByResourceTypesProperty
           = cdkBuilder.build()
@@ -430,7 +445,7 @@ public open class CfnConfigurationRecorder internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.config.CfnConfigurationRecorder.ExclusionByResourceTypesProperty,
     ) : ExclusionByResourceTypesProperty {
-      override fun resourceTypes(): List<String> = unwrap(this).getResourceTypes() ?: emptyList()
+      override fun resourceTypes(): List<String> = unwrap(this).getResourceTypes()
     }
 
     public companion object {
@@ -466,6 +481,8 @@ public open class CfnConfigurationRecorder internal constructor(
       public fun recordingFrequency(recordingFrequency: String)
 
       public fun resourceTypes(resourceTypes: List<String>)
+
+      public fun resourceTypes(vararg resourceTypes: String)
     }
 
     private class BuilderImpl : Builder {
@@ -486,6 +503,9 @@ public open class CfnConfigurationRecorder internal constructor(
         cdkBuilder.resourceTypes(resourceTypes)
       }
 
+      override fun resourceTypes(vararg resourceTypes: String): Unit =
+          resourceTypes(resourceTypes.toList())
+
       public fun build():
           software.amazon.awscdk.services.config.CfnConfigurationRecorder.RecordingModeOverrideProperty
           = cdkBuilder.build()
@@ -499,7 +519,7 @@ public open class CfnConfigurationRecorder internal constructor(
 
       override fun recordingFrequency(): String = unwrap(this).getRecordingFrequency()
 
-      override fun resourceTypes(): List<String> = unwrap(this).getResourceTypes() ?: emptyList()
+      override fun resourceTypes(): List<String> = unwrap(this).getResourceTypes()
     }
 
     public companion object {

@@ -16,7 +16,7 @@ public open class CfnNetworkSettings internal constructor(
   private val cdkObject: software.amazon.awscdk.services.workspacesweb.CfnNetworkSettings,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public open fun attrAssociatedPortalArns(): List<String> =
-      unwrap(this).getAttrAssociatedPortalArns() ?: emptyList()
+      unwrap(this).getAttrAssociatedPortalArns()
 
   public open fun attrNetworkSettingsArn(): String = unwrap(this).getAttrNetworkSettingsArn()
 
@@ -27,24 +27,30 @@ public open class CfnNetworkSettings internal constructor(
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
-  public open fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
-      emptyList()
+  public open fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
 
   public open fun securityGroupIds(`value`: List<String>) {
     unwrap(this).setSecurityGroupIds(`value`)
   }
 
-  public open fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+  public open fun securityGroupIds(vararg `value`: String): Unit =
+      securityGroupIds(`value`.toList())
+
+  public open fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
 
   public open fun subnetIds(`value`: List<String>) {
     unwrap(this).setSubnetIds(`value`)
   }
+
+  public open fun subnetIds(vararg `value`: String): Unit = subnetIds(`value`.toList())
 
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   public open fun vpcId(): String = unwrap(this).getVpcId()
 
@@ -55,9 +61,15 @@ public open class CfnNetworkSettings internal constructor(
   public interface Builder {
     public fun securityGroupIds(securityGroupIds: List<String>)
 
+    public fun securityGroupIds(vararg securityGroupIds: String)
+
     public fun subnetIds(subnetIds: List<String>)
 
+    public fun subnetIds(vararg subnetIds: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun vpcId(vpcId: String)
   }
@@ -73,13 +85,20 @@ public open class CfnNetworkSettings internal constructor(
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
+
     override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
 
+    override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)

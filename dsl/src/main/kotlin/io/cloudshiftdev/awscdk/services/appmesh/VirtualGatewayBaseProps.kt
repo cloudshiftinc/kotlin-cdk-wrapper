@@ -28,6 +28,8 @@ public interface VirtualGatewayBaseProps {
 
     public fun listeners(listeners: List<VirtualGatewayListener>)
 
+    public fun listeners(vararg listeners: VirtualGatewayListener)
+
     public fun virtualGatewayName(virtualGatewayName: String)
   }
 
@@ -51,6 +53,9 @@ public interface VirtualGatewayBaseProps {
     override fun listeners(listeners: List<VirtualGatewayListener>) {
       cdkBuilder.listeners(listeners.map(VirtualGatewayListener::unwrap))
     }
+
+    override fun listeners(vararg listeners: VirtualGatewayListener): Unit =
+        listeners(listeners.toList())
 
     override fun virtualGatewayName(virtualGatewayName: String) {
       cdkBuilder.virtualGatewayName(virtualGatewayName)

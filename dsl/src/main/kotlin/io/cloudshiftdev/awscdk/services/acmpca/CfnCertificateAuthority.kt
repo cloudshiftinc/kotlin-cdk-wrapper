@@ -104,6 +104,8 @@ public open class CfnCertificateAuthority internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun type(): String = unwrap(this).getType()
 
   public open fun type(`value`: String) {
@@ -149,6 +151,8 @@ public open class CfnCertificateAuthority internal constructor(
     public fun subject(subject: SubjectProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun type(type: String)
 
@@ -217,6 +221,8 @@ public open class CfnCertificateAuthority internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun type(type: String) {
       cdkBuilder.type(type)
@@ -656,6 +662,8 @@ public open class CfnCertificateAuthority internal constructor(
       public fun subjectInformationAccess(subjectInformationAccess: IResolvable)
 
       public fun subjectInformationAccess(subjectInformationAccess: List<Any>)
+
+      public fun subjectInformationAccess(vararg subjectInformationAccess: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -684,6 +692,9 @@ public open class CfnCertificateAuthority internal constructor(
       override fun subjectInformationAccess(subjectInformationAccess: List<Any>) {
         cdkBuilder.subjectInformationAccess(subjectInformationAccess)
       }
+
+      override fun subjectInformationAccess(vararg subjectInformationAccess: Any): Unit =
+          subjectInformationAccess(subjectInformationAccess.toList())
 
       public fun build():
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.CsrExtensionsProperty =
@@ -849,6 +860,8 @@ public open class CfnCertificateAuthority internal constructor(
 
       public fun customAttributes(customAttributes: List<Any>)
 
+      public fun customAttributes(vararg customAttributes: Any)
+
       public fun distinguishedNameQualifier(distinguishedNameQualifier: String)
 
       public fun generationQualifier(generationQualifier: String)
@@ -894,6 +907,9 @@ public open class CfnCertificateAuthority internal constructor(
       override fun customAttributes(customAttributes: List<Any>) {
         cdkBuilder.customAttributes(customAttributes)
       }
+
+      override fun customAttributes(vararg customAttributes: Any): Unit =
+          customAttributes(customAttributes.toList())
 
       override fun distinguishedNameQualifier(distinguishedNameQualifier: String) {
         cdkBuilder.distinguishedNameQualifier(distinguishedNameQualifier)

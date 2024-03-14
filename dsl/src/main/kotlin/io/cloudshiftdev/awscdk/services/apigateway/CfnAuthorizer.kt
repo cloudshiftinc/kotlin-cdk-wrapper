@@ -69,6 +69,8 @@ public open class CfnAuthorizer internal constructor(
     unwrap(this).setProviderArns(`value`)
   }
 
+  public open fun providerArns(vararg `value`: String): Unit = providerArns(`value`.toList())
+
   public open fun restApiId(): String = unwrap(this).getRestApiId()
 
   public open fun restApiId(`value`: String) {
@@ -97,6 +99,8 @@ public open class CfnAuthorizer internal constructor(
     public fun name(name: String)
 
     public fun providerArns(providerArns: List<String>)
+
+    public fun providerArns(vararg providerArns: String)
 
     public fun restApiId(restApiId: String)
 
@@ -141,6 +145,9 @@ public open class CfnAuthorizer internal constructor(
     override fun providerArns(providerArns: List<String>) {
       cdkBuilder.providerArns(providerArns)
     }
+
+    override fun providerArns(vararg providerArns: String): Unit =
+        providerArns(providerArns.toList())
 
     override fun restApiId(restApiId: String) {
       cdkBuilder.restApiId(restApiId)

@@ -137,12 +137,17 @@ public open class CfnReplicationInstance internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun vpcSecurityGroupIds(): List<String> = unwrap(this).getVpcSecurityGroupIds() ?:
       emptyList()
 
   public open fun vpcSecurityGroupIds(`value`: List<String>) {
     unwrap(this).setVpcSecurityGroupIds(`value`)
   }
+
+  public open fun vpcSecurityGroupIds(vararg `value`: String): Unit =
+      vpcSecurityGroupIds(`value`.toList())
 
   public interface Builder {
     public fun allocatedStorage(allocatedStorage: Number)
@@ -181,7 +186,11 @@ public open class CfnReplicationInstance internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>)
+
+    public fun vpcSecurityGroupIds(vararg vpcSecurityGroupIds: String)
   }
 
   private class BuilderImpl(
@@ -263,9 +272,14 @@ public open class CfnReplicationInstance internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
       cdkBuilder.vpcSecurityGroupIds(vpcSecurityGroupIds)
     }
+
+    override fun vpcSecurityGroupIds(vararg vpcSecurityGroupIds: String): Unit =
+        vpcSecurityGroupIds(vpcSecurityGroupIds.toList())
 
     public fun build(): software.amazon.awscdk.services.dms.CfnReplicationInstance =
         cdkBuilder.build()

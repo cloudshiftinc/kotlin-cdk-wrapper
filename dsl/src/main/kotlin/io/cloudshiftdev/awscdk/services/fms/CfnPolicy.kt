@@ -108,6 +108,8 @@ public open class CfnPolicy internal constructor(
     unwrap(this).setResourceSetIds(`value`)
   }
 
+  public open fun resourceSetIds(vararg `value`: String): Unit = resourceSetIds(`value`.toList())
+
   public open fun resourceTags(): Any? = unwrap(this).getResourceTags()
 
   public open fun resourceTags(`value`: IResolvable) {
@@ -117,6 +119,8 @@ public open class CfnPolicy internal constructor(
   public open fun resourceTags(__idx_ac66f0: List<Any>) {
     unwrap(this).setResourceTags(__idx_ac66f0)
   }
+
+  public open fun resourceTags(vararg __idx_ac66f0: Any): Unit = resourceTags(__idx_ac66f0.toList())
 
   public open fun resourceType(): String? = unwrap(this).getResourceType()
 
@@ -130,6 +134,9 @@ public open class CfnPolicy internal constructor(
   public open fun resourceTypeList(`value`: List<String>) {
     unwrap(this).setResourceTypeList(`value`)
   }
+
+  public open fun resourceTypeList(vararg `value`: String): Unit =
+      resourceTypeList(`value`.toList())
 
   public open fun resourcesCleanUp(): Any? = unwrap(this).getResourcesCleanUp()
 
@@ -163,6 +170,8 @@ public open class CfnPolicy internal constructor(
   public open fun tags(`value`: List<PolicyTagProperty>) {
     unwrap(this).setTags(`value`.map(PolicyTagProperty::unwrap))
   }
+
+  public open fun tags(vararg `value`: PolicyTagProperty): Unit = tags(`value`.toList())
 
   public interface Builder {
     public fun deleteAllPolicyResources(deleteAllPolicyResources: Boolean)
@@ -199,13 +208,19 @@ public open class CfnPolicy internal constructor(
 
     public fun resourceSetIds(resourceSetIds: List<String>)
 
+    public fun resourceSetIds(vararg resourceSetIds: String)
+
     public fun resourceTags(resourceTags: IResolvable)
 
     public fun resourceTags(resourceTags: List<Any>)
 
+    public fun resourceTags(vararg resourceTags: Any)
+
     public fun resourceType(resourceType: String)
 
     public fun resourceTypeList(resourceTypeList: List<String>)
+
+    public fun resourceTypeList(vararg resourceTypeList: String)
 
     public fun resourcesCleanUp(resourcesCleanUp: Boolean)
 
@@ -222,6 +237,8 @@ public open class CfnPolicy internal constructor(
         fun securityServicePolicyData(securityServicePolicyData: SecurityServicePolicyDataProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<PolicyTagProperty>)
+
+    public fun tags(vararg tags: PolicyTagProperty)
   }
 
   private class BuilderImpl(
@@ -293,6 +310,9 @@ public open class CfnPolicy internal constructor(
       cdkBuilder.resourceSetIds(resourceSetIds)
     }
 
+    override fun resourceSetIds(vararg resourceSetIds: String): Unit =
+        resourceSetIds(resourceSetIds.toList())
+
     override fun resourceTags(resourceTags: IResolvable) {
       cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
     }
@@ -301,6 +321,8 @@ public open class CfnPolicy internal constructor(
       cdkBuilder.resourceTags(resourceTags)
     }
 
+    override fun resourceTags(vararg resourceTags: Any): Unit = resourceTags(resourceTags.toList())
+
     override fun resourceType(resourceType: String) {
       cdkBuilder.resourceType(resourceType)
     }
@@ -308,6 +330,9 @@ public open class CfnPolicy internal constructor(
     override fun resourceTypeList(resourceTypeList: List<String>) {
       cdkBuilder.resourceTypeList(resourceTypeList)
     }
+
+    override fun resourceTypeList(vararg resourceTypeList: String): Unit =
+        resourceTypeList(resourceTypeList.toList())
 
     override fun resourcesCleanUp(resourcesCleanUp: Boolean) {
       cdkBuilder.resourcesCleanUp(resourcesCleanUp)
@@ -336,6 +361,8 @@ public open class CfnPolicy internal constructor(
     override fun tags(tags: List<PolicyTagProperty>) {
       cdkBuilder.tags(tags.map(PolicyTagProperty::unwrap))
     }
+
+    override fun tags(vararg tags: PolicyTagProperty): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.fms.CfnPolicy = cdkBuilder.build()
   }
@@ -369,7 +396,11 @@ public open class CfnPolicy internal constructor(
     public interface Builder {
       public fun account(account: List<String>)
 
+      public fun account(vararg account: String)
+
       public fun orgunit(orgunit: List<String>)
+
+      public fun orgunit(vararg orgunit: String)
     }
 
     private class BuilderImpl : Builder {
@@ -380,9 +411,13 @@ public open class CfnPolicy internal constructor(
         cdkBuilder.account(account)
       }
 
+      override fun account(vararg account: String): Unit = account(account.toList())
+
       override fun orgunit(orgunit: List<String>) {
         cdkBuilder.orgunit(orgunit)
       }
+
+      override fun orgunit(vararg orgunit: String): Unit = orgunit(orgunit.toList())
 
       public fun build(): software.amazon.awscdk.services.fms.CfnPolicy.IEMapProperty =
           cdkBuilder.build()

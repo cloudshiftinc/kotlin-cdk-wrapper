@@ -13,6 +13,8 @@ public interface GatewayVpcEndpointOptions {
     public fun service(service: IGatewayVpcEndpointService)
 
     public fun subnets(subnets: List<SubnetSelection>)
+
+    public fun subnets(vararg subnets: SubnetSelection)
   }
 
   private class BuilderImpl : Builder {
@@ -26,6 +28,8 @@ public interface GatewayVpcEndpointOptions {
     override fun subnets(subnets: List<SubnetSelection>) {
       cdkBuilder.subnets(subnets.map(SubnetSelection::unwrap))
     }
+
+    override fun subnets(vararg subnets: SubnetSelection): Unit = subnets(subnets.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.GatewayVpcEndpointOptions =
         cdkBuilder.build()

@@ -77,6 +77,8 @@ public open class CfnTable internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun databaseName(databaseName: String)
 
@@ -95,6 +97,8 @@ public open class CfnTable internal constructor(
     public fun tableName(tableName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -136,6 +140,8 @@ public open class CfnTable internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.timestream.CfnTable = cdkBuilder.build()
   }
@@ -467,6 +473,8 @@ public open class CfnTable internal constructor(
       public fun compositePartitionKey(compositePartitionKey: IResolvable)
 
       public fun compositePartitionKey(compositePartitionKey: List<Any>)
+
+      public fun compositePartitionKey(vararg compositePartitionKey: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -481,6 +489,9 @@ public open class CfnTable internal constructor(
       override fun compositePartitionKey(compositePartitionKey: List<Any>) {
         cdkBuilder.compositePartitionKey(compositePartitionKey)
       }
+
+      override fun compositePartitionKey(vararg compositePartitionKey: Any): Unit =
+          compositePartitionKey(compositePartitionKey.toList())
 
       public fun build(): software.amazon.awscdk.services.timestream.CfnTable.SchemaProperty =
           cdkBuilder.build()

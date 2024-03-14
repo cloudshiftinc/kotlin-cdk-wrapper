@@ -71,6 +71,8 @@ public open class CfnConfigurationProfile internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public open fun type(): String? = unwrap(this).getType()
 
   public open fun type(`value`: String) {
@@ -87,6 +89,8 @@ public open class CfnConfigurationProfile internal constructor(
     unwrap(this).setValidators(__idx_ac66f0)
   }
 
+  public open fun validators(vararg __idx_ac66f0: Any): Unit = validators(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun applicationId(applicationId: String)
 
@@ -102,11 +106,15 @@ public open class CfnConfigurationProfile internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun type(type: String)
 
     public fun validators(validators: IResolvable)
 
     public fun validators(validators: List<Any>)
+
+    public fun validators(vararg validators: Any)
   }
 
   private class BuilderImpl(
@@ -145,6 +153,8 @@ public open class CfnConfigurationProfile internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun type(type: String) {
       cdkBuilder.type(type)
     }
@@ -156,6 +166,8 @@ public open class CfnConfigurationProfile internal constructor(
     override fun validators(validators: List<Any>) {
       cdkBuilder.validators(validators)
     }
+
+    override fun validators(vararg validators: Any): Unit = validators(validators.toList())
 
     public fun build(): software.amazon.awscdk.services.appconfig.CfnConfigurationProfile =
         cdkBuilder.build()

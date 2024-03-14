@@ -30,6 +30,9 @@ public open class CfnIPSet internal constructor(
     unwrap(this).setIpSetDescriptors(__idx_ac66f0)
   }
 
+  public open fun ipSetDescriptors(vararg __idx_ac66f0: Any): Unit =
+      ipSetDescriptors(__idx_ac66f0.toList())
+
   public open fun name(): String = unwrap(this).getName()
 
   public open fun name(`value`: String) {
@@ -40,6 +43,8 @@ public open class CfnIPSet internal constructor(
     public fun ipSetDescriptors(ipSetDescriptors: IResolvable)
 
     public fun ipSetDescriptors(ipSetDescriptors: List<Any>)
+
+    public fun ipSetDescriptors(vararg ipSetDescriptors: Any)
 
     public fun name(name: String)
   }
@@ -58,6 +63,9 @@ public open class CfnIPSet internal constructor(
     override fun ipSetDescriptors(ipSetDescriptors: List<Any>) {
       cdkBuilder.ipSetDescriptors(ipSetDescriptors)
     }
+
+    override fun ipSetDescriptors(vararg ipSetDescriptors: Any): Unit =
+        ipSetDescriptors(ipSetDescriptors.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)

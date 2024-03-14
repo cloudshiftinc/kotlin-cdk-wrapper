@@ -77,6 +77,8 @@ public open class CfnRule internal constructor(
     unwrap(this).setTargets(__idx_ac66f0)
   }
 
+  public open fun targets(vararg __idx_ac66f0: Any): Unit = targets(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun description(description: String)
 
@@ -95,6 +97,8 @@ public open class CfnRule internal constructor(
     public fun targets(targets: IResolvable)
 
     public fun targets(targets: List<Any>)
+
+    public fun targets(vararg targets: Any)
   }
 
   private class BuilderImpl(
@@ -139,6 +143,8 @@ public open class CfnRule internal constructor(
     override fun targets(targets: List<Any>) {
       cdkBuilder.targets(targets)
     }
+
+    override fun targets(vararg targets: Any): Unit = targets(targets.toList())
 
     public fun build(): software.amazon.awscdk.services.events.CfnRule = cdkBuilder.build()
   }
@@ -301,6 +307,8 @@ public open class CfnRule internal constructor(
 
       public fun sqls(sqls: List<String>)
 
+      public fun sqls(vararg sqls: String)
+
       public fun statementName(statementName: String)
 
       public fun withEvent(withEvent: Boolean)
@@ -332,6 +340,8 @@ public open class CfnRule internal constructor(
       override fun sqls(sqls: List<String>) {
         cdkBuilder.sqls(sqls)
       }
+
+      override fun sqls(vararg sqls: String): Unit = sqls(sqls.toList())
 
       override fun statementName(statementName: String) {
         cdkBuilder.statementName(statementName)
@@ -620,6 +630,8 @@ public open class CfnRule internal constructor(
       public fun key(key: String)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -635,6 +647,8 @@ public open class CfnRule internal constructor(
         cdkBuilder.values(values)
       }
 
+      override fun values(vararg values: String): Unit = values(values.toList())
+
       public fun build(): software.amazon.awscdk.services.events.CfnRule.RunCommandTargetProperty =
           cdkBuilder.build()
     }
@@ -645,7 +659,7 @@ public open class CfnRule internal constructor(
     ) : RunCommandTargetProperty {
       override fun key(): String = unwrap(this).getKey()
 
-      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues()
     }
 
     public companion object {
@@ -727,7 +741,11 @@ public open class CfnRule internal constructor(
 
       public fun securityGroups(securityGroups: List<String>)
 
+      public fun securityGroups(vararg securityGroups: String)
+
       public fun subnets(subnets: List<String>)
+
+      public fun subnets(vararg subnets: String)
     }
 
     private class BuilderImpl : Builder {
@@ -743,9 +761,14 @@ public open class CfnRule internal constructor(
         cdkBuilder.securityGroups(securityGroups)
       }
 
+      override fun securityGroups(vararg securityGroups: String): Unit =
+          securityGroups(securityGroups.toList())
+
       override fun subnets(subnets: List<String>) {
         cdkBuilder.subnets(subnets)
       }
+
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
 
       public fun build(): software.amazon.awscdk.services.events.CfnRule.AwsVpcConfigurationProperty
           = cdkBuilder.build()
@@ -759,7 +782,7 @@ public open class CfnRule internal constructor(
 
       override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
 
-      override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+      override fun subnets(): List<String> = unwrap(this).getSubnets()
     }
 
     public companion object {
@@ -816,6 +839,8 @@ public open class CfnRule internal constructor(
 
       public fun capacityProviderStrategy(capacityProviderStrategy: List<Any>)
 
+      public fun capacityProviderStrategy(vararg capacityProviderStrategy: Any)
+
       public fun enableEcsManagedTags(enableEcsManagedTags: Boolean)
 
       public fun enableEcsManagedTags(enableEcsManagedTags: IResolvable)
@@ -841,9 +866,13 @@ public open class CfnRule internal constructor(
 
       public fun placementConstraints(placementConstraints: List<Any>)
 
+      public fun placementConstraints(vararg placementConstraints: Any)
+
       public fun placementStrategies(placementStrategies: IResolvable)
 
       public fun placementStrategies(placementStrategies: List<Any>)
+
+      public fun placementStrategies(vararg placementStrategies: Any)
 
       public fun platformVersion(platformVersion: String)
 
@@ -854,6 +883,8 @@ public open class CfnRule internal constructor(
       public fun tagList(tagList: IResolvable)
 
       public fun tagList(tagList: List<Any>)
+
+      public fun tagList(vararg tagList: Any)
 
       public fun taskCount(taskCount: Number)
 
@@ -872,6 +903,9 @@ public open class CfnRule internal constructor(
       override fun capacityProviderStrategy(capacityProviderStrategy: List<Any>) {
         cdkBuilder.capacityProviderStrategy(capacityProviderStrategy)
       }
+
+      override fun capacityProviderStrategy(vararg capacityProviderStrategy: Any): Unit =
+          capacityProviderStrategy(capacityProviderStrategy.toList())
 
       override fun enableEcsManagedTags(enableEcsManagedTags: Boolean) {
         cdkBuilder.enableEcsManagedTags(enableEcsManagedTags)
@@ -919,6 +953,9 @@ public open class CfnRule internal constructor(
         cdkBuilder.placementConstraints(placementConstraints)
       }
 
+      override fun placementConstraints(vararg placementConstraints: Any): Unit =
+          placementConstraints(placementConstraints.toList())
+
       override fun placementStrategies(placementStrategies: IResolvable) {
         cdkBuilder.placementStrategies(placementStrategies.let(IResolvable::unwrap))
       }
@@ -926,6 +963,9 @@ public open class CfnRule internal constructor(
       override fun placementStrategies(placementStrategies: List<Any>) {
         cdkBuilder.placementStrategies(placementStrategies)
       }
+
+      override fun placementStrategies(vararg placementStrategies: Any): Unit =
+          placementStrategies(placementStrategies.toList())
 
       override fun platformVersion(platformVersion: String) {
         cdkBuilder.platformVersion(platformVersion)
@@ -946,6 +986,8 @@ public open class CfnRule internal constructor(
       override fun tagList(tagList: List<Any>) {
         cdkBuilder.tagList(tagList)
       }
+
+      override fun tagList(vararg tagList: Any): Unit = tagList(tagList.toList())
 
       override fun taskCount(taskCount: Number) {
         cdkBuilder.taskCount(taskCount)
@@ -1220,6 +1262,8 @@ public open class CfnRule internal constructor(
       public fun pipelineParameterList(pipelineParameterList: IResolvable)
 
       public fun pipelineParameterList(pipelineParameterList: List<Any>)
+
+      public fun pipelineParameterList(vararg pipelineParameterList: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1235,6 +1279,9 @@ public open class CfnRule internal constructor(
       override fun pipelineParameterList(pipelineParameterList: List<Any>) {
         cdkBuilder.pipelineParameterList(pipelineParameterList)
       }
+
+      override fun pipelineParameterList(vararg pipelineParameterList: Any): Unit =
+          pipelineParameterList(pipelineParameterList.toList())
 
       public fun build():
           software.amazon.awscdk.services.events.CfnRule.SageMakerPipelineParametersProperty =
@@ -1767,6 +1814,8 @@ public open class CfnRule internal constructor(
       public fun runCommandTargets(runCommandTargets: IResolvable)
 
       public fun runCommandTargets(runCommandTargets: List<Any>)
+
+      public fun runCommandTargets(vararg runCommandTargets: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1781,6 +1830,9 @@ public open class CfnRule internal constructor(
       override fun runCommandTargets(runCommandTargets: List<Any>) {
         cdkBuilder.runCommandTargets(runCommandTargets)
       }
+
+      override fun runCommandTargets(vararg runCommandTargets: Any): Unit =
+          runCommandTargets(runCommandTargets.toList())
 
       public fun build():
           software.amazon.awscdk.services.events.CfnRule.RunCommandParametersProperty =
@@ -1829,6 +1881,8 @@ public open class CfnRule internal constructor(
 
       public fun pathParameterValues(pathParameterValues: List<String>)
 
+      public fun pathParameterValues(vararg pathParameterValues: String)
+
       public fun queryStringParameters(queryStringParameters: IResolvable)
 
       public fun queryStringParameters(queryStringParameters: Map<String, String>)
@@ -1850,6 +1904,9 @@ public open class CfnRule internal constructor(
       override fun pathParameterValues(pathParameterValues: List<String>) {
         cdkBuilder.pathParameterValues(pathParameterValues)
       }
+
+      override fun pathParameterValues(vararg pathParameterValues: String): Unit =
+          pathParameterValues(pathParameterValues.toList())
 
       override fun queryStringParameters(queryStringParameters: IResolvable) {
         cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable::unwrap))

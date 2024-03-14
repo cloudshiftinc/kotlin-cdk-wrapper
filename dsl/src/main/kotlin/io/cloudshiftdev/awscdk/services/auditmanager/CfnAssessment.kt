@@ -69,6 +69,8 @@ public open class CfnAssessment internal constructor(
     unwrap(this).setDelegations(__idx_ac66f0)
   }
 
+  public open fun delegations(vararg __idx_ac66f0: Any): Unit = delegations(__idx_ac66f0.toList())
+
   public open fun description(): String? = unwrap(this).getDescription()
 
   public open fun description(`value`: String) {
@@ -101,6 +103,8 @@ public open class CfnAssessment internal constructor(
     unwrap(this).setRoles(__idx_ac66f0)
   }
 
+  public open fun roles(vararg __idx_ac66f0: Any): Unit = roles(__idx_ac66f0.toList())
+
   public open fun scope(): Any? = unwrap(this).getScope()
 
   public open fun scope(`value`: IResolvable) {
@@ -131,6 +135,8 @@ public open class CfnAssessment internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun assessmentReportsDestination(assessmentReportsDestination: IResolvable)
 
@@ -154,6 +160,8 @@ public open class CfnAssessment internal constructor(
 
     public fun delegations(delegations: List<Any>)
 
+    public fun delegations(vararg delegations: Any)
+
     public fun description(description: String)
 
     public fun frameworkId(frameworkId: String)
@@ -163,6 +171,8 @@ public open class CfnAssessment internal constructor(
     public fun roles(roles: IResolvable)
 
     public fun roles(roles: List<Any>)
+
+    public fun roles(vararg roles: Any)
 
     public fun scope(scope: IResolvable)
 
@@ -175,6 +185,8 @@ public open class CfnAssessment internal constructor(
     public fun status(status: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -221,6 +233,8 @@ public open class CfnAssessment internal constructor(
       cdkBuilder.delegations(delegations)
     }
 
+    override fun delegations(vararg delegations: Any): Unit = delegations(delegations.toList())
+
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
@@ -241,6 +255,8 @@ public open class CfnAssessment internal constructor(
       cdkBuilder.roles(roles)
     }
 
+    override fun roles(vararg roles: Any): Unit = roles(roles.toList())
+
     override fun scope(scope: IResolvable) {
       cdkBuilder.scope(scope.let(IResolvable::unwrap))
     }
@@ -260,6 +276,8 @@ public open class CfnAssessment internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.auditmanager.CfnAssessment =
         cdkBuilder.build()
@@ -572,9 +590,13 @@ public open class CfnAssessment internal constructor(
 
       public fun awsAccounts(awsAccounts: List<Any>)
 
+      public fun awsAccounts(vararg awsAccounts: Any)
+
       public fun awsServices(awsServices: IResolvable)
 
       public fun awsServices(awsServices: List<Any>)
+
+      public fun awsServices(vararg awsServices: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -590,6 +612,8 @@ public open class CfnAssessment internal constructor(
         cdkBuilder.awsAccounts(awsAccounts)
       }
 
+      override fun awsAccounts(vararg awsAccounts: Any): Unit = awsAccounts(awsAccounts.toList())
+
       override fun awsServices(awsServices: IResolvable) {
         cdkBuilder.awsServices(awsServices.let(IResolvable::unwrap))
       }
@@ -597,6 +621,8 @@ public open class CfnAssessment internal constructor(
       override fun awsServices(awsServices: List<Any>) {
         cdkBuilder.awsServices(awsServices)
       }
+
+      override fun awsServices(vararg awsServices: Any): Unit = awsServices(awsServices.toList())
 
       public fun build(): software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty =
           cdkBuilder.build()

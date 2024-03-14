@@ -105,6 +105,9 @@ public open class CfnEnvironment internal constructor(
     unwrap(this).setSecurityGroupIds(`value`)
   }
 
+  public open fun securityGroupIds(vararg `value`: String): Unit =
+      securityGroupIds(`value`.toList())
+
   public open fun storageConfigurations(): Any? = unwrap(this).getStorageConfigurations()
 
   public open fun storageConfigurations(`value`: IResolvable) {
@@ -115,11 +118,16 @@ public open class CfnEnvironment internal constructor(
     unwrap(this).setStorageConfigurations(__idx_ac66f0)
   }
 
+  public open fun storageConfigurations(vararg __idx_ac66f0: Any): Unit =
+      storageConfigurations(__idx_ac66f0.toList())
+
   public open fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
 
   public open fun subnetIds(`value`: List<String>) {
     unwrap(this).setSubnetIds(`value`)
   }
+
+  public open fun subnetIds(vararg `value`: String): Unit = subnetIds(`value`.toList())
 
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
@@ -159,11 +167,17 @@ public open class CfnEnvironment internal constructor(
 
     public fun securityGroupIds(securityGroupIds: List<String>)
 
+    public fun securityGroupIds(vararg securityGroupIds: String)
+
     public fun storageConfigurations(storageConfigurations: IResolvable)
 
     public fun storageConfigurations(storageConfigurations: List<Any>)
 
+    public fun storageConfigurations(vararg storageConfigurations: Any)
+
     public fun subnetIds(subnetIds: List<String>)
+
+    public fun subnetIds(vararg subnetIds: String)
 
     public fun tags(tags: Map<String, String>)
   }
@@ -229,6 +243,9 @@ public open class CfnEnvironment internal constructor(
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
+
     override fun storageConfigurations(storageConfigurations: IResolvable) {
       cdkBuilder.storageConfigurations(storageConfigurations.let(IResolvable::unwrap))
     }
@@ -237,9 +254,14 @@ public open class CfnEnvironment internal constructor(
       cdkBuilder.storageConfigurations(storageConfigurations)
     }
 
+    override fun storageConfigurations(vararg storageConfigurations: Any): Unit =
+        storageConfigurations(storageConfigurations.toList())
+
     override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
+
+    override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)

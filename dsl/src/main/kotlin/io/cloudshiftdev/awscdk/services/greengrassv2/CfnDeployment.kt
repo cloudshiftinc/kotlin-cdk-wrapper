@@ -557,6 +557,8 @@ public open class CfnDeployment internal constructor(
       public fun merge(merge: String)
 
       public fun reset(reset: List<String>)
+
+      public fun reset(vararg reset: String)
     }
 
     private class BuilderImpl : Builder {
@@ -572,6 +574,8 @@ public open class CfnDeployment internal constructor(
       override fun reset(reset: List<String>) {
         cdkBuilder.reset(reset)
       }
+
+      override fun reset(vararg reset: String): Unit = reset(reset.toList())
 
       public fun build():
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.ComponentConfigurationUpdateProperty
@@ -726,6 +730,8 @@ public open class CfnDeployment internal constructor(
       public fun criteriaList(criteriaList: IResolvable)
 
       public fun criteriaList(criteriaList: List<Any>)
+
+      public fun criteriaList(vararg criteriaList: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -741,6 +747,9 @@ public open class CfnDeployment internal constructor(
       override fun criteriaList(criteriaList: List<Any>) {
         cdkBuilder.criteriaList(criteriaList)
       }
+
+      override fun criteriaList(vararg criteriaList: Any): Unit =
+          criteriaList(criteriaList.toList())
 
       public fun build():
           software.amazon.awscdk.services.greengrassv2.CfnDeployment.IoTJobAbortConfigProperty =

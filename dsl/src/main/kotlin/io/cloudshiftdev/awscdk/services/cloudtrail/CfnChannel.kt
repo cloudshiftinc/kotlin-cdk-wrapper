@@ -29,6 +29,8 @@ public open class CfnChannel internal constructor(
     unwrap(this).setDestinations(__idx_ac66f0)
   }
 
+  public open fun destinations(vararg __idx_ac66f0: Any): Unit = destinations(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -54,16 +56,22 @@ public open class CfnChannel internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun destinations(destinations: IResolvable)
 
     public fun destinations(destinations: List<Any>)
+
+    public fun destinations(vararg destinations: Any)
 
     public fun name(name: String)
 
     public fun source(source: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -81,6 +89,8 @@ public open class CfnChannel internal constructor(
       cdkBuilder.destinations(destinations)
     }
 
+    override fun destinations(vararg destinations: Any): Unit = destinations(destinations.toList())
+
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -92,6 +102,8 @@ public open class CfnChannel internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.cloudtrail.CfnChannel = cdkBuilder.build()
   }

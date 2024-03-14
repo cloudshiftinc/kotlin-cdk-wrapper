@@ -33,6 +33,8 @@ public open class CfnGroup internal constructor(
     unwrap(this).setResourceArns(`value`)
   }
 
+  public open fun resourceArns(vararg `value`: String): Unit = resourceArns(`value`.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -42,12 +44,18 @@ public open class CfnGroup internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun name(name: String)
 
     public fun resourceArns(resourceArns: List<String>)
 
+    public fun resourceArns(vararg resourceArns: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -65,9 +73,14 @@ public open class CfnGroup internal constructor(
       cdkBuilder.resourceArns(resourceArns)
     }
 
+    override fun resourceArns(vararg resourceArns: String): Unit =
+        resourceArns(resourceArns.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.synthetics.CfnGroup = cdkBuilder.build()
   }

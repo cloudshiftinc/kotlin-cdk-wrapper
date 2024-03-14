@@ -41,6 +41,9 @@ public open class ApplicationLoadBalancedEc2Service internal constructor(
     public
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>)
 
+    public fun capacityProviderStrategies(vararg
+        capacityProviderStrategies: CapacityProviderStrategy)
+
     public fun certificate(certificate: ICertificate)
 
     public fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker)
@@ -97,7 +100,11 @@ public open class ApplicationLoadBalancedEc2Service internal constructor(
 
     public fun placementConstraints(placementConstraints: List<PlacementConstraint>)
 
+    public fun placementConstraints(vararg placementConstraints: PlacementConstraint)
+
     public fun placementStrategies(placementStrategies: List<PlacementStrategy>)
+
+    public fun placementStrategies(vararg placementStrategies: PlacementStrategy)
 
     public fun propagateTags(propagateTags: PropagatedTagSource)
 
@@ -142,6 +149,10 @@ public open class ApplicationLoadBalancedEc2Service internal constructor(
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>) {
       cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy::unwrap))
     }
+
+    override fun capacityProviderStrategies(vararg
+        capacityProviderStrategies: CapacityProviderStrategy): Unit =
+        capacityProviderStrategies(capacityProviderStrategies.toList())
 
     override fun certificate(certificate: ICertificate) {
       cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
@@ -247,9 +258,15 @@ public open class ApplicationLoadBalancedEc2Service internal constructor(
       cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint::unwrap))
     }
 
+    override fun placementConstraints(vararg placementConstraints: PlacementConstraint): Unit =
+        placementConstraints(placementConstraints.toList())
+
     override fun placementStrategies(placementStrategies: List<PlacementStrategy>) {
       cdkBuilder.placementStrategies(placementStrategies.map(PlacementStrategy::unwrap))
     }
+
+    override fun placementStrategies(vararg placementStrategies: PlacementStrategy): Unit =
+        placementStrategies(placementStrategies.toList())
 
     override fun propagateTags(propagateTags: PropagatedTagSource) {
       cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))

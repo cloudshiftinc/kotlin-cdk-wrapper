@@ -98,6 +98,8 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun attributeDetails(attributeDetails: IResolvable)
 
@@ -126,6 +128,8 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
     public fun statistic(statistic: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -186,6 +190,8 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build():
         software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition =
@@ -274,6 +280,8 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
 
       public fun attributes(attributes: List<Any>)
 
+      public fun attributes(vararg attributes: Any)
+
       public fun expression(expression: String)
     }
 
@@ -290,6 +298,8 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
       override fun attributes(attributes: List<Any>) {
         cdkBuilder.attributes(attributes)
       }
+
+      override fun attributes(vararg attributes: Any): Unit = attributes(attributes.toList())
 
       override fun expression(expression: String) {
         cdkBuilder.expression(expression)

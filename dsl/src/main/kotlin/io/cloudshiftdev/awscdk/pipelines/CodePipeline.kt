@@ -52,6 +52,8 @@ public open class CodePipeline internal constructor(
 
     public fun dockerCredentials(dockerCredentials: List<DockerCredential>)
 
+    public fun dockerCredentials(vararg dockerCredentials: DockerCredential)
+
     public fun dockerEnabledForSelfMutation(dockerEnabledForSelfMutation: Boolean)
 
     public fun dockerEnabledForSynth(dockerEnabledForSynth: Boolean)
@@ -137,6 +139,9 @@ public open class CodePipeline internal constructor(
     override fun dockerCredentials(dockerCredentials: List<DockerCredential>) {
       cdkBuilder.dockerCredentials(dockerCredentials.map(DockerCredential::unwrap))
     }
+
+    override fun dockerCredentials(vararg dockerCredentials: DockerCredential): Unit =
+        dockerCredentials(dockerCredentials.toList())
 
     override fun dockerEnabledForSelfMutation(dockerEnabledForSelfMutation: Boolean) {
       cdkBuilder.dockerEnabledForSelfMutation(dockerEnabledForSelfMutation)

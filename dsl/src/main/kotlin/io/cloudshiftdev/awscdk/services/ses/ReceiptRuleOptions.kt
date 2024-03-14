@@ -24,6 +24,8 @@ public interface ReceiptRuleOptions {
   public interface Builder {
     public fun actions(actions: List<IReceiptRuleAction>)
 
+    public fun actions(vararg actions: IReceiptRuleAction)
+
     public fun after(after: IReceiptRule)
 
     public fun enabled(enabled: Boolean)
@@ -31,6 +33,8 @@ public interface ReceiptRuleOptions {
     public fun receiptRuleName(receiptRuleName: String)
 
     public fun recipients(recipients: List<String>)
+
+    public fun recipients(vararg recipients: String)
 
     public fun scanEnabled(scanEnabled: Boolean)
 
@@ -44,6 +48,8 @@ public interface ReceiptRuleOptions {
     override fun actions(actions: List<IReceiptRuleAction>) {
       cdkBuilder.actions(actions.map(IReceiptRuleAction::unwrap))
     }
+
+    override fun actions(vararg actions: IReceiptRuleAction): Unit = actions(actions.toList())
 
     override fun after(after: IReceiptRule) {
       cdkBuilder.after(after.let(IReceiptRule::unwrap))
@@ -60,6 +66,8 @@ public interface ReceiptRuleOptions {
     override fun recipients(recipients: List<String>) {
       cdkBuilder.recipients(recipients)
     }
+
+    override fun recipients(vararg recipients: String): Unit = recipients(recipients.toList())
 
     override fun scanEnabled(scanEnabled: Boolean) {
       cdkBuilder.scanEnabled(scanEnabled)

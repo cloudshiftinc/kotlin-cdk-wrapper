@@ -16,7 +16,11 @@ public interface CodeImageConfig {
   public interface Builder {
     public fun cmd(cmd: List<String>)
 
+    public fun cmd(vararg cmd: String)
+
     public fun entrypoint(entrypoint: List<String>)
+
+    public fun entrypoint(vararg entrypoint: String)
 
     public fun imageUri(imageUri: String)
 
@@ -31,9 +35,13 @@ public interface CodeImageConfig {
       cdkBuilder.cmd(cmd)
     }
 
+    override fun cmd(vararg cmd: String): Unit = cmd(cmd.toList())
+
     override fun entrypoint(entrypoint: List<String>) {
       cdkBuilder.entrypoint(entrypoint)
     }
+
+    override fun entrypoint(vararg entrypoint: String): Unit = entrypoint(entrypoint.toList())
 
     override fun imageUri(imageUri: String) {
       cdkBuilder.imageUri(imageUri)

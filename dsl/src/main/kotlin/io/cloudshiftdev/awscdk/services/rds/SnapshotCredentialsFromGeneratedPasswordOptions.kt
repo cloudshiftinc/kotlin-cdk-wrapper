@@ -20,6 +20,8 @@ public interface SnapshotCredentialsFromGeneratedPasswordOptions {
     public fun excludeCharacters(excludeCharacters: String)
 
     public fun replicaRegions(replicaRegions: List<ReplicaRegion>)
+
+    public fun replicaRegions(vararg replicaRegions: ReplicaRegion)
   }
 
   private class BuilderImpl : Builder {
@@ -39,6 +41,9 @@ public interface SnapshotCredentialsFromGeneratedPasswordOptions {
     override fun replicaRegions(replicaRegions: List<ReplicaRegion>) {
       cdkBuilder.replicaRegions(replicaRegions.map(ReplicaRegion::unwrap))
     }
+
+    override fun replicaRegions(vararg replicaRegions: ReplicaRegion): Unit =
+        replicaRegions(replicaRegions.toList())
 
     public fun build():
         software.amazon.awscdk.services.rds.SnapshotCredentialsFromGeneratedPasswordOptions =

@@ -58,6 +58,8 @@ public open class ScheduledEc2Task internal constructor(
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
+
     public fun subnetSelection(subnetSelection: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -65,6 +67,8 @@ public open class ScheduledEc2Task internal constructor(
     public fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit)
 
     public fun tags(tags: List<Tag>)
+
+    public fun tags(vararg tags: Tag)
 
     public fun vpc(vpc: IVpc)
   }
@@ -128,6 +132,9 @@ public open class ScheduledEc2Task internal constructor(
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
+
     override fun subnetSelection(subnetSelection: SubnetSelection) {
       cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
     }
@@ -140,6 +147,8 @@ public open class ScheduledEc2Task internal constructor(
     override fun tags(tags: List<Tag>) {
       cdkBuilder.tags(tags.map(Tag::unwrap))
     }
+
+    override fun tags(vararg tags: Tag): Unit = tags(tags.toList())
 
     override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))

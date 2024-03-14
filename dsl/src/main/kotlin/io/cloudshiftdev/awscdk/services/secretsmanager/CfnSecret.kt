@@ -70,6 +70,9 @@ public open class CfnSecret internal constructor(
     unwrap(this).setReplicaRegions(__idx_ac66f0)
   }
 
+  public open fun replicaRegions(vararg __idx_ac66f0: Any): Unit =
+      replicaRegions(__idx_ac66f0.toList())
+
   public open fun secretString(): String? = unwrap(this).getSecretString()
 
   public open fun secretString(`value`: String) {
@@ -84,6 +87,8 @@ public open class CfnSecret internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public interface Builder {
     public fun description(description: String)
@@ -105,9 +110,13 @@ public open class CfnSecret internal constructor(
 
     public fun replicaRegions(replicaRegions: List<Any>)
 
+    public fun replicaRegions(vararg replicaRegions: Any)
+
     public fun secretString(secretString: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -151,6 +160,9 @@ public open class CfnSecret internal constructor(
       cdkBuilder.replicaRegions(replicaRegions)
     }
 
+    override fun replicaRegions(vararg replicaRegions: Any): Unit =
+        replicaRegions(replicaRegions.toList())
+
     override fun secretString(secretString: String) {
       cdkBuilder.secretString(secretString)
     }
@@ -158,6 +170,8 @@ public open class CfnSecret internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.secretsmanager.CfnSecret =
         cdkBuilder.build()

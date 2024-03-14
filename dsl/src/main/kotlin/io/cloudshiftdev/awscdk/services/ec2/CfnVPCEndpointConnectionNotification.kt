@@ -15,12 +15,14 @@ public open class CfnVPCEndpointConnectionNotification internal constructor(
   public open fun attrVpcEndpointConnectionNotificationId(): String =
       unwrap(this).getAttrVpcEndpointConnectionNotificationId()
 
-  public open fun connectionEvents(): List<String> = unwrap(this).getConnectionEvents() ?:
-      emptyList()
+  public open fun connectionEvents(): List<String> = unwrap(this).getConnectionEvents()
 
   public open fun connectionEvents(`value`: List<String>) {
     unwrap(this).setConnectionEvents(`value`)
   }
+
+  public open fun connectionEvents(vararg `value`: String): Unit =
+      connectionEvents(`value`.toList())
 
   public open fun connectionNotificationArn(): String = unwrap(this).getConnectionNotificationArn()
 
@@ -47,6 +49,8 @@ public open class CfnVPCEndpointConnectionNotification internal constructor(
   public interface Builder {
     public fun connectionEvents(connectionEvents: List<String>)
 
+    public fun connectionEvents(vararg connectionEvents: String)
+
     public fun connectionNotificationArn(connectionNotificationArn: String)
 
     public fun serviceId(serviceId: String)
@@ -66,6 +70,9 @@ public open class CfnVPCEndpointConnectionNotification internal constructor(
     override fun connectionEvents(connectionEvents: List<String>) {
       cdkBuilder.connectionEvents(connectionEvents)
     }
+
+    override fun connectionEvents(vararg connectionEvents: String): Unit =
+        connectionEvents(connectionEvents.toList())
 
     override fun connectionNotificationArn(connectionNotificationArn: String) {
       cdkBuilder.connectionNotificationArn(connectionNotificationArn)

@@ -10,6 +10,9 @@ public abstract class SubnetFilter internal constructor(
   public open fun selectSubnets(_subnets: List<ISubnet>): List<ISubnet> =
       unwrap(this).selectSubnets(_subnets.map(ISubnet::unwrap)).map(ISubnet::wrap)
 
+  public open fun selectSubnets(vararg _subnets: ISubnet): List<ISubnet> =
+      selectSubnets(_subnets.toList())
+
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.SubnetFilter,
   ) : SubnetFilter(cdkObject)
@@ -18,17 +21,27 @@ public abstract class SubnetFilter internal constructor(
     public open fun availabilityZones(availabilityZones: List<String>): SubnetFilter =
         software.amazon.awscdk.services.ec2.SubnetFilter.availabilityZones(availabilityZones).let(SubnetFilter::wrap)
 
+    public open fun availabilityZones(vararg availabilityZones: String): SubnetFilter =
+        availabilityZones(availabilityZones.toList())
+
     public open fun byCidrMask(mask: Number): SubnetFilter =
         software.amazon.awscdk.services.ec2.SubnetFilter.byCidrMask(mask).let(SubnetFilter::wrap)
 
     public open fun byCidrRanges(cidrs: List<String>): SubnetFilter =
         software.amazon.awscdk.services.ec2.SubnetFilter.byCidrRanges(cidrs).let(SubnetFilter::wrap)
 
+    public open fun byCidrRanges(vararg cidrs: String): SubnetFilter = byCidrRanges(cidrs.toList())
+
     public open fun byIds(subnetIds: List<String>): SubnetFilter =
         software.amazon.awscdk.services.ec2.SubnetFilter.byIds(subnetIds).let(SubnetFilter::wrap)
 
+    public open fun byIds(vararg subnetIds: String): SubnetFilter = byIds(subnetIds.toList())
+
     public open fun containsIpAddresses(ipv4addrs: List<String>): SubnetFilter =
         software.amazon.awscdk.services.ec2.SubnetFilter.containsIpAddresses(ipv4addrs).let(SubnetFilter::wrap)
+
+    public open fun containsIpAddresses(vararg ipv4addrs: String): SubnetFilter =
+        containsIpAddresses(ipv4addrs.toList())
 
     public open fun onePerAz(): SubnetFilter =
         software.amazon.awscdk.services.ec2.SubnetFilter.onePerAz().let(SubnetFilter::wrap)

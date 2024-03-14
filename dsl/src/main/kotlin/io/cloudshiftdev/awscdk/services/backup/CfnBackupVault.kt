@@ -195,6 +195,8 @@ public open class CfnBackupVault internal constructor(
     public interface Builder {
       public fun backupVaultEvents(backupVaultEvents: List<String>)
 
+      public fun backupVaultEvents(vararg backupVaultEvents: String)
+
       public fun snsTopicArn(snsTopicArn: String)
     }
 
@@ -207,6 +209,9 @@ public open class CfnBackupVault internal constructor(
       override fun backupVaultEvents(backupVaultEvents: List<String>) {
         cdkBuilder.backupVaultEvents(backupVaultEvents)
       }
+
+      override fun backupVaultEvents(vararg backupVaultEvents: String): Unit =
+          backupVaultEvents(backupVaultEvents.toList())
 
       override fun snsTopicArn(snsTopicArn: String) {
         cdkBuilder.snsTopicArn(snsTopicArn)
@@ -221,8 +226,7 @@ public open class CfnBackupVault internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.backup.CfnBackupVault.NotificationObjectTypeProperty,
     ) : NotificationObjectTypeProperty {
-      override fun backupVaultEvents(): List<String> = unwrap(this).getBackupVaultEvents() ?:
-          emptyList()
+      override fun backupVaultEvents(): List<String> = unwrap(this).getBackupVaultEvents()
 
       override fun snsTopicArn(): String = unwrap(this).getSnsTopicArn()
     }

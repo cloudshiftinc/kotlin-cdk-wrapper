@@ -27,6 +27,9 @@ public open class CfnStandard internal constructor(
     unwrap(this).setDisabledStandardsControls(__idx_ac66f0)
   }
 
+  public open fun disabledStandardsControls(vararg __idx_ac66f0: Any): Unit =
+      disabledStandardsControls(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -41,6 +44,8 @@ public open class CfnStandard internal constructor(
     public fun disabledStandardsControls(disabledStandardsControls: IResolvable)
 
     public fun disabledStandardsControls(disabledStandardsControls: List<Any>)
+
+    public fun disabledStandardsControls(vararg disabledStandardsControls: Any)
 
     public fun standardsArn(standardsArn: String)
   }
@@ -59,6 +64,9 @@ public open class CfnStandard internal constructor(
     override fun disabledStandardsControls(disabledStandardsControls: List<Any>) {
       cdkBuilder.disabledStandardsControls(disabledStandardsControls)
     }
+
+    override fun disabledStandardsControls(vararg disabledStandardsControls: Any): Unit =
+        disabledStandardsControls(disabledStandardsControls.toList())
 
     override fun standardsArn(standardsArn: String) {
       cdkBuilder.standardsArn(standardsArn)

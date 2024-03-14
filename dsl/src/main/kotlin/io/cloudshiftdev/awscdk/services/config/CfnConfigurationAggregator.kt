@@ -30,6 +30,9 @@ public open class CfnConfigurationAggregator internal constructor(
     unwrap(this).setAccountAggregationSources(__idx_ac66f0)
   }
 
+  public open fun accountAggregationSources(vararg __idx_ac66f0: Any): Unit =
+      accountAggregationSources(__idx_ac66f0.toList())
+
   public open fun attrConfigurationAggregatorArn(): String =
       unwrap(this).getAttrConfigurationAggregatorArn()
 
@@ -70,10 +73,14 @@ public open class CfnConfigurationAggregator internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun accountAggregationSources(accountAggregationSources: IResolvable)
 
     public fun accountAggregationSources(accountAggregationSources: List<Any>)
+
+    public fun accountAggregationSources(vararg accountAggregationSources: Any)
 
     public fun configurationAggregatorName(configurationAggregatorName: String)
 
@@ -88,6 +95,8 @@ public open class CfnConfigurationAggregator internal constructor(
         fun organizationAggregationSource(organizationAggregationSource: OrganizationAggregationSourceProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -105,6 +114,9 @@ public open class CfnConfigurationAggregator internal constructor(
     override fun accountAggregationSources(accountAggregationSources: List<Any>) {
       cdkBuilder.accountAggregationSources(accountAggregationSources)
     }
+
+    override fun accountAggregationSources(vararg accountAggregationSources: Any): Unit =
+        accountAggregationSources(accountAggregationSources.toList())
 
     override fun configurationAggregatorName(configurationAggregatorName: String) {
       cdkBuilder.configurationAggregatorName(configurationAggregatorName)
@@ -129,6 +141,8 @@ public open class CfnConfigurationAggregator internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.config.CfnConfigurationAggregator =
         cdkBuilder.build()
@@ -169,6 +183,8 @@ public open class CfnConfigurationAggregator internal constructor(
 
       public fun awsRegions(awsRegions: List<String>)
 
+      public fun awsRegions(vararg awsRegions: String)
+
       public fun roleArn(roleArn: String)
     }
 
@@ -189,6 +205,8 @@ public open class CfnConfigurationAggregator internal constructor(
       override fun awsRegions(awsRegions: List<String>) {
         cdkBuilder.awsRegions(awsRegions)
       }
+
+      override fun awsRegions(vararg awsRegions: String): Unit = awsRegions(awsRegions.toList())
 
       override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
@@ -241,11 +259,15 @@ public open class CfnConfigurationAggregator internal constructor(
     public interface Builder {
       public fun accountIds(accountIds: List<String>)
 
+      public fun accountIds(vararg accountIds: String)
+
       public fun allAwsRegions(allAwsRegions: Boolean)
 
       public fun allAwsRegions(allAwsRegions: IResolvable)
 
       public fun awsRegions(awsRegions: List<String>)
+
+      public fun awsRegions(vararg awsRegions: String)
     }
 
     private class BuilderImpl : Builder {
@@ -257,6 +279,8 @@ public open class CfnConfigurationAggregator internal constructor(
       override fun accountIds(accountIds: List<String>) {
         cdkBuilder.accountIds(accountIds)
       }
+
+      override fun accountIds(vararg accountIds: String): Unit = accountIds(accountIds.toList())
 
       override fun allAwsRegions(allAwsRegions: Boolean) {
         cdkBuilder.allAwsRegions(allAwsRegions)
@@ -270,6 +294,8 @@ public open class CfnConfigurationAggregator internal constructor(
         cdkBuilder.awsRegions(awsRegions)
       }
 
+      override fun awsRegions(vararg awsRegions: String): Unit = awsRegions(awsRegions.toList())
+
       public fun build():
           software.amazon.awscdk.services.config.CfnConfigurationAggregator.AccountAggregationSourceProperty
           = cdkBuilder.build()
@@ -279,7 +305,7 @@ public open class CfnConfigurationAggregator internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.config.CfnConfigurationAggregator.AccountAggregationSourceProperty,
     ) : AccountAggregationSourceProperty {
-      override fun accountIds(): List<String> = unwrap(this).getAccountIds() ?: emptyList()
+      override fun accountIds(): List<String> = unwrap(this).getAccountIds()
 
       override fun allAwsRegions(): Any? = unwrap(this).getAllAwsRegions()
 

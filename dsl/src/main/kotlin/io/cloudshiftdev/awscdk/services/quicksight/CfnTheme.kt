@@ -109,6 +109,8 @@ public open class CfnTheme internal constructor(
     unwrap(this).setPermissions(__idx_ac66f0)
   }
 
+  public open fun permissions(vararg __idx_ac66f0: Any): Unit = permissions(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -117,6 +119,8 @@ public open class CfnTheme internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun themeId(): String = unwrap(this).getThemeId()
 
@@ -149,7 +153,11 @@ public open class CfnTheme internal constructor(
 
     public fun permissions(permissions: List<Any>)
 
+    public fun permissions(vararg permissions: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun themeId(themeId: String)
 
@@ -196,9 +204,13 @@ public open class CfnTheme internal constructor(
       cdkBuilder.permissions(permissions)
     }
 
+    override fun permissions(vararg permissions: Any): Unit = permissions(permissions.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun themeId(themeId: String) {
       cdkBuilder.themeId(themeId)
@@ -438,6 +450,8 @@ public open class CfnTheme internal constructor(
       public fun fontFamilies(fontFamilies: IResolvable)
 
       public fun fontFamilies(fontFamilies: List<Any>)
+
+      public fun fontFamilies(vararg fontFamilies: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -452,6 +466,9 @@ public open class CfnTheme internal constructor(
       override fun fontFamilies(fontFamilies: List<Any>) {
         cdkBuilder.fontFamilies(fontFamilies)
       }
+
+      override fun fontFamilies(vararg fontFamilies: Any): Unit =
+          fontFamilies(fontFamilies.toList())
 
       public fun build(): software.amazon.awscdk.services.quicksight.CfnTheme.TypographyProperty =
           cdkBuilder.build()
@@ -610,6 +627,8 @@ public open class CfnTheme internal constructor(
 
       public fun errors(errors: List<Any>)
 
+      public fun errors(vararg errors: Any)
+
       public fun status(status: String)
 
       public fun versionNumber(versionNumber: Number)
@@ -656,6 +675,8 @@ public open class CfnTheme internal constructor(
       override fun errors(errors: List<Any>) {
         cdkBuilder.errors(errors)
       }
+
+      override fun errors(vararg errors: Any): Unit = errors(errors.toList())
 
       override fun status(status: String) {
         cdkBuilder.status(status)
@@ -1080,6 +1101,8 @@ public open class CfnTheme internal constructor(
     public interface Builder {
       public fun actions(actions: List<String>)
 
+      public fun actions(vararg actions: String)
+
       public fun principal(principal: String)
 
       public fun resource(resource: String)
@@ -1093,6 +1116,8 @@ public open class CfnTheme internal constructor(
       override fun actions(actions: List<String>) {
         cdkBuilder.actions(actions)
       }
+
+      override fun actions(vararg actions: String): Unit = actions(actions.toList())
 
       override fun principal(principal: String) {
         cdkBuilder.principal(principal)
@@ -1111,7 +1136,7 @@ public open class CfnTheme internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnTheme.ResourcePermissionProperty,
     ) : ResourcePermissionProperty {
-      override fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
+      override fun actions(): List<String> = unwrap(this).getActions()
 
       override fun principal(): String = unwrap(this).getPrincipal()
 
@@ -1194,9 +1219,13 @@ public open class CfnTheme internal constructor(
     public interface Builder {
       public fun colors(colors: List<String>)
 
+      public fun colors(vararg colors: String)
+
       public fun emptyFillColor(emptyFillColor: String)
 
       public fun minMaxGradient(minMaxGradient: List<String>)
+
+      public fun minMaxGradient(vararg minMaxGradient: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1208,6 +1237,8 @@ public open class CfnTheme internal constructor(
         cdkBuilder.colors(colors)
       }
 
+      override fun colors(vararg colors: String): Unit = colors(colors.toList())
+
       override fun emptyFillColor(emptyFillColor: String) {
         cdkBuilder.emptyFillColor(emptyFillColor)
       }
@@ -1215,6 +1246,9 @@ public open class CfnTheme internal constructor(
       override fun minMaxGradient(minMaxGradient: List<String>) {
         cdkBuilder.minMaxGradient(minMaxGradient)
       }
+
+      override fun minMaxGradient(vararg minMaxGradient: String): Unit =
+          minMaxGradient(minMaxGradient.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnTheme.DataColorPaletteProperty =

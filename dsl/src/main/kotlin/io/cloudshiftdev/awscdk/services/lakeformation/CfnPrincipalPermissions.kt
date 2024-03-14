@@ -30,18 +30,23 @@ public open class CfnPrincipalPermissions internal constructor(
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
-  public open fun permissions(): List<String> = unwrap(this).getPermissions() ?: emptyList()
+  public open fun permissions(): List<String> = unwrap(this).getPermissions()
 
   public open fun permissions(`value`: List<String>) {
     unwrap(this).setPermissions(`value`)
   }
 
+  public open fun permissions(vararg `value`: String): Unit = permissions(`value`.toList())
+
   public open fun permissionsWithGrantOption(): List<String> =
-      unwrap(this).getPermissionsWithGrantOption() ?: emptyList()
+      unwrap(this).getPermissionsWithGrantOption()
 
   public open fun permissionsWithGrantOption(`value`: List<String>) {
     unwrap(this).setPermissionsWithGrantOption(`value`)
   }
+
+  public open fun permissionsWithGrantOption(vararg `value`: String): Unit =
+      permissionsWithGrantOption(`value`.toList())
 
   public open fun principal(): Any = unwrap(this).getPrincipal()
 
@@ -78,7 +83,11 @@ public open class CfnPrincipalPermissions internal constructor(
 
     public fun permissions(permissions: List<String>)
 
+    public fun permissions(vararg permissions: String)
+
     public fun permissionsWithGrantOption(permissionsWithGrantOption: List<String>)
+
+    public fun permissionsWithGrantOption(vararg permissionsWithGrantOption: String)
 
     public fun principal(principal: IResolvable)
 
@@ -114,9 +123,14 @@ public open class CfnPrincipalPermissions internal constructor(
       cdkBuilder.permissions(permissions)
     }
 
+    override fun permissions(vararg permissions: String): Unit = permissions(permissions.toList())
+
     override fun permissionsWithGrantOption(permissionsWithGrantOption: List<String>) {
       cdkBuilder.permissionsWithGrantOption(permissionsWithGrantOption)
     }
+
+    override fun permissionsWithGrantOption(vararg permissionsWithGrantOption: String): Unit =
+        permissionsWithGrantOption(permissionsWithGrantOption.toList())
 
     override fun principal(principal: IResolvable) {
       cdkBuilder.principal(principal.let(IResolvable::unwrap))
@@ -552,6 +566,8 @@ public open class CfnPrincipalPermissions internal constructor(
 
       public fun columnNames(columnNames: List<String>)
 
+      public fun columnNames(vararg columnNames: String)
+
       public fun columnWildcard(columnWildcard: IResolvable)
 
       public fun columnWildcard(columnWildcard: ColumnWildcardProperty)
@@ -578,6 +594,8 @@ public open class CfnPrincipalPermissions internal constructor(
       override fun columnNames(columnNames: List<String>) {
         cdkBuilder.columnNames(columnNames)
       }
+
+      override fun columnNames(vararg columnNames: String): Unit = columnNames(columnNames.toList())
 
       override fun columnWildcard(columnWildcard: IResolvable) {
         cdkBuilder.columnWildcard(columnWildcard.let(IResolvable::unwrap))
@@ -704,6 +722,8 @@ public open class CfnPrincipalPermissions internal constructor(
       public fun tagKey(tagKey: String)
 
       public fun tagValues(tagValues: List<String>)
+
+      public fun tagValues(vararg tagValues: String)
     }
 
     private class BuilderImpl : Builder {
@@ -724,6 +744,8 @@ public open class CfnPrincipalPermissions internal constructor(
         cdkBuilder.tagValues(tagValues)
       }
 
+      override fun tagValues(vararg tagValues: String): Unit = tagValues(tagValues.toList())
+
       public fun build():
           software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagKeyResourceProperty
           = cdkBuilder.build()
@@ -737,7 +759,7 @@ public open class CfnPrincipalPermissions internal constructor(
 
       override fun tagKey(): String = unwrap(this).getTagKey()
 
-      override fun tagValues(): List<String> = unwrap(this).getTagValues() ?: emptyList()
+      override fun tagValues(): List<String> = unwrap(this).getTagValues()
     }
 
     public companion object {
@@ -774,6 +796,8 @@ public open class CfnPrincipalPermissions internal constructor(
 
       public fun expression(expression: List<Any>)
 
+      public fun expression(vararg expression: Any)
+
       public fun resourceType(resourceType: String)
     }
 
@@ -794,6 +818,8 @@ public open class CfnPrincipalPermissions internal constructor(
       override fun expression(expression: List<Any>) {
         cdkBuilder.expression(expression)
       }
+
+      override fun expression(vararg expression: Any): Unit = expression(expression.toList())
 
       override fun resourceType(resourceType: String) {
         cdkBuilder.resourceType(resourceType)
@@ -841,6 +867,8 @@ public open class CfnPrincipalPermissions internal constructor(
 
     public interface Builder {
       public fun excludedColumnNames(excludedColumnNames: List<String>)
+
+      public fun excludedColumnNames(vararg excludedColumnNames: String)
     }
 
     private class BuilderImpl : Builder {
@@ -852,6 +880,9 @@ public open class CfnPrincipalPermissions internal constructor(
       override fun excludedColumnNames(excludedColumnNames: List<String>) {
         cdkBuilder.excludedColumnNames(excludedColumnNames)
       }
+
+      override fun excludedColumnNames(vararg excludedColumnNames: String): Unit =
+          excludedColumnNames(excludedColumnNames.toList())
 
       public fun build():
           software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.ColumnWildcardProperty
@@ -1033,6 +1064,8 @@ public open class CfnPrincipalPermissions internal constructor(
       public fun tagKey(tagKey: String)
 
       public fun tagValues(tagValues: List<String>)
+
+      public fun tagValues(vararg tagValues: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1048,6 +1081,8 @@ public open class CfnPrincipalPermissions internal constructor(
       override fun tagValues(tagValues: List<String>) {
         cdkBuilder.tagValues(tagValues)
       }
+
+      override fun tagValues(vararg tagValues: String): Unit = tagValues(tagValues.toList())
 
       public fun build():
           software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions.LFTagProperty =

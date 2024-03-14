@@ -78,6 +78,8 @@ public open class CfnCertificate internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun usage(): String = unwrap(this).getUsage()
 
   public open fun usage(`value`: String) {
@@ -98,6 +100,8 @@ public open class CfnCertificate internal constructor(
     public fun privateKey(privateKey: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun usage(usage: String)
   }
@@ -136,6 +140,8 @@ public open class CfnCertificate internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun usage(usage: String) {
       cdkBuilder.usage(usage)

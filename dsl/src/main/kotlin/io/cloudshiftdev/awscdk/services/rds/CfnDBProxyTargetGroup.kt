@@ -44,12 +44,18 @@ public open class CfnDBProxyTargetGroup internal constructor(
     unwrap(this).setDbClusterIdentifiers(`value`)
   }
 
+  public open fun dbClusterIdentifiers(vararg `value`: String): Unit =
+      dbClusterIdentifiers(`value`.toList())
+
   public open fun dbInstanceIdentifiers(): List<String> = unwrap(this).getDbInstanceIdentifiers() ?:
       emptyList()
 
   public open fun dbInstanceIdentifiers(`value`: List<String>) {
     unwrap(this).setDbInstanceIdentifiers(`value`)
   }
+
+  public open fun dbInstanceIdentifiers(vararg `value`: String): Unit =
+      dbInstanceIdentifiers(`value`.toList())
 
   public open fun dbProxyName(): String = unwrap(this).getDbProxyName()
 
@@ -80,7 +86,11 @@ public open class CfnDBProxyTargetGroup internal constructor(
 
     public fun dbClusterIdentifiers(dbClusterIdentifiers: List<String>)
 
+    public fun dbClusterIdentifiers(vararg dbClusterIdentifiers: String)
+
     public fun dbInstanceIdentifiers(dbInstanceIdentifiers: List<String>)
+
+    public fun dbInstanceIdentifiers(vararg dbInstanceIdentifiers: String)
 
     public fun dbProxyName(dbProxyName: String)
 
@@ -114,9 +124,15 @@ public open class CfnDBProxyTargetGroup internal constructor(
       cdkBuilder.dbClusterIdentifiers(dbClusterIdentifiers)
     }
 
+    override fun dbClusterIdentifiers(vararg dbClusterIdentifiers: String): Unit =
+        dbClusterIdentifiers(dbClusterIdentifiers.toList())
+
     override fun dbInstanceIdentifiers(dbInstanceIdentifiers: List<String>) {
       cdkBuilder.dbInstanceIdentifiers(dbInstanceIdentifiers)
     }
+
+    override fun dbInstanceIdentifiers(vararg dbInstanceIdentifiers: String): Unit =
+        dbInstanceIdentifiers(dbInstanceIdentifiers.toList())
 
     override fun dbProxyName(dbProxyName: String) {
       cdkBuilder.dbProxyName(dbProxyName)
@@ -173,6 +189,8 @@ public open class CfnDBProxyTargetGroup internal constructor(
       public fun maxIdleConnectionsPercent(maxIdleConnectionsPercent: Number)
 
       public fun sessionPinningFilters(sessionPinningFilters: List<String>)
+
+      public fun sessionPinningFilters(vararg sessionPinningFilters: String)
     }
 
     private class BuilderImpl : Builder {
@@ -200,6 +218,9 @@ public open class CfnDBProxyTargetGroup internal constructor(
       override fun sessionPinningFilters(sessionPinningFilters: List<String>) {
         cdkBuilder.sessionPinningFilters(sessionPinningFilters)
       }
+
+      override fun sessionPinningFilters(vararg sessionPinningFilters: String): Unit =
+          sessionPinningFilters(sessionPinningFilters.toList())
 
       public fun build():
           software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup.ConnectionPoolConfigurationInfoFormatProperty

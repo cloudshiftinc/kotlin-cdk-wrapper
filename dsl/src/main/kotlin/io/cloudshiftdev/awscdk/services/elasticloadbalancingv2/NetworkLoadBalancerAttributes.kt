@@ -27,6 +27,8 @@ public interface NetworkLoadBalancerAttributes {
 
     public fun loadBalancerSecurityGroups(loadBalancerSecurityGroups: List<String>)
 
+    public fun loadBalancerSecurityGroups(vararg loadBalancerSecurityGroups: String)
+
     public fun vpc(vpc: IVpc)
   }
 
@@ -51,6 +53,9 @@ public interface NetworkLoadBalancerAttributes {
     override fun loadBalancerSecurityGroups(loadBalancerSecurityGroups: List<String>) {
       cdkBuilder.loadBalancerSecurityGroups(loadBalancerSecurityGroups)
     }
+
+    override fun loadBalancerSecurityGroups(vararg loadBalancerSecurityGroups: String): Unit =
+        loadBalancerSecurityGroups(loadBalancerSecurityGroups.toList())
 
     override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))

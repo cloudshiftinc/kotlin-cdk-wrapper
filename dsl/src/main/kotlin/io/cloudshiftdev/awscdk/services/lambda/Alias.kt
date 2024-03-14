@@ -57,6 +57,8 @@ public open class Alias internal constructor(
   public interface Builder {
     public fun additionalVersions(additionalVersions: List<VersionWeight>)
 
+    public fun additionalVersions(vararg additionalVersions: VersionWeight)
+
     public fun aliasName(aliasName: String)
 
     public fun description(description: String)
@@ -84,6 +86,9 @@ public open class Alias internal constructor(
     override fun additionalVersions(additionalVersions: List<VersionWeight>) {
       cdkBuilder.additionalVersions(additionalVersions.map(VersionWeight::unwrap))
     }
+
+    override fun additionalVersions(vararg additionalVersions: VersionWeight): Unit =
+        additionalVersions(additionalVersions.toList())
 
     override fun aliasName(aliasName: String) {
       cdkBuilder.aliasName(aliasName)

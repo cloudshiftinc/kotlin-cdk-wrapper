@@ -95,6 +95,8 @@ public open class CfnSafetyRule internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun assertionRule(assertionRule: IResolvable)
 
@@ -125,6 +127,8 @@ public open class CfnSafetyRule internal constructor(
     public fun ruleConfig(ruleConfig: RuleConfigProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -186,6 +190,8 @@ public open class CfnSafetyRule internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule =
         cdkBuilder.build()
@@ -298,7 +304,11 @@ public open class CfnSafetyRule internal constructor(
     public interface Builder {
       public fun gatingControls(gatingControls: List<String>)
 
+      public fun gatingControls(vararg gatingControls: String)
+
       public fun targetControls(targetControls: List<String>)
+
+      public fun targetControls(vararg targetControls: String)
 
       public fun waitPeriodMs(waitPeriodMs: Number)
     }
@@ -313,9 +323,15 @@ public open class CfnSafetyRule internal constructor(
         cdkBuilder.gatingControls(gatingControls)
       }
 
+      override fun gatingControls(vararg gatingControls: String): Unit =
+          gatingControls(gatingControls.toList())
+
       override fun targetControls(targetControls: List<String>) {
         cdkBuilder.targetControls(targetControls)
       }
+
+      override fun targetControls(vararg targetControls: String): Unit =
+          targetControls(targetControls.toList())
 
       override fun waitPeriodMs(waitPeriodMs: Number) {
         cdkBuilder.waitPeriodMs(waitPeriodMs)
@@ -330,9 +346,9 @@ public open class CfnSafetyRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.GatingRuleProperty,
     ) : GatingRuleProperty {
-      override fun gatingControls(): List<String> = unwrap(this).getGatingControls() ?: emptyList()
+      override fun gatingControls(): List<String> = unwrap(this).getGatingControls()
 
-      override fun targetControls(): List<String> = unwrap(this).getTargetControls() ?: emptyList()
+      override fun targetControls(): List<String> = unwrap(this).getTargetControls()
 
       override fun waitPeriodMs(): Number = unwrap(this).getWaitPeriodMs()
     }
@@ -365,6 +381,8 @@ public open class CfnSafetyRule internal constructor(
     public interface Builder {
       public fun assertedControls(assertedControls: List<String>)
 
+      public fun assertedControls(vararg assertedControls: String)
+
       public fun waitPeriodMs(waitPeriodMs: Number)
     }
 
@@ -377,6 +395,9 @@ public open class CfnSafetyRule internal constructor(
       override fun assertedControls(assertedControls: List<String>) {
         cdkBuilder.assertedControls(assertedControls)
       }
+
+      override fun assertedControls(vararg assertedControls: String): Unit =
+          assertedControls(assertedControls.toList())
 
       override fun waitPeriodMs(waitPeriodMs: Number) {
         cdkBuilder.waitPeriodMs(waitPeriodMs)
@@ -391,8 +412,7 @@ public open class CfnSafetyRule internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty,
     ) : AssertionRuleProperty {
-      override fun assertedControls(): List<String> = unwrap(this).getAssertedControls() ?:
-          emptyList()
+      override fun assertedControls(): List<String> = unwrap(this).getAssertedControls()
 
       override fun waitPeriodMs(): Number = unwrap(this).getWaitPeriodMs()
     }

@@ -105,11 +105,16 @@ public open class CfnMigrationProject internal constructor(
     unwrap(this).setSourceDataProviderDescriptors(__idx_ac66f0)
   }
 
+  public open fun sourceDataProviderDescriptors(vararg __idx_ac66f0: Any): Unit =
+      sourceDataProviderDescriptors(__idx_ac66f0.toList())
+
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   public open fun targetDataProviderDescriptors(): Any? =
       unwrap(this).getTargetDataProviderDescriptors()
@@ -121,6 +126,9 @@ public open class CfnMigrationProject internal constructor(
   public open fun targetDataProviderDescriptors(__idx_ac66f0: List<Any>) {
     unwrap(this).setTargetDataProviderDescriptors(__idx_ac66f0)
   }
+
+  public open fun targetDataProviderDescriptors(vararg __idx_ac66f0: Any): Unit =
+      targetDataProviderDescriptors(__idx_ac66f0.toList())
 
   public open fun transformationRules(): String? = unwrap(this).getTransformationRules()
 
@@ -159,11 +167,17 @@ public open class CfnMigrationProject internal constructor(
 
     public fun sourceDataProviderDescriptors(sourceDataProviderDescriptors: List<Any>)
 
+    public fun sourceDataProviderDescriptors(vararg sourceDataProviderDescriptors: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun targetDataProviderDescriptors(targetDataProviderDescriptors: IResolvable)
 
     public fun targetDataProviderDescriptors(targetDataProviderDescriptors: List<Any>)
+
+    public fun targetDataProviderDescriptors(vararg targetDataProviderDescriptors: Any)
 
     public fun transformationRules(transformationRules: String)
   }
@@ -229,9 +243,14 @@ public open class CfnMigrationProject internal constructor(
       cdkBuilder.sourceDataProviderDescriptors(sourceDataProviderDescriptors)
     }
 
+    override fun sourceDataProviderDescriptors(vararg sourceDataProviderDescriptors: Any): Unit =
+        sourceDataProviderDescriptors(sourceDataProviderDescriptors.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun targetDataProviderDescriptors(targetDataProviderDescriptors: IResolvable) {
       cdkBuilder.targetDataProviderDescriptors(targetDataProviderDescriptors.let(IResolvable::unwrap))
@@ -240,6 +259,9 @@ public open class CfnMigrationProject internal constructor(
     override fun targetDataProviderDescriptors(targetDataProviderDescriptors: List<Any>) {
       cdkBuilder.targetDataProviderDescriptors(targetDataProviderDescriptors)
     }
+
+    override fun targetDataProviderDescriptors(vararg targetDataProviderDescriptors: Any): Unit =
+        targetDataProviderDescriptors(targetDataProviderDescriptors.toList())
 
     override fun transformationRules(transformationRules: String) {
       cdkBuilder.transformationRules(transformationRules)

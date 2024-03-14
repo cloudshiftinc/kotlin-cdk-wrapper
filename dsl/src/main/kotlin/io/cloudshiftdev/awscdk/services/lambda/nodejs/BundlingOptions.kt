@@ -88,6 +88,8 @@ public interface BundlingOptions : DockerRunOptions {
 
     public fun command(command: List<String>)
 
+    public fun command(vararg command: String)
+
     public fun commandHooks(commandHooks: ICommandHooks)
 
     public fun define(define: Map<String, String>)
@@ -95,6 +97,8 @@ public interface BundlingOptions : DockerRunOptions {
     public fun dockerImage(dockerImage: DockerImage)
 
     public fun entrypoint(entrypoint: List<String>)
+
+    public fun entrypoint(vararg entrypoint: String)
 
     public fun environment(environment: Map<String, String>)
 
@@ -104,6 +108,8 @@ public interface BundlingOptions : DockerRunOptions {
 
     public fun externalModules(externalModules: List<String>)
 
+    public fun externalModules(vararg externalModules: String)
+
     public fun footer(footer: String)
 
     public fun forceDockerBundling(forceDockerBundling: Boolean)
@@ -111,6 +117,8 @@ public interface BundlingOptions : DockerRunOptions {
     public fun format(format: OutputFormat)
 
     public fun inject(inject: List<String>)
+
+    public fun inject(vararg inject: String)
 
     public fun keepNames(keepNames: Boolean)
 
@@ -120,6 +128,8 @@ public interface BundlingOptions : DockerRunOptions {
 
     public fun mainFields(mainFields: List<String>)
 
+    public fun mainFields(vararg mainFields: String)
+
     public fun metafile(metafile: Boolean)
 
     public fun minify(minify: Boolean)
@@ -127,6 +137,8 @@ public interface BundlingOptions : DockerRunOptions {
     public fun network(network: String)
 
     public fun nodeModules(nodeModules: List<String>)
+
+    public fun nodeModules(vararg nodeModules: String)
 
     public fun platform(platform: String)
 
@@ -148,7 +160,11 @@ public interface BundlingOptions : DockerRunOptions {
 
     public fun volumes(volumes: List<DockerVolume>)
 
+    public fun volumes(vararg volumes: DockerVolume)
+
     public fun volumesFrom(volumesFrom: List<String>)
+
+    public fun volumesFrom(vararg volumesFrom: String)
 
     public fun workingDirectory(workingDirectory: String)
   }
@@ -185,6 +201,8 @@ public interface BundlingOptions : DockerRunOptions {
       cdkBuilder.command(command)
     }
 
+    override fun command(vararg command: String): Unit = command(command.toList())
+
     override fun commandHooks(commandHooks: ICommandHooks) {
       cdkBuilder.commandHooks(commandHooks.let(ICommandHooks::unwrap))
     }
@@ -200,6 +218,8 @@ public interface BundlingOptions : DockerRunOptions {
     override fun entrypoint(entrypoint: List<String>) {
       cdkBuilder.entrypoint(entrypoint)
     }
+
+    override fun entrypoint(vararg entrypoint: String): Unit = entrypoint(entrypoint.toList())
 
     override fun environment(environment: Map<String, String>) {
       cdkBuilder.environment(environment)
@@ -217,6 +237,9 @@ public interface BundlingOptions : DockerRunOptions {
       cdkBuilder.externalModules(externalModules)
     }
 
+    override fun externalModules(vararg externalModules: String): Unit =
+        externalModules(externalModules.toList())
+
     override fun footer(footer: String) {
       cdkBuilder.footer(footer)
     }
@@ -232,6 +255,8 @@ public interface BundlingOptions : DockerRunOptions {
     override fun inject(inject: List<String>) {
       cdkBuilder.inject(inject)
     }
+
+    override fun inject(vararg inject: String): Unit = inject(inject.toList())
 
     override fun keepNames(keepNames: Boolean) {
       cdkBuilder.keepNames(keepNames)
@@ -249,6 +274,8 @@ public interface BundlingOptions : DockerRunOptions {
       cdkBuilder.mainFields(mainFields)
     }
 
+    override fun mainFields(vararg mainFields: String): Unit = mainFields(mainFields.toList())
+
     override fun metafile(metafile: Boolean) {
       cdkBuilder.metafile(metafile)
     }
@@ -264,6 +291,8 @@ public interface BundlingOptions : DockerRunOptions {
     override fun nodeModules(nodeModules: List<String>) {
       cdkBuilder.nodeModules(nodeModules)
     }
+
+    override fun nodeModules(vararg nodeModules: String): Unit = nodeModules(nodeModules.toList())
 
     override fun platform(platform: String) {
       cdkBuilder.platform(platform)
@@ -305,9 +334,13 @@ public interface BundlingOptions : DockerRunOptions {
       cdkBuilder.volumes(volumes.map(DockerVolume::unwrap))
     }
 
+    override fun volumes(vararg volumes: DockerVolume): Unit = volumes(volumes.toList())
+
     override fun volumesFrom(volumesFrom: List<String>) {
       cdkBuilder.volumesFrom(volumesFrom)
     }
+
+    override fun volumesFrom(vararg volumesFrom: String): Unit = volumesFrom(volumesFrom.toList())
 
     override fun workingDirectory(workingDirectory: String) {
       cdkBuilder.workingDirectory(workingDirectory)

@@ -38,12 +38,17 @@ public open class CfnSqlInjectionMatchSet internal constructor(
     unwrap(this).setSqlInjectionMatchTuples(__idx_ac66f0)
   }
 
+  public open fun sqlInjectionMatchTuples(vararg __idx_ac66f0: Any): Unit =
+      sqlInjectionMatchTuples(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun name(name: String)
 
     public fun sqlInjectionMatchTuples(sqlInjectionMatchTuples: IResolvable)
 
     public fun sqlInjectionMatchTuples(sqlInjectionMatchTuples: List<Any>)
+
+    public fun sqlInjectionMatchTuples(vararg sqlInjectionMatchTuples: Any)
   }
 
   private class BuilderImpl(
@@ -66,6 +71,9 @@ public open class CfnSqlInjectionMatchSet internal constructor(
     override fun sqlInjectionMatchTuples(sqlInjectionMatchTuples: List<Any>) {
       cdkBuilder.sqlInjectionMatchTuples(sqlInjectionMatchTuples)
     }
+
+    override fun sqlInjectionMatchTuples(vararg sqlInjectionMatchTuples: Any): Unit =
+        sqlInjectionMatchTuples(sqlInjectionMatchTuples.toList())
 
     public fun build(): software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSet =
         cdkBuilder.build()

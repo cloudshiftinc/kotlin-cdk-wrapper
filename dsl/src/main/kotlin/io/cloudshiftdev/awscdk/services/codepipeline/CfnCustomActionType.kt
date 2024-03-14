@@ -39,6 +39,9 @@ public open class CfnCustomActionType internal constructor(
     unwrap(this).setConfigurationProperties(__idx_ac66f0)
   }
 
+  public open fun configurationProperties(vararg __idx_ac66f0: Any): Unit =
+      configurationProperties(__idx_ac66f0.toList())
+
   public open fun inputArtifactDetails(): Any = unwrap(this).getInputArtifactDetails()
 
   public open fun inputArtifactDetails(`value`: IResolvable) {
@@ -103,6 +106,8 @@ public open class CfnCustomActionType internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun version(): String = unwrap(this).getVersion()
 
   public open fun version(`value`: String) {
@@ -115,6 +120,8 @@ public open class CfnCustomActionType internal constructor(
     public fun configurationProperties(configurationProperties: IResolvable)
 
     public fun configurationProperties(configurationProperties: List<Any>)
+
+    public fun configurationProperties(vararg configurationProperties: Any)
 
     public fun inputArtifactDetails(inputArtifactDetails: IResolvable)
 
@@ -137,6 +144,8 @@ public open class CfnCustomActionType internal constructor(
     public fun provider(provider: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun tings(settings: IResolvable)
 
@@ -167,6 +176,9 @@ public open class CfnCustomActionType internal constructor(
     override fun configurationProperties(configurationProperties: List<Any>) {
       cdkBuilder.configurationProperties(configurationProperties)
     }
+
+    override fun configurationProperties(vararg configurationProperties: Any): Unit =
+        configurationProperties(configurationProperties.toList())
 
     override fun inputArtifactDetails(inputArtifactDetails: IResolvable) {
       cdkBuilder.inputArtifactDetails(inputArtifactDetails.let(IResolvable::unwrap))
@@ -203,6 +215,8 @@ public open class CfnCustomActionType internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun tings(settings: IResolvable) {
       cdkBuilder.settings(settings.let(IResolvable::unwrap))

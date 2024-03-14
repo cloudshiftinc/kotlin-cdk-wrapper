@@ -12,8 +12,7 @@ public open class ItemBatcher internal constructor(
 ) {
   public open fun render(): Any = unwrap(this).render()
 
-  public open fun validateItemBatcher(): List<String> = unwrap(this).validateItemBatcher() ?:
-      emptyList()
+  public open fun validateItemBatcher(): List<String> = unwrap(this).validateItemBatcher()
 
   public interface Builder {
     public fun batchInput(batchInput: ObjectNode)

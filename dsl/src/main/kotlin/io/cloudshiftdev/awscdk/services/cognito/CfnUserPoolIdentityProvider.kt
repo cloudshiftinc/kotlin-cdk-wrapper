@@ -27,6 +27,8 @@ public open class CfnUserPoolIdentityProvider internal constructor(
     unwrap(this).setIdpIdentifiers(`value`)
   }
 
+  public open fun idpIdentifiers(vararg `value`: String): Unit = idpIdentifiers(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -60,6 +62,8 @@ public open class CfnUserPoolIdentityProvider internal constructor(
 
     public fun idpIdentifiers(idpIdentifiers: List<String>)
 
+    public fun idpIdentifiers(vararg idpIdentifiers: String)
+
     public fun providerDetails(providerDetails: Any)
 
     public fun providerName(providerName: String)
@@ -85,6 +89,9 @@ public open class CfnUserPoolIdentityProvider internal constructor(
     override fun idpIdentifiers(idpIdentifiers: List<String>) {
       cdkBuilder.idpIdentifiers(idpIdentifiers)
     }
+
+    override fun idpIdentifiers(vararg idpIdentifiers: String): Unit =
+        idpIdentifiers(idpIdentifiers.toList())
 
     override fun providerDetails(providerDetails: Any) {
       cdkBuilder.providerDetails(providerDetails)

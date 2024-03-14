@@ -20,11 +20,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLocationHDFS internal constructor(
   private val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationHDFS,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
-  public open fun agentArns(): List<String> = unwrap(this).getAgentArns() ?: emptyList()
+  public open fun agentArns(): List<String> = unwrap(this).getAgentArns()
 
   public open fun agentArns(`value`: List<String>) {
     unwrap(this).setAgentArns(`value`)
   }
+
+  public open fun agentArns(vararg `value`: String): Unit = agentArns(`value`.toList())
 
   public open fun attrLocationArn(): String = unwrap(this).getAttrLocationArn()
 
@@ -80,6 +82,8 @@ public open class CfnLocationHDFS internal constructor(
     unwrap(this).setNameNodes(__idx_ac66f0)
   }
 
+  public open fun nameNodes(vararg __idx_ac66f0: Any): Unit = nameNodes(__idx_ac66f0.toList())
+
   public open fun qopConfiguration(): Any? = unwrap(this).getQopConfiguration()
 
   public open fun qopConfiguration(`value`: IResolvable) {
@@ -122,8 +126,12 @@ public open class CfnLocationHDFS internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun agentArns(agentArns: List<String>)
+
+    public fun agentArns(vararg agentArns: String)
 
     public fun authenticationType(authenticationType: String)
 
@@ -141,6 +149,8 @@ public open class CfnLocationHDFS internal constructor(
 
     public fun nameNodes(nameNodes: List<Any>)
 
+    public fun nameNodes(vararg nameNodes: Any)
+
     public fun qopConfiguration(qopConfiguration: IResolvable)
 
     public fun qopConfiguration(qopConfiguration: QopConfigurationProperty)
@@ -156,6 +166,8 @@ public open class CfnLocationHDFS internal constructor(
     public fun subdirectory(subdirectory: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -168,6 +180,8 @@ public open class CfnLocationHDFS internal constructor(
     override fun agentArns(agentArns: List<String>) {
       cdkBuilder.agentArns(agentArns)
     }
+
+    override fun agentArns(vararg agentArns: String): Unit = agentArns(agentArns.toList())
 
     override fun authenticationType(authenticationType: String) {
       cdkBuilder.authenticationType(authenticationType)
@@ -201,6 +215,8 @@ public open class CfnLocationHDFS internal constructor(
       cdkBuilder.nameNodes(nameNodes)
     }
 
+    override fun nameNodes(vararg nameNodes: Any): Unit = nameNodes(nameNodes.toList())
+
     override fun qopConfiguration(qopConfiguration: IResolvable) {
       cdkBuilder.qopConfiguration(qopConfiguration.let(IResolvable::unwrap))
     }
@@ -229,6 +245,8 @@ public open class CfnLocationHDFS internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.datasync.CfnLocationHDFS =
         cdkBuilder.build()

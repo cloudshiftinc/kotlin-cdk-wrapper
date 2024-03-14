@@ -15,6 +15,8 @@ public interface EnableVpnGatewayOptions : VpnGatewayProps {
     public fun type(type: String)
 
     public fun vpnRoutePropagation(vpnRoutePropagation: List<SubnetSelection>)
+
+    public fun vpnRoutePropagation(vararg vpnRoutePropagation: SubnetSelection)
   }
 
   private class BuilderImpl : Builder {
@@ -32,6 +34,9 @@ public interface EnableVpnGatewayOptions : VpnGatewayProps {
     override fun vpnRoutePropagation(vpnRoutePropagation: List<SubnetSelection>) {
       cdkBuilder.vpnRoutePropagation(vpnRoutePropagation.map(SubnetSelection::unwrap))
     }
+
+    override fun vpnRoutePropagation(vararg vpnRoutePropagation: SubnetSelection): Unit =
+        vpnRoutePropagation(vpnRoutePropagation.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.EnableVpnGatewayOptions =
         cdkBuilder.build()

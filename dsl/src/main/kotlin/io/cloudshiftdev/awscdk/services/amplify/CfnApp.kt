@@ -87,6 +87,8 @@ public open class CfnApp internal constructor(
     unwrap(this).setCustomRules(__idx_ac66f0)
   }
 
+  public open fun customRules(vararg __idx_ac66f0: Any): Unit = customRules(__idx_ac66f0.toList())
+
   public open fun description(): String? = unwrap(this).getDescription()
 
   public open fun description(`value`: String) {
@@ -112,6 +114,9 @@ public open class CfnApp internal constructor(
   public open fun environmentVariables(__idx_ac66f0: List<Any>) {
     unwrap(this).setEnvironmentVariables(__idx_ac66f0)
   }
+
+  public open fun environmentVariables(vararg __idx_ac66f0: Any): Unit =
+      environmentVariables(__idx_ac66f0.toList())
 
   public open fun iamServiceRole(): String? = unwrap(this).getIamServiceRole()
 
@@ -156,6 +161,8 @@ public open class CfnApp internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun accessToken(accessToken: String)
 
@@ -184,6 +191,8 @@ public open class CfnApp internal constructor(
 
     public fun customRules(customRules: List<Any>)
 
+    public fun customRules(vararg customRules: Any)
+
     public fun description(description: String)
 
     public fun enableBranchAutoDeletion(enableBranchAutoDeletion: Boolean)
@@ -193,6 +202,8 @@ public open class CfnApp internal constructor(
     public fun environmentVariables(environmentVariables: IResolvable)
 
     public fun environmentVariables(environmentVariables: List<Any>)
+
+    public fun environmentVariables(vararg environmentVariables: Any)
 
     public fun iamServiceRole(iamServiceRole: String)
 
@@ -205,6 +216,8 @@ public open class CfnApp internal constructor(
     public fun repository(repository: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -262,6 +275,8 @@ public open class CfnApp internal constructor(
       cdkBuilder.customRules(customRules)
     }
 
+    override fun customRules(vararg customRules: Any): Unit = customRules(customRules.toList())
+
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
@@ -281,6 +296,9 @@ public open class CfnApp internal constructor(
     override fun environmentVariables(environmentVariables: List<Any>) {
       cdkBuilder.environmentVariables(environmentVariables)
     }
+
+    override fun environmentVariables(vararg environmentVariables: Any): Unit =
+        environmentVariables(environmentVariables.toList())
 
     override fun iamServiceRole(iamServiceRole: String) {
       cdkBuilder.iamServiceRole(iamServiceRole)
@@ -305,6 +323,8 @@ public open class CfnApp internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.amplify.CfnApp = cdkBuilder.build()
   }
@@ -490,6 +510,8 @@ public open class CfnApp internal constructor(
     public interface Builder {
       public fun autoBranchCreationPatterns(autoBranchCreationPatterns: List<String>)
 
+      public fun autoBranchCreationPatterns(vararg autoBranchCreationPatterns: String)
+
       public fun basicAuthConfig(basicAuthConfig: IResolvable)
 
       public fun basicAuthConfig(basicAuthConfig: BasicAuthConfigProperty)
@@ -520,6 +542,8 @@ public open class CfnApp internal constructor(
 
       public fun environmentVariables(environmentVariables: List<Any>)
 
+      public fun environmentVariables(vararg environmentVariables: Any)
+
       public fun framework(framework: String)
 
       public fun pullRequestEnvironmentName(pullRequestEnvironmentName: String)
@@ -535,6 +559,9 @@ public open class CfnApp internal constructor(
       override fun autoBranchCreationPatterns(autoBranchCreationPatterns: List<String>) {
         cdkBuilder.autoBranchCreationPatterns(autoBranchCreationPatterns)
       }
+
+      override fun autoBranchCreationPatterns(vararg autoBranchCreationPatterns: String): Unit =
+          autoBranchCreationPatterns(autoBranchCreationPatterns.toList())
 
       override fun basicAuthConfig(basicAuthConfig: IResolvable) {
         cdkBuilder.basicAuthConfig(basicAuthConfig.let(IResolvable::unwrap))
@@ -592,6 +619,9 @@ public open class CfnApp internal constructor(
       override fun environmentVariables(environmentVariables: List<Any>) {
         cdkBuilder.environmentVariables(environmentVariables)
       }
+
+      override fun environmentVariables(vararg environmentVariables: Any): Unit =
+          environmentVariables(environmentVariables.toList())
 
       override fun framework(framework: String) {
         cdkBuilder.framework(framework)

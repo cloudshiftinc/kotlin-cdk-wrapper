@@ -210,6 +210,8 @@ public open class AutoScalingGroup internal constructor(
 
     public fun blockDevices(blockDevices: List<BlockDevice>)
 
+    public fun blockDevices(vararg blockDevices: BlockDevice)
+
     public fun capacityRebalance(capacityRebalance: Boolean)
 
     public fun cooldown(cooldown: Duration)
@@ -219,6 +221,8 @@ public open class AutoScalingGroup internal constructor(
     public fun desiredCapacity(desiredCapacity: Number)
 
     public fun groupMetrics(groupMetrics: List<GroupMetrics>)
+
+    public fun groupMetrics(vararg groupMetrics: GroupMetrics)
 
     public fun healthCheck(healthCheck: HealthCheck)
 
@@ -262,6 +266,8 @@ public open class AutoScalingGroup internal constructor(
 
     public fun notifications(notifications: List<NotificationConfiguration>)
 
+    public fun notifications(vararg notifications: NotificationConfiguration)
+
     public fun requireImdsv2(requireImdsv2: Boolean)
 
     public fun role(role: IRole)
@@ -275,6 +281,8 @@ public open class AutoScalingGroup internal constructor(
     public fun ssmSessionPermissions(ssmSessionPermissions: Boolean)
 
     public fun terminationPolicies(terminationPolicies: List<TerminationPolicy>)
+
+    public fun terminationPolicies(vararg terminationPolicies: TerminationPolicy)
 
     public
         fun terminationPolicyCustomLambdaFunctionArn(terminationPolicyCustomLambdaFunctionArn: String)
@@ -315,6 +323,9 @@ public open class AutoScalingGroup internal constructor(
       cdkBuilder.blockDevices(blockDevices.map(BlockDevice::unwrap))
     }
 
+    override fun blockDevices(vararg blockDevices: BlockDevice): Unit =
+        blockDevices(blockDevices.toList())
+
     override fun capacityRebalance(capacityRebalance: Boolean) {
       cdkBuilder.capacityRebalance(capacityRebalance)
     }
@@ -334,6 +345,9 @@ public open class AutoScalingGroup internal constructor(
     override fun groupMetrics(groupMetrics: List<GroupMetrics>) {
       cdkBuilder.groupMetrics(groupMetrics.map(GroupMetrics::unwrap))
     }
+
+    override fun groupMetrics(vararg groupMetrics: GroupMetrics): Unit =
+        groupMetrics(groupMetrics.toList())
 
     override fun healthCheck(healthCheck: HealthCheck) {
       cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
@@ -414,6 +428,9 @@ public open class AutoScalingGroup internal constructor(
       cdkBuilder.notifications(notifications.map(NotificationConfiguration::unwrap))
     }
 
+    override fun notifications(vararg notifications: NotificationConfiguration): Unit =
+        notifications(notifications.toList())
+
     override fun requireImdsv2(requireImdsv2: Boolean) {
       cdkBuilder.requireImdsv2(requireImdsv2)
     }
@@ -441,6 +458,9 @@ public open class AutoScalingGroup internal constructor(
     override fun terminationPolicies(terminationPolicies: List<TerminationPolicy>) {
       cdkBuilder.terminationPolicies(terminationPolicies.map(TerminationPolicy::unwrap))
     }
+
+    override fun terminationPolicies(vararg terminationPolicies: TerminationPolicy): Unit =
+        terminationPolicies(terminationPolicies.toList())
 
     override
         fun terminationPolicyCustomLambdaFunctionArn(terminationPolicyCustomLambdaFunctionArn: String) {

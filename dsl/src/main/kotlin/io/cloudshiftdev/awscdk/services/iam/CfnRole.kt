@@ -45,6 +45,9 @@ public open class CfnRole internal constructor(
     unwrap(this).setManagedPolicyArns(`value`)
   }
 
+  public open fun managedPolicyArns(vararg `value`: String): Unit =
+      managedPolicyArns(`value`.toList())
+
   public open fun maxSessionDuration(): Number? = unwrap(this).getMaxSessionDuration()
 
   public open fun maxSessionDuration(`value`: Number) {
@@ -73,6 +76,8 @@ public open class CfnRole internal constructor(
     unwrap(this).setPolicies(__idx_ac66f0)
   }
 
+  public open fun policies(vararg __idx_ac66f0: Any): Unit = policies(__idx_ac66f0.toList())
+
   public open fun roleName(): String? = unwrap(this).getRoleName()
 
   public open fun roleName(`value`: String) {
@@ -88,12 +93,16 @@ public open class CfnRole internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun assumeRolePolicyDocument(assumeRolePolicyDocument: Any)
 
     public fun description(description: String)
 
     public fun managedPolicyArns(managedPolicyArns: List<String>)
+
+    public fun managedPolicyArns(vararg managedPolicyArns: String)
 
     public fun maxSessionDuration(maxSessionDuration: Number)
 
@@ -105,9 +114,13 @@ public open class CfnRole internal constructor(
 
     public fun policies(policies: List<Any>)
 
+    public fun policies(vararg policies: Any)
+
     public fun roleName(roleName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -129,6 +142,9 @@ public open class CfnRole internal constructor(
       cdkBuilder.managedPolicyArns(managedPolicyArns)
     }
 
+    override fun managedPolicyArns(vararg managedPolicyArns: String): Unit =
+        managedPolicyArns(managedPolicyArns.toList())
+
     override fun maxSessionDuration(maxSessionDuration: Number) {
       cdkBuilder.maxSessionDuration(maxSessionDuration)
     }
@@ -149,6 +165,8 @@ public open class CfnRole internal constructor(
       cdkBuilder.policies(policies)
     }
 
+    override fun policies(vararg policies: Any): Unit = policies(policies.toList())
+
     override fun roleName(roleName: String) {
       cdkBuilder.roleName(roleName)
     }
@@ -156,6 +174,8 @@ public open class CfnRole internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.iam.CfnRole = cdkBuilder.build()
   }

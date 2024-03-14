@@ -28,9 +28,13 @@ public interface TableAttributesV2 {
 
     public fun globalIndexes(globalIndexes: List<String>)
 
+    public fun globalIndexes(vararg globalIndexes: String)
+
     public fun grantIndexPermissions(grantIndexPermissions: Boolean)
 
     public fun localIndexes(localIndexes: List<String>)
+
+    public fun localIndexes(vararg localIndexes: String)
 
     public fun tableArn(tableArn: String)
 
@@ -53,6 +57,9 @@ public interface TableAttributesV2 {
       cdkBuilder.globalIndexes(globalIndexes)
     }
 
+    override fun globalIndexes(vararg globalIndexes: String): Unit =
+        globalIndexes(globalIndexes.toList())
+
     override fun grantIndexPermissions(grantIndexPermissions: Boolean) {
       cdkBuilder.grantIndexPermissions(grantIndexPermissions)
     }
@@ -60,6 +67,9 @@ public interface TableAttributesV2 {
     override fun localIndexes(localIndexes: List<String>) {
       cdkBuilder.localIndexes(localIndexes)
     }
+
+    override fun localIndexes(vararg localIndexes: String): Unit =
+        localIndexes(localIndexes.toList())
 
     override fun tableArn(tableArn: String) {
       cdkBuilder.tableArn(tableArn)

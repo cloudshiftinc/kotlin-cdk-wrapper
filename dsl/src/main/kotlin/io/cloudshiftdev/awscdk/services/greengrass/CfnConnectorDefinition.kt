@@ -204,6 +204,8 @@ public open class CfnConnectorDefinition internal constructor(
       public fun connectors(connectors: IResolvable)
 
       public fun connectors(connectors: List<Any>)
+
+      public fun connectors(vararg connectors: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -219,6 +221,8 @@ public open class CfnConnectorDefinition internal constructor(
       override fun connectors(connectors: List<Any>) {
         cdkBuilder.connectors(connectors)
       }
+
+      override fun connectors(vararg connectors: Any): Unit = connectors(connectors.toList())
 
       public fun build():
           software.amazon.awscdk.services.greengrass.CfnConnectorDefinition.ConnectorDefinitionVersionProperty

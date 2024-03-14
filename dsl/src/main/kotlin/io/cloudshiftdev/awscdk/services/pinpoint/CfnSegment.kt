@@ -184,9 +184,13 @@ public open class CfnSegment internal constructor(
 
       public fun dimensions(dimensions: List<Any>)
 
+      public fun dimensions(vararg dimensions: Any)
+
       public fun sourceSegments(sourceSegments: IResolvable)
 
       public fun sourceSegments(sourceSegments: List<Any>)
+
+      public fun sourceSegments(vararg sourceSegments: Any)
 
       public fun sourceType(sourceType: String)
 
@@ -206,6 +210,8 @@ public open class CfnSegment internal constructor(
         cdkBuilder.dimensions(dimensions)
       }
 
+      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
+
       override fun sourceSegments(sourceSegments: IResolvable) {
         cdkBuilder.sourceSegments(sourceSegments.let(IResolvable::unwrap))
       }
@@ -213,6 +219,9 @@ public open class CfnSegment internal constructor(
       override fun sourceSegments(sourceSegments: List<Any>) {
         cdkBuilder.sourceSegments(sourceSegments)
       }
+
+      override fun sourceSegments(vararg sourceSegments: Any): Unit =
+          sourceSegments(sourceSegments.toList())
 
       override fun sourceType(sourceType: String) {
         cdkBuilder.sourceType(sourceType)
@@ -267,6 +276,8 @@ public open class CfnSegment internal constructor(
       public fun attributeType(attributeType: String)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -281,6 +292,8 @@ public open class CfnSegment internal constructor(
       override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.pinpoint.CfnSegment.AttributeDimensionProperty =
@@ -469,6 +482,8 @@ public open class CfnSegment internal constructor(
 
       public fun groups(groups: List<Any>)
 
+      public fun groups(vararg groups: Any)
+
       public fun include(include: String)
     }
 
@@ -484,6 +499,8 @@ public open class CfnSegment internal constructor(
       override fun groups(groups: List<Any>) {
         cdkBuilder.groups(groups)
       }
+
+      override fun groups(vararg groups: Any): Unit = groups(groups.toList())
 
       override fun include(include: String) {
         cdkBuilder.include(include)
@@ -993,6 +1010,8 @@ public open class CfnSegment internal constructor(
       public fun dimensionType(dimensionType: String)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1007,6 +1026,8 @@ public open class CfnSegment internal constructor(
       override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build(): software.amazon.awscdk.services.pinpoint.CfnSegment.SetDimensionProperty =
           cdkBuilder.build()

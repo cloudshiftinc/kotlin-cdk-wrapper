@@ -49,6 +49,8 @@ public open class CfnCustomerGateway internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun type(): String = unwrap(this).getType()
 
   public open fun type(`value`: String) {
@@ -63,6 +65,8 @@ public open class CfnCustomerGateway internal constructor(
     public fun ipAddress(ipAddress: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun type(type: String)
   }
@@ -89,6 +93,8 @@ public open class CfnCustomerGateway internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun type(type: String) {
       cdkBuilder.type(type)

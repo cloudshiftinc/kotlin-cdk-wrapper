@@ -36,6 +36,8 @@ public interface AwsSdkCall {
 
     public fun outputPaths(outputPaths: List<String>)
 
+    public fun outputPaths(vararg outputPaths: String)
+
     public fun parameters(parameters: Any)
 
     public fun physicalResourceId(physicalResourceId: PhysicalResourceId)
@@ -68,6 +70,8 @@ public interface AwsSdkCall {
     override fun outputPaths(outputPaths: List<String>) {
       cdkBuilder.outputPaths(outputPaths)
     }
+
+    override fun outputPaths(vararg outputPaths: String): Unit = outputPaths(outputPaths.toList())
 
     override fun parameters(parameters: Any) {
       cdkBuilder.parameters(parameters)

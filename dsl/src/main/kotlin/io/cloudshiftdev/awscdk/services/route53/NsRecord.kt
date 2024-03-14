@@ -31,6 +31,8 @@ public open class NsRecord internal constructor(
 
     public fun values(values: List<String>)
 
+    public fun values(vararg values: String)
+
     public fun weight(weight: Number)
 
     public fun zone(zone: IHostedZone)
@@ -78,6 +80,8 @@ public open class NsRecord internal constructor(
     override fun values(values: List<String>) {
       cdkBuilder.values(values)
     }
+
+    override fun values(vararg values: String): Unit = values(values.toList())
 
     override fun weight(weight: Number) {
       cdkBuilder.weight(weight)

@@ -40,6 +40,9 @@ public open class CfnFlow internal constructor(
     unwrap(this).setDestinationFlowConfigList(__idx_ac66f0)
   }
 
+  public open fun destinationFlowConfigList(vararg __idx_ac66f0: Any): Unit =
+      destinationFlowConfigList(__idx_ac66f0.toList())
+
   public open fun flowName(): String = unwrap(this).getFlowName()
 
   public open fun flowName(`value`: String) {
@@ -101,6 +104,8 @@ public open class CfnFlow internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun tasks(): Any = unwrap(this).getTasks()
 
   public open fun tasks(`value`: IResolvable) {
@@ -110,6 +115,8 @@ public open class CfnFlow internal constructor(
   public open fun tasks(__idx_ac66f0: List<Any>) {
     unwrap(this).setTasks(__idx_ac66f0)
   }
+
+  public open fun tasks(vararg __idx_ac66f0: Any): Unit = tasks(__idx_ac66f0.toList())
 
   public open fun triggerConfig(): Any = unwrap(this).getTriggerConfig()
 
@@ -132,6 +139,8 @@ public open class CfnFlow internal constructor(
     public fun destinationFlowConfigList(destinationFlowConfigList: IResolvable)
 
     public fun destinationFlowConfigList(destinationFlowConfigList: List<Any>)
+
+    public fun destinationFlowConfigList(vararg destinationFlowConfigList: Any)
 
     public fun flowName(flowName: String)
 
@@ -158,9 +167,13 @@ public open class CfnFlow internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun tasks(tasks: IResolvable)
 
     public fun tasks(tasks: List<Any>)
+
+    public fun tasks(vararg tasks: Any)
 
     public fun triggerConfig(triggerConfig: IResolvable)
 
@@ -189,6 +202,9 @@ public open class CfnFlow internal constructor(
     override fun destinationFlowConfigList(destinationFlowConfigList: List<Any>) {
       cdkBuilder.destinationFlowConfigList(destinationFlowConfigList)
     }
+
+    override fun destinationFlowConfigList(vararg destinationFlowConfigList: Any): Unit =
+        destinationFlowConfigList(destinationFlowConfigList.toList())
 
     override fun flowName(flowName: String) {
       cdkBuilder.flowName(flowName)
@@ -233,6 +249,8 @@ public open class CfnFlow internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun tasks(tasks: IResolvable) {
       cdkBuilder.tasks(tasks.let(IResolvable::unwrap))
     }
@@ -240,6 +258,8 @@ public open class CfnFlow internal constructor(
     override fun tasks(tasks: List<Any>) {
       cdkBuilder.tasks(tasks)
     }
+
+    override fun tasks(vararg tasks: Any): Unit = tasks(tasks.toList())
 
     override fun triggerConfig(triggerConfig: IResolvable) {
       cdkBuilder.triggerConfig(triggerConfig.let(IResolvable::unwrap))
@@ -602,9 +622,13 @@ public open class CfnFlow internal constructor(
 
       public fun sourceFields(sourceFields: List<String>)
 
+      public fun sourceFields(vararg sourceFields: String)
+
       public fun taskProperties(taskProperties: IResolvable)
 
       public fun taskProperties(taskProperties: List<Any>)
+
+      public fun taskProperties(vararg taskProperties: Any)
 
       public fun taskType(taskType: String)
     }
@@ -635,6 +659,9 @@ public open class CfnFlow internal constructor(
         cdkBuilder.sourceFields(sourceFields)
       }
 
+      override fun sourceFields(vararg sourceFields: String): Unit =
+          sourceFields(sourceFields.toList())
+
       override fun taskProperties(taskProperties: IResolvable) {
         cdkBuilder.taskProperties(taskProperties.let(IResolvable::unwrap))
       }
@@ -642,6 +669,9 @@ public open class CfnFlow internal constructor(
       override fun taskProperties(taskProperties: List<Any>) {
         cdkBuilder.taskProperties(taskProperties)
       }
+
+      override fun taskProperties(vararg taskProperties: Any): Unit =
+          taskProperties(taskProperties.toList())
 
       override fun taskType(taskType: String) {
         cdkBuilder.taskType(taskType)
@@ -658,7 +688,7 @@ public open class CfnFlow internal constructor(
 
       override fun destinationField(): String? = unwrap(this).getDestinationField()
 
-      override fun sourceFields(): List<String> = unwrap(this).getSourceFields() ?: emptyList()
+      override fun sourceFields(): List<String> = unwrap(this).getSourceFields()
 
       override fun taskProperties(): Any? = unwrap(this).getTaskProperties()
 
@@ -949,6 +979,8 @@ public open class CfnFlow internal constructor(
     public interface Builder {
       public fun pathPrefixHierarchy(pathPrefixHierarchy: List<String>)
 
+      public fun pathPrefixHierarchy(vararg pathPrefixHierarchy: String)
+
       public fun prefixFormat(prefixFormat: String)
 
       public fun prefixType(prefixType: String)
@@ -962,6 +994,9 @@ public open class CfnFlow internal constructor(
       override fun pathPrefixHierarchy(pathPrefixHierarchy: List<String>) {
         cdkBuilder.pathPrefixHierarchy(pathPrefixHierarchy)
       }
+
+      override fun pathPrefixHierarchy(vararg pathPrefixHierarchy: String): Unit =
+          pathPrefixHierarchy(pathPrefixHierarchy.toList())
 
       override fun prefixFormat(prefixFormat: String) {
         cdkBuilder.prefixFormat(prefixFormat)
@@ -1398,6 +1433,8 @@ public open class CfnFlow internal constructor(
 
       public fun idFieldNames(idFieldNames: List<String>)
 
+      public fun idFieldNames(vararg idFieldNames: String)
+
       public fun writeOperationType(writeOperationType: String)
     }
 
@@ -1436,6 +1473,9 @@ public open class CfnFlow internal constructor(
       override fun idFieldNames(idFieldNames: List<String>) {
         cdkBuilder.idFieldNames(idFieldNames)
       }
+
+      override fun idFieldNames(vararg idFieldNames: String): Unit =
+          idFieldNames(idFieldNames.toList())
 
       override fun writeOperationType(writeOperationType: String) {
         cdkBuilder.writeOperationType(writeOperationType)
@@ -2287,6 +2327,8 @@ public open class CfnFlow internal constructor(
 
       public fun idFieldNames(idFieldNames: List<String>)
 
+      public fun idFieldNames(vararg idFieldNames: String)
+
       public fun `object`(`object`: String)
 
       public fun writeOperationType(writeOperationType: String)
@@ -2319,6 +2361,9 @@ public open class CfnFlow internal constructor(
       override fun idFieldNames(idFieldNames: List<String>) {
         cdkBuilder.idFieldNames(idFieldNames)
       }
+
+      override fun idFieldNames(vararg idFieldNames: String): Unit =
+          idFieldNames(idFieldNames.toList())
 
       override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
@@ -3664,6 +3709,8 @@ public open class CfnFlow internal constructor(
 
       public fun idFieldNames(idFieldNames: List<String>)
 
+      public fun idFieldNames(vararg idFieldNames: String)
+
       public fun `object`(`object`: String)
 
       public fun writeOperationType(writeOperationType: String)
@@ -3692,6 +3739,9 @@ public open class CfnFlow internal constructor(
       override fun idFieldNames(idFieldNames: List<String>) {
         cdkBuilder.idFieldNames(idFieldNames)
       }
+
+      override fun idFieldNames(vararg idFieldNames: String): Unit =
+          idFieldNames(idFieldNames.toList())
 
       override fun `object`(`object`: String) {
         cdkBuilder.`object`(`object`)
@@ -3848,6 +3898,8 @@ public open class CfnFlow internal constructor(
 
       public fun idFieldNames(idFieldNames: List<String>)
 
+      public fun idFieldNames(vararg idFieldNames: String)
+
       public fun objectPath(objectPath: String)
 
       public fun successResponseHandlingConfig(successResponseHandlingConfig: IResolvable)
@@ -3886,6 +3938,9 @@ public open class CfnFlow internal constructor(
       override fun idFieldNames(idFieldNames: List<String>) {
         cdkBuilder.idFieldNames(idFieldNames)
       }
+
+      override fun idFieldNames(vararg idFieldNames: String): Unit =
+          idFieldNames(idFieldNames.toList())
 
       override fun objectPath(objectPath: String) {
         cdkBuilder.objectPath(objectPath)

@@ -15,6 +15,8 @@ public interface ViewerCertificateOptions {
   public interface Builder {
     public fun aliases(aliases: List<String>)
 
+    public fun aliases(vararg aliases: String)
+
     public fun securityPolicy(securityPolicy: SecurityPolicyProtocol)
 
     public fun sslMethod(sslMethod: SSLMethod)
@@ -28,6 +30,8 @@ public interface ViewerCertificateOptions {
     override fun aliases(aliases: List<String>) {
       cdkBuilder.aliases(aliases)
     }
+
+    override fun aliases(vararg aliases: String): Unit = aliases(aliases.toList())
 
     override fun securityPolicy(securityPolicy: SecurityPolicyProtocol) {
       cdkBuilder.securityPolicy(securityPolicy.let(SecurityPolicyProtocol::unwrap))

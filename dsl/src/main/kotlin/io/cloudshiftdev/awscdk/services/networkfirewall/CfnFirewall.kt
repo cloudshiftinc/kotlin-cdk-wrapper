@@ -18,7 +18,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnFirewall internal constructor(
   private val cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewall,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
-  public open fun attrEndpointIds(): List<String> = unwrap(this).getAttrEndpointIds() ?: emptyList()
+  public open fun attrEndpointIds(): List<String> = unwrap(this).getAttrEndpointIds()
 
   public open fun attrFirewallArn(): String = unwrap(this).getAttrFirewallArn()
 
@@ -87,6 +87,9 @@ public open class CfnFirewall internal constructor(
     unwrap(this).setSubnetMappings(__idx_ac66f0)
   }
 
+  public open fun subnetMappings(vararg __idx_ac66f0: Any): Unit =
+      subnetMappings(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -95,6 +98,8 @@ public open class CfnFirewall internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun vpcId(): String = unwrap(this).getVpcId()
 
@@ -125,7 +130,11 @@ public open class CfnFirewall internal constructor(
 
     public fun subnetMappings(subnetMappings: List<Any>)
 
+    public fun subnetMappings(vararg subnetMappings: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun vpcId(vpcId: String)
   }
@@ -181,9 +190,14 @@ public open class CfnFirewall internal constructor(
       cdkBuilder.subnetMappings(subnetMappings)
     }
 
+    override fun subnetMappings(vararg subnetMappings: Any): Unit =
+        subnetMappings(subnetMappings.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)

@@ -12,18 +12,19 @@ public open class GatewayVpcEndpoint internal constructor(
   public open fun vpcEndpointCreationTimestamp(): String =
       unwrap(this).getVpcEndpointCreationTimestamp()
 
-  public open fun vpcEndpointDnsEntries(): List<String> = unwrap(this).getVpcEndpointDnsEntries() ?:
-      emptyList()
+  public open fun vpcEndpointDnsEntries(): List<String> = unwrap(this).getVpcEndpointDnsEntries()
 
   public override fun vpcEndpointId(): String = unwrap(this).getVpcEndpointId()
 
   public open fun vpcEndpointNetworkInterfaceIds(): List<String> =
-      unwrap(this).getVpcEndpointNetworkInterfaceIds() ?: emptyList()
+      unwrap(this).getVpcEndpointNetworkInterfaceIds()
 
   public interface Builder {
     public fun service(service: IGatewayVpcEndpointService)
 
     public fun subnets(subnets: List<SubnetSelection>)
+
+    public fun subnets(vararg subnets: SubnetSelection)
 
     public fun vpc(vpc: IVpc)
   }
@@ -42,6 +43,8 @@ public open class GatewayVpcEndpoint internal constructor(
     override fun subnets(subnets: List<SubnetSelection>) {
       cdkBuilder.subnets(subnets.map(SubnetSelection::unwrap))
     }
+
+    override fun subnets(vararg subnets: SubnetSelection): Unit = subnets(subnets.toList())
 
     override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))

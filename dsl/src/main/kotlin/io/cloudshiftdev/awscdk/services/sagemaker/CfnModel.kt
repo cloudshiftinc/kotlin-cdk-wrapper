@@ -34,6 +34,8 @@ public open class CfnModel internal constructor(
     unwrap(this).setContainers(__idx_ac66f0)
   }
 
+  public open fun containers(vararg __idx_ac66f0: Any): Unit = containers(__idx_ac66f0.toList())
+
   public open fun enableNetworkIsolation(): Any? = unwrap(this).getEnableNetworkIsolation()
 
   public open fun enableNetworkIsolation(`value`: Boolean) {
@@ -100,6 +102,8 @@ public open class CfnModel internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun vpcConfig(): Any? = unwrap(this).getVpcConfig()
 
   public open fun vpcConfig(`value`: IResolvable) {
@@ -119,6 +123,8 @@ public open class CfnModel internal constructor(
     public fun containers(containers: IResolvable)
 
     public fun containers(containers: List<Any>)
+
+    public fun containers(vararg containers: Any)
 
     public fun enableNetworkIsolation(enableNetworkIsolation: Boolean)
 
@@ -147,6 +153,8 @@ public open class CfnModel internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun vpcConfig(vpcConfig: IResolvable)
 
     public fun vpcConfig(vpcConfig: VpcConfigProperty)
@@ -170,6 +178,8 @@ public open class CfnModel internal constructor(
     override fun containers(containers: List<Any>) {
       cdkBuilder.containers(containers)
     }
+
+    override fun containers(vararg containers: Any): Unit = containers(containers.toList())
 
     override fun enableNetworkIsolation(enableNetworkIsolation: Boolean) {
       cdkBuilder.enableNetworkIsolation(enableNetworkIsolation)
@@ -218,6 +228,8 @@ public open class CfnModel internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun vpcConfig(vpcConfig: IResolvable) {
       cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
@@ -374,7 +386,11 @@ public open class CfnModel internal constructor(
     public interface Builder {
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnets(subnets: List<String>)
+
+      public fun subnets(vararg subnets: String)
     }
 
     private class BuilderImpl : Builder {
@@ -386,9 +402,14 @@ public open class CfnModel internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnets(subnets: List<String>) {
         cdkBuilder.subnets(subnets)
       }
+
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
 
       public fun build(): software.amazon.awscdk.services.sagemaker.CfnModel.VpcConfigProperty =
           cdkBuilder.build()
@@ -397,10 +418,9 @@ public open class CfnModel internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel.VpcConfigProperty,
     ) : VpcConfigProperty {
-      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
-          emptyList()
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
 
-      override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+      override fun subnets(): List<String> = unwrap(this).getSubnets()
     }
 
     public companion object {

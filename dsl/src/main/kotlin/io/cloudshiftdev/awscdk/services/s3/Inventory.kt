@@ -46,6 +46,8 @@ public interface Inventory {
     public fun objectsPrefix(objectsPrefix: String)
 
     public fun optionalFields(optionalFields: List<String>)
+
+    public fun optionalFields(vararg optionalFields: String)
   }
 
   private class BuilderImpl : Builder {
@@ -88,6 +90,9 @@ public interface Inventory {
     override fun optionalFields(optionalFields: List<String>) {
       cdkBuilder.optionalFields(optionalFields)
     }
+
+    override fun optionalFields(vararg optionalFields: String): Unit =
+        optionalFields(optionalFields.toList())
 
     public fun build(): software.amazon.awscdk.services.s3.Inventory = cdkBuilder.build()
   }

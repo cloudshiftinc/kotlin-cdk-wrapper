@@ -192,6 +192,8 @@ public open class CfnPlaybackConfiguration internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun transcodeProfileName(): String? = unwrap(this).getTranscodeProfileName()
 
   public open fun transcodeProfileName(`value`: String) {
@@ -276,6 +278,8 @@ public open class CfnPlaybackConfiguration internal constructor(
     public fun slateAdUrl(slateAdUrl: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun transcodeProfileName(transcodeProfileName: String)
 
@@ -412,6 +416,8 @@ public open class CfnPlaybackConfiguration internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun transcodeProfileName(transcodeProfileName: String) {
       cdkBuilder.transcodeProfileName(transcodeProfileName)

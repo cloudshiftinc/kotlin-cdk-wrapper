@@ -49,6 +49,9 @@ public open class CfnSchemaMapping internal constructor(
     unwrap(this).setMappedInputFields(__idx_ac66f0)
   }
 
+  public open fun mappedInputFields(vararg __idx_ac66f0: Any): Unit =
+      mappedInputFields(__idx_ac66f0.toList())
+
   public open fun schemaName(): String = unwrap(this).getSchemaName()
 
   public open fun schemaName(`value`: String) {
@@ -61,6 +64,8 @@ public open class CfnSchemaMapping internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun description(description: String)
 
@@ -68,9 +73,13 @@ public open class CfnSchemaMapping internal constructor(
 
     public fun mappedInputFields(mappedInputFields: List<Any>)
 
+    public fun mappedInputFields(vararg mappedInputFields: Any)
+
     public fun schemaName(schemaName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -93,6 +102,9 @@ public open class CfnSchemaMapping internal constructor(
       cdkBuilder.mappedInputFields(mappedInputFields)
     }
 
+    override fun mappedInputFields(vararg mappedInputFields: Any): Unit =
+        mappedInputFields(mappedInputFields.toList())
+
     override fun schemaName(schemaName: String) {
       cdkBuilder.schemaName(schemaName)
     }
@@ -100,6 +112,8 @@ public open class CfnSchemaMapping internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.entityresolution.CfnSchemaMapping =
         cdkBuilder.build()

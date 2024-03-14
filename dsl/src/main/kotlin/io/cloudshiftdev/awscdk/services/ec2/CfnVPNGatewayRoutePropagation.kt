@@ -18,11 +18,13 @@ public open class CfnVPNGatewayRoutePropagation internal constructor(
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
-  public open fun routeTableIds(): List<String> = unwrap(this).getRouteTableIds() ?: emptyList()
+  public open fun routeTableIds(): List<String> = unwrap(this).getRouteTableIds()
 
   public open fun routeTableIds(`value`: List<String>) {
     unwrap(this).setRouteTableIds(`value`)
   }
+
+  public open fun routeTableIds(vararg `value`: String): Unit = routeTableIds(`value`.toList())
 
   public open fun vpnGatewayId(): String = unwrap(this).getVpnGatewayId()
 
@@ -32,6 +34,8 @@ public open class CfnVPNGatewayRoutePropagation internal constructor(
 
   public interface Builder {
     public fun routeTableIds(routeTableIds: List<String>)
+
+    public fun routeTableIds(vararg routeTableIds: String)
 
     public fun vpnGatewayId(vpnGatewayId: String)
   }
@@ -47,6 +51,9 @@ public open class CfnVPNGatewayRoutePropagation internal constructor(
     override fun routeTableIds(routeTableIds: List<String>) {
       cdkBuilder.routeTableIds(routeTableIds)
     }
+
+    override fun routeTableIds(vararg routeTableIds: String): Unit =
+        routeTableIds(routeTableIds.toList())
 
     override fun vpnGatewayId(vpnGatewayId: String) {
       cdkBuilder.vpnGatewayId(vpnGatewayId)

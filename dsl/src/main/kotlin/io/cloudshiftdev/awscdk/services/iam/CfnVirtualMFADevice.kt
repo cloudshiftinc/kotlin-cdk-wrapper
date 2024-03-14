@@ -36,11 +36,15 @@ public open class CfnVirtualMFADevice internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
-  public open fun users(): List<String> = unwrap(this).getUsers() ?: emptyList()
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
+  public open fun users(): List<String> = unwrap(this).getUsers()
 
   public open fun users(`value`: List<String>) {
     unwrap(this).setUsers(`value`)
   }
+
+  public open fun users(vararg `value`: String): Unit = users(`value`.toList())
 
   public open fun virtualMfaDeviceName(): String? = unwrap(this).getVirtualMfaDeviceName()
 
@@ -53,7 +57,11 @@ public open class CfnVirtualMFADevice internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun users(users: List<String>)
+
+    public fun users(vararg users: String)
 
     public fun virtualMfaDeviceName(virtualMfaDeviceName: String)
   }
@@ -73,9 +81,13 @@ public open class CfnVirtualMFADevice internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun users(users: List<String>) {
       cdkBuilder.users(users)
     }
+
+    override fun users(vararg users: String): Unit = users(users.toList())
 
     override fun virtualMfaDeviceName(virtualMfaDeviceName: String) {
       cdkBuilder.virtualMfaDeviceName(virtualMfaDeviceName)

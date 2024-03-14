@@ -44,12 +44,14 @@ public open class CfnLocationFSxONTAP internal constructor(
   public open fun protocol(`value`: ProtocolProperty.Builder.() -> Unit): Unit =
       protocol(ProtocolProperty(`value`))
 
-  public open fun securityGroupArns(): List<String> = unwrap(this).getSecurityGroupArns() ?:
-      emptyList()
+  public open fun securityGroupArns(): List<String> = unwrap(this).getSecurityGroupArns()
 
   public open fun securityGroupArns(`value`: List<String>) {
     unwrap(this).setSecurityGroupArns(`value`)
   }
+
+  public open fun securityGroupArns(vararg `value`: String): Unit =
+      securityGroupArns(`value`.toList())
 
   public open fun storageVirtualMachineArn(): String = unwrap(this).getStorageVirtualMachineArn()
 
@@ -72,6 +74,8 @@ public open class CfnLocationFSxONTAP internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun protocol(protocol: IResolvable)
 
@@ -83,11 +87,15 @@ public open class CfnLocationFSxONTAP internal constructor(
 
     public fun securityGroupArns(securityGroupArns: List<String>)
 
+    public fun securityGroupArns(vararg securityGroupArns: String)
+
     public fun storageVirtualMachineArn(storageVirtualMachineArn: String)
 
     public fun subdirectory(subdirectory: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -114,6 +122,9 @@ public open class CfnLocationFSxONTAP internal constructor(
       cdkBuilder.securityGroupArns(securityGroupArns)
     }
 
+    override fun securityGroupArns(vararg securityGroupArns: String): Unit =
+        securityGroupArns(securityGroupArns.toList())
+
     override fun storageVirtualMachineArn(storageVirtualMachineArn: String) {
       cdkBuilder.storageVirtualMachineArn(storageVirtualMachineArn)
     }
@@ -125,6 +136,8 @@ public open class CfnLocationFSxONTAP internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP =
         cdkBuilder.build()

@@ -35,6 +35,8 @@ public open class AssetImage internal constructor(
 
     public fun cacheFrom(cacheFrom: List<DockerCacheOption>)
 
+    public fun cacheFrom(vararg cacheFrom: DockerCacheOption)
+
     public fun cacheTo(cacheTo: DockerCacheOption)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -42,6 +44,8 @@ public open class AssetImage internal constructor(
     public fun cacheTo(cacheTo: DockerCacheOption.Builder.() -> Unit)
 
     public fun exclude(exclude: List<String>)
+
+    public fun exclude(vararg exclude: String)
 
     public fun extraHash(extraHash: String)
 
@@ -60,6 +64,8 @@ public open class AssetImage internal constructor(
     public fun networkMode(networkMode: NetworkMode)
 
     public fun outputs(outputs: List<String>)
+
+    public fun outputs(vararg outputs: String)
 
     public fun platform(platform: Platform)
 
@@ -96,6 +102,9 @@ public open class AssetImage internal constructor(
       cdkBuilder.cacheFrom(cacheFrom.map(DockerCacheOption::unwrap))
     }
 
+    override fun cacheFrom(vararg cacheFrom: DockerCacheOption): Unit =
+        cacheFrom(cacheFrom.toList())
+
     override fun cacheTo(cacheTo: DockerCacheOption) {
       cdkBuilder.cacheTo(cacheTo.let(DockerCacheOption::unwrap))
     }
@@ -108,6 +117,8 @@ public open class AssetImage internal constructor(
     override fun exclude(exclude: List<String>) {
       cdkBuilder.exclude(exclude)
     }
+
+    override fun exclude(vararg exclude: String): Unit = exclude(exclude.toList())
 
     override fun extraHash(extraHash: String) {
       cdkBuilder.extraHash(extraHash)
@@ -141,6 +152,8 @@ public open class AssetImage internal constructor(
     override fun outputs(outputs: List<String>) {
       cdkBuilder.outputs(outputs)
     }
+
+    override fun outputs(vararg outputs: String): Unit = outputs(outputs.toList())
 
     override fun platform(platform: Platform) {
       cdkBuilder.platform(platform.let(Platform::unwrap))

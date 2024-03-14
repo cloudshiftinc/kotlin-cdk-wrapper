@@ -24,6 +24,8 @@ public open class CfnParameter internal constructor(
     unwrap(this).setAllowedValues(`value`)
   }
 
+  public open fun allowedValues(vararg `value`: String): Unit = allowedValues(`value`.toList())
+
   public open fun constraintDescription(): String? = unwrap(this).getConstraintDescription()
 
   public open fun constraintDescription(`value`: String) {
@@ -83,7 +85,7 @@ public open class CfnParameter internal constructor(
 
   public open fun `value`(): IResolvable = unwrap(this).getValue().let(IResolvable::wrap)
 
-  public open fun valueAsList(): List<String> = unwrap(this).getValueAsList() ?: emptyList()
+  public open fun valueAsList(): List<String> = unwrap(this).getValueAsList()
 
   public open fun valueAsNumber(): Number = unwrap(this).getValueAsNumber()
 
@@ -93,6 +95,8 @@ public open class CfnParameter internal constructor(
     public fun allowedPattern(allowedPattern: String)
 
     public fun allowedValues(allowedValues: List<String>)
+
+    public fun allowedValues(vararg allowedValues: String)
 
     public fun constraintDescription(constraintDescription: String)
 
@@ -127,6 +131,9 @@ public open class CfnParameter internal constructor(
     override fun allowedValues(allowedValues: List<String>) {
       cdkBuilder.allowedValues(allowedValues)
     }
+
+    override fun allowedValues(vararg allowedValues: String): Unit =
+        allowedValues(allowedValues.toList())
 
     override fun constraintDescription(constraintDescription: String) {
       cdkBuilder.constraintDescription(constraintDescription)

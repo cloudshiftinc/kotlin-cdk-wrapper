@@ -14,6 +14,8 @@ public interface PolicyViolatingResourceBeta1 {
   public interface Builder {
     public fun locations(locations: List<String>)
 
+    public fun locations(vararg locations: String)
+
     public fun resourceLogicalId(resourceLogicalId: String)
 
     public fun templatePath(templatePath: String)
@@ -26,6 +28,8 @@ public interface PolicyViolatingResourceBeta1 {
     override fun locations(locations: List<String>) {
       cdkBuilder.locations(locations)
     }
+
+    override fun locations(vararg locations: String): Unit = locations(locations.toList())
 
     override fun resourceLogicalId(resourceLogicalId: String) {
       cdkBuilder.resourceLogicalId(resourceLogicalId)
@@ -41,7 +45,7 @@ public interface PolicyViolatingResourceBeta1 {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.PolicyViolatingResourceBeta1,
   ) : PolicyViolatingResourceBeta1 {
-    override fun locations(): List<String> = unwrap(this).getLocations() ?: emptyList()
+    override fun locations(): List<String> = unwrap(this).getLocations()
 
     override fun resourceLogicalId(): String = unwrap(this).getResourceLogicalId()
 

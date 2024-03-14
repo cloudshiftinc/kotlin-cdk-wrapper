@@ -53,6 +53,8 @@ public open class CfnStreamingDistribution internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun streamingDistributionConfig(streamingDistributionConfig: IResolvable)
 
@@ -65,6 +67,8 @@ public open class CfnStreamingDistribution internal constructor(
         fun streamingDistributionConfig(streamingDistributionConfig: StreamingDistributionConfigProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -95,6 +99,8 @@ public open class CfnStreamingDistribution internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution =
         cdkBuilder.build()
@@ -140,6 +146,8 @@ public open class CfnStreamingDistribution internal constructor(
     public interface Builder {
       public fun aliases(aliases: List<String>)
 
+      public fun aliases(vararg aliases: String)
+
       public fun comment(comment: String)
 
       public fun enabled(enabled: Boolean)
@@ -182,6 +190,8 @@ public open class CfnStreamingDistribution internal constructor(
       override fun aliases(aliases: List<String>) {
         cdkBuilder.aliases(aliases)
       }
+
+      override fun aliases(vararg aliases: String): Unit = aliases(aliases.toList())
 
       override fun comment(comment: String) {
         cdkBuilder.comment(comment)
@@ -426,6 +436,8 @@ public open class CfnStreamingDistribution internal constructor(
     public interface Builder {
       public fun awsAccountNumbers(awsAccountNumbers: List<String>)
 
+      public fun awsAccountNumbers(vararg awsAccountNumbers: String)
+
       public fun enabled(enabled: Boolean)
 
       public fun enabled(enabled: IResolvable)
@@ -440,6 +452,9 @@ public open class CfnStreamingDistribution internal constructor(
       override fun awsAccountNumbers(awsAccountNumbers: List<String>) {
         cdkBuilder.awsAccountNumbers(awsAccountNumbers)
       }
+
+      override fun awsAccountNumbers(vararg awsAccountNumbers: String): Unit =
+          awsAccountNumbers(awsAccountNumbers.toList())
 
       override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)

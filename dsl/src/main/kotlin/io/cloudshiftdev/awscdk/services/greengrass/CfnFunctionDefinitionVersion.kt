@@ -51,6 +51,8 @@ public open class CfnFunctionDefinitionVersion internal constructor(
     unwrap(this).setFunctions(__idx_ac66f0)
   }
 
+  public open fun functions(vararg __idx_ac66f0: Any): Unit = functions(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -69,6 +71,8 @@ public open class CfnFunctionDefinitionVersion internal constructor(
     public fun functions(functions: IResolvable)
 
     public fun functions(functions: List<Any>)
+
+    public fun functions(vararg functions: Any)
   }
 
   private class BuilderImpl(
@@ -104,6 +108,8 @@ public open class CfnFunctionDefinitionVersion internal constructor(
     override fun functions(functions: List<Any>) {
       cdkBuilder.functions(functions)
     }
+
+    override fun functions(vararg functions: Any): Unit = functions(functions.toList())
 
     public fun build(): software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion =
         cdkBuilder.build()
@@ -629,6 +635,8 @@ public open class CfnFunctionDefinitionVersion internal constructor(
 
       public fun resourceAccessPolicies(resourceAccessPolicies: List<Any>)
 
+      public fun resourceAccessPolicies(vararg resourceAccessPolicies: Any)
+
       public fun variables(variables: Any)
     }
 
@@ -666,6 +674,9 @@ public open class CfnFunctionDefinitionVersion internal constructor(
       override fun resourceAccessPolicies(resourceAccessPolicies: List<Any>) {
         cdkBuilder.resourceAccessPolicies(resourceAccessPolicies)
       }
+
+      override fun resourceAccessPolicies(vararg resourceAccessPolicies: Any): Unit =
+          resourceAccessPolicies(resourceAccessPolicies.toList())
 
       override fun variables(variables: Any) {
         cdkBuilder.variables(variables)

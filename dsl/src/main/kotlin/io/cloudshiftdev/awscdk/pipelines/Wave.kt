@@ -42,7 +42,11 @@ public open class Wave internal constructor(
   public interface Builder {
     public fun post(post: List<Step>)
 
+    public fun post(vararg post: Step)
+
     public fun pre(pre: List<Step>)
+
+    public fun pre(vararg pre: Step)
   }
 
   private class BuilderImpl(
@@ -55,9 +59,13 @@ public open class Wave internal constructor(
       cdkBuilder.post(post.map(Step::unwrap))
     }
 
+    override fun post(vararg post: Step): Unit = post(post.toList())
+
     override fun pre(pre: List<Step>) {
       cdkBuilder.pre(pre.map(Step::unwrap))
     }
+
+    override fun pre(vararg pre: Step): Unit = pre(pre.toList())
 
     public fun build(): software.amazon.awscdk.pipelines.Wave = cdkBuilder.build()
   }

@@ -39,6 +39,9 @@ public open class CfnAlarm internal constructor(
     unwrap(this).setContactProtocols(`value`)
   }
 
+  public open fun contactProtocols(vararg `value`: String): Unit =
+      contactProtocols(`value`.toList())
+
   public open fun datapointsToAlarm(): Number? = unwrap(this).getDatapointsToAlarm()
 
   public open fun datapointsToAlarm(`value`: Number) {
@@ -84,6 +87,9 @@ public open class CfnAlarm internal constructor(
     unwrap(this).setNotificationTriggers(`value`)
   }
 
+  public open fun notificationTriggers(vararg `value`: String): Unit =
+      notificationTriggers(`value`.toList())
+
   public open fun threshold(): Number = unwrap(this).getThreshold()
 
   public open fun threshold(`value`: Number) {
@@ -103,6 +109,8 @@ public open class CfnAlarm internal constructor(
 
     public fun contactProtocols(contactProtocols: List<String>)
 
+    public fun contactProtocols(vararg contactProtocols: String)
+
     public fun datapointsToAlarm(datapointsToAlarm: Number)
 
     public fun evaluationPeriods(evaluationPeriods: Number)
@@ -116,6 +124,8 @@ public open class CfnAlarm internal constructor(
     public fun notificationEnabled(notificationEnabled: IResolvable)
 
     public fun notificationTriggers(notificationTriggers: List<String>)
+
+    public fun notificationTriggers(vararg notificationTriggers: String)
 
     public fun threshold(threshold: Number)
 
@@ -140,6 +150,9 @@ public open class CfnAlarm internal constructor(
     override fun contactProtocols(contactProtocols: List<String>) {
       cdkBuilder.contactProtocols(contactProtocols)
     }
+
+    override fun contactProtocols(vararg contactProtocols: String): Unit =
+        contactProtocols(contactProtocols.toList())
 
     override fun datapointsToAlarm(datapointsToAlarm: Number) {
       cdkBuilder.datapointsToAlarm(datapointsToAlarm)
@@ -168,6 +181,9 @@ public open class CfnAlarm internal constructor(
     override fun notificationTriggers(notificationTriggers: List<String>) {
       cdkBuilder.notificationTriggers(notificationTriggers)
     }
+
+    override fun notificationTriggers(vararg notificationTriggers: String): Unit =
+        notificationTriggers(notificationTriggers.toList())
 
     override fun threshold(threshold: Number) {
       cdkBuilder.threshold(threshold)

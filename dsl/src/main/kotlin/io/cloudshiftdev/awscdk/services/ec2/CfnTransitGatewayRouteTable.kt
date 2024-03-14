@@ -31,6 +31,8 @@ public open class CfnTransitGatewayRouteTable internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun transitGatewayId(): String = unwrap(this).getTransitGatewayId()
 
   public open fun transitGatewayId(`value`: String) {
@@ -39,6 +41,8 @@ public open class CfnTransitGatewayRouteTable internal constructor(
 
   public interface Builder {
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun transitGatewayId(transitGatewayId: String)
   }
@@ -53,6 +57,8 @@ public open class CfnTransitGatewayRouteTable internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun transitGatewayId(transitGatewayId: String) {
       cdkBuilder.transitGatewayId(transitGatewayId)

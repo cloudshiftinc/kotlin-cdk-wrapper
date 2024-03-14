@@ -25,6 +25,9 @@ public open class CfnOrganizationConformancePack internal constructor(
     unwrap(this).setConformancePackInputParameters(__idx_ac66f0)
   }
 
+  public open fun conformancePackInputParameters(vararg __idx_ac66f0: Any): Unit =
+      conformancePackInputParameters(__idx_ac66f0.toList())
+
   public open fun deliveryS3Bucket(): String? = unwrap(this).getDeliveryS3Bucket()
 
   public open fun deliveryS3Bucket(`value`: String) {
@@ -43,6 +46,9 @@ public open class CfnOrganizationConformancePack internal constructor(
   public open fun excludedAccounts(`value`: List<String>) {
     unwrap(this).setExcludedAccounts(`value`)
   }
+
+  public open fun excludedAccounts(vararg `value`: String): Unit =
+      excludedAccounts(`value`.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -72,11 +78,15 @@ public open class CfnOrganizationConformancePack internal constructor(
 
     public fun conformancePackInputParameters(conformancePackInputParameters: List<Any>)
 
+    public fun conformancePackInputParameters(vararg conformancePackInputParameters: Any)
+
     public fun deliveryS3Bucket(deliveryS3Bucket: String)
 
     public fun deliveryS3KeyPrefix(deliveryS3KeyPrefix: String)
 
     public fun excludedAccounts(excludedAccounts: List<String>)
+
+    public fun excludedAccounts(vararg excludedAccounts: String)
 
     public fun organizationConformancePackName(organizationConformancePackName: String)
 
@@ -102,6 +112,9 @@ public open class CfnOrganizationConformancePack internal constructor(
       cdkBuilder.conformancePackInputParameters(conformancePackInputParameters)
     }
 
+    override fun conformancePackInputParameters(vararg conformancePackInputParameters: Any): Unit =
+        conformancePackInputParameters(conformancePackInputParameters.toList())
+
     override fun deliveryS3Bucket(deliveryS3Bucket: String) {
       cdkBuilder.deliveryS3Bucket(deliveryS3Bucket)
     }
@@ -113,6 +126,9 @@ public open class CfnOrganizationConformancePack internal constructor(
     override fun excludedAccounts(excludedAccounts: List<String>) {
       cdkBuilder.excludedAccounts(excludedAccounts)
     }
+
+    override fun excludedAccounts(vararg excludedAccounts: String): Unit =
+        excludedAccounts(excludedAccounts.toList())
 
     override fun organizationConformancePackName(organizationConformancePackName: String) {
       cdkBuilder.organizationConformancePackName(organizationConformancePackName)

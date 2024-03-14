@@ -60,6 +60,9 @@ public open class CfnConfigRule internal constructor(
     unwrap(this).setEvaluationModes(__idx_ac66f0)
   }
 
+  public open fun evaluationModes(vararg __idx_ac66f0: Any): Unit =
+      evaluationModes(__idx_ac66f0.toList())
+
   public open fun inputParameters(): Any? = unwrap(this).getInputParameters()
 
   public open fun inputParameters(`value`: Any) {
@@ -123,6 +126,8 @@ public open class CfnConfigRule internal constructor(
 
     public fun evaluationModes(evaluationModes: List<Any>)
 
+    public fun evaluationModes(vararg evaluationModes: Any)
+
     public fun inputParameters(inputParameters: Any)
 
     public fun maximumExecutionFrequency(maximumExecutionFrequency: String)
@@ -179,6 +184,9 @@ public open class CfnConfigRule internal constructor(
     override fun evaluationModes(evaluationModes: List<Any>) {
       cdkBuilder.evaluationModes(evaluationModes)
     }
+
+    override fun evaluationModes(vararg evaluationModes: Any): Unit =
+        evaluationModes(evaluationModes.toList())
 
     override fun inputParameters(inputParameters: Any) {
       cdkBuilder.inputParameters(inputParameters)
@@ -252,6 +260,8 @@ public open class CfnConfigRule internal constructor(
 
       public fun complianceResourceTypes(complianceResourceTypes: List<String>)
 
+      public fun complianceResourceTypes(vararg complianceResourceTypes: String)
+
       public fun tagKey(tagKey: String)
 
       public fun tagValue(tagValue: String)
@@ -269,6 +279,9 @@ public open class CfnConfigRule internal constructor(
       override fun complianceResourceTypes(complianceResourceTypes: List<String>) {
         cdkBuilder.complianceResourceTypes(complianceResourceTypes)
       }
+
+      override fun complianceResourceTypes(vararg complianceResourceTypes: String): Unit =
+          complianceResourceTypes(complianceResourceTypes.toList())
 
       override fun tagKey(tagKey: String) {
         cdkBuilder.tagKey(tagKey)
@@ -390,6 +403,8 @@ public open class CfnConfigRule internal constructor(
 
       public fun sourceDetails(sourceDetails: List<Any>)
 
+      public fun sourceDetails(vararg sourceDetails: Any)
+
       public fun sourceIdentifier(sourceIdentifier: String)
     }
 
@@ -423,6 +438,9 @@ public open class CfnConfigRule internal constructor(
       override fun sourceDetails(sourceDetails: List<Any>) {
         cdkBuilder.sourceDetails(sourceDetails)
       }
+
+      override fun sourceDetails(vararg sourceDetails: Any): Unit =
+          sourceDetails(sourceDetails.toList())
 
       override fun sourceIdentifier(sourceIdentifier: String) {
         cdkBuilder.sourceIdentifier(sourceIdentifier)

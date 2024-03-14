@@ -455,6 +455,8 @@ public open class CfnResolver internal constructor(
 
     public interface Builder {
       public fun functions(functions: List<String>)
+
+      public fun functions(vararg functions: String)
     }
 
     private class BuilderImpl : Builder {
@@ -465,6 +467,8 @@ public open class CfnResolver internal constructor(
       override fun functions(functions: List<String>) {
         cdkBuilder.functions(functions)
       }
+
+      override fun functions(vararg functions: String): Unit = functions(functions.toList())
 
       public fun build(): software.amazon.awscdk.services.appsync.CfnResolver.PipelineConfigProperty
           = cdkBuilder.build()
@@ -612,6 +616,8 @@ public open class CfnResolver internal constructor(
     public interface Builder {
       public fun cachingKeys(cachingKeys: List<String>)
 
+      public fun cachingKeys(vararg cachingKeys: String)
+
       public fun ttl(ttl: Number)
     }
 
@@ -623,6 +629,8 @@ public open class CfnResolver internal constructor(
       override fun cachingKeys(cachingKeys: List<String>) {
         cdkBuilder.cachingKeys(cachingKeys)
       }
+
+      override fun cachingKeys(vararg cachingKeys: String): Unit = cachingKeys(cachingKeys.toList())
 
       override fun ttl(ttl: Number) {
         cdkBuilder.ttl(ttl)

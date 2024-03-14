@@ -36,6 +36,8 @@ public open class PrivateCertificate internal constructor(
     public fun keyAlgorithm(keyAlgorithm: KeyAlgorithm)
 
     public fun subjectAlternativeNames(subjectAlternativeNames: List<String>)
+
+    public fun subjectAlternativeNames(vararg subjectAlternativeNames: String)
   }
 
   private class BuilderImpl(
@@ -62,6 +64,9 @@ public open class PrivateCertificate internal constructor(
     override fun subjectAlternativeNames(subjectAlternativeNames: List<String>) {
       cdkBuilder.subjectAlternativeNames(subjectAlternativeNames)
     }
+
+    override fun subjectAlternativeNames(vararg subjectAlternativeNames: String): Unit =
+        subjectAlternativeNames(subjectAlternativeNames.toList())
 
     public fun build(): software.amazon.awscdk.services.certificatemanager.PrivateCertificate =
         cdkBuilder.build()

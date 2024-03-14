@@ -17,6 +17,8 @@ public interface SecondaryIndexProps {
 
     public fun nonKeyAttributes(nonKeyAttributes: List<String>)
 
+    public fun nonKeyAttributes(vararg nonKeyAttributes: String)
+
     public fun projectionType(projectionType: ProjectionType)
   }
 
@@ -31,6 +33,9 @@ public interface SecondaryIndexProps {
     override fun nonKeyAttributes(nonKeyAttributes: List<String>) {
       cdkBuilder.nonKeyAttributes(nonKeyAttributes)
     }
+
+    override fun nonKeyAttributes(vararg nonKeyAttributes: String): Unit =
+        nonKeyAttributes(nonKeyAttributes.toList())
 
     override fun projectionType(projectionType: ProjectionType) {
       cdkBuilder.projectionType(projectionType.let(ProjectionType::unwrap))

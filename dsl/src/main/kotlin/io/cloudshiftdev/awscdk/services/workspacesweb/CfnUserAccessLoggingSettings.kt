@@ -16,7 +16,7 @@ public open class CfnUserAccessLoggingSettings internal constructor(
   private val cdkObject: software.amazon.awscdk.services.workspacesweb.CfnUserAccessLoggingSettings,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public open fun attrAssociatedPortalArns(): List<String> =
-      unwrap(this).getAttrAssociatedPortalArns() ?: emptyList()
+      unwrap(this).getAttrAssociatedPortalArns()
 
   public open fun attrUserAccessLoggingSettingsArn(): String =
       unwrap(this).getAttrUserAccessLoggingSettingsArn()
@@ -40,10 +40,14 @@ public open class CfnUserAccessLoggingSettings internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun kinesisStreamArn(kinesisStreamArn: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -62,6 +66,8 @@ public open class CfnUserAccessLoggingSettings internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.workspacesweb.CfnUserAccessLoggingSettings =
         cdkBuilder.build()

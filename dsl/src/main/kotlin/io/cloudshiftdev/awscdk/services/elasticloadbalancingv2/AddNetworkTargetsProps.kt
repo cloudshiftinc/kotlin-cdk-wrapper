@@ -48,6 +48,8 @@ public interface AddNetworkTargetsProps {
     public fun targetGroupName(targetGroupName: String)
 
     public fun targets(targets: List<INetworkLoadBalancerTarget>)
+
+    public fun targets(vararg targets: INetworkLoadBalancerTarget)
   }
 
   private class BuilderImpl : Builder {
@@ -91,6 +93,9 @@ public interface AddNetworkTargetsProps {
     override fun targets(targets: List<INetworkLoadBalancerTarget>) {
       cdkBuilder.targets(targets.map(INetworkLoadBalancerTarget::unwrap))
     }
+
+    override fun targets(vararg targets: INetworkLoadBalancerTarget): Unit =
+        targets(targets.toList())
 
     public fun build():
         software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkTargetsProps =

@@ -30,12 +30,14 @@ public open class BucketDeployment internal constructor(
 
   public open fun deployedBucket(): IBucket = unwrap(this).getDeployedBucket().let(IBucket::wrap)
 
-  public open fun objectKeys(): List<String> = unwrap(this).getObjectKeys() ?: emptyList()
+  public open fun objectKeys(): List<String> = unwrap(this).getObjectKeys()
 
   public interface Builder {
     public fun accessControl(accessControl: BucketAccessControl)
 
     public fun cacheControl(cacheControl: List<CacheControl>)
+
+    public fun cacheControl(vararg cacheControl: CacheControl)
 
     public fun contentDisposition(contentDisposition: String)
 
@@ -53,15 +55,21 @@ public open class BucketDeployment internal constructor(
 
     public fun distributionPaths(distributionPaths: List<String>)
 
+    public fun distributionPaths(vararg distributionPaths: String)
+
     public fun ephemeralStorageSize(ephemeralStorageSize: Size)
 
     public fun exclude(exclude: List<String>)
+
+    public fun exclude(vararg exclude: String)
 
     public fun expires(expires: Expiration)
 
     public fun extract(extract: Boolean)
 
     public fun include(include: List<String>)
+
+    public fun include(vararg include: String)
 
     public fun logGroup(logGroup: ILogGroup)
 
@@ -86,6 +94,8 @@ public open class BucketDeployment internal constructor(
     public fun signContent(signContent: Boolean)
 
     public fun sources(sources: List<ISource>)
+
+    public fun sources(vararg sources: ISource)
 
     public fun storageClass(storageClass: StorageClass)
 
@@ -116,6 +126,9 @@ public open class BucketDeployment internal constructor(
     override fun cacheControl(cacheControl: List<CacheControl>) {
       cdkBuilder.cacheControl(cacheControl.map(CacheControl::unwrap))
     }
+
+    override fun cacheControl(vararg cacheControl: CacheControl): Unit =
+        cacheControl(cacheControl.toList())
 
     override fun contentDisposition(contentDisposition: String) {
       cdkBuilder.contentDisposition(contentDisposition)
@@ -149,6 +162,9 @@ public open class BucketDeployment internal constructor(
       cdkBuilder.distributionPaths(distributionPaths)
     }
 
+    override fun distributionPaths(vararg distributionPaths: String): Unit =
+        distributionPaths(distributionPaths.toList())
+
     override fun ephemeralStorageSize(ephemeralStorageSize: Size) {
       cdkBuilder.ephemeralStorageSize(ephemeralStorageSize.let(Size::unwrap))
     }
@@ -156,6 +172,8 @@ public open class BucketDeployment internal constructor(
     override fun exclude(exclude: List<String>) {
       cdkBuilder.exclude(exclude)
     }
+
+    override fun exclude(vararg exclude: String): Unit = exclude(exclude.toList())
 
     override fun expires(expires: Expiration) {
       cdkBuilder.expires(expires.let(Expiration::unwrap))
@@ -168,6 +186,8 @@ public open class BucketDeployment internal constructor(
     override fun include(include: List<String>) {
       cdkBuilder.include(include)
     }
+
+    override fun include(vararg include: String): Unit = include(include.toList())
 
     override fun logGroup(logGroup: ILogGroup) {
       cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
@@ -217,6 +237,8 @@ public open class BucketDeployment internal constructor(
     override fun sources(sources: List<ISource>) {
       cdkBuilder.sources(sources.map(ISource::unwrap))
     }
+
+    override fun sources(vararg sources: ISource): Unit = sources(sources.toList())
 
     override fun storageClass(storageClass: StorageClass) {
       cdkBuilder.storageClass(storageClass.let(StorageClass::unwrap))

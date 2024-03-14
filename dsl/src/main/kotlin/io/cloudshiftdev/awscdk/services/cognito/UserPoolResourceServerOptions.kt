@@ -17,6 +17,8 @@ public interface UserPoolResourceServerOptions {
 
     public fun scopes(scopes: List<ResourceServerScope>)
 
+    public fun scopes(vararg scopes: ResourceServerScope)
+
     public fun userPoolResourceServerName(userPoolResourceServerName: String)
   }
 
@@ -32,6 +34,8 @@ public interface UserPoolResourceServerOptions {
     override fun scopes(scopes: List<ResourceServerScope>) {
       cdkBuilder.scopes(scopes.map(ResourceServerScope::unwrap))
     }
+
+    override fun scopes(vararg scopes: ResourceServerScope): Unit = scopes(scopes.toList())
 
     override fun userPoolResourceServerName(userPoolResourceServerName: String) {
       cdkBuilder.userPoolResourceServerName(userPoolResourceServerName)

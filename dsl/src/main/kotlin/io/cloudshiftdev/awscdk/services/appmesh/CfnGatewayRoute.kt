@@ -83,6 +83,8 @@ public open class CfnGatewayRoute internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun virtualGatewayName(): String = unwrap(this).getVirtualGatewayName()
 
   public open fun virtualGatewayName(`value`: String) {
@@ -105,6 +107,8 @@ public open class CfnGatewayRoute internal constructor(
     public fun spec(spec: GatewayRouteSpecProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun virtualGatewayName(virtualGatewayName: String)
   }
@@ -144,6 +148,8 @@ public open class CfnGatewayRoute internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun virtualGatewayName(virtualGatewayName: String) {
       cdkBuilder.virtualGatewayName(virtualGatewayName)
@@ -193,6 +199,8 @@ public open class CfnGatewayRoute internal constructor(
 
       public fun headers(headers: List<Any>)
 
+      public fun headers(vararg headers: Any)
+
       public fun hostname(hostname: IResolvable)
 
       public fun hostname(hostname: GatewayRouteHostnameMatchProperty)
@@ -218,6 +226,8 @@ public open class CfnGatewayRoute internal constructor(
       public fun queryParameters(queryParameters: IResolvable)
 
       public fun queryParameters(queryParameters: List<Any>)
+
+      public fun queryParameters(vararg queryParameters: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -233,6 +243,8 @@ public open class CfnGatewayRoute internal constructor(
       override fun headers(headers: List<Any>) {
         cdkBuilder.headers(headers)
       }
+
+      override fun headers(vararg headers: Any): Unit = headers(headers.toList())
 
       override fun hostname(hostname: IResolvable) {
         cdkBuilder.hostname(hostname.let(IResolvable::unwrap))
@@ -279,6 +291,9 @@ public open class CfnGatewayRoute internal constructor(
       override fun queryParameters(queryParameters: List<Any>) {
         cdkBuilder.queryParameters(queryParameters)
       }
+
+      override fun queryParameters(vararg queryParameters: Any): Unit =
+          queryParameters(queryParameters.toList())
 
       public fun build():
           software.amazon.awscdk.services.appmesh.CfnGatewayRoute.HttpGatewayRouteMatchProperty =
@@ -980,6 +995,8 @@ public open class CfnGatewayRoute internal constructor(
 
       public fun metadata(metadata: List<Any>)
 
+      public fun metadata(vararg metadata: Any)
+
       public fun port(port: Number)
 
       public fun serviceName(serviceName: String)
@@ -1011,6 +1028,8 @@ public open class CfnGatewayRoute internal constructor(
       override fun metadata(metadata: List<Any>) {
         cdkBuilder.metadata(metadata)
       }
+
+      override fun metadata(vararg metadata: Any): Unit = metadata(metadata.toList())
 
       override fun port(port: Number) {
         cdkBuilder.port(port)

@@ -15,6 +15,8 @@ public interface AuthorizationConfig {
   public interface Builder {
     public fun additionalAuthorizationModes(additionalAuthorizationModes: List<AuthorizationMode>)
 
+    public fun additionalAuthorizationModes(vararg additionalAuthorizationModes: AuthorizationMode)
+
     public fun defaultAuthorization(defaultAuthorization: AuthorizationMode)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -30,6 +32,10 @@ public interface AuthorizationConfig {
         fun additionalAuthorizationModes(additionalAuthorizationModes: List<AuthorizationMode>) {
       cdkBuilder.additionalAuthorizationModes(additionalAuthorizationModes.map(AuthorizationMode::unwrap))
     }
+
+    override fun additionalAuthorizationModes(vararg
+        additionalAuthorizationModes: AuthorizationMode): Unit =
+        additionalAuthorizationModes(additionalAuthorizationModes.toList())
 
     override fun defaultAuthorization(defaultAuthorization: AuthorizationMode) {
       cdkBuilder.defaultAuthorization(defaultAuthorization.let(AuthorizationMode::unwrap))

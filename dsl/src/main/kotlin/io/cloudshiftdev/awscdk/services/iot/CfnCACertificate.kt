@@ -86,6 +86,8 @@ public open class CfnCACertificate internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun verificationCertificatePem(): String? =
       unwrap(this).getVerificationCertificatePem()
 
@@ -115,6 +117,8 @@ public open class CfnCACertificate internal constructor(
     public fun status(status: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun verificationCertificatePem(verificationCertificatePem: String)
   }
@@ -167,6 +171,8 @@ public open class CfnCACertificate internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun verificationCertificatePem(verificationCertificatePem: String) {
       cdkBuilder.verificationCertificatePem(verificationCertificatePem)

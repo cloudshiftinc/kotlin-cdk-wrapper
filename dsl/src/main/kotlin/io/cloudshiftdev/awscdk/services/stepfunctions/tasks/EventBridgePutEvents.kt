@@ -30,6 +30,8 @@ public open class EventBridgePutEvents internal constructor(
 
     public fun entries(entries: List<EventBridgePutEventsEntry>)
 
+    public fun entries(vararg entries: EventBridgePutEventsEntry)
+
     @Deprecated(message = "deprecated in CDK")
     public fun heartbeat(heartbeat: Duration)
 
@@ -78,6 +80,9 @@ public open class EventBridgePutEvents internal constructor(
     override fun entries(entries: List<EventBridgePutEventsEntry>) {
       cdkBuilder.entries(entries.map(EventBridgePutEventsEntry::unwrap))
     }
+
+    override fun entries(vararg entries: EventBridgePutEventsEntry): Unit =
+        entries(entries.toList())
 
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {

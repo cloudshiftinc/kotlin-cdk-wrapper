@@ -134,6 +134,8 @@ public open class CfnLoggerDefinition internal constructor(
       public fun loggers(loggers: IResolvable)
 
       public fun loggers(loggers: List<Any>)
+
+      public fun loggers(vararg loggers: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -149,6 +151,8 @@ public open class CfnLoggerDefinition internal constructor(
       override fun loggers(loggers: List<Any>) {
         cdkBuilder.loggers(loggers)
       }
+
+      override fun loggers(vararg loggers: Any): Unit = loggers(loggers.toList())
 
       public fun build():
           software.amazon.awscdk.services.greengrass.CfnLoggerDefinition.LoggerDefinitionVersionProperty

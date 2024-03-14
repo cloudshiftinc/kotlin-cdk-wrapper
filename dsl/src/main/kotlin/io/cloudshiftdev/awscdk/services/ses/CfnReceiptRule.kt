@@ -476,6 +476,8 @@ public open class CfnReceiptRule internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun enabled(enabled: Boolean)
 
       public fun enabled(enabled: IResolvable)
@@ -483,6 +485,8 @@ public open class CfnReceiptRule internal constructor(
       public fun name(name: String)
 
       public fun recipients(recipients: List<String>)
+
+      public fun recipients(vararg recipients: String)
 
       public fun scanEnabled(scanEnabled: Boolean)
 
@@ -504,6 +508,8 @@ public open class CfnReceiptRule internal constructor(
         cdkBuilder.actions(actions)
       }
 
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
+
       override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
@@ -519,6 +525,8 @@ public open class CfnReceiptRule internal constructor(
       override fun recipients(recipients: List<String>) {
         cdkBuilder.recipients(recipients)
       }
+
+      override fun recipients(vararg recipients: String): Unit = recipients(recipients.toList())
 
       override fun scanEnabled(scanEnabled: Boolean) {
         cdkBuilder.scanEnabled(scanEnabled)

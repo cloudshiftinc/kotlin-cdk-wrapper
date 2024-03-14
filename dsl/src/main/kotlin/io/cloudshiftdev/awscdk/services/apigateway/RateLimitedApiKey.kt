@@ -34,6 +34,8 @@ public open class RateLimitedApiKey internal constructor(
 
     public fun apiStages(apiStages: List<UsagePlanPerApiStage>)
 
+    public fun apiStages(vararg apiStages: UsagePlanPerApiStage)
+
     public fun customerId(customerId: String)
 
     public fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions)
@@ -70,7 +72,12 @@ public open class RateLimitedApiKey internal constructor(
     @Deprecated(message = "deprecated in CDK")
     public fun resources(resources: List<IRestApi>)
 
+    @Deprecated(message = "deprecated in CDK")
+    public fun resources(vararg resources: IRestApi)
+
     public fun stages(stages: List<IStage>)
+
+    public fun stages(vararg stages: IStage)
 
     public fun throttle(throttle: ThrottleSettings)
 
@@ -95,6 +102,9 @@ public open class RateLimitedApiKey internal constructor(
     override fun apiStages(apiStages: List<UsagePlanPerApiStage>) {
       cdkBuilder.apiStages(apiStages.map(UsagePlanPerApiStage::unwrap))
     }
+
+    override fun apiStages(vararg apiStages: UsagePlanPerApiStage): Unit =
+        apiStages(apiStages.toList())
 
     override fun customerId(customerId: String) {
       cdkBuilder.customerId(customerId)
@@ -153,9 +163,14 @@ public open class RateLimitedApiKey internal constructor(
       cdkBuilder.resources(resources.map(IRestApi::unwrap))
     }
 
+    @Deprecated(message = "deprecated in CDK")
+    override fun resources(vararg resources: IRestApi): Unit = resources(resources.toList())
+
     override fun stages(stages: List<IStage>) {
       cdkBuilder.stages(stages.map(IStage::unwrap))
     }
+
+    override fun stages(vararg stages: IStage): Unit = stages(stages.toList())
 
     override fun throttle(throttle: ThrottleSettings) {
       cdkBuilder.throttle(throttle.let(ThrottleSettings::unwrap))

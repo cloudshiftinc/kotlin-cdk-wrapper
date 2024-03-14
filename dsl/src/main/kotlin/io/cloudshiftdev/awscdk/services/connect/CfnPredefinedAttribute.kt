@@ -119,6 +119,8 @@ public open class CfnPredefinedAttribute internal constructor(
 
     public interface Builder {
       public fun stringList(stringList: List<String>)
+
+      public fun stringList(vararg stringList: String)
     }
 
     private class BuilderImpl : Builder {
@@ -129,6 +131,8 @@ public open class CfnPredefinedAttribute internal constructor(
       override fun stringList(stringList: List<String>) {
         cdkBuilder.stringList(stringList)
       }
+
+      override fun stringList(vararg stringList: String): Unit = stringList(stringList.toList())
 
       public fun build():
           software.amazon.awscdk.services.connect.CfnPredefinedAttribute.ValuesProperty =

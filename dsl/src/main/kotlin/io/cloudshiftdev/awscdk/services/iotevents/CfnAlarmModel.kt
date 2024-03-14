@@ -109,6 +109,8 @@ public open class CfnAlarmModel internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun alarmCapabilities(alarmCapabilities: IResolvable)
 
@@ -145,6 +147,8 @@ public open class CfnAlarmModel internal constructor(
     public fun severity(severity: Number)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -216,6 +220,8 @@ public open class CfnAlarmModel internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.iotevents.CfnAlarmModel = cdkBuilder.build()
   }
@@ -1312,6 +1318,8 @@ public open class CfnAlarmModel internal constructor(
       public fun alarmActions(alarmActions: IResolvable)
 
       public fun alarmActions(alarmActions: List<Any>)
+
+      public fun alarmActions(vararg alarmActions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1327,6 +1335,9 @@ public open class CfnAlarmModel internal constructor(
       override fun alarmActions(alarmActions: List<Any>) {
         cdkBuilder.alarmActions(alarmActions)
       }
+
+      override fun alarmActions(vararg alarmActions: Any): Unit =
+          alarmActions(alarmActions.toList())
 
       public fun build():
           software.amazon.awscdk.services.iotevents.CfnAlarmModel.AlarmEventActionsProperty =

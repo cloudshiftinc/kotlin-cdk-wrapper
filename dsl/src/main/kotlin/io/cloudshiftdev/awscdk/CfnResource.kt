@@ -77,7 +77,7 @@ public open class CfnResource internal constructor(
 
   public open fun metadata(key: String): Any = unwrap(this).getMetadata(key)
 
-  public open fun obtainDependencies(): List<Any> = unwrap(this).obtainDependencies() ?: emptyList()
+  public open fun obtainDependencies(): List<Any> = unwrap(this).obtainDependencies()
 
   public open fun obtainResourceDependencies(): List<CfnResource> =
       unwrap(this).obtainResourceDependencies().map(CfnResource::wrap)

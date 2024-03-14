@@ -22,15 +22,21 @@ public interface SubnetSelection {
   public interface Builder {
     public fun availabilityZones(availabilityZones: List<String>)
 
+    public fun availabilityZones(vararg availabilityZones: String)
+
     public fun onePerAz(onePerAz: Boolean)
 
     public fun subnetFilters(subnetFilters: List<SubnetFilter>)
+
+    public fun subnetFilters(vararg subnetFilters: SubnetFilter)
 
     public fun subnetGroupName(subnetGroupName: String)
 
     public fun subnetType(subnetType: SubnetType)
 
     public fun subnets(subnets: List<ISubnet>)
+
+    public fun subnets(vararg subnets: ISubnet)
   }
 
   private class BuilderImpl : Builder {
@@ -41,6 +47,9 @@ public interface SubnetSelection {
       cdkBuilder.availabilityZones(availabilityZones)
     }
 
+    override fun availabilityZones(vararg availabilityZones: String): Unit =
+        availabilityZones(availabilityZones.toList())
+
     override fun onePerAz(onePerAz: Boolean) {
       cdkBuilder.onePerAz(onePerAz)
     }
@@ -48,6 +57,9 @@ public interface SubnetSelection {
     override fun subnetFilters(subnetFilters: List<SubnetFilter>) {
       cdkBuilder.subnetFilters(subnetFilters.map(SubnetFilter::unwrap))
     }
+
+    override fun subnetFilters(vararg subnetFilters: SubnetFilter): Unit =
+        subnetFilters(subnetFilters.toList())
 
     override fun subnetGroupName(subnetGroupName: String) {
       cdkBuilder.subnetGroupName(subnetGroupName)
@@ -60,6 +72,8 @@ public interface SubnetSelection {
     override fun subnets(subnets: List<ISubnet>) {
       cdkBuilder.subnets(subnets.map(ISubnet::unwrap))
     }
+
+    override fun subnets(vararg subnets: ISubnet): Unit = subnets(subnets.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.SubnetSelection = cdkBuilder.build()
   }

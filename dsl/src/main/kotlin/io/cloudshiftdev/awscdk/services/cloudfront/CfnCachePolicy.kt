@@ -105,6 +105,8 @@ public open class CfnCachePolicy internal constructor(
       public fun headerBehavior(headerBehavior: String)
 
       public fun headers(headers: List<String>)
+
+      public fun headers(vararg headers: String)
     }
 
     private class BuilderImpl : Builder {
@@ -119,6 +121,8 @@ public open class CfnCachePolicy internal constructor(
       override fun headers(headers: List<String>) {
         cdkBuilder.headers(headers)
       }
+
+      override fun headers(vararg headers: String): Unit = headers(headers.toList())
 
       public fun build():
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.HeadersConfigProperty =
@@ -312,6 +316,8 @@ public open class CfnCachePolicy internal constructor(
       public fun cookieBehavior(cookieBehavior: String)
 
       public fun cookies(cookies: List<String>)
+
+      public fun cookies(vararg cookies: String)
     }
 
     private class BuilderImpl : Builder {
@@ -326,6 +332,8 @@ public open class CfnCachePolicy internal constructor(
       override fun cookies(cookies: List<String>) {
         cdkBuilder.cookies(cookies)
       }
+
+      override fun cookies(vararg cookies: String): Unit = cookies(cookies.toList())
 
       public fun build():
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty =
@@ -370,6 +378,8 @@ public open class CfnCachePolicy internal constructor(
       public fun queryStringBehavior(queryStringBehavior: String)
 
       public fun queryStrings(queryStrings: List<String>)
+
+      public fun queryStrings(vararg queryStrings: String)
     }
 
     private class BuilderImpl : Builder {
@@ -385,6 +395,9 @@ public open class CfnCachePolicy internal constructor(
       override fun queryStrings(queryStrings: List<String>) {
         cdkBuilder.queryStrings(queryStrings)
       }
+
+      override fun queryStrings(vararg queryStrings: String): Unit =
+          queryStrings(queryStrings.toList())
 
       public fun build():
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.QueryStringsConfigProperty =

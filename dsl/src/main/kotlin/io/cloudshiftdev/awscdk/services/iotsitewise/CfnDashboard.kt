@@ -56,6 +56,8 @@ public open class CfnDashboard internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun dashboardDefinition(dashboardDefinition: String)
 
@@ -66,6 +68,8 @@ public open class CfnDashboard internal constructor(
     public fun projectId(projectId: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -94,6 +98,8 @@ public open class CfnDashboard internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.iotsitewise.CfnDashboard =
         cdkBuilder.build()

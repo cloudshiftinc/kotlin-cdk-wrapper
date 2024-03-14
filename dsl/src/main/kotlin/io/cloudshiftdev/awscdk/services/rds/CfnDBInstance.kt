@@ -48,6 +48,9 @@ public open class CfnDBInstance internal constructor(
     unwrap(this).setAssociatedRoles(__idx_ac66f0)
   }
 
+  public open fun associatedRoles(vararg __idx_ac66f0: Any): Unit =
+      associatedRoles(__idx_ac66f0.toList())
+
   public open fun attrCertificateDetailsCaIdentifier(): String =
       unwrap(this).getAttrCertificateDetailsCaIdentifier()
 
@@ -195,6 +198,9 @@ public open class CfnDBInstance internal constructor(
     unwrap(this).setDbSecurityGroups(`value`)
   }
 
+  public open fun dbSecurityGroups(vararg `value`: String): Unit =
+      dbSecurityGroups(`value`.toList())
+
   public open fun dbSnapshotIdentifier(): String? = unwrap(this).getDbSnapshotIdentifier()
 
   public open fun dbSnapshotIdentifier(`value`: String) {
@@ -255,6 +261,8 @@ public open class CfnDBInstance internal constructor(
     unwrap(this).setDomainDnsIps(`value`)
   }
 
+  public open fun domainDnsIps(vararg `value`: String): Unit = domainDnsIps(`value`.toList())
+
   public open fun domainFqdn(): String? = unwrap(this).getDomainFqdn()
 
   public open fun domainFqdn(`value`: String) {
@@ -279,6 +287,9 @@ public open class CfnDBInstance internal constructor(
   public open fun enableCloudwatchLogsExports(`value`: List<String>) {
     unwrap(this).setEnableCloudwatchLogsExports(`value`)
   }
+
+  public open fun enableCloudwatchLogsExports(vararg `value`: String): Unit =
+      enableCloudwatchLogsExports(`value`.toList())
 
   public open fun enableIamDatabaseAuthentication(): Any? =
       unwrap(this).getEnableIamDatabaseAuthentication()
@@ -476,6 +487,9 @@ public open class CfnDBInstance internal constructor(
     unwrap(this).setProcessorFeatures(__idx_ac66f0)
   }
 
+  public open fun processorFeatures(vararg __idx_ac66f0: Any): Unit =
+      processorFeatures(__idx_ac66f0.toList())
+
   public open fun promotionTier(): Number? = unwrap(this).getPromotionTier()
 
   public open fun promotionTier(`value`: Number) {
@@ -567,6 +581,8 @@ public open class CfnDBInstance internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   @Deprecated(message = "deprecated in CDK")
   public open fun tdeCredentialArn(): String? = unwrap(this).getTdeCredentialArn()
 
@@ -617,6 +633,9 @@ public open class CfnDBInstance internal constructor(
     unwrap(this).setVpcSecurityGroups(`value`)
   }
 
+  public open fun vpcSecurityGroups(vararg `value`: String): Unit =
+      vpcSecurityGroups(`value`.toList())
+
   public interface Builder {
     public fun allocatedStorage(allocatedStorage: String)
 
@@ -627,6 +646,8 @@ public open class CfnDBInstance internal constructor(
     public fun associatedRoles(associatedRoles: IResolvable)
 
     public fun associatedRoles(associatedRoles: List<Any>)
+
+    public fun associatedRoles(vararg associatedRoles: Any)
 
     public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean)
 
@@ -674,6 +695,8 @@ public open class CfnDBInstance internal constructor(
 
     public fun dbSecurityGroups(dbSecurityGroups: List<String>)
 
+    public fun dbSecurityGroups(vararg dbSecurityGroups: String)
+
     public fun dbSnapshotIdentifier(dbSnapshotIdentifier: String)
 
     public fun dbSubnetGroupName(dbSubnetGroupName: String)
@@ -696,6 +719,8 @@ public open class CfnDBInstance internal constructor(
 
     public fun domainDnsIps(domainDnsIps: List<String>)
 
+    public fun domainDnsIps(vararg domainDnsIps: String)
+
     public fun domainFqdn(domainFqdn: String)
 
     public fun domainIamRoleName(domainIamRoleName: String)
@@ -703,6 +728,8 @@ public open class CfnDBInstance internal constructor(
     public fun domainOu(domainOu: String)
 
     public fun enableCloudwatchLogsExports(enableCloudwatchLogsExports: List<String>)
+
+    public fun enableCloudwatchLogsExports(vararg enableCloudwatchLogsExports: String)
 
     public fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: Boolean)
 
@@ -776,6 +803,8 @@ public open class CfnDBInstance internal constructor(
 
     public fun processorFeatures(processorFeatures: List<Any>)
 
+    public fun processorFeatures(vararg processorFeatures: Any)
+
     public fun promotionTier(promotionTier: Number)
 
     public fun publiclyAccessible(publiclyAccessible: Boolean)
@@ -806,6 +835,8 @@ public open class CfnDBInstance internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     @Deprecated(message = "deprecated in CDK")
     public fun tdeCredentialArn(tdeCredentialArn: String)
 
@@ -823,6 +854,8 @@ public open class CfnDBInstance internal constructor(
     public fun useLatestRestorableTime(useLatestRestorableTime: IResolvable)
 
     public fun vpcSecurityGroups(vpcSecurityGroups: List<String>)
+
+    public fun vpcSecurityGroups(vararg vpcSecurityGroups: String)
   }
 
   private class BuilderImpl(
@@ -851,6 +884,9 @@ public open class CfnDBInstance internal constructor(
     override fun associatedRoles(associatedRoles: List<Any>) {
       cdkBuilder.associatedRoles(associatedRoles)
     }
+
+    override fun associatedRoles(vararg associatedRoles: Any): Unit =
+        associatedRoles(associatedRoles.toList())
 
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
@@ -942,6 +978,9 @@ public open class CfnDBInstance internal constructor(
       cdkBuilder.dbSecurityGroups(dbSecurityGroups)
     }
 
+    override fun dbSecurityGroups(vararg dbSecurityGroups: String): Unit =
+        dbSecurityGroups(dbSecurityGroups.toList())
+
     override fun dbSnapshotIdentifier(dbSnapshotIdentifier: String) {
       cdkBuilder.dbSnapshotIdentifier(dbSnapshotIdentifier)
     }
@@ -986,6 +1025,9 @@ public open class CfnDBInstance internal constructor(
       cdkBuilder.domainDnsIps(domainDnsIps)
     }
 
+    override fun domainDnsIps(vararg domainDnsIps: String): Unit =
+        domainDnsIps(domainDnsIps.toList())
+
     override fun domainFqdn(domainFqdn: String) {
       cdkBuilder.domainFqdn(domainFqdn)
     }
@@ -1001,6 +1043,9 @@ public open class CfnDBInstance internal constructor(
     override fun enableCloudwatchLogsExports(enableCloudwatchLogsExports: List<String>) {
       cdkBuilder.enableCloudwatchLogsExports(enableCloudwatchLogsExports)
     }
+
+    override fun enableCloudwatchLogsExports(vararg enableCloudwatchLogsExports: String): Unit =
+        enableCloudwatchLogsExports(enableCloudwatchLogsExports.toList())
 
     override fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: Boolean) {
       cdkBuilder.enableIamDatabaseAuthentication(enableIamDatabaseAuthentication)
@@ -1140,6 +1185,9 @@ public open class CfnDBInstance internal constructor(
       cdkBuilder.processorFeatures(processorFeatures)
     }
 
+    override fun processorFeatures(vararg processorFeatures: Any): Unit =
+        processorFeatures(processorFeatures.toList())
+
     override fun promotionTier(promotionTier: Number) {
       cdkBuilder.promotionTier(promotionTier)
     }
@@ -1200,6 +1248,8 @@ public open class CfnDBInstance internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     @Deprecated(message = "deprecated in CDK")
     override fun tdeCredentialArn(tdeCredentialArn: String) {
       cdkBuilder.tdeCredentialArn(tdeCredentialArn)
@@ -1233,6 +1283,9 @@ public open class CfnDBInstance internal constructor(
     override fun vpcSecurityGroups(vpcSecurityGroups: List<String>) {
       cdkBuilder.vpcSecurityGroups(vpcSecurityGroups)
     }
+
+    override fun vpcSecurityGroups(vararg vpcSecurityGroups: String): Unit =
+        vpcSecurityGroups(vpcSecurityGroups.toList())
 
     public fun build(): software.amazon.awscdk.services.rds.CfnDBInstance = cdkBuilder.build()
   }

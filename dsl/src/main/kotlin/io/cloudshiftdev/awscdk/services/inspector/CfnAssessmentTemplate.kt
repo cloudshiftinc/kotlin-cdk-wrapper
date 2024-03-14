@@ -39,12 +39,14 @@ public open class CfnAssessmentTemplate internal constructor(
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
-  public open fun rulesPackageArns(): List<String> = unwrap(this).getRulesPackageArns() ?:
-      emptyList()
+  public open fun rulesPackageArns(): List<String> = unwrap(this).getRulesPackageArns()
 
   public open fun rulesPackageArns(`value`: List<String>) {
     unwrap(this).setRulesPackageArns(`value`)
   }
+
+  public open fun rulesPackageArns(vararg `value`: String): Unit =
+      rulesPackageArns(`value`.toList())
 
   public open fun userAttributesForFindings(): Any? = unwrap(this).getUserAttributesForFindings()
 
@@ -56,6 +58,9 @@ public open class CfnAssessmentTemplate internal constructor(
     unwrap(this).setUserAttributesForFindings(__idx_ac66f0)
   }
 
+  public open fun userAttributesForFindings(vararg __idx_ac66f0: Any): Unit =
+      userAttributesForFindings(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun assessmentTargetArn(assessmentTargetArn: String)
 
@@ -65,9 +70,13 @@ public open class CfnAssessmentTemplate internal constructor(
 
     public fun rulesPackageArns(rulesPackageArns: List<String>)
 
+    public fun rulesPackageArns(vararg rulesPackageArns: String)
+
     public fun userAttributesForFindings(userAttributesForFindings: IResolvable)
 
     public fun userAttributesForFindings(userAttributesForFindings: List<Any>)
+
+    public fun userAttributesForFindings(vararg userAttributesForFindings: Any)
   }
 
   private class BuilderImpl(
@@ -93,6 +102,9 @@ public open class CfnAssessmentTemplate internal constructor(
       cdkBuilder.rulesPackageArns(rulesPackageArns)
     }
 
+    override fun rulesPackageArns(vararg rulesPackageArns: String): Unit =
+        rulesPackageArns(rulesPackageArns.toList())
+
     override fun userAttributesForFindings(userAttributesForFindings: IResolvable) {
       cdkBuilder.userAttributesForFindings(userAttributesForFindings.let(IResolvable::unwrap))
     }
@@ -100,6 +112,9 @@ public open class CfnAssessmentTemplate internal constructor(
     override fun userAttributesForFindings(userAttributesForFindings: List<Any>) {
       cdkBuilder.userAttributesForFindings(userAttributesForFindings)
     }
+
+    override fun userAttributesForFindings(vararg userAttributesForFindings: Any): Unit =
+        userAttributesForFindings(userAttributesForFindings.toList())
 
     public fun build(): software.amazon.awscdk.services.inspector.CfnAssessmentTemplate =
         cdkBuilder.build()

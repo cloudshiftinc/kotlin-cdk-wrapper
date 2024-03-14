@@ -16,7 +16,11 @@ public interface ProxyTargetConfig {
   public interface Builder {
     public fun dbClusters(dbClusters: List<IDatabaseCluster>)
 
+    public fun dbClusters(vararg dbClusters: IDatabaseCluster)
+
     public fun dbInstances(dbInstances: List<IDatabaseInstance>)
+
+    public fun dbInstances(vararg dbInstances: IDatabaseInstance)
 
     public fun engineFamily(engineFamily: String)
   }
@@ -29,9 +33,15 @@ public interface ProxyTargetConfig {
       cdkBuilder.dbClusters(dbClusters.map(IDatabaseCluster::unwrap))
     }
 
+    override fun dbClusters(vararg dbClusters: IDatabaseCluster): Unit =
+        dbClusters(dbClusters.toList())
+
     override fun dbInstances(dbInstances: List<IDatabaseInstance>) {
       cdkBuilder.dbInstances(dbInstances.map(IDatabaseInstance::unwrap))
     }
+
+    override fun dbInstances(vararg dbInstances: IDatabaseInstance): Unit =
+        dbInstances(dbInstances.toList())
 
     override fun engineFamily(engineFamily: String) {
       cdkBuilder.engineFamily(engineFamily)

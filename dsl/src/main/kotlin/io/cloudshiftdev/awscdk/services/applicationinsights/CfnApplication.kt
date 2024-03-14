@@ -54,6 +54,9 @@ public open class CfnApplication internal constructor(
     unwrap(this).setComponentMonitoringSettings(__idx_ac66f0)
   }
 
+  public open fun componentMonitoringSettings(vararg __idx_ac66f0: Any): Unit =
+      componentMonitoringSettings(__idx_ac66f0.toList())
+
   public open fun customComponents(): Any? = unwrap(this).getCustomComponents()
 
   public open fun customComponents(`value`: IResolvable) {
@@ -63,6 +66,9 @@ public open class CfnApplication internal constructor(
   public open fun customComponents(__idx_ac66f0: List<Any>) {
     unwrap(this).setCustomComponents(__idx_ac66f0)
   }
+
+  public open fun customComponents(vararg __idx_ac66f0: Any): Unit =
+      customComponents(__idx_ac66f0.toList())
 
   public open fun cweMonitorEnabled(): Any? = unwrap(this).getCweMonitorEnabled()
 
@@ -93,6 +99,9 @@ public open class CfnApplication internal constructor(
   public open fun logPatternSets(__idx_ac66f0: List<Any>) {
     unwrap(this).setLogPatternSets(__idx_ac66f0)
   }
+
+  public open fun logPatternSets(vararg __idx_ac66f0: Any): Unit =
+      logPatternSets(__idx_ac66f0.toList())
 
   public open fun opsCenterEnabled(): Any? = unwrap(this).getOpsCenterEnabled()
 
@@ -125,6 +134,8 @@ public open class CfnApplication internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun attachMissingPermission(attachMissingPermission: Boolean)
 
@@ -138,9 +149,13 @@ public open class CfnApplication internal constructor(
 
     public fun componentMonitoringSettings(componentMonitoringSettings: List<Any>)
 
+    public fun componentMonitoringSettings(vararg componentMonitoringSettings: Any)
+
     public fun customComponents(customComponents: IResolvable)
 
     public fun customComponents(customComponents: List<Any>)
+
+    public fun customComponents(vararg customComponents: Any)
 
     public fun cweMonitorEnabled(cweMonitorEnabled: Boolean)
 
@@ -152,6 +167,8 @@ public open class CfnApplication internal constructor(
 
     public fun logPatternSets(logPatternSets: List<Any>)
 
+    public fun logPatternSets(vararg logPatternSets: Any)
+
     public fun opsCenterEnabled(opsCenterEnabled: Boolean)
 
     public fun opsCenterEnabled(opsCenterEnabled: IResolvable)
@@ -161,6 +178,8 @@ public open class CfnApplication internal constructor(
     public fun resourceGroupName(resourceGroupName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -195,6 +214,9 @@ public open class CfnApplication internal constructor(
       cdkBuilder.componentMonitoringSettings(componentMonitoringSettings)
     }
 
+    override fun componentMonitoringSettings(vararg componentMonitoringSettings: Any): Unit =
+        componentMonitoringSettings(componentMonitoringSettings.toList())
+
     override fun customComponents(customComponents: IResolvable) {
       cdkBuilder.customComponents(customComponents.let(IResolvable::unwrap))
     }
@@ -202,6 +224,9 @@ public open class CfnApplication internal constructor(
     override fun customComponents(customComponents: List<Any>) {
       cdkBuilder.customComponents(customComponents)
     }
+
+    override fun customComponents(vararg customComponents: Any): Unit =
+        customComponents(customComponents.toList())
 
     override fun cweMonitorEnabled(cweMonitorEnabled: Boolean) {
       cdkBuilder.cweMonitorEnabled(cweMonitorEnabled)
@@ -223,6 +248,9 @@ public open class CfnApplication internal constructor(
       cdkBuilder.logPatternSets(logPatternSets)
     }
 
+    override fun logPatternSets(vararg logPatternSets: Any): Unit =
+        logPatternSets(logPatternSets.toList())
+
     override fun opsCenterEnabled(opsCenterEnabled: Boolean) {
       cdkBuilder.opsCenterEnabled(opsCenterEnabled)
     }
@@ -242,6 +270,8 @@ public open class CfnApplication internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.applicationinsights.CfnApplication =
         cdkBuilder.build()
@@ -337,6 +367,8 @@ public open class CfnApplication internal constructor(
 
       public fun logPatterns(logPatterns: List<Any>)
 
+      public fun logPatterns(vararg logPatterns: Any)
+
       public fun patternSetName(patternSetName: String)
     }
 
@@ -353,6 +385,8 @@ public open class CfnApplication internal constructor(
       override fun logPatterns(logPatterns: List<Any>) {
         cdkBuilder.logPatterns(logPatterns)
       }
+
+      override fun logPatterns(vararg logPatterns: Any): Unit = logPatterns(logPatterns.toList())
 
       override fun patternSetName(patternSetName: String) {
         cdkBuilder.patternSetName(patternSetName)
@@ -404,6 +438,8 @@ public open class CfnApplication internal constructor(
     public interface Builder {
       public fun eventLevels(eventLevels: List<String>)
 
+      public fun eventLevels(vararg eventLevels: String)
+
       public fun eventName(eventName: String)
 
       public fun logGroupName(logGroupName: String)
@@ -420,6 +456,8 @@ public open class CfnApplication internal constructor(
       override fun eventLevels(eventLevels: List<String>) {
         cdkBuilder.eventLevels(eventLevels)
       }
+
+      override fun eventLevels(vararg eventLevels: String): Unit = eventLevels(eventLevels.toList())
 
       override fun eventName(eventName: String) {
         cdkBuilder.eventName(eventName)
@@ -442,7 +480,7 @@ public open class CfnApplication internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.applicationinsights.CfnApplication.WindowsEventProperty,
     ) : WindowsEventProperty {
-      override fun eventLevels(): List<String> = unwrap(this).getEventLevels() ?: emptyList()
+      override fun eventLevels(): List<String> = unwrap(this).getEventLevels()
 
       override fun eventName(): String = unwrap(this).getEventName()
 
@@ -540,6 +578,8 @@ public open class CfnApplication internal constructor(
       public fun subComponentTypeConfigurations(subComponentTypeConfigurations: IResolvable)
 
       public fun subComponentTypeConfigurations(subComponentTypeConfigurations: List<Any>)
+
+      public fun subComponentTypeConfigurations(vararg subComponentTypeConfigurations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -569,6 +609,9 @@ public open class CfnApplication internal constructor(
       override fun subComponentTypeConfigurations(subComponentTypeConfigurations: List<Any>) {
         cdkBuilder.subComponentTypeConfigurations(subComponentTypeConfigurations)
       }
+
+      override fun subComponentTypeConfigurations(vararg subComponentTypeConfigurations: Any): Unit
+          = subComponentTypeConfigurations(subComponentTypeConfigurations.toList())
 
       public fun build():
           software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentConfigurationProperty
@@ -625,9 +668,13 @@ public open class CfnApplication internal constructor(
 
       public fun alarmMetrics(alarmMetrics: List<Any>)
 
+      public fun alarmMetrics(vararg alarmMetrics: Any)
+
       public fun alarms(alarms: IResolvable)
 
       public fun alarms(alarms: List<Any>)
+
+      public fun alarms(vararg alarms: Any)
 
       public fun haClusterPrometheusExporter(haClusterPrometheusExporter: IResolvable)
 
@@ -661,9 +708,13 @@ public open class CfnApplication internal constructor(
 
       public fun logs(logs: List<Any>)
 
+      public fun logs(vararg logs: Any)
+
       public fun windowsEvents(windowsEvents: IResolvable)
 
       public fun windowsEvents(windowsEvents: List<Any>)
+
+      public fun windowsEvents(vararg windowsEvents: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -680,6 +731,9 @@ public open class CfnApplication internal constructor(
         cdkBuilder.alarmMetrics(alarmMetrics)
       }
 
+      override fun alarmMetrics(vararg alarmMetrics: Any): Unit =
+          alarmMetrics(alarmMetrics.toList())
+
       override fun alarms(alarms: IResolvable) {
         cdkBuilder.alarms(alarms.let(IResolvable::unwrap))
       }
@@ -687,6 +741,8 @@ public open class CfnApplication internal constructor(
       override fun alarms(alarms: List<Any>) {
         cdkBuilder.alarms(alarms)
       }
+
+      override fun alarms(vararg alarms: Any): Unit = alarms(alarms.toList())
 
       override fun haClusterPrometheusExporter(haClusterPrometheusExporter: IResolvable) {
         cdkBuilder.haClusterPrometheusExporter(haClusterPrometheusExporter.let(IResolvable::unwrap))
@@ -740,6 +796,8 @@ public open class CfnApplication internal constructor(
         cdkBuilder.logs(logs)
       }
 
+      override fun logs(vararg logs: Any): Unit = logs(logs.toList())
+
       override fun windowsEvents(windowsEvents: IResolvable) {
         cdkBuilder.windowsEvents(windowsEvents.let(IResolvable::unwrap))
       }
@@ -747,6 +805,9 @@ public open class CfnApplication internal constructor(
       override fun windowsEvents(windowsEvents: List<Any>) {
         cdkBuilder.windowsEvents(windowsEvents)
       }
+
+      override fun windowsEvents(vararg windowsEvents: Any): Unit =
+          windowsEvents(windowsEvents.toList())
 
       public fun build():
           software.amazon.awscdk.services.applicationinsights.CfnApplication.ConfigurationDetailsProperty
@@ -805,13 +866,19 @@ public open class CfnApplication internal constructor(
 
       public fun alarmMetrics(alarmMetrics: List<Any>)
 
+      public fun alarmMetrics(vararg alarmMetrics: Any)
+
       public fun logs(logs: IResolvable)
 
       public fun logs(logs: List<Any>)
 
+      public fun logs(vararg logs: Any)
+
       public fun windowsEvents(windowsEvents: IResolvable)
 
       public fun windowsEvents(windowsEvents: List<Any>)
+
+      public fun windowsEvents(vararg windowsEvents: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -828,6 +895,9 @@ public open class CfnApplication internal constructor(
         cdkBuilder.alarmMetrics(alarmMetrics)
       }
 
+      override fun alarmMetrics(vararg alarmMetrics: Any): Unit =
+          alarmMetrics(alarmMetrics.toList())
+
       override fun logs(logs: IResolvable) {
         cdkBuilder.logs(logs.let(IResolvable::unwrap))
       }
@@ -836,6 +906,8 @@ public open class CfnApplication internal constructor(
         cdkBuilder.logs(logs)
       }
 
+      override fun logs(vararg logs: Any): Unit = logs(logs.toList())
+
       override fun windowsEvents(windowsEvents: IResolvable) {
         cdkBuilder.windowsEvents(windowsEvents.let(IResolvable::unwrap))
       }
@@ -843,6 +915,9 @@ public open class CfnApplication internal constructor(
       override fun windowsEvents(windowsEvents: List<Any>) {
         cdkBuilder.windowsEvents(windowsEvents)
       }
+
+      override fun windowsEvents(vararg windowsEvents: Any): Unit =
+          windowsEvents(windowsEvents.toList())
 
       public fun build():
           software.amazon.awscdk.services.applicationinsights.CfnApplication.SubComponentConfigurationDetailsProperty
@@ -1128,6 +1203,8 @@ public open class CfnApplication internal constructor(
       public fun componentName(componentName: String)
 
       public fun resourceList(resourceList: List<String>)
+
+      public fun resourceList(vararg resourceList: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1144,6 +1221,9 @@ public open class CfnApplication internal constructor(
         cdkBuilder.resourceList(resourceList)
       }
 
+      override fun resourceList(vararg resourceList: String): Unit =
+          resourceList(resourceList.toList())
+
       public fun build():
           software.amazon.awscdk.services.applicationinsights.CfnApplication.CustomComponentProperty
           = cdkBuilder.build()
@@ -1155,7 +1235,7 @@ public open class CfnApplication internal constructor(
     ) : CustomComponentProperty {
       override fun componentName(): String = unwrap(this).getComponentName()
 
-      override fun resourceList(): List<String> = unwrap(this).getResourceList() ?: emptyList()
+      override fun resourceList(): List<String> = unwrap(this).getResourceList()
     }
 
     public companion object {

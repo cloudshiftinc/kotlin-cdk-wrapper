@@ -45,6 +45,9 @@ public open class CfnHealthCheck internal constructor(
     unwrap(this).setHealthCheckTags(__idx_ac66f0)
   }
 
+  public open fun healthCheckTags(vararg __idx_ac66f0: Any): Unit =
+      healthCheckTags(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -61,6 +64,8 @@ public open class CfnHealthCheck internal constructor(
     public fun healthCheckTags(healthCheckTags: IResolvable)
 
     public fun healthCheckTags(healthCheckTags: List<Any>)
+
+    public fun healthCheckTags(vararg healthCheckTags: Any)
   }
 
   private class BuilderImpl(
@@ -90,6 +95,9 @@ public open class CfnHealthCheck internal constructor(
     override fun healthCheckTags(healthCheckTags: List<Any>) {
       cdkBuilder.healthCheckTags(healthCheckTags)
     }
+
+    override fun healthCheckTags(vararg healthCheckTags: Any): Unit =
+        healthCheckTags(healthCheckTags.toList())
 
     public fun build(): software.amazon.awscdk.services.route53.CfnHealthCheck = cdkBuilder.build()
   }
@@ -279,6 +287,8 @@ public open class CfnHealthCheck internal constructor(
 
       public fun childHealthChecks(childHealthChecks: List<String>)
 
+      public fun childHealthChecks(vararg childHealthChecks: String)
+
       public fun enableSni(enableSni: Boolean)
 
       public fun enableSni(enableSni: IResolvable)
@@ -304,6 +314,8 @@ public open class CfnHealthCheck internal constructor(
       public fun port(port: Number)
 
       public fun regions(regions: List<String>)
+
+      public fun regions(vararg regions: String)
 
       public fun requestInterval(requestInterval: Number)
 
@@ -337,6 +349,9 @@ public open class CfnHealthCheck internal constructor(
       override fun childHealthChecks(childHealthChecks: List<String>) {
         cdkBuilder.childHealthChecks(childHealthChecks)
       }
+
+      override fun childHealthChecks(vararg childHealthChecks: String): Unit =
+          childHealthChecks(childHealthChecks.toList())
 
       override fun enableSni(enableSni: Boolean) {
         cdkBuilder.enableSni(enableSni)
@@ -389,6 +404,8 @@ public open class CfnHealthCheck internal constructor(
       override fun regions(regions: List<String>) {
         cdkBuilder.regions(regions)
       }
+
+      override fun regions(vararg regions: String): Unit = regions(regions.toList())
 
       override fun requestInterval(requestInterval: Number) {
         cdkBuilder.requestInterval(requestInterval)

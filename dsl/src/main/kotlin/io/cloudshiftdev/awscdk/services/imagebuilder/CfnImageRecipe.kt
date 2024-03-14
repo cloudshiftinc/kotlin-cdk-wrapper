@@ -53,6 +53,9 @@ public open class CfnImageRecipe internal constructor(
     unwrap(this).setBlockDeviceMappings(__idx_ac66f0)
   }
 
+  public open fun blockDeviceMappings(vararg __idx_ac66f0: Any): Unit =
+      blockDeviceMappings(__idx_ac66f0.toList())
+
   public open fun components(): Any = unwrap(this).getComponents()
 
   public open fun components(`value`: IResolvable) {
@@ -62,6 +65,8 @@ public open class CfnImageRecipe internal constructor(
   public open fun components(__idx_ac66f0: List<Any>) {
     unwrap(this).setComponents(__idx_ac66f0)
   }
+
+  public open fun components(vararg __idx_ac66f0: Any): Unit = components(__idx_ac66f0.toList())
 
   public open fun description(): String? = unwrap(this).getDescription()
 
@@ -120,9 +125,13 @@ public open class CfnImageRecipe internal constructor(
 
     public fun blockDeviceMappings(blockDeviceMappings: List<Any>)
 
+    public fun blockDeviceMappings(vararg blockDeviceMappings: Any)
+
     public fun components(components: IResolvable)
 
     public fun components(components: List<Any>)
+
+    public fun components(vararg components: Any)
 
     public fun description(description: String)
 
@@ -168,6 +177,9 @@ public open class CfnImageRecipe internal constructor(
       cdkBuilder.blockDeviceMappings(blockDeviceMappings)
     }
 
+    override fun blockDeviceMappings(vararg blockDeviceMappings: Any): Unit =
+        blockDeviceMappings(blockDeviceMappings.toList())
+
     override fun components(components: IResolvable) {
       cdkBuilder.components(components.let(IResolvable::unwrap))
     }
@@ -175,6 +187,8 @@ public open class CfnImageRecipe internal constructor(
     override fun components(components: List<Any>) {
       cdkBuilder.components(components)
     }
+
+    override fun components(vararg components: Any): Unit = components(components.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -234,6 +248,8 @@ public open class CfnImageRecipe internal constructor(
       public fun name(name: String)
 
       public fun `value`(`value`: List<String>)
+
+      public fun `value`(vararg `value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -250,6 +266,8 @@ public open class CfnImageRecipe internal constructor(
         cdkBuilder.`value`(`value`)
       }
 
+      override fun `value`(vararg `value`: String): Unit = `value`(`value`.toList())
+
       public fun build():
           software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentParameterProperty =
           cdkBuilder.build()
@@ -261,7 +279,7 @@ public open class CfnImageRecipe internal constructor(
     ) : ComponentParameterProperty {
       override fun name(): String = unwrap(this).getName()
 
-      override fun `value`(): List<String> = unwrap(this).getValue() ?: emptyList()
+      override fun `value`(): List<String> = unwrap(this).getValue()
     }
 
     public companion object {
@@ -372,6 +390,8 @@ public open class CfnImageRecipe internal constructor(
       public fun parameters(parameters: IResolvable)
 
       public fun parameters(parameters: List<Any>)
+
+      public fun parameters(vararg parameters: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -391,6 +411,8 @@ public open class CfnImageRecipe internal constructor(
       override fun parameters(parameters: List<Any>) {
         cdkBuilder.parameters(parameters)
       }
+
+      override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
 
       public fun build():
           software.amazon.awscdk.services.imagebuilder.CfnImageRecipe.ComponentConfigurationProperty

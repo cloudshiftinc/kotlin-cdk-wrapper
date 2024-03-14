@@ -30,6 +30,8 @@ public open class CfnDisk internal constructor(
     unwrap(this).setAddOns(__idx_ac66f0)
   }
 
+  public open fun addOns(vararg __idx_ac66f0: Any): Unit = addOns(__idx_ac66f0.toList())
+
   public open fun attrAttachedTo(): String = unwrap(this).getAttrAttachedTo()
 
   public open fun attrAttachmentState(): String = unwrap(this).getAttrAttachmentState()
@@ -100,10 +102,14 @@ public open class CfnDisk internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun addOns(addOns: IResolvable)
 
     public fun addOns(addOns: List<Any>)
+
+    public fun addOns(vararg addOns: Any)
 
     public fun availabilityZone(availabilityZone: String)
 
@@ -120,6 +126,8 @@ public open class CfnDisk internal constructor(
     public fun sizeInGb(sizeInGb: Number)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -136,6 +144,8 @@ public open class CfnDisk internal constructor(
     override fun addOns(addOns: List<Any>) {
       cdkBuilder.addOns(addOns)
     }
+
+    override fun addOns(vararg addOns: Any): Unit = addOns(addOns.toList())
 
     override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
@@ -165,6 +175,8 @@ public open class CfnDisk internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.lightsail.CfnDisk = cdkBuilder.build()
   }

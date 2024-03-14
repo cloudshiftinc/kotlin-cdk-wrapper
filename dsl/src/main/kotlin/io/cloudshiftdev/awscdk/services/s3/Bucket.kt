@@ -94,6 +94,8 @@ public open class Bucket internal constructor(
 
     public fun cors(cors: List<CorsRule>)
 
+    public fun cors(vararg cors: CorsRule)
+
     public fun encryption(encryption: BucketEncryption)
 
     public fun encryptionKey(encryptionKey: IKey)
@@ -105,11 +107,20 @@ public open class Bucket internal constructor(
     public
         fun intelligentTieringConfigurations(intelligentTieringConfigurations: List<IntelligentTieringConfiguration>)
 
+    public fun intelligentTieringConfigurations(vararg
+        intelligentTieringConfigurations: IntelligentTieringConfiguration)
+
     public fun inventories(inventories: List<Inventory>)
+
+    public fun inventories(vararg inventories: Inventory)
 
     public fun lifecycleRules(lifecycleRules: List<LifecycleRule>)
 
+    public fun lifecycleRules(vararg lifecycleRules: LifecycleRule)
+
     public fun metrics(metrics: List<BucketMetrics>)
+
+    public fun metrics(vararg metrics: BucketMetrics)
 
     public fun minimumTlsVersion(minimumTlsVersion: Number)
 
@@ -146,6 +157,8 @@ public open class Bucket internal constructor(
     public fun websiteRedirect(websiteRedirect: RedirectTarget.Builder.() -> Unit)
 
     public fun websiteRoutingRules(websiteRoutingRules: List<RoutingRule>)
+
+    public fun websiteRoutingRules(vararg websiteRoutingRules: RoutingRule)
   }
 
   private class BuilderImpl(
@@ -184,6 +197,8 @@ public open class Bucket internal constructor(
       cdkBuilder.cors(cors.map(CorsRule::unwrap))
     }
 
+    override fun cors(vararg cors: CorsRule): Unit = cors(cors.toList())
+
     override fun encryption(encryption: BucketEncryption) {
       cdkBuilder.encryption(encryption.let(BucketEncryption::unwrap))
     }
@@ -205,17 +220,29 @@ public open class Bucket internal constructor(
       cdkBuilder.intelligentTieringConfigurations(intelligentTieringConfigurations.map(IntelligentTieringConfiguration::unwrap))
     }
 
+    override fun intelligentTieringConfigurations(vararg
+        intelligentTieringConfigurations: IntelligentTieringConfiguration): Unit =
+        intelligentTieringConfigurations(intelligentTieringConfigurations.toList())
+
     override fun inventories(inventories: List<Inventory>) {
       cdkBuilder.inventories(inventories.map(Inventory::unwrap))
     }
+
+    override fun inventories(vararg inventories: Inventory): Unit =
+        inventories(inventories.toList())
 
     override fun lifecycleRules(lifecycleRules: List<LifecycleRule>) {
       cdkBuilder.lifecycleRules(lifecycleRules.map(LifecycleRule::unwrap))
     }
 
+    override fun lifecycleRules(vararg lifecycleRules: LifecycleRule): Unit =
+        lifecycleRules(lifecycleRules.toList())
+
     override fun metrics(metrics: List<BucketMetrics>) {
       cdkBuilder.metrics(metrics.map(BucketMetrics::unwrap))
     }
+
+    override fun metrics(vararg metrics: BucketMetrics): Unit = metrics(metrics.toList())
 
     override fun minimumTlsVersion(minimumTlsVersion: Number) {
       cdkBuilder.minimumTlsVersion(minimumTlsVersion)
@@ -285,6 +312,9 @@ public open class Bucket internal constructor(
     override fun websiteRoutingRules(websiteRoutingRules: List<RoutingRule>) {
       cdkBuilder.websiteRoutingRules(websiteRoutingRules.map(RoutingRule::unwrap))
     }
+
+    override fun websiteRoutingRules(vararg websiteRoutingRules: RoutingRule): Unit =
+        websiteRoutingRules(websiteRoutingRules.toList())
 
     public fun build(): software.amazon.awscdk.services.s3.Bucket = cdkBuilder.build()
   }

@@ -13,6 +13,8 @@ public interface AddRuleProps {
   public interface Builder {
     public fun conditions(conditions: List<ListenerCondition>)
 
+    public fun conditions(vararg conditions: ListenerCondition)
+
     public fun priority(priority: Number)
   }
 
@@ -24,6 +26,9 @@ public interface AddRuleProps {
     override fun conditions(conditions: List<ListenerCondition>) {
       cdkBuilder.conditions(conditions.map(ListenerCondition::unwrap))
     }
+
+    override fun conditions(vararg conditions: ListenerCondition): Unit =
+        conditions(conditions.toList())
 
     override fun priority(priority: Number) {
       cdkBuilder.priority(priority)

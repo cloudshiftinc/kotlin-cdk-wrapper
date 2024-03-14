@@ -49,6 +49,9 @@ public open class CfnRepository internal constructor(
     unwrap(this).setExternalConnections(`value`)
   }
 
+  public open fun externalConnections(vararg `value`: String): Unit =
+      externalConnections(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -74,11 +77,15 @@ public open class CfnRepository internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun upstreams(): List<String> = unwrap(this).getUpstreams() ?: emptyList()
 
   public open fun upstreams(`value`: List<String>) {
     unwrap(this).setUpstreams(`value`)
   }
+
+  public open fun upstreams(vararg `value`: String): Unit = upstreams(`value`.toList())
 
   public interface Builder {
     public fun description(description: String)
@@ -89,13 +96,19 @@ public open class CfnRepository internal constructor(
 
     public fun externalConnections(externalConnections: List<String>)
 
+    public fun externalConnections(vararg externalConnections: String)
+
     public fun permissionsPolicyDocument(permissionsPolicyDocument: Any)
 
     public fun repositoryName(repositoryName: String)
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun upstreams(upstreams: List<String>)
+
+    public fun upstreams(vararg upstreams: String)
   }
 
   private class BuilderImpl(
@@ -121,6 +134,9 @@ public open class CfnRepository internal constructor(
       cdkBuilder.externalConnections(externalConnections)
     }
 
+    override fun externalConnections(vararg externalConnections: String): Unit =
+        externalConnections(externalConnections.toList())
+
     override fun permissionsPolicyDocument(permissionsPolicyDocument: Any) {
       cdkBuilder.permissionsPolicyDocument(permissionsPolicyDocument)
     }
@@ -133,9 +149,13 @@ public open class CfnRepository internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun upstreams(upstreams: List<String>) {
       cdkBuilder.upstreams(upstreams)
     }
+
+    override fun upstreams(vararg upstreams: String): Unit = upstreams(upstreams.toList())
 
     public fun build(): software.amazon.awscdk.services.codeartifact.CfnRepository =
         cdkBuilder.build()

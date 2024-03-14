@@ -38,6 +38,9 @@ public open class CfnStreamProcessor internal constructor(
     unwrap(this).setBoundingBoxRegionsOfInterest(__idx_ac66f0)
   }
 
+  public open fun boundingBoxRegionsOfInterest(vararg __idx_ac66f0: Any): Unit =
+      boundingBoxRegionsOfInterest(__idx_ac66f0.toList())
+
   public open fun connectedHomeSettings(): Any? = unwrap(this).getConnectedHomeSettings()
 
   public open fun connectedHomeSettings(`value`: IResolvable) {
@@ -180,10 +183,14 @@ public open class CfnStreamProcessor internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun boundingBoxRegionsOfInterest(boundingBoxRegionsOfInterest: IResolvable)
 
     public fun boundingBoxRegionsOfInterest(boundingBoxRegionsOfInterest: List<Any>)
+
+    public fun boundingBoxRegionsOfInterest(vararg boundingBoxRegionsOfInterest: Any)
 
     public fun connectedHomeSettings(connectedHomeSettings: IResolvable)
 
@@ -253,6 +260,8 @@ public open class CfnStreamProcessor internal constructor(
     public fun s3Destination(s3Destination: S3DestinationProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -269,6 +278,9 @@ public open class CfnStreamProcessor internal constructor(
     override fun boundingBoxRegionsOfInterest(boundingBoxRegionsOfInterest: List<Any>) {
       cdkBuilder.boundingBoxRegionsOfInterest(boundingBoxRegionsOfInterest)
     }
+
+    override fun boundingBoxRegionsOfInterest(vararg boundingBoxRegionsOfInterest: Any): Unit =
+        boundingBoxRegionsOfInterest(boundingBoxRegionsOfInterest.toList())
 
     override fun connectedHomeSettings(connectedHomeSettings: IResolvable) {
       cdkBuilder.connectedHomeSettings(connectedHomeSettings.let(IResolvable::unwrap))
@@ -385,6 +397,8 @@ public open class CfnStreamProcessor internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.rekognition.CfnStreamProcessor =
         cdkBuilder.build()
@@ -602,6 +616,8 @@ public open class CfnStreamProcessor internal constructor(
     public interface Builder {
       public fun labels(labels: List<String>)
 
+      public fun labels(vararg labels: String)
+
       public fun minConfidence(minConfidence: Number)
     }
 
@@ -614,6 +630,8 @@ public open class CfnStreamProcessor internal constructor(
       override fun labels(labels: List<String>) {
         cdkBuilder.labels(labels)
       }
+
+      override fun labels(vararg labels: String): Unit = labels(labels.toList())
 
       override fun minConfidence(minConfidence: Number) {
         cdkBuilder.minConfidence(minConfidence)
@@ -628,7 +646,7 @@ public open class CfnStreamProcessor internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.rekognition.CfnStreamProcessor.ConnectedHomeSettingsProperty,
     ) : ConnectedHomeSettingsProperty {
-      override fun labels(): List<String> = unwrap(this).getLabels() ?: emptyList()
+      override fun labels(): List<String> = unwrap(this).getLabels()
 
       override fun minConfidence(): Number? = unwrap(this).getMinConfidence()
     }

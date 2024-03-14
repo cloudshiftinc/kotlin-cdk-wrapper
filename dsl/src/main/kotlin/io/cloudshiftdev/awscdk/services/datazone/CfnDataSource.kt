@@ -27,6 +27,9 @@ public open class CfnDataSource internal constructor(
     unwrap(this).setAssetFormsInput(__idx_ac66f0)
   }
 
+  public open fun assetFormsInput(vararg __idx_ac66f0: Any): Unit =
+      assetFormsInput(__idx_ac66f0.toList())
+
   public open fun attrCreatedAt(): String = unwrap(this).getAttrCreatedAt()
 
   public open fun attrDomainId(): String = unwrap(this).getAttrDomainId()
@@ -154,6 +157,8 @@ public open class CfnDataSource internal constructor(
 
     public fun assetFormsInput(assetFormsInput: List<Any>)
 
+    public fun assetFormsInput(vararg assetFormsInput: Any)
+
     public fun configuration(configuration: IResolvable)
 
     public fun configuration(configuration: DataSourceConfigurationInputProperty)
@@ -212,6 +217,9 @@ public open class CfnDataSource internal constructor(
     override fun assetFormsInput(assetFormsInput: List<Any>) {
       cdkBuilder.assetFormsInput(assetFormsInput)
     }
+
+    override fun assetFormsInput(vararg assetFormsInput: Any): Unit =
+        assetFormsInput(assetFormsInput.toList())
 
     override fun configuration(configuration: IResolvable) {
       cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
@@ -493,6 +501,8 @@ public open class CfnDataSource internal constructor(
 
       public fun filterExpressions(filterExpressions: List<Any>)
 
+      public fun filterExpressions(vararg filterExpressions: Any)
+
       public fun schemaName(schemaName: String)
     }
 
@@ -513,6 +523,9 @@ public open class CfnDataSource internal constructor(
       override fun filterExpressions(filterExpressions: List<Any>) {
         cdkBuilder.filterExpressions(filterExpressions)
       }
+
+      override fun filterExpressions(vararg filterExpressions: Any): Unit =
+          filterExpressions(filterExpressions.toList())
 
       override fun schemaName(schemaName: String) {
         cdkBuilder.schemaName(schemaName)
@@ -938,6 +951,8 @@ public open class CfnDataSource internal constructor(
       public fun relationalFilterConfigurations(relationalFilterConfigurations: IResolvable)
 
       public fun relationalFilterConfigurations(relationalFilterConfigurations: List<Any>)
+
+      public fun relationalFilterConfigurations(vararg relationalFilterConfigurations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -986,6 +1001,9 @@ public open class CfnDataSource internal constructor(
       override fun relationalFilterConfigurations(relationalFilterConfigurations: List<Any>) {
         cdkBuilder.relationalFilterConfigurations(relationalFilterConfigurations)
       }
+
+      override fun relationalFilterConfigurations(vararg relationalFilterConfigurations: Any): Unit
+          = relationalFilterConfigurations(relationalFilterConfigurations.toList())
 
       public fun build():
           software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftRunConfigurationInputProperty
@@ -1039,6 +1057,8 @@ public open class CfnDataSource internal constructor(
       public fun relationalFilterConfigurations(relationalFilterConfigurations: IResolvable)
 
       public fun relationalFilterConfigurations(relationalFilterConfigurations: List<Any>)
+
+      public fun relationalFilterConfigurations(vararg relationalFilterConfigurations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1058,6 +1078,9 @@ public open class CfnDataSource internal constructor(
       override fun relationalFilterConfigurations(relationalFilterConfigurations: List<Any>) {
         cdkBuilder.relationalFilterConfigurations(relationalFilterConfigurations)
       }
+
+      override fun relationalFilterConfigurations(vararg relationalFilterConfigurations: Any): Unit
+          = relationalFilterConfigurations(relationalFilterConfigurations.toList())
 
       public fun build():
           software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty =

@@ -46,6 +46,8 @@ public open class CfnTestGridProject internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun vpcConfig(): Any? = unwrap(this).getVpcConfig()
 
   public open fun vpcConfig(`value`: IResolvable) {
@@ -67,6 +69,8 @@ public open class CfnTestGridProject internal constructor(
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun vpcConfig(vpcConfig: IResolvable)
 
@@ -95,6 +99,8 @@ public open class CfnTestGridProject internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun vpcConfig(vpcConfig: IResolvable) {
       cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
@@ -144,7 +150,11 @@ public open class CfnTestGridProject internal constructor(
     public interface Builder {
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
 
       public fun vpcId(vpcId: String)
     }
@@ -158,9 +168,14 @@ public open class CfnTestGridProject internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       override fun vpcId(vpcId: String) {
         cdkBuilder.vpcId(vpcId)
@@ -175,10 +190,9 @@ public open class CfnTestGridProject internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.devicefarm.CfnTestGridProject.VpcConfigProperty,
     ) : VpcConfigProperty {
-      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
-          emptyList()
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
 
-      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
 
       override fun vpcId(): String = unwrap(this).getVpcId()
     }

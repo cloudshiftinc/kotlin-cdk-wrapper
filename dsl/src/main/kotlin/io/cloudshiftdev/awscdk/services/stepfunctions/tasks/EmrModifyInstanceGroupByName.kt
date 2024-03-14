@@ -187,7 +187,11 @@ public open class EmrModifyInstanceGroupByName internal constructor(
 
       public fun instancesToProtect(instancesToProtect: List<String>)
 
+      public fun instancesToProtect(vararg instancesToProtect: String)
+
       public fun instancesToTerminate(instancesToTerminate: List<String>)
+
+      public fun instancesToTerminate(vararg instancesToTerminate: String)
     }
 
     private class BuilderImpl : Builder {
@@ -204,9 +208,15 @@ public open class EmrModifyInstanceGroupByName internal constructor(
         cdkBuilder.instancesToProtect(instancesToProtect)
       }
 
+      override fun instancesToProtect(vararg instancesToProtect: String): Unit =
+          instancesToProtect(instancesToProtect.toList())
+
       override fun instancesToTerminate(instancesToTerminate: List<String>) {
         cdkBuilder.instancesToTerminate(instancesToTerminate)
       }
+
+      override fun instancesToTerminate(vararg instancesToTerminate: String): Unit =
+          instancesToTerminate(instancesToTerminate.toList())
 
       public fun build():
           software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName.InstanceResizePolicyProperty
@@ -337,7 +347,11 @@ public open class EmrModifyInstanceGroupByName internal constructor(
     public interface Builder {
       public fun configurations(configurations: List<EmrCreateCluster.ConfigurationProperty>)
 
+      public fun configurations(vararg configurations: EmrCreateCluster.ConfigurationProperty)
+
       public fun eC2InstanceIdsToTerminate(eC2InstanceIdsToTerminate: List<String>)
+
+      public fun eC2InstanceIdsToTerminate(vararg eC2InstanceIdsToTerminate: String)
 
       public fun instanceCount(instanceCount: Number)
 
@@ -358,9 +372,15 @@ public open class EmrModifyInstanceGroupByName internal constructor(
         cdkBuilder.configurations(configurations.map(EmrCreateCluster.ConfigurationProperty::unwrap))
       }
 
+      override fun configurations(vararg configurations: EmrCreateCluster.ConfigurationProperty):
+          Unit = configurations(configurations.toList())
+
       override fun eC2InstanceIdsToTerminate(eC2InstanceIdsToTerminate: List<String>) {
         cdkBuilder.eC2InstanceIdsToTerminate(eC2InstanceIdsToTerminate)
       }
+
+      override fun eC2InstanceIdsToTerminate(vararg eC2InstanceIdsToTerminate: String): Unit =
+          eC2InstanceIdsToTerminate(eC2InstanceIdsToTerminate.toList())
 
       override fun instanceCount(instanceCount: Number) {
         cdkBuilder.instanceCount(instanceCount)

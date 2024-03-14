@@ -90,6 +90,8 @@ public open class CfnAppMonitor internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun appMonitorConfiguration(appMonitorConfiguration: IResolvable)
 
@@ -117,6 +119,8 @@ public open class CfnAppMonitor internal constructor(
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -172,6 +176,8 @@ public open class CfnAppMonitor internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.rum.CfnAppMonitor = cdkBuilder.build()
   }
@@ -229,7 +235,11 @@ public open class CfnAppMonitor internal constructor(
 
       public fun excludedPages(excludedPages: List<String>)
 
+      public fun excludedPages(vararg excludedPages: String)
+
       public fun favoritePages(favoritePages: List<String>)
+
+      public fun favoritePages(vararg favoritePages: String)
 
       public fun guestRoleArn(guestRoleArn: String)
 
@@ -237,13 +247,19 @@ public open class CfnAppMonitor internal constructor(
 
       public fun includedPages(includedPages: List<String>)
 
+      public fun includedPages(vararg includedPages: String)
+
       public fun metricDestinations(metricDestinations: IResolvable)
 
       public fun metricDestinations(metricDestinations: List<Any>)
 
+      public fun metricDestinations(vararg metricDestinations: Any)
+
       public fun sessionSampleRate(sessionSampleRate: Number)
 
       public fun telemetries(telemetries: List<String>)
+
+      public fun telemetries(vararg telemetries: String)
     }
 
     private class BuilderImpl : Builder {
@@ -272,9 +288,15 @@ public open class CfnAppMonitor internal constructor(
         cdkBuilder.excludedPages(excludedPages)
       }
 
+      override fun excludedPages(vararg excludedPages: String): Unit =
+          excludedPages(excludedPages.toList())
+
       override fun favoritePages(favoritePages: List<String>) {
         cdkBuilder.favoritePages(favoritePages)
       }
+
+      override fun favoritePages(vararg favoritePages: String): Unit =
+          favoritePages(favoritePages.toList())
 
       override fun guestRoleArn(guestRoleArn: String) {
         cdkBuilder.guestRoleArn(guestRoleArn)
@@ -288,6 +310,9 @@ public open class CfnAppMonitor internal constructor(
         cdkBuilder.includedPages(includedPages)
       }
 
+      override fun includedPages(vararg includedPages: String): Unit =
+          includedPages(includedPages.toList())
+
       override fun metricDestinations(metricDestinations: IResolvable) {
         cdkBuilder.metricDestinations(metricDestinations.let(IResolvable::unwrap))
       }
@@ -296,6 +321,9 @@ public open class CfnAppMonitor internal constructor(
         cdkBuilder.metricDestinations(metricDestinations)
       }
 
+      override fun metricDestinations(vararg metricDestinations: Any): Unit =
+          metricDestinations(metricDestinations.toList())
+
       override fun sessionSampleRate(sessionSampleRate: Number) {
         cdkBuilder.sessionSampleRate(sessionSampleRate)
       }
@@ -303,6 +331,8 @@ public open class CfnAppMonitor internal constructor(
       override fun telemetries(telemetries: List<String>) {
         cdkBuilder.telemetries(telemetries)
       }
+
+      override fun telemetries(vararg telemetries: String): Unit = telemetries(telemetries.toList())
 
       public fun build():
           software.amazon.awscdk.services.rum.CfnAppMonitor.AppMonitorConfigurationProperty =
@@ -373,6 +403,8 @@ public open class CfnAppMonitor internal constructor(
       public fun metricDefinitions(metricDefinitions: IResolvable)
 
       public fun metricDefinitions(metricDefinitions: List<Any>)
+
+      public fun metricDefinitions(vararg metricDefinitions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -399,6 +431,9 @@ public open class CfnAppMonitor internal constructor(
       override fun metricDefinitions(metricDefinitions: List<Any>) {
         cdkBuilder.metricDefinitions(metricDefinitions)
       }
+
+      override fun metricDefinitions(vararg metricDefinitions: Any): Unit =
+          metricDefinitions(metricDefinitions.toList())
 
       public fun build():
           software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty =

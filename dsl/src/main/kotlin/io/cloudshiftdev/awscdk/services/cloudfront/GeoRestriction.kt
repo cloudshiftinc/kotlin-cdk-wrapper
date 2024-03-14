@@ -6,7 +6,7 @@ import kotlin.collections.List
 public open class GeoRestriction internal constructor(
   private val cdkObject: software.amazon.awscdk.services.cloudfront.GeoRestriction,
 ) {
-  public open fun locations(): List<String> = unwrap(this).getLocations() ?: emptyList()
+  public open fun locations(): List<String> = unwrap(this).getLocations()
 
   public open fun restrictionType(): String = unwrap(this).getRestrictionType()
 

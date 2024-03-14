@@ -30,10 +30,15 @@ public open class CfnResourceGroup internal constructor(
     unwrap(this).setResourceGroupTags(__idx_ac66f0)
   }
 
+  public open fun resourceGroupTags(vararg __idx_ac66f0: Any): Unit =
+      resourceGroupTags(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun resourceGroupTags(resourceGroupTags: IResolvable)
 
     public fun resourceGroupTags(resourceGroupTags: List<Any>)
+
+    public fun resourceGroupTags(vararg resourceGroupTags: Any)
   }
 
   private class BuilderImpl(
@@ -50,6 +55,9 @@ public open class CfnResourceGroup internal constructor(
     override fun resourceGroupTags(resourceGroupTags: List<Any>) {
       cdkBuilder.resourceGroupTags(resourceGroupTags)
     }
+
+    override fun resourceGroupTags(vararg resourceGroupTags: Any): Unit =
+        resourceGroupTags(resourceGroupTags.toList())
 
     public fun build(): software.amazon.awscdk.services.inspector.CfnResourceGroup =
         cdkBuilder.build()

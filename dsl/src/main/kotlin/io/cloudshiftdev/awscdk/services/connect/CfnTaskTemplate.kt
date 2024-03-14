@@ -49,6 +49,8 @@ public open class CfnTaskTemplate internal constructor(
     unwrap(this).setDefaults(__idx_ac66f0)
   }
 
+  public open fun defaults(vararg __idx_ac66f0: Any): Unit = defaults(__idx_ac66f0.toList())
+
   public open fun description(): String? = unwrap(this).getDescription()
 
   public open fun description(`value`: String) {
@@ -64,6 +66,8 @@ public open class CfnTaskTemplate internal constructor(
   public open fun fields(__idx_ac66f0: List<Any>) {
     unwrap(this).setFields(__idx_ac66f0)
   }
+
+  public open fun fields(vararg __idx_ac66f0: Any): Unit = fields(__idx_ac66f0.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -96,6 +100,8 @@ public open class CfnTaskTemplate internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun clientToken(clientToken: String)
 
@@ -107,11 +113,15 @@ public open class CfnTaskTemplate internal constructor(
 
     public fun defaults(defaults: List<Any>)
 
+    public fun defaults(vararg defaults: Any)
+
     public fun description(description: String)
 
     public fun fields(fields: IResolvable)
 
     public fun fields(fields: List<Any>)
+
+    public fun fields(vararg fields: Any)
 
     public fun instanceArn(instanceArn: String)
 
@@ -120,6 +130,8 @@ public open class CfnTaskTemplate internal constructor(
     public fun status(status: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -149,6 +161,8 @@ public open class CfnTaskTemplate internal constructor(
       cdkBuilder.defaults(defaults)
     }
 
+    override fun defaults(vararg defaults: Any): Unit = defaults(defaults.toList())
+
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
@@ -160,6 +174,8 @@ public open class CfnTaskTemplate internal constructor(
     override fun fields(fields: List<Any>) {
       cdkBuilder.fields(fields)
     }
+
+    override fun fields(vararg fields: Any): Unit = fields(fields.toList())
 
     override fun instanceArn(instanceArn: String) {
       cdkBuilder.instanceArn(instanceArn)
@@ -176,6 +192,8 @@ public open class CfnTaskTemplate internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.connect.CfnTaskTemplate = cdkBuilder.build()
   }
@@ -277,13 +295,19 @@ public open class CfnTaskTemplate internal constructor(
 
       public fun invisibleFields(invisibleFields: List<Any>)
 
+      public fun invisibleFields(vararg invisibleFields: Any)
+
       public fun readOnlyFields(readOnlyFields: IResolvable)
 
       public fun readOnlyFields(readOnlyFields: List<Any>)
 
+      public fun readOnlyFields(vararg readOnlyFields: Any)
+
       public fun requiredFields(requiredFields: IResolvable)
 
       public fun requiredFields(requiredFields: List<Any>)
+
+      public fun requiredFields(vararg requiredFields: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -299,6 +323,9 @@ public open class CfnTaskTemplate internal constructor(
         cdkBuilder.invisibleFields(invisibleFields)
       }
 
+      override fun invisibleFields(vararg invisibleFields: Any): Unit =
+          invisibleFields(invisibleFields.toList())
+
       override fun readOnlyFields(readOnlyFields: IResolvable) {
         cdkBuilder.readOnlyFields(readOnlyFields.let(IResolvable::unwrap))
       }
@@ -307,6 +334,9 @@ public open class CfnTaskTemplate internal constructor(
         cdkBuilder.readOnlyFields(readOnlyFields)
       }
 
+      override fun readOnlyFields(vararg readOnlyFields: Any): Unit =
+          readOnlyFields(readOnlyFields.toList())
+
       override fun requiredFields(requiredFields: IResolvable) {
         cdkBuilder.requiredFields(requiredFields.let(IResolvable::unwrap))
       }
@@ -314,6 +344,9 @@ public open class CfnTaskTemplate internal constructor(
       override fun requiredFields(requiredFields: List<Any>) {
         cdkBuilder.requiredFields(requiredFields)
       }
+
+      override fun requiredFields(vararg requiredFields: Any): Unit =
+          requiredFields(requiredFields.toList())
 
       public fun build():
           software.amazon.awscdk.services.connect.CfnTaskTemplate.ConstraintsProperty =
@@ -624,6 +657,8 @@ public open class CfnTaskTemplate internal constructor(
 
       public fun singleSelectOptions(singleSelectOptions: List<String>)
 
+      public fun singleSelectOptions(vararg singleSelectOptions: String)
+
       public fun type(type: String)
     }
 
@@ -652,6 +687,9 @@ public open class CfnTaskTemplate internal constructor(
       override fun singleSelectOptions(singleSelectOptions: List<String>) {
         cdkBuilder.singleSelectOptions(singleSelectOptions)
       }
+
+      override fun singleSelectOptions(vararg singleSelectOptions: String): Unit =
+          singleSelectOptions(singleSelectOptions.toList())
 
       override fun type(type: String) {
         cdkBuilder.type(type)

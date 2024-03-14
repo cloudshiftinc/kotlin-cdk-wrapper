@@ -22,7 +22,11 @@ public open class OpenIdConnectProvider internal constructor(
   public interface Builder {
     public fun clientIds(clientIds: List<String>)
 
+    public fun clientIds(vararg clientIds: String)
+
     public fun thumbprints(thumbprints: List<String>)
+
+    public fun thumbprints(vararg thumbprints: String)
 
     public fun url(url: String)
   }
@@ -38,9 +42,13 @@ public open class OpenIdConnectProvider internal constructor(
       cdkBuilder.clientIds(clientIds)
     }
 
+    override fun clientIds(vararg clientIds: String): Unit = clientIds(clientIds.toList())
+
     override fun thumbprints(thumbprints: List<String>) {
       cdkBuilder.thumbprints(thumbprints)
     }
+
+    override fun thumbprints(vararg thumbprints: String): Unit = thumbprints(thumbprints.toList())
 
     override fun url(url: String) {
       cdkBuilder.url(url)

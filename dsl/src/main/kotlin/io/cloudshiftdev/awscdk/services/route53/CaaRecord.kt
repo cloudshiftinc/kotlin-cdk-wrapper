@@ -31,6 +31,8 @@ public open class CaaRecord internal constructor(
 
     public fun values(values: List<CaaRecordValue>)
 
+    public fun values(vararg values: CaaRecordValue)
+
     public fun weight(weight: Number)
 
     public fun zone(zone: IHostedZone)
@@ -78,6 +80,8 @@ public open class CaaRecord internal constructor(
     override fun values(values: List<CaaRecordValue>) {
       cdkBuilder.values(values.map(CaaRecordValue::unwrap))
     }
+
+    override fun values(vararg values: CaaRecordValue): Unit = values(values.toList())
 
     override fun weight(weight: Number) {
       cdkBuilder.weight(weight)

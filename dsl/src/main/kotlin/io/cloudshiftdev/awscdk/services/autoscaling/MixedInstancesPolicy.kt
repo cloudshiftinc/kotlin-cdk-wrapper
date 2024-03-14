@@ -26,6 +26,8 @@ public interface MixedInstancesPolicy {
     public fun launchTemplate(launchTemplate: ILaunchTemplate)
 
     public fun launchTemplateOverrides(launchTemplateOverrides: List<LaunchTemplateOverrides>)
+
+    public fun launchTemplateOverrides(vararg launchTemplateOverrides: LaunchTemplateOverrides)
   }
 
   private class BuilderImpl : Builder {
@@ -49,6 +51,9 @@ public interface MixedInstancesPolicy {
     override fun launchTemplateOverrides(launchTemplateOverrides: List<LaunchTemplateOverrides>) {
       cdkBuilder.launchTemplateOverrides(launchTemplateOverrides.map(LaunchTemplateOverrides::unwrap))
     }
+
+    override fun launchTemplateOverrides(vararg launchTemplateOverrides: LaunchTemplateOverrides):
+        Unit = launchTemplateOverrides(launchTemplateOverrides.toList())
 
     public fun build(): software.amazon.awscdk.services.autoscaling.MixedInstancesPolicy =
         cdkBuilder.build()

@@ -71,12 +71,17 @@ public open class CfnVerifiedAccessInstance internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun verifiedAccessTrustProviderIds(): List<String> =
       unwrap(this).getVerifiedAccessTrustProviderIds() ?: emptyList()
 
   public open fun verifiedAccessTrustProviderIds(`value`: List<String>) {
     unwrap(this).setVerifiedAccessTrustProviderIds(`value`)
   }
+
+  public open fun verifiedAccessTrustProviderIds(vararg `value`: String): Unit =
+      verifiedAccessTrustProviderIds(`value`.toList())
 
   public open fun verifiedAccessTrustProviders(): Any? =
       unwrap(this).getVerifiedAccessTrustProviders()
@@ -88,6 +93,9 @@ public open class CfnVerifiedAccessInstance internal constructor(
   public open fun verifiedAccessTrustProviders(__idx_ac66f0: List<Any>) {
     unwrap(this).setVerifiedAccessTrustProviders(__idx_ac66f0)
   }
+
+  public open fun verifiedAccessTrustProviders(vararg __idx_ac66f0: Any): Unit =
+      verifiedAccessTrustProviders(__idx_ac66f0.toList())
 
   public interface Builder {
     public fun description(description: String)
@@ -107,11 +115,17 @@ public open class CfnVerifiedAccessInstance internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun verifiedAccessTrustProviderIds(verifiedAccessTrustProviderIds: List<String>)
+
+    public fun verifiedAccessTrustProviderIds(vararg verifiedAccessTrustProviderIds: String)
 
     public fun verifiedAccessTrustProviders(verifiedAccessTrustProviders: IResolvable)
 
     public fun verifiedAccessTrustProviders(verifiedAccessTrustProviders: List<Any>)
+
+    public fun verifiedAccessTrustProviders(vararg verifiedAccessTrustProviders: Any)
   }
 
   private class BuilderImpl(
@@ -151,9 +165,14 @@ public open class CfnVerifiedAccessInstance internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun verifiedAccessTrustProviderIds(verifiedAccessTrustProviderIds: List<String>) {
       cdkBuilder.verifiedAccessTrustProviderIds(verifiedAccessTrustProviderIds)
     }
+
+    override fun verifiedAccessTrustProviderIds(vararg verifiedAccessTrustProviderIds: String): Unit
+        = verifiedAccessTrustProviderIds(verifiedAccessTrustProviderIds.toList())
 
     override fun verifiedAccessTrustProviders(verifiedAccessTrustProviders: IResolvable) {
       cdkBuilder.verifiedAccessTrustProviders(verifiedAccessTrustProviders.let(IResolvable::unwrap))
@@ -162,6 +181,9 @@ public open class CfnVerifiedAccessInstance internal constructor(
     override fun verifiedAccessTrustProviders(verifiedAccessTrustProviders: List<Any>) {
       cdkBuilder.verifiedAccessTrustProviders(verifiedAccessTrustProviders)
     }
+
+    override fun verifiedAccessTrustProviders(vararg verifiedAccessTrustProviders: Any): Unit =
+        verifiedAccessTrustProviders(verifiedAccessTrustProviders.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance =
         cdkBuilder.build()

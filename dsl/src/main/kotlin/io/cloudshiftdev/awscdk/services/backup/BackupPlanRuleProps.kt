@@ -40,6 +40,8 @@ public interface BackupPlanRuleProps {
 
     public fun copyActions(copyActions: List<BackupPlanCopyActionProps>)
 
+    public fun copyActions(vararg copyActions: BackupPlanCopyActionProps)
+
     public fun deleteAfter(deleteAfter: Duration)
 
     public fun enableContinuousBackup(enableContinuousBackup: Boolean)
@@ -70,6 +72,9 @@ public interface BackupPlanRuleProps {
     override fun copyActions(copyActions: List<BackupPlanCopyActionProps>) {
       cdkBuilder.copyActions(copyActions.map(BackupPlanCopyActionProps::unwrap))
     }
+
+    override fun copyActions(vararg copyActions: BackupPlanCopyActionProps): Unit =
+        copyActions(copyActions.toList())
 
     override fun deleteAfter(deleteAfter: Duration) {
       cdkBuilder.deleteAfter(deleteAfter.let(Duration::unwrap))

@@ -14,13 +14,13 @@ public interface ICommandHooks {
     internal val cdkObject: software.amazon.awscdk.services.lambda.nodejs.ICommandHooks,
   ) : ICommandHooks {
     override fun afterBundling(arg0: String, arg1: String): List<String> =
-        unwrap(this).afterBundling(arg0, arg1) ?: emptyList()
+        unwrap(this).afterBundling(arg0, arg1)
 
     override fun beforeBundling(arg0: String, arg1: String): List<String> =
-        unwrap(this).beforeBundling(arg0, arg1) ?: emptyList()
+        unwrap(this).beforeBundling(arg0, arg1)
 
     override fun beforeInstall(arg0: String, arg1: String): List<String> =
-        unwrap(this).beforeInstall(arg0, arg1) ?: emptyList()
+        unwrap(this).beforeInstall(arg0, arg1)
   }
 
   public companion object {

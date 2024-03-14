@@ -29,6 +29,8 @@ public interface OptionConfiguration {
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
+
     public fun tings(settings: Map<String, String>)
 
     public fun version(version: String)
@@ -51,6 +53,9 @@ public interface OptionConfiguration {
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun tings(settings: Map<String, String>) {
       cdkBuilder.settings(settings)

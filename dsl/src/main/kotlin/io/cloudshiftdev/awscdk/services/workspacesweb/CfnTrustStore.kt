@@ -16,18 +16,20 @@ public open class CfnTrustStore internal constructor(
   private val cdkObject: software.amazon.awscdk.services.workspacesweb.CfnTrustStore,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public open fun attrAssociatedPortalArns(): List<String> =
-      unwrap(this).getAttrAssociatedPortalArns() ?: emptyList()
+      unwrap(this).getAttrAssociatedPortalArns()
 
   public open fun attrTrustStoreArn(): String = unwrap(this).getAttrTrustStoreArn()
 
   public override fun cdkTagManager(): TagManager =
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
-  public open fun certificateList(): List<String> = unwrap(this).getCertificateList() ?: emptyList()
+  public open fun certificateList(): List<String> = unwrap(this).getCertificateList()
 
   public open fun certificateList(`value`: List<String>) {
     unwrap(this).setCertificateList(`value`)
   }
+
+  public open fun certificateList(vararg `value`: String): Unit = certificateList(`value`.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -39,10 +41,16 @@ public open class CfnTrustStore internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun certificateList(certificateList: List<String>)
 
+    public fun certificateList(vararg certificateList: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -56,9 +64,14 @@ public open class CfnTrustStore internal constructor(
       cdkBuilder.certificateList(certificateList)
     }
 
+    override fun certificateList(vararg certificateList: String): Unit =
+        certificateList(certificateList.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.workspacesweb.CfnTrustStore =
         cdkBuilder.build()

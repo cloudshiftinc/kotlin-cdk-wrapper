@@ -20,7 +20,7 @@ public open class CfnHostedZone internal constructor(
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public open fun attrId(): String = unwrap(this).getAttrId()
 
-  public open fun attrNameServers(): List<String> = unwrap(this).getAttrNameServers() ?: emptyList()
+  public open fun attrNameServers(): List<String> = unwrap(this).getAttrNameServers()
 
   public open fun hostedZoneConfig(): Any? = unwrap(this).getHostedZoneConfig()
 
@@ -43,6 +43,9 @@ public open class CfnHostedZone internal constructor(
   public open fun hostedZoneTagsRaw(`value`: List<HostedZoneTagProperty>) {
     unwrap(this).setHostedZoneTagsRaw(`value`.map(HostedZoneTagProperty::unwrap))
   }
+
+  public open fun hostedZoneTagsRaw(vararg `value`: HostedZoneTagProperty): Unit =
+      hostedZoneTagsRaw(`value`.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -81,6 +84,8 @@ public open class CfnHostedZone internal constructor(
     unwrap(this).setVpcs(__idx_ac66f0)
   }
 
+  public open fun vpcs(vararg __idx_ac66f0: Any): Unit = vpcs(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun hostedZoneConfig(hostedZoneConfig: IResolvable)
 
@@ -91,6 +96,8 @@ public open class CfnHostedZone internal constructor(
     public fun hostedZoneConfig(hostedZoneConfig: HostedZoneConfigProperty.Builder.() -> Unit)
 
     public fun hostedZoneTags(hostedZoneTags: List<HostedZoneTagProperty>)
+
+    public fun hostedZoneTags(vararg hostedZoneTags: HostedZoneTagProperty)
 
     public fun name(name: String)
 
@@ -105,6 +112,8 @@ public open class CfnHostedZone internal constructor(
     public fun vpcs(vpcs: IResolvable)
 
     public fun vpcs(vpcs: List<Any>)
+
+    public fun vpcs(vararg vpcs: Any)
   }
 
   private class BuilderImpl(
@@ -131,6 +140,9 @@ public open class CfnHostedZone internal constructor(
       cdkBuilder.hostedZoneTags(hostedZoneTags.map(HostedZoneTagProperty::unwrap))
     }
 
+    override fun hostedZoneTags(vararg hostedZoneTags: HostedZoneTagProperty): Unit =
+        hostedZoneTags(hostedZoneTags.toList())
+
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -156,6 +168,8 @@ public open class CfnHostedZone internal constructor(
     override fun vpcs(vpcs: List<Any>) {
       cdkBuilder.vpcs(vpcs)
     }
+
+    override fun vpcs(vararg vpcs: Any): Unit = vpcs(vpcs.toList())
 
     public fun build(): software.amazon.awscdk.services.route53.CfnHostedZone = cdkBuilder.build()
   }

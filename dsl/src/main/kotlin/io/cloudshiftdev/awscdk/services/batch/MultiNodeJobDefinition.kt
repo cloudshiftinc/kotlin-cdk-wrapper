@@ -59,6 +59,8 @@ public open class MultiNodeJobDefinition internal constructor(
   public interface Builder {
     public fun containers(containers: List<MultiNodeContainer>)
 
+    public fun containers(vararg containers: MultiNodeContainer)
+
     public fun instanceType(instanceType: InstanceType)
 
     public fun jobDefinitionName(jobDefinitionName: String)
@@ -72,6 +74,8 @@ public open class MultiNodeJobDefinition internal constructor(
     public fun retryAttempts(retryAttempts: Number)
 
     public fun retryStrategies(retryStrategies: List<RetryStrategy>)
+
+    public fun retryStrategies(vararg retryStrategies: RetryStrategy)
 
     public fun schedulingPriority(schedulingPriority: Number)
 
@@ -88,6 +92,9 @@ public open class MultiNodeJobDefinition internal constructor(
     override fun containers(containers: List<MultiNodeContainer>) {
       cdkBuilder.containers(containers.map(MultiNodeContainer::unwrap))
     }
+
+    override fun containers(vararg containers: MultiNodeContainer): Unit =
+        containers(containers.toList())
 
     override fun instanceType(instanceType: InstanceType) {
       cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
@@ -116,6 +123,9 @@ public open class MultiNodeJobDefinition internal constructor(
     override fun retryStrategies(retryStrategies: List<RetryStrategy>) {
       cdkBuilder.retryStrategies(retryStrategies.map(RetryStrategy::unwrap))
     }
+
+    override fun retryStrategies(vararg retryStrategies: RetryStrategy): Unit =
+        retryStrategies(retryStrategies.toList())
 
     override fun schedulingPriority(schedulingPriority: Number) {
       cdkBuilder.schedulingPriority(schedulingPriority)

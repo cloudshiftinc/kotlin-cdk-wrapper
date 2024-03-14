@@ -69,6 +69,8 @@ public interface ClientVpnEndpointOptions {
 
     public fun dnsServers(dnsServers: List<String>)
 
+    public fun dnsServers(vararg dnsServers: String)
+
     public fun logGroup(logGroup: ILogGroup)
 
     public fun logStream(logStream: ILogStream)
@@ -78,6 +80,8 @@ public interface ClientVpnEndpointOptions {
     public fun port(port: VpnPort)
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
+
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
 
     public fun selfServicePortal(selfServicePortal: Boolean)
 
@@ -130,6 +134,8 @@ public interface ClientVpnEndpointOptions {
       cdkBuilder.dnsServers(dnsServers)
     }
 
+    override fun dnsServers(vararg dnsServers: String): Unit = dnsServers(dnsServers.toList())
+
     override fun logGroup(logGroup: ILogGroup) {
       cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
     }
@@ -149,6 +155,9 @@ public interface ClientVpnEndpointOptions {
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun selfServicePortal(selfServicePortal: Boolean) {
       cdkBuilder.selfServicePortal(selfServicePortal)

@@ -431,6 +431,8 @@ public open class CfnPipe internal constructor(
       public fun pipelineParameterList(pipelineParameterList: IResolvable)
 
       public fun pipelineParameterList(pipelineParameterList: List<Any>)
+
+      public fun pipelineParameterList(vararg pipelineParameterList: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -446,6 +448,9 @@ public open class CfnPipe internal constructor(
       override fun pipelineParameterList(pipelineParameterList: List<Any>) {
         cdkBuilder.pipelineParameterList(pipelineParameterList)
       }
+
+      override fun pipelineParameterList(vararg pipelineParameterList: Any): Unit =
+          pipelineParameterList(pipelineParameterList.toList())
 
       public fun build():
           software.amazon.awscdk.services.pipes.CfnPipe.PipeTargetSageMakerPipelineParametersProperty
@@ -492,7 +497,11 @@ public open class CfnPipe internal constructor(
 
       public fun securityGroups(securityGroups: List<String>)
 
+      public fun securityGroups(vararg securityGroups: String)
+
       public fun subnets(subnets: List<String>)
+
+      public fun subnets(vararg subnets: String)
     }
 
     private class BuilderImpl : Builder {
@@ -508,9 +517,14 @@ public open class CfnPipe internal constructor(
         cdkBuilder.securityGroups(securityGroups)
       }
 
+      override fun securityGroups(vararg securityGroups: String): Unit =
+          securityGroups(securityGroups.toList())
+
       override fun subnets(subnets: List<String>) {
         cdkBuilder.subnets(subnets)
       }
+
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
 
       public fun build(): software.amazon.awscdk.services.pipes.CfnPipe.AwsVpcConfigurationProperty
           = cdkBuilder.build()
@@ -524,7 +538,7 @@ public open class CfnPipe internal constructor(
 
       override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
 
-      override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+      override fun subnets(): List<String> = unwrap(this).getSubnets()
     }
 
     public companion object {
@@ -1008,6 +1022,8 @@ public open class CfnPipe internal constructor(
       public fun filters(filters: IResolvable)
 
       public fun filters(filters: List<Any>)
+
+      public fun filters(vararg filters: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1022,6 +1038,8 @@ public open class CfnPipe internal constructor(
       override fun filters(filters: List<Any>) {
         cdkBuilder.filters(filters)
       }
+
+      override fun filters(vararg filters: Any): Unit = filters(filters.toList())
 
       public fun build(): software.amazon.awscdk.services.pipes.CfnPipe.FilterCriteriaProperty =
           cdkBuilder.build()
@@ -1489,15 +1507,21 @@ public open class CfnPipe internal constructor(
     public interface Builder {
       public fun command(command: List<String>)
 
+      public fun command(vararg command: String)
+
       public fun cpu(cpu: Number)
 
       public fun environment(environment: IResolvable)
 
       public fun environment(environment: List<Any>)
 
+      public fun environment(vararg environment: Any)
+
       public fun environmentFiles(environmentFiles: IResolvable)
 
       public fun environmentFiles(environmentFiles: List<Any>)
+
+      public fun environmentFiles(vararg environmentFiles: Any)
 
       public fun memory(memory: Number)
 
@@ -1508,6 +1532,8 @@ public open class CfnPipe internal constructor(
       public fun resourceRequirements(resourceRequirements: IResolvable)
 
       public fun resourceRequirements(resourceRequirements: List<Any>)
+
+      public fun resourceRequirements(vararg resourceRequirements: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1518,6 +1544,8 @@ public open class CfnPipe internal constructor(
       override fun command(command: List<String>) {
         cdkBuilder.command(command)
       }
+
+      override fun command(vararg command: String): Unit = command(command.toList())
 
       override fun cpu(cpu: Number) {
         cdkBuilder.cpu(cpu)
@@ -1531,6 +1559,8 @@ public open class CfnPipe internal constructor(
         cdkBuilder.environment(environment)
       }
 
+      override fun environment(vararg environment: Any): Unit = environment(environment.toList())
+
       override fun environmentFiles(environmentFiles: IResolvable) {
         cdkBuilder.environmentFiles(environmentFiles.let(IResolvable::unwrap))
       }
@@ -1538,6 +1568,9 @@ public open class CfnPipe internal constructor(
       override fun environmentFiles(environmentFiles: List<Any>) {
         cdkBuilder.environmentFiles(environmentFiles)
       }
+
+      override fun environmentFiles(vararg environmentFiles: Any): Unit =
+          environmentFiles(environmentFiles.toList())
 
       override fun memory(memory: Number) {
         cdkBuilder.memory(memory)
@@ -1558,6 +1591,9 @@ public open class CfnPipe internal constructor(
       override fun resourceRequirements(resourceRequirements: List<Any>) {
         cdkBuilder.resourceRequirements(resourceRequirements)
       }
+
+      override fun resourceRequirements(vararg resourceRequirements: Any): Unit =
+          resourceRequirements(resourceRequirements.toList())
 
       public fun build(): software.amazon.awscdk.services.pipes.CfnPipe.EcsContainerOverrideProperty
           = cdkBuilder.build()
@@ -1766,6 +1802,8 @@ public open class CfnPipe internal constructor(
 
       public fun resources(resources: List<String>)
 
+      public fun resources(vararg resources: String)
+
       public fun source(source: String)
 
       public fun time(time: String)
@@ -1788,6 +1826,8 @@ public open class CfnPipe internal constructor(
       override fun resources(resources: List<String>) {
         cdkBuilder.resources(resources)
       }
+
+      override fun resources(vararg resources: String): Unit = resources(resources.toList())
 
       override fun source(source: String) {
         cdkBuilder.source(source)
@@ -1900,15 +1940,21 @@ public open class CfnPipe internal constructor(
     public interface Builder {
       public fun command(command: List<String>)
 
+      public fun command(vararg command: String)
+
       public fun environment(environment: IResolvable)
 
       public fun environment(environment: List<Any>)
+
+      public fun environment(vararg environment: Any)
 
       public fun instanceType(instanceType: String)
 
       public fun resourceRequirements(resourceRequirements: IResolvable)
 
       public fun resourceRequirements(resourceRequirements: List<Any>)
+
+      public fun resourceRequirements(vararg resourceRequirements: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1920,6 +1966,8 @@ public open class CfnPipe internal constructor(
         cdkBuilder.command(command)
       }
 
+      override fun command(vararg command: String): Unit = command(command.toList())
+
       override fun environment(environment: IResolvable) {
         cdkBuilder.environment(environment.let(IResolvable::unwrap))
       }
@@ -1927,6 +1975,8 @@ public open class CfnPipe internal constructor(
       override fun environment(environment: List<Any>) {
         cdkBuilder.environment(environment)
       }
+
+      override fun environment(vararg environment: Any): Unit = environment(environment.toList())
 
       override fun instanceType(instanceType: String) {
         cdkBuilder.instanceType(instanceType)
@@ -1939,6 +1989,9 @@ public open class CfnPipe internal constructor(
       override fun resourceRequirements(resourceRequirements: List<Any>) {
         cdkBuilder.resourceRequirements(resourceRequirements)
       }
+
+      override fun resourceRequirements(vararg resourceRequirements: Any): Unit =
+          resourceRequirements(resourceRequirements.toList())
 
       public fun build():
           software.amazon.awscdk.services.pipes.CfnPipe.BatchContainerOverridesProperty =
@@ -2528,7 +2581,11 @@ public open class CfnPipe internal constructor(
     public interface Builder {
       public fun securityGroup(securityGroup: List<String>)
 
+      public fun securityGroup(vararg securityGroup: String)
+
       public fun subnets(subnets: List<String>)
+
+      public fun subnets(vararg subnets: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2541,9 +2598,14 @@ public open class CfnPipe internal constructor(
         cdkBuilder.securityGroup(securityGroup)
       }
 
+      override fun securityGroup(vararg securityGroup: String): Unit =
+          securityGroup(securityGroup.toList())
+
       override fun subnets(subnets: List<String>) {
         cdkBuilder.subnets(subnets)
       }
+
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
 
       public fun build():
           software.amazon.awscdk.services.pipes.CfnPipe.SelfManagedKafkaAccessConfigurationVpcProperty
@@ -2617,6 +2679,8 @@ public open class CfnPipe internal constructor(
 
       public fun dependsOn(dependsOn: List<Any>)
 
+      public fun dependsOn(vararg dependsOn: Any)
+
       public fun jobDefinition(jobDefinition: String)
 
       public fun jobName(jobName: String)
@@ -2675,6 +2739,8 @@ public open class CfnPipe internal constructor(
       override fun dependsOn(dependsOn: List<Any>) {
         cdkBuilder.dependsOn(dependsOn)
       }
+
+      override fun dependsOn(vararg dependsOn: Any): Unit = dependsOn(dependsOn.toList())
 
       override fun jobDefinition(jobDefinition: String) {
         cdkBuilder.jobDefinition(jobDefinition)
@@ -3202,6 +3268,8 @@ public open class CfnPipe internal constructor(
 
       public fun includeExecutionData(includeExecutionData: List<String>)
 
+      public fun includeExecutionData(vararg includeExecutionData: String)
+
       public fun level(level: String)
 
       public fun s3LogDestination(s3LogDestination: IResolvable)
@@ -3251,6 +3319,9 @@ public open class CfnPipe internal constructor(
       override fun includeExecutionData(includeExecutionData: List<String>) {
         cdkBuilder.includeExecutionData(includeExecutionData)
       }
+
+      override fun includeExecutionData(vararg includeExecutionData: String): Unit =
+          includeExecutionData(includeExecutionData.toList())
 
       override fun level(level: String) {
         cdkBuilder.level(level)
@@ -3382,6 +3453,8 @@ public open class CfnPipe internal constructor(
 
       public fun pathParameterValues(pathParameterValues: List<String>)
 
+      public fun pathParameterValues(vararg pathParameterValues: String)
+
       public fun queryStringParameters(queryStringParameters: IResolvable)
 
       public fun queryStringParameters(queryStringParameters: Map<String, String>)
@@ -3403,6 +3476,9 @@ public open class CfnPipe internal constructor(
       override fun pathParameterValues(pathParameterValues: List<String>) {
         cdkBuilder.pathParameterValues(pathParameterValues)
       }
+
+      override fun pathParameterValues(vararg pathParameterValues: String): Unit =
+          pathParameterValues(pathParameterValues.toList())
 
       override fun queryStringParameters(queryStringParameters: IResolvable) {
         cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable::unwrap))
@@ -3485,6 +3561,8 @@ public open class CfnPipe internal constructor(
 
       public fun capacityProviderStrategy(capacityProviderStrategy: List<Any>)
 
+      public fun capacityProviderStrategy(vararg capacityProviderStrategy: Any)
+
       public fun enableEcsManagedTags(enableEcsManagedTags: Boolean)
 
       public fun enableEcsManagedTags(enableEcsManagedTags: IResolvable)
@@ -3518,9 +3596,13 @@ public open class CfnPipe internal constructor(
 
       public fun placementConstraints(placementConstraints: List<Any>)
 
+      public fun placementConstraints(vararg placementConstraints: Any)
+
       public fun placementStrategy(placementStrategy: IResolvable)
 
       public fun placementStrategy(placementStrategy: List<Any>)
+
+      public fun placementStrategy(vararg placementStrategy: Any)
 
       public fun platformVersion(platformVersion: String)
 
@@ -3529,6 +3611,8 @@ public open class CfnPipe internal constructor(
       public fun referenceId(referenceId: String)
 
       public fun tags(tags: List<CfnTag>)
+
+      public fun tags(vararg tags: CfnTag)
 
       public fun taskCount(taskCount: Number)
 
@@ -3548,6 +3632,9 @@ public open class CfnPipe internal constructor(
       override fun capacityProviderStrategy(capacityProviderStrategy: List<Any>) {
         cdkBuilder.capacityProviderStrategy(capacityProviderStrategy)
       }
+
+      override fun capacityProviderStrategy(vararg capacityProviderStrategy: Any): Unit =
+          capacityProviderStrategy(capacityProviderStrategy.toList())
 
       override fun enableEcsManagedTags(enableEcsManagedTags: Boolean) {
         cdkBuilder.enableEcsManagedTags(enableEcsManagedTags)
@@ -3608,6 +3695,9 @@ public open class CfnPipe internal constructor(
         cdkBuilder.placementConstraints(placementConstraints)
       }
 
+      override fun placementConstraints(vararg placementConstraints: Any): Unit =
+          placementConstraints(placementConstraints.toList())
+
       override fun placementStrategy(placementStrategy: IResolvable) {
         cdkBuilder.placementStrategy(placementStrategy.let(IResolvable::unwrap))
       }
@@ -3615,6 +3705,9 @@ public open class CfnPipe internal constructor(
       override fun placementStrategy(placementStrategy: List<Any>) {
         cdkBuilder.placementStrategy(placementStrategy)
       }
+
+      override fun placementStrategy(vararg placementStrategy: Any): Unit =
+          placementStrategy(placementStrategy.toList())
 
       override fun platformVersion(platformVersion: String) {
         cdkBuilder.platformVersion(platformVersion)
@@ -3631,6 +3724,8 @@ public open class CfnPipe internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       override fun taskCount(taskCount: Number) {
         cdkBuilder.taskCount(taskCount)
@@ -3830,6 +3925,8 @@ public open class CfnPipe internal constructor(
 
       public fun sqls(sqls: List<String>)
 
+      public fun sqls(vararg sqls: String)
+
       public fun statementName(statementName: String)
 
       public fun withEvent(withEvent: Boolean)
@@ -3859,6 +3956,8 @@ public open class CfnPipe internal constructor(
         cdkBuilder.sqls(sqls)
       }
 
+      override fun sqls(vararg sqls: String): Unit = sqls(sqls.toList())
+
       override fun statementName(statementName: String) {
         cdkBuilder.statementName(statementName)
       }
@@ -3886,7 +3985,7 @@ public open class CfnPipe internal constructor(
 
       override fun secretManagerArn(): String? = unwrap(this).getSecretManagerArn()
 
-      override fun sqls(): List<String> = unwrap(this).getSqls() ?: emptyList()
+      override fun sqls(): List<String> = unwrap(this).getSqls()
 
       override fun statementName(): String? = unwrap(this).getStatementName()
 
@@ -4077,6 +4176,8 @@ public open class CfnPipe internal constructor(
     public interface Builder {
       public fun additionalBootstrapServers(additionalBootstrapServers: List<String>)
 
+      public fun additionalBootstrapServers(vararg additionalBootstrapServers: String)
+
       public fun batchSize(batchSize: Number)
 
       public fun consumerGroupId(consumerGroupId: String)
@@ -4116,6 +4217,9 @@ public open class CfnPipe internal constructor(
       override fun additionalBootstrapServers(additionalBootstrapServers: List<String>) {
         cdkBuilder.additionalBootstrapServers(additionalBootstrapServers)
       }
+
+      override fun additionalBootstrapServers(vararg additionalBootstrapServers: String): Unit =
+          additionalBootstrapServers(additionalBootstrapServers.toList())
 
       override fun batchSize(batchSize: Number) {
         cdkBuilder.batchSize(batchSize)
@@ -4532,6 +4636,8 @@ public open class CfnPipe internal constructor(
 
       public fun containerOverrides(containerOverrides: List<Any>)
 
+      public fun containerOverrides(vararg containerOverrides: Any)
+
       public fun cpu(cpu: String)
 
       public fun ephemeralStorage(ephemeralStorage: IResolvable)
@@ -4547,6 +4653,8 @@ public open class CfnPipe internal constructor(
       public fun inferenceAcceleratorOverrides(inferenceAcceleratorOverrides: IResolvable)
 
       public fun inferenceAcceleratorOverrides(inferenceAcceleratorOverrides: List<Any>)
+
+      public fun inferenceAcceleratorOverrides(vararg inferenceAcceleratorOverrides: Any)
 
       public fun memory(memory: String)
 
@@ -4565,6 +4673,9 @@ public open class CfnPipe internal constructor(
       override fun containerOverrides(containerOverrides: List<Any>) {
         cdkBuilder.containerOverrides(containerOverrides)
       }
+
+      override fun containerOverrides(vararg containerOverrides: Any): Unit =
+          containerOverrides(containerOverrides.toList())
 
       override fun cpu(cpu: String) {
         cdkBuilder.cpu(cpu)
@@ -4595,6 +4706,9 @@ public open class CfnPipe internal constructor(
       override fun inferenceAcceleratorOverrides(inferenceAcceleratorOverrides: List<Any>) {
         cdkBuilder.inferenceAcceleratorOverrides(inferenceAcceleratorOverrides)
       }
+
+      override fun inferenceAcceleratorOverrides(vararg inferenceAcceleratorOverrides: Any): Unit =
+          inferenceAcceleratorOverrides(inferenceAcceleratorOverrides.toList())
 
       override fun memory(memory: String) {
         cdkBuilder.memory(memory)
@@ -4662,6 +4776,8 @@ public open class CfnPipe internal constructor(
 
       public fun pathParameterValues(pathParameterValues: List<String>)
 
+      public fun pathParameterValues(vararg pathParameterValues: String)
+
       public fun queryStringParameters(queryStringParameters: IResolvable)
 
       public fun queryStringParameters(queryStringParameters: Map<String, String>)
@@ -4684,6 +4800,9 @@ public open class CfnPipe internal constructor(
       override fun pathParameterValues(pathParameterValues: List<String>) {
         cdkBuilder.pathParameterValues(pathParameterValues)
       }
+
+      override fun pathParameterValues(vararg pathParameterValues: String): Unit =
+          pathParameterValues(pathParameterValues.toList())
 
       override fun queryStringParameters(queryStringParameters: IResolvable) {
         cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable::unwrap))

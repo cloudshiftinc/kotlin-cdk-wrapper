@@ -27,6 +27,8 @@ public interface LoadBalancerListener {
   public interface Builder {
     public fun allowConnectionsFrom(allowConnectionsFrom: List<IConnectable>)
 
+    public fun allowConnectionsFrom(vararg allowConnectionsFrom: IConnectable)
+
     public fun externalPort(externalPort: Number)
 
     public fun externalProtocol(externalProtocol: LoadBalancingProtocol)
@@ -36,6 +38,8 @@ public interface LoadBalancerListener {
     public fun internalProtocol(internalProtocol: LoadBalancingProtocol)
 
     public fun policyNames(policyNames: List<String>)
+
+    public fun policyNames(vararg policyNames: String)
 
     public fun sslCertificateArn(sslCertificateArn: String)
   }
@@ -48,6 +52,9 @@ public interface LoadBalancerListener {
     override fun allowConnectionsFrom(allowConnectionsFrom: List<IConnectable>) {
       cdkBuilder.allowConnectionsFrom(allowConnectionsFrom.map(IConnectable::unwrap))
     }
+
+    override fun allowConnectionsFrom(vararg allowConnectionsFrom: IConnectable): Unit =
+        allowConnectionsFrom(allowConnectionsFrom.toList())
 
     override fun externalPort(externalPort: Number) {
       cdkBuilder.externalPort(externalPort)
@@ -68,6 +75,8 @@ public interface LoadBalancerListener {
     override fun policyNames(policyNames: List<String>) {
       cdkBuilder.policyNames(policyNames)
     }
+
+    override fun policyNames(vararg policyNames: String): Unit = policyNames(policyNames.toList())
 
     override fun sslCertificateArn(sslCertificateArn: String) {
       cdkBuilder.sslCertificateArn(sslCertificateArn)

@@ -111,6 +111,9 @@ public open class CfnFileSystem internal constructor(
     unwrap(this).setSecurityGroupIds(`value`)
   }
 
+  public open fun securityGroupIds(vararg `value`: String): Unit =
+      securityGroupIds(`value`.toList())
+
   public open fun storageCapacity(): Number? = unwrap(this).getStorageCapacity()
 
   public open fun storageCapacity(`value`: Number) {
@@ -123,11 +126,13 @@ public open class CfnFileSystem internal constructor(
     unwrap(this).setStorageType(`value`)
   }
 
-  public open fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+  public open fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
 
   public open fun subnetIds(`value`: List<String>) {
     unwrap(this).setSubnetIds(`value`)
   }
+
+  public open fun subnetIds(vararg `value`: String): Unit = subnetIds(`value`.toList())
 
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
@@ -137,6 +142,8 @@ public open class CfnFileSystem internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun windowsConfiguration(): Any? = unwrap(this).getWindowsConfiguration()
 
@@ -190,13 +197,19 @@ public open class CfnFileSystem internal constructor(
 
     public fun securityGroupIds(securityGroupIds: List<String>)
 
+    public fun securityGroupIds(vararg securityGroupIds: String)
+
     public fun storageCapacity(storageCapacity: Number)
 
     public fun storageType(storageType: String)
 
     public fun subnetIds(subnetIds: List<String>)
 
+    public fun subnetIds(vararg subnetIds: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun windowsConfiguration(windowsConfiguration: IResolvable)
 
@@ -277,6 +290,9 @@ public open class CfnFileSystem internal constructor(
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
+
     override fun storageCapacity(storageCapacity: Number) {
       cdkBuilder.storageCapacity(storageCapacity)
     }
@@ -289,9 +305,13 @@ public open class CfnFileSystem internal constructor(
       cdkBuilder.subnetIds(subnetIds)
     }
 
+    override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun windowsConfiguration(windowsConfiguration: IResolvable) {
       cdkBuilder.windowsConfiguration(windowsConfiguration.let(IResolvable::unwrap))
@@ -364,6 +384,8 @@ public open class CfnFileSystem internal constructor(
 
       public fun aliases(aliases: List<String>)
 
+      public fun aliases(vararg aliases: String)
+
       public fun auditLogConfiguration(auditLogConfiguration: IResolvable)
 
       public fun auditLogConfiguration(auditLogConfiguration: AuditLogConfigurationProperty)
@@ -422,6 +444,8 @@ public open class CfnFileSystem internal constructor(
       override fun aliases(aliases: List<String>) {
         cdkBuilder.aliases(aliases)
       }
+
+      override fun aliases(vararg aliases: String): Unit = aliases(aliases.toList())
 
       override fun auditLogConfiguration(auditLogConfiguration: IResolvable) {
         cdkBuilder.auditLogConfiguration(auditLogConfiguration.let(IResolvable::unwrap))
@@ -805,6 +829,8 @@ public open class CfnFileSystem internal constructor(
       public fun clients(clients: String)
 
       public fun options(options: List<String>)
+
+      public fun options(vararg options: String)
     }
 
     private class BuilderImpl : Builder {
@@ -819,6 +845,8 @@ public open class CfnFileSystem internal constructor(
       override fun options(options: List<String>) {
         cdkBuilder.options(options)
       }
+
+      override fun options(vararg options: String): Unit = options(options.toList())
 
       public fun build():
           software.amazon.awscdk.services.fsx.CfnFileSystem.ClientConfigurationsProperty =
@@ -908,6 +936,8 @@ public open class CfnFileSystem internal constructor(
 
       public fun routeTableIds(routeTableIds: List<String>)
 
+      public fun routeTableIds(vararg routeTableIds: String)
+
       public fun throughputCapacity(throughputCapacity: Number)
 
       public fun throughputCapacityPerHaPair(throughputCapacityPerHaPair: Number)
@@ -965,6 +995,9 @@ public open class CfnFileSystem internal constructor(
       override fun routeTableIds(routeTableIds: List<String>) {
         cdkBuilder.routeTableIds(routeTableIds)
       }
+
+      override fun routeTableIds(vararg routeTableIds: String): Unit =
+          routeTableIds(routeTableIds.toList())
 
       override fun throughputCapacity(throughputCapacity: Number) {
         cdkBuilder.throughputCapacity(throughputCapacity)
@@ -1043,6 +1076,8 @@ public open class CfnFileSystem internal constructor(
       public fun clientConfigurations(clientConfigurations: IResolvable)
 
       public fun clientConfigurations(clientConfigurations: List<Any>)
+
+      public fun clientConfigurations(vararg clientConfigurations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1057,6 +1092,9 @@ public open class CfnFileSystem internal constructor(
       override fun clientConfigurations(clientConfigurations: List<Any>) {
         cdkBuilder.clientConfigurations(clientConfigurations)
       }
+
+      override fun clientConfigurations(vararg clientConfigurations: Any): Unit =
+          clientConfigurations(clientConfigurations.toList())
 
       public fun build(): software.amazon.awscdk.services.fsx.CfnFileSystem.NfsExportsProperty =
           cdkBuilder.build()
@@ -1145,6 +1183,8 @@ public open class CfnFileSystem internal constructor(
 
       public fun options(options: List<String>)
 
+      public fun options(vararg options: String)
+
       public fun preferredSubnetId(preferredSubnetId: String)
 
       public fun rootVolumeConfiguration(rootVolumeConfiguration: IResolvable)
@@ -1157,6 +1197,8 @@ public open class CfnFileSystem internal constructor(
           fun rootVolumeConfiguration(rootVolumeConfiguration: RootVolumeConfigurationProperty.Builder.() -> Unit)
 
       public fun routeTableIds(routeTableIds: List<String>)
+
+      public fun routeTableIds(vararg routeTableIds: String)
 
       public fun throughputCapacity(throughputCapacity: Number)
 
@@ -1218,6 +1260,8 @@ public open class CfnFileSystem internal constructor(
         cdkBuilder.options(options)
       }
 
+      override fun options(vararg options: String): Unit = options(options.toList())
+
       override fun preferredSubnetId(preferredSubnetId: String) {
         cdkBuilder.preferredSubnetId(preferredSubnetId)
       }
@@ -1240,6 +1284,9 @@ public open class CfnFileSystem internal constructor(
       override fun routeTableIds(routeTableIds: List<String>) {
         cdkBuilder.routeTableIds(routeTableIds)
       }
+
+      override fun routeTableIds(vararg routeTableIds: String): Unit =
+          routeTableIds(routeTableIds.toList())
 
       override fun throughputCapacity(throughputCapacity: Number) {
         cdkBuilder.throughputCapacity(throughputCapacity)
@@ -1332,6 +1379,8 @@ public open class CfnFileSystem internal constructor(
 
       public fun nfsExports(nfsExports: List<Any>)
 
+      public fun nfsExports(vararg nfsExports: Any)
+
       public fun readOnly(readOnly: Boolean)
 
       public fun readOnly(readOnly: IResolvable)
@@ -1341,6 +1390,8 @@ public open class CfnFileSystem internal constructor(
       public fun userAndGroupQuotas(userAndGroupQuotas: IResolvable)
 
       public fun userAndGroupQuotas(userAndGroupQuotas: List<Any>)
+
+      public fun userAndGroupQuotas(vararg userAndGroupQuotas: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1369,6 +1420,8 @@ public open class CfnFileSystem internal constructor(
         cdkBuilder.nfsExports(nfsExports)
       }
 
+      override fun nfsExports(vararg nfsExports: Any): Unit = nfsExports(nfsExports.toList())
+
       override fun readOnly(readOnly: Boolean) {
         cdkBuilder.readOnly(readOnly)
       }
@@ -1388,6 +1441,9 @@ public open class CfnFileSystem internal constructor(
       override fun userAndGroupQuotas(userAndGroupQuotas: List<Any>) {
         cdkBuilder.userAndGroupQuotas(userAndGroupQuotas)
       }
+
+      override fun userAndGroupQuotas(vararg userAndGroupQuotas: Any): Unit =
+          userAndGroupQuotas(userAndGroupQuotas.toList())
 
       public fun build():
           software.amazon.awscdk.services.fsx.CfnFileSystem.RootVolumeConfigurationProperty =
@@ -1575,6 +1631,8 @@ public open class CfnFileSystem internal constructor(
     public interface Builder {
       public fun dnsIps(dnsIps: List<String>)
 
+      public fun dnsIps(vararg dnsIps: String)
+
       public fun domainName(domainName: String)
 
       public fun fileSystemAdministratorsGroup(fileSystemAdministratorsGroup: String)
@@ -1595,6 +1653,8 @@ public open class CfnFileSystem internal constructor(
       override fun dnsIps(dnsIps: List<String>) {
         cdkBuilder.dnsIps(dnsIps)
       }
+
+      override fun dnsIps(vararg dnsIps: String): Unit = dnsIps(dnsIps.toList())
 
       override fun domainName(domainName: String) {
         cdkBuilder.domainName(domainName)

@@ -23,12 +23,14 @@ public open class CfnLoggingConfiguration internal constructor(
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
-  public open fun logDestinationConfigs(): List<String> = unwrap(this).getLogDestinationConfigs() ?:
-      emptyList()
+  public open fun logDestinationConfigs(): List<String> = unwrap(this).getLogDestinationConfigs()
 
   public open fun logDestinationConfigs(`value`: List<String>) {
     unwrap(this).setLogDestinationConfigs(`value`)
   }
+
+  public open fun logDestinationConfigs(vararg `value`: String): Unit =
+      logDestinationConfigs(`value`.toList())
 
   public open fun loggingFilter(): Any? = unwrap(this).getLoggingFilter()
 
@@ -46,6 +48,9 @@ public open class CfnLoggingConfiguration internal constructor(
     unwrap(this).setRedactedFields(__idx_ac66f0)
   }
 
+  public open fun redactedFields(vararg __idx_ac66f0: Any): Unit =
+      redactedFields(__idx_ac66f0.toList())
+
   public open fun resourceArn(): String = unwrap(this).getResourceArn()
 
   public open fun resourceArn(`value`: String) {
@@ -55,11 +60,15 @@ public open class CfnLoggingConfiguration internal constructor(
   public interface Builder {
     public fun logDestinationConfigs(logDestinationConfigs: List<String>)
 
+    public fun logDestinationConfigs(vararg logDestinationConfigs: String)
+
     public fun loggingFilter(loggingFilter: Any)
 
     public fun redactedFields(redactedFields: IResolvable)
 
     public fun redactedFields(redactedFields: List<Any>)
+
+    public fun redactedFields(vararg redactedFields: Any)
 
     public fun resourceArn(resourceArn: String)
   }
@@ -75,6 +84,9 @@ public open class CfnLoggingConfiguration internal constructor(
       cdkBuilder.logDestinationConfigs(logDestinationConfigs)
     }
 
+    override fun logDestinationConfigs(vararg logDestinationConfigs: String): Unit =
+        logDestinationConfigs(logDestinationConfigs.toList())
+
     override fun loggingFilter(loggingFilter: Any) {
       cdkBuilder.loggingFilter(loggingFilter)
     }
@@ -86,6 +98,9 @@ public open class CfnLoggingConfiguration internal constructor(
     override fun redactedFields(redactedFields: List<Any>) {
       cdkBuilder.redactedFields(redactedFields)
     }
+
+    override fun redactedFields(vararg redactedFields: Any): Unit =
+        redactedFields(redactedFields.toList())
 
     override fun resourceArn(resourceArn: String) {
       cdkBuilder.resourceArn(resourceArn)
@@ -179,6 +194,8 @@ public open class CfnLoggingConfiguration internal constructor(
 
       public fun conditions(conditions: List<Any>)
 
+      public fun conditions(vararg conditions: Any)
+
       public fun requirement(requirement: String)
     }
 
@@ -198,6 +215,8 @@ public open class CfnLoggingConfiguration internal constructor(
       override fun conditions(conditions: List<Any>) {
         cdkBuilder.conditions(conditions)
       }
+
+      override fun conditions(vararg conditions: Any): Unit = conditions(conditions.toList())
 
       override fun requirement(requirement: String) {
         cdkBuilder.requirement(requirement)
@@ -250,6 +269,8 @@ public open class CfnLoggingConfiguration internal constructor(
       public fun filters(filters: IResolvable)
 
       public fun filters(filters: List<Any>)
+
+      public fun filters(vararg filters: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -269,6 +290,8 @@ public open class CfnLoggingConfiguration internal constructor(
       override fun filters(filters: List<Any>) {
         cdkBuilder.filters(filters)
       }
+
+      override fun filters(vararg filters: Any): Unit = filters(filters.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.LoggingFilterProperty =
@@ -590,6 +613,8 @@ public open class CfnLoggingConfiguration internal constructor(
       public fun all(all: Any)
 
       public fun includedPaths(includedPaths: List<String>)
+
+      public fun includedPaths(vararg includedPaths: String)
     }
 
     private class BuilderImpl : Builder {
@@ -605,6 +630,9 @@ public open class CfnLoggingConfiguration internal constructor(
       override fun includedPaths(includedPaths: List<String>) {
         cdkBuilder.includedPaths(includedPaths)
       }
+
+      override fun includedPaths(vararg includedPaths: String): Unit =
+          includedPaths(includedPaths.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration.MatchPatternProperty =

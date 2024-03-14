@@ -92,12 +92,17 @@ public open class CfnTransitGateway internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun transitGatewayCidrBlocks(): List<String> =
       unwrap(this).getTransitGatewayCidrBlocks() ?: emptyList()
 
   public open fun transitGatewayCidrBlocks(`value`: List<String>) {
     unwrap(this).setTransitGatewayCidrBlocks(`value`)
   }
+
+  public open fun transitGatewayCidrBlocks(vararg `value`: String): Unit =
+      transitGatewayCidrBlocks(`value`.toList())
 
   public open fun vpnEcmpSupport(): String? = unwrap(this).getVpnEcmpSupport()
 
@@ -126,7 +131,11 @@ public open class CfnTransitGateway internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun transitGatewayCidrBlocks(transitGatewayCidrBlocks: List<String>)
+
+    public fun transitGatewayCidrBlocks(vararg transitGatewayCidrBlocks: String)
 
     public fun vpnEcmpSupport(vpnEcmpSupport: String)
   }
@@ -178,9 +187,14 @@ public open class CfnTransitGateway internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun transitGatewayCidrBlocks(transitGatewayCidrBlocks: List<String>) {
       cdkBuilder.transitGatewayCidrBlocks(transitGatewayCidrBlocks)
     }
+
+    override fun transitGatewayCidrBlocks(vararg transitGatewayCidrBlocks: String): Unit =
+        transitGatewayCidrBlocks(transitGatewayCidrBlocks.toList())
 
     override fun vpnEcmpSupport(vpnEcmpSupport: String) {
       cdkBuilder.vpnEcmpSupport(vpnEcmpSupport)

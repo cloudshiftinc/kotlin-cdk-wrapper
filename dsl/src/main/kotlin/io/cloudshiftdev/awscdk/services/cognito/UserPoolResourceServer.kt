@@ -18,6 +18,8 @@ public open class UserPoolResourceServer internal constructor(
 
     public fun scopes(scopes: List<ResourceServerScope>)
 
+    public fun scopes(vararg scopes: ResourceServerScope)
+
     public fun userPool(userPool: IUserPool)
 
     public fun userPoolResourceServerName(userPoolResourceServerName: String)
@@ -37,6 +39,8 @@ public open class UserPoolResourceServer internal constructor(
     override fun scopes(scopes: List<ResourceServerScope>) {
       cdkBuilder.scopes(scopes.map(ResourceServerScope::unwrap))
     }
+
+    override fun scopes(vararg scopes: ResourceServerScope): Unit = scopes(scopes.toList())
 
     override fun userPool(userPool: IUserPool) {
       cdkBuilder.userPool(userPool.let(IUserPool::unwrap))

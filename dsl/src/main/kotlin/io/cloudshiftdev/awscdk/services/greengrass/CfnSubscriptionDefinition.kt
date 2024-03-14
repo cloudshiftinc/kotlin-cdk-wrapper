@@ -138,6 +138,8 @@ public open class CfnSubscriptionDefinition internal constructor(
       public fun subscriptions(subscriptions: IResolvable)
 
       public fun subscriptions(subscriptions: List<Any>)
+
+      public fun subscriptions(vararg subscriptions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -153,6 +155,9 @@ public open class CfnSubscriptionDefinition internal constructor(
       override fun subscriptions(subscriptions: List<Any>) {
         cdkBuilder.subscriptions(subscriptions)
       }
+
+      override fun subscriptions(vararg subscriptions: Any): Unit =
+          subscriptions(subscriptions.toList())
 
       public fun build():
           software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition.SubscriptionDefinitionVersionProperty

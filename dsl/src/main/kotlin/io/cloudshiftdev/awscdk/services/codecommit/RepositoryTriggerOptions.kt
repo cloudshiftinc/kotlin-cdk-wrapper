@@ -17,9 +17,13 @@ public interface RepositoryTriggerOptions {
   public interface Builder {
     public fun branches(branches: List<String>)
 
+    public fun branches(vararg branches: String)
+
     public fun customData(customData: String)
 
     public fun events(events: List<RepositoryEventTrigger>)
+
+    public fun events(vararg events: RepositoryEventTrigger)
 
     public fun name(name: String)
   }
@@ -33,6 +37,8 @@ public interface RepositoryTriggerOptions {
       cdkBuilder.branches(branches)
     }
 
+    override fun branches(vararg branches: String): Unit = branches(branches.toList())
+
     override fun customData(customData: String) {
       cdkBuilder.customData(customData)
     }
@@ -40,6 +46,8 @@ public interface RepositoryTriggerOptions {
     override fun events(events: List<RepositoryEventTrigger>) {
       cdkBuilder.events(events.map(RepositoryEventTrigger::unwrap))
     }
+
+    override fun events(vararg events: RepositoryEventTrigger): Unit = events(events.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)

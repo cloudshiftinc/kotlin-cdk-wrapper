@@ -13,7 +13,7 @@ public open class CfnFlowVpcInterface internal constructor(
   private val cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowVpcInterface,
 ) : CfnResource(cdkObject), IInspectable {
   public open fun attrNetworkInterfaceIds(): List<String> =
-      unwrap(this).getAttrNetworkInterfaceIds() ?: emptyList()
+      unwrap(this).getAttrNetworkInterfaceIds()
 
   public open fun flowArn(): String = unwrap(this).getFlowArn()
 
@@ -37,12 +37,14 @@ public open class CfnFlowVpcInterface internal constructor(
     unwrap(this).setRoleArn(`value`)
   }
 
-  public open fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
-      emptyList()
+  public open fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
 
   public open fun securityGroupIds(`value`: List<String>) {
     unwrap(this).setSecurityGroupIds(`value`)
   }
+
+  public open fun securityGroupIds(vararg `value`: String): Unit =
+      securityGroupIds(`value`.toList())
 
   public open fun subnetId(): String = unwrap(this).getSubnetId()
 
@@ -58,6 +60,8 @@ public open class CfnFlowVpcInterface internal constructor(
     public fun roleArn(roleArn: String)
 
     public fun securityGroupIds(securityGroupIds: List<String>)
+
+    public fun securityGroupIds(vararg securityGroupIds: String)
 
     public fun subnetId(subnetId: String)
   }
@@ -84,6 +88,9 @@ public open class CfnFlowVpcInterface internal constructor(
     override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
+
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
 
     override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)

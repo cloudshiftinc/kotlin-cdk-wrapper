@@ -26,6 +26,9 @@ public open class RuleScope internal constructor(
     public open fun fromResources(resourceTypes: List<ResourceType>): RuleScope =
         software.amazon.awscdk.services.config.RuleScope.fromResources(resourceTypes.map(ResourceType::unwrap)).let(RuleScope::wrap)
 
+    public open fun fromResources(vararg resourceTypes: ResourceType): RuleScope =
+        fromResources(resourceTypes.toList())
+
     public open fun fromTag(key: String): RuleScope =
         software.amazon.awscdk.services.config.RuleScope.fromTag(key).let(RuleScope::wrap)
 

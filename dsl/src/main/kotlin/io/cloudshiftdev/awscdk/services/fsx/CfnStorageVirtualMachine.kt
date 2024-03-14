@@ -80,6 +80,8 @@ public open class CfnStorageVirtualMachine internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun activeDirectoryConfiguration(activeDirectoryConfiguration: IResolvable)
 
@@ -100,6 +102,8 @@ public open class CfnStorageVirtualMachine internal constructor(
     public fun svmAdminPassword(svmAdminPassword: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -145,6 +149,8 @@ public open class CfnStorageVirtualMachine internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     public fun build(): software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine =
         cdkBuilder.build()
   }
@@ -188,6 +194,8 @@ public open class CfnStorageVirtualMachine internal constructor(
     public interface Builder {
       public fun dnsIps(dnsIps: List<String>)
 
+      public fun dnsIps(vararg dnsIps: String)
+
       public fun domainName(domainName: String)
 
       public fun fileSystemAdministratorsGroup(fileSystemAdministratorsGroup: String)
@@ -208,6 +216,8 @@ public open class CfnStorageVirtualMachine internal constructor(
       override fun dnsIps(dnsIps: List<String>) {
         cdkBuilder.dnsIps(dnsIps)
       }
+
+      override fun dnsIps(vararg dnsIps: String): Unit = dnsIps(dnsIps.toList())
 
       override fun domainName(domainName: String) {
         cdkBuilder.domainName(domainName)

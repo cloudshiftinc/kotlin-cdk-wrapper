@@ -31,6 +31,8 @@ public interface DatabaseInstanceAttributes {
     public fun port(port: Number)
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
+
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
   }
 
   private class BuilderImpl : Builder {
@@ -60,6 +62,9 @@ public interface DatabaseInstanceAttributes {
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     public fun build(): software.amazon.awscdk.services.rds.DatabaseInstanceAttributes =
         cdkBuilder.build()

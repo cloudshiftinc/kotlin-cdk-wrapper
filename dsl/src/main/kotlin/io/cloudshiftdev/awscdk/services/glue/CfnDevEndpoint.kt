@@ -76,6 +76,8 @@ public open class CfnDevEndpoint internal constructor(
     unwrap(this).setPublicKeys(`value`)
   }
 
+  public open fun publicKeys(vararg `value`: String): Unit = publicKeys(`value`.toList())
+
   public open fun roleArn(): String = unwrap(this).getRoleArn()
 
   public open fun roleArn(`value`: String) {
@@ -94,6 +96,9 @@ public open class CfnDevEndpoint internal constructor(
   public open fun securityGroupIds(`value`: List<String>) {
     unwrap(this).setSecurityGroupIds(`value`)
   }
+
+  public open fun securityGroupIds(vararg `value`: String): Unit =
+      securityGroupIds(`value`.toList())
 
   public open fun subnetId(): String? = unwrap(this).getSubnetId()
 
@@ -134,11 +139,15 @@ public open class CfnDevEndpoint internal constructor(
 
     public fun publicKeys(publicKeys: List<String>)
 
+    public fun publicKeys(vararg publicKeys: String)
+
     public fun roleArn(roleArn: String)
 
     public fun securityConfiguration(securityConfiguration: String)
 
     public fun securityGroupIds(securityGroupIds: List<String>)
+
+    public fun securityGroupIds(vararg securityGroupIds: String)
 
     public fun subnetId(subnetId: String)
 
@@ -190,6 +199,8 @@ public open class CfnDevEndpoint internal constructor(
       cdkBuilder.publicKeys(publicKeys)
     }
 
+    override fun publicKeys(vararg publicKeys: String): Unit = publicKeys(publicKeys.toList())
+
     override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
@@ -201,6 +212,9 @@ public open class CfnDevEndpoint internal constructor(
     override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
+
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
 
     override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)

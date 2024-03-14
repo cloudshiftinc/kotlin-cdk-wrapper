@@ -37,6 +37,8 @@ public open class CfnTopic internal constructor(
     unwrap(this).setDataSets(__idx_ac66f0)
   }
 
+  public open fun dataSets(vararg __idx_ac66f0: Any): Unit = dataSets(__idx_ac66f0.toList())
+
   public open fun description(): String? = unwrap(this).getDescription()
 
   public open fun description(`value`: String) {
@@ -72,6 +74,8 @@ public open class CfnTopic internal constructor(
 
     public fun dataSets(dataSets: List<Any>)
 
+    public fun dataSets(vararg dataSets: Any)
+
     public fun description(description: String)
 
     public fun name(name: String)
@@ -99,6 +103,8 @@ public open class CfnTopic internal constructor(
     override fun dataSets(dataSets: List<Any>) {
       cdkBuilder.dataSets(dataSets)
     }
+
+    override fun dataSets(vararg dataSets: Any): Unit = dataSets(dataSets.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -162,11 +168,15 @@ public open class CfnTopic internal constructor(
 
       public fun falseyCellValueSynonyms(falseyCellValueSynonyms: List<String>)
 
+      public fun falseyCellValueSynonyms(vararg falseyCellValueSynonyms: String)
+
       public fun subTypeName(subTypeName: String)
 
       public fun truthyCellValue(truthyCellValue: String)
 
       public fun truthyCellValueSynonyms(truthyCellValueSynonyms: List<String>)
+
+      public fun truthyCellValueSynonyms(vararg truthyCellValueSynonyms: String)
 
       public fun typeName(typeName: String)
 
@@ -188,6 +198,9 @@ public open class CfnTopic internal constructor(
         cdkBuilder.falseyCellValueSynonyms(falseyCellValueSynonyms)
       }
 
+      override fun falseyCellValueSynonyms(vararg falseyCellValueSynonyms: String): Unit =
+          falseyCellValueSynonyms(falseyCellValueSynonyms.toList())
+
       override fun subTypeName(subTypeName: String) {
         cdkBuilder.subTypeName(subTypeName)
       }
@@ -199,6 +212,9 @@ public open class CfnTopic internal constructor(
       override fun truthyCellValueSynonyms(truthyCellValueSynonyms: List<String>) {
         cdkBuilder.truthyCellValueSynonyms(truthyCellValueSynonyms)
       }
+
+      override fun truthyCellValueSynonyms(vararg truthyCellValueSynonyms: String): Unit =
+          truthyCellValueSynonyms(truthyCellValueSynonyms.toList())
 
       override fun typeName(typeName: String) {
         cdkBuilder.typeName(typeName)
@@ -351,6 +367,8 @@ public open class CfnTopic internal constructor(
       public fun cellValue(cellValue: String)
 
       public fun synonyms(synonyms: List<String>)
+
+      public fun synonyms(vararg synonyms: String)
     }
 
     private class BuilderImpl : Builder {
@@ -365,6 +383,8 @@ public open class CfnTopic internal constructor(
       override fun synonyms(synonyms: List<String>) {
         cdkBuilder.synonyms(synonyms)
       }
+
+      override fun synonyms(vararg synonyms: String): Unit = synonyms(synonyms.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnTopic.CellValueSynonymProperty =
@@ -517,6 +537,8 @@ public open class CfnTopic internal constructor(
 
       public fun filterSynonyms(filterSynonyms: List<String>)
 
+      public fun filterSynonyms(vararg filterSynonyms: String)
+
       public fun filterType(filterType: String)
 
       public fun numericEqualityFilter(numericEqualityFilter: IResolvable)
@@ -596,6 +618,9 @@ public open class CfnTopic internal constructor(
       override fun filterSynonyms(filterSynonyms: List<String>) {
         cdkBuilder.filterSynonyms(filterSynonyms)
       }
+
+      override fun filterSynonyms(vararg filterSynonyms: String): Unit =
+          filterSynonyms(filterSynonyms.toList())
 
       override fun filterType(filterType: String) {
         cdkBuilder.filterType(filterType)
@@ -829,6 +854,8 @@ public open class CfnTopic internal constructor(
     public interface Builder {
       public fun specifedOrder(specifedOrder: List<String>)
 
+      public fun specifedOrder(vararg specifedOrder: String)
+
       public fun treatUndefinedSpecifiedValues(treatUndefinedSpecifiedValues: String)
 
       public fun useOrdering(useOrdering: String)
@@ -842,6 +869,9 @@ public open class CfnTopic internal constructor(
       override fun specifedOrder(specifedOrder: List<String>) {
         cdkBuilder.specifedOrder(specifedOrder)
       }
+
+      override fun specifedOrder(vararg specifedOrder: String): Unit =
+          specifedOrder(specifedOrder.toList())
 
       override fun treatUndefinedSpecifiedValues(treatUndefinedSpecifiedValues: String) {
         cdkBuilder.treatUndefinedSpecifiedValues(treatUndefinedSpecifiedValues)
@@ -928,9 +958,13 @@ public open class CfnTopic internal constructor(
 
       public fun allowedAggregations(allowedAggregations: List<String>)
 
+      public fun allowedAggregations(vararg allowedAggregations: String)
+
       public fun cellValueSynonyms(cellValueSynonyms: IResolvable)
 
       public fun cellValueSynonyms(cellValueSynonyms: List<Any>)
+
+      public fun cellValueSynonyms(vararg cellValueSynonyms: Any)
 
       public fun columnDataRole(columnDataRole: String)
 
@@ -941,6 +975,8 @@ public open class CfnTopic internal constructor(
       public fun columnName(columnName: String)
 
       public fun columnSynonyms(columnSynonyms: List<String>)
+
+      public fun columnSynonyms(vararg columnSynonyms: String)
 
       public fun comparativeOrder(comparativeOrder: IResolvable)
 
@@ -972,6 +1008,8 @@ public open class CfnTopic internal constructor(
 
       public fun notAllowedAggregations(notAllowedAggregations: List<String>)
 
+      public fun notAllowedAggregations(vararg notAllowedAggregations: String)
+
       public fun semanticType(semanticType: IResolvable)
 
       public fun semanticType(semanticType: SemanticTypeProperty)
@@ -996,6 +1034,9 @@ public open class CfnTopic internal constructor(
         cdkBuilder.allowedAggregations(allowedAggregations)
       }
 
+      override fun allowedAggregations(vararg allowedAggregations: String): Unit =
+          allowedAggregations(allowedAggregations.toList())
+
       override fun cellValueSynonyms(cellValueSynonyms: IResolvable) {
         cdkBuilder.cellValueSynonyms(cellValueSynonyms.let(IResolvable::unwrap))
       }
@@ -1003,6 +1044,9 @@ public open class CfnTopic internal constructor(
       override fun cellValueSynonyms(cellValueSynonyms: List<Any>) {
         cdkBuilder.cellValueSynonyms(cellValueSynonyms)
       }
+
+      override fun cellValueSynonyms(vararg cellValueSynonyms: Any): Unit =
+          cellValueSynonyms(cellValueSynonyms.toList())
 
       override fun columnDataRole(columnDataRole: String) {
         cdkBuilder.columnDataRole(columnDataRole)
@@ -1023,6 +1067,9 @@ public open class CfnTopic internal constructor(
       override fun columnSynonyms(columnSynonyms: List<String>) {
         cdkBuilder.columnSynonyms(columnSynonyms)
       }
+
+      override fun columnSynonyms(vararg columnSynonyms: String): Unit =
+          columnSynonyms(columnSynonyms.toList())
 
       override fun comparativeOrder(comparativeOrder: IResolvable) {
         cdkBuilder.comparativeOrder(comparativeOrder.let(IResolvable::unwrap))
@@ -1078,6 +1125,9 @@ public open class CfnTopic internal constructor(
       override fun notAllowedAggregations(notAllowedAggregations: List<String>) {
         cdkBuilder.notAllowedAggregations(notAllowedAggregations)
       }
+
+      override fun notAllowedAggregations(vararg notAllowedAggregations: String): Unit =
+          notAllowedAggregations(notAllowedAggregations.toList())
 
       override fun semanticType(semanticType: IResolvable) {
         cdkBuilder.semanticType(semanticType.let(IResolvable::unwrap))
@@ -1720,9 +1770,13 @@ public open class CfnTopic internal constructor(
 
       public fun calculatedFields(calculatedFields: List<Any>)
 
+      public fun calculatedFields(vararg calculatedFields: Any)
+
       public fun columns(columns: IResolvable)
 
       public fun columns(columns: List<Any>)
+
+      public fun columns(vararg columns: Any)
 
       public fun dataAggregation(dataAggregation: IResolvable)
 
@@ -1742,9 +1796,13 @@ public open class CfnTopic internal constructor(
 
       public fun filters(filters: List<Any>)
 
+      public fun filters(vararg filters: Any)
+
       public fun namedEntities(namedEntities: IResolvable)
 
       public fun namedEntities(namedEntities: List<Any>)
+
+      public fun namedEntities(vararg namedEntities: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1760,6 +1818,9 @@ public open class CfnTopic internal constructor(
         cdkBuilder.calculatedFields(calculatedFields)
       }
 
+      override fun calculatedFields(vararg calculatedFields: Any): Unit =
+          calculatedFields(calculatedFields.toList())
+
       override fun columns(columns: IResolvable) {
         cdkBuilder.columns(columns.let(IResolvable::unwrap))
       }
@@ -1767,6 +1828,8 @@ public open class CfnTopic internal constructor(
       override fun columns(columns: List<Any>) {
         cdkBuilder.columns(columns)
       }
+
+      override fun columns(vararg columns: Any): Unit = columns(columns.toList())
 
       override fun dataAggregation(dataAggregation: IResolvable) {
         cdkBuilder.dataAggregation(dataAggregation.let(IResolvable::unwrap))
@@ -1801,6 +1864,8 @@ public open class CfnTopic internal constructor(
         cdkBuilder.filters(filters)
       }
 
+      override fun filters(vararg filters: Any): Unit = filters(filters.toList())
+
       override fun namedEntities(namedEntities: IResolvable) {
         cdkBuilder.namedEntities(namedEntities.let(IResolvable::unwrap))
       }
@@ -1808,6 +1873,9 @@ public open class CfnTopic internal constructor(
       override fun namedEntities(namedEntities: List<Any>) {
         cdkBuilder.namedEntities(namedEntities)
       }
+
+      override fun namedEntities(vararg namedEntities: Any): Unit =
+          namedEntities(namedEntities.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnTopic.DatasetMetadataProperty =
@@ -2070,15 +2138,21 @@ public open class CfnTopic internal constructor(
 
       public fun allowedAggregations(allowedAggregations: List<String>)
 
+      public fun allowedAggregations(vararg allowedAggregations: String)
+
       public fun calculatedFieldDescription(calculatedFieldDescription: String)
 
       public fun calculatedFieldName(calculatedFieldName: String)
 
       public fun calculatedFieldSynonyms(calculatedFieldSynonyms: List<String>)
 
+      public fun calculatedFieldSynonyms(vararg calculatedFieldSynonyms: String)
+
       public fun cellValueSynonyms(cellValueSynonyms: IResolvable)
 
       public fun cellValueSynonyms(cellValueSynonyms: List<Any>)
+
+      public fun cellValueSynonyms(vararg cellValueSynonyms: Any)
 
       public fun columnDataRole(columnDataRole: String)
 
@@ -2114,6 +2188,8 @@ public open class CfnTopic internal constructor(
 
       public fun notAllowedAggregations(notAllowedAggregations: List<String>)
 
+      public fun notAllowedAggregations(vararg notAllowedAggregations: String)
+
       public fun semanticType(semanticType: IResolvable)
 
       public fun semanticType(semanticType: SemanticTypeProperty)
@@ -2138,6 +2214,9 @@ public open class CfnTopic internal constructor(
         cdkBuilder.allowedAggregations(allowedAggregations)
       }
 
+      override fun allowedAggregations(vararg allowedAggregations: String): Unit =
+          allowedAggregations(allowedAggregations.toList())
+
       override fun calculatedFieldDescription(calculatedFieldDescription: String) {
         cdkBuilder.calculatedFieldDescription(calculatedFieldDescription)
       }
@@ -2150,6 +2229,9 @@ public open class CfnTopic internal constructor(
         cdkBuilder.calculatedFieldSynonyms(calculatedFieldSynonyms)
       }
 
+      override fun calculatedFieldSynonyms(vararg calculatedFieldSynonyms: String): Unit =
+          calculatedFieldSynonyms(calculatedFieldSynonyms.toList())
+
       override fun cellValueSynonyms(cellValueSynonyms: IResolvable) {
         cdkBuilder.cellValueSynonyms(cellValueSynonyms.let(IResolvable::unwrap))
       }
@@ -2157,6 +2239,9 @@ public open class CfnTopic internal constructor(
       override fun cellValueSynonyms(cellValueSynonyms: List<Any>) {
         cdkBuilder.cellValueSynonyms(cellValueSynonyms)
       }
+
+      override fun cellValueSynonyms(vararg cellValueSynonyms: Any): Unit =
+          cellValueSynonyms(cellValueSynonyms.toList())
 
       override fun columnDataRole(columnDataRole: String) {
         cdkBuilder.columnDataRole(columnDataRole)
@@ -2220,6 +2305,9 @@ public open class CfnTopic internal constructor(
       override fun notAllowedAggregations(notAllowedAggregations: List<String>) {
         cdkBuilder.notAllowedAggregations(notAllowedAggregations)
       }
+
+      override fun notAllowedAggregations(vararg notAllowedAggregations: String): Unit =
+          notAllowedAggregations(notAllowedAggregations.toList())
 
       override fun semanticType(semanticType: IResolvable) {
         cdkBuilder.semanticType(semanticType.let(IResolvable::unwrap))
@@ -2424,11 +2512,15 @@ public open class CfnTopic internal constructor(
 
       public fun definition(definition: List<Any>)
 
+      public fun definition(vararg definition: Any)
+
       public fun entityDescription(entityDescription: String)
 
       public fun entityName(entityName: String)
 
       public fun entitySynonyms(entitySynonyms: List<String>)
+
+      public fun entitySynonyms(vararg entitySynonyms: String)
 
       public fun semanticEntityType(semanticEntityType: IResolvable)
 
@@ -2453,6 +2545,8 @@ public open class CfnTopic internal constructor(
         cdkBuilder.definition(definition)
       }
 
+      override fun definition(vararg definition: Any): Unit = definition(definition.toList())
+
       override fun entityDescription(entityDescription: String) {
         cdkBuilder.entityDescription(entityDescription)
       }
@@ -2464,6 +2558,9 @@ public open class CfnTopic internal constructor(
       override fun entitySynonyms(entitySynonyms: List<String>) {
         cdkBuilder.entitySynonyms(entitySynonyms)
       }
+
+      override fun entitySynonyms(vararg entitySynonyms: String): Unit =
+          entitySynonyms(entitySynonyms.toList())
 
       override fun semanticEntityType(semanticEntityType: IResolvable) {
         cdkBuilder.semanticEntityType(semanticEntityType.let(IResolvable::unwrap))
@@ -2763,6 +2860,8 @@ public open class CfnTopic internal constructor(
 
     public interface Builder {
       public fun valueList(valueList: List<String>)
+
+      public fun valueList(vararg valueList: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2773,6 +2872,8 @@ public open class CfnTopic internal constructor(
       override fun valueList(valueList: List<String>) {
         cdkBuilder.valueList(valueList)
       }
+
+      override fun valueList(vararg valueList: String): Unit = valueList(valueList.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnTopic.CollectiveConstantProperty =

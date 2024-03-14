@@ -26,6 +26,8 @@ public open class CfnCustomEntityType internal constructor(
     unwrap(this).setContextWords(`value`)
   }
 
+  public open fun contextWords(vararg `value`: String): Unit = contextWords(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -51,6 +53,8 @@ public open class CfnCustomEntityType internal constructor(
   public interface Builder {
     public fun contextWords(contextWords: List<String>)
 
+    public fun contextWords(vararg contextWords: String)
+
     public fun name(name: String)
 
     public fun regexString(regexString: String)
@@ -68,6 +72,9 @@ public open class CfnCustomEntityType internal constructor(
     override fun contextWords(contextWords: List<String>) {
       cdkBuilder.contextWords(contextWords)
     }
+
+    override fun contextWords(vararg contextWords: String): Unit =
+        contextWords(contextWords.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)

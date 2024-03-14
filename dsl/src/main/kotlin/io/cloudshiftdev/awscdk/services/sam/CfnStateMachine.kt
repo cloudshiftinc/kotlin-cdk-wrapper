@@ -120,6 +120,8 @@ public open class CfnStateMachine internal constructor(
     unwrap(this).setPolicies(__idx_ac66f0)
   }
 
+  public open fun policies(vararg __idx_ac66f0: Any): Unit = policies(__idx_ac66f0.toList())
+
   public open fun role(): String? = unwrap(this).getRole()
 
   public open fun role(`value`: String) {
@@ -199,6 +201,8 @@ public open class CfnStateMachine internal constructor(
     public fun policies(policies: IAMPolicyDocumentProperty.Builder.() -> Unit)
 
     public fun policies(policies: List<Any>)
+
+    public fun policies(vararg policies: Any)
 
     public fun role(role: String)
 
@@ -300,6 +304,8 @@ public open class CfnStateMachine internal constructor(
     override fun policies(policies: List<Any>) {
       cdkBuilder.policies(policies)
     }
+
+    override fun policies(vararg policies: Any): Unit = policies(policies.toList())
 
     override fun role(role: String) {
       cdkBuilder.role(role)
@@ -566,6 +572,8 @@ public open class CfnStateMachine internal constructor(
 
       public fun destinations(destinations: List<Any>)
 
+      public fun destinations(vararg destinations: Any)
+
       public fun includeExecutionData(includeExecutionData: Boolean)
 
       public fun includeExecutionData(includeExecutionData: IResolvable)
@@ -585,6 +593,9 @@ public open class CfnStateMachine internal constructor(
       override fun destinations(destinations: List<Any>) {
         cdkBuilder.destinations(destinations)
       }
+
+      override fun destinations(vararg destinations: Any): Unit =
+          destinations(destinations.toList())
 
       override fun includeExecutionData(includeExecutionData: Boolean) {
         cdkBuilder.includeExecutionData(includeExecutionData)

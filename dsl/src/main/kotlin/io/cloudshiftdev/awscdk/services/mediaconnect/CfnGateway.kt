@@ -18,12 +18,14 @@ public open class CfnGateway internal constructor(
 
   public open fun attrGatewayState(): String = unwrap(this).getAttrGatewayState()
 
-  public open fun egressCidrBlocks(): List<String> = unwrap(this).getEgressCidrBlocks() ?:
-      emptyList()
+  public open fun egressCidrBlocks(): List<String> = unwrap(this).getEgressCidrBlocks()
 
   public open fun egressCidrBlocks(`value`: List<String>) {
     unwrap(this).setEgressCidrBlocks(`value`)
   }
+
+  public open fun egressCidrBlocks(vararg `value`: String): Unit =
+      egressCidrBlocks(`value`.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -45,14 +47,20 @@ public open class CfnGateway internal constructor(
     unwrap(this).setNetworks(__idx_ac66f0)
   }
 
+  public open fun networks(vararg __idx_ac66f0: Any): Unit = networks(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun egressCidrBlocks(egressCidrBlocks: List<String>)
+
+    public fun egressCidrBlocks(vararg egressCidrBlocks: String)
 
     public fun name(name: String)
 
     public fun networks(networks: IResolvable)
 
     public fun networks(networks: List<Any>)
+
+    public fun networks(vararg networks: Any)
   }
 
   private class BuilderImpl(
@@ -66,6 +74,9 @@ public open class CfnGateway internal constructor(
       cdkBuilder.egressCidrBlocks(egressCidrBlocks)
     }
 
+    override fun egressCidrBlocks(vararg egressCidrBlocks: String): Unit =
+        egressCidrBlocks(egressCidrBlocks.toList())
+
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -77,6 +88,8 @@ public open class CfnGateway internal constructor(
     override fun networks(networks: List<Any>) {
       cdkBuilder.networks(networks)
     }
+
+    override fun networks(vararg networks: Any): Unit = networks(networks.toList())
 
     public fun build(): software.amazon.awscdk.services.mediaconnect.CfnGateway = cdkBuilder.build()
   }

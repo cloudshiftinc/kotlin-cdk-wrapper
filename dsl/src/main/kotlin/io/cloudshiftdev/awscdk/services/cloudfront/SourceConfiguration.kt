@@ -36,6 +36,8 @@ public interface SourceConfiguration {
   public interface Builder {
     public fun behaviors(behaviors: List<Behavior>)
 
+    public fun behaviors(vararg behaviors: Behavior)
+
     public fun connectionAttempts(connectionAttempts: Number)
 
     public fun connectionTimeout(connectionTimeout: Duration)
@@ -47,6 +49,8 @@ public interface SourceConfiguration {
     public fun customOriginSource(customOriginSource: CustomOriginConfig.Builder.() -> Unit)
 
     public fun failoverCriteriaStatusCodes(failoverCriteriaStatusCodes: List<FailoverStatusCode>)
+
+    public fun failoverCriteriaStatusCodes(vararg failoverCriteriaStatusCodes: FailoverStatusCode)
 
     public fun failoverCustomOriginSource(failoverCustomOriginSource: CustomOriginConfig)
 
@@ -78,6 +82,8 @@ public interface SourceConfiguration {
       cdkBuilder.behaviors(behaviors.map(Behavior::unwrap))
     }
 
+    override fun behaviors(vararg behaviors: Behavior): Unit = behaviors(behaviors.toList())
+
     override fun connectionAttempts(connectionAttempts: Number) {
       cdkBuilder.connectionAttempts(connectionAttempts)
     }
@@ -99,6 +105,10 @@ public interface SourceConfiguration {
         fun failoverCriteriaStatusCodes(failoverCriteriaStatusCodes: List<FailoverStatusCode>) {
       cdkBuilder.failoverCriteriaStatusCodes(failoverCriteriaStatusCodes.map(FailoverStatusCode::unwrap))
     }
+
+    override fun failoverCriteriaStatusCodes(vararg
+        failoverCriteriaStatusCodes: FailoverStatusCode): Unit =
+        failoverCriteriaStatusCodes(failoverCriteriaStatusCodes.toList())
 
     override fun failoverCustomOriginSource(failoverCustomOriginSource: CustomOriginConfig) {
       cdkBuilder.failoverCustomOriginSource(failoverCustomOriginSource.let(CustomOriginConfig::unwrap))

@@ -50,6 +50,9 @@ public open class CfnApplication internal constructor(
     unwrap(this).setNotificationArns(`value`)
   }
 
+  public open fun notificationArns(vararg `value`: String): Unit =
+      notificationArns(`value`.toList())
+
   public open fun parameters(): Any? = unwrap(this).getParameters()
 
   public open fun parameters(`value`: IResolvable) {
@@ -87,6 +90,8 @@ public open class CfnApplication internal constructor(
 
     public fun notificationArns(notificationArns: List<String>)
 
+    public fun notificationArns(vararg notificationArns: String)
+
     public fun parameters(parameters: IResolvable)
 
     public fun parameters(parameters: Map<String, String>)
@@ -123,6 +128,9 @@ public open class CfnApplication internal constructor(
     override fun notificationArns(notificationArns: List<String>) {
       cdkBuilder.notificationArns(notificationArns)
     }
+
+    override fun notificationArns(vararg notificationArns: String): Unit =
+        notificationArns(notificationArns.toList())
 
     override fun parameters(parameters: IResolvable) {
       cdkBuilder.parameters(parameters.let(IResolvable::unwrap))

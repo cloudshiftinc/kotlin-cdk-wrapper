@@ -88,6 +88,9 @@ public open class CfnLayer internal constructor(
     unwrap(this).setCustomSecurityGroupIds(`value`)
   }
 
+  public open fun customSecurityGroupIds(vararg `value`: String): Unit =
+      customSecurityGroupIds(`value`.toList())
+
   public open fun enableAutoHealing(): Any = unwrap(this).getEnableAutoHealing()
 
   public open fun enableAutoHealing(`value`: Boolean) {
@@ -156,6 +159,8 @@ public open class CfnLayer internal constructor(
     unwrap(this).setPackages(`value`)
   }
 
+  public open fun packages(vararg `value`: String): Unit = packages(`value`.toList())
+
   public open fun shortname(): String = unwrap(this).getShortname()
 
   public open fun shortname(`value`: String) {
@@ -176,6 +181,8 @@ public open class CfnLayer internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun type(): String = unwrap(this).getType()
 
@@ -203,6 +210,9 @@ public open class CfnLayer internal constructor(
     unwrap(this).setVolumeConfigurations(__idx_ac66f0)
   }
 
+  public open fun volumeConfigurations(vararg __idx_ac66f0: Any): Unit =
+      volumeConfigurations(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun attributes(attributes: IResolvable)
 
@@ -229,6 +239,8 @@ public open class CfnLayer internal constructor(
     public fun customRecipes(customRecipes: RecipesProperty.Builder.() -> Unit)
 
     public fun customSecurityGroupIds(customSecurityGroupIds: List<String>)
+
+    public fun customSecurityGroupIds(vararg customSecurityGroupIds: String)
 
     public fun enableAutoHealing(enableAutoHealing: Boolean)
 
@@ -261,11 +273,15 @@ public open class CfnLayer internal constructor(
 
     public fun packages(packages: List<String>)
 
+    public fun packages(vararg packages: String)
+
     public fun shortname(shortname: String)
 
     public fun stackId(stackId: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun type(type: String)
 
@@ -276,6 +292,8 @@ public open class CfnLayer internal constructor(
     public fun volumeConfigurations(volumeConfigurations: IResolvable)
 
     public fun volumeConfigurations(volumeConfigurations: List<Any>)
+
+    public fun volumeConfigurations(vararg volumeConfigurations: Any)
   }
 
   private class BuilderImpl(
@@ -334,6 +352,9 @@ public open class CfnLayer internal constructor(
       cdkBuilder.customSecurityGroupIds(customSecurityGroupIds)
     }
 
+    override fun customSecurityGroupIds(vararg customSecurityGroupIds: String): Unit =
+        customSecurityGroupIds(customSecurityGroupIds.toList())
+
     override fun enableAutoHealing(enableAutoHealing: Boolean) {
       cdkBuilder.enableAutoHealing(enableAutoHealing)
     }
@@ -388,6 +409,8 @@ public open class CfnLayer internal constructor(
       cdkBuilder.packages(packages)
     }
 
+    override fun packages(vararg packages: String): Unit = packages(packages.toList())
+
     override fun shortname(shortname: String) {
       cdkBuilder.shortname(shortname)
     }
@@ -399,6 +422,8 @@ public open class CfnLayer internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun type(type: String) {
       cdkBuilder.type(type)
@@ -419,6 +444,9 @@ public open class CfnLayer internal constructor(
     override fun volumeConfigurations(volumeConfigurations: List<Any>) {
       cdkBuilder.volumeConfigurations(volumeConfigurations)
     }
+
+    override fun volumeConfigurations(vararg volumeConfigurations: Any): Unit =
+        volumeConfigurations(volumeConfigurations.toList())
 
     public fun build(): software.amazon.awscdk.services.opsworks.CfnLayer = cdkBuilder.build()
   }
@@ -626,13 +654,23 @@ public open class CfnLayer internal constructor(
     public interface Builder {
       public fun configure(configure: List<String>)
 
+      public fun configure(vararg configure: String)
+
       public fun deploy(deploy: List<String>)
+
+      public fun deploy(vararg deploy: String)
 
       public fun shutdown(shutdown: List<String>)
 
+      public fun shutdown(vararg shutdown: String)
+
       public fun undeploy(undeploy: List<String>)
 
+      public fun undeploy(vararg undeploy: String)
+
       public fun up(setup: List<String>)
+
+      public fun up(vararg setup: String)
     }
 
     private class BuilderImpl : Builder {
@@ -644,21 +682,31 @@ public open class CfnLayer internal constructor(
         cdkBuilder.configure(configure)
       }
 
+      override fun configure(vararg configure: String): Unit = configure(configure.toList())
+
       override fun deploy(deploy: List<String>) {
         cdkBuilder.deploy(deploy)
       }
+
+      override fun deploy(vararg deploy: String): Unit = deploy(deploy.toList())
 
       override fun shutdown(shutdown: List<String>) {
         cdkBuilder.shutdown(shutdown)
       }
 
+      override fun shutdown(vararg shutdown: String): Unit = shutdown(shutdown.toList())
+
       override fun undeploy(undeploy: List<String>) {
         cdkBuilder.undeploy(undeploy)
       }
 
+      override fun undeploy(vararg undeploy: String): Unit = undeploy(undeploy.toList())
+
       override fun up(setup: List<String>) {
         cdkBuilder.setup(setup)
       }
+
+      override fun up(vararg setup: String): Unit = up(setup.toList())
 
       public fun build(): software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty =
           cdkBuilder.build()

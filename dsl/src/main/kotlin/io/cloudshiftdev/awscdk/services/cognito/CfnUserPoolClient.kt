@@ -31,6 +31,9 @@ public open class CfnUserPoolClient internal constructor(
     unwrap(this).setAllowedOAuthFlows(`value`)
   }
 
+  public open fun allowedOAuthFlows(vararg `value`: String): Unit =
+      allowedOAuthFlows(`value`.toList())
+
   public open fun allowedOAuthFlowsUserPoolClient(): Any? =
       unwrap(this).getAllowedOAuthFlowsUserPoolClient()
 
@@ -48,6 +51,9 @@ public open class CfnUserPoolClient internal constructor(
   public open fun allowedOAuthScopes(`value`: List<String>) {
     unwrap(this).setAllowedOAuthScopes(`value`)
   }
+
+  public open fun allowedOAuthScopes(vararg `value`: String): Unit =
+      allowedOAuthScopes(`value`.toList())
 
   public open fun analyticsConfiguration(): Any? = unwrap(this).getAnalyticsConfiguration()
 
@@ -82,6 +88,8 @@ public open class CfnUserPoolClient internal constructor(
   public open fun callbackUrLs(`value`: List<String>) {
     unwrap(this).setCallbackUrLs(`value`)
   }
+
+  public open fun callbackUrLs(vararg `value`: String): Unit = callbackUrLs(`value`.toList())
 
   public open fun clientName(): String? = unwrap(this).getClientName()
 
@@ -123,6 +131,9 @@ public open class CfnUserPoolClient internal constructor(
     unwrap(this).setExplicitAuthFlows(`value`)
   }
 
+  public open fun explicitAuthFlows(vararg `value`: String): Unit =
+      explicitAuthFlows(`value`.toList())
+
   public open fun generateSecret(): Any? = unwrap(this).getGenerateSecret()
 
   public open fun generateSecret(`value`: Boolean) {
@@ -149,6 +160,8 @@ public open class CfnUserPoolClient internal constructor(
     unwrap(this).setLogoutUrLs(`value`)
   }
 
+  public open fun logoutUrLs(vararg `value`: String): Unit = logoutUrLs(`value`.toList())
+
   public open fun preventUserExistenceErrors(): String? =
       unwrap(this).getPreventUserExistenceErrors()
 
@@ -162,6 +175,8 @@ public open class CfnUserPoolClient internal constructor(
     unwrap(this).setReadAttributes(`value`)
   }
 
+  public open fun readAttributes(vararg `value`: String): Unit = readAttributes(`value`.toList())
+
   public open fun refreshTokenValidity(): Number? = unwrap(this).getRefreshTokenValidity()
 
   public open fun refreshTokenValidity(`value`: Number) {
@@ -174,6 +189,9 @@ public open class CfnUserPoolClient internal constructor(
   public open fun supportedIdentityProviders(`value`: List<String>) {
     unwrap(this).setSupportedIdentityProviders(`value`)
   }
+
+  public open fun supportedIdentityProviders(vararg `value`: String): Unit =
+      supportedIdentityProviders(`value`.toList())
 
   public open fun tokenValidityUnits(): Any? = unwrap(this).getTokenValidityUnits()
 
@@ -202,16 +220,22 @@ public open class CfnUserPoolClient internal constructor(
     unwrap(this).setWriteAttributes(`value`)
   }
 
+  public open fun writeAttributes(vararg `value`: String): Unit = writeAttributes(`value`.toList())
+
   public interface Builder {
     public fun accessTokenValidity(accessTokenValidity: Number)
 
     public fun allowedOAuthFlows(allowedOAuthFlows: List<String>)
+
+    public fun allowedOAuthFlows(vararg allowedOAuthFlows: String)
 
     public fun allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient: Boolean)
 
     public fun allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient: IResolvable)
 
     public fun allowedOAuthScopes(allowedOAuthScopes: List<String>)
+
+    public fun allowedOAuthScopes(vararg allowedOAuthScopes: String)
 
     public fun analyticsConfiguration(analyticsConfiguration: IResolvable)
 
@@ -225,6 +249,8 @@ public open class CfnUserPoolClient internal constructor(
     public fun authSessionValidity(authSessionValidity: Number)
 
     public fun callbackUrLs(callbackUrLs: List<String>)
+
+    public fun callbackUrLs(vararg callbackUrLs: String)
 
     public fun clientName(clientName: String)
 
@@ -242,6 +268,8 @@ public open class CfnUserPoolClient internal constructor(
 
     public fun explicitAuthFlows(explicitAuthFlows: List<String>)
 
+    public fun explicitAuthFlows(vararg explicitAuthFlows: String)
+
     public fun generateSecret(generateSecret: Boolean)
 
     public fun generateSecret(generateSecret: IResolvable)
@@ -250,13 +278,19 @@ public open class CfnUserPoolClient internal constructor(
 
     public fun logoutUrLs(logoutUrLs: List<String>)
 
+    public fun logoutUrLs(vararg logoutUrLs: String)
+
     public fun preventUserExistenceErrors(preventUserExistenceErrors: String)
 
     public fun readAttributes(readAttributes: List<String>)
 
+    public fun readAttributes(vararg readAttributes: String)
+
     public fun refreshTokenValidity(refreshTokenValidity: Number)
 
     public fun supportedIdentityProviders(supportedIdentityProviders: List<String>)
+
+    public fun supportedIdentityProviders(vararg supportedIdentityProviders: String)
 
     public fun tokenValidityUnits(tokenValidityUnits: IResolvable)
 
@@ -269,6 +303,8 @@ public open class CfnUserPoolClient internal constructor(
     public fun userPoolId(userPoolId: String)
 
     public fun writeAttributes(writeAttributes: List<String>)
+
+    public fun writeAttributes(vararg writeAttributes: String)
   }
 
   private class BuilderImpl(
@@ -286,6 +322,9 @@ public open class CfnUserPoolClient internal constructor(
       cdkBuilder.allowedOAuthFlows(allowedOAuthFlows)
     }
 
+    override fun allowedOAuthFlows(vararg allowedOAuthFlows: String): Unit =
+        allowedOAuthFlows(allowedOAuthFlows.toList())
+
     override fun allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient: Boolean) {
       cdkBuilder.allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient)
     }
@@ -297,6 +336,9 @@ public open class CfnUserPoolClient internal constructor(
     override fun allowedOAuthScopes(allowedOAuthScopes: List<String>) {
       cdkBuilder.allowedOAuthScopes(allowedOAuthScopes)
     }
+
+    override fun allowedOAuthScopes(vararg allowedOAuthScopes: String): Unit =
+        allowedOAuthScopes(allowedOAuthScopes.toList())
 
     override fun analyticsConfiguration(analyticsConfiguration: IResolvable) {
       cdkBuilder.analyticsConfiguration(analyticsConfiguration.let(IResolvable::unwrap))
@@ -319,6 +361,9 @@ public open class CfnUserPoolClient internal constructor(
     override fun callbackUrLs(callbackUrLs: List<String>) {
       cdkBuilder.callbackUrLs(callbackUrLs)
     }
+
+    override fun callbackUrLs(vararg callbackUrLs: String): Unit =
+        callbackUrLs(callbackUrLs.toList())
 
     override fun clientName(clientName: String) {
       cdkBuilder.clientName(clientName)
@@ -350,6 +395,9 @@ public open class CfnUserPoolClient internal constructor(
       cdkBuilder.explicitAuthFlows(explicitAuthFlows)
     }
 
+    override fun explicitAuthFlows(vararg explicitAuthFlows: String): Unit =
+        explicitAuthFlows(explicitAuthFlows.toList())
+
     override fun generateSecret(generateSecret: Boolean) {
       cdkBuilder.generateSecret(generateSecret)
     }
@@ -366,6 +414,8 @@ public open class CfnUserPoolClient internal constructor(
       cdkBuilder.logoutUrLs(logoutUrLs)
     }
 
+    override fun logoutUrLs(vararg logoutUrLs: String): Unit = logoutUrLs(logoutUrLs.toList())
+
     override fun preventUserExistenceErrors(preventUserExistenceErrors: String) {
       cdkBuilder.preventUserExistenceErrors(preventUserExistenceErrors)
     }
@@ -374,6 +424,9 @@ public open class CfnUserPoolClient internal constructor(
       cdkBuilder.readAttributes(readAttributes)
     }
 
+    override fun readAttributes(vararg readAttributes: String): Unit =
+        readAttributes(readAttributes.toList())
+
     override fun refreshTokenValidity(refreshTokenValidity: Number) {
       cdkBuilder.refreshTokenValidity(refreshTokenValidity)
     }
@@ -381,6 +434,9 @@ public open class CfnUserPoolClient internal constructor(
     override fun supportedIdentityProviders(supportedIdentityProviders: List<String>) {
       cdkBuilder.supportedIdentityProviders(supportedIdentityProviders)
     }
+
+    override fun supportedIdentityProviders(vararg supportedIdentityProviders: String): Unit =
+        supportedIdentityProviders(supportedIdentityProviders.toList())
 
     override fun tokenValidityUnits(tokenValidityUnits: IResolvable) {
       cdkBuilder.tokenValidityUnits(tokenValidityUnits.let(IResolvable::unwrap))
@@ -403,6 +459,9 @@ public open class CfnUserPoolClient internal constructor(
     override fun writeAttributes(writeAttributes: List<String>) {
       cdkBuilder.writeAttributes(writeAttributes)
     }
+
+    override fun writeAttributes(vararg writeAttributes: String): Unit =
+        writeAttributes(writeAttributes.toList())
 
     public fun build(): software.amazon.awscdk.services.cognito.CfnUserPoolClient =
         cdkBuilder.build()

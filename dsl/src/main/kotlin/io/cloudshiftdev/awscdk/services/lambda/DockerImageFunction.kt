@@ -69,17 +69,23 @@ public open class DockerImageFunction internal constructor(
 
     public fun events(events: List<IEventSource>)
 
+    public fun events(vararg events: IEventSource)
+
     public fun filesystem(filesystem: FileSystem)
 
     public fun functionName(functionName: String)
 
     public fun initialPolicy(initialPolicy: List<PolicyStatement>)
 
+    public fun initialPolicy(vararg initialPolicy: PolicyStatement)
+
     public fun insightsVersion(insightsVersion: LambdaInsightsVersion)
 
     public fun ipv6AllowedForDualStack(ipv6AllowedForDualStack: Boolean)
 
     public fun layers(layers: List<ILayerVersion>)
+
+    public fun layers(vararg layers: ILayerVersion)
 
     public fun logFormat(logFormat: String)
 
@@ -121,6 +127,8 @@ public open class DockerImageFunction internal constructor(
     public fun runtimeManagementMode(runtimeManagementMode: RuntimeManagementMode)
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
+
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
 
     public fun snapStart(snapStart: SnapStartConf)
 
@@ -221,6 +229,8 @@ public open class DockerImageFunction internal constructor(
       cdkBuilder.events(events.map(IEventSource::unwrap))
     }
 
+    override fun events(vararg events: IEventSource): Unit = events(events.toList())
+
     override fun filesystem(filesystem: FileSystem) {
       cdkBuilder.filesystem(filesystem.let(FileSystem::unwrap))
     }
@@ -233,6 +243,9 @@ public open class DockerImageFunction internal constructor(
       cdkBuilder.initialPolicy(initialPolicy.map(PolicyStatement::unwrap))
     }
 
+    override fun initialPolicy(vararg initialPolicy: PolicyStatement): Unit =
+        initialPolicy(initialPolicy.toList())
+
     override fun insightsVersion(insightsVersion: LambdaInsightsVersion) {
       cdkBuilder.insightsVersion(insightsVersion.let(LambdaInsightsVersion::unwrap))
     }
@@ -244,6 +257,8 @@ public open class DockerImageFunction internal constructor(
     override fun layers(layers: List<ILayerVersion>) {
       cdkBuilder.layers(layers.map(ILayerVersion::unwrap))
     }
+
+    override fun layers(vararg layers: ILayerVersion): Unit = layers(layers.toList())
 
     override fun logFormat(logFormat: String) {
       cdkBuilder.logFormat(logFormat)
@@ -322,6 +337,9 @@ public open class DockerImageFunction internal constructor(
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun snapStart(snapStart: SnapStartConf) {
       cdkBuilder.snapStart(snapStart.let(SnapStartConf::unwrap))

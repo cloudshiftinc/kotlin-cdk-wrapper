@@ -40,6 +40,8 @@ public open class EcsRunTask internal constructor(
 
     public fun containerOverrides(containerOverrides: List<ContainerOverride>)
 
+    public fun containerOverrides(vararg containerOverrides: ContainerOverride)
+
     public fun credentials(credentials: Credentials)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -68,6 +70,8 @@ public open class EcsRunTask internal constructor(
     public fun revisionNumber(revisionNumber: Number)
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
+
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
 
     public fun stateName(stateName: String)
 
@@ -107,6 +111,9 @@ public open class EcsRunTask internal constructor(
     override fun containerOverrides(containerOverrides: List<ContainerOverride>) {
       cdkBuilder.containerOverrides(containerOverrides.map(ContainerOverride::unwrap))
     }
+
+    override fun containerOverrides(vararg containerOverrides: ContainerOverride): Unit =
+        containerOverrides(containerOverrides.toList())
 
     override fun credentials(credentials: Credentials) {
       cdkBuilder.credentials(credentials.let(Credentials::unwrap))
@@ -161,6 +168,9 @@ public open class EcsRunTask internal constructor(
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun stateName(stateName: String) {
       cdkBuilder.stateName(stateName)

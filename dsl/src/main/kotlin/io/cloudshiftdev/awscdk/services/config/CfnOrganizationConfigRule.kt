@@ -25,6 +25,9 @@ public open class CfnOrganizationConfigRule internal constructor(
     unwrap(this).setExcludedAccounts(`value`)
   }
 
+  public open fun excludedAccounts(vararg `value`: String): Unit =
+      excludedAccounts(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -93,6 +96,8 @@ public open class CfnOrganizationConfigRule internal constructor(
   public interface Builder {
     public fun excludedAccounts(excludedAccounts: List<String>)
 
+    public fun excludedAccounts(vararg excludedAccounts: String)
+
     public fun organizationConfigRuleName(organizationConfigRuleName: String)
 
     public
@@ -137,6 +142,9 @@ public open class CfnOrganizationConfigRule internal constructor(
     override fun excludedAccounts(excludedAccounts: List<String>) {
       cdkBuilder.excludedAccounts(excludedAccounts)
     }
+
+    override fun excludedAccounts(vararg excludedAccounts: String): Unit =
+        excludedAccounts(excludedAccounts.toList())
 
     override fun organizationConfigRuleName(organizationConfigRuleName: String) {
       cdkBuilder.organizationConfigRuleName(organizationConfigRuleName)
@@ -248,9 +256,14 @@ public open class CfnOrganizationConfigRule internal constructor(
       public
           fun organizationConfigRuleTriggerTypes(organizationConfigRuleTriggerTypes: List<String>)
 
+      public fun organizationConfigRuleTriggerTypes(vararg
+          organizationConfigRuleTriggerTypes: String)
+
       public fun resourceIdScope(resourceIdScope: String)
 
       public fun resourceTypesScope(resourceTypesScope: List<String>)
+
+      public fun resourceTypesScope(vararg resourceTypesScope: String)
 
       public fun tagKeyScope(tagKeyScope: String)
 
@@ -284,6 +297,10 @@ public open class CfnOrganizationConfigRule internal constructor(
         cdkBuilder.organizationConfigRuleTriggerTypes(organizationConfigRuleTriggerTypes)
       }
 
+      override fun organizationConfigRuleTriggerTypes(vararg
+          organizationConfigRuleTriggerTypes: String): Unit =
+          organizationConfigRuleTriggerTypes(organizationConfigRuleTriggerTypes.toList())
+
       override fun resourceIdScope(resourceIdScope: String) {
         cdkBuilder.resourceIdScope(resourceIdScope)
       }
@@ -291,6 +308,9 @@ public open class CfnOrganizationConfigRule internal constructor(
       override fun resourceTypesScope(resourceTypesScope: List<String>) {
         cdkBuilder.resourceTypesScope(resourceTypesScope)
       }
+
+      override fun resourceTypesScope(vararg resourceTypesScope: String): Unit =
+          resourceTypesScope(resourceTypesScope.toList())
 
       override fun tagKeyScope(tagKeyScope: String) {
         cdkBuilder.tagKeyScope(tagKeyScope)
@@ -319,7 +339,7 @@ public open class CfnOrganizationConfigRule internal constructor(
           unwrap(this).getMaximumExecutionFrequency()
 
       override fun organizationConfigRuleTriggerTypes(): List<String> =
-          unwrap(this).getOrganizationConfigRuleTriggerTypes() ?: emptyList()
+          unwrap(this).getOrganizationConfigRuleTriggerTypes()
 
       override fun resourceIdScope(): String? = unwrap(this).getResourceIdScope()
 
@@ -381,6 +401,8 @@ public open class CfnOrganizationConfigRule internal constructor(
     public interface Builder {
       public fun debugLogDeliveryAccounts(debugLogDeliveryAccounts: List<String>)
 
+      public fun debugLogDeliveryAccounts(vararg debugLogDeliveryAccounts: String)
+
       public fun description(description: String)
 
       public fun inputParameters(inputParameters: String)
@@ -390,11 +412,16 @@ public open class CfnOrganizationConfigRule internal constructor(
       public
           fun organizationConfigRuleTriggerTypes(organizationConfigRuleTriggerTypes: List<String>)
 
+      public fun organizationConfigRuleTriggerTypes(vararg
+          organizationConfigRuleTriggerTypes: String)
+
       public fun policyText(policyText: String)
 
       public fun resourceIdScope(resourceIdScope: String)
 
       public fun resourceTypesScope(resourceTypesScope: List<String>)
+
+      public fun resourceTypesScope(vararg resourceTypesScope: String)
 
       public fun runtime(runtime: String)
 
@@ -413,6 +440,9 @@ public open class CfnOrganizationConfigRule internal constructor(
         cdkBuilder.debugLogDeliveryAccounts(debugLogDeliveryAccounts)
       }
 
+      override fun debugLogDeliveryAccounts(vararg debugLogDeliveryAccounts: String): Unit =
+          debugLogDeliveryAccounts(debugLogDeliveryAccounts.toList())
+
       override fun description(description: String) {
         cdkBuilder.description(description)
       }
@@ -430,6 +460,10 @@ public open class CfnOrganizationConfigRule internal constructor(
         cdkBuilder.organizationConfigRuleTriggerTypes(organizationConfigRuleTriggerTypes)
       }
 
+      override fun organizationConfigRuleTriggerTypes(vararg
+          organizationConfigRuleTriggerTypes: String): Unit =
+          organizationConfigRuleTriggerTypes(organizationConfigRuleTriggerTypes.toList())
+
       override fun policyText(policyText: String) {
         cdkBuilder.policyText(policyText)
       }
@@ -441,6 +475,9 @@ public open class CfnOrganizationConfigRule internal constructor(
       override fun resourceTypesScope(resourceTypesScope: List<String>) {
         cdkBuilder.resourceTypesScope(resourceTypesScope)
       }
+
+      override fun resourceTypesScope(vararg resourceTypesScope: String): Unit =
+          resourceTypesScope(resourceTypesScope.toList())
 
       override fun runtime(runtime: String) {
         cdkBuilder.runtime(runtime)
@@ -540,6 +577,8 @@ public open class CfnOrganizationConfigRule internal constructor(
 
       public fun resourceTypesScope(resourceTypesScope: List<String>)
 
+      public fun resourceTypesScope(vararg resourceTypesScope: String)
+
       public fun ruleIdentifier(ruleIdentifier: String)
 
       public fun tagKeyScope(tagKeyScope: String)
@@ -572,6 +611,9 @@ public open class CfnOrganizationConfigRule internal constructor(
       override fun resourceTypesScope(resourceTypesScope: List<String>) {
         cdkBuilder.resourceTypesScope(resourceTypesScope)
       }
+
+      override fun resourceTypesScope(vararg resourceTypesScope: String): Unit =
+          resourceTypesScope(resourceTypesScope.toList())
 
       override fun ruleIdentifier(ruleIdentifier: String) {
         cdkBuilder.ruleIdentifier(ruleIdentifier)

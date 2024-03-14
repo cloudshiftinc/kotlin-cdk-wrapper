@@ -49,6 +49,8 @@ public open class LambdaDeploymentGroup internal constructor(
   public interface Builder {
     public fun alarms(alarms: List<IAlarm>)
 
+    public fun alarms(vararg alarms: IAlarm)
+
     public fun alias(alias: Alias)
 
     public fun application(application: ILambdaApplication)
@@ -84,6 +86,8 @@ public open class LambdaDeploymentGroup internal constructor(
     override fun alarms(alarms: List<IAlarm>) {
       cdkBuilder.alarms(alarms.map(IAlarm::unwrap))
     }
+
+    override fun alarms(vararg alarms: IAlarm): Unit = alarms(alarms.toList())
 
     override fun alias(alias: Alias) {
       cdkBuilder.alias(alias.let(Alias::unwrap))

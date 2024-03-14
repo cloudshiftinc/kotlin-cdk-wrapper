@@ -18,6 +18,8 @@ public interface ApplicationConfiguration {
 
     public fun nestedConfig(nestedConfig: List<ApplicationConfiguration>)
 
+    public fun nestedConfig(vararg nestedConfig: ApplicationConfiguration)
+
     public fun properties(properties: Map<String, String>)
   }
 
@@ -33,6 +35,9 @@ public interface ApplicationConfiguration {
     override fun nestedConfig(nestedConfig: List<ApplicationConfiguration>) {
       cdkBuilder.nestedConfig(nestedConfig.map(ApplicationConfiguration::unwrap))
     }
+
+    override fun nestedConfig(vararg nestedConfig: ApplicationConfiguration): Unit =
+        nestedConfig(nestedConfig.toList())
 
     override fun properties(properties: Map<String, String>) {
       cdkBuilder.properties(properties)

@@ -524,6 +524,8 @@ public open class CfnJob internal constructor(
 
     public interface Builder {
       public fun connections(connections: List<String>)
+
+      public fun connections(vararg connections: String)
     }
 
     private class BuilderImpl : Builder {
@@ -534,6 +536,8 @@ public open class CfnJob internal constructor(
       override fun connections(connections: List<String>) {
         cdkBuilder.connections(connections)
       }
+
+      override fun connections(vararg connections: String): Unit = connections(connections.toList())
 
       public fun build(): software.amazon.awscdk.services.glue.CfnJob.ConnectionsListProperty =
           cdkBuilder.build()

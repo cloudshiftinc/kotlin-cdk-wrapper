@@ -118,6 +118,9 @@ public open class CfnDatabase internal constructor(
     unwrap(this).setRelationalDatabaseParameters(__idx_ac66f0)
   }
 
+  public open fun relationalDatabaseParameters(vararg __idx_ac66f0: Any): Unit =
+      relationalDatabaseParameters(__idx_ac66f0.toList())
+
   public open fun rotateMasterUserPassword(): Any? = unwrap(this).getRotateMasterUserPassword()
 
   public open fun rotateMasterUserPassword(`value`: Boolean) {
@@ -136,6 +139,8 @@ public open class CfnDatabase internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public interface Builder {
     public fun availabilityZone(availabilityZone: String)
@@ -170,11 +175,15 @@ public open class CfnDatabase internal constructor(
 
     public fun relationalDatabaseParameters(relationalDatabaseParameters: List<Any>)
 
+    public fun relationalDatabaseParameters(vararg relationalDatabaseParameters: Any)
+
     public fun rotateMasterUserPassword(rotateMasterUserPassword: Boolean)
 
     public fun rotateMasterUserPassword(rotateMasterUserPassword: IResolvable)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -248,6 +257,9 @@ public open class CfnDatabase internal constructor(
       cdkBuilder.relationalDatabaseParameters(relationalDatabaseParameters)
     }
 
+    override fun relationalDatabaseParameters(vararg relationalDatabaseParameters: Any): Unit =
+        relationalDatabaseParameters(relationalDatabaseParameters.toList())
+
     override fun rotateMasterUserPassword(rotateMasterUserPassword: Boolean) {
       cdkBuilder.rotateMasterUserPassword(rotateMasterUserPassword)
     }
@@ -259,6 +271,8 @@ public open class CfnDatabase internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.lightsail.CfnDatabase = cdkBuilder.build()
   }

@@ -14,6 +14,8 @@ public interface NodegroupRemoteAccess {
   public interface Builder {
     public fun sourceSecurityGroups(sourceSecurityGroups: List<ISecurityGroup>)
 
+    public fun sourceSecurityGroups(vararg sourceSecurityGroups: ISecurityGroup)
+
     public fun sshKeyName(sshKeyName: String)
   }
 
@@ -24,6 +26,9 @@ public interface NodegroupRemoteAccess {
     override fun sourceSecurityGroups(sourceSecurityGroups: List<ISecurityGroup>) {
       cdkBuilder.sourceSecurityGroups(sourceSecurityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun sourceSecurityGroups(vararg sourceSecurityGroups: ISecurityGroup): Unit =
+        sourceSecurityGroups(sourceSecurityGroups.toList())
 
     override fun sshKeyName(sshKeyName: String) {
       cdkBuilder.sshKeyName(sshKeyName)

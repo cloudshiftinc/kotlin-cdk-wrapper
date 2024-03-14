@@ -169,6 +169,8 @@ public open class NetworkLoadBalancer internal constructor(
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
+
     public fun vpc(vpc: IVpc)
 
     public fun vpcSubnets(vpcSubnets: SubnetSelection)
@@ -210,6 +212,9 @@ public open class NetworkLoadBalancer internal constructor(
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))

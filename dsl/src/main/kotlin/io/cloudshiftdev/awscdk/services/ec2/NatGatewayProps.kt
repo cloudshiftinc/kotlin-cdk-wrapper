@@ -9,6 +9,8 @@ public interface NatGatewayProps {
 
   public interface Builder {
     public fun eipAllocationIds(eipAllocationIds: List<String>)
+
+    public fun eipAllocationIds(vararg eipAllocationIds: String)
   }
 
   private class BuilderImpl : Builder {
@@ -18,6 +20,9 @@ public interface NatGatewayProps {
     override fun eipAllocationIds(eipAllocationIds: List<String>) {
       cdkBuilder.eipAllocationIds(eipAllocationIds)
     }
+
+    override fun eipAllocationIds(vararg eipAllocationIds: String): Unit =
+        eipAllocationIds(eipAllocationIds.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.NatGatewayProps = cdkBuilder.build()
   }

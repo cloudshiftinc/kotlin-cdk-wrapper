@@ -32,6 +32,8 @@ public open class CfnCidrCollection internal constructor(
     unwrap(this).setLocations(__idx_ac66f0)
   }
 
+  public open fun locations(vararg __idx_ac66f0: Any): Unit = locations(__idx_ac66f0.toList())
+
   public open fun name(): String = unwrap(this).getName()
 
   public open fun name(`value`: String) {
@@ -42,6 +44,8 @@ public open class CfnCidrCollection internal constructor(
     public fun locations(locations: IResolvable)
 
     public fun locations(locations: List<Any>)
+
+    public fun locations(vararg locations: Any)
 
     public fun name(name: String)
   }
@@ -60,6 +64,8 @@ public open class CfnCidrCollection internal constructor(
     override fun locations(locations: List<Any>) {
       cdkBuilder.locations(locations)
     }
+
+    override fun locations(vararg locations: Any): Unit = locations(locations.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -98,6 +104,8 @@ public open class CfnCidrCollection internal constructor(
     public interface Builder {
       public fun cidrList(cidrList: List<String>)
 
+      public fun cidrList(vararg cidrList: String)
+
       public fun locationName(locationName: String)
     }
 
@@ -109,6 +117,8 @@ public open class CfnCidrCollection internal constructor(
       override fun cidrList(cidrList: List<String>) {
         cdkBuilder.cidrList(cidrList)
       }
+
+      override fun cidrList(vararg cidrList: String): Unit = cidrList(cidrList.toList())
 
       override fun locationName(locationName: String) {
         cdkBuilder.locationName(locationName)
@@ -122,7 +132,7 @@ public open class CfnCidrCollection internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.route53.CfnCidrCollection.LocationProperty,
     ) : LocationProperty {
-      override fun cidrList(): List<String> = unwrap(this).getCidrList() ?: emptyList()
+      override fun cidrList(): List<String> = unwrap(this).getCidrList()
 
       override fun locationName(): String = unwrap(this).getLocationName()
     }

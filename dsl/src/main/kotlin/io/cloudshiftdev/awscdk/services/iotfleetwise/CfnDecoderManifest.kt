@@ -57,6 +57,9 @@ public open class CfnDecoderManifest internal constructor(
     unwrap(this).setNetworkInterfaces(__idx_ac66f0)
   }
 
+  public open fun networkInterfaces(vararg __idx_ac66f0: Any): Unit =
+      networkInterfaces(__idx_ac66f0.toList())
+
   public open fun signalDecoders(): Any? = unwrap(this).getSignalDecoders()
 
   public open fun signalDecoders(`value`: IResolvable) {
@@ -66,6 +69,9 @@ public open class CfnDecoderManifest internal constructor(
   public open fun signalDecoders(__idx_ac66f0: List<Any>) {
     unwrap(this).setSignalDecoders(__idx_ac66f0)
   }
+
+  public open fun signalDecoders(vararg __idx_ac66f0: Any): Unit =
+      signalDecoders(__idx_ac66f0.toList())
 
   public open fun status(): String? = unwrap(this).getStatus()
 
@@ -82,6 +88,8 @@ public open class CfnDecoderManifest internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun description(description: String)
 
@@ -93,13 +101,19 @@ public open class CfnDecoderManifest internal constructor(
 
     public fun networkInterfaces(networkInterfaces: List<Any>)
 
+    public fun networkInterfaces(vararg networkInterfaces: Any)
+
     public fun signalDecoders(signalDecoders: IResolvable)
 
     public fun signalDecoders(signalDecoders: List<Any>)
 
+    public fun signalDecoders(vararg signalDecoders: Any)
+
     public fun status(status: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -129,6 +143,9 @@ public open class CfnDecoderManifest internal constructor(
       cdkBuilder.networkInterfaces(networkInterfaces)
     }
 
+    override fun networkInterfaces(vararg networkInterfaces: Any): Unit =
+        networkInterfaces(networkInterfaces.toList())
+
     override fun signalDecoders(signalDecoders: IResolvable) {
       cdkBuilder.signalDecoders(signalDecoders.let(IResolvable::unwrap))
     }
@@ -137,6 +154,9 @@ public open class CfnDecoderManifest internal constructor(
       cdkBuilder.signalDecoders(signalDecoders)
     }
 
+    override fun signalDecoders(vararg signalDecoders: Any): Unit =
+        signalDecoders(signalDecoders.toList())
+
     override fun status(status: String) {
       cdkBuilder.status(status)
     }
@@ -144,6 +164,8 @@ public open class CfnDecoderManifest internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest =
         cdkBuilder.build()

@@ -21,6 +21,8 @@ public interface UsagePlanProps {
   public interface Builder {
     public fun apiStages(apiStages: List<UsagePlanPerApiStage>)
 
+    public fun apiStages(vararg apiStages: UsagePlanPerApiStage)
+
     public fun description(description: String)
 
     public fun name(name: String)
@@ -45,6 +47,9 @@ public interface UsagePlanProps {
     override fun apiStages(apiStages: List<UsagePlanPerApiStage>) {
       cdkBuilder.apiStages(apiStages.map(UsagePlanPerApiStage::unwrap))
     }
+
+    override fun apiStages(vararg apiStages: UsagePlanPerApiStage): Unit =
+        apiStages(apiStages.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)

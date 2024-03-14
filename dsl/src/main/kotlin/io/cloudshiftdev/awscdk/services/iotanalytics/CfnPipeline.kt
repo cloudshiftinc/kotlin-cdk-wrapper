@@ -37,6 +37,9 @@ public open class CfnPipeline internal constructor(
     unwrap(this).setPipelineActivities(__idx_ac66f0)
   }
 
+  public open fun pipelineActivities(vararg __idx_ac66f0: Any): Unit =
+      pipelineActivities(__idx_ac66f0.toList())
+
   public open fun pipelineName(): String? = unwrap(this).getPipelineName()
 
   public open fun pipelineName(`value`: String) {
@@ -52,14 +55,20 @@ public open class CfnPipeline internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun pipelineActivities(pipelineActivities: IResolvable)
 
     public fun pipelineActivities(pipelineActivities: List<Any>)
 
+    public fun pipelineActivities(vararg pipelineActivities: Any)
+
     public fun pipelineName(pipelineName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -77,6 +86,9 @@ public open class CfnPipeline internal constructor(
       cdkBuilder.pipelineActivities(pipelineActivities)
     }
 
+    override fun pipelineActivities(vararg pipelineActivities: Any): Unit =
+        pipelineActivities(pipelineActivities.toList())
+
     override fun pipelineName(pipelineName: String) {
       cdkBuilder.pipelineName(pipelineName)
     }
@@ -84,6 +96,8 @@ public open class CfnPipeline internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.iotanalytics.CfnPipeline =
         cdkBuilder.build()
@@ -774,6 +788,8 @@ public open class CfnPipeline internal constructor(
     public interface Builder {
       public fun attributes(attributes: List<String>)
 
+      public fun attributes(vararg attributes: String)
+
       public fun name(name: String)
 
       public fun next(next: String)
@@ -788,6 +804,8 @@ public open class CfnPipeline internal constructor(
       override fun attributes(attributes: List<String>) {
         cdkBuilder.attributes(attributes)
       }
+
+      override fun attributes(vararg attributes: String): Unit = attributes(attributes.toList())
 
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -806,7 +824,7 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty,
     ) : SelectAttributesProperty {
-      override fun attributes(): List<String> = unwrap(this).getAttributes() ?: emptyList()
+      override fun attributes(): List<String> = unwrap(this).getAttributes()
 
       override fun name(): String = unwrap(this).getName()
 
@@ -843,6 +861,8 @@ public open class CfnPipeline internal constructor(
     public interface Builder {
       public fun attributes(attributes: List<String>)
 
+      public fun attributes(vararg attributes: String)
+
       public fun name(name: String)
 
       public fun next(next: String)
@@ -857,6 +877,8 @@ public open class CfnPipeline internal constructor(
       override fun attributes(attributes: List<String>) {
         cdkBuilder.attributes(attributes)
       }
+
+      override fun attributes(vararg attributes: String): Unit = attributes(attributes.toList())
 
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -875,7 +897,7 @@ public open class CfnPipeline internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty,
     ) : RemoveAttributesProperty {
-      override fun attributes(): List<String> = unwrap(this).getAttributes() ?: emptyList()
+      override fun attributes(): List<String> = unwrap(this).getAttributes()
 
       override fun name(): String = unwrap(this).getName()
 

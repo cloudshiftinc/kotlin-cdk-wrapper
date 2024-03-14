@@ -96,6 +96,8 @@ public open class CfnConnectAttachment internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun transportAttachmentId(): String = unwrap(this).getTransportAttachmentId()
 
   public open fun transportAttachmentId(`value`: String) {
@@ -125,6 +127,8 @@ public open class CfnConnectAttachment internal constructor(
         fun proposedSegmentChange(proposedSegmentChange: ProposedSegmentChangeProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun transportAttachmentId(transportAttachmentId: String)
   }
@@ -176,6 +180,8 @@ public open class CfnConnectAttachment internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun transportAttachmentId(transportAttachmentId: String) {
       cdkBuilder.transportAttachmentId(transportAttachmentId)
@@ -269,6 +275,8 @@ public open class CfnConnectAttachment internal constructor(
       public fun segmentName(segmentName: String)
 
       public fun tags(tags: List<CfnTag>)
+
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
@@ -288,6 +296,8 @@ public open class CfnConnectAttachment internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       public fun build():
           software.amazon.awscdk.services.networkmanager.CfnConnectAttachment.ProposedSegmentChangeProperty

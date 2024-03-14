@@ -49,6 +49,8 @@ public open class CfnClusterParameterGroup internal constructor(
     unwrap(this).setParameters(__idx_ac66f0)
   }
 
+  public open fun parameters(vararg __idx_ac66f0: Any): Unit = parameters(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -57,6 +59,8 @@ public open class CfnClusterParameterGroup internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public interface Builder {
     public fun description(description: String)
@@ -69,7 +73,11 @@ public open class CfnClusterParameterGroup internal constructor(
 
     public fun parameters(parameters: List<Any>)
 
+    public fun parameters(vararg parameters: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -100,9 +108,13 @@ public open class CfnClusterParameterGroup internal constructor(
       cdkBuilder.parameters(parameters)
     }
 
+    override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.redshift.CfnClusterParameterGroup =
         cdkBuilder.build()

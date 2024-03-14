@@ -672,6 +672,8 @@ public open class CfnMLTransform internal constructor(
       public fun glueTables(glueTables: IResolvable)
 
       public fun glueTables(glueTables: List<Any>)
+
+      public fun glueTables(vararg glueTables: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -686,6 +688,8 @@ public open class CfnMLTransform internal constructor(
       override fun glueTables(glueTables: List<Any>) {
         cdkBuilder.glueTables(glueTables)
       }
+
+      override fun glueTables(vararg glueTables: Any): Unit = glueTables(glueTables.toList())
 
       public fun build():
           software.amazon.awscdk.services.glue.CfnMLTransform.InputRecordTablesProperty =

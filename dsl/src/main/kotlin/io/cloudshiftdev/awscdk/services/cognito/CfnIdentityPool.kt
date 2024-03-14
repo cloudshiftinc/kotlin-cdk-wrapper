@@ -58,6 +58,9 @@ public open class CfnIdentityPool internal constructor(
     unwrap(this).setCognitoIdentityProviders(__idx_ac66f0)
   }
 
+  public open fun cognitoIdentityProviders(vararg __idx_ac66f0: Any): Unit =
+      cognitoIdentityProviders(__idx_ac66f0.toList())
+
   public open fun cognitoStreams(): Any? = unwrap(this).getCognitoStreams()
 
   public open fun cognitoStreams(`value`: IResolvable) {
@@ -96,6 +99,9 @@ public open class CfnIdentityPool internal constructor(
     unwrap(this).setOpenIdConnectProviderArns(`value`)
   }
 
+  public open fun openIdConnectProviderArns(vararg `value`: String): Unit =
+      openIdConnectProviderArns(`value`.toList())
+
   public open fun pushSync(): Any? = unwrap(this).getPushSync()
 
   public open fun pushSync(`value`: IResolvable) {
@@ -118,6 +124,9 @@ public open class CfnIdentityPool internal constructor(
     unwrap(this).setSamlProviderArns(`value`)
   }
 
+  public open fun samlProviderArns(vararg `value`: String): Unit =
+      samlProviderArns(`value`.toList())
+
   public open fun supportedLoginProviders(): Any? = unwrap(this).getSupportedLoginProviders()
 
   public open fun supportedLoginProviders(`value`: Any) {
@@ -139,6 +148,8 @@ public open class CfnIdentityPool internal constructor(
 
     public fun cognitoIdentityProviders(cognitoIdentityProviders: List<Any>)
 
+    public fun cognitoIdentityProviders(vararg cognitoIdentityProviders: Any)
+
     public fun cognitoStreams(cognitoStreams: IResolvable)
 
     public fun cognitoStreams(cognitoStreams: CognitoStreamsProperty)
@@ -153,6 +164,8 @@ public open class CfnIdentityPool internal constructor(
 
     public fun openIdConnectProviderArns(openIdConnectProviderArns: List<String>)
 
+    public fun openIdConnectProviderArns(vararg openIdConnectProviderArns: String)
+
     public fun pushSync(pushSync: IResolvable)
 
     public fun pushSync(pushSync: PushSyncProperty)
@@ -162,6 +175,8 @@ public open class CfnIdentityPool internal constructor(
     public fun pushSync(pushSync: PushSyncProperty.Builder.() -> Unit)
 
     public fun samlProviderArns(samlProviderArns: List<String>)
+
+    public fun samlProviderArns(vararg samlProviderArns: String)
 
     public fun supportedLoginProviders(supportedLoginProviders: Any)
   }
@@ -201,6 +216,9 @@ public open class CfnIdentityPool internal constructor(
       cdkBuilder.cognitoIdentityProviders(cognitoIdentityProviders)
     }
 
+    override fun cognitoIdentityProviders(vararg cognitoIdentityProviders: Any): Unit =
+        cognitoIdentityProviders(cognitoIdentityProviders.toList())
+
     override fun cognitoStreams(cognitoStreams: IResolvable) {
       cdkBuilder.cognitoStreams(cognitoStreams.let(IResolvable::unwrap))
     }
@@ -226,6 +244,9 @@ public open class CfnIdentityPool internal constructor(
       cdkBuilder.openIdConnectProviderArns(openIdConnectProviderArns)
     }
 
+    override fun openIdConnectProviderArns(vararg openIdConnectProviderArns: String): Unit =
+        openIdConnectProviderArns(openIdConnectProviderArns.toList())
+
     override fun pushSync(pushSync: IResolvable) {
       cdkBuilder.pushSync(pushSync.let(IResolvable::unwrap))
     }
@@ -242,6 +263,9 @@ public open class CfnIdentityPool internal constructor(
     override fun samlProviderArns(samlProviderArns: List<String>) {
       cdkBuilder.samlProviderArns(samlProviderArns)
     }
+
+    override fun samlProviderArns(vararg samlProviderArns: String): Unit =
+        samlProviderArns(samlProviderArns.toList())
 
     override fun supportedLoginProviders(supportedLoginProviders: Any) {
       cdkBuilder.supportedLoginProviders(supportedLoginProviders)
@@ -422,6 +446,8 @@ public open class CfnIdentityPool internal constructor(
     public interface Builder {
       public fun applicationArns(applicationArns: List<String>)
 
+      public fun applicationArns(vararg applicationArns: String)
+
       public fun roleArn(roleArn: String)
     }
 
@@ -433,6 +459,9 @@ public open class CfnIdentityPool internal constructor(
       override fun applicationArns(applicationArns: List<String>) {
         cdkBuilder.applicationArns(applicationArns)
       }
+
+      override fun applicationArns(vararg applicationArns: String): Unit =
+          applicationArns(applicationArns.toList())
 
       override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)

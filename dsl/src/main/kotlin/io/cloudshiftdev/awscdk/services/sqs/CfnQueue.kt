@@ -136,6 +136,8 @@ public open class CfnQueue internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun visibilityTimeout(): Number? = unwrap(this).getVisibilityTimeout()
 
   public open fun visibilityTimeout(`value`: Number) {
@@ -178,6 +180,8 @@ public open class CfnQueue internal constructor(
     public fun sqsManagedSseEnabled(sqsManagedSseEnabled: IResolvable)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun visibilityTimeout(visibilityTimeout: Number)
   }
@@ -260,6 +264,8 @@ public open class CfnQueue internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun visibilityTimeout(visibilityTimeout: Number) {
       cdkBuilder.visibilityTimeout(visibilityTimeout)

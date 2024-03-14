@@ -73,6 +73,9 @@ public open class CfnTable internal constructor(
     unwrap(this).setClusteringKeyColumns(__idx_ac66f0)
   }
 
+  public open fun clusteringKeyColumns(vararg __idx_ac66f0: Any): Unit =
+      clusteringKeyColumns(__idx_ac66f0.toList())
+
   public open fun defaultTimeToLive(): Number? = unwrap(this).getDefaultTimeToLive()
 
   public open fun defaultTimeToLive(`value`: Number) {
@@ -115,6 +118,9 @@ public open class CfnTable internal constructor(
     unwrap(this).setPartitionKeyColumns(__idx_ac66f0)
   }
 
+  public open fun partitionKeyColumns(vararg __idx_ac66f0: Any): Unit =
+      partitionKeyColumns(__idx_ac66f0.toList())
+
   public open fun pointInTimeRecoveryEnabled(): Any? = unwrap(this).getPointInTimeRecoveryEnabled()
 
   public open fun pointInTimeRecoveryEnabled(`value`: Boolean) {
@@ -135,6 +141,9 @@ public open class CfnTable internal constructor(
     unwrap(this).setRegularColumns(__idx_ac66f0)
   }
 
+  public open fun regularColumns(vararg __idx_ac66f0: Any): Unit =
+      regularColumns(__idx_ac66f0.toList())
+
   public open fun replicaSpecifications(): Any? = unwrap(this).getReplicaSpecifications()
 
   public open fun replicaSpecifications(`value`: IResolvable) {
@@ -144,6 +153,9 @@ public open class CfnTable internal constructor(
   public open fun replicaSpecifications(__idx_ac66f0: List<Any>) {
     unwrap(this).setReplicaSpecifications(__idx_ac66f0)
   }
+
+  public open fun replicaSpecifications(vararg __idx_ac66f0: Any): Unit =
+      replicaSpecifications(__idx_ac66f0.toList())
 
   public open fun tableName(): String? = unwrap(this).getTableName()
 
@@ -159,6 +171,8 @@ public open class CfnTable internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public interface Builder {
     public fun autoScalingSpecifications(autoScalingSpecifications: IResolvable)
@@ -187,6 +201,8 @@ public open class CfnTable internal constructor(
 
     public fun clusteringKeyColumns(clusteringKeyColumns: List<Any>)
 
+    public fun clusteringKeyColumns(vararg clusteringKeyColumns: Any)
+
     public fun defaultTimeToLive(defaultTimeToLive: Number)
 
     public fun encryptionSpecification(encryptionSpecification: IResolvable)
@@ -204,6 +220,8 @@ public open class CfnTable internal constructor(
 
     public fun partitionKeyColumns(partitionKeyColumns: List<Any>)
 
+    public fun partitionKeyColumns(vararg partitionKeyColumns: Any)
+
     public fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: Boolean)
 
     public fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: IResolvable)
@@ -212,13 +230,19 @@ public open class CfnTable internal constructor(
 
     public fun regularColumns(regularColumns: List<Any>)
 
+    public fun regularColumns(vararg regularColumns: Any)
+
     public fun replicaSpecifications(replicaSpecifications: IResolvable)
 
     public fun replicaSpecifications(replicaSpecifications: List<Any>)
 
+    public fun replicaSpecifications(vararg replicaSpecifications: Any)
+
     public fun tableName(tableName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -273,6 +297,9 @@ public open class CfnTable internal constructor(
       cdkBuilder.clusteringKeyColumns(clusteringKeyColumns)
     }
 
+    override fun clusteringKeyColumns(vararg clusteringKeyColumns: Any): Unit =
+        clusteringKeyColumns(clusteringKeyColumns.toList())
+
     override fun defaultTimeToLive(defaultTimeToLive: Number) {
       cdkBuilder.defaultTimeToLive(defaultTimeToLive)
     }
@@ -303,6 +330,9 @@ public open class CfnTable internal constructor(
       cdkBuilder.partitionKeyColumns(partitionKeyColumns)
     }
 
+    override fun partitionKeyColumns(vararg partitionKeyColumns: Any): Unit =
+        partitionKeyColumns(partitionKeyColumns.toList())
+
     override fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: Boolean) {
       cdkBuilder.pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled)
     }
@@ -319,6 +349,9 @@ public open class CfnTable internal constructor(
       cdkBuilder.regularColumns(regularColumns)
     }
 
+    override fun regularColumns(vararg regularColumns: Any): Unit =
+        regularColumns(regularColumns.toList())
+
     override fun replicaSpecifications(replicaSpecifications: IResolvable) {
       cdkBuilder.replicaSpecifications(replicaSpecifications.let(IResolvable::unwrap))
     }
@@ -327,6 +360,9 @@ public open class CfnTable internal constructor(
       cdkBuilder.replicaSpecifications(replicaSpecifications)
     }
 
+    override fun replicaSpecifications(vararg replicaSpecifications: Any): Unit =
+        replicaSpecifications(replicaSpecifications.toList())
+
     override fun tableName(tableName: String) {
       cdkBuilder.tableName(tableName)
     }
@@ -334,6 +370,8 @@ public open class CfnTable internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.cassandra.CfnTable = cdkBuilder.build()
   }

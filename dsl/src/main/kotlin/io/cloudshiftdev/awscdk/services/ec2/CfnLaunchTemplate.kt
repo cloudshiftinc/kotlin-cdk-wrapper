@@ -60,6 +60,9 @@ public open class CfnLaunchTemplate internal constructor(
     unwrap(this).setTagSpecifications(__idx_ac66f0)
   }
 
+  public open fun tagSpecifications(vararg __idx_ac66f0: Any): Unit =
+      tagSpecifications(__idx_ac66f0.toList())
+
   public open fun versionDescription(): String? = unwrap(this).getVersionDescription()
 
   public open fun versionDescription(`value`: String) {
@@ -80,6 +83,8 @@ public open class CfnLaunchTemplate internal constructor(
     public fun tagSpecifications(tagSpecifications: IResolvable)
 
     public fun tagSpecifications(tagSpecifications: List<Any>)
+
+    public fun tagSpecifications(vararg tagSpecifications: Any)
 
     public fun versionDescription(versionDescription: String)
   }
@@ -116,6 +121,9 @@ public open class CfnLaunchTemplate internal constructor(
     override fun tagSpecifications(tagSpecifications: List<Any>) {
       cdkBuilder.tagSpecifications(tagSpecifications)
     }
+
+    override fun tagSpecifications(vararg tagSpecifications: Any): Unit =
+        tagSpecifications(tagSpecifications.toList())
 
     override fun versionDescription(versionDescription: String) {
       cdkBuilder.versionDescription(versionDescription)
@@ -417,6 +425,8 @@ public open class CfnLaunchTemplate internal constructor(
 
       public fun blockDeviceMappings(blockDeviceMappings: List<Any>)
 
+      public fun blockDeviceMappings(vararg blockDeviceMappings: Any)
+
       public fun capacityReservationSpecification(capacityReservationSpecification: IResolvable)
 
       public
@@ -460,9 +470,13 @@ public open class CfnLaunchTemplate internal constructor(
 
       public fun elasticGpuSpecifications(elasticGpuSpecifications: List<Any>)
 
+      public fun elasticGpuSpecifications(vararg elasticGpuSpecifications: Any)
+
       public fun elasticInferenceAccelerators(elasticInferenceAccelerators: IResolvable)
 
       public fun elasticInferenceAccelerators(elasticInferenceAccelerators: List<Any>)
+
+      public fun elasticInferenceAccelerators(vararg elasticInferenceAccelerators: Any)
 
       public fun enclaveOptions(enclaveOptions: IResolvable)
 
@@ -522,6 +536,8 @@ public open class CfnLaunchTemplate internal constructor(
 
       public fun licenseSpecifications(licenseSpecifications: List<Any>)
 
+      public fun licenseSpecifications(vararg licenseSpecifications: Any)
+
       public fun maintenanceOptions(maintenanceOptions: IResolvable)
 
       public fun maintenanceOptions(maintenanceOptions: MaintenanceOptionsProperty)
@@ -551,6 +567,8 @@ public open class CfnLaunchTemplate internal constructor(
 
       public fun networkInterfaces(networkInterfaces: List<Any>)
 
+      public fun networkInterfaces(vararg networkInterfaces: Any)
+
       public fun placement(placement: IResolvable)
 
       public fun placement(placement: PlacementProperty)
@@ -572,11 +590,17 @@ public open class CfnLaunchTemplate internal constructor(
 
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun securityGroups(securityGroups: List<String>)
+
+      public fun securityGroups(vararg securityGroups: String)
 
       public fun tagSpecifications(tagSpecifications: IResolvable)
 
       public fun tagSpecifications(tagSpecifications: List<Any>)
+
+      public fun tagSpecifications(vararg tagSpecifications: Any)
 
       public fun userData(userData: String)
     }
@@ -593,6 +617,9 @@ public open class CfnLaunchTemplate internal constructor(
       override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
         cdkBuilder.blockDeviceMappings(blockDeviceMappings)
       }
+
+      override fun blockDeviceMappings(vararg blockDeviceMappings: Any): Unit =
+          blockDeviceMappings(blockDeviceMappings.toList())
 
       override fun capacityReservationSpecification(capacityReservationSpecification: IResolvable) {
         cdkBuilder.capacityReservationSpecification(capacityReservationSpecification.let(IResolvable::unwrap))
@@ -669,6 +696,9 @@ public open class CfnLaunchTemplate internal constructor(
         cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications)
       }
 
+      override fun elasticGpuSpecifications(vararg elasticGpuSpecifications: Any): Unit =
+          elasticGpuSpecifications(elasticGpuSpecifications.toList())
+
       override fun elasticInferenceAccelerators(elasticInferenceAccelerators: IResolvable) {
         cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators.let(IResolvable::unwrap))
       }
@@ -676,6 +706,9 @@ public open class CfnLaunchTemplate internal constructor(
       override fun elasticInferenceAccelerators(elasticInferenceAccelerators: List<Any>) {
         cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators)
       }
+
+      override fun elasticInferenceAccelerators(vararg elasticInferenceAccelerators: Any): Unit =
+          elasticInferenceAccelerators(elasticInferenceAccelerators.toList())
 
       override fun enclaveOptions(enclaveOptions: IResolvable) {
         cdkBuilder.enclaveOptions(enclaveOptions.let(IResolvable::unwrap))
@@ -774,6 +807,9 @@ public open class CfnLaunchTemplate internal constructor(
         cdkBuilder.licenseSpecifications(licenseSpecifications)
       }
 
+      override fun licenseSpecifications(vararg licenseSpecifications: Any): Unit =
+          licenseSpecifications(licenseSpecifications.toList())
+
       override fun maintenanceOptions(maintenanceOptions: IResolvable) {
         cdkBuilder.maintenanceOptions(maintenanceOptions.let(IResolvable::unwrap))
       }
@@ -822,6 +858,9 @@ public open class CfnLaunchTemplate internal constructor(
         cdkBuilder.networkInterfaces(networkInterfaces)
       }
 
+      override fun networkInterfaces(vararg networkInterfaces: Any): Unit =
+          networkInterfaces(networkInterfaces.toList())
+
       override fun placement(placement: IResolvable) {
         cdkBuilder.placement(placement.let(IResolvable::unwrap))
       }
@@ -857,9 +896,15 @@ public open class CfnLaunchTemplate internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun securityGroups(securityGroups: List<String>) {
         cdkBuilder.securityGroups(securityGroups)
       }
+
+      override fun securityGroups(vararg securityGroups: String): Unit =
+          securityGroups(securityGroups.toList())
 
       override fun tagSpecifications(tagSpecifications: IResolvable) {
         cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable::unwrap))
@@ -868,6 +913,9 @@ public open class CfnLaunchTemplate internal constructor(
       override fun tagSpecifications(tagSpecifications: List<Any>) {
         cdkBuilder.tagSpecifications(tagSpecifications)
       }
+
+      override fun tagSpecifications(vararg tagSpecifications: Any): Unit =
+          tagSpecifications(tagSpecifications.toList())
 
       override fun userData(userData: String) {
         cdkBuilder.userData(userData)
@@ -1226,6 +1274,8 @@ public open class CfnLaunchTemplate internal constructor(
 
       public fun groups(groups: List<String>)
 
+      public fun groups(vararg groups: String)
+
       public fun interfaceType(interfaceType: String)
 
       public fun ipv4PrefixCount(ipv4PrefixCount: Number)
@@ -1234,17 +1284,23 @@ public open class CfnLaunchTemplate internal constructor(
 
       public fun ipv4Prefixes(ipv4Prefixes: List<Any>)
 
+      public fun ipv4Prefixes(vararg ipv4Prefixes: Any)
+
       public fun ipv6AddressCount(ipv6AddressCount: Number)
 
       public fun ipv6Addresses(ipv6Addresses: IResolvable)
 
       public fun ipv6Addresses(ipv6Addresses: List<Any>)
 
+      public fun ipv6Addresses(vararg ipv6Addresses: Any)
+
       public fun ipv6PrefixCount(ipv6PrefixCount: Number)
 
       public fun ipv6Prefixes(ipv6Prefixes: IResolvable)
 
       public fun ipv6Prefixes(ipv6Prefixes: List<Any>)
+
+      public fun ipv6Prefixes(vararg ipv6Prefixes: Any)
 
       public fun networkCardIndex(networkCardIndex: Number)
 
@@ -1259,6 +1315,8 @@ public open class CfnLaunchTemplate internal constructor(
       public fun privateIpAddresses(privateIpAddresses: IResolvable)
 
       public fun privateIpAddresses(privateIpAddresses: List<Any>)
+
+      public fun privateIpAddresses(vararg privateIpAddresses: Any)
 
       public fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number)
 
@@ -1336,6 +1394,8 @@ public open class CfnLaunchTemplate internal constructor(
         cdkBuilder.groups(groups)
       }
 
+      override fun groups(vararg groups: String): Unit = groups(groups.toList())
+
       override fun interfaceType(interfaceType: String) {
         cdkBuilder.interfaceType(interfaceType)
       }
@@ -1352,6 +1412,9 @@ public open class CfnLaunchTemplate internal constructor(
         cdkBuilder.ipv4Prefixes(ipv4Prefixes)
       }
 
+      override fun ipv4Prefixes(vararg ipv4Prefixes: Any): Unit =
+          ipv4Prefixes(ipv4Prefixes.toList())
+
       override fun ipv6AddressCount(ipv6AddressCount: Number) {
         cdkBuilder.ipv6AddressCount(ipv6AddressCount)
       }
@@ -1364,6 +1427,9 @@ public open class CfnLaunchTemplate internal constructor(
         cdkBuilder.ipv6Addresses(ipv6Addresses)
       }
 
+      override fun ipv6Addresses(vararg ipv6Addresses: Any): Unit =
+          ipv6Addresses(ipv6Addresses.toList())
+
       override fun ipv6PrefixCount(ipv6PrefixCount: Number) {
         cdkBuilder.ipv6PrefixCount(ipv6PrefixCount)
       }
@@ -1375,6 +1441,9 @@ public open class CfnLaunchTemplate internal constructor(
       override fun ipv6Prefixes(ipv6Prefixes: List<Any>) {
         cdkBuilder.ipv6Prefixes(ipv6Prefixes)
       }
+
+      override fun ipv6Prefixes(vararg ipv6Prefixes: Any): Unit =
+          ipv6Prefixes(ipv6Prefixes.toList())
 
       override fun networkCardIndex(networkCardIndex: Number) {
         cdkBuilder.networkCardIndex(networkCardIndex)
@@ -1403,6 +1472,9 @@ public open class CfnLaunchTemplate internal constructor(
       override fun privateIpAddresses(privateIpAddresses: List<Any>) {
         cdkBuilder.privateIpAddresses(privateIpAddresses)
       }
+
+      override fun privateIpAddresses(vararg privateIpAddresses: Any): Unit =
+          privateIpAddresses(privateIpAddresses.toList())
 
       override fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number) {
         cdkBuilder.secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount)
@@ -2436,6 +2508,8 @@ public open class CfnLaunchTemplate internal constructor(
       public fun resourceType(resourceType: String)
 
       public fun tags(tags: List<CfnTag>)
+
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
@@ -2450,6 +2524,8 @@ public open class CfnLaunchTemplate internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       public fun build():
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.TagSpecificationProperty =
@@ -2553,7 +2629,11 @@ public open class CfnLaunchTemplate internal constructor(
 
       public fun acceleratorManufacturers(acceleratorManufacturers: List<String>)
 
+      public fun acceleratorManufacturers(vararg acceleratorManufacturers: String)
+
       public fun acceleratorNames(acceleratorNames: List<String>)
+
+      public fun acceleratorNames(vararg acceleratorNames: String)
 
       public fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable)
 
@@ -2567,7 +2647,11 @@ public open class CfnLaunchTemplate internal constructor(
 
       public fun acceleratorTypes(acceleratorTypes: List<String>)
 
+      public fun acceleratorTypes(vararg acceleratorTypes: String)
+
       public fun allowedInstanceTypes(allowedInstanceTypes: List<String>)
+
+      public fun allowedInstanceTypes(vararg allowedInstanceTypes: String)
 
       public fun bareMetal(bareMetal: String)
 
@@ -2585,13 +2669,21 @@ public open class CfnLaunchTemplate internal constructor(
 
       public fun cpuManufacturers(cpuManufacturers: List<String>)
 
+      public fun cpuManufacturers(vararg cpuManufacturers: String)
+
       public fun excludedInstanceTypes(excludedInstanceTypes: List<String>)
 
+      public fun excludedInstanceTypes(vararg excludedInstanceTypes: String)
+
       public fun instanceGenerations(instanceGenerations: List<String>)
+
+      public fun instanceGenerations(vararg instanceGenerations: String)
 
       public fun localStorage(localStorage: String)
 
       public fun localStorageTypes(localStorageTypes: List<String>)
+
+      public fun localStorageTypes(vararg localStorageTypes: String)
 
       public
           fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number)
@@ -2681,9 +2773,15 @@ public open class CfnLaunchTemplate internal constructor(
         cdkBuilder.acceleratorManufacturers(acceleratorManufacturers)
       }
 
+      override fun acceleratorManufacturers(vararg acceleratorManufacturers: String): Unit =
+          acceleratorManufacturers(acceleratorManufacturers.toList())
+
       override fun acceleratorNames(acceleratorNames: List<String>) {
         cdkBuilder.acceleratorNames(acceleratorNames)
       }
+
+      override fun acceleratorNames(vararg acceleratorNames: String): Unit =
+          acceleratorNames(acceleratorNames.toList())
 
       override fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable) {
         cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(IResolvable::unwrap))
@@ -2705,9 +2803,15 @@ public open class CfnLaunchTemplate internal constructor(
         cdkBuilder.acceleratorTypes(acceleratorTypes)
       }
 
+      override fun acceleratorTypes(vararg acceleratorTypes: String): Unit =
+          acceleratorTypes(acceleratorTypes.toList())
+
       override fun allowedInstanceTypes(allowedInstanceTypes: List<String>) {
         cdkBuilder.allowedInstanceTypes(allowedInstanceTypes)
       }
+
+      override fun allowedInstanceTypes(vararg allowedInstanceTypes: String): Unit =
+          allowedInstanceTypes(allowedInstanceTypes.toList())
 
       override fun bareMetal(bareMetal: String) {
         cdkBuilder.bareMetal(bareMetal)
@@ -2737,13 +2841,22 @@ public open class CfnLaunchTemplate internal constructor(
         cdkBuilder.cpuManufacturers(cpuManufacturers)
       }
 
+      override fun cpuManufacturers(vararg cpuManufacturers: String): Unit =
+          cpuManufacturers(cpuManufacturers.toList())
+
       override fun excludedInstanceTypes(excludedInstanceTypes: List<String>) {
         cdkBuilder.excludedInstanceTypes(excludedInstanceTypes)
       }
 
+      override fun excludedInstanceTypes(vararg excludedInstanceTypes: String): Unit =
+          excludedInstanceTypes(excludedInstanceTypes.toList())
+
       override fun instanceGenerations(instanceGenerations: List<String>) {
         cdkBuilder.instanceGenerations(instanceGenerations)
       }
+
+      override fun instanceGenerations(vararg instanceGenerations: String): Unit =
+          instanceGenerations(instanceGenerations.toList())
 
       override fun localStorage(localStorage: String) {
         cdkBuilder.localStorage(localStorage)
@@ -2752,6 +2865,9 @@ public open class CfnLaunchTemplate internal constructor(
       override fun localStorageTypes(localStorageTypes: List<String>) {
         cdkBuilder.localStorageTypes(localStorageTypes)
       }
+
+      override fun localStorageTypes(vararg localStorageTypes: String): Unit =
+          localStorageTypes(localStorageTypes.toList())
 
       override
           fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number) {
@@ -3588,6 +3704,8 @@ public open class CfnLaunchTemplate internal constructor(
       public fun resourceType(resourceType: String)
 
       public fun tags(tags: List<CfnTag>)
+
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
@@ -3603,6 +3721,8 @@ public open class CfnLaunchTemplate internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       public fun build():
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.LaunchTemplateTagSpecificationProperty

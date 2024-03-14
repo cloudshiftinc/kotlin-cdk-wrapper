@@ -49,6 +49,8 @@ public open class CfnThingGroup internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun thingGroupName(): String? = unwrap(this).getThingGroupName()
 
   public open fun thingGroupName(`value`: String) {
@@ -76,6 +78,8 @@ public open class CfnThingGroup internal constructor(
     public fun queryString(queryString: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun thingGroupName(thingGroupName: String)
 
@@ -107,6 +111,8 @@ public open class CfnThingGroup internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun thingGroupName(thingGroupName: String) {
       cdkBuilder.thingGroupName(thingGroupName)

@@ -139,8 +139,7 @@ public interface IVpc : IResource {
       unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
     }
 
-    override fun availabilityZones(): List<String> = unwrap(this).getAvailabilityZones() ?:
-        emptyList()
+    override fun availabilityZones(): List<String> = unwrap(this).getAvailabilityZones()
 
     override fun enableVpnGateway(arg0: EnableVpnGatewayOptions) {
       unwrap(this).enableVpnGateway(arg0.let(EnableVpnGatewayOptions::unwrap))

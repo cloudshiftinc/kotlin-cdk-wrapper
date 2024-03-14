@@ -55,6 +55,8 @@ public open class CfnTrafficDistributionGroup internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun description(description: String)
 
@@ -63,6 +65,8 @@ public open class CfnTrafficDistributionGroup internal constructor(
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -89,6 +93,8 @@ public open class CfnTrafficDistributionGroup internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.connect.CfnTrafficDistributionGroup =
         cdkBuilder.build()

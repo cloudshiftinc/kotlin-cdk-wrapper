@@ -51,13 +51,12 @@ public open class CfnNamespace internal constructor(
   public open fun attrNamespaceDefaultIamRoleArn(): String =
       unwrap(this).getAttrNamespaceDefaultIamRoleArn()
 
-  public open fun attrNamespaceIamRoles(): List<String> = unwrap(this).getAttrNamespaceIamRoles() ?:
-      emptyList()
+  public open fun attrNamespaceIamRoles(): List<String> = unwrap(this).getAttrNamespaceIamRoles()
 
   public open fun attrNamespaceKmsKeyId(): String = unwrap(this).getAttrNamespaceKmsKeyId()
 
   public open fun attrNamespaceLogExports(): List<String> =
-      unwrap(this).getAttrNamespaceLogExports() ?: emptyList()
+      unwrap(this).getAttrNamespaceLogExports()
 
   public open fun attrNamespaceNamespaceArn(): String = unwrap(this).getAttrNamespaceNamespaceArn()
 
@@ -99,6 +98,8 @@ public open class CfnNamespace internal constructor(
     unwrap(this).setIamRoles(`value`)
   }
 
+  public open fun iamRoles(vararg `value`: String): Unit = iamRoles(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -114,6 +115,8 @@ public open class CfnNamespace internal constructor(
   public open fun logExports(`value`: List<String>) {
     unwrap(this).setLogExports(`value`)
   }
+
+  public open fun logExports(vararg `value`: String): Unit = logExports(`value`.toList())
 
   public open fun manageAdminPassword(): Any? = unwrap(this).getManageAdminPassword()
 
@@ -153,6 +156,9 @@ public open class CfnNamespace internal constructor(
     unwrap(this).setSnapshotCopyConfigurations(__idx_ac66f0)
   }
 
+  public open fun snapshotCopyConfigurations(vararg __idx_ac66f0: Any): Unit =
+      snapshotCopyConfigurations(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -161,6 +167,8 @@ public open class CfnNamespace internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public interface Builder {
     public fun adminPasswordSecretKmsKeyId(adminPasswordSecretKmsKeyId: String)
@@ -179,9 +187,13 @@ public open class CfnNamespace internal constructor(
 
     public fun iamRoles(iamRoles: List<String>)
 
+    public fun iamRoles(vararg iamRoles: String)
+
     public fun kmsKeyId(kmsKeyId: String)
 
     public fun logExports(logExports: List<String>)
+
+    public fun logExports(vararg logExports: String)
 
     public fun manageAdminPassword(manageAdminPassword: Boolean)
 
@@ -197,7 +209,11 @@ public open class CfnNamespace internal constructor(
 
     public fun snapshotCopyConfigurations(snapshotCopyConfigurations: List<Any>)
 
+    public fun snapshotCopyConfigurations(vararg snapshotCopyConfigurations: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -239,6 +255,8 @@ public open class CfnNamespace internal constructor(
       cdkBuilder.iamRoles(iamRoles)
     }
 
+    override fun iamRoles(vararg iamRoles: String): Unit = iamRoles(iamRoles.toList())
+
     override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
@@ -246,6 +264,8 @@ public open class CfnNamespace internal constructor(
     override fun logExports(logExports: List<String>) {
       cdkBuilder.logExports(logExports)
     }
+
+    override fun logExports(vararg logExports: String): Unit = logExports(logExports.toList())
 
     override fun manageAdminPassword(manageAdminPassword: Boolean) {
       cdkBuilder.manageAdminPassword(manageAdminPassword)
@@ -275,9 +295,14 @@ public open class CfnNamespace internal constructor(
       cdkBuilder.snapshotCopyConfigurations(snapshotCopyConfigurations)
     }
 
+    override fun snapshotCopyConfigurations(vararg snapshotCopyConfigurations: Any): Unit =
+        snapshotCopyConfigurations(snapshotCopyConfigurations.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.redshiftserverless.CfnNamespace =
         cdkBuilder.build()
@@ -347,9 +372,13 @@ public open class CfnNamespace internal constructor(
 
       public fun iamRoles(iamRoles: List<String>)
 
+      public fun iamRoles(vararg iamRoles: String)
+
       public fun kmsKeyId(kmsKeyId: String)
 
       public fun logExports(logExports: List<String>)
+
+      public fun logExports(vararg logExports: String)
 
       public fun namespaceArn(namespaceArn: String)
 
@@ -394,6 +423,8 @@ public open class CfnNamespace internal constructor(
         cdkBuilder.iamRoles(iamRoles)
       }
 
+      override fun iamRoles(vararg iamRoles: String): Unit = iamRoles(iamRoles.toList())
+
       override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
       }
@@ -401,6 +432,8 @@ public open class CfnNamespace internal constructor(
       override fun logExports(logExports: List<String>) {
         cdkBuilder.logExports(logExports)
       }
+
+      override fun logExports(vararg logExports: String): Unit = logExports(logExports.toList())
 
       override fun namespaceArn(namespaceArn: String) {
         cdkBuilder.namespaceArn(namespaceArn)

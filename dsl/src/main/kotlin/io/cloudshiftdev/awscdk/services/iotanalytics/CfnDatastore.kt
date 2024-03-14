@@ -103,6 +103,8 @@ public open class CfnDatastore internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun datastoreName(datastoreName: String)
 
@@ -141,6 +143,8 @@ public open class CfnDatastore internal constructor(
     public fun retentionPeriod(retentionPeriod: RetentionPeriodProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -212,6 +216,8 @@ public open class CfnDatastore internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     public fun build(): software.amazon.awscdk.services.iotanalytics.CfnDatastore =
         cdkBuilder.build()
   }
@@ -244,6 +250,8 @@ public open class CfnDatastore internal constructor(
       public fun partitions(partitions: IResolvable)
 
       public fun partitions(partitions: List<Any>)
+
+      public fun partitions(vararg partitions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -259,6 +267,8 @@ public open class CfnDatastore internal constructor(
       override fun partitions(partitions: List<Any>) {
         cdkBuilder.partitions(partitions)
       }
+
+      override fun partitions(vararg partitions: Any): Unit = partitions(partitions.toList())
 
       public fun build():
           software.amazon.awscdk.services.iotanalytics.CfnDatastore.DatastorePartitionsProperty =
@@ -715,6 +725,8 @@ public open class CfnDatastore internal constructor(
       public fun columns(columns: IResolvable)
 
       public fun columns(columns: List<Any>)
+
+      public fun columns(vararg columns: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -730,6 +742,8 @@ public open class CfnDatastore internal constructor(
       override fun columns(columns: List<Any>) {
         cdkBuilder.columns(columns)
       }
+
+      override fun columns(vararg columns: Any): Unit = columns(columns.toList())
 
       public fun build():
           software.amazon.awscdk.services.iotanalytics.CfnDatastore.SchemaDefinitionProperty =

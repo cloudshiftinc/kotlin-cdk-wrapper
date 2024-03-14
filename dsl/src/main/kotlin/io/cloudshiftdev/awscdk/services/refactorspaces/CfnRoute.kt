@@ -78,6 +78,8 @@ public open class CfnRoute internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun uriPathRoute(): Any? = unwrap(this).getUriPathRoute()
 
   public open fun uriPathRoute(`value`: IResolvable) {
@@ -111,6 +113,8 @@ public open class CfnRoute internal constructor(
     public fun serviceIdentifier(serviceIdentifier: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun uriPathRoute(uriPathRoute: IResolvable)
 
@@ -160,6 +164,8 @@ public open class CfnRoute internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun uriPathRoute(uriPathRoute: IResolvable) {
       cdkBuilder.uriPathRoute(uriPathRoute.let(IResolvable::unwrap))
@@ -222,6 +228,8 @@ public open class CfnRoute internal constructor(
 
       public fun methods(methods: List<String>)
 
+      public fun methods(vararg methods: String)
+
       public fun sourcePath(sourcePath: String)
     }
 
@@ -254,6 +262,8 @@ public open class CfnRoute internal constructor(
       override fun methods(methods: List<String>) {
         cdkBuilder.methods(methods)
       }
+
+      override fun methods(vararg methods: String): Unit = methods(methods.toList())
 
       override fun sourcePath(sourcePath: String) {
         cdkBuilder.sourcePath(sourcePath)

@@ -29,7 +29,7 @@ public interface IResolveContext {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.IResolveContext,
   ) : IResolveContext {
-    override fun documentPath(): List<String> = unwrap(this).getDocumentPath() ?: emptyList()
+    override fun documentPath(): List<String> = unwrap(this).getDocumentPath()
 
     override fun preparing(): Boolean = unwrap(this).getPreparing()
 

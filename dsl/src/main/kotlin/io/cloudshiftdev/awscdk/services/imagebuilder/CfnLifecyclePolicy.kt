@@ -53,6 +53,9 @@ public open class CfnLifecyclePolicy internal constructor(
     unwrap(this).setPolicyDetails(__idx_ac66f0)
   }
 
+  public open fun policyDetails(vararg __idx_ac66f0: Any): Unit =
+      policyDetails(__idx_ac66f0.toList())
+
   public open fun resourceSelection(): Any = unwrap(this).getResourceSelection()
 
   public open fun resourceSelection(`value`: IResolvable) {
@@ -97,6 +100,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
     public fun policyDetails(policyDetails: List<Any>)
 
+    public fun policyDetails(vararg policyDetails: Any)
+
     public fun resourceSelection(resourceSelection: IResolvable)
 
     public fun resourceSelection(resourceSelection: ResourceSelectionProperty)
@@ -138,6 +143,9 @@ public open class CfnLifecyclePolicy internal constructor(
     override fun policyDetails(policyDetails: List<Any>) {
       cdkBuilder.policyDetails(policyDetails)
     }
+
+    override fun policyDetails(vararg policyDetails: Any): Unit =
+        policyDetails(policyDetails.toList())
 
     override fun resourceSelection(resourceSelection: IResolvable) {
       cdkBuilder.resourceSelection(resourceSelection.let(IResolvable::unwrap))
@@ -477,6 +485,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       public fun recipes(recipes: List<Any>)
 
+      public fun recipes(vararg recipes: Any)
+
       public fun tagMap(tagMap: IResolvable)
 
       public fun tagMap(tagMap: Map<String, String>)
@@ -495,6 +505,8 @@ public open class CfnLifecyclePolicy internal constructor(
       override fun recipes(recipes: List<Any>) {
         cdkBuilder.recipes(recipes)
       }
+
+      override fun recipes(vararg recipes: Any): Unit = recipes(recipes.toList())
 
       override fun tagMap(tagMap: IResolvable) {
         cdkBuilder.tagMap(tagMap.let(IResolvable::unwrap))
@@ -756,7 +768,11 @@ public open class CfnLifecyclePolicy internal constructor(
 
       public fun regions(regions: List<String>)
 
+      public fun regions(vararg regions: String)
+
       public fun sharedAccounts(sharedAccounts: List<String>)
+
+      public fun sharedAccounts(vararg sharedAccounts: String)
 
       public fun tagMap(tagMap: IResolvable)
 
@@ -794,9 +810,14 @@ public open class CfnLifecyclePolicy internal constructor(
         cdkBuilder.regions(regions)
       }
 
+      override fun regions(vararg regions: String): Unit = regions(regions.toList())
+
       override fun sharedAccounts(sharedAccounts: List<String>) {
         cdkBuilder.sharedAccounts(sharedAccounts)
       }
+
+      override fun sharedAccounts(vararg sharedAccounts: String): Unit =
+          sharedAccounts(sharedAccounts.toList())
 
       override fun tagMap(tagMap: IResolvable) {
         cdkBuilder.tagMap(tagMap.let(IResolvable::unwrap))

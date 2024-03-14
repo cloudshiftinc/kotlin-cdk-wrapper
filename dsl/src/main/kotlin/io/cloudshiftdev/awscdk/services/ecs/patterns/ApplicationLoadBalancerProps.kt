@@ -29,6 +29,8 @@ public interface ApplicationLoadBalancerProps {
 
     public fun listeners(listeners: List<ApplicationListenerProps>)
 
+    public fun listeners(vararg listeners: ApplicationListenerProps)
+
     public fun name(name: String)
 
     public fun publicLoadBalancer(publicLoadBalancer: Boolean)
@@ -54,6 +56,9 @@ public interface ApplicationLoadBalancerProps {
     override fun listeners(listeners: List<ApplicationListenerProps>) {
       cdkBuilder.listeners(listeners.map(ApplicationListenerProps::unwrap))
     }
+
+    override fun listeners(vararg listeners: ApplicationListenerProps): Unit =
+        listeners(listeners.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)

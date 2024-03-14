@@ -81,6 +81,8 @@ public open class CfnLocationEFS internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun accessPointArn(accessPointArn: String)
 
@@ -101,6 +103,8 @@ public open class CfnLocationEFS internal constructor(
     public fun subdirectory(subdirectory: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -147,6 +151,8 @@ public open class CfnLocationEFS internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     public fun build(): software.amazon.awscdk.services.datasync.CfnLocationEFS = cdkBuilder.build()
   }
 
@@ -179,6 +185,8 @@ public open class CfnLocationEFS internal constructor(
     public interface Builder {
       public fun securityGroupArns(securityGroupArns: List<String>)
 
+      public fun securityGroupArns(vararg securityGroupArns: String)
+
       public fun subnetArn(subnetArn: String)
     }
 
@@ -190,6 +198,9 @@ public open class CfnLocationEFS internal constructor(
       override fun securityGroupArns(securityGroupArns: List<String>) {
         cdkBuilder.securityGroupArns(securityGroupArns)
       }
+
+      override fun securityGroupArns(vararg securityGroupArns: String): Unit =
+          securityGroupArns(securityGroupArns.toList())
 
       override fun subnetArn(subnetArn: String) {
         cdkBuilder.subnetArn(subnetArn)
@@ -203,8 +214,7 @@ public open class CfnLocationEFS internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datasync.CfnLocationEFS.Ec2ConfigProperty,
     ) : Ec2ConfigProperty {
-      override fun securityGroupArns(): List<String> = unwrap(this).getSecurityGroupArns() ?:
-          emptyList()
+      override fun securityGroupArns(): List<String> = unwrap(this).getSecurityGroupArns()
 
       override fun subnetArn(): String = unwrap(this).getSubnetArn()
     }

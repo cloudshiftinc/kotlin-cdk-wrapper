@@ -32,6 +32,8 @@ public open class CfnConnectorDefinitionVersion internal constructor(
     unwrap(this).setConnectors(__idx_ac66f0)
   }
 
+  public open fun connectors(vararg __idx_ac66f0: Any): Unit = connectors(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -42,6 +44,8 @@ public open class CfnConnectorDefinitionVersion internal constructor(
     public fun connectors(connectors: IResolvable)
 
     public fun connectors(connectors: List<Any>)
+
+    public fun connectors(vararg connectors: Any)
   }
 
   private class BuilderImpl(
@@ -64,6 +68,8 @@ public open class CfnConnectorDefinitionVersion internal constructor(
     override fun connectors(connectors: List<Any>) {
       cdkBuilder.connectors(connectors)
     }
+
+    override fun connectors(vararg connectors: Any): Unit = connectors(connectors.toList())
 
     public fun build(): software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersion =
         cdkBuilder.build()

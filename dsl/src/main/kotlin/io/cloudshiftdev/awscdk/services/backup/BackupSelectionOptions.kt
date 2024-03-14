@@ -26,6 +26,8 @@ public interface BackupSelectionOptions {
 
     public fun resources(resources: List<BackupResource>)
 
+    public fun resources(vararg resources: BackupResource)
+
     public fun role(role: IRole)
   }
 
@@ -48,6 +50,8 @@ public interface BackupSelectionOptions {
     override fun resources(resources: List<BackupResource>) {
       cdkBuilder.resources(resources.map(BackupResource::unwrap))
     }
+
+    override fun resources(vararg resources: BackupResource): Unit = resources(resources.toList())
 
     override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))

@@ -15,12 +15,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnClusterCapacityProviderAssociations internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ecs.CfnClusterCapacityProviderAssociations,
 ) : CfnResource(cdkObject), IInspectable {
-  public open fun capacityProviders(): List<String> = unwrap(this).getCapacityProviders() ?:
-      emptyList()
+  public open fun capacityProviders(): List<String> = unwrap(this).getCapacityProviders()
 
   public open fun capacityProviders(`value`: List<String>) {
     unwrap(this).setCapacityProviders(`value`)
   }
+
+  public open fun capacityProviders(vararg `value`: String): Unit =
+      capacityProviders(`value`.toList())
 
   public open fun cluster(): String = unwrap(this).getCluster()
 
@@ -39,6 +41,9 @@ public open class CfnClusterCapacityProviderAssociations internal constructor(
     unwrap(this).setDefaultCapacityProviderStrategy(__idx_ac66f0)
   }
 
+  public open fun defaultCapacityProviderStrategy(vararg __idx_ac66f0: Any): Unit =
+      defaultCapacityProviderStrategy(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -46,11 +51,15 @@ public open class CfnClusterCapacityProviderAssociations internal constructor(
   public interface Builder {
     public fun capacityProviders(capacityProviders: List<String>)
 
+    public fun capacityProviders(vararg capacityProviders: String)
+
     public fun cluster(cluster: String)
 
     public fun defaultCapacityProviderStrategy(defaultCapacityProviderStrategy: IResolvable)
 
     public fun defaultCapacityProviderStrategy(defaultCapacityProviderStrategy: List<Any>)
+
+    public fun defaultCapacityProviderStrategy(vararg defaultCapacityProviderStrategy: Any)
   }
 
   private class BuilderImpl(
@@ -66,6 +75,9 @@ public open class CfnClusterCapacityProviderAssociations internal constructor(
       cdkBuilder.capacityProviders(capacityProviders)
     }
 
+    override fun capacityProviders(vararg capacityProviders: String): Unit =
+        capacityProviders(capacityProviders.toList())
+
     override fun cluster(cluster: String) {
       cdkBuilder.cluster(cluster)
     }
@@ -77,6 +89,9 @@ public open class CfnClusterCapacityProviderAssociations internal constructor(
     override fun defaultCapacityProviderStrategy(defaultCapacityProviderStrategy: List<Any>) {
       cdkBuilder.defaultCapacityProviderStrategy(defaultCapacityProviderStrategy)
     }
+
+    override fun defaultCapacityProviderStrategy(vararg defaultCapacityProviderStrategy: Any): Unit
+        = defaultCapacityProviderStrategy(defaultCapacityProviderStrategy.toList())
 
     public fun build(): software.amazon.awscdk.services.ecs.CfnClusterCapacityProviderAssociations =
         cdkBuilder.build()

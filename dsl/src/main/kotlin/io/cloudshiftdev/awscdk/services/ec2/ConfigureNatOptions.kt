@@ -13,7 +13,11 @@ public interface ConfigureNatOptions {
   public interface Builder {
     public fun natSubnets(natSubnets: List<PublicSubnet>)
 
+    public fun natSubnets(vararg natSubnets: PublicSubnet)
+
     public fun privateSubnets(privateSubnets: List<PrivateSubnet>)
+
+    public fun privateSubnets(vararg privateSubnets: PrivateSubnet)
 
     public fun vpc(vpc: Vpc)
   }
@@ -26,9 +30,14 @@ public interface ConfigureNatOptions {
       cdkBuilder.natSubnets(natSubnets.map(PublicSubnet::unwrap))
     }
 
+    override fun natSubnets(vararg natSubnets: PublicSubnet): Unit = natSubnets(natSubnets.toList())
+
     override fun privateSubnets(privateSubnets: List<PrivateSubnet>) {
       cdkBuilder.privateSubnets(privateSubnets.map(PrivateSubnet::unwrap))
     }
+
+    override fun privateSubnets(vararg privateSubnets: PrivateSubnet): Unit =
+        privateSubnets(privateSubnets.toList())
 
     override fun vpc(vpc: Vpc) {
       cdkBuilder.vpc(vpc.let(Vpc::unwrap))

@@ -17,6 +17,8 @@ public open class ResourcePolicy internal constructor(
   public interface Builder {
     public fun policyStatements(policyStatements: List<PolicyStatement>)
 
+    public fun policyStatements(vararg policyStatements: PolicyStatement)
+
     public fun resourcePolicyName(resourcePolicyName: String)
   }
 
@@ -30,6 +32,9 @@ public open class ResourcePolicy internal constructor(
     override fun policyStatements(policyStatements: List<PolicyStatement>) {
       cdkBuilder.policyStatements(policyStatements.map(PolicyStatement::unwrap))
     }
+
+    override fun policyStatements(vararg policyStatements: PolicyStatement): Unit =
+        policyStatements(policyStatements.toList())
 
     override fun resourcePolicyName(resourcePolicyName: String) {
       cdkBuilder.resourcePolicyName(resourcePolicyName)

@@ -76,6 +76,8 @@ public open class CfnRule internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun triggerEventSource(): Any = unwrap(this).getTriggerEventSource()
 
   public open fun triggerEventSource(`value`: IResolvable) {
@@ -109,6 +111,8 @@ public open class CfnRule internal constructor(
     public fun publishStatus(publishStatus: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun triggerEventSource(triggerEventSource: IResolvable)
 
@@ -159,6 +163,8 @@ public open class CfnRule internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun triggerEventSource(triggerEventSource: IResolvable) {
       cdkBuilder.triggerEventSource(triggerEventSource.let(IResolvable::unwrap))
@@ -287,6 +293,8 @@ public open class CfnRule internal constructor(
       public fun fields(fields: IResolvable)
 
       public fun fields(fields: List<Any>)
+
+      public fun fields(vararg fields: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -301,6 +309,8 @@ public open class CfnRule internal constructor(
       override fun fields(fields: List<Any>) {
         cdkBuilder.fields(fields)
       }
+
+      override fun fields(vararg fields: Any): Unit = fields(fields.toList())
 
       public fun build(): software.amazon.awscdk.services.connect.CfnRule.UpdateCaseActionProperty =
           cdkBuilder.build()
@@ -412,6 +422,8 @@ public open class CfnRule internal constructor(
 
       public fun fields(fields: List<Any>)
 
+      public fun fields(vararg fields: Any)
+
       public fun templateId(templateId: String)
     }
 
@@ -427,6 +439,8 @@ public open class CfnRule internal constructor(
       override fun fields(fields: List<Any>) {
         cdkBuilder.fields(fields)
       }
+
+      override fun fields(vararg fields: Any): Unit = fields(fields.toList())
 
       override fun templateId(templateId: String) {
         cdkBuilder.templateId(templateId)
@@ -820,6 +834,8 @@ public open class CfnRule internal constructor(
     public interface Builder {
       public fun userArns(userArns: List<String>)
 
+      public fun userArns(vararg userArns: String)
+
       public fun userTags(userTags: IResolvable)
 
       public fun userTags(userTags: Map<String, String>)
@@ -834,6 +850,8 @@ public open class CfnRule internal constructor(
       override fun userArns(userArns: List<String>) {
         cdkBuilder.userArns(userArns)
       }
+
+      override fun userArns(vararg userArns: String): Unit = userArns(userArns.toList())
 
       override fun userTags(userTags: IResolvable) {
         cdkBuilder.userTags(userTags.let(IResolvable::unwrap))
@@ -896,13 +914,19 @@ public open class CfnRule internal constructor(
     public interface Builder {
       public fun assignContactCategoryActions(assignContactCategoryActions: List<Any>)
 
+      public fun assignContactCategoryActions(vararg assignContactCategoryActions: Any)
+
       public fun assignContactCategoryActions(assignContactCategoryActions: IResolvable)
 
       public fun createCaseActions(createCaseActions: IResolvable)
 
       public fun createCaseActions(createCaseActions: List<Any>)
 
+      public fun createCaseActions(vararg createCaseActions: Any)
+
       public fun endAssociatedTasksActions(endAssociatedTasksActions: List<Any>)
+
+      public fun endAssociatedTasksActions(vararg endAssociatedTasksActions: Any)
 
       public fun endAssociatedTasksActions(endAssociatedTasksActions: IResolvable)
 
@@ -910,17 +934,25 @@ public open class CfnRule internal constructor(
 
       public fun eventBridgeActions(eventBridgeActions: List<Any>)
 
+      public fun eventBridgeActions(vararg eventBridgeActions: Any)
+
       public fun sendNotificationActions(sendNotificationActions: IResolvable)
 
       public fun sendNotificationActions(sendNotificationActions: List<Any>)
+
+      public fun sendNotificationActions(vararg sendNotificationActions: Any)
 
       public fun taskActions(taskActions: IResolvable)
 
       public fun taskActions(taskActions: List<Any>)
 
+      public fun taskActions(vararg taskActions: Any)
+
       public fun updateCaseActions(updateCaseActions: IResolvable)
 
       public fun updateCaseActions(updateCaseActions: List<Any>)
+
+      public fun updateCaseActions(vararg updateCaseActions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -931,6 +963,9 @@ public open class CfnRule internal constructor(
       override fun assignContactCategoryActions(assignContactCategoryActions: List<Any>) {
         cdkBuilder.assignContactCategoryActions(assignContactCategoryActions)
       }
+
+      override fun assignContactCategoryActions(vararg assignContactCategoryActions: Any): Unit =
+          assignContactCategoryActions(assignContactCategoryActions.toList())
 
       override fun assignContactCategoryActions(assignContactCategoryActions: IResolvable) {
         cdkBuilder.assignContactCategoryActions(assignContactCategoryActions.let(IResolvable::unwrap))
@@ -944,9 +979,15 @@ public open class CfnRule internal constructor(
         cdkBuilder.createCaseActions(createCaseActions)
       }
 
+      override fun createCaseActions(vararg createCaseActions: Any): Unit =
+          createCaseActions(createCaseActions.toList())
+
       override fun endAssociatedTasksActions(endAssociatedTasksActions: List<Any>) {
         cdkBuilder.endAssociatedTasksActions(endAssociatedTasksActions)
       }
+
+      override fun endAssociatedTasksActions(vararg endAssociatedTasksActions: Any): Unit =
+          endAssociatedTasksActions(endAssociatedTasksActions.toList())
 
       override fun endAssociatedTasksActions(endAssociatedTasksActions: IResolvable) {
         cdkBuilder.endAssociatedTasksActions(endAssociatedTasksActions.let(IResolvable::unwrap))
@@ -960,6 +1001,9 @@ public open class CfnRule internal constructor(
         cdkBuilder.eventBridgeActions(eventBridgeActions)
       }
 
+      override fun eventBridgeActions(vararg eventBridgeActions: Any): Unit =
+          eventBridgeActions(eventBridgeActions.toList())
+
       override fun sendNotificationActions(sendNotificationActions: IResolvable) {
         cdkBuilder.sendNotificationActions(sendNotificationActions.let(IResolvable::unwrap))
       }
@@ -967,6 +1011,9 @@ public open class CfnRule internal constructor(
       override fun sendNotificationActions(sendNotificationActions: List<Any>) {
         cdkBuilder.sendNotificationActions(sendNotificationActions)
       }
+
+      override fun sendNotificationActions(vararg sendNotificationActions: Any): Unit =
+          sendNotificationActions(sendNotificationActions.toList())
 
       override fun taskActions(taskActions: IResolvable) {
         cdkBuilder.taskActions(taskActions.let(IResolvable::unwrap))
@@ -976,6 +1023,8 @@ public open class CfnRule internal constructor(
         cdkBuilder.taskActions(taskActions)
       }
 
+      override fun taskActions(vararg taskActions: Any): Unit = taskActions(taskActions.toList())
+
       override fun updateCaseActions(updateCaseActions: IResolvable) {
         cdkBuilder.updateCaseActions(updateCaseActions.let(IResolvable::unwrap))
       }
@@ -983,6 +1032,9 @@ public open class CfnRule internal constructor(
       override fun updateCaseActions(updateCaseActions: List<Any>) {
         cdkBuilder.updateCaseActions(updateCaseActions)
       }
+
+      override fun updateCaseActions(vararg updateCaseActions: Any): Unit =
+          updateCaseActions(updateCaseActions.toList())
 
       public fun build(): software.amazon.awscdk.services.connect.CfnRule.ActionsProperty =
           cdkBuilder.build()

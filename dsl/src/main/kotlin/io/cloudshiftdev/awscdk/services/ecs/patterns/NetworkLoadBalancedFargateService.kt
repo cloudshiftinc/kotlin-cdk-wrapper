@@ -42,6 +42,9 @@ public open class NetworkLoadBalancedFargateService internal constructor(
     public
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>)
 
+    public fun capacityProviderStrategies(vararg
+        capacityProviderStrategies: CapacityProviderStrategy)
+
     public fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -139,6 +142,10 @@ public open class NetworkLoadBalancedFargateService internal constructor(
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>) {
       cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy::unwrap))
     }
+
+    override fun capacityProviderStrategies(vararg
+        capacityProviderStrategies: CapacityProviderStrategy): Unit =
+        capacityProviderStrategies(capacityProviderStrategies.toList())
 
     override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
       cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker::unwrap))

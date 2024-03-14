@@ -28,11 +28,13 @@ public open class CfnTag internal constructor(
     unwrap(this).setTagKey(`value`)
   }
 
-  public open fun tagValues(): List<String> = unwrap(this).getTagValues() ?: emptyList()
+  public open fun tagValues(): List<String> = unwrap(this).getTagValues()
 
   public open fun tagValues(`value`: List<String>) {
     unwrap(this).setTagValues(`value`)
   }
+
+  public open fun tagValues(vararg `value`: String): Unit = tagValues(`value`.toList())
 
   public interface Builder {
     public fun catalogId(catalogId: String)
@@ -40,6 +42,8 @@ public open class CfnTag internal constructor(
     public fun tagKey(tagKey: String)
 
     public fun tagValues(tagValues: List<String>)
+
+    public fun tagValues(vararg tagValues: String)
   }
 
   private class BuilderImpl(
@@ -60,6 +64,8 @@ public open class CfnTag internal constructor(
     override fun tagValues(tagValues: List<String>) {
       cdkBuilder.tagValues(tagValues)
     }
+
+    override fun tagValues(vararg tagValues: String): Unit = tagValues(tagValues.toList())
 
     public fun build(): software.amazon.awscdk.services.lakeformation.CfnTag = cdkBuilder.build()
   }

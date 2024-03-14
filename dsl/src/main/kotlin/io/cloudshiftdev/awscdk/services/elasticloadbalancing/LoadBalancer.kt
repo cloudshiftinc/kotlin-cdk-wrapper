@@ -71,6 +71,8 @@ public open class LoadBalancer internal constructor(
 
     public fun listeners(listeners: List<LoadBalancerListener>)
 
+    public fun listeners(vararg listeners: LoadBalancerListener)
+
     public fun subnetSelection(subnetSelection: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -78,6 +80,8 @@ public open class LoadBalancer internal constructor(
     public fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit)
 
     public fun targets(targets: List<ILoadBalancerTarget>)
+
+    public fun targets(vararg targets: ILoadBalancerTarget)
 
     public fun vpc(vpc: IVpc)
   }
@@ -122,6 +126,9 @@ public open class LoadBalancer internal constructor(
       cdkBuilder.listeners(listeners.map(LoadBalancerListener::unwrap))
     }
 
+    override fun listeners(vararg listeners: LoadBalancerListener): Unit =
+        listeners(listeners.toList())
+
     override fun subnetSelection(subnetSelection: SubnetSelection) {
       cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
     }
@@ -134,6 +141,8 @@ public open class LoadBalancer internal constructor(
     override fun targets(targets: List<ILoadBalancerTarget>) {
       cdkBuilder.targets(targets.map(ILoadBalancerTarget::unwrap))
     }
+
+    override fun targets(vararg targets: ILoadBalancerTarget): Unit = targets(targets.toList())
 
     override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))

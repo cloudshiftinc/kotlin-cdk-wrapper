@@ -33,6 +33,9 @@ public open class CfnGroup internal constructor(
     unwrap(this).setManagedPolicyArns(`value`)
   }
 
+  public open fun managedPolicyArns(vararg `value`: String): Unit =
+      managedPolicyArns(`value`.toList())
+
   public open fun path(): String? = unwrap(this).getPath()
 
   public open fun path(`value`: String) {
@@ -49,16 +52,22 @@ public open class CfnGroup internal constructor(
     unwrap(this).setPolicies(__idx_ac66f0)
   }
 
+  public open fun policies(vararg __idx_ac66f0: Any): Unit = policies(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun groupName(groupName: String)
 
     public fun managedPolicyArns(managedPolicyArns: List<String>)
+
+    public fun managedPolicyArns(vararg managedPolicyArns: String)
 
     public fun path(path: String)
 
     public fun policies(policies: IResolvable)
 
     public fun policies(policies: List<Any>)
+
+    public fun policies(vararg policies: Any)
   }
 
   private class BuilderImpl(
@@ -76,6 +85,9 @@ public open class CfnGroup internal constructor(
       cdkBuilder.managedPolicyArns(managedPolicyArns)
     }
 
+    override fun managedPolicyArns(vararg managedPolicyArns: String): Unit =
+        managedPolicyArns(managedPolicyArns.toList())
+
     override fun path(path: String) {
       cdkBuilder.path(path)
     }
@@ -87,6 +99,8 @@ public open class CfnGroup internal constructor(
     override fun policies(policies: List<Any>) {
       cdkBuilder.policies(policies)
     }
+
+    override fun policies(vararg policies: Any): Unit = policies(policies.toList())
 
     public fun build(): software.amazon.awscdk.services.iam.CfnGroup = cdkBuilder.build()
   }

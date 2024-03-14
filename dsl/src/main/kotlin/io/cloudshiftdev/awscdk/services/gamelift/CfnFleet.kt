@@ -91,6 +91,9 @@ public open class CfnFleet internal constructor(
     unwrap(this).setEc2InboundPermissions(__idx_ac66f0)
   }
 
+  public open fun ec2InboundPermissions(vararg __idx_ac66f0: Any): Unit =
+      ec2InboundPermissions(__idx_ac66f0.toList())
+
   public open fun ec2InstanceType(): String? = unwrap(this).getEc2InstanceType()
 
   public open fun ec2InstanceType(`value`: String) {
@@ -130,6 +133,8 @@ public open class CfnFleet internal constructor(
     unwrap(this).setLocations(__idx_ac66f0)
   }
 
+  public open fun locations(vararg __idx_ac66f0: Any): Unit = locations(__idx_ac66f0.toList())
+
   @Deprecated(message = "deprecated in CDK")
   public open fun logPaths(): List<String> = unwrap(this).getLogPaths() ?: emptyList()
 
@@ -137,6 +142,9 @@ public open class CfnFleet internal constructor(
   public open fun logPaths(`value`: List<String>) {
     unwrap(this).setLogPaths(`value`)
   }
+
+  @Deprecated(message = "deprecated in CDK")
+  public open fun logPaths(vararg `value`: String): Unit = logPaths(`value`.toList())
 
   public open fun maxSize(): Number? = unwrap(this).getMaxSize()
 
@@ -149,6 +157,8 @@ public open class CfnFleet internal constructor(
   public open fun metricGroups(`value`: List<String>) {
     unwrap(this).setMetricGroups(`value`)
   }
+
+  public open fun metricGroups(vararg `value`: String): Unit = metricGroups(`value`.toList())
 
   public open fun minSize(): Number? = unwrap(this).getMinSize()
 
@@ -223,6 +233,9 @@ public open class CfnFleet internal constructor(
     unwrap(this).setScalingPolicies(__idx_ac66f0)
   }
 
+  public open fun scalingPolicies(vararg __idx_ac66f0: Any): Unit =
+      scalingPolicies(__idx_ac66f0.toList())
+
   public open fun scriptId(): String? = unwrap(this).getScriptId()
 
   public open fun scriptId(`value`: String) {
@@ -278,6 +291,8 @@ public open class CfnFleet internal constructor(
 
     public fun ec2InboundPermissions(ec2InboundPermissions: List<Any>)
 
+    public fun ec2InboundPermissions(vararg ec2InboundPermissions: Any)
+
     public fun ec2InstanceType(ec2InstanceType: String)
 
     public fun fleetType(fleetType: String)
@@ -290,12 +305,19 @@ public open class CfnFleet internal constructor(
 
     public fun locations(locations: List<Any>)
 
+    public fun locations(vararg locations: Any)
+
     @Deprecated(message = "deprecated in CDK")
     public fun logPaths(logPaths: List<String>)
+
+    @Deprecated(message = "deprecated in CDK")
+    public fun logPaths(vararg logPaths: String)
 
     public fun maxSize(maxSize: Number)
 
     public fun metricGroups(metricGroups: List<String>)
+
+    public fun metricGroups(vararg metricGroups: String)
 
     public fun minSize(minSize: Number)
 
@@ -329,6 +351,8 @@ public open class CfnFleet internal constructor(
     public fun scalingPolicies(scalingPolicies: IResolvable)
 
     public fun scalingPolicies(scalingPolicies: List<Any>)
+
+    public fun scalingPolicies(vararg scalingPolicies: Any)
 
     public fun scriptId(scriptId: String)
 
@@ -403,6 +427,9 @@ public open class CfnFleet internal constructor(
       cdkBuilder.ec2InboundPermissions(ec2InboundPermissions)
     }
 
+    override fun ec2InboundPermissions(vararg ec2InboundPermissions: Any): Unit =
+        ec2InboundPermissions(ec2InboundPermissions.toList())
+
     override fun ec2InstanceType(ec2InstanceType: String) {
       cdkBuilder.ec2InstanceType(ec2InstanceType)
     }
@@ -427,10 +454,15 @@ public open class CfnFleet internal constructor(
       cdkBuilder.locations(locations)
     }
 
+    override fun locations(vararg locations: Any): Unit = locations(locations.toList())
+
     @Deprecated(message = "deprecated in CDK")
     override fun logPaths(logPaths: List<String>) {
       cdkBuilder.logPaths(logPaths)
     }
+
+    @Deprecated(message = "deprecated in CDK")
+    override fun logPaths(vararg logPaths: String): Unit = logPaths(logPaths.toList())
 
     override fun maxSize(maxSize: Number) {
       cdkBuilder.maxSize(maxSize)
@@ -439,6 +471,9 @@ public open class CfnFleet internal constructor(
     override fun metricGroups(metricGroups: List<String>) {
       cdkBuilder.metricGroups(metricGroups)
     }
+
+    override fun metricGroups(vararg metricGroups: String): Unit =
+        metricGroups(metricGroups.toList())
 
     override fun minSize(minSize: Number) {
       cdkBuilder.minSize(minSize)
@@ -497,6 +532,9 @@ public open class CfnFleet internal constructor(
     override fun scalingPolicies(scalingPolicies: List<Any>) {
       cdkBuilder.scalingPolicies(scalingPolicies)
     }
+
+    override fun scalingPolicies(vararg scalingPolicies: Any): Unit =
+        scalingPolicies(scalingPolicies.toList())
 
     override fun scriptId(scriptId: String) {
       cdkBuilder.scriptId(scriptId)
@@ -927,6 +965,8 @@ public open class CfnFleet internal constructor(
       public fun serverProcesses(serverProcesses: IResolvable)
 
       public fun serverProcesses(serverProcesses: List<Any>)
+
+      public fun serverProcesses(vararg serverProcesses: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -951,6 +991,9 @@ public open class CfnFleet internal constructor(
       override fun serverProcesses(serverProcesses: List<Any>) {
         cdkBuilder.serverProcesses(serverProcesses)
       }
+
+      override fun serverProcesses(vararg serverProcesses: Any): Unit =
+          serverProcesses(serverProcesses.toList())
 
       public fun build():
           software.amazon.awscdk.services.gamelift.CfnFleet.RuntimeConfigurationProperty =

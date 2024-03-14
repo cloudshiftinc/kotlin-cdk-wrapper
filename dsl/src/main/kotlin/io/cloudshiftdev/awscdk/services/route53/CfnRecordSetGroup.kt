@@ -52,6 +52,8 @@ public open class CfnRecordSetGroup internal constructor(
     unwrap(this).setRecordSets(__idx_ac66f0)
   }
 
+  public open fun recordSets(vararg __idx_ac66f0: Any): Unit = recordSets(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun comment(comment: String)
 
@@ -62,6 +64,8 @@ public open class CfnRecordSetGroup internal constructor(
     public fun recordSets(recordSets: IResolvable)
 
     public fun recordSets(recordSets: List<Any>)
+
+    public fun recordSets(vararg recordSets: Any)
   }
 
   private class BuilderImpl(
@@ -90,6 +94,8 @@ public open class CfnRecordSetGroup internal constructor(
     override fun recordSets(recordSets: List<Any>) {
       cdkBuilder.recordSets(recordSets)
     }
+
+    override fun recordSets(vararg recordSets: Any): Unit = recordSets(recordSets.toList())
 
     public fun build(): software.amazon.awscdk.services.route53.CfnRecordSetGroup =
         cdkBuilder.build()
@@ -556,6 +562,8 @@ public open class CfnRecordSetGroup internal constructor(
 
       public fun resourceRecords(resourceRecords: List<String>)
 
+      public fun resourceRecords(vararg resourceRecords: String)
+
       public fun ttl(ttl: String)
 
       public fun type(type: String)
@@ -661,6 +669,9 @@ public open class CfnRecordSetGroup internal constructor(
       override fun resourceRecords(resourceRecords: List<String>) {
         cdkBuilder.resourceRecords(resourceRecords)
       }
+
+      override fun resourceRecords(vararg resourceRecords: String): Unit =
+          resourceRecords(resourceRecords.toList())
 
       override fun ttl(ttl: String) {
         cdkBuilder.ttl(ttl)

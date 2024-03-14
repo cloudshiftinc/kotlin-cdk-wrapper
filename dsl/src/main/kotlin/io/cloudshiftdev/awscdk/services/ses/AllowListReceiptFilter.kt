@@ -11,6 +11,8 @@ public open class AllowListReceiptFilter internal constructor(
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public interface Builder {
     public fun ips(ips: List<String>)
+
+    public fun ips(vararg ips: String)
   }
 
   private class BuilderImpl(
@@ -23,6 +25,8 @@ public open class AllowListReceiptFilter internal constructor(
     override fun ips(ips: List<String>) {
       cdkBuilder.ips(ips)
     }
+
+    override fun ips(vararg ips: String): Unit = ips(ips.toList())
 
     public fun build(): software.amazon.awscdk.services.ses.AllowListReceiptFilter =
         cdkBuilder.build()

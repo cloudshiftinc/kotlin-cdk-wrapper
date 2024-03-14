@@ -27,7 +27,11 @@ public open class HttpAuthorizer internal constructor(
 
     public fun identitySource(identitySource: List<String>)
 
+    public fun identitySource(vararg identitySource: String)
+
     public fun jwtAudience(jwtAudience: List<String>)
+
+    public fun jwtAudience(vararg jwtAudience: String)
 
     public fun jwtIssuer(jwtIssuer: String)
 
@@ -65,9 +69,14 @@ public open class HttpAuthorizer internal constructor(
       cdkBuilder.identitySource(identitySource)
     }
 
+    override fun identitySource(vararg identitySource: String): Unit =
+        identitySource(identitySource.toList())
+
     override fun jwtAudience(jwtAudience: List<String>) {
       cdkBuilder.jwtAudience(jwtAudience)
     }
+
+    override fun jwtAudience(vararg jwtAudience: String): Unit = jwtAudience(jwtAudience.toList())
 
     override fun jwtIssuer(jwtIssuer: String) {
       cdkBuilder.jwtIssuer(jwtIssuer)

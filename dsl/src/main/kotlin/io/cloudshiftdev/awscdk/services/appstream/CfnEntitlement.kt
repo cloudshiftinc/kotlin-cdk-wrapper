@@ -34,6 +34,8 @@ public open class CfnEntitlement internal constructor(
     unwrap(this).setAttributes(__idx_ac66f0)
   }
 
+  public open fun attributes(vararg __idx_ac66f0: Any): Unit = attributes(__idx_ac66f0.toList())
+
   public open fun description(): String? = unwrap(this).getDescription()
 
   public open fun description(`value`: String) {
@@ -63,6 +65,8 @@ public open class CfnEntitlement internal constructor(
 
     public fun attributes(attributes: List<Any>)
 
+    public fun attributes(vararg attributes: Any)
+
     public fun description(description: String)
 
     public fun name(name: String)
@@ -88,6 +92,8 @@ public open class CfnEntitlement internal constructor(
     override fun attributes(attributes: List<Any>) {
       cdkBuilder.attributes(attributes)
     }
+
+    override fun attributes(vararg attributes: Any): Unit = attributes(attributes.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)

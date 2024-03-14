@@ -32,6 +32,8 @@ public open class CfnScene internal constructor(
     unwrap(this).setCapabilities(`value`)
   }
 
+  public open fun capabilities(vararg `value`: String): Unit = capabilities(`value`.toList())
+
   public open fun contentLocation(): String = unwrap(this).getContentLocation()
 
   public open fun contentLocation(`value`: String) {
@@ -81,6 +83,8 @@ public open class CfnScene internal constructor(
   public interface Builder {
     public fun capabilities(capabilities: List<String>)
 
+    public fun capabilities(vararg capabilities: String)
+
     public fun contentLocation(contentLocation: String)
 
     public fun description(description: String)
@@ -106,6 +110,9 @@ public open class CfnScene internal constructor(
     override fun capabilities(capabilities: List<String>) {
       cdkBuilder.capabilities(capabilities)
     }
+
+    override fun capabilities(vararg capabilities: String): Unit =
+        capabilities(capabilities.toList())
 
     override fun contentLocation(contentLocation: String) {
       cdkBuilder.contentLocation(contentLocation)

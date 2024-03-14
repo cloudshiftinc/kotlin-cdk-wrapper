@@ -139,6 +139,8 @@ public open class CfnConnector internal constructor(
 
     public interface Builder {
       public fun securityGroupIds(securityGroupIds: List<String>)
+
+      public fun securityGroupIds(vararg securityGroupIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -151,6 +153,9 @@ public open class CfnConnector internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       public fun build():
           software.amazon.awscdk.services.pcaconnectorad.CfnConnector.VpcInformationProperty =
           cdkBuilder.build()
@@ -160,8 +165,7 @@ public open class CfnConnector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.pcaconnectorad.CfnConnector.VpcInformationProperty,
     ) : VpcInformationProperty {
-      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
-          emptyList()
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
     }
 
     public companion object {

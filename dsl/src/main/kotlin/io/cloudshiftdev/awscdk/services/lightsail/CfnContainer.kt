@@ -91,6 +91,9 @@ public open class CfnContainer internal constructor(
     unwrap(this).setPublicDomainNames(__idx_ac66f0)
   }
 
+  public open fun publicDomainNames(vararg __idx_ac66f0: Any): Unit =
+      publicDomainNames(__idx_ac66f0.toList())
+
   public open fun scale(): Number = unwrap(this).getScale()
 
   public open fun scale(`value`: Number) {
@@ -111,6 +114,8 @@ public open class CfnContainer internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public interface Builder {
     public fun containerServiceDeployment(containerServiceDeployment: IResolvable)
@@ -142,11 +147,15 @@ public open class CfnContainer internal constructor(
 
     public fun publicDomainNames(publicDomainNames: List<Any>)
 
+    public fun publicDomainNames(vararg publicDomainNames: Any)
+
     public fun scale(scale: Number)
 
     public fun serviceName(serviceName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -206,6 +215,9 @@ public open class CfnContainer internal constructor(
       cdkBuilder.publicDomainNames(publicDomainNames)
     }
 
+    override fun publicDomainNames(vararg publicDomainNames: Any): Unit =
+        publicDomainNames(publicDomainNames.toList())
+
     override fun scale(scale: Number) {
       cdkBuilder.scale(scale)
     }
@@ -217,6 +229,8 @@ public open class CfnContainer internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.lightsail.CfnContainer = cdkBuilder.build()
   }
@@ -376,6 +390,8 @@ public open class CfnContainer internal constructor(
       public fun certificateName(certificateName: String)
 
       public fun domainNames(domainNames: List<String>)
+
+      public fun domainNames(vararg domainNames: String)
     }
 
     private class BuilderImpl : Builder {
@@ -390,6 +406,8 @@ public open class CfnContainer internal constructor(
       override fun domainNames(domainNames: List<String>) {
         cdkBuilder.domainNames(domainNames)
       }
+
+      override fun domainNames(vararg domainNames: String): Unit = domainNames(domainNames.toList())
 
       public fun build():
           software.amazon.awscdk.services.lightsail.CfnContainer.PublicDomainNameProperty =
@@ -561,17 +579,23 @@ public open class CfnContainer internal constructor(
     public interface Builder {
       public fun command(command: List<String>)
 
+      public fun command(vararg command: String)
+
       public fun containerName(containerName: String)
 
       public fun environment(environment: IResolvable)
 
       public fun environment(environment: List<Any>)
 
+      public fun environment(vararg environment: Any)
+
       public fun image(image: String)
 
       public fun ports(ports: IResolvable)
 
       public fun ports(ports: List<Any>)
+
+      public fun ports(vararg ports: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -582,6 +606,8 @@ public open class CfnContainer internal constructor(
       override fun command(command: List<String>) {
         cdkBuilder.command(command)
       }
+
+      override fun command(vararg command: String): Unit = command(command.toList())
 
       override fun containerName(containerName: String) {
         cdkBuilder.containerName(containerName)
@@ -595,6 +621,8 @@ public open class CfnContainer internal constructor(
         cdkBuilder.environment(environment)
       }
 
+      override fun environment(vararg environment: Any): Unit = environment(environment.toList())
+
       override fun image(image: String) {
         cdkBuilder.image(image)
       }
@@ -606,6 +634,8 @@ public open class CfnContainer internal constructor(
       override fun ports(ports: List<Any>) {
         cdkBuilder.ports(ports)
       }
+
+      override fun ports(vararg ports: Any): Unit = ports(ports.toList())
 
       public fun build(): software.amazon.awscdk.services.lightsail.CfnContainer.ContainerProperty =
           cdkBuilder.build()
@@ -754,6 +784,8 @@ public open class CfnContainer internal constructor(
 
       public fun containers(containers: List<Any>)
 
+      public fun containers(vararg containers: Any)
+
       public fun publicEndpoint(publicEndpoint: IResolvable)
 
       public fun publicEndpoint(publicEndpoint: PublicEndpointProperty)
@@ -776,6 +808,8 @@ public open class CfnContainer internal constructor(
       override fun containers(containers: List<Any>) {
         cdkBuilder.containers(containers)
       }
+
+      override fun containers(vararg containers: Any): Unit = containers(containers.toList())
 
       override fun publicEndpoint(publicEndpoint: IResolvable) {
         cdkBuilder.publicEndpoint(publicEndpoint.let(IResolvable::unwrap))

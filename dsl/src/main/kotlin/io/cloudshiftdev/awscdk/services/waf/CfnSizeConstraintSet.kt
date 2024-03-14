@@ -39,12 +39,17 @@ public open class CfnSizeConstraintSet internal constructor(
     unwrap(this).setSizeConstraints(__idx_ac66f0)
   }
 
+  public open fun sizeConstraints(vararg __idx_ac66f0: Any): Unit =
+      sizeConstraints(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun name(name: String)
 
     public fun sizeConstraints(sizeConstraints: IResolvable)
 
     public fun sizeConstraints(sizeConstraints: List<Any>)
+
+    public fun sizeConstraints(vararg sizeConstraints: Any)
   }
 
   private class BuilderImpl(
@@ -65,6 +70,9 @@ public open class CfnSizeConstraintSet internal constructor(
     override fun sizeConstraints(sizeConstraints: List<Any>) {
       cdkBuilder.sizeConstraints(sizeConstraints)
     }
+
+    override fun sizeConstraints(vararg sizeConstraints: Any): Unit =
+        sizeConstraints(sizeConstraints.toList())
 
     public fun build(): software.amazon.awscdk.services.waf.CfnSizeConstraintSet =
         cdkBuilder.build()

@@ -40,6 +40,8 @@ public interface ApplicationLoadBalancedTaskImageProps {
 
     public fun containerPorts(containerPorts: List<Number>)
 
+    public fun containerPorts(vararg containerPorts: Number)
+
     public fun dockerLabels(dockerLabels: Map<String, String>)
 
     public fun enableLogging(enableLogging: Boolean)
@@ -71,6 +73,9 @@ public interface ApplicationLoadBalancedTaskImageProps {
     override fun containerPorts(containerPorts: List<Number>) {
       cdkBuilder.containerPorts(containerPorts)
     }
+
+    override fun containerPorts(vararg containerPorts: Number): Unit =
+        containerPorts(containerPorts.toList())
 
     override fun dockerLabels(dockerLabels: Map<String, String>) {
       cdkBuilder.dockerLabels(dockerLabels)

@@ -35,6 +35,8 @@ public interface AssetImageCodeProps : DockerImageAssetOptions {
 
     public fun cacheFrom(cacheFrom: List<DockerCacheOption>)
 
+    public fun cacheFrom(vararg cacheFrom: DockerCacheOption)
+
     public fun cacheTo(cacheTo: DockerCacheOption)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -43,9 +45,15 @@ public interface AssetImageCodeProps : DockerImageAssetOptions {
 
     public fun cmd(cmd: List<String>)
 
+    public fun cmd(vararg cmd: String)
+
     public fun entrypoint(entrypoint: List<String>)
 
+    public fun entrypoint(vararg entrypoint: String)
+
     public fun exclude(exclude: List<String>)
+
+    public fun exclude(vararg exclude: String)
 
     public fun extraHash(extraHash: String)
 
@@ -64,6 +72,8 @@ public interface AssetImageCodeProps : DockerImageAssetOptions {
     public fun networkMode(networkMode: NetworkMode)
 
     public fun outputs(outputs: List<String>)
+
+    public fun outputs(vararg outputs: String)
 
     public fun platform(platform: Platform)
 
@@ -100,6 +110,9 @@ public interface AssetImageCodeProps : DockerImageAssetOptions {
       cdkBuilder.cacheFrom(cacheFrom.map(DockerCacheOption::unwrap))
     }
 
+    override fun cacheFrom(vararg cacheFrom: DockerCacheOption): Unit =
+        cacheFrom(cacheFrom.toList())
+
     override fun cacheTo(cacheTo: DockerCacheOption) {
       cdkBuilder.cacheTo(cacheTo.let(DockerCacheOption::unwrap))
     }
@@ -113,13 +126,19 @@ public interface AssetImageCodeProps : DockerImageAssetOptions {
       cdkBuilder.cmd(cmd)
     }
 
+    override fun cmd(vararg cmd: String): Unit = cmd(cmd.toList())
+
     override fun entrypoint(entrypoint: List<String>) {
       cdkBuilder.entrypoint(entrypoint)
     }
 
+    override fun entrypoint(vararg entrypoint: String): Unit = entrypoint(entrypoint.toList())
+
     override fun exclude(exclude: List<String>) {
       cdkBuilder.exclude(exclude)
     }
+
+    override fun exclude(vararg exclude: String): Unit = exclude(exclude.toList())
 
     override fun extraHash(extraHash: String) {
       cdkBuilder.extraHash(extraHash)
@@ -153,6 +172,8 @@ public interface AssetImageCodeProps : DockerImageAssetOptions {
     override fun outputs(outputs: List<String>) {
       cdkBuilder.outputs(outputs)
     }
+
+    override fun outputs(vararg outputs: String): Unit = outputs(outputs.toList())
 
     override fun platform(platform: Platform) {
       cdkBuilder.platform(platform.let(Platform::unwrap))

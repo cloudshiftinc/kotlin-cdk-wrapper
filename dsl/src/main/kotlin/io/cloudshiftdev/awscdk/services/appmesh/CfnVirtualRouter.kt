@@ -74,6 +74,8 @@ public open class CfnVirtualRouter internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun virtualRouterName(): String? = unwrap(this).getVirtualRouterName()
 
   public open fun virtualRouterName(`value`: String) {
@@ -94,6 +96,8 @@ public open class CfnVirtualRouter internal constructor(
     public fun spec(spec: VirtualRouterSpecProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun virtualRouterName(virtualRouterName: String)
   }
@@ -129,6 +133,8 @@ public open class CfnVirtualRouter internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun virtualRouterName(virtualRouterName: String) {
       cdkBuilder.virtualRouterName(virtualRouterName)
@@ -166,6 +172,8 @@ public open class CfnVirtualRouter internal constructor(
       public fun listeners(listeners: IResolvable)
 
       public fun listeners(listeners: List<Any>)
+
+      public fun listeners(vararg listeners: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -181,6 +189,8 @@ public open class CfnVirtualRouter internal constructor(
       override fun listeners(listeners: List<Any>) {
         cdkBuilder.listeners(listeners)
       }
+
+      override fun listeners(vararg listeners: Any): Unit = listeners(listeners.toList())
 
       public fun build():
           software.amazon.awscdk.services.appmesh.CfnVirtualRouter.VirtualRouterSpecProperty =

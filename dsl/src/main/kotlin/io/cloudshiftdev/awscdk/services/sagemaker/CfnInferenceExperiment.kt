@@ -93,6 +93,9 @@ public open class CfnInferenceExperiment internal constructor(
     unwrap(this).setModelVariants(__idx_ac66f0)
   }
 
+  public open fun modelVariants(vararg __idx_ac66f0: Any): Unit =
+      modelVariants(__idx_ac66f0.toList())
+
   public open fun name(): String = unwrap(this).getName()
 
   public open fun name(`value`: String) {
@@ -150,6 +153,8 @@ public open class CfnInferenceExperiment internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun type(): String = unwrap(this).getType()
 
   public open fun type(`value`: String) {
@@ -177,6 +182,8 @@ public open class CfnInferenceExperiment internal constructor(
 
     public fun modelVariants(modelVariants: List<Any>)
 
+    public fun modelVariants(vararg modelVariants: Any)
+
     public fun name(name: String)
 
     public fun roleArn(roleArn: String)
@@ -200,6 +207,8 @@ public open class CfnInferenceExperiment internal constructor(
     public fun statusReason(statusReason: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun type(type: String)
   }
@@ -248,6 +257,9 @@ public open class CfnInferenceExperiment internal constructor(
       cdkBuilder.modelVariants(modelVariants)
     }
 
+    override fun modelVariants(vararg modelVariants: Any): Unit =
+        modelVariants(modelVariants.toList())
+
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -289,6 +301,8 @@ public open class CfnInferenceExperiment internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun type(type: String) {
       cdkBuilder.type(type)
@@ -550,6 +564,8 @@ public open class CfnInferenceExperiment internal constructor(
 
       public fun shadowModelVariants(shadowModelVariants: List<Any>)
 
+      public fun shadowModelVariants(vararg shadowModelVariants: Any)
+
       public fun sourceModelVariantName(sourceModelVariantName: String)
     }
 
@@ -566,6 +582,9 @@ public open class CfnInferenceExperiment internal constructor(
       override fun shadowModelVariants(shadowModelVariants: List<Any>) {
         cdkBuilder.shadowModelVariants(shadowModelVariants)
       }
+
+      override fun shadowModelVariants(vararg shadowModelVariants: Any): Unit =
+          shadowModelVariants(shadowModelVariants.toList())
 
       override fun sourceModelVariantName(sourceModelVariantName: String) {
         cdkBuilder.sourceModelVariantName(sourceModelVariantName)
@@ -818,7 +837,11 @@ public open class CfnInferenceExperiment internal constructor(
     public interface Builder {
       public fun csvContentTypes(csvContentTypes: List<String>)
 
+      public fun csvContentTypes(vararg csvContentTypes: String)
+
       public fun jsonContentTypes(jsonContentTypes: List<String>)
+
+      public fun jsonContentTypes(vararg jsonContentTypes: String)
     }
 
     private class BuilderImpl : Builder {
@@ -831,9 +854,15 @@ public open class CfnInferenceExperiment internal constructor(
         cdkBuilder.csvContentTypes(csvContentTypes)
       }
 
+      override fun csvContentTypes(vararg csvContentTypes: String): Unit =
+          csvContentTypes(csvContentTypes.toList())
+
       override fun jsonContentTypes(jsonContentTypes: List<String>) {
         cdkBuilder.jsonContentTypes(jsonContentTypes)
       }
+
+      override fun jsonContentTypes(vararg jsonContentTypes: String): Unit =
+          jsonContentTypes(jsonContentTypes.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment.CaptureContentTypeHeaderProperty

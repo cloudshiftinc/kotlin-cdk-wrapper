@@ -27,9 +27,13 @@ public interface BaseApplicationListenerProps {
   public interface Builder {
     public fun certificates(certificates: List<IListenerCertificate>)
 
+    public fun certificates(vararg certificates: IListenerCertificate)
+
     public fun defaultAction(defaultAction: ListenerAction)
 
     public fun defaultTargetGroups(defaultTargetGroups: List<IApplicationTargetGroup>)
+
+    public fun defaultTargetGroups(vararg defaultTargetGroups: IApplicationTargetGroup)
 
     public fun `open`(`open`: Boolean)
 
@@ -50,6 +54,9 @@ public interface BaseApplicationListenerProps {
       cdkBuilder.certificates(certificates.map(IListenerCertificate::unwrap))
     }
 
+    override fun certificates(vararg certificates: IListenerCertificate): Unit =
+        certificates(certificates.toList())
+
     override fun defaultAction(defaultAction: ListenerAction) {
       cdkBuilder.defaultAction(defaultAction.let(ListenerAction::unwrap))
     }
@@ -57,6 +64,9 @@ public interface BaseApplicationListenerProps {
     override fun defaultTargetGroups(defaultTargetGroups: List<IApplicationTargetGroup>) {
       cdkBuilder.defaultTargetGroups(defaultTargetGroups.map(IApplicationTargetGroup::unwrap))
     }
+
+    override fun defaultTargetGroups(vararg defaultTargetGroups: IApplicationTargetGroup): Unit =
+        defaultTargetGroups(defaultTargetGroups.toList())
 
     override fun `open`(`open`: Boolean) {
       cdkBuilder.`open`(`open`)

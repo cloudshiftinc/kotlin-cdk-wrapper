@@ -104,6 +104,8 @@ public open class CfnDomainName internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun certificateArn(certificateArn: String)
 
@@ -134,6 +136,8 @@ public open class CfnDomainName internal constructor(
     public fun securityPolicy(securityPolicy: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -194,6 +198,8 @@ public open class CfnDomainName internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.apigateway.CfnDomainName =
         cdkBuilder.build()
@@ -284,6 +290,8 @@ public open class CfnDomainName internal constructor(
 
     public interface Builder {
       public fun types(types: List<String>)
+
+      public fun types(vararg types: String)
     }
 
     private class BuilderImpl : Builder {
@@ -295,6 +303,8 @@ public open class CfnDomainName internal constructor(
       override fun types(types: List<String>) {
         cdkBuilder.types(types)
       }
+
+      override fun types(vararg types: String): Unit = types(types.toList())
 
       public fun build():
           software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty =

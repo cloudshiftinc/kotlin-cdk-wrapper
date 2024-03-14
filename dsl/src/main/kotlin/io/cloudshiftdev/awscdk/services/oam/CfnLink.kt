@@ -29,11 +29,13 @@ public open class CfnLink internal constructor(
     unwrap(this).setLabelTemplate(`value`)
   }
 
-  public open fun resourceTypes(): List<String> = unwrap(this).getResourceTypes() ?: emptyList()
+  public open fun resourceTypes(): List<String> = unwrap(this).getResourceTypes()
 
   public open fun resourceTypes(`value`: List<String>) {
     unwrap(this).setResourceTypes(`value`)
   }
+
+  public open fun resourceTypes(vararg `value`: String): Unit = resourceTypes(`value`.toList())
 
   public open fun sinkIdentifier(): String = unwrap(this).getSinkIdentifier()
 
@@ -54,6 +56,8 @@ public open class CfnLink internal constructor(
 
     public fun resourceTypes(resourceTypes: List<String>)
 
+    public fun resourceTypes(vararg resourceTypes: String)
+
     public fun sinkIdentifier(sinkIdentifier: String)
 
     public fun tags(tags: Map<String, String>)
@@ -73,6 +77,9 @@ public open class CfnLink internal constructor(
     override fun resourceTypes(resourceTypes: List<String>) {
       cdkBuilder.resourceTypes(resourceTypes)
     }
+
+    override fun resourceTypes(vararg resourceTypes: String): Unit =
+        resourceTypes(resourceTypes.toList())
 
     override fun sinkIdentifier(sinkIdentifier: String) {
       cdkBuilder.sinkIdentifier(sinkIdentifier)

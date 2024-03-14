@@ -22,14 +22,13 @@ public open class CfnVPC internal constructor(
   public open fun attrCidrBlock(): String = unwrap(this).getAttrCidrBlock()
 
   public open fun attrCidrBlockAssociations(): List<String> =
-      unwrap(this).getAttrCidrBlockAssociations() ?: emptyList()
+      unwrap(this).getAttrCidrBlockAssociations()
 
   public open fun attrDefaultNetworkAcl(): String = unwrap(this).getAttrDefaultNetworkAcl()
 
   public open fun attrDefaultSecurityGroup(): String = unwrap(this).getAttrDefaultSecurityGroup()
 
-  public open fun attrIpv6CidrBlocks(): List<String> = unwrap(this).getAttrIpv6CidrBlocks() ?:
-      emptyList()
+  public open fun attrIpv6CidrBlocks(): List<String> = unwrap(this).getAttrIpv6CidrBlocks()
 
   public open fun attrVpcId(): String = unwrap(this).getAttrVpcId()
 
@@ -90,6 +89,8 @@ public open class CfnVPC internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun cidrBlock(cidrBlock: String)
 
@@ -108,6 +109,8 @@ public open class CfnVPC internal constructor(
     public fun ipv4NetmaskLength(ipv4NetmaskLength: Number)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -152,6 +155,8 @@ public open class CfnVPC internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.CfnVPC = cdkBuilder.build()
   }

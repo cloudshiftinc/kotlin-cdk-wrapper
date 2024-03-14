@@ -35,6 +35,9 @@ public open class CfnBotVersion internal constructor(
     unwrap(this).setBotVersionLocaleSpecification(__idx_ac66f0)
   }
 
+  public open fun botVersionLocaleSpecification(vararg __idx_ac66f0: Any): Unit =
+      botVersionLocaleSpecification(__idx_ac66f0.toList())
+
   public open fun description(): String? = unwrap(this).getDescription()
 
   public open fun description(`value`: String) {
@@ -51,6 +54,8 @@ public open class CfnBotVersion internal constructor(
     public fun botVersionLocaleSpecification(botVersionLocaleSpecification: IResolvable)
 
     public fun botVersionLocaleSpecification(botVersionLocaleSpecification: List<Any>)
+
+    public fun botVersionLocaleSpecification(vararg botVersionLocaleSpecification: Any)
 
     public fun description(description: String)
   }
@@ -73,6 +78,9 @@ public open class CfnBotVersion internal constructor(
     override fun botVersionLocaleSpecification(botVersionLocaleSpecification: List<Any>) {
       cdkBuilder.botVersionLocaleSpecification(botVersionLocaleSpecification)
     }
+
+    override fun botVersionLocaleSpecification(vararg botVersionLocaleSpecification: Any): Unit =
+        botVersionLocaleSpecification(botVersionLocaleSpecification.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)

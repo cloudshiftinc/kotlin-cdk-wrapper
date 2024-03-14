@@ -46,6 +46,9 @@ public open class CfnPipeline internal constructor(
     unwrap(this).setArtifactStores(__idx_ac66f0)
   }
 
+  public open fun artifactStores(vararg __idx_ac66f0: Any): Unit =
+      artifactStores(__idx_ac66f0.toList())
+
   public open fun attrId(): String = unwrap(this).getAttrId()
 
   public open fun attrVersion(): String = unwrap(this).getAttrVersion()
@@ -60,6 +63,9 @@ public open class CfnPipeline internal constructor(
   public open fun disableInboundStageTransitions(__idx_ac66f0: List<Any>) {
     unwrap(this).setDisableInboundStageTransitions(__idx_ac66f0)
   }
+
+  public open fun disableInboundStageTransitions(vararg __idx_ac66f0: Any): Unit =
+      disableInboundStageTransitions(__idx_ac66f0.toList())
 
   public open fun executionMode(): String? = unwrap(this).getExecutionMode()
 
@@ -109,6 +115,8 @@ public open class CfnPipeline internal constructor(
     unwrap(this).setStages(__idx_ac66f0)
   }
 
+  public open fun stages(vararg __idx_ac66f0: Any): Unit = stages(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -117,6 +125,8 @@ public open class CfnPipeline internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun triggers(): Any? = unwrap(this).getTriggers()
 
@@ -128,6 +138,8 @@ public open class CfnPipeline internal constructor(
     unwrap(this).setTriggers(__idx_ac66f0)
   }
 
+  public open fun triggers(vararg __idx_ac66f0: Any): Unit = triggers(__idx_ac66f0.toList())
+
   public open fun variables(): Any? = unwrap(this).getVariables()
 
   public open fun variables(`value`: IResolvable) {
@@ -137,6 +149,8 @@ public open class CfnPipeline internal constructor(
   public open fun variables(__idx_ac66f0: List<Any>) {
     unwrap(this).setVariables(__idx_ac66f0)
   }
+
+  public open fun variables(vararg __idx_ac66f0: Any): Unit = variables(__idx_ac66f0.toList())
 
   public interface Builder {
     public fun artifactStore(artifactStore: IResolvable)
@@ -151,9 +165,13 @@ public open class CfnPipeline internal constructor(
 
     public fun artifactStores(artifactStores: List<Any>)
 
+    public fun artifactStores(vararg artifactStores: Any)
+
     public fun disableInboundStageTransitions(disableInboundStageTransitions: IResolvable)
 
     public fun disableInboundStageTransitions(disableInboundStageTransitions: List<Any>)
+
+    public fun disableInboundStageTransitions(vararg disableInboundStageTransitions: Any)
 
     public fun executionMode(executionMode: String)
 
@@ -171,15 +189,23 @@ public open class CfnPipeline internal constructor(
 
     public fun stages(stages: List<Any>)
 
+    public fun stages(vararg stages: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun triggers(triggers: IResolvable)
 
     public fun triggers(triggers: List<Any>)
 
+    public fun triggers(vararg triggers: Any)
+
     public fun variables(variables: IResolvable)
 
     public fun variables(variables: List<Any>)
+
+    public fun variables(vararg variables: Any)
   }
 
   private class BuilderImpl(
@@ -210,6 +236,9 @@ public open class CfnPipeline internal constructor(
       cdkBuilder.artifactStores(artifactStores)
     }
 
+    override fun artifactStores(vararg artifactStores: Any): Unit =
+        artifactStores(artifactStores.toList())
+
     override fun disableInboundStageTransitions(disableInboundStageTransitions: IResolvable) {
       cdkBuilder.disableInboundStageTransitions(disableInboundStageTransitions.let(IResolvable::unwrap))
     }
@@ -217,6 +246,9 @@ public open class CfnPipeline internal constructor(
     override fun disableInboundStageTransitions(disableInboundStageTransitions: List<Any>) {
       cdkBuilder.disableInboundStageTransitions(disableInboundStageTransitions)
     }
+
+    override fun disableInboundStageTransitions(vararg disableInboundStageTransitions: Any): Unit =
+        disableInboundStageTransitions(disableInboundStageTransitions.toList())
 
     override fun executionMode(executionMode: String) {
       cdkBuilder.executionMode(executionMode)
@@ -250,9 +282,13 @@ public open class CfnPipeline internal constructor(
       cdkBuilder.stages(stages)
     }
 
+    override fun stages(vararg stages: Any): Unit = stages(stages.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun triggers(triggers: IResolvable) {
       cdkBuilder.triggers(triggers.let(IResolvable::unwrap))
@@ -262,6 +298,8 @@ public open class CfnPipeline internal constructor(
       cdkBuilder.triggers(triggers)
     }
 
+    override fun triggers(vararg triggers: Any): Unit = triggers(triggers.toList())
+
     override fun variables(variables: IResolvable) {
       cdkBuilder.variables(variables.let(IResolvable::unwrap))
     }
@@ -269,6 +307,8 @@ public open class CfnPipeline internal constructor(
     override fun variables(variables: List<Any>) {
       cdkBuilder.variables(variables)
     }
+
+    override fun variables(vararg variables: Any): Unit = variables(variables.toList())
 
     public fun build(): software.amazon.awscdk.services.codepipeline.CfnPipeline =
         cdkBuilder.build()
@@ -351,7 +391,11 @@ public open class CfnPipeline internal constructor(
     public interface Builder {
       public fun excludes(excludes: List<String>)
 
+      public fun excludes(vararg excludes: String)
+
       public fun includes(includes: List<String>)
+
+      public fun includes(vararg includes: String)
     }
 
     private class BuilderImpl : Builder {
@@ -364,9 +408,13 @@ public open class CfnPipeline internal constructor(
         cdkBuilder.excludes(excludes)
       }
 
+      override fun excludes(vararg excludes: String): Unit = excludes(excludes.toList())
+
       override fun includes(includes: List<String>) {
         cdkBuilder.includes(includes)
       }
+
+      override fun includes(vararg includes: String): Unit = includes(includes.toList())
 
       public fun build():
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitTagFilterCriteriaProperty =
@@ -472,9 +520,13 @@ public open class CfnPipeline internal constructor(
 
       public fun pullRequest(pullRequest: List<Any>)
 
+      public fun pullRequest(vararg pullRequest: Any)
+
       public fun push(push: IResolvable)
 
       public fun push(push: List<Any>)
+
+      public fun push(vararg push: Any)
 
       public fun sourceActionName(sourceActionName: String)
     }
@@ -493,6 +545,8 @@ public open class CfnPipeline internal constructor(
         cdkBuilder.pullRequest(pullRequest)
       }
 
+      override fun pullRequest(vararg pullRequest: Any): Unit = pullRequest(pullRequest.toList())
+
       override fun push(push: IResolvable) {
         cdkBuilder.push(push.let(IResolvable::unwrap))
       }
@@ -500,6 +554,8 @@ public open class CfnPipeline internal constructor(
       override fun push(push: List<Any>) {
         cdkBuilder.push(push)
       }
+
+      override fun push(vararg push: Any): Unit = push(push.toList())
 
       override fun sourceActionName(sourceActionName: String) {
         cdkBuilder.sourceActionName(sourceActionName)
@@ -760,6 +816,8 @@ public open class CfnPipeline internal constructor(
 
       public fun events(events: List<String>)
 
+      public fun events(vararg events: String)
+
       public fun filePaths(filePaths: IResolvable)
 
       public fun filePaths(filePaths: GitFilePathFilterCriteriaProperty)
@@ -791,6 +849,8 @@ public open class CfnPipeline internal constructor(
       override fun events(events: List<String>) {
         cdkBuilder.events(events)
       }
+
+      override fun events(vararg events: String): Unit = events(events.toList())
 
       override fun filePaths(filePaths: IResolvable) {
         cdkBuilder.filePaths(filePaths.let(IResolvable::unwrap))
@@ -1069,9 +1129,13 @@ public open class CfnPipeline internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun blockers(blockers: IResolvable)
 
       public fun blockers(blockers: List<Any>)
+
+      public fun blockers(vararg blockers: Any)
 
       public fun name(name: String)
     }
@@ -1090,6 +1154,8 @@ public open class CfnPipeline internal constructor(
         cdkBuilder.actions(actions)
       }
 
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
+
       override fun blockers(blockers: IResolvable) {
         cdkBuilder.blockers(blockers.let(IResolvable::unwrap))
       }
@@ -1097,6 +1163,8 @@ public open class CfnPipeline internal constructor(
       override fun blockers(blockers: List<Any>) {
         cdkBuilder.blockers(blockers)
       }
+
+      override fun blockers(vararg blockers: Any): Unit = blockers(blockers.toList())
 
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -1230,6 +1298,8 @@ public open class CfnPipeline internal constructor(
 
       public fun inputArtifacts(inputArtifacts: List<Any>)
 
+      public fun inputArtifacts(vararg inputArtifacts: Any)
+
       public fun name(name: String)
 
       public fun namespace(namespace: String)
@@ -1237,6 +1307,8 @@ public open class CfnPipeline internal constructor(
       public fun outputArtifacts(outputArtifacts: IResolvable)
 
       public fun outputArtifacts(outputArtifacts: List<Any>)
+
+      public fun outputArtifacts(vararg outputArtifacts: Any)
 
       public fun region(region: String)
 
@@ -1276,6 +1348,9 @@ public open class CfnPipeline internal constructor(
         cdkBuilder.inputArtifacts(inputArtifacts)
       }
 
+      override fun inputArtifacts(vararg inputArtifacts: Any): Unit =
+          inputArtifacts(inputArtifacts.toList())
+
       override fun name(name: String) {
         cdkBuilder.name(name)
       }
@@ -1291,6 +1366,9 @@ public open class CfnPipeline internal constructor(
       override fun outputArtifacts(outputArtifacts: List<Any>) {
         cdkBuilder.outputArtifacts(outputArtifacts)
       }
+
+      override fun outputArtifacts(vararg outputArtifacts: Any): Unit =
+          outputArtifacts(outputArtifacts.toList())
 
       override fun region(region: String) {
         cdkBuilder.region(region)
@@ -1538,7 +1616,11 @@ public open class CfnPipeline internal constructor(
     public interface Builder {
       public fun excludes(excludes: List<String>)
 
+      public fun excludes(vararg excludes: String)
+
       public fun includes(includes: List<String>)
+
+      public fun includes(vararg includes: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1551,9 +1633,13 @@ public open class CfnPipeline internal constructor(
         cdkBuilder.excludes(excludes)
       }
 
+      override fun excludes(vararg excludes: String): Unit = excludes(excludes.toList())
+
       override fun includes(includes: List<String>) {
         cdkBuilder.includes(includes)
       }
+
+      override fun includes(vararg includes: String): Unit = includes(includes.toList())
 
       public fun build():
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitFilePathFilterCriteriaProperty
@@ -1598,7 +1684,11 @@ public open class CfnPipeline internal constructor(
     public interface Builder {
       public fun excludes(excludes: List<String>)
 
+      public fun excludes(vararg excludes: String)
+
       public fun includes(includes: List<String>)
+
+      public fun includes(vararg includes: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1611,9 +1701,13 @@ public open class CfnPipeline internal constructor(
         cdkBuilder.excludes(excludes)
       }
 
+      override fun excludes(vararg excludes: String): Unit = excludes(excludes.toList())
+
       override fun includes(includes: List<String>) {
         cdkBuilder.includes(includes)
       }
+
+      override fun includes(vararg includes: String): Unit = includes(includes.toList())
 
       public fun build():
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitBranchFilterCriteriaProperty =

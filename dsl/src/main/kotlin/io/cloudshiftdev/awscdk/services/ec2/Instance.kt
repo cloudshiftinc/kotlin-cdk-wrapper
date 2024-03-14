@@ -74,6 +74,8 @@ public open class Instance internal constructor(
 
     public fun blockDevices(blockDevices: List<BlockDevice>)
 
+    public fun blockDevices(vararg blockDevices: BlockDevice)
+
     public fun creditSpecification(creditSpecification: CpuCredits)
 
     public fun detailedMonitoring(detailedMonitoring: Boolean)
@@ -152,6 +154,9 @@ public open class Instance internal constructor(
     override fun blockDevices(blockDevices: List<BlockDevice>) {
       cdkBuilder.blockDevices(blockDevices.map(BlockDevice::unwrap))
     }
+
+    override fun blockDevices(vararg blockDevices: BlockDevice): Unit =
+        blockDevices(blockDevices.toList())
 
     override fun creditSpecification(creditSpecification: CpuCredits) {
       cdkBuilder.creditSpecification(creditSpecification.let(CpuCredits::unwrap))

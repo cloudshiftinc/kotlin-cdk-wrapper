@@ -24,16 +24,20 @@ public open class CfnUserToGroupAddition internal constructor(
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
-  public open fun users(): List<String> = unwrap(this).getUsers() ?: emptyList()
+  public open fun users(): List<String> = unwrap(this).getUsers()
 
   public open fun users(`value`: List<String>) {
     unwrap(this).setUsers(`value`)
   }
 
+  public open fun users(vararg `value`: String): Unit = users(`value`.toList())
+
   public interface Builder {
     public fun groupName(groupName: String)
 
     public fun users(users: List<String>)
+
+    public fun users(vararg users: String)
   }
 
   private class BuilderImpl(
@@ -50,6 +54,8 @@ public open class CfnUserToGroupAddition internal constructor(
     override fun users(users: List<String>) {
       cdkBuilder.users(users)
     }
+
+    override fun users(vararg users: String): Unit = users(users.toList())
 
     public fun build(): software.amazon.awscdk.services.iam.CfnUserToGroupAddition =
         cdkBuilder.build()

@@ -15,6 +15,8 @@ public open class DropSpamReceiptRule internal constructor(
   public interface Builder {
     public fun actions(actions: List<IReceiptRuleAction>)
 
+    public fun actions(vararg actions: IReceiptRuleAction)
+
     public fun after(after: IReceiptRule)
 
     public fun enabled(enabled: Boolean)
@@ -22,6 +24,8 @@ public open class DropSpamReceiptRule internal constructor(
     public fun receiptRuleName(receiptRuleName: String)
 
     public fun recipients(recipients: List<String>)
+
+    public fun recipients(vararg recipients: String)
 
     public fun ruleSet(ruleSet: IReceiptRuleSet)
 
@@ -41,6 +45,8 @@ public open class DropSpamReceiptRule internal constructor(
       cdkBuilder.actions(actions.map(IReceiptRuleAction::unwrap))
     }
 
+    override fun actions(vararg actions: IReceiptRuleAction): Unit = actions(actions.toList())
+
     override fun after(after: IReceiptRule) {
       cdkBuilder.after(after.let(IReceiptRule::unwrap))
     }
@@ -56,6 +62,8 @@ public open class DropSpamReceiptRule internal constructor(
     override fun recipients(recipients: List<String>) {
       cdkBuilder.recipients(recipients)
     }
+
+    override fun recipients(vararg recipients: String): Unit = recipients(recipients.toList())
 
     override fun ruleSet(ruleSet: IReceiptRuleSet) {
       cdkBuilder.ruleSet(ruleSet.let(IReceiptRuleSet::unwrap))

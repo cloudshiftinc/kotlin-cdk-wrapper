@@ -113,6 +113,8 @@ public open class CfnEnvironment internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun desiredSoftwareSetId(desiredSoftwareSetId: String)
 
@@ -137,6 +139,8 @@ public open class CfnEnvironment internal constructor(
     public fun softwareSetUpdateSchedule(softwareSetUpdateSchedule: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -193,6 +197,8 @@ public open class CfnEnvironment internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     public fun build(): software.amazon.awscdk.services.workspacesthinclient.CfnEnvironment =
         cdkBuilder.build()
   }
@@ -239,6 +245,8 @@ public open class CfnEnvironment internal constructor(
 
       public fun daysOfTheWeek(daysOfTheWeek: List<String>)
 
+      public fun daysOfTheWeek(vararg daysOfTheWeek: String)
+
       public fun endTimeHour(endTimeHour: Number)
 
       public fun endTimeMinute(endTimeMinute: Number)
@@ -263,6 +271,9 @@ public open class CfnEnvironment internal constructor(
       override fun daysOfTheWeek(daysOfTheWeek: List<String>) {
         cdkBuilder.daysOfTheWeek(daysOfTheWeek)
       }
+
+      override fun daysOfTheWeek(vararg daysOfTheWeek: String): Unit =
+          daysOfTheWeek(daysOfTheWeek.toList())
 
       override fun endTimeHour(endTimeHour: Number) {
         cdkBuilder.endTimeHour(endTimeHour)

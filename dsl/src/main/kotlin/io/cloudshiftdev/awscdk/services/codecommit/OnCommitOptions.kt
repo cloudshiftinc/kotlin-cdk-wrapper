@@ -16,6 +16,8 @@ public interface OnCommitOptions : OnEventOptions {
   public interface Builder {
     public fun branches(branches: List<String>)
 
+    public fun branches(vararg branches: String)
+
     public fun crossStackScope(crossStackScope: Construct)
 
     public fun description(description: String)
@@ -38,6 +40,8 @@ public interface OnCommitOptions : OnEventOptions {
     override fun branches(branches: List<String>) {
       cdkBuilder.branches(branches)
     }
+
+    override fun branches(vararg branches: String): Unit = branches(branches.toList())
 
     override fun crossStackScope(crossStackScope: Construct) {
       cdkBuilder.crossStackScope(crossStackScope.let(Construct::unwrap))

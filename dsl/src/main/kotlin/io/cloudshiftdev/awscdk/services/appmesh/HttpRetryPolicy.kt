@@ -19,11 +19,15 @@ public interface HttpRetryPolicy {
   public interface Builder {
     public fun httpRetryEvents(httpRetryEvents: List<HttpRetryEvent>)
 
+    public fun httpRetryEvents(vararg httpRetryEvents: HttpRetryEvent)
+
     public fun retryAttempts(retryAttempts: Number)
 
     public fun retryTimeout(retryTimeout: Duration)
 
     public fun tcpRetryEvents(tcpRetryEvents: List<TcpRetryEvent>)
+
+    public fun tcpRetryEvents(vararg tcpRetryEvents: TcpRetryEvent)
   }
 
   private class BuilderImpl : Builder {
@@ -33,6 +37,9 @@ public interface HttpRetryPolicy {
     override fun httpRetryEvents(httpRetryEvents: List<HttpRetryEvent>) {
       cdkBuilder.httpRetryEvents(httpRetryEvents.map(HttpRetryEvent::unwrap))
     }
+
+    override fun httpRetryEvents(vararg httpRetryEvents: HttpRetryEvent): Unit =
+        httpRetryEvents(httpRetryEvents.toList())
 
     override fun retryAttempts(retryAttempts: Number) {
       cdkBuilder.retryAttempts(retryAttempts)
@@ -45,6 +52,9 @@ public interface HttpRetryPolicy {
     override fun tcpRetryEvents(tcpRetryEvents: List<TcpRetryEvent>) {
       cdkBuilder.tcpRetryEvents(tcpRetryEvents.map(TcpRetryEvent::unwrap))
     }
+
+    override fun tcpRetryEvents(vararg tcpRetryEvents: TcpRetryEvent): Unit =
+        tcpRetryEvents(tcpRetryEvents.toList())
 
     public fun build(): software.amazon.awscdk.services.appmesh.HttpRetryPolicy = cdkBuilder.build()
   }

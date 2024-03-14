@@ -101,7 +101,11 @@ public open class CfnNotificationChannel internal constructor(
     public interface Builder {
       public fun messageTypes(messageTypes: List<String>)
 
+      public fun messageTypes(vararg messageTypes: String)
+
       public fun severities(severities: List<String>)
+
+      public fun severities(vararg severities: String)
     }
 
     private class BuilderImpl : Builder {
@@ -114,9 +118,14 @@ public open class CfnNotificationChannel internal constructor(
         cdkBuilder.messageTypes(messageTypes)
       }
 
+      override fun messageTypes(vararg messageTypes: String): Unit =
+          messageTypes(messageTypes.toList())
+
       override fun severities(severities: List<String>) {
         cdkBuilder.severities(severities)
       }
+
+      override fun severities(vararg severities: String): Unit = severities(severities.toList())
 
       public fun build():
           software.amazon.awscdk.services.devopsguru.CfnNotificationChannel.NotificationFilterConfigProperty

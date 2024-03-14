@@ -50,6 +50,9 @@ public open class CfnMissionProfile internal constructor(
     unwrap(this).setDataflowEdges(__idx_ac66f0)
   }
 
+  public open fun dataflowEdges(vararg __idx_ac66f0: Any): Unit =
+      dataflowEdges(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -97,6 +100,8 @@ public open class CfnMissionProfile internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun trackingConfigArn(): String = unwrap(this).getTrackingConfigArn()
 
   public open fun trackingConfigArn(`value`: String) {
@@ -111,6 +116,8 @@ public open class CfnMissionProfile internal constructor(
     public fun dataflowEdges(dataflowEdges: IResolvable)
 
     public fun dataflowEdges(dataflowEdges: List<Any>)
+
+    public fun dataflowEdges(vararg dataflowEdges: Any)
 
     public fun minimumViableContactDurationSeconds(minimumViableContactDurationSeconds: Number)
 
@@ -127,6 +134,8 @@ public open class CfnMissionProfile internal constructor(
     public fun streamsKmsRole(streamsKmsRole: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun trackingConfigArn(trackingConfigArn: String)
   }
@@ -153,6 +162,9 @@ public open class CfnMissionProfile internal constructor(
     override fun dataflowEdges(dataflowEdges: List<Any>) {
       cdkBuilder.dataflowEdges(dataflowEdges)
     }
+
+    override fun dataflowEdges(vararg dataflowEdges: Any): Unit =
+        dataflowEdges(dataflowEdges.toList())
 
     override fun minimumViableContactDurationSeconds(minimumViableContactDurationSeconds: Number) {
       cdkBuilder.minimumViableContactDurationSeconds(minimumViableContactDurationSeconds)
@@ -182,6 +194,8 @@ public open class CfnMissionProfile internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun trackingConfigArn(trackingConfigArn: String) {
       cdkBuilder.trackingConfigArn(trackingConfigArn)

@@ -75,8 +75,7 @@ public open class DatabaseCluster internal constructor(
   public override fun instanceEndpoints(): List<Endpoint> =
       unwrap(this).getInstanceEndpoints().map(Endpoint::wrap)
 
-  public override fun instanceIdentifiers(): List<String> = unwrap(this).getInstanceIdentifiers() ?:
-      emptyList()
+  public override fun instanceIdentifiers(): List<String> = unwrap(this).getInstanceIdentifiers()
 
   public open fun metricAcuUtilization(): Metric =
       unwrap(this).metricACUUtilization().let(Metric::wrap)
@@ -123,6 +122,8 @@ public open class DatabaseCluster internal constructor(
     public fun backup(backup: BackupProps.Builder.() -> Unit)
 
     public fun cloudwatchLogsExports(cloudwatchLogsExports: List<String>)
+
+    public fun cloudwatchLogsExports(vararg cloudwatchLogsExports: String)
 
     public fun cloudwatchLogsRetention(cloudwatchLogsRetention: RetentionDays)
 
@@ -179,17 +180,25 @@ public open class DatabaseCluster internal constructor(
 
     public fun readers(readers: List<IClusterInstance>)
 
+    public fun readers(vararg readers: IClusterInstance)
+
     public fun removalPolicy(removalPolicy: RemovalPolicy)
 
     public fun s3ExportBuckets(s3ExportBuckets: List<IBucket>)
+
+    public fun s3ExportBuckets(vararg s3ExportBuckets: IBucket)
 
     public fun s3ExportRole(s3ExportRole: IRole)
 
     public fun s3ImportBuckets(s3ImportBuckets: List<IBucket>)
 
+    public fun s3ImportBuckets(vararg s3ImportBuckets: IBucket)
+
     public fun s3ImportRole(s3ImportRole: IRole)
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
+
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
 
     public fun serverlessV2MaxCapacity(serverlessV2MaxCapacity: Number)
 
@@ -236,6 +245,9 @@ public open class DatabaseCluster internal constructor(
     override fun cloudwatchLogsExports(cloudwatchLogsExports: List<String>) {
       cdkBuilder.cloudwatchLogsExports(cloudwatchLogsExports)
     }
+
+    override fun cloudwatchLogsExports(vararg cloudwatchLogsExports: String): Unit =
+        cloudwatchLogsExports(cloudwatchLogsExports.toList())
 
     override fun cloudwatchLogsRetention(cloudwatchLogsRetention: RetentionDays) {
       cdkBuilder.cloudwatchLogsRetention(cloudwatchLogsRetention.let(RetentionDays::unwrap))
@@ -341,6 +353,8 @@ public open class DatabaseCluster internal constructor(
       cdkBuilder.readers(readers.map(IClusterInstance::unwrap))
     }
 
+    override fun readers(vararg readers: IClusterInstance): Unit = readers(readers.toList())
+
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
     }
@@ -348,6 +362,9 @@ public open class DatabaseCluster internal constructor(
     override fun s3ExportBuckets(s3ExportBuckets: List<IBucket>) {
       cdkBuilder.s3ExportBuckets(s3ExportBuckets.map(IBucket::unwrap))
     }
+
+    override fun s3ExportBuckets(vararg s3ExportBuckets: IBucket): Unit =
+        s3ExportBuckets(s3ExportBuckets.toList())
 
     override fun s3ExportRole(s3ExportRole: IRole) {
       cdkBuilder.s3ExportRole(s3ExportRole.let(IRole::unwrap))
@@ -357,6 +374,9 @@ public open class DatabaseCluster internal constructor(
       cdkBuilder.s3ImportBuckets(s3ImportBuckets.map(IBucket::unwrap))
     }
 
+    override fun s3ImportBuckets(vararg s3ImportBuckets: IBucket): Unit =
+        s3ImportBuckets(s3ImportBuckets.toList())
+
     override fun s3ImportRole(s3ImportRole: IRole) {
       cdkBuilder.s3ImportRole(s3ImportRole.let(IRole::unwrap))
     }
@@ -364,6 +384,9 @@ public open class DatabaseCluster internal constructor(
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun serverlessV2MaxCapacity(serverlessV2MaxCapacity: Number) {
       cdkBuilder.serverlessV2MaxCapacity(serverlessV2MaxCapacity)

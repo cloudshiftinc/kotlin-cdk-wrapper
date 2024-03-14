@@ -31,6 +31,8 @@ public interface RollingUpdateOptions {
 
     public fun suspendProcesses(suspendProcesses: List<ScalingProcess>)
 
+    public fun suspendProcesses(vararg suspendProcesses: ScalingProcess)
+
     public fun waitOnResourceSignals(waitOnResourceSignals: Boolean)
   }
 
@@ -57,6 +59,9 @@ public interface RollingUpdateOptions {
     override fun suspendProcesses(suspendProcesses: List<ScalingProcess>) {
       cdkBuilder.suspendProcesses(suspendProcesses.map(ScalingProcess::unwrap))
     }
+
+    override fun suspendProcesses(vararg suspendProcesses: ScalingProcess): Unit =
+        suspendProcesses(suspendProcesses.toList())
 
     override fun waitOnResourceSignals(waitOnResourceSignals: Boolean) {
       cdkBuilder.waitOnResourceSignals(waitOnResourceSignals)

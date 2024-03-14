@@ -25,7 +25,7 @@ public open class CfnStreamingImage internal constructor(
   public open fun attrEncryptionConfigurationKeyType(): String =
       unwrap(this).getAttrEncryptionConfigurationKeyType()
 
-  public open fun attrEulaIds(): List<String> = unwrap(this).getAttrEulaIds() ?: emptyList()
+  public open fun attrEulaIds(): List<String> = unwrap(this).getAttrEulaIds()
 
   public open fun attrOwner(): String = unwrap(this).getAttrOwner()
 

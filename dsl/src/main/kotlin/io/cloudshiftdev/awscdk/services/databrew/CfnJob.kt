@@ -32,6 +32,9 @@ public open class CfnJob internal constructor(
     unwrap(this).setDataCatalogOutputs(__idx_ac66f0)
   }
 
+  public open fun dataCatalogOutputs(vararg __idx_ac66f0: Any): Unit =
+      dataCatalogOutputs(__idx_ac66f0.toList())
+
   public open fun databaseOutputs(): Any? = unwrap(this).getDatabaseOutputs()
 
   public open fun databaseOutputs(`value`: IResolvable) {
@@ -41,6 +44,9 @@ public open class CfnJob internal constructor(
   public open fun databaseOutputs(__idx_ac66f0: List<Any>) {
     unwrap(this).setDatabaseOutputs(__idx_ac66f0)
   }
+
+  public open fun databaseOutputs(vararg __idx_ac66f0: Any): Unit =
+      databaseOutputs(__idx_ac66f0.toList())
 
   public open fun datasetName(): String? = unwrap(this).getDatasetName()
 
@@ -128,6 +134,8 @@ public open class CfnJob internal constructor(
     unwrap(this).setOutputs(__idx_ac66f0)
   }
 
+  public open fun outputs(vararg __idx_ac66f0: Any): Unit = outputs(__idx_ac66f0.toList())
+
   public open fun profileConfiguration(): Any? = unwrap(this).getProfileConfiguration()
 
   public open fun profileConfiguration(`value`: IResolvable) {
@@ -179,6 +187,8 @@ public open class CfnJob internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun timeout(): Number? = unwrap(this).getTimeout()
 
   public open fun timeout(`value`: Number) {
@@ -201,14 +211,21 @@ public open class CfnJob internal constructor(
     unwrap(this).setValidationConfigurations(__idx_ac66f0)
   }
 
+  public open fun validationConfigurations(vararg __idx_ac66f0: Any): Unit =
+      validationConfigurations(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun dataCatalogOutputs(dataCatalogOutputs: IResolvable)
 
     public fun dataCatalogOutputs(dataCatalogOutputs: List<Any>)
 
+    public fun dataCatalogOutputs(vararg dataCatalogOutputs: Any)
+
     public fun databaseOutputs(databaseOutputs: IResolvable)
 
     public fun databaseOutputs(databaseOutputs: List<Any>)
+
+    public fun databaseOutputs(vararg databaseOutputs: Any)
 
     public fun datasetName(datasetName: String)
 
@@ -244,6 +261,8 @@ public open class CfnJob internal constructor(
 
     public fun outputs(outputs: List<Any>)
 
+    public fun outputs(vararg outputs: Any)
+
     public fun profileConfiguration(profileConfiguration: IResolvable)
 
     public fun profileConfiguration(profileConfiguration: ProfileConfigurationProperty)
@@ -267,6 +286,8 @@ public open class CfnJob internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun timeout(timeout: Number)
 
     public fun type(type: String)
@@ -274,6 +295,8 @@ public open class CfnJob internal constructor(
     public fun validationConfigurations(validationConfigurations: IResolvable)
 
     public fun validationConfigurations(validationConfigurations: List<Any>)
+
+    public fun validationConfigurations(vararg validationConfigurations: Any)
   }
 
   private class BuilderImpl(
@@ -291,6 +314,9 @@ public open class CfnJob internal constructor(
       cdkBuilder.dataCatalogOutputs(dataCatalogOutputs)
     }
 
+    override fun dataCatalogOutputs(vararg dataCatalogOutputs: Any): Unit =
+        dataCatalogOutputs(dataCatalogOutputs.toList())
+
     override fun databaseOutputs(databaseOutputs: IResolvable) {
       cdkBuilder.databaseOutputs(databaseOutputs.let(IResolvable::unwrap))
     }
@@ -298,6 +324,9 @@ public open class CfnJob internal constructor(
     override fun databaseOutputs(databaseOutputs: List<Any>) {
       cdkBuilder.databaseOutputs(databaseOutputs)
     }
+
+    override fun databaseOutputs(vararg databaseOutputs: Any): Unit =
+        databaseOutputs(databaseOutputs.toList())
 
     override fun datasetName(datasetName: String) {
       cdkBuilder.datasetName(datasetName)
@@ -361,6 +390,8 @@ public open class CfnJob internal constructor(
       cdkBuilder.outputs(outputs)
     }
 
+    override fun outputs(vararg outputs: Any): Unit = outputs(outputs.toList())
+
     override fun profileConfiguration(profileConfiguration: IResolvable) {
       cdkBuilder.profileConfiguration(profileConfiguration.let(IResolvable::unwrap))
     }
@@ -400,6 +431,8 @@ public open class CfnJob internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun timeout(timeout: Number) {
       cdkBuilder.timeout(timeout)
     }
@@ -415,6 +448,9 @@ public open class CfnJob internal constructor(
     override fun validationConfigurations(validationConfigurations: List<Any>) {
       cdkBuilder.validationConfigurations(validationConfigurations)
     }
+
+    override fun validationConfigurations(vararg validationConfigurations: Any): Unit =
+        validationConfigurations(validationConfigurations.toList())
 
     public fun build(): software.amazon.awscdk.services.databrew.CfnJob = cdkBuilder.build()
   }
@@ -713,6 +749,8 @@ public open class CfnJob internal constructor(
 
     public interface Builder {
       public fun statistics(statistics: List<String>)
+
+      public fun statistics(vararg statistics: String)
     }
 
     private class BuilderImpl : Builder {
@@ -724,6 +762,8 @@ public open class CfnJob internal constructor(
         cdkBuilder.statistics(statistics)
       }
 
+      override fun statistics(vararg statistics: String): Unit = statistics(statistics.toList())
+
       public fun build(): software.amazon.awscdk.services.databrew.CfnJob.AllowedStatisticsProperty
           = cdkBuilder.build()
     }
@@ -732,7 +772,7 @@ public open class CfnJob internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.databrew.CfnJob.AllowedStatisticsProperty,
     ) : AllowedStatisticsProperty {
-      override fun statistics(): List<String> = unwrap(this).getStatistics() ?: emptyList()
+      override fun statistics(): List<String> = unwrap(this).getStatistics()
     }
 
     public companion object {
@@ -908,6 +948,8 @@ public open class CfnJob internal constructor(
       public fun overwrite(overwrite: IResolvable)
 
       public fun partitionColumns(partitionColumns: List<String>)
+
+      public fun partitionColumns(vararg partitionColumns: String)
     }
 
     private class BuilderImpl : Builder {
@@ -963,6 +1005,9 @@ public open class CfnJob internal constructor(
       override fun partitionColumns(partitionColumns: List<String>) {
         cdkBuilder.partitionColumns(partitionColumns)
       }
+
+      override fun partitionColumns(vararg partitionColumns: String): Unit =
+          partitionColumns(partitionColumns.toList())
 
       public fun build(): software.amazon.awscdk.services.databrew.CfnJob.OutputProperty =
           cdkBuilder.build()
@@ -1153,6 +1198,8 @@ public open class CfnJob internal constructor(
       public fun allowedStatistics(allowedStatistics: AllowedStatisticsProperty.Builder.() -> Unit)
 
       public fun entityTypes(entityTypes: List<String>)
+
+      public fun entityTypes(vararg entityTypes: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1179,6 +1226,8 @@ public open class CfnJob internal constructor(
         cdkBuilder.entityTypes(entityTypes)
       }
 
+      override fun entityTypes(vararg entityTypes: String): Unit = entityTypes(entityTypes.toList())
+
       public fun build():
           software.amazon.awscdk.services.databrew.CfnJob.EntityDetectorConfigurationProperty =
           cdkBuilder.build()
@@ -1190,7 +1239,7 @@ public open class CfnJob internal constructor(
     ) : EntityDetectorConfigurationProperty {
       override fun allowedStatistics(): Any? = unwrap(this).getAllowedStatistics()
 
-      override fun entityTypes(): List<String> = unwrap(this).getEntityTypes() ?: emptyList()
+      override fun entityTypes(): List<String> = unwrap(this).getEntityTypes()
     }
 
     public companion object {
@@ -1224,6 +1273,8 @@ public open class CfnJob internal constructor(
 
       public fun selectors(selectors: List<Any>)
 
+      public fun selectors(vararg selectors: Any)
+
       public fun statistics(statistics: IResolvable)
 
       public fun statistics(statistics: StatisticsConfigurationProperty)
@@ -1246,6 +1297,8 @@ public open class CfnJob internal constructor(
       override fun selectors(selectors: List<Any>) {
         cdkBuilder.selectors(selectors)
       }
+
+      override fun selectors(vararg selectors: Any): Unit = selectors(selectors.toList())
 
       override fun statistics(statistics: IResolvable) {
         cdkBuilder.statistics(statistics.let(IResolvable::unwrap))
@@ -1416,9 +1469,13 @@ public open class CfnJob internal constructor(
     public interface Builder {
       public fun includedStatistics(includedStatistics: List<String>)
 
+      public fun includedStatistics(vararg includedStatistics: String)
+
       public fun overrides(overrides: IResolvable)
 
       public fun overrides(overrides: List<Any>)
+
+      public fun overrides(vararg overrides: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1430,6 +1487,9 @@ public open class CfnJob internal constructor(
         cdkBuilder.includedStatistics(includedStatistics)
       }
 
+      override fun includedStatistics(vararg includedStatistics: String): Unit =
+          includedStatistics(includedStatistics.toList())
+
       override fun overrides(overrides: IResolvable) {
         cdkBuilder.overrides(overrides.let(IResolvable::unwrap))
       }
@@ -1437,6 +1497,8 @@ public open class CfnJob internal constructor(
       override fun overrides(overrides: List<Any>) {
         cdkBuilder.overrides(overrides)
       }
+
+      override fun overrides(vararg overrides: Any): Unit = overrides(overrides.toList())
 
       public fun build():
           software.amazon.awscdk.services.databrew.CfnJob.StatisticsConfigurationProperty =
@@ -1489,6 +1551,8 @@ public open class CfnJob internal constructor(
 
       public fun columnStatisticsConfigurations(columnStatisticsConfigurations: List<Any>)
 
+      public fun columnStatisticsConfigurations(vararg columnStatisticsConfigurations: Any)
+
       public fun datasetStatisticsConfiguration(datasetStatisticsConfiguration: IResolvable)
 
       public
@@ -1512,6 +1576,8 @@ public open class CfnJob internal constructor(
       public fun profileColumns(profileColumns: IResolvable)
 
       public fun profileColumns(profileColumns: List<Any>)
+
+      public fun profileColumns(vararg profileColumns: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1526,6 +1592,9 @@ public open class CfnJob internal constructor(
       override fun columnStatisticsConfigurations(columnStatisticsConfigurations: List<Any>) {
         cdkBuilder.columnStatisticsConfigurations(columnStatisticsConfigurations)
       }
+
+      override fun columnStatisticsConfigurations(vararg columnStatisticsConfigurations: Any): Unit
+          = columnStatisticsConfigurations(columnStatisticsConfigurations.toList())
 
       override fun datasetStatisticsConfiguration(datasetStatisticsConfiguration: IResolvable) {
         cdkBuilder.datasetStatisticsConfiguration(datasetStatisticsConfiguration.let(IResolvable::unwrap))
@@ -1566,6 +1635,9 @@ public open class CfnJob internal constructor(
       override fun profileColumns(profileColumns: List<Any>) {
         cdkBuilder.profileColumns(profileColumns)
       }
+
+      override fun profileColumns(vararg profileColumns: Any): Unit =
+          profileColumns(profileColumns.toList())
 
       public fun build():
           software.amazon.awscdk.services.databrew.CfnJob.ProfileConfigurationProperty =

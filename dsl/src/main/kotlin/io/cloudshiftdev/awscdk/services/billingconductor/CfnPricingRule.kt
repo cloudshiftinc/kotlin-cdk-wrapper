@@ -85,6 +85,8 @@ public open class CfnPricingRule internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun tiering(): Any? = unwrap(this).getTiering()
 
   public open fun tiering(`value`: IResolvable) {
@@ -128,6 +130,8 @@ public open class CfnPricingRule internal constructor(
     public fun service(service: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun tiering(tiering: IResolvable)
 
@@ -180,6 +184,8 @@ public open class CfnPricingRule internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun tiering(tiering: IResolvable) {
       cdkBuilder.tiering(tiering.let(IResolvable::unwrap))

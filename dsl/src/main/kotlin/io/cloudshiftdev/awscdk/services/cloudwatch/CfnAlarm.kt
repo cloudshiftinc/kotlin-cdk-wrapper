@@ -34,6 +34,8 @@ public open class CfnAlarm internal constructor(
     unwrap(this).setAlarmActions(`value`)
   }
 
+  public open fun alarmActions(vararg `value`: String): Unit = alarmActions(`value`.toList())
+
   public open fun alarmDescription(): String? = unwrap(this).getAlarmDescription()
 
   public open fun alarmDescription(`value`: String) {
@@ -70,6 +72,8 @@ public open class CfnAlarm internal constructor(
     unwrap(this).setDimensions(__idx_ac66f0)
   }
 
+  public open fun dimensions(vararg __idx_ac66f0: Any): Unit = dimensions(__idx_ac66f0.toList())
+
   public open fun evaluateLowSampleCountPercentile(): String? =
       unwrap(this).getEvaluateLowSampleCountPercentile()
 
@@ -100,6 +104,9 @@ public open class CfnAlarm internal constructor(
     unwrap(this).setInsufficientDataActions(`value`)
   }
 
+  public open fun insufficientDataActions(vararg `value`: String): Unit =
+      insufficientDataActions(`value`.toList())
+
   public open fun metricName(): String? = unwrap(this).getMetricName()
 
   public open fun metricName(`value`: String) {
@@ -116,6 +123,8 @@ public open class CfnAlarm internal constructor(
     unwrap(this).setMetrics(__idx_ac66f0)
   }
 
+  public open fun metrics(vararg __idx_ac66f0: Any): Unit = metrics(__idx_ac66f0.toList())
+
   public open fun namespace(): String? = unwrap(this).getNamespace()
 
   public open fun namespace(`value`: String) {
@@ -127,6 +136,8 @@ public open class CfnAlarm internal constructor(
   public open fun okActions(`value`: List<String>) {
     unwrap(this).setOkActions(`value`)
   }
+
+  public open fun okActions(vararg `value`: String): Unit = okActions(`value`.toList())
 
   public open fun period(): Number? = unwrap(this).getPeriod()
 
@@ -171,6 +182,8 @@ public open class CfnAlarm internal constructor(
 
     public fun alarmActions(alarmActions: List<String>)
 
+    public fun alarmActions(vararg alarmActions: String)
+
     public fun alarmDescription(alarmDescription: String)
 
     public fun alarmName(alarmName: String)
@@ -183,6 +196,8 @@ public open class CfnAlarm internal constructor(
 
     public fun dimensions(dimensions: List<Any>)
 
+    public fun dimensions(vararg dimensions: Any)
+
     public fun evaluateLowSampleCountPercentile(evaluateLowSampleCountPercentile: String)
 
     public fun evaluationPeriods(evaluationPeriods: Number)
@@ -191,15 +206,21 @@ public open class CfnAlarm internal constructor(
 
     public fun insufficientDataActions(insufficientDataActions: List<String>)
 
+    public fun insufficientDataActions(vararg insufficientDataActions: String)
+
     public fun metricName(metricName: String)
 
     public fun metrics(metrics: IResolvable)
 
     public fun metrics(metrics: List<Any>)
 
+    public fun metrics(vararg metrics: Any)
+
     public fun namespace(namespace: String)
 
     public fun okActions(okActions: List<String>)
+
+    public fun okActions(vararg okActions: String)
 
     public fun period(period: Number)
 
@@ -233,6 +254,9 @@ public open class CfnAlarm internal constructor(
       cdkBuilder.alarmActions(alarmActions)
     }
 
+    override fun alarmActions(vararg alarmActions: String): Unit =
+        alarmActions(alarmActions.toList())
+
     override fun alarmDescription(alarmDescription: String) {
       cdkBuilder.alarmDescription(alarmDescription)
     }
@@ -257,6 +281,8 @@ public open class CfnAlarm internal constructor(
       cdkBuilder.dimensions(dimensions)
     }
 
+    override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
+
     override fun evaluateLowSampleCountPercentile(evaluateLowSampleCountPercentile: String) {
       cdkBuilder.evaluateLowSampleCountPercentile(evaluateLowSampleCountPercentile)
     }
@@ -273,6 +299,9 @@ public open class CfnAlarm internal constructor(
       cdkBuilder.insufficientDataActions(insufficientDataActions)
     }
 
+    override fun insufficientDataActions(vararg insufficientDataActions: String): Unit =
+        insufficientDataActions(insufficientDataActions.toList())
+
     override fun metricName(metricName: String) {
       cdkBuilder.metricName(metricName)
     }
@@ -285,6 +314,8 @@ public open class CfnAlarm internal constructor(
       cdkBuilder.metrics(metrics)
     }
 
+    override fun metrics(vararg metrics: Any): Unit = metrics(metrics.toList())
+
     override fun namespace(namespace: String) {
       cdkBuilder.namespace(namespace)
     }
@@ -292,6 +323,8 @@ public open class CfnAlarm internal constructor(
     override fun okActions(okActions: List<String>) {
       cdkBuilder.okActions(okActions)
     }
+
+    override fun okActions(vararg okActions: String): Unit = okActions(okActions.toList())
 
     override fun period(period: Number) {
       cdkBuilder.period(period)
@@ -630,6 +663,8 @@ public open class CfnAlarm internal constructor(
 
       public fun dimensions(dimensions: List<Any>)
 
+      public fun dimensions(vararg dimensions: Any)
+
       public fun metricName(metricName: String)
 
       public fun namespace(namespace: String)
@@ -647,6 +682,8 @@ public open class CfnAlarm internal constructor(
       override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
+
+      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
 
       override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)

@@ -19,6 +19,8 @@ public interface ScheduledFargateTaskImageOptions : ScheduledTaskImageProps, Far
   public interface Builder {
     public fun command(command: List<String>)
 
+    public fun command(vararg command: String)
+
     public fun cpu(cpu: Number)
 
     public fun environment(environment: Map<String, String>)
@@ -52,6 +54,8 @@ public interface ScheduledFargateTaskImageOptions : ScheduledTaskImageProps, Far
     override fun command(command: List<String>) {
       cdkBuilder.command(command)
     }
+
+    override fun command(vararg command: String): Unit = command(command.toList())
 
     override fun cpu(cpu: Number) {
       cdkBuilder.cpu(cpu)

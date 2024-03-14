@@ -57,6 +57,8 @@ public open class Repository internal constructor(
 
     public fun lifecycleRules(lifecycleRules: List<LifecycleRule>)
 
+    public fun lifecycleRules(vararg lifecycleRules: LifecycleRule)
+
     public fun removalPolicy(removalPolicy: RemovalPolicy)
 
     public fun repositoryName(repositoryName: String)
@@ -101,6 +103,9 @@ public open class Repository internal constructor(
     override fun lifecycleRules(lifecycleRules: List<LifecycleRule>) {
       cdkBuilder.lifecycleRules(lifecycleRules.map(LifecycleRule::unwrap))
     }
+
+    override fun lifecycleRules(vararg lifecycleRules: LifecycleRule): Unit =
+        lifecycleRules(lifecycleRules.toList())
 
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))

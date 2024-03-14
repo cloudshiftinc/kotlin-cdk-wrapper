@@ -22,6 +22,8 @@ public open class CfnTransitGatewayVpcAttachment internal constructor(
     unwrap(this).setAddSubnetIds(`value`)
   }
 
+  public open fun addSubnetIds(vararg `value`: String): Unit = addSubnetIds(`value`.toList())
+
   public open fun attrId(): String = unwrap(this).getAttrId()
 
   public override fun inspect(inspector: TreeInspector) {
@@ -40,11 +42,15 @@ public open class CfnTransitGatewayVpcAttachment internal constructor(
     unwrap(this).setRemoveSubnetIds(`value`)
   }
 
-  public open fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+  public open fun removeSubnetIds(vararg `value`: String): Unit = removeSubnetIds(`value`.toList())
+
+  public open fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
 
   public open fun subnetIds(`value`: List<String>) {
     unwrap(this).setSubnetIds(`value`)
   }
+
+  public open fun subnetIds(vararg `value`: String): Unit = subnetIds(`value`.toList())
 
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
@@ -54,6 +60,8 @@ public open class CfnTransitGatewayVpcAttachment internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun transitGatewayId(): String = unwrap(this).getTransitGatewayId()
 
@@ -70,13 +78,21 @@ public open class CfnTransitGatewayVpcAttachment internal constructor(
   public interface Builder {
     public fun addSubnetIds(addSubnetIds: List<String>)
 
+    public fun addSubnetIds(vararg addSubnetIds: String)
+
     public fun options(options: Any)
 
     public fun removeSubnetIds(removeSubnetIds: List<String>)
 
+    public fun removeSubnetIds(vararg removeSubnetIds: String)
+
     public fun subnetIds(subnetIds: List<String>)
 
+    public fun subnetIds(vararg subnetIds: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun transitGatewayId(transitGatewayId: String)
 
@@ -95,6 +111,9 @@ public open class CfnTransitGatewayVpcAttachment internal constructor(
       cdkBuilder.addSubnetIds(addSubnetIds)
     }
 
+    override fun addSubnetIds(vararg addSubnetIds: String): Unit =
+        addSubnetIds(addSubnetIds.toList())
+
     override fun options(options: Any) {
       cdkBuilder.options(options)
     }
@@ -103,13 +122,20 @@ public open class CfnTransitGatewayVpcAttachment internal constructor(
       cdkBuilder.removeSubnetIds(removeSubnetIds)
     }
 
+    override fun removeSubnetIds(vararg removeSubnetIds: String): Unit =
+        removeSubnetIds(removeSubnetIds.toList())
+
     override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
 
+    override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun transitGatewayId(transitGatewayId: String) {
       cdkBuilder.transitGatewayId(transitGatewayId)

@@ -24,17 +24,21 @@ public open class CfnRegexPatternSet internal constructor(
     unwrap(this).setName(`value`)
   }
 
-  public open fun regexPatternStrings(): List<String> = unwrap(this).getRegexPatternStrings() ?:
-      emptyList()
+  public open fun regexPatternStrings(): List<String> = unwrap(this).getRegexPatternStrings()
 
   public open fun regexPatternStrings(`value`: List<String>) {
     unwrap(this).setRegexPatternStrings(`value`)
   }
 
+  public open fun regexPatternStrings(vararg `value`: String): Unit =
+      regexPatternStrings(`value`.toList())
+
   public interface Builder {
     public fun name(name: String)
 
     public fun regexPatternStrings(regexPatternStrings: List<String>)
+
+    public fun regexPatternStrings(vararg regexPatternStrings: String)
   }
 
   private class BuilderImpl(
@@ -51,6 +55,9 @@ public open class CfnRegexPatternSet internal constructor(
     override fun regexPatternStrings(regexPatternStrings: List<String>) {
       cdkBuilder.regexPatternStrings(regexPatternStrings)
     }
+
+    override fun regexPatternStrings(vararg regexPatternStrings: String): Unit =
+        regexPatternStrings(regexPatternStrings.toList())
 
     public fun build(): software.amazon.awscdk.services.waf.regional.CfnRegexPatternSet =
         cdkBuilder.build()

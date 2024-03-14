@@ -41,6 +41,8 @@ public open class CfnApplication internal constructor(
     unwrap(this).setCredentials(__idx_ac66f0)
   }
 
+  public open fun credentials(vararg __idx_ac66f0: Any): Unit = credentials(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -50,6 +52,8 @@ public open class CfnApplication internal constructor(
   public open fun instances(`value`: List<String>) {
     unwrap(this).setInstances(`value`)
   }
+
+  public open fun instances(vararg `value`: String): Unit = instances(`value`.toList())
 
   public open fun sapInstanceNumber(): String? = unwrap(this).getSapInstanceNumber()
 
@@ -72,6 +76,8 @@ public open class CfnApplication internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun applicationId(applicationId: String)
 
@@ -81,13 +87,19 @@ public open class CfnApplication internal constructor(
 
     public fun credentials(credentials: List<Any>)
 
+    public fun credentials(vararg credentials: Any)
+
     public fun instances(instances: List<String>)
+
+    public fun instances(vararg instances: String)
 
     public fun sapInstanceNumber(sapInstanceNumber: String)
 
     public fun sid(sid: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -113,9 +125,13 @@ public open class CfnApplication internal constructor(
       cdkBuilder.credentials(credentials)
     }
 
+    override fun credentials(vararg credentials: Any): Unit = credentials(credentials.toList())
+
     override fun instances(instances: List<String>) {
       cdkBuilder.instances(instances)
     }
+
+    override fun instances(vararg instances: String): Unit = instances(instances.toList())
 
     override fun sapInstanceNumber(sapInstanceNumber: String) {
       cdkBuilder.sapInstanceNumber(sapInstanceNumber)
@@ -128,6 +144,8 @@ public open class CfnApplication internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.systemsmanagersap.CfnApplication =
         cdkBuilder.build()

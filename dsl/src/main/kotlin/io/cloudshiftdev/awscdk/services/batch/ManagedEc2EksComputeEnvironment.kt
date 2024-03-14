@@ -104,11 +104,17 @@ public open class ManagedEc2EksComputeEnvironment internal constructor(
 
     public fun images(images: List<EksMachineImage>)
 
+    public fun images(vararg images: EksMachineImage)
+
     public fun instanceClasses(instanceClasses: List<InstanceClass>)
+
+    public fun instanceClasses(vararg instanceClasses: InstanceClass)
 
     public fun instanceRole(instanceRole: IRole)
 
     public fun instanceTypes(instanceTypes: List<InstanceType>)
+
+    public fun instanceTypes(vararg instanceTypes: InstanceType)
 
     public fun kubernetesNamespace(kubernetesNamespace: String)
 
@@ -123,6 +129,8 @@ public open class ManagedEc2EksComputeEnvironment internal constructor(
     public fun replaceComputeEnvironment(replaceComputeEnvironment: Boolean)
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
+
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
 
     public fun serviceRole(serviceRole: IRole)
 
@@ -176,9 +184,14 @@ public open class ManagedEc2EksComputeEnvironment internal constructor(
       cdkBuilder.images(images.map(EksMachineImage::unwrap))
     }
 
+    override fun images(vararg images: EksMachineImage): Unit = images(images.toList())
+
     override fun instanceClasses(instanceClasses: List<InstanceClass>) {
       cdkBuilder.instanceClasses(instanceClasses.map(InstanceClass::unwrap))
     }
+
+    override fun instanceClasses(vararg instanceClasses: InstanceClass): Unit =
+        instanceClasses(instanceClasses.toList())
 
     override fun instanceRole(instanceRole: IRole) {
       cdkBuilder.instanceRole(instanceRole.let(IRole::unwrap))
@@ -187,6 +200,9 @@ public open class ManagedEc2EksComputeEnvironment internal constructor(
     override fun instanceTypes(instanceTypes: List<InstanceType>) {
       cdkBuilder.instanceTypes(instanceTypes.map(InstanceType::unwrap))
     }
+
+    override fun instanceTypes(vararg instanceTypes: InstanceType): Unit =
+        instanceTypes(instanceTypes.toList())
 
     override fun kubernetesNamespace(kubernetesNamespace: String) {
       cdkBuilder.kubernetesNamespace(kubernetesNamespace)
@@ -215,6 +231,9 @@ public open class ManagedEc2EksComputeEnvironment internal constructor(
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun serviceRole(serviceRole: IRole) {
       cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))

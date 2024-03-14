@@ -50,6 +50,8 @@ public open class CfnReportPlan internal constructor(
     unwrap(this).setReportPlanTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun reportPlanTags(vararg `value`: CfnTag): Unit = reportPlanTags(`value`.toList())
+
   public open fun reportSetting(): Any = unwrap(this).getReportSetting()
 
   public open fun reportSetting(`value`: Any) {
@@ -64,6 +66,8 @@ public open class CfnReportPlan internal constructor(
     public fun reportPlanName(reportPlanName: String)
 
     public fun reportPlanTags(reportPlanTags: List<CfnTag>)
+
+    public fun reportPlanTags(vararg reportPlanTags: CfnTag)
 
     public fun reportSetting(reportSetting: Any)
   }
@@ -90,6 +94,9 @@ public open class CfnReportPlan internal constructor(
     override fun reportPlanTags(reportPlanTags: List<CfnTag>) {
       cdkBuilder.reportPlanTags(reportPlanTags.map(CfnTag::unwrap))
     }
+
+    override fun reportPlanTags(vararg reportPlanTags: CfnTag): Unit =
+        reportPlanTags(reportPlanTags.toList())
 
     override fun reportSetting(reportSetting: Any) {
       cdkBuilder.reportSetting(reportSetting)
@@ -129,6 +136,8 @@ public open class CfnReportPlan internal constructor(
     public interface Builder {
       public fun formats(formats: List<String>)
 
+      public fun formats(vararg formats: String)
+
       public fun s3BucketName(s3BucketName: String)
 
       public fun s3KeyPrefix(s3KeyPrefix: String)
@@ -143,6 +152,8 @@ public open class CfnReportPlan internal constructor(
       override fun formats(formats: List<String>) {
         cdkBuilder.formats(formats)
       }
+
+      override fun formats(vararg formats: String): Unit = formats(formats.toList())
 
       override fun s3BucketName(s3BucketName: String) {
         cdkBuilder.s3BucketName(s3BucketName)
@@ -203,11 +214,19 @@ public open class CfnReportPlan internal constructor(
     public interface Builder {
       public fun accounts(accounts: List<String>)
 
+      public fun accounts(vararg accounts: String)
+
       public fun frameworkArns(frameworkArns: List<String>)
+
+      public fun frameworkArns(vararg frameworkArns: String)
 
       public fun organizationUnits(organizationUnits: List<String>)
 
+      public fun organizationUnits(vararg organizationUnits: String)
+
       public fun regions(regions: List<String>)
+
+      public fun regions(vararg regions: String)
 
       public fun reportTemplate(reportTemplate: String)
     }
@@ -221,17 +240,27 @@ public open class CfnReportPlan internal constructor(
         cdkBuilder.accounts(accounts)
       }
 
+      override fun accounts(vararg accounts: String): Unit = accounts(accounts.toList())
+
       override fun frameworkArns(frameworkArns: List<String>) {
         cdkBuilder.frameworkArns(frameworkArns)
       }
+
+      override fun frameworkArns(vararg frameworkArns: String): Unit =
+          frameworkArns(frameworkArns.toList())
 
       override fun organizationUnits(organizationUnits: List<String>) {
         cdkBuilder.organizationUnits(organizationUnits)
       }
 
+      override fun organizationUnits(vararg organizationUnits: String): Unit =
+          organizationUnits(organizationUnits.toList())
+
       override fun regions(regions: List<String>) {
         cdkBuilder.regions(regions)
       }
+
+      override fun regions(vararg regions: String): Unit = regions(regions.toList())
 
       override fun reportTemplate(reportTemplate: String) {
         cdkBuilder.reportTemplate(reportTemplate)

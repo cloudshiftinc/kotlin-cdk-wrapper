@@ -13,6 +13,8 @@ public interface StageOptions : StageProps {
   public interface Builder {
     public fun actions(actions: List<IAction>)
 
+    public fun actions(vararg actions: IAction)
+
     public fun placement(placement: StagePlacement)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -33,6 +35,8 @@ public interface StageOptions : StageProps {
     override fun actions(actions: List<IAction>) {
       cdkBuilder.actions(actions.map(IAction::unwrap))
     }
+
+    override fun actions(vararg actions: IAction): Unit = actions(actions.toList())
 
     override fun placement(placement: StagePlacement) {
       cdkBuilder.placement(placement.let(StagePlacement::unwrap))

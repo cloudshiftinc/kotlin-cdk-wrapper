@@ -19,11 +19,15 @@ public interface AddRoutesOptions : BatchHttpRouteOptions {
   public interface Builder {
     public fun authorizationScopes(authorizationScopes: List<String>)
 
+    public fun authorizationScopes(vararg authorizationScopes: String)
+
     public fun authorizer(authorizer: IHttpRouteAuthorizer)
 
     public fun integration(integration: HttpRouteIntegration)
 
     public fun methods(methods: List<HttpMethod>)
+
+    public fun methods(vararg methods: HttpMethod)
 
     public fun path(path: String)
   }
@@ -36,6 +40,9 @@ public interface AddRoutesOptions : BatchHttpRouteOptions {
       cdkBuilder.authorizationScopes(authorizationScopes)
     }
 
+    override fun authorizationScopes(vararg authorizationScopes: String): Unit =
+        authorizationScopes(authorizationScopes.toList())
+
     override fun authorizer(authorizer: IHttpRouteAuthorizer) {
       cdkBuilder.authorizer(authorizer.let(IHttpRouteAuthorizer::unwrap))
     }
@@ -47,6 +54,8 @@ public interface AddRoutesOptions : BatchHttpRouteOptions {
     override fun methods(methods: List<HttpMethod>) {
       cdkBuilder.methods(methods.map(HttpMethod::unwrap))
     }
+
+    override fun methods(vararg methods: HttpMethod): Unit = methods(methods.toList())
 
     override fun path(path: String) {
       cdkBuilder.path(path)

@@ -41,11 +41,15 @@ public interface MethodOptions {
 
     public fun authorizationScopes(authorizationScopes: List<String>)
 
+    public fun authorizationScopes(vararg authorizationScopes: String)
+
     public fun authorizationType(authorizationType: AuthorizationType)
 
     public fun authorizer(authorizer: IAuthorizer)
 
     public fun methodResponses(methodResponses: List<MethodResponse>)
+
+    public fun methodResponses(vararg methodResponses: MethodResponse)
 
     public fun operationName(operationName: String)
 
@@ -75,6 +79,9 @@ public interface MethodOptions {
       cdkBuilder.authorizationScopes(authorizationScopes)
     }
 
+    override fun authorizationScopes(vararg authorizationScopes: String): Unit =
+        authorizationScopes(authorizationScopes.toList())
+
     override fun authorizationType(authorizationType: AuthorizationType) {
       cdkBuilder.authorizationType(authorizationType.let(AuthorizationType::unwrap))
     }
@@ -86,6 +93,9 @@ public interface MethodOptions {
     override fun methodResponses(methodResponses: List<MethodResponse>) {
       cdkBuilder.methodResponses(methodResponses.map(MethodResponse::unwrap))
     }
+
+    override fun methodResponses(vararg methodResponses: MethodResponse): Unit =
+        methodResponses(methodResponses.toList())
 
     override fun operationName(operationName: String) {
       cdkBuilder.operationName(operationName)

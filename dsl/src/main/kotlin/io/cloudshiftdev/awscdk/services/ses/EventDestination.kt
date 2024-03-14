@@ -19,6 +19,9 @@ public abstract class EventDestination internal constructor(
     public open fun cloudWatchDimensions(dimensions: List<CloudWatchDimension>): EventDestination =
         software.amazon.awscdk.services.ses.EventDestination.cloudWatchDimensions(dimensions.map(CloudWatchDimension::unwrap)).let(EventDestination::wrap)
 
+    public open fun cloudWatchDimensions(vararg dimensions: CloudWatchDimension): EventDestination =
+        cloudWatchDimensions(dimensions.toList())
+
     public open fun snsTopic(topic: ITopic): EventDestination =
         software.amazon.awscdk.services.ses.EventDestination.snsTopic(topic.let(ITopic::unwrap)).let(EventDestination::wrap)
 

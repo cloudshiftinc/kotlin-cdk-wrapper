@@ -33,6 +33,8 @@ public open class CfnEventSubscription internal constructor(
     unwrap(this).setEventCategories(`value`)
   }
 
+  public open fun eventCategories(vararg `value`: String): Unit = eventCategories(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -48,6 +50,8 @@ public open class CfnEventSubscription internal constructor(
   public open fun sourceIds(`value`: List<String>) {
     unwrap(this).setSourceIds(`value`)
   }
+
+  public open fun sourceIds(vararg `value`: String): Unit = sourceIds(`value`.toList())
 
   public open fun sourceType(): String? = unwrap(this).getSourceType()
 
@@ -68,9 +72,13 @@ public open class CfnEventSubscription internal constructor(
 
     public fun eventCategories(eventCategories: List<String>)
 
+    public fun eventCategories(vararg eventCategories: String)
+
     public fun snsTopicArn(snsTopicArn: String)
 
     public fun sourceIds(sourceIds: List<String>)
+
+    public fun sourceIds(vararg sourceIds: String)
 
     public fun sourceType(sourceType: String)
 
@@ -96,6 +104,9 @@ public open class CfnEventSubscription internal constructor(
       cdkBuilder.eventCategories(eventCategories)
     }
 
+    override fun eventCategories(vararg eventCategories: String): Unit =
+        eventCategories(eventCategories.toList())
+
     override fun snsTopicArn(snsTopicArn: String) {
       cdkBuilder.snsTopicArn(snsTopicArn)
     }
@@ -103,6 +114,8 @@ public open class CfnEventSubscription internal constructor(
     override fun sourceIds(sourceIds: List<String>) {
       cdkBuilder.sourceIds(sourceIds)
     }
+
+    override fun sourceIds(vararg sourceIds: String): Unit = sourceIds(sourceIds.toList())
 
     override fun sourceType(sourceType: String) {
       cdkBuilder.sourceType(sourceType)

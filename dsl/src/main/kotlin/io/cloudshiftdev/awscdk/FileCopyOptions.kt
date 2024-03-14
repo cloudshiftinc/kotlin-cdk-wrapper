@@ -15,6 +15,8 @@ public interface FileCopyOptions {
   public interface Builder {
     public fun exclude(exclude: List<String>)
 
+    public fun exclude(vararg exclude: String)
+
     public fun followSymlinks(followSymlinks: SymlinkFollowMode)
 
     public fun ignoreMode(ignoreMode: IgnoreMode)
@@ -27,6 +29,8 @@ public interface FileCopyOptions {
     override fun exclude(exclude: List<String>) {
       cdkBuilder.exclude(exclude)
     }
+
+    override fun exclude(vararg exclude: String): Unit = exclude(exclude.toList())
 
     override fun followSymlinks(followSymlinks: SymlinkFollowMode) {
       cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode::unwrap))

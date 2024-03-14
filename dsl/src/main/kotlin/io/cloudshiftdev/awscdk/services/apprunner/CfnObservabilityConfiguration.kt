@@ -48,6 +48,8 @@ public open class CfnObservabilityConfiguration internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun traceConfiguration(): Any? = unwrap(this).getTraceConfiguration()
 
   public open fun traceConfiguration(`value`: IResolvable) {
@@ -67,6 +69,8 @@ public open class CfnObservabilityConfiguration internal constructor(
     public fun observabilityConfigurationName(observabilityConfigurationName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun traceConfiguration(traceConfiguration: IResolvable)
 
@@ -93,6 +97,8 @@ public open class CfnObservabilityConfiguration internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun traceConfiguration(traceConfiguration: IResolvable) {
       cdkBuilder.traceConfiguration(traceConfiguration.let(IResolvable::unwrap))

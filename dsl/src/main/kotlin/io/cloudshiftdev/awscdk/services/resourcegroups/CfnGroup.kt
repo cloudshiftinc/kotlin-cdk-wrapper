@@ -31,6 +31,9 @@ public open class CfnGroup internal constructor(
     unwrap(this).setConfiguration(__idx_ac66f0)
   }
 
+  public open fun configuration(vararg __idx_ac66f0: Any): Unit =
+      configuration(__idx_ac66f0.toList())
+
   public open fun description(): String? = unwrap(this).getDescription()
 
   public open fun description(`value`: String) {
@@ -68,6 +71,8 @@ public open class CfnGroup internal constructor(
     unwrap(this).setResources(`value`)
   }
 
+  public open fun resources(vararg `value`: String): Unit = resources(`value`.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -77,10 +82,14 @@ public open class CfnGroup internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun configuration(configuration: IResolvable)
 
     public fun configuration(configuration: List<Any>)
+
+    public fun configuration(vararg configuration: Any)
 
     public fun description(description: String)
 
@@ -96,7 +105,11 @@ public open class CfnGroup internal constructor(
 
     public fun resources(resources: List<String>)
 
+    public fun resources(vararg resources: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -113,6 +126,9 @@ public open class CfnGroup internal constructor(
     override fun configuration(configuration: List<Any>) {
       cdkBuilder.configuration(configuration)
     }
+
+    override fun configuration(vararg configuration: Any): Unit =
+        configuration(configuration.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -139,9 +155,13 @@ public open class CfnGroup internal constructor(
       cdkBuilder.resources(resources)
     }
 
+    override fun resources(vararg resources: String): Unit = resources(resources.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.resourcegroups.CfnGroup = cdkBuilder.build()
   }
@@ -251,11 +271,15 @@ public open class CfnGroup internal constructor(
     public interface Builder {
       public fun resourceTypeFilters(resourceTypeFilters: List<String>)
 
+      public fun resourceTypeFilters(vararg resourceTypeFilters: String)
+
       public fun stackIdentifier(stackIdentifier: String)
 
       public fun tagFilters(tagFilters: IResolvable)
 
       public fun tagFilters(tagFilters: List<Any>)
+
+      public fun tagFilters(vararg tagFilters: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -266,6 +290,9 @@ public open class CfnGroup internal constructor(
       override fun resourceTypeFilters(resourceTypeFilters: List<String>) {
         cdkBuilder.resourceTypeFilters(resourceTypeFilters)
       }
+
+      override fun resourceTypeFilters(vararg resourceTypeFilters: String): Unit =
+          resourceTypeFilters(resourceTypeFilters.toList())
 
       override fun stackIdentifier(stackIdentifier: String) {
         cdkBuilder.stackIdentifier(stackIdentifier)
@@ -278,6 +305,8 @@ public open class CfnGroup internal constructor(
       override fun tagFilters(tagFilters: List<Any>) {
         cdkBuilder.tagFilters(tagFilters)
       }
+
+      override fun tagFilters(vararg tagFilters: Any): Unit = tagFilters(tagFilters.toList())
 
       public fun build(): software.amazon.awscdk.services.resourcegroups.CfnGroup.QueryProperty =
           cdkBuilder.build()
@@ -323,6 +352,8 @@ public open class CfnGroup internal constructor(
       public fun key(key: String)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -337,6 +368,8 @@ public open class CfnGroup internal constructor(
       override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build(): software.amazon.awscdk.services.resourcegroups.CfnGroup.TagFilterProperty
           = cdkBuilder.build()
@@ -381,6 +414,8 @@ public open class CfnGroup internal constructor(
 
       public fun parameters(parameters: List<Any>)
 
+      public fun parameters(vararg parameters: Any)
+
       public fun type(type: String)
     }
 
@@ -397,6 +432,8 @@ public open class CfnGroup internal constructor(
       override fun parameters(parameters: List<Any>) {
         cdkBuilder.parameters(parameters)
       }
+
+      override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
 
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -445,6 +482,8 @@ public open class CfnGroup internal constructor(
       public fun name(name: String)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -460,6 +499,8 @@ public open class CfnGroup internal constructor(
       override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.resourcegroups.CfnGroup.ConfigurationParameterProperty =

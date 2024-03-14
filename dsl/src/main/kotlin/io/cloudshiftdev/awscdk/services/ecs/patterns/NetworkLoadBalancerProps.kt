@@ -24,6 +24,8 @@ public interface NetworkLoadBalancerProps {
 
     public fun listeners(listeners: List<NetworkListenerProps>)
 
+    public fun listeners(vararg listeners: NetworkListenerProps)
+
     public fun name(name: String)
 
     public fun publicLoadBalancer(publicLoadBalancer: Boolean)
@@ -45,6 +47,9 @@ public interface NetworkLoadBalancerProps {
     override fun listeners(listeners: List<NetworkListenerProps>) {
       cdkBuilder.listeners(listeners.map(NetworkListenerProps::unwrap))
     }
+
+    override fun listeners(vararg listeners: NetworkListenerProps): Unit =
+        listeners(listeners.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)

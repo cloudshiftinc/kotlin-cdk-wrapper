@@ -305,6 +305,8 @@ public open class CfnIntegration internal constructor(
       public fun responseParameters(responseParameters: IResolvable)
 
       public fun responseParameters(responseParameters: List<Any>)
+
+      public fun responseParameters(vararg responseParameters: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -320,6 +322,9 @@ public open class CfnIntegration internal constructor(
       override fun responseParameters(responseParameters: List<Any>) {
         cdkBuilder.responseParameters(responseParameters)
       }
+
+      override fun responseParameters(vararg responseParameters: Any): Unit =
+          responseParameters(responseParameters.toList())
 
       public fun build():
           software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterListProperty

@@ -210,6 +210,8 @@ public open class CfnDomain internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun vpcOptions(): Any? = unwrap(this).getVpcOptions()
 
   public open fun vpcOptions(`value`: IResolvable) {
@@ -315,6 +317,8 @@ public open class CfnDomain internal constructor(
     public fun snapshotOptions(snapshotOptions: SnapshotOptionsProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun vpcOptions(vpcOptions: IResolvable)
 
@@ -482,6 +486,8 @@ public open class CfnDomain internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun vpcOptions(vpcOptions: IResolvable) {
       cdkBuilder.vpcOptions(vpcOptions.let(IResolvable::unwrap))
@@ -1357,7 +1363,11 @@ public open class CfnDomain internal constructor(
     public interface Builder {
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1369,9 +1379,14 @@ public open class CfnDomain internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       public fun build(): software.amazon.awscdk.services.elasticsearch.CfnDomain.VPCOptionsProperty
           = cdkBuilder.build()

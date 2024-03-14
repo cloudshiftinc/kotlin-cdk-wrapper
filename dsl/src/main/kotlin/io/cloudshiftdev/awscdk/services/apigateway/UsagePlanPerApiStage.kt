@@ -17,6 +17,8 @@ public interface UsagePlanPerApiStage {
     public fun stage(stage: Stage)
 
     public fun throttle(throttle: List<ThrottlingPerMethod>)
+
+    public fun throttle(vararg throttle: ThrottlingPerMethod)
   }
 
   private class BuilderImpl : Builder {
@@ -34,6 +36,8 @@ public interface UsagePlanPerApiStage {
     override fun throttle(throttle: List<ThrottlingPerMethod>) {
       cdkBuilder.throttle(throttle.map(ThrottlingPerMethod::unwrap))
     }
+
+    override fun throttle(vararg throttle: ThrottlingPerMethod): Unit = throttle(throttle.toList())
 
     public fun build(): software.amazon.awscdk.services.apigateway.UsagePlanPerApiStage =
         cdkBuilder.build()

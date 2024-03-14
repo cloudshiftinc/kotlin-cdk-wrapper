@@ -41,6 +41,9 @@ public open class CfnDistributionConfiguration internal constructor(
     unwrap(this).setDistributions(__idx_ac66f0)
   }
 
+  public open fun distributions(vararg __idx_ac66f0: Any): Unit =
+      distributions(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -65,6 +68,8 @@ public open class CfnDistributionConfiguration internal constructor(
     public fun distributions(distributions: IResolvable)
 
     public fun distributions(distributions: List<Any>)
+
+    public fun distributions(vararg distributions: Any)
 
     public fun name(name: String)
 
@@ -91,6 +96,9 @@ public open class CfnDistributionConfiguration internal constructor(
     override fun distributions(distributions: List<Any>) {
       cdkBuilder.distributions(distributions)
     }
+
+    override fun distributions(vararg distributions: Any): Unit =
+        distributions(distributions.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -283,11 +291,17 @@ public open class CfnDistributionConfiguration internal constructor(
 
       public fun fastLaunchConfigurations(fastLaunchConfigurations: List<Any>)
 
+      public fun fastLaunchConfigurations(vararg fastLaunchConfigurations: Any)
+
       public fun launchTemplateConfigurations(launchTemplateConfigurations: IResolvable)
 
       public fun launchTemplateConfigurations(launchTemplateConfigurations: List<Any>)
 
+      public fun launchTemplateConfigurations(vararg launchTemplateConfigurations: Any)
+
       public fun licenseConfigurationArns(licenseConfigurationArns: List<String>)
+
+      public fun licenseConfigurationArns(vararg licenseConfigurationArns: String)
 
       public fun region(region: String)
     }
@@ -314,6 +328,9 @@ public open class CfnDistributionConfiguration internal constructor(
         cdkBuilder.fastLaunchConfigurations(fastLaunchConfigurations)
       }
 
+      override fun fastLaunchConfigurations(vararg fastLaunchConfigurations: Any): Unit =
+          fastLaunchConfigurations(fastLaunchConfigurations.toList())
+
       override fun launchTemplateConfigurations(launchTemplateConfigurations: IResolvable) {
         cdkBuilder.launchTemplateConfigurations(launchTemplateConfigurations.let(IResolvable::unwrap))
       }
@@ -322,9 +339,15 @@ public open class CfnDistributionConfiguration internal constructor(
         cdkBuilder.launchTemplateConfigurations(launchTemplateConfigurations)
       }
 
+      override fun launchTemplateConfigurations(vararg launchTemplateConfigurations: Any): Unit =
+          launchTemplateConfigurations(launchTemplateConfigurations.toList())
+
       override fun licenseConfigurationArns(licenseConfigurationArns: List<String>) {
         cdkBuilder.licenseConfigurationArns(licenseConfigurationArns)
       }
+
+      override fun licenseConfigurationArns(vararg licenseConfigurationArns: String): Unit =
+          licenseConfigurationArns(licenseConfigurationArns.toList())
 
       override fun region(region: String) {
         cdkBuilder.region(region)
@@ -389,11 +412,19 @@ public open class CfnDistributionConfiguration internal constructor(
     public interface Builder {
       public fun organizationArns(organizationArns: List<String>)
 
+      public fun organizationArns(vararg organizationArns: String)
+
       public fun organizationalUnitArns(organizationalUnitArns: List<String>)
+
+      public fun organizationalUnitArns(vararg organizationalUnitArns: String)
 
       public fun userGroups(userGroups: List<String>)
 
+      public fun userGroups(vararg userGroups: String)
+
       public fun userIds(userIds: List<String>)
+
+      public fun userIds(vararg userIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -406,17 +437,27 @@ public open class CfnDistributionConfiguration internal constructor(
         cdkBuilder.organizationArns(organizationArns)
       }
 
+      override fun organizationArns(vararg organizationArns: String): Unit =
+          organizationArns(organizationArns.toList())
+
       override fun organizationalUnitArns(organizationalUnitArns: List<String>) {
         cdkBuilder.organizationalUnitArns(organizationalUnitArns)
       }
+
+      override fun organizationalUnitArns(vararg organizationalUnitArns: String): Unit =
+          organizationalUnitArns(organizationalUnitArns.toList())
 
       override fun userGroups(userGroups: List<String>) {
         cdkBuilder.userGroups(userGroups)
       }
 
+      override fun userGroups(vararg userGroups: String): Unit = userGroups(userGroups.toList())
+
       override fun userIds(userIds: List<String>) {
         cdkBuilder.userIds(userIds)
       }
+
+      override fun userIds(vararg userIds: String): Unit = userIds(userIds.toList())
 
       public fun build():
           software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.LaunchPermissionConfigurationProperty
@@ -469,6 +510,8 @@ public open class CfnDistributionConfiguration internal constructor(
     public interface Builder {
       public fun containerTags(containerTags: List<String>)
 
+      public fun containerTags(vararg containerTags: String)
+
       public fun description(description: String)
 
       public fun targetRepository(targetRepository: IResolvable)
@@ -490,6 +533,9 @@ public open class CfnDistributionConfiguration internal constructor(
       override fun containerTags(containerTags: List<String>) {
         cdkBuilder.containerTags(containerTags)
       }
+
+      override fun containerTags(vararg containerTags: String): Unit =
+          containerTags(containerTags.toList())
 
       override fun description(description: String) {
         cdkBuilder.description(description)
@@ -632,6 +678,8 @@ public open class CfnDistributionConfiguration internal constructor(
       public fun name(name: String)
 
       public fun targetAccountIds(targetAccountIds: List<String>)
+
+      public fun targetAccountIds(vararg targetAccountIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -679,6 +727,9 @@ public open class CfnDistributionConfiguration internal constructor(
       override fun targetAccountIds(targetAccountIds: List<String>) {
         cdkBuilder.targetAccountIds(targetAccountIds)
       }
+
+      override fun targetAccountIds(vararg targetAccountIds: String): Unit =
+          targetAccountIds(targetAccountIds.toList())
 
       public fun build():
           software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration.AmiDistributionConfigurationProperty

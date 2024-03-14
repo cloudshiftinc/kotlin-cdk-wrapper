@@ -18,6 +18,8 @@ public interface Device {
     public fun hostPath(hostPath: String)
 
     public fun permissions(permissions: List<DevicePermission>)
+
+    public fun permissions(vararg permissions: DevicePermission)
   }
 
   private class BuilderImpl : Builder {
@@ -35,6 +37,9 @@ public interface Device {
     override fun permissions(permissions: List<DevicePermission>) {
       cdkBuilder.permissions(permissions.map(DevicePermission::unwrap))
     }
+
+    override fun permissions(vararg permissions: DevicePermission): Unit =
+        permissions(permissions.toList())
 
     public fun build(): software.amazon.awscdk.services.batch.Device = cdkBuilder.build()
   }

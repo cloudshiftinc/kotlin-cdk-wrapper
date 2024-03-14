@@ -25,6 +25,10 @@ dependencies {
         artifact { classifier = "sources" }
         isTransitive = false
     }
+    awscdkSource(project.libs.awscdk.constructs) {
+        artifact { classifier = "sources" }
+        isTransitive = false
+    }
 }
 
 tasks {

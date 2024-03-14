@@ -23,21 +23,25 @@ public open class CfnVpcConnection internal constructor(
     unwrap(this).setAuthentication(`value`)
   }
 
-  public open fun clientSubnets(): List<String> = unwrap(this).getClientSubnets() ?: emptyList()
+  public open fun clientSubnets(): List<String> = unwrap(this).getClientSubnets()
 
   public open fun clientSubnets(`value`: List<String>) {
     unwrap(this).setClientSubnets(`value`)
   }
 
+  public open fun clientSubnets(vararg `value`: String): Unit = clientSubnets(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
-  public open fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
+  public open fun securityGroups(): List<String> = unwrap(this).getSecurityGroups()
 
   public open fun securityGroups(`value`: List<String>) {
     unwrap(this).setSecurityGroups(`value`)
   }
+
+  public open fun securityGroups(vararg `value`: String): Unit = securityGroups(`value`.toList())
 
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
@@ -64,7 +68,11 @@ public open class CfnVpcConnection internal constructor(
 
     public fun clientSubnets(clientSubnets: List<String>)
 
+    public fun clientSubnets(vararg clientSubnets: String)
+
     public fun securityGroups(securityGroups: List<String>)
+
+    public fun securityGroups(vararg securityGroups: String)
 
     public fun tags(tags: Map<String, String>)
 
@@ -88,9 +96,15 @@ public open class CfnVpcConnection internal constructor(
       cdkBuilder.clientSubnets(clientSubnets)
     }
 
+    override fun clientSubnets(vararg clientSubnets: String): Unit =
+        clientSubnets(clientSubnets.toList())
+
     override fun securityGroups(securityGroups: List<String>) {
       cdkBuilder.securityGroups(securityGroups)
     }
+
+    override fun securityGroups(vararg securityGroups: String): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)

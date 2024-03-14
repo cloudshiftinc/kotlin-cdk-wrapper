@@ -50,6 +50,8 @@ public open class CfnDataSet internal constructor(
     unwrap(this).setColumnGroups(__idx_ac66f0)
   }
 
+  public open fun columnGroups(vararg __idx_ac66f0: Any): Unit = columnGroups(__idx_ac66f0.toList())
+
   public open fun columnLevelPermissionRules(): Any? = unwrap(this).getColumnLevelPermissionRules()
 
   public open fun columnLevelPermissionRules(`value`: IResolvable) {
@@ -59,6 +61,9 @@ public open class CfnDataSet internal constructor(
   public open fun columnLevelPermissionRules(__idx_ac66f0: List<Any>) {
     unwrap(this).setColumnLevelPermissionRules(__idx_ac66f0)
   }
+
+  public open fun columnLevelPermissionRules(vararg __idx_ac66f0: Any): Unit =
+      columnLevelPermissionRules(__idx_ac66f0.toList())
 
   public open fun dataSetId(): String? = unwrap(this).getDataSetId()
 
@@ -107,6 +112,9 @@ public open class CfnDataSet internal constructor(
   public open fun datasetParameters(__idx_ac66f0: List<Any>) {
     unwrap(this).setDatasetParameters(__idx_ac66f0)
   }
+
+  public open fun datasetParameters(vararg __idx_ac66f0: Any): Unit =
+      datasetParameters(__idx_ac66f0.toList())
 
   public open fun fieldFolders(): Any? = unwrap(this).getFieldFolders()
 
@@ -169,6 +177,8 @@ public open class CfnDataSet internal constructor(
     unwrap(this).setPermissions(__idx_ac66f0)
   }
 
+  public open fun permissions(vararg __idx_ac66f0: Any): Unit = permissions(__idx_ac66f0.toList())
+
   public open fun physicalTableMap(): Any? = unwrap(this).getPhysicalTableMap()
 
   public open fun physicalTableMap(`value`: IResolvable) {
@@ -222,6 +232,8 @@ public open class CfnDataSet internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun awsAccountId(awsAccountId: String)
 
@@ -229,9 +241,13 @@ public open class CfnDataSet internal constructor(
 
     public fun columnGroups(columnGroups: List<Any>)
 
+    public fun columnGroups(vararg columnGroups: Any)
+
     public fun columnLevelPermissionRules(columnLevelPermissionRules: IResolvable)
 
     public fun columnLevelPermissionRules(columnLevelPermissionRules: List<Any>)
+
+    public fun columnLevelPermissionRules(vararg columnLevelPermissionRules: Any)
 
     public fun dataSetId(dataSetId: String)
 
@@ -258,6 +274,8 @@ public open class CfnDataSet internal constructor(
 
     public fun datasetParameters(datasetParameters: List<Any>)
 
+    public fun datasetParameters(vararg datasetParameters: Any)
+
     public fun fieldFolders(fieldFolders: IResolvable)
 
     public fun fieldFolders(fieldFolders: Map<String, Any>)
@@ -282,6 +300,8 @@ public open class CfnDataSet internal constructor(
     public fun permissions(permissions: IResolvable)
 
     public fun permissions(permissions: List<Any>)
+
+    public fun permissions(vararg permissions: Any)
 
     public fun physicalTableMap(physicalTableMap: IResolvable)
 
@@ -308,6 +328,8 @@ public open class CfnDataSet internal constructor(
         fun rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration: RowLevelPermissionTagConfigurationProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -329,6 +351,8 @@ public open class CfnDataSet internal constructor(
       cdkBuilder.columnGroups(columnGroups)
     }
 
+    override fun columnGroups(vararg columnGroups: Any): Unit = columnGroups(columnGroups.toList())
+
     override fun columnLevelPermissionRules(columnLevelPermissionRules: IResolvable) {
       cdkBuilder.columnLevelPermissionRules(columnLevelPermissionRules.let(IResolvable::unwrap))
     }
@@ -336,6 +360,9 @@ public open class CfnDataSet internal constructor(
     override fun columnLevelPermissionRules(columnLevelPermissionRules: List<Any>) {
       cdkBuilder.columnLevelPermissionRules(columnLevelPermissionRules)
     }
+
+    override fun columnLevelPermissionRules(vararg columnLevelPermissionRules: Any): Unit =
+        columnLevelPermissionRules(columnLevelPermissionRules.toList())
 
     override fun dataSetId(dataSetId: String) {
       cdkBuilder.dataSetId(dataSetId)
@@ -379,6 +406,9 @@ public open class CfnDataSet internal constructor(
     override fun datasetParameters(datasetParameters: List<Any>) {
       cdkBuilder.datasetParameters(datasetParameters)
     }
+
+    override fun datasetParameters(vararg datasetParameters: Any): Unit =
+        datasetParameters(datasetParameters.toList())
 
     override fun fieldFolders(fieldFolders: IResolvable) {
       cdkBuilder.fieldFolders(fieldFolders.let(IResolvable::unwrap))
@@ -426,6 +456,8 @@ public open class CfnDataSet internal constructor(
       cdkBuilder.permissions(permissions)
     }
 
+    override fun permissions(vararg permissions: Any): Unit = permissions(permissions.toList())
+
     override fun physicalTableMap(physicalTableMap: IResolvable) {
       cdkBuilder.physicalTableMap(physicalTableMap.let(IResolvable::unwrap))
     }
@@ -470,6 +502,8 @@ public open class CfnDataSet internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.quicksight.CfnDataSet = cdkBuilder.build()
   }
@@ -756,6 +790,8 @@ public open class CfnDataSet internal constructor(
 
       public fun inputColumns(inputColumns: List<Any>)
 
+      public fun inputColumns(vararg inputColumns: Any)
+
       public fun uploadSettings(uploadSettings: IResolvable)
 
       public fun uploadSettings(uploadSettings: UploadSettingsProperty)
@@ -781,6 +817,9 @@ public open class CfnDataSet internal constructor(
       override fun inputColumns(inputColumns: List<Any>) {
         cdkBuilder.inputColumns(inputColumns)
       }
+
+      override fun inputColumns(vararg inputColumns: Any): Unit =
+          inputColumns(inputColumns.toList())
 
       override fun uploadSettings(uploadSettings: IResolvable) {
         cdkBuilder.uploadSettings(uploadSettings.let(IResolvable::unwrap))
@@ -838,6 +877,8 @@ public open class CfnDataSet internal constructor(
     public interface Builder {
       public fun actions(actions: List<String>)
 
+      public fun actions(vararg actions: String)
+
       public fun principal(principal: String)
     }
 
@@ -849,6 +890,8 @@ public open class CfnDataSet internal constructor(
       override fun actions(actions: List<String>) {
         cdkBuilder.actions(actions)
       }
+
+      override fun actions(vararg actions: String): Unit = actions(actions.toList())
 
       override fun principal(principal: String) {
         cdkBuilder.principal(principal)
@@ -863,7 +906,7 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.ResourcePermissionProperty,
     ) : ResourcePermissionProperty {
-      override fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
+      override fun actions(): List<String> = unwrap(this).getActions()
 
       override fun principal(): String = unwrap(this).getPrincipal()
     }
@@ -966,6 +1009,8 @@ public open class CfnDataSet internal constructor(
 
     public interface Builder {
       public fun staticValues(staticValues: List<String>)
+
+      public fun staticValues(vararg staticValues: String)
     }
 
     private class BuilderImpl : Builder {
@@ -977,6 +1022,9 @@ public open class CfnDataSet internal constructor(
       override fun staticValues(staticValues: List<String>) {
         cdkBuilder.staticValues(staticValues)
       }
+
+      override fun staticValues(vararg staticValues: String): Unit =
+          staticValues(staticValues.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnDataSet.DateTimeDatasetParameterDefaultValuesProperty
@@ -1529,6 +1577,8 @@ public open class CfnDataSet internal constructor(
     public interface Builder {
       public fun columns(columns: List<String>)
 
+      public fun columns(vararg columns: String)
+
       public fun countryCode(countryCode: String)
 
       public fun name(name: String)
@@ -1543,6 +1593,8 @@ public open class CfnDataSet internal constructor(
       override fun columns(columns: List<String>) {
         cdkBuilder.columns(columns)
       }
+
+      override fun columns(vararg columns: String): Unit = columns(columns.toList())
 
       override fun countryCode(countryCode: String) {
         cdkBuilder.countryCode(countryCode)
@@ -1561,7 +1613,7 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.GeoSpatialColumnGroupProperty,
     ) : GeoSpatialColumnGroupProperty {
-      override fun columns(): List<String> = unwrap(this).getColumns() ?: emptyList()
+      override fun columns(): List<String> = unwrap(this).getColumns()
 
       override fun countryCode(): String? = unwrap(this).getCountryCode()
 
@@ -1783,6 +1835,8 @@ public open class CfnDataSet internal constructor(
 
       public fun inputColumns(inputColumns: List<Any>)
 
+      public fun inputColumns(vararg inputColumns: Any)
+
       public fun name(name: String)
 
       public fun schema(schema: String)
@@ -1808,6 +1862,9 @@ public open class CfnDataSet internal constructor(
       override fun inputColumns(inputColumns: List<Any>) {
         cdkBuilder.inputColumns(inputColumns)
       }
+
+      override fun inputColumns(vararg inputColumns: Any): Unit =
+          inputColumns(inputColumns.toList())
 
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -1871,6 +1928,8 @@ public open class CfnDataSet internal constructor(
 
       public fun dataTransforms(dataTransforms: List<Any>)
 
+      public fun dataTransforms(vararg dataTransforms: Any)
+
       public fun source(source: IResolvable)
 
       public fun source(source: LogicalTableSourceProperty)
@@ -1896,6 +1955,9 @@ public open class CfnDataSet internal constructor(
       override fun dataTransforms(dataTransforms: List<Any>) {
         cdkBuilder.dataTransforms(dataTransforms)
       }
+
+      override fun dataTransforms(vararg dataTransforms: Any): Unit =
+          dataTransforms(dataTransforms.toList())
 
       override fun source(source: IResolvable) {
         cdkBuilder.source(source.let(IResolvable::unwrap))
@@ -2204,15 +2266,23 @@ public open class CfnDataSet internal constructor(
     public interface Builder {
       public fun dateTimeStaticValues(dateTimeStaticValues: List<String>)
 
+      public fun dateTimeStaticValues(vararg dateTimeStaticValues: String)
+
       public fun decimalStaticValues(decimalStaticValues: IResolvable)
 
       public fun decimalStaticValues(decimalStaticValues: List<Number>)
+
+      public fun decimalStaticValues(vararg decimalStaticValues: Number)
 
       public fun integerStaticValues(integerStaticValues: IResolvable)
 
       public fun integerStaticValues(integerStaticValues: List<Number>)
 
+      public fun integerStaticValues(vararg integerStaticValues: Number)
+
       public fun stringStaticValues(stringStaticValues: List<String>)
+
+      public fun stringStaticValues(vararg stringStaticValues: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2224,6 +2294,9 @@ public open class CfnDataSet internal constructor(
         cdkBuilder.dateTimeStaticValues(dateTimeStaticValues)
       }
 
+      override fun dateTimeStaticValues(vararg dateTimeStaticValues: String): Unit =
+          dateTimeStaticValues(dateTimeStaticValues.toList())
+
       override fun decimalStaticValues(decimalStaticValues: IResolvable) {
         cdkBuilder.decimalStaticValues(decimalStaticValues.let(IResolvable::unwrap))
       }
@@ -2231,6 +2304,9 @@ public open class CfnDataSet internal constructor(
       override fun decimalStaticValues(decimalStaticValues: List<Number>) {
         cdkBuilder.decimalStaticValues(decimalStaticValues)
       }
+
+      override fun decimalStaticValues(vararg decimalStaticValues: Number): Unit =
+          decimalStaticValues(decimalStaticValues.toList())
 
       override fun integerStaticValues(integerStaticValues: IResolvable) {
         cdkBuilder.integerStaticValues(integerStaticValues.let(IResolvable::unwrap))
@@ -2240,9 +2316,15 @@ public open class CfnDataSet internal constructor(
         cdkBuilder.integerStaticValues(integerStaticValues)
       }
 
+      override fun integerStaticValues(vararg integerStaticValues: Number): Unit =
+          integerStaticValues(integerStaticValues.toList())
+
       override fun stringStaticValues(stringStaticValues: List<String>) {
         cdkBuilder.stringStaticValues(stringStaticValues)
       }
+
+      override fun stringStaticValues(vararg stringStaticValues: String): Unit =
+          stringStaticValues(stringStaticValues.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnDataSet.NewDefaultValuesProperty =
@@ -2299,6 +2381,8 @@ public open class CfnDataSet internal constructor(
       public fun tagRules(tagRules: IResolvable)
 
       public fun tagRules(tagRules: List<Any>)
+
+      public fun tagRules(vararg tagRules: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2322,6 +2406,8 @@ public open class CfnDataSet internal constructor(
       override fun tagRules(tagRules: List<Any>) {
         cdkBuilder.tagRules(tagRules)
       }
+
+      override fun tagRules(vararg tagRules: Any): Unit = tagRules(tagRules.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnDataSet.RowLevelPermissionTagConfigurationProperty
@@ -2368,7 +2454,11 @@ public open class CfnDataSet internal constructor(
     public interface Builder {
       public fun columnNames(columnNames: List<String>)
 
+      public fun columnNames(vararg columnNames: String)
+
       public fun principals(principals: List<String>)
+
+      public fun principals(vararg principals: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2381,9 +2471,13 @@ public open class CfnDataSet internal constructor(
         cdkBuilder.columnNames(columnNames)
       }
 
+      override fun columnNames(vararg columnNames: String): Unit = columnNames(columnNames.toList())
+
       override fun principals(principals: List<String>) {
         cdkBuilder.principals(principals)
       }
+
+      override fun principals(vararg principals: String): Unit = principals(principals.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnDataSet.ColumnLevelPermissionRuleProperty =
@@ -2803,6 +2897,8 @@ public open class CfnDataSet internal constructor(
 
     public interface Builder {
       public fun staticValues(staticValues: List<String>)
+
+      public fun staticValues(vararg staticValues: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2814,6 +2910,9 @@ public open class CfnDataSet internal constructor(
       override fun staticValues(staticValues: List<String>) {
         cdkBuilder.staticValues(staticValues)
       }
+
+      override fun staticValues(vararg staticValues: String): Unit =
+          staticValues(staticValues.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnDataSet.StringDatasetParameterDefaultValuesProperty
@@ -2856,6 +2955,8 @@ public open class CfnDataSet internal constructor(
     public interface Builder {
       public fun columns(columns: List<String>)
 
+      public fun columns(vararg columns: String)
+
       public fun description(description: String)
     }
 
@@ -2867,6 +2968,8 @@ public open class CfnDataSet internal constructor(
       override fun columns(columns: List<String>) {
         cdkBuilder.columns(columns)
       }
+
+      override fun columns(vararg columns: String): Unit = columns(columns.toList())
 
       override fun description(description: String) {
         cdkBuilder.description(description)
@@ -3092,6 +3195,8 @@ public open class CfnDataSet internal constructor(
       public fun columnName(columnName: String)
 
       public fun tags(tags: List<ColumnTagProperty>)
+
+      public fun tags(vararg tags: ColumnTagProperty)
     }
 
     private class BuilderImpl : Builder {
@@ -3106,6 +3211,8 @@ public open class CfnDataSet internal constructor(
       override fun tags(tags: List<ColumnTagProperty>) {
         cdkBuilder.tags(tags.map(ColumnTagProperty::unwrap))
       }
+
+      override fun tags(vararg tags: ColumnTagProperty): Unit = tags(tags.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnDataSet.TagColumnOperationProperty =
@@ -3415,6 +3522,8 @@ public open class CfnDataSet internal constructor(
 
     public interface Builder {
       public fun projectedColumns(projectedColumns: List<String>)
+
+      public fun projectedColumns(vararg projectedColumns: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3426,6 +3535,9 @@ public open class CfnDataSet internal constructor(
         cdkBuilder.projectedColumns(projectedColumns)
       }
 
+      override fun projectedColumns(vararg projectedColumns: String): Unit =
+          projectedColumns(projectedColumns.toList())
+
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnDataSet.ProjectOperationProperty =
           cdkBuilder.build()
@@ -3435,8 +3547,7 @@ public open class CfnDataSet internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSet.ProjectOperationProperty,
     ) : ProjectOperationProperty {
-      override fun projectedColumns(): List<String> = unwrap(this).getProjectedColumns() ?:
-          emptyList()
+      override fun projectedColumns(): List<String> = unwrap(this).getProjectedColumns()
     }
 
     public companion object {
@@ -3466,6 +3577,8 @@ public open class CfnDataSet internal constructor(
       public fun staticValues(staticValues: IResolvable)
 
       public fun staticValues(staticValues: List<Number>)
+
+      public fun staticValues(vararg staticValues: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -3481,6 +3594,9 @@ public open class CfnDataSet internal constructor(
       override fun staticValues(staticValues: List<Number>) {
         cdkBuilder.staticValues(staticValues)
       }
+
+      override fun staticValues(vararg staticValues: Number): Unit =
+          staticValues(staticValues.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnDataSet.DecimalDatasetParameterDefaultValuesProperty
@@ -3522,6 +3638,8 @@ public open class CfnDataSet internal constructor(
       public fun columns(columns: IResolvable)
 
       public fun columns(columns: List<Any>)
+
+      public fun columns(vararg columns: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -3537,6 +3655,8 @@ public open class CfnDataSet internal constructor(
       override fun columns(columns: List<Any>) {
         cdkBuilder.columns(columns)
       }
+
+      override fun columns(vararg columns: Any): Unit = columns(columns.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnDataSet.CreateColumnsOperationProperty =
@@ -3584,6 +3704,8 @@ public open class CfnDataSet internal constructor(
 
       public fun columns(columns: List<Any>)
 
+      public fun columns(vararg columns: Any)
+
       public fun dataSourceArn(dataSourceArn: String)
 
       public fun name(name: String)
@@ -3603,6 +3725,8 @@ public open class CfnDataSet internal constructor(
       override fun columns(columns: List<Any>) {
         cdkBuilder.columns(columns)
       }
+
+      override fun columns(vararg columns: Any): Unit = columns(columns.toList())
 
       override fun dataSourceArn(dataSourceArn: String) {
         cdkBuilder.dataSourceArn(dataSourceArn)
@@ -4013,6 +4137,8 @@ public open class CfnDataSet internal constructor(
       public fun staticValues(staticValues: IResolvable)
 
       public fun staticValues(staticValues: List<Number>)
+
+      public fun staticValues(vararg staticValues: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -4028,6 +4154,9 @@ public open class CfnDataSet internal constructor(
       override fun staticValues(staticValues: List<Number>) {
         cdkBuilder.staticValues(staticValues)
       }
+
+      override fun staticValues(vararg staticValues: Number): Unit =
+          staticValues(staticValues.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnDataSet.IntegerDatasetParameterDefaultValuesProperty

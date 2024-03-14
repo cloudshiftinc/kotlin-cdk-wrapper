@@ -20,11 +20,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnStorageSystem internal constructor(
   private val cdkObject: software.amazon.awscdk.services.datasync.CfnStorageSystem,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
-  public open fun agentArns(): List<String> = unwrap(this).getAgentArns() ?: emptyList()
+  public open fun agentArns(): List<String> = unwrap(this).getAgentArns()
 
   public open fun agentArns(`value`: List<String>) {
     unwrap(this).setAgentArns(`value`)
   }
+
+  public open fun agentArns(vararg `value`: String): Unit = agentArns(`value`.toList())
 
   public open fun attrConnectivityStatus(): String = unwrap(this).getAttrConnectivityStatus()
 
@@ -93,8 +95,12 @@ public open class CfnStorageSystem internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun agentArns(agentArns: List<String>)
+
+    public fun agentArns(vararg agentArns: String)
 
     public fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String)
 
@@ -120,6 +126,8 @@ public open class CfnStorageSystem internal constructor(
     public fun systemType(systemType: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -132,6 +140,8 @@ public open class CfnStorageSystem internal constructor(
     override fun agentArns(agentArns: List<String>) {
       cdkBuilder.agentArns(agentArns)
     }
+
+    override fun agentArns(vararg agentArns: String): Unit = agentArns(agentArns.toList())
 
     override fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String) {
       cdkBuilder.cloudWatchLogGroupArn(cloudWatchLogGroupArn)
@@ -175,6 +185,8 @@ public open class CfnStorageSystem internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.datasync.CfnStorageSystem =
         cdkBuilder.build()

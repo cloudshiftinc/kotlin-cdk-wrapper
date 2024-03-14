@@ -31,6 +31,9 @@ public open class CfnCodeDeployBlueGreenHook internal constructor(
     unwrap(this).setApplications(`value`.map(CfnCodeDeployBlueGreenApplication::unwrap))
   }
 
+  public open fun applications(vararg `value`: CfnCodeDeployBlueGreenApplication): Unit =
+      applications(`value`.toList())
+
   public open fun lifecycleEventHooks(): CfnCodeDeployBlueGreenLifecycleEventHooks? =
       unwrap(this).getLifecycleEventHooks()?.let(CfnCodeDeployBlueGreenLifecycleEventHooks::wrap)
 
@@ -72,6 +75,8 @@ public open class CfnCodeDeployBlueGreenHook internal constructor(
 
     public fun applications(applications: List<CfnCodeDeployBlueGreenApplication>)
 
+    public fun applications(vararg applications: CfnCodeDeployBlueGreenApplication)
+
     public fun lifecycleEventHooks(lifecycleEventHooks: CfnCodeDeployBlueGreenLifecycleEventHooks)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -109,6 +114,9 @@ public open class CfnCodeDeployBlueGreenHook internal constructor(
     override fun applications(applications: List<CfnCodeDeployBlueGreenApplication>) {
       cdkBuilder.applications(applications.map(CfnCodeDeployBlueGreenApplication::unwrap))
     }
+
+    override fun applications(vararg applications: CfnCodeDeployBlueGreenApplication): Unit =
+        applications(applications.toList())
 
     override
         fun lifecycleEventHooks(lifecycleEventHooks: CfnCodeDeployBlueGreenLifecycleEventHooks) {

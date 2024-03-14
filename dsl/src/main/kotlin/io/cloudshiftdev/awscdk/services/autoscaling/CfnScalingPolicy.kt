@@ -101,6 +101,9 @@ public open class CfnScalingPolicy internal constructor(
     unwrap(this).setStepAdjustments(__idx_ac66f0)
   }
 
+  public open fun stepAdjustments(vararg __idx_ac66f0: Any): Unit =
+      stepAdjustments(__idx_ac66f0.toList())
+
   public open fun targetTrackingConfiguration(): Any? =
       unwrap(this).getTargetTrackingConfiguration()
 
@@ -148,6 +151,8 @@ public open class CfnScalingPolicy internal constructor(
     public fun stepAdjustments(stepAdjustments: IResolvable)
 
     public fun stepAdjustments(stepAdjustments: List<Any>)
+
+    public fun stepAdjustments(vararg stepAdjustments: Any)
 
     public fun targetTrackingConfiguration(targetTrackingConfiguration: IResolvable)
 
@@ -222,6 +227,9 @@ public open class CfnScalingPolicy internal constructor(
     override fun stepAdjustments(stepAdjustments: List<Any>) {
       cdkBuilder.stepAdjustments(stepAdjustments)
     }
+
+    override fun stepAdjustments(vararg stepAdjustments: Any): Unit =
+        stepAdjustments(stepAdjustments.toList())
 
     override fun targetTrackingConfiguration(targetTrackingConfiguration: IResolvable) {
       cdkBuilder.targetTrackingConfiguration(targetTrackingConfiguration.let(IResolvable::unwrap))
@@ -344,6 +352,8 @@ public open class CfnScalingPolicy internal constructor(
 
       public fun metricSpecifications(metricSpecifications: List<Any>)
 
+      public fun metricSpecifications(vararg metricSpecifications: Any)
+
       public fun mode(mode: String)
 
       public fun schedulingBufferTime(schedulingBufferTime: Number)
@@ -370,6 +380,9 @@ public open class CfnScalingPolicy internal constructor(
       override fun metricSpecifications(metricSpecifications: List<Any>) {
         cdkBuilder.metricSpecifications(metricSpecifications)
       }
+
+      override fun metricSpecifications(vararg metricSpecifications: Any): Unit =
+          metricSpecifications(metricSpecifications.toList())
 
       override fun mode(mode: String) {
         cdkBuilder.mode(mode)
@@ -433,6 +446,8 @@ public open class CfnScalingPolicy internal constructor(
 
       public fun dimensions(dimensions: List<Any>)
 
+      public fun dimensions(vararg dimensions: Any)
+
       public fun metricName(metricName: String)
 
       public fun namespace(namespace: String)
@@ -450,6 +465,8 @@ public open class CfnScalingPolicy internal constructor(
       override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
+
+      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
 
       override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)
@@ -904,6 +921,8 @@ public open class CfnScalingPolicy internal constructor(
       public fun metricDataQueries(metricDataQueries: IResolvable)
 
       public fun metricDataQueries(metricDataQueries: List<Any>)
+
+      public fun metricDataQueries(vararg metricDataQueries: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -919,6 +938,9 @@ public open class CfnScalingPolicy internal constructor(
       override fun metricDataQueries(metricDataQueries: List<Any>) {
         cdkBuilder.metricDataQueries(metricDataQueries)
       }
+
+      override fun metricDataQueries(vararg metricDataQueries: Any): Unit =
+          metricDataQueries(metricDataQueries.toList())
 
       public fun build():
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedCapacityMetricProperty
@@ -1211,6 +1233,8 @@ public open class CfnScalingPolicy internal constructor(
       public fun metricDataQueries(metricDataQueries: IResolvable)
 
       public fun metricDataQueries(metricDataQueries: List<Any>)
+
+      public fun metricDataQueries(vararg metricDataQueries: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1226,6 +1250,9 @@ public open class CfnScalingPolicy internal constructor(
       override fun metricDataQueries(metricDataQueries: List<Any>) {
         cdkBuilder.metricDataQueries(metricDataQueries)
       }
+
+      override fun metricDataQueries(vararg metricDataQueries: Any): Unit =
+          metricDataQueries(metricDataQueries.toList())
 
       public fun build():
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedLoadMetricProperty
@@ -1446,6 +1473,8 @@ public open class CfnScalingPolicy internal constructor(
 
       public fun dimensions(dimensions: List<Any>)
 
+      public fun dimensions(vararg dimensions: Any)
+
       public fun metricName(metricName: String)
 
       public fun namespace(namespace: String)
@@ -1468,6 +1497,8 @@ public open class CfnScalingPolicy internal constructor(
       override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
+
+      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
 
       override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)
@@ -1533,6 +1564,8 @@ public open class CfnScalingPolicy internal constructor(
       public fun metricDataQueries(metricDataQueries: IResolvable)
 
       public fun metricDataQueries(metricDataQueries: List<Any>)
+
+      public fun metricDataQueries(vararg metricDataQueries: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1548,6 +1581,9 @@ public open class CfnScalingPolicy internal constructor(
       override fun metricDataQueries(metricDataQueries: List<Any>) {
         cdkBuilder.metricDataQueries(metricDataQueries)
       }
+
+      override fun metricDataQueries(vararg metricDataQueries: Any): Unit =
+          metricDataQueries(metricDataQueries.toList())
 
       public fun build():
           software.amazon.awscdk.services.autoscaling.CfnScalingPolicy.PredictiveScalingCustomizedScalingMetricProperty

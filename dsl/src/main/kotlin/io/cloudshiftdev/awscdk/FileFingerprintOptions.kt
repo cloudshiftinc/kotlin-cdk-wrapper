@@ -10,6 +10,8 @@ public interface FileFingerprintOptions : FileCopyOptions {
   public interface Builder {
     public fun exclude(exclude: List<String>)
 
+    public fun exclude(vararg exclude: String)
+
     public fun extraHash(extraHash: String)
 
     public fun followSymlinks(followSymlinks: SymlinkFollowMode)
@@ -24,6 +26,8 @@ public interface FileFingerprintOptions : FileCopyOptions {
     override fun exclude(exclude: List<String>) {
       cdkBuilder.exclude(exclude)
     }
+
+    override fun exclude(vararg exclude: String): Unit = exclude(exclude.toList())
 
     override fun extraHash(extraHash: String) {
       cdkBuilder.extraHash(extraHash)

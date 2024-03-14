@@ -35,12 +35,14 @@ public open class CfnRegexPatternSet internal constructor(
     unwrap(this).setName(`value`)
   }
 
-  public open fun regularExpressionList(): List<String> = unwrap(this).getRegularExpressionList() ?:
-      emptyList()
+  public open fun regularExpressionList(): List<String> = unwrap(this).getRegularExpressionList()
 
   public open fun regularExpressionList(`value`: List<String>) {
     unwrap(this).setRegularExpressionList(`value`)
   }
+
+  public open fun regularExpressionList(vararg `value`: String): Unit =
+      regularExpressionList(`value`.toList())
 
   public open fun scope(): String = unwrap(this).getScope()
 
@@ -57,6 +59,8 @@ public open class CfnRegexPatternSet internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun description(description: String)
 
@@ -64,9 +68,13 @@ public open class CfnRegexPatternSet internal constructor(
 
     public fun regularExpressionList(regularExpressionList: List<String>)
 
+    public fun regularExpressionList(vararg regularExpressionList: String)
+
     public fun scope(scope: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -88,6 +96,9 @@ public open class CfnRegexPatternSet internal constructor(
       cdkBuilder.regularExpressionList(regularExpressionList)
     }
 
+    override fun regularExpressionList(vararg regularExpressionList: String): Unit =
+        regularExpressionList(regularExpressionList.toList())
+
     override fun scope(scope: String) {
       cdkBuilder.scope(scope)
     }
@@ -95,6 +106,8 @@ public open class CfnRegexPatternSet internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.wafv2.CfnRegexPatternSet =
         cdkBuilder.build()

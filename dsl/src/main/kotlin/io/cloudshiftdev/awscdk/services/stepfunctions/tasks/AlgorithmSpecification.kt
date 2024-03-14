@@ -20,6 +20,8 @@ public interface AlgorithmSpecification {
 
     public fun metricDefinitions(metricDefinitions: List<MetricDefinition>)
 
+    public fun metricDefinitions(vararg metricDefinitions: MetricDefinition)
+
     public fun trainingImage(trainingImage: DockerImage)
 
     public fun trainingInputMode(trainingInputMode: InputMode)
@@ -37,6 +39,9 @@ public interface AlgorithmSpecification {
     override fun metricDefinitions(metricDefinitions: List<MetricDefinition>) {
       cdkBuilder.metricDefinitions(metricDefinitions.map(MetricDefinition::unwrap))
     }
+
+    override fun metricDefinitions(vararg metricDefinitions: MetricDefinition): Unit =
+        metricDefinitions(metricDefinitions.toList())
 
     override fun trainingImage(trainingImage: DockerImage) {
       cdkBuilder.trainingImage(trainingImage.let(DockerImage::unwrap))

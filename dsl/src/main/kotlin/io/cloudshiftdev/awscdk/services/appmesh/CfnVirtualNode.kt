@@ -75,6 +75,8 @@ public open class CfnVirtualNode internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun virtualNodeName(): String? = unwrap(this).getVirtualNodeName()
 
   public open fun virtualNodeName(`value`: String) {
@@ -95,6 +97,8 @@ public open class CfnVirtualNode internal constructor(
     public fun spec(spec: VirtualNodeSpecProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun virtualNodeName(virtualNodeName: String)
   }
@@ -131,6 +135,8 @@ public open class CfnVirtualNode internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun virtualNodeName(virtualNodeName: String) {
       cdkBuilder.virtualNodeName(virtualNodeName)
     }
@@ -164,6 +170,8 @@ public open class CfnVirtualNode internal constructor(
 
     public interface Builder {
       public fun certificateAuthorityArns(certificateAuthorityArns: List<String>)
+
+      public fun certificateAuthorityArns(vararg certificateAuthorityArns: String)
     }
 
     private class BuilderImpl : Builder {
@@ -176,6 +184,9 @@ public open class CfnVirtualNode internal constructor(
         cdkBuilder.certificateAuthorityArns(certificateAuthorityArns)
       }
 
+      override fun certificateAuthorityArns(vararg certificateAuthorityArns: String): Unit =
+          certificateAuthorityArns(certificateAuthorityArns.toList())
+
       public fun build():
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextAcmTrustProperty
           = cdkBuilder.build()
@@ -186,7 +197,7 @@ public open class CfnVirtualNode internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.TlsValidationContextAcmTrustProperty,
     ) : TlsValidationContextAcmTrustProperty {
       override fun certificateAuthorityArns(): List<String> =
-          unwrap(this).getCertificateAuthorityArns() ?: emptyList()
+          unwrap(this).getCertificateAuthorityArns()
     }
 
     public companion object {
@@ -655,6 +666,8 @@ public open class CfnVirtualNode internal constructor(
 
       public fun json(json: List<Any>)
 
+      public fun json(vararg json: Any)
+
       public fun text(text: String)
     }
 
@@ -670,6 +683,8 @@ public open class CfnVirtualNode internal constructor(
       override fun json(json: List<Any>) {
         cdkBuilder.json(json)
       }
+
+      override fun json(vararg json: Any): Unit = json(json.toList())
 
       override fun text(text: String) {
         cdkBuilder.text(text)
@@ -723,6 +738,8 @@ public open class CfnVirtualNode internal constructor(
 
       public fun attributes(attributes: List<Any>)
 
+      public fun attributes(vararg attributes: Any)
+
       public fun ipPreference(ipPreference: String)
 
       public fun namespaceName(namespaceName: String)
@@ -743,6 +760,8 @@ public open class CfnVirtualNode internal constructor(
       override fun attributes(attributes: List<Any>) {
         cdkBuilder.attributes(attributes)
       }
+
+      override fun attributes(vararg attributes: Any): Unit = attributes(attributes.toList())
 
       override fun ipPreference(ipPreference: String) {
         cdkBuilder.ipPreference(ipPreference)
@@ -862,6 +881,8 @@ public open class CfnVirtualNode internal constructor(
 
     public interface Builder {
       public fun exact(exact: List<String>)
+
+      public fun exact(vararg exact: String)
     }
 
     private class BuilderImpl : Builder {
@@ -873,6 +894,8 @@ public open class CfnVirtualNode internal constructor(
       override fun exact(exact: List<String>) {
         cdkBuilder.exact(exact)
       }
+
+      override fun exact(vararg exact: String): Unit = exact(exact.toList())
 
       public fun build():
           software.amazon.awscdk.services.appmesh.CfnVirtualNode.SubjectAlternativeNameMatchersProperty
@@ -1076,6 +1099,8 @@ public open class CfnVirtualNode internal constructor(
 
       public fun ports(ports: List<Number>)
 
+      public fun ports(vararg ports: Number)
+
       public fun validation(validation: IResolvable)
 
       public fun validation(validation: TlsValidationContextProperty)
@@ -1118,6 +1143,8 @@ public open class CfnVirtualNode internal constructor(
       override fun ports(ports: List<Number>) {
         cdkBuilder.ports(ports)
       }
+
+      override fun ports(vararg ports: Number): Unit = ports(ports.toList())
 
       override fun validation(validation: IResolvable) {
         cdkBuilder.validation(validation.let(IResolvable::unwrap))
@@ -1842,9 +1869,13 @@ public open class CfnVirtualNode internal constructor(
 
       public fun backends(backends: List<Any>)
 
+      public fun backends(vararg backends: Any)
+
       public fun listeners(listeners: IResolvable)
 
       public fun listeners(listeners: List<Any>)
+
+      public fun listeners(vararg listeners: Any)
 
       public fun logging(logging: IResolvable)
 
@@ -1889,6 +1920,8 @@ public open class CfnVirtualNode internal constructor(
         cdkBuilder.backends(backends)
       }
 
+      override fun backends(vararg backends: Any): Unit = backends(backends.toList())
+
       override fun listeners(listeners: IResolvable) {
         cdkBuilder.listeners(listeners.let(IResolvable::unwrap))
       }
@@ -1896,6 +1929,8 @@ public open class CfnVirtualNode internal constructor(
       override fun listeners(listeners: List<Any>) {
         cdkBuilder.listeners(listeners)
       }
+
+      override fun listeners(vararg listeners: Any): Unit = listeners(listeners.toList())
 
       override fun logging(logging: IResolvable) {
         cdkBuilder.logging(logging.let(IResolvable::unwrap))

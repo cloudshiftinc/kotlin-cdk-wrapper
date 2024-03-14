@@ -65,12 +65,18 @@ public open class CfnCampaign internal constructor(
     unwrap(this).setDataDestinationConfigs(__idx_ac66f0)
   }
 
+  public open fun dataDestinationConfigs(vararg __idx_ac66f0: Any): Unit =
+      dataDestinationConfigs(__idx_ac66f0.toList())
+
   public open fun dataExtraDimensions(): List<String> = unwrap(this).getDataExtraDimensions() ?:
       emptyList()
 
   public open fun dataExtraDimensions(`value`: List<String>) {
     unwrap(this).setDataExtraDimensions(`value`)
   }
+
+  public open fun dataExtraDimensions(vararg `value`: String): Unit =
+      dataExtraDimensions(`value`.toList())
 
   public open fun description(): String? = unwrap(this).getDescription()
 
@@ -129,6 +135,9 @@ public open class CfnCampaign internal constructor(
     unwrap(this).setSignalsToCollect(__idx_ac66f0)
   }
 
+  public open fun signalsToCollect(vararg __idx_ac66f0: Any): Unit =
+      signalsToCollect(__idx_ac66f0.toList())
+
   public open fun spoolingMode(): String? = unwrap(this).getSpoolingMode()
 
   public open fun spoolingMode(`value`: String) {
@@ -149,6 +158,8 @@ public open class CfnCampaign internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun targetArn(): String = unwrap(this).getTargetArn()
 
@@ -173,7 +184,11 @@ public open class CfnCampaign internal constructor(
 
     public fun dataDestinationConfigs(dataDestinationConfigs: List<Any>)
 
+    public fun dataDestinationConfigs(vararg dataDestinationConfigs: Any)
+
     public fun dataExtraDimensions(dataExtraDimensions: List<String>)
+
+    public fun dataExtraDimensions(vararg dataExtraDimensions: String)
 
     public fun description(description: String)
 
@@ -193,11 +208,15 @@ public open class CfnCampaign internal constructor(
 
     public fun signalsToCollect(signalsToCollect: List<Any>)
 
+    public fun signalsToCollect(vararg signalsToCollect: Any)
+
     public fun spoolingMode(spoolingMode: String)
 
     public fun startTime(startTime: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun targetArn(targetArn: String)
   }
@@ -238,9 +257,15 @@ public open class CfnCampaign internal constructor(
       cdkBuilder.dataDestinationConfigs(dataDestinationConfigs)
     }
 
+    override fun dataDestinationConfigs(vararg dataDestinationConfigs: Any): Unit =
+        dataDestinationConfigs(dataDestinationConfigs.toList())
+
     override fun dataExtraDimensions(dataExtraDimensions: List<String>) {
       cdkBuilder.dataExtraDimensions(dataExtraDimensions)
     }
+
+    override fun dataExtraDimensions(vararg dataExtraDimensions: String): Unit =
+        dataExtraDimensions(dataExtraDimensions.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -278,6 +303,9 @@ public open class CfnCampaign internal constructor(
       cdkBuilder.signalsToCollect(signalsToCollect)
     }
 
+    override fun signalsToCollect(vararg signalsToCollect: Any): Unit =
+        signalsToCollect(signalsToCollect.toList())
+
     override fun spoolingMode(spoolingMode: String) {
       cdkBuilder.spoolingMode(spoolingMode)
     }
@@ -289,6 +317,8 @@ public open class CfnCampaign internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun targetArn(targetArn: String) {
       cdkBuilder.targetArn(targetArn)

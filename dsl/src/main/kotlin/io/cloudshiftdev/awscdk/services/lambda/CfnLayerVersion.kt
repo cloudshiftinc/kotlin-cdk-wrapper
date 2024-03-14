@@ -25,12 +25,18 @@ public open class CfnLayerVersion internal constructor(
     unwrap(this).setCompatibleArchitectures(`value`)
   }
 
+  public open fun compatibleArchitectures(vararg `value`: String): Unit =
+      compatibleArchitectures(`value`.toList())
+
   public open fun compatibleRuntimes(): List<String> = unwrap(this).getCompatibleRuntimes() ?:
       emptyList()
 
   public open fun compatibleRuntimes(`value`: List<String>) {
     unwrap(this).setCompatibleRuntimes(`value`)
   }
+
+  public open fun compatibleRuntimes(vararg `value`: String): Unit =
+      compatibleRuntimes(`value`.toList())
 
   public open fun content(): Any = unwrap(this).getContent()
 
@@ -72,7 +78,11 @@ public open class CfnLayerVersion internal constructor(
   public interface Builder {
     public fun compatibleArchitectures(compatibleArchitectures: List<String>)
 
+    public fun compatibleArchitectures(vararg compatibleArchitectures: String)
+
     public fun compatibleRuntimes(compatibleRuntimes: List<String>)
+
+    public fun compatibleRuntimes(vararg compatibleRuntimes: String)
 
     public fun content(content: IResolvable)
 
@@ -100,9 +110,15 @@ public open class CfnLayerVersion internal constructor(
       cdkBuilder.compatibleArchitectures(compatibleArchitectures)
     }
 
+    override fun compatibleArchitectures(vararg compatibleArchitectures: String): Unit =
+        compatibleArchitectures(compatibleArchitectures.toList())
+
     override fun compatibleRuntimes(compatibleRuntimes: List<String>) {
       cdkBuilder.compatibleRuntimes(compatibleRuntimes)
     }
+
+    override fun compatibleRuntimes(vararg compatibleRuntimes: String): Unit =
+        compatibleRuntimes(compatibleRuntimes.toList())
 
     override fun content(content: IResolvable) {
       cdkBuilder.content(content.let(IResolvable::unwrap))

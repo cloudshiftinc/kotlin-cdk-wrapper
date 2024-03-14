@@ -43,6 +43,9 @@ public open class CfnFeature internal constructor(
     unwrap(this).setEntityOverrides(__idx_ac66f0)
   }
 
+  public open fun entityOverrides(vararg __idx_ac66f0: Any): Unit =
+      entityOverrides(__idx_ac66f0.toList())
+
   public open fun evaluationStrategy(): String? = unwrap(this).getEvaluationStrategy()
 
   public open fun evaluationStrategy(`value`: String) {
@@ -74,6 +77,8 @@ public open class CfnFeature internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun variations(): Any = unwrap(this).getVariations()
 
   public open fun variations(`value`: IResolvable) {
@@ -84,6 +89,8 @@ public open class CfnFeature internal constructor(
     unwrap(this).setVariations(__idx_ac66f0)
   }
 
+  public open fun variations(vararg __idx_ac66f0: Any): Unit = variations(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun defaultVariation(defaultVariation: String)
 
@@ -93,6 +100,8 @@ public open class CfnFeature internal constructor(
 
     public fun entityOverrides(entityOverrides: List<Any>)
 
+    public fun entityOverrides(vararg entityOverrides: Any)
+
     public fun evaluationStrategy(evaluationStrategy: String)
 
     public fun name(name: String)
@@ -101,9 +110,13 @@ public open class CfnFeature internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun variations(variations: IResolvable)
 
     public fun variations(variations: List<Any>)
+
+    public fun variations(vararg variations: Any)
   }
 
   private class BuilderImpl(
@@ -129,6 +142,9 @@ public open class CfnFeature internal constructor(
       cdkBuilder.entityOverrides(entityOverrides)
     }
 
+    override fun entityOverrides(vararg entityOverrides: Any): Unit =
+        entityOverrides(entityOverrides.toList())
+
     override fun evaluationStrategy(evaluationStrategy: String) {
       cdkBuilder.evaluationStrategy(evaluationStrategy)
     }
@@ -145,6 +161,8 @@ public open class CfnFeature internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun variations(variations: IResolvable) {
       cdkBuilder.variations(variations.let(IResolvable::unwrap))
     }
@@ -152,6 +170,8 @@ public open class CfnFeature internal constructor(
     override fun variations(variations: List<Any>) {
       cdkBuilder.variations(variations)
     }
+
+    override fun variations(vararg variations: Any): Unit = variations(variations.toList())
 
     public fun build(): software.amazon.awscdk.services.evidently.CfnFeature = cdkBuilder.build()
   }

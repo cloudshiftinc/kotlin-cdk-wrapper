@@ -59,6 +59,9 @@ public open class CfnDistribution internal constructor(
     unwrap(this).setCacheBehaviors(__idx_ac66f0)
   }
 
+  public open fun cacheBehaviors(vararg __idx_ac66f0: Any): Unit =
+      cacheBehaviors(__idx_ac66f0.toList())
+
   public open fun certificateName(): String? = unwrap(this).getCertificateName()
 
   public open fun certificateName(`value`: String) {
@@ -130,6 +133,8 @@ public open class CfnDistribution internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun bundleId(bundleId: String)
 
@@ -145,6 +150,8 @@ public open class CfnDistribution internal constructor(
     public fun cacheBehaviors(cacheBehaviors: IResolvable)
 
     public fun cacheBehaviors(cacheBehaviors: List<Any>)
+
+    public fun cacheBehaviors(vararg cacheBehaviors: Any)
 
     public fun certificateName(certificateName: String)
 
@@ -173,6 +180,8 @@ public open class CfnDistribution internal constructor(
     public fun origin(origin: InputOriginProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -207,6 +216,9 @@ public open class CfnDistribution internal constructor(
     override fun cacheBehaviors(cacheBehaviors: List<Any>) {
       cdkBuilder.cacheBehaviors(cacheBehaviors)
     }
+
+    override fun cacheBehaviors(vararg cacheBehaviors: Any): Unit =
+        cacheBehaviors(cacheBehaviors.toList())
 
     override fun certificateName(certificateName: String) {
       cdkBuilder.certificateName(certificateName)
@@ -258,6 +270,8 @@ public open class CfnDistribution internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.lightsail.CfnDistribution =
         cdkBuilder.build()
@@ -340,6 +354,8 @@ public open class CfnDistribution internal constructor(
     public interface Builder {
       public fun cookiesAllowList(cookiesAllowList: List<String>)
 
+      public fun cookiesAllowList(vararg cookiesAllowList: String)
+
       public fun option(option: String)
     }
 
@@ -351,6 +367,9 @@ public open class CfnDistribution internal constructor(
       override fun cookiesAllowList(cookiesAllowList: List<String>) {
         cdkBuilder.cookiesAllowList(cookiesAllowList)
       }
+
+      override fun cookiesAllowList(vararg cookiesAllowList: String): Unit =
+          cookiesAllowList(cookiesAllowList.toList())
 
       override fun option(option: String) {
         cdkBuilder.option(option)
@@ -399,6 +418,8 @@ public open class CfnDistribution internal constructor(
     public interface Builder {
       public fun headersAllowList(headersAllowList: List<String>)
 
+      public fun headersAllowList(vararg headersAllowList: String)
+
       public fun option(option: String)
     }
 
@@ -410,6 +431,9 @@ public open class CfnDistribution internal constructor(
       override fun headersAllowList(headersAllowList: List<String>) {
         cdkBuilder.headersAllowList(headersAllowList)
       }
+
+      override fun headersAllowList(vararg headersAllowList: String): Unit =
+          headersAllowList(headersAllowList.toList())
 
       override fun option(option: String) {
         cdkBuilder.option(option)
@@ -695,6 +719,8 @@ public open class CfnDistribution internal constructor(
       public fun option(option: IResolvable)
 
       public fun queryStringsAllowList(queryStringsAllowList: List<String>)
+
+      public fun queryStringsAllowList(vararg queryStringsAllowList: String)
     }
 
     private class BuilderImpl : Builder {
@@ -714,6 +740,9 @@ public open class CfnDistribution internal constructor(
       override fun queryStringsAllowList(queryStringsAllowList: List<String>) {
         cdkBuilder.queryStringsAllowList(queryStringsAllowList)
       }
+
+      override fun queryStringsAllowList(vararg queryStringsAllowList: String): Unit =
+          queryStringsAllowList(queryStringsAllowList.toList())
 
       public fun build():
           software.amazon.awscdk.services.lightsail.CfnDistribution.QueryStringObjectProperty =

@@ -65,6 +65,9 @@ public open class CfnEnvironment internal constructor(
     unwrap(this).setOptionSettings(__idx_ac66f0)
   }
 
+  public open fun optionSettings(vararg __idx_ac66f0: Any): Unit =
+      optionSettings(__idx_ac66f0.toList())
+
   public open fun platformArn(): String? = unwrap(this).getPlatformArn()
 
   public open fun platformArn(`value`: String) {
@@ -85,6 +88,8 @@ public open class CfnEnvironment internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun templateName(): String? = unwrap(this).getTemplateName()
 
@@ -127,11 +132,15 @@ public open class CfnEnvironment internal constructor(
 
     public fun optionSettings(optionSettings: List<Any>)
 
+    public fun optionSettings(vararg optionSettings: Any)
+
     public fun platformArn(platformArn: String)
 
     public fun solutionStackName(solutionStackName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun templateName(templateName: String)
 
@@ -181,6 +190,9 @@ public open class CfnEnvironment internal constructor(
       cdkBuilder.optionSettings(optionSettings)
     }
 
+    override fun optionSettings(vararg optionSettings: Any): Unit =
+        optionSettings(optionSettings.toList())
+
     override fun platformArn(platformArn: String) {
       cdkBuilder.platformArn(platformArn)
     }
@@ -192,6 +204,8 @@ public open class CfnEnvironment internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun templateName(templateName: String) {
       cdkBuilder.templateName(templateName)

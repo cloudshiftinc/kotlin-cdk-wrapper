@@ -40,6 +40,9 @@ public open class CloudFrontWebDistribution internal constructor(
     public
         fun errorConfigurations(errorConfigurations: List<CfnDistribution.CustomErrorResponseProperty>)
 
+    public fun errorConfigurations(vararg
+        errorConfigurations: CfnDistribution.CustomErrorResponseProperty)
+
     public fun geoRestriction(geoRestriction: GeoRestriction)
 
     public fun httpVersion(httpVersion: HttpVersion)
@@ -51,6 +54,8 @@ public open class CloudFrontWebDistribution internal constructor(
     public fun loggingConfig(loggingConfig: LoggingConfiguration.Builder.() -> Unit)
 
     public fun originConfigs(originConfigs: List<SourceConfiguration>)
+
+    public fun originConfigs(vararg originConfigs: SourceConfiguration)
 
     public fun priceClass(priceClass: PriceClass)
 
@@ -91,6 +96,10 @@ public open class CloudFrontWebDistribution internal constructor(
       cdkBuilder.errorConfigurations(errorConfigurations.map(CfnDistribution.CustomErrorResponseProperty::unwrap))
     }
 
+    override fun errorConfigurations(vararg
+        errorConfigurations: CfnDistribution.CustomErrorResponseProperty): Unit =
+        errorConfigurations(errorConfigurations.toList())
+
     override fun geoRestriction(geoRestriction: GeoRestriction) {
       cdkBuilder.geoRestriction(geoRestriction.let(GeoRestriction::unwrap))
     }
@@ -111,6 +120,9 @@ public open class CloudFrontWebDistribution internal constructor(
     override fun originConfigs(originConfigs: List<SourceConfiguration>) {
       cdkBuilder.originConfigs(originConfigs.map(SourceConfiguration::unwrap))
     }
+
+    override fun originConfigs(vararg originConfigs: SourceConfiguration): Unit =
+        originConfigs(originConfigs.toList())
 
     override fun priceClass(priceClass: PriceClass) {
       cdkBuilder.priceClass(priceClass.let(PriceClass::unwrap))

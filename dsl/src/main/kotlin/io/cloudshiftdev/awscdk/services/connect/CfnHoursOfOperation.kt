@@ -32,6 +32,8 @@ public open class CfnHoursOfOperation internal constructor(
     unwrap(this).setConfig(__idx_ac66f0)
   }
 
+  public open fun config(vararg __idx_ac66f0: Any): Unit = config(__idx_ac66f0.toList())
+
   public open fun description(): String? = unwrap(this).getDescription()
 
   public open fun description(`value`: String) {
@@ -63,6 +65,8 @@ public open class CfnHoursOfOperation internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun timeZone(): String = unwrap(this).getTimeZone()
 
   public open fun timeZone(`value`: String) {
@@ -74,6 +78,8 @@ public open class CfnHoursOfOperation internal constructor(
 
     public fun config(config: List<Any>)
 
+    public fun config(vararg config: Any)
+
     public fun description(description: String)
 
     public fun instanceArn(instanceArn: String)
@@ -81,6 +87,8 @@ public open class CfnHoursOfOperation internal constructor(
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun timeZone(timeZone: String)
   }
@@ -100,6 +108,8 @@ public open class CfnHoursOfOperation internal constructor(
       cdkBuilder.config(config)
     }
 
+    override fun config(vararg config: Any): Unit = config(config.toList())
+
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
@@ -115,6 +125,8 @@ public open class CfnHoursOfOperation internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun timeZone(timeZone: String) {
       cdkBuilder.timeZone(timeZone)

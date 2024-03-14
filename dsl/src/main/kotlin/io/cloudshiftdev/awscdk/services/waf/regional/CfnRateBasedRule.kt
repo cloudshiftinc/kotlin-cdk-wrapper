@@ -32,6 +32,9 @@ public open class CfnRateBasedRule internal constructor(
     unwrap(this).setMatchPredicates(__idx_ac66f0)
   }
 
+  public open fun matchPredicates(vararg __idx_ac66f0: Any): Unit =
+      matchPredicates(__idx_ac66f0.toList())
+
   public open fun metricName(): String = unwrap(this).getMetricName()
 
   public open fun metricName(`value`: String) {
@@ -61,6 +64,8 @@ public open class CfnRateBasedRule internal constructor(
 
     public fun matchPredicates(matchPredicates: List<Any>)
 
+    public fun matchPredicates(vararg matchPredicates: Any)
+
     public fun metricName(metricName: String)
 
     public fun name(name: String)
@@ -84,6 +89,9 @@ public open class CfnRateBasedRule internal constructor(
     override fun matchPredicates(matchPredicates: List<Any>) {
       cdkBuilder.matchPredicates(matchPredicates)
     }
+
+    override fun matchPredicates(vararg matchPredicates: Any): Unit =
+        matchPredicates(matchPredicates.toList())
 
     override fun metricName(metricName: String) {
       cdkBuilder.metricName(metricName)

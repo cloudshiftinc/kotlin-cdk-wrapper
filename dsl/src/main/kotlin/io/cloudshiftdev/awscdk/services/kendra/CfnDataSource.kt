@@ -109,6 +109,8 @@ public open class CfnDataSource internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun type(): String = unwrap(this).getType()
 
   public open fun type(`value`: String) {
@@ -149,6 +151,8 @@ public open class CfnDataSource internal constructor(
     public fun schedule(schedule: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun type(type: String)
   }
@@ -219,6 +223,8 @@ public open class CfnDataSource internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun type(type: String) {
       cdkBuilder.type(type)
     }
@@ -255,7 +261,11 @@ public open class CfnDataSource internal constructor(
     public interface Builder {
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -268,9 +278,14 @@ public open class CfnDataSource internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       public fun build():
           software.amazon.awscdk.services.kendra.CfnDataSource.DataSourceVpcConfigurationProperty =
@@ -281,10 +296,9 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.DataSourceVpcConfigurationProperty,
     ) : DataSourceVpcConfigurationProperty {
-      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
-          emptyList()
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
 
-      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
     }
 
     public companion object {
@@ -348,11 +362,17 @@ public open class CfnDataSource internal constructor(
 
       public fun exclusionPatterns(exclusionPatterns: List<String>)
 
+      public fun exclusionPatterns(vararg exclusionPatterns: String)
+
       public fun fieldMappings(fieldMappings: IResolvable)
 
       public fun fieldMappings(fieldMappings: List<Any>)
 
+      public fun fieldMappings(vararg fieldMappings: Any)
+
       public fun inclusionPatterns(inclusionPatterns: List<String>)
+
+      public fun inclusionPatterns(vararg inclusionPatterns: String)
 
       public fun secretArn(secretArn: String)
 
@@ -367,6 +387,8 @@ public open class CfnDataSource internal constructor(
       public fun sslCertificateS3Path(sslCertificateS3Path: S3PathProperty.Builder.() -> Unit)
 
       public fun urls(urls: List<String>)
+
+      public fun urls(vararg urls: String)
 
       public fun useChangeLog(useChangeLog: Boolean)
 
@@ -412,6 +434,9 @@ public open class CfnDataSource internal constructor(
         cdkBuilder.exclusionPatterns(exclusionPatterns)
       }
 
+      override fun exclusionPatterns(vararg exclusionPatterns: String): Unit =
+          exclusionPatterns(exclusionPatterns.toList())
+
       override fun fieldMappings(fieldMappings: IResolvable) {
         cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
       }
@@ -420,9 +445,15 @@ public open class CfnDataSource internal constructor(
         cdkBuilder.fieldMappings(fieldMappings)
       }
 
+      override fun fieldMappings(vararg fieldMappings: Any): Unit =
+          fieldMappings(fieldMappings.toList())
+
       override fun inclusionPatterns(inclusionPatterns: List<String>) {
         cdkBuilder.inclusionPatterns(inclusionPatterns)
       }
+
+      override fun inclusionPatterns(vararg inclusionPatterns: String): Unit =
+          inclusionPatterns(inclusionPatterns.toList())
 
       override fun secretArn(secretArn: String) {
         cdkBuilder.secretArn(secretArn)
@@ -448,6 +479,8 @@ public open class CfnDataSource internal constructor(
       override fun urls(urls: List<String>) {
         cdkBuilder.urls(urls)
       }
+
+      override fun urls(vararg urls: String): Unit = urls(urls.toList())
 
       override fun useChangeLog(useChangeLog: Boolean) {
         cdkBuilder.useChangeLog(useChangeLog)
@@ -500,7 +533,7 @@ public open class CfnDataSource internal constructor(
 
       override fun sslCertificateS3Path(): Any? = unwrap(this).getSslCertificateS3Path()
 
-      override fun urls(): List<String> = unwrap(this).getUrls() ?: emptyList()
+      override fun urls(): List<String> = unwrap(this).getUrls()
 
       override fun useChangeLog(): Any? = unwrap(this).getUseChangeLog()
 
@@ -579,7 +612,11 @@ public open class CfnDataSource internal constructor(
 
       public fun urlExclusionPatterns(urlExclusionPatterns: List<String>)
 
+      public fun urlExclusionPatterns(vararg urlExclusionPatterns: String)
+
       public fun urlInclusionPatterns(urlInclusionPatterns: List<String>)
+
+      public fun urlInclusionPatterns(vararg urlInclusionPatterns: String)
 
       public fun urls(urls: IResolvable)
 
@@ -646,9 +683,15 @@ public open class CfnDataSource internal constructor(
         cdkBuilder.urlExclusionPatterns(urlExclusionPatterns)
       }
 
+      override fun urlExclusionPatterns(vararg urlExclusionPatterns: String): Unit =
+          urlExclusionPatterns(urlExclusionPatterns.toList())
+
       override fun urlInclusionPatterns(urlInclusionPatterns: List<String>) {
         cdkBuilder.urlInclusionPatterns(urlInclusionPatterns)
       }
+
+      override fun urlInclusionPatterns(vararg urlInclusionPatterns: String): Unit =
+          urlInclusionPatterns(urlInclusionPatterns.toList())
 
       override fun urls(urls: IResolvable) {
         cdkBuilder.urls(urls.let(IResolvable::unwrap))
@@ -811,6 +854,8 @@ public open class CfnDataSource internal constructor(
       public fun pageFieldMappings(pageFieldMappings: IResolvable)
 
       public fun pageFieldMappings(pageFieldMappings: List<Any>)
+
+      public fun pageFieldMappings(vararg pageFieldMappings: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -826,6 +871,9 @@ public open class CfnDataSource internal constructor(
       override fun pageFieldMappings(pageFieldMappings: List<Any>) {
         cdkBuilder.pageFieldMappings(pageFieldMappings)
       }
+
+      override fun pageFieldMappings(vararg pageFieldMappings: Any): Unit =
+          pageFieldMappings(pageFieldMappings.toList())
 
       public fun build():
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluencePageConfigurationProperty =
@@ -882,11 +930,17 @@ public open class CfnDataSource internal constructor(
 
       public fun excludeSpaces(excludeSpaces: List<String>)
 
+      public fun excludeSpaces(vararg excludeSpaces: String)
+
       public fun includeSpaces(includeSpaces: List<String>)
+
+      public fun includeSpaces(vararg includeSpaces: String)
 
       public fun spaceFieldMappings(spaceFieldMappings: IResolvable)
 
       public fun spaceFieldMappings(spaceFieldMappings: List<Any>)
+
+      public fun spaceFieldMappings(vararg spaceFieldMappings: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -915,9 +969,15 @@ public open class CfnDataSource internal constructor(
         cdkBuilder.excludeSpaces(excludeSpaces)
       }
 
+      override fun excludeSpaces(vararg excludeSpaces: String): Unit =
+          excludeSpaces(excludeSpaces.toList())
+
       override fun includeSpaces(includeSpaces: List<String>) {
         cdkBuilder.includeSpaces(includeSpaces)
       }
+
+      override fun includeSpaces(vararg includeSpaces: String): Unit =
+          includeSpaces(includeSpaces.toList())
 
       override fun spaceFieldMappings(spaceFieldMappings: IResolvable) {
         cdkBuilder.spaceFieldMappings(spaceFieldMappings.let(IResolvable::unwrap))
@@ -926,6 +986,9 @@ public open class CfnDataSource internal constructor(
       override fun spaceFieldMappings(spaceFieldMappings: List<Any>) {
         cdkBuilder.spaceFieldMappings(spaceFieldMappings)
       }
+
+      override fun spaceFieldMappings(vararg spaceFieldMappings: Any): Unit =
+          spaceFieldMappings(spaceFieldMappings.toList())
 
       public fun build():
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceSpaceConfigurationProperty
@@ -1117,6 +1180,8 @@ public open class CfnDataSource internal constructor(
       public fun basicAuthentication(basicAuthentication: IResolvable)
 
       public fun basicAuthentication(basicAuthentication: List<Any>)
+
+      public fun basicAuthentication(vararg basicAuthentication: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1132,6 +1197,9 @@ public open class CfnDataSource internal constructor(
       override fun basicAuthentication(basicAuthentication: List<Any>) {
         cdkBuilder.basicAuthentication(basicAuthentication)
       }
+
+      override fun basicAuthentication(vararg basicAuthentication: Any): Unit =
+          basicAuthentication(basicAuthentication.toList())
 
       public fun build():
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerAuthenticationConfigurationProperty
@@ -1284,7 +1352,12 @@ public open class CfnDataSource internal constructor(
       public
           fun customKnowledgeArticleTypeConfigurations(customKnowledgeArticleTypeConfigurations: List<Any>)
 
+      public fun customKnowledgeArticleTypeConfigurations(vararg
+          customKnowledgeArticleTypeConfigurations: Any)
+
       public fun includedStates(includedStates: List<String>)
+
+      public fun includedStates(vararg includedStates: String)
 
       public
           fun standardKnowledgeArticleTypeConfiguration(standardKnowledgeArticleTypeConfiguration: IResolvable)
@@ -1314,9 +1387,16 @@ public open class CfnDataSource internal constructor(
         cdkBuilder.customKnowledgeArticleTypeConfigurations(customKnowledgeArticleTypeConfigurations)
       }
 
+      override fun customKnowledgeArticleTypeConfigurations(vararg
+          customKnowledgeArticleTypeConfigurations: Any): Unit =
+          customKnowledgeArticleTypeConfigurations(customKnowledgeArticleTypeConfigurations.toList())
+
       override fun includedStates(includedStates: List<String>) {
         cdkBuilder.includedStates(includedStates)
       }
+
+      override fun includedStates(vararg includedStates: String): Unit =
+          includedStates(includedStates.toList())
 
       override
           fun standardKnowledgeArticleTypeConfiguration(standardKnowledgeArticleTypeConfiguration: IResolvable) {
@@ -1347,7 +1427,7 @@ public open class CfnDataSource internal constructor(
       override fun customKnowledgeArticleTypeConfigurations(): Any? =
           unwrap(this).getCustomKnowledgeArticleTypeConfigurations()
 
-      override fun includedStates(): List<String> = unwrap(this).getIncludedStates() ?: emptyList()
+      override fun includedStates(): List<String> = unwrap(this).getIncludedStates()
 
       override fun standardKnowledgeArticleTypeConfiguration(): Any? =
           unwrap(this).getStandardKnowledgeArticleTypeConfiguration()
@@ -1526,6 +1606,8 @@ public open class CfnDataSource internal constructor(
 
       public fun fieldMappings(fieldMappings: List<Any>)
 
+      public fun fieldMappings(vararg fieldMappings: Any)
+
       public fun name(name: String)
     }
 
@@ -1550,6 +1632,9 @@ public open class CfnDataSource internal constructor(
       override fun fieldMappings(fieldMappings: List<Any>) {
         cdkBuilder.fieldMappings(fieldMappings)
       }
+
+      override fun fieldMappings(vararg fieldMappings: Any): Unit =
+          fieldMappings(fieldMappings.toList())
 
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -1639,7 +1724,11 @@ public open class CfnDataSource internal constructor(
 
       public fun exclusionPatterns(exclusionPatterns: List<String>)
 
+      public fun exclusionPatterns(vararg exclusionPatterns: String)
+
       public fun inclusionPatterns(inclusionPatterns: List<String>)
+
+      public fun inclusionPatterns(vararg inclusionPatterns: String)
 
       public fun pageConfiguration(pageConfiguration: IResolvable)
 
@@ -1715,9 +1804,15 @@ public open class CfnDataSource internal constructor(
         cdkBuilder.exclusionPatterns(exclusionPatterns)
       }
 
+      override fun exclusionPatterns(vararg exclusionPatterns: String): Unit =
+          exclusionPatterns(exclusionPatterns.toList())
+
       override fun inclusionPatterns(inclusionPatterns: List<String>) {
         cdkBuilder.inclusionPatterns(inclusionPatterns)
       }
+
+      override fun inclusionPatterns(vararg inclusionPatterns: String): Unit =
+          inclusionPatterns(inclusionPatterns.toList())
 
       override fun pageConfiguration(pageConfiguration: IResolvable) {
         cdkBuilder.pageConfiguration(pageConfiguration.let(IResolvable::unwrap))
@@ -1840,6 +1935,8 @@ public open class CfnDataSource internal constructor(
       public fun fieldMappings(fieldMappings: IResolvable)
 
       public fun fieldMappings(fieldMappings: List<Any>)
+
+      public fun fieldMappings(vararg fieldMappings: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1863,6 +1960,9 @@ public open class CfnDataSource internal constructor(
       override fun fieldMappings(fieldMappings: List<Any>) {
         cdkBuilder.fieldMappings(fieldMappings)
       }
+
+      override fun fieldMappings(vararg fieldMappings: Any): Unit =
+          fieldMappings(fieldMappings.toList())
 
       public fun build():
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceStandardKnowledgeArticleTypeConfigurationProperty
@@ -1987,6 +2087,8 @@ public open class CfnDataSource internal constructor(
 
       public fun stringListValue(stringListValue: List<String>)
 
+      public fun stringListValue(vararg stringListValue: String)
+
       public fun stringValue(stringValue: String)
     }
 
@@ -2007,6 +2109,9 @@ public open class CfnDataSource internal constructor(
       override fun stringListValue(stringListValue: List<String>) {
         cdkBuilder.stringListValue(stringListValue)
       }
+
+      override fun stringListValue(vararg stringListValue: String): Unit =
+          stringListValue(stringListValue.toList())
 
       override fun stringValue(stringValue: String) {
         cdkBuilder.stringValue(stringValue)
@@ -2075,11 +2180,17 @@ public open class CfnDataSource internal constructor(
 
       public fun exclusionPatterns(exclusionPatterns: List<String>)
 
+      public fun exclusionPatterns(vararg exclusionPatterns: String)
+
       public fun fieldMappings(fieldMappings: IResolvable)
 
       public fun fieldMappings(fieldMappings: List<Any>)
 
+      public fun fieldMappings(vararg fieldMappings: Any)
+
       public fun inclusionPatterns(inclusionPatterns: List<String>)
+
+      public fun inclusionPatterns(vararg inclusionPatterns: String)
 
       public fun oneDriveUsers(oneDriveUsers: IResolvable)
 
@@ -2112,6 +2223,9 @@ public open class CfnDataSource internal constructor(
         cdkBuilder.exclusionPatterns(exclusionPatterns)
       }
 
+      override fun exclusionPatterns(vararg exclusionPatterns: String): Unit =
+          exclusionPatterns(exclusionPatterns.toList())
+
       override fun fieldMappings(fieldMappings: IResolvable) {
         cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
       }
@@ -2120,9 +2234,15 @@ public open class CfnDataSource internal constructor(
         cdkBuilder.fieldMappings(fieldMappings)
       }
 
+      override fun fieldMappings(vararg fieldMappings: Any): Unit =
+          fieldMappings(fieldMappings.toList())
+
       override fun inclusionPatterns(inclusionPatterns: List<String>) {
         cdkBuilder.inclusionPatterns(inclusionPatterns)
       }
+
+      override fun inclusionPatterns(vararg inclusionPatterns: String): Unit =
+          inclusionPatterns(inclusionPatterns.toList())
 
       override fun oneDriveUsers(oneDriveUsers: IResolvable) {
         cdkBuilder.oneDriveUsers(oneDriveUsers.let(IResolvable::unwrap))
@@ -2199,6 +2319,8 @@ public open class CfnDataSource internal constructor(
     public interface Builder {
       public fun oneDriveUserList(oneDriveUserList: List<String>)
 
+      public fun oneDriveUserList(vararg oneDriveUserList: String)
+
       public fun oneDriveUserS3Path(oneDriveUserS3Path: IResolvable)
 
       public fun oneDriveUserS3Path(oneDriveUserS3Path: S3PathProperty)
@@ -2216,6 +2338,9 @@ public open class CfnDataSource internal constructor(
       override fun oneDriveUserList(oneDriveUserList: List<String>) {
         cdkBuilder.oneDriveUserList(oneDriveUserList)
       }
+
+      override fun oneDriveUserList(vararg oneDriveUserList: String): Unit =
+          oneDriveUserList(oneDriveUserList.toList())
 
       override fun oneDriveUserS3Path(oneDriveUserS3Path: IResolvable) {
         cdkBuilder.oneDriveUserS3Path(oneDriveUserS3Path.let(IResolvable::unwrap))
@@ -2280,6 +2405,8 @@ public open class CfnDataSource internal constructor(
 
       public fun inlineConfigurations(inlineConfigurations: List<Any>)
 
+      public fun inlineConfigurations(vararg inlineConfigurations: Any)
+
       public fun postExtractionHookConfiguration(postExtractionHookConfiguration: IResolvable)
 
       public
@@ -2316,6 +2443,9 @@ public open class CfnDataSource internal constructor(
       override fun inlineConfigurations(inlineConfigurations: List<Any>) {
         cdkBuilder.inlineConfigurations(inlineConfigurations)
       }
+
+      override fun inlineConfigurations(vararg inlineConfigurations: Any): Unit =
+          inlineConfigurations(inlineConfigurations.toList())
 
       override fun postExtractionHookConfiguration(postExtractionHookConfiguration: IResolvable) {
         cdkBuilder.postExtractionHookConfiguration(postExtractionHookConfiguration.let(IResolvable::unwrap))
@@ -2413,7 +2543,11 @@ public open class CfnDataSource internal constructor(
 
       public fun fieldMappings(fieldMappings: List<Any>)
 
+      public fun fieldMappings(vararg fieldMappings: Any)
+
       public fun includeFilterTypes(includeFilterTypes: List<String>)
+
+      public fun includeFilterTypes(vararg includeFilterTypes: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2438,9 +2572,15 @@ public open class CfnDataSource internal constructor(
         cdkBuilder.fieldMappings(fieldMappings)
       }
 
+      override fun fieldMappings(vararg fieldMappings: Any): Unit =
+          fieldMappings(fieldMappings.toList())
+
       override fun includeFilterTypes(includeFilterTypes: List<String>) {
         cdkBuilder.includeFilterTypes(includeFilterTypes)
       }
+
+      override fun includeFilterTypes(vararg includeFilterTypes: String): Unit =
+          includeFilterTypes(includeFilterTypes.toList())
 
       public fun build():
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceChatterFeedConfigurationProperty
@@ -2508,11 +2648,17 @@ public open class CfnDataSource internal constructor(
 
       public fun excludeAttachmentFilePatterns(excludeAttachmentFilePatterns: List<String>)
 
+      public fun excludeAttachmentFilePatterns(vararg excludeAttachmentFilePatterns: String)
+
       public fun fieldMappings(fieldMappings: IResolvable)
 
       public fun fieldMappings(fieldMappings: List<Any>)
 
+      public fun fieldMappings(vararg fieldMappings: Any)
+
       public fun includeAttachmentFilePatterns(includeAttachmentFilePatterns: List<String>)
+
+      public fun includeAttachmentFilePatterns(vararg includeAttachmentFilePatterns: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2541,6 +2687,9 @@ public open class CfnDataSource internal constructor(
         cdkBuilder.excludeAttachmentFilePatterns(excludeAttachmentFilePatterns)
       }
 
+      override fun excludeAttachmentFilePatterns(vararg excludeAttachmentFilePatterns: String): Unit
+          = excludeAttachmentFilePatterns(excludeAttachmentFilePatterns.toList())
+
       override fun fieldMappings(fieldMappings: IResolvable) {
         cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
       }
@@ -2549,9 +2698,15 @@ public open class CfnDataSource internal constructor(
         cdkBuilder.fieldMappings(fieldMappings)
       }
 
+      override fun fieldMappings(vararg fieldMappings: Any): Unit =
+          fieldMappings(fieldMappings.toList())
+
       override fun includeAttachmentFilePatterns(includeAttachmentFilePatterns: List<String>) {
         cdkBuilder.includeAttachmentFilePatterns(includeAttachmentFilePatterns)
       }
+
+      override fun includeAttachmentFilePatterns(vararg includeAttachmentFilePatterns: String): Unit
+          = includeAttachmentFilePatterns(includeAttachmentFilePatterns.toList())
 
       public fun build():
           software.amazon.awscdk.services.kendra.CfnDataSource.ServiceNowServiceCatalogConfigurationProperty
@@ -3010,6 +3165,8 @@ public open class CfnDataSource internal constructor(
 
       public fun fieldMappings(fieldMappings: List<Any>)
 
+      public fun fieldMappings(vararg fieldMappings: Any)
+
       public fun name(name: String)
     }
 
@@ -3034,6 +3191,9 @@ public open class CfnDataSource internal constructor(
       override fun fieldMappings(fieldMappings: List<Any>) {
         cdkBuilder.fieldMappings(fieldMappings)
       }
+
+      override fun fieldMappings(vararg fieldMappings: Any): Unit =
+          fieldMappings(fieldMappings.toList())
 
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -3083,6 +3243,8 @@ public open class CfnDataSource internal constructor(
 
     public interface Builder {
       public fun siteMaps(siteMaps: List<String>)
+
+      public fun siteMaps(vararg siteMaps: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3095,6 +3257,8 @@ public open class CfnDataSource internal constructor(
         cdkBuilder.siteMaps(siteMaps)
       }
 
+      override fun siteMaps(vararg siteMaps: String): Unit = siteMaps(siteMaps.toList())
+
       public fun build():
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerSiteMapsConfigurationProperty
           = cdkBuilder.build()
@@ -3104,7 +3268,7 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerSiteMapsConfigurationProperty,
     ) : WebCrawlerSiteMapsConfigurationProperty {
-      override fun siteMaps(): List<String> = unwrap(this).getSiteMaps() ?: emptyList()
+      override fun siteMaps(): List<String> = unwrap(this).getSiteMaps()
     }
 
     public companion object {
@@ -3239,11 +3403,17 @@ public open class CfnDataSource internal constructor(
 
       public fun exclusionPatterns(exclusionPatterns: List<String>)
 
+      public fun exclusionPatterns(vararg exclusionPatterns: String)
+
       public fun fieldMappings(fieldMappings: IResolvable)
 
       public fun fieldMappings(fieldMappings: List<Any>)
 
+      public fun fieldMappings(vararg fieldMappings: Any)
+
       public fun inclusionPatterns(inclusionPatterns: List<String>)
+
+      public fun inclusionPatterns(vararg inclusionPatterns: String)
 
       public fun organizationId(organizationId: String)
 
@@ -3270,6 +3440,9 @@ public open class CfnDataSource internal constructor(
         cdkBuilder.exclusionPatterns(exclusionPatterns)
       }
 
+      override fun exclusionPatterns(vararg exclusionPatterns: String): Unit =
+          exclusionPatterns(exclusionPatterns.toList())
+
       override fun fieldMappings(fieldMappings: IResolvable) {
         cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
       }
@@ -3278,9 +3451,15 @@ public open class CfnDataSource internal constructor(
         cdkBuilder.fieldMappings(fieldMappings)
       }
 
+      override fun fieldMappings(vararg fieldMappings: Any): Unit =
+          fieldMappings(fieldMappings.toList())
+
       override fun inclusionPatterns(inclusionPatterns: List<String>) {
         cdkBuilder.inclusionPatterns(inclusionPatterns)
       }
+
+      override fun inclusionPatterns(vararg inclusionPatterns: String): Unit =
+          inclusionPatterns(inclusionPatterns.toList())
 
       override fun organizationId(organizationId: String) {
         cdkBuilder.organizationId(organizationId)
@@ -3378,7 +3557,11 @@ public open class CfnDataSource internal constructor(
 
       public fun excludeAttachmentFilePatterns(excludeAttachmentFilePatterns: List<String>)
 
+      public fun excludeAttachmentFilePatterns(vararg excludeAttachmentFilePatterns: String)
+
       public fun includeAttachmentFilePatterns(includeAttachmentFilePatterns: List<String>)
+
+      public fun includeAttachmentFilePatterns(vararg includeAttachmentFilePatterns: String)
 
       public fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: IResolvable)
 
@@ -3408,6 +3591,8 @@ public open class CfnDataSource internal constructor(
       public fun standardObjectConfigurations(standardObjectConfigurations: IResolvable)
 
       public fun standardObjectConfigurations(standardObjectConfigurations: List<Any>)
+
+      public fun standardObjectConfigurations(vararg standardObjectConfigurations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -3444,9 +3629,15 @@ public open class CfnDataSource internal constructor(
         cdkBuilder.excludeAttachmentFilePatterns(excludeAttachmentFilePatterns)
       }
 
+      override fun excludeAttachmentFilePatterns(vararg excludeAttachmentFilePatterns: String): Unit
+          = excludeAttachmentFilePatterns(excludeAttachmentFilePatterns.toList())
+
       override fun includeAttachmentFilePatterns(includeAttachmentFilePatterns: List<String>) {
         cdkBuilder.includeAttachmentFilePatterns(includeAttachmentFilePatterns)
       }
+
+      override fun includeAttachmentFilePatterns(vararg includeAttachmentFilePatterns: String): Unit
+          = includeAttachmentFilePatterns(includeAttachmentFilePatterns.toList())
 
       override fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: IResolvable) {
         cdkBuilder.knowledgeArticleConfiguration(knowledgeArticleConfiguration.let(IResolvable::unwrap))
@@ -3496,6 +3687,9 @@ public open class CfnDataSource internal constructor(
       override fun standardObjectConfigurations(standardObjectConfigurations: List<Any>) {
         cdkBuilder.standardObjectConfigurations(standardObjectConfigurations)
       }
+
+      override fun standardObjectConfigurations(vararg standardObjectConfigurations: Any): Unit =
+          standardObjectConfigurations(standardObjectConfigurations.toList())
 
       public fun build():
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceConfigurationProperty =
@@ -3676,6 +3870,8 @@ public open class CfnDataSource internal constructor(
     public interface Builder {
       public fun seedUrls(seedUrls: List<String>)
 
+      public fun seedUrls(vararg seedUrls: String)
+
       public fun webCrawlerMode(webCrawlerMode: String)
     }
 
@@ -3688,6 +3884,8 @@ public open class CfnDataSource internal constructor(
       override fun seedUrls(seedUrls: List<String>) {
         cdkBuilder.seedUrls(seedUrls)
       }
+
+      override fun seedUrls(vararg seedUrls: String): Unit = seedUrls(seedUrls.toList())
 
       override fun webCrawlerMode(webCrawlerMode: String) {
         cdkBuilder.webCrawlerMode(webCrawlerMode)
@@ -3702,7 +3900,7 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerSeedUrlConfigurationProperty,
     ) : WebCrawlerSeedUrlConfigurationProperty {
-      override fun seedUrls(): List<String> = unwrap(this).getSeedUrls() ?: emptyList()
+      override fun seedUrls(): List<String> = unwrap(this).getSeedUrls()
 
       override fun webCrawlerMode(): String? = unwrap(this).getWebCrawlerMode()
     }
@@ -3739,6 +3937,8 @@ public open class CfnDataSource internal constructor(
       public fun fieldMappings(fieldMappings: IResolvable)
 
       public fun fieldMappings(fieldMappings: List<Any>)
+
+      public fun fieldMappings(vararg fieldMappings: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -3758,6 +3958,9 @@ public open class CfnDataSource internal constructor(
       override fun fieldMappings(fieldMappings: List<Any>) {
         cdkBuilder.fieldMappings(fieldMappings)
       }
+
+      override fun fieldMappings(vararg fieldMappings: Any): Unit =
+          fieldMappings(fieldMappings.toList())
 
       public fun build():
           software.amazon.awscdk.services.kendra.CfnDataSource.SalesforceStandardObjectAttachmentConfigurationProperty
@@ -4148,6 +4351,8 @@ public open class CfnDataSource internal constructor(
       public fun blogFieldMappings(blogFieldMappings: IResolvable)
 
       public fun blogFieldMappings(blogFieldMappings: List<Any>)
+
+      public fun blogFieldMappings(vararg blogFieldMappings: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -4163,6 +4368,9 @@ public open class CfnDataSource internal constructor(
       override fun blogFieldMappings(blogFieldMappings: List<Any>) {
         cdkBuilder.blogFieldMappings(blogFieldMappings)
       }
+
+      override fun blogFieldMappings(vararg blogFieldMappings: Any): Unit =
+          blogFieldMappings(blogFieldMappings.toList())
 
       public fun build():
           software.amazon.awscdk.services.kendra.CfnDataSource.ConfluenceBlogConfigurationProperty =
@@ -4641,6 +4849,8 @@ public open class CfnDataSource internal constructor(
 
       public fun attachmentFieldMappings(attachmentFieldMappings: List<Any>)
 
+      public fun attachmentFieldMappings(vararg attachmentFieldMappings: Any)
+
       public fun crawlAttachments(crawlAttachments: Boolean)
 
       public fun crawlAttachments(crawlAttachments: IResolvable)
@@ -4659,6 +4869,9 @@ public open class CfnDataSource internal constructor(
       override fun attachmentFieldMappings(attachmentFieldMappings: List<Any>) {
         cdkBuilder.attachmentFieldMappings(attachmentFieldMappings)
       }
+
+      override fun attachmentFieldMappings(vararg attachmentFieldMappings: Any): Unit =
+          attachmentFieldMappings(attachmentFieldMappings.toList())
 
       override fun crawlAttachments(crawlAttachments: Boolean) {
         cdkBuilder.crawlAttachments(crawlAttachments)
@@ -4852,9 +5065,15 @@ public open class CfnDataSource internal constructor(
 
       public fun exclusionPatterns(exclusionPatterns: List<String>)
 
+      public fun exclusionPatterns(vararg exclusionPatterns: String)
+
       public fun inclusionPatterns(inclusionPatterns: List<String>)
 
+      public fun inclusionPatterns(vararg inclusionPatterns: String)
+
       public fun inclusionPrefixes(inclusionPrefixes: List<String>)
+
+      public fun inclusionPrefixes(vararg inclusionPrefixes: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4903,13 +5122,22 @@ public open class CfnDataSource internal constructor(
         cdkBuilder.exclusionPatterns(exclusionPatterns)
       }
 
+      override fun exclusionPatterns(vararg exclusionPatterns: String): Unit =
+          exclusionPatterns(exclusionPatterns.toList())
+
       override fun inclusionPatterns(inclusionPatterns: List<String>) {
         cdkBuilder.inclusionPatterns(inclusionPatterns)
       }
 
+      override fun inclusionPatterns(vararg inclusionPatterns: String): Unit =
+          inclusionPatterns(inclusionPatterns.toList())
+
       override fun inclusionPrefixes(inclusionPrefixes: List<String>) {
         cdkBuilder.inclusionPrefixes(inclusionPrefixes)
       }
+
+      override fun inclusionPrefixes(vararg inclusionPrefixes: String): Unit =
+          inclusionPrefixes(inclusionPrefixes.toList())
 
       public fun build():
           software.amazon.awscdk.services.kendra.CfnDataSource.S3DataSourceConfigurationProperty =
@@ -4973,6 +5201,8 @@ public open class CfnDataSource internal constructor(
     public interface Builder {
       public fun changeDetectingColumns(changeDetectingColumns: List<String>)
 
+      public fun changeDetectingColumns(vararg changeDetectingColumns: String)
+
       public fun documentDataColumnName(documentDataColumnName: String)
 
       public fun documentIdColumnName(documentIdColumnName: String)
@@ -4982,6 +5212,8 @@ public open class CfnDataSource internal constructor(
       public fun fieldMappings(fieldMappings: IResolvable)
 
       public fun fieldMappings(fieldMappings: List<Any>)
+
+      public fun fieldMappings(vararg fieldMappings: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -4992,6 +5224,9 @@ public open class CfnDataSource internal constructor(
       override fun changeDetectingColumns(changeDetectingColumns: List<String>) {
         cdkBuilder.changeDetectingColumns(changeDetectingColumns)
       }
+
+      override fun changeDetectingColumns(vararg changeDetectingColumns: String): Unit =
+          changeDetectingColumns(changeDetectingColumns.toList())
 
       override fun documentDataColumnName(documentDataColumnName: String) {
         cdkBuilder.documentDataColumnName(documentDataColumnName)
@@ -5013,6 +5248,9 @@ public open class CfnDataSource internal constructor(
         cdkBuilder.fieldMappings(fieldMappings)
       }
 
+      override fun fieldMappings(vararg fieldMappings: Any): Unit =
+          fieldMappings(fieldMappings.toList())
+
       public fun build():
           software.amazon.awscdk.services.kendra.CfnDataSource.ColumnConfigurationProperty =
           cdkBuilder.build()
@@ -5023,7 +5261,6 @@ public open class CfnDataSource internal constructor(
           software.amazon.awscdk.services.kendra.CfnDataSource.ColumnConfigurationProperty,
     ) : ColumnConfigurationProperty {
       override fun changeDetectingColumns(): List<String> = unwrap(this).getChangeDetectingColumns()
-          ?: emptyList()
 
       override fun documentDataColumnName(): String = unwrap(this).getDocumentDataColumnName()
 
@@ -5082,13 +5319,19 @@ public open class CfnDataSource internal constructor(
 
       public fun excludeAttachmentFilePatterns(excludeAttachmentFilePatterns: List<String>)
 
+      public fun excludeAttachmentFilePatterns(vararg excludeAttachmentFilePatterns: String)
+
       public fun fieldMappings(fieldMappings: IResolvable)
 
       public fun fieldMappings(fieldMappings: List<Any>)
 
+      public fun fieldMappings(vararg fieldMappings: Any)
+
       public fun filterQuery(filterQuery: String)
 
       public fun includeAttachmentFilePatterns(includeAttachmentFilePatterns: List<String>)
+
+      public fun includeAttachmentFilePatterns(vararg includeAttachmentFilePatterns: String)
     }
 
     private class BuilderImpl : Builder {
@@ -5117,6 +5360,9 @@ public open class CfnDataSource internal constructor(
         cdkBuilder.excludeAttachmentFilePatterns(excludeAttachmentFilePatterns)
       }
 
+      override fun excludeAttachmentFilePatterns(vararg excludeAttachmentFilePatterns: String): Unit
+          = excludeAttachmentFilePatterns(excludeAttachmentFilePatterns.toList())
+
       override fun fieldMappings(fieldMappings: IResolvable) {
         cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
       }
@@ -5125,6 +5371,9 @@ public open class CfnDataSource internal constructor(
         cdkBuilder.fieldMappings(fieldMappings)
       }
 
+      override fun fieldMappings(vararg fieldMappings: Any): Unit =
+          fieldMappings(fieldMappings.toList())
+
       override fun filterQuery(filterQuery: String) {
         cdkBuilder.filterQuery(filterQuery)
       }
@@ -5132,6 +5381,9 @@ public open class CfnDataSource internal constructor(
       override fun includeAttachmentFilePatterns(includeAttachmentFilePatterns: List<String>) {
         cdkBuilder.includeAttachmentFilePatterns(includeAttachmentFilePatterns)
       }
+
+      override fun includeAttachmentFilePatterns(vararg includeAttachmentFilePatterns: String): Unit
+          = includeAttachmentFilePatterns(includeAttachmentFilePatterns.toList())
 
       public fun build():
           software.amazon.awscdk.services.kendra.CfnDataSource.ServiceNowKnowledgeArticleConfigurationProperty
@@ -5202,17 +5454,29 @@ public open class CfnDataSource internal constructor(
     public interface Builder {
       public fun excludeMimeTypes(excludeMimeTypes: List<String>)
 
+      public fun excludeMimeTypes(vararg excludeMimeTypes: String)
+
       public fun excludeSharedDrives(excludeSharedDrives: List<String>)
+
+      public fun excludeSharedDrives(vararg excludeSharedDrives: String)
 
       public fun excludeUserAccounts(excludeUserAccounts: List<String>)
 
+      public fun excludeUserAccounts(vararg excludeUserAccounts: String)
+
       public fun exclusionPatterns(exclusionPatterns: List<String>)
+
+      public fun exclusionPatterns(vararg exclusionPatterns: String)
 
       public fun fieldMappings(fieldMappings: IResolvable)
 
       public fun fieldMappings(fieldMappings: List<Any>)
 
+      public fun fieldMappings(vararg fieldMappings: Any)
+
       public fun inclusionPatterns(inclusionPatterns: List<String>)
+
+      public fun inclusionPatterns(vararg inclusionPatterns: String)
 
       public fun secretArn(secretArn: String)
     }
@@ -5227,17 +5491,29 @@ public open class CfnDataSource internal constructor(
         cdkBuilder.excludeMimeTypes(excludeMimeTypes)
       }
 
+      override fun excludeMimeTypes(vararg excludeMimeTypes: String): Unit =
+          excludeMimeTypes(excludeMimeTypes.toList())
+
       override fun excludeSharedDrives(excludeSharedDrives: List<String>) {
         cdkBuilder.excludeSharedDrives(excludeSharedDrives)
       }
+
+      override fun excludeSharedDrives(vararg excludeSharedDrives: String): Unit =
+          excludeSharedDrives(excludeSharedDrives.toList())
 
       override fun excludeUserAccounts(excludeUserAccounts: List<String>) {
         cdkBuilder.excludeUserAccounts(excludeUserAccounts)
       }
 
+      override fun excludeUserAccounts(vararg excludeUserAccounts: String): Unit =
+          excludeUserAccounts(excludeUserAccounts.toList())
+
       override fun exclusionPatterns(exclusionPatterns: List<String>) {
         cdkBuilder.exclusionPatterns(exclusionPatterns)
       }
+
+      override fun exclusionPatterns(vararg exclusionPatterns: String): Unit =
+          exclusionPatterns(exclusionPatterns.toList())
 
       override fun fieldMappings(fieldMappings: IResolvable) {
         cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
@@ -5247,9 +5523,15 @@ public open class CfnDataSource internal constructor(
         cdkBuilder.fieldMappings(fieldMappings)
       }
 
+      override fun fieldMappings(vararg fieldMappings: Any): Unit =
+          fieldMappings(fieldMappings.toList())
+
       override fun inclusionPatterns(inclusionPatterns: List<String>) {
         cdkBuilder.inclusionPatterns(inclusionPatterns)
       }
+
+      override fun inclusionPatterns(vararg inclusionPatterns: String): Unit =
+          inclusionPatterns(inclusionPatterns.toList())
 
       override fun secretArn(secretArn: String) {
         cdkBuilder.secretArn(secretArn)

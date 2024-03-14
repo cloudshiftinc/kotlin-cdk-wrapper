@@ -31,11 +31,13 @@ public open class CfnEnvironmentBlueprintConfiguration internal constructor(
     unwrap(this).setDomainIdentifier(`value`)
   }
 
-  public open fun enabledRegions(): List<String> = unwrap(this).getEnabledRegions() ?: emptyList()
+  public open fun enabledRegions(): List<String> = unwrap(this).getEnabledRegions()
 
   public open fun enabledRegions(`value`: List<String>) {
     unwrap(this).setEnabledRegions(`value`)
   }
+
+  public open fun enabledRegions(vararg `value`: String): Unit = enabledRegions(`value`.toList())
 
   public open fun environmentBlueprintIdentifier(): String =
       unwrap(this).getEnvironmentBlueprintIdentifier()
@@ -70,10 +72,15 @@ public open class CfnEnvironmentBlueprintConfiguration internal constructor(
     unwrap(this).setRegionalParameters(__idx_ac66f0)
   }
 
+  public open fun regionalParameters(vararg __idx_ac66f0: Any): Unit =
+      regionalParameters(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun domainIdentifier(domainIdentifier: String)
 
     public fun enabledRegions(enabledRegions: List<String>)
+
+    public fun enabledRegions(vararg enabledRegions: String)
 
     public fun environmentBlueprintIdentifier(environmentBlueprintIdentifier: String)
 
@@ -84,6 +91,8 @@ public open class CfnEnvironmentBlueprintConfiguration internal constructor(
     public fun regionalParameters(regionalParameters: IResolvable)
 
     public fun regionalParameters(regionalParameters: List<Any>)
+
+    public fun regionalParameters(vararg regionalParameters: Any)
   }
 
   private class BuilderImpl(
@@ -102,6 +111,9 @@ public open class CfnEnvironmentBlueprintConfiguration internal constructor(
     override fun enabledRegions(enabledRegions: List<String>) {
       cdkBuilder.enabledRegions(enabledRegions)
     }
+
+    override fun enabledRegions(vararg enabledRegions: String): Unit =
+        enabledRegions(enabledRegions.toList())
 
     override fun environmentBlueprintIdentifier(environmentBlueprintIdentifier: String) {
       cdkBuilder.environmentBlueprintIdentifier(environmentBlueprintIdentifier)
@@ -122,6 +134,9 @@ public open class CfnEnvironmentBlueprintConfiguration internal constructor(
     override fun regionalParameters(regionalParameters: List<Any>) {
       cdkBuilder.regionalParameters(regionalParameters)
     }
+
+    override fun regionalParameters(vararg regionalParameters: Any): Unit =
+        regionalParameters(regionalParameters.toList())
 
     public fun build():
         software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration =

@@ -33,6 +33,9 @@ public open class CfnSecurityProfile internal constructor(
     unwrap(this).setAdditionalMetricsToRetainV2(__idx_ac66f0)
   }
 
+  public open fun additionalMetricsToRetainV2(vararg __idx_ac66f0: Any): Unit =
+      additionalMetricsToRetainV2(__idx_ac66f0.toList())
+
   public open fun alertTargets(): Any? = unwrap(this).getAlertTargets()
 
   public open fun alertTargets(`value`: IResolvable) {
@@ -54,6 +57,8 @@ public open class CfnSecurityProfile internal constructor(
   public open fun behaviors(__idx_ac66f0: List<Any>) {
     unwrap(this).setBehaviors(__idx_ac66f0)
   }
+
+  public open fun behaviors(vararg __idx_ac66f0: Any): Unit = behaviors(__idx_ac66f0.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -96,16 +101,22 @@ public open class CfnSecurityProfile internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun targetArns(): List<String> = unwrap(this).getTargetArns() ?: emptyList()
 
   public open fun targetArns(`value`: List<String>) {
     unwrap(this).setTargetArns(`value`)
   }
 
+  public open fun targetArns(vararg `value`: String): Unit = targetArns(`value`.toList())
+
   public interface Builder {
     public fun additionalMetricsToRetainV2(additionalMetricsToRetainV2: IResolvable)
 
     public fun additionalMetricsToRetainV2(additionalMetricsToRetainV2: List<Any>)
+
+    public fun additionalMetricsToRetainV2(vararg additionalMetricsToRetainV2: Any)
 
     public fun alertTargets(alertTargets: IResolvable)
 
@@ -114,6 +125,8 @@ public open class CfnSecurityProfile internal constructor(
     public fun behaviors(behaviors: IResolvable)
 
     public fun behaviors(behaviors: List<Any>)
+
+    public fun behaviors(vararg behaviors: Any)
 
     public fun metricsExportConfig(metricsExportConfig: IResolvable)
 
@@ -130,7 +143,11 @@ public open class CfnSecurityProfile internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun targetArns(targetArns: List<String>)
+
+    public fun targetArns(vararg targetArns: String)
   }
 
   private class BuilderImpl(
@@ -148,6 +165,9 @@ public open class CfnSecurityProfile internal constructor(
       cdkBuilder.additionalMetricsToRetainV2(additionalMetricsToRetainV2)
     }
 
+    override fun additionalMetricsToRetainV2(vararg additionalMetricsToRetainV2: Any): Unit =
+        additionalMetricsToRetainV2(additionalMetricsToRetainV2.toList())
+
     override fun alertTargets(alertTargets: IResolvable) {
       cdkBuilder.alertTargets(alertTargets.let(IResolvable::unwrap))
     }
@@ -163,6 +183,8 @@ public open class CfnSecurityProfile internal constructor(
     override fun behaviors(behaviors: List<Any>) {
       cdkBuilder.behaviors(behaviors)
     }
+
+    override fun behaviors(vararg behaviors: Any): Unit = behaviors(behaviors.toList())
 
     override fun metricsExportConfig(metricsExportConfig: IResolvable) {
       cdkBuilder.metricsExportConfig(metricsExportConfig.let(IResolvable::unwrap))
@@ -190,9 +212,13 @@ public open class CfnSecurityProfile internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun targetArns(targetArns: List<String>) {
       cdkBuilder.targetArns(targetArns)
     }
+
+    override fun targetArns(vararg targetArns: String): Unit = targetArns(targetArns.toList())
 
     public fun build(): software.amazon.awscdk.services.iot.CfnSecurityProfile = cdkBuilder.build()
   }
@@ -678,6 +704,8 @@ public open class CfnSecurityProfile internal constructor(
     public interface Builder {
       public fun cidrs(cidrs: List<String>)
 
+      public fun cidrs(vararg cidrs: String)
+
       public fun count(count: String)
 
       public fun number(number: Number)
@@ -686,11 +714,17 @@ public open class CfnSecurityProfile internal constructor(
 
       public fun numbers(numbers: List<Number>)
 
+      public fun numbers(vararg numbers: Number)
+
       public fun ports(ports: IResolvable)
 
       public fun ports(ports: List<Number>)
 
+      public fun ports(vararg ports: Number)
+
       public fun strings(strings: List<String>)
+
+      public fun strings(vararg strings: String)
     }
 
     private class BuilderImpl : Builder {
@@ -701,6 +735,8 @@ public open class CfnSecurityProfile internal constructor(
       override fun cidrs(cidrs: List<String>) {
         cdkBuilder.cidrs(cidrs)
       }
+
+      override fun cidrs(vararg cidrs: String): Unit = cidrs(cidrs.toList())
 
       override fun count(count: String) {
         cdkBuilder.count(count)
@@ -718,6 +754,8 @@ public open class CfnSecurityProfile internal constructor(
         cdkBuilder.numbers(numbers)
       }
 
+      override fun numbers(vararg numbers: Number): Unit = numbers(numbers.toList())
+
       override fun ports(ports: IResolvable) {
         cdkBuilder.ports(ports.let(IResolvable::unwrap))
       }
@@ -726,9 +764,13 @@ public open class CfnSecurityProfile internal constructor(
         cdkBuilder.ports(ports)
       }
 
+      override fun ports(vararg ports: Number): Unit = ports(ports.toList())
+
       override fun strings(strings: List<String>) {
         cdkBuilder.strings(strings)
       }
+
+      override fun strings(vararg strings: String): Unit = strings(strings.toList())
 
       public fun build(): software.amazon.awscdk.services.iot.CfnSecurityProfile.MetricValueProperty
           = cdkBuilder.build()

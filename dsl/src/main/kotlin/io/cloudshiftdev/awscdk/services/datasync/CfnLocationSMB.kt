@@ -19,11 +19,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLocationSMB internal constructor(
   private val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationSMB,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
-  public open fun agentArns(): List<String> = unwrap(this).getAgentArns() ?: emptyList()
+  public open fun agentArns(): List<String> = unwrap(this).getAgentArns()
 
   public open fun agentArns(`value`: List<String>) {
     unwrap(this).setAgentArns(`value`)
   }
+
+  public open fun agentArns(vararg `value`: String): Unit = agentArns(`value`.toList())
 
   public open fun attrLocationArn(): String = unwrap(this).getAttrLocationArn()
 
@@ -81,6 +83,8 @@ public open class CfnLocationSMB internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun user(): String = unwrap(this).getUser()
 
   public open fun user(`value`: String) {
@@ -89,6 +93,8 @@ public open class CfnLocationSMB internal constructor(
 
   public interface Builder {
     public fun agentArns(agentArns: List<String>)
+
+    public fun agentArns(vararg agentArns: String)
 
     public fun domain(domain: String)
 
@@ -108,6 +114,8 @@ public open class CfnLocationSMB internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun user(user: String)
   }
 
@@ -121,6 +129,8 @@ public open class CfnLocationSMB internal constructor(
     override fun agentArns(agentArns: List<String>) {
       cdkBuilder.agentArns(agentArns)
     }
+
+    override fun agentArns(vararg agentArns: String): Unit = agentArns(agentArns.toList())
 
     override fun domain(domain: String) {
       cdkBuilder.domain(domain)
@@ -154,6 +164,8 @@ public open class CfnLocationSMB internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun user(user: String) {
       cdkBuilder.user(user)

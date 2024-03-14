@@ -17,6 +17,8 @@ public open class QueryDefinition internal constructor(
   public interface Builder {
     public fun logGroups(logGroups: List<ILogGroup>)
 
+    public fun logGroups(vararg logGroups: ILogGroup)
+
     public fun queryDefinitionName(queryDefinitionName: String)
 
     public fun queryString(queryString: QueryString)
@@ -36,6 +38,8 @@ public open class QueryDefinition internal constructor(
     override fun logGroups(logGroups: List<ILogGroup>) {
       cdkBuilder.logGroups(logGroups.map(ILogGroup::unwrap))
     }
+
+    override fun logGroups(vararg logGroups: ILogGroup): Unit = logGroups(logGroups.toList())
 
     override fun queryDefinitionName(queryDefinitionName: String) {
       cdkBuilder.queryDefinitionName(queryDefinitionName)

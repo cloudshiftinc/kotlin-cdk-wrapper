@@ -77,9 +77,15 @@ public interface DatabaseProxyOptions {
 
     public fun secrets(secrets: List<ISecret>)
 
+    public fun secrets(vararg secrets: ISecret)
+
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
+
     public fun sessionPinningFilters(sessionPinningFilters: List<SessionPinningFilter>)
+
+    public fun sessionPinningFilters(vararg sessionPinningFilters: SessionPinningFilter)
 
     public fun vpc(vpc: IVpc)
 
@@ -142,13 +148,21 @@ public interface DatabaseProxyOptions {
       cdkBuilder.secrets(secrets.map(ISecret::unwrap))
     }
 
+    override fun secrets(vararg secrets: ISecret): Unit = secrets(secrets.toList())
+
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
+
     override fun sessionPinningFilters(sessionPinningFilters: List<SessionPinningFilter>) {
       cdkBuilder.sessionPinningFilters(sessionPinningFilters.map(SessionPinningFilter::unwrap))
     }
+
+    override fun sessionPinningFilters(vararg sessionPinningFilters: SessionPinningFilter): Unit =
+        sessionPinningFilters(sessionPinningFilters.toList())
 
     override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))

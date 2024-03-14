@@ -191,9 +191,15 @@ public open class CfnBackupSelection internal constructor(
 
       public fun listOfTags(listOfTags: List<Any>)
 
+      public fun listOfTags(vararg listOfTags: Any)
+
       public fun notResources(notResources: List<String>)
 
+      public fun notResources(vararg notResources: String)
+
       public fun resources(resources: List<String>)
+
+      public fun resources(vararg resources: String)
 
       public fun selectionName(selectionName: String)
     }
@@ -220,13 +226,20 @@ public open class CfnBackupSelection internal constructor(
         cdkBuilder.listOfTags(listOfTags)
       }
 
+      override fun listOfTags(vararg listOfTags: Any): Unit = listOfTags(listOfTags.toList())
+
       override fun notResources(notResources: List<String>) {
         cdkBuilder.notResources(notResources)
       }
 
+      override fun notResources(vararg notResources: String): Unit =
+          notResources(notResources.toList())
+
       override fun resources(resources: List<String>) {
         cdkBuilder.resources(resources)
       }
+
+      override fun resources(vararg resources: String): Unit = resources(resources.toList())
 
       override fun selectionName(selectionName: String) {
         cdkBuilder.selectionName(selectionName)
@@ -358,17 +371,25 @@ public open class CfnBackupSelection internal constructor(
 
       public fun stringEquals(stringEquals: List<Any>)
 
+      public fun stringEquals(vararg stringEquals: Any)
+
       public fun stringLike(stringLike: IResolvable)
 
       public fun stringLike(stringLike: List<Any>)
+
+      public fun stringLike(vararg stringLike: Any)
 
       public fun stringNotEquals(stringNotEquals: IResolvable)
 
       public fun stringNotEquals(stringNotEquals: List<Any>)
 
+      public fun stringNotEquals(vararg stringNotEquals: Any)
+
       public fun stringNotLike(stringNotLike: IResolvable)
 
       public fun stringNotLike(stringNotLike: List<Any>)
+
+      public fun stringNotLike(vararg stringNotLike: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -384,6 +405,9 @@ public open class CfnBackupSelection internal constructor(
         cdkBuilder.stringEquals(stringEquals)
       }
 
+      override fun stringEquals(vararg stringEquals: Any): Unit =
+          stringEquals(stringEquals.toList())
+
       override fun stringLike(stringLike: IResolvable) {
         cdkBuilder.stringLike(stringLike.let(IResolvable::unwrap))
       }
@@ -391,6 +415,8 @@ public open class CfnBackupSelection internal constructor(
       override fun stringLike(stringLike: List<Any>) {
         cdkBuilder.stringLike(stringLike)
       }
+
+      override fun stringLike(vararg stringLike: Any): Unit = stringLike(stringLike.toList())
 
       override fun stringNotEquals(stringNotEquals: IResolvable) {
         cdkBuilder.stringNotEquals(stringNotEquals.let(IResolvable::unwrap))
@@ -400,6 +426,9 @@ public open class CfnBackupSelection internal constructor(
         cdkBuilder.stringNotEquals(stringNotEquals)
       }
 
+      override fun stringNotEquals(vararg stringNotEquals: Any): Unit =
+          stringNotEquals(stringNotEquals.toList())
+
       override fun stringNotLike(stringNotLike: IResolvable) {
         cdkBuilder.stringNotLike(stringNotLike.let(IResolvable::unwrap))
       }
@@ -407,6 +436,9 @@ public open class CfnBackupSelection internal constructor(
       override fun stringNotLike(stringNotLike: List<Any>) {
         cdkBuilder.stringNotLike(stringNotLike)
       }
+
+      override fun stringNotLike(vararg stringNotLike: Any): Unit =
+          stringNotLike(stringNotLike.toList())
 
       public fun build():
           software.amazon.awscdk.services.backup.CfnBackupSelection.ConditionsProperty =

@@ -67,6 +67,8 @@ public open class CfnResolverRule internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun targetIps(): Any? = unwrap(this).getTargetIps()
 
   public open fun targetIps(`value`: IResolvable) {
@@ -76,6 +78,8 @@ public open class CfnResolverRule internal constructor(
   public open fun targetIps(__idx_ac66f0: List<Any>) {
     unwrap(this).setTargetIps(__idx_ac66f0)
   }
+
+  public open fun targetIps(vararg __idx_ac66f0: Any): Unit = targetIps(__idx_ac66f0.toList())
 
   public interface Builder {
     public fun domainName(domainName: String)
@@ -88,9 +92,13 @@ public open class CfnResolverRule internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun targetIps(targetIps: IResolvable)
 
     public fun targetIps(targetIps: List<Any>)
+
+    public fun targetIps(vararg targetIps: Any)
   }
 
   private class BuilderImpl(
@@ -120,6 +128,8 @@ public open class CfnResolverRule internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun targetIps(targetIps: IResolvable) {
       cdkBuilder.targetIps(targetIps.let(IResolvable::unwrap))
     }
@@ -127,6 +137,8 @@ public open class CfnResolverRule internal constructor(
     override fun targetIps(targetIps: List<Any>) {
       cdkBuilder.targetIps(targetIps)
     }
+
+    override fun targetIps(vararg targetIps: Any): Unit = targetIps(targetIps.toList())
 
     public fun build(): software.amazon.awscdk.services.route53resolver.CfnResolverRule =
         cdkBuilder.build()

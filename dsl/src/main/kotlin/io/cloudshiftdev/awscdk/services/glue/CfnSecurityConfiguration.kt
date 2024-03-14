@@ -136,6 +136,8 @@ public open class CfnSecurityConfiguration internal constructor(
       public fun s3Encryptions(s3Encryptions: IResolvable)
 
       public fun s3Encryptions(s3Encryptions: List<Any>)
+
+      public fun s3Encryptions(vararg s3Encryptions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -179,6 +181,9 @@ public open class CfnSecurityConfiguration internal constructor(
       override fun s3Encryptions(s3Encryptions: List<Any>) {
         cdkBuilder.s3Encryptions(s3Encryptions)
       }
+
+      override fun s3Encryptions(vararg s3Encryptions: Any): Unit =
+          s3Encryptions(s3Encryptions.toList())
 
       public fun build():
           software.amazon.awscdk.services.glue.CfnSecurityConfiguration.EncryptionConfigurationProperty

@@ -67,8 +67,7 @@ public open class Subnet internal constructor(
 
   public override fun subnetId(): String = unwrap(this).getSubnetId()
 
-  public open fun subnetIpv6CidrBlocks(): List<String> = unwrap(this).getSubnetIpv6CidrBlocks() ?:
-      emptyList()
+  public open fun subnetIpv6CidrBlocks(): List<String> = unwrap(this).getSubnetIpv6CidrBlocks()
 
   public open fun subnetNetworkAclAssociationId(): String =
       unwrap(this).getSubnetNetworkAclAssociationId()

@@ -52,6 +52,8 @@ public open class CfnAnalyzer internal constructor(
     unwrap(this).setArchiveRules(__idx_ac66f0)
   }
 
+  public open fun archiveRules(vararg __idx_ac66f0: Any): Unit = archiveRules(__idx_ac66f0.toList())
+
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   public override fun inspect(inspector: TreeInspector) {
@@ -66,6 +68,8 @@ public open class CfnAnalyzer internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun type(): String = unwrap(this).getType()
 
@@ -89,7 +93,11 @@ public open class CfnAnalyzer internal constructor(
 
     public fun archiveRules(archiveRules: List<Any>)
 
+    public fun archiveRules(vararg archiveRules: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun type(type: String)
   }
@@ -127,9 +135,13 @@ public open class CfnAnalyzer internal constructor(
       cdkBuilder.archiveRules(archiveRules)
     }
 
+    override fun archiveRules(vararg archiveRules: Any): Unit = archiveRules(archiveRules.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun type(type: String) {
       cdkBuilder.type(type)
@@ -174,13 +186,19 @@ public open class CfnAnalyzer internal constructor(
     public interface Builder {
       public fun contains(contains: List<String>)
 
+      public fun contains(vararg contains: String)
+
       public fun eq(eq: List<String>)
+
+      public fun eq(vararg eq: String)
 
       public fun exists(exists: Boolean)
 
       public fun exists(exists: IResolvable)
 
       public fun neq(neq: List<String>)
+
+      public fun neq(vararg neq: String)
 
       public fun `property`(`property`: String)
     }
@@ -194,9 +212,13 @@ public open class CfnAnalyzer internal constructor(
         cdkBuilder.contains(contains)
       }
 
+      override fun contains(vararg contains: String): Unit = contains(contains.toList())
+
       override fun eq(eq: List<String>) {
         cdkBuilder.eq(eq)
       }
+
+      override fun eq(vararg eq: String): Unit = eq(eq.toList())
 
       override fun exists(exists: Boolean) {
         cdkBuilder.exists(exists)
@@ -209,6 +231,8 @@ public open class CfnAnalyzer internal constructor(
       override fun neq(neq: List<String>) {
         cdkBuilder.neq(neq)
       }
+
+      override fun neq(vararg neq: String): Unit = neq(neq.toList())
 
       override fun `property`(`property`: String) {
         cdkBuilder.`property`(`property`)
@@ -332,6 +356,8 @@ public open class CfnAnalyzer internal constructor(
 
       public fun filter(filter: List<Any>)
 
+      public fun filter(vararg filter: Any)
+
       public fun ruleName(ruleName: String)
     }
 
@@ -347,6 +373,8 @@ public open class CfnAnalyzer internal constructor(
       override fun filter(filter: List<Any>) {
         cdkBuilder.filter(filter)
       }
+
+      override fun filter(vararg filter: Any): Unit = filter(filter.toList())
 
       override fun ruleName(ruleName: String) {
         cdkBuilder.ruleName(ruleName)

@@ -19,6 +19,8 @@ public interface LogDriverConfig {
     public fun options(options: Map<String, String>)
 
     public fun secretOptions(secretOptions: List<CfnTaskDefinition.SecretProperty>)
+
+    public fun secretOptions(vararg secretOptions: CfnTaskDefinition.SecretProperty)
   }
 
   private class BuilderImpl : Builder {
@@ -36,6 +38,9 @@ public interface LogDriverConfig {
     override fun secretOptions(secretOptions: List<CfnTaskDefinition.SecretProperty>) {
       cdkBuilder.secretOptions(secretOptions.map(CfnTaskDefinition.SecretProperty::unwrap))
     }
+
+    override fun secretOptions(vararg secretOptions: CfnTaskDefinition.SecretProperty): Unit =
+        secretOptions(secretOptions.toList())
 
     public fun build(): software.amazon.awscdk.services.ecs.LogDriverConfig = cdkBuilder.build()
   }

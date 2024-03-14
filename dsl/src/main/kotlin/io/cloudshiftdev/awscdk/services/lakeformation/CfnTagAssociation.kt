@@ -34,6 +34,8 @@ public open class CfnTagAssociation internal constructor(
     unwrap(this).setLfTags(__idx_ac66f0)
   }
 
+  public open fun lfTags(vararg __idx_ac66f0: Any): Unit = lfTags(__idx_ac66f0.toList())
+
   public open fun resource(): Any = unwrap(this).getResource()
 
   public open fun resource(`value`: IResolvable) {
@@ -53,6 +55,8 @@ public open class CfnTagAssociation internal constructor(
     public fun lfTags(lfTags: IResolvable)
 
     public fun lfTags(lfTags: List<Any>)
+
+    public fun lfTags(vararg lfTags: Any)
 
     public fun resource(resource: IResolvable)
 
@@ -77,6 +81,8 @@ public open class CfnTagAssociation internal constructor(
     override fun lfTags(lfTags: List<Any>) {
       cdkBuilder.lfTags(lfTags)
     }
+
+    override fun lfTags(vararg lfTags: Any): Unit = lfTags(lfTags.toList())
 
     override fun resource(resource: IResolvable) {
       cdkBuilder.resource(resource.let(IResolvable::unwrap))
@@ -314,6 +320,8 @@ public open class CfnTagAssociation internal constructor(
 
       public fun columnNames(columnNames: List<String>)
 
+      public fun columnNames(vararg columnNames: String)
+
       public fun databaseName(databaseName: String)
 
       public fun name(name: String)
@@ -332,6 +340,8 @@ public open class CfnTagAssociation internal constructor(
       override fun columnNames(columnNames: List<String>) {
         cdkBuilder.columnNames(columnNames)
       }
+
+      override fun columnNames(vararg columnNames: String): Unit = columnNames(columnNames.toList())
 
       override fun databaseName(databaseName: String) {
         cdkBuilder.databaseName(databaseName)
@@ -352,7 +362,7 @@ public open class CfnTagAssociation internal constructor(
     ) : TableWithColumnsResourceProperty {
       override fun catalogId(): String = unwrap(this).getCatalogId()
 
-      override fun columnNames(): List<String> = unwrap(this).getColumnNames() ?: emptyList()
+      override fun columnNames(): List<String> = unwrap(this).getColumnNames()
 
       override fun databaseName(): String = unwrap(this).getDatabaseName()
 
@@ -392,6 +402,8 @@ public open class CfnTagAssociation internal constructor(
       public fun tagKey(tagKey: String)
 
       public fun tagValues(tagValues: List<String>)
+
+      public fun tagValues(vararg tagValues: String)
     }
 
     private class BuilderImpl : Builder {
@@ -412,6 +424,8 @@ public open class CfnTagAssociation internal constructor(
         cdkBuilder.tagValues(tagValues)
       }
 
+      override fun tagValues(vararg tagValues: String): Unit = tagValues(tagValues.toList())
+
       public fun build():
           software.amazon.awscdk.services.lakeformation.CfnTagAssociation.LFTagPairProperty =
           cdkBuilder.build()
@@ -425,7 +439,7 @@ public open class CfnTagAssociation internal constructor(
 
       override fun tagKey(): String = unwrap(this).getTagKey()
 
-      override fun tagValues(): List<String> = unwrap(this).getTagValues() ?: emptyList()
+      override fun tagValues(): List<String> = unwrap(this).getTagValues()
     }
 
     public companion object {

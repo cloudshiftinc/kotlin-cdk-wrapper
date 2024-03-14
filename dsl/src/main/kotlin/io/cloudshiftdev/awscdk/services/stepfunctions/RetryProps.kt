@@ -24,6 +24,8 @@ public interface RetryProps {
 
     public fun errors(errors: List<String>)
 
+    public fun errors(vararg errors: String)
+
     public fun interval(interval: Duration)
 
     public fun jitterStrategy(jitterStrategy: JitterType)
@@ -44,6 +46,8 @@ public interface RetryProps {
     override fun errors(errors: List<String>) {
       cdkBuilder.errors(errors)
     }
+
+    override fun errors(vararg errors: String): Unit = errors(errors.toList())
 
     override fun interval(interval: Duration) {
       cdkBuilder.interval(interval.let(Duration::unwrap))

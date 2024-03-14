@@ -35,6 +35,9 @@ public open class CfnTable internal constructor(
     unwrap(this).setAttributeDefinitions(__idx_ac66f0)
   }
 
+  public open fun attributeDefinitions(vararg __idx_ac66f0: Any): Unit =
+      attributeDefinitions(__idx_ac66f0.toList())
+
   public open fun billingMode(): String? = unwrap(this).getBillingMode()
 
   public open fun billingMode(`value`: String) {
@@ -79,6 +82,9 @@ public open class CfnTable internal constructor(
     unwrap(this).setGlobalSecondaryIndexes(__idx_ac66f0)
   }
 
+  public open fun globalSecondaryIndexes(vararg __idx_ac66f0: Any): Unit =
+      globalSecondaryIndexes(__idx_ac66f0.toList())
+
   public open fun importSourceSpecification(): Any? = unwrap(this).getImportSourceSpecification()
 
   public open fun importSourceSpecification(`value`: IResolvable) {
@@ -109,6 +115,8 @@ public open class CfnTable internal constructor(
     unwrap(this).setKeySchema(__idx_ac66f0)
   }
 
+  public open fun keySchema(vararg __idx_ac66f0: Any): Unit = keySchema(__idx_ac66f0.toList())
+
   public open fun kinesisStreamSpecification(): Any? = unwrap(this).getKinesisStreamSpecification()
 
   public open fun kinesisStreamSpecification(`value`: IResolvable) {
@@ -134,6 +142,9 @@ public open class CfnTable internal constructor(
   public open fun localSecondaryIndexes(__idx_ac66f0: List<Any>) {
     unwrap(this).setLocalSecondaryIndexes(__idx_ac66f0)
   }
+
+  public open fun localSecondaryIndexes(vararg __idx_ac66f0: Any): Unit =
+      localSecondaryIndexes(__idx_ac66f0.toList())
 
   public open fun pointInTimeRecoverySpecification(): Any? =
       unwrap(this).getPointInTimeRecoverySpecification()
@@ -219,6 +230,8 @@ public open class CfnTable internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun timeToLiveSpecification(): Any? = unwrap(this).getTimeToLiveSpecification()
 
   public open fun timeToLiveSpecification(`value`: IResolvable) {
@@ -240,6 +253,8 @@ public open class CfnTable internal constructor(
 
     public fun attributeDefinitions(attributeDefinitions: List<Any>)
 
+    public fun attributeDefinitions(vararg attributeDefinitions: Any)
+
     public fun billingMode(billingMode: String)
 
     public fun contributorInsightsSpecification(contributorInsightsSpecification: IResolvable)
@@ -260,6 +275,8 @@ public open class CfnTable internal constructor(
 
     public fun globalSecondaryIndexes(globalSecondaryIndexes: List<Any>)
 
+    public fun globalSecondaryIndexes(vararg globalSecondaryIndexes: Any)
+
     public fun importSourceSpecification(importSourceSpecification: IResolvable)
 
     public
@@ -274,6 +291,8 @@ public open class CfnTable internal constructor(
 
     public fun keySchema(keySchema: List<Any>)
 
+    public fun keySchema(vararg keySchema: Any)
+
     public fun kinesisStreamSpecification(kinesisStreamSpecification: IResolvable)
 
     public
@@ -287,6 +306,8 @@ public open class CfnTable internal constructor(
     public fun localSecondaryIndexes(localSecondaryIndexes: IResolvable)
 
     public fun localSecondaryIndexes(localSecondaryIndexes: List<Any>)
+
+    public fun localSecondaryIndexes(vararg localSecondaryIndexes: Any)
 
     public fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: IResolvable)
 
@@ -330,6 +351,8 @@ public open class CfnTable internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun timeToLiveSpecification(timeToLiveSpecification: IResolvable)
 
     public fun timeToLiveSpecification(timeToLiveSpecification: TimeToLiveSpecificationProperty)
@@ -354,6 +377,9 @@ public open class CfnTable internal constructor(
     override fun attributeDefinitions(attributeDefinitions: List<Any>) {
       cdkBuilder.attributeDefinitions(attributeDefinitions)
     }
+
+    override fun attributeDefinitions(vararg attributeDefinitions: Any): Unit =
+        attributeDefinitions(attributeDefinitions.toList())
 
     override fun billingMode(billingMode: String) {
       cdkBuilder.billingMode(billingMode)
@@ -391,6 +417,9 @@ public open class CfnTable internal constructor(
       cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes)
     }
 
+    override fun globalSecondaryIndexes(vararg globalSecondaryIndexes: Any): Unit =
+        globalSecondaryIndexes(globalSecondaryIndexes.toList())
+
     override fun importSourceSpecification(importSourceSpecification: IResolvable) {
       cdkBuilder.importSourceSpecification(importSourceSpecification.let(IResolvable::unwrap))
     }
@@ -415,6 +444,8 @@ public open class CfnTable internal constructor(
       cdkBuilder.keySchema(keySchema)
     }
 
+    override fun keySchema(vararg keySchema: Any): Unit = keySchema(keySchema.toList())
+
     override fun kinesisStreamSpecification(kinesisStreamSpecification: IResolvable) {
       cdkBuilder.kinesisStreamSpecification(kinesisStreamSpecification.let(IResolvable::unwrap))
     }
@@ -438,6 +469,9 @@ public open class CfnTable internal constructor(
     override fun localSecondaryIndexes(localSecondaryIndexes: List<Any>) {
       cdkBuilder.localSecondaryIndexes(localSecondaryIndexes)
     }
+
+    override fun localSecondaryIndexes(vararg localSecondaryIndexes: Any): Unit =
+        localSecondaryIndexes(localSecondaryIndexes.toList())
 
     override fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: IResolvable) {
       cdkBuilder.pointInTimeRecoverySpecification(pointInTimeRecoverySpecification.let(IResolvable::unwrap))
@@ -507,6 +541,8 @@ public open class CfnTable internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun timeToLiveSpecification(timeToLiveSpecification: IResolvable) {
       cdkBuilder.timeToLiveSpecification(timeToLiveSpecification.let(IResolvable::unwrap))
@@ -798,6 +834,8 @@ public open class CfnTable internal constructor(
       public fun delimiter(delimiter: String)
 
       public fun headerList(headerList: List<String>)
+
+      public fun headerList(vararg headerList: String)
     }
 
     private class BuilderImpl : Builder {
@@ -811,6 +849,8 @@ public open class CfnTable internal constructor(
       override fun headerList(headerList: List<String>) {
         cdkBuilder.headerList(headerList)
       }
+
+      override fun headerList(vararg headerList: String): Unit = headerList(headerList.toList())
 
       public fun build(): software.amazon.awscdk.services.dynamodb.CfnTable.CsvProperty =
           cdkBuilder.build()
@@ -857,6 +897,8 @@ public open class CfnTable internal constructor(
 
       public fun keySchema(keySchema: List<Any>)
 
+      public fun keySchema(vararg keySchema: Any)
+
       public fun projection(projection: IResolvable)
 
       public fun projection(projection: ProjectionProperty)
@@ -882,6 +924,8 @@ public open class CfnTable internal constructor(
       override fun keySchema(keySchema: List<Any>) {
         cdkBuilder.keySchema(keySchema)
       }
+
+      override fun keySchema(vararg keySchema: Any): Unit = keySchema(keySchema.toList())
 
       override fun projection(projection: IResolvable) {
         cdkBuilder.projection(projection.let(IResolvable::unwrap))
@@ -1052,6 +1096,8 @@ public open class CfnTable internal constructor(
     public interface Builder {
       public fun nonKeyAttributes(nonKeyAttributes: List<String>)
 
+      public fun nonKeyAttributes(vararg nonKeyAttributes: String)
+
       public fun projectionType(projectionType: String)
     }
 
@@ -1063,6 +1109,9 @@ public open class CfnTable internal constructor(
       override fun nonKeyAttributes(nonKeyAttributes: List<String>) {
         cdkBuilder.nonKeyAttributes(nonKeyAttributes)
       }
+
+      override fun nonKeyAttributes(vararg nonKeyAttributes: String): Unit =
+          nonKeyAttributes(nonKeyAttributes.toList())
 
       override fun projectionType(projectionType: String) {
         cdkBuilder.projectionType(projectionType)
@@ -1482,6 +1531,8 @@ public open class CfnTable internal constructor(
 
       public fun keySchema(keySchema: List<Any>)
 
+      public fun keySchema(vararg keySchema: Any)
+
       public fun projection(projection: IResolvable)
 
       public fun projection(projection: ProjectionProperty)
@@ -1532,6 +1583,8 @@ public open class CfnTable internal constructor(
       override fun keySchema(keySchema: List<Any>) {
         cdkBuilder.keySchema(keySchema)
       }
+
+      override fun keySchema(vararg keySchema: Any): Unit = keySchema(keySchema.toList())
 
       override fun projection(projection: IResolvable) {
         cdkBuilder.projection(projection.let(IResolvable::unwrap))

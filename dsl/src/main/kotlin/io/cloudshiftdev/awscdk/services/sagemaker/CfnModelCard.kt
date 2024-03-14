@@ -134,6 +134,8 @@ public open class CfnModelCard internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun content(content: IResolvable)
 
@@ -172,6 +174,8 @@ public open class CfnModelCard internal constructor(
     public fun securityConfig(securityConfig: SecurityConfigProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -245,6 +249,8 @@ public open class CfnModelCard internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     public fun build(): software.amazon.awscdk.services.sagemaker.CfnModelCard = cdkBuilder.build()
   }
 
@@ -279,6 +285,8 @@ public open class CfnModelCard internal constructor(
 
       public fun metricData(metricData: List<Any>)
 
+      public fun metricData(vararg metricData: Any)
+
       public fun name(name: String)
     }
 
@@ -294,6 +302,8 @@ public open class CfnModelCard internal constructor(
       override fun metricData(metricData: List<Any>) {
         cdkBuilder.metricData(metricData)
       }
+
+      override fun metricData(vararg metricData: Any): Unit = metricData(metricData.toList())
 
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -424,7 +434,11 @@ public open class CfnModelCard internal constructor(
 
       public fun xAxisName(xAxisName: List<String>)
 
+      public fun xAxisName(vararg xAxisName: String)
+
       public fun yAxisName(yAxisName: List<String>)
+
+      public fun yAxisName(vararg yAxisName: String)
     }
 
     private class BuilderImpl : Builder {
@@ -452,9 +466,13 @@ public open class CfnModelCard internal constructor(
         cdkBuilder.xAxisName(xAxisName)
       }
 
+      override fun xAxisName(vararg xAxisName: String): Unit = xAxisName(xAxisName.toList())
+
       override fun yAxisName(yAxisName: List<String>) {
         cdkBuilder.yAxisName(yAxisName)
       }
+
+      override fun yAxisName(vararg yAxisName: String): Unit = yAxisName(yAxisName.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnModelCard.MetricDataItemsProperty =
@@ -587,6 +605,8 @@ public open class CfnModelCard internal constructor(
     public interface Builder {
       public fun datasets(datasets: List<String>)
 
+      public fun datasets(vararg datasets: String)
+
       public fun evaluationJobArn(evaluationJobArn: String)
 
       public fun evaluationObservation(evaluationObservation: String)
@@ -599,6 +619,8 @@ public open class CfnModelCard internal constructor(
 
       public fun metricGroups(metricGroups: List<Any>)
 
+      public fun metricGroups(vararg metricGroups: Any)
+
       public fun name(name: String)
     }
 
@@ -610,6 +632,8 @@ public open class CfnModelCard internal constructor(
       override fun datasets(datasets: List<String>) {
         cdkBuilder.datasets(datasets)
       }
+
+      override fun datasets(vararg datasets: String): Unit = datasets(datasets.toList())
 
       override fun evaluationJobArn(evaluationJobArn: String) {
         cdkBuilder.evaluationJobArn(evaluationJobArn)
@@ -634,6 +658,9 @@ public open class CfnModelCard internal constructor(
       override fun metricGroups(metricGroups: List<Any>) {
         cdkBuilder.metricGroups(metricGroups)
       }
+
+      override fun metricGroups(vararg metricGroups: Any): Unit =
+          metricGroups(metricGroups.toList())
 
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -759,9 +786,13 @@ public open class CfnModelCard internal constructor(
 
       public fun hyperParameters(hyperParameters: List<Any>)
 
+      public fun hyperParameters(vararg hyperParameters: Any)
+
       public fun trainingArn(trainingArn: String)
 
       public fun trainingDatasets(trainingDatasets: List<String>)
+
+      public fun trainingDatasets(vararg trainingDatasets: String)
 
       public fun trainingEnvironment(trainingEnvironment: IResolvable)
 
@@ -776,13 +807,19 @@ public open class CfnModelCard internal constructor(
 
       public fun trainingMetrics(trainingMetrics: List<Any>)
 
+      public fun trainingMetrics(vararg trainingMetrics: Any)
+
       public fun userProvidedHyperParameters(userProvidedHyperParameters: IResolvable)
 
       public fun userProvidedHyperParameters(userProvidedHyperParameters: List<Any>)
 
+      public fun userProvidedHyperParameters(vararg userProvidedHyperParameters: Any)
+
       public fun userProvidedTrainingMetrics(userProvidedTrainingMetrics: IResolvable)
 
       public fun userProvidedTrainingMetrics(userProvidedTrainingMetrics: List<Any>)
+
+      public fun userProvidedTrainingMetrics(vararg userProvidedTrainingMetrics: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -799,6 +836,9 @@ public open class CfnModelCard internal constructor(
         cdkBuilder.hyperParameters(hyperParameters)
       }
 
+      override fun hyperParameters(vararg hyperParameters: Any): Unit =
+          hyperParameters(hyperParameters.toList())
+
       override fun trainingArn(trainingArn: String) {
         cdkBuilder.trainingArn(trainingArn)
       }
@@ -806,6 +846,9 @@ public open class CfnModelCard internal constructor(
       override fun trainingDatasets(trainingDatasets: List<String>) {
         cdkBuilder.trainingDatasets(trainingDatasets)
       }
+
+      override fun trainingDatasets(vararg trainingDatasets: String): Unit =
+          trainingDatasets(trainingDatasets.toList())
 
       override fun trainingEnvironment(trainingEnvironment: IResolvable) {
         cdkBuilder.trainingEnvironment(trainingEnvironment.let(IResolvable::unwrap))
@@ -829,6 +872,9 @@ public open class CfnModelCard internal constructor(
         cdkBuilder.trainingMetrics(trainingMetrics)
       }
 
+      override fun trainingMetrics(vararg trainingMetrics: Any): Unit =
+          trainingMetrics(trainingMetrics.toList())
+
       override fun userProvidedHyperParameters(userProvidedHyperParameters: IResolvable) {
         cdkBuilder.userProvidedHyperParameters(userProvidedHyperParameters.let(IResolvable::unwrap))
       }
@@ -837,6 +883,9 @@ public open class CfnModelCard internal constructor(
         cdkBuilder.userProvidedHyperParameters(userProvidedHyperParameters)
       }
 
+      override fun userProvidedHyperParameters(vararg userProvidedHyperParameters: Any): Unit =
+          userProvidedHyperParameters(userProvidedHyperParameters.toList())
+
       override fun userProvidedTrainingMetrics(userProvidedTrainingMetrics: IResolvable) {
         cdkBuilder.userProvidedTrainingMetrics(userProvidedTrainingMetrics.let(IResolvable::unwrap))
       }
@@ -844,6 +893,9 @@ public open class CfnModelCard internal constructor(
       override fun userProvidedTrainingMetrics(userProvidedTrainingMetrics: List<Any>) {
         cdkBuilder.userProvidedTrainingMetrics(userProvidedTrainingMetrics)
       }
+
+      override fun userProvidedTrainingMetrics(vararg userProvidedTrainingMetrics: Any): Unit =
+          userProvidedTrainingMetrics(userProvidedTrainingMetrics.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingJobDetailsProperty =
@@ -1086,6 +1138,8 @@ public open class CfnModelCard internal constructor(
 
       public fun modelArtifact(modelArtifact: List<String>)
 
+      public fun modelArtifact(vararg modelArtifact: String)
+
       public fun modelCreator(modelCreator: String)
 
       public fun modelDescription(modelDescription: String)
@@ -1127,6 +1181,9 @@ public open class CfnModelCard internal constructor(
       override fun modelArtifact(modelArtifact: List<String>) {
         cdkBuilder.modelArtifact(modelArtifact)
       }
+
+      override fun modelArtifact(vararg modelArtifact: String): Unit =
+          modelArtifact(modelArtifact.toList())
 
       override fun modelCreator(modelCreator: String) {
         cdkBuilder.modelCreator(modelCreator)
@@ -1273,6 +1330,8 @@ public open class CfnModelCard internal constructor(
 
       public fun sourceAlgorithms(sourceAlgorithms: List<Any>)
 
+      public fun sourceAlgorithms(vararg sourceAlgorithms: Any)
+
       public fun task(task: String)
     }
 
@@ -1352,6 +1411,9 @@ public open class CfnModelCard internal constructor(
       override fun sourceAlgorithms(sourceAlgorithms: List<Any>) {
         cdkBuilder.sourceAlgorithms(sourceAlgorithms)
       }
+
+      override fun sourceAlgorithms(vararg sourceAlgorithms: Any): Unit =
+          sourceAlgorithms(sourceAlgorithms.toList())
 
       override fun task(task: String) {
         cdkBuilder.task(task)
@@ -1666,6 +1728,8 @@ public open class CfnModelCard internal constructor(
 
       public fun evaluationDetails(evaluationDetails: List<Any>)
 
+      public fun evaluationDetails(vararg evaluationDetails: Any)
+
       public fun intendedUses(intendedUses: IResolvable)
 
       public fun intendedUses(intendedUses: IntendedUsesProperty)
@@ -1739,6 +1803,9 @@ public open class CfnModelCard internal constructor(
       override fun evaluationDetails(evaluationDetails: List<Any>) {
         cdkBuilder.evaluationDetails(evaluationDetails)
       }
+
+      override fun evaluationDetails(vararg evaluationDetails: Any): Unit =
+          evaluationDetails(evaluationDetails.toList())
 
       override fun intendedUses(intendedUses: IResolvable) {
         cdkBuilder.intendedUses(intendedUses.let(IResolvable::unwrap))
@@ -1957,6 +2024,8 @@ public open class CfnModelCard internal constructor(
 
     public interface Builder {
       public fun containerImage(containerImage: List<String>)
+
+      public fun containerImage(vararg containerImage: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1968,6 +2037,9 @@ public open class CfnModelCard internal constructor(
       override fun containerImage(containerImage: List<String>) {
         cdkBuilder.containerImage(containerImage)
       }
+
+      override fun containerImage(vararg containerImage: String): Unit =
+          containerImage(containerImage.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingEnvironmentProperty =
@@ -2210,6 +2282,8 @@ public open class CfnModelCard internal constructor(
       public fun containers(containers: IResolvable)
 
       public fun containers(containers: List<Any>)
+
+      public fun containers(vararg containers: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2225,6 +2299,8 @@ public open class CfnModelCard internal constructor(
       override fun containers(containers: List<Any>) {
         cdkBuilder.containers(containers)
       }
+
+      override fun containers(vararg containers: Any): Unit = containers(containers.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnModelCard.InferenceSpecificationProperty =
@@ -2263,6 +2339,8 @@ public open class CfnModelCard internal constructor(
 
     public interface Builder {
       public fun containerImage(containerImage: List<String>)
+
+      public fun containerImage(vararg containerImage: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2274,6 +2352,9 @@ public open class CfnModelCard internal constructor(
       override fun containerImage(containerImage: List<String>) {
         cdkBuilder.containerImage(containerImage)
       }
+
+      override fun containerImage(vararg containerImage: String): Unit =
+          containerImage(containerImage.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnModelCard.InferenceEnvironmentProperty =

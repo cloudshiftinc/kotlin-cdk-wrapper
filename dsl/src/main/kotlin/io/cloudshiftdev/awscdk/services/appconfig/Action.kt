@@ -27,6 +27,8 @@ public open class Action internal constructor(
   public interface Builder {
     public fun actionPoints(actionPoints: List<ActionPoint>)
 
+    public fun actionPoints(vararg actionPoints: ActionPoint)
+
     public fun description(description: String)
 
     public fun eventDestination(eventDestination: IEventDestination)
@@ -45,6 +47,9 @@ public open class Action internal constructor(
     override fun actionPoints(actionPoints: List<ActionPoint>) {
       cdkBuilder.actionPoints(actionPoints.map(ActionPoint::unwrap))
     }
+
+    override fun actionPoints(vararg actionPoints: ActionPoint): Unit =
+        actionPoints(actionPoints.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)

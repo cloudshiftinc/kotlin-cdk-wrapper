@@ -90,6 +90,8 @@ public interface ClusterAttributes {
 
     public fun kubectlPrivateSubnetIds(kubectlPrivateSubnetIds: List<String>)
 
+    public fun kubectlPrivateSubnetIds(vararg kubectlPrivateSubnetIds: String)
+
     public fun kubectlProvider(kubectlProvider: IKubectlProvider)
 
     public fun kubectlRoleArn(kubectlRoleArn: String)
@@ -103,6 +105,8 @@ public interface ClusterAttributes {
     public fun prune(prune: Boolean)
 
     public fun securityGroupIds(securityGroupIds: List<String>)
+
+    public fun securityGroupIds(vararg securityGroupIds: String)
 
     public fun vpc(vpc: IVpc)
   }
@@ -163,6 +167,9 @@ public interface ClusterAttributes {
       cdkBuilder.kubectlPrivateSubnetIds(kubectlPrivateSubnetIds)
     }
 
+    override fun kubectlPrivateSubnetIds(vararg kubectlPrivateSubnetIds: String): Unit =
+        kubectlPrivateSubnetIds(kubectlPrivateSubnetIds.toList())
+
     override fun kubectlProvider(kubectlProvider: IKubectlProvider) {
       cdkBuilder.kubectlProvider(kubectlProvider.let(IKubectlProvider::unwrap))
     }
@@ -190,6 +197,9 @@ public interface ClusterAttributes {
     override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
+
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
 
     override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))

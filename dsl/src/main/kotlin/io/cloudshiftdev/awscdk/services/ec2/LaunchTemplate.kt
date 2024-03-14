@@ -56,6 +56,8 @@ public open class LaunchTemplate internal constructor(
 
     public fun blockDevices(blockDevices: List<BlockDevice>)
 
+    public fun blockDevices(vararg blockDevices: BlockDevice)
+
     public fun cpuCredits(cpuCredits: CpuCredits)
 
     public fun detailedMonitoring(detailedMonitoring: Boolean)
@@ -123,6 +125,9 @@ public open class LaunchTemplate internal constructor(
     override fun blockDevices(blockDevices: List<BlockDevice>) {
       cdkBuilder.blockDevices(blockDevices.map(BlockDevice::unwrap))
     }
+
+    override fun blockDevices(vararg blockDevices: BlockDevice): Unit =
+        blockDevices(blockDevices.toList())
 
     override fun cpuCredits(cpuCredits: CpuCredits) {
       cdkBuilder.cpuCredits(cpuCredits.let(CpuCredits::unwrap))

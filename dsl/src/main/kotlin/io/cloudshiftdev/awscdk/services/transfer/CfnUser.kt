@@ -44,6 +44,9 @@ public open class CfnUser internal constructor(
     unwrap(this).setHomeDirectoryMappings(__idx_ac66f0)
   }
 
+  public open fun homeDirectoryMappings(vararg __idx_ac66f0: Any): Unit =
+      homeDirectoryMappings(__idx_ac66f0.toList())
+
   public open fun homeDirectoryType(): String? = unwrap(this).getHomeDirectoryType()
 
   public open fun homeDirectoryType(`value`: String) {
@@ -93,6 +96,8 @@ public open class CfnUser internal constructor(
     unwrap(this).setSshPublicKeys(`value`)
   }
 
+  public open fun sshPublicKeys(vararg `value`: String): Unit = sshPublicKeys(`value`.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -101,6 +106,8 @@ public open class CfnUser internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun userName(): String = unwrap(this).getUserName()
 
@@ -114,6 +121,8 @@ public open class CfnUser internal constructor(
     public fun homeDirectoryMappings(homeDirectoryMappings: IResolvable)
 
     public fun homeDirectoryMappings(homeDirectoryMappings: List<Any>)
+
+    public fun homeDirectoryMappings(vararg homeDirectoryMappings: Any)
 
     public fun homeDirectoryType(homeDirectoryType: String)
 
@@ -133,7 +142,11 @@ public open class CfnUser internal constructor(
 
     public fun sshPublicKeys(sshPublicKeys: List<String>)
 
+    public fun sshPublicKeys(vararg sshPublicKeys: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun userName(userName: String)
   }
@@ -156,6 +169,9 @@ public open class CfnUser internal constructor(
     override fun homeDirectoryMappings(homeDirectoryMappings: List<Any>) {
       cdkBuilder.homeDirectoryMappings(homeDirectoryMappings)
     }
+
+    override fun homeDirectoryMappings(vararg homeDirectoryMappings: Any): Unit =
+        homeDirectoryMappings(homeDirectoryMappings.toList())
 
     override fun homeDirectoryType(homeDirectoryType: String) {
       cdkBuilder.homeDirectoryType(homeDirectoryType)
@@ -190,9 +206,14 @@ public open class CfnUser internal constructor(
       cdkBuilder.sshPublicKeys(sshPublicKeys)
     }
 
+    override fun sshPublicKeys(vararg sshPublicKeys: String): Unit =
+        sshPublicKeys(sshPublicKeys.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun userName(userName: String) {
       cdkBuilder.userName(userName)
@@ -236,6 +257,8 @@ public open class CfnUser internal constructor(
 
       public fun secondaryGids(secondaryGids: List<Number>)
 
+      public fun secondaryGids(vararg secondaryGids: Number)
+
       public fun uid(uid: Number)
     }
 
@@ -255,6 +278,9 @@ public open class CfnUser internal constructor(
       override fun secondaryGids(secondaryGids: List<Number>) {
         cdkBuilder.secondaryGids(secondaryGids)
       }
+
+      override fun secondaryGids(vararg secondaryGids: Number): Unit =
+          secondaryGids(secondaryGids.toList())
 
       override fun uid(uid: Number) {
         cdkBuilder.uid(uid)

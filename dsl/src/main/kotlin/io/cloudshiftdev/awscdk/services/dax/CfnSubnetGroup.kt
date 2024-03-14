@@ -30,11 +30,13 @@ public open class CfnSubnetGroup internal constructor(
     unwrap(this).setSubnetGroupName(`value`)
   }
 
-  public open fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+  public open fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
 
   public open fun subnetIds(`value`: List<String>) {
     unwrap(this).setSubnetIds(`value`)
   }
+
+  public open fun subnetIds(vararg `value`: String): Unit = subnetIds(`value`.toList())
 
   public interface Builder {
     public fun description(description: String)
@@ -42,6 +44,8 @@ public open class CfnSubnetGroup internal constructor(
     public fun subnetGroupName(subnetGroupName: String)
 
     public fun subnetIds(subnetIds: List<String>)
+
+    public fun subnetIds(vararg subnetIds: String)
   }
 
   private class BuilderImpl(
@@ -62,6 +66,8 @@ public open class CfnSubnetGroup internal constructor(
     override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
+
+    override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
     public fun build(): software.amazon.awscdk.services.dax.CfnSubnetGroup = cdkBuilder.build()
   }

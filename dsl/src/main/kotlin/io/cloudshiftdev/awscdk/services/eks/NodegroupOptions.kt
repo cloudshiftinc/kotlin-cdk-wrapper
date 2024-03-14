@@ -68,6 +68,8 @@ public interface NodegroupOptions {
 
     public fun instanceTypes(instanceTypes: List<InstanceType>)
 
+    public fun instanceTypes(vararg instanceTypes: InstanceType)
+
     public fun labels(labels: Map<String, String>)
 
     public fun launchTemplateSpec(launchTemplateSpec: LaunchTemplateSpec)
@@ -105,6 +107,8 @@ public interface NodegroupOptions {
     public fun tags(tags: Map<String, String>)
 
     public fun taints(taints: List<TaintSpec>)
+
+    public fun taints(vararg taints: TaintSpec)
   }
 
   private class BuilderImpl : Builder {
@@ -134,6 +138,9 @@ public interface NodegroupOptions {
     override fun instanceTypes(instanceTypes: List<InstanceType>) {
       cdkBuilder.instanceTypes(instanceTypes.map(InstanceType::unwrap))
     }
+
+    override fun instanceTypes(vararg instanceTypes: InstanceType): Unit =
+        instanceTypes(instanceTypes.toList())
 
     override fun labels(labels: Map<String, String>) {
       cdkBuilder.labels(labels)
@@ -201,6 +208,8 @@ public interface NodegroupOptions {
     override fun taints(taints: List<TaintSpec>) {
       cdkBuilder.taints(taints.map(TaintSpec::unwrap))
     }
+
+    override fun taints(vararg taints: TaintSpec): Unit = taints(taints.toList())
 
     public fun build(): software.amazon.awscdk.services.eks.NodegroupOptions = cdkBuilder.build()
   }

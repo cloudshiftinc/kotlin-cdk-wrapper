@@ -17,6 +17,8 @@ public interface S3DataSource {
   public interface Builder {
     public fun attributeNames(attributeNames: List<String>)
 
+    public fun attributeNames(vararg attributeNames: String)
+
     public fun s3DataDistributionType(s3DataDistributionType: S3DataDistributionType)
 
     public fun s3DataType(s3DataType: S3DataType)
@@ -31,6 +33,9 @@ public interface S3DataSource {
     override fun attributeNames(attributeNames: List<String>) {
       cdkBuilder.attributeNames(attributeNames)
     }
+
+    override fun attributeNames(vararg attributeNames: String): Unit =
+        attributeNames(attributeNames.toList())
 
     override fun s3DataDistributionType(s3DataDistributionType: S3DataDistributionType) {
       cdkBuilder.s3DataDistributionType(s3DataDistributionType.let(S3DataDistributionType::unwrap))

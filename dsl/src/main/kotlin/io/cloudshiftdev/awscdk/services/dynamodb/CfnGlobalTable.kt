@@ -35,6 +35,9 @@ public open class CfnGlobalTable internal constructor(
     unwrap(this).setAttributeDefinitions(__idx_ac66f0)
   }
 
+  public open fun attributeDefinitions(vararg __idx_ac66f0: Any): Unit =
+      attributeDefinitions(__idx_ac66f0.toList())
+
   public open fun billingMode(): String? = unwrap(this).getBillingMode()
 
   public open fun billingMode(`value`: String) {
@@ -51,6 +54,9 @@ public open class CfnGlobalTable internal constructor(
     unwrap(this).setGlobalSecondaryIndexes(__idx_ac66f0)
   }
 
+  public open fun globalSecondaryIndexes(vararg __idx_ac66f0: Any): Unit =
+      globalSecondaryIndexes(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -65,6 +71,8 @@ public open class CfnGlobalTable internal constructor(
     unwrap(this).setKeySchema(__idx_ac66f0)
   }
 
+  public open fun keySchema(vararg __idx_ac66f0: Any): Unit = keySchema(__idx_ac66f0.toList())
+
   public open fun localSecondaryIndexes(): Any? = unwrap(this).getLocalSecondaryIndexes()
 
   public open fun localSecondaryIndexes(`value`: IResolvable) {
@@ -75,6 +83,9 @@ public open class CfnGlobalTable internal constructor(
     unwrap(this).setLocalSecondaryIndexes(__idx_ac66f0)
   }
 
+  public open fun localSecondaryIndexes(vararg __idx_ac66f0: Any): Unit =
+      localSecondaryIndexes(__idx_ac66f0.toList())
+
   public open fun replicas(): Any = unwrap(this).getReplicas()
 
   public open fun replicas(`value`: IResolvable) {
@@ -84,6 +95,8 @@ public open class CfnGlobalTable internal constructor(
   public open fun replicas(__idx_ac66f0: List<Any>) {
     unwrap(this).setReplicas(__idx_ac66f0)
   }
+
+  public open fun replicas(vararg __idx_ac66f0: Any): Unit = replicas(__idx_ac66f0.toList())
 
   public open fun sseSpecification(): Any? = unwrap(this).getSseSpecification()
 
@@ -160,23 +173,33 @@ public open class CfnGlobalTable internal constructor(
 
     public fun attributeDefinitions(attributeDefinitions: List<Any>)
 
+    public fun attributeDefinitions(vararg attributeDefinitions: Any)
+
     public fun billingMode(billingMode: String)
 
     public fun globalSecondaryIndexes(globalSecondaryIndexes: IResolvable)
 
     public fun globalSecondaryIndexes(globalSecondaryIndexes: List<Any>)
 
+    public fun globalSecondaryIndexes(vararg globalSecondaryIndexes: Any)
+
     public fun keySchema(keySchema: IResolvable)
 
     public fun keySchema(keySchema: List<Any>)
+
+    public fun keySchema(vararg keySchema: Any)
 
     public fun localSecondaryIndexes(localSecondaryIndexes: IResolvable)
 
     public fun localSecondaryIndexes(localSecondaryIndexes: List<Any>)
 
+    public fun localSecondaryIndexes(vararg localSecondaryIndexes: Any)
+
     public fun replicas(replicas: IResolvable)
 
     public fun replicas(replicas: List<Any>)
+
+    public fun replicas(vararg replicas: Any)
 
     public fun sseSpecification(sseSpecification: IResolvable)
 
@@ -232,6 +255,9 @@ public open class CfnGlobalTable internal constructor(
       cdkBuilder.attributeDefinitions(attributeDefinitions)
     }
 
+    override fun attributeDefinitions(vararg attributeDefinitions: Any): Unit =
+        attributeDefinitions(attributeDefinitions.toList())
+
     override fun billingMode(billingMode: String) {
       cdkBuilder.billingMode(billingMode)
     }
@@ -244,6 +270,9 @@ public open class CfnGlobalTable internal constructor(
       cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes)
     }
 
+    override fun globalSecondaryIndexes(vararg globalSecondaryIndexes: Any): Unit =
+        globalSecondaryIndexes(globalSecondaryIndexes.toList())
+
     override fun keySchema(keySchema: IResolvable) {
       cdkBuilder.keySchema(keySchema.let(IResolvable::unwrap))
     }
@@ -251,6 +280,8 @@ public open class CfnGlobalTable internal constructor(
     override fun keySchema(keySchema: List<Any>) {
       cdkBuilder.keySchema(keySchema)
     }
+
+    override fun keySchema(vararg keySchema: Any): Unit = keySchema(keySchema.toList())
 
     override fun localSecondaryIndexes(localSecondaryIndexes: IResolvable) {
       cdkBuilder.localSecondaryIndexes(localSecondaryIndexes.let(IResolvable::unwrap))
@@ -260,6 +291,9 @@ public open class CfnGlobalTable internal constructor(
       cdkBuilder.localSecondaryIndexes(localSecondaryIndexes)
     }
 
+    override fun localSecondaryIndexes(vararg localSecondaryIndexes: Any): Unit =
+        localSecondaryIndexes(localSecondaryIndexes.toList())
+
     override fun replicas(replicas: IResolvable) {
       cdkBuilder.replicas(replicas.let(IResolvable::unwrap))
     }
@@ -267,6 +301,8 @@ public open class CfnGlobalTable internal constructor(
     override fun replicas(replicas: List<Any>) {
       cdkBuilder.replicas(replicas)
     }
+
+    override fun replicas(vararg replicas: Any): Unit = replicas(replicas.toList())
 
     override fun sseSpecification(sseSpecification: IResolvable) {
       cdkBuilder.sseSpecification(sseSpecification.let(IResolvable::unwrap))
@@ -513,6 +549,8 @@ public open class CfnGlobalTable internal constructor(
     public interface Builder {
       public fun nonKeyAttributes(nonKeyAttributes: List<String>)
 
+      public fun nonKeyAttributes(vararg nonKeyAttributes: String)
+
       public fun projectionType(projectionType: String)
     }
 
@@ -524,6 +562,9 @@ public open class CfnGlobalTable internal constructor(
       override fun nonKeyAttributes(nonKeyAttributes: List<String>) {
         cdkBuilder.nonKeyAttributes(nonKeyAttributes)
       }
+
+      override fun nonKeyAttributes(vararg nonKeyAttributes: String): Unit =
+          nonKeyAttributes(nonKeyAttributes.toList())
 
       override fun projectionType(projectionType: String) {
         cdkBuilder.projectionType(projectionType)
@@ -758,6 +799,8 @@ public open class CfnGlobalTable internal constructor(
 
       public fun globalSecondaryIndexes(globalSecondaryIndexes: List<Any>)
 
+      public fun globalSecondaryIndexes(vararg globalSecondaryIndexes: Any)
+
       public fun kinesisStreamSpecification(kinesisStreamSpecification: IResolvable)
 
       public
@@ -802,6 +845,8 @@ public open class CfnGlobalTable internal constructor(
       public fun tableClass(tableClass: String)
 
       public fun tags(tags: List<CfnTag>)
+
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
@@ -841,6 +886,9 @@ public open class CfnGlobalTable internal constructor(
       override fun globalSecondaryIndexes(globalSecondaryIndexes: List<Any>) {
         cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes)
       }
+
+      override fun globalSecondaryIndexes(vararg globalSecondaryIndexes: Any): Unit =
+          globalSecondaryIndexes(globalSecondaryIndexes.toList())
 
       override fun kinesisStreamSpecification(kinesisStreamSpecification: IResolvable) {
         cdkBuilder.kinesisStreamSpecification(kinesisStreamSpecification.let(IResolvable::unwrap))
@@ -916,6 +964,8 @@ public open class CfnGlobalTable internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       public fun build():
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSpecificationProperty =
@@ -1043,6 +1093,8 @@ public open class CfnGlobalTable internal constructor(
 
       public fun keySchema(keySchema: List<Any>)
 
+      public fun keySchema(vararg keySchema: Any)
+
       public fun projection(projection: IResolvable)
 
       public fun projection(projection: ProjectionProperty)
@@ -1079,6 +1131,8 @@ public open class CfnGlobalTable internal constructor(
       override fun keySchema(keySchema: List<Any>) {
         cdkBuilder.keySchema(keySchema)
       }
+
+      override fun keySchema(vararg keySchema: Any): Unit = keySchema(keySchema.toList())
 
       override fun projection(projection: IResolvable) {
         cdkBuilder.projection(projection.let(IResolvable::unwrap))
@@ -1579,6 +1633,8 @@ public open class CfnGlobalTable internal constructor(
 
       public fun keySchema(keySchema: List<Any>)
 
+      public fun keySchema(vararg keySchema: Any)
+
       public fun projection(projection: IResolvable)
 
       public fun projection(projection: ProjectionProperty)
@@ -1605,6 +1661,8 @@ public open class CfnGlobalTable internal constructor(
       override fun keySchema(keySchema: List<Any>) {
         cdkBuilder.keySchema(keySchema)
       }
+
+      override fun keySchema(vararg keySchema: Any): Unit = keySchema(keySchema.toList())
 
       override fun projection(projection: IResolvable) {
         cdkBuilder.projection(projection.let(IResolvable::unwrap))

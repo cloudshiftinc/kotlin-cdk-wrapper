@@ -16,6 +16,9 @@ public open class TagManager internal constructor(
   public open fun applyTagAspectHere(include: List<String>): Boolean =
       unwrap(this).applyTagAspectHere(include)
 
+  public open fun applyTagAspectHere(vararg include: String): Boolean =
+      applyTagAspectHere(include.toList())
+
   public open fun applyTagAspectHere(include: List<String>, exclude: List<String>): Boolean =
       unwrap(this).applyTagAspectHere(include, exclude)
 

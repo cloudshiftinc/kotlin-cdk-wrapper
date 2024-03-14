@@ -55,6 +55,8 @@ public open class CfnResolverEndpoint internal constructor(
     unwrap(this).setIpAddresses(__idx_ac66f0)
   }
 
+  public open fun ipAddresses(vararg __idx_ac66f0: Any): Unit = ipAddresses(__idx_ac66f0.toList())
+
   public open fun name(): String? = unwrap(this).getName()
 
   public open fun name(`value`: String) {
@@ -79,18 +81,22 @@ public open class CfnResolverEndpoint internal constructor(
     unwrap(this).setProtocols(`value`)
   }
 
+  public open fun protocols(vararg `value`: String): Unit = protocols(`value`.toList())
+
   public open fun resolverEndpointType(): String? = unwrap(this).getResolverEndpointType()
 
   public open fun resolverEndpointType(`value`: String) {
     unwrap(this).setResolverEndpointType(`value`)
   }
 
-  public open fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
-      emptyList()
+  public open fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
 
   public open fun securityGroupIds(`value`: List<String>) {
     unwrap(this).setSecurityGroupIds(`value`)
   }
+
+  public open fun securityGroupIds(vararg `value`: String): Unit =
+      securityGroupIds(`value`.toList())
 
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
@@ -101,12 +107,16 @@ public open class CfnResolverEndpoint internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun direction(direction: String)
 
     public fun ipAddresses(ipAddresses: IResolvable)
 
     public fun ipAddresses(ipAddresses: List<Any>)
+
+    public fun ipAddresses(vararg ipAddresses: Any)
 
     public fun name(name: String)
 
@@ -116,11 +126,17 @@ public open class CfnResolverEndpoint internal constructor(
 
     public fun protocols(protocols: List<String>)
 
+    public fun protocols(vararg protocols: String)
+
     public fun resolverEndpointType(resolverEndpointType: String)
 
     public fun securityGroupIds(securityGroupIds: List<String>)
 
+    public fun securityGroupIds(vararg securityGroupIds: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -144,6 +160,8 @@ public open class CfnResolverEndpoint internal constructor(
       cdkBuilder.ipAddresses(ipAddresses)
     }
 
+    override fun ipAddresses(vararg ipAddresses: Any): Unit = ipAddresses(ipAddresses.toList())
+
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -160,6 +178,8 @@ public open class CfnResolverEndpoint internal constructor(
       cdkBuilder.protocols(protocols)
     }
 
+    override fun protocols(vararg protocols: String): Unit = protocols(protocols.toList())
+
     override fun resolverEndpointType(resolverEndpointType: String) {
       cdkBuilder.resolverEndpointType(resolverEndpointType)
     }
@@ -168,9 +188,14 @@ public open class CfnResolverEndpoint internal constructor(
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.route53resolver.CfnResolverEndpoint =
         cdkBuilder.build()

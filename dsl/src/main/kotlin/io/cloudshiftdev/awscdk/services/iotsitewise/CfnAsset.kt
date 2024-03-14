@@ -39,6 +39,9 @@ public open class CfnAsset internal constructor(
     unwrap(this).setAssetHierarchies(__idx_ac66f0)
   }
 
+  public open fun assetHierarchies(vararg __idx_ac66f0: Any): Unit =
+      assetHierarchies(__idx_ac66f0.toList())
+
   public open fun assetModelId(): String = unwrap(this).getAssetModelId()
 
   public open fun assetModelId(`value`: String) {
@@ -61,6 +64,9 @@ public open class CfnAsset internal constructor(
     unwrap(this).setAssetProperties(__idx_ac66f0)
   }
 
+  public open fun assetProperties(vararg __idx_ac66f0: Any): Unit =
+      assetProperties(__idx_ac66f0.toList())
+
   public open fun attrAssetArn(): String = unwrap(this).getAttrAssetArn()
 
   public open fun attrAssetId(): String = unwrap(this).getAttrAssetId()
@@ -78,6 +84,8 @@ public open class CfnAsset internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun assetDescription(assetDescription: String)
 
@@ -87,6 +95,8 @@ public open class CfnAsset internal constructor(
 
     public fun assetHierarchies(assetHierarchies: List<Any>)
 
+    public fun assetHierarchies(vararg assetHierarchies: Any)
+
     public fun assetModelId(assetModelId: String)
 
     public fun assetName(assetName: String)
@@ -95,7 +105,11 @@ public open class CfnAsset internal constructor(
 
     public fun assetProperties(assetProperties: List<Any>)
 
+    public fun assetProperties(vararg assetProperties: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -121,6 +135,9 @@ public open class CfnAsset internal constructor(
       cdkBuilder.assetHierarchies(assetHierarchies)
     }
 
+    override fun assetHierarchies(vararg assetHierarchies: Any): Unit =
+        assetHierarchies(assetHierarchies.toList())
+
     override fun assetModelId(assetModelId: String) {
       cdkBuilder.assetModelId(assetModelId)
     }
@@ -137,9 +154,14 @@ public open class CfnAsset internal constructor(
       cdkBuilder.assetProperties(assetProperties)
     }
 
+    override fun assetProperties(vararg assetProperties: Any): Unit =
+        assetProperties(assetProperties.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.iotsitewise.CfnAsset = cdkBuilder.build()
   }

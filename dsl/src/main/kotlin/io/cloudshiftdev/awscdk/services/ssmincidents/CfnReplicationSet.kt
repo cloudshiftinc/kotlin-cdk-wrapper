@@ -46,6 +46,8 @@ public open class CfnReplicationSet internal constructor(
     unwrap(this).setRegions(__idx_ac66f0)
   }
 
+  public open fun regions(vararg __idx_ac66f0: Any): Unit = regions(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -54,6 +56,8 @@ public open class CfnReplicationSet internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public interface Builder {
     public fun deletionProtected(deletionProtected: Boolean)
@@ -64,7 +68,11 @@ public open class CfnReplicationSet internal constructor(
 
     public fun regions(regions: List<Any>)
 
+    public fun regions(vararg regions: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -90,9 +98,13 @@ public open class CfnReplicationSet internal constructor(
       cdkBuilder.regions(regions)
     }
 
+    override fun regions(vararg regions: Any): Unit = regions(regions.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ssmincidents.CfnReplicationSet =
         cdkBuilder.build()

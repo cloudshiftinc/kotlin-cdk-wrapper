@@ -83,6 +83,9 @@ public open class CfnQueue internal constructor(
     unwrap(this).setQuickConnectArns(`value`)
   }
 
+  public open fun quickConnectArns(vararg `value`: String): Unit =
+      quickConnectArns(`value`.toList())
+
   public open fun status(): String? = unwrap(this).getStatus()
 
   public open fun status(`value`: String) {
@@ -94,6 +97,8 @@ public open class CfnQueue internal constructor(
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   public interface Builder {
     public fun description(description: String)
@@ -117,9 +122,13 @@ public open class CfnQueue internal constructor(
 
     public fun quickConnectArns(quickConnectArns: List<String>)
 
+    public fun quickConnectArns(vararg quickConnectArns: String)
+
     public fun status(status: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -167,6 +176,9 @@ public open class CfnQueue internal constructor(
       cdkBuilder.quickConnectArns(quickConnectArns)
     }
 
+    override fun quickConnectArns(vararg quickConnectArns: String): Unit =
+        quickConnectArns(quickConnectArns.toList())
+
     override fun status(status: String) {
       cdkBuilder.status(status)
     }
@@ -174,6 +186,8 @@ public open class CfnQueue internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.connect.CfnQueue = cdkBuilder.build()
   }

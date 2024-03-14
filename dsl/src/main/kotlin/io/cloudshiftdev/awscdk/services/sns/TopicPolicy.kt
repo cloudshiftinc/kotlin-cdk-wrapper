@@ -26,6 +26,8 @@ public open class TopicPolicy internal constructor(
     public fun policyDocument(policyDocument: PolicyDocument.Builder.() -> Unit)
 
     public fun topics(topics: List<ITopic>)
+
+    public fun topics(vararg topics: ITopic)
   }
 
   private class BuilderImpl(
@@ -51,6 +53,8 @@ public open class TopicPolicy internal constructor(
     override fun topics(topics: List<ITopic>) {
       cdkBuilder.topics(topics.map(ITopic::unwrap))
     }
+
+    override fun topics(vararg topics: ITopic): Unit = topics(topics.toList())
 
     public fun build(): software.amazon.awscdk.services.sns.TopicPolicy = cdkBuilder.build()
   }

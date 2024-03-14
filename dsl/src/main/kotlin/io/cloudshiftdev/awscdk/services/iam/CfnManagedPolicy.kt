@@ -45,6 +45,8 @@ public open class CfnManagedPolicy internal constructor(
     unwrap(this).setGroups(`value`)
   }
 
+  public open fun groups(vararg `value`: String): Unit = groups(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -73,16 +75,22 @@ public open class CfnManagedPolicy internal constructor(
     unwrap(this).setRoles(`value`)
   }
 
+  public open fun roles(vararg `value`: String): Unit = roles(`value`.toList())
+
   public open fun users(): List<String> = unwrap(this).getUsers() ?: emptyList()
 
   public open fun users(`value`: List<String>) {
     unwrap(this).setUsers(`value`)
   }
 
+  public open fun users(vararg `value`: String): Unit = users(`value`.toList())
+
   public interface Builder {
     public fun description(description: String)
 
     public fun groups(groups: List<String>)
+
+    public fun groups(vararg groups: String)
 
     public fun managedPolicyName(managedPolicyName: String)
 
@@ -92,7 +100,11 @@ public open class CfnManagedPolicy internal constructor(
 
     public fun roles(roles: List<String>)
 
+    public fun roles(vararg roles: String)
+
     public fun users(users: List<String>)
+
+    public fun users(vararg users: String)
   }
 
   private class BuilderImpl(
@@ -110,6 +122,8 @@ public open class CfnManagedPolicy internal constructor(
       cdkBuilder.groups(groups)
     }
 
+    override fun groups(vararg groups: String): Unit = groups(groups.toList())
+
     override fun managedPolicyName(managedPolicyName: String) {
       cdkBuilder.managedPolicyName(managedPolicyName)
     }
@@ -126,9 +140,13 @@ public open class CfnManagedPolicy internal constructor(
       cdkBuilder.roles(roles)
     }
 
+    override fun roles(vararg roles: String): Unit = roles(roles.toList())
+
     override fun users(users: List<String>) {
       cdkBuilder.users(users)
     }
+
+    override fun users(vararg users: String): Unit = users(users.toList())
 
     public fun build(): software.amazon.awscdk.services.iam.CfnManagedPolicy = cdkBuilder.build()
   }

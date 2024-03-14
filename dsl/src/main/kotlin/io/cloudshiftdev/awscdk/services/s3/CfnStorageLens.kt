@@ -53,6 +53,8 @@ public open class CfnStorageLens internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun storageLensConfiguration(storageLensConfiguration: IResolvable)
 
@@ -64,6 +66,8 @@ public open class CfnStorageLens internal constructor(
         fun storageLensConfiguration(storageLensConfiguration: StorageLensConfigurationProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -91,6 +95,8 @@ public open class CfnStorageLens internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.s3.CfnStorageLens = cdkBuilder.build()
   }
@@ -800,7 +806,11 @@ public open class CfnStorageLens internal constructor(
     public interface Builder {
       public fun exclude(exclude: List<String>)
 
+      public fun exclude(vararg exclude: String)
+
       public fun include(include: List<String>)
+
+      public fun include(vararg include: String)
     }
 
     private class BuilderImpl : Builder {
@@ -813,9 +823,13 @@ public open class CfnStorageLens internal constructor(
         cdkBuilder.exclude(exclude)
       }
 
+      override fun exclude(vararg exclude: String): Unit = exclude(exclude.toList())
+
       override fun include(include: List<String>) {
         cdkBuilder.include(include)
       }
+
+      override fun include(vararg include: String): Unit = include(include.toList())
 
       public fun build():
           software.amazon.awscdk.services.s3.CfnStorageLens.StorageLensGroupSelectionCriteriaProperty
@@ -860,7 +874,11 @@ public open class CfnStorageLens internal constructor(
     public interface Builder {
       public fun buckets(buckets: List<String>)
 
+      public fun buckets(vararg buckets: String)
+
       public fun regions(regions: List<String>)
+
+      public fun regions(vararg regions: String)
     }
 
     private class BuilderImpl : Builder {
@@ -872,9 +890,13 @@ public open class CfnStorageLens internal constructor(
         cdkBuilder.buckets(buckets)
       }
 
+      override fun buckets(vararg buckets: String): Unit = buckets(buckets.toList())
+
       override fun regions(regions: List<String>) {
         cdkBuilder.regions(regions)
       }
+
+      override fun regions(vararg regions: String): Unit = regions(regions.toList())
 
       public fun build():
           software.amazon.awscdk.services.s3.CfnStorageLens.BucketsAndRegionsProperty =

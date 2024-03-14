@@ -94,6 +94,8 @@ public open class CfnReplicationConfig internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public open fun targetEndpointArn(): String? = unwrap(this).getTargetEndpointArn()
 
   public open fun targetEndpointArn(`value`: String) {
@@ -124,6 +126,8 @@ public open class CfnReplicationConfig internal constructor(
     public fun tableMappings(tableMappings: Any)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun targetEndpointArn(targetEndpointArn: String)
   }
@@ -179,6 +183,8 @@ public open class CfnReplicationConfig internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun targetEndpointArn(targetEndpointArn: String) {
       cdkBuilder.targetEndpointArn(targetEndpointArn)
@@ -249,6 +255,8 @@ public open class CfnReplicationConfig internal constructor(
       public fun replicationSubnetGroupId(replicationSubnetGroupId: String)
 
       public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>)
+
+      public fun vpcSecurityGroupIds(vararg vpcSecurityGroupIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -295,6 +303,9 @@ public open class CfnReplicationConfig internal constructor(
       override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
         cdkBuilder.vpcSecurityGroupIds(vpcSecurityGroupIds)
       }
+
+      override fun vpcSecurityGroupIds(vararg vpcSecurityGroupIds: String): Unit =
+          vpcSecurityGroupIds(vpcSecurityGroupIds.toList())
 
       public fun build():
           software.amazon.awscdk.services.dms.CfnReplicationConfig.ComputeConfigProperty =

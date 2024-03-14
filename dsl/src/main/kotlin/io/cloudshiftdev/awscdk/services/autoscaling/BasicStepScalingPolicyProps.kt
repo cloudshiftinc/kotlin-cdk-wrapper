@@ -46,6 +46,8 @@ public interface BasicStepScalingPolicyProps {
     public fun minAdjustmentMagnitude(minAdjustmentMagnitude: Number)
 
     public fun scalingSteps(scalingSteps: List<ScalingInterval>)
+
+    public fun scalingSteps(vararg scalingSteps: ScalingInterval)
   }
 
   private class BuilderImpl : Builder {
@@ -88,6 +90,9 @@ public interface BasicStepScalingPolicyProps {
     override fun scalingSteps(scalingSteps: List<ScalingInterval>) {
       cdkBuilder.scalingSteps(scalingSteps.map(ScalingInterval::unwrap))
     }
+
+    override fun scalingSteps(vararg scalingSteps: ScalingInterval): Unit =
+        scalingSteps(scalingSteps.toList())
 
     public fun build(): software.amazon.awscdk.services.autoscaling.BasicStepScalingPolicyProps =
         cdkBuilder.build()

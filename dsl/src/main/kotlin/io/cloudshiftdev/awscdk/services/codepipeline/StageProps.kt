@@ -17,6 +17,8 @@ public interface StageProps {
   public interface Builder {
     public fun actions(actions: List<IAction>)
 
+    public fun actions(vararg actions: IAction)
+
     public fun stageName(stageName: String)
 
     public fun transitionDisabledReason(transitionDisabledReason: String)
@@ -31,6 +33,8 @@ public interface StageProps {
     override fun actions(actions: List<IAction>) {
       cdkBuilder.actions(actions.map(IAction::unwrap))
     }
+
+    override fun actions(vararg actions: IAction): Unit = actions(actions.toList())
 
     override fun stageName(stageName: String) {
       cdkBuilder.stageName(stageName)

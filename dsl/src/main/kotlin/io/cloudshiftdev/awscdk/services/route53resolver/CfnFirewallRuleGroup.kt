@@ -48,6 +48,9 @@ public open class CfnFirewallRuleGroup internal constructor(
     unwrap(this).setFirewallRules(__idx_ac66f0)
   }
 
+  public open fun firewallRules(vararg __idx_ac66f0: Any): Unit =
+      firewallRules(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -67,14 +70,20 @@ public open class CfnFirewallRuleGroup internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun firewallRules(firewallRules: IResolvable)
 
     public fun firewallRules(firewallRules: List<Any>)
 
+    public fun firewallRules(vararg firewallRules: Any)
+
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -94,6 +103,9 @@ public open class CfnFirewallRuleGroup internal constructor(
       cdkBuilder.firewallRules(firewallRules)
     }
 
+    override fun firewallRules(vararg firewallRules: Any): Unit =
+        firewallRules(firewallRules.toList())
+
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -101,6 +113,8 @@ public open class CfnFirewallRuleGroup internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup =
         cdkBuilder.build()

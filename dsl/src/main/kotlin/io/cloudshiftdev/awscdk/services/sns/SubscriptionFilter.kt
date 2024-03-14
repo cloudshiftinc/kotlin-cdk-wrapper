@@ -9,7 +9,7 @@ import kotlin.jvm.JvmName
 public open class SubscriptionFilter internal constructor(
   private val cdkObject: software.amazon.awscdk.services.sns.SubscriptionFilter,
 ) {
-  public open fun conditions(): List<Any> = unwrap(this).getConditions() ?: emptyList()
+  public open fun conditions(): List<Any> = unwrap(this).getConditions()
 
   public companion object {
     public open fun existsFilter(): SubscriptionFilter =

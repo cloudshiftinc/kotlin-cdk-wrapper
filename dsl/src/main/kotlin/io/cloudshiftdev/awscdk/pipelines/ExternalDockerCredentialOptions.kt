@@ -23,6 +23,8 @@ public interface ExternalDockerCredentialOptions {
     public fun secretUsernameField(secretUsernameField: String)
 
     public fun usages(usages: List<DockerCredentialUsage>)
+
+    public fun usages(vararg usages: DockerCredentialUsage)
   }
 
   private class BuilderImpl : Builder {
@@ -44,6 +46,8 @@ public interface ExternalDockerCredentialOptions {
     override fun usages(usages: List<DockerCredentialUsage>) {
       cdkBuilder.usages(usages.map(DockerCredentialUsage::unwrap))
     }
+
+    override fun usages(vararg usages: DockerCredentialUsage): Unit = usages(usages.toList())
 
     public fun build(): software.amazon.awscdk.pipelines.ExternalDockerCredentialOptions =
         cdkBuilder.build()

@@ -47,6 +47,8 @@ public open class CfnRuleset internal constructor(
     unwrap(this).setRules(__idx_ac66f0)
   }
 
+  public open fun rules(vararg __idx_ac66f0: Any): Unit = rules(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -55,6 +57,8 @@ public open class CfnRuleset internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun targetArn(): String = unwrap(this).getTargetArn()
 
@@ -71,7 +75,11 @@ public open class CfnRuleset internal constructor(
 
     public fun rules(rules: List<Any>)
 
+    public fun rules(vararg rules: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun targetArn(targetArn: String)
   }
@@ -99,9 +107,13 @@ public open class CfnRuleset internal constructor(
       cdkBuilder.rules(rules)
     }
 
+    override fun rules(vararg rules: Any): Unit = rules(rules.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun targetArn(targetArn: String) {
       cdkBuilder.targetArn(targetArn)
@@ -332,6 +344,8 @@ public open class CfnRuleset internal constructor(
 
       public fun columnSelectors(columnSelectors: List<Any>)
 
+      public fun columnSelectors(vararg columnSelectors: Any)
+
       public fun disabled(disabled: Boolean)
 
       public fun disabled(disabled: IResolvable)
@@ -341,6 +355,8 @@ public open class CfnRuleset internal constructor(
       public fun substitutionMap(substitutionMap: IResolvable)
 
       public fun substitutionMap(substitutionMap: List<Any>)
+
+      public fun substitutionMap(vararg substitutionMap: Any)
 
       public fun threshold(threshold: IResolvable)
 
@@ -368,6 +384,9 @@ public open class CfnRuleset internal constructor(
         cdkBuilder.columnSelectors(columnSelectors)
       }
 
+      override fun columnSelectors(vararg columnSelectors: Any): Unit =
+          columnSelectors(columnSelectors.toList())
+
       override fun disabled(disabled: Boolean) {
         cdkBuilder.disabled(disabled)
       }
@@ -387,6 +406,9 @@ public open class CfnRuleset internal constructor(
       override fun substitutionMap(substitutionMap: List<Any>) {
         cdkBuilder.substitutionMap(substitutionMap)
       }
+
+      override fun substitutionMap(vararg substitutionMap: Any): Unit =
+          substitutionMap(substitutionMap.toList())
 
       override fun threshold(threshold: IResolvable) {
         cdkBuilder.threshold(threshold.let(IResolvable::unwrap))

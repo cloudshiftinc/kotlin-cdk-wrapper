@@ -48,6 +48,9 @@ public open class CfnEC2Fleet internal constructor(
     unwrap(this).setLaunchTemplateConfigs(__idx_ac66f0)
   }
 
+  public open fun launchTemplateConfigs(vararg __idx_ac66f0: Any): Unit =
+      launchTemplateConfigs(__idx_ac66f0.toList())
+
   public open fun onDemandOptions(): Any? = unwrap(this).getOnDemandOptions()
 
   public open fun onDemandOptions(`value`: IResolvable) {
@@ -97,6 +100,9 @@ public open class CfnEC2Fleet internal constructor(
   public open fun tagSpecifications(__idx_ac66f0: List<Any>) {
     unwrap(this).setTagSpecifications(__idx_ac66f0)
   }
+
+  public open fun tagSpecifications(vararg __idx_ac66f0: Any): Unit =
+      tagSpecifications(__idx_ac66f0.toList())
 
   public open fun targetCapacitySpecification(): Any = unwrap(this).getTargetCapacitySpecification()
 
@@ -152,6 +158,8 @@ public open class CfnEC2Fleet internal constructor(
 
     public fun launchTemplateConfigs(launchTemplateConfigs: List<Any>)
 
+    public fun launchTemplateConfigs(vararg launchTemplateConfigs: Any)
+
     public fun onDemandOptions(onDemandOptions: IResolvable)
 
     public fun onDemandOptions(onDemandOptions: OnDemandOptionsRequestProperty)
@@ -175,6 +183,8 @@ public open class CfnEC2Fleet internal constructor(
     public fun tagSpecifications(tagSpecifications: IResolvable)
 
     public fun tagSpecifications(tagSpecifications: List<Any>)
+
+    public fun tagSpecifications(vararg tagSpecifications: Any)
 
     public fun targetCapacitySpecification(targetCapacitySpecification: IResolvable)
 
@@ -220,6 +230,9 @@ public open class CfnEC2Fleet internal constructor(
       cdkBuilder.launchTemplateConfigs(launchTemplateConfigs)
     }
 
+    override fun launchTemplateConfigs(vararg launchTemplateConfigs: Any): Unit =
+        launchTemplateConfigs(launchTemplateConfigs.toList())
+
     override fun onDemandOptions(onDemandOptions: IResolvable) {
       cdkBuilder.onDemandOptions(onDemandOptions.let(IResolvable::unwrap))
     }
@@ -262,6 +275,9 @@ public open class CfnEC2Fleet internal constructor(
     override fun tagSpecifications(tagSpecifications: List<Any>) {
       cdkBuilder.tagSpecifications(tagSpecifications)
     }
+
+    override fun tagSpecifications(vararg tagSpecifications: Any): Unit =
+        tagSpecifications(tagSpecifications.toList())
 
     override fun targetCapacitySpecification(targetCapacitySpecification: IResolvable) {
       cdkBuilder.targetCapacitySpecification(targetCapacitySpecification.let(IResolvable::unwrap))
@@ -481,6 +497,8 @@ public open class CfnEC2Fleet internal constructor(
       public fun resourceType(resourceType: String)
 
       public fun tags(tags: List<CfnTag>)
+
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
@@ -495,6 +513,8 @@ public open class CfnEC2Fleet internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       public fun build(): software.amazon.awscdk.services.ec2.CfnEC2Fleet.TagSpecificationProperty =
           cdkBuilder.build()
@@ -898,7 +918,11 @@ public open class CfnEC2Fleet internal constructor(
 
       public fun acceleratorManufacturers(acceleratorManufacturers: List<String>)
 
+      public fun acceleratorManufacturers(vararg acceleratorManufacturers: String)
+
       public fun acceleratorNames(acceleratorNames: List<String>)
+
+      public fun acceleratorNames(vararg acceleratorNames: String)
 
       public fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable)
 
@@ -912,7 +936,11 @@ public open class CfnEC2Fleet internal constructor(
 
       public fun acceleratorTypes(acceleratorTypes: List<String>)
 
+      public fun acceleratorTypes(vararg acceleratorTypes: String)
+
       public fun allowedInstanceTypes(allowedInstanceTypes: List<String>)
+
+      public fun allowedInstanceTypes(vararg allowedInstanceTypes: String)
 
       public fun bareMetal(bareMetal: String)
 
@@ -930,13 +958,21 @@ public open class CfnEC2Fleet internal constructor(
 
       public fun cpuManufacturers(cpuManufacturers: List<String>)
 
+      public fun cpuManufacturers(vararg cpuManufacturers: String)
+
       public fun excludedInstanceTypes(excludedInstanceTypes: List<String>)
 
+      public fun excludedInstanceTypes(vararg excludedInstanceTypes: String)
+
       public fun instanceGenerations(instanceGenerations: List<String>)
+
+      public fun instanceGenerations(vararg instanceGenerations: String)
 
       public fun localStorage(localStorage: String)
 
       public fun localStorageTypes(localStorageTypes: List<String>)
+
+      public fun localStorageTypes(vararg localStorageTypes: String)
 
       public
           fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number)
@@ -1028,9 +1064,15 @@ public open class CfnEC2Fleet internal constructor(
         cdkBuilder.acceleratorManufacturers(acceleratorManufacturers)
       }
 
+      override fun acceleratorManufacturers(vararg acceleratorManufacturers: String): Unit =
+          acceleratorManufacturers(acceleratorManufacturers.toList())
+
       override fun acceleratorNames(acceleratorNames: List<String>) {
         cdkBuilder.acceleratorNames(acceleratorNames)
       }
+
+      override fun acceleratorNames(vararg acceleratorNames: String): Unit =
+          acceleratorNames(acceleratorNames.toList())
 
       override fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable) {
         cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(IResolvable::unwrap))
@@ -1052,9 +1094,15 @@ public open class CfnEC2Fleet internal constructor(
         cdkBuilder.acceleratorTypes(acceleratorTypes)
       }
 
+      override fun acceleratorTypes(vararg acceleratorTypes: String): Unit =
+          acceleratorTypes(acceleratorTypes.toList())
+
       override fun allowedInstanceTypes(allowedInstanceTypes: List<String>) {
         cdkBuilder.allowedInstanceTypes(allowedInstanceTypes)
       }
+
+      override fun allowedInstanceTypes(vararg allowedInstanceTypes: String): Unit =
+          allowedInstanceTypes(allowedInstanceTypes.toList())
 
       override fun bareMetal(bareMetal: String) {
         cdkBuilder.bareMetal(bareMetal)
@@ -1084,13 +1132,22 @@ public open class CfnEC2Fleet internal constructor(
         cdkBuilder.cpuManufacturers(cpuManufacturers)
       }
 
+      override fun cpuManufacturers(vararg cpuManufacturers: String): Unit =
+          cpuManufacturers(cpuManufacturers.toList())
+
       override fun excludedInstanceTypes(excludedInstanceTypes: List<String>) {
         cdkBuilder.excludedInstanceTypes(excludedInstanceTypes)
       }
 
+      override fun excludedInstanceTypes(vararg excludedInstanceTypes: String): Unit =
+          excludedInstanceTypes(excludedInstanceTypes.toList())
+
       override fun instanceGenerations(instanceGenerations: List<String>) {
         cdkBuilder.instanceGenerations(instanceGenerations)
       }
+
+      override fun instanceGenerations(vararg instanceGenerations: String): Unit =
+          instanceGenerations(instanceGenerations.toList())
 
       override fun localStorage(localStorage: String) {
         cdkBuilder.localStorage(localStorage)
@@ -1099,6 +1156,9 @@ public open class CfnEC2Fleet internal constructor(
       override fun localStorageTypes(localStorageTypes: List<String>) {
         cdkBuilder.localStorageTypes(localStorageTypes)
       }
+
+      override fun localStorageTypes(vararg localStorageTypes: String): Unit =
+          localStorageTypes(localStorageTypes.toList())
 
       override
           fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number) {
@@ -2157,6 +2217,8 @@ public open class CfnEC2Fleet internal constructor(
       public fun overrides(overrides: IResolvable)
 
       public fun overrides(overrides: List<Any>)
+
+      public fun overrides(vararg overrides: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2188,6 +2250,8 @@ public open class CfnEC2Fleet internal constructor(
       override fun overrides(overrides: List<Any>) {
         cdkBuilder.overrides(overrides)
       }
+
+      override fun overrides(vararg overrides: Any): Unit = overrides(overrides.toList())
 
       public fun build():
           software.amazon.awscdk.services.ec2.CfnEC2Fleet.FleetLaunchTemplateConfigRequestProperty =

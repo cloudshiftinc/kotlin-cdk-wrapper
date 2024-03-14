@@ -123,6 +123,9 @@ public open class CfnProject internal constructor(
     unwrap(this).setFileSystemLocations(__idx_ac66f0)
   }
 
+  public open fun fileSystemLocations(vararg __idx_ac66f0: Any): Unit =
+      fileSystemLocations(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -170,6 +173,9 @@ public open class CfnProject internal constructor(
     unwrap(this).setSecondaryArtifacts(__idx_ac66f0)
   }
 
+  public open fun secondaryArtifacts(vararg __idx_ac66f0: Any): Unit =
+      secondaryArtifacts(__idx_ac66f0.toList())
+
   public open fun secondarySourceVersions(): Any? = unwrap(this).getSecondarySourceVersions()
 
   public open fun secondarySourceVersions(`value`: IResolvable) {
@@ -180,6 +186,9 @@ public open class CfnProject internal constructor(
     unwrap(this).setSecondarySourceVersions(__idx_ac66f0)
   }
 
+  public open fun secondarySourceVersions(vararg __idx_ac66f0: Any): Unit =
+      secondarySourceVersions(__idx_ac66f0.toList())
+
   public open fun secondarySources(): Any? = unwrap(this).getSecondarySources()
 
   public open fun secondarySources(`value`: IResolvable) {
@@ -189,6 +198,9 @@ public open class CfnProject internal constructor(
   public open fun secondarySources(__idx_ac66f0: List<Any>) {
     unwrap(this).setSecondarySources(__idx_ac66f0)
   }
+
+  public open fun secondarySources(vararg __idx_ac66f0: Any): Unit =
+      secondarySources(__idx_ac66f0.toList())
 
   public open fun serviceRole(): String = unwrap(this).getServiceRole()
 
@@ -225,6 +237,8 @@ public open class CfnProject internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun timeoutInMinutes(): Number? = unwrap(this).getTimeoutInMinutes()
 
@@ -316,6 +330,8 @@ public open class CfnProject internal constructor(
 
     public fun fileSystemLocations(fileSystemLocations: List<Any>)
 
+    public fun fileSystemLocations(vararg fileSystemLocations: Any)
+
     public fun logsConfig(logsConfig: IResolvable)
 
     public fun logsConfig(logsConfig: LogsConfigProperty)
@@ -334,13 +350,19 @@ public open class CfnProject internal constructor(
 
     public fun secondaryArtifacts(secondaryArtifacts: List<Any>)
 
+    public fun secondaryArtifacts(vararg secondaryArtifacts: Any)
+
     public fun secondarySourceVersions(secondarySourceVersions: IResolvable)
 
     public fun secondarySourceVersions(secondarySourceVersions: List<Any>)
 
+    public fun secondarySourceVersions(vararg secondarySourceVersions: Any)
+
     public fun secondarySources(secondarySources: IResolvable)
 
     public fun secondarySources(secondarySources: List<Any>)
+
+    public fun secondarySources(vararg secondarySources: Any)
 
     public fun serviceRole(serviceRole: String)
 
@@ -355,6 +377,8 @@ public open class CfnProject internal constructor(
     public fun sourceVersion(sourceVersion: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun timeoutInMinutes(timeoutInMinutes: Number)
 
@@ -465,6 +489,9 @@ public open class CfnProject internal constructor(
       cdkBuilder.fileSystemLocations(fileSystemLocations)
     }
 
+    override fun fileSystemLocations(vararg fileSystemLocations: Any): Unit =
+        fileSystemLocations(fileSystemLocations.toList())
+
     override fun logsConfig(logsConfig: IResolvable) {
       cdkBuilder.logsConfig(logsConfig.let(IResolvable::unwrap))
     }
@@ -498,6 +525,9 @@ public open class CfnProject internal constructor(
       cdkBuilder.secondaryArtifacts(secondaryArtifacts)
     }
 
+    override fun secondaryArtifacts(vararg secondaryArtifacts: Any): Unit =
+        secondaryArtifacts(secondaryArtifacts.toList())
+
     override fun secondarySourceVersions(secondarySourceVersions: IResolvable) {
       cdkBuilder.secondarySourceVersions(secondarySourceVersions.let(IResolvable::unwrap))
     }
@@ -506,6 +536,9 @@ public open class CfnProject internal constructor(
       cdkBuilder.secondarySourceVersions(secondarySourceVersions)
     }
 
+    override fun secondarySourceVersions(vararg secondarySourceVersions: Any): Unit =
+        secondarySourceVersions(secondarySourceVersions.toList())
+
     override fun secondarySources(secondarySources: IResolvable) {
       cdkBuilder.secondarySources(secondarySources.let(IResolvable::unwrap))
     }
@@ -513,6 +546,9 @@ public open class CfnProject internal constructor(
     override fun secondarySources(secondarySources: List<Any>) {
       cdkBuilder.secondarySources(secondarySources)
     }
+
+    override fun secondarySources(vararg secondarySources: Any): Unit =
+        secondarySources(secondarySources.toList())
 
     override fun serviceRole(serviceRole: String) {
       cdkBuilder.serviceRole(serviceRole)
@@ -538,6 +574,8 @@ public open class CfnProject internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun timeoutInMinutes(timeoutInMinutes: Number) {
       cdkBuilder.timeoutInMinutes(timeoutInMinutes)
@@ -609,6 +647,8 @@ public open class CfnProject internal constructor(
 
       public fun modes(modes: List<String>)
 
+      public fun modes(vararg modes: String)
+
       public fun type(type: String)
     }
 
@@ -624,6 +664,8 @@ public open class CfnProject internal constructor(
       override fun modes(modes: List<String>) {
         cdkBuilder.modes(modes)
       }
+
+      override fun modes(vararg modes: String): Unit = modes(modes.toList())
 
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -939,6 +981,8 @@ public open class CfnProject internal constructor(
     public interface Builder {
       public fun computeTypesAllowed(computeTypesAllowed: List<String>)
 
+      public fun computeTypesAllowed(vararg computeTypesAllowed: String)
+
       public fun maximumBuildsAllowed(maximumBuildsAllowed: Number)
     }
 
@@ -950,6 +994,9 @@ public open class CfnProject internal constructor(
       override fun computeTypesAllowed(computeTypesAllowed: List<String>) {
         cdkBuilder.computeTypesAllowed(computeTypesAllowed)
       }
+
+      override fun computeTypesAllowed(vararg computeTypesAllowed: String): Unit =
+          computeTypesAllowed(computeTypesAllowed.toList())
 
       override fun maximumBuildsAllowed(maximumBuildsAllowed: Number) {
         cdkBuilder.maximumBuildsAllowed(maximumBuildsAllowed)
@@ -1128,6 +1175,8 @@ public open class CfnProject internal constructor(
 
       public fun environmentVariables(environmentVariables: List<Any>)
 
+      public fun environmentVariables(vararg environmentVariables: Any)
+
       public fun fleet(fleet: IResolvable)
 
       public fun fleet(fleet: ProjectFleetProperty)
@@ -1176,6 +1225,9 @@ public open class CfnProject internal constructor(
       override fun environmentVariables(environmentVariables: List<Any>) {
         cdkBuilder.environmentVariables(environmentVariables)
       }
+
+      override fun environmentVariables(vararg environmentVariables: Any): Unit =
+          environmentVariables(environmentVariables.toList())
 
       override fun fleet(fleet: IResolvable) {
         cdkBuilder.fleet(fleet.let(IResolvable::unwrap))
@@ -1545,6 +1597,8 @@ public open class CfnProject internal constructor(
 
       public fun filterGroups(filterGroups: List<Any>)
 
+      public fun filterGroups(vararg filterGroups: Any)
+
       public fun webhook(webhook: Boolean)
 
       public fun webhook(webhook: IResolvable)
@@ -1566,6 +1620,9 @@ public open class CfnProject internal constructor(
       override fun filterGroups(filterGroups: List<Any>) {
         cdkBuilder.filterGroups(filterGroups)
       }
+
+      override fun filterGroups(vararg filterGroups: Any): Unit =
+          filterGroups(filterGroups.toList())
 
       override fun webhook(webhook: Boolean) {
         cdkBuilder.webhook(webhook)
@@ -2027,7 +2084,11 @@ public open class CfnProject internal constructor(
     public interface Builder {
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnets(subnets: List<String>)
+
+      public fun subnets(vararg subnets: String)
 
       public fun vpcId(vpcId: String)
     }
@@ -2041,9 +2102,14 @@ public open class CfnProject internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnets(subnets: List<String>) {
         cdkBuilder.subnets(subnets)
       }
+
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
 
       override fun vpcId(vpcId: String) {
         cdkBuilder.vpcId(vpcId)

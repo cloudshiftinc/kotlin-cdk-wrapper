@@ -123,6 +123,8 @@ public open class CfnServer internal constructor(
     unwrap(this).setProtocols(`value`)
   }
 
+  public open fun protocols(vararg `value`: String): Unit = protocols(`value`.toList())
+
   public open fun s3StorageOptions(): Any? = unwrap(this).getS3StorageOptions()
 
   public open fun s3StorageOptions(`value`: IResolvable) {
@@ -151,6 +153,9 @@ public open class CfnServer internal constructor(
     unwrap(this).setStructuredLogDestinations(`value`)
   }
 
+  public open fun structuredLogDestinations(vararg `value`: String): Unit =
+      structuredLogDestinations(`value`.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -159,6 +164,8 @@ public open class CfnServer internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun workflowDetails(): Any? = unwrap(this).getWorkflowDetails()
 
@@ -217,6 +224,8 @@ public open class CfnServer internal constructor(
 
     public fun protocols(protocols: List<String>)
 
+    public fun protocols(vararg protocols: String)
+
     public fun s3StorageOptions(s3StorageOptions: IResolvable)
 
     public fun s3StorageOptions(s3StorageOptions: S3StorageOptionsProperty)
@@ -229,7 +238,11 @@ public open class CfnServer internal constructor(
 
     public fun structuredLogDestinations(structuredLogDestinations: List<String>)
 
+    public fun structuredLogDestinations(vararg structuredLogDestinations: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun workflowDetails(workflowDetails: IResolvable)
 
@@ -319,6 +332,8 @@ public open class CfnServer internal constructor(
       cdkBuilder.protocols(protocols)
     }
 
+    override fun protocols(vararg protocols: String): Unit = protocols(protocols.toList())
+
     override fun s3StorageOptions(s3StorageOptions: IResolvable) {
       cdkBuilder.s3StorageOptions(s3StorageOptions.let(IResolvable::unwrap))
     }
@@ -340,9 +355,14 @@ public open class CfnServer internal constructor(
       cdkBuilder.structuredLogDestinations(structuredLogDestinations)
     }
 
+    override fun structuredLogDestinations(vararg structuredLogDestinations: String): Unit =
+        structuredLogDestinations(structuredLogDestinations.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun workflowDetails(workflowDetails: IResolvable) {
       cdkBuilder.workflowDetails(workflowDetails.let(IResolvable::unwrap))
@@ -393,6 +413,8 @@ public open class CfnServer internal constructor(
     public interface Builder {
       public fun as2Transports(as2Transports: List<String>)
 
+      public fun as2Transports(vararg as2Transports: String)
+
       public fun passiveIp(passiveIp: String)
 
       public fun statOption(setStatOption: String)
@@ -408,6 +430,9 @@ public open class CfnServer internal constructor(
       override fun as2Transports(as2Transports: List<String>) {
         cdkBuilder.as2Transports(as2Transports)
       }
+
+      override fun as2Transports(vararg as2Transports: String): Unit =
+          as2Transports(as2Transports.toList())
 
       override fun passiveIp(passiveIp: String) {
         cdkBuilder.passiveIp(passiveIp)
@@ -468,9 +493,13 @@ public open class CfnServer internal constructor(
 
       public fun onPartialUpload(onPartialUpload: List<Any>)
 
+      public fun onPartialUpload(vararg onPartialUpload: Any)
+
       public fun onUpload(onUpload: IResolvable)
 
       public fun onUpload(onUpload: List<Any>)
+
+      public fun onUpload(vararg onUpload: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -486,6 +515,9 @@ public open class CfnServer internal constructor(
         cdkBuilder.onPartialUpload(onPartialUpload)
       }
 
+      override fun onPartialUpload(vararg onPartialUpload: Any): Unit =
+          onPartialUpload(onPartialUpload.toList())
+
       override fun onUpload(onUpload: IResolvable) {
         cdkBuilder.onUpload(onUpload.let(IResolvable::unwrap))
       }
@@ -493,6 +525,8 @@ public open class CfnServer internal constructor(
       override fun onUpload(onUpload: List<Any>) {
         cdkBuilder.onUpload(onUpload)
       }
+
+      override fun onUpload(vararg onUpload: Any): Unit = onUpload(onUpload.toList())
 
       public fun build(): software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty
           = cdkBuilder.build()
@@ -739,9 +773,15 @@ public open class CfnServer internal constructor(
     public interface Builder {
       public fun addressAllocationIds(addressAllocationIds: List<String>)
 
+      public fun addressAllocationIds(vararg addressAllocationIds: String)
+
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
 
       public fun vpcEndpointId(vpcEndpointId: String)
 
@@ -757,13 +797,21 @@ public open class CfnServer internal constructor(
         cdkBuilder.addressAllocationIds(addressAllocationIds)
       }
 
+      override fun addressAllocationIds(vararg addressAllocationIds: String): Unit =
+          addressAllocationIds(addressAllocationIds.toList())
+
       override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       override fun vpcEndpointId(vpcEndpointId: String) {
         cdkBuilder.vpcEndpointId(vpcEndpointId)

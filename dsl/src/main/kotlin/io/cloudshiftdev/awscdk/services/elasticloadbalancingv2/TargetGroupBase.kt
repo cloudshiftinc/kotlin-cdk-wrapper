@@ -51,7 +51,7 @@ public abstract class TargetGroupBase internal constructor(
   public open fun targetGroupFullName(): String = unwrap(this).getTargetGroupFullName()
 
   public open fun targetGroupLoadBalancerArns(): List<String> =
-      unwrap(this).getTargetGroupLoadBalancerArns() ?: emptyList()
+      unwrap(this).getTargetGroupLoadBalancerArns()
 
   public override fun targetGroupName(): String = unwrap(this).getTargetGroupName()
 

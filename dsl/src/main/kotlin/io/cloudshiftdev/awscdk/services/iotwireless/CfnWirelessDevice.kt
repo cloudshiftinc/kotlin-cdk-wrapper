@@ -83,6 +83,8 @@ public open class CfnWirelessDevice internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun thingArn(): String? = unwrap(this).getThingArn()
 
   public open fun thingArn(`value`: String) {
@@ -115,6 +117,8 @@ public open class CfnWirelessDevice internal constructor(
     public fun positioning(positioning: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun thingArn(thingArn: String)
 
@@ -164,6 +168,8 @@ public open class CfnWirelessDevice internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun thingArn(thingArn: String) {
       cdkBuilder.thingArn(thingArn)

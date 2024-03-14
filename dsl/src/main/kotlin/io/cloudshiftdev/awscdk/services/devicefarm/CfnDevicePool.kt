@@ -58,6 +58,8 @@ public open class CfnDevicePool internal constructor(
     unwrap(this).setRules(__idx_ac66f0)
   }
 
+  public open fun rules(vararg __idx_ac66f0: Any): Unit = rules(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -66,6 +68,8 @@ public open class CfnDevicePool internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public interface Builder {
     public fun description(description: String)
@@ -80,7 +84,11 @@ public open class CfnDevicePool internal constructor(
 
     public fun rules(rules: List<Any>)
 
+    public fun rules(vararg rules: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -114,9 +122,13 @@ public open class CfnDevicePool internal constructor(
       cdkBuilder.rules(rules)
     }
 
+    override fun rules(vararg rules: Any): Unit = rules(rules.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.devicefarm.CfnDevicePool =
         cdkBuilder.build()

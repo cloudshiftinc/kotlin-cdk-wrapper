@@ -16,6 +16,8 @@ public open class HttpsRedirect internal constructor(
 
     public fun recordNames(recordNames: List<String>)
 
+    public fun recordNames(vararg recordNames: String)
+
     public fun targetDomain(targetDomain: String)
 
     public fun zone(zone: IHostedZone)
@@ -35,6 +37,8 @@ public open class HttpsRedirect internal constructor(
     override fun recordNames(recordNames: List<String>) {
       cdkBuilder.recordNames(recordNames)
     }
+
+    override fun recordNames(vararg recordNames: String): Unit = recordNames(recordNames.toList())
 
     override fun targetDomain(targetDomain: String) {
       cdkBuilder.targetDomain(targetDomain)

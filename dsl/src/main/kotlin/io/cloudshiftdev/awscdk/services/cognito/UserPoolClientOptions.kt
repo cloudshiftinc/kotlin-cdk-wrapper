@@ -78,6 +78,9 @@ public interface UserPoolClientOptions {
     public
         fun supportedIdentityProviders(supportedIdentityProviders: List<UserPoolClientIdentityProvider>)
 
+    public fun supportedIdentityProviders(vararg
+        supportedIdentityProviders: UserPoolClientIdentityProvider)
+
     public fun userPoolClientName(userPoolClientName: String)
 
     public fun writeAttributes(writeAttributes: ClientAttributes)
@@ -144,6 +147,10 @@ public interface UserPoolClientOptions {
         fun supportedIdentityProviders(supportedIdentityProviders: List<UserPoolClientIdentityProvider>) {
       cdkBuilder.supportedIdentityProviders(supportedIdentityProviders.map(UserPoolClientIdentityProvider::unwrap))
     }
+
+    override fun supportedIdentityProviders(vararg
+        supportedIdentityProviders: UserPoolClientIdentityProvider): Unit =
+        supportedIdentityProviders(supportedIdentityProviders.toList())
 
     override fun userPoolClientName(userPoolClientName: String) {
       cdkBuilder.userPoolClientName(userPoolClientName)

@@ -64,6 +64,8 @@ public open class CfnIntegration internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public open fun targetArn(): String = unwrap(this).getTargetArn()
 
   public open fun targetArn(`value`: String) {
@@ -82,6 +84,8 @@ public open class CfnIntegration internal constructor(
     public fun sourceArn(sourceArn: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun targetArn(targetArn: String)
   }
@@ -116,6 +120,8 @@ public open class CfnIntegration internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun targetArn(targetArn: String) {
       cdkBuilder.targetArn(targetArn)

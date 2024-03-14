@@ -64,6 +64,8 @@ public open class CfnOriginEndpoint internal constructor(
     unwrap(this).setHlsManifests(__idx_ac66f0)
   }
 
+  public open fun hlsManifests(vararg __idx_ac66f0: Any): Unit = hlsManifests(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -77,6 +79,9 @@ public open class CfnOriginEndpoint internal constructor(
   public open fun lowLatencyHlsManifests(__idx_ac66f0: List<Any>) {
     unwrap(this).setLowLatencyHlsManifests(__idx_ac66f0)
   }
+
+  public open fun lowLatencyHlsManifests(vararg __idx_ac66f0: Any): Unit =
+      lowLatencyHlsManifests(__idx_ac66f0.toList())
 
   public open fun originEndpointName(): String = unwrap(this).getOriginEndpointName()
 
@@ -111,6 +116,8 @@ public open class CfnOriginEndpoint internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun channelGroupName(channelGroupName: String)
 
@@ -124,9 +131,13 @@ public open class CfnOriginEndpoint internal constructor(
 
     public fun hlsManifests(hlsManifests: List<Any>)
 
+    public fun hlsManifests(vararg hlsManifests: Any)
+
     public fun lowLatencyHlsManifests(lowLatencyHlsManifests: IResolvable)
 
     public fun lowLatencyHlsManifests(lowLatencyHlsManifests: List<Any>)
+
+    public fun lowLatencyHlsManifests(vararg lowLatencyHlsManifests: Any)
 
     public fun originEndpointName(originEndpointName: String)
 
@@ -141,6 +152,8 @@ public open class CfnOriginEndpoint internal constructor(
     public fun startoverWindowSeconds(startoverWindowSeconds: Number)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -174,6 +187,8 @@ public open class CfnOriginEndpoint internal constructor(
       cdkBuilder.hlsManifests(hlsManifests)
     }
 
+    override fun hlsManifests(vararg hlsManifests: Any): Unit = hlsManifests(hlsManifests.toList())
+
     override fun lowLatencyHlsManifests(lowLatencyHlsManifests: IResolvable) {
       cdkBuilder.lowLatencyHlsManifests(lowLatencyHlsManifests.let(IResolvable::unwrap))
     }
@@ -181,6 +196,9 @@ public open class CfnOriginEndpoint internal constructor(
     override fun lowLatencyHlsManifests(lowLatencyHlsManifests: List<Any>) {
       cdkBuilder.lowLatencyHlsManifests(lowLatencyHlsManifests)
     }
+
+    override fun lowLatencyHlsManifests(vararg lowLatencyHlsManifests: Any): Unit =
+        lowLatencyHlsManifests(lowLatencyHlsManifests.toList())
 
     override fun originEndpointName(originEndpointName: String) {
       cdkBuilder.originEndpointName(originEndpointName)
@@ -206,6 +224,8 @@ public open class CfnOriginEndpoint internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint =
         cdkBuilder.build()
@@ -384,6 +404,8 @@ public open class CfnOriginEndpoint internal constructor(
     public interface Builder {
       public fun drmSystems(drmSystems: List<String>)
 
+      public fun drmSystems(vararg drmSystems: String)
+
       public fun encryptionContractConfiguration(encryptionContractConfiguration: IResolvable)
 
       public
@@ -410,6 +432,8 @@ public open class CfnOriginEndpoint internal constructor(
       override fun drmSystems(drmSystems: List<String>) {
         cdkBuilder.drmSystems(drmSystems)
       }
+
+      override fun drmSystems(vararg drmSystems: String): Unit = drmSystems(drmSystems.toList())
 
       override fun encryptionContractConfiguration(encryptionContractConfiguration: IResolvable) {
         cdkBuilder.encryptionContractConfiguration(encryptionContractConfiguration.let(IResolvable::unwrap))
@@ -448,7 +472,7 @@ public open class CfnOriginEndpoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SpekeKeyProviderProperty,
     ) : SpekeKeyProviderProperty {
-      override fun drmSystems(): List<String> = unwrap(this).getDrmSystems() ?: emptyList()
+      override fun drmSystems(): List<String> = unwrap(this).getDrmSystems()
 
       override fun encryptionContractConfiguration(): Any =
           unwrap(this).getEncryptionContractConfiguration()
@@ -1035,6 +1059,8 @@ public open class CfnOriginEndpoint internal constructor(
 
     public interface Builder {
       public fun scteFilter(scteFilter: List<String>)
+
+      public fun scteFilter(vararg scteFilter: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1045,6 +1071,8 @@ public open class CfnOriginEndpoint internal constructor(
       override fun scteFilter(scteFilter: List<String>) {
         cdkBuilder.scteFilter(scteFilter)
       }
+
+      override fun scteFilter(vararg scteFilter: String): Unit = scteFilter(scteFilter.toList())
 
       public fun build():
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ScteProperty =

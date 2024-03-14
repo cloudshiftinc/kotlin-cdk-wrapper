@@ -74,6 +74,8 @@ public open class CfnAuthorizer internal constructor(
     unwrap(this).setIdentitySource(`value`)
   }
 
+  public open fun identitySource(vararg `value`: String): Unit = identitySource(`value`.toList())
+
   public open fun identityValidationExpression(): String? =
       unwrap(this).getIdentityValidationExpression()
 
@@ -124,6 +126,8 @@ public open class CfnAuthorizer internal constructor(
     public fun enableSimpleResponses(enableSimpleResponses: IResolvable)
 
     public fun identitySource(identitySource: List<String>)
+
+    public fun identitySource(vararg identitySource: String)
 
     public fun identityValidationExpression(identityValidationExpression: String)
 
@@ -181,6 +185,9 @@ public open class CfnAuthorizer internal constructor(
       cdkBuilder.identitySource(identitySource)
     }
 
+    override fun identitySource(vararg identitySource: String): Unit =
+        identitySource(identitySource.toList())
+
     override fun identityValidationExpression(identityValidationExpression: String) {
       cdkBuilder.identityValidationExpression(identityValidationExpression)
     }
@@ -235,6 +242,8 @@ public open class CfnAuthorizer internal constructor(
     public interface Builder {
       public fun audience(audience: List<String>)
 
+      public fun audience(vararg audience: String)
+
       public fun issuer(issuer: String)
     }
 
@@ -247,6 +256,8 @@ public open class CfnAuthorizer internal constructor(
       override fun audience(audience: List<String>) {
         cdkBuilder.audience(audience)
       }
+
+      override fun audience(vararg audience: String): Unit = audience(audience.toList())
 
       override fun issuer(issuer: String) {
         cdkBuilder.issuer(issuer)

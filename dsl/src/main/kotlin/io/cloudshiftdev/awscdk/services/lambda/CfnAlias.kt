@@ -191,6 +191,8 @@ public open class CfnAlias internal constructor(
       public fun additionalVersionWeights(additionalVersionWeights: IResolvable)
 
       public fun additionalVersionWeights(additionalVersionWeights: List<Any>)
+
+      public fun additionalVersionWeights(vararg additionalVersionWeights: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -206,6 +208,9 @@ public open class CfnAlias internal constructor(
       override fun additionalVersionWeights(additionalVersionWeights: List<Any>) {
         cdkBuilder.additionalVersionWeights(additionalVersionWeights)
       }
+
+      override fun additionalVersionWeights(vararg additionalVersionWeights: Any): Unit =
+          additionalVersionWeights(additionalVersionWeights.toList())
 
       public fun build():
           software.amazon.awscdk.services.lambda.CfnAlias.AliasRoutingConfigurationProperty =

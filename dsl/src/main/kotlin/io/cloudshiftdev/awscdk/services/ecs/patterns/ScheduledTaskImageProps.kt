@@ -23,6 +23,8 @@ public interface ScheduledTaskImageProps {
   public interface Builder {
     public fun command(command: List<String>)
 
+    public fun command(vararg command: String)
+
     public fun environment(environment: Map<String, String>)
 
     public fun image(image: ContainerImage)
@@ -40,6 +42,8 @@ public interface ScheduledTaskImageProps {
     override fun command(command: List<String>) {
       cdkBuilder.command(command)
     }
+
+    override fun command(vararg command: String): Unit = command(command.toList())
 
     override fun environment(environment: Map<String, String>) {
       cdkBuilder.environment(environment)

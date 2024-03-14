@@ -30,11 +30,15 @@ public open class CfnVpcConnector internal constructor(
     unwrap(this).setSecurityGroups(`value`)
   }
 
-  public open fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+  public open fun securityGroups(vararg `value`: String): Unit = securityGroups(`value`.toList())
+
+  public open fun subnets(): List<String> = unwrap(this).getSubnets()
 
   public open fun subnets(`value`: List<String>) {
     unwrap(this).setSubnets(`value`)
   }
+
+  public open fun subnets(vararg `value`: String): Unit = subnets(`value`.toList())
 
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
@@ -45,6 +49,8 @@ public open class CfnVpcConnector internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun vpcConnectorName(): String? = unwrap(this).getVpcConnectorName()
 
   public open fun vpcConnectorName(`value`: String) {
@@ -54,9 +60,15 @@ public open class CfnVpcConnector internal constructor(
   public interface Builder {
     public fun securityGroups(securityGroups: List<String>)
 
+    public fun securityGroups(vararg securityGroups: String)
+
     public fun subnets(subnets: List<String>)
 
+    public fun subnets(vararg subnets: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun vpcConnectorName(vpcConnectorName: String)
   }
@@ -72,13 +84,20 @@ public open class CfnVpcConnector internal constructor(
       cdkBuilder.securityGroups(securityGroups)
     }
 
+    override fun securityGroups(vararg securityGroups: String): Unit =
+        securityGroups(securityGroups.toList())
+
     override fun subnets(subnets: List<String>) {
       cdkBuilder.subnets(subnets)
     }
 
+    override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun vpcConnectorName(vpcConnectorName: String) {
       cdkBuilder.vpcConnectorName(vpcConnectorName)

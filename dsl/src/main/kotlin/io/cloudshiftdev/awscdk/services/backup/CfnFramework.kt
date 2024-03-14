@@ -38,6 +38,9 @@ public open class CfnFramework internal constructor(
     unwrap(this).setFrameworkControls(__idx_ac66f0)
   }
 
+  public open fun frameworkControls(vararg __idx_ac66f0: Any): Unit =
+      frameworkControls(__idx_ac66f0.toList())
+
   public open fun frameworkDescription(): String? = unwrap(this).getFrameworkDescription()
 
   public open fun frameworkDescription(`value`: String) {
@@ -57,6 +60,8 @@ public open class CfnFramework internal constructor(
     unwrap(this).setFrameworkTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun frameworkTags(vararg `value`: CfnTag): Unit = frameworkTags(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -66,11 +71,15 @@ public open class CfnFramework internal constructor(
 
     public fun frameworkControls(frameworkControls: List<Any>)
 
+    public fun frameworkControls(vararg frameworkControls: Any)
+
     public fun frameworkDescription(frameworkDescription: String)
 
     public fun frameworkName(frameworkName: String)
 
     public fun frameworkTags(frameworkTags: List<CfnTag>)
+
+    public fun frameworkTags(vararg frameworkTags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -88,6 +97,9 @@ public open class CfnFramework internal constructor(
       cdkBuilder.frameworkControls(frameworkControls)
     }
 
+    override fun frameworkControls(vararg frameworkControls: Any): Unit =
+        frameworkControls(frameworkControls.toList())
+
     override fun frameworkDescription(frameworkDescription: String) {
       cdkBuilder.frameworkDescription(frameworkDescription)
     }
@@ -99,6 +111,9 @@ public open class CfnFramework internal constructor(
     override fun frameworkTags(frameworkTags: List<CfnTag>) {
       cdkBuilder.frameworkTags(frameworkTags.map(CfnTag::unwrap))
     }
+
+    override fun frameworkTags(vararg frameworkTags: CfnTag): Unit =
+        frameworkTags(frameworkTags.toList())
 
     public fun build(): software.amazon.awscdk.services.backup.CfnFramework = cdkBuilder.build()
   }
@@ -136,6 +151,8 @@ public open class CfnFramework internal constructor(
 
       public fun controlInputParameters(controlInputParameters: List<Any>)
 
+      public fun controlInputParameters(vararg controlInputParameters: Any)
+
       public fun controlName(controlName: String)
 
       public fun controlScope(controlScope: Any)
@@ -153,6 +170,9 @@ public open class CfnFramework internal constructor(
       override fun controlInputParameters(controlInputParameters: List<Any>) {
         cdkBuilder.controlInputParameters(controlInputParameters)
       }
+
+      override fun controlInputParameters(vararg controlInputParameters: Any): Unit =
+          controlInputParameters(controlInputParameters.toList())
 
       override fun controlName(controlName: String) {
         cdkBuilder.controlName(controlName)
@@ -210,9 +230,15 @@ public open class CfnFramework internal constructor(
     public interface Builder {
       public fun complianceResourceIds(complianceResourceIds: List<String>)
 
+      public fun complianceResourceIds(vararg complianceResourceIds: String)
+
       public fun complianceResourceTypes(complianceResourceTypes: List<String>)
 
+      public fun complianceResourceTypes(vararg complianceResourceTypes: String)
+
       public fun tags(tags: List<CfnTag>)
+
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
@@ -224,13 +250,21 @@ public open class CfnFramework internal constructor(
         cdkBuilder.complianceResourceIds(complianceResourceIds)
       }
 
+      override fun complianceResourceIds(vararg complianceResourceIds: String): Unit =
+          complianceResourceIds(complianceResourceIds.toList())
+
       override fun complianceResourceTypes(complianceResourceTypes: List<String>) {
         cdkBuilder.complianceResourceTypes(complianceResourceTypes)
       }
 
+      override fun complianceResourceTypes(vararg complianceResourceTypes: String): Unit =
+          complianceResourceTypes(complianceResourceTypes.toList())
+
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       public fun build(): software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty =
           cdkBuilder.build()

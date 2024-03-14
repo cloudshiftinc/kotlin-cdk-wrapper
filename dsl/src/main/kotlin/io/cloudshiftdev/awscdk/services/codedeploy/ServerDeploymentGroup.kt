@@ -44,6 +44,8 @@ public open class ServerDeploymentGroup internal constructor(
   public interface Builder {
     public fun alarms(alarms: List<IAlarm>)
 
+    public fun alarms(vararg alarms: IAlarm)
+
     public fun application(application: IServerApplication)
 
     public fun autoRollback(autoRollback: AutoRollbackConfig)
@@ -53,6 +55,8 @@ public open class ServerDeploymentGroup internal constructor(
     public fun autoRollback(autoRollback: AutoRollbackConfig.Builder.() -> Unit)
 
     public fun autoScalingGroups(autoScalingGroups: List<IAutoScalingGroup>)
+
+    public fun autoScalingGroups(vararg autoScalingGroups: IAutoScalingGroup)
 
     public fun deploymentConfig(deploymentConfig: IServerDeploymentConfig)
 
@@ -71,6 +75,8 @@ public open class ServerDeploymentGroup internal constructor(
 
     public fun loadBalancers(loadBalancers: List<LoadBalancer>)
 
+    public fun loadBalancers(vararg loadBalancers: LoadBalancer)
+
     public fun onPremiseInstanceTags(onPremiseInstanceTags: InstanceTagSet)
 
     public fun role(role: IRole)
@@ -86,6 +92,8 @@ public open class ServerDeploymentGroup internal constructor(
     override fun alarms(alarms: List<IAlarm>) {
       cdkBuilder.alarms(alarms.map(IAlarm::unwrap))
     }
+
+    override fun alarms(vararg alarms: IAlarm): Unit = alarms(alarms.toList())
 
     override fun application(application: IServerApplication) {
       cdkBuilder.application(application.let(IServerApplication::unwrap))
@@ -103,6 +111,9 @@ public open class ServerDeploymentGroup internal constructor(
     override fun autoScalingGroups(autoScalingGroups: List<IAutoScalingGroup>) {
       cdkBuilder.autoScalingGroups(autoScalingGroups.map(IAutoScalingGroup::unwrap))
     }
+
+    override fun autoScalingGroups(vararg autoScalingGroups: IAutoScalingGroup): Unit =
+        autoScalingGroups(autoScalingGroups.toList())
 
     override fun deploymentConfig(deploymentConfig: IServerDeploymentConfig) {
       cdkBuilder.deploymentConfig(deploymentConfig.let(IServerDeploymentConfig::unwrap))
@@ -136,6 +147,9 @@ public open class ServerDeploymentGroup internal constructor(
     override fun loadBalancers(loadBalancers: List<LoadBalancer>) {
       cdkBuilder.loadBalancers(loadBalancers.map(LoadBalancer::unwrap))
     }
+
+    override fun loadBalancers(vararg loadBalancers: LoadBalancer): Unit =
+        loadBalancers(loadBalancers.toList())
 
     override fun onPremiseInstanceTags(onPremiseInstanceTags: InstanceTagSet) {
       cdkBuilder.onPremiseInstanceTags(onPremiseInstanceTags.let(InstanceTagSet::unwrap))

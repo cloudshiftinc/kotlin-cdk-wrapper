@@ -20,7 +20,7 @@ import kotlin.jvm.JvmName
 public open class CloudFormationStackArtifact internal constructor(
   private val cdkObject: software.amazon.awscdk.cxapi.CloudFormationStackArtifact,
 ) : CloudArtifact(cdkObject) {
-  public open fun assets(): List<Any> = unwrap(this).getAssets() ?: emptyList()
+  public open fun assets(): List<Any> = unwrap(this).getAssets()
 
   public open fun assumeRoleArn(): String? = unwrap(this).getAssumeRoleArn()
 
@@ -66,6 +66,8 @@ public open class CloudFormationStackArtifact internal constructor(
   public interface Builder {
     public fun dependencies(dependencies: List<String>)
 
+    public fun dependencies(vararg dependencies: String)
+
     public fun displayName(displayName: String)
 
     public fun environment(environment: String)
@@ -110,6 +112,9 @@ public open class CloudFormationStackArtifact internal constructor(
     override fun dependencies(dependencies: List<String>) {
       cdkBuilder.dependencies(dependencies)
     }
+
+    override fun dependencies(vararg dependencies: String): Unit =
+        dependencies(dependencies.toList())
 
     override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)

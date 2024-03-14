@@ -149,6 +149,8 @@ public open class CfnCodeSigningConfig internal constructor(
 
     public interface Builder {
       public fun signingProfileVersionArns(signingProfileVersionArns: List<String>)
+
+      public fun signingProfileVersionArns(vararg signingProfileVersionArns: String)
     }
 
     private class BuilderImpl : Builder {
@@ -161,6 +163,9 @@ public open class CfnCodeSigningConfig internal constructor(
         cdkBuilder.signingProfileVersionArns(signingProfileVersionArns)
       }
 
+      override fun signingProfileVersionArns(vararg signingProfileVersionArns: String): Unit =
+          signingProfileVersionArns(signingProfileVersionArns.toList())
+
       public fun build():
           software.amazon.awscdk.services.lambda.CfnCodeSigningConfig.AllowedPublishersProperty =
           cdkBuilder.build()
@@ -171,7 +176,7 @@ public open class CfnCodeSigningConfig internal constructor(
           software.amazon.awscdk.services.lambda.CfnCodeSigningConfig.AllowedPublishersProperty,
     ) : AllowedPublishersProperty {
       override fun signingProfileVersionArns(): List<String> =
-          unwrap(this).getSigningProfileVersionArns() ?: emptyList()
+          unwrap(this).getSigningProfileVersionArns()
     }
 
     public companion object {

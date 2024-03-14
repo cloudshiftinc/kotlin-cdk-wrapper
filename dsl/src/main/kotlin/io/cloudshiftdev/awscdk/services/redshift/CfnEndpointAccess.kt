@@ -65,12 +65,14 @@ public open class CfnEndpointAccess internal constructor(
     unwrap(this).setSubnetGroupName(`value`)
   }
 
-  public open fun vpcSecurityGroupIds(): List<String> = unwrap(this).getVpcSecurityGroupIds() ?:
-      emptyList()
+  public open fun vpcSecurityGroupIds(): List<String> = unwrap(this).getVpcSecurityGroupIds()
 
   public open fun vpcSecurityGroupIds(`value`: List<String>) {
     unwrap(this).setVpcSecurityGroupIds(`value`)
   }
+
+  public open fun vpcSecurityGroupIds(vararg `value`: String): Unit =
+      vpcSecurityGroupIds(`value`.toList())
 
   public interface Builder {
     public fun clusterIdentifier(clusterIdentifier: String)
@@ -82,6 +84,8 @@ public open class CfnEndpointAccess internal constructor(
     public fun subnetGroupName(subnetGroupName: String)
 
     public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>)
+
+    public fun vpcSecurityGroupIds(vararg vpcSecurityGroupIds: String)
   }
 
   private class BuilderImpl(
@@ -110,6 +114,9 @@ public open class CfnEndpointAccess internal constructor(
     override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
       cdkBuilder.vpcSecurityGroupIds(vpcSecurityGroupIds)
     }
+
+    override fun vpcSecurityGroupIds(vararg vpcSecurityGroupIds: String): Unit =
+        vpcSecurityGroupIds(vpcSecurityGroupIds.toList())
 
     public fun build(): software.amazon.awscdk.services.redshift.CfnEndpointAccess =
         cdkBuilder.build()
@@ -207,6 +214,8 @@ public open class CfnEndpointAccess internal constructor(
 
       public fun networkInterfaces(networkInterfaces: List<Any>)
 
+      public fun networkInterfaces(vararg networkInterfaces: Any)
+
       public fun vpcEndpointId(vpcEndpointId: String)
 
       public fun vpcId(vpcId: String)
@@ -224,6 +233,9 @@ public open class CfnEndpointAccess internal constructor(
       override fun networkInterfaces(networkInterfaces: List<Any>) {
         cdkBuilder.networkInterfaces(networkInterfaces)
       }
+
+      override fun networkInterfaces(vararg networkInterfaces: Any): Unit =
+          networkInterfaces(networkInterfaces.toList())
 
       override fun vpcEndpointId(vpcEndpointId: String) {
         cdkBuilder.vpcEndpointId(vpcEndpointId)

@@ -71,6 +71,8 @@ public open class CfnTaskDefinition internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun taskDefinitionType(): String? = unwrap(this).getTaskDefinitionType()
 
   public open fun taskDefinitionType(`value`: String) {
@@ -110,6 +112,8 @@ public open class CfnTaskDefinition internal constructor(
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun taskDefinitionType(taskDefinitionType: String)
 
@@ -160,6 +164,8 @@ public open class CfnTaskDefinition internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun taskDefinitionType(taskDefinitionType: String) {
       cdkBuilder.taskDefinitionType(taskDefinitionType)

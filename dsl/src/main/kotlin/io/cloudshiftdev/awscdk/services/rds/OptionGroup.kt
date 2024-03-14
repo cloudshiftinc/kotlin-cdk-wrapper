@@ -31,6 +31,8 @@ public open class OptionGroup internal constructor(
   public interface Builder {
     public fun configurations(configurations: List<OptionConfiguration>)
 
+    public fun configurations(vararg configurations: OptionConfiguration)
+
     public fun description(description: String)
 
     public fun engine(engine: IInstanceEngine)
@@ -46,6 +48,9 @@ public open class OptionGroup internal constructor(
     override fun configurations(configurations: List<OptionConfiguration>) {
       cdkBuilder.configurations(configurations.map(OptionConfiguration::unwrap))
     }
+
+    override fun configurations(vararg configurations: OptionConfiguration): Unit =
+        configurations(configurations.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)

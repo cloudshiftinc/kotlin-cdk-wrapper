@@ -67,9 +67,13 @@ public open class ApplicationListener internal constructor(
   public interface Builder {
     public fun certificates(certificates: List<IListenerCertificate>)
 
+    public fun certificates(vararg certificates: IListenerCertificate)
+
     public fun defaultAction(defaultAction: ListenerAction)
 
     public fun defaultTargetGroups(defaultTargetGroups: List<IApplicationTargetGroup>)
+
+    public fun defaultTargetGroups(vararg defaultTargetGroups: IApplicationTargetGroup)
 
     public fun loadBalancer(loadBalancer: IApplicationLoadBalancer)
 
@@ -95,6 +99,9 @@ public open class ApplicationListener internal constructor(
       cdkBuilder.certificates(certificates.map(IListenerCertificate::unwrap))
     }
 
+    override fun certificates(vararg certificates: IListenerCertificate): Unit =
+        certificates(certificates.toList())
+
     override fun defaultAction(defaultAction: ListenerAction) {
       cdkBuilder.defaultAction(defaultAction.let(ListenerAction::unwrap))
     }
@@ -102,6 +109,9 @@ public open class ApplicationListener internal constructor(
     override fun defaultTargetGroups(defaultTargetGroups: List<IApplicationTargetGroup>) {
       cdkBuilder.defaultTargetGroups(defaultTargetGroups.map(IApplicationTargetGroup::unwrap))
     }
+
+    override fun defaultTargetGroups(vararg defaultTargetGroups: IApplicationTargetGroup): Unit =
+        defaultTargetGroups(defaultTargetGroups.toList())
 
     override fun loadBalancer(loadBalancer: IApplicationLoadBalancer) {
       cdkBuilder.loadBalancer(loadBalancer.let(IApplicationLoadBalancer::unwrap))

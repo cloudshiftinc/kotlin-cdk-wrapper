@@ -29,7 +29,11 @@ public open class VpnConnection internal constructor(
 
     public fun staticRoutes(staticRoutes: List<String>)
 
+    public fun staticRoutes(vararg staticRoutes: String)
+
     public fun tunnelOptions(tunnelOptions: List<VpnTunnelOption>)
+
+    public fun tunnelOptions(vararg tunnelOptions: VpnTunnelOption)
 
     public fun vpc(vpc: IVpc)
   }
@@ -53,9 +57,15 @@ public open class VpnConnection internal constructor(
       cdkBuilder.staticRoutes(staticRoutes)
     }
 
+    override fun staticRoutes(vararg staticRoutes: String): Unit =
+        staticRoutes(staticRoutes.toList())
+
     override fun tunnelOptions(tunnelOptions: List<VpnTunnelOption>) {
       cdkBuilder.tunnelOptions(tunnelOptions.map(VpnTunnelOption::unwrap))
     }
+
+    override fun tunnelOptions(vararg tunnelOptions: VpnTunnelOption): Unit =
+        tunnelOptions(tunnelOptions.toList())
 
     override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))

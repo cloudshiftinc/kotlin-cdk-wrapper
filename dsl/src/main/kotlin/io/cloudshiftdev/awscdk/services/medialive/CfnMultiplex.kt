@@ -30,12 +30,14 @@ public open class CfnMultiplex internal constructor(
 
   public open fun attrState(): String = unwrap(this).getAttrState()
 
-  public open fun availabilityZones(): List<String> = unwrap(this).getAvailabilityZones() ?:
-      emptyList()
+  public open fun availabilityZones(): List<String> = unwrap(this).getAvailabilityZones()
 
   public open fun availabilityZones(`value`: List<String>) {
     unwrap(this).setAvailabilityZones(`value`)
   }
+
+  public open fun availabilityZones(vararg `value`: String): Unit =
+      availabilityZones(`value`.toList())
 
   public override fun cdkTagManager(): TagManager =
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
@@ -49,6 +51,8 @@ public open class CfnMultiplex internal constructor(
   public open fun destinations(__idx_ac66f0: List<Any>) {
     unwrap(this).setDestinations(__idx_ac66f0)
   }
+
+  public open fun destinations(vararg __idx_ac66f0: Any): Unit = destinations(__idx_ac66f0.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -81,12 +85,18 @@ public open class CfnMultiplex internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun availabilityZones(availabilityZones: List<String>)
+
+    public fun availabilityZones(vararg availabilityZones: String)
 
     public fun destinations(destinations: IResolvable)
 
     public fun destinations(destinations: List<Any>)
+
+    public fun destinations(vararg destinations: Any)
 
     public fun multiplexSettings(multiplexSettings: IResolvable)
 
@@ -99,6 +109,8 @@ public open class CfnMultiplex internal constructor(
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -112,6 +124,9 @@ public open class CfnMultiplex internal constructor(
       cdkBuilder.availabilityZones(availabilityZones)
     }
 
+    override fun availabilityZones(vararg availabilityZones: String): Unit =
+        availabilityZones(availabilityZones.toList())
+
     override fun destinations(destinations: IResolvable) {
       cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
     }
@@ -119,6 +134,8 @@ public open class CfnMultiplex internal constructor(
     override fun destinations(destinations: List<Any>) {
       cdkBuilder.destinations(destinations)
     }
+
+    override fun destinations(vararg destinations: Any): Unit = destinations(destinations.toList())
 
     override fun multiplexSettings(multiplexSettings: IResolvable) {
       cdkBuilder.multiplexSettings(multiplexSettings.let(IResolvable::unwrap))
@@ -140,6 +157,8 @@ public open class CfnMultiplex internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.medialive.CfnMultiplex = cdkBuilder.build()
   }

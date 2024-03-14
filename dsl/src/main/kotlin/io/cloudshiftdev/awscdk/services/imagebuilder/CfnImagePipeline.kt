@@ -155,6 +155,8 @@ public open class CfnImagePipeline internal constructor(
     unwrap(this).setWorkflows(__idx_ac66f0)
   }
 
+  public open fun workflows(vararg __idx_ac66f0: Any): Unit = workflows(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun containerRecipeArn(containerRecipeArn: String)
 
@@ -208,6 +210,8 @@ public open class CfnImagePipeline internal constructor(
     public fun workflows(workflows: IResolvable)
 
     public fun workflows(workflows: List<Any>)
+
+    public fun workflows(vararg workflows: Any)
   }
 
   private class BuilderImpl(
@@ -312,6 +316,8 @@ public open class CfnImagePipeline internal constructor(
       cdkBuilder.workflows(workflows)
     }
 
+    override fun workflows(vararg workflows: Any): Unit = workflows(workflows.toList())
+
     public fun build(): software.amazon.awscdk.services.imagebuilder.CfnImagePipeline =
         cdkBuilder.build()
   }
@@ -346,6 +352,8 @@ public open class CfnImagePipeline internal constructor(
       public fun name(name: String)
 
       public fun `value`(`value`: List<String>)
+
+      public fun `value`(vararg `value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -361,6 +369,8 @@ public open class CfnImagePipeline internal constructor(
       override fun `value`(`value`: List<String>) {
         cdkBuilder.`value`(`value`)
       }
+
+      override fun `value`(vararg `value`: String): Unit = `value`(`value`.toList())
 
       public fun build():
           software.amazon.awscdk.services.imagebuilder.CfnImagePipeline.WorkflowParameterProperty =
@@ -414,6 +424,8 @@ public open class CfnImagePipeline internal constructor(
 
       public fun parameters(parameters: List<Any>)
 
+      public fun parameters(vararg parameters: Any)
+
       public fun workflowArn(workflowArn: String)
     }
 
@@ -438,6 +450,8 @@ public open class CfnImagePipeline internal constructor(
       override fun parameters(parameters: List<Any>) {
         cdkBuilder.parameters(parameters)
       }
+
+      override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
 
       override fun workflowArn(workflowArn: String) {
         cdkBuilder.workflowArn(workflowArn)
@@ -554,6 +568,8 @@ public open class CfnImagePipeline internal constructor(
     public interface Builder {
       public fun containerTags(containerTags: List<String>)
 
+      public fun containerTags(vararg containerTags: String)
+
       public fun repositoryName(repositoryName: String)
     }
 
@@ -566,6 +582,9 @@ public open class CfnImagePipeline internal constructor(
       override fun containerTags(containerTags: List<String>) {
         cdkBuilder.containerTags(containerTags)
       }
+
+      override fun containerTags(vararg containerTags: String): Unit =
+          containerTags(containerTags.toList())
 
       override fun repositoryName(repositoryName: String) {
         cdkBuilder.repositoryName(repositoryName)

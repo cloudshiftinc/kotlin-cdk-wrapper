@@ -32,10 +32,15 @@ public open class VpcEndpointService internal constructor(
 
     public fun allowedPrincipals(allowedPrincipals: List<ArnPrincipal>)
 
+    public fun allowedPrincipals(vararg allowedPrincipals: ArnPrincipal)
+
     public fun contributorInsights(contributorInsights: Boolean)
 
     public
         fun vpcEndpointServiceLoadBalancers(vpcEndpointServiceLoadBalancers: List<IVpcEndpointServiceLoadBalancer>)
+
+    public fun vpcEndpointServiceLoadBalancers(vararg
+        vpcEndpointServiceLoadBalancers: IVpcEndpointServiceLoadBalancer)
   }
 
   private class BuilderImpl(
@@ -53,6 +58,9 @@ public open class VpcEndpointService internal constructor(
       cdkBuilder.allowedPrincipals(allowedPrincipals.map(ArnPrincipal::unwrap))
     }
 
+    override fun allowedPrincipals(vararg allowedPrincipals: ArnPrincipal): Unit =
+        allowedPrincipals(allowedPrincipals.toList())
+
     override fun contributorInsights(contributorInsights: Boolean) {
       cdkBuilder.contributorInsights(contributorInsights)
     }
@@ -61,6 +69,10 @@ public open class VpcEndpointService internal constructor(
         fun vpcEndpointServiceLoadBalancers(vpcEndpointServiceLoadBalancers: List<IVpcEndpointServiceLoadBalancer>) {
       cdkBuilder.vpcEndpointServiceLoadBalancers(vpcEndpointServiceLoadBalancers.map(IVpcEndpointServiceLoadBalancer::unwrap))
     }
+
+    override fun vpcEndpointServiceLoadBalancers(vararg
+        vpcEndpointServiceLoadBalancers: IVpcEndpointServiceLoadBalancer): Unit =
+        vpcEndpointServiceLoadBalancers(vpcEndpointServiceLoadBalancers.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.VpcEndpointService = cdkBuilder.build()
   }

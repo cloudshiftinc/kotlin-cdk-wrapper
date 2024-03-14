@@ -43,6 +43,8 @@ public open class VirtualGateway internal constructor(
 
     public fun listeners(listeners: List<VirtualGatewayListener>)
 
+    public fun listeners(vararg listeners: VirtualGatewayListener)
+
     public fun mesh(mesh: IMesh)
 
     public fun virtualGatewayName(virtualGatewayName: String)
@@ -71,6 +73,9 @@ public open class VirtualGateway internal constructor(
     override fun listeners(listeners: List<VirtualGatewayListener>) {
       cdkBuilder.listeners(listeners.map(VirtualGatewayListener::unwrap))
     }
+
+    override fun listeners(vararg listeners: VirtualGatewayListener): Unit =
+        listeners(listeners.toList())
 
     override fun mesh(mesh: IMesh) {
       cdkBuilder.mesh(mesh.let(IMesh::unwrap))

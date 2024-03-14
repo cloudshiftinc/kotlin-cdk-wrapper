@@ -36,6 +36,9 @@ public open class CfnMethod internal constructor(
     unwrap(this).setAuthorizationScopes(`value`)
   }
 
+  public open fun authorizationScopes(vararg `value`: String): Unit =
+      authorizationScopes(`value`.toList())
+
   public open fun authorizationType(): String? = unwrap(this).getAuthorizationType()
 
   public open fun authorizationType(`value`: String) {
@@ -82,6 +85,9 @@ public open class CfnMethod internal constructor(
   public open fun methodResponses(__idx_ac66f0: List<Any>) {
     unwrap(this).setMethodResponses(__idx_ac66f0)
   }
+
+  public open fun methodResponses(vararg __idx_ac66f0: Any): Unit =
+      methodResponses(__idx_ac66f0.toList())
 
   public open fun operationName(): String? = unwrap(this).getOperationName()
 
@@ -134,6 +140,8 @@ public open class CfnMethod internal constructor(
 
     public fun authorizationScopes(authorizationScopes: List<String>)
 
+    public fun authorizationScopes(vararg authorizationScopes: String)
+
     public fun authorizationType(authorizationType: String)
 
     public fun authorizerId(authorizerId: String)
@@ -151,6 +159,8 @@ public open class CfnMethod internal constructor(
     public fun methodResponses(methodResponses: IResolvable)
 
     public fun methodResponses(methodResponses: List<Any>)
+
+    public fun methodResponses(vararg methodResponses: Any)
 
     public fun operationName(operationName: String)
 
@@ -188,6 +198,9 @@ public open class CfnMethod internal constructor(
       cdkBuilder.authorizationScopes(authorizationScopes)
     }
 
+    override fun authorizationScopes(vararg authorizationScopes: String): Unit =
+        authorizationScopes(authorizationScopes.toList())
+
     override fun authorizationType(authorizationType: String) {
       cdkBuilder.authorizationType(authorizationType)
     }
@@ -220,6 +233,9 @@ public open class CfnMethod internal constructor(
     override fun methodResponses(methodResponses: List<Any>) {
       cdkBuilder.methodResponses(methodResponses)
     }
+
+    override fun methodResponses(vararg methodResponses: Any): Unit =
+        methodResponses(methodResponses.toList())
 
     override fun operationName(operationName: String) {
       cdkBuilder.operationName(operationName)
@@ -390,6 +406,8 @@ public open class CfnMethod internal constructor(
     public interface Builder {
       public fun cacheKeyParameters(cacheKeyParameters: List<String>)
 
+      public fun cacheKeyParameters(vararg cacheKeyParameters: String)
+
       public fun cacheNamespace(cacheNamespace: String)
 
       public fun connectionId(connectionId: String)
@@ -405,6 +423,8 @@ public open class CfnMethod internal constructor(
       public fun integrationResponses(integrationResponses: IResolvable)
 
       public fun integrationResponses(integrationResponses: List<Any>)
+
+      public fun integrationResponses(vararg integrationResponses: Any)
 
       public fun passthroughBehavior(passthroughBehavior: String)
 
@@ -431,6 +451,9 @@ public open class CfnMethod internal constructor(
       override fun cacheKeyParameters(cacheKeyParameters: List<String>) {
         cdkBuilder.cacheKeyParameters(cacheKeyParameters)
       }
+
+      override fun cacheKeyParameters(vararg cacheKeyParameters: String): Unit =
+          cacheKeyParameters(cacheKeyParameters.toList())
 
       override fun cacheNamespace(cacheNamespace: String) {
         cdkBuilder.cacheNamespace(cacheNamespace)
@@ -463,6 +486,9 @@ public open class CfnMethod internal constructor(
       override fun integrationResponses(integrationResponses: List<Any>) {
         cdkBuilder.integrationResponses(integrationResponses)
       }
+
+      override fun integrationResponses(vararg integrationResponses: Any): Unit =
+          integrationResponses(integrationResponses.toList())
 
       override fun passthroughBehavior(passthroughBehavior: String) {
         cdkBuilder.passthroughBehavior(passthroughBehavior)

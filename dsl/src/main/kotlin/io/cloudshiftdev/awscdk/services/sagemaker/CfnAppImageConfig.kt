@@ -73,6 +73,8 @@ public open class CfnAppImageConfig internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun appImageConfigName(appImageConfigName: String)
 
@@ -95,6 +97,8 @@ public open class CfnAppImageConfig internal constructor(
         fun kernelGatewayImageConfig(kernelGatewayImageConfig: KernelGatewayImageConfigProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -141,6 +145,8 @@ public open class CfnAppImageConfig internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.sagemaker.CfnAppImageConfig =
         cdkBuilder.build()
@@ -302,11 +308,17 @@ public open class CfnAppImageConfig internal constructor(
     public interface Builder {
       public fun containerArguments(containerArguments: List<String>)
 
+      public fun containerArguments(vararg containerArguments: String)
+
       public fun containerEntrypoint(containerEntrypoint: List<String>)
+
+      public fun containerEntrypoint(vararg containerEntrypoint: String)
 
       public fun containerEnvironmentVariables(containerEnvironmentVariables: IResolvable)
 
       public fun containerEnvironmentVariables(containerEnvironmentVariables: List<Any>)
+
+      public fun containerEnvironmentVariables(vararg containerEnvironmentVariables: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -319,9 +331,15 @@ public open class CfnAppImageConfig internal constructor(
         cdkBuilder.containerArguments(containerArguments)
       }
 
+      override fun containerArguments(vararg containerArguments: String): Unit =
+          containerArguments(containerArguments.toList())
+
       override fun containerEntrypoint(containerEntrypoint: List<String>) {
         cdkBuilder.containerEntrypoint(containerEntrypoint)
       }
+
+      override fun containerEntrypoint(vararg containerEntrypoint: String): Unit =
+          containerEntrypoint(containerEntrypoint.toList())
 
       override fun containerEnvironmentVariables(containerEnvironmentVariables: IResolvable) {
         cdkBuilder.containerEnvironmentVariables(containerEnvironmentVariables.let(IResolvable::unwrap))
@@ -330,6 +348,9 @@ public open class CfnAppImageConfig internal constructor(
       override fun containerEnvironmentVariables(containerEnvironmentVariables: List<Any>) {
         cdkBuilder.containerEnvironmentVariables(containerEnvironmentVariables)
       }
+
+      override fun containerEnvironmentVariables(vararg containerEnvironmentVariables: Any): Unit =
+          containerEnvironmentVariables(containerEnvironmentVariables.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.ContainerConfigProperty =
@@ -387,6 +408,8 @@ public open class CfnAppImageConfig internal constructor(
       public fun kernelSpecs(kernelSpecs: IResolvable)
 
       public fun kernelSpecs(kernelSpecs: List<Any>)
+
+      public fun kernelSpecs(vararg kernelSpecs: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -415,6 +438,8 @@ public open class CfnAppImageConfig internal constructor(
       override fun kernelSpecs(kernelSpecs: List<Any>) {
         cdkBuilder.kernelSpecs(kernelSpecs)
       }
+
+      override fun kernelSpecs(vararg kernelSpecs: Any): Unit = kernelSpecs(kernelSpecs.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelGatewayImageConfigProperty

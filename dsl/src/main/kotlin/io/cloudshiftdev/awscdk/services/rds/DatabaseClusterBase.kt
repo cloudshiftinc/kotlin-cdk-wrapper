@@ -55,8 +55,7 @@ public abstract class DatabaseClusterBase internal constructor(
   public override fun instanceEndpoints(): List<Endpoint> =
       unwrap(this).getInstanceEndpoints().map(Endpoint::wrap)
 
-  public override fun instanceIdentifiers(): List<String> = unwrap(this).getInstanceIdentifiers() ?:
-      emptyList()
+  public override fun instanceIdentifiers(): List<String> = unwrap(this).getInstanceIdentifiers()
 
   public override fun metric(metricName: String): Metric =
       unwrap(this).metric(metricName).let(Metric::wrap)

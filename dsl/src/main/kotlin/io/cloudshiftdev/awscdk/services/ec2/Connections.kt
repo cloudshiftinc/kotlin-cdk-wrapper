@@ -145,6 +145,8 @@ public open class Connections internal constructor(
     public fun peer(peer: IPeer)
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
+
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
   }
 
   private class BuilderImpl : Builder {
@@ -167,6 +169,9 @@ public open class Connections internal constructor(
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.Connections = cdkBuilder.build()
   }

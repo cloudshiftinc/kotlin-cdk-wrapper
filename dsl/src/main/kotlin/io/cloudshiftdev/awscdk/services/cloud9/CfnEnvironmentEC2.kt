@@ -80,6 +80,8 @@ public open class CfnEnvironmentEC2 internal constructor(
     unwrap(this).setRepositories(__idx_ac66f0)
   }
 
+  public open fun repositories(vararg __idx_ac66f0: Any): Unit = repositories(__idx_ac66f0.toList())
+
   public open fun subnetId(): String? = unwrap(this).getSubnetId()
 
   public open fun subnetId(`value`: String) {
@@ -94,6 +96,8 @@ public open class CfnEnvironmentEC2 internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public interface Builder {
     public fun automaticStopTimeMinutes(automaticStopTimeMinutes: Number)
@@ -114,9 +118,13 @@ public open class CfnEnvironmentEC2 internal constructor(
 
     public fun repositories(repositories: List<Any>)
 
+    public fun repositories(vararg repositories: Any)
+
     public fun subnetId(subnetId: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -162,6 +170,8 @@ public open class CfnEnvironmentEC2 internal constructor(
       cdkBuilder.repositories(repositories)
     }
 
+    override fun repositories(vararg repositories: Any): Unit = repositories(repositories.toList())
+
     override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }
@@ -169,6 +179,8 @@ public open class CfnEnvironmentEC2 internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2 =
         cdkBuilder.build()

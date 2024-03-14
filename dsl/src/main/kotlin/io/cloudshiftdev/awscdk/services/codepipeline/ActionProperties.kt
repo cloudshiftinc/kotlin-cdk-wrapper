@@ -54,7 +54,11 @@ public interface ActionProperties {
 
     public fun inputs(inputs: List<Artifact>)
 
+    public fun inputs(vararg inputs: Artifact)
+
     public fun outputs(outputs: List<Artifact>)
+
+    public fun outputs(vararg outputs: Artifact)
 
     public fun owner(owner: String)
 
@@ -102,9 +106,13 @@ public interface ActionProperties {
       cdkBuilder.inputs(inputs.map(Artifact::unwrap))
     }
 
+    override fun inputs(vararg inputs: Artifact): Unit = inputs(inputs.toList())
+
     override fun outputs(outputs: List<Artifact>) {
       cdkBuilder.outputs(outputs.map(Artifact::unwrap))
     }
+
+    override fun outputs(vararg outputs: Artifact): Unit = outputs(outputs.toList())
 
     override fun owner(owner: String) {
       cdkBuilder.owner(owner)

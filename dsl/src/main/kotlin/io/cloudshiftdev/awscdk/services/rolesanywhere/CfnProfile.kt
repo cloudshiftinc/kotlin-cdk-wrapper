@@ -50,6 +50,9 @@ public open class CfnProfile internal constructor(
     unwrap(this).setManagedPolicyArns(`value`)
   }
 
+  public open fun managedPolicyArns(vararg `value`: String): Unit =
+      managedPolicyArns(`value`.toList())
+
   public open fun name(): String = unwrap(this).getName()
 
   public open fun name(`value`: String) {
@@ -66,11 +69,13 @@ public open class CfnProfile internal constructor(
     unwrap(this).setRequireInstanceProperties(`value`.let(IResolvable::unwrap))
   }
 
-  public open fun roleArns(): List<String> = unwrap(this).getRoleArns() ?: emptyList()
+  public open fun roleArns(): List<String> = unwrap(this).getRoleArns()
 
   public open fun roleArns(`value`: List<String>) {
     unwrap(this).setRoleArns(`value`)
   }
+
+  public open fun roleArns(vararg `value`: String): Unit = roleArns(`value`.toList())
 
   public open fun sessionPolicy(): String? = unwrap(this).getSessionPolicy()
 
@@ -87,6 +92,8 @@ public open class CfnProfile internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun durationSeconds(durationSeconds: Number)
 
@@ -96,6 +103,8 @@ public open class CfnProfile internal constructor(
 
     public fun managedPolicyArns(managedPolicyArns: List<String>)
 
+    public fun managedPolicyArns(vararg managedPolicyArns: String)
+
     public fun name(name: String)
 
     public fun requireInstanceProperties(requireInstanceProperties: Boolean)
@@ -104,9 +113,13 @@ public open class CfnProfile internal constructor(
 
     public fun roleArns(roleArns: List<String>)
 
+    public fun roleArns(vararg roleArns: String)
+
     public fun sessionPolicy(sessionPolicy: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -132,6 +145,9 @@ public open class CfnProfile internal constructor(
       cdkBuilder.managedPolicyArns(managedPolicyArns)
     }
 
+    override fun managedPolicyArns(vararg managedPolicyArns: String): Unit =
+        managedPolicyArns(managedPolicyArns.toList())
+
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -148,6 +164,8 @@ public open class CfnProfile internal constructor(
       cdkBuilder.roleArns(roleArns)
     }
 
+    override fun roleArns(vararg roleArns: String): Unit = roleArns(roleArns.toList())
+
     override fun sessionPolicy(sessionPolicy: String) {
       cdkBuilder.sessionPolicy(sessionPolicy)
     }
@@ -155,6 +173,8 @@ public open class CfnProfile internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.rolesanywhere.CfnProfile =
         cdkBuilder.build()

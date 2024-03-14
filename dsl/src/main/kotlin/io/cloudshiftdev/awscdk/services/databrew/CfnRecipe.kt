@@ -48,6 +48,8 @@ public open class CfnRecipe internal constructor(
     unwrap(this).setSteps(__idx_ac66f0)
   }
 
+  public open fun steps(vararg __idx_ac66f0: Any): Unit = steps(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -56,6 +58,8 @@ public open class CfnRecipe internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public interface Builder {
     public fun description(description: String)
@@ -66,7 +70,11 @@ public open class CfnRecipe internal constructor(
 
     public fun steps(steps: List<Any>)
 
+    public fun steps(vararg steps: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -92,9 +100,13 @@ public open class CfnRecipe internal constructor(
       cdkBuilder.steps(steps)
     }
 
+    override fun steps(vararg steps: Any): Unit = steps(steps.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.databrew.CfnRecipe = cdkBuilder.build()
   }
@@ -842,11 +854,17 @@ public open class CfnRecipe internal constructor(
 
       public fun secondaryInputs(secondaryInputs: List<Any>)
 
+      public fun secondaryInputs(vararg secondaryInputs: Any)
+
       public fun sheetIndexes(sheetIndexes: IResolvable)
 
       public fun sheetIndexes(sheetIndexes: List<Number>)
 
+      public fun sheetIndexes(vararg sheetIndexes: Number)
+
       public fun sheetNames(sheetNames: List<String>)
+
+      public fun sheetNames(vararg sheetNames: String)
 
       public fun sourceColumn(sourceColumn: String)
 
@@ -1199,6 +1217,9 @@ public open class CfnRecipe internal constructor(
         cdkBuilder.secondaryInputs(secondaryInputs)
       }
 
+      override fun secondaryInputs(vararg secondaryInputs: Any): Unit =
+          secondaryInputs(secondaryInputs.toList())
+
       override fun sheetIndexes(sheetIndexes: IResolvable) {
         cdkBuilder.sheetIndexes(sheetIndexes.let(IResolvable::unwrap))
       }
@@ -1207,9 +1228,14 @@ public open class CfnRecipe internal constructor(
         cdkBuilder.sheetIndexes(sheetIndexes)
       }
 
+      override fun sheetIndexes(vararg sheetIndexes: Number): Unit =
+          sheetIndexes(sheetIndexes.toList())
+
       override fun sheetNames(sheetNames: List<String>) {
         cdkBuilder.sheetNames(sheetNames)
       }
+
+      override fun sheetNames(vararg sheetNames: String): Unit = sheetNames(sheetNames.toList())
 
       override fun sourceColumn(sourceColumn: String) {
         cdkBuilder.sourceColumn(sourceColumn)
@@ -1677,6 +1703,8 @@ public open class CfnRecipe internal constructor(
       public fun conditionExpressions(conditionExpressions: IResolvable)
 
       public fun conditionExpressions(conditionExpressions: List<Any>)
+
+      public fun conditionExpressions(vararg conditionExpressions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1704,6 +1732,9 @@ public open class CfnRecipe internal constructor(
       override fun conditionExpressions(conditionExpressions: List<Any>) {
         cdkBuilder.conditionExpressions(conditionExpressions)
       }
+
+      override fun conditionExpressions(vararg conditionExpressions: Any): Unit =
+          conditionExpressions(conditionExpressions.toList())
 
       public fun build(): software.amazon.awscdk.services.databrew.CfnRecipe.RecipeStepProperty =
           cdkBuilder.build()

@@ -114,6 +114,8 @@ public open class CfnResourceCollection internal constructor(
           fun cloudFormation(cloudFormation: CloudFormationCollectionFilterProperty.Builder.() -> Unit)
 
       public fun tags(tags: List<TagCollectionProperty>)
+
+      public fun tags(vararg tags: TagCollectionProperty)
     }
 
     private class BuilderImpl : Builder {
@@ -139,6 +141,8 @@ public open class CfnResourceCollection internal constructor(
       override fun tags(tags: List<TagCollectionProperty>) {
         cdkBuilder.tags(tags.map(TagCollectionProperty::unwrap))
       }
+
+      override fun tags(vararg tags: TagCollectionProperty): Unit = tags(tags.toList())
 
       public fun build():
           software.amazon.awscdk.services.devopsguru.CfnResourceCollection.ResourceCollectionFilterProperty
@@ -184,6 +188,8 @@ public open class CfnResourceCollection internal constructor(
       public fun appBoundaryKey(appBoundaryKey: String)
 
       public fun tagValues(tagValues: List<String>)
+
+      public fun tagValues(vararg tagValues: String)
     }
 
     private class BuilderImpl : Builder {
@@ -199,6 +205,8 @@ public open class CfnResourceCollection internal constructor(
       override fun tagValues(tagValues: List<String>) {
         cdkBuilder.tagValues(tagValues)
       }
+
+      override fun tagValues(vararg tagValues: String): Unit = tagValues(tagValues.toList())
 
       public fun build():
           software.amazon.awscdk.services.devopsguru.CfnResourceCollection.TagCollectionProperty =
@@ -239,6 +247,8 @@ public open class CfnResourceCollection internal constructor(
 
     public interface Builder {
       public fun stackNames(stackNames: List<String>)
+
+      public fun stackNames(vararg stackNames: String)
     }
 
     private class BuilderImpl : Builder {
@@ -250,6 +260,8 @@ public open class CfnResourceCollection internal constructor(
       override fun stackNames(stackNames: List<String>) {
         cdkBuilder.stackNames(stackNames)
       }
+
+      override fun stackNames(vararg stackNames: String): Unit = stackNames(stackNames.toList())
 
       public fun build():
           software.amazon.awscdk.services.devopsguru.CfnResourceCollection.CloudFormationCollectionFilterProperty

@@ -39,7 +39,7 @@ public open class CfnWirelessDeviceImportTask internal constructor(
       unwrap(this).getAttrPendingImportedDevicesCount()
 
   public open fun attrSidewalkDeviceCreationFileList(): List<String> =
-      unwrap(this).getAttrSidewalkDeviceCreationFileList() ?: emptyList()
+      unwrap(this).getAttrSidewalkDeviceCreationFileList()
 
   public open fun attrStatus(): String = unwrap(this).getAttrStatus()
 
@@ -79,6 +79,8 @@ public open class CfnWirelessDeviceImportTask internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun destinationName(destinationName: String)
 
@@ -91,6 +93,8 @@ public open class CfnWirelessDeviceImportTask internal constructor(
     public fun sidewalk(sidewalk: SidewalkProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -122,6 +126,8 @@ public open class CfnWirelessDeviceImportTask internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTask =
         cdkBuilder.build()
@@ -164,6 +170,8 @@ public open class CfnWirelessDeviceImportTask internal constructor(
 
       public fun deviceCreationFileList(deviceCreationFileList: List<String>)
 
+      public fun deviceCreationFileList(vararg deviceCreationFileList: String)
+
       public fun role(role: String)
 
       public fun sidewalkManufacturingSn(sidewalkManufacturingSn: String)
@@ -182,6 +190,9 @@ public open class CfnWirelessDeviceImportTask internal constructor(
       override fun deviceCreationFileList(deviceCreationFileList: List<String>) {
         cdkBuilder.deviceCreationFileList(deviceCreationFileList)
       }
+
+      override fun deviceCreationFileList(vararg deviceCreationFileList: String): Unit =
+          deviceCreationFileList(deviceCreationFileList.toList())
 
       override fun role(role: String) {
         cdkBuilder.role(role)

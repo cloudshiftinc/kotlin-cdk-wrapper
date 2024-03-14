@@ -9,7 +9,7 @@ import kotlin.collections.List
 public abstract class CfnElement internal constructor(
   private val cdkObject: software.amazon.awscdk.CfnElement,
 ) : Construct(cdkObject) {
-  public open fun creationStack(): List<String> = unwrap(this).getCreationStack() ?: emptyList()
+  public open fun creationStack(): List<String> = unwrap(this).getCreationStack()
 
   public open fun logicalId(): String = unwrap(this).getLogicalId()
 

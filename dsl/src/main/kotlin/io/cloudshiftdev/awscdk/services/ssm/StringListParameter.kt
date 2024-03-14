@@ -31,8 +31,7 @@ public open class StringListParameter internal constructor(
 
   public override fun parameterType(): String = unwrap(this).getParameterType()
 
-  public override fun stringListValue(): List<String> = unwrap(this).getStringListValue() ?:
-      emptyList()
+  public override fun stringListValue(): List<String> = unwrap(this).getStringListValue()
 
   public interface Builder {
     public fun allowedPattern(allowedPattern: String)
@@ -44,6 +43,8 @@ public open class StringListParameter internal constructor(
     public fun simpleName(simpleName: Boolean)
 
     public fun stringListValue(stringListValue: List<String>)
+
+    public fun stringListValue(vararg stringListValue: String)
 
     public fun tier(tier: ParameterTier)
   }
@@ -74,6 +75,9 @@ public open class StringListParameter internal constructor(
     override fun stringListValue(stringListValue: List<String>) {
       cdkBuilder.stringListValue(stringListValue)
     }
+
+    override fun stringListValue(vararg stringListValue: String): Unit =
+        stringListValue(stringListValue.toList())
 
     override fun tier(tier: ParameterTier) {
       cdkBuilder.tier(tier.let(ParameterTier::unwrap))
@@ -110,7 +114,7 @@ public open class StringListParameter internal constructor(
     public open fun valueForTypedListParameter(scope: CloudshiftdevConstructsConstruct,
         parameterName: String): List<String> =
         software.amazon.awscdk.services.ssm.StringListParameter.valueForTypedListParameter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        parameterName) ?: emptyList()
+        parameterName)
 
     public open fun valueForTypedListParameter(
       scope: CloudshiftdevConstructsConstruct,
@@ -118,7 +122,7 @@ public open class StringListParameter internal constructor(
       type: ParameterValueType,
     ): List<String> =
         software.amazon.awscdk.services.ssm.StringListParameter.valueForTypedListParameter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        parameterName, type.let(ParameterValueType::unwrap)) ?: emptyList()
+        parameterName, type.let(ParameterValueType::unwrap))
 
     public open fun valueForTypedListParameter(
       scope: CloudshiftdevConstructsConstruct,
@@ -127,7 +131,7 @@ public open class StringListParameter internal constructor(
       version: Number,
     ): List<String> =
         software.amazon.awscdk.services.ssm.StringListParameter.valueForTypedListParameter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        parameterName, type.let(ParameterValueType::unwrap), version) ?: emptyList()
+        parameterName, type.let(ParameterValueType::unwrap), version)
 
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,

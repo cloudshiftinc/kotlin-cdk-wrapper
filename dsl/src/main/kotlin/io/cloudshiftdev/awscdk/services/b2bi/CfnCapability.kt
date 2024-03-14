@@ -59,6 +59,9 @@ public open class CfnCapability internal constructor(
     unwrap(this).setInstructionsDocuments(__idx_ac66f0)
   }
 
+  public open fun instructionsDocuments(vararg __idx_ac66f0: Any): Unit =
+      instructionsDocuments(__idx_ac66f0.toList())
+
   public open fun name(): String = unwrap(this).getName()
 
   public open fun name(`value`: String) {
@@ -70,6 +73,8 @@ public open class CfnCapability internal constructor(
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   public open fun type(): String = unwrap(this).getType()
 
@@ -90,9 +95,13 @@ public open class CfnCapability internal constructor(
 
     public fun instructionsDocuments(instructionsDocuments: List<Any>)
 
+    public fun instructionsDocuments(vararg instructionsDocuments: Any)
+
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun type(type: String)
   }
@@ -125,6 +134,9 @@ public open class CfnCapability internal constructor(
       cdkBuilder.instructionsDocuments(instructionsDocuments)
     }
 
+    override fun instructionsDocuments(vararg instructionsDocuments: Any): Unit =
+        instructionsDocuments(instructionsDocuments.toList())
+
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -132,6 +144,8 @@ public open class CfnCapability internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun type(type: String) {
       cdkBuilder.type(type)

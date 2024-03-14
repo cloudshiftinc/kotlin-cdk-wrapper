@@ -361,6 +361,8 @@ public open class CfnClassifier internal constructor(
 
       public fun containsCustomDatatype(containsCustomDatatype: List<String>)
 
+      public fun containsCustomDatatype(vararg containsCustomDatatype: String)
+
       public fun containsHeader(containsHeader: String)
 
       public fun customDatatypeConfigured(customDatatypeConfigured: Boolean)
@@ -374,6 +376,8 @@ public open class CfnClassifier internal constructor(
       public fun disableValueTrimming(disableValueTrimming: IResolvable)
 
       public fun `header`(`header`: List<String>)
+
+      public fun `header`(vararg `header`: String)
 
       public fun name(name: String)
 
@@ -396,6 +400,9 @@ public open class CfnClassifier internal constructor(
       override fun containsCustomDatatype(containsCustomDatatype: List<String>) {
         cdkBuilder.containsCustomDatatype(containsCustomDatatype)
       }
+
+      override fun containsCustomDatatype(vararg containsCustomDatatype: String): Unit =
+          containsCustomDatatype(containsCustomDatatype.toList())
 
       override fun containsHeader(containsHeader: String) {
         cdkBuilder.containsHeader(containsHeader)
@@ -424,6 +431,8 @@ public open class CfnClassifier internal constructor(
       override fun `header`(`header`: List<String>) {
         cdkBuilder.`header`(`header`)
       }
+
+      override fun `header`(vararg `header`: String): Unit = `header`(`header`.toList())
 
       override fun name(name: String) {
         cdkBuilder.name(name)

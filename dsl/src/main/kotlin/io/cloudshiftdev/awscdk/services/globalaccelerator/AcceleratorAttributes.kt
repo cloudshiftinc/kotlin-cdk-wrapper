@@ -24,7 +24,11 @@ public interface AcceleratorAttributes {
 
     public fun ipv4Addresses(ipv4Addresses: List<String>)
 
+    public fun ipv4Addresses(vararg ipv4Addresses: String)
+
     public fun ipv6Addresses(ipv6Addresses: List<String>)
+
+    public fun ipv6Addresses(vararg ipv6Addresses: String)
   }
 
   private class BuilderImpl : Builder {
@@ -48,9 +52,15 @@ public interface AcceleratorAttributes {
       cdkBuilder.ipv4Addresses(ipv4Addresses)
     }
 
+    override fun ipv4Addresses(vararg ipv4Addresses: String): Unit =
+        ipv4Addresses(ipv4Addresses.toList())
+
     override fun ipv6Addresses(ipv6Addresses: List<String>) {
       cdkBuilder.ipv6Addresses(ipv6Addresses)
     }
+
+    override fun ipv6Addresses(vararg ipv6Addresses: String): Unit =
+        ipv6Addresses(ipv6Addresses.toList())
 
     public fun build(): software.amazon.awscdk.services.globalaccelerator.AcceleratorAttributes =
         cdkBuilder.build()

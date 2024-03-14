@@ -174,6 +174,8 @@ public open class Environment internal constructor(
     public fun environmentName(environmentName: String)
 
     public fun monitors(monitors: List<Monitor>)
+
+    public fun monitors(vararg monitors: Monitor)
   }
 
   private class BuilderImpl(
@@ -198,6 +200,8 @@ public open class Environment internal constructor(
     override fun monitors(monitors: List<Monitor>) {
       cdkBuilder.monitors(monitors.map(Monitor::unwrap))
     }
+
+    override fun monitors(vararg monitors: Monitor): Unit = monitors(monitors.toList())
 
     public fun build(): software.amazon.awscdk.services.appconfig.Environment = cdkBuilder.build()
   }

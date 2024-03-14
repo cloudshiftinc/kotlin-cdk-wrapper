@@ -38,6 +38,9 @@ public open class CfnRuleGroup internal constructor(
     unwrap(this).setAvailableLabels(__idx_ac66f0)
   }
 
+  public open fun availableLabels(vararg __idx_ac66f0: Any): Unit =
+      availableLabels(__idx_ac66f0.toList())
+
   public open fun capacity(): Number = unwrap(this).getCapacity()
 
   public open fun capacity(`value`: Number) {
@@ -53,6 +56,9 @@ public open class CfnRuleGroup internal constructor(
   public open fun consumedLabels(__idx_ac66f0: List<Any>) {
     unwrap(this).setConsumedLabels(__idx_ac66f0)
   }
+
+  public open fun consumedLabels(vararg __idx_ac66f0: Any): Unit =
+      consumedLabels(__idx_ac66f0.toList())
 
   public open fun customResponseBodies(): Any? = unwrap(this).getCustomResponseBodies()
 
@@ -90,6 +96,8 @@ public open class CfnRuleGroup internal constructor(
     unwrap(this).setRules(__idx_ac66f0)
   }
 
+  public open fun rules(vararg __idx_ac66f0: Any): Unit = rules(__idx_ac66f0.toList())
+
   public open fun scope(): String = unwrap(this).getScope()
 
   public open fun scope(`value`: String) {
@@ -104,6 +112,8 @@ public open class CfnRuleGroup internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun visibilityConfig(): Any = unwrap(this).getVisibilityConfig()
 
@@ -125,11 +135,15 @@ public open class CfnRuleGroup internal constructor(
 
     public fun availableLabels(availableLabels: List<Any>)
 
+    public fun availableLabels(vararg availableLabels: Any)
+
     public fun capacity(capacity: Number)
 
     public fun consumedLabels(consumedLabels: IResolvable)
 
     public fun consumedLabels(consumedLabels: List<Any>)
+
+    public fun consumedLabels(vararg consumedLabels: Any)
 
     public fun customResponseBodies(customResponseBodies: IResolvable)
 
@@ -143,9 +157,13 @@ public open class CfnRuleGroup internal constructor(
 
     public fun rules(rules: List<Any>)
 
+    public fun rules(vararg rules: Any)
+
     public fun scope(scope: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun visibilityConfig(visibilityConfig: IResolvable)
 
@@ -171,6 +189,9 @@ public open class CfnRuleGroup internal constructor(
       cdkBuilder.availableLabels(availableLabels)
     }
 
+    override fun availableLabels(vararg availableLabels: Any): Unit =
+        availableLabels(availableLabels.toList())
+
     override fun capacity(capacity: Number) {
       cdkBuilder.capacity(capacity)
     }
@@ -182,6 +203,9 @@ public open class CfnRuleGroup internal constructor(
     override fun consumedLabels(consumedLabels: List<Any>) {
       cdkBuilder.consumedLabels(consumedLabels)
     }
+
+    override fun consumedLabels(vararg consumedLabels: Any): Unit =
+        consumedLabels(consumedLabels.toList())
 
     override fun customResponseBodies(customResponseBodies: IResolvable) {
       cdkBuilder.customResponseBodies(customResponseBodies.let(IResolvable::unwrap))
@@ -207,6 +231,8 @@ public open class CfnRuleGroup internal constructor(
       cdkBuilder.rules(rules)
     }
 
+    override fun rules(vararg rules: Any): Unit = rules(rules.toList())
+
     override fun scope(scope: String) {
       cdkBuilder.scope(scope)
     }
@@ -214,6 +240,8 @@ public open class CfnRuleGroup internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun visibilityConfig(visibilityConfig: IResolvable) {
       cdkBuilder.visibilityConfig(visibilityConfig.let(IResolvable::unwrap))
@@ -358,6 +386,8 @@ public open class CfnRuleGroup internal constructor(
       public fun responseHeaders(responseHeaders: IResolvable)
 
       public fun responseHeaders(responseHeaders: List<Any>)
+
+      public fun responseHeaders(vararg responseHeaders: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -380,6 +410,9 @@ public open class CfnRuleGroup internal constructor(
       override fun responseHeaders(responseHeaders: List<Any>) {
         cdkBuilder.responseHeaders(responseHeaders)
       }
+
+      override fun responseHeaders(vararg responseHeaders: Any): Unit =
+          responseHeaders(responseHeaders.toList())
 
       public fun build(): software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomResponseProperty
           = cdkBuilder.build()
@@ -600,6 +633,8 @@ public open class CfnRuleGroup internal constructor(
 
       public fun ruleLabels(ruleLabels: List<Any>)
 
+      public fun ruleLabels(vararg ruleLabels: Any)
+
       public fun statement(statement: IResolvable)
 
       public fun statement(statement: StatementProperty)
@@ -676,6 +711,8 @@ public open class CfnRuleGroup internal constructor(
       override fun ruleLabels(ruleLabels: List<Any>) {
         cdkBuilder.ruleLabels(ruleLabels)
       }
+
+      override fun ruleLabels(vararg ruleLabels: Any): Unit = ruleLabels(ruleLabels.toList())
 
       override fun statement(statement: IResolvable) {
         cdkBuilder.statement(statement.let(IResolvable::unwrap))
@@ -754,6 +791,8 @@ public open class CfnRuleGroup internal constructor(
     public interface Builder {
       public fun countryCodes(countryCodes: List<String>)
 
+      public fun countryCodes(vararg countryCodes: String)
+
       public fun forwardedIpConfig(forwardedIpConfig: IResolvable)
 
       public fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty)
@@ -772,6 +811,9 @@ public open class CfnRuleGroup internal constructor(
       override fun countryCodes(countryCodes: List<String>) {
         cdkBuilder.countryCodes(countryCodes)
       }
+
+      override fun countryCodes(vararg countryCodes: String): Unit =
+          countryCodes(countryCodes.toList())
 
       override fun forwardedIpConfig(forwardedIpConfig: IResolvable) {
         cdkBuilder.forwardedIpConfig(forwardedIpConfig.let(IResolvable::unwrap))
@@ -833,7 +875,11 @@ public open class CfnRuleGroup internal constructor(
 
       public fun excludedCookies(excludedCookies: List<String>)
 
+      public fun excludedCookies(vararg excludedCookies: String)
+
       public fun includedCookies(includedCookies: List<String>)
+
+      public fun includedCookies(vararg includedCookies: String)
     }
 
     private class BuilderImpl : Builder {
@@ -849,9 +895,15 @@ public open class CfnRuleGroup internal constructor(
         cdkBuilder.excludedCookies(excludedCookies)
       }
 
+      override fun excludedCookies(vararg excludedCookies: String): Unit =
+          excludedCookies(excludedCookies.toList())
+
       override fun includedCookies(includedCookies: List<String>) {
         cdkBuilder.includedCookies(includedCookies)
       }
+
+      override fun includedCookies(vararg includedCookies: String): Unit =
+          includedCookies(includedCookies.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CookieMatchPatternProperty =
@@ -916,6 +968,8 @@ public open class CfnRuleGroup internal constructor(
       public fun textTransformations(textTransformations: IResolvable)
 
       public fun textTransformations(textTransformations: List<Any>)
+
+      public fun textTransformations(vararg textTransformations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -952,6 +1006,9 @@ public open class CfnRuleGroup internal constructor(
       override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
+
+      override fun textTransformations(vararg textTransformations: Any): Unit =
+          textTransformations(textTransformations.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.SizeConstraintStatementProperty =
@@ -2200,6 +2257,8 @@ public open class CfnRuleGroup internal constructor(
       public fun statements(statements: IResolvable)
 
       public fun statements(statements: List<Any>)
+
+      public fun statements(vararg statements: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2214,6 +2273,8 @@ public open class CfnRuleGroup internal constructor(
       override fun statements(statements: List<Any>) {
         cdkBuilder.statements(statements)
       }
+
+      override fun statements(vararg statements: Any): Unit = statements(statements.toList())
 
       public fun build(): software.amazon.awscdk.services.wafv2.CfnRuleGroup.OrStatementProperty =
           cdkBuilder.build()
@@ -2275,6 +2336,8 @@ public open class CfnRuleGroup internal constructor(
       public fun textTransformations(textTransformations: IResolvable)
 
       public fun textTransformations(textTransformations: List<Any>)
+
+      public fun textTransformations(vararg textTransformations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2314,6 +2377,9 @@ public open class CfnRuleGroup internal constructor(
       override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
+
+      override fun textTransformations(vararg textTransformations: Any): Unit =
+          textTransformations(textTransformations.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.ByteMatchStatementProperty =
@@ -2376,6 +2442,8 @@ public open class CfnRuleGroup internal constructor(
       public fun textTransformations(textTransformations: IResolvable)
 
       public fun textTransformations(textTransformations: List<Any>)
+
+      public fun textTransformations(vararg textTransformations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2407,6 +2475,9 @@ public open class CfnRuleGroup internal constructor(
       override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
+
+      override fun textTransformations(vararg textTransformations: Any): Unit =
+          textTransformations(textTransformations.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RegexMatchStatementProperty =
@@ -2745,6 +2816,8 @@ public open class CfnRuleGroup internal constructor(
       public fun insertHeaders(insertHeaders: IResolvable)
 
       public fun insertHeaders(insertHeaders: List<Any>)
+
+      public fun insertHeaders(vararg insertHeaders: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2759,6 +2832,9 @@ public open class CfnRuleGroup internal constructor(
       override fun insertHeaders(insertHeaders: List<Any>) {
         cdkBuilder.insertHeaders(insertHeaders)
       }
+
+      override fun insertHeaders(vararg insertHeaders: Any): Unit =
+          insertHeaders(insertHeaders.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.CustomRequestHandlingProperty =
@@ -2803,6 +2879,8 @@ public open class CfnRuleGroup internal constructor(
       public fun textTransformations(textTransformations: IResolvable)
 
       public fun textTransformations(textTransformations: List<Any>)
+
+      public fun textTransformations(vararg textTransformations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2821,6 +2899,9 @@ public open class CfnRuleGroup internal constructor(
       override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
+
+      override fun textTransformations(vararg textTransformations: Any): Unit =
+          textTransformations(textTransformations.toList())
 
       public fun build(): software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitCookieProperty
           = cdkBuilder.build()
@@ -3056,6 +3137,8 @@ public open class CfnRuleGroup internal constructor(
       public fun textTransformations(textTransformations: IResolvable)
 
       public fun textTransformations(textTransformations: List<Any>)
+
+      public fun textTransformations(vararg textTransformations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -3088,6 +3171,9 @@ public open class CfnRuleGroup internal constructor(
       override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
+
+      override fun textTransformations(vararg textTransformations: Any): Unit =
+          textTransformations(textTransformations.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RegexPatternSetReferenceStatementProperty
@@ -3201,6 +3287,8 @@ public open class CfnRuleGroup internal constructor(
       public fun textTransformations(textTransformations: IResolvable)
 
       public fun textTransformations(textTransformations: List<Any>)
+
+      public fun textTransformations(vararg textTransformations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -3228,6 +3316,9 @@ public open class CfnRuleGroup internal constructor(
       override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
+
+      override fun textTransformations(vararg textTransformations: Any): Unit =
+          textTransformations(textTransformations.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.XssMatchStatementProperty =
@@ -3511,6 +3602,8 @@ public open class CfnRuleGroup internal constructor(
       public fun all(all: Any)
 
       public fun includedPaths(includedPaths: List<String>)
+
+      public fun includedPaths(vararg includedPaths: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3525,6 +3618,9 @@ public open class CfnRuleGroup internal constructor(
       override fun includedPaths(includedPaths: List<String>) {
         cdkBuilder.includedPaths(includedPaths)
       }
+
+      override fun includedPaths(vararg includedPaths: String): Unit =
+          includedPaths(includedPaths.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.JsonMatchPatternProperty =
@@ -3567,6 +3663,8 @@ public open class CfnRuleGroup internal constructor(
       public fun textTransformations(textTransformations: IResolvable)
 
       public fun textTransformations(textTransformations: List<Any>)
+
+      public fun textTransformations(vararg textTransformations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -3581,6 +3679,9 @@ public open class CfnRuleGroup internal constructor(
       override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
+
+      override fun textTransformations(vararg textTransformations: Any): Unit =
+          textTransformations(textTransformations.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitUriPathProperty =
@@ -3693,6 +3794,8 @@ public open class CfnRuleGroup internal constructor(
 
       public fun customKeys(customKeys: List<Any>)
 
+      public fun customKeys(vararg customKeys: Any)
+
       public fun forwardedIpConfig(forwardedIpConfig: IResolvable)
 
       public fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty)
@@ -3729,6 +3832,8 @@ public open class CfnRuleGroup internal constructor(
       override fun customKeys(customKeys: List<Any>) {
         cdkBuilder.customKeys(customKeys)
       }
+
+      override fun customKeys(vararg customKeys: Any): Unit = customKeys(customKeys.toList())
 
       override fun forwardedIpConfig(forwardedIpConfig: IResolvable) {
         cdkBuilder.forwardedIpConfig(forwardedIpConfig.let(IResolvable::unwrap))
@@ -3812,6 +3917,8 @@ public open class CfnRuleGroup internal constructor(
       public fun textTransformations(textTransformations: IResolvable)
 
       public fun textTransformations(textTransformations: List<Any>)
+
+      public fun textTransformations(vararg textTransformations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -3830,6 +3937,9 @@ public open class CfnRuleGroup internal constructor(
       override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
+
+      override fun textTransformations(vararg textTransformations: Any): Unit =
+          textTransformations(textTransformations.toList())
 
       public fun build(): software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitHeaderProperty
           = cdkBuilder.build()
@@ -3957,7 +4067,11 @@ public open class CfnRuleGroup internal constructor(
 
       public fun excludedHeaders(excludedHeaders: List<String>)
 
+      public fun excludedHeaders(vararg excludedHeaders: String)
+
       public fun includedHeaders(includedHeaders: List<String>)
+
+      public fun includedHeaders(vararg includedHeaders: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3973,9 +4087,15 @@ public open class CfnRuleGroup internal constructor(
         cdkBuilder.excludedHeaders(excludedHeaders)
       }
 
+      override fun excludedHeaders(vararg excludedHeaders: String): Unit =
+          excludedHeaders(excludedHeaders.toList())
+
       override fun includedHeaders(includedHeaders: List<String>) {
         cdkBuilder.includedHeaders(includedHeaders)
       }
+
+      override fun includedHeaders(vararg includedHeaders: String): Unit =
+          includedHeaders(includedHeaders.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.HeaderMatchPatternProperty =
@@ -4115,6 +4235,8 @@ public open class CfnRuleGroup internal constructor(
       public fun statements(statements: IResolvable)
 
       public fun statements(statements: List<Any>)
+
+      public fun statements(vararg statements: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -4129,6 +4251,8 @@ public open class CfnRuleGroup internal constructor(
       override fun statements(statements: List<Any>) {
         cdkBuilder.statements(statements)
       }
+
+      override fun statements(vararg statements: Any): Unit = statements(statements.toList())
 
       public fun build(): software.amazon.awscdk.services.wafv2.CfnRuleGroup.AndStatementProperty =
           cdkBuilder.build()
@@ -4172,6 +4296,8 @@ public open class CfnRuleGroup internal constructor(
       public fun textTransformations(textTransformations: IResolvable)
 
       public fun textTransformations(textTransformations: List<Any>)
+
+      public fun textTransformations(vararg textTransformations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -4191,6 +4317,9 @@ public open class CfnRuleGroup internal constructor(
       override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
+
+      override fun textTransformations(vararg textTransformations: Any): Unit =
+          textTransformations(textTransformations.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitQueryArgumentProperty =
@@ -4233,6 +4362,8 @@ public open class CfnRuleGroup internal constructor(
       public fun textTransformations(textTransformations: IResolvable)
 
       public fun textTransformations(textTransformations: List<Any>)
+
+      public fun textTransformations(vararg textTransformations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -4247,6 +4378,9 @@ public open class CfnRuleGroup internal constructor(
       override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
+
+      override fun textTransformations(vararg textTransformations: Any): Unit =
+          textTransformations(textTransformations.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.RateLimitQueryStringProperty =
@@ -4301,6 +4435,8 @@ public open class CfnRuleGroup internal constructor(
       public fun textTransformations(textTransformations: IResolvable)
 
       public fun textTransformations(textTransformations: List<Any>)
+
+      public fun textTransformations(vararg textTransformations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -4332,6 +4468,9 @@ public open class CfnRuleGroup internal constructor(
       override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
+
+      override fun textTransformations(vararg textTransformations: Any): Unit =
+          textTransformations(textTransformations.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnRuleGroup.SqliMatchStatementProperty =

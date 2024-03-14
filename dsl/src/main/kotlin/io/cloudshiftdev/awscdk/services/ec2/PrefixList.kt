@@ -28,6 +28,8 @@ public open class PrefixList internal constructor(
 
     public fun entries(entries: List<CfnPrefixList.EntryProperty>)
 
+    public fun entries(vararg entries: CfnPrefixList.EntryProperty)
+
     public fun maxEntries(maxEntries: Number)
 
     public fun prefixListName(prefixListName: String)
@@ -47,6 +49,9 @@ public open class PrefixList internal constructor(
     override fun entries(entries: List<CfnPrefixList.EntryProperty>) {
       cdkBuilder.entries(entries.map(CfnPrefixList.EntryProperty::unwrap))
     }
+
+    override fun entries(vararg entries: CfnPrefixList.EntryProperty): Unit =
+        entries(entries.toList())
 
     override fun maxEntries(maxEntries: Number) {
       cdkBuilder.maxEntries(maxEntries)

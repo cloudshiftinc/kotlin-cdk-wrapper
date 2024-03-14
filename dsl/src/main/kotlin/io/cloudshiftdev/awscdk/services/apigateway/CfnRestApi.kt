@@ -39,6 +39,9 @@ public open class CfnRestApi internal constructor(
     unwrap(this).setBinaryMediaTypes(`value`)
   }
 
+  public open fun binaryMediaTypes(vararg `value`: String): Unit =
+      binaryMediaTypes(`value`.toList())
+
   public open fun body(): Any? = unwrap(this).getBody()
 
   public open fun body(`value`: Any) {
@@ -154,10 +157,14 @@ public open class CfnRestApi internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun apiKeySourceType(apiKeySourceType: String)
 
     public fun binaryMediaTypes(binaryMediaTypes: List<String>)
+
+    public fun binaryMediaTypes(vararg binaryMediaTypes: String)
 
     public fun body(body: Any)
 
@@ -203,6 +210,8 @@ public open class CfnRestApi internal constructor(
     public fun policy(policy: Any)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -219,6 +228,9 @@ public open class CfnRestApi internal constructor(
     override fun binaryMediaTypes(binaryMediaTypes: List<String>) {
       cdkBuilder.binaryMediaTypes(binaryMediaTypes)
     }
+
+    override fun binaryMediaTypes(vararg binaryMediaTypes: String): Unit =
+        binaryMediaTypes(binaryMediaTypes.toList())
 
     override fun body(body: Any) {
       cdkBuilder.body(body)
@@ -302,6 +314,8 @@ public open class CfnRestApi internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.apigateway.CfnRestApi = cdkBuilder.build()
   }
@@ -412,7 +426,11 @@ public open class CfnRestApi internal constructor(
     public interface Builder {
       public fun types(types: List<String>)
 
+      public fun types(vararg types: String)
+
       public fun vpcEndpointIds(vpcEndpointIds: List<String>)
+
+      public fun vpcEndpointIds(vararg vpcEndpointIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -425,9 +443,14 @@ public open class CfnRestApi internal constructor(
         cdkBuilder.types(types)
       }
 
+      override fun types(vararg types: String): Unit = types(types.toList())
+
       override fun vpcEndpointIds(vpcEndpointIds: List<String>) {
         cdkBuilder.vpcEndpointIds(vpcEndpointIds)
       }
+
+      override fun vpcEndpointIds(vararg vpcEndpointIds: String): Unit =
+          vpcEndpointIds(vpcEndpointIds.toList())
 
       public fun build():
           software.amazon.awscdk.services.apigateway.CfnRestApi.EndpointConfigurationProperty =

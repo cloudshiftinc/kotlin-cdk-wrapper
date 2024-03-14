@@ -50,6 +50,8 @@ public open class CfnDBProxyEndpoint internal constructor(
     unwrap(this).setTags(`value`.map(TagFormatProperty::unwrap))
   }
 
+  public open fun tags(vararg `value`: TagFormatProperty): Unit = tags(`value`.toList())
+
   public open fun targetRole(): String? = unwrap(this).getTargetRole()
 
   public open fun targetRole(`value`: String) {
@@ -63,11 +65,16 @@ public open class CfnDBProxyEndpoint internal constructor(
     unwrap(this).setVpcSecurityGroupIds(`value`)
   }
 
-  public open fun vpcSubnetIds(): List<String> = unwrap(this).getVpcSubnetIds() ?: emptyList()
+  public open fun vpcSecurityGroupIds(vararg `value`: String): Unit =
+      vpcSecurityGroupIds(`value`.toList())
+
+  public open fun vpcSubnetIds(): List<String> = unwrap(this).getVpcSubnetIds()
 
   public open fun vpcSubnetIds(`value`: List<String>) {
     unwrap(this).setVpcSubnetIds(`value`)
   }
+
+  public open fun vpcSubnetIds(vararg `value`: String): Unit = vpcSubnetIds(`value`.toList())
 
   public interface Builder {
     public fun dbProxyEndpointName(dbProxyEndpointName: String)
@@ -76,11 +83,17 @@ public open class CfnDBProxyEndpoint internal constructor(
 
     public fun tags(tags: List<TagFormatProperty>)
 
+    public fun tags(vararg tags: TagFormatProperty)
+
     public fun targetRole(targetRole: String)
 
     public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>)
 
+    public fun vpcSecurityGroupIds(vararg vpcSecurityGroupIds: String)
+
     public fun vpcSubnetIds(vpcSubnetIds: List<String>)
+
+    public fun vpcSubnetIds(vararg vpcSubnetIds: String)
   }
 
   private class BuilderImpl(
@@ -102,6 +115,8 @@ public open class CfnDBProxyEndpoint internal constructor(
       cdkBuilder.tags(tags.map(TagFormatProperty::unwrap))
     }
 
+    override fun tags(vararg tags: TagFormatProperty): Unit = tags(tags.toList())
+
     override fun targetRole(targetRole: String) {
       cdkBuilder.targetRole(targetRole)
     }
@@ -110,9 +125,15 @@ public open class CfnDBProxyEndpoint internal constructor(
       cdkBuilder.vpcSecurityGroupIds(vpcSecurityGroupIds)
     }
 
+    override fun vpcSecurityGroupIds(vararg vpcSecurityGroupIds: String): Unit =
+        vpcSecurityGroupIds(vpcSecurityGroupIds.toList())
+
     override fun vpcSubnetIds(vpcSubnetIds: List<String>) {
       cdkBuilder.vpcSubnetIds(vpcSubnetIds)
     }
+
+    override fun vpcSubnetIds(vararg vpcSubnetIds: String): Unit =
+        vpcSubnetIds(vpcSubnetIds.toList())
 
     public fun build(): software.amazon.awscdk.services.rds.CfnDBProxyEndpoint = cdkBuilder.build()
   }

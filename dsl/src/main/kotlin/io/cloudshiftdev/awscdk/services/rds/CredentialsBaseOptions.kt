@@ -23,6 +23,8 @@ public interface CredentialsBaseOptions {
 
     public fun replicaRegions(replicaRegions: List<ReplicaRegion>)
 
+    public fun replicaRegions(vararg replicaRegions: ReplicaRegion)
+
     public fun secretName(secretName: String)
   }
 
@@ -41,6 +43,9 @@ public interface CredentialsBaseOptions {
     override fun replicaRegions(replicaRegions: List<ReplicaRegion>) {
       cdkBuilder.replicaRegions(replicaRegions.map(ReplicaRegion::unwrap))
     }
+
+    override fun replicaRegions(vararg replicaRegions: ReplicaRegion): Unit =
+        replicaRegions(replicaRegions.toList())
 
     override fun secretName(secretName: String) {
       cdkBuilder.secretName(secretName)

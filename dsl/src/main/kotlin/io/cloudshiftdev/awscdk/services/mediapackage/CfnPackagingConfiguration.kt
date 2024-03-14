@@ -108,6 +108,8 @@ public open class CfnPackagingConfiguration internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun cmafPackage(cmafPackage: IResolvable)
 
@@ -146,6 +148,8 @@ public open class CfnPackagingConfiguration internal constructor(
     public fun packagingGroupId(packagingGroupId: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -220,6 +224,8 @@ public open class CfnPackagingConfiguration internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.mediapackage.CfnPackagingConfiguration =
         cdkBuilder.build()
@@ -332,6 +338,8 @@ public open class CfnPackagingConfiguration internal constructor(
 
       public fun dashManifests(dashManifests: List<Any>)
 
+      public fun dashManifests(vararg dashManifests: Any)
+
       public fun encryption(encryption: IResolvable)
 
       public fun encryption(encryption: DashEncryptionProperty)
@@ -352,6 +360,8 @@ public open class CfnPackagingConfiguration internal constructor(
 
       public fun periodTriggers(periodTriggers: List<String>)
 
+      public fun periodTriggers(vararg periodTriggers: String)
+
       public fun segmentDurationSeconds(segmentDurationSeconds: Number)
 
       public fun segmentTemplateFormat(segmentTemplateFormat: String)
@@ -370,6 +380,9 @@ public open class CfnPackagingConfiguration internal constructor(
       override fun dashManifests(dashManifests: List<Any>) {
         cdkBuilder.dashManifests(dashManifests)
       }
+
+      override fun dashManifests(vararg dashManifests: Any): Unit =
+          dashManifests(dashManifests.toList())
 
       override fun encryption(encryption: IResolvable) {
         cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
@@ -405,6 +418,9 @@ public open class CfnPackagingConfiguration internal constructor(
       override fun periodTriggers(periodTriggers: List<String>) {
         cdkBuilder.periodTriggers(periodTriggers)
       }
+
+      override fun periodTriggers(vararg periodTriggers: String): Unit =
+          periodTriggers(periodTriggers.toList())
 
       override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
         cdkBuilder.segmentDurationSeconds(segmentDurationSeconds)
@@ -612,6 +628,8 @@ public open class CfnPackagingConfiguration internal constructor(
 
       public fun mssManifests(mssManifests: List<Any>)
 
+      public fun mssManifests(vararg mssManifests: Any)
+
       public fun segmentDurationSeconds(segmentDurationSeconds: Number)
     }
 
@@ -641,6 +659,9 @@ public open class CfnPackagingConfiguration internal constructor(
       override fun mssManifests(mssManifests: List<Any>) {
         cdkBuilder.mssManifests(mssManifests)
       }
+
+      override fun mssManifests(vararg mssManifests: Any): Unit =
+          mssManifests(mssManifests.toList())
 
       override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
         cdkBuilder.segmentDurationSeconds(segmentDurationSeconds)
@@ -1035,6 +1056,8 @@ public open class CfnPackagingConfiguration internal constructor(
 
       public fun systemIds(systemIds: List<String>)
 
+      public fun systemIds(vararg systemIds: String)
+
       public fun url(url: String)
     }
 
@@ -1068,6 +1091,8 @@ public open class CfnPackagingConfiguration internal constructor(
         cdkBuilder.systemIds(systemIds)
       }
 
+      override fun systemIds(vararg systemIds: String): Unit = systemIds(systemIds.toList())
+
       override fun url(url: String) {
         cdkBuilder.url(url)
       }
@@ -1086,7 +1111,7 @@ public open class CfnPackagingConfiguration internal constructor(
 
       override fun roleArn(): String = unwrap(this).getRoleArn()
 
-      override fun systemIds(): List<String> = unwrap(this).getSystemIds() ?: emptyList()
+      override fun systemIds(): List<String> = unwrap(this).getSystemIds()
 
       override fun url(): String = unwrap(this).getUrl()
     }
@@ -1195,6 +1220,8 @@ public open class CfnPackagingConfiguration internal constructor(
 
       public fun hlsManifests(hlsManifests: List<Any>)
 
+      public fun hlsManifests(vararg hlsManifests: Any)
+
       public fun includeDvbSubtitles(includeDvbSubtitles: Boolean)
 
       public fun includeDvbSubtitles(includeDvbSubtitles: IResolvable)
@@ -1232,6 +1259,9 @@ public open class CfnPackagingConfiguration internal constructor(
       override fun hlsManifests(hlsManifests: List<Any>) {
         cdkBuilder.hlsManifests(hlsManifests)
       }
+
+      override fun hlsManifests(vararg hlsManifests: Any): Unit =
+          hlsManifests(hlsManifests.toList())
 
       override fun includeDvbSubtitles(includeDvbSubtitles: Boolean) {
         cdkBuilder.includeDvbSubtitles(includeDvbSubtitles)
@@ -1454,6 +1484,8 @@ public open class CfnPackagingConfiguration internal constructor(
 
       public fun hlsManifests(hlsManifests: List<Any>)
 
+      public fun hlsManifests(vararg hlsManifests: Any)
+
       public
           fun includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments: Boolean)
 
@@ -1489,6 +1521,9 @@ public open class CfnPackagingConfiguration internal constructor(
       override fun hlsManifests(hlsManifests: List<Any>) {
         cdkBuilder.hlsManifests(hlsManifests)
       }
+
+      override fun hlsManifests(vararg hlsManifests: Any): Unit =
+          hlsManifests(hlsManifests.toList())
 
       override
           fun includeEncoderConfigurationInSegments(includeEncoderConfigurationInSegments: Boolean) {

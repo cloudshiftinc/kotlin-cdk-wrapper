@@ -110,6 +110,8 @@ public open class CfnStateMachine internal constructor(
     unwrap(this).setTagsRaw(`value`.map(TagsEntryProperty::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: TagsEntryProperty): Unit = tagsRaw(`value`.toList())
+
   public open fun tracingConfiguration(): Any? = unwrap(this).getTracingConfiguration()
 
   public open fun tracingConfiguration(`value`: IResolvable) {
@@ -158,6 +160,8 @@ public open class CfnStateMachine internal constructor(
     public fun stateMachineType(stateMachineType: String)
 
     public fun tags(tags: List<TagsEntryProperty>)
+
+    public fun tags(vararg tags: TagsEntryProperty)
 
     public fun tracingConfiguration(tracingConfiguration: IResolvable)
 
@@ -235,6 +239,8 @@ public open class CfnStateMachine internal constructor(
       cdkBuilder.tags(tags.map(TagsEntryProperty::unwrap))
     }
 
+    override fun tags(vararg tags: TagsEntryProperty): Unit = tags(tags.toList())
+
     override fun tracingConfiguration(tracingConfiguration: IResolvable) {
       cdkBuilder.tracingConfiguration(tracingConfiguration.let(IResolvable::unwrap))
     }
@@ -286,6 +292,8 @@ public open class CfnStateMachine internal constructor(
 
       public fun destinations(destinations: List<Any>)
 
+      public fun destinations(vararg destinations: Any)
+
       public fun includeExecutionData(includeExecutionData: Boolean)
 
       public fun includeExecutionData(includeExecutionData: IResolvable)
@@ -306,6 +314,9 @@ public open class CfnStateMachine internal constructor(
       override fun destinations(destinations: List<Any>) {
         cdkBuilder.destinations(destinations)
       }
+
+      override fun destinations(vararg destinations: Any): Unit =
+          destinations(destinations.toList())
 
       override fun includeExecutionData(includeExecutionData: Boolean) {
         cdkBuilder.includeExecutionData(includeExecutionData)

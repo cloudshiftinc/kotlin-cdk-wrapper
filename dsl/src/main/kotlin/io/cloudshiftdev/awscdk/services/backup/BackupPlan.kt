@@ -45,6 +45,8 @@ public open class BackupPlan internal constructor(
 
     public fun backupPlanRules(backupPlanRules: List<BackupPlanRule>)
 
+    public fun backupPlanRules(vararg backupPlanRules: BackupPlanRule)
+
     public fun backupVault(backupVault: IBackupVault)
 
     public fun windowsVss(windowsVss: Boolean)
@@ -64,6 +66,9 @@ public open class BackupPlan internal constructor(
     override fun backupPlanRules(backupPlanRules: List<BackupPlanRule>) {
       cdkBuilder.backupPlanRules(backupPlanRules.map(BackupPlanRule::unwrap))
     }
+
+    override fun backupPlanRules(vararg backupPlanRules: BackupPlanRule): Unit =
+        backupPlanRules(backupPlanRules.toList())
 
     override fun backupVault(backupVault: IBackupVault) {
       cdkBuilder.backupVault(backupVault.let(IBackupVault::unwrap))

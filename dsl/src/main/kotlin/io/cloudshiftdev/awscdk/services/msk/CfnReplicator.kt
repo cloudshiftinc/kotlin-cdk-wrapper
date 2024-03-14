@@ -51,6 +51,9 @@ public open class CfnReplicator internal constructor(
     unwrap(this).setKafkaClusters(__idx_ac66f0)
   }
 
+  public open fun kafkaClusters(vararg __idx_ac66f0: Any): Unit =
+      kafkaClusters(__idx_ac66f0.toList())
+
   public open fun replicationInfoList(): Any = unwrap(this).getReplicationInfoList()
 
   public open fun replicationInfoList(`value`: IResolvable) {
@@ -60,6 +63,9 @@ public open class CfnReplicator internal constructor(
   public open fun replicationInfoList(__idx_ac66f0: List<Any>) {
     unwrap(this).setReplicationInfoList(__idx_ac66f0)
   }
+
+  public open fun replicationInfoList(vararg __idx_ac66f0: Any): Unit =
+      replicationInfoList(__idx_ac66f0.toList())
 
   public open fun replicatorName(): String = unwrap(this).getReplicatorName()
 
@@ -79,6 +85,8 @@ public open class CfnReplicator internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun currentVersion(currentVersion: String)
 
@@ -88,15 +96,21 @@ public open class CfnReplicator internal constructor(
 
     public fun kafkaClusters(kafkaClusters: List<Any>)
 
+    public fun kafkaClusters(vararg kafkaClusters: Any)
+
     public fun replicationInfoList(replicationInfoList: IResolvable)
 
     public fun replicationInfoList(replicationInfoList: List<Any>)
+
+    public fun replicationInfoList(vararg replicationInfoList: Any)
 
     public fun replicatorName(replicatorName: String)
 
     public fun serviceExecutionRoleArn(serviceExecutionRoleArn: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -122,6 +136,9 @@ public open class CfnReplicator internal constructor(
       cdkBuilder.kafkaClusters(kafkaClusters)
     }
 
+    override fun kafkaClusters(vararg kafkaClusters: Any): Unit =
+        kafkaClusters(kafkaClusters.toList())
+
     override fun replicationInfoList(replicationInfoList: IResolvable) {
       cdkBuilder.replicationInfoList(replicationInfoList.let(IResolvable::unwrap))
     }
@@ -129,6 +146,9 @@ public open class CfnReplicator internal constructor(
     override fun replicationInfoList(replicationInfoList: List<Any>) {
       cdkBuilder.replicationInfoList(replicationInfoList)
     }
+
+    override fun replicationInfoList(vararg replicationInfoList: Any): Unit =
+        replicationInfoList(replicationInfoList.toList())
 
     override fun replicatorName(replicatorName: String) {
       cdkBuilder.replicatorName(replicatorName)
@@ -141,6 +161,8 @@ public open class CfnReplicator internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.msk.CfnReplicator = cdkBuilder.build()
   }
@@ -240,7 +262,11 @@ public open class CfnReplicator internal constructor(
 
       public fun topicsToExclude(topicsToExclude: List<String>)
 
+      public fun topicsToExclude(vararg topicsToExclude: String)
+
       public fun topicsToReplicate(topicsToReplicate: List<String>)
+
+      public fun topicsToReplicate(vararg topicsToReplicate: String)
     }
 
     private class BuilderImpl : Builder {
@@ -276,9 +302,15 @@ public open class CfnReplicator internal constructor(
         cdkBuilder.topicsToExclude(topicsToExclude)
       }
 
+      override fun topicsToExclude(vararg topicsToExclude: String): Unit =
+          topicsToExclude(topicsToExclude.toList())
+
       override fun topicsToReplicate(topicsToReplicate: List<String>) {
         cdkBuilder.topicsToReplicate(topicsToReplicate)
       }
+
+      override fun topicsToReplicate(vararg topicsToReplicate: String): Unit =
+          topicsToReplicate(topicsToReplicate.toList())
 
       public fun build(): software.amazon.awscdk.services.msk.CfnReplicator.TopicReplicationProperty
           = cdkBuilder.build()
@@ -298,8 +330,7 @@ public open class CfnReplicator internal constructor(
       override fun topicsToExclude(): List<String> = unwrap(this).getTopicsToExclude() ?:
           emptyList()
 
-      override fun topicsToReplicate(): List<String> = unwrap(this).getTopicsToReplicate() ?:
-          emptyList()
+      override fun topicsToReplicate(): List<String> = unwrap(this).getTopicsToReplicate()
     }
 
     public companion object {
@@ -330,7 +361,11 @@ public open class CfnReplicator internal constructor(
     public interface Builder {
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -343,9 +378,14 @@ public open class CfnReplicator internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       public fun build():
           software.amazon.awscdk.services.msk.CfnReplicator.KafkaClusterClientVpcConfigProperty =
@@ -359,7 +399,7 @@ public open class CfnReplicator internal constructor(
       override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
-      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
     }
 
     public companion object {
@@ -607,7 +647,11 @@ public open class CfnReplicator internal constructor(
     public interface Builder {
       public fun consumerGroupsToExclude(consumerGroupsToExclude: List<String>)
 
+      public fun consumerGroupsToExclude(vararg consumerGroupsToExclude: String)
+
       public fun consumerGroupsToReplicate(consumerGroupsToReplicate: List<String>)
+
+      public fun consumerGroupsToReplicate(vararg consumerGroupsToReplicate: String)
 
       public fun detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups: Boolean)
 
@@ -628,9 +672,15 @@ public open class CfnReplicator internal constructor(
         cdkBuilder.consumerGroupsToExclude(consumerGroupsToExclude)
       }
 
+      override fun consumerGroupsToExclude(vararg consumerGroupsToExclude: String): Unit =
+          consumerGroupsToExclude(consumerGroupsToExclude.toList())
+
       override fun consumerGroupsToReplicate(consumerGroupsToReplicate: List<String>) {
         cdkBuilder.consumerGroupsToReplicate(consumerGroupsToReplicate)
       }
+
+      override fun consumerGroupsToReplicate(vararg consumerGroupsToReplicate: String): Unit =
+          consumerGroupsToReplicate(consumerGroupsToReplicate.toList())
 
       override fun detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups: Boolean) {
         cdkBuilder.detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups)
@@ -661,7 +711,7 @@ public open class CfnReplicator internal constructor(
           unwrap(this).getConsumerGroupsToExclude() ?: emptyList()
 
       override fun consumerGroupsToReplicate(): List<String> =
-          unwrap(this).getConsumerGroupsToReplicate() ?: emptyList()
+          unwrap(this).getConsumerGroupsToReplicate()
 
       override fun detectAndCopyNewConsumerGroups(): Any? =
           unwrap(this).getDetectAndCopyNewConsumerGroups()

@@ -28,6 +28,9 @@ public open class CfnTrail internal constructor(
     unwrap(this).setAdvancedEventSelectors(__idx_ac66f0)
   }
 
+  public open fun advancedEventSelectors(vararg __idx_ac66f0: Any): Unit =
+      advancedEventSelectors(__idx_ac66f0.toList())
+
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   public open fun attrSnsTopicArn(): String = unwrap(this).getAttrSnsTopicArn()
@@ -64,6 +67,9 @@ public open class CfnTrail internal constructor(
     unwrap(this).setEventSelectors(__idx_ac66f0)
   }
 
+  public open fun eventSelectors(vararg __idx_ac66f0: Any): Unit =
+      eventSelectors(__idx_ac66f0.toList())
+
   public open fun includeGlobalServiceEvents(): Any? = unwrap(this).getIncludeGlobalServiceEvents()
 
   public open fun includeGlobalServiceEvents(`value`: Boolean) {
@@ -83,6 +89,9 @@ public open class CfnTrail internal constructor(
   public open fun insightSelectors(__idx_ac66f0: List<Any>) {
     unwrap(this).setInsightSelectors(__idx_ac66f0)
   }
+
+  public open fun insightSelectors(vararg __idx_ac66f0: Any): Unit =
+      insightSelectors(__idx_ac66f0.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -151,6 +160,8 @@ public open class CfnTrail internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun trailName(): String? = unwrap(this).getTrailName()
 
   public open fun trailName(`value`: String) {
@@ -161,6 +172,8 @@ public open class CfnTrail internal constructor(
     public fun advancedEventSelectors(advancedEventSelectors: IResolvable)
 
     public fun advancedEventSelectors(advancedEventSelectors: List<Any>)
+
+    public fun advancedEventSelectors(vararg advancedEventSelectors: Any)
 
     public fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String)
 
@@ -174,6 +187,8 @@ public open class CfnTrail internal constructor(
 
     public fun eventSelectors(eventSelectors: List<Any>)
 
+    public fun eventSelectors(vararg eventSelectors: Any)
+
     public fun includeGlobalServiceEvents(includeGlobalServiceEvents: Boolean)
 
     public fun includeGlobalServiceEvents(includeGlobalServiceEvents: IResolvable)
@@ -181,6 +196,8 @@ public open class CfnTrail internal constructor(
     public fun insightSelectors(insightSelectors: IResolvable)
 
     public fun insightSelectors(insightSelectors: List<Any>)
+
+    public fun insightSelectors(vararg insightSelectors: Any)
 
     public fun isLogging(isLogging: Boolean)
 
@@ -204,6 +221,8 @@ public open class CfnTrail internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun trailName(trailName: String)
   }
 
@@ -221,6 +240,9 @@ public open class CfnTrail internal constructor(
     override fun advancedEventSelectors(advancedEventSelectors: List<Any>) {
       cdkBuilder.advancedEventSelectors(advancedEventSelectors)
     }
+
+    override fun advancedEventSelectors(vararg advancedEventSelectors: Any): Unit =
+        advancedEventSelectors(advancedEventSelectors.toList())
 
     override fun cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn: String) {
       cdkBuilder.cloudWatchLogsLogGroupArn(cloudWatchLogsLogGroupArn)
@@ -246,6 +268,9 @@ public open class CfnTrail internal constructor(
       cdkBuilder.eventSelectors(eventSelectors)
     }
 
+    override fun eventSelectors(vararg eventSelectors: Any): Unit =
+        eventSelectors(eventSelectors.toList())
+
     override fun includeGlobalServiceEvents(includeGlobalServiceEvents: Boolean) {
       cdkBuilder.includeGlobalServiceEvents(includeGlobalServiceEvents)
     }
@@ -261,6 +286,9 @@ public open class CfnTrail internal constructor(
     override fun insightSelectors(insightSelectors: List<Any>) {
       cdkBuilder.insightSelectors(insightSelectors)
     }
+
+    override fun insightSelectors(vararg insightSelectors: Any): Unit =
+        insightSelectors(insightSelectors.toList())
 
     override fun isLogging(isLogging: Boolean) {
       cdkBuilder.isLogging(isLogging)
@@ -306,6 +334,8 @@ public open class CfnTrail internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun trailName(trailName: String) {
       cdkBuilder.trailName(trailName)
     }
@@ -344,6 +374,8 @@ public open class CfnTrail internal constructor(
 
       public fun fieldSelectors(fieldSelectors: List<Any>)
 
+      public fun fieldSelectors(vararg fieldSelectors: Any)
+
       public fun name(name: String)
     }
 
@@ -360,6 +392,9 @@ public open class CfnTrail internal constructor(
       override fun fieldSelectors(fieldSelectors: List<Any>) {
         cdkBuilder.fieldSelectors(fieldSelectors)
       }
+
+      override fun fieldSelectors(vararg fieldSelectors: Any): Unit =
+          fieldSelectors(fieldSelectors.toList())
 
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -414,7 +449,11 @@ public open class CfnTrail internal constructor(
 
       public fun dataResources(dataResources: List<Any>)
 
+      public fun dataResources(vararg dataResources: Any)
+
       public fun excludeManagementEventSources(excludeManagementEventSources: List<String>)
+
+      public fun excludeManagementEventSources(vararg excludeManagementEventSources: String)
 
       public fun includeManagementEvents(includeManagementEvents: Boolean)
 
@@ -436,9 +475,15 @@ public open class CfnTrail internal constructor(
         cdkBuilder.dataResources(dataResources)
       }
 
+      override fun dataResources(vararg dataResources: Any): Unit =
+          dataResources(dataResources.toList())
+
       override fun excludeManagementEventSources(excludeManagementEventSources: List<String>) {
         cdkBuilder.excludeManagementEventSources(excludeManagementEventSources)
       }
+
+      override fun excludeManagementEventSources(vararg excludeManagementEventSources: String): Unit
+          = excludeManagementEventSources(excludeManagementEventSources.toList())
 
       override fun includeManagementEvents(includeManagementEvents: Boolean) {
         cdkBuilder.includeManagementEvents(includeManagementEvents)
@@ -508,17 +553,29 @@ public open class CfnTrail internal constructor(
     public interface Builder {
       public fun endsWith(endsWith: List<String>)
 
+      public fun endsWith(vararg endsWith: String)
+
       public fun equalTo(equalTo: List<String>)
+
+      public fun equalTo(vararg equalTo: String)
 
       public fun `field`(`field`: String)
 
       public fun notEndsWith(notEndsWith: List<String>)
 
+      public fun notEndsWith(vararg notEndsWith: String)
+
       public fun notEquals(notEquals: List<String>)
+
+      public fun notEquals(vararg notEquals: String)
 
       public fun notStartsWith(notStartsWith: List<String>)
 
+      public fun notStartsWith(vararg notStartsWith: String)
+
       public fun startsWith(startsWith: List<String>)
+
+      public fun startsWith(vararg startsWith: String)
     }
 
     private class BuilderImpl : Builder {
@@ -531,9 +588,13 @@ public open class CfnTrail internal constructor(
         cdkBuilder.endsWith(endsWith)
       }
 
+      override fun endsWith(vararg endsWith: String): Unit = endsWith(endsWith.toList())
+
       override fun equalTo(equalTo: List<String>) {
         cdkBuilder.equalTo(equalTo)
       }
+
+      override fun equalTo(vararg equalTo: String): Unit = equalTo(equalTo.toList())
 
       override fun `field`(`field`: String) {
         cdkBuilder.`field`(`field`)
@@ -543,17 +604,26 @@ public open class CfnTrail internal constructor(
         cdkBuilder.notEndsWith(notEndsWith)
       }
 
+      override fun notEndsWith(vararg notEndsWith: String): Unit = notEndsWith(notEndsWith.toList())
+
       override fun notEquals(notEquals: List<String>) {
         cdkBuilder.notEquals(notEquals)
       }
+
+      override fun notEquals(vararg notEquals: String): Unit = notEquals(notEquals.toList())
 
       override fun notStartsWith(notStartsWith: List<String>) {
         cdkBuilder.notStartsWith(notStartsWith)
       }
 
+      override fun notStartsWith(vararg notStartsWith: String): Unit =
+          notStartsWith(notStartsWith.toList())
+
       override fun startsWith(startsWith: List<String>) {
         cdkBuilder.startsWith(startsWith)
       }
+
+      override fun startsWith(vararg startsWith: String): Unit = startsWith(startsWith.toList())
 
       public fun build():
           software.amazon.awscdk.services.cloudtrail.CfnTrail.AdvancedFieldSelectorProperty =
@@ -608,6 +678,8 @@ public open class CfnTrail internal constructor(
       public fun type(type: String)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -622,6 +694,8 @@ public open class CfnTrail internal constructor(
       override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build(): software.amazon.awscdk.services.cloudtrail.CfnTrail.DataResourceProperty =
           cdkBuilder.build()

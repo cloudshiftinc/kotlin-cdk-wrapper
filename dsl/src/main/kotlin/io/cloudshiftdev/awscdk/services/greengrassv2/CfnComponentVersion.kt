@@ -162,6 +162,8 @@ public open class CfnComponentVersion internal constructor(
 
       public fun componentPlatforms(componentPlatforms: List<Any>)
 
+      public fun componentPlatforms(vararg componentPlatforms: Any)
+
       public fun componentVersion(componentVersion: String)
 
       public fun lambdaArn(lambdaArn: String)
@@ -208,6 +210,9 @@ public open class CfnComponentVersion internal constructor(
       override fun componentPlatforms(componentPlatforms: List<Any>) {
         cdkBuilder.componentPlatforms(componentPlatforms)
       }
+
+      override fun componentPlatforms(vararg componentPlatforms: Any): Unit =
+          componentPlatforms(componentPlatforms.toList())
 
       override fun componentVersion(componentVersion: String) {
         cdkBuilder.componentVersion(componentVersion)
@@ -274,6 +279,8 @@ public open class CfnComponentVersion internal constructor(
 
       public fun devices(devices: List<Any>)
 
+      public fun devices(vararg devices: Any)
+
       public fun memorySizeInKb(memorySizeInKb: Number)
 
       public fun mountRoSysfs(mountRoSysfs: Boolean)
@@ -283,6 +290,8 @@ public open class CfnComponentVersion internal constructor(
       public fun volumes(volumes: IResolvable)
 
       public fun volumes(volumes: List<Any>)
+
+      public fun volumes(vararg volumes: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -298,6 +307,8 @@ public open class CfnComponentVersion internal constructor(
       override fun devices(devices: List<Any>) {
         cdkBuilder.devices(devices)
       }
+
+      override fun devices(vararg devices: Any): Unit = devices(devices.toList())
 
       override fun memorySizeInKb(memorySizeInKb: Number) {
         cdkBuilder.memorySizeInKb(memorySizeInKb)
@@ -318,6 +329,8 @@ public open class CfnComponentVersion internal constructor(
       override fun volumes(volumes: List<Any>) {
         cdkBuilder.volumes(volumes)
       }
+
+      override fun volumes(vararg volumes: Any): Unit = volumes(volumes.toList())
 
       public fun build():
           software.amazon.awscdk.services.greengrassv2.CfnComponentVersion.LambdaContainerParamsProperty
@@ -589,7 +602,11 @@ public open class CfnComponentVersion internal constructor(
 
       public fun eventSources(eventSources: List<Any>)
 
+      public fun eventSources(vararg eventSources: Any)
+
       public fun execArgs(execArgs: List<String>)
+
+      public fun execArgs(vararg execArgs: String)
 
       public fun inputPayloadEncodingType(inputPayloadEncodingType: String)
 
@@ -639,9 +656,14 @@ public open class CfnComponentVersion internal constructor(
         cdkBuilder.eventSources(eventSources)
       }
 
+      override fun eventSources(vararg eventSources: Any): Unit =
+          eventSources(eventSources.toList())
+
       override fun execArgs(execArgs: List<String>) {
         cdkBuilder.execArgs(execArgs)
       }
+
+      override fun execArgs(vararg execArgs: String): Unit = execArgs(execArgs.toList())
 
       override fun inputPayloadEncodingType(inputPayloadEncodingType: String) {
         cdkBuilder.inputPayloadEncodingType(inputPayloadEncodingType)

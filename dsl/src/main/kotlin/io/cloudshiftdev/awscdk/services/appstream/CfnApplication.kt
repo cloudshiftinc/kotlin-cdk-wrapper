@@ -36,6 +36,9 @@ public open class CfnApplication internal constructor(
     unwrap(this).setAttributesToDelete(`value`)
   }
 
+  public open fun attributesToDelete(vararg `value`: String): Unit =
+      attributesToDelete(`value`.toList())
+
   public open fun description(): String? = unwrap(this).getDescription()
 
   public open fun description(`value`: String) {
@@ -67,12 +70,14 @@ public open class CfnApplication internal constructor(
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
-  public open fun instanceFamilies(): List<String> = unwrap(this).getInstanceFamilies() ?:
-      emptyList()
+  public open fun instanceFamilies(): List<String> = unwrap(this).getInstanceFamilies()
 
   public open fun instanceFamilies(`value`: List<String>) {
     unwrap(this).setInstanceFamilies(`value`)
   }
+
+  public open fun instanceFamilies(vararg `value`: String): Unit =
+      instanceFamilies(`value`.toList())
 
   public open fun launchParameters(): String? = unwrap(this).getLaunchParameters()
 
@@ -92,11 +97,13 @@ public open class CfnApplication internal constructor(
     unwrap(this).setName(`value`)
   }
 
-  public open fun platforms(): List<String> = unwrap(this).getPlatforms() ?: emptyList()
+  public open fun platforms(): List<String> = unwrap(this).getPlatforms()
 
   public open fun platforms(`value`: List<String>) {
     unwrap(this).setPlatforms(`value`)
   }
+
+  public open fun platforms(vararg `value`: String): Unit = platforms(`value`.toList())
 
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
@@ -106,6 +113,8 @@ public open class CfnApplication internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun workingDirectory(): String? = unwrap(this).getWorkingDirectory()
 
@@ -117,6 +126,8 @@ public open class CfnApplication internal constructor(
     public fun appBlockArn(appBlockArn: String)
 
     public fun attributesToDelete(attributesToDelete: List<String>)
+
+    public fun attributesToDelete(vararg attributesToDelete: String)
 
     public fun description(description: String)
 
@@ -132,6 +143,8 @@ public open class CfnApplication internal constructor(
 
     public fun instanceFamilies(instanceFamilies: List<String>)
 
+    public fun instanceFamilies(vararg instanceFamilies: String)
+
     public fun launchParameters(launchParameters: String)
 
     public fun launchPath(launchPath: String)
@@ -140,7 +153,11 @@ public open class CfnApplication internal constructor(
 
     public fun platforms(platforms: List<String>)
 
+    public fun platforms(vararg platforms: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun workingDirectory(workingDirectory: String)
   }
@@ -159,6 +176,9 @@ public open class CfnApplication internal constructor(
     override fun attributesToDelete(attributesToDelete: List<String>) {
       cdkBuilder.attributesToDelete(attributesToDelete)
     }
+
+    override fun attributesToDelete(vararg attributesToDelete: String): Unit =
+        attributesToDelete(attributesToDelete.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -185,6 +205,9 @@ public open class CfnApplication internal constructor(
       cdkBuilder.instanceFamilies(instanceFamilies)
     }
 
+    override fun instanceFamilies(vararg instanceFamilies: String): Unit =
+        instanceFamilies(instanceFamilies.toList())
+
     override fun launchParameters(launchParameters: String) {
       cdkBuilder.launchParameters(launchParameters)
     }
@@ -201,9 +224,13 @@ public open class CfnApplication internal constructor(
       cdkBuilder.platforms(platforms)
     }
 
+    override fun platforms(vararg platforms: String): Unit = platforms(platforms.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun workingDirectory(workingDirectory: String) {
       cdkBuilder.workingDirectory(workingDirectory)

@@ -231,6 +231,8 @@ public open class ApplicationTargetGroup internal constructor(
 
     public fun targets(targets: List<IApplicationLoadBalancerTarget>)
 
+    public fun targets(vararg targets: IApplicationLoadBalancerTarget)
+
     public fun vpc(vpc: IVpc)
   }
 
@@ -296,6 +298,9 @@ public open class ApplicationTargetGroup internal constructor(
     override fun targets(targets: List<IApplicationLoadBalancerTarget>) {
       cdkBuilder.targets(targets.map(IApplicationLoadBalancerTarget::unwrap))
     }
+
+    override fun targets(vararg targets: IApplicationLoadBalancerTarget): Unit =
+        targets(targets.toList())
 
     override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))

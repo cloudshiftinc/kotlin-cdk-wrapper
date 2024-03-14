@@ -97,6 +97,8 @@ public open class CfnDomain internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun deadLetterQueueUrl(deadLetterQueueUrl: String)
 
@@ -123,6 +125,8 @@ public open class CfnDomain internal constructor(
     public fun ruleBasedMatching(ruleBasedMatching: RuleBasedMatchingProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -177,6 +181,8 @@ public open class CfnDomain internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.customerprofiles.CfnDomain =
         cdkBuilder.build()
@@ -435,6 +441,8 @@ public open class CfnDomain internal constructor(
 
       public fun matchingRules(matchingRules: List<Any>)
 
+      public fun matchingRules(vararg matchingRules: Any)
+
       public fun maxAllowedRuleLevelForMatching(maxAllowedRuleLevelForMatching: Number)
 
       public fun maxAllowedRuleLevelForMerging(maxAllowedRuleLevelForMerging: Number)
@@ -504,6 +512,9 @@ public open class CfnDomain internal constructor(
       override fun matchingRules(matchingRules: List<Any>) {
         cdkBuilder.matchingRules(matchingRules)
       }
+
+      override fun matchingRules(vararg matchingRules: Any): Unit =
+          matchingRules(matchingRules.toList())
 
       override fun maxAllowedRuleLevelForMatching(maxAllowedRuleLevelForMatching: Number) {
         cdkBuilder.maxAllowedRuleLevelForMatching(maxAllowedRuleLevelForMatching)
@@ -829,11 +840,17 @@ public open class CfnDomain internal constructor(
     public interface Builder {
       public fun address(address: List<String>)
 
+      public fun address(vararg address: String)
+
       public fun attributeMatchingModel(attributeMatchingModel: String)
 
       public fun emailAddress(emailAddress: List<String>)
 
+      public fun emailAddress(vararg emailAddress: String)
+
       public fun phoneNumber(phoneNumber: List<String>)
+
+      public fun phoneNumber(vararg phoneNumber: String)
     }
 
     private class BuilderImpl : Builder {
@@ -846,6 +863,8 @@ public open class CfnDomain internal constructor(
         cdkBuilder.address(address)
       }
 
+      override fun address(vararg address: String): Unit = address(address.toList())
+
       override fun attributeMatchingModel(attributeMatchingModel: String) {
         cdkBuilder.attributeMatchingModel(attributeMatchingModel)
       }
@@ -854,9 +873,14 @@ public open class CfnDomain internal constructor(
         cdkBuilder.emailAddress(emailAddress)
       }
 
+      override fun emailAddress(vararg emailAddress: String): Unit =
+          emailAddress(emailAddress.toList())
+
       override fun phoneNumber(phoneNumber: List<String>) {
         cdkBuilder.phoneNumber(phoneNumber)
       }
+
+      override fun phoneNumber(vararg phoneNumber: String): Unit = phoneNumber(phoneNumber.toList())
 
       public fun build():
           software.amazon.awscdk.services.customerprofiles.CfnDomain.AttributeTypesSelectorProperty
@@ -903,6 +927,8 @@ public open class CfnDomain internal constructor(
       public fun matchingAttributesList(matchingAttributesList: IResolvable)
 
       public fun matchingAttributesList(matchingAttributesList: List<List<String>>)
+
+      public fun matchingAttributesList(vararg matchingAttributesList: List<String>)
     }
 
     private class BuilderImpl : Builder {
@@ -917,6 +943,9 @@ public open class CfnDomain internal constructor(
       override fun matchingAttributesList(matchingAttributesList: List<List<String>>) {
         cdkBuilder.matchingAttributesList(matchingAttributesList)
       }
+
+      override fun matchingAttributesList(vararg matchingAttributesList: List<String>): Unit =
+          matchingAttributesList(matchingAttributesList.toList())
 
       public fun build():
           software.amazon.awscdk.services.customerprofiles.CfnDomain.ConsolidationProperty =
@@ -1013,6 +1042,8 @@ public open class CfnDomain internal constructor(
 
     public interface Builder {
       public fun rule(rule: List<String>)
+
+      public fun rule(vararg rule: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1024,6 +1055,8 @@ public open class CfnDomain internal constructor(
         cdkBuilder.rule(rule)
       }
 
+      override fun rule(vararg rule: String): Unit = rule(rule.toList())
+
       public fun build():
           software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingRuleProperty =
           cdkBuilder.build()
@@ -1033,7 +1066,7 @@ public open class CfnDomain internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingRuleProperty,
     ) : MatchingRuleProperty {
-      override fun rule(): List<String> = unwrap(this).getRule() ?: emptyList()
+      override fun rule(): List<String> = unwrap(this).getRule()
     }
 
     public companion object {

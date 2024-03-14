@@ -85,6 +85,9 @@ public open class CfnMatchmakingConfiguration internal constructor(
     unwrap(this).setGameProperties(__idx_ac66f0)
   }
 
+  public open fun gameProperties(vararg __idx_ac66f0: Any): Unit =
+      gameProperties(__idx_ac66f0.toList())
+
   public open fun gameSessionData(): String? = unwrap(this).getGameSessionData()
 
   public open fun gameSessionData(`value`: String) {
@@ -97,6 +100,9 @@ public open class CfnMatchmakingConfiguration internal constructor(
   public open fun gameSessionQueueArns(`value`: List<String>) {
     unwrap(this).setGameSessionQueueArns(`value`)
   }
+
+  public open fun gameSessionQueueArns(vararg `value`: String): Unit =
+      gameSessionQueueArns(`value`.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -141,6 +147,8 @@ public open class CfnMatchmakingConfiguration internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun acceptanceRequired(acceptanceRequired: Boolean)
 
@@ -164,9 +172,13 @@ public open class CfnMatchmakingConfiguration internal constructor(
 
     public fun gameProperties(gameProperties: List<Any>)
 
+    public fun gameProperties(vararg gameProperties: Any)
+
     public fun gameSessionData(gameSessionData: String)
 
     public fun gameSessionQueueArns(gameSessionQueueArns: List<String>)
+
+    public fun gameSessionQueueArns(vararg gameSessionQueueArns: String)
 
     public fun name(name: String)
 
@@ -179,6 +191,8 @@ public open class CfnMatchmakingConfiguration internal constructor(
     public fun ruleSetName(ruleSetName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -234,6 +248,9 @@ public open class CfnMatchmakingConfiguration internal constructor(
       cdkBuilder.gameProperties(gameProperties)
     }
 
+    override fun gameProperties(vararg gameProperties: Any): Unit =
+        gameProperties(gameProperties.toList())
+
     override fun gameSessionData(gameSessionData: String) {
       cdkBuilder.gameSessionData(gameSessionData)
     }
@@ -241,6 +258,9 @@ public open class CfnMatchmakingConfiguration internal constructor(
     override fun gameSessionQueueArns(gameSessionQueueArns: List<String>) {
       cdkBuilder.gameSessionQueueArns(gameSessionQueueArns)
     }
+
+    override fun gameSessionQueueArns(vararg gameSessionQueueArns: String): Unit =
+        gameSessionQueueArns(gameSessionQueueArns.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -265,6 +285,8 @@ public open class CfnMatchmakingConfiguration internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.gamelift.CfnMatchmakingConfiguration =
         cdkBuilder.build()

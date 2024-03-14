@@ -118,6 +118,9 @@ public open class CfnBranch internal constructor(
     unwrap(this).setEnvironmentVariables(__idx_ac66f0)
   }
 
+  public open fun environmentVariables(vararg __idx_ac66f0: Any): Unit =
+      environmentVariables(__idx_ac66f0.toList())
+
   public open fun framework(): String? = unwrap(this).getFramework()
 
   public open fun framework(`value`: String) {
@@ -149,6 +152,8 @@ public open class CfnBranch internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public interface Builder {
     public fun appId(appId: String)
@@ -191,6 +196,8 @@ public open class CfnBranch internal constructor(
 
     public fun environmentVariables(environmentVariables: List<Any>)
 
+    public fun environmentVariables(vararg environmentVariables: Any)
+
     public fun framework(framework: String)
 
     public fun pullRequestEnvironmentName(pullRequestEnvironmentName: String)
@@ -198,6 +205,8 @@ public open class CfnBranch internal constructor(
     public fun stage(stage: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -281,6 +290,9 @@ public open class CfnBranch internal constructor(
       cdkBuilder.environmentVariables(environmentVariables)
     }
 
+    override fun environmentVariables(vararg environmentVariables: Any): Unit =
+        environmentVariables(environmentVariables.toList())
+
     override fun framework(framework: String) {
       cdkBuilder.framework(framework)
     }
@@ -296,6 +308,8 @@ public open class CfnBranch internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.amplify.CfnBranch = cdkBuilder.build()
   }

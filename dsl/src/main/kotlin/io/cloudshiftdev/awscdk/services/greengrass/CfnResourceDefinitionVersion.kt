@@ -39,12 +39,16 @@ public open class CfnResourceDefinitionVersion internal constructor(
     unwrap(this).setResources(__idx_ac66f0)
   }
 
+  public open fun resources(vararg __idx_ac66f0: Any): Unit = resources(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun resourceDefinitionId(resourceDefinitionId: String)
 
     public fun resources(resources: IResolvable)
 
     public fun resources(resources: List<Any>)
+
+    public fun resources(vararg resources: Any)
   }
 
   private class BuilderImpl(
@@ -67,6 +71,8 @@ public open class CfnResourceDefinitionVersion internal constructor(
     override fun resources(resources: List<Any>) {
       cdkBuilder.resources(resources)
     }
+
+    override fun resources(vararg resources: Any): Unit = resources(resources.toList())
 
     public fun build(): software.amazon.awscdk.services.greengrass.CfnResourceDefinitionVersion =
         cdkBuilder.build()
@@ -189,6 +195,8 @@ public open class CfnResourceDefinitionVersion internal constructor(
     public interface Builder {
       public fun additionalStagingLabelsToDownload(additionalStagingLabelsToDownload: List<String>)
 
+      public fun additionalStagingLabelsToDownload(vararg additionalStagingLabelsToDownload: String)
+
       public fun arn(arn: String)
     }
 
@@ -202,6 +210,10 @@ public open class CfnResourceDefinitionVersion internal constructor(
           fun additionalStagingLabelsToDownload(additionalStagingLabelsToDownload: List<String>) {
         cdkBuilder.additionalStagingLabelsToDownload(additionalStagingLabelsToDownload)
       }
+
+      override fun additionalStagingLabelsToDownload(vararg
+          additionalStagingLabelsToDownload: String): Unit =
+          additionalStagingLabelsToDownload(additionalStagingLabelsToDownload.toList())
 
       override fun arn(arn: String) {
         cdkBuilder.arn(arn)

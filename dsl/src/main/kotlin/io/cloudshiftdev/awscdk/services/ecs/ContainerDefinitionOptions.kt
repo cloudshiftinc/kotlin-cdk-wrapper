@@ -92,27 +92,41 @@ public interface ContainerDefinitionOptions {
   public interface Builder {
     public fun command(command: List<String>)
 
+    public fun command(vararg command: String)
+
     public fun containerName(containerName: String)
 
     public fun cpu(cpu: Number)
 
     public fun credentialSpecs(credentialSpecs: List<CredentialSpec>)
 
+    public fun credentialSpecs(vararg credentialSpecs: CredentialSpec)
+
     public fun disableNetworking(disableNetworking: Boolean)
 
     public fun dnsSearchDomains(dnsSearchDomains: List<String>)
 
+    public fun dnsSearchDomains(vararg dnsSearchDomains: String)
+
     public fun dnsServers(dnsServers: List<String>)
+
+    public fun dnsServers(vararg dnsServers: String)
 
     public fun dockerLabels(dockerLabels: Map<String, String>)
 
     public fun dockerSecurityOptions(dockerSecurityOptions: List<String>)
 
+    public fun dockerSecurityOptions(vararg dockerSecurityOptions: String)
+
     public fun entryPoint(entryPoint: List<String>)
+
+    public fun entryPoint(vararg entryPoint: String)
 
     public fun environment(environment: Map<String, String>)
 
     public fun environmentFiles(environmentFiles: List<EnvironmentFile>)
+
+    public fun environmentFiles(vararg environmentFiles: EnvironmentFile)
 
     public fun essential(essential: Boolean)
 
@@ -132,6 +146,8 @@ public interface ContainerDefinitionOptions {
 
     public fun inferenceAcceleratorResources(inferenceAcceleratorResources: List<String>)
 
+    public fun inferenceAcceleratorResources(vararg inferenceAcceleratorResources: String)
+
     public fun interactive(interactive: Boolean)
 
     public fun linuxParameters(linuxParameters: LinuxParameters)
@@ -143,6 +159,8 @@ public interface ContainerDefinitionOptions {
     public fun memoryReservationMiB(memoryReservationMiB: Number)
 
     public fun portMappings(portMappings: List<PortMapping>)
+
+    public fun portMappings(vararg portMappings: PortMapping)
 
     public fun privileged(privileged: Boolean)
 
@@ -158,7 +176,11 @@ public interface ContainerDefinitionOptions {
 
     public fun systemControls(systemControls: List<SystemControl>)
 
+    public fun systemControls(vararg systemControls: SystemControl)
+
     public fun ulimits(ulimits: List<Ulimit>)
+
+    public fun ulimits(vararg ulimits: Ulimit)
 
     public fun user(user: String)
 
@@ -173,6 +195,8 @@ public interface ContainerDefinitionOptions {
       cdkBuilder.command(command)
     }
 
+    override fun command(vararg command: String): Unit = command(command.toList())
+
     override fun containerName(containerName: String) {
       cdkBuilder.containerName(containerName)
     }
@@ -185,6 +209,9 @@ public interface ContainerDefinitionOptions {
       cdkBuilder.credentialSpecs(credentialSpecs.map(CredentialSpec::unwrap))
     }
 
+    override fun credentialSpecs(vararg credentialSpecs: CredentialSpec): Unit =
+        credentialSpecs(credentialSpecs.toList())
+
     override fun disableNetworking(disableNetworking: Boolean) {
       cdkBuilder.disableNetworking(disableNetworking)
     }
@@ -193,9 +220,14 @@ public interface ContainerDefinitionOptions {
       cdkBuilder.dnsSearchDomains(dnsSearchDomains)
     }
 
+    override fun dnsSearchDomains(vararg dnsSearchDomains: String): Unit =
+        dnsSearchDomains(dnsSearchDomains.toList())
+
     override fun dnsServers(dnsServers: List<String>) {
       cdkBuilder.dnsServers(dnsServers)
     }
+
+    override fun dnsServers(vararg dnsServers: String): Unit = dnsServers(dnsServers.toList())
 
     override fun dockerLabels(dockerLabels: Map<String, String>) {
       cdkBuilder.dockerLabels(dockerLabels)
@@ -205,9 +237,14 @@ public interface ContainerDefinitionOptions {
       cdkBuilder.dockerSecurityOptions(dockerSecurityOptions)
     }
 
+    override fun dockerSecurityOptions(vararg dockerSecurityOptions: String): Unit =
+        dockerSecurityOptions(dockerSecurityOptions.toList())
+
     override fun entryPoint(entryPoint: List<String>) {
       cdkBuilder.entryPoint(entryPoint)
     }
+
+    override fun entryPoint(vararg entryPoint: String): Unit = entryPoint(entryPoint.toList())
 
     override fun environment(environment: Map<String, String>) {
       cdkBuilder.environment(environment)
@@ -216,6 +253,9 @@ public interface ContainerDefinitionOptions {
     override fun environmentFiles(environmentFiles: List<EnvironmentFile>) {
       cdkBuilder.environmentFiles(environmentFiles.map(EnvironmentFile::unwrap))
     }
+
+    override fun environmentFiles(vararg environmentFiles: EnvironmentFile): Unit =
+        environmentFiles(environmentFiles.toList())
 
     override fun essential(essential: Boolean) {
       cdkBuilder.essential(essential)
@@ -250,6 +290,9 @@ public interface ContainerDefinitionOptions {
       cdkBuilder.inferenceAcceleratorResources(inferenceAcceleratorResources)
     }
 
+    override fun inferenceAcceleratorResources(vararg inferenceAcceleratorResources: String): Unit =
+        inferenceAcceleratorResources(inferenceAcceleratorResources.toList())
+
     override fun interactive(interactive: Boolean) {
       cdkBuilder.interactive(interactive)
     }
@@ -273,6 +316,9 @@ public interface ContainerDefinitionOptions {
     override fun portMappings(portMappings: List<PortMapping>) {
       cdkBuilder.portMappings(portMappings.map(PortMapping::unwrap))
     }
+
+    override fun portMappings(vararg portMappings: PortMapping): Unit =
+        portMappings(portMappings.toList())
 
     override fun privileged(privileged: Boolean) {
       cdkBuilder.privileged(privileged)
@@ -302,9 +348,14 @@ public interface ContainerDefinitionOptions {
       cdkBuilder.systemControls(systemControls.map(SystemControl::unwrap))
     }
 
+    override fun systemControls(vararg systemControls: SystemControl): Unit =
+        systemControls(systemControls.toList())
+
     override fun ulimits(ulimits: List<Ulimit>) {
       cdkBuilder.ulimits(ulimits.map(Ulimit::unwrap))
     }
+
+    override fun ulimits(vararg ulimits: Ulimit): Unit = ulimits(ulimits.toList())
 
     override fun user(user: String) {
       cdkBuilder.user(user)

@@ -78,6 +78,8 @@ public open class CfnLocationNFS internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun mountOptions(mountOptions: IResolvable)
 
@@ -100,6 +102,8 @@ public open class CfnLocationNFS internal constructor(
     public fun subdirectory(subdirectory: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -147,6 +151,8 @@ public open class CfnLocationNFS internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     public fun build(): software.amazon.awscdk.services.datasync.CfnLocationNFS = cdkBuilder.build()
   }
 
@@ -176,6 +182,8 @@ public open class CfnLocationNFS internal constructor(
 
     public interface Builder {
       public fun agentArns(agentArns: List<String>)
+
+      public fun agentArns(vararg agentArns: String)
     }
 
     private class BuilderImpl : Builder {
@@ -187,6 +195,8 @@ public open class CfnLocationNFS internal constructor(
         cdkBuilder.agentArns(agentArns)
       }
 
+      override fun agentArns(vararg agentArns: String): Unit = agentArns(agentArns.toList())
+
       public fun build():
           software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty =
           cdkBuilder.build()
@@ -196,7 +206,7 @@ public open class CfnLocationNFS internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.datasync.CfnLocationNFS.OnPremConfigProperty,
     ) : OnPremConfigProperty {
-      override fun agentArns(): List<String> = unwrap(this).getAgentArns() ?: emptyList()
+      override fun agentArns(): List<String> = unwrap(this).getAgentArns()
     }
 
     public companion object {

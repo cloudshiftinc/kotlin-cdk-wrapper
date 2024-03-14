@@ -36,6 +36,8 @@ public open class CfnProtectionGroup internal constructor(
     unwrap(this).setMembers(`value`)
   }
 
+  public open fun members(vararg `value`: String): Unit = members(`value`.toList())
+
   public open fun pattern(): String = unwrap(this).getPattern()
 
   public open fun pattern(`value`: String) {
@@ -60,10 +62,14 @@ public open class CfnProtectionGroup internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun aggregation(aggregation: String)
 
     public fun members(members: List<String>)
+
+    public fun members(vararg members: String)
 
     public fun pattern(pattern: String)
 
@@ -72,6 +78,8 @@ public open class CfnProtectionGroup internal constructor(
     public fun resourceType(resourceType: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -89,6 +97,8 @@ public open class CfnProtectionGroup internal constructor(
       cdkBuilder.members(members)
     }
 
+    override fun members(vararg members: String): Unit = members(members.toList())
+
     override fun pattern(pattern: String) {
       cdkBuilder.pattern(pattern)
     }
@@ -104,6 +114,8 @@ public open class CfnProtectionGroup internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.shield.CfnProtectionGroup =
         cdkBuilder.build()

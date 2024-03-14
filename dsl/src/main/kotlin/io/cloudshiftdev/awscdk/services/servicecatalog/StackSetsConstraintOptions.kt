@@ -21,6 +21,8 @@ public interface StackSetsConstraintOptions : CommonConstraintOptions {
   public interface Builder {
     public fun accounts(accounts: List<String>)
 
+    public fun accounts(vararg accounts: String)
+
     public fun adminRole(adminRole: IRole)
 
     public fun allowStackSetInstanceOperations(allowStackSetInstanceOperations: Boolean)
@@ -32,6 +34,8 @@ public interface StackSetsConstraintOptions : CommonConstraintOptions {
     public fun messageLanguage(messageLanguage: MessageLanguage)
 
     public fun regions(regions: List<String>)
+
+    public fun regions(vararg regions: String)
   }
 
   private class BuilderImpl : Builder {
@@ -42,6 +46,8 @@ public interface StackSetsConstraintOptions : CommonConstraintOptions {
     override fun accounts(accounts: List<String>) {
       cdkBuilder.accounts(accounts)
     }
+
+    override fun accounts(vararg accounts: String): Unit = accounts(accounts.toList())
 
     override fun adminRole(adminRole: IRole) {
       cdkBuilder.adminRole(adminRole.let(IRole::unwrap))
@@ -67,6 +73,8 @@ public interface StackSetsConstraintOptions : CommonConstraintOptions {
       cdkBuilder.regions(regions)
     }
 
+    override fun regions(vararg regions: String): Unit = regions(regions.toList())
+
     public fun build(): software.amazon.awscdk.services.servicecatalog.StackSetsConstraintOptions =
         cdkBuilder.build()
   }
@@ -75,7 +83,7 @@ public interface StackSetsConstraintOptions : CommonConstraintOptions {
     internal val cdkObject:
         software.amazon.awscdk.services.servicecatalog.StackSetsConstraintOptions,
   ) : StackSetsConstraintOptions {
-    override fun accounts(): List<String> = unwrap(this).getAccounts() ?: emptyList()
+    override fun accounts(): List<String> = unwrap(this).getAccounts()
 
     override fun adminRole(): IRole = unwrap(this).getAdminRole().let(IRole::wrap)
 
@@ -89,7 +97,7 @@ public interface StackSetsConstraintOptions : CommonConstraintOptions {
     override fun messageLanguage(): MessageLanguage? =
         unwrap(this).getMessageLanguage()?.let(MessageLanguage::wrap)
 
-    override fun regions(): List<String> = unwrap(this).getRegions() ?: emptyList()
+    override fun regions(): List<String> = unwrap(this).getRegions()
   }
 
   public companion object {

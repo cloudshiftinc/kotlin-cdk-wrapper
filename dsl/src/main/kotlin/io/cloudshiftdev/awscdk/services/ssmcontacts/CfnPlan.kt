@@ -36,6 +36,8 @@ public open class CfnPlan internal constructor(
     unwrap(this).setRotationIds(`value`)
   }
 
+  public open fun rotationIds(vararg `value`: String): Unit = rotationIds(`value`.toList())
+
   public open fun stages(): Any? = unwrap(this).getStages()
 
   public open fun stages(`value`: IResolvable) {
@@ -46,14 +48,20 @@ public open class CfnPlan internal constructor(
     unwrap(this).setStages(__idx_ac66f0)
   }
 
+  public open fun stages(vararg __idx_ac66f0: Any): Unit = stages(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun contactId(contactId: String)
 
     public fun rotationIds(rotationIds: List<String>)
 
+    public fun rotationIds(vararg rotationIds: String)
+
     public fun stages(stages: IResolvable)
 
     public fun stages(stages: List<Any>)
+
+    public fun stages(vararg stages: Any)
   }
 
   private class BuilderImpl(
@@ -71,6 +79,8 @@ public open class CfnPlan internal constructor(
       cdkBuilder.rotationIds(rotationIds)
     }
 
+    override fun rotationIds(vararg rotationIds: String): Unit = rotationIds(rotationIds.toList())
+
     override fun stages(stages: IResolvable) {
       cdkBuilder.stages(stages.let(IResolvable::unwrap))
     }
@@ -78,6 +88,8 @@ public open class CfnPlan internal constructor(
     override fun stages(stages: List<Any>) {
       cdkBuilder.stages(stages)
     }
+
+    override fun stages(vararg stages: Any): Unit = stages(stages.toList())
 
     public fun build(): software.amazon.awscdk.services.ssmcontacts.CfnPlan = cdkBuilder.build()
   }
@@ -324,6 +336,8 @@ public open class CfnPlan internal constructor(
       public fun targets(targets: IResolvable)
 
       public fun targets(targets: List<Any>)
+
+      public fun targets(vararg targets: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -342,6 +356,8 @@ public open class CfnPlan internal constructor(
       override fun targets(targets: List<Any>) {
         cdkBuilder.targets(targets)
       }
+
+      override fun targets(vararg targets: Any): Unit = targets(targets.toList())
 
       public fun build(): software.amazon.awscdk.services.ssmcontacts.CfnPlan.StageProperty =
           cdkBuilder.build()

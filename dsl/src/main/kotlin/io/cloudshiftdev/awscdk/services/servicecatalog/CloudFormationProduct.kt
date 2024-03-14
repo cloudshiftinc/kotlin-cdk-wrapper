@@ -31,6 +31,8 @@ public open class CloudFormationProduct internal constructor(
 
     public fun productVersions(productVersions: List<CloudFormationProductVersion>)
 
+    public fun productVersions(vararg productVersions: CloudFormationProductVersion)
+
     public fun replaceProductVersionIds(replaceProductVersionIds: Boolean)
 
     public fun supportDescription(supportDescription: String)
@@ -74,6 +76,9 @@ public open class CloudFormationProduct internal constructor(
     override fun productVersions(productVersions: List<CloudFormationProductVersion>) {
       cdkBuilder.productVersions(productVersions.map(CloudFormationProductVersion::unwrap))
     }
+
+    override fun productVersions(vararg productVersions: CloudFormationProductVersion): Unit =
+        productVersions(productVersions.toList())
 
     override fun replaceProductVersionIds(replaceProductVersionIds: Boolean) {
       cdkBuilder.replaceProductVersionIds(replaceProductVersionIds)

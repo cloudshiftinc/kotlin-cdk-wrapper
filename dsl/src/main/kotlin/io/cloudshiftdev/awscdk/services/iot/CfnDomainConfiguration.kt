@@ -71,6 +71,9 @@ public open class CfnDomainConfiguration internal constructor(
     unwrap(this).setServerCertificateArns(`value`)
   }
 
+  public open fun serverCertificateArns(vararg `value`: String): Unit =
+      serverCertificateArns(`value`.toList())
+
   public open fun serverCertificateConfig(): Any? = unwrap(this).getServerCertificateConfig()
 
   public open fun serverCertificateConfig(`value`: IResolvable) {
@@ -101,6 +104,8 @@ public open class CfnDomainConfiguration internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun tlsConfig(): Any? = unwrap(this).getTlsConfig()
 
@@ -140,6 +145,8 @@ public open class CfnDomainConfiguration internal constructor(
 
     public fun serverCertificateArns(serverCertificateArns: List<String>)
 
+    public fun serverCertificateArns(vararg serverCertificateArns: String)
+
     public fun serverCertificateConfig(serverCertificateConfig: IResolvable)
 
     public fun serverCertificateConfig(serverCertificateConfig: ServerCertificateConfigProperty)
@@ -152,6 +159,8 @@ public open class CfnDomainConfiguration internal constructor(
     public fun serviceType(serviceType: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun tlsConfig(tlsConfig: IResolvable)
 
@@ -200,6 +209,9 @@ public open class CfnDomainConfiguration internal constructor(
       cdkBuilder.serverCertificateArns(serverCertificateArns)
     }
 
+    override fun serverCertificateArns(vararg serverCertificateArns: String): Unit =
+        serverCertificateArns(serverCertificateArns.toList())
+
     override fun serverCertificateConfig(serverCertificateConfig: IResolvable) {
       cdkBuilder.serverCertificateConfig(serverCertificateConfig.let(IResolvable::unwrap))
     }
@@ -221,6 +233,8 @@ public open class CfnDomainConfiguration internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun tlsConfig(tlsConfig: IResolvable) {
       cdkBuilder.tlsConfig(tlsConfig.let(IResolvable::unwrap))

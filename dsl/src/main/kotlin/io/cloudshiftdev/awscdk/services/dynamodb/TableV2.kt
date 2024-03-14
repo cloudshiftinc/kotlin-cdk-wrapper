@@ -69,9 +69,13 @@ public open class TableV2 internal constructor(
 
     public fun globalSecondaryIndexes(globalSecondaryIndexes: List<GlobalSecondaryIndexPropsV2>)
 
+    public fun globalSecondaryIndexes(vararg globalSecondaryIndexes: GlobalSecondaryIndexPropsV2)
+
     public fun kinesisStream(kinesisStream: IStream)
 
     public fun localSecondaryIndexes(localSecondaryIndexes: List<LocalSecondaryIndexProps>)
+
+    public fun localSecondaryIndexes(vararg localSecondaryIndexes: LocalSecondaryIndexProps)
 
     public fun partitionKey(partitionKey: Attribute)
 
@@ -85,6 +89,8 @@ public open class TableV2 internal constructor(
 
     public fun replicas(replicas: List<ReplicaTableProps>)
 
+    public fun replicas(vararg replicas: ReplicaTableProps)
+
     public fun sortKey(sortKey: Attribute)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -96,6 +102,8 @@ public open class TableV2 internal constructor(
     public fun tableName(tableName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun timeToLiveAttribute(timeToLiveAttribute: String)
   }
@@ -131,6 +139,9 @@ public open class TableV2 internal constructor(
       cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes.map(GlobalSecondaryIndexPropsV2::unwrap))
     }
 
+    override fun globalSecondaryIndexes(vararg globalSecondaryIndexes: GlobalSecondaryIndexPropsV2):
+        Unit = globalSecondaryIndexes(globalSecondaryIndexes.toList())
+
     override fun kinesisStream(kinesisStream: IStream) {
       cdkBuilder.kinesisStream(kinesisStream.let(IStream::unwrap))
     }
@@ -138,6 +149,9 @@ public open class TableV2 internal constructor(
     override fun localSecondaryIndexes(localSecondaryIndexes: List<LocalSecondaryIndexProps>) {
       cdkBuilder.localSecondaryIndexes(localSecondaryIndexes.map(LocalSecondaryIndexProps::unwrap))
     }
+
+    override fun localSecondaryIndexes(vararg localSecondaryIndexes: LocalSecondaryIndexProps): Unit
+        = localSecondaryIndexes(localSecondaryIndexes.toList())
 
     override fun partitionKey(partitionKey: Attribute) {
       cdkBuilder.partitionKey(partitionKey.let(Attribute::unwrap))
@@ -160,6 +174,8 @@ public open class TableV2 internal constructor(
       cdkBuilder.replicas(replicas.map(ReplicaTableProps::unwrap))
     }
 
+    override fun replicas(vararg replicas: ReplicaTableProps): Unit = replicas(replicas.toList())
+
     override fun sortKey(sortKey: Attribute) {
       cdkBuilder.sortKey(sortKey.let(Attribute::unwrap))
     }
@@ -179,6 +195,8 @@ public open class TableV2 internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun timeToLiveAttribute(timeToLiveAttribute: String) {
       cdkBuilder.timeToLiveAttribute(timeToLiveAttribute)

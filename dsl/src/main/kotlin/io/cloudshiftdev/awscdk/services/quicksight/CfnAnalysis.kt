@@ -31,7 +31,7 @@ public open class CfnAnalysis internal constructor(
 
   public open fun attrCreatedTime(): String = unwrap(this).getAttrCreatedTime()
 
-  public open fun attrDataSetArns(): List<String> = unwrap(this).getAttrDataSetArns() ?: emptyList()
+  public open fun attrDataSetArns(): List<String> = unwrap(this).getAttrDataSetArns()
 
   public open fun attrErrors(): IResolvable = unwrap(this).getAttrErrors().let(IResolvable::wrap)
 
@@ -70,6 +70,8 @@ public open class CfnAnalysis internal constructor(
     unwrap(this).setErrors(__idx_ac66f0)
   }
 
+  public open fun errors(vararg __idx_ac66f0: Any): Unit = errors(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -105,6 +107,8 @@ public open class CfnAnalysis internal constructor(
     unwrap(this).setPermissions(__idx_ac66f0)
   }
 
+  public open fun permissions(vararg __idx_ac66f0: Any): Unit = permissions(__idx_ac66f0.toList())
+
   public open fun sheets(): Any? = unwrap(this).getSheets()
 
   public open fun sheets(`value`: IResolvable) {
@@ -114,6 +118,8 @@ public open class CfnAnalysis internal constructor(
   public open fun sheets(__idx_ac66f0: List<Any>) {
     unwrap(this).setSheets(__idx_ac66f0)
   }
+
+  public open fun sheets(vararg __idx_ac66f0: Any): Unit = sheets(__idx_ac66f0.toList())
 
   public open fun sourceEntity(): Any? = unwrap(this).getSourceEntity()
 
@@ -144,6 +150,8 @@ public open class CfnAnalysis internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun themeArn(): String? = unwrap(this).getThemeArn()
 
@@ -183,6 +191,8 @@ public open class CfnAnalysis internal constructor(
 
     public fun errors(errors: List<Any>)
 
+    public fun errors(vararg errors: Any)
+
     public fun name(name: String)
 
     public fun parameters(parameters: IResolvable)
@@ -197,9 +207,13 @@ public open class CfnAnalysis internal constructor(
 
     public fun permissions(permissions: List<Any>)
 
+    public fun permissions(vararg permissions: Any)
+
     public fun sheets(sheets: IResolvable)
 
     public fun sheets(sheets: List<Any>)
+
+    public fun sheets(vararg sheets: Any)
 
     public fun sourceEntity(sourceEntity: IResolvable)
 
@@ -212,6 +226,8 @@ public open class CfnAnalysis internal constructor(
     public fun status(status: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun themeArn(themeArn: String)
 
@@ -260,6 +276,8 @@ public open class CfnAnalysis internal constructor(
       cdkBuilder.errors(errors)
     }
 
+    override fun errors(vararg errors: Any): Unit = errors(errors.toList())
+
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -285,6 +303,8 @@ public open class CfnAnalysis internal constructor(
       cdkBuilder.permissions(permissions)
     }
 
+    override fun permissions(vararg permissions: Any): Unit = permissions(permissions.toList())
+
     override fun sheets(sheets: IResolvable) {
       cdkBuilder.sheets(sheets.let(IResolvable::unwrap))
     }
@@ -292,6 +312,8 @@ public open class CfnAnalysis internal constructor(
     override fun sheets(sheets: List<Any>) {
       cdkBuilder.sheets(sheets)
     }
+
+    override fun sheets(vararg sheets: Any): Unit = sheets(sheets.toList())
 
     override fun sourceEntity(sourceEntity: IResolvable) {
       cdkBuilder.sourceEntity(sourceEntity.let(IResolvable::unwrap))
@@ -313,6 +335,8 @@ public open class CfnAnalysis internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun themeArn(themeArn: String) {
       cdkBuilder.themeArn(themeArn)
@@ -567,6 +591,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun categorySort(categorySort: List<Any>)
 
+      public fun categorySort(vararg categorySort: Any)
+
       public fun colorItemsLimit(colorItemsLimit: IResolvable)
 
       public fun colorItemsLimit(colorItemsLimit: ItemsLimitConfigurationProperty)
@@ -579,6 +605,8 @@ public open class CfnAnalysis internal constructor(
       public fun colorSort(colorSort: IResolvable)
 
       public fun colorSort(colorSort: List<Any>)
+
+      public fun colorSort(vararg colorSort: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -609,6 +637,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.categorySort(categorySort)
       }
 
+      override fun categorySort(vararg categorySort: Any): Unit =
+          categorySort(categorySort.toList())
+
       override fun colorItemsLimit(colorItemsLimit: IResolvable) {
         cdkBuilder.colorItemsLimit(colorItemsLimit.let(IResolvable::unwrap))
       }
@@ -630,6 +661,8 @@ public open class CfnAnalysis internal constructor(
       override fun colorSort(colorSort: List<Any>) {
         cdkBuilder.colorSort(colorSort)
       }
+
+      override fun colorSort(vararg colorSort: Any): Unit = colorSort(colorSort.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.ComboChartSortConfigurationProperty
@@ -690,6 +723,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun chartConfiguration(chartConfiguration: IResolvable)
 
       public fun chartConfiguration(chartConfiguration: KPIConfigurationProperty)
@@ -701,6 +736,8 @@ public open class CfnAnalysis internal constructor(
       public fun columnHierarchies(columnHierarchies: IResolvable)
 
       public fun columnHierarchies(columnHierarchies: List<Any>)
+
+      public fun columnHierarchies(vararg columnHierarchies: Any)
 
       public fun conditionalFormatting(conditionalFormatting: IResolvable)
 
@@ -743,6 +780,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.actions(actions)
       }
 
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
+
       override fun chartConfiguration(chartConfiguration: IResolvable) {
         cdkBuilder.chartConfiguration(chartConfiguration.let(IResolvable::unwrap))
       }
@@ -764,6 +803,9 @@ public open class CfnAnalysis internal constructor(
       override fun columnHierarchies(columnHierarchies: List<Any>) {
         cdkBuilder.columnHierarchies(columnHierarchies)
       }
+
+      override fun columnHierarchies(vararg columnHierarchies: Any): Unit =
+          columnHierarchies(columnHierarchies.toList())
 
       override fun conditionalFormatting(conditionalFormatting: IResolvable) {
         cdkBuilder.conditionalFormatting(conditionalFormatting.let(IResolvable::unwrap))
@@ -1156,9 +1198,13 @@ public open class CfnAnalysis internal constructor(
 
       public fun targetValues(targetValues: List<Any>)
 
+      public fun targetValues(vararg targetValues: Any)
+
       public fun values(values: IResolvable)
 
       public fun values(values: List<Any>)
+
+      public fun values(vararg values: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1175,6 +1221,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.targetValues(targetValues)
       }
 
+      override fun targetValues(vararg targetValues: Any): Unit =
+          targetValues(targetValues.toList())
+
       override fun values(values: IResolvable) {
         cdkBuilder.values(values.let(IResolvable::unwrap))
       }
@@ -1182,6 +1231,8 @@ public open class CfnAnalysis internal constructor(
       override fun values(values: List<Any>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: Any): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.GaugeChartFieldWellsProperty =
@@ -1229,6 +1280,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun dataSetIdentifier(dataSetIdentifier: String)
 
       public fun visualId(visualId: String)
@@ -1246,6 +1299,8 @@ public open class CfnAnalysis internal constructor(
       override fun actions(actions: List<Any>) {
         cdkBuilder.actions(actions)
       }
+
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
 
       override fun dataSetIdentifier(dataSetIdentifier: String) {
         cdkBuilder.dataSetIdentifier(dataSetIdentifier)
@@ -1300,6 +1355,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun computations(computations: List<Any>)
 
+      public fun computations(vararg computations: Any)
+
       public fun customNarrative(customNarrative: IResolvable)
 
       public fun customNarrative(customNarrative: CustomNarrativeOptionsProperty)
@@ -1322,6 +1379,9 @@ public open class CfnAnalysis internal constructor(
       override fun computations(computations: List<Any>) {
         cdkBuilder.computations(computations)
       }
+
+      override fun computations(vararg computations: Any): Unit =
+          computations(computations.toList())
 
       override fun customNarrative(customNarrative: IResolvable) {
         cdkBuilder.customNarrative(customNarrative.let(IResolvable::unwrap))
@@ -1395,6 +1455,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun mappedDataSetParameters(mappedDataSetParameters: List<Any>)
 
+      public fun mappedDataSetParameters(vararg mappedDataSetParameters: Any)
+
       public fun name(name: String)
 
       public fun timeGranularity(timeGranularity: String)
@@ -1435,6 +1497,9 @@ public open class CfnAnalysis internal constructor(
       override fun mappedDataSetParameters(mappedDataSetParameters: List<Any>) {
         cdkBuilder.mappedDataSetParameters(mappedDataSetParameters)
       }
+
+      override fun mappedDataSetParameters(vararg mappedDataSetParameters: Any): Unit =
+          mappedDataSetParameters(mappedDataSetParameters.toList())
 
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -1517,6 +1582,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun aggregationSortConfigurations(aggregationSortConfigurations: List<Any>)
 
+      public fun aggregationSortConfigurations(vararg aggregationSortConfigurations: Any)
+
       public fun column(column: IResolvable)
 
       public fun column(column: ColumnIdentifierProperty)
@@ -1546,6 +1613,9 @@ public open class CfnAnalysis internal constructor(
       override fun aggregationSortConfigurations(aggregationSortConfigurations: List<Any>) {
         cdkBuilder.aggregationSortConfigurations(aggregationSortConfigurations)
       }
+
+      override fun aggregationSortConfigurations(vararg aggregationSortConfigurations: Any): Unit =
+          aggregationSortConfigurations(aggregationSortConfigurations.toList())
 
       override fun column(column: IResolvable) {
         cdkBuilder.column(column.let(IResolvable::unwrap))
@@ -1626,6 +1696,8 @@ public open class CfnAnalysis internal constructor(
       public fun values(values: IResolvable)
 
       public fun values(values: List<Any>)
+
+      public fun values(vararg values: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1641,6 +1713,8 @@ public open class CfnAnalysis internal constructor(
       override fun values(values: List<Any>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: Any): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.TableUnaggregatedFieldWellsProperty
@@ -2316,6 +2390,8 @@ public open class CfnAnalysis internal constructor(
       public fun sortPaths(sortPaths: IResolvable)
 
       public fun sortPaths(sortPaths: List<Any>)
+
+      public fun sortPaths(vararg sortPaths: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2334,6 +2410,8 @@ public open class CfnAnalysis internal constructor(
       override fun sortPaths(sortPaths: List<Any>) {
         cdkBuilder.sortPaths(sortPaths)
       }
+
+      override fun sortPaths(vararg sortPaths: Any): Unit = sortPaths(sortPaths.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.DataPathSortProperty =
@@ -2537,17 +2615,25 @@ public open class CfnAnalysis internal constructor(
 
       public fun category(category: List<Any>)
 
+      public fun category(vararg category: Any)
+
       public fun colors(colors: IResolvable)
 
       public fun colors(colors: List<Any>)
+
+      public fun colors(vararg colors: Any)
 
       public fun smallMultiples(smallMultiples: IResolvable)
 
       public fun smallMultiples(smallMultiples: List<Any>)
 
+      public fun smallMultiples(vararg smallMultiples: Any)
+
       public fun values(values: IResolvable)
 
       public fun values(values: List<Any>)
+
+      public fun values(vararg values: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2564,6 +2650,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.category(category)
       }
 
+      override fun category(vararg category: Any): Unit = category(category.toList())
+
       override fun colors(colors: IResolvable) {
         cdkBuilder.colors(colors.let(IResolvable::unwrap))
       }
@@ -2571,6 +2659,8 @@ public open class CfnAnalysis internal constructor(
       override fun colors(colors: List<Any>) {
         cdkBuilder.colors(colors)
       }
+
+      override fun colors(vararg colors: Any): Unit = colors(colors.toList())
 
       override fun smallMultiples(smallMultiples: IResolvable) {
         cdkBuilder.smallMultiples(smallMultiples.let(IResolvable::unwrap))
@@ -2580,6 +2670,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.smallMultiples(smallMultiples)
       }
 
+      override fun smallMultiples(vararg smallMultiples: Any): Unit =
+          smallMultiples(smallMultiples.toList())
+
       override fun values(values: IResolvable) {
         cdkBuilder.values(values.let(IResolvable::unwrap))
       }
@@ -2587,6 +2680,8 @@ public open class CfnAnalysis internal constructor(
       override fun values(values: List<Any>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: Any): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.BarChartAggregatedFieldWellsProperty
@@ -2871,9 +2966,13 @@ public open class CfnAnalysis internal constructor(
 
       public fun groupBy(groupBy: List<Any>)
 
+      public fun groupBy(vararg groupBy: Any)
+
       public fun values(values: IResolvable)
 
       public fun values(values: List<Any>)
+
+      public fun values(vararg values: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2890,6 +2989,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.groupBy(groupBy)
       }
 
+      override fun groupBy(vararg groupBy: Any): Unit = groupBy(groupBy.toList())
+
       override fun values(values: IResolvable) {
         cdkBuilder.values(values.let(IResolvable::unwrap))
       }
@@ -2897,6 +2998,8 @@ public open class CfnAnalysis internal constructor(
       override fun values(values: List<Any>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: Any): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.BoxPlotAggregatedFieldWellsProperty
@@ -2947,6 +3050,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun bodySections(bodySections: List<Any>)
 
+      public fun bodySections(vararg bodySections: Any)
+
       public fun canvasSizeOptions(canvasSizeOptions: IResolvable)
 
       public fun canvasSizeOptions(canvasSizeOptions: SectionBasedLayoutCanvasSizeOptionsProperty)
@@ -2960,9 +3065,13 @@ public open class CfnAnalysis internal constructor(
 
       public fun footerSections(footerSections: List<Any>)
 
+      public fun footerSections(vararg footerSections: Any)
+
       public fun headerSections(headerSections: IResolvable)
 
       public fun headerSections(headerSections: List<Any>)
+
+      public fun headerSections(vararg headerSections: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2978,6 +3087,9 @@ public open class CfnAnalysis internal constructor(
       override fun bodySections(bodySections: List<Any>) {
         cdkBuilder.bodySections(bodySections)
       }
+
+      override fun bodySections(vararg bodySections: Any): Unit =
+          bodySections(bodySections.toList())
 
       override fun canvasSizeOptions(canvasSizeOptions: IResolvable) {
         cdkBuilder.canvasSizeOptions(canvasSizeOptions.let(IResolvable::unwrap))
@@ -3002,6 +3114,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.footerSections(footerSections)
       }
 
+      override fun footerSections(vararg footerSections: Any): Unit =
+          footerSections(footerSections.toList())
+
       override fun headerSections(headerSections: IResolvable) {
         cdkBuilder.headerSections(headerSections.let(IResolvable::unwrap))
       }
@@ -3009,6 +3124,9 @@ public open class CfnAnalysis internal constructor(
       override fun headerSections(headerSections: List<Any>) {
         cdkBuilder.headerSections(headerSections)
       }
+
+      override fun headerSections(vararg headerSections: Any): Unit =
+          headerSections(headerSections.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.SectionBasedLayoutConfigurationProperty
@@ -3065,6 +3183,8 @@ public open class CfnAnalysis internal constructor(
           fun linkToDataSetColumn(linkToDataSetColumn: ColumnIdentifierProperty.Builder.() -> Unit)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3090,6 +3210,8 @@ public open class CfnAnalysis internal constructor(
       override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.ParameterSelectableValuesProperty =
@@ -3289,6 +3411,8 @@ public open class CfnAnalysis internal constructor(
       public fun conditionalFormattingOptions(conditionalFormattingOptions: IResolvable)
 
       public fun conditionalFormattingOptions(conditionalFormattingOptions: List<Any>)
+
+      public fun conditionalFormattingOptions(vararg conditionalFormattingOptions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -3304,6 +3428,9 @@ public open class CfnAnalysis internal constructor(
       override fun conditionalFormattingOptions(conditionalFormattingOptions: List<Any>) {
         cdkBuilder.conditionalFormattingOptions(conditionalFormattingOptions)
       }
+
+      override fun conditionalFormattingOptions(vararg conditionalFormattingOptions: Any): Unit =
+          conditionalFormattingOptions(conditionalFormattingOptions.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.GaugeChartConditionalFormattingProperty
@@ -3351,9 +3478,13 @@ public open class CfnAnalysis internal constructor(
 
       public fun columns(columns: List<Any>)
 
+      public fun columns(vararg columns: Any)
+
       public fun drillDownFilters(drillDownFilters: IResolvable)
 
       public fun drillDownFilters(drillDownFilters: List<Any>)
+
+      public fun drillDownFilters(vararg drillDownFilters: Any)
 
       public fun hierarchyId(hierarchyId: String)
     }
@@ -3371,6 +3502,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.columns(columns)
       }
 
+      override fun columns(vararg columns: Any): Unit = columns(columns.toList())
+
       override fun drillDownFilters(drillDownFilters: IResolvable) {
         cdkBuilder.drillDownFilters(drillDownFilters.let(IResolvable::unwrap))
       }
@@ -3378,6 +3511,9 @@ public open class CfnAnalysis internal constructor(
       override fun drillDownFilters(drillDownFilters: List<Any>) {
         cdkBuilder.drillDownFilters(drillDownFilters)
       }
+
+      override fun drillDownFilters(vararg drillDownFilters: Any): Unit =
+          drillDownFilters(drillDownFilters.toList())
 
       override fun hierarchyId(hierarchyId: String) {
         cdkBuilder.hierarchyId(hierarchyId)
@@ -3483,6 +3619,8 @@ public open class CfnAnalysis internal constructor(
       public fun sheetVisualScopingConfigurations(sheetVisualScopingConfigurations: IResolvable)
 
       public fun sheetVisualScopingConfigurations(sheetVisualScopingConfigurations: List<Any>)
+
+      public fun sheetVisualScopingConfigurations(vararg sheetVisualScopingConfigurations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -3498,6 +3636,9 @@ public open class CfnAnalysis internal constructor(
       override fun sheetVisualScopingConfigurations(sheetVisualScopingConfigurations: List<Any>) {
         cdkBuilder.sheetVisualScopingConfigurations(sheetVisualScopingConfigurations)
       }
+
+      override fun sheetVisualScopingConfigurations(vararg sheetVisualScopingConfigurations: Any):
+          Unit = sheetVisualScopingConfigurations(sheetVisualScopingConfigurations.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.SelectedSheetsFilterScopeConfigurationProperty
@@ -3752,6 +3893,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun tableInlineVisualizations(tableInlineVisualizations: List<Any>)
 
+      public fun tableInlineVisualizations(vararg tableInlineVisualizations: Any)
+
       public fun tableOptions(tableOptions: IResolvable)
 
       public fun tableOptions(tableOptions: TableOptionsProperty)
@@ -3837,6 +3980,9 @@ public open class CfnAnalysis internal constructor(
       override fun tableInlineVisualizations(tableInlineVisualizations: List<Any>) {
         cdkBuilder.tableInlineVisualizations(tableInlineVisualizations)
       }
+
+      override fun tableInlineVisualizations(vararg tableInlineVisualizations: Any): Unit =
+          tableInlineVisualizations(tableInlineVisualizations.toList())
 
       override fun tableOptions(tableOptions: IResolvable) {
         cdkBuilder.tableOptions(tableOptions.let(IResolvable::unwrap))
@@ -4212,6 +4358,8 @@ public open class CfnAnalysis internal constructor(
       public fun conditionalFormattingOptions(conditionalFormattingOptions: IResolvable)
 
       public fun conditionalFormattingOptions(conditionalFormattingOptions: List<Any>)
+
+      public fun conditionalFormattingOptions(vararg conditionalFormattingOptions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -4227,6 +4375,9 @@ public open class CfnAnalysis internal constructor(
       override fun conditionalFormattingOptions(conditionalFormattingOptions: List<Any>) {
         cdkBuilder.conditionalFormattingOptions(conditionalFormattingOptions)
       }
+
+      override fun conditionalFormattingOptions(vararg conditionalFormattingOptions: Any): Unit =
+          conditionalFormattingOptions(conditionalFormattingOptions.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.TableConditionalFormattingProperty
@@ -4454,6 +4605,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun chartConfiguration(chartConfiguration: IResolvable)
 
       public fun chartConfiguration(chartConfiguration: HistogramConfigurationProperty)
@@ -4494,6 +4647,8 @@ public open class CfnAnalysis internal constructor(
       override fun actions(actions: List<Any>) {
         cdkBuilder.actions(actions)
       }
+
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
 
       override fun chartConfiguration(chartConfiguration: IResolvable) {
         cdkBuilder.chartConfiguration(chartConfiguration.let(IResolvable::unwrap))
@@ -4590,6 +4745,8 @@ public open class CfnAnalysis internal constructor(
       public fun dataSetReferences(dataSetReferences: IResolvable)
 
       public fun dataSetReferences(dataSetReferences: List<Any>)
+
+      public fun dataSetReferences(vararg dataSetReferences: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -4609,6 +4766,9 @@ public open class CfnAnalysis internal constructor(
       override fun dataSetReferences(dataSetReferences: List<Any>) {
         cdkBuilder.dataSetReferences(dataSetReferences)
       }
+
+      override fun dataSetReferences(vararg dataSetReferences: Any): Unit =
+          dataSetReferences(dataSetReferences.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.AnalysisSourceTemplateProperty =
@@ -4655,6 +4815,8 @@ public open class CfnAnalysis internal constructor(
       public fun colorMap(colorMap: IResolvable)
 
       public fun colorMap(colorMap: List<Any>)
+
+      public fun colorMap(vararg colorMap: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -4673,6 +4835,8 @@ public open class CfnAnalysis internal constructor(
       override fun colorMap(colorMap: List<Any>) {
         cdkBuilder.colorMap(colorMap)
       }
+
+      override fun colorMap(vararg colorMap: Any): Unit = colorMap(colorMap.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.VisualPaletteProperty =
@@ -4810,6 +4974,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun chartConfiguration(chartConfiguration: IResolvable)
 
       public fun chartConfiguration(chartConfiguration: HeatMapConfigurationProperty)
@@ -4822,6 +4988,8 @@ public open class CfnAnalysis internal constructor(
       public fun columnHierarchies(columnHierarchies: IResolvable)
 
       public fun columnHierarchies(columnHierarchies: List<Any>)
+
+      public fun columnHierarchies(vararg columnHierarchies: Any)
 
       public fun subtitle(subtitle: IResolvable)
 
@@ -4855,6 +5023,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.actions(actions)
       }
 
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
+
       override fun chartConfiguration(chartConfiguration: IResolvable) {
         cdkBuilder.chartConfiguration(chartConfiguration.let(IResolvable::unwrap))
       }
@@ -4876,6 +5046,9 @@ public open class CfnAnalysis internal constructor(
       override fun columnHierarchies(columnHierarchies: List<Any>) {
         cdkBuilder.columnHierarchies(columnHierarchies)
       }
+
+      override fun columnHierarchies(vararg columnHierarchies: Any): Unit =
+          columnHierarchies(columnHierarchies.toList())
 
       override fun subtitle(subtitle: IResolvable) {
         cdkBuilder.subtitle(subtitle.let(IResolvable::unwrap))
@@ -4975,6 +5148,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun fieldLevelOptions(fieldLevelOptions: List<Any>)
 
+      public fun fieldLevelOptions(vararg fieldLevelOptions: Any)
+
       public fun metricHeaderCellStyle(metricHeaderCellStyle: IResolvable)
 
       public fun metricHeaderCellStyle(metricHeaderCellStyle: TableCellStyleProperty)
@@ -4987,6 +5162,8 @@ public open class CfnAnalysis internal constructor(
       public fun styleTargets(styleTargets: IResolvable)
 
       public fun styleTargets(styleTargets: List<Any>)
+
+      public fun styleTargets(vararg styleTargets: Any)
 
       public fun totalCellStyle(totalCellStyle: IResolvable)
 
@@ -5028,6 +5205,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.fieldLevelOptions(fieldLevelOptions)
       }
 
+      override fun fieldLevelOptions(vararg fieldLevelOptions: Any): Unit =
+          fieldLevelOptions(fieldLevelOptions.toList())
+
       override fun metricHeaderCellStyle(metricHeaderCellStyle: IResolvable) {
         cdkBuilder.metricHeaderCellStyle(metricHeaderCellStyle.let(IResolvable::unwrap))
       }
@@ -5049,6 +5229,9 @@ public open class CfnAnalysis internal constructor(
       override fun styleTargets(styleTargets: List<Any>) {
         cdkBuilder.styleTargets(styleTargets)
       }
+
+      override fun styleTargets(vararg styleTargets: Any): Unit =
+          styleTargets(styleTargets.toList())
 
       override fun totalCellStyle(totalCellStyle: IResolvable) {
         cdkBuilder.totalCellStyle(totalCellStyle.let(IResolvable::unwrap))
@@ -5144,6 +5327,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun dataSetIdentifier(dataSetIdentifier: String)
 
       public fun insightConfiguration(insightConfiguration: IResolvable)
@@ -5186,6 +5371,8 @@ public open class CfnAnalysis internal constructor(
       override fun actions(actions: List<Any>) {
         cdkBuilder.actions(actions)
       }
+
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
 
       override fun dataSetIdentifier(dataSetIdentifier: String) {
         cdkBuilder.dataSetIdentifier(dataSetIdentifier)
@@ -5722,6 +5909,8 @@ public open class CfnAnalysis internal constructor(
 
     public interface Builder {
       public fun pinnedLeftFields(pinnedLeftFields: List<String>)
+
+      public fun pinnedLeftFields(vararg pinnedLeftFields: String)
     }
 
     private class BuilderImpl : Builder {
@@ -5733,6 +5922,9 @@ public open class CfnAnalysis internal constructor(
       override fun pinnedLeftFields(pinnedLeftFields: List<String>) {
         cdkBuilder.pinnedLeftFields(pinnedLeftFields)
       }
+
+      override fun pinnedLeftFields(vararg pinnedLeftFields: String): Unit =
+          pinnedLeftFields(pinnedLeftFields.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.TablePinnedFieldOptionsProperty =
@@ -6204,6 +6396,8 @@ public open class CfnAnalysis internal constructor(
       public fun sourceControls(sourceControls: IResolvable)
 
       public fun sourceControls(sourceControls: List<Any>)
+
+      public fun sourceControls(vararg sourceControls: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -6219,6 +6413,9 @@ public open class CfnAnalysis internal constructor(
       override fun sourceControls(sourceControls: List<Any>) {
         cdkBuilder.sourceControls(sourceControls)
       }
+
+      override fun sourceControls(vararg sourceControls: Any): Unit =
+          sourceControls(sourceControls.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.CascadingControlConfigurationProperty
@@ -6735,6 +6932,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun heatMapColumnSort(heatMapColumnSort: List<Any>)
 
+      public fun heatMapColumnSort(vararg heatMapColumnSort: Any)
+
       public fun heatMapRowItemsLimitConfiguration(heatMapRowItemsLimitConfiguration: IResolvable)
 
       public
@@ -6748,6 +6947,8 @@ public open class CfnAnalysis internal constructor(
       public fun heatMapRowSort(heatMapRowSort: IResolvable)
 
       public fun heatMapRowSort(heatMapRowSort: List<Any>)
+
+      public fun heatMapRowSort(vararg heatMapRowSort: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -6781,6 +6982,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.heatMapColumnSort(heatMapColumnSort)
       }
 
+      override fun heatMapColumnSort(vararg heatMapColumnSort: Any): Unit =
+          heatMapColumnSort(heatMapColumnSort.toList())
+
       override
           fun heatMapRowItemsLimitConfiguration(heatMapRowItemsLimitConfiguration: IResolvable) {
         cdkBuilder.heatMapRowItemsLimitConfiguration(heatMapRowItemsLimitConfiguration.let(IResolvable::unwrap))
@@ -6805,6 +7009,9 @@ public open class CfnAnalysis internal constructor(
       override fun heatMapRowSort(heatMapRowSort: List<Any>) {
         cdkBuilder.heatMapRowSort(heatMapRowSort)
       }
+
+      override fun heatMapRowSort(vararg heatMapRowSort: Any): Unit =
+          heatMapRowSort(heatMapRowSort.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.HeatMapSortConfigurationProperty =
@@ -6938,6 +7145,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun chartConfiguration(chartConfiguration: IResolvable)
 
       public fun chartConfiguration(chartConfiguration: ScatterPlotConfigurationProperty)
@@ -6950,6 +7159,8 @@ public open class CfnAnalysis internal constructor(
       public fun columnHierarchies(columnHierarchies: IResolvable)
 
       public fun columnHierarchies(columnHierarchies: List<Any>)
+
+      public fun columnHierarchies(vararg columnHierarchies: Any)
 
       public fun subtitle(subtitle: IResolvable)
 
@@ -6983,6 +7194,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.actions(actions)
       }
 
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
+
       override fun chartConfiguration(chartConfiguration: IResolvable) {
         cdkBuilder.chartConfiguration(chartConfiguration.let(IResolvable::unwrap))
       }
@@ -7004,6 +7217,9 @@ public open class CfnAnalysis internal constructor(
       override fun columnHierarchies(columnHierarchies: List<Any>) {
         cdkBuilder.columnHierarchies(columnHierarchies)
       }
+
+      override fun columnHierarchies(vararg columnHierarchies: Any): Unit =
+          columnHierarchies(columnHierarchies.toList())
 
       override fun subtitle(subtitle: IResolvable) {
         cdkBuilder.subtitle(subtitle.let(IResolvable::unwrap))
@@ -7928,21 +8144,31 @@ public open class CfnAnalysis internal constructor(
 
       public fun category(category: List<Any>)
 
+      public fun category(vararg category: Any)
+
       public fun label(label: IResolvable)
 
       public fun label(label: List<Any>)
+
+      public fun label(vararg label: Any)
 
       public fun size(size: IResolvable)
 
       public fun size(size: List<Any>)
 
+      public fun size(vararg size: Any)
+
       public fun xAxis(xAxis: IResolvable)
 
       public fun xAxis(xAxis: List<Any>)
 
+      public fun xAxis(vararg xAxis: Any)
+
       public fun yAxis(yAxis: IResolvable)
 
       public fun yAxis(yAxis: List<Any>)
+
+      public fun yAxis(vararg yAxis: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -7959,6 +8185,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.category(category)
       }
 
+      override fun category(vararg category: Any): Unit = category(category.toList())
+
       override fun label(label: IResolvable) {
         cdkBuilder.label(label.let(IResolvable::unwrap))
       }
@@ -7966,6 +8194,8 @@ public open class CfnAnalysis internal constructor(
       override fun label(label: List<Any>) {
         cdkBuilder.label(label)
       }
+
+      override fun label(vararg label: Any): Unit = label(label.toList())
 
       override fun size(size: IResolvable) {
         cdkBuilder.size(size.let(IResolvable::unwrap))
@@ -7975,6 +8205,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.size(size)
       }
 
+      override fun size(vararg size: Any): Unit = size(size.toList())
+
       override fun xAxis(xAxis: IResolvable) {
         cdkBuilder.xAxis(xAxis.let(IResolvable::unwrap))
       }
@@ -7983,6 +8215,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.xAxis(xAxis)
       }
 
+      override fun xAxis(vararg xAxis: Any): Unit = xAxis(xAxis.toList())
+
       override fun yAxis(yAxis: IResolvable) {
         cdkBuilder.yAxis(yAxis.let(IResolvable::unwrap))
       }
@@ -7990,6 +8224,8 @@ public open class CfnAnalysis internal constructor(
       override fun yAxis(yAxis: List<Any>) {
         cdkBuilder.yAxis(yAxis)
       }
+
+      override fun yAxis(vararg yAxis: Any): Unit = yAxis(yAxis.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.ScatterPlotUnaggregatedFieldWellsProperty
@@ -8305,6 +8541,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun referenceLines(referenceLines: List<Any>)
 
+      public fun referenceLines(vararg referenceLines: Any)
+
       public fun sortConfiguration(sortConfiguration: IResolvable)
 
       public fun sortConfiguration(sortConfiguration: BoxPlotSortConfigurationProperty)
@@ -8441,6 +8679,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.referenceLines(referenceLines)
       }
 
+      override fun referenceLines(vararg referenceLines: Any): Unit =
+          referenceLines(referenceLines.toList())
+
       override fun sortConfiguration(sortConfiguration: IResolvable) {
         cdkBuilder.sortConfiguration(sortConfiguration.let(IResolvable::unwrap))
       }
@@ -8552,6 +8793,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun chartConfiguration(chartConfiguration: IResolvable)
 
       public fun chartConfiguration(chartConfiguration: BoxPlotChartConfigurationProperty)
@@ -8564,6 +8807,8 @@ public open class CfnAnalysis internal constructor(
       public fun columnHierarchies(columnHierarchies: IResolvable)
 
       public fun columnHierarchies(columnHierarchies: List<Any>)
+
+      public fun columnHierarchies(vararg columnHierarchies: Any)
 
       public fun subtitle(subtitle: IResolvable)
 
@@ -8597,6 +8842,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.actions(actions)
       }
 
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
+
       override fun chartConfiguration(chartConfiguration: IResolvable) {
         cdkBuilder.chartConfiguration(chartConfiguration.let(IResolvable::unwrap))
       }
@@ -8618,6 +8865,9 @@ public open class CfnAnalysis internal constructor(
       override fun columnHierarchies(columnHierarchies: List<Any>) {
         cdkBuilder.columnHierarchies(columnHierarchies)
       }
+
+      override fun columnHierarchies(vararg columnHierarchies: Any): Unit =
+          columnHierarchies(columnHierarchies.toList())
 
       override fun subtitle(subtitle: IResolvable) {
         cdkBuilder.subtitle(subtitle.let(IResolvable::unwrap))
@@ -9374,6 +9624,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun dataLabelTypes(dataLabelTypes: List<Any>)
 
+      public fun dataLabelTypes(vararg dataLabelTypes: Any)
+
       public fun labelColor(labelColor: String)
 
       public fun labelContent(labelContent: String)
@@ -9414,6 +9666,9 @@ public open class CfnAnalysis internal constructor(
       override fun dataLabelTypes(dataLabelTypes: List<Any>) {
         cdkBuilder.dataLabelTypes(dataLabelTypes)
       }
+
+      override fun dataLabelTypes(vararg dataLabelTypes: Any): Unit =
+          dataLabelTypes(dataLabelTypes.toList())
 
       override fun labelColor(labelColor: String) {
         cdkBuilder.labelColor(labelColor)
@@ -10717,6 +10972,8 @@ public open class CfnAnalysis internal constructor(
     public interface Builder {
       public fun categoryValues(categoryValues: List<String>)
 
+      public fun categoryValues(vararg categoryValues: String)
+
       public fun column(column: IResolvable)
 
       public fun column(column: ColumnIdentifierProperty)
@@ -10735,6 +10992,9 @@ public open class CfnAnalysis internal constructor(
       override fun categoryValues(categoryValues: List<String>) {
         cdkBuilder.categoryValues(categoryValues)
       }
+
+      override fun categoryValues(vararg categoryValues: String): Unit =
+          categoryValues(categoryValues.toList())
 
       override fun column(column: IResolvable) {
         cdkBuilder.column(column.let(IResolvable::unwrap))
@@ -10758,7 +11018,7 @@ public open class CfnAnalysis internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnAnalysis.CategoryDrillDownFilterProperty,
     ) : CategoryDrillDownFilterProperty {
-      override fun categoryValues(): List<String> = unwrap(this).getCategoryValues() ?: emptyList()
+      override fun categoryValues(): List<String> = unwrap(this).getCategoryValues()
 
       override fun column(): Any = unwrap(this).getColumn()
     }
@@ -10803,6 +11063,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun chartConfiguration(chartConfiguration: IResolvable)
 
       public fun chartConfiguration(chartConfiguration: FilledMapConfigurationProperty)
@@ -10815,6 +11077,8 @@ public open class CfnAnalysis internal constructor(
       public fun columnHierarchies(columnHierarchies: IResolvable)
 
       public fun columnHierarchies(columnHierarchies: List<Any>)
+
+      public fun columnHierarchies(vararg columnHierarchies: Any)
 
       public fun conditionalFormatting(conditionalFormatting: IResolvable)
 
@@ -10858,6 +11122,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.actions(actions)
       }
 
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
+
       override fun chartConfiguration(chartConfiguration: IResolvable) {
         cdkBuilder.chartConfiguration(chartConfiguration.let(IResolvable::unwrap))
       }
@@ -10879,6 +11145,9 @@ public open class CfnAnalysis internal constructor(
       override fun columnHierarchies(columnHierarchies: List<Any>) {
         cdkBuilder.columnHierarchies(columnHierarchies)
       }
+
+      override fun columnHierarchies(vararg columnHierarchies: Any): Unit =
+          columnHierarchies(columnHierarchies.toList())
 
       override fun conditionalFormatting(conditionalFormatting: IResolvable) {
         cdkBuilder.conditionalFormatting(conditionalFormatting.let(IResolvable::unwrap))
@@ -11185,6 +11454,8 @@ public open class CfnAnalysis internal constructor(
       public fun name(name: String)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -11200,6 +11471,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.values(values)
       }
 
+      override fun values(vararg values: String): Unit = values(values.toList())
+
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.DateTimeParameterProperty =
           cdkBuilder.build()
@@ -11211,7 +11484,7 @@ public open class CfnAnalysis internal constructor(
     ) : DateTimeParameterProperty {
       override fun name(): String = unwrap(this).getName()
 
-      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues()
     }
 
     public companion object {
@@ -11575,6 +11848,8 @@ public open class CfnAnalysis internal constructor(
       public fun conditionalFormattingOptions(conditionalFormattingOptions: IResolvable)
 
       public fun conditionalFormattingOptions(conditionalFormattingOptions: List<Any>)
+
+      public fun conditionalFormattingOptions(vararg conditionalFormattingOptions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -11590,6 +11865,9 @@ public open class CfnAnalysis internal constructor(
       override fun conditionalFormattingOptions(conditionalFormattingOptions: List<Any>) {
         cdkBuilder.conditionalFormattingOptions(conditionalFormattingOptions)
       }
+
+      override fun conditionalFormattingOptions(vararg conditionalFormattingOptions: Any): Unit =
+          conditionalFormattingOptions(conditionalFormattingOptions.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.FilledMapConditionalFormattingProperty
@@ -12021,15 +12299,23 @@ public open class CfnAnalysis internal constructor(
     public interface Builder {
       public fun dateTimeValues(dateTimeValues: List<String>)
 
+      public fun dateTimeValues(vararg dateTimeValues: String)
+
       public fun decimalValues(decimalValues: IResolvable)
 
       public fun decimalValues(decimalValues: List<Number>)
+
+      public fun decimalValues(vararg decimalValues: Number)
 
       public fun integerValues(integerValues: IResolvable)
 
       public fun integerValues(integerValues: List<Number>)
 
+      public fun integerValues(vararg integerValues: Number)
+
       public fun stringValues(stringValues: List<String>)
+
+      public fun stringValues(vararg stringValues: String)
     }
 
     private class BuilderImpl : Builder {
@@ -12042,6 +12328,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.dateTimeValues(dateTimeValues)
       }
 
+      override fun dateTimeValues(vararg dateTimeValues: String): Unit =
+          dateTimeValues(dateTimeValues.toList())
+
       override fun decimalValues(decimalValues: IResolvable) {
         cdkBuilder.decimalValues(decimalValues.let(IResolvable::unwrap))
       }
@@ -12049,6 +12338,9 @@ public open class CfnAnalysis internal constructor(
       override fun decimalValues(decimalValues: List<Number>) {
         cdkBuilder.decimalValues(decimalValues)
       }
+
+      override fun decimalValues(vararg decimalValues: Number): Unit =
+          decimalValues(decimalValues.toList())
 
       override fun integerValues(integerValues: IResolvable) {
         cdkBuilder.integerValues(integerValues.let(IResolvable::unwrap))
@@ -12058,9 +12350,15 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.integerValues(integerValues)
       }
 
+      override fun integerValues(vararg integerValues: Number): Unit =
+          integerValues(integerValues.toList())
+
       override fun stringValues(stringValues: List<String>) {
         cdkBuilder.stringValues(stringValues)
       }
+
+      override fun stringValues(vararg stringValues: String): Unit =
+          stringValues(stringValues.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.CustomParameterValuesProperty =
@@ -12112,13 +12410,19 @@ public open class CfnAnalysis internal constructor(
 
       public fun category(category: List<Any>)
 
+      public fun category(vararg category: Any)
+
       public fun color(color: IResolvable)
 
       public fun color(color: List<Any>)
 
+      public fun color(vararg color: Any)
+
       public fun values(values: IResolvable)
 
       public fun values(values: List<Any>)
+
+      public fun values(vararg values: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -12135,6 +12439,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.category(category)
       }
 
+      override fun category(vararg category: Any): Unit = category(category.toList())
+
       override fun color(color: IResolvable) {
         cdkBuilder.color(color.let(IResolvable::unwrap))
       }
@@ -12143,6 +12449,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.color(color)
       }
 
+      override fun color(vararg color: Any): Unit = color(color.toList())
+
       override fun values(values: IResolvable) {
         cdkBuilder.values(values.let(IResolvable::unwrap))
       }
@@ -12150,6 +12458,8 @@ public open class CfnAnalysis internal constructor(
       override fun values(values: List<Any>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: Any): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.RadarChartAggregatedFieldWellsProperty
@@ -12648,9 +12958,13 @@ public open class CfnAnalysis internal constructor(
 
       public fun selectedColumns(selectedColumns: List<Any>)
 
+      public fun selectedColumns(vararg selectedColumns: Any)
+
       public fun selectedFieldOptions(selectedFieldOptions: String)
 
       public fun selectedFields(selectedFields: List<String>)
+
+      public fun selectedFields(vararg selectedFields: String)
     }
 
     private class BuilderImpl : Builder {
@@ -12667,6 +12981,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.selectedColumns(selectedColumns)
       }
 
+      override fun selectedColumns(vararg selectedColumns: Any): Unit =
+          selectedColumns(selectedColumns.toList())
+
       override fun selectedFieldOptions(selectedFieldOptions: String) {
         cdkBuilder.selectedFieldOptions(selectedFieldOptions)
       }
@@ -12674,6 +12991,9 @@ public open class CfnAnalysis internal constructor(
       override fun selectedFields(selectedFields: List<String>) {
         cdkBuilder.selectedFields(selectedFields)
       }
+
+      override fun selectedFields(vararg selectedFields: String): Unit =
+          selectedFields(selectedFields.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.FilterOperationSelectedFieldsConfigurationProperty
@@ -12723,6 +13043,8 @@ public open class CfnAnalysis internal constructor(
       public fun values(values: IResolvable)
 
       public fun values(values: List<Number>)
+
+      public fun values(vararg values: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -12741,6 +13063,8 @@ public open class CfnAnalysis internal constructor(
       override fun values(values: List<Number>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: Number): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.IntegerParameterProperty =
@@ -13017,13 +13341,19 @@ public open class CfnAnalysis internal constructor(
 
       public fun columns(columns: List<Any>)
 
+      public fun columns(vararg columns: Any)
+
       public fun rows(rows: IResolvable)
 
       public fun rows(rows: List<Any>)
 
+      public fun rows(vararg rows: Any)
+
       public fun values(values: IResolvable)
 
       public fun values(values: List<Any>)
+
+      public fun values(vararg values: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -13040,6 +13370,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.columns(columns)
       }
 
+      override fun columns(vararg columns: Any): Unit = columns(columns.toList())
+
       override fun rows(rows: IResolvable) {
         cdkBuilder.rows(rows.let(IResolvable::unwrap))
       }
@@ -13048,6 +13380,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.rows(rows)
       }
 
+      override fun rows(vararg rows: Any): Unit = rows(rows.toList())
+
       override fun values(values: IResolvable) {
         cdkBuilder.values(values.let(IResolvable::unwrap))
       }
@@ -13055,6 +13389,8 @@ public open class CfnAnalysis internal constructor(
       override fun values(values: List<Any>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: Any): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.PivotTableAggregatedFieldWellsProperty
@@ -13303,6 +13639,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun contributionAnalysisDefaults(contributionAnalysisDefaults: List<Any>)
 
+      public fun contributionAnalysisDefaults(vararg contributionAnalysisDefaults: Any)
+
       public fun dataLabels(dataLabels: IResolvable)
 
       public fun dataLabels(dataLabels: DataLabelOptionsProperty)
@@ -13332,6 +13670,8 @@ public open class CfnAnalysis internal constructor(
       public fun referenceLines(referenceLines: IResolvable)
 
       public fun referenceLines(referenceLines: List<Any>)
+
+      public fun referenceLines(vararg referenceLines: Any)
 
       public fun smallMultiplesOptions(smallMultiplesOptions: IResolvable)
 
@@ -13444,6 +13784,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.contributionAnalysisDefaults(contributionAnalysisDefaults)
       }
 
+      override fun contributionAnalysisDefaults(vararg contributionAnalysisDefaults: Any): Unit =
+          contributionAnalysisDefaults(contributionAnalysisDefaults.toList())
+
       override fun dataLabels(dataLabels: IResolvable) {
         cdkBuilder.dataLabels(dataLabels.let(IResolvable::unwrap))
       }
@@ -13494,6 +13837,9 @@ public open class CfnAnalysis internal constructor(
       override fun referenceLines(referenceLines: List<Any>) {
         cdkBuilder.referenceLines(referenceLines)
       }
+
+      override fun referenceLines(vararg referenceLines: Any): Unit =
+          referenceLines(referenceLines.toList())
 
       override fun smallMultiplesOptions(smallMultiplesOptions: IResolvable) {
         cdkBuilder.smallMultiplesOptions(smallMultiplesOptions.let(IResolvable::unwrap))
@@ -13653,17 +13999,25 @@ public open class CfnAnalysis internal constructor(
 
       public fun category(category: List<Any>)
 
+      public fun category(vararg category: Any)
+
       public fun colors(colors: IResolvable)
 
       public fun colors(colors: List<Any>)
+
+      public fun colors(vararg colors: Any)
 
       public fun smallMultiples(smallMultiples: IResolvable)
 
       public fun smallMultiples(smallMultiples: List<Any>)
 
+      public fun smallMultiples(vararg smallMultiples: Any)
+
       public fun values(values: IResolvable)
 
       public fun values(values: List<Any>)
+
+      public fun values(vararg values: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -13680,6 +14034,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.category(category)
       }
 
+      override fun category(vararg category: Any): Unit = category(category.toList())
+
       override fun colors(colors: IResolvable) {
         cdkBuilder.colors(colors.let(IResolvable::unwrap))
       }
@@ -13687,6 +14043,8 @@ public open class CfnAnalysis internal constructor(
       override fun colors(colors: List<Any>) {
         cdkBuilder.colors(colors)
       }
+
+      override fun colors(vararg colors: Any): Unit = colors(colors.toList())
 
       override fun smallMultiples(smallMultiples: IResolvable) {
         cdkBuilder.smallMultiples(smallMultiples.let(IResolvable::unwrap))
@@ -13696,6 +14054,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.smallMultiples(smallMultiples)
       }
 
+      override fun smallMultiples(vararg smallMultiples: Any): Unit =
+          smallMultiples(smallMultiples.toList())
+
       override fun values(values: IResolvable) {
         cdkBuilder.values(values.let(IResolvable::unwrap))
       }
@@ -13703,6 +14064,8 @@ public open class CfnAnalysis internal constructor(
       override fun values(values: List<Any>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: Any): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.LineChartAggregatedFieldWellsProperty
@@ -13879,6 +14242,8 @@ public open class CfnAnalysis internal constructor(
       public fun sheetId(sheetId: String)
 
       public fun visualIds(visualIds: List<String>)
+
+      public fun visualIds(vararg visualIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -13898,6 +14263,8 @@ public open class CfnAnalysis internal constructor(
       override fun visualIds(visualIds: List<String>) {
         cdkBuilder.visualIds(visualIds)
       }
+
+      override fun visualIds(vararg visualIds: String): Unit = visualIds(visualIds.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.SheetVisualScopingConfigurationProperty
@@ -15057,6 +15424,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun tooltipFields(tooltipFields: List<Any>)
 
+      public fun tooltipFields(vararg tooltipFields: Any)
+
       public fun tooltipTitleType(tooltipTitleType: String)
     }
 
@@ -15076,6 +15445,9 @@ public open class CfnAnalysis internal constructor(
       override fun tooltipFields(tooltipFields: List<Any>) {
         cdkBuilder.tooltipFields(tooltipFields)
       }
+
+      override fun tooltipFields(vararg tooltipFields: Any): Unit =
+          tooltipFields(tooltipFields.toList())
 
       override fun tooltipTitleType(tooltipTitleType: String) {
         cdkBuilder.tooltipTitleType(tooltipTitleType)
@@ -15358,6 +15730,8 @@ public open class CfnAnalysis internal constructor(
 
     public interface Builder {
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -15369,6 +15743,8 @@ public open class CfnAnalysis internal constructor(
       override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.FilterSelectableValuesProperty =
@@ -16671,6 +17047,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun chartConfiguration(chartConfiguration: IResolvable)
 
       public fun chartConfiguration(chartConfiguration: LineChartConfigurationProperty)
@@ -16683,6 +17061,8 @@ public open class CfnAnalysis internal constructor(
       public fun columnHierarchies(columnHierarchies: IResolvable)
 
       public fun columnHierarchies(columnHierarchies: List<Any>)
+
+      public fun columnHierarchies(vararg columnHierarchies: Any)
 
       public fun subtitle(subtitle: IResolvable)
 
@@ -16716,6 +17096,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.actions(actions)
       }
 
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
+
       override fun chartConfiguration(chartConfiguration: IResolvable) {
         cdkBuilder.chartConfiguration(chartConfiguration.let(IResolvable::unwrap))
       }
@@ -16737,6 +17119,9 @@ public open class CfnAnalysis internal constructor(
       override fun columnHierarchies(columnHierarchies: List<Any>) {
         cdkBuilder.columnHierarchies(columnHierarchies)
       }
+
+      override fun columnHierarchies(vararg columnHierarchies: Any): Unit =
+          columnHierarchies(columnHierarchies.toList())
 
       override fun subtitle(subtitle: IResolvable) {
         cdkBuilder.subtitle(subtitle.let(IResolvable::unwrap))
@@ -16854,6 +17239,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun contributionAnalysisDefaults(contributionAnalysisDefaults: List<Any>)
 
+      public fun contributionAnalysisDefaults(vararg contributionAnalysisDefaults: Any)
+
       public fun dataLabels(dataLabels: IResolvable)
 
       public fun dataLabels(dataLabels: DataLabelOptionsProperty)
@@ -16883,6 +17270,8 @@ public open class CfnAnalysis internal constructor(
       public fun forecastConfigurations(forecastConfigurations: IResolvable)
 
       public fun forecastConfigurations(forecastConfigurations: List<Any>)
+
+      public fun forecastConfigurations(vararg forecastConfigurations: Any)
 
       public fun legend(legend: IResolvable)
 
@@ -16915,6 +17304,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun referenceLines(referenceLines: List<Any>)
 
+      public fun referenceLines(vararg referenceLines: Any)
+
       public fun secondaryYAxisDisplayOptions(secondaryYAxisDisplayOptions: IResolvable)
 
       public
@@ -16938,6 +17329,8 @@ public open class CfnAnalysis internal constructor(
       public fun series(series: IResolvable)
 
       public fun series(series: List<Any>)
+
+      public fun series(vararg series: Any)
 
       public fun smallMultiplesOptions(smallMultiplesOptions: IResolvable)
 
@@ -17008,6 +17401,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.contributionAnalysisDefaults(contributionAnalysisDefaults)
       }
 
+      override fun contributionAnalysisDefaults(vararg contributionAnalysisDefaults: Any): Unit =
+          contributionAnalysisDefaults(contributionAnalysisDefaults.toList())
+
       override fun dataLabels(dataLabels: IResolvable) {
         cdkBuilder.dataLabels(dataLabels.let(IResolvable::unwrap))
       }
@@ -17057,6 +17453,9 @@ public open class CfnAnalysis internal constructor(
       override fun forecastConfigurations(forecastConfigurations: List<Any>) {
         cdkBuilder.forecastConfigurations(forecastConfigurations)
       }
+
+      override fun forecastConfigurations(vararg forecastConfigurations: Any): Unit =
+          forecastConfigurations(forecastConfigurations.toList())
 
       override fun legend(legend: IResolvable) {
         cdkBuilder.legend(legend.let(IResolvable::unwrap))
@@ -17110,6 +17509,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.referenceLines(referenceLines)
       }
 
+      override fun referenceLines(vararg referenceLines: Any): Unit =
+          referenceLines(referenceLines.toList())
+
       override fun secondaryYAxisDisplayOptions(secondaryYAxisDisplayOptions: IResolvable) {
         cdkBuilder.secondaryYAxisDisplayOptions(secondaryYAxisDisplayOptions.let(IResolvable::unwrap))
       }
@@ -17149,6 +17551,8 @@ public open class CfnAnalysis internal constructor(
       override fun series(series: List<Any>) {
         cdkBuilder.series(series)
       }
+
+      override fun series(vararg series: Any): Unit = series(series.toList())
 
       override fun smallMultiplesOptions(smallMultiplesOptions: IResolvable) {
         cdkBuilder.smallMultiplesOptions(smallMultiplesOptions.let(IResolvable::unwrap))
@@ -17567,6 +17971,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun chartConfiguration(chartConfiguration: IResolvable)
 
       public fun chartConfiguration(chartConfiguration: ComboChartConfigurationProperty)
@@ -17579,6 +17985,8 @@ public open class CfnAnalysis internal constructor(
       public fun columnHierarchies(columnHierarchies: IResolvable)
 
       public fun columnHierarchies(columnHierarchies: List<Any>)
+
+      public fun columnHierarchies(vararg columnHierarchies: Any)
 
       public fun subtitle(subtitle: IResolvable)
 
@@ -17612,6 +18020,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.actions(actions)
       }
 
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
+
       override fun chartConfiguration(chartConfiguration: IResolvable) {
         cdkBuilder.chartConfiguration(chartConfiguration.let(IResolvable::unwrap))
       }
@@ -17633,6 +18043,9 @@ public open class CfnAnalysis internal constructor(
       override fun columnHierarchies(columnHierarchies: List<Any>) {
         cdkBuilder.columnHierarchies(columnHierarchies)
       }
+
+      override fun columnHierarchies(vararg columnHierarchies: Any): Unit =
+          columnHierarchies(columnHierarchies.toList())
 
       override fun subtitle(subtitle: IResolvable) {
         cdkBuilder.subtitle(subtitle.let(IResolvable::unwrap))
@@ -18558,9 +18971,13 @@ public open class CfnAnalysis internal constructor(
 
       public fun columns(columns: List<Any>)
 
+      public fun columns(vararg columns: Any)
+
       public fun drillDownFilters(drillDownFilters: IResolvable)
 
       public fun drillDownFilters(drillDownFilters: List<Any>)
+
+      public fun drillDownFilters(vararg drillDownFilters: Any)
 
       public fun hierarchyId(hierarchyId: String)
     }
@@ -18579,6 +18996,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.columns(columns)
       }
 
+      override fun columns(vararg columns: Any): Unit = columns(columns.toList())
+
       override fun drillDownFilters(drillDownFilters: IResolvable) {
         cdkBuilder.drillDownFilters(drillDownFilters.let(IResolvable::unwrap))
       }
@@ -18586,6 +19005,9 @@ public open class CfnAnalysis internal constructor(
       override fun drillDownFilters(drillDownFilters: List<Any>) {
         cdkBuilder.drillDownFilters(drillDownFilters)
       }
+
+      override fun drillDownFilters(vararg drillDownFilters: Any): Unit =
+          drillDownFilters(drillDownFilters.toList())
 
       override fun hierarchyId(hierarchyId: String) {
         cdkBuilder.hierarchyId(hierarchyId)
@@ -18655,6 +19077,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun categorySort(categorySort: List<Any>)
 
+      public fun categorySort(vararg categorySort: Any)
+
       public fun colorItemsLimitConfiguration(colorItemsLimitConfiguration: IResolvable)
 
       public
@@ -18678,6 +19102,8 @@ public open class CfnAnalysis internal constructor(
       public fun smallMultiplesSort(smallMultiplesSort: IResolvable)
 
       public fun smallMultiplesSort(smallMultiplesSort: List<Any>)
+
+      public fun smallMultiplesSort(vararg smallMultiplesSort: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -18709,6 +19135,9 @@ public open class CfnAnalysis internal constructor(
       override fun categorySort(categorySort: List<Any>) {
         cdkBuilder.categorySort(categorySort)
       }
+
+      override fun categorySort(vararg categorySort: Any): Unit =
+          categorySort(categorySort.toList())
 
       override fun colorItemsLimitConfiguration(colorItemsLimitConfiguration: IResolvable) {
         cdkBuilder.colorItemsLimitConfiguration(colorItemsLimitConfiguration.let(IResolvable::unwrap))
@@ -18749,6 +19178,9 @@ public open class CfnAnalysis internal constructor(
       override fun smallMultiplesSort(smallMultiplesSort: List<Any>) {
         cdkBuilder.smallMultiplesSort(smallMultiplesSort)
       }
+
+      override fun smallMultiplesSort(vararg smallMultiplesSort: Any): Unit =
+          smallMultiplesSort(smallMultiplesSort.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.LineChartSortConfigurationProperty
@@ -18804,6 +19236,8 @@ public open class CfnAnalysis internal constructor(
     public interface Builder {
       public fun order(order: List<String>)
 
+      public fun order(vararg order: String)
+
       public fun pinnedFieldOptions(pinnedFieldOptions: IResolvable)
 
       public fun pinnedFieldOptions(pinnedFieldOptions: TablePinnedFieldOptionsProperty)
@@ -18816,6 +19250,8 @@ public open class CfnAnalysis internal constructor(
       public fun selectedFieldOptions(selectedFieldOptions: IResolvable)
 
       public fun selectedFieldOptions(selectedFieldOptions: List<Any>)
+
+      public fun selectedFieldOptions(vararg selectedFieldOptions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -18826,6 +19262,8 @@ public open class CfnAnalysis internal constructor(
       override fun order(order: List<String>) {
         cdkBuilder.order(order)
       }
+
+      override fun order(vararg order: String): Unit = order(order.toList())
 
       override fun pinnedFieldOptions(pinnedFieldOptions: IResolvable) {
         cdkBuilder.pinnedFieldOptions(pinnedFieldOptions.let(IResolvable::unwrap))
@@ -18848,6 +19286,9 @@ public open class CfnAnalysis internal constructor(
       override fun selectedFieldOptions(selectedFieldOptions: List<Any>) {
         cdkBuilder.selectedFieldOptions(selectedFieldOptions)
       }
+
+      override fun selectedFieldOptions(vararg selectedFieldOptions: Any): Unit =
+          selectedFieldOptions(selectedFieldOptions.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.TableFieldOptionsProperty =
@@ -19065,6 +19506,8 @@ public open class CfnAnalysis internal constructor(
       public fun elements(elements: IResolvable)
 
       public fun elements(elements: List<Any>)
+
+      public fun elements(vararg elements: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -19094,6 +19537,8 @@ public open class CfnAnalysis internal constructor(
       override fun elements(elements: List<Any>) {
         cdkBuilder.elements(elements)
       }
+
+      override fun elements(vararg elements: Any): Unit = elements(elements.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.GridLayoutConfigurationProperty =
@@ -19232,9 +19677,13 @@ public open class CfnAnalysis internal constructor(
 
       public fun filterControls(filterControls: List<Any>)
 
+      public fun filterControls(vararg filterControls: Any)
+
       public fun layouts(layouts: IResolvable)
 
       public fun layouts(layouts: List<Any>)
+
+      public fun layouts(vararg layouts: Any)
 
       public fun name(name: String)
 
@@ -19242,9 +19691,13 @@ public open class CfnAnalysis internal constructor(
 
       public fun parameterControls(parameterControls: List<Any>)
 
+      public fun parameterControls(vararg parameterControls: Any)
+
       public fun sheetControlLayouts(sheetControlLayouts: IResolvable)
 
       public fun sheetControlLayouts(sheetControlLayouts: List<Any>)
+
+      public fun sheetControlLayouts(vararg sheetControlLayouts: Any)
 
       public fun sheetId(sheetId: String)
 
@@ -19252,11 +19705,15 @@ public open class CfnAnalysis internal constructor(
 
       public fun textBoxes(textBoxes: List<Any>)
 
+      public fun textBoxes(vararg textBoxes: Any)
+
       public fun title(title: String)
 
       public fun visuals(visuals: IResolvable)
 
       public fun visuals(visuals: List<Any>)
+
+      public fun visuals(vararg visuals: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -19280,6 +19737,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.filterControls(filterControls)
       }
 
+      override fun filterControls(vararg filterControls: Any): Unit =
+          filterControls(filterControls.toList())
+
       override fun layouts(layouts: IResolvable) {
         cdkBuilder.layouts(layouts.let(IResolvable::unwrap))
       }
@@ -19287,6 +19747,8 @@ public open class CfnAnalysis internal constructor(
       override fun layouts(layouts: List<Any>) {
         cdkBuilder.layouts(layouts)
       }
+
+      override fun layouts(vararg layouts: Any): Unit = layouts(layouts.toList())
 
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -19300,6 +19762,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.parameterControls(parameterControls)
       }
 
+      override fun parameterControls(vararg parameterControls: Any): Unit =
+          parameterControls(parameterControls.toList())
+
       override fun sheetControlLayouts(sheetControlLayouts: IResolvable) {
         cdkBuilder.sheetControlLayouts(sheetControlLayouts.let(IResolvable::unwrap))
       }
@@ -19307,6 +19772,9 @@ public open class CfnAnalysis internal constructor(
       override fun sheetControlLayouts(sheetControlLayouts: List<Any>) {
         cdkBuilder.sheetControlLayouts(sheetControlLayouts)
       }
+
+      override fun sheetControlLayouts(vararg sheetControlLayouts: Any): Unit =
+          sheetControlLayouts(sheetControlLayouts.toList())
 
       override fun sheetId(sheetId: String) {
         cdkBuilder.sheetId(sheetId)
@@ -19320,6 +19788,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.textBoxes(textBoxes)
       }
 
+      override fun textBoxes(vararg textBoxes: Any): Unit = textBoxes(textBoxes.toList())
+
       override fun title(title: String) {
         cdkBuilder.title(title)
       }
@@ -19331,6 +19801,8 @@ public open class CfnAnalysis internal constructor(
       override fun visuals(visuals: List<Any>) {
         cdkBuilder.visuals(visuals)
       }
+
+      override fun visuals(vararg visuals: Any): Unit = visuals(visuals.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.SheetDefinitionProperty =
@@ -19506,13 +19978,19 @@ public open class CfnAnalysis internal constructor(
 
       public fun colors(colors: List<Any>)
 
+      public fun colors(vararg colors: Any)
+
       public fun groups(groups: IResolvable)
 
       public fun groups(groups: List<Any>)
 
+      public fun groups(vararg groups: Any)
+
       public fun sizes(sizes: IResolvable)
 
       public fun sizes(sizes: List<Any>)
+
+      public fun sizes(vararg sizes: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -19529,6 +20007,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.colors(colors)
       }
 
+      override fun colors(vararg colors: Any): Unit = colors(colors.toList())
+
       override fun groups(groups: IResolvable) {
         cdkBuilder.groups(groups.let(IResolvable::unwrap))
       }
@@ -19537,6 +20017,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.groups(groups)
       }
 
+      override fun groups(vararg groups: Any): Unit = groups(groups.toList())
+
       override fun sizes(sizes: IResolvable) {
         cdkBuilder.sizes(sizes.let(IResolvable::unwrap))
       }
@@ -19544,6 +20026,8 @@ public open class CfnAnalysis internal constructor(
       override fun sizes(sizes: List<Any>) {
         cdkBuilder.sizes(sizes)
       }
+
+      override fun sizes(vararg sizes: Any): Unit = sizes(sizes.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.TreeMapAggregatedFieldWellsProperty
@@ -20397,6 +20881,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun contributorDimensions(contributorDimensions: List<Any>)
 
+      public fun contributorDimensions(vararg contributorDimensions: Any)
+
       public fun measureFieldId(measureFieldId: String)
     }
 
@@ -20413,6 +20899,9 @@ public open class CfnAnalysis internal constructor(
       override fun contributorDimensions(contributorDimensions: List<Any>) {
         cdkBuilder.contributorDimensions(contributorDimensions)
       }
+
+      override fun contributorDimensions(vararg contributorDimensions: Any): Unit =
+          contributorDimensions(contributorDimensions.toList())
 
       override fun measureFieldId(measureFieldId: String) {
         cdkBuilder.measureFieldId(measureFieldId)
@@ -20471,6 +20960,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun chartConfiguration(chartConfiguration: IResolvable)
 
       public fun chartConfiguration(chartConfiguration: CustomContentConfigurationProperty)
@@ -20514,6 +21005,8 @@ public open class CfnAnalysis internal constructor(
       override fun actions(actions: List<Any>) {
         cdkBuilder.actions(actions)
       }
+
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
 
       override fun chartConfiguration(chartConfiguration: IResolvable) {
         cdkBuilder.chartConfiguration(chartConfiguration.let(IResolvable::unwrap))
@@ -20665,6 +21158,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun fieldDataPathValues(fieldDataPathValues: List<Any>)
 
+      public fun fieldDataPathValues(vararg fieldDataPathValues: Any)
+
       public fun fieldId(fieldId: String)
     }
 
@@ -20681,6 +21176,9 @@ public open class CfnAnalysis internal constructor(
       override fun fieldDataPathValues(fieldDataPathValues: List<Any>) {
         cdkBuilder.fieldDataPathValues(fieldDataPathValues)
       }
+
+      override fun fieldDataPathValues(vararg fieldDataPathValues: Any): Unit =
+          fieldDataPathValues(fieldDataPathValues.toList())
 
       override fun fieldId(fieldId: String) {
         cdkBuilder.fieldId(fieldId)
@@ -21017,6 +21515,8 @@ public open class CfnAnalysis internal constructor(
       public fun conditionalFormattingOptions(conditionalFormattingOptions: IResolvable)
 
       public fun conditionalFormattingOptions(conditionalFormattingOptions: List<Any>)
+
+      public fun conditionalFormattingOptions(vararg conditionalFormattingOptions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -21032,6 +21532,9 @@ public open class CfnAnalysis internal constructor(
       override fun conditionalFormattingOptions(conditionalFormattingOptions: List<Any>) {
         cdkBuilder.conditionalFormattingOptions(conditionalFormattingOptions)
       }
+
+      override fun conditionalFormattingOptions(vararg conditionalFormattingOptions: Any): Unit =
+          conditionalFormattingOptions(conditionalFormattingOptions.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.KPIConditionalFormattingProperty =
@@ -21239,6 +21742,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun contributionAnalysisDefaults(contributionAnalysisDefaults: List<Any>)
 
+      public fun contributionAnalysisDefaults(vararg contributionAnalysisDefaults: Any)
+
       public fun dataLabels(dataLabels: IResolvable)
 
       public fun dataLabels(dataLabels: DataLabelOptionsProperty)
@@ -21342,6 +21847,9 @@ public open class CfnAnalysis internal constructor(
       override fun contributionAnalysisDefaults(contributionAnalysisDefaults: List<Any>) {
         cdkBuilder.contributionAnalysisDefaults(contributionAnalysisDefaults)
       }
+
+      override fun contributionAnalysisDefaults(vararg contributionAnalysisDefaults: Any): Unit =
+          contributionAnalysisDefaults(contributionAnalysisDefaults.toList())
 
       override fun dataLabels(dataLabels: IResolvable) {
         cdkBuilder.dataLabels(dataLabels.let(IResolvable::unwrap))
@@ -21534,6 +22042,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun chartConfiguration(chartConfiguration: IResolvable)
 
       public fun chartConfiguration(chartConfiguration: PieChartConfigurationProperty)
@@ -21546,6 +22056,8 @@ public open class CfnAnalysis internal constructor(
       public fun columnHierarchies(columnHierarchies: IResolvable)
 
       public fun columnHierarchies(columnHierarchies: List<Any>)
+
+      public fun columnHierarchies(vararg columnHierarchies: Any)
 
       public fun subtitle(subtitle: IResolvable)
 
@@ -21579,6 +22091,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.actions(actions)
       }
 
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
+
       override fun chartConfiguration(chartConfiguration: IResolvable) {
         cdkBuilder.chartConfiguration(chartConfiguration.let(IResolvable::unwrap))
       }
@@ -21600,6 +22114,9 @@ public open class CfnAnalysis internal constructor(
       override fun columnHierarchies(columnHierarchies: List<Any>) {
         cdkBuilder.columnHierarchies(columnHierarchies)
       }
+
+      override fun columnHierarchies(vararg columnHierarchies: Any): Unit =
+          columnHierarchies(columnHierarchies.toList())
 
       override fun subtitle(subtitle: IResolvable) {
         cdkBuilder.subtitle(subtitle.let(IResolvable::unwrap))
@@ -21691,6 +22208,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun chartConfiguration(chartConfiguration: IResolvable)
 
       public fun chartConfiguration(chartConfiguration: RadarChartConfigurationProperty)
@@ -21703,6 +22222,8 @@ public open class CfnAnalysis internal constructor(
       public fun columnHierarchies(columnHierarchies: IResolvable)
 
       public fun columnHierarchies(columnHierarchies: List<Any>)
+
+      public fun columnHierarchies(vararg columnHierarchies: Any)
 
       public fun subtitle(subtitle: IResolvable)
 
@@ -21736,6 +22257,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.actions(actions)
       }
 
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
+
       override fun chartConfiguration(chartConfiguration: IResolvable) {
         cdkBuilder.chartConfiguration(chartConfiguration.let(IResolvable::unwrap))
       }
@@ -21757,6 +22280,9 @@ public open class CfnAnalysis internal constructor(
       override fun columnHierarchies(columnHierarchies: List<Any>) {
         cdkBuilder.columnHierarchies(columnHierarchies)
       }
+
+      override fun columnHierarchies(vararg columnHierarchies: Any): Unit =
+          columnHierarchies(columnHierarchies.toList())
 
       override fun subtitle(subtitle: IResolvable) {
         cdkBuilder.subtitle(subtitle.let(IResolvable::unwrap))
@@ -22010,6 +22536,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun chartConfiguration(chartConfiguration: IResolvable)
 
       public fun chartConfiguration(chartConfiguration: BarChartConfigurationProperty)
@@ -22022,6 +22550,8 @@ public open class CfnAnalysis internal constructor(
       public fun columnHierarchies(columnHierarchies: IResolvable)
 
       public fun columnHierarchies(columnHierarchies: List<Any>)
+
+      public fun columnHierarchies(vararg columnHierarchies: Any)
 
       public fun subtitle(subtitle: IResolvable)
 
@@ -22055,6 +22585,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.actions(actions)
       }
 
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
+
       override fun chartConfiguration(chartConfiguration: IResolvable) {
         cdkBuilder.chartConfiguration(chartConfiguration.let(IResolvable::unwrap))
       }
@@ -22076,6 +22608,9 @@ public open class CfnAnalysis internal constructor(
       override fun columnHierarchies(columnHierarchies: List<Any>) {
         cdkBuilder.columnHierarchies(columnHierarchies)
       }
+
+      override fun columnHierarchies(vararg columnHierarchies: Any): Unit =
+          columnHierarchies(columnHierarchies.toList())
 
       override fun subtitle(subtitle: IResolvable) {
         cdkBuilder.subtitle(subtitle.let(IResolvable::unwrap))
@@ -23143,6 +23678,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun mappedDataSetParameters(mappedDataSetParameters: List<Any>)
 
+      public fun mappedDataSetParameters(vararg mappedDataSetParameters: Any)
+
       public fun name(name: String)
 
       public fun parameterValueType(parameterValueType: String)
@@ -23183,6 +23720,9 @@ public open class CfnAnalysis internal constructor(
       override fun mappedDataSetParameters(mappedDataSetParameters: List<Any>) {
         cdkBuilder.mappedDataSetParameters(mappedDataSetParameters)
       }
+
+      override fun mappedDataSetParameters(vararg mappedDataSetParameters: Any): Unit =
+          mappedDataSetParameters(mappedDataSetParameters.toList())
 
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -23256,6 +23796,8 @@ public open class CfnAnalysis internal constructor(
       public fun targetVisualOptions(targetVisualOptions: String)
 
       public fun targetVisuals(targetVisuals: List<String>)
+
+      public fun targetVisuals(vararg targetVisuals: String)
     }
 
     private class BuilderImpl : Builder {
@@ -23271,6 +23813,9 @@ public open class CfnAnalysis internal constructor(
       override fun targetVisuals(targetVisuals: List<String>) {
         cdkBuilder.targetVisuals(targetVisuals)
       }
+
+      override fun targetVisuals(vararg targetVisuals: String): Unit =
+          targetVisuals(targetVisuals.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.SameSheetTargetVisualConfigurationProperty
@@ -23492,6 +24037,8 @@ public open class CfnAnalysis internal constructor(
       public fun categorySort(categorySort: IResolvable)
 
       public fun categorySort(categorySort: List<Any>)
+
+      public fun categorySort(vararg categorySort: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -23521,6 +24068,9 @@ public open class CfnAnalysis internal constructor(
       override fun categorySort(categorySort: List<Any>) {
         cdkBuilder.categorySort(categorySort)
       }
+
+      override fun categorySort(vararg categorySort: Any): Unit =
+          categorySort(categorySort.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.WaterfallChartSortConfigurationProperty
@@ -24559,6 +25109,8 @@ public open class CfnAnalysis internal constructor(
       public fun treeMapSort(treeMapSort: IResolvable)
 
       public fun treeMapSort(treeMapSort: List<Any>)
+
+      public fun treeMapSort(vararg treeMapSort: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -24591,6 +25143,8 @@ public open class CfnAnalysis internal constructor(
       override fun treeMapSort(treeMapSort: List<Any>) {
         cdkBuilder.treeMapSort(treeMapSort)
       }
+
+      override fun treeMapSort(vararg treeMapSort: Any): Unit = treeMapSort(treeMapSort.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.TreeMapSortConfigurationProperty =
@@ -25262,6 +25816,8 @@ public open class CfnAnalysis internal constructor(
       public fun values(values: IResolvable)
 
       public fun values(values: List<Number>)
+
+      public fun values(vararg values: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -25280,6 +25836,8 @@ public open class CfnAnalysis internal constructor(
       override fun values(values: List<Number>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: Number): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.DecimalParameterProperty =
@@ -25687,6 +26245,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun referenceLines(referenceLines: List<Any>)
 
+      public fun referenceLines(vararg referenceLines: Any)
+
       public fun secondaryYAxisDisplayOptions(secondaryYAxisDisplayOptions: IResolvable)
 
       public
@@ -25873,6 +26433,9 @@ public open class CfnAnalysis internal constructor(
       override fun referenceLines(referenceLines: List<Any>) {
         cdkBuilder.referenceLines(referenceLines)
       }
+
+      override fun referenceLines(vararg referenceLines: Any): Unit =
+          referenceLines(referenceLines.toList())
 
       override fun secondaryYAxisDisplayOptions(secondaryYAxisDisplayOptions: IResolvable) {
         cdkBuilder.secondaryYAxisDisplayOptions(secondaryYAxisDisplayOptions.let(IResolvable::unwrap))
@@ -26309,6 +26872,8 @@ public open class CfnAnalysis internal constructor(
       public fun customColors(customColors: IResolvable)
 
       public fun customColors(customColors: List<Any>)
+
+      public fun customColors(vararg customColors: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -26324,6 +26889,9 @@ public open class CfnAnalysis internal constructor(
       override fun customColors(customColors: List<Any>) {
         cdkBuilder.customColors(customColors)
       }
+
+      override fun customColors(vararg customColors: Any): Unit =
+          customColors(customColors.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.ColorsConfigurationProperty =
@@ -26573,6 +27141,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun chartConfiguration(chartConfiguration: IResolvable)
 
       public fun chartConfiguration(chartConfiguration: WaterfallChartConfigurationProperty)
@@ -26585,6 +27155,8 @@ public open class CfnAnalysis internal constructor(
       public fun columnHierarchies(columnHierarchies: IResolvable)
 
       public fun columnHierarchies(columnHierarchies: List<Any>)
+
+      public fun columnHierarchies(vararg columnHierarchies: Any)
 
       public fun subtitle(subtitle: IResolvable)
 
@@ -26618,6 +27190,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.actions(actions)
       }
 
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
+
       override fun chartConfiguration(chartConfiguration: IResolvable) {
         cdkBuilder.chartConfiguration(chartConfiguration.let(IResolvable::unwrap))
       }
@@ -26639,6 +27213,9 @@ public open class CfnAnalysis internal constructor(
       override fun columnHierarchies(columnHierarchies: List<Any>) {
         cdkBuilder.columnHierarchies(columnHierarchies)
       }
+
+      override fun columnHierarchies(vararg columnHierarchies: Any): Unit =
+          columnHierarchies(columnHierarchies.toList())
 
       override fun subtitle(subtitle: IResolvable) {
         cdkBuilder.subtitle(subtitle.let(IResolvable::unwrap))
@@ -26784,17 +27361,25 @@ public open class CfnAnalysis internal constructor(
 
       public fun barValues(barValues: List<Any>)
 
+      public fun barValues(vararg barValues: Any)
+
       public fun category(category: IResolvable)
 
       public fun category(category: List<Any>)
+
+      public fun category(vararg category: Any)
 
       public fun colors(colors: IResolvable)
 
       public fun colors(colors: List<Any>)
 
+      public fun colors(vararg colors: Any)
+
       public fun lineValues(lineValues: IResolvable)
 
       public fun lineValues(lineValues: List<Any>)
+
+      public fun lineValues(vararg lineValues: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -26811,6 +27396,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.barValues(barValues)
       }
 
+      override fun barValues(vararg barValues: Any): Unit = barValues(barValues.toList())
+
       override fun category(category: IResolvable) {
         cdkBuilder.category(category.let(IResolvable::unwrap))
       }
@@ -26818,6 +27405,8 @@ public open class CfnAnalysis internal constructor(
       override fun category(category: List<Any>) {
         cdkBuilder.category(category)
       }
+
+      override fun category(vararg category: Any): Unit = category(category.toList())
 
       override fun colors(colors: IResolvable) {
         cdkBuilder.colors(colors.let(IResolvable::unwrap))
@@ -26827,6 +27416,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.colors(colors)
       }
 
+      override fun colors(vararg colors: Any): Unit = colors(colors.toList())
+
       override fun lineValues(lineValues: IResolvable) {
         cdkBuilder.lineValues(lineValues.let(IResolvable::unwrap))
       }
@@ -26834,6 +27425,8 @@ public open class CfnAnalysis internal constructor(
       override fun lineValues(lineValues: List<Any>) {
         cdkBuilder.lineValues(lineValues)
       }
+
+      override fun lineValues(vararg lineValues: Any): Unit = lineValues(lineValues.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.ComboChartAggregatedFieldWellsProperty
@@ -27477,6 +28070,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun mappedDataSetParameters(mappedDataSetParameters: List<Any>)
 
+      public fun mappedDataSetParameters(vararg mappedDataSetParameters: Any)
+
       public fun name(name: String)
 
       public fun parameterValueType(parameterValueType: String)
@@ -27517,6 +28112,9 @@ public open class CfnAnalysis internal constructor(
       override fun mappedDataSetParameters(mappedDataSetParameters: List<Any>) {
         cdkBuilder.mappedDataSetParameters(mappedDataSetParameters)
       }
+
+      override fun mappedDataSetParameters(vararg mappedDataSetParameters: Any): Unit =
+          mappedDataSetParameters(mappedDataSetParameters.toList())
 
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -27760,6 +28358,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun chartConfiguration(chartConfiguration: IResolvable)
 
       public fun chartConfiguration(chartConfiguration: WordCloudChartConfigurationProperty)
@@ -27772,6 +28372,8 @@ public open class CfnAnalysis internal constructor(
       public fun columnHierarchies(columnHierarchies: IResolvable)
 
       public fun columnHierarchies(columnHierarchies: List<Any>)
+
+      public fun columnHierarchies(vararg columnHierarchies: Any)
 
       public fun subtitle(subtitle: IResolvable)
 
@@ -27805,6 +28407,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.actions(actions)
       }
 
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
+
       override fun chartConfiguration(chartConfiguration: IResolvable) {
         cdkBuilder.chartConfiguration(chartConfiguration.let(IResolvable::unwrap))
       }
@@ -27826,6 +28430,9 @@ public open class CfnAnalysis internal constructor(
       override fun columnHierarchies(columnHierarchies: List<Any>) {
         cdkBuilder.columnHierarchies(columnHierarchies)
       }
+
+      override fun columnHierarchies(vararg columnHierarchies: Any): Unit =
+          columnHierarchies(columnHierarchies.toList())
 
       override fun subtitle(subtitle: IResolvable) {
         cdkBuilder.subtitle(subtitle.let(IResolvable::unwrap))
@@ -28424,6 +29031,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun totalAggregationOptions(totalAggregationOptions: List<Any>)
 
+      public fun totalAggregationOptions(vararg totalAggregationOptions: Any)
+
       public fun totalCellStyle(totalCellStyle: IResolvable)
 
       public fun totalCellStyle(totalCellStyle: TableCellStyleProperty)
@@ -28459,6 +29068,9 @@ public open class CfnAnalysis internal constructor(
       override fun totalAggregationOptions(totalAggregationOptions: List<Any>) {
         cdkBuilder.totalAggregationOptions(totalAggregationOptions)
       }
+
+      override fun totalAggregationOptions(vararg totalAggregationOptions: Any): Unit =
+          totalAggregationOptions(totalAggregationOptions.toList())
 
       override fun totalCellStyle(totalCellStyle: IResolvable) {
         cdkBuilder.totalCellStyle(totalCellStyle.let(IResolvable::unwrap))
@@ -28657,6 +29269,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun chartConfiguration(chartConfiguration: IResolvable)
 
       public fun chartConfiguration(chartConfiguration: TableConfigurationProperty)
@@ -28706,6 +29320,8 @@ public open class CfnAnalysis internal constructor(
       override fun actions(actions: List<Any>) {
         cdkBuilder.actions(actions)
       }
+
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
 
       override fun chartConfiguration(chartConfiguration: IResolvable) {
         cdkBuilder.chartConfiguration(chartConfiguration.let(IResolvable::unwrap))
@@ -29409,6 +30025,8 @@ public open class CfnAnalysis internal constructor(
       public fun categorySort(categorySort: IResolvable)
 
       public fun categorySort(categorySort: List<Any>)
+
+      public fun categorySort(vararg categorySort: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -29438,6 +30056,9 @@ public open class CfnAnalysis internal constructor(
       override fun categorySort(categorySort: List<Any>) {
         cdkBuilder.categorySort(categorySort)
       }
+
+      override fun categorySort(vararg categorySort: Any): Unit =
+          categorySort(categorySort.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.WordCloudSortConfigurationProperty
@@ -29536,9 +30157,13 @@ public open class CfnAnalysis internal constructor(
 
       public fun geospatial(geospatial: List<Any>)
 
+      public fun geospatial(vararg geospatial: Any)
+
       public fun values(values: IResolvable)
 
       public fun values(values: List<Any>)
+
+      public fun values(vararg values: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -29555,6 +30180,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.geospatial(geospatial)
       }
 
+      override fun geospatial(vararg geospatial: Any): Unit = geospatial(geospatial.toList())
+
       override fun values(values: IResolvable) {
         cdkBuilder.values(values.let(IResolvable::unwrap))
       }
@@ -29562,6 +30189,8 @@ public open class CfnAnalysis internal constructor(
       override fun values(values: List<Any>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: Any): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.FilledMapAggregatedFieldWellsProperty
@@ -29605,6 +30234,8 @@ public open class CfnAnalysis internal constructor(
       public fun values(values: IResolvable)
 
       public fun values(values: List<Any>)
+
+      public fun values(vararg values: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -29620,6 +30251,8 @@ public open class CfnAnalysis internal constructor(
       override fun values(values: List<Any>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: Any): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.HistogramAggregatedFieldWellsProperty
@@ -31779,6 +32412,8 @@ public open class CfnAnalysis internal constructor(
       public fun parameterValueConfigurations(parameterValueConfigurations: IResolvable)
 
       public fun parameterValueConfigurations(parameterValueConfigurations: List<Any>)
+
+      public fun parameterValueConfigurations(vararg parameterValueConfigurations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -31794,6 +32429,9 @@ public open class CfnAnalysis internal constructor(
       override fun parameterValueConfigurations(parameterValueConfigurations: List<Any>) {
         cdkBuilder.parameterValueConfigurations(parameterValueConfigurations)
       }
+
+      override fun parameterValueConfigurations(vararg parameterValueConfigurations: Any): Unit =
+          parameterValueConfigurations(parameterValueConfigurations.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.CustomActionSetParametersOperationProperty
@@ -31841,6 +32479,8 @@ public open class CfnAnalysis internal constructor(
     public interface Builder {
       public fun categoryValues(categoryValues: List<String>)
 
+      public fun categoryValues(vararg categoryValues: String)
+
       public fun matchOperator(matchOperator: String)
 
       public fun nullOption(nullOption: String)
@@ -31857,6 +32497,9 @@ public open class CfnAnalysis internal constructor(
       override fun categoryValues(categoryValues: List<String>) {
         cdkBuilder.categoryValues(categoryValues)
       }
+
+      override fun categoryValues(vararg categoryValues: String): Unit =
+          categoryValues(categoryValues.toList())
 
       override fun matchOperator(matchOperator: String) {
         cdkBuilder.matchOperator(matchOperator)
@@ -32214,6 +32857,8 @@ public open class CfnAnalysis internal constructor(
       public fun missingDataConfigurations(missingDataConfigurations: IResolvable)
 
       public fun missingDataConfigurations(missingDataConfigurations: List<Any>)
+
+      public fun missingDataConfigurations(vararg missingDataConfigurations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -32242,6 +32887,9 @@ public open class CfnAnalysis internal constructor(
       override fun missingDataConfigurations(missingDataConfigurations: List<Any>) {
         cdkBuilder.missingDataConfigurations(missingDataConfigurations)
       }
+
+      override fun missingDataConfigurations(vararg missingDataConfigurations: Any): Unit =
+          missingDataConfigurations(missingDataConfigurations.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.LineSeriesAxisDisplayOptionsProperty
@@ -32296,6 +32944,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun chartConfiguration(chartConfiguration: IResolvable)
 
       public fun chartConfiguration(chartConfiguration: PivotTableConfigurationProperty)
@@ -32346,6 +32996,8 @@ public open class CfnAnalysis internal constructor(
       override fun actions(actions: List<Any>) {
         cdkBuilder.actions(actions)
       }
+
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
 
       override fun chartConfiguration(chartConfiguration: IResolvable) {
         cdkBuilder.chartConfiguration(chartConfiguration.let(IResolvable::unwrap))
@@ -33780,6 +34432,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun chartConfiguration(chartConfiguration: IResolvable)
 
       public fun chartConfiguration(chartConfiguration: FunnelChartConfigurationProperty)
@@ -33792,6 +34446,8 @@ public open class CfnAnalysis internal constructor(
       public fun columnHierarchies(columnHierarchies: IResolvable)
 
       public fun columnHierarchies(columnHierarchies: List<Any>)
+
+      public fun columnHierarchies(vararg columnHierarchies: Any)
 
       public fun subtitle(subtitle: IResolvable)
 
@@ -33825,6 +34481,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.actions(actions)
       }
 
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
+
       override fun chartConfiguration(chartConfiguration: IResolvable) {
         cdkBuilder.chartConfiguration(chartConfiguration.let(IResolvable::unwrap))
       }
@@ -33846,6 +34504,9 @@ public open class CfnAnalysis internal constructor(
       override fun columnHierarchies(columnHierarchies: List<Any>) {
         cdkBuilder.columnHierarchies(columnHierarchies)
       }
+
+      override fun columnHierarchies(vararg columnHierarchies: Any): Unit =
+          columnHierarchies(columnHierarchies.toList())
 
       override fun subtitle(subtitle: IResolvable) {
         cdkBuilder.subtitle(subtitle.let(IResolvable::unwrap))
@@ -34366,13 +35027,19 @@ public open class CfnAnalysis internal constructor(
 
       public fun destination(destination: List<Any>)
 
+      public fun destination(vararg destination: Any)
+
       public fun source(source: IResolvable)
 
       public fun source(source: List<Any>)
 
+      public fun source(vararg source: Any)
+
       public fun weight(weight: IResolvable)
 
       public fun weight(weight: List<Any>)
+
+      public fun weight(vararg weight: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -34389,6 +35056,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.destination(destination)
       }
 
+      override fun destination(vararg destination: Any): Unit = destination(destination.toList())
+
       override fun source(source: IResolvable) {
         cdkBuilder.source(source.let(IResolvable::unwrap))
       }
@@ -34397,6 +35066,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.source(source)
       }
 
+      override fun source(vararg source: Any): Unit = source(source.toList())
+
       override fun weight(weight: IResolvable) {
         cdkBuilder.weight(weight.let(IResolvable::unwrap))
       }
@@ -34404,6 +35075,8 @@ public open class CfnAnalysis internal constructor(
       override fun weight(weight: List<Any>) {
         cdkBuilder.weight(weight)
       }
+
+      override fun weight(vararg weight: Any): Unit = weight(weight.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.SankeyDiagramAggregatedFieldWellsProperty
@@ -35002,6 +35675,8 @@ public open class CfnAnalysis internal constructor(
       public fun fieldSortOptions(fieldSortOptions: IResolvable)
 
       public fun fieldSortOptions(fieldSortOptions: List<Any>)
+
+      public fun fieldSortOptions(vararg fieldSortOptions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -35017,6 +35692,9 @@ public open class CfnAnalysis internal constructor(
       override fun fieldSortOptions(fieldSortOptions: List<Any>) {
         cdkBuilder.fieldSortOptions(fieldSortOptions)
       }
+
+      override fun fieldSortOptions(vararg fieldSortOptions: Any): Unit =
+          fieldSortOptions(fieldSortOptions.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.PivotTableSortConfigurationProperty
@@ -35063,13 +35741,19 @@ public open class CfnAnalysis internal constructor(
 
       public fun collapseStateOptions(collapseStateOptions: List<Any>)
 
+      public fun collapseStateOptions(vararg collapseStateOptions: Any)
+
       public fun dataPathOptions(dataPathOptions: IResolvable)
 
       public fun dataPathOptions(dataPathOptions: List<Any>)
 
+      public fun dataPathOptions(vararg dataPathOptions: Any)
+
       public fun selectedFieldOptions(selectedFieldOptions: IResolvable)
 
       public fun selectedFieldOptions(selectedFieldOptions: List<Any>)
+
+      public fun selectedFieldOptions(vararg selectedFieldOptions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -35086,6 +35770,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.collapseStateOptions(collapseStateOptions)
       }
 
+      override fun collapseStateOptions(vararg collapseStateOptions: Any): Unit =
+          collapseStateOptions(collapseStateOptions.toList())
+
       override fun dataPathOptions(dataPathOptions: IResolvable) {
         cdkBuilder.dataPathOptions(dataPathOptions.let(IResolvable::unwrap))
       }
@@ -35094,6 +35781,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.dataPathOptions(dataPathOptions)
       }
 
+      override fun dataPathOptions(vararg dataPathOptions: Any): Unit =
+          dataPathOptions(dataPathOptions.toList())
+
       override fun selectedFieldOptions(selectedFieldOptions: IResolvable) {
         cdkBuilder.selectedFieldOptions(selectedFieldOptions.let(IResolvable::unwrap))
       }
@@ -35101,6 +35791,9 @@ public open class CfnAnalysis internal constructor(
       override fun selectedFieldOptions(selectedFieldOptions: List<Any>) {
         cdkBuilder.selectedFieldOptions(selectedFieldOptions)
       }
+
+      override fun selectedFieldOptions(vararg selectedFieldOptions: Any): Unit =
+          selectedFieldOptions(selectedFieldOptions.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.PivotTableFieldOptionsProperty =
@@ -35168,17 +35861,25 @@ public open class CfnAnalysis internal constructor(
 
       public fun calculatedFields(calculatedFields: List<Any>)
 
+      public fun calculatedFields(vararg calculatedFields: Any)
+
       public fun columnConfigurations(columnConfigurations: IResolvable)
 
       public fun columnConfigurations(columnConfigurations: List<Any>)
+
+      public fun columnConfigurations(vararg columnConfigurations: Any)
 
       public fun dataSetIdentifierDeclarations(dataSetIdentifierDeclarations: IResolvable)
 
       public fun dataSetIdentifierDeclarations(dataSetIdentifierDeclarations: List<Any>)
 
+      public fun dataSetIdentifierDeclarations(vararg dataSetIdentifierDeclarations: Any)
+
       public fun filterGroups(filterGroups: IResolvable)
 
       public fun filterGroups(filterGroups: List<Any>)
+
+      public fun filterGroups(vararg filterGroups: Any)
 
       public fun options(options: IResolvable)
 
@@ -35192,9 +35893,13 @@ public open class CfnAnalysis internal constructor(
 
       public fun parameterDeclarations(parameterDeclarations: List<Any>)
 
+      public fun parameterDeclarations(vararg parameterDeclarations: Any)
+
       public fun sheets(sheets: IResolvable)
 
       public fun sheets(sheets: List<Any>)
+
+      public fun sheets(vararg sheets: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -35224,6 +35929,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.calculatedFields(calculatedFields)
       }
 
+      override fun calculatedFields(vararg calculatedFields: Any): Unit =
+          calculatedFields(calculatedFields.toList())
+
       override fun columnConfigurations(columnConfigurations: IResolvable) {
         cdkBuilder.columnConfigurations(columnConfigurations.let(IResolvable::unwrap))
       }
@@ -35231,6 +35939,9 @@ public open class CfnAnalysis internal constructor(
       override fun columnConfigurations(columnConfigurations: List<Any>) {
         cdkBuilder.columnConfigurations(columnConfigurations)
       }
+
+      override fun columnConfigurations(vararg columnConfigurations: Any): Unit =
+          columnConfigurations(columnConfigurations.toList())
 
       override fun dataSetIdentifierDeclarations(dataSetIdentifierDeclarations: IResolvable) {
         cdkBuilder.dataSetIdentifierDeclarations(dataSetIdentifierDeclarations.let(IResolvable::unwrap))
@@ -35240,6 +35951,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.dataSetIdentifierDeclarations(dataSetIdentifierDeclarations)
       }
 
+      override fun dataSetIdentifierDeclarations(vararg dataSetIdentifierDeclarations: Any): Unit =
+          dataSetIdentifierDeclarations(dataSetIdentifierDeclarations.toList())
+
       override fun filterGroups(filterGroups: IResolvable) {
         cdkBuilder.filterGroups(filterGroups.let(IResolvable::unwrap))
       }
@@ -35247,6 +35961,9 @@ public open class CfnAnalysis internal constructor(
       override fun filterGroups(filterGroups: List<Any>) {
         cdkBuilder.filterGroups(filterGroups)
       }
+
+      override fun filterGroups(vararg filterGroups: Any): Unit =
+          filterGroups(filterGroups.toList())
 
       override fun options(options: IResolvable) {
         cdkBuilder.options(options.let(IResolvable::unwrap))
@@ -35269,6 +35986,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.parameterDeclarations(parameterDeclarations)
       }
 
+      override fun parameterDeclarations(vararg parameterDeclarations: Any): Unit =
+          parameterDeclarations(parameterDeclarations.toList())
+
       override fun sheets(sheets: IResolvable) {
         cdkBuilder.sheets(sheets.let(IResolvable::unwrap))
       }
@@ -35276,6 +35996,8 @@ public open class CfnAnalysis internal constructor(
       override fun sheets(sheets: List<Any>) {
         cdkBuilder.sheets(sheets)
       }
+
+      override fun sheets(vararg sheets: Any): Unit = sheets(sheets.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.AnalysisDefinitionProperty =
@@ -35563,6 +36285,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun filters(filters: List<Any>)
 
+      public fun filters(vararg filters: Any)
+
       public fun scopeConfiguration(scopeConfiguration: IResolvable)
 
       public fun scopeConfiguration(scopeConfiguration: FilterScopeConfigurationProperty)
@@ -35595,6 +36319,8 @@ public open class CfnAnalysis internal constructor(
       override fun filters(filters: List<Any>) {
         cdkBuilder.filters(filters)
       }
+
+      override fun filters(vararg filters: Any): Unit = filters(filters.toList())
 
       override fun scopeConfiguration(scopeConfiguration: IResolvable) {
         cdkBuilder.scopeConfiguration(scopeConfiguration.let(IResolvable::unwrap))
@@ -35884,6 +36610,8 @@ public open class CfnAnalysis internal constructor(
       public fun conditionalFormattingOptions(conditionalFormattingOptions: IResolvable)
 
       public fun conditionalFormattingOptions(conditionalFormattingOptions: List<Any>)
+
+      public fun conditionalFormattingOptions(vararg conditionalFormattingOptions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -35899,6 +36627,9 @@ public open class CfnAnalysis internal constructor(
       override fun conditionalFormattingOptions(conditionalFormattingOptions: List<Any>) {
         cdkBuilder.conditionalFormattingOptions(conditionalFormattingOptions)
       }
+
+      override fun conditionalFormattingOptions(vararg conditionalFormattingOptions: Any): Unit =
+          conditionalFormattingOptions(conditionalFormattingOptions.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.PivotTableConditionalFormattingProperty
@@ -36181,13 +36912,19 @@ public open class CfnAnalysis internal constructor(
 
       public fun colors(colors: List<Any>)
 
+      public fun colors(vararg colors: Any)
+
       public fun geospatial(geospatial: IResolvable)
 
       public fun geospatial(geospatial: List<Any>)
 
+      public fun geospatial(vararg geospatial: Any)
+
       public fun values(values: IResolvable)
 
       public fun values(values: List<Any>)
+
+      public fun values(vararg values: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -36204,6 +36941,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.colors(colors)
       }
 
+      override fun colors(vararg colors: Any): Unit = colors(colors.toList())
+
       override fun geospatial(geospatial: IResolvable) {
         cdkBuilder.geospatial(geospatial.let(IResolvable::unwrap))
       }
@@ -36212,6 +36951,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.geospatial(geospatial)
       }
 
+      override fun geospatial(vararg geospatial: Any): Unit = geospatial(geospatial.toList())
+
       override fun values(values: IResolvable) {
         cdkBuilder.values(values.let(IResolvable::unwrap))
       }
@@ -36219,6 +36960,8 @@ public open class CfnAnalysis internal constructor(
       override fun values(values: List<Any>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: Any): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.GeospatialMapAggregatedFieldWellsProperty
@@ -36294,6 +37037,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun totalAggregationOptions(totalAggregationOptions: List<Any>)
 
+      public fun totalAggregationOptions(vararg totalAggregationOptions: Any)
+
       public fun totalCellStyle(totalCellStyle: IResolvable)
 
       public fun totalCellStyle(totalCellStyle: TableCellStyleProperty)
@@ -36351,6 +37096,9 @@ public open class CfnAnalysis internal constructor(
       override fun totalAggregationOptions(totalAggregationOptions: List<Any>) {
         cdkBuilder.totalAggregationOptions(totalAggregationOptions)
       }
+
+      override fun totalAggregationOptions(vararg totalAggregationOptions: Any): Unit =
+          totalAggregationOptions(totalAggregationOptions.toList())
 
       override fun totalCellStyle(totalCellStyle: IResolvable) {
         cdkBuilder.totalCellStyle(totalCellStyle.let(IResolvable::unwrap))
@@ -36728,6 +37476,8 @@ public open class CfnAnalysis internal constructor(
       public fun elements(elements: IResolvable)
 
       public fun elements(elements: List<Any>)
+
+      public fun elements(vararg elements: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -36757,6 +37507,8 @@ public open class CfnAnalysis internal constructor(
       override fun elements(elements: List<Any>) {
         cdkBuilder.elements(elements)
       }
+
+      override fun elements(vararg elements: Any): Unit = elements(elements.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.FreeFormLayoutConfigurationProperty
@@ -37465,6 +38217,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun categorySort(categorySort: List<Any>)
 
+      public fun categorySort(vararg categorySort: Any)
+
       public fun colorItemsLimit(colorItemsLimit: IResolvable)
 
       public fun colorItemsLimit(colorItemsLimit: ItemsLimitConfigurationProperty)
@@ -37477,6 +38231,8 @@ public open class CfnAnalysis internal constructor(
       public fun colorSort(colorSort: IResolvable)
 
       public fun colorSort(colorSort: List<Any>)
+
+      public fun colorSort(vararg colorSort: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -37507,6 +38263,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.categorySort(categorySort)
       }
 
+      override fun categorySort(vararg categorySort: Any): Unit =
+          categorySort(categorySort.toList())
+
       override fun colorItemsLimit(colorItemsLimit: IResolvable) {
         cdkBuilder.colorItemsLimit(colorItemsLimit.let(IResolvable::unwrap))
       }
@@ -37528,6 +38287,8 @@ public open class CfnAnalysis internal constructor(
       override fun colorSort(colorSort: List<Any>) {
         cdkBuilder.colorSort(colorSort)
       }
+
+      override fun colorSort(vararg colorSort: Any): Unit = colorSort(colorSort.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.RadarChartSortConfigurationProperty
@@ -38111,6 +38872,8 @@ public open class CfnAnalysis internal constructor(
     public interface Builder {
       public fun categoryValues(categoryValues: List<String>)
 
+      public fun categoryValues(vararg categoryValues: String)
+
       public fun matchOperator(matchOperator: String)
 
       public fun nullOption(nullOption: String)
@@ -38127,6 +38890,9 @@ public open class CfnAnalysis internal constructor(
       override fun categoryValues(categoryValues: List<String>) {
         cdkBuilder.categoryValues(categoryValues)
       }
+
+      override fun categoryValues(vararg categoryValues: String): Unit =
+          categoryValues(categoryValues.toList())
 
       override fun matchOperator(matchOperator: String) {
         cdkBuilder.matchOperator(matchOperator)
@@ -38269,6 +39035,8 @@ public open class CfnAnalysis internal constructor(
       public fun trendGroupSort(trendGroupSort: IResolvable)
 
       public fun trendGroupSort(trendGroupSort: List<Any>)
+
+      public fun trendGroupSort(vararg trendGroupSort: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -38284,6 +39052,9 @@ public open class CfnAnalysis internal constructor(
       override fun trendGroupSort(trendGroupSort: List<Any>) {
         cdkBuilder.trendGroupSort(trendGroupSort)
       }
+
+      override fun trendGroupSort(vararg trendGroupSort: Any): Unit =
+          trendGroupSort(trendGroupSort.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.KPISortConfigurationProperty =
@@ -38327,6 +39098,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun dataPathList(dataPathList: List<Any>)
 
+      public fun dataPathList(vararg dataPathList: Any)
+
       public fun width(width: String)
     }
 
@@ -38343,6 +39116,9 @@ public open class CfnAnalysis internal constructor(
       override fun dataPathList(dataPathList: List<Any>) {
         cdkBuilder.dataPathList(dataPathList)
       }
+
+      override fun dataPathList(vararg dataPathList: Any): Unit =
+          dataPathList(dataPathList.toList())
 
       override fun width(width: String) {
         cdkBuilder.width(width)
@@ -38397,6 +39173,8 @@ public open class CfnAnalysis internal constructor(
       public fun dynamicValue(dynamicValue: DynamicDefaultValueProperty.Builder.() -> Unit)
 
       public fun staticValues(staticValues: List<String>)
+
+      public fun staticValues(vararg staticValues: String)
     }
 
     private class BuilderImpl : Builder {
@@ -38421,6 +39199,9 @@ public open class CfnAnalysis internal constructor(
       override fun staticValues(staticValues: List<String>) {
         cdkBuilder.staticValues(staticValues)
       }
+
+      override fun staticValues(vararg staticValues: String): Unit =
+          staticValues(staticValues.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.StringDefaultValuesProperty =
@@ -38474,6 +39255,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun chartConfiguration(chartConfiguration: IResolvable)
 
       public fun chartConfiguration(chartConfiguration: TreeMapConfigurationProperty)
@@ -38486,6 +39269,8 @@ public open class CfnAnalysis internal constructor(
       public fun columnHierarchies(columnHierarchies: IResolvable)
 
       public fun columnHierarchies(columnHierarchies: List<Any>)
+
+      public fun columnHierarchies(vararg columnHierarchies: Any)
 
       public fun subtitle(subtitle: IResolvable)
 
@@ -38519,6 +39304,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.actions(actions)
       }
 
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
+
       override fun chartConfiguration(chartConfiguration: IResolvable) {
         cdkBuilder.chartConfiguration(chartConfiguration.let(IResolvable::unwrap))
       }
@@ -38540,6 +39327,9 @@ public open class CfnAnalysis internal constructor(
       override fun columnHierarchies(columnHierarchies: List<Any>) {
         cdkBuilder.columnHierarchies(columnHierarchies)
       }
+
+      override fun columnHierarchies(vararg columnHierarchies: Any): Unit =
+          columnHierarchies(columnHierarchies.toList())
 
       override fun subtitle(subtitle: IResolvable) {
         cdkBuilder.subtitle(subtitle.let(IResolvable::unwrap))
@@ -38714,6 +39504,8 @@ public open class CfnAnalysis internal constructor(
       public fun categorySort(categorySort: IResolvable)
 
       public fun categorySort(categorySort: List<Any>)
+
+      public fun categorySort(vararg categorySort: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -38743,6 +39535,9 @@ public open class CfnAnalysis internal constructor(
       override fun categorySort(categorySort: List<Any>) {
         cdkBuilder.categorySort(categorySort)
       }
+
+      override fun categorySort(vararg categorySort: Any): Unit =
+          categorySort(categorySort.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.FunnelChartSortConfigurationProperty
@@ -38803,6 +39598,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun scopes(scopes: List<Any>)
 
+      public fun scopes(vararg scopes: Any)
+
       public fun textFormat(textFormat: IResolvable)
 
       public fun textFormat(textFormat: TextConditionalFormatProperty)
@@ -38842,6 +39639,8 @@ public open class CfnAnalysis internal constructor(
       override fun scopes(scopes: List<Any>) {
         cdkBuilder.scopes(scopes)
       }
+
+      override fun scopes(vararg scopes: Any): Unit = scopes(scopes.toList())
 
       override fun textFormat(textFormat: IResolvable) {
         cdkBuilder.textFormat(textFormat.let(IResolvable::unwrap))
@@ -39023,6 +39822,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun colors(colors: List<Any>)
 
+      public fun colors(vararg colors: Any)
+
       public fun nullValueColor(nullValueColor: IResolvable)
 
       public fun nullValueColor(nullValueColor: DataColorProperty)
@@ -39048,6 +39849,8 @@ public open class CfnAnalysis internal constructor(
       override fun colors(colors: List<Any>) {
         cdkBuilder.colors(colors)
       }
+
+      override fun colors(vararg colors: Any): Unit = colors(colors.toList())
 
       override fun nullValueColor(nullValueColor: IResolvable) {
         cdkBuilder.nullValueColor(nullValueColor.let(IResolvable::unwrap))
@@ -39125,6 +39928,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun categorySort(categorySort: List<Any>)
 
+      public fun categorySort(vararg categorySort: Any)
+
       public fun colorItemsLimit(colorItemsLimit: IResolvable)
 
       public fun colorItemsLimit(colorItemsLimit: ItemsLimitConfigurationProperty)
@@ -39137,6 +39942,8 @@ public open class CfnAnalysis internal constructor(
       public fun colorSort(colorSort: IResolvable)
 
       public fun colorSort(colorSort: List<Any>)
+
+      public fun colorSort(vararg colorSort: Any)
 
       public fun smallMultiplesLimitConfiguration(smallMultiplesLimitConfiguration: IResolvable)
 
@@ -39151,6 +39958,8 @@ public open class CfnAnalysis internal constructor(
       public fun smallMultiplesSort(smallMultiplesSort: IResolvable)
 
       public fun smallMultiplesSort(smallMultiplesSort: List<Any>)
+
+      public fun smallMultiplesSort(vararg smallMultiplesSort: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -39181,6 +39990,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.categorySort(categorySort)
       }
 
+      override fun categorySort(vararg categorySort: Any): Unit =
+          categorySort(categorySort.toList())
+
       override fun colorItemsLimit(colorItemsLimit: IResolvable) {
         cdkBuilder.colorItemsLimit(colorItemsLimit.let(IResolvable::unwrap))
       }
@@ -39202,6 +40014,8 @@ public open class CfnAnalysis internal constructor(
       override fun colorSort(colorSort: List<Any>) {
         cdkBuilder.colorSort(colorSort)
       }
+
+      override fun colorSort(vararg colorSort: Any): Unit = colorSort(colorSort.toList())
 
       override fun smallMultiplesLimitConfiguration(smallMultiplesLimitConfiguration: IResolvable) {
         cdkBuilder.smallMultiplesLimitConfiguration(smallMultiplesLimitConfiguration.let(IResolvable::unwrap))
@@ -39226,6 +40040,9 @@ public open class CfnAnalysis internal constructor(
       override fun smallMultiplesSort(smallMultiplesSort: List<Any>) {
         cdkBuilder.smallMultiplesSort(smallMultiplesSort)
       }
+
+      override fun smallMultiplesSort(vararg smallMultiplesSort: Any): Unit =
+          smallMultiplesSort(smallMultiplesSort.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.BarChartSortConfigurationProperty =
@@ -39278,6 +40095,8 @@ public open class CfnAnalysis internal constructor(
       public fun elements(elements: IResolvable)
 
       public fun elements(elements: List<Any>)
+
+      public fun elements(vararg elements: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -39293,6 +40112,8 @@ public open class CfnAnalysis internal constructor(
       override fun elements(elements: List<Any>) {
         cdkBuilder.elements(elements)
       }
+
+      override fun elements(vararg elements: Any): Unit = elements(elements.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.FreeFormSectionLayoutConfigurationProperty
@@ -39339,13 +40160,19 @@ public open class CfnAnalysis internal constructor(
 
       public fun breakdowns(breakdowns: List<Any>)
 
+      public fun breakdowns(vararg breakdowns: Any)
+
       public fun categories(categories: IResolvable)
 
       public fun categories(categories: List<Any>)
 
+      public fun categories(vararg categories: Any)
+
       public fun values(values: IResolvable)
 
       public fun values(values: List<Any>)
+
+      public fun values(vararg values: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -39362,6 +40189,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.breakdowns(breakdowns)
       }
 
+      override fun breakdowns(vararg breakdowns: Any): Unit = breakdowns(breakdowns.toList())
+
       override fun categories(categories: IResolvable) {
         cdkBuilder.categories(categories.let(IResolvable::unwrap))
       }
@@ -39370,6 +40199,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.categories(categories)
       }
 
+      override fun categories(vararg categories: Any): Unit = categories(categories.toList())
+
       override fun values(values: IResolvable) {
         cdkBuilder.values(values.let(IResolvable::unwrap))
       }
@@ -39377,6 +40208,8 @@ public open class CfnAnalysis internal constructor(
       override fun values(values: List<Any>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: Any): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.WaterfallChartAggregatedFieldWellsProperty
@@ -39439,6 +40272,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun mappedDataSetParameters(mappedDataSetParameters: List<Any>)
 
+      public fun mappedDataSetParameters(vararg mappedDataSetParameters: Any)
+
       public fun name(name: String)
 
       public fun parameterValueType(parameterValueType: String)
@@ -39479,6 +40314,9 @@ public open class CfnAnalysis internal constructor(
       override fun mappedDataSetParameters(mappedDataSetParameters: List<Any>) {
         cdkBuilder.mappedDataSetParameters(mappedDataSetParameters)
       }
+
+      override fun mappedDataSetParameters(vararg mappedDataSetParameters: Any): Unit =
+          mappedDataSetParameters(mappedDataSetParameters.toList())
 
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -39860,6 +40698,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun chartConfiguration(chartConfiguration: IResolvable)
 
       public fun chartConfiguration(chartConfiguration: GaugeChartConfigurationProperty)
@@ -39910,6 +40750,8 @@ public open class CfnAnalysis internal constructor(
       override fun actions(actions: List<Any>) {
         cdkBuilder.actions(actions)
       }
+
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
 
       override fun chartConfiguration(chartConfiguration: IResolvable) {
         cdkBuilder.chartConfiguration(chartConfiguration.let(IResolvable::unwrap))
@@ -40172,6 +41014,8 @@ public open class CfnAnalysis internal constructor(
     public interface Builder {
       public fun actions(actions: List<String>)
 
+      public fun actions(vararg actions: String)
+
       public fun principal(principal: String)
 
       public fun resource(resource: String)
@@ -40186,6 +41030,8 @@ public open class CfnAnalysis internal constructor(
       override fun actions(actions: List<String>) {
         cdkBuilder.actions(actions)
       }
+
+      override fun actions(vararg actions: String): Unit = actions(actions.toList())
 
       override fun principal(principal: String) {
         cdkBuilder.principal(principal)
@@ -40204,7 +41050,7 @@ public open class CfnAnalysis internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnAnalysis.ResourcePermissionProperty,
     ) : ResourcePermissionProperty {
-      override fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
+      override fun actions(): List<String> = unwrap(this).getActions()
 
       override fun principal(): String = unwrap(this).getPrincipal()
 
@@ -40291,9 +41137,13 @@ public open class CfnAnalysis internal constructor(
 
       public fun groupBy(groupBy: List<Any>)
 
+      public fun groupBy(vararg groupBy: Any)
+
       public fun values(values: IResolvable)
 
       public fun values(values: List<Any>)
+
+      public fun values(vararg values: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -40310,6 +41160,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.groupBy(groupBy)
       }
 
+      override fun groupBy(vararg groupBy: Any): Unit = groupBy(groupBy.toList())
+
       override fun values(values: IResolvable) {
         cdkBuilder.values(values.let(IResolvable::unwrap))
       }
@@ -40317,6 +41169,8 @@ public open class CfnAnalysis internal constructor(
       override fun values(values: List<Any>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: Any): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.TableAggregatedFieldWellsProperty =
@@ -40867,13 +41721,19 @@ public open class CfnAnalysis internal constructor(
 
       public fun columns(columns: List<Any>)
 
+      public fun columns(vararg columns: Any)
+
       public fun rows(rows: IResolvable)
 
       public fun rows(rows: List<Any>)
 
+      public fun rows(vararg rows: Any)
+
       public fun values(values: IResolvable)
 
       public fun values(values: List<Any>)
+
+      public fun values(vararg values: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -40890,6 +41750,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.columns(columns)
       }
 
+      override fun columns(vararg columns: Any): Unit = columns(columns.toList())
+
       override fun rows(rows: IResolvable) {
         cdkBuilder.rows(rows.let(IResolvable::unwrap))
       }
@@ -40898,6 +41760,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.rows(rows)
       }
 
+      override fun rows(vararg rows: Any): Unit = rows(rows.toList())
+
       override fun values(values: IResolvable) {
         cdkBuilder.values(values.let(IResolvable::unwrap))
       }
@@ -40905,6 +41769,8 @@ public open class CfnAnalysis internal constructor(
       override fun values(values: List<Any>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: Any): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.HeatMapAggregatedFieldWellsProperty
@@ -41066,9 +41932,13 @@ public open class CfnAnalysis internal constructor(
 
       public fun groupBy(groupBy: List<Any>)
 
+      public fun groupBy(vararg groupBy: Any)
+
       public fun size(size: IResolvable)
 
       public fun size(size: List<Any>)
+
+      public fun size(vararg size: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -41085,6 +41955,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.groupBy(groupBy)
       }
 
+      override fun groupBy(vararg groupBy: Any): Unit = groupBy(groupBy.toList())
+
       override fun size(size: IResolvable) {
         cdkBuilder.size(size.let(IResolvable::unwrap))
       }
@@ -41092,6 +41964,8 @@ public open class CfnAnalysis internal constructor(
       override fun size(size: List<Any>) {
         cdkBuilder.size(size)
       }
+
+      override fun size(vararg size: Any): Unit = size(size.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.WordCloudAggregatedFieldWellsProperty
@@ -41509,6 +42383,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun chartConfiguration(chartConfiguration: IResolvable)
 
       public fun chartConfiguration(chartConfiguration: SankeyDiagramChartConfigurationProperty)
@@ -41550,6 +42426,8 @@ public open class CfnAnalysis internal constructor(
       override fun actions(actions: List<Any>) {
         cdkBuilder.actions(actions)
       }
+
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
 
       override fun chartConfiguration(chartConfiguration: IResolvable) {
         cdkBuilder.chartConfiguration(chartConfiguration.let(IResolvable::unwrap))
@@ -41787,6 +42665,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun axisLabelOptions(axisLabelOptions: List<Any>)
 
+      public fun axisLabelOptions(vararg axisLabelOptions: Any)
+
       public fun sortIconVisibility(sortIconVisibility: String)
 
       public fun visibility(visibility: String)
@@ -41805,6 +42685,9 @@ public open class CfnAnalysis internal constructor(
       override fun axisLabelOptions(axisLabelOptions: List<Any>) {
         cdkBuilder.axisLabelOptions(axisLabelOptions)
       }
+
+      override fun axisLabelOptions(vararg axisLabelOptions: Any): Unit =
+          axisLabelOptions(axisLabelOptions.toList())
 
       override fun sortIconVisibility(sortIconVisibility: String) {
         cdkBuilder.sortIconVisibility(sortIconVisibility)
@@ -41928,6 +42811,8 @@ public open class CfnAnalysis internal constructor(
       public fun rowSort(rowSort: IResolvable)
 
       public fun rowSort(rowSort: List<Any>)
+
+      public fun rowSort(vararg rowSort: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -41958,6 +42843,8 @@ public open class CfnAnalysis internal constructor(
       override fun rowSort(rowSort: List<Any>) {
         cdkBuilder.rowSort(rowSort)
       }
+
+      override fun rowSort(vararg rowSort: Any): Unit = rowSort(rowSort.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.TableSortConfigurationProperty =
@@ -42004,6 +42891,8 @@ public open class CfnAnalysis internal constructor(
     public interface Builder {
       public fun rowAlternateColors(rowAlternateColors: List<String>)
 
+      public fun rowAlternateColors(vararg rowAlternateColors: String)
+
       public fun status(status: String)
 
       public fun usePrimaryBackgroundColor(usePrimaryBackgroundColor: String)
@@ -42018,6 +42907,9 @@ public open class CfnAnalysis internal constructor(
       override fun rowAlternateColors(rowAlternateColors: List<String>) {
         cdkBuilder.rowAlternateColors(rowAlternateColors)
       }
+
+      override fun rowAlternateColors(vararg rowAlternateColors: String): Unit =
+          rowAlternateColors(rowAlternateColors.toList())
 
       override fun status(status: String) {
         cdkBuilder.status(status)
@@ -42214,6 +43106,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun categorySort(categorySort: List<Any>)
 
+      public fun categorySort(vararg categorySort: Any)
+
       public fun smallMultiplesLimitConfiguration(smallMultiplesLimitConfiguration: IResolvable)
 
       public
@@ -42227,6 +43121,8 @@ public open class CfnAnalysis internal constructor(
       public fun smallMultiplesSort(smallMultiplesSort: IResolvable)
 
       public fun smallMultiplesSort(smallMultiplesSort: List<Any>)
+
+      public fun smallMultiplesSort(vararg smallMultiplesSort: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -42257,6 +43153,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.categorySort(categorySort)
       }
 
+      override fun categorySort(vararg categorySort: Any): Unit =
+          categorySort(categorySort.toList())
+
       override fun smallMultiplesLimitConfiguration(smallMultiplesLimitConfiguration: IResolvable) {
         cdkBuilder.smallMultiplesLimitConfiguration(smallMultiplesLimitConfiguration.let(IResolvable::unwrap))
       }
@@ -42280,6 +43179,9 @@ public open class CfnAnalysis internal constructor(
       override fun smallMultiplesSort(smallMultiplesSort: List<Any>) {
         cdkBuilder.smallMultiplesSort(smallMultiplesSort)
       }
+
+      override fun smallMultiplesSort(vararg smallMultiplesSort: Any): Unit =
+          smallMultiplesSort(smallMultiplesSort.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.PieChartSortConfigurationProperty =
@@ -42443,21 +43345,31 @@ public open class CfnAnalysis internal constructor(
 
       public fun category(category: List<Any>)
 
+      public fun category(vararg category: Any)
+
       public fun label(label: IResolvable)
 
       public fun label(label: List<Any>)
+
+      public fun label(vararg label: Any)
 
       public fun size(size: IResolvable)
 
       public fun size(size: List<Any>)
 
+      public fun size(vararg size: Any)
+
       public fun xAxis(xAxis: IResolvable)
 
       public fun xAxis(xAxis: List<Any>)
 
+      public fun xAxis(vararg xAxis: Any)
+
       public fun yAxis(yAxis: IResolvable)
 
       public fun yAxis(yAxis: List<Any>)
+
+      public fun yAxis(vararg yAxis: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -42474,6 +43386,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.category(category)
       }
 
+      override fun category(vararg category: Any): Unit = category(category.toList())
+
       override fun label(label: IResolvable) {
         cdkBuilder.label(label.let(IResolvable::unwrap))
       }
@@ -42481,6 +43395,8 @@ public open class CfnAnalysis internal constructor(
       override fun label(label: List<Any>) {
         cdkBuilder.label(label)
       }
+
+      override fun label(vararg label: Any): Unit = label(label.toList())
 
       override fun size(size: IResolvable) {
         cdkBuilder.size(size.let(IResolvable::unwrap))
@@ -42490,6 +43406,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.size(size)
       }
 
+      override fun size(vararg size: Any): Unit = size(size.toList())
+
       override fun xAxis(xAxis: IResolvable) {
         cdkBuilder.xAxis(xAxis.let(IResolvable::unwrap))
       }
@@ -42498,6 +43416,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.xAxis(xAxis)
       }
 
+      override fun xAxis(vararg xAxis: Any): Unit = xAxis(xAxis.toList())
+
       override fun yAxis(yAxis: IResolvable) {
         cdkBuilder.yAxis(yAxis.let(IResolvable::unwrap))
       }
@@ -42505,6 +43425,8 @@ public open class CfnAnalysis internal constructor(
       override fun yAxis(yAxis: List<Any>) {
         cdkBuilder.yAxis(yAxis)
       }
+
+      override fun yAxis(vararg yAxis: Any): Unit = yAxis(yAxis.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.ScatterPlotCategoricallyAggregatedFieldWellsProperty
@@ -42811,6 +43733,8 @@ public open class CfnAnalysis internal constructor(
       public fun name(name: String)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -42826,6 +43750,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.values(values)
       }
 
+      override fun values(vararg values: String): Unit = values(values.toList())
+
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.StringParameterProperty =
           cdkBuilder.build()
@@ -42837,7 +43763,7 @@ public open class CfnAnalysis internal constructor(
     ) : StringParameterProperty {
       override fun name(): String = unwrap(this).getName()
 
-      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues()
     }
 
     public companion object {
@@ -42937,13 +43863,19 @@ public open class CfnAnalysis internal constructor(
 
       public fun targetValues(targetValues: List<Any>)
 
+      public fun targetValues(vararg targetValues: Any)
+
       public fun trendGroups(trendGroups: IResolvable)
 
       public fun trendGroups(trendGroups: List<Any>)
 
+      public fun trendGroups(vararg trendGroups: Any)
+
       public fun values(values: IResolvable)
 
       public fun values(values: List<Any>)
+
+      public fun values(vararg values: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -42959,6 +43891,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.targetValues(targetValues)
       }
 
+      override fun targetValues(vararg targetValues: Any): Unit =
+          targetValues(targetValues.toList())
+
       override fun trendGroups(trendGroups: IResolvable) {
         cdkBuilder.trendGroups(trendGroups.let(IResolvable::unwrap))
       }
@@ -42967,6 +43902,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.trendGroups(trendGroups)
       }
 
+      override fun trendGroups(vararg trendGroups: Any): Unit = trendGroups(trendGroups.toList())
+
       override fun values(values: IResolvable) {
         cdkBuilder.values(values.let(IResolvable::unwrap))
       }
@@ -42974,6 +43911,8 @@ public open class CfnAnalysis internal constructor(
       override fun values(values: List<Any>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: Any): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.KPIFieldWellsProperty =
@@ -43152,6 +44091,8 @@ public open class CfnAnalysis internal constructor(
       public fun weightSort(weightSort: IResolvable)
 
       public fun weightSort(weightSort: List<Any>)
+
+      public fun weightSort(vararg weightSort: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -43195,6 +44136,8 @@ public open class CfnAnalysis internal constructor(
       override fun weightSort(weightSort: List<Any>) {
         cdkBuilder.weightSort(weightSort)
       }
+
+      override fun weightSort(vararg weightSort: Any): Unit = weightSort(weightSort.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.SankeyDiagramSortConfigurationProperty
@@ -43251,6 +44194,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun chartConfiguration(chartConfiguration: IResolvable)
 
       public fun chartConfiguration(chartConfiguration: GeospatialMapConfigurationProperty)
@@ -43263,6 +44208,8 @@ public open class CfnAnalysis internal constructor(
       public fun columnHierarchies(columnHierarchies: IResolvable)
 
       public fun columnHierarchies(columnHierarchies: List<Any>)
+
+      public fun columnHierarchies(vararg columnHierarchies: Any)
 
       public fun subtitle(subtitle: IResolvable)
 
@@ -43297,6 +44244,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.actions(actions)
       }
 
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
+
       override fun chartConfiguration(chartConfiguration: IResolvable) {
         cdkBuilder.chartConfiguration(chartConfiguration.let(IResolvable::unwrap))
       }
@@ -43318,6 +44267,9 @@ public open class CfnAnalysis internal constructor(
       override fun columnHierarchies(columnHierarchies: List<Any>) {
         cdkBuilder.columnHierarchies(columnHierarchies)
       }
+
+      override fun columnHierarchies(vararg columnHierarchies: Any): Unit =
+          columnHierarchies(columnHierarchies.toList())
 
       override fun subtitle(subtitle: IResolvable) {
         cdkBuilder.subtitle(subtitle.let(IResolvable::unwrap))
@@ -43911,6 +44863,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun renderingRules(renderingRules: List<Any>)
 
+      public fun renderingRules(vararg renderingRules: Any)
+
       public fun selectedBorderStyle(selectedBorderStyle: IResolvable)
 
       public fun selectedBorderStyle(selectedBorderStyle: FreeFormLayoutElementBorderStyleProperty)
@@ -43995,6 +44949,9 @@ public open class CfnAnalysis internal constructor(
       override fun renderingRules(renderingRules: List<Any>) {
         cdkBuilder.renderingRules(renderingRules)
       }
+
+      override fun renderingRules(vararg renderingRules: Any): Unit =
+          renderingRules(renderingRules.toList())
 
       override fun selectedBorderStyle(selectedBorderStyle: IResolvable) {
         cdkBuilder.selectedBorderStyle(selectedBorderStyle.let(IResolvable::unwrap))
@@ -44091,6 +45048,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun categorySort(categorySort: List<Any>)
 
+      public fun categorySort(vararg categorySort: Any)
+
       public fun paginationConfiguration(paginationConfiguration: IResolvable)
 
       public fun paginationConfiguration(paginationConfiguration: PaginationConfigurationProperty)
@@ -44114,6 +45073,9 @@ public open class CfnAnalysis internal constructor(
       override fun categorySort(categorySort: List<Any>) {
         cdkBuilder.categorySort(categorySort)
       }
+
+      override fun categorySort(vararg categorySort: Any): Unit =
+          categorySort(categorySort.toList())
 
       override fun paginationConfiguration(paginationConfiguration: IResolvable) {
         cdkBuilder.paginationConfiguration(paginationConfiguration.let(IResolvable::unwrap))
@@ -44243,17 +45205,25 @@ public open class CfnAnalysis internal constructor(
 
       public fun dateTimeParameters(dateTimeParameters: List<Any>)
 
+      public fun dateTimeParameters(vararg dateTimeParameters: Any)
+
       public fun decimalParameters(decimalParameters: IResolvable)
 
       public fun decimalParameters(decimalParameters: List<Any>)
+
+      public fun decimalParameters(vararg decimalParameters: Any)
 
       public fun integerParameters(integerParameters: IResolvable)
 
       public fun integerParameters(integerParameters: List<Any>)
 
+      public fun integerParameters(vararg integerParameters: Any)
+
       public fun stringParameters(stringParameters: IResolvable)
 
       public fun stringParameters(stringParameters: List<Any>)
+
+      public fun stringParameters(vararg stringParameters: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -44269,6 +45239,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.dateTimeParameters(dateTimeParameters)
       }
 
+      override fun dateTimeParameters(vararg dateTimeParameters: Any): Unit =
+          dateTimeParameters(dateTimeParameters.toList())
+
       override fun decimalParameters(decimalParameters: IResolvable) {
         cdkBuilder.decimalParameters(decimalParameters.let(IResolvable::unwrap))
       }
@@ -44276,6 +45249,9 @@ public open class CfnAnalysis internal constructor(
       override fun decimalParameters(decimalParameters: List<Any>) {
         cdkBuilder.decimalParameters(decimalParameters)
       }
+
+      override fun decimalParameters(vararg decimalParameters: Any): Unit =
+          decimalParameters(decimalParameters.toList())
 
       override fun integerParameters(integerParameters: IResolvable) {
         cdkBuilder.integerParameters(integerParameters.let(IResolvable::unwrap))
@@ -44285,6 +45261,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.integerParameters(integerParameters)
       }
 
+      override fun integerParameters(vararg integerParameters: Any): Unit =
+          integerParameters(integerParameters.toList())
+
       override fun stringParameters(stringParameters: IResolvable) {
         cdkBuilder.stringParameters(stringParameters.let(IResolvable::unwrap))
       }
@@ -44292,6 +45271,9 @@ public open class CfnAnalysis internal constructor(
       override fun stringParameters(stringParameters: List<Any>) {
         cdkBuilder.stringParameters(stringParameters)
       }
+
+      override fun stringParameters(vararg stringParameters: Any): Unit =
+          stringParameters(stringParameters.toList())
 
       public fun build(): software.amazon.awscdk.services.quicksight.CfnAnalysis.ParametersProperty
           = cdkBuilder.build()
@@ -44439,6 +45421,8 @@ public open class CfnAnalysis internal constructor(
       public fun violatedEntities(violatedEntities: IResolvable)
 
       public fun violatedEntities(violatedEntities: List<Any>)
+
+      public fun violatedEntities(vararg violatedEntities: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -44461,6 +45445,9 @@ public open class CfnAnalysis internal constructor(
       override fun violatedEntities(violatedEntities: List<Any>) {
         cdkBuilder.violatedEntities(violatedEntities)
       }
+
+      override fun violatedEntities(vararg violatedEntities: Any): Unit =
+          violatedEntities(violatedEntities.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.AnalysisErrorProperty =
@@ -45135,9 +46122,13 @@ public open class CfnAnalysis internal constructor(
 
       public fun category(category: List<Any>)
 
+      public fun category(vararg category: Any)
+
       public fun values(values: IResolvable)
 
       public fun values(values: List<Any>)
+
+      public fun values(vararg values: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -45154,6 +46145,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.category(category)
       }
 
+      override fun category(vararg category: Any): Unit = category(category.toList())
+
       override fun values(values: IResolvable) {
         cdkBuilder.values(values.let(IResolvable::unwrap))
       }
@@ -45161,6 +46154,8 @@ public open class CfnAnalysis internal constructor(
       override fun values(values: List<Any>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: Any): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.FunnelChartAggregatedFieldWellsProperty
@@ -45526,6 +46521,8 @@ public open class CfnAnalysis internal constructor(
       public fun categorySort(categorySort: IResolvable)
 
       public fun categorySort(categorySort: List<Any>)
+
+      public fun categorySort(vararg categorySort: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -45541,6 +46538,9 @@ public open class CfnAnalysis internal constructor(
       override fun categorySort(categorySort: List<Any>) {
         cdkBuilder.categorySort(categorySort)
       }
+
+      override fun categorySort(vararg categorySort: Any): Unit =
+          categorySort(categorySort.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.FilledMapSortConfigurationProperty
@@ -46265,13 +47265,19 @@ public open class CfnAnalysis internal constructor(
 
       public fun category(category: List<Any>)
 
+      public fun category(vararg category: Any)
+
       public fun smallMultiples(smallMultiples: IResolvable)
 
       public fun smallMultiples(smallMultiples: List<Any>)
 
+      public fun smallMultiples(vararg smallMultiples: Any)
+
       public fun values(values: IResolvable)
 
       public fun values(values: List<Any>)
+
+      public fun values(vararg values: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -46288,6 +47294,8 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.category(category)
       }
 
+      override fun category(vararg category: Any): Unit = category(category.toList())
+
       override fun smallMultiples(smallMultiples: IResolvable) {
         cdkBuilder.smallMultiples(smallMultiples.let(IResolvable::unwrap))
       }
@@ -46296,6 +47304,9 @@ public open class CfnAnalysis internal constructor(
         cdkBuilder.smallMultiples(smallMultiples)
       }
 
+      override fun smallMultiples(vararg smallMultiples: Any): Unit =
+          smallMultiples(smallMultiples.toList())
+
       override fun values(values: IResolvable) {
         cdkBuilder.values(values.let(IResolvable::unwrap))
       }
@@ -46303,6 +47314,8 @@ public open class CfnAnalysis internal constructor(
       override fun values(values: List<Any>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: Any): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.PieChartAggregatedFieldWellsProperty
@@ -46366,6 +47379,8 @@ public open class CfnAnalysis internal constructor(
       public fun rollingDate(rollingDate: RollingDateConfigurationProperty.Builder.() -> Unit)
 
       public fun staticValues(staticValues: List<String>)
+
+      public fun staticValues(vararg staticValues: String)
     }
 
     private class BuilderImpl : Builder {
@@ -46403,6 +47418,9 @@ public open class CfnAnalysis internal constructor(
       override fun staticValues(staticValues: List<String>) {
         cdkBuilder.staticValues(staticValues)
       }
+
+      override fun staticValues(vararg staticValues: String): Unit =
+          staticValues(staticValues.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.DateTimeDefaultValuesProperty =
@@ -46457,6 +47475,8 @@ public open class CfnAnalysis internal constructor(
       public fun staticValues(staticValues: IResolvable)
 
       public fun staticValues(staticValues: List<Number>)
+
+      public fun staticValues(vararg staticValues: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -46485,6 +47505,9 @@ public open class CfnAnalysis internal constructor(
       override fun staticValues(staticValues: List<Number>) {
         cdkBuilder.staticValues(staticValues)
       }
+
+      override fun staticValues(vararg staticValues: Number): Unit =
+          staticValues(staticValues.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.DecimalDefaultValuesProperty =
@@ -47151,6 +48174,8 @@ public open class CfnAnalysis internal constructor(
       public fun stops(stops: IResolvable)
 
       public fun stops(stops: List<Any>)
+
+      public fun stops(vararg stops: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -47165,6 +48190,8 @@ public open class CfnAnalysis internal constructor(
       override fun stops(stops: List<Any>) {
         cdkBuilder.stops(stops)
       }
+
+      override fun stops(vararg stops: Any): Unit = stops(stops.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.GradientColorProperty =
@@ -47268,6 +48295,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun drillDownFilters(drillDownFilters: List<Any>)
 
+      public fun drillDownFilters(vararg drillDownFilters: Any)
+
       public fun hierarchyId(hierarchyId: String)
     }
 
@@ -47283,6 +48312,9 @@ public open class CfnAnalysis internal constructor(
       override fun drillDownFilters(drillDownFilters: List<Any>) {
         cdkBuilder.drillDownFilters(drillDownFilters)
       }
+
+      override fun drillDownFilters(vararg drillDownFilters: Any): Unit =
+          drillDownFilters(drillDownFilters.toList())
 
       override fun hierarchyId(hierarchyId: String) {
         cdkBuilder.hierarchyId(hierarchyId)
@@ -47403,6 +48435,8 @@ public open class CfnAnalysis internal constructor(
 
       public fun actionOperations(actionOperations: List<Any>)
 
+      public fun actionOperations(vararg actionOperations: Any)
+
       public fun customActionId(customActionId: String)
 
       public fun name(name: String)
@@ -47425,6 +48459,9 @@ public open class CfnAnalysis internal constructor(
       override fun actionOperations(actionOperations: List<Any>) {
         cdkBuilder.actionOperations(actionOperations)
       }
+
+      override fun actionOperations(vararg actionOperations: Any): Unit =
+          actionOperations(actionOperations.toList())
 
       override fun customActionId(customActionId: String) {
         cdkBuilder.customActionId(customActionId)
@@ -47489,6 +48526,8 @@ public open class CfnAnalysis internal constructor(
       public fun colors(colors: IResolvable)
 
       public fun colors(colors: List<Any>)
+
+      public fun colors(vararg colors: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -47504,6 +48543,8 @@ public open class CfnAnalysis internal constructor(
       override fun colors(colors: List<Any>) {
         cdkBuilder.colors(colors)
       }
+
+      override fun colors(vararg colors: Any): Unit = colors(colors.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.GeospatialHeatmapColorScaleProperty
@@ -47555,6 +48596,8 @@ public open class CfnAnalysis internal constructor(
       public fun staticValues(staticValues: IResolvable)
 
       public fun staticValues(staticValues: List<Number>)
+
+      public fun staticValues(vararg staticValues: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -47583,6 +48626,9 @@ public open class CfnAnalysis internal constructor(
       override fun staticValues(staticValues: List<Number>) {
         cdkBuilder.staticValues(staticValues)
       }
+
+      override fun staticValues(vararg staticValues: Number): Unit =
+          staticValues(staticValues.toList())
 
       public fun build():
           software.amazon.awscdk.services.quicksight.CfnAnalysis.IntegerDefaultValuesProperty =

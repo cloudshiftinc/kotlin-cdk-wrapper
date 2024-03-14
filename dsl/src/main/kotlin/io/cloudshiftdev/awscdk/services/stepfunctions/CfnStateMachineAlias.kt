@@ -60,6 +60,9 @@ public open class CfnStateMachineAlias internal constructor(
     unwrap(this).setRoutingConfiguration(__idx_ac66f0)
   }
 
+  public open fun routingConfiguration(vararg __idx_ac66f0: Any): Unit =
+      routingConfiguration(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun deploymentPreference(deploymentPreference: IResolvable)
 
@@ -77,6 +80,8 @@ public open class CfnStateMachineAlias internal constructor(
     public fun routingConfiguration(routingConfiguration: IResolvable)
 
     public fun routingConfiguration(routingConfiguration: List<Any>)
+
+    public fun routingConfiguration(vararg routingConfiguration: Any)
   }
 
   private class BuilderImpl(
@@ -116,6 +121,9 @@ public open class CfnStateMachineAlias internal constructor(
     override fun routingConfiguration(routingConfiguration: List<Any>) {
       cdkBuilder.routingConfiguration(routingConfiguration)
     }
+
+    override fun routingConfiguration(vararg routingConfiguration: Any): Unit =
+        routingConfiguration(routingConfiguration.toList())
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias =
         cdkBuilder.build()
@@ -217,6 +225,8 @@ public open class CfnStateMachineAlias internal constructor(
     public interface Builder {
       public fun alarms(alarms: List<String>)
 
+      public fun alarms(vararg alarms: String)
+
       public fun interval(interval: Number)
 
       public fun percentage(percentage: Number)
@@ -235,6 +245,8 @@ public open class CfnStateMachineAlias internal constructor(
       override fun alarms(alarms: List<String>) {
         cdkBuilder.alarms(alarms)
       }
+
+      override fun alarms(vararg alarms: String): Unit = alarms(alarms.toList())
 
       override fun interval(interval: Number) {
         cdkBuilder.interval(interval)

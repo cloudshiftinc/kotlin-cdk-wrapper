@@ -82,6 +82,8 @@ public open class CfnSignalCatalog internal constructor(
     unwrap(this).setNodes(__idx_ac66f0)
   }
 
+  public open fun nodes(vararg __idx_ac66f0: Any): Unit = nodes(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -90,6 +92,8 @@ public open class CfnSignalCatalog internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public interface Builder {
     public fun description(description: String)
@@ -108,7 +112,11 @@ public open class CfnSignalCatalog internal constructor(
 
     public fun nodes(nodes: List<Any>)
 
+    public fun nodes(vararg nodes: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -147,9 +155,13 @@ public open class CfnSignalCatalog internal constructor(
       cdkBuilder.nodes(nodes)
     }
 
+    override fun nodes(vararg nodes: Any): Unit = nodes(nodes.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog =
         cdkBuilder.build()
@@ -196,6 +208,8 @@ public open class CfnSignalCatalog internal constructor(
     public interface Builder {
       public fun allowedValues(allowedValues: List<String>)
 
+      public fun allowedValues(vararg allowedValues: String)
+
       public fun assignedValue(assignedValue: String)
 
       public fun dataType(dataType: String)
@@ -219,6 +233,9 @@ public open class CfnSignalCatalog internal constructor(
       override fun allowedValues(allowedValues: List<String>) {
         cdkBuilder.allowedValues(allowedValues)
       }
+
+      override fun allowedValues(vararg allowedValues: String): Unit =
+          allowedValues(allowedValues.toList())
 
       override fun assignedValue(assignedValue: String) {
         cdkBuilder.assignedValue(assignedValue)
@@ -449,6 +466,8 @@ public open class CfnSignalCatalog internal constructor(
     public interface Builder {
       public fun allowedValues(allowedValues: List<String>)
 
+      public fun allowedValues(vararg allowedValues: String)
+
       public fun dataType(dataType: String)
 
       public fun description(description: String)
@@ -470,6 +489,9 @@ public open class CfnSignalCatalog internal constructor(
       override fun allowedValues(allowedValues: List<String>) {
         cdkBuilder.allowedValues(allowedValues)
       }
+
+      override fun allowedValues(vararg allowedValues: String): Unit =
+          allowedValues(allowedValues.toList())
 
       override fun dataType(dataType: String) {
         cdkBuilder.dataType(dataType)
@@ -561,6 +583,8 @@ public open class CfnSignalCatalog internal constructor(
     public interface Builder {
       public fun allowedValues(allowedValues: List<String>)
 
+      public fun allowedValues(vararg allowedValues: String)
+
       public fun assignedValue(assignedValue: String)
 
       public fun dataType(dataType: String)
@@ -586,6 +610,9 @@ public open class CfnSignalCatalog internal constructor(
       override fun allowedValues(allowedValues: List<String>) {
         cdkBuilder.allowedValues(allowedValues)
       }
+
+      override fun allowedValues(vararg allowedValues: String): Unit =
+          allowedValues(allowedValues.toList())
 
       override fun assignedValue(assignedValue: String) {
         cdkBuilder.assignedValue(assignedValue)

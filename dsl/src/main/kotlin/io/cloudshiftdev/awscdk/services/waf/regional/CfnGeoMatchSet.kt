@@ -26,6 +26,9 @@ public open class CfnGeoMatchSet internal constructor(
     unwrap(this).setGeoMatchConstraints(__idx_ac66f0)
   }
 
+  public open fun geoMatchConstraints(vararg __idx_ac66f0: Any): Unit =
+      geoMatchConstraints(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -40,6 +43,8 @@ public open class CfnGeoMatchSet internal constructor(
     public fun geoMatchConstraints(geoMatchConstraints: IResolvable)
 
     public fun geoMatchConstraints(geoMatchConstraints: List<Any>)
+
+    public fun geoMatchConstraints(vararg geoMatchConstraints: Any)
 
     public fun name(name: String)
   }
@@ -58,6 +63,9 @@ public open class CfnGeoMatchSet internal constructor(
     override fun geoMatchConstraints(geoMatchConstraints: List<Any>) {
       cdkBuilder.geoMatchConstraints(geoMatchConstraints)
     }
+
+    override fun geoMatchConstraints(vararg geoMatchConstraints: Any): Unit =
+        geoMatchConstraints(geoMatchConstraints.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)

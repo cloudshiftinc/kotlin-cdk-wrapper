@@ -48,6 +48,9 @@ public open class CfnCertificate internal constructor(
     unwrap(this).setDomainValidationOptions(__idx_ac66f0)
   }
 
+  public open fun domainValidationOptions(vararg __idx_ac66f0: Any): Unit =
+      domainValidationOptions(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -65,6 +68,9 @@ public open class CfnCertificate internal constructor(
     unwrap(this).setSubjectAlternativeNames(`value`)
   }
 
+  public open fun subjectAlternativeNames(vararg `value`: String): Unit =
+      subjectAlternativeNames(`value`.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -73,6 +79,8 @@ public open class CfnCertificate internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun validationMethod(): String? = unwrap(this).getValidationMethod()
 
@@ -92,11 +100,17 @@ public open class CfnCertificate internal constructor(
 
     public fun domainValidationOptions(domainValidationOptions: List<Any>)
 
+    public fun domainValidationOptions(vararg domainValidationOptions: Any)
+
     public fun keyAlgorithm(keyAlgorithm: String)
 
     public fun subjectAlternativeNames(subjectAlternativeNames: List<String>)
 
+    public fun subjectAlternativeNames(vararg subjectAlternativeNames: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun validationMethod(validationMethod: String)
   }
@@ -130,6 +144,9 @@ public open class CfnCertificate internal constructor(
       cdkBuilder.domainValidationOptions(domainValidationOptions)
     }
 
+    override fun domainValidationOptions(vararg domainValidationOptions: Any): Unit =
+        domainValidationOptions(domainValidationOptions.toList())
+
     override fun keyAlgorithm(keyAlgorithm: String) {
       cdkBuilder.keyAlgorithm(keyAlgorithm)
     }
@@ -138,9 +155,14 @@ public open class CfnCertificate internal constructor(
       cdkBuilder.subjectAlternativeNames(subjectAlternativeNames)
     }
 
+    override fun subjectAlternativeNames(vararg subjectAlternativeNames: String): Unit =
+        subjectAlternativeNames(subjectAlternativeNames.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun validationMethod(validationMethod: String) {
       cdkBuilder.validationMethod(validationMethod)

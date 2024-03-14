@@ -291,6 +291,8 @@ public open class CfnConfigurationSetEventDestination internal constructor(
 
       public fun matchingEventTypes(matchingEventTypes: List<String>)
 
+      public fun matchingEventTypes(vararg matchingEventTypes: String)
+
       public fun pinpointDestination(pinpointDestination: IResolvable)
 
       public fun pinpointDestination(pinpointDestination: PinpointDestinationProperty)
@@ -357,6 +359,9 @@ public open class CfnConfigurationSetEventDestination internal constructor(
         cdkBuilder.matchingEventTypes(matchingEventTypes)
       }
 
+      override fun matchingEventTypes(vararg matchingEventTypes: String): Unit =
+          matchingEventTypes(matchingEventTypes.toList())
+
       override fun pinpointDestination(pinpointDestination: IResolvable) {
         cdkBuilder.pinpointDestination(pinpointDestination.let(IResolvable::unwrap))
       }
@@ -399,8 +404,7 @@ public open class CfnConfigurationSetEventDestination internal constructor(
 
       override fun kinesisFirehoseDestination(): Any? = unwrap(this).getKinesisFirehoseDestination()
 
-      override fun matchingEventTypes(): List<String> = unwrap(this).getMatchingEventTypes() ?:
-          emptyList()
+      override fun matchingEventTypes(): List<String> = unwrap(this).getMatchingEventTypes()
 
       override fun pinpointDestination(): Any? = unwrap(this).getPinpointDestination()
 
@@ -532,6 +536,8 @@ public open class CfnConfigurationSetEventDestination internal constructor(
       public fun dimensionConfigurations(dimensionConfigurations: IResolvable)
 
       public fun dimensionConfigurations(dimensionConfigurations: List<Any>)
+
+      public fun dimensionConfigurations(vararg dimensionConfigurations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -547,6 +553,9 @@ public open class CfnConfigurationSetEventDestination internal constructor(
       override fun dimensionConfigurations(dimensionConfigurations: List<Any>) {
         cdkBuilder.dimensionConfigurations(dimensionConfigurations)
       }
+
+      override fun dimensionConfigurations(vararg dimensionConfigurations: Any): Unit =
+          dimensionConfigurations(dimensionConfigurations.toList())
 
       public fun build():
           software.amazon.awscdk.services.pinpointemail.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty

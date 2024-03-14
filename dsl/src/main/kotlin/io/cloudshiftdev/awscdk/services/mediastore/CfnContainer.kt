@@ -51,6 +51,8 @@ public open class CfnContainer internal constructor(
     unwrap(this).setCorsPolicy(__idx_ac66f0)
   }
 
+  public open fun corsPolicy(vararg __idx_ac66f0: Any): Unit = corsPolicy(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -91,6 +93,8 @@ public open class CfnContainer internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun accessLoggingEnabled(accessLoggingEnabled: Boolean)
 
@@ -101,6 +105,8 @@ public open class CfnContainer internal constructor(
     public fun corsPolicy(corsPolicy: IResolvable)
 
     public fun corsPolicy(corsPolicy: List<Any>)
+
+    public fun corsPolicy(vararg corsPolicy: Any)
 
     public fun lifecyclePolicy(lifecyclePolicy: String)
 
@@ -115,6 +121,8 @@ public open class CfnContainer internal constructor(
     public fun policy(policy: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -144,6 +152,8 @@ public open class CfnContainer internal constructor(
       cdkBuilder.corsPolicy(corsPolicy)
     }
 
+    override fun corsPolicy(vararg corsPolicy: Any): Unit = corsPolicy(corsPolicy.toList())
+
     override fun lifecyclePolicy(lifecyclePolicy: String) {
       cdkBuilder.lifecyclePolicy(lifecyclePolicy)
     }
@@ -168,6 +178,8 @@ public open class CfnContainer internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.mediastore.CfnContainer = cdkBuilder.build()
   }
@@ -262,6 +274,8 @@ public open class CfnContainer internal constructor(
       public fun metricPolicyRules(metricPolicyRules: IResolvable)
 
       public fun metricPolicyRules(metricPolicyRules: List<Any>)
+
+      public fun metricPolicyRules(vararg metricPolicyRules: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -280,6 +294,9 @@ public open class CfnContainer internal constructor(
       override fun metricPolicyRules(metricPolicyRules: List<Any>) {
         cdkBuilder.metricPolicyRules(metricPolicyRules)
       }
+
+      override fun metricPolicyRules(vararg metricPolicyRules: Any): Unit =
+          metricPolicyRules(metricPolicyRules.toList())
 
       public fun build():
           software.amazon.awscdk.services.mediastore.CfnContainer.MetricPolicyProperty =
@@ -329,11 +346,19 @@ public open class CfnContainer internal constructor(
     public interface Builder {
       public fun allowedHeaders(allowedHeaders: List<String>)
 
+      public fun allowedHeaders(vararg allowedHeaders: String)
+
       public fun allowedMethods(allowedMethods: List<String>)
+
+      public fun allowedMethods(vararg allowedMethods: String)
 
       public fun allowedOrigins(allowedOrigins: List<String>)
 
+      public fun allowedOrigins(vararg allowedOrigins: String)
+
       public fun exposeHeaders(exposeHeaders: List<String>)
+
+      public fun exposeHeaders(vararg exposeHeaders: String)
 
       public fun maxAgeSeconds(maxAgeSeconds: Number)
     }
@@ -347,17 +372,29 @@ public open class CfnContainer internal constructor(
         cdkBuilder.allowedHeaders(allowedHeaders)
       }
 
+      override fun allowedHeaders(vararg allowedHeaders: String): Unit =
+          allowedHeaders(allowedHeaders.toList())
+
       override fun allowedMethods(allowedMethods: List<String>) {
         cdkBuilder.allowedMethods(allowedMethods)
       }
+
+      override fun allowedMethods(vararg allowedMethods: String): Unit =
+          allowedMethods(allowedMethods.toList())
 
       override fun allowedOrigins(allowedOrigins: List<String>) {
         cdkBuilder.allowedOrigins(allowedOrigins)
       }
 
+      override fun allowedOrigins(vararg allowedOrigins: String): Unit =
+          allowedOrigins(allowedOrigins.toList())
+
       override fun exposeHeaders(exposeHeaders: List<String>) {
         cdkBuilder.exposeHeaders(exposeHeaders)
       }
+
+      override fun exposeHeaders(vararg exposeHeaders: String): Unit =
+          exposeHeaders(exposeHeaders.toList())
 
       override fun maxAgeSeconds(maxAgeSeconds: Number) {
         cdkBuilder.maxAgeSeconds(maxAgeSeconds)

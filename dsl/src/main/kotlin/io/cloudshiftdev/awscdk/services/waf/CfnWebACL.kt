@@ -60,6 +60,8 @@ public open class CfnWebACL internal constructor(
     unwrap(this).setRules(__idx_ac66f0)
   }
 
+  public open fun rules(vararg __idx_ac66f0: Any): Unit = rules(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun defaultAction(defaultAction: IResolvable)
 
@@ -76,6 +78,8 @@ public open class CfnWebACL internal constructor(
     public fun rules(rules: IResolvable)
 
     public fun rules(rules: List<Any>)
+
+    public fun rules(vararg rules: Any)
   }
 
   private class BuilderImpl(
@@ -113,6 +117,8 @@ public open class CfnWebACL internal constructor(
     override fun rules(rules: List<Any>) {
       cdkBuilder.rules(rules)
     }
+
+    override fun rules(vararg rules: Any): Unit = rules(rules.toList())
 
     public fun build(): software.amazon.awscdk.services.waf.CfnWebACL = cdkBuilder.build()
   }

@@ -47,6 +47,8 @@ public open class CfnVPCConnection internal constructor(
     unwrap(this).setDnsResolvers(`value`)
   }
 
+  public open fun dnsResolvers(vararg `value`: String): Unit = dnsResolvers(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -70,11 +72,16 @@ public open class CfnVPCConnection internal constructor(
     unwrap(this).setSecurityGroupIds(`value`)
   }
 
+  public open fun securityGroupIds(vararg `value`: String): Unit =
+      securityGroupIds(`value`.toList())
+
   public open fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
 
   public open fun subnetIds(`value`: List<String>) {
     unwrap(this).setSubnetIds(`value`)
   }
+
+  public open fun subnetIds(vararg `value`: String): Unit = subnetIds(`value`.toList())
 
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
@@ -84,6 +91,8 @@ public open class CfnVPCConnection internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun vpcConnectionId(): String? = unwrap(this).getVpcConnectionId()
 
@@ -98,15 +107,23 @@ public open class CfnVPCConnection internal constructor(
 
     public fun dnsResolvers(dnsResolvers: List<String>)
 
+    public fun dnsResolvers(vararg dnsResolvers: String)
+
     public fun name(name: String)
 
     public fun roleArn(roleArn: String)
 
     public fun securityGroupIds(securityGroupIds: List<String>)
 
+    public fun securityGroupIds(vararg securityGroupIds: String)
+
     public fun subnetIds(subnetIds: List<String>)
 
+    public fun subnetIds(vararg subnetIds: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun vpcConnectionId(vpcConnectionId: String)
   }
@@ -130,6 +147,9 @@ public open class CfnVPCConnection internal constructor(
       cdkBuilder.dnsResolvers(dnsResolvers)
     }
 
+    override fun dnsResolvers(vararg dnsResolvers: String): Unit =
+        dnsResolvers(dnsResolvers.toList())
+
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -142,13 +162,20 @@ public open class CfnVPCConnection internal constructor(
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
+
     override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
 
+    override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun vpcConnectionId(vpcConnectionId: String) {
       cdkBuilder.vpcConnectionId(vpcConnectionId)

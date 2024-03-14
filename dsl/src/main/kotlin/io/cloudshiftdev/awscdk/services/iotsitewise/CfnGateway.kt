@@ -31,6 +31,9 @@ public open class CfnGateway internal constructor(
     unwrap(this).setGatewayCapabilitySummaries(__idx_ac66f0)
   }
 
+  public open fun gatewayCapabilitySummaries(vararg __idx_ac66f0: Any): Unit =
+      gatewayCapabilitySummaries(__idx_ac66f0.toList())
+
   public open fun gatewayName(): String = unwrap(this).getGatewayName()
 
   public open fun gatewayName(`value`: String) {
@@ -65,10 +68,14 @@ public open class CfnGateway internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun gatewayCapabilitySummaries(gatewayCapabilitySummaries: IResolvable)
 
     public fun gatewayCapabilitySummaries(gatewayCapabilitySummaries: List<Any>)
+
+    public fun gatewayCapabilitySummaries(vararg gatewayCapabilitySummaries: Any)
 
     public fun gatewayName(gatewayName: String)
 
@@ -81,6 +88,8 @@ public open class CfnGateway internal constructor(
     public fun gatewayPlatform(gatewayPlatform: GatewayPlatformProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -97,6 +106,9 @@ public open class CfnGateway internal constructor(
     override fun gatewayCapabilitySummaries(gatewayCapabilitySummaries: List<Any>) {
       cdkBuilder.gatewayCapabilitySummaries(gatewayCapabilitySummaries)
     }
+
+    override fun gatewayCapabilitySummaries(vararg gatewayCapabilitySummaries: Any): Unit =
+        gatewayCapabilitySummaries(gatewayCapabilitySummaries.toList())
 
     override fun gatewayName(gatewayName: String) {
       cdkBuilder.gatewayName(gatewayName)
@@ -118,6 +130,8 @@ public open class CfnGateway internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.iotsitewise.CfnGateway = cdkBuilder.build()
   }

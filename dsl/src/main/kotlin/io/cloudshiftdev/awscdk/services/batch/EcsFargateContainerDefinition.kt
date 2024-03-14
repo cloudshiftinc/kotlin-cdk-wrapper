@@ -74,6 +74,8 @@ public open class EcsFargateContainerDefinition internal constructor(
 
     public fun command(command: List<String>)
 
+    public fun command(vararg command: String)
+
     public fun cpu(cpu: Number)
 
     public fun environment(environment: Map<String, String>)
@@ -105,6 +107,8 @@ public open class EcsFargateContainerDefinition internal constructor(
     public fun user(user: String)
 
     public fun volumes(volumes: List<EcsVolume>)
+
+    public fun volumes(vararg volumes: EcsVolume)
   }
 
   private class BuilderImpl(
@@ -123,6 +127,8 @@ public open class EcsFargateContainerDefinition internal constructor(
     override fun command(command: List<String>) {
       cdkBuilder.command(command)
     }
+
+    override fun command(vararg command: String): Unit = command(command.toList())
 
     override fun cpu(cpu: Number) {
       cdkBuilder.cpu(cpu)
@@ -187,6 +193,8 @@ public open class EcsFargateContainerDefinition internal constructor(
     override fun volumes(volumes: List<EcsVolume>) {
       cdkBuilder.volumes(volumes.map(EcsVolume::unwrap))
     }
+
+    override fun volumes(vararg volumes: EcsVolume): Unit = volumes(volumes.toList())
 
     public fun build(): software.amazon.awscdk.services.batch.EcsFargateContainerDefinition =
         cdkBuilder.build()

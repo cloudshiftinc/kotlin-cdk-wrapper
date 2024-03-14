@@ -35,6 +35,9 @@ public open class CfnTrustStoreRevocation internal constructor(
     unwrap(this).setRevocationContents(__idx_ac66f0)
   }
 
+  public open fun revocationContents(vararg __idx_ac66f0: Any): Unit =
+      revocationContents(__idx_ac66f0.toList())
+
   public open fun trustStoreArn(): String? = unwrap(this).getTrustStoreArn()
 
   public open fun trustStoreArn(`value`: String) {
@@ -45,6 +48,8 @@ public open class CfnTrustStoreRevocation internal constructor(
     public fun revocationContents(revocationContents: IResolvable)
 
     public fun revocationContents(revocationContents: List<Any>)
+
+    public fun revocationContents(vararg revocationContents: Any)
 
     public fun trustStoreArn(trustStoreArn: String)
   }
@@ -65,6 +70,9 @@ public open class CfnTrustStoreRevocation internal constructor(
     override fun revocationContents(revocationContents: List<Any>) {
       cdkBuilder.revocationContents(revocationContents)
     }
+
+    override fun revocationContents(vararg revocationContents: Any): Unit =
+        revocationContents(revocationContents.toList())
 
     override fun trustStoreArn(trustStoreArn: String) {
       cdkBuilder.trustStoreArn(trustStoreArn)

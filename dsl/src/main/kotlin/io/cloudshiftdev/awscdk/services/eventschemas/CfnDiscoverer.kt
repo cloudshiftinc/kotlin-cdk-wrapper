@@ -61,6 +61,8 @@ public open class CfnDiscoverer internal constructor(
     unwrap(this).setTagsRaw(`value`.map(TagsEntryProperty::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: TagsEntryProperty): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun crossAccount(crossAccount: Boolean)
 
@@ -71,6 +73,8 @@ public open class CfnDiscoverer internal constructor(
     public fun sourceArn(sourceArn: String)
 
     public fun tags(tags: List<TagsEntryProperty>)
+
+    public fun tags(vararg tags: TagsEntryProperty)
   }
 
   private class BuilderImpl(
@@ -99,6 +103,8 @@ public open class CfnDiscoverer internal constructor(
     override fun tags(tags: List<TagsEntryProperty>) {
       cdkBuilder.tags(tags.map(TagsEntryProperty::unwrap))
     }
+
+    override fun tags(vararg tags: TagsEntryProperty): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.eventschemas.CfnDiscoverer =
         cdkBuilder.build()

@@ -71,6 +71,8 @@ public open class CfnBridge internal constructor(
     unwrap(this).setOutputs(__idx_ac66f0)
   }
 
+  public open fun outputs(vararg __idx_ac66f0: Any): Unit = outputs(__idx_ac66f0.toList())
+
   public open fun placementArn(): String = unwrap(this).getPlacementArn()
 
   public open fun placementArn(`value`: String) {
@@ -102,6 +104,8 @@ public open class CfnBridge internal constructor(
     unwrap(this).setSources(__idx_ac66f0)
   }
 
+  public open fun sources(vararg __idx_ac66f0: Any): Unit = sources(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun egressGatewayBridge(egressGatewayBridge: IResolvable)
 
@@ -127,6 +131,8 @@ public open class CfnBridge internal constructor(
 
     public fun outputs(outputs: List<Any>)
 
+    public fun outputs(vararg outputs: Any)
+
     public fun placementArn(placementArn: String)
 
     public fun sourceFailoverConfig(sourceFailoverConfig: IResolvable)
@@ -140,6 +146,8 @@ public open class CfnBridge internal constructor(
     public fun sources(sources: IResolvable)
 
     public fun sources(sources: List<Any>)
+
+    public fun sources(vararg sources: Any)
   }
 
   private class BuilderImpl(
@@ -189,6 +197,8 @@ public open class CfnBridge internal constructor(
       cdkBuilder.outputs(outputs)
     }
 
+    override fun outputs(vararg outputs: Any): Unit = outputs(outputs.toList())
+
     override fun placementArn(placementArn: String) {
       cdkBuilder.placementArn(placementArn)
     }
@@ -214,6 +224,8 @@ public open class CfnBridge internal constructor(
     override fun sources(sources: List<Any>) {
       cdkBuilder.sources(sources)
     }
+
+    override fun sources(vararg sources: Any): Unit = sources(sources.toList())
 
     public fun build(): software.amazon.awscdk.services.mediaconnect.CfnBridge = cdkBuilder.build()
   }

@@ -63,6 +63,8 @@ public open class CfnBucket internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun bucketName(bucketName: String)
 
@@ -78,6 +80,8 @@ public open class CfnBucket internal constructor(
     public fun outpostId(outpostId: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -113,6 +117,8 @@ public open class CfnBucket internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     public fun build(): software.amazon.awscdk.services.s3outposts.CfnBucket = cdkBuilder.build()
   }
 
@@ -144,6 +150,8 @@ public open class CfnBucket internal constructor(
       public fun rules(rules: IResolvable)
 
       public fun rules(rules: List<Any>)
+
+      public fun rules(vararg rules: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -159,6 +167,8 @@ public open class CfnBucket internal constructor(
       override fun rules(rules: List<Any>) {
         cdkBuilder.rules(rules)
       }
+
+      override fun rules(vararg rules: Any): Unit = rules(rules.toList())
 
       public fun build():
           software.amazon.awscdk.services.s3outposts.CfnBucket.LifecycleConfigurationProperty =
@@ -522,6 +532,8 @@ public open class CfnBucket internal constructor(
       public fun prefix(prefix: String)
 
       public fun tags(tags: List<FilterTagProperty>)
+
+      public fun tags(vararg tags: FilterTagProperty)
     }
 
     private class BuilderImpl : Builder {
@@ -536,6 +548,8 @@ public open class CfnBucket internal constructor(
       override fun tags(tags: List<FilterTagProperty>) {
         cdkBuilder.tags(tags.map(FilterTagProperty::unwrap))
       }
+
+      override fun tags(vararg tags: FilterTagProperty): Unit = tags(tags.toList())
 
       public fun build():
           software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty =

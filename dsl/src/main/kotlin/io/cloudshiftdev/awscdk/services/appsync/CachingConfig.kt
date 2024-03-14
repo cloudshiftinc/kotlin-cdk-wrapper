@@ -13,6 +13,8 @@ public interface CachingConfig {
   public interface Builder {
     public fun cachingKeys(cachingKeys: List<String>)
 
+    public fun cachingKeys(vararg cachingKeys: String)
+
     public fun ttl(ttl: Duration)
   }
 
@@ -23,6 +25,8 @@ public interface CachingConfig {
     override fun cachingKeys(cachingKeys: List<String>) {
       cdkBuilder.cachingKeys(cachingKeys)
     }
+
+    override fun cachingKeys(vararg cachingKeys: String): Unit = cachingKeys(cachingKeys.toList())
 
     override fun ttl(ttl: Duration) {
       cdkBuilder.ttl(ttl.let(Duration::unwrap))

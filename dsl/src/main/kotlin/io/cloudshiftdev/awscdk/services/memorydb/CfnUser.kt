@@ -45,6 +45,8 @@ public open class CfnUser internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun userName(): String = unwrap(this).getUserName()
 
   public open fun userName(`value`: String) {
@@ -57,6 +59,8 @@ public open class CfnUser internal constructor(
     public fun authenticationMode(authenticationMode: Any)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun userName(userName: String)
   }
@@ -79,6 +83,8 @@ public open class CfnUser internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun userName(userName: String) {
       cdkBuilder.userName(userName)
@@ -116,6 +122,8 @@ public open class CfnUser internal constructor(
     public interface Builder {
       public fun passwords(passwords: List<String>)
 
+      public fun passwords(vararg passwords: String)
+
       public fun type(type: String)
     }
 
@@ -127,6 +135,8 @@ public open class CfnUser internal constructor(
       override fun passwords(passwords: List<String>) {
         cdkBuilder.passwords(passwords)
       }
+
+      override fun passwords(vararg passwords: String): Unit = passwords(passwords.toList())
 
       override fun type(type: String) {
         cdkBuilder.type(type)

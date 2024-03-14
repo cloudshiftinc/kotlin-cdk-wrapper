@@ -50,6 +50,9 @@ public open class CfnBudget internal constructor(
     unwrap(this).setNotificationsWithSubscribers(__idx_ac66f0)
   }
 
+  public open fun notificationsWithSubscribers(vararg __idx_ac66f0: Any): Unit =
+      notificationsWithSubscribers(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun budget(budget: IResolvable)
 
@@ -62,6 +65,8 @@ public open class CfnBudget internal constructor(
     public fun notificationsWithSubscribers(notificationsWithSubscribers: IResolvable)
 
     public fun notificationsWithSubscribers(notificationsWithSubscribers: List<Any>)
+
+    public fun notificationsWithSubscribers(vararg notificationsWithSubscribers: Any)
   }
 
   private class BuilderImpl(
@@ -91,6 +96,9 @@ public open class CfnBudget internal constructor(
     override fun notificationsWithSubscribers(notificationsWithSubscribers: List<Any>) {
       cdkBuilder.notificationsWithSubscribers(notificationsWithSubscribers)
     }
+
+    override fun notificationsWithSubscribers(vararg notificationsWithSubscribers: Any): Unit =
+        notificationsWithSubscribers(notificationsWithSubscribers.toList())
 
     public fun build(): software.amazon.awscdk.services.budgets.CfnBudget = cdkBuilder.build()
   }
@@ -607,6 +615,8 @@ public open class CfnBudget internal constructor(
       public fun subscribers(subscribers: IResolvable)
 
       public fun subscribers(subscribers: List<Any>)
+
+      public fun subscribers(vararg subscribers: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -635,6 +645,8 @@ public open class CfnBudget internal constructor(
       override fun subscribers(subscribers: List<Any>) {
         cdkBuilder.subscribers(subscribers)
       }
+
+      override fun subscribers(vararg subscribers: Any): Unit = subscribers(subscribers.toList())
 
       public fun build():
           software.amazon.awscdk.services.budgets.CfnBudget.NotificationWithSubscribersProperty =

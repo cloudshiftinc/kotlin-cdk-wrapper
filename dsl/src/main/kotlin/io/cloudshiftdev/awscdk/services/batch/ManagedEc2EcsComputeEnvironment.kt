@@ -100,11 +100,17 @@ public open class ManagedEc2EcsComputeEnvironment internal constructor(
 
     public fun images(images: List<EcsMachineImage>)
 
+    public fun images(vararg images: EcsMachineImage)
+
     public fun instanceClasses(instanceClasses: List<InstanceClass>)
+
+    public fun instanceClasses(vararg instanceClasses: InstanceClass)
 
     public fun instanceRole(instanceRole: IRole)
 
     public fun instanceTypes(instanceTypes: List<InstanceType>)
+
+    public fun instanceTypes(vararg instanceTypes: InstanceType)
 
     public fun launchTemplate(launchTemplate: ILaunchTemplate)
 
@@ -117,6 +123,8 @@ public open class ManagedEc2EcsComputeEnvironment internal constructor(
     public fun replaceComputeEnvironment(replaceComputeEnvironment: Boolean)
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
+
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
 
     public fun serviceRole(serviceRole: IRole)
 
@@ -168,9 +176,14 @@ public open class ManagedEc2EcsComputeEnvironment internal constructor(
       cdkBuilder.images(images.map(EcsMachineImage::unwrap))
     }
 
+    override fun images(vararg images: EcsMachineImage): Unit = images(images.toList())
+
     override fun instanceClasses(instanceClasses: List<InstanceClass>) {
       cdkBuilder.instanceClasses(instanceClasses.map(InstanceClass::unwrap))
     }
+
+    override fun instanceClasses(vararg instanceClasses: InstanceClass): Unit =
+        instanceClasses(instanceClasses.toList())
 
     override fun instanceRole(instanceRole: IRole) {
       cdkBuilder.instanceRole(instanceRole.let(IRole::unwrap))
@@ -179,6 +192,9 @@ public open class ManagedEc2EcsComputeEnvironment internal constructor(
     override fun instanceTypes(instanceTypes: List<InstanceType>) {
       cdkBuilder.instanceTypes(instanceTypes.map(InstanceType::unwrap))
     }
+
+    override fun instanceTypes(vararg instanceTypes: InstanceType): Unit =
+        instanceTypes(instanceTypes.toList())
 
     override fun launchTemplate(launchTemplate: ILaunchTemplate) {
       cdkBuilder.launchTemplate(launchTemplate.let(ILaunchTemplate::unwrap))
@@ -203,6 +219,9 @@ public open class ManagedEc2EcsComputeEnvironment internal constructor(
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun serviceRole(serviceRole: IRole) {
       cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))

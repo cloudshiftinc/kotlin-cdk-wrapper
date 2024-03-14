@@ -490,7 +490,11 @@ public open class CfnSpotFleet internal constructor(
 
       public fun acceleratorManufacturers(acceleratorManufacturers: List<String>)
 
+      public fun acceleratorManufacturers(vararg acceleratorManufacturers: String)
+
       public fun acceleratorNames(acceleratorNames: List<String>)
+
+      public fun acceleratorNames(vararg acceleratorNames: String)
 
       public fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable)
 
@@ -504,7 +508,11 @@ public open class CfnSpotFleet internal constructor(
 
       public fun acceleratorTypes(acceleratorTypes: List<String>)
 
+      public fun acceleratorTypes(vararg acceleratorTypes: String)
+
       public fun allowedInstanceTypes(allowedInstanceTypes: List<String>)
+
+      public fun allowedInstanceTypes(vararg allowedInstanceTypes: String)
 
       public fun bareMetal(bareMetal: String)
 
@@ -522,13 +530,21 @@ public open class CfnSpotFleet internal constructor(
 
       public fun cpuManufacturers(cpuManufacturers: List<String>)
 
+      public fun cpuManufacturers(vararg cpuManufacturers: String)
+
       public fun excludedInstanceTypes(excludedInstanceTypes: List<String>)
 
+      public fun excludedInstanceTypes(vararg excludedInstanceTypes: String)
+
       public fun instanceGenerations(instanceGenerations: List<String>)
+
+      public fun instanceGenerations(vararg instanceGenerations: String)
 
       public fun localStorage(localStorage: String)
 
       public fun localStorageTypes(localStorageTypes: List<String>)
+
+      public fun localStorageTypes(vararg localStorageTypes: String)
 
       public
           fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number)
@@ -620,9 +636,15 @@ public open class CfnSpotFleet internal constructor(
         cdkBuilder.acceleratorManufacturers(acceleratorManufacturers)
       }
 
+      override fun acceleratorManufacturers(vararg acceleratorManufacturers: String): Unit =
+          acceleratorManufacturers(acceleratorManufacturers.toList())
+
       override fun acceleratorNames(acceleratorNames: List<String>) {
         cdkBuilder.acceleratorNames(acceleratorNames)
       }
+
+      override fun acceleratorNames(vararg acceleratorNames: String): Unit =
+          acceleratorNames(acceleratorNames.toList())
 
       override fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable) {
         cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(IResolvable::unwrap))
@@ -644,9 +666,15 @@ public open class CfnSpotFleet internal constructor(
         cdkBuilder.acceleratorTypes(acceleratorTypes)
       }
 
+      override fun acceleratorTypes(vararg acceleratorTypes: String): Unit =
+          acceleratorTypes(acceleratorTypes.toList())
+
       override fun allowedInstanceTypes(allowedInstanceTypes: List<String>) {
         cdkBuilder.allowedInstanceTypes(allowedInstanceTypes)
       }
+
+      override fun allowedInstanceTypes(vararg allowedInstanceTypes: String): Unit =
+          allowedInstanceTypes(allowedInstanceTypes.toList())
 
       override fun bareMetal(bareMetal: String) {
         cdkBuilder.bareMetal(bareMetal)
@@ -676,13 +704,22 @@ public open class CfnSpotFleet internal constructor(
         cdkBuilder.cpuManufacturers(cpuManufacturers)
       }
 
+      override fun cpuManufacturers(vararg cpuManufacturers: String): Unit =
+          cpuManufacturers(cpuManufacturers.toList())
+
       override fun excludedInstanceTypes(excludedInstanceTypes: List<String>) {
         cdkBuilder.excludedInstanceTypes(excludedInstanceTypes)
       }
 
+      override fun excludedInstanceTypes(vararg excludedInstanceTypes: String): Unit =
+          excludedInstanceTypes(excludedInstanceTypes.toList())
+
       override fun instanceGenerations(instanceGenerations: List<String>) {
         cdkBuilder.instanceGenerations(instanceGenerations)
       }
+
+      override fun instanceGenerations(vararg instanceGenerations: String): Unit =
+          instanceGenerations(instanceGenerations.toList())
 
       override fun localStorage(localStorage: String) {
         cdkBuilder.localStorage(localStorage)
@@ -691,6 +728,9 @@ public open class CfnSpotFleet internal constructor(
       override fun localStorageTypes(localStorageTypes: List<String>) {
         cdkBuilder.localStorageTypes(localStorageTypes)
       }
+
+      override fun localStorageTypes(vararg localStorageTypes: String): Unit =
+          localStorageTypes(localStorageTypes.toList())
 
       override
           fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number) {
@@ -897,6 +937,8 @@ public open class CfnSpotFleet internal constructor(
       public fun resourceType(resourceType: String)
 
       public fun tags(tags: List<CfnTag>)
+
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
@@ -912,6 +954,8 @@ public open class CfnSpotFleet internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       public fun build():
           software.amazon.awscdk.services.ec2.CfnSpotFleet.SpotFleetTagSpecificationProperty =
@@ -1033,6 +1077,8 @@ public open class CfnSpotFleet internal constructor(
       public fun overrides(overrides: IResolvable)
 
       public fun overrides(overrides: List<Any>)
+
+      public fun overrides(vararg overrides: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1063,6 +1109,8 @@ public open class CfnSpotFleet internal constructor(
       override fun overrides(overrides: List<Any>) {
         cdkBuilder.overrides(overrides)
       }
+
+      override fun overrides(vararg overrides: Any): Unit = overrides(overrides.toList())
 
       public fun build():
           software.amazon.awscdk.services.ec2.CfnSpotFleet.LaunchTemplateConfigProperty =
@@ -1403,6 +1451,8 @@ public open class CfnSpotFleet internal constructor(
 
       public fun blockDeviceMappings(blockDeviceMappings: List<Any>)
 
+      public fun blockDeviceMappings(vararg blockDeviceMappings: Any)
+
       public fun ebsOptimized(ebsOptimized: Boolean)
 
       public fun ebsOptimized(ebsOptimized: IResolvable)
@@ -1445,6 +1495,8 @@ public open class CfnSpotFleet internal constructor(
 
       public fun networkInterfaces(networkInterfaces: List<Any>)
 
+      public fun networkInterfaces(vararg networkInterfaces: Any)
+
       public fun placement(placement: IResolvable)
 
       public fun placement(placement: SpotPlacementProperty)
@@ -1459,6 +1511,8 @@ public open class CfnSpotFleet internal constructor(
 
       public fun securityGroups(securityGroups: List<Any>)
 
+      public fun securityGroups(vararg securityGroups: Any)
+
       public fun spotPrice(spotPrice: String)
 
       public fun subnetId(subnetId: String)
@@ -1466,6 +1520,8 @@ public open class CfnSpotFleet internal constructor(
       public fun tagSpecifications(tagSpecifications: IResolvable)
 
       public fun tagSpecifications(tagSpecifications: List<Any>)
+
+      public fun tagSpecifications(vararg tagSpecifications: Any)
 
       public fun userData(userData: String)
 
@@ -1485,6 +1541,9 @@ public open class CfnSpotFleet internal constructor(
       override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
         cdkBuilder.blockDeviceMappings(blockDeviceMappings)
       }
+
+      override fun blockDeviceMappings(vararg blockDeviceMappings: Any): Unit =
+          blockDeviceMappings(blockDeviceMappings.toList())
 
       override fun ebsOptimized(ebsOptimized: Boolean) {
         cdkBuilder.ebsOptimized(ebsOptimized)
@@ -1559,6 +1618,9 @@ public open class CfnSpotFleet internal constructor(
         cdkBuilder.networkInterfaces(networkInterfaces)
       }
 
+      override fun networkInterfaces(vararg networkInterfaces: Any): Unit =
+          networkInterfaces(networkInterfaces.toList())
+
       override fun placement(placement: IResolvable) {
         cdkBuilder.placement(placement.let(IResolvable::unwrap))
       }
@@ -1584,6 +1646,9 @@ public open class CfnSpotFleet internal constructor(
         cdkBuilder.securityGroups(securityGroups)
       }
 
+      override fun securityGroups(vararg securityGroups: Any): Unit =
+          securityGroups(securityGroups.toList())
+
       override fun spotPrice(spotPrice: String) {
         cdkBuilder.spotPrice(spotPrice)
       }
@@ -1599,6 +1664,9 @@ public open class CfnSpotFleet internal constructor(
       override fun tagSpecifications(tagSpecifications: List<Any>) {
         cdkBuilder.tagSpecifications(tagSpecifications)
       }
+
+      override fun tagSpecifications(vararg tagSpecifications: Any): Unit =
+          tagSpecifications(tagSpecifications.toList())
 
       override fun userData(userData: String) {
         cdkBuilder.userData(userData)
@@ -2062,17 +2130,23 @@ public open class CfnSpotFleet internal constructor(
 
       public fun groups(groups: List<String>)
 
+      public fun groups(vararg groups: String)
+
       public fun ipv6AddressCount(ipv6AddressCount: Number)
 
       public fun ipv6Addresses(ipv6Addresses: IResolvable)
 
       public fun ipv6Addresses(ipv6Addresses: List<Any>)
 
+      public fun ipv6Addresses(vararg ipv6Addresses: Any)
+
       public fun networkInterfaceId(networkInterfaceId: String)
 
       public fun privateIpAddresses(privateIpAddresses: IResolvable)
 
       public fun privateIpAddresses(privateIpAddresses: List<Any>)
+
+      public fun privateIpAddresses(vararg privateIpAddresses: Any)
 
       public fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number)
 
@@ -2113,6 +2187,8 @@ public open class CfnSpotFleet internal constructor(
         cdkBuilder.groups(groups)
       }
 
+      override fun groups(vararg groups: String): Unit = groups(groups.toList())
+
       override fun ipv6AddressCount(ipv6AddressCount: Number) {
         cdkBuilder.ipv6AddressCount(ipv6AddressCount)
       }
@@ -2125,6 +2201,9 @@ public open class CfnSpotFleet internal constructor(
         cdkBuilder.ipv6Addresses(ipv6Addresses)
       }
 
+      override fun ipv6Addresses(vararg ipv6Addresses: Any): Unit =
+          ipv6Addresses(ipv6Addresses.toList())
+
       override fun networkInterfaceId(networkInterfaceId: String) {
         cdkBuilder.networkInterfaceId(networkInterfaceId)
       }
@@ -2136,6 +2215,9 @@ public open class CfnSpotFleet internal constructor(
       override fun privateIpAddresses(privateIpAddresses: List<Any>) {
         cdkBuilder.privateIpAddresses(privateIpAddresses)
       }
+
+      override fun privateIpAddresses(vararg privateIpAddresses: Any): Unit =
+          privateIpAddresses(privateIpAddresses.toList())
 
       override fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number) {
         cdkBuilder.secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount)
@@ -2266,9 +2348,13 @@ public open class CfnSpotFleet internal constructor(
 
       public fun launchSpecifications(launchSpecifications: List<Any>)
 
+      public fun launchSpecifications(vararg launchSpecifications: Any)
+
       public fun launchTemplateConfigs(launchTemplateConfigs: IResolvable)
 
       public fun launchTemplateConfigs(launchTemplateConfigs: List<Any>)
+
+      public fun launchTemplateConfigs(vararg launchTemplateConfigs: Any)
 
       public fun loadBalancersConfig(loadBalancersConfig: IResolvable)
 
@@ -2306,6 +2392,8 @@ public open class CfnSpotFleet internal constructor(
       public fun tagSpecifications(tagSpecifications: IResolvable)
 
       public fun tagSpecifications(tagSpecifications: List<Any>)
+
+      public fun tagSpecifications(vararg tagSpecifications: Any)
 
       public fun targetCapacity(targetCapacity: Number)
 
@@ -2360,6 +2448,9 @@ public open class CfnSpotFleet internal constructor(
         cdkBuilder.launchSpecifications(launchSpecifications)
       }
 
+      override fun launchSpecifications(vararg launchSpecifications: Any): Unit =
+          launchSpecifications(launchSpecifications.toList())
+
       override fun launchTemplateConfigs(launchTemplateConfigs: IResolvable) {
         cdkBuilder.launchTemplateConfigs(launchTemplateConfigs.let(IResolvable::unwrap))
       }
@@ -2367,6 +2458,9 @@ public open class CfnSpotFleet internal constructor(
       override fun launchTemplateConfigs(launchTemplateConfigs: List<Any>) {
         cdkBuilder.launchTemplateConfigs(launchTemplateConfigs)
       }
+
+      override fun launchTemplateConfigs(vararg launchTemplateConfigs: Any): Unit =
+          launchTemplateConfigs(launchTemplateConfigs.toList())
 
       override fun loadBalancersConfig(loadBalancersConfig: IResolvable) {
         cdkBuilder.loadBalancersConfig(loadBalancersConfig.let(IResolvable::unwrap))
@@ -2433,6 +2527,9 @@ public open class CfnSpotFleet internal constructor(
       override fun tagSpecifications(tagSpecifications: List<Any>) {
         cdkBuilder.tagSpecifications(tagSpecifications)
       }
+
+      override fun tagSpecifications(vararg tagSpecifications: Any): Unit =
+          tagSpecifications(tagSpecifications.toList())
 
       override fun targetCapacity(targetCapacity: Number) {
         cdkBuilder.targetCapacity(targetCapacity)
@@ -2687,6 +2784,8 @@ public open class CfnSpotFleet internal constructor(
       public fun targetGroups(targetGroups: IResolvable)
 
       public fun targetGroups(targetGroups: List<Any>)
+
+      public fun targetGroups(vararg targetGroups: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2701,6 +2800,9 @@ public open class CfnSpotFleet internal constructor(
       override fun targetGroups(targetGroups: List<Any>) {
         cdkBuilder.targetGroups(targetGroups)
       }
+
+      override fun targetGroups(vararg targetGroups: Any): Unit =
+          targetGroups(targetGroups.toList())
 
       public fun build():
           software.amazon.awscdk.services.ec2.CfnSpotFleet.TargetGroupsConfigProperty =
@@ -3054,6 +3156,8 @@ public open class CfnSpotFleet internal constructor(
       public fun classicLoadBalancers(classicLoadBalancers: IResolvable)
 
       public fun classicLoadBalancers(classicLoadBalancers: List<Any>)
+
+      public fun classicLoadBalancers(vararg classicLoadBalancers: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -3069,6 +3173,9 @@ public open class CfnSpotFleet internal constructor(
       override fun classicLoadBalancers(classicLoadBalancers: List<Any>) {
         cdkBuilder.classicLoadBalancers(classicLoadBalancers)
       }
+
+      override fun classicLoadBalancers(vararg classicLoadBalancers: Any): Unit =
+          classicLoadBalancers(classicLoadBalancers.toList())
 
       public fun build():
           software.amazon.awscdk.services.ec2.CfnSpotFleet.ClassicLoadBalancersConfigProperty =

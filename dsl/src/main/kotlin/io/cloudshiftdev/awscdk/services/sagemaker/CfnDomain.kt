@@ -117,11 +117,13 @@ public open class CfnDomain internal constructor(
     unwrap(this).setKmsKeyId(`value`)
   }
 
-  public open fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+  public open fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
 
   public open fun subnetIds(`value`: List<String>) {
     unwrap(this).setSubnetIds(`value`)
   }
+
+  public open fun subnetIds(vararg `value`: String): Unit = subnetIds(`value`.toList())
 
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
@@ -131,6 +133,8 @@ public open class CfnDomain internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun vpcId(): String = unwrap(this).getVpcId()
 
@@ -176,7 +180,11 @@ public open class CfnDomain internal constructor(
 
     public fun subnetIds(subnetIds: List<String>)
 
+    public fun subnetIds(vararg subnetIds: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun vpcId(vpcId: String)
   }
@@ -252,9 +260,13 @@ public open class CfnDomain internal constructor(
       cdkBuilder.subnetIds(subnetIds)
     }
 
+    override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
@@ -436,6 +448,8 @@ public open class CfnDomain internal constructor(
 
       public fun customImages(customImages: List<Any>)
 
+      public fun customImages(vararg customImages: Any)
+
       public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
 
       public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
@@ -458,6 +472,9 @@ public open class CfnDomain internal constructor(
       override fun customImages(customImages: List<Any>) {
         cdkBuilder.customImages(customImages)
       }
+
+      override fun customImages(vararg customImages: Any): Unit =
+          customImages(customImages.toList())
 
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
@@ -535,6 +552,8 @@ public open class CfnDomain internal constructor(
           fun rStudioServerProDomainSettings(rStudioServerProDomainSettings: RStudioServerProDomainSettingsProperty.Builder.() -> Unit)
 
       public fun securityGroupIds(securityGroupIds: List<String>)
+
+      public fun securityGroupIds(vararg securityGroupIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -574,6 +593,9 @@ public open class CfnDomain internal constructor(
       override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
+
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
 
       public fun build(): software.amazon.awscdk.services.sagemaker.CfnDomain.DomainSettingsProperty
           = cdkBuilder.build()
@@ -627,9 +649,13 @@ public open class CfnDomain internal constructor(
 
       public fun codeRepositories(codeRepositories: List<Any>)
 
+      public fun codeRepositories(vararg codeRepositories: Any)
+
       public fun customImages(customImages: IResolvable)
 
       public fun customImages(customImages: List<Any>)
+
+      public fun customImages(vararg customImages: Any)
 
       public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
 
@@ -640,6 +666,8 @@ public open class CfnDomain internal constructor(
       public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
 
       public fun lifecycleConfigArns(lifecycleConfigArns: List<String>)
+
+      public fun lifecycleConfigArns(vararg lifecycleConfigArns: String)
     }
 
     private class BuilderImpl : Builder {
@@ -656,6 +684,9 @@ public open class CfnDomain internal constructor(
         cdkBuilder.codeRepositories(codeRepositories)
       }
 
+      override fun codeRepositories(vararg codeRepositories: Any): Unit =
+          codeRepositories(codeRepositories.toList())
+
       override fun customImages(customImages: IResolvable) {
         cdkBuilder.customImages(customImages.let(IResolvable::unwrap))
       }
@@ -663,6 +694,9 @@ public open class CfnDomain internal constructor(
       override fun customImages(customImages: List<Any>) {
         cdkBuilder.customImages(customImages)
       }
+
+      override fun customImages(vararg customImages: Any): Unit =
+          customImages(customImages.toList())
 
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
@@ -681,6 +715,9 @@ public open class CfnDomain internal constructor(
       override fun lifecycleConfigArns(lifecycleConfigArns: List<String>) {
         cdkBuilder.lifecycleConfigArns(lifecycleConfigArns)
       }
+
+      override fun lifecycleConfigArns(vararg lifecycleConfigArns: String): Unit =
+          lifecycleConfigArns(lifecycleConfigArns.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnDomain.JupyterLabAppSettingsProperty =
@@ -731,6 +768,8 @@ public open class CfnDomain internal constructor(
 
       public fun customImages(customImages: List<Any>)
 
+      public fun customImages(vararg customImages: Any)
+
       public fun defaultResourceSpec(defaultResourceSpec: IResolvable)
 
       public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty)
@@ -752,6 +791,9 @@ public open class CfnDomain internal constructor(
       override fun customImages(customImages: List<Any>) {
         cdkBuilder.customImages(customImages)
       }
+
+      override fun customImages(vararg customImages: Any): Unit =
+          customImages(customImages.toList())
 
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
         cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
@@ -907,6 +949,8 @@ public open class CfnDomain internal constructor(
       public fun enableDockerAccess(enableDockerAccess: String)
 
       public fun vpcOnlyTrustedAccounts(vpcOnlyTrustedAccounts: List<String>)
+
+      public fun vpcOnlyTrustedAccounts(vararg vpcOnlyTrustedAccounts: String)
     }
 
     private class BuilderImpl : Builder {
@@ -921,6 +965,9 @@ public open class CfnDomain internal constructor(
       override fun vpcOnlyTrustedAccounts(vpcOnlyTrustedAccounts: List<String>) {
         cdkBuilder.vpcOnlyTrustedAccounts(vpcOnlyTrustedAccounts)
       }
+
+      override fun vpcOnlyTrustedAccounts(vararg vpcOnlyTrustedAccounts: String): Unit =
+          vpcOnlyTrustedAccounts(vpcOnlyTrustedAccounts.toList())
 
       public fun build(): software.amazon.awscdk.services.sagemaker.CfnDomain.DockerSettingsProperty
           = cdkBuilder.build()
@@ -1329,6 +1376,8 @@ public open class CfnDomain internal constructor(
       public fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty.Builder.() -> Unit)
 
       public fun lifecycleConfigArns(lifecycleConfigArns: List<String>)
+
+      public fun lifecycleConfigArns(vararg lifecycleConfigArns: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1354,6 +1403,9 @@ public open class CfnDomain internal constructor(
       override fun lifecycleConfigArns(lifecycleConfigArns: List<String>) {
         cdkBuilder.lifecycleConfigArns(lifecycleConfigArns)
       }
+
+      override fun lifecycleConfigArns(vararg lifecycleConfigArns: String): Unit =
+          lifecycleConfigArns(lifecycleConfigArns.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnDomain.CodeEditorAppSettingsProperty =
@@ -1493,6 +1545,8 @@ public open class CfnDomain internal constructor(
 
       public fun customFileSystemConfigs(customFileSystemConfigs: List<Any>)
 
+      public fun customFileSystemConfigs(vararg customFileSystemConfigs: Any)
+
       public fun customPosixUserConfig(customPosixUserConfig: IResolvable)
 
       public fun customPosixUserConfig(customPosixUserConfig: CustomPosixUserConfigProperty)
@@ -1556,6 +1610,8 @@ public open class CfnDomain internal constructor(
 
       public fun securityGroups(securityGroups: List<String>)
 
+      public fun securityGroups(vararg securityGroups: String)
+
       public fun sharingSettings(sharingSettings: IResolvable)
 
       public fun sharingSettings(sharingSettings: SharingSettingsProperty)
@@ -1602,6 +1658,9 @@ public open class CfnDomain internal constructor(
       override fun customFileSystemConfigs(customFileSystemConfigs: List<Any>) {
         cdkBuilder.customFileSystemConfigs(customFileSystemConfigs)
       }
+
+      override fun customFileSystemConfigs(vararg customFileSystemConfigs: Any): Unit =
+          customFileSystemConfigs(customFileSystemConfigs.toList())
 
       override fun customPosixUserConfig(customPosixUserConfig: IResolvable) {
         cdkBuilder.customPosixUserConfig(customPosixUserConfig.let(IResolvable::unwrap))
@@ -1704,6 +1763,9 @@ public open class CfnDomain internal constructor(
       override fun securityGroups(securityGroups: List<String>) {
         cdkBuilder.securityGroups(securityGroups)
       }
+
+      override fun securityGroups(vararg securityGroups: String): Unit =
+          securityGroups(securityGroups.toList())
 
       override fun sharingSettings(sharingSettings: IResolvable) {
         cdkBuilder.sharingSettings(sharingSettings.let(IResolvable::unwrap))
@@ -1897,6 +1959,8 @@ public open class CfnDomain internal constructor(
           fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty.Builder.() -> Unit)
 
       public fun securityGroups(securityGroups: List<String>)
+
+      public fun securityGroups(vararg securityGroups: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1943,6 +2007,9 @@ public open class CfnDomain internal constructor(
       override fun securityGroups(securityGroups: List<String>) {
         cdkBuilder.securityGroups(securityGroups)
       }
+
+      override fun securityGroups(vararg securityGroups: String): Unit =
+          securityGroups(securityGroups.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceSettingsProperty =

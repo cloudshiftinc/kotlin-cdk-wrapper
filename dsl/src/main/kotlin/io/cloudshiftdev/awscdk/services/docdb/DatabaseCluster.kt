@@ -66,8 +66,7 @@ public open class DatabaseCluster internal constructor(
   public override fun instanceEndpoints(): List<Endpoint> =
       unwrap(this).getInstanceEndpoints().map(Endpoint::wrap)
 
-  public override fun instanceIdentifiers(): List<String> = unwrap(this).getInstanceIdentifiers() ?:
-      emptyList()
+  public override fun instanceIdentifiers(): List<String> = unwrap(this).getInstanceIdentifiers()
 
   public open fun secret(): ISecret? = unwrap(this).getSecret()?.let(ISecret::wrap)
 

@@ -83,6 +83,8 @@ public open class CfnRoute internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun virtualRouterName(): String = unwrap(this).getVirtualRouterName()
 
   public open fun virtualRouterName(`value`: String) {
@@ -105,6 +107,8 @@ public open class CfnRoute internal constructor(
     public fun spec(spec: RouteSpecProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun virtualRouterName(virtualRouterName: String)
   }
@@ -144,6 +148,8 @@ public open class CfnRoute internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun virtualRouterName(virtualRouterName: String) {
       cdkBuilder.virtualRouterName(virtualRouterName)
@@ -390,7 +396,11 @@ public open class CfnRoute internal constructor(
     public interface Builder {
       public fun grpcRetryEvents(grpcRetryEvents: List<String>)
 
+      public fun grpcRetryEvents(vararg grpcRetryEvents: String)
+
       public fun httpRetryEvents(httpRetryEvents: List<String>)
+
+      public fun httpRetryEvents(vararg httpRetryEvents: String)
 
       public fun maxRetries(maxRetries: Number)
 
@@ -403,6 +413,8 @@ public open class CfnRoute internal constructor(
       public fun perRetryTimeout(perRetryTimeout: DurationProperty.Builder.() -> Unit)
 
       public fun tcpRetryEvents(tcpRetryEvents: List<String>)
+
+      public fun tcpRetryEvents(vararg tcpRetryEvents: String)
     }
 
     private class BuilderImpl : Builder {
@@ -414,9 +426,15 @@ public open class CfnRoute internal constructor(
         cdkBuilder.grpcRetryEvents(grpcRetryEvents)
       }
 
+      override fun grpcRetryEvents(vararg grpcRetryEvents: String): Unit =
+          grpcRetryEvents(grpcRetryEvents.toList())
+
       override fun httpRetryEvents(httpRetryEvents: List<String>) {
         cdkBuilder.httpRetryEvents(httpRetryEvents)
       }
+
+      override fun httpRetryEvents(vararg httpRetryEvents: String): Unit =
+          httpRetryEvents(httpRetryEvents.toList())
 
       override fun maxRetries(maxRetries: Number) {
         cdkBuilder.maxRetries(maxRetries)
@@ -438,6 +456,9 @@ public open class CfnRoute internal constructor(
       override fun tcpRetryEvents(tcpRetryEvents: List<String>) {
         cdkBuilder.tcpRetryEvents(tcpRetryEvents)
       }
+
+      override fun tcpRetryEvents(vararg tcpRetryEvents: String): Unit =
+          tcpRetryEvents(tcpRetryEvents.toList())
 
       public fun build(): software.amazon.awscdk.services.appmesh.CfnRoute.GrpcRetryPolicyProperty =
           cdkBuilder.build()
@@ -487,6 +508,8 @@ public open class CfnRoute internal constructor(
       public fun weightedTargets(weightedTargets: IResolvable)
 
       public fun weightedTargets(weightedTargets: List<Any>)
+
+      public fun weightedTargets(vararg weightedTargets: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -501,6 +524,9 @@ public open class CfnRoute internal constructor(
       override fun weightedTargets(weightedTargets: List<Any>) {
         cdkBuilder.weightedTargets(weightedTargets)
       }
+
+      override fun weightedTargets(vararg weightedTargets: Any): Unit =
+          weightedTargets(weightedTargets.toList())
 
       public fun build(): software.amazon.awscdk.services.appmesh.CfnRoute.TcpRouteActionProperty =
           cdkBuilder.build()
@@ -588,6 +614,8 @@ public open class CfnRoute internal constructor(
       public fun weightedTargets(weightedTargets: IResolvable)
 
       public fun weightedTargets(weightedTargets: List<Any>)
+
+      public fun weightedTargets(vararg weightedTargets: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -602,6 +630,9 @@ public open class CfnRoute internal constructor(
       override fun weightedTargets(weightedTargets: List<Any>) {
         cdkBuilder.weightedTargets(weightedTargets)
       }
+
+      override fun weightedTargets(vararg weightedTargets: Any): Unit =
+          weightedTargets(weightedTargets.toList())
 
       public fun build(): software.amazon.awscdk.services.appmesh.CfnRoute.GrpcRouteActionProperty =
           cdkBuilder.build()
@@ -701,6 +732,8 @@ public open class CfnRoute internal constructor(
 
       public fun headers(headers: List<Any>)
 
+      public fun headers(vararg headers: Any)
+
       public fun method(method: String)
 
       public fun path(path: IResolvable)
@@ -719,6 +752,8 @@ public open class CfnRoute internal constructor(
 
       public fun queryParameters(queryParameters: List<Any>)
 
+      public fun queryParameters(vararg queryParameters: Any)
+
       public fun scheme(scheme: String)
     }
 
@@ -734,6 +769,8 @@ public open class CfnRoute internal constructor(
       override fun headers(headers: List<Any>) {
         cdkBuilder.headers(headers)
       }
+
+      override fun headers(vararg headers: Any): Unit = headers(headers.toList())
 
       override fun method(method: String) {
         cdkBuilder.method(method)
@@ -767,6 +804,9 @@ public open class CfnRoute internal constructor(
       override fun queryParameters(queryParameters: List<Any>) {
         cdkBuilder.queryParameters(queryParameters)
       }
+
+      override fun queryParameters(vararg queryParameters: Any): Unit =
+          queryParameters(queryParameters.toList())
 
       override fun scheme(scheme: String) {
         cdkBuilder.scheme(scheme)
@@ -958,6 +998,8 @@ public open class CfnRoute internal constructor(
       public fun weightedTargets(weightedTargets: IResolvable)
 
       public fun weightedTargets(weightedTargets: List<Any>)
+
+      public fun weightedTargets(vararg weightedTargets: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -972,6 +1014,9 @@ public open class CfnRoute internal constructor(
       override fun weightedTargets(weightedTargets: List<Any>) {
         cdkBuilder.weightedTargets(weightedTargets)
       }
+
+      override fun weightedTargets(vararg weightedTargets: Any): Unit =
+          weightedTargets(weightedTargets.toList())
 
       public fun build(): software.amazon.awscdk.services.appmesh.CfnRoute.HttpRouteActionProperty =
           cdkBuilder.build()
@@ -1520,6 +1565,8 @@ public open class CfnRoute internal constructor(
     public interface Builder {
       public fun httpRetryEvents(httpRetryEvents: List<String>)
 
+      public fun httpRetryEvents(vararg httpRetryEvents: String)
+
       public fun maxRetries(maxRetries: Number)
 
       public fun perRetryTimeout(perRetryTimeout: IResolvable)
@@ -1531,6 +1578,8 @@ public open class CfnRoute internal constructor(
       public fun perRetryTimeout(perRetryTimeout: DurationProperty.Builder.() -> Unit)
 
       public fun tcpRetryEvents(tcpRetryEvents: List<String>)
+
+      public fun tcpRetryEvents(vararg tcpRetryEvents: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1541,6 +1590,9 @@ public open class CfnRoute internal constructor(
       override fun httpRetryEvents(httpRetryEvents: List<String>) {
         cdkBuilder.httpRetryEvents(httpRetryEvents)
       }
+
+      override fun httpRetryEvents(vararg httpRetryEvents: String): Unit =
+          httpRetryEvents(httpRetryEvents.toList())
 
       override fun maxRetries(maxRetries: Number) {
         cdkBuilder.maxRetries(maxRetries)
@@ -1562,6 +1614,9 @@ public open class CfnRoute internal constructor(
       override fun tcpRetryEvents(tcpRetryEvents: List<String>) {
         cdkBuilder.tcpRetryEvents(tcpRetryEvents)
       }
+
+      override fun tcpRetryEvents(vararg tcpRetryEvents: String): Unit =
+          tcpRetryEvents(tcpRetryEvents.toList())
 
       public fun build(): software.amazon.awscdk.services.appmesh.CfnRoute.HttpRetryPolicyProperty =
           cdkBuilder.build()
@@ -2083,6 +2138,8 @@ public open class CfnRoute internal constructor(
 
       public fun metadata(metadata: List<Any>)
 
+      public fun metadata(vararg metadata: Any)
+
       public fun methodName(methodName: String)
 
       public fun port(port: Number)
@@ -2102,6 +2159,8 @@ public open class CfnRoute internal constructor(
       override fun metadata(metadata: List<Any>) {
         cdkBuilder.metadata(metadata)
       }
+
+      override fun metadata(vararg metadata: Any): Unit = metadata(metadata.toList())
 
       override fun methodName(methodName: String) {
         cdkBuilder.methodName(methodName)

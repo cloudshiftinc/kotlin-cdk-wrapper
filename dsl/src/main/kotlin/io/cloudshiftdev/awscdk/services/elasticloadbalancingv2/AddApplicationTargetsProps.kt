@@ -40,6 +40,8 @@ public interface AddApplicationTargetsProps : AddRuleProps {
   public interface Builder {
     public fun conditions(conditions: List<ListenerCondition>)
 
+    public fun conditions(vararg conditions: ListenerCondition)
+
     public fun deregistrationDelay(deregistrationDelay: Duration)
 
     public fun healthCheck(healthCheck: HealthCheck)
@@ -68,6 +70,8 @@ public interface AddApplicationTargetsProps : AddRuleProps {
     public fun targetGroupName(targetGroupName: String)
 
     public fun targets(targets: List<IApplicationLoadBalancerTarget>)
+
+    public fun targets(vararg targets: IApplicationLoadBalancerTarget)
   }
 
   private class BuilderImpl : Builder {
@@ -78,6 +82,9 @@ public interface AddApplicationTargetsProps : AddRuleProps {
     override fun conditions(conditions: List<ListenerCondition>) {
       cdkBuilder.conditions(conditions.map(ListenerCondition::unwrap))
     }
+
+    override fun conditions(vararg conditions: ListenerCondition): Unit =
+        conditions(conditions.toList())
 
     override fun deregistrationDelay(deregistrationDelay: Duration) {
       cdkBuilder.deregistrationDelay(deregistrationDelay.let(Duration::unwrap))
@@ -132,6 +139,9 @@ public interface AddApplicationTargetsProps : AddRuleProps {
     override fun targets(targets: List<IApplicationLoadBalancerTarget>) {
       cdkBuilder.targets(targets.map(IApplicationLoadBalancerTarget::unwrap))
     }
+
+    override fun targets(vararg targets: IApplicationLoadBalancerTarget): Unit =
+        targets(targets.toList())
 
     public fun build():
         software.amazon.awscdk.services.elasticloadbalancingv2.AddApplicationTargetsProps =

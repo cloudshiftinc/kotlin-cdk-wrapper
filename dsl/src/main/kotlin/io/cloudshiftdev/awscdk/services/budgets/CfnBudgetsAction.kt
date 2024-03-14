@@ -93,6 +93,8 @@ public open class CfnBudgetsAction internal constructor(
     unwrap(this).setSubscribers(__idx_ac66f0)
   }
 
+  public open fun subscribers(vararg __idx_ac66f0: Any): Unit = subscribers(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun actionThreshold(actionThreshold: IResolvable)
 
@@ -123,6 +125,8 @@ public open class CfnBudgetsAction internal constructor(
     public fun subscribers(subscribers: IResolvable)
 
     public fun subscribers(subscribers: List<Any>)
+
+    public fun subscribers(vararg subscribers: Any)
   }
 
   private class BuilderImpl(
@@ -186,6 +190,8 @@ public open class CfnBudgetsAction internal constructor(
       cdkBuilder.subscribers(subscribers)
     }
 
+    override fun subscribers(vararg subscribers: Any): Unit = subscribers(subscribers.toList())
+
     public fun build(): software.amazon.awscdk.services.budgets.CfnBudgetsAction =
         cdkBuilder.build()
   }
@@ -221,6 +227,8 @@ public open class CfnBudgetsAction internal constructor(
     public interface Builder {
       public fun instanceIds(instanceIds: List<String>)
 
+      public fun instanceIds(vararg instanceIds: String)
+
       public fun region(region: String)
 
       public fun subtype(subtype: String)
@@ -235,6 +243,8 @@ public open class CfnBudgetsAction internal constructor(
       override fun instanceIds(instanceIds: List<String>) {
         cdkBuilder.instanceIds(instanceIds)
       }
+
+      override fun instanceIds(vararg instanceIds: String): Unit = instanceIds(instanceIds.toList())
 
       override fun region(region: String) {
         cdkBuilder.region(region)
@@ -253,7 +263,7 @@ public open class CfnBudgetsAction internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.SsmActionDefinitionProperty,
     ) : SsmActionDefinitionProperty {
-      override fun instanceIds(): List<String> = unwrap(this).getInstanceIds() ?: emptyList()
+      override fun instanceIds(): List<String> = unwrap(this).getInstanceIds()
 
       override fun region(): String = unwrap(this).getRegion()
 
@@ -527,11 +537,17 @@ public open class CfnBudgetsAction internal constructor(
     public interface Builder {
       public fun groups(groups: List<String>)
 
+      public fun groups(vararg groups: String)
+
       public fun policyArn(policyArn: String)
 
       public fun roles(roles: List<String>)
 
+      public fun roles(vararg roles: String)
+
       public fun users(users: List<String>)
+
+      public fun users(vararg users: String)
     }
 
     private class BuilderImpl : Builder {
@@ -544,6 +560,8 @@ public open class CfnBudgetsAction internal constructor(
         cdkBuilder.groups(groups)
       }
 
+      override fun groups(vararg groups: String): Unit = groups(groups.toList())
+
       override fun policyArn(policyArn: String) {
         cdkBuilder.policyArn(policyArn)
       }
@@ -552,9 +570,13 @@ public open class CfnBudgetsAction internal constructor(
         cdkBuilder.roles(roles)
       }
 
+      override fun roles(vararg roles: String): Unit = roles(roles.toList())
+
       override fun users(users: List<String>) {
         cdkBuilder.users(users)
       }
+
+      override fun users(vararg users: String): Unit = users(users.toList())
 
       public fun build():
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.IamActionDefinitionProperty =
@@ -603,6 +625,8 @@ public open class CfnBudgetsAction internal constructor(
       public fun policyId(policyId: String)
 
       public fun targetIds(targetIds: List<String>)
+
+      public fun targetIds(vararg targetIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -619,6 +643,8 @@ public open class CfnBudgetsAction internal constructor(
         cdkBuilder.targetIds(targetIds)
       }
 
+      override fun targetIds(vararg targetIds: String): Unit = targetIds(targetIds.toList())
+
       public fun build():
           software.amazon.awscdk.services.budgets.CfnBudgetsAction.ScpActionDefinitionProperty =
           cdkBuilder.build()
@@ -630,7 +656,7 @@ public open class CfnBudgetsAction internal constructor(
     ) : ScpActionDefinitionProperty {
       override fun policyId(): String = unwrap(this).getPolicyId()
 
-      override fun targetIds(): List<String> = unwrap(this).getTargetIds() ?: emptyList()
+      override fun targetIds(): List<String> = unwrap(this).getTargetIds()
     }
 
     public companion object {

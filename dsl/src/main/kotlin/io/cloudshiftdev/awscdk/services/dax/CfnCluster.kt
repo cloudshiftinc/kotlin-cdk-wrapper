@@ -37,6 +37,9 @@ public open class CfnCluster internal constructor(
     unwrap(this).setAvailabilityZones(`value`)
   }
 
+  public open fun availabilityZones(vararg `value`: String): Unit =
+      availabilityZones(`value`.toList())
+
   public open fun clusterEndpointEncryptionType(): String? =
       unwrap(this).getClusterEndpointEncryptionType()
 
@@ -104,6 +107,9 @@ public open class CfnCluster internal constructor(
     unwrap(this).setSecurityGroupIds(`value`)
   }
 
+  public open fun securityGroupIds(vararg `value`: String): Unit =
+      securityGroupIds(`value`.toList())
+
   public open fun sseSpecification(): Any? = unwrap(this).getSseSpecification()
 
   public open fun sseSpecification(`value`: IResolvable) {
@@ -136,6 +142,8 @@ public open class CfnCluster internal constructor(
   public interface Builder {
     public fun availabilityZones(availabilityZones: List<String>)
 
+    public fun availabilityZones(vararg availabilityZones: String)
+
     public fun clusterEndpointEncryptionType(clusterEndpointEncryptionType: String)
 
     public fun clusterName(clusterName: String)
@@ -155,6 +163,8 @@ public open class CfnCluster internal constructor(
     public fun replicationFactor(replicationFactor: Number)
 
     public fun securityGroupIds(securityGroupIds: List<String>)
+
+    public fun securityGroupIds(vararg securityGroupIds: String)
 
     public fun sseSpecification(sseSpecification: IResolvable)
 
@@ -179,6 +189,9 @@ public open class CfnCluster internal constructor(
     override fun availabilityZones(availabilityZones: List<String>) {
       cdkBuilder.availabilityZones(availabilityZones)
     }
+
+    override fun availabilityZones(vararg availabilityZones: String): Unit =
+        availabilityZones(availabilityZones.toList())
 
     override fun clusterEndpointEncryptionType(clusterEndpointEncryptionType: String) {
       cdkBuilder.clusterEndpointEncryptionType(clusterEndpointEncryptionType)
@@ -219,6 +232,9 @@ public open class CfnCluster internal constructor(
     override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
+
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
 
     override fun sseSpecification(sseSpecification: IResolvable) {
       cdkBuilder.sseSpecification(sseSpecification.let(IResolvable::unwrap))

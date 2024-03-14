@@ -30,7 +30,7 @@ public open class CfnBrowserSettings internal constructor(
   }
 
   public open fun attrAssociatedPortalArns(): List<String> =
-      unwrap(this).getAttrAssociatedPortalArns() ?: emptyList()
+      unwrap(this).getAttrAssociatedPortalArns()
 
   public open fun attrBrowserSettingsArn(): String = unwrap(this).getAttrBrowserSettingsArn()
 
@@ -59,6 +59,8 @@ public open class CfnBrowserSettings internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
 
@@ -69,6 +71,8 @@ public open class CfnBrowserSettings internal constructor(
     public fun customerManagedKey(customerManagedKey: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -97,6 +101,8 @@ public open class CfnBrowserSettings internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.workspacesweb.CfnBrowserSettings =
         cdkBuilder.build()

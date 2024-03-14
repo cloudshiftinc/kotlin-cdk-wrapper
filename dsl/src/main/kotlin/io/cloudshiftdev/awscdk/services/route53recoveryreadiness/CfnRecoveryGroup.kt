@@ -23,6 +23,8 @@ public open class CfnRecoveryGroup internal constructor(
     unwrap(this).setCells(`value`)
   }
 
+  public open fun cells(vararg `value`: String): Unit = cells(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -42,12 +44,18 @@ public open class CfnRecoveryGroup internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun cells(cells: List<String>)
+
+    public fun cells(vararg cells: String)
 
     public fun recoveryGroupName(recoveryGroupName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -63,6 +71,8 @@ public open class CfnRecoveryGroup internal constructor(
       cdkBuilder.cells(cells)
     }
 
+    override fun cells(vararg cells: String): Unit = cells(cells.toList())
+
     override fun recoveryGroupName(recoveryGroupName: String) {
       cdkBuilder.recoveryGroupName(recoveryGroupName)
     }
@@ -70,6 +80,8 @@ public open class CfnRecoveryGroup internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.route53recoveryreadiness.CfnRecoveryGroup =
         cdkBuilder.build()

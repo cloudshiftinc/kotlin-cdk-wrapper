@@ -51,6 +51,8 @@ public interface ServiceManagedEBSVolumeConfiguration {
 
     public fun tagSpecifications(tagSpecifications: List<EBSTagSpecification>)
 
+    public fun tagSpecifications(vararg tagSpecifications: EBSTagSpecification)
+
     public fun throughput(throughput: Number)
 
     public fun volumeType(volumeType: EbsDeviceVolumeType)
@@ -92,6 +94,9 @@ public interface ServiceManagedEBSVolumeConfiguration {
     override fun tagSpecifications(tagSpecifications: List<EBSTagSpecification>) {
       cdkBuilder.tagSpecifications(tagSpecifications.map(EBSTagSpecification::unwrap))
     }
+
+    override fun tagSpecifications(vararg tagSpecifications: EBSTagSpecification): Unit =
+        tagSpecifications(tagSpecifications.toList())
 
     override fun throughput(throughput: Number) {
       cdkBuilder.throughput(throughput)

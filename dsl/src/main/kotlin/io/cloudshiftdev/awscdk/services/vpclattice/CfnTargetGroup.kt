@@ -65,6 +65,8 @@ public open class CfnTargetGroup internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun targets(): Any? = unwrap(this).getTargets()
 
   public open fun targets(`value`: IResolvable) {
@@ -74,6 +76,8 @@ public open class CfnTargetGroup internal constructor(
   public open fun targets(__idx_ac66f0: List<Any>) {
     unwrap(this).setTargets(__idx_ac66f0)
   }
+
+  public open fun targets(vararg __idx_ac66f0: Any): Unit = targets(__idx_ac66f0.toList())
 
   public open fun type(): String = unwrap(this).getType()
 
@@ -94,9 +98,13 @@ public open class CfnTargetGroup internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun targets(targets: IResolvable)
 
     public fun targets(targets: List<Any>)
+
+    public fun targets(vararg targets: Any)
 
     public fun type(type: String)
   }
@@ -129,6 +137,8 @@ public open class CfnTargetGroup internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun targets(targets: IResolvable) {
       cdkBuilder.targets(targets.let(IResolvable::unwrap))
     }
@@ -136,6 +146,8 @@ public open class CfnTargetGroup internal constructor(
     override fun targets(targets: List<Any>) {
       cdkBuilder.targets(targets)
     }
+
+    override fun targets(vararg targets: Any): Unit = targets(targets.toList())
 
     override fun type(type: String) {
       cdkBuilder.type(type)

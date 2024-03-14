@@ -276,6 +276,8 @@ public open class CfnConfigurationSetEventDestination internal constructor(
 
       public fun matchingEventTypes(matchingEventTypes: List<String>)
 
+      public fun matchingEventTypes(vararg matchingEventTypes: String)
+
       public fun name(name: String)
 
       public fun snsDestination(snsDestination: IResolvable)
@@ -335,6 +337,9 @@ public open class CfnConfigurationSetEventDestination internal constructor(
         cdkBuilder.matchingEventTypes(matchingEventTypes)
       }
 
+      override fun matchingEventTypes(vararg matchingEventTypes: String): Unit =
+          matchingEventTypes(matchingEventTypes.toList())
+
       override fun name(name: String) {
         cdkBuilder.name(name)
       }
@@ -367,8 +372,7 @@ public open class CfnConfigurationSetEventDestination internal constructor(
 
       override fun kinesisFirehoseDestination(): Any? = unwrap(this).getKinesisFirehoseDestination()
 
-      override fun matchingEventTypes(): List<String> = unwrap(this).getMatchingEventTypes() ?:
-          emptyList()
+      override fun matchingEventTypes(): List<String> = unwrap(this).getMatchingEventTypes()
 
       override fun name(): String? = unwrap(this).getName()
 
@@ -451,6 +455,8 @@ public open class CfnConfigurationSetEventDestination internal constructor(
       public fun dimensionConfigurations(dimensionConfigurations: IResolvable)
 
       public fun dimensionConfigurations(dimensionConfigurations: List<Any>)
+
+      public fun dimensionConfigurations(vararg dimensionConfigurations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -466,6 +472,9 @@ public open class CfnConfigurationSetEventDestination internal constructor(
       override fun dimensionConfigurations(dimensionConfigurations: List<Any>) {
         cdkBuilder.dimensionConfigurations(dimensionConfigurations)
       }
+
+      override fun dimensionConfigurations(vararg dimensionConfigurations: Any): Unit =
+          dimensionConfigurations(dimensionConfigurations.toList())
 
       public fun build():
           software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination.CloudWatchDestinationProperty

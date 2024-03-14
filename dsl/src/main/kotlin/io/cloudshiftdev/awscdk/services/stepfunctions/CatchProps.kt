@@ -12,6 +12,8 @@ public interface CatchProps {
   public interface Builder {
     public fun errors(errors: List<String>)
 
+    public fun errors(vararg errors: String)
+
     public fun resultPath(resultPath: String)
   }
 
@@ -22,6 +24,8 @@ public interface CatchProps {
     override fun errors(errors: List<String>) {
       cdkBuilder.errors(errors)
     }
+
+    override fun errors(vararg errors: String): Unit = errors(errors.toList())
 
     override fun resultPath(resultPath: String) {
       cdkBuilder.resultPath(resultPath)

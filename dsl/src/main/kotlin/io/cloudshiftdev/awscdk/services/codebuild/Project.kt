@@ -287,6 +287,8 @@ public open class Project internal constructor(
 
     public fun fileSystemLocations(fileSystemLocations: List<IFileSystemLocation>)
 
+    public fun fileSystemLocations(vararg fileSystemLocations: IFileSystemLocation)
+
     public fun grantReportGroupPermissions(grantReportGroupPermissions: Boolean)
 
     public fun logging(logging: LoggingOptions)
@@ -303,9 +305,15 @@ public open class Project internal constructor(
 
     public fun secondaryArtifacts(secondaryArtifacts: List<IArtifacts>)
 
+    public fun secondaryArtifacts(vararg secondaryArtifacts: IArtifacts)
+
     public fun secondarySources(secondarySources: List<ISource>)
 
+    public fun secondarySources(vararg secondarySources: ISource)
+
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
+
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
 
     public fun source(source: ISource)
 
@@ -382,6 +390,9 @@ public open class Project internal constructor(
       cdkBuilder.fileSystemLocations(fileSystemLocations.map(IFileSystemLocation::unwrap))
     }
 
+    override fun fileSystemLocations(vararg fileSystemLocations: IFileSystemLocation): Unit =
+        fileSystemLocations(fileSystemLocations.toList())
+
     override fun grantReportGroupPermissions(grantReportGroupPermissions: Boolean) {
       cdkBuilder.grantReportGroupPermissions(grantReportGroupPermissions)
     }
@@ -411,13 +422,22 @@ public open class Project internal constructor(
       cdkBuilder.secondaryArtifacts(secondaryArtifacts.map(IArtifacts::unwrap))
     }
 
+    override fun secondaryArtifacts(vararg secondaryArtifacts: IArtifacts): Unit =
+        secondaryArtifacts(secondaryArtifacts.toList())
+
     override fun secondarySources(secondarySources: List<ISource>) {
       cdkBuilder.secondarySources(secondarySources.map(ISource::unwrap))
     }
 
+    override fun secondarySources(vararg secondarySources: ISource): Unit =
+        secondarySources(secondarySources.toList())
+
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun source(source: ISource) {
       cdkBuilder.source(source.let(ISource::unwrap))

@@ -23,7 +23,7 @@ public open class CfnChannel internal constructor(
 
   public open fun attrId(): String = unwrap(this).getAttrId()
 
-  public open fun attrInputs(): List<String> = unwrap(this).getAttrInputs() ?: emptyList()
+  public open fun attrInputs(): List<String> = unwrap(this).getAttrInputs()
 
   public open fun cdiInputSpecification(): Any? = unwrap(this).getCdiInputSpecification()
 
@@ -56,6 +56,8 @@ public open class CfnChannel internal constructor(
     unwrap(this).setDestinations(__idx_ac66f0)
   }
 
+  public open fun destinations(vararg __idx_ac66f0: Any): Unit = destinations(__idx_ac66f0.toList())
+
   public open fun encoderSettings(): Any? = unwrap(this).getEncoderSettings()
 
   public open fun encoderSettings(`value`: IResolvable) {
@@ -80,6 +82,9 @@ public open class CfnChannel internal constructor(
   public open fun inputAttachments(__idx_ac66f0: List<Any>) {
     unwrap(this).setInputAttachments(__idx_ac66f0)
   }
+
+  public open fun inputAttachments(vararg __idx_ac66f0: Any): Unit =
+      inputAttachments(__idx_ac66f0.toList())
 
   public open fun inputSpecification(): Any? = unwrap(this).getInputSpecification()
 
@@ -172,6 +177,8 @@ public open class CfnChannel internal constructor(
 
     public fun destinations(destinations: List<Any>)
 
+    public fun destinations(vararg destinations: Any)
+
     public fun encoderSettings(encoderSettings: IResolvable)
 
     public fun encoderSettings(encoderSettings: EncoderSettingsProperty)
@@ -183,6 +190,8 @@ public open class CfnChannel internal constructor(
     public fun inputAttachments(inputAttachments: IResolvable)
 
     public fun inputAttachments(inputAttachments: List<Any>)
+
+    public fun inputAttachments(vararg inputAttachments: Any)
 
     public fun inputSpecification(inputSpecification: IResolvable)
 
@@ -250,6 +259,8 @@ public open class CfnChannel internal constructor(
       cdkBuilder.destinations(destinations)
     }
 
+    override fun destinations(vararg destinations: Any): Unit = destinations(destinations.toList())
+
     override fun encoderSettings(encoderSettings: IResolvable) {
       cdkBuilder.encoderSettings(encoderSettings.let(IResolvable::unwrap))
     }
@@ -270,6 +281,9 @@ public open class CfnChannel internal constructor(
     override fun inputAttachments(inputAttachments: List<Any>) {
       cdkBuilder.inputAttachments(inputAttachments)
     }
+
+    override fun inputAttachments(vararg inputAttachments: Any): Unit =
+        inputAttachments(inputAttachments.toList())
 
     override fun inputSpecification(inputSpecification: IResolvable) {
       cdkBuilder.inputSpecification(inputSpecification.let(IResolvable::unwrap))
@@ -665,6 +679,8 @@ public open class CfnChannel internal constructor(
 
       public fun audioDescriptions(audioDescriptions: List<Any>)
 
+      public fun audioDescriptions(vararg audioDescriptions: Any)
+
       public fun availBlanking(availBlanking: IResolvable)
 
       public fun availBlanking(availBlanking: AvailBlankingProperty)
@@ -693,6 +709,8 @@ public open class CfnChannel internal constructor(
       public fun captionDescriptions(captionDescriptions: IResolvable)
 
       public fun captionDescriptions(captionDescriptions: List<Any>)
+
+      public fun captionDescriptions(vararg captionDescriptions: Any)
 
       public fun colorCorrectionSettings(colorCorrectionSettings: IResolvable)
 
@@ -744,6 +762,8 @@ public open class CfnChannel internal constructor(
 
       public fun outputGroups(outputGroups: List<Any>)
 
+      public fun outputGroups(vararg outputGroups: Any)
+
       public fun thumbnailConfiguration(thumbnailConfiguration: IResolvable)
 
       public fun thumbnailConfiguration(thumbnailConfiguration: ThumbnailConfigurationProperty)
@@ -764,6 +784,8 @@ public open class CfnChannel internal constructor(
       public fun videoDescriptions(videoDescriptions: IResolvable)
 
       public fun videoDescriptions(videoDescriptions: List<Any>)
+
+      public fun videoDescriptions(vararg videoDescriptions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -778,6 +800,9 @@ public open class CfnChannel internal constructor(
       override fun audioDescriptions(audioDescriptions: List<Any>) {
         cdkBuilder.audioDescriptions(audioDescriptions)
       }
+
+      override fun audioDescriptions(vararg audioDescriptions: Any): Unit =
+          audioDescriptions(audioDescriptions.toList())
 
       override fun availBlanking(availBlanking: IResolvable) {
         cdkBuilder.availBlanking(availBlanking.let(IResolvable::unwrap))
@@ -826,6 +851,9 @@ public open class CfnChannel internal constructor(
       override fun captionDescriptions(captionDescriptions: List<Any>) {
         cdkBuilder.captionDescriptions(captionDescriptions)
       }
+
+      override fun captionDescriptions(vararg captionDescriptions: Any): Unit =
+          captionDescriptions(captionDescriptions.toList())
 
       override fun colorCorrectionSettings(colorCorrectionSettings: IResolvable) {
         cdkBuilder.colorCorrectionSettings(colorCorrectionSettings.let(IResolvable::unwrap))
@@ -908,6 +936,9 @@ public open class CfnChannel internal constructor(
         cdkBuilder.outputGroups(outputGroups)
       }
 
+      override fun outputGroups(vararg outputGroups: Any): Unit =
+          outputGroups(outputGroups.toList())
+
       override fun thumbnailConfiguration(thumbnailConfiguration: IResolvable) {
         cdkBuilder.thumbnailConfiguration(thumbnailConfiguration.let(IResolvable::unwrap))
       }
@@ -942,6 +973,9 @@ public open class CfnChannel internal constructor(
       override fun videoDescriptions(videoDescriptions: List<Any>) {
         cdkBuilder.videoDescriptions(videoDescriptions)
       }
+
+      override fun videoDescriptions(vararg videoDescriptions: Any): Unit =
+          videoDescriptions(videoDescriptions.toList())
 
       public fun build():
           software.amazon.awscdk.services.medialive.CfnChannel.EncoderSettingsProperty =
@@ -1306,6 +1340,8 @@ public open class CfnChannel internal constructor(
       public fun tracks(tracks: IResolvable)
 
       public fun tracks(tracks: List<Any>)
+
+      public fun tracks(vararg tracks: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1333,6 +1369,8 @@ public open class CfnChannel internal constructor(
       override fun tracks(tracks: List<Any>) {
         cdkBuilder.tracks(tracks)
       }
+
+      override fun tracks(vararg tracks: Any): Unit = tracks(tracks.toList())
 
       public fun build():
           software.amazon.awscdk.services.medialive.CfnChannel.AudioTrackSelectionProperty =
@@ -1890,6 +1928,8 @@ public open class CfnChannel internal constructor(
     public interface Builder {
       public fun adMarkers(adMarkers: List<String>)
 
+      public fun adMarkers(vararg adMarkers: String)
+
       public fun baseUrlContent(baseUrlContent: String)
 
       public fun baseUrlContent1(baseUrlContent1: String)
@@ -1901,6 +1941,8 @@ public open class CfnChannel internal constructor(
       public fun captionLanguageMappings(captionLanguageMappings: IResolvable)
 
       public fun captionLanguageMappings(captionLanguageMappings: List<Any>)
+
+      public fun captionLanguageMappings(vararg captionLanguageMappings: Any)
 
       public fun captionLanguageSetting(captionLanguageSetting: String)
 
@@ -2005,6 +2047,8 @@ public open class CfnChannel internal constructor(
         cdkBuilder.adMarkers(adMarkers)
       }
 
+      override fun adMarkers(vararg adMarkers: String): Unit = adMarkers(adMarkers.toList())
+
       override fun baseUrlContent(baseUrlContent: String) {
         cdkBuilder.baseUrlContent(baseUrlContent)
       }
@@ -2028,6 +2072,9 @@ public open class CfnChannel internal constructor(
       override fun captionLanguageMappings(captionLanguageMappings: List<Any>) {
         cdkBuilder.captionLanguageMappings(captionLanguageMappings)
       }
+
+      override fun captionLanguageMappings(vararg captionLanguageMappings: Any): Unit =
+          captionLanguageMappings(captionLanguageMappings.toList())
 
       override fun captionLanguageSetting(captionLanguageSetting: String) {
         cdkBuilder.captionLanguageSetting(captionLanguageSetting)
@@ -2864,6 +2911,8 @@ public open class CfnChannel internal constructor(
 
       public fun failoverConditions(failoverConditions: List<Any>)
 
+      public fun failoverConditions(vararg failoverConditions: Any)
+
       public fun inputPreference(inputPreference: String)
 
       public fun secondaryInputId(secondaryInputId: String)
@@ -2886,6 +2935,9 @@ public open class CfnChannel internal constructor(
       override fun failoverConditions(failoverConditions: List<Any>) {
         cdkBuilder.failoverConditions(failoverConditions)
       }
+
+      override fun failoverConditions(vararg failoverConditions: Any): Unit =
+          failoverConditions(failoverConditions.toList())
 
       override fun inputPreference(inputPreference: String) {
         cdkBuilder.inputPreference(inputPreference)
@@ -7094,9 +7146,15 @@ public open class CfnChannel internal constructor(
     public interface Builder {
       public fun publicAddressAllocationIds(publicAddressAllocationIds: List<String>)
 
+      public fun publicAddressAllocationIds(vararg publicAddressAllocationIds: String)
+
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -7108,13 +7166,21 @@ public open class CfnChannel internal constructor(
         cdkBuilder.publicAddressAllocationIds(publicAddressAllocationIds)
       }
 
+      override fun publicAddressAllocationIds(vararg publicAddressAllocationIds: String): Unit =
+          publicAddressAllocationIds(publicAddressAllocationIds.toList())
+
       override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       public fun build():
           software.amazon.awscdk.services.medialive.CfnChannel.VpcOutputSettingsProperty =
@@ -7284,6 +7350,8 @@ public open class CfnChannel internal constructor(
     public interface Builder {
       public fun adMarkers(adMarkers: List<String>)
 
+      public fun adMarkers(vararg adMarkers: String)
+
       public fun authenticationScheme(authenticationScheme: String)
 
       public fun cacheFullBehavior(cacheFullBehavior: String)
@@ -7307,6 +7375,8 @@ public open class CfnChannel internal constructor(
       override fun adMarkers(adMarkers: List<String>) {
         cdkBuilder.adMarkers(adMarkers)
       }
+
+      override fun adMarkers(vararg adMarkers: String): Unit = adMarkers(adMarkers.toList())
 
       override fun authenticationScheme(authenticationScheme: String) {
         cdkBuilder.authenticationScheme(authenticationScheme)
@@ -8030,6 +8100,8 @@ public open class CfnChannel internal constructor(
 
       public fun mediaPackageSettings(mediaPackageSettings: List<Any>)
 
+      public fun mediaPackageSettings(vararg mediaPackageSettings: Any)
+
       public fun multiplexSettings(multiplexSettings: IResolvable)
 
       public
@@ -8043,6 +8115,8 @@ public open class CfnChannel internal constructor(
       public fun tings(settings: IResolvable)
 
       public fun tings(settings: List<Any>)
+
+      public fun tings(vararg settings: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -8061,6 +8135,9 @@ public open class CfnChannel internal constructor(
       override fun mediaPackageSettings(mediaPackageSettings: List<Any>) {
         cdkBuilder.mediaPackageSettings(mediaPackageSettings)
       }
+
+      override fun mediaPackageSettings(vararg mediaPackageSettings: Any): Unit =
+          mediaPackageSettings(mediaPackageSettings.toList())
 
       override fun multiplexSettings(multiplexSettings: IResolvable) {
         cdkBuilder.multiplexSettings(multiplexSettings.let(IResolvable::unwrap))
@@ -8085,6 +8162,8 @@ public open class CfnChannel internal constructor(
       override fun tings(settings: List<Any>) {
         cdkBuilder.settings(settings)
       }
+
+      override fun tings(vararg settings: Any): Unit = tings(settings.toList())
 
       public fun build():
           software.amazon.awscdk.services.medialive.CfnChannel.OutputDestinationProperty =
@@ -8521,6 +8600,8 @@ public open class CfnChannel internal constructor(
       public fun globalColorCorrections(globalColorCorrections: IResolvable)
 
       public fun globalColorCorrections(globalColorCorrections: List<Any>)
+
+      public fun globalColorCorrections(vararg globalColorCorrections: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -8536,6 +8617,9 @@ public open class CfnChannel internal constructor(
       override fun globalColorCorrections(globalColorCorrections: List<Any>) {
         cdkBuilder.globalColorCorrections(globalColorCorrections)
       }
+
+      override fun globalColorCorrections(vararg globalColorCorrections: Any): Unit =
+          globalColorCorrections(globalColorCorrections.toList())
 
       public fun build():
           software.amazon.awscdk.services.medialive.CfnChannel.ColorCorrectionSettingsProperty =
@@ -9164,6 +9248,8 @@ public open class CfnChannel internal constructor(
 
       public fun channelMappings(channelMappings: List<Any>)
 
+      public fun channelMappings(vararg channelMappings: Any)
+
       public fun channelsIn(channelsIn: Number)
 
       public fun channelsOut(channelsOut: Number)
@@ -9181,6 +9267,9 @@ public open class CfnChannel internal constructor(
       override fun channelMappings(channelMappings: List<Any>) {
         cdkBuilder.channelMappings(channelMappings)
       }
+
+      override fun channelMappings(vararg channelMappings: Any): Unit =
+          channelMappings(channelMappings.toList())
 
       override fun channelsIn(channelsIn: Number) {
         cdkBuilder.channelsIn(channelsIn)
@@ -10160,6 +10249,8 @@ public open class CfnChannel internal constructor(
 
       public fun inputChannelLevels(inputChannelLevels: List<Any>)
 
+      public fun inputChannelLevels(vararg inputChannelLevels: Any)
+
       public fun outputChannel(outputChannel: Number)
     }
 
@@ -10175,6 +10266,9 @@ public open class CfnChannel internal constructor(
       override fun inputChannelLevels(inputChannelLevels: List<Any>) {
         cdkBuilder.inputChannelLevels(inputChannelLevels)
       }
+
+      override fun inputChannelLevels(vararg inputChannelLevels: Any): Unit =
+          inputChannelLevels(inputChannelLevels.toList())
 
       override fun outputChannel(outputChannel: Number) {
         cdkBuilder.outputChannel(outputChannel)
@@ -15341,7 +15435,11 @@ public open class CfnChannel internal constructor(
     public interface Builder {
       public fun audioDescriptionNames(audioDescriptionNames: List<String>)
 
+      public fun audioDescriptionNames(vararg audioDescriptionNames: String)
+
       public fun captionDescriptionNames(captionDescriptionNames: List<String>)
+
+      public fun captionDescriptionNames(vararg captionDescriptionNames: String)
 
       public fun outputName(outputName: String)
 
@@ -15365,9 +15463,15 @@ public open class CfnChannel internal constructor(
         cdkBuilder.audioDescriptionNames(audioDescriptionNames)
       }
 
+      override fun audioDescriptionNames(vararg audioDescriptionNames: String): Unit =
+          audioDescriptionNames(audioDescriptionNames.toList())
+
       override fun captionDescriptionNames(captionDescriptionNames: List<String>) {
         cdkBuilder.captionDescriptionNames(captionDescriptionNames)
       }
+
+      override fun captionDescriptionNames(vararg captionDescriptionNames: String): Unit =
+          captionDescriptionNames(captionDescriptionNames.toList())
 
       override fun outputName(outputName: String) {
         cdkBuilder.outputName(outputName)
@@ -16025,6 +16129,8 @@ public open class CfnChannel internal constructor(
       public fun outputs(outputs: IResolvable)
 
       public fun outputs(outputs: List<Any>)
+
+      public fun outputs(vararg outputs: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -16057,6 +16163,8 @@ public open class CfnChannel internal constructor(
       override fun outputs(outputs: List<Any>) {
         cdkBuilder.outputs(outputs)
       }
+
+      override fun outputs(vararg outputs: Any): Unit = outputs(outputs.toList())
 
       public fun build(): software.amazon.awscdk.services.medialive.CfnChannel.OutputGroupProperty =
           cdkBuilder.build()
@@ -16291,9 +16399,13 @@ public open class CfnChannel internal constructor(
 
       public fun audioSelectors(audioSelectors: List<Any>)
 
+      public fun audioSelectors(vararg audioSelectors: Any)
+
       public fun captionSelectors(captionSelectors: IResolvable)
 
       public fun captionSelectors(captionSelectors: List<Any>)
+
+      public fun captionSelectors(vararg captionSelectors: Any)
 
       public fun deblockFilter(deblockFilter: String)
 
@@ -16340,6 +16452,9 @@ public open class CfnChannel internal constructor(
         cdkBuilder.audioSelectors(audioSelectors)
       }
 
+      override fun audioSelectors(vararg audioSelectors: Any): Unit =
+          audioSelectors(audioSelectors.toList())
+
       override fun captionSelectors(captionSelectors: IResolvable) {
         cdkBuilder.captionSelectors(captionSelectors.let(IResolvable::unwrap))
       }
@@ -16347,6 +16462,9 @@ public open class CfnChannel internal constructor(
       override fun captionSelectors(captionSelectors: List<Any>) {
         cdkBuilder.captionSelectors(captionSelectors)
       }
+
+      override fun captionSelectors(vararg captionSelectors: Any): Unit =
+          captionSelectors(captionSelectors.toList())
 
       override fun deblockFilter(deblockFilter: String) {
         cdkBuilder.deblockFilter(deblockFilter)

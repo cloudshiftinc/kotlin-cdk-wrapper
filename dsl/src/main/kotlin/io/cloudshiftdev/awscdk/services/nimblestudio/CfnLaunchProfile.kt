@@ -28,22 +28,27 @@ public open class CfnLaunchProfile internal constructor(
     unwrap(this).setDescription(`value`)
   }
 
-  public open fun ec2SubnetIds(): List<String> = unwrap(this).getEc2SubnetIds() ?: emptyList()
+  public open fun ec2SubnetIds(): List<String> = unwrap(this).getEc2SubnetIds()
 
   public open fun ec2SubnetIds(`value`: List<String>) {
     unwrap(this).setEc2SubnetIds(`value`)
   }
+
+  public open fun ec2SubnetIds(vararg `value`: String): Unit = ec2SubnetIds(`value`.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
   public open fun launchProfileProtocolVersions(): List<String> =
-      unwrap(this).getLaunchProfileProtocolVersions() ?: emptyList()
+      unwrap(this).getLaunchProfileProtocolVersions()
 
   public open fun launchProfileProtocolVersions(`value`: List<String>) {
     unwrap(this).setLaunchProfileProtocolVersions(`value`)
   }
+
+  public open fun launchProfileProtocolVersions(vararg `value`: String): Unit =
+      launchProfileProtocolVersions(`value`.toList())
 
   public open fun name(): String = unwrap(this).getName()
 
@@ -66,12 +71,14 @@ public open class CfnLaunchProfile internal constructor(
   public open fun streamConfiguration(`value`: StreamConfigurationProperty.Builder.() -> Unit): Unit
       = streamConfiguration(StreamConfigurationProperty(`value`))
 
-  public open fun studioComponentIds(): List<String> = unwrap(this).getStudioComponentIds() ?:
-      emptyList()
+  public open fun studioComponentIds(): List<String> = unwrap(this).getStudioComponentIds()
 
   public open fun studioComponentIds(`value`: List<String>) {
     unwrap(this).setStudioComponentIds(`value`)
   }
+
+  public open fun studioComponentIds(vararg `value`: String): Unit =
+      studioComponentIds(`value`.toList())
 
   public open fun studioId(): String = unwrap(this).getStudioId()
 
@@ -92,7 +99,11 @@ public open class CfnLaunchProfile internal constructor(
 
     public fun ec2SubnetIds(ec2SubnetIds: List<String>)
 
+    public fun ec2SubnetIds(vararg ec2SubnetIds: String)
+
     public fun launchProfileProtocolVersions(launchProfileProtocolVersions: List<String>)
+
+    public fun launchProfileProtocolVersions(vararg launchProfileProtocolVersions: String)
 
     public fun name(name: String)
 
@@ -106,6 +117,8 @@ public open class CfnLaunchProfile internal constructor(
         fun streamConfiguration(streamConfiguration: StreamConfigurationProperty.Builder.() -> Unit)
 
     public fun studioComponentIds(studioComponentIds: List<String>)
+
+    public fun studioComponentIds(vararg studioComponentIds: String)
 
     public fun studioId(studioId: String)
 
@@ -127,9 +140,15 @@ public open class CfnLaunchProfile internal constructor(
       cdkBuilder.ec2SubnetIds(ec2SubnetIds)
     }
 
+    override fun ec2SubnetIds(vararg ec2SubnetIds: String): Unit =
+        ec2SubnetIds(ec2SubnetIds.toList())
+
     override fun launchProfileProtocolVersions(launchProfileProtocolVersions: List<String>) {
       cdkBuilder.launchProfileProtocolVersions(launchProfileProtocolVersions)
     }
+
+    override fun launchProfileProtocolVersions(vararg launchProfileProtocolVersions: String): Unit =
+        launchProfileProtocolVersions(launchProfileProtocolVersions.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -152,6 +171,9 @@ public open class CfnLaunchProfile internal constructor(
     override fun studioComponentIds(studioComponentIds: List<String>) {
       cdkBuilder.studioComponentIds(studioComponentIds)
     }
+
+    override fun studioComponentIds(vararg studioComponentIds: String): Unit =
+        studioComponentIds(studioComponentIds.toList())
 
     override fun studioId(studioId: String) {
       cdkBuilder.studioId(studioId)
@@ -284,6 +306,8 @@ public open class CfnLaunchProfile internal constructor(
 
       public fun ec2InstanceTypes(ec2InstanceTypes: List<String>)
 
+      public fun ec2InstanceTypes(vararg ec2InstanceTypes: String)
+
       public fun maxSessionLengthInMinutes(maxSessionLengthInMinutes: Number)
 
       public fun maxStoppedSessionLengthInMinutes(maxStoppedSessionLengthInMinutes: Number)
@@ -309,6 +333,8 @@ public open class CfnLaunchProfile internal constructor(
           fun sessionStorage(sessionStorage: StreamConfigurationSessionStorageProperty.Builder.() -> Unit)
 
       public fun streamingImageIds(streamingImageIds: List<String>)
+
+      public fun streamingImageIds(vararg streamingImageIds: String)
 
       public fun volumeConfiguration(volumeConfiguration: IResolvable)
 
@@ -337,6 +363,9 @@ public open class CfnLaunchProfile internal constructor(
       override fun ec2InstanceTypes(ec2InstanceTypes: List<String>) {
         cdkBuilder.ec2InstanceTypes(ec2InstanceTypes)
       }
+
+      override fun ec2InstanceTypes(vararg ec2InstanceTypes: String): Unit =
+          ec2InstanceTypes(ec2InstanceTypes.toList())
 
       override fun maxSessionLengthInMinutes(maxSessionLengthInMinutes: Number) {
         cdkBuilder.maxSessionLengthInMinutes(maxSessionLengthInMinutes)
@@ -382,6 +411,9 @@ public open class CfnLaunchProfile internal constructor(
         cdkBuilder.streamingImageIds(streamingImageIds)
       }
 
+      override fun streamingImageIds(vararg streamingImageIds: String): Unit =
+          streamingImageIds(streamingImageIds.toList())
+
       override fun volumeConfiguration(volumeConfiguration: IResolvable) {
         cdkBuilder.volumeConfiguration(volumeConfiguration.let(IResolvable::unwrap))
       }
@@ -409,8 +441,7 @@ public open class CfnLaunchProfile internal constructor(
 
       override fun clipboardMode(): String = unwrap(this).getClipboardMode()
 
-      override fun ec2InstanceTypes(): List<String> = unwrap(this).getEc2InstanceTypes() ?:
-          emptyList()
+      override fun ec2InstanceTypes(): List<String> = unwrap(this).getEc2InstanceTypes()
 
       override fun maxSessionLengthInMinutes(): Number? =
           unwrap(this).getMaxSessionLengthInMinutes()
@@ -424,8 +455,7 @@ public open class CfnLaunchProfile internal constructor(
 
       override fun sessionStorage(): Any? = unwrap(this).getSessionStorage()
 
-      override fun streamingImageIds(): List<String> = unwrap(this).getStreamingImageIds() ?:
-          emptyList()
+      override fun streamingImageIds(): List<String> = unwrap(this).getStreamingImageIds()
 
       override fun volumeConfiguration(): Any? = unwrap(this).getVolumeConfiguration()
     }
@@ -518,6 +548,8 @@ public open class CfnLaunchProfile internal constructor(
     public interface Builder {
       public fun mode(mode: List<String>)
 
+      public fun mode(vararg mode: String)
+
       public fun root(root: IResolvable)
 
       public fun root(root: StreamingSessionStorageRootProperty)
@@ -536,6 +568,8 @@ public open class CfnLaunchProfile internal constructor(
       override fun mode(mode: List<String>) {
         cdkBuilder.mode(mode)
       }
+
+      override fun mode(vararg mode: String): Unit = mode(mode.toList())
 
       override fun root(root: IResolvable) {
         cdkBuilder.root(root.let(IResolvable::unwrap))
@@ -559,7 +593,7 @@ public open class CfnLaunchProfile internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionStorageProperty,
     ) : StreamConfigurationSessionStorageProperty {
-      override fun mode(): List<String> = unwrap(this).getMode() ?: emptyList()
+      override fun mode(): List<String> = unwrap(this).getMode()
 
       override fun root(): Any? = unwrap(this).getRoot()
     }

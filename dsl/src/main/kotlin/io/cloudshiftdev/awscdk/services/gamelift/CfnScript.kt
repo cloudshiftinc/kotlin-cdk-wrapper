@@ -62,6 +62,8 @@ public open class CfnScript internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun version(): String? = unwrap(this).getVersion()
 
   public open fun version(`value`: String) {
@@ -80,6 +82,8 @@ public open class CfnScript internal constructor(
     public fun storageLocation(storageLocation: S3LocationProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun version(version: String)
   }
@@ -111,6 +115,8 @@ public open class CfnScript internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun version(version: String) {
       cdkBuilder.version(version)

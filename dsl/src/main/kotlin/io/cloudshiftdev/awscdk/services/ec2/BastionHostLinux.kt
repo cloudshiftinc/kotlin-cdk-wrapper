@@ -50,6 +50,8 @@ public open class BastionHostLinux internal constructor(
 
     public fun blockDevices(blockDevices: List<BlockDevice>)
 
+    public fun blockDevices(vararg blockDevices: BlockDevice)
+
     public fun `init`(`init`: CloudFormationInit)
 
     public fun initOptions(initOptions: ApplyCloudFormationInitOptions)
@@ -91,6 +93,9 @@ public open class BastionHostLinux internal constructor(
     override fun blockDevices(blockDevices: List<BlockDevice>) {
       cdkBuilder.blockDevices(blockDevices.map(BlockDevice::unwrap))
     }
+
+    override fun blockDevices(vararg blockDevices: BlockDevice): Unit =
+        blockDevices(blockDevices.toList())
 
     override fun `init`(`init`: CloudFormationInit) {
       cdkBuilder.`init`(`init`.let(CloudFormationInit::unwrap))

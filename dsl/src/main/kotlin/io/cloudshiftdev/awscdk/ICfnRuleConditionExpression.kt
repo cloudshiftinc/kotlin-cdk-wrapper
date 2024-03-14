@@ -11,7 +11,7 @@ public interface ICfnRuleConditionExpression : ICfnConditionExpression {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.ICfnRuleConditionExpression,
   ) : ICfnRuleConditionExpression {
-    override fun creationStack(): List<String> = unwrap(this).getCreationStack() ?: emptyList()
+    override fun creationStack(): List<String> = unwrap(this).getCreationStack()
 
     override fun disambiguator(): Boolean = unwrap(this).getDisambiguator()
 

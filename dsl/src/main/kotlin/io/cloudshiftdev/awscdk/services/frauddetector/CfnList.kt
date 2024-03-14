@@ -33,6 +33,8 @@ public open class CfnList internal constructor(
     unwrap(this).setElements(`value`)
   }
 
+  public open fun elements(vararg `value`: String): Unit = elements(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -52,6 +54,8 @@ public open class CfnList internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun variableType(): String? = unwrap(this).getVariableType()
 
   public open fun variableType(`value`: String) {
@@ -63,9 +67,13 @@ public open class CfnList internal constructor(
 
     public fun elements(elements: List<String>)
 
+    public fun elements(vararg elements: String)
+
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun variableType(variableType: String)
   }
@@ -85,6 +93,8 @@ public open class CfnList internal constructor(
       cdkBuilder.elements(elements)
     }
 
+    override fun elements(vararg elements: String): Unit = elements(elements.toList())
+
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -92,6 +102,8 @@ public open class CfnList internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun variableType(variableType: String) {
       cdkBuilder.variableType(variableType)

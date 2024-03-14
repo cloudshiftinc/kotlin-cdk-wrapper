@@ -44,11 +44,14 @@ public open class CfnDirectoryConfig internal constructor(
   }
 
   public open fun organizationalUnitDistinguishedNames(): List<String> =
-      unwrap(this).getOrganizationalUnitDistinguishedNames() ?: emptyList()
+      unwrap(this).getOrganizationalUnitDistinguishedNames()
 
   public open fun organizationalUnitDistinguishedNames(`value`: List<String>) {
     unwrap(this).setOrganizationalUnitDistinguishedNames(`value`)
   }
+
+  public open fun organizationalUnitDistinguishedNames(vararg `value`: String): Unit =
+      organizationalUnitDistinguishedNames(`value`.toList())
 
   public open fun serviceAccountCredentials(): Any = unwrap(this).getServiceAccountCredentials()
 
@@ -81,6 +84,9 @@ public open class CfnDirectoryConfig internal constructor(
 
     public
         fun organizationalUnitDistinguishedNames(organizationalUnitDistinguishedNames: List<String>)
+
+    public fun organizationalUnitDistinguishedNames(vararg
+        organizationalUnitDistinguishedNames: String)
 
     public fun serviceAccountCredentials(serviceAccountCredentials: IResolvable)
 
@@ -124,6 +130,10 @@ public open class CfnDirectoryConfig internal constructor(
         fun organizationalUnitDistinguishedNames(organizationalUnitDistinguishedNames: List<String>) {
       cdkBuilder.organizationalUnitDistinguishedNames(organizationalUnitDistinguishedNames)
     }
+
+    override fun organizationalUnitDistinguishedNames(vararg
+        organizationalUnitDistinguishedNames: String): Unit =
+        organizationalUnitDistinguishedNames(organizationalUnitDistinguishedNames.toList())
 
     override fun serviceAccountCredentials(serviceAccountCredentials: IResolvable) {
       cdkBuilder.serviceAccountCredentials(serviceAccountCredentials.let(IResolvable::unwrap))

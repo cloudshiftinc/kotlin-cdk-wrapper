@@ -47,6 +47,8 @@ public open class CfnApplication internal constructor(
     unwrap(this).setInputs(__idx_ac66f0)
   }
 
+  public open fun inputs(vararg __idx_ac66f0: Any): Unit = inputs(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -61,6 +63,8 @@ public open class CfnApplication internal constructor(
     public fun inputs(inputs: IResolvable)
 
     public fun inputs(inputs: List<Any>)
+
+    public fun inputs(vararg inputs: Any)
   }
 
   private class BuilderImpl(
@@ -89,6 +93,8 @@ public open class CfnApplication internal constructor(
     override fun inputs(inputs: List<Any>) {
       cdkBuilder.inputs(inputs)
     }
+
+    override fun inputs(vararg inputs: Any): Unit = inputs(inputs.toList())
 
     public fun build(): software.amazon.awscdk.services.kinesisanalytics.CfnApplication =
         cdkBuilder.build()
@@ -269,6 +275,8 @@ public open class CfnApplication internal constructor(
 
       public fun recordColumns(recordColumns: List<Any>)
 
+      public fun recordColumns(vararg recordColumns: Any)
+
       public fun recordEncoding(recordEncoding: String)
 
       public fun recordFormat(recordFormat: IResolvable)
@@ -293,6 +301,9 @@ public open class CfnApplication internal constructor(
       override fun recordColumns(recordColumns: List<Any>) {
         cdkBuilder.recordColumns(recordColumns)
       }
+
+      override fun recordColumns(vararg recordColumns: Any): Unit =
+          recordColumns(recordColumns.toList())
 
       override fun recordEncoding(recordEncoding: String) {
         cdkBuilder.recordEncoding(recordEncoding)

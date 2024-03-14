@@ -63,6 +63,9 @@ public open class CfnRoutingProfile internal constructor(
     unwrap(this).setMediaConcurrencies(__idx_ac66f0)
   }
 
+  public open fun mediaConcurrencies(vararg __idx_ac66f0: Any): Unit =
+      mediaConcurrencies(__idx_ac66f0.toList())
+
   public open fun name(): String = unwrap(this).getName()
 
   public open fun name(`value`: String) {
@@ -79,11 +82,15 @@ public open class CfnRoutingProfile internal constructor(
     unwrap(this).setQueueConfigs(__idx_ac66f0)
   }
 
+  public open fun queueConfigs(vararg __idx_ac66f0: Any): Unit = queueConfigs(__idx_ac66f0.toList())
+
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   public interface Builder {
     public fun agentAvailabilityTimer(agentAvailabilityTimer: String)
@@ -98,13 +105,19 @@ public open class CfnRoutingProfile internal constructor(
 
     public fun mediaConcurrencies(mediaConcurrencies: List<Any>)
 
+    public fun mediaConcurrencies(vararg mediaConcurrencies: Any)
+
     public fun name(name: String)
 
     public fun queueConfigs(queueConfigs: IResolvable)
 
     public fun queueConfigs(queueConfigs: List<Any>)
 
+    public fun queueConfigs(vararg queueConfigs: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -138,6 +151,9 @@ public open class CfnRoutingProfile internal constructor(
       cdkBuilder.mediaConcurrencies(mediaConcurrencies)
     }
 
+    override fun mediaConcurrencies(vararg mediaConcurrencies: Any): Unit =
+        mediaConcurrencies(mediaConcurrencies.toList())
+
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -150,9 +166,13 @@ public open class CfnRoutingProfile internal constructor(
       cdkBuilder.queueConfigs(queueConfigs)
     }
 
+    override fun queueConfigs(vararg queueConfigs: Any): Unit = queueConfigs(queueConfigs.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.connect.CfnRoutingProfile =
         cdkBuilder.build()

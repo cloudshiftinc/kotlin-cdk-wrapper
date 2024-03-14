@@ -35,6 +35,8 @@ public open class CfnContainerRecipe internal constructor(
     unwrap(this).setComponents(__idx_ac66f0)
   }
 
+  public open fun components(vararg __idx_ac66f0: Any): Unit = components(__idx_ac66f0.toList())
+
   public open fun containerType(): String = unwrap(this).getContainerType()
 
   public open fun containerType(`value`: String) {
@@ -148,6 +150,8 @@ public open class CfnContainerRecipe internal constructor(
 
     public fun components(components: List<Any>)
 
+    public fun components(vararg components: Any)
+
     public fun containerType(containerType: String)
 
     public fun description(description: String)
@@ -205,6 +209,8 @@ public open class CfnContainerRecipe internal constructor(
     override fun components(components: List<Any>) {
       cdkBuilder.components(components)
     }
+
+    override fun components(vararg components: Any): Unit = components(components.toList())
 
     override fun containerType(containerType: String) {
       cdkBuilder.containerType(containerType)
@@ -316,6 +322,8 @@ public open class CfnContainerRecipe internal constructor(
       public fun name(name: String)
 
       public fun `value`(`value`: List<String>)
+
+      public fun `value`(vararg `value`: String)
     }
 
     private class BuilderImpl : Builder {
@@ -332,6 +340,8 @@ public open class CfnContainerRecipe internal constructor(
         cdkBuilder.`value`(`value`)
       }
 
+      override fun `value`(vararg `value`: String): Unit = `value`(`value`.toList())
+
       public fun build():
           software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentParameterProperty
           = cdkBuilder.build()
@@ -343,7 +353,7 @@ public open class CfnContainerRecipe internal constructor(
     ) : ComponentParameterProperty {
       override fun name(): String = unwrap(this).getName()
 
-      override fun `value`(): List<String> = unwrap(this).getValue() ?: emptyList()
+      override fun `value`(): List<String> = unwrap(this).getValue()
     }
 
     public companion object {
@@ -509,6 +519,8 @@ public open class CfnContainerRecipe internal constructor(
       public fun parameters(parameters: IResolvable)
 
       public fun parameters(parameters: List<Any>)
+
+      public fun parameters(vararg parameters: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -528,6 +540,8 @@ public open class CfnContainerRecipe internal constructor(
       override fun parameters(parameters: List<Any>) {
         cdkBuilder.parameters(parameters)
       }
+
+      override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
 
       public fun build():
           software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentConfigurationProperty
@@ -728,6 +742,8 @@ public open class CfnContainerRecipe internal constructor(
 
       public fun blockDeviceMappings(blockDeviceMappings: List<Any>)
 
+      public fun blockDeviceMappings(vararg blockDeviceMappings: Any)
+
       public fun image(image: String)
     }
 
@@ -744,6 +760,9 @@ public open class CfnContainerRecipe internal constructor(
       override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
         cdkBuilder.blockDeviceMappings(blockDeviceMappings)
       }
+
+      override fun blockDeviceMappings(vararg blockDeviceMappings: Any): Unit =
+          blockDeviceMappings(blockDeviceMappings.toList())
 
       override fun image(image: String) {
         cdkBuilder.image(image)

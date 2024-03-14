@@ -27,11 +27,13 @@ public open class CfnDimension internal constructor(
     unwrap(this).setName(`value`)
   }
 
-  public open fun stringValues(): List<String> = unwrap(this).getStringValues() ?: emptyList()
+  public open fun stringValues(): List<String> = unwrap(this).getStringValues()
 
   public open fun stringValues(`value`: List<String>) {
     unwrap(this).setStringValues(`value`)
   }
+
+  public open fun stringValues(vararg `value`: String): Unit = stringValues(`value`.toList())
 
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
@@ -41,6 +43,8 @@ public open class CfnDimension internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun type(): String = unwrap(this).getType()
 
@@ -53,7 +57,11 @@ public open class CfnDimension internal constructor(
 
     public fun stringValues(stringValues: List<String>)
 
+    public fun stringValues(vararg stringValues: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun type(type: String)
   }
@@ -73,9 +81,14 @@ public open class CfnDimension internal constructor(
       cdkBuilder.stringValues(stringValues)
     }
 
+    override fun stringValues(vararg stringValues: String): Unit =
+        stringValues(stringValues.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun type(type: String) {
       cdkBuilder.type(type)

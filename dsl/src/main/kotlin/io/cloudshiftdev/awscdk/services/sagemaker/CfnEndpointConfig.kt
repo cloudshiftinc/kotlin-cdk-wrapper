@@ -112,6 +112,9 @@ public open class CfnEndpointConfig internal constructor(
     unwrap(this).setProductionVariants(__idx_ac66f0)
   }
 
+  public open fun productionVariants(vararg __idx_ac66f0: Any): Unit =
+      productionVariants(__idx_ac66f0.toList())
+
   public open fun shadowProductionVariants(): Any? = unwrap(this).getShadowProductionVariants()
 
   public open fun shadowProductionVariants(`value`: IResolvable) {
@@ -122,6 +125,9 @@ public open class CfnEndpointConfig internal constructor(
     unwrap(this).setShadowProductionVariants(__idx_ac66f0)
   }
 
+  public open fun shadowProductionVariants(vararg __idx_ac66f0: Any): Unit =
+      shadowProductionVariants(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -130,6 +136,8 @@ public open class CfnEndpointConfig internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun vpcConfig(): Any? = unwrap(this).getVpcConfig()
 
@@ -186,11 +194,17 @@ public open class CfnEndpointConfig internal constructor(
 
     public fun productionVariants(productionVariants: List<Any>)
 
+    public fun productionVariants(vararg productionVariants: Any)
+
     public fun shadowProductionVariants(shadowProductionVariants: IResolvable)
 
     public fun shadowProductionVariants(shadowProductionVariants: List<Any>)
 
+    public fun shadowProductionVariants(vararg shadowProductionVariants: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun vpcConfig(vpcConfig: IResolvable)
 
@@ -276,6 +290,9 @@ public open class CfnEndpointConfig internal constructor(
       cdkBuilder.productionVariants(productionVariants)
     }
 
+    override fun productionVariants(vararg productionVariants: Any): Unit =
+        productionVariants(productionVariants.toList())
+
     override fun shadowProductionVariants(shadowProductionVariants: IResolvable) {
       cdkBuilder.shadowProductionVariants(shadowProductionVariants.let(IResolvable::unwrap))
     }
@@ -284,9 +301,14 @@ public open class CfnEndpointConfig internal constructor(
       cdkBuilder.shadowProductionVariants(shadowProductionVariants)
     }
 
+    override fun shadowProductionVariants(vararg shadowProductionVariants: Any): Unit =
+        shadowProductionVariants(shadowProductionVariants.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun vpcConfig(vpcConfig: IResolvable) {
       cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
@@ -408,6 +430,8 @@ public open class CfnEndpointConfig internal constructor(
 
       public fun includeInferenceResponseIn(includeInferenceResponseIn: List<String>)
 
+      public fun includeInferenceResponseIn(vararg includeInferenceResponseIn: String)
+
       public fun successTopic(successTopic: String)
     }
 
@@ -424,6 +448,9 @@ public open class CfnEndpointConfig internal constructor(
       override fun includeInferenceResponseIn(includeInferenceResponseIn: List<String>) {
         cdkBuilder.includeInferenceResponseIn(includeInferenceResponseIn)
       }
+
+      override fun includeInferenceResponseIn(vararg includeInferenceResponseIn: String): Unit =
+          includeInferenceResponseIn(includeInferenceResponseIn.toList())
 
       override fun successTopic(successTopic: String) {
         cdkBuilder.successTopic(successTopic)
@@ -678,7 +705,11 @@ public open class CfnEndpointConfig internal constructor(
     public interface Builder {
       public fun csvContentTypes(csvContentTypes: List<String>)
 
+      public fun csvContentTypes(vararg csvContentTypes: String)
+
       public fun jsonContentTypes(jsonContentTypes: List<String>)
+
+      public fun jsonContentTypes(vararg jsonContentTypes: String)
     }
 
     private class BuilderImpl : Builder {
@@ -691,9 +722,15 @@ public open class CfnEndpointConfig internal constructor(
         cdkBuilder.csvContentTypes(csvContentTypes)
       }
 
+      override fun csvContentTypes(vararg csvContentTypes: String): Unit =
+          csvContentTypes(csvContentTypes.toList())
+
       override fun jsonContentTypes(jsonContentTypes: List<String>) {
         cdkBuilder.jsonContentTypes(jsonContentTypes)
       }
+
+      override fun jsonContentTypes(vararg jsonContentTypes: String): Unit =
+          jsonContentTypes(jsonContentTypes.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.CaptureContentTypeHeaderProperty
@@ -759,13 +796,19 @@ public open class CfnEndpointConfig internal constructor(
 
       public fun featureHeaders(featureHeaders: List<String>)
 
+      public fun featureHeaders(vararg featureHeaders: String)
+
       public fun featureTypes(featureTypes: List<String>)
+
+      public fun featureTypes(vararg featureTypes: String)
 
       public fun featuresAttribute(featuresAttribute: String)
 
       public fun labelAttribute(labelAttribute: String)
 
       public fun labelHeaders(labelHeaders: List<String>)
+
+      public fun labelHeaders(vararg labelHeaders: String)
 
       public fun labelIndex(labelIndex: Number)
 
@@ -792,9 +835,15 @@ public open class CfnEndpointConfig internal constructor(
         cdkBuilder.featureHeaders(featureHeaders)
       }
 
+      override fun featureHeaders(vararg featureHeaders: String): Unit =
+          featureHeaders(featureHeaders.toList())
+
       override fun featureTypes(featureTypes: List<String>) {
         cdkBuilder.featureTypes(featureTypes)
       }
+
+      override fun featureTypes(vararg featureTypes: String): Unit =
+          featureTypes(featureTypes.toList())
 
       override fun featuresAttribute(featuresAttribute: String) {
         cdkBuilder.featuresAttribute(featuresAttribute)
@@ -807,6 +856,9 @@ public open class CfnEndpointConfig internal constructor(
       override fun labelHeaders(labelHeaders: List<String>) {
         cdkBuilder.labelHeaders(labelHeaders)
       }
+
+      override fun labelHeaders(vararg labelHeaders: String): Unit =
+          labelHeaders(labelHeaders.toList())
 
       override fun labelIndex(labelIndex: Number) {
         cdkBuilder.labelIndex(labelIndex)
@@ -888,7 +940,11 @@ public open class CfnEndpointConfig internal constructor(
     public interface Builder {
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnets(subnets: List<String>)
+
+      public fun subnets(vararg subnets: String)
     }
 
     private class BuilderImpl : Builder {
@@ -900,9 +956,14 @@ public open class CfnEndpointConfig internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnets(subnets: List<String>) {
         cdkBuilder.subnets(subnets)
       }
+
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.VpcConfigProperty =
@@ -913,10 +974,9 @@ public open class CfnEndpointConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnEndpointConfig.VpcConfigProperty,
     ) : VpcConfigProperty {
-      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
-          emptyList()
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
 
-      override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+      override fun subnets(): List<String> = unwrap(this).getSubnets()
     }
 
     public companion object {
@@ -1440,6 +1500,8 @@ public open class CfnEndpointConfig internal constructor(
 
       public fun captureOptions(captureOptions: List<Any>)
 
+      public fun captureOptions(vararg captureOptions: Any)
+
       public fun destinationS3Uri(destinationS3Uri: String)
 
       public fun enableCapture(enableCapture: Boolean)
@@ -1480,6 +1542,9 @@ public open class CfnEndpointConfig internal constructor(
       override fun captureOptions(captureOptions: List<Any>) {
         cdkBuilder.captureOptions(captureOptions)
       }
+
+      override fun captureOptions(vararg captureOptions: Any): Unit =
+          captureOptions(captureOptions.toList())
 
       override fun destinationS3Uri(destinationS3Uri: String) {
         cdkBuilder.destinationS3Uri(destinationS3Uri)

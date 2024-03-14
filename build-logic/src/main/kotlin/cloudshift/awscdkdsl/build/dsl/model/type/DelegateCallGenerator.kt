@@ -4,10 +4,13 @@ package cloudshift.awscdkdsl.build.dsl.model.type
 
 import cloudshift.awscdkdsl.build.dsl.TypeGeneratorContext
 import cloudshift.awscdkdsl.build.dsl.isCdkClass
+import cloudshift.awscdkdsl.build.dsl.isListOfCdkObject
+import cloudshift.awscdkdsl.build.dsl.isListOfListsOfCdkObject
+import cloudshift.awscdkdsl.build.dsl.isMapWithCdkListValue
+import cloudshift.awscdkdsl.build.dsl.isMapWithCdkValue
 import cloudshift.awscdkdsl.build.dsl.mapClassName
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.CodeBlock
-import com.squareup.kotlinpoet.LIST
 import com.squareup.kotlinpoet.MAP
 import com.squareup.kotlinpoet.ParameterizedTypeName
 import com.squareup.kotlinpoet.TypeName
@@ -156,10 +159,13 @@ private class DelegatedCall(
                     )
                 }
 
-                type.isList -> CallSegment(
-                    " ?: emptyList()",
-                    emptyList(),
-                )
+                type.isList -> {
+                    val nullableSuffix = if (type.isNullable) " ?: emptyList()" else ""
+                    CallSegment(
+                        nullableSuffix,
+                        emptyList(),
+                    )
+                }
 
                 else -> defaultCallSegment
             }
@@ -241,40 +247,3 @@ private class DelegatedCall(
     }
 }
 
-private fun TypeName.isMapWithCdkListValue(): Boolean {
-    fun checkTypeArgs(typeArguments: List<TypeName>): Boolean {
-        if (!(typeArguments.size == 2 && !typeArguments[0].isCdkClass && typeArguments[1].isList)) return false
-        val valueType = typeArguments[1] as ParameterizedTypeName
-        return when {
-            valueType.typeArguments[0].isCdkClass -> true
-            else -> false
-        }
-    }
-    return when (this) {
-        is ParameterizedTypeName -> when {
-            rawType == MAP && checkTypeArgs(typeArguments) -> true
-            else -> false
-        }
-
-        else -> false
-    }
-}
-
-private fun TypeName.isListOfListsOfCdkObject(): Boolean {
-    return when (this) {
-        is ParameterizedTypeName -> when {
-            rawType == LIST && typeArguments[0].isList && (typeArguments[0] as ParameterizedTypeName).typeArguments[0].isCdkClass -> true
-            else -> false
-        }
-
-        else -> false
-    }
-}
-
-private fun TypeName.isListOfCdkObject(): Boolean {
-    return this is ParameterizedTypeName && rawType == LIST && typeArguments[0].isCdkClass
-}
-
-private fun TypeName.isMapWithCdkValue(): Boolean {
-    return this is ParameterizedTypeName && rawType == MAP && !typeArguments[0].isCdkClass && typeArguments[1].isCdkClass
-}

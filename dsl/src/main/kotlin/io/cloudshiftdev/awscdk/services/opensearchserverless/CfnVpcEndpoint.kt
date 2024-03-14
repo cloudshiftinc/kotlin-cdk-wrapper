@@ -31,11 +31,16 @@ public open class CfnVpcEndpoint internal constructor(
     unwrap(this).setSecurityGroupIds(`value`)
   }
 
-  public open fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+  public open fun securityGroupIds(vararg `value`: String): Unit =
+      securityGroupIds(`value`.toList())
+
+  public open fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
 
   public open fun subnetIds(`value`: List<String>) {
     unwrap(this).setSubnetIds(`value`)
   }
+
+  public open fun subnetIds(vararg `value`: String): Unit = subnetIds(`value`.toList())
 
   public open fun vpcId(): String = unwrap(this).getVpcId()
 
@@ -48,7 +53,11 @@ public open class CfnVpcEndpoint internal constructor(
 
     public fun securityGroupIds(securityGroupIds: List<String>)
 
+    public fun securityGroupIds(vararg securityGroupIds: String)
+
     public fun subnetIds(subnetIds: List<String>)
+
+    public fun subnetIds(vararg subnetIds: String)
 
     public fun vpcId(vpcId: String)
   }
@@ -70,9 +79,14 @@ public open class CfnVpcEndpoint internal constructor(
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
+
     override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
+
+    override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
     override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)

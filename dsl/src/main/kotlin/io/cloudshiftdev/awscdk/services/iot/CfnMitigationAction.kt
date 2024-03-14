@@ -64,6 +64,8 @@ public open class CfnMitigationAction internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun actionName(actionName: String)
 
@@ -78,6 +80,8 @@ public open class CfnMitigationAction internal constructor(
     public fun roleArn(roleArn: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -111,6 +115,8 @@ public open class CfnMitigationAction internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.iot.CfnMitigationAction = cdkBuilder.build()
   }
@@ -568,6 +574,8 @@ public open class CfnMitigationAction internal constructor(
       public fun overrideDynamicGroups(overrideDynamicGroups: IResolvable)
 
       public fun thingGroupNames(thingGroupNames: List<String>)
+
+      public fun thingGroupNames(vararg thingGroupNames: String)
     }
 
     private class BuilderImpl : Builder {
@@ -588,6 +596,9 @@ public open class CfnMitigationAction internal constructor(
         cdkBuilder.thingGroupNames(thingGroupNames)
       }
 
+      override fun thingGroupNames(vararg thingGroupNames: String): Unit =
+          thingGroupNames(thingGroupNames.toList())
+
       public fun build():
           software.amazon.awscdk.services.iot.CfnMitigationAction.AddThingsToThingGroupParamsProperty
           = cdkBuilder.build()
@@ -599,8 +610,7 @@ public open class CfnMitigationAction internal constructor(
     ) : AddThingsToThingGroupParamsProperty {
       override fun overrideDynamicGroups(): Any? = unwrap(this).getOverrideDynamicGroups()
 
-      override fun thingGroupNames(): List<String> = unwrap(this).getThingGroupNames() ?:
-          emptyList()
+      override fun thingGroupNames(): List<String> = unwrap(this).getThingGroupNames()
     }
 
     public companion object {

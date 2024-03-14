@@ -37,11 +37,13 @@ public open class CfnNotificationRule internal constructor(
     unwrap(this).setEventTypeId(`value`)
   }
 
-  public open fun eventTypeIds(): List<String> = unwrap(this).getEventTypeIds() ?: emptyList()
+  public open fun eventTypeIds(): List<String> = unwrap(this).getEventTypeIds()
 
   public open fun eventTypeIds(`value`: List<String>) {
     unwrap(this).setEventTypeIds(`value`)
   }
+
+  public open fun eventTypeIds(vararg `value`: String): Unit = eventTypeIds(`value`.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -89,6 +91,8 @@ public open class CfnNotificationRule internal constructor(
     unwrap(this).setTargets(__idx_ac66f0)
   }
 
+  public open fun targets(vararg __idx_ac66f0: Any): Unit = targets(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun createdBy(createdBy: String)
 
@@ -97,6 +101,8 @@ public open class CfnNotificationRule internal constructor(
     public fun eventTypeId(eventTypeId: String)
 
     public fun eventTypeIds(eventTypeIds: List<String>)
+
+    public fun eventTypeIds(vararg eventTypeIds: String)
 
     public fun name(name: String)
 
@@ -111,6 +117,8 @@ public open class CfnNotificationRule internal constructor(
     public fun targets(targets: IResolvable)
 
     public fun targets(targets: List<Any>)
+
+    public fun targets(vararg targets: Any)
   }
 
   private class BuilderImpl(
@@ -137,6 +145,9 @@ public open class CfnNotificationRule internal constructor(
     override fun eventTypeIds(eventTypeIds: List<String>) {
       cdkBuilder.eventTypeIds(eventTypeIds)
     }
+
+    override fun eventTypeIds(vararg eventTypeIds: String): Unit =
+        eventTypeIds(eventTypeIds.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -165,6 +176,8 @@ public open class CfnNotificationRule internal constructor(
     override fun targets(targets: List<Any>) {
       cdkBuilder.targets(targets)
     }
+
+    override fun targets(vararg targets: Any): Unit = targets(targets.toList())
 
     public fun build(): software.amazon.awscdk.services.codestarnotifications.CfnNotificationRule =
         cdkBuilder.build()

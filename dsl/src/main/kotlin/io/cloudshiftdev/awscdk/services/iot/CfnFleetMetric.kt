@@ -100,6 +100,8 @@ public open class CfnFleetMetric internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun unit(): String? = unwrap(this).getUnit()
 
   public open fun unit(`value`: String) {
@@ -130,6 +132,8 @@ public open class CfnFleetMetric internal constructor(
     public fun queryVersion(queryVersion: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun unit(unit: String)
   }
@@ -186,6 +190,8 @@ public open class CfnFleetMetric internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun unit(unit: String) {
       cdkBuilder.unit(unit)
     }
@@ -223,6 +229,8 @@ public open class CfnFleetMetric internal constructor(
       public fun name(name: String)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -238,6 +246,8 @@ public open class CfnFleetMetric internal constructor(
         cdkBuilder.values(values)
       }
 
+      override fun values(vararg values: String): Unit = values(values.toList())
+
       public fun build(): software.amazon.awscdk.services.iot.CfnFleetMetric.AggregationTypeProperty
           = cdkBuilder.build()
     }
@@ -248,7 +258,7 @@ public open class CfnFleetMetric internal constructor(
     ) : AggregationTypeProperty {
       override fun name(): String = unwrap(this).getName()
 
-      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues()
     }
 
     public companion object {

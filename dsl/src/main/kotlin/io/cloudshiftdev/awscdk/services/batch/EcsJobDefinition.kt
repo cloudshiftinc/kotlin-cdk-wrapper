@@ -57,6 +57,8 @@ public open class EcsJobDefinition internal constructor(
 
     public fun retryStrategies(retryStrategies: List<RetryStrategy>)
 
+    public fun retryStrategies(vararg retryStrategies: RetryStrategy)
+
     public fun schedulingPriority(schedulingPriority: Number)
 
     public fun timeout(timeout: Duration)
@@ -92,6 +94,9 @@ public open class EcsJobDefinition internal constructor(
     override fun retryStrategies(retryStrategies: List<RetryStrategy>) {
       cdkBuilder.retryStrategies(retryStrategies.map(RetryStrategy::unwrap))
     }
+
+    override fun retryStrategies(vararg retryStrategies: RetryStrategy): Unit =
+        retryStrategies(retryStrategies.toList())
 
     override fun schedulingPriority(schedulingPriority: Number) {
       cdkBuilder.schedulingPriority(schedulingPriority)

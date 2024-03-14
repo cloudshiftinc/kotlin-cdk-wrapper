@@ -142,6 +142,8 @@ public open class CfnRecordSet internal constructor(
     unwrap(this).setResourceRecords(`value`)
   }
 
+  public open fun resourceRecords(vararg `value`: String): Unit = resourceRecords(`value`.toList())
+
   public open fun setIdentifier(): String? = unwrap(this).getSetIdentifier()
 
   public open fun setIdentifier(`value`: String) {
@@ -221,6 +223,8 @@ public open class CfnRecordSet internal constructor(
     public fun region(region: String)
 
     public fun resourceRecords(resourceRecords: List<String>)
+
+    public fun resourceRecords(vararg resourceRecords: String)
 
     public fun ttl(ttl: String)
 
@@ -332,6 +336,9 @@ public open class CfnRecordSet internal constructor(
     override fun resourceRecords(resourceRecords: List<String>) {
       cdkBuilder.resourceRecords(resourceRecords)
     }
+
+    override fun resourceRecords(vararg resourceRecords: String): Unit =
+        resourceRecords(resourceRecords.toList())
 
     override fun ttl(ttl: String) {
       cdkBuilder.ttl(ttl)

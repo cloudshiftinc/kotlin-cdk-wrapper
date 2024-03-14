@@ -32,6 +32,8 @@ public interface AttachInitOptions {
   public interface Builder {
     public fun configSets(configSets: List<String>)
 
+    public fun configSets(vararg configSets: String)
+
     public fun embedFingerprint(embedFingerprint: Boolean)
 
     public fun ignoreFailures(ignoreFailures: Boolean)
@@ -58,6 +60,8 @@ public interface AttachInitOptions {
     override fun configSets(configSets: List<String>) {
       cdkBuilder.configSets(configSets)
     }
+
+    override fun configSets(vararg configSets: String): Unit = configSets(configSets.toList())
 
     override fun embedFingerprint(embedFingerprint: Boolean) {
       cdkBuilder.embedFingerprint(embedFingerprint)

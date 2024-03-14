@@ -25,6 +25,8 @@ public open class RequestAuthorizer internal constructor(
 
     public fun identitySources(identitySources: List<String>)
 
+    public fun identitySources(vararg identitySources: String)
+
     public fun resultsCacheTtl(resultsCacheTtl: Duration)
   }
 
@@ -50,6 +52,9 @@ public open class RequestAuthorizer internal constructor(
     override fun identitySources(identitySources: List<String>) {
       cdkBuilder.identitySources(identitySources)
     }
+
+    override fun identitySources(vararg identitySources: String): Unit =
+        identitySources(identitySources.toList())
 
     override fun resultsCacheTtl(resultsCacheTtl: Duration) {
       cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration::unwrap))

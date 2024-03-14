@@ -76,6 +76,8 @@ public open class CfnRestoreTestingPlan internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun recoveryPointSelection(recoveryPointSelection: IResolvable)
 
@@ -96,6 +98,8 @@ public open class CfnRestoreTestingPlan internal constructor(
     public fun startWindowHours(startWindowHours: Number)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -141,6 +145,8 @@ public open class CfnRestoreTestingPlan internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     public fun build(): software.amazon.awscdk.services.backup.CfnRestoreTestingPlan =
         cdkBuilder.build()
   }
@@ -182,9 +188,15 @@ public open class CfnRestoreTestingPlan internal constructor(
 
       public fun excludeVaults(excludeVaults: List<String>)
 
+      public fun excludeVaults(vararg excludeVaults: String)
+
       public fun includeVaults(includeVaults: List<String>)
 
+      public fun includeVaults(vararg includeVaults: String)
+
       public fun recoveryPointTypes(recoveryPointTypes: List<String>)
+
+      public fun recoveryPointTypes(vararg recoveryPointTypes: String)
 
       public fun selectionWindowDays(selectionWindowDays: Number)
     }
@@ -203,13 +215,22 @@ public open class CfnRestoreTestingPlan internal constructor(
         cdkBuilder.excludeVaults(excludeVaults)
       }
 
+      override fun excludeVaults(vararg excludeVaults: String): Unit =
+          excludeVaults(excludeVaults.toList())
+
       override fun includeVaults(includeVaults: List<String>) {
         cdkBuilder.includeVaults(includeVaults)
       }
 
+      override fun includeVaults(vararg includeVaults: String): Unit =
+          includeVaults(includeVaults.toList())
+
       override fun recoveryPointTypes(recoveryPointTypes: List<String>) {
         cdkBuilder.recoveryPointTypes(recoveryPointTypes)
       }
+
+      override fun recoveryPointTypes(vararg recoveryPointTypes: String): Unit =
+          recoveryPointTypes(recoveryPointTypes.toList())
 
       override fun selectionWindowDays(selectionWindowDays: Number) {
         cdkBuilder.selectionWindowDays(selectionWindowDays)
@@ -228,10 +249,9 @@ public open class CfnRestoreTestingPlan internal constructor(
 
       override fun excludeVaults(): List<String> = unwrap(this).getExcludeVaults() ?: emptyList()
 
-      override fun includeVaults(): List<String> = unwrap(this).getIncludeVaults() ?: emptyList()
+      override fun includeVaults(): List<String> = unwrap(this).getIncludeVaults()
 
-      override fun recoveryPointTypes(): List<String> = unwrap(this).getRecoveryPointTypes() ?:
-          emptyList()
+      override fun recoveryPointTypes(): List<String> = unwrap(this).getRecoveryPointTypes()
 
       override fun selectionWindowDays(): Number? = unwrap(this).getSelectionWindowDays()
     }

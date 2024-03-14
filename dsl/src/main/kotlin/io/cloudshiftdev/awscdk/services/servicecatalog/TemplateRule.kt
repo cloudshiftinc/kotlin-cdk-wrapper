@@ -16,6 +16,8 @@ public interface TemplateRule {
   public interface Builder {
     public fun assertions(assertions: List<TemplateRuleAssertion>)
 
+    public fun assertions(vararg assertions: TemplateRuleAssertion)
+
     public fun condition(condition: ICfnRuleConditionExpression)
 
     public fun ruleName(ruleName: String)
@@ -28,6 +30,9 @@ public interface TemplateRule {
     override fun assertions(assertions: List<TemplateRuleAssertion>) {
       cdkBuilder.assertions(assertions.map(TemplateRuleAssertion::unwrap))
     }
+
+    override fun assertions(vararg assertions: TemplateRuleAssertion): Unit =
+        assertions(assertions.toList())
 
     override fun condition(condition: ICfnRuleConditionExpression) {
       cdkBuilder.condition(condition.let(ICfnRuleConditionExpression::unwrap))

@@ -190,6 +190,8 @@ public open class SourcedConfiguration internal constructor(
 
     public fun deployTo(deployTo: List<IEnvironment>)
 
+    public fun deployTo(vararg deployTo: IEnvironment)
+
     public fun deploymentKey(deploymentKey: IKey)
 
     public fun deploymentStrategy(deploymentStrategy: IDeploymentStrategy)
@@ -205,6 +207,8 @@ public open class SourcedConfiguration internal constructor(
     public fun type(type: ConfigurationType)
 
     public fun validators(validators: List<IValidator>)
+
+    public fun validators(vararg validators: IValidator)
 
     public fun versionNumber(versionNumber: String)
   }
@@ -223,6 +227,8 @@ public open class SourcedConfiguration internal constructor(
     override fun deployTo(deployTo: List<IEnvironment>) {
       cdkBuilder.deployTo(deployTo.map(IEnvironment::unwrap))
     }
+
+    override fun deployTo(vararg deployTo: IEnvironment): Unit = deployTo(deployTo.toList())
 
     override fun deploymentKey(deploymentKey: IKey) {
       cdkBuilder.deploymentKey(deploymentKey.let(IKey::unwrap))
@@ -255,6 +261,8 @@ public open class SourcedConfiguration internal constructor(
     override fun validators(validators: List<IValidator>) {
       cdkBuilder.validators(validators.map(IValidator::unwrap))
     }
+
+    override fun validators(vararg validators: IValidator): Unit = validators(validators.toList())
 
     override fun versionNumber(versionNumber: String) {
       cdkBuilder.versionNumber(versionNumber)

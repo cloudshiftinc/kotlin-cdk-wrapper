@@ -49,6 +49,8 @@ public open class CfnPublicRepository internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun repositoryCatalogData(repositoryCatalogData: Any)
 
@@ -57,6 +59,8 @@ public open class CfnPublicRepository internal constructor(
     public fun repositoryPolicyText(repositoryPolicyText: Any)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -81,6 +85,8 @@ public open class CfnPublicRepository internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ecr.CfnPublicRepository = cdkBuilder.build()
   }
@@ -122,7 +128,11 @@ public open class CfnPublicRepository internal constructor(
 
       public fun architectures(architectures: List<String>)
 
+      public fun architectures(vararg architectures: String)
+
       public fun operatingSystems(operatingSystems: List<String>)
+
+      public fun operatingSystems(vararg operatingSystems: String)
 
       public fun repositoryDescription(repositoryDescription: String)
 
@@ -143,9 +153,15 @@ public open class CfnPublicRepository internal constructor(
         cdkBuilder.architectures(architectures)
       }
 
+      override fun architectures(vararg architectures: String): Unit =
+          architectures(architectures.toList())
+
       override fun operatingSystems(operatingSystems: List<String>) {
         cdkBuilder.operatingSystems(operatingSystems)
       }
+
+      override fun operatingSystems(vararg operatingSystems: String): Unit =
+          operatingSystems(operatingSystems.toList())
 
       override fun repositoryDescription(repositoryDescription: String) {
         cdkBuilder.repositoryDescription(repositoryDescription)

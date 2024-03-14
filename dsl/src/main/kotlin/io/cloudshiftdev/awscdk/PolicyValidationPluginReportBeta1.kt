@@ -23,6 +23,8 @@ public interface PolicyValidationPluginReportBeta1 {
     public fun success(success: Boolean)
 
     public fun violations(violations: List<PolicyViolationBeta1>)
+
+    public fun violations(vararg violations: PolicyViolationBeta1)
   }
 
   private class BuilderImpl : Builder {
@@ -44,6 +46,9 @@ public interface PolicyValidationPluginReportBeta1 {
     override fun violations(violations: List<PolicyViolationBeta1>) {
       cdkBuilder.violations(violations.map(PolicyViolationBeta1::unwrap))
     }
+
+    override fun violations(vararg violations: PolicyViolationBeta1): Unit =
+        violations(violations.toList())
 
     public fun build(): software.amazon.awscdk.PolicyValidationPluginReportBeta1 =
         cdkBuilder.build()

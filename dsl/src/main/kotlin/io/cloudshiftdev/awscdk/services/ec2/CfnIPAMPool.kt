@@ -58,6 +58,9 @@ public open class CfnIPAMPool internal constructor(
     unwrap(this).setAllocationResourceTags(__idx_ac66f0)
   }
 
+  public open fun allocationResourceTags(vararg __idx_ac66f0: Any): Unit =
+      allocationResourceTags(__idx_ac66f0.toList())
+
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   public open fun attrIpamArn(): String = unwrap(this).getAttrIpamArn()
@@ -122,6 +125,9 @@ public open class CfnIPAMPool internal constructor(
     unwrap(this).setProvisionedCidrs(__idx_ac66f0)
   }
 
+  public open fun provisionedCidrs(vararg __idx_ac66f0: Any): Unit =
+      provisionedCidrs(__idx_ac66f0.toList())
+
   public open fun publicIpSource(): String? = unwrap(this).getPublicIpSource()
 
   public open fun publicIpSource(`value`: String) {
@@ -168,6 +174,8 @@ public open class CfnIPAMPool internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun addressFamily(addressFamily: String)
 
@@ -180,6 +188,8 @@ public open class CfnIPAMPool internal constructor(
     public fun allocationResourceTags(allocationResourceTags: IResolvable)
 
     public fun allocationResourceTags(allocationResourceTags: List<Any>)
+
+    public fun allocationResourceTags(vararg allocationResourceTags: Any)
 
     public fun autoImport(autoImport: Boolean)
 
@@ -196,6 +206,8 @@ public open class CfnIPAMPool internal constructor(
     public fun provisionedCidrs(provisionedCidrs: IResolvable)
 
     public fun provisionedCidrs(provisionedCidrs: List<Any>)
+
+    public fun provisionedCidrs(vararg provisionedCidrs: Any)
 
     public fun publicIpSource(publicIpSource: String)
 
@@ -214,6 +226,8 @@ public open class CfnIPAMPool internal constructor(
     public fun sourceResource(sourceResource: SourceResourceProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -247,6 +261,9 @@ public open class CfnIPAMPool internal constructor(
       cdkBuilder.allocationResourceTags(allocationResourceTags)
     }
 
+    override fun allocationResourceTags(vararg allocationResourceTags: Any): Unit =
+        allocationResourceTags(allocationResourceTags.toList())
+
     override fun autoImport(autoImport: Boolean) {
       cdkBuilder.autoImport(autoImport)
     }
@@ -278,6 +295,9 @@ public open class CfnIPAMPool internal constructor(
     override fun provisionedCidrs(provisionedCidrs: List<Any>) {
       cdkBuilder.provisionedCidrs(provisionedCidrs)
     }
+
+    override fun provisionedCidrs(vararg provisionedCidrs: Any): Unit =
+        provisionedCidrs(provisionedCidrs.toList())
 
     override fun publicIpSource(publicIpSource: String) {
       cdkBuilder.publicIpSource(publicIpSource)
@@ -311,6 +331,8 @@ public open class CfnIPAMPool internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.CfnIPAMPool = cdkBuilder.build()
   }

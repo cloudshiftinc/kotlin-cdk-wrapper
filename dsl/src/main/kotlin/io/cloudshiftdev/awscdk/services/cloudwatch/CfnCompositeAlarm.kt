@@ -52,6 +52,8 @@ public open class CfnCompositeAlarm internal constructor(
     unwrap(this).setAlarmActions(`value`)
   }
 
+  public open fun alarmActions(vararg `value`: String): Unit = alarmActions(`value`.toList())
+
   public open fun alarmDescription(): String? = unwrap(this).getAlarmDescription()
 
   public open fun alarmDescription(`value`: String) {
@@ -83,11 +85,16 @@ public open class CfnCompositeAlarm internal constructor(
     unwrap(this).setInsufficientDataActions(`value`)
   }
 
+  public open fun insufficientDataActions(vararg `value`: String): Unit =
+      insufficientDataActions(`value`.toList())
+
   public open fun okActions(): List<String> = unwrap(this).getOkActions() ?: emptyList()
 
   public open fun okActions(`value`: List<String>) {
     unwrap(this).setOkActions(`value`)
   }
+
+  public open fun okActions(vararg `value`: String): Unit = okActions(`value`.toList())
 
   public interface Builder {
     public fun actionsEnabled(actionsEnabled: Boolean)
@@ -102,6 +109,8 @@ public open class CfnCompositeAlarm internal constructor(
 
     public fun alarmActions(alarmActions: List<String>)
 
+    public fun alarmActions(vararg alarmActions: String)
+
     public fun alarmDescription(alarmDescription: String)
 
     public fun alarmName(alarmName: String)
@@ -110,7 +119,11 @@ public open class CfnCompositeAlarm internal constructor(
 
     public fun insufficientDataActions(insufficientDataActions: List<String>)
 
+    public fun insufficientDataActions(vararg insufficientDataActions: String)
+
     public fun okActions(okActions: List<String>)
+
+    public fun okActions(vararg okActions: String)
   }
 
   private class BuilderImpl(
@@ -144,6 +157,9 @@ public open class CfnCompositeAlarm internal constructor(
       cdkBuilder.alarmActions(alarmActions)
     }
 
+    override fun alarmActions(vararg alarmActions: String): Unit =
+        alarmActions(alarmActions.toList())
+
     override fun alarmDescription(alarmDescription: String) {
       cdkBuilder.alarmDescription(alarmDescription)
     }
@@ -160,9 +176,14 @@ public open class CfnCompositeAlarm internal constructor(
       cdkBuilder.insufficientDataActions(insufficientDataActions)
     }
 
+    override fun insufficientDataActions(vararg insufficientDataActions: String): Unit =
+        insufficientDataActions(insufficientDataActions.toList())
+
     override fun okActions(okActions: List<String>) {
       cdkBuilder.okActions(okActions)
     }
+
+    override fun okActions(vararg okActions: String): Unit = okActions(okActions.toList())
 
     public fun build(): software.amazon.awscdk.services.cloudwatch.CfnCompositeAlarm =
         cdkBuilder.build()

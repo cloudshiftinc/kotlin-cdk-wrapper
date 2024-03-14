@@ -24,11 +24,17 @@ public open class DynamoAttributeValue internal constructor(
     public open fun fromBinarySet(`value`: List<String>): DynamoAttributeValue =
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.fromBinarySet(`value`).let(DynamoAttributeValue::wrap)
 
+    public open fun fromBinarySet(vararg `value`: String): DynamoAttributeValue =
+        fromBinarySet(`value`.toList())
+
     public open fun fromBoolean(`value`: Boolean): DynamoAttributeValue =
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.fromBoolean(`value`).let(DynamoAttributeValue::wrap)
 
     public open fun fromList(`value`: List<DynamoAttributeValue>): DynamoAttributeValue =
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.fromList(`value`.map(DynamoAttributeValue::unwrap)).let(DynamoAttributeValue::wrap)
+
+    public open fun fromList(vararg `value`: DynamoAttributeValue): DynamoAttributeValue =
+        fromList(`value`.toList())
 
     public open fun fromMap(`value`: Map<String, DynamoAttributeValue>): DynamoAttributeValue =
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.fromMap(`value`.mapValues{DynamoAttributeValue.unwrap(it.value)}).let(DynamoAttributeValue::wrap)
@@ -42,11 +48,17 @@ public open class DynamoAttributeValue internal constructor(
     public open fun fromNumberSet(`value`: List<Number>): DynamoAttributeValue =
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.fromNumberSet(`value`).let(DynamoAttributeValue::wrap)
 
+    public open fun fromNumberSet(vararg `value`: Number): DynamoAttributeValue =
+        fromNumberSet(`value`.toList())
+
     public open fun fromString(`value`: String): DynamoAttributeValue =
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.fromString(`value`).let(DynamoAttributeValue::wrap)
 
     public open fun fromStringSet(`value`: List<String>): DynamoAttributeValue =
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.fromStringSet(`value`).let(DynamoAttributeValue::wrap)
+
+    public open fun fromStringSet(vararg `value`: String): DynamoAttributeValue =
+        fromStringSet(`value`.toList())
 
     public open fun listFromJsonPath(`value`: String): DynamoAttributeValue =
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.listFromJsonPath(`value`).let(DynamoAttributeValue::wrap)
@@ -59,6 +71,9 @@ public open class DynamoAttributeValue internal constructor(
 
     public open fun numberSetFromStrings(`value`: List<String>): DynamoAttributeValue =
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.numberSetFromStrings(`value`).let(DynamoAttributeValue::wrap)
+
+    public open fun numberSetFromStrings(vararg `value`: String): DynamoAttributeValue =
+        numberSetFromStrings(`value`.toList())
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue):

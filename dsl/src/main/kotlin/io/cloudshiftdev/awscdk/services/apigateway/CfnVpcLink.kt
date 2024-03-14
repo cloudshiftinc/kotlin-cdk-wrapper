@@ -42,11 +42,15 @@ public open class CfnVpcLink internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
-  public open fun targetArns(): List<String> = unwrap(this).getTargetArns() ?: emptyList()
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
+  public open fun targetArns(): List<String> = unwrap(this).getTargetArns()
 
   public open fun targetArns(`value`: List<String>) {
     unwrap(this).setTargetArns(`value`)
   }
+
+  public open fun targetArns(vararg `value`: String): Unit = targetArns(`value`.toList())
 
   public interface Builder {
     public fun description(description: String)
@@ -55,7 +59,11 @@ public open class CfnVpcLink internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun targetArns(targetArns: List<String>)
+
+    public fun targetArns(vararg targetArns: String)
   }
 
   private class BuilderImpl(
@@ -77,9 +85,13 @@ public open class CfnVpcLink internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun targetArns(targetArns: List<String>) {
       cdkBuilder.targetArns(targetArns)
     }
+
+    override fun targetArns(vararg targetArns: String): Unit = targetArns(targetArns.toList())
 
     public fun build(): software.amazon.awscdk.services.apigateway.CfnVpcLink = cdkBuilder.build()
   }

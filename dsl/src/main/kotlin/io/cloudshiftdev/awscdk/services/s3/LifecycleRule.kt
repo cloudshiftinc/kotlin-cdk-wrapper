@@ -62,6 +62,9 @@ public interface LifecycleRule {
     public
         fun noncurrentVersionTransitions(noncurrentVersionTransitions: List<NoncurrentVersionTransition>)
 
+    public fun noncurrentVersionTransitions(vararg
+        noncurrentVersionTransitions: NoncurrentVersionTransition)
+
     public fun noncurrentVersionsToRetain(noncurrentVersionsToRetain: Number)
 
     public fun objectSizeGreaterThan(objectSizeGreaterThan: Number)
@@ -73,6 +76,8 @@ public interface LifecycleRule {
     public fun tagFilters(tagFilters: Map<String, Any>)
 
     public fun transitions(transitions: List<Transition>)
+
+    public fun transitions(vararg transitions: Transition)
   }
 
   private class BuilderImpl : Builder {
@@ -113,6 +118,10 @@ public interface LifecycleRule {
       cdkBuilder.noncurrentVersionTransitions(noncurrentVersionTransitions.map(NoncurrentVersionTransition::unwrap))
     }
 
+    override fun noncurrentVersionTransitions(vararg
+        noncurrentVersionTransitions: NoncurrentVersionTransition): Unit =
+        noncurrentVersionTransitions(noncurrentVersionTransitions.toList())
+
     override fun noncurrentVersionsToRetain(noncurrentVersionsToRetain: Number) {
       cdkBuilder.noncurrentVersionsToRetain(noncurrentVersionsToRetain)
     }
@@ -136,6 +145,9 @@ public interface LifecycleRule {
     override fun transitions(transitions: List<Transition>) {
       cdkBuilder.transitions(transitions.map(Transition::unwrap))
     }
+
+    override fun transitions(vararg transitions: Transition): Unit =
+        transitions(transitions.toList())
 
     public fun build(): software.amazon.awscdk.services.s3.LifecycleRule = cdkBuilder.build()
   }

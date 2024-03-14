@@ -55,6 +55,9 @@ public open class CfnTrustAnchor internal constructor(
     unwrap(this).setNotificationSettings(__idx_ac66f0)
   }
 
+  public open fun notificationSettings(vararg __idx_ac66f0: Any): Unit =
+      notificationSettings(__idx_ac66f0.toList())
+
   public open fun source(): Any = unwrap(this).getSource()
 
   public open fun source(`value`: IResolvable) {
@@ -79,6 +82,8 @@ public open class CfnTrustAnchor internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun enabled(enabled: Boolean)
 
@@ -90,6 +95,8 @@ public open class CfnTrustAnchor internal constructor(
 
     public fun notificationSettings(notificationSettings: List<Any>)
 
+    public fun notificationSettings(vararg notificationSettings: Any)
+
     public fun source(source: IResolvable)
 
     public fun source(source: SourceProperty)
@@ -99,6 +106,8 @@ public open class CfnTrustAnchor internal constructor(
     public fun source(source: SourceProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -128,6 +137,9 @@ public open class CfnTrustAnchor internal constructor(
       cdkBuilder.notificationSettings(notificationSettings)
     }
 
+    override fun notificationSettings(vararg notificationSettings: Any): Unit =
+        notificationSettings(notificationSettings.toList())
+
     override fun source(source: IResolvable) {
       cdkBuilder.source(source.let(IResolvable::unwrap))
     }
@@ -144,6 +156,8 @@ public open class CfnTrustAnchor internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor =
         cdkBuilder.build()

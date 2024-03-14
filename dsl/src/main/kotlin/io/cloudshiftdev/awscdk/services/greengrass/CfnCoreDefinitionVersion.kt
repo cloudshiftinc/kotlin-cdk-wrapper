@@ -33,6 +33,8 @@ public open class CfnCoreDefinitionVersion internal constructor(
     unwrap(this).setCores(__idx_ac66f0)
   }
 
+  public open fun cores(vararg __idx_ac66f0: Any): Unit = cores(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -43,6 +45,8 @@ public open class CfnCoreDefinitionVersion internal constructor(
     public fun cores(cores: IResolvable)
 
     public fun cores(cores: List<Any>)
+
+    public fun cores(vararg cores: Any)
   }
 
   private class BuilderImpl(
@@ -65,6 +69,8 @@ public open class CfnCoreDefinitionVersion internal constructor(
     override fun cores(cores: List<Any>) {
       cdkBuilder.cores(cores)
     }
+
+    override fun cores(vararg cores: Any): Unit = cores(cores.toList())
 
     public fun build(): software.amazon.awscdk.services.greengrass.CfnCoreDefinitionVersion =
         cdkBuilder.build()

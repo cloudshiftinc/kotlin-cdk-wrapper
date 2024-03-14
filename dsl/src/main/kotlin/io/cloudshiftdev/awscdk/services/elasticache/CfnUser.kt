@@ -60,6 +60,8 @@ public open class CfnUser internal constructor(
     unwrap(this).setPasswords(`value`)
   }
 
+  public open fun passwords(vararg `value`: String): Unit = passwords(`value`.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -68,6 +70,8 @@ public open class CfnUser internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun userId(): String = unwrap(this).getUserId()
 
@@ -94,7 +98,11 @@ public open class CfnUser internal constructor(
 
     public fun passwords(passwords: List<String>)
 
+    public fun passwords(vararg passwords: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun userId(userId: String)
 
@@ -132,9 +140,13 @@ public open class CfnUser internal constructor(
       cdkBuilder.passwords(passwords)
     }
 
+    override fun passwords(vararg passwords: String): Unit = passwords(passwords.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun userId(userId: String) {
       cdkBuilder.userId(userId)
@@ -176,6 +188,8 @@ public open class CfnUser internal constructor(
     public interface Builder {
       public fun passwords(passwords: List<String>)
 
+      public fun passwords(vararg passwords: String)
+
       public fun type(type: String)
     }
 
@@ -187,6 +201,8 @@ public open class CfnUser internal constructor(
       override fun passwords(passwords: List<String>) {
         cdkBuilder.passwords(passwords)
       }
+
+      override fun passwords(vararg passwords: String): Unit = passwords(passwords.toList())
 
       override fun type(type: String) {
         cdkBuilder.type(type)

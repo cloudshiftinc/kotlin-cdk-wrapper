@@ -159,9 +159,13 @@ public open class CfnPartition internal constructor(
     public interface Builder {
       public fun bucketColumns(bucketColumns: List<String>)
 
+      public fun bucketColumns(vararg bucketColumns: String)
+
       public fun columns(columns: IResolvable)
 
       public fun columns(columns: List<Any>)
+
+      public fun columns(vararg columns: Any)
 
       public fun compressed(compressed: Boolean)
 
@@ -205,6 +209,8 @@ public open class CfnPartition internal constructor(
 
       public fun sortColumns(sortColumns: List<Any>)
 
+      public fun sortColumns(vararg sortColumns: Any)
+
       public fun storedAsSubDirectories(storedAsSubDirectories: Boolean)
 
       public fun storedAsSubDirectories(storedAsSubDirectories: IResolvable)
@@ -219,6 +225,9 @@ public open class CfnPartition internal constructor(
         cdkBuilder.bucketColumns(bucketColumns)
       }
 
+      override fun bucketColumns(vararg bucketColumns: String): Unit =
+          bucketColumns(bucketColumns.toList())
+
       override fun columns(columns: IResolvable) {
         cdkBuilder.columns(columns.let(IResolvable::unwrap))
       }
@@ -226,6 +235,8 @@ public open class CfnPartition internal constructor(
       override fun columns(columns: List<Any>) {
         cdkBuilder.columns(columns)
       }
+
+      override fun columns(vararg columns: Any): Unit = columns(columns.toList())
 
       override fun compressed(compressed: Boolean) {
         cdkBuilder.compressed(compressed)
@@ -301,6 +312,8 @@ public open class CfnPartition internal constructor(
       override fun sortColumns(sortColumns: List<Any>) {
         cdkBuilder.sortColumns(sortColumns)
       }
+
+      override fun sortColumns(vararg sortColumns: Any): Unit = sortColumns(sortColumns.toList())
 
       override fun storedAsSubDirectories(storedAsSubDirectories: Boolean) {
         cdkBuilder.storedAsSubDirectories(storedAsSubDirectories)
@@ -599,6 +612,8 @@ public open class CfnPartition internal constructor(
       public fun storageDescriptor(storageDescriptor: StorageDescriptorProperty.Builder.() -> Unit)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -628,6 +643,8 @@ public open class CfnPartition internal constructor(
         cdkBuilder.values(values)
       }
 
+      override fun values(vararg values: String): Unit = values(values.toList())
+
       public fun build(): software.amazon.awscdk.services.glue.CfnPartition.PartitionInputProperty =
           cdkBuilder.build()
     }
@@ -640,7 +657,7 @@ public open class CfnPartition internal constructor(
 
       override fun storageDescriptor(): Any? = unwrap(this).getStorageDescriptor()
 
-      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues()
     }
 
     public companion object {
@@ -676,9 +693,13 @@ public open class CfnPartition internal constructor(
     public interface Builder {
       public fun skewedColumnNames(skewedColumnNames: List<String>)
 
+      public fun skewedColumnNames(vararg skewedColumnNames: String)
+
       public fun skewedColumnValueLocationMaps(skewedColumnValueLocationMaps: Any)
 
       public fun skewedColumnValues(skewedColumnValues: List<String>)
+
+      public fun skewedColumnValues(vararg skewedColumnValues: String)
     }
 
     private class BuilderImpl : Builder {
@@ -690,6 +711,9 @@ public open class CfnPartition internal constructor(
         cdkBuilder.skewedColumnNames(skewedColumnNames)
       }
 
+      override fun skewedColumnNames(vararg skewedColumnNames: String): Unit =
+          skewedColumnNames(skewedColumnNames.toList())
+
       override fun skewedColumnValueLocationMaps(skewedColumnValueLocationMaps: Any) {
         cdkBuilder.skewedColumnValueLocationMaps(skewedColumnValueLocationMaps)
       }
@@ -697,6 +721,9 @@ public open class CfnPartition internal constructor(
       override fun skewedColumnValues(skewedColumnValues: List<String>) {
         cdkBuilder.skewedColumnValues(skewedColumnValues)
       }
+
+      override fun skewedColumnValues(vararg skewedColumnValues: String): Unit =
+          skewedColumnValues(skewedColumnValues.toList())
 
       public fun build(): software.amazon.awscdk.services.glue.CfnPartition.SkewedInfoProperty =
           cdkBuilder.build()

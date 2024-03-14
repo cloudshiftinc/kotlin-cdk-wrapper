@@ -262,7 +262,7 @@ public interface IFunction : IResource, IConnectable, IGrantable {
     override fun permissionsNode(): Node = unwrap(this).getPermissionsNode().let(Node::wrap)
 
     override fun resourceArnsForGrantInvoke(): List<String> =
-        unwrap(this).getResourceArnsForGrantInvoke() ?: emptyList()
+        unwrap(this).getResourceArnsForGrantInvoke()
 
     override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
 

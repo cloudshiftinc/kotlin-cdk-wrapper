@@ -53,6 +53,8 @@ public open class CfnDistribution internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun distributionConfig(distributionConfig: IResolvable)
 
@@ -63,6 +65,8 @@ public open class CfnDistribution internal constructor(
     public fun distributionConfig(distributionConfig: DistributionConfigProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -89,6 +93,8 @@ public open class CfnDistribution internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.cloudfront.CfnDistribution =
         cdkBuilder.build()
@@ -157,9 +163,13 @@ public open class CfnDistribution internal constructor(
     public interface Builder {
       public fun allowedMethods(allowedMethods: List<String>)
 
+      public fun allowedMethods(vararg allowedMethods: String)
+
       public fun cachePolicyId(cachePolicyId: String)
 
       public fun cachedMethods(cachedMethods: List<String>)
+
+      public fun cachedMethods(vararg cachedMethods: String)
 
       public fun compress(compress: Boolean)
 
@@ -181,9 +191,13 @@ public open class CfnDistribution internal constructor(
 
       public fun functionAssociations(functionAssociations: List<Any>)
 
+      public fun functionAssociations(vararg functionAssociations: Any)
+
       public fun lambdaFunctionAssociations(lambdaFunctionAssociations: IResolvable)
 
       public fun lambdaFunctionAssociations(lambdaFunctionAssociations: List<Any>)
+
+      public fun lambdaFunctionAssociations(vararg lambdaFunctionAssociations: Any)
 
       public fun maxTtl(maxTtl: Number)
 
@@ -203,7 +217,11 @@ public open class CfnDistribution internal constructor(
 
       public fun trustedKeyGroups(trustedKeyGroups: List<String>)
 
+      public fun trustedKeyGroups(vararg trustedKeyGroups: String)
+
       public fun trustedSigners(trustedSigners: List<String>)
+
+      public fun trustedSigners(vararg trustedSigners: String)
 
       public fun viewerProtocolPolicy(viewerProtocolPolicy: String)
     }
@@ -218,6 +236,9 @@ public open class CfnDistribution internal constructor(
         cdkBuilder.allowedMethods(allowedMethods)
       }
 
+      override fun allowedMethods(vararg allowedMethods: String): Unit =
+          allowedMethods(allowedMethods.toList())
+
       override fun cachePolicyId(cachePolicyId: String) {
         cdkBuilder.cachePolicyId(cachePolicyId)
       }
@@ -225,6 +246,9 @@ public open class CfnDistribution internal constructor(
       override fun cachedMethods(cachedMethods: List<String>) {
         cdkBuilder.cachedMethods(cachedMethods)
       }
+
+      override fun cachedMethods(vararg cachedMethods: String): Unit =
+          cachedMethods(cachedMethods.toList())
 
       override fun compress(compress: Boolean) {
         cdkBuilder.compress(compress)
@@ -263,6 +287,9 @@ public open class CfnDistribution internal constructor(
         cdkBuilder.functionAssociations(functionAssociations)
       }
 
+      override fun functionAssociations(vararg functionAssociations: Any): Unit =
+          functionAssociations(functionAssociations.toList())
+
       override fun lambdaFunctionAssociations(lambdaFunctionAssociations: IResolvable) {
         cdkBuilder.lambdaFunctionAssociations(lambdaFunctionAssociations.let(IResolvable::unwrap))
       }
@@ -270,6 +297,9 @@ public open class CfnDistribution internal constructor(
       override fun lambdaFunctionAssociations(lambdaFunctionAssociations: List<Any>) {
         cdkBuilder.lambdaFunctionAssociations(lambdaFunctionAssociations)
       }
+
+      override fun lambdaFunctionAssociations(vararg lambdaFunctionAssociations: Any): Unit =
+          lambdaFunctionAssociations(lambdaFunctionAssociations.toList())
 
       override fun maxTtl(maxTtl: Number) {
         cdkBuilder.maxTtl(maxTtl)
@@ -307,9 +337,15 @@ public open class CfnDistribution internal constructor(
         cdkBuilder.trustedKeyGroups(trustedKeyGroups)
       }
 
+      override fun trustedKeyGroups(vararg trustedKeyGroups: String): Unit =
+          trustedKeyGroups(trustedKeyGroups.toList())
+
       override fun trustedSigners(trustedSigners: List<String>) {
         cdkBuilder.trustedSigners(trustedSigners)
       }
+
+      override fun trustedSigners(vararg trustedSigners: String): Unit =
+          trustedSigners(trustedSigners.toList())
 
       override fun viewerProtocolPolicy(viewerProtocolPolicy: String) {
         cdkBuilder.viewerProtocolPolicy(viewerProtocolPolicy)
@@ -428,9 +464,13 @@ public open class CfnDistribution internal constructor(
     public interface Builder {
       public fun allowedMethods(allowedMethods: List<String>)
 
+      public fun allowedMethods(vararg allowedMethods: String)
+
       public fun cachePolicyId(cachePolicyId: String)
 
       public fun cachedMethods(cachedMethods: List<String>)
+
+      public fun cachedMethods(vararg cachedMethods: String)
 
       public fun compress(compress: Boolean)
 
@@ -452,9 +492,13 @@ public open class CfnDistribution internal constructor(
 
       public fun functionAssociations(functionAssociations: List<Any>)
 
+      public fun functionAssociations(vararg functionAssociations: Any)
+
       public fun lambdaFunctionAssociations(lambdaFunctionAssociations: IResolvable)
 
       public fun lambdaFunctionAssociations(lambdaFunctionAssociations: List<Any>)
+
+      public fun lambdaFunctionAssociations(vararg lambdaFunctionAssociations: Any)
 
       public fun maxTtl(maxTtl: Number)
 
@@ -476,7 +520,11 @@ public open class CfnDistribution internal constructor(
 
       public fun trustedKeyGroups(trustedKeyGroups: List<String>)
 
+      public fun trustedKeyGroups(vararg trustedKeyGroups: String)
+
       public fun trustedSigners(trustedSigners: List<String>)
+
+      public fun trustedSigners(vararg trustedSigners: String)
 
       public fun viewerProtocolPolicy(viewerProtocolPolicy: String)
     }
@@ -490,6 +538,9 @@ public open class CfnDistribution internal constructor(
         cdkBuilder.allowedMethods(allowedMethods)
       }
 
+      override fun allowedMethods(vararg allowedMethods: String): Unit =
+          allowedMethods(allowedMethods.toList())
+
       override fun cachePolicyId(cachePolicyId: String) {
         cdkBuilder.cachePolicyId(cachePolicyId)
       }
@@ -497,6 +548,9 @@ public open class CfnDistribution internal constructor(
       override fun cachedMethods(cachedMethods: List<String>) {
         cdkBuilder.cachedMethods(cachedMethods)
       }
+
+      override fun cachedMethods(vararg cachedMethods: String): Unit =
+          cachedMethods(cachedMethods.toList())
 
       override fun compress(compress: Boolean) {
         cdkBuilder.compress(compress)
@@ -535,6 +589,9 @@ public open class CfnDistribution internal constructor(
         cdkBuilder.functionAssociations(functionAssociations)
       }
 
+      override fun functionAssociations(vararg functionAssociations: Any): Unit =
+          functionAssociations(functionAssociations.toList())
+
       override fun lambdaFunctionAssociations(lambdaFunctionAssociations: IResolvable) {
         cdkBuilder.lambdaFunctionAssociations(lambdaFunctionAssociations.let(IResolvable::unwrap))
       }
@@ -542,6 +599,9 @@ public open class CfnDistribution internal constructor(
       override fun lambdaFunctionAssociations(lambdaFunctionAssociations: List<Any>) {
         cdkBuilder.lambdaFunctionAssociations(lambdaFunctionAssociations)
       }
+
+      override fun lambdaFunctionAssociations(vararg lambdaFunctionAssociations: Any): Unit =
+          lambdaFunctionAssociations(lambdaFunctionAssociations.toList())
 
       override fun maxTtl(maxTtl: Number) {
         cdkBuilder.maxTtl(maxTtl)
@@ -583,9 +643,15 @@ public open class CfnDistribution internal constructor(
         cdkBuilder.trustedKeyGroups(trustedKeyGroups)
       }
 
+      override fun trustedKeyGroups(vararg trustedKeyGroups: String): Unit =
+          trustedKeyGroups(trustedKeyGroups.toList())
+
       override fun trustedSigners(trustedSigners: List<String>) {
         cdkBuilder.trustedSigners(trustedSigners)
       }
+
+      override fun trustedSigners(vararg trustedSigners: String): Unit =
+          trustedSigners(trustedSigners.toList())
 
       override fun viewerProtocolPolicy(viewerProtocolPolicy: String) {
         cdkBuilder.viewerProtocolPolicy(viewerProtocolPolicy)
@@ -672,6 +738,8 @@ public open class CfnDistribution internal constructor(
 
       public fun items(items: List<Any>)
 
+      public fun items(vararg items: Any)
+
       public fun quantity(quantity: Number)
     }
 
@@ -687,6 +755,8 @@ public open class CfnDistribution internal constructor(
       override fun items(items: List<Any>) {
         cdkBuilder.items(items)
       }
+
+      override fun items(vararg items: Any): Unit = items(items.toList())
 
       override fun quantity(quantity: Number) {
         cdkBuilder.quantity(quantity)
@@ -813,6 +883,8 @@ public open class CfnDistribution internal constructor(
     public interface Builder {
       public fun locations(locations: List<String>)
 
+      public fun locations(vararg locations: String)
+
       public fun restrictionType(restrictionType: String)
     }
 
@@ -825,6 +897,8 @@ public open class CfnDistribution internal constructor(
       override fun locations(locations: List<String>) {
         cdkBuilder.locations(locations)
       }
+
+      override fun locations(vararg locations: String): Unit = locations(locations.toList())
 
       override fun restrictionType(restrictionType: String) {
         cdkBuilder.restrictionType(restrictionType)
@@ -995,6 +1069,8 @@ public open class CfnDistribution internal constructor(
       public fun forward(forward: String)
 
       public fun whitelistedNames(whitelistedNames: List<String>)
+
+      public fun whitelistedNames(vararg whitelistedNames: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1009,6 +1085,9 @@ public open class CfnDistribution internal constructor(
       override fun whitelistedNames(whitelistedNames: List<String>) {
         cdkBuilder.whitelistedNames(whitelistedNames)
       }
+
+      override fun whitelistedNames(vararg whitelistedNames: String): Unit =
+          whitelistedNames(whitelistedNames.toList())
 
       public fun build(): software.amazon.awscdk.services.cloudfront.CfnDistribution.CookiesProperty
           = cdkBuilder.build()
@@ -1129,6 +1208,8 @@ public open class CfnDistribution internal constructor(
       public fun originReadTimeout(originReadTimeout: Number)
 
       public fun originSslProtocols(originSslProtocols: List<String>)
+
+      public fun originSslProtocols(vararg originSslProtocols: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1160,6 +1241,9 @@ public open class CfnDistribution internal constructor(
       override fun originSslProtocols(originSslProtocols: List<String>) {
         cdkBuilder.originSslProtocols(originSslProtocols)
       }
+
+      override fun originSslProtocols(vararg originSslProtocols: String): Unit =
+          originSslProtocols(originSslProtocols.toList())
 
       public fun build():
           software.amazon.awscdk.services.cloudfront.CfnDistribution.CustomOriginConfigProperty =
@@ -1225,11 +1309,15 @@ public open class CfnDistribution internal constructor(
 
       public fun headers(headers: List<String>)
 
+      public fun headers(vararg headers: String)
+
       public fun queryString(queryString: Boolean)
 
       public fun queryString(queryString: IResolvable)
 
       public fun queryStringCacheKeys(queryStringCacheKeys: List<String>)
+
+      public fun queryStringCacheKeys(vararg queryStringCacheKeys: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1255,6 +1343,8 @@ public open class CfnDistribution internal constructor(
         cdkBuilder.headers(headers)
       }
 
+      override fun headers(vararg headers: String): Unit = headers(headers.toList())
+
       override fun queryString(queryString: Boolean) {
         cdkBuilder.queryString(queryString)
       }
@@ -1266,6 +1356,9 @@ public open class CfnDistribution internal constructor(
       override fun queryStringCacheKeys(queryStringCacheKeys: List<String>) {
         cdkBuilder.queryStringCacheKeys(queryStringCacheKeys)
       }
+
+      override fun queryStringCacheKeys(vararg queryStringCacheKeys: String): Unit =
+          queryStringCacheKeys(queryStringCacheKeys.toList())
 
       public fun build():
           software.amazon.awscdk.services.cloudfront.CfnDistribution.ForwardedValuesProperty =
@@ -1449,11 +1542,17 @@ public open class CfnDistribution internal constructor(
     public interface Builder {
       public fun aliases(aliases: List<String>)
 
+      public fun aliases(vararg aliases: String)
+
       public fun cacheBehaviors(cacheBehaviors: IResolvable)
 
       public fun cacheBehaviors(cacheBehaviors: List<Any>)
 
+      public fun cacheBehaviors(vararg cacheBehaviors: Any)
+
       public fun cnamEs(cnamEs: List<String>)
+
+      public fun cnamEs(vararg cnamEs: String)
 
       public fun comment(comment: String)
 
@@ -1462,6 +1561,8 @@ public open class CfnDistribution internal constructor(
       public fun customErrorResponses(customErrorResponses: IResolvable)
 
       public fun customErrorResponses(customErrorResponses: List<Any>)
+
+      public fun customErrorResponses(vararg customErrorResponses: Any)
 
       public fun customOrigin(customOrigin: IResolvable)
 
@@ -1512,6 +1613,8 @@ public open class CfnDistribution internal constructor(
 
       public fun origins(origins: List<Any>)
 
+      public fun origins(vararg origins: Any)
+
       public fun priceClass(priceClass: String)
 
       public fun restrictions(restrictions: IResolvable)
@@ -1555,6 +1658,8 @@ public open class CfnDistribution internal constructor(
         cdkBuilder.aliases(aliases)
       }
 
+      override fun aliases(vararg aliases: String): Unit = aliases(aliases.toList())
+
       override fun cacheBehaviors(cacheBehaviors: IResolvable) {
         cdkBuilder.cacheBehaviors(cacheBehaviors.let(IResolvable::unwrap))
       }
@@ -1563,9 +1668,14 @@ public open class CfnDistribution internal constructor(
         cdkBuilder.cacheBehaviors(cacheBehaviors)
       }
 
+      override fun cacheBehaviors(vararg cacheBehaviors: Any): Unit =
+          cacheBehaviors(cacheBehaviors.toList())
+
       override fun cnamEs(cnamEs: List<String>) {
         cdkBuilder.cnamEs(cnamEs)
       }
+
+      override fun cnamEs(vararg cnamEs: String): Unit = cnamEs(cnamEs.toList())
 
       override fun comment(comment: String) {
         cdkBuilder.comment(comment)
@@ -1582,6 +1692,9 @@ public open class CfnDistribution internal constructor(
       override fun customErrorResponses(customErrorResponses: List<Any>) {
         cdkBuilder.customErrorResponses(customErrorResponses)
       }
+
+      override fun customErrorResponses(vararg customErrorResponses: Any): Unit =
+          customErrorResponses(customErrorResponses.toList())
 
       override fun customOrigin(customOrigin: IResolvable) {
         cdkBuilder.customOrigin(customOrigin.let(IResolvable::unwrap))
@@ -1667,6 +1780,8 @@ public open class CfnDistribution internal constructor(
       override fun origins(origins: List<Any>) {
         cdkBuilder.origins(origins)
       }
+
+      override fun origins(vararg origins: Any): Unit = origins(origins.toList())
 
       override fun priceClass(priceClass: String) {
         cdkBuilder.priceClass(priceClass)
@@ -1871,6 +1986,8 @@ public open class CfnDistribution internal constructor(
 
       public fun items(items: List<Number>)
 
+      public fun items(vararg items: Number)
+
       public fun quantity(quantity: Number)
     }
 
@@ -1886,6 +2003,8 @@ public open class CfnDistribution internal constructor(
       override fun items(items: List<Number>) {
         cdkBuilder.items(items)
       }
+
+      override fun items(vararg items: Number): Unit = items(items.toList())
 
       override fun quantity(quantity: Number) {
         cdkBuilder.quantity(quantity)
@@ -2000,6 +2119,8 @@ public open class CfnDistribution internal constructor(
 
       public fun items(items: List<Any>)
 
+      public fun items(vararg items: Any)
+
       public fun quantity(quantity: Number)
     }
 
@@ -2016,6 +2137,8 @@ public open class CfnDistribution internal constructor(
       override fun items(items: List<Any>) {
         cdkBuilder.items(items)
       }
+
+      override fun items(vararg items: Any): Unit = items(items.toList())
 
       override fun quantity(quantity: Number) {
         cdkBuilder.quantity(quantity)
@@ -2335,6 +2458,8 @@ public open class CfnDistribution internal constructor(
 
       public fun originCustomHeaders(originCustomHeaders: List<Any>)
 
+      public fun originCustomHeaders(vararg originCustomHeaders: Any)
+
       public fun originPath(originPath: String)
 
       public fun originShield(originShield: IResolvable)
@@ -2400,6 +2525,9 @@ public open class CfnDistribution internal constructor(
       override fun originCustomHeaders(originCustomHeaders: List<Any>) {
         cdkBuilder.originCustomHeaders(originCustomHeaders)
       }
+
+      override fun originCustomHeaders(vararg originCustomHeaders: Any): Unit =
+          originCustomHeaders(originCustomHeaders.toList())
 
       override fun originPath(originPath: String) {
         cdkBuilder.originPath(originPath)
@@ -2672,6 +2800,8 @@ public open class CfnDistribution internal constructor(
       public fun originProtocolPolicy(originProtocolPolicy: String)
 
       public fun originSslProtocols(originSslProtocols: List<String>)
+
+      public fun originSslProtocols(vararg originSslProtocols: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2700,6 +2830,9 @@ public open class CfnDistribution internal constructor(
         cdkBuilder.originSslProtocols(originSslProtocols)
       }
 
+      override fun originSslProtocols(vararg originSslProtocols: String): Unit =
+          originSslProtocols(originSslProtocols.toList())
+
       public fun build():
           software.amazon.awscdk.services.cloudfront.CfnDistribution.LegacyCustomOriginProperty =
           cdkBuilder.build()
@@ -2717,8 +2850,7 @@ public open class CfnDistribution internal constructor(
 
       override fun originProtocolPolicy(): String = unwrap(this).getOriginProtocolPolicy()
 
-      override fun originSslProtocols(): List<String> = unwrap(this).getOriginSslProtocols() ?:
-          emptyList()
+      override fun originSslProtocols(): List<String> = unwrap(this).getOriginSslProtocols()
     }
 
     public companion object {

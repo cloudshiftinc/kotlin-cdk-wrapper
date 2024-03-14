@@ -31,6 +31,8 @@ public open class CfnProfile internal constructor(
     unwrap(this).setCertificateIds(`value`)
   }
 
+  public open fun certificateIds(vararg `value`: String): Unit = certificateIds(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -50,14 +52,20 @@ public open class CfnProfile internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun as2Id(as2Id: String)
 
     public fun certificateIds(certificateIds: List<String>)
 
+    public fun certificateIds(vararg certificateIds: String)
+
     public fun profileType(profileType: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -75,6 +83,9 @@ public open class CfnProfile internal constructor(
       cdkBuilder.certificateIds(certificateIds)
     }
 
+    override fun certificateIds(vararg certificateIds: String): Unit =
+        certificateIds(certificateIds.toList())
+
     override fun profileType(profileType: String) {
       cdkBuilder.profileType(profileType)
     }
@@ -82,6 +93,8 @@ public open class CfnProfile internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.transfer.CfnProfile = cdkBuilder.build()
   }

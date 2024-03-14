@@ -29,11 +29,15 @@ public open class CfnRealtimeLogConfig internal constructor(
     unwrap(this).setEndPoints(__idx_ac66f0)
   }
 
-  public open fun fields(): List<String> = unwrap(this).getFields() ?: emptyList()
+  public open fun endPoints(vararg __idx_ac66f0: Any): Unit = endPoints(__idx_ac66f0.toList())
+
+  public open fun fields(): List<String> = unwrap(this).getFields()
 
   public open fun fields(`value`: List<String>) {
     unwrap(this).setFields(`value`)
   }
+
+  public open fun fields(vararg `value`: String): Unit = fields(`value`.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -56,7 +60,11 @@ public open class CfnRealtimeLogConfig internal constructor(
 
     public fun endPoints(endPoints: List<Any>)
 
+    public fun endPoints(vararg endPoints: Any)
+
     public fun fields(fields: List<String>)
+
+    public fun fields(vararg fields: String)
 
     public fun name(name: String)
 
@@ -78,9 +86,13 @@ public open class CfnRealtimeLogConfig internal constructor(
       cdkBuilder.endPoints(endPoints)
     }
 
+    override fun endPoints(vararg endPoints: Any): Unit = endPoints(endPoints.toList())
+
     override fun fields(fields: List<String>) {
       cdkBuilder.fields(fields)
     }
+
+    override fun fields(vararg fields: String): Unit = fields(fields.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)

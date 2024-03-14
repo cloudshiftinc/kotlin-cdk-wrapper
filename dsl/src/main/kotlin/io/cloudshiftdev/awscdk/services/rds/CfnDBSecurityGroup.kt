@@ -29,6 +29,9 @@ public open class CfnDBSecurityGroup internal constructor(
     unwrap(this).setDbSecurityGroupIngress(__idx_ac66f0)
   }
 
+  public open fun dbSecurityGroupIngress(vararg __idx_ac66f0: Any): Unit =
+      dbSecurityGroupIngress(__idx_ac66f0.toList())
+
   public open fun ec2VpcId(): String? = unwrap(this).getEc2VpcId()
 
   public open fun ec2VpcId(`value`: String) {
@@ -54,16 +57,22 @@ public open class CfnDBSecurityGroup internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun dbSecurityGroupIngress(dbSecurityGroupIngress: IResolvable)
 
     public fun dbSecurityGroupIngress(dbSecurityGroupIngress: List<Any>)
+
+    public fun dbSecurityGroupIngress(vararg dbSecurityGroupIngress: Any)
 
     public fun ec2VpcId(ec2VpcId: String)
 
     public fun groupDescription(groupDescription: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -81,6 +90,9 @@ public open class CfnDBSecurityGroup internal constructor(
       cdkBuilder.dbSecurityGroupIngress(dbSecurityGroupIngress)
     }
 
+    override fun dbSecurityGroupIngress(vararg dbSecurityGroupIngress: Any): Unit =
+        dbSecurityGroupIngress(dbSecurityGroupIngress.toList())
+
     override fun ec2VpcId(ec2VpcId: String) {
       cdkBuilder.ec2VpcId(ec2VpcId)
     }
@@ -92,6 +104,8 @@ public open class CfnDBSecurityGroup internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.rds.CfnDBSecurityGroup = cdkBuilder.build()
   }

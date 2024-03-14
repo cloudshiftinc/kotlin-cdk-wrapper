@@ -95,6 +95,8 @@ public open class CfnPortal internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public open fun trustStoreArn(): String? = unwrap(this).getTrustStoreArn()
 
   public open fun trustStoreArn(`value`: String) {
@@ -132,6 +134,8 @@ public open class CfnPortal internal constructor(
     public fun networkSettingsArn(networkSettingsArn: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun trustStoreArn(trustStoreArn: String)
 
@@ -182,6 +186,8 @@ public open class CfnPortal internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun trustStoreArn(trustStoreArn: String) {
       cdkBuilder.trustStoreArn(trustStoreArn)

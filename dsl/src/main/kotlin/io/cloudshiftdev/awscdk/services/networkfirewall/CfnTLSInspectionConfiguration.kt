@@ -46,6 +46,8 @@ public open class CfnTLSInspectionConfiguration internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public open fun tlsInspectionConfiguration(): Any = unwrap(this).getTlsInspectionConfiguration()
 
   public open fun tlsInspectionConfiguration(`value`: IResolvable) {
@@ -73,6 +75,8 @@ public open class CfnTLSInspectionConfiguration internal constructor(
     public fun description(description: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun tlsInspectionConfiguration(tlsInspectionConfiguration: IResolvable)
 
@@ -103,6 +107,8 @@ public open class CfnTLSInspectionConfiguration internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun tlsInspectionConfiguration(tlsInspectionConfiguration: IResolvable) {
       cdkBuilder.tlsInspectionConfiguration(tlsInspectionConfiguration.let(IResolvable::unwrap))
@@ -219,6 +225,8 @@ public open class CfnTLSInspectionConfiguration internal constructor(
       public fun serverCertificateConfigurations(serverCertificateConfigurations: IResolvable)
 
       public fun serverCertificateConfigurations(serverCertificateConfigurations: List<Any>)
+
+      public fun serverCertificateConfigurations(vararg serverCertificateConfigurations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -234,6 +242,9 @@ public open class CfnTLSInspectionConfiguration internal constructor(
       override fun serverCertificateConfigurations(serverCertificateConfigurations: List<Any>) {
         cdkBuilder.serverCertificateConfigurations(serverCertificateConfigurations)
       }
+
+      override fun serverCertificateConfigurations(vararg serverCertificateConfigurations: Any):
+          Unit = serverCertificateConfigurations(serverCertificateConfigurations.toList())
 
       public fun build():
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty
@@ -443,21 +454,31 @@ public open class CfnTLSInspectionConfiguration internal constructor(
 
       public fun destinationPorts(destinationPorts: List<Any>)
 
+      public fun destinationPorts(vararg destinationPorts: Any)
+
       public fun destinations(destinations: IResolvable)
 
       public fun destinations(destinations: List<Any>)
+
+      public fun destinations(vararg destinations: Any)
 
       public fun protocols(protocols: IResolvable)
 
       public fun protocols(protocols: List<Number>)
 
+      public fun protocols(vararg protocols: Number)
+
       public fun sourcePorts(sourcePorts: IResolvable)
 
       public fun sourcePorts(sourcePorts: List<Any>)
 
+      public fun sourcePorts(vararg sourcePorts: Any)
+
       public fun sources(sources: IResolvable)
 
       public fun sources(sources: List<Any>)
+
+      public fun sources(vararg sources: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -474,6 +495,9 @@ public open class CfnTLSInspectionConfiguration internal constructor(
         cdkBuilder.destinationPorts(destinationPorts)
       }
 
+      override fun destinationPorts(vararg destinationPorts: Any): Unit =
+          destinationPorts(destinationPorts.toList())
+
       override fun destinations(destinations: IResolvable) {
         cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
       }
@@ -481,6 +505,9 @@ public open class CfnTLSInspectionConfiguration internal constructor(
       override fun destinations(destinations: List<Any>) {
         cdkBuilder.destinations(destinations)
       }
+
+      override fun destinations(vararg destinations: Any): Unit =
+          destinations(destinations.toList())
 
       override fun protocols(protocols: IResolvable) {
         cdkBuilder.protocols(protocols.let(IResolvable::unwrap))
@@ -490,6 +517,8 @@ public open class CfnTLSInspectionConfiguration internal constructor(
         cdkBuilder.protocols(protocols)
       }
 
+      override fun protocols(vararg protocols: Number): Unit = protocols(protocols.toList())
+
       override fun sourcePorts(sourcePorts: IResolvable) {
         cdkBuilder.sourcePorts(sourcePorts.let(IResolvable::unwrap))
       }
@@ -498,6 +527,8 @@ public open class CfnTLSInspectionConfiguration internal constructor(
         cdkBuilder.sourcePorts(sourcePorts)
       }
 
+      override fun sourcePorts(vararg sourcePorts: Any): Unit = sourcePorts(sourcePorts.toList())
+
       override fun sources(sources: IResolvable) {
         cdkBuilder.sources(sources.let(IResolvable::unwrap))
       }
@@ -505,6 +536,8 @@ public open class CfnTLSInspectionConfiguration internal constructor(
       override fun sources(sources: List<Any>) {
         cdkBuilder.sources(sources)
       }
+
+      override fun sources(vararg sources: Any): Unit = sources(sources.toList())
 
       public fun build():
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateScopeProperty
@@ -573,9 +606,13 @@ public open class CfnTLSInspectionConfiguration internal constructor(
 
       public fun scopes(scopes: List<Any>)
 
+      public fun scopes(vararg scopes: Any)
+
       public fun serverCertificates(serverCertificates: IResolvable)
 
       public fun serverCertificates(serverCertificates: List<Any>)
+
+      public fun serverCertificates(vararg serverCertificates: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -612,6 +649,8 @@ public open class CfnTLSInspectionConfiguration internal constructor(
         cdkBuilder.scopes(scopes)
       }
 
+      override fun scopes(vararg scopes: Any): Unit = scopes(scopes.toList())
+
       override fun serverCertificates(serverCertificates: IResolvable) {
         cdkBuilder.serverCertificates(serverCertificates.let(IResolvable::unwrap))
       }
@@ -619,6 +658,9 @@ public open class CfnTLSInspectionConfiguration internal constructor(
       override fun serverCertificates(serverCertificates: List<Any>) {
         cdkBuilder.serverCertificates(serverCertificates)
       }
+
+      override fun serverCertificates(vararg serverCertificates: Any): Unit =
+          serverCertificates(serverCertificates.toList())
 
       public fun build():
           software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration.ServerCertificateConfigurationProperty

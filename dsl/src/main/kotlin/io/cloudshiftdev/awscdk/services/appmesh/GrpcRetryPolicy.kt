@@ -12,13 +12,19 @@ public interface GrpcRetryPolicy : HttpRetryPolicy {
   public interface Builder {
     public fun grpcRetryEvents(grpcRetryEvents: List<GrpcRetryEvent>)
 
+    public fun grpcRetryEvents(vararg grpcRetryEvents: GrpcRetryEvent)
+
     public fun httpRetryEvents(httpRetryEvents: List<HttpRetryEvent>)
+
+    public fun httpRetryEvents(vararg httpRetryEvents: HttpRetryEvent)
 
     public fun retryAttempts(retryAttempts: Number)
 
     public fun retryTimeout(retryTimeout: Duration)
 
     public fun tcpRetryEvents(tcpRetryEvents: List<TcpRetryEvent>)
+
+    public fun tcpRetryEvents(vararg tcpRetryEvents: TcpRetryEvent)
   }
 
   private class BuilderImpl : Builder {
@@ -29,9 +35,15 @@ public interface GrpcRetryPolicy : HttpRetryPolicy {
       cdkBuilder.grpcRetryEvents(grpcRetryEvents.map(GrpcRetryEvent::unwrap))
     }
 
+    override fun grpcRetryEvents(vararg grpcRetryEvents: GrpcRetryEvent): Unit =
+        grpcRetryEvents(grpcRetryEvents.toList())
+
     override fun httpRetryEvents(httpRetryEvents: List<HttpRetryEvent>) {
       cdkBuilder.httpRetryEvents(httpRetryEvents.map(HttpRetryEvent::unwrap))
     }
+
+    override fun httpRetryEvents(vararg httpRetryEvents: HttpRetryEvent): Unit =
+        httpRetryEvents(httpRetryEvents.toList())
 
     override fun retryAttempts(retryAttempts: Number) {
       cdkBuilder.retryAttempts(retryAttempts)
@@ -44,6 +56,9 @@ public interface GrpcRetryPolicy : HttpRetryPolicy {
     override fun tcpRetryEvents(tcpRetryEvents: List<TcpRetryEvent>) {
       cdkBuilder.tcpRetryEvents(tcpRetryEvents.map(TcpRetryEvent::unwrap))
     }
+
+    override fun tcpRetryEvents(vararg tcpRetryEvents: TcpRetryEvent): Unit =
+        tcpRetryEvents(tcpRetryEvents.toList())
 
     public fun build(): software.amazon.awscdk.services.appmesh.GrpcRetryPolicy = cdkBuilder.build()
   }

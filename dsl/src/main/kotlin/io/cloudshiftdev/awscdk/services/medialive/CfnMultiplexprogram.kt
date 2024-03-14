@@ -75,6 +75,9 @@ public open class CfnMultiplexprogram internal constructor(
     unwrap(this).setPipelineDetails(__idx_ac66f0)
   }
 
+  public open fun pipelineDetails(vararg __idx_ac66f0: Any): Unit =
+      pipelineDetails(__idx_ac66f0.toList())
+
   public open fun preferredChannelPipeline(): String? = unwrap(this).getPreferredChannelPipeline()
 
   public open fun preferredChannelPipeline(`value`: String) {
@@ -114,6 +117,8 @@ public open class CfnMultiplexprogram internal constructor(
     public fun pipelineDetails(pipelineDetails: IResolvable)
 
     public fun pipelineDetails(pipelineDetails: List<Any>)
+
+    public fun pipelineDetails(vararg pipelineDetails: Any)
 
     public fun preferredChannelPipeline(preferredChannelPipeline: String)
 
@@ -173,6 +178,9 @@ public open class CfnMultiplexprogram internal constructor(
     override fun pipelineDetails(pipelineDetails: List<Any>) {
       cdkBuilder.pipelineDetails(pipelineDetails)
     }
+
+    override fun pipelineDetails(vararg pipelineDetails: Any): Unit =
+        pipelineDetails(pipelineDetails.toList())
 
     override fun preferredChannelPipeline(preferredChannelPipeline: String) {
       cdkBuilder.preferredChannelPipeline(preferredChannelPipeline)
@@ -239,9 +247,13 @@ public open class CfnMultiplexprogram internal constructor(
 
       public fun audioPids(audioPids: List<Number>)
 
+      public fun audioPids(vararg audioPids: Number)
+
       public fun dvbSubPids(dvbSubPids: IResolvable)
 
       public fun dvbSubPids(dvbSubPids: List<Number>)
+
+      public fun dvbSubPids(vararg dvbSubPids: Number)
 
       public fun dvbTeletextPid(dvbTeletextPid: Number)
 
@@ -253,6 +265,8 @@ public open class CfnMultiplexprogram internal constructor(
 
       public fun klvDataPids(klvDataPids: List<Number>)
 
+      public fun klvDataPids(vararg klvDataPids: Number)
+
       public fun pcrPid(pcrPid: Number)
 
       public fun pmtPid(pmtPid: Number)
@@ -262,6 +276,8 @@ public open class CfnMultiplexprogram internal constructor(
       public fun scte27Pids(scte27Pids: IResolvable)
 
       public fun scte27Pids(scte27Pids: List<Number>)
+
+      public fun scte27Pids(vararg scte27Pids: Number)
 
       public fun scte35Pid(scte35Pid: Number)
 
@@ -284,6 +300,8 @@ public open class CfnMultiplexprogram internal constructor(
         cdkBuilder.audioPids(audioPids)
       }
 
+      override fun audioPids(vararg audioPids: Number): Unit = audioPids(audioPids.toList())
+
       override fun dvbSubPids(dvbSubPids: IResolvable) {
         cdkBuilder.dvbSubPids(dvbSubPids.let(IResolvable::unwrap))
       }
@@ -291,6 +309,8 @@ public open class CfnMultiplexprogram internal constructor(
       override fun dvbSubPids(dvbSubPids: List<Number>) {
         cdkBuilder.dvbSubPids(dvbSubPids)
       }
+
+      override fun dvbSubPids(vararg dvbSubPids: Number): Unit = dvbSubPids(dvbSubPids.toList())
 
       override fun dvbTeletextPid(dvbTeletextPid: Number) {
         cdkBuilder.dvbTeletextPid(dvbTeletextPid)
@@ -312,6 +332,8 @@ public open class CfnMultiplexprogram internal constructor(
         cdkBuilder.klvDataPids(klvDataPids)
       }
 
+      override fun klvDataPids(vararg klvDataPids: Number): Unit = klvDataPids(klvDataPids.toList())
+
       override fun pcrPid(pcrPid: Number) {
         cdkBuilder.pcrPid(pcrPid)
       }
@@ -331,6 +353,8 @@ public open class CfnMultiplexprogram internal constructor(
       override fun scte27Pids(scte27Pids: List<Number>) {
         cdkBuilder.scte27Pids(scte27Pids)
       }
+
+      override fun scte27Pids(vararg scte27Pids: Number): Unit = scte27Pids(scte27Pids.toList())
 
       override fun scte35Pid(scte35Pid: Number) {
         cdkBuilder.scte35Pid(scte35Pid)

@@ -20,12 +20,11 @@ public open class CfnInput internal constructor(
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
-  public open fun attrDestinations(): List<String> = unwrap(this).getAttrDestinations() ?:
-      emptyList()
+  public open fun attrDestinations(): List<String> = unwrap(this).getAttrDestinations()
 
   public open fun attrId(): String = unwrap(this).getAttrId()
 
-  public open fun attrSources(): List<String> = unwrap(this).getAttrSources() ?: emptyList()
+  public open fun attrSources(): List<String> = unwrap(this).getAttrSources()
 
   public open fun destinations(): Any? = unwrap(this).getDestinations()
 
@@ -37,6 +36,8 @@ public open class CfnInput internal constructor(
     unwrap(this).setDestinations(__idx_ac66f0)
   }
 
+  public open fun destinations(vararg __idx_ac66f0: Any): Unit = destinations(__idx_ac66f0.toList())
+
   public open fun inputDevices(): Any? = unwrap(this).getInputDevices()
 
   public open fun inputDevices(`value`: IResolvable) {
@@ -47,12 +48,17 @@ public open class CfnInput internal constructor(
     unwrap(this).setInputDevices(__idx_ac66f0)
   }
 
+  public open fun inputDevices(vararg __idx_ac66f0: Any): Unit = inputDevices(__idx_ac66f0.toList())
+
   public open fun inputSecurityGroups(): List<String> = unwrap(this).getInputSecurityGroups() ?:
       emptyList()
 
   public open fun inputSecurityGroups(`value`: List<String>) {
     unwrap(this).setInputSecurityGroups(`value`)
   }
+
+  public open fun inputSecurityGroups(vararg `value`: String): Unit =
+      inputSecurityGroups(`value`.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -67,6 +73,9 @@ public open class CfnInput internal constructor(
   public open fun mediaConnectFlows(__idx_ac66f0: List<Any>) {
     unwrap(this).setMediaConnectFlows(__idx_ac66f0)
   }
+
+  public open fun mediaConnectFlows(vararg __idx_ac66f0: Any): Unit =
+      mediaConnectFlows(__idx_ac66f0.toList())
 
   public open fun name(): String? = unwrap(this).getName()
 
@@ -89,6 +98,8 @@ public open class CfnInput internal constructor(
   public open fun sources(__idx_ac66f0: List<Any>) {
     unwrap(this).setSources(__idx_ac66f0)
   }
+
+  public open fun sources(vararg __idx_ac66f0: Any): Unit = sources(__idx_ac66f0.toList())
 
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
@@ -124,15 +135,23 @@ public open class CfnInput internal constructor(
 
     public fun destinations(destinations: List<Any>)
 
+    public fun destinations(vararg destinations: Any)
+
     public fun inputDevices(inputDevices: IResolvable)
 
     public fun inputDevices(inputDevices: List<Any>)
 
+    public fun inputDevices(vararg inputDevices: Any)
+
     public fun inputSecurityGroups(inputSecurityGroups: List<String>)
+
+    public fun inputSecurityGroups(vararg inputSecurityGroups: String)
 
     public fun mediaConnectFlows(mediaConnectFlows: IResolvable)
 
     public fun mediaConnectFlows(mediaConnectFlows: List<Any>)
+
+    public fun mediaConnectFlows(vararg mediaConnectFlows: Any)
 
     public fun name(name: String)
 
@@ -141,6 +160,8 @@ public open class CfnInput internal constructor(
     public fun sources(sources: IResolvable)
 
     public fun sources(sources: List<Any>)
+
+    public fun sources(vararg sources: Any)
 
     public fun tags(tags: Any)
 
@@ -170,6 +191,8 @@ public open class CfnInput internal constructor(
       cdkBuilder.destinations(destinations)
     }
 
+    override fun destinations(vararg destinations: Any): Unit = destinations(destinations.toList())
+
     override fun inputDevices(inputDevices: IResolvable) {
       cdkBuilder.inputDevices(inputDevices.let(IResolvable::unwrap))
     }
@@ -178,9 +201,14 @@ public open class CfnInput internal constructor(
       cdkBuilder.inputDevices(inputDevices)
     }
 
+    override fun inputDevices(vararg inputDevices: Any): Unit = inputDevices(inputDevices.toList())
+
     override fun inputSecurityGroups(inputSecurityGroups: List<String>) {
       cdkBuilder.inputSecurityGroups(inputSecurityGroups)
     }
+
+    override fun inputSecurityGroups(vararg inputSecurityGroups: String): Unit =
+        inputSecurityGroups(inputSecurityGroups.toList())
 
     override fun mediaConnectFlows(mediaConnectFlows: IResolvable) {
       cdkBuilder.mediaConnectFlows(mediaConnectFlows.let(IResolvable::unwrap))
@@ -189,6 +217,9 @@ public open class CfnInput internal constructor(
     override fun mediaConnectFlows(mediaConnectFlows: List<Any>) {
       cdkBuilder.mediaConnectFlows(mediaConnectFlows)
     }
+
+    override fun mediaConnectFlows(vararg mediaConnectFlows: Any): Unit =
+        mediaConnectFlows(mediaConnectFlows.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -205,6 +236,8 @@ public open class CfnInput internal constructor(
     override fun sources(sources: List<Any>) {
       cdkBuilder.sources(sources)
     }
+
+    override fun sources(vararg sources: Any): Unit = sources(sources.toList())
 
     override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
@@ -327,7 +360,11 @@ public open class CfnInput internal constructor(
     public interface Builder {
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -339,9 +376,14 @@ public open class CfnInput internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       public fun build(): software.amazon.awscdk.services.medialive.CfnInput.InputVpcRequestProperty
           = cdkBuilder.build()

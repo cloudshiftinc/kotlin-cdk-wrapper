@@ -68,6 +68,8 @@ public open class CfnCapacityReservation internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public open fun targetDpus(): Number = unwrap(this).getTargetDpus()
 
   public open fun targetDpus(`value`: Number) {
@@ -88,6 +90,8 @@ public open class CfnCapacityReservation internal constructor(
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun targetDpus(targetDpus: Number)
   }
@@ -122,6 +126,8 @@ public open class CfnCapacityReservation internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun targetDpus(targetDpus: Number) {
       cdkBuilder.targetDpus(targetDpus)
@@ -159,6 +165,8 @@ public open class CfnCapacityReservation internal constructor(
       public fun capacityAssignments(capacityAssignments: IResolvable)
 
       public fun capacityAssignments(capacityAssignments: List<Any>)
+
+      public fun capacityAssignments(vararg capacityAssignments: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -174,6 +182,9 @@ public open class CfnCapacityReservation internal constructor(
       override fun capacityAssignments(capacityAssignments: List<Any>) {
         cdkBuilder.capacityAssignments(capacityAssignments)
       }
+
+      override fun capacityAssignments(vararg capacityAssignments: Any): Unit =
+          capacityAssignments(capacityAssignments.toList())
 
       public fun build():
           software.amazon.awscdk.services.athena.CfnCapacityReservation.CapacityAssignmentConfigurationProperty
@@ -213,6 +224,8 @@ public open class CfnCapacityReservation internal constructor(
 
     public interface Builder {
       public fun workgroupNames(workgroupNames: List<String>)
+
+      public fun workgroupNames(vararg workgroupNames: String)
     }
 
     private class BuilderImpl : Builder {
@@ -225,6 +238,9 @@ public open class CfnCapacityReservation internal constructor(
         cdkBuilder.workgroupNames(workgroupNames)
       }
 
+      override fun workgroupNames(vararg workgroupNames: String): Unit =
+          workgroupNames(workgroupNames.toList())
+
       public fun build():
           software.amazon.awscdk.services.athena.CfnCapacityReservation.CapacityAssignmentProperty =
           cdkBuilder.build()
@@ -234,7 +250,7 @@ public open class CfnCapacityReservation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.athena.CfnCapacityReservation.CapacityAssignmentProperty,
     ) : CapacityAssignmentProperty {
-      override fun workgroupNames(): List<String> = unwrap(this).getWorkgroupNames() ?: emptyList()
+      override fun workgroupNames(): List<String> = unwrap(this).getWorkgroupNames()
     }
 
     public companion object {

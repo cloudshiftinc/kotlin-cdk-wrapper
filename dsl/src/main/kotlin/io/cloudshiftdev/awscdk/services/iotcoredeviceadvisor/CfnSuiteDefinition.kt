@@ -45,10 +45,14 @@ public open class CfnSuiteDefinition internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun suiteDefinitionConfiguration(suiteDefinitionConfiguration: Any)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -67,6 +71,8 @@ public open class CfnSuiteDefinition internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition =
         cdkBuilder.build()
@@ -112,6 +118,8 @@ public open class CfnSuiteDefinition internal constructor(
 
       public fun devices(devices: List<Any>)
 
+      public fun devices(vararg devices: Any)
+
       public fun intendedForQualification(intendedForQualification: Boolean)
 
       public fun intendedForQualification(intendedForQualification: IResolvable)
@@ -138,6 +146,8 @@ public open class CfnSuiteDefinition internal constructor(
       override fun devices(devices: List<Any>) {
         cdkBuilder.devices(devices)
       }
+
+      override fun devices(vararg devices: Any): Unit = devices(devices.toList())
 
       override fun intendedForQualification(intendedForQualification: Boolean) {
         cdkBuilder.intendedForQualification(intendedForQualification)

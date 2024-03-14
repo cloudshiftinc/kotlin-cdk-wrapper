@@ -23,7 +23,11 @@ public open class Trigger internal constructor(
   public interface Builder {
     public fun executeAfter(executeAfter: List<CloudshiftdevConstructsConstruct>)
 
+    public fun executeAfter(vararg executeAfter: CloudshiftdevConstructsConstruct)
+
     public fun executeBefore(executeBefore: List<CloudshiftdevConstructsConstruct>)
+
+    public fun executeBefore(vararg executeBefore: CloudshiftdevConstructsConstruct)
 
     public fun executeOnHandlerChange(executeOnHandlerChange: Boolean)
 
@@ -45,9 +49,15 @@ public open class Trigger internal constructor(
       cdkBuilder.executeAfter(executeAfter.map(CloudshiftdevConstructsConstruct::unwrap))
     }
 
+    override fun executeAfter(vararg executeAfter: CloudshiftdevConstructsConstruct): Unit =
+        executeAfter(executeAfter.toList())
+
     override fun executeBefore(executeBefore: List<CloudshiftdevConstructsConstruct>) {
       cdkBuilder.executeBefore(executeBefore.map(CloudshiftdevConstructsConstruct::unwrap))
     }
+
+    override fun executeBefore(vararg executeBefore: CloudshiftdevConstructsConstruct): Unit =
+        executeBefore(executeBefore.toList())
 
     override fun executeOnHandlerChange(executeOnHandlerChange: Boolean) {
       cdkBuilder.executeOnHandlerChange(executeOnHandlerChange)

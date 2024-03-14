@@ -25,6 +25,8 @@ public open class CfnFlowOutput internal constructor(
     unwrap(this).setCidrAllowList(`value`)
   }
 
+  public open fun cidrAllowList(vararg `value`: String): Unit = cidrAllowList(`value`.toList())
+
   public open fun description(): String? = unwrap(this).getDescription()
 
   public open fun description(`value`: String) {
@@ -129,6 +131,8 @@ public open class CfnFlowOutput internal constructor(
   public interface Builder {
     public fun cidrAllowList(cidrAllowList: List<String>)
 
+    public fun cidrAllowList(vararg cidrAllowList: String)
+
     public fun description(description: String)
 
     public fun destination(destination: String)
@@ -179,6 +183,9 @@ public open class CfnFlowOutput internal constructor(
     override fun cidrAllowList(cidrAllowList: List<String>) {
       cdkBuilder.cidrAllowList(cidrAllowList)
     }
+
+    override fun cidrAllowList(vararg cidrAllowList: String): Unit =
+        cidrAllowList(cidrAllowList.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)

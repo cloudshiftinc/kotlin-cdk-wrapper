@@ -33,6 +33,8 @@ public open class CfnDeviceDefinitionVersion internal constructor(
     unwrap(this).setDevices(__idx_ac66f0)
   }
 
+  public open fun devices(vararg __idx_ac66f0: Any): Unit = devices(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -43,6 +45,8 @@ public open class CfnDeviceDefinitionVersion internal constructor(
     public fun devices(devices: IResolvable)
 
     public fun devices(devices: List<Any>)
+
+    public fun devices(vararg devices: Any)
   }
 
   private class BuilderImpl(
@@ -65,6 +69,8 @@ public open class CfnDeviceDefinitionVersion internal constructor(
     override fun devices(devices: List<Any>) {
       cdkBuilder.devices(devices)
     }
+
+    override fun devices(vararg devices: Any): Unit = devices(devices.toList())
 
     public fun build(): software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionVersion =
         cdkBuilder.build()

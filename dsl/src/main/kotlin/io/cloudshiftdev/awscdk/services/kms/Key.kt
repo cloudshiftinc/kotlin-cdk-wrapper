@@ -65,6 +65,8 @@ public open class Key internal constructor(
   public interface Builder {
     public fun admins(admins: List<IPrincipal>)
 
+    public fun admins(vararg admins: IPrincipal)
+
     public fun alias(alias: String)
 
     public fun description(description: String)
@@ -98,6 +100,8 @@ public open class Key internal constructor(
     override fun admins(admins: List<IPrincipal>) {
       cdkBuilder.admins(admins.map(IPrincipal::unwrap))
     }
+
+    override fun admins(vararg admins: IPrincipal): Unit = admins(admins.toList())
 
     override fun alias(alias: String) {
       cdkBuilder.alias(alias)

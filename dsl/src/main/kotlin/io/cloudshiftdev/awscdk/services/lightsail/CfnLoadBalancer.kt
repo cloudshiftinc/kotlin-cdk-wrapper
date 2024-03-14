@@ -26,6 +26,9 @@ public open class CfnLoadBalancer internal constructor(
     unwrap(this).setAttachedInstances(`value`)
   }
 
+  public open fun attachedInstances(vararg `value`: String): Unit =
+      attachedInstances(`value`.toList())
+
   public open fun attrLoadBalancerArn(): String = unwrap(this).getAttrLoadBalancerArn()
 
   public open fun healthCheckPath(): String? = unwrap(this).getHealthCheckPath()
@@ -82,6 +85,8 @@ public open class CfnLoadBalancer internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun tlsPolicyName(): String? = unwrap(this).getTlsPolicyName()
 
   public open fun tlsPolicyName(`value`: String) {
@@ -90,6 +95,8 @@ public open class CfnLoadBalancer internal constructor(
 
   public interface Builder {
     public fun attachedInstances(attachedInstances: List<String>)
+
+    public fun attachedInstances(vararg attachedInstances: String)
 
     public fun healthCheckPath(healthCheckPath: String)
 
@@ -108,6 +115,8 @@ public open class CfnLoadBalancer internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun tlsPolicyName(tlsPolicyName: String)
   }
 
@@ -121,6 +130,9 @@ public open class CfnLoadBalancer internal constructor(
     override fun attachedInstances(attachedInstances: List<String>) {
       cdkBuilder.attachedInstances(attachedInstances)
     }
+
+    override fun attachedInstances(vararg attachedInstances: String): Unit =
+        attachedInstances(attachedInstances.toList())
 
     override fun healthCheckPath(healthCheckPath: String) {
       cdkBuilder.healthCheckPath(healthCheckPath)
@@ -154,6 +166,8 @@ public open class CfnLoadBalancer internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun tlsPolicyName(tlsPolicyName: String) {
       cdkBuilder.tlsPolicyName(tlsPolicyName)

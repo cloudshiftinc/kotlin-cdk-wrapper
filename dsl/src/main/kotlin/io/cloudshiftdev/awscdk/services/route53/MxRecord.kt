@@ -31,6 +31,8 @@ public open class MxRecord internal constructor(
 
     public fun values(values: List<MxRecordValue>)
 
+    public fun values(vararg values: MxRecordValue)
+
     public fun weight(weight: Number)
 
     public fun zone(zone: IHostedZone)
@@ -78,6 +80,8 @@ public open class MxRecord internal constructor(
     override fun values(values: List<MxRecordValue>) {
       cdkBuilder.values(values.map(MxRecordValue::unwrap))
     }
+
+    override fun values(vararg values: MxRecordValue): Unit = values(values.toList())
 
     override fun weight(weight: Number) {
       cdkBuilder.weight(weight)

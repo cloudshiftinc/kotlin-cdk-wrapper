@@ -68,6 +68,8 @@ public open class SageMakerCreateTrainingJob internal constructor(
 
     public fun inputDataConfig(inputDataConfig: List<Channel>)
 
+    public fun inputDataConfig(vararg inputDataConfig: Channel)
+
     public fun inputPath(inputPath: String)
 
     public fun integrationPattern(integrationPattern: IntegrationPattern)
@@ -172,6 +174,9 @@ public open class SageMakerCreateTrainingJob internal constructor(
     override fun inputDataConfig(inputDataConfig: List<Channel>) {
       cdkBuilder.inputDataConfig(inputDataConfig.map(Channel::unwrap))
     }
+
+    override fun inputDataConfig(vararg inputDataConfig: Channel): Unit =
+        inputDataConfig(inputDataConfig.toList())
 
     override fun inputPath(inputPath: String) {
       cdkBuilder.inputPath(inputPath)

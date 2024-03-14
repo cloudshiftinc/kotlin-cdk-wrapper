@@ -56,6 +56,8 @@ public open class CfnPhoneNumber internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun targetArn(): String = unwrap(this).getTargetArn()
 
   public open fun targetArn(`value`: String) {
@@ -78,6 +80,8 @@ public open class CfnPhoneNumber internal constructor(
     public fun sourcePhoneNumberArn(sourcePhoneNumberArn: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun targetArn(targetArn: String)
 
@@ -110,6 +114,8 @@ public open class CfnPhoneNumber internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun targetArn(targetArn: String) {
       cdkBuilder.targetArn(targetArn)

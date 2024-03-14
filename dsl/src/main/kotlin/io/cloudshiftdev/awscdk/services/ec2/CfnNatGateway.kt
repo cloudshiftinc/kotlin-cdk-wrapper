@@ -53,6 +53,9 @@ public open class CfnNatGateway internal constructor(
     unwrap(this).setSecondaryAllocationIds(`value`)
   }
 
+  public open fun secondaryAllocationIds(vararg `value`: String): Unit =
+      secondaryAllocationIds(`value`.toList())
+
   public open fun secondaryPrivateIpAddressCount(): Number? =
       unwrap(this).getSecondaryPrivateIpAddressCount()
 
@@ -66,6 +69,9 @@ public open class CfnNatGateway internal constructor(
   public open fun secondaryPrivateIpAddresses(`value`: List<String>) {
     unwrap(this).setSecondaryPrivateIpAddresses(`value`)
   }
+
+  public open fun secondaryPrivateIpAddresses(vararg `value`: String): Unit =
+      secondaryPrivateIpAddresses(`value`.toList())
 
   public open fun subnetId(): String = unwrap(this).getSubnetId()
 
@@ -82,6 +88,8 @@ public open class CfnNatGateway internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun allocationId(allocationId: String)
 
@@ -93,13 +101,19 @@ public open class CfnNatGateway internal constructor(
 
     public fun secondaryAllocationIds(secondaryAllocationIds: List<String>)
 
+    public fun secondaryAllocationIds(vararg secondaryAllocationIds: String)
+
     public fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number)
 
     public fun secondaryPrivateIpAddresses(secondaryPrivateIpAddresses: List<String>)
 
+    public fun secondaryPrivateIpAddresses(vararg secondaryPrivateIpAddresses: String)
+
     public fun subnetId(subnetId: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -129,6 +143,9 @@ public open class CfnNatGateway internal constructor(
       cdkBuilder.secondaryAllocationIds(secondaryAllocationIds)
     }
 
+    override fun secondaryAllocationIds(vararg secondaryAllocationIds: String): Unit =
+        secondaryAllocationIds(secondaryAllocationIds.toList())
+
     override fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number) {
       cdkBuilder.secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount)
     }
@@ -137,6 +154,9 @@ public open class CfnNatGateway internal constructor(
       cdkBuilder.secondaryPrivateIpAddresses(secondaryPrivateIpAddresses)
     }
 
+    override fun secondaryPrivateIpAddresses(vararg secondaryPrivateIpAddresses: String): Unit =
+        secondaryPrivateIpAddresses(secondaryPrivateIpAddresses.toList())
+
     override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }
@@ -144,6 +164,8 @@ public open class CfnNatGateway internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.CfnNatGateway = cdkBuilder.build()
   }

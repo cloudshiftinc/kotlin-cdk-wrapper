@@ -12,6 +12,8 @@ public interface AwsAuthMapping {
   public interface Builder {
     public fun groups(groups: List<String>)
 
+    public fun groups(vararg groups: String)
+
     public fun username(username: String)
   }
 
@@ -23,6 +25,8 @@ public interface AwsAuthMapping {
       cdkBuilder.groups(groups)
     }
 
+    override fun groups(vararg groups: String): Unit = groups(groups.toList())
+
     override fun username(username: String) {
       cdkBuilder.username(username)
     }
@@ -33,7 +37,7 @@ public interface AwsAuthMapping {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.eks.AwsAuthMapping,
   ) : AwsAuthMapping {
-    override fun groups(): List<String> = unwrap(this).getGroups() ?: emptyList()
+    override fun groups(): List<String> = unwrap(this).getGroups()
 
     override fun username(): String? = unwrap(this).getUsername()
   }

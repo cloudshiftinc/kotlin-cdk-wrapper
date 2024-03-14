@@ -58,6 +58,8 @@ public open class CfnBot internal constructor(
     unwrap(this).setBotLocales(__idx_ac66f0)
   }
 
+  public open fun botLocales(vararg __idx_ac66f0: Any): Unit = botLocales(__idx_ac66f0.toList())
+
   public open fun botTags(): Any? = unwrap(this).getBotTags()
 
   public open fun botTags(`value`: IResolvable) {
@@ -67,6 +69,8 @@ public open class CfnBot internal constructor(
   public open fun botTags(__idx_ac66f0: List<Any>) {
     unwrap(this).setBotTags(__idx_ac66f0)
   }
+
+  public open fun botTags(vararg __idx_ac66f0: Any): Unit = botTags(__idx_ac66f0.toList())
 
   public open fun dataPrivacy(): Any = unwrap(this).getDataPrivacy()
 
@@ -127,6 +131,9 @@ public open class CfnBot internal constructor(
     unwrap(this).setTestBotAliasTags(__idx_ac66f0)
   }
 
+  public open fun testBotAliasTags(vararg __idx_ac66f0: Any): Unit =
+      testBotAliasTags(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun autoBuildBotLocales(autoBuildBotLocales: Boolean)
 
@@ -144,9 +151,13 @@ public open class CfnBot internal constructor(
 
     public fun botLocales(botLocales: List<Any>)
 
+    public fun botLocales(vararg botLocales: Any)
+
     public fun botTags(botTags: IResolvable)
 
     public fun botTags(botTags: List<Any>)
+
+    public fun botTags(vararg botTags: Any)
 
     public fun dataPrivacy(dataPrivacy: Any)
 
@@ -170,6 +181,8 @@ public open class CfnBot internal constructor(
     public fun testBotAliasTags(testBotAliasTags: IResolvable)
 
     public fun testBotAliasTags(testBotAliasTags: List<Any>)
+
+    public fun testBotAliasTags(vararg testBotAliasTags: Any)
   }
 
   private class BuilderImpl(
@@ -208,6 +221,8 @@ public open class CfnBot internal constructor(
       cdkBuilder.botLocales(botLocales)
     }
 
+    override fun botLocales(vararg botLocales: Any): Unit = botLocales(botLocales.toList())
+
     override fun botTags(botTags: IResolvable) {
       cdkBuilder.botTags(botTags.let(IResolvable::unwrap))
     }
@@ -215,6 +230,8 @@ public open class CfnBot internal constructor(
     override fun botTags(botTags: List<Any>) {
       cdkBuilder.botTags(botTags)
     }
+
+    override fun botTags(vararg botTags: Any): Unit = botTags(botTags.toList())
 
     override fun dataPrivacy(dataPrivacy: Any) {
       cdkBuilder.dataPrivacy(dataPrivacy)
@@ -257,6 +274,9 @@ public open class CfnBot internal constructor(
     override fun testBotAliasTags(testBotAliasTags: List<Any>) {
       cdkBuilder.testBotAliasTags(testBotAliasTags)
     }
+
+    override fun testBotAliasTags(vararg testBotAliasTags: Any): Unit =
+        testBotAliasTags(testBotAliasTags.toList())
 
     public fun build(): software.amazon.awscdk.services.lex.CfnBot = cdkBuilder.build()
   }
@@ -397,6 +417,8 @@ public open class CfnBot internal constructor(
 
       public fun messageGroupsList(messageGroupsList: List<Any>)
 
+      public fun messageGroupsList(vararg messageGroupsList: Any)
+
       public fun messageSelectionStrategy(messageSelectionStrategy: String)
 
       public fun promptAttemptsSpecification(promptAttemptsSpecification: IResolvable)
@@ -428,6 +450,9 @@ public open class CfnBot internal constructor(
       override fun messageGroupsList(messageGroupsList: List<Any>) {
         cdkBuilder.messageGroupsList(messageGroupsList)
       }
+
+      override fun messageGroupsList(vararg messageGroupsList: Any): Unit =
+          messageGroupsList(messageGroupsList.toList())
 
       override fun messageSelectionStrategy(messageSelectionStrategy: String) {
         cdkBuilder.messageSelectionStrategy(messageSelectionStrategy)
@@ -795,6 +820,8 @@ public open class CfnBot internal constructor(
       public fun messageGroups(messageGroups: IResolvable)
 
       public fun messageGroups(messageGroups: List<Any>)
+
+      public fun messageGroups(vararg messageGroups: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -822,6 +849,9 @@ public open class CfnBot internal constructor(
       override fun messageGroups(messageGroups: List<Any>) {
         cdkBuilder.messageGroups(messageGroups)
       }
+
+      override fun messageGroups(vararg messageGroups: Any): Unit =
+          messageGroups(messageGroups.toList())
 
       public fun build():
           software.amazon.awscdk.services.lex.CfnBot.FulfillmentUpdateResponseSpecificationProperty
@@ -933,6 +963,8 @@ public open class CfnBot internal constructor(
       public fun defaultValueList(defaultValueList: IResolvable)
 
       public fun defaultValueList(defaultValueList: List<Any>)
+
+      public fun defaultValueList(vararg defaultValueList: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -947,6 +979,9 @@ public open class CfnBot internal constructor(
       override fun defaultValueList(defaultValueList: List<Any>) {
         cdkBuilder.defaultValueList(defaultValueList)
       }
+
+      override fun defaultValueList(vararg defaultValueList: Any): Unit =
+          defaultValueList(defaultValueList.toList())
 
       public fun build():
           software.amazon.awscdk.services.lex.CfnBot.SlotDefaultValueSpecificationProperty =
@@ -1165,6 +1200,8 @@ public open class CfnBot internal constructor(
 
       public fun sampleUtterances(sampleUtterances: List<Any>)
 
+      public fun sampleUtterances(vararg sampleUtterances: Any)
+
       public fun slotCaptureSetting(slotCaptureSetting: IResolvable)
 
       public fun slotCaptureSetting(slotCaptureSetting: SlotCaptureSettingProperty)
@@ -1229,6 +1266,9 @@ public open class CfnBot internal constructor(
       override fun sampleUtterances(sampleUtterances: List<Any>) {
         cdkBuilder.sampleUtterances(sampleUtterances)
       }
+
+      override fun sampleUtterances(vararg sampleUtterances: Any): Unit =
+          sampleUtterances(sampleUtterances.toList())
 
       override fun slotCaptureSetting(slotCaptureSetting: IResolvable) {
         cdkBuilder.slotCaptureSetting(slotCaptureSetting.let(IResolvable::unwrap))
@@ -1707,6 +1747,8 @@ public open class CfnBot internal constructor(
 
       public fun buttons(buttons: List<Any>)
 
+      public fun buttons(vararg buttons: Any)
+
       public fun imageUrl(imageUrl: String)
 
       public fun subtitle(subtitle: String)
@@ -1726,6 +1768,8 @@ public open class CfnBot internal constructor(
       override fun buttons(buttons: List<Any>) {
         cdkBuilder.buttons(buttons)
       }
+
+      override fun buttons(vararg buttons: Any): Unit = buttons(buttons.toList())
 
       override fun imageUrl(imageUrl: String) {
         cdkBuilder.imageUrl(imageUrl)
@@ -1795,6 +1839,8 @@ public open class CfnBot internal constructor(
 
       public fun messageGroupsList(messageGroupsList: List<Any>)
 
+      public fun messageGroupsList(vararg messageGroupsList: Any)
+
       public fun timeoutInSeconds(timeoutInSeconds: Number)
     }
 
@@ -1823,6 +1869,9 @@ public open class CfnBot internal constructor(
       override fun messageGroupsList(messageGroupsList: List<Any>) {
         cdkBuilder.messageGroupsList(messageGroupsList)
       }
+
+      override fun messageGroupsList(vararg messageGroupsList: Any): Unit =
+          messageGroupsList(messageGroupsList.toList())
 
       override fun timeoutInSeconds(timeoutInSeconds: Number) {
         cdkBuilder.timeoutInSeconds(timeoutInSeconds)
@@ -1881,6 +1930,8 @@ public open class CfnBot internal constructor(
 
       public fun botAliasLocaleSettings(botAliasLocaleSettings: List<Any>)
 
+      public fun botAliasLocaleSettings(vararg botAliasLocaleSettings: Any)
+
       public fun conversationLogSettings(conversationLogSettings: IResolvable)
 
       public fun conversationLogSettings(conversationLogSettings: ConversationLogSettingsProperty)
@@ -1907,6 +1958,9 @@ public open class CfnBot internal constructor(
       override fun botAliasLocaleSettings(botAliasLocaleSettings: List<Any>) {
         cdkBuilder.botAliasLocaleSettings(botAliasLocaleSettings)
       }
+
+      override fun botAliasLocaleSettings(vararg botAliasLocaleSettings: Any): Unit =
+          botAliasLocaleSettings(botAliasLocaleSettings.toList())
 
       override fun conversationLogSettings(conversationLogSettings: IResolvable) {
         cdkBuilder.conversationLogSettings(conversationLogSettings.let(IResolvable::unwrap))
@@ -2067,6 +2121,8 @@ public open class CfnBot internal constructor(
       public fun slots(slots: IResolvable)
 
       public fun slots(slots: List<Any>)
+
+      public fun slots(vararg slots: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2085,6 +2141,8 @@ public open class CfnBot internal constructor(
       override fun slots(slots: List<Any>) {
         cdkBuilder.slots(slots)
       }
+
+      override fun slots(vararg slots: Any): Unit = slots(slots.toList())
 
       public fun build(): software.amazon.awscdk.services.lex.CfnBot.IntentOverrideProperty =
           cdkBuilder.build()
@@ -2396,6 +2454,8 @@ public open class CfnBot internal constructor(
 
       public fun slotTypeValues(slotTypeValues: List<Any>)
 
+      public fun slotTypeValues(vararg slotTypeValues: Any)
+
       public fun valueSelectionSetting(valueSelectionSetting: IResolvable)
 
       public fun valueSelectionSetting(valueSelectionSetting: SlotValueSelectionSettingProperty)
@@ -2443,6 +2503,9 @@ public open class CfnBot internal constructor(
       override fun slotTypeValues(slotTypeValues: List<Any>) {
         cdkBuilder.slotTypeValues(slotTypeValues)
       }
+
+      override fun slotTypeValues(vararg slotTypeValues: Any): Unit =
+          slotTypeValues(slotTypeValues.toList())
 
       override fun valueSelectionSetting(valueSelectionSetting: IResolvable) {
         cdkBuilder.valueSelectionSetting(valueSelectionSetting.let(IResolvable::unwrap))
@@ -2514,6 +2577,8 @@ public open class CfnBot internal constructor(
       public fun messageGroups(messageGroups: IResolvable)
 
       public fun messageGroups(messageGroups: List<Any>)
+
+      public fun messageGroups(vararg messageGroups: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2541,6 +2606,9 @@ public open class CfnBot internal constructor(
       override fun messageGroups(messageGroups: List<Any>) {
         cdkBuilder.messageGroups(messageGroups)
       }
+
+      override fun messageGroups(vararg messageGroups: Any): Unit =
+          messageGroups(messageGroups.toList())
 
       public fun build():
           software.amazon.awscdk.services.lex.CfnBot.FulfillmentStartResponseSpecificationProperty =
@@ -2718,6 +2786,8 @@ public open class CfnBot internal constructor(
       public fun sessionAttributes(sessionAttributes: IResolvable)
 
       public fun sessionAttributes(sessionAttributes: List<Any>)
+
+      public fun sessionAttributes(vararg sessionAttributes: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2757,6 +2827,9 @@ public open class CfnBot internal constructor(
       override fun sessionAttributes(sessionAttributes: List<Any>) {
         cdkBuilder.sessionAttributes(sessionAttributes)
       }
+
+      override fun sessionAttributes(vararg sessionAttributes: Any): Unit =
+          sessionAttributes(sessionAttributes.toList())
 
       public fun build(): software.amazon.awscdk.services.lex.CfnBot.DialogStateProperty =
           cdkBuilder.build()
@@ -3527,6 +3600,8 @@ public open class CfnBot internal constructor(
       public fun variations(variations: IResolvable)
 
       public fun variations(variations: List<Any>)
+
+      public fun variations(vararg variations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -3554,6 +3629,8 @@ public open class CfnBot internal constructor(
       override fun variations(variations: List<Any>) {
         cdkBuilder.variations(variations)
       }
+
+      override fun variations(vararg variations: Any): Unit = variations(variations.toList())
 
       public fun build(): software.amazon.awscdk.services.lex.CfnBot.MessageGroupProperty =
           cdkBuilder.build()
@@ -3596,9 +3673,13 @@ public open class CfnBot internal constructor(
 
       public fun audioLogSettings(audioLogSettings: List<Any>)
 
+      public fun audioLogSettings(vararg audioLogSettings: Any)
+
       public fun textLogSettings(textLogSettings: IResolvable)
 
       public fun textLogSettings(textLogSettings: List<Any>)
+
+      public fun textLogSettings(vararg textLogSettings: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -3614,6 +3695,9 @@ public open class CfnBot internal constructor(
         cdkBuilder.audioLogSettings(audioLogSettings)
       }
 
+      override fun audioLogSettings(vararg audioLogSettings: Any): Unit =
+          audioLogSettings(audioLogSettings.toList())
+
       override fun textLogSettings(textLogSettings: IResolvable) {
         cdkBuilder.textLogSettings(textLogSettings.let(IResolvable::unwrap))
       }
@@ -3621,6 +3705,9 @@ public open class CfnBot internal constructor(
       override fun textLogSettings(textLogSettings: List<Any>) {
         cdkBuilder.textLogSettings(textLogSettings)
       }
+
+      override fun textLogSettings(vararg textLogSettings: Any): Unit =
+          textLogSettings(textLogSettings.toList())
 
       public fun build(): software.amazon.awscdk.services.lex.CfnBot.ConversationLogSettingsProperty
           = cdkBuilder.build()
@@ -4074,6 +4161,8 @@ public open class CfnBot internal constructor(
       public fun messageGroupsList(messageGroupsList: IResolvable)
 
       public fun messageGroupsList(messageGroupsList: List<Any>)
+
+      public fun messageGroupsList(vararg messageGroupsList: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -4096,6 +4185,9 @@ public open class CfnBot internal constructor(
       override fun messageGroupsList(messageGroupsList: List<Any>) {
         cdkBuilder.messageGroupsList(messageGroupsList)
       }
+
+      override fun messageGroupsList(vararg messageGroupsList: Any): Unit =
+          messageGroupsList(messageGroupsList.toList())
 
       public fun build(): software.amazon.awscdk.services.lex.CfnBot.ResponseSpecificationProperty =
           cdkBuilder.build()
@@ -4228,6 +4320,8 @@ public open class CfnBot internal constructor(
       public fun values(values: IResolvable)
 
       public fun values(values: List<Any>)
+
+      public fun values(vararg values: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -4259,6 +4353,8 @@ public open class CfnBot internal constructor(
       override fun values(values: List<Any>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: Any): Unit = values(values.toList())
 
       public fun build(): software.amazon.awscdk.services.lex.CfnBot.SlotValueOverrideProperty =
           cdkBuilder.build()
@@ -4985,6 +5081,8 @@ public open class CfnBot internal constructor(
 
       public fun intents(intents: List<Any>)
 
+      public fun intents(vararg intents: Any)
+
       public fun localeId(localeId: String)
 
       public fun nluConfidenceThreshold(nluConfidenceThreshold: Number)
@@ -4992,6 +5090,8 @@ public open class CfnBot internal constructor(
       public fun slotTypes(slotTypes: IResolvable)
 
       public fun slotTypes(slotTypes: List<Any>)
+
+      public fun slotTypes(vararg slotTypes: Any)
 
       public fun voiceSettings(voiceSettings: IResolvable)
 
@@ -5031,6 +5131,8 @@ public open class CfnBot internal constructor(
         cdkBuilder.intents(intents)
       }
 
+      override fun intents(vararg intents: Any): Unit = intents(intents.toList())
+
       override fun localeId(localeId: String) {
         cdkBuilder.localeId(localeId)
       }
@@ -5046,6 +5148,8 @@ public open class CfnBot internal constructor(
       override fun slotTypes(slotTypes: List<Any>) {
         cdkBuilder.slotTypes(slotTypes)
       }
+
+      override fun slotTypes(vararg slotTypes: Any): Unit = slotTypes(slotTypes.toList())
 
       override fun voiceSettings(voiceSettings: IResolvable) {
         cdkBuilder.voiceSettings(voiceSettings.let(IResolvable::unwrap))
@@ -5694,6 +5798,8 @@ public open class CfnBot internal constructor(
       public fun synonyms(synonyms: IResolvable)
 
       public fun synonyms(synonyms: List<Any>)
+
+      public fun synonyms(vararg synonyms: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -5721,6 +5827,8 @@ public open class CfnBot internal constructor(
       override fun synonyms(synonyms: List<Any>) {
         cdkBuilder.synonyms(synonyms)
       }
+
+      override fun synonyms(vararg synonyms: Any): Unit = synonyms(synonyms.toList())
 
       public fun build(): software.amazon.awscdk.services.lex.CfnBot.SlotTypeValueProperty =
           cdkBuilder.build()
@@ -5957,6 +6065,8 @@ public open class CfnBot internal constructor(
       public fun customVocabularyItems(customVocabularyItems: IResolvable)
 
       public fun customVocabularyItems(customVocabularyItems: List<Any>)
+
+      public fun customVocabularyItems(vararg customVocabularyItems: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -5971,6 +6081,9 @@ public open class CfnBot internal constructor(
       override fun customVocabularyItems(customVocabularyItems: List<Any>) {
         cdkBuilder.customVocabularyItems(customVocabularyItems)
       }
+
+      override fun customVocabularyItems(vararg customVocabularyItems: Any): Unit =
+          customVocabularyItems(customVocabularyItems.toList())
 
       public fun build(): software.amazon.awscdk.services.lex.CfnBot.CustomVocabularyProperty =
           cdkBuilder.build()
@@ -6117,6 +6230,8 @@ public open class CfnBot internal constructor(
 
       public fun inputContexts(inputContexts: List<Any>)
 
+      public fun inputContexts(vararg inputContexts: Any)
+
       public fun intentClosingSetting(intentClosingSetting: IResolvable)
 
       public fun intentClosingSetting(intentClosingSetting: IntentClosingSettingProperty)
@@ -6151,19 +6266,27 @@ public open class CfnBot internal constructor(
 
       public fun outputContexts(outputContexts: List<Any>)
 
+      public fun outputContexts(vararg outputContexts: Any)
+
       public fun parentIntentSignature(parentIntentSignature: String)
 
       public fun sampleUtterances(sampleUtterances: IResolvable)
 
       public fun sampleUtterances(sampleUtterances: List<Any>)
 
+      public fun sampleUtterances(vararg sampleUtterances: Any)
+
       public fun slotPriorities(slotPriorities: IResolvable)
 
       public fun slotPriorities(slotPriorities: List<Any>)
 
+      public fun slotPriorities(vararg slotPriorities: Any)
+
       public fun slots(slots: IResolvable)
 
       public fun slots(slots: List<Any>)
+
+      public fun slots(vararg slots: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -6223,6 +6346,9 @@ public open class CfnBot internal constructor(
         cdkBuilder.inputContexts(inputContexts)
       }
 
+      override fun inputContexts(vararg inputContexts: Any): Unit =
+          inputContexts(inputContexts.toList())
+
       override fun intentClosingSetting(intentClosingSetting: IResolvable) {
         cdkBuilder.intentClosingSetting(intentClosingSetting.let(IResolvable::unwrap))
       }
@@ -6279,6 +6405,9 @@ public open class CfnBot internal constructor(
         cdkBuilder.outputContexts(outputContexts)
       }
 
+      override fun outputContexts(vararg outputContexts: Any): Unit =
+          outputContexts(outputContexts.toList())
+
       override fun parentIntentSignature(parentIntentSignature: String) {
         cdkBuilder.parentIntentSignature(parentIntentSignature)
       }
@@ -6291,6 +6420,9 @@ public open class CfnBot internal constructor(
         cdkBuilder.sampleUtterances(sampleUtterances)
       }
 
+      override fun sampleUtterances(vararg sampleUtterances: Any): Unit =
+          sampleUtterances(sampleUtterances.toList())
+
       override fun slotPriorities(slotPriorities: IResolvable) {
         cdkBuilder.slotPriorities(slotPriorities.let(IResolvable::unwrap))
       }
@@ -6299,6 +6431,9 @@ public open class CfnBot internal constructor(
         cdkBuilder.slotPriorities(slotPriorities)
       }
 
+      override fun slotPriorities(vararg slotPriorities: Any): Unit =
+          slotPriorities(slotPriorities.toList())
+
       override fun slots(slots: IResolvable) {
         cdkBuilder.slots(slots.let(IResolvable::unwrap))
       }
@@ -6306,6 +6441,8 @@ public open class CfnBot internal constructor(
       override fun slots(slots: List<Any>) {
         cdkBuilder.slots(slots)
       }
+
+      override fun slots(vararg slots: Any): Unit = slots(slots.toList())
 
       public fun build(): software.amazon.awscdk.services.lex.CfnBot.IntentProperty =
           cdkBuilder.build()
@@ -6373,6 +6510,8 @@ public open class CfnBot internal constructor(
 
       public fun conditionalBranches(conditionalBranches: List<Any>)
 
+      public fun conditionalBranches(vararg conditionalBranches: Any)
+
       public fun defaultBranch(defaultBranch: IResolvable)
 
       public fun defaultBranch(defaultBranch: DefaultConditionalBranchProperty)
@@ -6398,6 +6537,9 @@ public open class CfnBot internal constructor(
       override fun conditionalBranches(conditionalBranches: List<Any>) {
         cdkBuilder.conditionalBranches(conditionalBranches)
       }
+
+      override fun conditionalBranches(vararg conditionalBranches: Any): Unit =
+          conditionalBranches(conditionalBranches.toList())
 
       override fun defaultBranch(defaultBranch: IResolvable) {
         cdkBuilder.defaultBranch(defaultBranch.let(IResolvable::unwrap))

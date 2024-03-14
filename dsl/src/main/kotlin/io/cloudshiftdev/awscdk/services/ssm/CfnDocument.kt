@@ -27,6 +27,8 @@ public open class CfnDocument internal constructor(
     unwrap(this).setAttachments(__idx_ac66f0)
   }
 
+  public open fun attachments(vararg __idx_ac66f0: Any): Unit = attachments(__idx_ac66f0.toList())
+
   public open fun content(): Any = unwrap(this).getContent()
 
   public open fun content(`value`: Any) {
@@ -65,6 +67,8 @@ public open class CfnDocument internal constructor(
     unwrap(this).setRequires(__idx_ac66f0)
   }
 
+  public open fun requires(vararg __idx_ac66f0: Any): Unit = requires(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -73,6 +77,8 @@ public open class CfnDocument internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun targetType(): String? = unwrap(this).getTargetType()
 
@@ -97,6 +103,8 @@ public open class CfnDocument internal constructor(
 
     public fun attachments(attachments: List<Any>)
 
+    public fun attachments(vararg attachments: Any)
+
     public fun content(content: Any)
 
     public fun documentFormat(documentFormat: String)
@@ -109,7 +117,11 @@ public open class CfnDocument internal constructor(
 
     public fun requires(requires: List<Any>)
 
+    public fun requires(vararg requires: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun targetType(targetType: String)
 
@@ -132,6 +144,8 @@ public open class CfnDocument internal constructor(
     override fun attachments(attachments: List<Any>) {
       cdkBuilder.attachments(attachments)
     }
+
+    override fun attachments(vararg attachments: Any): Unit = attachments(attachments.toList())
 
     override fun content(content: Any) {
       cdkBuilder.content(content)
@@ -157,9 +171,13 @@ public open class CfnDocument internal constructor(
       cdkBuilder.requires(requires)
     }
 
+    override fun requires(vararg requires: Any): Unit = requires(requires.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun targetType(targetType: String) {
       cdkBuilder.targetType(targetType)
@@ -210,6 +228,8 @@ public open class CfnDocument internal constructor(
       public fun name(name: String)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -228,6 +248,8 @@ public open class CfnDocument internal constructor(
       override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build(): software.amazon.awscdk.services.ssm.CfnDocument.AttachmentsSourceProperty
           = cdkBuilder.build()

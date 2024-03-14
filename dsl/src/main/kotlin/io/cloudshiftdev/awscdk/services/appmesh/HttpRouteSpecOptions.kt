@@ -38,6 +38,8 @@ public interface HttpRouteSpecOptions : RouteSpecOptionsBase {
     public fun timeout(timeout: HttpTimeout.Builder.() -> Unit)
 
     public fun weightedTargets(weightedTargets: List<WeightedTarget>)
+
+    public fun weightedTargets(vararg weightedTargets: WeightedTarget)
   }
 
   private class BuilderImpl : Builder {
@@ -78,6 +80,9 @@ public interface HttpRouteSpecOptions : RouteSpecOptionsBase {
     override fun weightedTargets(weightedTargets: List<WeightedTarget>) {
       cdkBuilder.weightedTargets(weightedTargets.map(WeightedTarget::unwrap))
     }
+
+    override fun weightedTargets(vararg weightedTargets: WeightedTarget): Unit =
+        weightedTargets(weightedTargets.toList())
 
     public fun build(): software.amazon.awscdk.services.appmesh.HttpRouteSpecOptions =
         cdkBuilder.build()

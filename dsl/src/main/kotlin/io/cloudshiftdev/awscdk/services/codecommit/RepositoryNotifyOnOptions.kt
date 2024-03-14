@@ -17,6 +17,8 @@ public interface RepositoryNotifyOnOptions : NotificationRuleOptions {
 
     public fun events(events: List<RepositoryNotificationEvents>)
 
+    public fun events(vararg events: RepositoryNotificationEvents)
+
     public fun notificationRuleName(notificationRuleName: String)
   }
 
@@ -36,6 +38,8 @@ public interface RepositoryNotifyOnOptions : NotificationRuleOptions {
     override fun events(events: List<RepositoryNotificationEvents>) {
       cdkBuilder.events(events.map(RepositoryNotificationEvents::unwrap))
     }
+
+    override fun events(vararg events: RepositoryNotificationEvents): Unit = events(events.toList())
 
     override fun notificationRuleName(notificationRuleName: String) {
       cdkBuilder.notificationRuleName(notificationRuleName)

@@ -126,6 +126,8 @@ public open class CfnConnection internal constructor(
 
       public fun matchCriteria(matchCriteria: List<String>)
 
+      public fun matchCriteria(vararg matchCriteria: String)
+
       public fun name(name: String)
 
       public fun physicalConnectionRequirements(physicalConnectionRequirements: IResolvable)
@@ -159,6 +161,9 @@ public open class CfnConnection internal constructor(
       override fun matchCriteria(matchCriteria: List<String>) {
         cdkBuilder.matchCriteria(matchCriteria)
       }
+
+      override fun matchCriteria(vararg matchCriteria: String): Unit =
+          matchCriteria(matchCriteria.toList())
 
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -235,6 +240,8 @@ public open class CfnConnection internal constructor(
 
       public fun securityGroupIdList(securityGroupIdList: List<String>)
 
+      public fun securityGroupIdList(vararg securityGroupIdList: String)
+
       public fun subnetId(subnetId: String)
     }
 
@@ -251,6 +258,9 @@ public open class CfnConnection internal constructor(
       override fun securityGroupIdList(securityGroupIdList: List<String>) {
         cdkBuilder.securityGroupIdList(securityGroupIdList)
       }
+
+      override fun securityGroupIdList(vararg securityGroupIdList: String): Unit =
+          securityGroupIdList(securityGroupIdList.toList())
 
       override fun subnetId(subnetId: String) {
         cdkBuilder.subnetId(subnetId)

@@ -33,6 +33,8 @@ public open class ResponseHeadersPolicy internal constructor(
 
     public fun removeHeaders(removeHeaders: List<String>)
 
+    public fun removeHeaders(vararg removeHeaders: String)
+
     public fun responseHeadersPolicyName(responseHeadersPolicyName: String)
 
     public fun securityHeadersBehavior(securityHeadersBehavior: ResponseSecurityHeadersBehavior)
@@ -78,6 +80,9 @@ public open class ResponseHeadersPolicy internal constructor(
     override fun removeHeaders(removeHeaders: List<String>) {
       cdkBuilder.removeHeaders(removeHeaders)
     }
+
+    override fun removeHeaders(vararg removeHeaders: String): Unit =
+        removeHeaders(removeHeaders.toList())
 
     override fun responseHeadersPolicyName(responseHeadersPolicyName: String) {
       cdkBuilder.responseHeadersPolicyName(responseHeadersPolicyName)

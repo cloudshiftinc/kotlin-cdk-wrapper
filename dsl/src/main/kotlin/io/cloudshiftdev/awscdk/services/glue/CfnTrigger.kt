@@ -30,6 +30,8 @@ public open class CfnTrigger internal constructor(
     unwrap(this).setActions(__idx_ac66f0)
   }
 
+  public open fun actions(vararg __idx_ac66f0: Any): Unit = actions(__idx_ac66f0.toList())
+
   public open fun attrId(): String = unwrap(this).getAttrId()
 
   public open fun description(): String? = unwrap(this).getDescription()
@@ -120,6 +122,8 @@ public open class CfnTrigger internal constructor(
 
     public fun actions(actions: List<Any>)
 
+    public fun actions(vararg actions: Any)
+
     public fun description(description: String)
 
     public fun eventBatchingCondition(eventBatchingCondition: IResolvable)
@@ -168,6 +172,8 @@ public open class CfnTrigger internal constructor(
     override fun actions(actions: List<Any>) {
       cdkBuilder.actions(actions)
     }
+
+    override fun actions(vararg actions: Any): Unit = actions(actions.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -479,6 +485,8 @@ public open class CfnTrigger internal constructor(
 
       public fun conditions(conditions: List<Any>)
 
+      public fun conditions(vararg conditions: Any)
+
       public fun logical(logical: String)
     }
 
@@ -494,6 +502,8 @@ public open class CfnTrigger internal constructor(
       override fun conditions(conditions: List<Any>) {
         cdkBuilder.conditions(conditions)
       }
+
+      override fun conditions(vararg conditions: Any): Unit = conditions(conditions.toList())
 
       override fun logical(logical: String) {
         cdkBuilder.logical(logical)

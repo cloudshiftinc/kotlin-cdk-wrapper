@@ -34,6 +34,8 @@ public open class JobQueue internal constructor(
   public interface Builder {
     public fun computeEnvironments(computeEnvironments: List<OrderedComputeEnvironment>)
 
+    public fun computeEnvironments(vararg computeEnvironments: OrderedComputeEnvironment)
+
     public fun enabled(enabled: Boolean)
 
     public fun jobQueueName(jobQueueName: String)
@@ -53,6 +55,9 @@ public open class JobQueue internal constructor(
     override fun computeEnvironments(computeEnvironments: List<OrderedComputeEnvironment>) {
       cdkBuilder.computeEnvironments(computeEnvironments.map(OrderedComputeEnvironment::unwrap))
     }
+
+    override fun computeEnvironments(vararg computeEnvironments: OrderedComputeEnvironment): Unit =
+        computeEnvironments(computeEnvironments.toList())
 
     override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)

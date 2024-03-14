@@ -44,6 +44,9 @@ public open class CfnVPCEndpointService internal constructor(
     unwrap(this).setGatewayLoadBalancerArns(`value`)
   }
 
+  public open fun gatewayLoadBalancerArns(vararg `value`: String): Unit =
+      gatewayLoadBalancerArns(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -54,6 +57,9 @@ public open class CfnVPCEndpointService internal constructor(
   public open fun networkLoadBalancerArns(`value`: List<String>) {
     unwrap(this).setNetworkLoadBalancerArns(`value`)
   }
+
+  public open fun networkLoadBalancerArns(vararg `value`: String): Unit =
+      networkLoadBalancerArns(`value`.toList())
 
   public open fun payerResponsibility(): String? = unwrap(this).getPayerResponsibility()
 
@@ -72,7 +78,11 @@ public open class CfnVPCEndpointService internal constructor(
 
     public fun gatewayLoadBalancerArns(gatewayLoadBalancerArns: List<String>)
 
+    public fun gatewayLoadBalancerArns(vararg gatewayLoadBalancerArns: String)
+
     public fun networkLoadBalancerArns(networkLoadBalancerArns: List<String>)
+
+    public fun networkLoadBalancerArns(vararg networkLoadBalancerArns: String)
 
     public fun payerResponsibility(payerResponsibility: String)
   }
@@ -104,9 +114,15 @@ public open class CfnVPCEndpointService internal constructor(
       cdkBuilder.gatewayLoadBalancerArns(gatewayLoadBalancerArns)
     }
 
+    override fun gatewayLoadBalancerArns(vararg gatewayLoadBalancerArns: String): Unit =
+        gatewayLoadBalancerArns(gatewayLoadBalancerArns.toList())
+
     override fun networkLoadBalancerArns(networkLoadBalancerArns: List<String>) {
       cdkBuilder.networkLoadBalancerArns(networkLoadBalancerArns)
     }
+
+    override fun networkLoadBalancerArns(vararg networkLoadBalancerArns: String): Unit =
+        networkLoadBalancerArns(networkLoadBalancerArns.toList())
 
     override fun payerResponsibility(payerResponsibility: String) {
       cdkBuilder.payerResponsibility(payerResponsibility)

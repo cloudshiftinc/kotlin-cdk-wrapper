@@ -73,6 +73,8 @@ public open class CfnVirtualService internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun virtualServiceName(): String = unwrap(this).getVirtualServiceName()
 
   public open fun virtualServiceName(`value`: String) {
@@ -93,6 +95,8 @@ public open class CfnVirtualService internal constructor(
     public fun spec(spec: VirtualServiceSpecProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun virtualServiceName(virtualServiceName: String)
   }
@@ -128,6 +132,8 @@ public open class CfnVirtualService internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun virtualServiceName(virtualServiceName: String) {
       cdkBuilder.virtualServiceName(virtualServiceName)

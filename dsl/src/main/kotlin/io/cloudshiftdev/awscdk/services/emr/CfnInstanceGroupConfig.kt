@@ -52,6 +52,9 @@ public open class CfnInstanceGroupConfig internal constructor(
     unwrap(this).setConfigurations(__idx_ac66f0)
   }
 
+  public open fun configurations(vararg __idx_ac66f0: Any): Unit =
+      configurations(__idx_ac66f0.toList())
+
   public open fun customAmiId(): String? = unwrap(this).getCustomAmiId()
 
   public open fun customAmiId(`value`: String) {
@@ -128,6 +131,8 @@ public open class CfnInstanceGroupConfig internal constructor(
 
     public fun configurations(configurations: List<Any>)
 
+    public fun configurations(vararg configurations: Any)
+
     public fun customAmiId(customAmiId: String)
 
     public fun ebsConfiguration(ebsConfiguration: IResolvable)
@@ -182,6 +187,9 @@ public open class CfnInstanceGroupConfig internal constructor(
     override fun configurations(configurations: List<Any>) {
       cdkBuilder.configurations(configurations)
     }
+
+    override fun configurations(vararg configurations: Any): Unit =
+        configurations(configurations.toList())
 
     override fun customAmiId(customAmiId: String) {
       cdkBuilder.customAmiId(customAmiId)
@@ -786,6 +794,8 @@ public open class CfnInstanceGroupConfig internal constructor(
       public fun rules(rules: IResolvable)
 
       public fun rules(rules: List<Any>)
+
+      public fun rules(vararg rules: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -814,6 +824,8 @@ public open class CfnInstanceGroupConfig internal constructor(
       override fun rules(rules: List<Any>) {
         cdkBuilder.rules(rules)
       }
+
+      override fun rules(vararg rules: Any): Unit = rules(rules.toList())
 
       public fun build():
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.AutoScalingPolicyProperty =
@@ -866,6 +878,8 @@ public open class CfnInstanceGroupConfig internal constructor(
       public fun configurations(configurations: IResolvable)
 
       public fun configurations(configurations: List<Any>)
+
+      public fun configurations(vararg configurations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -892,6 +906,9 @@ public open class CfnInstanceGroupConfig internal constructor(
       override fun configurations(configurations: List<Any>) {
         cdkBuilder.configurations(configurations)
       }
+
+      override fun configurations(vararg configurations: Any): Unit =
+          configurations(configurations.toList())
 
       public fun build():
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ConfigurationProperty =
@@ -955,6 +972,8 @@ public open class CfnInstanceGroupConfig internal constructor(
 
       public fun dimensions(dimensions: List<Any>)
 
+      public fun dimensions(vararg dimensions: Any)
+
       public fun evaluationPeriods(evaluationPeriods: Number)
 
       public fun metricName(metricName: String)
@@ -987,6 +1006,8 @@ public open class CfnInstanceGroupConfig internal constructor(
       override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
+
+      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
 
       override fun evaluationPeriods(evaluationPeriods: Number) {
         cdkBuilder.evaluationPeriods(evaluationPeriods)
@@ -1154,6 +1175,8 @@ public open class CfnInstanceGroupConfig internal constructor(
 
       public fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>)
 
+      public fun ebsBlockDeviceConfigs(vararg ebsBlockDeviceConfigs: Any)
+
       public fun ebsOptimized(ebsOptimized: Boolean)
 
       public fun ebsOptimized(ebsOptimized: IResolvable)
@@ -1172,6 +1195,9 @@ public open class CfnInstanceGroupConfig internal constructor(
       override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>) {
         cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs)
       }
+
+      override fun ebsBlockDeviceConfigs(vararg ebsBlockDeviceConfigs: Any): Unit =
+          ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.toList())
 
       override fun ebsOptimized(ebsOptimized: Boolean) {
         cdkBuilder.ebsOptimized(ebsOptimized)

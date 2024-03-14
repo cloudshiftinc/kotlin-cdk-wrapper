@@ -26,6 +26,8 @@ public interface OnCloudTrailBucketEventOptions : OnEventOptions {
 
     public fun paths(paths: List<String>)
 
+    public fun paths(vararg paths: String)
+
     public fun ruleName(ruleName: String)
 
     public fun target(target: IRuleTarget)
@@ -56,6 +58,8 @@ public interface OnCloudTrailBucketEventOptions : OnEventOptions {
     override fun paths(paths: List<String>) {
       cdkBuilder.paths(paths)
     }
+
+    override fun paths(vararg paths: String): Unit = paths(paths.toList())
 
     override fun ruleName(ruleName: String) {
       cdkBuilder.ruleName(ruleName)

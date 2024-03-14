@@ -49,6 +49,8 @@ public open class CfnEvaluationForm internal constructor(
     unwrap(this).setItems(__idx_ac66f0)
   }
 
+  public open fun items(vararg __idx_ac66f0: Any): Unit = items(__idx_ac66f0.toList())
+
   public open fun scoringStrategy(): Any? = unwrap(this).getScoringStrategy()
 
   public open fun scoringStrategy(`value`: IResolvable) {
@@ -79,6 +81,8 @@ public open class CfnEvaluationForm internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun title(): String = unwrap(this).getTitle()
 
   public open fun title(`value`: String) {
@@ -94,6 +98,8 @@ public open class CfnEvaluationForm internal constructor(
 
     public fun items(items: List<Any>)
 
+    public fun items(vararg items: Any)
+
     public fun scoringStrategy(scoringStrategy: IResolvable)
 
     public fun scoringStrategy(scoringStrategy: ScoringStrategyProperty)
@@ -105,6 +111,8 @@ public open class CfnEvaluationForm internal constructor(
     public fun status(status: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun title(title: String)
   }
@@ -132,6 +140,8 @@ public open class CfnEvaluationForm internal constructor(
       cdkBuilder.items(items)
     }
 
+    override fun items(vararg items: Any): Unit = items(items.toList())
+
     override fun scoringStrategy(scoringStrategy: IResolvable) {
       cdkBuilder.scoringStrategy(scoringStrategy.let(IResolvable::unwrap))
     }
@@ -152,6 +162,8 @@ public open class CfnEvaluationForm internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun title(title: String) {
       cdkBuilder.title(title)
@@ -512,6 +524,8 @@ public open class CfnEvaluationForm internal constructor(
       public fun options(options: IResolvable)
 
       public fun options(options: List<Any>)
+
+      public fun options(vararg options: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -531,6 +545,8 @@ public open class CfnEvaluationForm internal constructor(
       override fun options(options: List<Any>) {
         cdkBuilder.options(options)
       }
+
+      override fun options(vararg options: Any): Unit = options(options.toList())
 
       public fun build():
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationProperty
@@ -593,6 +609,8 @@ public open class CfnEvaluationForm internal constructor(
       public fun options(options: IResolvable)
 
       public fun options(options: List<Any>)
+
+      public fun options(vararg options: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -630,6 +648,8 @@ public open class CfnEvaluationForm internal constructor(
       override fun options(options: List<Any>) {
         cdkBuilder.options(options)
       }
+
+      override fun options(vararg options: Any): Unit = options(options.toList())
 
       public fun build():
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionPropertiesProperty
@@ -762,6 +782,8 @@ public open class CfnEvaluationForm internal constructor(
       public fun options(options: IResolvable)
 
       public fun options(options: List<Any>)
+
+      public fun options(vararg options: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -795,6 +817,8 @@ public open class CfnEvaluationForm internal constructor(
       override fun options(options: List<Any>) {
         cdkBuilder.options(options)
       }
+
+      override fun options(vararg options: Any): Unit = options(options.toList())
 
       public fun build():
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionPropertiesProperty
@@ -1330,6 +1354,8 @@ public open class CfnEvaluationForm internal constructor(
 
       public fun items(items: List<Any>)
 
+      public fun items(vararg items: Any)
+
       public fun refId(refId: String)
 
       public fun title(title: String)
@@ -1354,6 +1380,8 @@ public open class CfnEvaluationForm internal constructor(
       override fun items(items: List<Any>) {
         cdkBuilder.items(items)
       }
+
+      override fun items(vararg items: Any): Unit = items(items.toList())
 
       override fun refId(refId: String) {
         cdkBuilder.refId(refId)

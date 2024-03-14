@@ -45,6 +45,8 @@ public interface BaseResolverProps {
 
     public fun pipelineConfig(pipelineConfig: List<IAppsyncFunction>)
 
+    public fun pipelineConfig(vararg pipelineConfig: IAppsyncFunction)
+
     public fun requestMappingTemplate(requestMappingTemplate: MappingTemplate)
 
     public fun responseMappingTemplate(responseMappingTemplate: MappingTemplate)
@@ -82,6 +84,9 @@ public interface BaseResolverProps {
     override fun pipelineConfig(pipelineConfig: List<IAppsyncFunction>) {
       cdkBuilder.pipelineConfig(pipelineConfig.map(IAppsyncFunction::unwrap))
     }
+
+    override fun pipelineConfig(vararg pipelineConfig: IAppsyncFunction): Unit =
+        pipelineConfig(pipelineConfig.toList())
 
     override fun requestMappingTemplate(requestMappingTemplate: MappingTemplate) {
       cdkBuilder.requestMappingTemplate(requestMappingTemplate.let(MappingTemplate::unwrap))

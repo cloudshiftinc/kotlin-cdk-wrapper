@@ -78,6 +78,9 @@ public open class CfnGameServerGroup internal constructor(
     unwrap(this).setInstanceDefinitions(__idx_ac66f0)
   }
 
+  public open fun instanceDefinitions(vararg __idx_ac66f0: Any): Unit =
+      instanceDefinitions(__idx_ac66f0.toList())
+
   public open fun launchTemplate(): Any? = unwrap(this).getLaunchTemplate()
 
   public open fun launchTemplate(`value`: IResolvable) {
@@ -120,11 +123,15 @@ public open class CfnGameServerGroup internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun vpcSubnets(): List<String> = unwrap(this).getVpcSubnets() ?: emptyList()
 
   public open fun vpcSubnets(`value`: List<String>) {
     unwrap(this).setVpcSubnets(`value`)
   }
+
+  public open fun vpcSubnets(vararg `value`: String): Unit = vpcSubnets(`value`.toList())
 
   public interface Builder {
     public fun autoScalingPolicy(autoScalingPolicy: IResolvable)
@@ -147,6 +154,8 @@ public open class CfnGameServerGroup internal constructor(
 
     public fun instanceDefinitions(instanceDefinitions: List<Any>)
 
+    public fun instanceDefinitions(vararg instanceDefinitions: Any)
+
     public fun launchTemplate(launchTemplate: IResolvable)
 
     public fun launchTemplate(launchTemplate: LaunchTemplateProperty)
@@ -163,7 +172,11 @@ public open class CfnGameServerGroup internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun vpcSubnets(vpcSubnets: List<String>)
+
+    public fun vpcSubnets(vararg vpcSubnets: String)
   }
 
   private class BuilderImpl(
@@ -210,6 +223,9 @@ public open class CfnGameServerGroup internal constructor(
       cdkBuilder.instanceDefinitions(instanceDefinitions)
     }
 
+    override fun instanceDefinitions(vararg instanceDefinitions: Any): Unit =
+        instanceDefinitions(instanceDefinitions.toList())
+
     override fun launchTemplate(launchTemplate: IResolvable) {
       cdkBuilder.launchTemplate(launchTemplate.let(IResolvable::unwrap))
     }
@@ -239,9 +255,13 @@ public open class CfnGameServerGroup internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun vpcSubnets(vpcSubnets: List<String>) {
       cdkBuilder.vpcSubnets(vpcSubnets)
     }
+
+    override fun vpcSubnets(vararg vpcSubnets: String): Unit = vpcSubnets(vpcSubnets.toList())
 
     public fun build(): software.amazon.awscdk.services.gamelift.CfnGameServerGroup =
         cdkBuilder.build()

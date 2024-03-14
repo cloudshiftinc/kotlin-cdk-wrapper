@@ -103,6 +103,8 @@ public open class CfnKnowledgeBase internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun description(description: String)
 
@@ -139,6 +141,8 @@ public open class CfnKnowledgeBase internal constructor(
         fun sourceConfiguration(sourceConfiguration: SourceConfigurationProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -207,6 +211,8 @@ public open class CfnKnowledgeBase internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.wisdom.CfnKnowledgeBase = cdkBuilder.build()
   }
@@ -406,6 +412,8 @@ public open class CfnKnowledgeBase internal constructor(
       public fun appIntegrationArn(appIntegrationArn: String)
 
       public fun objectFields(objectFields: List<String>)
+
+      public fun objectFields(vararg objectFields: String)
     }
 
     private class BuilderImpl : Builder {
@@ -421,6 +429,9 @@ public open class CfnKnowledgeBase internal constructor(
       override fun objectFields(objectFields: List<String>) {
         cdkBuilder.objectFields(objectFields)
       }
+
+      override fun objectFields(vararg objectFields: String): Unit =
+          objectFields(objectFields.toList())
 
       public fun build():
           software.amazon.awscdk.services.wisdom.CfnKnowledgeBase.AppIntegrationsConfigurationProperty

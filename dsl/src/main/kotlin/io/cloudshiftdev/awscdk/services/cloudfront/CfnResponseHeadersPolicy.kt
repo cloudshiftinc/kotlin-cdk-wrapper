@@ -175,6 +175,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
 
     public interface Builder {
       public fun items(items: List<String>)
+
+      public fun items(vararg items: String)
     }
 
     private class BuilderImpl : Builder {
@@ -187,6 +189,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
         cdkBuilder.items(items)
       }
 
+      override fun items(vararg items: String): Unit = items(items.toList())
+
       public fun build():
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowMethodsProperty
           = cdkBuilder.build()
@@ -196,7 +200,7 @@ public open class CfnResponseHeadersPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowMethodsProperty,
     ) : AccessControlAllowMethodsProperty {
-      override fun items(): List<String> = unwrap(this).getItems() ?: emptyList()
+      override fun items(): List<String> = unwrap(this).getItems()
     }
 
     public companion object {
@@ -561,6 +565,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
 
     public interface Builder {
       public fun items(items: List<String>)
+
+      public fun items(vararg items: String)
     }
 
     private class BuilderImpl : Builder {
@@ -573,6 +579,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
         cdkBuilder.items(items)
       }
 
+      override fun items(vararg items: String): Unit = items(items.toList())
+
       public fun build():
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowOriginsProperty
           = cdkBuilder.build()
@@ -582,7 +590,7 @@ public open class CfnResponseHeadersPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowOriginsProperty,
     ) : AccessControlAllowOriginsProperty {
-      override fun items(): List<String> = unwrap(this).getItems() ?: emptyList()
+      override fun items(): List<String> = unwrap(this).getItems()
     }
 
     public companion object {
@@ -1223,6 +1231,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
       public fun items(items: IResolvable)
 
       public fun items(items: List<Any>)
+
+      public fun items(vararg items: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1238,6 +1248,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
       override fun items(items: List<Any>) {
         cdkBuilder.items(items)
       }
+
+      override fun items(vararg items: Any): Unit = items(items.toList())
 
       public fun build():
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeadersConfigProperty
@@ -1278,6 +1290,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
       public fun items(items: IResolvable)
 
       public fun items(items: List<Any>)
+
+      public fun items(vararg items: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1293,6 +1307,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
       override fun items(items: List<Any>) {
         cdkBuilder.items(items)
       }
+
+      override fun items(vararg items: Any): Unit = items(items.toList())
 
       public fun build():
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeadersConfigProperty
@@ -1396,6 +1412,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
 
     public interface Builder {
       public fun items(items: List<String>)
+
+      public fun items(vararg items: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1408,6 +1426,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
         cdkBuilder.items(items)
       }
 
+      override fun items(vararg items: String): Unit = items(items.toList())
+
       public fun build():
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty
           = cdkBuilder.build()
@@ -1417,7 +1437,7 @@ public open class CfnResponseHeadersPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty,
     ) : AccessControlAllowHeadersProperty {
-      override fun items(): List<String> = unwrap(this).getItems() ?: emptyList()
+      override fun items(): List<String> = unwrap(this).getItems()
     }
 
     public companion object {
@@ -1446,6 +1466,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
 
     public interface Builder {
       public fun items(items: List<String>)
+
+      public fun items(vararg items: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1458,6 +1480,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
         cdkBuilder.items(items)
       }
 
+      override fun items(vararg items: String): Unit = items(items.toList())
+
       public fun build():
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlExposeHeadersProperty
           = cdkBuilder.build()
@@ -1467,7 +1491,7 @@ public open class CfnResponseHeadersPolicy internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlExposeHeadersProperty,
     ) : AccessControlExposeHeadersProperty {
-      override fun items(): List<String> = unwrap(this).getItems() ?: emptyList()
+      override fun items(): List<String> = unwrap(this).getItems()
     }
 
     public companion object {

@@ -61,6 +61,8 @@ public open class CfnVpcIngressConnection internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun vpcIngressConnectionName(): String? = unwrap(this).getVpcIngressConnectionName()
 
   public open fun vpcIngressConnectionName(`value`: String) {
@@ -80,6 +82,8 @@ public open class CfnVpcIngressConnection internal constructor(
     public fun serviceArn(serviceArn: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun vpcIngressConnectionName(vpcIngressConnectionName: String)
   }
@@ -113,6 +117,8 @@ public open class CfnVpcIngressConnection internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun vpcIngressConnectionName(vpcIngressConnectionName: String) {
       cdkBuilder.vpcIngressConnectionName(vpcIngressConnectionName)

@@ -218,6 +218,8 @@ public open class CfnDeviceDefinition internal constructor(
       public fun devices(devices: IResolvable)
 
       public fun devices(devices: List<Any>)
+
+      public fun devices(vararg devices: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -233,6 +235,8 @@ public open class CfnDeviceDefinition internal constructor(
       override fun devices(devices: List<Any>) {
         cdkBuilder.devices(devices)
       }
+
+      override fun devices(vararg devices: Any): Unit = devices(devices.toList())
 
       public fun build():
           software.amazon.awscdk.services.greengrass.CfnDeviceDefinition.DeviceDefinitionVersionProperty

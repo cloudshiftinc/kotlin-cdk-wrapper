@@ -38,6 +38,8 @@ public open class FargateCluster internal constructor(
 
     public fun clusterLogging(clusterLogging: List<ClusterLoggingTypes>)
 
+    public fun clusterLogging(vararg clusterLogging: ClusterLoggingTypes)
+
     public fun clusterName(clusterName: String)
 
     public fun coreDnsComputeType(coreDnsComputeType: CoreDnsComputeType)
@@ -85,6 +87,8 @@ public open class FargateCluster internal constructor(
     public fun vpc(vpc: IVpc)
 
     public fun vpcSubnets(vpcSubnets: List<SubnetSelection>)
+
+    public fun vpcSubnets(vararg vpcSubnets: SubnetSelection)
   }
 
   private class BuilderImpl(
@@ -118,6 +122,9 @@ public open class FargateCluster internal constructor(
     override fun clusterLogging(clusterLogging: List<ClusterLoggingTypes>) {
       cdkBuilder.clusterLogging(clusterLogging.map(ClusterLoggingTypes::unwrap))
     }
+
+    override fun clusterLogging(vararg clusterLogging: ClusterLoggingTypes): Unit =
+        clusterLogging(clusterLogging.toList())
 
     override fun clusterName(clusterName: String) {
       cdkBuilder.clusterName(clusterName)
@@ -211,6 +218,9 @@ public open class FargateCluster internal constructor(
     override fun vpcSubnets(vpcSubnets: List<SubnetSelection>) {
       cdkBuilder.vpcSubnets(vpcSubnets.map(SubnetSelection::unwrap))
     }
+
+    override fun vpcSubnets(vararg vpcSubnets: SubnetSelection): Unit =
+        vpcSubnets(vpcSubnets.toList())
 
     public fun build(): software.amazon.awscdk.services.eks.FargateCluster = cdkBuilder.build()
   }

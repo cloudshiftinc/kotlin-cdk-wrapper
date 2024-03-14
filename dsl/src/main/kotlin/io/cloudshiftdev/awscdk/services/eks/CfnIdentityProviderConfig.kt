@@ -63,6 +63,8 @@ public open class CfnIdentityProviderConfig internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun type(): String = unwrap(this).getType()
 
   public open fun type(`value`: String) {
@@ -83,6 +85,8 @@ public open class CfnIdentityProviderConfig internal constructor(
     public fun oidc(oidc: OidcIdentityProviderConfigProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun type(type: String)
   }
@@ -118,6 +122,8 @@ public open class CfnIdentityProviderConfig internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun type(type: String) {
       cdkBuilder.type(type)
@@ -176,6 +182,8 @@ public open class CfnIdentityProviderConfig internal constructor(
 
       public fun requiredClaims(requiredClaims: List<Any>)
 
+      public fun requiredClaims(vararg requiredClaims: Any)
+
       public fun usernameClaim(usernameClaim: String)
 
       public fun usernamePrefix(usernamePrefix: String)
@@ -210,6 +218,9 @@ public open class CfnIdentityProviderConfig internal constructor(
       override fun requiredClaims(requiredClaims: List<Any>) {
         cdkBuilder.requiredClaims(requiredClaims)
       }
+
+      override fun requiredClaims(vararg requiredClaims: Any): Unit =
+          requiredClaims(requiredClaims.toList())
 
       override fun usernameClaim(usernameClaim: String) {
         cdkBuilder.usernameClaim(usernameClaim)

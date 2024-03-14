@@ -74,6 +74,8 @@ public open class CfnRepository internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun triggers(): Any? = unwrap(this).getTriggers()
 
   public open fun triggers(`value`: IResolvable) {
@@ -83,6 +85,8 @@ public open class CfnRepository internal constructor(
   public open fun triggers(__idx_ac66f0: List<Any>) {
     unwrap(this).setTriggers(__idx_ac66f0)
   }
+
+  public open fun triggers(vararg __idx_ac66f0: Any): Unit = triggers(__idx_ac66f0.toList())
 
   public interface Builder {
     public fun code(code: IResolvable)
@@ -101,9 +105,13 @@ public open class CfnRepository internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun triggers(triggers: IResolvable)
 
     public fun triggers(triggers: List<Any>)
+
+    public fun triggers(vararg triggers: Any)
   }
 
   private class BuilderImpl(
@@ -141,6 +149,8 @@ public open class CfnRepository internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun triggers(triggers: IResolvable) {
       cdkBuilder.triggers(triggers.let(IResolvable::unwrap))
     }
@@ -148,6 +158,8 @@ public open class CfnRepository internal constructor(
     override fun triggers(triggers: List<Any>) {
       cdkBuilder.triggers(triggers)
     }
+
+    override fun triggers(vararg triggers: Any): Unit = triggers(triggers.toList())
 
     public fun build(): software.amazon.awscdk.services.codecommit.CfnRepository =
         cdkBuilder.build()
@@ -324,11 +336,15 @@ public open class CfnRepository internal constructor(
     public interface Builder {
       public fun branches(branches: List<String>)
 
+      public fun branches(vararg branches: String)
+
       public fun customData(customData: String)
 
       public fun destinationArn(destinationArn: String)
 
       public fun events(events: List<String>)
+
+      public fun events(vararg events: String)
 
       public fun name(name: String)
     }
@@ -343,6 +359,8 @@ public open class CfnRepository internal constructor(
         cdkBuilder.branches(branches)
       }
 
+      override fun branches(vararg branches: String): Unit = branches(branches.toList())
+
       override fun customData(customData: String) {
         cdkBuilder.customData(customData)
       }
@@ -354,6 +372,8 @@ public open class CfnRepository internal constructor(
       override fun events(events: List<String>) {
         cdkBuilder.events(events)
       }
+
+      override fun events(vararg events: String): Unit = events(events.toList())
 
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -374,7 +394,7 @@ public open class CfnRepository internal constructor(
 
       override fun destinationArn(): String = unwrap(this).getDestinationArn()
 
-      override fun events(): List<String> = unwrap(this).getEvents() ?: emptyList()
+      override fun events(): List<String> = unwrap(this).getEvents()
 
       override fun name(): String = unwrap(this).getName()
     }

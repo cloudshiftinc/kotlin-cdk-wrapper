@@ -33,6 +33,9 @@ public open class CfnUserPoolUser internal constructor(
     unwrap(this).setDesiredDeliveryMediums(`value`)
   }
 
+  public open fun desiredDeliveryMediums(vararg `value`: String): Unit =
+      desiredDeliveryMediums(`value`.toList())
+
   public open fun forceAliasCreation(): Any? = unwrap(this).getForceAliasCreation()
 
   public open fun forceAliasCreation(`value`: Boolean) {
@@ -63,6 +66,9 @@ public open class CfnUserPoolUser internal constructor(
     unwrap(this).setUserAttributes(__idx_ac66f0)
   }
 
+  public open fun userAttributes(vararg __idx_ac66f0: Any): Unit =
+      userAttributes(__idx_ac66f0.toList())
+
   public open fun userPoolId(): String = unwrap(this).getUserPoolId()
 
   public open fun userPoolId(`value`: String) {
@@ -85,12 +91,17 @@ public open class CfnUserPoolUser internal constructor(
     unwrap(this).setValidationData(__idx_ac66f0)
   }
 
+  public open fun validationData(vararg __idx_ac66f0: Any): Unit =
+      validationData(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun clientMetadata(clientMetadata: IResolvable)
 
     public fun clientMetadata(clientMetadata: Map<String, String>)
 
     public fun desiredDeliveryMediums(desiredDeliveryMediums: List<String>)
+
+    public fun desiredDeliveryMediums(vararg desiredDeliveryMediums: String)
 
     public fun forceAliasCreation(forceAliasCreation: Boolean)
 
@@ -102,6 +113,8 @@ public open class CfnUserPoolUser internal constructor(
 
     public fun userAttributes(userAttributes: List<Any>)
 
+    public fun userAttributes(vararg userAttributes: Any)
+
     public fun userPoolId(userPoolId: String)
 
     public fun username(username: String)
@@ -109,6 +122,8 @@ public open class CfnUserPoolUser internal constructor(
     public fun validationData(validationData: IResolvable)
 
     public fun validationData(validationData: List<Any>)
+
+    public fun validationData(vararg validationData: Any)
   }
 
   private class BuilderImpl(
@@ -130,6 +145,9 @@ public open class CfnUserPoolUser internal constructor(
       cdkBuilder.desiredDeliveryMediums(desiredDeliveryMediums)
     }
 
+    override fun desiredDeliveryMediums(vararg desiredDeliveryMediums: String): Unit =
+        desiredDeliveryMediums(desiredDeliveryMediums.toList())
+
     override fun forceAliasCreation(forceAliasCreation: Boolean) {
       cdkBuilder.forceAliasCreation(forceAliasCreation)
     }
@@ -150,6 +168,9 @@ public open class CfnUserPoolUser internal constructor(
       cdkBuilder.userAttributes(userAttributes)
     }
 
+    override fun userAttributes(vararg userAttributes: Any): Unit =
+        userAttributes(userAttributes.toList())
+
     override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)
     }
@@ -165,6 +186,9 @@ public open class CfnUserPoolUser internal constructor(
     override fun validationData(validationData: List<Any>) {
       cdkBuilder.validationData(validationData)
     }
+
+    override fun validationData(vararg validationData: Any): Unit =
+        validationData(validationData.toList())
 
     public fun build(): software.amazon.awscdk.services.cognito.CfnUserPoolUser = cdkBuilder.build()
   }

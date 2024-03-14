@@ -146,11 +146,16 @@ public open class CfnCluster internal constructor(
     unwrap(this).setSecurityGroupIds(`value`)
   }
 
+  public open fun securityGroupIds(vararg `value`: String): Unit =
+      securityGroupIds(`value`.toList())
+
   public open fun snapshotArns(): List<String> = unwrap(this).getSnapshotArns() ?: emptyList()
 
   public open fun snapshotArns(`value`: List<String>) {
     unwrap(this).setSnapshotArns(`value`)
   }
+
+  public open fun snapshotArns(vararg `value`: String): Unit = snapshotArns(`value`.toList())
 
   public open fun snapshotName(): String? = unwrap(this).getSnapshotName()
 
@@ -196,6 +201,8 @@ public open class CfnCluster internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun tlsEnabled(): Any? = unwrap(this).getTlsEnabled()
 
@@ -248,7 +255,11 @@ public open class CfnCluster internal constructor(
 
     public fun securityGroupIds(securityGroupIds: List<String>)
 
+    public fun securityGroupIds(vararg securityGroupIds: String)
+
     public fun snapshotArns(snapshotArns: List<String>)
+
+    public fun snapshotArns(vararg snapshotArns: String)
 
     public fun snapshotName(snapshotName: String)
 
@@ -263,6 +274,8 @@ public open class CfnCluster internal constructor(
     public fun subnetGroupName(subnetGroupName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun tlsEnabled(tlsEnabled: Boolean)
 
@@ -353,9 +366,15 @@ public open class CfnCluster internal constructor(
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
+
     override fun snapshotArns(snapshotArns: List<String>) {
       cdkBuilder.snapshotArns(snapshotArns)
     }
+
+    override fun snapshotArns(vararg snapshotArns: String): Unit =
+        snapshotArns(snapshotArns.toList())
 
     override fun snapshotName(snapshotName: String) {
       cdkBuilder.snapshotName(snapshotName)
@@ -384,6 +403,8 @@ public open class CfnCluster internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun tlsEnabled(tlsEnabled: Boolean) {
       cdkBuilder.tlsEnabled(tlsEnabled)

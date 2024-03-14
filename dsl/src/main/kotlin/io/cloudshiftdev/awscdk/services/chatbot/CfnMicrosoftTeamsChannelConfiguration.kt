@@ -31,6 +31,9 @@ public open class CfnMicrosoftTeamsChannelConfiguration internal constructor(
     unwrap(this).setGuardrailPolicies(`value`)
   }
 
+  public open fun guardrailPolicies(vararg `value`: String): Unit =
+      guardrailPolicies(`value`.toList())
+
   public open fun iamRoleArn(): String = unwrap(this).getIamRoleArn()
 
   public open fun iamRoleArn(`value`: String) {
@@ -52,6 +55,8 @@ public open class CfnMicrosoftTeamsChannelConfiguration internal constructor(
   public open fun snsTopicArns(`value`: List<String>) {
     unwrap(this).setSnsTopicArns(`value`)
   }
+
+  public open fun snsTopicArns(vararg `value`: String): Unit = snsTopicArns(`value`.toList())
 
   public open fun teamId(): String = unwrap(this).getTeamId()
 
@@ -86,11 +91,15 @@ public open class CfnMicrosoftTeamsChannelConfiguration internal constructor(
 
     public fun guardrailPolicies(guardrailPolicies: List<String>)
 
+    public fun guardrailPolicies(vararg guardrailPolicies: String)
+
     public fun iamRoleArn(iamRoleArn: String)
 
     public fun loggingLevel(loggingLevel: String)
 
     public fun snsTopicArns(snsTopicArns: List<String>)
+
+    public fun snsTopicArns(vararg snsTopicArns: String)
 
     public fun teamId(teamId: String)
 
@@ -120,6 +129,9 @@ public open class CfnMicrosoftTeamsChannelConfiguration internal constructor(
       cdkBuilder.guardrailPolicies(guardrailPolicies)
     }
 
+    override fun guardrailPolicies(vararg guardrailPolicies: String): Unit =
+        guardrailPolicies(guardrailPolicies.toList())
+
     override fun iamRoleArn(iamRoleArn: String) {
       cdkBuilder.iamRoleArn(iamRoleArn)
     }
@@ -131,6 +143,9 @@ public open class CfnMicrosoftTeamsChannelConfiguration internal constructor(
     override fun snsTopicArns(snsTopicArns: List<String>) {
       cdkBuilder.snsTopicArns(snsTopicArns)
     }
+
+    override fun snsTopicArns(vararg snsTopicArns: String): Unit =
+        snsTopicArns(snsTopicArns.toList())
 
     override fun teamId(teamId: String) {
       cdkBuilder.teamId(teamId)

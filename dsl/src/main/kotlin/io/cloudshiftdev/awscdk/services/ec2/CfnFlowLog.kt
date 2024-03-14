@@ -94,6 +94,8 @@ public open class CfnFlowLog internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun trafficType(): String? = unwrap(this).getTrafficType()
 
   public open fun trafficType(`value`: String) {
@@ -122,6 +124,8 @@ public open class CfnFlowLog internal constructor(
     public fun resourceType(resourceType: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun trafficType(trafficType: String)
   }
@@ -176,6 +180,8 @@ public open class CfnFlowLog internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun trafficType(trafficType: String) {
       cdkBuilder.trafficType(trafficType)

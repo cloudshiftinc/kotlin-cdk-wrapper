@@ -28,6 +28,8 @@ public interface IntelligentTieringConfiguration {
     public fun prefix(prefix: String)
 
     public fun tags(tags: List<Tag>)
+
+    public fun tags(vararg tags: Tag)
   }
 
   private class BuilderImpl : Builder {
@@ -54,6 +56,8 @@ public interface IntelligentTieringConfiguration {
     override fun tags(tags: List<Tag>) {
       cdkBuilder.tags(tags.map(Tag::unwrap))
     }
+
+    override fun tags(vararg tags: Tag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.s3.IntelligentTieringConfiguration =
         cdkBuilder.build()

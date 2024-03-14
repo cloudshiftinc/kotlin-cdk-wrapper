@@ -125,6 +125,8 @@ public open class CfnApplicationReferenceDataSourceV2 internal constructor(
 
       public fun recordColumns(recordColumns: List<Any>)
 
+      public fun recordColumns(vararg recordColumns: Any)
+
       public fun recordEncoding(recordEncoding: String)
 
       public fun recordFormat(recordFormat: IResolvable)
@@ -149,6 +151,9 @@ public open class CfnApplicationReferenceDataSourceV2 internal constructor(
       override fun recordColumns(recordColumns: List<Any>) {
         cdkBuilder.recordColumns(recordColumns)
       }
+
+      override fun recordColumns(vararg recordColumns: Any): Unit =
+          recordColumns(recordColumns.toList())
 
       override fun recordEncoding(recordEncoding: String) {
         cdkBuilder.recordEncoding(recordEncoding)

@@ -75,6 +75,8 @@ public open class CfnMap internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun configuration(configuration: IResolvable)
 
@@ -91,6 +93,8 @@ public open class CfnMap internal constructor(
     public fun pricingPlan(pricingPlan: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -129,6 +133,8 @@ public open class CfnMap internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     public fun build(): software.amazon.awscdk.services.location.CfnMap = cdkBuilder.build()
   }
 
@@ -163,6 +169,8 @@ public open class CfnMap internal constructor(
     public interface Builder {
       public fun customLayers(customLayers: List<String>)
 
+      public fun customLayers(vararg customLayers: String)
+
       public fun politicalView(politicalView: String)
 
       public fun style(style: String)
@@ -176,6 +184,9 @@ public open class CfnMap internal constructor(
       override fun customLayers(customLayers: List<String>) {
         cdkBuilder.customLayers(customLayers)
       }
+
+      override fun customLayers(vararg customLayers: String): Unit =
+          customLayers(customLayers.toList())
 
       override fun politicalView(politicalView: String) {
         cdkBuilder.politicalView(politicalView)

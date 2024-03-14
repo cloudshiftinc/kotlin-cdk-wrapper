@@ -253,125 +253,187 @@ public open class CfnFilter internal constructor(
 
       public fun awsAccountId(awsAccountId: List<Any>)
 
+      public fun awsAccountId(vararg awsAccountId: Any)
+
       public fun componentId(componentId: IResolvable)
 
       public fun componentId(componentId: List<Any>)
+
+      public fun componentId(vararg componentId: Any)
 
       public fun componentType(componentType: IResolvable)
 
       public fun componentType(componentType: List<Any>)
 
+      public fun componentType(vararg componentType: Any)
+
       public fun ec2InstanceImageId(ec2InstanceImageId: IResolvable)
 
       public fun ec2InstanceImageId(ec2InstanceImageId: List<Any>)
+
+      public fun ec2InstanceImageId(vararg ec2InstanceImageId: Any)
 
       public fun ec2InstanceSubnetId(ec2InstanceSubnetId: IResolvable)
 
       public fun ec2InstanceSubnetId(ec2InstanceSubnetId: List<Any>)
 
+      public fun ec2InstanceSubnetId(vararg ec2InstanceSubnetId: Any)
+
       public fun ec2InstanceVpcId(ec2InstanceVpcId: IResolvable)
 
       public fun ec2InstanceVpcId(ec2InstanceVpcId: List<Any>)
+
+      public fun ec2InstanceVpcId(vararg ec2InstanceVpcId: Any)
 
       public fun ecrImageArchitecture(ecrImageArchitecture: IResolvable)
 
       public fun ecrImageArchitecture(ecrImageArchitecture: List<Any>)
 
+      public fun ecrImageArchitecture(vararg ecrImageArchitecture: Any)
+
       public fun ecrImageHash(ecrImageHash: IResolvable)
 
       public fun ecrImageHash(ecrImageHash: List<Any>)
+
+      public fun ecrImageHash(vararg ecrImageHash: Any)
 
       public fun ecrImagePushedAt(ecrImagePushedAt: IResolvable)
 
       public fun ecrImagePushedAt(ecrImagePushedAt: List<Any>)
 
+      public fun ecrImagePushedAt(vararg ecrImagePushedAt: Any)
+
       public fun ecrImageRegistry(ecrImageRegistry: IResolvable)
 
       public fun ecrImageRegistry(ecrImageRegistry: List<Any>)
+
+      public fun ecrImageRegistry(vararg ecrImageRegistry: Any)
 
       public fun ecrImageRepositoryName(ecrImageRepositoryName: IResolvable)
 
       public fun ecrImageRepositoryName(ecrImageRepositoryName: List<Any>)
 
+      public fun ecrImageRepositoryName(vararg ecrImageRepositoryName: Any)
+
       public fun ecrImageTags(ecrImageTags: IResolvable)
 
       public fun ecrImageTags(ecrImageTags: List<Any>)
+
+      public fun ecrImageTags(vararg ecrImageTags: Any)
 
       public fun findingArn(findingArn: IResolvable)
 
       public fun findingArn(findingArn: List<Any>)
 
+      public fun findingArn(vararg findingArn: Any)
+
       public fun findingStatus(findingStatus: IResolvable)
 
       public fun findingStatus(findingStatus: List<Any>)
+
+      public fun findingStatus(vararg findingStatus: Any)
 
       public fun findingType(findingType: IResolvable)
 
       public fun findingType(findingType: List<Any>)
 
+      public fun findingType(vararg findingType: Any)
+
       public fun firstObservedAt(firstObservedAt: IResolvable)
 
       public fun firstObservedAt(firstObservedAt: List<Any>)
+
+      public fun firstObservedAt(vararg firstObservedAt: Any)
 
       public fun inspectorScore(inspectorScore: IResolvable)
 
       public fun inspectorScore(inspectorScore: List<Any>)
 
+      public fun inspectorScore(vararg inspectorScore: Any)
+
       public fun lastObservedAt(lastObservedAt: IResolvable)
 
       public fun lastObservedAt(lastObservedAt: List<Any>)
+
+      public fun lastObservedAt(vararg lastObservedAt: Any)
 
       public fun networkProtocol(networkProtocol: IResolvable)
 
       public fun networkProtocol(networkProtocol: List<Any>)
 
+      public fun networkProtocol(vararg networkProtocol: Any)
+
       public fun portRange(portRange: IResolvable)
 
       public fun portRange(portRange: List<Any>)
+
+      public fun portRange(vararg portRange: Any)
 
       public fun relatedVulnerabilities(relatedVulnerabilities: IResolvable)
 
       public fun relatedVulnerabilities(relatedVulnerabilities: List<Any>)
 
+      public fun relatedVulnerabilities(vararg relatedVulnerabilities: Any)
+
       public fun resourceId(resourceId: IResolvable)
 
       public fun resourceId(resourceId: List<Any>)
+
+      public fun resourceId(vararg resourceId: Any)
 
       public fun resourceTags(resourceTags: IResolvable)
 
       public fun resourceTags(resourceTags: List<Any>)
 
+      public fun resourceTags(vararg resourceTags: Any)
+
       public fun resourceType(resourceType: IResolvable)
 
       public fun resourceType(resourceType: List<Any>)
+
+      public fun resourceType(vararg resourceType: Any)
 
       public fun severity(severity: IResolvable)
 
       public fun severity(severity: List<Any>)
 
+      public fun severity(vararg severity: Any)
+
       public fun title(title: IResolvable)
 
       public fun title(title: List<Any>)
+
+      public fun title(vararg title: Any)
 
       public fun updatedAt(updatedAt: IResolvable)
 
       public fun updatedAt(updatedAt: List<Any>)
 
+      public fun updatedAt(vararg updatedAt: Any)
+
       public fun vendorSeverity(vendorSeverity: IResolvable)
 
       public fun vendorSeverity(vendorSeverity: List<Any>)
+
+      public fun vendorSeverity(vararg vendorSeverity: Any)
 
       public fun vulnerabilityId(vulnerabilityId: IResolvable)
 
       public fun vulnerabilityId(vulnerabilityId: List<Any>)
 
+      public fun vulnerabilityId(vararg vulnerabilityId: Any)
+
       public fun vulnerabilitySource(vulnerabilitySource: IResolvable)
 
       public fun vulnerabilitySource(vulnerabilitySource: List<Any>)
 
+      public fun vulnerabilitySource(vararg vulnerabilitySource: Any)
+
       public fun vulnerablePackages(vulnerablePackages: IResolvable)
 
       public fun vulnerablePackages(vulnerablePackages: List<Any>)
+
+      public fun vulnerablePackages(vararg vulnerablePackages: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -387,6 +449,9 @@ public open class CfnFilter internal constructor(
         cdkBuilder.awsAccountId(awsAccountId)
       }
 
+      override fun awsAccountId(vararg awsAccountId: Any): Unit =
+          awsAccountId(awsAccountId.toList())
+
       override fun componentId(componentId: IResolvable) {
         cdkBuilder.componentId(componentId.let(IResolvable::unwrap))
       }
@@ -394,6 +459,8 @@ public open class CfnFilter internal constructor(
       override fun componentId(componentId: List<Any>) {
         cdkBuilder.componentId(componentId)
       }
+
+      override fun componentId(vararg componentId: Any): Unit = componentId(componentId.toList())
 
       override fun componentType(componentType: IResolvable) {
         cdkBuilder.componentType(componentType.let(IResolvable::unwrap))
@@ -403,6 +470,9 @@ public open class CfnFilter internal constructor(
         cdkBuilder.componentType(componentType)
       }
 
+      override fun componentType(vararg componentType: Any): Unit =
+          componentType(componentType.toList())
+
       override fun ec2InstanceImageId(ec2InstanceImageId: IResolvable) {
         cdkBuilder.ec2InstanceImageId(ec2InstanceImageId.let(IResolvable::unwrap))
       }
@@ -410,6 +480,9 @@ public open class CfnFilter internal constructor(
       override fun ec2InstanceImageId(ec2InstanceImageId: List<Any>) {
         cdkBuilder.ec2InstanceImageId(ec2InstanceImageId)
       }
+
+      override fun ec2InstanceImageId(vararg ec2InstanceImageId: Any): Unit =
+          ec2InstanceImageId(ec2InstanceImageId.toList())
 
       override fun ec2InstanceSubnetId(ec2InstanceSubnetId: IResolvable) {
         cdkBuilder.ec2InstanceSubnetId(ec2InstanceSubnetId.let(IResolvable::unwrap))
@@ -419,6 +492,9 @@ public open class CfnFilter internal constructor(
         cdkBuilder.ec2InstanceSubnetId(ec2InstanceSubnetId)
       }
 
+      override fun ec2InstanceSubnetId(vararg ec2InstanceSubnetId: Any): Unit =
+          ec2InstanceSubnetId(ec2InstanceSubnetId.toList())
+
       override fun ec2InstanceVpcId(ec2InstanceVpcId: IResolvable) {
         cdkBuilder.ec2InstanceVpcId(ec2InstanceVpcId.let(IResolvable::unwrap))
       }
@@ -426,6 +502,9 @@ public open class CfnFilter internal constructor(
       override fun ec2InstanceVpcId(ec2InstanceVpcId: List<Any>) {
         cdkBuilder.ec2InstanceVpcId(ec2InstanceVpcId)
       }
+
+      override fun ec2InstanceVpcId(vararg ec2InstanceVpcId: Any): Unit =
+          ec2InstanceVpcId(ec2InstanceVpcId.toList())
 
       override fun ecrImageArchitecture(ecrImageArchitecture: IResolvable) {
         cdkBuilder.ecrImageArchitecture(ecrImageArchitecture.let(IResolvable::unwrap))
@@ -435,6 +514,9 @@ public open class CfnFilter internal constructor(
         cdkBuilder.ecrImageArchitecture(ecrImageArchitecture)
       }
 
+      override fun ecrImageArchitecture(vararg ecrImageArchitecture: Any): Unit =
+          ecrImageArchitecture(ecrImageArchitecture.toList())
+
       override fun ecrImageHash(ecrImageHash: IResolvable) {
         cdkBuilder.ecrImageHash(ecrImageHash.let(IResolvable::unwrap))
       }
@@ -442,6 +524,9 @@ public open class CfnFilter internal constructor(
       override fun ecrImageHash(ecrImageHash: List<Any>) {
         cdkBuilder.ecrImageHash(ecrImageHash)
       }
+
+      override fun ecrImageHash(vararg ecrImageHash: Any): Unit =
+          ecrImageHash(ecrImageHash.toList())
 
       override fun ecrImagePushedAt(ecrImagePushedAt: IResolvable) {
         cdkBuilder.ecrImagePushedAt(ecrImagePushedAt.let(IResolvable::unwrap))
@@ -451,6 +536,9 @@ public open class CfnFilter internal constructor(
         cdkBuilder.ecrImagePushedAt(ecrImagePushedAt)
       }
 
+      override fun ecrImagePushedAt(vararg ecrImagePushedAt: Any): Unit =
+          ecrImagePushedAt(ecrImagePushedAt.toList())
+
       override fun ecrImageRegistry(ecrImageRegistry: IResolvable) {
         cdkBuilder.ecrImageRegistry(ecrImageRegistry.let(IResolvable::unwrap))
       }
@@ -458,6 +546,9 @@ public open class CfnFilter internal constructor(
       override fun ecrImageRegistry(ecrImageRegistry: List<Any>) {
         cdkBuilder.ecrImageRegistry(ecrImageRegistry)
       }
+
+      override fun ecrImageRegistry(vararg ecrImageRegistry: Any): Unit =
+          ecrImageRegistry(ecrImageRegistry.toList())
 
       override fun ecrImageRepositoryName(ecrImageRepositoryName: IResolvable) {
         cdkBuilder.ecrImageRepositoryName(ecrImageRepositoryName.let(IResolvable::unwrap))
@@ -467,6 +558,9 @@ public open class CfnFilter internal constructor(
         cdkBuilder.ecrImageRepositoryName(ecrImageRepositoryName)
       }
 
+      override fun ecrImageRepositoryName(vararg ecrImageRepositoryName: Any): Unit =
+          ecrImageRepositoryName(ecrImageRepositoryName.toList())
+
       override fun ecrImageTags(ecrImageTags: IResolvable) {
         cdkBuilder.ecrImageTags(ecrImageTags.let(IResolvable::unwrap))
       }
@@ -474,6 +568,9 @@ public open class CfnFilter internal constructor(
       override fun ecrImageTags(ecrImageTags: List<Any>) {
         cdkBuilder.ecrImageTags(ecrImageTags)
       }
+
+      override fun ecrImageTags(vararg ecrImageTags: Any): Unit =
+          ecrImageTags(ecrImageTags.toList())
 
       override fun findingArn(findingArn: IResolvable) {
         cdkBuilder.findingArn(findingArn.let(IResolvable::unwrap))
@@ -483,6 +580,8 @@ public open class CfnFilter internal constructor(
         cdkBuilder.findingArn(findingArn)
       }
 
+      override fun findingArn(vararg findingArn: Any): Unit = findingArn(findingArn.toList())
+
       override fun findingStatus(findingStatus: IResolvable) {
         cdkBuilder.findingStatus(findingStatus.let(IResolvable::unwrap))
       }
@@ -490,6 +589,9 @@ public open class CfnFilter internal constructor(
       override fun findingStatus(findingStatus: List<Any>) {
         cdkBuilder.findingStatus(findingStatus)
       }
+
+      override fun findingStatus(vararg findingStatus: Any): Unit =
+          findingStatus(findingStatus.toList())
 
       override fun findingType(findingType: IResolvable) {
         cdkBuilder.findingType(findingType.let(IResolvable::unwrap))
@@ -499,6 +601,8 @@ public open class CfnFilter internal constructor(
         cdkBuilder.findingType(findingType)
       }
 
+      override fun findingType(vararg findingType: Any): Unit = findingType(findingType.toList())
+
       override fun firstObservedAt(firstObservedAt: IResolvable) {
         cdkBuilder.firstObservedAt(firstObservedAt.let(IResolvable::unwrap))
       }
@@ -506,6 +610,9 @@ public open class CfnFilter internal constructor(
       override fun firstObservedAt(firstObservedAt: List<Any>) {
         cdkBuilder.firstObservedAt(firstObservedAt)
       }
+
+      override fun firstObservedAt(vararg firstObservedAt: Any): Unit =
+          firstObservedAt(firstObservedAt.toList())
 
       override fun inspectorScore(inspectorScore: IResolvable) {
         cdkBuilder.inspectorScore(inspectorScore.let(IResolvable::unwrap))
@@ -515,6 +622,9 @@ public open class CfnFilter internal constructor(
         cdkBuilder.inspectorScore(inspectorScore)
       }
 
+      override fun inspectorScore(vararg inspectorScore: Any): Unit =
+          inspectorScore(inspectorScore.toList())
+
       override fun lastObservedAt(lastObservedAt: IResolvable) {
         cdkBuilder.lastObservedAt(lastObservedAt.let(IResolvable::unwrap))
       }
@@ -522,6 +632,9 @@ public open class CfnFilter internal constructor(
       override fun lastObservedAt(lastObservedAt: List<Any>) {
         cdkBuilder.lastObservedAt(lastObservedAt)
       }
+
+      override fun lastObservedAt(vararg lastObservedAt: Any): Unit =
+          lastObservedAt(lastObservedAt.toList())
 
       override fun networkProtocol(networkProtocol: IResolvable) {
         cdkBuilder.networkProtocol(networkProtocol.let(IResolvable::unwrap))
@@ -531,6 +644,9 @@ public open class CfnFilter internal constructor(
         cdkBuilder.networkProtocol(networkProtocol)
       }
 
+      override fun networkProtocol(vararg networkProtocol: Any): Unit =
+          networkProtocol(networkProtocol.toList())
+
       override fun portRange(portRange: IResolvable) {
         cdkBuilder.portRange(portRange.let(IResolvable::unwrap))
       }
@@ -538,6 +654,8 @@ public open class CfnFilter internal constructor(
       override fun portRange(portRange: List<Any>) {
         cdkBuilder.portRange(portRange)
       }
+
+      override fun portRange(vararg portRange: Any): Unit = portRange(portRange.toList())
 
       override fun relatedVulnerabilities(relatedVulnerabilities: IResolvable) {
         cdkBuilder.relatedVulnerabilities(relatedVulnerabilities.let(IResolvable::unwrap))
@@ -547,6 +665,9 @@ public open class CfnFilter internal constructor(
         cdkBuilder.relatedVulnerabilities(relatedVulnerabilities)
       }
 
+      override fun relatedVulnerabilities(vararg relatedVulnerabilities: Any): Unit =
+          relatedVulnerabilities(relatedVulnerabilities.toList())
+
       override fun resourceId(resourceId: IResolvable) {
         cdkBuilder.resourceId(resourceId.let(IResolvable::unwrap))
       }
@@ -554,6 +675,8 @@ public open class CfnFilter internal constructor(
       override fun resourceId(resourceId: List<Any>) {
         cdkBuilder.resourceId(resourceId)
       }
+
+      override fun resourceId(vararg resourceId: Any): Unit = resourceId(resourceId.toList())
 
       override fun resourceTags(resourceTags: IResolvable) {
         cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
@@ -563,6 +686,9 @@ public open class CfnFilter internal constructor(
         cdkBuilder.resourceTags(resourceTags)
       }
 
+      override fun resourceTags(vararg resourceTags: Any): Unit =
+          resourceTags(resourceTags.toList())
+
       override fun resourceType(resourceType: IResolvable) {
         cdkBuilder.resourceType(resourceType.let(IResolvable::unwrap))
       }
@@ -570,6 +696,9 @@ public open class CfnFilter internal constructor(
       override fun resourceType(resourceType: List<Any>) {
         cdkBuilder.resourceType(resourceType)
       }
+
+      override fun resourceType(vararg resourceType: Any): Unit =
+          resourceType(resourceType.toList())
 
       override fun severity(severity: IResolvable) {
         cdkBuilder.severity(severity.let(IResolvable::unwrap))
@@ -579,6 +708,8 @@ public open class CfnFilter internal constructor(
         cdkBuilder.severity(severity)
       }
 
+      override fun severity(vararg severity: Any): Unit = severity(severity.toList())
+
       override fun title(title: IResolvable) {
         cdkBuilder.title(title.let(IResolvable::unwrap))
       }
@@ -586,6 +717,8 @@ public open class CfnFilter internal constructor(
       override fun title(title: List<Any>) {
         cdkBuilder.title(title)
       }
+
+      override fun title(vararg title: Any): Unit = title(title.toList())
 
       override fun updatedAt(updatedAt: IResolvable) {
         cdkBuilder.updatedAt(updatedAt.let(IResolvable::unwrap))
@@ -595,6 +728,8 @@ public open class CfnFilter internal constructor(
         cdkBuilder.updatedAt(updatedAt)
       }
 
+      override fun updatedAt(vararg updatedAt: Any): Unit = updatedAt(updatedAt.toList())
+
       override fun vendorSeverity(vendorSeverity: IResolvable) {
         cdkBuilder.vendorSeverity(vendorSeverity.let(IResolvable::unwrap))
       }
@@ -602,6 +737,9 @@ public open class CfnFilter internal constructor(
       override fun vendorSeverity(vendorSeverity: List<Any>) {
         cdkBuilder.vendorSeverity(vendorSeverity)
       }
+
+      override fun vendorSeverity(vararg vendorSeverity: Any): Unit =
+          vendorSeverity(vendorSeverity.toList())
 
       override fun vulnerabilityId(vulnerabilityId: IResolvable) {
         cdkBuilder.vulnerabilityId(vulnerabilityId.let(IResolvable::unwrap))
@@ -611,6 +749,9 @@ public open class CfnFilter internal constructor(
         cdkBuilder.vulnerabilityId(vulnerabilityId)
       }
 
+      override fun vulnerabilityId(vararg vulnerabilityId: Any): Unit =
+          vulnerabilityId(vulnerabilityId.toList())
+
       override fun vulnerabilitySource(vulnerabilitySource: IResolvable) {
         cdkBuilder.vulnerabilitySource(vulnerabilitySource.let(IResolvable::unwrap))
       }
@@ -619,6 +760,9 @@ public open class CfnFilter internal constructor(
         cdkBuilder.vulnerabilitySource(vulnerabilitySource)
       }
 
+      override fun vulnerabilitySource(vararg vulnerabilitySource: Any): Unit =
+          vulnerabilitySource(vulnerabilitySource.toList())
+
       override fun vulnerablePackages(vulnerablePackages: IResolvable) {
         cdkBuilder.vulnerablePackages(vulnerablePackages.let(IResolvable::unwrap))
       }
@@ -626,6 +770,9 @@ public open class CfnFilter internal constructor(
       override fun vulnerablePackages(vulnerablePackages: List<Any>) {
         cdkBuilder.vulnerablePackages(vulnerablePackages)
       }
+
+      override fun vulnerablePackages(vararg vulnerablePackages: Any): Unit =
+          vulnerablePackages(vulnerablePackages.toList())
 
       public fun build():
           software.amazon.awscdk.services.inspectorv2.CfnFilter.FilterCriteriaProperty =

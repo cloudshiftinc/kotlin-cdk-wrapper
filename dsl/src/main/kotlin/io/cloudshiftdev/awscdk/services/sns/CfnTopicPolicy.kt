@@ -25,16 +25,20 @@ public open class CfnTopicPolicy internal constructor(
     unwrap(this).setPolicyDocument(`value`)
   }
 
-  public open fun topics(): List<String> = unwrap(this).getTopics() ?: emptyList()
+  public open fun topics(): List<String> = unwrap(this).getTopics()
 
   public open fun topics(`value`: List<String>) {
     unwrap(this).setTopics(`value`)
   }
 
+  public open fun topics(vararg `value`: String): Unit = topics(`value`.toList())
+
   public interface Builder {
     public fun policyDocument(policyDocument: Any)
 
     public fun topics(topics: List<String>)
+
+    public fun topics(vararg topics: String)
   }
 
   private class BuilderImpl(
@@ -51,6 +55,8 @@ public open class CfnTopicPolicy internal constructor(
     override fun topics(topics: List<String>) {
       cdkBuilder.topics(topics)
     }
+
+    override fun topics(vararg topics: String): Unit = topics(topics.toList())
 
     public fun build(): software.amazon.awscdk.services.sns.CfnTopicPolicy = cdkBuilder.build()
   }

@@ -27,6 +27,8 @@ public open class CfnListenerCertificate internal constructor(
     unwrap(this).setCertificates(__idx_ac66f0)
   }
 
+  public open fun certificates(vararg __idx_ac66f0: Any): Unit = certificates(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -41,6 +43,8 @@ public open class CfnListenerCertificate internal constructor(
     public fun certificates(certificates: IResolvable)
 
     public fun certificates(certificates: List<Any>)
+
+    public fun certificates(vararg certificates: Any)
 
     public fun listenerArn(listenerArn: String)
   }
@@ -61,6 +65,8 @@ public open class CfnListenerCertificate internal constructor(
     override fun certificates(certificates: List<Any>) {
       cdkBuilder.certificates(certificates)
     }
+
+    override fun certificates(vararg certificates: Any): Unit = certificates(certificates.toList())
 
     override fun listenerArn(listenerArn: String) {
       cdkBuilder.listenerArn(listenerArn)

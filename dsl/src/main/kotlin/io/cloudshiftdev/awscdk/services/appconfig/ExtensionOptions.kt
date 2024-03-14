@@ -23,6 +23,8 @@ public interface ExtensionOptions {
     public fun latestVersionNumber(latestVersionNumber: Number)
 
     public fun parameters(parameters: List<Parameter>)
+
+    public fun parameters(vararg parameters: Parameter)
   }
 
   private class BuilderImpl : Builder {
@@ -44,6 +46,8 @@ public interface ExtensionOptions {
     override fun parameters(parameters: List<Parameter>) {
       cdkBuilder.parameters(parameters.map(Parameter::unwrap))
     }
+
+    override fun parameters(vararg parameters: Parameter): Unit = parameters(parameters.toList())
 
     public fun build(): software.amazon.awscdk.services.appconfig.ExtensionOptions =
         cdkBuilder.build()

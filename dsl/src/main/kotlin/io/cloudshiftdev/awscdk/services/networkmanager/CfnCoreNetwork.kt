@@ -64,6 +64,8 @@ public open class CfnCoreNetwork internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun description(description: String)
 
@@ -72,6 +74,8 @@ public open class CfnCoreNetwork internal constructor(
     public fun policyDocument(policyDocument: Any)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -96,6 +100,8 @@ public open class CfnCoreNetwork internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.networkmanager.CfnCoreNetwork =
         cdkBuilder.build()
@@ -132,9 +138,13 @@ public open class CfnCoreNetwork internal constructor(
     public interface Builder {
       public fun edgeLocations(edgeLocations: List<String>)
 
+      public fun edgeLocations(vararg edgeLocations: String)
+
       public fun name(name: String)
 
       public fun sharedSegments(sharedSegments: List<String>)
+
+      public fun sharedSegments(vararg sharedSegments: String)
     }
 
     private class BuilderImpl : Builder {
@@ -147,6 +157,9 @@ public open class CfnCoreNetwork internal constructor(
         cdkBuilder.edgeLocations(edgeLocations)
       }
 
+      override fun edgeLocations(vararg edgeLocations: String): Unit =
+          edgeLocations(edgeLocations.toList())
+
       override fun name(name: String) {
         cdkBuilder.name(name)
       }
@@ -154,6 +167,9 @@ public open class CfnCoreNetwork internal constructor(
       override fun sharedSegments(sharedSegments: List<String>) {
         cdkBuilder.sharedSegments(sharedSegments)
       }
+
+      override fun sharedSegments(vararg sharedSegments: String): Unit =
+          sharedSegments(sharedSegments.toList())
 
       public fun build():
           software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkSegmentProperty =
@@ -204,6 +220,8 @@ public open class CfnCoreNetwork internal constructor(
       public fun edgeLocation(edgeLocation: String)
 
       public fun insideCidrBlocks(insideCidrBlocks: List<String>)
+
+      public fun insideCidrBlocks(vararg insideCidrBlocks: String)
     }
 
     private class BuilderImpl : Builder {
@@ -223,6 +241,9 @@ public open class CfnCoreNetwork internal constructor(
       override fun insideCidrBlocks(insideCidrBlocks: List<String>) {
         cdkBuilder.insideCidrBlocks(insideCidrBlocks)
       }
+
+      override fun insideCidrBlocks(vararg insideCidrBlocks: String): Unit =
+          insideCidrBlocks(insideCidrBlocks.toList())
 
       public fun build():
           software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty =

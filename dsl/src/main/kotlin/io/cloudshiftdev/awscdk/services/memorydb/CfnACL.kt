@@ -38,18 +38,26 @@ public open class CfnACL internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun userNames(): List<String> = unwrap(this).getUserNames() ?: emptyList()
 
   public open fun userNames(`value`: List<String>) {
     unwrap(this).setUserNames(`value`)
   }
 
+  public open fun userNames(vararg `value`: String): Unit = userNames(`value`.toList())
+
   public interface Builder {
     public fun aclName(aclName: String)
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun userNames(userNames: List<String>)
+
+    public fun userNames(vararg userNames: String)
   }
 
   private class BuilderImpl(
@@ -67,9 +75,13 @@ public open class CfnACL internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun userNames(userNames: List<String>) {
       cdkBuilder.userNames(userNames)
     }
+
+    override fun userNames(vararg userNames: String): Unit = userNames(userNames.toList())
 
     public fun build(): software.amazon.awscdk.services.memorydb.CfnACL = cdkBuilder.build()
   }

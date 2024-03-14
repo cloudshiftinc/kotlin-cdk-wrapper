@@ -29,6 +29,8 @@ public open class UserPoolIdentityProviderApple internal constructor(
 
     public fun scopes(scopes: List<String>)
 
+    public fun scopes(vararg scopes: String)
+
     public fun teamId(teamId: String)
 
     public fun userPool(userPool: IUserPool)
@@ -67,6 +69,8 @@ public open class UserPoolIdentityProviderApple internal constructor(
     override fun scopes(scopes: List<String>) {
       cdkBuilder.scopes(scopes)
     }
+
+    override fun scopes(vararg scopes: String): Unit = scopes(scopes.toList())
 
     override fun teamId(teamId: String) {
       cdkBuilder.teamId(teamId)

@@ -57,6 +57,8 @@ public open class CfnTheme internal constructor(
     unwrap(this).setOverrides(__idx_ac66f0)
   }
 
+  public open fun overrides(vararg __idx_ac66f0: Any): Unit = overrides(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): Map<String, String> = unwrap(this).getTagsRaw() ?: emptyMap()
@@ -75,6 +77,8 @@ public open class CfnTheme internal constructor(
     unwrap(this).setValues(__idx_ac66f0)
   }
 
+  public open fun values(vararg __idx_ac66f0: Any): Unit = values(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun appId(appId: String)
 
@@ -86,11 +90,15 @@ public open class CfnTheme internal constructor(
 
     public fun overrides(overrides: List<Any>)
 
+    public fun overrides(vararg overrides: Any)
+
     public fun tags(tags: Map<String, String>)
 
     public fun values(values: IResolvable)
 
     public fun values(values: List<Any>)
+
+    public fun values(vararg values: Any)
   }
 
   private class BuilderImpl(
@@ -120,6 +128,8 @@ public open class CfnTheme internal constructor(
       cdkBuilder.overrides(overrides)
     }
 
+    override fun overrides(vararg overrides: Any): Unit = overrides(overrides.toList())
+
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
@@ -131,6 +141,8 @@ public open class CfnTheme internal constructor(
     override fun values(values: List<Any>) {
       cdkBuilder.values(values)
     }
+
+    override fun values(vararg values: Any): Unit = values(values.toList())
 
     public fun build(): software.amazon.awscdk.services.amplifyuibuilder.CfnTheme =
         cdkBuilder.build()
@@ -240,6 +252,8 @@ public open class CfnTheme internal constructor(
 
       public fun children(children: List<Any>)
 
+      public fun children(vararg children: Any)
+
       public fun `value`(`value`: String)
     }
 
@@ -255,6 +269,8 @@ public open class CfnTheme internal constructor(
       override fun children(children: List<Any>) {
         cdkBuilder.children(children)
       }
+
+      override fun children(vararg children: Any): Unit = children(children.toList())
 
       override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)

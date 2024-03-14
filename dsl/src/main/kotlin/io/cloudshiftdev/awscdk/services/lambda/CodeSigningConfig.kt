@@ -20,6 +20,8 @@ public open class CodeSigningConfig internal constructor(
 
     public fun signingProfiles(signingProfiles: List<ISigningProfile>)
 
+    public fun signingProfiles(vararg signingProfiles: ISigningProfile)
+
     public
         fun untrustedArtifactOnDeployment(untrustedArtifactOnDeployment: UntrustedArtifactOnDeployment)
   }
@@ -38,6 +40,9 @@ public open class CodeSigningConfig internal constructor(
     override fun signingProfiles(signingProfiles: List<ISigningProfile>) {
       cdkBuilder.signingProfiles(signingProfiles.map(ISigningProfile::unwrap))
     }
+
+    override fun signingProfiles(vararg signingProfiles: ISigningProfile): Unit =
+        signingProfiles(signingProfiles.toList())
 
     override
         fun untrustedArtifactOnDeployment(untrustedArtifactOnDeployment: UntrustedArtifactOnDeployment) {

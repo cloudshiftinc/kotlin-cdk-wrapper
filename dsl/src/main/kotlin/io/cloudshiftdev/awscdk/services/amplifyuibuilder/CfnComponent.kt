@@ -52,6 +52,8 @@ public open class CfnComponent internal constructor(
     unwrap(this).setChildren(__idx_ac66f0)
   }
 
+  public open fun children(vararg __idx_ac66f0: Any): Unit = children(__idx_ac66f0.toList())
+
   public open fun collectionProperties(): Any? = unwrap(this).getCollectionProperties()
 
   public open fun collectionProperties(`value`: IResolvable) {
@@ -140,6 +142,8 @@ public open class CfnComponent internal constructor(
     unwrap(this).setVariants(__idx_ac66f0)
   }
 
+  public open fun variants(vararg __idx_ac66f0: Any): Unit = variants(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun appId(appId: String)
 
@@ -150,6 +154,8 @@ public open class CfnComponent internal constructor(
     public fun children(children: IResolvable)
 
     public fun children(children: List<Any>)
+
+    public fun children(vararg children: Any)
 
     public fun collectionProperties(collectionProperties: IResolvable)
 
@@ -180,6 +186,8 @@ public open class CfnComponent internal constructor(
     public fun variants(variants: IResolvable)
 
     public fun variants(variants: List<Any>)
+
+    public fun variants(vararg variants: Any)
   }
 
   private class BuilderImpl(
@@ -208,6 +216,8 @@ public open class CfnComponent internal constructor(
     override fun children(children: List<Any>) {
       cdkBuilder.children(children)
     }
+
+    override fun children(vararg children: Any): Unit = children(children.toList())
 
     override fun collectionProperties(collectionProperties: IResolvable) {
       cdkBuilder.collectionProperties(collectionProperties.let(IResolvable::unwrap))
@@ -268,6 +278,8 @@ public open class CfnComponent internal constructor(
     override fun variants(variants: List<Any>) {
       cdkBuilder.variants(variants)
     }
+
+    override fun variants(vararg variants: Any): Unit = variants(variants.toList())
 
     public fun build(): software.amazon.awscdk.services.amplifyuibuilder.CfnComponent =
         cdkBuilder.build()
@@ -397,6 +409,8 @@ public open class CfnComponent internal constructor(
 
       public fun children(children: List<Any>)
 
+      public fun children(vararg children: Any)
+
       public fun componentType(componentType: String)
 
       public fun events(events: IResolvable)
@@ -425,6 +439,8 @@ public open class CfnComponent internal constructor(
       override fun children(children: List<Any>) {
         cdkBuilder.children(children)
       }
+
+      override fun children(vararg children: Any): Unit = children(children.toList())
 
       override fun componentType(componentType: String) {
         cdkBuilder.componentType(componentType)
@@ -700,6 +716,8 @@ public open class CfnComponent internal constructor(
 
       public fun concat(concat: List<Any>)
 
+      public fun concat(vararg concat: Any)
+
       public fun condition(condition: IResolvable)
 
       public fun condition(condition: ComponentConditionPropertyProperty)
@@ -785,6 +803,8 @@ public open class CfnComponent internal constructor(
       override fun concat(concat: List<Any>) {
         cdkBuilder.concat(concat)
       }
+
+      override fun concat(vararg concat: Any): Unit = concat(concat.toList())
 
       override fun condition(condition: IResolvable) {
         cdkBuilder.condition(condition.let(IResolvable::unwrap))
@@ -932,6 +952,8 @@ public open class CfnComponent internal constructor(
 
       public fun predicates(predicates: List<Any>)
 
+      public fun predicates(vararg predicates: Any)
+
       public fun slotName(slotName: String)
 
       public fun userAttribute(userAttribute: String)
@@ -970,6 +992,8 @@ public open class CfnComponent internal constructor(
       override fun predicates(predicates: List<Any>) {
         cdkBuilder.predicates(predicates)
       }
+
+      override fun predicates(vararg predicates: Any): Unit = predicates(predicates.toList())
 
       override fun slotName(slotName: String) {
         cdkBuilder.slotName(slotName)
@@ -1333,6 +1357,8 @@ public open class CfnComponent internal constructor(
 
       public fun and(and: List<Any>)
 
+      public fun and(vararg and: Any)
+
       public fun `field`(`field`: String)
 
       public fun operand(operand: String)
@@ -1344,6 +1370,8 @@ public open class CfnComponent internal constructor(
       public fun or(or: IResolvable)
 
       public fun or(or: List<Any>)
+
+      public fun or(vararg or: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1358,6 +1386,8 @@ public open class CfnComponent internal constructor(
       override fun and(and: List<Any>) {
         cdkBuilder.and(and)
       }
+
+      override fun and(vararg and: Any): Unit = and(and.toList())
 
       override fun `field`(`field`: String) {
         cdkBuilder.`field`(`field`)
@@ -1382,6 +1412,8 @@ public open class CfnComponent internal constructor(
       override fun or(or: List<Any>) {
         cdkBuilder.or(or)
       }
+
+      override fun or(vararg or: Any): Unit = or(or.toList())
 
       public fun build():
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.PredicateProperty =
@@ -1802,6 +1834,8 @@ public open class CfnComponent internal constructor(
     public interface Builder {
       public fun identifiers(identifiers: List<String>)
 
+      public fun identifiers(vararg identifiers: String)
+
       public fun model(model: String)
 
       public fun predicate(predicate: IResolvable)
@@ -1815,6 +1849,8 @@ public open class CfnComponent internal constructor(
       public fun sort(sort: IResolvable)
 
       public fun sort(sort: List<Any>)
+
+      public fun sort(vararg sort: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1826,6 +1862,8 @@ public open class CfnComponent internal constructor(
       override fun identifiers(identifiers: List<String>) {
         cdkBuilder.identifiers(identifiers)
       }
+
+      override fun identifiers(vararg identifiers: String): Unit = identifiers(identifiers.toList())
 
       override fun model(model: String) {
         cdkBuilder.model(model)
@@ -1851,6 +1889,8 @@ public open class CfnComponent internal constructor(
       override fun sort(sort: List<Any>) {
         cdkBuilder.sort(sort)
       }
+
+      override fun sort(vararg sort: Any): Unit = sort(sort.toList())
 
       public fun build():
           software.amazon.awscdk.services.amplifyuibuilder.CfnComponent.ComponentDataConfigurationProperty

@@ -396,7 +396,11 @@ public open class CfnRemediationConfiguration internal constructor(
     public interface Builder {
       public fun `value`(`value`: List<String>)
 
+      public fun `value`(vararg `value`: String)
+
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -409,9 +413,13 @@ public open class CfnRemediationConfiguration internal constructor(
         cdkBuilder.`value`(`value`)
       }
 
+      override fun `value`(vararg `value`: String): Unit = `value`(`value`.toList())
+
       override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.config.CfnRemediationConfiguration.StaticValueProperty =

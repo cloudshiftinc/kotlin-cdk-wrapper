@@ -21,6 +21,8 @@ public open class KubernetesManifest internal constructor(
 
     public fun manifest(manifest: List<Map<String, Any>>)
 
+    public fun manifest(vararg manifest: Map<String, Any>)
+
     public fun overwrite(overwrite: Boolean)
 
     public fun prune(prune: Boolean)
@@ -50,6 +52,8 @@ public open class KubernetesManifest internal constructor(
     override fun manifest(manifest: List<Map<String, Any>>) {
       cdkBuilder.manifest(manifest)
     }
+
+    override fun manifest(vararg manifest: Map<String, Any>): Unit = manifest(manifest.toList())
 
     override fun overwrite(overwrite: Boolean) {
       cdkBuilder.overwrite(overwrite)

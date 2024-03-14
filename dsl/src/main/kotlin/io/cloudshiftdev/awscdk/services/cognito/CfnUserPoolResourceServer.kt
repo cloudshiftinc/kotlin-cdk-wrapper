@@ -42,6 +42,8 @@ public open class CfnUserPoolResourceServer internal constructor(
     unwrap(this).setScopes(__idx_ac66f0)
   }
 
+  public open fun scopes(vararg __idx_ac66f0: Any): Unit = scopes(__idx_ac66f0.toList())
+
   public open fun userPoolId(): String = unwrap(this).getUserPoolId()
 
   public open fun userPoolId(`value`: String) {
@@ -56,6 +58,8 @@ public open class CfnUserPoolResourceServer internal constructor(
     public fun scopes(scopes: IResolvable)
 
     public fun scopes(scopes: List<Any>)
+
+    public fun scopes(vararg scopes: Any)
 
     public fun userPoolId(userPoolId: String)
   }
@@ -83,6 +87,8 @@ public open class CfnUserPoolResourceServer internal constructor(
     override fun scopes(scopes: List<Any>) {
       cdkBuilder.scopes(scopes)
     }
+
+    override fun scopes(vararg scopes: Any): Unit = scopes(scopes.toList())
 
     override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)

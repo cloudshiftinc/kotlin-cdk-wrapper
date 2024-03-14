@@ -49,6 +49,9 @@ public open class CfnStudioComponent internal constructor(
     unwrap(this).setEc2SecurityGroupIds(`value`)
   }
 
+  public open fun ec2SecurityGroupIds(vararg `value`: String): Unit =
+      ec2SecurityGroupIds(`value`.toList())
+
   public open fun initializationScripts(): Any? = unwrap(this).getInitializationScripts()
 
   public open fun initializationScripts(`value`: IResolvable) {
@@ -58,6 +61,9 @@ public open class CfnStudioComponent internal constructor(
   public open fun initializationScripts(__idx_ac66f0: List<Any>) {
     unwrap(this).setInitializationScripts(__idx_ac66f0)
   }
+
+  public open fun initializationScripts(vararg __idx_ac66f0: Any): Unit =
+      initializationScripts(__idx_ac66f0.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -84,6 +90,9 @@ public open class CfnStudioComponent internal constructor(
   public open fun scriptParameters(__idx_ac66f0: List<Any>) {
     unwrap(this).setScriptParameters(__idx_ac66f0)
   }
+
+  public open fun scriptParameters(vararg __idx_ac66f0: Any): Unit =
+      scriptParameters(__idx_ac66f0.toList())
 
   public open fun secureInitializationRoleArn(): String? =
       unwrap(this).getSecureInitializationRoleArn()
@@ -131,9 +140,13 @@ public open class CfnStudioComponent internal constructor(
 
     public fun ec2SecurityGroupIds(ec2SecurityGroupIds: List<String>)
 
+    public fun ec2SecurityGroupIds(vararg ec2SecurityGroupIds: String)
+
     public fun initializationScripts(initializationScripts: IResolvable)
 
     public fun initializationScripts(initializationScripts: List<Any>)
+
+    public fun initializationScripts(vararg initializationScripts: Any)
 
     public fun name(name: String)
 
@@ -142,6 +155,8 @@ public open class CfnStudioComponent internal constructor(
     public fun scriptParameters(scriptParameters: IResolvable)
 
     public fun scriptParameters(scriptParameters: List<Any>)
+
+    public fun scriptParameters(vararg scriptParameters: Any)
 
     public fun secureInitializationRoleArn(secureInitializationRoleArn: String)
 
@@ -183,6 +198,9 @@ public open class CfnStudioComponent internal constructor(
       cdkBuilder.ec2SecurityGroupIds(ec2SecurityGroupIds)
     }
 
+    override fun ec2SecurityGroupIds(vararg ec2SecurityGroupIds: String): Unit =
+        ec2SecurityGroupIds(ec2SecurityGroupIds.toList())
+
     override fun initializationScripts(initializationScripts: IResolvable) {
       cdkBuilder.initializationScripts(initializationScripts.let(IResolvable::unwrap))
     }
@@ -190,6 +208,9 @@ public open class CfnStudioComponent internal constructor(
     override fun initializationScripts(initializationScripts: List<Any>) {
       cdkBuilder.initializationScripts(initializationScripts)
     }
+
+    override fun initializationScripts(vararg initializationScripts: Any): Unit =
+        initializationScripts(initializationScripts.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -206,6 +227,9 @@ public open class CfnStudioComponent internal constructor(
     override fun scriptParameters(scriptParameters: List<Any>) {
       cdkBuilder.scriptParameters(scriptParameters)
     }
+
+    override fun scriptParameters(vararg scriptParameters: Any): Unit =
+        scriptParameters(scriptParameters.toList())
 
     override fun secureInitializationRoleArn(secureInitializationRoleArn: String) {
       cdkBuilder.secureInitializationRoleArn(secureInitializationRoleArn)
@@ -555,6 +579,8 @@ public open class CfnStudioComponent internal constructor(
 
       public fun computerAttributes(computerAttributes: List<Any>)
 
+      public fun computerAttributes(vararg computerAttributes: Any)
+
       public fun directoryId(directoryId: String)
 
       public fun organizationalUnitDistinguishedName(organizationalUnitDistinguishedName: String)
@@ -573,6 +599,9 @@ public open class CfnStudioComponent internal constructor(
       override fun computerAttributes(computerAttributes: List<Any>) {
         cdkBuilder.computerAttributes(computerAttributes)
       }
+
+      override fun computerAttributes(vararg computerAttributes: Any): Unit =
+          computerAttributes(computerAttributes.toList())
 
       override fun directoryId(directoryId: String) {
         cdkBuilder.directoryId(directoryId)

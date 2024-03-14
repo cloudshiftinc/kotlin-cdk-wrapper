@@ -37,10 +37,14 @@ public open class CfnActivity internal constructor(
     unwrap(this).setTagsRaw(`value`.map(TagsEntryProperty::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: TagsEntryProperty): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun name(name: String)
 
     public fun tags(tags: List<TagsEntryProperty>)
+
+    public fun tags(vararg tags: TagsEntryProperty)
   }
 
   private class BuilderImpl(
@@ -57,6 +61,8 @@ public open class CfnActivity internal constructor(
     override fun tags(tags: List<TagsEntryProperty>) {
       cdkBuilder.tags(tags.map(TagsEntryProperty::unwrap))
     }
+
+    override fun tags(vararg tags: TagsEntryProperty): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.CfnActivity =
         cdkBuilder.build()

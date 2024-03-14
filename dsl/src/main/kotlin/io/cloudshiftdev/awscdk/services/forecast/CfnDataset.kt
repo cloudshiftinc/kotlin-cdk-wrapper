@@ -63,6 +63,8 @@ public open class CfnDataset internal constructor(
     unwrap(this).setTags(`value`.map(TagsItemsProperty::unwrap))
   }
 
+  public open fun tags(vararg `value`: TagsItemsProperty): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun dataFrequency(dataFrequency: String)
 
@@ -77,6 +79,8 @@ public open class CfnDataset internal constructor(
     public fun schema(schema: Any)
 
     public fun tags(tags: List<TagsItemsProperty>)
+
+    public fun tags(vararg tags: TagsItemsProperty)
   }
 
   private class BuilderImpl(
@@ -113,6 +117,8 @@ public open class CfnDataset internal constructor(
     override fun tags(tags: List<TagsItemsProperty>) {
       cdkBuilder.tags(tags.map(TagsItemsProperty::unwrap))
     }
+
+    override fun tags(vararg tags: TagsItemsProperty): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.forecast.CfnDataset = cdkBuilder.build()
   }
@@ -203,6 +209,8 @@ public open class CfnDataset internal constructor(
       public fun attributes(attributes: IResolvable)
 
       public fun attributes(attributes: List<Any>)
+
+      public fun attributes(vararg attributes: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -217,6 +225,8 @@ public open class CfnDataset internal constructor(
       override fun attributes(attributes: List<Any>) {
         cdkBuilder.attributes(attributes)
       }
+
+      override fun attributes(vararg attributes: Any): Unit = attributes(attributes.toList())
 
       public fun build(): software.amazon.awscdk.services.forecast.CfnDataset.SchemaProperty =
           cdkBuilder.build()

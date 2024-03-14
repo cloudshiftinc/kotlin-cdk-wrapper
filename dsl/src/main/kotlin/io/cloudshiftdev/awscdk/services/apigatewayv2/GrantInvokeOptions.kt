@@ -9,6 +9,8 @@ public interface GrantInvokeOptions {
 
   public interface Builder {
     public fun httpMethods(httpMethods: List<HttpMethod>)
+
+    public fun httpMethods(vararg httpMethods: HttpMethod)
   }
 
   private class BuilderImpl : Builder {
@@ -18,6 +20,9 @@ public interface GrantInvokeOptions {
     override fun httpMethods(httpMethods: List<HttpMethod>) {
       cdkBuilder.httpMethods(httpMethods.map(HttpMethod::unwrap))
     }
+
+    override fun httpMethods(vararg httpMethods: HttpMethod): Unit =
+        httpMethods(httpMethods.toList())
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.GrantInvokeOptions =
         cdkBuilder.build()

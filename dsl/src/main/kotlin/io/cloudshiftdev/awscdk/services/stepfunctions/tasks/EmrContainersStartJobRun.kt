@@ -29,6 +29,8 @@ public open class EmrContainersStartJobRun internal constructor(
   public interface Builder {
     public fun applicationConfig(applicationConfig: List<ApplicationConfiguration>)
 
+    public fun applicationConfig(vararg applicationConfig: ApplicationConfiguration)
+
     public fun comment(comment: String)
 
     public fun credentials(credentials: Credentials)
@@ -94,6 +96,9 @@ public open class EmrContainersStartJobRun internal constructor(
     override fun applicationConfig(applicationConfig: List<ApplicationConfiguration>) {
       cdkBuilder.applicationConfig(applicationConfig.map(ApplicationConfiguration::unwrap))
     }
+
+    override fun applicationConfig(vararg applicationConfig: ApplicationConfiguration): Unit =
+        applicationConfig(applicationConfig.toList())
 
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)

@@ -16,6 +16,8 @@ public open class CfnRule internal constructor(
   public interface Builder {
     public fun assertions(assertions: List<CfnRuleAssertion>)
 
+    public fun assertions(vararg assertions: CfnRuleAssertion)
+
     public fun ruleCondition(ruleCondition: ICfnConditionExpression)
   }
 
@@ -29,6 +31,9 @@ public open class CfnRule internal constructor(
     override fun assertions(assertions: List<CfnRuleAssertion>) {
       cdkBuilder.assertions(assertions.map(CfnRuleAssertion::unwrap))
     }
+
+    override fun assertions(vararg assertions: CfnRuleAssertion): Unit =
+        assertions(assertions.toList())
 
     override fun ruleCondition(ruleCondition: ICfnConditionExpression) {
       cdkBuilder.ruleCondition(ruleCondition.let(ICfnConditionExpression::unwrap))

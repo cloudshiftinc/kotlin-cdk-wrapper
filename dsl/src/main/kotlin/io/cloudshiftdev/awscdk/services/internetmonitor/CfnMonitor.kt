@@ -85,11 +85,15 @@ public open class CfnMonitor internal constructor(
     unwrap(this).setResources(`value`)
   }
 
+  public open fun resources(vararg `value`: String): Unit = resources(`value`.toList())
+
   public open fun resourcesToAdd(): List<String> = unwrap(this).getResourcesToAdd() ?: emptyList()
 
   public open fun resourcesToAdd(`value`: List<String>) {
     unwrap(this).setResourcesToAdd(`value`)
   }
+
+  public open fun resourcesToAdd(vararg `value`: String): Unit = resourcesToAdd(`value`.toList())
 
   public open fun resourcesToRemove(): List<String> = unwrap(this).getResourcesToRemove() ?:
       emptyList()
@@ -97,6 +101,9 @@ public open class CfnMonitor internal constructor(
   public open fun resourcesToRemove(`value`: List<String>) {
     unwrap(this).setResourcesToRemove(`value`)
   }
+
+  public open fun resourcesToRemove(vararg `value`: String): Unit =
+      resourcesToRemove(`value`.toList())
 
   public open fun status(): String? = unwrap(this).getStatus()
 
@@ -112,6 +119,8 @@ public open class CfnMonitor internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun trafficPercentageToMonitor(): Number? =
       unwrap(this).getTrafficPercentageToMonitor()
@@ -145,13 +154,21 @@ public open class CfnMonitor internal constructor(
 
     public fun resources(resources: List<String>)
 
+    public fun resources(vararg resources: String)
+
     public fun resourcesToAdd(resourcesToAdd: List<String>)
 
+    public fun resourcesToAdd(vararg resourcesToAdd: String)
+
     public fun resourcesToRemove(resourcesToRemove: List<String>)
+
+    public fun resourcesToRemove(vararg resourcesToRemove: String)
 
     public fun status(status: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun trafficPercentageToMonitor(trafficPercentageToMonitor: Number)
   }
@@ -205,13 +222,21 @@ public open class CfnMonitor internal constructor(
       cdkBuilder.resources(resources)
     }
 
+    override fun resources(vararg resources: String): Unit = resources(resources.toList())
+
     override fun resourcesToAdd(resourcesToAdd: List<String>) {
       cdkBuilder.resourcesToAdd(resourcesToAdd)
     }
 
+    override fun resourcesToAdd(vararg resourcesToAdd: String): Unit =
+        resourcesToAdd(resourcesToAdd.toList())
+
     override fun resourcesToRemove(resourcesToRemove: List<String>) {
       cdkBuilder.resourcesToRemove(resourcesToRemove)
     }
+
+    override fun resourcesToRemove(vararg resourcesToRemove: String): Unit =
+        resourcesToRemove(resourcesToRemove.toList())
 
     override fun status(status: String) {
       cdkBuilder.status(status)
@@ -220,6 +245,8 @@ public open class CfnMonitor internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun trafficPercentageToMonitor(trafficPercentageToMonitor: Number) {
       cdkBuilder.trafficPercentageToMonitor(trafficPercentageToMonitor)

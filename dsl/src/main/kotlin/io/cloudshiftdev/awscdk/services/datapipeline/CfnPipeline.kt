@@ -60,6 +60,9 @@ public open class CfnPipeline internal constructor(
     unwrap(this).setParameterObjects(__idx_ac66f0)
   }
 
+  public open fun parameterObjects(vararg __idx_ac66f0: Any): Unit =
+      parameterObjects(__idx_ac66f0.toList())
+
   public open fun parameterValues(): Any? = unwrap(this).getParameterValues()
 
   public open fun parameterValues(`value`: IResolvable) {
@@ -69,6 +72,9 @@ public open class CfnPipeline internal constructor(
   public open fun parameterValues(__idx_ac66f0: List<Any>) {
     unwrap(this).setParameterValues(__idx_ac66f0)
   }
+
+  public open fun parameterValues(vararg __idx_ac66f0: Any): Unit =
+      parameterValues(__idx_ac66f0.toList())
 
   public open fun pipelineObjects(): Any? = unwrap(this).getPipelineObjects()
 
@@ -80,12 +86,18 @@ public open class CfnPipeline internal constructor(
     unwrap(this).setPipelineObjects(__idx_ac66f0)
   }
 
+  public open fun pipelineObjects(vararg __idx_ac66f0: Any): Unit =
+      pipelineObjects(__idx_ac66f0.toList())
+
   public open fun pipelineTags(): List<PipelineTagProperty> =
       unwrap(this).getPipelineTags()?.map(PipelineTagProperty::wrap) ?: emptyList()
 
   public open fun pipelineTags(`value`: List<PipelineTagProperty>) {
     unwrap(this).setPipelineTags(`value`.map(PipelineTagProperty::unwrap))
   }
+
+  public open fun pipelineTags(vararg `value`: PipelineTagProperty): Unit =
+      pipelineTags(`value`.toList())
 
   public interface Builder {
     public fun activate(activate: Boolean)
@@ -100,15 +112,23 @@ public open class CfnPipeline internal constructor(
 
     public fun parameterObjects(parameterObjects: List<Any>)
 
+    public fun parameterObjects(vararg parameterObjects: Any)
+
     public fun parameterValues(parameterValues: IResolvable)
 
     public fun parameterValues(parameterValues: List<Any>)
+
+    public fun parameterValues(vararg parameterValues: Any)
 
     public fun pipelineObjects(pipelineObjects: IResolvable)
 
     public fun pipelineObjects(pipelineObjects: List<Any>)
 
+    public fun pipelineObjects(vararg pipelineObjects: Any)
+
     public fun pipelineTags(pipelineTags: List<PipelineTagProperty>)
+
+    public fun pipelineTags(vararg pipelineTags: PipelineTagProperty)
   }
 
   private class BuilderImpl(
@@ -142,6 +162,9 @@ public open class CfnPipeline internal constructor(
       cdkBuilder.parameterObjects(parameterObjects)
     }
 
+    override fun parameterObjects(vararg parameterObjects: Any): Unit =
+        parameterObjects(parameterObjects.toList())
+
     override fun parameterValues(parameterValues: IResolvable) {
       cdkBuilder.parameterValues(parameterValues.let(IResolvable::unwrap))
     }
@@ -149,6 +172,9 @@ public open class CfnPipeline internal constructor(
     override fun parameterValues(parameterValues: List<Any>) {
       cdkBuilder.parameterValues(parameterValues)
     }
+
+    override fun parameterValues(vararg parameterValues: Any): Unit =
+        parameterValues(parameterValues.toList())
 
     override fun pipelineObjects(pipelineObjects: IResolvable) {
       cdkBuilder.pipelineObjects(pipelineObjects.let(IResolvable::unwrap))
@@ -158,9 +184,15 @@ public open class CfnPipeline internal constructor(
       cdkBuilder.pipelineObjects(pipelineObjects)
     }
 
+    override fun pipelineObjects(vararg pipelineObjects: Any): Unit =
+        pipelineObjects(pipelineObjects.toList())
+
     override fun pipelineTags(pipelineTags: List<PipelineTagProperty>) {
       cdkBuilder.pipelineTags(pipelineTags.map(PipelineTagProperty::unwrap))
     }
+
+    override fun pipelineTags(vararg pipelineTags: PipelineTagProperty): Unit =
+        pipelineTags(pipelineTags.toList())
 
     public fun build(): software.amazon.awscdk.services.datapipeline.CfnPipeline =
         cdkBuilder.build()
@@ -197,6 +229,8 @@ public open class CfnPipeline internal constructor(
 
       public fun attributes(attributes: List<Any>)
 
+      public fun attributes(vararg attributes: Any)
+
       public fun id(id: String)
     }
 
@@ -212,6 +246,8 @@ public open class CfnPipeline internal constructor(
       override fun attributes(attributes: List<Any>) {
         cdkBuilder.attributes(attributes)
       }
+
+      override fun attributes(vararg attributes: Any): Unit = attributes(attributes.toList())
 
       override fun id(id: String) {
         cdkBuilder.id(id)
@@ -321,6 +357,8 @@ public open class CfnPipeline internal constructor(
 
       public fun fields(fields: List<Any>)
 
+      public fun fields(vararg fields: Any)
+
       public fun id(id: String)
 
       public fun name(name: String)
@@ -338,6 +376,8 @@ public open class CfnPipeline internal constructor(
       override fun fields(fields: List<Any>) {
         cdkBuilder.fields(fields)
       }
+
+      override fun fields(vararg fields: Any): Unit = fields(fields.toList())
 
       override fun id(id: String) {
         cdkBuilder.id(id)

@@ -34,6 +34,9 @@ public open class CfnProfilingGroup internal constructor(
     unwrap(this).setAnomalyDetectionNotificationConfiguration(__idx_ac66f0)
   }
 
+  public open fun anomalyDetectionNotificationConfiguration(vararg __idx_ac66f0: Any): Unit =
+      anomalyDetectionNotificationConfiguration(__idx_ac66f0.toList())
+
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   public open fun computePlatform(): String? = unwrap(this).getComputePlatform()
@@ -61,6 +64,8 @@ public open class CfnProfilingGroup internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun agentPermissions(agentPermissions: Any)
 
@@ -70,11 +75,16 @@ public open class CfnProfilingGroup internal constructor(
     public
         fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: List<Any>)
 
+    public fun anomalyDetectionNotificationConfiguration(vararg
+        anomalyDetectionNotificationConfiguration: Any)
+
     public fun computePlatform(computePlatform: String)
 
     public fun profilingGroupName(profilingGroupName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -99,6 +109,10 @@ public open class CfnProfilingGroup internal constructor(
       cdkBuilder.anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration)
     }
 
+    override fun anomalyDetectionNotificationConfiguration(vararg
+        anomalyDetectionNotificationConfiguration: Any): Unit =
+        anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration.toList())
+
     override fun computePlatform(computePlatform: String) {
       cdkBuilder.computePlatform(computePlatform)
     }
@@ -110,6 +124,8 @@ public open class CfnProfilingGroup internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup =
         cdkBuilder.build()
@@ -142,6 +158,8 @@ public open class CfnProfilingGroup internal constructor(
 
     public interface Builder {
       public fun principals(principals: List<String>)
+
+      public fun principals(vararg principals: String)
     }
 
     private class BuilderImpl : Builder {
@@ -154,6 +172,8 @@ public open class CfnProfilingGroup internal constructor(
         cdkBuilder.principals(principals)
       }
 
+      override fun principals(vararg principals: String): Unit = principals(principals.toList())
+
       public fun build():
           software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.AgentPermissionsProperty
           = cdkBuilder.build()
@@ -163,7 +183,7 @@ public open class CfnProfilingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.AgentPermissionsProperty,
     ) : AgentPermissionsProperty {
-      override fun principals(): List<String> = unwrap(this).getPrincipals() ?: emptyList()
+      override fun principals(): List<String> = unwrap(this).getPrincipals()
     }
 
     public companion object {

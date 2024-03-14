@@ -115,6 +115,8 @@ public open class CfnApplicationV2 internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun applicationConfiguration(applicationConfiguration: IResolvable)
 
@@ -154,6 +156,8 @@ public open class CfnApplicationV2 internal constructor(
     public fun serviceExecutionRole(serviceExecutionRole: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -232,6 +236,8 @@ public open class CfnApplicationV2 internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2 =
         cdkBuilder.build()
@@ -329,6 +335,8 @@ public open class CfnApplicationV2 internal constructor(
       public fun vpcConfigurations(vpcConfigurations: IResolvable)
 
       public fun vpcConfigurations(vpcConfigurations: List<Any>)
+
+      public fun vpcConfigurations(vararg vpcConfigurations: Any)
 
       public fun zeppelinApplicationConfiguration(zeppelinApplicationConfiguration: IResolvable)
 
@@ -432,6 +440,9 @@ public open class CfnApplicationV2 internal constructor(
       override fun vpcConfigurations(vpcConfigurations: List<Any>) {
         cdkBuilder.vpcConfigurations(vpcConfigurations)
       }
+
+      override fun vpcConfigurations(vararg vpcConfigurations: Any): Unit =
+          vpcConfigurations(vpcConfigurations.toList())
 
       override fun zeppelinApplicationConfiguration(zeppelinApplicationConfiguration: IResolvable) {
         cdkBuilder.zeppelinApplicationConfiguration(zeppelinApplicationConfiguration.let(IResolvable::unwrap))
@@ -781,6 +792,8 @@ public open class CfnApplicationV2 internal constructor(
       public fun propertyGroups(propertyGroups: IResolvable)
 
       public fun propertyGroups(propertyGroups: List<Any>)
+
+      public fun propertyGroups(vararg propertyGroups: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -796,6 +809,9 @@ public open class CfnApplicationV2 internal constructor(
       override fun propertyGroups(propertyGroups: List<Any>) {
         cdkBuilder.propertyGroups(propertyGroups)
       }
+
+      override fun propertyGroups(vararg propertyGroups: Any): Unit =
+          propertyGroups(propertyGroups.toList())
 
       public fun build():
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.EnvironmentPropertiesProperty
@@ -836,6 +852,8 @@ public open class CfnApplicationV2 internal constructor(
       public fun inputs(inputs: IResolvable)
 
       public fun inputs(inputs: List<Any>)
+
+      public fun inputs(vararg inputs: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -851,6 +869,8 @@ public open class CfnApplicationV2 internal constructor(
       override fun inputs(inputs: List<Any>) {
         cdkBuilder.inputs(inputs)
       }
+
+      override fun inputs(vararg inputs: Any): Unit = inputs(inputs.toList())
 
       public fun build():
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.SqlApplicationConfigurationProperty
@@ -1742,6 +1762,8 @@ public open class CfnApplicationV2 internal constructor(
 
       public fun recordColumns(recordColumns: List<Any>)
 
+      public fun recordColumns(vararg recordColumns: Any)
+
       public fun recordEncoding(recordEncoding: String)
 
       public fun recordFormat(recordFormat: IResolvable)
@@ -1766,6 +1788,9 @@ public open class CfnApplicationV2 internal constructor(
       override fun recordColumns(recordColumns: List<Any>) {
         cdkBuilder.recordColumns(recordColumns)
       }
+
+      override fun recordColumns(vararg recordColumns: Any): Unit =
+          recordColumns(recordColumns.toList())
 
       override fun recordEncoding(recordEncoding: String) {
         cdkBuilder.recordEncoding(recordEncoding)
@@ -2360,6 +2385,8 @@ public open class CfnApplicationV2 internal constructor(
 
       public fun customArtifactsConfiguration(customArtifactsConfiguration: List<Any>)
 
+      public fun customArtifactsConfiguration(vararg customArtifactsConfiguration: Any)
+
       public fun deployAsApplicationConfiguration(deployAsApplicationConfiguration: IResolvable)
 
       public
@@ -2408,6 +2435,9 @@ public open class CfnApplicationV2 internal constructor(
       override fun customArtifactsConfiguration(customArtifactsConfiguration: List<Any>) {
         cdkBuilder.customArtifactsConfiguration(customArtifactsConfiguration)
       }
+
+      override fun customArtifactsConfiguration(vararg customArtifactsConfiguration: Any): Unit =
+          customArtifactsConfiguration(customArtifactsConfiguration.toList())
 
       override fun deployAsApplicationConfiguration(deployAsApplicationConfiguration: IResolvable) {
         cdkBuilder.deployAsApplicationConfiguration(deployAsApplicationConfiguration.let(IResolvable::unwrap))
@@ -2674,7 +2704,11 @@ public open class CfnApplicationV2 internal constructor(
     public interface Builder {
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2687,9 +2721,14 @@ public open class CfnApplicationV2 internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       public fun build():
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.VpcConfigurationProperty
@@ -2700,10 +2739,9 @@ public open class CfnApplicationV2 internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.kinesisanalytics.CfnApplicationV2.VpcConfigurationProperty,
     ) : VpcConfigurationProperty {
-      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
-          emptyList()
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
 
-      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
     }
 
     public companion object {

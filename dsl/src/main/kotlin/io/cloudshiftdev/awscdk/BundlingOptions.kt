@@ -41,7 +41,11 @@ public interface BundlingOptions {
 
     public fun command(command: List<String>)
 
+    public fun command(vararg command: String)
+
     public fun entrypoint(entrypoint: List<String>)
+
+    public fun entrypoint(vararg entrypoint: String)
 
     public fun environment(environment: Map<String, String>)
 
@@ -61,7 +65,11 @@ public interface BundlingOptions {
 
     public fun volumes(volumes: List<DockerVolume>)
 
+    public fun volumes(vararg volumes: DockerVolume)
+
     public fun volumesFrom(volumesFrom: List<String>)
+
+    public fun volumesFrom(vararg volumesFrom: String)
 
     public fun workingDirectory(workingDirectory: String)
   }
@@ -78,9 +86,13 @@ public interface BundlingOptions {
       cdkBuilder.command(command)
     }
 
+    override fun command(vararg command: String): Unit = command(command.toList())
+
     override fun entrypoint(entrypoint: List<String>) {
       cdkBuilder.entrypoint(entrypoint)
     }
+
+    override fun entrypoint(vararg entrypoint: String): Unit = entrypoint(entrypoint.toList())
 
     override fun environment(environment: Map<String, String>) {
       cdkBuilder.environment(environment)
@@ -118,9 +130,13 @@ public interface BundlingOptions {
       cdkBuilder.volumes(volumes.map(DockerVolume::unwrap))
     }
 
+    override fun volumes(vararg volumes: DockerVolume): Unit = volumes(volumes.toList())
+
     override fun volumesFrom(volumesFrom: List<String>) {
       cdkBuilder.volumesFrom(volumesFrom)
     }
+
+    override fun volumesFrom(vararg volumesFrom: String): Unit = volumesFrom(volumesFrom.toList())
 
     override fun workingDirectory(workingDirectory: String) {
       cdkBuilder.workingDirectory(workingDirectory)

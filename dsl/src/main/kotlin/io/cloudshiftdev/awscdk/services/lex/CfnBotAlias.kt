@@ -33,6 +33,9 @@ public open class CfnBotAlias internal constructor(
     unwrap(this).setBotAliasLocaleSettings(__idx_ac66f0)
   }
 
+  public open fun botAliasLocaleSettings(vararg __idx_ac66f0: Any): Unit =
+      botAliasLocaleSettings(__idx_ac66f0.toList())
+
   public open fun botAliasName(): String = unwrap(this).getBotAliasName()
 
   public open fun botAliasName(`value`: String) {
@@ -48,6 +51,8 @@ public open class CfnBotAlias internal constructor(
   public open fun botAliasTags(__idx_ac66f0: List<Any>) {
     unwrap(this).setBotAliasTags(__idx_ac66f0)
   }
+
+  public open fun botAliasTags(vararg __idx_ac66f0: Any): Unit = botAliasTags(__idx_ac66f0.toList())
 
   public open fun botId(): String = unwrap(this).getBotId()
 
@@ -98,11 +103,15 @@ public open class CfnBotAlias internal constructor(
 
     public fun botAliasLocaleSettings(botAliasLocaleSettings: List<Any>)
 
+    public fun botAliasLocaleSettings(vararg botAliasLocaleSettings: Any)
+
     public fun botAliasName(botAliasName: String)
 
     public fun botAliasTags(botAliasTags: IResolvable)
 
     public fun botAliasTags(botAliasTags: List<Any>)
+
+    public fun botAliasTags(vararg botAliasTags: Any)
 
     public fun botId(botId: String)
 
@@ -137,6 +146,9 @@ public open class CfnBotAlias internal constructor(
       cdkBuilder.botAliasLocaleSettings(botAliasLocaleSettings)
     }
 
+    override fun botAliasLocaleSettings(vararg botAliasLocaleSettings: Any): Unit =
+        botAliasLocaleSettings(botAliasLocaleSettings.toList())
+
     override fun botAliasName(botAliasName: String) {
       cdkBuilder.botAliasName(botAliasName)
     }
@@ -148,6 +160,8 @@ public open class CfnBotAlias internal constructor(
     override fun botAliasTags(botAliasTags: List<Any>) {
       cdkBuilder.botAliasTags(botAliasTags)
     }
+
+    override fun botAliasTags(vararg botAliasTags: Any): Unit = botAliasTags(botAliasTags.toList())
 
     override fun botId(botId: String) {
       cdkBuilder.botId(botId)
@@ -957,9 +971,13 @@ public open class CfnBotAlias internal constructor(
 
       public fun audioLogSettings(audioLogSettings: List<Any>)
 
+      public fun audioLogSettings(vararg audioLogSettings: Any)
+
       public fun textLogSettings(textLogSettings: IResolvable)
 
       public fun textLogSettings(textLogSettings: List<Any>)
+
+      public fun textLogSettings(vararg textLogSettings: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -975,6 +993,9 @@ public open class CfnBotAlias internal constructor(
         cdkBuilder.audioLogSettings(audioLogSettings)
       }
 
+      override fun audioLogSettings(vararg audioLogSettings: Any): Unit =
+          audioLogSettings(audioLogSettings.toList())
+
       override fun textLogSettings(textLogSettings: IResolvable) {
         cdkBuilder.textLogSettings(textLogSettings.let(IResolvable::unwrap))
       }
@@ -982,6 +1003,9 @@ public open class CfnBotAlias internal constructor(
       override fun textLogSettings(textLogSettings: List<Any>) {
         cdkBuilder.textLogSettings(textLogSettings)
       }
+
+      override fun textLogSettings(vararg textLogSettings: Any): Unit =
+          textLogSettings(textLogSettings.toList())
 
       public fun build():
           software.amazon.awscdk.services.lex.CfnBotAlias.ConversationLogSettingsProperty =

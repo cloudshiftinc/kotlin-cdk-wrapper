@@ -118,6 +118,9 @@ public open class CfnCapacityReservation internal constructor(
     unwrap(this).setTagSpecifications(__idx_ac66f0)
   }
 
+  public open fun tagSpecifications(vararg __idx_ac66f0: Any): Unit =
+      tagSpecifications(__idx_ac66f0.toList())
+
   public open fun tenancy(): String? = unwrap(this).getTenancy()
 
   public open fun tenancy(`value`: String) {
@@ -154,6 +157,8 @@ public open class CfnCapacityReservation internal constructor(
     public fun tagSpecifications(tagSpecifications: IResolvable)
 
     public fun tagSpecifications(tagSpecifications: List<Any>)
+
+    public fun tagSpecifications(vararg tagSpecifications: Any)
 
     public fun tenancy(tenancy: String)
   }
@@ -225,6 +230,9 @@ public open class CfnCapacityReservation internal constructor(
       cdkBuilder.tagSpecifications(tagSpecifications)
     }
 
+    override fun tagSpecifications(vararg tagSpecifications: Any): Unit =
+        tagSpecifications(tagSpecifications.toList())
+
     override fun tenancy(tenancy: String) {
       cdkBuilder.tenancy(tenancy)
     }
@@ -263,6 +271,8 @@ public open class CfnCapacityReservation internal constructor(
       public fun resourceType(resourceType: String)
 
       public fun tags(tags: List<CfnTag>)
+
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
@@ -278,6 +288,8 @@ public open class CfnCapacityReservation internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       public fun build():
           software.amazon.awscdk.services.ec2.CfnCapacityReservation.TagSpecificationProperty =

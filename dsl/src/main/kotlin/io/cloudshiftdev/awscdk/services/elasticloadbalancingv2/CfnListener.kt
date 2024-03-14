@@ -25,6 +25,8 @@ public open class CfnListener internal constructor(
     unwrap(this).setAlpnPolicy(`value`)
   }
 
+  public open fun alpnPolicy(vararg `value`: String): Unit = alpnPolicy(`value`.toList())
+
   public open fun attrListenerArn(): String = unwrap(this).getAttrListenerArn()
 
   public open fun certificates(): Any? = unwrap(this).getCertificates()
@@ -37,6 +39,8 @@ public open class CfnListener internal constructor(
     unwrap(this).setCertificates(__idx_ac66f0)
   }
 
+  public open fun certificates(vararg __idx_ac66f0: Any): Unit = certificates(__idx_ac66f0.toList())
+
   public open fun defaultActions(): Any = unwrap(this).getDefaultActions()
 
   public open fun defaultActions(`value`: IResolvable) {
@@ -46,6 +50,9 @@ public open class CfnListener internal constructor(
   public open fun defaultActions(__idx_ac66f0: List<Any>) {
     unwrap(this).setDefaultActions(__idx_ac66f0)
   }
+
+  public open fun defaultActions(vararg __idx_ac66f0: Any): Unit =
+      defaultActions(__idx_ac66f0.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -93,13 +100,19 @@ public open class CfnListener internal constructor(
   public interface Builder {
     public fun alpnPolicy(alpnPolicy: List<String>)
 
+    public fun alpnPolicy(vararg alpnPolicy: String)
+
     public fun certificates(certificates: IResolvable)
 
     public fun certificates(certificates: List<Any>)
 
+    public fun certificates(vararg certificates: Any)
+
     public fun defaultActions(defaultActions: IResolvable)
 
     public fun defaultActions(defaultActions: List<Any>)
+
+    public fun defaultActions(vararg defaultActions: Any)
 
     public fun loadBalancerArn(loadBalancerArn: String)
 
@@ -131,6 +144,8 @@ public open class CfnListener internal constructor(
       cdkBuilder.alpnPolicy(alpnPolicy)
     }
 
+    override fun alpnPolicy(vararg alpnPolicy: String): Unit = alpnPolicy(alpnPolicy.toList())
+
     override fun certificates(certificates: IResolvable) {
       cdkBuilder.certificates(certificates.let(IResolvable::unwrap))
     }
@@ -139,6 +154,8 @@ public open class CfnListener internal constructor(
       cdkBuilder.certificates(certificates)
     }
 
+    override fun certificates(vararg certificates: Any): Unit = certificates(certificates.toList())
+
     override fun defaultActions(defaultActions: IResolvable) {
       cdkBuilder.defaultActions(defaultActions.let(IResolvable::unwrap))
     }
@@ -146,6 +163,9 @@ public open class CfnListener internal constructor(
     override fun defaultActions(defaultActions: List<Any>) {
       cdkBuilder.defaultActions(defaultActions)
     }
+
+    override fun defaultActions(vararg defaultActions: Any): Unit =
+        defaultActions(defaultActions.toList())
 
     override fun loadBalancerArn(loadBalancerArn: String) {
       cdkBuilder.loadBalancerArn(loadBalancerArn)
@@ -493,6 +513,8 @@ public open class CfnListener internal constructor(
       public fun targetGroups(targetGroups: IResolvable)
 
       public fun targetGroups(targetGroups: List<Any>)
+
+      public fun targetGroups(vararg targetGroups: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -524,6 +546,9 @@ public open class CfnListener internal constructor(
       override fun targetGroups(targetGroups: List<Any>) {
         cdkBuilder.targetGroups(targetGroups)
       }
+
+      override fun targetGroups(vararg targetGroups: Any): Unit =
+          targetGroups(targetGroups.toList())
 
       public fun build():
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListener.ForwardConfigProperty =

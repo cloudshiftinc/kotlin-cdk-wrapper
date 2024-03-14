@@ -102,6 +102,8 @@ public open class CfnDocumentClassifier internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public open fun versionName(): String? = unwrap(this).getVersionName()
 
   public open fun versionName(`value`: String) {
@@ -161,6 +163,8 @@ public open class CfnDocumentClassifier internal constructor(
         fun outputDataConfig(outputDataConfig: DocumentClassifierOutputDataConfigProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun versionName(versionName: String)
 
@@ -238,6 +242,8 @@ public open class CfnDocumentClassifier internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun versionName(versionName: String) {
       cdkBuilder.versionName(versionName)
     }
@@ -297,6 +303,8 @@ public open class CfnDocumentClassifier internal constructor(
       public fun documentReadMode(documentReadMode: String)
 
       public fun featureTypes(featureTypes: List<String>)
+
+      public fun featureTypes(vararg featureTypes: String)
     }
 
     private class BuilderImpl : Builder {
@@ -316,6 +324,9 @@ public open class CfnDocumentClassifier internal constructor(
       override fun featureTypes(featureTypes: List<String>) {
         cdkBuilder.featureTypes(featureTypes)
       }
+
+      override fun featureTypes(vararg featureTypes: String): Unit =
+          featureTypes(featureTypes.toList())
 
       public fun build():
           software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.DocumentReaderConfigProperty
@@ -435,6 +446,8 @@ public open class CfnDocumentClassifier internal constructor(
 
       public fun augmentedManifests(augmentedManifests: List<Any>)
 
+      public fun augmentedManifests(vararg augmentedManifests: Any)
+
       public fun dataFormat(dataFormat: String)
 
       public fun documentReaderConfig(documentReaderConfig: IResolvable)
@@ -476,6 +489,9 @@ public open class CfnDocumentClassifier internal constructor(
       override fun augmentedManifests(augmentedManifests: List<Any>) {
         cdkBuilder.augmentedManifests(augmentedManifests)
       }
+
+      override fun augmentedManifests(vararg augmentedManifests: Any): Unit =
+          augmentedManifests(augmentedManifests.toList())
 
       override fun dataFormat(dataFormat: String) {
         cdkBuilder.dataFormat(dataFormat)
@@ -641,6 +657,8 @@ public open class CfnDocumentClassifier internal constructor(
     public interface Builder {
       public fun attributeNames(attributeNames: List<String>)
 
+      public fun attributeNames(vararg attributeNames: String)
+
       public fun s3Uri(s3Uri: String)
 
       public fun split(split: String)
@@ -655,6 +673,9 @@ public open class CfnDocumentClassifier internal constructor(
       override fun attributeNames(attributeNames: List<String>) {
         cdkBuilder.attributeNames(attributeNames)
       }
+
+      override fun attributeNames(vararg attributeNames: String): Unit =
+          attributeNames(attributeNames.toList())
 
       override fun s3Uri(s3Uri: String) {
         cdkBuilder.s3Uri(s3Uri)
@@ -673,7 +694,7 @@ public open class CfnDocumentClassifier internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.AugmentedManifestsListItemProperty,
     ) : AugmentedManifestsListItemProperty {
-      override fun attributeNames(): List<String> = unwrap(this).getAttributeNames() ?: emptyList()
+      override fun attributeNames(): List<String> = unwrap(this).getAttributeNames()
 
       override fun s3Uri(): String = unwrap(this).getS3Uri()
 
@@ -709,7 +730,11 @@ public open class CfnDocumentClassifier internal constructor(
     public interface Builder {
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnets(subnets: List<String>)
+
+      public fun subnets(vararg subnets: String)
     }
 
     private class BuilderImpl : Builder {
@@ -722,9 +747,14 @@ public open class CfnDocumentClassifier internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnets(subnets: List<String>) {
         cdkBuilder.subnets(subnets)
       }
+
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
 
       public fun build():
           software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.VpcConfigProperty =
@@ -735,10 +765,9 @@ public open class CfnDocumentClassifier internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.comprehend.CfnDocumentClassifier.VpcConfigProperty,
     ) : VpcConfigProperty {
-      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
-          emptyList()
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
 
-      override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+      override fun subnets(): List<String> = unwrap(this).getSubnets()
     }
 
     public companion object {

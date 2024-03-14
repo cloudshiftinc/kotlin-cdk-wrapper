@@ -33,7 +33,7 @@ public abstract class QualifiedFunctionBase internal constructor(
   public override fun permissionsNode(): Node = unwrap(this).getPermissionsNode().let(Node::wrap)
 
   public override fun resourceArnsForGrantInvoke(): List<String> =
-      unwrap(this).getResourceArnsForGrantInvoke() ?: emptyList()
+      unwrap(this).getResourceArnsForGrantInvoke()
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.QualifiedFunctionBase,

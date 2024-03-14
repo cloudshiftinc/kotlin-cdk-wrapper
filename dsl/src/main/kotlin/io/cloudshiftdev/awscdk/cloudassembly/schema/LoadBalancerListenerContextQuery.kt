@@ -32,6 +32,8 @@ public interface LoadBalancerListenerContextQuery : LoadBalancerFilter {
 
     public fun loadBalancerTags(loadBalancerTags: List<Tag>)
 
+    public fun loadBalancerTags(vararg loadBalancerTags: Tag)
+
     public fun loadBalancerType(loadBalancerType: LoadBalancerType)
 
     public fun lookupRoleArn(lookupRoleArn: String)
@@ -67,6 +69,9 @@ public interface LoadBalancerListenerContextQuery : LoadBalancerFilter {
     override fun loadBalancerTags(loadBalancerTags: List<Tag>) {
       cdkBuilder.loadBalancerTags(loadBalancerTags.map(Tag::unwrap))
     }
+
+    override fun loadBalancerTags(vararg loadBalancerTags: Tag): Unit =
+        loadBalancerTags(loadBalancerTags.toList())
 
     override fun loadBalancerType(loadBalancerType: LoadBalancerType) {
       cdkBuilder.loadBalancerType(loadBalancerType.let(LoadBalancerType::unwrap))

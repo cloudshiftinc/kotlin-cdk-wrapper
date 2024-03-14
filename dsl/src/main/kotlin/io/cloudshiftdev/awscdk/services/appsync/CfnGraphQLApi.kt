@@ -32,6 +32,9 @@ public open class CfnGraphQLApi internal constructor(
     unwrap(this).setAdditionalAuthenticationProviders(__idx_ac66f0)
   }
 
+  public open fun additionalAuthenticationProviders(vararg __idx_ac66f0: Any): Unit =
+      additionalAuthenticationProviders(__idx_ac66f0.toList())
+
   public open fun apiType(): String? = unwrap(this).getApiType()
 
   public open fun apiType(`value`: String) {
@@ -176,6 +179,8 @@ public open class CfnGraphQLApi internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun userPoolConfig(): Any? = unwrap(this).getUserPoolConfig()
 
   public open fun userPoolConfig(`value`: IResolvable) {
@@ -211,6 +216,8 @@ public open class CfnGraphQLApi internal constructor(
     public fun additionalAuthenticationProviders(additionalAuthenticationProviders: IResolvable)
 
     public fun additionalAuthenticationProviders(additionalAuthenticationProviders: List<Any>)
+
+    public fun additionalAuthenticationProviders(vararg additionalAuthenticationProviders: Any)
 
     public fun apiType(apiType: String)
 
@@ -267,6 +274,8 @@ public open class CfnGraphQLApi internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun userPoolConfig(userPoolConfig: IResolvable)
 
     public fun userPoolConfig(userPoolConfig: UserPoolConfigProperty)
@@ -296,6 +305,9 @@ public open class CfnGraphQLApi internal constructor(
     override fun additionalAuthenticationProviders(additionalAuthenticationProviders: List<Any>) {
       cdkBuilder.additionalAuthenticationProviders(additionalAuthenticationProviders)
     }
+
+    override fun additionalAuthenticationProviders(vararg additionalAuthenticationProviders: Any):
+        Unit = additionalAuthenticationProviders(additionalAuthenticationProviders.toList())
 
     override fun apiType(apiType: String) {
       cdkBuilder.apiType(apiType)
@@ -391,6 +403,8 @@ public open class CfnGraphQLApi internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun userPoolConfig(userPoolConfig: IResolvable) {
       cdkBuilder.userPoolConfig(userPoolConfig.let(IResolvable::unwrap))

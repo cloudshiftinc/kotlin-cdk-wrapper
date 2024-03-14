@@ -42,12 +42,17 @@ public open class CfnInputSecurityGroup internal constructor(
     unwrap(this).setWhitelistRules(__idx_ac66f0)
   }
 
+  public open fun whitelistRules(vararg __idx_ac66f0: Any): Unit =
+      whitelistRules(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun tags(tags: Any)
 
     public fun whitelistRules(whitelistRules: IResolvable)
 
     public fun whitelistRules(whitelistRules: List<Any>)
+
+    public fun whitelistRules(vararg whitelistRules: Any)
   }
 
   private class BuilderImpl(
@@ -68,6 +73,9 @@ public open class CfnInputSecurityGroup internal constructor(
     override fun whitelistRules(whitelistRules: List<Any>) {
       cdkBuilder.whitelistRules(whitelistRules)
     }
+
+    override fun whitelistRules(vararg whitelistRules: Any): Unit =
+        whitelistRules(whitelistRules.toList())
 
     public fun build(): software.amazon.awscdk.services.medialive.CfnInputSecurityGroup =
         cdkBuilder.build()

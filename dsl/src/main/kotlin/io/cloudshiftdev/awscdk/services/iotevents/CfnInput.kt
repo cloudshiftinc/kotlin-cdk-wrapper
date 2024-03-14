@@ -59,6 +59,8 @@ public open class CfnInput internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun inputDefinition(inputDefinition: IResolvable)
 
@@ -73,6 +75,8 @@ public open class CfnInput internal constructor(
     public fun inputName(inputName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -106,6 +110,8 @@ public open class CfnInput internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.iotevents.CfnInput = cdkBuilder.build()
   }
@@ -184,6 +190,8 @@ public open class CfnInput internal constructor(
       public fun attributes(attributes: IResolvable)
 
       public fun attributes(attributes: List<Any>)
+
+      public fun attributes(vararg attributes: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -198,6 +206,8 @@ public open class CfnInput internal constructor(
       override fun attributes(attributes: List<Any>) {
         cdkBuilder.attributes(attributes)
       }
+
+      override fun attributes(vararg attributes: Any): Unit = attributes(attributes.toList())
 
       public fun build(): software.amazon.awscdk.services.iotevents.CfnInput.InputDefinitionProperty
           = cdkBuilder.build()

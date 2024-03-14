@@ -33,7 +33,7 @@ public open class CfnUserSettings internal constructor(
   }
 
   public open fun attrAssociatedPortalArns(): List<String> =
-      unwrap(this).getAttrAssociatedPortalArns() ?: emptyList()
+      unwrap(this).getAttrAssociatedPortalArns()
 
   public open fun attrUserSettingsArn(): String = unwrap(this).getAttrUserSettingsArn()
 
@@ -112,6 +112,8 @@ public open class CfnUserSettings internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public open fun uploadAllowed(): String = unwrap(this).getUploadAllowed()
 
   public open fun uploadAllowed(`value`: String) {
@@ -148,6 +150,8 @@ public open class CfnUserSettings internal constructor(
     public fun printAllowed(printAllowed: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun uploadAllowed(uploadAllowed: String)
   }
@@ -216,6 +220,8 @@ public open class CfnUserSettings internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun uploadAllowed(uploadAllowed: String) {
       cdkBuilder.uploadAllowed(uploadAllowed)
     }
@@ -255,9 +261,13 @@ public open class CfnUserSettings internal constructor(
 
       public fun allowlist(allowlist: List<Any>)
 
+      public fun allowlist(vararg allowlist: Any)
+
       public fun blocklist(blocklist: IResolvable)
 
       public fun blocklist(blocklist: List<Any>)
+
+      public fun blocklist(vararg blocklist: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -274,6 +284,8 @@ public open class CfnUserSettings internal constructor(
         cdkBuilder.allowlist(allowlist)
       }
 
+      override fun allowlist(vararg allowlist: Any): Unit = allowlist(allowlist.toList())
+
       override fun blocklist(blocklist: IResolvable) {
         cdkBuilder.blocklist(blocklist.let(IResolvable::unwrap))
       }
@@ -281,6 +293,8 @@ public open class CfnUserSettings internal constructor(
       override fun blocklist(blocklist: List<Any>) {
         cdkBuilder.blocklist(blocklist)
       }
+
+      override fun blocklist(vararg blocklist: Any): Unit = blocklist(blocklist.toList())
 
       public fun build():
           software.amazon.awscdk.services.workspacesweb.CfnUserSettings.CookieSynchronizationConfigurationProperty

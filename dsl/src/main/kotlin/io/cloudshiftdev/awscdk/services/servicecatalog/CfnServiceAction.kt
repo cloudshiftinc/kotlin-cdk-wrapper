@@ -32,6 +32,8 @@ public open class CfnServiceAction internal constructor(
     unwrap(this).setDefinition(__idx_ac66f0)
   }
 
+  public open fun definition(vararg __idx_ac66f0: Any): Unit = definition(__idx_ac66f0.toList())
+
   public open fun definitionType(): String = unwrap(this).getDefinitionType()
 
   public open fun definitionType(`value`: String) {
@@ -61,6 +63,8 @@ public open class CfnServiceAction internal constructor(
 
     public fun definition(definition: List<Any>)
 
+    public fun definition(vararg definition: Any)
+
     public fun definitionType(definitionType: String)
 
     public fun description(description: String)
@@ -86,6 +90,8 @@ public open class CfnServiceAction internal constructor(
     override fun definition(definition: List<Any>) {
       cdkBuilder.definition(definition)
     }
+
+    override fun definition(vararg definition: Any): Unit = definition(definition.toList())
 
     override fun definitionType(definitionType: String) {
       cdkBuilder.definitionType(definitionType)

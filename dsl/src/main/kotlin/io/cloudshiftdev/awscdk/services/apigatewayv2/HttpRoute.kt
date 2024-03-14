@@ -38,6 +38,8 @@ public open class HttpRoute internal constructor(
   public interface Builder {
     public fun authorizationScopes(authorizationScopes: List<String>)
 
+    public fun authorizationScopes(vararg authorizationScopes: String)
+
     public fun authorizer(authorizer: IHttpRouteAuthorizer)
 
     public fun httpApi(httpApi: IHttpApi)
@@ -57,6 +59,9 @@ public open class HttpRoute internal constructor(
     override fun authorizationScopes(authorizationScopes: List<String>) {
       cdkBuilder.authorizationScopes(authorizationScopes)
     }
+
+    override fun authorizationScopes(vararg authorizationScopes: String): Unit =
+        authorizationScopes(authorizationScopes.toList())
 
     override fun authorizer(authorizer: IHttpRouteAuthorizer) {
       cdkBuilder.authorizer(authorizer.let(IHttpRouteAuthorizer::unwrap))

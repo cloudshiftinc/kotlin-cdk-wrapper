@@ -9,7 +9,7 @@ import kotlin.jvm.JvmName
 public open class ClientAttributes internal constructor(
   private val cdkObject: software.amazon.awscdk.services.cognito.ClientAttributes,
 ) {
-  public open fun attributes(): List<String> = unwrap(this).attributes() ?: emptyList()
+  public open fun attributes(): List<String> = unwrap(this).attributes()
 
   public open fun withCustomAttributes(attributes: String): ClientAttributes =
       unwrap(this).withCustomAttributes(attributes).let(ClientAttributes::wrap)

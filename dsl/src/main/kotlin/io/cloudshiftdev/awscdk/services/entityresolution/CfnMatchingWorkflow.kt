@@ -46,6 +46,9 @@ public open class CfnMatchingWorkflow internal constructor(
     unwrap(this).setInputSourceConfig(__idx_ac66f0)
   }
 
+  public open fun inputSourceConfig(vararg __idx_ac66f0: Any): Unit =
+      inputSourceConfig(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -59,6 +62,9 @@ public open class CfnMatchingWorkflow internal constructor(
   public open fun outputSourceConfig(__idx_ac66f0: List<Any>) {
     unwrap(this).setOutputSourceConfig(__idx_ac66f0)
   }
+
+  public open fun outputSourceConfig(vararg __idx_ac66f0: Any): Unit =
+      outputSourceConfig(__idx_ac66f0.toList())
 
   public open fun resolutionTechniques(): Any = unwrap(this).getResolutionTechniques()
 
@@ -87,6 +93,8 @@ public open class CfnMatchingWorkflow internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public open fun workflowName(): String = unwrap(this).getWorkflowName()
 
   public open fun workflowName(`value`: String) {
@@ -100,9 +108,13 @@ public open class CfnMatchingWorkflow internal constructor(
 
     public fun inputSourceConfig(inputSourceConfig: List<Any>)
 
+    public fun inputSourceConfig(vararg inputSourceConfig: Any)
+
     public fun outputSourceConfig(outputSourceConfig: IResolvable)
 
     public fun outputSourceConfig(outputSourceConfig: List<Any>)
+
+    public fun outputSourceConfig(vararg outputSourceConfig: Any)
 
     public fun resolutionTechniques(resolutionTechniques: IResolvable)
 
@@ -116,6 +128,8 @@ public open class CfnMatchingWorkflow internal constructor(
     public fun roleArn(roleArn: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun workflowName(workflowName: String)
   }
@@ -141,6 +155,9 @@ public open class CfnMatchingWorkflow internal constructor(
       cdkBuilder.inputSourceConfig(inputSourceConfig)
     }
 
+    override fun inputSourceConfig(vararg inputSourceConfig: Any): Unit =
+        inputSourceConfig(inputSourceConfig.toList())
+
     override fun outputSourceConfig(outputSourceConfig: IResolvable) {
       cdkBuilder.outputSourceConfig(outputSourceConfig.let(IResolvable::unwrap))
     }
@@ -148,6 +165,9 @@ public open class CfnMatchingWorkflow internal constructor(
     override fun outputSourceConfig(outputSourceConfig: List<Any>) {
       cdkBuilder.outputSourceConfig(outputSourceConfig)
     }
+
+    override fun outputSourceConfig(vararg outputSourceConfig: Any): Unit =
+        outputSourceConfig(outputSourceConfig.toList())
 
     override fun resolutionTechniques(resolutionTechniques: IResolvable) {
       cdkBuilder.resolutionTechniques(resolutionTechniques.let(IResolvable::unwrap))
@@ -170,6 +190,8 @@ public open class CfnMatchingWorkflow internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun workflowName(workflowName: String) {
       cdkBuilder.workflowName(workflowName)
@@ -212,6 +234,8 @@ public open class CfnMatchingWorkflow internal constructor(
       public fun rules(rules: IResolvable)
 
       public fun rules(rules: List<Any>)
+
+      public fun rules(vararg rules: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -231,6 +255,8 @@ public open class CfnMatchingWorkflow internal constructor(
       override fun rules(rules: List<Any>) {
         cdkBuilder.rules(rules)
       }
+
+      override fun rules(vararg rules: Any): Unit = rules(rules.toList())
 
       public fun build():
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleBasedPropertiesProperty
@@ -286,6 +312,8 @@ public open class CfnMatchingWorkflow internal constructor(
 
       public fun output(output: List<Any>)
 
+      public fun output(vararg output: Any)
+
       public fun outputS3Path(outputS3Path: String)
     }
 
@@ -314,6 +342,8 @@ public open class CfnMatchingWorkflow internal constructor(
       override fun output(output: List<Any>) {
         cdkBuilder.output(output)
       }
+
+      override fun output(vararg output: Any): Unit = output(output.toList())
 
       override fun outputS3Path(outputS3Path: String) {
         cdkBuilder.outputS3Path(outputS3Path)
@@ -755,6 +785,8 @@ public open class CfnMatchingWorkflow internal constructor(
     public interface Builder {
       public fun matchingKeys(matchingKeys: List<String>)
 
+      public fun matchingKeys(vararg matchingKeys: String)
+
       public fun ruleName(ruleName: String)
     }
 
@@ -767,6 +799,9 @@ public open class CfnMatchingWorkflow internal constructor(
       override fun matchingKeys(matchingKeys: List<String>) {
         cdkBuilder.matchingKeys(matchingKeys)
       }
+
+      override fun matchingKeys(vararg matchingKeys: String): Unit =
+          matchingKeys(matchingKeys.toList())
 
       override fun ruleName(ruleName: String) {
         cdkBuilder.ruleName(ruleName)
@@ -781,7 +816,7 @@ public open class CfnMatchingWorkflow internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow.RuleProperty,
     ) : RuleProperty {
-      override fun matchingKeys(): List<String> = unwrap(this).getMatchingKeys() ?: emptyList()
+      override fun matchingKeys(): List<String> = unwrap(this).getMatchingKeys()
 
       override fun ruleName(): String = unwrap(this).getRuleName()
     }

@@ -44,6 +44,8 @@ public open class CfnNetworkAnalyzerConfiguration internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun traceContent(): Any? = unwrap(this).getTraceContent()
 
   public open fun traceContent(`value`: Any) {
@@ -56,12 +58,17 @@ public open class CfnNetworkAnalyzerConfiguration internal constructor(
     unwrap(this).setWirelessDevices(`value`)
   }
 
+  public open fun wirelessDevices(vararg `value`: String): Unit = wirelessDevices(`value`.toList())
+
   public open fun wirelessGateways(): List<String> = unwrap(this).getWirelessGateways() ?:
       emptyList()
 
   public open fun wirelessGateways(`value`: List<String>) {
     unwrap(this).setWirelessGateways(`value`)
   }
+
+  public open fun wirelessGateways(vararg `value`: String): Unit =
+      wirelessGateways(`value`.toList())
 
   public interface Builder {
     public fun description(description: String)
@@ -70,11 +77,17 @@ public open class CfnNetworkAnalyzerConfiguration internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun traceContent(traceContent: Any)
 
     public fun wirelessDevices(wirelessDevices: List<String>)
 
+    public fun wirelessDevices(vararg wirelessDevices: String)
+
     public fun wirelessGateways(wirelessGateways: List<String>)
+
+    public fun wirelessGateways(vararg wirelessGateways: String)
   }
 
   private class BuilderImpl(
@@ -98,6 +111,8 @@ public open class CfnNetworkAnalyzerConfiguration internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun traceContent(traceContent: Any) {
       cdkBuilder.traceContent(traceContent)
     }
@@ -106,9 +121,15 @@ public open class CfnNetworkAnalyzerConfiguration internal constructor(
       cdkBuilder.wirelessDevices(wirelessDevices)
     }
 
+    override fun wirelessDevices(vararg wirelessDevices: String): Unit =
+        wirelessDevices(wirelessDevices.toList())
+
     override fun wirelessGateways(wirelessGateways: List<String>) {
       cdkBuilder.wirelessGateways(wirelessGateways)
     }
+
+    override fun wirelessGateways(vararg wirelessGateways: String): Unit =
+        wirelessGateways(wirelessGateways.toList())
 
     public fun build(): software.amazon.awscdk.services.iotwireless.CfnNetworkAnalyzerConfiguration
         = cdkBuilder.build()

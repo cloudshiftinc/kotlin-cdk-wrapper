@@ -49,7 +49,11 @@ public interface AddBehaviorOptions {
 
     public fun edgeLambdas(edgeLambdas: List<EdgeLambda>)
 
+    public fun edgeLambdas(vararg edgeLambdas: EdgeLambda)
+
     public fun functionAssociations(functionAssociations: List<FunctionAssociation>)
+
+    public fun functionAssociations(vararg functionAssociations: FunctionAssociation)
 
     public fun originRequestPolicy(originRequestPolicy: IOriginRequestPolicy)
 
@@ -60,6 +64,8 @@ public interface AddBehaviorOptions {
     public fun smoothStreaming(smoothStreaming: Boolean)
 
     public fun trustedKeyGroups(trustedKeyGroups: List<IKeyGroup>)
+
+    public fun trustedKeyGroups(vararg trustedKeyGroups: IKeyGroup)
 
     public fun viewerProtocolPolicy(viewerProtocolPolicy: ViewerProtocolPolicy)
   }
@@ -88,9 +94,15 @@ public interface AddBehaviorOptions {
       cdkBuilder.edgeLambdas(edgeLambdas.map(EdgeLambda::unwrap))
     }
 
+    override fun edgeLambdas(vararg edgeLambdas: EdgeLambda): Unit =
+        edgeLambdas(edgeLambdas.toList())
+
     override fun functionAssociations(functionAssociations: List<FunctionAssociation>) {
       cdkBuilder.functionAssociations(functionAssociations.map(FunctionAssociation::unwrap))
     }
+
+    override fun functionAssociations(vararg functionAssociations: FunctionAssociation): Unit =
+        functionAssociations(functionAssociations.toList())
 
     override fun originRequestPolicy(originRequestPolicy: IOriginRequestPolicy) {
       cdkBuilder.originRequestPolicy(originRequestPolicy.let(IOriginRequestPolicy::unwrap))
@@ -111,6 +123,9 @@ public interface AddBehaviorOptions {
     override fun trustedKeyGroups(trustedKeyGroups: List<IKeyGroup>) {
       cdkBuilder.trustedKeyGroups(trustedKeyGroups.map(IKeyGroup::unwrap))
     }
+
+    override fun trustedKeyGroups(vararg trustedKeyGroups: IKeyGroup): Unit =
+        trustedKeyGroups(trustedKeyGroups.toList())
 
     override fun viewerProtocolPolicy(viewerProtocolPolicy: ViewerProtocolPolicy) {
       cdkBuilder.viewerProtocolPolicy(viewerProtocolPolicy.let(ViewerProtocolPolicy::unwrap))

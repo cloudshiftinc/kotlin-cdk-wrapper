@@ -260,11 +260,15 @@ public open class CfnDeployment internal constructor(
 
       public fun methodSettings(methodSettings: List<Any>)
 
+      public fun methodSettings(vararg methodSettings: Any)
+
       public fun metricsEnabled(metricsEnabled: Boolean)
 
       public fun metricsEnabled(metricsEnabled: IResolvable)
 
       public fun tags(tags: List<CfnTag>)
+
+      public fun tags(vararg tags: CfnTag)
 
       public fun throttlingBurstLimit(throttlingBurstLimit: Number)
 
@@ -375,6 +379,9 @@ public open class CfnDeployment internal constructor(
         cdkBuilder.methodSettings(methodSettings)
       }
 
+      override fun methodSettings(vararg methodSettings: Any): Unit =
+          methodSettings(methodSettings.toList())
+
       override fun metricsEnabled(metricsEnabled: Boolean) {
         cdkBuilder.metricsEnabled(metricsEnabled)
       }
@@ -386,6 +393,8 @@ public open class CfnDeployment internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       override fun throttlingBurstLimit(throttlingBurstLimit: Number) {
         cdkBuilder.throttlingBurstLimit(throttlingBurstLimit)

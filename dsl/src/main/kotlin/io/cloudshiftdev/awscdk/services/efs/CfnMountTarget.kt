@@ -32,11 +32,13 @@ public open class CfnMountTarget internal constructor(
     unwrap(this).setIpAddress(`value`)
   }
 
-  public open fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
+  public open fun securityGroups(): List<String> = unwrap(this).getSecurityGroups()
 
   public open fun securityGroups(`value`: List<String>) {
     unwrap(this).setSecurityGroups(`value`)
   }
+
+  public open fun securityGroups(vararg `value`: String): Unit = securityGroups(`value`.toList())
 
   public open fun subnetId(): String = unwrap(this).getSubnetId()
 
@@ -50,6 +52,8 @@ public open class CfnMountTarget internal constructor(
     public fun ipAddress(ipAddress: String)
 
     public fun securityGroups(securityGroups: List<String>)
+
+    public fun securityGroups(vararg securityGroups: String)
 
     public fun subnetId(subnetId: String)
   }
@@ -72,6 +76,9 @@ public open class CfnMountTarget internal constructor(
     override fun securityGroups(securityGroups: List<String>) {
       cdkBuilder.securityGroups(securityGroups)
     }
+
+    override fun securityGroups(vararg securityGroups: String): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)

@@ -226,6 +226,8 @@ public open class CfnCertificate internal constructor(
       public fun policyQualifiers(policyQualifiers: IResolvable)
 
       public fun policyQualifiers(policyQualifiers: List<Any>)
+
+      public fun policyQualifiers(vararg policyQualifiers: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -244,6 +246,9 @@ public open class CfnCertificate internal constructor(
       override fun policyQualifiers(policyQualifiers: List<Any>) {
         cdkBuilder.policyQualifiers(policyQualifiers)
       }
+
+      override fun policyQualifiers(vararg policyQualifiers: Any): Unit =
+          policyQualifiers(policyQualifiers.toList())
 
       public fun build():
           software.amazon.awscdk.services.acmpca.CfnCertificate.PolicyInformationProperty =
@@ -319,6 +324,8 @@ public open class CfnCertificate internal constructor(
 
       public fun customAttributes(customAttributes: List<Any>)
 
+      public fun customAttributes(vararg customAttributes: Any)
+
       public fun distinguishedNameQualifier(distinguishedNameQualifier: String)
 
       public fun generationQualifier(generationQualifier: String)
@@ -364,6 +371,9 @@ public open class CfnCertificate internal constructor(
       override fun customAttributes(customAttributes: List<Any>) {
         cdkBuilder.customAttributes(customAttributes)
       }
+
+      override fun customAttributes(vararg customAttributes: Any): Unit =
+          customAttributes(customAttributes.toList())
 
       override fun distinguishedNameQualifier(distinguishedNameQualifier: String) {
         cdkBuilder.distinguishedNameQualifier(distinguishedNameQualifier)
@@ -1183,13 +1193,19 @@ public open class CfnCertificate internal constructor(
 
       public fun certificatePolicies(certificatePolicies: List<Any>)
 
+      public fun certificatePolicies(vararg certificatePolicies: Any)
+
       public fun customExtensions(customExtensions: IResolvable)
 
       public fun customExtensions(customExtensions: List<Any>)
 
+      public fun customExtensions(vararg customExtensions: Any)
+
       public fun extendedKeyUsage(extendedKeyUsage: IResolvable)
 
       public fun extendedKeyUsage(extendedKeyUsage: List<Any>)
+
+      public fun extendedKeyUsage(vararg extendedKeyUsage: Any)
 
       public fun keyUsage(keyUsage: IResolvable)
 
@@ -1202,6 +1218,8 @@ public open class CfnCertificate internal constructor(
       public fun subjectAlternativeNames(subjectAlternativeNames: IResolvable)
 
       public fun subjectAlternativeNames(subjectAlternativeNames: List<Any>)
+
+      public fun subjectAlternativeNames(vararg subjectAlternativeNames: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1217,6 +1235,9 @@ public open class CfnCertificate internal constructor(
         cdkBuilder.certificatePolicies(certificatePolicies)
       }
 
+      override fun certificatePolicies(vararg certificatePolicies: Any): Unit =
+          certificatePolicies(certificatePolicies.toList())
+
       override fun customExtensions(customExtensions: IResolvable) {
         cdkBuilder.customExtensions(customExtensions.let(IResolvable::unwrap))
       }
@@ -1225,6 +1246,9 @@ public open class CfnCertificate internal constructor(
         cdkBuilder.customExtensions(customExtensions)
       }
 
+      override fun customExtensions(vararg customExtensions: Any): Unit =
+          customExtensions(customExtensions.toList())
+
       override fun extendedKeyUsage(extendedKeyUsage: IResolvable) {
         cdkBuilder.extendedKeyUsage(extendedKeyUsage.let(IResolvable::unwrap))
       }
@@ -1232,6 +1256,9 @@ public open class CfnCertificate internal constructor(
       override fun extendedKeyUsage(extendedKeyUsage: List<Any>) {
         cdkBuilder.extendedKeyUsage(extendedKeyUsage)
       }
+
+      override fun extendedKeyUsage(vararg extendedKeyUsage: Any): Unit =
+          extendedKeyUsage(extendedKeyUsage.toList())
 
       override fun keyUsage(keyUsage: IResolvable) {
         cdkBuilder.keyUsage(keyUsage.let(IResolvable::unwrap))
@@ -1253,6 +1280,9 @@ public open class CfnCertificate internal constructor(
       override fun subjectAlternativeNames(subjectAlternativeNames: List<Any>) {
         cdkBuilder.subjectAlternativeNames(subjectAlternativeNames)
       }
+
+      override fun subjectAlternativeNames(vararg subjectAlternativeNames: Any): Unit =
+          subjectAlternativeNames(subjectAlternativeNames.toList())
 
       public fun build(): software.amazon.awscdk.services.acmpca.CfnCertificate.ExtensionsProperty =
           cdkBuilder.build()

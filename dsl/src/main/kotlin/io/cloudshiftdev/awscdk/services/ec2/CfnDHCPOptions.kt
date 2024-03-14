@@ -31,6 +31,9 @@ public open class CfnDHCPOptions internal constructor(
     unwrap(this).setDomainNameServers(`value`)
   }
 
+  public open fun domainNameServers(vararg `value`: String): Unit =
+      domainNameServers(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -41,6 +44,9 @@ public open class CfnDHCPOptions internal constructor(
   public open fun netbiosNameServers(`value`: List<String>) {
     unwrap(this).setNetbiosNameServers(`value`)
   }
+
+  public open fun netbiosNameServers(vararg `value`: String): Unit =
+      netbiosNameServers(`value`.toList())
 
   public open fun netbiosNodeType(): Number? = unwrap(this).getNetbiosNodeType()
 
@@ -54,6 +60,8 @@ public open class CfnDHCPOptions internal constructor(
     unwrap(this).setNtpServers(`value`)
   }
 
+  public open fun ntpServers(vararg `value`: String): Unit = ntpServers(`value`.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -63,18 +71,28 @@ public open class CfnDHCPOptions internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun domainName(domainName: String)
 
     public fun domainNameServers(domainNameServers: List<String>)
 
+    public fun domainNameServers(vararg domainNameServers: String)
+
     public fun netbiosNameServers(netbiosNameServers: List<String>)
+
+    public fun netbiosNameServers(vararg netbiosNameServers: String)
 
     public fun netbiosNodeType(netbiosNodeType: Number)
 
     public fun ntpServers(ntpServers: List<String>)
 
+    public fun ntpServers(vararg ntpServers: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -92,9 +110,15 @@ public open class CfnDHCPOptions internal constructor(
       cdkBuilder.domainNameServers(domainNameServers)
     }
 
+    override fun domainNameServers(vararg domainNameServers: String): Unit =
+        domainNameServers(domainNameServers.toList())
+
     override fun netbiosNameServers(netbiosNameServers: List<String>) {
       cdkBuilder.netbiosNameServers(netbiosNameServers)
     }
+
+    override fun netbiosNameServers(vararg netbiosNameServers: String): Unit =
+        netbiosNameServers(netbiosNameServers.toList())
 
     override fun netbiosNodeType(netbiosNodeType: Number) {
       cdkBuilder.netbiosNodeType(netbiosNodeType)
@@ -104,9 +128,13 @@ public open class CfnDHCPOptions internal constructor(
       cdkBuilder.ntpServers(ntpServers)
     }
 
+    override fun ntpServers(vararg ntpServers: String): Unit = ntpServers(ntpServers.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.CfnDHCPOptions = cdkBuilder.build()
   }

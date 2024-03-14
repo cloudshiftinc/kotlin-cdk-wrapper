@@ -34,7 +34,11 @@ public interface VirtualNodeBaseProps {
 
     public fun backends(backends: List<Backend>)
 
+    public fun backends(vararg backends: Backend)
+
     public fun listeners(listeners: List<VirtualNodeListener>)
+
+    public fun listeners(vararg listeners: VirtualNodeListener)
 
     public fun serviceDiscovery(serviceDiscovery: ServiceDiscovery)
 
@@ -62,9 +66,14 @@ public interface VirtualNodeBaseProps {
       cdkBuilder.backends(backends.map(Backend::unwrap))
     }
 
+    override fun backends(vararg backends: Backend): Unit = backends(backends.toList())
+
     override fun listeners(listeners: List<VirtualNodeListener>) {
       cdkBuilder.listeners(listeners.map(VirtualNodeListener::unwrap))
     }
+
+    override fun listeners(vararg listeners: VirtualNodeListener): Unit =
+        listeners(listeners.toList())
 
     override fun serviceDiscovery(serviceDiscovery: ServiceDiscovery) {
       cdkBuilder.serviceDiscovery(serviceDiscovery.let(ServiceDiscovery::unwrap))

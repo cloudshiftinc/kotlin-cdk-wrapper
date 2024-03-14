@@ -49,6 +49,8 @@ public open class CfnVPNConnection internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun transitGatewayId(): String? = unwrap(this).getTransitGatewayId()
 
   public open fun transitGatewayId(`value`: String) {
@@ -78,6 +80,9 @@ public open class CfnVPNConnection internal constructor(
     unwrap(this).setVpnTunnelOptionsSpecifications(__idx_ac66f0)
   }
 
+  public open fun vpnTunnelOptionsSpecifications(vararg __idx_ac66f0: Any): Unit =
+      vpnTunnelOptionsSpecifications(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun customerGatewayId(customerGatewayId: String)
 
@@ -86,6 +91,8 @@ public open class CfnVPNConnection internal constructor(
     public fun staticRoutesOnly(staticRoutesOnly: IResolvable)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun transitGatewayId(transitGatewayId: String)
 
@@ -96,6 +103,8 @@ public open class CfnVPNConnection internal constructor(
     public fun vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications: IResolvable)
 
     public fun vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications: List<Any>)
+
+    public fun vpnTunnelOptionsSpecifications(vararg vpnTunnelOptionsSpecifications: Any)
   }
 
   private class BuilderImpl(
@@ -121,6 +130,8 @@ public open class CfnVPNConnection internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun transitGatewayId(transitGatewayId: String) {
       cdkBuilder.transitGatewayId(transitGatewayId)
     }
@@ -140,6 +151,9 @@ public open class CfnVPNConnection internal constructor(
     override fun vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications: List<Any>) {
       cdkBuilder.vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications)
     }
+
+    override fun vpnTunnelOptionsSpecifications(vararg vpnTunnelOptionsSpecifications: Any): Unit =
+        vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.CfnVPNConnection = cdkBuilder.build()
   }

@@ -72,6 +72,8 @@ public open class CfnAuthorizer internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun tokenKeyName(): String? = unwrap(this).getTokenKeyName()
 
   public open fun tokenKeyName(`value`: String) {
@@ -104,6 +106,8 @@ public open class CfnAuthorizer internal constructor(
     public fun status(status: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun tokenKeyName(tokenKeyName: String)
 
@@ -150,6 +154,8 @@ public open class CfnAuthorizer internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun tokenKeyName(tokenKeyName: String) {
       cdkBuilder.tokenKeyName(tokenKeyName)

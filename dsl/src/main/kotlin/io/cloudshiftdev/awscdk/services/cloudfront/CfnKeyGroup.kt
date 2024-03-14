@@ -105,6 +105,8 @@ public open class CfnKeyGroup internal constructor(
 
       public fun items(items: List<String>)
 
+      public fun items(vararg items: String)
+
       public fun name(name: String)
     }
 
@@ -121,6 +123,8 @@ public open class CfnKeyGroup internal constructor(
         cdkBuilder.items(items)
       }
 
+      override fun items(vararg items: String): Unit = items(items.toList())
+
       override fun name(name: String) {
         cdkBuilder.name(name)
       }
@@ -136,7 +140,7 @@ public open class CfnKeyGroup internal constructor(
     ) : KeyGroupConfigProperty {
       override fun comment(): String? = unwrap(this).getComment()
 
-      override fun items(): List<String> = unwrap(this).getItems() ?: emptyList()
+      override fun items(): List<String> = unwrap(this).getItems()
 
       override fun name(): String = unwrap(this).getName()
     }

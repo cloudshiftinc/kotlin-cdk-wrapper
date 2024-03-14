@@ -429,6 +429,8 @@ public open class CfnAccessPoint internal constructor(
     public interface Builder {
       public fun actions(actions: List<String>)
 
+      public fun actions(vararg actions: String)
+
       public fun contentTransformation(contentTransformation: Any)
     }
 
@@ -441,6 +443,8 @@ public open class CfnAccessPoint internal constructor(
       override fun actions(actions: List<String>) {
         cdkBuilder.actions(actions)
       }
+
+      override fun actions(vararg actions: String): Unit = actions(actions.toList())
 
       override fun contentTransformation(contentTransformation: Any) {
         cdkBuilder.contentTransformation(contentTransformation)
@@ -455,7 +459,7 @@ public open class CfnAccessPoint internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.TransformationConfigurationProperty,
     ) : TransformationConfigurationProperty {
-      override fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
+      override fun actions(): List<String> = unwrap(this).getActions()
 
       override fun contentTransformation(): Any = unwrap(this).getContentTransformation()
     }
@@ -493,6 +497,8 @@ public open class CfnAccessPoint internal constructor(
     public interface Builder {
       public fun allowedFeatures(allowedFeatures: List<String>)
 
+      public fun allowedFeatures(vararg allowedFeatures: String)
+
       public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: Boolean)
 
       public fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable)
@@ -502,6 +508,8 @@ public open class CfnAccessPoint internal constructor(
       public fun transformationConfigurations(transformationConfigurations: IResolvable)
 
       public fun transformationConfigurations(transformationConfigurations: List<Any>)
+
+      public fun transformationConfigurations(vararg transformationConfigurations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -513,6 +521,9 @@ public open class CfnAccessPoint internal constructor(
       override fun allowedFeatures(allowedFeatures: List<String>) {
         cdkBuilder.allowedFeatures(allowedFeatures)
       }
+
+      override fun allowedFeatures(vararg allowedFeatures: String): Unit =
+          allowedFeatures(allowedFeatures.toList())
 
       override fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: Boolean) {
         cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled)
@@ -533,6 +544,9 @@ public open class CfnAccessPoint internal constructor(
       override fun transformationConfigurations(transformationConfigurations: List<Any>) {
         cdkBuilder.transformationConfigurations(transformationConfigurations)
       }
+
+      override fun transformationConfigurations(vararg transformationConfigurations: Any): Unit =
+          transformationConfigurations(transformationConfigurations.toList())
 
       public fun build():
           software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint.ObjectLambdaConfigurationProperty

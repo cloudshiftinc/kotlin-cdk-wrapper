@@ -18,7 +18,11 @@ public open class RealtimeLogConfig internal constructor(
   public interface Builder {
     public fun endPoints(endPoints: List<Endpoint>)
 
+    public fun endPoints(vararg endPoints: Endpoint)
+
     public fun fields(fields: List<String>)
+
+    public fun fields(vararg fields: String)
 
     public fun realtimeLogConfigName(realtimeLogConfigName: String)
 
@@ -36,9 +40,13 @@ public open class RealtimeLogConfig internal constructor(
       cdkBuilder.endPoints(endPoints.map(Endpoint::unwrap))
     }
 
+    override fun endPoints(vararg endPoints: Endpoint): Unit = endPoints(endPoints.toList())
+
     override fun fields(fields: List<String>) {
       cdkBuilder.fields(fields)
     }
+
+    override fun fields(vararg fields: String): Unit = fields(fields.toList())
 
     override fun realtimeLogConfigName(realtimeLogConfigName: String) {
       cdkBuilder.realtimeLogConfigName(realtimeLogConfigName)

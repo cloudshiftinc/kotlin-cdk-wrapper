@@ -94,6 +94,9 @@ public open class CfnFileSystem internal constructor(
     unwrap(this).setFileSystemTagsRaw(`value`.map(ElasticFileSystemTagProperty::unwrap))
   }
 
+  public open fun fileSystemTagsRaw(vararg `value`: ElasticFileSystemTagProperty): Unit =
+      fileSystemTagsRaw(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -113,6 +116,9 @@ public open class CfnFileSystem internal constructor(
   public open fun lifecyclePolicies(__idx_ac66f0: List<Any>) {
     unwrap(this).setLifecyclePolicies(__idx_ac66f0)
   }
+
+  public open fun lifecyclePolicies(vararg __idx_ac66f0: Any): Unit =
+      lifecyclePolicies(__idx_ac66f0.toList())
 
   public open fun performanceMode(): String? = unwrap(this).getPerformanceMode()
 
@@ -183,11 +189,15 @@ public open class CfnFileSystem internal constructor(
 
     public fun fileSystemTags(fileSystemTags: List<ElasticFileSystemTagProperty>)
 
+    public fun fileSystemTags(vararg fileSystemTags: ElasticFileSystemTagProperty)
+
     public fun kmsKeyId(kmsKeyId: String)
 
     public fun lifecyclePolicies(lifecyclePolicies: IResolvable)
 
     public fun lifecyclePolicies(lifecyclePolicies: List<Any>)
+
+    public fun lifecyclePolicies(vararg lifecyclePolicies: Any)
 
     public fun performanceMode(performanceMode: String)
 
@@ -267,6 +277,9 @@ public open class CfnFileSystem internal constructor(
       cdkBuilder.fileSystemTags(fileSystemTags.map(ElasticFileSystemTagProperty::unwrap))
     }
 
+    override fun fileSystemTags(vararg fileSystemTags: ElasticFileSystemTagProperty): Unit =
+        fileSystemTags(fileSystemTags.toList())
+
     override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
     }
@@ -278,6 +291,9 @@ public open class CfnFileSystem internal constructor(
     override fun lifecyclePolicies(lifecyclePolicies: List<Any>) {
       cdkBuilder.lifecyclePolicies(lifecyclePolicies)
     }
+
+    override fun lifecyclePolicies(vararg lifecyclePolicies: Any): Unit =
+        lifecyclePolicies(lifecyclePolicies.toList())
 
     override fun performanceMode(performanceMode: String) {
       cdkBuilder.performanceMode(performanceMode)
@@ -592,6 +608,8 @@ public open class CfnFileSystem internal constructor(
       public fun destinations(destinations: IResolvable)
 
       public fun destinations(destinations: List<Any>)
+
+      public fun destinations(vararg destinations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -607,6 +625,9 @@ public open class CfnFileSystem internal constructor(
       override fun destinations(destinations: List<Any>) {
         cdkBuilder.destinations(destinations)
       }
+
+      override fun destinations(vararg destinations: Any): Unit =
+          destinations(destinations.toList())
 
       public fun build():
           software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationConfigurationProperty =

@@ -17,6 +17,8 @@ public interface PipelineNotifyOnOptions : NotificationRuleOptions {
 
     public fun events(events: List<PipelineNotificationEvents>)
 
+    public fun events(vararg events: PipelineNotificationEvents)
+
     public fun notificationRuleName(notificationRuleName: String)
   }
 
@@ -36,6 +38,8 @@ public interface PipelineNotifyOnOptions : NotificationRuleOptions {
     override fun events(events: List<PipelineNotificationEvents>) {
       cdkBuilder.events(events.map(PipelineNotificationEvents::unwrap))
     }
+
+    override fun events(vararg events: PipelineNotificationEvents): Unit = events(events.toList())
 
     override fun notificationRuleName(notificationRuleName: String) {
       cdkBuilder.notificationRuleName(notificationRuleName)

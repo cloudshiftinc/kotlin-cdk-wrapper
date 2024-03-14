@@ -33,7 +33,11 @@ public open class LayerVersion internal constructor(
 
     public fun compatibleArchitectures(compatibleArchitectures: List<Architecture>)
 
+    public fun compatibleArchitectures(vararg compatibleArchitectures: Architecture)
+
     public fun compatibleRuntimes(compatibleRuntimes: List<Runtime>)
+
+    public fun compatibleRuntimes(vararg compatibleRuntimes: Runtime)
 
     public fun description(description: String)
 
@@ -59,9 +63,15 @@ public open class LayerVersion internal constructor(
       cdkBuilder.compatibleArchitectures(compatibleArchitectures.map(Architecture::unwrap))
     }
 
+    override fun compatibleArchitectures(vararg compatibleArchitectures: Architecture): Unit =
+        compatibleArchitectures(compatibleArchitectures.toList())
+
     override fun compatibleRuntimes(compatibleRuntimes: List<Runtime>) {
       cdkBuilder.compatibleRuntimes(compatibleRuntimes.map(Runtime::unwrap))
     }
+
+    override fun compatibleRuntimes(vararg compatibleRuntimes: Runtime): Unit =
+        compatibleRuntimes(compatibleRuntimes.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)

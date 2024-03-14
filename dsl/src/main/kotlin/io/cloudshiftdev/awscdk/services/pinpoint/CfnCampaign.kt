@@ -30,6 +30,9 @@ public open class CfnCampaign internal constructor(
     unwrap(this).setAdditionalTreatments(__idx_ac66f0)
   }
 
+  public open fun additionalTreatments(vararg __idx_ac66f0: Any): Unit =
+      additionalTreatments(__idx_ac66f0.toList())
+
   public open fun applicationId(): String = unwrap(this).getApplicationId()
 
   public open fun applicationId(`value`: String) {
@@ -207,6 +210,8 @@ public open class CfnCampaign internal constructor(
 
     public fun additionalTreatments(additionalTreatments: List<Any>)
 
+    public fun additionalTreatments(vararg additionalTreatments: Any)
+
     public fun applicationId(applicationId: String)
 
     public fun campaignHook(campaignHook: IResolvable)
@@ -298,6 +303,9 @@ public open class CfnCampaign internal constructor(
     override fun additionalTreatments(additionalTreatments: List<Any>) {
       cdkBuilder.additionalTreatments(additionalTreatments)
     }
+
+    override fun additionalTreatments(vararg additionalTreatments: Any): Unit =
+        additionalTreatments(additionalTreatments.toList())
 
     override fun applicationId(applicationId: String) {
       cdkBuilder.applicationId(applicationId)
@@ -855,6 +863,8 @@ public open class CfnCampaign internal constructor(
 
       public fun content(content: List<Any>)
 
+      public fun content(vararg content: Any)
+
       public fun customConfig(customConfig: Any)
 
       public fun layout(layout: String)
@@ -873,6 +883,8 @@ public open class CfnCampaign internal constructor(
       override fun content(content: List<Any>) {
         cdkBuilder.content(content)
       }
+
+      override fun content(vararg content: Any): Unit = content(content.toList())
 
       override fun customConfig(customConfig: Any) {
         cdkBuilder.customConfig(customConfig)
@@ -1228,6 +1240,8 @@ public open class CfnCampaign internal constructor(
       public fun deliveryUri(deliveryUri: String)
 
       public fun endpointTypes(endpointTypes: List<String>)
+
+      public fun endpointTypes(vararg endpointTypes: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1243,6 +1257,9 @@ public open class CfnCampaign internal constructor(
       override fun endpointTypes(endpointTypes: List<String>) {
         cdkBuilder.endpointTypes(endpointTypes)
       }
+
+      override fun endpointTypes(vararg endpointTypes: String): Unit =
+          endpointTypes(endpointTypes.toList())
 
       public fun build():
           software.amazon.awscdk.services.pinpoint.CfnCampaign.CustomDeliveryConfigurationProperty =
@@ -2114,6 +2131,8 @@ public open class CfnCampaign internal constructor(
       public fun dimensionType(dimensionType: String)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2128,6 +2147,8 @@ public open class CfnCampaign internal constructor(
       override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build(): software.amazon.awscdk.services.pinpoint.CfnCampaign.SetDimensionProperty
           = cdkBuilder.build()
@@ -2703,6 +2724,8 @@ public open class CfnCampaign internal constructor(
       public fun attributeType(attributeType: String)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2717,6 +2740,8 @@ public open class CfnCampaign internal constructor(
       override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.pinpoint.CfnCampaign.AttributeDimensionProperty =

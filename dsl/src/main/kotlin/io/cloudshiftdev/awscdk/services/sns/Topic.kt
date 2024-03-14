@@ -43,6 +43,8 @@ public open class Topic internal constructor(
 
     public fun loggingConfigs(loggingConfigs: List<LoggingConfig>)
 
+    public fun loggingConfigs(vararg loggingConfigs: LoggingConfig)
+
     public fun masterKey(masterKey: IKey)
 
     public fun messageRetentionPeriodInDays(messageRetentionPeriodInDays: Number)
@@ -76,6 +78,9 @@ public open class Topic internal constructor(
     override fun loggingConfigs(loggingConfigs: List<LoggingConfig>) {
       cdkBuilder.loggingConfigs(loggingConfigs.map(LoggingConfig::unwrap))
     }
+
+    override fun loggingConfigs(vararg loggingConfigs: LoggingConfig): Unit =
+        loggingConfigs(loggingConfigs.toList())
 
     override fun masterKey(masterKey: IKey) {
       cdkBuilder.masterKey(masterKey.let(IKey::unwrap))

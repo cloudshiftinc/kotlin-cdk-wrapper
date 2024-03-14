@@ -19,6 +19,8 @@ public interface OAuthSettings {
   public interface Builder {
     public fun callbackUrls(callbackUrls: List<String>)
 
+    public fun callbackUrls(vararg callbackUrls: String)
+
     public fun flows(flows: OAuthFlows)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -27,7 +29,11 @@ public interface OAuthSettings {
 
     public fun logoutUrls(logoutUrls: List<String>)
 
+    public fun logoutUrls(vararg logoutUrls: String)
+
     public fun scopes(scopes: List<OAuthScope>)
+
+    public fun scopes(vararg scopes: OAuthScope)
   }
 
   private class BuilderImpl : Builder {
@@ -37,6 +43,9 @@ public interface OAuthSettings {
     override fun callbackUrls(callbackUrls: List<String>) {
       cdkBuilder.callbackUrls(callbackUrls)
     }
+
+    override fun callbackUrls(vararg callbackUrls: String): Unit =
+        callbackUrls(callbackUrls.toList())
 
     override fun flows(flows: OAuthFlows) {
       cdkBuilder.flows(flows.let(OAuthFlows::unwrap))
@@ -50,9 +59,13 @@ public interface OAuthSettings {
       cdkBuilder.logoutUrls(logoutUrls)
     }
 
+    override fun logoutUrls(vararg logoutUrls: String): Unit = logoutUrls(logoutUrls.toList())
+
     override fun scopes(scopes: List<OAuthScope>) {
       cdkBuilder.scopes(scopes.map(OAuthScope::unwrap))
     }
+
+    override fun scopes(vararg scopes: OAuthScope): Unit = scopes(scopes.toList())
 
     public fun build(): software.amazon.awscdk.services.cognito.OAuthSettings = cdkBuilder.build()
   }

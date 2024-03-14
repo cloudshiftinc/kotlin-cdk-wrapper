@@ -23,6 +23,8 @@ public open class App internal constructor(
 
     public fun policyValidationBeta1(policyValidationBeta1: List<IPolicyValidationPluginBeta1>)
 
+    public fun policyValidationBeta1(vararg policyValidationBeta1: IPolicyValidationPluginBeta1)
+
     public fun postCliContext(postCliContext: Map<String, Any>)
 
     public fun stackTraces(stackTraces: Boolean)
@@ -57,6 +59,9 @@ public open class App internal constructor(
     override fun policyValidationBeta1(policyValidationBeta1: List<IPolicyValidationPluginBeta1>) {
       cdkBuilder.policyValidationBeta1(policyValidationBeta1.map(IPolicyValidationPluginBeta1::unwrap))
     }
+
+    override fun policyValidationBeta1(vararg policyValidationBeta1: IPolicyValidationPluginBeta1):
+        Unit = policyValidationBeta1(policyValidationBeta1.toList())
 
     override fun postCliContext(postCliContext: Map<String, Any>) {
       cdkBuilder.postCliContext(postCliContext)

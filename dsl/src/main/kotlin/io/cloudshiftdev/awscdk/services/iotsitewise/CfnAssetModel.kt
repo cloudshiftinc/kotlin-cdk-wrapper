@@ -29,6 +29,9 @@ public open class CfnAssetModel internal constructor(
     unwrap(this).setAssetModelCompositeModels(__idx_ac66f0)
   }
 
+  public open fun assetModelCompositeModels(vararg __idx_ac66f0: Any): Unit =
+      assetModelCompositeModels(__idx_ac66f0.toList())
+
   public open fun assetModelDescription(): String? = unwrap(this).getAssetModelDescription()
 
   public open fun assetModelDescription(`value`: String) {
@@ -51,6 +54,9 @@ public open class CfnAssetModel internal constructor(
     unwrap(this).setAssetModelHierarchies(__idx_ac66f0)
   }
 
+  public open fun assetModelHierarchies(vararg __idx_ac66f0: Any): Unit =
+      assetModelHierarchies(__idx_ac66f0.toList())
+
   public open fun assetModelName(): String = unwrap(this).getAssetModelName()
 
   public open fun assetModelName(`value`: String) {
@@ -66,6 +72,9 @@ public open class CfnAssetModel internal constructor(
   public open fun assetModelProperties(__idx_ac66f0: List<Any>) {
     unwrap(this).setAssetModelProperties(__idx_ac66f0)
   }
+
+  public open fun assetModelProperties(vararg __idx_ac66f0: Any): Unit =
+      assetModelProperties(__idx_ac66f0.toList())
 
   public open fun assetModelType(): String? = unwrap(this).getAssetModelType()
 
@@ -90,10 +99,14 @@ public open class CfnAssetModel internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun assetModelCompositeModels(assetModelCompositeModels: IResolvable)
 
     public fun assetModelCompositeModels(assetModelCompositeModels: List<Any>)
+
+    public fun assetModelCompositeModels(vararg assetModelCompositeModels: Any)
 
     public fun assetModelDescription(assetModelDescription: String)
 
@@ -103,15 +116,21 @@ public open class CfnAssetModel internal constructor(
 
     public fun assetModelHierarchies(assetModelHierarchies: List<Any>)
 
+    public fun assetModelHierarchies(vararg assetModelHierarchies: Any)
+
     public fun assetModelName(assetModelName: String)
 
     public fun assetModelProperties(assetModelProperties: IResolvable)
 
     public fun assetModelProperties(assetModelProperties: List<Any>)
 
+    public fun assetModelProperties(vararg assetModelProperties: Any)
+
     public fun assetModelType(assetModelType: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -129,6 +148,9 @@ public open class CfnAssetModel internal constructor(
       cdkBuilder.assetModelCompositeModels(assetModelCompositeModels)
     }
 
+    override fun assetModelCompositeModels(vararg assetModelCompositeModels: Any): Unit =
+        assetModelCompositeModels(assetModelCompositeModels.toList())
+
     override fun assetModelDescription(assetModelDescription: String) {
       cdkBuilder.assetModelDescription(assetModelDescription)
     }
@@ -145,6 +167,9 @@ public open class CfnAssetModel internal constructor(
       cdkBuilder.assetModelHierarchies(assetModelHierarchies)
     }
 
+    override fun assetModelHierarchies(vararg assetModelHierarchies: Any): Unit =
+        assetModelHierarchies(assetModelHierarchies.toList())
+
     override fun assetModelName(assetModelName: String) {
       cdkBuilder.assetModelName(assetModelName)
     }
@@ -157,6 +182,9 @@ public open class CfnAssetModel internal constructor(
       cdkBuilder.assetModelProperties(assetModelProperties)
     }
 
+    override fun assetModelProperties(vararg assetModelProperties: Any): Unit =
+        assetModelProperties(assetModelProperties.toList())
+
     override fun assetModelType(assetModelType: String) {
       cdkBuilder.assetModelType(assetModelType)
     }
@@ -164,6 +192,8 @@ public open class CfnAssetModel internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.iotsitewise.CfnAssetModel =
         cdkBuilder.build()
@@ -409,6 +439,8 @@ public open class CfnAssetModel internal constructor(
 
       public fun compositeModelProperties(compositeModelProperties: List<Any>)
 
+      public fun compositeModelProperties(vararg compositeModelProperties: Any)
+
       public fun description(description: String)
 
       public fun externalId(externalId: String)
@@ -421,6 +453,8 @@ public open class CfnAssetModel internal constructor(
           fun parentAssetModelCompositeModelExternalId(parentAssetModelCompositeModelExternalId: String)
 
       public fun path(path: List<String>)
+
+      public fun path(vararg path: String)
 
       public fun type(type: String)
     }
@@ -442,6 +476,9 @@ public open class CfnAssetModel internal constructor(
       override fun compositeModelProperties(compositeModelProperties: List<Any>) {
         cdkBuilder.compositeModelProperties(compositeModelProperties)
       }
+
+      override fun compositeModelProperties(vararg compositeModelProperties: Any): Unit =
+          compositeModelProperties(compositeModelProperties.toList())
 
       override fun description(description: String) {
         cdkBuilder.description(description)
@@ -467,6 +504,8 @@ public open class CfnAssetModel internal constructor(
       override fun path(path: List<String>) {
         cdkBuilder.path(path)
       }
+
+      override fun path(vararg path: String): Unit = path(path.toList())
 
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -609,6 +648,8 @@ public open class CfnAssetModel internal constructor(
 
       public fun variables(variables: List<Any>)
 
+      public fun variables(vararg variables: Any)
+
       public fun window(window: IResolvable)
 
       public fun window(window: MetricWindowProperty)
@@ -634,6 +675,8 @@ public open class CfnAssetModel internal constructor(
       override fun variables(variables: List<Any>) {
         cdkBuilder.variables(variables)
       }
+
+      override fun variables(vararg variables: Any): Unit = variables(variables.toList())
 
       override fun window(window: IResolvable) {
         cdkBuilder.window(window.let(IResolvable::unwrap))
@@ -929,6 +972,8 @@ public open class CfnAssetModel internal constructor(
       public fun variables(variables: IResolvable)
 
       public fun variables(variables: List<Any>)
+
+      public fun variables(vararg variables: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -947,6 +992,8 @@ public open class CfnAssetModel internal constructor(
       override fun variables(variables: List<Any>) {
         cdkBuilder.variables(variables)
       }
+
+      override fun variables(vararg variables: Any): Unit = variables(variables.toList())
 
       public fun build():
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.TransformProperty =
@@ -1150,6 +1197,8 @@ public open class CfnAssetModel internal constructor(
       public fun propertyPath(propertyPath: IResolvable)
 
       public fun propertyPath(propertyPath: List<Any>)
+
+      public fun propertyPath(vararg propertyPath: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1188,6 +1237,9 @@ public open class CfnAssetModel internal constructor(
       override fun propertyPath(propertyPath: List<Any>) {
         cdkBuilder.propertyPath(propertyPath)
       }
+
+      override fun propertyPath(vararg propertyPath: Any): Unit =
+          propertyPath(propertyPath.toList())
 
       public fun build():
           software.amazon.awscdk.services.iotsitewise.CfnAssetModel.VariableValueProperty =

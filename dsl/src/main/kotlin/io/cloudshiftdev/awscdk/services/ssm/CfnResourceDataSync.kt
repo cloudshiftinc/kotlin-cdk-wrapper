@@ -222,6 +222,8 @@ public open class CfnResourceDataSync internal constructor(
       public fun organizationSourceType(organizationSourceType: String)
 
       public fun organizationalUnits(organizationalUnits: List<String>)
+
+      public fun organizationalUnits(vararg organizationalUnits: String)
     }
 
     private class BuilderImpl : Builder {
@@ -237,6 +239,9 @@ public open class CfnResourceDataSync internal constructor(
       override fun organizationalUnits(organizationalUnits: List<String>) {
         cdkBuilder.organizationalUnits(organizationalUnits)
       }
+
+      override fun organizationalUnits(vararg organizationalUnits: String): Unit =
+          organizationalUnits(organizationalUnits.toList())
 
       public fun build():
           software.amazon.awscdk.services.ssm.CfnResourceDataSync.AwsOrganizationsSourceProperty =
@@ -386,6 +391,8 @@ public open class CfnResourceDataSync internal constructor(
 
       public fun sourceRegions(sourceRegions: List<String>)
 
+      public fun sourceRegions(vararg sourceRegions: String)
+
       public fun sourceType(sourceType: String)
     }
 
@@ -420,6 +427,9 @@ public open class CfnResourceDataSync internal constructor(
         cdkBuilder.sourceRegions(sourceRegions)
       }
 
+      override fun sourceRegions(vararg sourceRegions: String): Unit =
+          sourceRegions(sourceRegions.toList())
+
       override fun sourceType(sourceType: String) {
         cdkBuilder.sourceType(sourceType)
       }
@@ -436,7 +446,7 @@ public open class CfnResourceDataSync internal constructor(
 
       override fun includeFutureRegions(): Any? = unwrap(this).getIncludeFutureRegions()
 
-      override fun sourceRegions(): List<String> = unwrap(this).getSourceRegions() ?: emptyList()
+      override fun sourceRegions(): List<String> = unwrap(this).getSourceRegions()
 
       override fun sourceType(): String = unwrap(this).getSourceType()
     }

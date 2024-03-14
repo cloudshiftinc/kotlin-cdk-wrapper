@@ -97,9 +97,15 @@ public open class TriggerFunction internal constructor(
 
     public fun events(events: List<IEventSource>)
 
+    public fun events(vararg events: IEventSource)
+
     public fun executeAfter(executeAfter: List<CloudshiftdevConstructsConstruct>)
 
+    public fun executeAfter(vararg executeAfter: CloudshiftdevConstructsConstruct)
+
     public fun executeBefore(executeBefore: List<CloudshiftdevConstructsConstruct>)
+
+    public fun executeBefore(vararg executeBefore: CloudshiftdevConstructsConstruct)
 
     public fun executeOnHandlerChange(executeOnHandlerChange: Boolean)
 
@@ -111,11 +117,15 @@ public open class TriggerFunction internal constructor(
 
     public fun initialPolicy(initialPolicy: List<PolicyStatement>)
 
+    public fun initialPolicy(vararg initialPolicy: PolicyStatement)
+
     public fun insightsVersion(insightsVersion: LambdaInsightsVersion)
 
     public fun ipv6AllowedForDualStack(ipv6AllowedForDualStack: Boolean)
 
     public fun layers(layers: List<ILayerVersion>)
+
+    public fun layers(vararg layers: ILayerVersion)
 
     public fun logFormat(logFormat: String)
 
@@ -159,6 +169,8 @@ public open class TriggerFunction internal constructor(
     public fun runtimeManagementMode(runtimeManagementMode: RuntimeManagementMode)
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
+
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
 
     public fun snapStart(snapStart: SnapStartConf)
 
@@ -259,13 +271,21 @@ public open class TriggerFunction internal constructor(
       cdkBuilder.events(events.map(IEventSource::unwrap))
     }
 
+    override fun events(vararg events: IEventSource): Unit = events(events.toList())
+
     override fun executeAfter(executeAfter: List<CloudshiftdevConstructsConstruct>) {
       cdkBuilder.executeAfter(executeAfter.map(CloudshiftdevConstructsConstruct::unwrap))
     }
 
+    override fun executeAfter(vararg executeAfter: CloudshiftdevConstructsConstruct): Unit =
+        executeAfter(executeAfter.toList())
+
     override fun executeBefore(executeBefore: List<CloudshiftdevConstructsConstruct>) {
       cdkBuilder.executeBefore(executeBefore.map(CloudshiftdevConstructsConstruct::unwrap))
     }
+
+    override fun executeBefore(vararg executeBefore: CloudshiftdevConstructsConstruct): Unit =
+        executeBefore(executeBefore.toList())
 
     override fun executeOnHandlerChange(executeOnHandlerChange: Boolean) {
       cdkBuilder.executeOnHandlerChange(executeOnHandlerChange)
@@ -287,6 +307,9 @@ public open class TriggerFunction internal constructor(
       cdkBuilder.initialPolicy(initialPolicy.map(PolicyStatement::unwrap))
     }
 
+    override fun initialPolicy(vararg initialPolicy: PolicyStatement): Unit =
+        initialPolicy(initialPolicy.toList())
+
     override fun insightsVersion(insightsVersion: LambdaInsightsVersion) {
       cdkBuilder.insightsVersion(insightsVersion.let(LambdaInsightsVersion::unwrap))
     }
@@ -298,6 +321,8 @@ public open class TriggerFunction internal constructor(
     override fun layers(layers: List<ILayerVersion>) {
       cdkBuilder.layers(layers.map(ILayerVersion::unwrap))
     }
+
+    override fun layers(vararg layers: ILayerVersion): Unit = layers(layers.toList())
 
     override fun logFormat(logFormat: String) {
       cdkBuilder.logFormat(logFormat)
@@ -380,6 +405,9 @@ public open class TriggerFunction internal constructor(
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun snapStart(snapStart: SnapStartConf) {
       cdkBuilder.snapStart(snapStart.let(SnapStartConf::unwrap))

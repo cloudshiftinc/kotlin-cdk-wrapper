@@ -32,6 +32,9 @@ public open class CfnPermissionSet internal constructor(
     unwrap(this).setCustomerManagedPolicyReferences(__idx_ac66f0)
   }
 
+  public open fun customerManagedPolicyReferences(vararg __idx_ac66f0: Any): Unit =
+      customerManagedPolicyReferences(__idx_ac66f0.toList())
+
   public open fun description(): String? = unwrap(this).getDescription()
 
   public open fun description(`value`: String) {
@@ -59,6 +62,8 @@ public open class CfnPermissionSet internal constructor(
   public open fun managedPolicies(`value`: List<String>) {
     unwrap(this).setManagedPolicies(`value`)
   }
+
+  public open fun managedPolicies(vararg `value`: String): Unit = managedPolicies(`value`.toList())
 
   public open fun name(): String = unwrap(this).getName()
 
@@ -102,10 +107,14 @@ public open class CfnPermissionSet internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun customerManagedPolicyReferences(customerManagedPolicyReferences: IResolvable)
 
     public fun customerManagedPolicyReferences(customerManagedPolicyReferences: List<Any>)
+
+    public fun customerManagedPolicyReferences(vararg customerManagedPolicyReferences: Any)
 
     public fun description(description: String)
 
@@ -114,6 +123,8 @@ public open class CfnPermissionSet internal constructor(
     public fun instanceArn(instanceArn: String)
 
     public fun managedPolicies(managedPolicies: List<String>)
+
+    public fun managedPolicies(vararg managedPolicies: String)
 
     public fun name(name: String)
 
@@ -131,6 +142,8 @@ public open class CfnPermissionSet internal constructor(
     public fun sessionDuration(sessionDuration: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -148,6 +161,9 @@ public open class CfnPermissionSet internal constructor(
       cdkBuilder.customerManagedPolicyReferences(customerManagedPolicyReferences)
     }
 
+    override fun customerManagedPolicyReferences(vararg customerManagedPolicyReferences: Any): Unit
+        = customerManagedPolicyReferences(customerManagedPolicyReferences.toList())
+
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
@@ -163,6 +179,9 @@ public open class CfnPermissionSet internal constructor(
     override fun managedPolicies(managedPolicies: List<String>) {
       cdkBuilder.managedPolicies(managedPolicies)
     }
+
+    override fun managedPolicies(vararg managedPolicies: String): Unit =
+        managedPolicies(managedPolicies.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -193,6 +212,8 @@ public open class CfnPermissionSet internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.sso.CfnPermissionSet = cdkBuilder.build()
   }

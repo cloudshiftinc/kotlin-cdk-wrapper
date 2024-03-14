@@ -14,6 +14,8 @@ public interface EcrDockerCredentialOptions {
     public fun assumeRole(assumeRole: IRole)
 
     public fun usages(usages: List<DockerCredentialUsage>)
+
+    public fun usages(vararg usages: DockerCredentialUsage)
   }
 
   private class BuilderImpl : Builder {
@@ -27,6 +29,8 @@ public interface EcrDockerCredentialOptions {
     override fun usages(usages: List<DockerCredentialUsage>) {
       cdkBuilder.usages(usages.map(DockerCredentialUsage::unwrap))
     }
+
+    override fun usages(vararg usages: DockerCredentialUsage): Unit = usages(usages.toList())
 
     public fun build(): software.amazon.awscdk.pipelines.EcrDockerCredentialOptions =
         cdkBuilder.build()

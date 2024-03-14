@@ -62,6 +62,8 @@ public open class CfnTrustStore internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun caCertificatesBundleS3Bucket(caCertificatesBundleS3Bucket: String)
 
@@ -72,6 +74,8 @@ public open class CfnTrustStore internal constructor(
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -102,6 +106,8 @@ public open class CfnTrustStore internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStore =
         cdkBuilder.build()

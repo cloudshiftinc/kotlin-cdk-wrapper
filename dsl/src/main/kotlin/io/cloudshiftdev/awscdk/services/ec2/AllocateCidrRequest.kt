@@ -12,6 +12,8 @@ public interface AllocateCidrRequest {
   public interface Builder {
     public fun requestedSubnets(requestedSubnets: List<RequestedSubnet>)
 
+    public fun requestedSubnets(vararg requestedSubnets: RequestedSubnet)
+
     public fun vpcCidr(vpcCidr: String)
   }
 
@@ -22,6 +24,9 @@ public interface AllocateCidrRequest {
     override fun requestedSubnets(requestedSubnets: List<RequestedSubnet>) {
       cdkBuilder.requestedSubnets(requestedSubnets.map(RequestedSubnet::unwrap))
     }
+
+    override fun requestedSubnets(vararg requestedSubnets: RequestedSubnet): Unit =
+        requestedSubnets(requestedSubnets.toList())
 
     override fun vpcCidr(vpcCidr: String) {
       cdkBuilder.vpcCidr(vpcCidr)

@@ -21,6 +21,8 @@ public open class WebSocketAuthorizer internal constructor(
 
     public fun identitySource(identitySource: List<String>)
 
+    public fun identitySource(vararg identitySource: String)
+
     public fun type(type: WebSocketAuthorizerType)
 
     public fun webSocketApi(webSocketApi: IWebSocketApi)
@@ -44,6 +46,9 @@ public open class WebSocketAuthorizer internal constructor(
     override fun identitySource(identitySource: List<String>) {
       cdkBuilder.identitySource(identitySource)
     }
+
+    override fun identitySource(vararg identitySource: String): Unit =
+        identitySource(identitySource.toList())
 
     override fun type(type: WebSocketAuthorizerType) {
       cdkBuilder.type(type.let(WebSocketAuthorizerType::unwrap))

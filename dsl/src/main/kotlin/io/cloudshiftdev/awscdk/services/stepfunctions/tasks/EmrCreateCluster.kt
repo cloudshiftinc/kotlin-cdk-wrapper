@@ -34,15 +34,21 @@ public open class EmrCreateCluster internal constructor(
 
     public fun applications(applications: List<ApplicationConfigProperty>)
 
+    public fun applications(vararg applications: ApplicationConfigProperty)
+
     public fun autoScalingRole(autoScalingRole: IRole)
 
     public fun bootstrapActions(bootstrapActions: List<BootstrapActionConfigProperty>)
+
+    public fun bootstrapActions(vararg bootstrapActions: BootstrapActionConfigProperty)
 
     public fun clusterRole(clusterRole: IRole)
 
     public fun comment(comment: String)
 
     public fun configurations(configurations: List<ConfigurationProperty>)
+
+    public fun configurations(vararg configurations: ConfigurationProperty)
 
     public fun credentials(credentials: Credentials)
 
@@ -124,6 +130,9 @@ public open class EmrCreateCluster internal constructor(
       cdkBuilder.applications(applications.map(ApplicationConfigProperty::unwrap))
     }
 
+    override fun applications(vararg applications: ApplicationConfigProperty): Unit =
+        applications(applications.toList())
+
     override fun autoScalingRole(autoScalingRole: IRole) {
       cdkBuilder.autoScalingRole(autoScalingRole.let(IRole::unwrap))
     }
@@ -131,6 +140,9 @@ public open class EmrCreateCluster internal constructor(
     override fun bootstrapActions(bootstrapActions: List<BootstrapActionConfigProperty>) {
       cdkBuilder.bootstrapActions(bootstrapActions.map(BootstrapActionConfigProperty::unwrap))
     }
+
+    override fun bootstrapActions(vararg bootstrapActions: BootstrapActionConfigProperty): Unit =
+        bootstrapActions(bootstrapActions.toList())
 
     override fun clusterRole(clusterRole: IRole) {
       cdkBuilder.clusterRole(clusterRole.let(IRole::unwrap))
@@ -143,6 +155,9 @@ public open class EmrCreateCluster internal constructor(
     override fun configurations(configurations: List<ConfigurationProperty>) {
       cdkBuilder.configurations(configurations.map(ConfigurationProperty::unwrap))
     }
+
+    override fun configurations(vararg configurations: ConfigurationProperty): Unit =
+        configurations(configurations.toList())
 
     override fun credentials(credentials: Credentials) {
       cdkBuilder.credentials(credentials.let(Credentials::unwrap))
@@ -297,6 +312,8 @@ public open class EmrCreateCluster internal constructor(
 
       public fun configurations(configurations: List<ConfigurationProperty>)
 
+      public fun configurations(vararg configurations: ConfigurationProperty)
+
       public fun properties(properties: Map<String, String>)
     }
 
@@ -313,6 +330,9 @@ public open class EmrCreateCluster internal constructor(
       override fun configurations(configurations: List<ConfigurationProperty>) {
         cdkBuilder.configurations(configurations.map(ConfigurationProperty::unwrap))
       }
+
+      override fun configurations(vararg configurations: ConfigurationProperty): Unit =
+          configurations(configurations.toList())
 
       override fun properties(properties: Map<String, String>) {
         cdkBuilder.properties(properties)
@@ -646,6 +666,8 @@ public open class EmrCreateCluster internal constructor(
 
       public fun args(args: List<String>)
 
+      public fun args(vararg args: String)
+
       public fun name(name: String)
 
       public fun version(version: String)
@@ -664,6 +686,8 @@ public open class EmrCreateCluster internal constructor(
       override fun args(args: List<String>) {
         cdkBuilder.args(args)
       }
+
+      override fun args(vararg args: String): Unit = args(args.toList())
 
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -735,6 +759,8 @@ public open class EmrCreateCluster internal constructor(
 
       public fun configurations(configurations: List<ConfigurationProperty>)
 
+      public fun configurations(vararg configurations: ConfigurationProperty)
+
       public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
@@ -764,6 +790,9 @@ public open class EmrCreateCluster internal constructor(
       override fun configurations(configurations: List<ConfigurationProperty>) {
         cdkBuilder.configurations(configurations.map(ConfigurationProperty::unwrap))
       }
+
+      override fun configurations(vararg configurations: ConfigurationProperty): Unit =
+          configurations(configurations.toList())
 
       override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
         cdkBuilder.ebsConfiguration(ebsConfiguration.let(EbsConfigurationProperty::unwrap))
@@ -860,6 +889,8 @@ public open class EmrCreateCluster internal constructor(
 
       public fun configurations(configurations: List<ConfigurationProperty>)
 
+      public fun configurations(vararg configurations: ConfigurationProperty)
+
       public fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty)
 
       @Suppress("INAPPLICABLE_JVM_NAME")
@@ -900,6 +931,9 @@ public open class EmrCreateCluster internal constructor(
       override fun configurations(configurations: List<ConfigurationProperty>) {
         cdkBuilder.configurations(configurations.map(ConfigurationProperty::unwrap))
       }
+
+      override fun configurations(vararg configurations: ConfigurationProperty): Unit =
+          configurations(configurations.toList())
 
       override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
         cdkBuilder.ebsConfiguration(ebsConfiguration.let(EbsConfigurationProperty::unwrap))
@@ -1008,6 +1042,8 @@ public open class EmrCreateCluster internal constructor(
 
       public fun dimensions(dimensions: List<MetricDimensionProperty>)
 
+      public fun dimensions(vararg dimensions: MetricDimensionProperty)
+
       public fun evaluationPeriods(evaluationPeriods: Number)
 
       public fun metricName(metricName: String)
@@ -1036,6 +1072,9 @@ public open class EmrCreateCluster internal constructor(
       override fun dimensions(dimensions: List<MetricDimensionProperty>) {
         cdkBuilder.dimensions(dimensions.map(MetricDimensionProperty::unwrap))
       }
+
+      override fun dimensions(vararg dimensions: MetricDimensionProperty): Unit =
+          dimensions(dimensions.toList())
 
       override fun evaluationPeriods(evaluationPeriods: Number) {
         cdkBuilder.evaluationPeriods(evaluationPeriods)
@@ -1161,13 +1200,19 @@ public open class EmrCreateCluster internal constructor(
     public interface Builder {
       public fun additionalMasterSecurityGroups(additionalMasterSecurityGroups: List<String>)
 
+      public fun additionalMasterSecurityGroups(vararg additionalMasterSecurityGroups: String)
+
       public fun additionalSlaveSecurityGroups(additionalSlaveSecurityGroups: List<String>)
+
+      public fun additionalSlaveSecurityGroups(vararg additionalSlaveSecurityGroups: String)
 
       public fun ec2KeyName(ec2KeyName: String)
 
       public fun ec2SubnetId(ec2SubnetId: String)
 
       public fun ec2SubnetIds(ec2SubnetIds: List<String>)
+
+      public fun ec2SubnetIds(vararg ec2SubnetIds: String)
 
       public fun emrManagedMasterSecurityGroup(emrManagedMasterSecurityGroup: String)
 
@@ -1179,7 +1224,11 @@ public open class EmrCreateCluster internal constructor(
 
       public fun instanceFleets(instanceFleets: List<InstanceFleetConfigProperty>)
 
+      public fun instanceFleets(vararg instanceFleets: InstanceFleetConfigProperty)
+
       public fun instanceGroups(instanceGroups: List<InstanceGroupConfigProperty>)
+
+      public fun instanceGroups(vararg instanceGroups: InstanceGroupConfigProperty)
 
       public fun masterInstanceType(masterInstanceType: String)
 
@@ -1206,9 +1255,15 @@ public open class EmrCreateCluster internal constructor(
         cdkBuilder.additionalMasterSecurityGroups(additionalMasterSecurityGroups)
       }
 
+      override fun additionalMasterSecurityGroups(vararg additionalMasterSecurityGroups: String):
+          Unit = additionalMasterSecurityGroups(additionalMasterSecurityGroups.toList())
+
       override fun additionalSlaveSecurityGroups(additionalSlaveSecurityGroups: List<String>) {
         cdkBuilder.additionalSlaveSecurityGroups(additionalSlaveSecurityGroups)
       }
+
+      override fun additionalSlaveSecurityGroups(vararg additionalSlaveSecurityGroups: String): Unit
+          = additionalSlaveSecurityGroups(additionalSlaveSecurityGroups.toList())
 
       override fun ec2KeyName(ec2KeyName: String) {
         cdkBuilder.ec2KeyName(ec2KeyName)
@@ -1221,6 +1276,9 @@ public open class EmrCreateCluster internal constructor(
       override fun ec2SubnetIds(ec2SubnetIds: List<String>) {
         cdkBuilder.ec2SubnetIds(ec2SubnetIds)
       }
+
+      override fun ec2SubnetIds(vararg ec2SubnetIds: String): Unit =
+          ec2SubnetIds(ec2SubnetIds.toList())
 
       override fun emrManagedMasterSecurityGroup(emrManagedMasterSecurityGroup: String) {
         cdkBuilder.emrManagedMasterSecurityGroup(emrManagedMasterSecurityGroup)
@@ -1242,9 +1300,15 @@ public open class EmrCreateCluster internal constructor(
         cdkBuilder.instanceFleets(instanceFleets.map(InstanceFleetConfigProperty::unwrap))
       }
 
+      override fun instanceFleets(vararg instanceFleets: InstanceFleetConfigProperty): Unit =
+          instanceFleets(instanceFleets.toList())
+
       override fun instanceGroups(instanceGroups: List<InstanceGroupConfigProperty>) {
         cdkBuilder.instanceGroups(instanceGroups.map(InstanceGroupConfigProperty::unwrap))
       }
+
+      override fun instanceGroups(vararg instanceGroups: InstanceGroupConfigProperty): Unit =
+          instanceGroups(instanceGroups.toList())
 
       override fun masterInstanceType(masterInstanceType: String) {
         cdkBuilder.masterInstanceType(masterInstanceType)
@@ -1565,6 +1629,8 @@ public open class EmrCreateCluster internal constructor(
 
       public fun instanceTypeConfigs(instanceTypeConfigs: List<InstanceTypeConfigProperty>)
 
+      public fun instanceTypeConfigs(vararg instanceTypeConfigs: InstanceTypeConfigProperty)
+
       public
           fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty)
 
@@ -1593,6 +1659,9 @@ public open class EmrCreateCluster internal constructor(
       override fun instanceTypeConfigs(instanceTypeConfigs: List<InstanceTypeConfigProperty>) {
         cdkBuilder.instanceTypeConfigs(instanceTypeConfigs.map(InstanceTypeConfigProperty::unwrap))
       }
+
+      override fun instanceTypeConfigs(vararg instanceTypeConfigs: InstanceTypeConfigProperty): Unit
+          = instanceTypeConfigs(instanceTypeConfigs.toList())
 
       override
           fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty) {
@@ -1769,6 +1838,8 @@ public open class EmrCreateCluster internal constructor(
       public fun constraints(constraints: ScalingConstraintsProperty.Builder.() -> Unit)
 
       public fun rules(rules: List<ScalingRuleProperty>)
+
+      public fun rules(vararg rules: ScalingRuleProperty)
     }
 
     private class BuilderImpl : Builder {
@@ -1789,6 +1860,8 @@ public open class EmrCreateCluster internal constructor(
       override fun rules(rules: List<ScalingRuleProperty>) {
         cdkBuilder.rules(rules.map(ScalingRuleProperty::unwrap))
       }
+
+      override fun rules(vararg rules: ScalingRuleProperty): Unit = rules(rules.toList())
 
       public fun build():
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.AutoScalingPolicyProperty
@@ -2093,6 +2166,8 @@ public open class EmrCreateCluster internal constructor(
       public fun availabilityZone(availabilityZone: String)
 
       public fun availabilityZones(availabilityZones: List<String>)
+
+      public fun availabilityZones(vararg availabilityZones: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2108,6 +2183,9 @@ public open class EmrCreateCluster internal constructor(
       override fun availabilityZones(availabilityZones: List<String>) {
         cdkBuilder.availabilityZones(availabilityZones)
       }
+
+      override fun availabilityZones(vararg availabilityZones: String): Unit =
+          availabilityZones(availabilityZones.toList())
 
       public fun build():
           software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster.PlacementTypeProperty
@@ -2152,6 +2230,8 @@ public open class EmrCreateCluster internal constructor(
     public interface Builder {
       public fun args(args: List<String>)
 
+      public fun args(vararg args: String)
+
       public fun path(path: String)
     }
 
@@ -2164,6 +2244,8 @@ public open class EmrCreateCluster internal constructor(
       override fun args(args: List<String>) {
         cdkBuilder.args(args)
       }
+
+      override fun args(vararg args: String): Unit = args(args.toList())
 
       override fun path(path: String) {
         cdkBuilder.path(path)
@@ -2436,6 +2518,8 @@ public open class EmrCreateCluster internal constructor(
     public interface Builder {
       public fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<EbsBlockDeviceConfigProperty>)
 
+      public fun ebsBlockDeviceConfigs(vararg ebsBlockDeviceConfigs: EbsBlockDeviceConfigProperty)
+
       public fun ebsOptimized(ebsOptimized: Boolean)
     }
 
@@ -2449,6 +2533,10 @@ public open class EmrCreateCluster internal constructor(
           fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<EbsBlockDeviceConfigProperty>) {
         cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.map(EbsBlockDeviceConfigProperty::unwrap))
       }
+
+      override fun ebsBlockDeviceConfigs(vararg
+          ebsBlockDeviceConfigs: EbsBlockDeviceConfigProperty): Unit =
+          ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.toList())
 
       override fun ebsOptimized(ebsOptimized: Boolean) {
         cdkBuilder.ebsOptimized(ebsOptimized)

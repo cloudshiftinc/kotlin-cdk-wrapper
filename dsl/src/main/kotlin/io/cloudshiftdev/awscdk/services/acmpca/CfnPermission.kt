@@ -12,11 +12,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnPermission internal constructor(
   private val cdkObject: software.amazon.awscdk.services.acmpca.CfnPermission,
 ) : CfnResource(cdkObject), IInspectable {
-  public open fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
+  public open fun actions(): List<String> = unwrap(this).getActions()
 
   public open fun actions(`value`: List<String>) {
     unwrap(this).setActions(`value`)
   }
+
+  public open fun actions(vararg `value`: String): Unit = actions(`value`.toList())
 
   public open fun certificateAuthorityArn(): String = unwrap(this).getCertificateAuthorityArn()
 
@@ -43,6 +45,8 @@ public open class CfnPermission internal constructor(
   public interface Builder {
     public fun actions(actions: List<String>)
 
+    public fun actions(vararg actions: String)
+
     public fun certificateAuthorityArn(certificateAuthorityArn: String)
 
     public fun principal(principal: String)
@@ -60,6 +64,8 @@ public open class CfnPermission internal constructor(
     override fun actions(actions: List<String>) {
       cdkBuilder.actions(actions)
     }
+
+    override fun actions(vararg actions: String): Unit = actions(actions.toList())
 
     override fun certificateAuthorityArn(certificateAuthorityArn: String) {
       cdkBuilder.certificateAuthorityArn(certificateAuthorityArn)

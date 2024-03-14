@@ -48,11 +48,15 @@ public open class CfnResourceShare internal constructor(
     unwrap(this).setPermissionArns(`value`)
   }
 
+  public open fun permissionArns(vararg `value`: String): Unit = permissionArns(`value`.toList())
+
   public open fun principals(): List<String> = unwrap(this).getPrincipals() ?: emptyList()
 
   public open fun principals(`value`: List<String>) {
     unwrap(this).setPrincipals(`value`)
   }
+
+  public open fun principals(vararg `value`: String): Unit = principals(`value`.toList())
 
   public open fun resourceArns(): List<String> = unwrap(this).getResourceArns() ?: emptyList()
 
@@ -60,11 +64,15 @@ public open class CfnResourceShare internal constructor(
     unwrap(this).setResourceArns(`value`)
   }
 
+  public open fun resourceArns(vararg `value`: String): Unit = resourceArns(`value`.toList())
+
   public open fun sources(): List<String> = unwrap(this).getSources() ?: emptyList()
 
   public open fun sources(`value`: List<String>) {
     unwrap(this).setSources(`value`)
   }
+
+  public open fun sources(vararg `value`: String): Unit = sources(`value`.toList())
 
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
@@ -75,6 +83,8 @@ public open class CfnResourceShare internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun allowExternalPrincipals(allowExternalPrincipals: Boolean)
 
@@ -84,13 +94,23 @@ public open class CfnResourceShare internal constructor(
 
     public fun permissionArns(permissionArns: List<String>)
 
+    public fun permissionArns(vararg permissionArns: String)
+
     public fun principals(principals: List<String>)
+
+    public fun principals(vararg principals: String)
 
     public fun resourceArns(resourceArns: List<String>)
 
+    public fun resourceArns(vararg resourceArns: String)
+
     public fun sources(sources: List<String>)
 
+    public fun sources(vararg sources: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -116,21 +136,33 @@ public open class CfnResourceShare internal constructor(
       cdkBuilder.permissionArns(permissionArns)
     }
 
+    override fun permissionArns(vararg permissionArns: String): Unit =
+        permissionArns(permissionArns.toList())
+
     override fun principals(principals: List<String>) {
       cdkBuilder.principals(principals)
     }
+
+    override fun principals(vararg principals: String): Unit = principals(principals.toList())
 
     override fun resourceArns(resourceArns: List<String>) {
       cdkBuilder.resourceArns(resourceArns)
     }
 
+    override fun resourceArns(vararg resourceArns: String): Unit =
+        resourceArns(resourceArns.toList())
+
     override fun sources(sources: List<String>) {
       cdkBuilder.sources(sources)
     }
 
+    override fun sources(vararg sources: String): Unit = sources(sources.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ram.CfnResourceShare = cdkBuilder.build()
   }

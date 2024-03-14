@@ -32,6 +32,9 @@ public open class CfnLiveSource internal constructor(
     unwrap(this).setHttpPackageConfigurations(__idx_ac66f0)
   }
 
+  public open fun httpPackageConfigurations(vararg __idx_ac66f0: Any): Unit =
+      httpPackageConfigurations(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -54,16 +57,22 @@ public open class CfnLiveSource internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun httpPackageConfigurations(httpPackageConfigurations: IResolvable)
 
     public fun httpPackageConfigurations(httpPackageConfigurations: List<Any>)
+
+    public fun httpPackageConfigurations(vararg httpPackageConfigurations: Any)
 
     public fun liveSourceName(liveSourceName: String)
 
     public fun sourceLocationName(sourceLocationName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -81,6 +90,9 @@ public open class CfnLiveSource internal constructor(
       cdkBuilder.httpPackageConfigurations(httpPackageConfigurations)
     }
 
+    override fun httpPackageConfigurations(vararg httpPackageConfigurations: Any): Unit =
+        httpPackageConfigurations(httpPackageConfigurations.toList())
+
     override fun liveSourceName(liveSourceName: String) {
       cdkBuilder.liveSourceName(liveSourceName)
     }
@@ -92,6 +104,8 @@ public open class CfnLiveSource internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.mediatailor.CfnLiveSource =
         cdkBuilder.build()

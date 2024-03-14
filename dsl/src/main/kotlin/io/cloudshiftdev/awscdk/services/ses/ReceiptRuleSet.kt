@@ -32,6 +32,8 @@ public open class ReceiptRuleSet internal constructor(
     public fun receiptRuleSetName(receiptRuleSetName: String)
 
     public fun rules(rules: List<ReceiptRuleOptions>)
+
+    public fun rules(vararg rules: ReceiptRuleOptions)
   }
 
   private class BuilderImpl(
@@ -52,6 +54,8 @@ public open class ReceiptRuleSet internal constructor(
     override fun rules(rules: List<ReceiptRuleOptions>) {
       cdkBuilder.rules(rules.map(ReceiptRuleOptions::unwrap))
     }
+
+    override fun rules(vararg rules: ReceiptRuleOptions): Unit = rules(rules.toList())
 
     public fun build(): software.amazon.awscdk.services.ses.ReceiptRuleSet = cdkBuilder.build()
   }

@@ -43,6 +43,8 @@ public open class CfnRule internal constructor(
     unwrap(this).setPredicates(__idx_ac66f0)
   }
 
+  public open fun predicates(vararg __idx_ac66f0: Any): Unit = predicates(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun metricName(metricName: String)
 
@@ -51,6 +53,8 @@ public open class CfnRule internal constructor(
     public fun predicates(predicates: IResolvable)
 
     public fun predicates(predicates: List<Any>)
+
+    public fun predicates(vararg predicates: Any)
   }
 
   private class BuilderImpl(
@@ -75,6 +79,8 @@ public open class CfnRule internal constructor(
     override fun predicates(predicates: List<Any>) {
       cdkBuilder.predicates(predicates)
     }
+
+    override fun predicates(vararg predicates: Any): Unit = predicates(predicates.toList())
 
     public fun build(): software.amazon.awscdk.services.waf.regional.CfnRule = cdkBuilder.build()
   }

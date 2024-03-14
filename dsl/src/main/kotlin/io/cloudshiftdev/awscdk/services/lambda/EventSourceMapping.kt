@@ -30,7 +30,11 @@ public open class EventSourceMapping internal constructor(
 
     public fun filters(filters: List<Map<String, Any>>)
 
+    public fun filters(vararg filters: Map<String, Any>)
+
     public fun kafkaBootstrapServers(kafkaBootstrapServers: List<String>)
+
+    public fun kafkaBootstrapServers(vararg kafkaBootstrapServers: String)
 
     public fun kafkaConsumerGroupId(kafkaConsumerGroupId: String)
 
@@ -52,6 +56,9 @@ public open class EventSourceMapping internal constructor(
 
     public
         fun sourceAccessConfigurations(sourceAccessConfigurations: List<SourceAccessConfiguration>)
+
+    public fun sourceAccessConfigurations(vararg
+        sourceAccessConfigurations: SourceAccessConfiguration)
 
     public fun startingPosition(startingPosition: StartingPosition)
 
@@ -91,9 +98,14 @@ public open class EventSourceMapping internal constructor(
       cdkBuilder.filters(filters)
     }
 
+    override fun filters(vararg filters: Map<String, Any>): Unit = filters(filters.toList())
+
     override fun kafkaBootstrapServers(kafkaBootstrapServers: List<String>) {
       cdkBuilder.kafkaBootstrapServers(kafkaBootstrapServers)
     }
+
+    override fun kafkaBootstrapServers(vararg kafkaBootstrapServers: String): Unit =
+        kafkaBootstrapServers(kafkaBootstrapServers.toList())
 
     override fun kafkaConsumerGroupId(kafkaConsumerGroupId: String) {
       cdkBuilder.kafkaConsumerGroupId(kafkaConsumerGroupId)
@@ -135,6 +147,10 @@ public open class EventSourceMapping internal constructor(
         fun sourceAccessConfigurations(sourceAccessConfigurations: List<SourceAccessConfiguration>) {
       cdkBuilder.sourceAccessConfigurations(sourceAccessConfigurations.map(SourceAccessConfiguration::unwrap))
     }
+
+    override fun sourceAccessConfigurations(vararg
+        sourceAccessConfigurations: SourceAccessConfiguration): Unit =
+        sourceAccessConfigurations(sourceAccessConfigurations.toList())
 
     override fun startingPosition(startingPosition: StartingPosition) {
       cdkBuilder.startingPosition(startingPosition.let(StartingPosition::unwrap))

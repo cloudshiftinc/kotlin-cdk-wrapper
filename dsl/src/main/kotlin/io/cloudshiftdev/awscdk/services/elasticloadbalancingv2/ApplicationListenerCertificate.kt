@@ -13,6 +13,8 @@ public open class ApplicationListenerCertificate internal constructor(
   public interface Builder {
     public fun certificates(certificates: List<IListenerCertificate>)
 
+    public fun certificates(vararg certificates: IListenerCertificate)
+
     public fun listener(listener: IApplicationListener)
   }
 
@@ -29,6 +31,9 @@ public open class ApplicationListenerCertificate internal constructor(
     override fun certificates(certificates: List<IListenerCertificate>) {
       cdkBuilder.certificates(certificates.map(IListenerCertificate::unwrap))
     }
+
+    override fun certificates(vararg certificates: IListenerCertificate): Unit =
+        certificates(certificates.toList())
 
     override fun listener(listener: IApplicationListener) {
       cdkBuilder.listener(listener.let(IApplicationListener::unwrap))

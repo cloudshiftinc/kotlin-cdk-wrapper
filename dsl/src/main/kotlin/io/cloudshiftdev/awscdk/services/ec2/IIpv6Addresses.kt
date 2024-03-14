@@ -59,8 +59,7 @@ public interface IIpv6Addresses {
     }
 
     override fun createIpv6CidrBlocks(arg0: CreateIpv6CidrBlocksRequest): List<String> =
-        unwrap(this).createIpv6CidrBlocks(arg0.let(CreateIpv6CidrBlocksRequest::unwrap)) ?:
-        emptyList()
+        unwrap(this).createIpv6CidrBlocks(arg0.let(CreateIpv6CidrBlocksRequest::unwrap))
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d2abe7832c051bc6bb30a8c48bbd31a9320e5be2c4c7819500bd41b1f161a206")

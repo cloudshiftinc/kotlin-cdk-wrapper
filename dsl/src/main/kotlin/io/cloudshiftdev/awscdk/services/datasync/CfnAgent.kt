@@ -42,11 +42,16 @@ public open class CfnAgent internal constructor(
     unwrap(this).setSecurityGroupArns(`value`)
   }
 
+  public open fun securityGroupArns(vararg `value`: String): Unit =
+      securityGroupArns(`value`.toList())
+
   public open fun subnetArns(): List<String> = unwrap(this).getSubnetArns() ?: emptyList()
 
   public open fun subnetArns(`value`: List<String>) {
     unwrap(this).setSubnetArns(`value`)
   }
+
+  public open fun subnetArns(vararg `value`: String): Unit = subnetArns(`value`.toList())
 
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
@@ -56,6 +61,8 @@ public open class CfnAgent internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun vpcEndpointId(): String? = unwrap(this).getVpcEndpointId()
 
@@ -70,9 +77,15 @@ public open class CfnAgent internal constructor(
 
     public fun securityGroupArns(securityGroupArns: List<String>)
 
+    public fun securityGroupArns(vararg securityGroupArns: String)
+
     public fun subnetArns(subnetArns: List<String>)
 
+    public fun subnetArns(vararg subnetArns: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun vpcEndpointId(vpcEndpointId: String)
   }
@@ -96,13 +109,20 @@ public open class CfnAgent internal constructor(
       cdkBuilder.securityGroupArns(securityGroupArns)
     }
 
+    override fun securityGroupArns(vararg securityGroupArns: String): Unit =
+        securityGroupArns(securityGroupArns.toList())
+
     override fun subnetArns(subnetArns: List<String>) {
       cdkBuilder.subnetArns(subnetArns)
     }
 
+    override fun subnetArns(vararg subnetArns: String): Unit = subnetArns(subnetArns.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun vpcEndpointId(vpcEndpointId: String) {
       cdkBuilder.vpcEndpointId(vpcEndpointId)

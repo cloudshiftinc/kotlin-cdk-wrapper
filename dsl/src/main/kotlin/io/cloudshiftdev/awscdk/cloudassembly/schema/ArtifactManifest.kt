@@ -25,6 +25,8 @@ public interface ArtifactManifest {
   public interface Builder {
     public fun dependencies(dependencies: List<String>)
 
+    public fun dependencies(vararg dependencies: String)
+
     public fun displayName(displayName: String)
 
     public fun environment(environment: String)
@@ -65,6 +67,9 @@ public interface ArtifactManifest {
     override fun dependencies(dependencies: List<String>) {
       cdkBuilder.dependencies(dependencies)
     }
+
+    override fun dependencies(vararg dependencies: String): Unit =
+        dependencies(dependencies.toList())
 
     override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)

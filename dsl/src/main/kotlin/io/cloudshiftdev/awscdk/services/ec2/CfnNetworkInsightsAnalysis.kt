@@ -28,6 +28,9 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
     unwrap(this).setAdditionalAccounts(`value`)
   }
 
+  public open fun additionalAccounts(vararg `value`: String): Unit =
+      additionalAccounts(`value`.toList())
+
   public open fun attrAlternatePathHints(): IResolvable =
       unwrap(this).getAttrAlternatePathHints().let(IResolvable::wrap)
 
@@ -55,14 +58,15 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
 
   public open fun attrStatusMessage(): String = unwrap(this).getAttrStatusMessage()
 
-  public open fun attrSuggestedAccounts(): List<String> = unwrap(this).getAttrSuggestedAccounts() ?:
-      emptyList()
+  public open fun attrSuggestedAccounts(): List<String> = unwrap(this).getAttrSuggestedAccounts()
 
   public open fun filterInArns(): List<String> = unwrap(this).getFilterInArns() ?: emptyList()
 
   public open fun filterInArns(`value`: List<String>) {
     unwrap(this).setFilterInArns(`value`)
   }
+
+  public open fun filterInArns(vararg `value`: String): Unit = filterInArns(`value`.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -83,14 +87,22 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun additionalAccounts(additionalAccounts: List<String>)
 
+    public fun additionalAccounts(vararg additionalAccounts: String)
+
     public fun filterInArns(filterInArns: List<String>)
+
+    public fun filterInArns(vararg filterInArns: String)
 
     public fun networkInsightsPathId(networkInsightsPathId: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -104,9 +116,15 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
       cdkBuilder.additionalAccounts(additionalAccounts)
     }
 
+    override fun additionalAccounts(vararg additionalAccounts: String): Unit =
+        additionalAccounts(additionalAccounts.toList())
+
     override fun filterInArns(filterInArns: List<String>) {
       cdkBuilder.filterInArns(filterInArns)
     }
+
+    override fun filterInArns(vararg filterInArns: String): Unit =
+        filterInArns(filterInArns.toList())
 
     override fun networkInsightsPathId(networkInsightsPathId: String) {
       cdkBuilder.networkInsightsPathId(networkInsightsPathId)
@@ -115,6 +133,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis =
         cdkBuilder.build()
@@ -362,6 +382,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
 
       public fun addresses(addresses: List<String>)
 
+      public fun addresses(vararg addresses: String)
+
       public fun attachedTo(attachedTo: IResolvable)
 
       public fun attachedTo(attachedTo: AnalysisComponentProperty)
@@ -372,7 +394,11 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
 
       public fun availabilityZones(availabilityZones: List<String>)
 
+      public fun availabilityZones(vararg availabilityZones: String)
+
       public fun cidrs(cidrs: List<String>)
+
+      public fun cidrs(vararg cidrs: String)
 
       public fun classicLoadBalancerListener(classicLoadBalancerListener: IResolvable)
 
@@ -475,6 +501,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
 
       public fun loadBalancerTargetGroups(loadBalancerTargetGroups: List<Any>)
 
+      public fun loadBalancerTargetGroups(vararg loadBalancerTargetGroups: Any)
+
       public fun loadBalancerTargetPort(loadBalancerTargetPort: Number)
 
       public fun missingComponent(missingComponent: String)
@@ -503,6 +531,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
 
       public fun portRanges(portRanges: List<Any>)
 
+      public fun portRanges(vararg portRanges: Any)
+
       public fun prefixList(prefixList: IResolvable)
 
       public fun prefixList(prefixList: AnalysisComponentProperty)
@@ -512,6 +542,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
       public fun prefixList(prefixList: AnalysisComponentProperty.Builder.() -> Unit)
 
       public fun protocols(protocols: List<String>)
+
+      public fun protocols(vararg protocols: String)
 
       public fun routeTable(routeTable: IResolvable)
 
@@ -550,6 +582,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
       public fun securityGroups(securityGroups: IResolvable)
 
       public fun securityGroups(securityGroups: List<Any>)
+
+      public fun securityGroups(vararg securityGroups: Any)
 
       public fun sourceVpc(sourceVpc: IResolvable)
 
@@ -695,6 +729,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
         cdkBuilder.addresses(addresses)
       }
 
+      override fun addresses(vararg addresses: String): Unit = addresses(addresses.toList())
+
       override fun attachedTo(attachedTo: IResolvable) {
         cdkBuilder.attachedTo(attachedTo.let(IResolvable::unwrap))
       }
@@ -712,9 +748,14 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
         cdkBuilder.availabilityZones(availabilityZones)
       }
 
+      override fun availabilityZones(vararg availabilityZones: String): Unit =
+          availabilityZones(availabilityZones.toList())
+
       override fun cidrs(cidrs: List<String>) {
         cdkBuilder.cidrs(cidrs)
       }
+
+      override fun cidrs(vararg cidrs: String): Unit = cidrs(cidrs.toList())
 
       override fun classicLoadBalancerListener(classicLoadBalancerListener: IResolvable) {
         cdkBuilder.classicLoadBalancerListener(classicLoadBalancerListener.let(IResolvable::unwrap))
@@ -886,6 +927,9 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
         cdkBuilder.loadBalancerTargetGroups(loadBalancerTargetGroups)
       }
 
+      override fun loadBalancerTargetGroups(vararg loadBalancerTargetGroups: Any): Unit =
+          loadBalancerTargetGroups(loadBalancerTargetGroups.toList())
+
       override fun loadBalancerTargetPort(loadBalancerTargetPort: Number) {
         cdkBuilder.loadBalancerTargetPort(loadBalancerTargetPort)
       }
@@ -936,6 +980,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
         cdkBuilder.portRanges(portRanges)
       }
 
+      override fun portRanges(vararg portRanges: Any): Unit = portRanges(portRanges.toList())
+
       override fun prefixList(prefixList: IResolvable) {
         cdkBuilder.prefixList(prefixList.let(IResolvable::unwrap))
       }
@@ -952,6 +998,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
       override fun protocols(protocols: List<String>) {
         cdkBuilder.protocols(protocols)
       }
+
+      override fun protocols(vararg protocols: String): Unit = protocols(protocols.toList())
 
       override fun routeTable(routeTable: IResolvable) {
         cdkBuilder.routeTable(routeTable.let(IResolvable::unwrap))
@@ -1014,6 +1062,9 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
       override fun securityGroups(securityGroups: List<Any>) {
         cdkBuilder.securityGroups(securityGroups)
       }
+
+      override fun securityGroups(vararg securityGroups: Any): Unit =
+          securityGroups(securityGroups.toList())
 
       override fun sourceVpc(sourceVpc: IResolvable) {
         cdkBuilder.sourceVpc(sourceVpc.let(IResolvable::unwrap))
@@ -1332,17 +1383,25 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
     public interface Builder {
       public fun destinationAddresses(destinationAddresses: List<String>)
 
+      public fun destinationAddresses(vararg destinationAddresses: String)
+
       public fun destinationPortRanges(destinationPortRanges: IResolvable)
 
       public fun destinationPortRanges(destinationPortRanges: List<Any>)
+
+      public fun destinationPortRanges(vararg destinationPortRanges: Any)
 
       public fun protocol(protocol: String)
 
       public fun sourceAddresses(sourceAddresses: List<String>)
 
+      public fun sourceAddresses(vararg sourceAddresses: String)
+
       public fun sourcePortRanges(sourcePortRanges: IResolvable)
 
       public fun sourcePortRanges(sourcePortRanges: List<Any>)
+
+      public fun sourcePortRanges(vararg sourcePortRanges: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1355,6 +1414,9 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
         cdkBuilder.destinationAddresses(destinationAddresses)
       }
 
+      override fun destinationAddresses(vararg destinationAddresses: String): Unit =
+          destinationAddresses(destinationAddresses.toList())
+
       override fun destinationPortRanges(destinationPortRanges: IResolvable) {
         cdkBuilder.destinationPortRanges(destinationPortRanges.let(IResolvable::unwrap))
       }
@@ -1362,6 +1424,9 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
       override fun destinationPortRanges(destinationPortRanges: List<Any>) {
         cdkBuilder.destinationPortRanges(destinationPortRanges)
       }
+
+      override fun destinationPortRanges(vararg destinationPortRanges: Any): Unit =
+          destinationPortRanges(destinationPortRanges.toList())
 
       override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
@@ -1371,6 +1436,9 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
         cdkBuilder.sourceAddresses(sourceAddresses)
       }
 
+      override fun sourceAddresses(vararg sourceAddresses: String): Unit =
+          sourceAddresses(sourceAddresses.toList())
+
       override fun sourcePortRanges(sourcePortRanges: IResolvable) {
         cdkBuilder.sourcePortRanges(sourcePortRanges.let(IResolvable::unwrap))
       }
@@ -1378,6 +1446,9 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
       override fun sourcePortRanges(sourcePortRanges: List<Any>) {
         cdkBuilder.sourcePortRanges(sourcePortRanges)
       }
+
+      override fun sourcePortRanges(vararg sourcePortRanges: Any): Unit =
+          sourcePortRanges(sourcePortRanges.toList())
 
       public fun build():
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis.AnalysisPacketHeaderProperty
@@ -1826,6 +1897,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
 
       public fun additionalDetails(additionalDetails: List<Any>)
 
+      public fun additionalDetails(vararg additionalDetails: Any)
+
       public fun component(component: IResolvable)
 
       public fun component(component: AnalysisComponentProperty)
@@ -1854,6 +1927,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
       public fun explanations(explanations: IResolvable)
 
       public fun explanations(explanations: List<Any>)
+
+      public fun explanations(vararg explanations: Any)
 
       public fun inboundHeader(inboundHeader: IResolvable)
 
@@ -1963,6 +2038,9 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
         cdkBuilder.additionalDetails(additionalDetails)
       }
 
+      override fun additionalDetails(vararg additionalDetails: Any): Unit =
+          additionalDetails(additionalDetails.toList())
+
       override fun component(component: IResolvable) {
         cdkBuilder.component(component.let(IResolvable::unwrap))
       }
@@ -2011,6 +2089,9 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
       override fun explanations(explanations: List<Any>) {
         cdkBuilder.explanations(explanations)
       }
+
+      override fun explanations(vararg explanations: Any): Unit =
+          explanations(explanations.toList())
 
       override fun inboundHeader(inboundHeader: IResolvable) {
         cdkBuilder.inboundHeader(inboundHeader.let(IResolvable::unwrap))
@@ -2457,6 +2538,8 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
 
       public fun loadBalancers(loadBalancers: List<Any>)
 
+      public fun loadBalancers(vararg loadBalancers: Any)
+
       public fun serviceName(serviceName: String)
     }
 
@@ -2490,6 +2573,9 @@ public open class CfnNetworkInsightsAnalysis internal constructor(
       override fun loadBalancers(loadBalancers: List<Any>) {
         cdkBuilder.loadBalancers(loadBalancers)
       }
+
+      override fun loadBalancers(vararg loadBalancers: Any): Unit =
+          loadBalancers(loadBalancers.toList())
 
       override fun serviceName(serviceName: String) {
         cdkBuilder.serviceName(serviceName)

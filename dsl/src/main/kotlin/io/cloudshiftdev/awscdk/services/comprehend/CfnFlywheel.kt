@@ -79,6 +79,8 @@ public open class CfnFlywheel internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun taskConfig(): Any? = unwrap(this).getTaskConfig()
 
   public open fun taskConfig(`value`: IResolvable) {
@@ -114,6 +116,8 @@ public open class CfnFlywheel internal constructor(
     public fun modelType(modelType: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun taskConfig(taskConfig: IResolvable)
 
@@ -168,6 +172,8 @@ public open class CfnFlywheel internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun taskConfig(taskConfig: IResolvable) {
       cdkBuilder.taskConfig(taskConfig.let(IResolvable::unwrap))
@@ -320,7 +326,11 @@ public open class CfnFlywheel internal constructor(
     public interface Builder {
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnets(subnets: List<String>)
+
+      public fun subnets(vararg subnets: String)
     }
 
     private class BuilderImpl : Builder {
@@ -332,9 +342,14 @@ public open class CfnFlywheel internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnets(subnets: List<String>) {
         cdkBuilder.subnets(subnets)
       }
+
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
 
       public fun build(): software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty =
           cdkBuilder.build()
@@ -344,10 +359,9 @@ public open class CfnFlywheel internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.comprehend.CfnFlywheel.VpcConfigProperty,
     ) : VpcConfigProperty {
-      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
-          emptyList()
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
 
-      override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+      override fun subnets(): List<String> = unwrap(this).getSubnets()
     }
 
     public companion object {
@@ -471,6 +485,8 @@ public open class CfnFlywheel internal constructor(
       public fun entityTypes(entityTypes: IResolvable)
 
       public fun entityTypes(entityTypes: List<Any>)
+
+      public fun entityTypes(vararg entityTypes: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -486,6 +502,8 @@ public open class CfnFlywheel internal constructor(
       override fun entityTypes(entityTypes: List<Any>) {
         cdkBuilder.entityTypes(entityTypes)
       }
+
+      override fun entityTypes(vararg entityTypes: Any): Unit = entityTypes(entityTypes.toList())
 
       public fun build():
           software.amazon.awscdk.services.comprehend.CfnFlywheel.EntityRecognitionConfigProperty =
@@ -576,6 +594,8 @@ public open class CfnFlywheel internal constructor(
     public interface Builder {
       public fun labels(labels: List<String>)
 
+      public fun labels(vararg labels: String)
+
       public fun mode(mode: String)
     }
 
@@ -588,6 +608,8 @@ public open class CfnFlywheel internal constructor(
       override fun labels(labels: List<String>) {
         cdkBuilder.labels(labels)
       }
+
+      override fun labels(vararg labels: String): Unit = labels(labels.toList())
 
       override fun mode(mode: String) {
         cdkBuilder.mode(mode)

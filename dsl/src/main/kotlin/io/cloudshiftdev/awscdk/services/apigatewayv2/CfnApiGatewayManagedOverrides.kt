@@ -197,6 +197,8 @@ public open class CfnApiGatewayManagedOverrides internal constructor(
     public interface Builder {
       public fun authorizationScopes(authorizationScopes: List<String>)
 
+      public fun authorizationScopes(vararg authorizationScopes: String)
+
       public fun authorizationType(authorizationType: String)
 
       public fun authorizerId(authorizerId: String)
@@ -215,6 +217,9 @@ public open class CfnApiGatewayManagedOverrides internal constructor(
       override fun authorizationScopes(authorizationScopes: List<String>) {
         cdkBuilder.authorizationScopes(authorizationScopes)
       }
+
+      override fun authorizationScopes(vararg authorizationScopes: String): Unit =
+          authorizationScopes(authorizationScopes.toList())
 
       override fun authorizationType(authorizationType: String) {
         cdkBuilder.authorizationType(authorizationType)

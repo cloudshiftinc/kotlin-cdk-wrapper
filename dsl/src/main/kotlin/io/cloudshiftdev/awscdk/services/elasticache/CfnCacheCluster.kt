@@ -68,6 +68,9 @@ public open class CfnCacheCluster internal constructor(
     unwrap(this).setCacheSecurityGroupNames(`value`)
   }
 
+  public open fun cacheSecurityGroupNames(vararg `value`: String): Unit =
+      cacheSecurityGroupNames(`value`.toList())
+
   public open fun cacheSubnetGroupName(): String? = unwrap(this).getCacheSubnetGroupName()
 
   public open fun cacheSubnetGroupName(`value`: String) {
@@ -112,6 +115,9 @@ public open class CfnCacheCluster internal constructor(
     unwrap(this).setLogDeliveryConfigurations(__idx_ac66f0)
   }
 
+  public open fun logDeliveryConfigurations(vararg __idx_ac66f0: Any): Unit =
+      logDeliveryConfigurations(__idx_ac66f0.toList())
+
   public open fun networkType(): String? = unwrap(this).getNetworkType()
 
   public open fun networkType(`value`: String) {
@@ -149,6 +155,9 @@ public open class CfnCacheCluster internal constructor(
     unwrap(this).setPreferredAvailabilityZones(`value`)
   }
 
+  public open fun preferredAvailabilityZones(vararg `value`: String): Unit =
+      preferredAvailabilityZones(`value`.toList())
+
   public open fun preferredMaintenanceWindow(): String? =
       unwrap(this).getPreferredMaintenanceWindow()
 
@@ -161,6 +170,8 @@ public open class CfnCacheCluster internal constructor(
   public open fun snapshotArns(`value`: List<String>) {
     unwrap(this).setSnapshotArns(`value`)
   }
+
+  public open fun snapshotArns(vararg `value`: String): Unit = snapshotArns(`value`.toList())
 
   public open fun snapshotName(): String? = unwrap(this).getSnapshotName()
 
@@ -189,6 +200,8 @@ public open class CfnCacheCluster internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun transitEncryptionEnabled(): Any? = unwrap(this).getTransitEncryptionEnabled()
 
   public open fun transitEncryptionEnabled(`value`: Boolean) {
@@ -206,6 +219,9 @@ public open class CfnCacheCluster internal constructor(
     unwrap(this).setVpcSecurityGroupIds(`value`)
   }
 
+  public open fun vpcSecurityGroupIds(vararg `value`: String): Unit =
+      vpcSecurityGroupIds(`value`.toList())
+
   public interface Builder {
     public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean)
 
@@ -218,6 +234,8 @@ public open class CfnCacheCluster internal constructor(
     public fun cacheParameterGroupName(cacheParameterGroupName: String)
 
     public fun cacheSecurityGroupNames(cacheSecurityGroupNames: List<String>)
+
+    public fun cacheSecurityGroupNames(vararg cacheSecurityGroupNames: String)
 
     public fun cacheSubnetGroupName(cacheSubnetGroupName: String)
 
@@ -233,6 +251,8 @@ public open class CfnCacheCluster internal constructor(
 
     public fun logDeliveryConfigurations(logDeliveryConfigurations: List<Any>)
 
+    public fun logDeliveryConfigurations(vararg logDeliveryConfigurations: Any)
+
     public fun networkType(networkType: String)
 
     public fun notificationTopicArn(notificationTopicArn: String)
@@ -245,9 +265,13 @@ public open class CfnCacheCluster internal constructor(
 
     public fun preferredAvailabilityZones(preferredAvailabilityZones: List<String>)
 
+    public fun preferredAvailabilityZones(vararg preferredAvailabilityZones: String)
+
     public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String)
 
     public fun snapshotArns(snapshotArns: List<String>)
+
+    public fun snapshotArns(vararg snapshotArns: String)
 
     public fun snapshotName(snapshotName: String)
 
@@ -257,11 +281,15 @@ public open class CfnCacheCluster internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun transitEncryptionEnabled(transitEncryptionEnabled: Boolean)
 
     public fun transitEncryptionEnabled(transitEncryptionEnabled: IResolvable)
 
     public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>)
+
+    public fun vpcSecurityGroupIds(vararg vpcSecurityGroupIds: String)
   }
 
   private class BuilderImpl(
@@ -295,6 +323,9 @@ public open class CfnCacheCluster internal constructor(
       cdkBuilder.cacheSecurityGroupNames(cacheSecurityGroupNames)
     }
 
+    override fun cacheSecurityGroupNames(vararg cacheSecurityGroupNames: String): Unit =
+        cacheSecurityGroupNames(cacheSecurityGroupNames.toList())
+
     override fun cacheSubnetGroupName(cacheSubnetGroupName: String) {
       cdkBuilder.cacheSubnetGroupName(cacheSubnetGroupName)
     }
@@ -323,6 +354,9 @@ public open class CfnCacheCluster internal constructor(
       cdkBuilder.logDeliveryConfigurations(logDeliveryConfigurations)
     }
 
+    override fun logDeliveryConfigurations(vararg logDeliveryConfigurations: Any): Unit =
+        logDeliveryConfigurations(logDeliveryConfigurations.toList())
+
     override fun networkType(networkType: String) {
       cdkBuilder.networkType(networkType)
     }
@@ -347,6 +381,9 @@ public open class CfnCacheCluster internal constructor(
       cdkBuilder.preferredAvailabilityZones(preferredAvailabilityZones)
     }
 
+    override fun preferredAvailabilityZones(vararg preferredAvailabilityZones: String): Unit =
+        preferredAvailabilityZones(preferredAvailabilityZones.toList())
+
     override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
       cdkBuilder.preferredMaintenanceWindow(preferredMaintenanceWindow)
     }
@@ -354,6 +391,9 @@ public open class CfnCacheCluster internal constructor(
     override fun snapshotArns(snapshotArns: List<String>) {
       cdkBuilder.snapshotArns(snapshotArns)
     }
+
+    override fun snapshotArns(vararg snapshotArns: String): Unit =
+        snapshotArns(snapshotArns.toList())
 
     override fun snapshotName(snapshotName: String) {
       cdkBuilder.snapshotName(snapshotName)
@@ -371,6 +411,8 @@ public open class CfnCacheCluster internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun transitEncryptionEnabled(transitEncryptionEnabled: Boolean) {
       cdkBuilder.transitEncryptionEnabled(transitEncryptionEnabled)
     }
@@ -382,6 +424,9 @@ public open class CfnCacheCluster internal constructor(
     override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
       cdkBuilder.vpcSecurityGroupIds(vpcSecurityGroupIds)
     }
+
+    override fun vpcSecurityGroupIds(vararg vpcSecurityGroupIds: String): Unit =
+        vpcSecurityGroupIds(vpcSecurityGroupIds.toList())
 
     public fun build(): software.amazon.awscdk.services.elasticache.CfnCacheCluster =
         cdkBuilder.build()

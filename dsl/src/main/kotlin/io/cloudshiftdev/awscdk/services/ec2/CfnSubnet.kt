@@ -36,8 +36,7 @@ public open class CfnSubnet internal constructor(
 
   public open fun attrCidrBlock(): String = unwrap(this).getAttrCidrBlock()
 
-  public open fun attrIpv6CidrBlocks(): List<String> = unwrap(this).getAttrIpv6CidrBlocks() ?:
-      emptyList()
+  public open fun attrIpv6CidrBlocks(): List<String> = unwrap(this).getAttrIpv6CidrBlocks()
 
   public open fun attrNetworkAclAssociationId(): String =
       unwrap(this).getAttrNetworkAclAssociationId()
@@ -104,6 +103,8 @@ public open class CfnSubnet internal constructor(
     unwrap(this).setIpv6CidrBlocks(`value`)
   }
 
+  public open fun ipv6CidrBlocks(vararg `value`: String): Unit = ipv6CidrBlocks(`value`.toList())
+
   public open fun ipv6IpamPoolId(): String? = unwrap(this).getIpv6IpamPoolId()
 
   public open fun ipv6IpamPoolId(`value`: String) {
@@ -158,6 +159,8 @@ public open class CfnSubnet internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun vpcId(): String = unwrap(this).getVpcId()
 
   public open fun vpcId(`value`: String) {
@@ -187,6 +190,8 @@ public open class CfnSubnet internal constructor(
 
     public fun ipv6CidrBlocks(ipv6CidrBlocks: List<String>)
 
+    public fun ipv6CidrBlocks(vararg ipv6CidrBlocks: String)
+
     public fun ipv6IpamPoolId(ipv6IpamPoolId: String)
 
     public fun ipv6Native(ipv6Native: Boolean)
@@ -204,6 +209,8 @@ public open class CfnSubnet internal constructor(
     public fun privateDnsNameOptionsOnLaunch(privateDnsNameOptionsOnLaunch: Any)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun vpcId(vpcId: String)
   }
@@ -259,6 +266,9 @@ public open class CfnSubnet internal constructor(
       cdkBuilder.ipv6CidrBlocks(ipv6CidrBlocks)
     }
 
+    override fun ipv6CidrBlocks(vararg ipv6CidrBlocks: String): Unit =
+        ipv6CidrBlocks(ipv6CidrBlocks.toList())
+
     override fun ipv6IpamPoolId(ipv6IpamPoolId: String) {
       cdkBuilder.ipv6IpamPoolId(ipv6IpamPoolId)
     }
@@ -294,6 +304,8 @@ public open class CfnSubnet internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)

@@ -43,6 +43,8 @@ public open class CfnTopicRule internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun topicRulePayload(): Any = unwrap(this).getTopicRulePayload()
 
   public open fun topicRulePayload(`value`: IResolvable) {
@@ -62,6 +64,8 @@ public open class CfnTopicRule internal constructor(
     public fun ruleName(ruleName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun topicRulePayload(topicRulePayload: IResolvable)
 
@@ -86,6 +90,8 @@ public open class CfnTopicRule internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun topicRulePayload(topicRulePayload: IResolvable) {
       cdkBuilder.topicRulePayload(topicRulePayload.let(IResolvable::unwrap))
@@ -920,6 +926,8 @@ public open class CfnTopicRule internal constructor(
       public fun userProperties(userProperties: IResolvable)
 
       public fun userProperties(userProperties: List<Any>)
+
+      public fun userProperties(vararg userProperties: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -954,6 +962,9 @@ public open class CfnTopicRule internal constructor(
       override fun userProperties(userProperties: List<Any>) {
         cdkBuilder.userProperties(userProperties)
       }
+
+      override fun userProperties(vararg userProperties: Any): Unit =
+          userProperties(userProperties.toList())
 
       public fun build():
           software.amazon.awscdk.services.iot.CfnTopicRule.RepublishActionHeadersProperty =
@@ -1061,6 +1072,8 @@ public open class CfnTopicRule internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun awsIotSqlVersion(awsIotSqlVersion: String)
 
       public fun description(description: String)
@@ -1092,6 +1105,8 @@ public open class CfnTopicRule internal constructor(
       override fun actions(actions: List<Any>) {
         cdkBuilder.actions(actions)
       }
+
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
 
       override fun awsIotSqlVersion(awsIotSqlVersion: String) {
         cdkBuilder.awsIotSqlVersion(awsIotSqlVersion)
@@ -1505,6 +1520,8 @@ public open class CfnTopicRule internal constructor(
 
       public fun headers(headers: List<Any>)
 
+      public fun headers(vararg headers: Any)
+
       public fun key(key: String)
 
       public fun partition(partition: String)
@@ -1536,6 +1553,8 @@ public open class CfnTopicRule internal constructor(
       override fun headers(headers: List<Any>) {
         cdkBuilder.headers(headers)
       }
+
+      override fun headers(vararg headers: Any): Unit = headers(headers.toList())
 
       override fun key(key: String) {
         cdkBuilder.key(key)
@@ -1686,6 +1705,8 @@ public open class CfnTopicRule internal constructor(
       public fun propertyValues(propertyValues: IResolvable)
 
       public fun propertyValues(propertyValues: List<Any>)
+
+      public fun propertyValues(vararg propertyValues: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1717,6 +1738,9 @@ public open class CfnTopicRule internal constructor(
       override fun propertyValues(propertyValues: List<Any>) {
         cdkBuilder.propertyValues(propertyValues)
       }
+
+      override fun propertyValues(vararg propertyValues: Any): Unit =
+          propertyValues(propertyValues.toList())
 
       public fun build():
           software.amazon.awscdk.services.iot.CfnTopicRule.PutAssetPropertyValueEntryProperty =
@@ -2206,6 +2230,8 @@ public open class CfnTopicRule internal constructor(
 
       public fun headers(headers: List<Any>)
 
+      public fun headers(vararg headers: Any)
+
       public fun url(url: String)
     }
 
@@ -2238,6 +2264,8 @@ public open class CfnTopicRule internal constructor(
       override fun headers(headers: List<Any>) {
         cdkBuilder.headers(headers)
       }
+
+      override fun headers(vararg headers: Any): Unit = headers(headers.toList())
 
       override fun url(url: String) {
         cdkBuilder.url(url)
@@ -2289,6 +2317,8 @@ public open class CfnTopicRule internal constructor(
 
       public fun putAssetPropertyValueEntries(putAssetPropertyValueEntries: List<Any>)
 
+      public fun putAssetPropertyValueEntries(vararg putAssetPropertyValueEntries: Any)
+
       public fun roleArn(roleArn: String)
     }
 
@@ -2304,6 +2334,9 @@ public open class CfnTopicRule internal constructor(
       override fun putAssetPropertyValueEntries(putAssetPropertyValueEntries: List<Any>) {
         cdkBuilder.putAssetPropertyValueEntries(putAssetPropertyValueEntries)
       }
+
+      override fun putAssetPropertyValueEntries(vararg putAssetPropertyValueEntries: Any): Unit =
+          putAssetPropertyValueEntries(putAssetPropertyValueEntries.toList())
 
       override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
@@ -3403,6 +3436,8 @@ public open class CfnTopicRule internal constructor(
 
       public fun dimensions(dimensions: List<Any>)
 
+      public fun dimensions(vararg dimensions: Any)
+
       public fun roleArn(roleArn: String)
 
       public fun tableName(tableName: String)
@@ -3432,6 +3467,8 @@ public open class CfnTopicRule internal constructor(
       override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
+
+      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
 
       override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)

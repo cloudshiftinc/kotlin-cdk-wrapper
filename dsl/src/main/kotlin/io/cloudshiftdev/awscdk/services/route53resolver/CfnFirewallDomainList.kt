@@ -46,6 +46,8 @@ public open class CfnFirewallDomainList internal constructor(
     unwrap(this).setDomains(`value`)
   }
 
+  public open fun domains(vararg `value`: String): Unit = domains(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -65,14 +67,20 @@ public open class CfnFirewallDomainList internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun domainFileUrl(domainFileUrl: String)
 
     public fun domains(domains: List<String>)
 
+    public fun domains(vararg domains: String)
+
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -92,6 +100,8 @@ public open class CfnFirewallDomainList internal constructor(
       cdkBuilder.domains(domains)
     }
 
+    override fun domains(vararg domains: String): Unit = domains(domains.toList())
+
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -99,6 +109,8 @@ public open class CfnFirewallDomainList internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.route53resolver.CfnFirewallDomainList =
         cdkBuilder.build()

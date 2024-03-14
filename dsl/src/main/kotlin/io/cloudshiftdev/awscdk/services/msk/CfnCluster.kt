@@ -1615,6 +1615,8 @@ public open class CfnCluster internal constructor(
     public interface Builder {
       public fun certificateAuthorityArnList(certificateAuthorityArnList: List<String>)
 
+      public fun certificateAuthorityArnList(vararg certificateAuthorityArnList: String)
+
       public fun enabled(enabled: Boolean)
 
       public fun enabled(enabled: IResolvable)
@@ -1627,6 +1629,9 @@ public open class CfnCluster internal constructor(
       override fun certificateAuthorityArnList(certificateAuthorityArnList: List<String>) {
         cdkBuilder.certificateAuthorityArnList(certificateAuthorityArnList)
       }
+
+      override fun certificateAuthorityArnList(vararg certificateAuthorityArnList: String): Unit =
+          certificateAuthorityArnList(certificateAuthorityArnList.toList())
 
       override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
@@ -2070,6 +2075,8 @@ public open class CfnCluster internal constructor(
 
       public fun clientSubnets(clientSubnets: List<String>)
 
+      public fun clientSubnets(vararg clientSubnets: String)
+
       public fun connectivityInfo(connectivityInfo: IResolvable)
 
       public fun connectivityInfo(connectivityInfo: ConnectivityInfoProperty)
@@ -2081,6 +2088,8 @@ public open class CfnCluster internal constructor(
       public fun instanceType(instanceType: String)
 
       public fun securityGroups(securityGroups: List<String>)
+
+      public fun securityGroups(vararg securityGroups: String)
 
       public fun storageInfo(storageInfo: IResolvable)
 
@@ -2104,6 +2113,9 @@ public open class CfnCluster internal constructor(
         cdkBuilder.clientSubnets(clientSubnets)
       }
 
+      override fun clientSubnets(vararg clientSubnets: String): Unit =
+          clientSubnets(clientSubnets.toList())
+
       override fun connectivityInfo(connectivityInfo: IResolvable) {
         cdkBuilder.connectivityInfo(connectivityInfo.let(IResolvable::unwrap))
       }
@@ -2124,6 +2136,9 @@ public open class CfnCluster internal constructor(
       override fun securityGroups(securityGroups: List<String>) {
         cdkBuilder.securityGroups(securityGroups)
       }
+
+      override fun securityGroups(vararg securityGroups: String): Unit =
+          securityGroups(securityGroups.toList())
 
       override fun storageInfo(storageInfo: IResolvable) {
         cdkBuilder.storageInfo(storageInfo.let(IResolvable::unwrap))
@@ -2148,7 +2163,7 @@ public open class CfnCluster internal constructor(
     ) : BrokerNodeGroupInfoProperty {
       override fun brokerAzDistribution(): String? = unwrap(this).getBrokerAzDistribution()
 
-      override fun clientSubnets(): List<String> = unwrap(this).getClientSubnets() ?: emptyList()
+      override fun clientSubnets(): List<String> = unwrap(this).getClientSubnets()
 
       override fun connectivityInfo(): Any? = unwrap(this).getConnectivityInfo()
 

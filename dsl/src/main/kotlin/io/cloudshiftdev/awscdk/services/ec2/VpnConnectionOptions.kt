@@ -22,7 +22,11 @@ public interface VpnConnectionOptions {
 
     public fun staticRoutes(staticRoutes: List<String>)
 
+    public fun staticRoutes(vararg staticRoutes: String)
+
     public fun tunnelOptions(tunnelOptions: List<VpnTunnelOption>)
+
+    public fun tunnelOptions(vararg tunnelOptions: VpnTunnelOption)
   }
 
   private class BuilderImpl : Builder {
@@ -41,9 +45,15 @@ public interface VpnConnectionOptions {
       cdkBuilder.staticRoutes(staticRoutes)
     }
 
+    override fun staticRoutes(vararg staticRoutes: String): Unit =
+        staticRoutes(staticRoutes.toList())
+
     override fun tunnelOptions(tunnelOptions: List<VpnTunnelOption>) {
       cdkBuilder.tunnelOptions(tunnelOptions.map(VpnTunnelOption::unwrap))
     }
+
+    override fun tunnelOptions(vararg tunnelOptions: VpnTunnelOption): Unit =
+        tunnelOptions(tunnelOptions.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.VpnConnectionOptions =
         cdkBuilder.build()

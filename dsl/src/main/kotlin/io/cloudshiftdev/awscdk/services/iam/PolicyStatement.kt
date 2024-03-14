@@ -12,7 +12,7 @@ import kotlin.jvm.JvmName
 public open class PolicyStatement internal constructor(
   private val cdkObject: software.amazon.awscdk.services.iam.PolicyStatement,
 ) {
-  public open fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
+  public open fun actions(): List<String> = unwrap(this).getActions()
 
   public open fun addAccountCondition(accountId: String) {
     unwrap(this).addAccountCondition(accountId)
@@ -126,17 +126,17 @@ public open class PolicyStatement internal constructor(
 
   public open fun hasResource(): Boolean = unwrap(this).getHasResource()
 
-  public open fun notActions(): List<String> = unwrap(this).getNotActions() ?: emptyList()
+  public open fun notActions(): List<String> = unwrap(this).getNotActions()
 
   public open fun notPrincipals(): List<IPrincipal> =
       unwrap(this).getNotPrincipals().map(IPrincipal::wrap)
 
-  public open fun notResources(): List<String> = unwrap(this).getNotResources() ?: emptyList()
+  public open fun notResources(): List<String> = unwrap(this).getNotResources()
 
   public open fun principals(): List<IPrincipal> =
       unwrap(this).getPrincipals().map(IPrincipal::wrap)
 
-  public open fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
+  public open fun resources(): List<String> = unwrap(this).getResources()
 
   public open fun sid(): String? = unwrap(this).getSid()
 
@@ -148,17 +148,18 @@ public open class PolicyStatement internal constructor(
 
   public open fun toStatementJson(): Any = unwrap(this).toStatementJson()
 
-  public open fun validateForAnyPolicy(): List<String> = unwrap(this).validateForAnyPolicy() ?:
-      emptyList()
+  public open fun validateForAnyPolicy(): List<String> = unwrap(this).validateForAnyPolicy()
 
   public open fun validateForIdentityPolicy(): List<String> =
-      unwrap(this).validateForIdentityPolicy() ?: emptyList()
+      unwrap(this).validateForIdentityPolicy()
 
   public open fun validateForResourcePolicy(): List<String> =
-      unwrap(this).validateForResourcePolicy() ?: emptyList()
+      unwrap(this).validateForResourcePolicy()
 
   public interface Builder {
     public fun actions(actions: List<String>)
+
+    public fun actions(vararg actions: String)
 
     public fun conditions(conditions: Map<String, Any>)
 
@@ -166,13 +167,23 @@ public open class PolicyStatement internal constructor(
 
     public fun notActions(notActions: List<String>)
 
+    public fun notActions(vararg notActions: String)
+
     public fun notPrincipals(notPrincipals: List<IPrincipal>)
+
+    public fun notPrincipals(vararg notPrincipals: IPrincipal)
 
     public fun notResources(notResources: List<String>)
 
+    public fun notResources(vararg notResources: String)
+
     public fun principals(principals: List<IPrincipal>)
 
+    public fun principals(vararg principals: IPrincipal)
+
     public fun resources(resources: List<String>)
+
+    public fun resources(vararg resources: String)
 
     public fun sid(sid: String)
   }
@@ -184,6 +195,8 @@ public open class PolicyStatement internal constructor(
     override fun actions(actions: List<String>) {
       cdkBuilder.actions(actions)
     }
+
+    override fun actions(vararg actions: String): Unit = actions(actions.toList())
 
     override fun conditions(conditions: Map<String, Any>) {
       cdkBuilder.conditions(conditions)
@@ -197,21 +210,33 @@ public open class PolicyStatement internal constructor(
       cdkBuilder.notActions(notActions)
     }
 
+    override fun notActions(vararg notActions: String): Unit = notActions(notActions.toList())
+
     override fun notPrincipals(notPrincipals: List<IPrincipal>) {
       cdkBuilder.notPrincipals(notPrincipals.map(IPrincipal::unwrap))
     }
+
+    override fun notPrincipals(vararg notPrincipals: IPrincipal): Unit =
+        notPrincipals(notPrincipals.toList())
 
     override fun notResources(notResources: List<String>) {
       cdkBuilder.notResources(notResources)
     }
 
+    override fun notResources(vararg notResources: String): Unit =
+        notResources(notResources.toList())
+
     override fun principals(principals: List<IPrincipal>) {
       cdkBuilder.principals(principals.map(IPrincipal::unwrap))
     }
 
+    override fun principals(vararg principals: IPrincipal): Unit = principals(principals.toList())
+
     override fun resources(resources: List<String>) {
       cdkBuilder.resources(resources)
     }
+
+    override fun resources(vararg resources: String): Unit = resources(resources.toList())
 
     override fun sid(sid: String) {
       cdkBuilder.sid(sid)

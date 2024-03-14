@@ -91,6 +91,8 @@ public open class CfnDataset internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun format(format: String)
 
@@ -121,6 +123,8 @@ public open class CfnDataset internal constructor(
     public fun pathOptions(pathOptions: PathOptionsProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -179,6 +183,8 @@ public open class CfnDataset internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.databrew.CfnDataset = cdkBuilder.build()
   }
@@ -621,7 +627,11 @@ public open class CfnDataset internal constructor(
 
       public fun sheetIndexes(sheetIndexes: List<Number>)
 
+      public fun sheetIndexes(vararg sheetIndexes: Number)
+
       public fun sheetNames(sheetNames: List<String>)
+
+      public fun sheetNames(vararg sheetNames: String)
     }
 
     private class BuilderImpl : Builder {
@@ -645,9 +655,14 @@ public open class CfnDataset internal constructor(
         cdkBuilder.sheetIndexes(sheetIndexes)
       }
 
+      override fun sheetIndexes(vararg sheetIndexes: Number): Unit =
+          sheetIndexes(sheetIndexes.toList())
+
       override fun sheetNames(sheetNames: List<String>) {
         cdkBuilder.sheetNames(sheetNames)
       }
+
+      override fun sheetNames(vararg sheetNames: String): Unit = sheetNames(sheetNames.toList())
 
       public fun build(): software.amazon.awscdk.services.databrew.CfnDataset.ExcelOptionsProperty =
           cdkBuilder.build()
@@ -1104,6 +1119,8 @@ public open class CfnDataset internal constructor(
       public fun parameters(parameters: IResolvable)
 
       public fun parameters(parameters: List<Any>)
+
+      public fun parameters(vararg parameters: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1145,6 +1162,8 @@ public open class CfnDataset internal constructor(
       override fun parameters(parameters: List<Any>) {
         cdkBuilder.parameters(parameters)
       }
+
+      override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
 
       public fun build(): software.amazon.awscdk.services.databrew.CfnDataset.PathOptionsProperty =
           cdkBuilder.build()
@@ -1331,6 +1350,8 @@ public open class CfnDataset internal constructor(
       public fun valuesMap(valuesMap: IResolvable)
 
       public fun valuesMap(valuesMap: List<Any>)
+
+      public fun valuesMap(vararg valuesMap: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1349,6 +1370,8 @@ public open class CfnDataset internal constructor(
       override fun valuesMap(valuesMap: List<Any>) {
         cdkBuilder.valuesMap(valuesMap)
       }
+
+      override fun valuesMap(vararg valuesMap: Any): Unit = valuesMap(valuesMap.toList())
 
       public fun build():
           software.amazon.awscdk.services.databrew.CfnDataset.FilterExpressionProperty =

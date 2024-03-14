@@ -18,6 +18,8 @@ public interface GrpcRouteMatch {
   public interface Builder {
     public fun metadata(metadata: List<HeaderMatch>)
 
+    public fun metadata(vararg metadata: HeaderMatch)
+
     public fun methodName(methodName: String)
 
     public fun port(port: Number)
@@ -32,6 +34,8 @@ public interface GrpcRouteMatch {
     override fun metadata(metadata: List<HeaderMatch>) {
       cdkBuilder.metadata(metadata.map(HeaderMatch::unwrap))
     }
+
+    override fun metadata(vararg metadata: HeaderMatch): Unit = metadata(metadata.toList())
 
     override fun methodName(methodName: String) {
       cdkBuilder.methodName(methodName)

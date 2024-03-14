@@ -158,7 +158,11 @@ public open class CfnTopicRuleDestination internal constructor(
 
       public fun securityGroups(securityGroups: List<String>)
 
+      public fun securityGroups(vararg securityGroups: String)
+
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
 
       public fun vpcId(vpcId: String)
     }
@@ -177,9 +181,14 @@ public open class CfnTopicRuleDestination internal constructor(
         cdkBuilder.securityGroups(securityGroups)
       }
 
+      override fun securityGroups(vararg securityGroups: String): Unit =
+          securityGroups(securityGroups.toList())
+
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       override fun vpcId(vpcId: String) {
         cdkBuilder.vpcId(vpcId)

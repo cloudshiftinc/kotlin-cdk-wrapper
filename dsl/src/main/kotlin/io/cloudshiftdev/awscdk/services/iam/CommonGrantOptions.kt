@@ -19,11 +19,15 @@ public interface CommonGrantOptions {
   public interface Builder {
     public fun actions(actions: List<String>)
 
+    public fun actions(vararg actions: String)
+
     public fun conditions(conditions: Map<String, Map<String, Any>>)
 
     public fun grantee(grantee: IGrantable)
 
     public fun resourceArns(resourceArns: List<String>)
+
+    public fun resourceArns(vararg resourceArns: String)
   }
 
   private class BuilderImpl : Builder {
@@ -33,6 +37,8 @@ public interface CommonGrantOptions {
     override fun actions(actions: List<String>) {
       cdkBuilder.actions(actions)
     }
+
+    override fun actions(vararg actions: String): Unit = actions(actions.toList())
 
     override fun conditions(conditions: Map<String, Map<String, Any>>) {
       cdkBuilder.conditions(conditions)
@@ -46,20 +52,23 @@ public interface CommonGrantOptions {
       cdkBuilder.resourceArns(resourceArns)
     }
 
+    override fun resourceArns(vararg resourceArns: String): Unit =
+        resourceArns(resourceArns.toList())
+
     public fun build(): software.amazon.awscdk.services.iam.CommonGrantOptions = cdkBuilder.build()
   }
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.iam.CommonGrantOptions,
   ) : CommonGrantOptions {
-    override fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
+    override fun actions(): List<String> = unwrap(this).getActions()
 
     override fun conditions(): Map<String, Map<String, Any>> = unwrap(this).getConditions() ?:
         emptyMap()
 
     override fun grantee(): IGrantable = unwrap(this).getGrantee().let(IGrantable::wrap)
 
-    override fun resourceArns(): List<String> = unwrap(this).getResourceArns() ?: emptyList()
+    override fun resourceArns(): List<String> = unwrap(this).getResourceArns()
   }
 
   public companion object {

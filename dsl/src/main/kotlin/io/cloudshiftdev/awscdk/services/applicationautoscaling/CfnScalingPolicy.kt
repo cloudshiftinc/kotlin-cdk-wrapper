@@ -519,6 +519,8 @@ public open class CfnScalingPolicy internal constructor(
       public fun stepAdjustments(stepAdjustments: IResolvable)
 
       public fun stepAdjustments(stepAdjustments: List<Any>)
+
+      public fun stepAdjustments(vararg stepAdjustments: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -550,6 +552,9 @@ public open class CfnScalingPolicy internal constructor(
       override fun stepAdjustments(stepAdjustments: List<Any>) {
         cdkBuilder.stepAdjustments(stepAdjustments)
       }
+
+      override fun stepAdjustments(vararg stepAdjustments: Any): Unit =
+          stepAdjustments(stepAdjustments.toList())
 
       public fun build():
           software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy.StepScalingPolicyConfigurationProperty
@@ -610,11 +615,15 @@ public open class CfnScalingPolicy internal constructor(
 
       public fun dimensions(dimensions: List<Any>)
 
+      public fun dimensions(vararg dimensions: Any)
+
       public fun metricName(metricName: String)
 
       public fun metrics(metrics: IResolvable)
 
       public fun metrics(metrics: List<Any>)
+
+      public fun metrics(vararg metrics: Any)
 
       public fun namespace(namespace: String)
 
@@ -637,6 +646,8 @@ public open class CfnScalingPolicy internal constructor(
         cdkBuilder.dimensions(dimensions)
       }
 
+      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
+
       override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)
       }
@@ -648,6 +659,8 @@ public open class CfnScalingPolicy internal constructor(
       override fun metrics(metrics: List<Any>) {
         cdkBuilder.metrics(metrics)
       }
+
+      override fun metrics(vararg metrics: Any): Unit = metrics(metrics.toList())
 
       override fun namespace(namespace: String) {
         cdkBuilder.namespace(namespace)
@@ -977,6 +990,8 @@ public open class CfnScalingPolicy internal constructor(
 
       public fun dimensions(dimensions: List<Any>)
 
+      public fun dimensions(vararg dimensions: Any)
+
       public fun metricName(metricName: String)
 
       public fun namespace(namespace: String)
@@ -995,6 +1010,8 @@ public open class CfnScalingPolicy internal constructor(
       override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
+
+      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
 
       override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)

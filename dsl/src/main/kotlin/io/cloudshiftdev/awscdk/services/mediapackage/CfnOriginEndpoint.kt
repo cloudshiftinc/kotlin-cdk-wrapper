@@ -149,6 +149,8 @@ public open class CfnOriginEndpoint internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun timeDelaySeconds(): Number? = unwrap(this).getTimeDelaySeconds()
 
   public open fun timeDelaySeconds(`value`: Number) {
@@ -160,6 +162,8 @@ public open class CfnOriginEndpoint internal constructor(
   public open fun whitelist(`value`: List<String>) {
     unwrap(this).setWhitelist(`value`)
   }
+
+  public open fun whitelist(vararg `value`: String): Unit = whitelist(`value`.toList())
 
   public interface Builder {
     public fun authorization(authorization: IResolvable)
@@ -216,9 +220,13 @@ public open class CfnOriginEndpoint internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun timeDelaySeconds(timeDelaySeconds: Number)
 
     public fun whitelist(whitelist: List<String>)
+
+    public fun whitelist(vararg whitelist: String)
   }
 
   private class BuilderImpl(
@@ -321,6 +329,8 @@ public open class CfnOriginEndpoint internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun timeDelaySeconds(timeDelaySeconds: Number) {
       cdkBuilder.timeDelaySeconds(timeDelaySeconds)
     }
@@ -328,6 +338,8 @@ public open class CfnOriginEndpoint internal constructor(
     override fun whitelist(whitelist: List<String>) {
       cdkBuilder.whitelist(whitelist)
     }
+
+    override fun whitelist(vararg whitelist: String): Unit = whitelist(whitelist.toList())
 
     public fun build(): software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint =
         cdkBuilder.build()
@@ -487,6 +499,8 @@ public open class CfnOriginEndpoint internal constructor(
 
       public fun hlsManifests(hlsManifests: List<Any>)
 
+      public fun hlsManifests(vararg hlsManifests: Any)
+
       public fun segmentDurationSeconds(segmentDurationSeconds: Number)
 
       public fun segmentPrefix(segmentPrefix: String)
@@ -526,6 +540,9 @@ public open class CfnOriginEndpoint internal constructor(
       override fun hlsManifests(hlsManifests: List<Any>) {
         cdkBuilder.hlsManifests(hlsManifests)
       }
+
+      override fun hlsManifests(vararg hlsManifests: Any): Unit =
+          hlsManifests(hlsManifests.toList())
 
       override fun segmentDurationSeconds(segmentDurationSeconds: Number) {
         cdkBuilder.segmentDurationSeconds(segmentDurationSeconds)
@@ -680,6 +697,8 @@ public open class CfnOriginEndpoint internal constructor(
 
       public fun systemIds(systemIds: List<String>)
 
+      public fun systemIds(vararg systemIds: String)
+
       public fun url(url: String)
     }
 
@@ -721,6 +740,8 @@ public open class CfnOriginEndpoint internal constructor(
         cdkBuilder.systemIds(systemIds)
       }
 
+      override fun systemIds(vararg systemIds: String): Unit = systemIds(systemIds.toList())
+
       override fun url(url: String) {
         cdkBuilder.url(url)
       }
@@ -743,7 +764,7 @@ public open class CfnOriginEndpoint internal constructor(
 
       override fun roleArn(): String = unwrap(this).getRoleArn()
 
-      override fun systemIds(): List<String> = unwrap(this).getSystemIds() ?: emptyList()
+      override fun systemIds(): List<String> = unwrap(this).getSystemIds()
 
       override fun url(): String = unwrap(this).getUrl()
     }
@@ -795,6 +816,8 @@ public open class CfnOriginEndpoint internal constructor(
 
       public fun adTriggers(adTriggers: List<String>)
 
+      public fun adTriggers(vararg adTriggers: String)
+
       public fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String)
 
       public fun id(id: String)
@@ -827,6 +850,8 @@ public open class CfnOriginEndpoint internal constructor(
       override fun adTriggers(adTriggers: List<String>) {
         cdkBuilder.adTriggers(adTriggers)
       }
+
+      override fun adTriggers(vararg adTriggers: String): Unit = adTriggers(adTriggers.toList())
 
       override fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String) {
         cdkBuilder.adsOnDeliveryRestrictions(adsOnDeliveryRestrictions)
@@ -947,6 +972,8 @@ public open class CfnOriginEndpoint internal constructor(
 
       public fun adTriggers(adTriggers: List<String>)
 
+      public fun adTriggers(vararg adTriggers: String)
+
       public fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String)
 
       public fun encryption(encryption: IResolvable)
@@ -999,6 +1026,8 @@ public open class CfnOriginEndpoint internal constructor(
       override fun adTriggers(adTriggers: List<String>) {
         cdkBuilder.adTriggers(adTriggers)
       }
+
+      override fun adTriggers(vararg adTriggers: String): Unit = adTriggers(adTriggers.toList())
 
       override fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String) {
         cdkBuilder.adsOnDeliveryRestrictions(adsOnDeliveryRestrictions)
@@ -1502,6 +1531,8 @@ public open class CfnOriginEndpoint internal constructor(
     public interface Builder {
       public fun adTriggers(adTriggers: List<String>)
 
+      public fun adTriggers(vararg adTriggers: String)
+
       public fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String)
 
       public fun encryption(encryption: IResolvable)
@@ -1525,6 +1556,8 @@ public open class CfnOriginEndpoint internal constructor(
       public fun minUpdatePeriodSeconds(minUpdatePeriodSeconds: Number)
 
       public fun periodTriggers(periodTriggers: List<String>)
+
+      public fun periodTriggers(vararg periodTriggers: String)
 
       public fun profile(profile: String)
 
@@ -1556,6 +1589,8 @@ public open class CfnOriginEndpoint internal constructor(
       override fun adTriggers(adTriggers: List<String>) {
         cdkBuilder.adTriggers(adTriggers)
       }
+
+      override fun adTriggers(vararg adTriggers: String): Unit = adTriggers(adTriggers.toList())
 
       override fun adsOnDeliveryRestrictions(adsOnDeliveryRestrictions: String) {
         cdkBuilder.adsOnDeliveryRestrictions(adsOnDeliveryRestrictions)
@@ -1601,6 +1636,9 @@ public open class CfnOriginEndpoint internal constructor(
       override fun periodTriggers(periodTriggers: List<String>) {
         cdkBuilder.periodTriggers(periodTriggers)
       }
+
+      override fun periodTriggers(vararg periodTriggers: String): Unit =
+          periodTriggers(periodTriggers.toList())
 
       override fun profile(profile: String) {
         cdkBuilder.profile(profile)

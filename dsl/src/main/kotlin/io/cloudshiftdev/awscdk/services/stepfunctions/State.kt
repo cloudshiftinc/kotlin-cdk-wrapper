@@ -39,6 +39,9 @@ public abstract class State internal constructor(
     public open fun filterNextables(states: List<State>): List<INextable> =
         software.amazon.awscdk.services.stepfunctions.State.filterNextables(states.map(State::unwrap)).map(INextable::wrap)
 
+    public open fun filterNextables(vararg states: State): List<INextable> =
+        filterNextables(states.toList())
+
     public open fun findReachableEndStates(start: State): List<State> =
         software.amazon.awscdk.services.stepfunctions.State.findReachableEndStates(start.let(State::unwrap)).map(State::wrap)
 

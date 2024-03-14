@@ -18,6 +18,8 @@ public interface InterfaceVpcEndpointAttributes {
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
+
     public fun vpcEndpointId(vpcEndpointId: String)
   }
 
@@ -33,6 +35,9 @@ public interface InterfaceVpcEndpointAttributes {
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun vpcEndpointId(vpcEndpointId: String) {
       cdkBuilder.vpcEndpointId(vpcEndpointId)

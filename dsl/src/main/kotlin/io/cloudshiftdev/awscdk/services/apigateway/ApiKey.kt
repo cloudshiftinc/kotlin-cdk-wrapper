@@ -62,7 +62,12 @@ public open class ApiKey internal constructor(
     @Deprecated(message = "deprecated in CDK")
     public fun resources(resources: List<IRestApi>)
 
+    @Deprecated(message = "deprecated in CDK")
+    public fun resources(vararg resources: IRestApi)
+
     public fun stages(stages: List<IStage>)
+
+    public fun stages(vararg stages: IStage)
 
     public fun `value`(`value`: String)
   }
@@ -127,9 +132,14 @@ public open class ApiKey internal constructor(
       cdkBuilder.resources(resources.map(IRestApi::unwrap))
     }
 
+    @Deprecated(message = "deprecated in CDK")
+    override fun resources(vararg resources: IRestApi): Unit = resources(resources.toList())
+
     override fun stages(stages: List<IStage>) {
       cdkBuilder.stages(stages.map(IStage::unwrap))
     }
+
+    override fun stages(vararg stages: IStage): Unit = stages(stages.toList())
 
     override fun `value`(`value`: String) {
       cdkBuilder.`value`(`value`)

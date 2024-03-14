@@ -30,11 +30,16 @@ public open class CfnAppBlockBuilder internal constructor(
     unwrap(this).setAccessEndpoints(__idx_ac66f0)
   }
 
+  public open fun accessEndpoints(vararg __idx_ac66f0: Any): Unit =
+      accessEndpoints(__idx_ac66f0.toList())
+
   public open fun appBlockArns(): List<String> = unwrap(this).getAppBlockArns() ?: emptyList()
 
   public open fun appBlockArns(`value`: List<String>) {
     unwrap(this).setAppBlockArns(`value`)
   }
+
+  public open fun appBlockArns(vararg `value`: String): Unit = appBlockArns(`value`.toList())
 
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
@@ -100,6 +105,8 @@ public open class CfnAppBlockBuilder internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public open fun vpcConfig(): Any = unwrap(this).getVpcConfig()
 
   public open fun vpcConfig(`value`: IResolvable) {
@@ -120,7 +127,11 @@ public open class CfnAppBlockBuilder internal constructor(
 
     public fun accessEndpoints(accessEndpoints: List<Any>)
 
+    public fun accessEndpoints(vararg accessEndpoints: Any)
+
     public fun appBlockArns(appBlockArns: List<String>)
+
+    public fun appBlockArns(vararg appBlockArns: String)
 
     public fun description(description: String)
 
@@ -139,6 +150,8 @@ public open class CfnAppBlockBuilder internal constructor(
     public fun platform(platform: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun vpcConfig(vpcConfig: IResolvable)
 
@@ -164,9 +177,15 @@ public open class CfnAppBlockBuilder internal constructor(
       cdkBuilder.accessEndpoints(accessEndpoints)
     }
 
+    override fun accessEndpoints(vararg accessEndpoints: Any): Unit =
+        accessEndpoints(accessEndpoints.toList())
+
     override fun appBlockArns(appBlockArns: List<String>) {
       cdkBuilder.appBlockArns(appBlockArns)
     }
+
+    override fun appBlockArns(vararg appBlockArns: String): Unit =
+        appBlockArns(appBlockArns.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -203,6 +222,8 @@ public open class CfnAppBlockBuilder internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun vpcConfig(vpcConfig: IResolvable) {
       cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
@@ -309,7 +330,11 @@ public open class CfnAppBlockBuilder internal constructor(
     public interface Builder {
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -321,9 +346,14 @@ public open class CfnAppBlockBuilder internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       public fun build():
           software.amazon.awscdk.services.appstream.CfnAppBlockBuilder.VpcConfigProperty =

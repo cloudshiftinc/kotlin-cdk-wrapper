@@ -205,8 +205,7 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
     override fun instanceEndpoints(): List<Endpoint> =
         unwrap(this).getInstanceEndpoints().map(Endpoint::wrap)
 
-    override fun instanceIdentifiers(): List<String> = unwrap(this).getInstanceIdentifiers() ?:
-        emptyList()
+    override fun instanceIdentifiers(): List<String> = unwrap(this).getInstanceIdentifiers()
 
     override fun metric(arg0: String): Metric = unwrap(this).metric(arg0).let(Metric::wrap)
 

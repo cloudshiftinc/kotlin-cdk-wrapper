@@ -47,6 +47,9 @@ public open class CfnFeatureGroup internal constructor(
     unwrap(this).setFeatureDefinitions(__idx_ac66f0)
   }
 
+  public open fun featureDefinitions(vararg __idx_ac66f0: Any): Unit =
+      featureDefinitions(__idx_ac66f0.toList())
+
   public open fun featureGroupName(): String = unwrap(this).getFeatureGroupName()
 
   public open fun featureGroupName(`value`: String) {
@@ -91,6 +94,8 @@ public open class CfnFeatureGroup internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun throughputConfig(): Any? = unwrap(this).getThroughputConfig()
 
   public open fun throughputConfig(`value`: IResolvable) {
@@ -115,6 +120,8 @@ public open class CfnFeatureGroup internal constructor(
 
     public fun featureDefinitions(featureDefinitions: List<Any>)
 
+    public fun featureDefinitions(vararg featureDefinitions: Any)
+
     public fun featureGroupName(featureGroupName: String)
 
     public fun offlineStoreConfig(offlineStoreConfig: Any)
@@ -126,6 +133,8 @@ public open class CfnFeatureGroup internal constructor(
     public fun roleArn(roleArn: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun throughputConfig(throughputConfig: IResolvable)
 
@@ -159,6 +168,9 @@ public open class CfnFeatureGroup internal constructor(
       cdkBuilder.featureDefinitions(featureDefinitions)
     }
 
+    override fun featureDefinitions(vararg featureDefinitions: Any): Unit =
+        featureDefinitions(featureDefinitions.toList())
+
     override fun featureGroupName(featureGroupName: String) {
       cdkBuilder.featureGroupName(featureGroupName)
     }
@@ -182,6 +194,8 @@ public open class CfnFeatureGroup internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun throughputConfig(throughputConfig: IResolvable) {
       cdkBuilder.throughputConfig(throughputConfig.let(IResolvable::unwrap))

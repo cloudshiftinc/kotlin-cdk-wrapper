@@ -39,6 +39,9 @@ public open class CfnDomainName internal constructor(
     unwrap(this).setDomainNameConfigurations(__idx_ac66f0)
   }
 
+  public open fun domainNameConfigurations(vararg __idx_ac66f0: Any): Unit =
+      domainNameConfigurations(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -74,6 +77,8 @@ public open class CfnDomainName internal constructor(
 
     public fun domainNameConfigurations(domainNameConfigurations: List<Any>)
 
+    public fun domainNameConfigurations(vararg domainNameConfigurations: Any)
+
     public fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable)
 
     public fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty)
@@ -104,6 +109,9 @@ public open class CfnDomainName internal constructor(
     override fun domainNameConfigurations(domainNameConfigurations: List<Any>) {
       cdkBuilder.domainNameConfigurations(domainNameConfigurations)
     }
+
+    override fun domainNameConfigurations(vararg domainNameConfigurations: Any): Unit =
+        domainNameConfigurations(domainNameConfigurations.toList())
 
     override fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable) {
       cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(IResolvable::unwrap))

@@ -47,6 +47,8 @@ public open class PipelineProject internal constructor(
 
     public fun fileSystemLocations(fileSystemLocations: List<IFileSystemLocation>)
 
+    public fun fileSystemLocations(vararg fileSystemLocations: IFileSystemLocation)
+
     public fun grantReportGroupPermissions(grantReportGroupPermissions: Boolean)
 
     public fun logging(logging: LoggingOptions)
@@ -62,6 +64,8 @@ public open class PipelineProject internal constructor(
     public fun role(role: IRole)
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
+
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
 
     public fun ssmSessionPermissions(ssmSessionPermissions: Boolean)
 
@@ -132,6 +136,9 @@ public open class PipelineProject internal constructor(
       cdkBuilder.fileSystemLocations(fileSystemLocations.map(IFileSystemLocation::unwrap))
     }
 
+    override fun fileSystemLocations(vararg fileSystemLocations: IFileSystemLocation): Unit =
+        fileSystemLocations(fileSystemLocations.toList())
+
     override fun grantReportGroupPermissions(grantReportGroupPermissions: Boolean) {
       cdkBuilder.grantReportGroupPermissions(grantReportGroupPermissions)
     }
@@ -160,6 +167,9 @@ public open class PipelineProject internal constructor(
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun ssmSessionPermissions(ssmSessionPermissions: Boolean) {
       cdkBuilder.ssmSessionPermissions(ssmSessionPermissions)

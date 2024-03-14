@@ -144,6 +144,8 @@ public open class CfnConnector internal constructor(
     unwrap(this).setPlugins(__idx_ac66f0)
   }
 
+  public open fun plugins(vararg __idx_ac66f0: Any): Unit = plugins(__idx_ac66f0.toList())
+
   public open fun serviceExecutionRoleArn(): String = unwrap(this).getServiceExecutionRoleArn()
 
   public open fun serviceExecutionRoleArn(`value`: String) {
@@ -223,6 +225,8 @@ public open class CfnConnector internal constructor(
     public fun plugins(plugins: IResolvable)
 
     public fun plugins(plugins: List<Any>)
+
+    public fun plugins(vararg plugins: Any)
 
     public fun serviceExecutionRoleArn(serviceExecutionRoleArn: String)
 
@@ -341,6 +345,8 @@ public open class CfnConnector internal constructor(
     override fun plugins(plugins: List<Any>) {
       cdkBuilder.plugins(plugins)
     }
+
+    override fun plugins(vararg plugins: Any): Unit = plugins(plugins.toList())
 
     override fun serviceExecutionRoleArn(serviceExecutionRoleArn: String) {
       cdkBuilder.serviceExecutionRoleArn(serviceExecutionRoleArn)
@@ -804,7 +810,11 @@ public open class CfnConnector internal constructor(
     public interface Builder {
       public fun securityGroups(securityGroups: List<String>)
 
+      public fun securityGroups(vararg securityGroups: String)
+
       public fun subnets(subnets: List<String>)
+
+      public fun subnets(vararg subnets: String)
     }
 
     private class BuilderImpl : Builder {
@@ -816,9 +826,14 @@ public open class CfnConnector internal constructor(
         cdkBuilder.securityGroups(securityGroups)
       }
 
+      override fun securityGroups(vararg securityGroups: String): Unit =
+          securityGroups(securityGroups.toList())
+
       override fun subnets(subnets: List<String>) {
         cdkBuilder.subnets(subnets)
       }
+
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
 
       public fun build(): software.amazon.awscdk.services.kafkaconnect.CfnConnector.VpcProperty =
           cdkBuilder.build()
@@ -827,9 +842,9 @@ public open class CfnConnector internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.VpcProperty,
     ) : VpcProperty {
-      override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
+      override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups()
 
-      override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+      override fun subnets(): List<String> = unwrap(this).getSubnets()
     }
 
     public companion object {

@@ -601,7 +601,11 @@ public open class CfnSchedule internal constructor(
 
       public fun securityGroups(securityGroups: List<String>)
 
+      public fun securityGroups(vararg securityGroups: String)
+
       public fun subnets(subnets: List<String>)
+
+      public fun subnets(vararg subnets: String)
     }
 
     private class BuilderImpl : Builder {
@@ -618,9 +622,14 @@ public open class CfnSchedule internal constructor(
         cdkBuilder.securityGroups(securityGroups)
       }
 
+      override fun securityGroups(vararg securityGroups: String): Unit =
+          securityGroups(securityGroups.toList())
+
       override fun subnets(subnets: List<String>) {
         cdkBuilder.subnets(subnets)
       }
+
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
 
       public fun build():
           software.amazon.awscdk.services.scheduler.CfnSchedule.AwsVpcConfigurationProperty =
@@ -635,7 +644,7 @@ public open class CfnSchedule internal constructor(
 
       override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
 
-      override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+      override fun subnets(): List<String> = unwrap(this).getSubnets()
     }
 
     public companion object {
@@ -692,6 +701,8 @@ public open class CfnSchedule internal constructor(
 
       public fun capacityProviderStrategy(capacityProviderStrategy: List<Any>)
 
+      public fun capacityProviderStrategy(vararg capacityProviderStrategy: Any)
+
       public fun enableEcsManagedTags(enableEcsManagedTags: Boolean)
 
       public fun enableEcsManagedTags(enableEcsManagedTags: IResolvable)
@@ -717,9 +728,13 @@ public open class CfnSchedule internal constructor(
 
       public fun placementConstraints(placementConstraints: List<Any>)
 
+      public fun placementConstraints(vararg placementConstraints: Any)
+
       public fun placementStrategy(placementStrategy: IResolvable)
 
       public fun placementStrategy(placementStrategy: List<Any>)
+
+      public fun placementStrategy(vararg placementStrategy: Any)
 
       public fun platformVersion(platformVersion: String)
 
@@ -746,6 +761,9 @@ public open class CfnSchedule internal constructor(
       override fun capacityProviderStrategy(capacityProviderStrategy: List<Any>) {
         cdkBuilder.capacityProviderStrategy(capacityProviderStrategy)
       }
+
+      override fun capacityProviderStrategy(vararg capacityProviderStrategy: Any): Unit =
+          capacityProviderStrategy(capacityProviderStrategy.toList())
 
       override fun enableEcsManagedTags(enableEcsManagedTags: Boolean) {
         cdkBuilder.enableEcsManagedTags(enableEcsManagedTags)
@@ -793,6 +811,9 @@ public open class CfnSchedule internal constructor(
         cdkBuilder.placementConstraints(placementConstraints)
       }
 
+      override fun placementConstraints(vararg placementConstraints: Any): Unit =
+          placementConstraints(placementConstraints.toList())
+
       override fun placementStrategy(placementStrategy: IResolvable) {
         cdkBuilder.placementStrategy(placementStrategy.let(IResolvable::unwrap))
       }
@@ -800,6 +821,9 @@ public open class CfnSchedule internal constructor(
       override fun placementStrategy(placementStrategy: List<Any>) {
         cdkBuilder.placementStrategy(placementStrategy)
       }
+
+      override fun placementStrategy(vararg placementStrategy: Any): Unit =
+          placementStrategy(placementStrategy.toList())
 
       override fun platformVersion(platformVersion: String) {
         cdkBuilder.platformVersion(platformVersion)
@@ -1421,6 +1445,8 @@ public open class CfnSchedule internal constructor(
       public fun pipelineParameterList(pipelineParameterList: IResolvable)
 
       public fun pipelineParameterList(pipelineParameterList: List<Any>)
+
+      public fun pipelineParameterList(vararg pipelineParameterList: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1436,6 +1462,9 @@ public open class CfnSchedule internal constructor(
       override fun pipelineParameterList(pipelineParameterList: List<Any>) {
         cdkBuilder.pipelineParameterList(pipelineParameterList)
       }
+
+      override fun pipelineParameterList(vararg pipelineParameterList: Any): Unit =
+          pipelineParameterList(pipelineParameterList.toList())
 
       public fun build():
           software.amazon.awscdk.services.scheduler.CfnSchedule.SageMakerPipelineParametersProperty

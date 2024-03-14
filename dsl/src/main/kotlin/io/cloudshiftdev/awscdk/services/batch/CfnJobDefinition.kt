@@ -90,6 +90,9 @@ public open class CfnJobDefinition internal constructor(
     unwrap(this).setPlatformCapabilities(`value`)
   }
 
+  public open fun platformCapabilities(vararg `value`: String): Unit =
+      platformCapabilities(`value`.toList())
+
   public open fun propagateTags(): Any? = unwrap(this).getPropagateTags()
 
   public open fun propagateTags(`value`: Boolean) {
@@ -182,6 +185,8 @@ public open class CfnJobDefinition internal constructor(
 
     public fun platformCapabilities(platformCapabilities: List<String>)
 
+    public fun platformCapabilities(vararg platformCapabilities: String)
+
     public fun propagateTags(propagateTags: Boolean)
 
     public fun propagateTags(propagateTags: IResolvable)
@@ -267,6 +272,9 @@ public open class CfnJobDefinition internal constructor(
     override fun platformCapabilities(platformCapabilities: List<String>) {
       cdkBuilder.platformCapabilities(platformCapabilities)
     }
+
+    override fun platformCapabilities(vararg platformCapabilities: String): Unit =
+        platformCapabilities(platformCapabilities.toList())
 
     override fun propagateTags(propagateTags: Boolean) {
       cdkBuilder.propagateTags(propagateTags)
@@ -405,6 +413,8 @@ public open class CfnJobDefinition internal constructor(
 
       public fun devices(devices: List<Any>)
 
+      public fun devices(vararg devices: Any)
+
       public fun initProcessEnabled(initProcessEnabled: Boolean)
 
       public fun initProcessEnabled(initProcessEnabled: IResolvable)
@@ -418,6 +428,8 @@ public open class CfnJobDefinition internal constructor(
       public fun tmpfs(tmpfs: IResolvable)
 
       public fun tmpfs(tmpfs: List<Any>)
+
+      public fun tmpfs(vararg tmpfs: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -432,6 +444,8 @@ public open class CfnJobDefinition internal constructor(
       override fun devices(devices: List<Any>) {
         cdkBuilder.devices(devices)
       }
+
+      override fun devices(vararg devices: Any): Unit = devices(devices.toList())
 
       override fun initProcessEnabled(initProcessEnabled: Boolean) {
         cdkBuilder.initProcessEnabled(initProcessEnabled)
@@ -460,6 +474,8 @@ public open class CfnJobDefinition internal constructor(
       override fun tmpfs(tmpfs: List<Any>) {
         cdkBuilder.tmpfs(tmpfs)
       }
+
+      override fun tmpfs(vararg tmpfs: Any): Unit = tmpfs(tmpfs.toList())
 
       public fun build():
           software.amazon.awscdk.services.batch.CfnJobDefinition.LinuxParametersProperty =
@@ -1147,6 +1163,8 @@ public open class CfnJobDefinition internal constructor(
 
       public fun nodeRangeProperties(nodeRangeProperties: List<Any>)
 
+      public fun nodeRangeProperties(vararg nodeRangeProperties: Any)
+
       public fun numNodes(numNodes: Number)
     }
 
@@ -1166,6 +1184,9 @@ public open class CfnJobDefinition internal constructor(
       override fun nodeRangeProperties(nodeRangeProperties: List<Any>) {
         cdkBuilder.nodeRangeProperties(nodeRangeProperties)
       }
+
+      override fun nodeRangeProperties(vararg nodeRangeProperties: Any): Unit =
+          nodeRangeProperties(nodeRangeProperties.toList())
 
       override fun numNodes(numNodes: Number) {
         cdkBuilder.numNodes(numNodes)
@@ -1222,6 +1243,8 @@ public open class CfnJobDefinition internal constructor(
       public fun secretOptions(secretOptions: IResolvable)
 
       public fun secretOptions(secretOptions: List<Any>)
+
+      public fun secretOptions(vararg secretOptions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1244,6 +1267,9 @@ public open class CfnJobDefinition internal constructor(
       override fun secretOptions(secretOptions: List<Any>) {
         cdkBuilder.secretOptions(secretOptions)
       }
+
+      override fun secretOptions(vararg secretOptions: Any): Unit =
+          secretOptions(secretOptions.toList())
 
       public fun build():
           software.amazon.awscdk.services.batch.CfnJobDefinition.LogConfigurationProperty =
@@ -1468,6 +1494,8 @@ public open class CfnJobDefinition internal constructor(
 
       public fun mountOptions(mountOptions: List<String>)
 
+      public fun mountOptions(vararg mountOptions: String)
+
       public fun size(size: Number)
     }
 
@@ -1483,6 +1511,9 @@ public open class CfnJobDefinition internal constructor(
       override fun mountOptions(mountOptions: List<String>) {
         cdkBuilder.mountOptions(mountOptions)
       }
+
+      override fun mountOptions(vararg mountOptions: String): Unit =
+          mountOptions(mountOptions.toList())
 
       override fun size(size: Number) {
         cdkBuilder.size(size)
@@ -1911,11 +1942,17 @@ public open class CfnJobDefinition internal constructor(
     public interface Builder {
       public fun args(args: List<String>)
 
+      public fun args(vararg args: String)
+
       public fun command(command: List<String>)
+
+      public fun command(vararg command: String)
 
       public fun env(env: IResolvable)
 
       public fun env(env: List<Any>)
+
+      public fun env(vararg env: Any)
 
       public fun image(image: String)
 
@@ -1942,6 +1979,8 @@ public open class CfnJobDefinition internal constructor(
       public fun volumeMounts(volumeMounts: IResolvable)
 
       public fun volumeMounts(volumeMounts: List<Any>)
+
+      public fun volumeMounts(vararg volumeMounts: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1953,9 +1992,13 @@ public open class CfnJobDefinition internal constructor(
         cdkBuilder.args(args)
       }
 
+      override fun args(vararg args: String): Unit = args(args.toList())
+
       override fun command(command: List<String>) {
         cdkBuilder.command(command)
       }
+
+      override fun command(vararg command: String): Unit = command(command.toList())
 
       override fun env(env: IResolvable) {
         cdkBuilder.env(env.let(IResolvable::unwrap))
@@ -1964,6 +2007,8 @@ public open class CfnJobDefinition internal constructor(
       override fun env(env: List<Any>) {
         cdkBuilder.env(env)
       }
+
+      override fun env(vararg env: Any): Unit = env(env.toList())
 
       override fun image(image: String) {
         cdkBuilder.image(image)
@@ -2010,6 +2055,9 @@ public open class CfnJobDefinition internal constructor(
       override fun volumeMounts(volumeMounts: List<Any>) {
         cdkBuilder.volumeMounts(volumeMounts)
       }
+
+      override fun volumeMounts(vararg volumeMounts: Any): Unit =
+          volumeMounts(volumeMounts.toList())
 
       public fun build():
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksContainerProperty =
@@ -2340,6 +2388,8 @@ public open class CfnJobDefinition internal constructor(
 
       public fun containers(containers: List<Any>)
 
+      public fun containers(vararg containers: Any)
+
       public fun dnsPolicy(dnsPolicy: String)
 
       public fun hostNetwork(hostNetwork: Boolean)
@@ -2359,6 +2409,8 @@ public open class CfnJobDefinition internal constructor(
       public fun volumes(volumes: IResolvable)
 
       public fun volumes(volumes: List<Any>)
+
+      public fun volumes(vararg volumes: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2373,6 +2425,8 @@ public open class CfnJobDefinition internal constructor(
       override fun containers(containers: List<Any>) {
         cdkBuilder.containers(containers)
       }
+
+      override fun containers(vararg containers: Any): Unit = containers(containers.toList())
 
       override fun dnsPolicy(dnsPolicy: String) {
         cdkBuilder.dnsPolicy(dnsPolicy)
@@ -2410,6 +2464,8 @@ public open class CfnJobDefinition internal constructor(
       override fun volumes(volumes: List<Any>) {
         cdkBuilder.volumes(volumes)
       }
+
+      override fun volumes(vararg volumes: Any): Unit = volumes(volumes.toList())
 
       public fun build():
           software.amazon.awscdk.services.batch.CfnJobDefinition.PodPropertiesProperty =
@@ -2715,9 +2771,13 @@ public open class CfnJobDefinition internal constructor(
     public interface Builder {
       public fun command(command: List<String>)
 
+      public fun command(vararg command: String)
+
       public fun environment(environment: IResolvable)
 
       public fun environment(environment: List<Any>)
+
+      public fun environment(vararg environment: Any)
 
       public fun ephemeralStorage(ephemeralStorage: IResolvable)
 
@@ -2767,6 +2827,8 @@ public open class CfnJobDefinition internal constructor(
 
       public fun mountPoints(mountPoints: List<Any>)
 
+      public fun mountPoints(vararg mountPoints: Any)
+
       public fun networkConfiguration(networkConfiguration: IResolvable)
 
       public fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty)
@@ -2797,6 +2859,8 @@ public open class CfnJobDefinition internal constructor(
 
       public fun resourceRequirements(resourceRequirements: List<Any>)
 
+      public fun resourceRequirements(vararg resourceRequirements: Any)
+
       public fun runtimePlatform(runtimePlatform: IResolvable)
 
       public fun runtimePlatform(runtimePlatform: RuntimePlatformProperty)
@@ -2809,9 +2873,13 @@ public open class CfnJobDefinition internal constructor(
 
       public fun secrets(secrets: List<Any>)
 
+      public fun secrets(vararg secrets: Any)
+
       public fun ulimits(ulimits: IResolvable)
 
       public fun ulimits(ulimits: List<Any>)
+
+      public fun ulimits(vararg ulimits: Any)
 
       public fun user(user: String)
 
@@ -2820,6 +2888,8 @@ public open class CfnJobDefinition internal constructor(
       public fun volumes(volumes: IResolvable)
 
       public fun volumes(volumes: List<Any>)
+
+      public fun volumes(vararg volumes: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2832,6 +2902,8 @@ public open class CfnJobDefinition internal constructor(
         cdkBuilder.command(command)
       }
 
+      override fun command(vararg command: String): Unit = command(command.toList())
+
       override fun environment(environment: IResolvable) {
         cdkBuilder.environment(environment.let(IResolvable::unwrap))
       }
@@ -2839,6 +2911,8 @@ public open class CfnJobDefinition internal constructor(
       override fun environment(environment: List<Any>) {
         cdkBuilder.environment(environment)
       }
+
+      override fun environment(vararg environment: Any): Unit = environment(environment.toList())
 
       override fun ephemeralStorage(ephemeralStorage: IResolvable) {
         cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable::unwrap))
@@ -2923,6 +2997,8 @@ public open class CfnJobDefinition internal constructor(
         cdkBuilder.mountPoints(mountPoints)
       }
 
+      override fun mountPoints(vararg mountPoints: Any): Unit = mountPoints(mountPoints.toList())
+
       override fun networkConfiguration(networkConfiguration: IResolvable) {
         cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
       }
@@ -2975,6 +3051,9 @@ public open class CfnJobDefinition internal constructor(
         cdkBuilder.resourceRequirements(resourceRequirements)
       }
 
+      override fun resourceRequirements(vararg resourceRequirements: Any): Unit =
+          resourceRequirements(resourceRequirements.toList())
+
       override fun runtimePlatform(runtimePlatform: IResolvable) {
         cdkBuilder.runtimePlatform(runtimePlatform.let(IResolvable::unwrap))
       }
@@ -2996,6 +3075,8 @@ public open class CfnJobDefinition internal constructor(
         cdkBuilder.secrets(secrets)
       }
 
+      override fun secrets(vararg secrets: Any): Unit = secrets(secrets.toList())
+
       override fun ulimits(ulimits: IResolvable) {
         cdkBuilder.ulimits(ulimits.let(IResolvable::unwrap))
       }
@@ -3003,6 +3084,8 @@ public open class CfnJobDefinition internal constructor(
       override fun ulimits(ulimits: List<Any>) {
         cdkBuilder.ulimits(ulimits)
       }
+
+      override fun ulimits(vararg ulimits: Any): Unit = ulimits(ulimits.toList())
 
       override fun user(user: String) {
         cdkBuilder.user(user)
@@ -3019,6 +3102,8 @@ public open class CfnJobDefinition internal constructor(
       override fun volumes(volumes: List<Any>) {
         cdkBuilder.volumes(volumes)
       }
+
+      override fun volumes(vararg volumes: Any): Unit = volumes(volumes.toList())
 
       public fun build():
           software.amazon.awscdk.services.batch.CfnJobDefinition.ContainerPropertiesProperty =
@@ -3108,6 +3193,8 @@ public open class CfnJobDefinition internal constructor(
       public fun evaluateOnExit(evaluateOnExit: IResolvable)
 
       public fun evaluateOnExit(evaluateOnExit: List<Any>)
+
+      public fun evaluateOnExit(vararg evaluateOnExit: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -3126,6 +3213,9 @@ public open class CfnJobDefinition internal constructor(
       override fun evaluateOnExit(evaluateOnExit: List<Any>) {
         cdkBuilder.evaluateOnExit(evaluateOnExit)
       }
+
+      override fun evaluateOnExit(vararg evaluateOnExit: Any): Unit =
+          evaluateOnExit(evaluateOnExit.toList())
 
       public fun build():
           software.amazon.awscdk.services.batch.CfnJobDefinition.RetryStrategyProperty =
@@ -3249,6 +3339,8 @@ public open class CfnJobDefinition internal constructor(
       public fun hostPath(hostPath: String)
 
       public fun permissions(permissions: List<String>)
+
+      public fun permissions(vararg permissions: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3267,6 +3359,8 @@ public open class CfnJobDefinition internal constructor(
       override fun permissions(permissions: List<String>) {
         cdkBuilder.permissions(permissions)
       }
+
+      override fun permissions(vararg permissions: String): Unit = permissions(permissions.toList())
 
       public fun build(): software.amazon.awscdk.services.batch.CfnJobDefinition.DeviceProperty =
           cdkBuilder.build()

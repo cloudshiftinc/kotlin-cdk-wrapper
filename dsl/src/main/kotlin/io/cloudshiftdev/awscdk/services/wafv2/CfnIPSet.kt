@@ -15,11 +15,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnIPSet internal constructor(
   private val cdkObject: software.amazon.awscdk.services.wafv2.CfnIPSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
-  public open fun addresses(): List<String> = unwrap(this).getAddresses() ?: emptyList()
+  public open fun addresses(): List<String> = unwrap(this).getAddresses()
 
   public open fun addresses(`value`: List<String>) {
     unwrap(this).setAddresses(`value`)
   }
+
+  public open fun addresses(vararg `value`: String): Unit = addresses(`value`.toList())
 
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
@@ -62,8 +64,12 @@ public open class CfnIPSet internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun addresses(addresses: List<String>)
+
+    public fun addresses(vararg addresses: String)
 
     public fun description(description: String)
 
@@ -74,6 +80,8 @@ public open class CfnIPSet internal constructor(
     public fun scope(scope: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -86,6 +94,8 @@ public open class CfnIPSet internal constructor(
     override fun addresses(addresses: List<String>) {
       cdkBuilder.addresses(addresses)
     }
+
+    override fun addresses(vararg addresses: String): Unit = addresses(addresses.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -106,6 +116,8 @@ public open class CfnIPSet internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.wafv2.CfnIPSet = cdkBuilder.build()
   }

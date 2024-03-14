@@ -31,6 +31,8 @@ public open class CfnInstance internal constructor(
     unwrap(this).setAddOns(__idx_ac66f0)
   }
 
+  public open fun addOns(vararg __idx_ac66f0: Any): Unit = addOns(__idx_ac66f0.toList())
+
   public open fun attrHardwareCpuCount(): Number = unwrap(this).getAttrHardwareCpuCount()
 
   public open fun attrHardwareRamSizeInGb(): Number = unwrap(this).getAttrHardwareRamSizeInGb()
@@ -167,6 +169,8 @@ public open class CfnInstance internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun userData(): String? = unwrap(this).getUserData()
 
   public open fun userData(`value`: String) {
@@ -177,6 +181,8 @@ public open class CfnInstance internal constructor(
     public fun addOns(addOns: IResolvable)
 
     public fun addOns(addOns: List<Any>)
+
+    public fun addOns(vararg addOns: Any)
 
     public fun availabilityZone(availabilityZone: String)
 
@@ -222,6 +228,8 @@ public open class CfnInstance internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun userData(userData: String)
   }
 
@@ -239,6 +247,8 @@ public open class CfnInstance internal constructor(
     override fun addOns(addOns: List<Any>) {
       cdkBuilder.addOns(addOns)
     }
+
+    override fun addOns(vararg addOns: Any): Unit = addOns(addOns.toList())
 
     override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
@@ -314,6 +324,8 @@ public open class CfnInstance internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun userData(userData: String) {
       cdkBuilder.userData(userData)
@@ -609,13 +621,19 @@ public open class CfnInstance internal constructor(
 
       public fun cidrListAliases(cidrListAliases: List<String>)
 
+      public fun cidrListAliases(vararg cidrListAliases: String)
+
       public fun cidrs(cidrs: List<String>)
+
+      public fun cidrs(vararg cidrs: String)
 
       public fun commonName(commonName: String)
 
       public fun fromPort(fromPort: Number)
 
       public fun ipv6Cidrs(ipv6Cidrs: List<String>)
+
+      public fun ipv6Cidrs(vararg ipv6Cidrs: String)
 
       public fun protocol(protocol: String)
 
@@ -643,9 +661,14 @@ public open class CfnInstance internal constructor(
         cdkBuilder.cidrListAliases(cidrListAliases)
       }
 
+      override fun cidrListAliases(vararg cidrListAliases: String): Unit =
+          cidrListAliases(cidrListAliases.toList())
+
       override fun cidrs(cidrs: List<String>) {
         cdkBuilder.cidrs(cidrs)
       }
+
+      override fun cidrs(vararg cidrs: String): Unit = cidrs(cidrs.toList())
 
       override fun commonName(commonName: String) {
         cdkBuilder.commonName(commonName)
@@ -658,6 +681,8 @@ public open class CfnInstance internal constructor(
       override fun ipv6Cidrs(ipv6Cidrs: List<String>) {
         cdkBuilder.ipv6Cidrs(ipv6Cidrs)
       }
+
+      override fun ipv6Cidrs(vararg ipv6Cidrs: String): Unit = ipv6Cidrs(ipv6Cidrs.toList())
 
       override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
@@ -730,6 +755,8 @@ public open class CfnInstance internal constructor(
 
       public fun disks(disks: List<Any>)
 
+      public fun disks(vararg disks: Any)
+
       public fun ramSizeInGb(ramSizeInGb: Number)
     }
 
@@ -749,6 +776,8 @@ public open class CfnInstance internal constructor(
       override fun disks(disks: List<Any>) {
         cdkBuilder.disks(disks)
       }
+
+      override fun disks(vararg disks: Any): Unit = disks(disks.toList())
 
       override fun ramSizeInGb(ramSizeInGb: Number) {
         cdkBuilder.ramSizeInGb(ramSizeInGb)
@@ -806,6 +835,8 @@ public open class CfnInstance internal constructor(
       public fun ports(ports: IResolvable)
 
       public fun ports(ports: List<Any>)
+
+      public fun ports(vararg ports: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -833,6 +864,8 @@ public open class CfnInstance internal constructor(
       override fun ports(ports: List<Any>) {
         cdkBuilder.ports(ports)
       }
+
+      override fun ports(vararg ports: Any): Unit = ports(ports.toList())
 
       public fun build(): software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty =
           cdkBuilder.build()

@@ -34,6 +34,8 @@ public open class CfnDBProxy internal constructor(
     unwrap(this).setAuth(__idx_ac66f0)
   }
 
+  public open fun auth(vararg __idx_ac66f0: Any): Unit = auth(__idx_ac66f0.toList())
+
   public override fun cdkTagManager(): TagManager =
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
@@ -92,6 +94,8 @@ public open class CfnDBProxy internal constructor(
     unwrap(this).setTags(`value`.map(TagFormatProperty::unwrap))
   }
 
+  public open fun tags(vararg `value`: TagFormatProperty): Unit = tags(`value`.toList())
+
   public open fun vpcSecurityGroupIds(): List<String> = unwrap(this).getVpcSecurityGroupIds() ?:
       emptyList()
 
@@ -99,16 +103,23 @@ public open class CfnDBProxy internal constructor(
     unwrap(this).setVpcSecurityGroupIds(`value`)
   }
 
-  public open fun vpcSubnetIds(): List<String> = unwrap(this).getVpcSubnetIds() ?: emptyList()
+  public open fun vpcSecurityGroupIds(vararg `value`: String): Unit =
+      vpcSecurityGroupIds(`value`.toList())
+
+  public open fun vpcSubnetIds(): List<String> = unwrap(this).getVpcSubnetIds()
 
   public open fun vpcSubnetIds(`value`: List<String>) {
     unwrap(this).setVpcSubnetIds(`value`)
   }
 
+  public open fun vpcSubnetIds(vararg `value`: String): Unit = vpcSubnetIds(`value`.toList())
+
   public interface Builder {
     public fun auth(auth: IResolvable)
 
     public fun auth(auth: List<Any>)
+
+    public fun auth(vararg auth: Any)
 
     public fun dbProxyName(dbProxyName: String)
 
@@ -128,9 +139,15 @@ public open class CfnDBProxy internal constructor(
 
     public fun tags(tags: List<TagFormatProperty>)
 
+    public fun tags(vararg tags: TagFormatProperty)
+
     public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>)
 
+    public fun vpcSecurityGroupIds(vararg vpcSecurityGroupIds: String)
+
     public fun vpcSubnetIds(vpcSubnetIds: List<String>)
+
+    public fun vpcSubnetIds(vararg vpcSubnetIds: String)
   }
 
   private class BuilderImpl(
@@ -147,6 +164,8 @@ public open class CfnDBProxy internal constructor(
     override fun auth(auth: List<Any>) {
       cdkBuilder.auth(auth)
     }
+
+    override fun auth(vararg auth: Any): Unit = auth(auth.toList())
 
     override fun dbProxyName(dbProxyName: String) {
       cdkBuilder.dbProxyName(dbProxyName)
@@ -184,13 +203,21 @@ public open class CfnDBProxy internal constructor(
       cdkBuilder.tags(tags.map(TagFormatProperty::unwrap))
     }
 
+    override fun tags(vararg tags: TagFormatProperty): Unit = tags(tags.toList())
+
     override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
       cdkBuilder.vpcSecurityGroupIds(vpcSecurityGroupIds)
     }
 
+    override fun vpcSecurityGroupIds(vararg vpcSecurityGroupIds: String): Unit =
+        vpcSecurityGroupIds(vpcSecurityGroupIds.toList())
+
     override fun vpcSubnetIds(vpcSubnetIds: List<String>) {
       cdkBuilder.vpcSubnetIds(vpcSubnetIds)
     }
+
+    override fun vpcSubnetIds(vararg vpcSubnetIds: String): Unit =
+        vpcSubnetIds(vpcSubnetIds.toList())
 
     public fun build(): software.amazon.awscdk.services.rds.CfnDBProxy = cdkBuilder.build()
   }

@@ -96,6 +96,8 @@ public open class Secret internal constructor(
 
     public fun replicaRegions(replicaRegions: List<ReplicaRegion>)
 
+    public fun replicaRegions(vararg replicaRegions: ReplicaRegion)
+
     public fun secretName(secretName: String)
 
     public fun secretObjectValue(secretObjectValue: Map<String, SecretValue>)
@@ -138,6 +140,9 @@ public open class Secret internal constructor(
     override fun replicaRegions(replicaRegions: List<ReplicaRegion>) {
       cdkBuilder.replicaRegions(replicaRegions.map(ReplicaRegion::unwrap))
     }
+
+    override fun replicaRegions(vararg replicaRegions: ReplicaRegion): Unit =
+        replicaRegions(replicaRegions.toList())
 
     override fun secretName(secretName: String) {
       cdkBuilder.secretName(secretName)

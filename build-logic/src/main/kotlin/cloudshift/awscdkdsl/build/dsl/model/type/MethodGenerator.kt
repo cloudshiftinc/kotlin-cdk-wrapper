@@ -101,7 +101,7 @@ internal data class MethodSpec(
     val body: CodeBlock? = null,
     val isOpen: Boolean = false,
     val isAbstract: Boolean = false,
-    val annotations: List<AnnotationSpec> = emptyList()
+    val annotations: List<AnnotationSpec> = emptyList(),
 ) {
 
     val name: String
@@ -112,13 +112,15 @@ internal data class MethodSpec(
 
     data class Parameter(
         val name: String,
-        val type: TypeName
+        val type: TypeName,
+        val varargs : Boolean = false
     ) {
         fun toParameterSpec(): ParameterSpec {
             val builder = ParameterSpec.builder(
                 name,
                 type.mapClassName(),
             )
+            if(varargs) builder.addModifiers(KModifier.VARARG)
             return builder.build()
         }
     }

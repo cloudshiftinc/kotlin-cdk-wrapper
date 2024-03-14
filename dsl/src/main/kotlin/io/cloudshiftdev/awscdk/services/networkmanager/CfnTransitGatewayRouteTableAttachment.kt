@@ -80,6 +80,8 @@ public open class CfnTransitGatewayRouteTableAttachment internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun transitGatewayRouteTableArn(): String =
       unwrap(this).getTransitGatewayRouteTableArn()
 
@@ -100,6 +102,8 @@ public open class CfnTransitGatewayRouteTableAttachment internal constructor(
         fun proposedSegmentChange(proposedSegmentChange: ProposedSegmentChangeProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun transitGatewayRouteTableArn(transitGatewayRouteTableArn: String)
   }
@@ -135,6 +139,8 @@ public open class CfnTransitGatewayRouteTableAttachment internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun transitGatewayRouteTableArn(transitGatewayRouteTableArn: String) {
       cdkBuilder.transitGatewayRouteTableArn(transitGatewayRouteTableArn)
@@ -181,6 +187,8 @@ public open class CfnTransitGatewayRouteTableAttachment internal constructor(
       public fun segmentName(segmentName: String)
 
       public fun tags(tags: List<CfnTag>)
+
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
@@ -200,6 +208,8 @@ public open class CfnTransitGatewayRouteTableAttachment internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       public fun build():
           software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment.ProposedSegmentChangeProperty

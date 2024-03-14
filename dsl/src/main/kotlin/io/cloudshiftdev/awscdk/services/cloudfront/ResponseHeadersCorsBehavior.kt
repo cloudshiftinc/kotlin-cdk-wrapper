@@ -28,11 +28,19 @@ public interface ResponseHeadersCorsBehavior {
 
     public fun accessControlAllowHeaders(accessControlAllowHeaders: List<String>)
 
+    public fun accessControlAllowHeaders(vararg accessControlAllowHeaders: String)
+
     public fun accessControlAllowMethods(accessControlAllowMethods: List<String>)
+
+    public fun accessControlAllowMethods(vararg accessControlAllowMethods: String)
 
     public fun accessControlAllowOrigins(accessControlAllowOrigins: List<String>)
 
+    public fun accessControlAllowOrigins(vararg accessControlAllowOrigins: String)
+
     public fun accessControlExposeHeaders(accessControlExposeHeaders: List<String>)
+
+    public fun accessControlExposeHeaders(vararg accessControlExposeHeaders: String)
 
     public fun accessControlMaxAge(accessControlMaxAge: Duration)
 
@@ -52,17 +60,29 @@ public interface ResponseHeadersCorsBehavior {
       cdkBuilder.accessControlAllowHeaders(accessControlAllowHeaders)
     }
 
+    override fun accessControlAllowHeaders(vararg accessControlAllowHeaders: String): Unit =
+        accessControlAllowHeaders(accessControlAllowHeaders.toList())
+
     override fun accessControlAllowMethods(accessControlAllowMethods: List<String>) {
       cdkBuilder.accessControlAllowMethods(accessControlAllowMethods)
     }
+
+    override fun accessControlAllowMethods(vararg accessControlAllowMethods: String): Unit =
+        accessControlAllowMethods(accessControlAllowMethods.toList())
 
     override fun accessControlAllowOrigins(accessControlAllowOrigins: List<String>) {
       cdkBuilder.accessControlAllowOrigins(accessControlAllowOrigins)
     }
 
+    override fun accessControlAllowOrigins(vararg accessControlAllowOrigins: String): Unit =
+        accessControlAllowOrigins(accessControlAllowOrigins.toList())
+
     override fun accessControlExposeHeaders(accessControlExposeHeaders: List<String>) {
       cdkBuilder.accessControlExposeHeaders(accessControlExposeHeaders)
     }
+
+    override fun accessControlExposeHeaders(vararg accessControlExposeHeaders: String): Unit =
+        accessControlExposeHeaders(accessControlExposeHeaders.toList())
 
     override fun accessControlMaxAge(accessControlMaxAge: Duration) {
       cdkBuilder.accessControlMaxAge(accessControlMaxAge.let(Duration::unwrap))
@@ -83,13 +103,13 @@ public interface ResponseHeadersCorsBehavior {
         unwrap(this).getAccessControlAllowCredentials()
 
     override fun accessControlAllowHeaders(): List<String> =
-        unwrap(this).getAccessControlAllowHeaders() ?: emptyList()
+        unwrap(this).getAccessControlAllowHeaders()
 
     override fun accessControlAllowMethods(): List<String> =
-        unwrap(this).getAccessControlAllowMethods() ?: emptyList()
+        unwrap(this).getAccessControlAllowMethods()
 
     override fun accessControlAllowOrigins(): List<String> =
-        unwrap(this).getAccessControlAllowOrigins() ?: emptyList()
+        unwrap(this).getAccessControlAllowOrigins()
 
     override fun accessControlExposeHeaders(): List<String> =
         unwrap(this).getAccessControlExposeHeaders() ?: emptyList()

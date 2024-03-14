@@ -29,6 +29,8 @@ public open class CfnListenerRule internal constructor(
     unwrap(this).setActions(__idx_ac66f0)
   }
 
+  public open fun actions(vararg __idx_ac66f0: Any): Unit = actions(__idx_ac66f0.toList())
+
   public open fun attrIsDefault(): IResolvable =
       unwrap(this).getAttrIsDefault().let(IResolvable::wrap)
 
@@ -43,6 +45,8 @@ public open class CfnListenerRule internal constructor(
   public open fun conditions(__idx_ac66f0: List<Any>) {
     unwrap(this).setConditions(__idx_ac66f0)
   }
+
+  public open fun conditions(vararg __idx_ac66f0: Any): Unit = conditions(__idx_ac66f0.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -65,9 +69,13 @@ public open class CfnListenerRule internal constructor(
 
     public fun actions(actions: List<Any>)
 
+    public fun actions(vararg actions: Any)
+
     public fun conditions(conditions: IResolvable)
 
     public fun conditions(conditions: List<Any>)
+
+    public fun conditions(vararg conditions: Any)
 
     public fun listenerArn(listenerArn: String)
 
@@ -91,6 +99,8 @@ public open class CfnListenerRule internal constructor(
       cdkBuilder.actions(actions)
     }
 
+    override fun actions(vararg actions: Any): Unit = actions(actions.toList())
+
     override fun conditions(conditions: IResolvable) {
       cdkBuilder.conditions(conditions.let(IResolvable::unwrap))
     }
@@ -98,6 +108,8 @@ public open class CfnListenerRule internal constructor(
     override fun conditions(conditions: List<Any>) {
       cdkBuilder.conditions(conditions)
     }
+
+    override fun conditions(vararg conditions: Any): Unit = conditions(conditions.toList())
 
     override fun listenerArn(listenerArn: String) {
       cdkBuilder.listenerArn(listenerArn)
@@ -442,6 +454,8 @@ public open class CfnListenerRule internal constructor(
       public fun values(values: IResolvable)
 
       public fun values(values: List<Any>)
+
+      public fun values(vararg values: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -457,6 +471,8 @@ public open class CfnListenerRule internal constructor(
       override fun values(values: List<Any>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: Any): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringConfigProperty
@@ -495,6 +511,8 @@ public open class CfnListenerRule internal constructor(
 
     public interface Builder {
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -506,6 +524,8 @@ public open class CfnListenerRule internal constructor(
       override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.PathPatternConfigProperty
@@ -734,6 +754,8 @@ public open class CfnListenerRule internal constructor(
       public fun sourceIpConfig(sourceIpConfig: SourceIpConfigProperty.Builder.() -> Unit)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -831,6 +853,8 @@ public open class CfnListenerRule internal constructor(
       override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RuleConditionProperty
@@ -942,6 +966,8 @@ public open class CfnListenerRule internal constructor(
 
     public interface Builder {
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -953,6 +979,8 @@ public open class CfnListenerRule internal constructor(
       override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpRequestMethodConfigProperty
@@ -1005,6 +1033,8 @@ public open class CfnListenerRule internal constructor(
       public fun targetGroups(targetGroups: IResolvable)
 
       public fun targetGroups(targetGroups: List<Any>)
+
+      public fun targetGroups(vararg targetGroups: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1036,6 +1066,9 @@ public open class CfnListenerRule internal constructor(
       override fun targetGroups(targetGroups: List<Any>) {
         cdkBuilder.targetGroups(targetGroups)
       }
+
+      override fun targetGroups(vararg targetGroups: Any): Unit =
+          targetGroups(targetGroups.toList())
 
       public fun build():
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ForwardConfigProperty
@@ -1081,6 +1114,8 @@ public open class CfnListenerRule internal constructor(
       public fun httpHeaderName(httpHeaderName: String)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1096,6 +1131,8 @@ public open class CfnListenerRule internal constructor(
       override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpHeaderConfigProperty
@@ -1266,6 +1303,8 @@ public open class CfnListenerRule internal constructor(
 
     public interface Builder {
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1277,6 +1316,8 @@ public open class CfnListenerRule internal constructor(
       override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HostHeaderConfigProperty
@@ -1315,6 +1356,8 @@ public open class CfnListenerRule internal constructor(
 
     public interface Builder {
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1326,6 +1369,8 @@ public open class CfnListenerRule internal constructor(
       override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.SourceIpConfigProperty

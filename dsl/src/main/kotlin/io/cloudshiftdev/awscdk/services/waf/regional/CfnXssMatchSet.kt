@@ -38,12 +38,17 @@ public open class CfnXssMatchSet internal constructor(
     unwrap(this).setXssMatchTuples(__idx_ac66f0)
   }
 
+  public open fun xssMatchTuples(vararg __idx_ac66f0: Any): Unit =
+      xssMatchTuples(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun name(name: String)
 
     public fun xssMatchTuples(xssMatchTuples: IResolvable)
 
     public fun xssMatchTuples(xssMatchTuples: List<Any>)
+
+    public fun xssMatchTuples(vararg xssMatchTuples: Any)
   }
 
   private class BuilderImpl(
@@ -64,6 +69,9 @@ public open class CfnXssMatchSet internal constructor(
     override fun xssMatchTuples(xssMatchTuples: List<Any>) {
       cdkBuilder.xssMatchTuples(xssMatchTuples)
     }
+
+    override fun xssMatchTuples(vararg xssMatchTuples: Any): Unit =
+        xssMatchTuples(xssMatchTuples.toList())
 
     public fun build(): software.amazon.awscdk.services.waf.regional.CfnXssMatchSet =
         cdkBuilder.build()

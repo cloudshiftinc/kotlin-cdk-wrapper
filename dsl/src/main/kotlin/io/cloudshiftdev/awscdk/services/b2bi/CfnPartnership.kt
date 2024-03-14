@@ -31,6 +31,8 @@ public open class CfnPartnership internal constructor(
     unwrap(this).setCapabilities(`value`)
   }
 
+  public open fun capabilities(vararg `value`: String): Unit = capabilities(`value`.toList())
+
   public override fun cdkTagManager(): TagManager =
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
@@ -68,8 +70,12 @@ public open class CfnPartnership internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun capabilities(capabilities: List<String>)
+
+    public fun capabilities(vararg capabilities: String)
 
     public fun email(email: String)
 
@@ -80,6 +86,8 @@ public open class CfnPartnership internal constructor(
     public fun profileId(profileId: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -92,6 +100,9 @@ public open class CfnPartnership internal constructor(
     override fun capabilities(capabilities: List<String>) {
       cdkBuilder.capabilities(capabilities)
     }
+
+    override fun capabilities(vararg capabilities: String): Unit =
+        capabilities(capabilities.toList())
 
     override fun email(email: String) {
       cdkBuilder.email(email)
@@ -112,6 +123,8 @@ public open class CfnPartnership internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.b2bi.CfnPartnership = cdkBuilder.build()
   }

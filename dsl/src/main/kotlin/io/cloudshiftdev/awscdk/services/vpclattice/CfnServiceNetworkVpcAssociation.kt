@@ -42,6 +42,9 @@ public open class CfnServiceNetworkVpcAssociation internal constructor(
     unwrap(this).setSecurityGroupIds(`value`)
   }
 
+  public open fun securityGroupIds(vararg `value`: String): Unit =
+      securityGroupIds(`value`.toList())
+
   public open fun serviceNetworkIdentifier(): String? = unwrap(this).getServiceNetworkIdentifier()
 
   public open fun serviceNetworkIdentifier(`value`: String) {
@@ -57,6 +60,8 @@ public open class CfnServiceNetworkVpcAssociation internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun vpcIdentifier(): String? = unwrap(this).getVpcIdentifier()
 
   public open fun vpcIdentifier(`value`: String) {
@@ -66,9 +71,13 @@ public open class CfnServiceNetworkVpcAssociation internal constructor(
   public interface Builder {
     public fun securityGroupIds(securityGroupIds: List<String>)
 
+    public fun securityGroupIds(vararg securityGroupIds: String)
+
     public fun serviceNetworkIdentifier(serviceNetworkIdentifier: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun vpcIdentifier(vpcIdentifier: String)
   }
@@ -86,6 +95,9 @@ public open class CfnServiceNetworkVpcAssociation internal constructor(
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
+
     override fun serviceNetworkIdentifier(serviceNetworkIdentifier: String) {
       cdkBuilder.serviceNetworkIdentifier(serviceNetworkIdentifier)
     }
@@ -93,6 +105,8 @@ public open class CfnServiceNetworkVpcAssociation internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun vpcIdentifier(vpcIdentifier: String) {
       cdkBuilder.vpcIdentifier(vpcIdentifier)

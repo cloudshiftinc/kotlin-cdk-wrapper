@@ -88,6 +88,8 @@ public open class CfnDataProvider internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun dataProviderIdentifier(dataProviderIdentifier: String)
 
@@ -102,6 +104,8 @@ public open class CfnDataProvider internal constructor(
     public fun exactSettings(exactSettings: IResolvable)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun tings(settings: IResolvable)
 
@@ -146,6 +150,8 @@ public open class CfnDataProvider internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun tings(settings: IResolvable) {
       cdkBuilder.settings(settings.let(IResolvable::unwrap))

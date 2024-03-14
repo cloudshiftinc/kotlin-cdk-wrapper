@@ -20,8 +20,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnBroker internal constructor(
   private val cdkObject: software.amazon.awscdk.services.amazonmq.CfnBroker,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
-  public open fun attrAmqpEndpoints(): List<String> = unwrap(this).getAttrAmqpEndpoints() ?:
-      emptyList()
+  public open fun attrAmqpEndpoints(): List<String> = unwrap(this).getAttrAmqpEndpoints()
 
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
@@ -31,19 +30,15 @@ public open class CfnBroker internal constructor(
 
   public open fun attrId(): String = unwrap(this).getAttrId()
 
-  public open fun attrIpAddresses(): List<String> = unwrap(this).getAttrIpAddresses() ?: emptyList()
+  public open fun attrIpAddresses(): List<String> = unwrap(this).getAttrIpAddresses()
 
-  public open fun attrMqttEndpoints(): List<String> = unwrap(this).getAttrMqttEndpoints() ?:
-      emptyList()
+  public open fun attrMqttEndpoints(): List<String> = unwrap(this).getAttrMqttEndpoints()
 
-  public open fun attrOpenWireEndpoints(): List<String> = unwrap(this).getAttrOpenWireEndpoints() ?:
-      emptyList()
+  public open fun attrOpenWireEndpoints(): List<String> = unwrap(this).getAttrOpenWireEndpoints()
 
-  public open fun attrStompEndpoints(): List<String> = unwrap(this).getAttrStompEndpoints() ?:
-      emptyList()
+  public open fun attrStompEndpoints(): List<String> = unwrap(this).getAttrStompEndpoints()
 
-  public open fun attrWssEndpoints(): List<String> = unwrap(this).getAttrWssEndpoints() ?:
-      emptyList()
+  public open fun attrWssEndpoints(): List<String> = unwrap(this).getAttrWssEndpoints()
 
   public open fun authenticationStrategy(): String? = unwrap(this).getAuthenticationStrategy()
 
@@ -199,6 +194,8 @@ public open class CfnBroker internal constructor(
     unwrap(this).setSecurityGroups(`value`)
   }
 
+  public open fun securityGroups(vararg `value`: String): Unit = securityGroups(`value`.toList())
+
   public open fun storageType(): String? = unwrap(this).getStorageType()
 
   public open fun storageType(`value`: String) {
@@ -211,6 +208,8 @@ public open class CfnBroker internal constructor(
     unwrap(this).setSubnetIds(`value`)
   }
 
+  public open fun subnetIds(vararg `value`: String): Unit = subnetIds(`value`.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<TagsEntryProperty> =
@@ -219,6 +218,8 @@ public open class CfnBroker internal constructor(
   public open fun tagsRaw(`value`: List<TagsEntryProperty>) {
     unwrap(this).setTagsRaw(`value`.map(TagsEntryProperty::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: TagsEntryProperty): Unit = tagsRaw(`value`.toList())
 
   public open fun users(): Any = unwrap(this).getUsers()
 
@@ -229,6 +230,8 @@ public open class CfnBroker internal constructor(
   public open fun users(__idx_ac66f0: List<Any>) {
     unwrap(this).setUsers(__idx_ac66f0)
   }
+
+  public open fun users(vararg __idx_ac66f0: Any): Unit = users(__idx_ac66f0.toList())
 
   public interface Builder {
     public fun authenticationStrategy(authenticationStrategy: String)
@@ -298,15 +301,23 @@ public open class CfnBroker internal constructor(
 
     public fun securityGroups(securityGroups: List<String>)
 
+    public fun securityGroups(vararg securityGroups: String)
+
     public fun storageType(storageType: String)
 
     public fun subnetIds(subnetIds: List<String>)
 
+    public fun subnetIds(vararg subnetIds: String)
+
     public fun tags(tags: List<TagsEntryProperty>)
+
+    public fun tags(vararg tags: TagsEntryProperty)
 
     public fun users(users: IResolvable)
 
     public fun users(users: List<Any>)
+
+    public fun users(vararg users: Any)
   }
 
   private class BuilderImpl(
@@ -434,6 +445,9 @@ public open class CfnBroker internal constructor(
       cdkBuilder.securityGroups(securityGroups)
     }
 
+    override fun securityGroups(vararg securityGroups: String): Unit =
+        securityGroups(securityGroups.toList())
+
     override fun storageType(storageType: String) {
       cdkBuilder.storageType(storageType)
     }
@@ -442,9 +456,13 @@ public open class CfnBroker internal constructor(
       cdkBuilder.subnetIds(subnetIds)
     }
 
+    override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+
     override fun tags(tags: List<TagsEntryProperty>) {
       cdkBuilder.tags(tags.map(TagsEntryProperty::unwrap))
     }
+
+    override fun tags(vararg tags: TagsEntryProperty): Unit = tags(tags.toList())
 
     override fun users(users: IResolvable) {
       cdkBuilder.users(users.let(IResolvable::unwrap))
@@ -453,6 +471,8 @@ public open class CfnBroker internal constructor(
     override fun users(users: List<Any>) {
       cdkBuilder.users(users)
     }
+
+    override fun users(vararg users: Any): Unit = users(users.toList())
 
     public fun build(): software.amazon.awscdk.services.amazonmq.CfnBroker = cdkBuilder.build()
   }
@@ -504,6 +524,8 @@ public open class CfnBroker internal constructor(
     public interface Builder {
       public fun hosts(hosts: List<String>)
 
+      public fun hosts(vararg hosts: String)
+
       public fun roleBase(roleBase: String)
 
       public fun roleName(roleName: String)
@@ -537,6 +559,8 @@ public open class CfnBroker internal constructor(
       override fun hosts(hosts: List<String>) {
         cdkBuilder.hosts(hosts)
       }
+
+      override fun hosts(vararg hosts: String): Unit = hosts(hosts.toList())
 
       override fun roleBase(roleBase: String) {
         cdkBuilder.roleBase(roleBase)
@@ -595,7 +619,7 @@ public open class CfnBroker internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amazonmq.CfnBroker.LdapServerMetadataProperty,
     ) : LdapServerMetadataProperty {
-      override fun hosts(): List<String> = unwrap(this).getHosts() ?: emptyList()
+      override fun hosts(): List<String> = unwrap(this).getHosts()
 
       override fun roleBase(): String = unwrap(this).getRoleBase()
 
@@ -712,6 +736,8 @@ public open class CfnBroker internal constructor(
 
       public fun groups(groups: List<String>)
 
+      public fun groups(vararg groups: String)
+
       public fun password(password: String)
 
       public fun replicationUser(replicationUser: Boolean)
@@ -737,6 +763,8 @@ public open class CfnBroker internal constructor(
       override fun groups(groups: List<String>) {
         cdkBuilder.groups(groups)
       }
+
+      override fun groups(vararg groups: String): Unit = groups(groups.toList())
 
       override fun password(password: String) {
         cdkBuilder.password(password)

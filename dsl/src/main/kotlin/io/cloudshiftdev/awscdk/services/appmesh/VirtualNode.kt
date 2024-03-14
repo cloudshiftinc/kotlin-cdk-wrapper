@@ -42,7 +42,11 @@ public open class VirtualNode internal constructor(
 
     public fun backends(backends: List<Backend>)
 
+    public fun backends(vararg backends: Backend)
+
     public fun listeners(listeners: List<VirtualNodeListener>)
+
+    public fun listeners(vararg listeners: VirtualNodeListener)
 
     public fun mesh(mesh: IMesh)
 
@@ -75,9 +79,14 @@ public open class VirtualNode internal constructor(
       cdkBuilder.backends(backends.map(Backend::unwrap))
     }
 
+    override fun backends(vararg backends: Backend): Unit = backends(backends.toList())
+
     override fun listeners(listeners: List<VirtualNodeListener>) {
       cdkBuilder.listeners(listeners.map(VirtualNodeListener::unwrap))
     }
+
+    override fun listeners(vararg listeners: VirtualNodeListener): Unit =
+        listeners(listeners.toList())
 
     override fun mesh(mesh: IMesh) {
       cdkBuilder.mesh(mesh.let(IMesh::unwrap))

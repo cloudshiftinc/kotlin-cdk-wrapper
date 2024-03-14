@@ -46,9 +46,13 @@ public open class NetworkListener internal constructor(
 
     public fun certificates(certificates: List<IListenerCertificate>)
 
+    public fun certificates(vararg certificates: IListenerCertificate)
+
     public fun defaultAction(defaultAction: NetworkListenerAction)
 
     public fun defaultTargetGroups(defaultTargetGroups: List<INetworkTargetGroup>)
+
+    public fun defaultTargetGroups(vararg defaultTargetGroups: INetworkTargetGroup)
 
     public fun loadBalancer(loadBalancer: INetworkLoadBalancer)
 
@@ -76,6 +80,9 @@ public open class NetworkListener internal constructor(
       cdkBuilder.certificates(certificates.map(IListenerCertificate::unwrap))
     }
 
+    override fun certificates(vararg certificates: IListenerCertificate): Unit =
+        certificates(certificates.toList())
+
     override fun defaultAction(defaultAction: NetworkListenerAction) {
       cdkBuilder.defaultAction(defaultAction.let(NetworkListenerAction::unwrap))
     }
@@ -83,6 +90,9 @@ public open class NetworkListener internal constructor(
     override fun defaultTargetGroups(defaultTargetGroups: List<INetworkTargetGroup>) {
       cdkBuilder.defaultTargetGroups(defaultTargetGroups.map(INetworkTargetGroup::unwrap))
     }
+
+    override fun defaultTargetGroups(vararg defaultTargetGroups: INetworkTargetGroup): Unit =
+        defaultTargetGroups(defaultTargetGroups.toList())
 
     override fun loadBalancer(loadBalancer: INetworkLoadBalancer) {
       cdkBuilder.loadBalancer(loadBalancer.let(INetworkLoadBalancer::unwrap))

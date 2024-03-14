@@ -39,6 +39,8 @@ public open class AssetStaging internal constructor(
 
     public fun exclude(exclude: List<String>)
 
+    public fun exclude(vararg exclude: String)
+
     public fun extraHash(extraHash: String)
 
     public fun follow(follow: SymlinkFollowMode)
@@ -75,6 +77,8 @@ public open class AssetStaging internal constructor(
     override fun exclude(exclude: List<String>) {
       cdkBuilder.exclude(exclude)
     }
+
+    override fun exclude(vararg exclude: String): Unit = exclude(exclude.toList())
 
     override fun extraHash(extraHash: String) {
       cdkBuilder.extraHash(extraHash)

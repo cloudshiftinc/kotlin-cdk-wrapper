@@ -56,6 +56,9 @@ public open class ListenerAction internal constructor(
     public open fun forward(targetGroups: List<IApplicationTargetGroup>): ListenerAction =
         software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction.forward(targetGroups.map(IApplicationTargetGroup::unwrap)).let(ListenerAction::wrap)
 
+    public open fun forward(vararg targetGroups: IApplicationTargetGroup): ListenerAction =
+        forward(targetGroups.toList())
+
     public open fun forward(targetGroups: List<IApplicationTargetGroup>, options: ForwardOptions):
         ListenerAction =
         software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction.forward(targetGroups.map(IApplicationTargetGroup::unwrap),
@@ -77,6 +80,9 @@ public open class ListenerAction internal constructor(
 
     public open fun weightedForward(targetGroups: List<WeightedTargetGroup>): ListenerAction =
         software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction.weightedForward(targetGroups.map(WeightedTargetGroup::unwrap)).let(ListenerAction::wrap)
+
+    public open fun weightedForward(vararg targetGroups: WeightedTargetGroup): ListenerAction =
+        weightedForward(targetGroups.toList())
 
     public open fun weightedForward(targetGroups: List<WeightedTargetGroup>,
         options: ForwardOptions): ListenerAction =

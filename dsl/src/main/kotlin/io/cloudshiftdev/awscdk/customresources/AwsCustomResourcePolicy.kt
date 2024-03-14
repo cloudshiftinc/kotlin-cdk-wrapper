@@ -27,6 +27,9 @@ public open class AwsCustomResourcePolicy internal constructor(
     public open fun fromStatements(statements: List<PolicyStatement>): AwsCustomResourcePolicy =
         software.amazon.awscdk.customresources.AwsCustomResourcePolicy.fromStatements(statements.map(PolicyStatement::unwrap)).let(AwsCustomResourcePolicy::wrap)
 
+    public open fun fromStatements(vararg statements: PolicyStatement): AwsCustomResourcePolicy =
+        fromStatements(statements.toList())
+
     internal fun wrap(cdkObject: software.amazon.awscdk.customresources.AwsCustomResourcePolicy):
         AwsCustomResourcePolicy = AwsCustomResourcePolicy(cdkObject)
 

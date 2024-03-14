@@ -23,6 +23,8 @@ public open class CfnOIDCProvider internal constructor(
     unwrap(this).setClientIdList(`value`)
   }
 
+  public open fun clientIdList(vararg `value`: String): Unit = clientIdList(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -36,11 +38,15 @@ public open class CfnOIDCProvider internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
-  public open fun thumbprintList(): List<String> = unwrap(this).getThumbprintList() ?: emptyList()
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
+  public open fun thumbprintList(): List<String> = unwrap(this).getThumbprintList()
 
   public open fun thumbprintList(`value`: List<String>) {
     unwrap(this).setThumbprintList(`value`)
   }
+
+  public open fun thumbprintList(vararg `value`: String): Unit = thumbprintList(`value`.toList())
 
   public open fun url(): String? = unwrap(this).getUrl()
 
@@ -51,9 +57,15 @@ public open class CfnOIDCProvider internal constructor(
   public interface Builder {
     public fun clientIdList(clientIdList: List<String>)
 
+    public fun clientIdList(vararg clientIdList: String)
+
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun thumbprintList(thumbprintList: List<String>)
+
+    public fun thumbprintList(vararg thumbprintList: String)
 
     public fun url(url: String)
   }
@@ -69,13 +81,21 @@ public open class CfnOIDCProvider internal constructor(
       cdkBuilder.clientIdList(clientIdList)
     }
 
+    override fun clientIdList(vararg clientIdList: String): Unit =
+        clientIdList(clientIdList.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun thumbprintList(thumbprintList: List<String>) {
       cdkBuilder.thumbprintList(thumbprintList)
     }
+
+    override fun thumbprintList(vararg thumbprintList: String): Unit =
+        thumbprintList(thumbprintList.toList())
 
     override fun url(url: String) {
       cdkBuilder.url(url)

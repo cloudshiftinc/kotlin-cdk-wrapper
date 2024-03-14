@@ -53,6 +53,9 @@ public open class CfnScalingPlan internal constructor(
     unwrap(this).setScalingInstructions(__idx_ac66f0)
   }
 
+  public open fun scalingInstructions(vararg __idx_ac66f0: Any): Unit =
+      scalingInstructions(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun applicationSource(applicationSource: IResolvable)
 
@@ -65,6 +68,8 @@ public open class CfnScalingPlan internal constructor(
     public fun scalingInstructions(scalingInstructions: IResolvable)
 
     public fun scalingInstructions(scalingInstructions: List<Any>)
+
+    public fun scalingInstructions(vararg scalingInstructions: Any)
   }
 
   private class BuilderImpl(
@@ -94,6 +99,9 @@ public open class CfnScalingPlan internal constructor(
     override fun scalingInstructions(scalingInstructions: List<Any>) {
       cdkBuilder.scalingInstructions(scalingInstructions)
     }
+
+    override fun scalingInstructions(vararg scalingInstructions: Any): Unit =
+        scalingInstructions(scalingInstructions.toList())
 
     public fun build(): software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan =
         cdkBuilder.build()
@@ -129,6 +137,8 @@ public open class CfnScalingPlan internal constructor(
       public fun key(key: String)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -144,6 +154,8 @@ public open class CfnScalingPlan internal constructor(
       override fun values(values: List<String>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: String): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.TagFilterProperty =
@@ -418,6 +430,8 @@ public open class CfnScalingPlan internal constructor(
 
       public fun dimensions(dimensions: List<Any>)
 
+      public fun dimensions(vararg dimensions: Any)
+
       public fun metricName(metricName: String)
 
       public fun namespace(namespace: String)
@@ -440,6 +454,8 @@ public open class CfnScalingPlan internal constructor(
       override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
+
+      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
 
       override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)
@@ -514,6 +530,8 @@ public open class CfnScalingPlan internal constructor(
 
       public fun dimensions(dimensions: List<Any>)
 
+      public fun dimensions(vararg dimensions: Any)
+
       public fun metricName(metricName: String)
 
       public fun namespace(namespace: String)
@@ -536,6 +554,8 @@ public open class CfnScalingPlan internal constructor(
       override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
+
+      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
 
       override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)
@@ -605,6 +625,8 @@ public open class CfnScalingPlan internal constructor(
       public fun tagFilters(tagFilters: IResolvable)
 
       public fun tagFilters(tagFilters: List<Any>)
+
+      public fun tagFilters(vararg tagFilters: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -624,6 +646,8 @@ public open class CfnScalingPlan internal constructor(
       override fun tagFilters(tagFilters: List<Any>) {
         cdkBuilder.tagFilters(tagFilters)
       }
+
+      override fun tagFilters(vararg tagFilters: Any): Unit = tagFilters(tagFilters.toList())
 
       public fun build():
           software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ApplicationSourceProperty
@@ -802,6 +826,8 @@ public open class CfnScalingPlan internal constructor(
       public fun targetTrackingConfigurations(targetTrackingConfigurations: IResolvable)
 
       public fun targetTrackingConfigurations(targetTrackingConfigurations: List<Any>)
+
+      public fun targetTrackingConfigurations(vararg targetTrackingConfigurations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -900,6 +926,9 @@ public open class CfnScalingPlan internal constructor(
       override fun targetTrackingConfigurations(targetTrackingConfigurations: List<Any>) {
         cdkBuilder.targetTrackingConfigurations(targetTrackingConfigurations)
       }
+
+      override fun targetTrackingConfigurations(vararg targetTrackingConfigurations: Any): Unit =
+          targetTrackingConfigurations(targetTrackingConfigurations.toList())
 
       public fun build():
           software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan.ScalingInstructionProperty

@@ -88,6 +88,9 @@ public open class CfnSourceLocation internal constructor(
     unwrap(this).setSegmentDeliveryConfigurations(__idx_ac66f0)
   }
 
+  public open fun segmentDeliveryConfigurations(vararg __idx_ac66f0: Any): Unit =
+      segmentDeliveryConfigurations(__idx_ac66f0.toList())
+
   public open fun sourceLocationName(): String = unwrap(this).getSourceLocationName()
 
   public open fun sourceLocationName(`value`: String) {
@@ -99,6 +102,8 @@ public open class CfnSourceLocation internal constructor(
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   public interface Builder {
     public fun accessConfiguration(accessConfiguration: IResolvable)
@@ -132,9 +137,13 @@ public open class CfnSourceLocation internal constructor(
 
     public fun segmentDeliveryConfigurations(segmentDeliveryConfigurations: List<Any>)
 
+    public fun segmentDeliveryConfigurations(vararg segmentDeliveryConfigurations: Any)
+
     public fun sourceLocationName(sourceLocationName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -196,6 +205,9 @@ public open class CfnSourceLocation internal constructor(
       cdkBuilder.segmentDeliveryConfigurations(segmentDeliveryConfigurations)
     }
 
+    override fun segmentDeliveryConfigurations(vararg segmentDeliveryConfigurations: Any): Unit =
+        segmentDeliveryConfigurations(segmentDeliveryConfigurations.toList())
+
     override fun sourceLocationName(sourceLocationName: String) {
       cdkBuilder.sourceLocationName(sourceLocationName)
     }
@@ -203,6 +215,8 @@ public open class CfnSourceLocation internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.mediatailor.CfnSourceLocation =
         cdkBuilder.build()

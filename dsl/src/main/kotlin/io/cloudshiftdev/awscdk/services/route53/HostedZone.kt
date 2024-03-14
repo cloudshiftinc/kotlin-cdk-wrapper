@@ -41,6 +41,8 @@ public open class HostedZone internal constructor(
 
     public fun vpcs(vpcs: List<IVpc>)
 
+    public fun vpcs(vararg vpcs: IVpc)
+
     public fun zoneName(zoneName: String)
   }
 
@@ -66,6 +68,8 @@ public open class HostedZone internal constructor(
     override fun vpcs(vpcs: List<IVpc>) {
       cdkBuilder.vpcs(vpcs.map(IVpc::unwrap))
     }
+
+    override fun vpcs(vararg vpcs: IVpc): Unit = vpcs(vpcs.toList())
 
     override fun zoneName(zoneName: String) {
       cdkBuilder.zoneName(zoneName)

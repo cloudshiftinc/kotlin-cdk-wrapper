@@ -78,6 +78,8 @@ public open class CfnGraph internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public open fun vectorSearchConfiguration(): Any? = unwrap(this).getVectorSearchConfiguration()
 
   public open fun vectorSearchConfiguration(`value`: IResolvable) {
@@ -110,6 +112,8 @@ public open class CfnGraph internal constructor(
     public fun replicaCount(replicaCount: Number)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun vectorSearchConfiguration(vectorSearchConfiguration: IResolvable)
 
@@ -160,6 +164,8 @@ public open class CfnGraph internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun vectorSearchConfiguration(vectorSearchConfiguration: IResolvable) {
       cdkBuilder.vectorSearchConfiguration(vectorSearchConfiguration.let(IResolvable::unwrap))

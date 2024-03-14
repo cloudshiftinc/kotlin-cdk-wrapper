@@ -47,6 +47,9 @@ public open class CfnInstanceFleetConfig internal constructor(
     unwrap(this).setInstanceTypeConfigs(__idx_ac66f0)
   }
 
+  public open fun instanceTypeConfigs(vararg __idx_ac66f0: Any): Unit =
+      instanceTypeConfigs(__idx_ac66f0.toList())
+
   public open fun launchSpecifications(): Any? = unwrap(this).getLaunchSpecifications()
 
   public open fun launchSpecifications(`value`: IResolvable) {
@@ -90,6 +93,8 @@ public open class CfnInstanceFleetConfig internal constructor(
 
     public fun instanceTypeConfigs(instanceTypeConfigs: List<Any>)
 
+    public fun instanceTypeConfigs(vararg instanceTypeConfigs: Any)
+
     public fun launchSpecifications(launchSpecifications: IResolvable)
 
     public
@@ -129,6 +134,9 @@ public open class CfnInstanceFleetConfig internal constructor(
     override fun instanceTypeConfigs(instanceTypeConfigs: List<Any>) {
       cdkBuilder.instanceTypeConfigs(instanceTypeConfigs)
     }
+
+    override fun instanceTypeConfigs(vararg instanceTypeConfigs: Any): Unit =
+        instanceTypeConfigs(instanceTypeConfigs.toList())
 
     override fun launchSpecifications(launchSpecifications: IResolvable) {
       cdkBuilder.launchSpecifications(launchSpecifications.let(IResolvable::unwrap))
@@ -193,6 +201,8 @@ public open class CfnInstanceFleetConfig internal constructor(
 
       public fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>)
 
+      public fun ebsBlockDeviceConfigs(vararg ebsBlockDeviceConfigs: Any)
+
       public fun ebsOptimized(ebsOptimized: Boolean)
 
       public fun ebsOptimized(ebsOptimized: IResolvable)
@@ -211,6 +221,9 @@ public open class CfnInstanceFleetConfig internal constructor(
       override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>) {
         cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs)
       }
+
+      override fun ebsBlockDeviceConfigs(vararg ebsBlockDeviceConfigs: Any): Unit =
+          ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.toList())
 
       override fun ebsOptimized(ebsOptimized: Boolean) {
         cdkBuilder.ebsOptimized(ebsOptimized)
@@ -321,6 +334,8 @@ public open class CfnInstanceFleetConfig internal constructor(
       public fun configurations(configurations: IResolvable)
 
       public fun configurations(configurations: List<Any>)
+
+      public fun configurations(vararg configurations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -347,6 +362,9 @@ public open class CfnInstanceFleetConfig internal constructor(
       override fun configurations(configurations: List<Any>) {
         cdkBuilder.configurations(configurations)
       }
+
+      override fun configurations(vararg configurations: Any): Unit =
+          configurations(configurations.toList())
 
       public fun build():
           software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.ConfigurationProperty =
@@ -565,6 +583,8 @@ public open class CfnInstanceFleetConfig internal constructor(
 
       public fun configurations(configurations: List<Any>)
 
+      public fun configurations(vararg configurations: Any)
+
       public fun customAmiId(customAmiId: String)
 
       public fun ebsConfiguration(ebsConfiguration: IResolvable)
@@ -602,6 +622,9 @@ public open class CfnInstanceFleetConfig internal constructor(
       override fun configurations(configurations: List<Any>) {
         cdkBuilder.configurations(configurations)
       }
+
+      override fun configurations(vararg configurations: Any): Unit =
+          configurations(configurations.toList())
 
       override fun customAmiId(customAmiId: String) {
         cdkBuilder.customAmiId(customAmiId)

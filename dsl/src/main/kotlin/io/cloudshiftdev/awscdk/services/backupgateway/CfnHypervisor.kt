@@ -60,6 +60,8 @@ public open class CfnHypervisor internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun username(): String? = unwrap(this).getUsername()
 
   public open fun username(`value`: String) {
@@ -78,6 +80,8 @@ public open class CfnHypervisor internal constructor(
     public fun password(password: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun username(username: String)
   }
@@ -112,6 +116,8 @@ public open class CfnHypervisor internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun username(username: String) {
       cdkBuilder.username(username)

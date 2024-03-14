@@ -44,6 +44,9 @@ public open class CfnOptionGroup internal constructor(
     unwrap(this).setOptionConfigurations(__idx_ac66f0)
   }
 
+  public open fun optionConfigurations(vararg __idx_ac66f0: Any): Unit =
+      optionConfigurations(__idx_ac66f0.toList())
+
   public open fun optionGroupDescription(): String = unwrap(this).getOptionGroupDescription()
 
   public open fun optionGroupDescription(`value`: String) {
@@ -65,6 +68,8 @@ public open class CfnOptionGroup internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun engineName(engineName: String)
 
@@ -74,11 +79,15 @@ public open class CfnOptionGroup internal constructor(
 
     public fun optionConfigurations(optionConfigurations: List<Any>)
 
+    public fun optionConfigurations(vararg optionConfigurations: Any)
+
     public fun optionGroupDescription(optionGroupDescription: String)
 
     public fun optionGroupName(optionGroupName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -104,6 +113,9 @@ public open class CfnOptionGroup internal constructor(
       cdkBuilder.optionConfigurations(optionConfigurations)
     }
 
+    override fun optionConfigurations(vararg optionConfigurations: Any): Unit =
+        optionConfigurations(optionConfigurations.toList())
+
     override fun optionGroupDescription(optionGroupDescription: String) {
       cdkBuilder.optionGroupDescription(optionGroupDescription)
     }
@@ -115,6 +127,8 @@ public open class CfnOptionGroup internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.rds.CfnOptionGroup = cdkBuilder.build()
   }
@@ -158,17 +172,23 @@ public open class CfnOptionGroup internal constructor(
     public interface Builder {
       public fun dbSecurityGroupMemberships(dbSecurityGroupMemberships: List<String>)
 
+      public fun dbSecurityGroupMemberships(vararg dbSecurityGroupMemberships: String)
+
       public fun optionName(optionName: String)
 
       public fun optionSettings(optionSettings: IResolvable)
 
       public fun optionSettings(optionSettings: List<Any>)
 
+      public fun optionSettings(vararg optionSettings: Any)
+
       public fun optionVersion(optionVersion: String)
 
       public fun port(port: Number)
 
       public fun vpcSecurityGroupMemberships(vpcSecurityGroupMemberships: List<String>)
+
+      public fun vpcSecurityGroupMemberships(vararg vpcSecurityGroupMemberships: String)
     }
 
     private class BuilderImpl : Builder {
@@ -179,6 +199,9 @@ public open class CfnOptionGroup internal constructor(
       override fun dbSecurityGroupMemberships(dbSecurityGroupMemberships: List<String>) {
         cdkBuilder.dbSecurityGroupMemberships(dbSecurityGroupMemberships)
       }
+
+      override fun dbSecurityGroupMemberships(vararg dbSecurityGroupMemberships: String): Unit =
+          dbSecurityGroupMemberships(dbSecurityGroupMemberships.toList())
 
       override fun optionName(optionName: String) {
         cdkBuilder.optionName(optionName)
@@ -192,6 +215,9 @@ public open class CfnOptionGroup internal constructor(
         cdkBuilder.optionSettings(optionSettings)
       }
 
+      override fun optionSettings(vararg optionSettings: Any): Unit =
+          optionSettings(optionSettings.toList())
+
       override fun optionVersion(optionVersion: String) {
         cdkBuilder.optionVersion(optionVersion)
       }
@@ -203,6 +229,9 @@ public open class CfnOptionGroup internal constructor(
       override fun vpcSecurityGroupMemberships(vpcSecurityGroupMemberships: List<String>) {
         cdkBuilder.vpcSecurityGroupMemberships(vpcSecurityGroupMemberships)
       }
+
+      override fun vpcSecurityGroupMemberships(vararg vpcSecurityGroupMemberships: String): Unit =
+          vpcSecurityGroupMemberships(vpcSecurityGroupMemberships.toList())
 
       public fun build():
           software.amazon.awscdk.services.rds.CfnOptionGroup.OptionConfigurationProperty =

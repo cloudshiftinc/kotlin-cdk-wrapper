@@ -35,6 +35,8 @@ public open class CfnCustomDataIdentifier internal constructor(
     unwrap(this).setIgnoreWords(`value`)
   }
 
+  public open fun ignoreWords(vararg `value`: String): Unit = ignoreWords(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -44,6 +46,8 @@ public open class CfnCustomDataIdentifier internal constructor(
   public open fun keywords(`value`: List<String>) {
     unwrap(this).setKeywords(`value`)
   }
+
+  public open fun keywords(vararg `value`: String): Unit = keywords(`value`.toList())
 
   public open fun maximumMatchDistance(): Number? = unwrap(this).getMaximumMatchDistance()
 
@@ -69,12 +73,18 @@ public open class CfnCustomDataIdentifier internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun description(description: String)
 
     public fun ignoreWords(ignoreWords: List<String>)
 
+    public fun ignoreWords(vararg ignoreWords: String)
+
     public fun keywords(keywords: List<String>)
+
+    public fun keywords(vararg keywords: String)
 
     public fun maximumMatchDistance(maximumMatchDistance: Number)
 
@@ -83,6 +93,8 @@ public open class CfnCustomDataIdentifier internal constructor(
     public fun regex(regex: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -100,9 +112,13 @@ public open class CfnCustomDataIdentifier internal constructor(
       cdkBuilder.ignoreWords(ignoreWords)
     }
 
+    override fun ignoreWords(vararg ignoreWords: String): Unit = ignoreWords(ignoreWords.toList())
+
     override fun keywords(keywords: List<String>) {
       cdkBuilder.keywords(keywords)
     }
+
+    override fun keywords(vararg keywords: String): Unit = keywords(keywords.toList())
 
     override fun maximumMatchDistance(maximumMatchDistance: Number) {
       cdkBuilder.maximumMatchDistance(maximumMatchDistance)
@@ -119,6 +135,8 @@ public open class CfnCustomDataIdentifier internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.macie.CfnCustomDataIdentifier =
         cdkBuilder.build()

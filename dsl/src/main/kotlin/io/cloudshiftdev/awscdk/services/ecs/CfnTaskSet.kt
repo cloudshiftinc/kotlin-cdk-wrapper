@@ -57,6 +57,9 @@ public open class CfnTaskSet internal constructor(
     unwrap(this).setLoadBalancers(__idx_ac66f0)
   }
 
+  public open fun loadBalancers(vararg __idx_ac66f0: Any): Unit =
+      loadBalancers(__idx_ac66f0.toList())
+
   public open fun networkConfiguration(): Any? = unwrap(this).getNetworkConfiguration()
 
   public open fun networkConfiguration(`value`: IResolvable) {
@@ -109,11 +112,16 @@ public open class CfnTaskSet internal constructor(
     unwrap(this).setServiceRegistries(__idx_ac66f0)
   }
 
+  public open fun serviceRegistries(vararg __idx_ac66f0: Any): Unit =
+      serviceRegistries(__idx_ac66f0.toList())
+
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   public open fun taskDefinition(): String = unwrap(this).getTaskDefinition()
 
@@ -131,6 +139,8 @@ public open class CfnTaskSet internal constructor(
     public fun loadBalancers(loadBalancers: IResolvable)
 
     public fun loadBalancers(loadBalancers: List<Any>)
+
+    public fun loadBalancers(vararg loadBalancers: Any)
 
     public fun networkConfiguration(networkConfiguration: IResolvable)
 
@@ -157,7 +167,11 @@ public open class CfnTaskSet internal constructor(
 
     public fun serviceRegistries(serviceRegistries: List<Any>)
 
+    public fun serviceRegistries(vararg serviceRegistries: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun taskDefinition(taskDefinition: String)
   }
@@ -188,6 +202,9 @@ public open class CfnTaskSet internal constructor(
     override fun loadBalancers(loadBalancers: List<Any>) {
       cdkBuilder.loadBalancers(loadBalancers)
     }
+
+    override fun loadBalancers(vararg loadBalancers: Any): Unit =
+        loadBalancers(loadBalancers.toList())
 
     override fun networkConfiguration(networkConfiguration: IResolvable) {
       cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
@@ -231,9 +248,14 @@ public open class CfnTaskSet internal constructor(
       cdkBuilder.serviceRegistries(serviceRegistries)
     }
 
+    override fun serviceRegistries(vararg serviceRegistries: Any): Unit =
+        serviceRegistries(serviceRegistries.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun taskDefinition(taskDefinition: String) {
       cdkBuilder.taskDefinition(taskDefinition)
@@ -537,7 +559,11 @@ public open class CfnTaskSet internal constructor(
 
       public fun securityGroups(securityGroups: List<String>)
 
+      public fun securityGroups(vararg securityGroups: String)
+
       public fun subnets(subnets: List<String>)
+
+      public fun subnets(vararg subnets: String)
     }
 
     private class BuilderImpl : Builder {
@@ -553,9 +579,14 @@ public open class CfnTaskSet internal constructor(
         cdkBuilder.securityGroups(securityGroups)
       }
 
+      override fun securityGroups(vararg securityGroups: String): Unit =
+          securityGroups(securityGroups.toList())
+
       override fun subnets(subnets: List<String>) {
         cdkBuilder.subnets(subnets)
       }
+
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
 
       public fun build(): software.amazon.awscdk.services.ecs.CfnTaskSet.AwsVpcConfigurationProperty
           = cdkBuilder.build()
@@ -569,7 +600,7 @@ public open class CfnTaskSet internal constructor(
 
       override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
 
-      override fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
+      override fun subnets(): List<String> = unwrap(this).getSubnets()
     }
 
     public companion object {

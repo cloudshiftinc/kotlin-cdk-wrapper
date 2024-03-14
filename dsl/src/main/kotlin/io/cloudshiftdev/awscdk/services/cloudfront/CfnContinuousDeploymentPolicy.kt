@@ -327,6 +327,8 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
 
       public fun stagingDistributionDnsNames(stagingDistributionDnsNames: List<String>)
 
+      public fun stagingDistributionDnsNames(vararg stagingDistributionDnsNames: String)
+
       public fun trafficConfig(trafficConfig: IResolvable)
 
       public fun trafficConfig(trafficConfig: TrafficConfigProperty)
@@ -388,6 +390,9 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
         cdkBuilder.stagingDistributionDnsNames(stagingDistributionDnsNames)
       }
 
+      override fun stagingDistributionDnsNames(vararg stagingDistributionDnsNames: String): Unit =
+          stagingDistributionDnsNames(stagingDistributionDnsNames.toList())
+
       override fun trafficConfig(trafficConfig: IResolvable) {
         cdkBuilder.trafficConfig(trafficConfig.let(IResolvable::unwrap))
       }
@@ -421,7 +426,7 @@ public open class CfnContinuousDeploymentPolicy internal constructor(
       override fun singleWeightPolicyConfig(): Any? = unwrap(this).getSingleWeightPolicyConfig()
 
       override fun stagingDistributionDnsNames(): List<String> =
-          unwrap(this).getStagingDistributionDnsNames() ?: emptyList()
+          unwrap(this).getStagingDistributionDnsNames()
 
       override fun trafficConfig(): Any? = unwrap(this).getTrafficConfig()
 

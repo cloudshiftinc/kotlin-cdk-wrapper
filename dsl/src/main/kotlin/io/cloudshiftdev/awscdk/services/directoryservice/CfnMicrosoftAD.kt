@@ -19,8 +19,7 @@ public open class CfnMicrosoftAD internal constructor(
 ) : CfnResource(cdkObject), IInspectable {
   public open fun attrAlias(): String = unwrap(this).getAttrAlias()
 
-  public open fun attrDnsIpAddresses(): List<String> = unwrap(this).getAttrDnsIpAddresses() ?:
-      emptyList()
+  public open fun attrDnsIpAddresses(): List<String> = unwrap(this).getAttrDnsIpAddresses()
 
   public open fun attrId(): String = unwrap(this).getAttrId()
 
@@ -198,6 +197,8 @@ public open class CfnMicrosoftAD internal constructor(
     public interface Builder {
       public fun subnetIds(subnetIds: List<String>)
 
+      public fun subnetIds(vararg subnetIds: String)
+
       public fun vpcId(vpcId: String)
     }
 
@@ -210,6 +211,8 @@ public open class CfnMicrosoftAD internal constructor(
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       override fun vpcId(vpcId: String) {
         cdkBuilder.vpcId(vpcId)
@@ -224,7 +227,7 @@ public open class CfnMicrosoftAD internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD.VpcSettingsProperty,
     ) : VpcSettingsProperty {
-      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
 
       override fun vpcId(): String = unwrap(this).getVpcId()
     }

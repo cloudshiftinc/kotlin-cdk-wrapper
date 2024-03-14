@@ -15,7 +15,7 @@ public interface IResolvable {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.IResolvable,
   ) : IResolvable {
-    override fun creationStack(): List<String> = unwrap(this).getCreationStack() ?: emptyList()
+    override fun creationStack(): List<String> = unwrap(this).getCreationStack()
 
     override fun resolve(arg0: IResolveContext): Any =
         unwrap(this).resolve(arg0.let(IResolveContext::unwrap))

@@ -72,6 +72,8 @@ public open class CfnProvisioningTemplate internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun templateBody(): String = unwrap(this).getTemplateBody()
 
   public open fun templateBody(`value`: String) {
@@ -108,6 +110,8 @@ public open class CfnProvisioningTemplate internal constructor(
     public fun provisioningRoleArn(provisioningRoleArn: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun templateBody(templateBody: String)
 
@@ -156,6 +160,8 @@ public open class CfnProvisioningTemplate internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun templateBody(templateBody: String) {
       cdkBuilder.templateBody(templateBody)

@@ -37,7 +37,7 @@ public interface IStringListParameter : IParameter {
 
     override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
-    override fun stringListValue(): List<String> = unwrap(this).getStringListValue() ?: emptyList()
+    override fun stringListValue(): List<String> = unwrap(this).getStringListValue()
   }
 
   public companion object {

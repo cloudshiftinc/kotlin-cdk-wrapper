@@ -48,6 +48,9 @@ public open class ApplicationLoadBalancedFargateService internal constructor(
     public
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>)
 
+    public fun capacityProviderStrategies(vararg
+        capacityProviderStrategies: CapacityProviderStrategy)
+
     public fun certificate(certificate: ICertificate)
 
     public fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker)
@@ -130,6 +133,8 @@ public open class ApplicationLoadBalancedFargateService internal constructor(
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
+
     public fun serviceName(serviceName: String)
 
     public fun sslPolicy(sslPolicy: SslPolicy)
@@ -171,6 +176,10 @@ public open class ApplicationLoadBalancedFargateService internal constructor(
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>) {
       cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy::unwrap))
     }
+
+    override fun capacityProviderStrategies(vararg
+        capacityProviderStrategies: CapacityProviderStrategy): Unit =
+        capacityProviderStrategies(capacityProviderStrategies.toList())
 
     override fun certificate(certificate: ICertificate) {
       cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
@@ -321,6 +330,9 @@ public open class ApplicationLoadBalancedFargateService internal constructor(
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun serviceName(serviceName: String) {
       cdkBuilder.serviceName(serviceName)

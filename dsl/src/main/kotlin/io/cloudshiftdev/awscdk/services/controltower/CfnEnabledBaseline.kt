@@ -49,11 +49,15 @@ public open class CfnEnabledBaseline internal constructor(
     unwrap(this).setParameters(__idx_ac66f0)
   }
 
+  public open fun parameters(vararg __idx_ac66f0: Any): Unit = parameters(__idx_ac66f0.toList())
+
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   public open fun targetIdentifier(): String = unwrap(this).getTargetIdentifier()
 
@@ -70,7 +74,11 @@ public open class CfnEnabledBaseline internal constructor(
 
     public fun parameters(parameters: List<Any>)
 
+    public fun parameters(vararg parameters: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun targetIdentifier(targetIdentifier: String)
   }
@@ -98,9 +106,13 @@ public open class CfnEnabledBaseline internal constructor(
       cdkBuilder.parameters(parameters)
     }
 
+    override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun targetIdentifier(targetIdentifier: String) {
       cdkBuilder.targetIdentifier(targetIdentifier)

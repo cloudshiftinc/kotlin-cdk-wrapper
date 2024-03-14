@@ -14,12 +14,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSubscriptionTarget internal constructor(
   private val cdkObject: software.amazon.awscdk.services.datazone.CfnSubscriptionTarget,
 ) : CfnResource(cdkObject), IInspectable {
-  public open fun applicableAssetTypes(): List<String> = unwrap(this).getApplicableAssetTypes() ?:
-      emptyList()
+  public open fun applicableAssetTypes(): List<String> = unwrap(this).getApplicableAssetTypes()
 
   public open fun applicableAssetTypes(`value`: List<String>) {
     unwrap(this).setApplicableAssetTypes(`value`)
   }
+
+  public open fun applicableAssetTypes(vararg `value`: String): Unit =
+      applicableAssetTypes(`value`.toList())
 
   public open fun attrCreatedAt(): String = unwrap(this).getAttrCreatedAt()
 
@@ -37,12 +39,14 @@ public open class CfnSubscriptionTarget internal constructor(
 
   public open fun attrUpdatedBy(): String = unwrap(this).getAttrUpdatedBy()
 
-  public open fun authorizedPrincipals(): List<String> = unwrap(this).getAuthorizedPrincipals() ?:
-      emptyList()
+  public open fun authorizedPrincipals(): List<String> = unwrap(this).getAuthorizedPrincipals()
 
   public open fun authorizedPrincipals(`value`: List<String>) {
     unwrap(this).setAuthorizedPrincipals(`value`)
   }
+
+  public open fun authorizedPrincipals(vararg `value`: String): Unit =
+      authorizedPrincipals(`value`.toList())
 
   public open fun domainIdentifier(): String = unwrap(this).getDomainIdentifier()
 
@@ -88,6 +92,9 @@ public open class CfnSubscriptionTarget internal constructor(
     unwrap(this).setSubscriptionTargetConfig(__idx_ac66f0)
   }
 
+  public open fun subscriptionTargetConfig(vararg __idx_ac66f0: Any): Unit =
+      subscriptionTargetConfig(__idx_ac66f0.toList())
+
   public open fun type(): String = unwrap(this).getType()
 
   public open fun type(`value`: String) {
@@ -97,7 +104,11 @@ public open class CfnSubscriptionTarget internal constructor(
   public interface Builder {
     public fun applicableAssetTypes(applicableAssetTypes: List<String>)
 
+    public fun applicableAssetTypes(vararg applicableAssetTypes: String)
+
     public fun authorizedPrincipals(authorizedPrincipals: List<String>)
+
+    public fun authorizedPrincipals(vararg authorizedPrincipals: String)
 
     public fun domainIdentifier(domainIdentifier: String)
 
@@ -113,6 +124,8 @@ public open class CfnSubscriptionTarget internal constructor(
 
     public fun subscriptionTargetConfig(subscriptionTargetConfig: List<Any>)
 
+    public fun subscriptionTargetConfig(vararg subscriptionTargetConfig: Any)
+
     public fun type(type: String)
   }
 
@@ -127,9 +140,15 @@ public open class CfnSubscriptionTarget internal constructor(
       cdkBuilder.applicableAssetTypes(applicableAssetTypes)
     }
 
+    override fun applicableAssetTypes(vararg applicableAssetTypes: String): Unit =
+        applicableAssetTypes(applicableAssetTypes.toList())
+
     override fun authorizedPrincipals(authorizedPrincipals: List<String>) {
       cdkBuilder.authorizedPrincipals(authorizedPrincipals)
     }
+
+    override fun authorizedPrincipals(vararg authorizedPrincipals: String): Unit =
+        authorizedPrincipals(authorizedPrincipals.toList())
 
     override fun domainIdentifier(domainIdentifier: String) {
       cdkBuilder.domainIdentifier(domainIdentifier)
@@ -158,6 +177,9 @@ public open class CfnSubscriptionTarget internal constructor(
     override fun subscriptionTargetConfig(subscriptionTargetConfig: List<Any>) {
       cdkBuilder.subscriptionTargetConfig(subscriptionTargetConfig)
     }
+
+    override fun subscriptionTargetConfig(vararg subscriptionTargetConfig: Any): Unit =
+        subscriptionTargetConfig(subscriptionTargetConfig.toList())
 
     override fun type(type: String) {
       cdkBuilder.type(type)

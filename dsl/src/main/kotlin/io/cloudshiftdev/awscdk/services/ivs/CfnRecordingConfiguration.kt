@@ -82,6 +82,8 @@ public open class CfnRecordingConfiguration internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun thumbnailConfiguration(): Any? = unwrap(this).getThumbnailConfiguration()
 
   public open fun thumbnailConfiguration(`value`: IResolvable) {
@@ -122,6 +124,8 @@ public open class CfnRecordingConfiguration internal constructor(
         fun renditionConfiguration(renditionConfiguration: RenditionConfigurationProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun thumbnailConfiguration(thumbnailConfiguration: IResolvable)
 
@@ -181,6 +185,8 @@ public open class CfnRecordingConfiguration internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun thumbnailConfiguration(thumbnailConfiguration: IResolvable) {
       cdkBuilder.thumbnailConfiguration(thumbnailConfiguration.let(IResolvable::unwrap))
     }
@@ -236,6 +242,8 @@ public open class CfnRecordingConfiguration internal constructor(
 
       public fun storage(storage: List<String>)
 
+      public fun storage(vararg storage: String)
+
       public fun targetIntervalSeconds(targetIntervalSeconds: Number)
     }
 
@@ -256,6 +264,8 @@ public open class CfnRecordingConfiguration internal constructor(
       override fun storage(storage: List<String>) {
         cdkBuilder.storage(storage)
       }
+
+      override fun storage(vararg storage: String): Unit = storage(storage.toList())
 
       override fun targetIntervalSeconds(targetIntervalSeconds: Number) {
         cdkBuilder.targetIntervalSeconds(targetIntervalSeconds)
@@ -308,6 +318,8 @@ public open class CfnRecordingConfiguration internal constructor(
       public fun renditionSelection(renditionSelection: String)
 
       public fun renditions(renditions: List<String>)
+
+      public fun renditions(vararg renditions: String)
     }
 
     private class BuilderImpl : Builder {
@@ -323,6 +335,8 @@ public open class CfnRecordingConfiguration internal constructor(
       override fun renditions(renditions: List<String>) {
         cdkBuilder.renditions(renditions)
       }
+
+      override fun renditions(vararg renditions: String): Unit = renditions(renditions.toList())
 
       public fun build():
           software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty

@@ -100,7 +100,7 @@ public open class Node internal constructor(
   public open fun tryRemoveChild(childName: String): Boolean =
       unwrap(this).tryRemoveChild(childName)
 
-  public open fun validate(): List<String> = unwrap(this).validate() ?: emptyList()
+  public open fun validate(): List<String> = unwrap(this).validate()
 
   public companion object {
     @Deprecated(message = "deprecated in CDK")

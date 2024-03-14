@@ -22,6 +22,8 @@ public interface CfnTrafficRouting {
 
     public fun targetGroups(targetGroups: List<String>)
 
+    public fun targetGroups(vararg targetGroups: String)
+
     public fun testTrafficRoute(testTrafficRoute: CfnTrafficRoute)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -46,6 +48,9 @@ public interface CfnTrafficRouting {
       cdkBuilder.targetGroups(targetGroups)
     }
 
+    override fun targetGroups(vararg targetGroups: String): Unit =
+        targetGroups(targetGroups.toList())
+
     override fun testTrafficRoute(testTrafficRoute: CfnTrafficRoute) {
       cdkBuilder.testTrafficRoute(testTrafficRoute.let(CfnTrafficRoute::unwrap))
     }
@@ -64,7 +69,7 @@ public interface CfnTrafficRouting {
     override fun prodTrafficRoute(): CfnTrafficRoute =
         unwrap(this).getProdTrafficRoute().let(CfnTrafficRoute::wrap)
 
-    override fun targetGroups(): List<String> = unwrap(this).getTargetGroups() ?: emptyList()
+    override fun targetGroups(): List<String> = unwrap(this).getTargetGroups()
 
     override fun testTrafficRoute(): CfnTrafficRoute =
         unwrap(this).getTestTrafficRoute().let(CfnTrafficRoute::wrap)

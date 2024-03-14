@@ -24,6 +24,8 @@ public open class LambdaRestApi internal constructor(
 
     public fun binaryMediaTypes(binaryMediaTypes: List<String>)
 
+    public fun binaryMediaTypes(vararg binaryMediaTypes: String)
+
     public fun cloneFrom(cloneFrom: IRestApi)
 
     public fun cloudWatchRole(cloudWatchRole: Boolean)
@@ -78,6 +80,8 @@ public open class LambdaRestApi internal constructor(
 
     public fun endpointTypes(endpointTypes: List<EndpointType>)
 
+    public fun endpointTypes(vararg endpointTypes: EndpointType)
+
     public fun failOnWarnings(failOnWarnings: Boolean)
 
     public fun handler(handler: IFunction)
@@ -122,6 +126,9 @@ public open class LambdaRestApi internal constructor(
     override fun binaryMediaTypes(binaryMediaTypes: List<String>) {
       cdkBuilder.binaryMediaTypes(binaryMediaTypes)
     }
+
+    override fun binaryMediaTypes(vararg binaryMediaTypes: String): Unit =
+        binaryMediaTypes(binaryMediaTypes.toList())
 
     override fun cloneFrom(cloneFrom: IRestApi) {
       cdkBuilder.cloneFrom(cloneFrom.let(IRestApi::unwrap))
@@ -210,6 +217,9 @@ public open class LambdaRestApi internal constructor(
     override fun endpointTypes(endpointTypes: List<EndpointType>) {
       cdkBuilder.endpointTypes(endpointTypes.map(EndpointType::unwrap))
     }
+
+    override fun endpointTypes(vararg endpointTypes: EndpointType): Unit =
+        endpointTypes(endpointTypes.toList())
 
     override fun failOnWarnings(failOnWarnings: Boolean) {
       cdkBuilder.failOnWarnings(failOnWarnings)

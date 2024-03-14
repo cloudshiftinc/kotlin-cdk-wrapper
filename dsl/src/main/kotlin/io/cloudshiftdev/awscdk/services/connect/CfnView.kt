@@ -16,11 +16,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnView internal constructor(
   private val cdkObject: software.amazon.awscdk.services.connect.CfnView,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
-  public open fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
+  public open fun actions(): List<String> = unwrap(this).getActions()
 
   public open fun actions(`value`: List<String>) {
     unwrap(this).setActions(`value`)
   }
+
+  public open fun actions(vararg `value`: String): Unit = actions(`value`.toList())
 
   public open fun attrViewArn(): String = unwrap(this).getAttrViewArn()
 
@@ -59,6 +61,8 @@ public open class CfnView internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public open fun template(): Any = unwrap(this).getTemplate()
 
   public open fun template(`value`: Any) {
@@ -68,6 +72,8 @@ public open class CfnView internal constructor(
   public interface Builder {
     public fun actions(actions: List<String>)
 
+    public fun actions(vararg actions: String)
+
     public fun description(description: String)
 
     public fun instanceArn(instanceArn: String)
@@ -75,6 +81,8 @@ public open class CfnView internal constructor(
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun template(template: Any)
   }
@@ -89,6 +97,8 @@ public open class CfnView internal constructor(
     override fun actions(actions: List<String>) {
       cdkBuilder.actions(actions)
     }
+
+    override fun actions(vararg actions: String): Unit = actions(actions.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -105,6 +115,8 @@ public open class CfnView internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun template(template: Any) {
       cdkBuilder.template(template)

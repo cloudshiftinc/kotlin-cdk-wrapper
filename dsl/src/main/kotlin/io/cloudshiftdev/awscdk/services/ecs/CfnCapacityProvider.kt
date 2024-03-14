@@ -55,6 +55,8 @@ public open class CfnCapacityProvider internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun autoScalingGroupProvider(autoScalingGroupProvider: IResolvable)
 
@@ -68,6 +70,8 @@ public open class CfnCapacityProvider internal constructor(
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -99,6 +103,8 @@ public open class CfnCapacityProvider internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ecs.CfnCapacityProvider = cdkBuilder.build()
   }

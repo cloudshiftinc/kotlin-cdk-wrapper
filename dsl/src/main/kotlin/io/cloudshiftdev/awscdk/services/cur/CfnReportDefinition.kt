@@ -22,12 +22,18 @@ public open class CfnReportDefinition internal constructor(
     unwrap(this).setAdditionalArtifacts(`value`)
   }
 
+  public open fun additionalArtifacts(vararg `value`: String): Unit =
+      additionalArtifacts(`value`.toList())
+
   public open fun additionalSchemaElements(): List<String> =
       unwrap(this).getAdditionalSchemaElements() ?: emptyList()
 
   public open fun additionalSchemaElements(`value`: List<String>) {
     unwrap(this).setAdditionalSchemaElements(`value`)
   }
+
+  public open fun additionalSchemaElements(vararg `value`: String): Unit =
+      additionalSchemaElements(`value`.toList())
 
   public open fun billingViewArn(): String? = unwrap(this).getBillingViewArn()
 
@@ -100,7 +106,11 @@ public open class CfnReportDefinition internal constructor(
   public interface Builder {
     public fun additionalArtifacts(additionalArtifacts: List<String>)
 
+    public fun additionalArtifacts(vararg additionalArtifacts: String)
+
     public fun additionalSchemaElements(additionalSchemaElements: List<String>)
+
+    public fun additionalSchemaElements(vararg additionalSchemaElements: String)
 
     public fun billingViewArn(billingViewArn: String)
 
@@ -136,9 +146,15 @@ public open class CfnReportDefinition internal constructor(
       cdkBuilder.additionalArtifacts(additionalArtifacts)
     }
 
+    override fun additionalArtifacts(vararg additionalArtifacts: String): Unit =
+        additionalArtifacts(additionalArtifacts.toList())
+
     override fun additionalSchemaElements(additionalSchemaElements: List<String>) {
       cdkBuilder.additionalSchemaElements(additionalSchemaElements)
     }
+
+    override fun additionalSchemaElements(vararg additionalSchemaElements: String): Unit =
+        additionalSchemaElements(additionalSchemaElements.toList())
 
     override fun billingViewArn(billingViewArn: String) {
       cdkBuilder.billingViewArn(billingViewArn)

@@ -63,6 +63,9 @@ public open class CfnEndpoint internal constructor(
     unwrap(this).setExcludeRetainedVariantProperties(__idx_ac66f0)
   }
 
+  public open fun excludeRetainedVariantProperties(vararg __idx_ac66f0: Any): Unit =
+      excludeRetainedVariantProperties(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -96,6 +99,8 @@ public open class CfnEndpoint internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun deploymentConfig(deploymentConfig: IResolvable)
 
@@ -113,6 +118,8 @@ public open class CfnEndpoint internal constructor(
 
     public fun excludeRetainedVariantProperties(excludeRetainedVariantProperties: List<Any>)
 
+    public fun excludeRetainedVariantProperties(vararg excludeRetainedVariantProperties: Any)
+
     public fun retainAllVariantProperties(retainAllVariantProperties: Boolean)
 
     public fun retainAllVariantProperties(retainAllVariantProperties: IResolvable)
@@ -122,6 +129,8 @@ public open class CfnEndpoint internal constructor(
     public fun retainDeploymentConfig(retainDeploymentConfig: IResolvable)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -160,6 +169,9 @@ public open class CfnEndpoint internal constructor(
       cdkBuilder.excludeRetainedVariantProperties(excludeRetainedVariantProperties)
     }
 
+    override fun excludeRetainedVariantProperties(vararg excludeRetainedVariantProperties: Any):
+        Unit = excludeRetainedVariantProperties(excludeRetainedVariantProperties.toList())
+
     override fun retainAllVariantProperties(retainAllVariantProperties: Boolean) {
       cdkBuilder.retainAllVariantProperties(retainAllVariantProperties)
     }
@@ -179,6 +191,8 @@ public open class CfnEndpoint internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.sagemaker.CfnEndpoint = cdkBuilder.build()
   }
@@ -676,6 +690,8 @@ public open class CfnEndpoint internal constructor(
       public fun alarms(alarms: IResolvable)
 
       public fun alarms(alarms: List<Any>)
+
+      public fun alarms(vararg alarms: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -690,6 +706,8 @@ public open class CfnEndpoint internal constructor(
       override fun alarms(alarms: List<Any>) {
         cdkBuilder.alarms(alarms)
       }
+
+      override fun alarms(vararg alarms: Any): Unit = alarms(alarms.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.AutoRollbackConfigProperty =

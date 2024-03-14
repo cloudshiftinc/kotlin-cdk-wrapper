@@ -104,6 +104,8 @@ public open class CfnAPIKey internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun description(description: String)
 
@@ -132,6 +134,8 @@ public open class CfnAPIKey internal constructor(
     public fun restrictions(restrictions: ApiKeyRestrictionsProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -194,6 +198,8 @@ public open class CfnAPIKey internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     public fun build(): software.amazon.awscdk.services.location.CfnAPIKey = cdkBuilder.build()
   }
 
@@ -228,9 +234,15 @@ public open class CfnAPIKey internal constructor(
     public interface Builder {
       public fun allowActions(allowActions: List<String>)
 
+      public fun allowActions(vararg allowActions: String)
+
       public fun allowReferers(allowReferers: List<String>)
 
+      public fun allowReferers(vararg allowReferers: String)
+
       public fun allowResources(allowResources: List<String>)
+
+      public fun allowResources(vararg allowResources: String)
     }
 
     private class BuilderImpl : Builder {
@@ -242,13 +254,22 @@ public open class CfnAPIKey internal constructor(
         cdkBuilder.allowActions(allowActions)
       }
 
+      override fun allowActions(vararg allowActions: String): Unit =
+          allowActions(allowActions.toList())
+
       override fun allowReferers(allowReferers: List<String>) {
         cdkBuilder.allowReferers(allowReferers)
       }
 
+      override fun allowReferers(vararg allowReferers: String): Unit =
+          allowReferers(allowReferers.toList())
+
       override fun allowResources(allowResources: List<String>) {
         cdkBuilder.allowResources(allowResources)
       }
+
+      override fun allowResources(vararg allowResources: String): Unit =
+          allowResources(allowResources.toList())
 
       public fun build():
           software.amazon.awscdk.services.location.CfnAPIKey.ApiKeyRestrictionsProperty =
@@ -259,11 +280,11 @@ public open class CfnAPIKey internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.location.CfnAPIKey.ApiKeyRestrictionsProperty,
     ) : ApiKeyRestrictionsProperty {
-      override fun allowActions(): List<String> = unwrap(this).getAllowActions() ?: emptyList()
+      override fun allowActions(): List<String> = unwrap(this).getAllowActions()
 
       override fun allowReferers(): List<String> = unwrap(this).getAllowReferers() ?: emptyList()
 
-      override fun allowResources(): List<String> = unwrap(this).getAllowResources() ?: emptyList()
+      override fun allowResources(): List<String> = unwrap(this).getAllowResources()
     }
 
     public companion object {

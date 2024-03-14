@@ -66,6 +66,8 @@ public open class CfnPrivateDnsNamespace internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun vpc(): String = unwrap(this).getVpc()
 
   public open fun vpc(`value`: String) {
@@ -86,6 +88,8 @@ public open class CfnPrivateDnsNamespace internal constructor(
     public fun properties(properties: PropertiesProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun vpc(vpc: String)
   }
@@ -123,6 +127,8 @@ public open class CfnPrivateDnsNamespace internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun vpc(vpc: String) {
       cdkBuilder.vpc(vpc)

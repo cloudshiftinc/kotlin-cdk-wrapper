@@ -445,6 +445,8 @@ public open class CfnTemplate internal constructor(
       public fun subjectNameFlags(subjectNameFlags: SubjectNameFlagsV2Property.Builder.() -> Unit)
 
       public fun supersededTemplates(supersededTemplates: List<String>)
+
+      public fun supersededTemplates(vararg supersededTemplates: String)
     }
 
     private class BuilderImpl : Builder {
@@ -549,6 +551,9 @@ public open class CfnTemplate internal constructor(
       override fun supersededTemplates(supersededTemplates: List<String>) {
         cdkBuilder.supersededTemplates(supersededTemplates)
       }
+
+      override fun supersededTemplates(vararg supersededTemplates: String): Unit =
+          supersededTemplates(supersededTemplates.toList())
 
       public fun build():
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV2Property =
@@ -758,6 +763,8 @@ public open class CfnTemplate internal constructor(
       public fun subjectNameFlags(subjectNameFlags: SubjectNameFlagsV3Property.Builder.() -> Unit)
 
       public fun supersededTemplates(supersededTemplates: List<String>)
+
+      public fun supersededTemplates(vararg supersededTemplates: String)
     }
 
     private class BuilderImpl : Builder {
@@ -866,6 +873,9 @@ public open class CfnTemplate internal constructor(
       override fun supersededTemplates(supersededTemplates: List<String>) {
         cdkBuilder.supersededTemplates(supersededTemplates)
       }
+
+      override fun supersededTemplates(vararg supersededTemplates: String): Unit =
+          supersededTemplates(supersededTemplates.toList())
 
       public fun build():
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV3Property =
@@ -1583,6 +1593,8 @@ public open class CfnTemplate internal constructor(
     public interface Builder {
       public fun cryptoProviders(cryptoProviders: List<String>)
 
+      public fun cryptoProviders(vararg cryptoProviders: String)
+
       public fun keySpec(keySpec: String)
 
       public fun minimalKeyLength(minimalKeyLength: Number)
@@ -1597,6 +1609,9 @@ public open class CfnTemplate internal constructor(
       override fun cryptoProviders(cryptoProviders: List<String>) {
         cdkBuilder.cryptoProviders(cryptoProviders)
       }
+
+      override fun cryptoProviders(vararg cryptoProviders: String): Unit =
+          cryptoProviders(cryptoProviders.toList())
 
       override fun keySpec(keySpec: String) {
         cdkBuilder.keySpec(keySpec)
@@ -1659,6 +1674,8 @@ public open class CfnTemplate internal constructor(
 
       public fun cryptoProviders(cryptoProviders: List<String>)
 
+      public fun cryptoProviders(vararg cryptoProviders: String)
+
       public fun keySpec(keySpec: String)
 
       public fun keyUsageProperty(keyUsageProperty: IResolvable)
@@ -1685,6 +1702,9 @@ public open class CfnTemplate internal constructor(
       override fun cryptoProviders(cryptoProviders: List<String>) {
         cdkBuilder.cryptoProviders(cryptoProviders)
       }
+
+      override fun cryptoProviders(vararg cryptoProviders: String): Unit =
+          cryptoProviders(cryptoProviders.toList())
 
       override fun keySpec(keySpec: String) {
         cdkBuilder.keySpec(keySpec)
@@ -1764,6 +1784,8 @@ public open class CfnTemplate internal constructor(
 
       public fun cryptoProviders(cryptoProviders: List<String>)
 
+      public fun cryptoProviders(vararg cryptoProviders: String)
+
       public fun keySpec(keySpec: String)
 
       public fun keyUsageProperty(keyUsageProperty: IResolvable)
@@ -1790,6 +1812,9 @@ public open class CfnTemplate internal constructor(
       override fun cryptoProviders(cryptoProviders: List<String>) {
         cdkBuilder.cryptoProviders(cryptoProviders)
       }
+
+      override fun cryptoProviders(vararg cryptoProviders: String): Unit =
+          cryptoProviders(cryptoProviders.toList())
 
       override fun keySpec(keySpec: String) {
         cdkBuilder.keySpec(keySpec)
@@ -2187,6 +2212,8 @@ public open class CfnTemplate internal constructor(
       public fun policies(policies: IResolvable)
 
       public fun policies(policies: List<Any>)
+
+      public fun policies(vararg policies: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2210,6 +2237,8 @@ public open class CfnTemplate internal constructor(
       override fun policies(policies: List<Any>) {
         cdkBuilder.policies(policies)
       }
+
+      override fun policies(vararg policies: Any): Unit = policies(policies.toList())
 
       public fun build():
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPoliciesProperty =
@@ -3088,6 +3117,8 @@ public open class CfnTemplate internal constructor(
       public fun subjectNameFlags(subjectNameFlags: SubjectNameFlagsV4Property.Builder.() -> Unit)
 
       public fun supersededTemplates(supersededTemplates: List<String>)
+
+      public fun supersededTemplates(vararg supersededTemplates: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3196,6 +3227,9 @@ public open class CfnTemplate internal constructor(
       override fun supersededTemplates(supersededTemplates: List<String>) {
         cdkBuilder.supersededTemplates(supersededTemplates)
       }
+
+      override fun supersededTemplates(vararg supersededTemplates: String): Unit =
+          supersededTemplates(supersededTemplates.toList())
 
       public fun build():
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV4Property =

@@ -28,6 +28,8 @@ public interface FargateProfileOptions {
 
     public fun selectors(selectors: List<Selector>)
 
+    public fun selectors(vararg selectors: Selector)
+
     public fun subnetSelection(subnetSelection: SubnetSelection)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -52,6 +54,8 @@ public interface FargateProfileOptions {
     override fun selectors(selectors: List<Selector>) {
       cdkBuilder.selectors(selectors.map(Selector::unwrap))
     }
+
+    override fun selectors(vararg selectors: Selector): Unit = selectors(selectors.toList())
 
     override fun subnetSelection(subnetSelection: SubnetSelection) {
       cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))

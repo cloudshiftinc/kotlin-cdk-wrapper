@@ -60,6 +60,8 @@ public open class CfnStack internal constructor(
     unwrap(this).setCloneAppIds(`value`)
   }
 
+  public open fun cloneAppIds(vararg `value`: String): Unit = cloneAppIds(`value`.toList())
+
   public open fun clonePermissions(): Any? = unwrap(this).getClonePermissions()
 
   public open fun clonePermissions(`value`: Boolean) {
@@ -159,6 +161,8 @@ public open class CfnStack internal constructor(
     unwrap(this).setElasticIps(__idx_ac66f0)
   }
 
+  public open fun elasticIps(vararg __idx_ac66f0: Any): Unit = elasticIps(__idx_ac66f0.toList())
+
   public open fun hostnameTheme(): String? = unwrap(this).getHostnameTheme()
 
   public open fun hostnameTheme(`value`: String) {
@@ -185,6 +189,9 @@ public open class CfnStack internal constructor(
     unwrap(this).setRdsDbInstances(__idx_ac66f0)
   }
 
+  public open fun rdsDbInstances(vararg __idx_ac66f0: Any): Unit =
+      rdsDbInstances(__idx_ac66f0.toList())
+
   public open fun serviceRoleArn(): String = unwrap(this).getServiceRoleArn()
 
   public open fun serviceRoleArn(`value`: String) {
@@ -205,6 +212,8 @@ public open class CfnStack internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun useCustomCookbooks(): Any? = unwrap(this).getUseCustomCookbooks()
 
@@ -249,6 +258,8 @@ public open class CfnStack internal constructor(
 
     public fun cloneAppIds(cloneAppIds: List<String>)
 
+    public fun cloneAppIds(vararg cloneAppIds: String)
+
     public fun clonePermissions(clonePermissions: Boolean)
 
     public fun clonePermissions(clonePermissions: IResolvable)
@@ -290,6 +301,8 @@ public open class CfnStack internal constructor(
 
     public fun elasticIps(elasticIps: List<Any>)
 
+    public fun elasticIps(vararg elasticIps: Any)
+
     public fun hostnameTheme(hostnameTheme: String)
 
     public fun name(name: String)
@@ -298,11 +311,15 @@ public open class CfnStack internal constructor(
 
     public fun rdsDbInstances(rdsDbInstances: List<Any>)
 
+    public fun rdsDbInstances(vararg rdsDbInstances: Any)
+
     public fun serviceRoleArn(serviceRoleArn: String)
 
     public fun sourceStackId(sourceStackId: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun useCustomCookbooks(useCustomCookbooks: Boolean)
 
@@ -350,6 +367,8 @@ public open class CfnStack internal constructor(
     override fun cloneAppIds(cloneAppIds: List<String>) {
       cdkBuilder.cloneAppIds(cloneAppIds)
     }
+
+    override fun cloneAppIds(vararg cloneAppIds: String): Unit = cloneAppIds(cloneAppIds.toList())
 
     override fun clonePermissions(clonePermissions: Boolean) {
       cdkBuilder.clonePermissions(clonePermissions)
@@ -426,6 +445,8 @@ public open class CfnStack internal constructor(
       cdkBuilder.elasticIps(elasticIps)
     }
 
+    override fun elasticIps(vararg elasticIps: Any): Unit = elasticIps(elasticIps.toList())
+
     override fun hostnameTheme(hostnameTheme: String) {
       cdkBuilder.hostnameTheme(hostnameTheme)
     }
@@ -442,6 +463,9 @@ public open class CfnStack internal constructor(
       cdkBuilder.rdsDbInstances(rdsDbInstances)
     }
 
+    override fun rdsDbInstances(vararg rdsDbInstances: Any): Unit =
+        rdsDbInstances(rdsDbInstances.toList())
+
     override fun serviceRoleArn(serviceRoleArn: String) {
       cdkBuilder.serviceRoleArn(serviceRoleArn)
     }
@@ -453,6 +477,8 @@ public open class CfnStack internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun useCustomCookbooks(useCustomCookbooks: Boolean) {
       cdkBuilder.useCustomCookbooks(useCustomCookbooks)

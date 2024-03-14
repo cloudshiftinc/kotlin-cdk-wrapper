@@ -82,6 +82,8 @@ public open class CfnVolume internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun volumeType(): String? = unwrap(this).getVolumeType()
 
   public open fun volumeType(`value`: String) {
@@ -111,6 +113,8 @@ public open class CfnVolume internal constructor(
         fun openZfsConfiguration(openZfsConfiguration: OpenZFSConfigurationProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun volumeType(volumeType: String)
   }
@@ -162,6 +166,8 @@ public open class CfnVolume internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun volumeType(volumeType: String) {
       cdkBuilder.volumeType(volumeType)
     }
@@ -197,6 +203,8 @@ public open class CfnVolume internal constructor(
       public fun clientConfigurations(clientConfigurations: IResolvable)
 
       public fun clientConfigurations(clientConfigurations: List<Any>)
+
+      public fun clientConfigurations(vararg clientConfigurations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -211,6 +219,9 @@ public open class CfnVolume internal constructor(
       override fun clientConfigurations(clientConfigurations: List<Any>) {
         cdkBuilder.clientConfigurations(clientConfigurations)
       }
+
+      override fun clientConfigurations(vararg clientConfigurations: Any): Unit =
+          clientConfigurations(clientConfigurations.toList())
 
       public fun build(): software.amazon.awscdk.services.fsx.CfnVolume.NfsExportsProperty =
           cdkBuilder.build()
@@ -250,6 +261,8 @@ public open class CfnVolume internal constructor(
     public interface Builder {
       public fun aggregates(aggregates: List<String>)
 
+      public fun aggregates(vararg aggregates: String)
+
       public fun constituentsPerAggregate(constituentsPerAggregate: Number)
     }
 
@@ -261,6 +274,8 @@ public open class CfnVolume internal constructor(
       override fun aggregates(aggregates: List<String>) {
         cdkBuilder.aggregates(aggregates)
       }
+
+      override fun aggregates(vararg aggregates: String): Unit = aggregates(aggregates.toList())
 
       override fun constituentsPerAggregate(constituentsPerAggregate: Number) {
         cdkBuilder.constituentsPerAggregate(constituentsPerAggregate)
@@ -478,6 +493,8 @@ public open class CfnVolume internal constructor(
       public fun clients(clients: String)
 
       public fun options(options: List<String>)
+
+      public fun options(vararg options: String)
     }
 
     private class BuilderImpl : Builder {
@@ -493,6 +510,8 @@ public open class CfnVolume internal constructor(
         cdkBuilder.options(options)
       }
 
+      override fun options(vararg options: String): Unit = options(options.toList())
+
       public fun build(): software.amazon.awscdk.services.fsx.CfnVolume.ClientConfigurationsProperty
           = cdkBuilder.build()
     }
@@ -503,7 +522,7 @@ public open class CfnVolume internal constructor(
     ) : ClientConfigurationsProperty {
       override fun clients(): String = unwrap(this).getClients()
 
-      override fun options(): List<String> = unwrap(this).getOptions() ?: emptyList()
+      override fun options(): List<String> = unwrap(this).getOptions()
     }
 
     public companion object {
@@ -797,7 +816,11 @@ public open class CfnVolume internal constructor(
 
       public fun nfsExports(nfsExports: List<Any>)
 
+      public fun nfsExports(vararg nfsExports: Any)
+
       public fun options(options: List<String>)
+
+      public fun options(vararg options: String)
 
       public fun originSnapshot(originSnapshot: IResolvable)
 
@@ -822,6 +845,8 @@ public open class CfnVolume internal constructor(
       public fun userAndGroupQuotas(userAndGroupQuotas: IResolvable)
 
       public fun userAndGroupQuotas(userAndGroupQuotas: List<Any>)
+
+      public fun userAndGroupQuotas(vararg userAndGroupQuotas: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -849,9 +874,13 @@ public open class CfnVolume internal constructor(
         cdkBuilder.nfsExports(nfsExports)
       }
 
+      override fun nfsExports(vararg nfsExports: Any): Unit = nfsExports(nfsExports.toList())
+
       override fun options(options: List<String>) {
         cdkBuilder.options(options)
       }
+
+      override fun options(vararg options: String): Unit = options(options.toList())
 
       override fun originSnapshot(originSnapshot: IResolvable) {
         cdkBuilder.originSnapshot(originSnapshot.let(IResolvable::unwrap))
@@ -897,6 +926,9 @@ public open class CfnVolume internal constructor(
       override fun userAndGroupQuotas(userAndGroupQuotas: List<Any>) {
         cdkBuilder.userAndGroupQuotas(userAndGroupQuotas)
       }
+
+      override fun userAndGroupQuotas(vararg userAndGroupQuotas: Any): Unit =
+          userAndGroupQuotas(userAndGroupQuotas.toList())
 
       public fun build(): software.amazon.awscdk.services.fsx.CfnVolume.OpenZFSConfigurationProperty
           = cdkBuilder.build()

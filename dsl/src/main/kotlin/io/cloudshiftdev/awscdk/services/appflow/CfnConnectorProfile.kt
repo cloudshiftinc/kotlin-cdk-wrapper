@@ -1587,6 +1587,8 @@ public open class CfnConnectorProfile internal constructor(
 
       public fun oAuthScopes(oAuthScopes: List<String>)
 
+      public fun oAuthScopes(vararg oAuthScopes: String)
+
       public fun tokenUrl(tokenUrl: String)
     }
 
@@ -1603,6 +1605,8 @@ public open class CfnConnectorProfile internal constructor(
       override fun oAuthScopes(oAuthScopes: List<String>) {
         cdkBuilder.oAuthScopes(oAuthScopes)
       }
+
+      override fun oAuthScopes(vararg oAuthScopes: String): Unit = oAuthScopes(oAuthScopes.toList())
 
       override fun tokenUrl(tokenUrl: String) {
         cdkBuilder.tokenUrl(tokenUrl)

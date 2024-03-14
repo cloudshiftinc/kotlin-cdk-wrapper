@@ -40,6 +40,8 @@ public open class CfnProject internal constructor(
     unwrap(this).setGlossaryTerms(`value`)
   }
 
+  public open fun glossaryTerms(vararg `value`: String): Unit = glossaryTerms(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -56,6 +58,8 @@ public open class CfnProject internal constructor(
     public fun domainIdentifier(domainIdentifier: String)
 
     public fun glossaryTerms(glossaryTerms: List<String>)
+
+    public fun glossaryTerms(vararg glossaryTerms: String)
 
     public fun name(name: String)
   }
@@ -78,6 +82,9 @@ public open class CfnProject internal constructor(
     override fun glossaryTerms(glossaryTerms: List<String>) {
       cdkBuilder.glossaryTerms(glossaryTerms)
     }
+
+    override fun glossaryTerms(vararg glossaryTerms: String): Unit =
+        glossaryTerms(glossaryTerms.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)

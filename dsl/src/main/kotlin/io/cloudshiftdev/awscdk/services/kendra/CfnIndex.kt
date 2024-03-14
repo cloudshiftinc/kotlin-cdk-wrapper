@@ -57,6 +57,9 @@ public open class CfnIndex internal constructor(
     unwrap(this).setDocumentMetadataConfigurations(__idx_ac66f0)
   }
 
+  public open fun documentMetadataConfigurations(vararg __idx_ac66f0: Any): Unit =
+      documentMetadataConfigurations(__idx_ac66f0.toList())
+
   public open fun edition(): String = unwrap(this).getEdition()
 
   public open fun edition(`value`: String) {
@@ -106,6 +109,8 @@ public open class CfnIndex internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun userContextPolicy(): String? = unwrap(this).getUserContextPolicy()
 
   public open fun userContextPolicy(`value`: String) {
@@ -122,6 +127,9 @@ public open class CfnIndex internal constructor(
     unwrap(this).setUserTokenConfigurations(__idx_ac66f0)
   }
 
+  public open fun userTokenConfigurations(vararg __idx_ac66f0: Any): Unit =
+      userTokenConfigurations(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun capacityUnits(capacityUnits: IResolvable)
 
@@ -136,6 +144,8 @@ public open class CfnIndex internal constructor(
     public fun documentMetadataConfigurations(documentMetadataConfigurations: IResolvable)
 
     public fun documentMetadataConfigurations(documentMetadataConfigurations: List<Any>)
+
+    public fun documentMetadataConfigurations(vararg documentMetadataConfigurations: Any)
 
     public fun edition(edition: String)
 
@@ -155,11 +165,15 @@ public open class CfnIndex internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun userContextPolicy(userContextPolicy: String)
 
     public fun userTokenConfigurations(userTokenConfigurations: IResolvable)
 
     public fun userTokenConfigurations(userTokenConfigurations: List<Any>)
+
+    public fun userTokenConfigurations(vararg userTokenConfigurations: Any)
   }
 
   private class BuilderImpl(
@@ -195,6 +209,9 @@ public open class CfnIndex internal constructor(
       cdkBuilder.documentMetadataConfigurations(documentMetadataConfigurations)
     }
 
+    override fun documentMetadataConfigurations(vararg documentMetadataConfigurations: Any): Unit =
+        documentMetadataConfigurations(documentMetadataConfigurations.toList())
+
     override fun edition(edition: String) {
       cdkBuilder.edition(edition)
     }
@@ -227,6 +244,8 @@ public open class CfnIndex internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun userContextPolicy(userContextPolicy: String) {
       cdkBuilder.userContextPolicy(userContextPolicy)
     }
@@ -238,6 +257,9 @@ public open class CfnIndex internal constructor(
     override fun userTokenConfigurations(userTokenConfigurations: List<Any>) {
       cdkBuilder.userTokenConfigurations(userTokenConfigurations)
     }
+
+    override fun userTokenConfigurations(vararg userTokenConfigurations: Any): Unit =
+        userTokenConfigurations(userTokenConfigurations.toList())
 
     public fun build(): software.amazon.awscdk.services.kendra.CfnIndex = cdkBuilder.build()
   }
@@ -348,6 +370,8 @@ public open class CfnIndex internal constructor(
       public fun valueImportanceItems(valueImportanceItems: IResolvable)
 
       public fun valueImportanceItems(valueImportanceItems: List<Any>)
+
+      public fun valueImportanceItems(vararg valueImportanceItems: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -382,6 +406,9 @@ public open class CfnIndex internal constructor(
       override fun valueImportanceItems(valueImportanceItems: List<Any>) {
         cdkBuilder.valueImportanceItems(valueImportanceItems)
       }
+
+      override fun valueImportanceItems(vararg valueImportanceItems: Any): Unit =
+          valueImportanceItems(valueImportanceItems.toList())
 
       public fun build(): software.amazon.awscdk.services.kendra.CfnIndex.RelevanceProperty =
           cdkBuilder.build()

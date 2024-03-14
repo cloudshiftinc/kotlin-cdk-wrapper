@@ -8,7 +8,7 @@ public open class InstanceTagSet internal constructor(
   private val cdkObject: software.amazon.awscdk.services.codedeploy.InstanceTagSet,
 ) {
   public open fun instanceTagGroups(): List<Map<String, List<String>>> =
-      unwrap(this).getInstanceTagGroups() ?: emptyList()
+      unwrap(this).getInstanceTagGroups()
 
   public companion object {
     init {

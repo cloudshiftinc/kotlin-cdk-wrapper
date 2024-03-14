@@ -39,13 +39,19 @@ public interface DatabaseClusterAttributes {
 
     public fun instanceEndpointAddresses(instanceEndpointAddresses: List<String>)
 
+    public fun instanceEndpointAddresses(vararg instanceEndpointAddresses: String)
+
     public fun instanceIdentifiers(instanceIdentifiers: List<String>)
+
+    public fun instanceIdentifiers(vararg instanceIdentifiers: String)
 
     public fun port(port: Number)
 
     public fun readerEndpointAddress(readerEndpointAddress: String)
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
+
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
   }
 
   private class BuilderImpl : Builder {
@@ -72,9 +78,15 @@ public interface DatabaseClusterAttributes {
       cdkBuilder.instanceEndpointAddresses(instanceEndpointAddresses)
     }
 
+    override fun instanceEndpointAddresses(vararg instanceEndpointAddresses: String): Unit =
+        instanceEndpointAddresses(instanceEndpointAddresses.toList())
+
     override fun instanceIdentifiers(instanceIdentifiers: List<String>) {
       cdkBuilder.instanceIdentifiers(instanceIdentifiers)
     }
+
+    override fun instanceIdentifiers(vararg instanceIdentifiers: String): Unit =
+        instanceIdentifiers(instanceIdentifiers.toList())
 
     override fun port(port: Number) {
       cdkBuilder.port(port)
@@ -87,6 +99,9 @@ public interface DatabaseClusterAttributes {
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     public fun build(): software.amazon.awscdk.services.rds.DatabaseClusterAttributes =
         cdkBuilder.build()

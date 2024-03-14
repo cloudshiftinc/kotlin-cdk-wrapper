@@ -22,11 +22,13 @@ public open class CfnRotation internal constructor(
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
-  public open fun contactIds(): List<String> = unwrap(this).getContactIds() ?: emptyList()
+  public open fun contactIds(): List<String> = unwrap(this).getContactIds()
 
   public open fun contactIds(`value`: List<String>) {
     unwrap(this).setContactIds(`value`)
   }
+
+  public open fun contactIds(vararg `value`: String): Unit = contactIds(`value`.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -68,6 +70,8 @@ public open class CfnRotation internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun timeZoneId(): String = unwrap(this).getTimeZoneId()
 
   public open fun timeZoneId(`value`: String) {
@@ -76,6 +80,8 @@ public open class CfnRotation internal constructor(
 
   public interface Builder {
     public fun contactIds(contactIds: List<String>)
+
+    public fun contactIds(vararg contactIds: String)
 
     public fun name(name: String)
 
@@ -91,6 +97,8 @@ public open class CfnRotation internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun timeZoneId(timeZoneId: String)
   }
 
@@ -104,6 +112,8 @@ public open class CfnRotation internal constructor(
     override fun contactIds(contactIds: List<String>) {
       cdkBuilder.contactIds(contactIds)
     }
+
+    override fun contactIds(vararg contactIds: String): Unit = contactIds(contactIds.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -129,6 +139,8 @@ public open class CfnRotation internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun timeZoneId(timeZoneId: String) {
       cdkBuilder.timeZoneId(timeZoneId)
@@ -348,9 +360,13 @@ public open class CfnRotation internal constructor(
     public interface Builder {
       public fun dailySettings(dailySettings: List<String>)
 
+      public fun dailySettings(vararg dailySettings: String)
+
       public fun monthlySettings(monthlySettings: IResolvable)
 
       public fun monthlySettings(monthlySettings: List<Any>)
+
+      public fun monthlySettings(vararg monthlySettings: Any)
 
       public fun numberOfOnCalls(numberOfOnCalls: Number)
 
@@ -360,9 +376,13 @@ public open class CfnRotation internal constructor(
 
       public fun shiftCoverages(shiftCoverages: List<Any>)
 
+      public fun shiftCoverages(vararg shiftCoverages: Any)
+
       public fun weeklySettings(weeklySettings: IResolvable)
 
       public fun weeklySettings(weeklySettings: List<Any>)
+
+      public fun weeklySettings(vararg weeklySettings: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -375,6 +395,9 @@ public open class CfnRotation internal constructor(
         cdkBuilder.dailySettings(dailySettings)
       }
 
+      override fun dailySettings(vararg dailySettings: String): Unit =
+          dailySettings(dailySettings.toList())
+
       override fun monthlySettings(monthlySettings: IResolvable) {
         cdkBuilder.monthlySettings(monthlySettings.let(IResolvable::unwrap))
       }
@@ -382,6 +405,9 @@ public open class CfnRotation internal constructor(
       override fun monthlySettings(monthlySettings: List<Any>) {
         cdkBuilder.monthlySettings(monthlySettings)
       }
+
+      override fun monthlySettings(vararg monthlySettings: Any): Unit =
+          monthlySettings(monthlySettings.toList())
 
       override fun numberOfOnCalls(numberOfOnCalls: Number) {
         cdkBuilder.numberOfOnCalls(numberOfOnCalls)
@@ -399,6 +425,9 @@ public open class CfnRotation internal constructor(
         cdkBuilder.shiftCoverages(shiftCoverages)
       }
 
+      override fun shiftCoverages(vararg shiftCoverages: Any): Unit =
+          shiftCoverages(shiftCoverages.toList())
+
       override fun weeklySettings(weeklySettings: IResolvable) {
         cdkBuilder.weeklySettings(weeklySettings.let(IResolvable::unwrap))
       }
@@ -406,6 +435,9 @@ public open class CfnRotation internal constructor(
       override fun weeklySettings(weeklySettings: List<Any>) {
         cdkBuilder.weeklySettings(weeklySettings)
       }
+
+      override fun weeklySettings(vararg weeklySettings: Any): Unit =
+          weeklySettings(weeklySettings.toList())
 
       public fun build():
           software.amazon.awscdk.services.ssmcontacts.CfnRotation.RecurrenceSettingsProperty =
@@ -459,6 +491,8 @@ public open class CfnRotation internal constructor(
 
       public fun coverageTimes(coverageTimes: List<Any>)
 
+      public fun coverageTimes(vararg coverageTimes: Any)
+
       public fun dayOfWeek(dayOfWeek: String)
     }
 
@@ -474,6 +508,9 @@ public open class CfnRotation internal constructor(
       override fun coverageTimes(coverageTimes: List<Any>) {
         cdkBuilder.coverageTimes(coverageTimes)
       }
+
+      override fun coverageTimes(vararg coverageTimes: Any): Unit =
+          coverageTimes(coverageTimes.toList())
 
       override fun dayOfWeek(dayOfWeek: String) {
         cdkBuilder.dayOfWeek(dayOfWeek)

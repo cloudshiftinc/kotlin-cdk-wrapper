@@ -30,7 +30,7 @@ public open class CfnConnectPeer internal constructor(
       unwrap(this).getAttrConfigurationCoreNetworkAddress()
 
   public open fun attrConfigurationInsideCidrBlocks(): List<String> =
-      unwrap(this).getAttrConfigurationInsideCidrBlocks() ?: emptyList()
+      unwrap(this).getAttrConfigurationInsideCidrBlocks()
 
   public open fun attrConfigurationPeerAddress(): String =
       unwrap(this).getAttrConfigurationPeerAddress()
@@ -81,6 +81,9 @@ public open class CfnConnectPeer internal constructor(
     unwrap(this).setInsideCidrBlocks(`value`)
   }
 
+  public open fun insideCidrBlocks(vararg `value`: String): Unit =
+      insideCidrBlocks(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -106,6 +109,8 @@ public open class CfnConnectPeer internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun bgpOptions(bgpOptions: IResolvable)
 
@@ -121,11 +126,15 @@ public open class CfnConnectPeer internal constructor(
 
     public fun insideCidrBlocks(insideCidrBlocks: List<String>)
 
+    public fun insideCidrBlocks(vararg insideCidrBlocks: String)
+
     public fun peerAddress(peerAddress: String)
 
     public fun subnetArn(subnetArn: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -160,6 +169,9 @@ public open class CfnConnectPeer internal constructor(
       cdkBuilder.insideCidrBlocks(insideCidrBlocks)
     }
 
+    override fun insideCidrBlocks(vararg insideCidrBlocks: String): Unit =
+        insideCidrBlocks(insideCidrBlocks.toList())
+
     override fun peerAddress(peerAddress: String) {
       cdkBuilder.peerAddress(peerAddress)
     }
@@ -171,6 +183,8 @@ public open class CfnConnectPeer internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.networkmanager.CfnConnectPeer =
         cdkBuilder.build()
@@ -341,9 +355,13 @@ public open class CfnConnectPeer internal constructor(
 
       public fun bgpConfigurations(bgpConfigurations: List<Any>)
 
+      public fun bgpConfigurations(vararg bgpConfigurations: Any)
+
       public fun coreNetworkAddress(coreNetworkAddress: String)
 
       public fun insideCidrBlocks(insideCidrBlocks: List<String>)
+
+      public fun insideCidrBlocks(vararg insideCidrBlocks: String)
 
       public fun peerAddress(peerAddress: String)
 
@@ -364,6 +382,9 @@ public open class CfnConnectPeer internal constructor(
         cdkBuilder.bgpConfigurations(bgpConfigurations)
       }
 
+      override fun bgpConfigurations(vararg bgpConfigurations: Any): Unit =
+          bgpConfigurations(bgpConfigurations.toList())
+
       override fun coreNetworkAddress(coreNetworkAddress: String) {
         cdkBuilder.coreNetworkAddress(coreNetworkAddress)
       }
@@ -371,6 +392,9 @@ public open class CfnConnectPeer internal constructor(
       override fun insideCidrBlocks(insideCidrBlocks: List<String>) {
         cdkBuilder.insideCidrBlocks(insideCidrBlocks)
       }
+
+      override fun insideCidrBlocks(vararg insideCidrBlocks: String): Unit =
+          insideCidrBlocks(insideCidrBlocks.toList())
 
       override fun peerAddress(peerAddress: String) {
         cdkBuilder.peerAddress(peerAddress)

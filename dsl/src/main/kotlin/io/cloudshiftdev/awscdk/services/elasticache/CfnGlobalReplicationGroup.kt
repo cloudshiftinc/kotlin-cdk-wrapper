@@ -83,6 +83,8 @@ public open class CfnGlobalReplicationGroup internal constructor(
     unwrap(this).setMembers(__idx_ac66f0)
   }
 
+  public open fun members(vararg __idx_ac66f0: Any): Unit = members(__idx_ac66f0.toList())
+
   public open fun regionalConfigurations(): Any? = unwrap(this).getRegionalConfigurations()
 
   public open fun regionalConfigurations(`value`: IResolvable) {
@@ -92,6 +94,9 @@ public open class CfnGlobalReplicationGroup internal constructor(
   public open fun regionalConfigurations(__idx_ac66f0: List<Any>) {
     unwrap(this).setRegionalConfigurations(__idx_ac66f0)
   }
+
+  public open fun regionalConfigurations(vararg __idx_ac66f0: Any): Unit =
+      regionalConfigurations(__idx_ac66f0.toList())
 
   public interface Builder {
     public fun automaticFailoverEnabled(automaticFailoverEnabled: Boolean)
@@ -114,9 +119,13 @@ public open class CfnGlobalReplicationGroup internal constructor(
 
     public fun members(members: List<Any>)
 
+    public fun members(vararg members: Any)
+
     public fun regionalConfigurations(regionalConfigurations: IResolvable)
 
     public fun regionalConfigurations(regionalConfigurations: List<Any>)
+
+    public fun regionalConfigurations(vararg regionalConfigurations: Any)
   }
 
   private class BuilderImpl(
@@ -168,6 +177,8 @@ public open class CfnGlobalReplicationGroup internal constructor(
       cdkBuilder.members(members)
     }
 
+    override fun members(vararg members: Any): Unit = members(members.toList())
+
     override fun regionalConfigurations(regionalConfigurations: IResolvable) {
       cdkBuilder.regionalConfigurations(regionalConfigurations.let(IResolvable::unwrap))
     }
@@ -175,6 +186,9 @@ public open class CfnGlobalReplicationGroup internal constructor(
     override fun regionalConfigurations(regionalConfigurations: List<Any>) {
       cdkBuilder.regionalConfigurations(regionalConfigurations)
     }
+
+    override fun regionalConfigurations(vararg regionalConfigurations: Any): Unit =
+        regionalConfigurations(regionalConfigurations.toList())
 
     public fun build(): software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup =
         cdkBuilder.build()
@@ -282,6 +296,8 @@ public open class CfnGlobalReplicationGroup internal constructor(
       public fun nodeGroupId(nodeGroupId: String)
 
       public fun preferredAvailabilityZones(preferredAvailabilityZones: List<String>)
+
+      public fun preferredAvailabilityZones(vararg preferredAvailabilityZones: String)
     }
 
     private class BuilderImpl : Builder {
@@ -297,6 +313,9 @@ public open class CfnGlobalReplicationGroup internal constructor(
       override fun preferredAvailabilityZones(preferredAvailabilityZones: List<String>) {
         cdkBuilder.preferredAvailabilityZones(preferredAvailabilityZones)
       }
+
+      override fun preferredAvailabilityZones(vararg preferredAvailabilityZones: String): Unit =
+          preferredAvailabilityZones(preferredAvailabilityZones.toList())
 
       public fun build():
           software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.ReshardingConfigurationProperty
@@ -348,6 +367,8 @@ public open class CfnGlobalReplicationGroup internal constructor(
       public fun reshardingConfigurations(reshardingConfigurations: IResolvable)
 
       public fun reshardingConfigurations(reshardingConfigurations: List<Any>)
+
+      public fun reshardingConfigurations(vararg reshardingConfigurations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -371,6 +392,9 @@ public open class CfnGlobalReplicationGroup internal constructor(
       override fun reshardingConfigurations(reshardingConfigurations: List<Any>) {
         cdkBuilder.reshardingConfigurations(reshardingConfigurations)
       }
+
+      override fun reshardingConfigurations(vararg reshardingConfigurations: Any): Unit =
+          reshardingConfigurations(reshardingConfigurations.toList())
 
       public fun build():
           software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup.RegionalConfigurationProperty

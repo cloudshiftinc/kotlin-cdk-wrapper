@@ -54,12 +54,16 @@ public open class CfnScheduledAudit internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
-  public open fun targetCheckNames(): List<String> = unwrap(this).getTargetCheckNames() ?:
-      emptyList()
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
+  public open fun targetCheckNames(): List<String> = unwrap(this).getTargetCheckNames()
 
   public open fun targetCheckNames(`value`: List<String>) {
     unwrap(this).setTargetCheckNames(`value`)
   }
+
+  public open fun targetCheckNames(vararg `value`: String): Unit =
+      targetCheckNames(`value`.toList())
 
   public interface Builder {
     public fun dayOfMonth(dayOfMonth: String)
@@ -72,7 +76,11 @@ public open class CfnScheduledAudit internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun targetCheckNames(targetCheckNames: List<String>)
+
+    public fun targetCheckNames(vararg targetCheckNames: String)
   }
 
   private class BuilderImpl(
@@ -102,9 +110,14 @@ public open class CfnScheduledAudit internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun targetCheckNames(targetCheckNames: List<String>) {
       cdkBuilder.targetCheckNames(targetCheckNames)
     }
+
+    override fun targetCheckNames(vararg targetCheckNames: String): Unit =
+        targetCheckNames(targetCheckNames.toList())
 
     public fun build(): software.amazon.awscdk.services.iot.CfnScheduledAudit = cdkBuilder.build()
   }

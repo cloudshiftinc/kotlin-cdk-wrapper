@@ -55,11 +55,15 @@ public open class CfnPolicy internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun targetIds(): List<String> = unwrap(this).getTargetIds() ?: emptyList()
 
   public open fun targetIds(`value`: List<String>) {
     unwrap(this).setTargetIds(`value`)
   }
+
+  public open fun targetIds(vararg `value`: String): Unit = targetIds(`value`.toList())
 
   public open fun type(): String = unwrap(this).getType()
 
@@ -76,7 +80,11 @@ public open class CfnPolicy internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun targetIds(targetIds: List<String>)
+
+    public fun targetIds(vararg targetIds: String)
 
     public fun type(type: String)
   }
@@ -104,9 +112,13 @@ public open class CfnPolicy internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun targetIds(targetIds: List<String>) {
       cdkBuilder.targetIds(targetIds)
     }
+
+    override fun targetIds(vararg targetIds: String): Unit = targetIds(targetIds.toList())
 
     override fun type(type: String) {
       cdkBuilder.type(type)

@@ -40,6 +40,8 @@ public open class CfnGameSessionQueue internal constructor(
     unwrap(this).setDestinations(__idx_ac66f0)
   }
 
+  public open fun destinations(vararg __idx_ac66f0: Any): Unit = destinations(__idx_ac66f0.toList())
+
   public open fun filterConfiguration(): Any? = unwrap(this).getFilterConfiguration()
 
   public open fun filterConfiguration(`value`: IResolvable) {
@@ -81,6 +83,9 @@ public open class CfnGameSessionQueue internal constructor(
     unwrap(this).setPlayerLatencyPolicies(__idx_ac66f0)
   }
 
+  public open fun playerLatencyPolicies(vararg __idx_ac66f0: Any): Unit =
+      playerLatencyPolicies(__idx_ac66f0.toList())
+
   public open fun priorityConfiguration(): Any? = unwrap(this).getPriorityConfiguration()
 
   public open fun priorityConfiguration(`value`: IResolvable) {
@@ -105,6 +110,8 @@ public open class CfnGameSessionQueue internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun timeoutInSeconds(): Number? = unwrap(this).getTimeoutInSeconds()
 
   public open fun timeoutInSeconds(`value`: Number) {
@@ -117,6 +124,8 @@ public open class CfnGameSessionQueue internal constructor(
     public fun destinations(destinations: IResolvable)
 
     public fun destinations(destinations: List<Any>)
+
+    public fun destinations(vararg destinations: Any)
 
     public fun filterConfiguration(filterConfiguration: IResolvable)
 
@@ -135,6 +144,8 @@ public open class CfnGameSessionQueue internal constructor(
 
     public fun playerLatencyPolicies(playerLatencyPolicies: List<Any>)
 
+    public fun playerLatencyPolicies(vararg playerLatencyPolicies: Any)
+
     public fun priorityConfiguration(priorityConfiguration: IResolvable)
 
     public fun priorityConfiguration(priorityConfiguration: PriorityConfigurationProperty)
@@ -145,6 +156,8 @@ public open class CfnGameSessionQueue internal constructor(
         fun priorityConfiguration(priorityConfiguration: PriorityConfigurationProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun timeoutInSeconds(timeoutInSeconds: Number)
   }
@@ -167,6 +180,8 @@ public open class CfnGameSessionQueue internal constructor(
     override fun destinations(destinations: List<Any>) {
       cdkBuilder.destinations(destinations)
     }
+
+    override fun destinations(vararg destinations: Any): Unit = destinations(destinations.toList())
 
     override fun filterConfiguration(filterConfiguration: IResolvable) {
       cdkBuilder.filterConfiguration(filterConfiguration.let(IResolvable::unwrap))
@@ -198,6 +213,9 @@ public open class CfnGameSessionQueue internal constructor(
       cdkBuilder.playerLatencyPolicies(playerLatencyPolicies)
     }
 
+    override fun playerLatencyPolicies(vararg playerLatencyPolicies: Any): Unit =
+        playerLatencyPolicies(playerLatencyPolicies.toList())
+
     override fun priorityConfiguration(priorityConfiguration: IResolvable) {
       cdkBuilder.priorityConfiguration(priorityConfiguration.let(IResolvable::unwrap))
     }
@@ -215,6 +233,8 @@ public open class CfnGameSessionQueue internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun timeoutInSeconds(timeoutInSeconds: Number) {
       cdkBuilder.timeoutInSeconds(timeoutInSeconds)
@@ -253,7 +273,11 @@ public open class CfnGameSessionQueue internal constructor(
     public interface Builder {
       public fun locationOrder(locationOrder: List<String>)
 
+      public fun locationOrder(vararg locationOrder: String)
+
       public fun priorityOrder(priorityOrder: List<String>)
+
+      public fun priorityOrder(vararg priorityOrder: String)
     }
 
     private class BuilderImpl : Builder {
@@ -266,9 +290,15 @@ public open class CfnGameSessionQueue internal constructor(
         cdkBuilder.locationOrder(locationOrder)
       }
 
+      override fun locationOrder(vararg locationOrder: String): Unit =
+          locationOrder(locationOrder.toList())
+
       override fun priorityOrder(priorityOrder: List<String>) {
         cdkBuilder.priorityOrder(priorityOrder)
       }
+
+      override fun priorityOrder(vararg priorityOrder: String): Unit =
+          priorityOrder(priorityOrder.toList())
 
       public fun build():
           software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PriorityConfigurationProperty
@@ -420,6 +450,8 @@ public open class CfnGameSessionQueue internal constructor(
 
     public interface Builder {
       public fun allowedLocations(allowedLocations: List<String>)
+
+      public fun allowedLocations(vararg allowedLocations: String)
     }
 
     private class BuilderImpl : Builder {
@@ -431,6 +463,9 @@ public open class CfnGameSessionQueue internal constructor(
       override fun allowedLocations(allowedLocations: List<String>) {
         cdkBuilder.allowedLocations(allowedLocations)
       }
+
+      override fun allowedLocations(vararg allowedLocations: String): Unit =
+          allowedLocations(allowedLocations.toList())
 
       public fun build():
           software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.FilterConfigurationProperty =

@@ -14,6 +14,8 @@ public interface GrantWithResourceOptions : CommonGrantOptions {
   public interface Builder {
     public fun actions(actions: List<String>)
 
+    public fun actions(vararg actions: String)
+
     public fun conditions(conditions: Map<String, Map<String, Any>>)
 
     public fun grantee(grantee: IGrantable)
@@ -22,7 +24,11 @@ public interface GrantWithResourceOptions : CommonGrantOptions {
 
     public fun resourceArns(resourceArns: List<String>)
 
+    public fun resourceArns(vararg resourceArns: String)
+
     public fun resourceSelfArns(resourceSelfArns: List<String>)
+
+    public fun resourceSelfArns(vararg resourceSelfArns: String)
   }
 
   private class BuilderImpl : Builder {
@@ -32,6 +38,8 @@ public interface GrantWithResourceOptions : CommonGrantOptions {
     override fun actions(actions: List<String>) {
       cdkBuilder.actions(actions)
     }
+
+    override fun actions(vararg actions: String): Unit = actions(actions.toList())
 
     override fun conditions(conditions: Map<String, Map<String, Any>>) {
       cdkBuilder.conditions(conditions)
@@ -49,9 +57,15 @@ public interface GrantWithResourceOptions : CommonGrantOptions {
       cdkBuilder.resourceArns(resourceArns)
     }
 
+    override fun resourceArns(vararg resourceArns: String): Unit =
+        resourceArns(resourceArns.toList())
+
     override fun resourceSelfArns(resourceSelfArns: List<String>) {
       cdkBuilder.resourceSelfArns(resourceSelfArns)
     }
+
+    override fun resourceSelfArns(vararg resourceSelfArns: String): Unit =
+        resourceSelfArns(resourceSelfArns.toList())
 
     public fun build(): software.amazon.awscdk.services.iam.GrantWithResourceOptions =
         cdkBuilder.build()
@@ -60,7 +74,7 @@ public interface GrantWithResourceOptions : CommonGrantOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.iam.GrantWithResourceOptions,
   ) : GrantWithResourceOptions {
-    override fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
+    override fun actions(): List<String> = unwrap(this).getActions()
 
     override fun conditions(): Map<String, Map<String, Any>> = unwrap(this).getConditions() ?:
         emptyMap()
@@ -70,7 +84,7 @@ public interface GrantWithResourceOptions : CommonGrantOptions {
     override fun resource(): IResourceWithPolicy =
         unwrap(this).getResource().let(IResourceWithPolicy::wrap)
 
-    override fun resourceArns(): List<String> = unwrap(this).getResourceArns() ?: emptyList()
+    override fun resourceArns(): List<String> = unwrap(this).getResourceArns()
 
     override fun resourceSelfArns(): List<String> = unwrap(this).getResourceSelfArns() ?:
         emptyList()

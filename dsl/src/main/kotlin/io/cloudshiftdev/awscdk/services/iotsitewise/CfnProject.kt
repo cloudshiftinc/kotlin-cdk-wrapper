@@ -21,6 +21,8 @@ public open class CfnProject internal constructor(
     unwrap(this).setAssetIds(`value`)
   }
 
+  public open fun assetIds(vararg `value`: String): Unit = assetIds(`value`.toList())
+
   public open fun attrProjectArn(): String = unwrap(this).getAttrProjectArn()
 
   public open fun attrProjectId(): String = unwrap(this).getAttrProjectId()
@@ -56,8 +58,12 @@ public open class CfnProject internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun assetIds(assetIds: List<String>)
+
+    public fun assetIds(vararg assetIds: String)
 
     public fun portalId(portalId: String)
 
@@ -66,6 +72,8 @@ public open class CfnProject internal constructor(
     public fun projectName(projectName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -78,6 +86,8 @@ public open class CfnProject internal constructor(
     override fun assetIds(assetIds: List<String>) {
       cdkBuilder.assetIds(assetIds)
     }
+
+    override fun assetIds(vararg assetIds: String): Unit = assetIds(assetIds.toList())
 
     override fun portalId(portalId: String) {
       cdkBuilder.portalId(portalId)
@@ -94,6 +104,8 @@ public open class CfnProject internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.iotsitewise.CfnProject = cdkBuilder.build()
   }

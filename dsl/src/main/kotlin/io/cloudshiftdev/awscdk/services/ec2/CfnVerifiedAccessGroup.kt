@@ -81,6 +81,8 @@ public open class CfnVerifiedAccessGroup internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun verifiedAccessInstanceId(): String = unwrap(this).getVerifiedAccessInstanceId()
 
   public open fun verifiedAccessInstanceId(`value`: String) {
@@ -105,6 +107,8 @@ public open class CfnVerifiedAccessGroup internal constructor(
     public fun sseSpecification(sseSpecification: SseSpecificationProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun verifiedAccessInstanceId(verifiedAccessInstanceId: String)
   }
@@ -148,6 +152,8 @@ public open class CfnVerifiedAccessGroup internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun verifiedAccessInstanceId(verifiedAccessInstanceId: String) {
       cdkBuilder.verifiedAccessInstanceId(verifiedAccessInstanceId)

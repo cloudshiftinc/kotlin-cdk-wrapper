@@ -18,8 +18,7 @@ public open class CfnIdentitySource internal constructor(
 ) : CfnResource(cdkObject), IInspectable {
   public open fun attrDetails(): IResolvable = unwrap(this).getAttrDetails().let(IResolvable::wrap)
 
-  public open fun attrDetailsClientIds(): List<String> = unwrap(this).getAttrDetailsClientIds() ?:
-      emptyList()
+  public open fun attrDetailsClientIds(): List<String> = unwrap(this).getAttrDetailsClientIds()
 
   public open fun attrDetailsDiscoveryUrl(): String = unwrap(this).getAttrDetailsDiscoveryUrl()
 
@@ -214,6 +213,8 @@ public open class CfnIdentitySource internal constructor(
     public interface Builder {
       public fun clientIds(clientIds: List<String>)
 
+      public fun clientIds(vararg clientIds: String)
+
       public fun discoveryUrl(discoveryUrl: String)
 
       public fun openIdIssuer(openIdIssuer: String)
@@ -230,6 +231,8 @@ public open class CfnIdentitySource internal constructor(
       override fun clientIds(clientIds: List<String>) {
         cdkBuilder.clientIds(clientIds)
       }
+
+      override fun clientIds(vararg clientIds: String): Unit = clientIds(clientIds.toList())
 
       override fun discoveryUrl(discoveryUrl: String) {
         cdkBuilder.discoveryUrl(discoveryUrl)
@@ -289,6 +292,8 @@ public open class CfnIdentitySource internal constructor(
     public interface Builder {
       public fun clientIds(clientIds: List<String>)
 
+      public fun clientIds(vararg clientIds: String)
+
       public fun userPoolArn(userPoolArn: String)
     }
 
@@ -301,6 +306,8 @@ public open class CfnIdentitySource internal constructor(
       override fun clientIds(clientIds: List<String>) {
         cdkBuilder.clientIds(clientIds)
       }
+
+      override fun clientIds(vararg clientIds: String): Unit = clientIds(clientIds.toList())
 
       override fun userPoolArn(userPoolArn: String) {
         cdkBuilder.userPoolArn(userPoolArn)

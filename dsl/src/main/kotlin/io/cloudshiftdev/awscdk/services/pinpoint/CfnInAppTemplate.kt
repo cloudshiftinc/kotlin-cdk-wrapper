@@ -31,6 +31,8 @@ public open class CfnInAppTemplate internal constructor(
     unwrap(this).setContent(__idx_ac66f0)
   }
 
+  public open fun content(vararg __idx_ac66f0: Any): Unit = content(__idx_ac66f0.toList())
+
   public open fun customConfig(): Any? = unwrap(this).getCustomConfig()
 
   public open fun customConfig(`value`: Any) {
@@ -72,6 +74,8 @@ public open class CfnInAppTemplate internal constructor(
 
     public fun content(content: List<Any>)
 
+    public fun content(vararg content: Any)
+
     public fun customConfig(customConfig: Any)
 
     public fun layout(layout: String)
@@ -97,6 +101,8 @@ public open class CfnInAppTemplate internal constructor(
     override fun content(content: List<Any>) {
       cdkBuilder.content(content)
     }
+
+    override fun content(vararg content: Any): Unit = content(content.toList())
 
     override fun customConfig(customConfig: Any) {
       cdkBuilder.customConfig(customConfig)

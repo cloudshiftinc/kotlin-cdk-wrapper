@@ -75,6 +75,8 @@ public open class CfnChannel internal constructor(
     unwrap(this).setOutputs(__idx_ac66f0)
   }
 
+  public open fun outputs(vararg __idx_ac66f0: Any): Unit = outputs(__idx_ac66f0.toList())
+
   public open fun playbackMode(): String = unwrap(this).getPlaybackMode()
 
   public open fun playbackMode(`value`: String) {
@@ -86,6 +88,8 @@ public open class CfnChannel internal constructor(
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   public open fun tier(): String? = unwrap(this).getTier()
 
@@ -133,9 +137,13 @@ public open class CfnChannel internal constructor(
 
     public fun outputs(outputs: List<Any>)
 
+    public fun outputs(vararg outputs: Any)
+
     public fun playbackMode(playbackMode: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun tier(tier: String)
 
@@ -195,6 +203,8 @@ public open class CfnChannel internal constructor(
       cdkBuilder.outputs(outputs)
     }
 
+    override fun outputs(vararg outputs: Any): Unit = outputs(outputs.toList())
+
     override fun playbackMode(playbackMode: String) {
       cdkBuilder.playbackMode(playbackMode)
     }
@@ -202,6 +212,8 @@ public open class CfnChannel internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun tier(tier: String) {
       cdkBuilder.tier(tier)
@@ -250,6 +262,8 @@ public open class CfnChannel internal constructor(
 
     public interface Builder {
       public fun logTypes(logTypes: List<String>)
+
+      public fun logTypes(vararg logTypes: String)
     }
 
     private class BuilderImpl : Builder {
@@ -261,6 +275,8 @@ public open class CfnChannel internal constructor(
       override fun logTypes(logTypes: List<String>) {
         cdkBuilder.logTypes(logTypes)
       }
+
+      override fun logTypes(vararg logTypes: String): Unit = logTypes(logTypes.toList())
 
       public fun build():
           software.amazon.awscdk.services.mediatailor.CfnChannel.LogConfigurationForChannelProperty
@@ -409,6 +425,8 @@ public open class CfnChannel internal constructor(
     public interface Builder {
       public fun adMarkupType(adMarkupType: List<String>)
 
+      public fun adMarkupType(vararg adMarkupType: String)
+
       public fun manifestWindowSeconds(manifestWindowSeconds: Number)
     }
 
@@ -421,6 +439,9 @@ public open class CfnChannel internal constructor(
       override fun adMarkupType(adMarkupType: List<String>) {
         cdkBuilder.adMarkupType(adMarkupType)
       }
+
+      override fun adMarkupType(vararg adMarkupType: String): Unit =
+          adMarkupType(adMarkupType.toList())
 
       override fun manifestWindowSeconds(manifestWindowSeconds: Number) {
         cdkBuilder.manifestWindowSeconds(manifestWindowSeconds)

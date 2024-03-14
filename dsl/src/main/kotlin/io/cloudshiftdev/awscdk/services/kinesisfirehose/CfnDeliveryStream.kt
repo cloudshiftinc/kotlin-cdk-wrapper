@@ -265,6 +265,8 @@ public open class CfnDeliveryStream internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public
         fun amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration: IResolvable)
@@ -395,6 +397,8 @@ public open class CfnDeliveryStream internal constructor(
         fun splunkDestinationConfiguration(splunkDestinationConfiguration: SplunkDestinationConfigurationProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -612,6 +616,8 @@ public open class CfnDeliveryStream internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream =
         cdkBuilder.build()
@@ -1687,6 +1693,8 @@ public open class CfnDeliveryStream internal constructor(
 
       public fun bloomFilterColumns(bloomFilterColumns: List<String>)
 
+      public fun bloomFilterColumns(vararg bloomFilterColumns: String)
+
       public fun bloomFilterFalsePositiveProbability(bloomFilterFalsePositiveProbability: Number)
 
       public fun compression(compression: String)
@@ -1719,6 +1727,9 @@ public open class CfnDeliveryStream internal constructor(
       override fun bloomFilterColumns(bloomFilterColumns: List<String>) {
         cdkBuilder.bloomFilterColumns(bloomFilterColumns)
       }
+
+      override fun bloomFilterColumns(vararg bloomFilterColumns: String): Unit =
+          bloomFilterColumns(bloomFilterColumns.toList())
 
       override
           fun bloomFilterFalsePositiveProbability(bloomFilterFalsePositiveProbability: Number) {
@@ -1911,7 +1922,11 @@ public open class CfnDeliveryStream internal constructor(
 
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1928,9 +1943,14 @@ public open class CfnDeliveryStream internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       public fun build():
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.VpcConfigurationProperty
@@ -1943,10 +1963,9 @@ public open class CfnDeliveryStream internal constructor(
     ) : VpcConfigurationProperty {
       override fun roleArn(): String = unwrap(this).getRoleArn()
 
-      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
-          emptyList()
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
 
-      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
     }
 
     public companion object {
@@ -2029,6 +2048,8 @@ public open class CfnDeliveryStream internal constructor(
 
       public fun parameters(parameters: List<Any>)
 
+      public fun parameters(vararg parameters: Any)
+
       public fun type(type: String)
     }
 
@@ -2045,6 +2066,8 @@ public open class CfnDeliveryStream internal constructor(
       override fun parameters(parameters: List<Any>) {
         cdkBuilder.parameters(parameters)
       }
+
+      override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
 
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -3155,6 +3178,8 @@ public open class CfnDeliveryStream internal constructor(
 
       public fun commonAttributes(commonAttributes: List<Any>)
 
+      public fun commonAttributes(vararg commonAttributes: Any)
+
       public fun contentEncoding(contentEncoding: String)
     }
 
@@ -3171,6 +3196,9 @@ public open class CfnDeliveryStream internal constructor(
       override fun commonAttributes(commonAttributes: List<Any>) {
         cdkBuilder.commonAttributes(commonAttributes)
       }
+
+      override fun commonAttributes(vararg commonAttributes: Any): Unit =
+          commonAttributes(commonAttributes.toList())
 
       override fun contentEncoding(contentEncoding: String) {
         cdkBuilder.contentEncoding(contentEncoding)
@@ -4178,6 +4206,8 @@ public open class CfnDeliveryStream internal constructor(
 
     public interface Builder {
       public fun timestampFormats(timestampFormats: List<String>)
+
+      public fun timestampFormats(vararg timestampFormats: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4189,6 +4219,9 @@ public open class CfnDeliveryStream internal constructor(
       override fun timestampFormats(timestampFormats: List<String>) {
         cdkBuilder.timestampFormats(timestampFormats)
       }
+
+      override fun timestampFormats(vararg timestampFormats: String): Unit =
+          timestampFormats(timestampFormats.toList())
 
       public fun build():
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HiveJsonSerDeProperty =
@@ -4813,6 +4846,8 @@ public open class CfnDeliveryStream internal constructor(
       public fun processors(processors: IResolvable)
 
       public fun processors(processors: List<Any>)
+
+      public fun processors(vararg processors: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -4836,6 +4871,8 @@ public open class CfnDeliveryStream internal constructor(
       override fun processors(processors: List<Any>) {
         cdkBuilder.processors(processors)
       }
+
+      override fun processors(vararg processors: Any): Unit = processors(processors.toList())
 
       public fun build():
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ProcessingConfigurationProperty

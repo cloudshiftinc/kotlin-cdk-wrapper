@@ -39,6 +39,8 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
     unwrap(this).setExcludePaths(__idx_ac66f0)
   }
 
+  public open fun excludePaths(vararg __idx_ac66f0: Any): Unit = excludePaths(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -53,6 +55,8 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
     unwrap(this).setMatchPaths(__idx_ac66f0)
   }
 
+  public open fun matchPaths(vararg __idx_ac66f0: Any): Unit = matchPaths(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -62,16 +66,24 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun excludePaths(excludePaths: IResolvable)
 
     public fun excludePaths(excludePaths: List<Any>)
 
+    public fun excludePaths(vararg excludePaths: Any)
+
     public fun matchPaths(matchPaths: IResolvable)
 
     public fun matchPaths(matchPaths: List<Any>)
 
+    public fun matchPaths(vararg matchPaths: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -90,6 +102,8 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
       cdkBuilder.excludePaths(excludePaths)
     }
 
+    override fun excludePaths(vararg excludePaths: Any): Unit = excludePaths(excludePaths.toList())
+
     override fun matchPaths(matchPaths: IResolvable) {
       cdkBuilder.matchPaths(matchPaths.let(IResolvable::unwrap))
     }
@@ -98,9 +112,13 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
       cdkBuilder.matchPaths(matchPaths)
     }
 
+    override fun matchPaths(vararg matchPaths: Any): Unit = matchPaths(matchPaths.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope =
         cdkBuilder.build()
@@ -315,6 +333,8 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
       public fun throughResources(throughResources: IResolvable)
 
       public fun throughResources(throughResources: List<Any>)
+
+      public fun throughResources(vararg throughResources: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -356,6 +376,9 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
       override fun throughResources(throughResources: List<Any>) {
         cdkBuilder.throughResources(throughResources)
       }
+
+      override fun throughResources(vararg throughResources: Any): Unit =
+          throughResources(throughResources.toList())
 
       public fun build():
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.AccessScopePathRequestProperty
@@ -414,17 +437,31 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
     public interface Builder {
       public fun destinationAddresses(destinationAddresses: List<String>)
 
+      public fun destinationAddresses(vararg destinationAddresses: String)
+
       public fun destinationPorts(destinationPorts: List<String>)
+
+      public fun destinationPorts(vararg destinationPorts: String)
 
       public fun destinationPrefixLists(destinationPrefixLists: List<String>)
 
+      public fun destinationPrefixLists(vararg destinationPrefixLists: String)
+
       public fun protocols(protocols: List<String>)
+
+      public fun protocols(vararg protocols: String)
 
       public fun sourceAddresses(sourceAddresses: List<String>)
 
+      public fun sourceAddresses(vararg sourceAddresses: String)
+
       public fun sourcePorts(sourcePorts: List<String>)
 
+      public fun sourcePorts(vararg sourcePorts: String)
+
       public fun sourcePrefixLists(sourcePrefixLists: List<String>)
+
+      public fun sourcePrefixLists(vararg sourcePrefixLists: String)
     }
 
     private class BuilderImpl : Builder {
@@ -437,29 +474,48 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
         cdkBuilder.destinationAddresses(destinationAddresses)
       }
 
+      override fun destinationAddresses(vararg destinationAddresses: String): Unit =
+          destinationAddresses(destinationAddresses.toList())
+
       override fun destinationPorts(destinationPorts: List<String>) {
         cdkBuilder.destinationPorts(destinationPorts)
       }
+
+      override fun destinationPorts(vararg destinationPorts: String): Unit =
+          destinationPorts(destinationPorts.toList())
 
       override fun destinationPrefixLists(destinationPrefixLists: List<String>) {
         cdkBuilder.destinationPrefixLists(destinationPrefixLists)
       }
 
+      override fun destinationPrefixLists(vararg destinationPrefixLists: String): Unit =
+          destinationPrefixLists(destinationPrefixLists.toList())
+
       override fun protocols(protocols: List<String>) {
         cdkBuilder.protocols(protocols)
       }
+
+      override fun protocols(vararg protocols: String): Unit = protocols(protocols.toList())
 
       override fun sourceAddresses(sourceAddresses: List<String>) {
         cdkBuilder.sourceAddresses(sourceAddresses)
       }
 
+      override fun sourceAddresses(vararg sourceAddresses: String): Unit =
+          sourceAddresses(sourceAddresses.toList())
+
       override fun sourcePorts(sourcePorts: List<String>) {
         cdkBuilder.sourcePorts(sourcePorts)
       }
 
+      override fun sourcePorts(vararg sourcePorts: String): Unit = sourcePorts(sourcePorts.toList())
+
       override fun sourcePrefixLists(sourcePrefixLists: List<String>) {
         cdkBuilder.sourcePrefixLists(sourcePrefixLists)
       }
+
+      override fun sourcePrefixLists(vararg sourcePrefixLists: String): Unit =
+          sourcePrefixLists(sourcePrefixLists.toList())
 
       public fun build():
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PacketHeaderStatementRequestProperty
@@ -519,7 +575,11 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
     public interface Builder {
       public fun resourceTypes(resourceTypes: List<String>)
 
+      public fun resourceTypes(vararg resourceTypes: String)
+
       public fun resources(resources: List<String>)
+
+      public fun resources(vararg resources: String)
     }
 
     private class BuilderImpl : Builder {
@@ -532,9 +592,14 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
         cdkBuilder.resourceTypes(resourceTypes)
       }
 
+      override fun resourceTypes(vararg resourceTypes: String): Unit =
+          resourceTypes(resourceTypes.toList())
+
       override fun resources(resources: List<String>) {
         cdkBuilder.resources(resources)
       }
+
+      override fun resources(vararg resources: String): Unit = resources(resources.toList())
 
       public fun build():
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ResourceStatementRequestProperty

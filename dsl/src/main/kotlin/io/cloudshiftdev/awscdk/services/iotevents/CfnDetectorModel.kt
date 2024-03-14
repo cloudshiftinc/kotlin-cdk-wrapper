@@ -80,6 +80,8 @@ public open class CfnDetectorModel internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun detectorModelDefinition(detectorModelDefinition: IResolvable)
 
@@ -101,6 +103,8 @@ public open class CfnDetectorModel internal constructor(
     public fun roleArn(roleArn: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -147,6 +151,8 @@ public open class CfnDetectorModel internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.iotevents.CfnDetectorModel =
         cdkBuilder.build()
@@ -360,6 +366,8 @@ public open class CfnDetectorModel internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun condition(condition: String)
 
       public fun eventName(eventName: String)
@@ -380,6 +388,8 @@ public open class CfnDetectorModel internal constructor(
       override fun actions(actions: List<Any>) {
         cdkBuilder.actions(actions)
       }
+
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
 
       override fun condition(condition: String) {
         cdkBuilder.condition(condition)
@@ -514,9 +524,13 @@ public open class CfnDetectorModel internal constructor(
 
       public fun events(events: List<Any>)
 
+      public fun events(vararg events: Any)
+
       public fun transitionEvents(transitionEvents: IResolvable)
 
       public fun transitionEvents(transitionEvents: List<Any>)
+
+      public fun transitionEvents(vararg transitionEvents: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -532,6 +546,8 @@ public open class CfnDetectorModel internal constructor(
         cdkBuilder.events(events)
       }
 
+      override fun events(vararg events: Any): Unit = events(events.toList())
+
       override fun transitionEvents(transitionEvents: IResolvable) {
         cdkBuilder.transitionEvents(transitionEvents.let(IResolvable::unwrap))
       }
@@ -539,6 +555,9 @@ public open class CfnDetectorModel internal constructor(
       override fun transitionEvents(transitionEvents: List<Any>) {
         cdkBuilder.transitionEvents(transitionEvents)
       }
+
+      override fun transitionEvents(vararg transitionEvents: Any): Unit =
+          transitionEvents(transitionEvents.toList())
 
       public fun build(): software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnInputProperty
           = cdkBuilder.build()
@@ -585,6 +604,8 @@ public open class CfnDetectorModel internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun condition(condition: String)
 
       public fun eventName(eventName: String)
@@ -602,6 +623,8 @@ public open class CfnDetectorModel internal constructor(
       override fun actions(actions: List<Any>) {
         cdkBuilder.actions(actions)
       }
+
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
 
       override fun condition(condition: String) {
         cdkBuilder.condition(condition)
@@ -1139,6 +1162,8 @@ public open class CfnDetectorModel internal constructor(
       public fun events(events: IResolvable)
 
       public fun events(events: List<Any>)
+
+      public fun events(vararg events: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1153,6 +1178,8 @@ public open class CfnDetectorModel internal constructor(
       override fun events(events: List<Any>) {
         cdkBuilder.events(events)
       }
+
+      override fun events(vararg events: Any): Unit = events(events.toList())
 
       public fun build(): software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnExitProperty
           = cdkBuilder.build()
@@ -2010,6 +2037,8 @@ public open class CfnDetectorModel internal constructor(
       public fun events(events: IResolvable)
 
       public fun events(events: List<Any>)
+
+      public fun events(vararg events: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2024,6 +2053,8 @@ public open class CfnDetectorModel internal constructor(
       override fun events(events: List<Any>) {
         cdkBuilder.events(events)
       }
+
+      override fun events(vararg events: Any): Unit = events(events.toList())
 
       public fun build(): software.amazon.awscdk.services.iotevents.CfnDetectorModel.OnEnterProperty
           = cdkBuilder.build()
@@ -2227,6 +2258,8 @@ public open class CfnDetectorModel internal constructor(
       public fun states(states: IResolvable)
 
       public fun states(states: List<Any>)
+
+      public fun states(vararg states: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2246,6 +2279,8 @@ public open class CfnDetectorModel internal constructor(
       override fun states(states: List<Any>) {
         cdkBuilder.states(states)
       }
+
+      override fun states(vararg states: Any): Unit = states(states.toList())
 
       public fun build():
           software.amazon.awscdk.services.iotevents.CfnDetectorModel.DetectorModelDefinitionProperty

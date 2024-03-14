@@ -42,6 +42,8 @@ public open class CfnContactList internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun topics(): Any? = unwrap(this).getTopics()
 
   public open fun topics(`value`: IResolvable) {
@@ -52,6 +54,8 @@ public open class CfnContactList internal constructor(
     unwrap(this).setTopics(__idx_ac66f0)
   }
 
+  public open fun topics(vararg __idx_ac66f0: Any): Unit = topics(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun contactListName(contactListName: String)
 
@@ -59,9 +63,13 @@ public open class CfnContactList internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun topics(topics: IResolvable)
 
     public fun topics(topics: List<Any>)
+
+    public fun topics(vararg topics: Any)
   }
 
   private class BuilderImpl(
@@ -83,6 +91,8 @@ public open class CfnContactList internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun topics(topics: IResolvable) {
       cdkBuilder.topics(topics.let(IResolvable::unwrap))
     }
@@ -90,6 +100,8 @@ public open class CfnContactList internal constructor(
     override fun topics(topics: List<Any>) {
       cdkBuilder.topics(topics)
     }
+
+    override fun topics(vararg topics: Any): Unit = topics(topics.toList())
 
     public fun build(): software.amazon.awscdk.services.ses.CfnContactList = cdkBuilder.build()
   }

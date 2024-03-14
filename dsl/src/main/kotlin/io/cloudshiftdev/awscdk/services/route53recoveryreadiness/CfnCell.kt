@@ -18,7 +18,7 @@ public open class CfnCell internal constructor(
   public open fun attrCellArn(): String = unwrap(this).getAttrCellArn()
 
   public open fun attrParentReadinessScopes(): List<String> =
-      unwrap(this).getAttrParentReadinessScopes() ?: emptyList()
+      unwrap(this).getAttrParentReadinessScopes()
 
   public open fun cellName(): String? = unwrap(this).getCellName()
 
@@ -31,6 +31,8 @@ public open class CfnCell internal constructor(
   public open fun cells(`value`: List<String>) {
     unwrap(this).setCells(`value`)
   }
+
+  public open fun cells(vararg `value`: String): Unit = cells(`value`.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -45,12 +47,18 @@ public open class CfnCell internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun cellName(cellName: String)
 
     public fun cells(cells: List<String>)
 
+    public fun cells(vararg cells: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -68,9 +76,13 @@ public open class CfnCell internal constructor(
       cdkBuilder.cells(cells)
     }
 
+    override fun cells(vararg cells: String): Unit = cells(cells.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.route53recoveryreadiness.CfnCell =
         cdkBuilder.build()

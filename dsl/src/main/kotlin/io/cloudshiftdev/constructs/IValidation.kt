@@ -9,7 +9,7 @@ public interface IValidation {
   private class Wrapper internal constructor(
     internal val cdkObject: software.constructs.IValidation,
   ) : IValidation {
-    override fun validate(): List<String> = unwrap(this).validate() ?: emptyList()
+    override fun validate(): List<String> = unwrap(this).validate()
   }
 
   public companion object {

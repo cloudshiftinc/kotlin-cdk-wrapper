@@ -18,11 +18,13 @@ public open class CfnStackSetConstraint internal constructor(
     unwrap(this).setAcceptLanguage(`value`)
   }
 
-  public open fun accountList(): List<String> = unwrap(this).getAccountList() ?: emptyList()
+  public open fun accountList(): List<String> = unwrap(this).getAccountList()
 
   public open fun accountList(`value`: List<String>) {
     unwrap(this).setAccountList(`value`)
   }
+
+  public open fun accountList(vararg `value`: String): Unit = accountList(`value`.toList())
 
   public open fun adminRole(): String = unwrap(this).getAdminRole()
 
@@ -60,11 +62,13 @@ public open class CfnStackSetConstraint internal constructor(
     unwrap(this).setProductId(`value`)
   }
 
-  public open fun regionList(): List<String> = unwrap(this).getRegionList() ?: emptyList()
+  public open fun regionList(): List<String> = unwrap(this).getRegionList()
 
   public open fun regionList(`value`: List<String>) {
     unwrap(this).setRegionList(`value`)
   }
+
+  public open fun regionList(vararg `value`: String): Unit = regionList(`value`.toList())
 
   public open fun stackInstanceControl(): String = unwrap(this).getStackInstanceControl()
 
@@ -77,6 +81,8 @@ public open class CfnStackSetConstraint internal constructor(
 
     public fun accountList(accountList: List<String>)
 
+    public fun accountList(vararg accountList: String)
+
     public fun adminRole(adminRole: String)
 
     public fun description(description: String)
@@ -88,6 +94,8 @@ public open class CfnStackSetConstraint internal constructor(
     public fun productId(productId: String)
 
     public fun regionList(regionList: List<String>)
+
+    public fun regionList(vararg regionList: String)
 
     public fun stackInstanceControl(stackInstanceControl: String)
   }
@@ -108,6 +116,8 @@ public open class CfnStackSetConstraint internal constructor(
     override fun accountList(accountList: List<String>) {
       cdkBuilder.accountList(accountList)
     }
+
+    override fun accountList(vararg accountList: String): Unit = accountList(accountList.toList())
 
     override fun adminRole(adminRole: String) {
       cdkBuilder.adminRole(adminRole)
@@ -132,6 +142,8 @@ public open class CfnStackSetConstraint internal constructor(
     override fun regionList(regionList: List<String>) {
       cdkBuilder.regionList(regionList)
     }
+
+    override fun regionList(vararg regionList: String): Unit = regionList(regionList.toList())
 
     override fun stackInstanceControl(stackInstanceControl: String) {
       cdkBuilder.stackInstanceControl(stackInstanceControl)

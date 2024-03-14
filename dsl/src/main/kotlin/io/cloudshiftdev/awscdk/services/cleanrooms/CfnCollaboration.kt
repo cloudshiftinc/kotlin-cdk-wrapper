@@ -35,11 +35,13 @@ public open class CfnCollaboration internal constructor(
   }
 
   public open fun creatorMemberAbilities(): List<String> = unwrap(this).getCreatorMemberAbilities()
-      ?: emptyList()
 
   public open fun creatorMemberAbilities(`value`: List<String>) {
     unwrap(this).setCreatorMemberAbilities(`value`)
   }
+
+  public open fun creatorMemberAbilities(vararg `value`: String): Unit =
+      creatorMemberAbilities(`value`.toList())
 
   public open fun creatorPaymentConfiguration(): Any? =
       unwrap(this).getCreatorPaymentConfiguration()
@@ -94,6 +96,8 @@ public open class CfnCollaboration internal constructor(
     unwrap(this).setMembers(__idx_ac66f0)
   }
 
+  public open fun members(vararg __idx_ac66f0: Any): Unit = members(__idx_ac66f0.toList())
+
   public open fun name(): String = unwrap(this).getName()
 
   public open fun name(`value`: String) {
@@ -112,10 +116,14 @@ public open class CfnCollaboration internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun creatorDisplayName(creatorDisplayName: String)
 
     public fun creatorMemberAbilities(creatorMemberAbilities: List<String>)
+
+    public fun creatorMemberAbilities(vararg creatorMemberAbilities: String)
 
     public fun creatorPaymentConfiguration(creatorPaymentConfiguration: IResolvable)
 
@@ -142,11 +150,15 @@ public open class CfnCollaboration internal constructor(
 
     public fun members(members: List<Any>)
 
+    public fun members(vararg members: Any)
+
     public fun name(name: String)
 
     public fun queryLogStatus(queryLogStatus: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -163,6 +175,9 @@ public open class CfnCollaboration internal constructor(
     override fun creatorMemberAbilities(creatorMemberAbilities: List<String>) {
       cdkBuilder.creatorMemberAbilities(creatorMemberAbilities)
     }
+
+    override fun creatorMemberAbilities(vararg creatorMemberAbilities: String): Unit =
+        creatorMemberAbilities(creatorMemberAbilities.toList())
 
     override fun creatorPaymentConfiguration(creatorPaymentConfiguration: IResolvable) {
       cdkBuilder.creatorPaymentConfiguration(creatorPaymentConfiguration.let(IResolvable::unwrap))
@@ -206,6 +221,8 @@ public open class CfnCollaboration internal constructor(
       cdkBuilder.members(members)
     }
 
+    override fun members(vararg members: Any): Unit = members(members.toList())
+
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -217,6 +234,8 @@ public open class CfnCollaboration internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.cleanrooms.CfnCollaboration =
         cdkBuilder.build()
@@ -323,6 +342,8 @@ public open class CfnCollaboration internal constructor(
 
       public fun memberAbilities(memberAbilities: List<String>)
 
+      public fun memberAbilities(vararg memberAbilities: String)
+
       public fun paymentConfiguration(paymentConfiguration: IResolvable)
 
       public fun paymentConfiguration(paymentConfiguration: PaymentConfigurationProperty)
@@ -351,6 +372,9 @@ public open class CfnCollaboration internal constructor(
         cdkBuilder.memberAbilities(memberAbilities)
       }
 
+      override fun memberAbilities(vararg memberAbilities: String): Unit =
+          memberAbilities(memberAbilities.toList())
+
       override fun paymentConfiguration(paymentConfiguration: IResolvable) {
         cdkBuilder.paymentConfiguration(paymentConfiguration.let(IResolvable::unwrap))
       }
@@ -378,8 +402,7 @@ public open class CfnCollaboration internal constructor(
 
       override fun displayName(): String = unwrap(this).getDisplayName()
 
-      override fun memberAbilities(): List<String> = unwrap(this).getMemberAbilities() ?:
-          emptyList()
+      override fun memberAbilities(): List<String> = unwrap(this).getMemberAbilities()
 
       override fun paymentConfiguration(): Any? = unwrap(this).getPaymentConfiguration()
     }

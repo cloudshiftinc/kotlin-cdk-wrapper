@@ -50,6 +50,9 @@ public open class CfnInstanceConnectEndpoint internal constructor(
     unwrap(this).setSecurityGroupIds(`value`)
   }
 
+  public open fun securityGroupIds(vararg `value`: String): Unit =
+      securityGroupIds(`value`.toList())
+
   public open fun subnetId(): String = unwrap(this).getSubnetId()
 
   public open fun subnetId(`value`: String) {
@@ -62,6 +65,8 @@ public open class CfnInstanceConnectEndpoint internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun clientToken(clientToken: String)
 
@@ -71,9 +76,13 @@ public open class CfnInstanceConnectEndpoint internal constructor(
 
     public fun securityGroupIds(securityGroupIds: List<String>)
 
+    public fun securityGroupIds(vararg securityGroupIds: String)
+
     public fun subnetId(subnetId: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -99,6 +108,9 @@ public open class CfnInstanceConnectEndpoint internal constructor(
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
+
     override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }
@@ -106,6 +118,8 @@ public open class CfnInstanceConnectEndpoint internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.CfnInstanceConnectEndpoint =
         cdkBuilder.build()

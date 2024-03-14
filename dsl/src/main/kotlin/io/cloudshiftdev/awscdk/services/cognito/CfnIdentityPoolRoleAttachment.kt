@@ -113,6 +113,8 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
       public fun rules(rules: IResolvable)
 
       public fun rules(rules: List<Any>)
+
+      public fun rules(vararg rules: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -128,6 +130,8 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
       override fun rules(rules: List<Any>) {
         cdkBuilder.rules(rules)
       }
+
+      override fun rules(vararg rules: Any): Unit = rules(rules.toList())
 
       public fun build():
           software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty

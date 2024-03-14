@@ -26,6 +26,8 @@ public interface OnImageScanCompletedOptions : OnEventOptions {
 
     public fun imageTags(imageTags: List<String>)
 
+    public fun imageTags(vararg imageTags: String)
+
     public fun ruleName(ruleName: String)
 
     public fun target(target: IRuleTarget)
@@ -55,6 +57,8 @@ public interface OnImageScanCompletedOptions : OnEventOptions {
     override fun imageTags(imageTags: List<String>) {
       cdkBuilder.imageTags(imageTags)
     }
+
+    override fun imageTags(vararg imageTags: String): Unit = imageTags(imageTags.toList())
 
     override fun ruleName(ruleName: String) {
       cdkBuilder.ruleName(ruleName)

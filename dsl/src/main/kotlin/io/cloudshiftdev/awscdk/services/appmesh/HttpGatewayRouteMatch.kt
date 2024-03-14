@@ -27,6 +27,8 @@ public interface HttpGatewayRouteMatch {
   public interface Builder {
     public fun headers(headers: List<HeaderMatch>)
 
+    public fun headers(vararg headers: HeaderMatch)
+
     public fun hostname(hostname: GatewayRouteHostnameMatch)
 
     public fun method(method: HttpRouteMethod)
@@ -36,6 +38,8 @@ public interface HttpGatewayRouteMatch {
     public fun port(port: Number)
 
     public fun queryParameters(queryParameters: List<QueryParameterMatch>)
+
+    public fun queryParameters(vararg queryParameters: QueryParameterMatch)
 
     public fun rewriteRequestHostname(rewriteRequestHostname: Boolean)
   }
@@ -47,6 +51,8 @@ public interface HttpGatewayRouteMatch {
     override fun headers(headers: List<HeaderMatch>) {
       cdkBuilder.headers(headers.map(HeaderMatch::unwrap))
     }
+
+    override fun headers(vararg headers: HeaderMatch): Unit = headers(headers.toList())
 
     override fun hostname(hostname: GatewayRouteHostnameMatch) {
       cdkBuilder.hostname(hostname.let(GatewayRouteHostnameMatch::unwrap))
@@ -67,6 +73,9 @@ public interface HttpGatewayRouteMatch {
     override fun queryParameters(queryParameters: List<QueryParameterMatch>) {
       cdkBuilder.queryParameters(queryParameters.map(QueryParameterMatch::unwrap))
     }
+
+    override fun queryParameters(vararg queryParameters: QueryParameterMatch): Unit =
+        queryParameters(queryParameters.toList())
 
     override fun rewriteRequestHostname(rewriteRequestHostname: Boolean) {
       cdkBuilder.rewriteRequestHostname(rewriteRequestHostname)

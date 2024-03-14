@@ -87,6 +87,8 @@ public open class CfnDataRepositoryAssociation internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun batchImportMetaDataOnCreate(batchImportMetaDataOnCreate: Boolean)
 
@@ -109,6 +111,8 @@ public open class CfnDataRepositoryAssociation internal constructor(
     public fun s3(s3: S3Property.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -157,6 +161,8 @@ public open class CfnDataRepositoryAssociation internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation =
         cdkBuilder.build()
@@ -276,6 +282,8 @@ public open class CfnDataRepositoryAssociation internal constructor(
 
     public interface Builder {
       public fun events(events: List<String>)
+
+      public fun events(vararg events: String)
     }
 
     private class BuilderImpl : Builder {
@@ -288,6 +296,8 @@ public open class CfnDataRepositoryAssociation internal constructor(
         cdkBuilder.events(events)
       }
 
+      override fun events(vararg events: String): Unit = events(events.toList())
+
       public fun build():
           software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty
           = cdkBuilder.build()
@@ -297,7 +307,7 @@ public open class CfnDataRepositoryAssociation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoImportPolicyProperty,
     ) : AutoImportPolicyProperty {
-      override fun events(): List<String> = unwrap(this).getEvents() ?: emptyList()
+      override fun events(): List<String> = unwrap(this).getEvents()
     }
 
     public companion object {
@@ -325,6 +335,8 @@ public open class CfnDataRepositoryAssociation internal constructor(
 
     public interface Builder {
       public fun events(events: List<String>)
+
+      public fun events(vararg events: String)
     }
 
     private class BuilderImpl : Builder {
@@ -337,6 +349,8 @@ public open class CfnDataRepositoryAssociation internal constructor(
         cdkBuilder.events(events)
       }
 
+      override fun events(vararg events: String): Unit = events(events.toList())
+
       public fun build():
           software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty
           = cdkBuilder.build()
@@ -346,7 +360,7 @@ public open class CfnDataRepositoryAssociation internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation.AutoExportPolicyProperty,
     ) : AutoExportPolicyProperty {
-      override fun events(): List<String> = unwrap(this).getEvents() ?: emptyList()
+      override fun events(): List<String> = unwrap(this).getEvents()
     }
 
     public companion object {

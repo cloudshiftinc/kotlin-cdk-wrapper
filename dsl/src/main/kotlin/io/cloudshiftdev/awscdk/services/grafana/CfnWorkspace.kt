@@ -42,11 +42,14 @@ public open class CfnWorkspace internal constructor(
   public open fun attrStatus(): String = unwrap(this).getAttrStatus()
 
   public open fun authenticationProviders(): List<String> =
-      unwrap(this).getAuthenticationProviders() ?: emptyList()
+      unwrap(this).getAuthenticationProviders()
 
   public open fun authenticationProviders(`value`: List<String>) {
     unwrap(this).setAuthenticationProviders(`value`)
   }
+
+  public open fun authenticationProviders(vararg `value`: String): Unit =
+      authenticationProviders(`value`.toList())
 
   public open fun clientToken(): String? = unwrap(this).getClientToken()
 
@@ -59,6 +62,8 @@ public open class CfnWorkspace internal constructor(
   public open fun dataSources(`value`: List<String>) {
     unwrap(this).setDataSources(`value`)
   }
+
+  public open fun dataSources(vararg `value`: String): Unit = dataSources(`value`.toList())
 
   public open fun description(): String? = unwrap(this).getDescription()
 
@@ -104,6 +109,9 @@ public open class CfnWorkspace internal constructor(
     unwrap(this).setNotificationDestinations(`value`)
   }
 
+  public open fun notificationDestinations(vararg `value`: String): Unit =
+      notificationDestinations(`value`.toList())
+
   public open fun organizationRoleName(): String? = unwrap(this).getOrganizationRoleName()
 
   public open fun organizationRoleName(`value`: String) {
@@ -116,6 +124,9 @@ public open class CfnWorkspace internal constructor(
   public open fun organizationalUnits(`value`: List<String>) {
     unwrap(this).setOrganizationalUnits(`value`)
   }
+
+  public open fun organizationalUnits(vararg `value`: String): Unit =
+      organizationalUnits(`value`.toList())
 
   public open fun permissionType(): String = unwrap(this).getPermissionType()
 
@@ -180,9 +191,13 @@ public open class CfnWorkspace internal constructor(
 
     public fun authenticationProviders(authenticationProviders: List<String>)
 
+    public fun authenticationProviders(vararg authenticationProviders: String)
+
     public fun clientToken(clientToken: String)
 
     public fun dataSources(dataSources: List<String>)
+
+    public fun dataSources(vararg dataSources: String)
 
     public fun description(description: String)
 
@@ -201,9 +216,13 @@ public open class CfnWorkspace internal constructor(
 
     public fun notificationDestinations(notificationDestinations: List<String>)
 
+    public fun notificationDestinations(vararg notificationDestinations: String)
+
     public fun organizationRoleName(organizationRoleName: String)
 
     public fun organizationalUnits(organizationalUnits: List<String>)
+
+    public fun organizationalUnits(vararg organizationalUnits: String)
 
     public fun permissionType(permissionType: String)
 
@@ -247,6 +266,9 @@ public open class CfnWorkspace internal constructor(
       cdkBuilder.authenticationProviders(authenticationProviders)
     }
 
+    override fun authenticationProviders(vararg authenticationProviders: String): Unit =
+        authenticationProviders(authenticationProviders.toList())
+
     override fun clientToken(clientToken: String) {
       cdkBuilder.clientToken(clientToken)
     }
@@ -254,6 +276,8 @@ public open class CfnWorkspace internal constructor(
     override fun dataSources(dataSources: List<String>) {
       cdkBuilder.dataSources(dataSources)
     }
+
+    override fun dataSources(vararg dataSources: String): Unit = dataSources(dataSources.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -285,6 +309,9 @@ public open class CfnWorkspace internal constructor(
       cdkBuilder.notificationDestinations(notificationDestinations)
     }
 
+    override fun notificationDestinations(vararg notificationDestinations: String): Unit =
+        notificationDestinations(notificationDestinations.toList())
+
     override fun organizationRoleName(organizationRoleName: String) {
       cdkBuilder.organizationRoleName(organizationRoleName)
     }
@@ -292,6 +319,9 @@ public open class CfnWorkspace internal constructor(
     override fun organizationalUnits(organizationalUnits: List<String>) {
       cdkBuilder.organizationalUnits(organizationalUnits)
     }
+
+    override fun organizationalUnits(vararg organizationalUnits: String): Unit =
+        organizationalUnits(organizationalUnits.toList())
 
     override fun permissionType(permissionType: String) {
       cdkBuilder.permissionType(permissionType)
@@ -533,6 +563,8 @@ public open class CfnWorkspace internal constructor(
     public interface Builder {
       public fun allowedOrganizations(allowedOrganizations: List<String>)
 
+      public fun allowedOrganizations(vararg allowedOrganizations: String)
+
       public fun assertionAttributes(assertionAttributes: IResolvable)
 
       public fun assertionAttributes(assertionAttributes: AssertionAttributesProperty)
@@ -569,6 +601,9 @@ public open class CfnWorkspace internal constructor(
       override fun allowedOrganizations(allowedOrganizations: List<String>) {
         cdkBuilder.allowedOrganizations(allowedOrganizations)
       }
+
+      override fun allowedOrganizations(vararg allowedOrganizations: String): Unit =
+          allowedOrganizations(allowedOrganizations.toList())
 
       override fun assertionAttributes(assertionAttributes: IResolvable) {
         cdkBuilder.assertionAttributes(assertionAttributes.let(IResolvable::unwrap))
@@ -663,7 +698,11 @@ public open class CfnWorkspace internal constructor(
     public interface Builder {
       public fun prefixListIds(prefixListIds: List<String>)
 
+      public fun prefixListIds(vararg prefixListIds: String)
+
       public fun vpceIds(vpceIds: List<String>)
+
+      public fun vpceIds(vararg vpceIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -676,9 +715,14 @@ public open class CfnWorkspace internal constructor(
         cdkBuilder.prefixListIds(prefixListIds)
       }
 
+      override fun prefixListIds(vararg prefixListIds: String): Unit =
+          prefixListIds(prefixListIds.toList())
+
       override fun vpceIds(vpceIds: List<String>) {
         cdkBuilder.vpceIds(vpceIds)
       }
+
+      override fun vpceIds(vararg vpceIds: String): Unit = vpceIds(vpceIds.toList())
 
       public fun build():
           software.amazon.awscdk.services.grafana.CfnWorkspace.NetworkAccessControlProperty =
@@ -722,7 +766,11 @@ public open class CfnWorkspace internal constructor(
     public interface Builder {
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -734,9 +782,14 @@ public open class CfnWorkspace internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       public fun build():
           software.amazon.awscdk.services.grafana.CfnWorkspace.VpcConfigurationProperty =
@@ -747,10 +800,9 @@ public open class CfnWorkspace internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.grafana.CfnWorkspace.VpcConfigurationProperty,
     ) : VpcConfigurationProperty {
-      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
-          emptyList()
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
 
-      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
     }
 
     public companion object {
@@ -781,7 +833,11 @@ public open class CfnWorkspace internal constructor(
     public interface Builder {
       public fun admin(admin: List<String>)
 
+      public fun admin(vararg admin: String)
+
       public fun editor(editor: List<String>)
+
+      public fun editor(vararg editor: String)
     }
 
     private class BuilderImpl : Builder {
@@ -793,9 +849,13 @@ public open class CfnWorkspace internal constructor(
         cdkBuilder.admin(admin)
       }
 
+      override fun admin(vararg admin: String): Unit = admin(admin.toList())
+
       override fun editor(editor: List<String>) {
         cdkBuilder.editor(editor)
       }
+
+      override fun editor(vararg editor: String): Unit = editor(editor.toList())
 
       public fun build(): software.amazon.awscdk.services.grafana.CfnWorkspace.RoleValuesProperty =
           cdkBuilder.build()

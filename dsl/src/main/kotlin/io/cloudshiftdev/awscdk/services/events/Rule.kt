@@ -58,6 +58,8 @@ public open class Rule internal constructor(
     public fun schedule(schedule: Schedule)
 
     public fun targets(targets: List<IRuleTarget>)
+
+    public fun targets(vararg targets: IRuleTarget)
   }
 
   private class BuilderImpl(
@@ -103,6 +105,8 @@ public open class Rule internal constructor(
     override fun targets(targets: List<IRuleTarget>) {
       cdkBuilder.targets(targets.map(IRuleTarget::unwrap))
     }
+
+    override fun targets(vararg targets: IRuleTarget): Unit = targets(targets.toList())
 
     public fun build(): software.amazon.awscdk.services.events.Rule = cdkBuilder.build()
   }

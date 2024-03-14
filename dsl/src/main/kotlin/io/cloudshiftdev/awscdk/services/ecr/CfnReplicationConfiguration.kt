@@ -162,6 +162,8 @@ public open class CfnReplicationConfiguration internal constructor(
       public fun rules(rules: IResolvable)
 
       public fun rules(rules: List<Any>)
+
+      public fun rules(vararg rules: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -177,6 +179,8 @@ public open class CfnReplicationConfiguration internal constructor(
       override fun rules(rules: List<Any>) {
         cdkBuilder.rules(rules)
       }
+
+      override fun rules(vararg rules: Any): Unit = rules(rules.toList())
 
       public fun build():
           software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationConfigurationProperty
@@ -220,9 +224,13 @@ public open class CfnReplicationConfiguration internal constructor(
 
       public fun destinations(destinations: List<Any>)
 
+      public fun destinations(vararg destinations: Any)
+
       public fun repositoryFilters(repositoryFilters: IResolvable)
 
       public fun repositoryFilters(repositoryFilters: List<Any>)
+
+      public fun repositoryFilters(vararg repositoryFilters: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -239,6 +247,9 @@ public open class CfnReplicationConfiguration internal constructor(
         cdkBuilder.destinations(destinations)
       }
 
+      override fun destinations(vararg destinations: Any): Unit =
+          destinations(destinations.toList())
+
       override fun repositoryFilters(repositoryFilters: IResolvable) {
         cdkBuilder.repositoryFilters(repositoryFilters.let(IResolvable::unwrap))
       }
@@ -246,6 +257,9 @@ public open class CfnReplicationConfiguration internal constructor(
       override fun repositoryFilters(repositoryFilters: List<Any>) {
         cdkBuilder.repositoryFilters(repositoryFilters)
       }
+
+      override fun repositoryFilters(vararg repositoryFilters: Any): Unit =
+          repositoryFilters(repositoryFilters.toList())
 
       public fun build():
           software.amazon.awscdk.services.ecr.CfnReplicationConfiguration.ReplicationRuleProperty =

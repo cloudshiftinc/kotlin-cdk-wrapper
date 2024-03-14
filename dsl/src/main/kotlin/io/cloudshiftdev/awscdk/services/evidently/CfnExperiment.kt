@@ -43,6 +43,8 @@ public open class CfnExperiment internal constructor(
     unwrap(this).setMetricGoals(__idx_ac66f0)
   }
 
+  public open fun metricGoals(vararg __idx_ac66f0: Any): Unit = metricGoals(__idx_ac66f0.toList())
+
   public open fun name(): String = unwrap(this).getName()
 
   public open fun name(`value`: String) {
@@ -122,6 +124,8 @@ public open class CfnExperiment internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun treatments(): Any = unwrap(this).getTreatments()
 
   public open fun treatments(`value`: IResolvable) {
@@ -132,12 +136,16 @@ public open class CfnExperiment internal constructor(
     unwrap(this).setTreatments(__idx_ac66f0)
   }
 
+  public open fun treatments(vararg __idx_ac66f0: Any): Unit = treatments(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun description(description: String)
 
     public fun metricGoals(metricGoals: IResolvable)
 
     public fun metricGoals(metricGoals: List<Any>)
+
+    public fun metricGoals(vararg metricGoals: Any)
 
     public fun name(name: String)
 
@@ -171,9 +179,13 @@ public open class CfnExperiment internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun treatments(treatments: IResolvable)
 
     public fun treatments(treatments: List<Any>)
+
+    public fun treatments(vararg treatments: Any)
   }
 
   private class BuilderImpl(
@@ -194,6 +206,8 @@ public open class CfnExperiment internal constructor(
     override fun metricGoals(metricGoals: List<Any>) {
       cdkBuilder.metricGoals(metricGoals)
     }
+
+    override fun metricGoals(vararg metricGoals: Any): Unit = metricGoals(metricGoals.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -253,6 +267,8 @@ public open class CfnExperiment internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun treatments(treatments: IResolvable) {
       cdkBuilder.treatments(treatments.let(IResolvable::unwrap))
     }
@@ -260,6 +276,8 @@ public open class CfnExperiment internal constructor(
     override fun treatments(treatments: List<Any>) {
       cdkBuilder.treatments(treatments)
     }
+
+    override fun treatments(vararg treatments: Any): Unit = treatments(treatments.toList())
 
     public fun build(): software.amazon.awscdk.services.evidently.CfnExperiment = cdkBuilder.build()
   }
@@ -610,6 +628,8 @@ public open class CfnExperiment internal constructor(
       public fun treatmentWeights(treatmentWeights: IResolvable)
 
       public fun treatmentWeights(treatmentWeights: List<Any>)
+
+      public fun treatmentWeights(vararg treatmentWeights: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -629,6 +649,9 @@ public open class CfnExperiment internal constructor(
       override fun treatmentWeights(treatmentWeights: List<Any>) {
         cdkBuilder.treatmentWeights(treatmentWeights)
       }
+
+      override fun treatmentWeights(vararg treatmentWeights: Any): Unit =
+          treatmentWeights(treatmentWeights.toList())
 
       public fun build():
           software.amazon.awscdk.services.evidently.CfnExperiment.OnlineAbConfigObjectProperty =

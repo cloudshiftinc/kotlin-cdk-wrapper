@@ -16,11 +16,14 @@ public open class CfnCertificateProvider internal constructor(
   private val cdkObject: software.amazon.awscdk.services.iot.CfnCertificateProvider,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public open fun accountDefaultForOperations(): List<String> =
-      unwrap(this).getAccountDefaultForOperations() ?: emptyList()
+      unwrap(this).getAccountDefaultForOperations()
 
   public open fun accountDefaultForOperations(`value`: List<String>) {
     unwrap(this).setAccountDefaultForOperations(`value`)
   }
+
+  public open fun accountDefaultForOperations(vararg `value`: String): Unit =
+      accountDefaultForOperations(`value`.toList())
 
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
@@ -49,14 +52,20 @@ public open class CfnCertificateProvider internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun accountDefaultForOperations(accountDefaultForOperations: List<String>)
+
+    public fun accountDefaultForOperations(vararg accountDefaultForOperations: String)
 
     public fun certificateProviderName(certificateProviderName: String)
 
     public fun lambdaFunctionArn(lambdaFunctionArn: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -70,6 +79,9 @@ public open class CfnCertificateProvider internal constructor(
       cdkBuilder.accountDefaultForOperations(accountDefaultForOperations)
     }
 
+    override fun accountDefaultForOperations(vararg accountDefaultForOperations: String): Unit =
+        accountDefaultForOperations(accountDefaultForOperations.toList())
+
     override fun certificateProviderName(certificateProviderName: String) {
       cdkBuilder.certificateProviderName(certificateProviderName)
     }
@@ -81,6 +93,8 @@ public open class CfnCertificateProvider internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.iot.CfnCertificateProvider =
         cdkBuilder.build()

@@ -23,6 +23,8 @@ public interface SystemErrorsForOperationsMetricOptions : MetricOptions {
 
     public fun operations(operations: List<Operation>)
 
+    public fun operations(vararg operations: Operation)
+
     public fun period(period: Duration)
 
     public fun region(region: String)
@@ -56,6 +58,9 @@ public interface SystemErrorsForOperationsMetricOptions : MetricOptions {
     override fun operations(operations: List<Operation>) {
       cdkBuilder.operations(operations.map(Operation::unwrap))
     }
+
+    override fun operations(vararg operations: Operation): KotlinUnit =
+        operations(operations.toList())
 
     override fun period(period: Duration) {
       cdkBuilder.period(period.let(Duration::unwrap))

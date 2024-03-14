@@ -31,6 +31,9 @@ public open class CfnStack internal constructor(
     unwrap(this).setAccessEndpoints(__idx_ac66f0)
   }
 
+  public open fun accessEndpoints(vararg __idx_ac66f0: Any): Unit =
+      accessEndpoints(__idx_ac66f0.toList())
+
   public open fun applicationSettings(): Any? = unwrap(this).getApplicationSettings()
 
   public open fun applicationSettings(`value`: IResolvable) {
@@ -54,6 +57,9 @@ public open class CfnStack internal constructor(
   public open fun attributesToDelete(`value`: List<String>) {
     unwrap(this).setAttributesToDelete(`value`)
   }
+
+  public open fun attributesToDelete(vararg `value`: String): Unit =
+      attributesToDelete(`value`.toList())
 
   public open fun deleteStorageConnectors(): Any? = unwrap(this).getDeleteStorageConnectors()
 
@@ -83,6 +89,9 @@ public open class CfnStack internal constructor(
   public open fun embedHostDomains(`value`: List<String>) {
     unwrap(this).setEmbedHostDomains(`value`)
   }
+
+  public open fun embedHostDomains(vararg `value`: String): Unit =
+      embedHostDomains(`value`.toList())
 
   public open fun feedbackUrl(): String? = unwrap(this).getFeedbackUrl()
 
@@ -116,6 +125,9 @@ public open class CfnStack internal constructor(
     unwrap(this).setStorageConnectors(__idx_ac66f0)
   }
 
+  public open fun storageConnectors(vararg __idx_ac66f0: Any): Unit =
+      storageConnectors(__idx_ac66f0.toList())
+
   public open fun streamingExperienceSettings(): Any? =
       unwrap(this).getStreamingExperienceSettings()
 
@@ -142,6 +154,8 @@ public open class CfnStack internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun userSettings(): Any? = unwrap(this).getUserSettings()
 
   public open fun userSettings(`value`: IResolvable) {
@@ -152,10 +166,14 @@ public open class CfnStack internal constructor(
     unwrap(this).setUserSettings(__idx_ac66f0)
   }
 
+  public open fun userSettings(vararg __idx_ac66f0: Any): Unit = userSettings(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun accessEndpoints(accessEndpoints: IResolvable)
 
     public fun accessEndpoints(accessEndpoints: List<Any>)
+
+    public fun accessEndpoints(vararg accessEndpoints: Any)
 
     public fun applicationSettings(applicationSettings: IResolvable)
 
@@ -168,6 +186,8 @@ public open class CfnStack internal constructor(
 
     public fun attributesToDelete(attributesToDelete: List<String>)
 
+    public fun attributesToDelete(vararg attributesToDelete: String)
+
     public fun deleteStorageConnectors(deleteStorageConnectors: Boolean)
 
     public fun deleteStorageConnectors(deleteStorageConnectors: IResolvable)
@@ -178,6 +198,8 @@ public open class CfnStack internal constructor(
 
     public fun embedHostDomains(embedHostDomains: List<String>)
 
+    public fun embedHostDomains(vararg embedHostDomains: String)
+
     public fun feedbackUrl(feedbackUrl: String)
 
     public fun name(name: String)
@@ -187,6 +209,8 @@ public open class CfnStack internal constructor(
     public fun storageConnectors(storageConnectors: IResolvable)
 
     public fun storageConnectors(storageConnectors: List<Any>)
+
+    public fun storageConnectors(vararg storageConnectors: Any)
 
     public fun streamingExperienceSettings(streamingExperienceSettings: IResolvable)
 
@@ -200,9 +224,13 @@ public open class CfnStack internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun userSettings(userSettings: IResolvable)
 
     public fun userSettings(userSettings: List<Any>)
+
+    public fun userSettings(vararg userSettings: Any)
   }
 
   private class BuilderImpl(
@@ -219,6 +247,9 @@ public open class CfnStack internal constructor(
     override fun accessEndpoints(accessEndpoints: List<Any>) {
       cdkBuilder.accessEndpoints(accessEndpoints)
     }
+
+    override fun accessEndpoints(vararg accessEndpoints: Any): Unit =
+        accessEndpoints(accessEndpoints.toList())
 
     override fun applicationSettings(applicationSettings: IResolvable) {
       cdkBuilder.applicationSettings(applicationSettings.let(IResolvable::unwrap))
@@ -237,6 +268,9 @@ public open class CfnStack internal constructor(
     override fun attributesToDelete(attributesToDelete: List<String>) {
       cdkBuilder.attributesToDelete(attributesToDelete)
     }
+
+    override fun attributesToDelete(vararg attributesToDelete: String): Unit =
+        attributesToDelete(attributesToDelete.toList())
 
     override fun deleteStorageConnectors(deleteStorageConnectors: Boolean) {
       cdkBuilder.deleteStorageConnectors(deleteStorageConnectors)
@@ -258,6 +292,9 @@ public open class CfnStack internal constructor(
       cdkBuilder.embedHostDomains(embedHostDomains)
     }
 
+    override fun embedHostDomains(vararg embedHostDomains: String): Unit =
+        embedHostDomains(embedHostDomains.toList())
+
     override fun feedbackUrl(feedbackUrl: String) {
       cdkBuilder.feedbackUrl(feedbackUrl)
     }
@@ -277,6 +314,9 @@ public open class CfnStack internal constructor(
     override fun storageConnectors(storageConnectors: List<Any>) {
       cdkBuilder.storageConnectors(storageConnectors)
     }
+
+    override fun storageConnectors(vararg storageConnectors: Any): Unit =
+        storageConnectors(storageConnectors.toList())
 
     override fun streamingExperienceSettings(streamingExperienceSettings: IResolvable) {
       cdkBuilder.streamingExperienceSettings(streamingExperienceSettings.let(IResolvable::unwrap))
@@ -298,6 +338,8 @@ public open class CfnStack internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun userSettings(userSettings: IResolvable) {
       cdkBuilder.userSettings(userSettings.let(IResolvable::unwrap))
     }
@@ -305,6 +347,8 @@ public open class CfnStack internal constructor(
     override fun userSettings(userSettings: List<Any>) {
       cdkBuilder.userSettings(userSettings)
     }
+
+    override fun userSettings(vararg userSettings: Any): Unit = userSettings(userSettings.toList())
 
     public fun build(): software.amazon.awscdk.services.appstream.CfnStack = cdkBuilder.build()
   }
@@ -463,6 +507,8 @@ public open class CfnStack internal constructor(
 
       public fun domains(domains: List<String>)
 
+      public fun domains(vararg domains: String)
+
       public fun resourceIdentifier(resourceIdentifier: String)
     }
 
@@ -478,6 +524,8 @@ public open class CfnStack internal constructor(
       override fun domains(domains: List<String>) {
         cdkBuilder.domains(domains)
       }
+
+      override fun domains(vararg domains: String): Unit = domains(domains.toList())
 
       override fun resourceIdentifier(resourceIdentifier: String) {
         cdkBuilder.resourceIdentifier(resourceIdentifier)

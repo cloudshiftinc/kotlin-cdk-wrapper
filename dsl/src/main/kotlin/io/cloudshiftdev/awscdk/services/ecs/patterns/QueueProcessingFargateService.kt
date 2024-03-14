@@ -44,6 +44,9 @@ public open class QueueProcessingFargateService internal constructor(
     public
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>)
 
+    public fun capacityProviderStrategies(vararg
+        capacityProviderStrategies: CapacityProviderStrategy)
+
     public fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -53,6 +56,8 @@ public open class QueueProcessingFargateService internal constructor(
     public fun cluster(cluster: ICluster)
 
     public fun command(command: List<String>)
+
+    public fun command(vararg command: String)
 
     public fun containerName(containerName: String)
 
@@ -120,9 +125,13 @@ public open class QueueProcessingFargateService internal constructor(
 
     public fun scalingSteps(scalingSteps: List<ScalingInterval>)
 
+    public fun scalingSteps(vararg scalingSteps: ScalingInterval)
+
     public fun secrets(secrets: Map<String, Secret>)
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
+
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
 
     public fun serviceName(serviceName: String)
 
@@ -157,6 +166,10 @@ public open class QueueProcessingFargateService internal constructor(
       cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy::unwrap))
     }
 
+    override fun capacityProviderStrategies(vararg
+        capacityProviderStrategies: CapacityProviderStrategy): Unit =
+        capacityProviderStrategies(capacityProviderStrategies.toList())
+
     override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
       cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker::unwrap))
     }
@@ -173,6 +186,8 @@ public open class QueueProcessingFargateService internal constructor(
     override fun command(command: List<String>) {
       cdkBuilder.command(command)
     }
+
+    override fun command(vararg command: String): Unit = command(command.toList())
 
     override fun containerName(containerName: String) {
       cdkBuilder.containerName(containerName)
@@ -298,6 +313,9 @@ public open class QueueProcessingFargateService internal constructor(
       cdkBuilder.scalingSteps(scalingSteps.map(ScalingInterval::unwrap))
     }
 
+    override fun scalingSteps(vararg scalingSteps: ScalingInterval): Unit =
+        scalingSteps(scalingSteps.toList())
+
     override fun secrets(secrets: Map<String, Secret>) {
       cdkBuilder.secrets(secrets.mapValues{Secret.unwrap(it.value)})
     }
@@ -305,6 +323,9 @@ public open class QueueProcessingFargateService internal constructor(
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun serviceName(serviceName: String) {
       cdkBuilder.serviceName(serviceName)

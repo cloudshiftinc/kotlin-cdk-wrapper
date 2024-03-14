@@ -63,6 +63,8 @@ public open class CfnAnomalyMonitor internal constructor(
     unwrap(this).setResourceTags(__idx_ac66f0)
   }
 
+  public open fun resourceTags(vararg __idx_ac66f0: Any): Unit = resourceTags(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun monitorDimension(monitorDimension: String)
 
@@ -75,6 +77,8 @@ public open class CfnAnomalyMonitor internal constructor(
     public fun resourceTags(resourceTags: IResolvable)
 
     public fun resourceTags(resourceTags: List<Any>)
+
+    public fun resourceTags(vararg resourceTags: Any)
   }
 
   private class BuilderImpl(
@@ -107,6 +111,8 @@ public open class CfnAnomalyMonitor internal constructor(
     override fun resourceTags(resourceTags: List<Any>) {
       cdkBuilder.resourceTags(resourceTags)
     }
+
+    override fun resourceTags(vararg resourceTags: Any): Unit = resourceTags(resourceTags.toList())
 
     public fun build(): software.amazon.awscdk.services.ce.CfnAnomalyMonitor = cdkBuilder.build()
   }

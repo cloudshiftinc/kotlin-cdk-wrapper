@@ -40,6 +40,9 @@ public open class CfnRoute internal constructor(
     unwrap(this).setAuthorizationScopes(`value`)
   }
 
+  public open fun authorizationScopes(vararg `value`: String): Unit =
+      authorizationScopes(`value`.toList())
+
   public open fun authorizationType(): String? = unwrap(this).getAuthorizationType()
 
   public open fun authorizationType(`value`: String) {
@@ -108,6 +111,8 @@ public open class CfnRoute internal constructor(
 
     public fun authorizationScopes(authorizationScopes: List<String>)
 
+    public fun authorizationScopes(vararg authorizationScopes: String)
+
     public fun authorizationType(authorizationType: String)
 
     public fun authorizerId(authorizerId: String)
@@ -149,6 +154,9 @@ public open class CfnRoute internal constructor(
     override fun authorizationScopes(authorizationScopes: List<String>) {
       cdkBuilder.authorizationScopes(authorizationScopes)
     }
+
+    override fun authorizationScopes(vararg authorizationScopes: String): Unit =
+        authorizationScopes(authorizationScopes.toList())
 
     override fun authorizationType(authorizationType: String) {
       cdkBuilder.authorizationType(authorizationType)

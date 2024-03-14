@@ -44,6 +44,8 @@ public interface AutoScalingGroupCapacityOptions : CommonAutoScalingGroupProps {
 
     public fun blockDevices(blockDevices: List<BlockDevice>)
 
+    public fun blockDevices(vararg blockDevices: BlockDevice)
+
     public fun bootstrapEnabled(bootstrapEnabled: Boolean)
 
     public fun bootstrapOptions(bootstrapOptions: BootstrapOptions)
@@ -61,6 +63,8 @@ public interface AutoScalingGroupCapacityOptions : CommonAutoScalingGroupProps {
     public fun desiredCapacity(desiredCapacity: Number)
 
     public fun groupMetrics(groupMetrics: List<GroupMetrics>)
+
+    public fun groupMetrics(vararg groupMetrics: GroupMetrics)
 
     public fun healthCheck(healthCheck: HealthCheck)
 
@@ -86,6 +90,8 @@ public interface AutoScalingGroupCapacityOptions : CommonAutoScalingGroupProps {
 
     public fun notifications(notifications: List<NotificationConfiguration>)
 
+    public fun notifications(vararg notifications: NotificationConfiguration)
+
     public fun signals(signals: Signals)
 
     public fun spotInterruptHandler(spotInterruptHandler: Boolean)
@@ -95,6 +101,8 @@ public interface AutoScalingGroupCapacityOptions : CommonAutoScalingGroupProps {
     public fun ssmSessionPermissions(ssmSessionPermissions: Boolean)
 
     public fun terminationPolicies(terminationPolicies: List<TerminationPolicy>)
+
+    public fun terminationPolicies(vararg terminationPolicies: TerminationPolicy)
 
     public
         fun terminationPolicyCustomLambdaFunctionArn(terminationPolicyCustomLambdaFunctionArn: String)
@@ -129,6 +137,9 @@ public interface AutoScalingGroupCapacityOptions : CommonAutoScalingGroupProps {
       cdkBuilder.blockDevices(blockDevices.map(BlockDevice::unwrap))
     }
 
+    override fun blockDevices(vararg blockDevices: BlockDevice): Unit =
+        blockDevices(blockDevices.toList())
+
     override fun bootstrapEnabled(bootstrapEnabled: Boolean) {
       cdkBuilder.bootstrapEnabled(bootstrapEnabled)
     }
@@ -161,6 +172,9 @@ public interface AutoScalingGroupCapacityOptions : CommonAutoScalingGroupProps {
     override fun groupMetrics(groupMetrics: List<GroupMetrics>) {
       cdkBuilder.groupMetrics(groupMetrics.map(GroupMetrics::unwrap))
     }
+
+    override fun groupMetrics(vararg groupMetrics: GroupMetrics): Unit =
+        groupMetrics(groupMetrics.toList())
 
     override fun healthCheck(healthCheck: HealthCheck) {
       cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
@@ -210,6 +224,9 @@ public interface AutoScalingGroupCapacityOptions : CommonAutoScalingGroupProps {
       cdkBuilder.notifications(notifications.map(NotificationConfiguration::unwrap))
     }
 
+    override fun notifications(vararg notifications: NotificationConfiguration): Unit =
+        notifications(notifications.toList())
+
     override fun signals(signals: Signals) {
       cdkBuilder.signals(signals.let(Signals::unwrap))
     }
@@ -229,6 +246,9 @@ public interface AutoScalingGroupCapacityOptions : CommonAutoScalingGroupProps {
     override fun terminationPolicies(terminationPolicies: List<TerminationPolicy>) {
       cdkBuilder.terminationPolicies(terminationPolicies.map(TerminationPolicy::unwrap))
     }
+
+    override fun terminationPolicies(vararg terminationPolicies: TerminationPolicy): Unit =
+        terminationPolicies(terminationPolicies.toList())
 
     override
         fun terminationPolicyCustomLambdaFunctionArn(terminationPolicyCustomLambdaFunctionArn: String) {

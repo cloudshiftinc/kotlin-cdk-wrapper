@@ -18,6 +18,8 @@ public interface ServiceConnectProps {
     public fun namespace(namespace: String)
 
     public fun services(services: List<ServiceConnectService>)
+
+    public fun services(vararg services: ServiceConnectService)
   }
 
   private class BuilderImpl : Builder {
@@ -35,6 +37,9 @@ public interface ServiceConnectProps {
     override fun services(services: List<ServiceConnectService>) {
       cdkBuilder.services(services.map(ServiceConnectService::unwrap))
     }
+
+    override fun services(vararg services: ServiceConnectService): Unit =
+        services(services.toList())
 
     public fun build(): software.amazon.awscdk.services.ecs.ServiceConnectProps = cdkBuilder.build()
   }

@@ -34,6 +34,9 @@ public open class CfnAutoScalingGroup internal constructor(
     unwrap(this).setAvailabilityZones(`value`)
   }
 
+  public open fun availabilityZones(vararg `value`: String): Unit =
+      availabilityZones(`value`.toList())
+
   public open fun capacityRebalance(): Any? = unwrap(this).getCapacityRebalance()
 
   public open fun capacityRebalance(`value`: Boolean) {
@@ -144,12 +147,18 @@ public open class CfnAutoScalingGroup internal constructor(
     unwrap(this).setLifecycleHookSpecificationList(__idx_ac66f0)
   }
 
+  public open fun lifecycleHookSpecificationList(vararg __idx_ac66f0: Any): Unit =
+      lifecycleHookSpecificationList(__idx_ac66f0.toList())
+
   public open fun loadBalancerNames(): List<String> = unwrap(this).getLoadBalancerNames() ?:
       emptyList()
 
   public open fun loadBalancerNames(`value`: List<String>) {
     unwrap(this).setLoadBalancerNames(`value`)
   }
+
+  public open fun loadBalancerNames(vararg `value`: String): Unit =
+      loadBalancerNames(`value`.toList())
 
   public open fun maxInstanceLifetime(): Number? = unwrap(this).getMaxInstanceLifetime()
 
@@ -172,6 +181,9 @@ public open class CfnAutoScalingGroup internal constructor(
   public open fun metricsCollection(__idx_ac66f0: List<Any>) {
     unwrap(this).setMetricsCollection(__idx_ac66f0)
   }
+
+  public open fun metricsCollection(vararg __idx_ac66f0: Any): Unit =
+      metricsCollection(__idx_ac66f0.toList())
 
   public open fun minSize(): String = unwrap(this).getMinSize()
 
@@ -235,6 +247,9 @@ public open class CfnAutoScalingGroup internal constructor(
     unwrap(this).setNotificationConfigurations(__idx_ac66f0)
   }
 
+  public open fun notificationConfigurations(vararg __idx_ac66f0: Any): Unit =
+      notificationConfigurations(__idx_ac66f0.toList())
+
   public open fun placementGroup(): String? = unwrap(this).getPlacementGroup()
 
   public open fun placementGroup(`value`: String) {
@@ -256,11 +271,15 @@ public open class CfnAutoScalingGroup internal constructor(
     unwrap(this).setTagsRaw(`value`.map(TagPropertyProperty::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: TagPropertyProperty): Unit = tagsRaw(`value`.toList())
+
   public open fun targetGroupArns(): List<String> = unwrap(this).getTargetGroupArns() ?: emptyList()
 
   public open fun targetGroupArns(`value`: List<String>) {
     unwrap(this).setTargetGroupArns(`value`)
   }
+
+  public open fun targetGroupArns(vararg `value`: String): Unit = targetGroupArns(`value`.toList())
 
   public open fun terminationPolicies(): List<String> = unwrap(this).getTerminationPolicies() ?:
       emptyList()
@@ -269,6 +288,9 @@ public open class CfnAutoScalingGroup internal constructor(
     unwrap(this).setTerminationPolicies(`value`)
   }
 
+  public open fun terminationPolicies(vararg `value`: String): Unit =
+      terminationPolicies(`value`.toList())
+
   public open fun vpcZoneIdentifier(): List<String> = unwrap(this).getVpcZoneIdentifier() ?:
       emptyList()
 
@@ -276,10 +298,15 @@ public open class CfnAutoScalingGroup internal constructor(
     unwrap(this).setVpcZoneIdentifier(`value`)
   }
 
+  public open fun vpcZoneIdentifier(vararg `value`: String): Unit =
+      vpcZoneIdentifier(`value`.toList())
+
   public interface Builder {
     public fun autoScalingGroupName(autoScalingGroupName: String)
 
     public fun availabilityZones(availabilityZones: List<String>)
+
+    public fun availabilityZones(vararg availabilityZones: String)
 
     public fun capacityRebalance(capacityRebalance: Boolean)
 
@@ -326,7 +353,11 @@ public open class CfnAutoScalingGroup internal constructor(
 
     public fun lifecycleHookSpecificationList(lifecycleHookSpecificationList: List<Any>)
 
+    public fun lifecycleHookSpecificationList(vararg lifecycleHookSpecificationList: Any)
+
     public fun loadBalancerNames(loadBalancerNames: List<String>)
+
+    public fun loadBalancerNames(vararg loadBalancerNames: String)
 
     public fun maxInstanceLifetime(maxInstanceLifetime: Number)
 
@@ -335,6 +366,8 @@ public open class CfnAutoScalingGroup internal constructor(
     public fun metricsCollection(metricsCollection: IResolvable)
 
     public fun metricsCollection(metricsCollection: List<Any>)
+
+    public fun metricsCollection(vararg metricsCollection: Any)
 
     public fun minSize(minSize: String)
 
@@ -368,17 +401,27 @@ public open class CfnAutoScalingGroup internal constructor(
 
     public fun notificationConfigurations(notificationConfigurations: List<Any>)
 
+    public fun notificationConfigurations(vararg notificationConfigurations: Any)
+
     public fun placementGroup(placementGroup: String)
 
     public fun serviceLinkedRoleArn(serviceLinkedRoleArn: String)
 
     public fun tags(tags: List<TagPropertyProperty>)
 
+    public fun tags(vararg tags: TagPropertyProperty)
+
     public fun targetGroupArns(targetGroupArns: List<String>)
+
+    public fun targetGroupArns(vararg targetGroupArns: String)
 
     public fun terminationPolicies(terminationPolicies: List<String>)
 
+    public fun terminationPolicies(vararg terminationPolicies: String)
+
     public fun vpcZoneIdentifier(vpcZoneIdentifier: List<String>)
+
+    public fun vpcZoneIdentifier(vararg vpcZoneIdentifier: String)
   }
 
   private class BuilderImpl(
@@ -395,6 +438,9 @@ public open class CfnAutoScalingGroup internal constructor(
     override fun availabilityZones(availabilityZones: List<String>) {
       cdkBuilder.availabilityZones(availabilityZones)
     }
+
+    override fun availabilityZones(vararg availabilityZones: String): Unit =
+        availabilityZones(availabilityZones.toList())
 
     override fun capacityRebalance(capacityRebalance: Boolean) {
       cdkBuilder.capacityRebalance(capacityRebalance)
@@ -478,9 +524,15 @@ public open class CfnAutoScalingGroup internal constructor(
       cdkBuilder.lifecycleHookSpecificationList(lifecycleHookSpecificationList)
     }
 
+    override fun lifecycleHookSpecificationList(vararg lifecycleHookSpecificationList: Any): Unit =
+        lifecycleHookSpecificationList(lifecycleHookSpecificationList.toList())
+
     override fun loadBalancerNames(loadBalancerNames: List<String>) {
       cdkBuilder.loadBalancerNames(loadBalancerNames)
     }
+
+    override fun loadBalancerNames(vararg loadBalancerNames: String): Unit =
+        loadBalancerNames(loadBalancerNames.toList())
 
     override fun maxInstanceLifetime(maxInstanceLifetime: Number) {
       cdkBuilder.maxInstanceLifetime(maxInstanceLifetime)
@@ -497,6 +549,9 @@ public open class CfnAutoScalingGroup internal constructor(
     override fun metricsCollection(metricsCollection: List<Any>) {
       cdkBuilder.metricsCollection(metricsCollection)
     }
+
+    override fun metricsCollection(vararg metricsCollection: Any): Unit =
+        metricsCollection(metricsCollection.toList())
 
     override fun minSize(minSize: String) {
       cdkBuilder.minSize(minSize)
@@ -551,6 +606,9 @@ public open class CfnAutoScalingGroup internal constructor(
       cdkBuilder.notificationConfigurations(notificationConfigurations)
     }
 
+    override fun notificationConfigurations(vararg notificationConfigurations: Any): Unit =
+        notificationConfigurations(notificationConfigurations.toList())
+
     override fun placementGroup(placementGroup: String) {
       cdkBuilder.placementGroup(placementGroup)
     }
@@ -563,17 +621,28 @@ public open class CfnAutoScalingGroup internal constructor(
       cdkBuilder.tags(tags.map(TagPropertyProperty::unwrap))
     }
 
+    override fun tags(vararg tags: TagPropertyProperty): Unit = tags(tags.toList())
+
     override fun targetGroupArns(targetGroupArns: List<String>) {
       cdkBuilder.targetGroupArns(targetGroupArns)
     }
+
+    override fun targetGroupArns(vararg targetGroupArns: String): Unit =
+        targetGroupArns(targetGroupArns.toList())
 
     override fun terminationPolicies(terminationPolicies: List<String>) {
       cdkBuilder.terminationPolicies(terminationPolicies)
     }
 
+    override fun terminationPolicies(vararg terminationPolicies: String): Unit =
+        terminationPolicies(terminationPolicies.toList())
+
     override fun vpcZoneIdentifier(vpcZoneIdentifier: List<String>) {
       cdkBuilder.vpcZoneIdentifier(vpcZoneIdentifier)
     }
+
+    override fun vpcZoneIdentifier(vararg vpcZoneIdentifier: String): Unit =
+        vpcZoneIdentifier(vpcZoneIdentifier.toList())
 
     public fun build(): software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup =
         cdkBuilder.build()
@@ -1390,6 +1459,8 @@ public open class CfnAutoScalingGroup internal constructor(
     public interface Builder {
       public fun notificationTypes(notificationTypes: List<String>)
 
+      public fun notificationTypes(vararg notificationTypes: String)
+
       public fun topicArn(topicArn: String)
     }
 
@@ -1402,6 +1473,9 @@ public open class CfnAutoScalingGroup internal constructor(
       override fun notificationTypes(notificationTypes: List<String>) {
         cdkBuilder.notificationTypes(notificationTypes)
       }
+
+      override fun notificationTypes(vararg notificationTypes: String): Unit =
+          notificationTypes(notificationTypes.toList())
 
       override fun topicArn(topicArn: String) {
         cdkBuilder.topicArn(topicArn)
@@ -1452,6 +1526,8 @@ public open class CfnAutoScalingGroup internal constructor(
       public fun granularity(granularity: String)
 
       public fun metrics(metrics: List<String>)
+
+      public fun metrics(vararg metrics: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1467,6 +1543,8 @@ public open class CfnAutoScalingGroup internal constructor(
       override fun metrics(metrics: List<String>) {
         cdkBuilder.metrics(metrics)
       }
+
+      override fun metrics(vararg metrics: String): Unit = metrics(metrics.toList())
 
       public fun build():
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MetricsCollectionProperty
@@ -1571,7 +1649,11 @@ public open class CfnAutoScalingGroup internal constructor(
 
       public fun acceleratorManufacturers(acceleratorManufacturers: List<String>)
 
+      public fun acceleratorManufacturers(vararg acceleratorManufacturers: String)
+
       public fun acceleratorNames(acceleratorNames: List<String>)
+
+      public fun acceleratorNames(vararg acceleratorNames: String)
 
       public fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable)
 
@@ -1585,7 +1667,11 @@ public open class CfnAutoScalingGroup internal constructor(
 
       public fun acceleratorTypes(acceleratorTypes: List<String>)
 
+      public fun acceleratorTypes(vararg acceleratorTypes: String)
+
       public fun allowedInstanceTypes(allowedInstanceTypes: List<String>)
+
+      public fun allowedInstanceTypes(vararg allowedInstanceTypes: String)
 
       public fun bareMetal(bareMetal: String)
 
@@ -1603,13 +1689,21 @@ public open class CfnAutoScalingGroup internal constructor(
 
       public fun cpuManufacturers(cpuManufacturers: List<String>)
 
+      public fun cpuManufacturers(vararg cpuManufacturers: String)
+
       public fun excludedInstanceTypes(excludedInstanceTypes: List<String>)
 
+      public fun excludedInstanceTypes(vararg excludedInstanceTypes: String)
+
       public fun instanceGenerations(instanceGenerations: List<String>)
+
+      public fun instanceGenerations(vararg instanceGenerations: String)
 
       public fun localStorage(localStorage: String)
 
       public fun localStorageTypes(localStorageTypes: List<String>)
+
+      public fun localStorageTypes(vararg localStorageTypes: String)
 
       public
           fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number)
@@ -1701,9 +1795,15 @@ public open class CfnAutoScalingGroup internal constructor(
         cdkBuilder.acceleratorManufacturers(acceleratorManufacturers)
       }
 
+      override fun acceleratorManufacturers(vararg acceleratorManufacturers: String): Unit =
+          acceleratorManufacturers(acceleratorManufacturers.toList())
+
       override fun acceleratorNames(acceleratorNames: List<String>) {
         cdkBuilder.acceleratorNames(acceleratorNames)
       }
+
+      override fun acceleratorNames(vararg acceleratorNames: String): Unit =
+          acceleratorNames(acceleratorNames.toList())
 
       override fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable) {
         cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(IResolvable::unwrap))
@@ -1725,9 +1825,15 @@ public open class CfnAutoScalingGroup internal constructor(
         cdkBuilder.acceleratorTypes(acceleratorTypes)
       }
 
+      override fun acceleratorTypes(vararg acceleratorTypes: String): Unit =
+          acceleratorTypes(acceleratorTypes.toList())
+
       override fun allowedInstanceTypes(allowedInstanceTypes: List<String>) {
         cdkBuilder.allowedInstanceTypes(allowedInstanceTypes)
       }
+
+      override fun allowedInstanceTypes(vararg allowedInstanceTypes: String): Unit =
+          allowedInstanceTypes(allowedInstanceTypes.toList())
 
       override fun bareMetal(bareMetal: String) {
         cdkBuilder.bareMetal(bareMetal)
@@ -1757,13 +1863,22 @@ public open class CfnAutoScalingGroup internal constructor(
         cdkBuilder.cpuManufacturers(cpuManufacturers)
       }
 
+      override fun cpuManufacturers(vararg cpuManufacturers: String): Unit =
+          cpuManufacturers(cpuManufacturers.toList())
+
       override fun excludedInstanceTypes(excludedInstanceTypes: List<String>) {
         cdkBuilder.excludedInstanceTypes(excludedInstanceTypes)
       }
 
+      override fun excludedInstanceTypes(vararg excludedInstanceTypes: String): Unit =
+          excludedInstanceTypes(excludedInstanceTypes.toList())
+
       override fun instanceGenerations(instanceGenerations: List<String>) {
         cdkBuilder.instanceGenerations(instanceGenerations)
       }
+
+      override fun instanceGenerations(vararg instanceGenerations: String): Unit =
+          instanceGenerations(instanceGenerations.toList())
 
       override fun localStorage(localStorage: String) {
         cdkBuilder.localStorage(localStorage)
@@ -1772,6 +1887,9 @@ public open class CfnAutoScalingGroup internal constructor(
       override fun localStorageTypes(localStorageTypes: List<String>) {
         cdkBuilder.localStorageTypes(localStorageTypes)
       }
+
+      override fun localStorageTypes(vararg localStorageTypes: String): Unit =
+          localStorageTypes(localStorageTypes.toList())
 
       override
           fun maxSpotPriceAsPercentageOfOptimalOnDemandPrice(maxSpotPriceAsPercentageOfOptimalOnDemandPrice: Number) {
@@ -2368,6 +2486,8 @@ public open class CfnAutoScalingGroup internal constructor(
       public fun overrides(overrides: IResolvable)
 
       public fun overrides(overrides: List<Any>)
+
+      public fun overrides(vararg overrides: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2399,6 +2519,8 @@ public open class CfnAutoScalingGroup internal constructor(
       override fun overrides(overrides: List<Any>) {
         cdkBuilder.overrides(overrides)
       }
+
+      override fun overrides(vararg overrides: Any): Unit = overrides(overrides.toList())
 
       public fun build():
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateProperty =

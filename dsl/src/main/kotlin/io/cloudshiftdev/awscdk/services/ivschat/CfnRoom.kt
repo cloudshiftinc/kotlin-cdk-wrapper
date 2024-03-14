@@ -35,6 +35,9 @@ public open class CfnRoom internal constructor(
     unwrap(this).setLoggingConfigurationIdentifiers(`value`)
   }
 
+  public open fun loggingConfigurationIdentifiers(vararg `value`: String): Unit =
+      loggingConfigurationIdentifiers(`value`.toList())
+
   public open fun maximumMessageLength(): Number? = unwrap(this).getMaximumMessageLength()
 
   public open fun maximumMessageLength(`value`: Number) {
@@ -78,8 +81,12 @@ public open class CfnRoom internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun loggingConfigurationIdentifiers(loggingConfigurationIdentifiers: List<String>)
+
+    public fun loggingConfigurationIdentifiers(vararg loggingConfigurationIdentifiers: String)
 
     public fun maximumMessageLength(maximumMessageLength: Number)
 
@@ -97,6 +104,8 @@ public open class CfnRoom internal constructor(
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -109,6 +118,9 @@ public open class CfnRoom internal constructor(
     override fun loggingConfigurationIdentifiers(loggingConfigurationIdentifiers: List<String>) {
       cdkBuilder.loggingConfigurationIdentifiers(loggingConfigurationIdentifiers)
     }
+
+    override fun loggingConfigurationIdentifiers(vararg loggingConfigurationIdentifiers: String):
+        Unit = loggingConfigurationIdentifiers(loggingConfigurationIdentifiers.toList())
 
     override fun maximumMessageLength(maximumMessageLength: Number) {
       cdkBuilder.maximumMessageLength(maximumMessageLength)
@@ -139,6 +151,8 @@ public open class CfnRoom internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ivschat.CfnRoom = cdkBuilder.build()
   }

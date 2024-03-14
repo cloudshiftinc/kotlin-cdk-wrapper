@@ -23,6 +23,8 @@ public interface HttpRouteMatch {
   public interface Builder {
     public fun headers(headers: List<HeaderMatch>)
 
+    public fun headers(vararg headers: HeaderMatch)
+
     public fun method(method: HttpRouteMethod)
 
     public fun path(path: HttpRoutePathMatch)
@@ -32,6 +34,8 @@ public interface HttpRouteMatch {
     public fun protocol(protocol: HttpRouteProtocol)
 
     public fun queryParameters(queryParameters: List<QueryParameterMatch>)
+
+    public fun queryParameters(vararg queryParameters: QueryParameterMatch)
   }
 
   private class BuilderImpl : Builder {
@@ -41,6 +45,8 @@ public interface HttpRouteMatch {
     override fun headers(headers: List<HeaderMatch>) {
       cdkBuilder.headers(headers.map(HeaderMatch::unwrap))
     }
+
+    override fun headers(vararg headers: HeaderMatch): Unit = headers(headers.toList())
 
     override fun method(method: HttpRouteMethod) {
       cdkBuilder.method(method.let(HttpRouteMethod::unwrap))
@@ -61,6 +67,9 @@ public interface HttpRouteMatch {
     override fun queryParameters(queryParameters: List<QueryParameterMatch>) {
       cdkBuilder.queryParameters(queryParameters.map(QueryParameterMatch::unwrap))
     }
+
+    override fun queryParameters(vararg queryParameters: QueryParameterMatch): Unit =
+        queryParameters(queryParameters.toList())
 
     public fun build(): software.amazon.awscdk.services.appmesh.HttpRouteMatch = cdkBuilder.build()
   }

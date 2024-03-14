@@ -29,6 +29,8 @@ public open class Ec2TaskDefinition internal constructor(
 
     public fun inferenceAccelerators(inferenceAccelerators: List<InferenceAccelerator>)
 
+    public fun inferenceAccelerators(vararg inferenceAccelerators: InferenceAccelerator)
+
     public fun ipcMode(ipcMode: IpcMode)
 
     public fun networkMode(networkMode: NetworkMode)
@@ -37,11 +39,15 @@ public open class Ec2TaskDefinition internal constructor(
 
     public fun placementConstraints(placementConstraints: List<PlacementConstraint>)
 
+    public fun placementConstraints(vararg placementConstraints: PlacementConstraint)
+
     public fun proxyConfiguration(proxyConfiguration: ProxyConfiguration)
 
     public fun taskRole(taskRole: IRole)
 
     public fun volumes(volumes: List<Volume>)
+
+    public fun volumes(vararg volumes: Volume)
   }
 
   private class BuilderImpl(
@@ -63,6 +69,9 @@ public open class Ec2TaskDefinition internal constructor(
       cdkBuilder.inferenceAccelerators(inferenceAccelerators.map(InferenceAccelerator::unwrap))
     }
 
+    override fun inferenceAccelerators(vararg inferenceAccelerators: InferenceAccelerator): Unit =
+        inferenceAccelerators(inferenceAccelerators.toList())
+
     override fun ipcMode(ipcMode: IpcMode) {
       cdkBuilder.ipcMode(ipcMode.let(IpcMode::unwrap))
     }
@@ -79,6 +88,9 @@ public open class Ec2TaskDefinition internal constructor(
       cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint::unwrap))
     }
 
+    override fun placementConstraints(vararg placementConstraints: PlacementConstraint): Unit =
+        placementConstraints(placementConstraints.toList())
+
     override fun proxyConfiguration(proxyConfiguration: ProxyConfiguration) {
       cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfiguration::unwrap))
     }
@@ -90,6 +102,8 @@ public open class Ec2TaskDefinition internal constructor(
     override fun volumes(volumes: List<Volume>) {
       cdkBuilder.volumes(volumes.map(Volume::unwrap))
     }
+
+    override fun volumes(vararg volumes: Volume): Unit = volumes(volumes.toList())
 
     public fun build(): software.amazon.awscdk.services.ecs.Ec2TaskDefinition = cdkBuilder.build()
   }

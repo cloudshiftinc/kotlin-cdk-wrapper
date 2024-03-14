@@ -28,21 +28,37 @@ public interface EventPattern {
   public interface Builder {
     public fun account(account: List<String>)
 
+    public fun account(vararg account: String)
+
     public fun detail(detail: Map<String, Any>)
 
     public fun detailType(detailType: List<String>)
 
+    public fun detailType(vararg detailType: String)
+
     public fun id(id: List<String>)
+
+    public fun id(vararg id: String)
 
     public fun region(region: List<String>)
 
+    public fun region(vararg region: String)
+
     public fun resources(resources: List<String>)
+
+    public fun resources(vararg resources: String)
 
     public fun source(source: List<String>)
 
+    public fun source(vararg source: String)
+
     public fun time(time: List<String>)
 
+    public fun time(vararg time: String)
+
     public fun version(version: List<String>)
+
+    public fun version(vararg version: String)
   }
 
   private class BuilderImpl : Builder {
@@ -53,6 +69,8 @@ public interface EventPattern {
       cdkBuilder.account(account)
     }
 
+    override fun account(vararg account: String): Unit = account(account.toList())
+
     override fun detail(detail: Map<String, Any>) {
       cdkBuilder.detail(detail)
     }
@@ -61,29 +79,43 @@ public interface EventPattern {
       cdkBuilder.detailType(detailType)
     }
 
+    override fun detailType(vararg detailType: String): Unit = detailType(detailType.toList())
+
     override fun id(id: List<String>) {
       cdkBuilder.id(id)
     }
+
+    override fun id(vararg id: String): Unit = id(id.toList())
 
     override fun region(region: List<String>) {
       cdkBuilder.region(region)
     }
 
+    override fun region(vararg region: String): Unit = region(region.toList())
+
     override fun resources(resources: List<String>) {
       cdkBuilder.resources(resources)
     }
+
+    override fun resources(vararg resources: String): Unit = resources(resources.toList())
 
     override fun source(source: List<String>) {
       cdkBuilder.source(source)
     }
 
+    override fun source(vararg source: String): Unit = source(source.toList())
+
     override fun time(time: List<String>) {
       cdkBuilder.time(time)
     }
 
+    override fun time(vararg time: String): Unit = time(time.toList())
+
     override fun version(version: List<String>) {
       cdkBuilder.version(version)
     }
+
+    override fun version(vararg version: String): Unit = version(version.toList())
 
     public fun build(): software.amazon.awscdk.services.events.EventPattern = cdkBuilder.build()
   }

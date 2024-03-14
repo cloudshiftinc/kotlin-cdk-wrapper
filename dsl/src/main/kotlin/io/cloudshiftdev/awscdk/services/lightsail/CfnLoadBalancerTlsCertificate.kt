@@ -27,6 +27,9 @@ public open class CfnLoadBalancerTlsCertificate internal constructor(
     unwrap(this).setCertificateAlternativeNames(`value`)
   }
 
+  public open fun certificateAlternativeNames(vararg `value`: String): Unit =
+      certificateAlternativeNames(`value`.toList())
+
   public open fun certificateDomainName(): String = unwrap(this).getCertificateDomainName()
 
   public open fun certificateDomainName(`value`: String) {
@@ -72,6 +75,8 @@ public open class CfnLoadBalancerTlsCertificate internal constructor(
   public interface Builder {
     public fun certificateAlternativeNames(certificateAlternativeNames: List<String>)
 
+    public fun certificateAlternativeNames(vararg certificateAlternativeNames: String)
+
     public fun certificateDomainName(certificateDomainName: String)
 
     public fun certificateName(certificateName: String)
@@ -99,6 +104,9 @@ public open class CfnLoadBalancerTlsCertificate internal constructor(
     override fun certificateAlternativeNames(certificateAlternativeNames: List<String>) {
       cdkBuilder.certificateAlternativeNames(certificateAlternativeNames)
     }
+
+    override fun certificateAlternativeNames(vararg certificateAlternativeNames: String): Unit =
+        certificateAlternativeNames(certificateAlternativeNames.toList())
 
     override fun certificateDomainName(certificateDomainName: String) {
       cdkBuilder.certificateDomainName(certificateDomainName)

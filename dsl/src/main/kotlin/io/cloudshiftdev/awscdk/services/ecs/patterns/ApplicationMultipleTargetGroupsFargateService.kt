@@ -61,6 +61,8 @@ public open class ApplicationMultipleTargetGroupsFargateService internal constru
 
     public fun loadBalancers(loadBalancers: List<ApplicationLoadBalancerProps>)
 
+    public fun loadBalancers(vararg loadBalancers: ApplicationLoadBalancerProps)
+
     public fun memoryLimitMiB(memoryLimitMiB: Number)
 
     public fun platformVersion(platformVersion: FargatePlatformVersion)
@@ -76,6 +78,8 @@ public open class ApplicationMultipleTargetGroupsFargateService internal constru
     public fun serviceName(serviceName: String)
 
     public fun targetGroups(targetGroups: List<ApplicationTargetProps>)
+
+    public fun targetGroups(vararg targetGroups: ApplicationTargetProps)
 
     public fun taskDefinition(taskDefinition: FargateTaskDefinition)
 
@@ -144,6 +148,9 @@ public open class ApplicationMultipleTargetGroupsFargateService internal constru
       cdkBuilder.loadBalancers(loadBalancers.map(ApplicationLoadBalancerProps::unwrap))
     }
 
+    override fun loadBalancers(vararg loadBalancers: ApplicationLoadBalancerProps): Unit =
+        loadBalancers(loadBalancers.toList())
+
     override fun memoryLimitMiB(memoryLimitMiB: Number) {
       cdkBuilder.memoryLimitMiB(memoryLimitMiB)
     }
@@ -172,6 +179,9 @@ public open class ApplicationMultipleTargetGroupsFargateService internal constru
     override fun targetGroups(targetGroups: List<ApplicationTargetProps>) {
       cdkBuilder.targetGroups(targetGroups.map(ApplicationTargetProps::unwrap))
     }
+
+    override fun targetGroups(vararg targetGroups: ApplicationTargetProps): Unit =
+        targetGroups(targetGroups.toList())
 
     override fun taskDefinition(taskDefinition: FargateTaskDefinition) {
       cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition::unwrap))

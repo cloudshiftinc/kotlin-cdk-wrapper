@@ -31,7 +31,11 @@ public interface MetadataEntry {
 
     public fun `data`(`data`: List<Tag>)
 
+    public fun `data`(vararg `data`: Tag)
+
     public fun trace(trace: List<String>)
+
+    public fun trace(vararg trace: String)
 
     public fun type(type: String)
   }
@@ -66,9 +70,13 @@ public interface MetadataEntry {
       cdkBuilder.`data`(`data`.map(Tag::unwrap))
     }
 
+    override fun `data`(vararg `data`: Tag): Unit = `data`(`data`.toList())
+
     override fun trace(trace: List<String>) {
       cdkBuilder.trace(trace)
     }
+
+    override fun trace(vararg trace: String): Unit = trace(trace.toList())
 
     override fun type(type: String) {
       cdkBuilder.type(type)

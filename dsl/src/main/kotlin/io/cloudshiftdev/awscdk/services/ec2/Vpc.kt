@@ -68,8 +68,7 @@ public open class Vpc internal constructor(
       options: VpnConnectionOptions.Builder.() -> Unit): VpnConnection = addVpnConnection(id,
       VpnConnectionOptions(options))
 
-  public override fun availabilityZones(): List<String> = unwrap(this).getAvailabilityZones() ?:
-      emptyList()
+  public override fun availabilityZones(): List<String> = unwrap(this).getAvailabilityZones()
 
   public open fun dnsHostnamesEnabled(): Boolean = unwrap(this).getDnsHostnamesEnabled()
 
@@ -114,7 +113,7 @@ public open class Vpc internal constructor(
   public override fun vpcCidrBlock(): String = unwrap(this).getVpcCidrBlock()
 
   public open fun vpcCidrBlockAssociations(): List<String> =
-      unwrap(this).getVpcCidrBlockAssociations() ?: emptyList()
+      unwrap(this).getVpcCidrBlockAssociations()
 
   public open fun vpcDefaultNetworkAcl(): String = unwrap(this).getVpcDefaultNetworkAcl()
 
@@ -122,13 +121,14 @@ public open class Vpc internal constructor(
 
   public override fun vpcId(): String = unwrap(this).getVpcId()
 
-  public open fun vpcIpv6CidrBlocks(): List<String> = unwrap(this).getVpcIpv6CidrBlocks() ?:
-      emptyList()
+  public open fun vpcIpv6CidrBlocks(): List<String> = unwrap(this).getVpcIpv6CidrBlocks()
 
   public override fun vpnGatewayId(): String? = unwrap(this).getVpnGatewayId()
 
   public interface Builder {
     public fun availabilityZones(availabilityZones: List<String>)
+
+    public fun availabilityZones(vararg availabilityZones: String)
 
     @Deprecated(message = "deprecated in CDK")
     public fun cidr(cidr: String)
@@ -169,6 +169,8 @@ public open class Vpc internal constructor(
 
     public fun subnetConfiguration(subnetConfiguration: List<SubnetConfiguration>)
 
+    public fun subnetConfiguration(vararg subnetConfiguration: SubnetConfiguration)
+
     public fun vpcName(vpcName: String)
 
     public fun vpnConnections(vpnConnections: Map<String, VpnConnectionOptions>)
@@ -178,6 +180,8 @@ public open class Vpc internal constructor(
     public fun vpnGatewayAsn(vpnGatewayAsn: Number)
 
     public fun vpnRoutePropagation(vpnRoutePropagation: List<SubnetSelection>)
+
+    public fun vpnRoutePropagation(vararg vpnRoutePropagation: SubnetSelection)
   }
 
   private class BuilderImpl(
@@ -190,6 +194,9 @@ public open class Vpc internal constructor(
     override fun availabilityZones(availabilityZones: List<String>) {
       cdkBuilder.availabilityZones(availabilityZones)
     }
+
+    override fun availabilityZones(vararg availabilityZones: String): Unit =
+        availabilityZones(availabilityZones.toList())
 
     @Deprecated(message = "deprecated in CDK")
     override fun cidr(cidr: String) {
@@ -265,6 +272,9 @@ public open class Vpc internal constructor(
       cdkBuilder.subnetConfiguration(subnetConfiguration.map(SubnetConfiguration::unwrap))
     }
 
+    override fun subnetConfiguration(vararg subnetConfiguration: SubnetConfiguration): Unit =
+        subnetConfiguration(subnetConfiguration.toList())
+
     override fun vpcName(vpcName: String) {
       cdkBuilder.vpcName(vpcName)
     }
@@ -284,6 +294,9 @@ public open class Vpc internal constructor(
     override fun vpnRoutePropagation(vpnRoutePropagation: List<SubnetSelection>) {
       cdkBuilder.vpnRoutePropagation(vpnRoutePropagation.map(SubnetSelection::unwrap))
     }
+
+    override fun vpnRoutePropagation(vararg vpnRoutePropagation: SubnetSelection): Unit =
+        vpnRoutePropagation(vpnRoutePropagation.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.Vpc = cdkBuilder.build()
   }

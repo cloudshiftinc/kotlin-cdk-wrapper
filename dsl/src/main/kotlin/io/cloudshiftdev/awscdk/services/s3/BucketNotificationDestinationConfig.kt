@@ -18,6 +18,8 @@ public interface BucketNotificationDestinationConfig {
 
     public fun dependencies(dependencies: List<IDependable>)
 
+    public fun dependencies(vararg dependencies: IDependable)
+
     public fun type(type: BucketNotificationDestinationType)
   }
 
@@ -33,6 +35,9 @@ public interface BucketNotificationDestinationConfig {
     override fun dependencies(dependencies: List<IDependable>) {
       cdkBuilder.dependencies(dependencies.map(IDependable::unwrap))
     }
+
+    override fun dependencies(vararg dependencies: IDependable): Unit =
+        dependencies(dependencies.toList())
 
     override fun type(type: BucketNotificationDestinationType) {
       cdkBuilder.type(type.let(BucketNotificationDestinationType::unwrap))

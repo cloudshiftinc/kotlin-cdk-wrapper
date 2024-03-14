@@ -18,13 +18,12 @@ public open class InterfaceVpcEndpoint internal constructor(
   public open fun vpcEndpointCreationTimestamp(): String =
       unwrap(this).getVpcEndpointCreationTimestamp()
 
-  public open fun vpcEndpointDnsEntries(): List<String> = unwrap(this).getVpcEndpointDnsEntries() ?:
-      emptyList()
+  public open fun vpcEndpointDnsEntries(): List<String> = unwrap(this).getVpcEndpointDnsEntries()
 
   public override fun vpcEndpointId(): String = unwrap(this).getVpcEndpointId()
 
   public open fun vpcEndpointNetworkInterfaceIds(): List<String> =
-      unwrap(this).getVpcEndpointNetworkInterfaceIds() ?: emptyList()
+      unwrap(this).getVpcEndpointNetworkInterfaceIds()
 
   public interface Builder {
     public fun lookupSupportedAzs(lookupSupportedAzs: Boolean)
@@ -34,6 +33,8 @@ public open class InterfaceVpcEndpoint internal constructor(
     public fun privateDnsEnabled(privateDnsEnabled: Boolean)
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
+
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
 
     public fun service(service: IInterfaceVpcEndpointService)
 
@@ -68,6 +69,9 @@ public open class InterfaceVpcEndpoint internal constructor(
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun service(service: IInterfaceVpcEndpointService) {
       cdkBuilder.service(service.let(IInterfaceVpcEndpointService::unwrap))

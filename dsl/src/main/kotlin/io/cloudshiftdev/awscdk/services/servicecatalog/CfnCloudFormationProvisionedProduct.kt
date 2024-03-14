@@ -47,6 +47,9 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
     unwrap(this).setNotificationArns(`value`)
   }
 
+  public open fun notificationArns(vararg `value`: String): Unit =
+      notificationArns(`value`.toList())
+
   public open fun pathId(): String? = unwrap(this).getPathId()
 
   public open fun pathId(`value`: String) {
@@ -99,6 +102,9 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
     unwrap(this).setProvisioningParameters(__idx_ac66f0)
   }
 
+  public open fun provisioningParameters(vararg __idx_ac66f0: Any): Unit =
+      provisioningParameters(__idx_ac66f0.toList())
+
   public open fun provisioningPreferences(): Any? = unwrap(this).getProvisioningPreferences()
 
   public open fun provisioningPreferences(`value`: IResolvable) {
@@ -124,10 +130,14 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun acceptLanguage(acceptLanguage: String)
 
     public fun notificationArns(notificationArns: List<String>)
+
+    public fun notificationArns(vararg notificationArns: String)
 
     public fun pathId(pathId: String)
 
@@ -147,6 +157,8 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
 
     public fun provisioningParameters(provisioningParameters: List<Any>)
 
+    public fun provisioningParameters(vararg provisioningParameters: Any)
+
     public fun provisioningPreferences(provisioningPreferences: IResolvable)
 
     public fun provisioningPreferences(provisioningPreferences: ProvisioningPreferencesProperty)
@@ -157,6 +169,8 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
         fun provisioningPreferences(provisioningPreferences: ProvisioningPreferencesProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -175,6 +189,9 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
     override fun notificationArns(notificationArns: List<String>) {
       cdkBuilder.notificationArns(notificationArns)
     }
+
+    override fun notificationArns(vararg notificationArns: String): Unit =
+        notificationArns(notificationArns.toList())
 
     override fun pathId(pathId: String) {
       cdkBuilder.pathId(pathId)
@@ -212,6 +229,9 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
       cdkBuilder.provisioningParameters(provisioningParameters)
     }
 
+    override fun provisioningParameters(vararg provisioningParameters: Any): Unit =
+        provisioningParameters(provisioningParameters.toList())
+
     override fun provisioningPreferences(provisioningPreferences: IResolvable) {
       cdkBuilder.provisioningPreferences(provisioningPreferences.let(IResolvable::unwrap))
     }
@@ -229,6 +249,8 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build():
         software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct =
@@ -339,6 +361,8 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
     public interface Builder {
       public fun stackSetAccounts(stackSetAccounts: List<String>)
 
+      public fun stackSetAccounts(vararg stackSetAccounts: String)
+
       public fun stackSetFailureToleranceCount(stackSetFailureToleranceCount: Number)
 
       public fun stackSetFailureTolerancePercentage(stackSetFailureTolerancePercentage: Number)
@@ -350,6 +374,8 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
       public fun stackSetOperationType(stackSetOperationType: String)
 
       public fun stackSetRegions(stackSetRegions: List<String>)
+
+      public fun stackSetRegions(vararg stackSetRegions: String)
     }
 
     private class BuilderImpl : Builder {
@@ -361,6 +387,9 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
       override fun stackSetAccounts(stackSetAccounts: List<String>) {
         cdkBuilder.stackSetAccounts(stackSetAccounts)
       }
+
+      override fun stackSetAccounts(vararg stackSetAccounts: String): Unit =
+          stackSetAccounts(stackSetAccounts.toList())
 
       override fun stackSetFailureToleranceCount(stackSetFailureToleranceCount: Number) {
         cdkBuilder.stackSetFailureToleranceCount(stackSetFailureToleranceCount)
@@ -385,6 +414,9 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
       override fun stackSetRegions(stackSetRegions: List<String>) {
         cdkBuilder.stackSetRegions(stackSetRegions)
       }
+
+      override fun stackSetRegions(vararg stackSetRegions: String): Unit =
+          stackSetRegions(stackSetRegions.toList())
 
       public fun build():
           software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct.ProvisioningPreferencesProperty

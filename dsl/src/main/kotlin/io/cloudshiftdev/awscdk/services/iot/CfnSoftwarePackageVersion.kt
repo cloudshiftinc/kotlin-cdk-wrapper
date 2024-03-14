@@ -59,6 +59,8 @@ public open class CfnSoftwarePackageVersion internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public open fun versionName(): String? = unwrap(this).getVersionName()
 
   public open fun versionName(`value`: String) {
@@ -75,6 +77,8 @@ public open class CfnSoftwarePackageVersion internal constructor(
     public fun packageName(packageName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun versionName(versionName: String)
   }
@@ -105,6 +109,8 @@ public open class CfnSoftwarePackageVersion internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun versionName(versionName: String) {
       cdkBuilder.versionName(versionName)

@@ -41,6 +41,8 @@ public open class CfnNotebookInstanceLifecycleConfig internal constructor(
     unwrap(this).setOnCreate(__idx_ac66f0)
   }
 
+  public open fun onCreate(vararg __idx_ac66f0: Any): Unit = onCreate(__idx_ac66f0.toList())
+
   public open fun onStart(): Any? = unwrap(this).getOnStart()
 
   public open fun onStart(`value`: IResolvable) {
@@ -51,6 +53,8 @@ public open class CfnNotebookInstanceLifecycleConfig internal constructor(
     unwrap(this).setOnStart(__idx_ac66f0)
   }
 
+  public open fun onStart(vararg __idx_ac66f0: Any): Unit = onStart(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun notebookInstanceLifecycleConfigName(notebookInstanceLifecycleConfigName: String)
 
@@ -58,9 +62,13 @@ public open class CfnNotebookInstanceLifecycleConfig internal constructor(
 
     public fun onCreate(onCreate: List<Any>)
 
+    public fun onCreate(vararg onCreate: Any)
+
     public fun onStart(onStart: IResolvable)
 
     public fun onStart(onStart: List<Any>)
+
+    public fun onStart(vararg onStart: Any)
   }
 
   private class BuilderImpl(
@@ -84,6 +92,8 @@ public open class CfnNotebookInstanceLifecycleConfig internal constructor(
       cdkBuilder.onCreate(onCreate)
     }
 
+    override fun onCreate(vararg onCreate: Any): Unit = onCreate(onCreate.toList())
+
     override fun onStart(onStart: IResolvable) {
       cdkBuilder.onStart(onStart.let(IResolvable::unwrap))
     }
@@ -91,6 +101,8 @@ public open class CfnNotebookInstanceLifecycleConfig internal constructor(
     override fun onStart(onStart: List<Any>) {
       cdkBuilder.onStart(onStart)
     }
+
+    override fun onStart(vararg onStart: Any): Unit = onStart(onStart.toList())
 
     public fun build(): software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig
         = cdkBuilder.build()

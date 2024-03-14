@@ -38,6 +38,9 @@ public open class CfnLaunchConfiguration internal constructor(
     unwrap(this).setBlockDeviceMappings(__idx_ac66f0)
   }
 
+  public open fun blockDeviceMappings(vararg __idx_ac66f0: Any): Unit =
+      blockDeviceMappings(__idx_ac66f0.toList())
+
   public open fun classicLinkVpcId(): String? = unwrap(this).getClassicLinkVpcId()
 
   public open fun classicLinkVpcId(`value`: String) {
@@ -50,6 +53,9 @@ public open class CfnLaunchConfiguration internal constructor(
   public open fun classicLinkVpcSecurityGroups(`value`: List<String>) {
     unwrap(this).setClassicLinkVpcSecurityGroups(`value`)
   }
+
+  public open fun classicLinkVpcSecurityGroups(vararg `value`: String): Unit =
+      classicLinkVpcSecurityGroups(`value`.toList())
 
   public open fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
 
@@ -150,6 +156,8 @@ public open class CfnLaunchConfiguration internal constructor(
     unwrap(this).setSecurityGroups(`value`)
   }
 
+  public open fun securityGroups(vararg `value`: String): Unit = securityGroups(`value`.toList())
+
   public open fun spotPrice(): String? = unwrap(this).getSpotPrice()
 
   public open fun spotPrice(`value`: String) {
@@ -171,9 +179,13 @@ public open class CfnLaunchConfiguration internal constructor(
 
     public fun blockDeviceMappings(blockDeviceMappings: List<Any>)
 
+    public fun blockDeviceMappings(vararg blockDeviceMappings: Any)
+
     public fun classicLinkVpcId(classicLinkVpcId: String)
 
     public fun classicLinkVpcSecurityGroups(classicLinkVpcSecurityGroups: List<String>)
+
+    public fun classicLinkVpcSecurityGroups(vararg classicLinkVpcSecurityGroups: String)
 
     public fun ebsOptimized(ebsOptimized: Boolean)
 
@@ -211,6 +223,8 @@ public open class CfnLaunchConfiguration internal constructor(
 
     public fun securityGroups(securityGroups: List<String>)
 
+    public fun securityGroups(vararg securityGroups: String)
+
     public fun spotPrice(spotPrice: String)
 
     public fun userData(userData: String)
@@ -240,6 +254,9 @@ public open class CfnLaunchConfiguration internal constructor(
       cdkBuilder.blockDeviceMappings(blockDeviceMappings)
     }
 
+    override fun blockDeviceMappings(vararg blockDeviceMappings: Any): Unit =
+        blockDeviceMappings(blockDeviceMappings.toList())
+
     override fun classicLinkVpcId(classicLinkVpcId: String) {
       cdkBuilder.classicLinkVpcId(classicLinkVpcId)
     }
@@ -247,6 +264,9 @@ public open class CfnLaunchConfiguration internal constructor(
     override fun classicLinkVpcSecurityGroups(classicLinkVpcSecurityGroups: List<String>) {
       cdkBuilder.classicLinkVpcSecurityGroups(classicLinkVpcSecurityGroups)
     }
+
+    override fun classicLinkVpcSecurityGroups(vararg classicLinkVpcSecurityGroups: String): Unit =
+        classicLinkVpcSecurityGroups(classicLinkVpcSecurityGroups.toList())
 
     override fun ebsOptimized(ebsOptimized: Boolean) {
       cdkBuilder.ebsOptimized(ebsOptimized)
@@ -316,6 +336,9 @@ public open class CfnLaunchConfiguration internal constructor(
     override fun securityGroups(securityGroups: List<String>) {
       cdkBuilder.securityGroups(securityGroups)
     }
+
+    override fun securityGroups(vararg securityGroups: String): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun spotPrice(spotPrice: String) {
       cdkBuilder.spotPrice(spotPrice)

@@ -30,6 +30,8 @@ public open class NestedStack internal constructor(
 
     public fun notificationArns(notificationArns: List<String>)
 
+    public fun notificationArns(vararg notificationArns: String)
+
     public fun parameters(parameters: Map<String, String>)
 
     public fun removalPolicy(removalPolicy: RemovalPolicy)
@@ -51,6 +53,9 @@ public open class NestedStack internal constructor(
     override fun notificationArns(notificationArns: List<String>) {
       cdkBuilder.notificationArns(notificationArns)
     }
+
+    override fun notificationArns(vararg notificationArns: String): Unit =
+        notificationArns(notificationArns.toList())
 
     override fun parameters(parameters: Map<String, String>) {
       cdkBuilder.parameters(parameters)

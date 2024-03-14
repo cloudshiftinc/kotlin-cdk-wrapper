@@ -25,11 +25,19 @@ public interface FunctionUrlCorsOptions {
 
     public fun allowedHeaders(allowedHeaders: List<String>)
 
+    public fun allowedHeaders(vararg allowedHeaders: String)
+
     public fun allowedMethods(allowedMethods: List<HttpMethod>)
+
+    public fun allowedMethods(vararg allowedMethods: HttpMethod)
 
     public fun allowedOrigins(allowedOrigins: List<String>)
 
+    public fun allowedOrigins(vararg allowedOrigins: String)
+
     public fun exposedHeaders(exposedHeaders: List<String>)
+
+    public fun exposedHeaders(vararg exposedHeaders: String)
 
     public fun maxAge(maxAge: Duration)
   }
@@ -46,17 +54,29 @@ public interface FunctionUrlCorsOptions {
       cdkBuilder.allowedHeaders(allowedHeaders)
     }
 
+    override fun allowedHeaders(vararg allowedHeaders: String): Unit =
+        allowedHeaders(allowedHeaders.toList())
+
     override fun allowedMethods(allowedMethods: List<HttpMethod>) {
       cdkBuilder.allowedMethods(allowedMethods.map(HttpMethod::unwrap))
     }
+
+    override fun allowedMethods(vararg allowedMethods: HttpMethod): Unit =
+        allowedMethods(allowedMethods.toList())
 
     override fun allowedOrigins(allowedOrigins: List<String>) {
       cdkBuilder.allowedOrigins(allowedOrigins)
     }
 
+    override fun allowedOrigins(vararg allowedOrigins: String): Unit =
+        allowedOrigins(allowedOrigins.toList())
+
     override fun exposedHeaders(exposedHeaders: List<String>) {
       cdkBuilder.exposedHeaders(exposedHeaders)
     }
+
+    override fun exposedHeaders(vararg exposedHeaders: String): Unit =
+        exposedHeaders(exposedHeaders.toList())
 
     override fun maxAge(maxAge: Duration) {
       cdkBuilder.maxAge(maxAge.let(Duration::unwrap))

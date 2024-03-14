@@ -20,7 +20,11 @@ public open class EcrImageCode internal constructor(
   public interface Builder {
     public fun cmd(cmd: List<String>)
 
+    public fun cmd(vararg cmd: String)
+
     public fun entrypoint(entrypoint: List<String>)
+
+    public fun entrypoint(vararg entrypoint: String)
 
     @Deprecated(message = "deprecated in CDK")
     public fun tag(tag: String)
@@ -40,9 +44,13 @@ public open class EcrImageCode internal constructor(
       cdkBuilder.cmd(cmd)
     }
 
+    override fun cmd(vararg cmd: String): Unit = cmd(cmd.toList())
+
     override fun entrypoint(entrypoint: List<String>) {
       cdkBuilder.entrypoint(entrypoint)
     }
+
+    override fun entrypoint(vararg entrypoint: String): Unit = entrypoint(entrypoint.toList())
 
     @Deprecated(message = "deprecated in CDK")
     override fun tag(tag: String) {

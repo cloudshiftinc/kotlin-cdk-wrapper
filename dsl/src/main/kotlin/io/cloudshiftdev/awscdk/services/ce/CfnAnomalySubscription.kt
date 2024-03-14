@@ -29,11 +29,13 @@ public open class CfnAnomalySubscription internal constructor(
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
-  public open fun monitorArnList(): List<String> = unwrap(this).getMonitorArnList() ?: emptyList()
+  public open fun monitorArnList(): List<String> = unwrap(this).getMonitorArnList()
 
   public open fun monitorArnList(`value`: List<String>) {
     unwrap(this).setMonitorArnList(`value`)
   }
+
+  public open fun monitorArnList(vararg `value`: String): Unit = monitorArnList(`value`.toList())
 
   public open fun resourceTags(): Any? = unwrap(this).getResourceTags()
 
@@ -45,6 +47,8 @@ public open class CfnAnomalySubscription internal constructor(
     unwrap(this).setResourceTags(__idx_ac66f0)
   }
 
+  public open fun resourceTags(vararg __idx_ac66f0: Any): Unit = resourceTags(__idx_ac66f0.toList())
+
   public open fun subscribers(): Any = unwrap(this).getSubscribers()
 
   public open fun subscribers(`value`: IResolvable) {
@@ -54,6 +58,8 @@ public open class CfnAnomalySubscription internal constructor(
   public open fun subscribers(__idx_ac66f0: List<Any>) {
     unwrap(this).setSubscribers(__idx_ac66f0)
   }
+
+  public open fun subscribers(vararg __idx_ac66f0: Any): Unit = subscribers(__idx_ac66f0.toList())
 
   public open fun subscriptionName(): String = unwrap(this).getSubscriptionName()
 
@@ -78,13 +84,19 @@ public open class CfnAnomalySubscription internal constructor(
 
     public fun monitorArnList(monitorArnList: List<String>)
 
+    public fun monitorArnList(vararg monitorArnList: String)
+
     public fun resourceTags(resourceTags: IResolvable)
 
     public fun resourceTags(resourceTags: List<Any>)
 
+    public fun resourceTags(vararg resourceTags: Any)
+
     public fun subscribers(subscribers: IResolvable)
 
     public fun subscribers(subscribers: List<Any>)
+
+    public fun subscribers(vararg subscribers: Any)
 
     public fun subscriptionName(subscriptionName: String)
 
@@ -108,6 +120,9 @@ public open class CfnAnomalySubscription internal constructor(
       cdkBuilder.monitorArnList(monitorArnList)
     }
 
+    override fun monitorArnList(vararg monitorArnList: String): Unit =
+        monitorArnList(monitorArnList.toList())
+
     override fun resourceTags(resourceTags: IResolvable) {
       cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
     }
@@ -116,6 +131,8 @@ public open class CfnAnomalySubscription internal constructor(
       cdkBuilder.resourceTags(resourceTags)
     }
 
+    override fun resourceTags(vararg resourceTags: Any): Unit = resourceTags(resourceTags.toList())
+
     override fun subscribers(subscribers: IResolvable) {
       cdkBuilder.subscribers(subscribers.let(IResolvable::unwrap))
     }
@@ -123,6 +140,8 @@ public open class CfnAnomalySubscription internal constructor(
     override fun subscribers(subscribers: List<Any>) {
       cdkBuilder.subscribers(subscribers)
     }
+
+    override fun subscribers(vararg subscribers: Any): Unit = subscribers(subscribers.toList())
 
     override fun subscriptionName(subscriptionName: String) {
       cdkBuilder.subscriptionName(subscriptionName)

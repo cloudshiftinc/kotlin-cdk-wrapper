@@ -22,6 +22,8 @@ public interface DockerBuildAssetOptions : DockerBuildOptions {
 
     public fun cacheFrom(cacheFrom: List<DockerCacheOption>)
 
+    public fun cacheFrom(vararg cacheFrom: DockerCacheOption)
+
     public fun cacheTo(cacheTo: DockerCacheOption)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -54,6 +56,9 @@ public interface DockerBuildAssetOptions : DockerBuildOptions {
     override fun cacheFrom(cacheFrom: List<DockerCacheOption>) {
       cdkBuilder.cacheFrom(cacheFrom.map(DockerCacheOption::unwrap))
     }
+
+    override fun cacheFrom(vararg cacheFrom: DockerCacheOption): Unit =
+        cacheFrom(cacheFrom.toList())
 
     override fun cacheTo(cacheTo: DockerCacheOption) {
       cdkBuilder.cacheTo(cacheTo.let(DockerCacheOption::unwrap))

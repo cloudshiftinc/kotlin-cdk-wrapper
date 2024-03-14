@@ -30,6 +30,9 @@ public open class CfnDetector internal constructor(
     unwrap(this).setAssociatedModels(__idx_ac66f0)
   }
 
+  public open fun associatedModels(vararg __idx_ac66f0: Any): Unit =
+      associatedModels(__idx_ac66f0.toList())
+
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   public open fun attrCreatedTime(): String = unwrap(this).getAttrCreatedTime()
@@ -98,6 +101,8 @@ public open class CfnDetector internal constructor(
     unwrap(this).setRules(__idx_ac66f0)
   }
 
+  public open fun rules(vararg __idx_ac66f0: Any): Unit = rules(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -107,10 +112,14 @@ public open class CfnDetector internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun associatedModels(associatedModels: IResolvable)
 
     public fun associatedModels(associatedModels: List<Any>)
+
+    public fun associatedModels(vararg associatedModels: Any)
 
     public fun description(description: String)
 
@@ -132,7 +141,11 @@ public open class CfnDetector internal constructor(
 
     public fun rules(rules: List<Any>)
 
+    public fun rules(vararg rules: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -149,6 +162,9 @@ public open class CfnDetector internal constructor(
     override fun associatedModels(associatedModels: List<Any>) {
       cdkBuilder.associatedModels(associatedModels)
     }
+
+    override fun associatedModels(vararg associatedModels: Any): Unit =
+        associatedModels(associatedModels.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -187,9 +203,13 @@ public open class CfnDetector internal constructor(
       cdkBuilder.rules(rules)
     }
 
+    override fun rules(vararg rules: Any): Unit = rules(rules.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.frauddetector.CfnDetector =
         cdkBuilder.build()
@@ -247,6 +267,8 @@ public open class CfnDetector internal constructor(
       public fun name(name: String)
 
       public fun tags(tags: List<CfnTag>)
+
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
@@ -285,6 +307,8 @@ public open class CfnDetector internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       public fun build(): software.amazon.awscdk.services.frauddetector.CfnDetector.LabelProperty =
           cdkBuilder.build()
@@ -361,9 +385,13 @@ public open class CfnDetector internal constructor(
 
       public fun entityTypes(entityTypes: List<Any>)
 
+      public fun entityTypes(vararg entityTypes: Any)
+
       public fun eventVariables(eventVariables: IResolvable)
 
       public fun eventVariables(eventVariables: List<Any>)
+
+      public fun eventVariables(vararg eventVariables: Any)
 
       public fun `inline`(`inline`: Boolean)
 
@@ -373,11 +401,15 @@ public open class CfnDetector internal constructor(
 
       public fun labels(labels: List<Any>)
 
+      public fun labels(vararg labels: Any)
+
       public fun lastUpdatedTime(lastUpdatedTime: String)
 
       public fun name(name: String)
 
       public fun tags(tags: List<CfnTag>)
+
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
@@ -405,6 +437,8 @@ public open class CfnDetector internal constructor(
         cdkBuilder.entityTypes(entityTypes)
       }
 
+      override fun entityTypes(vararg entityTypes: Any): Unit = entityTypes(entityTypes.toList())
+
       override fun eventVariables(eventVariables: IResolvable) {
         cdkBuilder.eventVariables(eventVariables.let(IResolvable::unwrap))
       }
@@ -412,6 +446,9 @@ public open class CfnDetector internal constructor(
       override fun eventVariables(eventVariables: List<Any>) {
         cdkBuilder.eventVariables(eventVariables)
       }
+
+      override fun eventVariables(vararg eventVariables: Any): Unit =
+          eventVariables(eventVariables.toList())
 
       override fun `inline`(`inline`: Boolean) {
         cdkBuilder.`inline`(`inline`)
@@ -429,6 +466,8 @@ public open class CfnDetector internal constructor(
         cdkBuilder.labels(labels)
       }
 
+      override fun labels(vararg labels: Any): Unit = labels(labels.toList())
+
       override fun lastUpdatedTime(lastUpdatedTime: String) {
         cdkBuilder.lastUpdatedTime(lastUpdatedTime)
       }
@@ -440,6 +479,8 @@ public open class CfnDetector internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       public fun build():
           software.amazon.awscdk.services.frauddetector.CfnDetector.EventTypeProperty =
@@ -522,6 +563,8 @@ public open class CfnDetector internal constructor(
       public fun name(name: String)
 
       public fun tags(tags: List<CfnTag>)
+
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
@@ -560,6 +603,8 @@ public open class CfnDetector internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       public fun build(): software.amazon.awscdk.services.frauddetector.CfnDetector.OutcomeProperty
           = cdkBuilder.build()
@@ -646,11 +691,15 @@ public open class CfnDetector internal constructor(
 
       public fun outcomes(outcomes: List<Any>)
 
+      public fun outcomes(vararg outcomes: Any)
+
       public fun ruleId(ruleId: String)
 
       public fun ruleVersion(ruleVersion: String)
 
       public fun tags(tags: List<CfnTag>)
+
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
@@ -694,6 +743,8 @@ public open class CfnDetector internal constructor(
         cdkBuilder.outcomes(outcomes)
       }
 
+      override fun outcomes(vararg outcomes: Any): Unit = outcomes(outcomes.toList())
+
       override fun ruleId(ruleId: String) {
         cdkBuilder.ruleId(ruleId)
       }
@@ -705,6 +756,8 @@ public open class CfnDetector internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       public fun build(): software.amazon.awscdk.services.frauddetector.CfnDetector.RuleProperty =
           cdkBuilder.build()
@@ -835,6 +888,8 @@ public open class CfnDetector internal constructor(
       public fun name(name: String)
 
       public fun tags(tags: List<CfnTag>)
+
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
@@ -873,6 +928,8 @@ public open class CfnDetector internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       public fun build():
           software.amazon.awscdk.services.frauddetector.CfnDetector.EntityTypeProperty =
@@ -964,6 +1021,8 @@ public open class CfnDetector internal constructor(
 
       public fun tags(tags: List<CfnTag>)
 
+      public fun tags(vararg tags: CfnTag)
+
       public fun variableType(variableType: String)
     }
 
@@ -1015,6 +1074,8 @@ public open class CfnDetector internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       override fun variableType(variableType: String) {
         cdkBuilder.variableType(variableType)

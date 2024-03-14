@@ -85,6 +85,8 @@ public open class NetworkTargetGroup internal constructor(
 
     public fun targets(targets: List<INetworkLoadBalancerTarget>)
 
+    public fun targets(vararg targets: INetworkLoadBalancerTarget)
+
     public fun vpc(vpc: IVpc)
   }
 
@@ -141,6 +143,9 @@ public open class NetworkTargetGroup internal constructor(
     override fun targets(targets: List<INetworkLoadBalancerTarget>) {
       cdkBuilder.targets(targets.map(INetworkLoadBalancerTarget::unwrap))
     }
+
+    override fun targets(vararg targets: INetworkLoadBalancerTarget): Unit =
+        targets(targets.toList())
 
     override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))

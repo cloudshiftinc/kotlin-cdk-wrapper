@@ -64,6 +64,8 @@ public open class CfnEnvironment internal constructor(
     unwrap(this).setGlossaryTerms(`value`)
   }
 
+  public open fun glossaryTerms(vararg `value`: String): Unit = glossaryTerms(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -90,6 +92,9 @@ public open class CfnEnvironment internal constructor(
     unwrap(this).setUserParameters(__idx_ac66f0)
   }
 
+  public open fun userParameters(vararg __idx_ac66f0: Any): Unit =
+      userParameters(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun description(description: String)
 
@@ -99,6 +104,8 @@ public open class CfnEnvironment internal constructor(
 
     public fun glossaryTerms(glossaryTerms: List<String>)
 
+    public fun glossaryTerms(vararg glossaryTerms: String)
+
     public fun name(name: String)
 
     public fun projectIdentifier(projectIdentifier: String)
@@ -106,6 +113,8 @@ public open class CfnEnvironment internal constructor(
     public fun userParameters(userParameters: IResolvable)
 
     public fun userParameters(userParameters: List<Any>)
+
+    public fun userParameters(vararg userParameters: Any)
   }
 
   private class BuilderImpl(
@@ -131,6 +140,9 @@ public open class CfnEnvironment internal constructor(
       cdkBuilder.glossaryTerms(glossaryTerms)
     }
 
+    override fun glossaryTerms(vararg glossaryTerms: String): Unit =
+        glossaryTerms(glossaryTerms.toList())
+
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -146,6 +158,9 @@ public open class CfnEnvironment internal constructor(
     override fun userParameters(userParameters: List<Any>) {
       cdkBuilder.userParameters(userParameters)
     }
+
+    override fun userParameters(vararg userParameters: Any): Unit =
+        userParameters(userParameters.toList())
 
     public fun build(): software.amazon.awscdk.services.datazone.CfnEnvironment = cdkBuilder.build()
   }

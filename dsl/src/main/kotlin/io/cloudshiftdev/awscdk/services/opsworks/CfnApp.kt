@@ -55,6 +55,8 @@ public open class CfnApp internal constructor(
     unwrap(this).setDataSources(__idx_ac66f0)
   }
 
+  public open fun dataSources(vararg __idx_ac66f0: Any): Unit = dataSources(__idx_ac66f0.toList())
+
   public open fun description(): String? = unwrap(this).getDescription()
 
   public open fun description(`value`: String) {
@@ -66,6 +68,8 @@ public open class CfnApp internal constructor(
   public open fun domains(`value`: List<String>) {
     unwrap(this).setDomains(`value`)
   }
+
+  public open fun domains(vararg `value`: String): Unit = domains(`value`.toList())
 
   public open fun enableSsl(): Any? = unwrap(this).getEnableSsl()
 
@@ -86,6 +90,8 @@ public open class CfnApp internal constructor(
   public open fun environment(__idx_ac66f0: List<Any>) {
     unwrap(this).setEnvironment(__idx_ac66f0)
   }
+
+  public open fun environment(vararg __idx_ac66f0: Any): Unit = environment(__idx_ac66f0.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -147,9 +153,13 @@ public open class CfnApp internal constructor(
 
     public fun dataSources(dataSources: List<Any>)
 
+    public fun dataSources(vararg dataSources: Any)
+
     public fun description(description: String)
 
     public fun domains(domains: List<String>)
+
+    public fun domains(vararg domains: String)
 
     public fun enableSsl(enableSsl: Boolean)
 
@@ -158,6 +168,8 @@ public open class CfnApp internal constructor(
     public fun environment(environment: IResolvable)
 
     public fun environment(environment: List<Any>)
+
+    public fun environment(vararg environment: Any)
 
     public fun name(name: String)
 
@@ -212,6 +224,8 @@ public open class CfnApp internal constructor(
       cdkBuilder.dataSources(dataSources)
     }
 
+    override fun dataSources(vararg dataSources: Any): Unit = dataSources(dataSources.toList())
+
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
@@ -219,6 +233,8 @@ public open class CfnApp internal constructor(
     override fun domains(domains: List<String>) {
       cdkBuilder.domains(domains)
     }
+
+    override fun domains(vararg domains: String): Unit = domains(domains.toList())
 
     override fun enableSsl(enableSsl: Boolean) {
       cdkBuilder.enableSsl(enableSsl)
@@ -235,6 +251,8 @@ public open class CfnApp internal constructor(
     override fun environment(environment: List<Any>) {
       cdkBuilder.environment(environment)
     }
+
+    override fun environment(vararg environment: Any): Unit = environment(environment.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)

@@ -67,6 +67,9 @@ public open class CfnDeploymentGroup internal constructor(
     unwrap(this).setAutoScalingGroups(`value`)
   }
 
+  public open fun autoScalingGroups(vararg `value`: String): Unit =
+      autoScalingGroups(`value`.toList())
+
   public open fun blueGreenDeploymentConfiguration(): Any? =
       unwrap(this).getBlueGreenDeploymentConfiguration()
 
@@ -137,6 +140,9 @@ public open class CfnDeploymentGroup internal constructor(
     unwrap(this).setEc2TagFilters(__idx_ac66f0)
   }
 
+  public open fun ec2TagFilters(vararg __idx_ac66f0: Any): Unit =
+      ec2TagFilters(__idx_ac66f0.toList())
+
   public open fun ec2TagSet(): Any? = unwrap(this).getEc2TagSet()
 
   public open fun ec2TagSet(`value`: IResolvable) {
@@ -161,6 +167,8 @@ public open class CfnDeploymentGroup internal constructor(
   public open fun ecsServices(__idx_ac66f0: List<Any>) {
     unwrap(this).setEcsServices(__idx_ac66f0)
   }
+
+  public open fun ecsServices(vararg __idx_ac66f0: Any): Unit = ecsServices(__idx_ac66f0.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -191,6 +199,9 @@ public open class CfnDeploymentGroup internal constructor(
   public open fun onPremisesInstanceTagFilters(__idx_ac66f0: List<Any>) {
     unwrap(this).setOnPremisesInstanceTagFilters(__idx_ac66f0)
   }
+
+  public open fun onPremisesInstanceTagFilters(vararg __idx_ac66f0: Any): Unit =
+      onPremisesInstanceTagFilters(__idx_ac66f0.toList())
 
   public open fun onPremisesTagSet(): Any? = unwrap(this).getOnPremisesTagSet()
 
@@ -228,6 +239,8 @@ public open class CfnDeploymentGroup internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun terminationHookEnabled(): Any? = unwrap(this).getTerminationHookEnabled()
 
   public open fun terminationHookEnabled(`value`: Boolean) {
@@ -247,6 +260,9 @@ public open class CfnDeploymentGroup internal constructor(
   public open fun triggerConfigurations(__idx_ac66f0: List<Any>) {
     unwrap(this).setTriggerConfigurations(__idx_ac66f0)
   }
+
+  public open fun triggerConfigurations(vararg __idx_ac66f0: Any): Unit =
+      triggerConfigurations(__idx_ac66f0.toList())
 
   public interface Builder {
     public fun alarmConfiguration(alarmConfiguration: IResolvable)
@@ -270,6 +286,8 @@ public open class CfnDeploymentGroup internal constructor(
         fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigurationProperty.Builder.() -> Unit)
 
     public fun autoScalingGroups(autoScalingGroups: List<String>)
+
+    public fun autoScalingGroups(vararg autoScalingGroups: String)
 
     public fun blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration: IResolvable)
 
@@ -305,6 +323,8 @@ public open class CfnDeploymentGroup internal constructor(
 
     public fun ec2TagFilters(ec2TagFilters: List<Any>)
 
+    public fun ec2TagFilters(vararg ec2TagFilters: Any)
+
     public fun ec2TagSet(ec2TagSet: IResolvable)
 
     public fun ec2TagSet(ec2TagSet: EC2TagSetProperty)
@@ -317,6 +337,8 @@ public open class CfnDeploymentGroup internal constructor(
 
     public fun ecsServices(ecsServices: List<Any>)
 
+    public fun ecsServices(vararg ecsServices: Any)
+
     public fun loadBalancerInfo(loadBalancerInfo: IResolvable)
 
     public fun loadBalancerInfo(loadBalancerInfo: LoadBalancerInfoProperty)
@@ -328,6 +350,8 @@ public open class CfnDeploymentGroup internal constructor(
     public fun onPremisesInstanceTagFilters(onPremisesInstanceTagFilters: IResolvable)
 
     public fun onPremisesInstanceTagFilters(onPremisesInstanceTagFilters: List<Any>)
+
+    public fun onPremisesInstanceTagFilters(vararg onPremisesInstanceTagFilters: Any)
 
     public fun onPremisesTagSet(onPremisesTagSet: IResolvable)
 
@@ -343,6 +367,8 @@ public open class CfnDeploymentGroup internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun terminationHookEnabled(terminationHookEnabled: Boolean)
 
     public fun terminationHookEnabled(terminationHookEnabled: IResolvable)
@@ -350,6 +376,8 @@ public open class CfnDeploymentGroup internal constructor(
     public fun triggerConfigurations(triggerConfigurations: IResolvable)
 
     public fun triggerConfigurations(triggerConfigurations: List<Any>)
+
+    public fun triggerConfigurations(vararg triggerConfigurations: Any)
   }
 
   private class BuilderImpl(
@@ -396,6 +424,9 @@ public open class CfnDeploymentGroup internal constructor(
     override fun autoScalingGroups(autoScalingGroups: List<String>) {
       cdkBuilder.autoScalingGroups(autoScalingGroups)
     }
+
+    override fun autoScalingGroups(vararg autoScalingGroups: String): Unit =
+        autoScalingGroups(autoScalingGroups.toList())
 
     override fun blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration: IResolvable) {
       cdkBuilder.blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration.let(IResolvable::unwrap))
@@ -455,6 +486,9 @@ public open class CfnDeploymentGroup internal constructor(
       cdkBuilder.ec2TagFilters(ec2TagFilters)
     }
 
+    override fun ec2TagFilters(vararg ec2TagFilters: Any): Unit =
+        ec2TagFilters(ec2TagFilters.toList())
+
     override fun ec2TagSet(ec2TagSet: IResolvable) {
       cdkBuilder.ec2TagSet(ec2TagSet.let(IResolvable::unwrap))
     }
@@ -476,6 +510,8 @@ public open class CfnDeploymentGroup internal constructor(
       cdkBuilder.ecsServices(ecsServices)
     }
 
+    override fun ecsServices(vararg ecsServices: Any): Unit = ecsServices(ecsServices.toList())
+
     override fun loadBalancerInfo(loadBalancerInfo: IResolvable) {
       cdkBuilder.loadBalancerInfo(loadBalancerInfo.let(IResolvable::unwrap))
     }
@@ -496,6 +532,9 @@ public open class CfnDeploymentGroup internal constructor(
     override fun onPremisesInstanceTagFilters(onPremisesInstanceTagFilters: List<Any>) {
       cdkBuilder.onPremisesInstanceTagFilters(onPremisesInstanceTagFilters)
     }
+
+    override fun onPremisesInstanceTagFilters(vararg onPremisesInstanceTagFilters: Any): Unit =
+        onPremisesInstanceTagFilters(onPremisesInstanceTagFilters.toList())
 
     override fun onPremisesTagSet(onPremisesTagSet: IResolvable) {
       cdkBuilder.onPremisesTagSet(onPremisesTagSet.let(IResolvable::unwrap))
@@ -522,6 +561,8 @@ public open class CfnDeploymentGroup internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun terminationHookEnabled(terminationHookEnabled: Boolean) {
       cdkBuilder.terminationHookEnabled(terminationHookEnabled)
     }
@@ -537,6 +578,9 @@ public open class CfnDeploymentGroup internal constructor(
     override fun triggerConfigurations(triggerConfigurations: List<Any>) {
       cdkBuilder.triggerConfigurations(triggerConfigurations)
     }
+
+    override fun triggerConfigurations(vararg triggerConfigurations: Any): Unit =
+        triggerConfigurations(triggerConfigurations.toList())
 
     public fun build(): software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup =
         cdkBuilder.build()
@@ -673,6 +717,8 @@ public open class CfnDeploymentGroup internal constructor(
       public fun enabled(enabled: IResolvable)
 
       public fun events(events: List<String>)
+
+      public fun events(vararg events: String)
     }
 
     private class BuilderImpl : Builder {
@@ -692,6 +738,8 @@ public open class CfnDeploymentGroup internal constructor(
       override fun events(events: List<String>) {
         cdkBuilder.events(events)
       }
+
+      override fun events(vararg events: String): Unit = events(events.toList())
 
       public fun build():
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AutoRollbackConfigurationProperty
@@ -799,13 +847,19 @@ public open class CfnDeploymentGroup internal constructor(
 
       public fun elbInfoList(elbInfoList: List<Any>)
 
+      public fun elbInfoList(vararg elbInfoList: Any)
+
       public fun targetGroupInfoList(targetGroupInfoList: IResolvable)
 
       public fun targetGroupInfoList(targetGroupInfoList: List<Any>)
 
+      public fun targetGroupInfoList(vararg targetGroupInfoList: Any)
+
       public fun targetGroupPairInfoList(targetGroupPairInfoList: IResolvable)
 
       public fun targetGroupPairInfoList(targetGroupPairInfoList: List<Any>)
+
+      public fun targetGroupPairInfoList(vararg targetGroupPairInfoList: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -822,6 +876,8 @@ public open class CfnDeploymentGroup internal constructor(
         cdkBuilder.elbInfoList(elbInfoList)
       }
 
+      override fun elbInfoList(vararg elbInfoList: Any): Unit = elbInfoList(elbInfoList.toList())
+
       override fun targetGroupInfoList(targetGroupInfoList: IResolvable) {
         cdkBuilder.targetGroupInfoList(targetGroupInfoList.let(IResolvable::unwrap))
       }
@@ -830,6 +886,9 @@ public open class CfnDeploymentGroup internal constructor(
         cdkBuilder.targetGroupInfoList(targetGroupInfoList)
       }
 
+      override fun targetGroupInfoList(vararg targetGroupInfoList: Any): Unit =
+          targetGroupInfoList(targetGroupInfoList.toList())
+
       override fun targetGroupPairInfoList(targetGroupPairInfoList: IResolvable) {
         cdkBuilder.targetGroupPairInfoList(targetGroupPairInfoList.let(IResolvable::unwrap))
       }
@@ -837,6 +896,9 @@ public open class CfnDeploymentGroup internal constructor(
       override fun targetGroupPairInfoList(targetGroupPairInfoList: List<Any>) {
         cdkBuilder.targetGroupPairInfoList(targetGroupPairInfoList)
       }
+
+      override fun targetGroupPairInfoList(vararg targetGroupPairInfoList: Any): Unit =
+          targetGroupPairInfoList(targetGroupPairInfoList.toList())
 
       public fun build():
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.LoadBalancerInfoProperty =
@@ -1168,6 +1230,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       public fun alarms(alarms: List<Any>)
 
+      public fun alarms(vararg alarms: Any)
+
       public fun enabled(enabled: Boolean)
 
       public fun enabled(enabled: IResolvable)
@@ -1190,6 +1254,8 @@ public open class CfnDeploymentGroup internal constructor(
       override fun alarms(alarms: List<Any>) {
         cdkBuilder.alarms(alarms)
       }
+
+      override fun alarms(vararg alarms: Any): Unit = alarms(alarms.toList())
 
       override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
@@ -1407,6 +1473,8 @@ public open class CfnDeploymentGroup internal constructor(
       public fun onPremisesTagSetList(onPremisesTagSetList: IResolvable)
 
       public fun onPremisesTagSetList(onPremisesTagSetList: List<Any>)
+
+      public fun onPremisesTagSetList(vararg onPremisesTagSetList: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1422,6 +1490,9 @@ public open class CfnDeploymentGroup internal constructor(
       override fun onPremisesTagSetList(onPremisesTagSetList: List<Any>) {
         cdkBuilder.onPremisesTagSetList(onPremisesTagSetList)
       }
+
+      override fun onPremisesTagSetList(vararg onPremisesTagSetList: Any): Unit =
+          onPremisesTagSetList(onPremisesTagSetList.toList())
 
       public fun build():
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetProperty =
@@ -1460,6 +1531,8 @@ public open class CfnDeploymentGroup internal constructor(
 
     public interface Builder {
       public fun listenerArns(listenerArns: List<String>)
+
+      public fun listenerArns(vararg listenerArns: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1471,6 +1544,9 @@ public open class CfnDeploymentGroup internal constructor(
       override fun listenerArns(listenerArns: List<String>) {
         cdkBuilder.listenerArns(listenerArns)
       }
+
+      override fun listenerArns(vararg listenerArns: String): Unit =
+          listenerArns(listenerArns.toList())
 
       public fun build():
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TrafficRouteProperty =
@@ -1573,6 +1649,8 @@ public open class CfnDeploymentGroup internal constructor(
     public interface Builder {
       public fun triggerEvents(triggerEvents: List<String>)
 
+      public fun triggerEvents(vararg triggerEvents: String)
+
       public fun triggerName(triggerName: String)
 
       public fun triggerTargetArn(triggerTargetArn: String)
@@ -1587,6 +1665,9 @@ public open class CfnDeploymentGroup internal constructor(
       override fun triggerEvents(triggerEvents: List<String>) {
         cdkBuilder.triggerEvents(triggerEvents)
       }
+
+      override fun triggerEvents(vararg triggerEvents: String): Unit =
+          triggerEvents(triggerEvents.toList())
 
       override fun triggerName(triggerName: String) {
         cdkBuilder.triggerName(triggerName)
@@ -1652,6 +1733,8 @@ public open class CfnDeploymentGroup internal constructor(
 
       public fun targetGroups(targetGroups: List<Any>)
 
+      public fun targetGroups(vararg targetGroups: Any)
+
       public fun testTrafficRoute(testTrafficRoute: IResolvable)
 
       public fun testTrafficRoute(testTrafficRoute: TrafficRouteProperty)
@@ -1687,6 +1770,9 @@ public open class CfnDeploymentGroup internal constructor(
       override fun targetGroups(targetGroups: List<Any>) {
         cdkBuilder.targetGroups(targetGroups)
       }
+
+      override fun targetGroups(vararg targetGroups: Any): Unit =
+          targetGroups(targetGroups.toList())
 
       override fun testTrafficRoute(testTrafficRoute: IResolvable) {
         cdkBuilder.testTrafficRoute(testTrafficRoute.let(IResolvable::unwrap))
@@ -1942,6 +2028,8 @@ public open class CfnDeploymentGroup internal constructor(
       public fun ec2TagSetList(ec2TagSetList: IResolvable)
 
       public fun ec2TagSetList(ec2TagSetList: List<Any>)
+
+      public fun ec2TagSetList(vararg ec2TagSetList: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1956,6 +2044,9 @@ public open class CfnDeploymentGroup internal constructor(
       override fun ec2TagSetList(ec2TagSetList: List<Any>) {
         cdkBuilder.ec2TagSetList(ec2TagSetList)
       }
+
+      override fun ec2TagSetList(vararg ec2TagSetList: Any): Unit =
+          ec2TagSetList(ec2TagSetList.toList())
 
       public fun build():
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty =
@@ -2181,6 +2272,8 @@ public open class CfnDeploymentGroup internal constructor(
       public fun onPremisesTagGroup(onPremisesTagGroup: IResolvable)
 
       public fun onPremisesTagGroup(onPremisesTagGroup: List<Any>)
+
+      public fun onPremisesTagGroup(vararg onPremisesTagGroup: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2196,6 +2289,9 @@ public open class CfnDeploymentGroup internal constructor(
       override fun onPremisesTagGroup(onPremisesTagGroup: List<Any>) {
         cdkBuilder.onPremisesTagGroup(onPremisesTagGroup)
       }
+
+      override fun onPremisesTagGroup(vararg onPremisesTagGroup: Any): Unit =
+          onPremisesTagGroup(onPremisesTagGroup.toList())
 
       public fun build():
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty
@@ -2237,6 +2333,8 @@ public open class CfnDeploymentGroup internal constructor(
       public fun ec2TagGroup(ec2TagGroup: IResolvable)
 
       public fun ec2TagGroup(ec2TagGroup: List<Any>)
+
+      public fun ec2TagGroup(vararg ec2TagGroup: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2252,6 +2350,8 @@ public open class CfnDeploymentGroup internal constructor(
       override fun ec2TagGroup(ec2TagGroup: List<Any>) {
         cdkBuilder.ec2TagGroup(ec2TagGroup)
       }
+
+      override fun ec2TagGroup(vararg ec2TagGroup: Any): Unit = ec2TagGroup(ec2TagGroup.toList())
 
       public fun build():
           software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty

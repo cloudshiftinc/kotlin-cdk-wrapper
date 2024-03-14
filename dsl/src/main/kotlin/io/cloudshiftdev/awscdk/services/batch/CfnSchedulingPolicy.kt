@@ -196,6 +196,8 @@ public open class CfnSchedulingPolicy internal constructor(
       public fun shareDistribution(shareDistribution: IResolvable)
 
       public fun shareDistribution(shareDistribution: List<Any>)
+
+      public fun shareDistribution(vararg shareDistribution: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -219,6 +221,9 @@ public open class CfnSchedulingPolicy internal constructor(
       override fun shareDistribution(shareDistribution: List<Any>) {
         cdkBuilder.shareDistribution(shareDistribution)
       }
+
+      override fun shareDistribution(vararg shareDistribution: Any): Unit =
+          shareDistribution(shareDistribution.toList())
 
       public fun build():
           software.amazon.awscdk.services.batch.CfnSchedulingPolicy.FairsharePolicyProperty =

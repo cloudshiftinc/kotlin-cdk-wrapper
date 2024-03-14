@@ -45,5 +45,6 @@ aspectj-tools = { module = "org.aspectj:aspectjtools", version = "1.9.21.1" }
 
 guava = { module = "com.google.guava:guava", version = "32.1.3-jre" }
 awscdk = { module = "software.amazon.awscdk:aws-cdk-lib", version = "2.132.0" }
+awscdk-constructs = { module = "software.constructs:constructs", version = "10.3.0" }
 squareup-kotlinpoet = { module = "com.squareup:kotlinpoet", version = "1.16.0" }
 javaparser-core = { module = "com.github.javaparser:javaparser-core", version = "3.25.9" }

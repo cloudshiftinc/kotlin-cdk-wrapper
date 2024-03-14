@@ -24,6 +24,8 @@ public open class CfnQueryDefinition internal constructor(
     unwrap(this).setLogGroupNames(`value`)
   }
 
+  public open fun logGroupNames(vararg `value`: String): Unit = logGroupNames(`value`.toList())
+
   public open fun name(): String = unwrap(this).getName()
 
   public open fun name(`value`: String) {
@@ -38,6 +40,8 @@ public open class CfnQueryDefinition internal constructor(
 
   public interface Builder {
     public fun logGroupNames(logGroupNames: List<String>)
+
+    public fun logGroupNames(vararg logGroupNames: String)
 
     public fun name(name: String)
 
@@ -54,6 +58,9 @@ public open class CfnQueryDefinition internal constructor(
     override fun logGroupNames(logGroupNames: List<String>) {
       cdkBuilder.logGroupNames(logGroupNames)
     }
+
+    override fun logGroupNames(vararg logGroupNames: String): Unit =
+        logGroupNames(logGroupNames.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)

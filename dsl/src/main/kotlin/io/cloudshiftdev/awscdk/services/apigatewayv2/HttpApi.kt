@@ -163,6 +163,8 @@ public open class HttpApi internal constructor(
 
     public fun defaultAuthorizationScopes(defaultAuthorizationScopes: List<String>)
 
+    public fun defaultAuthorizationScopes(vararg defaultAuthorizationScopes: String)
+
     public fun defaultAuthorizer(defaultAuthorizer: IHttpRouteAuthorizer)
 
     public fun defaultDomainMapping(defaultDomainMapping: DomainMappingOptions)
@@ -205,6 +207,9 @@ public open class HttpApi internal constructor(
     override fun defaultAuthorizationScopes(defaultAuthorizationScopes: List<String>) {
       cdkBuilder.defaultAuthorizationScopes(defaultAuthorizationScopes)
     }
+
+    override fun defaultAuthorizationScopes(vararg defaultAuthorizationScopes: String): Unit =
+        defaultAuthorizationScopes(defaultAuthorizationScopes.toList())
 
     override fun defaultAuthorizer(defaultAuthorizer: IHttpRouteAuthorizer) {
       cdkBuilder.defaultAuthorizer(defaultAuthorizer.let(IHttpRouteAuthorizer::unwrap))

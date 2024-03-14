@@ -39,6 +39,8 @@ public open class Accelerator internal constructor(
     public fun ipAddressType(ipAddressType: IpAddressType)
 
     public fun ipAddresses(ipAddresses: List<String>)
+
+    public fun ipAddresses(vararg ipAddresses: String)
   }
 
   private class BuilderImpl(
@@ -63,6 +65,8 @@ public open class Accelerator internal constructor(
     override fun ipAddresses(ipAddresses: List<String>) {
       cdkBuilder.ipAddresses(ipAddresses)
     }
+
+    override fun ipAddresses(vararg ipAddresses: String): Unit = ipAddresses(ipAddresses.toList())
 
     public fun build(): software.amazon.awscdk.services.globalaccelerator.Accelerator =
         cdkBuilder.build()

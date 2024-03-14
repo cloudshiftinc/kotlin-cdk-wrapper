@@ -184,12 +184,17 @@ public open class CfnFleet internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun usbDeviceFilterStrings(): List<String> = unwrap(this).getUsbDeviceFilterStrings()
       ?: emptyList()
 
   public open fun usbDeviceFilterStrings(`value`: List<String>) {
     unwrap(this).setUsbDeviceFilterStrings(`value`)
   }
+
+  public open fun usbDeviceFilterStrings(vararg `value`: String): Unit =
+      usbDeviceFilterStrings(`value`.toList())
 
   public open fun vpcConfig(): Any? = unwrap(this).getVpcConfig()
 
@@ -268,7 +273,11 @@ public open class CfnFleet internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun usbDeviceFilterStrings(usbDeviceFilterStrings: List<String>)
+
+    public fun usbDeviceFilterStrings(vararg usbDeviceFilterStrings: String)
 
     public fun vpcConfig(vpcConfig: IResolvable)
 
@@ -398,9 +407,14 @@ public open class CfnFleet internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun usbDeviceFilterStrings(usbDeviceFilterStrings: List<String>) {
       cdkBuilder.usbDeviceFilterStrings(usbDeviceFilterStrings)
     }
+
+    override fun usbDeviceFilterStrings(vararg usbDeviceFilterStrings: String): Unit =
+        usbDeviceFilterStrings(usbDeviceFilterStrings.toList())
 
     override fun vpcConfig(vpcConfig: IResolvable) {
       cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
@@ -560,7 +574,11 @@ public open class CfnFleet internal constructor(
     public interface Builder {
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -572,9 +590,14 @@ public open class CfnFleet internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       public fun build(): software.amazon.awscdk.services.appstream.CfnFleet.VpcConfigProperty =
           cdkBuilder.build()

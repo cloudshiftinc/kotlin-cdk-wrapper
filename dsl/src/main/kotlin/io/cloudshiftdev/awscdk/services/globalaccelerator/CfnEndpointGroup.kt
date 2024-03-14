@@ -28,6 +28,9 @@ public open class CfnEndpointGroup internal constructor(
     unwrap(this).setEndpointConfigurations(__idx_ac66f0)
   }
 
+  public open fun endpointConfigurations(vararg __idx_ac66f0: Any): Unit =
+      endpointConfigurations(__idx_ac66f0.toList())
+
   public open fun endpointGroupRegion(): String = unwrap(this).getEndpointGroupRegion()
 
   public open fun endpointGroupRegion(`value`: String) {
@@ -79,6 +82,9 @@ public open class CfnEndpointGroup internal constructor(
     unwrap(this).setPortOverrides(__idx_ac66f0)
   }
 
+  public open fun portOverrides(vararg __idx_ac66f0: Any): Unit =
+      portOverrides(__idx_ac66f0.toList())
+
   public open fun thresholdCount(): Number? = unwrap(this).getThresholdCount()
 
   public open fun thresholdCount(`value`: Number) {
@@ -96,6 +102,8 @@ public open class CfnEndpointGroup internal constructor(
 
     public fun endpointConfigurations(endpointConfigurations: List<Any>)
 
+    public fun endpointConfigurations(vararg endpointConfigurations: Any)
+
     public fun endpointGroupRegion(endpointGroupRegion: String)
 
     public fun healthCheckIntervalSeconds(healthCheckIntervalSeconds: Number)
@@ -111,6 +119,8 @@ public open class CfnEndpointGroup internal constructor(
     public fun portOverrides(portOverrides: IResolvable)
 
     public fun portOverrides(portOverrides: List<Any>)
+
+    public fun portOverrides(vararg portOverrides: Any)
 
     public fun thresholdCount(thresholdCount: Number)
 
@@ -132,6 +142,9 @@ public open class CfnEndpointGroup internal constructor(
     override fun endpointConfigurations(endpointConfigurations: List<Any>) {
       cdkBuilder.endpointConfigurations(endpointConfigurations)
     }
+
+    override fun endpointConfigurations(vararg endpointConfigurations: Any): Unit =
+        endpointConfigurations(endpointConfigurations.toList())
 
     override fun endpointGroupRegion(endpointGroupRegion: String) {
       cdkBuilder.endpointGroupRegion(endpointGroupRegion)
@@ -164,6 +177,9 @@ public open class CfnEndpointGroup internal constructor(
     override fun portOverrides(portOverrides: List<Any>) {
       cdkBuilder.portOverrides(portOverrides)
     }
+
+    override fun portOverrides(vararg portOverrides: Any): Unit =
+        portOverrides(portOverrides.toList())
 
     override fun thresholdCount(thresholdCount: Number) {
       cdkBuilder.thresholdCount(thresholdCount)

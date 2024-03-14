@@ -91,6 +91,9 @@ public open class CfnServer internal constructor(
     unwrap(this).setEngineAttributes(__idx_ac66f0)
   }
 
+  public open fun engineAttributes(vararg __idx_ac66f0: Any): Unit =
+      engineAttributes(__idx_ac66f0.toList())
+
   public open fun engineModel(): String? = unwrap(this).getEngineModel()
 
   public open fun engineModel(`value`: String) {
@@ -145,6 +148,9 @@ public open class CfnServer internal constructor(
     unwrap(this).setSecurityGroupIds(`value`)
   }
 
+  public open fun securityGroupIds(vararg `value`: String): Unit =
+      securityGroupIds(`value`.toList())
+
   public open fun serverName(): String? = unwrap(this).getServerName()
 
   public open fun serverName(`value`: String) {
@@ -163,6 +169,8 @@ public open class CfnServer internal constructor(
     unwrap(this).setSubnetIds(`value`)
   }
 
+  public open fun subnetIds(vararg `value`: String): Unit = subnetIds(`value`.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -171,6 +179,8 @@ public open class CfnServer internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public interface Builder {
     public fun associatePublicIpAddress(associatePublicIpAddress: Boolean)
@@ -197,6 +207,8 @@ public open class CfnServer internal constructor(
 
     public fun engineAttributes(engineAttributes: List<Any>)
 
+    public fun engineAttributes(vararg engineAttributes: Any)
+
     public fun engineModel(engineModel: String)
 
     public fun engineVersion(engineVersion: String)
@@ -213,13 +225,19 @@ public open class CfnServer internal constructor(
 
     public fun securityGroupIds(securityGroupIds: List<String>)
 
+    public fun securityGroupIds(vararg securityGroupIds: String)
+
     public fun serverName(serverName: String)
 
     public fun serviceRoleArn(serviceRoleArn: String)
 
     public fun subnetIds(subnetIds: List<String>)
 
+    public fun subnetIds(vararg subnetIds: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -277,6 +295,9 @@ public open class CfnServer internal constructor(
       cdkBuilder.engineAttributes(engineAttributes)
     }
 
+    override fun engineAttributes(vararg engineAttributes: Any): Unit =
+        engineAttributes(engineAttributes.toList())
+
     override fun engineModel(engineModel: String) {
       cdkBuilder.engineModel(engineModel)
     }
@@ -309,6 +330,9 @@ public open class CfnServer internal constructor(
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
+
     override fun serverName(serverName: String) {
       cdkBuilder.serverName(serverName)
     }
@@ -321,9 +345,13 @@ public open class CfnServer internal constructor(
       cdkBuilder.subnetIds(subnetIds)
     }
 
+    override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.opsworkscm.CfnServer = cdkBuilder.build()
   }

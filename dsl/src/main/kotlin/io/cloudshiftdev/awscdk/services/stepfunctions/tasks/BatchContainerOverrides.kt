@@ -24,6 +24,8 @@ public interface BatchContainerOverrides {
   public interface Builder {
     public fun command(command: List<String>)
 
+    public fun command(vararg command: String)
+
     public fun environment(environment: Map<String, String>)
 
     public fun gpuCount(gpuCount: Number)
@@ -43,6 +45,8 @@ public interface BatchContainerOverrides {
     override fun command(command: List<String>) {
       cdkBuilder.command(command)
     }
+
+    override fun command(vararg command: String): Unit = command(command.toList())
 
     override fun environment(environment: Map<String, String>) {
       cdkBuilder.environment(environment)

@@ -25,6 +25,9 @@ public open class CfnAccessPoint internal constructor(
     unwrap(this).setAccessPointTagsRaw(`value`.map(AccessPointTagProperty::unwrap))
   }
 
+  public open fun accessPointTagsRaw(vararg `value`: AccessPointTagProperty): Unit =
+      accessPointTagsRaw(`value`.toList())
+
   public open fun attrAccessPointId(): String = unwrap(this).getAttrAccessPointId()
 
   public open fun attrArn(): String = unwrap(this).getAttrArn()
@@ -80,6 +83,8 @@ public open class CfnAccessPoint internal constructor(
   public interface Builder {
     public fun accessPointTags(accessPointTags: List<AccessPointTagProperty>)
 
+    public fun accessPointTags(vararg accessPointTags: AccessPointTagProperty)
+
     public fun clientToken(clientToken: String)
 
     public fun fileSystemId(fileSystemId: String)
@@ -111,6 +116,9 @@ public open class CfnAccessPoint internal constructor(
     override fun accessPointTags(accessPointTags: List<AccessPointTagProperty>) {
       cdkBuilder.accessPointTags(accessPointTags.map(AccessPointTagProperty::unwrap))
     }
+
+    override fun accessPointTags(vararg accessPointTags: AccessPointTagProperty): Unit =
+        accessPointTags(accessPointTags.toList())
 
     override fun clientToken(clientToken: String) {
       cdkBuilder.clientToken(clientToken)
@@ -378,6 +386,8 @@ public open class CfnAccessPoint internal constructor(
 
       public fun secondaryGids(secondaryGids: List<String>)
 
+      public fun secondaryGids(vararg secondaryGids: String)
+
       public fun uid(uid: String)
     }
 
@@ -393,6 +403,9 @@ public open class CfnAccessPoint internal constructor(
       override fun secondaryGids(secondaryGids: List<String>) {
         cdkBuilder.secondaryGids(secondaryGids)
       }
+
+      override fun secondaryGids(vararg secondaryGids: String): Unit =
+          secondaryGids(secondaryGids.toList())
 
       override fun uid(uid: String) {
         cdkBuilder.uid(uid)

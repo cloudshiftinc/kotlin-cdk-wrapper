@@ -29,12 +29,14 @@ public open class CfnLocationFSxLustre internal constructor(
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
-  public open fun securityGroupArns(): List<String> = unwrap(this).getSecurityGroupArns() ?:
-      emptyList()
+  public open fun securityGroupArns(): List<String> = unwrap(this).getSecurityGroupArns()
 
   public open fun securityGroupArns(`value`: List<String>) {
     unwrap(this).setSecurityGroupArns(`value`)
   }
+
+  public open fun securityGroupArns(vararg `value`: String): Unit =
+      securityGroupArns(`value`.toList())
 
   public open fun subdirectory(): String? = unwrap(this).getSubdirectory()
 
@@ -51,14 +53,20 @@ public open class CfnLocationFSxLustre internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun fsxFilesystemArn(fsxFilesystemArn: String)
 
     public fun securityGroupArns(securityGroupArns: List<String>)
 
+    public fun securityGroupArns(vararg securityGroupArns: String)
+
     public fun subdirectory(subdirectory: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -76,6 +84,9 @@ public open class CfnLocationFSxLustre internal constructor(
       cdkBuilder.securityGroupArns(securityGroupArns)
     }
 
+    override fun securityGroupArns(vararg securityGroupArns: String): Unit =
+        securityGroupArns(securityGroupArns.toList())
+
     override fun subdirectory(subdirectory: String) {
       cdkBuilder.subdirectory(subdirectory)
     }
@@ -83,6 +94,8 @@ public open class CfnLocationFSxLustre internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.datasync.CfnLocationFSxLustre =
         cdkBuilder.build()

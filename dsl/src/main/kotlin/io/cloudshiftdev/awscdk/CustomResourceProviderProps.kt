@@ -23,6 +23,8 @@ public interface CustomResourceProviderProps : CustomResourceProviderOptions {
 
     public fun policyStatements(policyStatements: List<Any>)
 
+    public fun policyStatements(vararg policyStatements: Any)
+
     public fun runtime(runtime: CustomResourceProviderRuntime)
 
     public fun timeout(timeout: Duration)
@@ -53,6 +55,9 @@ public interface CustomResourceProviderProps : CustomResourceProviderOptions {
     override fun policyStatements(policyStatements: List<Any>) {
       cdkBuilder.policyStatements(policyStatements)
     }
+
+    override fun policyStatements(vararg policyStatements: Any): Unit =
+        policyStatements(policyStatements.toList())
 
     override fun runtime(runtime: CustomResourceProviderRuntime) {
       cdkBuilder.runtime(runtime.let(CustomResourceProviderRuntime::unwrap))

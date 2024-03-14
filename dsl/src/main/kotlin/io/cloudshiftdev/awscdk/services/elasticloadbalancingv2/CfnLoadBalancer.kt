@@ -27,8 +27,7 @@ public open class CfnLoadBalancer internal constructor(
 
   public open fun attrLoadBalancerName(): String = unwrap(this).getAttrLoadBalancerName()
 
-  public open fun attrSecurityGroups(): List<String> = unwrap(this).getAttrSecurityGroups() ?:
-      emptyList()
+  public open fun attrSecurityGroups(): List<String> = unwrap(this).getAttrSecurityGroups()
 
   public open fun enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(): String? =
       unwrap(this).getEnforceSecurityGroupInboundRulesOnPrivateLinkTraffic()
@@ -57,6 +56,9 @@ public open class CfnLoadBalancer internal constructor(
     unwrap(this).setLoadBalancerAttributes(__idx_ac66f0)
   }
 
+  public open fun loadBalancerAttributes(vararg __idx_ac66f0: Any): Unit =
+      loadBalancerAttributes(__idx_ac66f0.toList())
+
   public open fun name(): String? = unwrap(this).getName()
 
   public open fun name(`value`: String) {
@@ -75,6 +77,8 @@ public open class CfnLoadBalancer internal constructor(
     unwrap(this).setSecurityGroups(`value`)
   }
 
+  public open fun securityGroups(vararg `value`: String): Unit = securityGroups(`value`.toList())
+
   public open fun subnetMappings(): Any? = unwrap(this).getSubnetMappings()
 
   public open fun subnetMappings(`value`: IResolvable) {
@@ -85,11 +89,16 @@ public open class CfnLoadBalancer internal constructor(
     unwrap(this).setSubnetMappings(__idx_ac66f0)
   }
 
+  public open fun subnetMappings(vararg __idx_ac66f0: Any): Unit =
+      subnetMappings(__idx_ac66f0.toList())
+
   public open fun subnets(): List<String> = unwrap(this).getSubnets() ?: emptyList()
 
   public open fun subnets(`value`: List<String>) {
     unwrap(this).setSubnets(`value`)
   }
+
+  public open fun subnets(vararg `value`: String): Unit = subnets(`value`.toList())
 
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
@@ -99,6 +108,8 @@ public open class CfnLoadBalancer internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun type(): String? = unwrap(this).getType()
 
@@ -116,19 +127,29 @@ public open class CfnLoadBalancer internal constructor(
 
     public fun loadBalancerAttributes(loadBalancerAttributes: List<Any>)
 
+    public fun loadBalancerAttributes(vararg loadBalancerAttributes: Any)
+
     public fun name(name: String)
 
     public fun scheme(scheme: String)
 
     public fun securityGroups(securityGroups: List<String>)
 
+    public fun securityGroups(vararg securityGroups: String)
+
     public fun subnetMappings(subnetMappings: IResolvable)
 
     public fun subnetMappings(subnetMappings: List<Any>)
 
+    public fun subnetMappings(vararg subnetMappings: Any)
+
     public fun subnets(subnets: List<String>)
 
+    public fun subnets(vararg subnets: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun type(type: String)
   }
@@ -159,6 +180,9 @@ public open class CfnLoadBalancer internal constructor(
       cdkBuilder.loadBalancerAttributes(loadBalancerAttributes)
     }
 
+    override fun loadBalancerAttributes(vararg loadBalancerAttributes: Any): Unit =
+        loadBalancerAttributes(loadBalancerAttributes.toList())
+
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -171,6 +195,9 @@ public open class CfnLoadBalancer internal constructor(
       cdkBuilder.securityGroups(securityGroups)
     }
 
+    override fun securityGroups(vararg securityGroups: String): Unit =
+        securityGroups(securityGroups.toList())
+
     override fun subnetMappings(subnetMappings: IResolvable) {
       cdkBuilder.subnetMappings(subnetMappings.let(IResolvable::unwrap))
     }
@@ -179,13 +206,20 @@ public open class CfnLoadBalancer internal constructor(
       cdkBuilder.subnetMappings(subnetMappings)
     }
 
+    override fun subnetMappings(vararg subnetMappings: Any): Unit =
+        subnetMappings(subnetMappings.toList())
+
     override fun subnets(subnets: List<String>) {
       cdkBuilder.subnets(subnets)
     }
 
+    override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun type(type: String) {
       cdkBuilder.type(type)

@@ -80,6 +80,8 @@ public open class CfnFindingsFilter internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun action(action: String)
 
@@ -98,6 +100,8 @@ public open class CfnFindingsFilter internal constructor(
     public fun position(position: Number)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -139,6 +143,8 @@ public open class CfnFindingsFilter internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.macie.CfnFindingsFilter = cdkBuilder.build()
   }
@@ -293,6 +299,8 @@ public open class CfnFindingsFilter internal constructor(
     public interface Builder {
       public fun eq(eq: List<String>)
 
+      public fun eq(vararg eq: String)
+
       public fun gt(gt: Number)
 
       public fun gte(gte: Number)
@@ -302,6 +310,8 @@ public open class CfnFindingsFilter internal constructor(
       public fun lte(lte: Number)
 
       public fun neq(neq: List<String>)
+
+      public fun neq(vararg neq: String)
     }
 
     private class BuilderImpl : Builder {
@@ -313,6 +323,8 @@ public open class CfnFindingsFilter internal constructor(
       override fun eq(eq: List<String>) {
         cdkBuilder.eq(eq)
       }
+
+      override fun eq(vararg eq: String): Unit = eq(eq.toList())
 
       override fun gt(gt: Number) {
         cdkBuilder.gt(gt)
@@ -333,6 +345,8 @@ public open class CfnFindingsFilter internal constructor(
       override fun neq(neq: List<String>) {
         cdkBuilder.neq(neq)
       }
+
+      override fun neq(vararg neq: String): Unit = neq(neq.toList())
 
       public fun build():
           software.amazon.awscdk.services.macie.CfnFindingsFilter.CriterionAdditionalPropertiesProperty

@@ -162,7 +162,7 @@ public abstract class FunctionBase internal constructor(
   public override fun permissionsNode(): Node = unwrap(this).getPermissionsNode().let(Node::wrap)
 
   public override fun resourceArnsForGrantInvoke(): List<String> =
-      unwrap(this).getResourceArnsForGrantInvoke() ?: emptyList()
+      unwrap(this).getResourceArnsForGrantInvoke()
 
   public override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
 

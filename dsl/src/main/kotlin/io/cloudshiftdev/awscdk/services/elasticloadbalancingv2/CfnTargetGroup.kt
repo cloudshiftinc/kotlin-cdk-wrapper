@@ -21,8 +21,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTargetGroup internal constructor(
   private val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
-  public open fun attrLoadBalancerArns(): List<String> = unwrap(this).getAttrLoadBalancerArns() ?:
-      emptyList()
+  public open fun attrLoadBalancerArns(): List<String> = unwrap(this).getAttrLoadBalancerArns()
 
   public open fun attrTargetGroupArn(): String = unwrap(this).getAttrTargetGroupArn()
 
@@ -135,6 +134,8 @@ public open class CfnTargetGroup internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun targetGroupAttributes(): Any? = unwrap(this).getTargetGroupAttributes()
 
   public open fun targetGroupAttributes(`value`: IResolvable) {
@@ -144,6 +145,9 @@ public open class CfnTargetGroup internal constructor(
   public open fun targetGroupAttributes(__idx_ac66f0: List<Any>) {
     unwrap(this).setTargetGroupAttributes(__idx_ac66f0)
   }
+
+  public open fun targetGroupAttributes(vararg __idx_ac66f0: Any): Unit =
+      targetGroupAttributes(__idx_ac66f0.toList())
 
   public open fun targetType(): String? = unwrap(this).getTargetType()
 
@@ -160,6 +164,8 @@ public open class CfnTargetGroup internal constructor(
   public open fun targets(__idx_ac66f0: List<Any>) {
     unwrap(this).setTargets(__idx_ac66f0)
   }
+
+  public open fun targets(vararg __idx_ac66f0: Any): Unit = targets(__idx_ac66f0.toList())
 
   public open fun unhealthyThresholdCount(): Number? = unwrap(this).getUnhealthyThresholdCount()
 
@@ -210,15 +216,21 @@ public open class CfnTargetGroup internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun targetGroupAttributes(targetGroupAttributes: IResolvable)
 
     public fun targetGroupAttributes(targetGroupAttributes: List<Any>)
+
+    public fun targetGroupAttributes(vararg targetGroupAttributes: Any)
 
     public fun targetType(targetType: String)
 
     public fun targets(targets: IResolvable)
 
     public fun targets(targets: List<Any>)
+
+    public fun targets(vararg targets: Any)
 
     public fun unhealthyThresholdCount(unhealthyThresholdCount: Number)
 
@@ -303,6 +315,8 @@ public open class CfnTargetGroup internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun targetGroupAttributes(targetGroupAttributes: IResolvable) {
       cdkBuilder.targetGroupAttributes(targetGroupAttributes.let(IResolvable::unwrap))
     }
@@ -310,6 +324,9 @@ public open class CfnTargetGroup internal constructor(
     override fun targetGroupAttributes(targetGroupAttributes: List<Any>) {
       cdkBuilder.targetGroupAttributes(targetGroupAttributes)
     }
+
+    override fun targetGroupAttributes(vararg targetGroupAttributes: Any): Unit =
+        targetGroupAttributes(targetGroupAttributes.toList())
 
     override fun targetType(targetType: String) {
       cdkBuilder.targetType(targetType)
@@ -322,6 +339,8 @@ public open class CfnTargetGroup internal constructor(
     override fun targets(targets: List<Any>) {
       cdkBuilder.targets(targets)
     }
+
+    override fun targets(vararg targets: Any): Unit = targets(targets.toList())
 
     override fun unhealthyThresholdCount(unhealthyThresholdCount: Number) {
       cdkBuilder.unhealthyThresholdCount(unhealthyThresholdCount)

@@ -20,6 +20,8 @@ public interface GlobalSecondaryIndexPropsV2 : SecondaryIndexProps {
 
     public fun nonKeyAttributes(nonKeyAttributes: List<String>)
 
+    public fun nonKeyAttributes(vararg nonKeyAttributes: String)
+
     public fun partitionKey(partitionKey: Attribute)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -51,6 +53,9 @@ public interface GlobalSecondaryIndexPropsV2 : SecondaryIndexProps {
     override fun nonKeyAttributes(nonKeyAttributes: List<String>) {
       cdkBuilder.nonKeyAttributes(nonKeyAttributes)
     }
+
+    override fun nonKeyAttributes(vararg nonKeyAttributes: String): Unit =
+        nonKeyAttributes(nonKeyAttributes.toList())
 
     override fun partitionKey(partitionKey: Attribute) {
       cdkBuilder.partitionKey(partitionKey.let(Attribute::unwrap))

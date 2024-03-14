@@ -15,6 +15,8 @@ public open class DataProtectionPolicy internal constructor(
 
     public fun identifiers(identifiers: List<DataIdentifier>)
 
+    public fun identifiers(vararg identifiers: DataIdentifier)
+
     public fun logGroupAuditDestination(logGroupAuditDestination: ILogGroup)
 
     public fun name(name: String)
@@ -37,6 +39,9 @@ public open class DataProtectionPolicy internal constructor(
     override fun identifiers(identifiers: List<DataIdentifier>) {
       cdkBuilder.identifiers(identifiers.map(DataIdentifier::unwrap))
     }
+
+    override fun identifiers(vararg identifiers: DataIdentifier): Unit =
+        identifiers(identifiers.toList())
 
     override fun logGroupAuditDestination(logGroupAuditDestination: ILogGroup) {
       cdkBuilder.logGroupAuditDestination(logGroupAuditDestination.let(ILogGroup::unwrap))

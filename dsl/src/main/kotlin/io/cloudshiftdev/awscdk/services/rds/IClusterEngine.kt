@@ -57,8 +57,7 @@ public interface IClusterEngine : IEngine {
     override fun singleUserRotationApplication(): SecretRotationApplication =
         unwrap(this).getSingleUserRotationApplication().let(SecretRotationApplication::wrap)
 
-    override fun supportedLogTypes(): List<String> = unwrap(this).getSupportedLogTypes() ?:
-        emptyList()
+    override fun supportedLogTypes(): List<String> = unwrap(this).getSupportedLogTypes()
   }
 
   public companion object {

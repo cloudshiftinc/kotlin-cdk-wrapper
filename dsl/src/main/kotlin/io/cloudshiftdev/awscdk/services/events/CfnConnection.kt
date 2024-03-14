@@ -390,13 +390,19 @@ public open class CfnConnection internal constructor(
 
       public fun bodyParameters(bodyParameters: List<Any>)
 
+      public fun bodyParameters(vararg bodyParameters: Any)
+
       public fun headerParameters(headerParameters: IResolvable)
 
       public fun headerParameters(headerParameters: List<Any>)
 
+      public fun headerParameters(vararg headerParameters: Any)
+
       public fun queryStringParameters(queryStringParameters: IResolvable)
 
       public fun queryStringParameters(queryStringParameters: List<Any>)
+
+      public fun queryStringParameters(vararg queryStringParameters: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -413,6 +419,9 @@ public open class CfnConnection internal constructor(
         cdkBuilder.bodyParameters(bodyParameters)
       }
 
+      override fun bodyParameters(vararg bodyParameters: Any): Unit =
+          bodyParameters(bodyParameters.toList())
+
       override fun headerParameters(headerParameters: IResolvable) {
         cdkBuilder.headerParameters(headerParameters.let(IResolvable::unwrap))
       }
@@ -421,6 +430,9 @@ public open class CfnConnection internal constructor(
         cdkBuilder.headerParameters(headerParameters)
       }
 
+      override fun headerParameters(vararg headerParameters: Any): Unit =
+          headerParameters(headerParameters.toList())
+
       override fun queryStringParameters(queryStringParameters: IResolvable) {
         cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable::unwrap))
       }
@@ -428,6 +440,9 @@ public open class CfnConnection internal constructor(
       override fun queryStringParameters(queryStringParameters: List<Any>) {
         cdkBuilder.queryStringParameters(queryStringParameters)
       }
+
+      override fun queryStringParameters(vararg queryStringParameters: Any): Unit =
+          queryStringParameters(queryStringParameters.toList())
 
       public fun build():
           software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty =

@@ -60,6 +60,8 @@ public interface DockerImageAssetSource {
 
     public fun dockerCacheFrom(dockerCacheFrom: List<DockerCacheOption>)
 
+    public fun dockerCacheFrom(vararg dockerCacheFrom: DockerCacheOption)
+
     public fun dockerCacheTo(dockerCacheTo: DockerCacheOption)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -70,7 +72,11 @@ public interface DockerImageAssetSource {
 
     public fun dockerOutputs(dockerOutputs: List<String>)
 
+    public fun dockerOutputs(vararg dockerOutputs: String)
+
     public fun executable(executable: List<String>)
+
+    public fun executable(vararg executable: String)
 
     public fun networkMode(networkMode: String)
 
@@ -115,6 +121,9 @@ public interface DockerImageAssetSource {
       cdkBuilder.dockerCacheFrom(dockerCacheFrom.map(DockerCacheOption::unwrap))
     }
 
+    override fun dockerCacheFrom(vararg dockerCacheFrom: DockerCacheOption): Unit =
+        dockerCacheFrom(dockerCacheFrom.toList())
+
     override fun dockerCacheTo(dockerCacheTo: DockerCacheOption) {
       cdkBuilder.dockerCacheTo(dockerCacheTo.let(DockerCacheOption::unwrap))
     }
@@ -132,9 +141,14 @@ public interface DockerImageAssetSource {
       cdkBuilder.dockerOutputs(dockerOutputs)
     }
 
+    override fun dockerOutputs(vararg dockerOutputs: String): Unit =
+        dockerOutputs(dockerOutputs.toList())
+
     override fun executable(executable: List<String>) {
       cdkBuilder.executable(executable)
     }
+
+    override fun executable(vararg executable: String): Unit = executable(executable.toList())
 
     override fun networkMode(networkMode: String) {
       cdkBuilder.networkMode(networkMode)

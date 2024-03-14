@@ -29,7 +29,7 @@ public abstract class BaseLoadBalancer internal constructor(
   public open fun loadBalancerName(): String = unwrap(this).getLoadBalancerName()
 
   public open fun loadBalancerSecurityGroups(): List<String> =
-      unwrap(this).getLoadBalancerSecurityGroups() ?: emptyList()
+      unwrap(this).getLoadBalancerSecurityGroups()
 
   public open fun logAccessLogs(bucket: IBucket) {
     unwrap(this).logAccessLogs(bucket.let(IBucket::unwrap))

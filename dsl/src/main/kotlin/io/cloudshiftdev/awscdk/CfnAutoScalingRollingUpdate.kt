@@ -31,6 +31,8 @@ public interface CfnAutoScalingRollingUpdate {
 
     public fun suspendProcesses(suspendProcesses: List<String>)
 
+    public fun suspendProcesses(vararg suspendProcesses: String)
+
     public fun waitOnResourceSignals(waitOnResourceSignals: Boolean)
   }
 
@@ -57,6 +59,9 @@ public interface CfnAutoScalingRollingUpdate {
     override fun suspendProcesses(suspendProcesses: List<String>) {
       cdkBuilder.suspendProcesses(suspendProcesses)
     }
+
+    override fun suspendProcesses(vararg suspendProcesses: String): Unit =
+        suspendProcesses(suspendProcesses.toList())
 
     override fun waitOnResourceSignals(waitOnResourceSignals: Boolean) {
       cdkBuilder.waitOnResourceSignals(waitOnResourceSignals)

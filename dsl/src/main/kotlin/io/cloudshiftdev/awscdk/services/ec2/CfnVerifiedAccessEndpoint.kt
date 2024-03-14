@@ -132,6 +132,9 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
     unwrap(this).setSecurityGroupIds(`value`)
   }
 
+  public open fun securityGroupIds(vararg `value`: String): Unit =
+      securityGroupIds(`value`.toList())
+
   public open fun sseSpecification(): Any? = unwrap(this).getSseSpecification()
 
   public open fun sseSpecification(`value`: IResolvable) {
@@ -155,6 +158,8 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun verifiedAccessGroupId(): String = unwrap(this).getVerifiedAccessGroupId()
 
@@ -201,6 +206,8 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
 
     public fun securityGroupIds(securityGroupIds: List<String>)
 
+    public fun securityGroupIds(vararg securityGroupIds: String)
+
     public fun sseSpecification(sseSpecification: IResolvable)
 
     public fun sseSpecification(sseSpecification: SseSpecificationProperty)
@@ -210,6 +217,8 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
     public fun sseSpecification(sseSpecification: SseSpecificationProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun verifiedAccessGroupId(verifiedAccessGroupId: String)
   }
@@ -289,6 +298,9 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
+
     override fun sseSpecification(sseSpecification: IResolvable) {
       cdkBuilder.sseSpecification(sseSpecification.let(IResolvable::unwrap))
     }
@@ -305,6 +317,8 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun verifiedAccessGroupId(verifiedAccessGroupId: String) {
       cdkBuilder.verifiedAccessGroupId(verifiedAccessGroupId)
@@ -486,6 +500,8 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
       public fun protocol(protocol: String)
 
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -509,6 +525,8 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       public fun build():
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty

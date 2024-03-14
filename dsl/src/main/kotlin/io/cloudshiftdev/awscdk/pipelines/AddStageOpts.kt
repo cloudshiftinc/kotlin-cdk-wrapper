@@ -14,9 +14,15 @@ public interface AddStageOpts {
   public interface Builder {
     public fun post(post: List<Step>)
 
+    public fun post(vararg post: Step)
+
     public fun pre(pre: List<Step>)
 
+    public fun pre(vararg pre: Step)
+
     public fun stackSteps(stackSteps: List<StackSteps>)
+
+    public fun stackSteps(vararg stackSteps: StackSteps)
   }
 
   private class BuilderImpl : Builder {
@@ -27,13 +33,19 @@ public interface AddStageOpts {
       cdkBuilder.post(post.map(Step::unwrap))
     }
 
+    override fun post(vararg post: Step): Unit = post(post.toList())
+
     override fun pre(pre: List<Step>) {
       cdkBuilder.pre(pre.map(Step::unwrap))
     }
 
+    override fun pre(vararg pre: Step): Unit = pre(pre.toList())
+
     override fun stackSteps(stackSteps: List<StackSteps>) {
       cdkBuilder.stackSteps(stackSteps.map(StackSteps::unwrap))
     }
+
+    override fun stackSteps(vararg stackSteps: StackSteps): Unit = stackSteps(stackSteps.toList())
 
     public fun build(): software.amazon.awscdk.pipelines.AddStageOpts = cdkBuilder.build()
   }

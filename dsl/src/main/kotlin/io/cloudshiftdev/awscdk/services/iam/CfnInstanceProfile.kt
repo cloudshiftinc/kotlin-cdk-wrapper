@@ -30,11 +30,13 @@ public open class CfnInstanceProfile internal constructor(
     unwrap(this).setPath(`value`)
   }
 
-  public open fun roles(): List<String> = unwrap(this).getRoles() ?: emptyList()
+  public open fun roles(): List<String> = unwrap(this).getRoles()
 
   public open fun roles(`value`: List<String>) {
     unwrap(this).setRoles(`value`)
   }
+
+  public open fun roles(vararg `value`: String): Unit = roles(`value`.toList())
 
   public interface Builder {
     public fun instanceProfileName(instanceProfileName: String)
@@ -42,6 +44,8 @@ public open class CfnInstanceProfile internal constructor(
     public fun path(path: String)
 
     public fun roles(roles: List<String>)
+
+    public fun roles(vararg roles: String)
   }
 
   private class BuilderImpl(
@@ -62,6 +66,8 @@ public open class CfnInstanceProfile internal constructor(
     override fun roles(roles: List<String>) {
       cdkBuilder.roles(roles)
     }
+
+    override fun roles(vararg roles: String): Unit = roles(roles.toList())
 
     public fun build(): software.amazon.awscdk.services.iam.CfnInstanceProfile = cdkBuilder.build()
   }

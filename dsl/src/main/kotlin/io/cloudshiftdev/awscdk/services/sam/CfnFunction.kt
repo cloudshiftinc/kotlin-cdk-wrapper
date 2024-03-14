@@ -27,6 +27,8 @@ public open class CfnFunction internal constructor(
     unwrap(this).setArchitectures(`value`)
   }
 
+  public open fun architectures(vararg `value`: String): Unit = architectures(`value`.toList())
+
   public open fun assumeRolePolicyDocument(): Any? = unwrap(this).getAssumeRolePolicyDocument()
 
   public open fun assumeRolePolicyDocument(`value`: Any) {
@@ -171,6 +173,9 @@ public open class CfnFunction internal constructor(
     unwrap(this).setFileSystemConfigs(__idx_ac66f0)
   }
 
+  public open fun fileSystemConfigs(vararg __idx_ac66f0: Any): Unit =
+      fileSystemConfigs(__idx_ac66f0.toList())
+
   public open fun functionName(): String? = unwrap(this).getFunctionName()
 
   public open fun functionName(`value`: String) {
@@ -241,6 +246,8 @@ public open class CfnFunction internal constructor(
     unwrap(this).setLayers(`value`)
   }
 
+  public open fun layers(vararg `value`: String): Unit = layers(`value`.toList())
+
   public open fun memorySize(): Number? = unwrap(this).getMemorySize()
 
   public open fun memorySize(`value`: Number) {
@@ -281,6 +288,8 @@ public open class CfnFunction internal constructor(
   public open fun policies(__idx_ac66f0: List<Any>) {
     unwrap(this).setPolicies(__idx_ac66f0)
   }
+
+  public open fun policies(vararg __idx_ac66f0: Any): Unit = policies(__idx_ac66f0.toList())
 
   public open fun provisionedConcurrencyConfig(): Any? =
       unwrap(this).getProvisionedConcurrencyConfig()
@@ -362,6 +371,8 @@ public open class CfnFunction internal constructor(
   public interface Builder {
     public fun architectures(architectures: List<String>)
 
+    public fun architectures(vararg architectures: String)
+
     public fun assumeRolePolicyDocument(assumeRolePolicyDocument: Any)
 
     public fun autoPublishAlias(autoPublishAlias: String)
@@ -431,6 +442,8 @@ public open class CfnFunction internal constructor(
 
     public fun fileSystemConfigs(fileSystemConfigs: List<Any>)
 
+    public fun fileSystemConfigs(vararg fileSystemConfigs: Any)
+
     public fun functionName(functionName: String)
 
     public fun functionUrlConfig(functionUrlConfig: IResolvable)
@@ -459,6 +472,8 @@ public open class CfnFunction internal constructor(
 
     public fun layers(layers: List<String>)
 
+    public fun layers(vararg layers: String)
+
     public fun memorySize(memorySize: Number)
 
     public fun packageType(packageType: String)
@@ -476,6 +491,8 @@ public open class CfnFunction internal constructor(
     public fun policies(policies: IAMPolicyDocumentProperty.Builder.() -> Unit)
 
     public fun policies(policies: List<Any>)
+
+    public fun policies(vararg policies: Any)
 
     public fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: IResolvable)
 
@@ -520,6 +537,9 @@ public open class CfnFunction internal constructor(
     override fun architectures(architectures: List<String>) {
       cdkBuilder.architectures(architectures)
     }
+
+    override fun architectures(vararg architectures: String): Unit =
+        architectures(architectures.toList())
 
     override fun assumeRolePolicyDocument(assumeRolePolicyDocument: Any) {
       cdkBuilder.assumeRolePolicyDocument(assumeRolePolicyDocument)
@@ -640,6 +660,9 @@ public open class CfnFunction internal constructor(
       cdkBuilder.fileSystemConfigs(fileSystemConfigs)
     }
 
+    override fun fileSystemConfigs(vararg fileSystemConfigs: Any): Unit =
+        fileSystemConfigs(fileSystemConfigs.toList())
+
     override fun functionName(functionName: String) {
       cdkBuilder.functionName(functionName)
     }
@@ -690,6 +713,8 @@ public open class CfnFunction internal constructor(
       cdkBuilder.layers(layers)
     }
 
+    override fun layers(vararg layers: String): Unit = layers(layers.toList())
+
     override fun memorySize(memorySize: Number) {
       cdkBuilder.memorySize(memorySize)
     }
@@ -722,6 +747,8 @@ public open class CfnFunction internal constructor(
     override fun policies(policies: List<Any>) {
       cdkBuilder.policies(policies)
     }
+
+    override fun policies(vararg policies: Any): Unit = policies(policies.toList())
 
     override fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: IResolvable) {
       cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(IResolvable::unwrap))
@@ -811,6 +838,8 @@ public open class CfnFunction internal constructor(
       public fun rules(rules: IResolvable)
 
       public fun rules(rules: List<Any>)
+
+      public fun rules(vararg rules: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -825,6 +854,8 @@ public open class CfnFunction internal constructor(
       override fun rules(rules: List<Any>) {
         cdkBuilder.rules(rules)
       }
+
+      override fun rules(vararg rules: Any): Unit = rules(rules.toList())
 
       public fun build(): software.amazon.awscdk.services.sam.CfnFunction.S3KeyFilterProperty =
           cdkBuilder.build()
@@ -1009,7 +1040,11 @@ public open class CfnFunction internal constructor(
     public interface Builder {
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1021,9 +1056,14 @@ public open class CfnFunction internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       public fun build(): software.amazon.awscdk.services.sam.CfnFunction.VpcConfigProperty =
           cdkBuilder.build()
@@ -1032,10 +1072,9 @@ public open class CfnFunction internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.sam.CfnFunction.VpcConfigProperty,
     ) : VpcConfigProperty {
-      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
-          emptyList()
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
 
-      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
     }
 
     public companion object {
@@ -1118,6 +1157,8 @@ public open class CfnFunction internal constructor(
     public interface Builder {
       public fun alarms(alarms: List<String>)
 
+      public fun alarms(vararg alarms: String)
+
       public fun enabled(enabled: Boolean)
 
       public fun enabled(enabled: IResolvable)
@@ -1143,6 +1184,8 @@ public open class CfnFunction internal constructor(
       override fun alarms(alarms: List<String>) {
         cdkBuilder.alarms(alarms)
       }
+
+      override fun alarms(vararg alarms: String): Unit = alarms(alarms.toList())
 
       override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
@@ -2631,6 +2674,8 @@ public open class CfnFunction internal constructor(
 
       public fun functionResponseTypes(functionResponseTypes: List<String>)
 
+      public fun functionResponseTypes(vararg functionResponseTypes: String)
+
       public fun startingPosition(startingPosition: String)
 
       public fun stream(stream: String)
@@ -2656,6 +2701,9 @@ public open class CfnFunction internal constructor(
       override fun functionResponseTypes(functionResponseTypes: List<String>) {
         cdkBuilder.functionResponseTypes(functionResponseTypes)
       }
+
+      override fun functionResponseTypes(vararg functionResponseTypes: String): Unit =
+          functionResponseTypes(functionResponseTypes.toList())
 
       override fun startingPosition(startingPosition: String) {
         cdkBuilder.startingPosition(startingPosition)
@@ -3719,6 +3767,8 @@ public open class CfnFunction internal constructor(
     public interface Builder {
       public fun authorizationScopes(authorizationScopes: List<String>)
 
+      public fun authorizationScopes(vararg authorizationScopes: String)
+
       public fun authorizer(authorizer: String)
     }
 
@@ -3730,6 +3780,9 @@ public open class CfnFunction internal constructor(
       override fun authorizationScopes(authorizationScopes: List<String>) {
         cdkBuilder.authorizationScopes(authorizationScopes)
       }
+
+      override fun authorizationScopes(vararg authorizationScopes: String): Unit =
+          authorizationScopes(authorizationScopes.toList())
 
       override fun authorizer(authorizer: String) {
         cdkBuilder.authorizer(authorizer)
@@ -3880,6 +3933,8 @@ public open class CfnFunction internal constructor(
 
       public fun authorizationScopes(authorizationScopes: List<String>)
 
+      public fun authorizationScopes(vararg authorizationScopes: String)
+
       public fun authorizer(authorizer: String)
 
       public fun resourcePolicy(resourcePolicy: IResolvable)
@@ -3906,6 +3961,9 @@ public open class CfnFunction internal constructor(
       override fun authorizationScopes(authorizationScopes: List<String>) {
         cdkBuilder.authorizationScopes(authorizationScopes)
       }
+
+      override fun authorizationScopes(vararg authorizationScopes: String): Unit =
+          authorizationScopes(authorizationScopes.toList())
 
       override fun authorizer(authorizer: String) {
         cdkBuilder.authorizer(authorizer)
@@ -4873,27 +4931,49 @@ public open class CfnFunction internal constructor(
     public interface Builder {
       public fun awsAccountBlacklist(awsAccountBlacklist: List<String>)
 
+      public fun awsAccountBlacklist(vararg awsAccountBlacklist: String)
+
       public fun awsAccountWhitelist(awsAccountWhitelist: List<String>)
 
+      public fun awsAccountWhitelist(vararg awsAccountWhitelist: String)
+
       public fun customStatements(customStatements: List<Any>)
+
+      public fun customStatements(vararg customStatements: Any)
 
       public fun customStatements(customStatements: IResolvable)
 
       public fun intrinsicVpcBlacklist(intrinsicVpcBlacklist: List<String>)
 
+      public fun intrinsicVpcBlacklist(vararg intrinsicVpcBlacklist: String)
+
       public fun intrinsicVpcWhitelist(intrinsicVpcWhitelist: List<String>)
+
+      public fun intrinsicVpcWhitelist(vararg intrinsicVpcWhitelist: String)
 
       public fun intrinsicVpceBlacklist(intrinsicVpceBlacklist: List<String>)
 
+      public fun intrinsicVpceBlacklist(vararg intrinsicVpceBlacklist: String)
+
       public fun intrinsicVpceWhitelist(intrinsicVpceWhitelist: List<String>)
+
+      public fun intrinsicVpceWhitelist(vararg intrinsicVpceWhitelist: String)
 
       public fun ipRangeBlacklist(ipRangeBlacklist: List<String>)
 
+      public fun ipRangeBlacklist(vararg ipRangeBlacklist: String)
+
       public fun ipRangeWhitelist(ipRangeWhitelist: List<String>)
+
+      public fun ipRangeWhitelist(vararg ipRangeWhitelist: String)
 
       public fun sourceVpcBlacklist(sourceVpcBlacklist: List<String>)
 
+      public fun sourceVpcBlacklist(vararg sourceVpcBlacklist: String)
+
       public fun sourceVpcWhitelist(sourceVpcWhitelist: List<String>)
+
+      public fun sourceVpcWhitelist(vararg sourceVpcWhitelist: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4905,13 +4985,22 @@ public open class CfnFunction internal constructor(
         cdkBuilder.awsAccountBlacklist(awsAccountBlacklist)
       }
 
+      override fun awsAccountBlacklist(vararg awsAccountBlacklist: String): Unit =
+          awsAccountBlacklist(awsAccountBlacklist.toList())
+
       override fun awsAccountWhitelist(awsAccountWhitelist: List<String>) {
         cdkBuilder.awsAccountWhitelist(awsAccountWhitelist)
       }
 
+      override fun awsAccountWhitelist(vararg awsAccountWhitelist: String): Unit =
+          awsAccountWhitelist(awsAccountWhitelist.toList())
+
       override fun customStatements(customStatements: List<Any>) {
         cdkBuilder.customStatements(customStatements)
       }
+
+      override fun customStatements(vararg customStatements: Any): Unit =
+          customStatements(customStatements.toList())
 
       override fun customStatements(customStatements: IResolvable) {
         cdkBuilder.customStatements(customStatements.let(IResolvable::unwrap))
@@ -4921,33 +5010,57 @@ public open class CfnFunction internal constructor(
         cdkBuilder.intrinsicVpcBlacklist(intrinsicVpcBlacklist)
       }
 
+      override fun intrinsicVpcBlacklist(vararg intrinsicVpcBlacklist: String): Unit =
+          intrinsicVpcBlacklist(intrinsicVpcBlacklist.toList())
+
       override fun intrinsicVpcWhitelist(intrinsicVpcWhitelist: List<String>) {
         cdkBuilder.intrinsicVpcWhitelist(intrinsicVpcWhitelist)
       }
+
+      override fun intrinsicVpcWhitelist(vararg intrinsicVpcWhitelist: String): Unit =
+          intrinsicVpcWhitelist(intrinsicVpcWhitelist.toList())
 
       override fun intrinsicVpceBlacklist(intrinsicVpceBlacklist: List<String>) {
         cdkBuilder.intrinsicVpceBlacklist(intrinsicVpceBlacklist)
       }
 
+      override fun intrinsicVpceBlacklist(vararg intrinsicVpceBlacklist: String): Unit =
+          intrinsicVpceBlacklist(intrinsicVpceBlacklist.toList())
+
       override fun intrinsicVpceWhitelist(intrinsicVpceWhitelist: List<String>) {
         cdkBuilder.intrinsicVpceWhitelist(intrinsicVpceWhitelist)
       }
+
+      override fun intrinsicVpceWhitelist(vararg intrinsicVpceWhitelist: String): Unit =
+          intrinsicVpceWhitelist(intrinsicVpceWhitelist.toList())
 
       override fun ipRangeBlacklist(ipRangeBlacklist: List<String>) {
         cdkBuilder.ipRangeBlacklist(ipRangeBlacklist)
       }
 
+      override fun ipRangeBlacklist(vararg ipRangeBlacklist: String): Unit =
+          ipRangeBlacklist(ipRangeBlacklist.toList())
+
       override fun ipRangeWhitelist(ipRangeWhitelist: List<String>) {
         cdkBuilder.ipRangeWhitelist(ipRangeWhitelist)
       }
+
+      override fun ipRangeWhitelist(vararg ipRangeWhitelist: String): Unit =
+          ipRangeWhitelist(ipRangeWhitelist.toList())
 
       override fun sourceVpcBlacklist(sourceVpcBlacklist: List<String>) {
         cdkBuilder.sourceVpcBlacklist(sourceVpcBlacklist)
       }
 
+      override fun sourceVpcBlacklist(vararg sourceVpcBlacklist: String): Unit =
+          sourceVpcBlacklist(sourceVpcBlacklist.toList())
+
       override fun sourceVpcWhitelist(sourceVpcWhitelist: List<String>) {
         cdkBuilder.sourceVpcWhitelist(sourceVpcWhitelist)
       }
+
+      override fun sourceVpcWhitelist(vararg sourceVpcWhitelist: String): Unit =
+          sourceVpcWhitelist(sourceVpcWhitelist.toList())
 
       public fun build(): software.amazon.awscdk.services.sam.CfnFunction.AuthResourcePolicyProperty
           = cdkBuilder.build()
@@ -5344,7 +5457,11 @@ public open class CfnFunction internal constructor(
     public interface Builder {
       public fun command(command: List<String>)
 
+      public fun command(vararg command: String)
+
       public fun entryPoint(entryPoint: List<String>)
+
+      public fun entryPoint(vararg entryPoint: String)
 
       public fun workingDirectory(workingDirectory: String)
     }
@@ -5358,9 +5475,13 @@ public open class CfnFunction internal constructor(
         cdkBuilder.command(command)
       }
 
+      override fun command(vararg command: String): Unit = command(command.toList())
+
       override fun entryPoint(entryPoint: List<String>) {
         cdkBuilder.entryPoint(entryPoint)
       }
+
+      override fun entryPoint(vararg entryPoint: String): Unit = entryPoint(entryPoint.toList())
 
       override fun workingDirectory(workingDirectory: String) {
         cdkBuilder.workingDirectory(workingDirectory)
@@ -5619,6 +5740,8 @@ public open class CfnFunction internal constructor(
 
       public fun requestParameters(requestParameters: List<Any>)
 
+      public fun requestParameters(vararg requestParameters: Any)
+
       public fun restApiId(restApiId: String)
     }
 
@@ -5667,6 +5790,9 @@ public open class CfnFunction internal constructor(
       override fun requestParameters(requestParameters: List<Any>) {
         cdkBuilder.requestParameters(requestParameters)
       }
+
+      override fun requestParameters(vararg requestParameters: Any): Unit =
+          requestParameters(requestParameters.toList())
 
       override fun restApiId(restApiId: String) {
         cdkBuilder.restApiId(restApiId)

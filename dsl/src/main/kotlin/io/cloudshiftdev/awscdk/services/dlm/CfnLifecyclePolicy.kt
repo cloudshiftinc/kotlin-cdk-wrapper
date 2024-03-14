@@ -130,6 +130,8 @@ public open class CfnLifecyclePolicy internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun copyTags(copyTags: Boolean)
 
@@ -170,6 +172,8 @@ public open class CfnLifecyclePolicy internal constructor(
     public fun state(state: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -252,6 +256,8 @@ public open class CfnLifecyclePolicy internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.dlm.CfnLifecyclePolicy = cdkBuilder.build()
   }
@@ -357,6 +363,8 @@ public open class CfnLifecyclePolicy internal constructor(
       public fun eventType(eventType: String)
 
       public fun snapshotOwner(snapshotOwner: List<String>)
+
+      public fun snapshotOwner(vararg snapshotOwner: String)
     }
 
     private class BuilderImpl : Builder {
@@ -376,6 +384,9 @@ public open class CfnLifecyclePolicy internal constructor(
         cdkBuilder.snapshotOwner(snapshotOwner)
       }
 
+      override fun snapshotOwner(vararg snapshotOwner: String): Unit =
+          snapshotOwner(snapshotOwner.toList())
+
       public fun build():
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.EventParametersProperty =
           cdkBuilder.build()
@@ -389,7 +400,7 @@ public open class CfnLifecyclePolicy internal constructor(
 
       override fun eventType(): String = unwrap(this).getEventType()
 
-      override fun snapshotOwner(): List<String> = unwrap(this).getSnapshotOwner() ?: emptyList()
+      override fun snapshotOwner(): List<String> = unwrap(this).getSnapshotOwner()
     }
 
     public companion object {
@@ -422,6 +433,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       public fun crossRegionCopy(crossRegionCopy: List<Any>)
 
+      public fun crossRegionCopy(vararg crossRegionCopy: Any)
+
       public fun name(name: String)
     }
 
@@ -437,6 +450,9 @@ public open class CfnLifecyclePolicy internal constructor(
       override fun crossRegionCopy(crossRegionCopy: List<Any>) {
         cdkBuilder.crossRegionCopy(crossRegionCopy)
       }
+
+      override fun crossRegionCopy(vararg crossRegionCopy: Any): Unit =
+          crossRegionCopy(crossRegionCopy.toList())
 
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -490,6 +506,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       public fun excludeDataVolumeTags(excludeDataVolumeTags: List<Any>)
 
+      public fun excludeDataVolumeTags(vararg excludeDataVolumeTags: Any)
+
       public fun noReboot(noReboot: Boolean)
 
       public fun noReboot(noReboot: IResolvable)
@@ -515,6 +533,9 @@ public open class CfnLifecyclePolicy internal constructor(
       override fun excludeDataVolumeTags(excludeDataVolumeTags: List<Any>) {
         cdkBuilder.excludeDataVolumeTags(excludeDataVolumeTags)
       }
+
+      override fun excludeDataVolumeTags(vararg excludeDataVolumeTags: Any): Unit =
+          excludeDataVolumeTags(excludeDataVolumeTags.toList())
 
       override fun noReboot(noReboot: Boolean) {
         cdkBuilder.noReboot(noReboot)
@@ -701,6 +722,8 @@ public open class CfnLifecyclePolicy internal constructor(
     public interface Builder {
       public fun targetAccounts(targetAccounts: List<String>)
 
+      public fun targetAccounts(vararg targetAccounts: String)
+
       public fun unshareInterval(unshareInterval: Number)
 
       public fun unshareIntervalUnit(unshareIntervalUnit: String)
@@ -714,6 +737,9 @@ public open class CfnLifecyclePolicy internal constructor(
       override fun targetAccounts(targetAccounts: List<String>) {
         cdkBuilder.targetAccounts(targetAccounts)
       }
+
+      override fun targetAccounts(vararg targetAccounts: String): Unit =
+          targetAccounts(targetAccounts.toList())
 
       override fun unshareInterval(unshareInterval: Number) {
         cdkBuilder.unshareInterval(unshareInterval)
@@ -771,6 +797,8 @@ public open class CfnLifecyclePolicy internal constructor(
     public interface Builder {
       public fun availabilityZones(availabilityZones: List<String>)
 
+      public fun availabilityZones(vararg availabilityZones: String)
+
       public fun count(count: Number)
 
       public fun interval(interval: Number)
@@ -786,6 +814,9 @@ public open class CfnLifecyclePolicy internal constructor(
       override fun availabilityZones(availabilityZones: List<String>) {
         cdkBuilder.availabilityZones(availabilityZones)
       }
+
+      override fun availabilityZones(vararg availabilityZones: String): Unit =
+          availabilityZones(availabilityZones.toList())
 
       override fun count(count: Number) {
         cdkBuilder.count(count)
@@ -955,6 +986,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       public fun crossRegionCopyRules(crossRegionCopyRules: List<Any>)
 
+      public fun crossRegionCopyRules(vararg crossRegionCopyRules: Any)
+
       public fun deprecateRule(deprecateRule: IResolvable)
 
       public fun deprecateRule(deprecateRule: DeprecateRuleProperty)
@@ -985,13 +1018,19 @@ public open class CfnLifecyclePolicy internal constructor(
 
       public fun shareRules(shareRules: List<Any>)
 
+      public fun shareRules(vararg shareRules: Any)
+
       public fun tagsToAdd(tagsToAdd: IResolvable)
 
       public fun tagsToAdd(tagsToAdd: List<Any>)
 
+      public fun tagsToAdd(vararg tagsToAdd: Any)
+
       public fun variableTags(variableTags: IResolvable)
 
       public fun variableTags(variableTags: List<Any>)
+
+      public fun variableTags(vararg variableTags: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1040,6 +1079,9 @@ public open class CfnLifecyclePolicy internal constructor(
       override fun crossRegionCopyRules(crossRegionCopyRules: List<Any>) {
         cdkBuilder.crossRegionCopyRules(crossRegionCopyRules)
       }
+
+      override fun crossRegionCopyRules(vararg crossRegionCopyRules: Any): Unit =
+          crossRegionCopyRules(crossRegionCopyRules.toList())
 
       override fun deprecateRule(deprecateRule: IResolvable) {
         cdkBuilder.deprecateRule(deprecateRule.let(IResolvable::unwrap))
@@ -1092,6 +1134,8 @@ public open class CfnLifecyclePolicy internal constructor(
         cdkBuilder.shareRules(shareRules)
       }
 
+      override fun shareRules(vararg shareRules: Any): Unit = shareRules(shareRules.toList())
+
       override fun tagsToAdd(tagsToAdd: IResolvable) {
         cdkBuilder.tagsToAdd(tagsToAdd.let(IResolvable::unwrap))
       }
@@ -1100,6 +1144,8 @@ public open class CfnLifecyclePolicy internal constructor(
         cdkBuilder.tagsToAdd(tagsToAdd)
       }
 
+      override fun tagsToAdd(vararg tagsToAdd: Any): Unit = tagsToAdd(tagsToAdd.toList())
+
       override fun variableTags(variableTags: IResolvable) {
         cdkBuilder.variableTags(variableTags.let(IResolvable::unwrap))
       }
@@ -1107,6 +1153,9 @@ public open class CfnLifecyclePolicy internal constructor(
       override fun variableTags(variableTags: List<Any>) {
         cdkBuilder.variableTags(variableTags)
       }
+
+      override fun variableTags(vararg variableTags: Any): Unit =
+          variableTags(variableTags.toList())
 
       public fun build(): software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ScheduleProperty =
           cdkBuilder.build()
@@ -1247,7 +1296,11 @@ public open class CfnLifecyclePolicy internal constructor(
 
       public fun scripts(scripts: List<Any>)
 
+      public fun scripts(vararg scripts: Any)
+
       public fun times(times: List<String>)
+
+      public fun times(vararg times: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1279,9 +1332,13 @@ public open class CfnLifecyclePolicy internal constructor(
         cdkBuilder.scripts(scripts)
       }
 
+      override fun scripts(vararg scripts: Any): Unit = scripts(scripts.toList())
+
       override fun times(times: List<String>) {
         cdkBuilder.times(times)
       }
+
+      override fun times(vararg times: String): Unit = times(times.toList())
 
       public fun build(): software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.CreateRuleProperty
           = cdkBuilder.build()
@@ -1352,6 +1409,8 @@ public open class CfnLifecyclePolicy internal constructor(
       public fun maximumRetryCount(maximumRetryCount: Number)
 
       public fun stages(stages: List<String>)
+
+      public fun stages(vararg stages: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1386,6 +1445,8 @@ public open class CfnLifecyclePolicy internal constructor(
       override fun stages(stages: List<String>) {
         cdkBuilder.stages(stages)
       }
+
+      override fun stages(vararg stages: String): Unit = stages(stages.toList())
 
       public fun build(): software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ScriptProperty =
           cdkBuilder.build()
@@ -1620,6 +1681,8 @@ public open class CfnLifecyclePolicy internal constructor(
 
       public fun actions(actions: List<Any>)
 
+      public fun actions(vararg actions: Any)
+
       public fun copyTags(copyTags: Boolean)
 
       public fun copyTags(copyTags: IResolvable)
@@ -1662,9 +1725,13 @@ public open class CfnLifecyclePolicy internal constructor(
 
       public fun resourceLocations(resourceLocations: List<String>)
 
+      public fun resourceLocations(vararg resourceLocations: String)
+
       public fun resourceType(resourceType: String)
 
       public fun resourceTypes(resourceTypes: List<String>)
+
+      public fun resourceTypes(vararg resourceTypes: String)
 
       public fun retainInterval(retainInterval: Number)
 
@@ -1672,9 +1739,13 @@ public open class CfnLifecyclePolicy internal constructor(
 
       public fun schedules(schedules: List<Any>)
 
+      public fun schedules(vararg schedules: Any)
+
       public fun targetTags(targetTags: IResolvable)
 
       public fun targetTags(targetTags: List<Any>)
+
+      public fun targetTags(vararg targetTags: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1689,6 +1760,8 @@ public open class CfnLifecyclePolicy internal constructor(
       override fun actions(actions: List<Any>) {
         cdkBuilder.actions(actions)
       }
+
+      override fun actions(vararg actions: Any): Unit = actions(actions.toList())
 
       override fun copyTags(copyTags: Boolean) {
         cdkBuilder.copyTags(copyTags)
@@ -1765,6 +1838,9 @@ public open class CfnLifecyclePolicy internal constructor(
         cdkBuilder.resourceLocations(resourceLocations)
       }
 
+      override fun resourceLocations(vararg resourceLocations: String): Unit =
+          resourceLocations(resourceLocations.toList())
+
       override fun resourceType(resourceType: String) {
         cdkBuilder.resourceType(resourceType)
       }
@@ -1772,6 +1848,9 @@ public open class CfnLifecyclePolicy internal constructor(
       override fun resourceTypes(resourceTypes: List<String>) {
         cdkBuilder.resourceTypes(resourceTypes)
       }
+
+      override fun resourceTypes(vararg resourceTypes: String): Unit =
+          resourceTypes(resourceTypes.toList())
 
       override fun retainInterval(retainInterval: Number) {
         cdkBuilder.retainInterval(retainInterval)
@@ -1785,6 +1864,8 @@ public open class CfnLifecyclePolicy internal constructor(
         cdkBuilder.schedules(schedules)
       }
 
+      override fun schedules(vararg schedules: Any): Unit = schedules(schedules.toList())
+
       override fun targetTags(targetTags: IResolvable) {
         cdkBuilder.targetTags(targetTags.let(IResolvable::unwrap))
       }
@@ -1792,6 +1873,8 @@ public open class CfnLifecyclePolicy internal constructor(
       override fun targetTags(targetTags: List<Any>) {
         cdkBuilder.targetTags(targetTags)
       }
+
+      override fun targetTags(vararg targetTags: Any): Unit = targetTags(targetTags.toList())
 
       public fun build():
           software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.PolicyDetailsProperty =

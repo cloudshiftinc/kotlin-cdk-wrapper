@@ -31,12 +31,14 @@ public open class CfnLaunchNotificationConstraint internal constructor(
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
-  public open fun notificationArns(): List<String> = unwrap(this).getNotificationArns() ?:
-      emptyList()
+  public open fun notificationArns(): List<String> = unwrap(this).getNotificationArns()
 
   public open fun notificationArns(`value`: List<String>) {
     unwrap(this).setNotificationArns(`value`)
   }
+
+  public open fun notificationArns(vararg `value`: String): Unit =
+      notificationArns(`value`.toList())
 
   public open fun portfolioId(): String = unwrap(this).getPortfolioId()
 
@@ -56,6 +58,8 @@ public open class CfnLaunchNotificationConstraint internal constructor(
     public fun description(description: String)
 
     public fun notificationArns(notificationArns: List<String>)
+
+    public fun notificationArns(vararg notificationArns: String)
 
     public fun portfolioId(portfolioId: String)
 
@@ -82,6 +86,9 @@ public open class CfnLaunchNotificationConstraint internal constructor(
     override fun notificationArns(notificationArns: List<String>) {
       cdkBuilder.notificationArns(notificationArns)
     }
+
+    override fun notificationArns(vararg notificationArns: String): Unit =
+        notificationArns(notificationArns.toList())
 
     override fun portfolioId(portfolioId: String) {
       cdkBuilder.portfolioId(portfolioId)

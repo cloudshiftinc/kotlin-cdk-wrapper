@@ -24,6 +24,9 @@ public open class NetworkListenerAction internal constructor(
     public open fun forward(targetGroups: List<INetworkTargetGroup>): NetworkListenerAction =
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction.forward(targetGroups.map(INetworkTargetGroup::unwrap)).let(NetworkListenerAction::wrap)
 
+    public open fun forward(vararg targetGroups: INetworkTargetGroup): NetworkListenerAction =
+        forward(targetGroups.toList())
+
     public open fun forward(targetGroups: List<INetworkTargetGroup>,
         options: NetworkForwardOptions): NetworkListenerAction =
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction.forward(targetGroups.map(INetworkTargetGroup::unwrap),
@@ -38,6 +41,9 @@ public open class NetworkListenerAction internal constructor(
     public open fun weightedForward(targetGroups: List<NetworkWeightedTargetGroup>):
         NetworkListenerAction =
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction.weightedForward(targetGroups.map(NetworkWeightedTargetGroup::unwrap)).let(NetworkListenerAction::wrap)
+
+    public open fun weightedForward(vararg targetGroups: NetworkWeightedTargetGroup):
+        NetworkListenerAction = weightedForward(targetGroups.toList())
 
     public open fun weightedForward(targetGroups: List<NetworkWeightedTargetGroup>,
         options: NetworkForwardOptions): NetworkListenerAction =

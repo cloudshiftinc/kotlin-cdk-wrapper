@@ -66,6 +66,9 @@ public open class CfnIntegration internal constructor(
     unwrap(this).setObjectTypeNames(__idx_ac66f0)
   }
 
+  public open fun objectTypeNames(vararg __idx_ac66f0: Any): Unit =
+      objectTypeNames(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -74,6 +77,8 @@ public open class CfnIntegration internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun uri(): String? = unwrap(this).getUri()
 
@@ -98,7 +103,11 @@ public open class CfnIntegration internal constructor(
 
     public fun objectTypeNames(objectTypeNames: List<Any>)
 
+    public fun objectTypeNames(vararg objectTypeNames: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun uri(uri: String)
   }
@@ -139,9 +148,14 @@ public open class CfnIntegration internal constructor(
       cdkBuilder.objectTypeNames(objectTypeNames)
     }
 
+    override fun objectTypeNames(vararg objectTypeNames: Any): Unit =
+        objectTypeNames(objectTypeNames.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun uri(uri: String) {
       cdkBuilder.uri(uri)
@@ -417,6 +431,8 @@ public open class CfnIntegration internal constructor(
 
       public fun tasks(tasks: List<Any>)
 
+      public fun tasks(vararg tasks: Any)
+
       public fun triggerConfig(triggerConfig: IResolvable)
 
       public fun triggerConfig(triggerConfig: TriggerConfigProperty)
@@ -464,6 +480,8 @@ public open class CfnIntegration internal constructor(
       override fun tasks(tasks: List<Any>) {
         cdkBuilder.tasks(tasks)
       }
+
+      override fun tasks(vararg tasks: Any): Unit = tasks(tasks.toList())
 
       override fun triggerConfig(triggerConfig: IResolvable) {
         cdkBuilder.triggerConfig(triggerConfig.let(IResolvable::unwrap))
@@ -952,9 +970,13 @@ public open class CfnIntegration internal constructor(
 
       public fun sourceFields(sourceFields: List<String>)
 
+      public fun sourceFields(vararg sourceFields: String)
+
       public fun taskProperties(taskProperties: IResolvable)
 
       public fun taskProperties(taskProperties: List<Any>)
+
+      public fun taskProperties(vararg taskProperties: Any)
 
       public fun taskType(taskType: String)
     }
@@ -986,6 +1008,9 @@ public open class CfnIntegration internal constructor(
         cdkBuilder.sourceFields(sourceFields)
       }
 
+      override fun sourceFields(vararg sourceFields: String): Unit =
+          sourceFields(sourceFields.toList())
+
       override fun taskProperties(taskProperties: IResolvable) {
         cdkBuilder.taskProperties(taskProperties.let(IResolvable::unwrap))
       }
@@ -993,6 +1018,9 @@ public open class CfnIntegration internal constructor(
       override fun taskProperties(taskProperties: List<Any>) {
         cdkBuilder.taskProperties(taskProperties)
       }
+
+      override fun taskProperties(vararg taskProperties: Any): Unit =
+          taskProperties(taskProperties.toList())
 
       override fun taskType(taskType: String) {
         cdkBuilder.taskType(taskType)
@@ -1011,7 +1039,7 @@ public open class CfnIntegration internal constructor(
 
       override fun destinationField(): String? = unwrap(this).getDestinationField()
 
-      override fun sourceFields(): List<String> = unwrap(this).getSourceFields() ?: emptyList()
+      override fun sourceFields(): List<String> = unwrap(this).getSourceFields()
 
       override fun taskProperties(): Any? = unwrap(this).getTaskProperties()
 

@@ -50,6 +50,9 @@ public open class CfnSecurityGroup internal constructor(
     unwrap(this).setSecurityGroupEgress(__idx_ac66f0)
   }
 
+  public open fun securityGroupEgress(vararg __idx_ac66f0: Any): Unit =
+      securityGroupEgress(__idx_ac66f0.toList())
+
   public open fun securityGroupIngress(): Any? = unwrap(this).getSecurityGroupIngress()
 
   public open fun securityGroupIngress(`value`: IResolvable) {
@@ -60,6 +63,9 @@ public open class CfnSecurityGroup internal constructor(
     unwrap(this).setSecurityGroupIngress(__idx_ac66f0)
   }
 
+  public open fun securityGroupIngress(vararg __idx_ac66f0: Any): Unit =
+      securityGroupIngress(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -68,6 +74,8 @@ public open class CfnSecurityGroup internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun vpcId(): String? = unwrap(this).getVpcId()
 
@@ -84,11 +92,17 @@ public open class CfnSecurityGroup internal constructor(
 
     public fun securityGroupEgress(securityGroupEgress: List<Any>)
 
+    public fun securityGroupEgress(vararg securityGroupEgress: Any)
+
     public fun securityGroupIngress(securityGroupIngress: IResolvable)
 
     public fun securityGroupIngress(securityGroupIngress: List<Any>)
 
+    public fun securityGroupIngress(vararg securityGroupIngress: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun vpcId(vpcId: String)
   }
@@ -116,6 +130,9 @@ public open class CfnSecurityGroup internal constructor(
       cdkBuilder.securityGroupEgress(securityGroupEgress)
     }
 
+    override fun securityGroupEgress(vararg securityGroupEgress: Any): Unit =
+        securityGroupEgress(securityGroupEgress.toList())
+
     override fun securityGroupIngress(securityGroupIngress: IResolvable) {
       cdkBuilder.securityGroupIngress(securityGroupIngress.let(IResolvable::unwrap))
     }
@@ -124,9 +141,14 @@ public open class CfnSecurityGroup internal constructor(
       cdkBuilder.securityGroupIngress(securityGroupIngress)
     }
 
+    override fun securityGroupIngress(vararg securityGroupIngress: Any): Unit =
+        securityGroupIngress(securityGroupIngress.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)

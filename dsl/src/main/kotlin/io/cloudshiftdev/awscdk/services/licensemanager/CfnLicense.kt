@@ -54,6 +54,8 @@ public open class CfnLicense internal constructor(
     unwrap(this).setEntitlements(__idx_ac66f0)
   }
 
+  public open fun entitlements(vararg __idx_ac66f0: Any): Unit = entitlements(__idx_ac66f0.toList())
+
   public open fun homeRegion(): String = unwrap(this).getHomeRegion()
 
   public open fun homeRegion(`value`: String) {
@@ -88,6 +90,9 @@ public open class CfnLicense internal constructor(
   public open fun licenseMetadata(__idx_ac66f0: List<Any>) {
     unwrap(this).setLicenseMetadata(__idx_ac66f0)
   }
+
+  public open fun licenseMetadata(vararg __idx_ac66f0: Any): Unit =
+      licenseMetadata(__idx_ac66f0.toList())
 
   public open fun licenseName(): String = unwrap(this).getLicenseName()
 
@@ -144,6 +149,8 @@ public open class CfnLicense internal constructor(
 
     public fun entitlements(entitlements: List<Any>)
 
+    public fun entitlements(vararg entitlements: Any)
+
     public fun homeRegion(homeRegion: String)
 
     public fun issuer(issuer: IResolvable)
@@ -157,6 +164,8 @@ public open class CfnLicense internal constructor(
     public fun licenseMetadata(licenseMetadata: IResolvable)
 
     public fun licenseMetadata(licenseMetadata: List<Any>)
+
+    public fun licenseMetadata(vararg licenseMetadata: Any)
 
     public fun licenseName(licenseName: String)
 
@@ -209,6 +218,8 @@ public open class CfnLicense internal constructor(
       cdkBuilder.entitlements(entitlements)
     }
 
+    override fun entitlements(vararg entitlements: Any): Unit = entitlements(entitlements.toList())
+
     override fun homeRegion(homeRegion: String) {
       cdkBuilder.homeRegion(homeRegion)
     }
@@ -233,6 +244,9 @@ public open class CfnLicense internal constructor(
     override fun licenseMetadata(licenseMetadata: List<Any>) {
       cdkBuilder.licenseMetadata(licenseMetadata)
     }
+
+    override fun licenseMetadata(vararg licenseMetadata: Any): Unit =
+        licenseMetadata(licenseMetadata.toList())
 
     override fun licenseName(licenseName: String) {
       cdkBuilder.licenseName(licenseName)

@@ -54,12 +54,11 @@ public open class CfnWorkgroup internal constructor(
       unwrap(this).getAttrWorkgroupPubliclyAccessible().let(IResolvable::wrap)
 
   public open fun attrWorkgroupSecurityGroupIds(): List<String> =
-      unwrap(this).getAttrWorkgroupSecurityGroupIds() ?: emptyList()
+      unwrap(this).getAttrWorkgroupSecurityGroupIds()
 
   public open fun attrWorkgroupStatus(): String = unwrap(this).getAttrWorkgroupStatus()
 
   public open fun attrWorkgroupSubnetIds(): List<String> = unwrap(this).getAttrWorkgroupSubnetIds()
-      ?: emptyList()
 
   public open fun attrWorkgroupWorkgroupArn(): String = unwrap(this).getAttrWorkgroupWorkgroupArn()
 
@@ -83,6 +82,9 @@ public open class CfnWorkgroup internal constructor(
   public open fun configParameters(__idx_ac66f0: List<Any>) {
     unwrap(this).setConfigParameters(__idx_ac66f0)
   }
+
+  public open fun configParameters(vararg __idx_ac66f0: Any): Unit =
+      configParameters(__idx_ac66f0.toList())
 
   public open fun enhancedVpcRouting(): Any? = unwrap(this).getEnhancedVpcRouting()
 
@@ -133,11 +135,16 @@ public open class CfnWorkgroup internal constructor(
     unwrap(this).setSecurityGroupIds(`value`)
   }
 
+  public open fun securityGroupIds(vararg `value`: String): Unit =
+      securityGroupIds(`value`.toList())
+
   public open fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
 
   public open fun subnetIds(`value`: List<String>) {
     unwrap(this).setSubnetIds(`value`)
   }
+
+  public open fun subnetIds(vararg `value`: String): Unit = subnetIds(`value`.toList())
 
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
@@ -147,6 +154,8 @@ public open class CfnWorkgroup internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun workgroupName(): String = unwrap(this).getWorkgroupName()
 
@@ -160,6 +169,8 @@ public open class CfnWorkgroup internal constructor(
     public fun configParameters(configParameters: IResolvable)
 
     public fun configParameters(configParameters: List<Any>)
+
+    public fun configParameters(vararg configParameters: Any)
 
     public fun enhancedVpcRouting(enhancedVpcRouting: Boolean)
 
@@ -177,9 +188,15 @@ public open class CfnWorkgroup internal constructor(
 
     public fun securityGroupIds(securityGroupIds: List<String>)
 
+    public fun securityGroupIds(vararg securityGroupIds: String)
+
     public fun subnetIds(subnetIds: List<String>)
 
+    public fun subnetIds(vararg subnetIds: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun workgroupName(workgroupName: String)
   }
@@ -202,6 +219,9 @@ public open class CfnWorkgroup internal constructor(
     override fun configParameters(configParameters: List<Any>) {
       cdkBuilder.configParameters(configParameters)
     }
+
+    override fun configParameters(vararg configParameters: Any): Unit =
+        configParameters(configParameters.toList())
 
     override fun enhancedVpcRouting(enhancedVpcRouting: Boolean) {
       cdkBuilder.enhancedVpcRouting(enhancedVpcRouting)
@@ -235,13 +255,20 @@ public open class CfnWorkgroup internal constructor(
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
+
     override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
 
+    override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun workgroupName(workgroupName: String) {
       cdkBuilder.workgroupName(workgroupName)
@@ -425,6 +452,8 @@ public open class CfnWorkgroup internal constructor(
       public fun vpcEndpoints(vpcEndpoints: IResolvable)
 
       public fun vpcEndpoints(vpcEndpoints: List<Any>)
+
+      public fun vpcEndpoints(vararg vpcEndpoints: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -447,6 +476,9 @@ public open class CfnWorkgroup internal constructor(
       override fun vpcEndpoints(vpcEndpoints: List<Any>) {
         cdkBuilder.vpcEndpoints(vpcEndpoints)
       }
+
+      override fun vpcEndpoints(vararg vpcEndpoints: Any): Unit =
+          vpcEndpoints(vpcEndpoints.toList())
 
       public fun build():
           software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup.EndpointProperty =
@@ -496,6 +528,8 @@ public open class CfnWorkgroup internal constructor(
 
       public fun networkInterfaces(networkInterfaces: List<Any>)
 
+      public fun networkInterfaces(vararg networkInterfaces: Any)
+
       public fun vpcEndpointId(vpcEndpointId: String)
 
       public fun vpcId(vpcId: String)
@@ -514,6 +548,9 @@ public open class CfnWorkgroup internal constructor(
       override fun networkInterfaces(networkInterfaces: List<Any>) {
         cdkBuilder.networkInterfaces(networkInterfaces)
       }
+
+      override fun networkInterfaces(vararg networkInterfaces: Any): Unit =
+          networkInterfaces(networkInterfaces.toList())
 
       override fun vpcEndpointId(vpcEndpointId: String) {
         cdkBuilder.vpcEndpointId(vpcEndpointId)
@@ -595,6 +632,8 @@ public open class CfnWorkgroup internal constructor(
 
       public fun configParameters(configParameters: List<Any>)
 
+      public fun configParameters(vararg configParameters: Any)
+
       public fun creationDate(creationDate: String)
 
       public fun endpoint(endpoint: IResolvable)
@@ -619,9 +658,13 @@ public open class CfnWorkgroup internal constructor(
 
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun status(status: String)
 
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
 
       public fun workgroupArn(workgroupArn: String)
 
@@ -647,6 +690,9 @@ public open class CfnWorkgroup internal constructor(
       override fun configParameters(configParameters: List<Any>) {
         cdkBuilder.configParameters(configParameters)
       }
+
+      override fun configParameters(vararg configParameters: Any): Unit =
+          configParameters(configParameters.toList())
 
       override fun creationDate(creationDate: String) {
         cdkBuilder.creationDate(creationDate)
@@ -693,6 +739,9 @@ public open class CfnWorkgroup internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun status(status: String) {
         cdkBuilder.status(status)
       }
@@ -700,6 +749,8 @@ public open class CfnWorkgroup internal constructor(
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       override fun workgroupArn(workgroupArn: String) {
         cdkBuilder.workgroupArn(workgroupArn)

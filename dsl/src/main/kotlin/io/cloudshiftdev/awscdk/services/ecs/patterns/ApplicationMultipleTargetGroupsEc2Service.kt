@@ -55,19 +55,27 @@ public open class ApplicationMultipleTargetGroupsEc2Service internal constructor
 
     public fun loadBalancers(loadBalancers: List<ApplicationLoadBalancerProps>)
 
+    public fun loadBalancers(vararg loadBalancers: ApplicationLoadBalancerProps)
+
     public fun memoryLimitMiB(memoryLimitMiB: Number)
 
     public fun memoryReservationMiB(memoryReservationMiB: Number)
 
     public fun placementConstraints(placementConstraints: List<PlacementConstraint>)
 
+    public fun placementConstraints(vararg placementConstraints: PlacementConstraint)
+
     public fun placementStrategies(placementStrategies: List<PlacementStrategy>)
+
+    public fun placementStrategies(vararg placementStrategies: PlacementStrategy)
 
     public fun propagateTags(propagateTags: PropagatedTagSource)
 
     public fun serviceName(serviceName: String)
 
     public fun targetGroups(targetGroups: List<ApplicationTargetProps>)
+
+    public fun targetGroups(vararg targetGroups: ApplicationTargetProps)
 
     public fun taskDefinition(taskDefinition: Ec2TaskDefinition)
 
@@ -128,6 +136,9 @@ public open class ApplicationMultipleTargetGroupsEc2Service internal constructor
       cdkBuilder.loadBalancers(loadBalancers.map(ApplicationLoadBalancerProps::unwrap))
     }
 
+    override fun loadBalancers(vararg loadBalancers: ApplicationLoadBalancerProps): Unit =
+        loadBalancers(loadBalancers.toList())
+
     override fun memoryLimitMiB(memoryLimitMiB: Number) {
       cdkBuilder.memoryLimitMiB(memoryLimitMiB)
     }
@@ -140,9 +151,15 @@ public open class ApplicationMultipleTargetGroupsEc2Service internal constructor
       cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint::unwrap))
     }
 
+    override fun placementConstraints(vararg placementConstraints: PlacementConstraint): Unit =
+        placementConstraints(placementConstraints.toList())
+
     override fun placementStrategies(placementStrategies: List<PlacementStrategy>) {
       cdkBuilder.placementStrategies(placementStrategies.map(PlacementStrategy::unwrap))
     }
+
+    override fun placementStrategies(vararg placementStrategies: PlacementStrategy): Unit =
+        placementStrategies(placementStrategies.toList())
 
     override fun propagateTags(propagateTags: PropagatedTagSource) {
       cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
@@ -155,6 +172,9 @@ public open class ApplicationMultipleTargetGroupsEc2Service internal constructor
     override fun targetGroups(targetGroups: List<ApplicationTargetProps>) {
       cdkBuilder.targetGroups(targetGroups.map(ApplicationTargetProps::unwrap))
     }
+
+    override fun targetGroups(vararg targetGroups: ApplicationTargetProps): Unit =
+        targetGroups(targetGroups.toList())
 
     override fun taskDefinition(taskDefinition: Ec2TaskDefinition) {
       cdkBuilder.taskDefinition(taskDefinition.let(Ec2TaskDefinition::unwrap))

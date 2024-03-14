@@ -16,11 +16,19 @@ public interface StringConditions {
   public interface Builder {
     public fun allowlist(allowlist: List<String>)
 
+    public fun allowlist(vararg allowlist: String)
+
     public fun denylist(denylist: List<String>)
+
+    public fun denylist(vararg denylist: String)
 
     public fun matchPrefixes(matchPrefixes: List<String>)
 
+    public fun matchPrefixes(vararg matchPrefixes: String)
+
     public fun matchSuffixes(matchSuffixes: List<String>)
+
+    public fun matchSuffixes(vararg matchSuffixes: String)
   }
 
   private class BuilderImpl : Builder {
@@ -31,17 +39,27 @@ public interface StringConditions {
       cdkBuilder.allowlist(allowlist)
     }
 
+    override fun allowlist(vararg allowlist: String): Unit = allowlist(allowlist.toList())
+
     override fun denylist(denylist: List<String>) {
       cdkBuilder.denylist(denylist)
     }
+
+    override fun denylist(vararg denylist: String): Unit = denylist(denylist.toList())
 
     override fun matchPrefixes(matchPrefixes: List<String>) {
       cdkBuilder.matchPrefixes(matchPrefixes)
     }
 
+    override fun matchPrefixes(vararg matchPrefixes: String): Unit =
+        matchPrefixes(matchPrefixes.toList())
+
     override fun matchSuffixes(matchSuffixes: List<String>) {
       cdkBuilder.matchSuffixes(matchSuffixes)
     }
+
+    override fun matchSuffixes(vararg matchSuffixes: String): Unit =
+        matchSuffixes(matchSuffixes.toList())
 
     public fun build(): software.amazon.awscdk.services.sns.StringConditions = cdkBuilder.build()
   }

@@ -51,6 +51,9 @@ public open class CfnApp internal constructor(
     unwrap(this).setEventSubscriptions(__idx_ac66f0)
   }
 
+  public open fun eventSubscriptions(vararg __idx_ac66f0: Any): Unit =
+      eventSubscriptions(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -92,6 +95,9 @@ public open class CfnApp internal constructor(
     unwrap(this).setResourceMappings(__idx_ac66f0)
   }
 
+  public open fun resourceMappings(vararg __idx_ac66f0: Any): Unit =
+      resourceMappings(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): Map<String, String> = unwrap(this).getTagsRaw() ?: emptyMap()
@@ -111,6 +117,8 @@ public open class CfnApp internal constructor(
 
     public fun eventSubscriptions(eventSubscriptions: List<Any>)
 
+    public fun eventSubscriptions(vararg eventSubscriptions: Any)
+
     public fun name(name: String)
 
     public fun permissionModel(permissionModel: IResolvable)
@@ -126,6 +134,8 @@ public open class CfnApp internal constructor(
     public fun resourceMappings(resourceMappings: IResolvable)
 
     public fun resourceMappings(resourceMappings: List<Any>)
+
+    public fun resourceMappings(vararg resourceMappings: Any)
 
     public fun tags(tags: Map<String, String>)
   }
@@ -157,6 +167,9 @@ public open class CfnApp internal constructor(
       cdkBuilder.eventSubscriptions(eventSubscriptions)
     }
 
+    override fun eventSubscriptions(vararg eventSubscriptions: Any): Unit =
+        eventSubscriptions(eventSubscriptions.toList())
+
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -185,6 +198,9 @@ public open class CfnApp internal constructor(
     override fun resourceMappings(resourceMappings: List<Any>) {
       cdkBuilder.resourceMappings(resourceMappings)
     }
+
+    override fun resourceMappings(vararg resourceMappings: Any): Unit =
+        resourceMappings(resourceMappings.toList())
 
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
@@ -303,6 +319,8 @@ public open class CfnApp internal constructor(
     public interface Builder {
       public fun crossAccountRoleArns(crossAccountRoleArns: List<String>)
 
+      public fun crossAccountRoleArns(vararg crossAccountRoleArns: String)
+
       public fun invokerRoleName(invokerRoleName: String)
 
       public fun type(type: String)
@@ -316,6 +334,9 @@ public open class CfnApp internal constructor(
       override fun crossAccountRoleArns(crossAccountRoleArns: List<String>) {
         cdkBuilder.crossAccountRoleArns(crossAccountRoleArns)
       }
+
+      override fun crossAccountRoleArns(vararg crossAccountRoleArns: String): Unit =
+          crossAccountRoleArns(crossAccountRoleArns.toList())
 
       override fun invokerRoleName(invokerRoleName: String) {
         cdkBuilder.invokerRoleName(invokerRoleName)

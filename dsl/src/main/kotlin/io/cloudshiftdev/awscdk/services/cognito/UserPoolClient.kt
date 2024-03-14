@@ -58,6 +58,9 @@ public open class UserPoolClient internal constructor(
     public
         fun supportedIdentityProviders(supportedIdentityProviders: List<UserPoolClientIdentityProvider>)
 
+    public fun supportedIdentityProviders(vararg
+        supportedIdentityProviders: UserPoolClientIdentityProvider)
+
     public fun userPool(userPool: IUserPool)
 
     public fun userPoolClientName(userPoolClientName: String)
@@ -129,6 +132,10 @@ public open class UserPoolClient internal constructor(
         fun supportedIdentityProviders(supportedIdentityProviders: List<UserPoolClientIdentityProvider>) {
       cdkBuilder.supportedIdentityProviders(supportedIdentityProviders.map(UserPoolClientIdentityProvider::unwrap))
     }
+
+    override fun supportedIdentityProviders(vararg
+        supportedIdentityProviders: UserPoolClientIdentityProvider): Unit =
+        supportedIdentityProviders(supportedIdentityProviders.toList())
 
     override fun userPool(userPool: IUserPool) {
       cdkBuilder.userPool(userPool.let(IUserPool::unwrap))

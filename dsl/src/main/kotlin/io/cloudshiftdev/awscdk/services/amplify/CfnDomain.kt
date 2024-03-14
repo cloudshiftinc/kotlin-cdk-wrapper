@@ -26,7 +26,7 @@ public open class CfnDomain internal constructor(
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   public open fun attrAutoSubDomainCreationPatterns(): List<String> =
-      unwrap(this).getAttrAutoSubDomainCreationPatterns() ?: emptyList()
+      unwrap(this).getAttrAutoSubDomainCreationPatterns()
 
   public open fun attrAutoSubDomainIamRole(): String = unwrap(this).getAttrAutoSubDomainIamRole()
 
@@ -47,6 +47,9 @@ public open class CfnDomain internal constructor(
   public open fun autoSubDomainCreationPatterns(`value`: List<String>) {
     unwrap(this).setAutoSubDomainCreationPatterns(`value`)
   }
+
+  public open fun autoSubDomainCreationPatterns(vararg `value`: String): Unit =
+      autoSubDomainCreationPatterns(`value`.toList())
 
   public open fun autoSubDomainIamRole(): String? = unwrap(this).getAutoSubDomainIamRole()
 
@@ -114,6 +117,9 @@ public open class CfnDomain internal constructor(
     unwrap(this).setSubDomainSettings(__idx_ac66f0)
   }
 
+  public open fun subDomainSettings(vararg __idx_ac66f0: Any): Unit =
+      subDomainSettings(__idx_ac66f0.toList())
+
   public open fun updateStatus(): String? = unwrap(this).getUpdateStatus()
 
   public open fun updateStatus(`value`: String) {
@@ -124,6 +130,8 @@ public open class CfnDomain internal constructor(
     public fun appId(appId: String)
 
     public fun autoSubDomainCreationPatterns(autoSubDomainCreationPatterns: List<String>)
+
+    public fun autoSubDomainCreationPatterns(vararg autoSubDomainCreationPatterns: String)
 
     public fun autoSubDomainIamRole(autoSubDomainIamRole: String)
 
@@ -154,6 +162,8 @@ public open class CfnDomain internal constructor(
 
     public fun subDomainSettings(subDomainSettings: List<Any>)
 
+    public fun subDomainSettings(vararg subDomainSettings: Any)
+
     public fun updateStatus(updateStatus: String)
   }
 
@@ -171,6 +181,9 @@ public open class CfnDomain internal constructor(
     override fun autoSubDomainCreationPatterns(autoSubDomainCreationPatterns: List<String>) {
       cdkBuilder.autoSubDomainCreationPatterns(autoSubDomainCreationPatterns)
     }
+
+    override fun autoSubDomainCreationPatterns(vararg autoSubDomainCreationPatterns: String): Unit =
+        autoSubDomainCreationPatterns(autoSubDomainCreationPatterns.toList())
 
     override fun autoSubDomainIamRole(autoSubDomainIamRole: String) {
       cdkBuilder.autoSubDomainIamRole(autoSubDomainIamRole)
@@ -222,6 +235,9 @@ public open class CfnDomain internal constructor(
     override fun subDomainSettings(subDomainSettings: List<Any>) {
       cdkBuilder.subDomainSettings(subDomainSettings)
     }
+
+    override fun subDomainSettings(vararg subDomainSettings: Any): Unit =
+        subDomainSettings(subDomainSettings.toList())
 
     override fun updateStatus(updateStatus: String) {
       cdkBuilder.updateStatus(updateStatus)

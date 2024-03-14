@@ -45,6 +45,9 @@ public open class CfnConfiguration internal constructor(
     unwrap(this).setKafkaVersionsList(`value`)
   }
 
+  public open fun kafkaVersionsList(vararg `value`: String): Unit =
+      kafkaVersionsList(`value`.toList())
+
   public open fun latestRevision(): Any? = unwrap(this).getLatestRevision()
 
   public open fun latestRevision(`value`: IResolvable) {
@@ -77,6 +80,8 @@ public open class CfnConfiguration internal constructor(
 
     public fun kafkaVersionsList(kafkaVersionsList: List<String>)
 
+    public fun kafkaVersionsList(vararg kafkaVersionsList: String)
+
     public fun latestRevision(latestRevision: IResolvable)
 
     public fun latestRevision(latestRevision: LatestRevisionProperty)
@@ -104,6 +109,9 @@ public open class CfnConfiguration internal constructor(
     override fun kafkaVersionsList(kafkaVersionsList: List<String>) {
       cdkBuilder.kafkaVersionsList(kafkaVersionsList)
     }
+
+    override fun kafkaVersionsList(vararg kafkaVersionsList: String): Unit =
+        kafkaVersionsList(kafkaVersionsList.toList())
 
     override fun latestRevision(latestRevision: IResolvable) {
       cdkBuilder.latestRevision(latestRevision.let(IResolvable::unwrap))

@@ -584,6 +584,8 @@ public open class CfnConfigurationSet internal constructor(
 
     public interface Builder {
       public fun suppressedReasons(suppressedReasons: List<String>)
+
+      public fun suppressedReasons(vararg suppressedReasons: String)
     }
 
     private class BuilderImpl : Builder {
@@ -595,6 +597,9 @@ public open class CfnConfigurationSet internal constructor(
       override fun suppressedReasons(suppressedReasons: List<String>) {
         cdkBuilder.suppressedReasons(suppressedReasons)
       }
+
+      override fun suppressedReasons(vararg suppressedReasons: String): Unit =
+          suppressedReasons(suppressedReasons.toList())
 
       public fun build():
           software.amazon.awscdk.services.ses.CfnConfigurationSet.SuppressionOptionsProperty =

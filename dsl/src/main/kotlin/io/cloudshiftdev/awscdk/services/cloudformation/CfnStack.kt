@@ -46,6 +46,9 @@ public open class CfnStack internal constructor(
     unwrap(this).setNotificationArns(`value`)
   }
 
+  public open fun notificationArns(vararg `value`: String): Unit =
+      notificationArns(`value`.toList())
+
   public open fun parameters(): Any? = unwrap(this).getParameters()
 
   public open fun parameters(`value`: IResolvable) {
@@ -65,6 +68,8 @@ public open class CfnStack internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun templateUrl(): String? = unwrap(this).getTemplateUrl()
 
   public open fun templateUrl(`value`: String) {
@@ -80,11 +85,15 @@ public open class CfnStack internal constructor(
   public interface Builder {
     public fun notificationArns(notificationArns: List<String>)
 
+    public fun notificationArns(vararg notificationArns: String)
+
     public fun parameters(parameters: IResolvable)
 
     public fun parameters(parameters: Map<String, String>)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun templateUrl(templateUrl: String)
 
@@ -102,6 +111,9 @@ public open class CfnStack internal constructor(
       cdkBuilder.notificationArns(notificationArns)
     }
 
+    override fun notificationArns(vararg notificationArns: String): Unit =
+        notificationArns(notificationArns.toList())
+
     override fun parameters(parameters: IResolvable) {
       cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
     }
@@ -113,6 +125,8 @@ public open class CfnStack internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun templateUrl(templateUrl: String) {
       cdkBuilder.templateUrl(templateUrl)

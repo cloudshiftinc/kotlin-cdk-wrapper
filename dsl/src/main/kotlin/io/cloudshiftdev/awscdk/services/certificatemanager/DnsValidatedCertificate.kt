@@ -66,6 +66,8 @@ public open class DnsValidatedCertificate internal constructor(
 
     public fun subjectAlternativeNames(subjectAlternativeNames: List<String>)
 
+    public fun subjectAlternativeNames(vararg subjectAlternativeNames: String)
+
     public fun transparencyLoggingEnabled(transparencyLoggingEnabled: Boolean)
 
     public fun validation(validation: CertificateValidation)
@@ -115,6 +117,9 @@ public open class DnsValidatedCertificate internal constructor(
     override fun subjectAlternativeNames(subjectAlternativeNames: List<String>) {
       cdkBuilder.subjectAlternativeNames(subjectAlternativeNames)
     }
+
+    override fun subjectAlternativeNames(vararg subjectAlternativeNames: String): Unit =
+        subjectAlternativeNames(subjectAlternativeNames.toList())
 
     override fun transparencyLoggingEnabled(transparencyLoggingEnabled: Boolean) {
       cdkBuilder.transparencyLoggingEnabled(transparencyLoggingEnabled)

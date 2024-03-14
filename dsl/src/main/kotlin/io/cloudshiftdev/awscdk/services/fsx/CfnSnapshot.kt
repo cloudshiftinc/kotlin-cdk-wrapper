@@ -38,6 +38,8 @@ public open class CfnSnapshot internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun volumeId(): String = unwrap(this).getVolumeId()
 
   public open fun volumeId(`value`: String) {
@@ -48,6 +50,8 @@ public open class CfnSnapshot internal constructor(
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun volumeId(volumeId: String)
   }
@@ -66,6 +70,8 @@ public open class CfnSnapshot internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun volumeId(volumeId: String) {
       cdkBuilder.volumeId(volumeId)

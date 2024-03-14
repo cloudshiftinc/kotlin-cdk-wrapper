@@ -262,11 +262,15 @@ public open class CfnBackupPlan internal constructor(
 
       public fun advancedBackupSettings(advancedBackupSettings: List<Any>)
 
+      public fun advancedBackupSettings(vararg advancedBackupSettings: Any)
+
       public fun backupPlanName(backupPlanName: String)
 
       public fun backupPlanRule(backupPlanRule: IResolvable)
 
       public fun backupPlanRule(backupPlanRule: List<Any>)
+
+      public fun backupPlanRule(vararg backupPlanRule: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -283,6 +287,9 @@ public open class CfnBackupPlan internal constructor(
         cdkBuilder.advancedBackupSettings(advancedBackupSettings)
       }
 
+      override fun advancedBackupSettings(vararg advancedBackupSettings: Any): Unit =
+          advancedBackupSettings(advancedBackupSettings.toList())
+
       override fun backupPlanName(backupPlanName: String) {
         cdkBuilder.backupPlanName(backupPlanName)
       }
@@ -294,6 +301,9 @@ public open class CfnBackupPlan internal constructor(
       override fun backupPlanRule(backupPlanRule: List<Any>) {
         cdkBuilder.backupPlanRule(backupPlanRule)
       }
+
+      override fun backupPlanRule(vararg backupPlanRule: Any): Unit =
+          backupPlanRule(backupPlanRule.toList())
 
       public fun build():
           software.amazon.awscdk.services.backup.CfnBackupPlan.BackupPlanResourceTypeProperty =
@@ -359,6 +369,8 @@ public open class CfnBackupPlan internal constructor(
 
       public fun copyActions(copyActions: List<Any>)
 
+      public fun copyActions(vararg copyActions: Any)
+
       public fun enableContinuousBackup(enableContinuousBackup: Boolean)
 
       public fun enableContinuousBackup(enableContinuousBackup: IResolvable)
@@ -403,6 +415,8 @@ public open class CfnBackupPlan internal constructor(
       override fun copyActions(copyActions: List<Any>) {
         cdkBuilder.copyActions(copyActions)
       }
+
+      override fun copyActions(vararg copyActions: Any): Unit = copyActions(copyActions.toList())
 
       override fun enableContinuousBackup(enableContinuousBackup: Boolean) {
         cdkBuilder.enableContinuousBackup(enableContinuousBackup)

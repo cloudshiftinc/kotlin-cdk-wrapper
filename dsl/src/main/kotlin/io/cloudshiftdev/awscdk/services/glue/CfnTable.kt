@@ -185,9 +185,13 @@ public open class CfnTable internal constructor(
     public interface Builder {
       public fun bucketColumns(bucketColumns: List<String>)
 
+      public fun bucketColumns(vararg bucketColumns: String)
+
       public fun columns(columns: IResolvable)
 
       public fun columns(columns: List<Any>)
+
+      public fun columns(vararg columns: Any)
 
       public fun compressed(compressed: Boolean)
 
@@ -231,6 +235,8 @@ public open class CfnTable internal constructor(
 
       public fun sortColumns(sortColumns: List<Any>)
 
+      public fun sortColumns(vararg sortColumns: Any)
+
       public fun storedAsSubDirectories(storedAsSubDirectories: Boolean)
 
       public fun storedAsSubDirectories(storedAsSubDirectories: IResolvable)
@@ -245,6 +251,9 @@ public open class CfnTable internal constructor(
         cdkBuilder.bucketColumns(bucketColumns)
       }
 
+      override fun bucketColumns(vararg bucketColumns: String): Unit =
+          bucketColumns(bucketColumns.toList())
+
       override fun columns(columns: IResolvable) {
         cdkBuilder.columns(columns.let(IResolvable::unwrap))
       }
@@ -252,6 +261,8 @@ public open class CfnTable internal constructor(
       override fun columns(columns: List<Any>) {
         cdkBuilder.columns(columns)
       }
+
+      override fun columns(vararg columns: Any): Unit = columns(columns.toList())
 
       override fun compressed(compressed: Boolean) {
         cdkBuilder.compressed(compressed)
@@ -327,6 +338,8 @@ public open class CfnTable internal constructor(
       override fun sortColumns(sortColumns: List<Any>) {
         cdkBuilder.sortColumns(sortColumns)
       }
+
+      override fun sortColumns(vararg sortColumns: Any): Unit = sortColumns(sortColumns.toList())
 
       override fun storedAsSubDirectories(storedAsSubDirectories: Boolean) {
         cdkBuilder.storedAsSubDirectories(storedAsSubDirectories)
@@ -570,6 +583,8 @@ public open class CfnTable internal constructor(
 
       public fun partitionKeys(partitionKeys: List<Any>)
 
+      public fun partitionKeys(vararg partitionKeys: Any)
+
       public fun retention(retention: Number)
 
       public fun storageDescriptor(storageDescriptor: IResolvable)
@@ -623,6 +638,9 @@ public open class CfnTable internal constructor(
       override fun partitionKeys(partitionKeys: List<Any>) {
         cdkBuilder.partitionKeys(partitionKeys)
       }
+
+      override fun partitionKeys(vararg partitionKeys: Any): Unit =
+          partitionKeys(partitionKeys.toList())
 
       override fun retention(retention: Number) {
         cdkBuilder.retention(retention)
@@ -730,9 +748,13 @@ public open class CfnTable internal constructor(
     public interface Builder {
       public fun skewedColumnNames(skewedColumnNames: List<String>)
 
+      public fun skewedColumnNames(vararg skewedColumnNames: String)
+
       public fun skewedColumnValueLocationMaps(skewedColumnValueLocationMaps: Any)
 
       public fun skewedColumnValues(skewedColumnValues: List<String>)
+
+      public fun skewedColumnValues(vararg skewedColumnValues: String)
     }
 
     private class BuilderImpl : Builder {
@@ -744,6 +766,9 @@ public open class CfnTable internal constructor(
         cdkBuilder.skewedColumnNames(skewedColumnNames)
       }
 
+      override fun skewedColumnNames(vararg skewedColumnNames: String): Unit =
+          skewedColumnNames(skewedColumnNames.toList())
+
       override fun skewedColumnValueLocationMaps(skewedColumnValueLocationMaps: Any) {
         cdkBuilder.skewedColumnValueLocationMaps(skewedColumnValueLocationMaps)
       }
@@ -751,6 +776,9 @@ public open class CfnTable internal constructor(
       override fun skewedColumnValues(skewedColumnValues: List<String>) {
         cdkBuilder.skewedColumnValues(skewedColumnValues)
       }
+
+      override fun skewedColumnValues(vararg skewedColumnValues: String): Unit =
+          skewedColumnValues(skewedColumnValues.toList())
 
       public fun build(): software.amazon.awscdk.services.glue.CfnTable.SkewedInfoProperty =
           cdkBuilder.build()

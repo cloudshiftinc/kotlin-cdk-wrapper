@@ -33,6 +33,8 @@ public open class AthenaStartQueryExecution internal constructor(
 
     public fun executionParameters(executionParameters: List<String>)
 
+    public fun executionParameters(vararg executionParameters: String)
+
     @Deprecated(message = "deprecated in CDK")
     public fun heartbeat(heartbeat: Duration)
 
@@ -102,6 +104,9 @@ public open class AthenaStartQueryExecution internal constructor(
     override fun executionParameters(executionParameters: List<String>) {
       cdkBuilder.executionParameters(executionParameters)
     }
+
+    override fun executionParameters(vararg executionParameters: String): Unit =
+        executionParameters(executionParameters.toList())
 
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {

@@ -28,6 +28,8 @@ public open class CfnFunction internal constructor(
     unwrap(this).setArchitectures(`value`)
   }
 
+  public open fun architectures(vararg `value`: String): Unit = architectures(`value`.toList())
+
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   public open fun attrSnapStartResponse(): IResolvable =
@@ -120,6 +122,9 @@ public open class CfnFunction internal constructor(
     unwrap(this).setFileSystemConfigs(__idx_ac66f0)
   }
 
+  public open fun fileSystemConfigs(vararg __idx_ac66f0: Any): Unit =
+      fileSystemConfigs(__idx_ac66f0.toList())
+
   public open fun functionName(): String? = unwrap(this).getFunctionName()
 
   public open fun functionName(`value`: String) {
@@ -162,6 +167,8 @@ public open class CfnFunction internal constructor(
   public open fun layers(`value`: List<String>) {
     unwrap(this).setLayers(`value`)
   }
+
+  public open fun layers(vararg `value`: String): Unit = layers(`value`.toList())
 
   public open fun loggingConfig(): Any? = unwrap(this).getLoggingConfig()
 
@@ -249,6 +256,8 @@ public open class CfnFunction internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun timeout(): Number? = unwrap(this).getTimeout()
 
   public open fun timeout(`value`: Number) {
@@ -287,6 +296,8 @@ public open class CfnFunction internal constructor(
 
   public interface Builder {
     public fun architectures(architectures: List<String>)
+
+    public fun architectures(vararg architectures: String)
 
     public fun code(code: IResolvable)
 
@@ -328,6 +339,8 @@ public open class CfnFunction internal constructor(
 
     public fun fileSystemConfigs(fileSystemConfigs: List<Any>)
 
+    public fun fileSystemConfigs(vararg fileSystemConfigs: Any)
+
     public fun functionName(functionName: String)
 
     public fun handler(handler: String)
@@ -343,6 +356,8 @@ public open class CfnFunction internal constructor(
     public fun kmsKeyArn(kmsKeyArn: String)
 
     public fun layers(layers: List<String>)
+
+    public fun layers(vararg layers: String)
 
     public fun loggingConfig(loggingConfig: IResolvable)
 
@@ -381,6 +396,8 @@ public open class CfnFunction internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun timeout(timeout: Number)
 
     public fun tracingConfig(tracingConfig: IResolvable)
@@ -410,6 +427,9 @@ public open class CfnFunction internal constructor(
     override fun architectures(architectures: List<String>) {
       cdkBuilder.architectures(architectures)
     }
+
+    override fun architectures(vararg architectures: String): Unit =
+        architectures(architectures.toList())
 
     override fun code(code: IResolvable) {
       cdkBuilder.code(code.let(IResolvable::unwrap))
@@ -478,6 +498,9 @@ public open class CfnFunction internal constructor(
       cdkBuilder.fileSystemConfigs(fileSystemConfigs)
     }
 
+    override fun fileSystemConfigs(vararg fileSystemConfigs: Any): Unit =
+        fileSystemConfigs(fileSystemConfigs.toList())
+
     override fun functionName(functionName: String) {
       cdkBuilder.functionName(functionName)
     }
@@ -506,6 +529,8 @@ public open class CfnFunction internal constructor(
     override fun layers(layers: List<String>) {
       cdkBuilder.layers(layers)
     }
+
+    override fun layers(vararg layers: String): Unit = layers(layers.toList())
 
     override fun loggingConfig(loggingConfig: IResolvable) {
       cdkBuilder.loggingConfig(loggingConfig.let(IResolvable::unwrap))
@@ -570,6 +595,8 @@ public open class CfnFunction internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun timeout(timeout: Number) {
       cdkBuilder.timeout(timeout)
@@ -686,7 +713,11 @@ public open class CfnFunction internal constructor(
 
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -706,9 +737,14 @@ public open class CfnFunction internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       public fun build(): software.amazon.awscdk.services.lambda.CfnFunction.VpcConfigProperty =
           cdkBuilder.build()
@@ -1033,7 +1069,11 @@ public open class CfnFunction internal constructor(
     public interface Builder {
       public fun command(command: List<String>)
 
+      public fun command(vararg command: String)
+
       public fun entryPoint(entryPoint: List<String>)
+
+      public fun entryPoint(vararg entryPoint: String)
 
       public fun workingDirectory(workingDirectory: String)
     }
@@ -1047,9 +1087,13 @@ public open class CfnFunction internal constructor(
         cdkBuilder.command(command)
       }
 
+      override fun command(vararg command: String): Unit = command(command.toList())
+
       override fun entryPoint(entryPoint: List<String>) {
         cdkBuilder.entryPoint(entryPoint)
       }
+
+      override fun entryPoint(vararg entryPoint: String): Unit = entryPoint(entryPoint.toList())
 
       override fun workingDirectory(workingDirectory: String) {
         cdkBuilder.workingDirectory(workingDirectory)

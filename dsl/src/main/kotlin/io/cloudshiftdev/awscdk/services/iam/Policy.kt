@@ -52,13 +52,21 @@ public open class Policy internal constructor(
 
     public fun groups(groups: List<IGroup>)
 
+    public fun groups(vararg groups: IGroup)
+
     public fun policyName(policyName: String)
 
     public fun roles(roles: List<IRole>)
 
+    public fun roles(vararg roles: IRole)
+
     public fun statements(statements: List<PolicyStatement>)
 
+    public fun statements(vararg statements: PolicyStatement)
+
     public fun users(users: List<IUser>)
+
+    public fun users(vararg users: IUser)
   }
 
   private class BuilderImpl(
@@ -85,6 +93,8 @@ public open class Policy internal constructor(
       cdkBuilder.groups(groups.map(IGroup::unwrap))
     }
 
+    override fun groups(vararg groups: IGroup): Unit = groups(groups.toList())
+
     override fun policyName(policyName: String) {
       cdkBuilder.policyName(policyName)
     }
@@ -93,13 +103,20 @@ public open class Policy internal constructor(
       cdkBuilder.roles(roles.map(IRole::unwrap))
     }
 
+    override fun roles(vararg roles: IRole): Unit = roles(roles.toList())
+
     override fun statements(statements: List<PolicyStatement>) {
       cdkBuilder.statements(statements.map(PolicyStatement::unwrap))
     }
 
+    override fun statements(vararg statements: PolicyStatement): Unit =
+        statements(statements.toList())
+
     override fun users(users: List<IUser>) {
       cdkBuilder.users(users.map(IUser::unwrap))
     }
+
+    override fun users(vararg users: IUser): Unit = users(users.toList())
 
     public fun build(): software.amazon.awscdk.services.iam.Policy = cdkBuilder.build()
   }

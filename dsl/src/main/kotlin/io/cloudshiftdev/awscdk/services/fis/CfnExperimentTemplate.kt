@@ -90,6 +90,9 @@ public open class CfnExperimentTemplate internal constructor(
     unwrap(this).setStopConditions(__idx_ac66f0)
   }
 
+  public open fun stopConditions(vararg __idx_ac66f0: Any): Unit =
+      stopConditions(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): Map<String, String> = unwrap(this).getTagsRaw() ?: emptyMap()
@@ -138,6 +141,8 @@ public open class CfnExperimentTemplate internal constructor(
     public fun stopConditions(stopConditions: IResolvable)
 
     public fun stopConditions(stopConditions: List<Any>)
+
+    public fun stopConditions(vararg stopConditions: Any)
 
     public fun tags(tags: Map<String, String>)
 
@@ -205,6 +210,9 @@ public open class CfnExperimentTemplate internal constructor(
       cdkBuilder.stopConditions(stopConditions)
     }
 
+    override fun stopConditions(vararg stopConditions: Any): Unit =
+        stopConditions(stopConditions.toList())
+
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
@@ -251,6 +259,8 @@ public open class CfnExperimentTemplate internal constructor(
       public fun path(path: String)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -267,6 +277,8 @@ public open class CfnExperimentTemplate internal constructor(
         cdkBuilder.values(values)
       }
 
+      override fun values(vararg values: String): Unit = values(values.toList())
+
       public fun build():
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateTargetFilterProperty
           = cdkBuilder.build()
@@ -278,7 +290,7 @@ public open class CfnExperimentTemplate internal constructor(
     ) : ExperimentTemplateTargetFilterProperty {
       override fun path(): String = unwrap(this).getPath()
 
-      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues()
     }
 
     public companion object {
@@ -320,11 +332,15 @@ public open class CfnExperimentTemplate internal constructor(
 
       public fun filters(filters: List<Any>)
 
+      public fun filters(vararg filters: Any)
+
       public fun parameters(parameters: IResolvable)
 
       public fun parameters(parameters: Map<String, String>)
 
       public fun resourceArns(resourceArns: List<String>)
+
+      public fun resourceArns(vararg resourceArns: String)
 
       public fun resourceTags(resourceTags: IResolvable)
 
@@ -349,6 +365,8 @@ public open class CfnExperimentTemplate internal constructor(
         cdkBuilder.filters(filters)
       }
 
+      override fun filters(vararg filters: Any): Unit = filters(filters.toList())
+
       override fun parameters(parameters: IResolvable) {
         cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
       }
@@ -360,6 +378,9 @@ public open class CfnExperimentTemplate internal constructor(
       override fun resourceArns(resourceArns: List<String>) {
         cdkBuilder.resourceArns(resourceArns)
       }
+
+      override fun resourceArns(vararg resourceArns: String): Unit =
+          resourceArns(resourceArns.toList())
 
       override fun resourceTags(resourceTags: IResolvable) {
         cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
@@ -692,6 +713,8 @@ public open class CfnExperimentTemplate internal constructor(
 
       public fun startAfter(startAfter: List<String>)
 
+      public fun startAfter(vararg startAfter: String)
+
       public fun targets(targets: IResolvable)
 
       public fun targets(targets: Map<String, String>)
@@ -722,6 +745,8 @@ public open class CfnExperimentTemplate internal constructor(
       override fun startAfter(startAfter: List<String>) {
         cdkBuilder.startAfter(startAfter)
       }
+
+      override fun startAfter(vararg startAfter: String): Unit = startAfter(startAfter.toList())
 
       override fun targets(targets: IResolvable) {
         cdkBuilder.targets(targets.let(IResolvable::unwrap))

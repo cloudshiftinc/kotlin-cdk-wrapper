@@ -17,8 +17,7 @@ public open class CfnDeliverySource internal constructor(
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
-  public open fun attrResourceArns(): List<String> = unwrap(this).getAttrResourceArns() ?:
-      emptyList()
+  public open fun attrResourceArns(): List<String> = unwrap(this).getAttrResourceArns()
 
   public open fun attrService(): String = unwrap(this).getAttrService()
 
@@ -53,6 +52,8 @@ public open class CfnDeliverySource internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun logType(logType: String)
 
@@ -61,6 +62,8 @@ public open class CfnDeliverySource internal constructor(
     public fun resourceArn(resourceArn: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -85,6 +88,8 @@ public open class CfnDeliverySource internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.logs.CfnDeliverySource = cdkBuilder.build()
   }

@@ -23,10 +23,9 @@ public open class CfnEventSubscription internal constructor(
   public open fun attrCustomerAwsId(): String = unwrap(this).getAttrCustomerAwsId()
 
   public open fun attrEventCategoriesList(): List<String> =
-      unwrap(this).getAttrEventCategoriesList() ?: emptyList()
+      unwrap(this).getAttrEventCategoriesList()
 
-  public open fun attrSourceIdsList(): List<String> = unwrap(this).getAttrSourceIdsList() ?:
-      emptyList()
+  public open fun attrSourceIdsList(): List<String> = unwrap(this).getAttrSourceIdsList()
 
   public open fun attrStatus(): String = unwrap(this).getAttrStatus()
 
@@ -48,6 +47,8 @@ public open class CfnEventSubscription internal constructor(
   public open fun eventCategories(`value`: List<String>) {
     unwrap(this).setEventCategories(`value`)
   }
+
+  public open fun eventCategories(vararg `value`: String): Unit = eventCategories(`value`.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -71,6 +72,8 @@ public open class CfnEventSubscription internal constructor(
     unwrap(this).setSourceIds(`value`)
   }
 
+  public open fun sourceIds(vararg `value`: String): Unit = sourceIds(`value`.toList())
+
   public open fun sourceType(): String? = unwrap(this).getSourceType()
 
   public open fun sourceType(`value`: String) {
@@ -92,6 +95,8 @@ public open class CfnEventSubscription internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun enabled(enabled: Boolean)
 
@@ -99,17 +104,23 @@ public open class CfnEventSubscription internal constructor(
 
     public fun eventCategories(eventCategories: List<String>)
 
+    public fun eventCategories(vararg eventCategories: String)
+
     public fun severity(severity: String)
 
     public fun snsTopicArn(snsTopicArn: String)
 
     public fun sourceIds(sourceIds: List<String>)
 
+    public fun sourceIds(vararg sourceIds: String)
+
     public fun sourceType(sourceType: String)
 
     public fun subscriptionName(subscriptionName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -131,6 +142,9 @@ public open class CfnEventSubscription internal constructor(
       cdkBuilder.eventCategories(eventCategories)
     }
 
+    override fun eventCategories(vararg eventCategories: String): Unit =
+        eventCategories(eventCategories.toList())
+
     override fun severity(severity: String) {
       cdkBuilder.severity(severity)
     }
@@ -143,6 +157,8 @@ public open class CfnEventSubscription internal constructor(
       cdkBuilder.sourceIds(sourceIds)
     }
 
+    override fun sourceIds(vararg sourceIds: String): Unit = sourceIds(sourceIds.toList())
+
     override fun sourceType(sourceType: String) {
       cdkBuilder.sourceType(sourceType)
     }
@@ -154,6 +170,8 @@ public open class CfnEventSubscription internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.redshift.CfnEventSubscription =
         cdkBuilder.build()

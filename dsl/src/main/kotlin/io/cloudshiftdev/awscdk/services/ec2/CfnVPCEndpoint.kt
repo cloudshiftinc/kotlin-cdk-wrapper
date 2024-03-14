@@ -17,12 +17,12 @@ public open class CfnVPCEndpoint internal constructor(
 ) : CfnResource(cdkObject), IInspectable {
   public open fun attrCreationTimestamp(): String = unwrap(this).getAttrCreationTimestamp()
 
-  public open fun attrDnsEntries(): List<String> = unwrap(this).getAttrDnsEntries() ?: emptyList()
+  public open fun attrDnsEntries(): List<String> = unwrap(this).getAttrDnsEntries()
 
   public open fun attrId(): String = unwrap(this).getAttrId()
 
   public open fun attrNetworkInterfaceIds(): List<String> =
-      unwrap(this).getAttrNetworkInterfaceIds() ?: emptyList()
+      unwrap(this).getAttrNetworkInterfaceIds()
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -50,12 +50,17 @@ public open class CfnVPCEndpoint internal constructor(
     unwrap(this).setRouteTableIds(`value`)
   }
 
+  public open fun routeTableIds(vararg `value`: String): Unit = routeTableIds(`value`.toList())
+
   public open fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
       emptyList()
 
   public open fun securityGroupIds(`value`: List<String>) {
     unwrap(this).setSecurityGroupIds(`value`)
   }
+
+  public open fun securityGroupIds(vararg `value`: String): Unit =
+      securityGroupIds(`value`.toList())
 
   public open fun serviceName(): String = unwrap(this).getServiceName()
 
@@ -68,6 +73,8 @@ public open class CfnVPCEndpoint internal constructor(
   public open fun subnetIds(`value`: List<String>) {
     unwrap(this).setSubnetIds(`value`)
   }
+
+  public open fun subnetIds(vararg `value`: String): Unit = subnetIds(`value`.toList())
 
   public open fun vpcEndpointType(): String? = unwrap(this).getVpcEndpointType()
 
@@ -90,11 +97,17 @@ public open class CfnVPCEndpoint internal constructor(
 
     public fun routeTableIds(routeTableIds: List<String>)
 
+    public fun routeTableIds(vararg routeTableIds: String)
+
     public fun securityGroupIds(securityGroupIds: List<String>)
+
+    public fun securityGroupIds(vararg securityGroupIds: String)
 
     public fun serviceName(serviceName: String)
 
     public fun subnetIds(subnetIds: List<String>)
+
+    public fun subnetIds(vararg subnetIds: String)
 
     public fun vpcEndpointType(vpcEndpointType: String)
 
@@ -124,9 +137,15 @@ public open class CfnVPCEndpoint internal constructor(
       cdkBuilder.routeTableIds(routeTableIds)
     }
 
+    override fun routeTableIds(vararg routeTableIds: String): Unit =
+        routeTableIds(routeTableIds.toList())
+
     override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
+
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
 
     override fun serviceName(serviceName: String) {
       cdkBuilder.serviceName(serviceName)
@@ -135,6 +154,8 @@ public open class CfnVPCEndpoint internal constructor(
     override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
+
+    override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
     override fun vpcEndpointType(vpcEndpointType: String) {
       cdkBuilder.vpcEndpointType(vpcEndpointType)

@@ -55,6 +55,8 @@ public open class CfnDBClusterParameterGroup internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun description(description: String)
 
@@ -65,6 +67,8 @@ public open class CfnDBClusterParameterGroup internal constructor(
     public fun parameters(parameters: Any)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -93,6 +97,8 @@ public open class CfnDBClusterParameterGroup internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.docdb.CfnDBClusterParameterGroup =
         cdkBuilder.build()

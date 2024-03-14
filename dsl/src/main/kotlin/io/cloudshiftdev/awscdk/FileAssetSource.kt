@@ -22,6 +22,8 @@ public interface FileAssetSource {
 
     public fun executable(executable: List<String>)
 
+    public fun executable(vararg executable: String)
+
     public fun fileName(fileName: String)
 
     public fun packaging(packaging: FileAssetPackaging)
@@ -40,6 +42,8 @@ public interface FileAssetSource {
     override fun executable(executable: List<String>) {
       cdkBuilder.executable(executable)
     }
+
+    override fun executable(vararg executable: String): Unit = executable(executable.toList())
 
     override fun fileName(fileName: String) {
       cdkBuilder.fileName(fileName)

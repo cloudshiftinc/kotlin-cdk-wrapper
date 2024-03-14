@@ -47,6 +47,8 @@ public open class CfnResourceSet internal constructor(
     unwrap(this).setResources(__idx_ac66f0)
   }
 
+  public open fun resources(vararg __idx_ac66f0: Any): Unit = resources(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -55,6 +57,8 @@ public open class CfnResourceSet internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public interface Builder {
     public fun resourceSetName(resourceSetName: String)
@@ -65,7 +69,11 @@ public open class CfnResourceSet internal constructor(
 
     public fun resources(resources: List<Any>)
 
+    public fun resources(vararg resources: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -93,9 +101,13 @@ public open class CfnResourceSet internal constructor(
       cdkBuilder.resources(resources)
     }
 
+    override fun resources(vararg resources: Any): Unit = resources(resources.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet =
         cdkBuilder.build()
@@ -342,6 +354,8 @@ public open class CfnResourceSet internal constructor(
 
       public fun readinessScopes(readinessScopes: List<String>)
 
+      public fun readinessScopes(vararg readinessScopes: String)
+
       public fun resourceArn(resourceArn: String)
     }
 
@@ -372,6 +386,9 @@ public open class CfnResourceSet internal constructor(
       override fun readinessScopes(readinessScopes: List<String>) {
         cdkBuilder.readinessScopes(readinessScopes)
       }
+
+      override fun readinessScopes(vararg readinessScopes: String): Unit =
+          readinessScopes(readinessScopes.toList())
 
       override fun resourceArn(resourceArn: String) {
         cdkBuilder.resourceArn(resourceArn)

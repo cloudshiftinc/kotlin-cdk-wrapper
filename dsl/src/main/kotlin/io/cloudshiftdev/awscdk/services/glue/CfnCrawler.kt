@@ -28,6 +28,8 @@ public open class CfnCrawler internal constructor(
     unwrap(this).setClassifiers(`value`)
   }
 
+  public open fun classifiers(vararg `value`: String): Unit = classifiers(`value`.toList())
+
   public open fun configuration(): String? = unwrap(this).getConfiguration()
 
   public open fun configuration(`value`: String) {
@@ -146,6 +148,8 @@ public open class CfnCrawler internal constructor(
   public interface Builder {
     public fun classifiers(classifiers: List<String>)
 
+    public fun classifiers(vararg classifiers: String)
+
     public fun configuration(configuration: String)
 
     public fun crawlerSecurityConfiguration(crawlerSecurityConfiguration: String)
@@ -205,6 +209,8 @@ public open class CfnCrawler internal constructor(
     override fun classifiers(classifiers: List<String>) {
       cdkBuilder.classifiers(classifiers)
     }
+
+    override fun classifiers(vararg classifiers: String): Unit = classifiers(classifiers.toList())
 
     override fun configuration(configuration: String) {
       cdkBuilder.configuration(configuration)
@@ -337,6 +343,8 @@ public open class CfnCrawler internal constructor(
 
       public fun exclusions(exclusions: List<String>)
 
+      public fun exclusions(vararg exclusions: String)
+
       public fun path(path: String)
 
       public fun sampleSize(sampleSize: Number)
@@ -362,6 +370,8 @@ public open class CfnCrawler internal constructor(
       override fun exclusions(exclusions: List<String>) {
         cdkBuilder.exclusions(exclusions)
       }
+
+      override fun exclusions(vararg exclusions: String): Unit = exclusions(exclusions.toList())
 
       override fun path(path: String) {
         cdkBuilder.path(path)
@@ -478,6 +488,8 @@ public open class CfnCrawler internal constructor(
       public fun eventQueueArn(eventQueueArn: String)
 
       public fun tables(tables: List<String>)
+
+      public fun tables(vararg tables: String)
     }
 
     private class BuilderImpl : Builder {
@@ -504,6 +516,8 @@ public open class CfnCrawler internal constructor(
       override fun tables(tables: List<String>) {
         cdkBuilder.tables(tables)
       }
+
+      override fun tables(vararg tables: String): Unit = tables(tables.toList())
 
       public fun build(): software.amazon.awscdk.services.glue.CfnCrawler.CatalogTargetProperty =
           cdkBuilder.build()
@@ -618,6 +632,8 @@ public open class CfnCrawler internal constructor(
 
       public fun deltaTables(deltaTables: List<String>)
 
+      public fun deltaTables(vararg deltaTables: String)
+
       public fun writeManifest(writeManifest: Boolean)
 
       public fun writeManifest(writeManifest: IResolvable)
@@ -643,6 +659,8 @@ public open class CfnCrawler internal constructor(
       override fun deltaTables(deltaTables: List<String>) {
         cdkBuilder.deltaTables(deltaTables)
       }
+
+      override fun deltaTables(vararg deltaTables: String): Unit = deltaTables(deltaTables.toList())
 
       override fun writeManifest(writeManifest: Boolean) {
         cdkBuilder.writeManifest(writeManifest)
@@ -754,29 +772,43 @@ public open class CfnCrawler internal constructor(
 
       public fun catalogTargets(catalogTargets: List<Any>)
 
+      public fun catalogTargets(vararg catalogTargets: Any)
+
       public fun deltaTargets(deltaTargets: IResolvable)
 
       public fun deltaTargets(deltaTargets: List<Any>)
+
+      public fun deltaTargets(vararg deltaTargets: Any)
 
       public fun dynamoDbTargets(dynamoDbTargets: IResolvable)
 
       public fun dynamoDbTargets(dynamoDbTargets: List<Any>)
 
+      public fun dynamoDbTargets(vararg dynamoDbTargets: Any)
+
       public fun icebergTargets(icebergTargets: IResolvable)
 
       public fun icebergTargets(icebergTargets: List<Any>)
+
+      public fun icebergTargets(vararg icebergTargets: Any)
 
       public fun jdbcTargets(jdbcTargets: IResolvable)
 
       public fun jdbcTargets(jdbcTargets: List<Any>)
 
+      public fun jdbcTargets(vararg jdbcTargets: Any)
+
       public fun mongoDbTargets(mongoDbTargets: IResolvable)
 
       public fun mongoDbTargets(mongoDbTargets: List<Any>)
 
+      public fun mongoDbTargets(vararg mongoDbTargets: Any)
+
       public fun s3Targets(s3Targets: IResolvable)
 
       public fun s3Targets(s3Targets: List<Any>)
+
+      public fun s3Targets(vararg s3Targets: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -792,6 +824,9 @@ public open class CfnCrawler internal constructor(
         cdkBuilder.catalogTargets(catalogTargets)
       }
 
+      override fun catalogTargets(vararg catalogTargets: Any): Unit =
+          catalogTargets(catalogTargets.toList())
+
       override fun deltaTargets(deltaTargets: IResolvable) {
         cdkBuilder.deltaTargets(deltaTargets.let(IResolvable::unwrap))
       }
@@ -799,6 +834,9 @@ public open class CfnCrawler internal constructor(
       override fun deltaTargets(deltaTargets: List<Any>) {
         cdkBuilder.deltaTargets(deltaTargets)
       }
+
+      override fun deltaTargets(vararg deltaTargets: Any): Unit =
+          deltaTargets(deltaTargets.toList())
 
       override fun dynamoDbTargets(dynamoDbTargets: IResolvable) {
         cdkBuilder.dynamoDbTargets(dynamoDbTargets.let(IResolvable::unwrap))
@@ -808,6 +846,9 @@ public open class CfnCrawler internal constructor(
         cdkBuilder.dynamoDbTargets(dynamoDbTargets)
       }
 
+      override fun dynamoDbTargets(vararg dynamoDbTargets: Any): Unit =
+          dynamoDbTargets(dynamoDbTargets.toList())
+
       override fun icebergTargets(icebergTargets: IResolvable) {
         cdkBuilder.icebergTargets(icebergTargets.let(IResolvable::unwrap))
       }
@@ -815,6 +856,9 @@ public open class CfnCrawler internal constructor(
       override fun icebergTargets(icebergTargets: List<Any>) {
         cdkBuilder.icebergTargets(icebergTargets)
       }
+
+      override fun icebergTargets(vararg icebergTargets: Any): Unit =
+          icebergTargets(icebergTargets.toList())
 
       override fun jdbcTargets(jdbcTargets: IResolvable) {
         cdkBuilder.jdbcTargets(jdbcTargets.let(IResolvable::unwrap))
@@ -824,6 +868,8 @@ public open class CfnCrawler internal constructor(
         cdkBuilder.jdbcTargets(jdbcTargets)
       }
 
+      override fun jdbcTargets(vararg jdbcTargets: Any): Unit = jdbcTargets(jdbcTargets.toList())
+
       override fun mongoDbTargets(mongoDbTargets: IResolvable) {
         cdkBuilder.mongoDbTargets(mongoDbTargets.let(IResolvable::unwrap))
       }
@@ -832,6 +878,9 @@ public open class CfnCrawler internal constructor(
         cdkBuilder.mongoDbTargets(mongoDbTargets)
       }
 
+      override fun mongoDbTargets(vararg mongoDbTargets: Any): Unit =
+          mongoDbTargets(mongoDbTargets.toList())
+
       override fun s3Targets(s3Targets: IResolvable) {
         cdkBuilder.s3Targets(s3Targets.let(IResolvable::unwrap))
       }
@@ -839,6 +888,8 @@ public open class CfnCrawler internal constructor(
       override fun s3Targets(s3Targets: List<Any>) {
         cdkBuilder.s3Targets(s3Targets)
       }
+
+      override fun s3Targets(vararg s3Targets: Any): Unit = s3Targets(s3Targets.toList())
 
       public fun build(): software.amazon.awscdk.services.glue.CfnCrawler.TargetsProperty =
           cdkBuilder.build()
@@ -998,9 +1049,13 @@ public open class CfnCrawler internal constructor(
 
       public fun exclusions(exclusions: List<String>)
 
+      public fun exclusions(vararg exclusions: String)
+
       public fun maximumTraversalDepth(maximumTraversalDepth: Number)
 
       public fun paths(paths: List<String>)
+
+      public fun paths(vararg paths: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1016,6 +1071,8 @@ public open class CfnCrawler internal constructor(
         cdkBuilder.exclusions(exclusions)
       }
 
+      override fun exclusions(vararg exclusions: String): Unit = exclusions(exclusions.toList())
+
       override fun maximumTraversalDepth(maximumTraversalDepth: Number) {
         cdkBuilder.maximumTraversalDepth(maximumTraversalDepth)
       }
@@ -1023,6 +1080,8 @@ public open class CfnCrawler internal constructor(
       override fun paths(paths: List<String>) {
         cdkBuilder.paths(paths)
       }
+
+      override fun paths(vararg paths: String): Unit = paths(paths.toList())
 
       public fun build(): software.amazon.awscdk.services.glue.CfnCrawler.IcebergTargetProperty =
           cdkBuilder.build()
@@ -1072,6 +1131,8 @@ public open class CfnCrawler internal constructor(
 
       public fun exclusions(exclusions: List<String>)
 
+      public fun exclusions(vararg exclusions: String)
+
       public fun path(path: String)
     }
 
@@ -1087,6 +1148,8 @@ public open class CfnCrawler internal constructor(
       override fun exclusions(exclusions: List<String>) {
         cdkBuilder.exclusions(exclusions)
       }
+
+      override fun exclusions(vararg exclusions: String): Unit = exclusions(exclusions.toList())
 
       override fun path(path: String) {
         cdkBuilder.path(path)

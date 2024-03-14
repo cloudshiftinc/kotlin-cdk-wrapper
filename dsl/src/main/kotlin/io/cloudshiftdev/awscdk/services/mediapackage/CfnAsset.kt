@@ -31,6 +31,9 @@ public open class CfnAsset internal constructor(
     unwrap(this).setEgressEndpoints(__idx_ac66f0)
   }
 
+  public open fun egressEndpoints(vararg __idx_ac66f0: Any): Unit =
+      egressEndpoints(__idx_ac66f0.toList())
+
   public open fun id(): String = unwrap(this).getId()
 
   public open fun id(`value`: String) {
@@ -74,10 +77,14 @@ public open class CfnAsset internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun egressEndpoints(egressEndpoints: IResolvable)
 
     public fun egressEndpoints(egressEndpoints: List<Any>)
+
+    public fun egressEndpoints(vararg egressEndpoints: Any)
 
     public fun id(id: String)
 
@@ -90,6 +97,8 @@ public open class CfnAsset internal constructor(
     public fun sourceRoleArn(sourceRoleArn: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -106,6 +115,9 @@ public open class CfnAsset internal constructor(
     override fun egressEndpoints(egressEndpoints: List<Any>) {
       cdkBuilder.egressEndpoints(egressEndpoints)
     }
+
+    override fun egressEndpoints(vararg egressEndpoints: Any): Unit =
+        egressEndpoints(egressEndpoints.toList())
 
     override fun id(id: String) {
       cdkBuilder.id(id)
@@ -130,6 +142,8 @@ public open class CfnAsset internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.mediapackage.CfnAsset = cdkBuilder.build()
   }

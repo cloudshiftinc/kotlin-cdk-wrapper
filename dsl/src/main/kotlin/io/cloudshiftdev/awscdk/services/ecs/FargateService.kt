@@ -22,6 +22,9 @@ public open class FargateService internal constructor(
     public
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>)
 
+    public fun capacityProviderStrategies(vararg
+        capacityProviderStrategies: CapacityProviderStrategy)
+
     public fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -66,6 +69,8 @@ public open class FargateService internal constructor(
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
+
     public fun serviceConnectConfiguration(serviceConnectConfiguration: ServiceConnectProps)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -80,6 +85,8 @@ public open class FargateService internal constructor(
     public fun taskDefinitionRevision(taskDefinitionRevision: TaskDefinitionRevision)
 
     public fun volumeConfigurations(volumeConfigurations: List<ServiceManagedVolume>)
+
+    public fun volumeConfigurations(vararg volumeConfigurations: ServiceManagedVolume)
 
     public fun vpcSubnets(vpcSubnets: SubnetSelection)
 
@@ -103,6 +110,10 @@ public open class FargateService internal constructor(
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>) {
       cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy::unwrap))
     }
+
+    override fun capacityProviderStrategies(vararg
+        capacityProviderStrategies: CapacityProviderStrategy): Unit =
+        capacityProviderStrategies(capacityProviderStrategies.toList())
 
     override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
       cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker::unwrap))
@@ -181,6 +192,9 @@ public open class FargateService internal constructor(
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
+
     override fun serviceConnectConfiguration(serviceConnectConfiguration: ServiceConnectProps) {
       cdkBuilder.serviceConnectConfiguration(serviceConnectConfiguration.let(ServiceConnectProps::unwrap))
     }
@@ -206,6 +220,9 @@ public open class FargateService internal constructor(
     override fun volumeConfigurations(volumeConfigurations: List<ServiceManagedVolume>) {
       cdkBuilder.volumeConfigurations(volumeConfigurations.map(ServiceManagedVolume::unwrap))
     }
+
+    override fun volumeConfigurations(vararg volumeConfigurations: ServiceManagedVolume): Unit =
+        volumeConfigurations(volumeConfigurations.toList())
 
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
       cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))

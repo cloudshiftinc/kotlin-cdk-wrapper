@@ -29,7 +29,7 @@ public open class CfnNetworkInterface internal constructor(
       unwrap(this).getAttrPrimaryPrivateIpAddress()
 
   public open fun attrSecondaryPrivateIpAddresses(): List<String> =
-      unwrap(this).getAttrSecondaryPrivateIpAddresses() ?: emptyList()
+      unwrap(this).getAttrSecondaryPrivateIpAddresses()
 
   public open fun connectionTrackingSpecification(): Any? =
       unwrap(this).getConnectionTrackingSpecification()
@@ -71,6 +71,8 @@ public open class CfnNetworkInterface internal constructor(
     unwrap(this).setGroupSet(`value`)
   }
 
+  public open fun groupSet(vararg `value`: String): Unit = groupSet(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -97,6 +99,8 @@ public open class CfnNetworkInterface internal constructor(
     unwrap(this).setIpv4Prefixes(__idx_ac66f0)
   }
 
+  public open fun ipv4Prefixes(vararg __idx_ac66f0: Any): Unit = ipv4Prefixes(__idx_ac66f0.toList())
+
   public open fun ipv6AddressCount(): Number? = unwrap(this).getIpv6AddressCount()
 
   public open fun ipv6AddressCount(`value`: Number) {
@@ -112,6 +116,9 @@ public open class CfnNetworkInterface internal constructor(
   public open fun ipv6Addresses(__idx_ac66f0: List<Any>) {
     unwrap(this).setIpv6Addresses(__idx_ac66f0)
   }
+
+  public open fun ipv6Addresses(vararg __idx_ac66f0: Any): Unit =
+      ipv6Addresses(__idx_ac66f0.toList())
 
   public open fun ipv6PrefixCount(): Number? = unwrap(this).getIpv6PrefixCount()
 
@@ -129,6 +136,8 @@ public open class CfnNetworkInterface internal constructor(
     unwrap(this).setIpv6Prefixes(__idx_ac66f0)
   }
 
+  public open fun ipv6Prefixes(vararg __idx_ac66f0: Any): Unit = ipv6Prefixes(__idx_ac66f0.toList())
+
   public open fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
 
   public open fun privateIpAddress(`value`: String) {
@@ -144,6 +153,9 @@ public open class CfnNetworkInterface internal constructor(
   public open fun privateIpAddresses(__idx_ac66f0: List<Any>) {
     unwrap(this).setPrivateIpAddresses(__idx_ac66f0)
   }
+
+  public open fun privateIpAddresses(vararg __idx_ac66f0: Any): Unit =
+      privateIpAddresses(__idx_ac66f0.toList())
 
   public open fun secondaryPrivateIpAddressCount(): Number? =
       unwrap(this).getSecondaryPrivateIpAddressCount()
@@ -177,6 +189,8 @@ public open class CfnNetworkInterface internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun connectionTrackingSpecification(connectionTrackingSpecification: IResolvable)
 
@@ -196,6 +210,8 @@ public open class CfnNetworkInterface internal constructor(
 
     public fun groupSet(groupSet: List<String>)
 
+    public fun groupSet(vararg groupSet: String)
+
     public fun interfaceType(interfaceType: String)
 
     public fun ipv4PrefixCount(ipv4PrefixCount: Number)
@@ -204,11 +220,15 @@ public open class CfnNetworkInterface internal constructor(
 
     public fun ipv4Prefixes(ipv4Prefixes: List<Any>)
 
+    public fun ipv4Prefixes(vararg ipv4Prefixes: Any)
+
     public fun ipv6AddressCount(ipv6AddressCount: Number)
 
     public fun ipv6Addresses(ipv6Addresses: IResolvable)
 
     public fun ipv6Addresses(ipv6Addresses: List<Any>)
+
+    public fun ipv6Addresses(vararg ipv6Addresses: Any)
 
     public fun ipv6PrefixCount(ipv6PrefixCount: Number)
 
@@ -216,11 +236,15 @@ public open class CfnNetworkInterface internal constructor(
 
     public fun ipv6Prefixes(ipv6Prefixes: List<Any>)
 
+    public fun ipv6Prefixes(vararg ipv6Prefixes: Any)
+
     public fun privateIpAddress(privateIpAddress: String)
 
     public fun privateIpAddresses(privateIpAddresses: IResolvable)
 
     public fun privateIpAddresses(privateIpAddresses: List<Any>)
+
+    public fun privateIpAddresses(vararg privateIpAddresses: Any)
 
     public fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number)
 
@@ -231,6 +255,8 @@ public open class CfnNetworkInterface internal constructor(
     public fun subnetId(subnetId: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -272,6 +298,8 @@ public open class CfnNetworkInterface internal constructor(
       cdkBuilder.groupSet(groupSet)
     }
 
+    override fun groupSet(vararg groupSet: String): Unit = groupSet(groupSet.toList())
+
     override fun interfaceType(interfaceType: String) {
       cdkBuilder.interfaceType(interfaceType)
     }
@@ -288,6 +316,8 @@ public open class CfnNetworkInterface internal constructor(
       cdkBuilder.ipv4Prefixes(ipv4Prefixes)
     }
 
+    override fun ipv4Prefixes(vararg ipv4Prefixes: Any): Unit = ipv4Prefixes(ipv4Prefixes.toList())
+
     override fun ipv6AddressCount(ipv6AddressCount: Number) {
       cdkBuilder.ipv6AddressCount(ipv6AddressCount)
     }
@@ -299,6 +329,9 @@ public open class CfnNetworkInterface internal constructor(
     override fun ipv6Addresses(ipv6Addresses: List<Any>) {
       cdkBuilder.ipv6Addresses(ipv6Addresses)
     }
+
+    override fun ipv6Addresses(vararg ipv6Addresses: Any): Unit =
+        ipv6Addresses(ipv6Addresses.toList())
 
     override fun ipv6PrefixCount(ipv6PrefixCount: Number) {
       cdkBuilder.ipv6PrefixCount(ipv6PrefixCount)
@@ -312,6 +345,8 @@ public open class CfnNetworkInterface internal constructor(
       cdkBuilder.ipv6Prefixes(ipv6Prefixes)
     }
 
+    override fun ipv6Prefixes(vararg ipv6Prefixes: Any): Unit = ipv6Prefixes(ipv6Prefixes.toList())
+
     override fun privateIpAddress(privateIpAddress: String) {
       cdkBuilder.privateIpAddress(privateIpAddress)
     }
@@ -323,6 +358,9 @@ public open class CfnNetworkInterface internal constructor(
     override fun privateIpAddresses(privateIpAddresses: List<Any>) {
       cdkBuilder.privateIpAddresses(privateIpAddresses)
     }
+
+    override fun privateIpAddresses(vararg privateIpAddresses: Any): Unit =
+        privateIpAddresses(privateIpAddresses.toList())
 
     override fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number) {
       cdkBuilder.secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount)
@@ -343,6 +381,8 @@ public open class CfnNetworkInterface internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.CfnNetworkInterface = cdkBuilder.build()
   }

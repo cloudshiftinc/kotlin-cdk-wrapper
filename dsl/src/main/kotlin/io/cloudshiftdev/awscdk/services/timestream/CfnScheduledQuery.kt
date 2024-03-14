@@ -132,6 +132,8 @@ public open class CfnScheduledQuery internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun targetConfiguration(): Any? = unwrap(this).getTargetConfiguration()
 
   public open fun targetConfiguration(`value`: IResolvable) {
@@ -187,6 +189,8 @@ public open class CfnScheduledQuery internal constructor(
     public fun scheduledQueryName(scheduledQueryName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun targetConfiguration(targetConfiguration: IResolvable)
 
@@ -273,6 +277,8 @@ public open class CfnScheduledQuery internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun targetConfiguration(targetConfiguration: IResolvable) {
       cdkBuilder.targetConfiguration(targetConfiguration.let(IResolvable::unwrap))
@@ -461,11 +467,15 @@ public open class CfnScheduledQuery internal constructor(
 
       public fun dimensionMappings(dimensionMappings: List<Any>)
 
+      public fun dimensionMappings(vararg dimensionMappings: Any)
+
       public fun measureNameColumn(measureNameColumn: String)
 
       public fun mixedMeasureMappings(mixedMeasureMappings: IResolvable)
 
       public fun mixedMeasureMappings(mixedMeasureMappings: List<Any>)
+
+      public fun mixedMeasureMappings(vararg mixedMeasureMappings: Any)
 
       public fun multiMeasureMappings(multiMeasureMappings: IResolvable)
 
@@ -499,6 +509,9 @@ public open class CfnScheduledQuery internal constructor(
         cdkBuilder.dimensionMappings(dimensionMappings)
       }
 
+      override fun dimensionMappings(vararg dimensionMappings: Any): Unit =
+          dimensionMappings(dimensionMappings.toList())
+
       override fun measureNameColumn(measureNameColumn: String) {
         cdkBuilder.measureNameColumn(measureNameColumn)
       }
@@ -510,6 +523,9 @@ public open class CfnScheduledQuery internal constructor(
       override fun mixedMeasureMappings(mixedMeasureMappings: List<Any>) {
         cdkBuilder.mixedMeasureMappings(mixedMeasureMappings)
       }
+
+      override fun mixedMeasureMappings(vararg mixedMeasureMappings: Any): Unit =
+          mixedMeasureMappings(mixedMeasureMappings.toList())
 
       override fun multiMeasureMappings(multiMeasureMappings: IResolvable) {
         cdkBuilder.multiMeasureMappings(multiMeasureMappings.let(IResolvable::unwrap))
@@ -902,6 +918,8 @@ public open class CfnScheduledQuery internal constructor(
 
       public fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>)
 
+      public fun multiMeasureAttributeMappings(vararg multiMeasureAttributeMappings: Any)
+
       public fun sourceColumn(sourceColumn: String)
 
       public fun targetMeasureName(targetMeasureName: String)
@@ -928,6 +946,9 @@ public open class CfnScheduledQuery internal constructor(
       override fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>) {
         cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings)
       }
+
+      override fun multiMeasureAttributeMappings(vararg multiMeasureAttributeMappings: Any): Unit =
+          multiMeasureAttributeMappings(multiMeasureAttributeMappings.toList())
 
       override fun sourceColumn(sourceColumn: String) {
         cdkBuilder.sourceColumn(sourceColumn)
@@ -988,6 +1009,8 @@ public open class CfnScheduledQuery internal constructor(
 
       public fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>)
 
+      public fun multiMeasureAttributeMappings(vararg multiMeasureAttributeMappings: Any)
+
       public fun targetMultiMeasureName(targetMultiMeasureName: String)
     }
 
@@ -1004,6 +1027,9 @@ public open class CfnScheduledQuery internal constructor(
       override fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>) {
         cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings)
       }
+
+      override fun multiMeasureAttributeMappings(vararg multiMeasureAttributeMappings: Any): Unit =
+          multiMeasureAttributeMappings(multiMeasureAttributeMappings.toList())
 
       override fun targetMultiMeasureName(targetMultiMeasureName: String) {
         cdkBuilder.targetMultiMeasureName(targetMultiMeasureName)

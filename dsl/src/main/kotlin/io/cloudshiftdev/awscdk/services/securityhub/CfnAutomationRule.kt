@@ -31,6 +31,8 @@ public open class CfnAutomationRule internal constructor(
     unwrap(this).setActions(__idx_ac66f0)
   }
 
+  public open fun actions(vararg __idx_ac66f0: Any): Unit = actions(__idx_ac66f0.toList())
+
   public open fun attrCreatedAt(): String = unwrap(this).getAttrCreatedAt()
 
   public open fun attrCreatedBy(): String = unwrap(this).getAttrCreatedBy()
@@ -106,6 +108,8 @@ public open class CfnAutomationRule internal constructor(
 
     public fun actions(actions: List<Any>)
 
+    public fun actions(vararg actions: Any)
+
     public fun criteria(criteria: IResolvable)
 
     public fun criteria(criteria: AutomationRulesFindingFiltersProperty)
@@ -143,6 +147,8 @@ public open class CfnAutomationRule internal constructor(
     override fun actions(actions: List<Any>) {
       cdkBuilder.actions(actions)
     }
+
+    override fun actions(vararg actions: Any): Unit = actions(actions.toList())
 
     override fun criteria(criteria: IResolvable) {
       cdkBuilder.criteria(criteria.let(IResolvable::unwrap))
@@ -531,141 +537,211 @@ public open class CfnAutomationRule internal constructor(
 
       public fun awsAccountId(awsAccountId: List<Any>)
 
+      public fun awsAccountId(vararg awsAccountId: Any)
+
       public fun companyName(companyName: IResolvable)
 
       public fun companyName(companyName: List<Any>)
+
+      public fun companyName(vararg companyName: Any)
 
       public fun complianceAssociatedStandardsId(complianceAssociatedStandardsId: IResolvable)
 
       public fun complianceAssociatedStandardsId(complianceAssociatedStandardsId: List<Any>)
 
+      public fun complianceAssociatedStandardsId(vararg complianceAssociatedStandardsId: Any)
+
       public fun complianceSecurityControlId(complianceSecurityControlId: IResolvable)
 
       public fun complianceSecurityControlId(complianceSecurityControlId: List<Any>)
+
+      public fun complianceSecurityControlId(vararg complianceSecurityControlId: Any)
 
       public fun complianceStatus(complianceStatus: IResolvable)
 
       public fun complianceStatus(complianceStatus: List<Any>)
 
+      public fun complianceStatus(vararg complianceStatus: Any)
+
       public fun confidence(confidence: IResolvable)
 
       public fun confidence(confidence: List<Any>)
+
+      public fun confidence(vararg confidence: Any)
 
       public fun createdAt(createdAt: IResolvable)
 
       public fun createdAt(createdAt: List<Any>)
 
+      public fun createdAt(vararg createdAt: Any)
+
       public fun criticality(criticality: IResolvable)
 
       public fun criticality(criticality: List<Any>)
+
+      public fun criticality(vararg criticality: Any)
 
       public fun description(description: IResolvable)
 
       public fun description(description: List<Any>)
 
+      public fun description(vararg description: Any)
+
       public fun firstObservedAt(firstObservedAt: IResolvable)
 
       public fun firstObservedAt(firstObservedAt: List<Any>)
+
+      public fun firstObservedAt(vararg firstObservedAt: Any)
 
       public fun generatorId(generatorId: IResolvable)
 
       public fun generatorId(generatorId: List<Any>)
 
+      public fun generatorId(vararg generatorId: Any)
+
       public fun id(id: IResolvable)
 
       public fun id(id: List<Any>)
+
+      public fun id(vararg id: Any)
 
       public fun lastObservedAt(lastObservedAt: IResolvable)
 
       public fun lastObservedAt(lastObservedAt: List<Any>)
 
+      public fun lastObservedAt(vararg lastObservedAt: Any)
+
       public fun noteText(noteText: IResolvable)
 
       public fun noteText(noteText: List<Any>)
+
+      public fun noteText(vararg noteText: Any)
 
       public fun noteUpdatedAt(noteUpdatedAt: IResolvable)
 
       public fun noteUpdatedAt(noteUpdatedAt: List<Any>)
 
+      public fun noteUpdatedAt(vararg noteUpdatedAt: Any)
+
       public fun noteUpdatedBy(noteUpdatedBy: IResolvable)
 
       public fun noteUpdatedBy(noteUpdatedBy: List<Any>)
+
+      public fun noteUpdatedBy(vararg noteUpdatedBy: Any)
 
       public fun productArn(productArn: IResolvable)
 
       public fun productArn(productArn: List<Any>)
 
+      public fun productArn(vararg productArn: Any)
+
       public fun productName(productName: IResolvable)
 
       public fun productName(productName: List<Any>)
+
+      public fun productName(vararg productName: Any)
 
       public fun recordState(recordState: IResolvable)
 
       public fun recordState(recordState: List<Any>)
 
+      public fun recordState(vararg recordState: Any)
+
       public fun relatedFindingsId(relatedFindingsId: IResolvable)
 
       public fun relatedFindingsId(relatedFindingsId: List<Any>)
+
+      public fun relatedFindingsId(vararg relatedFindingsId: Any)
 
       public fun relatedFindingsProductArn(relatedFindingsProductArn: IResolvable)
 
       public fun relatedFindingsProductArn(relatedFindingsProductArn: List<Any>)
 
+      public fun relatedFindingsProductArn(vararg relatedFindingsProductArn: Any)
+
       public fun resourceDetailsOther(resourceDetailsOther: IResolvable)
 
       public fun resourceDetailsOther(resourceDetailsOther: List<Any>)
+
+      public fun resourceDetailsOther(vararg resourceDetailsOther: Any)
 
       public fun resourceId(resourceId: IResolvable)
 
       public fun resourceId(resourceId: List<Any>)
 
+      public fun resourceId(vararg resourceId: Any)
+
       public fun resourcePartition(resourcePartition: IResolvable)
 
       public fun resourcePartition(resourcePartition: List<Any>)
+
+      public fun resourcePartition(vararg resourcePartition: Any)
 
       public fun resourceRegion(resourceRegion: IResolvable)
 
       public fun resourceRegion(resourceRegion: List<Any>)
 
+      public fun resourceRegion(vararg resourceRegion: Any)
+
       public fun resourceTags(resourceTags: IResolvable)
 
       public fun resourceTags(resourceTags: List<Any>)
+
+      public fun resourceTags(vararg resourceTags: Any)
 
       public fun resourceType(resourceType: IResolvable)
 
       public fun resourceType(resourceType: List<Any>)
 
+      public fun resourceType(vararg resourceType: Any)
+
       public fun severityLabel(severityLabel: IResolvable)
 
       public fun severityLabel(severityLabel: List<Any>)
+
+      public fun severityLabel(vararg severityLabel: Any)
 
       public fun sourceUrl(sourceUrl: IResolvable)
 
       public fun sourceUrl(sourceUrl: List<Any>)
 
+      public fun sourceUrl(vararg sourceUrl: Any)
+
       public fun title(title: IResolvable)
 
       public fun title(title: List<Any>)
+
+      public fun title(vararg title: Any)
 
       public fun type(type: IResolvable)
 
       public fun type(type: List<Any>)
 
+      public fun type(vararg type: Any)
+
       public fun updatedAt(updatedAt: IResolvable)
 
       public fun updatedAt(updatedAt: List<Any>)
+
+      public fun updatedAt(vararg updatedAt: Any)
 
       public fun userDefinedFields(userDefinedFields: IResolvable)
 
       public fun userDefinedFields(userDefinedFields: List<Any>)
 
+      public fun userDefinedFields(vararg userDefinedFields: Any)
+
       public fun verificationState(verificationState: IResolvable)
 
       public fun verificationState(verificationState: List<Any>)
 
+      public fun verificationState(vararg verificationState: Any)
+
       public fun workflowStatus(workflowStatus: IResolvable)
 
       public fun workflowStatus(workflowStatus: List<Any>)
+
+      public fun workflowStatus(vararg workflowStatus: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -682,6 +758,9 @@ public open class CfnAutomationRule internal constructor(
         cdkBuilder.awsAccountId(awsAccountId)
       }
 
+      override fun awsAccountId(vararg awsAccountId: Any): Unit =
+          awsAccountId(awsAccountId.toList())
+
       override fun companyName(companyName: IResolvable) {
         cdkBuilder.companyName(companyName.let(IResolvable::unwrap))
       }
@@ -689,6 +768,8 @@ public open class CfnAutomationRule internal constructor(
       override fun companyName(companyName: List<Any>) {
         cdkBuilder.companyName(companyName)
       }
+
+      override fun companyName(vararg companyName: Any): Unit = companyName(companyName.toList())
 
       override fun complianceAssociatedStandardsId(complianceAssociatedStandardsId: IResolvable) {
         cdkBuilder.complianceAssociatedStandardsId(complianceAssociatedStandardsId.let(IResolvable::unwrap))
@@ -698,6 +779,9 @@ public open class CfnAutomationRule internal constructor(
         cdkBuilder.complianceAssociatedStandardsId(complianceAssociatedStandardsId)
       }
 
+      override fun complianceAssociatedStandardsId(vararg complianceAssociatedStandardsId: Any):
+          Unit = complianceAssociatedStandardsId(complianceAssociatedStandardsId.toList())
+
       override fun complianceSecurityControlId(complianceSecurityControlId: IResolvable) {
         cdkBuilder.complianceSecurityControlId(complianceSecurityControlId.let(IResolvable::unwrap))
       }
@@ -705,6 +789,9 @@ public open class CfnAutomationRule internal constructor(
       override fun complianceSecurityControlId(complianceSecurityControlId: List<Any>) {
         cdkBuilder.complianceSecurityControlId(complianceSecurityControlId)
       }
+
+      override fun complianceSecurityControlId(vararg complianceSecurityControlId: Any): Unit =
+          complianceSecurityControlId(complianceSecurityControlId.toList())
 
       override fun complianceStatus(complianceStatus: IResolvable) {
         cdkBuilder.complianceStatus(complianceStatus.let(IResolvable::unwrap))
@@ -714,6 +801,9 @@ public open class CfnAutomationRule internal constructor(
         cdkBuilder.complianceStatus(complianceStatus)
       }
 
+      override fun complianceStatus(vararg complianceStatus: Any): Unit =
+          complianceStatus(complianceStatus.toList())
+
       override fun confidence(confidence: IResolvable) {
         cdkBuilder.confidence(confidence.let(IResolvable::unwrap))
       }
@@ -721,6 +811,8 @@ public open class CfnAutomationRule internal constructor(
       override fun confidence(confidence: List<Any>) {
         cdkBuilder.confidence(confidence)
       }
+
+      override fun confidence(vararg confidence: Any): Unit = confidence(confidence.toList())
 
       override fun createdAt(createdAt: IResolvable) {
         cdkBuilder.createdAt(createdAt.let(IResolvable::unwrap))
@@ -730,6 +822,8 @@ public open class CfnAutomationRule internal constructor(
         cdkBuilder.createdAt(createdAt)
       }
 
+      override fun createdAt(vararg createdAt: Any): Unit = createdAt(createdAt.toList())
+
       override fun criticality(criticality: IResolvable) {
         cdkBuilder.criticality(criticality.let(IResolvable::unwrap))
       }
@@ -737,6 +831,8 @@ public open class CfnAutomationRule internal constructor(
       override fun criticality(criticality: List<Any>) {
         cdkBuilder.criticality(criticality)
       }
+
+      override fun criticality(vararg criticality: Any): Unit = criticality(criticality.toList())
 
       override fun description(description: IResolvable) {
         cdkBuilder.description(description.let(IResolvable::unwrap))
@@ -746,6 +842,8 @@ public open class CfnAutomationRule internal constructor(
         cdkBuilder.description(description)
       }
 
+      override fun description(vararg description: Any): Unit = description(description.toList())
+
       override fun firstObservedAt(firstObservedAt: IResolvable) {
         cdkBuilder.firstObservedAt(firstObservedAt.let(IResolvable::unwrap))
       }
@@ -753,6 +851,9 @@ public open class CfnAutomationRule internal constructor(
       override fun firstObservedAt(firstObservedAt: List<Any>) {
         cdkBuilder.firstObservedAt(firstObservedAt)
       }
+
+      override fun firstObservedAt(vararg firstObservedAt: Any): Unit =
+          firstObservedAt(firstObservedAt.toList())
 
       override fun generatorId(generatorId: IResolvable) {
         cdkBuilder.generatorId(generatorId.let(IResolvable::unwrap))
@@ -762,6 +863,8 @@ public open class CfnAutomationRule internal constructor(
         cdkBuilder.generatorId(generatorId)
       }
 
+      override fun generatorId(vararg generatorId: Any): Unit = generatorId(generatorId.toList())
+
       override fun id(id: IResolvable) {
         cdkBuilder.id(id.let(IResolvable::unwrap))
       }
@@ -769,6 +872,8 @@ public open class CfnAutomationRule internal constructor(
       override fun id(id: List<Any>) {
         cdkBuilder.id(id)
       }
+
+      override fun id(vararg id: Any): Unit = id(id.toList())
 
       override fun lastObservedAt(lastObservedAt: IResolvable) {
         cdkBuilder.lastObservedAt(lastObservedAt.let(IResolvable::unwrap))
@@ -778,6 +883,9 @@ public open class CfnAutomationRule internal constructor(
         cdkBuilder.lastObservedAt(lastObservedAt)
       }
 
+      override fun lastObservedAt(vararg lastObservedAt: Any): Unit =
+          lastObservedAt(lastObservedAt.toList())
+
       override fun noteText(noteText: IResolvable) {
         cdkBuilder.noteText(noteText.let(IResolvable::unwrap))
       }
@@ -785,6 +893,8 @@ public open class CfnAutomationRule internal constructor(
       override fun noteText(noteText: List<Any>) {
         cdkBuilder.noteText(noteText)
       }
+
+      override fun noteText(vararg noteText: Any): Unit = noteText(noteText.toList())
 
       override fun noteUpdatedAt(noteUpdatedAt: IResolvable) {
         cdkBuilder.noteUpdatedAt(noteUpdatedAt.let(IResolvable::unwrap))
@@ -794,6 +904,9 @@ public open class CfnAutomationRule internal constructor(
         cdkBuilder.noteUpdatedAt(noteUpdatedAt)
       }
 
+      override fun noteUpdatedAt(vararg noteUpdatedAt: Any): Unit =
+          noteUpdatedAt(noteUpdatedAt.toList())
+
       override fun noteUpdatedBy(noteUpdatedBy: IResolvable) {
         cdkBuilder.noteUpdatedBy(noteUpdatedBy.let(IResolvable::unwrap))
       }
@@ -801,6 +914,9 @@ public open class CfnAutomationRule internal constructor(
       override fun noteUpdatedBy(noteUpdatedBy: List<Any>) {
         cdkBuilder.noteUpdatedBy(noteUpdatedBy)
       }
+
+      override fun noteUpdatedBy(vararg noteUpdatedBy: Any): Unit =
+          noteUpdatedBy(noteUpdatedBy.toList())
 
       override fun productArn(productArn: IResolvable) {
         cdkBuilder.productArn(productArn.let(IResolvable::unwrap))
@@ -810,6 +926,8 @@ public open class CfnAutomationRule internal constructor(
         cdkBuilder.productArn(productArn)
       }
 
+      override fun productArn(vararg productArn: Any): Unit = productArn(productArn.toList())
+
       override fun productName(productName: IResolvable) {
         cdkBuilder.productName(productName.let(IResolvable::unwrap))
       }
@@ -817,6 +935,8 @@ public open class CfnAutomationRule internal constructor(
       override fun productName(productName: List<Any>) {
         cdkBuilder.productName(productName)
       }
+
+      override fun productName(vararg productName: Any): Unit = productName(productName.toList())
 
       override fun recordState(recordState: IResolvable) {
         cdkBuilder.recordState(recordState.let(IResolvable::unwrap))
@@ -826,6 +946,8 @@ public open class CfnAutomationRule internal constructor(
         cdkBuilder.recordState(recordState)
       }
 
+      override fun recordState(vararg recordState: Any): Unit = recordState(recordState.toList())
+
       override fun relatedFindingsId(relatedFindingsId: IResolvable) {
         cdkBuilder.relatedFindingsId(relatedFindingsId.let(IResolvable::unwrap))
       }
@@ -833,6 +955,9 @@ public open class CfnAutomationRule internal constructor(
       override fun relatedFindingsId(relatedFindingsId: List<Any>) {
         cdkBuilder.relatedFindingsId(relatedFindingsId)
       }
+
+      override fun relatedFindingsId(vararg relatedFindingsId: Any): Unit =
+          relatedFindingsId(relatedFindingsId.toList())
 
       override fun relatedFindingsProductArn(relatedFindingsProductArn: IResolvable) {
         cdkBuilder.relatedFindingsProductArn(relatedFindingsProductArn.let(IResolvable::unwrap))
@@ -842,6 +967,9 @@ public open class CfnAutomationRule internal constructor(
         cdkBuilder.relatedFindingsProductArn(relatedFindingsProductArn)
       }
 
+      override fun relatedFindingsProductArn(vararg relatedFindingsProductArn: Any): Unit =
+          relatedFindingsProductArn(relatedFindingsProductArn.toList())
+
       override fun resourceDetailsOther(resourceDetailsOther: IResolvable) {
         cdkBuilder.resourceDetailsOther(resourceDetailsOther.let(IResolvable::unwrap))
       }
@@ -849,6 +977,9 @@ public open class CfnAutomationRule internal constructor(
       override fun resourceDetailsOther(resourceDetailsOther: List<Any>) {
         cdkBuilder.resourceDetailsOther(resourceDetailsOther)
       }
+
+      override fun resourceDetailsOther(vararg resourceDetailsOther: Any): Unit =
+          resourceDetailsOther(resourceDetailsOther.toList())
 
       override fun resourceId(resourceId: IResolvable) {
         cdkBuilder.resourceId(resourceId.let(IResolvable::unwrap))
@@ -858,6 +989,8 @@ public open class CfnAutomationRule internal constructor(
         cdkBuilder.resourceId(resourceId)
       }
 
+      override fun resourceId(vararg resourceId: Any): Unit = resourceId(resourceId.toList())
+
       override fun resourcePartition(resourcePartition: IResolvable) {
         cdkBuilder.resourcePartition(resourcePartition.let(IResolvable::unwrap))
       }
@@ -865,6 +998,9 @@ public open class CfnAutomationRule internal constructor(
       override fun resourcePartition(resourcePartition: List<Any>) {
         cdkBuilder.resourcePartition(resourcePartition)
       }
+
+      override fun resourcePartition(vararg resourcePartition: Any): Unit =
+          resourcePartition(resourcePartition.toList())
 
       override fun resourceRegion(resourceRegion: IResolvable) {
         cdkBuilder.resourceRegion(resourceRegion.let(IResolvable::unwrap))
@@ -874,6 +1010,9 @@ public open class CfnAutomationRule internal constructor(
         cdkBuilder.resourceRegion(resourceRegion)
       }
 
+      override fun resourceRegion(vararg resourceRegion: Any): Unit =
+          resourceRegion(resourceRegion.toList())
+
       override fun resourceTags(resourceTags: IResolvable) {
         cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
       }
@@ -881,6 +1020,9 @@ public open class CfnAutomationRule internal constructor(
       override fun resourceTags(resourceTags: List<Any>) {
         cdkBuilder.resourceTags(resourceTags)
       }
+
+      override fun resourceTags(vararg resourceTags: Any): Unit =
+          resourceTags(resourceTags.toList())
 
       override fun resourceType(resourceType: IResolvable) {
         cdkBuilder.resourceType(resourceType.let(IResolvable::unwrap))
@@ -890,6 +1032,9 @@ public open class CfnAutomationRule internal constructor(
         cdkBuilder.resourceType(resourceType)
       }
 
+      override fun resourceType(vararg resourceType: Any): Unit =
+          resourceType(resourceType.toList())
+
       override fun severityLabel(severityLabel: IResolvable) {
         cdkBuilder.severityLabel(severityLabel.let(IResolvable::unwrap))
       }
@@ -897,6 +1042,9 @@ public open class CfnAutomationRule internal constructor(
       override fun severityLabel(severityLabel: List<Any>) {
         cdkBuilder.severityLabel(severityLabel)
       }
+
+      override fun severityLabel(vararg severityLabel: Any): Unit =
+          severityLabel(severityLabel.toList())
 
       override fun sourceUrl(sourceUrl: IResolvable) {
         cdkBuilder.sourceUrl(sourceUrl.let(IResolvable::unwrap))
@@ -906,6 +1054,8 @@ public open class CfnAutomationRule internal constructor(
         cdkBuilder.sourceUrl(sourceUrl)
       }
 
+      override fun sourceUrl(vararg sourceUrl: Any): Unit = sourceUrl(sourceUrl.toList())
+
       override fun title(title: IResolvable) {
         cdkBuilder.title(title.let(IResolvable::unwrap))
       }
@@ -913,6 +1063,8 @@ public open class CfnAutomationRule internal constructor(
       override fun title(title: List<Any>) {
         cdkBuilder.title(title)
       }
+
+      override fun title(vararg title: Any): Unit = title(title.toList())
 
       override fun type(type: IResolvable) {
         cdkBuilder.type(type.let(IResolvable::unwrap))
@@ -922,6 +1074,8 @@ public open class CfnAutomationRule internal constructor(
         cdkBuilder.type(type)
       }
 
+      override fun type(vararg type: Any): Unit = type(type.toList())
+
       override fun updatedAt(updatedAt: IResolvable) {
         cdkBuilder.updatedAt(updatedAt.let(IResolvable::unwrap))
       }
@@ -929,6 +1083,8 @@ public open class CfnAutomationRule internal constructor(
       override fun updatedAt(updatedAt: List<Any>) {
         cdkBuilder.updatedAt(updatedAt)
       }
+
+      override fun updatedAt(vararg updatedAt: Any): Unit = updatedAt(updatedAt.toList())
 
       override fun userDefinedFields(userDefinedFields: IResolvable) {
         cdkBuilder.userDefinedFields(userDefinedFields.let(IResolvable::unwrap))
@@ -938,6 +1094,9 @@ public open class CfnAutomationRule internal constructor(
         cdkBuilder.userDefinedFields(userDefinedFields)
       }
 
+      override fun userDefinedFields(vararg userDefinedFields: Any): Unit =
+          userDefinedFields(userDefinedFields.toList())
+
       override fun verificationState(verificationState: IResolvable) {
         cdkBuilder.verificationState(verificationState.let(IResolvable::unwrap))
       }
@@ -946,6 +1105,9 @@ public open class CfnAutomationRule internal constructor(
         cdkBuilder.verificationState(verificationState)
       }
 
+      override fun verificationState(vararg verificationState: Any): Unit =
+          verificationState(verificationState.toList())
+
       override fun workflowStatus(workflowStatus: IResolvable) {
         cdkBuilder.workflowStatus(workflowStatus.let(IResolvable::unwrap))
       }
@@ -953,6 +1115,9 @@ public open class CfnAutomationRule internal constructor(
       override fun workflowStatus(workflowStatus: List<Any>) {
         cdkBuilder.workflowStatus(workflowStatus)
       }
+
+      override fun workflowStatus(vararg workflowStatus: Any): Unit =
+          workflowStatus(workflowStatus.toList())
 
       public fun build():
           software.amazon.awscdk.services.securityhub.CfnAutomationRule.AutomationRulesFindingFiltersProperty
@@ -1293,6 +1458,8 @@ public open class CfnAutomationRule internal constructor(
 
       public fun relatedFindings(relatedFindings: List<Any>)
 
+      public fun relatedFindings(vararg relatedFindings: Any)
+
       public fun severity(severity: IResolvable)
 
       public fun severity(severity: SeverityUpdateProperty)
@@ -1302,6 +1469,8 @@ public open class CfnAutomationRule internal constructor(
       public fun severity(severity: SeverityUpdateProperty.Builder.() -> Unit)
 
       public fun types(types: List<String>)
+
+      public fun types(vararg types: String)
 
       public fun userDefinedFields(userDefinedFields: IResolvable)
 
@@ -1353,6 +1522,9 @@ public open class CfnAutomationRule internal constructor(
         cdkBuilder.relatedFindings(relatedFindings)
       }
 
+      override fun relatedFindings(vararg relatedFindings: Any): Unit =
+          relatedFindings(relatedFindings.toList())
+
       override fun severity(severity: IResolvable) {
         cdkBuilder.severity(severity.let(IResolvable::unwrap))
       }
@@ -1369,6 +1541,8 @@ public open class CfnAutomationRule internal constructor(
       override fun types(types: List<String>) {
         cdkBuilder.types(types)
       }
+
+      override fun types(vararg types: String): Unit = types(types.toList())
 
       override fun userDefinedFields(userDefinedFields: IResolvable) {
         cdkBuilder.userDefinedFields(userDefinedFields.let(IResolvable::unwrap))

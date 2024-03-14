@@ -54,6 +54,8 @@ public open class CfnWebhook internal constructor(
     unwrap(this).setFilters(__idx_ac66f0)
   }
 
+  public open fun filters(vararg __idx_ac66f0: Any): Unit = filters(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -109,6 +111,8 @@ public open class CfnWebhook internal constructor(
 
     public fun filters(filters: List<Any>)
 
+    public fun filters(vararg filters: Any)
+
     public fun name(name: String)
 
     public fun registerWithThirdParty(registerWithThirdParty: Boolean)
@@ -156,6 +160,8 @@ public open class CfnWebhook internal constructor(
     override fun filters(filters: List<Any>) {
       cdkBuilder.filters(filters)
     }
+
+    override fun filters(vararg filters: Any): Unit = filters(filters.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)

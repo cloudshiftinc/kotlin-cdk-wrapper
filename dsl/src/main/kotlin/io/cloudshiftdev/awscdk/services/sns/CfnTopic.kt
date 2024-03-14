@@ -54,6 +54,9 @@ public open class CfnTopic internal constructor(
     unwrap(this).setDeliveryStatusLogging(__idx_ac66f0)
   }
 
+  public open fun deliveryStatusLogging(vararg __idx_ac66f0: Any): Unit =
+      deliveryStatusLogging(__idx_ac66f0.toList())
+
   public open fun displayName(): String? = unwrap(this).getDisplayName()
 
   public open fun displayName(`value`: String) {
@@ -96,6 +99,8 @@ public open class CfnTopic internal constructor(
     unwrap(this).setSubscription(__idx_ac66f0)
   }
 
+  public open fun subscription(vararg __idx_ac66f0: Any): Unit = subscription(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -104,6 +109,8 @@ public open class CfnTopic internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun topicName(): String? = unwrap(this).getTopicName()
 
@@ -130,6 +137,8 @@ public open class CfnTopic internal constructor(
 
     public fun deliveryStatusLogging(deliveryStatusLogging: List<Any>)
 
+    public fun deliveryStatusLogging(vararg deliveryStatusLogging: Any)
+
     public fun displayName(displayName: String)
 
     public fun fifoTopic(fifoTopic: Boolean)
@@ -144,7 +153,11 @@ public open class CfnTopic internal constructor(
 
     public fun subscription(subscription: List<Any>)
 
+    public fun subscription(vararg subscription: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun topicName(topicName: String)
 
@@ -182,6 +195,9 @@ public open class CfnTopic internal constructor(
       cdkBuilder.deliveryStatusLogging(deliveryStatusLogging)
     }
 
+    override fun deliveryStatusLogging(vararg deliveryStatusLogging: Any): Unit =
+        deliveryStatusLogging(deliveryStatusLogging.toList())
+
     override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
@@ -210,9 +226,13 @@ public open class CfnTopic internal constructor(
       cdkBuilder.subscription(subscription)
     }
 
+    override fun subscription(vararg subscription: Any): Unit = subscription(subscription.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun topicName(topicName: String) {
       cdkBuilder.topicName(topicName)

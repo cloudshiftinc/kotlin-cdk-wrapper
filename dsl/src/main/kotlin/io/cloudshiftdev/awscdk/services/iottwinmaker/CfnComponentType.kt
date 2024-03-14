@@ -72,6 +72,8 @@ public open class CfnComponentType internal constructor(
     unwrap(this).setExtendsFrom(`value`)
   }
 
+  public open fun extendsFrom(vararg `value`: String): Unit = extendsFrom(`value`.toList())
+
   public open fun functions(): Any? = unwrap(this).getFunctions()
 
   public open fun functions(`value`: IResolvable) {
@@ -141,6 +143,8 @@ public open class CfnComponentType internal constructor(
 
     public fun extendsFrom(extendsFrom: List<String>)
 
+    public fun extendsFrom(vararg extendsFrom: String)
+
     public fun functions(functions: IResolvable)
 
     public fun functions(functions: Map<String, Any>)
@@ -188,6 +192,8 @@ public open class CfnComponentType internal constructor(
     override fun extendsFrom(extendsFrom: List<String>) {
       cdkBuilder.extendsFrom(extendsFrom)
     }
+
+    override fun extendsFrom(vararg extendsFrom: String): Unit = extendsFrom(extendsFrom.toList())
 
     override fun functions(functions: IResolvable) {
       cdkBuilder.functions(functions.let(IResolvable::unwrap))
@@ -270,6 +276,8 @@ public open class CfnComponentType internal constructor(
 
       public fun allowedValues(allowedValues: List<Any>)
 
+      public fun allowedValues(vararg allowedValues: Any)
+
       public fun nestedType(nestedType: IResolvable)
 
       public fun nestedType(nestedType: DataTypeProperty)
@@ -303,6 +311,9 @@ public open class CfnComponentType internal constructor(
       override fun allowedValues(allowedValues: List<Any>) {
         cdkBuilder.allowedValues(allowedValues)
       }
+
+      override fun allowedValues(vararg allowedValues: Any): Unit =
+          allowedValues(allowedValues.toList())
 
       override fun nestedType(nestedType: IResolvable) {
         cdkBuilder.nestedType(nestedType.let(IResolvable::unwrap))
@@ -516,6 +527,8 @@ public open class CfnComponentType internal constructor(
       public fun groupType(groupType: String)
 
       public fun propertyNames(propertyNames: List<String>)
+
+      public fun propertyNames(vararg propertyNames: String)
     }
 
     private class BuilderImpl : Builder {
@@ -531,6 +544,9 @@ public open class CfnComponentType internal constructor(
       override fun propertyNames(propertyNames: List<String>) {
         cdkBuilder.propertyNames(propertyNames)
       }
+
+      override fun propertyNames(vararg propertyNames: String): Unit =
+          propertyNames(propertyNames.toList())
 
       public fun build():
           software.amazon.awscdk.services.iottwinmaker.CfnComponentType.PropertyGroupProperty =
@@ -766,6 +782,8 @@ public open class CfnComponentType internal constructor(
 
       public fun listValue(listValue: List<Any>)
 
+      public fun listValue(vararg listValue: Any)
+
       public fun longValue(longValue: Number)
 
       public fun mapValue(mapValue: IResolvable)
@@ -809,6 +827,8 @@ public open class CfnComponentType internal constructor(
       override fun listValue(listValue: List<Any>) {
         cdkBuilder.listValue(listValue)
       }
+
+      override fun listValue(vararg listValue: Any): Unit = listValue(listValue.toList())
 
       override fun longValue(longValue: Number) {
         cdkBuilder.longValue(longValue)
@@ -970,6 +990,8 @@ public open class CfnComponentType internal constructor(
 
       public fun requiredProperties(requiredProperties: List<String>)
 
+      public fun requiredProperties(vararg requiredProperties: String)
+
       public fun scope(scope: String)
     }
 
@@ -994,6 +1016,9 @@ public open class CfnComponentType internal constructor(
       override fun requiredProperties(requiredProperties: List<String>) {
         cdkBuilder.requiredProperties(requiredProperties)
       }
+
+      override fun requiredProperties(vararg requiredProperties: String): Unit =
+          requiredProperties(requiredProperties.toList())
 
       override fun scope(scope: String) {
         cdkBuilder.scope(scope)

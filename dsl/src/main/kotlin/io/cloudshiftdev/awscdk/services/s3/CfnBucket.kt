@@ -54,6 +54,9 @@ public open class CfnBucket internal constructor(
     unwrap(this).setAnalyticsConfigurations(__idx_ac66f0)
   }
 
+  public open fun analyticsConfigurations(vararg __idx_ac66f0: Any): Unit =
+      analyticsConfigurations(__idx_ac66f0.toList())
+
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   public open fun attrDomainName(): String = unwrap(this).getAttrDomainName()
@@ -115,6 +118,9 @@ public open class CfnBucket internal constructor(
     unwrap(this).setIntelligentTieringConfigurations(__idx_ac66f0)
   }
 
+  public open fun intelligentTieringConfigurations(vararg __idx_ac66f0: Any): Unit =
+      intelligentTieringConfigurations(__idx_ac66f0.toList())
+
   public open fun inventoryConfigurations(): Any? = unwrap(this).getInventoryConfigurations()
 
   public open fun inventoryConfigurations(`value`: IResolvable) {
@@ -124,6 +130,9 @@ public open class CfnBucket internal constructor(
   public open fun inventoryConfigurations(__idx_ac66f0: List<Any>) {
     unwrap(this).setInventoryConfigurations(__idx_ac66f0)
   }
+
+  public open fun inventoryConfigurations(vararg __idx_ac66f0: Any): Unit =
+      inventoryConfigurations(__idx_ac66f0.toList())
 
   public open fun lifecycleConfiguration(): Any? = unwrap(this).getLifecycleConfiguration()
 
@@ -165,6 +174,9 @@ public open class CfnBucket internal constructor(
   public open fun metricsConfigurations(__idx_ac66f0: List<Any>) {
     unwrap(this).setMetricsConfigurations(__idx_ac66f0)
   }
+
+  public open fun metricsConfigurations(vararg __idx_ac66f0: Any): Unit =
+      metricsConfigurations(__idx_ac66f0.toList())
 
   public open fun notificationConfiguration(): Any? = unwrap(this).getNotificationConfiguration()
 
@@ -265,6 +277,8 @@ public open class CfnBucket internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun versioningConfiguration(): Any? = unwrap(this).getVersioningConfiguration()
 
   public open fun versioningConfiguration(`value`: IResolvable) {
@@ -312,6 +326,8 @@ public open class CfnBucket internal constructor(
 
     public fun analyticsConfigurations(analyticsConfigurations: List<Any>)
 
+    public fun analyticsConfigurations(vararg analyticsConfigurations: Any)
+
     public fun bucketEncryption(bucketEncryption: IResolvable)
 
     public fun bucketEncryption(bucketEncryption: BucketEncryptionProperty)
@@ -334,9 +350,13 @@ public open class CfnBucket internal constructor(
 
     public fun intelligentTieringConfigurations(intelligentTieringConfigurations: List<Any>)
 
+    public fun intelligentTieringConfigurations(vararg intelligentTieringConfigurations: Any)
+
     public fun inventoryConfigurations(inventoryConfigurations: IResolvable)
 
     public fun inventoryConfigurations(inventoryConfigurations: List<Any>)
+
+    public fun inventoryConfigurations(vararg inventoryConfigurations: Any)
 
     public fun lifecycleConfiguration(lifecycleConfiguration: IResolvable)
 
@@ -359,6 +379,8 @@ public open class CfnBucket internal constructor(
     public fun metricsConfigurations(metricsConfigurations: IResolvable)
 
     public fun metricsConfigurations(metricsConfigurations: List<Any>)
+
+    public fun metricsConfigurations(vararg metricsConfigurations: Any)
 
     public fun notificationConfiguration(notificationConfiguration: IResolvable)
 
@@ -412,6 +434,8 @@ public open class CfnBucket internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun versioningConfiguration(versioningConfiguration: IResolvable)
 
     public fun versioningConfiguration(versioningConfiguration: VersioningConfigurationProperty)
@@ -464,6 +488,9 @@ public open class CfnBucket internal constructor(
       cdkBuilder.analyticsConfigurations(analyticsConfigurations)
     }
 
+    override fun analyticsConfigurations(vararg analyticsConfigurations: Any): Unit =
+        analyticsConfigurations(analyticsConfigurations.toList())
+
     override fun bucketEncryption(bucketEncryption: IResolvable) {
       cdkBuilder.bucketEncryption(bucketEncryption.let(IResolvable::unwrap))
     }
@@ -502,6 +529,9 @@ public open class CfnBucket internal constructor(
       cdkBuilder.intelligentTieringConfigurations(intelligentTieringConfigurations)
     }
 
+    override fun intelligentTieringConfigurations(vararg intelligentTieringConfigurations: Any):
+        Unit = intelligentTieringConfigurations(intelligentTieringConfigurations.toList())
+
     override fun inventoryConfigurations(inventoryConfigurations: IResolvable) {
       cdkBuilder.inventoryConfigurations(inventoryConfigurations.let(IResolvable::unwrap))
     }
@@ -509,6 +539,9 @@ public open class CfnBucket internal constructor(
     override fun inventoryConfigurations(inventoryConfigurations: List<Any>) {
       cdkBuilder.inventoryConfigurations(inventoryConfigurations)
     }
+
+    override fun inventoryConfigurations(vararg inventoryConfigurations: Any): Unit =
+        inventoryConfigurations(inventoryConfigurations.toList())
 
     override fun lifecycleConfiguration(lifecycleConfiguration: IResolvable) {
       cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(IResolvable::unwrap))
@@ -545,6 +578,9 @@ public open class CfnBucket internal constructor(
     override fun metricsConfigurations(metricsConfigurations: List<Any>) {
       cdkBuilder.metricsConfigurations(metricsConfigurations)
     }
+
+    override fun metricsConfigurations(vararg metricsConfigurations: Any): Unit =
+        metricsConfigurations(metricsConfigurations.toList())
 
     override fun notificationConfiguration(notificationConfiguration: IResolvable) {
       cdkBuilder.notificationConfiguration(notificationConfiguration.let(IResolvable::unwrap))
@@ -631,6 +667,8 @@ public open class CfnBucket internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun versioningConfiguration(versioningConfiguration: IResolvable) {
       cdkBuilder.versioningConfiguration(versioningConfiguration.let(IResolvable::unwrap))
@@ -983,6 +1021,8 @@ public open class CfnBucket internal constructor(
       public fun rules(rules: IResolvable)
 
       public fun rules(rules: List<Any>)
+
+      public fun rules(vararg rules: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -997,6 +1037,8 @@ public open class CfnBucket internal constructor(
       override fun rules(rules: List<Any>) {
         cdkBuilder.rules(rules)
       }
+
+      override fun rules(vararg rules: Any): Unit = rules(rules.toList())
 
       public fun build():
           software.amazon.awscdk.services.s3.CfnBucket.LifecycleConfigurationProperty =
@@ -1041,6 +1083,8 @@ public open class CfnBucket internal constructor(
       public fun tagFilters(tagFilters: IResolvable)
 
       public fun tagFilters(tagFilters: List<Any>)
+
+      public fun tagFilters(vararg tagFilters: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1059,6 +1103,8 @@ public open class CfnBucket internal constructor(
       override fun tagFilters(tagFilters: List<Any>) {
         cdkBuilder.tagFilters(tagFilters)
       }
+
+      override fun tagFilters(vararg tagFilters: Any): Unit = tagFilters(tagFilters.toList())
 
       public fun build():
           software.amazon.awscdk.services.s3.CfnBucket.ReplicationRuleAndOperatorProperty =
@@ -1409,6 +1455,8 @@ public open class CfnBucket internal constructor(
 
       public fun optionalFields(optionalFields: List<String>)
 
+      public fun optionalFields(vararg optionalFields: String)
+
       public fun prefix(prefix: String)
 
       public fun scheduleFrequency(scheduleFrequency: String)
@@ -1451,6 +1499,9 @@ public open class CfnBucket internal constructor(
       override fun optionalFields(optionalFields: List<String>) {
         cdkBuilder.optionalFields(optionalFields)
       }
+
+      override fun optionalFields(vararg optionalFields: String): Unit =
+          optionalFields(optionalFields.toList())
 
       override fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
@@ -1520,11 +1571,19 @@ public open class CfnBucket internal constructor(
     public interface Builder {
       public fun allowedHeaders(allowedHeaders: List<String>)
 
+      public fun allowedHeaders(vararg allowedHeaders: String)
+
       public fun allowedMethods(allowedMethods: List<String>)
+
+      public fun allowedMethods(vararg allowedMethods: String)
 
       public fun allowedOrigins(allowedOrigins: List<String>)
 
+      public fun allowedOrigins(vararg allowedOrigins: String)
+
       public fun exposedHeaders(exposedHeaders: List<String>)
+
+      public fun exposedHeaders(vararg exposedHeaders: String)
 
       public fun id(id: String)
 
@@ -1539,17 +1598,29 @@ public open class CfnBucket internal constructor(
         cdkBuilder.allowedHeaders(allowedHeaders)
       }
 
+      override fun allowedHeaders(vararg allowedHeaders: String): Unit =
+          allowedHeaders(allowedHeaders.toList())
+
       override fun allowedMethods(allowedMethods: List<String>) {
         cdkBuilder.allowedMethods(allowedMethods)
       }
+
+      override fun allowedMethods(vararg allowedMethods: String): Unit =
+          allowedMethods(allowedMethods.toList())
 
       override fun allowedOrigins(allowedOrigins: List<String>) {
         cdkBuilder.allowedOrigins(allowedOrigins)
       }
 
+      override fun allowedOrigins(vararg allowedOrigins: String): Unit =
+          allowedOrigins(allowedOrigins.toList())
+
       override fun exposedHeaders(exposedHeaders: List<String>) {
         cdkBuilder.exposedHeaders(exposedHeaders)
       }
+
+      override fun exposedHeaders(vararg exposedHeaders: String): Unit =
+          exposedHeaders(exposedHeaders.toList())
 
       override fun id(id: String) {
         cdkBuilder.id(id)
@@ -1568,9 +1639,9 @@ public open class CfnBucket internal constructor(
     ) : CorsRuleProperty {
       override fun allowedHeaders(): List<String> = unwrap(this).getAllowedHeaders() ?: emptyList()
 
-      override fun allowedMethods(): List<String> = unwrap(this).getAllowedMethods() ?: emptyList()
+      override fun allowedMethods(): List<String> = unwrap(this).getAllowedMethods()
 
-      override fun allowedOrigins(): List<String> = unwrap(this).getAllowedOrigins() ?: emptyList()
+      override fun allowedOrigins(): List<String> = unwrap(this).getAllowedOrigins()
 
       override fun exposedHeaders(): List<String> = unwrap(this).getExposedHeaders() ?: emptyList()
 
@@ -1722,9 +1793,13 @@ public open class CfnBucket internal constructor(
 
       public fun tagFilters(tagFilters: List<Any>)
 
+      public fun tagFilters(vararg tagFilters: Any)
+
       public fun tierings(tierings: IResolvable)
 
       public fun tierings(tierings: List<Any>)
+
+      public fun tierings(vararg tierings: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1753,6 +1828,8 @@ public open class CfnBucket internal constructor(
         cdkBuilder.tagFilters(tagFilters)
       }
 
+      override fun tagFilters(vararg tagFilters: Any): Unit = tagFilters(tagFilters.toList())
+
       override fun tierings(tierings: IResolvable) {
         cdkBuilder.tierings(tierings.let(IResolvable::unwrap))
       }
@@ -1760,6 +1837,8 @@ public open class CfnBucket internal constructor(
       override fun tierings(tierings: List<Any>) {
         cdkBuilder.tierings(tierings)
       }
+
+      override fun tierings(vararg tierings: Any): Unit = tierings(tierings.toList())
 
       public fun build():
           software.amazon.awscdk.services.s3.CfnBucket.IntelligentTieringConfigurationProperty =
@@ -1885,6 +1964,8 @@ public open class CfnBucket internal constructor(
       public fun rules(rules: IResolvable)
 
       public fun rules(rules: List<Any>)
+
+      public fun rules(vararg rules: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1899,6 +1980,8 @@ public open class CfnBucket internal constructor(
       override fun rules(rules: List<Any>) {
         cdkBuilder.rules(rules)
       }
+
+      override fun rules(vararg rules: Any): Unit = rules(rules.toList())
 
       public fun build(): software.amazon.awscdk.services.s3.CfnBucket.OwnershipControlsProperty =
           cdkBuilder.build()
@@ -1955,13 +2038,19 @@ public open class CfnBucket internal constructor(
 
       public fun lambdaConfigurations(lambdaConfigurations: List<Any>)
 
+      public fun lambdaConfigurations(vararg lambdaConfigurations: Any)
+
       public fun queueConfigurations(queueConfigurations: IResolvable)
 
       public fun queueConfigurations(queueConfigurations: List<Any>)
 
+      public fun queueConfigurations(vararg queueConfigurations: Any)
+
       public fun topicConfigurations(topicConfigurations: IResolvable)
 
       public fun topicConfigurations(topicConfigurations: List<Any>)
+
+      public fun topicConfigurations(vararg topicConfigurations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1993,6 +2082,9 @@ public open class CfnBucket internal constructor(
         cdkBuilder.lambdaConfigurations(lambdaConfigurations)
       }
 
+      override fun lambdaConfigurations(vararg lambdaConfigurations: Any): Unit =
+          lambdaConfigurations(lambdaConfigurations.toList())
+
       override fun queueConfigurations(queueConfigurations: IResolvable) {
         cdkBuilder.queueConfigurations(queueConfigurations.let(IResolvable::unwrap))
       }
@@ -2001,6 +2093,9 @@ public open class CfnBucket internal constructor(
         cdkBuilder.queueConfigurations(queueConfigurations)
       }
 
+      override fun queueConfigurations(vararg queueConfigurations: Any): Unit =
+          queueConfigurations(queueConfigurations.toList())
+
       override fun topicConfigurations(topicConfigurations: IResolvable) {
         cdkBuilder.topicConfigurations(topicConfigurations.let(IResolvable::unwrap))
       }
@@ -2008,6 +2103,9 @@ public open class CfnBucket internal constructor(
       override fun topicConfigurations(topicConfigurations: List<Any>) {
         cdkBuilder.topicConfigurations(topicConfigurations)
       }
+
+      override fun topicConfigurations(vararg topicConfigurations: Any): Unit =
+          topicConfigurations(topicConfigurations.toList())
 
       public fun build():
           software.amazon.awscdk.services.s3.CfnBucket.NotificationConfigurationProperty =
@@ -2074,6 +2172,8 @@ public open class CfnBucket internal constructor(
       public fun routingRules(routingRules: IResolvable)
 
       public fun routingRules(routingRules: List<Any>)
+
+      public fun routingRules(vararg routingRules: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2110,6 +2210,9 @@ public open class CfnBucket internal constructor(
       override fun routingRules(routingRules: List<Any>) {
         cdkBuilder.routingRules(routingRules)
       }
+
+      override fun routingRules(vararg routingRules: Any): Unit =
+          routingRules(routingRules.toList())
 
       public fun build(): software.amazon.awscdk.services.s3.CfnBucket.WebsiteConfigurationProperty
           = cdkBuilder.build()
@@ -2295,6 +2398,8 @@ public open class CfnBucket internal constructor(
       public fun rules(rules: IResolvable)
 
       public fun rules(rules: List<Any>)
+
+      public fun rules(vararg rules: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2313,6 +2418,8 @@ public open class CfnBucket internal constructor(
       override fun rules(rules: List<Any>) {
         cdkBuilder.rules(rules)
       }
+
+      override fun rules(vararg rules: Any): Unit = rules(rules.toList())
 
       public fun build():
           software.amazon.awscdk.services.s3.CfnBucket.ReplicationConfigurationProperty =
@@ -2537,6 +2644,8 @@ public open class CfnBucket internal constructor(
       public fun tagFilters(tagFilters: IResolvable)
 
       public fun tagFilters(tagFilters: List<Any>)
+
+      public fun tagFilters(vararg tagFilters: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2563,6 +2672,8 @@ public open class CfnBucket internal constructor(
       override fun tagFilters(tagFilters: List<Any>) {
         cdkBuilder.tagFilters(tagFilters)
       }
+
+      override fun tagFilters(vararg tagFilters: Any): Unit = tagFilters(tagFilters.toList())
 
       public fun build(): software.amazon.awscdk.services.s3.CfnBucket.MetricsConfigurationProperty
           = cdkBuilder.build()
@@ -2819,6 +2930,8 @@ public open class CfnBucket internal constructor(
       public fun rules(rules: IResolvable)
 
       public fun rules(rules: List<Any>)
+
+      public fun rules(vararg rules: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2833,6 +2946,8 @@ public open class CfnBucket internal constructor(
       override fun rules(rules: List<Any>) {
         cdkBuilder.rules(rules)
       }
+
+      override fun rules(vararg rules: Any): Unit = rules(rules.toList())
 
       public fun build(): software.amazon.awscdk.services.s3.CfnBucket.S3KeyFilterProperty =
           cdkBuilder.build()
@@ -3017,6 +3132,8 @@ public open class CfnBucket internal constructor(
 
       public fun noncurrentVersionTransitions(noncurrentVersionTransitions: List<Any>)
 
+      public fun noncurrentVersionTransitions(vararg noncurrentVersionTransitions: Any)
+
       public fun objectSizeGreaterThan(objectSizeGreaterThan: Number)
 
       public fun objectSizeLessThan(objectSizeLessThan: Number)
@@ -3029,6 +3146,8 @@ public open class CfnBucket internal constructor(
 
       public fun tagFilters(tagFilters: List<Any>)
 
+      public fun tagFilters(vararg tagFilters: Any)
+
       public fun transition(transition: IResolvable)
 
       public fun transition(transition: TransitionProperty)
@@ -3040,6 +3159,8 @@ public open class CfnBucket internal constructor(
       public fun transitions(transitions: IResolvable)
 
       public fun transitions(transitions: List<Any>)
+
+      public fun transitions(vararg transitions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -3130,6 +3251,9 @@ public open class CfnBucket internal constructor(
         cdkBuilder.noncurrentVersionTransitions(noncurrentVersionTransitions)
       }
 
+      override fun noncurrentVersionTransitions(vararg noncurrentVersionTransitions: Any): Unit =
+          noncurrentVersionTransitions(noncurrentVersionTransitions.toList())
+
       override fun objectSizeGreaterThan(objectSizeGreaterThan: Number) {
         cdkBuilder.objectSizeGreaterThan(objectSizeGreaterThan)
       }
@@ -3154,6 +3278,8 @@ public open class CfnBucket internal constructor(
         cdkBuilder.tagFilters(tagFilters)
       }
 
+      override fun tagFilters(vararg tagFilters: Any): Unit = tagFilters(tagFilters.toList())
+
       override fun transition(transition: IResolvable) {
         cdkBuilder.transition(transition.let(IResolvable::unwrap))
       }
@@ -3174,6 +3300,8 @@ public open class CfnBucket internal constructor(
       override fun transitions(transitions: List<Any>) {
         cdkBuilder.transitions(transitions)
       }
+
+      override fun transitions(vararg transitions: Any): Unit = transitions(transitions.toList())
 
       public fun build(): software.amazon.awscdk.services.s3.CfnBucket.RuleProperty =
           cdkBuilder.build()
@@ -4096,6 +4224,8 @@ public open class CfnBucket internal constructor(
       public fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable)
 
       public fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: List<Any>)
+
+      public fun serverSideEncryptionConfiguration(vararg serverSideEncryptionConfiguration: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -4111,6 +4241,9 @@ public open class CfnBucket internal constructor(
       override fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: List<Any>) {
         cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration)
       }
+
+      override fun serverSideEncryptionConfiguration(vararg serverSideEncryptionConfiguration: Any):
+          Unit = serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.toList())
 
       public fun build(): software.amazon.awscdk.services.s3.CfnBucket.BucketEncryptionProperty =
           cdkBuilder.build()
@@ -4473,6 +4606,8 @@ public open class CfnBucket internal constructor(
       public fun tagFilters(tagFilters: IResolvable)
 
       public fun tagFilters(tagFilters: List<Any>)
+
+      public fun tagFilters(vararg tagFilters: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -4509,6 +4644,8 @@ public open class CfnBucket internal constructor(
       override fun tagFilters(tagFilters: List<Any>) {
         cdkBuilder.tagFilters(tagFilters)
       }
+
+      override fun tagFilters(vararg tagFilters: Any): Unit = tagFilters(tagFilters.toList())
 
       public fun build():
           software.amazon.awscdk.services.s3.CfnBucket.AnalyticsConfigurationProperty =
@@ -4743,6 +4880,8 @@ public open class CfnBucket internal constructor(
       public fun corsRules(corsRules: IResolvable)
 
       public fun corsRules(corsRules: List<Any>)
+
+      public fun corsRules(vararg corsRules: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -4757,6 +4896,8 @@ public open class CfnBucket internal constructor(
       override fun corsRules(corsRules: List<Any>) {
         cdkBuilder.corsRules(corsRules)
       }
+
+      override fun corsRules(vararg corsRules: Any): Unit = corsRules(corsRules.toList())
 
       public fun build(): software.amazon.awscdk.services.s3.CfnBucket.CorsConfigurationProperty =
           cdkBuilder.build()

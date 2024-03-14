@@ -35,6 +35,8 @@ public open class EcsDeploymentGroup internal constructor(
   public interface Builder {
     public fun alarms(alarms: List<IAlarm>)
 
+    public fun alarms(vararg alarms: IAlarm)
+
     public fun application(application: IEcsApplication)
 
     public fun autoRollback(autoRollback: AutoRollbackConfig)
@@ -73,6 +75,8 @@ public open class EcsDeploymentGroup internal constructor(
     override fun alarms(alarms: List<IAlarm>) {
       cdkBuilder.alarms(alarms.map(IAlarm::unwrap))
     }
+
+    override fun alarms(vararg alarms: IAlarm): Unit = alarms(alarms.toList())
 
     override fun application(application: IEcsApplication) {
       cdkBuilder.application(application.let(IEcsApplication::unwrap))

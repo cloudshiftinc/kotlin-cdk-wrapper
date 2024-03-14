@@ -57,6 +57,9 @@ public open class CfnIPAM internal constructor(
     unwrap(this).setOperatingRegions(__idx_ac66f0)
   }
 
+  public open fun operatingRegions(vararg __idx_ac66f0: Any): Unit =
+      operatingRegions(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -65,6 +68,8 @@ public open class CfnIPAM internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun tier(): String? = unwrap(this).getTier()
 
@@ -79,7 +84,11 @@ public open class CfnIPAM internal constructor(
 
     public fun operatingRegions(operatingRegions: List<Any>)
 
+    public fun operatingRegions(vararg operatingRegions: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun tier(tier: String)
   }
@@ -103,9 +112,14 @@ public open class CfnIPAM internal constructor(
       cdkBuilder.operatingRegions(operatingRegions)
     }
 
+    override fun operatingRegions(vararg operatingRegions: Any): Unit =
+        operatingRegions(operatingRegions.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun tier(tier: String) {
       cdkBuilder.tier(tier)

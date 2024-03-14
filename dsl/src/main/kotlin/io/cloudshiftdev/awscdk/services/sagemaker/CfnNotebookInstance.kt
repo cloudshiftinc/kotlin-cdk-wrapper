@@ -27,12 +27,18 @@ public open class CfnNotebookInstance internal constructor(
     unwrap(this).setAcceleratorTypes(`value`)
   }
 
+  public open fun acceleratorTypes(vararg `value`: String): Unit =
+      acceleratorTypes(`value`.toList())
+
   public open fun additionalCodeRepositories(): List<String> =
       unwrap(this).getAdditionalCodeRepositories() ?: emptyList()
 
   public open fun additionalCodeRepositories(`value`: List<String>) {
     unwrap(this).setAdditionalCodeRepositories(`value`)
   }
+
+  public open fun additionalCodeRepositories(vararg `value`: String): Unit =
+      additionalCodeRepositories(`value`.toList())
 
   public open fun attrId(): String = unwrap(this).getAttrId()
 
@@ -122,6 +128,9 @@ public open class CfnNotebookInstance internal constructor(
     unwrap(this).setSecurityGroupIds(`value`)
   }
 
+  public open fun securityGroupIds(vararg `value`: String): Unit =
+      securityGroupIds(`value`.toList())
+
   public open fun subnetId(): String? = unwrap(this).getSubnetId()
 
   public open fun subnetId(`value`: String) {
@@ -137,6 +146,8 @@ public open class CfnNotebookInstance internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun volumeSizeInGb(): Number? = unwrap(this).getVolumeSizeInGb()
 
   public open fun volumeSizeInGb(`value`: Number) {
@@ -146,7 +157,11 @@ public open class CfnNotebookInstance internal constructor(
   public interface Builder {
     public fun acceleratorTypes(acceleratorTypes: List<String>)
 
+    public fun acceleratorTypes(vararg acceleratorTypes: String)
+
     public fun additionalCodeRepositories(additionalCodeRepositories: List<String>)
+
+    public fun additionalCodeRepositories(vararg additionalCodeRepositories: String)
 
     public fun defaultCodeRepository(defaultCodeRepository: String)
 
@@ -179,9 +194,13 @@ public open class CfnNotebookInstance internal constructor(
 
     public fun securityGroupIds(securityGroupIds: List<String>)
 
+    public fun securityGroupIds(vararg securityGroupIds: String)
+
     public fun subnetId(subnetId: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun volumeSizeInGb(volumeSizeInGb: Number)
   }
@@ -197,9 +216,15 @@ public open class CfnNotebookInstance internal constructor(
       cdkBuilder.acceleratorTypes(acceleratorTypes)
     }
 
+    override fun acceleratorTypes(vararg acceleratorTypes: String): Unit =
+        acceleratorTypes(acceleratorTypes.toList())
+
     override fun additionalCodeRepositories(additionalCodeRepositories: List<String>) {
       cdkBuilder.additionalCodeRepositories(additionalCodeRepositories)
     }
+
+    override fun additionalCodeRepositories(vararg additionalCodeRepositories: String): Unit =
+        additionalCodeRepositories(additionalCodeRepositories.toList())
 
     override fun defaultCodeRepository(defaultCodeRepository: String) {
       cdkBuilder.defaultCodeRepository(defaultCodeRepository)
@@ -258,6 +283,9 @@ public open class CfnNotebookInstance internal constructor(
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
+
     override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }
@@ -265,6 +293,8 @@ public open class CfnNotebookInstance internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun volumeSizeInGb(volumeSizeInGb: Number) {
       cdkBuilder.volumeSizeInGb(volumeSizeInGb)

@@ -64,6 +64,8 @@ public open class CfnInfrastructureConfiguration internal constructor(
     unwrap(this).setInstanceTypes(`value`)
   }
 
+  public open fun instanceTypes(vararg `value`: String): Unit = instanceTypes(`value`.toList())
+
   public open fun keyPair(): String? = unwrap(this).getKeyPair()
 
   public open fun keyPair(`value`: String) {
@@ -107,6 +109,9 @@ public open class CfnInfrastructureConfiguration internal constructor(
   public open fun securityGroupIds(`value`: List<String>) {
     unwrap(this).setSecurityGroupIds(`value`)
   }
+
+  public open fun securityGroupIds(vararg `value`: String): Unit =
+      securityGroupIds(`value`.toList())
 
   public open fun snsTopicArn(): String? = unwrap(this).getSnsTopicArn()
 
@@ -154,6 +159,8 @@ public open class CfnInfrastructureConfiguration internal constructor(
 
     public fun instanceTypes(instanceTypes: List<String>)
 
+    public fun instanceTypes(vararg instanceTypes: String)
+
     public fun keyPair(keyPair: String)
 
     public fun logging(logging: IResolvable)
@@ -171,6 +178,8 @@ public open class CfnInfrastructureConfiguration internal constructor(
     public fun resourceTags(resourceTags: Map<String, String>)
 
     public fun securityGroupIds(securityGroupIds: List<String>)
+
+    public fun securityGroupIds(vararg securityGroupIds: String)
 
     public fun snsTopicArn(snsTopicArn: String)
 
@@ -218,6 +227,9 @@ public open class CfnInfrastructureConfiguration internal constructor(
       cdkBuilder.instanceTypes(instanceTypes)
     }
 
+    override fun instanceTypes(vararg instanceTypes: String): Unit =
+        instanceTypes(instanceTypes.toList())
+
     override fun keyPair(keyPair: String) {
       cdkBuilder.keyPair(keyPair)
     }
@@ -250,6 +262,9 @@ public open class CfnInfrastructureConfiguration internal constructor(
     override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
+
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
 
     override fun snsTopicArn(snsTopicArn: String) {
       cdkBuilder.snsTopicArn(snsTopicArn)

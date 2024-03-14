@@ -71,6 +71,8 @@ public open class CfnRuleGroup internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun type(): String = unwrap(this).getType()
 
   public open fun type(`value`: String) {
@@ -93,6 +95,8 @@ public open class CfnRuleGroup internal constructor(
     public fun ruleGroupName(ruleGroupName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun type(type: String)
   }
@@ -133,6 +137,8 @@ public open class CfnRuleGroup internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun type(type: String) {
       cdkBuilder.type(type)
     }
@@ -167,6 +173,8 @@ public open class CfnRuleGroup internal constructor(
 
     public interface Builder {
       public fun definition(definition: List<String>)
+
+      public fun definition(vararg definition: String)
     }
 
     private class BuilderImpl : Builder {
@@ -177,6 +185,8 @@ public open class CfnRuleGroup internal constructor(
       override fun definition(definition: List<String>) {
         cdkBuilder.definition(definition)
       }
+
+      override fun definition(vararg definition: String): Unit = definition(definition.toList())
 
       public fun build(): software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.IPSetProperty
           = cdkBuilder.build()
@@ -308,6 +318,8 @@ public open class CfnRuleGroup internal constructor(
 
       public fun statefulRules(statefulRules: List<Any>)
 
+      public fun statefulRules(vararg statefulRules: Any)
+
       public fun statelessRulesAndCustomActions(statelessRulesAndCustomActions: IResolvable)
 
       public
@@ -348,6 +360,9 @@ public open class CfnRuleGroup internal constructor(
       override fun statefulRules(statefulRules: List<Any>) {
         cdkBuilder.statefulRules(statefulRules)
       }
+
+      override fun statefulRules(vararg statefulRules: Any): Unit =
+          statefulRules(statefulRules.toList())
 
       override fun statelessRulesAndCustomActions(statelessRulesAndCustomActions: IResolvable) {
         cdkBuilder.statelessRulesAndCustomActions(statelessRulesAndCustomActions.let(IResolvable::unwrap))
@@ -414,9 +429,13 @@ public open class CfnRuleGroup internal constructor(
 
       public fun customActions(customActions: List<Any>)
 
+      public fun customActions(vararg customActions: Any)
+
       public fun statelessRules(statelessRules: IResolvable)
 
       public fun statelessRules(statelessRules: List<Any>)
+
+      public fun statelessRules(vararg statelessRules: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -433,6 +452,9 @@ public open class CfnRuleGroup internal constructor(
         cdkBuilder.customActions(customActions)
       }
 
+      override fun customActions(vararg customActions: Any): Unit =
+          customActions(customActions.toList())
+
       override fun statelessRules(statelessRules: IResolvable) {
         cdkBuilder.statelessRules(statelessRules.let(IResolvable::unwrap))
       }
@@ -440,6 +462,9 @@ public open class CfnRuleGroup internal constructor(
       override fun statelessRules(statelessRules: List<Any>) {
         cdkBuilder.statelessRules(statelessRules)
       }
+
+      override fun statelessRules(vararg statelessRules: Any): Unit =
+          statelessRules(statelessRules.toList())
 
       public fun build():
           software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatelessRulesAndCustomActionsProperty
@@ -542,6 +567,8 @@ public open class CfnRuleGroup internal constructor(
     public interface Builder {
       public fun actions(actions: List<String>)
 
+      public fun actions(vararg actions: String)
+
       public fun matchAttributes(matchAttributes: IResolvable)
 
       public fun matchAttributes(matchAttributes: MatchAttributesProperty)
@@ -560,6 +587,8 @@ public open class CfnRuleGroup internal constructor(
       override fun actions(actions: List<String>) {
         cdkBuilder.actions(actions)
       }
+
+      override fun actions(vararg actions: String): Unit = actions(actions.toList())
 
       override fun matchAttributes(matchAttributes: IResolvable) {
         cdkBuilder.matchAttributes(matchAttributes.let(IResolvable::unwrap))
@@ -583,7 +612,7 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleDefinitionProperty,
     ) : RuleDefinitionProperty {
-      override fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
+      override fun actions(): List<String> = unwrap(this).getActions()
 
       override fun matchAttributes(): Any = unwrap(this).getMatchAttributes()
     }
@@ -629,6 +658,8 @@ public open class CfnRuleGroup internal constructor(
       public fun ruleOptions(ruleOptions: IResolvable)
 
       public fun ruleOptions(ruleOptions: List<Any>)
+
+      public fun ruleOptions(vararg ruleOptions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -661,6 +692,8 @@ public open class CfnRuleGroup internal constructor(
       override fun ruleOptions(ruleOptions: List<Any>) {
         cdkBuilder.ruleOptions(ruleOptions)
       }
+
+      override fun ruleOptions(vararg ruleOptions: Any): Unit = ruleOptions(ruleOptions.toList())
 
       public fun build():
           software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.StatefulRuleProperty =
@@ -716,25 +749,37 @@ public open class CfnRuleGroup internal constructor(
 
       public fun destinationPorts(destinationPorts: List<Any>)
 
+      public fun destinationPorts(vararg destinationPorts: Any)
+
       public fun destinations(destinations: IResolvable)
 
       public fun destinations(destinations: List<Any>)
+
+      public fun destinations(vararg destinations: Any)
 
       public fun protocols(protocols: IResolvable)
 
       public fun protocols(protocols: List<Number>)
 
+      public fun protocols(vararg protocols: Number)
+
       public fun sourcePorts(sourcePorts: IResolvable)
 
       public fun sourcePorts(sourcePorts: List<Any>)
+
+      public fun sourcePorts(vararg sourcePorts: Any)
 
       public fun sources(sources: IResolvable)
 
       public fun sources(sources: List<Any>)
 
+      public fun sources(vararg sources: Any)
+
       public fun tcpFlags(tcpFlags: IResolvable)
 
       public fun tcpFlags(tcpFlags: List<Any>)
+
+      public fun tcpFlags(vararg tcpFlags: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -751,6 +796,9 @@ public open class CfnRuleGroup internal constructor(
         cdkBuilder.destinationPorts(destinationPorts)
       }
 
+      override fun destinationPorts(vararg destinationPorts: Any): Unit =
+          destinationPorts(destinationPorts.toList())
+
       override fun destinations(destinations: IResolvable) {
         cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
       }
@@ -758,6 +806,9 @@ public open class CfnRuleGroup internal constructor(
       override fun destinations(destinations: List<Any>) {
         cdkBuilder.destinations(destinations)
       }
+
+      override fun destinations(vararg destinations: Any): Unit =
+          destinations(destinations.toList())
 
       override fun protocols(protocols: IResolvable) {
         cdkBuilder.protocols(protocols.let(IResolvable::unwrap))
@@ -767,6 +818,8 @@ public open class CfnRuleGroup internal constructor(
         cdkBuilder.protocols(protocols)
       }
 
+      override fun protocols(vararg protocols: Number): Unit = protocols(protocols.toList())
+
       override fun sourcePorts(sourcePorts: IResolvable) {
         cdkBuilder.sourcePorts(sourcePorts.let(IResolvable::unwrap))
       }
@@ -774,6 +827,8 @@ public open class CfnRuleGroup internal constructor(
       override fun sourcePorts(sourcePorts: List<Any>) {
         cdkBuilder.sourcePorts(sourcePorts)
       }
+
+      override fun sourcePorts(vararg sourcePorts: Any): Unit = sourcePorts(sourcePorts.toList())
 
       override fun sources(sources: IResolvable) {
         cdkBuilder.sources(sources.let(IResolvable::unwrap))
@@ -783,6 +838,8 @@ public open class CfnRuleGroup internal constructor(
         cdkBuilder.sources(sources)
       }
 
+      override fun sources(vararg sources: Any): Unit = sources(sources.toList())
+
       override fun tcpFlags(tcpFlags: IResolvable) {
         cdkBuilder.tcpFlags(tcpFlags.let(IResolvable::unwrap))
       }
@@ -790,6 +847,8 @@ public open class CfnRuleGroup internal constructor(
       override fun tcpFlags(tcpFlags: List<Any>) {
         cdkBuilder.tcpFlags(tcpFlags)
       }
+
+      override fun tcpFlags(vararg tcpFlags: Any): Unit = tcpFlags(tcpFlags.toList())
 
       public fun build():
           software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.MatchAttributesProperty =
@@ -891,6 +950,8 @@ public open class CfnRuleGroup internal constructor(
       public fun keyword(keyword: String)
 
       public fun tings(settings: List<String>)
+
+      public fun tings(vararg settings: String)
     }
 
     private class BuilderImpl : Builder {
@@ -905,6 +966,8 @@ public open class CfnRuleGroup internal constructor(
       override fun tings(settings: List<String>) {
         cdkBuilder.settings(settings)
       }
+
+      override fun tings(vararg settings: String): Unit = tings(settings.toList())
 
       public fun build():
           software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleOptionProperty =
@@ -945,6 +1008,8 @@ public open class CfnRuleGroup internal constructor(
 
     public interface Builder {
       public fun definition(definition: List<String>)
+
+      public fun definition(vararg definition: String)
     }
 
     private class BuilderImpl : Builder {
@@ -955,6 +1020,8 @@ public open class CfnRuleGroup internal constructor(
       override fun definition(definition: List<String>) {
         cdkBuilder.definition(definition)
       }
+
+      override fun definition(vararg definition: String): Unit = definition(definition.toList())
 
       public fun build():
           software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PortSetProperty =
@@ -1248,7 +1315,11 @@ public open class CfnRuleGroup internal constructor(
 
       public fun targetTypes(targetTypes: List<String>)
 
+      public fun targetTypes(vararg targetTypes: String)
+
       public fun targets(targets: List<String>)
+
+      public fun targets(vararg targets: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1265,9 +1336,13 @@ public open class CfnRuleGroup internal constructor(
         cdkBuilder.targetTypes(targetTypes)
       }
 
+      override fun targetTypes(vararg targetTypes: String): Unit = targetTypes(targetTypes.toList())
+
       override fun targets(targets: List<String>) {
         cdkBuilder.targets(targets)
       }
+
+      override fun targets(vararg targets: String): Unit = targets(targets.toList())
 
       public fun build():
           software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RulesSourceListProperty =
@@ -1280,9 +1355,9 @@ public open class CfnRuleGroup internal constructor(
     ) : RulesSourceListProperty {
       override fun generatedRulesType(): String = unwrap(this).getGeneratedRulesType()
 
-      override fun targetTypes(): List<String> = unwrap(this).getTargetTypes() ?: emptyList()
+      override fun targetTypes(): List<String> = unwrap(this).getTargetTypes()
 
-      override fun targets(): List<String> = unwrap(this).getTargets() ?: emptyList()
+      override fun targets(): List<String> = unwrap(this).getTargets()
     }
 
     public companion object {
@@ -1378,6 +1453,8 @@ public open class CfnRuleGroup internal constructor(
       public fun dimensions(dimensions: IResolvable)
 
       public fun dimensions(dimensions: List<Any>)
+
+      public fun dimensions(vararg dimensions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1393,6 +1470,8 @@ public open class CfnRuleGroup internal constructor(
       override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
+
+      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
 
       public fun build():
           software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.PublishMetricActionProperty =
@@ -1769,7 +1848,11 @@ public open class CfnRuleGroup internal constructor(
     public interface Builder {
       public fun flags(flags: List<String>)
 
+      public fun flags(vararg flags: String)
+
       public fun masks(masks: List<String>)
+
+      public fun masks(vararg masks: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1782,9 +1865,13 @@ public open class CfnRuleGroup internal constructor(
         cdkBuilder.flags(flags)
       }
 
+      override fun flags(vararg flags: String): Unit = flags(flags.toList())
+
       override fun masks(masks: List<String>) {
         cdkBuilder.masks(masks)
       }
+
+      override fun masks(vararg masks: String): Unit = masks(masks.toList())
 
       public fun build():
           software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.TCPFlagFieldProperty =
@@ -1795,7 +1882,7 @@ public open class CfnRuleGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.TCPFlagFieldProperty,
     ) : TCPFlagFieldProperty {
-      override fun flags(): List<String> = unwrap(this).getFlags() ?: emptyList()
+      override fun flags(): List<String> = unwrap(this).getFlags()
 
       override fun masks(): List<String> = unwrap(this).getMasks() ?: emptyList()
     }

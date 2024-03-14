@@ -25,6 +25,8 @@ public open class ZoneDelegationRecord internal constructor(
 
     public fun nameServers(nameServers: List<String>)
 
+    public fun nameServers(vararg nameServers: String)
+
     public fun recordName(recordName: String)
 
     public fun region(region: String)
@@ -66,6 +68,8 @@ public open class ZoneDelegationRecord internal constructor(
     override fun nameServers(nameServers: List<String>) {
       cdkBuilder.nameServers(nameServers)
     }
+
+    override fun nameServers(vararg nameServers: String): Unit = nameServers(nameServers.toList())
 
     override fun recordName(recordName: String) {
       cdkBuilder.recordName(recordName)

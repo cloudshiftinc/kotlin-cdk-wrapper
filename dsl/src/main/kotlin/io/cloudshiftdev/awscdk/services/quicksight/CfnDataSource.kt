@@ -32,6 +32,9 @@ public open class CfnDataSource internal constructor(
     unwrap(this).setAlternateDataSourceParameters(__idx_ac66f0)
   }
 
+  public open fun alternateDataSourceParameters(vararg __idx_ac66f0: Any): Unit =
+      alternateDataSourceParameters(__idx_ac66f0.toList())
+
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   public open fun attrCreatedTime(): String = unwrap(this).getAttrCreatedTime()
@@ -117,6 +120,8 @@ public open class CfnDataSource internal constructor(
     unwrap(this).setPermissions(__idx_ac66f0)
   }
 
+  public open fun permissions(vararg __idx_ac66f0: Any): Unit = permissions(__idx_ac66f0.toList())
+
   public open fun sslProperties(): Any? = unwrap(this).getSslProperties()
 
   public open fun sslProperties(`value`: IResolvable) {
@@ -140,6 +145,8 @@ public open class CfnDataSource internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun type(): String? = unwrap(this).getType()
 
@@ -167,6 +174,8 @@ public open class CfnDataSource internal constructor(
     public fun alternateDataSourceParameters(alternateDataSourceParameters: IResolvable)
 
     public fun alternateDataSourceParameters(alternateDataSourceParameters: List<Any>)
+
+    public fun alternateDataSourceParameters(vararg alternateDataSourceParameters: Any)
 
     public fun awsAccountId(awsAccountId: String)
 
@@ -203,6 +212,8 @@ public open class CfnDataSource internal constructor(
 
     public fun permissions(permissions: List<Any>)
 
+    public fun permissions(vararg permissions: Any)
+
     public fun sslProperties(sslProperties: IResolvable)
 
     public fun sslProperties(sslProperties: SslPropertiesProperty)
@@ -212,6 +223,8 @@ public open class CfnDataSource internal constructor(
     public fun sslProperties(sslProperties: SslPropertiesProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun type(type: String)
 
@@ -239,6 +252,9 @@ public open class CfnDataSource internal constructor(
     override fun alternateDataSourceParameters(alternateDataSourceParameters: List<Any>) {
       cdkBuilder.alternateDataSourceParameters(alternateDataSourceParameters)
     }
+
+    override fun alternateDataSourceParameters(vararg alternateDataSourceParameters: Any): Unit =
+        alternateDataSourceParameters(alternateDataSourceParameters.toList())
 
     override fun awsAccountId(awsAccountId: String) {
       cdkBuilder.awsAccountId(awsAccountId)
@@ -300,6 +316,8 @@ public open class CfnDataSource internal constructor(
       cdkBuilder.permissions(permissions)
     }
 
+    override fun permissions(vararg permissions: Any): Unit = permissions(permissions.toList())
+
     override fun sslProperties(sslProperties: IResolvable) {
       cdkBuilder.sslProperties(sslProperties.let(IResolvable::unwrap))
     }
@@ -316,6 +334,8 @@ public open class CfnDataSource internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun type(type: String) {
       cdkBuilder.type(type)
@@ -1028,6 +1048,8 @@ public open class CfnDataSource internal constructor(
     public interface Builder {
       public fun actions(actions: List<String>)
 
+      public fun actions(vararg actions: String)
+
       public fun principal(principal: String)
     }
 
@@ -1040,6 +1062,8 @@ public open class CfnDataSource internal constructor(
       override fun actions(actions: List<String>) {
         cdkBuilder.actions(actions)
       }
+
+      override fun actions(vararg actions: String): Unit = actions(actions.toList())
 
       override fun principal(principal: String) {
         cdkBuilder.principal(principal)
@@ -1054,7 +1078,7 @@ public open class CfnDataSource internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.quicksight.CfnDataSource.ResourcePermissionProperty,
     ) : ResourcePermissionProperty {
-      override fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
+      override fun actions(): List<String> = unwrap(this).getActions()
 
       override fun principal(): String = unwrap(this).getPrincipal()
     }
@@ -1161,6 +1185,8 @@ public open class CfnDataSource internal constructor(
 
       public fun alternateDataSourceParameters(alternateDataSourceParameters: List<Any>)
 
+      public fun alternateDataSourceParameters(vararg alternateDataSourceParameters: Any)
+
       public fun password(password: String)
 
       public fun username(username: String)
@@ -1178,6 +1204,9 @@ public open class CfnDataSource internal constructor(
       override fun alternateDataSourceParameters(alternateDataSourceParameters: List<Any>) {
         cdkBuilder.alternateDataSourceParameters(alternateDataSourceParameters)
       }
+
+      override fun alternateDataSourceParameters(vararg alternateDataSourceParameters: Any): Unit =
+          alternateDataSourceParameters(alternateDataSourceParameters.toList())
 
       override fun password(password: String) {
         cdkBuilder.password(password)

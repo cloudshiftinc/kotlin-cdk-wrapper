@@ -72,6 +72,8 @@ public open class CfnApiKey internal constructor(
     unwrap(this).setStageKeys(__idx_ac66f0)
   }
 
+  public open fun stageKeys(vararg __idx_ac66f0: Any): Unit = stageKeys(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -80,6 +82,8 @@ public open class CfnApiKey internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun `value`(): String? = unwrap(this).getValue()
 
@@ -106,7 +110,11 @@ public open class CfnApiKey internal constructor(
 
     public fun stageKeys(stageKeys: List<Any>)
 
+    public fun stageKeys(vararg stageKeys: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun `value`(`value`: String)
   }
@@ -154,9 +162,13 @@ public open class CfnApiKey internal constructor(
       cdkBuilder.stageKeys(stageKeys)
     }
 
+    override fun stageKeys(vararg stageKeys: Any): Unit = stageKeys(stageKeys.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun `value`(`value`: String) {
       cdkBuilder.`value`(`value`)

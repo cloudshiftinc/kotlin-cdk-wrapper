@@ -51,6 +51,8 @@ public open class SpecRestApi internal constructor(
 
     public fun endpointTypes(endpointTypes: List<EndpointType>)
 
+    public fun endpointTypes(vararg endpointTypes: EndpointType)
+
     public fun failOnWarnings(failOnWarnings: Boolean)
 
     public fun minCompressionSize(minCompressionSize: Size)
@@ -124,6 +126,9 @@ public open class SpecRestApi internal constructor(
     override fun endpointTypes(endpointTypes: List<EndpointType>) {
       cdkBuilder.endpointTypes(endpointTypes.map(EndpointType::unwrap))
     }
+
+    override fun endpointTypes(vararg endpointTypes: EndpointType): Unit =
+        endpointTypes(endpointTypes.toList())
 
     override fun failOnWarnings(failOnWarnings: Boolean) {
       cdkBuilder.failOnWarnings(failOnWarnings)

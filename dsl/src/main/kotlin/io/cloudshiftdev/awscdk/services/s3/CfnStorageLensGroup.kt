@@ -56,6 +56,8 @@ public open class CfnStorageLensGroup internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun filter(filter: IResolvable)
 
@@ -68,6 +70,8 @@ public open class CfnStorageLensGroup internal constructor(
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -97,6 +101,8 @@ public open class CfnStorageLensGroup internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.s3.CfnStorageLensGroup = cdkBuilder.build()
   }
@@ -136,11 +142,17 @@ public open class CfnStorageLensGroup internal constructor(
     public interface Builder {
       public fun matchAnyPrefix(matchAnyPrefix: List<String>)
 
+      public fun matchAnyPrefix(vararg matchAnyPrefix: String)
+
       public fun matchAnySuffix(matchAnySuffix: List<String>)
+
+      public fun matchAnySuffix(vararg matchAnySuffix: String)
 
       public fun matchAnyTag(matchAnyTag: IResolvable)
 
       public fun matchAnyTag(matchAnyTag: List<Any>)
+
+      public fun matchAnyTag(vararg matchAnyTag: Any)
 
       public fun matchObjectAge(matchObjectAge: IResolvable)
 
@@ -168,9 +180,15 @@ public open class CfnStorageLensGroup internal constructor(
         cdkBuilder.matchAnyPrefix(matchAnyPrefix)
       }
 
+      override fun matchAnyPrefix(vararg matchAnyPrefix: String): Unit =
+          matchAnyPrefix(matchAnyPrefix.toList())
+
       override fun matchAnySuffix(matchAnySuffix: List<String>) {
         cdkBuilder.matchAnySuffix(matchAnySuffix)
       }
+
+      override fun matchAnySuffix(vararg matchAnySuffix: String): Unit =
+          matchAnySuffix(matchAnySuffix.toList())
 
       override fun matchAnyTag(matchAnyTag: IResolvable) {
         cdkBuilder.matchAnyTag(matchAnyTag.let(IResolvable::unwrap))
@@ -179,6 +197,8 @@ public open class CfnStorageLensGroup internal constructor(
       override fun matchAnyTag(matchAnyTag: List<Any>) {
         cdkBuilder.matchAnyTag(matchAnyTag)
       }
+
+      override fun matchAnyTag(vararg matchAnyTag: Any): Unit = matchAnyTag(matchAnyTag.toList())
 
       override fun matchObjectAge(matchObjectAge: IResolvable) {
         cdkBuilder.matchObjectAge(matchObjectAge.let(IResolvable::unwrap))
@@ -328,11 +348,17 @@ public open class CfnStorageLensGroup internal constructor(
 
       public fun matchAnyPrefix(matchAnyPrefix: List<String>)
 
+      public fun matchAnyPrefix(vararg matchAnyPrefix: String)
+
       public fun matchAnySuffix(matchAnySuffix: List<String>)
+
+      public fun matchAnySuffix(vararg matchAnySuffix: String)
 
       public fun matchAnyTag(matchAnyTag: IResolvable)
 
       public fun matchAnyTag(matchAnyTag: List<Any>)
+
+      public fun matchAnyTag(vararg matchAnyTag: Any)
 
       public fun matchObjectAge(matchObjectAge: IResolvable)
 
@@ -380,9 +406,15 @@ public open class CfnStorageLensGroup internal constructor(
         cdkBuilder.matchAnyPrefix(matchAnyPrefix)
       }
 
+      override fun matchAnyPrefix(vararg matchAnyPrefix: String): Unit =
+          matchAnyPrefix(matchAnyPrefix.toList())
+
       override fun matchAnySuffix(matchAnySuffix: List<String>) {
         cdkBuilder.matchAnySuffix(matchAnySuffix)
       }
+
+      override fun matchAnySuffix(vararg matchAnySuffix: String): Unit =
+          matchAnySuffix(matchAnySuffix.toList())
 
       override fun matchAnyTag(matchAnyTag: IResolvable) {
         cdkBuilder.matchAnyTag(matchAnyTag.let(IResolvable::unwrap))
@@ -391,6 +423,8 @@ public open class CfnStorageLensGroup internal constructor(
       override fun matchAnyTag(matchAnyTag: List<Any>) {
         cdkBuilder.matchAnyTag(matchAnyTag)
       }
+
+      override fun matchAnyTag(vararg matchAnyTag: Any): Unit = matchAnyTag(matchAnyTag.toList())
 
       override fun matchObjectAge(matchObjectAge: IResolvable) {
         cdkBuilder.matchObjectAge(matchObjectAge.let(IResolvable::unwrap))
@@ -486,11 +520,17 @@ public open class CfnStorageLensGroup internal constructor(
     public interface Builder {
       public fun matchAnyPrefix(matchAnyPrefix: List<String>)
 
+      public fun matchAnyPrefix(vararg matchAnyPrefix: String)
+
       public fun matchAnySuffix(matchAnySuffix: List<String>)
+
+      public fun matchAnySuffix(vararg matchAnySuffix: String)
 
       public fun matchAnyTag(matchAnyTag: IResolvable)
 
       public fun matchAnyTag(matchAnyTag: List<Any>)
+
+      public fun matchAnyTag(vararg matchAnyTag: Any)
 
       public fun matchObjectAge(matchObjectAge: IResolvable)
 
@@ -518,9 +558,15 @@ public open class CfnStorageLensGroup internal constructor(
         cdkBuilder.matchAnyPrefix(matchAnyPrefix)
       }
 
+      override fun matchAnyPrefix(vararg matchAnyPrefix: String): Unit =
+          matchAnyPrefix(matchAnyPrefix.toList())
+
       override fun matchAnySuffix(matchAnySuffix: List<String>) {
         cdkBuilder.matchAnySuffix(matchAnySuffix)
       }
+
+      override fun matchAnySuffix(vararg matchAnySuffix: String): Unit =
+          matchAnySuffix(matchAnySuffix.toList())
 
       override fun matchAnyTag(matchAnyTag: IResolvable) {
         cdkBuilder.matchAnyTag(matchAnyTag.let(IResolvable::unwrap))
@@ -529,6 +575,8 @@ public open class CfnStorageLensGroup internal constructor(
       override fun matchAnyTag(matchAnyTag: List<Any>) {
         cdkBuilder.matchAnyTag(matchAnyTag)
       }
+
+      override fun matchAnyTag(vararg matchAnyTag: Any): Unit = matchAnyTag(matchAnyTag.toList())
 
       override fun matchObjectAge(matchObjectAge: IResolvable) {
         cdkBuilder.matchObjectAge(matchObjectAge.let(IResolvable::unwrap))

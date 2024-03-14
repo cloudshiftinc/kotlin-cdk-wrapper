@@ -55,6 +55,8 @@ public open class CfnCRL internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun trustAnchorArn(): String? = unwrap(this).getTrustAnchorArn()
 
   public open fun trustAnchorArn(`value`: String) {
@@ -71,6 +73,8 @@ public open class CfnCRL internal constructor(
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun trustAnchorArn(trustAnchorArn: String)
   }
@@ -101,6 +105,8 @@ public open class CfnCRL internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun trustAnchorArn(trustAnchorArn: String) {
       cdkBuilder.trustAnchorArn(trustAnchorArn)

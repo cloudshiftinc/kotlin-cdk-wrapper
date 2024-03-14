@@ -39,6 +39,9 @@ public open class QueueProcessingEc2Service internal constructor(
     public
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>)
 
+    public fun capacityProviderStrategies(vararg
+        capacityProviderStrategies: CapacityProviderStrategy)
+
     public fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -48,6 +51,8 @@ public open class QueueProcessingEc2Service internal constructor(
     public fun cluster(cluster: ICluster)
 
     public fun command(command: List<String>)
+
+    public fun command(vararg command: String)
 
     public fun containerName(containerName: String)
 
@@ -97,7 +102,11 @@ public open class QueueProcessingEc2Service internal constructor(
 
     public fun placementConstraints(placementConstraints: List<PlacementConstraint>)
 
+    public fun placementConstraints(vararg placementConstraints: PlacementConstraint)
+
     public fun placementStrategies(placementStrategies: List<PlacementStrategy>)
+
+    public fun placementStrategies(vararg placementStrategies: PlacementStrategy)
 
     public fun propagateTags(propagateTags: PropagatedTagSource)
 
@@ -106,6 +115,8 @@ public open class QueueProcessingEc2Service internal constructor(
     public fun retentionPeriod(retentionPeriod: Duration)
 
     public fun scalingSteps(scalingSteps: List<ScalingInterval>)
+
+    public fun scalingSteps(vararg scalingSteps: ScalingInterval)
 
     public fun secrets(secrets: Map<String, Secret>)
 
@@ -130,6 +141,10 @@ public open class QueueProcessingEc2Service internal constructor(
       cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy::unwrap))
     }
 
+    override fun capacityProviderStrategies(vararg
+        capacityProviderStrategies: CapacityProviderStrategy): Unit =
+        capacityProviderStrategies(capacityProviderStrategies.toList())
+
     override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
       cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker::unwrap))
     }
@@ -146,6 +161,8 @@ public open class QueueProcessingEc2Service internal constructor(
     override fun command(command: List<String>) {
       cdkBuilder.command(command)
     }
+
+    override fun command(vararg command: String): Unit = command(command.toList())
 
     override fun containerName(containerName: String) {
       cdkBuilder.containerName(containerName)
@@ -241,9 +258,15 @@ public open class QueueProcessingEc2Service internal constructor(
       cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint::unwrap))
     }
 
+    override fun placementConstraints(vararg placementConstraints: PlacementConstraint): Unit =
+        placementConstraints(placementConstraints.toList())
+
     override fun placementStrategies(placementStrategies: List<PlacementStrategy>) {
       cdkBuilder.placementStrategies(placementStrategies.map(PlacementStrategy::unwrap))
     }
+
+    override fun placementStrategies(vararg placementStrategies: PlacementStrategy): Unit =
+        placementStrategies(placementStrategies.toList())
 
     override fun propagateTags(propagateTags: PropagatedTagSource) {
       cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
@@ -260,6 +283,9 @@ public open class QueueProcessingEc2Service internal constructor(
     override fun scalingSteps(scalingSteps: List<ScalingInterval>) {
       cdkBuilder.scalingSteps(scalingSteps.map(ScalingInterval::unwrap))
     }
+
+    override fun scalingSteps(vararg scalingSteps: ScalingInterval): Unit =
+        scalingSteps(scalingSteps.toList())
 
     override fun secrets(secrets: Map<String, Secret>) {
       cdkBuilder.secrets(secrets.mapValues{Secret.unwrap(it.value)})

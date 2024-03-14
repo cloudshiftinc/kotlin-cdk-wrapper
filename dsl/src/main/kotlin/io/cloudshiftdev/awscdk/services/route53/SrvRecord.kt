@@ -31,6 +31,8 @@ public open class SrvRecord internal constructor(
 
     public fun values(values: List<SrvRecordValue>)
 
+    public fun values(vararg values: SrvRecordValue)
+
     public fun weight(weight: Number)
 
     public fun zone(zone: IHostedZone)
@@ -78,6 +80,8 @@ public open class SrvRecord internal constructor(
     override fun values(values: List<SrvRecordValue>) {
       cdkBuilder.values(values.map(SrvRecordValue::unwrap))
     }
+
+    override fun values(vararg values: SrvRecordValue): Unit = values(values.toList())
 
     override fun weight(weight: Number) {
       cdkBuilder.weight(weight)

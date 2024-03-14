@@ -36,6 +36,8 @@ public interface ReplicaTableProps : TableOptionsV2 {
     public fun tableClass(tableClass: TableClass)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl : Builder {
@@ -78,6 +80,8 @@ public interface ReplicaTableProps : TableOptionsV2 {
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.dynamodb.ReplicaTableProps =
         cdkBuilder.build()

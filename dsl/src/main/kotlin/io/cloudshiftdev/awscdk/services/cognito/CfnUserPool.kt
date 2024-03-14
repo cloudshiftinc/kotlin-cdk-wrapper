@@ -57,6 +57,8 @@ public open class CfnUserPool internal constructor(
     unwrap(this).setAliasAttributes(`value`)
   }
 
+  public open fun aliasAttributes(vararg `value`: String): Unit = aliasAttributes(`value`.toList())
+
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   public open fun attrProviderName(): String = unwrap(this).getAttrProviderName()
@@ -71,6 +73,9 @@ public open class CfnUserPool internal constructor(
   public open fun autoVerifiedAttributes(`value`: List<String>) {
     unwrap(this).setAutoVerifiedAttributes(`value`)
   }
+
+  public open fun autoVerifiedAttributes(vararg `value`: String): Unit =
+      autoVerifiedAttributes(`value`.toList())
 
   public open fun deletionProtection(): String? = unwrap(this).getDeletionProtection()
 
@@ -126,6 +131,8 @@ public open class CfnUserPool internal constructor(
     unwrap(this).setEnabledMfas(`value`)
   }
 
+  public open fun enabledMfas(vararg `value`: String): Unit = enabledMfas(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -175,6 +182,8 @@ public open class CfnUserPool internal constructor(
   public open fun schema(__idx_ac66f0: List<Any>) {
     unwrap(this).setSchema(__idx_ac66f0)
   }
+
+  public open fun schema(vararg __idx_ac66f0: Any): Unit = schema(__idx_ac66f0.toList())
 
   public open fun smsAuthenticationMessage(): String? = unwrap(this).getSmsAuthenticationMessage()
 
@@ -256,6 +265,9 @@ public open class CfnUserPool internal constructor(
     unwrap(this).setUsernameAttributes(`value`)
   }
 
+  public open fun usernameAttributes(vararg `value`: String): Unit =
+      usernameAttributes(`value`.toList())
+
   public open fun usernameConfiguration(): Any? = unwrap(this).getUsernameConfiguration()
 
   public open fun usernameConfiguration(`value`: IResolvable) {
@@ -309,7 +321,11 @@ public open class CfnUserPool internal constructor(
 
     public fun aliasAttributes(aliasAttributes: List<String>)
 
+    public fun aliasAttributes(vararg aliasAttributes: String)
+
     public fun autoVerifiedAttributes(autoVerifiedAttributes: List<String>)
+
+    public fun autoVerifiedAttributes(vararg autoVerifiedAttributes: String)
 
     public fun deletionProtection(deletionProtection: String)
 
@@ -336,6 +352,8 @@ public open class CfnUserPool internal constructor(
 
     public fun enabledMfas(enabledMfas: List<String>)
 
+    public fun enabledMfas(vararg enabledMfas: String)
+
     public fun lambdaConfig(lambdaConfig: IResolvable)
 
     public fun lambdaConfig(lambdaConfig: LambdaConfigProperty)
@@ -357,6 +375,8 @@ public open class CfnUserPool internal constructor(
     public fun schema(schema: IResolvable)
 
     public fun schema(schema: List<Any>)
+
+    public fun schema(vararg schema: Any)
 
     public fun smsAuthenticationMessage(smsAuthenticationMessage: String)
 
@@ -393,6 +413,8 @@ public open class CfnUserPool internal constructor(
     public fun userPoolTags(userPoolTags: Any)
 
     public fun usernameAttributes(usernameAttributes: List<String>)
+
+    public fun usernameAttributes(vararg usernameAttributes: String)
 
     public fun usernameConfiguration(usernameConfiguration: IResolvable)
 
@@ -453,9 +475,15 @@ public open class CfnUserPool internal constructor(
       cdkBuilder.aliasAttributes(aliasAttributes)
     }
 
+    override fun aliasAttributes(vararg aliasAttributes: String): Unit =
+        aliasAttributes(aliasAttributes.toList())
+
     override fun autoVerifiedAttributes(autoVerifiedAttributes: List<String>) {
       cdkBuilder.autoVerifiedAttributes(autoVerifiedAttributes)
     }
+
+    override fun autoVerifiedAttributes(vararg autoVerifiedAttributes: String): Unit =
+        autoVerifiedAttributes(autoVerifiedAttributes.toList())
 
     override fun deletionProtection(deletionProtection: String) {
       cdkBuilder.deletionProtection(deletionProtection)
@@ -501,6 +529,8 @@ public open class CfnUserPool internal constructor(
       cdkBuilder.enabledMfas(enabledMfas)
     }
 
+    override fun enabledMfas(vararg enabledMfas: String): Unit = enabledMfas(enabledMfas.toList())
+
     override fun lambdaConfig(lambdaConfig: IResolvable) {
       cdkBuilder.lambdaConfig(lambdaConfig.let(IResolvable::unwrap))
     }
@@ -538,6 +568,8 @@ public open class CfnUserPool internal constructor(
     override fun schema(schema: List<Any>) {
       cdkBuilder.schema(schema)
     }
+
+    override fun schema(vararg schema: Any): Unit = schema(schema.toList())
 
     override fun smsAuthenticationMessage(smsAuthenticationMessage: String) {
       cdkBuilder.smsAuthenticationMessage(smsAuthenticationMessage)
@@ -600,6 +632,9 @@ public open class CfnUserPool internal constructor(
     override fun usernameAttributes(usernameAttributes: List<String>) {
       cdkBuilder.usernameAttributes(usernameAttributes)
     }
+
+    override fun usernameAttributes(vararg usernameAttributes: String): Unit =
+        usernameAttributes(usernameAttributes.toList())
 
     override fun usernameConfiguration(usernameConfiguration: IResolvable) {
       cdkBuilder.usernameConfiguration(usernameConfiguration.let(IResolvable::unwrap))
@@ -1296,6 +1331,8 @@ public open class CfnUserPool internal constructor(
       public fun recoveryMechanisms(recoveryMechanisms: IResolvable)
 
       public fun recoveryMechanisms(recoveryMechanisms: List<Any>)
+
+      public fun recoveryMechanisms(vararg recoveryMechanisms: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1311,6 +1348,9 @@ public open class CfnUserPool internal constructor(
       override fun recoveryMechanisms(recoveryMechanisms: List<Any>) {
         cdkBuilder.recoveryMechanisms(recoveryMechanisms)
       }
+
+      override fun recoveryMechanisms(vararg recoveryMechanisms: Any): Unit =
+          recoveryMechanisms(recoveryMechanisms.toList())
 
       public fun build():
           software.amazon.awscdk.services.cognito.CfnUserPool.AccountRecoverySettingProperty =
@@ -2194,6 +2234,9 @@ public open class CfnUserPool internal constructor(
     public interface Builder {
       public
           fun attributesRequireVerificationBeforeUpdate(attributesRequireVerificationBeforeUpdate: List<String>)
+
+      public fun attributesRequireVerificationBeforeUpdate(vararg
+          attributesRequireVerificationBeforeUpdate: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2207,6 +2250,10 @@ public open class CfnUserPool internal constructor(
         cdkBuilder.attributesRequireVerificationBeforeUpdate(attributesRequireVerificationBeforeUpdate)
       }
 
+      override fun attributesRequireVerificationBeforeUpdate(vararg
+          attributesRequireVerificationBeforeUpdate: String): Unit =
+          attributesRequireVerificationBeforeUpdate(attributesRequireVerificationBeforeUpdate.toList())
+
       public fun build():
           software.amazon.awscdk.services.cognito.CfnUserPool.UserAttributeUpdateSettingsProperty =
           cdkBuilder.build()
@@ -2217,7 +2264,7 @@ public open class CfnUserPool internal constructor(
           software.amazon.awscdk.services.cognito.CfnUserPool.UserAttributeUpdateSettingsProperty,
     ) : UserAttributeUpdateSettingsProperty {
       override fun attributesRequireVerificationBeforeUpdate(): List<String> =
-          unwrap(this).getAttributesRequireVerificationBeforeUpdate() ?: emptyList()
+          unwrap(this).getAttributesRequireVerificationBeforeUpdate()
     }
 
     public companion object {

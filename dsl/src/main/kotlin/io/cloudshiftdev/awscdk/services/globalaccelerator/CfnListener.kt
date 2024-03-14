@@ -43,6 +43,8 @@ public open class CfnListener internal constructor(
     unwrap(this).setPortRanges(__idx_ac66f0)
   }
 
+  public open fun portRanges(vararg __idx_ac66f0: Any): Unit = portRanges(__idx_ac66f0.toList())
+
   public open fun protocol(): String = unwrap(this).getProtocol()
 
   public open fun protocol(`value`: String) {
@@ -57,6 +59,8 @@ public open class CfnListener internal constructor(
     public fun portRanges(portRanges: IResolvable)
 
     public fun portRanges(portRanges: List<Any>)
+
+    public fun portRanges(vararg portRanges: Any)
 
     public fun protocol(protocol: String)
   }
@@ -83,6 +87,8 @@ public open class CfnListener internal constructor(
     override fun portRanges(portRanges: List<Any>) {
       cdkBuilder.portRanges(portRanges)
     }
+
+    override fun portRanges(vararg portRanges: Any): Unit = portRanges(portRanges.toList())
 
     override fun protocol(protocol: String) {
       cdkBuilder.protocol(protocol)

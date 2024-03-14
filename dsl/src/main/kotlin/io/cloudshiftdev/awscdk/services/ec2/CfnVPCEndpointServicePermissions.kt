@@ -19,6 +19,9 @@ public open class CfnVPCEndpointServicePermissions internal constructor(
     unwrap(this).setAllowedPrincipals(`value`)
   }
 
+  public open fun allowedPrincipals(vararg `value`: String): Unit =
+      allowedPrincipals(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -31,6 +34,8 @@ public open class CfnVPCEndpointServicePermissions internal constructor(
 
   public interface Builder {
     public fun allowedPrincipals(allowedPrincipals: List<String>)
+
+    public fun allowedPrincipals(vararg allowedPrincipals: String)
 
     public fun serviceId(serviceId: String)
   }
@@ -47,6 +52,9 @@ public open class CfnVPCEndpointServicePermissions internal constructor(
     override fun allowedPrincipals(allowedPrincipals: List<String>) {
       cdkBuilder.allowedPrincipals(allowedPrincipals)
     }
+
+    override fun allowedPrincipals(vararg allowedPrincipals: String): Unit =
+        allowedPrincipals(allowedPrincipals.toList())
 
     override fun serviceId(serviceId: String) {
       cdkBuilder.serviceId(serviceId)

@@ -78,6 +78,8 @@ public open class CfnFilter internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun action(action: String)
 
@@ -98,6 +100,8 @@ public open class CfnFilter internal constructor(
     public fun rank(rank: Number)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -143,6 +147,8 @@ public open class CfnFilter internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.guardduty.CfnFilter = cdkBuilder.build()
   }
@@ -196,7 +202,11 @@ public open class CfnFilter internal constructor(
     public interface Builder {
       public fun eq(eq: List<String>)
 
+      public fun eq(vararg eq: String)
+
       public fun equalTo(equalTo: List<String>)
+
+      public fun equalTo(vararg equalTo: String)
 
       public fun greaterThan(greaterThan: Number)
 
@@ -216,7 +226,11 @@ public open class CfnFilter internal constructor(
 
       public fun neq(neq: List<String>)
 
+      public fun neq(vararg neq: String)
+
       public fun notEquals(notEquals: List<String>)
+
+      public fun notEquals(vararg notEquals: String)
     }
 
     private class BuilderImpl : Builder {
@@ -228,9 +242,13 @@ public open class CfnFilter internal constructor(
         cdkBuilder.eq(eq)
       }
 
+      override fun eq(vararg eq: String): Unit = eq(eq.toList())
+
       override fun equalTo(equalTo: List<String>) {
         cdkBuilder.equalTo(equalTo)
       }
+
+      override fun equalTo(vararg equalTo: String): Unit = equalTo(equalTo.toList())
 
       override fun greaterThan(greaterThan: Number) {
         cdkBuilder.greaterThan(greaterThan)
@@ -268,9 +286,13 @@ public open class CfnFilter internal constructor(
         cdkBuilder.neq(neq)
       }
 
+      override fun neq(vararg neq: String): Unit = neq(neq.toList())
+
       override fun notEquals(notEquals: List<String>) {
         cdkBuilder.notEquals(notEquals)
       }
+
+      override fun notEquals(vararg notEquals: String): Unit = notEquals(notEquals.toList())
 
       public fun build(): software.amazon.awscdk.services.guardduty.CfnFilter.ConditionProperty =
           cdkBuilder.build()

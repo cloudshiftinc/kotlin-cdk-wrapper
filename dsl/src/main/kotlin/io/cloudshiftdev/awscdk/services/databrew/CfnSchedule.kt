@@ -31,6 +31,8 @@ public open class CfnSchedule internal constructor(
     unwrap(this).setJobNames(`value`)
   }
 
+  public open fun jobNames(vararg `value`: String): Unit = jobNames(`value`.toList())
+
   public open fun name(): String = unwrap(this).getName()
 
   public open fun name(`value`: String) {
@@ -46,14 +48,20 @@ public open class CfnSchedule internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun cronExpression(cronExpression: String)
 
     public fun jobNames(jobNames: List<String>)
 
+    public fun jobNames(vararg jobNames: String)
+
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -71,6 +79,8 @@ public open class CfnSchedule internal constructor(
       cdkBuilder.jobNames(jobNames)
     }
 
+    override fun jobNames(vararg jobNames: String): Unit = jobNames(jobNames.toList())
+
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -78,6 +88,8 @@ public open class CfnSchedule internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.databrew.CfnSchedule = cdkBuilder.build()
   }

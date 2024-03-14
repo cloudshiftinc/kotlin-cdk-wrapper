@@ -29,6 +29,8 @@ public open class VirtualRouter internal constructor(
   public interface Builder {
     public fun listeners(listeners: List<VirtualRouterListener>)
 
+    public fun listeners(vararg listeners: VirtualRouterListener)
+
     public fun mesh(mesh: IMesh)
 
     public fun virtualRouterName(virtualRouterName: String)
@@ -44,6 +46,9 @@ public open class VirtualRouter internal constructor(
     override fun listeners(listeners: List<VirtualRouterListener>) {
       cdkBuilder.listeners(listeners.map(VirtualRouterListener::unwrap))
     }
+
+    override fun listeners(vararg listeners: VirtualRouterListener): Unit =
+        listeners(listeners.toList())
 
     override fun mesh(mesh: IMesh) {
       cdkBuilder.mesh(mesh.let(IMesh::unwrap))

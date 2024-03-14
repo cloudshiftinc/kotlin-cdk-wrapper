@@ -86,6 +86,9 @@ public open class CfnEnvironmentProfile internal constructor(
     unwrap(this).setUserParameters(__idx_ac66f0)
   }
 
+  public open fun userParameters(vararg __idx_ac66f0: Any): Unit =
+      userParameters(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun awsAccountId(awsAccountId: String)
 
@@ -104,6 +107,8 @@ public open class CfnEnvironmentProfile internal constructor(
     public fun userParameters(userParameters: IResolvable)
 
     public fun userParameters(userParameters: List<Any>)
+
+    public fun userParameters(vararg userParameters: Any)
   }
 
   private class BuilderImpl(
@@ -148,6 +153,9 @@ public open class CfnEnvironmentProfile internal constructor(
     override fun userParameters(userParameters: List<Any>) {
       cdkBuilder.userParameters(userParameters)
     }
+
+    override fun userParameters(vararg userParameters: Any): Unit =
+        userParameters(userParameters.toList())
 
     public fun build(): software.amazon.awscdk.services.datazone.CfnEnvironmentProfile =
         cdkBuilder.build()

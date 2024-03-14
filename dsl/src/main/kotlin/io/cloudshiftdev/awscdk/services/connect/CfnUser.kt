@@ -87,12 +87,14 @@ public open class CfnUser internal constructor(
     unwrap(this).setRoutingProfileArn(`value`)
   }
 
-  public open fun securityProfileArns(): List<String> = unwrap(this).getSecurityProfileArns() ?:
-      emptyList()
+  public open fun securityProfileArns(): List<String> = unwrap(this).getSecurityProfileArns()
 
   public open fun securityProfileArns(`value`: List<String>) {
     unwrap(this).setSecurityProfileArns(`value`)
   }
+
+  public open fun securityProfileArns(vararg `value`: String): Unit =
+      securityProfileArns(`value`.toList())
 
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
@@ -103,6 +105,8 @@ public open class CfnUser internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun userProficiencies(): Any? = unwrap(this).getUserProficiencies()
 
   public open fun userProficiencies(`value`: IResolvable) {
@@ -112,6 +116,9 @@ public open class CfnUser internal constructor(
   public open fun userProficiencies(__idx_ac66f0: List<Any>) {
     unwrap(this).setUserProficiencies(__idx_ac66f0)
   }
+
+  public open fun userProficiencies(vararg __idx_ac66f0: Any): Unit =
+      userProficiencies(__idx_ac66f0.toList())
 
   public open fun username(): String = unwrap(this).getUsername()
 
@@ -148,11 +155,17 @@ public open class CfnUser internal constructor(
 
     public fun securityProfileArns(securityProfileArns: List<String>)
 
+    public fun securityProfileArns(vararg securityProfileArns: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun userProficiencies(userProficiencies: IResolvable)
 
     public fun userProficiencies(userProficiencies: List<Any>)
+
+    public fun userProficiencies(vararg userProficiencies: Any)
 
     public fun username(username: String)
   }
@@ -214,9 +227,14 @@ public open class CfnUser internal constructor(
       cdkBuilder.securityProfileArns(securityProfileArns)
     }
 
+    override fun securityProfileArns(vararg securityProfileArns: String): Unit =
+        securityProfileArns(securityProfileArns.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun userProficiencies(userProficiencies: IResolvable) {
       cdkBuilder.userProficiencies(userProficiencies.let(IResolvable::unwrap))
@@ -225,6 +243,9 @@ public open class CfnUser internal constructor(
     override fun userProficiencies(userProficiencies: List<Any>) {
       cdkBuilder.userProficiencies(userProficiencies)
     }
+
+    override fun userProficiencies(vararg userProficiencies: Any): Unit =
+        userProficiencies(userProficiencies.toList())
 
     override fun username(username: String) {
       cdkBuilder.username(username)

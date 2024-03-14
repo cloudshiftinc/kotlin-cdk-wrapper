@@ -33,6 +33,9 @@ public open class CfnModelPackage internal constructor(
     unwrap(this).setAdditionalInferenceSpecifications(__idx_ac66f0)
   }
 
+  public open fun additionalInferenceSpecifications(vararg __idx_ac66f0: Any): Unit =
+      additionalInferenceSpecifications(__idx_ac66f0.toList())
+
   public open fun additionalInferenceSpecificationsToAdd(): Any? =
       unwrap(this).getAdditionalInferenceSpecificationsToAdd()
 
@@ -43,6 +46,9 @@ public open class CfnModelPackage internal constructor(
   public open fun additionalInferenceSpecificationsToAdd(__idx_ac66f0: List<Any>) {
     unwrap(this).setAdditionalInferenceSpecificationsToAdd(__idx_ac66f0)
   }
+
+  public open fun additionalInferenceSpecificationsToAdd(vararg __idx_ac66f0: Any): Unit =
+      additionalInferenceSpecificationsToAdd(__idx_ac66f0.toList())
 
   public open fun approvalDescription(): String? = unwrap(this).getApprovalDescription()
 
@@ -243,6 +249,8 @@ public open class CfnModelPackage internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun task(): String? = unwrap(this).getTask()
 
   public open fun task(`value`: String) {
@@ -270,11 +278,16 @@ public open class CfnModelPackage internal constructor(
 
     public fun additionalInferenceSpecifications(additionalInferenceSpecifications: List<Any>)
 
+    public fun additionalInferenceSpecifications(vararg additionalInferenceSpecifications: Any)
+
     public
         fun additionalInferenceSpecificationsToAdd(additionalInferenceSpecificationsToAdd: IResolvable)
 
     public
         fun additionalInferenceSpecificationsToAdd(additionalInferenceSpecificationsToAdd: List<Any>)
+
+    public fun additionalInferenceSpecificationsToAdd(vararg
+        additionalInferenceSpecificationsToAdd: Any)
 
     public fun approvalDescription(approvalDescription: String)
 
@@ -362,6 +375,8 @@ public open class CfnModelPackage internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun task(task: String)
 
     public fun validationSpecification(validationSpecification: IResolvable)
@@ -389,6 +404,9 @@ public open class CfnModelPackage internal constructor(
       cdkBuilder.additionalInferenceSpecifications(additionalInferenceSpecifications)
     }
 
+    override fun additionalInferenceSpecifications(vararg additionalInferenceSpecifications: Any):
+        Unit = additionalInferenceSpecifications(additionalInferenceSpecifications.toList())
+
     override
         fun additionalInferenceSpecificationsToAdd(additionalInferenceSpecificationsToAdd: IResolvable) {
       cdkBuilder.additionalInferenceSpecificationsToAdd(additionalInferenceSpecificationsToAdd.let(IResolvable::unwrap))
@@ -398,6 +416,10 @@ public open class CfnModelPackage internal constructor(
         fun additionalInferenceSpecificationsToAdd(additionalInferenceSpecificationsToAdd: List<Any>) {
       cdkBuilder.additionalInferenceSpecificationsToAdd(additionalInferenceSpecificationsToAdd)
     }
+
+    override fun additionalInferenceSpecificationsToAdd(vararg
+        additionalInferenceSpecificationsToAdd: Any): Unit =
+        additionalInferenceSpecificationsToAdd(additionalInferenceSpecificationsToAdd.toList())
 
     override fun approvalDescription(approvalDescription: String) {
       cdkBuilder.approvalDescription(approvalDescription)
@@ -549,6 +571,8 @@ public open class CfnModelPackage internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun task(task: String) {
       cdkBuilder.task(task)
@@ -712,6 +736,8 @@ public open class CfnModelPackage internal constructor(
       public fun sourceAlgorithms(sourceAlgorithms: IResolvable)
 
       public fun sourceAlgorithms(sourceAlgorithms: List<Any>)
+
+      public fun sourceAlgorithms(vararg sourceAlgorithms: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -727,6 +753,9 @@ public open class CfnModelPackage internal constructor(
       override fun sourceAlgorithms(sourceAlgorithms: List<Any>) {
         cdkBuilder.sourceAlgorithms(sourceAlgorithms)
       }
+
+      override fun sourceAlgorithms(vararg sourceAlgorithms: Any): Unit =
+          sourceAlgorithms(sourceAlgorithms.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.SourceAlgorithmSpecificationProperty
@@ -1060,14 +1089,25 @@ public open class CfnModelPackage internal constructor(
 
       public fun containers(containers: List<Any>)
 
+      public fun containers(vararg containers: Any)
+
       public fun supportedContentTypes(supportedContentTypes: List<String>)
+
+      public fun supportedContentTypes(vararg supportedContentTypes: String)
 
       public
           fun supportedRealtimeInferenceInstanceTypes(supportedRealtimeInferenceInstanceTypes: List<String>)
 
+      public fun supportedRealtimeInferenceInstanceTypes(vararg
+          supportedRealtimeInferenceInstanceTypes: String)
+
       public fun supportedResponseMimeTypes(supportedResponseMimeTypes: List<String>)
 
+      public fun supportedResponseMimeTypes(vararg supportedResponseMimeTypes: String)
+
       public fun supportedTransformInstanceTypes(supportedTransformInstanceTypes: List<String>)
+
+      public fun supportedTransformInstanceTypes(vararg supportedTransformInstanceTypes: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1084,22 +1124,37 @@ public open class CfnModelPackage internal constructor(
         cdkBuilder.containers(containers)
       }
 
+      override fun containers(vararg containers: Any): Unit = containers(containers.toList())
+
       override fun supportedContentTypes(supportedContentTypes: List<String>) {
         cdkBuilder.supportedContentTypes(supportedContentTypes)
       }
+
+      override fun supportedContentTypes(vararg supportedContentTypes: String): Unit =
+          supportedContentTypes(supportedContentTypes.toList())
 
       override
           fun supportedRealtimeInferenceInstanceTypes(supportedRealtimeInferenceInstanceTypes: List<String>) {
         cdkBuilder.supportedRealtimeInferenceInstanceTypes(supportedRealtimeInferenceInstanceTypes)
       }
 
+      override fun supportedRealtimeInferenceInstanceTypes(vararg
+          supportedRealtimeInferenceInstanceTypes: String): Unit =
+          supportedRealtimeInferenceInstanceTypes(supportedRealtimeInferenceInstanceTypes.toList())
+
       override fun supportedResponseMimeTypes(supportedResponseMimeTypes: List<String>) {
         cdkBuilder.supportedResponseMimeTypes(supportedResponseMimeTypes)
       }
 
+      override fun supportedResponseMimeTypes(vararg supportedResponseMimeTypes: String): Unit =
+          supportedResponseMimeTypes(supportedResponseMimeTypes.toList())
+
       override fun supportedTransformInstanceTypes(supportedTransformInstanceTypes: List<String>) {
         cdkBuilder.supportedTransformInstanceTypes(supportedTransformInstanceTypes)
       }
+
+      override fun supportedTransformInstanceTypes(vararg supportedTransformInstanceTypes: String):
+          Unit = supportedTransformInstanceTypes(supportedTransformInstanceTypes.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.InferenceSpecificationProperty =
@@ -1113,13 +1168,12 @@ public open class CfnModelPackage internal constructor(
       override fun containers(): Any = unwrap(this).getContainers()
 
       override fun supportedContentTypes(): List<String> = unwrap(this).getSupportedContentTypes()
-          ?: emptyList()
 
       override fun supportedRealtimeInferenceInstanceTypes(): List<String> =
           unwrap(this).getSupportedRealtimeInferenceInstanceTypes() ?: emptyList()
 
       override fun supportedResponseMimeTypes(): List<String> =
-          unwrap(this).getSupportedResponseMimeTypes() ?: emptyList()
+          unwrap(this).getSupportedResponseMimeTypes()
 
       override fun supportedTransformInstanceTypes(): List<String> =
           unwrap(this).getSupportedTransformInstanceTypes() ?: emptyList()
@@ -1241,6 +1295,8 @@ public open class CfnModelPackage internal constructor(
       public fun validationStatuses(validationStatuses: IResolvable)
 
       public fun validationStatuses(validationStatuses: List<Any>)
+
+      public fun validationStatuses(vararg validationStatuses: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1256,6 +1312,9 @@ public open class CfnModelPackage internal constructor(
       override fun validationStatuses(validationStatuses: List<Any>) {
         cdkBuilder.validationStatuses(validationStatuses)
       }
+
+      override fun validationStatuses(vararg validationStatuses: Any): Unit =
+          validationStatuses(validationStatuses.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.ModelPackageStatusDetailsProperty
@@ -2486,6 +2545,8 @@ public open class CfnModelPackage internal constructor(
 
       public fun validationProfiles(validationProfiles: List<Any>)
 
+      public fun validationProfiles(vararg validationProfiles: Any)
+
       public fun validationRole(validationRole: String)
     }
 
@@ -2502,6 +2563,9 @@ public open class CfnModelPackage internal constructor(
       override fun validationProfiles(validationProfiles: List<Any>) {
         cdkBuilder.validationProfiles(validationProfiles)
       }
+
+      override fun validationProfiles(vararg validationProfiles: Any): Unit =
+          validationProfiles(validationProfiles.toList())
 
       override fun validationRole(validationRole: String) {
         cdkBuilder.validationRole(validationRole)
@@ -3040,18 +3104,29 @@ public open class CfnModelPackage internal constructor(
 
       public fun containers(containers: List<Any>)
 
+      public fun containers(vararg containers: Any)
+
       public fun description(description: String)
 
       public fun name(name: String)
 
       public fun supportedContentTypes(supportedContentTypes: List<String>)
 
+      public fun supportedContentTypes(vararg supportedContentTypes: String)
+
       public
           fun supportedRealtimeInferenceInstanceTypes(supportedRealtimeInferenceInstanceTypes: List<String>)
 
+      public fun supportedRealtimeInferenceInstanceTypes(vararg
+          supportedRealtimeInferenceInstanceTypes: String)
+
       public fun supportedResponseMimeTypes(supportedResponseMimeTypes: List<String>)
 
+      public fun supportedResponseMimeTypes(vararg supportedResponseMimeTypes: String)
+
       public fun supportedTransformInstanceTypes(supportedTransformInstanceTypes: List<String>)
+
+      public fun supportedTransformInstanceTypes(vararg supportedTransformInstanceTypes: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3068,6 +3143,8 @@ public open class CfnModelPackage internal constructor(
         cdkBuilder.containers(containers)
       }
 
+      override fun containers(vararg containers: Any): Unit = containers(containers.toList())
+
       override fun description(description: String) {
         cdkBuilder.description(description)
       }
@@ -3080,18 +3157,31 @@ public open class CfnModelPackage internal constructor(
         cdkBuilder.supportedContentTypes(supportedContentTypes)
       }
 
+      override fun supportedContentTypes(vararg supportedContentTypes: String): Unit =
+          supportedContentTypes(supportedContentTypes.toList())
+
       override
           fun supportedRealtimeInferenceInstanceTypes(supportedRealtimeInferenceInstanceTypes: List<String>) {
         cdkBuilder.supportedRealtimeInferenceInstanceTypes(supportedRealtimeInferenceInstanceTypes)
       }
 
+      override fun supportedRealtimeInferenceInstanceTypes(vararg
+          supportedRealtimeInferenceInstanceTypes: String): Unit =
+          supportedRealtimeInferenceInstanceTypes(supportedRealtimeInferenceInstanceTypes.toList())
+
       override fun supportedResponseMimeTypes(supportedResponseMimeTypes: List<String>) {
         cdkBuilder.supportedResponseMimeTypes(supportedResponseMimeTypes)
       }
 
+      override fun supportedResponseMimeTypes(vararg supportedResponseMimeTypes: String): Unit =
+          supportedResponseMimeTypes(supportedResponseMimeTypes.toList())
+
       override fun supportedTransformInstanceTypes(supportedTransformInstanceTypes: List<String>) {
         cdkBuilder.supportedTransformInstanceTypes(supportedTransformInstanceTypes)
       }
+
+      override fun supportedTransformInstanceTypes(vararg supportedTransformInstanceTypes: String):
+          Unit = supportedTransformInstanceTypes(supportedTransformInstanceTypes.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnModelPackage.AdditionalInferenceSpecificationDefinitionProperty

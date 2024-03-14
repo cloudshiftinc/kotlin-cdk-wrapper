@@ -27,6 +27,9 @@ public open class CfnSecurityProfile internal constructor(
     unwrap(this).setAllowedAccessControlTags(__idx_ac66f0)
   }
 
+  public open fun allowedAccessControlTags(vararg __idx_ac66f0: Any): Unit =
+      allowedAccessControlTags(__idx_ac66f0.toList())
+
   public open fun attrSecurityProfileArn(): String = unwrap(this).getAttrSecurityProfileArn()
 
   public override fun cdkTagManager(): TagManager =
@@ -54,6 +57,8 @@ public open class CfnSecurityProfile internal constructor(
     unwrap(this).setPermissions(`value`)
   }
 
+  public open fun permissions(vararg `value`: String): Unit = permissions(`value`.toList())
+
   public open fun securityProfileName(): String = unwrap(this).getSecurityProfileName()
 
   public open fun securityProfileName(`value`: String) {
@@ -67,16 +72,23 @@ public open class CfnSecurityProfile internal constructor(
     unwrap(this).setTagRestrictedResources(`value`)
   }
 
+  public open fun tagRestrictedResources(vararg `value`: String): Unit =
+      tagRestrictedResources(`value`.toList())
+
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun allowedAccessControlTags(allowedAccessControlTags: IResolvable)
 
     public fun allowedAccessControlTags(allowedAccessControlTags: List<Any>)
+
+    public fun allowedAccessControlTags(vararg allowedAccessControlTags: Any)
 
     public fun description(description: String)
 
@@ -84,11 +96,17 @@ public open class CfnSecurityProfile internal constructor(
 
     public fun permissions(permissions: List<String>)
 
+    public fun permissions(vararg permissions: String)
+
     public fun securityProfileName(securityProfileName: String)
 
     public fun tagRestrictedResources(tagRestrictedResources: List<String>)
 
+    public fun tagRestrictedResources(vararg tagRestrictedResources: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -106,6 +124,9 @@ public open class CfnSecurityProfile internal constructor(
       cdkBuilder.allowedAccessControlTags(allowedAccessControlTags)
     }
 
+    override fun allowedAccessControlTags(vararg allowedAccessControlTags: Any): Unit =
+        allowedAccessControlTags(allowedAccessControlTags.toList())
+
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
@@ -118,6 +139,8 @@ public open class CfnSecurityProfile internal constructor(
       cdkBuilder.permissions(permissions)
     }
 
+    override fun permissions(vararg permissions: String): Unit = permissions(permissions.toList())
+
     override fun securityProfileName(securityProfileName: String) {
       cdkBuilder.securityProfileName(securityProfileName)
     }
@@ -126,9 +149,14 @@ public open class CfnSecurityProfile internal constructor(
       cdkBuilder.tagRestrictedResources(tagRestrictedResources)
     }
 
+    override fun tagRestrictedResources(vararg tagRestrictedResources: String): Unit =
+        tagRestrictedResources(tagRestrictedResources.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.connect.CfnSecurityProfile =
         cdkBuilder.build()

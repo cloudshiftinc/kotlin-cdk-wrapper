@@ -40,6 +40,8 @@ public open class FairshareSchedulingPolicy internal constructor(
     public fun shareDecay(shareDecay: Duration)
 
     public fun shares(shares: List<Share>)
+
+    public fun shares(vararg shares: Share)
   }
 
   private class BuilderImpl(
@@ -64,6 +66,8 @@ public open class FairshareSchedulingPolicy internal constructor(
     override fun shares(shares: List<Share>) {
       cdkBuilder.shares(shares.map(Share::unwrap))
     }
+
+    override fun shares(vararg shares: Share): Unit = shares(shares.toList())
 
     public fun build(): software.amazon.awscdk.services.batch.FairshareSchedulingPolicy =
         cdkBuilder.build()

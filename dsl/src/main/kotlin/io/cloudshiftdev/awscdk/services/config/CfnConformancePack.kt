@@ -25,6 +25,9 @@ public open class CfnConformancePack internal constructor(
     unwrap(this).setConformancePackInputParameters(__idx_ac66f0)
   }
 
+  public open fun conformancePackInputParameters(vararg __idx_ac66f0: Any): Unit =
+      conformancePackInputParameters(__idx_ac66f0.toList())
+
   public open fun conformancePackName(): String = unwrap(this).getConformancePackName()
 
   public open fun conformancePackName(`value`: String) {
@@ -70,6 +73,8 @@ public open class CfnConformancePack internal constructor(
 
     public fun conformancePackInputParameters(conformancePackInputParameters: List<Any>)
 
+    public fun conformancePackInputParameters(vararg conformancePackInputParameters: Any)
+
     public fun conformancePackName(conformancePackName: String)
 
     public fun deliveryS3Bucket(deliveryS3Bucket: String)
@@ -97,6 +102,9 @@ public open class CfnConformancePack internal constructor(
     override fun conformancePackInputParameters(conformancePackInputParameters: List<Any>) {
       cdkBuilder.conformancePackInputParameters(conformancePackInputParameters)
     }
+
+    override fun conformancePackInputParameters(vararg conformancePackInputParameters: Any): Unit =
+        conformancePackInputParameters(conformancePackInputParameters.toList())
 
     override fun conformancePackName(conformancePackName: String) {
       cdkBuilder.conformancePackName(conformancePackName)

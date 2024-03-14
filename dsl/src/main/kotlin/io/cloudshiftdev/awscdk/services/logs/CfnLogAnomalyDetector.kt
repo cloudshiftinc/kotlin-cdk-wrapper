@@ -70,6 +70,8 @@ public open class CfnLogAnomalyDetector internal constructor(
     unwrap(this).setLogGroupArnList(`value`)
   }
 
+  public open fun logGroupArnList(vararg `value`: String): Unit = logGroupArnList(`value`.toList())
+
   public interface Builder {
     public fun accountId(accountId: String)
 
@@ -84,6 +86,8 @@ public open class CfnLogAnomalyDetector internal constructor(
     public fun kmsKeyId(kmsKeyId: String)
 
     public fun logGroupArnList(logGroupArnList: List<String>)
+
+    public fun logGroupArnList(vararg logGroupArnList: String)
   }
 
   private class BuilderImpl(
@@ -120,6 +124,9 @@ public open class CfnLogAnomalyDetector internal constructor(
     override fun logGroupArnList(logGroupArnList: List<String>) {
       cdkBuilder.logGroupArnList(logGroupArnList)
     }
+
+    override fun logGroupArnList(vararg logGroupArnList: String): Unit =
+        logGroupArnList(logGroupArnList.toList())
 
     public fun build(): software.amazon.awscdk.services.logs.CfnLogAnomalyDetector =
         cdkBuilder.build()

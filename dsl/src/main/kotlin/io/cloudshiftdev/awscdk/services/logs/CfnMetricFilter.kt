@@ -47,6 +47,9 @@ public open class CfnMetricFilter internal constructor(
     unwrap(this).setMetricTransformations(__idx_ac66f0)
   }
 
+  public open fun metricTransformations(vararg __idx_ac66f0: Any): Unit =
+      metricTransformations(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun filterName(filterName: String)
 
@@ -57,6 +60,8 @@ public open class CfnMetricFilter internal constructor(
     public fun metricTransformations(metricTransformations: IResolvable)
 
     public fun metricTransformations(metricTransformations: List<Any>)
+
+    public fun metricTransformations(vararg metricTransformations: Any)
   }
 
   private class BuilderImpl(
@@ -85,6 +90,9 @@ public open class CfnMetricFilter internal constructor(
     override fun metricTransformations(metricTransformations: List<Any>) {
       cdkBuilder.metricTransformations(metricTransformations)
     }
+
+    override fun metricTransformations(vararg metricTransformations: Any): Unit =
+        metricTransformations(metricTransformations.toList())
 
     public fun build(): software.amazon.awscdk.services.logs.CfnMetricFilter = cdkBuilder.build()
   }
@@ -187,6 +195,8 @@ public open class CfnMetricFilter internal constructor(
 
       public fun dimensions(dimensions: List<Any>)
 
+      public fun dimensions(vararg dimensions: Any)
+
       public fun metricName(metricName: String)
 
       public fun metricNamespace(metricNamespace: String)
@@ -213,6 +223,8 @@ public open class CfnMetricFilter internal constructor(
       override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
+
+      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
 
       override fun metricName(metricName: String) {
         cdkBuilder.metricName(metricName)

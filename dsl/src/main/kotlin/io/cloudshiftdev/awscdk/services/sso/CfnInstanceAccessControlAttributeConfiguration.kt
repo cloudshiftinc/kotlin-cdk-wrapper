@@ -28,6 +28,9 @@ public open class CfnInstanceAccessControlAttributeConfiguration internal constr
     unwrap(this).setAccessControlAttributes(__idx_ac66f0)
   }
 
+  public open fun accessControlAttributes(vararg __idx_ac66f0: Any): Unit =
+      accessControlAttributes(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -66,6 +69,8 @@ public open class CfnInstanceAccessControlAttributeConfiguration internal constr
 
     public fun accessControlAttributes(accessControlAttributes: List<Any>)
 
+    public fun accessControlAttributes(vararg accessControlAttributes: Any)
+
     @Deprecated(message = "deprecated in CDK")
     public
         fun instanceAccessControlAttributeConfiguration(instanceAccessControlAttributeConfiguration: IResolvable)
@@ -99,6 +104,9 @@ public open class CfnInstanceAccessControlAttributeConfiguration internal constr
     override fun accessControlAttributes(accessControlAttributes: List<Any>) {
       cdkBuilder.accessControlAttributes(accessControlAttributes)
     }
+
+    override fun accessControlAttributes(vararg accessControlAttributes: Any): Unit =
+        accessControlAttributes(accessControlAttributes.toList())
 
     @Deprecated(message = "deprecated in CDK")
     override
@@ -232,6 +240,8 @@ public open class CfnInstanceAccessControlAttributeConfiguration internal constr
 
     public interface Builder {
       public fun source(source: List<String>)
+
+      public fun source(vararg source: String)
     }
 
     private class BuilderImpl : Builder {
@@ -244,6 +254,8 @@ public open class CfnInstanceAccessControlAttributeConfiguration internal constr
         cdkBuilder.source(source)
       }
 
+      override fun source(vararg source: String): Unit = source(source.toList())
+
       public fun build():
           software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeValueProperty
           = cdkBuilder.build()
@@ -253,7 +265,7 @@ public open class CfnInstanceAccessControlAttributeConfiguration internal constr
       internal val cdkObject:
           software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration.AccessControlAttributeValueProperty,
     ) : AccessControlAttributeValueProperty {
-      override fun source(): List<String> = unwrap(this).getSource() ?: emptyList()
+      override fun source(): List<String> = unwrap(this).getSource()
     }
 
     public companion object {
@@ -284,6 +296,8 @@ public open class CfnInstanceAccessControlAttributeConfiguration internal constr
       public fun accessControlAttributes(accessControlAttributes: IResolvable)
 
       public fun accessControlAttributes(accessControlAttributes: List<Any>)
+
+      public fun accessControlAttributes(vararg accessControlAttributes: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -299,6 +313,9 @@ public open class CfnInstanceAccessControlAttributeConfiguration internal constr
       override fun accessControlAttributes(accessControlAttributes: List<Any>) {
         cdkBuilder.accessControlAttributes(accessControlAttributes)
       }
+
+      override fun accessControlAttributes(vararg accessControlAttributes: Any): Unit =
+          accessControlAttributes(accessControlAttributes.toList())
 
       public fun build():
           software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration.InstanceAccessControlAttributeConfigurationProperty

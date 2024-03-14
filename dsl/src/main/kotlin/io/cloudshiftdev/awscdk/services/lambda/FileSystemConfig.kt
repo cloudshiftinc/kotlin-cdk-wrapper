@@ -33,9 +33,13 @@ public interface FileSystemConfig {
 
     public fun dependency(dependency: List<IDependable>)
 
+    public fun dependency(vararg dependency: IDependable)
+
     public fun localMountPath(localMountPath: String)
 
     public fun policies(policies: List<PolicyStatement>)
+
+    public fun policies(vararg policies: PolicyStatement)
   }
 
   private class BuilderImpl : Builder {
@@ -59,6 +63,8 @@ public interface FileSystemConfig {
       cdkBuilder.dependency(dependency.map(IDependable::unwrap))
     }
 
+    override fun dependency(vararg dependency: IDependable): Unit = dependency(dependency.toList())
+
     override fun localMountPath(localMountPath: String) {
       cdkBuilder.localMountPath(localMountPath)
     }
@@ -66,6 +72,8 @@ public interface FileSystemConfig {
     override fun policies(policies: List<PolicyStatement>) {
       cdkBuilder.policies(policies.map(PolicyStatement::unwrap))
     }
+
+    override fun policies(vararg policies: PolicyStatement): Unit = policies(policies.toList())
 
     public fun build(): software.amazon.awscdk.services.lambda.FileSystemConfig = cdkBuilder.build()
   }

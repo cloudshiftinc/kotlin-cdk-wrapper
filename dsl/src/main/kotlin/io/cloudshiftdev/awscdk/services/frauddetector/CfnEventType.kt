@@ -40,6 +40,8 @@ public open class CfnEventType internal constructor(
     unwrap(this).setEntityTypes(__idx_ac66f0)
   }
 
+  public open fun entityTypes(vararg __idx_ac66f0: Any): Unit = entityTypes(__idx_ac66f0.toList())
+
   public open fun eventVariables(): Any = unwrap(this).getEventVariables()
 
   public open fun eventVariables(`value`: IResolvable) {
@@ -49,6 +51,9 @@ public open class CfnEventType internal constructor(
   public open fun eventVariables(__idx_ac66f0: List<Any>) {
     unwrap(this).setEventVariables(__idx_ac66f0)
   }
+
+  public open fun eventVariables(vararg __idx_ac66f0: Any): Unit =
+      eventVariables(__idx_ac66f0.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -63,6 +68,8 @@ public open class CfnEventType internal constructor(
   public open fun labels(__idx_ac66f0: List<Any>) {
     unwrap(this).setLabels(__idx_ac66f0)
   }
+
+  public open fun labels(vararg __idx_ac66f0: Any): Unit = labels(__idx_ac66f0.toList())
 
   public open fun name(): String = unwrap(this).getName()
 
@@ -79,6 +86,8 @@ public open class CfnEventType internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun description(description: String)
 
@@ -86,17 +95,25 @@ public open class CfnEventType internal constructor(
 
     public fun entityTypes(entityTypes: List<Any>)
 
+    public fun entityTypes(vararg entityTypes: Any)
+
     public fun eventVariables(eventVariables: IResolvable)
 
     public fun eventVariables(eventVariables: List<Any>)
+
+    public fun eventVariables(vararg eventVariables: Any)
 
     public fun labels(labels: IResolvable)
 
     public fun labels(labels: List<Any>)
 
+    public fun labels(vararg labels: Any)
+
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -118,6 +135,8 @@ public open class CfnEventType internal constructor(
       cdkBuilder.entityTypes(entityTypes)
     }
 
+    override fun entityTypes(vararg entityTypes: Any): Unit = entityTypes(entityTypes.toList())
+
     override fun eventVariables(eventVariables: IResolvable) {
       cdkBuilder.eventVariables(eventVariables.let(IResolvable::unwrap))
     }
@@ -125,6 +144,9 @@ public open class CfnEventType internal constructor(
     override fun eventVariables(eventVariables: List<Any>) {
       cdkBuilder.eventVariables(eventVariables)
     }
+
+    override fun eventVariables(vararg eventVariables: Any): Unit =
+        eventVariables(eventVariables.toList())
 
     override fun labels(labels: IResolvable) {
       cdkBuilder.labels(labels.let(IResolvable::unwrap))
@@ -134,6 +156,8 @@ public open class CfnEventType internal constructor(
       cdkBuilder.labels(labels)
     }
 
+    override fun labels(vararg labels: Any): Unit = labels(labels.toList())
+
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -141,6 +165,8 @@ public open class CfnEventType internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.frauddetector.CfnEventType =
         cdkBuilder.build()
@@ -198,6 +224,8 @@ public open class CfnEventType internal constructor(
       public fun name(name: String)
 
       public fun tags(tags: List<CfnTag>)
+
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
@@ -236,6 +264,8 @@ public open class CfnEventType internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       public fun build(): software.amazon.awscdk.services.frauddetector.CfnEventType.LabelProperty =
           cdkBuilder.build()
@@ -311,6 +341,8 @@ public open class CfnEventType internal constructor(
       public fun name(name: String)
 
       public fun tags(tags: List<CfnTag>)
+
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
@@ -349,6 +381,8 @@ public open class CfnEventType internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       public fun build():
           software.amazon.awscdk.services.frauddetector.CfnEventType.EntityTypeProperty =
@@ -440,6 +474,8 @@ public open class CfnEventType internal constructor(
 
       public fun tags(tags: List<CfnTag>)
 
+      public fun tags(vararg tags: CfnTag)
+
       public fun variableType(variableType: String)
     }
 
@@ -491,6 +527,8 @@ public open class CfnEventType internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       override fun variableType(variableType: String) {
         cdkBuilder.variableType(variableType)

@@ -18,8 +18,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnScheduledAction internal constructor(
   private val cdkObject: software.amazon.awscdk.services.redshift.CfnScheduledAction,
 ) : CfnResource(cdkObject), IInspectable {
-  public open fun attrNextInvocations(): List<String> = unwrap(this).getAttrNextInvocations() ?:
-      emptyList()
+  public open fun attrNextInvocations(): List<String> = unwrap(this).getAttrNextInvocations()
 
   public open fun attrState(): String = unwrap(this).getAttrState()
 

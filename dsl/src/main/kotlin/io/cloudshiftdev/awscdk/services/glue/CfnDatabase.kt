@@ -124,6 +124,8 @@ public open class CfnDatabase internal constructor(
 
       public fun createTableDefaultPermissions(createTableDefaultPermissions: List<Any>)
 
+      public fun createTableDefaultPermissions(vararg createTableDefaultPermissions: Any)
+
       public fun description(description: String)
 
       public fun federatedDatabase(federatedDatabase: IResolvable)
@@ -161,6 +163,9 @@ public open class CfnDatabase internal constructor(
       override fun createTableDefaultPermissions(createTableDefaultPermissions: List<Any>) {
         cdkBuilder.createTableDefaultPermissions(createTableDefaultPermissions)
       }
+
+      override fun createTableDefaultPermissions(vararg createTableDefaultPermissions: Any): Unit =
+          createTableDefaultPermissions(createTableDefaultPermissions.toList())
 
       override fun description(description: String) {
         cdkBuilder.description(description)
@@ -363,6 +368,8 @@ public open class CfnDatabase internal constructor(
     public interface Builder {
       public fun permissions(permissions: List<String>)
 
+      public fun permissions(vararg permissions: String)
+
       public fun principal(principal: IResolvable)
 
       public fun principal(principal: DataLakePrincipalProperty)
@@ -380,6 +387,8 @@ public open class CfnDatabase internal constructor(
       override fun permissions(permissions: List<String>) {
         cdkBuilder.permissions(permissions)
       }
+
+      override fun permissions(vararg permissions: String): Unit = permissions(permissions.toList())
 
       override fun principal(principal: IResolvable) {
         cdkBuilder.principal(principal.let(IResolvable::unwrap))

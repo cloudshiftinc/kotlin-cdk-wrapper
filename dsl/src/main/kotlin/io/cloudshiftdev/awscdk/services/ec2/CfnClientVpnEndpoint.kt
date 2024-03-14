@@ -31,6 +31,9 @@ public open class CfnClientVpnEndpoint internal constructor(
     unwrap(this).setAuthenticationOptions(__idx_ac66f0)
   }
 
+  public open fun authenticationOptions(vararg __idx_ac66f0: Any): Unit =
+      authenticationOptions(__idx_ac66f0.toList())
+
   public open fun clientCidrBlock(): String = unwrap(this).getClientCidrBlock()
 
   public open fun clientCidrBlock(`value`: String) {
@@ -95,6 +98,8 @@ public open class CfnClientVpnEndpoint internal constructor(
     unwrap(this).setDnsServers(`value`)
   }
 
+  public open fun dnsServers(vararg `value`: String): Unit = dnsServers(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -105,6 +110,9 @@ public open class CfnClientVpnEndpoint internal constructor(
   public open fun securityGroupIds(`value`: List<String>) {
     unwrap(this).setSecurityGroupIds(`value`)
   }
+
+  public open fun securityGroupIds(vararg `value`: String): Unit =
+      securityGroupIds(`value`.toList())
 
   public open fun selfServicePortal(): String? = unwrap(this).getSelfServicePortal()
 
@@ -144,6 +152,9 @@ public open class CfnClientVpnEndpoint internal constructor(
     unwrap(this).setTagSpecifications(__idx_ac66f0)
   }
 
+  public open fun tagSpecifications(vararg __idx_ac66f0: Any): Unit =
+      tagSpecifications(__idx_ac66f0.toList())
+
   public open fun transportProtocol(): String? = unwrap(this).getTransportProtocol()
 
   public open fun transportProtocol(`value`: String) {
@@ -166,6 +177,8 @@ public open class CfnClientVpnEndpoint internal constructor(
     public fun authenticationOptions(authenticationOptions: IResolvable)
 
     public fun authenticationOptions(authenticationOptions: List<Any>)
+
+    public fun authenticationOptions(vararg authenticationOptions: Any)
 
     public fun clientCidrBlock(clientCidrBlock: String)
 
@@ -200,7 +213,11 @@ public open class CfnClientVpnEndpoint internal constructor(
 
     public fun dnsServers(dnsServers: List<String>)
 
+    public fun dnsServers(vararg dnsServers: String)
+
     public fun securityGroupIds(securityGroupIds: List<String>)
+
+    public fun securityGroupIds(vararg securityGroupIds: String)
 
     public fun selfServicePortal(selfServicePortal: String)
 
@@ -215,6 +232,8 @@ public open class CfnClientVpnEndpoint internal constructor(
     public fun tagSpecifications(tagSpecifications: IResolvable)
 
     public fun tagSpecifications(tagSpecifications: List<Any>)
+
+    public fun tagSpecifications(vararg tagSpecifications: Any)
 
     public fun transportProtocol(transportProtocol: String)
 
@@ -237,6 +256,9 @@ public open class CfnClientVpnEndpoint internal constructor(
     override fun authenticationOptions(authenticationOptions: List<Any>) {
       cdkBuilder.authenticationOptions(authenticationOptions)
     }
+
+    override fun authenticationOptions(vararg authenticationOptions: Any): Unit =
+        authenticationOptions(authenticationOptions.toList())
 
     override fun clientCidrBlock(clientCidrBlock: String) {
       cdkBuilder.clientCidrBlock(clientCidrBlock)
@@ -293,9 +315,14 @@ public open class CfnClientVpnEndpoint internal constructor(
       cdkBuilder.dnsServers(dnsServers)
     }
 
+    override fun dnsServers(vararg dnsServers: String): Unit = dnsServers(dnsServers.toList())
+
     override fun securityGroupIds(securityGroupIds: List<String>) {
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
+
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
 
     override fun selfServicePortal(selfServicePortal: String) {
       cdkBuilder.selfServicePortal(selfServicePortal)
@@ -324,6 +351,9 @@ public open class CfnClientVpnEndpoint internal constructor(
     override fun tagSpecifications(tagSpecifications: List<Any>) {
       cdkBuilder.tagSpecifications(tagSpecifications)
     }
+
+    override fun tagSpecifications(vararg tagSpecifications: Any): Unit =
+        tagSpecifications(tagSpecifications.toList())
 
     override fun transportProtocol(transportProtocol: String) {
       cdkBuilder.transportProtocol(transportProtocol)
@@ -371,6 +401,8 @@ public open class CfnClientVpnEndpoint internal constructor(
       public fun resourceType(resourceType: String)
 
       public fun tags(tags: List<CfnTag>)
+
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
@@ -386,6 +418,8 @@ public open class CfnClientVpnEndpoint internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       public fun build():
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.TagSpecificationProperty =

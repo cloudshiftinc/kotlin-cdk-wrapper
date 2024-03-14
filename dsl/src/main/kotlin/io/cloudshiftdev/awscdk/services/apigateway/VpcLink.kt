@@ -22,6 +22,8 @@ public open class VpcLink internal constructor(
 
     public fun targets(targets: List<INetworkLoadBalancer>)
 
+    public fun targets(vararg targets: INetworkLoadBalancer)
+
     public fun vpcLinkName(vpcLinkName: String)
   }
 
@@ -39,6 +41,8 @@ public open class VpcLink internal constructor(
     override fun targets(targets: List<INetworkLoadBalancer>) {
       cdkBuilder.targets(targets.map(INetworkLoadBalancer::unwrap))
     }
+
+    override fun targets(vararg targets: INetworkLoadBalancer): Unit = targets(targets.toList())
 
     override fun vpcLinkName(vpcLinkName: String) {
       cdkBuilder.vpcLinkName(vpcLinkName)

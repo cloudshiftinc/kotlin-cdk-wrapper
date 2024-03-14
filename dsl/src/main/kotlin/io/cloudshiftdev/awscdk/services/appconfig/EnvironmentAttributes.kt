@@ -25,6 +25,8 @@ public interface EnvironmentAttributes {
 
     public fun monitors(monitors: List<Monitor>)
 
+    public fun monitors(vararg monitors: Monitor)
+
     public fun name(name: String)
   }
 
@@ -47,6 +49,8 @@ public interface EnvironmentAttributes {
     override fun monitors(monitors: List<Monitor>) {
       cdkBuilder.monitors(monitors.map(Monitor::unwrap))
     }
+
+    override fun monitors(vararg monitors: Monitor): Unit = monitors(monitors.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)

@@ -84,11 +84,13 @@ public open class CfnVpcAttachment internal constructor(
   public open fun proposedSegmentChange(`value`: ProposedSegmentChangeProperty.Builder.() -> Unit):
       Unit = proposedSegmentChange(ProposedSegmentChangeProperty(`value`))
 
-  public open fun subnetArns(): List<String> = unwrap(this).getSubnetArns() ?: emptyList()
+  public open fun subnetArns(): List<String> = unwrap(this).getSubnetArns()
 
   public open fun subnetArns(`value`: List<String>) {
     unwrap(this).setSubnetArns(`value`)
   }
+
+  public open fun subnetArns(vararg `value`: String): Unit = subnetArns(`value`.toList())
 
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
@@ -98,6 +100,8 @@ public open class CfnVpcAttachment internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun vpcArn(): String = unwrap(this).getVpcArn()
 
@@ -127,7 +131,11 @@ public open class CfnVpcAttachment internal constructor(
 
     public fun subnetArns(subnetArns: List<String>)
 
+    public fun subnetArns(vararg subnetArns: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun vpcArn(vpcArn: String)
   }
@@ -174,9 +182,13 @@ public open class CfnVpcAttachment internal constructor(
       cdkBuilder.subnetArns(subnetArns)
     }
 
+    override fun subnetArns(vararg subnetArns: String): Unit = subnetArns(subnetArns.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun vpcArn(vpcArn: String) {
       cdkBuilder.vpcArn(vpcArn)
@@ -291,6 +303,8 @@ public open class CfnVpcAttachment internal constructor(
       public fun segmentName(segmentName: String)
 
       public fun tags(tags: List<CfnTag>)
+
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
@@ -310,6 +324,8 @@ public open class CfnVpcAttachment internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       public fun build():
           software.amazon.awscdk.services.networkmanager.CfnVpcAttachment.ProposedSegmentChangeProperty

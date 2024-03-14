@@ -81,6 +81,9 @@ public open class CfnCloudFormationProduct internal constructor(
     unwrap(this).setProvisioningArtifactParameters(__idx_ac66f0)
   }
 
+  public open fun provisioningArtifactParameters(vararg __idx_ac66f0: Any): Unit =
+      provisioningArtifactParameters(__idx_ac66f0.toList())
+
   public open fun replaceProvisioningArtifacts(): Any? =
       unwrap(this).getReplaceProvisioningArtifacts()
 
@@ -134,6 +137,8 @@ public open class CfnCloudFormationProduct internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun acceptLanguage(acceptLanguage: String)
 
@@ -150,6 +155,8 @@ public open class CfnCloudFormationProduct internal constructor(
     public fun provisioningArtifactParameters(provisioningArtifactParameters: IResolvable)
 
     public fun provisioningArtifactParameters(provisioningArtifactParameters: List<Any>)
+
+    public fun provisioningArtifactParameters(vararg provisioningArtifactParameters: Any)
 
     public fun replaceProvisioningArtifacts(replaceProvisioningArtifacts: Boolean)
 
@@ -170,6 +177,8 @@ public open class CfnCloudFormationProduct internal constructor(
     public fun supportUrl(supportUrl: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -213,6 +222,9 @@ public open class CfnCloudFormationProduct internal constructor(
       cdkBuilder.provisioningArtifactParameters(provisioningArtifactParameters)
     }
 
+    override fun provisioningArtifactParameters(vararg provisioningArtifactParameters: Any): Unit =
+        provisioningArtifactParameters(provisioningArtifactParameters.toList())
+
     override fun replaceProvisioningArtifacts(replaceProvisioningArtifacts: Boolean) {
       cdkBuilder.replaceProvisioningArtifacts(replaceProvisioningArtifacts)
     }
@@ -249,6 +261,8 @@ public open class CfnCloudFormationProduct internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct =
         cdkBuilder.build()

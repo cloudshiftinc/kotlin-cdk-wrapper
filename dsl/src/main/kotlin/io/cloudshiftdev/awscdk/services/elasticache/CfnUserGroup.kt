@@ -38,26 +38,34 @@ public open class CfnUserGroup internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun userGroupId(): String = unwrap(this).getUserGroupId()
 
   public open fun userGroupId(`value`: String) {
     unwrap(this).setUserGroupId(`value`)
   }
 
-  public open fun userIds(): List<String> = unwrap(this).getUserIds() ?: emptyList()
+  public open fun userIds(): List<String> = unwrap(this).getUserIds()
 
   public open fun userIds(`value`: List<String>) {
     unwrap(this).setUserIds(`value`)
   }
+
+  public open fun userIds(vararg `value`: String): Unit = userIds(`value`.toList())
 
   public interface Builder {
     public fun engine(engine: String)
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun userGroupId(userGroupId: String)
 
     public fun userIds(userIds: List<String>)
+
+    public fun userIds(vararg userIds: String)
   }
 
   private class BuilderImpl(
@@ -75,6 +83,8 @@ public open class CfnUserGroup internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun userGroupId(userGroupId: String) {
       cdkBuilder.userGroupId(userGroupId)
     }
@@ -82,6 +92,8 @@ public open class CfnUserGroup internal constructor(
     override fun userIds(userIds: List<String>) {
       cdkBuilder.userIds(userIds)
     }
+
+    override fun userIds(vararg userIds: String): Unit = userIds(userIds.toList())
 
     public fun build(): software.amazon.awscdk.services.elasticache.CfnUserGroup =
         cdkBuilder.build()

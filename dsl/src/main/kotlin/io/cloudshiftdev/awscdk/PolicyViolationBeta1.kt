@@ -30,6 +30,8 @@ public interface PolicyViolationBeta1 {
     public fun severity(severity: String)
 
     public fun violatingResources(violatingResources: List<PolicyViolatingResourceBeta1>)
+
+    public fun violatingResources(vararg violatingResources: PolicyViolatingResourceBeta1)
   }
 
   private class BuilderImpl : Builder {
@@ -59,6 +61,9 @@ public interface PolicyViolationBeta1 {
     override fun violatingResources(violatingResources: List<PolicyViolatingResourceBeta1>) {
       cdkBuilder.violatingResources(violatingResources.map(PolicyViolatingResourceBeta1::unwrap))
     }
+
+    override fun violatingResources(vararg violatingResources: PolicyViolatingResourceBeta1): Unit =
+        violatingResources(violatingResources.toList())
 
     public fun build(): software.amazon.awscdk.PolicyViolationBeta1 = cdkBuilder.build()
   }

@@ -101,6 +101,8 @@ public open class CfnCustomLineItem internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun accountId(accountId: String)
 
@@ -129,6 +131,8 @@ public open class CfnCustomLineItem internal constructor(
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -189,6 +193,8 @@ public open class CfnCustomLineItem internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     public fun build(): software.amazon.awscdk.services.billingconductor.CfnCustomLineItem =
         cdkBuilder.build()
   }
@@ -228,6 +234,8 @@ public open class CfnCustomLineItem internal constructor(
       public fun matchOption(matchOption: String)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -248,6 +256,8 @@ public open class CfnCustomLineItem internal constructor(
         cdkBuilder.values(values)
       }
 
+      override fun values(vararg values: String): Unit = values(values.toList())
+
       public fun build():
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty
           = cdkBuilder.build()
@@ -261,7 +271,7 @@ public open class CfnCustomLineItem internal constructor(
 
       override fun matchOption(): String = unwrap(this).getMatchOption()
 
-      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues()
     }
 
     public companion object {
@@ -356,6 +366,8 @@ public open class CfnCustomLineItem internal constructor(
 
       public fun lineItemFilters(lineItemFilters: List<Any>)
 
+      public fun lineItemFilters(vararg lineItemFilters: Any)
+
       public fun percentage(percentage: IResolvable)
 
       public fun percentage(percentage: CustomLineItemPercentageChargeDetailsProperty)
@@ -394,6 +406,9 @@ public open class CfnCustomLineItem internal constructor(
       override fun lineItemFilters(lineItemFilters: List<Any>) {
         cdkBuilder.lineItemFilters(lineItemFilters)
       }
+
+      override fun lineItemFilters(vararg lineItemFilters: Any): Unit =
+          lineItemFilters(lineItemFilters.toList())
 
       override fun percentage(percentage: IResolvable) {
         cdkBuilder.percentage(percentage.let(IResolvable::unwrap))
@@ -523,6 +538,8 @@ public open class CfnCustomLineItem internal constructor(
     public interface Builder {
       public fun childAssociatedResources(childAssociatedResources: List<String>)
 
+      public fun childAssociatedResources(vararg childAssociatedResources: String)
+
       public fun percentageValue(percentageValue: Number)
     }
 
@@ -535,6 +552,9 @@ public open class CfnCustomLineItem internal constructor(
       override fun childAssociatedResources(childAssociatedResources: List<String>) {
         cdkBuilder.childAssociatedResources(childAssociatedResources)
       }
+
+      override fun childAssociatedResources(vararg childAssociatedResources: String): Unit =
+          childAssociatedResources(childAssociatedResources.toList())
 
       override fun percentageValue(percentageValue: Number) {
         cdkBuilder.percentageValue(percentageValue)

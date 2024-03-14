@@ -161,6 +161,8 @@ public open class CfnCanary internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun visualReference(): Any? = unwrap(this).getVisualReference()
 
   public open fun visualReference(`value`: IResolvable) {
@@ -248,6 +250,8 @@ public open class CfnCanary internal constructor(
     public fun successRetentionPeriod(successRetentionPeriod: Number)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun visualReference(visualReference: IResolvable)
 
@@ -371,6 +375,8 @@ public open class CfnCanary internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun visualReference(visualReference: IResolvable) {
       cdkBuilder.visualReference(visualReference.let(IResolvable::unwrap))
@@ -546,6 +552,8 @@ public open class CfnCanary internal constructor(
       public fun baseScreenshots(baseScreenshots: IResolvable)
 
       public fun baseScreenshots(baseScreenshots: List<Any>)
+
+      public fun baseScreenshots(vararg baseScreenshots: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -564,6 +572,9 @@ public open class CfnCanary internal constructor(
       override fun baseScreenshots(baseScreenshots: List<Any>) {
         cdkBuilder.baseScreenshots(baseScreenshots)
       }
+
+      override fun baseScreenshots(vararg baseScreenshots: Any): Unit =
+          baseScreenshots(baseScreenshots.toList())
 
       public fun build():
           software.amazon.awscdk.services.synthetics.CfnCanary.VisualReferenceProperty =
@@ -608,6 +619,8 @@ public open class CfnCanary internal constructor(
     public interface Builder {
       public fun ignoreCoordinates(ignoreCoordinates: List<String>)
 
+      public fun ignoreCoordinates(vararg ignoreCoordinates: String)
+
       public fun screenshotName(screenshotName: String)
     }
 
@@ -619,6 +632,9 @@ public open class CfnCanary internal constructor(
       override fun ignoreCoordinates(ignoreCoordinates: List<String>) {
         cdkBuilder.ignoreCoordinates(ignoreCoordinates)
       }
+
+      override fun ignoreCoordinates(vararg ignoreCoordinates: String): Unit =
+          ignoreCoordinates(ignoreCoordinates.toList())
 
       override fun screenshotName(screenshotName: String) {
         cdkBuilder.screenshotName(screenshotName)
@@ -821,7 +837,11 @@ public open class CfnCanary internal constructor(
     public interface Builder {
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
 
       public fun vpcId(vpcId: String)
     }
@@ -835,9 +855,14 @@ public open class CfnCanary internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       override fun vpcId(vpcId: String) {
         cdkBuilder.vpcId(vpcId)
@@ -851,10 +876,9 @@ public open class CfnCanary internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.synthetics.CfnCanary.VPCConfigProperty,
     ) : VPCConfigProperty {
-      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
-          emptyList()
+      override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds()
 
-      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds() ?: emptyList()
+      override fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
 
       override fun vpcId(): String? = unwrap(this).getVpcId()
     }

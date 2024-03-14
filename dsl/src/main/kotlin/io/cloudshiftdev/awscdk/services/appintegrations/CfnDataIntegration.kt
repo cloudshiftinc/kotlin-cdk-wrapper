@@ -96,6 +96,8 @@ public open class CfnDataIntegration internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun description(description: String)
 
@@ -124,6 +126,8 @@ public open class CfnDataIntegration internal constructor(
     public fun sourceUri(sourceUri: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -183,6 +187,8 @@ public open class CfnDataIntegration internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.appintegrations.CfnDataIntegration =
         cdkBuilder.build()
@@ -288,6 +294,8 @@ public open class CfnDataIntegration internal constructor(
       public fun filters(filters: Any)
 
       public fun folders(folders: List<String>)
+
+      public fun folders(vararg folders: String)
     }
 
     private class BuilderImpl : Builder {
@@ -304,6 +312,8 @@ public open class CfnDataIntegration internal constructor(
         cdkBuilder.folders(folders)
       }
 
+      override fun folders(vararg folders: String): Unit = folders(folders.toList())
+
       public fun build():
           software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty
           = cdkBuilder.build()
@@ -315,7 +325,7 @@ public open class CfnDataIntegration internal constructor(
     ) : FileConfigurationProperty {
       override fun filters(): Any? = unwrap(this).getFilters()
 
-      override fun folders(): List<String> = unwrap(this).getFolders() ?: emptyList()
+      override fun folders(): List<String> = unwrap(this).getFolders()
     }
 
     public companion object {

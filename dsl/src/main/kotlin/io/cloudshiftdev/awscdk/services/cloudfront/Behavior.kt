@@ -65,10 +65,15 @@ public interface Behavior {
 
     public fun functionAssociations(functionAssociations: List<FunctionAssociation>)
 
+    public fun functionAssociations(vararg functionAssociations: FunctionAssociation)
+
     public fun isDefaultBehavior(isDefaultBehavior: Boolean)
 
     public
         fun lambdaFunctionAssociations(lambdaFunctionAssociations: List<LambdaFunctionAssociation>)
+
+    public fun lambdaFunctionAssociations(vararg
+        lambdaFunctionAssociations: LambdaFunctionAssociation)
 
     public fun maxTtl(maxTtl: Duration)
 
@@ -78,8 +83,13 @@ public interface Behavior {
 
     public fun trustedKeyGroups(trustedKeyGroups: List<IKeyGroup>)
 
+    public fun trustedKeyGroups(vararg trustedKeyGroups: IKeyGroup)
+
     @Deprecated(message = "deprecated in CDK")
     public fun trustedSigners(trustedSigners: List<String>)
+
+    @Deprecated(message = "deprecated in CDK")
+    public fun trustedSigners(vararg trustedSigners: String)
 
     public fun viewerProtocolPolicy(viewerProtocolPolicy: ViewerProtocolPolicy)
   }
@@ -118,6 +128,9 @@ public interface Behavior {
       cdkBuilder.functionAssociations(functionAssociations.map(FunctionAssociation::unwrap))
     }
 
+    override fun functionAssociations(vararg functionAssociations: FunctionAssociation): Unit =
+        functionAssociations(functionAssociations.toList())
+
     override fun isDefaultBehavior(isDefaultBehavior: Boolean) {
       cdkBuilder.isDefaultBehavior(isDefaultBehavior)
     }
@@ -126,6 +139,10 @@ public interface Behavior {
         fun lambdaFunctionAssociations(lambdaFunctionAssociations: List<LambdaFunctionAssociation>) {
       cdkBuilder.lambdaFunctionAssociations(lambdaFunctionAssociations.map(LambdaFunctionAssociation::unwrap))
     }
+
+    override fun lambdaFunctionAssociations(vararg
+        lambdaFunctionAssociations: LambdaFunctionAssociation): Unit =
+        lambdaFunctionAssociations(lambdaFunctionAssociations.toList())
 
     override fun maxTtl(maxTtl: Duration) {
       cdkBuilder.maxTtl(maxTtl.let(Duration::unwrap))
@@ -143,10 +160,17 @@ public interface Behavior {
       cdkBuilder.trustedKeyGroups(trustedKeyGroups.map(IKeyGroup::unwrap))
     }
 
+    override fun trustedKeyGroups(vararg trustedKeyGroups: IKeyGroup): Unit =
+        trustedKeyGroups(trustedKeyGroups.toList())
+
     @Deprecated(message = "deprecated in CDK")
     override fun trustedSigners(trustedSigners: List<String>) {
       cdkBuilder.trustedSigners(trustedSigners)
     }
+
+    @Deprecated(message = "deprecated in CDK")
+    override fun trustedSigners(vararg trustedSigners: String): Unit =
+        trustedSigners(trustedSigners.toList())
 
     override fun viewerProtocolPolicy(viewerProtocolPolicy: ViewerProtocolPolicy) {
       cdkBuilder.viewerProtocolPolicy(viewerProtocolPolicy.let(ViewerProtocolPolicy::unwrap))

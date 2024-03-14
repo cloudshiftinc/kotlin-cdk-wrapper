@@ -34,6 +34,8 @@ public open class Extension internal constructor(
   public interface Builder {
     public fun actions(actions: List<Action>)
 
+    public fun actions(vararg actions: Action)
+
     public fun description(description: String)
 
     public fun extensionName(extensionName: String)
@@ -41,6 +43,8 @@ public open class Extension internal constructor(
     public fun latestVersionNumber(latestVersionNumber: Number)
 
     public fun parameters(parameters: List<Parameter>)
+
+    public fun parameters(vararg parameters: Parameter)
   }
 
   private class BuilderImpl(
@@ -53,6 +57,8 @@ public open class Extension internal constructor(
     override fun actions(actions: List<Action>) {
       cdkBuilder.actions(actions.map(Action::unwrap))
     }
+
+    override fun actions(vararg actions: Action): Unit = actions(actions.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -69,6 +75,8 @@ public open class Extension internal constructor(
     override fun parameters(parameters: List<Parameter>) {
       cdkBuilder.parameters(parameters.map(Parameter::unwrap))
     }
+
+    override fun parameters(vararg parameters: Parameter): Unit = parameters(parameters.toList())
 
     public fun build(): software.amazon.awscdk.services.appconfig.Extension = cdkBuilder.build()
   }

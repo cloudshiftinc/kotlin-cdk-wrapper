@@ -10,7 +10,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnJson internal constructor(
   private val cdkObject: software.amazon.awscdk.CfnJson,
 ) : CloudshiftdevConstructsConstruct(cdkObject), IResolvable {
-  public override fun creationStack(): List<String> = unwrap(this).getCreationStack() ?: emptyList()
+  public override fun creationStack(): List<String> = unwrap(this).getCreationStack()
 
   public override fun resolve(_context: IResolveContext): Any =
       unwrap(this).resolve(_context.let(IResolveContext::unwrap))

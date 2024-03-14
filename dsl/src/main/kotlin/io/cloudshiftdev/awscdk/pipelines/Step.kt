@@ -34,6 +34,8 @@ public abstract class Step internal constructor(
     public open fun sequence(steps: List<Step>): List<Step> =
         software.amazon.awscdk.pipelines.Step.sequence(steps.map(Step::unwrap)).map(Step::wrap)
 
+    public open fun sequence(vararg steps: Step): List<Step> = sequence(steps.toList())
+
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.Step): Step = Wrapper(cdkObject)
 
     internal fun unwrap(wrapped: Step): software.amazon.awscdk.pipelines.Step = (wrapped as

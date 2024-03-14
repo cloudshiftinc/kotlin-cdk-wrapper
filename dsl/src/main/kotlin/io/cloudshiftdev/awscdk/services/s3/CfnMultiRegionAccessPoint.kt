@@ -58,6 +58,8 @@ public open class CfnMultiRegionAccessPoint internal constructor(
     unwrap(this).setRegions(__idx_ac66f0)
   }
 
+  public open fun regions(vararg __idx_ac66f0: Any): Unit = regions(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun name(name: String)
 
@@ -74,6 +76,8 @@ public open class CfnMultiRegionAccessPoint internal constructor(
     public fun regions(regions: IResolvable)
 
     public fun regions(regions: List<Any>)
+
+    public fun regions(vararg regions: Any)
   }
 
   private class BuilderImpl(
@@ -110,6 +114,8 @@ public open class CfnMultiRegionAccessPoint internal constructor(
     override fun regions(regions: List<Any>) {
       cdkBuilder.regions(regions)
     }
+
+    override fun regions(vararg regions: Any): Unit = regions(regions.toList())
 
     public fun build(): software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint =
         cdkBuilder.build()

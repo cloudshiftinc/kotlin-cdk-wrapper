@@ -21,10 +21,10 @@ public open class CfnTask internal constructor(
   private val cdkObject: software.amazon.awscdk.services.datasync.CfnTask,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public open fun attrDestinationNetworkInterfaceArns(): List<String> =
-      unwrap(this).getAttrDestinationNetworkInterfaceArns() ?: emptyList()
+      unwrap(this).getAttrDestinationNetworkInterfaceArns()
 
   public open fun attrSourceNetworkInterfaceArns(): List<String> =
-      unwrap(this).getAttrSourceNetworkInterfaceArns() ?: emptyList()
+      unwrap(this).getAttrSourceNetworkInterfaceArns()
 
   public open fun attrStatus(): String = unwrap(this).getAttrStatus()
 
@@ -52,6 +52,8 @@ public open class CfnTask internal constructor(
     unwrap(this).setExcludes(__idx_ac66f0)
   }
 
+  public open fun excludes(vararg __idx_ac66f0: Any): Unit = excludes(__idx_ac66f0.toList())
+
   public open fun includes(): Any? = unwrap(this).getIncludes()
 
   public open fun includes(`value`: IResolvable) {
@@ -61,6 +63,8 @@ public open class CfnTask internal constructor(
   public open fun includes(__idx_ac66f0: List<Any>) {
     unwrap(this).setIncludes(__idx_ac66f0)
   }
+
+  public open fun includes(vararg __idx_ac66f0: Any): Unit = includes(__idx_ac66f0.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -117,6 +121,8 @@ public open class CfnTask internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun taskReportConfig(): Any? = unwrap(this).getTaskReportConfig()
 
   public open fun taskReportConfig(`value`: IResolvable) {
@@ -141,9 +147,13 @@ public open class CfnTask internal constructor(
 
     public fun excludes(excludes: List<Any>)
 
+    public fun excludes(vararg excludes: Any)
+
     public fun includes(includes: IResolvable)
 
     public fun includes(includes: List<Any>)
+
+    public fun includes(vararg includes: Any)
 
     public fun name(name: String)
 
@@ -166,6 +176,8 @@ public open class CfnTask internal constructor(
     public fun sourceLocationArn(sourceLocationArn: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun taskReportConfig(taskReportConfig: IResolvable)
 
@@ -199,6 +211,8 @@ public open class CfnTask internal constructor(
       cdkBuilder.excludes(excludes)
     }
 
+    override fun excludes(vararg excludes: Any): Unit = excludes(excludes.toList())
+
     override fun includes(includes: IResolvable) {
       cdkBuilder.includes(includes.let(IResolvable::unwrap))
     }
@@ -206,6 +220,8 @@ public open class CfnTask internal constructor(
     override fun includes(includes: List<Any>) {
       cdkBuilder.includes(includes)
     }
+
+    override fun includes(vararg includes: Any): Unit = includes(includes.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -244,6 +260,8 @@ public open class CfnTask internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun taskReportConfig(taskReportConfig: IResolvable) {
       cdkBuilder.taskReportConfig(taskReportConfig.let(IResolvable::unwrap))

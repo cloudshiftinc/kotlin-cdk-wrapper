@@ -27,6 +27,8 @@ public interface MetricStatConfig {
 
     public fun dimensions(dimensions: List<Dimension>)
 
+    public fun dimensions(vararg dimensions: Dimension)
+
     public fun metricName(metricName: String)
 
     public fun namespace(namespace: String)
@@ -51,6 +53,9 @@ public interface MetricStatConfig {
     override fun dimensions(dimensions: List<Dimension>) {
       cdkBuilder.dimensions(dimensions.map(Dimension::unwrap))
     }
+
+    override fun dimensions(vararg dimensions: Dimension): kotlin.Unit =
+        dimensions(dimensions.toList())
 
     override fun metricName(metricName: String) {
       cdkBuilder.metricName(metricName)

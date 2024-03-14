@@ -21,6 +21,8 @@ public interface ExtensionAttributes {
   public interface Builder {
     public fun actions(actions: List<Action>)
 
+    public fun actions(vararg actions: Action)
+
     public fun description(description: String)
 
     public fun extensionArn(extensionArn: String)
@@ -39,6 +41,8 @@ public interface ExtensionAttributes {
     override fun actions(actions: List<Action>) {
       cdkBuilder.actions(actions.map(Action::unwrap))
     }
+
+    override fun actions(vararg actions: Action): Unit = actions(actions.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)

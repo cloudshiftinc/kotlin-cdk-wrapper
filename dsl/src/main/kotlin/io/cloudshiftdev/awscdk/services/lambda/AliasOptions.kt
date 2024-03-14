@@ -18,6 +18,8 @@ public interface AliasOptions : EventInvokeConfigOptions {
   public interface Builder {
     public fun additionalVersions(additionalVersions: List<VersionWeight>)
 
+    public fun additionalVersions(vararg additionalVersions: VersionWeight)
+
     public fun description(description: String)
 
     public fun maxEventAge(maxEventAge: Duration)
@@ -38,6 +40,9 @@ public interface AliasOptions : EventInvokeConfigOptions {
     override fun additionalVersions(additionalVersions: List<VersionWeight>) {
       cdkBuilder.additionalVersions(additionalVersions.map(VersionWeight::unwrap))
     }
+
+    override fun additionalVersions(vararg additionalVersions: VersionWeight): Unit =
+        additionalVersions(additionalVersions.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)

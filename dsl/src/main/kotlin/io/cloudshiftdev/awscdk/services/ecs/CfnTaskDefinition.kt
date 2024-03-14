@@ -34,6 +34,9 @@ public open class CfnTaskDefinition internal constructor(
     unwrap(this).setContainerDefinitions(__idx_ac66f0)
   }
 
+  public open fun containerDefinitions(vararg __idx_ac66f0: Any): Unit =
+      containerDefinitions(__idx_ac66f0.toList())
+
   public open fun cpu(): String? = unwrap(this).getCpu()
 
   public open fun cpu(`value`: String) {
@@ -77,6 +80,9 @@ public open class CfnTaskDefinition internal constructor(
     unwrap(this).setInferenceAccelerators(__idx_ac66f0)
   }
 
+  public open fun inferenceAccelerators(vararg __idx_ac66f0: Any): Unit =
+      inferenceAccelerators(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -115,6 +121,9 @@ public open class CfnTaskDefinition internal constructor(
     unwrap(this).setPlacementConstraints(__idx_ac66f0)
   }
 
+  public open fun placementConstraints(vararg __idx_ac66f0: Any): Unit =
+      placementConstraints(__idx_ac66f0.toList())
+
   public open fun proxyConfiguration(): Any? = unwrap(this).getProxyConfiguration()
 
   public open fun proxyConfiguration(`value`: IResolvable) {
@@ -136,6 +145,9 @@ public open class CfnTaskDefinition internal constructor(
   public open fun requiresCompatibilities(`value`: List<String>) {
     unwrap(this).setRequiresCompatibilities(`value`)
   }
+
+  public open fun requiresCompatibilities(vararg `value`: String): Unit =
+      requiresCompatibilities(`value`.toList())
 
   public open fun runtimePlatform(): Any? = unwrap(this).getRuntimePlatform()
 
@@ -161,6 +173,8 @@ public open class CfnTaskDefinition internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun taskRoleArn(): String? = unwrap(this).getTaskRoleArn()
 
   public open fun taskRoleArn(`value`: String) {
@@ -177,10 +191,14 @@ public open class CfnTaskDefinition internal constructor(
     unwrap(this).setVolumes(__idx_ac66f0)
   }
 
+  public open fun volumes(vararg __idx_ac66f0: Any): Unit = volumes(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun containerDefinitions(containerDefinitions: IResolvable)
 
     public fun containerDefinitions(containerDefinitions: List<Any>)
+
+    public fun containerDefinitions(vararg containerDefinitions: Any)
 
     public fun cpu(cpu: String)
 
@@ -200,6 +218,8 @@ public open class CfnTaskDefinition internal constructor(
 
     public fun inferenceAccelerators(inferenceAccelerators: List<Any>)
 
+    public fun inferenceAccelerators(vararg inferenceAccelerators: Any)
+
     public fun ipcMode(ipcMode: String)
 
     public fun memory(memory: String)
@@ -212,6 +232,8 @@ public open class CfnTaskDefinition internal constructor(
 
     public fun placementConstraints(placementConstraints: List<Any>)
 
+    public fun placementConstraints(vararg placementConstraints: Any)
+
     public fun proxyConfiguration(proxyConfiguration: IResolvable)
 
     public fun proxyConfiguration(proxyConfiguration: ProxyConfigurationProperty)
@@ -221,6 +243,8 @@ public open class CfnTaskDefinition internal constructor(
     public fun proxyConfiguration(proxyConfiguration: ProxyConfigurationProperty.Builder.() -> Unit)
 
     public fun requiresCompatibilities(requiresCompatibilities: List<String>)
+
+    public fun requiresCompatibilities(vararg requiresCompatibilities: String)
 
     public fun runtimePlatform(runtimePlatform: IResolvable)
 
@@ -232,11 +256,15 @@ public open class CfnTaskDefinition internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun taskRoleArn(taskRoleArn: String)
 
     public fun volumes(volumes: IResolvable)
 
     public fun volumes(volumes: List<Any>)
+
+    public fun volumes(vararg volumes: Any)
   }
 
   private class BuilderImpl(
@@ -253,6 +281,9 @@ public open class CfnTaskDefinition internal constructor(
     override fun containerDefinitions(containerDefinitions: List<Any>) {
       cdkBuilder.containerDefinitions(containerDefinitions)
     }
+
+    override fun containerDefinitions(vararg containerDefinitions: Any): Unit =
+        containerDefinitions(containerDefinitions.toList())
 
     override fun cpu(cpu: String) {
       cdkBuilder.cpu(cpu)
@@ -287,6 +318,9 @@ public open class CfnTaskDefinition internal constructor(
       cdkBuilder.inferenceAccelerators(inferenceAccelerators)
     }
 
+    override fun inferenceAccelerators(vararg inferenceAccelerators: Any): Unit =
+        inferenceAccelerators(inferenceAccelerators.toList())
+
     override fun ipcMode(ipcMode: String) {
       cdkBuilder.ipcMode(ipcMode)
     }
@@ -311,6 +345,9 @@ public open class CfnTaskDefinition internal constructor(
       cdkBuilder.placementConstraints(placementConstraints)
     }
 
+    override fun placementConstraints(vararg placementConstraints: Any): Unit =
+        placementConstraints(placementConstraints.toList())
+
     override fun proxyConfiguration(proxyConfiguration: IResolvable) {
       cdkBuilder.proxyConfiguration(proxyConfiguration.let(IResolvable::unwrap))
     }
@@ -329,6 +366,9 @@ public open class CfnTaskDefinition internal constructor(
       cdkBuilder.requiresCompatibilities(requiresCompatibilities)
     }
 
+    override fun requiresCompatibilities(vararg requiresCompatibilities: String): Unit =
+        requiresCompatibilities(requiresCompatibilities.toList())
+
     override fun runtimePlatform(runtimePlatform: IResolvable) {
       cdkBuilder.runtimePlatform(runtimePlatform.let(IResolvable::unwrap))
     }
@@ -346,6 +386,8 @@ public open class CfnTaskDefinition internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun taskRoleArn(taskRoleArn: String) {
       cdkBuilder.taskRoleArn(taskRoleArn)
     }
@@ -357,6 +399,8 @@ public open class CfnTaskDefinition internal constructor(
     override fun volumes(volumes: List<Any>) {
       cdkBuilder.volumes(volumes)
     }
+
+    override fun volumes(vararg volumes: Any): Unit = volumes(volumes.toList())
 
     public fun build(): software.amazon.awscdk.services.ecs.CfnTaskDefinition = cdkBuilder.build()
   }
@@ -566,6 +610,8 @@ public open class CfnTaskDefinition internal constructor(
 
       public fun mountOptions(mountOptions: List<String>)
 
+      public fun mountOptions(vararg mountOptions: String)
+
       public fun size(size: Number)
     }
 
@@ -581,6 +627,9 @@ public open class CfnTaskDefinition internal constructor(
       override fun mountOptions(mountOptions: List<String>) {
         cdkBuilder.mountOptions(mountOptions)
       }
+
+      override fun mountOptions(vararg mountOptions: String): Unit =
+          mountOptions(mountOptions.toList())
 
       override fun size(size: Number) {
         cdkBuilder.size(size)
@@ -1516,6 +1565,8 @@ public open class CfnTaskDefinition internal constructor(
       public fun hostPath(hostPath: String)
 
       public fun permissions(permissions: List<String>)
+
+      public fun permissions(vararg permissions: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1534,6 +1585,8 @@ public open class CfnTaskDefinition internal constructor(
       override fun permissions(permissions: List<String>) {
         cdkBuilder.permissions(permissions)
       }
+
+      override fun permissions(vararg permissions: String): Unit = permissions(permissions.toList())
 
       public fun build(): software.amazon.awscdk.services.ecs.CfnTaskDefinition.DeviceProperty =
           cdkBuilder.build()
@@ -1597,6 +1650,8 @@ public open class CfnTaskDefinition internal constructor(
 
       public fun devices(devices: List<Any>)
 
+      public fun devices(vararg devices: Any)
+
       public fun initProcessEnabled(initProcessEnabled: Boolean)
 
       public fun initProcessEnabled(initProcessEnabled: IResolvable)
@@ -1610,6 +1665,8 @@ public open class CfnTaskDefinition internal constructor(
       public fun tmpfs(tmpfs: IResolvable)
 
       public fun tmpfs(tmpfs: List<Any>)
+
+      public fun tmpfs(vararg tmpfs: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1638,6 +1695,8 @@ public open class CfnTaskDefinition internal constructor(
         cdkBuilder.devices(devices)
       }
 
+      override fun devices(vararg devices: Any): Unit = devices(devices.toList())
+
       override fun initProcessEnabled(initProcessEnabled: Boolean) {
         cdkBuilder.initProcessEnabled(initProcessEnabled)
       }
@@ -1665,6 +1724,8 @@ public open class CfnTaskDefinition internal constructor(
       override fun tmpfs(tmpfs: List<Any>) {
         cdkBuilder.tmpfs(tmpfs)
       }
+
+      override fun tmpfs(vararg tmpfs: Any): Unit = tmpfs(tmpfs.toList())
 
       public fun build():
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.LinuxParametersProperty =
@@ -1795,13 +1856,19 @@ public open class CfnTaskDefinition internal constructor(
     public interface Builder {
       public fun command(command: List<String>)
 
+      public fun command(vararg command: String)
+
       public fun cpu(cpu: Number)
 
       public fun credentialSpecs(credentialSpecs: List<String>)
 
+      public fun credentialSpecs(vararg credentialSpecs: String)
+
       public fun dependsOn(dependsOn: IResolvable)
 
       public fun dependsOn(dependsOn: List<Any>)
+
+      public fun dependsOn(vararg dependsOn: Any)
 
       public fun disableNetworking(disableNetworking: Boolean)
 
@@ -1809,7 +1876,11 @@ public open class CfnTaskDefinition internal constructor(
 
       public fun dnsSearchDomains(dnsSearchDomains: List<String>)
 
+      public fun dnsSearchDomains(vararg dnsSearchDomains: String)
+
       public fun dnsServers(dnsServers: List<String>)
+
+      public fun dnsServers(vararg dnsServers: String)
 
       public fun dockerLabels(dockerLabels: IResolvable)
 
@@ -1817,15 +1888,23 @@ public open class CfnTaskDefinition internal constructor(
 
       public fun dockerSecurityOptions(dockerSecurityOptions: List<String>)
 
+      public fun dockerSecurityOptions(vararg dockerSecurityOptions: String)
+
       public fun entryPoint(entryPoint: List<String>)
+
+      public fun entryPoint(vararg entryPoint: String)
 
       public fun environment(environment: IResolvable)
 
       public fun environment(environment: List<Any>)
 
+      public fun environment(vararg environment: Any)
+
       public fun environmentFiles(environmentFiles: IResolvable)
 
       public fun environmentFiles(environmentFiles: List<Any>)
+
+      public fun environmentFiles(vararg environmentFiles: Any)
 
       public fun essential(essential: Boolean)
 
@@ -1834,6 +1913,8 @@ public open class CfnTaskDefinition internal constructor(
       public fun extraHosts(extraHosts: IResolvable)
 
       public fun extraHosts(extraHosts: List<Any>)
+
+      public fun extraHosts(vararg extraHosts: Any)
 
       public fun firelensConfiguration(firelensConfiguration: IResolvable)
 
@@ -1862,6 +1943,8 @@ public open class CfnTaskDefinition internal constructor(
 
       public fun links(links: List<String>)
 
+      public fun links(vararg links: String)
+
       public fun linuxParameters(linuxParameters: IResolvable)
 
       public fun linuxParameters(linuxParameters: LinuxParametersProperty)
@@ -1886,11 +1969,15 @@ public open class CfnTaskDefinition internal constructor(
 
       public fun mountPoints(mountPoints: List<Any>)
 
+      public fun mountPoints(vararg mountPoints: Any)
+
       public fun name(name: String)
 
       public fun portMappings(portMappings: IResolvable)
 
       public fun portMappings(portMappings: List<Any>)
+
+      public fun portMappings(vararg portMappings: Any)
 
       public fun privileged(privileged: Boolean)
 
@@ -1917,9 +2004,13 @@ public open class CfnTaskDefinition internal constructor(
 
       public fun resourceRequirements(resourceRequirements: List<Any>)
 
+      public fun resourceRequirements(vararg resourceRequirements: Any)
+
       public fun secrets(secrets: IResolvable)
 
       public fun secrets(secrets: List<Any>)
+
+      public fun secrets(vararg secrets: Any)
 
       public fun startTimeout(startTimeout: Number)
 
@@ -1929,15 +2020,21 @@ public open class CfnTaskDefinition internal constructor(
 
       public fun systemControls(systemControls: List<Any>)
 
+      public fun systemControls(vararg systemControls: Any)
+
       public fun ulimits(ulimits: IResolvable)
 
       public fun ulimits(ulimits: List<Any>)
+
+      public fun ulimits(vararg ulimits: Any)
 
       public fun user(user: String)
 
       public fun volumesFrom(volumesFrom: IResolvable)
 
       public fun volumesFrom(volumesFrom: List<Any>)
+
+      public fun volumesFrom(vararg volumesFrom: Any)
 
       public fun workingDirectory(workingDirectory: String)
     }
@@ -1952,6 +2049,8 @@ public open class CfnTaskDefinition internal constructor(
         cdkBuilder.command(command)
       }
 
+      override fun command(vararg command: String): Unit = command(command.toList())
+
       override fun cpu(cpu: Number) {
         cdkBuilder.cpu(cpu)
       }
@@ -1960,6 +2059,9 @@ public open class CfnTaskDefinition internal constructor(
         cdkBuilder.credentialSpecs(credentialSpecs)
       }
 
+      override fun credentialSpecs(vararg credentialSpecs: String): Unit =
+          credentialSpecs(credentialSpecs.toList())
+
       override fun dependsOn(dependsOn: IResolvable) {
         cdkBuilder.dependsOn(dependsOn.let(IResolvable::unwrap))
       }
@@ -1967,6 +2069,8 @@ public open class CfnTaskDefinition internal constructor(
       override fun dependsOn(dependsOn: List<Any>) {
         cdkBuilder.dependsOn(dependsOn)
       }
+
+      override fun dependsOn(vararg dependsOn: Any): Unit = dependsOn(dependsOn.toList())
 
       override fun disableNetworking(disableNetworking: Boolean) {
         cdkBuilder.disableNetworking(disableNetworking)
@@ -1980,9 +2084,14 @@ public open class CfnTaskDefinition internal constructor(
         cdkBuilder.dnsSearchDomains(dnsSearchDomains)
       }
 
+      override fun dnsSearchDomains(vararg dnsSearchDomains: String): Unit =
+          dnsSearchDomains(dnsSearchDomains.toList())
+
       override fun dnsServers(dnsServers: List<String>) {
         cdkBuilder.dnsServers(dnsServers)
       }
+
+      override fun dnsServers(vararg dnsServers: String): Unit = dnsServers(dnsServers.toList())
 
       override fun dockerLabels(dockerLabels: IResolvable) {
         cdkBuilder.dockerLabels(dockerLabels.let(IResolvable::unwrap))
@@ -1996,9 +2105,14 @@ public open class CfnTaskDefinition internal constructor(
         cdkBuilder.dockerSecurityOptions(dockerSecurityOptions)
       }
 
+      override fun dockerSecurityOptions(vararg dockerSecurityOptions: String): Unit =
+          dockerSecurityOptions(dockerSecurityOptions.toList())
+
       override fun entryPoint(entryPoint: List<String>) {
         cdkBuilder.entryPoint(entryPoint)
       }
+
+      override fun entryPoint(vararg entryPoint: String): Unit = entryPoint(entryPoint.toList())
 
       override fun environment(environment: IResolvable) {
         cdkBuilder.environment(environment.let(IResolvable::unwrap))
@@ -2008,6 +2122,8 @@ public open class CfnTaskDefinition internal constructor(
         cdkBuilder.environment(environment)
       }
 
+      override fun environment(vararg environment: Any): Unit = environment(environment.toList())
+
       override fun environmentFiles(environmentFiles: IResolvable) {
         cdkBuilder.environmentFiles(environmentFiles.let(IResolvable::unwrap))
       }
@@ -2015,6 +2131,9 @@ public open class CfnTaskDefinition internal constructor(
       override fun environmentFiles(environmentFiles: List<Any>) {
         cdkBuilder.environmentFiles(environmentFiles)
       }
+
+      override fun environmentFiles(vararg environmentFiles: Any): Unit =
+          environmentFiles(environmentFiles.toList())
 
       override fun essential(essential: Boolean) {
         cdkBuilder.essential(essential)
@@ -2031,6 +2150,8 @@ public open class CfnTaskDefinition internal constructor(
       override fun extraHosts(extraHosts: List<Any>) {
         cdkBuilder.extraHosts(extraHosts)
       }
+
+      override fun extraHosts(vararg extraHosts: Any): Unit = extraHosts(extraHosts.toList())
 
       override fun firelensConfiguration(firelensConfiguration: IResolvable) {
         cdkBuilder.firelensConfiguration(firelensConfiguration.let(IResolvable::unwrap))
@@ -2079,6 +2200,8 @@ public open class CfnTaskDefinition internal constructor(
         cdkBuilder.links(links)
       }
 
+      override fun links(vararg links: String): Unit = links(links.toList())
+
       override fun linuxParameters(linuxParameters: IResolvable) {
         cdkBuilder.linuxParameters(linuxParameters.let(IResolvable::unwrap))
       }
@@ -2121,6 +2244,8 @@ public open class CfnTaskDefinition internal constructor(
         cdkBuilder.mountPoints(mountPoints)
       }
 
+      override fun mountPoints(vararg mountPoints: Any): Unit = mountPoints(mountPoints.toList())
+
       override fun name(name: String) {
         cdkBuilder.name(name)
       }
@@ -2132,6 +2257,9 @@ public open class CfnTaskDefinition internal constructor(
       override fun portMappings(portMappings: List<Any>) {
         cdkBuilder.portMappings(portMappings)
       }
+
+      override fun portMappings(vararg portMappings: Any): Unit =
+          portMappings(portMappings.toList())
 
       override fun privileged(privileged: Boolean) {
         cdkBuilder.privileged(privileged)
@@ -2179,6 +2307,9 @@ public open class CfnTaskDefinition internal constructor(
         cdkBuilder.resourceRequirements(resourceRequirements)
       }
 
+      override fun resourceRequirements(vararg resourceRequirements: Any): Unit =
+          resourceRequirements(resourceRequirements.toList())
+
       override fun secrets(secrets: IResolvable) {
         cdkBuilder.secrets(secrets.let(IResolvable::unwrap))
       }
@@ -2186,6 +2317,8 @@ public open class CfnTaskDefinition internal constructor(
       override fun secrets(secrets: List<Any>) {
         cdkBuilder.secrets(secrets)
       }
+
+      override fun secrets(vararg secrets: Any): Unit = secrets(secrets.toList())
 
       override fun startTimeout(startTimeout: Number) {
         cdkBuilder.startTimeout(startTimeout)
@@ -2203,6 +2336,9 @@ public open class CfnTaskDefinition internal constructor(
         cdkBuilder.systemControls(systemControls)
       }
 
+      override fun systemControls(vararg systemControls: Any): Unit =
+          systemControls(systemControls.toList())
+
       override fun ulimits(ulimits: IResolvable) {
         cdkBuilder.ulimits(ulimits.let(IResolvable::unwrap))
       }
@@ -2210,6 +2346,8 @@ public open class CfnTaskDefinition internal constructor(
       override fun ulimits(ulimits: List<Any>) {
         cdkBuilder.ulimits(ulimits)
       }
+
+      override fun ulimits(vararg ulimits: Any): Unit = ulimits(ulimits.toList())
 
       override fun user(user: String) {
         cdkBuilder.user(user)
@@ -2222,6 +2360,8 @@ public open class CfnTaskDefinition internal constructor(
       override fun volumesFrom(volumesFrom: List<Any>) {
         cdkBuilder.volumesFrom(volumesFrom)
       }
+
+      override fun volumesFrom(vararg volumesFrom: Any): Unit = volumesFrom(volumesFrom.toList())
 
       override fun workingDirectory(workingDirectory: String) {
         cdkBuilder.workingDirectory(workingDirectory)
@@ -2354,6 +2494,8 @@ public open class CfnTaskDefinition internal constructor(
 
       public fun proxyConfigurationProperties(proxyConfigurationProperties: List<Any>)
 
+      public fun proxyConfigurationProperties(vararg proxyConfigurationProperties: Any)
+
       public fun type(type: String)
     }
 
@@ -2373,6 +2515,9 @@ public open class CfnTaskDefinition internal constructor(
       override fun proxyConfigurationProperties(proxyConfigurationProperties: List<Any>) {
         cdkBuilder.proxyConfigurationProperties(proxyConfigurationProperties)
       }
+
+      override fun proxyConfigurationProperties(vararg proxyConfigurationProperties: Any): Unit =
+          proxyConfigurationProperties(proxyConfigurationProperties.toList())
 
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -2537,6 +2682,8 @@ public open class CfnTaskDefinition internal constructor(
       public fun secretOptions(secretOptions: IResolvable)
 
       public fun secretOptions(secretOptions: List<Any>)
+
+      public fun secretOptions(vararg secretOptions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2563,6 +2710,9 @@ public open class CfnTaskDefinition internal constructor(
       override fun secretOptions(secretOptions: List<Any>) {
         cdkBuilder.secretOptions(secretOptions)
       }
+
+      override fun secretOptions(vararg secretOptions: Any): Unit =
+          secretOptions(secretOptions.toList())
 
       public fun build():
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.LogConfigurationProperty =
@@ -2711,6 +2861,8 @@ public open class CfnTaskDefinition internal constructor(
     public interface Builder {
       public fun command(command: List<String>)
 
+      public fun command(vararg command: String)
+
       public fun interval(interval: Number)
 
       public fun retries(retries: Number)
@@ -2728,6 +2880,8 @@ public open class CfnTaskDefinition internal constructor(
       override fun command(command: List<String>) {
         cdkBuilder.command(command)
       }
+
+      override fun command(vararg command: String): Unit = command(command.toList())
 
       override fun interval(interval: Number) {
         cdkBuilder.interval(interval)
@@ -3043,7 +3197,11 @@ public open class CfnTaskDefinition internal constructor(
     public interface Builder {
       public fun add(add: List<String>)
 
+      public fun add(vararg add: String)
+
       public fun drop(drop: List<String>)
+
+      public fun drop(vararg drop: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3055,9 +3213,13 @@ public open class CfnTaskDefinition internal constructor(
         cdkBuilder.add(add)
       }
 
+      override fun add(vararg add: String): Unit = add(add.toList())
+
       override fun drop(drop: List<String>) {
         cdkBuilder.drop(drop)
       }
+
+      override fun drop(vararg drop: String): Unit = drop(drop.toList())
 
       public fun build():
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.KernelCapabilitiesProperty =

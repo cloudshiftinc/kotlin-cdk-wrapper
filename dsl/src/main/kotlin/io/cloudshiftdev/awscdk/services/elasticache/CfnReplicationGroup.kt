@@ -45,12 +45,12 @@ public open class CfnReplicationGroup internal constructor(
   public open fun attrReadEndPointAddresses(): String = unwrap(this).getAttrReadEndPointAddresses()
 
   public open fun attrReadEndPointAddressesList(): List<String> =
-      unwrap(this).getAttrReadEndPointAddressesList() ?: emptyList()
+      unwrap(this).getAttrReadEndPointAddressesList()
 
   public open fun attrReadEndPointPorts(): String = unwrap(this).getAttrReadEndPointPorts()
 
   public open fun attrReadEndPointPortsList(): List<String> =
-      unwrap(this).getAttrReadEndPointPortsList() ?: emptyList()
+      unwrap(this).getAttrReadEndPointPortsList()
 
   public open fun attrReaderEndPointAddress(): String = unwrap(this).getAttrReaderEndPointAddress()
 
@@ -100,6 +100,9 @@ public open class CfnReplicationGroup internal constructor(
   public open fun cacheSecurityGroupNames(`value`: List<String>) {
     unwrap(this).setCacheSecurityGroupNames(`value`)
   }
+
+  public open fun cacheSecurityGroupNames(vararg `value`: String): Unit =
+      cacheSecurityGroupNames(`value`.toList())
 
   public open fun cacheSubnetGroupName(): String? = unwrap(this).getCacheSubnetGroupName()
 
@@ -167,6 +170,9 @@ public open class CfnReplicationGroup internal constructor(
     unwrap(this).setLogDeliveryConfigurations(__idx_ac66f0)
   }
 
+  public open fun logDeliveryConfigurations(vararg __idx_ac66f0: Any): Unit =
+      logDeliveryConfigurations(__idx_ac66f0.toList())
+
   public open fun multiAzEnabled(): Any? = unwrap(this).getMultiAzEnabled()
 
   public open fun multiAzEnabled(`value`: Boolean) {
@@ -192,6 +198,9 @@ public open class CfnReplicationGroup internal constructor(
   public open fun nodeGroupConfiguration(__idx_ac66f0: List<Any>) {
     unwrap(this).setNodeGroupConfiguration(__idx_ac66f0)
   }
+
+  public open fun nodeGroupConfiguration(vararg __idx_ac66f0: Any): Unit =
+      nodeGroupConfiguration(__idx_ac66f0.toList())
 
   public open fun notificationTopicArn(): String? = unwrap(this).getNotificationTopicArn()
 
@@ -223,6 +232,9 @@ public open class CfnReplicationGroup internal constructor(
   public open fun preferredCacheClusterAZs(`value`: List<String>) {
     unwrap(this).setPreferredCacheClusterAZs(`value`)
   }
+
+  public open fun preferredCacheClusterAZs(vararg `value`: String): Unit =
+      preferredCacheClusterAZs(`value`.toList())
 
   public open fun preferredMaintenanceWindow(): String? =
       unwrap(this).getPreferredMaintenanceWindow()
@@ -263,11 +275,16 @@ public open class CfnReplicationGroup internal constructor(
     unwrap(this).setSecurityGroupIds(`value`)
   }
 
+  public open fun securityGroupIds(vararg `value`: String): Unit =
+      securityGroupIds(`value`.toList())
+
   public open fun snapshotArns(): List<String> = unwrap(this).getSnapshotArns() ?: emptyList()
 
   public open fun snapshotArns(`value`: List<String>) {
     unwrap(this).setSnapshotArns(`value`)
   }
+
+  public open fun snapshotArns(vararg `value`: String): Unit = snapshotArns(`value`.toList())
 
   public open fun snapshotName(): String? = unwrap(this).getSnapshotName()
 
@@ -302,6 +319,8 @@ public open class CfnReplicationGroup internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun transitEncryptionEnabled(): Any? = unwrap(this).getTransitEncryptionEnabled()
 
   public open fun transitEncryptionEnabled(`value`: Boolean) {
@@ -324,6 +343,8 @@ public open class CfnReplicationGroup internal constructor(
     unwrap(this).setUserGroupIds(`value`)
   }
 
+  public open fun userGroupIds(vararg `value`: String): Unit = userGroupIds(`value`.toList())
+
   public interface Builder {
     public fun atRestEncryptionEnabled(atRestEncryptionEnabled: Boolean)
 
@@ -344,6 +365,8 @@ public open class CfnReplicationGroup internal constructor(
     public fun cacheParameterGroupName(cacheParameterGroupName: String)
 
     public fun cacheSecurityGroupNames(cacheSecurityGroupNames: List<String>)
+
+    public fun cacheSecurityGroupNames(vararg cacheSecurityGroupNames: String)
 
     public fun cacheSubnetGroupName(cacheSubnetGroupName: String)
 
@@ -367,6 +390,8 @@ public open class CfnReplicationGroup internal constructor(
 
     public fun logDeliveryConfigurations(logDeliveryConfigurations: List<Any>)
 
+    public fun logDeliveryConfigurations(vararg logDeliveryConfigurations: Any)
+
     public fun multiAzEnabled(multiAzEnabled: Boolean)
 
     public fun multiAzEnabled(multiAzEnabled: IResolvable)
@@ -377,6 +402,8 @@ public open class CfnReplicationGroup internal constructor(
 
     public fun nodeGroupConfiguration(nodeGroupConfiguration: List<Any>)
 
+    public fun nodeGroupConfiguration(vararg nodeGroupConfiguration: Any)
+
     public fun notificationTopicArn(notificationTopicArn: String)
 
     public fun numCacheClusters(numCacheClusters: Number)
@@ -386,6 +413,8 @@ public open class CfnReplicationGroup internal constructor(
     public fun port(port: Number)
 
     public fun preferredCacheClusterAZs(preferredCacheClusterAZs: List<String>)
+
+    public fun preferredCacheClusterAZs(vararg preferredCacheClusterAZs: String)
 
     public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String)
 
@@ -399,7 +428,11 @@ public open class CfnReplicationGroup internal constructor(
 
     public fun securityGroupIds(securityGroupIds: List<String>)
 
+    public fun securityGroupIds(vararg securityGroupIds: String)
+
     public fun snapshotArns(snapshotArns: List<String>)
+
+    public fun snapshotArns(vararg snapshotArns: String)
 
     public fun snapshotName(snapshotName: String)
 
@@ -411,6 +444,8 @@ public open class CfnReplicationGroup internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun transitEncryptionEnabled(transitEncryptionEnabled: Boolean)
 
     public fun transitEncryptionEnabled(transitEncryptionEnabled: IResolvable)
@@ -418,6 +453,8 @@ public open class CfnReplicationGroup internal constructor(
     public fun transitEncryptionMode(transitEncryptionMode: String)
 
     public fun userGroupIds(userGroupIds: List<String>)
+
+    public fun userGroupIds(vararg userGroupIds: String)
   }
 
   private class BuilderImpl(
@@ -467,6 +504,9 @@ public open class CfnReplicationGroup internal constructor(
       cdkBuilder.cacheSecurityGroupNames(cacheSecurityGroupNames)
     }
 
+    override fun cacheSecurityGroupNames(vararg cacheSecurityGroupNames: String): Unit =
+        cacheSecurityGroupNames(cacheSecurityGroupNames.toList())
+
     override fun cacheSubnetGroupName(cacheSubnetGroupName: String) {
       cdkBuilder.cacheSubnetGroupName(cacheSubnetGroupName)
     }
@@ -511,6 +551,9 @@ public open class CfnReplicationGroup internal constructor(
       cdkBuilder.logDeliveryConfigurations(logDeliveryConfigurations)
     }
 
+    override fun logDeliveryConfigurations(vararg logDeliveryConfigurations: Any): Unit =
+        logDeliveryConfigurations(logDeliveryConfigurations.toList())
+
     override fun multiAzEnabled(multiAzEnabled: Boolean) {
       cdkBuilder.multiAzEnabled(multiAzEnabled)
     }
@@ -531,6 +574,9 @@ public open class CfnReplicationGroup internal constructor(
       cdkBuilder.nodeGroupConfiguration(nodeGroupConfiguration)
     }
 
+    override fun nodeGroupConfiguration(vararg nodeGroupConfiguration: Any): Unit =
+        nodeGroupConfiguration(nodeGroupConfiguration.toList())
+
     override fun notificationTopicArn(notificationTopicArn: String) {
       cdkBuilder.notificationTopicArn(notificationTopicArn)
     }
@@ -550,6 +596,9 @@ public open class CfnReplicationGroup internal constructor(
     override fun preferredCacheClusterAZs(preferredCacheClusterAZs: List<String>) {
       cdkBuilder.preferredCacheClusterAZs(preferredCacheClusterAZs)
     }
+
+    override fun preferredCacheClusterAZs(vararg preferredCacheClusterAZs: String): Unit =
+        preferredCacheClusterAZs(preferredCacheClusterAZs.toList())
 
     override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
       cdkBuilder.preferredMaintenanceWindow(preferredMaintenanceWindow)
@@ -575,9 +624,15 @@ public open class CfnReplicationGroup internal constructor(
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
+
     override fun snapshotArns(snapshotArns: List<String>) {
       cdkBuilder.snapshotArns(snapshotArns)
     }
+
+    override fun snapshotArns(vararg snapshotArns: String): Unit =
+        snapshotArns(snapshotArns.toList())
 
     override fun snapshotName(snapshotName: String) {
       cdkBuilder.snapshotName(snapshotName)
@@ -599,6 +654,8 @@ public open class CfnReplicationGroup internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun transitEncryptionEnabled(transitEncryptionEnabled: Boolean) {
       cdkBuilder.transitEncryptionEnabled(transitEncryptionEnabled)
     }
@@ -614,6 +671,9 @@ public open class CfnReplicationGroup internal constructor(
     override fun userGroupIds(userGroupIds: List<String>) {
       cdkBuilder.userGroupIds(userGroupIds)
     }
+
+    override fun userGroupIds(vararg userGroupIds: String): Unit =
+        userGroupIds(userGroupIds.toList())
 
     public fun build(): software.amazon.awscdk.services.elasticache.CfnReplicationGroup =
         cdkBuilder.build()
@@ -806,6 +866,8 @@ public open class CfnReplicationGroup internal constructor(
 
       public fun replicaAvailabilityZones(replicaAvailabilityZones: List<String>)
 
+      public fun replicaAvailabilityZones(vararg replicaAvailabilityZones: String)
+
       public fun replicaCount(replicaCount: Number)
 
       public fun slots(slots: String)
@@ -828,6 +890,9 @@ public open class CfnReplicationGroup internal constructor(
       override fun replicaAvailabilityZones(replicaAvailabilityZones: List<String>) {
         cdkBuilder.replicaAvailabilityZones(replicaAvailabilityZones)
       }
+
+      override fun replicaAvailabilityZones(vararg replicaAvailabilityZones: String): Unit =
+          replicaAvailabilityZones(replicaAvailabilityZones.toList())
 
       override fun replicaCount(replicaCount: Number) {
         cdkBuilder.replicaCount(replicaCount)

@@ -222,9 +222,15 @@ public open class Pipeline internal constructor(
 
     public fun stages(stages: List<StageProps>)
 
+    public fun stages(vararg stages: StageProps)
+
     public fun triggers(triggers: List<TriggerProps>)
 
+    public fun triggers(vararg triggers: TriggerProps)
+
     public fun variables(variables: List<Variable>)
+
+    public fun variables(vararg variables: Variable)
   }
 
   private class BuilderImpl(
@@ -279,13 +285,19 @@ public open class Pipeline internal constructor(
       cdkBuilder.stages(stages.map(StageProps::unwrap))
     }
 
+    override fun stages(vararg stages: StageProps): Unit = stages(stages.toList())
+
     override fun triggers(triggers: List<TriggerProps>) {
       cdkBuilder.triggers(triggers.map(TriggerProps::unwrap))
     }
 
+    override fun triggers(vararg triggers: TriggerProps): Unit = triggers(triggers.toList())
+
     override fun variables(variables: List<Variable>) {
       cdkBuilder.variables(variables.map(Variable::unwrap))
     }
+
+    override fun variables(vararg variables: Variable): Unit = variables(variables.toList())
 
     public fun build(): software.amazon.awscdk.services.codepipeline.Pipeline = cdkBuilder.build()
   }

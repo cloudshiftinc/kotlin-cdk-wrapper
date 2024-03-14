@@ -44,6 +44,9 @@ public open class CfnWorkflow internal constructor(
     unwrap(this).setOnExceptionSteps(__idx_ac66f0)
   }
 
+  public open fun onExceptionSteps(vararg __idx_ac66f0: Any): Unit =
+      onExceptionSteps(__idx_ac66f0.toList())
+
   public open fun steps(): Any = unwrap(this).getSteps()
 
   public open fun steps(`value`: IResolvable) {
@@ -54,6 +57,8 @@ public open class CfnWorkflow internal constructor(
     unwrap(this).setSteps(__idx_ac66f0)
   }
 
+  public open fun steps(vararg __idx_ac66f0: Any): Unit = steps(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -63,6 +68,8 @@ public open class CfnWorkflow internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun description(description: String)
 
@@ -70,11 +77,17 @@ public open class CfnWorkflow internal constructor(
 
     public fun onExceptionSteps(onExceptionSteps: List<Any>)
 
+    public fun onExceptionSteps(vararg onExceptionSteps: Any)
+
     public fun steps(steps: IResolvable)
 
     public fun steps(steps: List<Any>)
 
+    public fun steps(vararg steps: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -96,6 +109,9 @@ public open class CfnWorkflow internal constructor(
       cdkBuilder.onExceptionSteps(onExceptionSteps)
     }
 
+    override fun onExceptionSteps(vararg onExceptionSteps: Any): Unit =
+        onExceptionSteps(onExceptionSteps.toList())
+
     override fun steps(steps: IResolvable) {
       cdkBuilder.steps(steps.let(IResolvable::unwrap))
     }
@@ -104,9 +120,13 @@ public open class CfnWorkflow internal constructor(
       cdkBuilder.steps(steps)
     }
 
+    override fun steps(vararg steps: Any): Unit = steps(steps.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.transfer.CfnWorkflow = cdkBuilder.build()
   }
@@ -858,6 +878,8 @@ public open class CfnWorkflow internal constructor(
       public fun sourceFileLocation(sourceFileLocation: String)
 
       public fun tags(tags: List<S3TagProperty>)
+
+      public fun tags(vararg tags: S3TagProperty)
     }
 
     private class BuilderImpl : Builder {
@@ -876,6 +898,8 @@ public open class CfnWorkflow internal constructor(
       override fun tags(tags: List<S3TagProperty>) {
         cdkBuilder.tags(tags.map(S3TagProperty::unwrap))
       }
+
+      override fun tags(vararg tags: S3TagProperty): Unit = tags(tags.toList())
 
       public fun build():
           software.amazon.awscdk.services.transfer.CfnWorkflow.TagStepDetailsProperty =

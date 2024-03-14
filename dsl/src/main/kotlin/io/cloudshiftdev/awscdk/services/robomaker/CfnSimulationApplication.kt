@@ -101,6 +101,8 @@ public open class CfnSimulationApplication internal constructor(
     unwrap(this).setSources(__idx_ac66f0)
   }
 
+  public open fun sources(vararg __idx_ac66f0: Any): Unit = sources(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): Map<String, String> = unwrap(this).getTagsRaw() ?: emptyMap()
@@ -144,6 +146,8 @@ public open class CfnSimulationApplication internal constructor(
     public fun sources(sources: IResolvable)
 
     public fun sources(sources: List<Any>)
+
+    public fun sources(vararg sources: Any)
 
     public fun tags(tags: Map<String, String>)
   }
@@ -216,6 +220,8 @@ public open class CfnSimulationApplication internal constructor(
     override fun sources(sources: List<Any>) {
       cdkBuilder.sources(sources)
     }
+
+    override fun sources(vararg sources: Any): Unit = sources(sources.toList())
 
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)

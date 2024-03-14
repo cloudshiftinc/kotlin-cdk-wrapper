@@ -62,6 +62,9 @@ public open class CfnJobTemplate internal constructor(
     unwrap(this).setHopDestinations(__idx_ac66f0)
   }
 
+  public open fun hopDestinations(vararg __idx_ac66f0: Any): Unit =
+      hopDestinations(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -122,6 +125,8 @@ public open class CfnJobTemplate internal constructor(
 
     public fun hopDestinations(hopDestinations: List<Any>)
 
+    public fun hopDestinations(vararg hopDestinations: Any)
+
     public fun name(name: String)
 
     public fun priority(priority: Number)
@@ -171,6 +176,9 @@ public open class CfnJobTemplate internal constructor(
     override fun hopDestinations(hopDestinations: List<Any>) {
       cdkBuilder.hopDestinations(hopDestinations)
     }
+
+    override fun hopDestinations(vararg hopDestinations: Any): Unit =
+        hopDestinations(hopDestinations.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)

@@ -48,6 +48,8 @@ public open class CfnEnvironment internal constructor(
     unwrap(this).setMonitors(__idx_ac66f0)
   }
 
+  public open fun monitors(vararg __idx_ac66f0: Any): Unit = monitors(__idx_ac66f0.toList())
+
   public open fun name(): String = unwrap(this).getName()
 
   public open fun name(`value`: String) {
@@ -60,6 +62,8 @@ public open class CfnEnvironment internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun applicationId(applicationId: String)
 
@@ -69,9 +73,13 @@ public open class CfnEnvironment internal constructor(
 
     public fun monitors(monitors: List<Any>)
 
+    public fun monitors(vararg monitors: Any)
+
     public fun name(name: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -97,6 +105,8 @@ public open class CfnEnvironment internal constructor(
       cdkBuilder.monitors(monitors)
     }
 
+    override fun monitors(vararg monitors: Any): Unit = monitors(monitors.toList())
+
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -104,6 +114,8 @@ public open class CfnEnvironment internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.appconfig.CfnEnvironment =
         cdkBuilder.build()

@@ -267,6 +267,8 @@ public open class Domain internal constructor(
   public interface Builder {
     public fun accessPolicies(accessPolicies: List<PolicyStatement>)
 
+    public fun accessPolicies(vararg accessPolicies: PolicyStatement)
+
     public fun advancedOptions(advancedOptions: Map<String, String>)
 
     public fun automatedSnapshotStartHour(automatedSnapshotStartHour: Number)
@@ -338,6 +340,8 @@ public open class Domain internal constructor(
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
+
     public fun suppressLogsResourcePolicy(suppressLogsResourcePolicy: Boolean)
 
     public fun tlsSecurityPolicy(tlsSecurityPolicy: TLSSecurityPolicy)
@@ -349,6 +353,8 @@ public open class Domain internal constructor(
     public fun vpc(vpc: IVpc)
 
     public fun vpcSubnets(vpcSubnets: List<SubnetSelection>)
+
+    public fun vpcSubnets(vararg vpcSubnets: SubnetSelection)
 
     public fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig)
 
@@ -367,6 +373,9 @@ public open class Domain internal constructor(
     override fun accessPolicies(accessPolicies: List<PolicyStatement>) {
       cdkBuilder.accessPolicies(accessPolicies.map(PolicyStatement::unwrap))
     }
+
+    override fun accessPolicies(vararg accessPolicies: PolicyStatement): Unit =
+        accessPolicies(accessPolicies.toList())
 
     override fun advancedOptions(advancedOptions: Map<String, String>) {
       cdkBuilder.advancedOptions(advancedOptions)
@@ -484,6 +493,9 @@ public open class Domain internal constructor(
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
+
     override fun suppressLogsResourcePolicy(suppressLogsResourcePolicy: Boolean) {
       cdkBuilder.suppressLogsResourcePolicy(suppressLogsResourcePolicy)
     }
@@ -507,6 +519,9 @@ public open class Domain internal constructor(
     override fun vpcSubnets(vpcSubnets: List<SubnetSelection>) {
       cdkBuilder.vpcSubnets(vpcSubnets.map(SubnetSelection::unwrap))
     }
+
+    override fun vpcSubnets(vararg vpcSubnets: SubnetSelection): Unit =
+        vpcSubnets(vpcSubnets.toList())
 
     override fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig) {
       cdkBuilder.zoneAwareness(zoneAwareness.let(ZoneAwarenessConfig::unwrap))

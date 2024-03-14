@@ -106,6 +106,8 @@ public open class CfnAppBlock internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun description(description: String)
 
@@ -133,6 +135,8 @@ public open class CfnAppBlock internal constructor(
     public fun sourceS3Location(sourceS3Location: S3LocationProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun upScriptDetails(setupScriptDetails: IResolvable)
 
@@ -196,6 +200,8 @@ public open class CfnAppBlock internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun upScriptDetails(setupScriptDetails: IResolvable) {
       cdkBuilder.setupScriptDetails(setupScriptDetails.let(IResolvable::unwrap))

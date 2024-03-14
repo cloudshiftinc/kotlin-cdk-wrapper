@@ -24,6 +24,8 @@ public interface GrpcGatewayRouteMatch {
 
     public fun metadata(metadata: List<HeaderMatch>)
 
+    public fun metadata(vararg metadata: HeaderMatch)
+
     public fun port(port: Number)
 
     public fun rewriteRequestHostname(rewriteRequestHostname: Boolean)
@@ -42,6 +44,8 @@ public interface GrpcGatewayRouteMatch {
     override fun metadata(metadata: List<HeaderMatch>) {
       cdkBuilder.metadata(metadata.map(HeaderMatch::unwrap))
     }
+
+    override fun metadata(vararg metadata: HeaderMatch): Unit = metadata(metadata.toList())
 
     override fun port(port: Number) {
       cdkBuilder.port(port)

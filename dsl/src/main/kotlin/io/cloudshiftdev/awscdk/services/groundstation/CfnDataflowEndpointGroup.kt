@@ -48,6 +48,9 @@ public open class CfnDataflowEndpointGroup internal constructor(
     unwrap(this).setEndpointDetails(__idx_ac66f0)
   }
 
+  public open fun endpointDetails(vararg __idx_ac66f0: Any): Unit =
+      endpointDetails(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -61,6 +64,8 @@ public open class CfnDataflowEndpointGroup internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun contactPostPassDurationSeconds(contactPostPassDurationSeconds: Number)
 
@@ -70,7 +75,11 @@ public open class CfnDataflowEndpointGroup internal constructor(
 
     public fun endpointDetails(endpointDetails: List<Any>)
 
+    public fun endpointDetails(vararg endpointDetails: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -98,9 +107,14 @@ public open class CfnDataflowEndpointGroup internal constructor(
       cdkBuilder.endpointDetails(endpointDetails)
     }
 
+    override fun endpointDetails(vararg endpointDetails: Any): Unit =
+        endpointDetails(endpointDetails.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup =
         cdkBuilder.build()
@@ -806,7 +820,11 @@ public open class CfnDataflowEndpointGroup internal constructor(
 
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -823,9 +841,14 @@ public open class CfnDataflowEndpointGroup internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       public fun build():
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SecurityDetailsProperty

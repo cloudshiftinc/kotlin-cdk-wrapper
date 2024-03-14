@@ -46,6 +46,8 @@ public open class SageMakerCreateModel internal constructor(
 
     public fun containers(containers: List<IContainerDefinition>)
 
+    public fun containers(vararg containers: IContainerDefinition)
+
     public fun credentials(credentials: Credentials)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -109,6 +111,9 @@ public open class SageMakerCreateModel internal constructor(
     override fun containers(containers: List<IContainerDefinition>) {
       cdkBuilder.containers(containers.map(IContainerDefinition::unwrap))
     }
+
+    override fun containers(vararg containers: IContainerDefinition): Unit =
+        containers(containers.toList())
 
     override fun credentials(credentials: Credentials) {
       cdkBuilder.credentials(credentials.let(Credentials::unwrap))

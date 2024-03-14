@@ -91,6 +91,8 @@ public open class CfnMaintenanceWindowTask internal constructor(
     unwrap(this).setTargets(__idx_ac66f0)
   }
 
+  public open fun targets(vararg __idx_ac66f0: Any): Unit = targets(__idx_ac66f0.toList())
+
   public open fun taskArn(): String = unwrap(this).getTaskArn()
 
   public open fun taskArn(`value`: String) {
@@ -157,6 +159,8 @@ public open class CfnMaintenanceWindowTask internal constructor(
     public fun targets(targets: IResolvable)
 
     public fun targets(targets: List<Any>)
+
+    public fun targets(vararg targets: Any)
 
     public fun taskArn(taskArn: String)
 
@@ -231,6 +235,8 @@ public open class CfnMaintenanceWindowTask internal constructor(
     override fun targets(targets: List<Any>) {
       cdkBuilder.targets(targets)
     }
+
+    override fun targets(vararg targets: Any): Unit = targets(targets.toList())
 
     override fun taskArn(taskArn: String) {
       cdkBuilder.taskArn(taskArn)
@@ -555,6 +561,8 @@ public open class CfnMaintenanceWindowTask internal constructor(
 
       public fun notificationEvents(notificationEvents: List<String>)
 
+      public fun notificationEvents(vararg notificationEvents: String)
+
       public fun notificationType(notificationType: String)
     }
 
@@ -571,6 +579,9 @@ public open class CfnMaintenanceWindowTask internal constructor(
       override fun notificationEvents(notificationEvents: List<String>) {
         cdkBuilder.notificationEvents(notificationEvents)
       }
+
+      override fun notificationEvents(vararg notificationEvents: String): Unit =
+          notificationEvents(notificationEvents.toList())
 
       override fun notificationType(notificationType: String) {
         cdkBuilder.notificationType(notificationType)
@@ -622,6 +633,8 @@ public open class CfnMaintenanceWindowTask internal constructor(
       public fun key(key: String)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -637,6 +650,8 @@ public open class CfnMaintenanceWindowTask internal constructor(
         cdkBuilder.values(values)
       }
 
+      override fun values(vararg values: String): Unit = values(values.toList())
+
       public fun build():
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TargetProperty =
           cdkBuilder.build()
@@ -648,7 +663,7 @@ public open class CfnMaintenanceWindowTask internal constructor(
     ) : TargetProperty {
       override fun key(): String = unwrap(this).getKey()
 
-      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues()
     }
 
     public companion object {

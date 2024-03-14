@@ -54,6 +54,8 @@ public open class CfnMaintenanceWindowTarget internal constructor(
     unwrap(this).setTargets(__idx_ac66f0)
   }
 
+  public open fun targets(vararg __idx_ac66f0: Any): Unit = targets(__idx_ac66f0.toList())
+
   public open fun windowId(): String = unwrap(this).getWindowId()
 
   public open fun windowId(`value`: String) {
@@ -72,6 +74,8 @@ public open class CfnMaintenanceWindowTarget internal constructor(
     public fun targets(targets: IResolvable)
 
     public fun targets(targets: List<Any>)
+
+    public fun targets(vararg targets: Any)
 
     public fun windowId(windowId: String)
   }
@@ -106,6 +110,8 @@ public open class CfnMaintenanceWindowTarget internal constructor(
     override fun targets(targets: List<Any>) {
       cdkBuilder.targets(targets)
     }
+
+    override fun targets(vararg targets: Any): Unit = targets(targets.toList())
 
     override fun windowId(windowId: String) {
       cdkBuilder.windowId(windowId)
@@ -145,6 +151,8 @@ public open class CfnMaintenanceWindowTarget internal constructor(
       public fun key(key: String)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -160,6 +168,8 @@ public open class CfnMaintenanceWindowTarget internal constructor(
         cdkBuilder.values(values)
       }
 
+      override fun values(vararg values: String): Unit = values(values.toList())
+
       public fun build():
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTarget.TargetsProperty =
           cdkBuilder.build()
@@ -171,7 +181,7 @@ public open class CfnMaintenanceWindowTarget internal constructor(
     ) : TargetsProperty {
       override fun key(): String = unwrap(this).getKey()
 
-      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues()
     }
 
     public companion object {

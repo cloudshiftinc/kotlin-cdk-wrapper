@@ -366,6 +366,8 @@ public open class CfnEndpoint internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun username(): String? = unwrap(this).getUsername()
 
   public open fun username(`value`: String) {
@@ -537,6 +539,8 @@ public open class CfnEndpoint internal constructor(
     public fun sybaseSettings(sybaseSettings: SybaseSettingsProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun username(username: String)
   }
@@ -825,6 +829,8 @@ public open class CfnEndpoint internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun username(username: String) {
       cdkBuilder.username(username)
@@ -1418,6 +1424,8 @@ public open class CfnEndpoint internal constructor(
 
       public fun extraArchivedLogDestIds(extraArchivedLogDestIds: List<Number>)
 
+      public fun extraArchivedLogDestIds(vararg extraArchivedLogDestIds: Number)
+
       public fun failTasksOnLobTruncation(failTasksOnLobTruncation: Boolean)
 
       public fun failTasksOnLobTruncation(failTasksOnLobTruncation: IResolvable)
@@ -1568,6 +1576,9 @@ public open class CfnEndpoint internal constructor(
       override fun extraArchivedLogDestIds(extraArchivedLogDestIds: List<Number>) {
         cdkBuilder.extraArchivedLogDestIds(extraArchivedLogDestIds)
       }
+
+      override fun extraArchivedLogDestIds(vararg extraArchivedLogDestIds: Number): Unit =
+          extraArchivedLogDestIds(extraArchivedLogDestIds.toList())
 
       override fun failTasksOnLobTruncation(failTasksOnLobTruncation: Boolean) {
         cdkBuilder.failTasksOnLobTruncation(failTasksOnLobTruncation)

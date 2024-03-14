@@ -53,6 +53,10 @@ public open class Cluster internal constructor(
     unwrap(this).addDefaultCapacityProviderStrategy(defaultCapacityProviderStrategy.map(CapacityProviderStrategy::unwrap))
   }
 
+  public open fun addDefaultCapacityProviderStrategy(vararg
+      defaultCapacityProviderStrategy: CapacityProviderStrategy): Unit =
+      addDefaultCapacityProviderStrategy(defaultCapacityProviderStrategy.toList())
+
   public open fun addDefaultCloudMapNamespace(options: CloudMapNamespaceOptions): INamespace =
       unwrap(this).addDefaultCloudMapNamespace(options.let(CloudMapNamespaceOptions::unwrap)).let(INamespace::wrap)
 
@@ -66,8 +70,7 @@ public open class Cluster internal constructor(
   public override fun autoscalingGroup(): IAutoScalingGroup? =
       unwrap(this).getAutoscalingGroup()?.let(IAutoScalingGroup::wrap)
 
-  public open fun capacityProviderNames(): List<String> = unwrap(this).getCapacityProviderNames() ?:
-      emptyList()
+  public open fun capacityProviderNames(): List<String> = unwrap(this).getCapacityProviderNames()
 
   public override fun clusterArn(): String = unwrap(this).getClusterArn()
 

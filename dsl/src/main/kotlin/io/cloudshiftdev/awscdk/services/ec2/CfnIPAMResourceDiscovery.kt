@@ -53,6 +53,9 @@ public open class CfnIPAMResourceDiscovery internal constructor(
     unwrap(this).setOperatingRegions(__idx_ac66f0)
   }
 
+  public open fun operatingRegions(vararg __idx_ac66f0: Any): Unit =
+      operatingRegions(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -62,6 +65,8 @@ public open class CfnIPAMResourceDiscovery internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun description(description: String)
 
@@ -69,7 +74,11 @@ public open class CfnIPAMResourceDiscovery internal constructor(
 
     public fun operatingRegions(operatingRegions: List<Any>)
 
+    public fun operatingRegions(vararg operatingRegions: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -91,9 +100,14 @@ public open class CfnIPAMResourceDiscovery internal constructor(
       cdkBuilder.operatingRegions(operatingRegions)
     }
 
+    override fun operatingRegions(vararg operatingRegions: Any): Unit =
+        operatingRegions(operatingRegions.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscovery =
         cdkBuilder.build()

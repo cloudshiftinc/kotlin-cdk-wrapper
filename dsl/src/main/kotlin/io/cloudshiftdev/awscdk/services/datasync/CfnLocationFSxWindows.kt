@@ -41,12 +41,14 @@ public open class CfnLocationFSxWindows internal constructor(
     unwrap(this).setPassword(`value`)
   }
 
-  public open fun securityGroupArns(): List<String> = unwrap(this).getSecurityGroupArns() ?:
-      emptyList()
+  public open fun securityGroupArns(): List<String> = unwrap(this).getSecurityGroupArns()
 
   public open fun securityGroupArns(`value`: List<String>) {
     unwrap(this).setSecurityGroupArns(`value`)
   }
+
+  public open fun securityGroupArns(vararg `value`: String): Unit =
+      securityGroupArns(`value`.toList())
 
   public open fun subdirectory(): String? = unwrap(this).getSubdirectory()
 
@@ -63,6 +65,8 @@ public open class CfnLocationFSxWindows internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun user(): String = unwrap(this).getUser()
 
   public open fun user(`value`: String) {
@@ -78,9 +82,13 @@ public open class CfnLocationFSxWindows internal constructor(
 
     public fun securityGroupArns(securityGroupArns: List<String>)
 
+    public fun securityGroupArns(vararg securityGroupArns: String)
+
     public fun subdirectory(subdirectory: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun user(user: String)
   }
@@ -108,6 +116,9 @@ public open class CfnLocationFSxWindows internal constructor(
       cdkBuilder.securityGroupArns(securityGroupArns)
     }
 
+    override fun securityGroupArns(vararg securityGroupArns: String): Unit =
+        securityGroupArns(securityGroupArns.toList())
+
     override fun subdirectory(subdirectory: String) {
       cdkBuilder.subdirectory(subdirectory)
     }
@@ -115,6 +126,8 @@ public open class CfnLocationFSxWindows internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun user(user: String) {
       cdkBuilder.user(user)

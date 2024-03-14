@@ -57,6 +57,8 @@ public open class CfnCodeRepository internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun codeRepositoryName(codeRepositoryName: String)
 
@@ -69,6 +71,8 @@ public open class CfnCodeRepository internal constructor(
     public fun gitConfig(gitConfig: GitConfigProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -98,6 +102,8 @@ public open class CfnCodeRepository internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.sagemaker.CfnCodeRepository =
         cdkBuilder.build()

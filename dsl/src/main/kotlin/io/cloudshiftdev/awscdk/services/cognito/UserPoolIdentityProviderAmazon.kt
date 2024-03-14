@@ -27,6 +27,8 @@ public open class UserPoolIdentityProviderAmazon internal constructor(
 
     public fun scopes(scopes: List<String>)
 
+    public fun scopes(vararg scopes: String)
+
     public fun userPool(userPool: IUserPool)
   }
 
@@ -59,6 +61,8 @@ public open class UserPoolIdentityProviderAmazon internal constructor(
     override fun scopes(scopes: List<String>) {
       cdkBuilder.scopes(scopes)
     }
+
+    override fun scopes(vararg scopes: String): Unit = scopes(scopes.toList())
 
     override fun userPool(userPool: IUserPool) {
       cdkBuilder.userPool(userPool.let(IUserPool::unwrap))

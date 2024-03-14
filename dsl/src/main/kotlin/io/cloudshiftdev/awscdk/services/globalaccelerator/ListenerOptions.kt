@@ -22,6 +22,8 @@ public interface ListenerOptions {
 
     public fun portRanges(portRanges: List<PortRange>)
 
+    public fun portRanges(vararg portRanges: PortRange)
+
     public fun protocol(protocol: ConnectionProtocol)
   }
 
@@ -41,6 +43,8 @@ public interface ListenerOptions {
     override fun portRanges(portRanges: List<PortRange>) {
       cdkBuilder.portRanges(portRanges.map(PortRange::unwrap))
     }
+
+    override fun portRanges(vararg portRanges: PortRange): Unit = portRanges(portRanges.toList())
 
     override fun protocol(protocol: ConnectionProtocol) {
       cdkBuilder.protocol(protocol.let(ConnectionProtocol::unwrap))

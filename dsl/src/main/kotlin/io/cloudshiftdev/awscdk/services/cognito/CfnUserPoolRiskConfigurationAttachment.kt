@@ -764,7 +764,11 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
     public interface Builder {
       public fun blockedIpRangeList(blockedIpRangeList: List<String>)
 
+      public fun blockedIpRangeList(vararg blockedIpRangeList: String)
+
       public fun skippedIpRangeList(skippedIpRangeList: List<String>)
+
+      public fun skippedIpRangeList(vararg skippedIpRangeList: String)
     }
 
     private class BuilderImpl : Builder {
@@ -777,9 +781,15 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
         cdkBuilder.blockedIpRangeList(blockedIpRangeList)
       }
 
+      override fun blockedIpRangeList(vararg blockedIpRangeList: String): Unit =
+          blockedIpRangeList(blockedIpRangeList.toList())
+
       override fun skippedIpRangeList(skippedIpRangeList: List<String>) {
         cdkBuilder.skippedIpRangeList(skippedIpRangeList)
       }
+
+      override fun skippedIpRangeList(vararg skippedIpRangeList: String): Unit =
+          skippedIpRangeList(skippedIpRangeList.toList())
 
       public fun build():
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.RiskExceptionConfigurationTypeProperty
@@ -833,6 +843,8 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
       public fun actions(actions: CompromisedCredentialsActionsTypeProperty.Builder.() -> Unit)
 
       public fun eventFilter(eventFilter: List<String>)
+
+      public fun eventFilter(vararg eventFilter: String)
     }
 
     private class BuilderImpl : Builder {
@@ -857,6 +869,8 @@ public open class CfnUserPoolRiskConfigurationAttachment internal constructor(
       override fun eventFilter(eventFilter: List<String>) {
         cdkBuilder.eventFilter(eventFilter)
       }
+
+      override fun eventFilter(vararg eventFilter: String): Unit = eventFilter(eventFilter.toList())
 
       public fun build():
           software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty

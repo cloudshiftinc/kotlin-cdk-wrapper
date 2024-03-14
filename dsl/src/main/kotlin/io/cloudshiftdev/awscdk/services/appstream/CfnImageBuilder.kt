@@ -30,6 +30,9 @@ public open class CfnImageBuilder internal constructor(
     unwrap(this).setAccessEndpoints(__idx_ac66f0)
   }
 
+  public open fun accessEndpoints(vararg __idx_ac66f0: Any): Unit =
+      accessEndpoints(__idx_ac66f0.toList())
+
   public open fun appstreamAgentVersion(): String? = unwrap(this).getAppstreamAgentVersion()
 
   public open fun appstreamAgentVersion(`value`: String) {
@@ -119,6 +122,8 @@ public open class CfnImageBuilder internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun vpcConfig(): Any? = unwrap(this).getVpcConfig()
 
   public open fun vpcConfig(`value`: IResolvable) {
@@ -138,6 +143,8 @@ public open class CfnImageBuilder internal constructor(
     public fun accessEndpoints(accessEndpoints: IResolvable)
 
     public fun accessEndpoints(accessEndpoints: List<Any>)
+
+    public fun accessEndpoints(vararg accessEndpoints: Any)
 
     public fun appstreamAgentVersion(appstreamAgentVersion: String)
 
@@ -169,6 +176,8 @@ public open class CfnImageBuilder internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun vpcConfig(vpcConfig: IResolvable)
 
     public fun vpcConfig(vpcConfig: VpcConfigProperty)
@@ -192,6 +201,9 @@ public open class CfnImageBuilder internal constructor(
     override fun accessEndpoints(accessEndpoints: List<Any>) {
       cdkBuilder.accessEndpoints(accessEndpoints)
     }
+
+    override fun accessEndpoints(vararg accessEndpoints: Any): Unit =
+        accessEndpoints(accessEndpoints.toList())
 
     override fun appstreamAgentVersion(appstreamAgentVersion: String) {
       cdkBuilder.appstreamAgentVersion(appstreamAgentVersion)
@@ -249,6 +261,8 @@ public open class CfnImageBuilder internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun vpcConfig(vpcConfig: IResolvable) {
       cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
@@ -415,7 +429,11 @@ public open class CfnImageBuilder internal constructor(
     public interface Builder {
       public fun securityGroupIds(securityGroupIds: List<String>)
 
+      public fun securityGroupIds(vararg securityGroupIds: String)
+
       public fun subnetIds(subnetIds: List<String>)
+
+      public fun subnetIds(vararg subnetIds: String)
     }
 
     private class BuilderImpl : Builder {
@@ -427,9 +445,14 @@ public open class CfnImageBuilder internal constructor(
         cdkBuilder.securityGroupIds(securityGroupIds)
       }
 
+      override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+          securityGroupIds(securityGroupIds.toList())
+
       override fun subnetIds(subnetIds: List<String>) {
         cdkBuilder.subnetIds(subnetIds)
       }
+
+      override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
       public fun build():
           software.amazon.awscdk.services.appstream.CfnImageBuilder.VpcConfigProperty =

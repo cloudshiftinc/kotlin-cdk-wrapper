@@ -30,6 +30,9 @@ public open class CfnSlackChannelConfiguration internal constructor(
     unwrap(this).setGuardrailPolicies(`value`)
   }
 
+  public open fun guardrailPolicies(vararg `value`: String): Unit =
+      guardrailPolicies(`value`.toList())
+
   public open fun iamRoleArn(): String = unwrap(this).getIamRoleArn()
 
   public open fun iamRoleArn(`value`: String) {
@@ -64,6 +67,8 @@ public open class CfnSlackChannelConfiguration internal constructor(
     unwrap(this).setSnsTopicArns(`value`)
   }
 
+  public open fun snsTopicArns(vararg `value`: String): Unit = snsTopicArns(`value`.toList())
+
   public open fun userRoleRequired(): Any? = unwrap(this).getUserRoleRequired()
 
   public open fun userRoleRequired(`value`: Boolean) {
@@ -79,6 +84,8 @@ public open class CfnSlackChannelConfiguration internal constructor(
 
     public fun guardrailPolicies(guardrailPolicies: List<String>)
 
+    public fun guardrailPolicies(vararg guardrailPolicies: String)
+
     public fun iamRoleArn(iamRoleArn: String)
 
     public fun loggingLevel(loggingLevel: String)
@@ -88,6 +95,8 @@ public open class CfnSlackChannelConfiguration internal constructor(
     public fun slackWorkspaceId(slackWorkspaceId: String)
 
     public fun snsTopicArns(snsTopicArns: List<String>)
+
+    public fun snsTopicArns(vararg snsTopicArns: String)
 
     public fun userRoleRequired(userRoleRequired: Boolean)
 
@@ -111,6 +120,9 @@ public open class CfnSlackChannelConfiguration internal constructor(
       cdkBuilder.guardrailPolicies(guardrailPolicies)
     }
 
+    override fun guardrailPolicies(vararg guardrailPolicies: String): Unit =
+        guardrailPolicies(guardrailPolicies.toList())
+
     override fun iamRoleArn(iamRoleArn: String) {
       cdkBuilder.iamRoleArn(iamRoleArn)
     }
@@ -130,6 +142,9 @@ public open class CfnSlackChannelConfiguration internal constructor(
     override fun snsTopicArns(snsTopicArns: List<String>) {
       cdkBuilder.snsTopicArns(snsTopicArns)
     }
+
+    override fun snsTopicArns(vararg snsTopicArns: String): Unit =
+        snsTopicArns(snsTopicArns.toList())
 
     override fun userRoleRequired(userRoleRequired: Boolean) {
       cdkBuilder.userRoleRequired(userRoleRequired)

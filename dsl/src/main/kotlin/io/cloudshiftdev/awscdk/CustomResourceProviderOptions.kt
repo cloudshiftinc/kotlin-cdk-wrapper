@@ -29,6 +29,8 @@ public interface CustomResourceProviderOptions {
 
     public fun policyStatements(policyStatements: List<Any>)
 
+    public fun policyStatements(vararg policyStatements: Any)
+
     public fun timeout(timeout: Duration)
 
     public fun useCfnResponseWrapper(useCfnResponseWrapper: Boolean)
@@ -53,6 +55,9 @@ public interface CustomResourceProviderOptions {
     override fun policyStatements(policyStatements: List<Any>) {
       cdkBuilder.policyStatements(policyStatements)
     }
+
+    override fun policyStatements(vararg policyStatements: Any): Unit =
+        policyStatements(policyStatements.toList())
 
     override fun timeout(timeout: Duration) {
       cdkBuilder.timeout(timeout.let(Duration::unwrap))

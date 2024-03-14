@@ -48,6 +48,9 @@ public open class Trail internal constructor(
     unwrap(this).addLambdaEventSelector(handlers.map(IFunction::unwrap))
   }
 
+  public open fun addLambdaEventSelector(vararg handlers: IFunction): Unit =
+      addLambdaEventSelector(handlers.toList())
+
   public open fun addLambdaEventSelector(handlers: List<IFunction>,
       options: AddEventSelectorOptions) {
     unwrap(this).addLambdaEventSelector(handlers.map(IFunction::unwrap),
@@ -63,6 +66,9 @@ public open class Trail internal constructor(
   public open fun addS3EventSelector(s3Selector: List<S3EventSelector>) {
     unwrap(this).addS3EventSelector(s3Selector.map(S3EventSelector::unwrap))
   }
+
+  public open fun addS3EventSelector(vararg s3Selector: S3EventSelector): Unit =
+      addS3EventSelector(s3Selector.toList())
 
   public open fun addS3EventSelector(s3Selector: List<S3EventSelector>,
       options: AddEventSelectorOptions) {
@@ -123,6 +129,8 @@ public open class Trail internal constructor(
 
     public fun insightTypes(insightTypes: List<InsightType>)
 
+    public fun insightTypes(vararg insightTypes: InsightType)
+
     public fun isMultiRegionTrail(isMultiRegionTrail: Boolean)
 
     public fun isOrganizationTrail(isOrganizationTrail: Boolean)
@@ -174,6 +182,9 @@ public open class Trail internal constructor(
     override fun insightTypes(insightTypes: List<InsightType>) {
       cdkBuilder.insightTypes(insightTypes.map(InsightType::unwrap))
     }
+
+    override fun insightTypes(vararg insightTypes: InsightType): Unit =
+        insightTypes(insightTypes.toList())
 
     override fun isMultiRegionTrail(isMultiRegionTrail: Boolean) {
       cdkBuilder.isMultiRegionTrail(isMultiRegionTrail)

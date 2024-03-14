@@ -31,6 +31,9 @@ public open class CfnDBCluster internal constructor(
     unwrap(this).setAssociatedRoles(__idx_ac66f0)
   }
 
+  public open fun associatedRoles(vararg __idx_ac66f0: Any): Unit =
+      associatedRoles(__idx_ac66f0.toList())
+
   public open fun attrClusterResourceId(): String = unwrap(this).getAttrClusterResourceId()
 
   public open fun attrEndpoint(): String = unwrap(this).getAttrEndpoint()
@@ -45,6 +48,9 @@ public open class CfnDBCluster internal constructor(
   public open fun availabilityZones(`value`: List<String>) {
     unwrap(this).setAvailabilityZones(`value`)
   }
+
+  public open fun availabilityZones(vararg `value`: String): Unit =
+      availabilityZones(`value`.toList())
 
   public open fun backupRetentionPeriod(): Number? = unwrap(this).getBackupRetentionPeriod()
 
@@ -110,6 +116,9 @@ public open class CfnDBCluster internal constructor(
   public open fun enableCloudwatchLogsExports(`value`: List<String>) {
     unwrap(this).setEnableCloudwatchLogsExports(`value`)
   }
+
+  public open fun enableCloudwatchLogsExports(vararg `value`: String): Unit =
+      enableCloudwatchLogsExports(`value`.toList())
 
   public open fun engineVersion(): String? = unwrap(this).getEngineVersion()
 
@@ -210,6 +219,8 @@ public open class CfnDBCluster internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun useLatestRestorableTime(): Any? = unwrap(this).getUseLatestRestorableTime()
 
   public open fun useLatestRestorableTime(`value`: Boolean) {
@@ -227,12 +238,19 @@ public open class CfnDBCluster internal constructor(
     unwrap(this).setVpcSecurityGroupIds(`value`)
   }
 
+  public open fun vpcSecurityGroupIds(vararg `value`: String): Unit =
+      vpcSecurityGroupIds(`value`.toList())
+
   public interface Builder {
     public fun associatedRoles(associatedRoles: IResolvable)
 
     public fun associatedRoles(associatedRoles: List<Any>)
 
+    public fun associatedRoles(vararg associatedRoles: Any)
+
     public fun availabilityZones(availabilityZones: List<String>)
+
+    public fun availabilityZones(vararg availabilityZones: String)
 
     public fun backupRetentionPeriod(backupRetentionPeriod: Number)
 
@@ -255,6 +273,8 @@ public open class CfnDBCluster internal constructor(
     public fun deletionProtection(deletionProtection: IResolvable)
 
     public fun enableCloudwatchLogsExports(enableCloudwatchLogsExports: List<String>)
+
+    public fun enableCloudwatchLogsExports(vararg enableCloudwatchLogsExports: String)
 
     public fun engineVersion(engineVersion: String)
 
@@ -292,11 +312,15 @@ public open class CfnDBCluster internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun useLatestRestorableTime(useLatestRestorableTime: Boolean)
 
     public fun useLatestRestorableTime(useLatestRestorableTime: IResolvable)
 
     public fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>)
+
+    public fun vpcSecurityGroupIds(vararg vpcSecurityGroupIds: String)
   }
 
   private class BuilderImpl(
@@ -314,9 +338,15 @@ public open class CfnDBCluster internal constructor(
       cdkBuilder.associatedRoles(associatedRoles)
     }
 
+    override fun associatedRoles(vararg associatedRoles: Any): Unit =
+        associatedRoles(associatedRoles.toList())
+
     override fun availabilityZones(availabilityZones: List<String>) {
       cdkBuilder.availabilityZones(availabilityZones)
     }
+
+    override fun availabilityZones(vararg availabilityZones: String): Unit =
+        availabilityZones(availabilityZones.toList())
 
     override fun backupRetentionPeriod(backupRetentionPeriod: Number) {
       cdkBuilder.backupRetentionPeriod(backupRetentionPeriod)
@@ -361,6 +391,9 @@ public open class CfnDBCluster internal constructor(
     override fun enableCloudwatchLogsExports(enableCloudwatchLogsExports: List<String>) {
       cdkBuilder.enableCloudwatchLogsExports(enableCloudwatchLogsExports)
     }
+
+    override fun enableCloudwatchLogsExports(vararg enableCloudwatchLogsExports: String): Unit =
+        enableCloudwatchLogsExports(enableCloudwatchLogsExports.toList())
 
     override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
@@ -430,6 +463,8 @@ public open class CfnDBCluster internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun useLatestRestorableTime(useLatestRestorableTime: Boolean) {
       cdkBuilder.useLatestRestorableTime(useLatestRestorableTime)
     }
@@ -441,6 +476,9 @@ public open class CfnDBCluster internal constructor(
     override fun vpcSecurityGroupIds(vpcSecurityGroupIds: List<String>) {
       cdkBuilder.vpcSecurityGroupIds(vpcSecurityGroupIds)
     }
+
+    override fun vpcSecurityGroupIds(vararg vpcSecurityGroupIds: String): Unit =
+        vpcSecurityGroupIds(vpcSecurityGroupIds.toList())
 
     public fun build(): software.amazon.awscdk.services.neptune.CfnDBCluster = cdkBuilder.build()
   }

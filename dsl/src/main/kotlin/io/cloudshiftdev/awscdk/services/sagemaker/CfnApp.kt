@@ -67,6 +67,8 @@ public open class CfnApp internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun userProfileName(): String = unwrap(this).getUserProfileName()
 
   public open fun userProfileName(`value`: String) {
@@ -89,6 +91,8 @@ public open class CfnApp internal constructor(
     public fun resourceSpec(resourceSpec: ResourceSpecProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun userProfileName(userProfileName: String)
   }
@@ -128,6 +132,8 @@ public open class CfnApp internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun userProfileName(userProfileName: String) {
       cdkBuilder.userProfileName(userProfileName)

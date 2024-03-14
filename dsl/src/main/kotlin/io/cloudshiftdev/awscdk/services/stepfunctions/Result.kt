@@ -16,6 +16,8 @@ public open class Result internal constructor(
     public open fun fromArray(`value`: List<Any>): Result =
         software.amazon.awscdk.services.stepfunctions.Result.fromArray(`value`).let(Result::wrap)
 
+    public open fun fromArray(vararg `value`: Any): Result = fromArray(`value`.toList())
+
     public open fun fromBoolean(`value`: Boolean): Result =
         software.amazon.awscdk.services.stepfunctions.Result.fromBoolean(`value`).let(Result::wrap)
 

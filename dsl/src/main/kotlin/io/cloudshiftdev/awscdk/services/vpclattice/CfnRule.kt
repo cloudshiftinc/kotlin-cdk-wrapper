@@ -92,6 +92,8 @@ public open class CfnRule internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun action(action: IResolvable)
 
@@ -118,6 +120,8 @@ public open class CfnRule internal constructor(
     public fun serviceIdentifier(serviceIdentifier: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -171,6 +175,8 @@ public open class CfnRule internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.vpclattice.CfnRule = cdkBuilder.build()
   }
@@ -548,6 +554,8 @@ public open class CfnRule internal constructor(
       public fun targetGroups(targetGroups: IResolvable)
 
       public fun targetGroups(targetGroups: List<Any>)
+
+      public fun targetGroups(vararg targetGroups: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -562,6 +570,9 @@ public open class CfnRule internal constructor(
       override fun targetGroups(targetGroups: List<Any>) {
         cdkBuilder.targetGroups(targetGroups)
       }
+
+      override fun targetGroups(vararg targetGroups: Any): Unit =
+          targetGroups(targetGroups.toList())
 
       public fun build(): software.amazon.awscdk.services.vpclattice.CfnRule.ForwardProperty =
           cdkBuilder.build()
@@ -801,6 +812,8 @@ public open class CfnRule internal constructor(
 
       public fun headerMatches(headerMatches: List<Any>)
 
+      public fun headerMatches(vararg headerMatches: Any)
+
       public fun method(method: String)
 
       public fun pathMatch(pathMatch: IResolvable)
@@ -824,6 +837,9 @@ public open class CfnRule internal constructor(
       override fun headerMatches(headerMatches: List<Any>) {
         cdkBuilder.headerMatches(headerMatches)
       }
+
+      override fun headerMatches(vararg headerMatches: Any): Unit =
+          headerMatches(headerMatches.toList())
 
       override fun method(method: String) {
         cdkBuilder.method(method)

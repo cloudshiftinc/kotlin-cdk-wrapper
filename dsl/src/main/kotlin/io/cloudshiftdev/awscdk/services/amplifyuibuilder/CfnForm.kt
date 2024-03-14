@@ -432,6 +432,8 @@ public open class CfnForm internal constructor(
 
       public fun concat(concat: List<Any>)
 
+      public fun concat(vararg concat: Any)
+
       public fun `value`(`value`: String)
     }
 
@@ -464,6 +466,8 @@ public open class CfnForm internal constructor(
       override fun concat(concat: List<Any>) {
         cdkBuilder.concat(concat)
       }
+
+      override fun concat(vararg concat: Any): Unit = concat(concat.toList())
 
       override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
@@ -519,7 +523,11 @@ public open class CfnForm internal constructor(
 
       public fun numValues(numValues: List<Number>)
 
+      public fun numValues(vararg numValues: Number)
+
       public fun strValues(strValues: List<String>)
+
+      public fun strValues(vararg strValues: String)
 
       public fun type(type: String)
 
@@ -540,9 +548,13 @@ public open class CfnForm internal constructor(
         cdkBuilder.numValues(numValues)
       }
 
+      override fun numValues(vararg numValues: Number): Unit = numValues(numValues.toList())
+
       override fun strValues(strValues: List<String>) {
         cdkBuilder.strValues(strValues)
       }
+
+      override fun strValues(vararg strValues: String): Unit = strValues(strValues.toList())
 
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -607,6 +619,8 @@ public open class CfnForm internal constructor(
     public interface Builder {
       public fun acceptedFileTypes(acceptedFileTypes: List<String>)
 
+      public fun acceptedFileTypes(vararg acceptedFileTypes: String)
+
       public fun accessLevel(accessLevel: String)
 
       public fun isResumable(isResumable: Boolean)
@@ -631,6 +645,9 @@ public open class CfnForm internal constructor(
       override fun acceptedFileTypes(acceptedFileTypes: List<String>) {
         cdkBuilder.acceptedFileTypes(acceptedFileTypes)
       }
+
+      override fun acceptedFileTypes(vararg acceptedFileTypes: String): Unit =
+          acceptedFileTypes(acceptedFileTypes.toList())
 
       override fun accessLevel(accessLevel: String) {
         cdkBuilder.accessLevel(accessLevel)
@@ -669,8 +686,7 @@ public open class CfnForm internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FileUploaderFieldConfigProperty,
     ) : FileUploaderFieldConfigProperty {
-      override fun acceptedFileTypes(): List<String> = unwrap(this).getAcceptedFileTypes() ?:
-          emptyList()
+      override fun acceptedFileTypes(): List<String> = unwrap(this).getAcceptedFileTypes()
 
       override fun accessLevel(): String = unwrap(this).getAccessLevel()
 
@@ -1677,6 +1693,8 @@ public open class CfnForm internal constructor(
       public fun values(values: IResolvable)
 
       public fun values(values: List<Any>)
+
+      public fun values(vararg values: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1699,6 +1717,8 @@ public open class CfnForm internal constructor(
       override fun values(values: List<Any>) {
         cdkBuilder.values(values)
       }
+
+      override fun values(vararg values: Any): Unit = values(values.toList())
 
       public fun build():
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.ValueMappingsProperty =
@@ -1771,6 +1791,8 @@ public open class CfnForm internal constructor(
       public fun validations(validations: IResolvable)
 
       public fun validations(validations: List<Any>)
+
+      public fun validations(vararg validations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1823,6 +1845,8 @@ public open class CfnForm internal constructor(
       override fun validations(validations: List<Any>) {
         cdkBuilder.validations(validations)
       }
+
+      override fun validations(vararg validations: Any): Unit = validations(validations.toList())
 
       public fun build():
           software.amazon.awscdk.services.amplifyuibuilder.CfnForm.FieldConfigProperty =

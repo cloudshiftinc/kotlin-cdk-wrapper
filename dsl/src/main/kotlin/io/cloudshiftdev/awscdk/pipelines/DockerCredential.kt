@@ -60,6 +60,9 @@ public abstract class DockerCredential internal constructor(
     public open fun ecr(repositories: List<IRepository>): DockerCredential =
         software.amazon.awscdk.pipelines.DockerCredential.ecr(repositories.map(IRepository::unwrap)).let(DockerCredential::wrap)
 
+    public open fun ecr(vararg repositories: IRepository): DockerCredential =
+        ecr(repositories.toList())
+
     public open fun ecr(repositories: List<IRepository>, opts: EcrDockerCredentialOptions):
         DockerCredential =
         software.amazon.awscdk.pipelines.DockerCredential.ecr(repositories.map(IRepository::unwrap),

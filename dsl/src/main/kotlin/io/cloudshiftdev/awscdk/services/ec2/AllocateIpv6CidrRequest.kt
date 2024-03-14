@@ -12,7 +12,11 @@ public interface AllocateIpv6CidrRequest {
   public interface Builder {
     public fun allocatedSubnets(allocatedSubnets: List<AllocatedSubnet>)
 
+    public fun allocatedSubnets(vararg allocatedSubnets: AllocatedSubnet)
+
     public fun ipv6Cidrs(ipv6Cidrs: List<String>)
+
+    public fun ipv6Cidrs(vararg ipv6Cidrs: String)
   }
 
   private class BuilderImpl : Builder {
@@ -23,9 +27,14 @@ public interface AllocateIpv6CidrRequest {
       cdkBuilder.allocatedSubnets(allocatedSubnets.map(AllocatedSubnet::unwrap))
     }
 
+    override fun allocatedSubnets(vararg allocatedSubnets: AllocatedSubnet): Unit =
+        allocatedSubnets(allocatedSubnets.toList())
+
     override fun ipv6Cidrs(ipv6Cidrs: List<String>) {
       cdkBuilder.ipv6Cidrs(ipv6Cidrs)
     }
+
+    override fun ipv6Cidrs(vararg ipv6Cidrs: String): Unit = ipv6Cidrs(ipv6Cidrs.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.AllocateIpv6CidrRequest =
         cdkBuilder.build()
@@ -37,7 +46,7 @@ public interface AllocateIpv6CidrRequest {
     override fun allocatedSubnets(): List<AllocatedSubnet> =
         unwrap(this).getAllocatedSubnets().map(AllocatedSubnet::wrap)
 
-    override fun ipv6Cidrs(): List<String> = unwrap(this).getIpv6Cidrs() ?: emptyList()
+    override fun ipv6Cidrs(): List<String> = unwrap(this).getIpv6Cidrs()
   }
 
   public companion object {

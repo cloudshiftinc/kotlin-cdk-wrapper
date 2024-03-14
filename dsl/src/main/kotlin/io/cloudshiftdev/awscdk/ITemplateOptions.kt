@@ -2,6 +2,7 @@ package io.cloudshiftdev.awscdk
 
 import kotlin.Any
 import kotlin.String
+import kotlin.Unit
 import kotlin.collections.List
 import kotlin.collections.Map
 
@@ -30,6 +31,8 @@ public interface ITemplateOptions {
     unwrap(this).setTransforms(`value`)
   }
 
+  public fun transforms(vararg `value`: String): Unit = transforms(`value`.toList())
+
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.ITemplateOptions,
   ) : ITemplateOptions {
@@ -56,6 +59,8 @@ public interface ITemplateOptions {
     override fun transforms(`value`: List<String>) {
       unwrap(this).setTransforms(`value`)
     }
+
+    override fun transforms(vararg `value`: String): Unit = transforms(`value`.toList())
   }
 
   public companion object {

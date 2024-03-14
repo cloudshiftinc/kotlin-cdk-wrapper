@@ -21,11 +21,19 @@ public interface CorsRule {
   public interface Builder {
     public fun allowedHeaders(allowedHeaders: List<String>)
 
+    public fun allowedHeaders(vararg allowedHeaders: String)
+
     public fun allowedMethods(allowedMethods: List<HttpMethods>)
+
+    public fun allowedMethods(vararg allowedMethods: HttpMethods)
 
     public fun allowedOrigins(allowedOrigins: List<String>)
 
+    public fun allowedOrigins(vararg allowedOrigins: String)
+
     public fun exposedHeaders(exposedHeaders: List<String>)
+
+    public fun exposedHeaders(vararg exposedHeaders: String)
 
     public fun id(id: String)
 
@@ -40,17 +48,29 @@ public interface CorsRule {
       cdkBuilder.allowedHeaders(allowedHeaders)
     }
 
+    override fun allowedHeaders(vararg allowedHeaders: String): Unit =
+        allowedHeaders(allowedHeaders.toList())
+
     override fun allowedMethods(allowedMethods: List<HttpMethods>) {
       cdkBuilder.allowedMethods(allowedMethods.map(HttpMethods::unwrap))
     }
+
+    override fun allowedMethods(vararg allowedMethods: HttpMethods): Unit =
+        allowedMethods(allowedMethods.toList())
 
     override fun allowedOrigins(allowedOrigins: List<String>) {
       cdkBuilder.allowedOrigins(allowedOrigins)
     }
 
+    override fun allowedOrigins(vararg allowedOrigins: String): Unit =
+        allowedOrigins(allowedOrigins.toList())
+
     override fun exposedHeaders(exposedHeaders: List<String>) {
       cdkBuilder.exposedHeaders(exposedHeaders)
     }
+
+    override fun exposedHeaders(vararg exposedHeaders: String): Unit =
+        exposedHeaders(exposedHeaders.toList())
 
     override fun id(id: String) {
       cdkBuilder.id(id)
@@ -71,7 +91,7 @@ public interface CorsRule {
     override fun allowedMethods(): List<HttpMethods> =
         unwrap(this).getAllowedMethods().map(HttpMethods::wrap)
 
-    override fun allowedOrigins(): List<String> = unwrap(this).getAllowedOrigins() ?: emptyList()
+    override fun allowedOrigins(): List<String> = unwrap(this).getAllowedOrigins()
 
     override fun exposedHeaders(): List<String> = unwrap(this).getExposedHeaders() ?: emptyList()
 

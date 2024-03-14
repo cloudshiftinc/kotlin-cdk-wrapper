@@ -75,6 +75,8 @@ public open class CfnVirtualGateway internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun virtualGatewayName(): String? = unwrap(this).getVirtualGatewayName()
 
   public open fun virtualGatewayName(`value`: String) {
@@ -95,6 +97,8 @@ public open class CfnVirtualGateway internal constructor(
     public fun spec(spec: VirtualGatewaySpecProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun virtualGatewayName(virtualGatewayName: String)
   }
@@ -130,6 +134,8 @@ public open class CfnVirtualGateway internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun virtualGatewayName(virtualGatewayName: String) {
       cdkBuilder.virtualGatewayName(virtualGatewayName)
@@ -297,6 +303,8 @@ public open class CfnVirtualGateway internal constructor(
 
       public fun listeners(listeners: List<Any>)
 
+      public fun listeners(vararg listeners: Any)
+
       public fun logging(logging: IResolvable)
 
       public fun logging(logging: VirtualGatewayLoggingProperty)
@@ -333,6 +341,8 @@ public open class CfnVirtualGateway internal constructor(
       override fun listeners(listeners: List<Any>) {
         cdkBuilder.listeners(listeners)
       }
+
+      override fun listeners(vararg listeners: Any): Unit = listeners(listeners.toList())
 
       override fun logging(logging: IResolvable) {
         cdkBuilder.logging(logging.let(IResolvable::unwrap))
@@ -393,6 +403,8 @@ public open class CfnVirtualGateway internal constructor(
 
       public fun json(json: List<Any>)
 
+      public fun json(vararg json: Any)
+
       public fun text(text: String)
     }
 
@@ -408,6 +420,8 @@ public open class CfnVirtualGateway internal constructor(
       override fun json(json: List<Any>) {
         cdkBuilder.json(json)
       }
+
+      override fun json(vararg json: Any): Unit = json(json.toList())
 
       override fun text(text: String) {
         cdkBuilder.text(text)
@@ -1282,6 +1296,8 @@ public open class CfnVirtualGateway internal constructor(
 
     public interface Builder {
       public fun certificateAuthorityArns(certificateAuthorityArns: List<String>)
+
+      public fun certificateAuthorityArns(vararg certificateAuthorityArns: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1294,6 +1310,9 @@ public open class CfnVirtualGateway internal constructor(
         cdkBuilder.certificateAuthorityArns(certificateAuthorityArns)
       }
 
+      override fun certificateAuthorityArns(vararg certificateAuthorityArns: String): Unit =
+          certificateAuthorityArns(certificateAuthorityArns.toList())
+
       public fun build():
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextAcmTrustProperty
           = cdkBuilder.build()
@@ -1304,7 +1323,7 @@ public open class CfnVirtualGateway internal constructor(
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextAcmTrustProperty,
     ) : VirtualGatewayTlsValidationContextAcmTrustProperty {
       override fun certificateAuthorityArns(): List<String> =
-          unwrap(this).getCertificateAuthorityArns() ?: emptyList()
+          unwrap(this).getCertificateAuthorityArns()
     }
 
     public companion object {
@@ -1465,6 +1484,8 @@ public open class CfnVirtualGateway internal constructor(
 
       public fun ports(ports: List<Number>)
 
+      public fun ports(vararg ports: Number)
+
       public fun validation(validation: IResolvable)
 
       public fun validation(validation: VirtualGatewayTlsValidationContextProperty)
@@ -1510,6 +1531,8 @@ public open class CfnVirtualGateway internal constructor(
       override fun ports(ports: List<Number>) {
         cdkBuilder.ports(ports)
       }
+
+      override fun ports(vararg ports: Number): Unit = ports(ports.toList())
 
       override fun validation(validation: IResolvable) {
         cdkBuilder.validation(validation.let(IResolvable::unwrap))
@@ -1806,6 +1829,8 @@ public open class CfnVirtualGateway internal constructor(
 
     public interface Builder {
       public fun exact(exact: List<String>)
+
+      public fun exact(vararg exact: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1817,6 +1842,8 @@ public open class CfnVirtualGateway internal constructor(
       override fun exact(exact: List<String>) {
         cdkBuilder.exact(exact)
       }
+
+      override fun exact(vararg exact: String): Unit = exact(exact.toList())
 
       public fun build():
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNameMatchersProperty

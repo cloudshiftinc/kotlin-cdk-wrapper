@@ -72,6 +72,9 @@ public open class CfnComponent internal constructor(
     unwrap(this).setSupportedOsVersions(`value`)
   }
 
+  public open fun supportedOsVersions(vararg `value`: String): Unit =
+      supportedOsVersions(`value`.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): Map<String, String> = unwrap(this).getTagsRaw() ?: emptyMap()
@@ -106,6 +109,8 @@ public open class CfnComponent internal constructor(
     public fun platform(platform: String)
 
     public fun supportedOsVersions(supportedOsVersions: List<String>)
+
+    public fun supportedOsVersions(vararg supportedOsVersions: String)
 
     public fun tags(tags: Map<String, String>)
 
@@ -148,6 +153,9 @@ public open class CfnComponent internal constructor(
     override fun supportedOsVersions(supportedOsVersions: List<String>) {
       cdkBuilder.supportedOsVersions(supportedOsVersions)
     }
+
+    override fun supportedOsVersions(vararg supportedOsVersions: String): Unit =
+        supportedOsVersions(supportedOsVersions.toList())
 
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)

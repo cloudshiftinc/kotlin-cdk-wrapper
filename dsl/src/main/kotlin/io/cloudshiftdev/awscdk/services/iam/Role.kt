@@ -89,9 +89,13 @@ public open class Role internal constructor(
 
     public fun externalIds(externalIds: List<String>)
 
+    public fun externalIds(vararg externalIds: String)
+
     public fun inlinePolicies(inlinePolicies: Map<String, PolicyDocument>)
 
     public fun managedPolicies(managedPolicies: List<IManagedPolicy>)
+
+    public fun managedPolicies(vararg managedPolicies: IManagedPolicy)
 
     public fun maxSessionDuration(maxSessionDuration: Duration)
 
@@ -121,6 +125,8 @@ public open class Role internal constructor(
       cdkBuilder.externalIds(externalIds)
     }
 
+    override fun externalIds(vararg externalIds: String): Unit = externalIds(externalIds.toList())
+
     override fun inlinePolicies(inlinePolicies: Map<String, PolicyDocument>) {
       cdkBuilder.inlinePolicies(inlinePolicies.mapValues{PolicyDocument.unwrap(it.value)})
     }
@@ -128,6 +134,9 @@ public open class Role internal constructor(
     override fun managedPolicies(managedPolicies: List<IManagedPolicy>) {
       cdkBuilder.managedPolicies(managedPolicies.map(IManagedPolicy::unwrap))
     }
+
+    override fun managedPolicies(vararg managedPolicies: IManagedPolicy): Unit =
+        managedPolicies(managedPolicies.toList())
 
     override fun maxSessionDuration(maxSessionDuration: Duration) {
       cdkBuilder.maxSessionDuration(maxSessionDuration.let(Duration::unwrap))

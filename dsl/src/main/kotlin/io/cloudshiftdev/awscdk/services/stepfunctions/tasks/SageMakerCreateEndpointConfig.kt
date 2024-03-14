@@ -48,6 +48,8 @@ public open class SageMakerCreateEndpointConfig internal constructor(
 
     public fun productionVariants(productionVariants: List<ProductionVariant>)
 
+    public fun productionVariants(vararg productionVariants: ProductionVariant)
+
     public fun resultPath(resultPath: String)
 
     public fun resultSelector(resultSelector: Map<String, Any>)
@@ -116,6 +118,9 @@ public open class SageMakerCreateEndpointConfig internal constructor(
     override fun productionVariants(productionVariants: List<ProductionVariant>) {
       cdkBuilder.productionVariants(productionVariants.map(ProductionVariant::unwrap))
     }
+
+    override fun productionVariants(vararg productionVariants: ProductionVariant): Unit =
+        productionVariants(productionVariants.toList())
 
     override fun resultPath(resultPath: String) {
       cdkBuilder.resultPath(resultPath)

@@ -14,10 +14,14 @@ public open class QueryString internal constructor(
 
     public fun fields(fields: List<String>)
 
+    public fun fields(vararg fields: String)
+
     @Deprecated(message = "deprecated in CDK")
     public fun filter(filter: String)
 
     public fun filterStatements(filterStatements: List<String>)
+
+    public fun filterStatements(vararg filterStatements: String)
 
     public fun limit(limit: Number)
 
@@ -25,6 +29,8 @@ public open class QueryString internal constructor(
     public fun parse(parse: String)
 
     public fun parseStatements(parseStatements: List<String>)
+
+    public fun parseStatements(vararg parseStatements: String)
 
     public fun sort(sort: String)
 
@@ -43,6 +49,8 @@ public open class QueryString internal constructor(
       cdkBuilder.fields(fields)
     }
 
+    override fun fields(vararg fields: String): Unit = fields(fields.toList())
+
     @Deprecated(message = "deprecated in CDK")
     override fun filter(filter: String) {
       cdkBuilder.filter(filter)
@@ -51,6 +59,9 @@ public open class QueryString internal constructor(
     override fun filterStatements(filterStatements: List<String>) {
       cdkBuilder.filterStatements(filterStatements)
     }
+
+    override fun filterStatements(vararg filterStatements: String): Unit =
+        filterStatements(filterStatements.toList())
 
     override fun limit(limit: Number) {
       cdkBuilder.limit(limit)
@@ -64,6 +75,9 @@ public open class QueryString internal constructor(
     override fun parseStatements(parseStatements: List<String>) {
       cdkBuilder.parseStatements(parseStatements)
     }
+
+    override fun parseStatements(vararg parseStatements: String): Unit =
+        parseStatements(parseStatements.toList())
 
     override fun sort(sort: String) {
       cdkBuilder.sort(sort)

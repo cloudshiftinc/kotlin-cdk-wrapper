@@ -29,13 +29,21 @@ public interface CorsOptions {
 
     public fun allowHeaders(allowHeaders: List<String>)
 
+    public fun allowHeaders(vararg allowHeaders: String)
+
     public fun allowMethods(allowMethods: List<String>)
 
+    public fun allowMethods(vararg allowMethods: String)
+
     public fun allowOrigins(allowOrigins: List<String>)
+
+    public fun allowOrigins(vararg allowOrigins: String)
 
     public fun disableCache(disableCache: Boolean)
 
     public fun exposeHeaders(exposeHeaders: List<String>)
+
+    public fun exposeHeaders(vararg exposeHeaders: String)
 
     public fun maxAge(maxAge: Duration)
 
@@ -54,13 +62,22 @@ public interface CorsOptions {
       cdkBuilder.allowHeaders(allowHeaders)
     }
 
+    override fun allowHeaders(vararg allowHeaders: String): Unit =
+        allowHeaders(allowHeaders.toList())
+
     override fun allowMethods(allowMethods: List<String>) {
       cdkBuilder.allowMethods(allowMethods)
     }
 
+    override fun allowMethods(vararg allowMethods: String): Unit =
+        allowMethods(allowMethods.toList())
+
     override fun allowOrigins(allowOrigins: List<String>) {
       cdkBuilder.allowOrigins(allowOrigins)
     }
+
+    override fun allowOrigins(vararg allowOrigins: String): Unit =
+        allowOrigins(allowOrigins.toList())
 
     override fun disableCache(disableCache: Boolean) {
       cdkBuilder.disableCache(disableCache)
@@ -69,6 +86,9 @@ public interface CorsOptions {
     override fun exposeHeaders(exposeHeaders: List<String>) {
       cdkBuilder.exposeHeaders(exposeHeaders)
     }
+
+    override fun exposeHeaders(vararg exposeHeaders: String): Unit =
+        exposeHeaders(exposeHeaders.toList())
 
     override fun maxAge(maxAge: Duration) {
       cdkBuilder.maxAge(maxAge.let(Duration::unwrap))
@@ -90,7 +110,7 @@ public interface CorsOptions {
 
     override fun allowMethods(): List<String> = unwrap(this).getAllowMethods() ?: emptyList()
 
-    override fun allowOrigins(): List<String> = unwrap(this).getAllowOrigins() ?: emptyList()
+    override fun allowOrigins(): List<String> = unwrap(this).getAllowOrigins()
 
     override fun disableCache(): Boolean? = unwrap(this).getDisableCache()
 

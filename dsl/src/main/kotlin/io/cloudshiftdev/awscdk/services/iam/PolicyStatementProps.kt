@@ -30,19 +30,31 @@ public interface PolicyStatementProps {
   public interface Builder {
     public fun actions(actions: List<String>)
 
+    public fun actions(vararg actions: String)
+
     public fun conditions(conditions: Map<String, Any>)
 
     public fun effect(effect: Effect)
 
     public fun notActions(notActions: List<String>)
 
+    public fun notActions(vararg notActions: String)
+
     public fun notPrincipals(notPrincipals: List<IPrincipal>)
+
+    public fun notPrincipals(vararg notPrincipals: IPrincipal)
 
     public fun notResources(notResources: List<String>)
 
+    public fun notResources(vararg notResources: String)
+
     public fun principals(principals: List<IPrincipal>)
 
+    public fun principals(vararg principals: IPrincipal)
+
     public fun resources(resources: List<String>)
+
+    public fun resources(vararg resources: String)
 
     public fun sid(sid: String)
   }
@@ -54,6 +66,8 @@ public interface PolicyStatementProps {
     override fun actions(actions: List<String>) {
       cdkBuilder.actions(actions)
     }
+
+    override fun actions(vararg actions: String): Unit = actions(actions.toList())
 
     override fun conditions(conditions: Map<String, Any>) {
       cdkBuilder.conditions(conditions)
@@ -67,21 +81,33 @@ public interface PolicyStatementProps {
       cdkBuilder.notActions(notActions)
     }
 
+    override fun notActions(vararg notActions: String): Unit = notActions(notActions.toList())
+
     override fun notPrincipals(notPrincipals: List<IPrincipal>) {
       cdkBuilder.notPrincipals(notPrincipals.map(IPrincipal::unwrap))
     }
+
+    override fun notPrincipals(vararg notPrincipals: IPrincipal): Unit =
+        notPrincipals(notPrincipals.toList())
 
     override fun notResources(notResources: List<String>) {
       cdkBuilder.notResources(notResources)
     }
 
+    override fun notResources(vararg notResources: String): Unit =
+        notResources(notResources.toList())
+
     override fun principals(principals: List<IPrincipal>) {
       cdkBuilder.principals(principals.map(IPrincipal::unwrap))
     }
 
+    override fun principals(vararg principals: IPrincipal): Unit = principals(principals.toList())
+
     override fun resources(resources: List<String>) {
       cdkBuilder.resources(resources)
     }
+
+    override fun resources(vararg resources: String): Unit = resources(resources.toList())
 
     override fun sid(sid: String) {
       cdkBuilder.sid(sid)

@@ -16,6 +16,8 @@ public interface PosixUser {
 
     public fun secondaryGids(secondaryGids: List<String>)
 
+    public fun secondaryGids(vararg secondaryGids: String)
+
     public fun uid(uid: String)
   }
 
@@ -30,6 +32,9 @@ public interface PosixUser {
     override fun secondaryGids(secondaryGids: List<String>) {
       cdkBuilder.secondaryGids(secondaryGids)
     }
+
+    override fun secondaryGids(vararg secondaryGids: String): Unit =
+        secondaryGids(secondaryGids.toList())
 
     override fun uid(uid: String) {
       cdkBuilder.uid(uid)

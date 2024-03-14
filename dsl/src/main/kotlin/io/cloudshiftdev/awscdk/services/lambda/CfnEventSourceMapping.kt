@@ -131,6 +131,9 @@ public open class CfnEventSourceMapping internal constructor(
     unwrap(this).setFunctionResponseTypes(`value`)
   }
 
+  public open fun functionResponseTypes(vararg `value`: String): Unit =
+      functionResponseTypes(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -165,6 +168,8 @@ public open class CfnEventSourceMapping internal constructor(
   public open fun queues(`value`: List<String>) {
     unwrap(this).setQueues(`value`)
   }
+
+  public open fun queues(vararg `value`: String): Unit = queues(`value`.toList())
 
   public open fun scalingConfig(): Any? = unwrap(this).getScalingConfig()
 
@@ -225,6 +230,9 @@ public open class CfnEventSourceMapping internal constructor(
     unwrap(this).setSourceAccessConfigurations(__idx_ac66f0)
   }
 
+  public open fun sourceAccessConfigurations(vararg __idx_ac66f0: Any): Unit =
+      sourceAccessConfigurations(__idx_ac66f0.toList())
+
   public open fun startingPosition(): String? = unwrap(this).getStartingPosition()
 
   public open fun startingPosition(`value`: String) {
@@ -242,6 +250,8 @@ public open class CfnEventSourceMapping internal constructor(
   public open fun topics(`value`: List<String>) {
     unwrap(this).setTopics(`value`)
   }
+
+  public open fun topics(vararg `value`: String): Unit = topics(`value`.toList())
 
   public open fun tumblingWindowInSeconds(): Number? = unwrap(this).getTumblingWindowInSeconds()
 
@@ -302,6 +312,8 @@ public open class CfnEventSourceMapping internal constructor(
 
     public fun functionResponseTypes(functionResponseTypes: List<String>)
 
+    public fun functionResponseTypes(vararg functionResponseTypes: String)
+
     public fun maximumBatchingWindowInSeconds(maximumBatchingWindowInSeconds: Number)
 
     public fun maximumRecordAgeInSeconds(maximumRecordAgeInSeconds: Number)
@@ -311,6 +323,8 @@ public open class CfnEventSourceMapping internal constructor(
     public fun parallelizationFactor(parallelizationFactor: Number)
 
     public fun queues(queues: List<String>)
+
+    public fun queues(vararg queues: String)
 
     public fun scalingConfig(scalingConfig: IResolvable)
 
@@ -343,11 +357,15 @@ public open class CfnEventSourceMapping internal constructor(
 
     public fun sourceAccessConfigurations(sourceAccessConfigurations: List<Any>)
 
+    public fun sourceAccessConfigurations(vararg sourceAccessConfigurations: Any)
+
     public fun startingPosition(startingPosition: String)
 
     public fun startingPositionTimestamp(startingPositionTimestamp: Number)
 
     public fun topics(topics: List<String>)
+
+    public fun topics(vararg topics: String)
 
     public fun tumblingWindowInSeconds(tumblingWindowInSeconds: Number)
   }
@@ -450,6 +468,9 @@ public open class CfnEventSourceMapping internal constructor(
       cdkBuilder.functionResponseTypes(functionResponseTypes)
     }
 
+    override fun functionResponseTypes(vararg functionResponseTypes: String): Unit =
+        functionResponseTypes(functionResponseTypes.toList())
+
     override fun maximumBatchingWindowInSeconds(maximumBatchingWindowInSeconds: Number) {
       cdkBuilder.maximumBatchingWindowInSeconds(maximumBatchingWindowInSeconds)
     }
@@ -469,6 +490,8 @@ public open class CfnEventSourceMapping internal constructor(
     override fun queues(queues: List<String>) {
       cdkBuilder.queues(queues)
     }
+
+    override fun queues(vararg queues: String): Unit = queues(queues.toList())
 
     override fun scalingConfig(scalingConfig: IResolvable) {
       cdkBuilder.scalingConfig(scalingConfig.let(IResolvable::unwrap))
@@ -521,6 +544,9 @@ public open class CfnEventSourceMapping internal constructor(
       cdkBuilder.sourceAccessConfigurations(sourceAccessConfigurations)
     }
 
+    override fun sourceAccessConfigurations(vararg sourceAccessConfigurations: Any): Unit =
+        sourceAccessConfigurations(sourceAccessConfigurations.toList())
+
     override fun startingPosition(startingPosition: String) {
       cdkBuilder.startingPosition(startingPosition)
     }
@@ -532,6 +558,8 @@ public open class CfnEventSourceMapping internal constructor(
     override fun topics(topics: List<String>) {
       cdkBuilder.topics(topics)
     }
+
+    override fun topics(vararg topics: String): Unit = topics(topics.toList())
 
     override fun tumblingWindowInSeconds(tumblingWindowInSeconds: Number) {
       cdkBuilder.tumblingWindowInSeconds(tumblingWindowInSeconds)
@@ -781,6 +809,8 @@ public open class CfnEventSourceMapping internal constructor(
       public fun filters(filters: IResolvable)
 
       public fun filters(filters: List<Any>)
+
+      public fun filters(vararg filters: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -796,6 +826,8 @@ public open class CfnEventSourceMapping internal constructor(
       override fun filters(filters: List<Any>) {
         cdkBuilder.filters(filters)
       }
+
+      override fun filters(vararg filters: Any): Unit = filters(filters.toList())
 
       public fun build():
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.FilterCriteriaProperty =
@@ -1126,6 +1158,8 @@ public open class CfnEventSourceMapping internal constructor(
 
     public interface Builder {
       public fun kafkaBootstrapServers(kafkaBootstrapServers: List<String>)
+
+      public fun kafkaBootstrapServers(vararg kafkaBootstrapServers: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1136,6 +1170,9 @@ public open class CfnEventSourceMapping internal constructor(
       override fun kafkaBootstrapServers(kafkaBootstrapServers: List<String>) {
         cdkBuilder.kafkaBootstrapServers(kafkaBootstrapServers)
       }
+
+      override fun kafkaBootstrapServers(vararg kafkaBootstrapServers: String): Unit =
+          kafkaBootstrapServers(kafkaBootstrapServers.toList())
 
       public fun build():
           software.amazon.awscdk.services.lambda.CfnEventSourceMapping.EndpointsProperty =

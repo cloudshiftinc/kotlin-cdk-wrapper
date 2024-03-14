@@ -17,6 +17,8 @@ public interface ProjectNotifyOnOptions : NotificationRuleOptions {
 
     public fun events(events: List<ProjectNotificationEvents>)
 
+    public fun events(vararg events: ProjectNotificationEvents)
+
     public fun notificationRuleName(notificationRuleName: String)
   }
 
@@ -35,6 +37,8 @@ public interface ProjectNotifyOnOptions : NotificationRuleOptions {
     override fun events(events: List<ProjectNotificationEvents>) {
       cdkBuilder.events(events.map(ProjectNotificationEvents::unwrap))
     }
+
+    override fun events(vararg events: ProjectNotificationEvents): Unit = events(events.toList())
 
     override fun notificationRuleName(notificationRuleName: String) {
       cdkBuilder.notificationRuleName(notificationRuleName)

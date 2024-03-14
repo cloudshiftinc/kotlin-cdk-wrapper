@@ -17,6 +17,8 @@ public open class QueuePolicy internal constructor(
 
   public interface Builder {
     public fun queues(queues: List<IQueue>)
+
+    public fun queues(vararg queues: IQueue)
   }
 
   private class BuilderImpl(
@@ -29,6 +31,8 @@ public open class QueuePolicy internal constructor(
     override fun queues(queues: List<IQueue>) {
       cdkBuilder.queues(queues.map(IQueue::unwrap))
     }
+
+    override fun queues(vararg queues: IQueue): Unit = queues(queues.toList())
 
     public fun build(): software.amazon.awscdk.services.sqs.QueuePolicy = cdkBuilder.build()
   }

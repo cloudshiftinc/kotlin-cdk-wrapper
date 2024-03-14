@@ -13,6 +13,8 @@ public interface VirtualRouterBaseProps {
   public interface Builder {
     public fun listeners(listeners: List<VirtualRouterListener>)
 
+    public fun listeners(vararg listeners: VirtualRouterListener)
+
     public fun virtualRouterName(virtualRouterName: String)
   }
 
@@ -23,6 +25,9 @@ public interface VirtualRouterBaseProps {
     override fun listeners(listeners: List<VirtualRouterListener>) {
       cdkBuilder.listeners(listeners.map(VirtualRouterListener::unwrap))
     }
+
+    override fun listeners(vararg listeners: VirtualRouterListener): Unit =
+        listeners(listeners.toList())
 
     override fun virtualRouterName(virtualRouterName: String) {
       cdkBuilder.virtualRouterName(virtualRouterName)

@@ -25,16 +25,20 @@ public open class CfnQueuePolicy internal constructor(
     unwrap(this).setPolicyDocument(`value`)
   }
 
-  public open fun queues(): List<String> = unwrap(this).getQueues() ?: emptyList()
+  public open fun queues(): List<String> = unwrap(this).getQueues()
 
   public open fun queues(`value`: List<String>) {
     unwrap(this).setQueues(`value`)
   }
 
+  public open fun queues(vararg `value`: String): Unit = queues(`value`.toList())
+
   public interface Builder {
     public fun policyDocument(policyDocument: Any)
 
     public fun queues(queues: List<String>)
+
+    public fun queues(vararg queues: String)
   }
 
   private class BuilderImpl(
@@ -51,6 +55,8 @@ public open class CfnQueuePolicy internal constructor(
     override fun queues(queues: List<String>) {
       cdkBuilder.queues(queues)
     }
+
+    override fun queues(vararg queues: String): Unit = queues(queues.toList())
 
     public fun build(): software.amazon.awscdk.services.sqs.CfnQueuePolicy = cdkBuilder.build()
   }

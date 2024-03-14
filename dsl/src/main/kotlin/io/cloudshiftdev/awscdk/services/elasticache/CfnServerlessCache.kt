@@ -131,6 +131,9 @@ public open class CfnServerlessCache internal constructor(
     unwrap(this).setSecurityGroupIds(`value`)
   }
 
+  public open fun securityGroupIds(vararg `value`: String): Unit =
+      securityGroupIds(`value`.toList())
+
   public open fun serverlessCacheName(): String = unwrap(this).getServerlessCacheName()
 
   public open fun serverlessCacheName(`value`: String) {
@@ -144,6 +147,9 @@ public open class CfnServerlessCache internal constructor(
     unwrap(this).setSnapshotArnsToRestore(`value`)
   }
 
+  public open fun snapshotArnsToRestore(vararg `value`: String): Unit =
+      snapshotArnsToRestore(`value`.toList())
+
   public open fun snapshotRetentionLimit(): Number? = unwrap(this).getSnapshotRetentionLimit()
 
   public open fun snapshotRetentionLimit(`value`: Number) {
@@ -156,11 +162,15 @@ public open class CfnServerlessCache internal constructor(
     unwrap(this).setSubnetIds(`value`)
   }
 
+  public open fun subnetIds(vararg `value`: String): Unit = subnetIds(`value`.toList())
+
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   public open fun userGroupId(): String? = unwrap(this).getUserGroupId()
 
@@ -207,15 +217,23 @@ public open class CfnServerlessCache internal constructor(
 
     public fun securityGroupIds(securityGroupIds: List<String>)
 
+    public fun securityGroupIds(vararg securityGroupIds: String)
+
     public fun serverlessCacheName(serverlessCacheName: String)
 
     public fun snapshotArnsToRestore(snapshotArnsToRestore: List<String>)
+
+    public fun snapshotArnsToRestore(vararg snapshotArnsToRestore: String)
 
     public fun snapshotRetentionLimit(snapshotRetentionLimit: Number)
 
     public fun subnetIds(subnetIds: List<String>)
 
+    public fun subnetIds(vararg subnetIds: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun userGroupId(userGroupId: String)
   }
@@ -294,6 +312,9 @@ public open class CfnServerlessCache internal constructor(
       cdkBuilder.securityGroupIds(securityGroupIds)
     }
 
+    override fun securityGroupIds(vararg securityGroupIds: String): Unit =
+        securityGroupIds(securityGroupIds.toList())
+
     override fun serverlessCacheName(serverlessCacheName: String) {
       cdkBuilder.serverlessCacheName(serverlessCacheName)
     }
@@ -301,6 +322,9 @@ public open class CfnServerlessCache internal constructor(
     override fun snapshotArnsToRestore(snapshotArnsToRestore: List<String>) {
       cdkBuilder.snapshotArnsToRestore(snapshotArnsToRestore)
     }
+
+    override fun snapshotArnsToRestore(vararg snapshotArnsToRestore: String): Unit =
+        snapshotArnsToRestore(snapshotArnsToRestore.toList())
 
     override fun snapshotRetentionLimit(snapshotRetentionLimit: Number) {
       cdkBuilder.snapshotRetentionLimit(snapshotRetentionLimit)
@@ -310,9 +334,13 @@ public open class CfnServerlessCache internal constructor(
       cdkBuilder.subnetIds(subnetIds)
     }
 
+    override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun userGroupId(userGroupId: String) {
       cdkBuilder.userGroupId(userGroupId)

@@ -103,6 +103,8 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun trustProviderType(): String = unwrap(this).getTrustProviderType()
 
   public open fun trustProviderType(`value`: String) {
@@ -147,6 +149,8 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
     public fun sseSpecification(sseSpecification: SseSpecificationProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun trustProviderType(trustProviderType: String)
 
@@ -215,6 +219,8 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun trustProviderType(trustProviderType: String) {
       cdkBuilder.trustProviderType(trustProviderType)

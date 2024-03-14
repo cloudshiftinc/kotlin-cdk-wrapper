@@ -65,6 +65,9 @@ public open class CfnScalableTarget internal constructor(
     unwrap(this).setScheduledActions(__idx_ac66f0)
   }
 
+  public open fun scheduledActions(vararg __idx_ac66f0: Any): Unit =
+      scheduledActions(__idx_ac66f0.toList())
+
   public open fun serviceNamespace(): String = unwrap(this).getServiceNamespace()
 
   public open fun serviceNamespace(`value`: String) {
@@ -100,6 +103,8 @@ public open class CfnScalableTarget internal constructor(
     public fun scheduledActions(scheduledActions: IResolvable)
 
     public fun scheduledActions(scheduledActions: List<Any>)
+
+    public fun scheduledActions(vararg scheduledActions: Any)
 
     public fun serviceNamespace(serviceNamespace: String)
 
@@ -148,6 +153,9 @@ public open class CfnScalableTarget internal constructor(
     override fun scheduledActions(scheduledActions: List<Any>) {
       cdkBuilder.scheduledActions(scheduledActions)
     }
+
+    override fun scheduledActions(vararg scheduledActions: Any): Unit =
+        scheduledActions(scheduledActions.toList())
 
     override fun serviceNamespace(serviceNamespace: String) {
       cdkBuilder.serviceNamespace(serviceNamespace)

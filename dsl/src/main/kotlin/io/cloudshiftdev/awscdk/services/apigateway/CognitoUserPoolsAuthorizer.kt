@@ -23,6 +23,8 @@ public open class CognitoUserPoolsAuthorizer internal constructor(
 
     public fun cognitoUserPools(cognitoUserPools: List<IUserPool>)
 
+    public fun cognitoUserPools(vararg cognitoUserPools: IUserPool)
+
     public fun identitySource(identitySource: String)
 
     public fun resultsCacheTtl(resultsCacheTtl: Duration)
@@ -44,6 +46,9 @@ public open class CognitoUserPoolsAuthorizer internal constructor(
     override fun cognitoUserPools(cognitoUserPools: List<IUserPool>) {
       cdkBuilder.cognitoUserPools(cognitoUserPools.map(IUserPool::unwrap))
     }
+
+    override fun cognitoUserPools(vararg cognitoUserPools: IUserPool): Unit =
+        cognitoUserPools(cognitoUserPools.toList())
 
     override fun identitySource(identitySource: String) {
       cdkBuilder.identitySource(identitySource)

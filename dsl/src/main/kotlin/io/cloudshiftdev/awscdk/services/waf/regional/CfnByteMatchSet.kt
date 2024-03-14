@@ -28,6 +28,9 @@ public open class CfnByteMatchSet internal constructor(
     unwrap(this).setByteMatchTuples(__idx_ac66f0)
   }
 
+  public open fun byteMatchTuples(vararg __idx_ac66f0: Any): Unit =
+      byteMatchTuples(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -42,6 +45,8 @@ public open class CfnByteMatchSet internal constructor(
     public fun byteMatchTuples(byteMatchTuples: IResolvable)
 
     public fun byteMatchTuples(byteMatchTuples: List<Any>)
+
+    public fun byteMatchTuples(vararg byteMatchTuples: Any)
 
     public fun name(name: String)
   }
@@ -60,6 +65,9 @@ public open class CfnByteMatchSet internal constructor(
     override fun byteMatchTuples(byteMatchTuples: List<Any>) {
       cdkBuilder.byteMatchTuples(byteMatchTuples)
     }
+
+    override fun byteMatchTuples(vararg byteMatchTuples: Any): Unit =
+        byteMatchTuples(byteMatchTuples.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)

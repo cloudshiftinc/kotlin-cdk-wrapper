@@ -18,6 +18,8 @@ public interface LambdaIntegrationOptions : IntegrationOptions {
 
     public fun cacheKeyParameters(cacheKeyParameters: List<String>)
 
+    public fun cacheKeyParameters(vararg cacheKeyParameters: String)
+
     public fun cacheNamespace(cacheNamespace: String)
 
     public fun connectionType(connectionType: ConnectionType)
@@ -29,6 +31,8 @@ public interface LambdaIntegrationOptions : IntegrationOptions {
     public fun credentialsRole(credentialsRole: IRole)
 
     public fun integrationResponses(integrationResponses: List<IntegrationResponse>)
+
+    public fun integrationResponses(vararg integrationResponses: IntegrationResponse)
 
     public fun passthroughBehavior(passthroughBehavior: PassthroughBehavior)
 
@@ -56,6 +60,9 @@ public interface LambdaIntegrationOptions : IntegrationOptions {
       cdkBuilder.cacheKeyParameters(cacheKeyParameters)
     }
 
+    override fun cacheKeyParameters(vararg cacheKeyParameters: String): Unit =
+        cacheKeyParameters(cacheKeyParameters.toList())
+
     override fun cacheNamespace(cacheNamespace: String) {
       cdkBuilder.cacheNamespace(cacheNamespace)
     }
@@ -79,6 +86,9 @@ public interface LambdaIntegrationOptions : IntegrationOptions {
     override fun integrationResponses(integrationResponses: List<IntegrationResponse>) {
       cdkBuilder.integrationResponses(integrationResponses.map(IntegrationResponse::unwrap))
     }
+
+    override fun integrationResponses(vararg integrationResponses: IntegrationResponse): Unit =
+        integrationResponses(integrationResponses.toList())
 
     override fun passthroughBehavior(passthroughBehavior: PassthroughBehavior) {
       cdkBuilder.passthroughBehavior(passthroughBehavior.let(PassthroughBehavior::unwrap))

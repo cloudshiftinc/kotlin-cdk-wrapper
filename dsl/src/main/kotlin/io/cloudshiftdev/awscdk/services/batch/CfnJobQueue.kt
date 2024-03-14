@@ -30,6 +30,9 @@ public open class CfnJobQueue internal constructor(
     unwrap(this).setComputeEnvironmentOrder(__idx_ac66f0)
   }
 
+  public open fun computeEnvironmentOrder(vararg __idx_ac66f0: Any): Unit =
+      computeEnvironmentOrder(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -71,6 +74,8 @@ public open class CfnJobQueue internal constructor(
 
     public fun computeEnvironmentOrder(computeEnvironmentOrder: List<Any>)
 
+    public fun computeEnvironmentOrder(vararg computeEnvironmentOrder: Any)
+
     public fun jobQueueName(jobQueueName: String)
 
     public fun priority(priority: Number)
@@ -96,6 +101,9 @@ public open class CfnJobQueue internal constructor(
     override fun computeEnvironmentOrder(computeEnvironmentOrder: List<Any>) {
       cdkBuilder.computeEnvironmentOrder(computeEnvironmentOrder)
     }
+
+    override fun computeEnvironmentOrder(vararg computeEnvironmentOrder: Any): Unit =
+        computeEnvironmentOrder(computeEnvironmentOrder.toList())
 
     override fun jobQueueName(jobQueueName: String) {
       cdkBuilder.jobQueueName(jobQueueName)

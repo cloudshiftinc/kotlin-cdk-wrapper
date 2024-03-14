@@ -33,18 +33,22 @@ public open class CfnResourceSet internal constructor(
     unwrap(this).setName(`value`)
   }
 
-  public open fun resourceTypeList(): List<String> = unwrap(this).getResourceTypeList() ?:
-      emptyList()
+  public open fun resourceTypeList(): List<String> = unwrap(this).getResourceTypeList()
 
   public open fun resourceTypeList(`value`: List<String>) {
     unwrap(this).setResourceTypeList(`value`)
   }
+
+  public open fun resourceTypeList(vararg `value`: String): Unit =
+      resourceTypeList(`value`.toList())
 
   public open fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
 
   public open fun resources(`value`: List<String>) {
     unwrap(this).setResources(`value`)
   }
+
+  public open fun resources(vararg `value`: String): Unit = resources(`value`.toList())
 
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
@@ -55,6 +59,8 @@ public open class CfnResourceSet internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun description(description: String)
 
@@ -62,9 +68,15 @@ public open class CfnResourceSet internal constructor(
 
     public fun resourceTypeList(resourceTypeList: List<String>)
 
+    public fun resourceTypeList(vararg resourceTypeList: String)
+
     public fun resources(resources: List<String>)
 
+    public fun resources(vararg resources: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -86,13 +98,20 @@ public open class CfnResourceSet internal constructor(
       cdkBuilder.resourceTypeList(resourceTypeList)
     }
 
+    override fun resourceTypeList(vararg resourceTypeList: String): Unit =
+        resourceTypeList(resourceTypeList.toList())
+
     override fun resources(resources: List<String>) {
       cdkBuilder.resources(resources)
     }
 
+    override fun resources(vararg resources: String): Unit = resources(resources.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.fms.CfnResourceSet = cdkBuilder.build()
   }

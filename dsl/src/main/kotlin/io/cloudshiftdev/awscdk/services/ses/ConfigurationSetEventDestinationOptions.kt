@@ -24,6 +24,8 @@ public interface ConfigurationSetEventDestinationOptions {
     public fun enabled(enabled: Boolean)
 
     public fun events(events: List<EmailSendingEvent>)
+
+    public fun events(vararg events: EmailSendingEvent)
   }
 
   private class BuilderImpl : Builder {
@@ -47,6 +49,8 @@ public interface ConfigurationSetEventDestinationOptions {
     override fun events(events: List<EmailSendingEvent>) {
       cdkBuilder.events(events.map(EmailSendingEvent::unwrap))
     }
+
+    override fun events(vararg events: EmailSendingEvent): Unit = events(events.toList())
 
     public fun build(): software.amazon.awscdk.services.ses.ConfigurationSetEventDestinationOptions
         = cdkBuilder.build()

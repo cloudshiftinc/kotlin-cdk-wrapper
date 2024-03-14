@@ -30,6 +30,8 @@ public open class EndpointGroup internal constructor(
 
     public fun endpoints(endpoints: List<IEndpoint>)
 
+    public fun endpoints(vararg endpoints: IEndpoint)
+
     public fun healthCheckInterval(healthCheckInterval: Duration)
 
     public fun healthCheckPath(healthCheckPath: String)
@@ -43,6 +45,8 @@ public open class EndpointGroup internal constructor(
     public fun listener(listener: IListener)
 
     public fun portOverrides(portOverrides: List<PortOverride>)
+
+    public fun portOverrides(vararg portOverrides: PortOverride)
 
     public fun region(region: String)
 
@@ -63,6 +67,8 @@ public open class EndpointGroup internal constructor(
     override fun endpoints(endpoints: List<IEndpoint>) {
       cdkBuilder.endpoints(endpoints.map(IEndpoint::unwrap))
     }
+
+    override fun endpoints(vararg endpoints: IEndpoint): Unit = endpoints(endpoints.toList())
 
     override fun healthCheckInterval(healthCheckInterval: Duration) {
       cdkBuilder.healthCheckInterval(healthCheckInterval.let(Duration::unwrap))
@@ -91,6 +97,9 @@ public open class EndpointGroup internal constructor(
     override fun portOverrides(portOverrides: List<PortOverride>) {
       cdkBuilder.portOverrides(portOverrides.map(PortOverride::unwrap))
     }
+
+    override fun portOverrides(vararg portOverrides: PortOverride): Unit =
+        portOverrides(portOverrides.toList())
 
     override fun region(region: String) {
       cdkBuilder.region(region)

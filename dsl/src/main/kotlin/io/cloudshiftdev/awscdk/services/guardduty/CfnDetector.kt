@@ -56,6 +56,8 @@ public open class CfnDetector internal constructor(
     unwrap(this).setFeatures(__idx_ac66f0)
   }
 
+  public open fun features(vararg __idx_ac66f0: Any): Unit = features(__idx_ac66f0.toList())
+
   public open fun findingPublishingFrequency(): String? =
       unwrap(this).getFindingPublishingFrequency()
 
@@ -76,6 +78,8 @@ public open class CfnDetector internal constructor(
     unwrap(this).setTagsRaw(`value`.map(TagItemProperty::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: TagItemProperty): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun dataSources(dataSources: IResolvable)
 
@@ -93,9 +97,13 @@ public open class CfnDetector internal constructor(
 
     public fun features(features: List<Any>)
 
+    public fun features(vararg features: Any)
+
     public fun findingPublishingFrequency(findingPublishingFrequency: String)
 
     public fun tags(tags: List<TagItemProperty>)
+
+    public fun tags(vararg tags: TagItemProperty)
   }
 
   private class BuilderImpl(
@@ -134,6 +142,8 @@ public open class CfnDetector internal constructor(
       cdkBuilder.features(features)
     }
 
+    override fun features(vararg features: Any): Unit = features(features.toList())
+
     override fun findingPublishingFrequency(findingPublishingFrequency: String) {
       cdkBuilder.findingPublishingFrequency(findingPublishingFrequency)
     }
@@ -141,6 +151,8 @@ public open class CfnDetector internal constructor(
     override fun tags(tags: List<TagItemProperty>) {
       cdkBuilder.tags(tags.map(TagItemProperty::unwrap))
     }
+
+    override fun tags(vararg tags: TagItemProperty): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.guardduty.CfnDetector = cdkBuilder.build()
   }
@@ -462,6 +474,8 @@ public open class CfnDetector internal constructor(
 
       public fun additionalConfiguration(additionalConfiguration: List<Any>)
 
+      public fun additionalConfiguration(vararg additionalConfiguration: Any)
+
       public fun name(name: String)
 
       public fun status(status: String)
@@ -480,6 +494,9 @@ public open class CfnDetector internal constructor(
       override fun additionalConfiguration(additionalConfiguration: List<Any>) {
         cdkBuilder.additionalConfiguration(additionalConfiguration)
       }
+
+      override fun additionalConfiguration(vararg additionalConfiguration: Any): Unit =
+          additionalConfiguration(additionalConfiguration.toList())
 
       override fun name(name: String) {
         cdkBuilder.name(name)

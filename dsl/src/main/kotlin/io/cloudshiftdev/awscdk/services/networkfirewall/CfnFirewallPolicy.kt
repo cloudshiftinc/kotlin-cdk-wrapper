@@ -65,6 +65,8 @@ public open class CfnFirewallPolicy internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun description(description: String)
 
@@ -79,6 +81,8 @@ public open class CfnFirewallPolicy internal constructor(
     public fun firewallPolicyName(firewallPolicyName: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -114,6 +118,8 @@ public open class CfnFirewallPolicy internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     public fun build(): software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy =
         cdkBuilder.build()
   }
@@ -146,6 +152,8 @@ public open class CfnFirewallPolicy internal constructor(
       public fun dimensions(dimensions: IResolvable)
 
       public fun dimensions(dimensions: List<Any>)
+
+      public fun dimensions(vararg dimensions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -161,6 +169,8 @@ public open class CfnFirewallPolicy internal constructor(
       override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
+
+      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
 
       public fun build():
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PublishMetricActionProperty
@@ -674,6 +684,8 @@ public open class CfnFirewallPolicy internal constructor(
 
       public fun statefulDefaultActions(statefulDefaultActions: List<String>)
 
+      public fun statefulDefaultActions(vararg statefulDefaultActions: String)
+
       public fun statefulEngineOptions(statefulEngineOptions: IResolvable)
 
       public fun statefulEngineOptions(statefulEngineOptions: StatefulEngineOptionsProperty)
@@ -687,17 +699,27 @@ public open class CfnFirewallPolicy internal constructor(
 
       public fun statefulRuleGroupReferences(statefulRuleGroupReferences: List<Any>)
 
+      public fun statefulRuleGroupReferences(vararg statefulRuleGroupReferences: Any)
+
       public fun statelessCustomActions(statelessCustomActions: IResolvable)
 
       public fun statelessCustomActions(statelessCustomActions: List<Any>)
 
+      public fun statelessCustomActions(vararg statelessCustomActions: Any)
+
       public fun statelessDefaultActions(statelessDefaultActions: List<String>)
 
+      public fun statelessDefaultActions(vararg statelessDefaultActions: String)
+
       public fun statelessFragmentDefaultActions(statelessFragmentDefaultActions: List<String>)
+
+      public fun statelessFragmentDefaultActions(vararg statelessFragmentDefaultActions: String)
 
       public fun statelessRuleGroupReferences(statelessRuleGroupReferences: IResolvable)
 
       public fun statelessRuleGroupReferences(statelessRuleGroupReferences: List<Any>)
+
+      public fun statelessRuleGroupReferences(vararg statelessRuleGroupReferences: Any)
 
       public fun tlsInspectionConfigurationArn(tlsInspectionConfigurationArn: String)
     }
@@ -725,6 +747,9 @@ public open class CfnFirewallPolicy internal constructor(
         cdkBuilder.statefulDefaultActions(statefulDefaultActions)
       }
 
+      override fun statefulDefaultActions(vararg statefulDefaultActions: String): Unit =
+          statefulDefaultActions(statefulDefaultActions.toList())
+
       override fun statefulEngineOptions(statefulEngineOptions: IResolvable) {
         cdkBuilder.statefulEngineOptions(statefulEngineOptions.let(IResolvable::unwrap))
       }
@@ -747,6 +772,9 @@ public open class CfnFirewallPolicy internal constructor(
         cdkBuilder.statefulRuleGroupReferences(statefulRuleGroupReferences)
       }
 
+      override fun statefulRuleGroupReferences(vararg statefulRuleGroupReferences: Any): Unit =
+          statefulRuleGroupReferences(statefulRuleGroupReferences.toList())
+
       override fun statelessCustomActions(statelessCustomActions: IResolvable) {
         cdkBuilder.statelessCustomActions(statelessCustomActions.let(IResolvable::unwrap))
       }
@@ -755,13 +783,22 @@ public open class CfnFirewallPolicy internal constructor(
         cdkBuilder.statelessCustomActions(statelessCustomActions)
       }
 
+      override fun statelessCustomActions(vararg statelessCustomActions: Any): Unit =
+          statelessCustomActions(statelessCustomActions.toList())
+
       override fun statelessDefaultActions(statelessDefaultActions: List<String>) {
         cdkBuilder.statelessDefaultActions(statelessDefaultActions)
       }
 
+      override fun statelessDefaultActions(vararg statelessDefaultActions: String): Unit =
+          statelessDefaultActions(statelessDefaultActions.toList())
+
       override fun statelessFragmentDefaultActions(statelessFragmentDefaultActions: List<String>) {
         cdkBuilder.statelessFragmentDefaultActions(statelessFragmentDefaultActions)
       }
+
+      override fun statelessFragmentDefaultActions(vararg statelessFragmentDefaultActions: String):
+          Unit = statelessFragmentDefaultActions(statelessFragmentDefaultActions.toList())
 
       override fun statelessRuleGroupReferences(statelessRuleGroupReferences: IResolvable) {
         cdkBuilder.statelessRuleGroupReferences(statelessRuleGroupReferences.let(IResolvable::unwrap))
@@ -770,6 +807,9 @@ public open class CfnFirewallPolicy internal constructor(
       override fun statelessRuleGroupReferences(statelessRuleGroupReferences: List<Any>) {
         cdkBuilder.statelessRuleGroupReferences(statelessRuleGroupReferences)
       }
+
+      override fun statelessRuleGroupReferences(vararg statelessRuleGroupReferences: Any): Unit =
+          statelessRuleGroupReferences(statelessRuleGroupReferences.toList())
 
       override fun tlsInspectionConfigurationArn(tlsInspectionConfigurationArn: String) {
         cdkBuilder.tlsInspectionConfigurationArn(tlsInspectionConfigurationArn)
@@ -797,10 +837,10 @@ public open class CfnFirewallPolicy internal constructor(
       override fun statelessCustomActions(): Any? = unwrap(this).getStatelessCustomActions()
 
       override fun statelessDefaultActions(): List<String> =
-          unwrap(this).getStatelessDefaultActions() ?: emptyList()
+          unwrap(this).getStatelessDefaultActions()
 
       override fun statelessFragmentDefaultActions(): List<String> =
-          unwrap(this).getStatelessFragmentDefaultActions() ?: emptyList()
+          unwrap(this).getStatelessFragmentDefaultActions()
 
       override fun statelessRuleGroupReferences(): Any? =
           unwrap(this).getStatelessRuleGroupReferences()
@@ -884,6 +924,8 @@ public open class CfnFirewallPolicy internal constructor(
 
     public interface Builder {
       public fun definition(definition: List<String>)
+
+      public fun definition(vararg definition: String)
     }
 
     private class BuilderImpl : Builder {
@@ -894,6 +936,8 @@ public open class CfnFirewallPolicy internal constructor(
       override fun definition(definition: List<String>) {
         cdkBuilder.definition(definition)
       }
+
+      override fun definition(vararg definition: String): Unit = definition(definition.toList())
 
       public fun build():
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.IPSetProperty =

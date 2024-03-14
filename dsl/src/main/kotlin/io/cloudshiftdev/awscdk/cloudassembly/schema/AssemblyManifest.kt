@@ -1,5 +1,12 @@
 package io.cloudshiftdev.awscdk.cloudassembly.schema
 
+import kotlin.String
+import kotlin.Suppress
+import kotlin.Unit
+import kotlin.collections.List
+import kotlin.collections.Map
+import kotlin.jvm.JvmName
+
 public interface AssemblyManifest {
   public fun artifacts(): Map<String, ArtifactManifest> =
       unwrap(this).getArtifacts()?.mapValues{ArtifactManifest.wrap(it.value)} ?: emptyMap()
@@ -15,6 +22,8 @@ public interface AssemblyManifest {
     public fun artifacts(artifacts: Map<String, ArtifactManifest>)
 
     public fun missing(missing: List<MissingContext>)
+
+    public fun missing(vararg missing: MissingContext)
 
     public fun runtime(runtime: RuntimeInfo)
 
@@ -36,6 +45,8 @@ public interface AssemblyManifest {
     override fun missing(missing: List<MissingContext>) {
       cdkBuilder.missing(missing.map(MissingContext::unwrap))
     }
+
+    override fun missing(vararg missing: MissingContext): Unit = missing(missing.toList())
 
     override fun runtime(runtime: RuntimeInfo) {
       cdkBuilder.runtime(runtime.let(RuntimeInfo::unwrap))

@@ -18,6 +18,8 @@ public interface Tmpfs {
 
     public fun mountOptions(mountOptions: List<TmpfsMountOption>)
 
+    public fun mountOptions(vararg mountOptions: TmpfsMountOption)
+
     public fun size(size: Size)
   }
 
@@ -32,6 +34,9 @@ public interface Tmpfs {
     override fun mountOptions(mountOptions: List<TmpfsMountOption>) {
       cdkBuilder.mountOptions(mountOptions.map(TmpfsMountOption::unwrap))
     }
+
+    override fun mountOptions(vararg mountOptions: TmpfsMountOption): Unit =
+        mountOptions(mountOptions.toList())
 
     override fun size(size: Size) {
       cdkBuilder.size(size.let(Size::unwrap))

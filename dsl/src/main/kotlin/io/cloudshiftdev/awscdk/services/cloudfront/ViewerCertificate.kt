@@ -10,7 +10,7 @@ import kotlin.jvm.JvmName
 public open class ViewerCertificate internal constructor(
   private val cdkObject: software.amazon.awscdk.services.cloudfront.ViewerCertificate,
 ) {
-  public open fun aliases(): List<String> = unwrap(this).getAliases() ?: emptyList()
+  public open fun aliases(): List<String> = unwrap(this).getAliases()
 
   public open fun props(): CfnDistribution.ViewerCertificateProperty =
       unwrap(this).getProps().let(CfnDistribution.ViewerCertificateProperty::wrap)

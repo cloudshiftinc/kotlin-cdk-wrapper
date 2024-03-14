@@ -25,11 +25,19 @@ public interface CorsPreflightOptions {
 
     public fun allowHeaders(allowHeaders: List<String>)
 
+    public fun allowHeaders(vararg allowHeaders: String)
+
     public fun allowMethods(allowMethods: List<CorsHttpMethod>)
+
+    public fun allowMethods(vararg allowMethods: CorsHttpMethod)
 
     public fun allowOrigins(allowOrigins: List<String>)
 
+    public fun allowOrigins(vararg allowOrigins: String)
+
     public fun exposeHeaders(exposeHeaders: List<String>)
+
+    public fun exposeHeaders(vararg exposeHeaders: String)
 
     public fun maxAge(maxAge: Duration)
   }
@@ -47,17 +55,29 @@ public interface CorsPreflightOptions {
       cdkBuilder.allowHeaders(allowHeaders)
     }
 
+    override fun allowHeaders(vararg allowHeaders: String): Unit =
+        allowHeaders(allowHeaders.toList())
+
     override fun allowMethods(allowMethods: List<CorsHttpMethod>) {
       cdkBuilder.allowMethods(allowMethods.map(CorsHttpMethod::unwrap))
     }
+
+    override fun allowMethods(vararg allowMethods: CorsHttpMethod): Unit =
+        allowMethods(allowMethods.toList())
 
     override fun allowOrigins(allowOrigins: List<String>) {
       cdkBuilder.allowOrigins(allowOrigins)
     }
 
+    override fun allowOrigins(vararg allowOrigins: String): Unit =
+        allowOrigins(allowOrigins.toList())
+
     override fun exposeHeaders(exposeHeaders: List<String>) {
       cdkBuilder.exposeHeaders(exposeHeaders)
     }
+
+    override fun exposeHeaders(vararg exposeHeaders: String): Unit =
+        exposeHeaders(exposeHeaders.toList())
 
     override fun maxAge(maxAge: Duration) {
       cdkBuilder.maxAge(maxAge.let(Duration::unwrap))

@@ -47,6 +47,8 @@ public open class CfnThingType internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun thingTypeName(): String? = unwrap(this).getThingTypeName()
 
   public open fun thingTypeName(`value`: String) {
@@ -74,6 +76,8 @@ public open class CfnThingType internal constructor(
     public fun deprecateThingType(deprecateThingType: IResolvable)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun thingTypeName(thingTypeName: String)
 
@@ -105,6 +109,8 @@ public open class CfnThingType internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun thingTypeName(thingTypeName: String) {
       cdkBuilder.thingTypeName(thingTypeName)
@@ -157,6 +163,8 @@ public open class CfnThingType internal constructor(
     public interface Builder {
       public fun searchableAttributes(searchableAttributes: List<String>)
 
+      public fun searchableAttributes(vararg searchableAttributes: String)
+
       public fun thingTypeDescription(thingTypeDescription: String)
     }
 
@@ -168,6 +176,9 @@ public open class CfnThingType internal constructor(
       override fun searchableAttributes(searchableAttributes: List<String>) {
         cdkBuilder.searchableAttributes(searchableAttributes)
       }
+
+      override fun searchableAttributes(vararg searchableAttributes: String): Unit =
+          searchableAttributes(searchableAttributes.toList())
 
       override fun thingTypeDescription(thingTypeDescription: String) {
         cdkBuilder.thingTypeDescription(thingTypeDescription)

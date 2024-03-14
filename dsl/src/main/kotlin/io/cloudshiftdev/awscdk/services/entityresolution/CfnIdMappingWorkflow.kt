@@ -60,6 +60,9 @@ public open class CfnIdMappingWorkflow internal constructor(
     unwrap(this).setInputSourceConfig(__idx_ac66f0)
   }
 
+  public open fun inputSourceConfig(vararg __idx_ac66f0: Any): Unit =
+      inputSourceConfig(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -74,6 +77,9 @@ public open class CfnIdMappingWorkflow internal constructor(
     unwrap(this).setOutputSourceConfig(__idx_ac66f0)
   }
 
+  public open fun outputSourceConfig(vararg __idx_ac66f0: Any): Unit =
+      outputSourceConfig(__idx_ac66f0.toList())
+
   public open fun roleArn(): String = unwrap(this).getRoleArn()
 
   public open fun roleArn(`value`: String) {
@@ -85,6 +91,8 @@ public open class CfnIdMappingWorkflow internal constructor(
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   public open fun workflowName(): String = unwrap(this).getWorkflowName()
 
@@ -108,13 +116,19 @@ public open class CfnIdMappingWorkflow internal constructor(
 
     public fun inputSourceConfig(inputSourceConfig: List<Any>)
 
+    public fun inputSourceConfig(vararg inputSourceConfig: Any)
+
     public fun outputSourceConfig(outputSourceConfig: IResolvable)
 
     public fun outputSourceConfig(outputSourceConfig: List<Any>)
 
+    public fun outputSourceConfig(vararg outputSourceConfig: Any)
+
     public fun roleArn(roleArn: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun workflowName(workflowName: String)
   }
@@ -154,6 +168,9 @@ public open class CfnIdMappingWorkflow internal constructor(
       cdkBuilder.inputSourceConfig(inputSourceConfig)
     }
 
+    override fun inputSourceConfig(vararg inputSourceConfig: Any): Unit =
+        inputSourceConfig(inputSourceConfig.toList())
+
     override fun outputSourceConfig(outputSourceConfig: IResolvable) {
       cdkBuilder.outputSourceConfig(outputSourceConfig.let(IResolvable::unwrap))
     }
@@ -162,6 +179,9 @@ public open class CfnIdMappingWorkflow internal constructor(
       cdkBuilder.outputSourceConfig(outputSourceConfig)
     }
 
+    override fun outputSourceConfig(vararg outputSourceConfig: Any): Unit =
+        outputSourceConfig(outputSourceConfig.toList())
+
     override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
@@ -169,6 +189,8 @@ public open class CfnIdMappingWorkflow internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun workflowName(workflowName: String) {
       cdkBuilder.workflowName(workflowName)

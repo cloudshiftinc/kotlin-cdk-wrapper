@@ -119,6 +119,8 @@ public open class Table internal constructor(
 
     public fun replicationRegions(replicationRegions: List<String>)
 
+    public fun replicationRegions(vararg replicationRegions: String)
+
     public fun replicationTimeout(replicationTimeout: Duration)
 
     public fun sortKey(sortKey: Attribute)
@@ -204,6 +206,9 @@ public open class Table internal constructor(
     override fun replicationRegions(replicationRegions: List<String>) {
       cdkBuilder.replicationRegions(replicationRegions)
     }
+
+    override fun replicationRegions(vararg replicationRegions: String): Unit =
+        replicationRegions(replicationRegions.toList())
 
     override fun replicationTimeout(replicationTimeout: Duration) {
       cdkBuilder.replicationTimeout(replicationTimeout.let(Duration::unwrap))

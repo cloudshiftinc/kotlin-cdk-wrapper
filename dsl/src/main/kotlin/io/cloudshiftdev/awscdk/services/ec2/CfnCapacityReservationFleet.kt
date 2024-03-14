@@ -52,6 +52,9 @@ public open class CfnCapacityReservationFleet internal constructor(
     unwrap(this).setInstanceTypeSpecifications(__idx_ac66f0)
   }
 
+  public open fun instanceTypeSpecifications(vararg __idx_ac66f0: Any): Unit =
+      instanceTypeSpecifications(__idx_ac66f0.toList())
+
   public open fun noRemoveEndDate(): Any? = unwrap(this).getNoRemoveEndDate()
 
   public open fun noRemoveEndDate(`value`: Boolean) {
@@ -82,6 +85,9 @@ public open class CfnCapacityReservationFleet internal constructor(
     unwrap(this).setTagSpecifications(__idx_ac66f0)
   }
 
+  public open fun tagSpecifications(vararg __idx_ac66f0: Any): Unit =
+      tagSpecifications(__idx_ac66f0.toList())
+
   public open fun tenancy(): String? = unwrap(this).getTenancy()
 
   public open fun tenancy(`value`: String) {
@@ -105,6 +111,8 @@ public open class CfnCapacityReservationFleet internal constructor(
 
     public fun instanceTypeSpecifications(instanceTypeSpecifications: List<Any>)
 
+    public fun instanceTypeSpecifications(vararg instanceTypeSpecifications: Any)
+
     public fun noRemoveEndDate(noRemoveEndDate: Boolean)
 
     public fun noRemoveEndDate(noRemoveEndDate: IResolvable)
@@ -116,6 +124,8 @@ public open class CfnCapacityReservationFleet internal constructor(
     public fun tagSpecifications(tagSpecifications: IResolvable)
 
     public fun tagSpecifications(tagSpecifications: List<Any>)
+
+    public fun tagSpecifications(vararg tagSpecifications: Any)
 
     public fun tenancy(tenancy: String)
 
@@ -149,6 +159,9 @@ public open class CfnCapacityReservationFleet internal constructor(
       cdkBuilder.instanceTypeSpecifications(instanceTypeSpecifications)
     }
 
+    override fun instanceTypeSpecifications(vararg instanceTypeSpecifications: Any): Unit =
+        instanceTypeSpecifications(instanceTypeSpecifications.toList())
+
     override fun noRemoveEndDate(noRemoveEndDate: Boolean) {
       cdkBuilder.noRemoveEndDate(noRemoveEndDate)
     }
@@ -172,6 +185,9 @@ public open class CfnCapacityReservationFleet internal constructor(
     override fun tagSpecifications(tagSpecifications: List<Any>) {
       cdkBuilder.tagSpecifications(tagSpecifications)
     }
+
+    override fun tagSpecifications(vararg tagSpecifications: Any): Unit =
+        tagSpecifications(tagSpecifications.toList())
 
     override fun tenancy(tenancy: String) {
       cdkBuilder.tenancy(tenancy)
@@ -215,6 +231,8 @@ public open class CfnCapacityReservationFleet internal constructor(
       public fun resourceType(resourceType: String)
 
       public fun tags(tags: List<CfnTag>)
+
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
@@ -230,6 +248,8 @@ public open class CfnCapacityReservationFleet internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       public fun build():
           software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet.TagSpecificationProperty =

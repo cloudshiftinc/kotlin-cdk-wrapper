@@ -78,6 +78,8 @@ public open class CfnProject internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun projectDescription(projectDescription: String)
 
@@ -97,6 +99,8 @@ public open class CfnProject internal constructor(
     public fun serviceCatalogProvisioningDetails(serviceCatalogProvisioningDetails: Any)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -138,6 +142,8 @@ public open class CfnProject internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.sagemaker.CfnProject = cdkBuilder.build()
   }
@@ -182,6 +188,8 @@ public open class CfnProject internal constructor(
       public fun provisioningParameters(provisioningParameters: IResolvable)
 
       public fun provisioningParameters(provisioningParameters: List<Any>)
+
+      public fun provisioningParameters(vararg provisioningParameters: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -209,6 +217,9 @@ public open class CfnProject internal constructor(
       override fun provisioningParameters(provisioningParameters: List<Any>) {
         cdkBuilder.provisioningParameters(provisioningParameters)
       }
+
+      override fun provisioningParameters(vararg provisioningParameters: Any): Unit =
+          provisioningParameters(provisioningParameters.toList())
 
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty

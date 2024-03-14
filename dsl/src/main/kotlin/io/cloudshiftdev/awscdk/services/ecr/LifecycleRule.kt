@@ -32,7 +32,11 @@ public interface LifecycleRule {
 
     public fun tagPatternList(tagPatternList: List<String>)
 
+    public fun tagPatternList(vararg tagPatternList: String)
+
     public fun tagPrefixList(tagPrefixList: List<String>)
+
+    public fun tagPrefixList(vararg tagPrefixList: String)
 
     public fun tagStatus(tagStatus: TagStatus)
   }
@@ -61,9 +65,15 @@ public interface LifecycleRule {
       cdkBuilder.tagPatternList(tagPatternList)
     }
 
+    override fun tagPatternList(vararg tagPatternList: String): Unit =
+        tagPatternList(tagPatternList.toList())
+
     override fun tagPrefixList(tagPrefixList: List<String>) {
       cdkBuilder.tagPrefixList(tagPrefixList)
     }
+
+    override fun tagPrefixList(vararg tagPrefixList: String): Unit =
+        tagPrefixList(tagPrefixList.toList())
 
     override fun tagStatus(tagStatus: TagStatus) {
       cdkBuilder.tagStatus(tagStatus.let(TagStatus::unwrap))

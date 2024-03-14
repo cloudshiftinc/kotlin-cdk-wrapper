@@ -28,6 +28,8 @@ public open class CfnImageVersion internal constructor(
     unwrap(this).setAliases(`value`)
   }
 
+  public open fun aliases(vararg `value`: String): Unit = aliases(`value`.toList())
+
   public open fun attrContainerImage(): String = unwrap(this).getAttrContainerImage()
 
   public open fun attrImageArn(): String = unwrap(this).getAttrImageArn()
@@ -103,6 +105,8 @@ public open class CfnImageVersion internal constructor(
 
     public fun aliases(aliases: List<String>)
 
+    public fun aliases(vararg aliases: String)
+
     public fun baseImage(baseImage: String)
 
     public fun horovod(horovod: Boolean)
@@ -138,6 +142,8 @@ public open class CfnImageVersion internal constructor(
     override fun aliases(aliases: List<String>) {
       cdkBuilder.aliases(aliases)
     }
+
+    override fun aliases(vararg aliases: String): Unit = aliases(aliases.toList())
 
     override fun baseImage(baseImage: String) {
       cdkBuilder.baseImage(baseImage)

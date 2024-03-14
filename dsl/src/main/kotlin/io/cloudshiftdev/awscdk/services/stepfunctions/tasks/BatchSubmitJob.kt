@@ -42,6 +42,8 @@ public open class BatchSubmitJob internal constructor(
 
     public fun dependsOn(dependsOn: List<BatchJobDependency>)
 
+    public fun dependsOn(vararg dependsOn: BatchJobDependency)
+
     @Deprecated(message = "deprecated in CDK")
     public fun heartbeat(heartbeat: Duration)
 
@@ -116,6 +118,9 @@ public open class BatchSubmitJob internal constructor(
     override fun dependsOn(dependsOn: List<BatchJobDependency>) {
       cdkBuilder.dependsOn(dependsOn.map(BatchJobDependency::unwrap))
     }
+
+    override fun dependsOn(vararg dependsOn: BatchJobDependency): Unit =
+        dependsOn(dependsOn.toList())
 
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {

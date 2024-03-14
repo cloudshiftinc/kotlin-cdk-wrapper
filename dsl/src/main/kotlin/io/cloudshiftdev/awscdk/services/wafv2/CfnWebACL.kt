@@ -126,6 +126,8 @@ public open class CfnWebACL internal constructor(
     unwrap(this).setRules(__idx_ac66f0)
   }
 
+  public open fun rules(vararg __idx_ac66f0: Any): Unit = rules(__idx_ac66f0.toList())
+
   public open fun scope(): String = unwrap(this).getScope()
 
   public open fun scope(`value`: String) {
@@ -141,11 +143,15 @@ public open class CfnWebACL internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun tokenDomains(): List<String> = unwrap(this).getTokenDomains() ?: emptyList()
 
   public open fun tokenDomains(`value`: List<String>) {
     unwrap(this).setTokenDomains(`value`)
   }
+
+  public open fun tokenDomains(vararg `value`: String): Unit = tokenDomains(`value`.toList())
 
   public open fun visibilityConfig(): Any = unwrap(this).getVisibilityConfig()
 
@@ -207,11 +213,17 @@ public open class CfnWebACL internal constructor(
 
     public fun rules(rules: List<Any>)
 
+    public fun rules(vararg rules: Any)
+
     public fun scope(scope: String)
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun tokenDomains(tokenDomains: List<String>)
+
+    public fun tokenDomains(vararg tokenDomains: String)
 
     public fun visibilityConfig(visibilityConfig: IResolvable)
 
@@ -305,6 +317,8 @@ public open class CfnWebACL internal constructor(
       cdkBuilder.rules(rules)
     }
 
+    override fun rules(vararg rules: Any): Unit = rules(rules.toList())
+
     override fun scope(scope: String) {
       cdkBuilder.scope(scope)
     }
@@ -313,9 +327,14 @@ public open class CfnWebACL internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun tokenDomains(tokenDomains: List<String>) {
       cdkBuilder.tokenDomains(tokenDomains)
     }
+
+    override fun tokenDomains(vararg tokenDomains: String): Unit =
+        tokenDomains(tokenDomains.toList())
 
     override fun visibilityConfig(visibilityConfig: IResolvable) {
       cdkBuilder.visibilityConfig(visibilityConfig.let(IResolvable::unwrap))
@@ -371,6 +390,8 @@ public open class CfnWebACL internal constructor(
       public fun textTransformations(textTransformations: IResolvable)
 
       public fun textTransformations(textTransformations: List<Any>)
+
+      public fun textTransformations(vararg textTransformations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -398,6 +419,9 @@ public open class CfnWebACL internal constructor(
       override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
+
+      override fun textTransformations(vararg textTransformations: Any): Unit =
+          textTransformations(textTransformations.toList())
 
       public fun build(): software.amazon.awscdk.services.wafv2.CfnWebACL.XssMatchStatementProperty
           = cdkBuilder.build()
@@ -444,7 +468,11 @@ public open class CfnWebACL internal constructor(
 
       public fun excludedHeaders(excludedHeaders: List<String>)
 
+      public fun excludedHeaders(vararg excludedHeaders: String)
+
       public fun includedHeaders(includedHeaders: List<String>)
+
+      public fun includedHeaders(vararg includedHeaders: String)
     }
 
     private class BuilderImpl : Builder {
@@ -460,9 +488,15 @@ public open class CfnWebACL internal constructor(
         cdkBuilder.excludedHeaders(excludedHeaders)
       }
 
+      override fun excludedHeaders(vararg excludedHeaders: String): Unit =
+          excludedHeaders(excludedHeaders.toList())
+
       override fun includedHeaders(includedHeaders: List<String>) {
         cdkBuilder.includedHeaders(includedHeaders)
       }
+
+      override fun includedHeaders(vararg includedHeaders: String): Unit =
+          includedHeaders(includedHeaders.toList())
 
       public fun build(): software.amazon.awscdk.services.wafv2.CfnWebACL.HeaderMatchPatternProperty
           = cdkBuilder.build()
@@ -638,6 +672,8 @@ public open class CfnWebACL internal constructor(
       public fun statements(statements: IResolvable)
 
       public fun statements(statements: List<Any>)
+
+      public fun statements(vararg statements: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -652,6 +688,8 @@ public open class CfnWebACL internal constructor(
       override fun statements(statements: List<Any>) {
         cdkBuilder.statements(statements)
       }
+
+      override fun statements(vararg statements: Any): Unit = statements(statements.toList())
 
       public fun build(): software.amazon.awscdk.services.wafv2.CfnWebACL.OrStatementProperty =
           cdkBuilder.build()
@@ -743,6 +781,8 @@ public open class CfnWebACL internal constructor(
 
       public fun ruleLabels(ruleLabels: List<Any>)
 
+      public fun ruleLabels(vararg ruleLabels: Any)
+
       public fun statement(statement: IResolvable)
 
       public fun statement(statement: StatementProperty)
@@ -831,6 +871,8 @@ public open class CfnWebACL internal constructor(
       override fun ruleLabels(ruleLabels: List<Any>) {
         cdkBuilder.ruleLabels(ruleLabels)
       }
+
+      override fun ruleLabels(vararg ruleLabels: Any): Unit = ruleLabels(ruleLabels.toList())
 
       override fun statement(statement: IResolvable) {
         cdkBuilder.statement(statement.let(IResolvable::unwrap))
@@ -974,6 +1016,8 @@ public open class CfnWebACL internal constructor(
     public interface Builder {
       public fun countryCodes(countryCodes: List<String>)
 
+      public fun countryCodes(vararg countryCodes: String)
+
       public fun forwardedIpConfig(forwardedIpConfig: IResolvable)
 
       public fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty)
@@ -992,6 +1036,9 @@ public open class CfnWebACL internal constructor(
       override fun countryCodes(countryCodes: List<String>) {
         cdkBuilder.countryCodes(countryCodes)
       }
+
+      override fun countryCodes(vararg countryCodes: String): Unit =
+          countryCodes(countryCodes.toList())
 
       override fun forwardedIpConfig(forwardedIpConfig: IResolvable) {
         cdkBuilder.forwardedIpConfig(forwardedIpConfig.let(IResolvable::unwrap))
@@ -1140,15 +1187,21 @@ public open class CfnWebACL internal constructor(
 
       public fun excludedRules(excludedRules: List<Any>)
 
+      public fun excludedRules(vararg excludedRules: Any)
+
       public fun managedRuleGroupConfigs(managedRuleGroupConfigs: IResolvable)
 
       public fun managedRuleGroupConfigs(managedRuleGroupConfigs: List<Any>)
+
+      public fun managedRuleGroupConfigs(vararg managedRuleGroupConfigs: Any)
 
       public fun name(name: String)
 
       public fun ruleActionOverrides(ruleActionOverrides: IResolvable)
 
       public fun ruleActionOverrides(ruleActionOverrides: List<Any>)
+
+      public fun ruleActionOverrides(vararg ruleActionOverrides: Any)
 
       public fun scopeDownStatement(scopeDownStatement: IResolvable)
 
@@ -1177,6 +1230,9 @@ public open class CfnWebACL internal constructor(
         cdkBuilder.excludedRules(excludedRules)
       }
 
+      override fun excludedRules(vararg excludedRules: Any): Unit =
+          excludedRules(excludedRules.toList())
+
       override fun managedRuleGroupConfigs(managedRuleGroupConfigs: IResolvable) {
         cdkBuilder.managedRuleGroupConfigs(managedRuleGroupConfigs.let(IResolvable::unwrap))
       }
@@ -1184,6 +1240,9 @@ public open class CfnWebACL internal constructor(
       override fun managedRuleGroupConfigs(managedRuleGroupConfigs: List<Any>) {
         cdkBuilder.managedRuleGroupConfigs(managedRuleGroupConfigs)
       }
+
+      override fun managedRuleGroupConfigs(vararg managedRuleGroupConfigs: Any): Unit =
+          managedRuleGroupConfigs(managedRuleGroupConfigs.toList())
 
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -1196,6 +1255,9 @@ public open class CfnWebACL internal constructor(
       override fun ruleActionOverrides(ruleActionOverrides: List<Any>) {
         cdkBuilder.ruleActionOverrides(ruleActionOverrides)
       }
+
+      override fun ruleActionOverrides(vararg ruleActionOverrides: Any): Unit =
+          ruleActionOverrides(ruleActionOverrides.toList())
 
       override fun scopeDownStatement(scopeDownStatement: IResolvable) {
         cdkBuilder.scopeDownStatement(scopeDownStatement.let(IResolvable::unwrap))
@@ -1274,6 +1336,8 @@ public open class CfnWebACL internal constructor(
       public fun textTransformations(textTransformations: IResolvable)
 
       public fun textTransformations(textTransformations: List<Any>)
+
+      public fun textTransformations(vararg textTransformations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1292,6 +1356,9 @@ public open class CfnWebACL internal constructor(
       override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
+
+      override fun textTransformations(vararg textTransformations: Any): Unit =
+          textTransformations(textTransformations.toList())
 
       public fun build(): software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitCookieProperty =
           cdkBuilder.build()
@@ -1458,6 +1525,8 @@ public open class CfnWebACL internal constructor(
       public fun textTransformations(textTransformations: IResolvable)
 
       public fun textTransformations(textTransformations: List<Any>)
+
+      public fun textTransformations(vararg textTransformations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1476,6 +1545,9 @@ public open class CfnWebACL internal constructor(
       override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
+
+      override fun textTransformations(vararg textTransformations: Any): Unit =
+          textTransformations(textTransformations.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitQueryArgumentProperty =
@@ -1521,9 +1593,13 @@ public open class CfnWebACL internal constructor(
     public interface Builder {
       public fun failureValues(failureValues: List<String>)
 
+      public fun failureValues(vararg failureValues: String)
+
       public fun name(name: String)
 
       public fun successValues(successValues: List<String>)
+
+      public fun successValues(vararg successValues: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1535,6 +1611,9 @@ public open class CfnWebACL internal constructor(
         cdkBuilder.failureValues(failureValues)
       }
 
+      override fun failureValues(vararg failureValues: String): Unit =
+          failureValues(failureValues.toList())
+
       override fun name(name: String) {
         cdkBuilder.name(name)
       }
@@ -1542,6 +1621,9 @@ public open class CfnWebACL internal constructor(
       override fun successValues(successValues: List<String>) {
         cdkBuilder.successValues(successValues)
       }
+
+      override fun successValues(vararg successValues: String): Unit =
+          successValues(successValues.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionHeaderProperty =
@@ -1552,11 +1634,11 @@ public open class CfnWebACL internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionHeaderProperty,
     ) : ResponseInspectionHeaderProperty {
-      override fun failureValues(): List<String> = unwrap(this).getFailureValues() ?: emptyList()
+      override fun failureValues(): List<String> = unwrap(this).getFailureValues()
 
       override fun name(): String = unwrap(this).getName()
 
-      override fun successValues(): List<String> = unwrap(this).getSuccessValues() ?: emptyList()
+      override fun successValues(): List<String> = unwrap(this).getSuccessValues()
     }
 
     public companion object {
@@ -1785,6 +1867,8 @@ public open class CfnWebACL internal constructor(
       public fun textTransformations(textTransformations: IResolvable)
 
       public fun textTransformations(textTransformations: List<Any>)
+
+      public fun textTransformations(vararg textTransformations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1799,6 +1883,9 @@ public open class CfnWebACL internal constructor(
       override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
+
+      override fun textTransformations(vararg textTransformations: Any): Unit =
+          textTransformations(textTransformations.toList())
 
       public fun build(): software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitUriPathProperty =
           cdkBuilder.build()
@@ -1901,6 +1988,8 @@ public open class CfnWebACL internal constructor(
       public fun all(all: Any)
 
       public fun includedPaths(includedPaths: List<String>)
+
+      public fun includedPaths(vararg includedPaths: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1915,6 +2004,9 @@ public open class CfnWebACL internal constructor(
       override fun includedPaths(includedPaths: List<String>) {
         cdkBuilder.includedPaths(includedPaths)
       }
+
+      override fun includedPaths(vararg includedPaths: String): Unit =
+          includedPaths(includedPaths.toList())
 
       public fun build(): software.amazon.awscdk.services.wafv2.CfnWebACL.JsonMatchPatternProperty =
           cdkBuilder.build()
@@ -1967,6 +2059,8 @@ public open class CfnWebACL internal constructor(
 
       public fun addressFields(addressFields: List<Any>)
 
+      public fun addressFields(vararg addressFields: Any)
+
       public fun emailField(emailField: IResolvable)
 
       public fun emailField(emailField: FieldIdentifierProperty)
@@ -1989,6 +2083,8 @@ public open class CfnWebACL internal constructor(
 
       public fun phoneNumberFields(phoneNumberFields: List<Any>)
 
+      public fun phoneNumberFields(vararg phoneNumberFields: Any)
+
       public fun usernameField(usernameField: IResolvable)
 
       public fun usernameField(usernameField: FieldIdentifierProperty)
@@ -2010,6 +2106,9 @@ public open class CfnWebACL internal constructor(
       override fun addressFields(addressFields: List<Any>) {
         cdkBuilder.addressFields(addressFields)
       }
+
+      override fun addressFields(vararg addressFields: Any): Unit =
+          addressFields(addressFields.toList())
 
       override fun emailField(emailField: IResolvable) {
         cdkBuilder.emailField(emailField.let(IResolvable::unwrap))
@@ -2048,6 +2147,9 @@ public open class CfnWebACL internal constructor(
       override fun phoneNumberFields(phoneNumberFields: List<Any>) {
         cdkBuilder.phoneNumberFields(phoneNumberFields)
       }
+
+      override fun phoneNumberFields(vararg phoneNumberFields: Any): Unit =
+          phoneNumberFields(phoneNumberFields.toList())
 
       override fun usernameField(usernameField: IResolvable) {
         cdkBuilder.usernameField(usernameField.let(IResolvable::unwrap))
@@ -2114,9 +2216,13 @@ public open class CfnWebACL internal constructor(
     public interface Builder {
       public fun failureValues(failureValues: List<String>)
 
+      public fun failureValues(vararg failureValues: String)
+
       public fun identifier(identifier: String)
 
       public fun successValues(successValues: List<String>)
+
+      public fun successValues(vararg successValues: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2128,6 +2234,9 @@ public open class CfnWebACL internal constructor(
         cdkBuilder.failureValues(failureValues)
       }
 
+      override fun failureValues(vararg failureValues: String): Unit =
+          failureValues(failureValues.toList())
+
       override fun identifier(identifier: String) {
         cdkBuilder.identifier(identifier)
       }
@@ -2135,6 +2244,9 @@ public open class CfnWebACL internal constructor(
       override fun successValues(successValues: List<String>) {
         cdkBuilder.successValues(successValues)
       }
+
+      override fun successValues(vararg successValues: String): Unit =
+          successValues(successValues.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionJsonProperty =
@@ -2145,11 +2257,11 @@ public open class CfnWebACL internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionJsonProperty,
     ) : ResponseInspectionJsonProperty {
-      override fun failureValues(): List<String> = unwrap(this).getFailureValues() ?: emptyList()
+      override fun failureValues(): List<String> = unwrap(this).getFailureValues()
 
       override fun identifier(): String = unwrap(this).getIdentifier()
 
-      override fun successValues(): List<String> = unwrap(this).getSuccessValues() ?: emptyList()
+      override fun successValues(): List<String> = unwrap(this).getSuccessValues()
     }
 
     public companion object {
@@ -2193,6 +2305,8 @@ public open class CfnWebACL internal constructor(
       public fun textTransformations(textTransformations: IResolvable)
 
       public fun textTransformations(textTransformations: List<Any>)
+
+      public fun textTransformations(vararg textTransformations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2225,6 +2339,9 @@ public open class CfnWebACL internal constructor(
       override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
+
+      override fun textTransformations(vararg textTransformations: Any): Unit =
+          textTransformations(textTransformations.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnWebACL.RegexPatternSetReferenceStatementProperty
@@ -2394,6 +2511,8 @@ public open class CfnWebACL internal constructor(
       public fun textTransformations(textTransformations: IResolvable)
 
       public fun textTransformations(textTransformations: List<Any>)
+
+      public fun textTransformations(vararg textTransformations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2408,6 +2527,9 @@ public open class CfnWebACL internal constructor(
       override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
+
+      override fun textTransformations(vararg textTransformations: Any): Unit =
+          textTransformations(textTransformations.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitQueryStringProperty =
@@ -2612,9 +2734,13 @@ public open class CfnWebACL internal constructor(
 
       public fun failureCodes(failureCodes: List<Number>)
 
+      public fun failureCodes(vararg failureCodes: Number)
+
       public fun successCodes(successCodes: IResolvable)
 
       public fun successCodes(successCodes: List<Number>)
+
+      public fun successCodes(vararg successCodes: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -2631,6 +2757,9 @@ public open class CfnWebACL internal constructor(
         cdkBuilder.failureCodes(failureCodes)
       }
 
+      override fun failureCodes(vararg failureCodes: Number): Unit =
+          failureCodes(failureCodes.toList())
+
       override fun successCodes(successCodes: IResolvable) {
         cdkBuilder.successCodes(successCodes.let(IResolvable::unwrap))
       }
@@ -2638,6 +2767,9 @@ public open class CfnWebACL internal constructor(
       override fun successCodes(successCodes: List<Number>) {
         cdkBuilder.successCodes(successCodes)
       }
+
+      override fun successCodes(vararg successCodes: Number): Unit =
+          successCodes(successCodes.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionStatusCodeProperty =
@@ -2681,6 +2813,8 @@ public open class CfnWebACL internal constructor(
       public fun statements(statements: IResolvable)
 
       public fun statements(statements: List<Any>)
+
+      public fun statements(vararg statements: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2695,6 +2829,8 @@ public open class CfnWebACL internal constructor(
       override fun statements(statements: List<Any>) {
         cdkBuilder.statements(statements)
       }
+
+      override fun statements(vararg statements: Any): Unit = statements(statements.toList())
 
       public fun build(): software.amazon.awscdk.services.wafv2.CfnWebACL.AndStatementProperty =
           cdkBuilder.build()
@@ -3097,6 +3233,8 @@ public open class CfnWebACL internal constructor(
       public fun textTransformations(textTransformations: IResolvable)
 
       public fun textTransformations(textTransformations: List<Any>)
+
+      public fun textTransformations(vararg textTransformations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -3128,6 +3266,9 @@ public open class CfnWebACL internal constructor(
       override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
+
+      override fun textTransformations(vararg textTransformations: Any): Unit =
+          textTransformations(textTransformations.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnWebACL.RegexMatchStatementProperty =
@@ -3303,6 +3444,8 @@ public open class CfnWebACL internal constructor(
       public fun textTransformations(textTransformations: IResolvable)
 
       public fun textTransformations(textTransformations: List<Any>)
+
+      public fun textTransformations(vararg textTransformations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -3342,6 +3485,9 @@ public open class CfnWebACL internal constructor(
       override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
+
+      override fun textTransformations(vararg textTransformations: Any): Unit =
+          textTransformations(textTransformations.toList())
 
       public fun build(): software.amazon.awscdk.services.wafv2.CfnWebACL.ByteMatchStatementProperty
           = cdkBuilder.build()
@@ -3393,6 +3539,8 @@ public open class CfnWebACL internal constructor(
       public fun textTransformations(textTransformations: IResolvable)
 
       public fun textTransformations(textTransformations: List<Any>)
+
+      public fun textTransformations(vararg textTransformations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -3411,6 +3559,9 @@ public open class CfnWebACL internal constructor(
       override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
+
+      override fun textTransformations(vararg textTransformations: Any): Unit =
+          textTransformations(textTransformations.toList())
 
       public fun build(): software.amazon.awscdk.services.wafv2.CfnWebACL.RateLimitHeaderProperty =
           cdkBuilder.build()
@@ -3457,7 +3608,11 @@ public open class CfnWebACL internal constructor(
 
       public fun excludedCookies(excludedCookies: List<String>)
 
+      public fun excludedCookies(vararg excludedCookies: String)
+
       public fun includedCookies(includedCookies: List<String>)
+
+      public fun includedCookies(vararg includedCookies: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3473,9 +3628,15 @@ public open class CfnWebACL internal constructor(
         cdkBuilder.excludedCookies(excludedCookies)
       }
 
+      override fun excludedCookies(vararg excludedCookies: String): Unit =
+          excludedCookies(excludedCookies.toList())
+
       override fun includedCookies(includedCookies: List<String>) {
         cdkBuilder.includedCookies(includedCookies)
       }
+
+      override fun includedCookies(vararg includedCookies: String): Unit =
+          includedCookies(includedCookies.toList())
 
       public fun build(): software.amazon.awscdk.services.wafv2.CfnWebACL.CookieMatchPatternProperty
           = cdkBuilder.build()
@@ -3675,9 +3836,13 @@ public open class CfnWebACL internal constructor(
 
       public fun excludedRules(excludedRules: List<Any>)
 
+      public fun excludedRules(vararg excludedRules: Any)
+
       public fun ruleActionOverrides(ruleActionOverrides: IResolvable)
 
       public fun ruleActionOverrides(ruleActionOverrides: List<Any>)
+
+      public fun ruleActionOverrides(vararg ruleActionOverrides: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -3698,6 +3863,9 @@ public open class CfnWebACL internal constructor(
         cdkBuilder.excludedRules(excludedRules)
       }
 
+      override fun excludedRules(vararg excludedRules: Any): Unit =
+          excludedRules(excludedRules.toList())
+
       override fun ruleActionOverrides(ruleActionOverrides: IResolvable) {
         cdkBuilder.ruleActionOverrides(ruleActionOverrides.let(IResolvable::unwrap))
       }
@@ -3705,6 +3873,9 @@ public open class CfnWebACL internal constructor(
       override fun ruleActionOverrides(ruleActionOverrides: List<Any>) {
         cdkBuilder.ruleActionOverrides(ruleActionOverrides)
       }
+
+      override fun ruleActionOverrides(vararg ruleActionOverrides: Any): Unit =
+          ruleActionOverrides(ruleActionOverrides.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnWebACL.RuleGroupReferenceStatementProperty =
@@ -3993,6 +4164,8 @@ public open class CfnWebACL internal constructor(
       public fun textTransformations(textTransformations: IResolvable)
 
       public fun textTransformations(textTransformations: List<Any>)
+
+      public fun textTransformations(vararg textTransformations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -4028,6 +4201,9 @@ public open class CfnWebACL internal constructor(
       override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
+
+      override fun textTransformations(vararg textTransformations: Any): Unit =
+          textTransformations(textTransformations.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnWebACL.SizeConstraintStatementProperty =
@@ -4806,7 +4982,11 @@ public open class CfnWebACL internal constructor(
     public interface Builder {
       public fun failureStrings(failureStrings: List<String>)
 
+      public fun failureStrings(vararg failureStrings: String)
+
       public fun successStrings(successStrings: List<String>)
+
+      public fun successStrings(vararg successStrings: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4819,9 +4999,15 @@ public open class CfnWebACL internal constructor(
         cdkBuilder.failureStrings(failureStrings)
       }
 
+      override fun failureStrings(vararg failureStrings: String): Unit =
+          failureStrings(failureStrings.toList())
+
       override fun successStrings(successStrings: List<String>) {
         cdkBuilder.successStrings(successStrings)
       }
+
+      override fun successStrings(vararg successStrings: String): Unit =
+          successStrings(successStrings.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionBodyContainsProperty =
@@ -4832,9 +5018,9 @@ public open class CfnWebACL internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.wafv2.CfnWebACL.ResponseInspectionBodyContainsProperty,
     ) : ResponseInspectionBodyContainsProperty {
-      override fun failureStrings(): List<String> = unwrap(this).getFailureStrings() ?: emptyList()
+      override fun failureStrings(): List<String> = unwrap(this).getFailureStrings()
 
-      override fun successStrings(): List<String> = unwrap(this).getSuccessStrings() ?: emptyList()
+      override fun successStrings(): List<String> = unwrap(this).getSuccessStrings()
     }
 
     public companion object {
@@ -5172,6 +5358,8 @@ public open class CfnWebACL internal constructor(
       public fun textTransformations(textTransformations: IResolvable)
 
       public fun textTransformations(textTransformations: List<Any>)
+
+      public fun textTransformations(vararg textTransformations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -5203,6 +5391,9 @@ public open class CfnWebACL internal constructor(
       override fun textTransformations(textTransformations: List<Any>) {
         cdkBuilder.textTransformations(textTransformations)
       }
+
+      override fun textTransformations(vararg textTransformations: Any): Unit =
+          textTransformations(textTransformations.toList())
 
       public fun build(): software.amazon.awscdk.services.wafv2.CfnWebACL.SqliMatchStatementProperty
           = cdkBuilder.build()
@@ -5957,6 +6148,8 @@ public open class CfnWebACL internal constructor(
 
       public fun customKeys(customKeys: List<Any>)
 
+      public fun customKeys(vararg customKeys: Any)
+
       public fun forwardedIpConfig(forwardedIpConfig: IResolvable)
 
       public fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty)
@@ -5993,6 +6186,8 @@ public open class CfnWebACL internal constructor(
       override fun customKeys(customKeys: List<Any>) {
         cdkBuilder.customKeys(customKeys)
       }
+
+      override fun customKeys(vararg customKeys: Any): Unit = customKeys(customKeys.toList())
 
       override fun forwardedIpConfig(forwardedIpConfig: IResolvable) {
         cdkBuilder.forwardedIpConfig(forwardedIpConfig.let(IResolvable::unwrap))
@@ -6132,6 +6327,8 @@ public open class CfnWebACL internal constructor(
       public fun responseHeaders(responseHeaders: IResolvable)
 
       public fun responseHeaders(responseHeaders: List<Any>)
+
+      public fun responseHeaders(vararg responseHeaders: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -6154,6 +6351,9 @@ public open class CfnWebACL internal constructor(
       override fun responseHeaders(responseHeaders: List<Any>) {
         cdkBuilder.responseHeaders(responseHeaders)
       }
+
+      override fun responseHeaders(vararg responseHeaders: Any): Unit =
+          responseHeaders(responseHeaders.toList())
 
       public fun build(): software.amazon.awscdk.services.wafv2.CfnWebACL.CustomResponseProperty =
           cdkBuilder.build()
@@ -6383,6 +6583,8 @@ public open class CfnWebACL internal constructor(
       public fun insertHeaders(insertHeaders: IResolvable)
 
       public fun insertHeaders(insertHeaders: List<Any>)
+
+      public fun insertHeaders(vararg insertHeaders: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -6397,6 +6599,9 @@ public open class CfnWebACL internal constructor(
       override fun insertHeaders(insertHeaders: List<Any>) {
         cdkBuilder.insertHeaders(insertHeaders)
       }
+
+      override fun insertHeaders(vararg insertHeaders: Any): Unit =
+          insertHeaders(insertHeaders.toList())
 
       public fun build():
           software.amazon.awscdk.services.wafv2.CfnWebACL.CustomRequestHandlingProperty =

@@ -18,6 +18,9 @@ public interface AddEventSelectorOptions {
     public
         fun excludeManagementEventSources(excludeManagementEventSources: List<ManagementEventSources>)
 
+    public fun excludeManagementEventSources(vararg
+        excludeManagementEventSources: ManagementEventSources)
+
     public fun includeManagementEvents(includeManagementEvents: Boolean)
 
     public fun readWriteType(readWriteType: ReadWriteType)
@@ -32,6 +35,10 @@ public interface AddEventSelectorOptions {
         fun excludeManagementEventSources(excludeManagementEventSources: List<ManagementEventSources>) {
       cdkBuilder.excludeManagementEventSources(excludeManagementEventSources.map(ManagementEventSources::unwrap))
     }
+
+    override fun excludeManagementEventSources(vararg
+        excludeManagementEventSources: ManagementEventSources): Unit =
+        excludeManagementEventSources(excludeManagementEventSources.toList())
 
     override fun includeManagementEvents(includeManagementEvents: Boolean) {
       cdkBuilder.includeManagementEvents(includeManagementEvents)

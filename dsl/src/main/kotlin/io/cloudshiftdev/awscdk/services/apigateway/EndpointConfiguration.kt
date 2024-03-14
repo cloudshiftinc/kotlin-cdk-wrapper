@@ -13,7 +13,11 @@ public interface EndpointConfiguration {
   public interface Builder {
     public fun types(types: List<EndpointType>)
 
+    public fun types(vararg types: EndpointType)
+
     public fun vpcEndpoints(vpcEndpoints: List<IVpcEndpoint>)
+
+    public fun vpcEndpoints(vararg vpcEndpoints: IVpcEndpoint)
   }
 
   private class BuilderImpl : Builder {
@@ -24,9 +28,14 @@ public interface EndpointConfiguration {
       cdkBuilder.types(types.map(EndpointType::unwrap))
     }
 
+    override fun types(vararg types: EndpointType): Unit = types(types.toList())
+
     override fun vpcEndpoints(vpcEndpoints: List<IVpcEndpoint>) {
       cdkBuilder.vpcEndpoints(vpcEndpoints.map(IVpcEndpoint::unwrap))
     }
+
+    override fun vpcEndpoints(vararg vpcEndpoints: IVpcEndpoint): Unit =
+        vpcEndpoints(vpcEndpoints.toList())
 
     public fun build(): software.amazon.awscdk.services.apigateway.EndpointConfiguration =
         cdkBuilder.build()

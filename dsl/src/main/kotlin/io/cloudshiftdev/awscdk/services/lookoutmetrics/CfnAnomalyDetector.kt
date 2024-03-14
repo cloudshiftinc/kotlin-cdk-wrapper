@@ -68,6 +68,9 @@ public open class CfnAnomalyDetector internal constructor(
     unwrap(this).setMetricSetList(__idx_ac66f0)
   }
 
+  public open fun metricSetList(vararg __idx_ac66f0: Any): Unit =
+      metricSetList(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun anomalyDetectorConfig(anomalyDetectorConfig: IResolvable)
 
@@ -87,6 +90,8 @@ public open class CfnAnomalyDetector internal constructor(
     public fun metricSetList(metricSetList: IResolvable)
 
     public fun metricSetList(metricSetList: List<Any>)
+
+    public fun metricSetList(vararg metricSetList: Any)
   }
 
   private class BuilderImpl(
@@ -130,6 +135,9 @@ public open class CfnAnomalyDetector internal constructor(
     override fun metricSetList(metricSetList: List<Any>) {
       cdkBuilder.metricSetList(metricSetList)
     }
+
+    override fun metricSetList(vararg metricSetList: Any): Unit =
+        metricSetList(metricSetList.toList())
 
     public fun build(): software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector =
         cdkBuilder.build()
@@ -182,6 +190,8 @@ public open class CfnAnomalyDetector internal constructor(
 
       public fun headerList(headerList: List<String>)
 
+      public fun headerList(vararg headerList: String)
+
       public fun quoteSymbol(quoteSymbol: String)
     }
 
@@ -214,6 +224,8 @@ public open class CfnAnomalyDetector internal constructor(
       override fun headerList(headerList: List<String>) {
         cdkBuilder.headerList(headerList)
       }
+
+      override fun headerList(vararg headerList: String): Unit = headerList(headerList.toList())
 
       override fun quoteSymbol(quoteSymbol: String) {
         cdkBuilder.quoteSymbol(quoteSymbol)
@@ -602,9 +614,13 @@ public open class CfnAnomalyDetector internal constructor(
 
       public fun historicalDataPathList(historicalDataPathList: List<String>)
 
+      public fun historicalDataPathList(vararg historicalDataPathList: String)
+
       public fun roleArn(roleArn: String)
 
       public fun templatedPathList(templatedPathList: List<String>)
+
+      public fun templatedPathList(vararg templatedPathList: String)
     }
 
     private class BuilderImpl : Builder {
@@ -631,6 +647,9 @@ public open class CfnAnomalyDetector internal constructor(
         cdkBuilder.historicalDataPathList(historicalDataPathList)
       }
 
+      override fun historicalDataPathList(vararg historicalDataPathList: String): Unit =
+          historicalDataPathList(historicalDataPathList.toList())
+
       override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
@@ -638,6 +657,9 @@ public open class CfnAnomalyDetector internal constructor(
       override fun templatedPathList(templatedPathList: List<String>) {
         cdkBuilder.templatedPathList(templatedPathList)
       }
+
+      override fun templatedPathList(vararg templatedPathList: String): Unit =
+          templatedPathList(templatedPathList.toList())
 
       public fun build():
           software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.S3SourceConfigProperty =
@@ -1253,9 +1275,13 @@ public open class CfnAnomalyDetector internal constructor(
     public interface Builder {
       public fun dimensionList(dimensionList: List<String>)
 
+      public fun dimensionList(vararg dimensionList: String)
+
       public fun metricList(metricList: IResolvable)
 
       public fun metricList(metricList: List<Any>)
+
+      public fun metricList(vararg metricList: Any)
 
       public fun metricSetDescription(metricSetDescription: String)
 
@@ -1294,6 +1320,9 @@ public open class CfnAnomalyDetector internal constructor(
         cdkBuilder.dimensionList(dimensionList)
       }
 
+      override fun dimensionList(vararg dimensionList: String): Unit =
+          dimensionList(dimensionList.toList())
+
       override fun metricList(metricList: IResolvable) {
         cdkBuilder.metricList(metricList.let(IResolvable::unwrap))
       }
@@ -1301,6 +1330,8 @@ public open class CfnAnomalyDetector internal constructor(
       override fun metricList(metricList: List<Any>) {
         cdkBuilder.metricList(metricList)
       }
+
+      override fun metricList(vararg metricList: Any): Unit = metricList(metricList.toList())
 
       override fun metricSetDescription(metricSetDescription: String) {
         cdkBuilder.metricSetDescription(metricSetDescription)
@@ -1404,7 +1435,11 @@ public open class CfnAnomalyDetector internal constructor(
     public interface Builder {
       public fun securityGroupIdList(securityGroupIdList: List<String>)
 
+      public fun securityGroupIdList(vararg securityGroupIdList: String)
+
       public fun subnetIdList(subnetIdList: List<String>)
+
+      public fun subnetIdList(vararg subnetIdList: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1417,9 +1452,15 @@ public open class CfnAnomalyDetector internal constructor(
         cdkBuilder.securityGroupIdList(securityGroupIdList)
       }
 
+      override fun securityGroupIdList(vararg securityGroupIdList: String): Unit =
+          securityGroupIdList(securityGroupIdList.toList())
+
       override fun subnetIdList(subnetIdList: List<String>) {
         cdkBuilder.subnetIdList(subnetIdList)
       }
+
+      override fun subnetIdList(vararg subnetIdList: String): Unit =
+          subnetIdList(subnetIdList.toList())
 
       public fun build():
           software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.VpcConfigurationProperty
@@ -1430,10 +1471,9 @@ public open class CfnAnomalyDetector internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector.VpcConfigurationProperty,
     ) : VpcConfigurationProperty {
-      override fun securityGroupIdList(): List<String> = unwrap(this).getSecurityGroupIdList() ?:
-          emptyList()
+      override fun securityGroupIdList(): List<String> = unwrap(this).getSecurityGroupIdList()
 
-      override fun subnetIdList(): List<String> = unwrap(this).getSubnetIdList() ?: emptyList()
+      override fun subnetIdList(): List<String> = unwrap(this).getSubnetIdList()
     }
 
     public companion object {

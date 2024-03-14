@@ -13,6 +13,8 @@ public interface LayerVersionAttributes {
   public interface Builder {
     public fun compatibleRuntimes(compatibleRuntimes: List<Runtime>)
 
+    public fun compatibleRuntimes(vararg compatibleRuntimes: Runtime)
+
     public fun layerVersionArn(layerVersionArn: String)
   }
 
@@ -23,6 +25,9 @@ public interface LayerVersionAttributes {
     override fun compatibleRuntimes(compatibleRuntimes: List<Runtime>) {
       cdkBuilder.compatibleRuntimes(compatibleRuntimes.map(Runtime::unwrap))
     }
+
+    override fun compatibleRuntimes(vararg compatibleRuntimes: Runtime): Unit =
+        compatibleRuntimes(compatibleRuntimes.toList())
 
     override fun layerVersionArn(layerVersionArn: String) {
       cdkBuilder.layerVersionArn(layerVersionArn)

@@ -14,6 +14,8 @@ public open class CustomActionRegistration internal constructor(
   public interface Builder {
     public fun actionProperties(actionProperties: List<CustomActionProperty>)
 
+    public fun actionProperties(vararg actionProperties: CustomActionProperty)
+
     public fun artifactBounds(artifactBounds: ActionArtifactBounds)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -43,6 +45,9 @@ public open class CustomActionRegistration internal constructor(
     override fun actionProperties(actionProperties: List<CustomActionProperty>) {
       cdkBuilder.actionProperties(actionProperties.map(CustomActionProperty::unwrap))
     }
+
+    override fun actionProperties(vararg actionProperties: CustomActionProperty): Unit =
+        actionProperties(actionProperties.toList())
 
     override fun artifactBounds(artifactBounds: ActionArtifactBounds) {
       cdkBuilder.artifactBounds(artifactBounds.let(ActionArtifactBounds::unwrap))

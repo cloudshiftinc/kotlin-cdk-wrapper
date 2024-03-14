@@ -501,6 +501,8 @@ public open class CfnCisScanConfiguration internal constructor(
     public interface Builder {
       public fun accountIds(accountIds: List<String>)
 
+      public fun accountIds(vararg accountIds: String)
+
       public fun targetResourceTags(targetResourceTags: IResolvable)
 
       public fun targetResourceTags(targetResourceTags: Map<String, List<String>>)
@@ -515,6 +517,8 @@ public open class CfnCisScanConfiguration internal constructor(
       override fun accountIds(accountIds: List<String>) {
         cdkBuilder.accountIds(accountIds)
       }
+
+      override fun accountIds(vararg accountIds: String): Unit = accountIds(accountIds.toList())
 
       override fun targetResourceTags(targetResourceTags: IResolvable) {
         cdkBuilder.targetResourceTags(targetResourceTags.let(IResolvable::unwrap))
@@ -533,7 +537,7 @@ public open class CfnCisScanConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.CisTargetsProperty,
     ) : CisTargetsProperty {
-      override fun accountIds(): List<String> = unwrap(this).getAccountIds() ?: emptyList()
+      override fun accountIds(): List<String> = unwrap(this).getAccountIds()
 
       override fun targetResourceTags(): Any? = unwrap(this).getTargetResourceTags()
     }
@@ -566,6 +570,8 @@ public open class CfnCisScanConfiguration internal constructor(
     public interface Builder {
       public fun days(days: List<String>)
 
+      public fun days(vararg days: String)
+
       public fun startTime(startTime: IResolvable)
 
       public fun startTime(startTime: TimeProperty)
@@ -584,6 +590,8 @@ public open class CfnCisScanConfiguration internal constructor(
       override fun days(days: List<String>) {
         cdkBuilder.days(days)
       }
+
+      override fun days(vararg days: String): Unit = days(days.toList())
 
       override fun startTime(startTime: IResolvable) {
         cdkBuilder.startTime(startTime.let(IResolvable::unwrap))
@@ -607,7 +615,7 @@ public open class CfnCisScanConfiguration internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration.WeeklyScheduleProperty,
     ) : WeeklyScheduleProperty {
-      override fun days(): List<String> = unwrap(this).getDays() ?: emptyList()
+      override fun days(): List<String> = unwrap(this).getDays()
 
       override fun startTime(): Any = unwrap(this).getStartTime()
     }

@@ -29,6 +29,9 @@ public open class CfnAnalysisTemplate internal constructor(
     unwrap(this).setAnalysisParameters(__idx_ac66f0)
   }
 
+  public open fun analysisParameters(vararg __idx_ac66f0: Any): Unit =
+      analysisParameters(__idx_ac66f0.toList())
+
   public open fun attrAnalysisTemplateIdentifier(): String =
       unwrap(this).getAttrAnalysisTemplateIdentifier()
 
@@ -44,7 +47,7 @@ public open class CfnAnalysisTemplate internal constructor(
   public open fun attrSchema(): IResolvable = unwrap(this).getAttrSchema().let(IResolvable::wrap)
 
   public open fun attrSchemaReferencedTables(): List<String> =
-      unwrap(this).getAttrSchemaReferencedTables() ?: emptyList()
+      unwrap(this).getAttrSchemaReferencedTables()
 
   public override fun cdkTagManager(): TagManager =
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
@@ -98,10 +101,14 @@ public open class CfnAnalysisTemplate internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun analysisParameters(analysisParameters: IResolvable)
 
     public fun analysisParameters(analysisParameters: List<Any>)
+
+    public fun analysisParameters(vararg analysisParameters: Any)
 
     public fun description(description: String)
 
@@ -120,6 +127,8 @@ public open class CfnAnalysisTemplate internal constructor(
     public fun source(source: AnalysisSourceProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -136,6 +145,9 @@ public open class CfnAnalysisTemplate internal constructor(
     override fun analysisParameters(analysisParameters: List<Any>) {
       cdkBuilder.analysisParameters(analysisParameters)
     }
+
+    override fun analysisParameters(vararg analysisParameters: Any): Unit =
+        analysisParameters(analysisParameters.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -169,6 +181,8 @@ public open class CfnAnalysisTemplate internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate =
         cdkBuilder.build()
@@ -249,6 +263,8 @@ public open class CfnAnalysisTemplate internal constructor(
 
     public interface Builder {
       public fun referencedTables(referencedTables: List<String>)
+
+      public fun referencedTables(vararg referencedTables: String)
     }
 
     private class BuilderImpl : Builder {
@@ -261,6 +277,9 @@ public open class CfnAnalysisTemplate internal constructor(
         cdkBuilder.referencedTables(referencedTables)
       }
 
+      override fun referencedTables(vararg referencedTables: String): Unit =
+          referencedTables(referencedTables.toList())
+
       public fun build():
           software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty =
           cdkBuilder.build()
@@ -270,8 +289,7 @@ public open class CfnAnalysisTemplate internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate.AnalysisSchemaProperty,
     ) : AnalysisSchemaProperty {
-      override fun referencedTables(): List<String> = unwrap(this).getReferencedTables() ?:
-          emptyList()
+      override fun referencedTables(): List<String> = unwrap(this).getReferencedTables()
     }
 
     public companion object {

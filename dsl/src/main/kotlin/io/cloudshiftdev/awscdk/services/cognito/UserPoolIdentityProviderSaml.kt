@@ -24,6 +24,8 @@ public open class UserPoolIdentityProviderSaml internal constructor(
 
     public fun identifiers(identifiers: List<String>)
 
+    public fun identifiers(vararg identifiers: String)
+
     public fun idpSignout(idpSignout: Boolean)
 
     public fun metadata(metadata: UserPoolIdentityProviderSamlMetadata)
@@ -54,6 +56,8 @@ public open class UserPoolIdentityProviderSaml internal constructor(
     override fun identifiers(identifiers: List<String>) {
       cdkBuilder.identifiers(identifiers)
     }
+
+    override fun identifiers(vararg identifiers: String): Unit = identifiers(identifiers.toList())
 
     override fun idpSignout(idpSignout: Boolean) {
       cdkBuilder.idpSignout(idpSignout)

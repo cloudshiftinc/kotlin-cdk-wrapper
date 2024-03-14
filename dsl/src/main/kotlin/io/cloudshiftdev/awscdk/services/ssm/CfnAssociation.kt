@@ -49,6 +49,8 @@ public open class CfnAssociation internal constructor(
     unwrap(this).setCalendarNames(`value`)
   }
 
+  public open fun calendarNames(vararg `value`: String): Unit = calendarNames(`value`.toList())
+
   public open fun complianceSeverity(): String? = unwrap(this).getComplianceSeverity()
 
   public open fun complianceSeverity(`value`: String) {
@@ -139,6 +141,8 @@ public open class CfnAssociation internal constructor(
     unwrap(this).setTargets(__idx_ac66f0)
   }
 
+  public open fun targets(vararg __idx_ac66f0: Any): Unit = targets(__idx_ac66f0.toList())
+
   public open fun waitForSuccessTimeoutSeconds(): Number? =
       unwrap(this).getWaitForSuccessTimeoutSeconds()
 
@@ -156,6 +160,8 @@ public open class CfnAssociation internal constructor(
     public fun automationTargetParameterName(automationTargetParameterName: String)
 
     public fun calendarNames(calendarNames: List<String>)
+
+    public fun calendarNames(vararg calendarNames: String)
 
     public fun complianceSeverity(complianceSeverity: String)
 
@@ -190,6 +196,8 @@ public open class CfnAssociation internal constructor(
 
     public fun targets(targets: List<Any>)
 
+    public fun targets(vararg targets: Any)
+
     public fun waitForSuccessTimeoutSeconds(waitForSuccessTimeoutSeconds: Number)
   }
 
@@ -219,6 +227,9 @@ public open class CfnAssociation internal constructor(
     override fun calendarNames(calendarNames: List<String>) {
       cdkBuilder.calendarNames(calendarNames)
     }
+
+    override fun calendarNames(vararg calendarNames: String): Unit =
+        calendarNames(calendarNames.toList())
 
     override fun complianceSeverity(complianceSeverity: String) {
       cdkBuilder.complianceSeverity(complianceSeverity)
@@ -282,6 +293,8 @@ public open class CfnAssociation internal constructor(
       cdkBuilder.targets(targets)
     }
 
+    override fun targets(vararg targets: Any): Unit = targets(targets.toList())
+
     override fun waitForSuccessTimeoutSeconds(waitForSuccessTimeoutSeconds: Number) {
       cdkBuilder.waitForSuccessTimeoutSeconds(waitForSuccessTimeoutSeconds)
     }
@@ -319,6 +332,8 @@ public open class CfnAssociation internal constructor(
       public fun key(key: String)
 
       public fun values(values: List<String>)
+
+      public fun values(vararg values: String)
     }
 
     private class BuilderImpl : Builder {
@@ -334,6 +349,8 @@ public open class CfnAssociation internal constructor(
         cdkBuilder.values(values)
       }
 
+      override fun values(vararg values: String): Unit = values(values.toList())
+
       public fun build(): software.amazon.awscdk.services.ssm.CfnAssociation.TargetProperty =
           cdkBuilder.build()
     }
@@ -343,7 +360,7 @@ public open class CfnAssociation internal constructor(
     ) : TargetProperty {
       override fun key(): String = unwrap(this).getKey()
 
-      override fun values(): List<String> = unwrap(this).getValues() ?: emptyList()
+      override fun values(): List<String> = unwrap(this).getValues()
     }
 
     public companion object {

@@ -56,6 +56,8 @@ public open class CfnKeyPair internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun keyFormat(keyFormat: String)
 
@@ -66,6 +68,8 @@ public open class CfnKeyPair internal constructor(
     public fun publicKeyMaterial(publicKeyMaterial: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -94,6 +98,8 @@ public open class CfnKeyPair internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.CfnKeyPair = cdkBuilder.build()
   }

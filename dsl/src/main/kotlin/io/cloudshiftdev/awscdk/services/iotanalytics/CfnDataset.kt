@@ -31,6 +31,8 @@ public open class CfnDataset internal constructor(
     unwrap(this).setActions(__idx_ac66f0)
   }
 
+  public open fun actions(vararg __idx_ac66f0: Any): Unit = actions(__idx_ac66f0.toList())
+
   public open fun attrId(): String = unwrap(this).getAttrId()
 
   public open fun contentDeliveryRules(): Any? = unwrap(this).getContentDeliveryRules()
@@ -42,6 +44,9 @@ public open class CfnDataset internal constructor(
   public open fun contentDeliveryRules(__idx_ac66f0: List<Any>) {
     unwrap(this).setContentDeliveryRules(__idx_ac66f0)
   }
+
+  public open fun contentDeliveryRules(vararg __idx_ac66f0: Any): Unit =
+      contentDeliveryRules(__idx_ac66f0.toList())
 
   public open fun datasetName(): String? = unwrap(this).getDatasetName()
 
@@ -62,6 +67,9 @@ public open class CfnDataset internal constructor(
   public open fun lateDataRules(__idx_ac66f0: List<Any>) {
     unwrap(this).setLateDataRules(__idx_ac66f0)
   }
+
+  public open fun lateDataRules(vararg __idx_ac66f0: Any): Unit =
+      lateDataRules(__idx_ac66f0.toList())
 
   public open fun retentionPeriod(): Any? = unwrap(this).getRetentionPeriod()
 
@@ -87,6 +95,8 @@ public open class CfnDataset internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun triggers(): Any? = unwrap(this).getTriggers()
 
   public open fun triggers(`value`: IResolvable) {
@@ -96,6 +106,8 @@ public open class CfnDataset internal constructor(
   public open fun triggers(__idx_ac66f0: List<Any>) {
     unwrap(this).setTriggers(__idx_ac66f0)
   }
+
+  public open fun triggers(vararg __idx_ac66f0: Any): Unit = triggers(__idx_ac66f0.toList())
 
   public open fun versioningConfiguration(): Any? = unwrap(this).getVersioningConfiguration()
 
@@ -118,15 +130,21 @@ public open class CfnDataset internal constructor(
 
     public fun actions(actions: List<Any>)
 
+    public fun actions(vararg actions: Any)
+
     public fun contentDeliveryRules(contentDeliveryRules: IResolvable)
 
     public fun contentDeliveryRules(contentDeliveryRules: List<Any>)
+
+    public fun contentDeliveryRules(vararg contentDeliveryRules: Any)
 
     public fun datasetName(datasetName: String)
 
     public fun lateDataRules(lateDataRules: IResolvable)
 
     public fun lateDataRules(lateDataRules: List<Any>)
+
+    public fun lateDataRules(vararg lateDataRules: Any)
 
     public fun retentionPeriod(retentionPeriod: IResolvable)
 
@@ -138,9 +156,13 @@ public open class CfnDataset internal constructor(
 
     public fun tags(tags: List<CfnTag>)
 
+    public fun tags(vararg tags: CfnTag)
+
     public fun triggers(triggers: IResolvable)
 
     public fun triggers(triggers: List<Any>)
+
+    public fun triggers(vararg triggers: Any)
 
     public fun versioningConfiguration(versioningConfiguration: IResolvable)
 
@@ -167,6 +189,8 @@ public open class CfnDataset internal constructor(
       cdkBuilder.actions(actions)
     }
 
+    override fun actions(vararg actions: Any): Unit = actions(actions.toList())
+
     override fun contentDeliveryRules(contentDeliveryRules: IResolvable) {
       cdkBuilder.contentDeliveryRules(contentDeliveryRules.let(IResolvable::unwrap))
     }
@@ -174,6 +198,9 @@ public open class CfnDataset internal constructor(
     override fun contentDeliveryRules(contentDeliveryRules: List<Any>) {
       cdkBuilder.contentDeliveryRules(contentDeliveryRules)
     }
+
+    override fun contentDeliveryRules(vararg contentDeliveryRules: Any): Unit =
+        contentDeliveryRules(contentDeliveryRules.toList())
 
     override fun datasetName(datasetName: String) {
       cdkBuilder.datasetName(datasetName)
@@ -186,6 +213,9 @@ public open class CfnDataset internal constructor(
     override fun lateDataRules(lateDataRules: List<Any>) {
       cdkBuilder.lateDataRules(lateDataRules)
     }
+
+    override fun lateDataRules(vararg lateDataRules: Any): Unit =
+        lateDataRules(lateDataRules.toList())
 
     override fun retentionPeriod(retentionPeriod: IResolvable) {
       cdkBuilder.retentionPeriod(retentionPeriod.let(IResolvable::unwrap))
@@ -204,6 +234,8 @@ public open class CfnDataset internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     override fun triggers(triggers: IResolvable) {
       cdkBuilder.triggers(triggers.let(IResolvable::unwrap))
     }
@@ -211,6 +243,8 @@ public open class CfnDataset internal constructor(
     override fun triggers(triggers: List<Any>) {
       cdkBuilder.triggers(triggers)
     }
+
+    override fun triggers(vararg triggers: Any): Unit = triggers(triggers.toList())
 
     override fun versioningConfiguration(versioningConfiguration: IResolvable) {
       cdkBuilder.versioningConfiguration(versioningConfiguration.let(IResolvable::unwrap))
@@ -537,6 +571,8 @@ public open class CfnDataset internal constructor(
       public fun variables(variables: IResolvable)
 
       public fun variables(variables: List<Any>)
+
+      public fun variables(vararg variables: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -573,6 +609,8 @@ public open class CfnDataset internal constructor(
       override fun variables(variables: List<Any>) {
         cdkBuilder.variables(variables)
       }
+
+      override fun variables(vararg variables: Any): Unit = variables(variables.toList())
 
       public fun build():
           software.amazon.awscdk.services.iotanalytics.CfnDataset.ContainerActionProperty =
@@ -1283,6 +1321,8 @@ public open class CfnDataset internal constructor(
 
       public fun filters(filters: List<Any>)
 
+      public fun filters(vararg filters: Any)
+
       public fun sqlQuery(sqlQuery: String)
     }
 
@@ -1298,6 +1338,8 @@ public open class CfnDataset internal constructor(
       override fun filters(filters: List<Any>) {
         cdkBuilder.filters(filters)
       }
+
+      override fun filters(vararg filters: Any): Unit = filters(filters.toList())
 
       override fun sqlQuery(sqlQuery: String) {
         cdkBuilder.sqlQuery(sqlQuery)

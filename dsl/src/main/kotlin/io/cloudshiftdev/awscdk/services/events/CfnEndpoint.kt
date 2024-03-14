@@ -42,6 +42,8 @@ public open class CfnEndpoint internal constructor(
     unwrap(this).setEventBuses(__idx_ac66f0)
   }
 
+  public open fun eventBuses(vararg __idx_ac66f0: Any): Unit = eventBuses(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -95,6 +97,8 @@ public open class CfnEndpoint internal constructor(
 
     public fun eventBuses(eventBuses: List<Any>)
 
+    public fun eventBuses(vararg eventBuses: Any)
+
     public fun name(name: String)
 
     public fun replicationConfig(replicationConfig: IResolvable)
@@ -134,6 +138,8 @@ public open class CfnEndpoint internal constructor(
     override fun eventBuses(eventBuses: List<Any>) {
       cdkBuilder.eventBuses(eventBuses)
     }
+
+    override fun eventBuses(vararg eventBuses: Any): Unit = eventBuses(eventBuses.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)

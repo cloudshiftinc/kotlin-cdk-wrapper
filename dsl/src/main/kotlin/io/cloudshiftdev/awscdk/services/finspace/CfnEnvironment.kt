@@ -44,6 +44,9 @@ public open class CfnEnvironment internal constructor(
     unwrap(this).setDataBundles(`value`)
   }
 
+  @Deprecated(message = "deprecated in CDK")
+  public open fun dataBundles(vararg `value`: String): Unit = dataBundles(`value`.toList())
+
   public open fun description(): String? = unwrap(this).getDescription()
 
   public open fun description(`value`: String) {
@@ -111,9 +114,14 @@ public open class CfnEnvironment internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     @Deprecated(message = "deprecated in CDK")
     public fun dataBundles(dataBundles: List<String>)
+
+    @Deprecated(message = "deprecated in CDK")
+    public fun dataBundles(vararg dataBundles: String)
 
     public fun description(description: String)
 
@@ -142,6 +150,8 @@ public open class CfnEnvironment internal constructor(
         fun superuserParameters(superuserParameters: SuperuserParametersProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -155,6 +165,9 @@ public open class CfnEnvironment internal constructor(
     override fun dataBundles(dataBundles: List<String>) {
       cdkBuilder.dataBundles(dataBundles)
     }
+
+    @Deprecated(message = "deprecated in CDK")
+    override fun dataBundles(vararg dataBundles: String): Unit = dataBundles(dataBundles.toList())
 
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -204,6 +217,8 @@ public open class CfnEnvironment internal constructor(
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
     public fun build(): software.amazon.awscdk.services.finspace.CfnEnvironment = cdkBuilder.build()
   }
 
@@ -248,6 +263,8 @@ public open class CfnEnvironment internal constructor(
 
       public fun attributeMap(attributeMap: List<Any>)
 
+      public fun attributeMap(vararg attributeMap: Any)
+
       public fun federationProviderName(federationProviderName: String)
 
       public fun federationUrn(federationUrn: String)
@@ -274,6 +291,9 @@ public open class CfnEnvironment internal constructor(
       override fun attributeMap(attributeMap: List<Any>) {
         cdkBuilder.attributeMap(attributeMap)
       }
+
+      override fun attributeMap(vararg attributeMap: Any): Unit =
+          attributeMap(attributeMap.toList())
 
       override fun federationProviderName(federationProviderName: String) {
         cdkBuilder.federationProviderName(federationProviderName)

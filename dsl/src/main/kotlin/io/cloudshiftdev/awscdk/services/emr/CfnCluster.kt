@@ -38,6 +38,8 @@ public open class CfnCluster internal constructor(
     unwrap(this).setApplications(__idx_ac66f0)
   }
 
+  public open fun applications(vararg __idx_ac66f0: Any): Unit = applications(__idx_ac66f0.toList())
+
   public open fun attrId(): String = unwrap(this).getAttrId()
 
   public open fun attrMasterPublicDns(): String = unwrap(this).getAttrMasterPublicDns()
@@ -73,6 +75,9 @@ public open class CfnCluster internal constructor(
     unwrap(this).setBootstrapActions(__idx_ac66f0)
   }
 
+  public open fun bootstrapActions(vararg __idx_ac66f0: Any): Unit =
+      bootstrapActions(__idx_ac66f0.toList())
+
   public open fun configurations(): Any? = unwrap(this).getConfigurations()
 
   public open fun configurations(`value`: IResolvable) {
@@ -82,6 +87,9 @@ public open class CfnCluster internal constructor(
   public open fun configurations(__idx_ac66f0: List<Any>) {
     unwrap(this).setConfigurations(__idx_ac66f0)
   }
+
+  public open fun configurations(vararg __idx_ac66f0: Any): Unit =
+      configurations(__idx_ac66f0.toList())
 
   public open fun customAmiId(): String? = unwrap(this).getCustomAmiId()
 
@@ -196,6 +204,9 @@ public open class CfnCluster internal constructor(
     unwrap(this).setPlacementGroupConfigs(__idx_ac66f0)
   }
 
+  public open fun placementGroupConfigs(vararg __idx_ac66f0: Any): Unit =
+      placementGroupConfigs(__idx_ac66f0.toList())
+
   public open fun releaseLabel(): String? = unwrap(this).getReleaseLabel()
 
   public open fun releaseLabel(`value`: String) {
@@ -236,6 +247,8 @@ public open class CfnCluster internal constructor(
     unwrap(this).setSteps(__idx_ac66f0)
   }
 
+  public open fun steps(vararg __idx_ac66f0: Any): Unit = steps(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -244,6 +257,8 @@ public open class CfnCluster internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun visibleToAllUsers(): Any? = unwrap(this).getVisibleToAllUsers()
 
@@ -262,6 +277,8 @@ public open class CfnCluster internal constructor(
 
     public fun applications(applications: List<Any>)
 
+    public fun applications(vararg applications: Any)
+
     public fun autoScalingRole(autoScalingRole: String)
 
     public fun autoTerminationPolicy(autoTerminationPolicy: IResolvable)
@@ -277,9 +294,13 @@ public open class CfnCluster internal constructor(
 
     public fun bootstrapActions(bootstrapActions: List<Any>)
 
+    public fun bootstrapActions(vararg bootstrapActions: Any)
+
     public fun configurations(configurations: IResolvable)
 
     public fun configurations(configurations: List<Any>)
+
+    public fun configurations(vararg configurations: Any)
 
     public fun customAmiId(customAmiId: String)
 
@@ -328,6 +349,8 @@ public open class CfnCluster internal constructor(
 
     public fun placementGroupConfigs(placementGroupConfigs: List<Any>)
 
+    public fun placementGroupConfigs(vararg placementGroupConfigs: Any)
+
     public fun releaseLabel(releaseLabel: String)
 
     public fun scaleDownBehavior(scaleDownBehavior: String)
@@ -342,7 +365,11 @@ public open class CfnCluster internal constructor(
 
     public fun steps(steps: List<Any>)
 
+    public fun steps(vararg steps: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun visibleToAllUsers(visibleToAllUsers: Boolean)
 
@@ -367,6 +394,8 @@ public open class CfnCluster internal constructor(
     override fun applications(applications: List<Any>) {
       cdkBuilder.applications(applications)
     }
+
+    override fun applications(vararg applications: Any): Unit = applications(applications.toList())
 
     override fun autoScalingRole(autoScalingRole: String) {
       cdkBuilder.autoScalingRole(autoScalingRole)
@@ -394,6 +423,9 @@ public open class CfnCluster internal constructor(
       cdkBuilder.bootstrapActions(bootstrapActions)
     }
 
+    override fun bootstrapActions(vararg bootstrapActions: Any): Unit =
+        bootstrapActions(bootstrapActions.toList())
+
     override fun configurations(configurations: IResolvable) {
       cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
     }
@@ -401,6 +433,9 @@ public open class CfnCluster internal constructor(
     override fun configurations(configurations: List<Any>) {
       cdkBuilder.configurations(configurations)
     }
+
+    override fun configurations(vararg configurations: Any): Unit =
+        configurations(configurations.toList())
 
     override fun customAmiId(customAmiId: String) {
       cdkBuilder.customAmiId(customAmiId)
@@ -487,6 +522,9 @@ public open class CfnCluster internal constructor(
       cdkBuilder.placementGroupConfigs(placementGroupConfigs)
     }
 
+    override fun placementGroupConfigs(vararg placementGroupConfigs: Any): Unit =
+        placementGroupConfigs(placementGroupConfigs.toList())
+
     override fun releaseLabel(releaseLabel: String) {
       cdkBuilder.releaseLabel(releaseLabel)
     }
@@ -515,9 +553,13 @@ public open class CfnCluster internal constructor(
       cdkBuilder.steps(steps)
     }
 
+    override fun steps(vararg steps: Any): Unit = steps(steps.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun visibleToAllUsers(visibleToAllUsers: Boolean) {
       cdkBuilder.visibleToAllUsers(visibleToAllUsers)
@@ -577,6 +619,8 @@ public open class CfnCluster internal constructor(
 
       public fun dimensions(dimensions: List<Any>)
 
+      public fun dimensions(vararg dimensions: Any)
+
       public fun evaluationPeriods(evaluationPeriods: Number)
 
       public fun metricName(metricName: String)
@@ -608,6 +652,8 @@ public open class CfnCluster internal constructor(
       override fun dimensions(dimensions: List<Any>) {
         cdkBuilder.dimensions(dimensions)
       }
+
+      override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
 
       override fun evaluationPeriods(evaluationPeriods: Number) {
         cdkBuilder.evaluationPeriods(evaluationPeriods)
@@ -935,6 +981,8 @@ public open class CfnCluster internal constructor(
       public fun rules(rules: IResolvable)
 
       public fun rules(rules: List<Any>)
+
+      public fun rules(vararg rules: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -962,6 +1010,8 @@ public open class CfnCluster internal constructor(
       override fun rules(rules: List<Any>) {
         cdkBuilder.rules(rules)
       }
+
+      override fun rules(vararg rules: Any): Unit = rules(rules.toList())
 
       public fun build(): software.amazon.awscdk.services.emr.CfnCluster.AutoScalingPolicyProperty =
           cdkBuilder.build()
@@ -1130,7 +1180,11 @@ public open class CfnCluster internal constructor(
     public interface Builder {
       public fun additionalMasterSecurityGroups(additionalMasterSecurityGroups: List<String>)
 
+      public fun additionalMasterSecurityGroups(vararg additionalMasterSecurityGroups: String)
+
       public fun additionalSlaveSecurityGroups(additionalSlaveSecurityGroups: List<String>)
+
+      public fun additionalSlaveSecurityGroups(vararg additionalSlaveSecurityGroups: String)
 
       public fun coreInstanceFleet(coreInstanceFleet: IResolvable)
 
@@ -1155,6 +1209,8 @@ public open class CfnCluster internal constructor(
       public fun ec2SubnetId(ec2SubnetId: String)
 
       public fun ec2SubnetIds(ec2SubnetIds: List<String>)
+
+      public fun ec2SubnetIds(vararg ec2SubnetIds: String)
 
       public fun emrManagedMasterSecurityGroup(emrManagedMasterSecurityGroup: String)
 
@@ -1198,9 +1254,13 @@ public open class CfnCluster internal constructor(
 
       public fun taskInstanceFleets(taskInstanceFleets: List<Any>)
 
+      public fun taskInstanceFleets(vararg taskInstanceFleets: Any)
+
       public fun taskInstanceGroups(taskInstanceGroups: IResolvable)
 
       public fun taskInstanceGroups(taskInstanceGroups: List<Any>)
+
+      public fun taskInstanceGroups(vararg taskInstanceGroups: Any)
 
       public fun terminationProtected(terminationProtected: Boolean)
 
@@ -1220,9 +1280,15 @@ public open class CfnCluster internal constructor(
         cdkBuilder.additionalMasterSecurityGroups(additionalMasterSecurityGroups)
       }
 
+      override fun additionalMasterSecurityGroups(vararg additionalMasterSecurityGroups: String):
+          Unit = additionalMasterSecurityGroups(additionalMasterSecurityGroups.toList())
+
       override fun additionalSlaveSecurityGroups(additionalSlaveSecurityGroups: List<String>) {
         cdkBuilder.additionalSlaveSecurityGroups(additionalSlaveSecurityGroups)
       }
+
+      override fun additionalSlaveSecurityGroups(vararg additionalSlaveSecurityGroups: String): Unit
+          = additionalSlaveSecurityGroups(additionalSlaveSecurityGroups.toList())
 
       override fun coreInstanceFleet(coreInstanceFleet: IResolvable) {
         cdkBuilder.coreInstanceFleet(coreInstanceFleet.let(IResolvable::unwrap))
@@ -1263,6 +1329,9 @@ public open class CfnCluster internal constructor(
       override fun ec2SubnetIds(ec2SubnetIds: List<String>) {
         cdkBuilder.ec2SubnetIds(ec2SubnetIds)
       }
+
+      override fun ec2SubnetIds(vararg ec2SubnetIds: String): Unit =
+          ec2SubnetIds(ec2SubnetIds.toList())
 
       override fun emrManagedMasterSecurityGroup(emrManagedMasterSecurityGroup: String) {
         cdkBuilder.emrManagedMasterSecurityGroup(emrManagedMasterSecurityGroup)
@@ -1337,6 +1406,9 @@ public open class CfnCluster internal constructor(
         cdkBuilder.taskInstanceFleets(taskInstanceFleets)
       }
 
+      override fun taskInstanceFleets(vararg taskInstanceFleets: Any): Unit =
+          taskInstanceFleets(taskInstanceFleets.toList())
+
       override fun taskInstanceGroups(taskInstanceGroups: IResolvable) {
         cdkBuilder.taskInstanceGroups(taskInstanceGroups.let(IResolvable::unwrap))
       }
@@ -1344,6 +1416,9 @@ public open class CfnCluster internal constructor(
       override fun taskInstanceGroups(taskInstanceGroups: List<Any>) {
         cdkBuilder.taskInstanceGroups(taskInstanceGroups)
       }
+
+      override fun taskInstanceGroups(vararg taskInstanceGroups: Any): Unit =
+          taskInstanceGroups(taskInstanceGroups.toList())
 
       override fun terminationProtected(terminationProtected: Boolean) {
         cdkBuilder.terminationProtected(terminationProtected)
@@ -1451,6 +1526,8 @@ public open class CfnCluster internal constructor(
 
       public fun instanceTypeConfigs(instanceTypeConfigs: List<Any>)
 
+      public fun instanceTypeConfigs(vararg instanceTypeConfigs: Any)
+
       public fun launchSpecifications(launchSpecifications: IResolvable)
 
       public
@@ -1480,6 +1557,9 @@ public open class CfnCluster internal constructor(
       override fun instanceTypeConfigs(instanceTypeConfigs: List<Any>) {
         cdkBuilder.instanceTypeConfigs(instanceTypeConfigs)
       }
+
+      override fun instanceTypeConfigs(vararg instanceTypeConfigs: Any): Unit =
+          instanceTypeConfigs(instanceTypeConfigs.toList())
 
       override fun launchSpecifications(launchSpecifications: IResolvable) {
         cdkBuilder.launchSpecifications(launchSpecifications.let(IResolvable::unwrap))
@@ -1862,6 +1942,8 @@ public open class CfnCluster internal constructor(
 
       public fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>)
 
+      public fun ebsBlockDeviceConfigs(vararg ebsBlockDeviceConfigs: Any)
+
       public fun ebsOptimized(ebsOptimized: Boolean)
 
       public fun ebsOptimized(ebsOptimized: IResolvable)
@@ -1879,6 +1961,9 @@ public open class CfnCluster internal constructor(
       override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>) {
         cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs)
       }
+
+      override fun ebsBlockDeviceConfigs(vararg ebsBlockDeviceConfigs: Any): Unit =
+          ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.toList())
 
       override fun ebsOptimized(ebsOptimized: Boolean) {
         cdkBuilder.ebsOptimized(ebsOptimized)
@@ -2233,6 +2318,8 @@ public open class CfnCluster internal constructor(
 
       public fun configurations(configurations: List<Any>)
 
+      public fun configurations(vararg configurations: Any)
+
       public fun customAmiId(customAmiId: String)
 
       public fun ebsConfiguration(ebsConfiguration: IResolvable)
@@ -2282,6 +2369,9 @@ public open class CfnCluster internal constructor(
       override fun configurations(configurations: List<Any>) {
         cdkBuilder.configurations(configurations)
       }
+
+      override fun configurations(vararg configurations: Any): Unit =
+          configurations(configurations.toList())
 
       override fun customAmiId(customAmiId: String) {
         cdkBuilder.customAmiId(customAmiId)
@@ -2571,6 +2661,8 @@ public open class CfnCluster internal constructor(
     public interface Builder {
       public fun args(args: List<String>)
 
+      public fun args(vararg args: String)
+
       public fun jar(jar: String)
 
       public fun mainClass(mainClass: String)
@@ -2578,6 +2670,8 @@ public open class CfnCluster internal constructor(
       public fun stepProperties(stepProperties: IResolvable)
 
       public fun stepProperties(stepProperties: List<Any>)
+
+      public fun stepProperties(vararg stepProperties: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2588,6 +2682,8 @@ public open class CfnCluster internal constructor(
       override fun args(args: List<String>) {
         cdkBuilder.args(args)
       }
+
+      override fun args(vararg args: String): Unit = args(args.toList())
 
       override fun jar(jar: String) {
         cdkBuilder.jar(jar)
@@ -2604,6 +2700,9 @@ public open class CfnCluster internal constructor(
       override fun stepProperties(stepProperties: List<Any>) {
         cdkBuilder.stepProperties(stepProperties)
       }
+
+      override fun stepProperties(vararg stepProperties: Any): Unit =
+          stepProperties(stepProperties.toList())
 
       public fun build(): software.amazon.awscdk.services.emr.CfnCluster.HadoopJarStepConfigProperty
           = cdkBuilder.build()
@@ -2659,6 +2758,8 @@ public open class CfnCluster internal constructor(
       public fun configurations(configurations: IResolvable)
 
       public fun configurations(configurations: List<Any>)
+
+      public fun configurations(vararg configurations: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -2685,6 +2786,9 @@ public open class CfnCluster internal constructor(
       override fun configurations(configurations: List<Any>) {
         cdkBuilder.configurations(configurations)
       }
+
+      override fun configurations(vararg configurations: Any): Unit =
+          configurations(configurations.toList())
 
       public fun build(): software.amazon.awscdk.services.emr.CfnCluster.ConfigurationProperty =
           cdkBuilder.build()
@@ -2745,6 +2849,8 @@ public open class CfnCluster internal constructor(
 
       public fun configurations(configurations: List<Any>)
 
+      public fun configurations(vararg configurations: Any)
+
       public fun customAmiId(customAmiId: String)
 
       public fun ebsConfiguration(ebsConfiguration: IResolvable)
@@ -2781,6 +2887,9 @@ public open class CfnCluster internal constructor(
       override fun configurations(configurations: List<Any>) {
         cdkBuilder.configurations(configurations)
       }
+
+      override fun configurations(vararg configurations: Any): Unit =
+          configurations(configurations.toList())
 
       override fun customAmiId(customAmiId: String) {
         cdkBuilder.customAmiId(customAmiId)
@@ -3002,6 +3111,8 @@ public open class CfnCluster internal constructor(
 
       public fun args(args: List<String>)
 
+      public fun args(vararg args: String)
+
       public fun name(name: String)
 
       public fun version(version: String)
@@ -3023,6 +3134,8 @@ public open class CfnCluster internal constructor(
       override fun args(args: List<String>) {
         cdkBuilder.args(args)
       }
+
+      override fun args(vararg args: String): Unit = args(args.toList())
 
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -3259,6 +3372,8 @@ public open class CfnCluster internal constructor(
     public interface Builder {
       public fun args(args: List<String>)
 
+      public fun args(vararg args: String)
+
       public fun path(path: String)
     }
 
@@ -3271,6 +3386,8 @@ public open class CfnCluster internal constructor(
       override fun args(args: List<String>) {
         cdkBuilder.args(args)
       }
+
+      override fun args(vararg args: String): Unit = args(args.toList())
 
       override fun path(path: String) {
         cdkBuilder.path(path)

@@ -213,6 +213,8 @@ public open class CfnFunctionDefinition internal constructor(
 
       public fun resourceAccessPolicies(resourceAccessPolicies: List<Any>)
 
+      public fun resourceAccessPolicies(vararg resourceAccessPolicies: Any)
+
       public fun variables(variables: Any)
     }
 
@@ -250,6 +252,9 @@ public open class CfnFunctionDefinition internal constructor(
       override fun resourceAccessPolicies(resourceAccessPolicies: List<Any>) {
         cdkBuilder.resourceAccessPolicies(resourceAccessPolicies)
       }
+
+      override fun resourceAccessPolicies(vararg resourceAccessPolicies: Any): Unit =
+          resourceAccessPolicies(resourceAccessPolicies.toList())
 
       override fun variables(variables: Any) {
         cdkBuilder.variables(variables)
@@ -310,6 +315,8 @@ public open class CfnFunctionDefinition internal constructor(
       public fun functions(functions: IResolvable)
 
       public fun functions(functions: List<Any>)
+
+      public fun functions(vararg functions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -338,6 +345,8 @@ public open class CfnFunctionDefinition internal constructor(
       override fun functions(functions: List<Any>) {
         cdkBuilder.functions(functions)
       }
+
+      override fun functions(vararg functions: Any): Unit = functions(functions.toList())
 
       public fun build():
           software.amazon.awscdk.services.greengrass.CfnFunctionDefinition.FunctionDefinitionVersionProperty

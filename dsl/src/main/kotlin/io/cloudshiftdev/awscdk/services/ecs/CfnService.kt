@@ -36,6 +36,9 @@ public open class CfnService internal constructor(
     unwrap(this).setCapacityProviderStrategy(__idx_ac66f0)
   }
 
+  public open fun capacityProviderStrategy(vararg __idx_ac66f0: Any): Unit =
+      capacityProviderStrategy(__idx_ac66f0.toList())
+
   public open fun cluster(): String? = unwrap(this).getCluster()
 
   public open fun cluster(`value`: String) {
@@ -126,6 +129,9 @@ public open class CfnService internal constructor(
     unwrap(this).setLoadBalancers(__idx_ac66f0)
   }
 
+  public open fun loadBalancers(vararg __idx_ac66f0: Any): Unit =
+      loadBalancers(__idx_ac66f0.toList())
+
   public open fun networkConfiguration(): Any? = unwrap(this).getNetworkConfiguration()
 
   public open fun networkConfiguration(`value`: IResolvable) {
@@ -151,6 +157,9 @@ public open class CfnService internal constructor(
     unwrap(this).setPlacementConstraints(__idx_ac66f0)
   }
 
+  public open fun placementConstraints(vararg __idx_ac66f0: Any): Unit =
+      placementConstraints(__idx_ac66f0.toList())
+
   public open fun placementStrategies(): Any? = unwrap(this).getPlacementStrategies()
 
   public open fun placementStrategies(`value`: IResolvable) {
@@ -160,6 +169,9 @@ public open class CfnService internal constructor(
   public open fun placementStrategies(__idx_ac66f0: List<Any>) {
     unwrap(this).setPlacementStrategies(__idx_ac66f0)
   }
+
+  public open fun placementStrategies(vararg __idx_ac66f0: Any): Unit =
+      placementStrategies(__idx_ac66f0.toList())
 
   public open fun platformVersion(): String? = unwrap(this).getPlatformVersion()
 
@@ -218,6 +230,9 @@ public open class CfnService internal constructor(
     unwrap(this).setServiceRegistries(__idx_ac66f0)
   }
 
+  public open fun serviceRegistries(vararg __idx_ac66f0: Any): Unit =
+      serviceRegistries(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -226,6 +241,8 @@ public open class CfnService internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public open fun taskDefinition(): String? = unwrap(this).getTaskDefinition()
 
@@ -243,10 +260,15 @@ public open class CfnService internal constructor(
     unwrap(this).setVolumeConfigurations(__idx_ac66f0)
   }
 
+  public open fun volumeConfigurations(vararg __idx_ac66f0: Any): Unit =
+      volumeConfigurations(__idx_ac66f0.toList())
+
   public interface Builder {
     public fun capacityProviderStrategy(capacityProviderStrategy: IResolvable)
 
     public fun capacityProviderStrategy(capacityProviderStrategy: List<Any>)
+
+    public fun capacityProviderStrategy(vararg capacityProviderStrategy: Any)
 
     public fun cluster(cluster: String)
 
@@ -286,6 +308,8 @@ public open class CfnService internal constructor(
 
     public fun loadBalancers(loadBalancers: List<Any>)
 
+    public fun loadBalancers(vararg loadBalancers: Any)
+
     public fun networkConfiguration(networkConfiguration: IResolvable)
 
     public fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty)
@@ -299,9 +323,13 @@ public open class CfnService internal constructor(
 
     public fun placementConstraints(placementConstraints: List<Any>)
 
+    public fun placementConstraints(vararg placementConstraints: Any)
+
     public fun placementStrategies(placementStrategies: IResolvable)
 
     public fun placementStrategies(placementStrategies: List<Any>)
+
+    public fun placementStrategies(vararg placementStrategies: Any)
 
     public fun platformVersion(platformVersion: String)
 
@@ -327,13 +355,19 @@ public open class CfnService internal constructor(
 
     public fun serviceRegistries(serviceRegistries: List<Any>)
 
+    public fun serviceRegistries(vararg serviceRegistries: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun taskDefinition(taskDefinition: String)
 
     public fun volumeConfigurations(volumeConfigurations: IResolvable)
 
     public fun volumeConfigurations(volumeConfigurations: List<Any>)
+
+    public fun volumeConfigurations(vararg volumeConfigurations: Any)
   }
 
   private class BuilderImpl(
@@ -350,6 +384,9 @@ public open class CfnService internal constructor(
     override fun capacityProviderStrategy(capacityProviderStrategy: List<Any>) {
       cdkBuilder.capacityProviderStrategy(capacityProviderStrategy)
     }
+
+    override fun capacityProviderStrategy(vararg capacityProviderStrategy: Any): Unit =
+        capacityProviderStrategy(capacityProviderStrategy.toList())
 
     override fun cluster(cluster: String) {
       cdkBuilder.cluster(cluster)
@@ -419,6 +456,9 @@ public open class CfnService internal constructor(
       cdkBuilder.loadBalancers(loadBalancers)
     }
 
+    override fun loadBalancers(vararg loadBalancers: Any): Unit =
+        loadBalancers(loadBalancers.toList())
+
     override fun networkConfiguration(networkConfiguration: IResolvable) {
       cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
     }
@@ -441,6 +481,9 @@ public open class CfnService internal constructor(
       cdkBuilder.placementConstraints(placementConstraints)
     }
 
+    override fun placementConstraints(vararg placementConstraints: Any): Unit =
+        placementConstraints(placementConstraints.toList())
+
     override fun placementStrategies(placementStrategies: IResolvable) {
       cdkBuilder.placementStrategies(placementStrategies.let(IResolvable::unwrap))
     }
@@ -448,6 +491,9 @@ public open class CfnService internal constructor(
     override fun placementStrategies(placementStrategies: List<Any>) {
       cdkBuilder.placementStrategies(placementStrategies)
     }
+
+    override fun placementStrategies(vararg placementStrategies: Any): Unit =
+        placementStrategies(placementStrategies.toList())
 
     override fun platformVersion(platformVersion: String) {
       cdkBuilder.platformVersion(platformVersion)
@@ -493,9 +539,14 @@ public open class CfnService internal constructor(
       cdkBuilder.serviceRegistries(serviceRegistries)
     }
 
+    override fun serviceRegistries(vararg serviceRegistries: Any): Unit =
+        serviceRegistries(serviceRegistries.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun taskDefinition(taskDefinition: String) {
       cdkBuilder.taskDefinition(taskDefinition)
@@ -508,6 +559,9 @@ public open class CfnService internal constructor(
     override fun volumeConfigurations(volumeConfigurations: List<Any>) {
       cdkBuilder.volumeConfigurations(volumeConfigurations)
     }
+
+    override fun volumeConfigurations(vararg volumeConfigurations: Any): Unit =
+        volumeConfigurations(volumeConfigurations.toList())
 
     public fun build(): software.amazon.awscdk.services.ecs.CfnService = cdkBuilder.build()
   }
@@ -794,6 +848,8 @@ public open class CfnService internal constructor(
 
       public fun clientAliases(clientAliases: List<Any>)
 
+      public fun clientAliases(vararg clientAliases: Any)
+
       public fun discoveryName(discoveryName: String)
 
       public fun ingressPortOverride(ingressPortOverride: Number)
@@ -829,6 +885,9 @@ public open class CfnService internal constructor(
       override fun clientAliases(clientAliases: List<Any>) {
         cdkBuilder.clientAliases(clientAliases)
       }
+
+      override fun clientAliases(vararg clientAliases: Any): Unit =
+          clientAliases(clientAliases.toList())
 
       override fun discoveryName(discoveryName: String) {
         cdkBuilder.discoveryName(discoveryName)
@@ -992,6 +1051,8 @@ public open class CfnService internal constructor(
       public fun secretOptions(secretOptions: IResolvable)
 
       public fun secretOptions(secretOptions: List<Any>)
+
+      public fun secretOptions(vararg secretOptions: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1018,6 +1079,9 @@ public open class CfnService internal constructor(
       override fun secretOptions(secretOptions: List<Any>) {
         cdkBuilder.secretOptions(secretOptions)
       }
+
+      override fun secretOptions(vararg secretOptions: Any): Unit =
+          secretOptions(secretOptions.toList())
 
       public fun build(): software.amazon.awscdk.services.ecs.CfnService.LogConfigurationProperty =
           cdkBuilder.build()
@@ -1096,6 +1160,8 @@ public open class CfnService internal constructor(
 
       public fun tagSpecifications(tagSpecifications: List<Any>)
 
+      public fun tagSpecifications(vararg tagSpecifications: Any)
+
       public fun throughput(throughput: Number)
 
       public fun volumeType(volumeType: String)
@@ -1146,6 +1212,9 @@ public open class CfnService internal constructor(
       override fun tagSpecifications(tagSpecifications: List<Any>) {
         cdkBuilder.tagSpecifications(tagSpecifications)
       }
+
+      override fun tagSpecifications(vararg tagSpecifications: Any): Unit =
+          tagSpecifications(tagSpecifications.toList())
 
       override fun throughput(throughput: Number) {
         cdkBuilder.throughput(throughput)
@@ -1281,6 +1350,8 @@ public open class CfnService internal constructor(
       public fun services(services: IResolvable)
 
       public fun services(services: List<Any>)
+
+      public fun services(vararg services: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -1321,6 +1392,8 @@ public open class CfnService internal constructor(
       override fun services(services: List<Any>) {
         cdkBuilder.services(services)
       }
+
+      override fun services(vararg services: Any): Unit = services(services.toList())
 
       public fun build():
           software.amazon.awscdk.services.ecs.CfnService.ServiceConnectConfigurationProperty =
@@ -1487,6 +1560,8 @@ public open class CfnService internal constructor(
       public fun resourceType(resourceType: String)
 
       public fun tags(tags: List<CfnTag>)
+
+      public fun tags(vararg tags: CfnTag)
     }
 
     private class BuilderImpl : Builder {
@@ -1505,6 +1580,8 @@ public open class CfnService internal constructor(
       override fun tags(tags: List<CfnTag>) {
         cdkBuilder.tags(tags.map(CfnTag::unwrap))
       }
+
+      override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
       public fun build(): software.amazon.awscdk.services.ecs.CfnService.EBSTagSpecificationProperty
           = cdkBuilder.build()
@@ -1868,7 +1945,11 @@ public open class CfnService internal constructor(
 
       public fun securityGroups(securityGroups: List<String>)
 
+      public fun securityGroups(vararg securityGroups: String)
+
       public fun subnets(subnets: List<String>)
+
+      public fun subnets(vararg subnets: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1884,9 +1965,14 @@ public open class CfnService internal constructor(
         cdkBuilder.securityGroups(securityGroups)
       }
 
+      override fun securityGroups(vararg securityGroups: String): Unit =
+          securityGroups(securityGroups.toList())
+
       override fun subnets(subnets: List<String>) {
         cdkBuilder.subnets(subnets)
       }
+
+      override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
 
       public fun build(): software.amazon.awscdk.services.ecs.CfnService.AwsVpcConfigurationProperty
           = cdkBuilder.build()
@@ -2171,6 +2257,8 @@ public open class CfnService internal constructor(
     public interface Builder {
       public fun alarmNames(alarmNames: List<String>)
 
+      public fun alarmNames(vararg alarmNames: String)
+
       public fun enable(enable: Boolean)
 
       public fun enable(enable: IResolvable)
@@ -2188,6 +2276,8 @@ public open class CfnService internal constructor(
       override fun alarmNames(alarmNames: List<String>) {
         cdkBuilder.alarmNames(alarmNames)
       }
+
+      override fun alarmNames(vararg alarmNames: String): Unit = alarmNames(alarmNames.toList())
 
       override fun enable(enable: Boolean) {
         cdkBuilder.enable(enable)
@@ -2213,7 +2303,7 @@ public open class CfnService internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ecs.CfnService.DeploymentAlarmsProperty,
     ) : DeploymentAlarmsProperty {
-      override fun alarmNames(): List<String> = unwrap(this).getAlarmNames() ?: emptyList()
+      override fun alarmNames(): List<String> = unwrap(this).getAlarmNames()
 
       override fun enable(): Any = unwrap(this).getEnable()
 

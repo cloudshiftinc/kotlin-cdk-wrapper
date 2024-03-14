@@ -19,6 +19,9 @@ public open class CfnGrant internal constructor(
     unwrap(this).setAllowedOperations(`value`)
   }
 
+  public open fun allowedOperations(vararg `value`: String): Unit =
+      allowedOperations(`value`.toList())
+
   public open fun attrGrantArn(): String = unwrap(this).getAttrGrantArn()
 
   public open fun attrVersion(): String = unwrap(this).getAttrVersion()
@@ -51,6 +54,8 @@ public open class CfnGrant internal constructor(
     unwrap(this).setPrincipals(`value`)
   }
 
+  public open fun principals(vararg `value`: String): Unit = principals(`value`.toList())
+
   public open fun status(): String? = unwrap(this).getStatus()
 
   public open fun status(`value`: String) {
@@ -60,6 +65,8 @@ public open class CfnGrant internal constructor(
   public interface Builder {
     public fun allowedOperations(allowedOperations: List<String>)
 
+    public fun allowedOperations(vararg allowedOperations: String)
+
     public fun grantName(grantName: String)
 
     public fun homeRegion(homeRegion: String)
@@ -67,6 +74,8 @@ public open class CfnGrant internal constructor(
     public fun licenseArn(licenseArn: String)
 
     public fun principals(principals: List<String>)
+
+    public fun principals(vararg principals: String)
 
     public fun status(status: String)
   }
@@ -81,6 +90,9 @@ public open class CfnGrant internal constructor(
     override fun allowedOperations(allowedOperations: List<String>) {
       cdkBuilder.allowedOperations(allowedOperations)
     }
+
+    override fun allowedOperations(vararg allowedOperations: String): Unit =
+        allowedOperations(allowedOperations.toList())
 
     override fun grantName(grantName: String) {
       cdkBuilder.grantName(grantName)
@@ -97,6 +109,8 @@ public open class CfnGrant internal constructor(
     override fun principals(principals: List<String>) {
       cdkBuilder.principals(principals)
     }
+
+    override fun principals(vararg principals: String): Unit = principals(principals.toList())
 
     override fun status(status: String) {
       cdkBuilder.status(status)

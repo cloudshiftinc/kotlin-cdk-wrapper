@@ -43,6 +43,9 @@ public open class CfnWorkteam internal constructor(
     unwrap(this).setMemberDefinitions(__idx_ac66f0)
   }
 
+  public open fun memberDefinitions(vararg __idx_ac66f0: Any): Unit =
+      memberDefinitions(__idx_ac66f0.toList())
+
   public open fun notificationConfiguration(): Any? = unwrap(this).getNotificationConfiguration()
 
   public open fun notificationConfiguration(`value`: IResolvable) {
@@ -68,6 +71,8 @@ public open class CfnWorkteam internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun workforceName(): String? = unwrap(this).getWorkforceName()
 
   public open fun workforceName(`value`: String) {
@@ -87,6 +92,8 @@ public open class CfnWorkteam internal constructor(
 
     public fun memberDefinitions(memberDefinitions: List<Any>)
 
+    public fun memberDefinitions(vararg memberDefinitions: Any)
+
     public fun notificationConfiguration(notificationConfiguration: IResolvable)
 
     public
@@ -98,6 +105,8 @@ public open class CfnWorkteam internal constructor(
         fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun workforceName(workforceName: String)
 
@@ -123,6 +132,9 @@ public open class CfnWorkteam internal constructor(
       cdkBuilder.memberDefinitions(memberDefinitions)
     }
 
+    override fun memberDefinitions(vararg memberDefinitions: Any): Unit =
+        memberDefinitions(memberDefinitions.toList())
+
     override fun notificationConfiguration(notificationConfiguration: IResolvable) {
       cdkBuilder.notificationConfiguration(notificationConfiguration.let(IResolvable::unwrap))
     }
@@ -142,6 +154,8 @@ public open class CfnWorkteam internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun workforceName(workforceName: String) {
       cdkBuilder.workforceName(workforceName)
@@ -299,6 +313,8 @@ public open class CfnWorkteam internal constructor(
 
     public interface Builder {
       public fun oidcGroups(oidcGroups: List<String>)
+
+      public fun oidcGroups(vararg oidcGroups: String)
     }
 
     private class BuilderImpl : Builder {
@@ -311,6 +327,8 @@ public open class CfnWorkteam internal constructor(
         cdkBuilder.oidcGroups(oidcGroups)
       }
 
+      override fun oidcGroups(vararg oidcGroups: String): Unit = oidcGroups(oidcGroups.toList())
+
       public fun build():
           software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty =
           cdkBuilder.build()
@@ -320,7 +338,7 @@ public open class CfnWorkteam internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnWorkteam.OidcMemberDefinitionProperty,
     ) : OidcMemberDefinitionProperty {
-      override fun oidcGroups(): List<String> = unwrap(this).getOidcGroups() ?: emptyList()
+      override fun oidcGroups(): List<String> = unwrap(this).getOidcGroups()
     }
 
     public companion object {

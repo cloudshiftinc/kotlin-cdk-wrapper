@@ -30,6 +30,9 @@ public open class CfnCluster internal constructor(
     unwrap(this).setCapacityProviders(`value`)
   }
 
+  public open fun capacityProviders(vararg `value`: String): Unit =
+      capacityProviders(`value`.toList())
+
   public open fun clusterName(): String? = unwrap(this).getClusterName()
 
   public open fun clusterName(`value`: String) {
@@ -45,6 +48,9 @@ public open class CfnCluster internal constructor(
   public open fun clusterSettings(__idx_ac66f0: List<Any>) {
     unwrap(this).setClusterSettings(__idx_ac66f0)
   }
+
+  public open fun clusterSettings(vararg __idx_ac66f0: Any): Unit =
+      clusterSettings(__idx_ac66f0.toList())
 
   public open fun configuration(): Any? = unwrap(this).getConfiguration()
 
@@ -71,6 +77,9 @@ public open class CfnCluster internal constructor(
   public open fun defaultCapacityProviderStrategy(__idx_ac66f0: List<Any>) {
     unwrap(this).setDefaultCapacityProviderStrategy(__idx_ac66f0)
   }
+
+  public open fun defaultCapacityProviderStrategy(vararg __idx_ac66f0: Any): Unit =
+      defaultCapacityProviderStrategy(__idx_ac66f0.toList())
 
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
@@ -101,14 +110,20 @@ public open class CfnCluster internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun capacityProviders(capacityProviders: List<String>)
+
+    public fun capacityProviders(vararg capacityProviders: String)
 
     public fun clusterName(clusterName: String)
 
     public fun clusterSettings(clusterSettings: IResolvable)
 
     public fun clusterSettings(clusterSettings: List<Any>)
+
+    public fun clusterSettings(vararg clusterSettings: Any)
 
     public fun configuration(configuration: IResolvable)
 
@@ -122,6 +137,8 @@ public open class CfnCluster internal constructor(
 
     public fun defaultCapacityProviderStrategy(defaultCapacityProviderStrategy: List<Any>)
 
+    public fun defaultCapacityProviderStrategy(vararg defaultCapacityProviderStrategy: Any)
+
     public fun serviceConnectDefaults(serviceConnectDefaults: IResolvable)
 
     public fun serviceConnectDefaults(serviceConnectDefaults: ServiceConnectDefaultsProperty)
@@ -132,6 +149,8 @@ public open class CfnCluster internal constructor(
         fun serviceConnectDefaults(serviceConnectDefaults: ServiceConnectDefaultsProperty.Builder.() -> Unit)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -145,6 +164,9 @@ public open class CfnCluster internal constructor(
       cdkBuilder.capacityProviders(capacityProviders)
     }
 
+    override fun capacityProviders(vararg capacityProviders: String): Unit =
+        capacityProviders(capacityProviders.toList())
+
     override fun clusterName(clusterName: String) {
       cdkBuilder.clusterName(clusterName)
     }
@@ -156,6 +178,9 @@ public open class CfnCluster internal constructor(
     override fun clusterSettings(clusterSettings: List<Any>) {
       cdkBuilder.clusterSettings(clusterSettings)
     }
+
+    override fun clusterSettings(vararg clusterSettings: Any): Unit =
+        clusterSettings(clusterSettings.toList())
 
     override fun configuration(configuration: IResolvable) {
       cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
@@ -178,6 +203,9 @@ public open class CfnCluster internal constructor(
       cdkBuilder.defaultCapacityProviderStrategy(defaultCapacityProviderStrategy)
     }
 
+    override fun defaultCapacityProviderStrategy(vararg defaultCapacityProviderStrategy: Any): Unit
+        = defaultCapacityProviderStrategy(defaultCapacityProviderStrategy.toList())
+
     override fun serviceConnectDefaults(serviceConnectDefaults: IResolvable) {
       cdkBuilder.serviceConnectDefaults(serviceConnectDefaults.let(IResolvable::unwrap))
     }
@@ -195,6 +223,8 @@ public open class CfnCluster internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ecs.CfnCluster = cdkBuilder.build()
   }

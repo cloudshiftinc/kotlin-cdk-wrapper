@@ -35,6 +35,8 @@ public interface CustomOriginConfig {
   public interface Builder {
     public fun allowedOriginSslVersions(allowedOriginSslVersions: List<OriginSslPolicy>)
 
+    public fun allowedOriginSslVersions(vararg allowedOriginSslVersions: OriginSslPolicy)
+
     public fun domainName(domainName: String)
 
     public fun httpPort(httpPort: Number)
@@ -61,6 +63,9 @@ public interface CustomOriginConfig {
     override fun allowedOriginSslVersions(allowedOriginSslVersions: List<OriginSslPolicy>) {
       cdkBuilder.allowedOriginSslVersions(allowedOriginSslVersions.map(OriginSslPolicy::unwrap))
     }
+
+    override fun allowedOriginSslVersions(vararg allowedOriginSslVersions: OriginSslPolicy): Unit =
+        allowedOriginSslVersions(allowedOriginSslVersions.toList())
 
     override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)

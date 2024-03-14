@@ -72,6 +72,8 @@ public open class Canary internal constructor(
   public interface Builder {
     public fun artifactsBucketLifecycleRules(artifactsBucketLifecycleRules: List<LifecycleRule>)
 
+    public fun artifactsBucketLifecycleRules(vararg artifactsBucketLifecycleRules: LifecycleRule)
+
     public fun artifactsBucketLocation(artifactsBucketLocation: ArtifactsBucketLocation)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
@@ -94,6 +96,8 @@ public open class Canary internal constructor(
     public fun schedule(schedule: Schedule)
 
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
+
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
 
     public fun startAfterCreation(startAfterCreation: Boolean)
 
@@ -122,6 +126,9 @@ public open class Canary internal constructor(
     override fun artifactsBucketLifecycleRules(artifactsBucketLifecycleRules: List<LifecycleRule>) {
       cdkBuilder.artifactsBucketLifecycleRules(artifactsBucketLifecycleRules.map(LifecycleRule::unwrap))
     }
+
+    override fun artifactsBucketLifecycleRules(vararg artifactsBucketLifecycleRules: LifecycleRule):
+        Unit = artifactsBucketLifecycleRules(artifactsBucketLifecycleRules.toList())
 
     override fun artifactsBucketLocation(artifactsBucketLocation: ArtifactsBucketLocation) {
       cdkBuilder.artifactsBucketLocation(artifactsBucketLocation.let(ArtifactsBucketLocation::unwrap))
@@ -164,6 +171,9 @@ public open class Canary internal constructor(
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
+
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
 
     override fun startAfterCreation(startAfterCreation: Boolean) {
       cdkBuilder.startAfterCreation(startAfterCreation)

@@ -14,6 +14,8 @@ public interface RedriveAllowPolicy {
     public fun redrivePermission(redrivePermission: RedrivePermission)
 
     public fun sourceQueues(sourceQueues: List<IQueue>)
+
+    public fun sourceQueues(vararg sourceQueues: IQueue)
   }
 
   private class BuilderImpl : Builder {
@@ -27,6 +29,9 @@ public interface RedriveAllowPolicy {
     override fun sourceQueues(sourceQueues: List<IQueue>) {
       cdkBuilder.sourceQueues(sourceQueues.map(IQueue::unwrap))
     }
+
+    override fun sourceQueues(vararg sourceQueues: IQueue): Unit =
+        sourceQueues(sourceQueues.toList())
 
     public fun build(): software.amazon.awscdk.services.sqs.RedriveAllowPolicy = cdkBuilder.build()
   }

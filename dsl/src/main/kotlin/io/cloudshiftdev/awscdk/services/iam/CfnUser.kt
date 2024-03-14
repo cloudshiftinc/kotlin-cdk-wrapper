@@ -28,6 +28,8 @@ public open class CfnUser internal constructor(
     unwrap(this).setGroups(`value`)
   }
 
+  public open fun groups(vararg `value`: String): Unit = groups(`value`.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -54,6 +56,9 @@ public open class CfnUser internal constructor(
     unwrap(this).setManagedPolicyArns(`value`)
   }
 
+  public open fun managedPolicyArns(vararg `value`: String): Unit =
+      managedPolicyArns(`value`.toList())
+
   public open fun path(): String? = unwrap(this).getPath()
 
   public open fun path(`value`: String) {
@@ -76,6 +81,8 @@ public open class CfnUser internal constructor(
     unwrap(this).setPolicies(__idx_ac66f0)
   }
 
+  public open fun policies(vararg __idx_ac66f0: Any): Unit = policies(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -85,6 +92,8 @@ public open class CfnUser internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public open fun userName(): String? = unwrap(this).getUserName()
 
   public open fun userName(`value`: String) {
@@ -93,6 +102,8 @@ public open class CfnUser internal constructor(
 
   public interface Builder {
     public fun groups(groups: List<String>)
+
+    public fun groups(vararg groups: String)
 
     public fun loginProfile(loginProfile: IResolvable)
 
@@ -104,6 +115,8 @@ public open class CfnUser internal constructor(
 
     public fun managedPolicyArns(managedPolicyArns: List<String>)
 
+    public fun managedPolicyArns(vararg managedPolicyArns: String)
+
     public fun path(path: String)
 
     public fun permissionsBoundary(permissionsBoundary: String)
@@ -112,7 +125,11 @@ public open class CfnUser internal constructor(
 
     public fun policies(policies: List<Any>)
 
+    public fun policies(vararg policies: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun userName(userName: String)
   }
@@ -127,6 +144,8 @@ public open class CfnUser internal constructor(
     override fun groups(groups: List<String>) {
       cdkBuilder.groups(groups)
     }
+
+    override fun groups(vararg groups: String): Unit = groups(groups.toList())
 
     override fun loginProfile(loginProfile: IResolvable) {
       cdkBuilder.loginProfile(loginProfile.let(IResolvable::unwrap))
@@ -145,6 +164,9 @@ public open class CfnUser internal constructor(
       cdkBuilder.managedPolicyArns(managedPolicyArns)
     }
 
+    override fun managedPolicyArns(vararg managedPolicyArns: String): Unit =
+        managedPolicyArns(managedPolicyArns.toList())
+
     override fun path(path: String) {
       cdkBuilder.path(path)
     }
@@ -161,9 +183,13 @@ public open class CfnUser internal constructor(
       cdkBuilder.policies(policies)
     }
 
+    override fun policies(vararg policies: Any): Unit = policies(policies.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun userName(userName: String) {
       cdkBuilder.userName(userName)

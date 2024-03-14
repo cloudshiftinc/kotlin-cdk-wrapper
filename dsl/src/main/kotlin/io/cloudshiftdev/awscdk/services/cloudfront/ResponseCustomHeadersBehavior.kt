@@ -8,6 +8,8 @@ public interface ResponseCustomHeadersBehavior {
 
   public interface Builder {
     public fun customHeaders(customHeaders: List<ResponseCustomHeader>)
+
+    public fun customHeaders(vararg customHeaders: ResponseCustomHeader)
   }
 
   private class BuilderImpl : Builder {
@@ -18,6 +20,9 @@ public interface ResponseCustomHeadersBehavior {
     override fun customHeaders(customHeaders: List<ResponseCustomHeader>) {
       cdkBuilder.customHeaders(customHeaders.map(ResponseCustomHeader::unwrap))
     }
+
+    override fun customHeaders(vararg customHeaders: ResponseCustomHeader): Unit =
+        customHeaders(customHeaders.toList())
 
     public fun build(): software.amazon.awscdk.services.cloudfront.ResponseCustomHeadersBehavior =
         cdkBuilder.build()

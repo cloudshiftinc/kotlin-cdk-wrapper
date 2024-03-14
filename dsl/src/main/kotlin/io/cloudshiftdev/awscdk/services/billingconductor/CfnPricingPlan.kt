@@ -46,6 +46,8 @@ public open class CfnPricingPlan internal constructor(
     unwrap(this).setPricingRuleArns(`value`)
   }
 
+  public open fun pricingRuleArns(vararg `value`: String): Unit = pricingRuleArns(`value`.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -55,6 +57,8 @@ public open class CfnPricingPlan internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun description(description: String)
 
@@ -62,7 +66,11 @@ public open class CfnPricingPlan internal constructor(
 
     public fun pricingRuleArns(pricingRuleArns: List<String>)
 
+    public fun pricingRuleArns(vararg pricingRuleArns: String)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -84,9 +92,14 @@ public open class CfnPricingPlan internal constructor(
       cdkBuilder.pricingRuleArns(pricingRuleArns)
     }
 
+    override fun pricingRuleArns(vararg pricingRuleArns: String): Unit =
+        pricingRuleArns(pricingRuleArns.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.billingconductor.CfnPricingPlan =
         cdkBuilder.build()

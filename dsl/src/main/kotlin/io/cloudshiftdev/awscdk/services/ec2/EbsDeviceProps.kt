@@ -1,6 +1,10 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.services.kms.IKey
+import kotlin.Boolean
+import kotlin.Number
+import kotlin.String
+import kotlin.Unit
 
 public interface EbsDeviceProps : EbsDeviceSnapshotOptions, EbsDeviceOptions {
   public override fun deleteOnTermination(): Boolean? = unwrap(this).getDeleteOnTermination()

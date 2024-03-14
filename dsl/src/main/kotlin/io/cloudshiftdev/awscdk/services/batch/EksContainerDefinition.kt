@@ -59,7 +59,11 @@ public open class EksContainerDefinition internal constructor(
   public interface Builder {
     public fun args(args: List<String>)
 
+    public fun args(vararg args: String)
+
     public fun command(command: List<String>)
+
+    public fun command(vararg command: String)
 
     public fun cpuLimit(cpuLimit: Number)
 
@@ -92,6 +96,8 @@ public open class EksContainerDefinition internal constructor(
     public fun runAsUser(runAsUser: Number)
 
     public fun volumes(volumes: List<EksVolume>)
+
+    public fun volumes(vararg volumes: EksVolume)
   }
 
   private class BuilderImpl(
@@ -105,9 +111,13 @@ public open class EksContainerDefinition internal constructor(
       cdkBuilder.args(args)
     }
 
+    override fun args(vararg args: String): Unit = args(args.toList())
+
     override fun command(command: List<String>) {
       cdkBuilder.command(command)
     }
+
+    override fun command(vararg command: String): Unit = command(command.toList())
 
     override fun cpuLimit(cpuLimit: Number) {
       cdkBuilder.cpuLimit(cpuLimit)
@@ -172,6 +182,8 @@ public open class EksContainerDefinition internal constructor(
     override fun volumes(volumes: List<EksVolume>) {
       cdkBuilder.volumes(volumes.map(EksVolume::unwrap))
     }
+
+    override fun volumes(vararg volumes: EksVolume): Unit = volumes(volumes.toList())
 
     public fun build(): software.amazon.awscdk.services.batch.EksContainerDefinition =
         cdkBuilder.build()

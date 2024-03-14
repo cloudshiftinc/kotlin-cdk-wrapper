@@ -43,12 +43,17 @@ public open class CfnPermissions internal constructor(
     unwrap(this).setPermissions(`value`)
   }
 
+  public open fun permissions(vararg `value`: String): Unit = permissions(`value`.toList())
+
   public open fun permissionsWithGrantOption(): List<String> =
       unwrap(this).getPermissionsWithGrantOption() ?: emptyList()
 
   public open fun permissionsWithGrantOption(`value`: List<String>) {
     unwrap(this).setPermissionsWithGrantOption(`value`)
   }
+
+  public open fun permissionsWithGrantOption(vararg `value`: String): Unit =
+      permissionsWithGrantOption(`value`.toList())
 
   public open fun resource(): Any = unwrap(this).getResource()
 
@@ -76,7 +81,11 @@ public open class CfnPermissions internal constructor(
 
     public fun permissions(permissions: List<String>)
 
+    public fun permissions(vararg permissions: String)
+
     public fun permissionsWithGrantOption(permissionsWithGrantOption: List<String>)
+
+    public fun permissionsWithGrantOption(vararg permissionsWithGrantOption: String)
 
     public fun resource(resource: IResolvable)
 
@@ -111,9 +120,14 @@ public open class CfnPermissions internal constructor(
       cdkBuilder.permissions(permissions)
     }
 
+    override fun permissions(vararg permissions: String): Unit = permissions(permissions.toList())
+
     override fun permissionsWithGrantOption(permissionsWithGrantOption: List<String>) {
       cdkBuilder.permissionsWithGrantOption(permissionsWithGrantOption)
     }
+
+    override fun permissionsWithGrantOption(vararg permissionsWithGrantOption: String): Unit =
+        permissionsWithGrantOption(permissionsWithGrantOption.toList())
 
     override fun resource(resource: IResolvable) {
       cdkBuilder.resource(resource.let(IResolvable::unwrap))
@@ -432,6 +446,8 @@ public open class CfnPermissions internal constructor(
 
       public fun columnNames(columnNames: List<String>)
 
+      public fun columnNames(vararg columnNames: String)
+
       public fun columnWildcard(columnWildcard: IResolvable)
 
       public fun columnWildcard(columnWildcard: ColumnWildcardProperty)
@@ -458,6 +474,8 @@ public open class CfnPermissions internal constructor(
       override fun columnNames(columnNames: List<String>) {
         cdkBuilder.columnNames(columnNames)
       }
+
+      override fun columnNames(vararg columnNames: String): Unit = columnNames(columnNames.toList())
 
       override fun columnWildcard(columnWildcard: IResolvable) {
         cdkBuilder.columnWildcard(columnWildcard.let(IResolvable::unwrap))
@@ -526,6 +544,8 @@ public open class CfnPermissions internal constructor(
 
     public interface Builder {
       public fun excludedColumnNames(excludedColumnNames: List<String>)
+
+      public fun excludedColumnNames(vararg excludedColumnNames: String)
     }
 
     private class BuilderImpl : Builder {
@@ -537,6 +557,9 @@ public open class CfnPermissions internal constructor(
       override fun excludedColumnNames(excludedColumnNames: List<String>) {
         cdkBuilder.excludedColumnNames(excludedColumnNames)
       }
+
+      override fun excludedColumnNames(vararg excludedColumnNames: String): Unit =
+          excludedColumnNames(excludedColumnNames.toList())
 
       public fun build():
           software.amazon.awscdk.services.lakeformation.CfnPermissions.ColumnWildcardProperty =

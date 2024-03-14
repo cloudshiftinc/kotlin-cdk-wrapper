@@ -28,6 +28,8 @@ public open class CfnWALWorkspace internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public open fun walWorkspaceName(): String? = unwrap(this).getWalWorkspaceName()
 
   public open fun walWorkspaceName(`value`: String) {
@@ -36,6 +38,8 @@ public open class CfnWALWorkspace internal constructor(
 
   public interface Builder {
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
 
     public fun walWorkspaceName(walWorkspaceName: String)
   }
@@ -50,6 +54,8 @@ public open class CfnWALWorkspace internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     override fun walWorkspaceName(walWorkspaceName: String) {
       cdkBuilder.walWorkspaceName(walWorkspaceName)

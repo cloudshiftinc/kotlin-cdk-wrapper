@@ -40,6 +40,8 @@ public open class StepScalingPolicy internal constructor(
 
     public fun scalingSteps(scalingSteps: List<ScalingInterval>)
 
+    public fun scalingSteps(vararg scalingSteps: ScalingInterval)
+
     public fun scalingTarget(scalingTarget: IScalableTarget)
   }
 
@@ -83,6 +85,9 @@ public open class StepScalingPolicy internal constructor(
     override fun scalingSteps(scalingSteps: List<ScalingInterval>) {
       cdkBuilder.scalingSteps(scalingSteps.map(ScalingInterval::unwrap))
     }
+
+    override fun scalingSteps(vararg scalingSteps: ScalingInterval): Unit =
+        scalingSteps(scalingSteps.toList())
 
     override fun scalingTarget(scalingTarget: IScalableTarget) {
       cdkBuilder.scalingTarget(scalingTarget.let(IScalableTarget::unwrap))

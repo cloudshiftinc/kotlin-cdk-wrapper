@@ -80,6 +80,8 @@ public open class CfnListener internal constructor(
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
   public interface Builder {
     public fun defaultAction(defaultAction: IResolvable)
 
@@ -98,6 +100,8 @@ public open class CfnListener internal constructor(
     public fun serviceIdentifier(serviceIdentifier: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -139,6 +143,8 @@ public open class CfnListener internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.vpclattice.CfnListener = cdkBuilder.build()
   }
@@ -278,6 +284,8 @@ public open class CfnListener internal constructor(
       public fun targetGroups(targetGroups: IResolvable)
 
       public fun targetGroups(targetGroups: List<Any>)
+
+      public fun targetGroups(vararg targetGroups: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -292,6 +300,9 @@ public open class CfnListener internal constructor(
       override fun targetGroups(targetGroups: List<Any>) {
         cdkBuilder.targetGroups(targetGroups)
       }
+
+      override fun targetGroups(vararg targetGroups: Any): Unit =
+          targetGroups(targetGroups.toList())
 
       public fun build(): software.amazon.awscdk.services.vpclattice.CfnListener.ForwardProperty =
           cdkBuilder.build()

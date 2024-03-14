@@ -42,6 +42,8 @@ public interface ApplicationLoadBalancedTaskImageOptions {
   public interface Builder {
     public fun command(command: List<String>)
 
+    public fun command(vararg command: String)
+
     public fun containerName(containerName: String)
 
     public fun containerPort(containerPort: Number)
@@ -51,6 +53,8 @@ public interface ApplicationLoadBalancedTaskImageOptions {
     public fun enableLogging(enableLogging: Boolean)
 
     public fun entryPoint(entryPoint: List<String>)
+
+    public fun entryPoint(vararg entryPoint: String)
 
     public fun environment(environment: Map<String, String>)
 
@@ -77,6 +81,8 @@ public interface ApplicationLoadBalancedTaskImageOptions {
       cdkBuilder.command(command)
     }
 
+    override fun command(vararg command: String): Unit = command(command.toList())
+
     override fun containerName(containerName: String) {
       cdkBuilder.containerName(containerName)
     }
@@ -96,6 +102,8 @@ public interface ApplicationLoadBalancedTaskImageOptions {
     override fun entryPoint(entryPoint: List<String>) {
       cdkBuilder.entryPoint(entryPoint)
     }
+
+    override fun entryPoint(vararg entryPoint: String): Unit = entryPoint(entryPoint.toList())
 
     override fun environment(environment: Map<String, String>) {
       cdkBuilder.environment(environment)

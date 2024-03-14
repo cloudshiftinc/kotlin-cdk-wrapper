@@ -53,6 +53,8 @@ public open class CfnLaunch internal constructor(
     unwrap(this).setGroups(__idx_ac66f0)
   }
 
+  public open fun groups(vararg __idx_ac66f0: Any): Unit = groups(__idx_ac66f0.toList())
+
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
@@ -66,6 +68,9 @@ public open class CfnLaunch internal constructor(
   public open fun metricMonitors(__idx_ac66f0: List<Any>) {
     unwrap(this).setMetricMonitors(__idx_ac66f0)
   }
+
+  public open fun metricMonitors(vararg __idx_ac66f0: Any): Unit =
+      metricMonitors(__idx_ac66f0.toList())
 
   public open fun name(): String = unwrap(this).getName()
 
@@ -95,6 +100,9 @@ public open class CfnLaunch internal constructor(
     unwrap(this).setScheduledSplitsConfig(__idx_ac66f0)
   }
 
+  public open fun scheduledSplitsConfig(vararg __idx_ac66f0: Any): Unit =
+      scheduledSplitsConfig(__idx_ac66f0.toList())
+
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
@@ -103,6 +111,8 @@ public open class CfnLaunch internal constructor(
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   public interface Builder {
     public fun description(description: String)
@@ -119,9 +129,13 @@ public open class CfnLaunch internal constructor(
 
     public fun groups(groups: List<Any>)
 
+    public fun groups(vararg groups: Any)
+
     public fun metricMonitors(metricMonitors: IResolvable)
 
     public fun metricMonitors(metricMonitors: List<Any>)
+
+    public fun metricMonitors(vararg metricMonitors: Any)
 
     public fun name(name: String)
 
@@ -133,7 +147,11 @@ public open class CfnLaunch internal constructor(
 
     public fun scheduledSplitsConfig(scheduledSplitsConfig: List<Any>)
 
+    public fun scheduledSplitsConfig(vararg scheduledSplitsConfig: Any)
+
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -168,6 +186,8 @@ public open class CfnLaunch internal constructor(
       cdkBuilder.groups(groups)
     }
 
+    override fun groups(vararg groups: Any): Unit = groups(groups.toList())
+
     override fun metricMonitors(metricMonitors: IResolvable) {
       cdkBuilder.metricMonitors(metricMonitors.let(IResolvable::unwrap))
     }
@@ -175,6 +195,9 @@ public open class CfnLaunch internal constructor(
     override fun metricMonitors(metricMonitors: List<Any>) {
       cdkBuilder.metricMonitors(metricMonitors)
     }
+
+    override fun metricMonitors(vararg metricMonitors: Any): Unit =
+        metricMonitors(metricMonitors.toList())
 
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -196,9 +219,14 @@ public open class CfnLaunch internal constructor(
       cdkBuilder.scheduledSplitsConfig(scheduledSplitsConfig)
     }
 
+    override fun scheduledSplitsConfig(vararg scheduledSplitsConfig: Any): Unit =
+        scheduledSplitsConfig(scheduledSplitsConfig.toList())
+
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.evidently.CfnLaunch = cdkBuilder.build()
   }
@@ -532,6 +560,8 @@ public open class CfnLaunch internal constructor(
       public fun weights(weights: IResolvable)
 
       public fun weights(weights: List<Any>)
+
+      public fun weights(vararg weights: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -554,6 +584,8 @@ public open class CfnLaunch internal constructor(
       override fun weights(weights: List<Any>) {
         cdkBuilder.weights(weights)
       }
+
+      override fun weights(vararg weights: Any): Unit = weights(weights.toList())
 
       public fun build():
           software.amazon.awscdk.services.evidently.CfnLaunch.SegmentOverrideProperty =
@@ -603,9 +635,13 @@ public open class CfnLaunch internal constructor(
 
       public fun groupWeights(groupWeights: List<Any>)
 
+      public fun groupWeights(vararg groupWeights: Any)
+
       public fun segmentOverrides(segmentOverrides: IResolvable)
 
       public fun segmentOverrides(segmentOverrides: List<Any>)
+
+      public fun segmentOverrides(vararg segmentOverrides: Any)
 
       public fun startTime(startTime: String)
     }
@@ -623,6 +659,9 @@ public open class CfnLaunch internal constructor(
         cdkBuilder.groupWeights(groupWeights)
       }
 
+      override fun groupWeights(vararg groupWeights: Any): Unit =
+          groupWeights(groupWeights.toList())
+
       override fun segmentOverrides(segmentOverrides: IResolvable) {
         cdkBuilder.segmentOverrides(segmentOverrides.let(IResolvable::unwrap))
       }
@@ -630,6 +669,9 @@ public open class CfnLaunch internal constructor(
       override fun segmentOverrides(segmentOverrides: List<Any>) {
         cdkBuilder.segmentOverrides(segmentOverrides)
       }
+
+      override fun segmentOverrides(vararg segmentOverrides: Any): Unit =
+          segmentOverrides(segmentOverrides.toList())
 
       override fun startTime(startTime: String) {
         cdkBuilder.startTime(startTime)

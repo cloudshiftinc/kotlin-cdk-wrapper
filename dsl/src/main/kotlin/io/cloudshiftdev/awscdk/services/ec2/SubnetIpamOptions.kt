@@ -8,6 +8,8 @@ public interface SubnetIpamOptions {
 
   public interface Builder {
     public fun allocatedSubnets(allocatedSubnets: List<AllocatedSubnet>)
+
+    public fun allocatedSubnets(vararg allocatedSubnets: AllocatedSubnet)
   }
 
   private class BuilderImpl : Builder {
@@ -17,6 +19,9 @@ public interface SubnetIpamOptions {
     override fun allocatedSubnets(allocatedSubnets: List<AllocatedSubnet>) {
       cdkBuilder.allocatedSubnets(allocatedSubnets.map(AllocatedSubnet::unwrap))
     }
+
+    override fun allocatedSubnets(vararg allocatedSubnets: AllocatedSubnet): Unit =
+        allocatedSubnets(allocatedSubnets.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.SubnetIpamOptions = cdkBuilder.build()
   }

@@ -19,11 +19,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnLocationAzureBlob internal constructor(
   private val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationAzureBlob,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
-  public open fun agentArns(): List<String> = unwrap(this).getAgentArns() ?: emptyList()
+  public open fun agentArns(): List<String> = unwrap(this).getAgentArns()
 
   public open fun agentArns(`value`: List<String>) {
     unwrap(this).setAgentArns(`value`)
   }
+
+  public open fun agentArns(vararg `value`: String): Unit = agentArns(`value`.toList())
 
   public open fun attrLocationArn(): String = unwrap(this).getAttrLocationArn()
 
@@ -89,8 +91,12 @@ public open class CfnLocationAzureBlob internal constructor(
     unwrap(this).setTags(`value`.map(CfnTag::unwrap))
   }
 
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
+
   public interface Builder {
     public fun agentArns(agentArns: List<String>)
+
+    public fun agentArns(vararg agentArns: String)
 
     public fun azureAccessTier(azureAccessTier: String)
 
@@ -113,6 +119,8 @@ public open class CfnLocationAzureBlob internal constructor(
     public fun subdirectory(subdirectory: String)
 
     public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -125,6 +133,8 @@ public open class CfnLocationAzureBlob internal constructor(
     override fun agentArns(agentArns: List<String>) {
       cdkBuilder.agentArns(agentArns)
     }
+
+    override fun agentArns(vararg agentArns: String): Unit = agentArns(agentArns.toList())
 
     override fun azureAccessTier(azureAccessTier: String) {
       cdkBuilder.azureAccessTier(azureAccessTier)
@@ -165,6 +175,8 @@ public open class CfnLocationAzureBlob internal constructor(
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.datasync.CfnLocationAzureBlob =
         cdkBuilder.build()

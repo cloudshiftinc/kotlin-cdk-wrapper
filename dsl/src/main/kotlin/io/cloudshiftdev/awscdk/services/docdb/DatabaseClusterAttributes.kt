@@ -31,7 +31,11 @@ public interface DatabaseClusterAttributes {
 
     public fun instanceEndpointAddresses(instanceEndpointAddresses: List<String>)
 
+    public fun instanceEndpointAddresses(vararg instanceEndpointAddresses: String)
+
     public fun instanceIdentifiers(instanceIdentifiers: List<String>)
+
+    public fun instanceIdentifiers(vararg instanceIdentifiers: String)
 
     public fun port(port: Number)
 
@@ -56,9 +60,15 @@ public interface DatabaseClusterAttributes {
       cdkBuilder.instanceEndpointAddresses(instanceEndpointAddresses)
     }
 
+    override fun instanceEndpointAddresses(vararg instanceEndpointAddresses: String): Unit =
+        instanceEndpointAddresses(instanceEndpointAddresses.toList())
+
     override fun instanceIdentifiers(instanceIdentifiers: List<String>) {
       cdkBuilder.instanceIdentifiers(instanceIdentifiers)
     }
+
+    override fun instanceIdentifiers(vararg instanceIdentifiers: String): Unit =
+        instanceIdentifiers(instanceIdentifiers.toList())
 
     override fun port(port: Number) {
       cdkBuilder.port(port)
