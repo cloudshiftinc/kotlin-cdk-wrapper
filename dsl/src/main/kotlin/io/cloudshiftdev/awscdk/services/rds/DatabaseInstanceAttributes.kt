@@ -1,5 +1,6 @@
 package io.cloudshiftdev.awscdk.services.rds
 
+import io.cloudshiftdev.awscdk.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import kotlin.Number
@@ -8,18 +9,163 @@ import kotlin.Unit
 import kotlin.collections.List
 
 public interface DatabaseInstanceAttributes {
+  /**
+   * The engine of the existing database Instance.
+   *
+   * Default: - the imported Instance's engine is unknown
+   */
+  public fun engine(): IInstanceEngine? = unwrap(this).getEngine()?.let(IInstanceEngine::wrap)
+
+  /**
+   * The endpoint address.
+   */
+  public fun instanceEndpointAddress(): String
+
+  /**
+   * The instance identifier.
+   */
+  public fun instanceIdentifier(): String
+
+  /**
+   * The AWS Region-unique, immutable identifier for the DB instance.
+   *
+   * This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB
+   * instance is accessed.
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#aws-resource-rds-dbinstance-return-values)
+   */
+  public fun instanceResourceId(): String? = unwrap(this).getInstanceResourceId()
+
+  /**
+   * The database port.
+   */
+  public fun port(): Number
+
+  /**
+   * The security groups of the instance.
+   */
+  public fun securityGroups(): List<ISecurityGroup>
+
+  /**
+   * A builder for [DatabaseInstanceAttributes]
+   */
+  @CdkDslMarker
+  public interface Builder {
+    /**
+     * @param engine The engine of the existing database Instance.
+     */
+    public fun engine(engine: IInstanceEngine)
+
+    /**
+     * @param instanceEndpointAddress The endpoint address. 
+     */
+    public fun instanceEndpointAddress(instanceEndpointAddress: String)
+
+    /**
+     * @param instanceIdentifier The instance identifier. 
+     */
+    public fun instanceIdentifier(instanceIdentifier: String)
+
+    /**
+     * @param instanceResourceId The AWS Region-unique, immutable identifier for the DB instance.
+     * This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB
+     * instance is accessed.
+     */
+    public fun instanceResourceId(instanceResourceId: String)
+
+    /**
+     * @param port The database port. 
+     */
+    public fun port(port: Number)
+
+    /**
+     * @param securityGroups The security groups of the instance. 
+     */
+    public fun securityGroups(securityGroups: List<ISecurityGroup>)
+
+    /**
+     * @param securityGroups The security groups of the instance. 
+     */
+    public fun securityGroups(vararg securityGroups: ISecurityGroup)
+  }
+
+  private class BuilderImpl : Builder {
+    private val cdkBuilder: software.amazon.awscdk.services.rds.DatabaseInstanceAttributes.Builder =
+        software.amazon.awscdk.services.rds.DatabaseInstanceAttributes.builder()
+
+    /**
+     * @param engine The engine of the existing database Instance.
+     */
+    override fun engine(engine: IInstanceEngine) {
+      cdkBuilder.engine(engine.let(IInstanceEngine::unwrap))
+    }
+
+    /**
+     * @param instanceEndpointAddress The endpoint address. 
+     */
+    override fun instanceEndpointAddress(instanceEndpointAddress: String) {
+      cdkBuilder.instanceEndpointAddress(instanceEndpointAddress)
+    }
+
+    /**
+     * @param instanceIdentifier The instance identifier. 
+     */
+    override fun instanceIdentifier(instanceIdentifier: String) {
+      cdkBuilder.instanceIdentifier(instanceIdentifier)
+    }
+
+    /**
+     * @param instanceResourceId The AWS Region-unique, immutable identifier for the DB instance.
+     * This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB
+     * instance is accessed.
+     */
+    override fun instanceResourceId(instanceResourceId: String) {
+      cdkBuilder.instanceResourceId(instanceResourceId)
+    }
+
+    /**
+     * @param port The database port. 
+     */
+    override fun port(port: Number) {
+      cdkBuilder.port(port)
+    }
+
+    /**
+     * @param securityGroups The security groups of the instance. 
+     */
+    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+    }
+
+    /**
+     * @param securityGroups The security groups of the instance. 
+     */
+    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+        securityGroups(securityGroups.toList())
+
+    public fun build(): software.amazon.awscdk.services.rds.DatabaseInstanceAttributes =
+        cdkBuilder.build()
+  }
+
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceAttributes,
+  ) : CdkObject(cdkObject), DatabaseInstanceAttributes {
     /**
      * The engine of the existing database Instance.
      *
      * Default: - the imported Instance's engine is unknown
      */
-    public fun engine(): IInstanceEngine? = unwrap(this).getEngine()?.let(IInstanceEngine::wrap)
+    override fun engine(): IInstanceEngine? = unwrap(this).getEngine()?.let(IInstanceEngine::wrap)
 
-    /** The endpoint address. */
-    public fun instanceEndpointAddress(): String
+    /**
+     * The endpoint address.
+     */
+    override fun instanceEndpointAddress(): String = unwrap(this).getInstanceEndpointAddress()
 
-    /** The instance identifier. */
-    public fun instanceIdentifier(): String
+    /**
+     * The instance identifier.
+     */
+    override fun instanceIdentifier(): String = unwrap(this).getInstanceIdentifier()
 
     /**
      * The AWS Region-unique, immutable identifier for the DB instance.
@@ -29,141 +175,31 @@ public interface DatabaseInstanceAttributes {
      *
      * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#aws-resource-rds-dbinstance-return-values)
      */
-    public fun instanceResourceId(): String? = unwrap(this).getInstanceResourceId()
+    override fun instanceResourceId(): String? = unwrap(this).getInstanceResourceId()
 
-    /** The database port. */
-    public fun port(): Number
+    /**
+     * The database port.
+     */
+    override fun port(): Number = unwrap(this).getPort()
 
-    /** The security groups of the instance. */
-    public fun securityGroups(): List<ISecurityGroup>
+    /**
+     * The security groups of the instance.
+     */
+    override fun securityGroups(): List<ISecurityGroup> =
+        unwrap(this).getSecurityGroups().map(ISecurityGroup::wrap)
+  }
 
-    /** A builder for [DatabaseInstanceAttributes] */
-    @CdkDslMarker
-    public interface Builder {
-        /** @param engine The engine of the existing database Instance. */
-        public fun engine(engine: IInstanceEngine)
-
-        /** @param instanceEndpointAddress The endpoint address. */
-        public fun instanceEndpointAddress(instanceEndpointAddress: String)
-
-        /** @param instanceIdentifier The instance identifier. */
-        public fun instanceIdentifier(instanceIdentifier: String)
-
-        /**
-         * @param instanceResourceId The AWS Region-unique, immutable identifier for the DB
-         *   instance. This identifier is found in AWS CloudTrail log entries whenever the AWS KMS
-         *   key for the DB instance is accessed.
-         */
-        public fun instanceResourceId(instanceResourceId: String)
-
-        /** @param port The database port. */
-        public fun port(port: Number)
-
-        /** @param securityGroups The security groups of the instance. */
-        public fun securityGroups(securityGroups: List<ISecurityGroup>)
-
-        /** @param securityGroups The security groups of the instance. */
-        public fun securityGroups(vararg securityGroups: ISecurityGroup)
+  public companion object {
+    public operator fun invoke(block: Builder.() -> Unit = {}): DatabaseInstanceAttributes {
+      val builderImpl = BuilderImpl()
+      return Wrapper(builderImpl.apply(block).build())
     }
 
-    private class BuilderImpl : Builder {
-        private val cdkBuilder:
-            software.amazon.awscdk.services.rds.DatabaseInstanceAttributes.Builder =
-            software.amazon.awscdk.services.rds.DatabaseInstanceAttributes.builder()
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceAttributes):
+        DatabaseInstanceAttributes = Wrapper(cdkObject)
 
-        /** @param engine The engine of the existing database Instance. */
-        override fun engine(engine: IInstanceEngine) {
-            cdkBuilder.engine(engine.let(IInstanceEngine::unwrap))
-        }
-
-        /** @param instanceEndpointAddress The endpoint address. */
-        override fun instanceEndpointAddress(instanceEndpointAddress: String) {
-            cdkBuilder.instanceEndpointAddress(instanceEndpointAddress)
-        }
-
-        /** @param instanceIdentifier The instance identifier. */
-        override fun instanceIdentifier(instanceIdentifier: String) {
-            cdkBuilder.instanceIdentifier(instanceIdentifier)
-        }
-
-        /**
-         * @param instanceResourceId The AWS Region-unique, immutable identifier for the DB
-         *   instance. This identifier is found in AWS CloudTrail log entries whenever the AWS KMS
-         *   key for the DB instance is accessed.
-         */
-        override fun instanceResourceId(instanceResourceId: String) {
-            cdkBuilder.instanceResourceId(instanceResourceId)
-        }
-
-        /** @param port The database port. */
-        override fun port(port: Number) {
-            cdkBuilder.port(port)
-        }
-
-        /** @param securityGroups The security groups of the instance. */
-        override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-            cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
-        }
-
-        /** @param securityGroups The security groups of the instance. */
-        override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
-            securityGroups(securityGroups.toList())
-
-        public fun build(): software.amazon.awscdk.services.rds.DatabaseInstanceAttributes =
-            cdkBuilder.build()
-    }
-
-    private class Wrapper
-    internal constructor(
-        internal val cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceAttributes,
-    ) : DatabaseInstanceAttributes {
-        /**
-         * The engine of the existing database Instance.
-         *
-         * Default: - the imported Instance's engine is unknown
-         */
-        override fun engine(): IInstanceEngine? =
-            unwrap(this).getEngine()?.let(IInstanceEngine::wrap)
-
-        /** The endpoint address. */
-        override fun instanceEndpointAddress(): String = unwrap(this).getInstanceEndpointAddress()
-
-        /** The instance identifier. */
-        override fun instanceIdentifier(): String = unwrap(this).getInstanceIdentifier()
-
-        /**
-         * The AWS Region-unique, immutable identifier for the DB instance.
-         *
-         * This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the
-         * DB instance is accessed.
-         *
-         * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#aws-resource-rds-dbinstance-return-values)
-         */
-        override fun instanceResourceId(): String? = unwrap(this).getInstanceResourceId()
-
-        /** The database port. */
-        override fun port(): Number = unwrap(this).getPort()
-
-        /** The security groups of the instance. */
-        override fun securityGroups(): List<ISecurityGroup> =
-            unwrap(this).getSecurityGroups().map(ISecurityGroup::wrap)
-    }
-
-    public companion object {
-        init {}
-
-        public operator fun invoke(block: Builder.() -> Unit = {}): DatabaseInstanceAttributes {
-            val builderImpl = BuilderImpl()
-            return Wrapper(builderImpl.apply(block).build())
-        }
-
-        internal fun wrap(
-            cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceAttributes
-        ): DatabaseInstanceAttributes = Wrapper(cdkObject)
-
-        internal fun unwrap(
-            wrapped: DatabaseInstanceAttributes
-        ): software.amazon.awscdk.services.rds.DatabaseInstanceAttributes =
-            (wrapped as Wrapper).cdkObject
-    }
+    internal fun unwrap(wrapped: DatabaseInstanceAttributes):
+        software.amazon.awscdk.services.rds.DatabaseInstanceAttributes = (wrapped as
+        CdkObject).cdkObject as software.amazon.awscdk.services.rds.DatabaseInstanceAttributes
+  }
 }

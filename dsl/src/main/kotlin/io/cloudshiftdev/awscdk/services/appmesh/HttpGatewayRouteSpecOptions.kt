@@ -1,5 +1,6 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
+import io.cloudshiftdev.awscdk.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.Suppress
@@ -7,6 +8,100 @@ import kotlin.Unit
 import kotlin.jvm.JvmName
 
 public interface HttpGatewayRouteSpecOptions : CommonGatewayRouteSpecOptions {
+  /**
+   * The criterion for determining a request match for this GatewayRoute.
+   *
+   * When path match is defined, this may optionally determine the path rewrite configuration.
+   *
+   * Default: - matches any path and automatically rewrites the path to '/'
+   */
+  public fun match(): HttpGatewayRouteMatch? =
+      unwrap(this).getMatch()?.let(HttpGatewayRouteMatch::wrap)
+
+  /**
+   * The VirtualService this GatewayRoute directs traffic to.
+   */
+  public fun routeTarget(): IVirtualService
+
+  /**
+   * A builder for [HttpGatewayRouteSpecOptions]
+   */
+  @CdkDslMarker
+  public interface Builder {
+    /**
+     * @param match The criterion for determining a request match for this GatewayRoute.
+     * When path match is defined, this may optionally determine the path rewrite configuration.
+     */
+    public fun match(match: HttpGatewayRouteMatch)
+
+    /**
+     * @param match The criterion for determining a request match for this GatewayRoute.
+     * When path match is defined, this may optionally determine the path rewrite configuration.
+     */
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5de161a09ed98413915fa38ce6d6951ffd9f0e0bb9393542cdd7752003239f5f")
+    public fun match(match: HttpGatewayRouteMatch.Builder.() -> Unit)
+
+    /**
+     * @param priority The priority for the gateway route.
+     * When a Virtual Gateway has multiple gateway routes, gateway route match
+     * is performed in the order of specified value, where 0 is the highest priority,
+     * and first matched gateway route is selected.
+     */
+    public fun priority(priority: Number)
+
+    /**
+     * @param routeTarget The VirtualService this GatewayRoute directs traffic to. 
+     */
+    public fun routeTarget(routeTarget: IVirtualService)
+  }
+
+  private class BuilderImpl : Builder {
+    private val cdkBuilder:
+        software.amazon.awscdk.services.appmesh.HttpGatewayRouteSpecOptions.Builder =
+        software.amazon.awscdk.services.appmesh.HttpGatewayRouteSpecOptions.builder()
+
+    /**
+     * @param match The criterion for determining a request match for this GatewayRoute.
+     * When path match is defined, this may optionally determine the path rewrite configuration.
+     */
+    override fun match(match: HttpGatewayRouteMatch) {
+      cdkBuilder.match(match.let(HttpGatewayRouteMatch::unwrap))
+    }
+
+    /**
+     * @param match The criterion for determining a request match for this GatewayRoute.
+     * When path match is defined, this may optionally determine the path rewrite configuration.
+     */
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5de161a09ed98413915fa38ce6d6951ffd9f0e0bb9393542cdd7752003239f5f")
+    override fun match(match: HttpGatewayRouteMatch.Builder.() -> Unit): Unit =
+        match(HttpGatewayRouteMatch(match))
+
+    /**
+     * @param priority The priority for the gateway route.
+     * When a Virtual Gateway has multiple gateway routes, gateway route match
+     * is performed in the order of specified value, where 0 is the highest priority,
+     * and first matched gateway route is selected.
+     */
+    override fun priority(priority: Number) {
+      cdkBuilder.priority(priority)
+    }
+
+    /**
+     * @param routeTarget The VirtualService this GatewayRoute directs traffic to. 
+     */
+    override fun routeTarget(routeTarget: IVirtualService) {
+      cdkBuilder.routeTarget(routeTarget.let(IVirtualService::unwrap))
+    }
+
+    public fun build(): software.amazon.awscdk.services.appmesh.HttpGatewayRouteSpecOptions =
+        cdkBuilder.build()
+  }
+
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.appmesh.HttpGatewayRouteSpecOptions,
+  ) : CdkObject(cdkObject), HttpGatewayRouteSpecOptions {
     /**
      * The criterion for determining a request match for this GatewayRoute.
      *
@@ -14,125 +109,39 @@ public interface HttpGatewayRouteSpecOptions : CommonGatewayRouteSpecOptions {
      *
      * Default: - matches any path and automatically rewrites the path to '/'
      */
-    public fun match(): HttpGatewayRouteMatch? =
+    override fun match(): HttpGatewayRouteMatch? =
         unwrap(this).getMatch()?.let(HttpGatewayRouteMatch::wrap)
 
-    /** The VirtualService this GatewayRoute directs traffic to. */
-    public fun routeTarget(): IVirtualService
+    /**
+     * The priority for the gateway route.
+     *
+     * When a Virtual Gateway has multiple gateway routes, gateway route match
+     * is performed in the order of specified value, where 0 is the highest priority,
+     * and first matched gateway route is selected.
+     *
+     * Default: - no particular priority
+     */
+    override fun priority(): Number? = unwrap(this).getPriority()
 
-    /** A builder for [HttpGatewayRouteSpecOptions] */
-    @CdkDslMarker
-    public interface Builder {
-        /**
-         * @param match The criterion for determining a request match for this GatewayRoute. When
-         *   path match is defined, this may optionally determine the path rewrite configuration.
-         */
-        public fun match(match: HttpGatewayRouteMatch)
+    /**
+     * The VirtualService this GatewayRoute directs traffic to.
+     */
+    override fun routeTarget(): IVirtualService =
+        unwrap(this).getRouteTarget().let(IVirtualService::wrap)
+  }
 
-        /**
-         * @param match The criterion for determining a request match for this GatewayRoute. When
-         *   path match is defined, this may optionally determine the path rewrite configuration.
-         */
-        @Suppress("INAPPLICABLE_JVM_NAME")
-        @JvmName("5de161a09ed98413915fa38ce6d6951ffd9f0e0bb9393542cdd7752003239f5f")
-        public fun match(match: HttpGatewayRouteMatch.Builder.() -> Unit)
-
-        /**
-         * @param priority The priority for the gateway route. When a Virtual Gateway has multiple
-         *   gateway routes, gateway route match is performed in the order of specified value, where
-         *   0 is the highest priority, and first matched gateway route is selected.
-         */
-        public fun priority(priority: Number)
-
-        /** @param routeTarget The VirtualService this GatewayRoute directs traffic to. */
-        public fun routeTarget(routeTarget: IVirtualService)
+  public companion object {
+    public operator fun invoke(block: Builder.() -> Unit = {}): HttpGatewayRouteSpecOptions {
+      val builderImpl = BuilderImpl()
+      return Wrapper(builderImpl.apply(block).build())
     }
 
-    private class BuilderImpl : Builder {
-        private val cdkBuilder:
-            software.amazon.awscdk.services.appmesh.HttpGatewayRouteSpecOptions.Builder =
-            software.amazon.awscdk.services.appmesh.HttpGatewayRouteSpecOptions.builder()
+    internal
+        fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.HttpGatewayRouteSpecOptions):
+        HttpGatewayRouteSpecOptions = Wrapper(cdkObject)
 
-        /**
-         * @param match The criterion for determining a request match for this GatewayRoute. When
-         *   path match is defined, this may optionally determine the path rewrite configuration.
-         */
-        override fun match(match: HttpGatewayRouteMatch) {
-            cdkBuilder.match(match.let(HttpGatewayRouteMatch::unwrap))
-        }
-
-        /**
-         * @param match The criterion for determining a request match for this GatewayRoute. When
-         *   path match is defined, this may optionally determine the path rewrite configuration.
-         */
-        @Suppress("INAPPLICABLE_JVM_NAME")
-        @JvmName("5de161a09ed98413915fa38ce6d6951ffd9f0e0bb9393542cdd7752003239f5f")
-        override fun match(match: HttpGatewayRouteMatch.Builder.() -> Unit): Unit =
-            match(HttpGatewayRouteMatch(match))
-
-        /**
-         * @param priority The priority for the gateway route. When a Virtual Gateway has multiple
-         *   gateway routes, gateway route match is performed in the order of specified value, where
-         *   0 is the highest priority, and first matched gateway route is selected.
-         */
-        override fun priority(priority: Number) {
-            cdkBuilder.priority(priority)
-        }
-
-        /** @param routeTarget The VirtualService this GatewayRoute directs traffic to. */
-        override fun routeTarget(routeTarget: IVirtualService) {
-            cdkBuilder.routeTarget(routeTarget.let(IVirtualService::unwrap))
-        }
-
-        public fun build(): software.amazon.awscdk.services.appmesh.HttpGatewayRouteSpecOptions =
-            cdkBuilder.build()
-    }
-
-    private class Wrapper
-    internal constructor(
-        internal val cdkObject: software.amazon.awscdk.services.appmesh.HttpGatewayRouteSpecOptions,
-    ) : HttpGatewayRouteSpecOptions {
-        /**
-         * The criterion for determining a request match for this GatewayRoute.
-         *
-         * When path match is defined, this may optionally determine the path rewrite configuration.
-         *
-         * Default: - matches any path and automatically rewrites the path to '/'
-         */
-        override fun match(): HttpGatewayRouteMatch? =
-            unwrap(this).getMatch()?.let(HttpGatewayRouteMatch::wrap)
-
-        /**
-         * The priority for the gateway route.
-         *
-         * When a Virtual Gateway has multiple gateway routes, gateway route match is performed in
-         * the order of specified value, where 0 is the highest priority, and first matched gateway
-         * route is selected.
-         *
-         * Default: - no particular priority
-         */
-        override fun priority(): Number? = unwrap(this).getPriority()
-
-        /** The VirtualService this GatewayRoute directs traffic to. */
-        override fun routeTarget(): IVirtualService =
-            unwrap(this).getRouteTarget().let(IVirtualService::wrap)
-    }
-
-    public companion object {
-        init {}
-
-        public operator fun invoke(block: Builder.() -> Unit = {}): HttpGatewayRouteSpecOptions {
-            val builderImpl = BuilderImpl()
-            return Wrapper(builderImpl.apply(block).build())
-        }
-
-        internal fun wrap(
-            cdkObject: software.amazon.awscdk.services.appmesh.HttpGatewayRouteSpecOptions
-        ): HttpGatewayRouteSpecOptions = Wrapper(cdkObject)
-
-        internal fun unwrap(
-            wrapped: HttpGatewayRouteSpecOptions
-        ): software.amazon.awscdk.services.appmesh.HttpGatewayRouteSpecOptions =
-            (wrapped as Wrapper).cdkObject
-    }
+    internal fun unwrap(wrapped: HttpGatewayRouteSpecOptions):
+        software.amazon.awscdk.services.appmesh.HttpGatewayRouteSpecOptions = (wrapped as
+        CdkObject).cdkObject as software.amazon.awscdk.services.appmesh.HttpGatewayRouteSpecOptions
+  }
 }

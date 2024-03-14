@@ -1,61 +1,62 @@
 package io.cloudshiftdev.awscdk.services.cloudwatch
 
+import io.cloudshiftdev.awscdk.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface AlarmActionConfig {
-    /** Return the ARN that should be used for a CloudWatch Alarm action. */
-    public fun alarmActionArn(): String
+  /**
+   * Return the ARN that should be used for a CloudWatch Alarm action.
+   */
+  public fun alarmActionArn(): String
 
-    /** A builder for [AlarmActionConfig] */
-    @CdkDslMarker
-    public interface Builder {
-        /**
-         * @param alarmActionArn Return the ARN that should be used for a CloudWatch Alarm action.
-         */
-        public fun alarmActionArn(alarmActionArn: String)
+  /**
+   * A builder for [AlarmActionConfig]
+   */
+  @CdkDslMarker
+  public interface Builder {
+    /**
+     * @param alarmActionArn Return the ARN that should be used for a CloudWatch Alarm action. 
+     */
+    public fun alarmActionArn(alarmActionArn: String)
+  }
+
+  private class BuilderImpl : Builder {
+    private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.AlarmActionConfig.Builder =
+        software.amazon.awscdk.services.cloudwatch.AlarmActionConfig.builder()
+
+    /**
+     * @param alarmActionArn Return the ARN that should be used for a CloudWatch Alarm action. 
+     */
+    override fun alarmActionArn(alarmActionArn: String) {
+      cdkBuilder.alarmActionArn(alarmActionArn)
     }
 
-    private class BuilderImpl : Builder {
-        private val cdkBuilder:
-            software.amazon.awscdk.services.cloudwatch.AlarmActionConfig.Builder =
-            software.amazon.awscdk.services.cloudwatch.AlarmActionConfig.builder()
+    public fun build(): software.amazon.awscdk.services.cloudwatch.AlarmActionConfig =
+        cdkBuilder.build()
+  }
 
-        /**
-         * @param alarmActionArn Return the ARN that should be used for a CloudWatch Alarm action.
-         */
-        override fun alarmActionArn(alarmActionArn: String) {
-            cdkBuilder.alarmActionArn(alarmActionArn)
-        }
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmActionConfig,
+  ) : CdkObject(cdkObject), AlarmActionConfig {
+    /**
+     * Return the ARN that should be used for a CloudWatch Alarm action.
+     */
+    override fun alarmActionArn(): String = unwrap(this).getAlarmActionArn()
+  }
 
-        public fun build(): software.amazon.awscdk.services.cloudwatch.AlarmActionConfig =
-            cdkBuilder.build()
+  public companion object {
+    public operator fun invoke(block: Builder.() -> Unit = {}): AlarmActionConfig {
+      val builderImpl = BuilderImpl()
+      return Wrapper(builderImpl.apply(block).build())
     }
 
-    private class Wrapper
-    internal constructor(
-        internal val cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmActionConfig,
-    ) : AlarmActionConfig {
-        /** Return the ARN that should be used for a CloudWatch Alarm action. */
-        override fun alarmActionArn(): String = unwrap(this).getAlarmActionArn()
-    }
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmActionConfig):
+        AlarmActionConfig = Wrapper(cdkObject)
 
-    public companion object {
-        init {}
-
-        public operator fun invoke(block: Builder.() -> Unit = {}): AlarmActionConfig {
-            val builderImpl = BuilderImpl()
-            return Wrapper(builderImpl.apply(block).build())
-        }
-
-        internal fun wrap(
-            cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmActionConfig
-        ): AlarmActionConfig = Wrapper(cdkObject)
-
-        internal fun unwrap(
-            wrapped: AlarmActionConfig
-        ): software.amazon.awscdk.services.cloudwatch.AlarmActionConfig =
-            (wrapped as Wrapper).cdkObject
-    }
+    internal fun unwrap(wrapped: AlarmActionConfig):
+        software.amazon.awscdk.services.cloudwatch.AlarmActionConfig = (wrapped as
+        CdkObject).cdkObject as software.amazon.awscdk.services.cloudwatch.AlarmActionConfig
+  }
 }

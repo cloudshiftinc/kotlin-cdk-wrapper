@@ -6,187 +6,192 @@ import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnApplication
-internal constructor(
-    private val cdkObject: software.amazon.awscdk.services.servicecatalogappregistry.CfnApplication,
+public open class CfnApplication internal constructor(
+  internal override val cdkObject:
+      software.amazon.awscdk.services.servicecatalogappregistry.CfnApplication,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  /**
+   * The name of the application.
+   *
+   * The name must be unique in the region in which you are creating the application.
+   */
+  public open fun attrApplicationName(): String = unwrap(this).getAttrApplicationName()
+
+  /**
+   * The key of the AWS application tag, which is `awsApplication` .
+   *
+   * Applications created before 11/13/2023 or applications without the `AppTag` linked resource
+   * group return no value.
+   */
+  public open fun attrApplicationTagKey(): String = unwrap(this).getAttrApplicationTagKey()
+
+  /**
+   * The value of the AWS application tag, which is the identifier of an associated resource.
+   *
+   * Applications created before 11/13/2023 or applications without the `AppTag` linked resource
+   * group return no value.
+   */
+  public open fun attrApplicationTagValue(): String = unwrap(this).getAttrApplicationTagValue()
+
+  /**
+   * The Amazon resource name (ARN) that specifies the application across services.
+   */
+  public open fun attrArn(): String = unwrap(this).getAttrArn()
+
+  /**
+   * The identifier of the application.
+   */
+  public open fun attrId(): String = unwrap(this).getAttrId()
+
+  /**
+   * The description of the application.
+   */
+  public open fun description(): String? = unwrap(this).getDescription()
+
+  /**
+   * The description of the application.
+   */
+  public open fun description(`value`: String) {
+    unwrap(this).setDescription(`value`)
+  }
+
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
+  public override fun inspect(inspector: TreeInspector) {
+    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+  }
+
+  /**
+   * The name of the application.
+   */
+  public open fun name(): String = unwrap(this).getName()
+
+  /**
+   * The name of the application.
+   */
+  public open fun name(`value`: String) {
+    unwrap(this).setName(`value`)
+  }
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+
+  /**
+   * Key-value pairs you can use to associate with the application.
+   */
+  public open fun tagsRaw(): Map<String, String> = unwrap(this).getTagsRaw() ?: emptyMap()
+
+  /**
+   * Key-value pairs you can use to associate with the application.
+   */
+  public open fun tagsRaw(`value`: Map<String, String>) {
+    unwrap(this).setTagsRaw(`value`)
+  }
+
+  /**
+   * A fluent builder for
+   * [io.cloudshiftdev.awscdk.services.servicecatalogappregistry.CfnApplication].
+   */
+  @CdkDslMarker
+  public interface Builder {
+    /**
+     * The description of the application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-description)
+     * @param description The description of the application. 
+     */
+    public fun description(description: String)
+
     /**
      * The name of the application.
      *
      * The name must be unique in the region in which you are creating the application.
-     */
-    public open fun attrApplicationName(): String = unwrap(this).getAttrApplicationName()
-
-    /**
-     * The key of the AWS application tag, which is `awsApplication` .
      *
-     * Applications created before 11/13/2023 or applications without the `AppTag` linked resource
-     * group return no value.
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-name)
+     * @param name The name of the application. 
      */
-    public open fun attrApplicationTagKey(): String = unwrap(this).getAttrApplicationTagKey()
+    public fun name(name: String)
 
     /**
-     * The value of the AWS application tag, which is the identifier of an associated resource.
+     * Key-value pairs you can use to associate with the application.
      *
-     * Applications created before 11/13/2023 or applications without the `AppTag` linked resource
-     * group return no value.
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-tags)
+     * @param tags Key-value pairs you can use to associate with the application. 
      */
-    public open fun attrApplicationTagValue(): String = unwrap(this).getAttrApplicationTagValue()
+    public fun tags(tags: Map<String, String>)
+  }
 
-    /** The Amazon resource name (ARN) that specifies the application across services. */
-    public open fun attrArn(): String = unwrap(this).getAttrArn()
-
-    /** The identifier of the application. */
-    public open fun attrId(): String = unwrap(this).getAttrId()
-
-    /** The description of the application. */
-    public open fun description(): String? = unwrap(this).getDescription()
-
-    /** The description of the application. */
-    public open fun description(`value`: String) {
-        unwrap(this).setDescription(`value`)
-    }
+  private class BuilderImpl(
+    scope: SoftwareConstructsConstruct,
+    id: String,
+  ) : Builder {
+    private val cdkBuilder:
+        software.amazon.awscdk.services.servicecatalogappregistry.CfnApplication.Builder =
+        software.amazon.awscdk.services.servicecatalogappregistry.CfnApplication.Builder.create(scope,
+        id)
 
     /**
-     * Examines the CloudFormation resource and discloses attributes.
+     * The description of the application.
      *
-     * @param inspector tree inspector to collect and process attributes.
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-description)
+     * @param description The description of the application. 
      */
-    public override fun inspect(inspector: TreeInspector) {
-        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-    }
-
-    /** The name of the application. */
-    public open fun name(): String = unwrap(this).getName()
-
-    /** The name of the application. */
-    public open fun name(`value`: String) {
-        unwrap(this).setName(`value`)
-    }
-
-    /** Tag Manager which manages the tags for this resource. */
-    public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
-
-    /** Key-value pairs you can use to associate with the application. */
-    public open fun tagsRaw(): Map<String, String> = unwrap(this).getTagsRaw() ?: emptyMap()
-
-    /** Key-value pairs you can use to associate with the application. */
-    public open fun tagsRaw(`value`: Map<String, String>) {
-        unwrap(this).setTagsRaw(`value`)
+    override fun description(description: String) {
+      cdkBuilder.description(description)
     }
 
     /**
-     * A fluent builder for
-     * [io.cloudshiftdev.awscdk.services.servicecatalogappregistry.CfnApplication].
+     * The name of the application.
+     *
+     * The name must be unique in the region in which you are creating the application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-name)
+     * @param name The name of the application. 
      */
-    @CdkDslMarker
-    public interface Builder {
-        /**
-         * The description of the application.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-description)
-         *
-         * @param description The description of the application.
-         */
-        public fun description(description: String)
-
-        /**
-         * The name of the application.
-         *
-         * The name must be unique in the region in which you are creating the application.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-name)
-         *
-         * @param name The name of the application.
-         */
-        public fun name(name: String)
-
-        /**
-         * Key-value pairs you can use to associate with the application.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-tags)
-         *
-         * @param tags Key-value pairs you can use to associate with the application.
-         */
-        public fun tags(tags: Map<String, String>)
+    override fun name(name: String) {
+      cdkBuilder.name(name)
     }
 
-    private class BuilderImpl(
-        scope: SoftwareConstructsConstruct,
-        id: String,
-    ) : Builder {
-        private val cdkBuilder:
-            software.amazon.awscdk.services.servicecatalogappregistry.CfnApplication.Builder =
-            software.amazon.awscdk.services.servicecatalogappregistry.CfnApplication.Builder.create(
-                scope,
-                id
-            )
-
-        /**
-         * The description of the application.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-description)
-         *
-         * @param description The description of the application.
-         */
-        override fun description(description: String) {
-            cdkBuilder.description(description)
-        }
-
-        /**
-         * The name of the application.
-         *
-         * The name must be unique in the region in which you are creating the application.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-name)
-         *
-         * @param name The name of the application.
-         */
-        override fun name(name: String) {
-            cdkBuilder.name(name)
-        }
-
-        /**
-         * Key-value pairs you can use to associate with the application.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-tags)
-         *
-         * @param tags Key-value pairs you can use to associate with the application.
-         */
-        override fun tags(tags: Map<String, String>) {
-            cdkBuilder.tags(tags)
-        }
-
-        public fun build():
-            software.amazon.awscdk.services.servicecatalogappregistry.CfnApplication =
-            cdkBuilder.build()
+    /**
+     * Key-value pairs you can use to associate with the application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalogappregistry-application.html#cfn-servicecatalogappregistry-application-tags)
+     * @param tags Key-value pairs you can use to associate with the application. 
+     */
+    override fun tags(tags: Map<String, String>) {
+      cdkBuilder.tags(tags)
     }
 
-    public companion object {
-        init {}
+    public fun build(): software.amazon.awscdk.services.servicecatalogappregistry.CfnApplication =
+        cdkBuilder.build()
+  }
 
-        public operator fun invoke(
-            scope: CloudshiftdevConstructsConstruct,
-            id: String,
-            block: Builder.() -> Unit = {},
-        ): CfnApplication {
-            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-            return CfnApplication(builderImpl.apply(block).build())
-        }
-
-        internal fun wrap(
-            cdkObject: software.amazon.awscdk.services.servicecatalogappregistry.CfnApplication
-        ): CfnApplication = CfnApplication(cdkObject)
-
-        internal fun unwrap(
-            wrapped: CfnApplication
-        ): software.amazon.awscdk.services.servicecatalogappregistry.CfnApplication =
-            wrapped.cdkObject
+  public companion object {
+    public operator fun invoke(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      block: Builder.() -> Unit = {},
+    ): CfnApplication {
+      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+      return CfnApplication(builderImpl.apply(block).build())
     }
+
+    internal
+        fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalogappregistry.CfnApplication):
+        CfnApplication = CfnApplication(cdkObject)
+
+    internal fun unwrap(wrapped: CfnApplication):
+        software.amazon.awscdk.services.servicecatalogappregistry.CfnApplication = wrapped.cdkObject
+  }
 }

@@ -1,5 +1,6 @@
 package io.cloudshiftdev.awscdk.services.elasticsearch
 
+import io.cloudshiftdev.awscdk.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.ec2.EbsDeviceVolumeType
 import kotlin.Boolean
@@ -8,6 +9,170 @@ import kotlin.Number
 import kotlin.Unit
 
 public interface EbsOptions {
+  /**
+   * (deprecated) Specifies whether Amazon EBS volumes are attached to data nodes in the Amazon ES
+   * domain.
+   *
+   * Default: - true
+   *
+   * @deprecated use opensearchservice module instead
+   */
+  @Deprecated(message = "deprecated in CDK")
+  public fun enabled(): Boolean? = unwrap(this).getEnabled()
+
+  /**
+   * (deprecated) The number of I/O operations per second (IOPS) that the volume supports.
+   *
+   * This property applies only to the Provisioned IOPS (SSD) EBS
+   * volume type.
+   *
+   * Default: - iops are not set.
+   *
+   * @deprecated use opensearchservice module instead
+   */
+  @Deprecated(message = "deprecated in CDK")
+  public fun iops(): Number? = unwrap(this).getIops()
+
+  /**
+   * (deprecated) The size (in GiB) of the EBS volume for each data node.
+   *
+   * The minimum and
+   * maximum size of an EBS volume depends on the EBS volume type and the
+   * instance type to which it is attached.  For more information, see
+   * [Configuring EBS-based Storage]
+   * (https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-ebs)
+   * in the Amazon Elasticsearch Service Developer Guide.
+   *
+   * Default: 10
+   *
+   * @deprecated use opensearchservice module instead
+   */
+  @Deprecated(message = "deprecated in CDK")
+  public fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+
+  /**
+   * (deprecated) The EBS volume type to use with the Amazon ES domain, such as standard, gp2, io1.
+   *
+   * For more information, see[Configuring EBS-based Storage]
+   * (https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-ebs)
+   * in the Amazon Elasticsearch Service Developer Guide.
+   *
+   * Default: gp2
+   *
+   * @deprecated use opensearchservice module instead
+   */
+  @Deprecated(message = "deprecated in CDK")
+  public fun volumeType(): EbsDeviceVolumeType? =
+      unwrap(this).getVolumeType()?.let(EbsDeviceVolumeType::wrap)
+
+  /**
+   * A builder for [EbsOptions]
+   */
+  @CdkDslMarker
+  @Deprecated(message = "deprecated in CDK")
+  public interface Builder {
+    /**
+     * @param enabled Specifies whether Amazon EBS volumes are attached to data nodes in the Amazon
+     * ES domain.
+     * @deprecated use opensearchservice module instead
+     */
+    @Deprecated(message = "deprecated in CDK")
+    public fun enabled(enabled: Boolean)
+
+    /**
+     * @param iops The number of I/O operations per second (IOPS) that the volume supports.
+     * This property applies only to the Provisioned IOPS (SSD) EBS
+     * volume type.
+     * @deprecated use opensearchservice module instead
+     */
+    @Deprecated(message = "deprecated in CDK")
+    public fun iops(iops: Number)
+
+    /**
+     * @param volumeSize The size (in GiB) of the EBS volume for each data node.
+     * The minimum and
+     * maximum size of an EBS volume depends on the EBS volume type and the
+     * instance type to which it is attached.  For more information, see
+     * [Configuring EBS-based Storage]
+     * (https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-ebs)
+     * in the Amazon Elasticsearch Service Developer Guide.
+     * @deprecated use opensearchservice module instead
+     */
+    @Deprecated(message = "deprecated in CDK")
+    public fun volumeSize(volumeSize: Number)
+
+    /**
+     * @param volumeType The EBS volume type to use with the Amazon ES domain, such as standard,
+     * gp2, io1.
+     * For more information, see[Configuring EBS-based Storage]
+     * (https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-ebs)
+     * in the Amazon Elasticsearch Service Developer Guide.
+     * @deprecated use opensearchservice module instead
+     */
+    @Deprecated(message = "deprecated in CDK")
+    public fun volumeType(volumeType: EbsDeviceVolumeType)
+  }
+
+  private class BuilderImpl : Builder {
+    private val cdkBuilder: software.amazon.awscdk.services.elasticsearch.EbsOptions.Builder =
+        software.amazon.awscdk.services.elasticsearch.EbsOptions.builder()
+
+    /**
+     * @param enabled Specifies whether Amazon EBS volumes are attached to data nodes in the Amazon
+     * ES domain.
+     * @deprecated use opensearchservice module instead
+     */
+    @Deprecated(message = "deprecated in CDK")
+    override fun enabled(enabled: Boolean) {
+      cdkBuilder.enabled(enabled)
+    }
+
+    /**
+     * @param iops The number of I/O operations per second (IOPS) that the volume supports.
+     * This property applies only to the Provisioned IOPS (SSD) EBS
+     * volume type.
+     * @deprecated use opensearchservice module instead
+     */
+    @Deprecated(message = "deprecated in CDK")
+    override fun iops(iops: Number) {
+      cdkBuilder.iops(iops)
+    }
+
+    /**
+     * @param volumeSize The size (in GiB) of the EBS volume for each data node.
+     * The minimum and
+     * maximum size of an EBS volume depends on the EBS volume type and the
+     * instance type to which it is attached.  For more information, see
+     * [Configuring EBS-based Storage]
+     * (https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-ebs)
+     * in the Amazon Elasticsearch Service Developer Guide.
+     * @deprecated use opensearchservice module instead
+     */
+    @Deprecated(message = "deprecated in CDK")
+    override fun volumeSize(volumeSize: Number) {
+      cdkBuilder.volumeSize(volumeSize)
+    }
+
+    /**
+     * @param volumeType The EBS volume type to use with the Amazon ES domain, such as standard,
+     * gp2, io1.
+     * For more information, see[Configuring EBS-based Storage]
+     * (https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-ebs)
+     * in the Amazon Elasticsearch Service Developer Guide.
+     * @deprecated use opensearchservice module instead
+     */
+    @Deprecated(message = "deprecated in CDK")
+    override fun volumeType(volumeType: EbsDeviceVolumeType) {
+      cdkBuilder.volumeType(volumeType.let(EbsDeviceVolumeType::unwrap))
+    }
+
+    public fun build(): software.amazon.awscdk.services.elasticsearch.EbsOptions =
+        cdkBuilder.build()
+  }
+
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.elasticsearch.EbsOptions,
+  ) : CdkObject(cdkObject), EbsOptions {
     /**
      * (deprecated) Specifies whether Amazon EBS volumes are attached to data nodes in the Amazon ES
      * domain.
@@ -17,24 +182,28 @@ public interface EbsOptions {
      * @deprecated use opensearchservice module instead
      */
     @Deprecated(message = "deprecated in CDK")
-    public fun enabled(): Boolean? = unwrap(this).getEnabled()
+    override fun enabled(): Boolean? = unwrap(this).getEnabled()
 
     /**
      * (deprecated) The number of I/O operations per second (IOPS) that the volume supports.
      *
-     * This property applies only to the Provisioned IOPS (SSD) EBS volume type.
+     * This property applies only to the Provisioned IOPS (SSD) EBS
+     * volume type.
      *
      * Default: - iops are not set.
      *
      * @deprecated use opensearchservice module instead
      */
-    @Deprecated(message = "deprecated in CDK") public fun iops(): Number? = unwrap(this).getIops()
+    @Deprecated(message = "deprecated in CDK")
+    override fun iops(): Number? = unwrap(this).getIops()
 
     /**
      * (deprecated) The size (in GiB) of the EBS volume for each data node.
      *
-     * The minimum and maximum size of an EBS volume depends on the EBS volume type and the instance
-     * type to which it is attached. For more information, see [Configuring EBS-based Storage]
+     * The minimum and
+     * maximum size of an EBS volume depends on the EBS volume type and the
+     * instance type to which it is attached.  For more information, see
+     * [Configuring EBS-based Storage]
      * (https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-ebs)
      * in the Amazon Elasticsearch Service Developer Guide.
      *
@@ -43,7 +212,7 @@ public interface EbsOptions {
      * @deprecated use opensearchservice module instead
      */
     @Deprecated(message = "deprecated in CDK")
-    public fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+    override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
 
     /**
      * (deprecated) The EBS volume type to use with the Amazon ES domain, such as standard, gp2,
@@ -58,175 +227,21 @@ public interface EbsOptions {
      * @deprecated use opensearchservice module instead
      */
     @Deprecated(message = "deprecated in CDK")
-    public fun volumeType(): EbsDeviceVolumeType? =
+    override fun volumeType(): EbsDeviceVolumeType? =
         unwrap(this).getVolumeType()?.let(EbsDeviceVolumeType::wrap)
+  }
 
-    /** A builder for [EbsOptions] */
-    @CdkDslMarker
-    @Deprecated(message = "deprecated in CDK")
-    public interface Builder {
-        /**
-         * @param enabled Specifies whether Amazon EBS volumes are attached to data nodes in the
-         *   Amazon ES domain.
-         * @deprecated use opensearchservice module instead
-         */
-        @Deprecated(message = "deprecated in CDK") public fun enabled(enabled: Boolean)
-
-        /**
-         * @param iops The number of I/O operations per second (IOPS) that the volume supports. This
-         *   property applies only to the Provisioned IOPS (SSD) EBS volume type.
-         * @deprecated use opensearchservice module instead
-         */
-        @Deprecated(message = "deprecated in CDK") public fun iops(iops: Number)
-
-        /**
-         * @param volumeSize The size (in GiB) of the EBS volume for each data node. The minimum and
-         *   maximum size of an EBS volume depends on the EBS volume type and the instance type to
-         *   which it is attached. For more information, see [Configuring EBS-based Storage]
-         *   (https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-ebs)
-         *   in the Amazon Elasticsearch Service Developer Guide.
-         * @deprecated use opensearchservice module instead
-         */
-        @Deprecated(message = "deprecated in CDK") public fun volumeSize(volumeSize: Number)
-
-        /**
-         * @param volumeType The EBS volume type to use with the Amazon ES domain, such as standard,
-         *   gp2, io1. For more information, see[Configuring EBS-based Storage]
-         *   (https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-ebs)
-         *   in the Amazon Elasticsearch Service Developer Guide.
-         * @deprecated use opensearchservice module instead
-         */
-        @Deprecated(message = "deprecated in CDK")
-        public fun volumeType(volumeType: EbsDeviceVolumeType)
+  public companion object {
+    public operator fun invoke(block: Builder.() -> Unit = {}): EbsOptions {
+      val builderImpl = BuilderImpl()
+      return Wrapper(builderImpl.apply(block).build())
     }
 
-    private class BuilderImpl : Builder {
-        private val cdkBuilder: software.amazon.awscdk.services.elasticsearch.EbsOptions.Builder =
-            software.amazon.awscdk.services.elasticsearch.EbsOptions.builder()
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.EbsOptions):
+        EbsOptions = Wrapper(cdkObject)
 
-        /**
-         * @param enabled Specifies whether Amazon EBS volumes are attached to data nodes in the
-         *   Amazon ES domain.
-         * @deprecated use opensearchservice module instead
-         */
-        @Deprecated(message = "deprecated in CDK")
-        override fun enabled(enabled: Boolean) {
-            cdkBuilder.enabled(enabled)
-        }
-
-        /**
-         * @param iops The number of I/O operations per second (IOPS) that the volume supports. This
-         *   property applies only to the Provisioned IOPS (SSD) EBS volume type.
-         * @deprecated use opensearchservice module instead
-         */
-        @Deprecated(message = "deprecated in CDK")
-        override fun iops(iops: Number) {
-            cdkBuilder.iops(iops)
-        }
-
-        /**
-         * @param volumeSize The size (in GiB) of the EBS volume for each data node. The minimum and
-         *   maximum size of an EBS volume depends on the EBS volume type and the instance type to
-         *   which it is attached. For more information, see [Configuring EBS-based Storage]
-         *   (https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-ebs)
-         *   in the Amazon Elasticsearch Service Developer Guide.
-         * @deprecated use opensearchservice module instead
-         */
-        @Deprecated(message = "deprecated in CDK")
-        override fun volumeSize(volumeSize: Number) {
-            cdkBuilder.volumeSize(volumeSize)
-        }
-
-        /**
-         * @param volumeType The EBS volume type to use with the Amazon ES domain, such as standard,
-         *   gp2, io1. For more information, see[Configuring EBS-based Storage]
-         *   (https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-ebs)
-         *   in the Amazon Elasticsearch Service Developer Guide.
-         * @deprecated use opensearchservice module instead
-         */
-        @Deprecated(message = "deprecated in CDK")
-        override fun volumeType(volumeType: EbsDeviceVolumeType) {
-            cdkBuilder.volumeType(volumeType.let(EbsDeviceVolumeType::unwrap))
-        }
-
-        public fun build(): software.amazon.awscdk.services.elasticsearch.EbsOptions =
-            cdkBuilder.build()
-    }
-
-    private class Wrapper
-    internal constructor(
-        internal val cdkObject: software.amazon.awscdk.services.elasticsearch.EbsOptions,
-    ) : EbsOptions {
-        /**
-         * (deprecated) Specifies whether Amazon EBS volumes are attached to data nodes in the
-         * Amazon ES domain.
-         *
-         * Default: - true
-         *
-         * @deprecated use opensearchservice module instead
-         */
-        @Deprecated(message = "deprecated in CDK")
-        override fun enabled(): Boolean? = unwrap(this).getEnabled()
-
-        /**
-         * (deprecated) The number of I/O operations per second (IOPS) that the volume supports.
-         *
-         * This property applies only to the Provisioned IOPS (SSD) EBS volume type.
-         *
-         * Default: - iops are not set.
-         *
-         * @deprecated use opensearchservice module instead
-         */
-        @Deprecated(message = "deprecated in CDK")
-        override fun iops(): Number? = unwrap(this).getIops()
-
-        /**
-         * (deprecated) The size (in GiB) of the EBS volume for each data node.
-         *
-         * The minimum and maximum size of an EBS volume depends on the EBS volume type and the
-         * instance type to which it is attached. For more information, see
-         * [Configuring EBS-based Storage]
-         * (https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-ebs)
-         * in the Amazon Elasticsearch Service Developer Guide.
-         *
-         * Default: 10
-         *
-         * @deprecated use opensearchservice module instead
-         */
-        @Deprecated(message = "deprecated in CDK")
-        override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
-
-        /**
-         * (deprecated) The EBS volume type to use with the Amazon ES domain, such as standard, gp2,
-         * io1.
-         *
-         * For more information, see[Configuring EBS-based Storage]
-         * (https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomain-configure-ebs)
-         * in the Amazon Elasticsearch Service Developer Guide.
-         *
-         * Default: gp2
-         *
-         * @deprecated use opensearchservice module instead
-         */
-        @Deprecated(message = "deprecated in CDK")
-        override fun volumeType(): EbsDeviceVolumeType? =
-            unwrap(this).getVolumeType()?.let(EbsDeviceVolumeType::wrap)
-    }
-
-    public companion object {
-        init {}
-
-        public operator fun invoke(block: Builder.() -> Unit = {}): EbsOptions {
-            val builderImpl = BuilderImpl()
-            return Wrapper(builderImpl.apply(block).build())
-        }
-
-        internal fun wrap(
-            cdkObject: software.amazon.awscdk.services.elasticsearch.EbsOptions
-        ): EbsOptions = Wrapper(cdkObject)
-
-        internal fun unwrap(
-            wrapped: EbsOptions
-        ): software.amazon.awscdk.services.elasticsearch.EbsOptions = (wrapped as Wrapper).cdkObject
-    }
+    internal fun unwrap(wrapped: EbsOptions):
+        software.amazon.awscdk.services.elasticsearch.EbsOptions = (wrapped as CdkObject).cdkObject
+        as software.amazon.awscdk.services.elasticsearch.EbsOptions
+  }
 }

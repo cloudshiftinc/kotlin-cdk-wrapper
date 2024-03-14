@@ -1,65 +1,64 @@
 package io.cloudshiftdev.awscdk.services.cognito
 
+import io.cloudshiftdev.awscdk.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface CognitoDomainOptions {
-    /** The prefix to the Cognito hosted domain name that will be associated with the user pool. */
-    public fun domainPrefix(): String
+  /**
+   * The prefix to the Cognito hosted domain name that will be associated with the user pool.
+   */
+  public fun domainPrefix(): String
 
-    /** A builder for [CognitoDomainOptions] */
-    @CdkDslMarker
-    public interface Builder {
-        /**
-         * @param domainPrefix The prefix to the Cognito hosted domain name that will be associated
-         *   with the user pool.
-         */
-        public fun domainPrefix(domainPrefix: String)
+  /**
+   * A builder for [CognitoDomainOptions]
+   */
+  @CdkDslMarker
+  public interface Builder {
+    /**
+     * @param domainPrefix The prefix to the Cognito hosted domain name that will be associated with
+     * the user pool. 
+     */
+    public fun domainPrefix(domainPrefix: String)
+  }
+
+  private class BuilderImpl : Builder {
+    private val cdkBuilder: software.amazon.awscdk.services.cognito.CognitoDomainOptions.Builder =
+        software.amazon.awscdk.services.cognito.CognitoDomainOptions.builder()
+
+    /**
+     * @param domainPrefix The prefix to the Cognito hosted domain name that will be associated with
+     * the user pool. 
+     */
+    override fun domainPrefix(domainPrefix: String) {
+      cdkBuilder.domainPrefix(domainPrefix)
     }
 
-    private class BuilderImpl : Builder {
-        private val cdkBuilder:
-            software.amazon.awscdk.services.cognito.CognitoDomainOptions.Builder =
-            software.amazon.awscdk.services.cognito.CognitoDomainOptions.builder()
+    public fun build(): software.amazon.awscdk.services.cognito.CognitoDomainOptions =
+        cdkBuilder.build()
+  }
 
-        /**
-         * @param domainPrefix The prefix to the Cognito hosted domain name that will be associated
-         *   with the user pool.
-         */
-        override fun domainPrefix(domainPrefix: String) {
-            cdkBuilder.domainPrefix(domainPrefix)
-        }
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.cognito.CognitoDomainOptions,
+  ) : CdkObject(cdkObject), CognitoDomainOptions {
+    /**
+     * The prefix to the Cognito hosted domain name that will be associated with the user pool.
+     */
+    override fun domainPrefix(): String = unwrap(this).getDomainPrefix()
+  }
 
-        public fun build(): software.amazon.awscdk.services.cognito.CognitoDomainOptions =
-            cdkBuilder.build()
+  public companion object {
+    public operator fun invoke(block: Builder.() -> Unit = {}): CognitoDomainOptions {
+      val builderImpl = BuilderImpl()
+      return Wrapper(builderImpl.apply(block).build())
     }
 
-    private class Wrapper
-    internal constructor(
-        internal val cdkObject: software.amazon.awscdk.services.cognito.CognitoDomainOptions,
-    ) : CognitoDomainOptions {
-        /**
-         * The prefix to the Cognito hosted domain name that will be associated with the user pool.
-         */
-        override fun domainPrefix(): String = unwrap(this).getDomainPrefix()
-    }
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CognitoDomainOptions):
+        CognitoDomainOptions = Wrapper(cdkObject)
 
-    public companion object {
-        init {}
-
-        public operator fun invoke(block: Builder.() -> Unit = {}): CognitoDomainOptions {
-            val builderImpl = BuilderImpl()
-            return Wrapper(builderImpl.apply(block).build())
-        }
-
-        internal fun wrap(
-            cdkObject: software.amazon.awscdk.services.cognito.CognitoDomainOptions
-        ): CognitoDomainOptions = Wrapper(cdkObject)
-
-        internal fun unwrap(
-            wrapped: CognitoDomainOptions
-        ): software.amazon.awscdk.services.cognito.CognitoDomainOptions =
-            (wrapped as Wrapper).cdkObject
-    }
+    internal fun unwrap(wrapped: CognitoDomainOptions):
+        software.amazon.awscdk.services.cognito.CognitoDomainOptions = (wrapped as
+        CdkObject).cdkObject as software.amazon.awscdk.services.cognito.CognitoDomainOptions
+  }
 }

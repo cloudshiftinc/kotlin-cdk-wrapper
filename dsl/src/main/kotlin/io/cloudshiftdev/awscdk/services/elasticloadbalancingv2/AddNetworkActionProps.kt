@@ -1,59 +1,66 @@
 package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
+import io.cloudshiftdev.awscdk.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Unit
 
 public interface AddNetworkActionProps {
-    /** Action to perform. */
-    public fun action(): NetworkListenerAction
+  /**
+   * Action to perform.
+   */
+  public fun action(): NetworkListenerAction
 
-    /** A builder for [AddNetworkActionProps] */
-    @CdkDslMarker
-    public interface Builder {
-        /** @param action Action to perform. */
-        public fun action(action: NetworkListenerAction)
+  /**
+   * A builder for [AddNetworkActionProps]
+   */
+  @CdkDslMarker
+  public interface Builder {
+    /**
+     * @param action Action to perform. 
+     */
+    public fun action(action: NetworkListenerAction)
+  }
+
+  private class BuilderImpl : Builder {
+    private val cdkBuilder:
+        software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps.Builder =
+        software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps.builder()
+
+    /**
+     * @param action Action to perform. 
+     */
+    override fun action(action: NetworkListenerAction) {
+      cdkBuilder.action(action.let(NetworkListenerAction::unwrap))
     }
 
-    private class BuilderImpl : Builder {
-        private val cdkBuilder:
-            software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps.Builder =
-            software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps.builder()
+    public fun build(): software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps
+        = cdkBuilder.build()
+  }
 
-        /** @param action Action to perform. */
-        override fun action(action: NetworkListenerAction) {
-            cdkBuilder.action(action.let(NetworkListenerAction::unwrap))
-        }
+  private class Wrapper(
+    override val cdkObject:
+        software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps,
+  ) : CdkObject(cdkObject), AddNetworkActionProps {
+    /**
+     * Action to perform.
+     */
+    override fun action(): NetworkListenerAction =
+        unwrap(this).getAction().let(NetworkListenerAction::wrap)
+  }
 
-        public fun build():
-            software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps =
-            cdkBuilder.build()
+  public companion object {
+    public operator fun invoke(block: Builder.() -> Unit = {}): AddNetworkActionProps {
+      val builderImpl = BuilderImpl()
+      return Wrapper(builderImpl.apply(block).build())
     }
 
-    private class Wrapper
-    internal constructor(
-        internal val cdkObject:
-            software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps,
-    ) : AddNetworkActionProps {
-        /** Action to perform. */
-        override fun action(): NetworkListenerAction =
-            unwrap(this).getAction().let(NetworkListenerAction::wrap)
-    }
+    internal
+        fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps):
+        AddNetworkActionProps = Wrapper(cdkObject)
 
-    public companion object {
-        init {}
-
-        public operator fun invoke(block: Builder.() -> Unit = {}): AddNetworkActionProps {
-            val builderImpl = BuilderImpl()
-            return Wrapper(builderImpl.apply(block).build())
-        }
-
-        internal fun wrap(
-            cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps
-        ): AddNetworkActionProps = Wrapper(cdkObject)
-
-        internal fun unwrap(
-            wrapped: AddNetworkActionProps
-        ): software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps =
-            (wrapped as Wrapper).cdkObject
-    }
+    internal fun unwrap(wrapped: AddNetworkActionProps):
+        software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps = (wrapped as
+        CdkObject).cdkObject as
+        software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps
+  }
 }

@@ -1,71 +1,84 @@
 package io.cloudshiftdev.awscdk.services.cloudfront
 
+import io.cloudshiftdev.awscdk.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Unit
 
 public interface FunctionAssociation {
-    /** The type of event which should invoke the function. */
-    public fun eventType(): FunctionEventType
+  /**
+   * The type of event which should invoke the function.
+   */
+  public fun eventType(): FunctionEventType
 
-    /** The CloudFront function that will be invoked. */
-    public fun function(): IFunction
+  /**
+   * The CloudFront function that will be invoked.
+   */
+  public fun function(): IFunction
 
-    /** A builder for [FunctionAssociation] */
-    @CdkDslMarker
-    public interface Builder {
-        /** @param eventType The type of event which should invoke the function. */
-        public fun eventType(eventType: FunctionEventType)
+  /**
+   * A builder for [FunctionAssociation]
+   */
+  @CdkDslMarker
+  public interface Builder {
+    /**
+     * @param eventType The type of event which should invoke the function. 
+     */
+    public fun eventType(eventType: FunctionEventType)
 
-        /** @param function The CloudFront function that will be invoked. */
-        public fun function(function: IFunction)
+    /**
+     * @param function The CloudFront function that will be invoked. 
+     */
+    public fun function(function: IFunction)
+  }
+
+  private class BuilderImpl : Builder {
+    private val cdkBuilder: software.amazon.awscdk.services.cloudfront.FunctionAssociation.Builder =
+        software.amazon.awscdk.services.cloudfront.FunctionAssociation.builder()
+
+    /**
+     * @param eventType The type of event which should invoke the function. 
+     */
+    override fun eventType(eventType: FunctionEventType) {
+      cdkBuilder.eventType(eventType.let(FunctionEventType::unwrap))
     }
 
-    private class BuilderImpl : Builder {
-        private val cdkBuilder:
-            software.amazon.awscdk.services.cloudfront.FunctionAssociation.Builder =
-            software.amazon.awscdk.services.cloudfront.FunctionAssociation.builder()
-
-        /** @param eventType The type of event which should invoke the function. */
-        override fun eventType(eventType: FunctionEventType) {
-            cdkBuilder.eventType(eventType.let(FunctionEventType::unwrap))
-        }
-
-        /** @param function The CloudFront function that will be invoked. */
-        override fun function(function: IFunction) {
-            cdkBuilder.function(function.let(IFunction::unwrap))
-        }
-
-        public fun build(): software.amazon.awscdk.services.cloudfront.FunctionAssociation =
-            cdkBuilder.build()
+    /**
+     * @param function The CloudFront function that will be invoked. 
+     */
+    override fun function(function: IFunction) {
+      cdkBuilder.function(function.let(IFunction::unwrap))
     }
 
-    private class Wrapper
-    internal constructor(
-        internal val cdkObject: software.amazon.awscdk.services.cloudfront.FunctionAssociation,
-    ) : FunctionAssociation {
-        /** The type of event which should invoke the function. */
-        override fun eventType(): FunctionEventType =
-            unwrap(this).getEventType().let(FunctionEventType::wrap)
+    public fun build(): software.amazon.awscdk.services.cloudfront.FunctionAssociation =
+        cdkBuilder.build()
+  }
 
-        /** The CloudFront function that will be invoked. */
-        override fun function(): IFunction = unwrap(this).getFunction().let(IFunction::wrap)
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.cloudfront.FunctionAssociation,
+  ) : CdkObject(cdkObject), FunctionAssociation {
+    /**
+     * The type of event which should invoke the function.
+     */
+    override fun eventType(): FunctionEventType =
+        unwrap(this).getEventType().let(FunctionEventType::wrap)
+
+    /**
+     * The CloudFront function that will be invoked.
+     */
+    override fun function(): IFunction = unwrap(this).getFunction().let(IFunction::wrap)
+  }
+
+  public companion object {
+    public operator fun invoke(block: Builder.() -> Unit = {}): FunctionAssociation {
+      val builderImpl = BuilderImpl()
+      return Wrapper(builderImpl.apply(block).build())
     }
 
-    public companion object {
-        init {}
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.FunctionAssociation):
+        FunctionAssociation = Wrapper(cdkObject)
 
-        public operator fun invoke(block: Builder.() -> Unit = {}): FunctionAssociation {
-            val builderImpl = BuilderImpl()
-            return Wrapper(builderImpl.apply(block).build())
-        }
-
-        internal fun wrap(
-            cdkObject: software.amazon.awscdk.services.cloudfront.FunctionAssociation
-        ): FunctionAssociation = Wrapper(cdkObject)
-
-        internal fun unwrap(
-            wrapped: FunctionAssociation
-        ): software.amazon.awscdk.services.cloudfront.FunctionAssociation =
-            (wrapped as Wrapper).cdkObject
-    }
+    internal fun unwrap(wrapped: FunctionAssociation):
+        software.amazon.awscdk.services.cloudfront.FunctionAssociation = (wrapped as
+        CdkObject).cdkObject as software.amazon.awscdk.services.cloudfront.FunctionAssociation
+  }
 }

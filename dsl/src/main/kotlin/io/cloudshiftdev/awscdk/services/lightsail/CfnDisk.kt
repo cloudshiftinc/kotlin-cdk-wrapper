@@ -1,5 +1,6 @@
 package io.cloudshiftdev.awscdk.services.lightsail
 
+import io.cloudshiftdev.awscdk.CdkObject
 import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
@@ -8,7 +9,6 @@ import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -16,777 +16,834 @@ import kotlin.Suppress
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnDisk
-internal constructor(
-    private val cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk,
+public open class CfnDisk internal constructor(
+  internal override val cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
-    /** An array of add-ons for the disk. */
-    public open fun addOns(): Any? = unwrap(this).getAddOns()
+  /**
+   * An array of add-ons for the disk.
+   */
+  public open fun addOns(): Any? = unwrap(this).getAddOns()
 
-    /** An array of add-ons for the disk. */
-    public open fun addOns(`value`: IResolvable) {
-        unwrap(this).setAddOns(`value`.let(IResolvable::unwrap))
-    }
+  /**
+   * An array of add-ons for the disk.
+   */
+  public open fun addOns(`value`: IResolvable) {
+    unwrap(this).setAddOns(`value`.let(IResolvable::unwrap))
+  }
 
-    /** An array of add-ons for the disk. */
-    public open fun addOns(__idx_ac66f0: List<Any>) {
-        unwrap(this).setAddOns(__idx_ac66f0)
-    }
+  /**
+   * An array of add-ons for the disk.
+   */
+  public open fun addOns(__idx_ac66f0: List<Any>) {
+    unwrap(this).setAddOns(__idx_ac66f0)
+  }
 
-    /** An array of add-ons for the disk. */
-    public open fun addOns(vararg __idx_ac66f0: Any): Unit = addOns(__idx_ac66f0.toList())
+  /**
+   * An array of add-ons for the disk.
+   */
+  public open fun addOns(vararg __idx_ac66f0: Any): Unit = addOns(__idx_ac66f0.toList())
 
-    /** The resources to which the disk is attached. */
-    public open fun attrAttachedTo(): String = unwrap(this).getAttrAttachedTo()
+  /**
+   * The resources to which the disk is attached.
+   */
+  public open fun attrAttachedTo(): String = unwrap(this).getAttrAttachedTo()
+
+  /**
+   * (Deprecated) The attachment state of the disk.
+   *
+   *
+   * In releases prior to November 14, 2017, this parameter returned `attached` for system disks in
+   * the API response. It is now deprecated, but still included in the response. Use `isAttached`
+   * instead.
+   */
+  public open fun attrAttachmentState(): String = unwrap(this).getAttrAttachmentState()
+
+  /**
+   * The Amazon Resource Name (ARN) of the disk.
+   */
+  public open fun attrDiskArn(): String = unwrap(this).getAttrDiskArn()
+
+  /**
+   * The input/output operations per second (IOPS) of the disk.
+   */
+  public open fun attrIops(): Number = unwrap(this).getAttrIops()
+
+  /**
+   * A Boolean value indicating whether the disk is attached.
+   */
+  public open fun attrIsAttached(): IResolvable =
+      unwrap(this).getAttrIsAttached().let(IResolvable::wrap)
+
+  /**
+   * The Availability Zone where the disk is located.
+   */
+  public open fun attrLocationAvailabilityZone(): String =
+      unwrap(this).getAttrLocationAvailabilityZone()
+
+  /**
+   * The AWS Region where the disk is located.
+   */
+  public open fun attrLocationRegionName(): String = unwrap(this).getAttrLocationRegionName()
+
+  /**
+   * The disk path.
+   */
+  public open fun attrPath(): String = unwrap(this).getAttrPath()
+
+  /**
+   * The resource type of the disk (for example, `Disk` ).
+   */
+  public open fun attrResourceType(): String = unwrap(this).getAttrResourceType()
+
+  /**
+   * The state of the disk (for example, `in-use` ).
+   */
+  public open fun attrState(): String = unwrap(this).getAttrState()
+
+  /**
+   * The support code of the disk.
+   *
+   * Include this code in your email to support when you have questions about a disk or another
+   * resource in Lightsail . This code helps our support team to look up your Lightsail information.
+   */
+  public open fun attrSupportCode(): String = unwrap(this).getAttrSupportCode()
+
+  /**
+   * The AWS Region and Availability Zone location for the disk (for example, `us-east-1a` ).
+   */
+  public open fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+
+  /**
+   * The AWS Region and Availability Zone location for the disk (for example, `us-east-1a` ).
+   */
+  public open fun availabilityZone(`value`: String) {
+    unwrap(this).setAvailabilityZone(`value`)
+  }
+
+  /**
+   * The name of the disk.
+   */
+  public open fun diskName(): String = unwrap(this).getDiskName()
+
+  /**
+   * The name of the disk.
+   */
+  public open fun diskName(`value`: String) {
+    unwrap(this).setDiskName(`value`)
+  }
+
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
+  public override fun inspect(inspector: TreeInspector) {
+    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+  }
+
+  /**
+   * The AWS Region and Availability Zone where the disk is located.
+   */
+  public open fun location(): Any? = unwrap(this).getLocation()
+
+  /**
+   * The AWS Region and Availability Zone where the disk is located.
+   */
+  public open fun location(`value`: IResolvable) {
+    unwrap(this).setLocation(`value`.let(IResolvable::unwrap))
+  }
+
+  /**
+   * The AWS Region and Availability Zone where the disk is located.
+   */
+  public open fun location(`value`: LocationProperty) {
+    unwrap(this).setLocation(`value`.let(LocationProperty::unwrap))
+  }
+
+  /**
+   * The AWS Region and Availability Zone where the disk is located.
+   */
+  @Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("b6ea1ce60a7102130db8514b1dd1d4291dac2673f3f99f71bd4f4b4bd387abd2")
+  public open fun location(`value`: LocationProperty.Builder.() -> Unit): Unit =
+      location(LocationProperty(`value`))
+
+  /**
+   * The size of the disk in GB.
+   */
+  public open fun sizeInGb(): Number = unwrap(this).getSizeInGb()
+
+  /**
+   * The size of the disk in GB.
+   */
+  public open fun sizeInGb(`value`: Number) {
+    unwrap(this).setSizeInGb(`value`)
+  }
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+
+  /**
+   * An array of key-value pairs to apply to this resource.
+   */
+  public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
+      emptyList()
+
+  /**
+   * An array of key-value pairs to apply to this resource.
+   */
+  public open fun tagsRaw(`value`: List<CfnTag>) {
+    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+  }
+
+  /**
+   * An array of key-value pairs to apply to this resource.
+   */
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.lightsail.CfnDisk].
+   */
+  @CdkDslMarker
+  public interface Builder {
+    /**
+     * An array of add-ons for the disk.
+     *
+     *
+     * If the disk has an add-on enabled when performing a delete disk request, the add-on is
+     * automatically disabled before the disk is deleted.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-addons)
+     * @param addOns An array of add-ons for the disk. 
+     */
+    public fun addOns(addOns: IResolvable)
 
     /**
-     * (Deprecated) The attachment state of the disk.
+     * An array of add-ons for the disk.
      *
-     * In releases prior to November 14, 2017, this parameter returned `attached` for system disks
-     * in the API response. It is now deprecated, but still included in the response. Use
-     * `isAttached` instead.
+     *
+     * If the disk has an add-on enabled when performing a delete disk request, the add-on is
+     * automatically disabled before the disk is deleted.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-addons)
+     * @param addOns An array of add-ons for the disk. 
      */
-    public open fun attrAttachmentState(): String = unwrap(this).getAttrAttachmentState()
-
-    /** The Amazon Resource Name (ARN) of the disk. */
-    public open fun attrDiskArn(): String = unwrap(this).getAttrDiskArn()
-
-    /** The input/output operations per second (IOPS) of the disk. */
-    public open fun attrIops(): Number = unwrap(this).getAttrIops()
-
-    /** A Boolean value indicating whether the disk is attached. */
-    public open fun attrIsAttached(): IResolvable =
-        unwrap(this).getAttrIsAttached().let(IResolvable::wrap)
-
-    /** The Availability Zone where the disk is located. */
-    public open fun attrLocationAvailabilityZone(): String =
-        unwrap(this).getAttrLocationAvailabilityZone()
-
-    /** The AWS Region where the disk is located. */
-    public open fun attrLocationRegionName(): String = unwrap(this).getAttrLocationRegionName()
-
-    /** The disk path. */
-    public open fun attrPath(): String = unwrap(this).getAttrPath()
-
-    /** The resource type of the disk (for example, `Disk` ). */
-    public open fun attrResourceType(): String = unwrap(this).getAttrResourceType()
-
-    /** The state of the disk (for example, `in-use` ). */
-    public open fun attrState(): String = unwrap(this).getAttrState()
+    public fun addOns(addOns: List<Any>)
 
     /**
-     * The support code of the disk.
+     * An array of add-ons for the disk.
      *
-     * Include this code in your email to support when you have questions about a disk or another
-     * resource in Lightsail . This code helps our support team to look up your Lightsail
-     * information.
+     *
+     * If the disk has an add-on enabled when performing a delete disk request, the add-on is
+     * automatically disabled before the disk is deleted.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-addons)
+     * @param addOns An array of add-ons for the disk. 
      */
-    public open fun attrSupportCode(): String = unwrap(this).getAttrSupportCode()
-
-    /** The AWS Region and Availability Zone location for the disk (for example, `us-east-1a` ). */
-    public open fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
-
-    /** The AWS Region and Availability Zone location for the disk (for example, `us-east-1a` ). */
-    public open fun availabilityZone(`value`: String) {
-        unwrap(this).setAvailabilityZone(`value`)
-    }
-
-    /** The name of the disk. */
-    public open fun diskName(): String = unwrap(this).getDiskName()
-
-    /** The name of the disk. */
-    public open fun diskName(`value`: String) {
-        unwrap(this).setDiskName(`value`)
-    }
+    public fun addOns(vararg addOns: Any)
 
     /**
-     * Examines the CloudFormation resource and discloses attributes.
+     * The AWS Region and Availability Zone location for the disk (for example, `us-east-1a` ).
      *
-     * @param inspector tree inspector to collect and process attributes.
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-availabilityzone)
+     * @param availabilityZone The AWS Region and Availability Zone location for the disk (for
+     * example, `us-east-1a` ). 
      */
-    public override fun inspect(inspector: TreeInspector) {
-        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-    }
+    public fun availabilityZone(availabilityZone: String)
 
-    /** The AWS Region and Availability Zone where the disk is located. */
-    public open fun location(): Any? = unwrap(this).getLocation()
+    /**
+     * The name of the disk.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-diskname)
+     * @param diskName The name of the disk. 
+     */
+    public fun diskName(diskName: String)
 
-    /** The AWS Region and Availability Zone where the disk is located. */
-    public open fun location(`value`: IResolvable) {
-        unwrap(this).setLocation(`value`.let(IResolvable::unwrap))
-    }
+    /**
+     * The AWS Region and Availability Zone where the disk is located.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-location)
+     * @param location The AWS Region and Availability Zone where the disk is located. 
+     */
+    public fun location(location: IResolvable)
 
-    /** The AWS Region and Availability Zone where the disk is located. */
-    public open fun location(`value`: LocationProperty) {
-        unwrap(this).setLocation(`value`.let(LocationProperty::unwrap))
-    }
+    /**
+     * The AWS Region and Availability Zone where the disk is located.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-location)
+     * @param location The AWS Region and Availability Zone where the disk is located. 
+     */
+    public fun location(location: LocationProperty)
 
-    /** The AWS Region and Availability Zone where the disk is located. */
+    /**
+     * The AWS Region and Availability Zone where the disk is located.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-location)
+     * @param location The AWS Region and Availability Zone where the disk is located. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("b6ea1ce60a7102130db8514b1dd1d4291dac2673f3f99f71bd4f4b4bd387abd2")
-    public open fun location(`value`: LocationProperty.Builder.() -> Unit): Unit =
-        location(LocationProperty(`value`))
+    @JvmName("bd31cd3aff101e415dd437d50ed0c47b200615363e5321b85bb126ab37e00fa9")
+    public fun location(location: LocationProperty.Builder.() -> Unit)
 
-    /** The size of the disk in GB. */
-    public open fun sizeInGb(): Number = unwrap(this).getSizeInGb()
+    /**
+     * The size of the disk in GB.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-sizeingb)
+     * @param sizeInGb The size of the disk in GB. 
+     */
+    public fun sizeInGb(sizeInGb: Number)
 
-    /** The size of the disk in GB. */
-    public open fun sizeInGb(`value`: Number) {
-        unwrap(this).setSizeInGb(`value`)
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * in the *AWS CloudFormation User Guide* .
+     *
+     *
+     * The `Value` of `Tags` is optional for Lightsail resources.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-tags)
+     * @param tags An array of key-value pairs to apply to this resource. 
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * in the *AWS CloudFormation User Guide* .
+     *
+     *
+     * The `Value` of `Tags` is optional for Lightsail resources.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-tags)
+     * @param tags An array of key-value pairs to apply to this resource. 
+     */
+    public fun tags(vararg tags: CfnTag)
+  }
+
+  private class BuilderImpl(
+    scope: SoftwareConstructsConstruct,
+    id: String,
+  ) : Builder {
+    private val cdkBuilder: software.amazon.awscdk.services.lightsail.CfnDisk.Builder =
+        software.amazon.awscdk.services.lightsail.CfnDisk.Builder.create(scope, id)
+
+    /**
+     * An array of add-ons for the disk.
+     *
+     *
+     * If the disk has an add-on enabled when performing a delete disk request, the add-on is
+     * automatically disabled before the disk is deleted.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-addons)
+     * @param addOns An array of add-ons for the disk. 
+     */
+    override fun addOns(addOns: IResolvable) {
+      cdkBuilder.addOns(addOns.let(IResolvable::unwrap))
     }
 
-    /** Tag Manager which manages the tags for this resource. */
-    public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
-
-    /** An array of key-value pairs to apply to this resource. */
-    public open fun tagsRaw(): List<CfnTag> =
-        unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?: emptyList()
-
-    /** An array of key-value pairs to apply to this resource. */
-    public open fun tagsRaw(`value`: List<CfnTag>) {
-        unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    /**
+     * An array of add-ons for the disk.
+     *
+     *
+     * If the disk has an add-on enabled when performing a delete disk request, the add-on is
+     * automatically disabled before the disk is deleted.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-addons)
+     * @param addOns An array of add-ons for the disk. 
+     */
+    override fun addOns(addOns: List<Any>) {
+      cdkBuilder.addOns(addOns)
     }
 
-    /** An array of key-value pairs to apply to this resource. */
-    public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+    /**
+     * An array of add-ons for the disk.
+     *
+     *
+     * If the disk has an add-on enabled when performing a delete disk request, the add-on is
+     * automatically disabled before the disk is deleted.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-addons)
+     * @param addOns An array of add-ons for the disk. 
+     */
+    override fun addOns(vararg addOns: Any): Unit = addOns(addOns.toList())
 
-    /** A fluent builder for [io.cloudshiftdev.awscdk.services.lightsail.CfnDisk]. */
+    /**
+     * The AWS Region and Availability Zone location for the disk (for example, `us-east-1a` ).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-availabilityzone)
+     * @param availabilityZone The AWS Region and Availability Zone location for the disk (for
+     * example, `us-east-1a` ). 
+     */
+    override fun availabilityZone(availabilityZone: String) {
+      cdkBuilder.availabilityZone(availabilityZone)
+    }
+
+    /**
+     * The name of the disk.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-diskname)
+     * @param diskName The name of the disk. 
+     */
+    override fun diskName(diskName: String) {
+      cdkBuilder.diskName(diskName)
+    }
+
+    /**
+     * The AWS Region and Availability Zone where the disk is located.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-location)
+     * @param location The AWS Region and Availability Zone where the disk is located. 
+     */
+    override fun location(location: IResolvable) {
+      cdkBuilder.location(location.let(IResolvable::unwrap))
+    }
+
+    /**
+     * The AWS Region and Availability Zone where the disk is located.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-location)
+     * @param location The AWS Region and Availability Zone where the disk is located. 
+     */
+    override fun location(location: LocationProperty) {
+      cdkBuilder.location(location.let(LocationProperty::unwrap))
+    }
+
+    /**
+     * The AWS Region and Availability Zone where the disk is located.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-location)
+     * @param location The AWS Region and Availability Zone where the disk is located. 
+     */
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("bd31cd3aff101e415dd437d50ed0c47b200615363e5321b85bb126ab37e00fa9")
+    override fun location(location: LocationProperty.Builder.() -> Unit): Unit =
+        location(LocationProperty(location))
+
+    /**
+     * The size of the disk in GB.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-sizeingb)
+     * @param sizeInGb The size of the disk in GB. 
+     */
+    override fun sizeInGb(sizeInGb: Number) {
+      cdkBuilder.sizeInGb(sizeInGb)
+    }
+
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * in the *AWS CloudFormation User Guide* .
+     *
+     *
+     * The `Value` of `Tags` is optional for Lightsail resources.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-tags)
+     * @param tags An array of key-value pairs to apply to this resource. 
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+    }
+
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * in the *AWS CloudFormation User Guide* .
+     *
+     *
+     * The `Value` of `Tags` is optional for Lightsail resources.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-tags)
+     * @param tags An array of key-value pairs to apply to this resource. 
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+    public fun build(): software.amazon.awscdk.services.lightsail.CfnDisk = cdkBuilder.build()
+  }
+
+  public companion object {
+    public operator fun invoke(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      block: Builder.() -> Unit = {},
+    ): CfnDisk {
+      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+      return CfnDisk(builderImpl.apply(block).build())
+    }
+
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk): CfnDisk =
+        CfnDisk(cdkObject)
+
+    internal fun unwrap(wrapped: CfnDisk): software.amazon.awscdk.services.lightsail.CfnDisk =
+        wrapped.cdkObject
+  }
+
+  public interface AutoSnapshotAddOnProperty {
+    /**
+     * The daily time when an automatic snapshot will be created.
+     *
+     * Constraints:
+     *
+     * * Must be in `HH:00` format, and in an hourly increment.
+     * * Specified in Coordinated Universal Time (UTC).
+     * * The snapshot will be automatically created between the time specified and up to 45 minutes
+     * after.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-autosnapshotaddon.html#cfn-lightsail-disk-autosnapshotaddon-snapshottimeofday)
+     */
+    public fun snapshotTimeOfDay(): String? = unwrap(this).getSnapshotTimeOfDay()
+
+    /**
+     * A builder for [AutoSnapshotAddOnProperty]
+     */
     @CdkDslMarker
     public interface Builder {
-        /**
-         * An array of add-ons for the disk.
-         *
-         * If the disk has an add-on enabled when performing a delete disk request, the add-on is
-         * automatically disabled before the disk is deleted.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-addons)
-         *
-         * @param addOns An array of add-ons for the disk.
-         */
-        public fun addOns(addOns: IResolvable)
-
-        /**
-         * An array of add-ons for the disk.
-         *
-         * If the disk has an add-on enabled when performing a delete disk request, the add-on is
-         * automatically disabled before the disk is deleted.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-addons)
-         *
-         * @param addOns An array of add-ons for the disk.
-         */
-        public fun addOns(addOns: List<Any>)
-
-        /**
-         * An array of add-ons for the disk.
-         *
-         * If the disk has an add-on enabled when performing a delete disk request, the add-on is
-         * automatically disabled before the disk is deleted.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-addons)
-         *
-         * @param addOns An array of add-ons for the disk.
-         */
-        public fun addOns(vararg addOns: Any)
-
-        /**
-         * The AWS Region and Availability Zone location for the disk (for example, `us-east-1a` ).
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-availabilityzone)
-         *
-         * @param availabilityZone The AWS Region and Availability Zone location for the disk (for
-         *   example, `us-east-1a` ).
-         */
-        public fun availabilityZone(availabilityZone: String)
-
-        /**
-         * The name of the disk.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-diskname)
-         *
-         * @param diskName The name of the disk.
-         */
-        public fun diskName(diskName: String)
-
-        /**
-         * The AWS Region and Availability Zone where the disk is located.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-location)
-         *
-         * @param location The AWS Region and Availability Zone where the disk is located.
-         */
-        public fun location(location: IResolvable)
-
-        /**
-         * The AWS Region and Availability Zone where the disk is located.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-location)
-         *
-         * @param location The AWS Region and Availability Zone where the disk is located.
-         */
-        public fun location(location: LocationProperty)
-
-        /**
-         * The AWS Region and Availability Zone where the disk is located.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-location)
-         *
-         * @param location The AWS Region and Availability Zone where the disk is located.
-         */
-        @Suppress("INAPPLICABLE_JVM_NAME")
-        @JvmName("bd31cd3aff101e415dd437d50ed0c47b200615363e5321b85bb126ab37e00fa9")
-        public fun location(location: LocationProperty.Builder.() -> Unit)
-
-        /**
-         * The size of the disk in GB.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-sizeingb)
-         *
-         * @param sizeInGb The size of the disk in GB.
-         */
-        public fun sizeInGb(sizeInGb: Number)
-
-        /**
-         * An array of key-value pairs to apply to this resource.
-         *
-         * For more information, see
-         * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-         * in the *AWS CloudFormation User Guide* .
-         *
-         * The `Value` of `Tags` is optional for Lightsail resources.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-tags)
-         *
-         * @param tags An array of key-value pairs to apply to this resource.
-         */
-        public fun tags(tags: List<CfnTag>)
-
-        /**
-         * An array of key-value pairs to apply to this resource.
-         *
-         * For more information, see
-         * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-         * in the *AWS CloudFormation User Guide* .
-         *
-         * The `Value` of `Tags` is optional for Lightsail resources.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-tags)
-         *
-         * @param tags An array of key-value pairs to apply to this resource.
-         */
-        public fun tags(vararg tags: CfnTag)
+      /**
+       * @param snapshotTimeOfDay The daily time when an automatic snapshot will be created.
+       * Constraints:
+       *
+       * * Must be in `HH:00` format, and in an hourly increment.
+       * * Specified in Coordinated Universal Time (UTC).
+       * * The snapshot will be automatically created between the time specified and up to 45
+       * minutes after.
+       */
+      public fun snapshotTimeOfDay(snapshotTimeOfDay: String)
     }
 
-    private class BuilderImpl(
-        scope: SoftwareConstructsConstruct,
-        id: String,
-    ) : Builder {
-        private val cdkBuilder: software.amazon.awscdk.services.lightsail.CfnDisk.Builder =
-            software.amazon.awscdk.services.lightsail.CfnDisk.Builder.create(scope, id)
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty.Builder =
+          software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty.builder()
 
-        /**
-         * An array of add-ons for the disk.
-         *
-         * If the disk has an add-on enabled when performing a delete disk request, the add-on is
-         * automatically disabled before the disk is deleted.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-addons)
-         *
-         * @param addOns An array of add-ons for the disk.
-         */
-        override fun addOns(addOns: IResolvable) {
-            cdkBuilder.addOns(addOns.let(IResolvable::unwrap))
-        }
+      /**
+       * @param snapshotTimeOfDay The daily time when an automatic snapshot will be created.
+       * Constraints:
+       *
+       * * Must be in `HH:00` format, and in an hourly increment.
+       * * Specified in Coordinated Universal Time (UTC).
+       * * The snapshot will be automatically created between the time specified and up to 45
+       * minutes after.
+       */
+      override fun snapshotTimeOfDay(snapshotTimeOfDay: String) {
+        cdkBuilder.snapshotTimeOfDay(snapshotTimeOfDay)
+      }
 
-        /**
-         * An array of add-ons for the disk.
-         *
-         * If the disk has an add-on enabled when performing a delete disk request, the add-on is
-         * automatically disabled before the disk is deleted.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-addons)
-         *
-         * @param addOns An array of add-ons for the disk.
-         */
-        override fun addOns(addOns: List<Any>) {
-            cdkBuilder.addOns(addOns)
-        }
+      public fun build():
+          software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty =
+          cdkBuilder.build()
+    }
 
-        /**
-         * An array of add-ons for the disk.
-         *
-         * If the disk has an add-on enabled when performing a delete disk request, the add-on is
-         * automatically disabled before the disk is deleted.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-addons)
-         *
-         * @param addOns An array of add-ons for the disk.
-         */
-        override fun addOns(vararg addOns: Any): Unit = addOns(addOns.toList())
-
-        /**
-         * The AWS Region and Availability Zone location for the disk (for example, `us-east-1a` ).
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-availabilityzone)
-         *
-         * @param availabilityZone The AWS Region and Availability Zone location for the disk (for
-         *   example, `us-east-1a` ).
-         */
-        override fun availabilityZone(availabilityZone: String) {
-            cdkBuilder.availabilityZone(availabilityZone)
-        }
-
-        /**
-         * The name of the disk.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-diskname)
-         *
-         * @param diskName The name of the disk.
-         */
-        override fun diskName(diskName: String) {
-            cdkBuilder.diskName(diskName)
-        }
-
-        /**
-         * The AWS Region and Availability Zone where the disk is located.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-location)
-         *
-         * @param location The AWS Region and Availability Zone where the disk is located.
-         */
-        override fun location(location: IResolvable) {
-            cdkBuilder.location(location.let(IResolvable::unwrap))
-        }
-
-        /**
-         * The AWS Region and Availability Zone where the disk is located.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-location)
-         *
-         * @param location The AWS Region and Availability Zone where the disk is located.
-         */
-        override fun location(location: LocationProperty) {
-            cdkBuilder.location(location.let(LocationProperty::unwrap))
-        }
-
-        /**
-         * The AWS Region and Availability Zone where the disk is located.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-location)
-         *
-         * @param location The AWS Region and Availability Zone where the disk is located.
-         */
-        @Suppress("INAPPLICABLE_JVM_NAME")
-        @JvmName("bd31cd3aff101e415dd437d50ed0c47b200615363e5321b85bb126ab37e00fa9")
-        override fun location(location: LocationProperty.Builder.() -> Unit): Unit =
-            location(LocationProperty(location))
-
-        /**
-         * The size of the disk in GB.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-sizeingb)
-         *
-         * @param sizeInGb The size of the disk in GB.
-         */
-        override fun sizeInGb(sizeInGb: Number) {
-            cdkBuilder.sizeInGb(sizeInGb)
-        }
-
-        /**
-         * An array of key-value pairs to apply to this resource.
-         *
-         * For more information, see
-         * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-         * in the *AWS CloudFormation User Guide* .
-         *
-         * The `Value` of `Tags` is optional for Lightsail resources.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-tags)
-         *
-         * @param tags An array of key-value pairs to apply to this resource.
-         */
-        override fun tags(tags: List<CfnTag>) {
-            cdkBuilder.tags(tags.map(CfnTag::unwrap))
-        }
-
-        /**
-         * An array of key-value pairs to apply to this resource.
-         *
-         * For more information, see
-         * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-         * in the *AWS CloudFormation User Guide* .
-         *
-         * The `Value` of `Tags` is optional for Lightsail resources.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lightsail-disk.html#cfn-lightsail-disk-tags)
-         *
-         * @param tags An array of key-value pairs to apply to this resource.
-         */
-        override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
-
-        public fun build(): software.amazon.awscdk.services.lightsail.CfnDisk = cdkBuilder.build()
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty,
+    ) : CdkObject(cdkObject), AutoSnapshotAddOnProperty {
+      /**
+       * The daily time when an automatic snapshot will be created.
+       *
+       * Constraints:
+       *
+       * * Must be in `HH:00` format, and in an hourly increment.
+       * * Specified in Coordinated Universal Time (UTC).
+       * * The snapshot will be automatically created between the time specified and up to 45
+       * minutes after.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-autosnapshotaddon.html#cfn-lightsail-disk-autosnapshotaddon-snapshottimeofday)
+       */
+      override fun snapshotTimeOfDay(): String? = unwrap(this).getSnapshotTimeOfDay()
     }
 
     public companion object {
-        init {}
+      public operator fun invoke(block: Builder.() -> Unit = {}): AutoSnapshotAddOnProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
 
-        public operator fun invoke(
-            scope: CloudshiftdevConstructsConstruct,
-            id: String,
-            block: Builder.() -> Unit = {},
-        ): CfnDisk {
-            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-            return CfnDisk(builderImpl.apply(block).build())
-        }
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty):
+          AutoSnapshotAddOnProperty = Wrapper(cdkObject)
 
-        internal fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk): CfnDisk =
-            CfnDisk(cdkObject)
+      internal fun unwrap(wrapped: AutoSnapshotAddOnProperty):
+          software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty
+    }
+  }
 
-        internal fun unwrap(wrapped: CfnDisk): software.amazon.awscdk.services.lightsail.CfnDisk =
-            wrapped.cdkObject
+  public interface AddOnProperty {
+    /**
+     * The add-on type (for example, `AutoSnapshot` ).
+     *
+     *
+     * `AutoSnapshot` is the only add-on that can be enabled for a disk.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-addon.html#cfn-lightsail-disk-addon-addontype)
+     */
+    public fun addOnType(): String
+
+    /**
+     * The parameters for the automatic snapshot add-on, such as the daily time when an automatic
+     * snapshot will be created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-addon.html#cfn-lightsail-disk-addon-autosnapshotaddonrequest)
+     */
+    public fun autoSnapshotAddOnRequest(): Any? = unwrap(this).getAutoSnapshotAddOnRequest()
+
+    /**
+     * The status of the add-on.
+     *
+     * Valid Values: `Enabled` | `Disabled`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-addon.html#cfn-lightsail-disk-addon-status)
+     */
+    public fun status(): String? = unwrap(this).getStatus()
+
+    /**
+     * A builder for [AddOnProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param addOnType The add-on type (for example, `AutoSnapshot` ). 
+       *
+       * `AutoSnapshot` is the only add-on that can be enabled for a disk.
+       */
+      public fun addOnType(addOnType: String)
+
+      /**
+       * @param autoSnapshotAddOnRequest The parameters for the automatic snapshot add-on, such as
+       * the daily time when an automatic snapshot will be created.
+       */
+      public fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: IResolvable)
+
+      /**
+       * @param autoSnapshotAddOnRequest The parameters for the automatic snapshot add-on, such as
+       * the daily time when an automatic snapshot will be created.
+       */
+      public fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty)
+
+      /**
+       * @param autoSnapshotAddOnRequest The parameters for the automatic snapshot add-on, such as
+       * the daily time when an automatic snapshot will be created.
+       */
+      @Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6bfdcb74b866e98c57c2409486794c297fdaab9d014d1c05279a425875c2d9e3")
+      public
+          fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty.Builder.() -> Unit)
+
+      /**
+       * @param status The status of the add-on.
+       * Valid Values: `Enabled` | `Disabled`
+       */
+      public fun status(status: String)
     }
 
-    public interface AutoSnapshotAddOnProperty {
-        /**
-         * The daily time when an automatic snapshot will be created.
-         *
-         * Constraints:
-         * * Must be in `HH:00` format, and in an hourly increment.
-         * * Specified in Coordinated Universal Time (UTC).
-         * * The snapshot will be automatically created between the time specified and up to 45
-         *   minutes after.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-autosnapshotaddon.html#cfn-lightsail-disk-autosnapshotaddon-snapshottimeofday)
-         */
-        public fun snapshotTimeOfDay(): String? = unwrap(this).getSnapshotTimeOfDay()
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty.Builder =
+          software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty.builder()
 
-        /** A builder for [AutoSnapshotAddOnProperty] */
-        @CdkDslMarker
-        public interface Builder {
-            /**
-             * @param snapshotTimeOfDay The daily time when an automatic snapshot will be created.
-             *   Constraints:
-             * * Must be in `HH:00` format, and in an hourly increment.
-             * * Specified in Coordinated Universal Time (UTC).
-             * * The snapshot will be automatically created between the time specified and up to 45
-             *   minutes after.
-             */
-            public fun snapshotTimeOfDay(snapshotTimeOfDay: String)
-        }
+      /**
+       * @param addOnType The add-on type (for example, `AutoSnapshot` ). 
+       *
+       * `AutoSnapshot` is the only add-on that can be enabled for a disk.
+       */
+      override fun addOnType(addOnType: String) {
+        cdkBuilder.addOnType(addOnType)
+      }
 
-        private class BuilderImpl : Builder {
-            private val cdkBuilder:
-                software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty.Builder =
-                software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty
-                    .builder()
+      /**
+       * @param autoSnapshotAddOnRequest The parameters for the automatic snapshot add-on, such as
+       * the daily time when an automatic snapshot will be created.
+       */
+      override fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: IResolvable) {
+        cdkBuilder.autoSnapshotAddOnRequest(autoSnapshotAddOnRequest.let(IResolvable::unwrap))
+      }
 
-            /**
-             * @param snapshotTimeOfDay The daily time when an automatic snapshot will be created.
-             *   Constraints:
-             * * Must be in `HH:00` format, and in an hourly increment.
-             * * Specified in Coordinated Universal Time (UTC).
-             * * The snapshot will be automatically created between the time specified and up to 45
-             *   minutes after.
-             */
-            override fun snapshotTimeOfDay(snapshotTimeOfDay: String) {
-                cdkBuilder.snapshotTimeOfDay(snapshotTimeOfDay)
-            }
+      /**
+       * @param autoSnapshotAddOnRequest The parameters for the automatic snapshot add-on, such as
+       * the daily time when an automatic snapshot will be created.
+       */
+      override fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty) {
+        cdkBuilder.autoSnapshotAddOnRequest(autoSnapshotAddOnRequest.let(AutoSnapshotAddOnProperty::unwrap))
+      }
 
-            public fun build():
-                software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty =
-                cdkBuilder.build()
-        }
+      /**
+       * @param autoSnapshotAddOnRequest The parameters for the automatic snapshot add-on, such as
+       * the daily time when an automatic snapshot will be created.
+       */
+      @Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6bfdcb74b866e98c57c2409486794c297fdaab9d014d1c05279a425875c2d9e3")
+      override
+          fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty.Builder.() -> Unit):
+          Unit = autoSnapshotAddOnRequest(AutoSnapshotAddOnProperty(autoSnapshotAddOnRequest))
 
-        private class Wrapper
-        internal constructor(
-            internal val cdkObject:
-                software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty,
-        ) : AutoSnapshotAddOnProperty {
-            /**
-             * The daily time when an automatic snapshot will be created.
-             *
-             * Constraints:
-             * * Must be in `HH:00` format, and in an hourly increment.
-             * * Specified in Coordinated Universal Time (UTC).
-             * * The snapshot will be automatically created between the time specified and up to 45
-             *   minutes after.
-             *
-             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-autosnapshotaddon.html#cfn-lightsail-disk-autosnapshotaddon-snapshottimeofday)
-             */
-            override fun snapshotTimeOfDay(): String? = unwrap(this).getSnapshotTimeOfDay()
-        }
+      /**
+       * @param status The status of the add-on.
+       * Valid Values: `Enabled` | `Disabled`
+       */
+      override fun status(status: String) {
+        cdkBuilder.status(status)
+      }
 
-        public companion object {
-            init {}
-
-            public operator fun invoke(block: Builder.() -> Unit = {}): AutoSnapshotAddOnProperty {
-                val builderImpl = BuilderImpl()
-                return Wrapper(builderImpl.apply(block).build())
-            }
-
-            internal fun wrap(
-                cdkObject:
-                    software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty
-            ): AutoSnapshotAddOnProperty = Wrapper(cdkObject)
-
-            internal fun unwrap(
-                wrapped: AutoSnapshotAddOnProperty
-            ): software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty =
-                (wrapped as Wrapper).cdkObject
-        }
+      public fun build(): software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty =
+          cdkBuilder.build()
     }
 
-    public interface AddOnProperty {
-        /**
-         * The add-on type (for example, `AutoSnapshot` ).
-         *
-         * `AutoSnapshot` is the only add-on that can be enabled for a disk.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-addon.html#cfn-lightsail-disk-addon-addontype)
-         */
-        public fun addOnType(): String
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty,
+    ) : CdkObject(cdkObject), AddOnProperty {
+      /**
+       * The add-on type (for example, `AutoSnapshot` ).
+       *
+       *
+       * `AutoSnapshot` is the only add-on that can be enabled for a disk.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-addon.html#cfn-lightsail-disk-addon-addontype)
+       */
+      override fun addOnType(): String = unwrap(this).getAddOnType()
 
-        /**
-         * The parameters for the automatic snapshot add-on, such as the daily time when an
-         * automatic snapshot will be created.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-addon.html#cfn-lightsail-disk-addon-autosnapshotaddonrequest)
-         */
-        public fun autoSnapshotAddOnRequest(): Any? = unwrap(this).getAutoSnapshotAddOnRequest()
+      /**
+       * The parameters for the automatic snapshot add-on, such as the daily time when an automatic
+       * snapshot will be created.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-addon.html#cfn-lightsail-disk-addon-autosnapshotaddonrequest)
+       */
+      override fun autoSnapshotAddOnRequest(): Any? = unwrap(this).getAutoSnapshotAddOnRequest()
 
-        /**
-         * The status of the add-on.
-         *
-         * Valid Values: `Enabled` | `Disabled`
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-addon.html#cfn-lightsail-disk-addon-status)
-         */
-        public fun status(): String? = unwrap(this).getStatus()
-
-        /** A builder for [AddOnProperty] */
-        @CdkDslMarker
-        public interface Builder {
-            /**
-             * @param addOnType The add-on type (for example, `AutoSnapshot` ).
-             *
-             * `AutoSnapshot` is the only add-on that can be enabled for a disk.
-             */
-            public fun addOnType(addOnType: String)
-
-            /**
-             * @param autoSnapshotAddOnRequest The parameters for the automatic snapshot add-on,
-             *   such as the daily time when an automatic snapshot will be created.
-             */
-            public fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: IResolvable)
-
-            /**
-             * @param autoSnapshotAddOnRequest The parameters for the automatic snapshot add-on,
-             *   such as the daily time when an automatic snapshot will be created.
-             */
-            public fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty)
-
-            /**
-             * @param autoSnapshotAddOnRequest The parameters for the automatic snapshot add-on,
-             *   such as the daily time when an automatic snapshot will be created.
-             */
-            @Suppress("INAPPLICABLE_JVM_NAME")
-            @JvmName("6bfdcb74b866e98c57c2409486794c297fdaab9d014d1c05279a425875c2d9e3")
-            public fun autoSnapshotAddOnRequest(
-                autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty.Builder.() -> Unit
-            )
-
-            /** @param status The status of the add-on. Valid Values: `Enabled` | `Disabled` */
-            public fun status(status: String)
-        }
-
-        private class BuilderImpl : Builder {
-            private val cdkBuilder:
-                software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty.Builder =
-                software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty.builder()
-
-            /**
-             * @param addOnType The add-on type (for example, `AutoSnapshot` ).
-             *
-             * `AutoSnapshot` is the only add-on that can be enabled for a disk.
-             */
-            override fun addOnType(addOnType: String) {
-                cdkBuilder.addOnType(addOnType)
-            }
-
-            /**
-             * @param autoSnapshotAddOnRequest The parameters for the automatic snapshot add-on,
-             *   such as the daily time when an automatic snapshot will be created.
-             */
-            override fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: IResolvable) {
-                cdkBuilder.autoSnapshotAddOnRequest(
-                    autoSnapshotAddOnRequest.let(IResolvable::unwrap)
-                )
-            }
-
-            /**
-             * @param autoSnapshotAddOnRequest The parameters for the automatic snapshot add-on,
-             *   such as the daily time when an automatic snapshot will be created.
-             */
-            override fun autoSnapshotAddOnRequest(
-                autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty
-            ) {
-                cdkBuilder.autoSnapshotAddOnRequest(
-                    autoSnapshotAddOnRequest.let(AutoSnapshotAddOnProperty::unwrap)
-                )
-            }
-
-            /**
-             * @param autoSnapshotAddOnRequest The parameters for the automatic snapshot add-on,
-             *   such as the daily time when an automatic snapshot will be created.
-             */
-            @Suppress("INAPPLICABLE_JVM_NAME")
-            @JvmName("6bfdcb74b866e98c57c2409486794c297fdaab9d014d1c05279a425875c2d9e3")
-            override fun autoSnapshotAddOnRequest(
-                autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty.Builder.() -> Unit
-            ): Unit = autoSnapshotAddOnRequest(AutoSnapshotAddOnProperty(autoSnapshotAddOnRequest))
-
-            /** @param status The status of the add-on. Valid Values: `Enabled` | `Disabled` */
-            override fun status(status: String) {
-                cdkBuilder.status(status)
-            }
-
-            public fun build(): software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty =
-                cdkBuilder.build()
-        }
-
-        private class Wrapper
-        internal constructor(
-            internal val cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty,
-        ) : AddOnProperty {
-            /**
-             * The add-on type (for example, `AutoSnapshot` ).
-             *
-             * `AutoSnapshot` is the only add-on that can be enabled for a disk.
-             *
-             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-addon.html#cfn-lightsail-disk-addon-addontype)
-             */
-            override fun addOnType(): String = unwrap(this).getAddOnType()
-
-            /**
-             * The parameters for the automatic snapshot add-on, such as the daily time when an
-             * automatic snapshot will be created.
-             *
-             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-addon.html#cfn-lightsail-disk-addon-autosnapshotaddonrequest)
-             */
-            override fun autoSnapshotAddOnRequest(): Any? =
-                unwrap(this).getAutoSnapshotAddOnRequest()
-
-            /**
-             * The status of the add-on.
-             *
-             * Valid Values: `Enabled` | `Disabled`
-             *
-             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-addon.html#cfn-lightsail-disk-addon-status)
-             */
-            override fun status(): String? = unwrap(this).getStatus()
-        }
-
-        public companion object {
-            init {}
-
-            public operator fun invoke(block: Builder.() -> Unit = {}): AddOnProperty {
-                val builderImpl = BuilderImpl()
-                return Wrapper(builderImpl.apply(block).build())
-            }
-
-            internal fun wrap(
-                cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty
-            ): AddOnProperty = Wrapper(cdkObject)
-
-            internal fun unwrap(
-                wrapped: AddOnProperty
-            ): software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty =
-                (wrapped as Wrapper).cdkObject
-        }
+      /**
+       * The status of the add-on.
+       *
+       * Valid Values: `Enabled` | `Disabled`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-addon.html#cfn-lightsail-disk-addon-status)
+       */
+      override fun status(): String? = unwrap(this).getStatus()
     }
 
-    public interface LocationProperty {
-        /**
-         * The Availability Zone where the disk is located.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-location.html#cfn-lightsail-disk-location-availabilityzone)
-         */
-        public fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AddOnProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
 
-        /**
-         * The AWS Region where the disk is located.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-location.html#cfn-lightsail-disk-location-regionname)
-         */
-        public fun regionName(): String? = unwrap(this).getRegionName()
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty):
+          AddOnProperty = Wrapper(cdkObject)
 
-        /** A builder for [LocationProperty] */
-        @CdkDslMarker
-        public interface Builder {
-            /** @param availabilityZone The Availability Zone where the disk is located. */
-            public fun availabilityZone(availabilityZone: String)
-
-            /** @param regionName The AWS Region where the disk is located. */
-            public fun regionName(regionName: String)
-        }
-
-        private class BuilderImpl : Builder {
-            private val cdkBuilder:
-                software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty.Builder =
-                software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty.builder()
-
-            /** @param availabilityZone The Availability Zone where the disk is located. */
-            override fun availabilityZone(availabilityZone: String) {
-                cdkBuilder.availabilityZone(availabilityZone)
-            }
-
-            /** @param regionName The AWS Region where the disk is located. */
-            override fun regionName(regionName: String) {
-                cdkBuilder.regionName(regionName)
-            }
-
-            public fun build(): software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty =
-                cdkBuilder.build()
-        }
-
-        private class Wrapper
-        internal constructor(
-            internal val cdkObject:
-                software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty,
-        ) : LocationProperty {
-            /**
-             * The Availability Zone where the disk is located.
-             *
-             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-location.html#cfn-lightsail-disk-location-availabilityzone)
-             */
-            override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
-
-            /**
-             * The AWS Region where the disk is located.
-             *
-             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-location.html#cfn-lightsail-disk-location-regionname)
-             */
-            override fun regionName(): String? = unwrap(this).getRegionName()
-        }
-
-        public companion object {
-            init {}
-
-            public operator fun invoke(block: Builder.() -> Unit = {}): LocationProperty {
-                val builderImpl = BuilderImpl()
-                return Wrapper(builderImpl.apply(block).build())
-            }
-
-            internal fun wrap(
-                cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty
-            ): LocationProperty = Wrapper(cdkObject)
-
-            internal fun unwrap(
-                wrapped: LocationProperty
-            ): software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty =
-                (wrapped as Wrapper).cdkObject
-        }
+      internal fun unwrap(wrapped: AddOnProperty):
+          software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty
     }
+  }
+
+  public interface LocationProperty {
+    /**
+     * The Availability Zone where the disk is located.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-location.html#cfn-lightsail-disk-location-availabilityzone)
+     */
+    public fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+
+    /**
+     * The AWS Region where the disk is located.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-location.html#cfn-lightsail-disk-location-regionname)
+     */
+    public fun regionName(): String? = unwrap(this).getRegionName()
+
+    /**
+     * A builder for [LocationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param availabilityZone The Availability Zone where the disk is located.
+       */
+      public fun availabilityZone(availabilityZone: String)
+
+      /**
+       * @param regionName The AWS Region where the disk is located.
+       */
+      public fun regionName(regionName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty.Builder =
+          software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty.builder()
+
+      /**
+       * @param availabilityZone The Availability Zone where the disk is located.
+       */
+      override fun availabilityZone(availabilityZone: String) {
+        cdkBuilder.availabilityZone(availabilityZone)
+      }
+
+      /**
+       * @param regionName The AWS Region where the disk is located.
+       */
+      override fun regionName(regionName: String) {
+        cdkBuilder.regionName(regionName)
+      }
+
+      public fun build(): software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty,
+    ) : CdkObject(cdkObject), LocationProperty {
+      /**
+       * The Availability Zone where the disk is located.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-location.html#cfn-lightsail-disk-location-availabilityzone)
+       */
+      override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+
+      /**
+       * The AWS Region where the disk is located.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lightsail-disk-location.html#cfn-lightsail-disk-location-regionname)
+       */
+      override fun regionName(): String? = unwrap(this).getRegionName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LocationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty):
+          LocationProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LocationProperty):
+          software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty
+    }
+  }
 }

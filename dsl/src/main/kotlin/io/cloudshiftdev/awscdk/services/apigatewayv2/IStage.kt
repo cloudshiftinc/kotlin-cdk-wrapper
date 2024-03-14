@@ -1,5 +1,6 @@
 package io.cloudshiftdev.awscdk.services.apigatewayv2
 
+import io.cloudshiftdev.awscdk.CdkObject
 import io.cloudshiftdev.awscdk.IResource
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.ResourceEnvironment
@@ -13,138 +14,142 @@ import kotlin.Unit
 import kotlin.jvm.JvmName
 
 public interface IStage : IResource {
+  /**
+   * Return the given named metric for this HTTP Api Gateway Stage.
+   *
+   * Default: - average over 5 minutes
+   *
+   * @param metricName 
+   * @param props
+   */
+  public fun metric(metricName: String): Metric
+
+  /**
+   * Return the given named metric for this HTTP Api Gateway Stage.
+   *
+   * Default: - average over 5 minutes
+   *
+   * @param metricName 
+   * @param props
+   */
+  public fun metric(metricName: String, props: MetricOptions): Metric
+
+  /**
+   * Return the given named metric for this HTTP Api Gateway Stage.
+   *
+   * Default: - average over 5 minutes
+   *
+   * @param metricName 
+   * @param props
+   */
+  @Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("629ccc2b9ed0d0686ac72be3c432836a76a92f56ab45dae83dc2e318f17ba80c")
+  public fun metric(metricName: String, props: MetricOptions.Builder.() -> Unit): Metric
+
+  /**
+   * The name of the stage;
+   *
+   * its primary identifier.
+   */
+  public fun stageName(): String
+
+  /**
+   * The URL to this stage.
+   */
+  public fun url(): String
+
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.IStage,
+  ) : CdkObject(cdkObject), IStage {
     /**
-     * Return the given named metric for this HTTP Api Gateway Stage.
+     * Apply the given removal policy to this resource.
      *
-     * Default: - average over 5 minutes
+     * The Removal Policy controls what happens to this resource when it stops
+     * being managed by CloudFormation, either because you've removed it from the
+     * CDK application or because you've made a change that requires the resource
+     * to be replaced.
      *
-     * @param metricName
-     * @param props
+     * The resource can be deleted (`RemovalPolicy.DESTROY`), or left in your AWS
+     * account for data recovery and cleanup later (`RemovalPolicy.RETAIN`).
+     *
+     * @param policy 
      */
-    public fun metric(metricName: String): Metric
+    override fun applyRemovalPolicy(policy: RemovalPolicy) {
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+    }
+
+    /**
+     * The environment this resource belongs to.
+     *
+     * For resources that are created and managed by the CDK
+     * (generally, those created by creating new class instances like Role, Bucket, etc.),
+     * this is always the same as the environment of the stack they belong to;
+     * however, for imported resources
+     * (those obtained from static methods like fromRoleArn, fromBucketName, etc.),
+     * that might be different than the stack they were imported into.
+     */
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
     /**
      * Return the given named metric for this HTTP Api Gateway Stage.
      *
      * Default: - average over 5 minutes
      *
-     * @param metricName
+     * @param metricName 
      * @param props
      */
-    public fun metric(metricName: String, props: MetricOptions): Metric
+    override fun metric(metricName: String): Metric =
+        unwrap(this).metric(metricName).let(Metric::wrap)
 
     /**
      * Return the given named metric for this HTTP Api Gateway Stage.
      *
      * Default: - average over 5 minutes
      *
-     * @param metricName
+     * @param metricName 
+     * @param props
+     */
+    override fun metric(metricName: String, props: MetricOptions): Metric =
+        unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+
+    /**
+     * Return the given named metric for this HTTP Api Gateway Stage.
+     *
+     * Default: - average over 5 minutes
+     *
+     * @param metricName 
      * @param props
      */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("629ccc2b9ed0d0686ac72be3c432836a76a92f56ab45dae83dc2e318f17ba80c")
-    public fun metric(metricName: String, props: MetricOptions.Builder.() -> Unit): Metric
+    override fun metric(metricName: String, props: MetricOptions.Builder.() -> Unit): Metric =
+        metric(metricName, MetricOptions(props))
+
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+
+    /**
+     * The stack in which this resource is defined.
+     */
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
     /**
      * The name of the stage;
      *
      * its primary identifier.
      */
-    public fun stageName(): String
+    override fun stageName(): String = unwrap(this).getStageName()
 
-    /** The URL to this stage. */
-    public fun url(): String
+    /**
+     * The URL to this stage.
+     */
+    override fun url(): String = unwrap(this).getUrl()
+  }
 
-    private class Wrapper
-    internal constructor(
-        internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.IStage,
-    ) : IStage {
-        /**
-         * Apply the given removal policy to this resource.
-         *
-         * The Removal Policy controls what happens to this resource when it stops being managed by
-         * CloudFormation, either because you've removed it from the CDK application or because
-         * you've made a change that requires the resource to be replaced.
-         *
-         * The resource can be deleted (`RemovalPolicy.DESTROY`), or left in your AWS account for
-         * data recovery and cleanup later (`RemovalPolicy.RETAIN`).
-         *
-         * @param policy
-         */
-        override fun applyRemovalPolicy(policy: RemovalPolicy) {
-            unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
-        }
+  public companion object {
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.IStage): IStage =
+        Wrapper(cdkObject)
 
-        /**
-         * The environment this resource belongs to.
-         *
-         * For resources that are created and managed by the CDK (generally, those created by
-         * creating new class instances like Role, Bucket, etc.), this is always the same as the
-         * environment of the stack they belong to; however, for imported resources (those obtained
-         * from static methods like fromRoleArn, fromBucketName, etc.), that might be different than
-         * the stack they were imported into.
-         */
-        override fun env(): ResourceEnvironment =
-            unwrap(this).getEnv().let(ResourceEnvironment::wrap)
-
-        /**
-         * Return the given named metric for this HTTP Api Gateway Stage.
-         *
-         * Default: - average over 5 minutes
-         *
-         * @param metricName
-         * @param props
-         */
-        override fun metric(metricName: String): Metric =
-            unwrap(this).metric(metricName).let(Metric::wrap)
-
-        /**
-         * Return the given named metric for this HTTP Api Gateway Stage.
-         *
-         * Default: - average over 5 minutes
-         *
-         * @param metricName
-         * @param props
-         */
-        override fun metric(metricName: String, props: MetricOptions): Metric =
-            unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
-
-        /**
-         * Return the given named metric for this HTTP Api Gateway Stage.
-         *
-         * Default: - average over 5 minutes
-         *
-         * @param metricName
-         * @param props
-         */
-        @Suppress("INAPPLICABLE_JVM_NAME")
-        @JvmName("629ccc2b9ed0d0686ac72be3c432836a76a92f56ab45dae83dc2e318f17ba80c")
-        override fun metric(metricName: String, props: MetricOptions.Builder.() -> Unit): Metric =
-            metric(metricName, MetricOptions(props))
-
-        override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
-
-        /** The stack in which this resource is defined. */
-        override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
-
-        /**
-         * The name of the stage;
-         *
-         * its primary identifier.
-         */
-        override fun stageName(): String = unwrap(this).getStageName()
-
-        /** The URL to this stage. */
-        override fun url(): String = unwrap(this).getUrl()
-    }
-
-    public companion object {
-        init {}
-
-        internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.IStage): IStage =
-            Wrapper(cdkObject)
-
-        internal fun unwrap(wrapped: IStage): software.amazon.awscdk.services.apigatewayv2.IStage =
-            (wrapped as Wrapper).cdkObject
-    }
+    internal fun unwrap(wrapped: IStage): software.amazon.awscdk.services.apigatewayv2.IStage =
+        (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.apigatewayv2.IStage
+  }
 }

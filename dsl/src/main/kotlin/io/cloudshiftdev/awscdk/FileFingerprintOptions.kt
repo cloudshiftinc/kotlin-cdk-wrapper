@@ -6,132 +6,141 @@ import kotlin.Unit
 import kotlin.collections.List
 
 public interface FileFingerprintOptions : FileCopyOptions {
+  /**
+   * Extra information to encode into the fingerprint (e.g. build instructions and other inputs).
+   *
+   * Default: - hash is only based on source content
+   */
+  public fun extraHash(): String? = unwrap(this).getExtraHash()
+
+  /**
+   * A builder for [FileFingerprintOptions]
+   */
+  @CdkDslMarker
+  public interface Builder {
+    /**
+     * @param exclude File paths matching the patterns will be excluded.
+     * See `ignoreMode` to set the matching behavior.
+     * Has no effect on Assets bundled using the `bundling` property.
+     */
+    public fun exclude(exclude: List<String>)
+
+    /**
+     * @param exclude File paths matching the patterns will be excluded.
+     * See `ignoreMode` to set the matching behavior.
+     * Has no effect on Assets bundled using the `bundling` property.
+     */
+    public fun exclude(vararg exclude: String)
+
+    /**
+     * @param extraHash Extra information to encode into the fingerprint (e.g. build instructions
+     * and other inputs).
+     */
+    public fun extraHash(extraHash: String)
+
+    /**
+     * @param followSymlinks A strategy for how to handle symlinks.
+     */
+    public fun followSymlinks(followSymlinks: SymlinkFollowMode)
+
+    /**
+     * @param ignoreMode The ignore behavior to use for `exclude` patterns.
+     */
+    public fun ignoreMode(ignoreMode: IgnoreMode)
+  }
+
+  private class BuilderImpl : Builder {
+    private val cdkBuilder: software.amazon.awscdk.FileFingerprintOptions.Builder =
+        software.amazon.awscdk.FileFingerprintOptions.builder()
+
+    /**
+     * @param exclude File paths matching the patterns will be excluded.
+     * See `ignoreMode` to set the matching behavior.
+     * Has no effect on Assets bundled using the `bundling` property.
+     */
+    override fun exclude(exclude: List<String>) {
+      cdkBuilder.exclude(exclude)
+    }
+
+    /**
+     * @param exclude File paths matching the patterns will be excluded.
+     * See `ignoreMode` to set the matching behavior.
+     * Has no effect on Assets bundled using the `bundling` property.
+     */
+    override fun exclude(vararg exclude: String): Unit = exclude(exclude.toList())
+
+    /**
+     * @param extraHash Extra information to encode into the fingerprint (e.g. build instructions
+     * and other inputs).
+     */
+    override fun extraHash(extraHash: String) {
+      cdkBuilder.extraHash(extraHash)
+    }
+
+    /**
+     * @param followSymlinks A strategy for how to handle symlinks.
+     */
+    override fun followSymlinks(followSymlinks: SymlinkFollowMode) {
+      cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode::unwrap))
+    }
+
+    /**
+     * @param ignoreMode The ignore behavior to use for `exclude` patterns.
+     */
+    override fun ignoreMode(ignoreMode: IgnoreMode) {
+      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode::unwrap))
+    }
+
+    public fun build(): software.amazon.awscdk.FileFingerprintOptions = cdkBuilder.build()
+  }
+
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.FileFingerprintOptions,
+  ) : CdkObject(cdkObject), FileFingerprintOptions {
+    /**
+     * File paths matching the patterns will be excluded.
+     *
+     * See `ignoreMode` to set the matching behavior.
+     * Has no effect on Assets bundled using the `bundling` property.
+     *
+     * Default: - nothing is excluded
+     */
+    override fun exclude(): List<String> = unwrap(this).getExclude() ?: emptyList()
+
     /**
      * Extra information to encode into the fingerprint (e.g. build instructions and other inputs).
      *
      * Default: - hash is only based on source content
      */
-    public fun extraHash(): String? = unwrap(this).getExtraHash()
+    override fun extraHash(): String? = unwrap(this).getExtraHash()
 
-    /** A builder for [FileFingerprintOptions] */
-    @CdkDslMarker
-    public interface Builder {
-        /**
-         * @param exclude File paths matching the patterns will be excluded. See `ignoreMode` to set
-         *   the matching behavior. Has no effect on Assets bundled using the `bundling` property.
-         */
-        public fun exclude(exclude: List<String>)
+    /**
+     * A strategy for how to handle symlinks.
+     *
+     * Default: SymlinkFollowMode.NEVER
+     */
+    override fun followSymlinks(): SymlinkFollowMode? =
+        unwrap(this).getFollowSymlinks()?.let(SymlinkFollowMode::wrap)
 
-        /**
-         * @param exclude File paths matching the patterns will be excluded. See `ignoreMode` to set
-         *   the matching behavior. Has no effect on Assets bundled using the `bundling` property.
-         */
-        public fun exclude(vararg exclude: String)
+    /**
+     * The ignore behavior to use for `exclude` patterns.
+     *
+     * Default: IgnoreMode.GLOB
+     */
+    override fun ignoreMode(): IgnoreMode? = unwrap(this).getIgnoreMode()?.let(IgnoreMode::wrap)
+  }
 
-        /**
-         * @param extraHash Extra information to encode into the fingerprint (e.g. build
-         *   instructions and other inputs).
-         */
-        public fun extraHash(extraHash: String)
-
-        /** @param followSymlinks A strategy for how to handle symlinks. */
-        public fun followSymlinks(followSymlinks: SymlinkFollowMode)
-
-        /** @param ignoreMode The ignore behavior to use for `exclude` patterns. */
-        public fun ignoreMode(ignoreMode: IgnoreMode)
+  public companion object {
+    public operator fun invoke(block: Builder.() -> Unit = {}): FileFingerprintOptions {
+      val builderImpl = BuilderImpl()
+      return Wrapper(builderImpl.apply(block).build())
     }
 
-    private class BuilderImpl : Builder {
-        private val cdkBuilder: software.amazon.awscdk.FileFingerprintOptions.Builder =
-            software.amazon.awscdk.FileFingerprintOptions.builder()
+    internal fun wrap(cdkObject: software.amazon.awscdk.FileFingerprintOptions):
+        FileFingerprintOptions = Wrapper(cdkObject)
 
-        /**
-         * @param exclude File paths matching the patterns will be excluded. See `ignoreMode` to set
-         *   the matching behavior. Has no effect on Assets bundled using the `bundling` property.
-         */
-        override fun exclude(exclude: List<String>) {
-            cdkBuilder.exclude(exclude)
-        }
-
-        /**
-         * @param exclude File paths matching the patterns will be excluded. See `ignoreMode` to set
-         *   the matching behavior. Has no effect on Assets bundled using the `bundling` property.
-         */
-        override fun exclude(vararg exclude: String): Unit = exclude(exclude.toList())
-
-        /**
-         * @param extraHash Extra information to encode into the fingerprint (e.g. build
-         *   instructions and other inputs).
-         */
-        override fun extraHash(extraHash: String) {
-            cdkBuilder.extraHash(extraHash)
-        }
-
-        /** @param followSymlinks A strategy for how to handle symlinks. */
-        override fun followSymlinks(followSymlinks: SymlinkFollowMode) {
-            cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode::unwrap))
-        }
-
-        /** @param ignoreMode The ignore behavior to use for `exclude` patterns. */
-        override fun ignoreMode(ignoreMode: IgnoreMode) {
-            cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode::unwrap))
-        }
-
-        public fun build(): software.amazon.awscdk.FileFingerprintOptions = cdkBuilder.build()
-    }
-
-    private class Wrapper
-    internal constructor(
-        internal val cdkObject: software.amazon.awscdk.FileFingerprintOptions,
-    ) : FileFingerprintOptions {
-        /**
-         * File paths matching the patterns will be excluded.
-         *
-         * See `ignoreMode` to set the matching behavior. Has no effect on Assets bundled using the
-         * `bundling` property.
-         *
-         * Default: - nothing is excluded
-         */
-        override fun exclude(): List<String> = unwrap(this).getExclude() ?: emptyList()
-
-        /**
-         * Extra information to encode into the fingerprint (e.g. build instructions and other
-         * inputs).
-         *
-         * Default: - hash is only based on source content
-         */
-        override fun extraHash(): String? = unwrap(this).getExtraHash()
-
-        /**
-         * A strategy for how to handle symlinks.
-         *
-         * Default: SymlinkFollowMode.NEVER
-         */
-        override fun followSymlinks(): SymlinkFollowMode? =
-            unwrap(this).getFollowSymlinks()?.let(SymlinkFollowMode::wrap)
-
-        /**
-         * The ignore behavior to use for `exclude` patterns.
-         *
-         * Default: IgnoreMode.GLOB
-         */
-        override fun ignoreMode(): IgnoreMode? = unwrap(this).getIgnoreMode()?.let(IgnoreMode::wrap)
-    }
-
-    public companion object {
-        init {}
-
-        public operator fun invoke(block: Builder.() -> Unit = {}): FileFingerprintOptions {
-            val builderImpl = BuilderImpl()
-            return Wrapper(builderImpl.apply(block).build())
-        }
-
-        internal fun wrap(
-            cdkObject: software.amazon.awscdk.FileFingerprintOptions
-        ): FileFingerprintOptions = Wrapper(cdkObject)
-
-        internal fun unwrap(
-            wrapped: FileFingerprintOptions
-        ): software.amazon.awscdk.FileFingerprintOptions = (wrapped as Wrapper).cdkObject
-    }
+    internal fun unwrap(wrapped: FileFingerprintOptions):
+        software.amazon.awscdk.FileFingerprintOptions = (wrapped as CdkObject).cdkObject as
+        software.amazon.awscdk.FileFingerprintOptions
+  }
 }

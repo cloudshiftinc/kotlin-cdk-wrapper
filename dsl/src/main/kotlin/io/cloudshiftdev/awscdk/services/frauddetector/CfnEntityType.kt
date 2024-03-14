@@ -7,181 +7,191 @@ import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnEntityType
-internal constructor(
-    private val cdkObject: software.amazon.awscdk.services.frauddetector.CfnEntityType,
+public open class CfnEntityType internal constructor(
+  internal override val cdkObject: software.amazon.awscdk.services.frauddetector.CfnEntityType,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
-    /** The entity type ARN. */
-    public open fun attrArn(): String = unwrap(this).getAttrArn()
+  /**
+   * The entity type ARN.
+   */
+  public open fun attrArn(): String = unwrap(this).getAttrArn()
 
-    /** Timestamp of when entity type was created. */
-    public open fun attrCreatedTime(): String = unwrap(this).getAttrCreatedTime()
+  /**
+   * Timestamp of when entity type was created.
+   */
+  public open fun attrCreatedTime(): String = unwrap(this).getAttrCreatedTime()
 
-    /** Timestamp of when entity type was last updated. */
-    public open fun attrLastUpdatedTime(): String = unwrap(this).getAttrLastUpdatedTime()
+  /**
+   * Timestamp of when entity type was last updated.
+   */
+  public open fun attrLastUpdatedTime(): String = unwrap(this).getAttrLastUpdatedTime()
 
-    /** The entity type description. */
-    public open fun description(): String? = unwrap(this).getDescription()
+  /**
+   * The entity type description.
+   */
+  public open fun description(): String? = unwrap(this).getDescription()
 
-    /** The entity type description. */
-    public open fun description(`value`: String) {
-        unwrap(this).setDescription(`value`)
+  /**
+   * The entity type description.
+   */
+  public open fun description(`value`: String) {
+    unwrap(this).setDescription(`value`)
+  }
+
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
+  public override fun inspect(inspector: TreeInspector) {
+    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+  }
+
+  /**
+   * The entity type name.
+   */
+  public open fun name(): String = unwrap(this).getName()
+
+  /**
+   * The entity type name.
+   */
+  public open fun name(`value`: String) {
+    unwrap(this).setName(`value`)
+  }
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+
+  /**
+   * A key and value pair.
+   */
+  public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
+      emptyList()
+
+  /**
+   * A key and value pair.
+   */
+  public open fun tagsRaw(`value`: List<CfnTag>) {
+    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+  }
+
+  /**
+   * A key and value pair.
+   */
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.frauddetector.CfnEntityType].
+   */
+  @CdkDslMarker
+  public interface Builder {
+    /**
+     * The entity type description.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-entitytype.html#cfn-frauddetector-entitytype-description)
+     * @param description The entity type description. 
+     */
+    public fun description(description: String)
+
+    /**
+     * The entity type name.
+     *
+     * Pattern: `^[0-9a-z_-]+$`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-entitytype.html#cfn-frauddetector-entitytype-name)
+     * @param name The entity type name. 
+     */
+    public fun name(name: String)
+
+    /**
+     * A key and value pair.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-entitytype.html#cfn-frauddetector-entitytype-tags)
+     * @param tags A key and value pair. 
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * A key and value pair.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-entitytype.html#cfn-frauddetector-entitytype-tags)
+     * @param tags A key and value pair. 
+     */
+    public fun tags(vararg tags: CfnTag)
+  }
+
+  private class BuilderImpl(
+    scope: SoftwareConstructsConstruct,
+    id: String,
+  ) : Builder {
+    private val cdkBuilder: software.amazon.awscdk.services.frauddetector.CfnEntityType.Builder =
+        software.amazon.awscdk.services.frauddetector.CfnEntityType.Builder.create(scope, id)
+
+    /**
+     * The entity type description.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-entitytype.html#cfn-frauddetector-entitytype-description)
+     * @param description The entity type description. 
+     */
+    override fun description(description: String) {
+      cdkBuilder.description(description)
     }
 
     /**
-     * Examines the CloudFormation resource and discloses attributes.
+     * The entity type name.
      *
-     * @param inspector tree inspector to collect and process attributes.
+     * Pattern: `^[0-9a-z_-]+$`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-entitytype.html#cfn-frauddetector-entitytype-name)
+     * @param name The entity type name. 
      */
-    public override fun inspect(inspector: TreeInspector) {
-        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    override fun name(name: String) {
+      cdkBuilder.name(name)
     }
 
-    /** The entity type name. */
-    public open fun name(): String = unwrap(this).getName()
-
-    /** The entity type name. */
-    public open fun name(`value`: String) {
-        unwrap(this).setName(`value`)
+    /**
+     * A key and value pair.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-entitytype.html#cfn-frauddetector-entitytype-tags)
+     * @param tags A key and value pair. 
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    /** Tag Manager which manages the tags for this resource. */
-    public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+    /**
+     * A key and value pair.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-entitytype.html#cfn-frauddetector-entitytype-tags)
+     * @param tags A key and value pair. 
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
-    /** A key and value pair. */
-    public open fun tagsRaw(): List<CfnTag> =
-        unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?: emptyList()
+    public fun build(): software.amazon.awscdk.services.frauddetector.CfnEntityType =
+        cdkBuilder.build()
+  }
 
-    /** A key and value pair. */
-    public open fun tagsRaw(`value`: List<CfnTag>) {
-        unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+  public companion object {
+    public operator fun invoke(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      block: Builder.() -> Unit = {},
+    ): CfnEntityType {
+      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+      return CfnEntityType(builderImpl.apply(block).build())
     }
 
-    /** A key and value pair. */
-    public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnEntityType):
+        CfnEntityType = CfnEntityType(cdkObject)
 
-    /** A fluent builder for [io.cloudshiftdev.awscdk.services.frauddetector.CfnEntityType]. */
-    @CdkDslMarker
-    public interface Builder {
-        /**
-         * The entity type description.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-entitytype.html#cfn-frauddetector-entitytype-description)
-         *
-         * @param description The entity type description.
-         */
-        public fun description(description: String)
-
-        /**
-         * The entity type name.
-         *
-         * Pattern: `^[0-9a-z_-]+$`
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-entitytype.html#cfn-frauddetector-entitytype-name)
-         *
-         * @param name The entity type name.
-         */
-        public fun name(name: String)
-
-        /**
-         * A key and value pair.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-entitytype.html#cfn-frauddetector-entitytype-tags)
-         *
-         * @param tags A key and value pair.
-         */
-        public fun tags(tags: List<CfnTag>)
-
-        /**
-         * A key and value pair.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-entitytype.html#cfn-frauddetector-entitytype-tags)
-         *
-         * @param tags A key and value pair.
-         */
-        public fun tags(vararg tags: CfnTag)
-    }
-
-    private class BuilderImpl(
-        scope: SoftwareConstructsConstruct,
-        id: String,
-    ) : Builder {
-        private val cdkBuilder:
-            software.amazon.awscdk.services.frauddetector.CfnEntityType.Builder =
-            software.amazon.awscdk.services.frauddetector.CfnEntityType.Builder.create(scope, id)
-
-        /**
-         * The entity type description.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-entitytype.html#cfn-frauddetector-entitytype-description)
-         *
-         * @param description The entity type description.
-         */
-        override fun description(description: String) {
-            cdkBuilder.description(description)
-        }
-
-        /**
-         * The entity type name.
-         *
-         * Pattern: `^[0-9a-z_-]+$`
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-entitytype.html#cfn-frauddetector-entitytype-name)
-         *
-         * @param name The entity type name.
-         */
-        override fun name(name: String) {
-            cdkBuilder.name(name)
-        }
-
-        /**
-         * A key and value pair.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-entitytype.html#cfn-frauddetector-entitytype-tags)
-         *
-         * @param tags A key and value pair.
-         */
-        override fun tags(tags: List<CfnTag>) {
-            cdkBuilder.tags(tags.map(CfnTag::unwrap))
-        }
-
-        /**
-         * A key and value pair.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-frauddetector-entitytype.html#cfn-frauddetector-entitytype-tags)
-         *
-         * @param tags A key and value pair.
-         */
-        override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
-
-        public fun build(): software.amazon.awscdk.services.frauddetector.CfnEntityType =
-            cdkBuilder.build()
-    }
-
-    public companion object {
-        init {}
-
-        public operator fun invoke(
-            scope: CloudshiftdevConstructsConstruct,
-            id: String,
-            block: Builder.() -> Unit = {},
-        ): CfnEntityType {
-            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-            return CfnEntityType(builderImpl.apply(block).build())
-        }
-
-        internal fun wrap(
-            cdkObject: software.amazon.awscdk.services.frauddetector.CfnEntityType
-        ): CfnEntityType = CfnEntityType(cdkObject)
-
-        internal fun unwrap(
-            wrapped: CfnEntityType
-        ): software.amazon.awscdk.services.frauddetector.CfnEntityType = wrapped.cdkObject
-    }
+    internal fun unwrap(wrapped: CfnEntityType):
+        software.amazon.awscdk.services.frauddetector.CfnEntityType = wrapped.cdkObject
+  }
 }

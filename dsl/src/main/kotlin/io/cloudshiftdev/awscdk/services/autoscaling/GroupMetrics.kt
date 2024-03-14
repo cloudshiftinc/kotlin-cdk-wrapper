@@ -1,19 +1,18 @@
 package io.cloudshiftdev.awscdk.services.autoscaling
 
-public open class GroupMetrics
-internal constructor(
-    private val cdkObject: software.amazon.awscdk.services.autoscaling.GroupMetrics,
-) {
-    public companion object {
-        public fun all(): GroupMetrics =
-            software.amazon.awscdk.services.autoscaling.GroupMetrics.all().let(GroupMetrics::wrap)
+import io.cloudshiftdev.awscdk.CdkObject
 
-        internal fun wrap(
-            cdkObject: software.amazon.awscdk.services.autoscaling.GroupMetrics
-        ): GroupMetrics = GroupMetrics(cdkObject)
+public open class GroupMetrics internal constructor(
+  internal override val cdkObject: software.amazon.awscdk.services.autoscaling.GroupMetrics,
+) : CdkObject(cdkObject) {
+  public companion object {
+    public fun all(): GroupMetrics =
+        software.amazon.awscdk.services.autoscaling.GroupMetrics.all().let(GroupMetrics::wrap)
 
-        internal fun unwrap(
-            wrapped: GroupMetrics
-        ): software.amazon.awscdk.services.autoscaling.GroupMetrics = wrapped.cdkObject
-    }
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.GroupMetrics):
+        GroupMetrics = GroupMetrics(cdkObject)
+
+    internal fun unwrap(wrapped: GroupMetrics):
+        software.amazon.awscdk.services.autoscaling.GroupMetrics = wrapped.cdkObject
+  }
 }

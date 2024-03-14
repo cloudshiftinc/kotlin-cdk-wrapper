@@ -7,212 +7,227 @@ import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnTransitGatewayPeering
-internal constructor(
-    private val cdkObject: software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeering,
+public open class CfnTransitGatewayPeering internal constructor(
+  internal override val cdkObject:
+      software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeering,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
-    /** The ARN of the core network. */
-    public open fun attrCoreNetworkArn(): String = unwrap(this).getAttrCoreNetworkArn()
+  /**
+   * The ARN of the core network.
+   */
+  public open fun attrCoreNetworkArn(): String = unwrap(this).getAttrCoreNetworkArn()
 
-    /** The timestamp when the core network peering was created. */
-    public open fun attrCreatedAt(): String = unwrap(this).getAttrCreatedAt()
+  /**
+   * The timestamp when the core network peering was created.
+   */
+  public open fun attrCreatedAt(): String = unwrap(this).getAttrCreatedAt()
 
-    /** The edge location for the peer. */
-    public open fun attrEdgeLocation(): String = unwrap(this).getAttrEdgeLocation()
+  /**
+   * The edge location for the peer.
+   */
+  public open fun attrEdgeLocation(): String = unwrap(this).getAttrEdgeLocation()
 
-    /** The ID of the account owner. */
-    public open fun attrOwnerAccountId(): String = unwrap(this).getAttrOwnerAccountId()
+  /**
+   * The ID of the account owner.
+   */
+  public open fun attrOwnerAccountId(): String = unwrap(this).getAttrOwnerAccountId()
 
-    /** The ID of the peering. */
-    public open fun attrPeeringId(): String = unwrap(this).getAttrPeeringId()
+  /**
+   * The ID of the peering.
+   */
+  public open fun attrPeeringId(): String = unwrap(this).getAttrPeeringId()
 
+  /**
+   * The peering type.
+   *
+   * This will be `TRANSIT_GATEWAY` .
+   */
+  public open fun attrPeeringType(): String = unwrap(this).getAttrPeeringType()
+
+  /**
+   * The ARN of the resource peered to a core network.
+   */
+  public open fun attrResourceArn(): String = unwrap(this).getAttrResourceArn()
+
+  /**
+   * The current state of the peer.
+   *
+   * This can be `CREATING` | `FAILED` | `AVAILABLE` | `DELETING` .
+   */
+  public open fun attrState(): String = unwrap(this).getAttrState()
+
+  /**
+   * The ID of the peering attachment.
+   */
+  public open fun attrTransitGatewayPeeringAttachmentId(): String =
+      unwrap(this).getAttrTransitGatewayPeeringAttachmentId()
+
+  /**
+   * The ID of the core network.
+   */
+  public open fun coreNetworkId(): String = unwrap(this).getCoreNetworkId()
+
+  /**
+   * The ID of the core network.
+   */
+  public open fun coreNetworkId(`value`: String) {
+    unwrap(this).setCoreNetworkId(`value`)
+  }
+
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
+  public override fun inspect(inspector: TreeInspector) {
+    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+  }
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+
+  /**
+   * The list of key-value tags associated with the peering.
+   */
+  public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
+      emptyList()
+
+  /**
+   * The list of key-value tags associated with the peering.
+   */
+  public open fun tagsRaw(`value`: List<CfnTag>) {
+    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+  }
+
+  /**
+   * The list of key-value tags associated with the peering.
+   */
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
+  /**
+   * The ARN of the transit gateway.
+   */
+  public open fun transitGatewayArn(): String = unwrap(this).getTransitGatewayArn()
+
+  /**
+   * The ARN of the transit gateway.
+   */
+  public open fun transitGatewayArn(`value`: String) {
+    unwrap(this).setTransitGatewayArn(`value`)
+  }
+
+  /**
+   * A fluent builder for
+   * [io.cloudshiftdev.awscdk.services.networkmanager.CfnTransitGatewayPeering].
+   */
+  @CdkDslMarker
+  public interface Builder {
     /**
-     * The peering type.
+     * The ID of the core network.
      *
-     * This will be `TRANSIT_GATEWAY` .
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html#cfn-networkmanager-transitgatewaypeering-corenetworkid)
+     * @param coreNetworkId The ID of the core network. 
      */
-    public open fun attrPeeringType(): String = unwrap(this).getAttrPeeringType()
-
-    /** The ARN of the resource peered to a core network. */
-    public open fun attrResourceArn(): String = unwrap(this).getAttrResourceArn()
+    public fun coreNetworkId(coreNetworkId: String)
 
     /**
-     * The current state of the peer.
+     * The list of key-value tags associated with the peering.
      *
-     * This can be `CREATING` | `FAILED` | `AVAILABLE` | `DELETING` .
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html#cfn-networkmanager-transitgatewaypeering-tags)
+     * @param tags The list of key-value tags associated with the peering. 
      */
-    public open fun attrState(): String = unwrap(this).getAttrState()
-
-    /** The ID of the peering attachment. */
-    public open fun attrTransitGatewayPeeringAttachmentId(): String =
-        unwrap(this).getAttrTransitGatewayPeeringAttachmentId()
-
-    /** The ID of the core network. */
-    public open fun coreNetworkId(): String = unwrap(this).getCoreNetworkId()
-
-    /** The ID of the core network. */
-    public open fun coreNetworkId(`value`: String) {
-        unwrap(this).setCoreNetworkId(`value`)
-    }
+    public fun tags(tags: List<CfnTag>)
 
     /**
-     * Examines the CloudFormation resource and discloses attributes.
+     * The list of key-value tags associated with the peering.
      *
-     * @param inspector tree inspector to collect and process attributes.
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html#cfn-networkmanager-transitgatewaypeering-tags)
+     * @param tags The list of key-value tags associated with the peering. 
      */
-    public override fun inspect(inspector: TreeInspector) {
-        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-    }
+    public fun tags(vararg tags: CfnTag)
 
-    /** Tag Manager which manages the tags for this resource. */
-    public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+    /**
+     * The ARN of the transit gateway.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html#cfn-networkmanager-transitgatewaypeering-transitgatewayarn)
+     * @param transitGatewayArn The ARN of the transit gateway. 
+     */
+    public fun transitGatewayArn(transitGatewayArn: String)
+  }
 
-    /** The list of key-value tags associated with the peering. */
-    public open fun tagsRaw(): List<CfnTag> =
-        unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?: emptyList()
+  private class BuilderImpl(
+    scope: SoftwareConstructsConstruct,
+    id: String,
+  ) : Builder {
+    private val cdkBuilder:
+        software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeering.Builder =
+        software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeering.Builder.create(scope,
+        id)
 
-    /** The list of key-value tags associated with the peering. */
-    public open fun tagsRaw(`value`: List<CfnTag>) {
-        unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
-    }
-
-    /** The list of key-value tags associated with the peering. */
-    public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
-
-    /** The ARN of the transit gateway. */
-    public open fun transitGatewayArn(): String = unwrap(this).getTransitGatewayArn()
-
-    /** The ARN of the transit gateway. */
-    public open fun transitGatewayArn(`value`: String) {
-        unwrap(this).setTransitGatewayArn(`value`)
+    /**
+     * The ID of the core network.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html#cfn-networkmanager-transitgatewaypeering-corenetworkid)
+     * @param coreNetworkId The ID of the core network. 
+     */
+    override fun coreNetworkId(coreNetworkId: String) {
+      cdkBuilder.coreNetworkId(coreNetworkId)
     }
 
     /**
-     * A fluent builder for
-     * [io.cloudshiftdev.awscdk.services.networkmanager.CfnTransitGatewayPeering].
+     * The list of key-value tags associated with the peering.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html#cfn-networkmanager-transitgatewaypeering-tags)
+     * @param tags The list of key-value tags associated with the peering. 
      */
-    @CdkDslMarker
-    public interface Builder {
-        /**
-         * The ID of the core network.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html#cfn-networkmanager-transitgatewaypeering-corenetworkid)
-         *
-         * @param coreNetworkId The ID of the core network.
-         */
-        public fun coreNetworkId(coreNetworkId: String)
-
-        /**
-         * The list of key-value tags associated with the peering.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html#cfn-networkmanager-transitgatewaypeering-tags)
-         *
-         * @param tags The list of key-value tags associated with the peering.
-         */
-        public fun tags(tags: List<CfnTag>)
-
-        /**
-         * The list of key-value tags associated with the peering.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html#cfn-networkmanager-transitgatewaypeering-tags)
-         *
-         * @param tags The list of key-value tags associated with the peering.
-         */
-        public fun tags(vararg tags: CfnTag)
-
-        /**
-         * The ARN of the transit gateway.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html#cfn-networkmanager-transitgatewaypeering-transitgatewayarn)
-         *
-         * @param transitGatewayArn The ARN of the transit gateway.
-         */
-        public fun transitGatewayArn(transitGatewayArn: String)
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
-    private class BuilderImpl(
-        scope: SoftwareConstructsConstruct,
-        id: String,
-    ) : Builder {
-        private val cdkBuilder:
-            software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeering.Builder =
-            software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeering.Builder.create(
-                scope,
-                id
-            )
+    /**
+     * The list of key-value tags associated with the peering.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html#cfn-networkmanager-transitgatewaypeering-tags)
+     * @param tags The list of key-value tags associated with the peering. 
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
-        /**
-         * The ID of the core network.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html#cfn-networkmanager-transitgatewaypeering-corenetworkid)
-         *
-         * @param coreNetworkId The ID of the core network.
-         */
-        override fun coreNetworkId(coreNetworkId: String) {
-            cdkBuilder.coreNetworkId(coreNetworkId)
-        }
-
-        /**
-         * The list of key-value tags associated with the peering.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html#cfn-networkmanager-transitgatewaypeering-tags)
-         *
-         * @param tags The list of key-value tags associated with the peering.
-         */
-        override fun tags(tags: List<CfnTag>) {
-            cdkBuilder.tags(tags.map(CfnTag::unwrap))
-        }
-
-        /**
-         * The list of key-value tags associated with the peering.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html#cfn-networkmanager-transitgatewaypeering-tags)
-         *
-         * @param tags The list of key-value tags associated with the peering.
-         */
-        override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
-
-        /**
-         * The ARN of the transit gateway.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html#cfn-networkmanager-transitgatewaypeering-transitgatewayarn)
-         *
-         * @param transitGatewayArn The ARN of the transit gateway.
-         */
-        override fun transitGatewayArn(transitGatewayArn: String) {
-            cdkBuilder.transitGatewayArn(transitGatewayArn)
-        }
-
-        public fun build():
-            software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeering =
-            cdkBuilder.build()
+    /**
+     * The ARN of the transit gateway.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewaypeering.html#cfn-networkmanager-transitgatewaypeering-transitgatewayarn)
+     * @param transitGatewayArn The ARN of the transit gateway. 
+     */
+    override fun transitGatewayArn(transitGatewayArn: String) {
+      cdkBuilder.transitGatewayArn(transitGatewayArn)
     }
 
-    public companion object {
-        init {}
+    public fun build(): software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeering =
+        cdkBuilder.build()
+  }
 
-        public operator fun invoke(
-            scope: CloudshiftdevConstructsConstruct,
-            id: String,
-            block: Builder.() -> Unit = {},
-        ): CfnTransitGatewayPeering {
-            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-            return CfnTransitGatewayPeering(builderImpl.apply(block).build())
-        }
-
-        internal fun wrap(
-            cdkObject: software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeering
-        ): CfnTransitGatewayPeering = CfnTransitGatewayPeering(cdkObject)
-
-        internal fun unwrap(
-            wrapped: CfnTransitGatewayPeering
-        ): software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeering =
-            wrapped.cdkObject
+  public companion object {
+    public operator fun invoke(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      block: Builder.() -> Unit = {},
+    ): CfnTransitGatewayPeering {
+      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+      return CfnTransitGatewayPeering(builderImpl.apply(block).build())
     }
+
+    internal
+        fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeering):
+        CfnTransitGatewayPeering = CfnTransitGatewayPeering(cdkObject)
+
+    internal fun unwrap(wrapped: CfnTransitGatewayPeering):
+        software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeering = wrapped.cdkObject
+  }
 }

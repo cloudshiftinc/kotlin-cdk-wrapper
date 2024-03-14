@@ -1,5 +1,6 @@
 package io.cloudshiftdev.awscdk.services.ecs.patterns
 
+import io.cloudshiftdev.awscdk.CdkObject
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
@@ -9,19 +10,163 @@ import kotlin.Unit
 import kotlin.collections.List
 
 public interface ApplicationLoadBalancerProps {
+  /**
+   * The domain name for the service, e.g. "api.example.com.".
+   *
+   * Default: - No domain name.
+   */
+  public fun domainName(): String? = unwrap(this).getDomainName()
+
+  /**
+   * The Route53 hosted zone for the domain, e.g. "example.com.".
+   *
+   * Default: - No Route53 hosted domain zone.
+   */
+  public fun domainZone(): IHostedZone? = unwrap(this).getDomainZone()?.let(IHostedZone::wrap)
+
+  /**
+   * The load balancer idle timeout, in seconds.
+   *
+   * Can be between 1 and 4000 seconds.
+   *
+   * Default: - CloudFormation sets idle timeout to 60 seconds
+   */
+  public fun idleTimeout(): Duration? = unwrap(this).getIdleTimeout()?.let(Duration::wrap)
+
+  /**
+   * Listeners (at least one listener) attached to this load balancer.
+   */
+  public fun listeners(): List<ApplicationListenerProps>
+
+  /**
+   * Name of the load balancer.
+   */
+  public fun name(): String
+
+  /**
+   * Determines whether the Load Balancer will be internet-facing.
+   *
+   * Default: true
+   */
+  public fun publicLoadBalancer(): Boolean? = unwrap(this).getPublicLoadBalancer()
+
+  /**
+   * A builder for [ApplicationLoadBalancerProps]
+   */
+  @CdkDslMarker
+  public interface Builder {
+    /**
+     * @param domainName The domain name for the service, e.g. "api.example.com.".
+     */
+    public fun domainName(domainName: String)
+
+    /**
+     * @param domainZone The Route53 hosted zone for the domain, e.g. "example.com.".
+     */
+    public fun domainZone(domainZone: IHostedZone)
+
+    /**
+     * @param idleTimeout The load balancer idle timeout, in seconds.
+     * Can be between 1 and 4000 seconds.
+     */
+    public fun idleTimeout(idleTimeout: Duration)
+
+    /**
+     * @param listeners Listeners (at least one listener) attached to this load balancer. 
+     */
+    public fun listeners(listeners: List<ApplicationListenerProps>)
+
+    /**
+     * @param listeners Listeners (at least one listener) attached to this load balancer. 
+     */
+    public fun listeners(vararg listeners: ApplicationListenerProps)
+
+    /**
+     * @param name Name of the load balancer. 
+     */
+    public fun name(name: String)
+
+    /**
+     * @param publicLoadBalancer Determines whether the Load Balancer will be internet-facing.
+     */
+    public fun publicLoadBalancer(publicLoadBalancer: Boolean)
+  }
+
+  private class BuilderImpl : Builder {
+    private val cdkBuilder:
+        software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancerProps.Builder =
+        software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancerProps.builder()
+
+    /**
+     * @param domainName The domain name for the service, e.g. "api.example.com.".
+     */
+    override fun domainName(domainName: String) {
+      cdkBuilder.domainName(domainName)
+    }
+
+    /**
+     * @param domainZone The Route53 hosted zone for the domain, e.g. "example.com.".
+     */
+    override fun domainZone(domainZone: IHostedZone) {
+      cdkBuilder.domainZone(domainZone.let(IHostedZone::unwrap))
+    }
+
+    /**
+     * @param idleTimeout The load balancer idle timeout, in seconds.
+     * Can be between 1 and 4000 seconds.
+     */
+    override fun idleTimeout(idleTimeout: Duration) {
+      cdkBuilder.idleTimeout(idleTimeout.let(Duration::unwrap))
+    }
+
+    /**
+     * @param listeners Listeners (at least one listener) attached to this load balancer. 
+     */
+    override fun listeners(listeners: List<ApplicationListenerProps>) {
+      cdkBuilder.listeners(listeners.map(ApplicationListenerProps::unwrap))
+    }
+
+    /**
+     * @param listeners Listeners (at least one listener) attached to this load balancer. 
+     */
+    override fun listeners(vararg listeners: ApplicationListenerProps): Unit =
+        listeners(listeners.toList())
+
+    /**
+     * @param name Name of the load balancer. 
+     */
+    override fun name(name: String) {
+      cdkBuilder.name(name)
+    }
+
+    /**
+     * @param publicLoadBalancer Determines whether the Load Balancer will be internet-facing.
+     */
+    override fun publicLoadBalancer(publicLoadBalancer: Boolean) {
+      cdkBuilder.publicLoadBalancer(publicLoadBalancer)
+    }
+
+    public fun build(): software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancerProps =
+        cdkBuilder.build()
+  }
+
+  private class Wrapper(
+    override val cdkObject:
+        software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancerProps,
+  ) : CdkObject(cdkObject), ApplicationLoadBalancerProps {
     /**
      * The domain name for the service, e.g. "api.example.com.".
      *
      * Default: - No domain name.
      */
-    public fun domainName(): String? = unwrap(this).getDomainName()
+    override fun domainName(): String? = unwrap(this).getDomainName()
 
     /**
      * The Route53 hosted zone for the domain, e.g. "example.com.".
      *
      * Default: - No Route53 hosted domain zone.
      */
-    public fun domainZone(): IHostedZone? = unwrap(this).getDomainZone()?.let(IHostedZone::wrap)
+    override fun domainZone(): IHostedZone? = unwrap(this).getDomainZone()?.let(IHostedZone::wrap)
 
     /**
      * The load balancer idle timeout, in seconds.
@@ -30,159 +175,40 @@ public interface ApplicationLoadBalancerProps {
      *
      * Default: - CloudFormation sets idle timeout to 60 seconds
      */
-    public fun idleTimeout(): Duration? = unwrap(this).getIdleTimeout()?.let(Duration::wrap)
+    override fun idleTimeout(): Duration? = unwrap(this).getIdleTimeout()?.let(Duration::wrap)
 
-    /** Listeners (at least one listener) attached to this load balancer. */
-    public fun listeners(): List<ApplicationListenerProps>
+    /**
+     * Listeners (at least one listener) attached to this load balancer.
+     */
+    override fun listeners(): List<ApplicationListenerProps> =
+        unwrap(this).getListeners().map(ApplicationListenerProps::wrap)
 
-    /** Name of the load balancer. */
-    public fun name(): String
+    /**
+     * Name of the load balancer.
+     */
+    override fun name(): String = unwrap(this).getName()
 
     /**
      * Determines whether the Load Balancer will be internet-facing.
      *
      * Default: true
      */
-    public fun publicLoadBalancer(): Boolean? = unwrap(this).getPublicLoadBalancer()
+    override fun publicLoadBalancer(): Boolean? = unwrap(this).getPublicLoadBalancer()
+  }
 
-    /** A builder for [ApplicationLoadBalancerProps] */
-    @CdkDslMarker
-    public interface Builder {
-        /** @param domainName The domain name for the service, e.g. "api.example.com.". */
-        public fun domainName(domainName: String)
-
-        /** @param domainZone The Route53 hosted zone for the domain, e.g. "example.com.". */
-        public fun domainZone(domainZone: IHostedZone)
-
-        /**
-         * @param idleTimeout The load balancer idle timeout, in seconds. Can be between 1 and 4000
-         *   seconds.
-         */
-        public fun idleTimeout(idleTimeout: Duration)
-
-        /** @param listeners Listeners (at least one listener) attached to this load balancer. */
-        public fun listeners(listeners: List<ApplicationListenerProps>)
-
-        /** @param listeners Listeners (at least one listener) attached to this load balancer. */
-        public fun listeners(vararg listeners: ApplicationListenerProps)
-
-        /** @param name Name of the load balancer. */
-        public fun name(name: String)
-
-        /**
-         * @param publicLoadBalancer Determines whether the Load Balancer will be internet-facing.
-         */
-        public fun publicLoadBalancer(publicLoadBalancer: Boolean)
+  public companion object {
+    public operator fun invoke(block: Builder.() -> Unit = {}): ApplicationLoadBalancerProps {
+      val builderImpl = BuilderImpl()
+      return Wrapper(builderImpl.apply(block).build())
     }
 
-    private class BuilderImpl : Builder {
-        private val cdkBuilder:
-            software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancerProps.Builder =
-            software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancerProps.builder()
+    internal
+        fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancerProps):
+        ApplicationLoadBalancerProps = Wrapper(cdkObject)
 
-        /** @param domainName The domain name for the service, e.g. "api.example.com.". */
-        override fun domainName(domainName: String) {
-            cdkBuilder.domainName(domainName)
-        }
-
-        /** @param domainZone The Route53 hosted zone for the domain, e.g. "example.com.". */
-        override fun domainZone(domainZone: IHostedZone) {
-            cdkBuilder.domainZone(domainZone.let(IHostedZone::unwrap))
-        }
-
-        /**
-         * @param idleTimeout The load balancer idle timeout, in seconds. Can be between 1 and 4000
-         *   seconds.
-         */
-        override fun idleTimeout(idleTimeout: Duration) {
-            cdkBuilder.idleTimeout(idleTimeout.let(Duration::unwrap))
-        }
-
-        /** @param listeners Listeners (at least one listener) attached to this load balancer. */
-        override fun listeners(listeners: List<ApplicationListenerProps>) {
-            cdkBuilder.listeners(listeners.map(ApplicationListenerProps::unwrap))
-        }
-
-        /** @param listeners Listeners (at least one listener) attached to this load balancer. */
-        override fun listeners(vararg listeners: ApplicationListenerProps): Unit =
-            listeners(listeners.toList())
-
-        /** @param name Name of the load balancer. */
-        override fun name(name: String) {
-            cdkBuilder.name(name)
-        }
-
-        /**
-         * @param publicLoadBalancer Determines whether the Load Balancer will be internet-facing.
-         */
-        override fun publicLoadBalancer(publicLoadBalancer: Boolean) {
-            cdkBuilder.publicLoadBalancer(publicLoadBalancer)
-        }
-
-        public fun build():
-            software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancerProps =
-            cdkBuilder.build()
-    }
-
-    private class Wrapper
-    internal constructor(
-        internal val cdkObject:
-            software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancerProps,
-    ) : ApplicationLoadBalancerProps {
-        /**
-         * The domain name for the service, e.g. "api.example.com.".
-         *
-         * Default: - No domain name.
-         */
-        override fun domainName(): String? = unwrap(this).getDomainName()
-
-        /**
-         * The Route53 hosted zone for the domain, e.g. "example.com.".
-         *
-         * Default: - No Route53 hosted domain zone.
-         */
-        override fun domainZone(): IHostedZone? =
-            unwrap(this).getDomainZone()?.let(IHostedZone::wrap)
-
-        /**
-         * The load balancer idle timeout, in seconds.
-         *
-         * Can be between 1 and 4000 seconds.
-         *
-         * Default: - CloudFormation sets idle timeout to 60 seconds
-         */
-        override fun idleTimeout(): Duration? = unwrap(this).getIdleTimeout()?.let(Duration::wrap)
-
-        /** Listeners (at least one listener) attached to this load balancer. */
-        override fun listeners(): List<ApplicationListenerProps> =
-            unwrap(this).getListeners().map(ApplicationListenerProps::wrap)
-
-        /** Name of the load balancer. */
-        override fun name(): String = unwrap(this).getName()
-
-        /**
-         * Determines whether the Load Balancer will be internet-facing.
-         *
-         * Default: true
-         */
-        override fun publicLoadBalancer(): Boolean? = unwrap(this).getPublicLoadBalancer()
-    }
-
-    public companion object {
-        init {}
-
-        public operator fun invoke(block: Builder.() -> Unit = {}): ApplicationLoadBalancerProps {
-            val builderImpl = BuilderImpl()
-            return Wrapper(builderImpl.apply(block).build())
-        }
-
-        internal fun wrap(
-            cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancerProps
-        ): ApplicationLoadBalancerProps = Wrapper(cdkObject)
-
-        internal fun unwrap(
-            wrapped: ApplicationLoadBalancerProps
-        ): software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancerProps =
-            (wrapped as Wrapper).cdkObject
-    }
+    internal fun unwrap(wrapped: ApplicationLoadBalancerProps):
+        software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancerProps = (wrapped as
+        CdkObject).cdkObject as
+        software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancerProps
+  }
 }

@@ -1,5 +1,6 @@
 package io.cloudshiftdev.awscdk.services.apigatewayv2
 
+import io.cloudshiftdev.awscdk.CdkObject
 import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
@@ -7,7 +8,6 @@ import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Any
 import kotlin.String
 import kotlin.Suppress
@@ -15,642 +15,637 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.collections.Map
 import kotlin.jvm.JvmName
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnDomainName
-internal constructor(
-    private val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnDomainName,
+public open class CfnDomainName internal constructor(
+  internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnDomainName,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  /**
+   * The domain name associated with the regional endpoint for this custom domain name.
+   *
+   * You set up this association by adding a DNS record that points the custom domain name to this
+   * regional domain name.
+   */
+  public open fun attrRegionalDomainName(): String = unwrap(this).getAttrRegionalDomainName()
+
+  /**
+   * The region-specific Amazon Route 53 Hosted Zone ID of the regional endpoint.
+   */
+  public open fun attrRegionalHostedZoneId(): String = unwrap(this).getAttrRegionalHostedZoneId()
+
+  /**
+   * The custom domain name for your API in Amazon API Gateway.
+   */
+  public open fun domainName(): String = unwrap(this).getDomainName()
+
+  /**
+   * The custom domain name for your API in Amazon API Gateway.
+   */
+  public open fun domainName(`value`: String) {
+    unwrap(this).setDomainName(`value`)
+  }
+
+  /**
+   * The domain name configurations.
+   */
+  public open fun domainNameConfigurations(): Any? = unwrap(this).getDomainNameConfigurations()
+
+  /**
+   * The domain name configurations.
+   */
+  public open fun domainNameConfigurations(`value`: IResolvable) {
+    unwrap(this).setDomainNameConfigurations(`value`.let(IResolvable::unwrap))
+  }
+
+  /**
+   * The domain name configurations.
+   */
+  public open fun domainNameConfigurations(__idx_ac66f0: List<Any>) {
+    unwrap(this).setDomainNameConfigurations(__idx_ac66f0)
+  }
+
+  /**
+   * The domain name configurations.
+   */
+  public open fun domainNameConfigurations(vararg __idx_ac66f0: Any): Unit =
+      domainNameConfigurations(__idx_ac66f0.toList())
+
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
+  public override fun inspect(inspector: TreeInspector) {
+    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+  }
+
+  /**
+   * The mutual TLS authentication configuration for a custom domain name.
+   */
+  public open fun mutualTlsAuthentication(): Any? = unwrap(this).getMutualTlsAuthentication()
+
+  /**
+   * The mutual TLS authentication configuration for a custom domain name.
+   */
+  public open fun mutualTlsAuthentication(`value`: IResolvable) {
+    unwrap(this).setMutualTlsAuthentication(`value`.let(IResolvable::unwrap))
+  }
+
+  /**
+   * The mutual TLS authentication configuration for a custom domain name.
+   */
+  public open fun mutualTlsAuthentication(`value`: MutualTlsAuthenticationProperty) {
+    unwrap(this).setMutualTlsAuthentication(`value`.let(MutualTlsAuthenticationProperty::unwrap))
+  }
+
+  /**
+   * The mutual TLS authentication configuration for a custom domain name.
+   */
+  @Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("cb0d8d5ba3c842a7d34f6e2327f39e5e77bc744fdc701a2ce9260d922a5236db")
+  public open
+      fun mutualTlsAuthentication(`value`: MutualTlsAuthenticationProperty.Builder.() -> Unit): Unit
+      = mutualTlsAuthentication(MutualTlsAuthenticationProperty(`value`))
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+
+  /**
+   * The collection of tags associated with a domain name.
+   */
+  public open fun tagsRaw(): Map<String, String> = unwrap(this).getTagsRaw() ?: emptyMap()
+
+  /**
+   * The collection of tags associated with a domain name.
+   */
+  public open fun tagsRaw(`value`: Map<String, String>) {
+    unwrap(this).setTagsRaw(`value`)
+  }
+
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.apigatewayv2.CfnDomainName].
+   */
+  @CdkDslMarker
+  public interface Builder {
     /**
-     * The domain name associated with the regional endpoint for this custom domain name.
+     * The custom domain name for your API in Amazon API Gateway.
      *
-     * You set up this association by adding a DNS record that points the custom domain name to this
-     * regional domain name.
+     * Uppercase letters are not supported.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainname)
+     * @param domainName The custom domain name for your API in Amazon API Gateway. 
      */
-    public open fun attrRegionalDomainName(): String = unwrap(this).getAttrRegionalDomainName()
-
-    /** The region-specific Amazon Route 53 Hosted Zone ID of the regional endpoint. */
-    public open fun attrRegionalHostedZoneId(): String = unwrap(this).getAttrRegionalHostedZoneId()
-
-    /** The custom domain name for your API in Amazon API Gateway. */
-    public open fun domainName(): String = unwrap(this).getDomainName()
-
-    /** The custom domain name for your API in Amazon API Gateway. */
-    public open fun domainName(`value`: String) {
-        unwrap(this).setDomainName(`value`)
-    }
-
-    /** The domain name configurations. */
-    public open fun domainNameConfigurations(): Any? = unwrap(this).getDomainNameConfigurations()
-
-    /** The domain name configurations. */
-    public open fun domainNameConfigurations(`value`: IResolvable) {
-        unwrap(this).setDomainNameConfigurations(`value`.let(IResolvable::unwrap))
-    }
-
-    /** The domain name configurations. */
-    public open fun domainNameConfigurations(__idx_ac66f0: List<Any>) {
-        unwrap(this).setDomainNameConfigurations(__idx_ac66f0)
-    }
-
-    /** The domain name configurations. */
-    public open fun domainNameConfigurations(vararg __idx_ac66f0: Any): Unit =
-        domainNameConfigurations(__idx_ac66f0.toList())
+    public fun domainName(domainName: String)
 
     /**
-     * Examines the CloudFormation resource and discloses attributes.
+     * The domain name configurations.
      *
-     * @param inspector tree inspector to collect and process attributes.
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainnameconfigurations)
+     * @param domainNameConfigurations The domain name configurations. 
      */
-    public override fun inspect(inspector: TreeInspector) {
-        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-    }
+    public fun domainNameConfigurations(domainNameConfigurations: IResolvable)
 
-    /** The mutual TLS authentication configuration for a custom domain name. */
-    public open fun mutualTlsAuthentication(): Any? = unwrap(this).getMutualTlsAuthentication()
+    /**
+     * The domain name configurations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainnameconfigurations)
+     * @param domainNameConfigurations The domain name configurations. 
+     */
+    public fun domainNameConfigurations(domainNameConfigurations: List<Any>)
 
-    /** The mutual TLS authentication configuration for a custom domain name. */
-    public open fun mutualTlsAuthentication(`value`: IResolvable) {
-        unwrap(this).setMutualTlsAuthentication(`value`.let(IResolvable::unwrap))
-    }
+    /**
+     * The domain name configurations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainnameconfigurations)
+     * @param domainNameConfigurations The domain name configurations. 
+     */
+    public fun domainNameConfigurations(vararg domainNameConfigurations: Any)
 
-    /** The mutual TLS authentication configuration for a custom domain name. */
-    public open fun mutualTlsAuthentication(`value`: MutualTlsAuthenticationProperty) {
-        unwrap(this)
-            .setMutualTlsAuthentication(`value`.let(MutualTlsAuthenticationProperty::unwrap))
-    }
+    /**
+     * The mutual TLS authentication configuration for a custom domain name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-mutualtlsauthentication)
+     * @param mutualTlsAuthentication The mutual TLS authentication configuration for a custom
+     * domain name. 
+     */
+    public fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable)
 
-    /** The mutual TLS authentication configuration for a custom domain name. */
+    /**
+     * The mutual TLS authentication configuration for a custom domain name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-mutualtlsauthentication)
+     * @param mutualTlsAuthentication The mutual TLS authentication configuration for a custom
+     * domain name. 
+     */
+    public fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty)
+
+    /**
+     * The mutual TLS authentication configuration for a custom domain name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-mutualtlsauthentication)
+     * @param mutualTlsAuthentication The mutual TLS authentication configuration for a custom
+     * domain name. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("cb0d8d5ba3c842a7d34f6e2327f39e5e77bc744fdc701a2ce9260d922a5236db")
-    public open fun mutualTlsAuthentication(
-        `value`: MutualTlsAuthenticationProperty.Builder.() -> Unit
-    ): Unit = mutualTlsAuthentication(MutualTlsAuthenticationProperty(`value`))
+    @JvmName("54b3f93f1f07c6288dc8128a5b41417be3e6cd17c1990fb447a874e975ae6ac0")
+    public
+        fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty.Builder.() -> Unit)
 
-    /** Tag Manager which manages the tags for this resource. */
-    public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+    /**
+     * The collection of tags associated with a domain name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-tags)
+     * @param tags The collection of tags associated with a domain name. 
+     */
+    public fun tags(tags: Map<String, String>)
+  }
 
-    /** The collection of tags associated with a domain name. */
-    public open fun tagsRaw(): Map<String, String> = unwrap(this).getTagsRaw() ?: emptyMap()
+  private class BuilderImpl(
+    scope: SoftwareConstructsConstruct,
+    id: String,
+  ) : Builder {
+    private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.CfnDomainName.Builder =
+        software.amazon.awscdk.services.apigatewayv2.CfnDomainName.Builder.create(scope, id)
 
-    /** The collection of tags associated with a domain name. */
-    public open fun tagsRaw(`value`: Map<String, String>) {
-        unwrap(this).setTagsRaw(`value`)
+    /**
+     * The custom domain name for your API in Amazon API Gateway.
+     *
+     * Uppercase letters are not supported.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainname)
+     * @param domainName The custom domain name for your API in Amazon API Gateway. 
+     */
+    override fun domainName(domainName: String) {
+      cdkBuilder.domainName(domainName)
     }
 
-    /** A fluent builder for [io.cloudshiftdev.awscdk.services.apigatewayv2.CfnDomainName]. */
+    /**
+     * The domain name configurations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainnameconfigurations)
+     * @param domainNameConfigurations The domain name configurations. 
+     */
+    override fun domainNameConfigurations(domainNameConfigurations: IResolvable) {
+      cdkBuilder.domainNameConfigurations(domainNameConfigurations.let(IResolvable::unwrap))
+    }
+
+    /**
+     * The domain name configurations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainnameconfigurations)
+     * @param domainNameConfigurations The domain name configurations. 
+     */
+    override fun domainNameConfigurations(domainNameConfigurations: List<Any>) {
+      cdkBuilder.domainNameConfigurations(domainNameConfigurations)
+    }
+
+    /**
+     * The domain name configurations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainnameconfigurations)
+     * @param domainNameConfigurations The domain name configurations. 
+     */
+    override fun domainNameConfigurations(vararg domainNameConfigurations: Any): Unit =
+        domainNameConfigurations(domainNameConfigurations.toList())
+
+    /**
+     * The mutual TLS authentication configuration for a custom domain name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-mutualtlsauthentication)
+     * @param mutualTlsAuthentication The mutual TLS authentication configuration for a custom
+     * domain name. 
+     */
+    override fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable) {
+      cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(IResolvable::unwrap))
+    }
+
+    /**
+     * The mutual TLS authentication configuration for a custom domain name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-mutualtlsauthentication)
+     * @param mutualTlsAuthentication The mutual TLS authentication configuration for a custom
+     * domain name. 
+     */
+    override fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty) {
+      cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(MutualTlsAuthenticationProperty::unwrap))
+    }
+
+    /**
+     * The mutual TLS authentication configuration for a custom domain name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-mutualtlsauthentication)
+     * @param mutualTlsAuthentication The mutual TLS authentication configuration for a custom
+     * domain name. 
+     */
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("54b3f93f1f07c6288dc8128a5b41417be3e6cd17c1990fb447a874e975ae6ac0")
+    override
+        fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty.Builder.() -> Unit):
+        Unit = mutualTlsAuthentication(MutualTlsAuthenticationProperty(mutualTlsAuthentication))
+
+    /**
+     * The collection of tags associated with a domain name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-tags)
+     * @param tags The collection of tags associated with a domain name. 
+     */
+    override fun tags(tags: Map<String, String>) {
+      cdkBuilder.tags(tags)
+    }
+
+    public fun build(): software.amazon.awscdk.services.apigatewayv2.CfnDomainName =
+        cdkBuilder.build()
+  }
+
+  public companion object {
+    public operator fun invoke(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      block: Builder.() -> Unit = {},
+    ): CfnDomainName {
+      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+      return CfnDomainName(builderImpl.apply(block).build())
+    }
+
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnDomainName):
+        CfnDomainName = CfnDomainName(cdkObject)
+
+    internal fun unwrap(wrapped: CfnDomainName):
+        software.amazon.awscdk.services.apigatewayv2.CfnDomainName = wrapped.cdkObject
+  }
+
+  public interface DomainNameConfigurationProperty {
+    /**
+     * An AWS -managed certificate that will be used by the edge-optimized endpoint for this domain
+     * name.
+     *
+     * AWS Certificate Manager is the only supported source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatearn)
+     */
+    public fun certificateArn(): String? = unwrap(this).getCertificateArn()
+
+    /**
+     * The user-friendly name of the certificate that will be used by the edge-optimized endpoint
+     * for this domain name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatename)
+     */
+    public fun certificateName(): String? = unwrap(this).getCertificateName()
+
+    /**
+     * The endpoint type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-endpointtype)
+     */
+    public fun endpointType(): String? = unwrap(this).getEndpointType()
+
+    /**
+     * The Amazon resource name (ARN) for the public certificate issued by AWS Certificate Manager .
+     *
+     * This ARN is used to validate custom domain ownership. It's required only if you configure
+     * mutual TLS and use either an ACM-imported or a private CA certificate ARN as the
+     * regionalCertificateArn.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-ownershipverificationcertificatearn)
+     */
+    public fun ownershipVerificationCertificateArn(): String? =
+        unwrap(this).getOwnershipVerificationCertificateArn()
+
+    /**
+     * The Transport Layer Security (TLS) version of the security policy for this domain name.
+     *
+     * The valid values are `TLS_1_0` and `TLS_1_2` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-securitypolicy)
+     */
+    public fun securityPolicy(): String? = unwrap(this).getSecurityPolicy()
+
+    /**
+     * A builder for [DomainNameConfigurationProperty]
+     */
     @CdkDslMarker
     public interface Builder {
-        /**
-         * The custom domain name for your API in Amazon API Gateway.
-         *
-         * Uppercase letters are not supported.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainname)
-         *
-         * @param domainName The custom domain name for your API in Amazon API Gateway.
-         */
-        public fun domainName(domainName: String)
+      /**
+       * @param certificateArn An AWS -managed certificate that will be used by the edge-optimized
+       * endpoint for this domain name.
+       * AWS Certificate Manager is the only supported source.
+       */
+      public fun certificateArn(certificateArn: String)
 
-        /**
-         * The domain name configurations.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainnameconfigurations)
-         *
-         * @param domainNameConfigurations The domain name configurations.
-         */
-        public fun domainNameConfigurations(domainNameConfigurations: IResolvable)
+      /**
+       * @param certificateName The user-friendly name of the certificate that will be used by the
+       * edge-optimized endpoint for this domain name.
+       */
+      public fun certificateName(certificateName: String)
 
-        /**
-         * The domain name configurations.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainnameconfigurations)
-         *
-         * @param domainNameConfigurations The domain name configurations.
-         */
-        public fun domainNameConfigurations(domainNameConfigurations: List<Any>)
+      /**
+       * @param endpointType The endpoint type.
+       */
+      public fun endpointType(endpointType: String)
 
-        /**
-         * The domain name configurations.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainnameconfigurations)
-         *
-         * @param domainNameConfigurations The domain name configurations.
-         */
-        public fun domainNameConfigurations(vararg domainNameConfigurations: Any)
+      /**
+       * @param ownershipVerificationCertificateArn The Amazon resource name (ARN) for the public
+       * certificate issued by AWS Certificate Manager .
+       * This ARN is used to validate custom domain ownership. It's required only if you configure
+       * mutual TLS and use either an ACM-imported or a private CA certificate ARN as the
+       * regionalCertificateArn.
+       */
+      public fun ownershipVerificationCertificateArn(ownershipVerificationCertificateArn: String)
 
-        /**
-         * The mutual TLS authentication configuration for a custom domain name.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-mutualtlsauthentication)
-         *
-         * @param mutualTlsAuthentication The mutual TLS authentication configuration for a custom
-         *   domain name.
-         */
-        public fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable)
-
-        /**
-         * The mutual TLS authentication configuration for a custom domain name.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-mutualtlsauthentication)
-         *
-         * @param mutualTlsAuthentication The mutual TLS authentication configuration for a custom
-         *   domain name.
-         */
-        public fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty)
-
-        /**
-         * The mutual TLS authentication configuration for a custom domain name.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-mutualtlsauthentication)
-         *
-         * @param mutualTlsAuthentication The mutual TLS authentication configuration for a custom
-         *   domain name.
-         */
-        @Suppress("INAPPLICABLE_JVM_NAME")
-        @JvmName("54b3f93f1f07c6288dc8128a5b41417be3e6cd17c1990fb447a874e975ae6ac0")
-        public fun mutualTlsAuthentication(
-            mutualTlsAuthentication: MutualTlsAuthenticationProperty.Builder.() -> Unit
-        )
-
-        /**
-         * The collection of tags associated with a domain name.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-tags)
-         *
-         * @param tags The collection of tags associated with a domain name.
-         */
-        public fun tags(tags: Map<String, String>)
+      /**
+       * @param securityPolicy The Transport Layer Security (TLS) version of the security policy for
+       * this domain name.
+       * The valid values are `TLS_1_0` and `TLS_1_2` .
+       */
+      public fun securityPolicy(securityPolicy: String)
     }
 
-    private class BuilderImpl(
-        scope: SoftwareConstructsConstruct,
-        id: String,
-    ) : Builder {
-        private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.CfnDomainName.Builder =
-            software.amazon.awscdk.services.apigatewayv2.CfnDomainName.Builder.create(scope, id)
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apigatewayv2.CfnDomainName.DomainNameConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.apigatewayv2.CfnDomainName.DomainNameConfigurationProperty.builder()
 
-        /**
-         * The custom domain name for your API in Amazon API Gateway.
-         *
-         * Uppercase letters are not supported.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainname)
-         *
-         * @param domainName The custom domain name for your API in Amazon API Gateway.
-         */
-        override fun domainName(domainName: String) {
-            cdkBuilder.domainName(domainName)
-        }
+      /**
+       * @param certificateArn An AWS -managed certificate that will be used by the edge-optimized
+       * endpoint for this domain name.
+       * AWS Certificate Manager is the only supported source.
+       */
+      override fun certificateArn(certificateArn: String) {
+        cdkBuilder.certificateArn(certificateArn)
+      }
 
-        /**
-         * The domain name configurations.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainnameconfigurations)
-         *
-         * @param domainNameConfigurations The domain name configurations.
-         */
-        override fun domainNameConfigurations(domainNameConfigurations: IResolvable) {
-            cdkBuilder.domainNameConfigurations(domainNameConfigurations.let(IResolvable::unwrap))
-        }
+      /**
+       * @param certificateName The user-friendly name of the certificate that will be used by the
+       * edge-optimized endpoint for this domain name.
+       */
+      override fun certificateName(certificateName: String) {
+        cdkBuilder.certificateName(certificateName)
+      }
 
-        /**
-         * The domain name configurations.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainnameconfigurations)
-         *
-         * @param domainNameConfigurations The domain name configurations.
-         */
-        override fun domainNameConfigurations(domainNameConfigurations: List<Any>) {
-            cdkBuilder.domainNameConfigurations(domainNameConfigurations)
-        }
+      /**
+       * @param endpointType The endpoint type.
+       */
+      override fun endpointType(endpointType: String) {
+        cdkBuilder.endpointType(endpointType)
+      }
 
-        /**
-         * The domain name configurations.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainnameconfigurations)
-         *
-         * @param domainNameConfigurations The domain name configurations.
-         */
-        override fun domainNameConfigurations(vararg domainNameConfigurations: Any): Unit =
-            domainNameConfigurations(domainNameConfigurations.toList())
+      /**
+       * @param ownershipVerificationCertificateArn The Amazon resource name (ARN) for the public
+       * certificate issued by AWS Certificate Manager .
+       * This ARN is used to validate custom domain ownership. It's required only if you configure
+       * mutual TLS and use either an ACM-imported or a private CA certificate ARN as the
+       * regionalCertificateArn.
+       */
+      override
+          fun ownershipVerificationCertificateArn(ownershipVerificationCertificateArn: String) {
+        cdkBuilder.ownershipVerificationCertificateArn(ownershipVerificationCertificateArn)
+      }
 
-        /**
-         * The mutual TLS authentication configuration for a custom domain name.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-mutualtlsauthentication)
-         *
-         * @param mutualTlsAuthentication The mutual TLS authentication configuration for a custom
-         *   domain name.
-         */
-        override fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable) {
-            cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(IResolvable::unwrap))
-        }
+      /**
+       * @param securityPolicy The Transport Layer Security (TLS) version of the security policy for
+       * this domain name.
+       * The valid values are `TLS_1_0` and `TLS_1_2` .
+       */
+      override fun securityPolicy(securityPolicy: String) {
+        cdkBuilder.securityPolicy(securityPolicy)
+      }
 
-        /**
-         * The mutual TLS authentication configuration for a custom domain name.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-mutualtlsauthentication)
-         *
-         * @param mutualTlsAuthentication The mutual TLS authentication configuration for a custom
-         *   domain name.
-         */
-        override fun mutualTlsAuthentication(
-            mutualTlsAuthentication: MutualTlsAuthenticationProperty
-        ) {
-            cdkBuilder.mutualTlsAuthentication(
-                mutualTlsAuthentication.let(MutualTlsAuthenticationProperty::unwrap)
-            )
-        }
+      public fun build():
+          software.amazon.awscdk.services.apigatewayv2.CfnDomainName.DomainNameConfigurationProperty
+          = cdkBuilder.build()
+    }
 
-        /**
-         * The mutual TLS authentication configuration for a custom domain name.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-mutualtlsauthentication)
-         *
-         * @param mutualTlsAuthentication The mutual TLS authentication configuration for a custom
-         *   domain name.
-         */
-        @Suppress("INAPPLICABLE_JVM_NAME")
-        @JvmName("54b3f93f1f07c6288dc8128a5b41417be3e6cd17c1990fb447a874e975ae6ac0")
-        override fun mutualTlsAuthentication(
-            mutualTlsAuthentication: MutualTlsAuthenticationProperty.Builder.() -> Unit
-        ): Unit = mutualTlsAuthentication(MutualTlsAuthenticationProperty(mutualTlsAuthentication))
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.apigatewayv2.CfnDomainName.DomainNameConfigurationProperty,
+    ) : CdkObject(cdkObject), DomainNameConfigurationProperty {
+      /**
+       * An AWS -managed certificate that will be used by the edge-optimized endpoint for this
+       * domain name.
+       *
+       * AWS Certificate Manager is the only supported source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatearn)
+       */
+      override fun certificateArn(): String? = unwrap(this).getCertificateArn()
 
-        /**
-         * The collection of tags associated with a domain name.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-tags)
-         *
-         * @param tags The collection of tags associated with a domain name.
-         */
-        override fun tags(tags: Map<String, String>) {
-            cdkBuilder.tags(tags)
-        }
+      /**
+       * The user-friendly name of the certificate that will be used by the edge-optimized endpoint
+       * for this domain name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatename)
+       */
+      override fun certificateName(): String? = unwrap(this).getCertificateName()
 
-        public fun build(): software.amazon.awscdk.services.apigatewayv2.CfnDomainName =
-            cdkBuilder.build()
+      /**
+       * The endpoint type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-endpointtype)
+       */
+      override fun endpointType(): String? = unwrap(this).getEndpointType()
+
+      /**
+       * The Amazon resource name (ARN) for the public certificate issued by AWS Certificate Manager
+       * .
+       *
+       * This ARN is used to validate custom domain ownership. It's required only if you configure
+       * mutual TLS and use either an ACM-imported or a private CA certificate ARN as the
+       * regionalCertificateArn.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-ownershipverificationcertificatearn)
+       */
+      override fun ownershipVerificationCertificateArn(): String? =
+          unwrap(this).getOwnershipVerificationCertificateArn()
+
+      /**
+       * The Transport Layer Security (TLS) version of the security policy for this domain name.
+       *
+       * The valid values are `TLS_1_0` and `TLS_1_2` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-securitypolicy)
+       */
+      override fun securityPolicy(): String? = unwrap(this).getSecurityPolicy()
     }
 
     public companion object {
-        init {}
+      public operator fun invoke(block: Builder.() -> Unit = {}): DomainNameConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
 
-        public operator fun invoke(
-            scope: CloudshiftdevConstructsConstruct,
-            id: String,
-            block: Builder.() -> Unit = {},
-        ): CfnDomainName {
-            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-            return CfnDomainName(builderImpl.apply(block).build())
-        }
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnDomainName.DomainNameConfigurationProperty):
+          DomainNameConfigurationProperty = Wrapper(cdkObject)
 
-        internal fun wrap(
-            cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnDomainName
-        ): CfnDomainName = CfnDomainName(cdkObject)
+      internal fun unwrap(wrapped: DomainNameConfigurationProperty):
+          software.amazon.awscdk.services.apigatewayv2.CfnDomainName.DomainNameConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apigatewayv2.CfnDomainName.DomainNameConfigurationProperty
+    }
+  }
 
-        internal fun unwrap(
-            wrapped: CfnDomainName
-        ): software.amazon.awscdk.services.apigatewayv2.CfnDomainName = wrapped.cdkObject
+  public interface MutualTlsAuthenticationProperty {
+    /**
+     * An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example,
+     * `s3:// bucket-name / key-name` .
+     *
+     * The truststore can contain certificates from public or private certificate authorities. To
+     * update the truststore, upload a new version to S3, and then update your custom domain name to
+     * use the new version. To update the truststore, you must have permissions to access the S3
+     * object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-mutualtlsauthentication.html#cfn-apigatewayv2-domainname-mutualtlsauthentication-truststoreuri)
+     */
+    public fun truststoreUri(): String? = unwrap(this).getTruststoreUri()
+
+    /**
+     * The version of the S3 object that contains your truststore.
+     *
+     * To specify a version, you must have versioning enabled for the S3 bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-mutualtlsauthentication.html#cfn-apigatewayv2-domainname-mutualtlsauthentication-truststoreversion)
+     */
+    public fun truststoreVersion(): String? = unwrap(this).getTruststoreVersion()
+
+    /**
+     * A builder for [MutualTlsAuthenticationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param truststoreUri An Amazon S3 URL that specifies the truststore for mutual TLS
+       * authentication, for example, `s3:// bucket-name / key-name` .
+       * The truststore can contain certificates from public or private certificate authorities. To
+       * update the truststore, upload a new version to S3, and then update your custom domain name to
+       * use the new version. To update the truststore, you must have permissions to access the S3
+       * object.
+       */
+      public fun truststoreUri(truststoreUri: String)
+
+      /**
+       * @param truststoreVersion The version of the S3 object that contains your truststore.
+       * To specify a version, you must have versioning enabled for the S3 bucket.
+       */
+      public fun truststoreVersion(truststoreVersion: String)
     }
 
-    public interface DomainNameConfigurationProperty {
-        /**
-         * An AWS -managed certificate that will be used by the edge-optimized endpoint for this
-         * domain name.
-         *
-         * AWS Certificate Manager is the only supported source.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatearn)
-         */
-        public fun certificateArn(): String? = unwrap(this).getCertificateArn()
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.apigatewayv2.CfnDomainName.MutualTlsAuthenticationProperty.Builder
+          =
+          software.amazon.awscdk.services.apigatewayv2.CfnDomainName.MutualTlsAuthenticationProperty.builder()
 
-        /**
-         * The user-friendly name of the certificate that will be used by the edge-optimized
-         * endpoint for this domain name.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatename)
-         */
-        public fun certificateName(): String? = unwrap(this).getCertificateName()
+      /**
+       * @param truststoreUri An Amazon S3 URL that specifies the truststore for mutual TLS
+       * authentication, for example, `s3:// bucket-name / key-name` .
+       * The truststore can contain certificates from public or private certificate authorities. To
+       * update the truststore, upload a new version to S3, and then update your custom domain name to
+       * use the new version. To update the truststore, you must have permissions to access the S3
+       * object.
+       */
+      override fun truststoreUri(truststoreUri: String) {
+        cdkBuilder.truststoreUri(truststoreUri)
+      }
 
-        /**
-         * The endpoint type.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-endpointtype)
-         */
-        public fun endpointType(): String? = unwrap(this).getEndpointType()
+      /**
+       * @param truststoreVersion The version of the S3 object that contains your truststore.
+       * To specify a version, you must have versioning enabled for the S3 bucket.
+       */
+      override fun truststoreVersion(truststoreVersion: String) {
+        cdkBuilder.truststoreVersion(truststoreVersion)
+      }
 
-        /**
-         * The Amazon resource name (ARN) for the public certificate issued by AWS Certificate
-         * Manager .
-         *
-         * This ARN is used to validate custom domain ownership. It's required only if you configure
-         * mutual TLS and use either an ACM-imported or a private CA certificate ARN as the
-         * regionalCertificateArn.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-ownershipverificationcertificatearn)
-         */
-        public fun ownershipVerificationCertificateArn(): String? =
-            unwrap(this).getOwnershipVerificationCertificateArn()
-
-        /**
-         * The Transport Layer Security (TLS) version of the security policy for this domain name.
-         *
-         * The valid values are `TLS_1_0` and `TLS_1_2` .
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-securitypolicy)
-         */
-        public fun securityPolicy(): String? = unwrap(this).getSecurityPolicy()
-
-        /** A builder for [DomainNameConfigurationProperty] */
-        @CdkDslMarker
-        public interface Builder {
-            /**
-             * @param certificateArn An AWS -managed certificate that will be used by the
-             *   edge-optimized endpoint for this domain name. AWS Certificate Manager is the only
-             *   supported source.
-             */
-            public fun certificateArn(certificateArn: String)
-
-            /**
-             * @param certificateName The user-friendly name of the certificate that will be used by
-             *   the edge-optimized endpoint for this domain name.
-             */
-            public fun certificateName(certificateName: String)
-
-            /** @param endpointType The endpoint type. */
-            public fun endpointType(endpointType: String)
-
-            /**
-             * @param ownershipVerificationCertificateArn The Amazon resource name (ARN) for the
-             *   public certificate issued by AWS Certificate Manager . This ARN is used to validate
-             *   custom domain ownership. It's required only if you configure mutual TLS and use
-             *   either an ACM-imported or a private CA certificate ARN as the
-             *   regionalCertificateArn.
-             */
-            public fun ownershipVerificationCertificateArn(
-                ownershipVerificationCertificateArn: String
-            )
-
-            /**
-             * @param securityPolicy The Transport Layer Security (TLS) version of the security
-             *   policy for this domain name. The valid values are `TLS_1_0` and `TLS_1_2` .
-             */
-            public fun securityPolicy(securityPolicy: String)
-        }
-
-        private class BuilderImpl : Builder {
-            private val cdkBuilder:
-                software.amazon.awscdk.services.apigatewayv2.CfnDomainName.DomainNameConfigurationProperty.Builder =
-                software.amazon.awscdk.services.apigatewayv2.CfnDomainName
-                    .DomainNameConfigurationProperty
-                    .builder()
-
-            /**
-             * @param certificateArn An AWS -managed certificate that will be used by the
-             *   edge-optimized endpoint for this domain name. AWS Certificate Manager is the only
-             *   supported source.
-             */
-            override fun certificateArn(certificateArn: String) {
-                cdkBuilder.certificateArn(certificateArn)
-            }
-
-            /**
-             * @param certificateName The user-friendly name of the certificate that will be used by
-             *   the edge-optimized endpoint for this domain name.
-             */
-            override fun certificateName(certificateName: String) {
-                cdkBuilder.certificateName(certificateName)
-            }
-
-            /** @param endpointType The endpoint type. */
-            override fun endpointType(endpointType: String) {
-                cdkBuilder.endpointType(endpointType)
-            }
-
-            /**
-             * @param ownershipVerificationCertificateArn The Amazon resource name (ARN) for the
-             *   public certificate issued by AWS Certificate Manager . This ARN is used to validate
-             *   custom domain ownership. It's required only if you configure mutual TLS and use
-             *   either an ACM-imported or a private CA certificate ARN as the
-             *   regionalCertificateArn.
-             */
-            override fun ownershipVerificationCertificateArn(
-                ownershipVerificationCertificateArn: String
-            ) {
-                cdkBuilder.ownershipVerificationCertificateArn(ownershipVerificationCertificateArn)
-            }
-
-            /**
-             * @param securityPolicy The Transport Layer Security (TLS) version of the security
-             *   policy for this domain name. The valid values are `TLS_1_0` and `TLS_1_2` .
-             */
-            override fun securityPolicy(securityPolicy: String) {
-                cdkBuilder.securityPolicy(securityPolicy)
-            }
-
-            public fun build():
-                software.amazon.awscdk.services.apigatewayv2.CfnDomainName.DomainNameConfigurationProperty =
-                cdkBuilder.build()
-        }
-
-        private class Wrapper
-        internal constructor(
-            internal val cdkObject:
-                software.amazon.awscdk.services.apigatewayv2.CfnDomainName.DomainNameConfigurationProperty,
-        ) : DomainNameConfigurationProperty {
-            /**
-             * An AWS -managed certificate that will be used by the edge-optimized endpoint for this
-             * domain name.
-             *
-             * AWS Certificate Manager is the only supported source.
-             *
-             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatearn)
-             */
-            override fun certificateArn(): String? = unwrap(this).getCertificateArn()
-
-            /**
-             * The user-friendly name of the certificate that will be used by the edge-optimized
-             * endpoint for this domain name.
-             *
-             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-certificatename)
-             */
-            override fun certificateName(): String? = unwrap(this).getCertificateName()
-
-            /**
-             * The endpoint type.
-             *
-             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-endpointtype)
-             */
-            override fun endpointType(): String? = unwrap(this).getEndpointType()
-
-            /**
-             * The Amazon resource name (ARN) for the public certificate issued by AWS Certificate
-             * Manager .
-             *
-             * This ARN is used to validate custom domain ownership. It's required only if you
-             * configure mutual TLS and use either an ACM-imported or a private CA certificate ARN
-             * as the regionalCertificateArn.
-             *
-             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-ownershipverificationcertificatearn)
-             */
-            override fun ownershipVerificationCertificateArn(): String? =
-                unwrap(this).getOwnershipVerificationCertificateArn()
-
-            /**
-             * The Transport Layer Security (TLS) version of the security policy for this domain
-             * name.
-             *
-             * The valid values are `TLS_1_0` and `TLS_1_2` .
-             *
-             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-domainnameconfiguration.html#cfn-apigatewayv2-domainname-domainnameconfiguration-securitypolicy)
-             */
-            override fun securityPolicy(): String? = unwrap(this).getSecurityPolicy()
-        }
-
-        public companion object {
-            init {}
-
-            public operator fun invoke(
-                block: Builder.() -> Unit = {}
-            ): DomainNameConfigurationProperty {
-                val builderImpl = BuilderImpl()
-                return Wrapper(builderImpl.apply(block).build())
-            }
-
-            internal fun wrap(
-                cdkObject:
-                    software.amazon.awscdk.services.apigatewayv2.CfnDomainName.DomainNameConfigurationProperty
-            ): DomainNameConfigurationProperty = Wrapper(cdkObject)
-
-            internal fun unwrap(
-                wrapped: DomainNameConfigurationProperty
-            ): software.amazon.awscdk.services.apigatewayv2.CfnDomainName.DomainNameConfigurationProperty =
-                (wrapped as Wrapper).cdkObject
-        }
+      public fun build():
+          software.amazon.awscdk.services.apigatewayv2.CfnDomainName.MutualTlsAuthenticationProperty
+          = cdkBuilder.build()
     }
 
-    public interface MutualTlsAuthenticationProperty {
-        /**
-         * An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for
-         * example, `s3:// bucket-name / key-name` .
-         *
-         * The truststore can contain certificates from public or private certificate authorities.
-         * To update the truststore, upload a new version to S3, and then update your custom domain
-         * name to use the new version. To update the truststore, you must have permissions to
-         * access the S3 object.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-mutualtlsauthentication.html#cfn-apigatewayv2-domainname-mutualtlsauthentication-truststoreuri)
-         */
-        public fun truststoreUri(): String? = unwrap(this).getTruststoreUri()
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.apigatewayv2.CfnDomainName.MutualTlsAuthenticationProperty,
+    ) : CdkObject(cdkObject), MutualTlsAuthenticationProperty {
+      /**
+       * An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example,
+       * `s3:// bucket-name / key-name` .
+       *
+       * The truststore can contain certificates from public or private certificate authorities. To
+       * update the truststore, upload a new version to S3, and then update your custom domain name to
+       * use the new version. To update the truststore, you must have permissions to access the S3
+       * object.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-mutualtlsauthentication.html#cfn-apigatewayv2-domainname-mutualtlsauthentication-truststoreuri)
+       */
+      override fun truststoreUri(): String? = unwrap(this).getTruststoreUri()
 
-        /**
-         * The version of the S3 object that contains your truststore.
-         *
-         * To specify a version, you must have versioning enabled for the S3 bucket.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-mutualtlsauthentication.html#cfn-apigatewayv2-domainname-mutualtlsauthentication-truststoreversion)
-         */
-        public fun truststoreVersion(): String? = unwrap(this).getTruststoreVersion()
-
-        /** A builder for [MutualTlsAuthenticationProperty] */
-        @CdkDslMarker
-        public interface Builder {
-            /**
-             * @param truststoreUri An Amazon S3 URL that specifies the truststore for mutual TLS
-             *   authentication, for example, `s3:// bucket-name / key-name` . The truststore can
-             *   contain certificates from public or private certificate authorities. To update the
-             *   truststore, upload a new version to S3, and then update your custom domain name to
-             *   use the new version. To update the truststore, you must have permissions to access
-             *   the S3 object.
-             */
-            public fun truststoreUri(truststoreUri: String)
-
-            /**
-             * @param truststoreVersion The version of the S3 object that contains your truststore.
-             *   To specify a version, you must have versioning enabled for the S3 bucket.
-             */
-            public fun truststoreVersion(truststoreVersion: String)
-        }
-
-        private class BuilderImpl : Builder {
-            private val cdkBuilder:
-                software.amazon.awscdk.services.apigatewayv2.CfnDomainName.MutualTlsAuthenticationProperty.Builder =
-                software.amazon.awscdk.services.apigatewayv2.CfnDomainName
-                    .MutualTlsAuthenticationProperty
-                    .builder()
-
-            /**
-             * @param truststoreUri An Amazon S3 URL that specifies the truststore for mutual TLS
-             *   authentication, for example, `s3:// bucket-name / key-name` . The truststore can
-             *   contain certificates from public or private certificate authorities. To update the
-             *   truststore, upload a new version to S3, and then update your custom domain name to
-             *   use the new version. To update the truststore, you must have permissions to access
-             *   the S3 object.
-             */
-            override fun truststoreUri(truststoreUri: String) {
-                cdkBuilder.truststoreUri(truststoreUri)
-            }
-
-            /**
-             * @param truststoreVersion The version of the S3 object that contains your truststore.
-             *   To specify a version, you must have versioning enabled for the S3 bucket.
-             */
-            override fun truststoreVersion(truststoreVersion: String) {
-                cdkBuilder.truststoreVersion(truststoreVersion)
-            }
-
-            public fun build():
-                software.amazon.awscdk.services.apigatewayv2.CfnDomainName.MutualTlsAuthenticationProperty =
-                cdkBuilder.build()
-        }
-
-        private class Wrapper
-        internal constructor(
-            internal val cdkObject:
-                software.amazon.awscdk.services.apigatewayv2.CfnDomainName.MutualTlsAuthenticationProperty,
-        ) : MutualTlsAuthenticationProperty {
-            /**
-             * An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for
-             * example, `s3:// bucket-name / key-name` .
-             *
-             * The truststore can contain certificates from public or private certificate
-             * authorities. To update the truststore, upload a new version to S3, and then update
-             * your custom domain name to use the new version. To update the truststore, you must
-             * have permissions to access the S3 object.
-             *
-             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-mutualtlsauthentication.html#cfn-apigatewayv2-domainname-mutualtlsauthentication-truststoreuri)
-             */
-            override fun truststoreUri(): String? = unwrap(this).getTruststoreUri()
-
-            /**
-             * The version of the S3 object that contains your truststore.
-             *
-             * To specify a version, you must have versioning enabled for the S3 bucket.
-             *
-             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-mutualtlsauthentication.html#cfn-apigatewayv2-domainname-mutualtlsauthentication-truststoreversion)
-             */
-            override fun truststoreVersion(): String? = unwrap(this).getTruststoreVersion()
-        }
-
-        public companion object {
-            init {}
-
-            public operator fun invoke(
-                block: Builder.() -> Unit = {}
-            ): MutualTlsAuthenticationProperty {
-                val builderImpl = BuilderImpl()
-                return Wrapper(builderImpl.apply(block).build())
-            }
-
-            internal fun wrap(
-                cdkObject:
-                    software.amazon.awscdk.services.apigatewayv2.CfnDomainName.MutualTlsAuthenticationProperty
-            ): MutualTlsAuthenticationProperty = Wrapper(cdkObject)
-
-            internal fun unwrap(
-                wrapped: MutualTlsAuthenticationProperty
-            ): software.amazon.awscdk.services.apigatewayv2.CfnDomainName.MutualTlsAuthenticationProperty =
-                (wrapped as Wrapper).cdkObject
-        }
+      /**
+       * The version of the S3 object that contains your truststore.
+       *
+       * To specify a version, you must have versioning enabled for the S3 bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-domainname-mutualtlsauthentication.html#cfn-apigatewayv2-domainname-mutualtlsauthentication-truststoreversion)
+       */
+      override fun truststoreVersion(): String? = unwrap(this).getTruststoreVersion()
     }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MutualTlsAuthenticationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnDomainName.MutualTlsAuthenticationProperty):
+          MutualTlsAuthenticationProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MutualTlsAuthenticationProperty):
+          software.amazon.awscdk.services.apigatewayv2.CfnDomainName.MutualTlsAuthenticationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.apigatewayv2.CfnDomainName.MutualTlsAuthenticationProperty
+    }
+  }
 }

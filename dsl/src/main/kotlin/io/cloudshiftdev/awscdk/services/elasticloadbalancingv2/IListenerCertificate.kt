@@ -1,30 +1,32 @@
 package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
+import io.cloudshiftdev.awscdk.CdkObject
 import kotlin.String
 
 public interface IListenerCertificate {
-    /** The ARN of the certificate to use. */
-    public fun certificateArn(): String
+  /**
+   * The ARN of the certificate to use.
+   */
+  public fun certificateArn(): String
 
-    private class Wrapper
-    internal constructor(
-        internal val cdkObject:
-            software.amazon.awscdk.services.elasticloadbalancingv2.IListenerCertificate,
-    ) : IListenerCertificate {
-        /** The ARN of the certificate to use. */
-        override fun certificateArn(): String = unwrap(this).getCertificateArn()
-    }
+  private class Wrapper(
+    override val cdkObject:
+        software.amazon.awscdk.services.elasticloadbalancingv2.IListenerCertificate,
+  ) : CdkObject(cdkObject), IListenerCertificate {
+    /**
+     * The ARN of the certificate to use.
+     */
+    override fun certificateArn(): String = unwrap(this).getCertificateArn()
+  }
 
-    public companion object {
-        init {}
+  public companion object {
+    internal
+        fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IListenerCertificate):
+        IListenerCertificate = Wrapper(cdkObject)
 
-        internal fun wrap(
-            cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IListenerCertificate
-        ): IListenerCertificate = Wrapper(cdkObject)
-
-        internal fun unwrap(
-            wrapped: IListenerCertificate
-        ): software.amazon.awscdk.services.elasticloadbalancingv2.IListenerCertificate =
-            (wrapped as Wrapper).cdkObject
-    }
+    internal fun unwrap(wrapped: IListenerCertificate):
+        software.amazon.awscdk.services.elasticloadbalancingv2.IListenerCertificate = (wrapped as
+        CdkObject).cdkObject as
+        software.amazon.awscdk.services.elasticloadbalancingv2.IListenerCertificate
+  }
 }

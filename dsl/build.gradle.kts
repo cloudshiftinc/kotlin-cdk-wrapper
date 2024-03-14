@@ -1,3 +1,4 @@
+import com.ncorti.ktfmt.gradle.tasks.KtfmtBaseTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -22,4 +23,8 @@ tasks.named<KotlinCompile>("compileKotlin") {
             else -> true
         }
     }
+}
+
+tasks.withType<KtfmtBaseTask>().configureEach {
+    enabled = false
 }

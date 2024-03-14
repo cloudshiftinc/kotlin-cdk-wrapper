@@ -53,7 +53,8 @@ internal object WrapperTypeGenerator {
             pass++
         }
 
-        return specs
+
+        return specs + generateCdkObject()
     }
 
     private fun generateWrapperTypeFile(
@@ -90,7 +91,11 @@ internal object WrapperTypeGenerator {
 
             else -> {
                 val superClass = when {
-                    cdkClass.superClass.isJssiClass -> ANY
+                    cdkClass.superClass.isJssiClass || cdkClass.superClass == ANY -> {
+                        // TODO - pass in ctr param
+                        CdkObject
+                    }
+
                     else -> cdkClass.superClass
                 }
 
@@ -146,7 +151,7 @@ internal object WrapperTypeGenerator {
             ctx,
         )
 
-        if(cdkClass.className == Construct) {
+        if (cdkClass.className == Construct) {
             // protected constructor(scope: Construct, id: String) : this(software.constructs.Construct(unwrap(scope), id))
             val constructConstructor = FunSpec.constructorBuilder()
                 .addParameter("scope", Construct.mappedClassName())
@@ -180,12 +185,7 @@ internal object WrapperTypeGenerator {
             x.modifiers.remove(KModifier.OPEN)
             x.build()
         }
-        when {
-            companionMethods.isNotEmpty() -> companionBuilder.addFunctions(companionMethods)
-            else -> companionBuilder.addInitializerBlock(
-                CodeBlock.builder().addStatement("").build(),
-            )
-        }
+        companionBuilder.addFunctions(companionMethods)
 
         val cdkBuilder = ctx.model.builderFor(cdkClass.className)
 
@@ -266,7 +266,12 @@ internal object WrapperTypeGenerator {
                     .addModifiers(KModifier.INTERNAL)
                     .returns(cdkClass.className)
                     .addParameter("wrapped", cdkClass.className.mappedClassName())
-                    .addStatement("return (wrapped as %T).%N", wrapperClass, CdkObjectName)
+                    .addStatement(
+                        "return (wrapped as %T).%N as %T",
+                        CdkObject,
+                        CdkObjectName,
+                        cdkClass.className,
+                    )
                     .build(),
             )
         } else {
@@ -304,6 +309,27 @@ internal object WrapperTypeGenerator {
         typeBuilder.addTypes(innerClasses)
     }
 
+    private fun generateCdkObject(): FileSpec {
+        val cdkObject = TypeSpec.classBuilder(CdkObject)
+            .addModifiers(KModifier.PUBLIC, KModifier.ABSTRACT)
+            .primaryConstructor(
+                FunSpec.constructorBuilder()
+                    .addParameter(CdkObjectName, ANY)
+                    .build(),
+            )
+            .addProperty(
+                PropertySpec.builder(CdkObjectName, ANY)
+                    .addModifiers(KModifier.INTERNAL, KModifier.OPEN)
+                    .initializer(CdkObjectName)
+                    .build(),
+            )
+            .build()
+
+        return FileSpec.builder(CdkObject)
+            .addType(cdkObject)
+            .build()
+    }
+
     private fun generateInterfaceWrapper(
         wrapperClass: ClassName,
         cdkClass: CdkClass,
@@ -315,6 +341,8 @@ internal object WrapperTypeGenerator {
 
         if (cdkClass.isInterface) {
             wrapperBuilder.addSuperinterface(cdkClass.className.mappedClassName())
+            wrapperBuilder.superclass(CdkObject)
+            wrapperBuilder.addSuperclassConstructorParameter("%N", CdkObjectName)
         } else {
             wrapperBuilder.superclass(cdkClass.className.mappedClassName())
             wrapperBuilder.addSuperclassConstructorParameter("%N", CdkObjectName)
@@ -322,12 +350,12 @@ internal object WrapperTypeGenerator {
 
         wrapperBuilder.primaryConstructor(
             FunSpec.constructorBuilder().addParameter(CdkObjectName, cdkClass.className)
-                .addModifiers(KModifier.INTERNAL).build(),
+                .addModifiers().build(),
         )
 
         wrapperBuilder.addProperty(
             PropertySpec.builder(CdkObjectName, cdkClass.className)
-                .addModifiers(KModifier.INTERNAL)
+                .addModifiers( KModifier.OVERRIDE)
                 .initializer(CdkObjectName).build(),
         )
 
@@ -356,6 +384,7 @@ internal object WrapperTypeGenerator {
     }
 
     private const val CdkObjectName = "cdkObject"
+    private val CdkObject = ClassName("io.cloudshiftdev.awscdk", "CdkObject")
     private val IConstruct = ClassName("software.constructs", "IConstruct")
     private val Construct = ClassName("software.constructs", "Construct")
 }
@@ -370,7 +399,12 @@ private fun TypeSpec.Builder.wrappedClassConstructor(
     )
 
     addProperty(
-        PropertySpec.builder(delegatePropertyName, delegateClass, KModifier.PRIVATE)
+        PropertySpec.builder(
+            delegatePropertyName,
+            delegateClass,
+            KModifier.INTERNAL,
+            KModifier.OVERRIDE,
+        )
             .initializer(delegatePropertyName).build(),
     )
     return this

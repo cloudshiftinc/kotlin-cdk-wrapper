@@ -4,163 +4,162 @@ import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.String
 import kotlin.Unit
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnModuleDefaultVersion
-internal constructor(
-    private val cdkObject: software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion,
+public open class CfnModuleDefaultVersion internal constructor(
+  internal override val cdkObject:
+      software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion,
 ) : CfnResource(cdkObject), IInspectable {
-    /** The Amazon Resource Name (ARN) of the module version to set as the default version. */
-    public open fun arn(): String? = unwrap(this).getArn()
+  /**
+   * The Amazon Resource Name (ARN) of the module version to set as the default version.
+   */
+  public open fun arn(): String? = unwrap(this).getArn()
 
-    /** The Amazon Resource Name (ARN) of the module version to set as the default version. */
-    public open fun arn(`value`: String) {
-        unwrap(this).setArn(`value`)
-    }
+  /**
+   * The Amazon Resource Name (ARN) of the module version to set as the default version.
+   */
+  public open fun arn(`value`: String) {
+    unwrap(this).setArn(`value`)
+  }
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
+  public override fun inspect(inspector: TreeInspector) {
+    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+  }
+
+  /**
+   * The name of the module.
+   */
+  public open fun moduleName(): String? = unwrap(this).getModuleName()
+
+  /**
+   * The name of the module.
+   */
+  public open fun moduleName(`value`: String) {
+    unwrap(this).setModuleName(`value`)
+  }
+
+  /**
+   * The ID for the specific version of the module.
+   */
+  public open fun versionId(): String? = unwrap(this).getVersionId()
+
+  /**
+   * The ID for the specific version of the module.
+   */
+  public open fun versionId(`value`: String) {
+    unwrap(this).setVersionId(`value`)
+  }
+
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.cloudformation.CfnModuleDefaultVersion].
+   */
+  @CdkDslMarker
+  public interface Builder {
     /**
-     * Examines the CloudFormation resource and discloses attributes.
+     * The Amazon Resource Name (ARN) of the module version to set as the default version.
      *
-     * @param inspector tree inspector to collect and process attributes.
+     * Conditional: You must specify either `Arn` , or `ModuleName` and `VersionId` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html#cfn-cloudformation-moduledefaultversion-arn)
+     * @param arn The Amazon Resource Name (ARN) of the module version to set as the default
+     * version. 
      */
-    public override fun inspect(inspector: TreeInspector) {
-        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-    }
+    public fun arn(arn: String)
 
-    /** The name of the module. */
-    public open fun moduleName(): String? = unwrap(this).getModuleName()
+    /**
+     * The name of the module.
+     *
+     * Conditional: You must specify either `Arn` , or `ModuleName` and `VersionId` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html#cfn-cloudformation-moduledefaultversion-modulename)
+     * @param moduleName The name of the module. 
+     */
+    public fun moduleName(moduleName: String)
 
-    /** The name of the module. */
-    public open fun moduleName(`value`: String) {
-        unwrap(this).setModuleName(`value`)
-    }
+    /**
+     * The ID for the specific version of the module.
+     *
+     * Conditional: You must specify either `Arn` , or `ModuleName` and `VersionId` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html#cfn-cloudformation-moduledefaultversion-versionid)
+     * @param versionId The ID for the specific version of the module. 
+     */
+    public fun versionId(versionId: String)
+  }
 
-    /** The ID for the specific version of the module. */
-    public open fun versionId(): String? = unwrap(this).getVersionId()
+  private class BuilderImpl(
+    scope: SoftwareConstructsConstruct,
+    id: String,
+  ) : Builder {
+    private val cdkBuilder:
+        software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion.Builder =
+        software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion.Builder.create(scope,
+        id)
 
-    /** The ID for the specific version of the module. */
-    public open fun versionId(`value`: String) {
-        unwrap(this).setVersionId(`value`)
+    /**
+     * The Amazon Resource Name (ARN) of the module version to set as the default version.
+     *
+     * Conditional: You must specify either `Arn` , or `ModuleName` and `VersionId` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html#cfn-cloudformation-moduledefaultversion-arn)
+     * @param arn The Amazon Resource Name (ARN) of the module version to set as the default
+     * version. 
+     */
+    override fun arn(arn: String) {
+      cdkBuilder.arn(arn)
     }
 
     /**
-     * A fluent builder for
-     * [io.cloudshiftdev.awscdk.services.cloudformation.CfnModuleDefaultVersion].
+     * The name of the module.
+     *
+     * Conditional: You must specify either `Arn` , or `ModuleName` and `VersionId` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html#cfn-cloudformation-moduledefaultversion-modulename)
+     * @param moduleName The name of the module. 
      */
-    @CdkDslMarker
-    public interface Builder {
-        /**
-         * The Amazon Resource Name (ARN) of the module version to set as the default version.
-         *
-         * Conditional: You must specify either `Arn` , or `ModuleName` and `VersionId` .
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html#cfn-cloudformation-moduledefaultversion-arn)
-         *
-         * @param arn The Amazon Resource Name (ARN) of the module version to set as the default
-         *   version.
-         */
-        public fun arn(arn: String)
-
-        /**
-         * The name of the module.
-         *
-         * Conditional: You must specify either `Arn` , or `ModuleName` and `VersionId` .
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html#cfn-cloudformation-moduledefaultversion-modulename)
-         *
-         * @param moduleName The name of the module.
-         */
-        public fun moduleName(moduleName: String)
-
-        /**
-         * The ID for the specific version of the module.
-         *
-         * Conditional: You must specify either `Arn` , or `ModuleName` and `VersionId` .
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html#cfn-cloudformation-moduledefaultversion-versionid)
-         *
-         * @param versionId The ID for the specific version of the module.
-         */
-        public fun versionId(versionId: String)
+    override fun moduleName(moduleName: String) {
+      cdkBuilder.moduleName(moduleName)
     }
 
-    private class BuilderImpl(
-        scope: SoftwareConstructsConstruct,
-        id: String,
-    ) : Builder {
-        private val cdkBuilder:
-            software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion.Builder =
-            software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion.Builder.create(
-                scope,
-                id
-            )
-
-        /**
-         * The Amazon Resource Name (ARN) of the module version to set as the default version.
-         *
-         * Conditional: You must specify either `Arn` , or `ModuleName` and `VersionId` .
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html#cfn-cloudformation-moduledefaultversion-arn)
-         *
-         * @param arn The Amazon Resource Name (ARN) of the module version to set as the default
-         *   version.
-         */
-        override fun arn(arn: String) {
-            cdkBuilder.arn(arn)
-        }
-
-        /**
-         * The name of the module.
-         *
-         * Conditional: You must specify either `Arn` , or `ModuleName` and `VersionId` .
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html#cfn-cloudformation-moduledefaultversion-modulename)
-         *
-         * @param moduleName The name of the module.
-         */
-        override fun moduleName(moduleName: String) {
-            cdkBuilder.moduleName(moduleName)
-        }
-
-        /**
-         * The ID for the specific version of the module.
-         *
-         * Conditional: You must specify either `Arn` , or `ModuleName` and `VersionId` .
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html#cfn-cloudformation-moduledefaultversion-versionid)
-         *
-         * @param versionId The ID for the specific version of the module.
-         */
-        override fun versionId(versionId: String) {
-            cdkBuilder.versionId(versionId)
-        }
-
-        public fun build(): software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion =
-            cdkBuilder.build()
+    /**
+     * The ID for the specific version of the module.
+     *
+     * Conditional: You must specify either `Arn` , or `ModuleName` and `VersionId` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-moduledefaultversion.html#cfn-cloudformation-moduledefaultversion-versionid)
+     * @param versionId The ID for the specific version of the module. 
+     */
+    override fun versionId(versionId: String) {
+      cdkBuilder.versionId(versionId)
     }
 
-    public companion object {
-        init {}
+    public fun build(): software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion =
+        cdkBuilder.build()
+  }
 
-        public operator fun invoke(
-            scope: CloudshiftdevConstructsConstruct,
-            id: String,
-            block: Builder.() -> Unit = {},
-        ): CfnModuleDefaultVersion {
-            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-            return CfnModuleDefaultVersion(builderImpl.apply(block).build())
-        }
-
-        internal fun wrap(
-            cdkObject: software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion
-        ): CfnModuleDefaultVersion = CfnModuleDefaultVersion(cdkObject)
-
-        internal fun unwrap(
-            wrapped: CfnModuleDefaultVersion
-        ): software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion =
-            wrapped.cdkObject
+  public companion object {
+    public operator fun invoke(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      block: Builder.() -> Unit = {},
+    ): CfnModuleDefaultVersion {
+      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+      return CfnModuleDefaultVersion(builderImpl.apply(block).build())
     }
+
+    internal
+        fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion):
+        CfnModuleDefaultVersion = CfnModuleDefaultVersion(cdkObject)
+
+    internal fun unwrap(wrapped: CfnModuleDefaultVersion):
+        software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion = wrapped.cdkObject
+  }
 }

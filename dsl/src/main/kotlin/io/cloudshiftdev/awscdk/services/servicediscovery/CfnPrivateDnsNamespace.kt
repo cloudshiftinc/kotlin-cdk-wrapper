@@ -1,5 +1,6 @@
 package io.cloudshiftdev.awscdk.services.servicediscovery
 
+import io.cloudshiftdev.awscdk.CdkObject
 import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
@@ -8,7 +9,6 @@ import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -16,573 +16,587 @@ import kotlin.Suppress
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
-public open class CfnPrivateDnsNamespace
-internal constructor(
-    private val cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace,
+public open class CfnPrivateDnsNamespace internal constructor(
+  internal override val cdkObject:
+      software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
-    /** The Amazon Resource Name (ARN) of the private namespace. */
-    public open fun attrArn(): String = unwrap(this).getAttrArn()
+  /**
+   * The Amazon Resource Name (ARN) of the private namespace.
+   */
+  public open fun attrArn(): String = unwrap(this).getAttrArn()
 
+  /**
+   * The ID for the Route 53 hosted zone that AWS Cloud Map creates when you create a namespace.
+   */
+  public open fun attrHostedZoneId(): String = unwrap(this).getAttrHostedZoneId()
+
+  /**
+   * The ID of the private namespace.
+   */
+  public open fun attrId(): String = unwrap(this).getAttrId()
+
+  /**
+   * A description for the namespace.
+   */
+  public open fun description(): String? = unwrap(this).getDescription()
+
+  /**
+   * A description for the namespace.
+   */
+  public open fun description(`value`: String) {
+    unwrap(this).setDescription(`value`)
+  }
+
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
+  public override fun inspect(inspector: TreeInspector) {
+    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+  }
+
+  /**
+   * The name that you want to assign to this namespace.
+   */
+  public open fun name(): String = unwrap(this).getName()
+
+  /**
+   * The name that you want to assign to this namespace.
+   */
+  public open fun name(`value`: String) {
+    unwrap(this).setName(`value`)
+  }
+
+  /**
+   * Properties for the private DNS namespace.
+   */
+  public open fun properties(): Any? = unwrap(this).getProperties()
+
+  /**
+   * Properties for the private DNS namespace.
+   */
+  public open fun properties(`value`: IResolvable) {
+    unwrap(this).setProperties(`value`.let(IResolvable::unwrap))
+  }
+
+  /**
+   * Properties for the private DNS namespace.
+   */
+  public open fun properties(`value`: PropertiesProperty) {
+    unwrap(this).setProperties(`value`.let(PropertiesProperty::unwrap))
+  }
+
+  /**
+   * Properties for the private DNS namespace.
+   */
+  @Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("79c031c7cb2cc105f34838304bbfadaab7948c347b5e1d49e27b5a18a79caece")
+  public open fun properties(`value`: PropertiesProperty.Builder.() -> Unit): Unit =
+      properties(PropertiesProperty(`value`))
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+
+  /**
+   * The tags for the namespace.
+   */
+  public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
+      emptyList()
+
+  /**
+   * The tags for the namespace.
+   */
+  public open fun tagsRaw(`value`: List<CfnTag>) {
+    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+  }
+
+  /**
+   * The tags for the namespace.
+   */
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
+  /**
+   * The ID of the Amazon VPC that you want to associate the namespace with.
+   */
+  public open fun vpc(): String = unwrap(this).getVpc()
+
+  /**
+   * The ID of the Amazon VPC that you want to associate the namespace with.
+   */
+  public open fun vpc(`value`: String) {
+    unwrap(this).setVpc(`value`)
+  }
+
+  /**
+   * A fluent builder for
+   * [io.cloudshiftdev.awscdk.services.servicediscovery.CfnPrivateDnsNamespace].
+   */
+  @CdkDslMarker
+  public interface Builder {
     /**
-     * The ID for the Route 53 hosted zone that AWS Cloud Map creates when you create a namespace.
-     */
-    public open fun attrHostedZoneId(): String = unwrap(this).getAttrHostedZoneId()
-
-    /** The ID of the private namespace. */
-    public open fun attrId(): String = unwrap(this).getAttrId()
-
-    /** A description for the namespace. */
-    public open fun description(): String? = unwrap(this).getDescription()
-
-    /** A description for the namespace. */
-    public open fun description(`value`: String) {
-        unwrap(this).setDescription(`value`)
-    }
-
-    /**
-     * Examines the CloudFormation resource and discloses attributes.
+     * A description for the namespace.
      *
-     * @param inspector tree inspector to collect and process attributes.
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-description)
+     * @param description A description for the namespace. 
      */
-    public override fun inspect(inspector: TreeInspector) {
-        unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
-    }
+    public fun description(description: String)
 
-    /** The name that you want to assign to this namespace. */
-    public open fun name(): String = unwrap(this).getName()
+    /**
+     * The name that you want to assign to this namespace.
+     *
+     * When you create a private DNS namespace, AWS Cloud Map automatically creates an Amazon
+     * Route 53 private hosted zone that has the same name as the namespace.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-name)
+     * @param name The name that you want to assign to this namespace. 
+     */
+    public fun name(name: String)
 
-    /** The name that you want to assign to this namespace. */
-    public open fun name(`value`: String) {
-        unwrap(this).setName(`value`)
-    }
+    /**
+     * Properties for the private DNS namespace.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-properties)
+     * @param properties Properties for the private DNS namespace. 
+     */
+    public fun properties(properties: IResolvable)
 
-    /** Properties for the private DNS namespace. */
-    public open fun properties(): Any? = unwrap(this).getProperties()
+    /**
+     * Properties for the private DNS namespace.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-properties)
+     * @param properties Properties for the private DNS namespace. 
+     */
+    public fun properties(properties: PropertiesProperty)
 
-    /** Properties for the private DNS namespace. */
-    public open fun properties(`value`: IResolvable) {
-        unwrap(this).setProperties(`value`.let(IResolvable::unwrap))
-    }
-
-    /** Properties for the private DNS namespace. */
-    public open fun properties(`value`: PropertiesProperty) {
-        unwrap(this).setProperties(`value`.let(PropertiesProperty::unwrap))
-    }
-
-    /** Properties for the private DNS namespace. */
+    /**
+     * Properties for the private DNS namespace.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-properties)
+     * @param properties Properties for the private DNS namespace. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("79c031c7cb2cc105f34838304bbfadaab7948c347b5e1d49e27b5a18a79caece")
-    public open fun properties(`value`: PropertiesProperty.Builder.() -> Unit): Unit =
-        properties(PropertiesProperty(`value`))
+    @JvmName("37d20c5908b9330638c1b162884abd671700210e4f48f304bb16afce36f04f35")
+    public fun properties(properties: PropertiesProperty.Builder.() -> Unit)
 
-    /** Tag Manager which manages the tags for this resource. */
-    public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+    /**
+     * The tags for the namespace.
+     *
+     * Each tag consists of a key and an optional value, both of which you define. Tag keys can have
+     * a maximum character length of 128 characters, and tag values can have a maximum length of 256
+     * characters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-tags)
+     * @param tags The tags for the namespace. 
+     */
+    public fun tags(tags: List<CfnTag>)
 
-    /** The tags for the namespace. */
-    public open fun tagsRaw(): List<CfnTag> =
-        unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?: emptyList()
+    /**
+     * The tags for the namespace.
+     *
+     * Each tag consists of a key and an optional value, both of which you define. Tag keys can have
+     * a maximum character length of 128 characters, and tag values can have a maximum length of 256
+     * characters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-tags)
+     * @param tags The tags for the namespace. 
+     */
+    public fun tags(vararg tags: CfnTag)
 
-    /** The tags for the namespace. */
-    public open fun tagsRaw(`value`: List<CfnTag>) {
-        unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
-    }
+    /**
+     * The ID of the Amazon VPC that you want to associate the namespace with.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-vpc)
+     * @param vpc The ID of the Amazon VPC that you want to associate the namespace with. 
+     */
+    public fun vpc(vpc: String)
+  }
 
-    /** The tags for the namespace. */
-    public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+  private class BuilderImpl(
+    scope: SoftwareConstructsConstruct,
+    id: String,
+  ) : Builder {
+    private val cdkBuilder:
+        software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.Builder =
+        software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.Builder.create(scope,
+        id)
 
-    /** The ID of the Amazon VPC that you want to associate the namespace with. */
-    public open fun vpc(): String = unwrap(this).getVpc()
-
-    /** The ID of the Amazon VPC that you want to associate the namespace with. */
-    public open fun vpc(`value`: String) {
-        unwrap(this).setVpc(`value`)
+    /**
+     * A description for the namespace.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-description)
+     * @param description A description for the namespace. 
+     */
+    override fun description(description: String) {
+      cdkBuilder.description(description)
     }
 
     /**
-     * A fluent builder for
-     * [io.cloudshiftdev.awscdk.services.servicediscovery.CfnPrivateDnsNamespace].
+     * The name that you want to assign to this namespace.
+     *
+     * When you create a private DNS namespace, AWS Cloud Map automatically creates an Amazon
+     * Route 53 private hosted zone that has the same name as the namespace.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-name)
+     * @param name The name that you want to assign to this namespace. 
+     */
+    override fun name(name: String) {
+      cdkBuilder.name(name)
+    }
+
+    /**
+     * Properties for the private DNS namespace.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-properties)
+     * @param properties Properties for the private DNS namespace. 
+     */
+    override fun properties(properties: IResolvable) {
+      cdkBuilder.properties(properties.let(IResolvable::unwrap))
+    }
+
+    /**
+     * Properties for the private DNS namespace.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-properties)
+     * @param properties Properties for the private DNS namespace. 
+     */
+    override fun properties(properties: PropertiesProperty) {
+      cdkBuilder.properties(properties.let(PropertiesProperty::unwrap))
+    }
+
+    /**
+     * Properties for the private DNS namespace.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-properties)
+     * @param properties Properties for the private DNS namespace. 
+     */
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("37d20c5908b9330638c1b162884abd671700210e4f48f304bb16afce36f04f35")
+    override fun properties(properties: PropertiesProperty.Builder.() -> Unit): Unit =
+        properties(PropertiesProperty(properties))
+
+    /**
+     * The tags for the namespace.
+     *
+     * Each tag consists of a key and an optional value, both of which you define. Tag keys can have
+     * a maximum character length of 128 characters, and tag values can have a maximum length of 256
+     * characters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-tags)
+     * @param tags The tags for the namespace. 
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+    }
+
+    /**
+     * The tags for the namespace.
+     *
+     * Each tag consists of a key and an optional value, both of which you define. Tag keys can have
+     * a maximum character length of 128 characters, and tag values can have a maximum length of 256
+     * characters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-tags)
+     * @param tags The tags for the namespace. 
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+    /**
+     * The ID of the Amazon VPC that you want to associate the namespace with.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-vpc)
+     * @param vpc The ID of the Amazon VPC that you want to associate the namespace with. 
+     */
+    override fun vpc(vpc: String) {
+      cdkBuilder.vpc(vpc)
+    }
+
+    public fun build(): software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace =
+        cdkBuilder.build()
+  }
+
+  public companion object {
+    public operator fun invoke(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      block: Builder.() -> Unit = {},
+    ): CfnPrivateDnsNamespace {
+      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+      return CfnPrivateDnsNamespace(builderImpl.apply(block).build())
+    }
+
+    internal
+        fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace):
+        CfnPrivateDnsNamespace = CfnPrivateDnsNamespace(cdkObject)
+
+    internal fun unwrap(wrapped: CfnPrivateDnsNamespace):
+        software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace = wrapped.cdkObject
+  }
+
+  public interface PropertiesProperty {
+    /**
+     * DNS properties for the private DNS namespace.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-privatednsnamespace-properties.html#cfn-servicediscovery-privatednsnamespace-properties-dnsproperties)
+     */
+    public fun dnsProperties(): Any? = unwrap(this).getDnsProperties()
+
+    /**
+     * A builder for [PropertiesProperty]
      */
     @CdkDslMarker
     public interface Builder {
-        /**
-         * A description for the namespace.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-description)
-         *
-         * @param description A description for the namespace.
-         */
-        public fun description(description: String)
+      /**
+       * @param dnsProperties DNS properties for the private DNS namespace.
+       */
+      public fun dnsProperties(dnsProperties: IResolvable)
 
-        /**
-         * The name that you want to assign to this namespace.
-         *
-         * When you create a private DNS namespace, AWS Cloud Map automatically creates an Amazon
-         * Route 53 private hosted zone that has the same name as the namespace.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-name)
-         *
-         * @param name The name that you want to assign to this namespace.
-         */
-        public fun name(name: String)
+      /**
+       * @param dnsProperties DNS properties for the private DNS namespace.
+       */
+      public fun dnsProperties(dnsProperties: PrivateDnsPropertiesMutableProperty)
 
-        /**
-         * Properties for the private DNS namespace.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-properties)
-         *
-         * @param properties Properties for the private DNS namespace.
-         */
-        public fun properties(properties: IResolvable)
-
-        /**
-         * Properties for the private DNS namespace.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-properties)
-         *
-         * @param properties Properties for the private DNS namespace.
-         */
-        public fun properties(properties: PropertiesProperty)
-
-        /**
-         * Properties for the private DNS namespace.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-properties)
-         *
-         * @param properties Properties for the private DNS namespace.
-         */
-        @Suppress("INAPPLICABLE_JVM_NAME")
-        @JvmName("37d20c5908b9330638c1b162884abd671700210e4f48f304bb16afce36f04f35")
-        public fun properties(properties: PropertiesProperty.Builder.() -> Unit)
-
-        /**
-         * The tags for the namespace.
-         *
-         * Each tag consists of a key and an optional value, both of which you define. Tag keys can
-         * have a maximum character length of 128 characters, and tag values can have a maximum
-         * length of 256 characters.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-tags)
-         *
-         * @param tags The tags for the namespace.
-         */
-        public fun tags(tags: List<CfnTag>)
-
-        /**
-         * The tags for the namespace.
-         *
-         * Each tag consists of a key and an optional value, both of which you define. Tag keys can
-         * have a maximum character length of 128 characters, and tag values can have a maximum
-         * length of 256 characters.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-tags)
-         *
-         * @param tags The tags for the namespace.
-         */
-        public fun tags(vararg tags: CfnTag)
-
-        /**
-         * The ID of the Amazon VPC that you want to associate the namespace with.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-vpc)
-         *
-         * @param vpc The ID of the Amazon VPC that you want to associate the namespace with.
-         */
-        public fun vpc(vpc: String)
+      /**
+       * @param dnsProperties DNS properties for the private DNS namespace.
+       */
+      @Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("44901fa38784f73d246bb8e19965e43c23ba275fb50754bc62f41212fa96f4ab")
+      public
+          fun dnsProperties(dnsProperties: PrivateDnsPropertiesMutableProperty.Builder.() -> Unit)
     }
 
-    private class BuilderImpl(
-        scope: SoftwareConstructsConstruct,
-        id: String,
-    ) : Builder {
-        private val cdkBuilder:
-            software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.Builder =
-            software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.Builder.create(
-                scope,
-                id
-            )
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PropertiesProperty.Builder
+          =
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PropertiesProperty.builder()
 
-        /**
-         * A description for the namespace.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-description)
-         *
-         * @param description A description for the namespace.
-         */
-        override fun description(description: String) {
-            cdkBuilder.description(description)
-        }
+      /**
+       * @param dnsProperties DNS properties for the private DNS namespace.
+       */
+      override fun dnsProperties(dnsProperties: IResolvable) {
+        cdkBuilder.dnsProperties(dnsProperties.let(IResolvable::unwrap))
+      }
 
-        /**
-         * The name that you want to assign to this namespace.
-         *
-         * When you create a private DNS namespace, AWS Cloud Map automatically creates an Amazon
-         * Route 53 private hosted zone that has the same name as the namespace.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-name)
-         *
-         * @param name The name that you want to assign to this namespace.
-         */
-        override fun name(name: String) {
-            cdkBuilder.name(name)
-        }
+      /**
+       * @param dnsProperties DNS properties for the private DNS namespace.
+       */
+      override fun dnsProperties(dnsProperties: PrivateDnsPropertiesMutableProperty) {
+        cdkBuilder.dnsProperties(dnsProperties.let(PrivateDnsPropertiesMutableProperty::unwrap))
+      }
 
-        /**
-         * Properties for the private DNS namespace.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-properties)
-         *
-         * @param properties Properties for the private DNS namespace.
-         */
-        override fun properties(properties: IResolvable) {
-            cdkBuilder.properties(properties.let(IResolvable::unwrap))
-        }
+      /**
+       * @param dnsProperties DNS properties for the private DNS namespace.
+       */
+      @Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("44901fa38784f73d246bb8e19965e43c23ba275fb50754bc62f41212fa96f4ab")
+      override
+          fun dnsProperties(dnsProperties: PrivateDnsPropertiesMutableProperty.Builder.() -> Unit):
+          Unit = dnsProperties(PrivateDnsPropertiesMutableProperty(dnsProperties))
 
-        /**
-         * Properties for the private DNS namespace.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-properties)
-         *
-         * @param properties Properties for the private DNS namespace.
-         */
-        override fun properties(properties: PropertiesProperty) {
-            cdkBuilder.properties(properties.let(PropertiesProperty::unwrap))
-        }
+      public fun build():
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PropertiesProperty
+          = cdkBuilder.build()
+    }
 
-        /**
-         * Properties for the private DNS namespace.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-properties)
-         *
-         * @param properties Properties for the private DNS namespace.
-         */
-        @Suppress("INAPPLICABLE_JVM_NAME")
-        @JvmName("37d20c5908b9330638c1b162884abd671700210e4f48f304bb16afce36f04f35")
-        override fun properties(properties: PropertiesProperty.Builder.() -> Unit): Unit =
-            properties(PropertiesProperty(properties))
-
-        /**
-         * The tags for the namespace.
-         *
-         * Each tag consists of a key and an optional value, both of which you define. Tag keys can
-         * have a maximum character length of 128 characters, and tag values can have a maximum
-         * length of 256 characters.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-tags)
-         *
-         * @param tags The tags for the namespace.
-         */
-        override fun tags(tags: List<CfnTag>) {
-            cdkBuilder.tags(tags.map(CfnTag::unwrap))
-        }
-
-        /**
-         * The tags for the namespace.
-         *
-         * Each tag consists of a key and an optional value, both of which you define. Tag keys can
-         * have a maximum character length of 128 characters, and tag values can have a maximum
-         * length of 256 characters.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-tags)
-         *
-         * @param tags The tags for the namespace.
-         */
-        override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
-
-        /**
-         * The ID of the Amazon VPC that you want to associate the namespace with.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-privatednsnamespace.html#cfn-servicediscovery-privatednsnamespace-vpc)
-         *
-         * @param vpc The ID of the Amazon VPC that you want to associate the namespace with.
-         */
-        override fun vpc(vpc: String) {
-            cdkBuilder.vpc(vpc)
-        }
-
-        public fun build():
-            software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace =
-            cdkBuilder.build()
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PropertiesProperty,
+    ) : CdkObject(cdkObject), PropertiesProperty {
+      /**
+       * DNS properties for the private DNS namespace.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-privatednsnamespace-properties.html#cfn-servicediscovery-privatednsnamespace-properties-dnsproperties)
+       */
+      override fun dnsProperties(): Any? = unwrap(this).getDnsProperties()
     }
 
     public companion object {
-        init {}
+      public operator fun invoke(block: Builder.() -> Unit = {}): PropertiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
 
-        public operator fun invoke(
-            scope: CloudshiftdevConstructsConstruct,
-            id: String,
-            block: Builder.() -> Unit = {},
-        ): CfnPrivateDnsNamespace {
-            val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
-            return CfnPrivateDnsNamespace(builderImpl.apply(block).build())
-        }
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PropertiesProperty):
+          PropertiesProperty = Wrapper(cdkObject)
 
-        internal fun wrap(
-            cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace
-        ): CfnPrivateDnsNamespace = CfnPrivateDnsNamespace(cdkObject)
+      internal fun unwrap(wrapped: PropertiesProperty):
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PropertiesProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PropertiesProperty
+    }
+  }
 
-        internal fun unwrap(
-            wrapped: CfnPrivateDnsNamespace
-        ): software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace =
-            wrapped.cdkObject
+  public interface SOAProperty {
+    /**
+     * The time to live (TTL) for purposes of negative caching.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-privatednsnamespace-soa.html#cfn-servicediscovery-privatednsnamespace-soa-ttl)
+     */
+    public fun ttl(): Number? = unwrap(this).getTtl()
+
+    /**
+     * A builder for [SOAProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param ttl The time to live (TTL) for purposes of negative caching.
+       */
+      public fun ttl(ttl: Number)
     }
 
-    public interface PropertiesProperty {
-        /**
-         * DNS properties for the private DNS namespace.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-privatednsnamespace-properties.html#cfn-servicediscovery-privatednsnamespace-properties-dnsproperties)
-         */
-        public fun dnsProperties(): Any? = unwrap(this).getDnsProperties()
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.SOAProperty.Builder
+          =
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.SOAProperty.builder()
 
-        /** A builder for [PropertiesProperty] */
-        @CdkDslMarker
-        public interface Builder {
-            /** @param dnsProperties DNS properties for the private DNS namespace. */
-            public fun dnsProperties(dnsProperties: IResolvable)
+      /**
+       * @param ttl The time to live (TTL) for purposes of negative caching.
+       */
+      override fun ttl(ttl: Number) {
+        cdkBuilder.ttl(ttl)
+      }
 
-            /** @param dnsProperties DNS properties for the private DNS namespace. */
-            public fun dnsProperties(dnsProperties: PrivateDnsPropertiesMutableProperty)
-
-            /** @param dnsProperties DNS properties for the private DNS namespace. */
-            @Suppress("INAPPLICABLE_JVM_NAME")
-            @JvmName("44901fa38784f73d246bb8e19965e43c23ba275fb50754bc62f41212fa96f4ab")
-            public fun dnsProperties(
-                dnsProperties: PrivateDnsPropertiesMutableProperty.Builder.() -> Unit
-            )
-        }
-
-        private class BuilderImpl : Builder {
-            private val cdkBuilder:
-                software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PropertiesProperty.Builder =
-                software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace
-                    .PropertiesProperty
-                    .builder()
-
-            /** @param dnsProperties DNS properties for the private DNS namespace. */
-            override fun dnsProperties(dnsProperties: IResolvable) {
-                cdkBuilder.dnsProperties(dnsProperties.let(IResolvable::unwrap))
-            }
-
-            /** @param dnsProperties DNS properties for the private DNS namespace. */
-            override fun dnsProperties(dnsProperties: PrivateDnsPropertiesMutableProperty) {
-                cdkBuilder.dnsProperties(
-                    dnsProperties.let(PrivateDnsPropertiesMutableProperty::unwrap)
-                )
-            }
-
-            /** @param dnsProperties DNS properties for the private DNS namespace. */
-            @Suppress("INAPPLICABLE_JVM_NAME")
-            @JvmName("44901fa38784f73d246bb8e19965e43c23ba275fb50754bc62f41212fa96f4ab")
-            override fun dnsProperties(
-                dnsProperties: PrivateDnsPropertiesMutableProperty.Builder.() -> Unit
-            ): Unit = dnsProperties(PrivateDnsPropertiesMutableProperty(dnsProperties))
-
-            public fun build():
-                software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PropertiesProperty =
-                cdkBuilder.build()
-        }
-
-        private class Wrapper
-        internal constructor(
-            internal val cdkObject:
-                software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PropertiesProperty,
-        ) : PropertiesProperty {
-            /**
-             * DNS properties for the private DNS namespace.
-             *
-             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-privatednsnamespace-properties.html#cfn-servicediscovery-privatednsnamespace-properties-dnsproperties)
-             */
-            override fun dnsProperties(): Any? = unwrap(this).getDnsProperties()
-        }
-
-        public companion object {
-            init {}
-
-            public operator fun invoke(block: Builder.() -> Unit = {}): PropertiesProperty {
-                val builderImpl = BuilderImpl()
-                return Wrapper(builderImpl.apply(block).build())
-            }
-
-            internal fun wrap(
-                cdkObject:
-                    software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PropertiesProperty
-            ): PropertiesProperty = Wrapper(cdkObject)
-
-            internal fun unwrap(
-                wrapped: PropertiesProperty
-            ): software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PropertiesProperty =
-                (wrapped as Wrapper).cdkObject
-        }
+      public fun build():
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.SOAProperty =
+          cdkBuilder.build()
     }
 
-    public interface SOAProperty {
-        /**
-         * The time to live (TTL) for purposes of negative caching.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-privatednsnamespace-soa.html#cfn-servicediscovery-privatednsnamespace-soa-ttl)
-         */
-        public fun ttl(): Number? = unwrap(this).getTtl()
-
-        /** A builder for [SOAProperty] */
-        @CdkDslMarker
-        public interface Builder {
-            /** @param ttl The time to live (TTL) for purposes of negative caching. */
-            public fun ttl(ttl: Number)
-        }
-
-        private class BuilderImpl : Builder {
-            private val cdkBuilder:
-                software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.SOAProperty.Builder =
-                software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.SOAProperty
-                    .builder()
-
-            /** @param ttl The time to live (TTL) for purposes of negative caching. */
-            override fun ttl(ttl: Number) {
-                cdkBuilder.ttl(ttl)
-            }
-
-            public fun build():
-                software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.SOAProperty =
-                cdkBuilder.build()
-        }
-
-        private class Wrapper
-        internal constructor(
-            internal val cdkObject:
-                software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.SOAProperty,
-        ) : SOAProperty {
-            /**
-             * The time to live (TTL) for purposes of negative caching.
-             *
-             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-privatednsnamespace-soa.html#cfn-servicediscovery-privatednsnamespace-soa-ttl)
-             */
-            override fun ttl(): Number? = unwrap(this).getTtl()
-        }
-
-        public companion object {
-            init {}
-
-            public operator fun invoke(block: Builder.() -> Unit = {}): SOAProperty {
-                val builderImpl = BuilderImpl()
-                return Wrapper(builderImpl.apply(block).build())
-            }
-
-            internal fun wrap(
-                cdkObject:
-                    software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.SOAProperty
-            ): SOAProperty = Wrapper(cdkObject)
-
-            internal fun unwrap(
-                wrapped: SOAProperty
-            ): software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.SOAProperty =
-                (wrapped as Wrapper).cdkObject
-        }
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.SOAProperty,
+    ) : CdkObject(cdkObject), SOAProperty {
+      /**
+       * The time to live (TTL) for purposes of negative caching.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-privatednsnamespace-soa.html#cfn-servicediscovery-privatednsnamespace-soa-ttl)
+       */
+      override fun ttl(): Number? = unwrap(this).getTtl()
     }
 
-    public interface PrivateDnsPropertiesMutableProperty {
-        /**
-         * Fields for the Start of Authority (SOA) record for the hosted zone for the private DNS
-         * namespace.
-         *
-         * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-privatednsnamespace-privatednspropertiesmutable.html#cfn-servicediscovery-privatednsnamespace-privatednspropertiesmutable-soa)
-         */
-        public fun soa(): Any? = unwrap(this).getSoa()
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SOAProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
 
-        /** A builder for [PrivateDnsPropertiesMutableProperty] */
-        @CdkDslMarker
-        public interface Builder {
-            /**
-             * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
-             *   private DNS namespace.
-             */
-            public fun soa(soa: IResolvable)
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.SOAProperty):
+          SOAProperty = Wrapper(cdkObject)
 
-            /**
-             * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
-             *   private DNS namespace.
-             */
-            public fun soa(soa: SOAProperty)
-
-            /**
-             * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
-             *   private DNS namespace.
-             */
-            @Suppress("INAPPLICABLE_JVM_NAME")
-            @JvmName("d750bfb0eabc2c39fac09cbee0c32f9de869433ccafea16034b465febe71fa30")
-            public fun soa(soa: SOAProperty.Builder.() -> Unit)
-        }
-
-        private class BuilderImpl : Builder {
-            private val cdkBuilder:
-                software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty.Builder =
-                software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace
-                    .PrivateDnsPropertiesMutableProperty
-                    .builder()
-
-            /**
-             * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
-             *   private DNS namespace.
-             */
-            override fun soa(soa: IResolvable) {
-                cdkBuilder.soa(soa.let(IResolvable::unwrap))
-            }
-
-            /**
-             * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
-             *   private DNS namespace.
-             */
-            override fun soa(soa: SOAProperty) {
-                cdkBuilder.soa(soa.let(SOAProperty::unwrap))
-            }
-
-            /**
-             * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
-             *   private DNS namespace.
-             */
-            @Suppress("INAPPLICABLE_JVM_NAME")
-            @JvmName("d750bfb0eabc2c39fac09cbee0c32f9de869433ccafea16034b465febe71fa30")
-            override fun soa(soa: SOAProperty.Builder.() -> Unit): Unit = soa(SOAProperty(soa))
-
-            public fun build():
-                software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty =
-                cdkBuilder.build()
-        }
-
-        private class Wrapper
-        internal constructor(
-            internal val cdkObject:
-                software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty,
-        ) : PrivateDnsPropertiesMutableProperty {
-            /**
-             * Fields for the Start of Authority (SOA) record for the hosted zone for the private
-             * DNS namespace.
-             *
-             * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-privatednsnamespace-privatednspropertiesmutable.html#cfn-servicediscovery-privatednsnamespace-privatednspropertiesmutable-soa)
-             */
-            override fun soa(): Any? = unwrap(this).getSoa()
-        }
-
-        public companion object {
-            init {}
-
-            public operator fun invoke(
-                block: Builder.() -> Unit = {}
-            ): PrivateDnsPropertiesMutableProperty {
-                val builderImpl = BuilderImpl()
-                return Wrapper(builderImpl.apply(block).build())
-            }
-
-            internal fun wrap(
-                cdkObject:
-                    software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty
-            ): PrivateDnsPropertiesMutableProperty = Wrapper(cdkObject)
-
-            internal fun unwrap(
-                wrapped: PrivateDnsPropertiesMutableProperty
-            ): software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty =
-                (wrapped as Wrapper).cdkObject
-        }
+      internal fun unwrap(wrapped: SOAProperty):
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.SOAProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.SOAProperty
     }
+  }
+
+  public interface PrivateDnsPropertiesMutableProperty {
+    /**
+     * Fields for the Start of Authority (SOA) record for the hosted zone for the private DNS
+     * namespace.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-privatednsnamespace-privatednspropertiesmutable.html#cfn-servicediscovery-privatednsnamespace-privatednspropertiesmutable-soa)
+     */
+    public fun soa(): Any? = unwrap(this).getSoa()
+
+    /**
+     * A builder for [PrivateDnsPropertiesMutableProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
+       * private DNS namespace.
+       */
+      public fun soa(soa: IResolvable)
+
+      /**
+       * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
+       * private DNS namespace.
+       */
+      public fun soa(soa: SOAProperty)
+
+      /**
+       * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
+       * private DNS namespace.
+       */
+      @Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d750bfb0eabc2c39fac09cbee0c32f9de869433ccafea16034b465febe71fa30")
+      public fun soa(soa: SOAProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty.Builder
+          =
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty.builder()
+
+      /**
+       * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
+       * private DNS namespace.
+       */
+      override fun soa(soa: IResolvable) {
+        cdkBuilder.soa(soa.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
+       * private DNS namespace.
+       */
+      override fun soa(soa: SOAProperty) {
+        cdkBuilder.soa(soa.let(SOAProperty::unwrap))
+      }
+
+      /**
+       * @param soa Fields for the Start of Authority (SOA) record for the hosted zone for the
+       * private DNS namespace.
+       */
+      @Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d750bfb0eabc2c39fac09cbee0c32f9de869433ccafea16034b465febe71fa30")
+      override fun soa(soa: SOAProperty.Builder.() -> Unit): Unit = soa(SOAProperty(soa))
+
+      public fun build():
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty,
+    ) : CdkObject(cdkObject), PrivateDnsPropertiesMutableProperty {
+      /**
+       * Fields for the Start of Authority (SOA) record for the hosted zone for the private DNS
+       * namespace.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-servicediscovery-privatednsnamespace-privatednspropertiesmutable.html#cfn-servicediscovery-privatednsnamespace-privatednspropertiesmutable-soa)
+       */
+      override fun soa(): Any? = unwrap(this).getSoa()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PrivateDnsPropertiesMutableProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty):
+          PrivateDnsPropertiesMutableProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PrivateDnsPropertiesMutableProperty):
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace.PrivateDnsPropertiesMutableProperty
+    }
+  }
 }

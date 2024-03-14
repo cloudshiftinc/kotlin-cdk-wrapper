@@ -1,37 +1,41 @@
 package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
+import io.cloudshiftdev.awscdk.CdkObject
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 
-public abstract class BaseJenkinsProvider
-internal constructor(
-    private val cdkObject: software.amazon.awscdk.services.codepipeline.actions.BaseJenkinsProvider,
+public abstract class BaseJenkinsProvider internal constructor(
+  internal override val cdkObject:
+      software.amazon.awscdk.services.codepipeline.actions.BaseJenkinsProvider,
 ) : Construct(cdkObject), IJenkinsProvider {
-    /**  */
-    public override fun providerName(): String = unwrap(this).getProviderName()
+  /**
+   *
+   */
+  public override fun providerName(): String = unwrap(this).getProviderName()
 
-    /**  */
-    public override fun serverUrl(): String = unwrap(this).getServerUrl()
+  /**
+   *
+   */
+  public override fun serverUrl(): String = unwrap(this).getServerUrl()
 
-    /**  */
-    public override fun version(): String = unwrap(this).getVersion()
+  /**
+   *
+   */
+  public override fun version(): String = unwrap(this).getVersion()
 
-    private class Wrapper
-    internal constructor(
-        internal val cdkObject:
-            software.amazon.awscdk.services.codepipeline.actions.BaseJenkinsProvider,
-    ) : BaseJenkinsProvider(cdkObject)
+  private class Wrapper(
+    override val cdkObject:
+        software.amazon.awscdk.services.codepipeline.actions.BaseJenkinsProvider,
+  ) : BaseJenkinsProvider(cdkObject)
 
-    public companion object {
-        init {}
+  public companion object {
+    internal
+        fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.BaseJenkinsProvider):
+        BaseJenkinsProvider = Wrapper(cdkObject)
 
-        internal fun wrap(
-            cdkObject: software.amazon.awscdk.services.codepipeline.actions.BaseJenkinsProvider
-        ): BaseJenkinsProvider = Wrapper(cdkObject)
-
-        internal fun unwrap(
-            wrapped: BaseJenkinsProvider
-        ): software.amazon.awscdk.services.codepipeline.actions.BaseJenkinsProvider =
-            (wrapped as Wrapper).cdkObject
-    }
+    internal fun unwrap(wrapped: BaseJenkinsProvider):
+        software.amazon.awscdk.services.codepipeline.actions.BaseJenkinsProvider = (wrapped as
+        CdkObject).cdkObject as
+        software.amazon.awscdk.services.codepipeline.actions.BaseJenkinsProvider
+  }
 }

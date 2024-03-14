@@ -1,72 +1,85 @@
 package io.cloudshiftdev.awscdk.services.apigatewayv2
 
+import io.cloudshiftdev.awscdk.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import kotlin.String
 import kotlin.Unit
 
 public interface VpcLinkAttributes {
-    /** The VPC to which this VPC link is associated with. */
-    public fun vpc(): IVpc
+  /**
+   * The VPC to which this VPC link is associated with.
+   */
+  public fun vpc(): IVpc
 
-    /** The VPC Link id. */
-    public fun vpcLinkId(): String
+  /**
+   * The VPC Link id.
+   */
+  public fun vpcLinkId(): String
 
-    /** A builder for [VpcLinkAttributes] */
-    @CdkDslMarker
-    public interface Builder {
-        /** @param vpc The VPC to which this VPC link is associated with. */
-        public fun vpc(vpc: IVpc)
+  /**
+   * A builder for [VpcLinkAttributes]
+   */
+  @CdkDslMarker
+  public interface Builder {
+    /**
+     * @param vpc The VPC to which this VPC link is associated with. 
+     */
+    public fun vpc(vpc: IVpc)
 
-        /** @param vpcLinkId The VPC Link id. */
-        public fun vpcLinkId(vpcLinkId: String)
+    /**
+     * @param vpcLinkId The VPC Link id. 
+     */
+    public fun vpcLinkId(vpcLinkId: String)
+  }
+
+  private class BuilderImpl : Builder {
+    private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.VpcLinkAttributes.Builder =
+        software.amazon.awscdk.services.apigatewayv2.VpcLinkAttributes.builder()
+
+    /**
+     * @param vpc The VPC to which this VPC link is associated with. 
+     */
+    override fun vpc(vpc: IVpc) {
+      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
-    private class BuilderImpl : Builder {
-        private val cdkBuilder:
-            software.amazon.awscdk.services.apigatewayv2.VpcLinkAttributes.Builder =
-            software.amazon.awscdk.services.apigatewayv2.VpcLinkAttributes.builder()
-
-        /** @param vpc The VPC to which this VPC link is associated with. */
-        override fun vpc(vpc: IVpc) {
-            cdkBuilder.vpc(vpc.let(IVpc::unwrap))
-        }
-
-        /** @param vpcLinkId The VPC Link id. */
-        override fun vpcLinkId(vpcLinkId: String) {
-            cdkBuilder.vpcLinkId(vpcLinkId)
-        }
-
-        public fun build(): software.amazon.awscdk.services.apigatewayv2.VpcLinkAttributes =
-            cdkBuilder.build()
+    /**
+     * @param vpcLinkId The VPC Link id. 
+     */
+    override fun vpcLinkId(vpcLinkId: String) {
+      cdkBuilder.vpcLinkId(vpcLinkId)
     }
 
-    private class Wrapper
-    internal constructor(
-        internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.VpcLinkAttributes,
-    ) : VpcLinkAttributes {
-        /** The VPC to which this VPC link is associated with. */
-        override fun vpc(): IVpc = unwrap(this).getVpc().let(IVpc::wrap)
+    public fun build(): software.amazon.awscdk.services.apigatewayv2.VpcLinkAttributes =
+        cdkBuilder.build()
+  }
 
-        /** The VPC Link id. */
-        override fun vpcLinkId(): String = unwrap(this).getVpcLinkId()
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.apigatewayv2.VpcLinkAttributes,
+  ) : CdkObject(cdkObject), VpcLinkAttributes {
+    /**
+     * The VPC to which this VPC link is associated with.
+     */
+    override fun vpc(): IVpc = unwrap(this).getVpc().let(IVpc::wrap)
+
+    /**
+     * The VPC Link id.
+     */
+    override fun vpcLinkId(): String = unwrap(this).getVpcLinkId()
+  }
+
+  public companion object {
+    public operator fun invoke(block: Builder.() -> Unit = {}): VpcLinkAttributes {
+      val builderImpl = BuilderImpl()
+      return Wrapper(builderImpl.apply(block).build())
     }
 
-    public companion object {
-        init {}
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.VpcLinkAttributes):
+        VpcLinkAttributes = Wrapper(cdkObject)
 
-        public operator fun invoke(block: Builder.() -> Unit = {}): VpcLinkAttributes {
-            val builderImpl = BuilderImpl()
-            return Wrapper(builderImpl.apply(block).build())
-        }
-
-        internal fun wrap(
-            cdkObject: software.amazon.awscdk.services.apigatewayv2.VpcLinkAttributes
-        ): VpcLinkAttributes = Wrapper(cdkObject)
-
-        internal fun unwrap(
-            wrapped: VpcLinkAttributes
-        ): software.amazon.awscdk.services.apigatewayv2.VpcLinkAttributes =
-            (wrapped as Wrapper).cdkObject
-    }
+    internal fun unwrap(wrapped: VpcLinkAttributes):
+        software.amazon.awscdk.services.apigatewayv2.VpcLinkAttributes = (wrapped as
+        CdkObject).cdkObject as software.amazon.awscdk.services.apigatewayv2.VpcLinkAttributes
+  }
 }

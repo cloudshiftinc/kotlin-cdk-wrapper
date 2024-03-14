@@ -1,22 +1,20 @@
 package io.cloudshiftdev.constructs
 
+import io.cloudshiftdev.awscdk.CdkObject
+
 public interface IConstruct : IDependable {
-    public fun node(): Node
+  public fun node(): Node
 
-    private class Wrapper
-    internal constructor(
-        internal val cdkObject: software.constructs.IConstruct,
-    ) : IConstruct {
-        override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
-    }
+  private class Wrapper(
+    override val cdkObject: software.constructs.IConstruct,
+  ) : CdkObject(cdkObject), IConstruct {
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+  }
 
-    public companion object {
-        init {}
+  public companion object {
+    internal fun wrap(cdkObject: software.constructs.IConstruct): IConstruct = Wrapper(cdkObject)
 
-        internal fun wrap(cdkObject: software.constructs.IConstruct): IConstruct =
-            Wrapper(cdkObject)
-
-        internal fun unwrap(wrapped: IConstruct): software.constructs.IConstruct =
-            (wrapped as Wrapper).cdkObject
-    }
+    internal fun unwrap(wrapped: IConstruct): software.constructs.IConstruct = (wrapped as
+        CdkObject).cdkObject as software.constructs.IConstruct
+  }
 }
