@@ -14,12 +14,13 @@ public interface SubnetSelections {
 }
 
 private object SubnetSelectionsImpl : SubnetSelections {
-    override val PublicSubnets: SubnetSelection =
-        SubnetSelection { subnetType(SubnetType.PUBLIC) }
-    override val PrivateSubnets: SubnetSelection =
-        SubnetSelection { subnetType(SubnetType.PRIVATE_WITH_EGRESS) }
-    override val IsolatedSubnets: SubnetSelection =
-        SubnetSelection { subnetType(SubnetType.PRIVATE_ISOLATED) }
+    override val PublicSubnets: SubnetSelection = SubnetSelection { subnetType(SubnetType.PUBLIC) }
+    override val PrivateSubnets: SubnetSelection = SubnetSelection {
+        subnetType(SubnetType.PRIVATE_WITH_EGRESS)
+    }
+    override val IsolatedSubnets: SubnetSelection = SubnetSelection {
+        subnetType(SubnetType.PRIVATE_ISOLATED)
+    }
 }
 
 public val subnetSelections: SubnetSelections
