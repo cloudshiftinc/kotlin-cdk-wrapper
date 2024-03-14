@@ -13,10 +13,7 @@ dependencies {
 
 // lots of generated Kotlin drives memory requirement
 kotlin {
-    kotlinDaemonJvmArgs = when {
-        System.getenv("CI") == "true" -> listOf("-Xms12g", "-Xmx12g")
-        else -> listOf("-Xms8g", "-Xmx8g")
-    }
+    kotlinDaemonJvmArgs =  listOf("-Xms8g", "-Xmx8g")
 }
 
 tasks.named<KotlinCompile>("compileKotlin") {
