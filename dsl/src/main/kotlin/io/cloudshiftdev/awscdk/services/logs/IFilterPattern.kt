@@ -3,11 +3,17 @@ package io.cloudshiftdev.awscdk.services.logs
 import kotlin.String
 
 public interface IFilterPattern {
+  /**
+   *
+   */
   public fun logPatternString(): String
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.logs.IFilterPattern,
   ) : IFilterPattern {
+    /**
+     *
+     */
     override fun logPatternString(): String = unwrap(this).getLogPatternString()
   }
 

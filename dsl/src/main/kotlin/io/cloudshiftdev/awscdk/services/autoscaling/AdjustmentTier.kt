@@ -1,20 +1,68 @@
 package io.cloudshiftdev.awscdk.services.autoscaling
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.Unit
 
 public interface AdjustmentTier {
+  /**
+   * What number to adjust the capacity with.
+   *
+   * The number is interpeted as an added capacity, a new fixed capacity or an
+   * added percentage depending on the AdjustmentType value of the
+   * StepScalingPolicy.
+   *
+   * Can be positive or negative.
+   */
   public fun adjustment(): Number
 
+  /**
+   * Lower bound where this scaling tier applies.
+   *
+   * The scaling tier applies if the difference between the metric
+   * value and its alarm threshold is higher than this value.
+   *
+   * Default: -Infinity if this is the first tier, otherwise the upperBound of the previous tier
+   */
   public fun lowerBound(): Number? = unwrap(this).getLowerBound()
 
+  /**
+   * Upper bound where this scaling tier applies.
+   *
+   * The scaling tier applies if the difference between the metric
+   * value and its alarm threshold is lower than this value.
+   *
+   * Default: +Infinity
+   */
   public fun upperBound(): Number? = unwrap(this).getUpperBound()
 
+  /**
+   * A builder for [AdjustmentTier]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param adjustment What number to adjust the capacity with. 
+     * The number is interpeted as an added capacity, a new fixed capacity or an
+     * added percentage depending on the AdjustmentType value of the
+     * StepScalingPolicy.
+     *
+     * Can be positive or negative.
+     */
     public fun adjustment(adjustment: Number)
 
+    /**
+     * @param lowerBound Lower bound where this scaling tier applies.
+     * The scaling tier applies if the difference between the metric
+     * value and its alarm threshold is higher than this value.
+     */
     public fun lowerBound(lowerBound: Number)
 
+    /**
+     * @param upperBound Upper bound where this scaling tier applies.
+     * The scaling tier applies if the difference between the metric
+     * value and its alarm threshold is lower than this value.
+     */
     public fun upperBound(upperBound: Number)
   }
 
@@ -22,14 +70,32 @@ public interface AdjustmentTier {
     private val cdkBuilder: software.amazon.awscdk.services.autoscaling.AdjustmentTier.Builder =
         software.amazon.awscdk.services.autoscaling.AdjustmentTier.builder()
 
+    /**
+     * @param adjustment What number to adjust the capacity with. 
+     * The number is interpeted as an added capacity, a new fixed capacity or an
+     * added percentage depending on the AdjustmentType value of the
+     * StepScalingPolicy.
+     *
+     * Can be positive or negative.
+     */
     override fun adjustment(adjustment: Number) {
       cdkBuilder.adjustment(adjustment)
     }
 
+    /**
+     * @param lowerBound Lower bound where this scaling tier applies.
+     * The scaling tier applies if the difference between the metric
+     * value and its alarm threshold is higher than this value.
+     */
     override fun lowerBound(lowerBound: Number) {
       cdkBuilder.lowerBound(lowerBound)
     }
 
+    /**
+     * @param upperBound Upper bound where this scaling tier applies.
+     * The scaling tier applies if the difference between the metric
+     * value and its alarm threshold is lower than this value.
+     */
     override fun upperBound(upperBound: Number) {
       cdkBuilder.upperBound(upperBound)
     }
@@ -41,10 +107,35 @@ public interface AdjustmentTier {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.autoscaling.AdjustmentTier,
   ) : AdjustmentTier {
+    /**
+     * What number to adjust the capacity with.
+     *
+     * The number is interpeted as an added capacity, a new fixed capacity or an
+     * added percentage depending on the AdjustmentType value of the
+     * StepScalingPolicy.
+     *
+     * Can be positive or negative.
+     */
     override fun adjustment(): Number = unwrap(this).getAdjustment()
 
+    /**
+     * Lower bound where this scaling tier applies.
+     *
+     * The scaling tier applies if the difference between the metric
+     * value and its alarm threshold is higher than this value.
+     *
+     * Default: -Infinity if this is the first tier, otherwise the upperBound of the previous tier
+     */
     override fun lowerBound(): Number? = unwrap(this).getLowerBound()
 
+    /**
+     * Upper bound where this scaling tier applies.
+     *
+     * The scaling tier applies if the difference between the metric
+     * value and its alarm threshold is lower than this value.
+     *
+     * Default: +Infinity
+     */
     override fun upperBound(): Number? = unwrap(this).getUpperBound()
   }
 

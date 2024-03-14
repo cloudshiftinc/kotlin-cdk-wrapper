@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
 import kotlin.String
 import kotlin.Suppress
@@ -19,65 +20,159 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTransitGatewayConnect internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  /**
+   * The creation time.
+   */
   public open fun attrCreationTime(): String = unwrap(this).getAttrCreationTime()
 
+  /**
+   * The state of the attachment.
+   */
   public open fun attrState(): String = unwrap(this).getAttrState()
 
+  /**
+   * The ID of the transit gateway attachment.
+   */
   public open fun attrTransitGatewayAttachmentId(): String =
       unwrap(this).getAttrTransitGatewayAttachmentId()
 
+  /**
+   * The ID of the transit gateway.
+   */
   public open fun attrTransitGatewayId(): String = unwrap(this).getAttrTransitGatewayId()
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * The Connect attachment options.
+   */
   public open fun options(): Any = unwrap(this).getOptions()
 
+  /**
+   * The Connect attachment options.
+   */
   public open fun options(`value`: IResolvable) {
     unwrap(this).setOptions(`value`.let(IResolvable::unwrap))
   }
 
+  /**
+   * The Connect attachment options.
+   */
   public open fun options(`value`: TransitGatewayConnectOptionsProperty) {
     unwrap(this).setOptions(`value`.let(TransitGatewayConnectOptionsProperty::unwrap))
   }
 
+  /**
+   * The Connect attachment options.
+   */
   @Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("77935793ebec9bdf3b5c82feda60f560ee5efcd38fb8e99bdd22e505308b704f")
   public open fun options(`value`: TransitGatewayConnectOptionsProperty.Builder.() -> Unit): Unit =
       options(TransitGatewayConnectOptionsProperty(`value`))
 
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
+  /**
+   * The tags for the attachment.
+   */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
+  /**
+   * The tags for the attachment.
+   */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  /**
+   * The tags for the attachment.
+   */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
+  /**
+   * The ID of the attachment from which the Connect attachment was created.
+   */
   public open fun transportTransitGatewayAttachmentId(): String =
       unwrap(this).getTransportTransitGatewayAttachmentId()
 
+  /**
+   * The ID of the attachment from which the Connect attachment was created.
+   */
   public open fun transportTransitGatewayAttachmentId(`value`: String) {
     unwrap(this).setTransportTransitGatewayAttachmentId(`value`)
   }
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.CfnTransitGatewayConnect].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * The Connect attachment options.
+     *
+     * * protocol (gre)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayconnect.html#cfn-ec2-transitgatewayconnect-options)
+     * @param options The Connect attachment options. 
+     */
     public fun options(options: IResolvable)
 
+    /**
+     * The Connect attachment options.
+     *
+     * * protocol (gre)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayconnect.html#cfn-ec2-transitgatewayconnect-options)
+     * @param options The Connect attachment options. 
+     */
     public fun options(options: TransitGatewayConnectOptionsProperty)
 
+    /**
+     * The Connect attachment options.
+     *
+     * * protocol (gre)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayconnect.html#cfn-ec2-transitgatewayconnect-options)
+     * @param options The Connect attachment options. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("21b92d09de996ca5f42748c09084837f9a531a7edcfeaebde1daee4f1162274d")
     public fun options(options: TransitGatewayConnectOptionsProperty.Builder.() -> Unit)
 
+    /**
+     * The tags for the attachment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayconnect.html#cfn-ec2-transitgatewayconnect-tags)
+     * @param tags The tags for the attachment. 
+     */
     public fun tags(tags: List<CfnTag>)
 
+    /**
+     * The tags for the attachment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayconnect.html#cfn-ec2-transitgatewayconnect-tags)
+     * @param tags The tags for the attachment. 
+     */
     public fun tags(vararg tags: CfnTag)
 
+    /**
+     * The ID of the attachment from which the Connect attachment was created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayconnect.html#cfn-ec2-transitgatewayconnect-transporttransitgatewayattachmentid)
+     * @param transportTransitGatewayAttachmentId The ID of the attachment from which the Connect
+     * attachment was created. 
+     */
     public fun transportTransitGatewayAttachmentId(transportTransitGatewayAttachmentId: String)
   }
 
@@ -88,25 +183,68 @@ public open class CfnTransitGatewayConnect internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect.Builder =
         software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect.Builder.create(scope, id)
 
+    /**
+     * The Connect attachment options.
+     *
+     * * protocol (gre)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayconnect.html#cfn-ec2-transitgatewayconnect-options)
+     * @param options The Connect attachment options. 
+     */
     override fun options(options: IResolvable) {
       cdkBuilder.options(options.let(IResolvable::unwrap))
     }
 
+    /**
+     * The Connect attachment options.
+     *
+     * * protocol (gre)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayconnect.html#cfn-ec2-transitgatewayconnect-options)
+     * @param options The Connect attachment options. 
+     */
     override fun options(options: TransitGatewayConnectOptionsProperty) {
       cdkBuilder.options(options.let(TransitGatewayConnectOptionsProperty::unwrap))
     }
 
+    /**
+     * The Connect attachment options.
+     *
+     * * protocol (gre)
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayconnect.html#cfn-ec2-transitgatewayconnect-options)
+     * @param options The Connect attachment options. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("21b92d09de996ca5f42748c09084837f9a531a7edcfeaebde1daee4f1162274d")
     override fun options(options: TransitGatewayConnectOptionsProperty.Builder.() -> Unit): Unit =
         options(TransitGatewayConnectOptionsProperty(options))
 
+    /**
+     * The tags for the attachment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayconnect.html#cfn-ec2-transitgatewayconnect-tags)
+     * @param tags The tags for the attachment. 
+     */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    /**
+     * The tags for the attachment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayconnect.html#cfn-ec2-transitgatewayconnect-tags)
+     * @param tags The tags for the attachment. 
+     */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
+    /**
+     * The ID of the attachment from which the Connect attachment was created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayconnect.html#cfn-ec2-transitgatewayconnect-transporttransitgatewayattachmentid)
+     * @param transportTransitGatewayAttachmentId The ID of the attachment from which the Connect
+     * attachment was created. 
+     */
     override fun transportTransitGatewayAttachmentId(transportTransitGatewayAttachmentId: String) {
       cdkBuilder.transportTransitGatewayAttachmentId(transportTransitGatewayAttachmentId)
     }
@@ -137,9 +275,21 @@ public open class CfnTransitGatewayConnect internal constructor(
   }
 
   public interface TransitGatewayConnectOptionsProperty {
+    /**
+     * The tunnel protocol.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-transitgatewayconnect-transitgatewayconnectoptions.html#cfn-ec2-transitgatewayconnect-transitgatewayconnectoptions-protocol)
+     */
     public fun protocol(): String? = unwrap(this).getProtocol()
 
+    /**
+     * A builder for [TransitGatewayConnectOptionsProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param protocol The tunnel protocol.
+       */
       public fun protocol(protocol: String)
     }
 
@@ -149,6 +299,9 @@ public open class CfnTransitGatewayConnect internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect.TransitGatewayConnectOptionsProperty.builder()
 
+      /**
+       * @param protocol The tunnel protocol.
+       */
       override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
       }
@@ -162,6 +315,11 @@ public open class CfnTransitGatewayConnect internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect.TransitGatewayConnectOptionsProperty,
     ) : TransitGatewayConnectOptionsProperty {
+      /**
+       * The tunnel protocol.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-transitgatewayconnect-transitgatewayconnectoptions.html#cfn-ec2-transitgatewayconnect-transitgatewayconnectoptions-protocol)
+       */
       override fun protocol(): String? = unwrap(this).getProtocol()
     }
 

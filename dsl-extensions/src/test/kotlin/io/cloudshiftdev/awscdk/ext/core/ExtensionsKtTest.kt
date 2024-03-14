@@ -1,11 +1,11 @@
-package io.cloudshiftdev.awscdkdsl.ext.core
+package io.cloudshiftdev.awscdk.ext.core
 
 import io.cloudshiftdev.awscdkdsl.awscdk
-import io.cloudshiftdev.awscdkdsl.ext.iam.action
-import io.cloudshiftdev.awscdkdsl.ext.iam.allow
-import io.cloudshiftdev.awscdkdsl.ext.iam.anyResource
-import io.cloudshiftdev.awscdkdsl.ext.iam.policyStatements
-import io.cloudshiftdev.awscdkdsl.ext.iam.resource
+import io.cloudshiftdev.awscdk.ext.iam.action
+import io.cloudshiftdev.awscdk.ext.iam.allow
+import io.cloudshiftdev.awscdk.ext.iam.anyResource
+import io.cloudshiftdev.awscdk.ext.iam.policyStatements
+import io.cloudshiftdev.awscdk.ext.iam.resource
 import io.cloudshiftdev.awscdkdsl.services.iam.iam
 import io.cloudshiftdev.awscdkdsl.services.s3.s3
 import io.kotest.core.spec.style.FunSpec

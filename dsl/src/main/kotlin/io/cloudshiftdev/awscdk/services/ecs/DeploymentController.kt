@@ -1,12 +1,25 @@
 package io.cloudshiftdev.awscdk.services.ecs
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Unit
 
 public interface DeploymentController {
+  /**
+   * The deployment controller type to use.
+   *
+   * Default: DeploymentControllerType.ECS
+   */
   public fun type(): DeploymentControllerType? =
       unwrap(this).getType()?.let(DeploymentControllerType::wrap)
 
+  /**
+   * A builder for [DeploymentController]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param type The deployment controller type to use.
+     */
     public fun type(type: DeploymentControllerType)
   }
 
@@ -14,6 +27,9 @@ public interface DeploymentController {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.DeploymentController.Builder =
         software.amazon.awscdk.services.ecs.DeploymentController.builder()
 
+    /**
+     * @param type The deployment controller type to use.
+     */
     override fun type(type: DeploymentControllerType) {
       cdkBuilder.type(type.let(DeploymentControllerType::unwrap))
     }
@@ -25,6 +41,11 @@ public interface DeploymentController {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.DeploymentController,
   ) : DeploymentController {
+    /**
+     * The deployment controller type to use.
+     *
+     * Default: DeploymentControllerType.ECS
+     */
     override fun type(): DeploymentControllerType? =
         unwrap(this).getType()?.let(DeploymentControllerType::wrap)
   }

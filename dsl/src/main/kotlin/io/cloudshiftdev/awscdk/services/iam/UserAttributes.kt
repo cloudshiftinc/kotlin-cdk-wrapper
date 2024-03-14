@@ -1,12 +1,26 @@
 package io.cloudshiftdev.awscdk.services.iam
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface UserAttributes {
+  /**
+   * The ARN of the user.
+   *
+   * Format: arn:<partition>:iam::<account-id>:user/<user-name-with-path>
+   */
   public fun userArn(): String
 
+  /**
+   * A builder for [UserAttributes]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param userArn The ARN of the user. 
+     * Format: arn:<partition>:iam::<account-id>:user/<user-name-with-path>
+     */
     public fun userArn(userArn: String)
   }
 
@@ -14,6 +28,10 @@ public interface UserAttributes {
     private val cdkBuilder: software.amazon.awscdk.services.iam.UserAttributes.Builder =
         software.amazon.awscdk.services.iam.UserAttributes.builder()
 
+    /**
+     * @param userArn The ARN of the user. 
+     * Format: arn:<partition>:iam::<account-id>:user/<user-name-with-path>
+     */
     override fun userArn(userArn: String) {
       cdkBuilder.userArn(userArn)
     }
@@ -24,6 +42,11 @@ public interface UserAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.iam.UserAttributes,
   ) : UserAttributes {
+    /**
+     * The ARN of the user.
+     *
+     * Format: arn:<partition>:iam::<account-id>:user/<user-name-with-path>
+     */
     override fun userArn(): String = unwrap(this).getUserArn()
   }
 

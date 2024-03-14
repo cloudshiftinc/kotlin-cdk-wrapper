@@ -1,21 +1,50 @@
 package io.cloudshiftdev.awscdk.services.rds
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Unit
 
 public interface ClusterEngineBindOptions {
+  /**
+   * The customer-provided ParameterGroup.
+   *
+   * Default: - none
+   */
   public fun parameterGroup(): IParameterGroup? =
       unwrap(this).getParameterGroup()?.let(IParameterGroup::wrap)
 
+  /**
+   * The role used for S3 exporting.
+   *
+   * Default: - none
+   */
   public fun s3ExportRole(): IRole? = unwrap(this).getS3ExportRole()?.let(IRole::wrap)
 
+  /**
+   * The role used for S3 importing.
+   *
+   * Default: - none
+   */
   public fun s3ImportRole(): IRole? = unwrap(this).getS3ImportRole()?.let(IRole::wrap)
 
+  /**
+   * A builder for [ClusterEngineBindOptions]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param parameterGroup The customer-provided ParameterGroup.
+     */
     public fun parameterGroup(parameterGroup: IParameterGroup)
 
+    /**
+     * @param s3ExportRole The role used for S3 exporting.
+     */
     public fun s3ExportRole(s3ExportRole: IRole)
 
+    /**
+     * @param s3ImportRole The role used for S3 importing.
+     */
     public fun s3ImportRole(s3ImportRole: IRole)
   }
 
@@ -23,14 +52,23 @@ public interface ClusterEngineBindOptions {
     private val cdkBuilder: software.amazon.awscdk.services.rds.ClusterEngineBindOptions.Builder =
         software.amazon.awscdk.services.rds.ClusterEngineBindOptions.builder()
 
+    /**
+     * @param parameterGroup The customer-provided ParameterGroup.
+     */
     override fun parameterGroup(parameterGroup: IParameterGroup) {
       cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup::unwrap))
     }
 
+    /**
+     * @param s3ExportRole The role used for S3 exporting.
+     */
     override fun s3ExportRole(s3ExportRole: IRole) {
       cdkBuilder.s3ExportRole(s3ExportRole.let(IRole::unwrap))
     }
 
+    /**
+     * @param s3ImportRole The role used for S3 importing.
+     */
     override fun s3ImportRole(s3ImportRole: IRole) {
       cdkBuilder.s3ImportRole(s3ImportRole.let(IRole::unwrap))
     }
@@ -42,11 +80,26 @@ public interface ClusterEngineBindOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.rds.ClusterEngineBindOptions,
   ) : ClusterEngineBindOptions {
+    /**
+     * The customer-provided ParameterGroup.
+     *
+     * Default: - none
+     */
     override fun parameterGroup(): IParameterGroup? =
         unwrap(this).getParameterGroup()?.let(IParameterGroup::wrap)
 
+    /**
+     * The role used for S3 exporting.
+     *
+     * Default: - none
+     */
     override fun s3ExportRole(): IRole? = unwrap(this).getS3ExportRole()?.let(IRole::wrap)
 
+    /**
+     * The role used for S3 importing.
+     *
+     * Default: - none
+     */
     override fun s3ImportRole(): IRole? = unwrap(this).getS3ImportRole()?.let(IRole::wrap)
   }
 

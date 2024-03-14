@@ -1,8 +1,13 @@
 package io.cloudshiftdev.awscdk.services.appsync
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Unit
 
 public interface SchemaBindOptions {
+  /**
+   * A builder for [SchemaBindOptions]
+   */
+  @CdkDslMarker
   public interface Builder
 
   private class BuilderImpl : Builder {

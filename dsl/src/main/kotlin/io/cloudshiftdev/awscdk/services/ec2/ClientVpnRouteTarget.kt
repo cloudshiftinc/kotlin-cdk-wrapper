@@ -5,6 +5,9 @@ import kotlin.String
 public abstract class ClientVpnRouteTarget internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ec2.ClientVpnRouteTarget,
 ) {
+  /**
+   * The subnet ID.
+   */
   public open fun subnetId(): String = unwrap(this).getSubnetId()
 
   private class Wrapper internal constructor(
@@ -12,10 +15,10 @@ public abstract class ClientVpnRouteTarget internal constructor(
   ) : ClientVpnRouteTarget(cdkObject)
 
   public companion object {
-    public open fun local(): ClientVpnRouteTarget =
+    public fun local(): ClientVpnRouteTarget =
         software.amazon.awscdk.services.ec2.ClientVpnRouteTarget.local().let(ClientVpnRouteTarget::wrap)
 
-    public open fun subnet(subnet: ISubnet): ClientVpnRouteTarget =
+    public fun subnet(subnet: ISubnet): ClientVpnRouteTarget =
         software.amazon.awscdk.services.ec2.ClientVpnRouteTarget.subnet(subnet.let(ISubnet::unwrap)).let(ClientVpnRouteTarget::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.ClientVpnRouteTarget):

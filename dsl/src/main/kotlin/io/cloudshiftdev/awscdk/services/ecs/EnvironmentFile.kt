@@ -11,31 +11,36 @@ import kotlin.jvm.JvmName
 public abstract class EnvironmentFile internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ecs.EnvironmentFile,
 ) {
-  public open fun bind(arg0: Construct): EnvironmentFileConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(EnvironmentFileConfig::wrap)
+  /**
+   * Called when the container is initialized to allow this object to bind to the stack.
+   *
+   * @param scope The binding scope. 
+   */
+  public open fun bind(scope: Construct): EnvironmentFileConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(EnvironmentFileConfig::wrap)
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.EnvironmentFile,
   ) : EnvironmentFile(cdkObject)
 
   public companion object {
-    public open fun fromAsset(path: String): AssetEnvironmentFile =
+    public fun fromAsset(path: String): AssetEnvironmentFile =
         software.amazon.awscdk.services.ecs.EnvironmentFile.fromAsset(path).let(AssetEnvironmentFile::wrap)
 
-    public open fun fromAsset(path: String, options: AssetOptions): AssetEnvironmentFile =
+    public fun fromAsset(path: String, options: AssetOptions): AssetEnvironmentFile =
         software.amazon.awscdk.services.ecs.EnvironmentFile.fromAsset(path,
         options.let(AssetOptions::unwrap)).let(AssetEnvironmentFile::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("edeec1152b0bf37aee91af633844d9f37c3d95bf602d5a2e342201186b0d53ef")
-    public open fun fromAsset(path: String, options: AssetOptions.Builder.() -> Unit):
+    public fun fromAsset(path: String, options: AssetOptions.Builder.() -> Unit):
         AssetEnvironmentFile = fromAsset(path, AssetOptions(options))
 
-    public open fun fromBucket(bucket: IBucket, key: String): S3EnvironmentFile =
+    public fun fromBucket(bucket: IBucket, key: String): S3EnvironmentFile =
         software.amazon.awscdk.services.ecs.EnvironmentFile.fromBucket(bucket.let(IBucket::unwrap),
         key).let(S3EnvironmentFile::wrap)
 
-    public open fun fromBucket(
+    public fun fromBucket(
       bucket: IBucket,
       key: String,
       objectVersion: String,

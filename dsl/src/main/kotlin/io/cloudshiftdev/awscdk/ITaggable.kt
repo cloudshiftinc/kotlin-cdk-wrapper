@@ -1,11 +1,17 @@
 package io.cloudshiftdev.awscdk
 
 public interface ITaggable {
+  /**
+   * TagManager to set, remove and format tags.
+   */
   public fun tags(): TagManager
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.ITaggable,
   ) : ITaggable {
+    /**
+     * TagManager to set, remove and format tags.
+     */
     override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
   }
 

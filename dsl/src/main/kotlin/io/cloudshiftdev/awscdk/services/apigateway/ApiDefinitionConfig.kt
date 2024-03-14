@@ -1,21 +1,47 @@
 package io.cloudshiftdev.awscdk.services.apigateway
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
 import kotlin.Suppress
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
 public interface ApiDefinitionConfig {
+  /**
+   * Inline specification (mutually exclusive with `s3Location`).
+   *
+   * Default: - API definition is not defined inline
+   */
   public fun inlineDefinition(): Any? = unwrap(this).getInlineDefinition()
 
+  /**
+   * The location of the specification in S3 (mutually exclusive with `inlineDefinition`).
+   *
+   * Default: - API definition is not an S3 location
+   */
   public fun s3Location(): ApiDefinitionS3Location? =
       unwrap(this).getS3Location()?.let(ApiDefinitionS3Location::wrap)
 
+  /**
+   * A builder for [ApiDefinitionConfig]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param inlineDefinition Inline specification (mutually exclusive with `s3Location`).
+     */
     public fun inlineDefinition(inlineDefinition: Any)
 
+    /**
+     * @param s3Location The location of the specification in S3 (mutually exclusive with
+     * `inlineDefinition`).
+     */
     public fun s3Location(s3Location: ApiDefinitionS3Location)
 
+    /**
+     * @param s3Location The location of the specification in S3 (mutually exclusive with
+     * `inlineDefinition`).
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4eceb3142d927046d2ff9f8c231ea40847b258880f47c118a3b88b7a29b4b7d7")
     public fun s3Location(s3Location: ApiDefinitionS3Location.Builder.() -> Unit)
@@ -25,14 +51,25 @@ public interface ApiDefinitionConfig {
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.ApiDefinitionConfig.Builder =
         software.amazon.awscdk.services.apigateway.ApiDefinitionConfig.builder()
 
+    /**
+     * @param inlineDefinition Inline specification (mutually exclusive with `s3Location`).
+     */
     override fun inlineDefinition(inlineDefinition: Any) {
       cdkBuilder.inlineDefinition(inlineDefinition)
     }
 
+    /**
+     * @param s3Location The location of the specification in S3 (mutually exclusive with
+     * `inlineDefinition`).
+     */
     override fun s3Location(s3Location: ApiDefinitionS3Location) {
       cdkBuilder.s3Location(s3Location.let(ApiDefinitionS3Location::unwrap))
     }
 
+    /**
+     * @param s3Location The location of the specification in S3 (mutually exclusive with
+     * `inlineDefinition`).
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4eceb3142d927046d2ff9f8c231ea40847b258880f47c118a3b88b7a29b4b7d7")
     override fun s3Location(s3Location: ApiDefinitionS3Location.Builder.() -> Unit): Unit =
@@ -45,8 +82,18 @@ public interface ApiDefinitionConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.ApiDefinitionConfig,
   ) : ApiDefinitionConfig {
+    /**
+     * Inline specification (mutually exclusive with `s3Location`).
+     *
+     * Default: - API definition is not defined inline
+     */
     override fun inlineDefinition(): Any? = unwrap(this).getInlineDefinition()
 
+    /**
+     * The location of the specification in S3 (mutually exclusive with `inlineDefinition`).
+     *
+     * Default: - API definition is not an S3 location
+     */
     override fun s3Location(): ApiDefinitionS3Location? =
         unwrap(this).getS3Location()?.let(ApiDefinitionS3Location::wrap)
   }

@@ -5,15 +5,21 @@ import kotlin.String
 public open class Architecture internal constructor(
   private val cdkObject: software.amazon.awscdk.services.lambda.Architecture,
 ) {
+  /**
+   * The platform to use for this architecture when building with Docker.
+   */
   public open fun dockerPlatform(): String = unwrap(this).getDockerPlatform()
 
+  /**
+   * The name of the architecture as recognized by the AWS Lambda service APIs.
+   */
   public open fun name(): String = unwrap(this).getName()
 
   public companion object {
-    public open fun custom(name: String): Architecture =
+    public fun custom(name: String): Architecture =
         software.amazon.awscdk.services.lambda.Architecture.custom(name).let(Architecture::wrap)
 
-    public open fun custom(name: String, dockerPlatform: String): Architecture =
+    public fun custom(name: String, dockerPlatform: String): Architecture =
         software.amazon.awscdk.services.lambda.Architecture.custom(name,
         dockerPlatform).let(Architecture::wrap)
 

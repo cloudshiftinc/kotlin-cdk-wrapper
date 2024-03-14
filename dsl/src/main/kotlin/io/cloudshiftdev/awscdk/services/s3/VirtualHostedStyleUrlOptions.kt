@@ -1,12 +1,25 @@
 package io.cloudshiftdev.awscdk.services.s3
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import kotlin.Unit
 
 public interface VirtualHostedStyleUrlOptions {
+  /**
+   * Specifies the URL includes the region.
+   *
+   * Default: - true
+   */
   public fun regional(): Boolean? = unwrap(this).getRegional()
 
+  /**
+   * A builder for [VirtualHostedStyleUrlOptions]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param regional Specifies the URL includes the region.
+     */
     public fun regional(regional: Boolean)
   }
 
@@ -14,6 +27,9 @@ public interface VirtualHostedStyleUrlOptions {
     private val cdkBuilder: software.amazon.awscdk.services.s3.VirtualHostedStyleUrlOptions.Builder
         = software.amazon.awscdk.services.s3.VirtualHostedStyleUrlOptions.builder()
 
+    /**
+     * @param regional Specifies the URL includes the region.
+     */
     override fun regional(regional: Boolean) {
       cdkBuilder.regional(regional)
     }
@@ -25,6 +41,11 @@ public interface VirtualHostedStyleUrlOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.s3.VirtualHostedStyleUrlOptions,
   ) : VirtualHostedStyleUrlOptions {
+    /**
+     * Specifies the URL includes the region.
+     *
+     * Default: - true
+     */
     override fun regional(): Boolean? = unwrap(this).getRegional()
   }
 

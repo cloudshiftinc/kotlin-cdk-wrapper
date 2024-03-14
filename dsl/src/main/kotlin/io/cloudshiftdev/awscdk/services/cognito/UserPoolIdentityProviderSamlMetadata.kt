@@ -6,16 +6,22 @@ public open class UserPoolIdentityProviderSamlMetadata internal constructor(
   private val cdkObject:
       software.amazon.awscdk.services.cognito.UserPoolIdentityProviderSamlMetadata,
 ) {
+  /**
+   * A URL hosting SAML metadata, or the content of a file containing SAML metadata.
+   */
   public open fun metadataContent(): String = unwrap(this).getMetadataContent()
 
+  /**
+   * The type of metadata, either a URL or file content.
+   */
   public open fun metadataType(): UserPoolIdentityProviderSamlMetadataType =
       unwrap(this).getMetadataType().let(UserPoolIdentityProviderSamlMetadataType::wrap)
 
   public companion object {
-    public open fun `file`(fileContent: String): UserPoolIdentityProviderSamlMetadata =
+    public fun `file`(fileContent: String): UserPoolIdentityProviderSamlMetadata =
         software.amazon.awscdk.services.cognito.UserPoolIdentityProviderSamlMetadata.`file`(fileContent).let(UserPoolIdentityProviderSamlMetadata::wrap)
 
-    public open fun url(url: String): UserPoolIdentityProviderSamlMetadata =
+    public fun url(url: String): UserPoolIdentityProviderSamlMetadata =
         software.amazon.awscdk.services.cognito.UserPoolIdentityProviderSamlMetadata.url(url).let(UserPoolIdentityProviderSamlMetadata::wrap)
 
     internal

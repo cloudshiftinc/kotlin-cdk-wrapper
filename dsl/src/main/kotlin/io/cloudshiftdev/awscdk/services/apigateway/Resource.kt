@@ -1,5 +1,6 @@
 package io.cloudshiftdev.awscdk.services.apigateway
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Suppress
 import kotlin.Unit
@@ -10,46 +11,147 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class Resource internal constructor(
   private val cdkObject: software.amazon.awscdk.services.apigateway.Resource,
 ) : ResourceBase(cdkObject) {
+  /**
+   * The rest API that this resource is part of.
+   *
+   * The reason we need the RestApi object itself and not just the ID is because the model
+   * is being tracked by the top-level RestApi object for the purpose of calculating it's
+   * hash to determine the ID of the deployment. This allows us to automatically update
+   * the deployment when the model of the REST API changes.
+   */
   public override fun api(): IRestApi = unwrap(this).getApi().let(IRestApi::wrap)
 
+  /**
+   * Default options for CORS preflight OPTIONS method.
+   */
   public override fun defaultCorsPreflightOptions(): CorsOptions? =
       unwrap(this).getDefaultCorsPreflightOptions()?.let(CorsOptions::wrap)
 
+  /**
+   * An integration to use as a default for all methods created within this API unless an
+   * integration is specified.
+   */
   public override fun defaultIntegration(): Integration? =
       unwrap(this).getDefaultIntegration()?.let(Integration::wrap)
 
+  /**
+   * Method options to use as a default for all methods created within this API unless custom
+   * options are specified.
+   */
   public override fun defaultMethodOptions(): MethodOptions? =
       unwrap(this).getDefaultMethodOptions()?.let(MethodOptions::wrap)
 
+  /**
+   * The parent of this resource or undefined for the root resource.
+   */
   public override fun parentResource(): IResource? =
       unwrap(this).getParentResource()?.let(IResource::wrap)
 
+  /**
+   * The full path of this resource.
+   */
   public override fun path(): String = unwrap(this).getPath()
 
+  /**
+   * The ID of the resource.
+   */
   public override fun resourceId(): String = unwrap(this).getResourceId()
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.apigateway.Resource].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * Adds a CORS preflight OPTIONS method to this resource and all child resources.
+     *
+     * You can add CORS at the resource-level using `addCorsPreflight`.
+     *
+     * Default: - CORS is disabled
+     *
+     * @param defaultCorsPreflightOptions Adds a CORS preflight OPTIONS method to this resource and
+     * all child resources. 
+     */
     public fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions)
 
+    /**
+     * Adds a CORS preflight OPTIONS method to this resource and all child resources.
+     *
+     * You can add CORS at the resource-level using `addCorsPreflight`.
+     *
+     * Default: - CORS is disabled
+     *
+     * @param defaultCorsPreflightOptions Adds a CORS preflight OPTIONS method to this resource and
+     * all child resources. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d2236b4208fceda736b1bedffea6279dd798622412d44457398e6054538f2eae")
     public
         fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions.Builder.() -> Unit)
 
+    /**
+     * An integration to use as a default for all methods created within this API unless an
+     * integration is specified.
+     *
+     * Default: - Inherited from parent.
+     *
+     * @param defaultIntegration An integration to use as a default for all methods created within
+     * this API unless an integration is specified. 
+     */
     public fun defaultIntegration(defaultIntegration: Integration)
 
+    /**
+     * An integration to use as a default for all methods created within this API unless an
+     * integration is specified.
+     *
+     * Default: - Inherited from parent.
+     *
+     * @param defaultIntegration An integration to use as a default for all methods created within
+     * this API unless an integration is specified. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("904d07c2db4af04b79ae083fe47132f9a207260a7a1ca194d70a4e5e218000ee")
     public fun defaultIntegration(defaultIntegration: Integration.Builder.() -> Unit)
 
+    /**
+     * Method options to use as a default for all methods created within this API unless custom
+     * options are specified.
+     *
+     * Default: - Inherited from parent.
+     *
+     * @param defaultMethodOptions Method options to use as a default for all methods created within
+     * this API unless custom options are specified. 
+     */
     public fun defaultMethodOptions(defaultMethodOptions: MethodOptions)
 
+    /**
+     * Method options to use as a default for all methods created within this API unless custom
+     * options are specified.
+     *
+     * Default: - Inherited from parent.
+     *
+     * @param defaultMethodOptions Method options to use as a default for all methods created within
+     * this API unless custom options are specified. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f11cd7f099631d8488ca116f456cc9be8fcb574351f138b3a83632c08ca46237")
     public fun defaultMethodOptions(defaultMethodOptions: MethodOptions.Builder.() -> Unit)
 
+    /**
+     * The parent resource of this resource.
+     *
+     * You can either pass another
+     * `Resource` object or a `RestApi` object here.
+     *
+     * @param parent The parent resource of this resource. 
+     */
     public fun parent(parent: IResource)
 
+    /**
+     * A path name for the resource.
+     *
+     * @param pathPart A path name for the resource. 
+     */
     public fun pathPart(pathPart: String)
   }
 
@@ -60,38 +162,107 @@ public open class Resource internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.Resource.Builder =
         software.amazon.awscdk.services.apigateway.Resource.Builder.create(scope, id)
 
+    /**
+     * Adds a CORS preflight OPTIONS method to this resource and all child resources.
+     *
+     * You can add CORS at the resource-level using `addCorsPreflight`.
+     *
+     * Default: - CORS is disabled
+     *
+     * @param defaultCorsPreflightOptions Adds a CORS preflight OPTIONS method to this resource and
+     * all child resources. 
+     */
     override fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions) {
       cdkBuilder.defaultCorsPreflightOptions(defaultCorsPreflightOptions.let(CorsOptions::unwrap))
     }
 
+    /**
+     * Adds a CORS preflight OPTIONS method to this resource and all child resources.
+     *
+     * You can add CORS at the resource-level using `addCorsPreflight`.
+     *
+     * Default: - CORS is disabled
+     *
+     * @param defaultCorsPreflightOptions Adds a CORS preflight OPTIONS method to this resource and
+     * all child resources. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d2236b4208fceda736b1bedffea6279dd798622412d44457398e6054538f2eae")
     override
         fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions.Builder.() -> Unit):
         Unit = defaultCorsPreflightOptions(CorsOptions(defaultCorsPreflightOptions))
 
+    /**
+     * An integration to use as a default for all methods created within this API unless an
+     * integration is specified.
+     *
+     * Default: - Inherited from parent.
+     *
+     * @param defaultIntegration An integration to use as a default for all methods created within
+     * this API unless an integration is specified. 
+     */
     override fun defaultIntegration(defaultIntegration: Integration) {
       cdkBuilder.defaultIntegration(defaultIntegration.let(Integration::unwrap))
     }
 
+    /**
+     * An integration to use as a default for all methods created within this API unless an
+     * integration is specified.
+     *
+     * Default: - Inherited from parent.
+     *
+     * @param defaultIntegration An integration to use as a default for all methods created within
+     * this API unless an integration is specified. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("904d07c2db4af04b79ae083fe47132f9a207260a7a1ca194d70a4e5e218000ee")
     override fun defaultIntegration(defaultIntegration: Integration.Builder.() -> Unit): Unit =
         defaultIntegration(Integration(defaultIntegration))
 
+    /**
+     * Method options to use as a default for all methods created within this API unless custom
+     * options are specified.
+     *
+     * Default: - Inherited from parent.
+     *
+     * @param defaultMethodOptions Method options to use as a default for all methods created within
+     * this API unless custom options are specified. 
+     */
     override fun defaultMethodOptions(defaultMethodOptions: MethodOptions) {
       cdkBuilder.defaultMethodOptions(defaultMethodOptions.let(MethodOptions::unwrap))
     }
 
+    /**
+     * Method options to use as a default for all methods created within this API unless custom
+     * options are specified.
+     *
+     * Default: - Inherited from parent.
+     *
+     * @param defaultMethodOptions Method options to use as a default for all methods created within
+     * this API unless custom options are specified. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f11cd7f099631d8488ca116f456cc9be8fcb574351f138b3a83632c08ca46237")
     override fun defaultMethodOptions(defaultMethodOptions: MethodOptions.Builder.() -> Unit): Unit
         = defaultMethodOptions(MethodOptions(defaultMethodOptions))
 
+    /**
+     * The parent resource of this resource.
+     *
+     * You can either pass another
+     * `Resource` object or a `RestApi` object here.
+     *
+     * @param parent The parent resource of this resource. 
+     */
     override fun parent(parent: IResource) {
       cdkBuilder.parent(parent.let(IResource::unwrap))
     }
 
+    /**
+     * A path name for the resource.
+     *
+     * @param pathPart A path name for the resource. 
+     */
     override fun pathPart(pathPart: String) {
       cdkBuilder.pathPart(pathPart)
     }
@@ -100,7 +271,7 @@ public open class Resource internal constructor(
   }
 
   public companion object {
-    public open fun fromResourceAttributes(
+    public fun fromResourceAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
       attrs: ResourceAttributes,
@@ -110,7 +281,7 @@ public open class Resource internal constructor(
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("dc2cd864e2b32bee5456bf8bcb5d9271b8ba7faa17a2e56e903d053de2ee6379")
-    public open fun fromResourceAttributes(
+    public fun fromResourceAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
       attrs: ResourceAttributes.Builder.() -> Unit,

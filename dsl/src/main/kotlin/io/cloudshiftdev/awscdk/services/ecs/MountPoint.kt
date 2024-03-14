@@ -1,17 +1,39 @@
 package io.cloudshiftdev.awscdk.services.ecs
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 
 public interface MountPoint : BaseMountPoint {
+  /**
+   * The name of the volume to mount.
+   *
+   * Must be a volume name referenced in the name parameter of task definition volume.
+   */
   public fun sourceVolume(): String
 
+  /**
+   * A builder for [MountPoint]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param containerPath The path on the container to mount the host volume at. 
+     */
     public fun containerPath(containerPath: String)
 
+    /**
+     * @param readOnly Specifies whether to give the container read-only access to the volume. 
+     * If this value is true, the container has read-only access to the volume.
+     * If this value is false, then the container can write to the volume.
+     */
     public fun readOnly(readOnly: Boolean)
 
+    /**
+     * @param sourceVolume The name of the volume to mount. 
+     * Must be a volume name referenced in the name parameter of task definition volume.
+     */
     public fun sourceVolume(sourceVolume: String)
   }
 
@@ -19,14 +41,26 @@ public interface MountPoint : BaseMountPoint {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.MountPoint.Builder =
         software.amazon.awscdk.services.ecs.MountPoint.builder()
 
+    /**
+     * @param containerPath The path on the container to mount the host volume at. 
+     */
     override fun containerPath(containerPath: String) {
       cdkBuilder.containerPath(containerPath)
     }
 
+    /**
+     * @param readOnly Specifies whether to give the container read-only access to the volume. 
+     * If this value is true, the container has read-only access to the volume.
+     * If this value is false, then the container can write to the volume.
+     */
     override fun readOnly(readOnly: Boolean) {
       cdkBuilder.readOnly(readOnly)
     }
 
+    /**
+     * @param sourceVolume The name of the volume to mount. 
+     * Must be a volume name referenced in the name parameter of task definition volume.
+     */
     override fun sourceVolume(sourceVolume: String) {
       cdkBuilder.sourceVolume(sourceVolume)
     }
@@ -37,10 +71,24 @@ public interface MountPoint : BaseMountPoint {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.MountPoint,
   ) : MountPoint {
+    /**
+     * The path on the container to mount the host volume at.
+     */
     override fun containerPath(): String = unwrap(this).getContainerPath()
 
+    /**
+     * Specifies whether to give the container read-only access to the volume.
+     *
+     * If this value is true, the container has read-only access to the volume.
+     * If this value is false, then the container can write to the volume.
+     */
     override fun readOnly(): Boolean = unwrap(this).getReadOnly()
 
+    /**
+     * The name of the volume to mount.
+     *
+     * Must be a volume name referenced in the name parameter of task definition volume.
+     */
     override fun sourceVolume(): String = unwrap(this).getSourceVolume()
   }
 

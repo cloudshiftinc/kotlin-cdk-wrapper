@@ -3,11 +3,17 @@ package io.cloudshiftdev.awscdk.services.ec2
 import kotlin.String
 
 public interface IGatewayVpcEndpointService {
+  /**
+   * The name of the service.
+   */
   public fun name(): String
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.IGatewayVpcEndpointService,
   ) : IGatewayVpcEndpointService {
+    /**
+     * The name of the service.
+     */
     override fun name(): String = unwrap(this).getName()
   }
 

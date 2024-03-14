@@ -6,6 +6,9 @@ import io.cloudshiftdev.awscdk.services.ec2.IConnectable
 public open class ListenerPort internal constructor(
   private val cdkObject: software.amazon.awscdk.services.elasticloadbalancing.ListenerPort,
 ) : IConnectable {
+  /**
+   * The network connections associated with this resource.
+   */
   public override fun connections(): Connections =
       unwrap(this).getConnections().let(Connections::wrap)
 

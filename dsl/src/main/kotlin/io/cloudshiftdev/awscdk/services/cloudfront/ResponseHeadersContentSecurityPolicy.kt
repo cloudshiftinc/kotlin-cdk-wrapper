@@ -1,17 +1,39 @@
 package io.cloudshiftdev.awscdk.services.cloudfront
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 
 public interface ResponseHeadersContentSecurityPolicy {
+  /**
+   * The policy directives and their values that CloudFront includes as values for the
+   * Content-Security-Policy HTTP response header.
+   */
   public fun contentSecurityPolicy(): String
 
+  /**
+   * A Boolean that determines whether CloudFront overrides the Content-Security-Policy HTTP
+   * response header received from the origin with the one specified in this response headers policy.
+   */
   public fun `override`(): Boolean
 
+  /**
+   * A builder for [ResponseHeadersContentSecurityPolicy]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param contentSecurityPolicy The policy directives and their values that CloudFront includes
+     * as values for the Content-Security-Policy HTTP response header. 
+     */
     public fun contentSecurityPolicy(contentSecurityPolicy: String)
 
+    /**
+     * @param override A Boolean that determines whether CloudFront overrides the
+     * Content-Security-Policy HTTP response header received from the origin with the one specified in
+     * this response headers policy. 
+     */
     public fun `override`(`override`: Boolean)
   }
 
@@ -20,10 +42,19 @@ public interface ResponseHeadersContentSecurityPolicy {
         software.amazon.awscdk.services.cloudfront.ResponseHeadersContentSecurityPolicy.Builder =
         software.amazon.awscdk.services.cloudfront.ResponseHeadersContentSecurityPolicy.builder()
 
+    /**
+     * @param contentSecurityPolicy The policy directives and their values that CloudFront includes
+     * as values for the Content-Security-Policy HTTP response header. 
+     */
     override fun contentSecurityPolicy(contentSecurityPolicy: String) {
       cdkBuilder.contentSecurityPolicy(contentSecurityPolicy)
     }
 
+    /**
+     * @param override A Boolean that determines whether CloudFront overrides the
+     * Content-Security-Policy HTTP response header received from the origin with the one specified in
+     * this response headers policy. 
+     */
     override fun `override`(`override`: Boolean) {
       cdkBuilder.`override`(`override`)
     }
@@ -37,8 +68,16 @@ public interface ResponseHeadersContentSecurityPolicy {
     internal val cdkObject:
         software.amazon.awscdk.services.cloudfront.ResponseHeadersContentSecurityPolicy,
   ) : ResponseHeadersContentSecurityPolicy {
+    /**
+     * The policy directives and their values that CloudFront includes as values for the
+     * Content-Security-Policy HTTP response header.
+     */
     override fun contentSecurityPolicy(): String = unwrap(this).getContentSecurityPolicy()
 
+    /**
+     * A Boolean that determines whether CloudFront overrides the Content-Security-Policy HTTP
+     * response header received from the origin with the one specified in this response headers policy.
+     */
     override fun `override`(): Boolean = unwrap(this).getOverride()
   }
 

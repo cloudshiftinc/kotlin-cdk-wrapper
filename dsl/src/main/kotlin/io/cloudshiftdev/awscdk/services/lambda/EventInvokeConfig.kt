@@ -2,6 +2,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.Resource
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -11,17 +12,69 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class EventInvokeConfig internal constructor(
   private val cdkObject: software.amazon.awscdk.services.lambda.EventInvokeConfig,
 ) : Resource(cdkObject) {
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.lambda.EventInvokeConfig].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * The Lambda function.
+     *
+     * @param function The Lambda function. 
+     */
     public fun function(function: IFunction)
 
+    /**
+     * The maximum age of a request that Lambda sends to a function for processing.
+     *
+     * Minimum: 60 seconds
+     * Maximum: 6 hours
+     *
+     * Default: Duration.hours(6)
+     *
+     * @param maxEventAge The maximum age of a request that Lambda sends to a function for
+     * processing. 
+     */
     public fun maxEventAge(maxEventAge: Duration)
 
+    /**
+     * The destination for failed invocations.
+     *
+     * Default: - no destination
+     *
+     * @param onFailure The destination for failed invocations. 
+     */
     public fun onFailure(onFailure: IDestination)
 
+    /**
+     * The destination for successful invocations.
+     *
+     * Default: - no destination
+     *
+     * @param onSuccess The destination for successful invocations. 
+     */
     public fun onSuccess(onSuccess: IDestination)
 
+    /**
+     * The qualifier.
+     *
+     * Default: - latest version
+     *
+     * @param qualifier The qualifier. 
+     */
     public fun qualifier(qualifier: String)
 
+    /**
+     * The maximum number of times to retry when the function returns an error.
+     *
+     * Minimum: 0
+     * Maximum: 2
+     *
+     * Default: 2
+     *
+     * @param retryAttempts The maximum number of times to retry when the function returns an error.
+     * 
+     */
     public fun retryAttempts(retryAttempts: Number)
   }
 
@@ -32,26 +85,74 @@ public open class EventInvokeConfig internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lambda.EventInvokeConfig.Builder =
         software.amazon.awscdk.services.lambda.EventInvokeConfig.Builder.create(scope, id)
 
+    /**
+     * The Lambda function.
+     *
+     * @param function The Lambda function. 
+     */
     override fun function(function: IFunction) {
       cdkBuilder.function(function.let(IFunction::unwrap))
     }
 
+    /**
+     * The maximum age of a request that Lambda sends to a function for processing.
+     *
+     * Minimum: 60 seconds
+     * Maximum: 6 hours
+     *
+     * Default: Duration.hours(6)
+     *
+     * @param maxEventAge The maximum age of a request that Lambda sends to a function for
+     * processing. 
+     */
     override fun maxEventAge(maxEventAge: Duration) {
       cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
     }
 
+    /**
+     * The destination for failed invocations.
+     *
+     * Default: - no destination
+     *
+     * @param onFailure The destination for failed invocations. 
+     */
     override fun onFailure(onFailure: IDestination) {
       cdkBuilder.onFailure(onFailure.let(IDestination::unwrap))
     }
 
+    /**
+     * The destination for successful invocations.
+     *
+     * Default: - no destination
+     *
+     * @param onSuccess The destination for successful invocations. 
+     */
     override fun onSuccess(onSuccess: IDestination) {
       cdkBuilder.onSuccess(onSuccess.let(IDestination::unwrap))
     }
 
+    /**
+     * The qualifier.
+     *
+     * Default: - latest version
+     *
+     * @param qualifier The qualifier. 
+     */
     override fun qualifier(qualifier: String) {
       cdkBuilder.qualifier(qualifier)
     }
 
+    /**
+     * The maximum number of times to retry when the function returns an error.
+     *
+     * Minimum: 0
+     * Maximum: 2
+     *
+     * Default: 2
+     *
+     * @param retryAttempts The maximum number of times to retry when the function returns an error.
+     * 
+     */
     override fun retryAttempts(retryAttempts: Number) {
       cdkBuilder.retryAttempts(retryAttempts)
     }

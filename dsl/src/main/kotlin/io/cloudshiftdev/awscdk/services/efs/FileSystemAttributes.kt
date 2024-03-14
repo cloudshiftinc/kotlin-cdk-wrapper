@@ -1,21 +1,48 @@
 package io.cloudshiftdev.awscdk.services.efs
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import kotlin.String
 import kotlin.Unit
 
 public interface FileSystemAttributes {
+  /**
+   * The File System's Arn.
+   *
+   * Default: - determined based on fileSystemId
+   */
   public fun fileSystemArn(): String? = unwrap(this).getFileSystemArn()
 
+  /**
+   * The File System's ID.
+   *
+   * Default: - determined based on fileSystemArn
+   */
   public fun fileSystemId(): String? = unwrap(this).getFileSystemId()
 
+  /**
+   * The security group of the file system.
+   */
   public fun securityGroup(): ISecurityGroup
 
+  /**
+   * A builder for [FileSystemAttributes]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param fileSystemArn The File System's Arn.
+     */
     public fun fileSystemArn(fileSystemArn: String)
 
+    /**
+     * @param fileSystemId The File System's ID.
+     */
     public fun fileSystemId(fileSystemId: String)
 
+    /**
+     * @param securityGroup The security group of the file system. 
+     */
     public fun securityGroup(securityGroup: ISecurityGroup)
   }
 
@@ -23,14 +50,23 @@ public interface FileSystemAttributes {
     private val cdkBuilder: software.amazon.awscdk.services.efs.FileSystemAttributes.Builder =
         software.amazon.awscdk.services.efs.FileSystemAttributes.builder()
 
+    /**
+     * @param fileSystemArn The File System's Arn.
+     */
     override fun fileSystemArn(fileSystemArn: String) {
       cdkBuilder.fileSystemArn(fileSystemArn)
     }
 
+    /**
+     * @param fileSystemId The File System's ID.
+     */
     override fun fileSystemId(fileSystemId: String) {
       cdkBuilder.fileSystemId(fileSystemId)
     }
 
+    /**
+     * @param securityGroup The security group of the file system. 
+     */
     override fun securityGroup(securityGroup: ISecurityGroup) {
       cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
     }
@@ -42,10 +78,23 @@ public interface FileSystemAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.efs.FileSystemAttributes,
   ) : FileSystemAttributes {
+    /**
+     * The File System's Arn.
+     *
+     * Default: - determined based on fileSystemId
+     */
     override fun fileSystemArn(): String? = unwrap(this).getFileSystemArn()
 
+    /**
+     * The File System's ID.
+     *
+     * Default: - determined based on fileSystemArn
+     */
     override fun fileSystemId(): String? = unwrap(this).getFileSystemId()
 
+    /**
+     * The security group of the file system.
+     */
     override fun securityGroup(): ISecurityGroup =
         unwrap(this).getSecurityGroup().let(ISecurityGroup::wrap)
   }

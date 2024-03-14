@@ -1,16 +1,35 @@
 package io.cloudshiftdev.awscdk.services.s3
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface RedirectTarget {
+  /**
+   * Name of the host where requests are redirected.
+   */
   public fun hostName(): String
 
+  /**
+   * Protocol to use when redirecting requests.
+   *
+   * Default: - The protocol used in the original request.
+   */
   public fun protocol(): RedirectProtocol? = unwrap(this).getProtocol()?.let(RedirectProtocol::wrap)
 
+  /**
+   * A builder for [RedirectTarget]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param hostName Name of the host where requests are redirected. 
+     */
     public fun hostName(hostName: String)
 
+    /**
+     * @param protocol Protocol to use when redirecting requests.
+     */
     public fun protocol(protocol: RedirectProtocol)
   }
 
@@ -18,10 +37,16 @@ public interface RedirectTarget {
     private val cdkBuilder: software.amazon.awscdk.services.s3.RedirectTarget.Builder =
         software.amazon.awscdk.services.s3.RedirectTarget.builder()
 
+    /**
+     * @param hostName Name of the host where requests are redirected. 
+     */
     override fun hostName(hostName: String) {
       cdkBuilder.hostName(hostName)
     }
 
+    /**
+     * @param protocol Protocol to use when redirecting requests.
+     */
     override fun protocol(protocol: RedirectProtocol) {
       cdkBuilder.protocol(protocol.let(RedirectProtocol::unwrap))
     }
@@ -32,8 +57,16 @@ public interface RedirectTarget {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.s3.RedirectTarget,
   ) : RedirectTarget {
+    /**
+     * Name of the host where requests are redirected.
+     */
     override fun hostName(): String = unwrap(this).getHostName()
 
+    /**
+     * Protocol to use when redirecting requests.
+     *
+     * Default: - The protocol used in the original request.
+     */
     override fun protocol(): RedirectProtocol? =
         unwrap(this).getProtocol()?.let(RedirectProtocol::wrap)
   }

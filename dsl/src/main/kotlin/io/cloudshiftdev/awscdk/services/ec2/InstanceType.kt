@@ -5,16 +5,25 @@ import kotlin.Boolean
 public open class InstanceType internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ec2.InstanceType,
 ) {
+  /**
+   * The instance's CPU architecture.
+   */
   public open fun architecture(): InstanceArchitecture =
       unwrap(this).getArchitecture().let(InstanceArchitecture::wrap)
 
+  /**
+   * Return whether this instance type is a burstable instance type.
+   */
   public open fun isBurstable(): Boolean = unwrap(this).isBurstable()
 
+  /**
+   * @param other 
+   */
   public open fun sameInstanceClassAs(other: InstanceType): Boolean =
       unwrap(this).sameInstanceClassAs(other.let(InstanceType::unwrap))
 
   public companion object {
-    public open fun of(instanceClass: InstanceClass, instanceSize: InstanceSize): InstanceType =
+    public fun of(instanceClass: InstanceClass, instanceSize: InstanceSize): InstanceType =
         software.amazon.awscdk.services.ec2.InstanceType.of(instanceClass.let(InstanceClass::unwrap),
         instanceSize.let(InstanceSize::unwrap)).let(InstanceType::wrap)
 

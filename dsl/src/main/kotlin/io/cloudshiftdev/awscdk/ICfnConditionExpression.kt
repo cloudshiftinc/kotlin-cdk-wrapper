@@ -8,13 +8,33 @@ public interface ICfnConditionExpression : IResolvable {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.ICfnConditionExpression,
   ) : ICfnConditionExpression {
+    /**
+     * The creation stack of this resolvable which will be appended to errors thrown during
+     * resolution.
+     *
+     * This may return an array with a single informational element indicating how
+     * to get this property populated, if it was skipped for performance reasons.
+     */
     override fun creationStack(): List<String> = unwrap(this).getCreationStack()
 
-    override fun resolve(arg0: IResolveContext): Any =
-        unwrap(this).resolve(arg0.let(IResolveContext::unwrap))
+    /**
+     * Produce the Token's value at resolution time.
+     *
+     * @param context 
+     */
+    override fun resolve(context: IResolveContext): Any =
+        unwrap(this).resolve(context.let(IResolveContext::unwrap))
 
+    /**
+     * Return a string representation of this resolvable object.
+     *
+     * Returns a reversible string representation.
+     */
     override fun toString(): String = unwrap(this).toString()
 
+    /**
+     * The type that this token will likely resolve to.
+     */
     override fun typeHint(): ResolutionTypeHint? =
         unwrap(this).getTypeHint()?.let(ResolutionTypeHint::wrap)
   }

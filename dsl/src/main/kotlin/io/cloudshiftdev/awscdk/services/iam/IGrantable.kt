@@ -1,11 +1,17 @@
 package io.cloudshiftdev.awscdk.services.iam
 
 public interface IGrantable {
+  /**
+   * The principal to grant permissions to.
+   */
   public fun grantPrincipal(): IPrincipal
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.iam.IGrantable,
   ) : IGrantable {
+    /**
+     * The principal to grant permissions to.
+     */
     override fun grantPrincipal(): IPrincipal =
         unwrap(this).getGrantPrincipal().let(IPrincipal::wrap)
   }

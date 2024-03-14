@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
 import kotlin.String
 import kotlin.Suppress
@@ -19,79 +20,265 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnView internal constructor(
   private val cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnView,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  /**
+   * The ARN of the new view. For example:.
+   *
+   * `arn:aws:resource-explorer-2:us-east-1:123456789012:view/MyView/EXAMPLE8-90ab-cdef-fedc-EXAMPLE22222`
+   */
   public open fun attrViewArn(): String = unwrap(this).getAttrViewArn()
 
+  /**
+   * An array of strings that include search keywords, prefixes, and operators that filter the
+   * results that are returned for queries made using this view.
+   */
   public open fun filters(): Any? = unwrap(this).getFilters()
 
+  /**
+   * An array of strings that include search keywords, prefixes, and operators that filter the
+   * results that are returned for queries made using this view.
+   */
   public open fun filters(`value`: IResolvable) {
     unwrap(this).setFilters(`value`.let(IResolvable::unwrap))
   }
 
+  /**
+   * An array of strings that include search keywords, prefixes, and operators that filter the
+   * results that are returned for queries made using this view.
+   */
   public open fun filters(`value`: FiltersProperty) {
     unwrap(this).setFilters(`value`.let(FiltersProperty::unwrap))
   }
 
+  /**
+   * An array of strings that include search keywords, prefixes, and operators that filter the
+   * results that are returned for queries made using this view.
+   */
   @Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("8efc60275e91ea77cfe0ee95bdce8898540e1c5fbb268593760d8e3dfe9c9a57")
   public open fun filters(`value`: FiltersProperty.Builder.() -> Unit): Unit =
       filters(FiltersProperty(`value`))
 
+  /**
+   * A list of fields that provide additional information about the view.
+   */
   public open fun includedProperties(): Any? = unwrap(this).getIncludedProperties()
 
+  /**
+   * A list of fields that provide additional information about the view.
+   */
   public open fun includedProperties(`value`: IResolvable) {
     unwrap(this).setIncludedProperties(`value`.let(IResolvable::unwrap))
   }
 
+  /**
+   * A list of fields that provide additional information about the view.
+   */
   public open fun includedProperties(__idx_ac66f0: List<Any>) {
     unwrap(this).setIncludedProperties(__idx_ac66f0)
   }
 
+  /**
+   * A list of fields that provide additional information about the view.
+   */
   public open fun includedProperties(vararg __idx_ac66f0: Any): Unit =
       includedProperties(__idx_ac66f0.toList())
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * The root ARN of the account, an organizational unit (OU), or an organization ARN.
+   */
   public open fun scope(): String? = unwrap(this).getScope()
 
+  /**
+   * The root ARN of the account, an organizational unit (OU), or an organization ARN.
+   */
   public open fun scope(`value`: String) {
     unwrap(this).setScope(`value`)
   }
 
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
+  /**
+   * Tag key and value pairs that are attached to the view.
+   */
   public open fun tagsRaw(): Map<String, String> = unwrap(this).getTagsRaw() ?: emptyMap()
 
+  /**
+   * Tag key and value pairs that are attached to the view.
+   */
   public open fun tagsRaw(`value`: Map<String, String>) {
     unwrap(this).setTagsRaw(`value`)
   }
 
+  /**
+   * The name of the new view.
+   */
   public open fun viewName(): String = unwrap(this).getViewName()
 
+  /**
+   * The name of the new view.
+   */
   public open fun viewName(`value`: String) {
     unwrap(this).setViewName(`value`)
   }
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.resourceexplorer2.CfnView].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * An array of strings that include search keywords, prefixes, and operators that filter the
+     * results that are returned for queries made using this view.
+     *
+     * When you use this view in a
+     * [Search](https://docs.aws.amazon.com/resource-explorer/latest/apireference/API_Search.html)
+     * operation, the filter string is combined with the search's `QueryString` parameter using a
+     * logical `AND` operator.
+     *
+     * For information about the supported syntax, see [Search query reference for Resource
+     * Explorer](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html)
+     * in the *AWS Resource Explorer User Guide* .
+     *
+     *
+     * This query string in the context of this operation supports only [filter
+     * prefixes](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-filters)
+     * with optional
+     * [operators](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-operators)
+     * . It doesn't support free-form text. For example, the string `region:us*
+     * service:ec2 -tag:stage=prod` includes all Amazon EC2 resources in any AWS Region that begin with
+     * the letters `us` and are *not* tagged with a key `Stage` that has the value `prod` .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-view.html#cfn-resourceexplorer2-view-filters)
+     * @param filters An array of strings that include search keywords, prefixes, and operators that
+     * filter the results that are returned for queries made using this view. 
+     */
     public fun filters(filters: IResolvable)
 
+    /**
+     * An array of strings that include search keywords, prefixes, and operators that filter the
+     * results that are returned for queries made using this view.
+     *
+     * When you use this view in a
+     * [Search](https://docs.aws.amazon.com/resource-explorer/latest/apireference/API_Search.html)
+     * operation, the filter string is combined with the search's `QueryString` parameter using a
+     * logical `AND` operator.
+     *
+     * For information about the supported syntax, see [Search query reference for Resource
+     * Explorer](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html)
+     * in the *AWS Resource Explorer User Guide* .
+     *
+     *
+     * This query string in the context of this operation supports only [filter
+     * prefixes](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-filters)
+     * with optional
+     * [operators](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-operators)
+     * . It doesn't support free-form text. For example, the string `region:us*
+     * service:ec2 -tag:stage=prod` includes all Amazon EC2 resources in any AWS Region that begin with
+     * the letters `us` and are *not* tagged with a key `Stage` that has the value `prod` .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-view.html#cfn-resourceexplorer2-view-filters)
+     * @param filters An array of strings that include search keywords, prefixes, and operators that
+     * filter the results that are returned for queries made using this view. 
+     */
     public fun filters(filters: FiltersProperty)
 
+    /**
+     * An array of strings that include search keywords, prefixes, and operators that filter the
+     * results that are returned for queries made using this view.
+     *
+     * When you use this view in a
+     * [Search](https://docs.aws.amazon.com/resource-explorer/latest/apireference/API_Search.html)
+     * operation, the filter string is combined with the search's `QueryString` parameter using a
+     * logical `AND` operator.
+     *
+     * For information about the supported syntax, see [Search query reference for Resource
+     * Explorer](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html)
+     * in the *AWS Resource Explorer User Guide* .
+     *
+     *
+     * This query string in the context of this operation supports only [filter
+     * prefixes](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-filters)
+     * with optional
+     * [operators](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-operators)
+     * . It doesn't support free-form text. For example, the string `region:us*
+     * service:ec2 -tag:stage=prod` includes all Amazon EC2 resources in any AWS Region that begin with
+     * the letters `us` and are *not* tagged with a key `Stage` that has the value `prod` .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-view.html#cfn-resourceexplorer2-view-filters)
+     * @param filters An array of strings that include search keywords, prefixes, and operators that
+     * filter the results that are returned for queries made using this view. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5c101ff1abd5d95a62efbece54fc4a6c86ed1d5bb82015518c12e97e76685c0a")
     public fun filters(filters: FiltersProperty.Builder.() -> Unit)
 
+    /**
+     * A list of fields that provide additional information about the view.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-view.html#cfn-resourceexplorer2-view-includedproperties)
+     * @param includedProperties A list of fields that provide additional information about the
+     * view. 
+     */
     public fun includedProperties(includedProperties: IResolvable)
 
+    /**
+     * A list of fields that provide additional information about the view.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-view.html#cfn-resourceexplorer2-view-includedproperties)
+     * @param includedProperties A list of fields that provide additional information about the
+     * view. 
+     */
     public fun includedProperties(includedProperties: List<Any>)
 
+    /**
+     * A list of fields that provide additional information about the view.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-view.html#cfn-resourceexplorer2-view-includedproperties)
+     * @param includedProperties A list of fields that provide additional information about the
+     * view. 
+     */
     public fun includedProperties(vararg includedProperties: Any)
 
+    /**
+     * The root ARN of the account, an organizational unit (OU), or an organization ARN.
+     *
+     * If left empty, the default is account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-view.html#cfn-resourceexplorer2-view-scope)
+     * @param scope The root ARN of the account, an organizational unit (OU), or an organization
+     * ARN. 
+     */
     public fun scope(scope: String)
 
+    /**
+     * Tag key and value pairs that are attached to the view.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-view.html#cfn-resourceexplorer2-view-tags)
+     * @param tags Tag key and value pairs that are attached to the view. 
+     */
     public fun tags(tags: Map<String, String>)
 
+    /**
+     * The name of the new view.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-view.html#cfn-resourceexplorer2-view-viewname)
+     * @param viewName The name of the new view. 
+     */
     public fun viewName(viewName: String)
   }
 
@@ -102,38 +289,161 @@ public open class CfnView internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.resourceexplorer2.CfnView.Builder =
         software.amazon.awscdk.services.resourceexplorer2.CfnView.Builder.create(scope, id)
 
+    /**
+     * An array of strings that include search keywords, prefixes, and operators that filter the
+     * results that are returned for queries made using this view.
+     *
+     * When you use this view in a
+     * [Search](https://docs.aws.amazon.com/resource-explorer/latest/apireference/API_Search.html)
+     * operation, the filter string is combined with the search's `QueryString` parameter using a
+     * logical `AND` operator.
+     *
+     * For information about the supported syntax, see [Search query reference for Resource
+     * Explorer](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html)
+     * in the *AWS Resource Explorer User Guide* .
+     *
+     *
+     * This query string in the context of this operation supports only [filter
+     * prefixes](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-filters)
+     * with optional
+     * [operators](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-operators)
+     * . It doesn't support free-form text. For example, the string `region:us*
+     * service:ec2 -tag:stage=prod` includes all Amazon EC2 resources in any AWS Region that begin with
+     * the letters `us` and are *not* tagged with a key `Stage` that has the value `prod` .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-view.html#cfn-resourceexplorer2-view-filters)
+     * @param filters An array of strings that include search keywords, prefixes, and operators that
+     * filter the results that are returned for queries made using this view. 
+     */
     override fun filters(filters: IResolvable) {
       cdkBuilder.filters(filters.let(IResolvable::unwrap))
     }
 
+    /**
+     * An array of strings that include search keywords, prefixes, and operators that filter the
+     * results that are returned for queries made using this view.
+     *
+     * When you use this view in a
+     * [Search](https://docs.aws.amazon.com/resource-explorer/latest/apireference/API_Search.html)
+     * operation, the filter string is combined with the search's `QueryString` parameter using a
+     * logical `AND` operator.
+     *
+     * For information about the supported syntax, see [Search query reference for Resource
+     * Explorer](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html)
+     * in the *AWS Resource Explorer User Guide* .
+     *
+     *
+     * This query string in the context of this operation supports only [filter
+     * prefixes](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-filters)
+     * with optional
+     * [operators](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-operators)
+     * . It doesn't support free-form text. For example, the string `region:us*
+     * service:ec2 -tag:stage=prod` includes all Amazon EC2 resources in any AWS Region that begin with
+     * the letters `us` and are *not* tagged with a key `Stage` that has the value `prod` .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-view.html#cfn-resourceexplorer2-view-filters)
+     * @param filters An array of strings that include search keywords, prefixes, and operators that
+     * filter the results that are returned for queries made using this view. 
+     */
     override fun filters(filters: FiltersProperty) {
       cdkBuilder.filters(filters.let(FiltersProperty::unwrap))
     }
 
+    /**
+     * An array of strings that include search keywords, prefixes, and operators that filter the
+     * results that are returned for queries made using this view.
+     *
+     * When you use this view in a
+     * [Search](https://docs.aws.amazon.com/resource-explorer/latest/apireference/API_Search.html)
+     * operation, the filter string is combined with the search's `QueryString` parameter using a
+     * logical `AND` operator.
+     *
+     * For information about the supported syntax, see [Search query reference for Resource
+     * Explorer](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html)
+     * in the *AWS Resource Explorer User Guide* .
+     *
+     *
+     * This query string in the context of this operation supports only [filter
+     * prefixes](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-filters)
+     * with optional
+     * [operators](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-operators)
+     * . It doesn't support free-form text. For example, the string `region:us*
+     * service:ec2 -tag:stage=prod` includes all Amazon EC2 resources in any AWS Region that begin with
+     * the letters `us` and are *not* tagged with a key `Stage` that has the value `prod` .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-view.html#cfn-resourceexplorer2-view-filters)
+     * @param filters An array of strings that include search keywords, prefixes, and operators that
+     * filter the results that are returned for queries made using this view. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5c101ff1abd5d95a62efbece54fc4a6c86ed1d5bb82015518c12e97e76685c0a")
     override fun filters(filters: FiltersProperty.Builder.() -> Unit): Unit =
         filters(FiltersProperty(filters))
 
+    /**
+     * A list of fields that provide additional information about the view.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-view.html#cfn-resourceexplorer2-view-includedproperties)
+     * @param includedProperties A list of fields that provide additional information about the
+     * view. 
+     */
     override fun includedProperties(includedProperties: IResolvable) {
       cdkBuilder.includedProperties(includedProperties.let(IResolvable::unwrap))
     }
 
+    /**
+     * A list of fields that provide additional information about the view.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-view.html#cfn-resourceexplorer2-view-includedproperties)
+     * @param includedProperties A list of fields that provide additional information about the
+     * view. 
+     */
     override fun includedProperties(includedProperties: List<Any>) {
       cdkBuilder.includedProperties(includedProperties)
     }
 
+    /**
+     * A list of fields that provide additional information about the view.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-view.html#cfn-resourceexplorer2-view-includedproperties)
+     * @param includedProperties A list of fields that provide additional information about the
+     * view. 
+     */
     override fun includedProperties(vararg includedProperties: Any): Unit =
         includedProperties(includedProperties.toList())
 
+    /**
+     * The root ARN of the account, an organizational unit (OU), or an organization ARN.
+     *
+     * If left empty, the default is account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-view.html#cfn-resourceexplorer2-view-scope)
+     * @param scope The root ARN of the account, an organizational unit (OU), or an organization
+     * ARN. 
+     */
     override fun scope(scope: String) {
       cdkBuilder.scope(scope)
     }
 
+    /**
+     * Tag key and value pairs that are attached to the view.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-view.html#cfn-resourceexplorer2-view-tags)
+     * @param tags Tag key and value pairs that are attached to the view. 
+     */
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
+    /**
+     * The name of the new view.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-view.html#cfn-resourceexplorer2-view-viewname)
+     * @param viewName The name of the new view. 
+     */
     override fun viewName(viewName: String) {
       cdkBuilder.viewName(viewName)
     }
@@ -164,9 +474,49 @@ public open class CfnView internal constructor(
   }
 
   public interface SearchFilterProperty {
+    /**
+     * The string that contains the search keywords, prefixes, and operators to control the results
+     * that can be returned by a Search operation.
+     *
+     * For information about the supported syntax, see [Search query
+     * reference](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html)
+     * in the *AWS Resource Explorer User Guide* .
+     *
+     *
+     * This query string in the context of this operation supports only [filter
+     * prefixes](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-filters)
+     * with optional
+     * [operators](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-operators)
+     * . It doesn't support free-form text. For example, the string `region:us*
+     * service:ec2 -tag:stage=prod` includes all Amazon EC2 resources in any AWS Region that begin with
+     * the letters `us` and are *not* tagged with a key `Stage` that has the value `prod` .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourceexplorer2-view-searchfilter.html#cfn-resourceexplorer2-view-searchfilter-filterstring)
+     */
     public fun filterString(): String
 
+    /**
+     * A builder for [SearchFilterProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param filterString The string that contains the search keywords, prefixes, and operators
+       * to control the results that can be returned by a Search operation. 
+       * For information about the supported syntax, see [Search query
+       * reference](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html)
+       * in the *AWS Resource Explorer User Guide* .
+       *
+       *
+       * This query string in the context of this operation supports only [filter
+       * prefixes](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-filters)
+       * with optional
+       * [operators](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-operators)
+       * . It doesn't support free-form text. For example, the string `region:us*
+       * service:ec2 -tag:stage=prod` includes all Amazon EC2 resources in any AWS Region that begin
+       * with the letters `us` and are *not* tagged with a key `Stage` that has the value `prod` .
+       */
       public fun filterString(filterString: String)
     }
 
@@ -175,6 +525,22 @@ public open class CfnView internal constructor(
           software.amazon.awscdk.services.resourceexplorer2.CfnView.SearchFilterProperty.Builder =
           software.amazon.awscdk.services.resourceexplorer2.CfnView.SearchFilterProperty.builder()
 
+      /**
+       * @param filterString The string that contains the search keywords, prefixes, and operators
+       * to control the results that can be returned by a Search operation. 
+       * For information about the supported syntax, see [Search query
+       * reference](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html)
+       * in the *AWS Resource Explorer User Guide* .
+       *
+       *
+       * This query string in the context of this operation supports only [filter
+       * prefixes](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-filters)
+       * with optional
+       * [operators](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-operators)
+       * . It doesn't support free-form text. For example, the string `region:us*
+       * service:ec2 -tag:stage=prod` includes all Amazon EC2 resources in any AWS Region that begin
+       * with the letters `us` and are *not* tagged with a key `Stage` that has the value `prod` .
+       */
       override fun filterString(filterString: String) {
         cdkBuilder.filterString(filterString)
       }
@@ -188,6 +554,26 @@ public open class CfnView internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.resourceexplorer2.CfnView.SearchFilterProperty,
     ) : SearchFilterProperty {
+      /**
+       * The string that contains the search keywords, prefixes, and operators to control the
+       * results that can be returned by a Search operation.
+       *
+       * For information about the supported syntax, see [Search query
+       * reference](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html)
+       * in the *AWS Resource Explorer User Guide* .
+       *
+       *
+       * This query string in the context of this operation supports only [filter
+       * prefixes](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-filters)
+       * with optional
+       * [operators](https://docs.aws.amazon.com/resource-explorer/latest/userguide/using-search-query-syntax.html#query-syntax-operators)
+       * . It doesn't support free-form text. For example, the string `region:us*
+       * service:ec2 -tag:stage=prod` includes all Amazon EC2 resources in any AWS Region that begin
+       * with the letters `us` and are *not* tagged with a key `Stage` that has the value `prod` .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourceexplorer2-view-searchfilter.html#cfn-resourceexplorer2-view-searchfilter-filterstring)
+       */
       override fun filterString(): String = unwrap(this).getFilterString()
     }
 
@@ -212,9 +598,21 @@ public open class CfnView internal constructor(
   }
 
   public interface IncludedPropertyProperty {
+    /**
+     * The name of the property that is included in this view.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourceexplorer2-view-includedproperty.html#cfn-resourceexplorer2-view-includedproperty-name)
+     */
     public fun name(): String
 
+    /**
+     * A builder for [IncludedPropertyProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param name The name of the property that is included in this view. 
+       */
       public fun name(name: String)
     }
 
@@ -224,6 +622,9 @@ public open class CfnView internal constructor(
           =
           software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty.builder()
 
+      /**
+       * @param name The name of the property that is included in this view. 
+       */
       override fun name(name: String) {
         cdkBuilder.name(name)
       }
@@ -237,6 +638,11 @@ public open class CfnView internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty,
     ) : IncludedPropertyProperty {
+      /**
+       * The name of the property that is included in this view.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourceexplorer2-view-includedproperty.html#cfn-resourceexplorer2-view-includedproperty-name)
+       */
       override fun name(): String = unwrap(this).getName()
     }
 
@@ -261,9 +667,19 @@ public open class CfnView internal constructor(
   }
 
   public interface FiltersProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourceexplorer2-view-filters.html#cfn-resourceexplorer2-view-filters-filterstring)
+     */
     public fun filterString(): String
 
+    /**
+     * A builder for [FiltersProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param filterString the value to be set. 
+       */
       public fun filterString(filterString: String)
     }
 
@@ -272,6 +688,9 @@ public open class CfnView internal constructor(
           software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty.Builder =
           software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty.builder()
 
+      /**
+       * @param filterString the value to be set. 
+       */
       override fun filterString(filterString: String) {
         cdkBuilder.filterString(filterString)
       }
@@ -284,6 +703,9 @@ public open class CfnView internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty,
     ) : FiltersProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourceexplorer2-view-filters.html#cfn-resourceexplorer2-view-filters-filterstring)
+       */
       override fun filterString(): String = unwrap(this).getFilterString()
     }
 

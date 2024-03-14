@@ -5,6 +5,9 @@ import kotlin.String
 public abstract class InitElement internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ec2.InitElement,
 ) {
+  /**
+   * Returns the init element type for this element.
+   */
   public open fun elementType(): String = unwrap(this).getElementType()
 
   private class Wrapper internal constructor(

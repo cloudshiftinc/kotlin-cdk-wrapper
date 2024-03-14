@@ -13,22 +13,22 @@ public abstract class Cache internal constructor(
   ) : Cache(cdkObject)
 
   public companion object {
-    public open fun bucket(bucket: IBucket): Cache =
+    public fun bucket(bucket: IBucket): Cache =
         software.amazon.awscdk.services.codebuild.Cache.bucket(bucket.let(IBucket::unwrap)).let(Cache::wrap)
 
-    public open fun bucket(bucket: IBucket, options: BucketCacheOptions): Cache =
+    public fun bucket(bucket: IBucket, options: BucketCacheOptions): Cache =
         software.amazon.awscdk.services.codebuild.Cache.bucket(bucket.let(IBucket::unwrap),
         options.let(BucketCacheOptions::unwrap)).let(Cache::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f6eb3d0edf88b31d8b205a25aad1fee39fac0902b3ecfcfda69f004457e7f5f4")
-    public open fun bucket(bucket: IBucket, options: BucketCacheOptions.Builder.() -> Unit): Cache =
+    public fun bucket(bucket: IBucket, options: BucketCacheOptions.Builder.() -> Unit): Cache =
         bucket(bucket, BucketCacheOptions(options))
 
-    public open fun local(modes: LocalCacheMode): Cache =
+    public fun local(modes: LocalCacheMode): Cache =
         software.amazon.awscdk.services.codebuild.Cache.local(modes.let(LocalCacheMode::unwrap)).let(Cache::wrap)
 
-    public open fun none(): Cache =
+    public fun none(): Cache =
         software.amazon.awscdk.services.codebuild.Cache.none().let(Cache::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.Cache): Cache =

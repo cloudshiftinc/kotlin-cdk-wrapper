@@ -1,6 +1,7 @@
 package io.cloudshiftdev.awscdk.services.codedeploy
 
 import io.cloudshiftdev.awscdk.Resource
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
@@ -9,11 +10,28 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class EcsApplication internal constructor(
   private val cdkObject: software.amazon.awscdk.services.codedeploy.EcsApplication,
 ) : Resource(cdkObject), IEcsApplication {
+  /**
+   *
+   */
   public override fun applicationArn(): String = unwrap(this).getApplicationArn()
 
+  /**
+   *
+   */
   public override fun applicationName(): String = unwrap(this).getApplicationName()
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.codedeploy.EcsApplication].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * The physical, human-readable name of the CodeDeploy Application.
+     *
+     * Default: an auto-generated name will be used
+     *
+     * @param applicationName The physical, human-readable name of the CodeDeploy Application. 
+     */
     public fun applicationName(applicationName: String)
   }
 
@@ -24,6 +42,13 @@ public open class EcsApplication internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codedeploy.EcsApplication.Builder =
         software.amazon.awscdk.services.codedeploy.EcsApplication.Builder.create(scope, id)
 
+    /**
+     * The physical, human-readable name of the CodeDeploy Application.
+     *
+     * Default: an auto-generated name will be used
+     *
+     * @param applicationName The physical, human-readable name of the CodeDeploy Application. 
+     */
     override fun applicationName(applicationName: String) {
       cdkBuilder.applicationName(applicationName)
     }
@@ -33,7 +58,7 @@ public open class EcsApplication internal constructor(
   }
 
   public companion object {
-    public open fun fromEcsApplicationArn(
+    public fun fromEcsApplicationArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
       ecsApplicationArn: String,
@@ -41,7 +66,7 @@ public open class EcsApplication internal constructor(
         software.amazon.awscdk.services.codedeploy.EcsApplication.fromEcsApplicationArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
         id, ecsApplicationArn).let(IEcsApplication::wrap)
 
-    public open fun fromEcsApplicationName(
+    public fun fromEcsApplicationName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
       ecsApplicationName: String,

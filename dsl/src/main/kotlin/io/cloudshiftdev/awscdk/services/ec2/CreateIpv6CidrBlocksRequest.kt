@@ -1,21 +1,46 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 
 public interface CreateIpv6CidrBlocksRequest {
+  /**
+   * The IPv6 CIDR block string representation.
+   */
   public fun ipv6SelectedCidr(): String
 
+  /**
+   * Size of the covered bits in the CIDR.
+   *
+   * Default: - 128 - 64 = /64 CIDR.
+   */
   public fun sizeMask(): String? = unwrap(this).getSizeMask()
 
+  /**
+   * The number of subnets to assign CIDRs to.
+   */
   public fun subnetCount(): Number
 
+  /**
+   * A builder for [CreateIpv6CidrBlocksRequest]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param ipv6SelectedCidr The IPv6 CIDR block string representation. 
+     */
     public fun ipv6SelectedCidr(ipv6SelectedCidr: String)
 
+    /**
+     * @param sizeMask Size of the covered bits in the CIDR.
+     */
     public fun sizeMask(sizeMask: String)
 
+    /**
+     * @param subnetCount The number of subnets to assign CIDRs to. 
+     */
     public fun subnetCount(subnetCount: Number)
   }
 
@@ -23,14 +48,23 @@ public interface CreateIpv6CidrBlocksRequest {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CreateIpv6CidrBlocksRequest.Builder
         = software.amazon.awscdk.services.ec2.CreateIpv6CidrBlocksRequest.builder()
 
+    /**
+     * @param ipv6SelectedCidr The IPv6 CIDR block string representation. 
+     */
     override fun ipv6SelectedCidr(ipv6SelectedCidr: String) {
       cdkBuilder.ipv6SelectedCidr(ipv6SelectedCidr)
     }
 
+    /**
+     * @param sizeMask Size of the covered bits in the CIDR.
+     */
     override fun sizeMask(sizeMask: String) {
       cdkBuilder.sizeMask(sizeMask)
     }
 
+    /**
+     * @param subnetCount The number of subnets to assign CIDRs to. 
+     */
     override fun subnetCount(subnetCount: Number) {
       cdkBuilder.subnetCount(subnetCount)
     }
@@ -42,10 +76,21 @@ public interface CreateIpv6CidrBlocksRequest {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.CreateIpv6CidrBlocksRequest,
   ) : CreateIpv6CidrBlocksRequest {
+    /**
+     * The IPv6 CIDR block string representation.
+     */
     override fun ipv6SelectedCidr(): String = unwrap(this).getIpv6SelectedCidr()
 
+    /**
+     * Size of the covered bits in the CIDR.
+     *
+     * Default: - 128 - 64 = /64 CIDR.
+     */
     override fun sizeMask(): String? = unwrap(this).getSizeMask()
 
+    /**
+     * The number of subnets to assign CIDRs to.
+     */
     override fun subnetCount(): Number = unwrap(this).getSubnetCount()
   }
 

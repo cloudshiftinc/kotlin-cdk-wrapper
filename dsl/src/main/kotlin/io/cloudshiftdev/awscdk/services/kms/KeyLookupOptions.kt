@@ -1,12 +1,26 @@
 package io.cloudshiftdev.awscdk.services.kms
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface KeyLookupOptions {
+  /**
+   * The alias name of the Key.
+   *
+   * Must be in the format `alias/&lt;AliasName&gt;`.
+   */
   public fun aliasName(): String
 
+  /**
+   * A builder for [KeyLookupOptions]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param aliasName The alias name of the Key. 
+     * Must be in the format `alias/&lt;AliasName&gt;`.
+     */
     public fun aliasName(aliasName: String)
   }
 
@@ -14,6 +28,10 @@ public interface KeyLookupOptions {
     private val cdkBuilder: software.amazon.awscdk.services.kms.KeyLookupOptions.Builder =
         software.amazon.awscdk.services.kms.KeyLookupOptions.builder()
 
+    /**
+     * @param aliasName The alias name of the Key. 
+     * Must be in the format `alias/&lt;AliasName&gt;`.
+     */
     override fun aliasName(aliasName: String) {
       cdkBuilder.aliasName(aliasName)
     }
@@ -24,6 +42,11 @@ public interface KeyLookupOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.kms.KeyLookupOptions,
   ) : KeyLookupOptions {
+    /**
+     * The alias name of the Key.
+     *
+     * Must be in the format `alias/&lt;AliasName&gt;`.
+     */
     override fun aliasName(): String = unwrap(this).getAliasName()
   }
 

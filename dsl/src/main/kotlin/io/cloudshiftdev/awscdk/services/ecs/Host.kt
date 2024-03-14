@@ -1,12 +1,35 @@
 package io.cloudshiftdev.awscdk.services.ecs
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface Host {
+  /**
+   * Specifies the path on the host container instance that is presented to the container.
+   *
+   * If the sourcePath value does not exist on the host container instance, the Docker daemon
+   * creates it.
+   * If the location does exist, the contents of the source path folder are exported.
+   *
+   * This property is not supported for tasks that use the Fargate launch type.
+   */
   public fun sourcePath(): String? = unwrap(this).getSourcePath()
 
+  /**
+   * A builder for [Host]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param sourcePath Specifies the path on the host container instance that is presented to the
+     * container.
+     * If the sourcePath value does not exist on the host container instance, the Docker daemon
+     * creates it.
+     * If the location does exist, the contents of the source path folder are exported.
+     *
+     * This property is not supported for tasks that use the Fargate launch type.
+     */
     public fun sourcePath(sourcePath: String)
   }
 
@@ -14,6 +37,15 @@ public interface Host {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.Host.Builder =
         software.amazon.awscdk.services.ecs.Host.builder()
 
+    /**
+     * @param sourcePath Specifies the path on the host container instance that is presented to the
+     * container.
+     * If the sourcePath value does not exist on the host container instance, the Docker daemon
+     * creates it.
+     * If the location does exist, the contents of the source path folder are exported.
+     *
+     * This property is not supported for tasks that use the Fargate launch type.
+     */
     override fun sourcePath(sourcePath: String) {
       cdkBuilder.sourcePath(sourcePath)
     }
@@ -24,6 +56,15 @@ public interface Host {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.Host,
   ) : Host {
+    /**
+     * Specifies the path on the host container instance that is presented to the container.
+     *
+     * If the sourcePath value does not exist on the host container instance, the Docker daemon
+     * creates it.
+     * If the location does exist, the contents of the source path folder are exported.
+     *
+     * This property is not supported for tasks that use the Fargate launch type.
+     */
     override fun sourcePath(): String? = unwrap(this).getSourcePath()
   }
 

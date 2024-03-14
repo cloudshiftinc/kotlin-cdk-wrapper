@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -20,162 +21,564 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnGameServerGroup internal constructor(
   private val cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  /**
+   * A unique identifier for the auto scaling group.
+   */
   public open fun attrAutoScalingGroupArn(): String = unwrap(this).getAttrAutoScalingGroupArn()
 
+  /**
+   * A unique identifier for the game server group.
+   */
   public open fun attrGameServerGroupArn(): String = unwrap(this).getAttrGameServerGroupArn()
 
+  /**
+   * Configuration settings to define a scaling policy for the Auto Scaling group that is optimized
+   * for game hosting.
+   */
   public open fun autoScalingPolicy(): Any? = unwrap(this).getAutoScalingPolicy()
 
+  /**
+   * Configuration settings to define a scaling policy for the Auto Scaling group that is optimized
+   * for game hosting.
+   */
   public open fun autoScalingPolicy(`value`: IResolvable) {
     unwrap(this).setAutoScalingPolicy(`value`.let(IResolvable::unwrap))
   }
 
+  /**
+   * Configuration settings to define a scaling policy for the Auto Scaling group that is optimized
+   * for game hosting.
+   */
   public open fun autoScalingPolicy(`value`: AutoScalingPolicyProperty) {
     unwrap(this).setAutoScalingPolicy(`value`.let(AutoScalingPolicyProperty::unwrap))
   }
 
+  /**
+   * Configuration settings to define a scaling policy for the Auto Scaling group that is optimized
+   * for game hosting.
+   */
   @Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("51d7dbb45cbb27245de2f8aaa06ea366f3d60ba0fe38b9d6b4578f0b17d18cd4")
   public open fun autoScalingPolicy(`value`: AutoScalingPolicyProperty.Builder.() -> Unit): Unit =
       autoScalingPolicy(AutoScalingPolicyProperty(`value`))
 
+  /**
+   * Indicates how Amazon GameLift FleetIQ balances the use of Spot Instances and On-Demand
+   * Instances in the game server group.
+   */
   public open fun balancingStrategy(): String? = unwrap(this).getBalancingStrategy()
 
+  /**
+   * Indicates how Amazon GameLift FleetIQ balances the use of Spot Instances and On-Demand
+   * Instances in the game server group.
+   */
   public open fun balancingStrategy(`value`: String) {
     unwrap(this).setBalancingStrategy(`value`)
   }
 
+  /**
+   * The type of delete to perform.
+   */
   public open fun deleteOption(): String? = unwrap(this).getDeleteOption()
 
+  /**
+   * The type of delete to perform.
+   */
   public open fun deleteOption(`value`: String) {
     unwrap(this).setDeleteOption(`value`)
   }
 
+  /**
+   * A developer-defined identifier for the game server group.
+   */
   public open fun gameServerGroupName(): String = unwrap(this).getGameServerGroupName()
 
+  /**
+   * A developer-defined identifier for the game server group.
+   */
   public open fun gameServerGroupName(`value`: String) {
     unwrap(this).setGameServerGroupName(`value`)
   }
 
+  /**
+   * A flag that indicates whether instances in the game server group are protected from early
+   * termination.
+   */
   public open fun gameServerProtectionPolicy(): String? =
       unwrap(this).getGameServerProtectionPolicy()
 
+  /**
+   * A flag that indicates whether instances in the game server group are protected from early
+   * termination.
+   */
   public open fun gameServerProtectionPolicy(`value`: String) {
     unwrap(this).setGameServerProtectionPolicy(`value`)
   }
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * The set of Amazon EC2 instance types that Amazon GameLift FleetIQ can use when balancing and
+   * automatically scaling instances in the corresponding Auto Scaling group.
+   */
   public open fun instanceDefinitions(): Any = unwrap(this).getInstanceDefinitions()
 
+  /**
+   * The set of Amazon EC2 instance types that Amazon GameLift FleetIQ can use when balancing and
+   * automatically scaling instances in the corresponding Auto Scaling group.
+   */
   public open fun instanceDefinitions(`value`: IResolvable) {
     unwrap(this).setInstanceDefinitions(`value`.let(IResolvable::unwrap))
   }
 
+  /**
+   * The set of Amazon EC2 instance types that Amazon GameLift FleetIQ can use when balancing and
+   * automatically scaling instances in the corresponding Auto Scaling group.
+   */
   public open fun instanceDefinitions(__idx_ac66f0: List<Any>) {
     unwrap(this).setInstanceDefinitions(__idx_ac66f0)
   }
 
+  /**
+   * The set of Amazon EC2 instance types that Amazon GameLift FleetIQ can use when balancing and
+   * automatically scaling instances in the corresponding Auto Scaling group.
+   */
   public open fun instanceDefinitions(vararg __idx_ac66f0: Any): Unit =
       instanceDefinitions(__idx_ac66f0.toList())
 
+  /**
+   * The Amazon EC2 launch template that contains configuration settings and game server code to be
+   * deployed to all instances in the game server group.
+   */
   public open fun launchTemplate(): Any? = unwrap(this).getLaunchTemplate()
 
+  /**
+   * The Amazon EC2 launch template that contains configuration settings and game server code to be
+   * deployed to all instances in the game server group.
+   */
   public open fun launchTemplate(`value`: IResolvable) {
     unwrap(this).setLaunchTemplate(`value`.let(IResolvable::unwrap))
   }
 
+  /**
+   * The Amazon EC2 launch template that contains configuration settings and game server code to be
+   * deployed to all instances in the game server group.
+   */
   public open fun launchTemplate(`value`: LaunchTemplateProperty) {
     unwrap(this).setLaunchTemplate(`value`.let(LaunchTemplateProperty::unwrap))
   }
 
+  /**
+   * The Amazon EC2 launch template that contains configuration settings and game server code to be
+   * deployed to all instances in the game server group.
+   */
   @Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("d7ba1a3f567b211d341d6037dd420a6e93ffb5f377633b4a65c3daede1f9525b")
   public open fun launchTemplate(`value`: LaunchTemplateProperty.Builder.() -> Unit): Unit =
       launchTemplate(LaunchTemplateProperty(`value`))
 
+  /**
+   * The maximum number of instances allowed in the Amazon EC2 Auto Scaling group.
+   */
   public open fun maxSize(): Number? = unwrap(this).getMaxSize()
 
+  /**
+   * The maximum number of instances allowed in the Amazon EC2 Auto Scaling group.
+   */
   public open fun maxSize(`value`: Number) {
     unwrap(this).setMaxSize(`value`)
   }
 
+  /**
+   * The minimum number of instances allowed in the Amazon EC2 Auto Scaling group.
+   */
   public open fun minSize(): Number? = unwrap(this).getMinSize()
 
+  /**
+   * The minimum number of instances allowed in the Amazon EC2 Auto Scaling group.
+   */
   public open fun minSize(`value`: Number) {
     unwrap(this).setMinSize(`value`)
   }
 
+  /**
+   * The Amazon Resource Name (
+   * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) for an IAM role that
+   * allows Amazon GameLift to access your Amazon EC2 Auto Scaling groups.
+   */
   public open fun roleArn(): String = unwrap(this).getRoleArn()
 
+  /**
+   * The Amazon Resource Name (
+   * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) for an IAM role that
+   * allows Amazon GameLift to access your Amazon EC2 Auto Scaling groups.
+   */
   public open fun roleArn(`value`: String) {
     unwrap(this).setRoleArn(`value`)
   }
 
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
+  /**
+   * A list of labels to assign to the new game server group resource.
+   */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
+  /**
+   * A list of labels to assign to the new game server group resource.
+   */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  /**
+   * A list of labels to assign to the new game server group resource.
+   */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
+  /**
+   * A list of virtual private cloud (VPC) subnets to use with instances in the game server group.
+   */
   public open fun vpcSubnets(): List<String> = unwrap(this).getVpcSubnets() ?: emptyList()
 
+  /**
+   * A list of virtual private cloud (VPC) subnets to use with instances in the game server group.
+   */
   public open fun vpcSubnets(`value`: List<String>) {
     unwrap(this).setVpcSubnets(`value`)
   }
 
+  /**
+   * A list of virtual private cloud (VPC) subnets to use with instances in the game server group.
+   */
   public open fun vpcSubnets(vararg `value`: String): Unit = vpcSubnets(`value`.toList())
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.gamelift.CfnGameServerGroup].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * Configuration settings to define a scaling policy for the Auto Scaling group that is
+     * optimized for game hosting.
+     *
+     * The scaling policy uses the metric `"PercentUtilizedGameServers"` to maintain a buffer of
+     * idle game servers that can immediately accommodate new games and players. After the Auto Scaling
+     * group is created, update this value directly in the Auto Scaling group using the AWS console or
+     * APIs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-autoscalingpolicy)
+     * @param autoScalingPolicy Configuration settings to define a scaling policy for the Auto
+     * Scaling group that is optimized for game hosting. 
+     */
     public fun autoScalingPolicy(autoScalingPolicy: IResolvable)
 
+    /**
+     * Configuration settings to define a scaling policy for the Auto Scaling group that is
+     * optimized for game hosting.
+     *
+     * The scaling policy uses the metric `"PercentUtilizedGameServers"` to maintain a buffer of
+     * idle game servers that can immediately accommodate new games and players. After the Auto Scaling
+     * group is created, update this value directly in the Auto Scaling group using the AWS console or
+     * APIs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-autoscalingpolicy)
+     * @param autoScalingPolicy Configuration settings to define a scaling policy for the Auto
+     * Scaling group that is optimized for game hosting. 
+     */
     public fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty)
 
+    /**
+     * Configuration settings to define a scaling policy for the Auto Scaling group that is
+     * optimized for game hosting.
+     *
+     * The scaling policy uses the metric `"PercentUtilizedGameServers"` to maintain a buffer of
+     * idle game servers that can immediately accommodate new games and players. After the Auto Scaling
+     * group is created, update this value directly in the Auto Scaling group using the AWS console or
+     * APIs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-autoscalingpolicy)
+     * @param autoScalingPolicy Configuration settings to define a scaling policy for the Auto
+     * Scaling group that is optimized for game hosting. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("260b1af760b6009f2926f0ab103dda31affdd9a53f535ca8a3e9e09e0d373604")
     public fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty.Builder.() -> Unit)
 
+    /**
+     * Indicates how Amazon GameLift FleetIQ balances the use of Spot Instances and On-Demand
+     * Instances in the game server group.
+     *
+     * Method options include the following:
+     *
+     * * `SPOT_ONLY` - Only Spot Instances are used in the game server group. If Spot Instances are
+     * unavailable or not viable for game hosting, the game server group provides no hosting capacity
+     * until Spot Instances can again be used. Until then, no new instances are started, and the
+     * existing nonviable Spot Instances are terminated (after current gameplay ends) and are not
+     * replaced.
+     * * `SPOT_PREFERRED` - (default value) Spot Instances are used whenever available in the game
+     * server group. If Spot Instances are unavailable, the game server group continues to provide
+     * hosting capacity by falling back to On-Demand Instances. Existing nonviable Spot Instances are
+     * terminated (after current gameplay ends) and are replaced with new On-Demand Instances.
+     * * `ON_DEMAND_ONLY` - Only On-Demand Instances are used in the game server group. No Spot
+     * Instances are used, even when available, while this balancing strategy is in force.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-balancingstrategy)
+     * @param balancingStrategy Indicates how Amazon GameLift FleetIQ balances the use of Spot
+     * Instances and On-Demand Instances in the game server group. 
+     */
     public fun balancingStrategy(balancingStrategy: String)
 
+    /**
+     * The type of delete to perform.
+     *
+     * To delete a game server group, specify the `DeleteOption` . Options include the following:
+     *
+     * * `SAFE_DELETE` – (default) Terminates the game server group and Amazon EC2 Auto Scaling
+     * group only when it has no game servers that are in `UTILIZED` status.
+     * * `FORCE_DELETE` – Terminates the game server group, including all active game servers
+     * regardless of their utilization status, and the Amazon EC2 Auto Scaling group.
+     * * `RETAIN` – Does a safe delete of the game server group but retains the Amazon EC2 Auto
+     * Scaling group as is.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-deleteoption)
+     * @param deleteOption The type of delete to perform. 
+     */
     public fun deleteOption(deleteOption: String)
 
+    /**
+     * A developer-defined identifier for the game server group.
+     *
+     * The name is unique for each Region in each AWS account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-gameservergroupname)
+     * @param gameServerGroupName A developer-defined identifier for the game server group. 
+     */
     public fun gameServerGroupName(gameServerGroupName: String)
 
+    /**
+     * A flag that indicates whether instances in the game server group are protected from early
+     * termination.
+     *
+     * Unprotected instances that have active game servers running might be terminated during a
+     * scale-down event, causing players to be dropped from the game. Protected instances cannot be
+     * terminated while there are active game servers running except in the event of a forced game
+     * server group deletion (see ). An exception to this is with Spot Instances, which can be
+     * terminated by AWS regardless of protection status.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-gameserverprotectionpolicy)
+     * @param gameServerProtectionPolicy A flag that indicates whether instances in the game server
+     * group are protected from early termination. 
+     */
     public fun gameServerProtectionPolicy(gameServerProtectionPolicy: String)
 
+    /**
+     * The set of Amazon EC2 instance types that Amazon GameLift FleetIQ can use when balancing and
+     * automatically scaling instances in the corresponding Auto Scaling group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-instancedefinitions)
+     * @param instanceDefinitions The set of Amazon EC2 instance types that Amazon GameLift FleetIQ
+     * can use when balancing and automatically scaling instances in the corresponding Auto Scaling
+     * group. 
+     */
     public fun instanceDefinitions(instanceDefinitions: IResolvable)
 
+    /**
+     * The set of Amazon EC2 instance types that Amazon GameLift FleetIQ can use when balancing and
+     * automatically scaling instances in the corresponding Auto Scaling group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-instancedefinitions)
+     * @param instanceDefinitions The set of Amazon EC2 instance types that Amazon GameLift FleetIQ
+     * can use when balancing and automatically scaling instances in the corresponding Auto Scaling
+     * group. 
+     */
     public fun instanceDefinitions(instanceDefinitions: List<Any>)
 
+    /**
+     * The set of Amazon EC2 instance types that Amazon GameLift FleetIQ can use when balancing and
+     * automatically scaling instances in the corresponding Auto Scaling group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-instancedefinitions)
+     * @param instanceDefinitions The set of Amazon EC2 instance types that Amazon GameLift FleetIQ
+     * can use when balancing and automatically scaling instances in the corresponding Auto Scaling
+     * group. 
+     */
     public fun instanceDefinitions(vararg instanceDefinitions: Any)
 
+    /**
+     * The Amazon EC2 launch template that contains configuration settings and game server code to
+     * be deployed to all instances in the game server group.
+     *
+     * You can specify the template using either the template name or ID. For help with creating a
+     * launch template, see [Creating a Launch Template for an Auto Scaling
+     * Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html) in the
+     * *Amazon Elastic Compute Cloud Auto Scaling User Guide* . After the Auto Scaling group is
+     * created, update this value directly in the Auto Scaling group using the AWS console or APIs.
+     *
+     *
+     * If you specify network interfaces in your launch template, you must explicitly set the
+     * property `AssociatePublicIpAddress` to "true". If no network interface is specified in the
+     * launch template, Amazon GameLift FleetIQ uses your account's default VPC.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-launchtemplate)
+     * @param launchTemplate The Amazon EC2 launch template that contains configuration settings and
+     * game server code to be deployed to all instances in the game server group. 
+     */
     public fun launchTemplate(launchTemplate: IResolvable)
 
+    /**
+     * The Amazon EC2 launch template that contains configuration settings and game server code to
+     * be deployed to all instances in the game server group.
+     *
+     * You can specify the template using either the template name or ID. For help with creating a
+     * launch template, see [Creating a Launch Template for an Auto Scaling
+     * Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html) in the
+     * *Amazon Elastic Compute Cloud Auto Scaling User Guide* . After the Auto Scaling group is
+     * created, update this value directly in the Auto Scaling group using the AWS console or APIs.
+     *
+     *
+     * If you specify network interfaces in your launch template, you must explicitly set the
+     * property `AssociatePublicIpAddress` to "true". If no network interface is specified in the
+     * launch template, Amazon GameLift FleetIQ uses your account's default VPC.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-launchtemplate)
+     * @param launchTemplate The Amazon EC2 launch template that contains configuration settings and
+     * game server code to be deployed to all instances in the game server group. 
+     */
     public fun launchTemplate(launchTemplate: LaunchTemplateProperty)
 
+    /**
+     * The Amazon EC2 launch template that contains configuration settings and game server code to
+     * be deployed to all instances in the game server group.
+     *
+     * You can specify the template using either the template name or ID. For help with creating a
+     * launch template, see [Creating a Launch Template for an Auto Scaling
+     * Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html) in the
+     * *Amazon Elastic Compute Cloud Auto Scaling User Guide* . After the Auto Scaling group is
+     * created, update this value directly in the Auto Scaling group using the AWS console or APIs.
+     *
+     *
+     * If you specify network interfaces in your launch template, you must explicitly set the
+     * property `AssociatePublicIpAddress` to "true". If no network interface is specified in the
+     * launch template, Amazon GameLift FleetIQ uses your account's default VPC.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-launchtemplate)
+     * @param launchTemplate The Amazon EC2 launch template that contains configuration settings and
+     * game server code to be deployed to all instances in the game server group. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a0c6f4186d7a0bb0682a46568f56d9ab96c36e270752b16591b78b3cbf5f45ad")
     public fun launchTemplate(launchTemplate: LaunchTemplateProperty.Builder.() -> Unit)
 
+    /**
+     * The maximum number of instances allowed in the Amazon EC2 Auto Scaling group.
+     *
+     * During automatic scaling events, Amazon GameLift FleetIQ and EC2 do not scale up the group
+     * above this maximum. After the Auto Scaling group is created, update this value directly in the
+     * Auto Scaling group using the AWS console or APIs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-maxsize)
+     * @param maxSize The maximum number of instances allowed in the Amazon EC2 Auto Scaling group. 
+     */
     public fun maxSize(maxSize: Number)
 
+    /**
+     * The minimum number of instances allowed in the Amazon EC2 Auto Scaling group.
+     *
+     * During automatic scaling events, Amazon GameLift FleetIQ and Amazon EC2 do not scale down the
+     * group below this minimum. In production, this value should be set to at least 1. After the Auto
+     * Scaling group is created, update this value directly in the Auto Scaling group using the AWS
+     * console or APIs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-minsize)
+     * @param minSize The minimum number of instances allowed in the Amazon EC2 Auto Scaling group. 
+     */
     public fun minSize(minSize: Number)
 
+    /**
+     * The Amazon Resource Name (
+     * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) for an IAM role that
+     * allows Amazon GameLift to access your Amazon EC2 Auto Scaling groups.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-rolearn)
+     * @param roleArn The Amazon Resource Name (
+     * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) for an IAM role that
+     * allows Amazon GameLift to access your Amazon EC2 Auto Scaling groups. 
+     */
     public fun roleArn(roleArn: String)
 
+    /**
+     * A list of labels to assign to the new game server group resource.
+     *
+     * Tags are developer-defined key-value pairs. Tagging AWS resources is useful for resource
+     * management, access management, and cost allocation. For more information, see [Tagging AWS
+     * Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the *AWS General
+     * Reference* . Once the resource is created, you can use TagResource, UntagResource, and
+     * ListTagsForResource to add, remove, and view tags, respectively. The maximum tag limit may be
+     * lower than stated. See the AWS General Reference for actual tagging limits.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-tags)
+     * @param tags A list of labels to assign to the new game server group resource. 
+     */
     public fun tags(tags: List<CfnTag>)
 
+    /**
+     * A list of labels to assign to the new game server group resource.
+     *
+     * Tags are developer-defined key-value pairs. Tagging AWS resources is useful for resource
+     * management, access management, and cost allocation. For more information, see [Tagging AWS
+     * Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the *AWS General
+     * Reference* . Once the resource is created, you can use TagResource, UntagResource, and
+     * ListTagsForResource to add, remove, and view tags, respectively. The maximum tag limit may be
+     * lower than stated. See the AWS General Reference for actual tagging limits.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-tags)
+     * @param tags A list of labels to assign to the new game server group resource. 
+     */
     public fun tags(vararg tags: CfnTag)
 
+    /**
+     * A list of virtual private cloud (VPC) subnets to use with instances in the game server group.
+     *
+     * By default, all Amazon GameLift FleetIQ-supported Availability Zones are used. You can use
+     * this parameter to specify VPCs that you've set up. This property cannot be updated after the
+     * game server group is created, and the corresponding Auto Scaling group will always use the
+     * property value that is set with this request, even if the Auto Scaling group is updated
+     * directly.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-vpcsubnets)
+     * @param vpcSubnets A list of virtual private cloud (VPC) subnets to use with instances in the
+     * game server group. 
+     */
     public fun vpcSubnets(vpcSubnets: List<String>)
 
+    /**
+     * A list of virtual private cloud (VPC) subnets to use with instances in the game server group.
+     *
+     * By default, all Amazon GameLift FleetIQ-supported Availability Zones are used. You can use
+     * this parameter to specify VPCs that you've set up. This property cannot be updated after the
+     * game server group is created, and the corresponding Auto Scaling group will always use the
+     * property value that is set with this request, even if the Auto Scaling group is updated
+     * directly.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-vpcsubnets)
+     * @param vpcSubnets A list of virtual private cloud (VPC) subnets to use with instances in the
+     * game server group. 
+     */
     public fun vpcSubnets(vararg vpcSubnets: String)
   }
 
@@ -186,81 +589,349 @@ public open class CfnGameServerGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.gamelift.CfnGameServerGroup.Builder =
         software.amazon.awscdk.services.gamelift.CfnGameServerGroup.Builder.create(scope, id)
 
+    /**
+     * Configuration settings to define a scaling policy for the Auto Scaling group that is
+     * optimized for game hosting.
+     *
+     * The scaling policy uses the metric `"PercentUtilizedGameServers"` to maintain a buffer of
+     * idle game servers that can immediately accommodate new games and players. After the Auto Scaling
+     * group is created, update this value directly in the Auto Scaling group using the AWS console or
+     * APIs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-autoscalingpolicy)
+     * @param autoScalingPolicy Configuration settings to define a scaling policy for the Auto
+     * Scaling group that is optimized for game hosting. 
+     */
     override fun autoScalingPolicy(autoScalingPolicy: IResolvable) {
       cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(IResolvable::unwrap))
     }
 
+    /**
+     * Configuration settings to define a scaling policy for the Auto Scaling group that is
+     * optimized for game hosting.
+     *
+     * The scaling policy uses the metric `"PercentUtilizedGameServers"` to maintain a buffer of
+     * idle game servers that can immediately accommodate new games and players. After the Auto Scaling
+     * group is created, update this value directly in the Auto Scaling group using the AWS console or
+     * APIs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-autoscalingpolicy)
+     * @param autoScalingPolicy Configuration settings to define a scaling policy for the Auto
+     * Scaling group that is optimized for game hosting. 
+     */
     override fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty) {
       cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(AutoScalingPolicyProperty::unwrap))
     }
 
+    /**
+     * Configuration settings to define a scaling policy for the Auto Scaling group that is
+     * optimized for game hosting.
+     *
+     * The scaling policy uses the metric `"PercentUtilizedGameServers"` to maintain a buffer of
+     * idle game servers that can immediately accommodate new games and players. After the Auto Scaling
+     * group is created, update this value directly in the Auto Scaling group using the AWS console or
+     * APIs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-autoscalingpolicy)
+     * @param autoScalingPolicy Configuration settings to define a scaling policy for the Auto
+     * Scaling group that is optimized for game hosting. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("260b1af760b6009f2926f0ab103dda31affdd9a53f535ca8a3e9e09e0d373604")
     override fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty.Builder.() -> Unit):
         Unit = autoScalingPolicy(AutoScalingPolicyProperty(autoScalingPolicy))
 
+    /**
+     * Indicates how Amazon GameLift FleetIQ balances the use of Spot Instances and On-Demand
+     * Instances in the game server group.
+     *
+     * Method options include the following:
+     *
+     * * `SPOT_ONLY` - Only Spot Instances are used in the game server group. If Spot Instances are
+     * unavailable or not viable for game hosting, the game server group provides no hosting capacity
+     * until Spot Instances can again be used. Until then, no new instances are started, and the
+     * existing nonviable Spot Instances are terminated (after current gameplay ends) and are not
+     * replaced.
+     * * `SPOT_PREFERRED` - (default value) Spot Instances are used whenever available in the game
+     * server group. If Spot Instances are unavailable, the game server group continues to provide
+     * hosting capacity by falling back to On-Demand Instances. Existing nonviable Spot Instances are
+     * terminated (after current gameplay ends) and are replaced with new On-Demand Instances.
+     * * `ON_DEMAND_ONLY` - Only On-Demand Instances are used in the game server group. No Spot
+     * Instances are used, even when available, while this balancing strategy is in force.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-balancingstrategy)
+     * @param balancingStrategy Indicates how Amazon GameLift FleetIQ balances the use of Spot
+     * Instances and On-Demand Instances in the game server group. 
+     */
     override fun balancingStrategy(balancingStrategy: String) {
       cdkBuilder.balancingStrategy(balancingStrategy)
     }
 
+    /**
+     * The type of delete to perform.
+     *
+     * To delete a game server group, specify the `DeleteOption` . Options include the following:
+     *
+     * * `SAFE_DELETE` – (default) Terminates the game server group and Amazon EC2 Auto Scaling
+     * group only when it has no game servers that are in `UTILIZED` status.
+     * * `FORCE_DELETE` – Terminates the game server group, including all active game servers
+     * regardless of their utilization status, and the Amazon EC2 Auto Scaling group.
+     * * `RETAIN` – Does a safe delete of the game server group but retains the Amazon EC2 Auto
+     * Scaling group as is.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-deleteoption)
+     * @param deleteOption The type of delete to perform. 
+     */
     override fun deleteOption(deleteOption: String) {
       cdkBuilder.deleteOption(deleteOption)
     }
 
+    /**
+     * A developer-defined identifier for the game server group.
+     *
+     * The name is unique for each Region in each AWS account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-gameservergroupname)
+     * @param gameServerGroupName A developer-defined identifier for the game server group. 
+     */
     override fun gameServerGroupName(gameServerGroupName: String) {
       cdkBuilder.gameServerGroupName(gameServerGroupName)
     }
 
+    /**
+     * A flag that indicates whether instances in the game server group are protected from early
+     * termination.
+     *
+     * Unprotected instances that have active game servers running might be terminated during a
+     * scale-down event, causing players to be dropped from the game. Protected instances cannot be
+     * terminated while there are active game servers running except in the event of a forced game
+     * server group deletion (see ). An exception to this is with Spot Instances, which can be
+     * terminated by AWS regardless of protection status.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-gameserverprotectionpolicy)
+     * @param gameServerProtectionPolicy A flag that indicates whether instances in the game server
+     * group are protected from early termination. 
+     */
     override fun gameServerProtectionPolicy(gameServerProtectionPolicy: String) {
       cdkBuilder.gameServerProtectionPolicy(gameServerProtectionPolicy)
     }
 
+    /**
+     * The set of Amazon EC2 instance types that Amazon GameLift FleetIQ can use when balancing and
+     * automatically scaling instances in the corresponding Auto Scaling group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-instancedefinitions)
+     * @param instanceDefinitions The set of Amazon EC2 instance types that Amazon GameLift FleetIQ
+     * can use when balancing and automatically scaling instances in the corresponding Auto Scaling
+     * group. 
+     */
     override fun instanceDefinitions(instanceDefinitions: IResolvable) {
       cdkBuilder.instanceDefinitions(instanceDefinitions.let(IResolvable::unwrap))
     }
 
+    /**
+     * The set of Amazon EC2 instance types that Amazon GameLift FleetIQ can use when balancing and
+     * automatically scaling instances in the corresponding Auto Scaling group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-instancedefinitions)
+     * @param instanceDefinitions The set of Amazon EC2 instance types that Amazon GameLift FleetIQ
+     * can use when balancing and automatically scaling instances in the corresponding Auto Scaling
+     * group. 
+     */
     override fun instanceDefinitions(instanceDefinitions: List<Any>) {
       cdkBuilder.instanceDefinitions(instanceDefinitions)
     }
 
+    /**
+     * The set of Amazon EC2 instance types that Amazon GameLift FleetIQ can use when balancing and
+     * automatically scaling instances in the corresponding Auto Scaling group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-instancedefinitions)
+     * @param instanceDefinitions The set of Amazon EC2 instance types that Amazon GameLift FleetIQ
+     * can use when balancing and automatically scaling instances in the corresponding Auto Scaling
+     * group. 
+     */
     override fun instanceDefinitions(vararg instanceDefinitions: Any): Unit =
         instanceDefinitions(instanceDefinitions.toList())
 
+    /**
+     * The Amazon EC2 launch template that contains configuration settings and game server code to
+     * be deployed to all instances in the game server group.
+     *
+     * You can specify the template using either the template name or ID. For help with creating a
+     * launch template, see [Creating a Launch Template for an Auto Scaling
+     * Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html) in the
+     * *Amazon Elastic Compute Cloud Auto Scaling User Guide* . After the Auto Scaling group is
+     * created, update this value directly in the Auto Scaling group using the AWS console or APIs.
+     *
+     *
+     * If you specify network interfaces in your launch template, you must explicitly set the
+     * property `AssociatePublicIpAddress` to "true". If no network interface is specified in the
+     * launch template, Amazon GameLift FleetIQ uses your account's default VPC.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-launchtemplate)
+     * @param launchTemplate The Amazon EC2 launch template that contains configuration settings and
+     * game server code to be deployed to all instances in the game server group. 
+     */
     override fun launchTemplate(launchTemplate: IResolvable) {
       cdkBuilder.launchTemplate(launchTemplate.let(IResolvable::unwrap))
     }
 
+    /**
+     * The Amazon EC2 launch template that contains configuration settings and game server code to
+     * be deployed to all instances in the game server group.
+     *
+     * You can specify the template using either the template name or ID. For help with creating a
+     * launch template, see [Creating a Launch Template for an Auto Scaling
+     * Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html) in the
+     * *Amazon Elastic Compute Cloud Auto Scaling User Guide* . After the Auto Scaling group is
+     * created, update this value directly in the Auto Scaling group using the AWS console or APIs.
+     *
+     *
+     * If you specify network interfaces in your launch template, you must explicitly set the
+     * property `AssociatePublicIpAddress` to "true". If no network interface is specified in the
+     * launch template, Amazon GameLift FleetIQ uses your account's default VPC.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-launchtemplate)
+     * @param launchTemplate The Amazon EC2 launch template that contains configuration settings and
+     * game server code to be deployed to all instances in the game server group. 
+     */
     override fun launchTemplate(launchTemplate: LaunchTemplateProperty) {
       cdkBuilder.launchTemplate(launchTemplate.let(LaunchTemplateProperty::unwrap))
     }
 
+    /**
+     * The Amazon EC2 launch template that contains configuration settings and game server code to
+     * be deployed to all instances in the game server group.
+     *
+     * You can specify the template using either the template name or ID. For help with creating a
+     * launch template, see [Creating a Launch Template for an Auto Scaling
+     * Group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html) in the
+     * *Amazon Elastic Compute Cloud Auto Scaling User Guide* . After the Auto Scaling group is
+     * created, update this value directly in the Auto Scaling group using the AWS console or APIs.
+     *
+     *
+     * If you specify network interfaces in your launch template, you must explicitly set the
+     * property `AssociatePublicIpAddress` to "true". If no network interface is specified in the
+     * launch template, Amazon GameLift FleetIQ uses your account's default VPC.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-launchtemplate)
+     * @param launchTemplate The Amazon EC2 launch template that contains configuration settings and
+     * game server code to be deployed to all instances in the game server group. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a0c6f4186d7a0bb0682a46568f56d9ab96c36e270752b16591b78b3cbf5f45ad")
     override fun launchTemplate(launchTemplate: LaunchTemplateProperty.Builder.() -> Unit): Unit =
         launchTemplate(LaunchTemplateProperty(launchTemplate))
 
+    /**
+     * The maximum number of instances allowed in the Amazon EC2 Auto Scaling group.
+     *
+     * During automatic scaling events, Amazon GameLift FleetIQ and EC2 do not scale up the group
+     * above this maximum. After the Auto Scaling group is created, update this value directly in the
+     * Auto Scaling group using the AWS console or APIs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-maxsize)
+     * @param maxSize The maximum number of instances allowed in the Amazon EC2 Auto Scaling group. 
+     */
     override fun maxSize(maxSize: Number) {
       cdkBuilder.maxSize(maxSize)
     }
 
+    /**
+     * The minimum number of instances allowed in the Amazon EC2 Auto Scaling group.
+     *
+     * During automatic scaling events, Amazon GameLift FleetIQ and Amazon EC2 do not scale down the
+     * group below this minimum. In production, this value should be set to at least 1. After the Auto
+     * Scaling group is created, update this value directly in the Auto Scaling group using the AWS
+     * console or APIs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-minsize)
+     * @param minSize The minimum number of instances allowed in the Amazon EC2 Auto Scaling group. 
+     */
     override fun minSize(minSize: Number) {
       cdkBuilder.minSize(minSize)
     }
 
+    /**
+     * The Amazon Resource Name (
+     * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) for an IAM role that
+     * allows Amazon GameLift to access your Amazon EC2 Auto Scaling groups.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-rolearn)
+     * @param roleArn The Amazon Resource Name (
+     * [ARN](https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html) ) for an IAM role that
+     * allows Amazon GameLift to access your Amazon EC2 Auto Scaling groups. 
+     */
     override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
 
+    /**
+     * A list of labels to assign to the new game server group resource.
+     *
+     * Tags are developer-defined key-value pairs. Tagging AWS resources is useful for resource
+     * management, access management, and cost allocation. For more information, see [Tagging AWS
+     * Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the *AWS General
+     * Reference* . Once the resource is created, you can use TagResource, UntagResource, and
+     * ListTagsForResource to add, remove, and view tags, respectively. The maximum tag limit may be
+     * lower than stated. See the AWS General Reference for actual tagging limits.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-tags)
+     * @param tags A list of labels to assign to the new game server group resource. 
+     */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    /**
+     * A list of labels to assign to the new game server group resource.
+     *
+     * Tags are developer-defined key-value pairs. Tagging AWS resources is useful for resource
+     * management, access management, and cost allocation. For more information, see [Tagging AWS
+     * Resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) in the *AWS General
+     * Reference* . Once the resource is created, you can use TagResource, UntagResource, and
+     * ListTagsForResource to add, remove, and view tags, respectively. The maximum tag limit may be
+     * lower than stated. See the AWS General Reference for actual tagging limits.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-tags)
+     * @param tags A list of labels to assign to the new game server group resource. 
+     */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
+    /**
+     * A list of virtual private cloud (VPC) subnets to use with instances in the game server group.
+     *
+     * By default, all Amazon GameLift FleetIQ-supported Availability Zones are used. You can use
+     * this parameter to specify VPCs that you've set up. This property cannot be updated after the
+     * game server group is created, and the corresponding Auto Scaling group will always use the
+     * property value that is set with this request, even if the Auto Scaling group is updated
+     * directly.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-vpcsubnets)
+     * @param vpcSubnets A list of virtual private cloud (VPC) subnets to use with instances in the
+     * game server group. 
+     */
     override fun vpcSubnets(vpcSubnets: List<String>) {
       cdkBuilder.vpcSubnets(vpcSubnets)
     }
 
+    /**
+     * A list of virtual private cloud (VPC) subnets to use with instances in the game server group.
+     *
+     * By default, all Amazon GameLift FleetIQ-supported Availability Zones are used. You can use
+     * this parameter to specify VPCs that you've set up. This property cannot be updated after the
+     * game server group is created, and the corresponding Auto Scaling group will always use the
+     * property value that is set with this request, even if the Auto Scaling group is updated
+     * directly.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gameservergroup.html#cfn-gamelift-gameservergroup-vpcsubnets)
+     * @param vpcSubnets A list of virtual private cloud (VPC) subnets to use with instances in the
+     * game server group. 
+     */
     override fun vpcSubnets(vararg vpcSubnets: String): Unit = vpcSubnets(vpcSubnets.toList())
 
     public fun build(): software.amazon.awscdk.services.gamelift.CfnGameServerGroup =
@@ -289,17 +960,52 @@ public open class CfnGameServerGroup internal constructor(
   }
 
   public interface LaunchTemplateProperty {
+    /**
+     * A unique identifier for an existing Amazon EC2 launch template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-launchtemplate.html#cfn-gamelift-gameservergroup-launchtemplate-launchtemplateid)
+     */
     public fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
 
+    /**
+     * A readable identifier for an existing Amazon EC2 launch template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-launchtemplate.html#cfn-gamelift-gameservergroup-launchtemplate-launchtemplatename)
+     */
     public fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
 
+    /**
+     * The version of the Amazon EC2 launch template to use.
+     *
+     * If no version is specified, the default version will be used. With Amazon EC2, you can
+     * specify a default version for a launch template. If none is set, the default is the first
+     * version created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-launchtemplate.html#cfn-gamelift-gameservergroup-launchtemplate-version)
+     */
     public fun version(): String? = unwrap(this).getVersion()
 
+    /**
+     * A builder for [LaunchTemplateProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param launchTemplateId A unique identifier for an existing Amazon EC2 launch template.
+       */
       public fun launchTemplateId(launchTemplateId: String)
 
+      /**
+       * @param launchTemplateName A readable identifier for an existing Amazon EC2 launch template.
+       */
       public fun launchTemplateName(launchTemplateName: String)
 
+      /**
+       * @param version The version of the Amazon EC2 launch template to use.
+       * If no version is specified, the default version will be used. With Amazon EC2, you can
+       * specify a default version for a launch template. If none is set, the default is the first
+       * version created.
+       */
       public fun version(version: String)
     }
 
@@ -309,14 +1015,26 @@ public open class CfnGameServerGroup internal constructor(
           =
           software.amazon.awscdk.services.gamelift.CfnGameServerGroup.LaunchTemplateProperty.builder()
 
+      /**
+       * @param launchTemplateId A unique identifier for an existing Amazon EC2 launch template.
+       */
       override fun launchTemplateId(launchTemplateId: String) {
         cdkBuilder.launchTemplateId(launchTemplateId)
       }
 
+      /**
+       * @param launchTemplateName A readable identifier for an existing Amazon EC2 launch template.
+       */
       override fun launchTemplateName(launchTemplateName: String) {
         cdkBuilder.launchTemplateName(launchTemplateName)
       }
 
+      /**
+       * @param version The version of the Amazon EC2 launch template to use.
+       * If no version is specified, the default version will be used. With Amazon EC2, you can
+       * specify a default version for a launch template. If none is set, the default is the first
+       * version created.
+       */
       override fun version(version: String) {
         cdkBuilder.version(version)
       }
@@ -330,10 +1048,29 @@ public open class CfnGameServerGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnGameServerGroup.LaunchTemplateProperty,
     ) : LaunchTemplateProperty {
+      /**
+       * A unique identifier for an existing Amazon EC2 launch template.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-launchtemplate.html#cfn-gamelift-gameservergroup-launchtemplate-launchtemplateid)
+       */
       override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
 
+      /**
+       * A readable identifier for an existing Amazon EC2 launch template.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-launchtemplate.html#cfn-gamelift-gameservergroup-launchtemplate-launchtemplatename)
+       */
       override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
 
+      /**
+       * The version of the Amazon EC2 launch template to use.
+       *
+       * If no version is specified, the default version will be used. With Amazon EC2, you can
+       * specify a default version for a launch template. If none is set, the default is the first
+       * version created.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-launchtemplate.html#cfn-gamelift-gameservergroup-launchtemplate-version)
+       */
       override fun version(): String? = unwrap(this).getVersion()
     }
 
@@ -358,9 +1095,22 @@ public open class CfnGameServerGroup internal constructor(
   }
 
   public interface TargetTrackingConfigurationProperty {
+    /**
+     * Desired value to use with a game server group target-based scaling policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-targettrackingconfiguration.html#cfn-gamelift-gameservergroup-targettrackingconfiguration-targetvalue)
+     */
     public fun targetValue(): Number
 
+    /**
+     * A builder for [TargetTrackingConfigurationProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param targetValue Desired value to use with a game server group target-based scaling
+       * policy. 
+       */
       public fun targetValue(targetValue: Number)
     }
 
@@ -370,6 +1120,10 @@ public open class CfnGameServerGroup internal constructor(
           =
           software.amazon.awscdk.services.gamelift.CfnGameServerGroup.TargetTrackingConfigurationProperty.builder()
 
+      /**
+       * @param targetValue Desired value to use with a game server group target-based scaling
+       * policy. 
+       */
       override fun targetValue(targetValue: Number) {
         cdkBuilder.targetValue(targetValue)
       }
@@ -383,6 +1137,11 @@ public open class CfnGameServerGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnGameServerGroup.TargetTrackingConfigurationProperty,
     ) : TargetTrackingConfigurationProperty {
+      /**
+       * Desired value to use with a game server group target-based scaling policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-targettrackingconfiguration.html#cfn-gamelift-gameservergroup-targettrackingconfiguration-targetvalue)
+       */
       override fun targetValue(): Number = unwrap(this).getTargetValue()
     }
 
@@ -408,18 +1167,71 @@ public open class CfnGameServerGroup internal constructor(
   }
 
   public interface AutoScalingPolicyProperty {
+    /**
+     * Length of time, in seconds, it takes for a new instance to start new game server processes
+     * and register with Amazon GameLift FleetIQ.
+     *
+     * Specifying a warm-up time can be useful, particularly with game servers that take a long time
+     * to start up, because it avoids prematurely starting new instances.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-autoscalingpolicy.html#cfn-gamelift-gameservergroup-autoscalingpolicy-estimatedinstancewarmup)
+     */
     public fun estimatedInstanceWarmup(): Number? = unwrap(this).getEstimatedInstanceWarmup()
 
+    /**
+     * Settings for a target-based scaling policy applied to Auto Scaling group.
+     *
+     * These settings are used to create a target-based policy that tracks the GameLift FleetIQ
+     * metric `PercentUtilizedGameServers` and specifies a target value for the metric. As player usage
+     * changes, the policy triggers to adjust the game server group capacity so that the metric returns
+     * to the target value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-autoscalingpolicy.html#cfn-gamelift-gameservergroup-autoscalingpolicy-targettrackingconfiguration)
+     */
     public fun targetTrackingConfiguration(): Any
 
+    /**
+     * A builder for [AutoScalingPolicyProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param estimatedInstanceWarmup Length of time, in seconds, it takes for a new instance to
+       * start new game server processes and register with Amazon GameLift FleetIQ.
+       * Specifying a warm-up time can be useful, particularly with game servers that take a long
+       * time to start up, because it avoids prematurely starting new instances.
+       */
       public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Number)
 
+      /**
+       * @param targetTrackingConfiguration Settings for a target-based scaling policy applied to
+       * Auto Scaling group. 
+       * These settings are used to create a target-based policy that tracks the GameLift FleetIQ
+       * metric `PercentUtilizedGameServers` and specifies a target value for the metric. As player
+       * usage changes, the policy triggers to adjust the game server group capacity so that the metric
+       * returns to the target value.
+       */
       public fun targetTrackingConfiguration(targetTrackingConfiguration: IResolvable)
 
+      /**
+       * @param targetTrackingConfiguration Settings for a target-based scaling policy applied to
+       * Auto Scaling group. 
+       * These settings are used to create a target-based policy that tracks the GameLift FleetIQ
+       * metric `PercentUtilizedGameServers` and specifies a target value for the metric. As player
+       * usage changes, the policy triggers to adjust the game server group capacity so that the metric
+       * returns to the target value.
+       */
       public
           fun targetTrackingConfiguration(targetTrackingConfiguration: TargetTrackingConfigurationProperty)
 
+      /**
+       * @param targetTrackingConfiguration Settings for a target-based scaling policy applied to
+       * Auto Scaling group. 
+       * These settings are used to create a target-based policy that tracks the GameLift FleetIQ
+       * metric `PercentUtilizedGameServers` and specifies a target value for the metric. As player
+       * usage changes, the policy triggers to adjust the game server group capacity so that the metric
+       * returns to the target value.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2ea4e8fc6fbae60f62cc711e3cf2d8fd6d3e515c00aeeb96e8d56967a991c260")
       public
@@ -432,19 +1244,49 @@ public open class CfnGameServerGroup internal constructor(
           =
           software.amazon.awscdk.services.gamelift.CfnGameServerGroup.AutoScalingPolicyProperty.builder()
 
+      /**
+       * @param estimatedInstanceWarmup Length of time, in seconds, it takes for a new instance to
+       * start new game server processes and register with Amazon GameLift FleetIQ.
+       * Specifying a warm-up time can be useful, particularly with game servers that take a long
+       * time to start up, because it avoids prematurely starting new instances.
+       */
       override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Number) {
         cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup)
       }
 
+      /**
+       * @param targetTrackingConfiguration Settings for a target-based scaling policy applied to
+       * Auto Scaling group. 
+       * These settings are used to create a target-based policy that tracks the GameLift FleetIQ
+       * metric `PercentUtilizedGameServers` and specifies a target value for the metric. As player
+       * usage changes, the policy triggers to adjust the game server group capacity so that the metric
+       * returns to the target value.
+       */
       override fun targetTrackingConfiguration(targetTrackingConfiguration: IResolvable) {
         cdkBuilder.targetTrackingConfiguration(targetTrackingConfiguration.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param targetTrackingConfiguration Settings for a target-based scaling policy applied to
+       * Auto Scaling group. 
+       * These settings are used to create a target-based policy that tracks the GameLift FleetIQ
+       * metric `PercentUtilizedGameServers` and specifies a target value for the metric. As player
+       * usage changes, the policy triggers to adjust the game server group capacity so that the metric
+       * returns to the target value.
+       */
       override
           fun targetTrackingConfiguration(targetTrackingConfiguration: TargetTrackingConfigurationProperty) {
         cdkBuilder.targetTrackingConfiguration(targetTrackingConfiguration.let(TargetTrackingConfigurationProperty::unwrap))
       }
 
+      /**
+       * @param targetTrackingConfiguration Settings for a target-based scaling policy applied to
+       * Auto Scaling group. 
+       * These settings are used to create a target-based policy that tracks the GameLift FleetIQ
+       * metric `PercentUtilizedGameServers` and specifies a target value for the metric. As player
+       * usage changes, the policy triggers to adjust the game server group capacity so that the metric
+       * returns to the target value.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2ea4e8fc6fbae60f62cc711e3cf2d8fd6d3e515c00aeeb96e8d56967a991c260")
       override
@@ -461,8 +1303,27 @@ public open class CfnGameServerGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnGameServerGroup.AutoScalingPolicyProperty,
     ) : AutoScalingPolicyProperty {
+      /**
+       * Length of time, in seconds, it takes for a new instance to start new game server processes
+       * and register with Amazon GameLift FleetIQ.
+       *
+       * Specifying a warm-up time can be useful, particularly with game servers that take a long
+       * time to start up, because it avoids prematurely starting new instances.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-autoscalingpolicy.html#cfn-gamelift-gameservergroup-autoscalingpolicy-estimatedinstancewarmup)
+       */
       override fun estimatedInstanceWarmup(): Number? = unwrap(this).getEstimatedInstanceWarmup()
 
+      /**
+       * Settings for a target-based scaling policy applied to Auto Scaling group.
+       *
+       * These settings are used to create a target-based policy that tracks the GameLift FleetIQ
+       * metric `PercentUtilizedGameServers` and specifies a target value for the metric. As player
+       * usage changes, the policy triggers to adjust the game server group capacity so that the metric
+       * returns to the target value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-autoscalingpolicy.html#cfn-gamelift-gameservergroup-autoscalingpolicy-targettrackingconfiguration)
+       */
       override fun targetTrackingConfiguration(): Any =
           unwrap(this).getTargetTrackingConfiguration()
     }
@@ -488,13 +1349,46 @@ public open class CfnGameServerGroup internal constructor(
   }
 
   public interface InstanceDefinitionProperty {
+    /**
+     * An Amazon EC2 instance type designation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-instancedefinition.html#cfn-gamelift-gameservergroup-instancedefinition-instancetype)
+     */
     public fun instanceType(): String
 
+    /**
+     * Instance weighting that indicates how much this instance type contributes to the total
+     * capacity of a game server group.
+     *
+     * Instance weights are used by Amazon GameLift FleetIQ to calculate the instance type's cost
+     * per unit hour and better identify the most cost-effective options. For detailed information on
+     * weighting instance capacity, see [Instance
+     * Weighting](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html) in
+     * the *Amazon Elastic Compute Cloud Auto Scaling User Guide* . Default value is "1".
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-instancedefinition.html#cfn-gamelift-gameservergroup-instancedefinition-weightedcapacity)
+     */
     public fun weightedCapacity(): String? = unwrap(this).getWeightedCapacity()
 
+    /**
+     * A builder for [InstanceDefinitionProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param instanceType An Amazon EC2 instance type designation. 
+       */
       public fun instanceType(instanceType: String)
 
+      /**
+       * @param weightedCapacity Instance weighting that indicates how much this instance type
+       * contributes to the total capacity of a game server group.
+       * Instance weights are used by Amazon GameLift FleetIQ to calculate the instance type's cost
+       * per unit hour and better identify the most cost-effective options. For detailed information on
+       * weighting instance capacity, see [Instance
+       * Weighting](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html)
+       * in the *Amazon Elastic Compute Cloud Auto Scaling User Guide* . Default value is "1".
+       */
       public fun weightedCapacity(weightedCapacity: String)
     }
 
@@ -504,10 +1398,22 @@ public open class CfnGameServerGroup internal constructor(
           =
           software.amazon.awscdk.services.gamelift.CfnGameServerGroup.InstanceDefinitionProperty.builder()
 
+      /**
+       * @param instanceType An Amazon EC2 instance type designation. 
+       */
       override fun instanceType(instanceType: String) {
         cdkBuilder.instanceType(instanceType)
       }
 
+      /**
+       * @param weightedCapacity Instance weighting that indicates how much this instance type
+       * contributes to the total capacity of a game server group.
+       * Instance weights are used by Amazon GameLift FleetIQ to calculate the instance type's cost
+       * per unit hour and better identify the most cost-effective options. For detailed information on
+       * weighting instance capacity, see [Instance
+       * Weighting](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html)
+       * in the *Amazon Elastic Compute Cloud Auto Scaling User Guide* . Default value is "1".
+       */
       override fun weightedCapacity(weightedCapacity: String) {
         cdkBuilder.weightedCapacity(weightedCapacity)
       }
@@ -521,8 +1427,25 @@ public open class CfnGameServerGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.gamelift.CfnGameServerGroup.InstanceDefinitionProperty,
     ) : InstanceDefinitionProperty {
+      /**
+       * An Amazon EC2 instance type designation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-instancedefinition.html#cfn-gamelift-gameservergroup-instancedefinition-instancetype)
+       */
       override fun instanceType(): String = unwrap(this).getInstanceType()
 
+      /**
+       * Instance weighting that indicates how much this instance type contributes to the total
+       * capacity of a game server group.
+       *
+       * Instance weights are used by Amazon GameLift FleetIQ to calculate the instance type's cost
+       * per unit hour and better identify the most cost-effective options. For detailed information on
+       * weighting instance capacity, see [Instance
+       * Weighting](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html)
+       * in the *Amazon Elastic Compute Cloud Auto Scaling User Guide* . Default value is "1".
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-gamelift-gameservergroup-instancedefinition.html#cfn-gamelift-gameservergroup-instancedefinition-weightedcapacity)
+       */
       override fun weightedCapacity(): String? = unwrap(this).getWeightedCapacity()
     }
 

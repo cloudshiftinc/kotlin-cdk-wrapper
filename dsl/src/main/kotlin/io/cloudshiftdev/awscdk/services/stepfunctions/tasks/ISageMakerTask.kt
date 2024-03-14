@@ -7,6 +7,9 @@ public interface ISageMakerTask : IGrantable {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ISageMakerTask,
   ) : ISageMakerTask {
+    /**
+     * The principal to grant permissions to.
+     */
     override fun grantPrincipal(): IPrincipal =
         unwrap(this).getGrantPrincipal().let(IPrincipal::wrap)
   }

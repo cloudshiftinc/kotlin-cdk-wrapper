@@ -1,13 +1,29 @@
 package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdk.Duration
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Unit
 
 public interface NetworkForwardOptions {
+  /**
+   * For how long clients should be directed to the same target group.
+   *
+   * Range between 1 second and 7 days.
+   *
+   * Default: - No stickiness
+   */
   public fun stickinessDuration(): Duration? =
       unwrap(this).getStickinessDuration()?.let(Duration::wrap)
 
+  /**
+   * A builder for [NetworkForwardOptions]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param stickinessDuration For how long clients should be directed to the same target group.
+     * Range between 1 second and 7 days.
+     */
     public fun stickinessDuration(stickinessDuration: Duration)
   }
 
@@ -16,6 +32,10 @@ public interface NetworkForwardOptions {
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkForwardOptions.Builder =
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkForwardOptions.builder()
 
+    /**
+     * @param stickinessDuration For how long clients should be directed to the same target group.
+     * Range between 1 second and 7 days.
+     */
     override fun stickinessDuration(stickinessDuration: Duration) {
       cdkBuilder.stickinessDuration(stickinessDuration.let(Duration::unwrap))
     }
@@ -28,6 +48,13 @@ public interface NetworkForwardOptions {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkForwardOptions,
   ) : NetworkForwardOptions {
+    /**
+     * For how long clients should be directed to the same target group.
+     *
+     * Range between 1 second and 7 days.
+     *
+     * Default: - No stickiness
+     */
     override fun stickinessDuration(): Duration? =
         unwrap(this).getStickinessDuration()?.let(Duration::wrap)
   }

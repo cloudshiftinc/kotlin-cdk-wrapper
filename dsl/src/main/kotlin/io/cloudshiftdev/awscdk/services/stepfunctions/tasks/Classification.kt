@@ -5,6 +5,9 @@ import kotlin.String
 public open class Classification internal constructor(
   private val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.Classification,
 ) {
+  /**
+   * A literal string in case a new EMR classification is released, if not already defined.
+   */
   public open fun classificationStatement(): String = unwrap(this).getClassificationStatement()
 
   public companion object {

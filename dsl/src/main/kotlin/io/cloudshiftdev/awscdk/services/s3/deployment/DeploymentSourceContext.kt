@@ -1,12 +1,23 @@
 package io.cloudshiftdev.awscdk.services.s3.deployment
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Unit
 
 public interface DeploymentSourceContext {
+  /**
+   * The role for the handler.
+   */
   public fun handlerRole(): IRole
 
+  /**
+   * A builder for [DeploymentSourceContext]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param handlerRole The role for the handler. 
+     */
     public fun handlerRole(handlerRole: IRole)
   }
 
@@ -15,6 +26,9 @@ public interface DeploymentSourceContext {
         software.amazon.awscdk.services.s3.deployment.DeploymentSourceContext.Builder =
         software.amazon.awscdk.services.s3.deployment.DeploymentSourceContext.builder()
 
+    /**
+     * @param handlerRole The role for the handler. 
+     */
     override fun handlerRole(handlerRole: IRole) {
       cdkBuilder.handlerRole(handlerRole.let(IRole::unwrap))
     }
@@ -26,6 +40,9 @@ public interface DeploymentSourceContext {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.s3.deployment.DeploymentSourceContext,
   ) : DeploymentSourceContext {
+    /**
+     * The role for the handler.
+     */
     override fun handlerRole(): IRole = unwrap(this).getHandlerRole().let(IRole::wrap)
   }
 

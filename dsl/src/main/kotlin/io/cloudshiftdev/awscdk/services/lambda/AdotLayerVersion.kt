@@ -8,25 +8,23 @@ public abstract class AdotLayerVersion internal constructor(
   ) : AdotLayerVersion(cdkObject)
 
   public companion object {
-    public open fun fromGenericLayerVersion(version: AdotLambdaLayerGenericVersion):
-        AdotLayerVersion =
+    public fun fromGenericLayerVersion(version: AdotLambdaLayerGenericVersion): AdotLayerVersion =
         software.amazon.awscdk.services.lambda.AdotLayerVersion.fromGenericLayerVersion(version.let(AdotLambdaLayerGenericVersion::unwrap)).let(AdotLayerVersion::wrap)
 
-    public open
+    public
         fun fromJavaAutoInstrumentationLayerVersion(version: AdotLambdaLayerJavaAutoInstrumentationVersion):
         AdotLayerVersion =
         software.amazon.awscdk.services.lambda.AdotLayerVersion.fromJavaAutoInstrumentationLayerVersion(version.let(AdotLambdaLayerJavaAutoInstrumentationVersion::unwrap)).let(AdotLayerVersion::wrap)
 
-    public open fun fromJavaScriptSdkLayerVersion(version: AdotLambdaLayerJavaScriptSdkVersion):
+    public fun fromJavaScriptSdkLayerVersion(version: AdotLambdaLayerJavaScriptSdkVersion):
         AdotLayerVersion =
         software.amazon.awscdk.services.lambda.AdotLayerVersion.fromJavaScriptSdkLayerVersion(version.let(AdotLambdaLayerJavaScriptSdkVersion::unwrap)).let(AdotLayerVersion::wrap)
 
-    public open fun fromJavaSdkLayerVersion(version: AdotLambdaLayerJavaSdkVersion):
-        AdotLayerVersion =
+    public fun fromJavaSdkLayerVersion(version: AdotLambdaLayerJavaSdkVersion): AdotLayerVersion =
         software.amazon.awscdk.services.lambda.AdotLayerVersion.fromJavaSdkLayerVersion(version.let(AdotLambdaLayerJavaSdkVersion::unwrap)).let(AdotLayerVersion::wrap)
 
-    public open fun fromPythonSdkLayerVersion(version: AdotLambdaLayerPythonSdkVersion):
-        AdotLayerVersion =
+    public fun fromPythonSdkLayerVersion(version: AdotLambdaLayerPythonSdkVersion): AdotLayerVersion
+        =
         software.amazon.awscdk.services.lambda.AdotLayerVersion.fromPythonSdkLayerVersion(version.let(AdotLambdaLayerPythonSdkVersion::unwrap)).let(AdotLayerVersion::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.AdotLayerVersion):

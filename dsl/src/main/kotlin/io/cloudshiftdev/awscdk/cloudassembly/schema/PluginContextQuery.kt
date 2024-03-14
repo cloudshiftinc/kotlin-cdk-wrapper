@@ -1,12 +1,23 @@
 package io.cloudshiftdev.awscdk.cloudassembly.schema
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface PluginContextQuery {
+  /**
+   * The name of the plugin.
+   */
   public fun pluginName(): String
 
+  /**
+   * A builder for [PluginContextQuery]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param pluginName The name of the plugin. 
+     */
     public fun pluginName(pluginName: String)
   }
 
@@ -14,6 +25,9 @@ public interface PluginContextQuery {
     private val cdkBuilder: software.amazon.awscdk.cloudassembly.schema.PluginContextQuery.Builder =
         software.amazon.awscdk.cloudassembly.schema.PluginContextQuery.builder()
 
+    /**
+     * @param pluginName The name of the plugin. 
+     */
     override fun pluginName(pluginName: String) {
       cdkBuilder.pluginName(pluginName)
     }
@@ -25,6 +39,9 @@ public interface PluginContextQuery {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.cloudassembly.schema.PluginContextQuery,
   ) : PluginContextQuery {
+    /**
+     * The name of the plugin.
+     */
     override fun pluginName(): String = unwrap(this).getPluginName()
   }
 

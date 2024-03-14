@@ -1,23 +1,46 @@
 package io.cloudshiftdev.awscdk
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Suppress
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
 public interface CfnCodeDeployBlueGreenApplication {
+  /**
+   * The detailed attributes of the deployed target.
+   */
   public fun ecsAttributes(): CfnCodeDeployBlueGreenEcsAttributes
 
+  /**
+   * The target that is being deployed.
+   */
   public fun target(): CfnCodeDeployBlueGreenApplicationTarget
 
+  /**
+   * A builder for [CfnCodeDeployBlueGreenApplication]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param ecsAttributes The detailed attributes of the deployed target. 
+     */
     public fun ecsAttributes(ecsAttributes: CfnCodeDeployBlueGreenEcsAttributes)
 
+    /**
+     * @param ecsAttributes The detailed attributes of the deployed target. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2949b093137affa82667f7aadd73d2a3f9a659a80e8ce0a5773e3a9520660c1a")
     public fun ecsAttributes(ecsAttributes: CfnCodeDeployBlueGreenEcsAttributes.Builder.() -> Unit)
 
+    /**
+     * @param target The target that is being deployed. 
+     */
     public fun target(target: CfnCodeDeployBlueGreenApplicationTarget)
 
+    /**
+     * @param target The target that is being deployed. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7a6b144a7caab90d92ab5814297f2d3e984915d397737fb5bcc194546504c0df")
     public fun target(target: CfnCodeDeployBlueGreenApplicationTarget.Builder.() -> Unit)
@@ -27,20 +50,32 @@ public interface CfnCodeDeployBlueGreenApplication {
     private val cdkBuilder: software.amazon.awscdk.CfnCodeDeployBlueGreenApplication.Builder =
         software.amazon.awscdk.CfnCodeDeployBlueGreenApplication.builder()
 
+    /**
+     * @param ecsAttributes The detailed attributes of the deployed target. 
+     */
     override fun ecsAttributes(ecsAttributes: CfnCodeDeployBlueGreenEcsAttributes) {
       cdkBuilder.ecsAttributes(ecsAttributes.let(CfnCodeDeployBlueGreenEcsAttributes::unwrap))
     }
 
+    /**
+     * @param ecsAttributes The detailed attributes of the deployed target. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2949b093137affa82667f7aadd73d2a3f9a659a80e8ce0a5773e3a9520660c1a")
     override
         fun ecsAttributes(ecsAttributes: CfnCodeDeployBlueGreenEcsAttributes.Builder.() -> Unit):
         Unit = ecsAttributes(CfnCodeDeployBlueGreenEcsAttributes(ecsAttributes))
 
+    /**
+     * @param target The target that is being deployed. 
+     */
     override fun target(target: CfnCodeDeployBlueGreenApplicationTarget) {
       cdkBuilder.target(target.let(CfnCodeDeployBlueGreenApplicationTarget::unwrap))
     }
 
+    /**
+     * @param target The target that is being deployed. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7a6b144a7caab90d92ab5814297f2d3e984915d397737fb5bcc194546504c0df")
     override fun target(target: CfnCodeDeployBlueGreenApplicationTarget.Builder.() -> Unit): Unit =
@@ -53,9 +88,15 @@ public interface CfnCodeDeployBlueGreenApplication {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenApplication,
   ) : CfnCodeDeployBlueGreenApplication {
+    /**
+     * The detailed attributes of the deployed target.
+     */
     override fun ecsAttributes(): CfnCodeDeployBlueGreenEcsAttributes =
         unwrap(this).getEcsAttributes().let(CfnCodeDeployBlueGreenEcsAttributes::wrap)
 
+    /**
+     * The target that is being deployed.
+     */
     override fun target(): CfnCodeDeployBlueGreenApplicationTarget =
         unwrap(this).getTarget().let(CfnCodeDeployBlueGreenApplicationTarget::wrap)
   }

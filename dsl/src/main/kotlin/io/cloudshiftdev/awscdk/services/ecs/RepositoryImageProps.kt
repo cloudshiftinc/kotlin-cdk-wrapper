@@ -1,12 +1,27 @@
 package io.cloudshiftdev.awscdk.services.ecs
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
 import kotlin.Unit
 
 public interface RepositoryImageProps {
+  /**
+   * The secret to expose to the container that contains the credentials for the image repository.
+   *
+   * The supported value is the full ARN of an AWS Secrets Manager secret.
+   */
   public fun credentials(): ISecret? = unwrap(this).getCredentials()?.let(ISecret::wrap)
 
+  /**
+   * A builder for [RepositoryImageProps]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param credentials The secret to expose to the container that contains the credentials for
+     * the image repository.
+     * The supported value is the full ARN of an AWS Secrets Manager secret.
+     */
     public fun credentials(credentials: ISecret)
   }
 
@@ -14,6 +29,11 @@ public interface RepositoryImageProps {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.RepositoryImageProps.Builder =
         software.amazon.awscdk.services.ecs.RepositoryImageProps.builder()
 
+    /**
+     * @param credentials The secret to expose to the container that contains the credentials for
+     * the image repository.
+     * The supported value is the full ARN of an AWS Secrets Manager secret.
+     */
     override fun credentials(credentials: ISecret) {
       cdkBuilder.credentials(credentials.let(ISecret::unwrap))
     }
@@ -25,6 +45,11 @@ public interface RepositoryImageProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.RepositoryImageProps,
   ) : RepositoryImageProps {
+    /**
+     * The secret to expose to the container that contains the credentials for the image repository.
+     *
+     * The supported value is the full ARN of an AWS Secrets Manager secret.
+     */
     override fun credentials(): ISecret? = unwrap(this).getCredentials()?.let(ISecret::wrap)
   }
 

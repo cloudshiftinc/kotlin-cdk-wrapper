@@ -1,24 +1,54 @@
 package io.cloudshiftdev.awscdk.services.cognito
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 
 public interface UserPoolResourceServerOptions {
+  /**
+   * A unique resource server identifier for the resource server.
+   */
   public fun identifier(): String
 
+  /**
+   * Oauth scopes.
+   *
+   * Default: - No scopes will be added
+   */
   public fun scopes(): List<ResourceServerScope> =
       unwrap(this).getScopes()?.map(ResourceServerScope::wrap) ?: emptyList()
 
+  /**
+   * A friendly name for the resource server.
+   *
+   * Default: - same as `identifier`
+   */
   public fun userPoolResourceServerName(): String? = unwrap(this).getUserPoolResourceServerName()
 
+  /**
+   * A builder for [UserPoolResourceServerOptions]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param identifier A unique resource server identifier for the resource server. 
+     */
     public fun identifier(identifier: String)
 
+    /**
+     * @param scopes Oauth scopes.
+     */
     public fun scopes(scopes: List<ResourceServerScope>)
 
+    /**
+     * @param scopes Oauth scopes.
+     */
     public fun scopes(vararg scopes: ResourceServerScope)
 
+    /**
+     * @param userPoolResourceServerName A friendly name for the resource server.
+     */
     public fun userPoolResourceServerName(userPoolResourceServerName: String)
   }
 
@@ -27,16 +57,28 @@ public interface UserPoolResourceServerOptions {
         software.amazon.awscdk.services.cognito.UserPoolResourceServerOptions.Builder =
         software.amazon.awscdk.services.cognito.UserPoolResourceServerOptions.builder()
 
+    /**
+     * @param identifier A unique resource server identifier for the resource server. 
+     */
     override fun identifier(identifier: String) {
       cdkBuilder.identifier(identifier)
     }
 
+    /**
+     * @param scopes Oauth scopes.
+     */
     override fun scopes(scopes: List<ResourceServerScope>) {
       cdkBuilder.scopes(scopes.map(ResourceServerScope::unwrap))
     }
 
+    /**
+     * @param scopes Oauth scopes.
+     */
     override fun scopes(vararg scopes: ResourceServerScope): Unit = scopes(scopes.toList())
 
+    /**
+     * @param userPoolResourceServerName A friendly name for the resource server.
+     */
     override fun userPoolResourceServerName(userPoolResourceServerName: String) {
       cdkBuilder.userPoolResourceServerName(userPoolResourceServerName)
     }
@@ -48,11 +90,24 @@ public interface UserPoolResourceServerOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cognito.UserPoolResourceServerOptions,
   ) : UserPoolResourceServerOptions {
+    /**
+     * A unique resource server identifier for the resource server.
+     */
     override fun identifier(): String = unwrap(this).getIdentifier()
 
+    /**
+     * Oauth scopes.
+     *
+     * Default: - No scopes will be added
+     */
     override fun scopes(): List<ResourceServerScope> =
         unwrap(this).getScopes()?.map(ResourceServerScope::wrap) ?: emptyList()
 
+    /**
+     * A friendly name for the resource server.
+     *
+     * Default: - same as `identifier`
+     */
     override fun userPoolResourceServerName(): String? =
         unwrap(this).getUserPoolResourceServerName()
   }

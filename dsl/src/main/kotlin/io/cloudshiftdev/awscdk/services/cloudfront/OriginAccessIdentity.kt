@@ -1,6 +1,7 @@
 package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.Resource
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.iam.IPrincipal
 import kotlin.Deprecated
 import kotlin.String
@@ -11,19 +12,46 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class OriginAccessIdentity internal constructor(
   private val cdkObject: software.amazon.awscdk.services.cloudfront.OriginAccessIdentity,
 ) : Resource(cdkObject), IOriginAccessIdentity {
+  /**
+   * The Amazon S3 canonical user ID for the origin access identity, used when giving the origin
+   * access identity read permission to an object in Amazon S3.
+   */
   public open fun cloudFrontOriginAccessIdentityS3CanonicalUserId(): String =
       unwrap(this).getCloudFrontOriginAccessIdentityS3CanonicalUserId()
 
+  /**
+   * Derived principal value for bucket access.
+   */
   public override fun grantPrincipal(): IPrincipal =
       unwrap(this).getGrantPrincipal().let(IPrincipal::wrap)
 
+  /**
+   * The Origin Access Identity Id (physical id) This was called originAccessIdentityName before.
+   */
   public override fun originAccessIdentityId(): String = unwrap(this).getOriginAccessIdentityId()
 
+  /**
+   * (deprecated) The Origin Access Identity Id (physical id) It is misnamed and superseded by the
+   * correctly named originAccessIdentityId.
+   *
+   * @deprecated use originAccessIdentityId instead
+   */
   @Deprecated(message = "deprecated in CDK")
   public override fun originAccessIdentityName(): String =
       unwrap(this).getOriginAccessIdentityName()
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.cloudfront.OriginAccessIdentity].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * Any comments you want to include about the origin access identity.
+     *
+     * Default: "Allows CloudFront to reach the bucket"
+     *
+     * @param comment Any comments you want to include about the origin access identity. 
+     */
     public fun comment(comment: String)
   }
 
@@ -34,6 +62,13 @@ public open class OriginAccessIdentity internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.OriginAccessIdentity.Builder
         = software.amazon.awscdk.services.cloudfront.OriginAccessIdentity.Builder.create(scope, id)
 
+    /**
+     * Any comments you want to include about the origin access identity.
+     *
+     * Default: "Allows CloudFront to reach the bucket"
+     *
+     * @param comment Any comments you want to include about the origin access identity. 
+     */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
@@ -43,7 +78,7 @@ public open class OriginAccessIdentity internal constructor(
   }
 
   public companion object {
-    public open fun fromOriginAccessIdentityId(
+    public fun fromOriginAccessIdentityId(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
       originAccessIdentityId: String,
@@ -52,7 +87,7 @@ public open class OriginAccessIdentity internal constructor(
         id, originAccessIdentityId).let(IOriginAccessIdentity::wrap)
 
     @Deprecated(message = "deprecated in CDK")
-    public open fun fromOriginAccessIdentityName(
+    public fun fromOriginAccessIdentityName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
       originAccessIdentityName: String,

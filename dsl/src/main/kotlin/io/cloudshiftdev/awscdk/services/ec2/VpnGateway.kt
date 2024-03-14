@@ -1,6 +1,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.Resource
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -10,11 +11,30 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class VpnGateway internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ec2.VpnGateway,
 ) : Resource(cdkObject), IVpnGateway {
+  /**
+   * The virtual private gateway Id.
+   */
   public override fun gatewayId(): String = unwrap(this).getGatewayId()
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.VpnGateway].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * Explicitly specify an Asn or let aws pick an Asn for you.
+     *
+     * Default: 65000
+     *
+     * @param amazonSideAsn Explicitly specify an Asn or let aws pick an Asn for you. 
+     */
     public fun amazonSideAsn(amazonSideAsn: Number)
 
+    /**
+     * Default type ipsec.1.
+     *
+     * @param type Default type ipsec.1. 
+     */
     public fun type(type: String)
   }
 
@@ -25,10 +45,22 @@ public open class VpnGateway internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.VpnGateway.Builder =
         software.amazon.awscdk.services.ec2.VpnGateway.Builder.create(scope, id)
 
+    /**
+     * Explicitly specify an Asn or let aws pick an Asn for you.
+     *
+     * Default: 65000
+     *
+     * @param amazonSideAsn Explicitly specify an Asn or let aws pick an Asn for you. 
+     */
     override fun amazonSideAsn(amazonSideAsn: Number) {
       cdkBuilder.amazonSideAsn(amazonSideAsn)
     }
 
+    /**
+     * Default type ipsec.1.
+     *
+     * @param type Default type ipsec.1. 
+     */
     override fun type(type: String) {
       cdkBuilder.type(type)
     }

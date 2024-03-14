@@ -4,6 +4,7 @@ import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -16,66 +17,159 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnAlert internal constructor(
   private val cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAlert,
 ) : CfnResource(cdkObject), IInspectable {
+  /**
+   * Action that will be triggered when there is an alert.
+   */
   public open fun action(): Any = unwrap(this).getAction()
 
+  /**
+   * Action that will be triggered when there is an alert.
+   */
   public open fun action(`value`: IResolvable) {
     unwrap(this).setAction(`value`.let(IResolvable::unwrap))
   }
 
+  /**
+   * Action that will be triggered when there is an alert.
+   */
   public open fun action(`value`: ActionProperty) {
     unwrap(this).setAction(`value`.let(ActionProperty::unwrap))
   }
 
+  /**
+   * Action that will be triggered when there is an alert.
+   */
   @Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("b95d6b99fb4f0256195cb6943042dccba07e9fb979866e2e1df086fbcd3fa028")
   public open fun action(`value`: ActionProperty.Builder.() -> Unit): Unit =
       action(ActionProperty(`value`))
 
+  /**
+   * A description of the alert.
+   */
   public open fun alertDescription(): String? = unwrap(this).getAlertDescription()
 
+  /**
+   * A description of the alert.
+   */
   public open fun alertDescription(`value`: String) {
     unwrap(this).setAlertDescription(`value`)
   }
 
+  /**
+   * The name of the alert.
+   */
   public open fun alertName(): String? = unwrap(this).getAlertName()
 
+  /**
+   * The name of the alert.
+   */
   public open fun alertName(`value`: String) {
     unwrap(this).setAlertName(`value`)
   }
 
+  /**
+   * An integer from 0 to 100 specifying the alert sensitivity threshold.
+   */
   public open fun alertSensitivityThreshold(): Number = unwrap(this).getAlertSensitivityThreshold()
 
+  /**
+   * An integer from 0 to 100 specifying the alert sensitivity threshold.
+   */
   public open fun alertSensitivityThreshold(`value`: Number) {
     unwrap(this).setAlertSensitivityThreshold(`value`)
   }
 
+  /**
+   * The ARN of the detector to which the alert is attached.
+   */
   public open fun anomalyDetectorArn(): String = unwrap(this).getAnomalyDetectorArn()
 
+  /**
+   * The ARN of the detector to which the alert is attached.
+   */
   public open fun anomalyDetectorArn(`value`: String) {
     unwrap(this).setAnomalyDetectorArn(`value`)
   }
 
+  /**
+   * The Amazon Resource Name (ARN) of the alert.
+   *
+   * For example, `arn:aws:lookoutmetrics:us-east-2:123456789012:Alert:my-alert`
+   */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.lookoutmetrics.CfnAlert].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * Action that will be triggered when there is an alert.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutmetrics-alert.html#cfn-lookoutmetrics-alert-action)
+     * @param action Action that will be triggered when there is an alert. 
+     */
     public fun action(action: IResolvable)
 
+    /**
+     * Action that will be triggered when there is an alert.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutmetrics-alert.html#cfn-lookoutmetrics-alert-action)
+     * @param action Action that will be triggered when there is an alert. 
+     */
     public fun action(action: ActionProperty)
 
+    /**
+     * Action that will be triggered when there is an alert.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutmetrics-alert.html#cfn-lookoutmetrics-alert-action)
+     * @param action Action that will be triggered when there is an alert. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("278d5b12b8e89982419453ae1ea077de5bb3941638eeabea7724e0a04e604d45")
     public fun action(action: ActionProperty.Builder.() -> Unit)
 
+    /**
+     * A description of the alert.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutmetrics-alert.html#cfn-lookoutmetrics-alert-alertdescription)
+     * @param alertDescription A description of the alert. 
+     */
     public fun alertDescription(alertDescription: String)
 
+    /**
+     * The name of the alert.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutmetrics-alert.html#cfn-lookoutmetrics-alert-alertname)
+     * @param alertName The name of the alert. 
+     */
     public fun alertName(alertName: String)
 
+    /**
+     * An integer from 0 to 100 specifying the alert sensitivity threshold.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutmetrics-alert.html#cfn-lookoutmetrics-alert-alertsensitivitythreshold)
+     * @param alertSensitivityThreshold An integer from 0 to 100 specifying the alert sensitivity
+     * threshold. 
+     */
     public fun alertSensitivityThreshold(alertSensitivityThreshold: Number)
 
+    /**
+     * The ARN of the detector to which the alert is attached.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutmetrics-alert.html#cfn-lookoutmetrics-alert-anomalydetectorarn)
+     * @param anomalyDetectorArn The ARN of the detector to which the alert is attached. 
+     */
     public fun anomalyDetectorArn(anomalyDetectorArn: String)
   }
 
@@ -86,31 +180,74 @@ public open class CfnAlert internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lookoutmetrics.CfnAlert.Builder =
         software.amazon.awscdk.services.lookoutmetrics.CfnAlert.Builder.create(scope, id)
 
+    /**
+     * Action that will be triggered when there is an alert.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutmetrics-alert.html#cfn-lookoutmetrics-alert-action)
+     * @param action Action that will be triggered when there is an alert. 
+     */
     override fun action(action: IResolvable) {
       cdkBuilder.action(action.let(IResolvable::unwrap))
     }
 
+    /**
+     * Action that will be triggered when there is an alert.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutmetrics-alert.html#cfn-lookoutmetrics-alert-action)
+     * @param action Action that will be triggered when there is an alert. 
+     */
     override fun action(action: ActionProperty) {
       cdkBuilder.action(action.let(ActionProperty::unwrap))
     }
 
+    /**
+     * Action that will be triggered when there is an alert.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutmetrics-alert.html#cfn-lookoutmetrics-alert-action)
+     * @param action Action that will be triggered when there is an alert. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("278d5b12b8e89982419453ae1ea077de5bb3941638eeabea7724e0a04e604d45")
     override fun action(action: ActionProperty.Builder.() -> Unit): Unit =
         action(ActionProperty(action))
 
+    /**
+     * A description of the alert.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutmetrics-alert.html#cfn-lookoutmetrics-alert-alertdescription)
+     * @param alertDescription A description of the alert. 
+     */
     override fun alertDescription(alertDescription: String) {
       cdkBuilder.alertDescription(alertDescription)
     }
 
+    /**
+     * The name of the alert.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutmetrics-alert.html#cfn-lookoutmetrics-alert-alertname)
+     * @param alertName The name of the alert. 
+     */
     override fun alertName(alertName: String) {
       cdkBuilder.alertName(alertName)
     }
 
+    /**
+     * An integer from 0 to 100 specifying the alert sensitivity threshold.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutmetrics-alert.html#cfn-lookoutmetrics-alert-alertsensitivitythreshold)
+     * @param alertSensitivityThreshold An integer from 0 to 100 specifying the alert sensitivity
+     * threshold. 
+     */
     override fun alertSensitivityThreshold(alertSensitivityThreshold: Number) {
       cdkBuilder.alertSensitivityThreshold(alertSensitivityThreshold)
     }
 
+    /**
+     * The ARN of the detector to which the alert is attached.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lookoutmetrics-alert.html#cfn-lookoutmetrics-alert-anomalydetectorarn)
+     * @param anomalyDetectorArn The ARN of the detector to which the alert is attached. 
+     */
     override fun anomalyDetectorArn(anomalyDetectorArn: String) {
       cdkBuilder.anomalyDetectorArn(anomalyDetectorArn)
     }
@@ -140,24 +277,56 @@ public open class CfnAlert internal constructor(
   }
 
   public interface ActionProperty {
+    /**
+     * A configuration for an AWS Lambda channel.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-alert-action.html#cfn-lookoutmetrics-alert-action-lambdaconfiguration)
+     */
     public fun lambdaConfiguration(): Any? = unwrap(this).getLambdaConfiguration()
 
+    /**
+     * A configuration for an Amazon SNS channel.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-alert-action.html#cfn-lookoutmetrics-alert-action-snsconfiguration)
+     */
     public fun snsConfiguration(): Any? = unwrap(this).getSnsConfiguration()
 
+    /**
+     * A builder for [ActionProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param lambdaConfiguration A configuration for an AWS Lambda channel.
+       */
       public fun lambdaConfiguration(lambdaConfiguration: IResolvable)
 
+      /**
+       * @param lambdaConfiguration A configuration for an AWS Lambda channel.
+       */
       public fun lambdaConfiguration(lambdaConfiguration: LambdaConfigurationProperty)
 
+      /**
+       * @param lambdaConfiguration A configuration for an AWS Lambda channel.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6a3986527e9aa6ec69402be8b4e46fed80a6999a2031ccfe032e4b81c8bdbba2")
       public
           fun lambdaConfiguration(lambdaConfiguration: LambdaConfigurationProperty.Builder.() -> Unit)
 
+      /**
+       * @param snsConfiguration A configuration for an Amazon SNS channel.
+       */
       public fun snsConfiguration(snsConfiguration: IResolvable)
 
+      /**
+       * @param snsConfiguration A configuration for an Amazon SNS channel.
+       */
       public fun snsConfiguration(snsConfiguration: SNSConfigurationProperty)
 
+      /**
+       * @param snsConfiguration A configuration for an Amazon SNS channel.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("63e72e0610e94a8ffa8307fe364f6918789fc16738b62a3a110b3403b0808faa")
       public fun snsConfiguration(snsConfiguration: SNSConfigurationProperty.Builder.() -> Unit)
@@ -168,28 +337,46 @@ public open class CfnAlert internal constructor(
           software.amazon.awscdk.services.lookoutmetrics.CfnAlert.ActionProperty.Builder =
           software.amazon.awscdk.services.lookoutmetrics.CfnAlert.ActionProperty.builder()
 
+      /**
+       * @param lambdaConfiguration A configuration for an AWS Lambda channel.
+       */
       override fun lambdaConfiguration(lambdaConfiguration: IResolvable) {
         cdkBuilder.lambdaConfiguration(lambdaConfiguration.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param lambdaConfiguration A configuration for an AWS Lambda channel.
+       */
       override fun lambdaConfiguration(lambdaConfiguration: LambdaConfigurationProperty) {
         cdkBuilder.lambdaConfiguration(lambdaConfiguration.let(LambdaConfigurationProperty::unwrap))
       }
 
+      /**
+       * @param lambdaConfiguration A configuration for an AWS Lambda channel.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6a3986527e9aa6ec69402be8b4e46fed80a6999a2031ccfe032e4b81c8bdbba2")
       override
           fun lambdaConfiguration(lambdaConfiguration: LambdaConfigurationProperty.Builder.() -> Unit):
           Unit = lambdaConfiguration(LambdaConfigurationProperty(lambdaConfiguration))
 
+      /**
+       * @param snsConfiguration A configuration for an Amazon SNS channel.
+       */
       override fun snsConfiguration(snsConfiguration: IResolvable) {
         cdkBuilder.snsConfiguration(snsConfiguration.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param snsConfiguration A configuration for an Amazon SNS channel.
+       */
       override fun snsConfiguration(snsConfiguration: SNSConfigurationProperty) {
         cdkBuilder.snsConfiguration(snsConfiguration.let(SNSConfigurationProperty::unwrap))
       }
 
+      /**
+       * @param snsConfiguration A configuration for an Amazon SNS channel.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("63e72e0610e94a8ffa8307fe364f6918789fc16738b62a3a110b3403b0808faa")
       override fun snsConfiguration(snsConfiguration: SNSConfigurationProperty.Builder.() -> Unit):
@@ -203,8 +390,18 @@ public open class CfnAlert internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lookoutmetrics.CfnAlert.ActionProperty,
     ) : ActionProperty {
+      /**
+       * A configuration for an AWS Lambda channel.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-alert-action.html#cfn-lookoutmetrics-alert-action-lambdaconfiguration)
+       */
       override fun lambdaConfiguration(): Any? = unwrap(this).getLambdaConfiguration()
 
+      /**
+       * A configuration for an Amazon SNS channel.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-alert-action.html#cfn-lookoutmetrics-alert-action-snsconfiguration)
+       */
       override fun snsConfiguration(): Any? = unwrap(this).getSnsConfiguration()
     }
 
@@ -229,13 +426,33 @@ public open class CfnAlert internal constructor(
   }
 
   public interface LambdaConfigurationProperty {
+    /**
+     * The ARN of the Lambda function.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-alert-lambdaconfiguration.html#cfn-lookoutmetrics-alert-lambdaconfiguration-lambdaarn)
+     */
     public fun lambdaArn(): String
 
+    /**
+     * The ARN of an IAM role that has permission to invoke the Lambda function.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-alert-lambdaconfiguration.html#cfn-lookoutmetrics-alert-lambdaconfiguration-rolearn)
+     */
     public fun roleArn(): String
 
+    /**
+     * A builder for [LambdaConfigurationProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param lambdaArn The ARN of the Lambda function. 
+       */
       public fun lambdaArn(lambdaArn: String)
 
+      /**
+       * @param roleArn The ARN of an IAM role that has permission to invoke the Lambda function. 
+       */
       public fun roleArn(roleArn: String)
     }
 
@@ -245,10 +462,16 @@ public open class CfnAlert internal constructor(
           =
           software.amazon.awscdk.services.lookoutmetrics.CfnAlert.LambdaConfigurationProperty.builder()
 
+      /**
+       * @param lambdaArn The ARN of the Lambda function. 
+       */
       override fun lambdaArn(lambdaArn: String) {
         cdkBuilder.lambdaArn(lambdaArn)
       }
 
+      /**
+       * @param roleArn The ARN of an IAM role that has permission to invoke the Lambda function. 
+       */
       override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
@@ -262,8 +485,18 @@ public open class CfnAlert internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lookoutmetrics.CfnAlert.LambdaConfigurationProperty,
     ) : LambdaConfigurationProperty {
+      /**
+       * The ARN of the Lambda function.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-alert-lambdaconfiguration.html#cfn-lookoutmetrics-alert-lambdaconfiguration-lambdaarn)
+       */
       override fun lambdaArn(): String = unwrap(this).getLambdaArn()
 
+      /**
+       * The ARN of an IAM role that has permission to invoke the Lambda function.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-alert-lambdaconfiguration.html#cfn-lookoutmetrics-alert-lambdaconfiguration-rolearn)
+       */
       override fun roleArn(): String = unwrap(this).getRoleArn()
     }
 
@@ -288,13 +521,33 @@ public open class CfnAlert internal constructor(
   }
 
   public interface SNSConfigurationProperty {
+    /**
+     * The ARN of the IAM role that has access to the target SNS topic.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-alert-snsconfiguration.html#cfn-lookoutmetrics-alert-snsconfiguration-rolearn)
+     */
     public fun roleArn(): String
 
+    /**
+     * The ARN of the target SNS topic.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-alert-snsconfiguration.html#cfn-lookoutmetrics-alert-snsconfiguration-snstopicarn)
+     */
     public fun snsTopicArn(): String
 
+    /**
+     * A builder for [SNSConfigurationProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param roleArn The ARN of the IAM role that has access to the target SNS topic. 
+       */
       public fun roleArn(roleArn: String)
 
+      /**
+       * @param snsTopicArn The ARN of the target SNS topic. 
+       */
       public fun snsTopicArn(snsTopicArn: String)
     }
 
@@ -303,10 +556,16 @@ public open class CfnAlert internal constructor(
           software.amazon.awscdk.services.lookoutmetrics.CfnAlert.SNSConfigurationProperty.Builder =
           software.amazon.awscdk.services.lookoutmetrics.CfnAlert.SNSConfigurationProperty.builder()
 
+      /**
+       * @param roleArn The ARN of the IAM role that has access to the target SNS topic. 
+       */
       override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
+      /**
+       * @param snsTopicArn The ARN of the target SNS topic. 
+       */
       override fun snsTopicArn(snsTopicArn: String) {
         cdkBuilder.snsTopicArn(snsTopicArn)
       }
@@ -320,8 +579,18 @@ public open class CfnAlert internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.lookoutmetrics.CfnAlert.SNSConfigurationProperty,
     ) : SNSConfigurationProperty {
+      /**
+       * The ARN of the IAM role that has access to the target SNS topic.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-alert-snsconfiguration.html#cfn-lookoutmetrics-alert-snsconfiguration-rolearn)
+       */
       override fun roleArn(): String = unwrap(this).getRoleArn()
 
+      /**
+       * The ARN of the target SNS topic.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lookoutmetrics-alert-snsconfiguration.html#cfn-lookoutmetrics-alert-snsconfiguration-snstopicarn)
+       */
       override fun snsTopicArn(): String = unwrap(this).getSnsTopicArn()
     }
 

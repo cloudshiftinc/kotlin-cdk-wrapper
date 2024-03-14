@@ -4,6 +4,7 @@ import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
 import kotlin.String
 import kotlin.Suppress
@@ -15,32 +16,84 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnTemplate internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ses.CfnTemplate,
 ) : CfnResource(cdkObject), IInspectable {
+  /**
+   *
+   */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * The content of the email, composed of a subject line and either an HTML part or a text-only
+   * part.
+   */
   public open fun template(): Any? = unwrap(this).getTemplate()
 
+  /**
+   * The content of the email, composed of a subject line and either an HTML part or a text-only
+   * part.
+   */
   public open fun template(`value`: IResolvable) {
     unwrap(this).setTemplate(`value`.let(IResolvable::unwrap))
   }
 
+  /**
+   * The content of the email, composed of a subject line and either an HTML part or a text-only
+   * part.
+   */
   public open fun template(`value`: TemplateProperty) {
     unwrap(this).setTemplate(`value`.let(TemplateProperty::unwrap))
   }
 
+  /**
+   * The content of the email, composed of a subject line and either an HTML part or a text-only
+   * part.
+   */
   @Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("57f6de4491d980050e3f3d30941f0e0f693cabcc717af8906ad79a609cd784fe")
   public open fun template(`value`: TemplateProperty.Builder.() -> Unit): Unit =
       template(TemplateProperty(`value`))
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.ses.CfnTemplate].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * The content of the email, composed of a subject line and either an HTML part or a text-only
+     * part.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-template.html#cfn-ses-template-template)
+     * @param template The content of the email, composed of a subject line and either an HTML part
+     * or a text-only part. 
+     */
     public fun template(template: IResolvable)
 
+    /**
+     * The content of the email, composed of a subject line and either an HTML part or a text-only
+     * part.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-template.html#cfn-ses-template-template)
+     * @param template The content of the email, composed of a subject line and either an HTML part
+     * or a text-only part. 
+     */
     public fun template(template: TemplateProperty)
 
+    /**
+     * The content of the email, composed of a subject line and either an HTML part or a text-only
+     * part.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-template.html#cfn-ses-template-template)
+     * @param template The content of the email, composed of a subject line and either an HTML part
+     * or a text-only part. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cddd8ef62379e20dc50fd9f980b0aed4918a48b7c1a2aa51a0ff288116c8f0ff")
     public fun template(template: TemplateProperty.Builder.() -> Unit)
@@ -53,14 +106,38 @@ public open class CfnTemplate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ses.CfnTemplate.Builder =
         software.amazon.awscdk.services.ses.CfnTemplate.Builder.create(scope, id)
 
+    /**
+     * The content of the email, composed of a subject line and either an HTML part or a text-only
+     * part.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-template.html#cfn-ses-template-template)
+     * @param template The content of the email, composed of a subject line and either an HTML part
+     * or a text-only part. 
+     */
     override fun template(template: IResolvable) {
       cdkBuilder.template(template.let(IResolvable::unwrap))
     }
 
+    /**
+     * The content of the email, composed of a subject line and either an HTML part or a text-only
+     * part.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-template.html#cfn-ses-template-template)
+     * @param template The content of the email, composed of a subject line and either an HTML part
+     * or a text-only part. 
+     */
     override fun template(template: TemplateProperty) {
       cdkBuilder.template(template.let(TemplateProperty::unwrap))
     }
 
+    /**
+     * The content of the email, composed of a subject line and either an HTML part or a text-only
+     * part.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-template.html#cfn-ses-template-template)
+     * @param template The content of the email, composed of a subject line and either an HTML part
+     * or a text-only part. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cddd8ef62379e20dc50fd9f980b0aed4918a48b7c1a2aa51a0ff288116c8f0ff")
     override fun template(template: TemplateProperty.Builder.() -> Unit): Unit =
@@ -91,21 +168,58 @@ public open class CfnTemplate internal constructor(
   }
 
   public interface TemplateProperty {
+    /**
+     * The HTML body of the email.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-htmlpart)
+     */
     public fun htmlPart(): String? = unwrap(this).getHtmlPart()
 
+    /**
+     * The subject line of the email.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-subjectpart)
+     */
     public fun subjectPart(): String
 
+    /**
+     * The name of the template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-templatename)
+     */
     public fun templateName(): String? = unwrap(this).getTemplateName()
 
+    /**
+     * The email body that is visible to recipients whose email clients do not display HTML content.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-textpart)
+     */
     public fun textPart(): String? = unwrap(this).getTextPart()
 
+    /**
+     * A builder for [TemplateProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param htmlPart The HTML body of the email.
+       */
       public fun htmlPart(htmlPart: String)
 
+      /**
+       * @param subjectPart The subject line of the email. 
+       */
       public fun subjectPart(subjectPart: String)
 
+      /**
+       * @param templateName The name of the template.
+       */
       public fun templateName(templateName: String)
 
+      /**
+       * @param textPart The email body that is visible to recipients whose email clients do not
+       * display HTML content.
+       */
       public fun textPart(textPart: String)
     }
 
@@ -114,18 +228,31 @@ public open class CfnTemplate internal constructor(
           software.amazon.awscdk.services.ses.CfnTemplate.TemplateProperty.Builder =
           software.amazon.awscdk.services.ses.CfnTemplate.TemplateProperty.builder()
 
+      /**
+       * @param htmlPart The HTML body of the email.
+       */
       override fun htmlPart(htmlPart: String) {
         cdkBuilder.htmlPart(htmlPart)
       }
 
+      /**
+       * @param subjectPart The subject line of the email. 
+       */
       override fun subjectPart(subjectPart: String) {
         cdkBuilder.subjectPart(subjectPart)
       }
 
+      /**
+       * @param templateName The name of the template.
+       */
       override fun templateName(templateName: String) {
         cdkBuilder.templateName(templateName)
       }
 
+      /**
+       * @param textPart The email body that is visible to recipients whose email clients do not
+       * display HTML content.
+       */
       override fun textPart(textPart: String) {
         cdkBuilder.textPart(textPart)
       }
@@ -137,12 +264,33 @@ public open class CfnTemplate internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.ses.CfnTemplate.TemplateProperty,
     ) : TemplateProperty {
+      /**
+       * The HTML body of the email.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-htmlpart)
+       */
       override fun htmlPart(): String? = unwrap(this).getHtmlPart()
 
+      /**
+       * The subject line of the email.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-subjectpart)
+       */
       override fun subjectPart(): String = unwrap(this).getSubjectPart()
 
+      /**
+       * The name of the template.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-templatename)
+       */
       override fun templateName(): String? = unwrap(this).getTemplateName()
 
+      /**
+       * The email body that is visible to recipients whose email clients do not display HTML
+       * content.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-template-template.html#cfn-ses-template-template-textpart)
+       */
       override fun textPart(): String? = unwrap(this).getTextPart()
     }
 

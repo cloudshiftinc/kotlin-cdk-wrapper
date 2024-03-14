@@ -6,10 +6,13 @@ import kotlin.String
 public open class FileSystem internal constructor(
   private val cdkObject: software.amazon.awscdk.services.lambda.FileSystem,
 ) {
+  /**
+   * the FileSystem configurations for the Lambda function.
+   */
   public open fun config(): FileSystemConfig = unwrap(this).getConfig().let(FileSystemConfig::wrap)
 
   public companion object {
-    public open fun fromEfsAccessPoint(ap: IAccessPoint, mountPath: String): FileSystem =
+    public fun fromEfsAccessPoint(ap: IAccessPoint, mountPath: String): FileSystem =
         software.amazon.awscdk.services.lambda.FileSystem.fromEfsAccessPoint(ap.let(IAccessPoint::unwrap),
         mountPath).let(FileSystem::wrap)
 

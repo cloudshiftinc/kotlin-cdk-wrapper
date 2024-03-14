@@ -8,13 +8,13 @@ public abstract class TargetObjectKeyFormat internal constructor(
   ) : TargetObjectKeyFormat(cdkObject)
 
   public companion object {
-    public open fun partitionedPrefix(): TargetObjectKeyFormat =
+    public fun partitionedPrefix(): TargetObjectKeyFormat =
         software.amazon.awscdk.services.s3.TargetObjectKeyFormat.partitionedPrefix().let(TargetObjectKeyFormat::wrap)
 
-    public open fun partitionedPrefix(dateSource: PartitionDateSource): TargetObjectKeyFormat =
+    public fun partitionedPrefix(dateSource: PartitionDateSource): TargetObjectKeyFormat =
         software.amazon.awscdk.services.s3.TargetObjectKeyFormat.partitionedPrefix(dateSource.let(PartitionDateSource::unwrap)).let(TargetObjectKeyFormat::wrap)
 
-    public open fun simplePrefix(): TargetObjectKeyFormat =
+    public fun simplePrefix(): TargetObjectKeyFormat =
         software.amazon.awscdk.services.s3.TargetObjectKeyFormat.simplePrefix().let(TargetObjectKeyFormat::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.TargetObjectKeyFormat):

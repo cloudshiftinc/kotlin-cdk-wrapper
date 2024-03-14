@@ -8,23 +8,28 @@ import kotlin.collections.Map
 public abstract class ServiceDiscovery internal constructor(
   private val cdkObject: software.amazon.awscdk.services.appmesh.ServiceDiscovery,
 ) {
-  public open fun bind(arg0: Construct): ServiceDiscoveryConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(ServiceDiscoveryConfig::wrap)
+  /**
+   * Binds the current object when adding Service Discovery to a VirtualNode.
+   *
+   * @param scope 
+   */
+  public open fun bind(scope: Construct): ServiceDiscoveryConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(ServiceDiscoveryConfig::wrap)
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.ServiceDiscovery,
   ) : ServiceDiscovery(cdkObject)
 
   public companion object {
-    public open fun cloudMap(service: IService): ServiceDiscovery =
+    public fun cloudMap(service: IService): ServiceDiscovery =
         software.amazon.awscdk.services.appmesh.ServiceDiscovery.cloudMap(service.let(IService::unwrap)).let(ServiceDiscovery::wrap)
 
-    public open fun cloudMap(service: IService, instanceAttributes: Map<String, String>):
+    public fun cloudMap(service: IService, instanceAttributes: Map<String, String>):
         ServiceDiscovery =
         software.amazon.awscdk.services.appmesh.ServiceDiscovery.cloudMap(service.let(IService::unwrap),
         instanceAttributes).let(ServiceDiscovery::wrap)
 
-    public open fun cloudMap(
+    public fun cloudMap(
       service: IService,
       instanceAttributes: Map<String, String>,
       ipPreference: IpPreference,
@@ -32,14 +37,14 @@ public abstract class ServiceDiscovery internal constructor(
         software.amazon.awscdk.services.appmesh.ServiceDiscovery.cloudMap(service.let(IService::unwrap),
         instanceAttributes, ipPreference.let(IpPreference::unwrap)).let(ServiceDiscovery::wrap)
 
-    public open fun dns(hostname: String): ServiceDiscovery =
+    public fun dns(hostname: String): ServiceDiscovery =
         software.amazon.awscdk.services.appmesh.ServiceDiscovery.dns(hostname).let(ServiceDiscovery::wrap)
 
-    public open fun dns(hostname: String, responseType: DnsResponseType): ServiceDiscovery =
+    public fun dns(hostname: String, responseType: DnsResponseType): ServiceDiscovery =
         software.amazon.awscdk.services.appmesh.ServiceDiscovery.dns(hostname,
         responseType.let(DnsResponseType::unwrap)).let(ServiceDiscovery::wrap)
 
-    public open fun dns(
+    public fun dns(
       hostname: String,
       responseType: DnsResponseType,
       ipPreference: IpPreference,

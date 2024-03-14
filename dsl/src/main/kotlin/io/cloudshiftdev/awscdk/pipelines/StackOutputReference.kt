@@ -7,15 +7,26 @@ import kotlin.String
 public open class StackOutputReference internal constructor(
   private val cdkObject: software.amazon.awscdk.pipelines.StackOutputReference,
 ) {
+  /**
+   * Whether or not this stack output is being produced by the given Stack deployment.
+   *
+   * @param stack 
+   */
   public open fun isProducedBy(stack: StackDeployment): Boolean =
       unwrap(this).isProducedBy(stack.let(StackDeployment::unwrap))
 
+  /**
+   * Output name of the producing stack.
+   */
   public open fun outputName(): String = unwrap(this).getOutputName()
 
+  /**
+   * A human-readable description of the producing stack.
+   */
   public open fun stackDescription(): String = unwrap(this).getStackDescription()
 
   public companion object {
-    public open fun fromCfnOutput(output: CfnOutput): StackOutputReference =
+    public fun fromCfnOutput(output: CfnOutput): StackOutputReference =
         software.amazon.awscdk.pipelines.StackOutputReference.fromCfnOutput(output.let(CfnOutput::unwrap)).let(StackOutputReference::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.StackOutputReference):

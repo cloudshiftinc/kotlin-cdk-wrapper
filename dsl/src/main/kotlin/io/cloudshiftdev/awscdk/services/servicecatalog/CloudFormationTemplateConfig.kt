@@ -1,17 +1,36 @@
 package io.cloudshiftdev.awscdk.services.servicecatalog
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.String
 import kotlin.Unit
 
 public interface CloudFormationTemplateConfig {
+  /**
+   * The S3 bucket containing product stack assets.
+   *
+   * Default: - None - no assets are used in this product
+   */
   public fun assetBucket(): IBucket? = unwrap(this).getAssetBucket()?.let(IBucket::wrap)
 
+  /**
+   * The http url of the template in S3.
+   */
   public fun httpUrl(): String
 
+  /**
+   * A builder for [CloudFormationTemplateConfig]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param assetBucket The S3 bucket containing product stack assets.
+     */
     public fun assetBucket(assetBucket: IBucket)
 
+    /**
+     * @param httpUrl The http url of the template in S3. 
+     */
     public fun httpUrl(httpUrl: String)
   }
 
@@ -20,10 +39,16 @@ public interface CloudFormationTemplateConfig {
         software.amazon.awscdk.services.servicecatalog.CloudFormationTemplateConfig.Builder =
         software.amazon.awscdk.services.servicecatalog.CloudFormationTemplateConfig.builder()
 
+    /**
+     * @param assetBucket The S3 bucket containing product stack assets.
+     */
     override fun assetBucket(assetBucket: IBucket) {
       cdkBuilder.assetBucket(assetBucket.let(IBucket::unwrap))
     }
 
+    /**
+     * @param httpUrl The http url of the template in S3. 
+     */
     override fun httpUrl(httpUrl: String) {
       cdkBuilder.httpUrl(httpUrl)
     }
@@ -36,8 +61,16 @@ public interface CloudFormationTemplateConfig {
     internal val cdkObject:
         software.amazon.awscdk.services.servicecatalog.CloudFormationTemplateConfig,
   ) : CloudFormationTemplateConfig {
+    /**
+     * The S3 bucket containing product stack assets.
+     *
+     * Default: - None - no assets are used in this product
+     */
     override fun assetBucket(): IBucket? = unwrap(this).getAssetBucket()?.let(IBucket::wrap)
 
+    /**
+     * The http url of the template in S3.
+     */
     override fun httpUrl(): String = unwrap(this).getHttpUrl()
   }
 

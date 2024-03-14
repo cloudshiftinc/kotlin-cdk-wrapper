@@ -1,11 +1,17 @@
 package io.cloudshiftdev.awscdk.services.secretsmanager
 
 public interface ISecretAttachmentTarget {
+  /**
+   * Renders the target specifications.
+   */
   public fun asSecretAttachmentTarget(): SecretAttachmentTargetProps
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.secretsmanager.ISecretAttachmentTarget,
   ) : ISecretAttachmentTarget {
+    /**
+     * Renders the target specifications.
+     */
     override fun asSecretAttachmentTarget(): SecretAttachmentTargetProps =
         unwrap(this).asSecretAttachmentTarget().let(SecretAttachmentTargetProps::wrap)
   }

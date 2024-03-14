@@ -1,7 +1,6 @@
 package cloudshift.awscdkdsl.build.dsl.model.type
 
 import cloudshift.awscdkdsl.build.dsl.Annotations
-import cloudshift.awscdkdsl.build.dsl.TypeGeneratorContext
 import cloudshift.awscdkdsl.build.dsl.dslClassName
 import cloudshift.awscdkdsl.build.dsl.dslFunctionSpec
 import cloudshift.awscdkdsl.build.dsl.mapClassName
@@ -46,6 +45,7 @@ internal object BuilderGenerator {
 
 
         val builderInterfaceBuilder = TypeSpec.interfaceBuilder(builderName)
+            .addAnnotation(CdkDsl.DslMarkerAnnotation)
 
         generateBuilder(builderInterfaceBuilder, builderImplBuilder, cdkBuilder, ctx)
 

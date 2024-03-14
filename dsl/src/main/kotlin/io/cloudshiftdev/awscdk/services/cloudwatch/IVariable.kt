@@ -3,11 +3,17 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 import kotlin.Any
 
 public interface IVariable {
+  /**
+   * Return the variable JSON for use in the dashboard.
+   */
   public fun toJson(): Any
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudwatch.IVariable,
   ) : IVariable {
+    /**
+     * Return the variable JSON for use in the dashboard.
+     */
     override fun toJson(): Any = unwrap(this).toJson()
   }
 

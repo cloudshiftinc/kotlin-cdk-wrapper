@@ -6,8 +6,7 @@ public open class AcceleratorType internal constructor(
   private val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorType,
 ) {
   public companion object {
-    public open fun of(acceleratorClass: AcceleratorClass, instanceSize: InstanceSize):
-        AcceleratorType =
+    public fun of(acceleratorClass: AcceleratorClass, instanceSize: InstanceSize): AcceleratorType =
         software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorType.of(acceleratorClass.let(AcceleratorClass::unwrap),
         instanceSize.let(InstanceSize::unwrap)).let(AcceleratorType::wrap)
 

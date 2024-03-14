@@ -5,6 +5,7 @@ import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -14,44 +15,107 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRegistry internal constructor(
   private val cdkObject: software.amazon.awscdk.services.eventschemas.CfnRegistry,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  /**
+   * The ARN of the registry.
+   */
   public open fun attrRegistryArn(): String = unwrap(this).getAttrRegistryArn()
 
+  /**
+   * The name of the registry.
+   */
   public open fun attrRegistryName(): String = unwrap(this).getAttrRegistryName()
 
+  /**
+   * A description of the registry to be created.
+   */
   public open fun description(): String? = unwrap(this).getDescription()
 
+  /**
+   * A description of the registry to be created.
+   */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
   }
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * The name of the schema registry.
+   */
   public open fun registryName(): String? = unwrap(this).getRegistryName()
 
+  /**
+   * The name of the schema registry.
+   */
   public open fun registryName(`value`: String) {
     unwrap(this).setRegistryName(`value`)
   }
 
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
+  /**
+   * Tags to associate with the registry.
+   */
   public open fun tagsRaw(): List<TagsEntryProperty> =
       unwrap(this).getTagsRaw()?.map(TagsEntryProperty::wrap) ?: emptyList()
 
+  /**
+   * Tags to associate with the registry.
+   */
   public open fun tagsRaw(`value`: List<TagsEntryProperty>) {
     unwrap(this).setTagsRaw(`value`.map(TagsEntryProperty::unwrap))
   }
 
+  /**
+   * Tags to associate with the registry.
+   */
   public open fun tagsRaw(vararg `value`: TagsEntryProperty): Unit = tagsRaw(`value`.toList())
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.eventschemas.CfnRegistry].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * A description of the registry to be created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registry.html#cfn-eventschemas-registry-description)
+     * @param description A description of the registry to be created. 
+     */
     public fun description(description: String)
 
+    /**
+     * The name of the schema registry.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registry.html#cfn-eventschemas-registry-registryname)
+     * @param registryName The name of the schema registry. 
+     */
     public fun registryName(registryName: String)
 
+    /**
+     * Tags to associate with the registry.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registry.html#cfn-eventschemas-registry-tags)
+     * @param tags Tags to associate with the registry. 
+     */
     public fun tags(tags: List<TagsEntryProperty>)
 
+    /**
+     * Tags to associate with the registry.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registry.html#cfn-eventschemas-registry-tags)
+     * @param tags Tags to associate with the registry. 
+     */
     public fun tags(vararg tags: TagsEntryProperty)
   }
 
@@ -62,18 +126,42 @@ public open class CfnRegistry internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eventschemas.CfnRegistry.Builder =
         software.amazon.awscdk.services.eventschemas.CfnRegistry.Builder.create(scope, id)
 
+    /**
+     * A description of the registry to be created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registry.html#cfn-eventschemas-registry-description)
+     * @param description A description of the registry to be created. 
+     */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
+    /**
+     * The name of the schema registry.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registry.html#cfn-eventschemas-registry-registryname)
+     * @param registryName The name of the schema registry. 
+     */
     override fun registryName(registryName: String) {
       cdkBuilder.registryName(registryName)
     }
 
+    /**
+     * Tags to associate with the registry.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registry.html#cfn-eventschemas-registry-tags)
+     * @param tags Tags to associate with the registry. 
+     */
     override fun tags(tags: List<TagsEntryProperty>) {
       cdkBuilder.tags(tags.map(TagsEntryProperty::unwrap))
     }
 
+    /**
+     * Tags to associate with the registry.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eventschemas-registry.html#cfn-eventschemas-registry-tags)
+     * @param tags Tags to associate with the registry. 
+     */
     override fun tags(vararg tags: TagsEntryProperty): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.eventschemas.CfnRegistry =
@@ -102,13 +190,33 @@ public open class CfnRegistry internal constructor(
   }
 
   public interface TagsEntryProperty {
+    /**
+     * The key of a key-value pair.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eventschemas-registry-tagsentry.html#cfn-eventschemas-registry-tagsentry-key)
+     */
     public fun key(): String
 
+    /**
+     * The value of a key-value pair.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eventschemas-registry-tagsentry.html#cfn-eventschemas-registry-tagsentry-value)
+     */
     public fun `value`(): String
 
+    /**
+     * A builder for [TagsEntryProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param key The key of a key-value pair. 
+       */
       public fun key(key: String)
 
+      /**
+       * @param value The value of a key-value pair. 
+       */
       public fun `value`(`value`: String)
     }
 
@@ -117,10 +225,16 @@ public open class CfnRegistry internal constructor(
           software.amazon.awscdk.services.eventschemas.CfnRegistry.TagsEntryProperty.Builder =
           software.amazon.awscdk.services.eventschemas.CfnRegistry.TagsEntryProperty.builder()
 
+      /**
+       * @param key The key of a key-value pair. 
+       */
       override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
+      /**
+       * @param value The value of a key-value pair. 
+       */
       override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
       }
@@ -133,8 +247,18 @@ public open class CfnRegistry internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.eventschemas.CfnRegistry.TagsEntryProperty,
     ) : TagsEntryProperty {
+      /**
+       * The key of a key-value pair.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eventschemas-registry-tagsentry.html#cfn-eventschemas-registry-tagsentry-key)
+       */
       override fun key(): String = unwrap(this).getKey()
 
+      /**
+       * The value of a key-value pair.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eventschemas-registry-tagsentry.html#cfn-eventschemas-registry-tagsentry-value)
+       */
       override fun `value`(): String = unwrap(this).getValue()
     }
 

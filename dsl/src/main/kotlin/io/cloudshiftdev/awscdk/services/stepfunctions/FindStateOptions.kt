@@ -1,12 +1,25 @@
 package io.cloudshiftdev.awscdk.services.stepfunctions
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import kotlin.Unit
 
 public interface FindStateOptions {
+  /**
+   * Whether or not to follow error-handling transitions.
+   *
+   * Default: false
+   */
   public fun includeErrorHandlers(): Boolean? = unwrap(this).getIncludeErrorHandlers()
 
+  /**
+   * A builder for [FindStateOptions]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param includeErrorHandlers Whether or not to follow error-handling transitions.
+     */
     public fun includeErrorHandlers(includeErrorHandlers: Boolean)
   }
 
@@ -14,6 +27,9 @@ public interface FindStateOptions {
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.FindStateOptions.Builder =
         software.amazon.awscdk.services.stepfunctions.FindStateOptions.builder()
 
+    /**
+     * @param includeErrorHandlers Whether or not to follow error-handling transitions.
+     */
     override fun includeErrorHandlers(includeErrorHandlers: Boolean) {
       cdkBuilder.includeErrorHandlers(includeErrorHandlers)
     }
@@ -25,6 +41,11 @@ public interface FindStateOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.FindStateOptions,
   ) : FindStateOptions {
+    /**
+     * Whether or not to follow error-handling transitions.
+     *
+     * Default: false
+     */
     override fun includeErrorHandlers(): Boolean? = unwrap(this).getIncludeErrorHandlers()
   }
 

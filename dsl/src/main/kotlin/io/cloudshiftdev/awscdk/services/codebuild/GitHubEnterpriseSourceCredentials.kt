@@ -2,6 +2,7 @@ package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.SecretValue
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
@@ -11,7 +12,18 @@ public open class GitHubEnterpriseSourceCredentials internal constructor(
   private val cdkObject:
       software.amazon.awscdk.services.codebuild.GitHubEnterpriseSourceCredentials,
 ) : Resource(cdkObject) {
+  /**
+   * A fluent builder for
+   * [io.cloudshiftdev.awscdk.services.codebuild.GitHubEnterpriseSourceCredentials].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * The personal access token to use when contacting the instance of the GitHub Enterprise API.
+     *
+     * @param accessToken The personal access token to use when contacting the instance of the
+     * GitHub Enterprise API. 
+     */
     public fun accessToken(accessToken: SecretValue)
   }
 
@@ -24,6 +36,12 @@ public open class GitHubEnterpriseSourceCredentials internal constructor(
         software.amazon.awscdk.services.codebuild.GitHubEnterpriseSourceCredentials.Builder.create(scope,
         id)
 
+    /**
+     * The personal access token to use when contacting the instance of the GitHub Enterprise API.
+     *
+     * @param accessToken The personal access token to use when contacting the instance of the
+     * GitHub Enterprise API. 
+     */
     override fun accessToken(accessToken: SecretValue) {
       cdkBuilder.accessToken(accessToken.let(SecretValue::unwrap))
     }

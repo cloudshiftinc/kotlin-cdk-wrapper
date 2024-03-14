@@ -5,8 +5,16 @@ import kotlin.String
 public open class PartitionKeyStep internal constructor(
   private val cdkObject: software.amazon.awscdk.services.appsync.PartitionKeyStep,
 ) {
+  /**
+   * Assign an auto-generated value to the partition key.
+   */
   public open fun auto(): PartitionKey = unwrap(this).auto().let(PartitionKey::wrap)
 
+  /**
+   * Assign an auto-generated value to the partition key.
+   *
+   * @param val 
+   */
   public open fun `is`(`val`: String): PartitionKey =
       unwrap(this).`is`(`val`).let(PartitionKey::wrap)
 

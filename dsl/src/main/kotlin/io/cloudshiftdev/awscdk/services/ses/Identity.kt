@@ -6,9 +6,17 @@ import kotlin.String
 public abstract class Identity internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ses.Identity,
 ) {
+  /**
+   * The hosted zone associated with this identity.
+   *
+   * Default: - no hosted zone is associated and no records are created
+   */
   public open fun hostedZone(): IPublicHostedZone? =
       unwrap(this).getHostedZone()?.let(IPublicHostedZone::wrap)
 
+  /**
+   * The value of the identity.
+   */
   public open fun `value`(): String = unwrap(this).getValue()
 
   private class Wrapper internal constructor(
@@ -16,13 +24,13 @@ public abstract class Identity internal constructor(
   ) : Identity(cdkObject)
 
   public companion object {
-    public open fun domain(domain: String): Identity =
+    public fun domain(domain: String): Identity =
         software.amazon.awscdk.services.ses.Identity.domain(domain).let(Identity::wrap)
 
-    public open fun email(email: String): Identity =
+    public fun email(email: String): Identity =
         software.amazon.awscdk.services.ses.Identity.email(email).let(Identity::wrap)
 
-    public open fun publicHostedZone(hostedZone: IPublicHostedZone): Identity =
+    public fun publicHostedZone(hostedZone: IPublicHostedZone): Identity =
         software.amazon.awscdk.services.ses.Identity.publicHostedZone(hostedZone.let(IPublicHostedZone::unwrap)).let(Identity::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.Identity): Identity =

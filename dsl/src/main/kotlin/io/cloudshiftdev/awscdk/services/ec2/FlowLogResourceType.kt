@@ -5,16 +5,28 @@ import kotlin.String
 public abstract class FlowLogResourceType internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ec2.FlowLogResourceType,
 ) {
+  /**
+   * The Id of the resource that the flow log should be attached to.
+   */
   public open fun resourceId(): String = unwrap(this).getResourceId()
 
-  public open fun resourceId(arg0: String) {
-    unwrap(this).setResourceId(arg0)
+  /**
+   * The Id of the resource that the flow log should be attached to.
+   */
+  public open fun resourceId(`value`: String) {
+    unwrap(this).setResourceId(`value`)
   }
 
+  /**
+   * The type of resource to attach a flow log to.
+   */
   public open fun resourceType(): String = unwrap(this).getResourceType()
 
-  public open fun resourceType(arg0: String) {
-    unwrap(this).setResourceType(arg0)
+  /**
+   * The type of resource to attach a flow log to.
+   */
+  public open fun resourceType(`value`: String) {
+    unwrap(this).setResourceType(`value`)
   }
 
   private class Wrapper internal constructor(
@@ -22,19 +34,19 @@ public abstract class FlowLogResourceType internal constructor(
   ) : FlowLogResourceType(cdkObject)
 
   public companion object {
-    public open fun fromNetworkInterfaceId(id: String): FlowLogResourceType =
+    public fun fromNetworkInterfaceId(id: String): FlowLogResourceType =
         software.amazon.awscdk.services.ec2.FlowLogResourceType.fromNetworkInterfaceId(id).let(FlowLogResourceType::wrap)
 
-    public open fun fromSubnet(subnet: ISubnet): FlowLogResourceType =
+    public fun fromSubnet(subnet: ISubnet): FlowLogResourceType =
         software.amazon.awscdk.services.ec2.FlowLogResourceType.fromSubnet(subnet.let(ISubnet::unwrap)).let(FlowLogResourceType::wrap)
 
-    public open fun fromTransitGatewayAttachmentId(id: String): FlowLogResourceType =
+    public fun fromTransitGatewayAttachmentId(id: String): FlowLogResourceType =
         software.amazon.awscdk.services.ec2.FlowLogResourceType.fromTransitGatewayAttachmentId(id).let(FlowLogResourceType::wrap)
 
-    public open fun fromTransitGatewayId(id: String): FlowLogResourceType =
+    public fun fromTransitGatewayId(id: String): FlowLogResourceType =
         software.amazon.awscdk.services.ec2.FlowLogResourceType.fromTransitGatewayId(id).let(FlowLogResourceType::wrap)
 
-    public open fun fromVpc(vpc: IVpc): FlowLogResourceType =
+    public fun fromVpc(vpc: IVpc): FlowLogResourceType =
         software.amazon.awscdk.services.ec2.FlowLogResourceType.fromVpc(vpc.let(IVpc::unwrap)).let(FlowLogResourceType::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.FlowLogResourceType):

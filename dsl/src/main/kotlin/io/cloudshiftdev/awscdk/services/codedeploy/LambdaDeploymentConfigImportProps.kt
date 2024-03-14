@@ -1,12 +1,25 @@
 package io.cloudshiftdev.awscdk.services.codedeploy
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface LambdaDeploymentConfigImportProps {
+  /**
+   * The physical, human-readable name of the custom CodeDeploy Lambda Deployment Configuration that
+   * we are referencing.
+   */
   public fun deploymentConfigName(): String
 
+  /**
+   * A builder for [LambdaDeploymentConfigImportProps]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param deploymentConfigName The physical, human-readable name of the custom CodeDeploy Lambda
+     * Deployment Configuration that we are referencing. 
+     */
     public fun deploymentConfigName(deploymentConfigName: String)
   }
 
@@ -15,6 +28,10 @@ public interface LambdaDeploymentConfigImportProps {
         software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps.Builder =
         software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps.builder()
 
+    /**
+     * @param deploymentConfigName The physical, human-readable name of the custom CodeDeploy Lambda
+     * Deployment Configuration that we are referencing. 
+     */
     override fun deploymentConfigName(deploymentConfigName: String) {
       cdkBuilder.deploymentConfigName(deploymentConfigName)
     }
@@ -27,6 +44,10 @@ public interface LambdaDeploymentConfigImportProps {
     internal val cdkObject:
         software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps,
   ) : LambdaDeploymentConfigImportProps {
+    /**
+     * The physical, human-readable name of the custom CodeDeploy Lambda Deployment Configuration
+     * that we are referencing.
+     */
     override fun deploymentConfigName(): String = unwrap(this).getDeploymentConfigName()
   }
 

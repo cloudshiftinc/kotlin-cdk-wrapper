@@ -1,4 +1,4 @@
-package io.cloudshiftdev.awscdkdsl.common
+package io.cloudshiftdev.awscdk.common
 
 @CdkDslMarker
 public class MapBuilder {

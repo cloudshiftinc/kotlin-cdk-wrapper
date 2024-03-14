@@ -1,13 +1,24 @@
 package io.cloudshiftdev.awscdk
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import kotlin.Unit
 
 public interface CfnAutoScalingScheduledAction {
+  /**
+   *
+   */
   public fun ignoreUnmodifiedGroupSizeProperties(): Boolean? =
       unwrap(this).getIgnoreUnmodifiedGroupSizeProperties()
 
+  /**
+   * A builder for [CfnAutoScalingScheduledAction]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param ignoreUnmodifiedGroupSizeProperties the value to be set.
+     */
     public fun ignoreUnmodifiedGroupSizeProperties(ignoreUnmodifiedGroupSizeProperties: Boolean)
   }
 
@@ -15,6 +26,9 @@ public interface CfnAutoScalingScheduledAction {
     private val cdkBuilder: software.amazon.awscdk.CfnAutoScalingScheduledAction.Builder =
         software.amazon.awscdk.CfnAutoScalingScheduledAction.builder()
 
+    /**
+     * @param ignoreUnmodifiedGroupSizeProperties the value to be set.
+     */
     override fun ignoreUnmodifiedGroupSizeProperties(ignoreUnmodifiedGroupSizeProperties: Boolean) {
       cdkBuilder.ignoreUnmodifiedGroupSizeProperties(ignoreUnmodifiedGroupSizeProperties)
     }
@@ -25,6 +39,9 @@ public interface CfnAutoScalingScheduledAction {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.CfnAutoScalingScheduledAction,
   ) : CfnAutoScalingScheduledAction {
+    /**
+     *
+     */
     override fun ignoreUnmodifiedGroupSizeProperties(): Boolean? =
         unwrap(this).getIgnoreUnmodifiedGroupSizeProperties()
   }

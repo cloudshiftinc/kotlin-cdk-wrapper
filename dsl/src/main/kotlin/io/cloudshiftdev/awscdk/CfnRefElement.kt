@@ -5,6 +5,12 @@ import kotlin.String
 public abstract class CfnRefElement internal constructor(
   private val cdkObject: software.amazon.awscdk.CfnRefElement,
 ) : CfnElement(cdkObject) {
+  /**
+   * Return a string that will be resolved to a CloudFormation `{ Ref }` for this element.
+   *
+   * If, by any chance, the intrinsic reference of a resource is not a string, you could
+   * coerce it to an IResolvable through `Lazy.any({ produce: resource.ref })`.
+   */
   public open fun ref(): String = unwrap(this).getRef()
 
   private class Wrapper internal constructor(

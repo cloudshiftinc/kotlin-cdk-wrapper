@@ -1,21 +1,44 @@
 package io.cloudshiftdev.awscdk.services.elasticsearch
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 
 public interface DomainAttributes {
+  /**
+   * (deprecated) The ARN of the Elasticsearch domain.
+   *
+   * @deprecated use opensearchservice module instead
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun domainArn(): String
 
+  /**
+   * (deprecated) The domain endpoint of the Elasticsearch domain.
+   *
+   * @deprecated use opensearchservice module instead
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun domainEndpoint(): String
 
+  /**
+   * A builder for [DomainAttributes]
+   */
+  @CdkDslMarker
   @Deprecated(message = "deprecated in CDK")
   public interface Builder {
+    /**
+     * @param domainArn The ARN of the Elasticsearch domain. 
+     * @deprecated use opensearchservice module instead
+     */
     @Deprecated(message = "deprecated in CDK")
     public fun domainArn(domainArn: String)
 
+    /**
+     * @param domainEndpoint The domain endpoint of the Elasticsearch domain. 
+     * @deprecated use opensearchservice module instead
+     */
     @Deprecated(message = "deprecated in CDK")
     public fun domainEndpoint(domainEndpoint: String)
   }
@@ -24,11 +47,19 @@ public interface DomainAttributes {
     private val cdkBuilder: software.amazon.awscdk.services.elasticsearch.DomainAttributes.Builder =
         software.amazon.awscdk.services.elasticsearch.DomainAttributes.builder()
 
+    /**
+     * @param domainArn The ARN of the Elasticsearch domain. 
+     * @deprecated use opensearchservice module instead
+     */
     @Deprecated(message = "deprecated in CDK")
     override fun domainArn(domainArn: String) {
       cdkBuilder.domainArn(domainArn)
     }
 
+    /**
+     * @param domainEndpoint The domain endpoint of the Elasticsearch domain. 
+     * @deprecated use opensearchservice module instead
+     */
     @Deprecated(message = "deprecated in CDK")
     override fun domainEndpoint(domainEndpoint: String) {
       cdkBuilder.domainEndpoint(domainEndpoint)
@@ -41,9 +72,19 @@ public interface DomainAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.elasticsearch.DomainAttributes,
   ) : DomainAttributes {
+    /**
+     * (deprecated) The ARN of the Elasticsearch domain.
+     *
+     * @deprecated use opensearchservice module instead
+     */
     @Deprecated(message = "deprecated in CDK")
     override fun domainArn(): String = unwrap(this).getDomainArn()
 
+    /**
+     * (deprecated) The domain endpoint of the Elasticsearch domain.
+     *
+     * @deprecated use opensearchservice module instead
+     */
     @Deprecated(message = "deprecated in CDK")
     override fun domainEndpoint(): String = unwrap(this).getDomainEndpoint()
   }

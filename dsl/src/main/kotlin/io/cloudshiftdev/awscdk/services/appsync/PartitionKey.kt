@@ -5,6 +5,11 @@ import kotlin.String
 public open class PartitionKey internal constructor(
   private val cdkObject: software.amazon.awscdk.services.appsync.PartitionKey,
 ) : PrimaryKey(cdkObject) {
+  /**
+   * Allows assigning a value to the sort key.
+   *
+   * @param key 
+   */
   public open fun sort(key: String): SortKeyStep = unwrap(this).sort(key).let(SortKeyStep::wrap)
 
   public companion object {

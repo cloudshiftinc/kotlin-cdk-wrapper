@@ -5,6 +5,11 @@ import kotlin.String
 public open class ReleaseLabel internal constructor(
   private val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ReleaseLabel,
 ) {
+  /**
+   * A literal string that contains the release-version ex.
+   *
+   * 'emr-x.x.x-latest'
+   */
   public open fun label(): String = unwrap(this).getLabel()
 
   public companion object {

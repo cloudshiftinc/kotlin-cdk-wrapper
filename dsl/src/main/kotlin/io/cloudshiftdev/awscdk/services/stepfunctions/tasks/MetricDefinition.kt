@@ -1,16 +1,34 @@
 package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface MetricDefinition {
+  /**
+   * Name of the metric.
+   */
   public fun name(): String
 
+  /**
+   * Regular expression that searches the output of a training job and gets the value of the metric.
+   */
   public fun regex(): String
 
+  /**
+   * A builder for [MetricDefinition]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param name Name of the metric. 
+     */
     public fun name(name: String)
 
+    /**
+     * @param regex Regular expression that searches the output of a training job and gets the value
+     * of the metric. 
+     */
     public fun regex(regex: String)
   }
 
@@ -19,10 +37,17 @@ public interface MetricDefinition {
         software.amazon.awscdk.services.stepfunctions.tasks.MetricDefinition.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.MetricDefinition.builder()
 
+    /**
+     * @param name Name of the metric. 
+     */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
+    /**
+     * @param regex Regular expression that searches the output of a training job and gets the value
+     * of the metric. 
+     */
     override fun regex(regex: String) {
       cdkBuilder.regex(regex)
     }
@@ -34,8 +59,15 @@ public interface MetricDefinition {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.MetricDefinition,
   ) : MetricDefinition {
+    /**
+     * Name of the metric.
+     */
     override fun name(): String = unwrap(this).getName()
 
+    /**
+     * Regular expression that searches the output of a training job and gets the value of the
+     * metric.
+     */
     override fun regex(): String = unwrap(this).getRegex()
   }
 

@@ -1,16 +1,33 @@
 package io.cloudshiftdev.awscdk.services.dynamodb
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.Unit
 
 public interface EnableScalingProps {
+  /**
+   * Maximum capacity to scale to.
+   */
   public fun maxCapacity(): Number
 
+  /**
+   * Minimum capacity to scale to.
+   */
   public fun minCapacity(): Number
 
+  /**
+   * A builder for [EnableScalingProps]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param maxCapacity Maximum capacity to scale to. 
+     */
     public fun maxCapacity(maxCapacity: Number)
 
+    /**
+     * @param minCapacity Minimum capacity to scale to. 
+     */
     public fun minCapacity(minCapacity: Number)
   }
 
@@ -18,10 +35,16 @@ public interface EnableScalingProps {
     private val cdkBuilder: software.amazon.awscdk.services.dynamodb.EnableScalingProps.Builder =
         software.amazon.awscdk.services.dynamodb.EnableScalingProps.builder()
 
+    /**
+     * @param maxCapacity Maximum capacity to scale to. 
+     */
     override fun maxCapacity(maxCapacity: Number) {
       cdkBuilder.maxCapacity(maxCapacity)
     }
 
+    /**
+     * @param minCapacity Minimum capacity to scale to. 
+     */
     override fun minCapacity(minCapacity: Number) {
       cdkBuilder.minCapacity(minCapacity)
     }
@@ -33,8 +56,14 @@ public interface EnableScalingProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.dynamodb.EnableScalingProps,
   ) : EnableScalingProps {
+    /**
+     * Maximum capacity to scale to.
+     */
     override fun maxCapacity(): Number = unwrap(this).getMaxCapacity()
 
+    /**
+     * Minimum capacity to scale to.
+     */
     override fun minCapacity(): Number = unwrap(this).getMinCapacity()
   }
 

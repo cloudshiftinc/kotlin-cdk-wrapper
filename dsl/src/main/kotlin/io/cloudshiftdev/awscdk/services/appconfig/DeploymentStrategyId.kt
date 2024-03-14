@@ -5,6 +5,9 @@ import kotlin.String
 public abstract class DeploymentStrategyId internal constructor(
   private val cdkObject: software.amazon.awscdk.services.appconfig.DeploymentStrategyId,
 ) {
+  /**
+   * The deployment strategy ID.
+   */
   public open fun id(): String = unwrap(this).getId()
 
   private class Wrapper internal constructor(
@@ -12,7 +15,7 @@ public abstract class DeploymentStrategyId internal constructor(
   ) : DeploymentStrategyId(cdkObject)
 
   public companion object {
-    public open fun fromString(deploymentStrategyId: String): DeploymentStrategyId =
+    public fun fromString(deploymentStrategyId: String): DeploymentStrategyId =
         software.amazon.awscdk.services.appconfig.DeploymentStrategyId.fromString(deploymentStrategyId).let(DeploymentStrategyId::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.DeploymentStrategyId):

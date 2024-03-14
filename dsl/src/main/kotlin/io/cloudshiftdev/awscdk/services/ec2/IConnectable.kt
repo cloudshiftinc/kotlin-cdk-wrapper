@@ -1,11 +1,17 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 public interface IConnectable {
+  /**
+   * The network connections associated with this resource.
+   */
   public fun connections(): Connections
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.IConnectable,
   ) : IConnectable {
+    /**
+     * The network connections associated with this resource.
+     */
     override fun connections(): Connections = unwrap(this).getConnections().let(Connections::wrap)
   }
 

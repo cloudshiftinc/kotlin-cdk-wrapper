@@ -6,18 +6,26 @@ import kotlin.String
 public abstract class AccessLog internal constructor(
   private val cdkObject: software.amazon.awscdk.services.appmesh.AccessLog,
 ) {
-  public open fun bind(arg0: Construct): AccessLogConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(AccessLogConfig::wrap)
+  /**
+   * Called when the AccessLog type is initialized.
+   *
+   * Can be used to enforce
+   * mutual exclusivity with future properties
+   *
+   * @param scope 
+   */
+  public open fun bind(scope: Construct): AccessLogConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(AccessLogConfig::wrap)
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.AccessLog,
   ) : AccessLog(cdkObject)
 
   public companion object {
-    public open fun fromFilePath(filePath: String): AccessLog =
+    public fun fromFilePath(filePath: String): AccessLog =
         software.amazon.awscdk.services.appmesh.AccessLog.fromFilePath(filePath).let(AccessLog::wrap)
 
-    public open fun fromFilePath(filePath: String, loggingFormat: LoggingFormat): AccessLog =
+    public fun fromFilePath(filePath: String, loggingFormat: LoggingFormat): AccessLog =
         software.amazon.awscdk.services.appmesh.AccessLog.fromFilePath(filePath,
         loggingFormat.let(LoggingFormat::unwrap)).let(AccessLog::wrap)
 

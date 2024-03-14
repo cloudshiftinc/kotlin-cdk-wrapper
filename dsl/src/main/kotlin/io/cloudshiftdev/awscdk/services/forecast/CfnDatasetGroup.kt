@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -15,54 +16,161 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnDatasetGroup internal constructor(
   private val cdkObject: software.amazon.awscdk.services.forecast.CfnDatasetGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  /**
+   * The Amazon Resource Name (ARN) of the dataset group.
+   */
   public open fun attrDatasetGroupArn(): String = unwrap(this).getAttrDatasetGroupArn()
 
+  /**
+   * An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the
+   * dataset group.
+   */
   public open fun datasetArns(): List<String> = unwrap(this).getDatasetArns() ?: emptyList()
 
+  /**
+   * An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the
+   * dataset group.
+   */
   public open fun datasetArns(`value`: List<String>) {
     unwrap(this).setDatasetArns(`value`)
   }
 
+  /**
+   * An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the
+   * dataset group.
+   */
   public open fun datasetArns(vararg `value`: String): Unit = datasetArns(`value`.toList())
 
+  /**
+   * The name of the dataset group.
+   */
   public open fun datasetGroupName(): String = unwrap(this).getDatasetGroupName()
 
+  /**
+   * The name of the dataset group.
+   */
   public open fun datasetGroupName(`value`: String) {
     unwrap(this).setDatasetGroupName(`value`)
   }
 
+  /**
+   * The domain associated with the dataset group.
+   */
   public open fun domain(): String = unwrap(this).getDomain()
 
+  /**
+   * The domain associated with the dataset group.
+   */
   public open fun domain(`value`: String) {
     unwrap(this).setDomain(`value`)
   }
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.forecast.CfnDatasetGroup].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the
+     * dataset group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-forecast-datasetgroup.html#cfn-forecast-datasetgroup-datasetarns)
+     * @param datasetArns An array of Amazon Resource Names (ARNs) of the datasets that you want to
+     * include in the dataset group. 
+     */
     public fun datasetArns(datasetArns: List<String>)
 
+    /**
+     * An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the
+     * dataset group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-forecast-datasetgroup.html#cfn-forecast-datasetgroup-datasetarns)
+     * @param datasetArns An array of Amazon Resource Names (ARNs) of the datasets that you want to
+     * include in the dataset group. 
+     */
     public fun datasetArns(vararg datasetArns: String)
 
+    /**
+     * The name of the dataset group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-forecast-datasetgroup.html#cfn-forecast-datasetgroup-datasetgroupname)
+     * @param datasetGroupName The name of the dataset group. 
+     */
     public fun datasetGroupName(datasetGroupName: String)
 
+    /**
+     * The domain associated with the dataset group.
+     *
+     * When you add a dataset to a dataset group, this value and the value specified for the
+     * `Domain` parameter of the
+     * [CreateDataset](https://docs.aws.amazon.com/forecast/latest/dg/API_CreateDataset.html) operation
+     * must match.
+     *
+     * The `Domain` and `DatasetType` that you choose determine the fields that must be present in
+     * training data that you import to a dataset. For example, if you choose the `RETAIL` domain and
+     * `TARGET_TIME_SERIES` as the `DatasetType` , Amazon Forecast requires that `item_id` ,
+     * `timestamp` , and `demand` fields are present in your data. For more information, see [Dataset
+     * groups](https://docs.aws.amazon.com/forecast/latest/dg/howitworks-datasets-groups.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-forecast-datasetgroup.html#cfn-forecast-datasetgroup-domain)
+     * @param domain The domain associated with the dataset group. 
+     */
     public fun domain(domain: String)
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-forecast-datasetgroup.html#cfn-forecast-datasetgroup-tags)
+     * @param tags An array of key-value pairs to apply to this resource. 
+     */
     public fun tags(tags: List<CfnTag>)
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-forecast-datasetgroup.html#cfn-forecast-datasetgroup-tags)
+     * @param tags An array of key-value pairs to apply to this resource. 
+     */
     public fun tags(vararg tags: CfnTag)
   }
 
@@ -73,24 +181,83 @@ public open class CfnDatasetGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.forecast.CfnDatasetGroup.Builder =
         software.amazon.awscdk.services.forecast.CfnDatasetGroup.Builder.create(scope, id)
 
+    /**
+     * An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the
+     * dataset group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-forecast-datasetgroup.html#cfn-forecast-datasetgroup-datasetarns)
+     * @param datasetArns An array of Amazon Resource Names (ARNs) of the datasets that you want to
+     * include in the dataset group. 
+     */
     override fun datasetArns(datasetArns: List<String>) {
       cdkBuilder.datasetArns(datasetArns)
     }
 
+    /**
+     * An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the
+     * dataset group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-forecast-datasetgroup.html#cfn-forecast-datasetgroup-datasetarns)
+     * @param datasetArns An array of Amazon Resource Names (ARNs) of the datasets that you want to
+     * include in the dataset group. 
+     */
     override fun datasetArns(vararg datasetArns: String): Unit = datasetArns(datasetArns.toList())
 
+    /**
+     * The name of the dataset group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-forecast-datasetgroup.html#cfn-forecast-datasetgroup-datasetgroupname)
+     * @param datasetGroupName The name of the dataset group. 
+     */
     override fun datasetGroupName(datasetGroupName: String) {
       cdkBuilder.datasetGroupName(datasetGroupName)
     }
 
+    /**
+     * The domain associated with the dataset group.
+     *
+     * When you add a dataset to a dataset group, this value and the value specified for the
+     * `Domain` parameter of the
+     * [CreateDataset](https://docs.aws.amazon.com/forecast/latest/dg/API_CreateDataset.html) operation
+     * must match.
+     *
+     * The `Domain` and `DatasetType` that you choose determine the fields that must be present in
+     * training data that you import to a dataset. For example, if you choose the `RETAIL` domain and
+     * `TARGET_TIME_SERIES` as the `DatasetType` , Amazon Forecast requires that `item_id` ,
+     * `timestamp` , and `demand` fields are present in your data. For more information, see [Dataset
+     * groups](https://docs.aws.amazon.com/forecast/latest/dg/howitworks-datasets-groups.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-forecast-datasetgroup.html#cfn-forecast-datasetgroup-domain)
+     * @param domain The domain associated with the dataset group. 
+     */
     override fun domain(domain: String) {
       cdkBuilder.domain(domain)
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-forecast-datasetgroup.html#cfn-forecast-datasetgroup-tags)
+     * @param tags An array of key-value pairs to apply to this resource. 
+     */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-forecast-datasetgroup.html#cfn-forecast-datasetgroup-tags)
+     * @param tags An array of key-value pairs to apply to this resource. 
+     */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.forecast.CfnDatasetGroup =

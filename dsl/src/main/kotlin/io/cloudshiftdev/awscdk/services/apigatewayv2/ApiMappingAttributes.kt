@@ -1,12 +1,23 @@
 package io.cloudshiftdev.awscdk.services.apigatewayv2
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface ApiMappingAttributes {
+  /**
+   * The API mapping ID.
+   */
   public fun apiMappingId(): String
 
+  /**
+   * A builder for [ApiMappingAttributes]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param apiMappingId The API mapping ID. 
+     */
     public fun apiMappingId(apiMappingId: String)
   }
 
@@ -15,6 +26,9 @@ public interface ApiMappingAttributes {
         software.amazon.awscdk.services.apigatewayv2.ApiMappingAttributes.Builder =
         software.amazon.awscdk.services.apigatewayv2.ApiMappingAttributes.builder()
 
+    /**
+     * @param apiMappingId The API mapping ID. 
+     */
     override fun apiMappingId(apiMappingId: String) {
       cdkBuilder.apiMappingId(apiMappingId)
     }
@@ -26,6 +40,9 @@ public interface ApiMappingAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.ApiMappingAttributes,
   ) : ApiMappingAttributes {
+    /**
+     * The API mapping ID.
+     */
     override fun apiMappingId(): String = unwrap(this).getApiMappingId()
   }
 

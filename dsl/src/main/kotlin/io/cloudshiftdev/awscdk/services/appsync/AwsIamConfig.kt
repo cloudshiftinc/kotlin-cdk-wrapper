@@ -1,16 +1,33 @@
 package io.cloudshiftdev.awscdk.services.appsync
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface AwsIamConfig {
+  /**
+   * The signing region for AWS IAM authorization.
+   */
   public fun signingRegion(): String
 
+  /**
+   * The signing service name for AWS IAM authorization.
+   */
   public fun signingServiceName(): String
 
+  /**
+   * A builder for [AwsIamConfig]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param signingRegion The signing region for AWS IAM authorization. 
+     */
     public fun signingRegion(signingRegion: String)
 
+    /**
+     * @param signingServiceName The signing service name for AWS IAM authorization. 
+     */
     public fun signingServiceName(signingServiceName: String)
   }
 
@@ -18,10 +35,16 @@ public interface AwsIamConfig {
     private val cdkBuilder: software.amazon.awscdk.services.appsync.AwsIamConfig.Builder =
         software.amazon.awscdk.services.appsync.AwsIamConfig.builder()
 
+    /**
+     * @param signingRegion The signing region for AWS IAM authorization. 
+     */
     override fun signingRegion(signingRegion: String) {
       cdkBuilder.signingRegion(signingRegion)
     }
 
+    /**
+     * @param signingServiceName The signing service name for AWS IAM authorization. 
+     */
     override fun signingServiceName(signingServiceName: String) {
       cdkBuilder.signingServiceName(signingServiceName)
     }
@@ -32,8 +55,14 @@ public interface AwsIamConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appsync.AwsIamConfig,
   ) : AwsIamConfig {
+    /**
+     * The signing region for AWS IAM authorization.
+     */
     override fun signingRegion(): String = unwrap(this).getSigningRegion()
 
+    /**
+     * The signing service name for AWS IAM authorization.
+     */
     override fun signingServiceName(): String = unwrap(this).getSigningServiceName()
   }
 

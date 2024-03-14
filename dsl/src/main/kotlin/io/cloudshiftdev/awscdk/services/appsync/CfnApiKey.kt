@@ -3,6 +3,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.TreeInspector
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -12,39 +13,96 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnApiKey internal constructor(
   private val cdkObject: software.amazon.awscdk.services.appsync.CfnApiKey,
 ) : CfnResource(cdkObject), IInspectable {
+  /**
+   * Unique AWS AppSync GraphQL API ID for this API key.
+   */
   public open fun apiId(): String = unwrap(this).getApiId()
 
+  /**
+   * Unique AWS AppSync GraphQL API ID for this API key.
+   */
   public open fun apiId(`value`: String) {
     unwrap(this).setApiId(`value`)
   }
 
+  /**
+   * The API key.
+   */
   public open fun attrApiKey(): String = unwrap(this).getAttrApiKey()
 
+  /**
+   * The API key ID.
+   */
   public open fun attrApiKeyId(): String = unwrap(this).getAttrApiKeyId()
 
+  /**
+   * The Amazon Resource Name (ARN) of the API key, such as
+   * `arn:aws:appsync:us-east-1:123456789012:apis/graphqlapiid/apikey/apikeya1bzhi` .
+   */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
+  /**
+   * Unique description of your API key.
+   */
   public open fun description(): String? = unwrap(this).getDescription()
 
+  /**
+   * Unique description of your API key.
+   */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
   }
 
+  /**
+   * The time after which the API key expires.
+   */
   public open fun expires(): Number? = unwrap(this).getExpires()
 
+  /**
+   * The time after which the API key expires.
+   */
   public open fun expires(`value`: Number) {
     unwrap(this).setExpires(`value`)
   }
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.appsync.CfnApiKey].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * Unique AWS AppSync GraphQL API ID for this API key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html#cfn-appsync-apikey-apiid)
+     * @param apiId Unique AWS AppSync GraphQL API ID for this API key. 
+     */
     public fun apiId(apiId: String)
 
+    /**
+     * Unique description of your API key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html#cfn-appsync-apikey-description)
+     * @param description Unique description of your API key. 
+     */
     public fun description(description: String)
 
+    /**
+     * The time after which the API key expires.
+     *
+     * The date is represented as seconds since the epoch, rounded down to the nearest hour.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html#cfn-appsync-apikey-expires)
+     * @param expires The time after which the API key expires. 
+     */
     public fun expires(expires: Number)
   }
 
@@ -55,14 +113,34 @@ public open class CfnApiKey internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appsync.CfnApiKey.Builder =
         software.amazon.awscdk.services.appsync.CfnApiKey.Builder.create(scope, id)
 
+    /**
+     * Unique AWS AppSync GraphQL API ID for this API key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html#cfn-appsync-apikey-apiid)
+     * @param apiId Unique AWS AppSync GraphQL API ID for this API key. 
+     */
     override fun apiId(apiId: String) {
       cdkBuilder.apiId(apiId)
     }
 
+    /**
+     * Unique description of your API key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html#cfn-appsync-apikey-description)
+     * @param description Unique description of your API key. 
+     */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
+    /**
+     * The time after which the API key expires.
+     *
+     * The date is represented as seconds since the epoch, rounded down to the nearest hour.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html#cfn-appsync-apikey-expires)
+     * @param expires The time after which the API key expires. 
+     */
     override fun expires(expires: Number) {
       cdkBuilder.expires(expires)
     }

@@ -1,16 +1,35 @@
 package io.cloudshiftdev.awscdk.services.globalaccelerator
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.Unit
 
 public interface PortRange {
+  /**
+   * The first port in the range of ports, inclusive.
+   */
   public fun fromPort(): Number
 
+  /**
+   * The last port in the range of ports, inclusive.
+   *
+   * Default: - same as `fromPort`
+   */
   public fun toPort(): Number? = unwrap(this).getToPort()
 
+  /**
+   * A builder for [PortRange]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param fromPort The first port in the range of ports, inclusive. 
+     */
     public fun fromPort(fromPort: Number)
 
+    /**
+     * @param toPort The last port in the range of ports, inclusive.
+     */
     public fun toPort(toPort: Number)
   }
 
@@ -18,10 +37,16 @@ public interface PortRange {
     private val cdkBuilder: software.amazon.awscdk.services.globalaccelerator.PortRange.Builder =
         software.amazon.awscdk.services.globalaccelerator.PortRange.builder()
 
+    /**
+     * @param fromPort The first port in the range of ports, inclusive. 
+     */
     override fun fromPort(fromPort: Number) {
       cdkBuilder.fromPort(fromPort)
     }
 
+    /**
+     * @param toPort The last port in the range of ports, inclusive.
+     */
     override fun toPort(toPort: Number) {
       cdkBuilder.toPort(toPort)
     }
@@ -33,8 +58,16 @@ public interface PortRange {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.globalaccelerator.PortRange,
   ) : PortRange {
+    /**
+     * The first port in the range of ports, inclusive.
+     */
     override fun fromPort(): Number = unwrap(this).getFromPort()
 
+    /**
+     * The last port in the range of ports, inclusive.
+     *
+     * Default: - same as `fromPort`
+     */
     override fun toPort(): Number? = unwrap(this).getToPort()
   }
 

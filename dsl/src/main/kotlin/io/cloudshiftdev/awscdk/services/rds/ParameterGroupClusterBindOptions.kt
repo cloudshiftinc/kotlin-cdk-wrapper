@@ -1,8 +1,13 @@
 package io.cloudshiftdev.awscdk.services.rds
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Unit
 
 public interface ParameterGroupClusterBindOptions {
+  /**
+   * A builder for [ParameterGroupClusterBindOptions]
+   */
+  @CdkDslMarker
   public interface Builder
 
   private class BuilderImpl : Builder {

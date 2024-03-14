@@ -6,6 +6,14 @@ import kotlin.String
 public open class S3Code internal constructor(
   private val cdkObject: software.amazon.awscdk.services.synthetics.S3Code,
 ) : Code(cdkObject) {
+  /**
+   * Called when the canary is initialized to allow this object to bind to the stack, add resources
+   * and have fun.
+   *
+   * @param _scope 
+   * @param _handler 
+   * @param _family 
+   */
   public override fun bind(
     _scope: Construct,
     _handler: String,

@@ -8,6 +8,9 @@ import kotlin.jvm.JvmName
 public abstract class Schedule internal constructor(
   private val cdkObject: software.amazon.awscdk.services.autoscaling.Schedule,
 ) {
+  /**
+   * Retrieve the expression for this schedule.
+   */
   public open fun expressionString(): String = unwrap(this).getExpressionString()
 
   private class Wrapper internal constructor(
@@ -15,15 +18,14 @@ public abstract class Schedule internal constructor(
   ) : Schedule(cdkObject)
 
   public companion object {
-    public open fun cron(options: CronOptions): Schedule =
+    public fun cron(options: CronOptions): Schedule =
         software.amazon.awscdk.services.autoscaling.Schedule.cron(options.let(CronOptions::unwrap)).let(Schedule::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("af064fd9e0fad094eabe25ea55682bfc02ac054c7d070975a439b1b83317aeba")
-    public open fun cron(options: CronOptions.Builder.() -> Unit): Schedule =
-        cron(CronOptions(options))
+    public fun cron(options: CronOptions.Builder.() -> Unit): Schedule = cron(CronOptions(options))
 
-    public open fun expression(expression: String): Schedule =
+    public fun expression(expression: String): Schedule =
         software.amazon.awscdk.services.autoscaling.Schedule.expression(expression).let(Schedule::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.Schedule): Schedule =

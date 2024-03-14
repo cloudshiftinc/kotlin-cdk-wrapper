@@ -5,9 +5,16 @@ import io.cloudshiftdev.constructs.Construct
 public abstract class ProxyConfiguration internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ecs.ProxyConfiguration,
 ) {
-  public open fun bind(arg0: Construct, arg1: TaskDefinition):
-      CfnTaskDefinition.ProxyConfigurationProperty = unwrap(this).bind(arg0.let(Construct::unwrap),
-      arg1.let(TaskDefinition::unwrap)).let(CfnTaskDefinition.ProxyConfigurationProperty::wrap)
+  /**
+   * Called when the proxy configuration is configured on a task definition.
+   *
+   * @param _scope 
+   * @param _taskDefinition 
+   */
+  public open fun bind(_scope: Construct, _taskDefinition: TaskDefinition):
+      CfnTaskDefinition.ProxyConfigurationProperty =
+      unwrap(this).bind(_scope.let(Construct::unwrap),
+      _taskDefinition.let(TaskDefinition::unwrap)).let(CfnTaskDefinition.ProxyConfigurationProperty::wrap)
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.ProxyConfiguration,

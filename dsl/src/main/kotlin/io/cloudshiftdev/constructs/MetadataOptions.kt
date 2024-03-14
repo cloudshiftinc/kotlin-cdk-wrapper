@@ -1,5 +1,6 @@
 package io.cloudshiftdev.constructs
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Unit
@@ -9,6 +10,7 @@ public interface MetadataOptions {
 
   public fun traceFromFunction(): Any? = unwrap(this).getTraceFromFunction()
 
+  @CdkDslMarker
   public interface Builder {
     public fun stackTrace(stackTrace: Boolean)
 

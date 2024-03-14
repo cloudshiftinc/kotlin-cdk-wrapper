@@ -66,16 +66,14 @@ internal class AsmMethodAdapter(
                                 // first index is 'this' for instance methods, skip it
                                 else -> delegate.localVariables[index + 1].name
                             }
-                        else -> "arg$index"
+                        else -> sourceMethod?.parameterNames?.get(index) ?: "arg$index"
+
                     }
                 var theType: TypeName = type.toTypeName()
                 if (genericParams.isNotEmpty()) {
                     theType = genericParams[index]
                 }
 
-                // TODO - there don't appear to be any builder methods that use nullability
-                // annotations
-                //   if we find a use for these annotations we have them...
                 val visibleAnnotations =
                     delegate.visibleParameterAnnotations?.get(index) ?: emptyList()
                 val invisibleAnnotations =

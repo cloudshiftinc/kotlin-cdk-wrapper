@@ -1,16 +1,32 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Suppress
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
 public interface BackendDefaults {
+  /**
+   * TLS properties for Client policy for backend defaults.
+   *
+   * Default: - none
+   */
   public fun tlsClientPolicy(): TlsClientPolicy? =
       unwrap(this).getTlsClientPolicy()?.let(TlsClientPolicy::wrap)
 
+  /**
+   * A builder for [BackendDefaults]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param tlsClientPolicy TLS properties for Client policy for backend defaults.
+     */
     public fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy)
 
+    /**
+     * @param tlsClientPolicy TLS properties for Client policy for backend defaults.
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e996c14c629bc229d00dc4ace25d0993cc82bf53577c0120d82f87798f45e5ca")
     public fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy.Builder.() -> Unit)
@@ -20,10 +36,16 @@ public interface BackendDefaults {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.BackendDefaults.Builder =
         software.amazon.awscdk.services.appmesh.BackendDefaults.builder()
 
+    /**
+     * @param tlsClientPolicy TLS properties for Client policy for backend defaults.
+     */
     override fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy) {
       cdkBuilder.tlsClientPolicy(tlsClientPolicy.let(TlsClientPolicy::unwrap))
     }
 
+    /**
+     * @param tlsClientPolicy TLS properties for Client policy for backend defaults.
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e996c14c629bc229d00dc4ace25d0993cc82bf53577c0120d82f87798f45e5ca")
     override fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy.Builder.() -> Unit): Unit =
@@ -35,6 +57,11 @@ public interface BackendDefaults {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.BackendDefaults,
   ) : BackendDefaults {
+    /**
+     * TLS properties for Client policy for backend defaults.
+     *
+     * Default: - none
+     */
     override fun tlsClientPolicy(): TlsClientPolicy? =
         unwrap(this).getTlsClientPolicy()?.let(TlsClientPolicy::wrap)
   }

@@ -4,11 +4,17 @@ import kotlin.String
 import kotlin.collections.List
 
 public interface IPolicyValidationContextBeta1 {
+  /**
+   * The absolute path of all templates to be processed.
+   */
   public fun templatePaths(): List<String>
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.IPolicyValidationContextBeta1,
   ) : IPolicyValidationContextBeta1 {
+    /**
+     * The absolute path of all templates to be processed.
+     */
     override fun templatePaths(): List<String> = unwrap(this).getTemplatePaths()
   }
 

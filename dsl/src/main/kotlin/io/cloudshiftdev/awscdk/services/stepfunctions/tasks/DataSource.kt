@@ -1,15 +1,29 @@
 package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Suppress
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
 public interface DataSource {
+  /**
+   * S3 location of the data source that is associated with a channel.
+   */
   public fun s3DataSource(): S3DataSource
 
+  /**
+   * A builder for [DataSource]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param s3DataSource S3 location of the data source that is associated with a channel. 
+     */
     public fun s3DataSource(s3DataSource: S3DataSource)
 
+    /**
+     * @param s3DataSource S3 location of the data source that is associated with a channel. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2ebbc3bbf36c06c717e037f58161a4876fd4251eb0fb934c9de190c21961c9d1")
     public fun s3DataSource(s3DataSource: S3DataSource.Builder.() -> Unit)
@@ -19,10 +33,16 @@ public interface DataSource {
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.tasks.DataSource.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.DataSource.builder()
 
+    /**
+     * @param s3DataSource S3 location of the data source that is associated with a channel. 
+     */
     override fun s3DataSource(s3DataSource: S3DataSource) {
       cdkBuilder.s3DataSource(s3DataSource.let(S3DataSource::unwrap))
     }
 
+    /**
+     * @param s3DataSource S3 location of the data source that is associated with a channel. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2ebbc3bbf36c06c717e037f58161a4876fd4251eb0fb934c9de190c21961c9d1")
     override fun s3DataSource(s3DataSource: S3DataSource.Builder.() -> Unit): Unit =
@@ -35,6 +55,9 @@ public interface DataSource {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DataSource,
   ) : DataSource {
+    /**
+     * S3 location of the data source that is associated with a channel.
+     */
     override fun s3DataSource(): S3DataSource =
         unwrap(this).getS3DataSource().let(S3DataSource::wrap)
   }

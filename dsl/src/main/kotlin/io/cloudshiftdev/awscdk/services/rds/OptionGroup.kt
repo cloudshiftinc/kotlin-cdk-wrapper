@@ -1,6 +1,7 @@
 package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.Resource
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.ec2.Connections
 import kotlin.Boolean
 import kotlin.String
@@ -15,26 +16,72 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class OptionGroup internal constructor(
   private val cdkObject: software.amazon.awscdk.services.rds.OptionGroup,
 ) : Resource(cdkObject), IOptionGroup {
+  /**
+   * Adds a configuration to this OptionGroup.
+   *
+   * This method is a no-op for an imported OptionGroup.
+   *
+   * @param configuration 
+   */
   public override fun addConfiguration(configuration: OptionConfiguration): Boolean =
       unwrap(this).addConfiguration(configuration.let(OptionConfiguration::unwrap))
 
+  /**
+   * Adds a configuration to this OptionGroup.
+   *
+   * This method is a no-op for an imported OptionGroup.
+   *
+   * @param configuration 
+   */
   @Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("12b43bc5b68d5862bb4430eddcc0fef9fc36fe009a38b9e972fbd6e89f47a190")
   public override fun addConfiguration(configuration: OptionConfiguration.Builder.() -> Unit):
       Boolean = addConfiguration(OptionConfiguration(configuration))
 
+  /**
+   * The connections object for the options.
+   */
   public open fun optionConnections(): Map<String, Connections> =
       unwrap(this).getOptionConnections().mapValues{Connections.wrap(it.value)} ?: emptyMap()
 
+  /**
+   * The name of the option group.
+   */
   public override fun optionGroupName(): String = unwrap(this).getOptionGroupName()
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.rds.OptionGroup].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * The configurations for this option group.
+     *
+     * @param configurations The configurations for this option group. 
+     */
     public fun configurations(configurations: List<OptionConfiguration>)
 
+    /**
+     * The configurations for this option group.
+     *
+     * @param configurations The configurations for this option group. 
+     */
     public fun configurations(vararg configurations: OptionConfiguration)
 
+    /**
+     * A description of the option group.
+     *
+     * Default: a CDK generated description
+     *
+     * @param description A description of the option group. 
+     */
     public fun description(description: String)
 
+    /**
+     * The database engine that this option group is associated with.
+     *
+     * @param engine The database engine that this option group is associated with. 
+     */
     public fun engine(engine: IInstanceEngine)
   }
 
@@ -45,17 +92,39 @@ public open class OptionGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.rds.OptionGroup.Builder =
         software.amazon.awscdk.services.rds.OptionGroup.Builder.create(scope, id)
 
+    /**
+     * The configurations for this option group.
+     *
+     * @param configurations The configurations for this option group. 
+     */
     override fun configurations(configurations: List<OptionConfiguration>) {
       cdkBuilder.configurations(configurations.map(OptionConfiguration::unwrap))
     }
 
+    /**
+     * The configurations for this option group.
+     *
+     * @param configurations The configurations for this option group. 
+     */
     override fun configurations(vararg configurations: OptionConfiguration): Unit =
         configurations(configurations.toList())
 
+    /**
+     * A description of the option group.
+     *
+     * Default: a CDK generated description
+     *
+     * @param description A description of the option group. 
+     */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
+    /**
+     * The database engine that this option group is associated with.
+     *
+     * @param engine The database engine that this option group is associated with. 
+     */
     override fun engine(engine: IInstanceEngine) {
       cdkBuilder.engine(engine.let(IInstanceEngine::unwrap))
     }
@@ -64,7 +133,7 @@ public open class OptionGroup internal constructor(
   }
 
   public companion object {
-    public open fun fromOptionGroupName(
+    public fun fromOptionGroupName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
       optionGroupName: String,

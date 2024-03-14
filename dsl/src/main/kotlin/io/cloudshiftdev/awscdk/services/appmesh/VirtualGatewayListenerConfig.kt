@@ -1,15 +1,29 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Suppress
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
 public interface VirtualGatewayListenerConfig {
+  /**
+   * Single listener config for a VirtualGateway.
+   */
   public fun listener(): CfnVirtualGateway.VirtualGatewayListenerProperty
 
+  /**
+   * A builder for [VirtualGatewayListenerConfig]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param listener Single listener config for a VirtualGateway. 
+     */
     public fun listener(listener: CfnVirtualGateway.VirtualGatewayListenerProperty)
 
+    /**
+     * @param listener Single listener config for a VirtualGateway. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4ae19caa59030aae0ac021b242b35f65b707171c469e9b1b6ea6443eaad8a0e5")
     public
@@ -21,10 +35,16 @@ public interface VirtualGatewayListenerConfig {
         software.amazon.awscdk.services.appmesh.VirtualGatewayListenerConfig.Builder =
         software.amazon.awscdk.services.appmesh.VirtualGatewayListenerConfig.builder()
 
+    /**
+     * @param listener Single listener config for a VirtualGateway. 
+     */
     override fun listener(listener: CfnVirtualGateway.VirtualGatewayListenerProperty) {
       cdkBuilder.listener(listener.let(CfnVirtualGateway.VirtualGatewayListenerProperty::unwrap))
     }
 
+    /**
+     * @param listener Single listener config for a VirtualGateway. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4ae19caa59030aae0ac021b242b35f65b707171c469e9b1b6ea6443eaad8a0e5")
     override
@@ -38,6 +58,9 @@ public interface VirtualGatewayListenerConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.VirtualGatewayListenerConfig,
   ) : VirtualGatewayListenerConfig {
+    /**
+     * Single listener config for a VirtualGateway.
+     */
     override fun listener(): CfnVirtualGateway.VirtualGatewayListenerProperty =
         unwrap(this).getListener().let(CfnVirtualGateway.VirtualGatewayListenerProperty::wrap)
   }

@@ -6,6 +6,9 @@ import kotlin.collections.List
 public open class CachedMethods internal constructor(
   private val cdkObject: software.amazon.awscdk.services.cloudfront.CachedMethods,
 ) {
+  /**
+   * HTTP methods supported.
+   */
   public open fun methods(): List<String> = unwrap(this).getMethods()
 
   public companion object {

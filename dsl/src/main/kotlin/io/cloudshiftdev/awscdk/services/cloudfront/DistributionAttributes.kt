@@ -1,16 +1,34 @@
 package io.cloudshiftdev.awscdk.services.cloudfront
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface DistributionAttributes {
+  /**
+   * The distribution ID for this distribution.
+   */
   public fun distributionId(): String
 
+  /**
+   * The generated domain name of the Distribution, such as d111111abcdef8.cloudfront.net.
+   */
   public fun domainName(): String
 
+  /**
+   * A builder for [DistributionAttributes]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param distributionId The distribution ID for this distribution. 
+     */
     public fun distributionId(distributionId: String)
 
+    /**
+     * @param domainName The generated domain name of the Distribution, such as
+     * d111111abcdef8.cloudfront.net. 
+     */
     public fun domainName(domainName: String)
   }
 
@@ -19,10 +37,17 @@ public interface DistributionAttributes {
         software.amazon.awscdk.services.cloudfront.DistributionAttributes.Builder =
         software.amazon.awscdk.services.cloudfront.DistributionAttributes.builder()
 
+    /**
+     * @param distributionId The distribution ID for this distribution. 
+     */
     override fun distributionId(distributionId: String) {
       cdkBuilder.distributionId(distributionId)
     }
 
+    /**
+     * @param domainName The generated domain name of the Distribution, such as
+     * d111111abcdef8.cloudfront.net. 
+     */
     override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
@@ -34,8 +59,14 @@ public interface DistributionAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.DistributionAttributes,
   ) : DistributionAttributes {
+    /**
+     * The distribution ID for this distribution.
+     */
     override fun distributionId(): String = unwrap(this).getDistributionId()
 
+    /**
+     * The generated domain name of the Distribution, such as d111111abcdef8.cloudfront.net.
+     */
     override fun domainName(): String = unwrap(this).getDomainName()
   }
 

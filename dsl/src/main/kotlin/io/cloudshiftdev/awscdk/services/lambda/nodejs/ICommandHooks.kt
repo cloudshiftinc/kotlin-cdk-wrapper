@@ -4,23 +4,75 @@ import kotlin.String
 import kotlin.collections.List
 
 public interface ICommandHooks {
-  public fun afterBundling(arg0: String, arg1: String): List<String>
+  /**
+   * Returns commands to run after bundling.
+   *
+   * Commands are chained with `&amp;&amp;`.
+   *
+   * @param inputDir 
+   * @param outputDir 
+   */
+  public fun afterBundling(inputDir: String, outputDir: String): List<String>
 
-  public fun beforeBundling(arg0: String, arg1: String): List<String>
+  /**
+   * Returns commands to run before bundling.
+   *
+   * Commands are chained with `&amp;&amp;`.
+   *
+   * @param inputDir 
+   * @param outputDir 
+   */
+  public fun beforeBundling(inputDir: String, outputDir: String): List<String>
 
-  public fun beforeInstall(arg0: String, arg1: String): List<String>
+  /**
+   * Returns commands to run before installing node modules.
+   *
+   * This hook only runs when node modules are installed.
+   *
+   * Commands are chained with `&amp;&amp;`.
+   *
+   * @param inputDir 
+   * @param outputDir 
+   */
+  public fun beforeInstall(inputDir: String, outputDir: String): List<String>
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.nodejs.ICommandHooks,
   ) : ICommandHooks {
-    override fun afterBundling(arg0: String, arg1: String): List<String> =
-        unwrap(this).afterBundling(arg0, arg1)
+    /**
+     * Returns commands to run after bundling.
+     *
+     * Commands are chained with `&amp;&amp;`.
+     *
+     * @param inputDir 
+     * @param outputDir 
+     */
+    override fun afterBundling(inputDir: String, outputDir: String): List<String> =
+        unwrap(this).afterBundling(inputDir, outputDir)
 
-    override fun beforeBundling(arg0: String, arg1: String): List<String> =
-        unwrap(this).beforeBundling(arg0, arg1)
+    /**
+     * Returns commands to run before bundling.
+     *
+     * Commands are chained with `&amp;&amp;`.
+     *
+     * @param inputDir 
+     * @param outputDir 
+     */
+    override fun beforeBundling(inputDir: String, outputDir: String): List<String> =
+        unwrap(this).beforeBundling(inputDir, outputDir)
 
-    override fun beforeInstall(arg0: String, arg1: String): List<String> =
-        unwrap(this).beforeInstall(arg0, arg1)
+    /**
+     * Returns commands to run before installing node modules.
+     *
+     * This hook only runs when node modules are installed.
+     *
+     * Commands are chained with `&amp;&amp;`.
+     *
+     * @param inputDir 
+     * @param outputDir 
+     */
+    override fun beforeInstall(inputDir: String, outputDir: String): List<String> =
+        unwrap(this).beforeInstall(inputDir, outputDir)
   }
 
   public companion object {

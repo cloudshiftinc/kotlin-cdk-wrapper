@@ -1,11 +1,24 @@
 package io.cloudshiftdev.awscdk.services.ecs
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Unit
 
 public interface DeploymentAlarmOptions {
+  /**
+   * Default rollback on alarm.
+   *
+   * Default: AlarmBehavior.ROLLBACK_ON_ALARM
+   */
   public fun behavior(): AlarmBehavior? = unwrap(this).getBehavior()?.let(AlarmBehavior::wrap)
 
+  /**
+   * A builder for [DeploymentAlarmOptions]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param behavior Default rollback on alarm.
+     */
     public fun behavior(behavior: AlarmBehavior)
   }
 
@@ -13,6 +26,9 @@ public interface DeploymentAlarmOptions {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.DeploymentAlarmOptions.Builder =
         software.amazon.awscdk.services.ecs.DeploymentAlarmOptions.builder()
 
+    /**
+     * @param behavior Default rollback on alarm.
+     */
     override fun behavior(behavior: AlarmBehavior) {
       cdkBuilder.behavior(behavior.let(AlarmBehavior::unwrap))
     }
@@ -24,6 +40,11 @@ public interface DeploymentAlarmOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.DeploymentAlarmOptions,
   ) : DeploymentAlarmOptions {
+    /**
+     * Default rollback on alarm.
+     *
+     * Default: AlarmBehavior.ROLLBACK_ON_ALARM
+     */
     override fun behavior(): AlarmBehavior? = unwrap(this).getBehavior()?.let(AlarmBehavior::wrap)
   }
 

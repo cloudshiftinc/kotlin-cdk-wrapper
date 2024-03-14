@@ -1,31 +1,91 @@
 package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.Unit
 
 public interface ApplicationLoadBalancerRedirectConfig {
+  /**
+   * Allow anyone to connect to this listener.
+   *
+   * If this is specified, the listener will be opened up to anyone who can reach it.
+   * For internal load balancers this is anyone in the same VPC. For public load
+   * balancers, this is anyone on the internet.
+   *
+   * If you want to be more selective about who can access this load
+   * balancer, set this to `false` and use the listener's `connections`
+   * object to selectively grant access to the listener.
+   *
+   * Default: true
+   */
   public fun `open`(): Boolean? = unwrap(this).getOpen()
 
+  /**
+   * The port number to listen to.
+   *
+   * Default: 80
+   */
   public fun sourcePort(): Number? = unwrap(this).getSourcePort()
 
+  /**
+   * The protocol of the listener being created.
+   *
+   * Default: HTTP
+   */
   public fun sourceProtocol(): ApplicationProtocol? =
       unwrap(this).getSourceProtocol()?.let(ApplicationProtocol::wrap)
 
+  /**
+   * The port number to redirect to.
+   *
+   * Default: 443
+   */
   public fun targetPort(): Number? = unwrap(this).getTargetPort()
 
+  /**
+   * The protocol of the redirection target.
+   *
+   * Default: HTTPS
+   */
   public fun targetProtocol(): ApplicationProtocol? =
       unwrap(this).getTargetProtocol()?.let(ApplicationProtocol::wrap)
 
+  /**
+   * A builder for [ApplicationLoadBalancerRedirectConfig]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param open Allow anyone to connect to this listener.
+     * If this is specified, the listener will be opened up to anyone who can reach it.
+     * For internal load balancers this is anyone in the same VPC. For public load
+     * balancers, this is anyone on the internet.
+     *
+     * If you want to be more selective about who can access this load
+     * balancer, set this to `false` and use the listener's `connections`
+     * object to selectively grant access to the listener.
+     */
     public fun `open`(`open`: Boolean)
 
+    /**
+     * @param sourcePort The port number to listen to.
+     */
     public fun sourcePort(sourcePort: Number)
 
+    /**
+     * @param sourceProtocol The protocol of the listener being created.
+     */
     public fun sourceProtocol(sourceProtocol: ApplicationProtocol)
 
+    /**
+     * @param targetPort The port number to redirect to.
+     */
     public fun targetPort(targetPort: Number)
 
+    /**
+     * @param targetProtocol The protocol of the redirection target.
+     */
     public fun targetProtocol(targetProtocol: ApplicationProtocol)
   }
 
@@ -35,22 +95,44 @@ public interface ApplicationLoadBalancerRedirectConfig {
         =
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerRedirectConfig.builder()
 
+    /**
+     * @param open Allow anyone to connect to this listener.
+     * If this is specified, the listener will be opened up to anyone who can reach it.
+     * For internal load balancers this is anyone in the same VPC. For public load
+     * balancers, this is anyone on the internet.
+     *
+     * If you want to be more selective about who can access this load
+     * balancer, set this to `false` and use the listener's `connections`
+     * object to selectively grant access to the listener.
+     */
     override fun `open`(`open`: Boolean) {
       cdkBuilder.`open`(`open`)
     }
 
+    /**
+     * @param sourcePort The port number to listen to.
+     */
     override fun sourcePort(sourcePort: Number) {
       cdkBuilder.sourcePort(sourcePort)
     }
 
+    /**
+     * @param sourceProtocol The protocol of the listener being created.
+     */
     override fun sourceProtocol(sourceProtocol: ApplicationProtocol) {
       cdkBuilder.sourceProtocol(sourceProtocol.let(ApplicationProtocol::unwrap))
     }
 
+    /**
+     * @param targetPort The port number to redirect to.
+     */
     override fun targetPort(targetPort: Number) {
       cdkBuilder.targetPort(targetPort)
     }
 
+    /**
+     * @param targetProtocol The protocol of the redirection target.
+     */
     override fun targetProtocol(targetProtocol: ApplicationProtocol) {
       cdkBuilder.targetProtocol(targetProtocol.let(ApplicationProtocol::unwrap))
     }
@@ -64,15 +146,48 @@ public interface ApplicationLoadBalancerRedirectConfig {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerRedirectConfig,
   ) : ApplicationLoadBalancerRedirectConfig {
+    /**
+     * Allow anyone to connect to this listener.
+     *
+     * If this is specified, the listener will be opened up to anyone who can reach it.
+     * For internal load balancers this is anyone in the same VPC. For public load
+     * balancers, this is anyone on the internet.
+     *
+     * If you want to be more selective about who can access this load
+     * balancer, set this to `false` and use the listener's `connections`
+     * object to selectively grant access to the listener.
+     *
+     * Default: true
+     */
     override fun `open`(): Boolean? = unwrap(this).getOpen()
 
+    /**
+     * The port number to listen to.
+     *
+     * Default: 80
+     */
     override fun sourcePort(): Number? = unwrap(this).getSourcePort()
 
+    /**
+     * The protocol of the listener being created.
+     *
+     * Default: HTTP
+     */
     override fun sourceProtocol(): ApplicationProtocol? =
         unwrap(this).getSourceProtocol()?.let(ApplicationProtocol::wrap)
 
+    /**
+     * The port number to redirect to.
+     *
+     * Default: 443
+     */
     override fun targetPort(): Number? = unwrap(this).getTargetPort()
 
+    /**
+     * The protocol of the redirection target.
+     *
+     * Default: HTTPS
+     */
     override fun targetProtocol(): ApplicationProtocol? =
         unwrap(this).getTargetProtocol()?.let(ApplicationProtocol::wrap)
   }

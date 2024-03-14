@@ -1,12 +1,25 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.Unit
 
 public interface Http2ConnectionPool {
+  /**
+   * The maximum requests in the pool.
+   *
+   * Default: - none
+   */
   public fun maxRequests(): Number
 
+  /**
+   * A builder for [Http2ConnectionPool]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param maxRequests The maximum requests in the pool. 
+     */
     public fun maxRequests(maxRequests: Number)
   }
 
@@ -14,6 +27,9 @@ public interface Http2ConnectionPool {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.Http2ConnectionPool.Builder =
         software.amazon.awscdk.services.appmesh.Http2ConnectionPool.builder()
 
+    /**
+     * @param maxRequests The maximum requests in the pool. 
+     */
     override fun maxRequests(maxRequests: Number) {
       cdkBuilder.maxRequests(maxRequests)
     }
@@ -25,6 +41,11 @@ public interface Http2ConnectionPool {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.Http2ConnectionPool,
   ) : Http2ConnectionPool {
+    /**
+     * The maximum requests in the pool.
+     *
+     * Default: - none
+     */
     override fun maxRequests(): Number = unwrap(this).getMaxRequests()
   }
 

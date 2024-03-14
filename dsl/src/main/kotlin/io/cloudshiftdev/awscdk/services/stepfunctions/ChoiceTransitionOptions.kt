@@ -1,12 +1,25 @@
 package io.cloudshiftdev.awscdk.services.stepfunctions
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface ChoiceTransitionOptions {
+  /**
+   * An optional description for the choice transition.
+   *
+   * Default: No comment
+   */
   public fun comment(): String? = unwrap(this).getComment()
 
+  /**
+   * A builder for [ChoiceTransitionOptions]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param comment An optional description for the choice transition.
+     */
     public fun comment(comment: String)
   }
 
@@ -15,6 +28,9 @@ public interface ChoiceTransitionOptions {
         software.amazon.awscdk.services.stepfunctions.ChoiceTransitionOptions.Builder =
         software.amazon.awscdk.services.stepfunctions.ChoiceTransitionOptions.builder()
 
+    /**
+     * @param comment An optional description for the choice transition.
+     */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
@@ -26,6 +42,11 @@ public interface ChoiceTransitionOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.ChoiceTransitionOptions,
   ) : ChoiceTransitionOptions {
+    /**
+     * An optional description for the choice transition.
+     *
+     * Default: No comment
+     */
     override fun comment(): String? = unwrap(this).getComment()
   }
 

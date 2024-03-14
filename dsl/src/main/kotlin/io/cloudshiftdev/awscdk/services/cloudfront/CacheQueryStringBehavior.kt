@@ -6,21 +6,27 @@ import kotlin.collections.List
 public open class CacheQueryStringBehavior internal constructor(
   private val cdkObject: software.amazon.awscdk.services.cloudfront.CacheQueryStringBehavior,
 ) {
+  /**
+   * The behavior of query strings -- allow all, none, only an allow list, or a deny list.
+   */
   public open fun behavior(): String = unwrap(this).getBehavior()
 
+  /**
+   * The query strings to allow or deny, if the behavior is an allow or deny list.
+   */
   public open fun queryStrings(): List<String> = unwrap(this).getQueryStrings() ?: emptyList()
 
   public companion object {
-    public open fun all(): CacheQueryStringBehavior =
+    public fun all(): CacheQueryStringBehavior =
         software.amazon.awscdk.services.cloudfront.CacheQueryStringBehavior.all().let(CacheQueryStringBehavior::wrap)
 
-    public open fun allowList(queryStrings: String): CacheQueryStringBehavior =
+    public fun allowList(queryStrings: String): CacheQueryStringBehavior =
         software.amazon.awscdk.services.cloudfront.CacheQueryStringBehavior.allowList(queryStrings).let(CacheQueryStringBehavior::wrap)
 
-    public open fun denyList(queryStrings: String): CacheQueryStringBehavior =
+    public fun denyList(queryStrings: String): CacheQueryStringBehavior =
         software.amazon.awscdk.services.cloudfront.CacheQueryStringBehavior.denyList(queryStrings).let(CacheQueryStringBehavior::wrap)
 
-    public open fun none(): CacheQueryStringBehavior =
+    public fun none(): CacheQueryStringBehavior =
         software.amazon.awscdk.services.cloudfront.CacheQueryStringBehavior.none().let(CacheQueryStringBehavior::wrap)
 
     internal

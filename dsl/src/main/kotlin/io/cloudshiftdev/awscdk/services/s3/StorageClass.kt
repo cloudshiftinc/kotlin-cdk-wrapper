@@ -5,6 +5,9 @@ import kotlin.String
 public open class StorageClass internal constructor(
   private val cdkObject: software.amazon.awscdk.services.s3.StorageClass,
 ) {
+  /**
+   *
+   */
   public open fun `value`(): String = unwrap(this).getValue()
 
   public companion object {

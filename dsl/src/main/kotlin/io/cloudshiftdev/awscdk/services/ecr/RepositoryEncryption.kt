@@ -5,6 +5,9 @@ import kotlin.String
 public open class RepositoryEncryption internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ecr.RepositoryEncryption,
 ) {
+  /**
+   * the string value of the encryption.
+   */
   public open fun `value`(): String = unwrap(this).getValue()
 
   public companion object {

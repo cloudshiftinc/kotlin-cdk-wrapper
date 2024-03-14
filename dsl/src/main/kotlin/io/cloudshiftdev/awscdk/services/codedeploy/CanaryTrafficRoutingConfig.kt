@@ -1,16 +1,36 @@
 package io.cloudshiftdev.awscdk.services.codedeploy
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.Unit
 
 public interface CanaryTrafficRoutingConfig {
+  /**
+   * The number of minutes between the first and second traffic shifts of a `TimeBasedCanary`
+   * deployment.
+   */
   public fun canaryInterval(): Number
 
+  /**
+   * The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
+   */
   public fun canaryPercentage(): Number
 
+  /**
+   * A builder for [CanaryTrafficRoutingConfig]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param canaryInterval The number of minutes between the first and second traffic shifts of a
+     * `TimeBasedCanary` deployment. 
+     */
     public fun canaryInterval(canaryInterval: Number)
 
+    /**
+     * @param canaryPercentage The percentage of traffic to shift in the first increment of a
+     * `TimeBasedCanary` deployment. 
+     */
     public fun canaryPercentage(canaryPercentage: Number)
   }
 
@@ -19,10 +39,18 @@ public interface CanaryTrafficRoutingConfig {
         software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig.Builder =
         software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig.builder()
 
+    /**
+     * @param canaryInterval The number of minutes between the first and second traffic shifts of a
+     * `TimeBasedCanary` deployment. 
+     */
     override fun canaryInterval(canaryInterval: Number) {
       cdkBuilder.canaryInterval(canaryInterval)
     }
 
+    /**
+     * @param canaryPercentage The percentage of traffic to shift in the first increment of a
+     * `TimeBasedCanary` deployment. 
+     */
     override fun canaryPercentage(canaryPercentage: Number) {
       cdkBuilder.canaryPercentage(canaryPercentage)
     }
@@ -34,8 +62,15 @@ public interface CanaryTrafficRoutingConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codedeploy.CanaryTrafficRoutingConfig,
   ) : CanaryTrafficRoutingConfig {
+    /**
+     * The number of minutes between the first and second traffic shifts of a `TimeBasedCanary`
+     * deployment.
+     */
     override fun canaryInterval(): Number = unwrap(this).getCanaryInterval()
 
+    /**
+     * The percentage of traffic to shift in the first increment of a `TimeBasedCanary` deployment.
+     */
     override fun canaryPercentage(): Number = unwrap(this).getCanaryPercentage()
   }
 

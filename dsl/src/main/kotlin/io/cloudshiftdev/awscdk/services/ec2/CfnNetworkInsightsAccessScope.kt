@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
 import kotlin.String
 import kotlin.Suppress
@@ -19,70 +20,175 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnNetworkInsightsAccessScope internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  /**
+   * The creation date.
+   */
   public open fun attrCreatedDate(): String = unwrap(this).getAttrCreatedDate()
 
+  /**
+   * The ARN of the Network Access Scope.
+   */
   public open fun attrNetworkInsightsAccessScopeArn(): String =
       unwrap(this).getAttrNetworkInsightsAccessScopeArn()
 
+  /**
+   * The ID of the Network Access Scope.
+   */
   public open fun attrNetworkInsightsAccessScopeId(): String =
       unwrap(this).getAttrNetworkInsightsAccessScopeId()
 
+  /**
+   * The last updated date.
+   */
   public open fun attrUpdatedDate(): String = unwrap(this).getAttrUpdatedDate()
 
+  /**
+   * The paths to exclude.
+   */
   public open fun excludePaths(): Any? = unwrap(this).getExcludePaths()
 
+  /**
+   * The paths to exclude.
+   */
   public open fun excludePaths(`value`: IResolvable) {
     unwrap(this).setExcludePaths(`value`.let(IResolvable::unwrap))
   }
 
+  /**
+   * The paths to exclude.
+   */
   public open fun excludePaths(__idx_ac66f0: List<Any>) {
     unwrap(this).setExcludePaths(__idx_ac66f0)
   }
 
+  /**
+   * The paths to exclude.
+   */
   public open fun excludePaths(vararg __idx_ac66f0: Any): Unit = excludePaths(__idx_ac66f0.toList())
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * The paths to match.
+   */
   public open fun matchPaths(): Any? = unwrap(this).getMatchPaths()
 
+  /**
+   * The paths to match.
+   */
   public open fun matchPaths(`value`: IResolvable) {
     unwrap(this).setMatchPaths(`value`.let(IResolvable::unwrap))
   }
 
+  /**
+   * The paths to match.
+   */
   public open fun matchPaths(__idx_ac66f0: List<Any>) {
     unwrap(this).setMatchPaths(__idx_ac66f0)
   }
 
+  /**
+   * The paths to match.
+   */
   public open fun matchPaths(vararg __idx_ac66f0: Any): Unit = matchPaths(__idx_ac66f0.toList())
 
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
+  /**
+   * The tags.
+   */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
+  /**
+   * The tags.
+   */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  /**
+   * The tags.
+   */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.CfnNetworkInsightsAccessScope].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * The paths to exclude.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-excludepaths)
+     * @param excludePaths The paths to exclude. 
+     */
     public fun excludePaths(excludePaths: IResolvable)
 
+    /**
+     * The paths to exclude.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-excludepaths)
+     * @param excludePaths The paths to exclude. 
+     */
     public fun excludePaths(excludePaths: List<Any>)
 
+    /**
+     * The paths to exclude.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-excludepaths)
+     * @param excludePaths The paths to exclude. 
+     */
     public fun excludePaths(vararg excludePaths: Any)
 
+    /**
+     * The paths to match.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-matchpaths)
+     * @param matchPaths The paths to match. 
+     */
     public fun matchPaths(matchPaths: IResolvable)
 
+    /**
+     * The paths to match.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-matchpaths)
+     * @param matchPaths The paths to match. 
+     */
     public fun matchPaths(matchPaths: List<Any>)
 
+    /**
+     * The paths to match.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-matchpaths)
+     * @param matchPaths The paths to match. 
+     */
     public fun matchPaths(vararg matchPaths: Any)
 
+    /**
+     * The tags.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-tags)
+     * @param tags The tags. 
+     */
     public fun tags(tags: List<CfnTag>)
 
+    /**
+     * The tags.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-tags)
+     * @param tags The tags. 
+     */
     public fun tags(vararg tags: CfnTag)
   }
 
@@ -94,30 +200,78 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
         software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.Builder =
         software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.Builder.create(scope, id)
 
+    /**
+     * The paths to exclude.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-excludepaths)
+     * @param excludePaths The paths to exclude. 
+     */
     override fun excludePaths(excludePaths: IResolvable) {
       cdkBuilder.excludePaths(excludePaths.let(IResolvable::unwrap))
     }
 
+    /**
+     * The paths to exclude.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-excludepaths)
+     * @param excludePaths The paths to exclude. 
+     */
     override fun excludePaths(excludePaths: List<Any>) {
       cdkBuilder.excludePaths(excludePaths)
     }
 
+    /**
+     * The paths to exclude.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-excludepaths)
+     * @param excludePaths The paths to exclude. 
+     */
     override fun excludePaths(vararg excludePaths: Any): Unit = excludePaths(excludePaths.toList())
 
+    /**
+     * The paths to match.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-matchpaths)
+     * @param matchPaths The paths to match. 
+     */
     override fun matchPaths(matchPaths: IResolvable) {
       cdkBuilder.matchPaths(matchPaths.let(IResolvable::unwrap))
     }
 
+    /**
+     * The paths to match.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-matchpaths)
+     * @param matchPaths The paths to match. 
+     */
     override fun matchPaths(matchPaths: List<Any>) {
       cdkBuilder.matchPaths(matchPaths)
     }
 
+    /**
+     * The paths to match.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-matchpaths)
+     * @param matchPaths The paths to match. 
+     */
     override fun matchPaths(vararg matchPaths: Any): Unit = matchPaths(matchPaths.toList())
 
+    /**
+     * The tags.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-tags)
+     * @param tags The tags. 
+     */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    /**
+     * The tags.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinsightsaccessscope.html#cfn-ec2-networkinsightsaccessscope-tags)
+     * @param tags The tags. 
+     */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope =
@@ -146,13 +300,31 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
   }
 
   public interface ThroughResourcesStatementRequestProperty {
+    /**
+     * The resource statement.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-throughresourcesstatementrequest.html#cfn-ec2-networkinsightsaccessscope-throughresourcesstatementrequest-resourcestatement)
+     */
     public fun resourceStatement(): Any? = unwrap(this).getResourceStatement()
 
+    /**
+     * A builder for [ThroughResourcesStatementRequestProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param resourceStatement The resource statement.
+       */
       public fun resourceStatement(resourceStatement: IResolvable)
 
+      /**
+       * @param resourceStatement The resource statement.
+       */
       public fun resourceStatement(resourceStatement: ResourceStatementRequestProperty)
 
+      /**
+       * @param resourceStatement The resource statement.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("423458459363e0c9215239e6647bed7b703cd31ede23af357cb017e6a3612e13")
       public
@@ -165,14 +337,23 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty.builder()
 
+      /**
+       * @param resourceStatement The resource statement.
+       */
       override fun resourceStatement(resourceStatement: IResolvable) {
         cdkBuilder.resourceStatement(resourceStatement.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param resourceStatement The resource statement.
+       */
       override fun resourceStatement(resourceStatement: ResourceStatementRequestProperty) {
         cdkBuilder.resourceStatement(resourceStatement.let(ResourceStatementRequestProperty::unwrap))
       }
 
+      /**
+       * @param resourceStatement The resource statement.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("423458459363e0c9215239e6647bed7b703cd31ede23af357cb017e6a3612e13")
       override
@@ -188,6 +369,11 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ThroughResourcesStatementRequestProperty,
     ) : ThroughResourcesStatementRequestProperty {
+      /**
+       * The resource statement.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-throughresourcesstatementrequest.html#cfn-ec2-networkinsightsaccessscope-throughresourcesstatementrequest-resourcestatement)
+       */
       override fun resourceStatement(): Any? = unwrap(this).getResourceStatement()
     }
 
@@ -213,24 +399,56 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
   }
 
   public interface PathStatementRequestProperty {
+    /**
+     * The packet header statement.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-pathstatementrequest.html#cfn-ec2-networkinsightsaccessscope-pathstatementrequest-packetheaderstatement)
+     */
     public fun packetHeaderStatement(): Any? = unwrap(this).getPacketHeaderStatement()
 
+    /**
+     * The resource statement.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-pathstatementrequest.html#cfn-ec2-networkinsightsaccessscope-pathstatementrequest-resourcestatement)
+     */
     public fun resourceStatement(): Any? = unwrap(this).getResourceStatement()
 
+    /**
+     * A builder for [PathStatementRequestProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param packetHeaderStatement The packet header statement.
+       */
       public fun packetHeaderStatement(packetHeaderStatement: IResolvable)
 
+      /**
+       * @param packetHeaderStatement The packet header statement.
+       */
       public fun packetHeaderStatement(packetHeaderStatement: PacketHeaderStatementRequestProperty)
 
+      /**
+       * @param packetHeaderStatement The packet header statement.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("79ded352caa18d864b60f9392e8f63faa86842009ead626b6f9b9eee09a20597")
       public
           fun packetHeaderStatement(packetHeaderStatement: PacketHeaderStatementRequestProperty.Builder.() -> Unit)
 
+      /**
+       * @param resourceStatement The resource statement.
+       */
       public fun resourceStatement(resourceStatement: IResolvable)
 
+      /**
+       * @param resourceStatement The resource statement.
+       */
       public fun resourceStatement(resourceStatement: ResourceStatementRequestProperty)
 
+      /**
+       * @param resourceStatement The resource statement.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("94af38a3de4afaaf2a082829aef56c9b0e4eed32792656b36dc3cfb773f06d10")
       public
@@ -243,29 +461,47 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty.builder()
 
+      /**
+       * @param packetHeaderStatement The packet header statement.
+       */
       override fun packetHeaderStatement(packetHeaderStatement: IResolvable) {
         cdkBuilder.packetHeaderStatement(packetHeaderStatement.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param packetHeaderStatement The packet header statement.
+       */
       override
           fun packetHeaderStatement(packetHeaderStatement: PacketHeaderStatementRequestProperty) {
         cdkBuilder.packetHeaderStatement(packetHeaderStatement.let(PacketHeaderStatementRequestProperty::unwrap))
       }
 
+      /**
+       * @param packetHeaderStatement The packet header statement.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("79ded352caa18d864b60f9392e8f63faa86842009ead626b6f9b9eee09a20597")
       override
           fun packetHeaderStatement(packetHeaderStatement: PacketHeaderStatementRequestProperty.Builder.() -> Unit):
           Unit = packetHeaderStatement(PacketHeaderStatementRequestProperty(packetHeaderStatement))
 
+      /**
+       * @param resourceStatement The resource statement.
+       */
       override fun resourceStatement(resourceStatement: IResolvable) {
         cdkBuilder.resourceStatement(resourceStatement.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param resourceStatement The resource statement.
+       */
       override fun resourceStatement(resourceStatement: ResourceStatementRequestProperty) {
         cdkBuilder.resourceStatement(resourceStatement.let(ResourceStatementRequestProperty::unwrap))
       }
 
+      /**
+       * @param resourceStatement The resource statement.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("94af38a3de4afaaf2a082829aef56c9b0e4eed32792656b36dc3cfb773f06d10")
       override
@@ -281,8 +517,18 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PathStatementRequestProperty,
     ) : PathStatementRequestProperty {
+      /**
+       * The packet header statement.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-pathstatementrequest.html#cfn-ec2-networkinsightsaccessscope-pathstatementrequest-packetheaderstatement)
+       */
       override fun packetHeaderStatement(): Any? = unwrap(this).getPacketHeaderStatement()
 
+      /**
+       * The resource statement.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-pathstatementrequest.html#cfn-ec2-networkinsightsaccessscope-pathstatementrequest-resourcestatement)
+       */
       override fun resourceStatement(): Any? = unwrap(this).getResourceStatement()
     }
 
@@ -307,33 +553,79 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
   }
 
   public interface AccessScopePathRequestProperty {
+    /**
+     * The destination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-accessscopepathrequest.html#cfn-ec2-networkinsightsaccessscope-accessscopepathrequest-destination)
+     */
     public fun destination(): Any? = unwrap(this).getDestination()
 
+    /**
+     * The source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-accessscopepathrequest.html#cfn-ec2-networkinsightsaccessscope-accessscopepathrequest-source)
+     */
     public fun source(): Any? = unwrap(this).getSource()
 
+    /**
+     * The through resources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-accessscopepathrequest.html#cfn-ec2-networkinsightsaccessscope-accessscopepathrequest-throughresources)
+     */
     public fun throughResources(): Any? = unwrap(this).getThroughResources()
 
+    /**
+     * A builder for [AccessScopePathRequestProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param destination The destination.
+       */
       public fun destination(destination: IResolvable)
 
+      /**
+       * @param destination The destination.
+       */
       public fun destination(destination: PathStatementRequestProperty)
 
+      /**
+       * @param destination The destination.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1209f052f40165c46e829f5d00392f3ca65d1ec4efcf2823cdd1b16c5daefaaf")
       public fun destination(destination: PathStatementRequestProperty.Builder.() -> Unit)
 
+      /**
+       * @param source The source.
+       */
       public fun source(source: IResolvable)
 
+      /**
+       * @param source The source.
+       */
       public fun source(source: PathStatementRequestProperty)
 
+      /**
+       * @param source The source.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4e32f15217edb30ee0f70053d61737d03c0ab342e15686f7c971a56274e5fdc6")
       public fun source(source: PathStatementRequestProperty.Builder.() -> Unit)
 
+      /**
+       * @param throughResources The through resources.
+       */
       public fun throughResources(throughResources: IResolvable)
 
+      /**
+       * @param throughResources The through resources.
+       */
       public fun throughResources(throughResources: List<Any>)
 
+      /**
+       * @param throughResources The through resources.
+       */
       public fun throughResources(vararg throughResources: Any)
     }
 
@@ -343,40 +635,67 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.AccessScopePathRequestProperty.builder()
 
+      /**
+       * @param destination The destination.
+       */
       override fun destination(destination: IResolvable) {
         cdkBuilder.destination(destination.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param destination The destination.
+       */
       override fun destination(destination: PathStatementRequestProperty) {
         cdkBuilder.destination(destination.let(PathStatementRequestProperty::unwrap))
       }
 
+      /**
+       * @param destination The destination.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("1209f052f40165c46e829f5d00392f3ca65d1ec4efcf2823cdd1b16c5daefaaf")
       override fun destination(destination: PathStatementRequestProperty.Builder.() -> Unit): Unit =
           destination(PathStatementRequestProperty(destination))
 
+      /**
+       * @param source The source.
+       */
       override fun source(source: IResolvable) {
         cdkBuilder.source(source.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param source The source.
+       */
       override fun source(source: PathStatementRequestProperty) {
         cdkBuilder.source(source.let(PathStatementRequestProperty::unwrap))
       }
 
+      /**
+       * @param source The source.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4e32f15217edb30ee0f70053d61737d03c0ab342e15686f7c971a56274e5fdc6")
       override fun source(source: PathStatementRequestProperty.Builder.() -> Unit): Unit =
           source(PathStatementRequestProperty(source))
 
+      /**
+       * @param throughResources The through resources.
+       */
       override fun throughResources(throughResources: IResolvable) {
         cdkBuilder.throughResources(throughResources.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param throughResources The through resources.
+       */
       override fun throughResources(throughResources: List<Any>) {
         cdkBuilder.throughResources(throughResources)
       }
 
+      /**
+       * @param throughResources The through resources.
+       */
       override fun throughResources(vararg throughResources: Any): Unit =
           throughResources(throughResources.toList())
 
@@ -389,10 +708,25 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.AccessScopePathRequestProperty,
     ) : AccessScopePathRequestProperty {
+      /**
+       * The destination.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-accessscopepathrequest.html#cfn-ec2-networkinsightsaccessscope-accessscopepathrequest-destination)
+       */
       override fun destination(): Any? = unwrap(this).getDestination()
 
+      /**
+       * The source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-accessscopepathrequest.html#cfn-ec2-networkinsightsaccessscope-accessscopepathrequest-source)
+       */
       override fun source(): Any? = unwrap(this).getSource()
 
+      /**
+       * The through resources.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-accessscopepathrequest.html#cfn-ec2-networkinsightsaccessscope-accessscopepathrequest-throughresources)
+       */
       override fun throughResources(): Any? = unwrap(this).getThroughResources()
     }
 
@@ -417,50 +751,131 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
   }
 
   public interface PacketHeaderStatementRequestProperty {
+    /**
+     * The destination addresses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-packetheaderstatementrequest.html#cfn-ec2-networkinsightsaccessscope-packetheaderstatementrequest-destinationaddresses)
+     */
     public fun destinationAddresses(): List<String> = unwrap(this).getDestinationAddresses() ?:
         emptyList()
 
+    /**
+     * The destination ports.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-packetheaderstatementrequest.html#cfn-ec2-networkinsightsaccessscope-packetheaderstatementrequest-destinationports)
+     */
     public fun destinationPorts(): List<String> = unwrap(this).getDestinationPorts() ?: emptyList()
 
+    /**
+     * The destination prefix lists.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-packetheaderstatementrequest.html#cfn-ec2-networkinsightsaccessscope-packetheaderstatementrequest-destinationprefixlists)
+     */
     public fun destinationPrefixLists(): List<String> = unwrap(this).getDestinationPrefixLists() ?:
         emptyList()
 
+    /**
+     * The protocols.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-packetheaderstatementrequest.html#cfn-ec2-networkinsightsaccessscope-packetheaderstatementrequest-protocols)
+     */
     public fun protocols(): List<String> = unwrap(this).getProtocols() ?: emptyList()
 
+    /**
+     * The source addresses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-packetheaderstatementrequest.html#cfn-ec2-networkinsightsaccessscope-packetheaderstatementrequest-sourceaddresses)
+     */
     public fun sourceAddresses(): List<String> = unwrap(this).getSourceAddresses() ?: emptyList()
 
+    /**
+     * The source ports.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-packetheaderstatementrequest.html#cfn-ec2-networkinsightsaccessscope-packetheaderstatementrequest-sourceports)
+     */
     public fun sourcePorts(): List<String> = unwrap(this).getSourcePorts() ?: emptyList()
 
+    /**
+     * The source prefix lists.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-packetheaderstatementrequest.html#cfn-ec2-networkinsightsaccessscope-packetheaderstatementrequest-sourceprefixlists)
+     */
     public fun sourcePrefixLists(): List<String> = unwrap(this).getSourcePrefixLists() ?:
         emptyList()
 
+    /**
+     * A builder for [PacketHeaderStatementRequestProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param destinationAddresses The destination addresses.
+       */
       public fun destinationAddresses(destinationAddresses: List<String>)
 
+      /**
+       * @param destinationAddresses The destination addresses.
+       */
       public fun destinationAddresses(vararg destinationAddresses: String)
 
+      /**
+       * @param destinationPorts The destination ports.
+       */
       public fun destinationPorts(destinationPorts: List<String>)
 
+      /**
+       * @param destinationPorts The destination ports.
+       */
       public fun destinationPorts(vararg destinationPorts: String)
 
+      /**
+       * @param destinationPrefixLists The destination prefix lists.
+       */
       public fun destinationPrefixLists(destinationPrefixLists: List<String>)
 
+      /**
+       * @param destinationPrefixLists The destination prefix lists.
+       */
       public fun destinationPrefixLists(vararg destinationPrefixLists: String)
 
+      /**
+       * @param protocols The protocols.
+       */
       public fun protocols(protocols: List<String>)
 
+      /**
+       * @param protocols The protocols.
+       */
       public fun protocols(vararg protocols: String)
 
+      /**
+       * @param sourceAddresses The source addresses.
+       */
       public fun sourceAddresses(sourceAddresses: List<String>)
 
+      /**
+       * @param sourceAddresses The source addresses.
+       */
       public fun sourceAddresses(vararg sourceAddresses: String)
 
+      /**
+       * @param sourcePorts The source ports.
+       */
       public fun sourcePorts(sourcePorts: List<String>)
 
+      /**
+       * @param sourcePorts The source ports.
+       */
       public fun sourcePorts(vararg sourcePorts: String)
 
+      /**
+       * @param sourcePrefixLists The source prefix lists.
+       */
       public fun sourcePrefixLists(sourcePrefixLists: List<String>)
 
+      /**
+       * @param sourcePrefixLists The source prefix lists.
+       */
       public fun sourcePrefixLists(vararg sourcePrefixLists: String)
     }
 
@@ -470,50 +885,92 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PacketHeaderStatementRequestProperty.builder()
 
+      /**
+       * @param destinationAddresses The destination addresses.
+       */
       override fun destinationAddresses(destinationAddresses: List<String>) {
         cdkBuilder.destinationAddresses(destinationAddresses)
       }
 
+      /**
+       * @param destinationAddresses The destination addresses.
+       */
       override fun destinationAddresses(vararg destinationAddresses: String): Unit =
           destinationAddresses(destinationAddresses.toList())
 
+      /**
+       * @param destinationPorts The destination ports.
+       */
       override fun destinationPorts(destinationPorts: List<String>) {
         cdkBuilder.destinationPorts(destinationPorts)
       }
 
+      /**
+       * @param destinationPorts The destination ports.
+       */
       override fun destinationPorts(vararg destinationPorts: String): Unit =
           destinationPorts(destinationPorts.toList())
 
+      /**
+       * @param destinationPrefixLists The destination prefix lists.
+       */
       override fun destinationPrefixLists(destinationPrefixLists: List<String>) {
         cdkBuilder.destinationPrefixLists(destinationPrefixLists)
       }
 
+      /**
+       * @param destinationPrefixLists The destination prefix lists.
+       */
       override fun destinationPrefixLists(vararg destinationPrefixLists: String): Unit =
           destinationPrefixLists(destinationPrefixLists.toList())
 
+      /**
+       * @param protocols The protocols.
+       */
       override fun protocols(protocols: List<String>) {
         cdkBuilder.protocols(protocols)
       }
 
+      /**
+       * @param protocols The protocols.
+       */
       override fun protocols(vararg protocols: String): Unit = protocols(protocols.toList())
 
+      /**
+       * @param sourceAddresses The source addresses.
+       */
       override fun sourceAddresses(sourceAddresses: List<String>) {
         cdkBuilder.sourceAddresses(sourceAddresses)
       }
 
+      /**
+       * @param sourceAddresses The source addresses.
+       */
       override fun sourceAddresses(vararg sourceAddresses: String): Unit =
           sourceAddresses(sourceAddresses.toList())
 
+      /**
+       * @param sourcePorts The source ports.
+       */
       override fun sourcePorts(sourcePorts: List<String>) {
         cdkBuilder.sourcePorts(sourcePorts)
       }
 
+      /**
+       * @param sourcePorts The source ports.
+       */
       override fun sourcePorts(vararg sourcePorts: String): Unit = sourcePorts(sourcePorts.toList())
 
+      /**
+       * @param sourcePrefixLists The source prefix lists.
+       */
       override fun sourcePrefixLists(sourcePrefixLists: List<String>) {
         cdkBuilder.sourcePrefixLists(sourcePrefixLists)
       }
 
+      /**
+       * @param sourcePrefixLists The source prefix lists.
+       */
       override fun sourcePrefixLists(vararg sourcePrefixLists: String): Unit =
           sourcePrefixLists(sourcePrefixLists.toList())
 
@@ -526,22 +983,57 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.PacketHeaderStatementRequestProperty,
     ) : PacketHeaderStatementRequestProperty {
+      /**
+       * The destination addresses.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-packetheaderstatementrequest.html#cfn-ec2-networkinsightsaccessscope-packetheaderstatementrequest-destinationaddresses)
+       */
       override fun destinationAddresses(): List<String> = unwrap(this).getDestinationAddresses() ?:
           emptyList()
 
+      /**
+       * The destination ports.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-packetheaderstatementrequest.html#cfn-ec2-networkinsightsaccessscope-packetheaderstatementrequest-destinationports)
+       */
       override fun destinationPorts(): List<String> = unwrap(this).getDestinationPorts() ?:
           emptyList()
 
+      /**
+       * The destination prefix lists.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-packetheaderstatementrequest.html#cfn-ec2-networkinsightsaccessscope-packetheaderstatementrequest-destinationprefixlists)
+       */
       override fun destinationPrefixLists(): List<String> = unwrap(this).getDestinationPrefixLists()
           ?: emptyList()
 
+      /**
+       * The protocols.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-packetheaderstatementrequest.html#cfn-ec2-networkinsightsaccessscope-packetheaderstatementrequest-protocols)
+       */
       override fun protocols(): List<String> = unwrap(this).getProtocols() ?: emptyList()
 
+      /**
+       * The source addresses.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-packetheaderstatementrequest.html#cfn-ec2-networkinsightsaccessscope-packetheaderstatementrequest-sourceaddresses)
+       */
       override fun sourceAddresses(): List<String> = unwrap(this).getSourceAddresses() ?:
           emptyList()
 
+      /**
+       * The source ports.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-packetheaderstatementrequest.html#cfn-ec2-networkinsightsaccessscope-packetheaderstatementrequest-sourceports)
+       */
       override fun sourcePorts(): List<String> = unwrap(this).getSourcePorts() ?: emptyList()
 
+      /**
+       * The source prefix lists.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-packetheaderstatementrequest.html#cfn-ec2-networkinsightsaccessscope-packetheaderstatementrequest-sourceprefixlists)
+       */
       override fun sourcePrefixLists(): List<String> = unwrap(this).getSourcePrefixLists() ?:
           emptyList()
     }
@@ -568,17 +1060,43 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
   }
 
   public interface ResourceStatementRequestProperty {
+    /**
+     * The resource types.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-resourcestatementrequest.html#cfn-ec2-networkinsightsaccessscope-resourcestatementrequest-resourcetypes)
+     */
     public fun resourceTypes(): List<String> = unwrap(this).getResourceTypes() ?: emptyList()
 
+    /**
+     * The resources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-resourcestatementrequest.html#cfn-ec2-networkinsightsaccessscope-resourcestatementrequest-resources)
+     */
     public fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
 
+    /**
+     * A builder for [ResourceStatementRequestProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param resourceTypes The resource types.
+       */
       public fun resourceTypes(resourceTypes: List<String>)
 
+      /**
+       * @param resourceTypes The resource types.
+       */
       public fun resourceTypes(vararg resourceTypes: String)
 
+      /**
+       * @param resources The resources.
+       */
       public fun resources(resources: List<String>)
 
+      /**
+       * @param resources The resources.
+       */
       public fun resources(vararg resources: String)
     }
 
@@ -588,17 +1106,29 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
           =
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ResourceStatementRequestProperty.builder()
 
+      /**
+       * @param resourceTypes The resource types.
+       */
       override fun resourceTypes(resourceTypes: List<String>) {
         cdkBuilder.resourceTypes(resourceTypes)
       }
 
+      /**
+       * @param resourceTypes The resource types.
+       */
       override fun resourceTypes(vararg resourceTypes: String): Unit =
           resourceTypes(resourceTypes.toList())
 
+      /**
+       * @param resources The resources.
+       */
       override fun resources(resources: List<String>) {
         cdkBuilder.resources(resources)
       }
 
+      /**
+       * @param resources The resources.
+       */
       override fun resources(vararg resources: String): Unit = resources(resources.toList())
 
       public fun build():
@@ -610,8 +1140,18 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope.ResourceStatementRequestProperty,
     ) : ResourceStatementRequestProperty {
+      /**
+       * The resource types.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-resourcestatementrequest.html#cfn-ec2-networkinsightsaccessscope-resourcestatementrequest-resourcetypes)
+       */
       override fun resourceTypes(): List<String> = unwrap(this).getResourceTypes() ?: emptyList()
 
+      /**
+       * The resources.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-networkinsightsaccessscope-resourcestatementrequest.html#cfn-ec2-networkinsightsaccessscope-resourcestatementrequest-resources)
+       */
       override fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
     }
 

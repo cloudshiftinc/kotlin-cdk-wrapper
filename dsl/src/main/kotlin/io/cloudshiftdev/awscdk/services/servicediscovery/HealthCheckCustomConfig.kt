@@ -1,12 +1,29 @@
 package io.cloudshiftdev.awscdk.services.servicediscovery
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.Unit
 
 public interface HealthCheckCustomConfig {
+  /**
+   * The number of 30-second intervals that you want Cloud Map to wait after receiving an
+   * UpdateInstanceCustomHealthStatus request before it changes the health status of a service
+   * instance.
+   *
+   * Default: 1
+   */
   public fun failureThreshold(): Number? = unwrap(this).getFailureThreshold()
 
+  /**
+   * A builder for [HealthCheckCustomConfig]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param failureThreshold The number of 30-second intervals that you want Cloud Map to wait
+     * after receiving an UpdateInstanceCustomHealthStatus request before it changes the health status
+     * of a service instance.
+     */
     public fun failureThreshold(failureThreshold: Number)
   }
 
@@ -15,6 +32,11 @@ public interface HealthCheckCustomConfig {
         software.amazon.awscdk.services.servicediscovery.HealthCheckCustomConfig.Builder =
         software.amazon.awscdk.services.servicediscovery.HealthCheckCustomConfig.builder()
 
+    /**
+     * @param failureThreshold The number of 30-second intervals that you want Cloud Map to wait
+     * after receiving an UpdateInstanceCustomHealthStatus request before it changes the health status
+     * of a service instance.
+     */
     override fun failureThreshold(failureThreshold: Number) {
       cdkBuilder.failureThreshold(failureThreshold)
     }
@@ -27,6 +49,13 @@ public interface HealthCheckCustomConfig {
     internal val cdkObject:
         software.amazon.awscdk.services.servicediscovery.HealthCheckCustomConfig,
   ) : HealthCheckCustomConfig {
+    /**
+     * The number of 30-second intervals that you want Cloud Map to wait after receiving an
+     * UpdateInstanceCustomHealthStatus request before it changes the health status of a service
+     * instance.
+     *
+     * Default: 1
+     */
     override fun failureThreshold(): Number? = unwrap(this).getFailureThreshold()
   }
 

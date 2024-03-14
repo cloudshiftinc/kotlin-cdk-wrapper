@@ -7,6 +7,9 @@ import kotlin.collections.Map
 public open class InstanceTagSet internal constructor(
   private val cdkObject: software.amazon.awscdk.services.codedeploy.InstanceTagSet,
 ) {
+  /**
+   *
+   */
   public open fun instanceTagGroups(): List<Map<String, List<String>>> =
       unwrap(this).getInstanceTagGroups()
 

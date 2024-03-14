@@ -1,17 +1,34 @@
 package io.cloudshiftdev.awscdk.services.cloudwatch
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 
 public interface Dimension {
+  /**
+   * Name of the dimension.
+   */
   public fun name(): String
 
+  /**
+   * Value of the dimension.
+   */
   public fun `value`(): Any
 
+  /**
+   * A builder for [Dimension]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param name Name of the dimension. 
+     */
     public fun name(name: String)
 
+    /**
+     * @param value Value of the dimension. 
+     */
     public fun `value`(`value`: Any)
   }
 
@@ -19,10 +36,16 @@ public interface Dimension {
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.Dimension.Builder =
         software.amazon.awscdk.services.cloudwatch.Dimension.builder()
 
+    /**
+     * @param name Name of the dimension. 
+     */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
+    /**
+     * @param value Value of the dimension. 
+     */
     override fun `value`(`value`: Any) {
       cdkBuilder.`value`(`value`)
     }
@@ -33,8 +56,14 @@ public interface Dimension {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudwatch.Dimension,
   ) : Dimension {
+    /**
+     * Name of the dimension.
+     */
     override fun name(): String = unwrap(this).getName()
 
+    /**
+     * Value of the dimension.
+     */
     override fun `value`(): Any = unwrap(this).getValue()
   }
 

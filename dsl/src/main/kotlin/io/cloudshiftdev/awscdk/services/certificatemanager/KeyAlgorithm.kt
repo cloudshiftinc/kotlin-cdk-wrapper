@@ -5,6 +5,9 @@ import kotlin.String
 public open class KeyAlgorithm internal constructor(
   private val cdkObject: software.amazon.awscdk.services.certificatemanager.KeyAlgorithm,
 ) {
+  /**
+   * The name of the algorithm.
+   */
   public open fun name(): String = unwrap(this).getName()
 
   public companion object {

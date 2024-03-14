@@ -3,12 +3,18 @@ package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 import kotlin.String
 
 public interface IListenerCertificate {
+  /**
+   * The ARN of the certificate to use.
+   */
   public fun certificateArn(): String
 
   private class Wrapper internal constructor(
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.IListenerCertificate,
   ) : IListenerCertificate {
+    /**
+     * The ARN of the certificate to use.
+     */
     override fun certificateArn(): String = unwrap(this).getCertificateArn()
   }
 

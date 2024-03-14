@@ -1,13 +1,23 @@
 package io.cloudshiftdev.awscdk.services.ecs
 
 public interface ITaskDefinitionExtension {
-  public fun extend(arg0: TaskDefinition)
+  /**
+   * Apply the extension to the given TaskDefinition.
+   *
+   * @param taskDefinition [disable-awslint:ref-via-interface]. 
+   */
+  public fun extend(taskDefinition: TaskDefinition)
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.ITaskDefinitionExtension,
   ) : ITaskDefinitionExtension {
-    override fun extend(arg0: TaskDefinition) {
-      unwrap(this).extend(arg0.let(TaskDefinition::unwrap))
+    /**
+     * Apply the extension to the given TaskDefinition.
+     *
+     * @param taskDefinition [disable-awslint:ref-via-interface]. 
+     */
+    override fun extend(taskDefinition: TaskDefinition) {
+      unwrap(this).extend(taskDefinition.let(TaskDefinition::unwrap))
     }
   }
 

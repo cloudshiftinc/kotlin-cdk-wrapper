@@ -14,22 +14,67 @@ import kotlin.jvm.JvmName
 public abstract class SnapshotCredentials internal constructor(
   private val cdkObject: software.amazon.awscdk.services.rds.SnapshotCredentials,
 ) {
+  /**
+   * KMS encryption key to encrypt the generated secret.
+   *
+   * Default: - default master key
+   */
   public open fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
 
+  /**
+   * The characters to exclude from the generated password.
+   *
+   * Only used if `generatePassword` if true.
+   *
+   * Default: - the DatabaseSecret default exclude character set (" %+~`#$&*()|[]{}:;<>?!'/@\"\\")
+   */
   public open fun excludeCharacters(): String? = unwrap(this).getExcludeCharacters()
 
+  /**
+   * Whether a new password should be generated.
+   */
   public open fun generatePassword(): Boolean = unwrap(this).getGeneratePassword()
 
+  /**
+   * The master user password.
+   *
+   * Do not put passwords in your CDK code directly.
+   *
+   * Default: - the existing password from the snapshot
+   */
   public open fun password(): SecretValue? = unwrap(this).getPassword()?.let(SecretValue::wrap)
 
+  /**
+   * Whether to replace the generated secret when the criteria for the password change.
+   *
+   * Default: false
+   */
   public open fun replaceOnPasswordCriteriaChanges(): Boolean? =
       unwrap(this).getReplaceOnPasswordCriteriaChanges()
 
+  /**
+   * A list of regions where to replicate the generated secret.
+   *
+   * Default: - Secret is not replicated
+   */
   public open fun replicaRegions(): List<ReplicaRegion> =
       unwrap(this).getReplicaRegions()?.map(ReplicaRegion::wrap) ?: emptyList()
 
+  /**
+   * Secret used to instantiate this Login.
+   *
+   * Default: - none
+   */
   public open fun secret(): ISecret? = unwrap(this).getSecret()?.let(ISecret::wrap)
 
+  /**
+   * The master user name.
+   *
+   * Must be the **current** master user name of the snapshot.
+   * It is not possible to change the master user name of a RDS instance.
+   *
+   * Default: - the existing username from the snapshot
+   */
   public open fun username(): String? = unwrap(this).getUsername()
 
   private class Wrapper internal constructor(
@@ -37,40 +82,40 @@ public abstract class SnapshotCredentials internal constructor(
   ) : SnapshotCredentials(cdkObject)
 
   public companion object {
-    public open fun fromGeneratedPassword(username: String): SnapshotCredentials =
+    public fun fromGeneratedPassword(username: String): SnapshotCredentials =
         software.amazon.awscdk.services.rds.SnapshotCredentials.fromGeneratedPassword(username).let(SnapshotCredentials::wrap)
 
-    public open fun fromGeneratedPassword(username: String,
+    public fun fromGeneratedPassword(username: String,
         options: SnapshotCredentialsFromGeneratedPasswordOptions): SnapshotCredentials =
         software.amazon.awscdk.services.rds.SnapshotCredentials.fromGeneratedPassword(username,
         options.let(SnapshotCredentialsFromGeneratedPasswordOptions::unwrap)).let(SnapshotCredentials::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3b437dfc7de68bde863f8913a8f7257fa4f3365c7319431248f9f54c1c2072b1")
-    public open fun fromGeneratedPassword(username: String,
+    public fun fromGeneratedPassword(username: String,
         options: SnapshotCredentialsFromGeneratedPasswordOptions.Builder.() -> Unit):
         SnapshotCredentials = fromGeneratedPassword(username,
         SnapshotCredentialsFromGeneratedPasswordOptions(options))
 
-    public open fun fromGeneratedSecret(username: String): SnapshotCredentials =
+    public fun fromGeneratedSecret(username: String): SnapshotCredentials =
         software.amazon.awscdk.services.rds.SnapshotCredentials.fromGeneratedSecret(username).let(SnapshotCredentials::wrap)
 
-    public open fun fromGeneratedSecret(username: String,
+    public fun fromGeneratedSecret(username: String,
         options: SnapshotCredentialsFromGeneratedPasswordOptions): SnapshotCredentials =
         software.amazon.awscdk.services.rds.SnapshotCredentials.fromGeneratedSecret(username,
         options.let(SnapshotCredentialsFromGeneratedPasswordOptions::unwrap)).let(SnapshotCredentials::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("705fa082196cb4dd2b1b4538f0bf65522295840612d62d4ebfd5fe38af402ef1")
-    public open fun fromGeneratedSecret(username: String,
+    public fun fromGeneratedSecret(username: String,
         options: SnapshotCredentialsFromGeneratedPasswordOptions.Builder.() -> Unit):
         SnapshotCredentials = fromGeneratedSecret(username,
         SnapshotCredentialsFromGeneratedPasswordOptions(options))
 
-    public open fun fromPassword(password: SecretValue): SnapshotCredentials =
+    public fun fromPassword(password: SecretValue): SnapshotCredentials =
         software.amazon.awscdk.services.rds.SnapshotCredentials.fromPassword(password.let(SecretValue::unwrap)).let(SnapshotCredentials::wrap)
 
-    public open fun fromSecret(secret: ISecret): SnapshotCredentials =
+    public fun fromSecret(secret: ISecret): SnapshotCredentials =
         software.amazon.awscdk.services.rds.SnapshotCredentials.fromSecret(secret.let(ISecret::unwrap)).let(SnapshotCredentials::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.SnapshotCredentials):

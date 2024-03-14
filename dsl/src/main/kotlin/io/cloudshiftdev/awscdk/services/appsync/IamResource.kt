@@ -6,17 +6,22 @@ import kotlin.collections.List
 public open class IamResource internal constructor(
   private val cdkObject: software.amazon.awscdk.services.appsync.IamResource,
 ) {
+  /**
+   * Return the Resource ARN.
+   *
+   * @param api The GraphQL API to give permissions. 
+   */
   public open fun resourceArns(api: GraphqlApiBase): List<String> =
       unwrap(this).resourceArns(api.let(GraphqlApiBase::unwrap))
 
   public companion object {
-    public open fun all(): IamResource =
+    public fun all(): IamResource =
         software.amazon.awscdk.services.appsync.IamResource.all().let(IamResource::wrap)
 
-    public open fun custom(arns: String): IamResource =
+    public fun custom(arns: String): IamResource =
         software.amazon.awscdk.services.appsync.IamResource.custom(arns).let(IamResource::wrap)
 
-    public open fun ofType(type: String, fields: String): IamResource =
+    public fun ofType(type: String, fields: String): IamResource =
         software.amazon.awscdk.services.appsync.IamResource.ofType(type,
         fields).let(IamResource::wrap)
 

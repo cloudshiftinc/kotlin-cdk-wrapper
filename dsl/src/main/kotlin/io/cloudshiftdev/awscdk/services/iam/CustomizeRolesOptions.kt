@@ -1,19 +1,68 @@
 package io.cloudshiftdev.awscdk.services.iam
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
 
 public interface CustomizeRolesOptions {
+  /**
+   * Whether or not to synthesize the resource into the CFN template.
+   *
+   * Set this to `false` if you still want to create the resources *and*
+   * you also want to create the policy report.
+   *
+   * Default: true
+   */
   public fun preventSynthesis(): Boolean? = unwrap(this).getPreventSynthesis()
 
+  /**
+   * A list of precreated IAM roles to substitute for roles that CDK is creating.
+   *
+   * The constructPath can be either a relative or absolute path
+   * from the scope that `customizeRoles` is used on to the role being created.
+   *
+   * Default: - there are no precreated roles. Synthesis will fail if `preventSynthesis=true`
+   *
+   * Example:
+   *
+   * ```
+   * App app;
+   * Stack stack = new Stack(app, "MyStack");
+   * Role.Builder.create(stack, "MyRole")
+   * .assumedBy(new AccountPrincipal("1111111111"))
+   * .build();
+   * Role.customizeRoles(stack, CustomizeRolesOptions.builder()
+   * .usePrecreatedRoles(Map.of(
+   * // absolute path
+   * "MyStack/MyRole", "my-precreated-role-name",
+   * // or relative path from `stack`
+   * "MyRole", "my-precreated-role"))
+   * .build());
+   * ```
+   */
   public fun usePrecreatedRoles(): Map<String, String> = unwrap(this).getUsePrecreatedRoles() ?:
       emptyMap()
 
+  /**
+   * A builder for [CustomizeRolesOptions]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param preventSynthesis Whether or not to synthesize the resource into the CFN template.
+     * Set this to `false` if you still want to create the resources *and*
+     * you also want to create the policy report.
+     */
     public fun preventSynthesis(preventSynthesis: Boolean)
 
+    /**
+     * @param usePrecreatedRoles A list of precreated IAM roles to substitute for roles that CDK is
+     * creating.
+     * The constructPath can be either a relative or absolute path
+     * from the scope that `customizeRoles` is used on to the role being created.
+     */
     public fun usePrecreatedRoles(usePrecreatedRoles: Map<String, String>)
   }
 
@@ -21,10 +70,21 @@ public interface CustomizeRolesOptions {
     private val cdkBuilder: software.amazon.awscdk.services.iam.CustomizeRolesOptions.Builder =
         software.amazon.awscdk.services.iam.CustomizeRolesOptions.builder()
 
+    /**
+     * @param preventSynthesis Whether or not to synthesize the resource into the CFN template.
+     * Set this to `false` if you still want to create the resources *and*
+     * you also want to create the policy report.
+     */
     override fun preventSynthesis(preventSynthesis: Boolean) {
       cdkBuilder.preventSynthesis(preventSynthesis)
     }
 
+    /**
+     * @param usePrecreatedRoles A list of precreated IAM roles to substitute for roles that CDK is
+     * creating.
+     * The constructPath can be either a relative or absolute path
+     * from the scope that `customizeRoles` is used on to the role being created.
+     */
     override fun usePrecreatedRoles(usePrecreatedRoles: Map<String, String>) {
       cdkBuilder.usePrecreatedRoles(usePrecreatedRoles)
     }
@@ -36,8 +96,41 @@ public interface CustomizeRolesOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.iam.CustomizeRolesOptions,
   ) : CustomizeRolesOptions {
+    /**
+     * Whether or not to synthesize the resource into the CFN template.
+     *
+     * Set this to `false` if you still want to create the resources *and*
+     * you also want to create the policy report.
+     *
+     * Default: true
+     */
     override fun preventSynthesis(): Boolean? = unwrap(this).getPreventSynthesis()
 
+    /**
+     * A list of precreated IAM roles to substitute for roles that CDK is creating.
+     *
+     * The constructPath can be either a relative or absolute path
+     * from the scope that `customizeRoles` is used on to the role being created.
+     *
+     * Default: - there are no precreated roles. Synthesis will fail if `preventSynthesis=true`
+     *
+     * Example:
+     *
+     * ```
+     * App app;
+     * Stack stack = new Stack(app, "MyStack");
+     * Role.Builder.create(stack, "MyRole")
+     * .assumedBy(new AccountPrincipal("1111111111"))
+     * .build();
+     * Role.customizeRoles(stack, CustomizeRolesOptions.builder()
+     * .usePrecreatedRoles(Map.of(
+     * // absolute path
+     * "MyStack/MyRole", "my-precreated-role-name",
+     * // or relative path from `stack`
+     * "MyRole", "my-precreated-role"))
+     * .build());
+     * ```
+     */
     override fun usePrecreatedRoles(): Map<String, String> = unwrap(this).getUsePrecreatedRoles() ?:
         emptyMap()
   }

@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
 import kotlin.String
 import kotlin.Suppress
@@ -19,61 +20,142 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnBillingGroup internal constructor(
   private val cdkObject: software.amazon.awscdk.services.iot.CfnBillingGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  /**
+   * The ARN of the billing group.
+   */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
+  /**
+   * The ID of the billing group.
+   */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
+  /**
+   * The name of the billing group.
+   */
   public open fun billingGroupName(): String? = unwrap(this).getBillingGroupName()
 
+  /**
+   * The name of the billing group.
+   */
   public open fun billingGroupName(`value`: String) {
     unwrap(this).setBillingGroupName(`value`)
   }
 
+  /**
+   * The properties of the billing group.
+   */
   public open fun billingGroupProperties(): Any? = unwrap(this).getBillingGroupProperties()
 
+  /**
+   * The properties of the billing group.
+   */
   public open fun billingGroupProperties(`value`: IResolvable) {
     unwrap(this).setBillingGroupProperties(`value`.let(IResolvable::unwrap))
   }
 
+  /**
+   * The properties of the billing group.
+   */
   public open fun billingGroupProperties(`value`: BillingGroupPropertiesProperty) {
     unwrap(this).setBillingGroupProperties(`value`.let(BillingGroupPropertiesProperty::unwrap))
   }
 
+  /**
+   * The properties of the billing group.
+   */
   @Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("6f753c76abb0cd325eaa77a57504c7a71292cbc706237c037ada087bec85ff17")
   public open
       fun billingGroupProperties(`value`: BillingGroupPropertiesProperty.Builder.() -> Unit): Unit =
       billingGroupProperties(BillingGroupPropertiesProperty(`value`))
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
+  /**
+   * Metadata which can be used to manage the billing group.
+   */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
+  /**
+   * Metadata which can be used to manage the billing group.
+   */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  /**
+   * Metadata which can be used to manage the billing group.
+   */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.iot.CfnBillingGroup].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * The name of the billing group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-billinggroupname)
+     * @param billingGroupName The name of the billing group. 
+     */
     public fun billingGroupName(billingGroupName: String)
 
+    /**
+     * The properties of the billing group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-billinggroupproperties)
+     * @param billingGroupProperties The properties of the billing group. 
+     */
     public fun billingGroupProperties(billingGroupProperties: IResolvable)
 
+    /**
+     * The properties of the billing group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-billinggroupproperties)
+     * @param billingGroupProperties The properties of the billing group. 
+     */
     public fun billingGroupProperties(billingGroupProperties: BillingGroupPropertiesProperty)
 
+    /**
+     * The properties of the billing group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-billinggroupproperties)
+     * @param billingGroupProperties The properties of the billing group. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("55dbff1410458bd4eef08c70df11ab68af290157f142e2f6921fd29524062fd5")
     public
         fun billingGroupProperties(billingGroupProperties: BillingGroupPropertiesProperty.Builder.() -> Unit)
 
+    /**
+     * Metadata which can be used to manage the billing group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-tags)
+     * @param tags Metadata which can be used to manage the billing group. 
+     */
     public fun tags(tags: List<CfnTag>)
 
+    /**
+     * Metadata which can be used to manage the billing group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-tags)
+     * @param tags Metadata which can be used to manage the billing group. 
+     */
     public fun tags(vararg tags: CfnTag)
   }
 
@@ -84,28 +166,64 @@ public open class CfnBillingGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnBillingGroup.Builder =
         software.amazon.awscdk.services.iot.CfnBillingGroup.Builder.create(scope, id)
 
+    /**
+     * The name of the billing group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-billinggroupname)
+     * @param billingGroupName The name of the billing group. 
+     */
     override fun billingGroupName(billingGroupName: String) {
       cdkBuilder.billingGroupName(billingGroupName)
     }
 
+    /**
+     * The properties of the billing group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-billinggroupproperties)
+     * @param billingGroupProperties The properties of the billing group. 
+     */
     override fun billingGroupProperties(billingGroupProperties: IResolvable) {
       cdkBuilder.billingGroupProperties(billingGroupProperties.let(IResolvable::unwrap))
     }
 
+    /**
+     * The properties of the billing group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-billinggroupproperties)
+     * @param billingGroupProperties The properties of the billing group. 
+     */
     override fun billingGroupProperties(billingGroupProperties: BillingGroupPropertiesProperty) {
       cdkBuilder.billingGroupProperties(billingGroupProperties.let(BillingGroupPropertiesProperty::unwrap))
     }
 
+    /**
+     * The properties of the billing group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-billinggroupproperties)
+     * @param billingGroupProperties The properties of the billing group. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("55dbff1410458bd4eef08c70df11ab68af290157f142e2f6921fd29524062fd5")
     override
         fun billingGroupProperties(billingGroupProperties: BillingGroupPropertiesProperty.Builder.() -> Unit):
         Unit = billingGroupProperties(BillingGroupPropertiesProperty(billingGroupProperties))
 
+    /**
+     * Metadata which can be used to manage the billing group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-tags)
+     * @param tags Metadata which can be used to manage the billing group. 
+     */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    /**
+     * Metadata which can be used to manage the billing group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-billinggroup.html#cfn-iot-billinggroup-tags)
+     * @param tags Metadata which can be used to manage the billing group. 
+     */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.iot.CfnBillingGroup = cdkBuilder.build()
@@ -133,9 +251,21 @@ public open class CfnBillingGroup internal constructor(
   }
 
   public interface BillingGroupPropertiesProperty {
+    /**
+     * The description of the billing group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-billinggroup-billinggroupproperties.html#cfn-iot-billinggroup-billinggroupproperties-billinggroupdescription)
+     */
     public fun billingGroupDescription(): String? = unwrap(this).getBillingGroupDescription()
 
+    /**
+     * A builder for [BillingGroupPropertiesProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param billingGroupDescription The description of the billing group.
+       */
       public fun billingGroupDescription(billingGroupDescription: String)
     }
 
@@ -145,6 +275,9 @@ public open class CfnBillingGroup internal constructor(
           =
           software.amazon.awscdk.services.iot.CfnBillingGroup.BillingGroupPropertiesProperty.builder()
 
+      /**
+       * @param billingGroupDescription The description of the billing group.
+       */
       override fun billingGroupDescription(billingGroupDescription: String) {
         cdkBuilder.billingGroupDescription(billingGroupDescription)
       }
@@ -158,6 +291,11 @@ public open class CfnBillingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnBillingGroup.BillingGroupPropertiesProperty,
     ) : BillingGroupPropertiesProperty {
+      /**
+       * The description of the billing group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-billinggroup-billinggroupproperties.html#cfn-iot-billinggroup-billinggroupproperties-billinggroupdescription)
+       */
       override fun billingGroupDescription(): String? = unwrap(this).getBillingGroupDescription()
     }
 

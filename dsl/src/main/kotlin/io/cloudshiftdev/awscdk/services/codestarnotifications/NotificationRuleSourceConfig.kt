@@ -1,12 +1,23 @@
 package io.cloudshiftdev.awscdk.services.codestarnotifications
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface NotificationRuleSourceConfig {
+  /**
+   * The Amazon Resource Name (ARN) of the notification source.
+   */
   public fun sourceArn(): String
 
+  /**
+   * A builder for [NotificationRuleSourceConfig]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param sourceArn The Amazon Resource Name (ARN) of the notification source. 
+     */
     public fun sourceArn(sourceArn: String)
   }
 
@@ -15,6 +26,9 @@ public interface NotificationRuleSourceConfig {
         software.amazon.awscdk.services.codestarnotifications.NotificationRuleSourceConfig.Builder =
         software.amazon.awscdk.services.codestarnotifications.NotificationRuleSourceConfig.builder()
 
+    /**
+     * @param sourceArn The Amazon Resource Name (ARN) of the notification source. 
+     */
     override fun sourceArn(sourceArn: String) {
       cdkBuilder.sourceArn(sourceArn)
     }
@@ -28,6 +42,9 @@ public interface NotificationRuleSourceConfig {
     internal val cdkObject:
         software.amazon.awscdk.services.codestarnotifications.NotificationRuleSourceConfig,
   ) : NotificationRuleSourceConfig {
+    /**
+     * The Amazon Resource Name (ARN) of the notification source.
+     */
     override fun sourceArn(): String = unwrap(this).getSourceArn()
   }
 

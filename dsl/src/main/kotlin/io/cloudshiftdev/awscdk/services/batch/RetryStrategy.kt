@@ -3,12 +3,18 @@ package io.cloudshiftdev.awscdk.services.batch
 public open class RetryStrategy internal constructor(
   private val cdkObject: software.amazon.awscdk.services.batch.RetryStrategy,
 ) {
+  /**
+   * The action to take when the job exits with the Reason specified.
+   */
   public open fun action(): Action = unwrap(this).getAction().let(Action::wrap)
 
+  /**
+   * If the job exits with this Reason it will trigger the specified Action.
+   */
   public open fun on(): Reason = unwrap(this).getOn().let(Reason::wrap)
 
   public companion object {
-    public open fun of(action: Action, on: Reason): RetryStrategy =
+    public fun of(action: Action, on: Reason): RetryStrategy =
         software.amazon.awscdk.services.batch.RetryStrategy.of(action.let(Action::unwrap),
         on.let(Reason::unwrap)).let(RetryStrategy::wrap)
 

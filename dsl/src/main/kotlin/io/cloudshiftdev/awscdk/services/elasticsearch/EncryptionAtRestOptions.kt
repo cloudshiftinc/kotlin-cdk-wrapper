@@ -1,22 +1,49 @@
 package io.cloudshiftdev.awscdk.services.elasticsearch
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Boolean
 import kotlin.Deprecated
 import kotlin.Unit
 
 public interface EncryptionAtRestOptions {
+  /**
+   * (deprecated) Specify true to enable encryption at rest.
+   *
+   * Default: - encryption at rest is disabled.
+   *
+   * @deprecated use opensearchservice module instead
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun enabled(): Boolean? = unwrap(this).getEnabled()
 
+  /**
+   * (deprecated) Supply if using KMS key for encryption at rest.
+   *
+   * Default: - uses default aws/es KMS key.
+   *
+   * @deprecated use opensearchservice module instead
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun kmsKey(): IKey? = unwrap(this).getKmsKey()?.let(IKey::wrap)
 
+  /**
+   * A builder for [EncryptionAtRestOptions]
+   */
+  @CdkDslMarker
   @Deprecated(message = "deprecated in CDK")
   public interface Builder {
+    /**
+     * @param enabled Specify true to enable encryption at rest.
+     * @deprecated use opensearchservice module instead
+     */
     @Deprecated(message = "deprecated in CDK")
     public fun enabled(enabled: Boolean)
 
+    /**
+     * @param kmsKey Supply if using KMS key for encryption at rest.
+     * @deprecated use opensearchservice module instead
+     */
     @Deprecated(message = "deprecated in CDK")
     public fun kmsKey(kmsKey: IKey)
   }
@@ -26,11 +53,19 @@ public interface EncryptionAtRestOptions {
         software.amazon.awscdk.services.elasticsearch.EncryptionAtRestOptions.Builder =
         software.amazon.awscdk.services.elasticsearch.EncryptionAtRestOptions.builder()
 
+    /**
+     * @param enabled Specify true to enable encryption at rest.
+     * @deprecated use opensearchservice module instead
+     */
     @Deprecated(message = "deprecated in CDK")
     override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
+    /**
+     * @param kmsKey Supply if using KMS key for encryption at rest.
+     * @deprecated use opensearchservice module instead
+     */
     @Deprecated(message = "deprecated in CDK")
     override fun kmsKey(kmsKey: IKey) {
       cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
@@ -43,9 +78,23 @@ public interface EncryptionAtRestOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.elasticsearch.EncryptionAtRestOptions,
   ) : EncryptionAtRestOptions {
+    /**
+     * (deprecated) Specify true to enable encryption at rest.
+     *
+     * Default: - encryption at rest is disabled.
+     *
+     * @deprecated use opensearchservice module instead
+     */
     @Deprecated(message = "deprecated in CDK")
     override fun enabled(): Boolean? = unwrap(this).getEnabled()
 
+    /**
+     * (deprecated) Supply if using KMS key for encryption at rest.
+     *
+     * Default: - uses default aws/es KMS key.
+     *
+     * @deprecated use opensearchservice module instead
+     */
     @Deprecated(message = "deprecated in CDK")
     override fun kmsKey(): IKey? = unwrap(this).getKmsKey()?.let(IKey::wrap)
   }

@@ -1,6 +1,7 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.Resource
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import kotlin.String
@@ -14,39 +15,122 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class VirtualGateway internal constructor(
   private val cdkObject: software.amazon.awscdk.services.appmesh.VirtualGateway,
 ) : Resource(cdkObject), IVirtualGateway {
+  /**
+   * Utility method to add a new GatewayRoute to the VirtualGateway.
+   *
+   * @param id 
+   * @param props 
+   */
   public override fun addGatewayRoute(id: String, props: GatewayRouteBaseProps): GatewayRoute =
       unwrap(this).addGatewayRoute(id,
       props.let(GatewayRouteBaseProps::unwrap)).let(GatewayRoute::wrap)
 
+  /**
+   * Utility method to add a new GatewayRoute to the VirtualGateway.
+   *
+   * @param id 
+   * @param props 
+   */
   @Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("088adf02806882d057d24f01d7bde8e78aae6d65ce74dad71dfdd37cbc9bcf9c")
   public override fun addGatewayRoute(id: String, props: GatewayRouteBaseProps.Builder.() -> Unit):
       GatewayRoute = addGatewayRoute(id, GatewayRouteBaseProps(props))
 
+  /**
+   * Grants the given entity `appmesh:StreamAggregatedResources`.
+   *
+   * @param identity 
+   */
   public override fun grantStreamAggregatedResources(identity: IGrantable): Grant =
       unwrap(this).grantStreamAggregatedResources(identity.let(IGrantable::unwrap)).let(Grant::wrap)
 
+  /**
+   * The Mesh that the VirtualGateway belongs to.
+   */
   public override fun mesh(): IMesh = unwrap(this).getMesh().let(IMesh::wrap)
 
+  /**
+   * The Amazon Resource Name (ARN) for the VirtualGateway.
+   */
   public override fun virtualGatewayArn(): String = unwrap(this).getVirtualGatewayArn()
 
+  /**
+   * The name of the VirtualGateway.
+   */
   public override fun virtualGatewayName(): String = unwrap(this).getVirtualGatewayName()
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.appmesh.VirtualGateway].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * Access Logging Configuration for the VirtualGateway.
+     *
+     * Default: - no access logging
+     *
+     * @param accessLog Access Logging Configuration for the VirtualGateway. 
+     */
     public fun accessLog(accessLog: AccessLog)
 
+    /**
+     * Default Configuration Virtual Node uses to communicate with Virtual Service.
+     *
+     * Default: - No Config
+     *
+     * @param backendDefaults Default Configuration Virtual Node uses to communicate with Virtual
+     * Service. 
+     */
     public fun backendDefaults(backendDefaults: BackendDefaults)
 
+    /**
+     * Default Configuration Virtual Node uses to communicate with Virtual Service.
+     *
+     * Default: - No Config
+     *
+     * @param backendDefaults Default Configuration Virtual Node uses to communicate with Virtual
+     * Service. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("380b63411b3329491321af5555bf8e3f9d8052786eea8a267f4b867656d3666d")
     public fun backendDefaults(backendDefaults: BackendDefaults.Builder.() -> Unit)
 
+    /**
+     * Listeners for the VirtualGateway.
+     *
+     * Only one is supported.
+     *
+     * Default: - Single HTTP listener on port 8080
+     *
+     * @param listeners Listeners for the VirtualGateway. 
+     */
     public fun listeners(listeners: List<VirtualGatewayListener>)
 
+    /**
+     * Listeners for the VirtualGateway.
+     *
+     * Only one is supported.
+     *
+     * Default: - Single HTTP listener on port 8080
+     *
+     * @param listeners Listeners for the VirtualGateway. 
+     */
     public fun listeners(vararg listeners: VirtualGatewayListener)
 
+    /**
+     * The Mesh which the VirtualGateway belongs to.
+     *
+     * @param mesh The Mesh which the VirtualGateway belongs to. 
+     */
     public fun mesh(mesh: IMesh)
 
+    /**
+     * Name of the VirtualGateway.
+     *
+     * Default: - A name is automatically determined
+     *
+     * @param virtualGatewayName Name of the VirtualGateway. 
+     */
     public fun virtualGatewayName(virtualGatewayName: String)
   }
 
@@ -57,30 +141,83 @@ public open class VirtualGateway internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.VirtualGateway.Builder =
         software.amazon.awscdk.services.appmesh.VirtualGateway.Builder.create(scope, id)
 
+    /**
+     * Access Logging Configuration for the VirtualGateway.
+     *
+     * Default: - no access logging
+     *
+     * @param accessLog Access Logging Configuration for the VirtualGateway. 
+     */
     override fun accessLog(accessLog: AccessLog) {
       cdkBuilder.accessLog(accessLog.let(AccessLog::unwrap))
     }
 
+    /**
+     * Default Configuration Virtual Node uses to communicate with Virtual Service.
+     *
+     * Default: - No Config
+     *
+     * @param backendDefaults Default Configuration Virtual Node uses to communicate with Virtual
+     * Service. 
+     */
     override fun backendDefaults(backendDefaults: BackendDefaults) {
       cdkBuilder.backendDefaults(backendDefaults.let(BackendDefaults::unwrap))
     }
 
+    /**
+     * Default Configuration Virtual Node uses to communicate with Virtual Service.
+     *
+     * Default: - No Config
+     *
+     * @param backendDefaults Default Configuration Virtual Node uses to communicate with Virtual
+     * Service. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("380b63411b3329491321af5555bf8e3f9d8052786eea8a267f4b867656d3666d")
     override fun backendDefaults(backendDefaults: BackendDefaults.Builder.() -> Unit): Unit =
         backendDefaults(BackendDefaults(backendDefaults))
 
+    /**
+     * Listeners for the VirtualGateway.
+     *
+     * Only one is supported.
+     *
+     * Default: - Single HTTP listener on port 8080
+     *
+     * @param listeners Listeners for the VirtualGateway. 
+     */
     override fun listeners(listeners: List<VirtualGatewayListener>) {
       cdkBuilder.listeners(listeners.map(VirtualGatewayListener::unwrap))
     }
 
+    /**
+     * Listeners for the VirtualGateway.
+     *
+     * Only one is supported.
+     *
+     * Default: - Single HTTP listener on port 8080
+     *
+     * @param listeners Listeners for the VirtualGateway. 
+     */
     override fun listeners(vararg listeners: VirtualGatewayListener): Unit =
         listeners(listeners.toList())
 
+    /**
+     * The Mesh which the VirtualGateway belongs to.
+     *
+     * @param mesh The Mesh which the VirtualGateway belongs to. 
+     */
     override fun mesh(mesh: IMesh) {
       cdkBuilder.mesh(mesh.let(IMesh::unwrap))
     }
 
+    /**
+     * Name of the VirtualGateway.
+     *
+     * Default: - A name is automatically determined
+     *
+     * @param virtualGatewayName Name of the VirtualGateway. 
+     */
     override fun virtualGatewayName(virtualGatewayName: String) {
       cdkBuilder.virtualGatewayName(virtualGatewayName)
     }
@@ -89,7 +226,7 @@ public open class VirtualGateway internal constructor(
   }
 
   public companion object {
-    public open fun fromVirtualGatewayArn(
+    public fun fromVirtualGatewayArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
       virtualGatewayArn: String,
@@ -97,7 +234,7 @@ public open class VirtualGateway internal constructor(
         software.amazon.awscdk.services.appmesh.VirtualGateway.fromVirtualGatewayArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
         id, virtualGatewayArn).let(IVirtualGateway::wrap)
 
-    public open fun fromVirtualGatewayAttributes(
+    public fun fromVirtualGatewayAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
       attrs: VirtualGatewayAttributes,
@@ -107,7 +244,7 @@ public open class VirtualGateway internal constructor(
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c9d9e9ae33c84cde6a971a8ce03c125e996430a025d7b52cf600b06241f9384f")
-    public open fun fromVirtualGatewayAttributes(
+    public fun fromVirtualGatewayAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
       attrs: VirtualGatewayAttributes.Builder.() -> Unit,

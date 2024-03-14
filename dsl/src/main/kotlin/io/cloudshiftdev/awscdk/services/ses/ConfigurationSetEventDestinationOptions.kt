@@ -1,30 +1,69 @@
 package io.cloudshiftdev.awscdk.services.ses
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 
 public interface ConfigurationSetEventDestinationOptions {
+  /**
+   * A name for the configuration set event destination.
+   *
+   * Default: - a CloudFormation generated name
+   */
   public fun configurationSetEventDestinationName(): String? =
       unwrap(this).getConfigurationSetEventDestinationName()
 
+  /**
+   * The event destination.
+   */
   public fun destination(): EventDestination
 
+  /**
+   * Whether Amazon SES publishes events to this destination.
+   *
+   * Default: true
+   */
   public fun enabled(): Boolean? = unwrap(this).getEnabled()
 
+  /**
+   * The type of email sending events to publish to the event destination.
+   *
+   * Default: - send all event types
+   */
   public fun events(): List<EmailSendingEvent> =
       unwrap(this).getEvents()?.map(EmailSendingEvent::wrap) ?: emptyList()
 
+  /**
+   * A builder for [ConfigurationSetEventDestinationOptions]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param configurationSetEventDestinationName A name for the configuration set event
+     * destination.
+     */
     public fun configurationSetEventDestinationName(configurationSetEventDestinationName: String)
 
+    /**
+     * @param destination The event destination. 
+     */
     public fun destination(destination: EventDestination)
 
+    /**
+     * @param enabled Whether Amazon SES publishes events to this destination.
+     */
     public fun enabled(enabled: Boolean)
 
+    /**
+     * @param events The type of email sending events to publish to the event destination.
+     */
     public fun events(events: List<EmailSendingEvent>)
 
+    /**
+     * @param events The type of email sending events to publish to the event destination.
+     */
     public fun events(vararg events: EmailSendingEvent)
   }
 
@@ -33,23 +72,39 @@ public interface ConfigurationSetEventDestinationOptions {
         software.amazon.awscdk.services.ses.ConfigurationSetEventDestinationOptions.Builder =
         software.amazon.awscdk.services.ses.ConfigurationSetEventDestinationOptions.builder()
 
+    /**
+     * @param configurationSetEventDestinationName A name for the configuration set event
+     * destination.
+     */
     override
         fun configurationSetEventDestinationName(configurationSetEventDestinationName: String) {
       cdkBuilder.configurationSetEventDestinationName(configurationSetEventDestinationName)
     }
 
+    /**
+     * @param destination The event destination. 
+     */
     override fun destination(destination: EventDestination) {
       cdkBuilder.destination(destination.let(EventDestination::unwrap))
     }
 
+    /**
+     * @param enabled Whether Amazon SES publishes events to this destination.
+     */
     override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
+    /**
+     * @param events The type of email sending events to publish to the event destination.
+     */
     override fun events(events: List<EmailSendingEvent>) {
       cdkBuilder.events(events.map(EmailSendingEvent::unwrap))
     }
 
+    /**
+     * @param events The type of email sending events to publish to the event destination.
+     */
     override fun events(vararg events: EmailSendingEvent): Unit = events(events.toList())
 
     public fun build(): software.amazon.awscdk.services.ses.ConfigurationSetEventDestinationOptions
@@ -60,14 +115,32 @@ public interface ConfigurationSetEventDestinationOptions {
     internal val cdkObject:
         software.amazon.awscdk.services.ses.ConfigurationSetEventDestinationOptions,
   ) : ConfigurationSetEventDestinationOptions {
+    /**
+     * A name for the configuration set event destination.
+     *
+     * Default: - a CloudFormation generated name
+     */
     override fun configurationSetEventDestinationName(): String? =
         unwrap(this).getConfigurationSetEventDestinationName()
 
+    /**
+     * The event destination.
+     */
     override fun destination(): EventDestination =
         unwrap(this).getDestination().let(EventDestination::wrap)
 
+    /**
+     * Whether Amazon SES publishes events to this destination.
+     *
+     * Default: true
+     */
     override fun enabled(): Boolean? = unwrap(this).getEnabled()
 
+    /**
+     * The type of email sending events to publish to the event destination.
+     *
+     * Default: - send all event types
+     */
     override fun events(): List<EmailSendingEvent> =
         unwrap(this).getEvents()?.map(EmailSendingEvent::wrap) ?: emptyList()
   }

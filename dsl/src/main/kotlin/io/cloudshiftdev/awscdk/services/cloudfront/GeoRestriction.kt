@@ -6,15 +6,24 @@ import kotlin.collections.List
 public open class GeoRestriction internal constructor(
   private val cdkObject: software.amazon.awscdk.services.cloudfront.GeoRestriction,
 ) {
+  /**
+   * Two-letter, uppercase country code for a country that you want to allow/deny.
+   *
+   * Include one element for each country.
+   * See ISO 3166-1-alpha-2 code on the *International Organization for Standardization* website
+   */
   public open fun locations(): List<String> = unwrap(this).getLocations()
 
+  /**
+   * Specifies the restriction type to impose.
+   */
   public open fun restrictionType(): String = unwrap(this).getRestrictionType()
 
   public companion object {
-    public open fun allowlist(locations: String): GeoRestriction =
+    public fun allowlist(locations: String): GeoRestriction =
         software.amazon.awscdk.services.cloudfront.GeoRestriction.allowlist(locations).let(GeoRestriction::wrap)
 
-    public open fun denylist(locations: String): GeoRestriction =
+    public fun denylist(locations: String): GeoRestriction =
         software.amazon.awscdk.services.cloudfront.GeoRestriction.denylist(locations).let(GeoRestriction::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.GeoRestriction):

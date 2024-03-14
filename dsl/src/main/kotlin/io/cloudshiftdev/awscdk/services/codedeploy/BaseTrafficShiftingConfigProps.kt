@@ -1,17 +1,34 @@
 package io.cloudshiftdev.awscdk.services.codedeploy
 
 import io.cloudshiftdev.awscdk.Duration
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.Unit
 
 public interface BaseTrafficShiftingConfigProps {
+  /**
+   * The amount of time between traffic shifts.
+   */
   public fun interval(): Duration
 
+  /**
+   * The percentage to increase traffic on each traffic shift.
+   */
   public fun percentage(): Number
 
+  /**
+   * A builder for [BaseTrafficShiftingConfigProps]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param interval The amount of time between traffic shifts. 
+     */
     public fun interval(interval: Duration)
 
+    /**
+     * @param percentage The percentage to increase traffic on each traffic shift. 
+     */
     public fun percentage(percentage: Number)
   }
 
@@ -20,10 +37,16 @@ public interface BaseTrafficShiftingConfigProps {
         software.amazon.awscdk.services.codedeploy.BaseTrafficShiftingConfigProps.Builder =
         software.amazon.awscdk.services.codedeploy.BaseTrafficShiftingConfigProps.builder()
 
+    /**
+     * @param interval The amount of time between traffic shifts. 
+     */
     override fun interval(interval: Duration) {
       cdkBuilder.interval(interval.let(Duration::unwrap))
     }
 
+    /**
+     * @param percentage The percentage to increase traffic on each traffic shift. 
+     */
     override fun percentage(percentage: Number) {
       cdkBuilder.percentage(percentage)
     }
@@ -36,8 +59,14 @@ public interface BaseTrafficShiftingConfigProps {
     internal val cdkObject:
         software.amazon.awscdk.services.codedeploy.BaseTrafficShiftingConfigProps,
   ) : BaseTrafficShiftingConfigProps {
+    /**
+     * The amount of time between traffic shifts.
+     */
     override fun interval(): Duration = unwrap(this).getInterval().let(Duration::wrap)
 
+    /**
+     * The percentage to increase traffic on each traffic shift.
+     */
     override fun percentage(): Number = unwrap(this).getPercentage()
   }
 

@@ -11,12 +11,24 @@ import kotlin.jvm.JvmName
 public abstract class Monitor internal constructor(
   private val cdkObject: software.amazon.awscdk.services.appconfig.Monitor,
 ) {
+  /**
+   * The alarm ARN for AWS AppConfig to monitor.
+   */
   public open fun alarmArn(): String = unwrap(this).getAlarmArn()
 
+  /**
+   * The IAM role ARN for AWS AppConfig to view the alarm state.
+   */
   public open fun alarmRoleArn(): String? = unwrap(this).getAlarmRoleArn()
 
+  /**
+   * Indicates whether a CloudWatch alarm is a composite alarm.
+   */
   public open fun isCompositeAlarm(): Boolean? = unwrap(this).getIsCompositeAlarm()
 
+  /**
+   * The type of monitor.
+   */
   public open fun monitorType(): MonitorType = unwrap(this).getMonitorType().let(MonitorType::wrap)
 
   private class Wrapper internal constructor(
@@ -24,20 +36,19 @@ public abstract class Monitor internal constructor(
   ) : Monitor(cdkObject)
 
   public companion object {
-    public open fun fromCfnMonitorsProperty(monitorsProperty: CfnEnvironment.MonitorsProperty):
-        Monitor =
+    public fun fromCfnMonitorsProperty(monitorsProperty: CfnEnvironment.MonitorsProperty): Monitor =
         software.amazon.awscdk.services.appconfig.Monitor.fromCfnMonitorsProperty(monitorsProperty.let(CfnEnvironment.MonitorsProperty::unwrap)).let(Monitor::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4160cfc84ae2b4cb85bc384cebf397909a3e3ef271bd9dd9eaa9ac20dc631472")
-    public open
+    public
         fun fromCfnMonitorsProperty(monitorsProperty: CfnEnvironment.MonitorsProperty.Builder.() -> Unit):
         Monitor = fromCfnMonitorsProperty(CfnEnvironment.MonitorsProperty(monitorsProperty))
 
-    public open fun fromCloudWatchAlarm(alarm: IAlarm): Monitor =
+    public fun fromCloudWatchAlarm(alarm: IAlarm): Monitor =
         software.amazon.awscdk.services.appconfig.Monitor.fromCloudWatchAlarm(alarm.let(IAlarm::unwrap)).let(Monitor::wrap)
 
-    public open fun fromCloudWatchAlarm(alarm: IAlarm, alarmRole: IRole): Monitor =
+    public fun fromCloudWatchAlarm(alarm: IAlarm, alarmRole: IRole): Monitor =
         software.amazon.awscdk.services.appconfig.Monitor.fromCloudWatchAlarm(alarm.let(IAlarm::unwrap),
         alarmRole.let(IRole::unwrap)).let(Monitor::wrap)
 

@@ -5,6 +5,9 @@ import kotlin.String
 public open class InsightType internal constructor(
   private val cdkObject: software.amazon.awscdk.services.cloudtrail.InsightType,
 ) {
+  /**
+   *
+   */
   public open fun `value`(): String = unwrap(this).getValue()
 
   public companion object {

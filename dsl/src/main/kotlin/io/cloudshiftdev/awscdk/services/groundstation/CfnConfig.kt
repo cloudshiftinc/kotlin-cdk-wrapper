@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -21,61 +22,156 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnConfig internal constructor(
   private val cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  /**
+   * The ARN of the config, such as
+   * `arn:aws:groundstation:us-east-2:1234567890:config/tracking/9940bf3b-d2ba-427e-9906-842b5e5d2296`
+   * .
+   */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
+  /**
+   * The ID of the config, such as `9940bf3b-d2ba-427e-9906-842b5e5d2296` .
+   */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
+  /**
+   * The type of the config, such as `tracking` .
+   */
   public open fun attrType(): String = unwrap(this).getAttrType()
 
+  /**
+   * Object containing the parameters of a config.
+   */
   public open fun configData(): Any = unwrap(this).getConfigData()
 
+  /**
+   * Object containing the parameters of a config.
+   */
   public open fun configData(`value`: IResolvable) {
     unwrap(this).setConfigData(`value`.let(IResolvable::unwrap))
   }
 
+  /**
+   * Object containing the parameters of a config.
+   */
   public open fun configData(`value`: ConfigDataProperty) {
     unwrap(this).setConfigData(`value`.let(ConfigDataProperty::unwrap))
   }
 
+  /**
+   * Object containing the parameters of a config.
+   */
   @Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("ad1cba991ba68797a0182dfde1623e59e6af576977ec8c35cf05cfa9eddc8d80")
   public open fun configData(`value`: ConfigDataProperty.Builder.() -> Unit): Unit =
       configData(ConfigDataProperty(`value`))
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * The name of the config object.
+   */
   public open fun name(): String = unwrap(this).getName()
 
+  /**
+   * The name of the config object.
+   */
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
   }
 
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
+  /**
+   * Tags assigned to a resource.
+   */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
+  /**
+   * Tags assigned to a resource.
+   */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  /**
+   * Tags assigned to a resource.
+   */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.groundstation.CfnConfig].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * Object containing the parameters of a config.
+     *
+     * Only one subtype may be specified per config. See the subtype definitions for a description
+     * of each config subtype.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html#cfn-groundstation-config-configdata)
+     * @param configData Object containing the parameters of a config. 
+     */
     public fun configData(configData: IResolvable)
 
+    /**
+     * Object containing the parameters of a config.
+     *
+     * Only one subtype may be specified per config. See the subtype definitions for a description
+     * of each config subtype.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html#cfn-groundstation-config-configdata)
+     * @param configData Object containing the parameters of a config. 
+     */
     public fun configData(configData: ConfigDataProperty)
 
+    /**
+     * Object containing the parameters of a config.
+     *
+     * Only one subtype may be specified per config. See the subtype definitions for a description
+     * of each config subtype.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html#cfn-groundstation-config-configdata)
+     * @param configData Object containing the parameters of a config. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3bdf5af7de0ff43d0573dd7103ea00c681cadc3f9f100193f8727c8b62912646")
     public fun configData(configData: ConfigDataProperty.Builder.() -> Unit)
 
+    /**
+     * The name of the config object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html#cfn-groundstation-config-name)
+     * @param name The name of the config object. 
+     */
     public fun name(name: String)
 
+    /**
+     * Tags assigned to a resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html#cfn-groundstation-config-tags)
+     * @param tags Tags assigned to a resource. 
+     */
     public fun tags(tags: List<CfnTag>)
 
+    /**
+     * Tags assigned to a resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html#cfn-groundstation-config-tags)
+     * @param tags Tags assigned to a resource. 
+     */
     public fun tags(vararg tags: CfnTag)
   }
 
@@ -86,27 +182,72 @@ public open class CfnConfig internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.groundstation.CfnConfig.Builder =
         software.amazon.awscdk.services.groundstation.CfnConfig.Builder.create(scope, id)
 
+    /**
+     * Object containing the parameters of a config.
+     *
+     * Only one subtype may be specified per config. See the subtype definitions for a description
+     * of each config subtype.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html#cfn-groundstation-config-configdata)
+     * @param configData Object containing the parameters of a config. 
+     */
     override fun configData(configData: IResolvable) {
       cdkBuilder.configData(configData.let(IResolvable::unwrap))
     }
 
+    /**
+     * Object containing the parameters of a config.
+     *
+     * Only one subtype may be specified per config. See the subtype definitions for a description
+     * of each config subtype.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html#cfn-groundstation-config-configdata)
+     * @param configData Object containing the parameters of a config. 
+     */
     override fun configData(configData: ConfigDataProperty) {
       cdkBuilder.configData(configData.let(ConfigDataProperty::unwrap))
     }
 
+    /**
+     * Object containing the parameters of a config.
+     *
+     * Only one subtype may be specified per config. See the subtype definitions for a description
+     * of each config subtype.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html#cfn-groundstation-config-configdata)
+     * @param configData Object containing the parameters of a config. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3bdf5af7de0ff43d0573dd7103ea00c681cadc3f9f100193f8727c8b62912646")
     override fun configData(configData: ConfigDataProperty.Builder.() -> Unit): Unit =
         configData(ConfigDataProperty(configData))
 
+    /**
+     * The name of the config object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html#cfn-groundstation-config-name)
+     * @param name The name of the config object. 
+     */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
+    /**
+     * Tags assigned to a resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html#cfn-groundstation-config-tags)
+     * @param tags Tags assigned to a resource. 
+     */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    /**
+     * Tags assigned to a resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-groundstation-config.html#cfn-groundstation-config-tags)
+     * @param tags Tags assigned to a resource. 
+     */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.groundstation.CfnConfig = cdkBuilder.build()
@@ -134,13 +275,36 @@ public open class CfnConfig internal constructor(
   }
 
   public interface DataflowEndpointConfigProperty {
+    /**
+     * The name of the dataflow endpoint to use during contacts.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-dataflowendpointconfig.html#cfn-groundstation-config-dataflowendpointconfig-dataflowendpointname)
+     */
     public fun dataflowEndpointName(): String? = unwrap(this).getDataflowEndpointName()
 
+    /**
+     * The region of the dataflow endpoint to use during contacts.
+     *
+     * When omitted, Ground Station will use the region of the contact.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-dataflowendpointconfig.html#cfn-groundstation-config-dataflowendpointconfig-dataflowendpointregion)
+     */
     public fun dataflowEndpointRegion(): String? = unwrap(this).getDataflowEndpointRegion()
 
+    /**
+     * A builder for [DataflowEndpointConfigProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param dataflowEndpointName The name of the dataflow endpoint to use during contacts.
+       */
       public fun dataflowEndpointName(dataflowEndpointName: String)
 
+      /**
+       * @param dataflowEndpointRegion The region of the dataflow endpoint to use during contacts.
+       * When omitted, Ground Station will use the region of the contact.
+       */
       public fun dataflowEndpointRegion(dataflowEndpointRegion: String)
     }
 
@@ -150,10 +314,17 @@ public open class CfnConfig internal constructor(
           =
           software.amazon.awscdk.services.groundstation.CfnConfig.DataflowEndpointConfigProperty.builder()
 
+      /**
+       * @param dataflowEndpointName The name of the dataflow endpoint to use during contacts.
+       */
       override fun dataflowEndpointName(dataflowEndpointName: String) {
         cdkBuilder.dataflowEndpointName(dataflowEndpointName)
       }
 
+      /**
+       * @param dataflowEndpointRegion The region of the dataflow endpoint to use during contacts.
+       * When omitted, Ground Station will use the region of the contact.
+       */
       override fun dataflowEndpointRegion(dataflowEndpointRegion: String) {
         cdkBuilder.dataflowEndpointRegion(dataflowEndpointRegion)
       }
@@ -167,8 +338,20 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.DataflowEndpointConfigProperty,
     ) : DataflowEndpointConfigProperty {
+      /**
+       * The name of the dataflow endpoint to use during contacts.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-dataflowendpointconfig.html#cfn-groundstation-config-dataflowendpointconfig-dataflowendpointname)
+       */
       override fun dataflowEndpointName(): String? = unwrap(this).getDataflowEndpointName()
 
+      /**
+       * The region of the dataflow endpoint to use during contacts.
+       *
+       * When omitted, Ground Station will use the region of the contact.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-dataflowendpointconfig.html#cfn-groundstation-config-dataflowendpointconfig-dataflowendpointregion)
+       */
       override fun dataflowEndpointRegion(): String? = unwrap(this).getDataflowEndpointRegion()
     }
 
@@ -193,19 +376,57 @@ public open class CfnConfig internal constructor(
   }
 
   public interface UplinkSpectrumConfigProperty {
+    /**
+     * The center frequency of the spectrum.
+     *
+     * Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to 2120
+     * MHz for uplink.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-uplinkspectrumconfig.html#cfn-groundstation-config-uplinkspectrumconfig-centerfrequency)
+     */
     public fun centerFrequency(): Any? = unwrap(this).getCenterFrequency()
 
+    /**
+     * The polarization of the spectrum.
+     *
+     * Valid values are `"RIGHT_HAND"` and `"LEFT_HAND"` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-uplinkspectrumconfig.html#cfn-groundstation-config-uplinkspectrumconfig-polarization)
+     */
     public fun polarization(): String? = unwrap(this).getPolarization()
 
+    /**
+     * A builder for [UplinkSpectrumConfigProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param centerFrequency The center frequency of the spectrum.
+       * Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to
+       * 2120 MHz for uplink.
+       */
       public fun centerFrequency(centerFrequency: IResolvable)
 
+      /**
+       * @param centerFrequency The center frequency of the spectrum.
+       * Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to
+       * 2120 MHz for uplink.
+       */
       public fun centerFrequency(centerFrequency: FrequencyProperty)
 
+      /**
+       * @param centerFrequency The center frequency of the spectrum.
+       * Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to
+       * 2120 MHz for uplink.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ce5ef5bdc5a0cc681dbba37350877f9524c0fb76096c96eb150111dddad9694d")
       public fun centerFrequency(centerFrequency: FrequencyProperty.Builder.() -> Unit)
 
+      /**
+       * @param polarization The polarization of the spectrum.
+       * Valid values are `"RIGHT_HAND"` and `"LEFT_HAND"` .
+       */
       public fun polarization(polarization: String)
     }
 
@@ -215,19 +436,38 @@ public open class CfnConfig internal constructor(
           =
           software.amazon.awscdk.services.groundstation.CfnConfig.UplinkSpectrumConfigProperty.builder()
 
+      /**
+       * @param centerFrequency The center frequency of the spectrum.
+       * Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to
+       * 2120 MHz for uplink.
+       */
       override fun centerFrequency(centerFrequency: IResolvable) {
         cdkBuilder.centerFrequency(centerFrequency.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param centerFrequency The center frequency of the spectrum.
+       * Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to
+       * 2120 MHz for uplink.
+       */
       override fun centerFrequency(centerFrequency: FrequencyProperty) {
         cdkBuilder.centerFrequency(centerFrequency.let(FrequencyProperty::unwrap))
       }
 
+      /**
+       * @param centerFrequency The center frequency of the spectrum.
+       * Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to
+       * 2120 MHz for uplink.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ce5ef5bdc5a0cc681dbba37350877f9524c0fb76096c96eb150111dddad9694d")
       override fun centerFrequency(centerFrequency: FrequencyProperty.Builder.() -> Unit): Unit =
           centerFrequency(FrequencyProperty(centerFrequency))
 
+      /**
+       * @param polarization The polarization of the spectrum.
+       * Valid values are `"RIGHT_HAND"` and `"LEFT_HAND"` .
+       */
       override fun polarization(polarization: String) {
         cdkBuilder.polarization(polarization)
       }
@@ -241,8 +481,23 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.UplinkSpectrumConfigProperty,
     ) : UplinkSpectrumConfigProperty {
+      /**
+       * The center frequency of the spectrum.
+       *
+       * Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to
+       * 2120 MHz for uplink.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-uplinkspectrumconfig.html#cfn-groundstation-config-uplinkspectrumconfig-centerfrequency)
+       */
       override fun centerFrequency(): Any? = unwrap(this).getCenterFrequency()
 
+      /**
+       * The polarization of the spectrum.
+       *
+       * Valid values are `"RIGHT_HAND"` and `"LEFT_HAND"` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-uplinkspectrumconfig.html#cfn-groundstation-config-uplinkspectrumconfig-polarization)
+       */
       override fun polarization(): String? = unwrap(this).getPolarization()
     }
 
@@ -267,9 +522,30 @@ public open class CfnConfig internal constructor(
   }
 
   public interface TrackingConfigProperty {
+    /**
+     * Specifies whether or not to use autotrack.
+     *
+     * `REMOVED` specifies that program track should only be used during the contact. `PREFERRED`
+     * specifies that autotracking is preferred during the contact but fallback to program track if the
+     * signal is lost. `REQUIRED` specifies that autotracking is required during the contact and not to
+     * use program track if the signal is lost.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-trackingconfig.html#cfn-groundstation-config-trackingconfig-autotrack)
+     */
     public fun autotrack(): String? = unwrap(this).getAutotrack()
 
+    /**
+     * A builder for [TrackingConfigProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param autotrack Specifies whether or not to use autotrack.
+       * `REMOVED` specifies that program track should only be used during the contact. `PREFERRED`
+       * specifies that autotracking is preferred during the contact but fallback to program track if
+       * the signal is lost. `REQUIRED` specifies that autotracking is required during the contact and
+       * not to use program track if the signal is lost.
+       */
       public fun autotrack(autotrack: String)
     }
 
@@ -278,6 +554,13 @@ public open class CfnConfig internal constructor(
           software.amazon.awscdk.services.groundstation.CfnConfig.TrackingConfigProperty.Builder =
           software.amazon.awscdk.services.groundstation.CfnConfig.TrackingConfigProperty.builder()
 
+      /**
+       * @param autotrack Specifies whether or not to use autotrack.
+       * `REMOVED` specifies that program track should only be used during the contact. `PREFERRED`
+       * specifies that autotracking is preferred during the contact but fallback to program track if
+       * the signal is lost. `REQUIRED` specifies that autotracking is required during the contact and
+       * not to use program track if the signal is lost.
+       */
       override fun autotrack(autotrack: String) {
         cdkBuilder.autotrack(autotrack)
       }
@@ -291,6 +574,16 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.TrackingConfigProperty,
     ) : TrackingConfigProperty {
+      /**
+       * Specifies whether or not to use autotrack.
+       *
+       * `REMOVED` specifies that program track should only be used during the contact. `PREFERRED`
+       * specifies that autotracking is preferred during the contact but fallback to program track if
+       * the signal is lost. `REQUIRED` specifies that autotracking is required during the contact and
+       * not to use program track if the signal is lost.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-trackingconfig.html#cfn-groundstation-config-trackingconfig-autotrack)
+       */
       override fun autotrack(): String? = unwrap(this).getAutotrack()
     }
 
@@ -315,13 +608,38 @@ public open class CfnConfig internal constructor(
   }
 
   public interface FrequencyProperty {
+    /**
+     * The units of the frequency.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-frequency.html#cfn-groundstation-config-frequency-units)
+     */
     public fun units(): String? = unwrap(this).getUnits()
 
+    /**
+     * The value of the frequency.
+     *
+     * Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to 2120
+     * MHz for uplink.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-frequency.html#cfn-groundstation-config-frequency-value)
+     */
     public fun `value`(): Number? = unwrap(this).getValue()
 
+    /**
+     * A builder for [FrequencyProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param units The units of the frequency.
+       */
       public fun units(units: String)
 
+      /**
+       * @param value The value of the frequency.
+       * Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to
+       * 2120 MHz for uplink.
+       */
       public fun `value`(`value`: Number)
     }
 
@@ -330,10 +648,18 @@ public open class CfnConfig internal constructor(
           software.amazon.awscdk.services.groundstation.CfnConfig.FrequencyProperty.Builder =
           software.amazon.awscdk.services.groundstation.CfnConfig.FrequencyProperty.builder()
 
+      /**
+       * @param units The units of the frequency.
+       */
       override fun units(units: String) {
         cdkBuilder.units(units)
       }
 
+      /**
+       * @param value The value of the frequency.
+       * Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to
+       * 2120 MHz for uplink.
+       */
       override fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
       }
@@ -346,8 +672,21 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.FrequencyProperty,
     ) : FrequencyProperty {
+      /**
+       * The units of the frequency.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-frequency.html#cfn-groundstation-config-frequency-units)
+       */
       override fun units(): String? = unwrap(this).getUnits()
 
+      /**
+       * The value of the frequency.
+       *
+       * Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to
+       * 2120 MHz for uplink.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-frequency.html#cfn-groundstation-config-frequency-value)
+       */
       override fun `value`(): Number? = unwrap(this).getValue()
     }
 
@@ -372,79 +711,251 @@ public open class CfnConfig internal constructor(
   }
 
   public interface ConfigDataProperty {
+    /**
+     * Provides information for an antenna downlink config object.
+     *
+     * Antenna downlink config objects are used to provide parameters for downlinks where no
+     * demodulation or decoding is performed by Ground Station (RF over IP downlinks).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-configdata.html#cfn-groundstation-config-configdata-antennadownlinkconfig)
+     */
     public fun antennaDownlinkConfig(): Any? = unwrap(this).getAntennaDownlinkConfig()
 
+    /**
+     * Provides information for a downlink demod decode config object.
+     *
+     * Downlink demod decode config objects are used to provide parameters for downlinks where the
+     * Ground Station service will demodulate and decode the downlinked data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-configdata.html#cfn-groundstation-config-configdata-antennadownlinkdemoddecodeconfig)
+     */
     public fun antennaDownlinkDemodDecodeConfig(): Any? =
         unwrap(this).getAntennaDownlinkDemodDecodeConfig()
 
+    /**
+     * Provides information for an uplink config object.
+     *
+     * Uplink config objects are used to provide parameters for uplink contacts.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-configdata.html#cfn-groundstation-config-configdata-antennauplinkconfig)
+     */
     public fun antennaUplinkConfig(): Any? = unwrap(this).getAntennaUplinkConfig()
 
+    /**
+     * Provides information for a dataflow endpoint config object.
+     *
+     * Dataflow endpoint config objects are used to provide parameters about which IP endpoint(s) to
+     * use during a contact. Dataflow endpoints are where Ground Station sends data during a downlink
+     * contact and where Ground Station receives data to send to the satellite during an uplink
+     * contact.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-configdata.html#cfn-groundstation-config-configdata-dataflowendpointconfig)
+     */
     public fun dataflowEndpointConfig(): Any? = unwrap(this).getDataflowEndpointConfig()
 
+    /**
+     * Provides information for an S3 recording config object.
+     *
+     * S3 recording config objects are used to provide parameters for S3 recording during downlink
+     * contacts.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-configdata.html#cfn-groundstation-config-configdata-s3recordingconfig)
+     */
     public fun s3RecordingConfig(): Any? = unwrap(this).getS3RecordingConfig()
 
+    /**
+     * Provides information for a tracking config object.
+     *
+     * Tracking config objects are used to provide parameters about how to track the satellite
+     * through the sky during a contact.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-configdata.html#cfn-groundstation-config-configdata-trackingconfig)
+     */
     public fun trackingConfig(): Any? = unwrap(this).getTrackingConfig()
 
+    /**
+     * Provides information for an uplink echo config object.
+     *
+     * Uplink echo config objects are used to provide parameters for uplink echo during uplink
+     * contacts.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-configdata.html#cfn-groundstation-config-configdata-uplinkechoconfig)
+     */
     public fun uplinkEchoConfig(): Any? = unwrap(this).getUplinkEchoConfig()
 
+    /**
+     * A builder for [ConfigDataProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param antennaDownlinkConfig Provides information for an antenna downlink config object.
+       * Antenna downlink config objects are used to provide parameters for downlinks where no
+       * demodulation or decoding is performed by Ground Station (RF over IP downlinks).
+       */
       public fun antennaDownlinkConfig(antennaDownlinkConfig: IResolvable)
 
+      /**
+       * @param antennaDownlinkConfig Provides information for an antenna downlink config object.
+       * Antenna downlink config objects are used to provide parameters for downlinks where no
+       * demodulation or decoding is performed by Ground Station (RF over IP downlinks).
+       */
       public fun antennaDownlinkConfig(antennaDownlinkConfig: AntennaDownlinkConfigProperty)
 
+      /**
+       * @param antennaDownlinkConfig Provides information for an antenna downlink config object.
+       * Antenna downlink config objects are used to provide parameters for downlinks where no
+       * demodulation or decoding is performed by Ground Station (RF over IP downlinks).
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e7a2cb2e2de5da61ba05fee08241c3e250ac1c4ae9b09b4c778b8b7fa82f7764")
       public
           fun antennaDownlinkConfig(antennaDownlinkConfig: AntennaDownlinkConfigProperty.Builder.() -> Unit)
 
+      /**
+       * @param antennaDownlinkDemodDecodeConfig Provides information for a downlink demod decode
+       * config object.
+       * Downlink demod decode config objects are used to provide parameters for downlinks where the
+       * Ground Station service will demodulate and decode the downlinked data.
+       */
       public fun antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig: IResolvable)
 
+      /**
+       * @param antennaDownlinkDemodDecodeConfig Provides information for a downlink demod decode
+       * config object.
+       * Downlink demod decode config objects are used to provide parameters for downlinks where the
+       * Ground Station service will demodulate and decode the downlinked data.
+       */
       public
           fun antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig: AntennaDownlinkDemodDecodeConfigProperty)
 
+      /**
+       * @param antennaDownlinkDemodDecodeConfig Provides information for a downlink demod decode
+       * config object.
+       * Downlink demod decode config objects are used to provide parameters for downlinks where the
+       * Ground Station service will demodulate and decode the downlinked data.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("17d0baf1af43e1879e4081b34471973f4d932da70bfc6a9a450e0ea950877607")
       public
           fun antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig: AntennaDownlinkDemodDecodeConfigProperty.Builder.() -> Unit)
 
+      /**
+       * @param antennaUplinkConfig Provides information for an uplink config object.
+       * Uplink config objects are used to provide parameters for uplink contacts.
+       */
       public fun antennaUplinkConfig(antennaUplinkConfig: IResolvable)
 
+      /**
+       * @param antennaUplinkConfig Provides information for an uplink config object.
+       * Uplink config objects are used to provide parameters for uplink contacts.
+       */
       public fun antennaUplinkConfig(antennaUplinkConfig: AntennaUplinkConfigProperty)
 
+      /**
+       * @param antennaUplinkConfig Provides information for an uplink config object.
+       * Uplink config objects are used to provide parameters for uplink contacts.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9e683d9dbb2881828c7f91e7acf80e85b64ac1a993fe3920e567b26f5ab4bb3e")
       public
           fun antennaUplinkConfig(antennaUplinkConfig: AntennaUplinkConfigProperty.Builder.() -> Unit)
 
+      /**
+       * @param dataflowEndpointConfig Provides information for a dataflow endpoint config object.
+       * Dataflow endpoint config objects are used to provide parameters about which IP endpoint(s)
+       * to use during a contact. Dataflow endpoints are where Ground Station sends data during a
+       * downlink contact and where Ground Station receives data to send to the satellite during an
+       * uplink contact.
+       */
       public fun dataflowEndpointConfig(dataflowEndpointConfig: IResolvable)
 
+      /**
+       * @param dataflowEndpointConfig Provides information for a dataflow endpoint config object.
+       * Dataflow endpoint config objects are used to provide parameters about which IP endpoint(s)
+       * to use during a contact. Dataflow endpoints are where Ground Station sends data during a
+       * downlink contact and where Ground Station receives data to send to the satellite during an
+       * uplink contact.
+       */
       public fun dataflowEndpointConfig(dataflowEndpointConfig: DataflowEndpointConfigProperty)
 
+      /**
+       * @param dataflowEndpointConfig Provides information for a dataflow endpoint config object.
+       * Dataflow endpoint config objects are used to provide parameters about which IP endpoint(s)
+       * to use during a contact. Dataflow endpoints are where Ground Station sends data during a
+       * downlink contact and where Ground Station receives data to send to the satellite during an
+       * uplink contact.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8ecd5f3e83583f469ac597f4908c851e4e743ba415170780e3b6ec1b0b32a07f")
       public
           fun dataflowEndpointConfig(dataflowEndpointConfig: DataflowEndpointConfigProperty.Builder.() -> Unit)
 
+      /**
+       * @param s3RecordingConfig Provides information for an S3 recording config object.
+       * S3 recording config objects are used to provide parameters for S3 recording during downlink
+       * contacts.
+       */
       public fun s3RecordingConfig(s3RecordingConfig: IResolvable)
 
+      /**
+       * @param s3RecordingConfig Provides information for an S3 recording config object.
+       * S3 recording config objects are used to provide parameters for S3 recording during downlink
+       * contacts.
+       */
       public fun s3RecordingConfig(s3RecordingConfig: S3RecordingConfigProperty)
 
+      /**
+       * @param s3RecordingConfig Provides information for an S3 recording config object.
+       * S3 recording config objects are used to provide parameters for S3 recording during downlink
+       * contacts.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("30b810d472a639602948402c858f31c95b7f7e2c83183883330e5db314bbe364")
       public fun s3RecordingConfig(s3RecordingConfig: S3RecordingConfigProperty.Builder.() -> Unit)
 
+      /**
+       * @param trackingConfig Provides information for a tracking config object.
+       * Tracking config objects are used to provide parameters about how to track the satellite
+       * through the sky during a contact.
+       */
       public fun trackingConfig(trackingConfig: IResolvable)
 
+      /**
+       * @param trackingConfig Provides information for a tracking config object.
+       * Tracking config objects are used to provide parameters about how to track the satellite
+       * through the sky during a contact.
+       */
       public fun trackingConfig(trackingConfig: TrackingConfigProperty)
 
+      /**
+       * @param trackingConfig Provides information for a tracking config object.
+       * Tracking config objects are used to provide parameters about how to track the satellite
+       * through the sky during a contact.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fc026be17cdda923100e7e206217b7badfcc1d5b4b8787c6fff3048146a53ece")
       public fun trackingConfig(trackingConfig: TrackingConfigProperty.Builder.() -> Unit)
 
+      /**
+       * @param uplinkEchoConfig Provides information for an uplink echo config object.
+       * Uplink echo config objects are used to provide parameters for uplink echo during uplink
+       * contacts.
+       */
       public fun uplinkEchoConfig(uplinkEchoConfig: IResolvable)
 
+      /**
+       * @param uplinkEchoConfig Provides information for an uplink echo config object.
+       * Uplink echo config objects are used to provide parameters for uplink echo during uplink
+       * contacts.
+       */
       public fun uplinkEchoConfig(uplinkEchoConfig: UplinkEchoConfigProperty)
 
+      /**
+       * @param uplinkEchoConfig Provides information for an uplink echo config object.
+       * Uplink echo config objects are used to provide parameters for uplink echo during uplink
+       * contacts.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f2dd7c421827f5ef12e5f61f27d89e3cb3a7df37bfde8d3f36d1365ac5be1962")
       public fun uplinkEchoConfig(uplinkEchoConfig: UplinkEchoConfigProperty.Builder.() -> Unit)
@@ -455,29 +966,62 @@ public open class CfnConfig internal constructor(
           software.amazon.awscdk.services.groundstation.CfnConfig.ConfigDataProperty.Builder =
           software.amazon.awscdk.services.groundstation.CfnConfig.ConfigDataProperty.builder()
 
+      /**
+       * @param antennaDownlinkConfig Provides information for an antenna downlink config object.
+       * Antenna downlink config objects are used to provide parameters for downlinks where no
+       * demodulation or decoding is performed by Ground Station (RF over IP downlinks).
+       */
       override fun antennaDownlinkConfig(antennaDownlinkConfig: IResolvable) {
         cdkBuilder.antennaDownlinkConfig(antennaDownlinkConfig.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param antennaDownlinkConfig Provides information for an antenna downlink config object.
+       * Antenna downlink config objects are used to provide parameters for downlinks where no
+       * demodulation or decoding is performed by Ground Station (RF over IP downlinks).
+       */
       override fun antennaDownlinkConfig(antennaDownlinkConfig: AntennaDownlinkConfigProperty) {
         cdkBuilder.antennaDownlinkConfig(antennaDownlinkConfig.let(AntennaDownlinkConfigProperty::unwrap))
       }
 
+      /**
+       * @param antennaDownlinkConfig Provides information for an antenna downlink config object.
+       * Antenna downlink config objects are used to provide parameters for downlinks where no
+       * demodulation or decoding is performed by Ground Station (RF over IP downlinks).
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e7a2cb2e2de5da61ba05fee08241c3e250ac1c4ae9b09b4c778b8b7fa82f7764")
       override
           fun antennaDownlinkConfig(antennaDownlinkConfig: AntennaDownlinkConfigProperty.Builder.() -> Unit):
           Unit = antennaDownlinkConfig(AntennaDownlinkConfigProperty(antennaDownlinkConfig))
 
+      /**
+       * @param antennaDownlinkDemodDecodeConfig Provides information for a downlink demod decode
+       * config object.
+       * Downlink demod decode config objects are used to provide parameters for downlinks where the
+       * Ground Station service will demodulate and decode the downlinked data.
+       */
       override fun antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig: IResolvable) {
         cdkBuilder.antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param antennaDownlinkDemodDecodeConfig Provides information for a downlink demod decode
+       * config object.
+       * Downlink demod decode config objects are used to provide parameters for downlinks where the
+       * Ground Station service will demodulate and decode the downlinked data.
+       */
       override
           fun antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig: AntennaDownlinkDemodDecodeConfigProperty) {
         cdkBuilder.antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig.let(AntennaDownlinkDemodDecodeConfigProperty::unwrap))
       }
 
+      /**
+       * @param antennaDownlinkDemodDecodeConfig Provides information for a downlink demod decode
+       * config object.
+       * Downlink demod decode config objects are used to provide parameters for downlinks where the
+       * Ground Station service will demodulate and decode the downlinked data.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("17d0baf1af43e1879e4081b34471973f4d932da70bfc6a9a450e0ea950877607")
       override
@@ -485,69 +1029,147 @@ public open class CfnConfig internal constructor(
           Unit =
           antennaDownlinkDemodDecodeConfig(AntennaDownlinkDemodDecodeConfigProperty(antennaDownlinkDemodDecodeConfig))
 
+      /**
+       * @param antennaUplinkConfig Provides information for an uplink config object.
+       * Uplink config objects are used to provide parameters for uplink contacts.
+       */
       override fun antennaUplinkConfig(antennaUplinkConfig: IResolvable) {
         cdkBuilder.antennaUplinkConfig(antennaUplinkConfig.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param antennaUplinkConfig Provides information for an uplink config object.
+       * Uplink config objects are used to provide parameters for uplink contacts.
+       */
       override fun antennaUplinkConfig(antennaUplinkConfig: AntennaUplinkConfigProperty) {
         cdkBuilder.antennaUplinkConfig(antennaUplinkConfig.let(AntennaUplinkConfigProperty::unwrap))
       }
 
+      /**
+       * @param antennaUplinkConfig Provides information for an uplink config object.
+       * Uplink config objects are used to provide parameters for uplink contacts.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9e683d9dbb2881828c7f91e7acf80e85b64ac1a993fe3920e567b26f5ab4bb3e")
       override
           fun antennaUplinkConfig(antennaUplinkConfig: AntennaUplinkConfigProperty.Builder.() -> Unit):
           Unit = antennaUplinkConfig(AntennaUplinkConfigProperty(antennaUplinkConfig))
 
+      /**
+       * @param dataflowEndpointConfig Provides information for a dataflow endpoint config object.
+       * Dataflow endpoint config objects are used to provide parameters about which IP endpoint(s)
+       * to use during a contact. Dataflow endpoints are where Ground Station sends data during a
+       * downlink contact and where Ground Station receives data to send to the satellite during an
+       * uplink contact.
+       */
       override fun dataflowEndpointConfig(dataflowEndpointConfig: IResolvable) {
         cdkBuilder.dataflowEndpointConfig(dataflowEndpointConfig.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param dataflowEndpointConfig Provides information for a dataflow endpoint config object.
+       * Dataflow endpoint config objects are used to provide parameters about which IP endpoint(s)
+       * to use during a contact. Dataflow endpoints are where Ground Station sends data during a
+       * downlink contact and where Ground Station receives data to send to the satellite during an
+       * uplink contact.
+       */
       override fun dataflowEndpointConfig(dataflowEndpointConfig: DataflowEndpointConfigProperty) {
         cdkBuilder.dataflowEndpointConfig(dataflowEndpointConfig.let(DataflowEndpointConfigProperty::unwrap))
       }
 
+      /**
+       * @param dataflowEndpointConfig Provides information for a dataflow endpoint config object.
+       * Dataflow endpoint config objects are used to provide parameters about which IP endpoint(s)
+       * to use during a contact. Dataflow endpoints are where Ground Station sends data during a
+       * downlink contact and where Ground Station receives data to send to the satellite during an
+       * uplink contact.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8ecd5f3e83583f469ac597f4908c851e4e743ba415170780e3b6ec1b0b32a07f")
       override
           fun dataflowEndpointConfig(dataflowEndpointConfig: DataflowEndpointConfigProperty.Builder.() -> Unit):
           Unit = dataflowEndpointConfig(DataflowEndpointConfigProperty(dataflowEndpointConfig))
 
+      /**
+       * @param s3RecordingConfig Provides information for an S3 recording config object.
+       * S3 recording config objects are used to provide parameters for S3 recording during downlink
+       * contacts.
+       */
       override fun s3RecordingConfig(s3RecordingConfig: IResolvable) {
         cdkBuilder.s3RecordingConfig(s3RecordingConfig.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param s3RecordingConfig Provides information for an S3 recording config object.
+       * S3 recording config objects are used to provide parameters for S3 recording during downlink
+       * contacts.
+       */
       override fun s3RecordingConfig(s3RecordingConfig: S3RecordingConfigProperty) {
         cdkBuilder.s3RecordingConfig(s3RecordingConfig.let(S3RecordingConfigProperty::unwrap))
       }
 
+      /**
+       * @param s3RecordingConfig Provides information for an S3 recording config object.
+       * S3 recording config objects are used to provide parameters for S3 recording during downlink
+       * contacts.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("30b810d472a639602948402c858f31c95b7f7e2c83183883330e5db314bbe364")
       override
           fun s3RecordingConfig(s3RecordingConfig: S3RecordingConfigProperty.Builder.() -> Unit):
           Unit = s3RecordingConfig(S3RecordingConfigProperty(s3RecordingConfig))
 
+      /**
+       * @param trackingConfig Provides information for a tracking config object.
+       * Tracking config objects are used to provide parameters about how to track the satellite
+       * through the sky during a contact.
+       */
       override fun trackingConfig(trackingConfig: IResolvable) {
         cdkBuilder.trackingConfig(trackingConfig.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param trackingConfig Provides information for a tracking config object.
+       * Tracking config objects are used to provide parameters about how to track the satellite
+       * through the sky during a contact.
+       */
       override fun trackingConfig(trackingConfig: TrackingConfigProperty) {
         cdkBuilder.trackingConfig(trackingConfig.let(TrackingConfigProperty::unwrap))
       }
 
+      /**
+       * @param trackingConfig Provides information for a tracking config object.
+       * Tracking config objects are used to provide parameters about how to track the satellite
+       * through the sky during a contact.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fc026be17cdda923100e7e206217b7badfcc1d5b4b8787c6fff3048146a53ece")
       override fun trackingConfig(trackingConfig: TrackingConfigProperty.Builder.() -> Unit): Unit =
           trackingConfig(TrackingConfigProperty(trackingConfig))
 
+      /**
+       * @param uplinkEchoConfig Provides information for an uplink echo config object.
+       * Uplink echo config objects are used to provide parameters for uplink echo during uplink
+       * contacts.
+       */
       override fun uplinkEchoConfig(uplinkEchoConfig: IResolvable) {
         cdkBuilder.uplinkEchoConfig(uplinkEchoConfig.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param uplinkEchoConfig Provides information for an uplink echo config object.
+       * Uplink echo config objects are used to provide parameters for uplink echo during uplink
+       * contacts.
+       */
       override fun uplinkEchoConfig(uplinkEchoConfig: UplinkEchoConfigProperty) {
         cdkBuilder.uplinkEchoConfig(uplinkEchoConfig.let(UplinkEchoConfigProperty::unwrap))
       }
 
+      /**
+       * @param uplinkEchoConfig Provides information for an uplink echo config object.
+       * Uplink echo config objects are used to provide parameters for uplink echo during uplink
+       * contacts.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f2dd7c421827f5ef12e5f61f27d89e3cb3a7df37bfde8d3f36d1365ac5be1962")
       override fun uplinkEchoConfig(uplinkEchoConfig: UplinkEchoConfigProperty.Builder.() -> Unit):
@@ -561,19 +1183,76 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.ConfigDataProperty,
     ) : ConfigDataProperty {
+      /**
+       * Provides information for an antenna downlink config object.
+       *
+       * Antenna downlink config objects are used to provide parameters for downlinks where no
+       * demodulation or decoding is performed by Ground Station (RF over IP downlinks).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-configdata.html#cfn-groundstation-config-configdata-antennadownlinkconfig)
+       */
       override fun antennaDownlinkConfig(): Any? = unwrap(this).getAntennaDownlinkConfig()
 
+      /**
+       * Provides information for a downlink demod decode config object.
+       *
+       * Downlink demod decode config objects are used to provide parameters for downlinks where the
+       * Ground Station service will demodulate and decode the downlinked data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-configdata.html#cfn-groundstation-config-configdata-antennadownlinkdemoddecodeconfig)
+       */
       override fun antennaDownlinkDemodDecodeConfig(): Any? =
           unwrap(this).getAntennaDownlinkDemodDecodeConfig()
 
+      /**
+       * Provides information for an uplink config object.
+       *
+       * Uplink config objects are used to provide parameters for uplink contacts.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-configdata.html#cfn-groundstation-config-configdata-antennauplinkconfig)
+       */
       override fun antennaUplinkConfig(): Any? = unwrap(this).getAntennaUplinkConfig()
 
+      /**
+       * Provides information for a dataflow endpoint config object.
+       *
+       * Dataflow endpoint config objects are used to provide parameters about which IP endpoint(s)
+       * to use during a contact. Dataflow endpoints are where Ground Station sends data during a
+       * downlink contact and where Ground Station receives data to send to the satellite during an
+       * uplink contact.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-configdata.html#cfn-groundstation-config-configdata-dataflowendpointconfig)
+       */
       override fun dataflowEndpointConfig(): Any? = unwrap(this).getDataflowEndpointConfig()
 
+      /**
+       * Provides information for an S3 recording config object.
+       *
+       * S3 recording config objects are used to provide parameters for S3 recording during downlink
+       * contacts.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-configdata.html#cfn-groundstation-config-configdata-s3recordingconfig)
+       */
       override fun s3RecordingConfig(): Any? = unwrap(this).getS3RecordingConfig()
 
+      /**
+       * Provides information for a tracking config object.
+       *
+       * Tracking config objects are used to provide parameters about how to track the satellite
+       * through the sky during a contact.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-configdata.html#cfn-groundstation-config-configdata-trackingconfig)
+       */
       override fun trackingConfig(): Any? = unwrap(this).getTrackingConfig()
 
+      /**
+       * Provides information for an uplink echo config object.
+       *
+       * Uplink echo config objects are used to provide parameters for uplink echo during uplink
+       * contacts.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-configdata.html#cfn-groundstation-config-configdata-uplinkechoconfig)
+       */
       override fun uplinkEchoConfig(): Any? = unwrap(this).getUplinkEchoConfig()
     }
 
@@ -598,13 +1277,42 @@ public open class CfnConfig internal constructor(
   }
 
   public interface FrequencyBandwidthProperty {
+    /**
+     * The units of the bandwidth.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-frequencybandwidth.html#cfn-groundstation-config-frequencybandwidth-units)
+     */
     public fun units(): String? = unwrap(this).getUnits()
 
+    /**
+     * The value of the bandwidth. AWS Ground Station currently has the following bandwidth
+     * limitations:.
+     *
+     * * For `AntennaDownlinkDemodDecodeconfig` , valid values are between 125 kHz to 650 MHz.
+     * * For `AntennaDownlinkconfig` , valid values are between 10 kHz to 54 MHz.
+     * * For `AntennaUplinkConfig` , valid values are between 10 kHz to 54 MHz.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-frequencybandwidth.html#cfn-groundstation-config-frequencybandwidth-value)
+     */
     public fun `value`(): Number? = unwrap(this).getValue()
 
+    /**
+     * A builder for [FrequencyBandwidthProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param units The units of the bandwidth.
+       */
       public fun units(units: String)
 
+      /**
+       * @param value The value of the bandwidth. AWS Ground Station currently has the following
+       * bandwidth limitations:.
+       * * For `AntennaDownlinkDemodDecodeconfig` , valid values are between 125 kHz to 650 MHz.
+       * * For `AntennaDownlinkconfig` , valid values are between 10 kHz to 54 MHz.
+       * * For `AntennaUplinkConfig` , valid values are between 10 kHz to 54 MHz.
+       */
       public fun `value`(`value`: Number)
     }
 
@@ -614,10 +1322,20 @@ public open class CfnConfig internal constructor(
           =
           software.amazon.awscdk.services.groundstation.CfnConfig.FrequencyBandwidthProperty.builder()
 
+      /**
+       * @param units The units of the bandwidth.
+       */
       override fun units(units: String) {
         cdkBuilder.units(units)
       }
 
+      /**
+       * @param value The value of the bandwidth. AWS Ground Station currently has the following
+       * bandwidth limitations:.
+       * * For `AntennaDownlinkDemodDecodeconfig` , valid values are between 125 kHz to 650 MHz.
+       * * For `AntennaDownlinkconfig` , valid values are between 10 kHz to 54 MHz.
+       * * For `AntennaUplinkConfig` , valid values are between 10 kHz to 54 MHz.
+       */
       override fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
       }
@@ -631,8 +1349,23 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.FrequencyBandwidthProperty,
     ) : FrequencyBandwidthProperty {
+      /**
+       * The units of the bandwidth.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-frequencybandwidth.html#cfn-groundstation-config-frequencybandwidth-units)
+       */
       override fun units(): String? = unwrap(this).getUnits()
 
+      /**
+       * The value of the bandwidth. AWS Ground Station currently has the following bandwidth
+       * limitations:.
+       *
+       * * For `AntennaDownlinkDemodDecodeconfig` , valid values are between 125 kHz to 650 MHz.
+       * * For `AntennaDownlinkconfig` , valid values are between 10 kHz to 54 MHz.
+       * * For `AntennaUplinkConfig` , valid values are between 10 kHz to 54 MHz.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-frequencybandwidth.html#cfn-groundstation-config-frequencybandwidth-value)
+       */
       override fun `value`(): Number? = unwrap(this).getValue()
     }
 
@@ -657,9 +1390,19 @@ public open class CfnConfig internal constructor(
   }
 
   public interface DecodeConfigProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-decodeconfig.html#cfn-groundstation-config-decodeconfig-unvalidatedjson)
+     */
     public fun unvalidatedJson(): String? = unwrap(this).getUnvalidatedJson()
 
+    /**
+     * A builder for [DecodeConfigProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param unvalidatedJson the value to be set.
+       */
       public fun unvalidatedJson(unvalidatedJson: String)
     }
 
@@ -668,6 +1411,9 @@ public open class CfnConfig internal constructor(
           software.amazon.awscdk.services.groundstation.CfnConfig.DecodeConfigProperty.Builder =
           software.amazon.awscdk.services.groundstation.CfnConfig.DecodeConfigProperty.builder()
 
+      /**
+       * @param unvalidatedJson the value to be set.
+       */
       override fun unvalidatedJson(unvalidatedJson: String) {
         cdkBuilder.unvalidatedJson(unvalidatedJson)
       }
@@ -681,6 +1427,9 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.DecodeConfigProperty,
     ) : DecodeConfigProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-decodeconfig.html#cfn-groundstation-config-decodeconfig-unvalidatedjson)
+       */
       override fun unvalidatedJson(): String? = unwrap(this).getUnvalidatedJson()
     }
 
@@ -705,13 +1454,36 @@ public open class CfnConfig internal constructor(
   }
 
   public interface EirpProperty {
+    /**
+     * The units of the EIRP.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-eirp.html#cfn-groundstation-config-eirp-units)
+     */
     public fun units(): String? = unwrap(this).getUnits()
 
+    /**
+     * The value of the EIRP.
+     *
+     * Valid values are between 20.0 to 50.0 dBW.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-eirp.html#cfn-groundstation-config-eirp-value)
+     */
     public fun `value`(): Number? = unwrap(this).getValue()
 
+    /**
+     * A builder for [EirpProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param units The units of the EIRP.
+       */
       public fun units(units: String)
 
+      /**
+       * @param value The value of the EIRP.
+       * Valid values are between 20.0 to 50.0 dBW.
+       */
       public fun `value`(`value`: Number)
     }
 
@@ -720,10 +1492,17 @@ public open class CfnConfig internal constructor(
           software.amazon.awscdk.services.groundstation.CfnConfig.EirpProperty.Builder =
           software.amazon.awscdk.services.groundstation.CfnConfig.EirpProperty.builder()
 
+      /**
+       * @param units The units of the EIRP.
+       */
       override fun units(units: String) {
         cdkBuilder.units(units)
       }
 
+      /**
+       * @param value The value of the EIRP.
+       * Valid values are between 20.0 to 50.0 dBW.
+       */
       override fun `value`(`value`: Number) {
         cdkBuilder.`value`(`value`)
       }
@@ -735,8 +1514,20 @@ public open class CfnConfig internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.services.groundstation.CfnConfig.EirpProperty,
     ) : EirpProperty {
+      /**
+       * The units of the EIRP.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-eirp.html#cfn-groundstation-config-eirp-units)
+       */
       override fun units(): String? = unwrap(this).getUnits()
 
+      /**
+       * The value of the EIRP.
+       *
+       * Valid values are between 20.0 to 50.0 dBW.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-eirp.html#cfn-groundstation-config-eirp-value)
+       */
       override fun `value`(): Number? = unwrap(this).getValue()
     }
 
@@ -761,34 +1552,80 @@ public open class CfnConfig internal constructor(
   }
 
   public interface AntennaDownlinkDemodDecodeConfigProperty {
+    /**
+     * Defines how the RF signal will be decoded.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-antennadownlinkdemoddecodeconfig.html#cfn-groundstation-config-antennadownlinkdemoddecodeconfig-decodeconfig)
+     */
     public fun decodeConfig(): Any? = unwrap(this).getDecodeConfig()
 
+    /**
+     * Defines how the RF signal will be demodulated.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-antennadownlinkdemoddecodeconfig.html#cfn-groundstation-config-antennadownlinkdemoddecodeconfig-demodulationconfig)
+     */
     public fun demodulationConfig(): Any? = unwrap(this).getDemodulationConfig()
 
+    /**
+     * Defines the spectrum configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-antennadownlinkdemoddecodeconfig.html#cfn-groundstation-config-antennadownlinkdemoddecodeconfig-spectrumconfig)
+     */
     public fun spectrumConfig(): Any? = unwrap(this).getSpectrumConfig()
 
+    /**
+     * A builder for [AntennaDownlinkDemodDecodeConfigProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param decodeConfig Defines how the RF signal will be decoded.
+       */
       public fun decodeConfig(decodeConfig: IResolvable)
 
+      /**
+       * @param decodeConfig Defines how the RF signal will be decoded.
+       */
       public fun decodeConfig(decodeConfig: DecodeConfigProperty)
 
+      /**
+       * @param decodeConfig Defines how the RF signal will be decoded.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c0f6fe2a6a288dc6d33fb2eed29827a3837936477d02861ab99cad291d7cde72")
       public fun decodeConfig(decodeConfig: DecodeConfigProperty.Builder.() -> Unit)
 
+      /**
+       * @param demodulationConfig Defines how the RF signal will be demodulated.
+       */
       public fun demodulationConfig(demodulationConfig: IResolvable)
 
+      /**
+       * @param demodulationConfig Defines how the RF signal will be demodulated.
+       */
       public fun demodulationConfig(demodulationConfig: DemodulationConfigProperty)
 
+      /**
+       * @param demodulationConfig Defines how the RF signal will be demodulated.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e0a9f2fe13c3bd64c02bcd06addc44c8e1290399ec3a59a50da1a9d5af7c78e0")
       public
           fun demodulationConfig(demodulationConfig: DemodulationConfigProperty.Builder.() -> Unit)
 
+      /**
+       * @param spectrumConfig Defines the spectrum configuration.
+       */
       public fun spectrumConfig(spectrumConfig: IResolvable)
 
+      /**
+       * @param spectrumConfig Defines the spectrum configuration.
+       */
       public fun spectrumConfig(spectrumConfig: SpectrumConfigProperty)
 
+      /**
+       * @param spectrumConfig Defines the spectrum configuration.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5e396683af6258796a463bfcfe4e947b18814e7a7223d1dfbbf3f2a08d326e96")
       public fun spectrumConfig(spectrumConfig: SpectrumConfigProperty.Builder.() -> Unit)
@@ -800,41 +1637,68 @@ public open class CfnConfig internal constructor(
           =
           software.amazon.awscdk.services.groundstation.CfnConfig.AntennaDownlinkDemodDecodeConfigProperty.builder()
 
+      /**
+       * @param decodeConfig Defines how the RF signal will be decoded.
+       */
       override fun decodeConfig(decodeConfig: IResolvable) {
         cdkBuilder.decodeConfig(decodeConfig.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param decodeConfig Defines how the RF signal will be decoded.
+       */
       override fun decodeConfig(decodeConfig: DecodeConfigProperty) {
         cdkBuilder.decodeConfig(decodeConfig.let(DecodeConfigProperty::unwrap))
       }
 
+      /**
+       * @param decodeConfig Defines how the RF signal will be decoded.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c0f6fe2a6a288dc6d33fb2eed29827a3837936477d02861ab99cad291d7cde72")
       override fun decodeConfig(decodeConfig: DecodeConfigProperty.Builder.() -> Unit): Unit =
           decodeConfig(DecodeConfigProperty(decodeConfig))
 
+      /**
+       * @param demodulationConfig Defines how the RF signal will be demodulated.
+       */
       override fun demodulationConfig(demodulationConfig: IResolvable) {
         cdkBuilder.demodulationConfig(demodulationConfig.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param demodulationConfig Defines how the RF signal will be demodulated.
+       */
       override fun demodulationConfig(demodulationConfig: DemodulationConfigProperty) {
         cdkBuilder.demodulationConfig(demodulationConfig.let(DemodulationConfigProperty::unwrap))
       }
 
+      /**
+       * @param demodulationConfig Defines how the RF signal will be demodulated.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e0a9f2fe13c3bd64c02bcd06addc44c8e1290399ec3a59a50da1a9d5af7c78e0")
       override
           fun demodulationConfig(demodulationConfig: DemodulationConfigProperty.Builder.() -> Unit):
           Unit = demodulationConfig(DemodulationConfigProperty(demodulationConfig))
 
+      /**
+       * @param spectrumConfig Defines the spectrum configuration.
+       */
       override fun spectrumConfig(spectrumConfig: IResolvable) {
         cdkBuilder.spectrumConfig(spectrumConfig.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param spectrumConfig Defines the spectrum configuration.
+       */
       override fun spectrumConfig(spectrumConfig: SpectrumConfigProperty) {
         cdkBuilder.spectrumConfig(spectrumConfig.let(SpectrumConfigProperty::unwrap))
       }
 
+      /**
+       * @param spectrumConfig Defines the spectrum configuration.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5e396683af6258796a463bfcfe4e947b18814e7a7223d1dfbbf3f2a08d326e96")
       override fun spectrumConfig(spectrumConfig: SpectrumConfigProperty.Builder.() -> Unit): Unit =
@@ -849,10 +1713,25 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.AntennaDownlinkDemodDecodeConfigProperty,
     ) : AntennaDownlinkDemodDecodeConfigProperty {
+      /**
+       * Defines how the RF signal will be decoded.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-antennadownlinkdemoddecodeconfig.html#cfn-groundstation-config-antennadownlinkdemoddecodeconfig-decodeconfig)
+       */
       override fun decodeConfig(): Any? = unwrap(this).getDecodeConfig()
 
+      /**
+       * Defines how the RF signal will be demodulated.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-antennadownlinkdemoddecodeconfig.html#cfn-groundstation-config-antennadownlinkdemoddecodeconfig-demodulationconfig)
+       */
       override fun demodulationConfig(): Any? = unwrap(this).getDemodulationConfig()
 
+      /**
+       * Defines the spectrum configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-antennadownlinkdemoddecodeconfig.html#cfn-groundstation-config-antennadownlinkdemoddecodeconfig-spectrumconfig)
+       */
       override fun spectrumConfig(): Any? = unwrap(this).getSpectrumConfig()
     }
 
@@ -878,9 +1757,19 @@ public open class CfnConfig internal constructor(
   }
 
   public interface DemodulationConfigProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-demodulationconfig.html#cfn-groundstation-config-demodulationconfig-unvalidatedjson)
+     */
     public fun unvalidatedJson(): String? = unwrap(this).getUnvalidatedJson()
 
+    /**
+     * A builder for [DemodulationConfigProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param unvalidatedJson the value to be set.
+       */
       public fun unvalidatedJson(unvalidatedJson: String)
     }
 
@@ -890,6 +1779,9 @@ public open class CfnConfig internal constructor(
           =
           software.amazon.awscdk.services.groundstation.CfnConfig.DemodulationConfigProperty.builder()
 
+      /**
+       * @param unvalidatedJson the value to be set.
+       */
       override fun unvalidatedJson(unvalidatedJson: String) {
         cdkBuilder.unvalidatedJson(unvalidatedJson)
       }
@@ -903,6 +1795,9 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.DemodulationConfigProperty,
     ) : DemodulationConfigProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-demodulationconfig.html#cfn-groundstation-config-demodulationconfig-unvalidatedjson)
+       */
       override fun unvalidatedJson(): String? = unwrap(this).getUnvalidatedJson()
     }
 
@@ -927,13 +1822,31 @@ public open class CfnConfig internal constructor(
   }
 
   public interface AntennaDownlinkConfigProperty {
+    /**
+     * Defines the spectrum configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-antennadownlinkconfig.html#cfn-groundstation-config-antennadownlinkconfig-spectrumconfig)
+     */
     public fun spectrumConfig(): Any? = unwrap(this).getSpectrumConfig()
 
+    /**
+     * A builder for [AntennaDownlinkConfigProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param spectrumConfig Defines the spectrum configuration.
+       */
       public fun spectrumConfig(spectrumConfig: IResolvable)
 
+      /**
+       * @param spectrumConfig Defines the spectrum configuration.
+       */
       public fun spectrumConfig(spectrumConfig: SpectrumConfigProperty)
 
+      /**
+       * @param spectrumConfig Defines the spectrum configuration.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e6b5683f44729ff20d9fefa85e712c39f52d7130711aadca8f83422b35d01ae3")
       public fun spectrumConfig(spectrumConfig: SpectrumConfigProperty.Builder.() -> Unit)
@@ -945,14 +1858,23 @@ public open class CfnConfig internal constructor(
           =
           software.amazon.awscdk.services.groundstation.CfnConfig.AntennaDownlinkConfigProperty.builder()
 
+      /**
+       * @param spectrumConfig Defines the spectrum configuration.
+       */
       override fun spectrumConfig(spectrumConfig: IResolvable) {
         cdkBuilder.spectrumConfig(spectrumConfig.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param spectrumConfig Defines the spectrum configuration.
+       */
       override fun spectrumConfig(spectrumConfig: SpectrumConfigProperty) {
         cdkBuilder.spectrumConfig(spectrumConfig.let(SpectrumConfigProperty::unwrap))
       }
 
+      /**
+       * @param spectrumConfig Defines the spectrum configuration.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e6b5683f44729ff20d9fefa85e712c39f52d7130711aadca8f83422b35d01ae3")
       override fun spectrumConfig(spectrumConfig: SpectrumConfigProperty.Builder.() -> Unit): Unit =
@@ -967,6 +1889,11 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.AntennaDownlinkConfigProperty,
     ) : AntennaDownlinkConfigProperty {
+      /**
+       * Defines the spectrum configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-antennadownlinkconfig.html#cfn-groundstation-config-antennadownlinkconfig-spectrumconfig)
+       */
       override fun spectrumConfig(): Any? = unwrap(this).getSpectrumConfig()
     }
 
@@ -991,17 +1918,61 @@ public open class CfnConfig internal constructor(
   }
 
   public interface S3RecordingConfigProperty {
+    /**
+     * S3 Bucket where the data is written.
+     *
+     * The name of the S3 Bucket provided must begin with `aws-groundstation` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-s3recordingconfig.html#cfn-groundstation-config-s3recordingconfig-bucketarn)
+     */
     public fun bucketArn(): String? = unwrap(this).getBucketArn()
 
+    /**
+     * The prefix of the S3 data object.
+     *
+     * If you choose to use any optional keys for substitution, these values will be replaced with
+     * the corresponding information from your contact details. For example, a prefix of
+     * `{satellite_id}/{year}/{month}/{day}/` will replaced with `fake_satellite_id/2021/01/10/`
+     *
+     * *Optional keys for substitution* : `{satellite_id}` | `{config-name}` | `{config-id}` |
+     * `{year}` | `{month}` | `{day}`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-s3recordingconfig.html#cfn-groundstation-config-s3recordingconfig-prefix)
+     */
     public fun prefix(): String? = unwrap(this).getPrefix()
 
+    /**
+     * Defines the ARN of the role assumed for putting archives to S3.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-s3recordingconfig.html#cfn-groundstation-config-s3recordingconfig-rolearn)
+     */
     public fun roleArn(): String? = unwrap(this).getRoleArn()
 
+    /**
+     * A builder for [S3RecordingConfigProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param bucketArn S3 Bucket where the data is written.
+       * The name of the S3 Bucket provided must begin with `aws-groundstation` .
+       */
       public fun bucketArn(bucketArn: String)
 
+      /**
+       * @param prefix The prefix of the S3 data object.
+       * If you choose to use any optional keys for substitution, these values will be replaced with
+       * the corresponding information from your contact details. For example, a prefix of
+       * `{satellite_id}/{year}/{month}/{day}/` will replaced with `fake_satellite_id/2021/01/10/`
+       *
+       * *Optional keys for substitution* : `{satellite_id}` | `{config-name}` | `{config-id}` |
+       * `{year}` | `{month}` | `{day}`
+       */
       public fun prefix(prefix: String)
 
+      /**
+       * @param roleArn Defines the ARN of the role assumed for putting archives to S3.
+       */
       public fun roleArn(roleArn: String)
     }
 
@@ -1011,14 +1982,30 @@ public open class CfnConfig internal constructor(
           =
           software.amazon.awscdk.services.groundstation.CfnConfig.S3RecordingConfigProperty.builder()
 
+      /**
+       * @param bucketArn S3 Bucket where the data is written.
+       * The name of the S3 Bucket provided must begin with `aws-groundstation` .
+       */
       override fun bucketArn(bucketArn: String) {
         cdkBuilder.bucketArn(bucketArn)
       }
 
+      /**
+       * @param prefix The prefix of the S3 data object.
+       * If you choose to use any optional keys for substitution, these values will be replaced with
+       * the corresponding information from your contact details. For example, a prefix of
+       * `{satellite_id}/{year}/{month}/{day}/` will replaced with `fake_satellite_id/2021/01/10/`
+       *
+       * *Optional keys for substitution* : `{satellite_id}` | `{config-name}` | `{config-id}` |
+       * `{year}` | `{month}` | `{day}`
+       */
       override fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
       }
 
+      /**
+       * @param roleArn Defines the ARN of the role assumed for putting archives to S3.
+       */
       override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
@@ -1032,10 +2019,34 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.S3RecordingConfigProperty,
     ) : S3RecordingConfigProperty {
+      /**
+       * S3 Bucket where the data is written.
+       *
+       * The name of the S3 Bucket provided must begin with `aws-groundstation` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-s3recordingconfig.html#cfn-groundstation-config-s3recordingconfig-bucketarn)
+       */
       override fun bucketArn(): String? = unwrap(this).getBucketArn()
 
+      /**
+       * The prefix of the S3 data object.
+       *
+       * If you choose to use any optional keys for substitution, these values will be replaced with
+       * the corresponding information from your contact details. For example, a prefix of
+       * `{satellite_id}/{year}/{month}/{day}/` will replaced with `fake_satellite_id/2021/01/10/`
+       *
+       * *Optional keys for substitution* : `{satellite_id}` | `{config-name}` | `{config-id}` |
+       * `{year}` | `{month}` | `{day}`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-s3recordingconfig.html#cfn-groundstation-config-s3recordingconfig-prefix)
+       */
       override fun prefix(): String? = unwrap(this).getPrefix()
 
+      /**
+       * Defines the ARN of the role assumed for putting archives to S3.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-s3recordingconfig.html#cfn-groundstation-config-s3recordingconfig-rolearn)
+       */
       override fun roleArn(): String? = unwrap(this).getRoleArn()
     }
 
@@ -1060,15 +2071,39 @@ public open class CfnConfig internal constructor(
   }
 
   public interface UplinkEchoConfigProperty {
+    /**
+     * Defines the ARN of the uplink config to echo back to a dataflow endpoint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-uplinkechoconfig.html#cfn-groundstation-config-uplinkechoconfig-antennauplinkconfigarn)
+     */
     public fun antennaUplinkConfigArn(): String? = unwrap(this).getAntennaUplinkConfigArn()
 
+    /**
+     * Whether or not uplink echo is enabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-uplinkechoconfig.html#cfn-groundstation-config-uplinkechoconfig-enabled)
+     */
     public fun enabled(): Any? = unwrap(this).getEnabled()
 
+    /**
+     * A builder for [UplinkEchoConfigProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param antennaUplinkConfigArn Defines the ARN of the uplink config to echo back to a
+       * dataflow endpoint.
+       */
       public fun antennaUplinkConfigArn(antennaUplinkConfigArn: String)
 
+      /**
+       * @param enabled Whether or not uplink echo is enabled.
+       */
       public fun enabled(enabled: Boolean)
 
+      /**
+       * @param enabled Whether or not uplink echo is enabled.
+       */
       public fun enabled(enabled: IResolvable)
     }
 
@@ -1077,14 +2112,24 @@ public open class CfnConfig internal constructor(
           software.amazon.awscdk.services.groundstation.CfnConfig.UplinkEchoConfigProperty.Builder =
           software.amazon.awscdk.services.groundstation.CfnConfig.UplinkEchoConfigProperty.builder()
 
+      /**
+       * @param antennaUplinkConfigArn Defines the ARN of the uplink config to echo back to a
+       * dataflow endpoint.
+       */
       override fun antennaUplinkConfigArn(antennaUplinkConfigArn: String) {
         cdkBuilder.antennaUplinkConfigArn(antennaUplinkConfigArn)
       }
 
+      /**
+       * @param enabled Whether or not uplink echo is enabled.
+       */
       override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
+      /**
+       * @param enabled Whether or not uplink echo is enabled.
+       */
       override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
       }
@@ -1098,8 +2143,18 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.UplinkEchoConfigProperty,
     ) : UplinkEchoConfigProperty {
+      /**
+       * Defines the ARN of the uplink config to echo back to a dataflow endpoint.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-uplinkechoconfig.html#cfn-groundstation-config-uplinkechoconfig-antennauplinkconfigarn)
+       */
       override fun antennaUplinkConfigArn(): String? = unwrap(this).getAntennaUplinkConfigArn()
 
+      /**
+       * Whether or not uplink echo is enabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-uplinkechoconfig.html#cfn-groundstation-config-uplinkechoconfig-enabled)
+       */
       override fun enabled(): Any? = unwrap(this).getEnabled()
     }
 
@@ -1124,29 +2179,100 @@ public open class CfnConfig internal constructor(
   }
 
   public interface SpectrumConfigProperty {
+    /**
+     * The bandwidth of the spectrum. AWS Ground Station currently has the following bandwidth
+     * limitations:.
+     *
+     * * For `AntennaDownlinkDemodDecodeconfig` , valid values are between 125 kHz to 650 MHz.
+     * * For `AntennaDownlinkconfig` , valid values are between 10 kHz to 54 MHz.
+     * * For `AntennaUplinkConfig` , valid values are between 10 kHz to 54 MHz.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-spectrumconfig.html#cfn-groundstation-config-spectrumconfig-bandwidth)
+     */
     public fun bandwidth(): Any? = unwrap(this).getBandwidth()
 
+    /**
+     * The center frequency of the spectrum.
+     *
+     * Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to 2120
+     * MHz for uplink.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-spectrumconfig.html#cfn-groundstation-config-spectrumconfig-centerfrequency)
+     */
     public fun centerFrequency(): Any? = unwrap(this).getCenterFrequency()
 
+    /**
+     * The polarization of the spectrum.
+     *
+     * Valid values are `"RIGHT_HAND"` and `"LEFT_HAND"` . Capturing both `"RIGHT_HAND"` and
+     * `"LEFT_HAND"` polarization requires two separate configs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-spectrumconfig.html#cfn-groundstation-config-spectrumconfig-polarization)
+     */
     public fun polarization(): String? = unwrap(this).getPolarization()
 
+    /**
+     * A builder for [SpectrumConfigProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param bandwidth The bandwidth of the spectrum. AWS Ground Station currently has the
+       * following bandwidth limitations:.
+       * * For `AntennaDownlinkDemodDecodeconfig` , valid values are between 125 kHz to 650 MHz.
+       * * For `AntennaDownlinkconfig` , valid values are between 10 kHz to 54 MHz.
+       * * For `AntennaUplinkConfig` , valid values are between 10 kHz to 54 MHz.
+       */
       public fun bandwidth(bandwidth: IResolvable)
 
+      /**
+       * @param bandwidth The bandwidth of the spectrum. AWS Ground Station currently has the
+       * following bandwidth limitations:.
+       * * For `AntennaDownlinkDemodDecodeconfig` , valid values are between 125 kHz to 650 MHz.
+       * * For `AntennaDownlinkconfig` , valid values are between 10 kHz to 54 MHz.
+       * * For `AntennaUplinkConfig` , valid values are between 10 kHz to 54 MHz.
+       */
       public fun bandwidth(bandwidth: FrequencyBandwidthProperty)
 
+      /**
+       * @param bandwidth The bandwidth of the spectrum. AWS Ground Station currently has the
+       * following bandwidth limitations:.
+       * * For `AntennaDownlinkDemodDecodeconfig` , valid values are between 125 kHz to 650 MHz.
+       * * For `AntennaDownlinkconfig` , valid values are between 10 kHz to 54 MHz.
+       * * For `AntennaUplinkConfig` , valid values are between 10 kHz to 54 MHz.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f86b6a696ee407f4e18ed6b8fa7d088c5cba74464613b1c99c83cb55ecc5e3b4")
       public fun bandwidth(bandwidth: FrequencyBandwidthProperty.Builder.() -> Unit)
 
+      /**
+       * @param centerFrequency The center frequency of the spectrum.
+       * Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to
+       * 2120 MHz for uplink.
+       */
       public fun centerFrequency(centerFrequency: IResolvable)
 
+      /**
+       * @param centerFrequency The center frequency of the spectrum.
+       * Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to
+       * 2120 MHz for uplink.
+       */
       public fun centerFrequency(centerFrequency: FrequencyProperty)
 
+      /**
+       * @param centerFrequency The center frequency of the spectrum.
+       * Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to
+       * 2120 MHz for uplink.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4fe26014ac8993be2915449f92c808ec5143605d29c7a43e98e914df410af126")
       public fun centerFrequency(centerFrequency: FrequencyProperty.Builder.() -> Unit)
 
+      /**
+       * @param polarization The polarization of the spectrum.
+       * Valid values are `"RIGHT_HAND"` and `"LEFT_HAND"` . Capturing both `"RIGHT_HAND"` and
+       * `"LEFT_HAND"` polarization requires two separate configs.
+       */
       public fun polarization(polarization: String)
     }
 
@@ -1155,32 +2281,73 @@ public open class CfnConfig internal constructor(
           software.amazon.awscdk.services.groundstation.CfnConfig.SpectrumConfigProperty.Builder =
           software.amazon.awscdk.services.groundstation.CfnConfig.SpectrumConfigProperty.builder()
 
+      /**
+       * @param bandwidth The bandwidth of the spectrum. AWS Ground Station currently has the
+       * following bandwidth limitations:.
+       * * For `AntennaDownlinkDemodDecodeconfig` , valid values are between 125 kHz to 650 MHz.
+       * * For `AntennaDownlinkconfig` , valid values are between 10 kHz to 54 MHz.
+       * * For `AntennaUplinkConfig` , valid values are between 10 kHz to 54 MHz.
+       */
       override fun bandwidth(bandwidth: IResolvable) {
         cdkBuilder.bandwidth(bandwidth.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param bandwidth The bandwidth of the spectrum. AWS Ground Station currently has the
+       * following bandwidth limitations:.
+       * * For `AntennaDownlinkDemodDecodeconfig` , valid values are between 125 kHz to 650 MHz.
+       * * For `AntennaDownlinkconfig` , valid values are between 10 kHz to 54 MHz.
+       * * For `AntennaUplinkConfig` , valid values are between 10 kHz to 54 MHz.
+       */
       override fun bandwidth(bandwidth: FrequencyBandwidthProperty) {
         cdkBuilder.bandwidth(bandwidth.let(FrequencyBandwidthProperty::unwrap))
       }
 
+      /**
+       * @param bandwidth The bandwidth of the spectrum. AWS Ground Station currently has the
+       * following bandwidth limitations:.
+       * * For `AntennaDownlinkDemodDecodeconfig` , valid values are between 125 kHz to 650 MHz.
+       * * For `AntennaDownlinkconfig` , valid values are between 10 kHz to 54 MHz.
+       * * For `AntennaUplinkConfig` , valid values are between 10 kHz to 54 MHz.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f86b6a696ee407f4e18ed6b8fa7d088c5cba74464613b1c99c83cb55ecc5e3b4")
       override fun bandwidth(bandwidth: FrequencyBandwidthProperty.Builder.() -> Unit): Unit =
           bandwidth(FrequencyBandwidthProperty(bandwidth))
 
+      /**
+       * @param centerFrequency The center frequency of the spectrum.
+       * Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to
+       * 2120 MHz for uplink.
+       */
       override fun centerFrequency(centerFrequency: IResolvable) {
         cdkBuilder.centerFrequency(centerFrequency.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param centerFrequency The center frequency of the spectrum.
+       * Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to
+       * 2120 MHz for uplink.
+       */
       override fun centerFrequency(centerFrequency: FrequencyProperty) {
         cdkBuilder.centerFrequency(centerFrequency.let(FrequencyProperty::unwrap))
       }
 
+      /**
+       * @param centerFrequency The center frequency of the spectrum.
+       * Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to
+       * 2120 MHz for uplink.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4fe26014ac8993be2915449f92c808ec5143605d29c7a43e98e914df410af126")
       override fun centerFrequency(centerFrequency: FrequencyProperty.Builder.() -> Unit): Unit =
           centerFrequency(FrequencyProperty(centerFrequency))
 
+      /**
+       * @param polarization The polarization of the spectrum.
+       * Valid values are `"RIGHT_HAND"` and `"LEFT_HAND"` . Capturing both `"RIGHT_HAND"` and
+       * `"LEFT_HAND"` polarization requires two separate configs.
+       */
       override fun polarization(polarization: String) {
         cdkBuilder.polarization(polarization)
       }
@@ -1194,10 +2361,36 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.SpectrumConfigProperty,
     ) : SpectrumConfigProperty {
+      /**
+       * The bandwidth of the spectrum. AWS Ground Station currently has the following bandwidth
+       * limitations:.
+       *
+       * * For `AntennaDownlinkDemodDecodeconfig` , valid values are between 125 kHz to 650 MHz.
+       * * For `AntennaDownlinkconfig` , valid values are between 10 kHz to 54 MHz.
+       * * For `AntennaUplinkConfig` , valid values are between 10 kHz to 54 MHz.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-spectrumconfig.html#cfn-groundstation-config-spectrumconfig-bandwidth)
+       */
       override fun bandwidth(): Any? = unwrap(this).getBandwidth()
 
+      /**
+       * The center frequency of the spectrum.
+       *
+       * Valid values are between 2200 to 2300 MHz and 7750 to 8400 MHz for downlink and 2025 to
+       * 2120 MHz for uplink.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-spectrumconfig.html#cfn-groundstation-config-spectrumconfig-centerfrequency)
+       */
       override fun centerFrequency(): Any? = unwrap(this).getCenterFrequency()
 
+      /**
+       * The polarization of the spectrum.
+       *
+       * Valid values are `"RIGHT_HAND"` and `"LEFT_HAND"` . Capturing both `"RIGHT_HAND"` and
+       * `"LEFT_HAND"` polarization requires two separate configs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-spectrumconfig.html#cfn-groundstation-config-spectrumconfig-polarization)
+       */
       override fun polarization(): String? = unwrap(this).getPolarization()
     }
 
@@ -1222,31 +2415,82 @@ public open class CfnConfig internal constructor(
   }
 
   public interface AntennaUplinkConfigProperty {
+    /**
+     * Defines the spectrum configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-antennauplinkconfig.html#cfn-groundstation-config-antennauplinkconfig-spectrumconfig)
+     */
     public fun spectrumConfig(): Any? = unwrap(this).getSpectrumConfig()
 
+    /**
+     * The equivalent isotropically radiated power (EIRP) to use for uplink transmissions.
+     *
+     * Valid values are between 20.0 to 50.0 dBW.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-antennauplinkconfig.html#cfn-groundstation-config-antennauplinkconfig-targeteirp)
+     */
     public fun targetEirp(): Any? = unwrap(this).getTargetEirp()
 
+    /**
+     * Whether or not uplink transmit is disabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-antennauplinkconfig.html#cfn-groundstation-config-antennauplinkconfig-transmitdisabled)
+     */
     public fun transmitDisabled(): Any? = unwrap(this).getTransmitDisabled()
 
+    /**
+     * A builder for [AntennaUplinkConfigProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param spectrumConfig Defines the spectrum configuration.
+       */
       public fun spectrumConfig(spectrumConfig: IResolvable)
 
+      /**
+       * @param spectrumConfig Defines the spectrum configuration.
+       */
       public fun spectrumConfig(spectrumConfig: UplinkSpectrumConfigProperty)
 
+      /**
+       * @param spectrumConfig Defines the spectrum configuration.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dea05ab978fd04ba084abfba00bf59ebfbef118fee29ca1b9ff8785385774e84")
       public fun spectrumConfig(spectrumConfig: UplinkSpectrumConfigProperty.Builder.() -> Unit)
 
+      /**
+       * @param targetEirp The equivalent isotropically radiated power (EIRP) to use for uplink
+       * transmissions.
+       * Valid values are between 20.0 to 50.0 dBW.
+       */
       public fun targetEirp(targetEirp: IResolvable)
 
+      /**
+       * @param targetEirp The equivalent isotropically radiated power (EIRP) to use for uplink
+       * transmissions.
+       * Valid values are between 20.0 to 50.0 dBW.
+       */
       public fun targetEirp(targetEirp: EirpProperty)
 
+      /**
+       * @param targetEirp The equivalent isotropically radiated power (EIRP) to use for uplink
+       * transmissions.
+       * Valid values are between 20.0 to 50.0 dBW.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("feefa4f5b0ff7258c3c5a4c739c2e1924d755d513639600e6a72ac97c904e03e")
       public fun targetEirp(targetEirp: EirpProperty.Builder.() -> Unit)
 
+      /**
+       * @param transmitDisabled Whether or not uplink transmit is disabled.
+       */
       public fun transmitDisabled(transmitDisabled: Boolean)
 
+      /**
+       * @param transmitDisabled Whether or not uplink transmit is disabled.
+       */
       public fun transmitDisabled(transmitDisabled: IResolvable)
     }
 
@@ -1256,36 +2500,66 @@ public open class CfnConfig internal constructor(
           =
           software.amazon.awscdk.services.groundstation.CfnConfig.AntennaUplinkConfigProperty.builder()
 
+      /**
+       * @param spectrumConfig Defines the spectrum configuration.
+       */
       override fun spectrumConfig(spectrumConfig: IResolvable) {
         cdkBuilder.spectrumConfig(spectrumConfig.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param spectrumConfig Defines the spectrum configuration.
+       */
       override fun spectrumConfig(spectrumConfig: UplinkSpectrumConfigProperty) {
         cdkBuilder.spectrumConfig(spectrumConfig.let(UplinkSpectrumConfigProperty::unwrap))
       }
 
+      /**
+       * @param spectrumConfig Defines the spectrum configuration.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("dea05ab978fd04ba084abfba00bf59ebfbef118fee29ca1b9ff8785385774e84")
       override fun spectrumConfig(spectrumConfig: UplinkSpectrumConfigProperty.Builder.() -> Unit):
           Unit = spectrumConfig(UplinkSpectrumConfigProperty(spectrumConfig))
 
+      /**
+       * @param targetEirp The equivalent isotropically radiated power (EIRP) to use for uplink
+       * transmissions.
+       * Valid values are between 20.0 to 50.0 dBW.
+       */
       override fun targetEirp(targetEirp: IResolvable) {
         cdkBuilder.targetEirp(targetEirp.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param targetEirp The equivalent isotropically radiated power (EIRP) to use for uplink
+       * transmissions.
+       * Valid values are between 20.0 to 50.0 dBW.
+       */
       override fun targetEirp(targetEirp: EirpProperty) {
         cdkBuilder.targetEirp(targetEirp.let(EirpProperty::unwrap))
       }
 
+      /**
+       * @param targetEirp The equivalent isotropically radiated power (EIRP) to use for uplink
+       * transmissions.
+       * Valid values are between 20.0 to 50.0 dBW.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("feefa4f5b0ff7258c3c5a4c739c2e1924d755d513639600e6a72ac97c904e03e")
       override fun targetEirp(targetEirp: EirpProperty.Builder.() -> Unit): Unit =
           targetEirp(EirpProperty(targetEirp))
 
+      /**
+       * @param transmitDisabled Whether or not uplink transmit is disabled.
+       */
       override fun transmitDisabled(transmitDisabled: Boolean) {
         cdkBuilder.transmitDisabled(transmitDisabled)
       }
 
+      /**
+       * @param transmitDisabled Whether or not uplink transmit is disabled.
+       */
       override fun transmitDisabled(transmitDisabled: IResolvable) {
         cdkBuilder.transmitDisabled(transmitDisabled.let(IResolvable::unwrap))
       }
@@ -1299,10 +2573,27 @@ public open class CfnConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.groundstation.CfnConfig.AntennaUplinkConfigProperty,
     ) : AntennaUplinkConfigProperty {
+      /**
+       * Defines the spectrum configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-antennauplinkconfig.html#cfn-groundstation-config-antennauplinkconfig-spectrumconfig)
+       */
       override fun spectrumConfig(): Any? = unwrap(this).getSpectrumConfig()
 
+      /**
+       * The equivalent isotropically radiated power (EIRP) to use for uplink transmissions.
+       *
+       * Valid values are between 20.0 to 50.0 dBW.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-antennauplinkconfig.html#cfn-groundstation-config-antennauplinkconfig-targeteirp)
+       */
       override fun targetEirp(): Any? = unwrap(this).getTargetEirp()
 
+      /**
+       * Whether or not uplink transmit is disabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-groundstation-config-antennauplinkconfig.html#cfn-groundstation-config-antennauplinkconfig-transmitdisabled)
+       */
       override fun transmitDisabled(): Any? = unwrap(this).getTransmitDisabled()
     }
 

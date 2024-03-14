@@ -1,16 +1,36 @@
 package io.cloudshiftdev.awscdk.services.synthetics
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface CustomTestOptions {
+  /**
+   * The code of the canary script.
+   */
   public fun code(): Code
 
+  /**
+   * The handler for the code.
+   *
+   * Must end with `.handler`.
+   */
   public fun handler(): String
 
+  /**
+   * A builder for [CustomTestOptions]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param code The code of the canary script. 
+     */
     public fun code(code: Code)
 
+    /**
+     * @param handler The handler for the code. 
+     * Must end with `.handler`.
+     */
     public fun handler(handler: String)
   }
 
@@ -18,10 +38,17 @@ public interface CustomTestOptions {
     private val cdkBuilder: software.amazon.awscdk.services.synthetics.CustomTestOptions.Builder =
         software.amazon.awscdk.services.synthetics.CustomTestOptions.builder()
 
+    /**
+     * @param code The code of the canary script. 
+     */
     override fun code(code: Code) {
       cdkBuilder.code(code.let(Code::unwrap))
     }
 
+    /**
+     * @param handler The handler for the code. 
+     * Must end with `.handler`.
+     */
     override fun handler(handler: String) {
       cdkBuilder.handler(handler)
     }
@@ -33,8 +60,16 @@ public interface CustomTestOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.synthetics.CustomTestOptions,
   ) : CustomTestOptions {
+    /**
+     * The code of the canary script.
+     */
     override fun code(): Code = unwrap(this).getCode().let(Code::wrap)
 
+    /**
+     * The handler for the code.
+     *
+     * Must end with `.handler`.
+     */
     override fun handler(): String = unwrap(this).getHandler()
   }
 

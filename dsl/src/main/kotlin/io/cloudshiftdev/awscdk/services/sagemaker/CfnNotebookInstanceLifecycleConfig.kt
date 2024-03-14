@@ -4,6 +4,7 @@ import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -15,59 +16,169 @@ public open class CfnNotebookInstanceLifecycleConfig internal constructor(
   private val cdkObject:
       software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig,
 ) : CfnResource(cdkObject), IInspectable {
+  /**
+   *
+   */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
+  /**
+   * The name of the lifecycle configuration, such as `MyLifecycleConfig` .
+   */
   public open fun attrNotebookInstanceLifecycleConfigName(): String =
       unwrap(this).getAttrNotebookInstanceLifecycleConfigName()
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * The name of the lifecycle configuration.
+   */
   public open fun notebookInstanceLifecycleConfigName(): String? =
       unwrap(this).getNotebookInstanceLifecycleConfigName()
 
+  /**
+   * The name of the lifecycle configuration.
+   */
   public open fun notebookInstanceLifecycleConfigName(`value`: String) {
     unwrap(this).setNotebookInstanceLifecycleConfigName(`value`)
   }
 
+  /**
+   * A shell script that runs only once, when you create a notebook instance.
+   */
   public open fun onCreate(): Any? = unwrap(this).getOnCreate()
 
+  /**
+   * A shell script that runs only once, when you create a notebook instance.
+   */
   public open fun onCreate(`value`: IResolvable) {
     unwrap(this).setOnCreate(`value`.let(IResolvable::unwrap))
   }
 
+  /**
+   * A shell script that runs only once, when you create a notebook instance.
+   */
   public open fun onCreate(__idx_ac66f0: List<Any>) {
     unwrap(this).setOnCreate(__idx_ac66f0)
   }
 
+  /**
+   * A shell script that runs only once, when you create a notebook instance.
+   */
   public open fun onCreate(vararg __idx_ac66f0: Any): Unit = onCreate(__idx_ac66f0.toList())
 
+  /**
+   * A shell script that runs every time you start a notebook instance, including when you create
+   * the notebook instance.
+   */
   public open fun onStart(): Any? = unwrap(this).getOnStart()
 
+  /**
+   * A shell script that runs every time you start a notebook instance, including when you create
+   * the notebook instance.
+   */
   public open fun onStart(`value`: IResolvable) {
     unwrap(this).setOnStart(`value`.let(IResolvable::unwrap))
   }
 
+  /**
+   * A shell script that runs every time you start a notebook instance, including when you create
+   * the notebook instance.
+   */
   public open fun onStart(__idx_ac66f0: List<Any>) {
     unwrap(this).setOnStart(__idx_ac66f0)
   }
 
+  /**
+   * A shell script that runs every time you start a notebook instance, including when you create
+   * the notebook instance.
+   */
   public open fun onStart(vararg __idx_ac66f0: Any): Unit = onStart(__idx_ac66f0.toList())
 
+  /**
+   * A fluent builder for
+   * [io.cloudshiftdev.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * The name of the lifecycle configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecycleconfigname)
+     * @param notebookInstanceLifecycleConfigName The name of the lifecycle configuration. 
+     */
     public fun notebookInstanceLifecycleConfigName(notebookInstanceLifecycleConfigName: String)
 
+    /**
+     * A shell script that runs only once, when you create a notebook instance.
+     *
+     * The shell script must be a base64-encoded string.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-oncreate)
+     * @param onCreate A shell script that runs only once, when you create a notebook instance. 
+     */
     public fun onCreate(onCreate: IResolvable)
 
+    /**
+     * A shell script that runs only once, when you create a notebook instance.
+     *
+     * The shell script must be a base64-encoded string.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-oncreate)
+     * @param onCreate A shell script that runs only once, when you create a notebook instance. 
+     */
     public fun onCreate(onCreate: List<Any>)
 
+    /**
+     * A shell script that runs only once, when you create a notebook instance.
+     *
+     * The shell script must be a base64-encoded string.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-oncreate)
+     * @param onCreate A shell script that runs only once, when you create a notebook instance. 
+     */
     public fun onCreate(vararg onCreate: Any)
 
+    /**
+     * A shell script that runs every time you start a notebook instance, including when you create
+     * the notebook instance.
+     *
+     * The shell script must be a base64-encoded string.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-onstart)
+     * @param onStart A shell script that runs every time you start a notebook instance, including
+     * when you create the notebook instance. 
+     */
     public fun onStart(onStart: IResolvable)
 
+    /**
+     * A shell script that runs every time you start a notebook instance, including when you create
+     * the notebook instance.
+     *
+     * The shell script must be a base64-encoded string.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-onstart)
+     * @param onStart A shell script that runs every time you start a notebook instance, including
+     * when you create the notebook instance. 
+     */
     public fun onStart(onStart: List<Any>)
 
+    /**
+     * A shell script that runs every time you start a notebook instance, including when you create
+     * the notebook instance.
+     *
+     * The shell script must be a base64-encoded string.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-onstart)
+     * @param onStart A shell script that runs every time you start a notebook instance, including
+     * when you create the notebook instance. 
+     */
     public fun onStart(vararg onStart: Any)
   }
 
@@ -80,28 +191,88 @@ public open class CfnNotebookInstanceLifecycleConfig internal constructor(
         software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig.Builder.create(scope,
         id)
 
+    /**
+     * The name of the lifecycle configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecycleconfigname)
+     * @param notebookInstanceLifecycleConfigName The name of the lifecycle configuration. 
+     */
     override fun notebookInstanceLifecycleConfigName(notebookInstanceLifecycleConfigName: String) {
       cdkBuilder.notebookInstanceLifecycleConfigName(notebookInstanceLifecycleConfigName)
     }
 
+    /**
+     * A shell script that runs only once, when you create a notebook instance.
+     *
+     * The shell script must be a base64-encoded string.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-oncreate)
+     * @param onCreate A shell script that runs only once, when you create a notebook instance. 
+     */
     override fun onCreate(onCreate: IResolvable) {
       cdkBuilder.onCreate(onCreate.let(IResolvable::unwrap))
     }
 
+    /**
+     * A shell script that runs only once, when you create a notebook instance.
+     *
+     * The shell script must be a base64-encoded string.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-oncreate)
+     * @param onCreate A shell script that runs only once, when you create a notebook instance. 
+     */
     override fun onCreate(onCreate: List<Any>) {
       cdkBuilder.onCreate(onCreate)
     }
 
+    /**
+     * A shell script that runs only once, when you create a notebook instance.
+     *
+     * The shell script must be a base64-encoded string.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-oncreate)
+     * @param onCreate A shell script that runs only once, when you create a notebook instance. 
+     */
     override fun onCreate(vararg onCreate: Any): Unit = onCreate(onCreate.toList())
 
+    /**
+     * A shell script that runs every time you start a notebook instance, including when you create
+     * the notebook instance.
+     *
+     * The shell script must be a base64-encoded string.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-onstart)
+     * @param onStart A shell script that runs every time you start a notebook instance, including
+     * when you create the notebook instance. 
+     */
     override fun onStart(onStart: IResolvable) {
       cdkBuilder.onStart(onStart.let(IResolvable::unwrap))
     }
 
+    /**
+     * A shell script that runs every time you start a notebook instance, including when you create
+     * the notebook instance.
+     *
+     * The shell script must be a base64-encoded string.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-onstart)
+     * @param onStart A shell script that runs every time you start a notebook instance, including
+     * when you create the notebook instance. 
+     */
     override fun onStart(onStart: List<Any>) {
       cdkBuilder.onStart(onStart)
     }
 
+    /**
+     * A shell script that runs every time you start a notebook instance, including when you create
+     * the notebook instance.
+     *
+     * The shell script must be a base64-encoded string.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-onstart)
+     * @param onStart A shell script that runs every time you start a notebook instance, including
+     * when you create the notebook instance. 
+     */
     override fun onStart(vararg onStart: Any): Unit = onStart(onStart.toList())
 
     public fun build(): software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig
@@ -132,9 +303,23 @@ public open class CfnNotebookInstanceLifecycleConfig internal constructor(
   }
 
   public interface NotebookInstanceLifecycleHookProperty {
+    /**
+     * A base64-encoded string that contains a shell script for a notebook instance lifecycle
+     * configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.html#cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook-content)
+     */
     public fun content(): String? = unwrap(this).getContent()
 
+    /**
+     * A builder for [NotebookInstanceLifecycleHookProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param content A base64-encoded string that contains a shell script for a notebook instance
+       * lifecycle configuration.
+       */
       public fun content(content: String)
     }
 
@@ -144,6 +329,10 @@ public open class CfnNotebookInstanceLifecycleConfig internal constructor(
           =
           software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig.NotebookInstanceLifecycleHookProperty.builder()
 
+      /**
+       * @param content A base64-encoded string that contains a shell script for a notebook instance
+       * lifecycle configuration.
+       */
       override fun content(content: String) {
         cdkBuilder.content(content)
       }
@@ -157,6 +346,12 @@ public open class CfnNotebookInstanceLifecycleConfig internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig.NotebookInstanceLifecycleHookProperty,
     ) : NotebookInstanceLifecycleHookProperty {
+      /**
+       * A base64-encoded string that contains a shell script for a notebook instance lifecycle
+       * configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook.html#cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecyclehook-content)
+       */
       override fun content(): String? = unwrap(this).getContent()
     }
 

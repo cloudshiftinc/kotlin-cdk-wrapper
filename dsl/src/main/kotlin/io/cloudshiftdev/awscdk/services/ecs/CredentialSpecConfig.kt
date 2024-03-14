@@ -1,16 +1,33 @@
 package io.cloudshiftdev.awscdk.services.ecs
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface CredentialSpecConfig {
+  /**
+   * Location of the CredSpec file.
+   */
   public fun location(): String
 
+  /**
+   * Prefix used for the CredSpec string.
+   */
   public fun typePrefix(): String
 
+  /**
+   * A builder for [CredentialSpecConfig]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param location Location of the CredSpec file. 
+     */
     public fun location(location: String)
 
+    /**
+     * @param typePrefix Prefix used for the CredSpec string. 
+     */
     public fun typePrefix(typePrefix: String)
   }
 
@@ -18,10 +35,16 @@ public interface CredentialSpecConfig {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.CredentialSpecConfig.Builder =
         software.amazon.awscdk.services.ecs.CredentialSpecConfig.builder()
 
+    /**
+     * @param location Location of the CredSpec file. 
+     */
     override fun location(location: String) {
       cdkBuilder.location(location)
     }
 
+    /**
+     * @param typePrefix Prefix used for the CredSpec string. 
+     */
     override fun typePrefix(typePrefix: String) {
       cdkBuilder.typePrefix(typePrefix)
     }
@@ -33,8 +56,14 @@ public interface CredentialSpecConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.CredentialSpecConfig,
   ) : CredentialSpecConfig {
+    /**
+     * Location of the CredSpec file.
+     */
     override fun location(): String = unwrap(this).getLocation()
 
+    /**
+     * Prefix used for the CredSpec string.
+     */
     override fun typePrefix(): String = unwrap(this).getTypePrefix()
   }
 

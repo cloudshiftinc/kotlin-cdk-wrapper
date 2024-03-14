@@ -1,16 +1,53 @@
 package io.cloudshiftdev.awscdk.services.ecs
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface AuthorizationConfig {
+  /**
+   * The access point ID to use.
+   *
+   * If an access point is specified, the root directory value will be
+   * relative to the directory set for the access point.
+   * If specified, transit encryption must be enabled in the EFSVolumeConfiguration.
+   *
+   * Default: No id
+   */
   public fun accessPointId(): String? = unwrap(this).getAccessPointId()
 
+  /**
+   * Whether or not to use the Amazon ECS task IAM role defined in a task definition when mounting
+   * the Amazon EFS file system.
+   *
+   * If enabled, transit encryption must be enabled in the EFSVolumeConfiguration.
+   *
+   * Valid values: ENABLED | DISABLED
+   *
+   * Default: If this parameter is omitted, the default value of DISABLED is used.
+   */
   public fun iam(): String? = unwrap(this).getIam()
 
+  /**
+   * A builder for [AuthorizationConfig]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param accessPointId The access point ID to use.
+     * If an access point is specified, the root directory value will be
+     * relative to the directory set for the access point.
+     * If specified, transit encryption must be enabled in the EFSVolumeConfiguration.
+     */
     public fun accessPointId(accessPointId: String)
 
+    /**
+     * @param iam Whether or not to use the Amazon ECS task IAM role defined in a task definition
+     * when mounting the Amazon EFS file system.
+     * If enabled, transit encryption must be enabled in the EFSVolumeConfiguration.
+     *
+     * Valid values: ENABLED | DISABLED
+     */
     public fun iam(iam: String)
   }
 
@@ -18,10 +55,23 @@ public interface AuthorizationConfig {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.AuthorizationConfig.Builder =
         software.amazon.awscdk.services.ecs.AuthorizationConfig.builder()
 
+    /**
+     * @param accessPointId The access point ID to use.
+     * If an access point is specified, the root directory value will be
+     * relative to the directory set for the access point.
+     * If specified, transit encryption must be enabled in the EFSVolumeConfiguration.
+     */
     override fun accessPointId(accessPointId: String) {
       cdkBuilder.accessPointId(accessPointId)
     }
 
+    /**
+     * @param iam Whether or not to use the Amazon ECS task IAM role defined in a task definition
+     * when mounting the Amazon EFS file system.
+     * If enabled, transit encryption must be enabled in the EFSVolumeConfiguration.
+     *
+     * Valid values: ENABLED | DISABLED
+     */
     override fun iam(iam: String) {
       cdkBuilder.iam(iam)
     }
@@ -32,8 +82,27 @@ public interface AuthorizationConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ecs.AuthorizationConfig,
   ) : AuthorizationConfig {
+    /**
+     * The access point ID to use.
+     *
+     * If an access point is specified, the root directory value will be
+     * relative to the directory set for the access point.
+     * If specified, transit encryption must be enabled in the EFSVolumeConfiguration.
+     *
+     * Default: No id
+     */
     override fun accessPointId(): String? = unwrap(this).getAccessPointId()
 
+    /**
+     * Whether or not to use the Amazon ECS task IAM role defined in a task definition when mounting
+     * the Amazon EFS file system.
+     *
+     * If enabled, transit encryption must be enabled in the EFSVolumeConfiguration.
+     *
+     * Valid values: ENABLED | DISABLED
+     *
+     * Default: If this parameter is omitted, the default value of DISABLED is used.
+     */
     override fun iam(): String? = unwrap(this).getIam()
   }
 

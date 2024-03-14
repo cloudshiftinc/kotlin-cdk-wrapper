@@ -7,49 +7,52 @@ import kotlin.String
 public open class CacheControl internal constructor(
   private val cdkObject: software.amazon.awscdk.services.s3.deployment.CacheControl,
 ) {
+  /**
+   * The raw cache control setting.
+   */
   public open fun `value`(): Any = unwrap(this).getValue()
 
   public companion object {
-    public open fun fromString(s: String): CacheControl =
+    public fun fromString(s: String): CacheControl =
         software.amazon.awscdk.services.s3.deployment.CacheControl.fromString(s).let(CacheControl::wrap)
 
-    public open fun immutable(): CacheControl =
+    public fun immutable(): CacheControl =
         software.amazon.awscdk.services.s3.deployment.CacheControl.immutable().let(CacheControl::wrap)
 
-    public open fun maxAge(t: Duration): CacheControl =
+    public fun maxAge(t: Duration): CacheControl =
         software.amazon.awscdk.services.s3.deployment.CacheControl.maxAge(t.let(Duration::unwrap)).let(CacheControl::wrap)
 
-    public open fun mustRevalidate(): CacheControl =
+    public fun mustRevalidate(): CacheControl =
         software.amazon.awscdk.services.s3.deployment.CacheControl.mustRevalidate().let(CacheControl::wrap)
 
-    public open fun mustUnderstand(): CacheControl =
+    public fun mustUnderstand(): CacheControl =
         software.amazon.awscdk.services.s3.deployment.CacheControl.mustUnderstand().let(CacheControl::wrap)
 
-    public open fun noCache(): CacheControl =
+    public fun noCache(): CacheControl =
         software.amazon.awscdk.services.s3.deployment.CacheControl.noCache().let(CacheControl::wrap)
 
-    public open fun noStore(): CacheControl =
+    public fun noStore(): CacheControl =
         software.amazon.awscdk.services.s3.deployment.CacheControl.noStore().let(CacheControl::wrap)
 
-    public open fun noTransform(): CacheControl =
+    public fun noTransform(): CacheControl =
         software.amazon.awscdk.services.s3.deployment.CacheControl.noTransform().let(CacheControl::wrap)
 
-    public open fun `private`(): CacheControl =
+    public fun `private`(): CacheControl =
         software.amazon.awscdk.services.s3.deployment.CacheControl.setPrivate().let(CacheControl::wrap)
 
-    public open fun proxyRevalidate(): CacheControl =
+    public fun proxyRevalidate(): CacheControl =
         software.amazon.awscdk.services.s3.deployment.CacheControl.proxyRevalidate().let(CacheControl::wrap)
 
-    public open fun `public`(): CacheControl =
+    public fun `public`(): CacheControl =
         software.amazon.awscdk.services.s3.deployment.CacheControl.setPublic().let(CacheControl::wrap)
 
-    public open fun sMaxAge(t: Duration): CacheControl =
+    public fun sMaxAge(t: Duration): CacheControl =
         software.amazon.awscdk.services.s3.deployment.CacheControl.sMaxAge(t.let(Duration::unwrap)).let(CacheControl::wrap)
 
-    public open fun staleIfError(t: Duration): CacheControl =
+    public fun staleIfError(t: Duration): CacheControl =
         software.amazon.awscdk.services.s3.deployment.CacheControl.staleIfError(t.let(Duration::unwrap)).let(CacheControl::wrap)
 
-    public open fun staleWhileRevalidate(t: Duration): CacheControl =
+    public fun staleWhileRevalidate(t: Duration): CacheControl =
         software.amazon.awscdk.services.s3.deployment.CacheControl.staleWhileRevalidate(t.let(Duration::unwrap)).let(CacheControl::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.deployment.CacheControl):

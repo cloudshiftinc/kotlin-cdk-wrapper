@@ -5,6 +5,9 @@ import kotlin.String
 public open class DataIdentifier internal constructor(
   private val cdkObject: software.amazon.awscdk.services.logs.DataIdentifier,
 ) {
+  /**
+   * * name of the identifier.
+   */
   public open fun name(): String = unwrap(this).getName()
 
   public companion object {

@@ -1,11 +1,22 @@
 package io.cloudshiftdev.awscdk.services.lambda
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Unit
 
 public interface DestinationOptions {
+  /**
+   * The destination type.
+   */
   public fun type(): DestinationType
 
+  /**
+   * A builder for [DestinationOptions]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param type The destination type. 
+     */
     public fun type(type: DestinationType)
   }
 
@@ -13,6 +24,9 @@ public interface DestinationOptions {
     private val cdkBuilder: software.amazon.awscdk.services.lambda.DestinationOptions.Builder =
         software.amazon.awscdk.services.lambda.DestinationOptions.builder()
 
+    /**
+     * @param type The destination type. 
+     */
     override fun type(type: DestinationType) {
       cdkBuilder.type(type.let(DestinationType::unwrap))
     }
@@ -24,6 +38,9 @@ public interface DestinationOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.DestinationOptions,
   ) : DestinationOptions {
+    /**
+     * The destination type.
+     */
     override fun type(): DestinationType = unwrap(this).getType().let(DestinationType::wrap)
   }
 

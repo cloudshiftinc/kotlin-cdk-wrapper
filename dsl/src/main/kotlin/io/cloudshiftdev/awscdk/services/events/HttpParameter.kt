@@ -11,10 +11,10 @@ public abstract class HttpParameter internal constructor(
   ) : HttpParameter(cdkObject)
 
   public companion object {
-    public open fun fromSecret(`value`: SecretValue): HttpParameter =
+    public fun fromSecret(`value`: SecretValue): HttpParameter =
         software.amazon.awscdk.services.events.HttpParameter.fromSecret(`value`.let(SecretValue::unwrap)).let(HttpParameter::wrap)
 
-    public open fun fromString(`value`: String): HttpParameter =
+    public fun fromString(`value`: String): HttpParameter =
         software.amazon.awscdk.services.events.HttpParameter.fromString(`value`).let(HttpParameter::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.HttpParameter):

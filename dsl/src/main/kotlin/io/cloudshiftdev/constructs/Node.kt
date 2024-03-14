@@ -104,7 +104,7 @@ public open class Node internal constructor(
 
   public companion object {
     @Deprecated(message = "deprecated in CDK")
-    public open fun of(construct: IConstruct): Node =
+    public fun of(construct: IConstruct): Node =
         software.constructs.Node.of(construct.let(IConstruct::unwrap)).let(Node::wrap)
 
     internal fun wrap(cdkObject: software.constructs.Node): Node = Node(cdkObject)

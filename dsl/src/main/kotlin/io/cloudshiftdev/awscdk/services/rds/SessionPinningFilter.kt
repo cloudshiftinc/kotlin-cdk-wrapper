@@ -5,10 +5,13 @@ import kotlin.String
 public open class SessionPinningFilter internal constructor(
   private val cdkObject: software.amazon.awscdk.services.rds.SessionPinningFilter,
 ) {
+  /**
+   * Filter name.
+   */
   public open fun filterName(): String = unwrap(this).getFilterName()
 
   public companion object {
-    public open fun of(filterName: String): SessionPinningFilter =
+    public fun of(filterName: String): SessionPinningFilter =
         software.amazon.awscdk.services.rds.SessionPinningFilter.of(filterName).let(SessionPinningFilter::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.SessionPinningFilter):

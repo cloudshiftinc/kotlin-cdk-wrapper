@@ -13,18 +13,18 @@ public abstract class UserPoolEmail internal constructor(
   ) : UserPoolEmail(cdkObject)
 
   public companion object {
-    public open fun withCognito(): UserPoolEmail =
+    public fun withCognito(): UserPoolEmail =
         software.amazon.awscdk.services.cognito.UserPoolEmail.withCognito().let(UserPoolEmail::wrap)
 
-    public open fun withCognito(replyTo: String): UserPoolEmail =
+    public fun withCognito(replyTo: String): UserPoolEmail =
         software.amazon.awscdk.services.cognito.UserPoolEmail.withCognito(replyTo).let(UserPoolEmail::wrap)
 
-    public open fun withSes(options: UserPoolSESOptions): UserPoolEmail =
+    public fun withSes(options: UserPoolSESOptions): UserPoolEmail =
         software.amazon.awscdk.services.cognito.UserPoolEmail.withSES(options.let(UserPoolSESOptions::unwrap)).let(UserPoolEmail::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("936601e098b55fdc321a4be6ec6742fa825f535416e14399c65ae36e1d5754de")
-    public open fun withSes(options: UserPoolSESOptions.Builder.() -> Unit): UserPoolEmail =
+    public fun withSes(options: UserPoolSESOptions.Builder.() -> Unit): UserPoolEmail =
         withSes(UserPoolSESOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.UserPoolEmail):

@@ -1,16 +1,33 @@
 package io.cloudshiftdev.awscdk.services.route53
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface HostedZoneAttributes {
+  /**
+   * Identifier of the hosted zone.
+   */
   public fun hostedZoneId(): String
 
+  /**
+   * Name of the hosted zone.
+   */
   public fun zoneName(): String
 
+  /**
+   * A builder for [HostedZoneAttributes]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param hostedZoneId Identifier of the hosted zone. 
+     */
     public fun hostedZoneId(hostedZoneId: String)
 
+    /**
+     * @param zoneName Name of the hosted zone. 
+     */
     public fun zoneName(zoneName: String)
   }
 
@@ -18,10 +35,16 @@ public interface HostedZoneAttributes {
     private val cdkBuilder: software.amazon.awscdk.services.route53.HostedZoneAttributes.Builder =
         software.amazon.awscdk.services.route53.HostedZoneAttributes.builder()
 
+    /**
+     * @param hostedZoneId Identifier of the hosted zone. 
+     */
     override fun hostedZoneId(hostedZoneId: String) {
       cdkBuilder.hostedZoneId(hostedZoneId)
     }
 
+    /**
+     * @param zoneName Name of the hosted zone. 
+     */
     override fun zoneName(zoneName: String) {
       cdkBuilder.zoneName(zoneName)
     }
@@ -33,8 +56,14 @@ public interface HostedZoneAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.route53.HostedZoneAttributes,
   ) : HostedZoneAttributes {
+    /**
+     * Identifier of the hosted zone.
+     */
     override fun hostedZoneId(): String = unwrap(this).getHostedZoneId()
 
+    /**
+     * Name of the hosted zone.
+     */
     override fun zoneName(): String = unwrap(this).getZoneName()
   }
 

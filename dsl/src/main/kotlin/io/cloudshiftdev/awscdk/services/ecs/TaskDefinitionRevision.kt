@@ -6,10 +6,13 @@ import kotlin.String
 public open class TaskDefinitionRevision internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ecs.TaskDefinitionRevision,
 ) {
+  /**
+   * The string representation of this revision.
+   */
   public open fun revision(): String = unwrap(this).getRevision()
 
   public companion object {
-    public open fun of(revision: Number): TaskDefinitionRevision =
+    public fun of(revision: Number): TaskDefinitionRevision =
         software.amazon.awscdk.services.ecs.TaskDefinitionRevision.of(revision).let(TaskDefinitionRevision::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.TaskDefinitionRevision):

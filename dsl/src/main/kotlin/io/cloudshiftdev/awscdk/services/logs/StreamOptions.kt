@@ -1,12 +1,28 @@
 package io.cloudshiftdev.awscdk.services.logs
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface StreamOptions {
+  /**
+   * The name of the log stream to create.
+   *
+   * The name must be unique within the log group.
+   *
+   * Default: Automatically generated
+   */
   public fun logStreamName(): String? = unwrap(this).getLogStreamName()
 
+  /**
+   * A builder for [StreamOptions]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param logStreamName The name of the log stream to create.
+     * The name must be unique within the log group.
+     */
     public fun logStreamName(logStreamName: String)
   }
 
@@ -14,6 +30,10 @@ public interface StreamOptions {
     private val cdkBuilder: software.amazon.awscdk.services.logs.StreamOptions.Builder =
         software.amazon.awscdk.services.logs.StreamOptions.builder()
 
+    /**
+     * @param logStreamName The name of the log stream to create.
+     * The name must be unique within the log group.
+     */
     override fun logStreamName(logStreamName: String) {
       cdkBuilder.logStreamName(logStreamName)
     }
@@ -24,6 +44,13 @@ public interface StreamOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.logs.StreamOptions,
   ) : StreamOptions {
+    /**
+     * The name of the log stream to create.
+     *
+     * The name must be unique within the log group.
+     *
+     * Default: Automatically generated
+     */
     override fun logStreamName(): String? = unwrap(this).getLogStreamName()
   }
 

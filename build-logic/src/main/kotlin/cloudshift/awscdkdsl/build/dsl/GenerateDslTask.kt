@@ -1,7 +1,7 @@
 package cloudshift.awscdkdsl.build.dsl
 
 import cloudshift.awscdkdsl.build.dsl.asm.AsmClassLoader2
-import cloudshift.awscdkdsl.build.dsl.model.source.CdkSourceModel
+import cloudshift.awscdkdsl.build.dsl.model.type.WrapperTypeGenerator
 import com.squareup.kotlinpoet.AnnotationSpec
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.FileSpec
@@ -79,11 +79,11 @@ constructor(
 //        )
 
         logger.lifecycle("Parsing sources...")
-//        val cdkSourceModel = SourceParser.parse(sourcesDir)
-        val cdkSourceModel = CdkSourceModel(
-            classMap = emptyMap(),
-            classes = emptyList()
-        )
+        val cdkSourceModel = SourceParser.parse(sourcesDir)
+//        val cdkSourceModel = CdkSourceModel(
+//            classMap = emptyMap(),
+//            classes = emptyList()
+//        )
         logger.lifecycle("Sources: ${sources.get().map { it.name }}")
 
         logger.lifecycle("Loading AWS CDK classes from ${classpath.get()}")

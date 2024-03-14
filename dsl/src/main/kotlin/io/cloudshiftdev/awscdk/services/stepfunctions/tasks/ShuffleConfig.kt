@@ -1,12 +1,23 @@
 package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.Unit
 
 public interface ShuffleConfig {
+  /**
+   * Determines the shuffling order.
+   */
   public fun seed(): Number
 
+  /**
+   * A builder for [ShuffleConfig]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param seed Determines the shuffling order. 
+     */
     public fun seed(seed: Number)
   }
 
@@ -15,6 +26,9 @@ public interface ShuffleConfig {
         software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig.builder()
 
+    /**
+     * @param seed Determines the shuffling order. 
+     */
     override fun seed(seed: Number) {
       cdkBuilder.seed(seed)
     }
@@ -26,6 +40,9 @@ public interface ShuffleConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ShuffleConfig,
   ) : ShuffleConfig {
+    /**
+     * Determines the shuffling order.
+     */
     override fun seed(): Number = unwrap(this).getSeed()
   }
 

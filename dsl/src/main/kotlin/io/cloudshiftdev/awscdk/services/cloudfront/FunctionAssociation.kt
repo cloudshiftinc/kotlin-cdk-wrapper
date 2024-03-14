@@ -1,15 +1,32 @@
 package io.cloudshiftdev.awscdk.services.cloudfront
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Unit
 
 public interface FunctionAssociation {
+  /**
+   * The type of event which should invoke the function.
+   */
   public fun eventType(): FunctionEventType
 
+  /**
+   * The CloudFront function that will be invoked.
+   */
   public fun function(): IFunction
 
+  /**
+   * A builder for [FunctionAssociation]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param eventType The type of event which should invoke the function. 
+     */
     public fun eventType(eventType: FunctionEventType)
 
+    /**
+     * @param function The CloudFront function that will be invoked. 
+     */
     public fun function(function: IFunction)
   }
 
@@ -17,10 +34,16 @@ public interface FunctionAssociation {
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.FunctionAssociation.Builder =
         software.amazon.awscdk.services.cloudfront.FunctionAssociation.builder()
 
+    /**
+     * @param eventType The type of event which should invoke the function. 
+     */
     override fun eventType(eventType: FunctionEventType) {
       cdkBuilder.eventType(eventType.let(FunctionEventType::unwrap))
     }
 
+    /**
+     * @param function The CloudFront function that will be invoked. 
+     */
     override fun function(function: IFunction) {
       cdkBuilder.function(function.let(IFunction::unwrap))
     }
@@ -32,9 +55,15 @@ public interface FunctionAssociation {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.FunctionAssociation,
   ) : FunctionAssociation {
+    /**
+     * The type of event which should invoke the function.
+     */
     override fun eventType(): FunctionEventType =
         unwrap(this).getEventType().let(FunctionEventType::wrap)
 
+    /**
+     * The CloudFront function that will be invoked.
+     */
     override fun function(): IFunction = unwrap(this).getFunction().let(IFunction::wrap)
   }
 

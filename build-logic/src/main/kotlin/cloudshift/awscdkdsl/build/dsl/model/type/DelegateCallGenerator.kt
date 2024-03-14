@@ -2,7 +2,6 @@
 
 package cloudshift.awscdkdsl.build.dsl.model.type
 
-import cloudshift.awscdkdsl.build.dsl.TypeGeneratorContext
 import cloudshift.awscdkdsl.build.dsl.isCdkClass
 import cloudshift.awscdkdsl.build.dsl.isListOfCdkObject
 import cloudshift.awscdkdsl.build.dsl.isListOfListsOfCdkObject

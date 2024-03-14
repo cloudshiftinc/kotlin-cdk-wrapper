@@ -1,12 +1,23 @@
 package io.cloudshiftdev.awscdk.services.codepipeline
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
 import kotlin.Unit
 
 public interface ActionConfig {
+  /**
+   *
+   */
   public fun configuration(): Any? = unwrap(this).getConfiguration()
 
+  /**
+   * A builder for [ActionConfig]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param configuration the value to be set.
+     */
     public fun configuration(configuration: Any)
   }
 
@@ -14,6 +25,9 @@ public interface ActionConfig {
     private val cdkBuilder: software.amazon.awscdk.services.codepipeline.ActionConfig.Builder =
         software.amazon.awscdk.services.codepipeline.ActionConfig.builder()
 
+    /**
+     * @param configuration the value to be set.
+     */
     override fun configuration(configuration: Any) {
       cdkBuilder.configuration(configuration)
     }
@@ -25,6 +39,9 @@ public interface ActionConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codepipeline.ActionConfig,
   ) : ActionConfig {
+    /**
+     *
+     */
     override fun configuration(): Any? = unwrap(this).getConfiguration()
   }
 

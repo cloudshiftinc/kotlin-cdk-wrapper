@@ -1,12 +1,25 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface LinuxUserDataOptions {
+  /**
+   * Shebang for the UserData script.
+   *
+   * Default: "#!/bin/bash"
+   */
   public fun shebang(): String? = unwrap(this).getShebang()
 
+  /**
+   * A builder for [LinuxUserDataOptions]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param shebang Shebang for the UserData script.
+     */
     public fun shebang(shebang: String)
   }
 
@@ -14,6 +27,9 @@ public interface LinuxUserDataOptions {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.LinuxUserDataOptions.Builder =
         software.amazon.awscdk.services.ec2.LinuxUserDataOptions.builder()
 
+    /**
+     * @param shebang Shebang for the UserData script.
+     */
     override fun shebang(shebang: String) {
       cdkBuilder.shebang(shebang)
     }
@@ -25,6 +41,11 @@ public interface LinuxUserDataOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.LinuxUserDataOptions,
   ) : LinuxUserDataOptions {
+    /**
+     * Shebang for the UserData script.
+     *
+     * Default: "#!/bin/bash"
+     */
     override fun shebang(): String? = unwrap(this).getShebang()
   }
 

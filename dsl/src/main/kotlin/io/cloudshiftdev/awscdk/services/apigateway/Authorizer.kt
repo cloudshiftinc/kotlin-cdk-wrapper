@@ -8,9 +8,15 @@ import kotlin.String
 public abstract class Authorizer internal constructor(
   private val cdkObject: software.amazon.awscdk.services.apigateway.Authorizer,
 ) : Resource(cdkObject), IAuthorizer {
+  /**
+   * The authorization type of this authorizer.
+   */
   public override fun authorizationType(): AuthorizationType? =
       unwrap(this).getAuthorizationType()?.let(AuthorizationType::wrap)
 
+  /**
+   * The authorizer ID.
+   */
   public override fun authorizerId(): String = unwrap(this).getAuthorizerId()
 
   private class Wrapper internal constructor(
@@ -18,7 +24,7 @@ public abstract class Authorizer internal constructor(
   ) : Authorizer(cdkObject)
 
   public companion object {
-    public open fun isAuthorizer(x: Any): Boolean =
+    public fun isAuthorizer(x: Any): Boolean =
         software.amazon.awscdk.services.apigateway.Authorizer.isAuthorizer(x)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.Authorizer): Authorizer

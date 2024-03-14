@@ -1,13 +1,27 @@
 package io.cloudshiftdev.awscdk
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.Unit
 
 public interface CfnCodeDeployBlueGreenAdditionalOptions {
+  /**
+   * Specifies time to wait, in minutes, before terminating the blue resources.
+   *
+   * Default: - 5 minutes
+   */
   public fun terminationWaitTimeInMinutes(): Number? =
       unwrap(this).getTerminationWaitTimeInMinutes()
 
+  /**
+   * A builder for [CfnCodeDeployBlueGreenAdditionalOptions]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param terminationWaitTimeInMinutes Specifies time to wait, in minutes, before terminating
+     * the blue resources.
+     */
     public fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number)
   }
 
@@ -15,6 +29,10 @@ public interface CfnCodeDeployBlueGreenAdditionalOptions {
     private val cdkBuilder: software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions.Builder =
         software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions.builder()
 
+    /**
+     * @param terminationWaitTimeInMinutes Specifies time to wait, in minutes, before terminating
+     * the blue resources.
+     */
     override fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number) {
       cdkBuilder.terminationWaitTimeInMinutes(terminationWaitTimeInMinutes)
     }
@@ -26,6 +44,11 @@ public interface CfnCodeDeployBlueGreenAdditionalOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions,
   ) : CfnCodeDeployBlueGreenAdditionalOptions {
+    /**
+     * Specifies time to wait, in minutes, before terminating the blue resources.
+     *
+     * Default: - 5 minutes
+     */
     override fun terminationWaitTimeInMinutes(): Number? =
         unwrap(this).getTerminationWaitTimeInMinutes()
   }

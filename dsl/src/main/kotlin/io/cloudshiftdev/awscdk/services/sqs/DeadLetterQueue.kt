@@ -1,16 +1,37 @@
 package io.cloudshiftdev.awscdk.services.sqs
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.Unit
 
 public interface DeadLetterQueue {
+  /**
+   * The number of times a message can be unsuccesfully dequeued before being moved to the
+   * dead-letter queue.
+   */
   public fun maxReceiveCount(): Number
 
+  /**
+   * The dead-letter queue to which Amazon SQS moves messages after the value of maxReceiveCount is
+   * exceeded.
+   */
   public fun queue(): IQueue
 
+  /**
+   * A builder for [DeadLetterQueue]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param maxReceiveCount The number of times a message can be unsuccesfully dequeued before
+     * being moved to the dead-letter queue. 
+     */
     public fun maxReceiveCount(maxReceiveCount: Number)
 
+    /**
+     * @param queue The dead-letter queue to which Amazon SQS moves messages after the value of
+     * maxReceiveCount is exceeded. 
+     */
     public fun queue(queue: IQueue)
   }
 
@@ -18,10 +39,18 @@ public interface DeadLetterQueue {
     private val cdkBuilder: software.amazon.awscdk.services.sqs.DeadLetterQueue.Builder =
         software.amazon.awscdk.services.sqs.DeadLetterQueue.builder()
 
+    /**
+     * @param maxReceiveCount The number of times a message can be unsuccesfully dequeued before
+     * being moved to the dead-letter queue. 
+     */
     override fun maxReceiveCount(maxReceiveCount: Number) {
       cdkBuilder.maxReceiveCount(maxReceiveCount)
     }
 
+    /**
+     * @param queue The dead-letter queue to which Amazon SQS moves messages after the value of
+     * maxReceiveCount is exceeded. 
+     */
     override fun queue(queue: IQueue) {
       cdkBuilder.queue(queue.let(IQueue::unwrap))
     }
@@ -32,8 +61,16 @@ public interface DeadLetterQueue {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.sqs.DeadLetterQueue,
   ) : DeadLetterQueue {
+    /**
+     * The number of times a message can be unsuccesfully dequeued before being moved to the
+     * dead-letter queue.
+     */
     override fun maxReceiveCount(): Number = unwrap(this).getMaxReceiveCount()
 
+    /**
+     * The dead-letter queue to which Amazon SQS moves messages after the value of maxReceiveCount
+     * is exceeded.
+     */
     override fun queue(): IQueue = unwrap(this).getQueue().let(IQueue::wrap)
   }
 

@@ -3,11 +3,17 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 import kotlin.String
 
 public interface IResponseHeadersPolicy {
+  /**
+   * The ID of the response headers policy.
+   */
   public fun responseHeadersPolicyId(): String
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cloudfront.IResponseHeadersPolicy,
   ) : IResponseHeadersPolicy {
+    /**
+     * The ID of the response headers policy.
+     */
     override fun responseHeadersPolicyId(): String = unwrap(this).getResponseHeadersPolicyId()
   }
 

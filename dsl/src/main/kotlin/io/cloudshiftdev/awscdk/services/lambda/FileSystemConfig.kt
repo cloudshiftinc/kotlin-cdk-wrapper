@@ -1,5 +1,6 @@
 package io.cloudshiftdev.awscdk.services.lambda
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import io.cloudshiftdev.constructs.IDependable
@@ -10,35 +11,84 @@ import kotlin.collections.List
 import kotlin.jvm.JvmName
 
 public interface FileSystemConfig {
+  /**
+   * ARN of the access point.
+   */
   public fun arn(): String
 
+  /**
+   * connections object used to allow ingress traffic from lambda function.
+   *
+   * Default: - no connections required to add extra ingress rules for Lambda function
+   */
   public fun connections(): Connections? = unwrap(this).getConnections()?.let(Connections::wrap)
 
+  /**
+   * array of IDependable that lambda function depends on.
+   *
+   * Default: - no dependency
+   */
   public fun dependency(): List<IDependable> = unwrap(this).getDependency()?.map(IDependable::wrap)
       ?: emptyList()
 
+  /**
+   * mount path in the lambda runtime environment.
+   */
   public fun localMountPath(): String
 
+  /**
+   * additional IAM policies required for the lambda function.
+   *
+   * Default: - no additional policies required
+   */
   public fun policies(): List<PolicyStatement> =
       unwrap(this).getPolicies()?.map(PolicyStatement::wrap) ?: emptyList()
 
+  /**
+   * A builder for [FileSystemConfig]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param arn ARN of the access point. 
+     */
     public fun arn(arn: String)
 
+    /**
+     * @param connections connections object used to allow ingress traffic from lambda function.
+     */
     public fun connections(connections: Connections)
 
+    /**
+     * @param connections connections object used to allow ingress traffic from lambda function.
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f5ebd5e04fa849f60402f17bfc35c14dd123c06f6ebf505342c0216705c69e79")
     public fun connections(connections: Connections.Builder.() -> Unit)
 
+    /**
+     * @param dependency array of IDependable that lambda function depends on.
+     */
     public fun dependency(dependency: List<IDependable>)
 
+    /**
+     * @param dependency array of IDependable that lambda function depends on.
+     */
     public fun dependency(vararg dependency: IDependable)
 
+    /**
+     * @param localMountPath mount path in the lambda runtime environment. 
+     */
     public fun localMountPath(localMountPath: String)
 
+    /**
+     * @param policies additional IAM policies required for the lambda function.
+     */
     public fun policies(policies: List<PolicyStatement>)
 
+    /**
+     * @param policies additional IAM policies required for the lambda function.
+     */
     public fun policies(vararg policies: PolicyStatement)
   }
 
@@ -46,33 +96,57 @@ public interface FileSystemConfig {
     private val cdkBuilder: software.amazon.awscdk.services.lambda.FileSystemConfig.Builder =
         software.amazon.awscdk.services.lambda.FileSystemConfig.builder()
 
+    /**
+     * @param arn ARN of the access point. 
+     */
     override fun arn(arn: String) {
       cdkBuilder.arn(arn)
     }
 
+    /**
+     * @param connections connections object used to allow ingress traffic from lambda function.
+     */
     override fun connections(connections: Connections) {
       cdkBuilder.connections(connections.let(Connections::unwrap))
     }
 
+    /**
+     * @param connections connections object used to allow ingress traffic from lambda function.
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f5ebd5e04fa849f60402f17bfc35c14dd123c06f6ebf505342c0216705c69e79")
     override fun connections(connections: Connections.Builder.() -> Unit): Unit =
         connections(Connections(connections))
 
+    /**
+     * @param dependency array of IDependable that lambda function depends on.
+     */
     override fun dependency(dependency: List<IDependable>) {
       cdkBuilder.dependency(dependency.map(IDependable::unwrap))
     }
 
+    /**
+     * @param dependency array of IDependable that lambda function depends on.
+     */
     override fun dependency(vararg dependency: IDependable): Unit = dependency(dependency.toList())
 
+    /**
+     * @param localMountPath mount path in the lambda runtime environment. 
+     */
     override fun localMountPath(localMountPath: String) {
       cdkBuilder.localMountPath(localMountPath)
     }
 
+    /**
+     * @param policies additional IAM policies required for the lambda function.
+     */
     override fun policies(policies: List<PolicyStatement>) {
       cdkBuilder.policies(policies.map(PolicyStatement::unwrap))
     }
 
+    /**
+     * @param policies additional IAM policies required for the lambda function.
+     */
     override fun policies(vararg policies: PolicyStatement): Unit = policies(policies.toList())
 
     public fun build(): software.amazon.awscdk.services.lambda.FileSystemConfig = cdkBuilder.build()
@@ -81,15 +155,36 @@ public interface FileSystemConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.FileSystemConfig,
   ) : FileSystemConfig {
+    /**
+     * ARN of the access point.
+     */
     override fun arn(): String = unwrap(this).getArn()
 
+    /**
+     * connections object used to allow ingress traffic from lambda function.
+     *
+     * Default: - no connections required to add extra ingress rules for Lambda function
+     */
     override fun connections(): Connections? = unwrap(this).getConnections()?.let(Connections::wrap)
 
+    /**
+     * array of IDependable that lambda function depends on.
+     *
+     * Default: - no dependency
+     */
     override fun dependency(): List<IDependable> =
         unwrap(this).getDependency()?.map(IDependable::wrap) ?: emptyList()
 
+    /**
+     * mount path in the lambda runtime environment.
+     */
     override fun localMountPath(): String = unwrap(this).getLocalMountPath()
 
+    /**
+     * additional IAM policies required for the lambda function.
+     *
+     * Default: - no additional policies required
+     */
     override fun policies(): List<PolicyStatement> =
         unwrap(this).getPolicies()?.map(PolicyStatement::wrap) ?: emptyList()
   }

@@ -1,16 +1,33 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface GatewayRouteAttributes {
+  /**
+   * The name of the GatewayRoute.
+   */
   public fun gatewayRouteName(): String
 
+  /**
+   * The VirtualGateway this GatewayRoute is associated with.
+   */
   public fun virtualGateway(): IVirtualGateway
 
+  /**
+   * A builder for [GatewayRouteAttributes]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param gatewayRouteName The name of the GatewayRoute. 
+     */
     public fun gatewayRouteName(gatewayRouteName: String)
 
+    /**
+     * @param virtualGateway The VirtualGateway this GatewayRoute is associated with. 
+     */
     public fun virtualGateway(virtualGateway: IVirtualGateway)
   }
 
@@ -18,10 +35,16 @@ public interface GatewayRouteAttributes {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.GatewayRouteAttributes.Builder =
         software.amazon.awscdk.services.appmesh.GatewayRouteAttributes.builder()
 
+    /**
+     * @param gatewayRouteName The name of the GatewayRoute. 
+     */
     override fun gatewayRouteName(gatewayRouteName: String) {
       cdkBuilder.gatewayRouteName(gatewayRouteName)
     }
 
+    /**
+     * @param virtualGateway The VirtualGateway this GatewayRoute is associated with. 
+     */
     override fun virtualGateway(virtualGateway: IVirtualGateway) {
       cdkBuilder.virtualGateway(virtualGateway.let(IVirtualGateway::unwrap))
     }
@@ -33,8 +56,14 @@ public interface GatewayRouteAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteAttributes,
   ) : GatewayRouteAttributes {
+    /**
+     * The name of the GatewayRoute.
+     */
     override fun gatewayRouteName(): String = unwrap(this).getGatewayRouteName()
 
+    /**
+     * The VirtualGateway this GatewayRoute is associated with.
+     */
     override fun virtualGateway(): IVirtualGateway =
         unwrap(this).getVirtualGateway().let(IVirtualGateway::wrap)
   }

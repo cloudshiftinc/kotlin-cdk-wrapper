@@ -12,4 +12,7 @@ data class CdkSourceClass(
     }
 }
 
-data class CdkSourceMethod(val name: String, val parameterCount: Int, val comment: String?)
+data class CdkSourceMethod(val name: String, val parameterNames : List<String>, val comment: String?) {
+    val parameterCount: Int
+        get() = parameterNames.size
+}

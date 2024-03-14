@@ -1,17 +1,36 @@
 package io.cloudshiftdev.awscdk.services.logs
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.String
 import kotlin.Unit
 
 public interface LogSubscriptionDestinationConfig {
+  /**
+   * The ARN of the subscription's destination.
+   */
   public fun arn(): String
 
+  /**
+   * The role to assume to write log events to the destination.
+   *
+   * Default: No role assumed
+   */
   public fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
 
+  /**
+   * A builder for [LogSubscriptionDestinationConfig]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param arn The ARN of the subscription's destination. 
+     */
     public fun arn(arn: String)
 
+    /**
+     * @param role The role to assume to write log events to the destination.
+     */
     public fun role(role: IRole)
   }
 
@@ -20,10 +39,16 @@ public interface LogSubscriptionDestinationConfig {
         software.amazon.awscdk.services.logs.LogSubscriptionDestinationConfig.Builder =
         software.amazon.awscdk.services.logs.LogSubscriptionDestinationConfig.builder()
 
+    /**
+     * @param arn The ARN of the subscription's destination. 
+     */
     override fun arn(arn: String) {
       cdkBuilder.arn(arn)
     }
 
+    /**
+     * @param role The role to assume to write log events to the destination.
+     */
     override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
@@ -35,8 +60,16 @@ public interface LogSubscriptionDestinationConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.logs.LogSubscriptionDestinationConfig,
   ) : LogSubscriptionDestinationConfig {
+    /**
+     * The ARN of the subscription's destination.
+     */
     override fun arn(): String = unwrap(this).getArn()
 
+    /**
+     * The role to assume to write log events to the destination.
+     *
+     * Default: No role assumed
+     */
     override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
   }
 

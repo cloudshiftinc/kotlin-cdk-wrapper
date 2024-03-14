@@ -6,7 +6,7 @@ public open class CpuArchitecture internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ecs.CpuArchitecture,
 ) {
   public companion object {
-    public open fun of(cpuArchitecture: String): CpuArchitecture =
+    public fun of(cpuArchitecture: String): CpuArchitecture =
         software.amazon.awscdk.services.ecs.CpuArchitecture.of(cpuArchitecture).let(CpuArchitecture::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CpuArchitecture):

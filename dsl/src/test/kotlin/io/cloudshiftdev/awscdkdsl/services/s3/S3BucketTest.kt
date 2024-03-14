@@ -18,5 +18,7 @@ class S3BucketTest :
                 allowedMethods(HttpMethods.HEAD)
                 allowedOrigins("abc")
             }
+
+            app.synth()
         }
     })

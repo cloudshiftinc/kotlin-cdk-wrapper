@@ -1,21 +1,44 @@
 package io.cloudshiftdev.awscdk.services.fsx
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import kotlin.String
 import kotlin.Unit
 
 public interface FileSystemAttributes {
+  /**
+   * The DNS name assigned to this file system.
+   */
   public fun dnsName(): String
 
+  /**
+   * The ID of the file system, assigned by Amazon FSx.
+   */
   public fun fileSystemId(): String
 
+  /**
+   * The security group of the file system.
+   */
   public fun securityGroup(): ISecurityGroup
 
+  /**
+   * A builder for [FileSystemAttributes]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param dnsName The DNS name assigned to this file system. 
+     */
     public fun dnsName(dnsName: String)
 
+    /**
+     * @param fileSystemId The ID of the file system, assigned by Amazon FSx. 
+     */
     public fun fileSystemId(fileSystemId: String)
 
+    /**
+     * @param securityGroup The security group of the file system. 
+     */
     public fun securityGroup(securityGroup: ISecurityGroup)
   }
 
@@ -23,14 +46,23 @@ public interface FileSystemAttributes {
     private val cdkBuilder: software.amazon.awscdk.services.fsx.FileSystemAttributes.Builder =
         software.amazon.awscdk.services.fsx.FileSystemAttributes.builder()
 
+    /**
+     * @param dnsName The DNS name assigned to this file system. 
+     */
     override fun dnsName(dnsName: String) {
       cdkBuilder.dnsName(dnsName)
     }
 
+    /**
+     * @param fileSystemId The ID of the file system, assigned by Amazon FSx. 
+     */
     override fun fileSystemId(fileSystemId: String) {
       cdkBuilder.fileSystemId(fileSystemId)
     }
 
+    /**
+     * @param securityGroup The security group of the file system. 
+     */
     override fun securityGroup(securityGroup: ISecurityGroup) {
       cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
     }
@@ -42,10 +74,19 @@ public interface FileSystemAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.fsx.FileSystemAttributes,
   ) : FileSystemAttributes {
+    /**
+     * The DNS name assigned to this file system.
+     */
     override fun dnsName(): String = unwrap(this).getDnsName()
 
+    /**
+     * The ID of the file system, assigned by Amazon FSx.
+     */
     override fun fileSystemId(): String = unwrap(this).getFileSystemId()
 
+    /**
+     * The security group of the file system.
+     */
     override fun securityGroup(): ISecurityGroup =
         unwrap(this).getSecurityGroup().let(ISecurityGroup::wrap)
   }

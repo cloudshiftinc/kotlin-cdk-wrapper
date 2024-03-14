@@ -1,12 +1,23 @@
 package io.cloudshiftdev.awscdk.services.lambda
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface DlqDestinationConfig {
+  /**
+   * The Amazon Resource Name (ARN) of the destination resource.
+   */
   public fun destination(): String
 
+  /**
+   * A builder for [DlqDestinationConfig]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param destination The Amazon Resource Name (ARN) of the destination resource. 
+     */
     public fun destination(destination: String)
   }
 
@@ -14,6 +25,9 @@ public interface DlqDestinationConfig {
     private val cdkBuilder: software.amazon.awscdk.services.lambda.DlqDestinationConfig.Builder =
         software.amazon.awscdk.services.lambda.DlqDestinationConfig.builder()
 
+    /**
+     * @param destination The Amazon Resource Name (ARN) of the destination resource. 
+     */
     override fun destination(destination: String) {
       cdkBuilder.destination(destination)
     }
@@ -25,6 +39,9 @@ public interface DlqDestinationConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.lambda.DlqDestinationConfig,
   ) : DlqDestinationConfig {
+    /**
+     * The Amazon Resource Name (ARN) of the destination resource.
+     */
     override fun destination(): String = unwrap(this).getDestination()
   }
 

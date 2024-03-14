@@ -1,13 +1,23 @@
 package io.cloudshiftdev.awscdk
 
 public interface IInspectable {
-  public fun inspect(arg0: TreeInspector)
+  /**
+   * Examines construct.
+   *
+   * @param inspector * tree inspector to collect and process attributes. 
+   */
+  public fun inspect(inspector: TreeInspector)
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.IInspectable,
   ) : IInspectable {
-    override fun inspect(arg0: TreeInspector) {
-      unwrap(this).inspect(arg0.let(TreeInspector::unwrap))
+    /**
+     * Examines construct.
+     *
+     * @param inspector * tree inspector to collect and process attributes. 
+     */
+    override fun inspect(inspector: TreeInspector) {
+      unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
     }
   }
 

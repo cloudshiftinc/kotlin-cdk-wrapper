@@ -1,16 +1,33 @@
 package io.cloudshiftdev.awscdk.services.batch
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.Unit
 
 public interface OrderedComputeEnvironment {
+  /**
+   * The ComputeEnvironment to link to this JobQueue.
+   */
   public fun computeEnvironment(): IComputeEnvironment
 
+  /**
+   * The order associated with `computeEnvironment`.
+   */
   public fun order(): Number
 
+  /**
+   * A builder for [OrderedComputeEnvironment]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param computeEnvironment The ComputeEnvironment to link to this JobQueue. 
+     */
     public fun computeEnvironment(computeEnvironment: IComputeEnvironment)
 
+    /**
+     * @param order The order associated with `computeEnvironment`. 
+     */
     public fun order(order: Number)
   }
 
@@ -18,10 +35,16 @@ public interface OrderedComputeEnvironment {
     private val cdkBuilder: software.amazon.awscdk.services.batch.OrderedComputeEnvironment.Builder
         = software.amazon.awscdk.services.batch.OrderedComputeEnvironment.builder()
 
+    /**
+     * @param computeEnvironment The ComputeEnvironment to link to this JobQueue. 
+     */
     override fun computeEnvironment(computeEnvironment: IComputeEnvironment) {
       cdkBuilder.computeEnvironment(computeEnvironment.let(IComputeEnvironment::unwrap))
     }
 
+    /**
+     * @param order The order associated with `computeEnvironment`. 
+     */
     override fun order(order: Number) {
       cdkBuilder.order(order)
     }
@@ -33,9 +56,15 @@ public interface OrderedComputeEnvironment {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.batch.OrderedComputeEnvironment,
   ) : OrderedComputeEnvironment {
+    /**
+     * The ComputeEnvironment to link to this JobQueue.
+     */
     override fun computeEnvironment(): IComputeEnvironment =
         unwrap(this).getComputeEnvironment().let(IComputeEnvironment::wrap)
 
+    /**
+     * The order associated with `computeEnvironment`.
+     */
     override fun order(): Number = unwrap(this).getOrder()
   }
 

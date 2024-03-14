@@ -1,12 +1,24 @@
 package io.cloudshiftdev.awscdk.services.codebuild
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.Unit
 
 public interface BindToCodePipelineOptions {
+  /**
+   * The artifact bucket that will be used by the action that invokes this project.
+   */
   public fun artifactBucket(): IBucket
 
+  /**
+   * A builder for [BindToCodePipelineOptions]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param artifactBucket The artifact bucket that will be used by the action that invokes this
+     * project. 
+     */
     public fun artifactBucket(artifactBucket: IBucket)
   }
 
@@ -15,6 +27,10 @@ public interface BindToCodePipelineOptions {
         software.amazon.awscdk.services.codebuild.BindToCodePipelineOptions.Builder =
         software.amazon.awscdk.services.codebuild.BindToCodePipelineOptions.builder()
 
+    /**
+     * @param artifactBucket The artifact bucket that will be used by the action that invokes this
+     * project. 
+     */
     override fun artifactBucket(artifactBucket: IBucket) {
       cdkBuilder.artifactBucket(artifactBucket.let(IBucket::unwrap))
     }
@@ -26,6 +42,9 @@ public interface BindToCodePipelineOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codebuild.BindToCodePipelineOptions,
   ) : BindToCodePipelineOptions {
+    /**
+     * The artifact bucket that will be used by the action that invokes this project.
+     */
     override fun artifactBucket(): IBucket = unwrap(this).getArtifactBucket().let(IBucket::wrap)
   }
 

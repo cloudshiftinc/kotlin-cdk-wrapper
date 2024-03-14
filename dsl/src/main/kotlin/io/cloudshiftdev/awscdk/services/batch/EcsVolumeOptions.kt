@@ -1,21 +1,46 @@
 package io.cloudshiftdev.awscdk.services.batch
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 
 public interface EcsVolumeOptions {
+  /**
+   * the path on the container where this volume is mounted.
+   */
   public fun containerPath(): String
 
+  /**
+   * the name of this volume.
+   */
   public fun name(): String
 
+  /**
+   * if set, the container will have readonly access to the volume.
+   *
+   * Default: false
+   */
   public fun readonly(): Boolean? = unwrap(this).getReadonly()
 
+  /**
+   * A builder for [EcsVolumeOptions]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param containerPath the path on the container where this volume is mounted. 
+     */
     public fun containerPath(containerPath: String)
 
+    /**
+     * @param name the name of this volume. 
+     */
     public fun name(name: String)
 
+    /**
+     * @param readonly if set, the container will have readonly access to the volume.
+     */
     public fun readonly(readonly: Boolean)
   }
 
@@ -23,14 +48,23 @@ public interface EcsVolumeOptions {
     private val cdkBuilder: software.amazon.awscdk.services.batch.EcsVolumeOptions.Builder =
         software.amazon.awscdk.services.batch.EcsVolumeOptions.builder()
 
+    /**
+     * @param containerPath the path on the container where this volume is mounted. 
+     */
     override fun containerPath(containerPath: String) {
       cdkBuilder.containerPath(containerPath)
     }
 
+    /**
+     * @param name the name of this volume. 
+     */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
+    /**
+     * @param readonly if set, the container will have readonly access to the volume.
+     */
     override fun readonly(readonly: Boolean) {
       cdkBuilder.readonly(readonly)
     }
@@ -41,10 +75,21 @@ public interface EcsVolumeOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.batch.EcsVolumeOptions,
   ) : EcsVolumeOptions {
+    /**
+     * the path on the container where this volume is mounted.
+     */
     override fun containerPath(): String = unwrap(this).getContainerPath()
 
+    /**
+     * the name of this volume.
+     */
     override fun name(): String = unwrap(this).getName()
 
+    /**
+     * if set, the container will have readonly access to the volume.
+     *
+     * Default: false
+     */
     override fun readonly(): Boolean? = unwrap(this).getReadonly()
   }
 

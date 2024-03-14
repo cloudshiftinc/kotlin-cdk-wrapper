@@ -1,16 +1,35 @@
 package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface TransformS3DataSource {
+  /**
+   * S3 Data Type.
+   *
+   * Default: 'S3Prefix'
+   */
   public fun s3DataType(): S3DataType? = unwrap(this).getS3DataType()?.let(S3DataType::wrap)
 
+  /**
+   * Identifies either a key name prefix or a manifest.
+   */
   public fun s3Uri(): String
 
+  /**
+   * A builder for [TransformS3DataSource]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param s3DataType S3 Data Type.
+     */
     public fun s3DataType(s3DataType: S3DataType)
 
+    /**
+     * @param s3Uri Identifies either a key name prefix or a manifest. 
+     */
     public fun s3Uri(s3Uri: String)
   }
 
@@ -19,10 +38,16 @@ public interface TransformS3DataSource {
         software.amazon.awscdk.services.stepfunctions.tasks.TransformS3DataSource.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.TransformS3DataSource.builder()
 
+    /**
+     * @param s3DataType S3 Data Type.
+     */
     override fun s3DataType(s3DataType: S3DataType) {
       cdkBuilder.s3DataType(s3DataType.let(S3DataType::unwrap))
     }
 
+    /**
+     * @param s3Uri Identifies either a key name prefix or a manifest. 
+     */
     override fun s3Uri(s3Uri: String) {
       cdkBuilder.s3Uri(s3Uri)
     }
@@ -35,8 +60,16 @@ public interface TransformS3DataSource {
     internal val cdkObject:
         software.amazon.awscdk.services.stepfunctions.tasks.TransformS3DataSource,
   ) : TransformS3DataSource {
+    /**
+     * S3 Data Type.
+     *
+     * Default: 'S3Prefix'
+     */
     override fun s3DataType(): S3DataType? = unwrap(this).getS3DataType()?.let(S3DataType::wrap)
 
+    /**
+     * Identifies either a key name prefix or a manifest.
+     */
     override fun s3Uri(): String = unwrap(this).getS3Uri()
   }
 

@@ -1,13 +1,25 @@
 package io.cloudshiftdev.awscdk.services.stepfunctions
 
 public interface INextable {
-  public fun next(arg0: IChainable): Chain
+  /**
+   * Go to the indicated state after this state.
+   *
+   * @return The chain of states built up
+   * @param state 
+   */
+  public fun next(state: IChainable): Chain
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.INextable,
   ) : INextable {
-    override fun next(arg0: IChainable): Chain =
-        unwrap(this).next(arg0.let(IChainable::unwrap)).let(Chain::wrap)
+    /**
+     * Go to the indicated state after this state.
+     *
+     * @return The chain of states built up
+     * @param state 
+     */
+    override fun next(state: IChainable): Chain =
+        unwrap(this).next(state.let(IChainable::unwrap)).let(Chain::wrap)
   }
 
   public companion object {

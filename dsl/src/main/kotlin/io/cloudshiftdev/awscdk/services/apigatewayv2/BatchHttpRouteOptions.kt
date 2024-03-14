@@ -1,11 +1,22 @@
 package io.cloudshiftdev.awscdk.services.apigatewayv2
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Unit
 
 public interface BatchHttpRouteOptions {
+  /**
+   * The integration to be configured on this route.
+   */
   public fun integration(): HttpRouteIntegration
 
+  /**
+   * A builder for [BatchHttpRouteOptions]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param integration The integration to be configured on this route. 
+     */
     public fun integration(integration: HttpRouteIntegration)
   }
 
@@ -14,6 +25,9 @@ public interface BatchHttpRouteOptions {
         software.amazon.awscdk.services.apigatewayv2.BatchHttpRouteOptions.Builder =
         software.amazon.awscdk.services.apigatewayv2.BatchHttpRouteOptions.builder()
 
+    /**
+     * @param integration The integration to be configured on this route. 
+     */
     override fun integration(integration: HttpRouteIntegration) {
       cdkBuilder.integration(integration.let(HttpRouteIntegration::unwrap))
     }
@@ -25,6 +39,9 @@ public interface BatchHttpRouteOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.BatchHttpRouteOptions,
   ) : BatchHttpRouteOptions {
+    /**
+     * The integration to be configured on this route.
+     */
     override fun integration(): HttpRouteIntegration =
         unwrap(this).getIntegration().let(HttpRouteIntegration::wrap)
   }

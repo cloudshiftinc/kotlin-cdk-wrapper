@@ -1,8 +1,13 @@
 package io.cloudshiftdev.awscdk.cxapi
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Unit
 
 public interface AssemblyBuildOptions {
+  /**
+   * A builder for [AssemblyBuildOptions]
+   */
+  @CdkDslMarker
   public interface Builder
 
   private class BuilderImpl : Builder {

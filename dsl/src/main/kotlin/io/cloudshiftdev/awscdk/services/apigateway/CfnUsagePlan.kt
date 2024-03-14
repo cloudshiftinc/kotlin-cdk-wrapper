@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -21,106 +22,265 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnUsagePlan internal constructor(
   private val cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  /**
+   * The associated API stages of a usage plan.
+   */
   public open fun apiStages(): Any? = unwrap(this).getApiStages()
 
+  /**
+   * The associated API stages of a usage plan.
+   */
   public open fun apiStages(`value`: IResolvable) {
     unwrap(this).setApiStages(`value`.let(IResolvable::unwrap))
   }
 
+  /**
+   * The associated API stages of a usage plan.
+   */
   public open fun apiStages(__idx_ac66f0: List<Any>) {
     unwrap(this).setApiStages(__idx_ac66f0)
   }
 
+  /**
+   * The associated API stages of a usage plan.
+   */
   public open fun apiStages(vararg __idx_ac66f0: Any): Unit = apiStages(__idx_ac66f0.toList())
 
+  /**
+   * The ID for the usage plan.
+   *
+   * For example: `abc123` .
+   */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
+  /**
+   * The description of a usage plan.
+   */
   public open fun description(): String? = unwrap(this).getDescription()
 
+  /**
+   * The description of a usage plan.
+   */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
   }
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * The target maximum number of permitted requests per a given unit time interval.
+   */
   public open fun quota(): Any? = unwrap(this).getQuota()
 
+  /**
+   * The target maximum number of permitted requests per a given unit time interval.
+   */
   public open fun quota(`value`: IResolvable) {
     unwrap(this).setQuota(`value`.let(IResolvable::unwrap))
   }
 
+  /**
+   * The target maximum number of permitted requests per a given unit time interval.
+   */
   public open fun quota(`value`: QuotaSettingsProperty) {
     unwrap(this).setQuota(`value`.let(QuotaSettingsProperty::unwrap))
   }
 
+  /**
+   * The target maximum number of permitted requests per a given unit time interval.
+   */
   @Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("513d79bf55b0fc7e5fb826298997daf8a100ce76df384d6dccc51c8f4eb8ef1c")
   public open fun quota(`value`: QuotaSettingsProperty.Builder.() -> Unit): Unit =
       quota(QuotaSettingsProperty(`value`))
 
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
+  /**
+   * The collection of tags.
+   */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
+  /**
+   * The collection of tags.
+   */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  /**
+   * The collection of tags.
+   */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
+  /**
+   * A map containing method level throttling information for API stage in a usage plan.
+   */
   public open fun throttle(): Any? = unwrap(this).getThrottle()
 
+  /**
+   * A map containing method level throttling information for API stage in a usage plan.
+   */
   public open fun throttle(`value`: IResolvable) {
     unwrap(this).setThrottle(`value`.let(IResolvable::unwrap))
   }
 
+  /**
+   * A map containing method level throttling information for API stage in a usage plan.
+   */
   public open fun throttle(`value`: ThrottleSettingsProperty) {
     unwrap(this).setThrottle(`value`.let(ThrottleSettingsProperty::unwrap))
   }
 
+  /**
+   * A map containing method level throttling information for API stage in a usage plan.
+   */
   @Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("9aa0bbb41cec396f73144459cccf376bbbf026fcd61769dfe3241000d44b5798")
   public open fun throttle(`value`: ThrottleSettingsProperty.Builder.() -> Unit): Unit =
       throttle(ThrottleSettingsProperty(`value`))
 
+  /**
+   * The name of a usage plan.
+   */
   public open fun usagePlanName(): String? = unwrap(this).getUsagePlanName()
 
+  /**
+   * The name of a usage plan.
+   */
   public open fun usagePlanName(`value`: String) {
     unwrap(this).setUsagePlanName(`value`)
   }
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.apigateway.CfnUsagePlan].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * The associated API stages of a usage plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-apistages)
+     * @param apiStages The associated API stages of a usage plan. 
+     */
     public fun apiStages(apiStages: IResolvable)
 
+    /**
+     * The associated API stages of a usage plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-apistages)
+     * @param apiStages The associated API stages of a usage plan. 
+     */
     public fun apiStages(apiStages: List<Any>)
 
+    /**
+     * The associated API stages of a usage plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-apistages)
+     * @param apiStages The associated API stages of a usage plan. 
+     */
     public fun apiStages(vararg apiStages: Any)
 
+    /**
+     * The description of a usage plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-description)
+     * @param description The description of a usage plan. 
+     */
     public fun description(description: String)
 
+    /**
+     * The target maximum number of permitted requests per a given unit time interval.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-quota)
+     * @param quota The target maximum number of permitted requests per a given unit time interval. 
+     */
     public fun quota(quota: IResolvable)
 
+    /**
+     * The target maximum number of permitted requests per a given unit time interval.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-quota)
+     * @param quota The target maximum number of permitted requests per a given unit time interval. 
+     */
     public fun quota(quota: QuotaSettingsProperty)
 
+    /**
+     * The target maximum number of permitted requests per a given unit time interval.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-quota)
+     * @param quota The target maximum number of permitted requests per a given unit time interval. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0183b02f64044bdf04ca00b27cc24e485809a67d79639146ce7dcb23f42d1edc")
     public fun quota(quota: QuotaSettingsProperty.Builder.() -> Unit)
 
+    /**
+     * The collection of tags.
+     *
+     * Each tag element is associated with a given resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-tags)
+     * @param tags The collection of tags. 
+     */
     public fun tags(tags: List<CfnTag>)
 
+    /**
+     * The collection of tags.
+     *
+     * Each tag element is associated with a given resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-tags)
+     * @param tags The collection of tags. 
+     */
     public fun tags(vararg tags: CfnTag)
 
+    /**
+     * A map containing method level throttling information for API stage in a usage plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-throttle)
+     * @param throttle A map containing method level throttling information for API stage in a usage
+     * plan. 
+     */
     public fun throttle(throttle: IResolvable)
 
+    /**
+     * A map containing method level throttling information for API stage in a usage plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-throttle)
+     * @param throttle A map containing method level throttling information for API stage in a usage
+     * plan. 
+     */
     public fun throttle(throttle: ThrottleSettingsProperty)
 
+    /**
+     * A map containing method level throttling information for API stage in a usage plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-throttle)
+     * @param throttle A map containing method level throttling information for API stage in a usage
+     * plan. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ee354e813e0a512cded8fda38274ee50c28a68c3b2cdc4b5daff523545d7b71d")
     public fun throttle(throttle: ThrottleSettingsProperty.Builder.() -> Unit)
 
+    /**
+     * The name of a usage plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-usageplanname)
+     * @param usagePlanName The name of a usage plan. 
+     */
     public fun usagePlanName(usagePlanName: String)
   }
 
@@ -131,52 +291,137 @@ public open class CfnUsagePlan internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.CfnUsagePlan.Builder =
         software.amazon.awscdk.services.apigateway.CfnUsagePlan.Builder.create(scope, id)
 
+    /**
+     * The associated API stages of a usage plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-apistages)
+     * @param apiStages The associated API stages of a usage plan. 
+     */
     override fun apiStages(apiStages: IResolvable) {
       cdkBuilder.apiStages(apiStages.let(IResolvable::unwrap))
     }
 
+    /**
+     * The associated API stages of a usage plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-apistages)
+     * @param apiStages The associated API stages of a usage plan. 
+     */
     override fun apiStages(apiStages: List<Any>) {
       cdkBuilder.apiStages(apiStages)
     }
 
+    /**
+     * The associated API stages of a usage plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-apistages)
+     * @param apiStages The associated API stages of a usage plan. 
+     */
     override fun apiStages(vararg apiStages: Any): Unit = apiStages(apiStages.toList())
 
+    /**
+     * The description of a usage plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-description)
+     * @param description The description of a usage plan. 
+     */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
+    /**
+     * The target maximum number of permitted requests per a given unit time interval.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-quota)
+     * @param quota The target maximum number of permitted requests per a given unit time interval. 
+     */
     override fun quota(quota: IResolvable) {
       cdkBuilder.quota(quota.let(IResolvable::unwrap))
     }
 
+    /**
+     * The target maximum number of permitted requests per a given unit time interval.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-quota)
+     * @param quota The target maximum number of permitted requests per a given unit time interval. 
+     */
     override fun quota(quota: QuotaSettingsProperty) {
       cdkBuilder.quota(quota.let(QuotaSettingsProperty::unwrap))
     }
 
+    /**
+     * The target maximum number of permitted requests per a given unit time interval.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-quota)
+     * @param quota The target maximum number of permitted requests per a given unit time interval. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0183b02f64044bdf04ca00b27cc24e485809a67d79639146ce7dcb23f42d1edc")
     override fun quota(quota: QuotaSettingsProperty.Builder.() -> Unit): Unit =
         quota(QuotaSettingsProperty(quota))
 
+    /**
+     * The collection of tags.
+     *
+     * Each tag element is associated with a given resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-tags)
+     * @param tags The collection of tags. 
+     */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    /**
+     * The collection of tags.
+     *
+     * Each tag element is associated with a given resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-tags)
+     * @param tags The collection of tags. 
+     */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
+    /**
+     * A map containing method level throttling information for API stage in a usage plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-throttle)
+     * @param throttle A map containing method level throttling information for API stage in a usage
+     * plan. 
+     */
     override fun throttle(throttle: IResolvable) {
       cdkBuilder.throttle(throttle.let(IResolvable::unwrap))
     }
 
+    /**
+     * A map containing method level throttling information for API stage in a usage plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-throttle)
+     * @param throttle A map containing method level throttling information for API stage in a usage
+     * plan. 
+     */
     override fun throttle(throttle: ThrottleSettingsProperty) {
       cdkBuilder.throttle(throttle.let(ThrottleSettingsProperty::unwrap))
     }
 
+    /**
+     * A map containing method level throttling information for API stage in a usage plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-throttle)
+     * @param throttle A map containing method level throttling information for API stage in a usage
+     * plan. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ee354e813e0a512cded8fda38274ee50c28a68c3b2cdc4b5daff523545d7b71d")
     override fun throttle(throttle: ThrottleSettingsProperty.Builder.() -> Unit): Unit =
         throttle(ThrottleSettingsProperty(throttle))
 
+    /**
+     * The name of a usage plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-usageplanname)
+     * @param usagePlanName The name of a usage plan. 
+     */
     override fun usagePlanName(usagePlanName: String) {
       cdkBuilder.usagePlanName(usagePlanName)
     }
@@ -206,13 +451,36 @@ public open class CfnUsagePlan internal constructor(
   }
 
   public interface ThrottleSettingsProperty {
+    /**
+     * The API target request burst rate limit.
+     *
+     * This allows more requests through for a period of time than the target rate limit.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-burstlimit)
+     */
     public fun burstLimit(): Number? = unwrap(this).getBurstLimit()
 
+    /**
+     * The API target request rate limit.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-ratelimit)
+     */
     public fun rateLimit(): Number? = unwrap(this).getRateLimit()
 
+    /**
+     * A builder for [ThrottleSettingsProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param burstLimit The API target request burst rate limit.
+       * This allows more requests through for a period of time than the target rate limit.
+       */
       public fun burstLimit(burstLimit: Number)
 
+      /**
+       * @param rateLimit The API target request rate limit.
+       */
       public fun rateLimit(rateLimit: Number)
     }
 
@@ -221,10 +489,17 @@ public open class CfnUsagePlan internal constructor(
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty.Builder =
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty.builder()
 
+      /**
+       * @param burstLimit The API target request burst rate limit.
+       * This allows more requests through for a period of time than the target rate limit.
+       */
       override fun burstLimit(burstLimit: Number) {
         cdkBuilder.burstLimit(burstLimit)
       }
 
+      /**
+       * @param rateLimit The API target request rate limit.
+       */
       override fun rateLimit(rateLimit: Number) {
         cdkBuilder.rateLimit(rateLimit)
       }
@@ -238,8 +513,20 @@ public open class CfnUsagePlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.ThrottleSettingsProperty,
     ) : ThrottleSettingsProperty {
+      /**
+       * The API target request burst rate limit.
+       *
+       * This allows more requests through for a period of time than the target rate limit.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-burstlimit)
+       */
       override fun burstLimit(): Number? = unwrap(this).getBurstLimit()
 
+      /**
+       * The API target request rate limit.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-throttlesettings.html#cfn-apigateway-usageplan-throttlesettings-ratelimit)
+       */
       override fun rateLimit(): Number? = unwrap(this).getRateLimit()
     }
 
@@ -264,17 +551,49 @@ public open class CfnUsagePlan internal constructor(
   }
 
   public interface QuotaSettingsProperty {
+    /**
+     * The target maximum number of requests that can be made in a given time period.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-limit)
+     */
     public fun limit(): Number? = unwrap(this).getLimit()
 
+    /**
+     * The number of requests subtracted from the given limit in the initial time period.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-offset)
+     */
     public fun offset(): Number? = unwrap(this).getOffset()
 
+    /**
+     * The time period in which the limit applies.
+     *
+     * Valid values are "DAY", "WEEK" or "MONTH".
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-period)
+     */
     public fun period(): String? = unwrap(this).getPeriod()
 
+    /**
+     * A builder for [QuotaSettingsProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param limit The target maximum number of requests that can be made in a given time period.
+       */
       public fun limit(limit: Number)
 
+      /**
+       * @param offset The number of requests subtracted from the given limit in the initial time
+       * period.
+       */
       public fun offset(offset: Number)
 
+      /**
+       * @param period The time period in which the limit applies.
+       * Valid values are "DAY", "WEEK" or "MONTH".
+       */
       public fun period(period: String)
     }
 
@@ -283,14 +602,25 @@ public open class CfnUsagePlan internal constructor(
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty.Builder =
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty.builder()
 
+      /**
+       * @param limit The target maximum number of requests that can be made in a given time period.
+       */
       override fun limit(limit: Number) {
         cdkBuilder.limit(limit)
       }
 
+      /**
+       * @param offset The number of requests subtracted from the given limit in the initial time
+       * period.
+       */
       override fun offset(offset: Number) {
         cdkBuilder.offset(offset)
       }
 
+      /**
+       * @param period The time period in which the limit applies.
+       * Valid values are "DAY", "WEEK" or "MONTH".
+       */
       override fun period(period: String) {
         cdkBuilder.period(period)
       }
@@ -304,10 +634,27 @@ public open class CfnUsagePlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.QuotaSettingsProperty,
     ) : QuotaSettingsProperty {
+      /**
+       * The target maximum number of requests that can be made in a given time period.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-limit)
+       */
       override fun limit(): Number? = unwrap(this).getLimit()
 
+      /**
+       * The number of requests subtracted from the given limit in the initial time period.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-offset)
+       */
       override fun offset(): Number? = unwrap(this).getOffset()
 
+      /**
+       * The time period in which the limit applies.
+       *
+       * Valid values are "DAY", "WEEK" or "MONTH".
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-period)
+       */
       override fun period(): String? = unwrap(this).getPeriod()
     }
 
@@ -332,19 +679,52 @@ public open class CfnUsagePlan internal constructor(
   }
 
   public interface ApiStageProperty {
+    /**
+     * API Id of the associated API stage in a usage plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-apiid)
+     */
     public fun apiId(): String? = unwrap(this).getApiId()
 
+    /**
+     * API stage name of the associated API stage in a usage plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-stage)
+     */
     public fun stage(): String? = unwrap(this).getStage()
 
+    /**
+     * Map containing method level throttling information for API stage in a usage plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-throttle)
+     */
     public fun throttle(): Any? = unwrap(this).getThrottle()
 
+    /**
+     * A builder for [ApiStageProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param apiId API Id of the associated API stage in a usage plan.
+       */
       public fun apiId(apiId: String)
 
+      /**
+       * @param stage API stage name of the associated API stage in a usage plan.
+       */
       public fun stage(stage: String)
 
+      /**
+       * @param throttle Map containing method level throttling information for API stage in a usage
+       * plan.
+       */
       public fun throttle(throttle: IResolvable)
 
+      /**
+       * @param throttle Map containing method level throttling information for API stage in a usage
+       * plan.
+       */
       public fun throttle(throttle: Map<String, Any>)
     }
 
@@ -353,18 +733,32 @@ public open class CfnUsagePlan internal constructor(
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty.Builder =
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty.builder()
 
+      /**
+       * @param apiId API Id of the associated API stage in a usage plan.
+       */
       override fun apiId(apiId: String) {
         cdkBuilder.apiId(apiId)
       }
 
+      /**
+       * @param stage API stage name of the associated API stage in a usage plan.
+       */
       override fun stage(stage: String) {
         cdkBuilder.stage(stage)
       }
 
+      /**
+       * @param throttle Map containing method level throttling information for API stage in a usage
+       * plan.
+       */
       override fun throttle(throttle: IResolvable) {
         cdkBuilder.throttle(throttle.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param throttle Map containing method level throttling information for API stage in a usage
+       * plan.
+       */
       override fun throttle(throttle: Map<String, Any>) {
         cdkBuilder.throttle(throttle)
       }
@@ -377,10 +771,25 @@ public open class CfnUsagePlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty,
     ) : ApiStageProperty {
+      /**
+       * API Id of the associated API stage in a usage plan.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-apiid)
+       */
       override fun apiId(): String? = unwrap(this).getApiId()
 
+      /**
+       * API stage name of the associated API stage in a usage plan.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-stage)
+       */
       override fun stage(): String? = unwrap(this).getStage()
 
+      /**
+       * Map containing method level throttling information for API stage in a usage plan.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-apistage.html#cfn-apigateway-usageplan-apistage-throttle)
+       */
       override fun throttle(): Any? = unwrap(this).getThrottle()
     }
 

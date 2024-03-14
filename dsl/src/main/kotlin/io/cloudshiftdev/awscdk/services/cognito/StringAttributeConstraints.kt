@@ -1,16 +1,37 @@
 package io.cloudshiftdev.awscdk.services.cognito
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.Unit
 
 public interface StringAttributeConstraints {
+  /**
+   * Maximum length of this attribute.
+   *
+   * Default: 2048
+   */
   public fun maxLen(): Number? = unwrap(this).getMaxLen()
 
+  /**
+   * Minimum length of this attribute.
+   *
+   * Default: 0
+   */
   public fun minLen(): Number? = unwrap(this).getMinLen()
 
+  /**
+   * A builder for [StringAttributeConstraints]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param maxLen Maximum length of this attribute.
+     */
     public fun maxLen(maxLen: Number)
 
+    /**
+     * @param minLen Minimum length of this attribute.
+     */
     public fun minLen(minLen: Number)
   }
 
@@ -19,10 +40,16 @@ public interface StringAttributeConstraints {
         software.amazon.awscdk.services.cognito.StringAttributeConstraints.Builder =
         software.amazon.awscdk.services.cognito.StringAttributeConstraints.builder()
 
+    /**
+     * @param maxLen Maximum length of this attribute.
+     */
     override fun maxLen(maxLen: Number) {
       cdkBuilder.maxLen(maxLen)
     }
 
+    /**
+     * @param minLen Minimum length of this attribute.
+     */
     override fun minLen(minLen: Number) {
       cdkBuilder.minLen(minLen)
     }
@@ -34,8 +61,18 @@ public interface StringAttributeConstraints {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cognito.StringAttributeConstraints,
   ) : StringAttributeConstraints {
+    /**
+     * Maximum length of this attribute.
+     *
+     * Default: 2048
+     */
     override fun maxLen(): Number? = unwrap(this).getMaxLen()
 
+    /**
+     * Minimum length of this attribute.
+     *
+     * Default: 0
+     */
     override fun minLen(): Number? = unwrap(this).getMinLen()
   }
 

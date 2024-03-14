@@ -1,24 +1,55 @@
 package io.cloudshiftdev.awscdk.cloudassembly.schema
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface SSMParameterContextQuery {
+  /**
+   * Query account.
+   */
   public fun account(): String
 
+  /**
+   * The ARN of the role that should be used to look up the missing values.
+   *
+   * Default: - None
+   */
   public fun lookupRoleArn(): String? = unwrap(this).getLookupRoleArn()
 
+  /**
+   * Parameter name to query.
+   */
   public fun parameterName(): String
 
+  /**
+   * Query region.
+   */
   public fun region(): String
 
+  /**
+   * A builder for [SSMParameterContextQuery]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param account Query account. 
+     */
     public fun account(account: String)
 
+    /**
+     * @param lookupRoleArn The ARN of the role that should be used to look up the missing values.
+     */
     public fun lookupRoleArn(lookupRoleArn: String)
 
+    /**
+     * @param parameterName Parameter name to query. 
+     */
     public fun parameterName(parameterName: String)
 
+    /**
+     * @param region Query region. 
+     */
     public fun region(region: String)
   }
 
@@ -27,18 +58,30 @@ public interface SSMParameterContextQuery {
         software.amazon.awscdk.cloudassembly.schema.SSMParameterContextQuery.Builder =
         software.amazon.awscdk.cloudassembly.schema.SSMParameterContextQuery.builder()
 
+    /**
+     * @param account Query account. 
+     */
     override fun account(account: String) {
       cdkBuilder.account(account)
     }
 
+    /**
+     * @param lookupRoleArn The ARN of the role that should be used to look up the missing values.
+     */
     override fun lookupRoleArn(lookupRoleArn: String) {
       cdkBuilder.lookupRoleArn(lookupRoleArn)
     }
 
+    /**
+     * @param parameterName Parameter name to query. 
+     */
     override fun parameterName(parameterName: String) {
       cdkBuilder.parameterName(parameterName)
     }
 
+    /**
+     * @param region Query region. 
+     */
     override fun region(region: String) {
       cdkBuilder.region(region)
     }
@@ -50,12 +93,26 @@ public interface SSMParameterContextQuery {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.cloudassembly.schema.SSMParameterContextQuery,
   ) : SSMParameterContextQuery {
+    /**
+     * Query account.
+     */
     override fun account(): String = unwrap(this).getAccount()
 
+    /**
+     * The ARN of the role that should be used to look up the missing values.
+     *
+     * Default: - None
+     */
     override fun lookupRoleArn(): String? = unwrap(this).getLookupRoleArn()
 
+    /**
+     * Parameter name to query.
+     */
     override fun parameterName(): String = unwrap(this).getParameterName()
 
+    /**
+     * Query region.
+     */
     override fun region(): String = unwrap(this).getRegion()
   }
 

@@ -6,6 +6,9 @@ import kotlin.String
 public abstract class BaseListener internal constructor(
   private val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseListener,
 ) : Resource(cdkObject), IListener {
+  /**
+   * ARN of the listener.
+   */
   public override fun listenerArn(): String = unwrap(this).getListenerArn()
 
   private class Wrapper internal constructor(

@@ -1,12 +1,23 @@
 package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface S3LocationConfig {
+  /**
+   * Uniquely identifies the resource in Amazon S3.
+   */
   public fun uri(): String
 
+  /**
+   * A builder for [S3LocationConfig]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param uri Uniquely identifies the resource in Amazon S3. 
+     */
     public fun uri(uri: String)
   }
 
@@ -15,6 +26,9 @@ public interface S3LocationConfig {
         software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig.builder()
 
+    /**
+     * @param uri Uniquely identifies the resource in Amazon S3. 
+     */
     override fun uri(uri: String) {
       cdkBuilder.uri(uri)
     }
@@ -26,6 +40,9 @@ public interface S3LocationConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig,
   ) : S3LocationConfig {
+    /**
+     * Uniquely identifies the resource in Amazon S3.
+     */
     override fun uri(): String = unwrap(this).getUri()
   }
 

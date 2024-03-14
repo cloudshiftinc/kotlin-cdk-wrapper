@@ -1,12 +1,23 @@
 package io.cloudshiftdev.awscdk.services.apigatewayv2
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface StageAttributes {
+  /**
+   * The name of the stage.
+   */
   public fun stageName(): String
 
+  /**
+   * A builder for [StageAttributes]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param stageName The name of the stage. 
+     */
     public fun stageName(stageName: String)
   }
 
@@ -14,6 +25,9 @@ public interface StageAttributes {
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.StageAttributes.Builder =
         software.amazon.awscdk.services.apigatewayv2.StageAttributes.builder()
 
+    /**
+     * @param stageName The name of the stage. 
+     */
     override fun stageName(stageName: String) {
       cdkBuilder.stageName(stageName)
     }
@@ -25,6 +39,9 @@ public interface StageAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.StageAttributes,
   ) : StageAttributes {
+    /**
+     * The name of the stage.
+     */
     override fun stageName(): String = unwrap(this).getStageName()
   }
 

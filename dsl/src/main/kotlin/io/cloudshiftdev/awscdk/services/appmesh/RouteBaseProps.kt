@@ -1,16 +1,35 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface RouteBaseProps {
+  /**
+   * The name of the route.
+   *
+   * Default: - An automatically generated name
+   */
   public fun routeName(): String? = unwrap(this).getRouteName()
 
+  /**
+   * Protocol specific spec.
+   */
   public fun routeSpec(): RouteSpec
 
+  /**
+   * A builder for [RouteBaseProps]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param routeName The name of the route.
+     */
     public fun routeName(routeName: String)
 
+    /**
+     * @param routeSpec Protocol specific spec. 
+     */
     public fun routeSpec(routeSpec: RouteSpec)
   }
 
@@ -18,10 +37,16 @@ public interface RouteBaseProps {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.RouteBaseProps.Builder =
         software.amazon.awscdk.services.appmesh.RouteBaseProps.builder()
 
+    /**
+     * @param routeName The name of the route.
+     */
     override fun routeName(routeName: String) {
       cdkBuilder.routeName(routeName)
     }
 
+    /**
+     * @param routeSpec Protocol specific spec. 
+     */
     override fun routeSpec(routeSpec: RouteSpec) {
       cdkBuilder.routeSpec(routeSpec.let(RouteSpec::unwrap))
     }
@@ -32,8 +57,16 @@ public interface RouteBaseProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.RouteBaseProps,
   ) : RouteBaseProps {
+    /**
+     * The name of the route.
+     *
+     * Default: - An automatically generated name
+     */
     override fun routeName(): String? = unwrap(this).getRouteName()
 
+    /**
+     * Protocol specific spec.
+     */
     override fun routeSpec(): RouteSpec = unwrap(this).getRouteSpec().let(RouteSpec::wrap)
   }
 

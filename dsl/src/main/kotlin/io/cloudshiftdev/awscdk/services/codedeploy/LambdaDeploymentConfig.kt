@@ -1,5 +1,6 @@
 package io.cloudshiftdev.awscdk.services.codedeploy
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Deprecated
 import kotlin.String
 import kotlin.Suppress
@@ -11,9 +12,30 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class LambdaDeploymentConfig internal constructor(
   private val cdkObject: software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig,
 ) : BaseDeploymentConfig(cdkObject), ILambdaDeploymentConfig {
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.codedeploy.LambdaDeploymentConfig].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * The physical, human-readable name of the Deployment Configuration.
+     *
+     * Default: - automatically generated name
+     *
+     * @param deploymentConfigName The physical, human-readable name of the Deployment
+     * Configuration. 
+     */
     public fun deploymentConfigName(deploymentConfigName: String)
 
+    /**
+     * The configuration that specifies how traffic is shifted from the 'blue' target group to the
+     * 'green' target group during a deployment.
+     *
+     * Default: AllAtOnce
+     *
+     * @param trafficRouting The configuration that specifies how traffic is shifted from the 'blue'
+     * target group to the 'green' target group during a deployment. 
+     */
     public fun trafficRouting(trafficRouting: TrafficRouting)
   }
 
@@ -25,10 +47,27 @@ public open class LambdaDeploymentConfig internal constructor(
         software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig.Builder =
         software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig.Builder.create(scope, id)
 
+    /**
+     * The physical, human-readable name of the Deployment Configuration.
+     *
+     * Default: - automatically generated name
+     *
+     * @param deploymentConfigName The physical, human-readable name of the Deployment
+     * Configuration. 
+     */
     override fun deploymentConfigName(deploymentConfigName: String) {
       cdkBuilder.deploymentConfigName(deploymentConfigName)
     }
 
+    /**
+     * The configuration that specifies how traffic is shifted from the 'blue' target group to the
+     * 'green' target group during a deployment.
+     *
+     * Default: AllAtOnce
+     *
+     * @param trafficRouting The configuration that specifies how traffic is shifted from the 'blue'
+     * target group to the 'green' target group during a deployment. 
+     */
     override fun trafficRouting(trafficRouting: TrafficRouting) {
       cdkBuilder.trafficRouting(trafficRouting.let(TrafficRouting::unwrap))
     }
@@ -39,7 +78,7 @@ public open class LambdaDeploymentConfig internal constructor(
 
   public companion object {
     @Deprecated(message = "deprecated in CDK")
-    public open fun doImport(
+    public fun doImport(
       _scope: CloudshiftdevConstructsConstruct,
       _id: String,
       props: LambdaDeploymentConfigImportProps,
@@ -51,13 +90,13 @@ public open class LambdaDeploymentConfig internal constructor(
     @Deprecated(message = "deprecated in CDK")
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fafbd60daf73a5800337fbe97f5b3805d8c2f09a126c3255cb4bcb3b42d78746")
-    public open fun doImport(
+    public fun doImport(
       _scope: CloudshiftdevConstructsConstruct,
       _id: String,
       props: LambdaDeploymentConfigImportProps.Builder.() -> Unit,
     ): ILambdaDeploymentConfig = doImport(_scope, _id, LambdaDeploymentConfigImportProps(props))
 
-    public open fun fromLambdaDeploymentConfigName(
+    public fun fromLambdaDeploymentConfigName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
       lambdaDeploymentConfigName: String,

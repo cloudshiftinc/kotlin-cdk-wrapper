@@ -1,16 +1,44 @@
 package io.cloudshiftdev.awscdk
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.Unit
 
 public interface CfnTrafficRoutingTimeBasedLinear {
+  /**
+   * The number of minutes between the first and second traffic shifts of a time-based linear
+   * deployment.
+   *
+   * Default: 5
+   */
   public fun bakeTimeMins(): Number? = unwrap(this).getBakeTimeMins()
 
+  /**
+   * The percentage of traffic that is shifted at the start of each increment of a time-based linear
+   * deployment.
+   *
+   * The step percentage must be 14% or greater.
+   *
+   * Default: 15
+   */
   public fun stepPercentage(): Number? = unwrap(this).getStepPercentage()
 
+  /**
+   * A builder for [CfnTrafficRoutingTimeBasedLinear]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param bakeTimeMins The number of minutes between the first and second traffic shifts of a
+     * time-based linear deployment.
+     */
     public fun bakeTimeMins(bakeTimeMins: Number)
 
+    /**
+     * @param stepPercentage The percentage of traffic that is shifted at the start of each
+     * increment of a time-based linear deployment.
+     * The step percentage must be 14% or greater.
+     */
     public fun stepPercentage(stepPercentage: Number)
   }
 
@@ -18,10 +46,19 @@ public interface CfnTrafficRoutingTimeBasedLinear {
     private val cdkBuilder: software.amazon.awscdk.CfnTrafficRoutingTimeBasedLinear.Builder =
         software.amazon.awscdk.CfnTrafficRoutingTimeBasedLinear.builder()
 
+    /**
+     * @param bakeTimeMins The number of minutes between the first and second traffic shifts of a
+     * time-based linear deployment.
+     */
     override fun bakeTimeMins(bakeTimeMins: Number) {
       cdkBuilder.bakeTimeMins(bakeTimeMins)
     }
 
+    /**
+     * @param stepPercentage The percentage of traffic that is shifted at the start of each
+     * increment of a time-based linear deployment.
+     * The step percentage must be 14% or greater.
+     */
     override fun stepPercentage(stepPercentage: Number) {
       cdkBuilder.stepPercentage(stepPercentage)
     }
@@ -32,8 +69,22 @@ public interface CfnTrafficRoutingTimeBasedLinear {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.CfnTrafficRoutingTimeBasedLinear,
   ) : CfnTrafficRoutingTimeBasedLinear {
+    /**
+     * The number of minutes between the first and second traffic shifts of a time-based linear
+     * deployment.
+     *
+     * Default: 5
+     */
     override fun bakeTimeMins(): Number? = unwrap(this).getBakeTimeMins()
 
+    /**
+     * The percentage of traffic that is shifted at the start of each increment of a time-based
+     * linear deployment.
+     *
+     * The step percentage must be 14% or greater.
+     *
+     * Default: 15
+     */
     override fun stepPercentage(): Number? = unwrap(this).getStepPercentage()
   }
 

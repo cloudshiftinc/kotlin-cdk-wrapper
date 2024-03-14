@@ -7,13 +7,16 @@ import kotlin.String
 public open class EksClusterInput internal constructor(
   private val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EksClusterInput,
 ) {
+  /**
+   * The name of the EKS Cluster.
+   */
   public open fun clusterName(): String = unwrap(this).getClusterName()
 
   public companion object {
-    public open fun fromCluster(cluster: ICluster): EksClusterInput =
+    public fun fromCluster(cluster: ICluster): EksClusterInput =
         software.amazon.awscdk.services.stepfunctions.tasks.EksClusterInput.fromCluster(cluster.let(ICluster::unwrap)).let(EksClusterInput::wrap)
 
-    public open fun fromTaskInput(taskInput: TaskInput): EksClusterInput =
+    public fun fromTaskInput(taskInput: TaskInput): EksClusterInput =
         software.amazon.awscdk.services.stepfunctions.tasks.EksClusterInput.fromTaskInput(taskInput.let(TaskInput::unwrap)).let(EksClusterInput::wrap)
 
     internal

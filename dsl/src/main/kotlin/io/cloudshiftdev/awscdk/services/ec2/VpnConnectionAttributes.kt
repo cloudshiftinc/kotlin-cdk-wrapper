@@ -1,25 +1,54 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 
 public interface VpnConnectionAttributes {
+  /**
+   * The ASN of the customer gateway.
+   */
   public fun customerGatewayAsn(): Number
 
+  /**
+   * The id of the customer gateway.
+   */
   public fun customerGatewayId(): String
 
+  /**
+   * The ip address of the customer gateway.
+   */
   public fun customerGatewayIp(): String
 
+  /**
+   * The id of the VPN connection.
+   */
   public fun vpnId(): String
 
+  /**
+   * A builder for [VpnConnectionAttributes]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param customerGatewayAsn The ASN of the customer gateway. 
+     */
     public fun customerGatewayAsn(customerGatewayAsn: Number)
 
+    /**
+     * @param customerGatewayId The id of the customer gateway. 
+     */
     public fun customerGatewayId(customerGatewayId: String)
 
+    /**
+     * @param customerGatewayIp The ip address of the customer gateway. 
+     */
     public fun customerGatewayIp(customerGatewayIp: String)
 
+    /**
+     * @param vpnId The id of the VPN connection. 
+     */
     public fun vpnId(vpnId: String)
   }
 
@@ -27,18 +56,30 @@ public interface VpnConnectionAttributes {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.VpnConnectionAttributes.Builder =
         software.amazon.awscdk.services.ec2.VpnConnectionAttributes.builder()
 
+    /**
+     * @param customerGatewayAsn The ASN of the customer gateway. 
+     */
     override fun customerGatewayAsn(customerGatewayAsn: Number) {
       cdkBuilder.customerGatewayAsn(customerGatewayAsn)
     }
 
+    /**
+     * @param customerGatewayId The id of the customer gateway. 
+     */
     override fun customerGatewayId(customerGatewayId: String) {
       cdkBuilder.customerGatewayId(customerGatewayId)
     }
 
+    /**
+     * @param customerGatewayIp The ip address of the customer gateway. 
+     */
     override fun customerGatewayIp(customerGatewayIp: String) {
       cdkBuilder.customerGatewayIp(customerGatewayIp)
     }
 
+    /**
+     * @param vpnId The id of the VPN connection. 
+     */
     override fun vpnId(vpnId: String) {
       cdkBuilder.vpnId(vpnId)
     }
@@ -50,12 +91,24 @@ public interface VpnConnectionAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.VpnConnectionAttributes,
   ) : VpnConnectionAttributes {
+    /**
+     * The ASN of the customer gateway.
+     */
     override fun customerGatewayAsn(): Number = unwrap(this).getCustomerGatewayAsn()
 
+    /**
+     * The id of the customer gateway.
+     */
     override fun customerGatewayId(): String = unwrap(this).getCustomerGatewayId()
 
+    /**
+     * The ip address of the customer gateway.
+     */
     override fun customerGatewayIp(): String = unwrap(this).getCustomerGatewayIp()
 
+    /**
+     * The id of the VPN connection.
+     */
     override fun vpnId(): String = unwrap(this).getVpnId()
   }
 

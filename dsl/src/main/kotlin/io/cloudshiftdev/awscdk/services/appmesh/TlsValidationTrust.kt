@@ -8,24 +8,29 @@ import kotlin.collections.List
 public abstract class TlsValidationTrust internal constructor(
   private val cdkObject: software.amazon.awscdk.services.appmesh.TlsValidationTrust,
 ) {
-  public open fun bind(arg0: Construct): TlsValidationTrustConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(TlsValidationTrustConfig::wrap)
+  /**
+   * Returns Trust context based on trust type.
+   *
+   * @param scope 
+   */
+  public open fun bind(scope: Construct): TlsValidationTrustConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(TlsValidationTrustConfig::wrap)
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.TlsValidationTrust,
   ) : TlsValidationTrust(cdkObject)
 
   public companion object {
-    public open fun acm(certificateAuthorities: List<ICertificateAuthority>): TlsValidationTrust =
+    public fun acm(certificateAuthorities: List<ICertificateAuthority>): TlsValidationTrust =
         software.amazon.awscdk.services.appmesh.TlsValidationTrust.acm(certificateAuthorities.map(ICertificateAuthority::unwrap)).let(TlsValidationTrust::wrap)
 
-    public open fun acm(vararg certificateAuthorities: ICertificateAuthority): TlsValidationTrust =
+    public fun acm(vararg certificateAuthorities: ICertificateAuthority): TlsValidationTrust =
         acm(certificateAuthorities.toList())
 
-    public open fun `file`(certificateChain: String): MutualTlsValidationTrust =
+    public fun `file`(certificateChain: String): MutualTlsValidationTrust =
         software.amazon.awscdk.services.appmesh.TlsValidationTrust.`file`(certificateChain).let(MutualTlsValidationTrust::wrap)
 
-    public open fun sds(secretName: String): MutualTlsValidationTrust =
+    public fun sds(secretName: String): MutualTlsValidationTrust =
         software.amazon.awscdk.services.appmesh.TlsValidationTrust.sds(secretName).let(MutualTlsValidationTrust::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.TlsValidationTrust):

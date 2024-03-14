@@ -1,5 +1,6 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.Suppress
@@ -8,26 +9,73 @@ import kotlin.collections.List
 import kotlin.jvm.JvmName
 
 public interface TlsClientPolicy {
+  /**
+   * Whether the policy is enforced.
+   *
+   * Default: true
+   */
   public fun enforce(): Boolean? = unwrap(this).getEnforce()
 
+  /**
+   * Represents a client TLS certificate.
+   *
+   * The certificate will be sent only if the server requests it, enabling mutual TLS.
+   *
+   * Default: - client TLS certificate is not provided
+   */
   public fun mutualTlsCertificate(): MutualTlsCertificate? =
       unwrap(this).getMutualTlsCertificate()?.let(MutualTlsCertificate::wrap)
 
+  /**
+   * TLS is enforced on the ports specified here.
+   *
+   * If no ports are specified, TLS will be enforced on all the ports.
+   *
+   * Default: - all ports
+   */
   public fun ports(): List<Number> = unwrap(this).getPorts() ?: emptyList()
 
+  /**
+   * Represents the object for TLS validation context.
+   */
   public fun validation(): TlsValidation
 
+  /**
+   * A builder for [TlsClientPolicy]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param enforce Whether the policy is enforced.
+     */
     public fun enforce(enforce: Boolean)
 
+    /**
+     * @param mutualTlsCertificate Represents a client TLS certificate.
+     * The certificate will be sent only if the server requests it, enabling mutual TLS.
+     */
     public fun mutualTlsCertificate(mutualTlsCertificate: MutualTlsCertificate)
 
+    /**
+     * @param ports TLS is enforced on the ports specified here.
+     * If no ports are specified, TLS will be enforced on all the ports.
+     */
     public fun ports(ports: List<Number>)
 
+    /**
+     * @param ports TLS is enforced on the ports specified here.
+     * If no ports are specified, TLS will be enforced on all the ports.
+     */
     public fun ports(vararg ports: Number)
 
+    /**
+     * @param validation Represents the object for TLS validation context. 
+     */
     public fun validation(validation: TlsValidation)
 
+    /**
+     * @param validation Represents the object for TLS validation context. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5dff341066282c8ab2a7042b826ea2289f0fd8205afe8a4d9debc6a31761dcca")
     public fun validation(validation: TlsValidation.Builder.() -> Unit)
@@ -37,24 +85,45 @@ public interface TlsClientPolicy {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.TlsClientPolicy.Builder =
         software.amazon.awscdk.services.appmesh.TlsClientPolicy.builder()
 
+    /**
+     * @param enforce Whether the policy is enforced.
+     */
     override fun enforce(enforce: Boolean) {
       cdkBuilder.enforce(enforce)
     }
 
+    /**
+     * @param mutualTlsCertificate Represents a client TLS certificate.
+     * The certificate will be sent only if the server requests it, enabling mutual TLS.
+     */
     override fun mutualTlsCertificate(mutualTlsCertificate: MutualTlsCertificate) {
       cdkBuilder.mutualTlsCertificate(mutualTlsCertificate.let(MutualTlsCertificate::unwrap))
     }
 
+    /**
+     * @param ports TLS is enforced on the ports specified here.
+     * If no ports are specified, TLS will be enforced on all the ports.
+     */
     override fun ports(ports: List<Number>) {
       cdkBuilder.ports(ports)
     }
 
+    /**
+     * @param ports TLS is enforced on the ports specified here.
+     * If no ports are specified, TLS will be enforced on all the ports.
+     */
     override fun ports(vararg ports: Number): Unit = ports(ports.toList())
 
+    /**
+     * @param validation Represents the object for TLS validation context. 
+     */
     override fun validation(validation: TlsValidation) {
       cdkBuilder.validation(validation.let(TlsValidation::unwrap))
     }
 
+    /**
+     * @param validation Represents the object for TLS validation context. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5dff341066282c8ab2a7042b826ea2289f0fd8205afe8a4d9debc6a31761dcca")
     override fun validation(validation: TlsValidation.Builder.() -> Unit): Unit =
@@ -66,13 +135,35 @@ public interface TlsClientPolicy {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.appmesh.TlsClientPolicy,
   ) : TlsClientPolicy {
+    /**
+     * Whether the policy is enforced.
+     *
+     * Default: true
+     */
     override fun enforce(): Boolean? = unwrap(this).getEnforce()
 
+    /**
+     * Represents a client TLS certificate.
+     *
+     * The certificate will be sent only if the server requests it, enabling mutual TLS.
+     *
+     * Default: - client TLS certificate is not provided
+     */
     override fun mutualTlsCertificate(): MutualTlsCertificate? =
         unwrap(this).getMutualTlsCertificate()?.let(MutualTlsCertificate::wrap)
 
+    /**
+     * TLS is enforced on the ports specified here.
+     *
+     * If no ports are specified, TLS will be enforced on all the ports.
+     *
+     * Default: - all ports
+     */
     override fun ports(): List<Number> = unwrap(this).getPorts() ?: emptyList()
 
+    /**
+     * Represents the object for TLS validation context.
+     */
     override fun validation(): TlsValidation = unwrap(this).getValidation().let(TlsValidation::wrap)
   }
 

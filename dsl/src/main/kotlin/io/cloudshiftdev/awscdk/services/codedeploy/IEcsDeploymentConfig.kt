@@ -6,8 +6,14 @@ public interface IEcsDeploymentConfig : IBaseDeploymentConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codedeploy.IEcsDeploymentConfig,
   ) : IEcsDeploymentConfig {
+    /**
+     * The ARN of the Deployment Configuration.
+     */
     override fun deploymentConfigArn(): String = unwrap(this).getDeploymentConfigArn()
 
+    /**
+     * The physical, human-readable name of the Deployment Configuration.
+     */
     override fun deploymentConfigName(): String = unwrap(this).getDeploymentConfigName()
   }
 

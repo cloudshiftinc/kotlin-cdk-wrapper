@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.ITaggableV2
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -16,59 +17,164 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnReportPlan internal constructor(
   private val cdkObject: software.amazon.awscdk.services.backup.CfnReportPlan,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  /**
+   * The Amazon Resource Name (ARN) of your report plan.
+   */
   public open fun attrReportPlanArn(): String = unwrap(this).getAttrReportPlanArn()
 
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
   public override fun cdkTagManager(): TagManager =
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * Contains information about where and how to deliver your reports, specifically your Amazon S3
+   * bucket name, S3 key prefix, and the formats of your reports.
+   */
   public open fun reportDeliveryChannel(): Any = unwrap(this).getReportDeliveryChannel()
 
+  /**
+   * Contains information about where and how to deliver your reports, specifically your Amazon S3
+   * bucket name, S3 key prefix, and the formats of your reports.
+   */
   public open fun reportDeliveryChannel(`value`: Any) {
     unwrap(this).setReportDeliveryChannel(`value`)
   }
 
+  /**
+   * An optional description of the report plan with a maximum 1,024 characters.
+   */
   public open fun reportPlanDescription(): String? = unwrap(this).getReportPlanDescription()
 
+  /**
+   * An optional description of the report plan with a maximum 1,024 characters.
+   */
   public open fun reportPlanDescription(`value`: String) {
     unwrap(this).setReportPlanDescription(`value`)
   }
 
+  /**
+   * The unique name of the report plan.
+   */
   public open fun reportPlanName(): String? = unwrap(this).getReportPlanName()
 
+  /**
+   * The unique name of the report plan.
+   */
   public open fun reportPlanName(`value`: String) {
     unwrap(this).setReportPlanName(`value`)
   }
 
+  /**
+   * A list of tags to tag your report plan.
+   */
   public open fun reportPlanTags(): List<CfnTag> =
       unwrap(this).getReportPlanTags()?.map(CfnTag::wrap) ?: emptyList()
 
+  /**
+   * A list of tags to tag your report plan.
+   */
   public open fun reportPlanTags(`value`: List<CfnTag>) {
     unwrap(this).setReportPlanTags(`value`.map(CfnTag::unwrap))
   }
 
+  /**
+   * A list of tags to tag your report plan.
+   */
   public open fun reportPlanTags(vararg `value`: CfnTag): Unit = reportPlanTags(`value`.toList())
 
+  /**
+   * Identifies the report template for the report.
+   *
+   * Reports are built using a report template. The report templates are:.
+   */
   public open fun reportSetting(): Any = unwrap(this).getReportSetting()
 
+  /**
+   * Identifies the report template for the report.
+   *
+   * Reports are built using a report template. The report templates are:.
+   */
   public open fun reportSetting(`value`: Any) {
     unwrap(this).setReportSetting(`value`)
   }
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.backup.CfnReportPlan].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * Contains information about where and how to deliver your reports, specifically your Amazon S3
+     * bucket name, S3 key prefix, and the formats of your reports.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportdeliverychannel)
+     * @param reportDeliveryChannel Contains information about where and how to deliver your
+     * reports, specifically your Amazon S3 bucket name, S3 key prefix, and the formats of your
+     * reports. 
+     */
     public fun reportDeliveryChannel(reportDeliveryChannel: Any)
 
+    /**
+     * An optional description of the report plan with a maximum 1,024 characters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportplandescription)
+     * @param reportPlanDescription An optional description of the report plan with a maximum 1,024
+     * characters. 
+     */
     public fun reportPlanDescription(reportPlanDescription: String)
 
+    /**
+     * The unique name of the report plan.
+     *
+     * This name is between 1 and 256 characters starting with a letter, and consisting of letters
+     * (a-z, A-Z), numbers (0-9), and underscores (_).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportplanname)
+     * @param reportPlanName The unique name of the report plan. 
+     */
     public fun reportPlanName(reportPlanName: String)
 
+    /**
+     * A list of tags to tag your report plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportplantags)
+     * @param reportPlanTags A list of tags to tag your report plan. 
+     */
     public fun reportPlanTags(reportPlanTags: List<CfnTag>)
 
+    /**
+     * A list of tags to tag your report plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportplantags)
+     * @param reportPlanTags A list of tags to tag your report plan. 
+     */
     public fun reportPlanTags(vararg reportPlanTags: CfnTag)
 
+    /**
+     * Identifies the report template for the report. Reports are built using a report template. The
+     * report templates are:.
+     *
+     * `RESOURCE_COMPLIANCE_REPORT | CONTROL_COMPLIANCE_REPORT | BACKUP_JOB_REPORT | COPY_JOB_REPORT
+     * | RESTORE_JOB_REPORT`
+     *
+     * If the report template is `RESOURCE_COMPLIANCE_REPORT` or `CONTROL_COMPLIANCE_REPORT` , this
+     * API resource also describes the report coverage by AWS Regions and frameworks.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportsetting)
+     * @param reportSetting Identifies the report template for the report. Reports are built using a
+     * report template. The report templates are:. 
+     */
     public fun reportSetting(reportSetting: Any)
   }
 
@@ -79,25 +185,76 @@ public open class CfnReportPlan internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.backup.CfnReportPlan.Builder =
         software.amazon.awscdk.services.backup.CfnReportPlan.Builder.create(scope, id)
 
+    /**
+     * Contains information about where and how to deliver your reports, specifically your Amazon S3
+     * bucket name, S3 key prefix, and the formats of your reports.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportdeliverychannel)
+     * @param reportDeliveryChannel Contains information about where and how to deliver your
+     * reports, specifically your Amazon S3 bucket name, S3 key prefix, and the formats of your
+     * reports. 
+     */
     override fun reportDeliveryChannel(reportDeliveryChannel: Any) {
       cdkBuilder.reportDeliveryChannel(reportDeliveryChannel)
     }
 
+    /**
+     * An optional description of the report plan with a maximum 1,024 characters.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportplandescription)
+     * @param reportPlanDescription An optional description of the report plan with a maximum 1,024
+     * characters. 
+     */
     override fun reportPlanDescription(reportPlanDescription: String) {
       cdkBuilder.reportPlanDescription(reportPlanDescription)
     }
 
+    /**
+     * The unique name of the report plan.
+     *
+     * This name is between 1 and 256 characters starting with a letter, and consisting of letters
+     * (a-z, A-Z), numbers (0-9), and underscores (_).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportplanname)
+     * @param reportPlanName The unique name of the report plan. 
+     */
     override fun reportPlanName(reportPlanName: String) {
       cdkBuilder.reportPlanName(reportPlanName)
     }
 
+    /**
+     * A list of tags to tag your report plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportplantags)
+     * @param reportPlanTags A list of tags to tag your report plan. 
+     */
     override fun reportPlanTags(reportPlanTags: List<CfnTag>) {
       cdkBuilder.reportPlanTags(reportPlanTags.map(CfnTag::unwrap))
     }
 
+    /**
+     * A list of tags to tag your report plan.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportplantags)
+     * @param reportPlanTags A list of tags to tag your report plan. 
+     */
     override fun reportPlanTags(vararg reportPlanTags: CfnTag): Unit =
         reportPlanTags(reportPlanTags.toList())
 
+    /**
+     * Identifies the report template for the report. Reports are built using a report template. The
+     * report templates are:.
+     *
+     * `RESOURCE_COMPLIANCE_REPORT | CONTROL_COMPLIANCE_REPORT | BACKUP_JOB_REPORT | COPY_JOB_REPORT
+     * | RESTORE_JOB_REPORT`
+     *
+     * If the report template is `RESOURCE_COMPLIANCE_REPORT` or `CONTROL_COMPLIANCE_REPORT` , this
+     * API resource also describes the report coverage by AWS Regions and frameworks.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportsetting)
+     * @param reportSetting Identifies the report template for the report. Reports are built using a
+     * report template. The report templates are:. 
+     */
     override fun reportSetting(reportSetting: Any) {
       cdkBuilder.reportSetting(reportSetting)
     }
@@ -127,19 +284,60 @@ public open class CfnReportPlan internal constructor(
   }
 
   public interface ReportDeliveryChannelProperty {
+    /**
+     * A list of the format of your reports: `CSV` , `JSON` , or both.
+     *
+     * If not specified, the default format is `CSV` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-reportplan-reportdeliverychannel.html#cfn-backup-reportplan-reportdeliverychannel-formats)
+     */
     public fun formats(): List<String> = unwrap(this).getFormats() ?: emptyList()
 
+    /**
+     * The unique name of the S3 bucket that receives your reports.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-reportplan-reportdeliverychannel.html#cfn-backup-reportplan-reportdeliverychannel-s3bucketname)
+     */
     public fun s3BucketName(): String
 
+    /**
+     * The prefix for where AWS Backup Audit Manager delivers your reports to Amazon S3.
+     *
+     * The prefix is this part of the following path: s3://your-bucket-name/ `prefix`
+     * /Backup/us-west-2/year/month/day/report-name. If not specified, there is no prefix.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-reportplan-reportdeliverychannel.html#cfn-backup-reportplan-reportdeliverychannel-s3keyprefix)
+     */
     public fun s3KeyPrefix(): String? = unwrap(this).getS3KeyPrefix()
 
+    /**
+     * A builder for [ReportDeliveryChannelProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param formats A list of the format of your reports: `CSV` , `JSON` , or both.
+       * If not specified, the default format is `CSV` .
+       */
       public fun formats(formats: List<String>)
 
+      /**
+       * @param formats A list of the format of your reports: `CSV` , `JSON` , or both.
+       * If not specified, the default format is `CSV` .
+       */
       public fun formats(vararg formats: String)
 
+      /**
+       * @param s3BucketName The unique name of the S3 bucket that receives your reports. 
+       */
       public fun s3BucketName(s3BucketName: String)
 
+      /**
+       * @param s3KeyPrefix The prefix for where AWS Backup Audit Manager delivers your reports to
+       * Amazon S3.
+       * The prefix is this part of the following path: s3://your-bucket-name/ `prefix`
+       * /Backup/us-west-2/year/month/day/report-name. If not specified, there is no prefix.
+       */
       public fun s3KeyPrefix(s3KeyPrefix: String)
     }
 
@@ -149,16 +347,33 @@ public open class CfnReportPlan internal constructor(
           =
           software.amazon.awscdk.services.backup.CfnReportPlan.ReportDeliveryChannelProperty.builder()
 
+      /**
+       * @param formats A list of the format of your reports: `CSV` , `JSON` , or both.
+       * If not specified, the default format is `CSV` .
+       */
       override fun formats(formats: List<String>) {
         cdkBuilder.formats(formats)
       }
 
+      /**
+       * @param formats A list of the format of your reports: `CSV` , `JSON` , or both.
+       * If not specified, the default format is `CSV` .
+       */
       override fun formats(vararg formats: String): Unit = formats(formats.toList())
 
+      /**
+       * @param s3BucketName The unique name of the S3 bucket that receives your reports. 
+       */
       override fun s3BucketName(s3BucketName: String) {
         cdkBuilder.s3BucketName(s3BucketName)
       }
 
+      /**
+       * @param s3KeyPrefix The prefix for where AWS Backup Audit Manager delivers your reports to
+       * Amazon S3.
+       * The prefix is this part of the following path: s3://your-bucket-name/ `prefix`
+       * /Backup/us-west-2/year/month/day/report-name. If not specified, there is no prefix.
+       */
       override fun s3KeyPrefix(s3KeyPrefix: String) {
         cdkBuilder.s3KeyPrefix(s3KeyPrefix)
       }
@@ -172,10 +387,30 @@ public open class CfnReportPlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.backup.CfnReportPlan.ReportDeliveryChannelProperty,
     ) : ReportDeliveryChannelProperty {
+      /**
+       * A list of the format of your reports: `CSV` , `JSON` , or both.
+       *
+       * If not specified, the default format is `CSV` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-reportplan-reportdeliverychannel.html#cfn-backup-reportplan-reportdeliverychannel-formats)
+       */
       override fun formats(): List<String> = unwrap(this).getFormats() ?: emptyList()
 
+      /**
+       * The unique name of the S3 bucket that receives your reports.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-reportplan-reportdeliverychannel.html#cfn-backup-reportplan-reportdeliverychannel-s3bucketname)
+       */
       override fun s3BucketName(): String = unwrap(this).getS3BucketName()
 
+      /**
+       * The prefix for where AWS Backup Audit Manager delivers your reports to Amazon S3.
+       *
+       * The prefix is this part of the following path: s3://your-bucket-name/ `prefix`
+       * /Backup/us-west-2/year/month/day/report-name. If not specified, there is no prefix.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-reportplan-reportdeliverychannel.html#cfn-backup-reportplan-reportdeliverychannel-s3keyprefix)
+       */
       override fun s3KeyPrefix(): String? = unwrap(this).getS3KeyPrefix()
     }
 
@@ -200,34 +435,97 @@ public open class CfnReportPlan internal constructor(
   }
 
   public interface ReportSettingProperty {
+    /**
+     * These are the accounts to be included in the report.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-reportplan-reportsetting.html#cfn-backup-reportplan-reportsetting-accounts)
+     */
     public fun accounts(): List<String> = unwrap(this).getAccounts() ?: emptyList()
 
+    /**
+     * The Amazon Resource Names (ARNs) of the frameworks a report covers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-reportplan-reportsetting.html#cfn-backup-reportplan-reportsetting-frameworkarns)
+     */
     public fun frameworkArns(): List<String> = unwrap(this).getFrameworkArns() ?: emptyList()
 
+    /**
+     * These are the Organizational Units to be included in the report.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-reportplan-reportsetting.html#cfn-backup-reportplan-reportsetting-organizationunits)
+     */
     public fun organizationUnits(): List<String> = unwrap(this).getOrganizationUnits() ?:
         emptyList()
 
+    /**
+     * These are the Regions to be included in the report.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-reportplan-reportsetting.html#cfn-backup-reportplan-reportsetting-regions)
+     */
     public fun regions(): List<String> = unwrap(this).getRegions() ?: emptyList()
 
+    /**
+     * Identifies the report template for the report. Reports are built using a report template. The
+     * report templates are:.
+     *
+     * `RESOURCE_COMPLIANCE_REPORT | CONTROL_COMPLIANCE_REPORT | BACKUP_JOB_REPORT | COPY_JOB_REPORT
+     * | RESTORE_JOB_REPORT`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-reportplan-reportsetting.html#cfn-backup-reportplan-reportsetting-reporttemplate)
+     */
     public fun reportTemplate(): String
 
+    /**
+     * A builder for [ReportSettingProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param accounts These are the accounts to be included in the report.
+       */
       public fun accounts(accounts: List<String>)
 
+      /**
+       * @param accounts These are the accounts to be included in the report.
+       */
       public fun accounts(vararg accounts: String)
 
+      /**
+       * @param frameworkArns The Amazon Resource Names (ARNs) of the frameworks a report covers.
+       */
       public fun frameworkArns(frameworkArns: List<String>)
 
+      /**
+       * @param frameworkArns The Amazon Resource Names (ARNs) of the frameworks a report covers.
+       */
       public fun frameworkArns(vararg frameworkArns: String)
 
+      /**
+       * @param organizationUnits These are the Organizational Units to be included in the report.
+       */
       public fun organizationUnits(organizationUnits: List<String>)
 
+      /**
+       * @param organizationUnits These are the Organizational Units to be included in the report.
+       */
       public fun organizationUnits(vararg organizationUnits: String)
 
+      /**
+       * @param regions These are the Regions to be included in the report.
+       */
       public fun regions(regions: List<String>)
 
+      /**
+       * @param regions These are the Regions to be included in the report.
+       */
       public fun regions(vararg regions: String)
 
+      /**
+       * @param reportTemplate Identifies the report template for the report. Reports are built
+       * using a report template. The report templates are:. 
+       * `RESOURCE_COMPLIANCE_REPORT | CONTROL_COMPLIANCE_REPORT | BACKUP_JOB_REPORT |
+       * COPY_JOB_REPORT | RESTORE_JOB_REPORT`
+       */
       public fun reportTemplate(reportTemplate: String)
     }
 
@@ -236,32 +534,62 @@ public open class CfnReportPlan internal constructor(
           software.amazon.awscdk.services.backup.CfnReportPlan.ReportSettingProperty.Builder =
           software.amazon.awscdk.services.backup.CfnReportPlan.ReportSettingProperty.builder()
 
+      /**
+       * @param accounts These are the accounts to be included in the report.
+       */
       override fun accounts(accounts: List<String>) {
         cdkBuilder.accounts(accounts)
       }
 
+      /**
+       * @param accounts These are the accounts to be included in the report.
+       */
       override fun accounts(vararg accounts: String): Unit = accounts(accounts.toList())
 
+      /**
+       * @param frameworkArns The Amazon Resource Names (ARNs) of the frameworks a report covers.
+       */
       override fun frameworkArns(frameworkArns: List<String>) {
         cdkBuilder.frameworkArns(frameworkArns)
       }
 
+      /**
+       * @param frameworkArns The Amazon Resource Names (ARNs) of the frameworks a report covers.
+       */
       override fun frameworkArns(vararg frameworkArns: String): Unit =
           frameworkArns(frameworkArns.toList())
 
+      /**
+       * @param organizationUnits These are the Organizational Units to be included in the report.
+       */
       override fun organizationUnits(organizationUnits: List<String>) {
         cdkBuilder.organizationUnits(organizationUnits)
       }
 
+      /**
+       * @param organizationUnits These are the Organizational Units to be included in the report.
+       */
       override fun organizationUnits(vararg organizationUnits: String): Unit =
           organizationUnits(organizationUnits.toList())
 
+      /**
+       * @param regions These are the Regions to be included in the report.
+       */
       override fun regions(regions: List<String>) {
         cdkBuilder.regions(regions)
       }
 
+      /**
+       * @param regions These are the Regions to be included in the report.
+       */
       override fun regions(vararg regions: String): Unit = regions(regions.toList())
 
+      /**
+       * @param reportTemplate Identifies the report template for the report. Reports are built
+       * using a report template. The report templates are:. 
+       * `RESOURCE_COMPLIANCE_REPORT | CONTROL_COMPLIANCE_REPORT | BACKUP_JOB_REPORT |
+       * COPY_JOB_REPORT | RESTORE_JOB_REPORT`
+       */
       override fun reportTemplate(reportTemplate: String) {
         cdkBuilder.reportTemplate(reportTemplate)
       }
@@ -274,15 +602,44 @@ public open class CfnReportPlan internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.backup.CfnReportPlan.ReportSettingProperty,
     ) : ReportSettingProperty {
+      /**
+       * These are the accounts to be included in the report.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-reportplan-reportsetting.html#cfn-backup-reportplan-reportsetting-accounts)
+       */
       override fun accounts(): List<String> = unwrap(this).getAccounts() ?: emptyList()
 
+      /**
+       * The Amazon Resource Names (ARNs) of the frameworks a report covers.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-reportplan-reportsetting.html#cfn-backup-reportplan-reportsetting-frameworkarns)
+       */
       override fun frameworkArns(): List<String> = unwrap(this).getFrameworkArns() ?: emptyList()
 
+      /**
+       * These are the Organizational Units to be included in the report.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-reportplan-reportsetting.html#cfn-backup-reportplan-reportsetting-organizationunits)
+       */
       override fun organizationUnits(): List<String> = unwrap(this).getOrganizationUnits() ?:
           emptyList()
 
+      /**
+       * These are the Regions to be included in the report.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-reportplan-reportsetting.html#cfn-backup-reportplan-reportsetting-regions)
+       */
       override fun regions(): List<String> = unwrap(this).getRegions() ?: emptyList()
 
+      /**
+       * Identifies the report template for the report. Reports are built using a report template.
+       * The report templates are:.
+       *
+       * `RESOURCE_COMPLIANCE_REPORT | CONTROL_COMPLIANCE_REPORT | BACKUP_JOB_REPORT |
+       * COPY_JOB_REPORT | RESTORE_JOB_REPORT`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-reportplan-reportsetting.html#cfn-backup-reportplan-reportsetting-reporttemplate)
+       */
       override fun reportTemplate(): String = unwrap(this).getReportTemplate()
     }
 

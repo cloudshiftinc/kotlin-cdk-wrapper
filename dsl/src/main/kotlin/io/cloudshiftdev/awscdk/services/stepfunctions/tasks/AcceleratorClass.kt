@@ -5,10 +5,13 @@ import kotlin.String
 public open class AcceleratorClass internal constructor(
   private val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorClass,
 ) {
+  /**
+   * * Elastic Inference accelerator generation.
+   */
   public open fun version(): String = unwrap(this).getVersion()
 
   public companion object {
-    public open fun of(version: String): AcceleratorClass =
+    public fun of(version: String): AcceleratorClass =
         software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorClass.of(version).let(AcceleratorClass::wrap)
 
     internal

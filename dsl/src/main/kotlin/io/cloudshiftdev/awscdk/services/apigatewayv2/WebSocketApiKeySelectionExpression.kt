@@ -6,6 +6,9 @@ public open class WebSocketApiKeySelectionExpression internal constructor(
   private val cdkObject:
       software.amazon.awscdk.services.apigatewayv2.WebSocketApiKeySelectionExpression,
 ) {
+  /**
+   * The expression used by API Gateway.
+   */
   public open fun customApiKeySelector(): String = unwrap(this).getCustomApiKeySelector()
 
   public companion object {

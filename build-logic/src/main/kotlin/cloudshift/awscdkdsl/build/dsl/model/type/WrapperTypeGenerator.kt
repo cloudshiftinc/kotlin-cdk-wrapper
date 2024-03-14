@@ -1,11 +1,12 @@
-package cloudshift.awscdkdsl.build.dsl
+package cloudshift.awscdkdsl.build.dsl.model.type
 
+import cloudshift.awscdkdsl.build.dsl.isBuilderClass
+import cloudshift.awscdkdsl.build.dsl.isCdkClass
+import cloudshift.awscdkdsl.build.dsl.isJssiClass
+import cloudshift.awscdkdsl.build.dsl.mapClassName
+import cloudshift.awscdkdsl.build.dsl.mappedClassName
 import cloudshift.awscdkdsl.build.dsl.model.CdkClass
 import cloudshift.awscdkdsl.build.dsl.model.CdkModel
-import cloudshift.awscdkdsl.build.dsl.model.type.BuilderGenerator
-import cloudshift.awscdkdsl.build.dsl.model.type.DelegateMethodFactory
-import cloudshift.awscdkdsl.build.dsl.model.type.EnumTypeGenerator
-import cloudshift.awscdkdsl.build.dsl.model.type.MethodGenerator
 import com.squareup.kotlinpoet.ANY
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.CodeBlock
@@ -34,6 +35,8 @@ internal object WrapperTypeGenerator {
         val constructSpecs = constructs.map {
             generateWrapperTypeFile(it, ctx)
         }
+        ctx.referencedType(ClassName("software.amazon.awscdk", "Tags"))
+        ctx.referencedType(ClassName("software.amazon.awscdk", "Arn"))
 
         val specs = mutableListOf<FileSpec>()
         specs.addAll(constructSpecs)
@@ -160,7 +163,11 @@ internal object WrapperTypeGenerator {
             cdkClass,
             ctx,
             isStatic = true,
-        ).map { it.specFor(cdkClass) }
+        ).map { it.specFor(cdkClass) }.map {
+            val x = it.toBuilder()
+            x.modifiers.remove(KModifier.OPEN)
+            x.build()
+        }
         when {
             companionMethods.isNotEmpty() -> companionBuilder.addFunctions(companionMethods)
             else -> companionBuilder.addInitializerBlock(

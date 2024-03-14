@@ -1,20 +1,46 @@
 package io.cloudshiftdev.awscdk.pipelines
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Unit
 import kotlin.collections.List
 
 public interface EcrDockerCredentialOptions {
+  /**
+   * An IAM role to assume prior to accessing the secret.
+   *
+   * Default: - none. The current execution role will be used.
+   */
   public fun assumeRole(): IRole? = unwrap(this).getAssumeRole()?.let(IRole::wrap)
 
+  /**
+   * Defines which stages of the pipeline should be granted access to these credentials.
+   *
+   * Default: - all relevant stages (synth, self-update, asset publishing) are granted access.
+   */
   public fun usages(): List<DockerCredentialUsage> =
       unwrap(this).getUsages()?.map(DockerCredentialUsage::wrap) ?: emptyList()
 
+  /**
+   * A builder for [EcrDockerCredentialOptions]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param assumeRole An IAM role to assume prior to accessing the secret.
+     */
     public fun assumeRole(assumeRole: IRole)
 
+    /**
+     * @param usages Defines which stages of the pipeline should be granted access to these
+     * credentials.
+     */
     public fun usages(usages: List<DockerCredentialUsage>)
 
+    /**
+     * @param usages Defines which stages of the pipeline should be granted access to these
+     * credentials.
+     */
     public fun usages(vararg usages: DockerCredentialUsage)
   }
 
@@ -22,14 +48,25 @@ public interface EcrDockerCredentialOptions {
     private val cdkBuilder: software.amazon.awscdk.pipelines.EcrDockerCredentialOptions.Builder =
         software.amazon.awscdk.pipelines.EcrDockerCredentialOptions.builder()
 
+    /**
+     * @param assumeRole An IAM role to assume prior to accessing the secret.
+     */
     override fun assumeRole(assumeRole: IRole) {
       cdkBuilder.assumeRole(assumeRole.let(IRole::unwrap))
     }
 
+    /**
+     * @param usages Defines which stages of the pipeline should be granted access to these
+     * credentials.
+     */
     override fun usages(usages: List<DockerCredentialUsage>) {
       cdkBuilder.usages(usages.map(DockerCredentialUsage::unwrap))
     }
 
+    /**
+     * @param usages Defines which stages of the pipeline should be granted access to these
+     * credentials.
+     */
     override fun usages(vararg usages: DockerCredentialUsage): Unit = usages(usages.toList())
 
     public fun build(): software.amazon.awscdk.pipelines.EcrDockerCredentialOptions =
@@ -39,8 +76,18 @@ public interface EcrDockerCredentialOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.pipelines.EcrDockerCredentialOptions,
   ) : EcrDockerCredentialOptions {
+    /**
+     * An IAM role to assume prior to accessing the secret.
+     *
+     * Default: - none. The current execution role will be used.
+     */
     override fun assumeRole(): IRole? = unwrap(this).getAssumeRole()?.let(IRole::wrap)
 
+    /**
+     * Defines which stages of the pipeline should be granted access to these credentials.
+     *
+     * Default: - all relevant stages (synth, self-update, asset publishing) are granted access.
+     */
     override fun usages(): List<DockerCredentialUsage> =
         unwrap(this).getUsages()?.map(DockerCredentialUsage::wrap) ?: emptyList()
   }

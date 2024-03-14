@@ -3,14 +3,24 @@ package io.cloudshiftdev.awscdk.services.codestarnotifications
 import io.cloudshiftdev.constructs.Construct
 
 public interface INotificationRuleSource {
-  public fun bindAsNotificationRuleSource(arg0: Construct): NotificationRuleSourceConfig
+  /**
+   * Returns a source configuration for notification rule.
+   *
+   * @param scope 
+   */
+  public fun bindAsNotificationRuleSource(scope: Construct): NotificationRuleSourceConfig
 
   private class Wrapper internal constructor(
     internal val cdkObject:
         software.amazon.awscdk.services.codestarnotifications.INotificationRuleSource,
   ) : INotificationRuleSource {
-    override fun bindAsNotificationRuleSource(arg0: Construct): NotificationRuleSourceConfig =
-        unwrap(this).bindAsNotificationRuleSource(arg0.let(Construct::unwrap)).let(NotificationRuleSourceConfig::wrap)
+    /**
+     * Returns a source configuration for notification rule.
+     *
+     * @param scope 
+     */
+    override fun bindAsNotificationRuleSource(scope: Construct): NotificationRuleSourceConfig =
+        unwrap(this).bindAsNotificationRuleSource(scope.let(Construct::unwrap)).let(NotificationRuleSourceConfig::wrap)
   }
 
   public companion object {

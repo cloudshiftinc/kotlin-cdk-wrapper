@@ -1,12 +1,24 @@
 package io.cloudshiftdev.awscdk.services.cognito
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface CognitoDomainOptions {
+  /**
+   * The prefix to the Cognito hosted domain name that will be associated with the user pool.
+   */
   public fun domainPrefix(): String
 
+  /**
+   * A builder for [CognitoDomainOptions]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param domainPrefix The prefix to the Cognito hosted domain name that will be associated with
+     * the user pool. 
+     */
     public fun domainPrefix(domainPrefix: String)
   }
 
@@ -14,6 +26,10 @@ public interface CognitoDomainOptions {
     private val cdkBuilder: software.amazon.awscdk.services.cognito.CognitoDomainOptions.Builder =
         software.amazon.awscdk.services.cognito.CognitoDomainOptions.builder()
 
+    /**
+     * @param domainPrefix The prefix to the Cognito hosted domain name that will be associated with
+     * the user pool. 
+     */
     override fun domainPrefix(domainPrefix: String) {
       cdkBuilder.domainPrefix(domainPrefix)
     }
@@ -25,6 +41,9 @@ public interface CognitoDomainOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.cognito.CognitoDomainOptions,
   ) : CognitoDomainOptions {
+    /**
+     * The prefix to the Cognito hosted domain name that will be associated with the user pool.
+     */
     override fun domainPrefix(): String = unwrap(this).getDomainPrefix()
   }
 

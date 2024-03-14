@@ -1,6 +1,7 @@
 package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.Resource
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.signer.ISigningProfile
 import kotlin.String
 import kotlin.Unit
@@ -11,17 +12,59 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CodeSigningConfig internal constructor(
   private val cdkObject: software.amazon.awscdk.services.lambda.CodeSigningConfig,
 ) : Resource(cdkObject), ICodeSigningConfig {
+  /**
+   * The ARN of Code Signing Config.
+   */
   public override fun codeSigningConfigArn(): String = unwrap(this).getCodeSigningConfigArn()
 
+  /**
+   * The id of Code Signing Config.
+   */
   public override fun codeSigningConfigId(): String = unwrap(this).getCodeSigningConfigId()
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.lambda.CodeSigningConfig].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * Code signing configuration description.
+     *
+     * Default: - No description.
+     *
+     * @param description Code signing configuration description. 
+     */
     public fun description(description: String)
 
+    /**
+     * List of signing profiles that defines a trusted user who can sign a code package.
+     *
+     * @param signingProfiles List of signing profiles that defines a trusted user who can sign a
+     * code package. 
+     */
     public fun signingProfiles(signingProfiles: List<ISigningProfile>)
 
+    /**
+     * List of signing profiles that defines a trusted user who can sign a code package.
+     *
+     * @param signingProfiles List of signing profiles that defines a trusted user who can sign a
+     * code package. 
+     */
     public fun signingProfiles(vararg signingProfiles: ISigningProfile)
 
+    /**
+     * Code signing configuration policy for deployment validation failure.
+     *
+     * If you set the policy to Enforce, Lambda blocks the deployment request
+     * if signature validation checks fail.
+     * If you set the policy to Warn, Lambda allows the deployment and
+     * creates a CloudWatch log.
+     *
+     * Default: UntrustedArtifactOnDeployment.WARN
+     *
+     * @param untrustedArtifactOnDeployment Code signing configuration policy for deployment
+     * validation failure. 
+     */
     public
         fun untrustedArtifactOnDeployment(untrustedArtifactOnDeployment: UntrustedArtifactOnDeployment)
   }
@@ -33,17 +76,49 @@ public open class CodeSigningConfig internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.lambda.CodeSigningConfig.Builder =
         software.amazon.awscdk.services.lambda.CodeSigningConfig.Builder.create(scope, id)
 
+    /**
+     * Code signing configuration description.
+     *
+     * Default: - No description.
+     *
+     * @param description Code signing configuration description. 
+     */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
+    /**
+     * List of signing profiles that defines a trusted user who can sign a code package.
+     *
+     * @param signingProfiles List of signing profiles that defines a trusted user who can sign a
+     * code package. 
+     */
     override fun signingProfiles(signingProfiles: List<ISigningProfile>) {
       cdkBuilder.signingProfiles(signingProfiles.map(ISigningProfile::unwrap))
     }
 
+    /**
+     * List of signing profiles that defines a trusted user who can sign a code package.
+     *
+     * @param signingProfiles List of signing profiles that defines a trusted user who can sign a
+     * code package. 
+     */
     override fun signingProfiles(vararg signingProfiles: ISigningProfile): Unit =
         signingProfiles(signingProfiles.toList())
 
+    /**
+     * Code signing configuration policy for deployment validation failure.
+     *
+     * If you set the policy to Enforce, Lambda blocks the deployment request
+     * if signature validation checks fail.
+     * If you set the policy to Warn, Lambda allows the deployment and
+     * creates a CloudWatch log.
+     *
+     * Default: UntrustedArtifactOnDeployment.WARN
+     *
+     * @param untrustedArtifactOnDeployment Code signing configuration policy for deployment
+     * validation failure. 
+     */
     override
         fun untrustedArtifactOnDeployment(untrustedArtifactOnDeployment: UntrustedArtifactOnDeployment) {
       cdkBuilder.untrustedArtifactOnDeployment(untrustedArtifactOnDeployment.let(UntrustedArtifactOnDeployment::unwrap))
@@ -54,7 +129,7 @@ public open class CodeSigningConfig internal constructor(
   }
 
   public companion object {
-    public open fun fromCodeSigningConfigArn(
+    public fun fromCodeSigningConfigArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
       codeSigningConfigArn: String,

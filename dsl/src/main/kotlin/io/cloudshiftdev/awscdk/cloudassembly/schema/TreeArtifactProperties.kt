@@ -1,12 +1,23 @@
 package io.cloudshiftdev.awscdk.cloudassembly.schema
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface TreeArtifactProperties {
+  /**
+   * Filename of the tree artifact.
+   */
   public fun `file`(): String
 
+  /**
+   * A builder for [TreeArtifactProperties]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param file Filename of the tree artifact. 
+     */
     public fun `file`(`file`: String)
   }
 
@@ -15,6 +26,9 @@ public interface TreeArtifactProperties {
         software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties.Builder =
         software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties.builder()
 
+    /**
+     * @param file Filename of the tree artifact. 
+     */
     override fun `file`(`file`: String) {
       cdkBuilder.`file`(`file`)
     }
@@ -26,6 +40,9 @@ public interface TreeArtifactProperties {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties,
   ) : TreeArtifactProperties {
+    /**
+     * Filename of the tree artifact.
+     */
     override fun `file`(): String = unwrap(this).getFile()
   }
 

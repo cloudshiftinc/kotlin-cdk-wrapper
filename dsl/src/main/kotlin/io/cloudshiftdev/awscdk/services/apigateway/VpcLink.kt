@@ -1,6 +1,7 @@
 package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.Resource
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer
 import kotlin.String
 import kotlin.Unit
@@ -11,19 +12,61 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class VpcLink internal constructor(
   private val cdkObject: software.amazon.awscdk.services.apigateway.VpcLink,
 ) : Resource(cdkObject), IVpcLink {
+  /**
+   * @param targets 
+   */
   public open fun addTargets(targets: INetworkLoadBalancer) {
     unwrap(this).addTargets(targets.let(INetworkLoadBalancer::unwrap))
   }
 
+  /**
+   * Physical ID of the VpcLink resource.
+   */
   public override fun vpcLinkId(): String = unwrap(this).getVpcLinkId()
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.apigateway.VpcLink].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * The description of the VPC link.
+     *
+     * Default: no description
+     *
+     * @param description The description of the VPC link. 
+     */
     public fun description(description: String)
 
+    /**
+     * The network load balancers of the VPC targeted by the VPC link.
+     *
+     * The network load balancers must be owned by the same AWS account of the API owner.
+     *
+     * Default: - no targets. Use `addTargets` to add targets
+     *
+     * @param targets The network load balancers of the VPC targeted by the VPC link. 
+     */
     public fun targets(targets: List<INetworkLoadBalancer>)
 
+    /**
+     * The network load balancers of the VPC targeted by the VPC link.
+     *
+     * The network load balancers must be owned by the same AWS account of the API owner.
+     *
+     * Default: - no targets. Use `addTargets` to add targets
+     *
+     * @param targets The network load balancers of the VPC targeted by the VPC link. 
+     */
     public fun targets(vararg targets: INetworkLoadBalancer)
 
+    /**
+     * The name used to label and identify the VPC link.
+     *
+     * Default: - automatically generated name
+     *
+     * @param vpcLinkName The name used to label and identify the VPC link. 
+     */
     public fun vpcLinkName(vpcLinkName: String)
   }
 
@@ -34,16 +77,48 @@ public open class VpcLink internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.VpcLink.Builder =
         software.amazon.awscdk.services.apigateway.VpcLink.Builder.create(scope, id)
 
+    /**
+     * The description of the VPC link.
+     *
+     * Default: no description
+     *
+     * @param description The description of the VPC link. 
+     */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
+    /**
+     * The network load balancers of the VPC targeted by the VPC link.
+     *
+     * The network load balancers must be owned by the same AWS account of the API owner.
+     *
+     * Default: - no targets. Use `addTargets` to add targets
+     *
+     * @param targets The network load balancers of the VPC targeted by the VPC link. 
+     */
     override fun targets(targets: List<INetworkLoadBalancer>) {
       cdkBuilder.targets(targets.map(INetworkLoadBalancer::unwrap))
     }
 
+    /**
+     * The network load balancers of the VPC targeted by the VPC link.
+     *
+     * The network load balancers must be owned by the same AWS account of the API owner.
+     *
+     * Default: - no targets. Use `addTargets` to add targets
+     *
+     * @param targets The network load balancers of the VPC targeted by the VPC link. 
+     */
     override fun targets(vararg targets: INetworkLoadBalancer): Unit = targets(targets.toList())
 
+    /**
+     * The name used to label and identify the VPC link.
+     *
+     * Default: - automatically generated name
+     *
+     * @param vpcLinkName The name used to label and identify the VPC link. 
+     */
     override fun vpcLinkName(vpcLinkName: String) {
       cdkBuilder.vpcLinkName(vpcLinkName)
     }
@@ -52,7 +127,7 @@ public open class VpcLink internal constructor(
   }
 
   public companion object {
-    public open fun fromVpcLinkId(
+    public fun fromVpcLinkId(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
       vpcLinkId: String,

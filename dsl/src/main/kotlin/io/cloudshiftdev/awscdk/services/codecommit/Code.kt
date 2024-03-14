@@ -7,32 +7,38 @@ import kotlin.String
 public abstract class Code internal constructor(
   private val cdkObject: software.amazon.awscdk.services.codecommit.Code,
 ) {
-  public open fun bind(arg0: Construct): CodeConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(CodeConfig::wrap)
+  /**
+   * This method is called after a repository is passed this instance of Code in its 'code'
+   * property.
+   *
+   * @param scope the binding scope. 
+   */
+  public open fun bind(scope: Construct): CodeConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(CodeConfig::wrap)
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codecommit.Code,
   ) : Code(cdkObject)
 
   public companion object {
-    public open fun fromAsset(asset: Asset): Code =
+    public fun fromAsset(asset: Asset): Code =
         software.amazon.awscdk.services.codecommit.Code.fromAsset(asset.let(Asset::unwrap)).let(Code::wrap)
 
-    public open fun fromAsset(asset: Asset, branch: String): Code =
+    public fun fromAsset(asset: Asset, branch: String): Code =
         software.amazon.awscdk.services.codecommit.Code.fromAsset(asset.let(Asset::unwrap),
         branch).let(Code::wrap)
 
-    public open fun fromDirectory(directoryPath: String): Code =
+    public fun fromDirectory(directoryPath: String): Code =
         software.amazon.awscdk.services.codecommit.Code.fromDirectory(directoryPath).let(Code::wrap)
 
-    public open fun fromDirectory(directoryPath: String, branch: String): Code =
+    public fun fromDirectory(directoryPath: String, branch: String): Code =
         software.amazon.awscdk.services.codecommit.Code.fromDirectory(directoryPath,
         branch).let(Code::wrap)
 
-    public open fun fromZipFile(filePath: String): Code =
+    public fun fromZipFile(filePath: String): Code =
         software.amazon.awscdk.services.codecommit.Code.fromZipFile(filePath).let(Code::wrap)
 
-    public open fun fromZipFile(filePath: String, branch: String): Code =
+    public fun fromZipFile(filePath: String, branch: String): Code =
         software.amazon.awscdk.services.codecommit.Code.fromZipFile(filePath,
         branch).let(Code::wrap)
 

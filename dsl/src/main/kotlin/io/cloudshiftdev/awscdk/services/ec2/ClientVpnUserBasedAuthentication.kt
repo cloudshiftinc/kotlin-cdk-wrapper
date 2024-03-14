@@ -7,6 +7,9 @@ import kotlin.String
 public abstract class ClientVpnUserBasedAuthentication internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ec2.ClientVpnUserBasedAuthentication,
 ) {
+  /**
+   * Renders the user based authentication.
+   */
   public open fun render(): Any = unwrap(this).render()
 
   private class Wrapper internal constructor(
@@ -14,13 +17,13 @@ public abstract class ClientVpnUserBasedAuthentication internal constructor(
   ) : ClientVpnUserBasedAuthentication(cdkObject)
 
   public companion object {
-    public open fun activeDirectory(directoryId: String): ClientVpnUserBasedAuthentication =
+    public fun activeDirectory(directoryId: String): ClientVpnUserBasedAuthentication =
         software.amazon.awscdk.services.ec2.ClientVpnUserBasedAuthentication.activeDirectory(directoryId).let(ClientVpnUserBasedAuthentication::wrap)
 
-    public open fun federated(samlProvider: ISamlProvider): ClientVpnUserBasedAuthentication =
+    public fun federated(samlProvider: ISamlProvider): ClientVpnUserBasedAuthentication =
         software.amazon.awscdk.services.ec2.ClientVpnUserBasedAuthentication.federated(samlProvider.let(ISamlProvider::unwrap)).let(ClientVpnUserBasedAuthentication::wrap)
 
-    public open fun federated(samlProvider: ISamlProvider, selfServiceSamlProvider: ISamlProvider):
+    public fun federated(samlProvider: ISamlProvider, selfServiceSamlProvider: ISamlProvider):
         ClientVpnUserBasedAuthentication =
         software.amazon.awscdk.services.ec2.ClientVpnUserBasedAuthentication.federated(samlProvider.let(ISamlProvider::unwrap),
         selfServiceSamlProvider.let(ISamlProvider::unwrap)).let(ClientVpnUserBasedAuthentication::wrap)

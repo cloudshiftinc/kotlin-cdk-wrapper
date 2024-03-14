@@ -5,8 +5,16 @@ import kotlin.String
 public open class SortKeyStep internal constructor(
   private val cdkObject: software.amazon.awscdk.services.appsync.SortKeyStep,
 ) {
+  /**
+   * Assign an auto-generated value to the sort key.
+   */
   public open fun auto(): PrimaryKey = unwrap(this).auto().let(PrimaryKey::wrap)
 
+  /**
+   * Assign an auto-generated value to the sort key.
+   *
+   * @param val 
+   */
   public open fun `is`(`val`: String): PrimaryKey = unwrap(this).`is`(`val`).let(PrimaryKey::wrap)
 
   public companion object {

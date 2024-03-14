@@ -1,20 +1,51 @@
 package io.cloudshiftdev.awscdk.services.apigateway
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.Unit
 
 public interface QuotaSettings {
+  /**
+   * The maximum number of requests that users can make within the specified time period.
+   *
+   * Default: none
+   */
   public fun limit(): Number? = unwrap(this).getLimit()
 
+  /**
+   * For the initial time period, the number of requests to subtract from the specified limit.
+   *
+   * Default: none
+   */
   public fun offset(): Number? = unwrap(this).getOffset()
 
+  /**
+   * The time period for which the maximum limit of requests applies.
+   *
+   * Default: none
+   */
   public fun period(): Period? = unwrap(this).getPeriod()?.let(Period::wrap)
 
+  /**
+   * A builder for [QuotaSettings]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param limit The maximum number of requests that users can make within the specified time
+     * period.
+     */
     public fun limit(limit: Number)
 
+    /**
+     * @param offset For the initial time period, the number of requests to subtract from the
+     * specified limit.
+     */
     public fun offset(offset: Number)
 
+    /**
+     * @param period The time period for which the maximum limit of requests applies.
+     */
     public fun period(period: Period)
   }
 
@@ -22,14 +53,25 @@ public interface QuotaSettings {
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.QuotaSettings.Builder =
         software.amazon.awscdk.services.apigateway.QuotaSettings.builder()
 
+    /**
+     * @param limit The maximum number of requests that users can make within the specified time
+     * period.
+     */
     override fun limit(limit: Number) {
       cdkBuilder.limit(limit)
     }
 
+    /**
+     * @param offset For the initial time period, the number of requests to subtract from the
+     * specified limit.
+     */
     override fun offset(offset: Number) {
       cdkBuilder.offset(offset)
     }
 
+    /**
+     * @param period The time period for which the maximum limit of requests applies.
+     */
     override fun period(period: Period) {
       cdkBuilder.period(period.let(Period::unwrap))
     }
@@ -41,10 +83,25 @@ public interface QuotaSettings {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigateway.QuotaSettings,
   ) : QuotaSettings {
+    /**
+     * The maximum number of requests that users can make within the specified time period.
+     *
+     * Default: none
+     */
     override fun limit(): Number? = unwrap(this).getLimit()
 
+    /**
+     * For the initial time period, the number of requests to subtract from the specified limit.
+     *
+     * Default: none
+     */
     override fun offset(): Number? = unwrap(this).getOffset()
 
+    /**
+     * The time period for which the maximum limit of requests applies.
+     *
+     * Default: none
+     */
     override fun period(): Period? = unwrap(this).getPeriod()?.let(Period::wrap)
   }
 

@@ -1,14 +1,28 @@
 package io.cloudshiftdev.awscdk.services.apigatewayv2
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface HttpStageAttributes : StageAttributes {
+  /**
+   * The API to which this stage is associated.
+   */
   public fun api(): IHttpApi
 
+  /**
+   * A builder for [HttpStageAttributes]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param api The API to which this stage is associated. 
+     */
     public fun api(api: IHttpApi)
 
+    /**
+     * @param stageName The name of the stage. 
+     */
     public fun stageName(stageName: String)
   }
 
@@ -16,10 +30,16 @@ public interface HttpStageAttributes : StageAttributes {
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.HttpStageAttributes.Builder
         = software.amazon.awscdk.services.apigatewayv2.HttpStageAttributes.builder()
 
+    /**
+     * @param api The API to which this stage is associated. 
+     */
     override fun api(api: IHttpApi) {
       cdkBuilder.api(api.let(IHttpApi::unwrap))
     }
 
+    /**
+     * @param stageName The name of the stage. 
+     */
     override fun stageName(stageName: String) {
       cdkBuilder.stageName(stageName)
     }
@@ -31,8 +51,14 @@ public interface HttpStageAttributes : StageAttributes {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpStageAttributes,
   ) : HttpStageAttributes {
+    /**
+     * The API to which this stage is associated.
+     */
     override fun api(): IHttpApi = unwrap(this).getApi().let(IHttpApi::wrap)
 
+    /**
+     * The name of the stage.
+     */
     override fun stageName(): String = unwrap(this).getStageName()
   }
 

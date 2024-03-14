@@ -1,11 +1,22 @@
 package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Unit
 
 public interface AddNetworkActionProps {
+  /**
+   * Action to perform.
+   */
   public fun action(): NetworkListenerAction
 
+  /**
+   * A builder for [AddNetworkActionProps]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param action Action to perform. 
+     */
     public fun action(action: NetworkListenerAction)
   }
 
@@ -14,6 +25,9 @@ public interface AddNetworkActionProps {
         software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps.Builder =
         software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps.builder()
 
+    /**
+     * @param action Action to perform. 
+     */
     override fun action(action: NetworkListenerAction) {
       cdkBuilder.action(action.let(NetworkListenerAction::unwrap))
     }
@@ -26,6 +40,9 @@ public interface AddNetworkActionProps {
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps,
   ) : AddNetworkActionProps {
+    /**
+     * Action to perform.
+     */
     override fun action(): NetworkListenerAction =
         unwrap(this).getAction().let(NetworkListenerAction::wrap)
   }

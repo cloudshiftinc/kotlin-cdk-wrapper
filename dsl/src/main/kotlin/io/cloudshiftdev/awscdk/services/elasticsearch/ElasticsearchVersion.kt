@@ -5,10 +5,13 @@ import kotlin.String
 public open class ElasticsearchVersion internal constructor(
   private val cdkObject: software.amazon.awscdk.services.elasticsearch.ElasticsearchVersion,
 ) {
+  /**
+   * Elasticsearch version number.
+   */
   public open fun version(): String = unwrap(this).getVersion()
 
   public companion object {
-    public open fun of(version: String): ElasticsearchVersion =
+    public fun of(version: String): ElasticsearchVersion =
         software.amazon.awscdk.services.elasticsearch.ElasticsearchVersion.of(version).let(ElasticsearchVersion::wrap)
 
     internal

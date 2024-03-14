@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
 import kotlin.String
 import kotlin.Suppress
@@ -20,73 +21,183 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnThingGroup internal constructor(
   private val cdkObject: software.amazon.awscdk.services.iot.CfnThingGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  /**
+   * The thing group ARN.
+   */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
+  /**
+   * The thing group ID.
+   */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * The parent thing group name.
+   */
   public open fun parentGroupName(): String? = unwrap(this).getParentGroupName()
 
+  /**
+   * The parent thing group name.
+   */
   public open fun parentGroupName(`value`: String) {
     unwrap(this).setParentGroupName(`value`)
   }
 
+  /**
+   * The dynamic thing group search query string.
+   */
   public open fun queryString(): String? = unwrap(this).getQueryString()
 
+  /**
+   * The dynamic thing group search query string.
+   */
   public open fun queryString(`value`: String) {
     unwrap(this).setQueryString(`value`)
   }
 
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
+  /**
+   * Metadata which can be used to manage the thing group or dynamic thing group.
+   */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
+  /**
+   * Metadata which can be used to manage the thing group or dynamic thing group.
+   */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  /**
+   * Metadata which can be used to manage the thing group or dynamic thing group.
+   */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
+  /**
+   * The thing group name.
+   */
   public open fun thingGroupName(): String? = unwrap(this).getThingGroupName()
 
+  /**
+   * The thing group name.
+   */
   public open fun thingGroupName(`value`: String) {
     unwrap(this).setThingGroupName(`value`)
   }
 
+  /**
+   * Thing group properties.
+   */
   public open fun thingGroupProperties(): Any? = unwrap(this).getThingGroupProperties()
 
+  /**
+   * Thing group properties.
+   */
   public open fun thingGroupProperties(`value`: IResolvable) {
     unwrap(this).setThingGroupProperties(`value`.let(IResolvable::unwrap))
   }
 
+  /**
+   * Thing group properties.
+   */
   public open fun thingGroupProperties(`value`: ThingGroupPropertiesProperty) {
     unwrap(this).setThingGroupProperties(`value`.let(ThingGroupPropertiesProperty::unwrap))
   }
 
+  /**
+   * Thing group properties.
+   */
   @Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("5e4f87fffceaf563a5bb83877db375d5d8d9a123e6da765c75f850c3974a19dd")
   public open fun thingGroupProperties(`value`: ThingGroupPropertiesProperty.Builder.() -> Unit):
       Unit = thingGroupProperties(ThingGroupPropertiesProperty(`value`))
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.iot.CfnThingGroup].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * The parent thing group name.
+     *
+     * A Dynamic Thing Group does not have `parentGroupName` defined.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thinggroup.html#cfn-iot-thinggroup-parentgroupname)
+     * @param parentGroupName The parent thing group name. 
+     */
     public fun parentGroupName(parentGroupName: String)
 
+    /**
+     * The dynamic thing group search query string.
+     *
+     * The `queryString` attribute *is* required for `CreateDynamicThingGroup` . The `queryString`
+     * attribute *is not* required for `CreateThingGroup` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thinggroup.html#cfn-iot-thinggroup-querystring)
+     * @param queryString The dynamic thing group search query string. 
+     */
     public fun queryString(queryString: String)
 
+    /**
+     * Metadata which can be used to manage the thing group or dynamic thing group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thinggroup.html#cfn-iot-thinggroup-tags)
+     * @param tags Metadata which can be used to manage the thing group or dynamic thing group. 
+     */
     public fun tags(tags: List<CfnTag>)
 
+    /**
+     * Metadata which can be used to manage the thing group or dynamic thing group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thinggroup.html#cfn-iot-thinggroup-tags)
+     * @param tags Metadata which can be used to manage the thing group or dynamic thing group. 
+     */
     public fun tags(vararg tags: CfnTag)
 
+    /**
+     * The thing group name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thinggroup.html#cfn-iot-thinggroup-thinggroupname)
+     * @param thingGroupName The thing group name. 
+     */
     public fun thingGroupName(thingGroupName: String)
 
+    /**
+     * Thing group properties.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thinggroup.html#cfn-iot-thinggroup-thinggroupproperties)
+     * @param thingGroupProperties Thing group properties. 
+     */
     public fun thingGroupProperties(thingGroupProperties: IResolvable)
 
+    /**
+     * Thing group properties.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thinggroup.html#cfn-iot-thinggroup-thinggroupproperties)
+     * @param thingGroupProperties Thing group properties. 
+     */
     public fun thingGroupProperties(thingGroupProperties: ThingGroupPropertiesProperty)
 
+    /**
+     * Thing group properties.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thinggroup.html#cfn-iot-thinggroup-thinggroupproperties)
+     * @param thingGroupProperties Thing group properties. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e32515e9f7939b92fbc09f334077a7c5cb6e042e9bed7abc63b3308772223433")
     public
@@ -100,32 +211,85 @@ public open class CfnThingGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.iot.CfnThingGroup.Builder =
         software.amazon.awscdk.services.iot.CfnThingGroup.Builder.create(scope, id)
 
+    /**
+     * The parent thing group name.
+     *
+     * A Dynamic Thing Group does not have `parentGroupName` defined.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thinggroup.html#cfn-iot-thinggroup-parentgroupname)
+     * @param parentGroupName The parent thing group name. 
+     */
     override fun parentGroupName(parentGroupName: String) {
       cdkBuilder.parentGroupName(parentGroupName)
     }
 
+    /**
+     * The dynamic thing group search query string.
+     *
+     * The `queryString` attribute *is* required for `CreateDynamicThingGroup` . The `queryString`
+     * attribute *is not* required for `CreateThingGroup` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thinggroup.html#cfn-iot-thinggroup-querystring)
+     * @param queryString The dynamic thing group search query string. 
+     */
     override fun queryString(queryString: String) {
       cdkBuilder.queryString(queryString)
     }
 
+    /**
+     * Metadata which can be used to manage the thing group or dynamic thing group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thinggroup.html#cfn-iot-thinggroup-tags)
+     * @param tags Metadata which can be used to manage the thing group or dynamic thing group. 
+     */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    /**
+     * Metadata which can be used to manage the thing group or dynamic thing group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thinggroup.html#cfn-iot-thinggroup-tags)
+     * @param tags Metadata which can be used to manage the thing group or dynamic thing group. 
+     */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
+    /**
+     * The thing group name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thinggroup.html#cfn-iot-thinggroup-thinggroupname)
+     * @param thingGroupName The thing group name. 
+     */
     override fun thingGroupName(thingGroupName: String) {
       cdkBuilder.thingGroupName(thingGroupName)
     }
 
+    /**
+     * Thing group properties.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thinggroup.html#cfn-iot-thinggroup-thinggroupproperties)
+     * @param thingGroupProperties Thing group properties. 
+     */
     override fun thingGroupProperties(thingGroupProperties: IResolvable) {
       cdkBuilder.thingGroupProperties(thingGroupProperties.let(IResolvable::unwrap))
     }
 
+    /**
+     * Thing group properties.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thinggroup.html#cfn-iot-thinggroup-thinggroupproperties)
+     * @param thingGroupProperties Thing group properties. 
+     */
     override fun thingGroupProperties(thingGroupProperties: ThingGroupPropertiesProperty) {
       cdkBuilder.thingGroupProperties(thingGroupProperties.let(ThingGroupPropertiesProperty::unwrap))
     }
 
+    /**
+     * Thing group properties.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thinggroup.html#cfn-iot-thinggroup-thinggroupproperties)
+     * @param thingGroupProperties Thing group properties. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e32515e9f7939b92fbc09f334077a7c5cb6e042e9bed7abc63b3308772223433")
     override
@@ -157,11 +321,32 @@ public open class CfnThingGroup internal constructor(
   }
 
   public interface AttributePayloadProperty {
+    /**
+     * A JSON string containing up to three key-value pair in JSON format. For example:.
+     *
+     * `{\"attributes\":{\"string1\":\"string2\"}}`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-thinggroup-attributepayload.html#cfn-iot-thinggroup-attributepayload-attributes)
+     */
     public fun attributes(): Any? = unwrap(this).getAttributes()
 
+    /**
+     * A builder for [AttributePayloadProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param attributes A JSON string containing up to three key-value pair in JSON format. For
+       * example:.
+       * `{\"attributes\":{\"string1\":\"string2\"}}`
+       */
       public fun attributes(attributes: IResolvable)
 
+      /**
+       * @param attributes A JSON string containing up to three key-value pair in JSON format. For
+       * example:.
+       * `{\"attributes\":{\"string1\":\"string2\"}}`
+       */
       public fun attributes(attributes: Map<String, String>)
     }
 
@@ -170,10 +355,20 @@ public open class CfnThingGroup internal constructor(
           software.amazon.awscdk.services.iot.CfnThingGroup.AttributePayloadProperty.Builder =
           software.amazon.awscdk.services.iot.CfnThingGroup.AttributePayloadProperty.builder()
 
+      /**
+       * @param attributes A JSON string containing up to three key-value pair in JSON format. For
+       * example:.
+       * `{\"attributes\":{\"string1\":\"string2\"}}`
+       */
       override fun attributes(attributes: IResolvable) {
         cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param attributes A JSON string containing up to three key-value pair in JSON format. For
+       * example:.
+       * `{\"attributes\":{\"string1\":\"string2\"}}`
+       */
       override fun attributes(attributes: Map<String, String>) {
         cdkBuilder.attributes(attributes)
       }
@@ -186,6 +381,13 @@ public open class CfnThingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnThingGroup.AttributePayloadProperty,
     ) : AttributePayloadProperty {
+      /**
+       * A JSON string containing up to three key-value pair in JSON format. For example:.
+       *
+       * `{\"attributes\":{\"string1\":\"string2\"}}`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-thinggroup-attributepayload.html#cfn-iot-thinggroup-attributepayload-attributes)
+       */
       override fun attributes(): Any? = unwrap(this).getAttributes()
     }
 
@@ -210,19 +412,45 @@ public open class CfnThingGroup internal constructor(
   }
 
   public interface ThingGroupPropertiesProperty {
+    /**
+     * The thing group attributes in JSON format.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-thinggroup-thinggroupproperties.html#cfn-iot-thinggroup-thinggroupproperties-attributepayload)
+     */
     public fun attributePayload(): Any? = unwrap(this).getAttributePayload()
 
+    /**
+     * The thing group description.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-thinggroup-thinggroupproperties.html#cfn-iot-thinggroup-thinggroupproperties-thinggroupdescription)
+     */
     public fun thingGroupDescription(): String? = unwrap(this).getThingGroupDescription()
 
+    /**
+     * A builder for [ThingGroupPropertiesProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param attributePayload The thing group attributes in JSON format.
+       */
       public fun attributePayload(attributePayload: IResolvable)
 
+      /**
+       * @param attributePayload The thing group attributes in JSON format.
+       */
       public fun attributePayload(attributePayload: AttributePayloadProperty)
 
+      /**
+       * @param attributePayload The thing group attributes in JSON format.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4fd1cdfbf0332bdbd7edf5ca85729520fc70da7127260b89c3f1c470af0bac58")
       public fun attributePayload(attributePayload: AttributePayloadProperty.Builder.() -> Unit)
 
+      /**
+       * @param thingGroupDescription The thing group description.
+       */
       public fun thingGroupDescription(thingGroupDescription: String)
     }
 
@@ -231,19 +459,31 @@ public open class CfnThingGroup internal constructor(
           software.amazon.awscdk.services.iot.CfnThingGroup.ThingGroupPropertiesProperty.Builder =
           software.amazon.awscdk.services.iot.CfnThingGroup.ThingGroupPropertiesProperty.builder()
 
+      /**
+       * @param attributePayload The thing group attributes in JSON format.
+       */
       override fun attributePayload(attributePayload: IResolvable) {
         cdkBuilder.attributePayload(attributePayload.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param attributePayload The thing group attributes in JSON format.
+       */
       override fun attributePayload(attributePayload: AttributePayloadProperty) {
         cdkBuilder.attributePayload(attributePayload.let(AttributePayloadProperty::unwrap))
       }
 
+      /**
+       * @param attributePayload The thing group attributes in JSON format.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4fd1cdfbf0332bdbd7edf5ca85729520fc70da7127260b89c3f1c470af0bac58")
       override fun attributePayload(attributePayload: AttributePayloadProperty.Builder.() -> Unit):
           Unit = attributePayload(AttributePayloadProperty(attributePayload))
 
+      /**
+       * @param thingGroupDescription The thing group description.
+       */
       override fun thingGroupDescription(thingGroupDescription: String) {
         cdkBuilder.thingGroupDescription(thingGroupDescription)
       }
@@ -257,8 +497,18 @@ public open class CfnThingGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.iot.CfnThingGroup.ThingGroupPropertiesProperty,
     ) : ThingGroupPropertiesProperty {
+      /**
+       * The thing group attributes in JSON format.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-thinggroup-thinggroupproperties.html#cfn-iot-thinggroup-thinggroupproperties-attributepayload)
+       */
       override fun attributePayload(): Any? = unwrap(this).getAttributePayload()
 
+      /**
+       * The thing group description.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-thinggroup-thinggroupproperties.html#cfn-iot-thinggroup-thinggroupproperties-thinggroupdescription)
+       */
       override fun thingGroupDescription(): String? = unwrap(this).getThingGroupDescription()
     }
 

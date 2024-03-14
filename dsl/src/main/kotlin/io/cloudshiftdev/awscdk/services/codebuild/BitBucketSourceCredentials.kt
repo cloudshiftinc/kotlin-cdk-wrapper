@@ -2,6 +2,7 @@ package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.SecretValue
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
@@ -10,9 +11,23 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class BitBucketSourceCredentials internal constructor(
   private val cdkObject: software.amazon.awscdk.services.codebuild.BitBucketSourceCredentials,
 ) : Resource(cdkObject) {
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.codebuild.BitBucketSourceCredentials].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * Your BitBucket application password.
+     *
+     * @param password Your BitBucket application password. 
+     */
     public fun password(password: SecretValue)
 
+    /**
+     * Your BitBucket username.
+     *
+     * @param username Your BitBucket username. 
+     */
     public fun username(username: SecretValue)
   }
 
@@ -25,10 +40,20 @@ public open class BitBucketSourceCredentials internal constructor(
         software.amazon.awscdk.services.codebuild.BitBucketSourceCredentials.Builder.create(scope,
         id)
 
+    /**
+     * Your BitBucket application password.
+     *
+     * @param password Your BitBucket application password. 
+     */
     override fun password(password: SecretValue) {
       cdkBuilder.password(password.let(SecretValue::unwrap))
     }
 
+    /**
+     * Your BitBucket username.
+     *
+     * @param username Your BitBucket username. 
+     */
     override fun username(username: SecretValue) {
       cdkBuilder.username(username.let(SecretValue::unwrap))
     }

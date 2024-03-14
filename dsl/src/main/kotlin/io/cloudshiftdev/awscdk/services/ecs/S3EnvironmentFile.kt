@@ -5,6 +5,11 @@ import io.cloudshiftdev.constructs.Construct
 public open class S3EnvironmentFile internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ecs.S3EnvironmentFile,
 ) : EnvironmentFile(cdkObject) {
+  /**
+   * Called when the container is initialized to allow this object to bind to the stack.
+   *
+   * @param _scope 
+   */
   public override fun bind(_scope: Construct): EnvironmentFileConfig =
       unwrap(this).bind(_scope.let(Construct::unwrap)).let(EnvironmentFileConfig::wrap)
 

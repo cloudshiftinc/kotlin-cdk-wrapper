@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -16,42 +17,112 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnInputSecurityGroup internal constructor(
   private val cdkObject: software.amazon.awscdk.services.medialive.CfnInputSecurityGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  /**
+   * The ARN of the MediaLive input security group.
+   *
+   * For example: arn:aws:medialive:us-west-1:111122223333:medialive:inputSecurityGroup:1234567
+   */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
+  /**
+   * The Id of the Input Security Group.
+   */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
+  /**
+   * A collection of tags for this input security group.
+   */
   public open fun tagsRaw(): Any? = unwrap(this).getTagsRaw()
 
+  /**
+   * A collection of tags for this input security group.
+   */
   public open fun tagsRaw(`value`: Any) {
     unwrap(this).setTagsRaw(`value`)
   }
 
+  /**
+   * The list of IPv4 CIDR addresses to include in the input security group as "allowed" addresses.
+   */
   public open fun whitelistRules(): Any? = unwrap(this).getWhitelistRules()
 
+  /**
+   * The list of IPv4 CIDR addresses to include in the input security group as "allowed" addresses.
+   */
   public open fun whitelistRules(`value`: IResolvable) {
     unwrap(this).setWhitelistRules(`value`.let(IResolvable::unwrap))
   }
 
+  /**
+   * The list of IPv4 CIDR addresses to include in the input security group as "allowed" addresses.
+   */
   public open fun whitelistRules(__idx_ac66f0: List<Any>) {
     unwrap(this).setWhitelistRules(__idx_ac66f0)
   }
 
+  /**
+   * The list of IPv4 CIDR addresses to include in the input security group as "allowed" addresses.
+   */
   public open fun whitelistRules(vararg __idx_ac66f0: Any): Unit =
       whitelistRules(__idx_ac66f0.toList())
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.medialive.CfnInputSecurityGroup].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * A collection of tags for this input security group.
+     *
+     * Each tag is a key-value pair.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-inputsecuritygroup.html#cfn-medialive-inputsecuritygroup-tags)
+     * @param tags A collection of tags for this input security group. 
+     */
     public fun tags(tags: Any)
 
+    /**
+     * The list of IPv4 CIDR addresses to include in the input security group as "allowed"
+     * addresses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-inputsecuritygroup.html#cfn-medialive-inputsecuritygroup-whitelistrules)
+     * @param whitelistRules The list of IPv4 CIDR addresses to include in the input security group
+     * as "allowed" addresses. 
+     */
     public fun whitelistRules(whitelistRules: IResolvable)
 
+    /**
+     * The list of IPv4 CIDR addresses to include in the input security group as "allowed"
+     * addresses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-inputsecuritygroup.html#cfn-medialive-inputsecuritygroup-whitelistrules)
+     * @param whitelistRules The list of IPv4 CIDR addresses to include in the input security group
+     * as "allowed" addresses. 
+     */
     public fun whitelistRules(whitelistRules: List<Any>)
 
+    /**
+     * The list of IPv4 CIDR addresses to include in the input security group as "allowed"
+     * addresses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-inputsecuritygroup.html#cfn-medialive-inputsecuritygroup-whitelistrules)
+     * @param whitelistRules The list of IPv4 CIDR addresses to include in the input security group
+     * as "allowed" addresses. 
+     */
     public fun whitelistRules(vararg whitelistRules: Any)
   }
 
@@ -62,18 +133,50 @@ public open class CfnInputSecurityGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.medialive.CfnInputSecurityGroup.Builder
         = software.amazon.awscdk.services.medialive.CfnInputSecurityGroup.Builder.create(scope, id)
 
+    /**
+     * A collection of tags for this input security group.
+     *
+     * Each tag is a key-value pair.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-inputsecuritygroup.html#cfn-medialive-inputsecuritygroup-tags)
+     * @param tags A collection of tags for this input security group. 
+     */
     override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
     }
 
+    /**
+     * The list of IPv4 CIDR addresses to include in the input security group as "allowed"
+     * addresses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-inputsecuritygroup.html#cfn-medialive-inputsecuritygroup-whitelistrules)
+     * @param whitelistRules The list of IPv4 CIDR addresses to include in the input security group
+     * as "allowed" addresses. 
+     */
     override fun whitelistRules(whitelistRules: IResolvable) {
       cdkBuilder.whitelistRules(whitelistRules.let(IResolvable::unwrap))
     }
 
+    /**
+     * The list of IPv4 CIDR addresses to include in the input security group as "allowed"
+     * addresses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-inputsecuritygroup.html#cfn-medialive-inputsecuritygroup-whitelistrules)
+     * @param whitelistRules The list of IPv4 CIDR addresses to include in the input security group
+     * as "allowed" addresses. 
+     */
     override fun whitelistRules(whitelistRules: List<Any>) {
       cdkBuilder.whitelistRules(whitelistRules)
     }
 
+    /**
+     * The list of IPv4 CIDR addresses to include in the input security group as "allowed"
+     * addresses.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-inputsecuritygroup.html#cfn-medialive-inputsecuritygroup-whitelistrules)
+     * @param whitelistRules The list of IPv4 CIDR addresses to include in the input security group
+     * as "allowed" addresses. 
+     */
     override fun whitelistRules(vararg whitelistRules: Any): Unit =
         whitelistRules(whitelistRules.toList())
 
@@ -103,9 +206,21 @@ public open class CfnInputSecurityGroup internal constructor(
   }
 
   public interface InputWhitelistRuleCidrProperty {
+    /**
+     * An IPv4 CIDR range to include in this input security group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-inputsecuritygroup-inputwhitelistrulecidr.html#cfn-medialive-inputsecuritygroup-inputwhitelistrulecidr-cidr)
+     */
     public fun cidr(): String? = unwrap(this).getCidr()
 
+    /**
+     * A builder for [InputWhitelistRuleCidrProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param cidr An IPv4 CIDR range to include in this input security group.
+       */
       public fun cidr(cidr: String)
     }
 
@@ -115,6 +230,9 @@ public open class CfnInputSecurityGroup internal constructor(
           =
           software.amazon.awscdk.services.medialive.CfnInputSecurityGroup.InputWhitelistRuleCidrProperty.builder()
 
+      /**
+       * @param cidr An IPv4 CIDR range to include in this input security group.
+       */
       override fun cidr(cidr: String) {
         cdkBuilder.cidr(cidr)
       }
@@ -128,6 +246,11 @@ public open class CfnInputSecurityGroup internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.services.medialive.CfnInputSecurityGroup.InputWhitelistRuleCidrProperty,
     ) : InputWhitelistRuleCidrProperty {
+      /**
+       * An IPv4 CIDR range to include in this input security group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-inputsecuritygroup-inputwhitelistrulecidr.html#cfn-medialive-inputsecuritygroup-inputwhitelistrulecidr-cidr)
+       */
       override fun cidr(): String? = unwrap(this).getCidr()
     }
 

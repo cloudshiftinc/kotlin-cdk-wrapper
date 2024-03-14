@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -15,34 +16,82 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnRouteTable internal constructor(
   private val cdkObject: software.amazon.awscdk.services.ec2.CfnRouteTable,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  /**
+   * The ID of the route table.
+   */
   public open fun attrRouteTableId(): String = unwrap(this).getAttrRouteTableId()
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
+  /**
+   * Any tags assigned to the route table.
+   */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
+  /**
+   * Any tags assigned to the route table.
+   */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  /**
+   * Any tags assigned to the route table.
+   */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
+  /**
+   * The ID of the VPC.
+   */
   public open fun vpcId(): String = unwrap(this).getVpcId()
 
+  /**
+   * The ID of the VPC.
+   */
   public open fun vpcId(`value`: String) {
     unwrap(this).setVpcId(`value`)
   }
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.CfnRouteTable].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * Any tags assigned to the route table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-routetable.html#cfn-ec2-routetable-tags)
+     * @param tags Any tags assigned to the route table. 
+     */
     public fun tags(tags: List<CfnTag>)
 
+    /**
+     * Any tags assigned to the route table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-routetable.html#cfn-ec2-routetable-tags)
+     * @param tags Any tags assigned to the route table. 
+     */
     public fun tags(vararg tags: CfnTag)
 
+    /**
+     * The ID of the VPC.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-routetable.html#cfn-ec2-routetable-vpcid)
+     * @param vpcId The ID of the VPC. 
+     */
     public fun vpcId(vpcId: String)
   }
 
@@ -53,12 +102,30 @@ public open class CfnRouteTable internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnRouteTable.Builder =
         software.amazon.awscdk.services.ec2.CfnRouteTable.Builder.create(scope, id)
 
+    /**
+     * Any tags assigned to the route table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-routetable.html#cfn-ec2-routetable-tags)
+     * @param tags Any tags assigned to the route table. 
+     */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    /**
+     * Any tags assigned to the route table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-routetable.html#cfn-ec2-routetable-tags)
+     * @param tags Any tags assigned to the route table. 
+     */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
+    /**
+     * The ID of the VPC.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-routetable.html#cfn-ec2-routetable-vpcid)
+     * @param vpcId The ID of the VPC. 
+     */
     override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }

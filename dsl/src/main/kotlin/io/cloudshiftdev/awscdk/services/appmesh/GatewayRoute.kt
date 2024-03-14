@@ -1,6 +1,7 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.Resource
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Suppress
 import kotlin.Unit
@@ -11,18 +12,48 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class GatewayRoute internal constructor(
   private val cdkObject: software.amazon.awscdk.services.appmesh.GatewayRoute,
 ) : Resource(cdkObject), IGatewayRoute {
+  /**
+   * The Amazon Resource Name (ARN) for the GatewayRoute.
+   */
   public override fun gatewayRouteArn(): String = unwrap(this).getGatewayRouteArn()
 
+  /**
+   * The name of the GatewayRoute.
+   */
   public override fun gatewayRouteName(): String = unwrap(this).getGatewayRouteName()
 
+  /**
+   * The VirtualGateway this GatewayRoute is a part of.
+   */
   public override fun virtualGateway(): IVirtualGateway =
       unwrap(this).getVirtualGateway().let(IVirtualGateway::wrap)
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.appmesh.GatewayRoute].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * The name of the GatewayRoute.
+     *
+     * Default: - an automatically generated name
+     *
+     * @param gatewayRouteName The name of the GatewayRoute. 
+     */
     public fun gatewayRouteName(gatewayRouteName: String)
 
+    /**
+     * What protocol the route uses.
+     *
+     * @param routeSpec What protocol the route uses. 
+     */
     public fun routeSpec(routeSpec: GatewayRouteSpec)
 
+    /**
+     * The VirtualGateway this GatewayRoute is associated with.
+     *
+     * @param virtualGateway The VirtualGateway this GatewayRoute is associated with. 
+     */
     public fun virtualGateway(virtualGateway: IVirtualGateway)
   }
 
@@ -33,14 +64,31 @@ public open class GatewayRoute internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.GatewayRoute.Builder =
         software.amazon.awscdk.services.appmesh.GatewayRoute.Builder.create(scope, id)
 
+    /**
+     * The name of the GatewayRoute.
+     *
+     * Default: - an automatically generated name
+     *
+     * @param gatewayRouteName The name of the GatewayRoute. 
+     */
     override fun gatewayRouteName(gatewayRouteName: String) {
       cdkBuilder.gatewayRouteName(gatewayRouteName)
     }
 
+    /**
+     * What protocol the route uses.
+     *
+     * @param routeSpec What protocol the route uses. 
+     */
     override fun routeSpec(routeSpec: GatewayRouteSpec) {
       cdkBuilder.routeSpec(routeSpec.let(GatewayRouteSpec::unwrap))
     }
 
+    /**
+     * The VirtualGateway this GatewayRoute is associated with.
+     *
+     * @param virtualGateway The VirtualGateway this GatewayRoute is associated with. 
+     */
     override fun virtualGateway(virtualGateway: IVirtualGateway) {
       cdkBuilder.virtualGateway(virtualGateway.let(IVirtualGateway::unwrap))
     }
@@ -49,7 +97,7 @@ public open class GatewayRoute internal constructor(
   }
 
   public companion object {
-    public open fun fromGatewayRouteArn(
+    public fun fromGatewayRouteArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
       gatewayRouteArn: String,
@@ -57,7 +105,7 @@ public open class GatewayRoute internal constructor(
         software.amazon.awscdk.services.appmesh.GatewayRoute.fromGatewayRouteArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
         id, gatewayRouteArn).let(IGatewayRoute::wrap)
 
-    public open fun fromGatewayRouteAttributes(
+    public fun fromGatewayRouteAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
       attrs: GatewayRouteAttributes,
@@ -67,7 +115,7 @@ public open class GatewayRoute internal constructor(
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f71dbbf43002918748ca9a53d66214e1ac13030048b1218765fc33ac163c70a9")
-    public open fun fromGatewayRouteAttributes(
+    public fun fromGatewayRouteAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
       attrs: GatewayRouteAttributes.Builder.() -> Unit,

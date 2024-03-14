@@ -1,16 +1,33 @@
 package io.cloudshiftdev.awscdk
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface CfnRuleAssertion {
+  /**
+   * The assertion description.
+   */
   public fun assertDescription(): String
 
+  /**
+   * The assertion.
+   */
   public fun assertValue(): ICfnConditionExpression
 
+  /**
+   * A builder for [CfnRuleAssertion]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param assertDescription The assertion description. 
+     */
     public fun assertDescription(assertDescription: String)
 
+    /**
+     * @param assertValue The assertion. 
+     */
     public fun assertValue(assertValue: ICfnConditionExpression)
   }
 
@@ -18,10 +35,16 @@ public interface CfnRuleAssertion {
     private val cdkBuilder: software.amazon.awscdk.CfnRuleAssertion.Builder =
         software.amazon.awscdk.CfnRuleAssertion.builder()
 
+    /**
+     * @param assertDescription The assertion description. 
+     */
     override fun assertDescription(assertDescription: String) {
       cdkBuilder.assertDescription(assertDescription)
     }
 
+    /**
+     * @param assertValue The assertion. 
+     */
     override fun assertValue(assertValue: ICfnConditionExpression) {
       cdkBuilder.assertValue(assertValue.let(ICfnConditionExpression::unwrap))
     }
@@ -32,8 +55,14 @@ public interface CfnRuleAssertion {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.CfnRuleAssertion,
   ) : CfnRuleAssertion {
+    /**
+     * The assertion description.
+     */
     override fun assertDescription(): String = unwrap(this).getAssertDescription()
 
+    /**
+     * The assertion.
+     */
     override fun assertValue(): ICfnConditionExpression =
         unwrap(this).getAssertValue().let(ICfnConditionExpression::wrap)
   }

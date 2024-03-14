@@ -1,7 +1,8 @@
 @file:Suppress("PropertyName")
 
-package io.cloudshiftdev.awscdkdsl.ext.ec2
+package io.cloudshiftdev.awscdk.ext.ec2
 
+import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import io.cloudshiftdev.awscdkdsl.services.ec2.ec2
 import software.amazon.awscdk.services.ec2.SubnetSelection
 import software.amazon.awscdk.services.ec2.SubnetType

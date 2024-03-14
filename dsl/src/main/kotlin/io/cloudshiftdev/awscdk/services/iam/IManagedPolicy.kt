@@ -3,11 +3,17 @@ package io.cloudshiftdev.awscdk.services.iam
 import kotlin.String
 
 public interface IManagedPolicy {
+  /**
+   * The ARN of the managed policy.
+   */
   public fun managedPolicyArn(): String
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.iam.IManagedPolicy,
   ) : IManagedPolicy {
+    /**
+     * The ARN of the managed policy.
+     */
     override fun managedPolicyArn(): String = unwrap(this).getManagedPolicyArn()
   }
 

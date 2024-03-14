@@ -4,6 +4,7 @@ import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
 import kotlin.String
 import kotlin.Suppress
@@ -15,68 +16,180 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnSkill internal constructor(
   private val cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill,
 ) : CfnResource(cdkObject), IInspectable {
+  /**
+   *
+   */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
+  /**
+   * Login with Amazon (LWA) configuration used to authenticate with the Alexa service.
+   */
   public open fun authenticationConfiguration(): Any = unwrap(this).getAuthenticationConfiguration()
 
+  /**
+   * Login with Amazon (LWA) configuration used to authenticate with the Alexa service.
+   */
   public open fun authenticationConfiguration(`value`: IResolvable) {
     unwrap(this).setAuthenticationConfiguration(`value`.let(IResolvable::unwrap))
   }
 
+  /**
+   * Login with Amazon (LWA) configuration used to authenticate with the Alexa service.
+   */
   public open fun authenticationConfiguration(`value`: AuthenticationConfigurationProperty) {
     unwrap(this).setAuthenticationConfiguration(`value`.let(AuthenticationConfigurationProperty::unwrap))
   }
 
+  /**
+   * Login with Amazon (LWA) configuration used to authenticate with the Alexa service.
+   */
   @Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("88004043ed86646dc18b8e3a53b1ae882edfeac1a686f59f6653eac81dd7ff26")
   public open
       fun authenticationConfiguration(`value`: AuthenticationConfigurationProperty.Builder.() -> Unit):
       Unit = authenticationConfiguration(AuthenticationConfigurationProperty(`value`))
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * Configuration for the skill package that contains the components of the Alexa skill.
+   */
   public open fun skillPackage(): Any = unwrap(this).getSkillPackage()
 
+  /**
+   * Configuration for the skill package that contains the components of the Alexa skill.
+   */
   public open fun skillPackage(`value`: IResolvable) {
     unwrap(this).setSkillPackage(`value`.let(IResolvable::unwrap))
   }
 
+  /**
+   * Configuration for the skill package that contains the components of the Alexa skill.
+   */
   public open fun skillPackage(`value`: SkillPackageProperty) {
     unwrap(this).setSkillPackage(`value`.let(SkillPackageProperty::unwrap))
   }
 
+  /**
+   * Configuration for the skill package that contains the components of the Alexa skill.
+   */
   @Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("c93828306ad2c9b3d8c39bf3596a81dcaa729ec089ffad6363a76ed2b2c37ddf")
   public open fun skillPackage(`value`: SkillPackageProperty.Builder.() -> Unit): Unit =
       skillPackage(SkillPackageProperty(`value`))
 
+  /**
+   * The vendor ID associated with the Amazon developer account that will host the skill.
+   */
   public open fun vendorId(): String = unwrap(this).getVendorId()
 
+  /**
+   * The vendor ID associated with the Amazon developer account that will host the skill.
+   */
   public open fun vendorId(`value`: String) {
     unwrap(this).setVendorId(`value`)
   }
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.alexa.ask.CfnSkill].
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * Login with Amazon (LWA) configuration used to authenticate with the Alexa service.
+     *
+     * Only Login with Amazon clients created through the  are supported. The client ID, client
+     * secret, and refresh token are required.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html#cfn-ask-skill-authenticationconfiguration)
+     * @param authenticationConfiguration Login with Amazon (LWA) configuration used to authenticate
+     * with the Alexa service. 
+     */
     public fun authenticationConfiguration(authenticationConfiguration: IResolvable)
 
+    /**
+     * Login with Amazon (LWA) configuration used to authenticate with the Alexa service.
+     *
+     * Only Login with Amazon clients created through the  are supported. The client ID, client
+     * secret, and refresh token are required.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html#cfn-ask-skill-authenticationconfiguration)
+     * @param authenticationConfiguration Login with Amazon (LWA) configuration used to authenticate
+     * with the Alexa service. 
+     */
     public
         fun authenticationConfiguration(authenticationConfiguration: AuthenticationConfigurationProperty)
 
+    /**
+     * Login with Amazon (LWA) configuration used to authenticate with the Alexa service.
+     *
+     * Only Login with Amazon clients created through the  are supported. The client ID, client
+     * secret, and refresh token are required.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html#cfn-ask-skill-authenticationconfiguration)
+     * @param authenticationConfiguration Login with Amazon (LWA) configuration used to authenticate
+     * with the Alexa service. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("37fcab36fae7d2b86f1f3810bf7474706e1cfd136bb24323f15e8c78bd597311")
     public
         fun authenticationConfiguration(authenticationConfiguration: AuthenticationConfigurationProperty.Builder.() -> Unit)
 
+    /**
+     * Configuration for the skill package that contains the components of the Alexa skill.
+     *
+     * Skill packages are retrieved from an Amazon S3 bucket and key and used to create and update
+     * the skill. For more information about the skill package format, see the  .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html#cfn-ask-skill-skillpackage)
+     * @param skillPackage Configuration for the skill package that contains the components of the
+     * Alexa skill. 
+     */
     public fun skillPackage(skillPackage: IResolvable)
 
+    /**
+     * Configuration for the skill package that contains the components of the Alexa skill.
+     *
+     * Skill packages are retrieved from an Amazon S3 bucket and key and used to create and update
+     * the skill. For more information about the skill package format, see the  .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html#cfn-ask-skill-skillpackage)
+     * @param skillPackage Configuration for the skill package that contains the components of the
+     * Alexa skill. 
+     */
     public fun skillPackage(skillPackage: SkillPackageProperty)
 
+    /**
+     * Configuration for the skill package that contains the components of the Alexa skill.
+     *
+     * Skill packages are retrieved from an Amazon S3 bucket and key and used to create and update
+     * the skill. For more information about the skill package format, see the  .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html#cfn-ask-skill-skillpackage)
+     * @param skillPackage Configuration for the skill package that contains the components of the
+     * Alexa skill. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("27243d70f0bca05762c9ee33da5908e19d239fc2644517eff6d81ae2bca2f3e5")
     public fun skillPackage(skillPackage: SkillPackageProperty.Builder.() -> Unit)
 
+    /**
+     * The vendor ID associated with the Amazon developer account that will host the skill.
+     *
+     * Details for retrieving the vendor ID are in  . The provided LWA credentials must be linked to
+     * the developer account associated with this vendor ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html#cfn-ask-skill-vendorid)
+     * @param vendorId The vendor ID associated with the Amazon developer account that will host the
+     * skill. 
+     */
     public fun vendorId(vendorId: String)
   }
 
@@ -87,15 +200,45 @@ public open class CfnSkill internal constructor(
     private val cdkBuilder: software.amazon.awscdk.alexa.ask.CfnSkill.Builder =
         software.amazon.awscdk.alexa.ask.CfnSkill.Builder.create(scope, id)
 
+    /**
+     * Login with Amazon (LWA) configuration used to authenticate with the Alexa service.
+     *
+     * Only Login with Amazon clients created through the  are supported. The client ID, client
+     * secret, and refresh token are required.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html#cfn-ask-skill-authenticationconfiguration)
+     * @param authenticationConfiguration Login with Amazon (LWA) configuration used to authenticate
+     * with the Alexa service. 
+     */
     override fun authenticationConfiguration(authenticationConfiguration: IResolvable) {
       cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(IResolvable::unwrap))
     }
 
+    /**
+     * Login with Amazon (LWA) configuration used to authenticate with the Alexa service.
+     *
+     * Only Login with Amazon clients created through the  are supported. The client ID, client
+     * secret, and refresh token are required.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html#cfn-ask-skill-authenticationconfiguration)
+     * @param authenticationConfiguration Login with Amazon (LWA) configuration used to authenticate
+     * with the Alexa service. 
+     */
     override
         fun authenticationConfiguration(authenticationConfiguration: AuthenticationConfigurationProperty) {
       cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(AuthenticationConfigurationProperty::unwrap))
     }
 
+    /**
+     * Login with Amazon (LWA) configuration used to authenticate with the Alexa service.
+     *
+     * Only Login with Amazon clients created through the  are supported. The client ID, client
+     * secret, and refresh token are required.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html#cfn-ask-skill-authenticationconfiguration)
+     * @param authenticationConfiguration Login with Amazon (LWA) configuration used to authenticate
+     * with the Alexa service. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("37fcab36fae7d2b86f1f3810bf7474706e1cfd136bb24323f15e8c78bd597311")
     override
@@ -103,19 +246,59 @@ public open class CfnSkill internal constructor(
         Unit =
         authenticationConfiguration(AuthenticationConfigurationProperty(authenticationConfiguration))
 
+    /**
+     * Configuration for the skill package that contains the components of the Alexa skill.
+     *
+     * Skill packages are retrieved from an Amazon S3 bucket and key and used to create and update
+     * the skill. For more information about the skill package format, see the  .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html#cfn-ask-skill-skillpackage)
+     * @param skillPackage Configuration for the skill package that contains the components of the
+     * Alexa skill. 
+     */
     override fun skillPackage(skillPackage: IResolvable) {
       cdkBuilder.skillPackage(skillPackage.let(IResolvable::unwrap))
     }
 
+    /**
+     * Configuration for the skill package that contains the components of the Alexa skill.
+     *
+     * Skill packages are retrieved from an Amazon S3 bucket and key and used to create and update
+     * the skill. For more information about the skill package format, see the  .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html#cfn-ask-skill-skillpackage)
+     * @param skillPackage Configuration for the skill package that contains the components of the
+     * Alexa skill. 
+     */
     override fun skillPackage(skillPackage: SkillPackageProperty) {
       cdkBuilder.skillPackage(skillPackage.let(SkillPackageProperty::unwrap))
     }
 
+    /**
+     * Configuration for the skill package that contains the components of the Alexa skill.
+     *
+     * Skill packages are retrieved from an Amazon S3 bucket and key and used to create and update
+     * the skill. For more information about the skill package format, see the  .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html#cfn-ask-skill-skillpackage)
+     * @param skillPackage Configuration for the skill package that contains the components of the
+     * Alexa skill. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("27243d70f0bca05762c9ee33da5908e19d239fc2644517eff6d81ae2bca2f3e5")
     override fun skillPackage(skillPackage: SkillPackageProperty.Builder.() -> Unit): Unit =
         skillPackage(SkillPackageProperty(skillPackage))
 
+    /**
+     * The vendor ID associated with the Amazon developer account that will host the skill.
+     *
+     * Details for retrieving the vendor ID are in  . The provided LWA credentials must be linked to
+     * the developer account associated with this vendor ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html#cfn-ask-skill-vendorid)
+     * @param vendorId The vendor ID associated with the Amazon developer account that will host the
+     * skill. 
+     */
     override fun vendorId(vendorId: String) {
       cdkBuilder.vendorId(vendorId)
     }
@@ -145,31 +328,103 @@ public open class CfnSkill internal constructor(
   }
 
   public interface SkillPackageProperty {
+    /**
+     * Overrides to the skill package to apply when creating or updating the skill.
+     *
+     * Values provided here do not modify the contents of the original skill package. Currently,
+     * only overriding values inside of the skill manifest component of the package is supported.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-skillpackage.html#cfn-ask-skill-skillpackage-overrides)
+     */
     public fun overrides(): Any? = unwrap(this).getOverrides()
 
+    /**
+     * The name of the Amazon S3 bucket where the .zip file that contains the skill package is
+     * stored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-skillpackage.html#cfn-ask-skill-skillpackage-s3bucket)
+     */
     public fun s3Bucket(): String
 
+    /**
+     * ARN of the IAM role that grants the Alexa service ( `alexa-appkit.amazon.com` ) permission to
+     * access the bucket and retrieve the skill package. This property is optional. If you do not
+     * provide it, the bucket must be publicly accessible or configured with a policy that allows this
+     * access. Otherwise, AWS CloudFormation cannot create the skill.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-skillpackage.html#cfn-ask-skill-skillpackage-s3bucketrole)
+     */
     public fun s3BucketRole(): String? = unwrap(this).getS3BucketRole()
 
+    /**
+     * The location and name of the skill package .zip file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-skillpackage.html#cfn-ask-skill-skillpackage-s3key)
+     */
     public fun s3Key(): String
 
+    /**
+     * If you have S3 versioning enabled, the version ID of the skill package.zip file.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-skillpackage.html#cfn-ask-skill-skillpackage-s3objectversion)
+     */
     public fun s3ObjectVersion(): String? = unwrap(this).getS3ObjectVersion()
 
+    /**
+     * A builder for [SkillPackageProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param overrides Overrides to the skill package to apply when creating or updating the
+       * skill.
+       * Values provided here do not modify the contents of the original skill package. Currently,
+       * only overriding values inside of the skill manifest component of the package is supported.
+       */
       public fun overrides(overrides: IResolvable)
 
+      /**
+       * @param overrides Overrides to the skill package to apply when creating or updating the
+       * skill.
+       * Values provided here do not modify the contents of the original skill package. Currently,
+       * only overriding values inside of the skill manifest component of the package is supported.
+       */
       public fun overrides(overrides: OverridesProperty)
 
+      /**
+       * @param overrides Overrides to the skill package to apply when creating or updating the
+       * skill.
+       * Values provided here do not modify the contents of the original skill package. Currently,
+       * only overriding values inside of the skill manifest component of the package is supported.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9d27def801a2afcb02efa20e1f4e48fe9a7fbf15c11da0ace5af7d3771bedbcc")
       public fun overrides(overrides: OverridesProperty.Builder.() -> Unit)
 
+      /**
+       * @param s3Bucket The name of the Amazon S3 bucket where the .zip file that contains the
+       * skill package is stored. 
+       */
       public fun s3Bucket(s3Bucket: String)
 
+      /**
+       * @param s3BucketRole ARN of the IAM role that grants the Alexa service (
+       * `alexa-appkit.amazon.com` ) permission to access the bucket and retrieve the skill package.
+       * This property is optional. If you do not provide it, the bucket must be publicly accessible or
+       * configured with a policy that allows this access. Otherwise, AWS CloudFormation cannot create
+       * the skill.
+       */
       public fun s3BucketRole(s3BucketRole: String)
 
+      /**
+       * @param s3Key The location and name of the skill package .zip file. 
+       */
       public fun s3Key(s3Key: String)
 
+      /**
+       * @param s3ObjectVersion If you have S3 versioning enabled, the version ID of the skill
+       * package.zip file.
+       */
       public fun s3ObjectVersion(s3ObjectVersion: String)
     }
 
@@ -177,31 +432,67 @@ public open class CfnSkill internal constructor(
       private val cdkBuilder: software.amazon.awscdk.alexa.ask.CfnSkill.SkillPackageProperty.Builder
           = software.amazon.awscdk.alexa.ask.CfnSkill.SkillPackageProperty.builder()
 
+      /**
+       * @param overrides Overrides to the skill package to apply when creating or updating the
+       * skill.
+       * Values provided here do not modify the contents of the original skill package. Currently,
+       * only overriding values inside of the skill manifest component of the package is supported.
+       */
       override fun overrides(overrides: IResolvable) {
         cdkBuilder.overrides(overrides.let(IResolvable::unwrap))
       }
 
+      /**
+       * @param overrides Overrides to the skill package to apply when creating or updating the
+       * skill.
+       * Values provided here do not modify the contents of the original skill package. Currently,
+       * only overriding values inside of the skill manifest component of the package is supported.
+       */
       override fun overrides(overrides: OverridesProperty) {
         cdkBuilder.overrides(overrides.let(OverridesProperty::unwrap))
       }
 
+      /**
+       * @param overrides Overrides to the skill package to apply when creating or updating the
+       * skill.
+       * Values provided here do not modify the contents of the original skill package. Currently,
+       * only overriding values inside of the skill manifest component of the package is supported.
+       */
       @Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("9d27def801a2afcb02efa20e1f4e48fe9a7fbf15c11da0ace5af7d3771bedbcc")
       override fun overrides(overrides: OverridesProperty.Builder.() -> Unit): Unit =
           overrides(OverridesProperty(overrides))
 
+      /**
+       * @param s3Bucket The name of the Amazon S3 bucket where the .zip file that contains the
+       * skill package is stored. 
+       */
       override fun s3Bucket(s3Bucket: String) {
         cdkBuilder.s3Bucket(s3Bucket)
       }
 
+      /**
+       * @param s3BucketRole ARN of the IAM role that grants the Alexa service (
+       * `alexa-appkit.amazon.com` ) permission to access the bucket and retrieve the skill package.
+       * This property is optional. If you do not provide it, the bucket must be publicly accessible or
+       * configured with a policy that allows this access. Otherwise, AWS CloudFormation cannot create
+       * the skill.
+       */
       override fun s3BucketRole(s3BucketRole: String) {
         cdkBuilder.s3BucketRole(s3BucketRole)
       }
 
+      /**
+       * @param s3Key The location and name of the skill package .zip file. 
+       */
       override fun s3Key(s3Key: String) {
         cdkBuilder.s3Key(s3Key)
       }
 
+      /**
+       * @param s3ObjectVersion If you have S3 versioning enabled, the version ID of the skill
+       * package.zip file.
+       */
       override fun s3ObjectVersion(s3ObjectVersion: String) {
         cdkBuilder.s3ObjectVersion(s3ObjectVersion)
       }
@@ -213,14 +504,46 @@ public open class CfnSkill internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.SkillPackageProperty,
     ) : SkillPackageProperty {
+      /**
+       * Overrides to the skill package to apply when creating or updating the skill.
+       *
+       * Values provided here do not modify the contents of the original skill package. Currently,
+       * only overriding values inside of the skill manifest component of the package is supported.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-skillpackage.html#cfn-ask-skill-skillpackage-overrides)
+       */
       override fun overrides(): Any? = unwrap(this).getOverrides()
 
+      /**
+       * The name of the Amazon S3 bucket where the .zip file that contains the skill package is
+       * stored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-skillpackage.html#cfn-ask-skill-skillpackage-s3bucket)
+       */
       override fun s3Bucket(): String = unwrap(this).getS3Bucket()
 
+      /**
+       * ARN of the IAM role that grants the Alexa service ( `alexa-appkit.amazon.com` ) permission
+       * to access the bucket and retrieve the skill package. This property is optional. If you do not
+       * provide it, the bucket must be publicly accessible or configured with a policy that allows
+       * this access. Otherwise, AWS CloudFormation cannot create the skill.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-skillpackage.html#cfn-ask-skill-skillpackage-s3bucketrole)
+       */
       override fun s3BucketRole(): String? = unwrap(this).getS3BucketRole()
 
+      /**
+       * The location and name of the skill package .zip file.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-skillpackage.html#cfn-ask-skill-skillpackage-s3key)
+       */
       override fun s3Key(): String = unwrap(this).getS3Key()
 
+      /**
+       * If you have S3 versioning enabled, the version ID of the skill package.zip file.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-skillpackage.html#cfn-ask-skill-skillpackage-s3objectversion)
+       */
       override fun s3ObjectVersion(): String? = unwrap(this).getS3ObjectVersion()
     }
 
@@ -244,9 +567,24 @@ public open class CfnSkill internal constructor(
   }
 
   public interface OverridesProperty {
+    /**
+     * Overrides to apply to the skill manifest inside of the skill package.
+     *
+     * The skill manifest contains metadata about the skill. For more information, see  .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-overrides.html#cfn-ask-skill-overrides-manifest)
+     */
     public fun manifest(): Any? = unwrap(this).getManifest()
 
+    /**
+     * A builder for [OverridesProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param manifest Overrides to apply to the skill manifest inside of the skill package.
+       * The skill manifest contains metadata about the skill. For more information, see  .
+       */
       public fun manifest(manifest: Any)
     }
 
@@ -254,6 +592,10 @@ public open class CfnSkill internal constructor(
       private val cdkBuilder: software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty.Builder =
           software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty.builder()
 
+      /**
+       * @param manifest Overrides to apply to the skill manifest inside of the skill package.
+       * The skill manifest contains metadata about the skill. For more information, see  .
+       */
       override fun manifest(manifest: Any) {
         cdkBuilder.manifest(manifest)
       }
@@ -265,6 +607,13 @@ public open class CfnSkill internal constructor(
     private class Wrapper internal constructor(
       internal val cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty,
     ) : OverridesProperty {
+      /**
+       * Overrides to apply to the skill manifest inside of the skill package.
+       *
+       * The skill manifest contains metadata about the skill. For more information, see  .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-overrides.html#cfn-ask-skill-overrides-manifest)
+       */
       override fun manifest(): Any? = unwrap(this).getManifest()
     }
 
@@ -288,17 +637,48 @@ public open class CfnSkill internal constructor(
   }
 
   public interface AuthenticationConfigurationProperty {
+    /**
+     * Client ID from Login with Amazon (LWA).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html#cfn-ask-skill-authenticationconfiguration-clientid)
+     */
     public fun clientId(): String
 
+    /**
+     * Client secret from Login with Amazon (LWA).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html#cfn-ask-skill-authenticationconfiguration-clientsecret)
+     */
     public fun clientSecret(): String
 
+    /**
+     * Refresh token from Login with Amazon (LWA).
+     *
+     * This token is secret.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html#cfn-ask-skill-authenticationconfiguration-refreshtoken)
+     */
     public fun refreshToken(): String
 
+    /**
+     * A builder for [AuthenticationConfigurationProperty]
+     */
+    @CdkDslMarker
     public interface Builder {
+      /**
+       * @param clientId Client ID from Login with Amazon (LWA). 
+       */
       public fun clientId(clientId: String)
 
+      /**
+       * @param clientSecret Client secret from Login with Amazon (LWA). 
+       */
       public fun clientSecret(clientSecret: String)
 
+      /**
+       * @param refreshToken Refresh token from Login with Amazon (LWA). 
+       * This token is secret.
+       */
       public fun refreshToken(refreshToken: String)
     }
 
@@ -307,14 +687,24 @@ public open class CfnSkill internal constructor(
           software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty.Builder =
           software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty.builder()
 
+      /**
+       * @param clientId Client ID from Login with Amazon (LWA). 
+       */
       override fun clientId(clientId: String) {
         cdkBuilder.clientId(clientId)
       }
 
+      /**
+       * @param clientSecret Client secret from Login with Amazon (LWA). 
+       */
       override fun clientSecret(clientSecret: String) {
         cdkBuilder.clientSecret(clientSecret)
       }
 
+      /**
+       * @param refreshToken Refresh token from Login with Amazon (LWA). 
+       * This token is secret.
+       */
       override fun refreshToken(refreshToken: String) {
         cdkBuilder.refreshToken(refreshToken)
       }
@@ -328,10 +718,27 @@ public open class CfnSkill internal constructor(
       internal val cdkObject:
           software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty,
     ) : AuthenticationConfigurationProperty {
+      /**
+       * Client ID from Login with Amazon (LWA).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html#cfn-ask-skill-authenticationconfiguration-clientid)
+       */
       override fun clientId(): String = unwrap(this).getClientId()
 
+      /**
+       * Client secret from Login with Amazon (LWA).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html#cfn-ask-skill-authenticationconfiguration-clientsecret)
+       */
       override fun clientSecret(): String = unwrap(this).getClientSecret()
 
+      /**
+       * Refresh token from Login with Amazon (LWA).
+       *
+       * This token is secret.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html#cfn-ask-skill-authenticationconfiguration-refreshtoken)
+       */
       override fun refreshToken(): String = unwrap(this).getRefreshToken()
     }
 

@@ -1,15 +1,36 @@
 package io.cloudshiftdev.awscdk.services.codepipeline
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Unit
 
 public interface StagePlacement {
+  /**
+   * Inserts the new Stage as a child of the given Stage (changing its current child Stage, if it
+   * had one).
+   */
   public fun justAfter(): IStage? = unwrap(this).getJustAfter()?.let(IStage::wrap)
 
+  /**
+   * Inserts the new Stage as a parent of the given Stage (changing its current parent Stage, if it
+   * had one).
+   */
   public fun rightBefore(): IStage? = unwrap(this).getRightBefore()?.let(IStage::wrap)
 
+  /**
+   * A builder for [StagePlacement]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param justAfter Inserts the new Stage as a child of the given Stage (changing its current
+     * child Stage, if it had one).
+     */
     public fun justAfter(justAfter: IStage)
 
+    /**
+     * @param rightBefore Inserts the new Stage as a parent of the given Stage (changing its current
+     * parent Stage, if it had one).
+     */
     public fun rightBefore(rightBefore: IStage)
   }
 
@@ -17,10 +38,18 @@ public interface StagePlacement {
     private val cdkBuilder: software.amazon.awscdk.services.codepipeline.StagePlacement.Builder =
         software.amazon.awscdk.services.codepipeline.StagePlacement.builder()
 
+    /**
+     * @param justAfter Inserts the new Stage as a child of the given Stage (changing its current
+     * child Stage, if it had one).
+     */
     override fun justAfter(justAfter: IStage) {
       cdkBuilder.justAfter(justAfter.let(IStage::unwrap))
     }
 
+    /**
+     * @param rightBefore Inserts the new Stage as a parent of the given Stage (changing its current
+     * parent Stage, if it had one).
+     */
     override fun rightBefore(rightBefore: IStage) {
       cdkBuilder.rightBefore(rightBefore.let(IStage::unwrap))
     }
@@ -32,8 +61,16 @@ public interface StagePlacement {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codepipeline.StagePlacement,
   ) : StagePlacement {
+    /**
+     * Inserts the new Stage as a child of the given Stage (changing its current child Stage, if it
+     * had one).
+     */
     override fun justAfter(): IStage? = unwrap(this).getJustAfter()?.let(IStage::wrap)
 
+    /**
+     * Inserts the new Stage as a parent of the given Stage (changing its current parent Stage, if
+     * it had one).
+     */
     override fun rightBefore(): IStage? = unwrap(this).getRightBefore()?.let(IStage::wrap)
   }
 

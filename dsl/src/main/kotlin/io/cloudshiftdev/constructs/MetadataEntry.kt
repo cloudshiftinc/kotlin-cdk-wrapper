@@ -1,5 +1,6 @@
 package io.cloudshiftdev.constructs
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -12,6 +13,7 @@ public interface MetadataEntry {
 
   public fun type(): String
 
+  @CdkDslMarker
   public interface Builder {
     public fun `data`(`data`: Any)
 

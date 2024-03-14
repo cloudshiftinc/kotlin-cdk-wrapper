@@ -1,17 +1,34 @@
 package io.cloudshiftdev.awscdk.services.route53
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 
 public interface MxRecordValue {
+  /**
+   * The mail server host name.
+   */
   public fun hostName(): String
 
+  /**
+   * The priority.
+   */
   public fun priority(): Number
 
+  /**
+   * A builder for [MxRecordValue]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param hostName The mail server host name. 
+     */
     public fun hostName(hostName: String)
 
+    /**
+     * @param priority The priority. 
+     */
     public fun priority(priority: Number)
   }
 
@@ -19,10 +36,16 @@ public interface MxRecordValue {
     private val cdkBuilder: software.amazon.awscdk.services.route53.MxRecordValue.Builder =
         software.amazon.awscdk.services.route53.MxRecordValue.builder()
 
+    /**
+     * @param hostName The mail server host name. 
+     */
     override fun hostName(hostName: String) {
       cdkBuilder.hostName(hostName)
     }
 
+    /**
+     * @param priority The priority. 
+     */
     override fun priority(priority: Number) {
       cdkBuilder.priority(priority)
     }
@@ -33,8 +56,14 @@ public interface MxRecordValue {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.route53.MxRecordValue,
   ) : MxRecordValue {
+    /**
+     * The mail server host name.
+     */
     override fun hostName(): String = unwrap(this).getHostName()
 
+    /**
+     * The priority.
+     */
     override fun priority(): Number = unwrap(this).getPriority()
   }
 

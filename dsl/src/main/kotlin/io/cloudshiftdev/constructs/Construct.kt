@@ -9,7 +9,7 @@ public open class Construct internal constructor(
   public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
   public companion object {
-    public open fun isConstruct(x: Any): Boolean = software.constructs.Construct.isConstruct(x)
+    public fun isConstruct(x: Any): Boolean = software.constructs.Construct.isConstruct(x)
 
     internal fun wrap(cdkObject: software.constructs.Construct): Construct = Construct(cdkObject)
 

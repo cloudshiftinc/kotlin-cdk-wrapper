@@ -7,9 +7,19 @@ public open class DynamoProjectionExpression internal constructor(
   private val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.DynamoProjectionExpression,
 ) {
+  /**
+   * Adds the array literal access for passed index.
+   *
+   * @param index array index. 
+   */
   public open fun atIndex(index: Number): DynamoProjectionExpression =
       unwrap(this).atIndex(index).let(DynamoProjectionExpression::wrap)
 
+  /**
+   * Adds the passed attribute to the chain.
+   *
+   * @param attr Attribute name. 
+   */
   public open fun withAttribute(attr: String): DynamoProjectionExpression =
       unwrap(this).withAttribute(attr).let(DynamoProjectionExpression::wrap)
 

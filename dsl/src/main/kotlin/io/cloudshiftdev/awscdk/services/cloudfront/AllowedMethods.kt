@@ -6,6 +6,9 @@ import kotlin.collections.List
 public open class AllowedMethods internal constructor(
   private val cdkObject: software.amazon.awscdk.services.cloudfront.AllowedMethods,
 ) {
+  /**
+   * HTTP methods supported.
+   */
   public open fun methods(): List<String> = unwrap(this).getMethods()
 
   public companion object {

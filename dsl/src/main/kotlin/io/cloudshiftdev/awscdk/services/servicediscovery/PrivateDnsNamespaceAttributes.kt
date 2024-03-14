@@ -1,20 +1,43 @@
 package io.cloudshiftdev.awscdk.services.servicediscovery
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface PrivateDnsNamespaceAttributes {
+  /**
+   * Namespace ARN for the Namespace.
+   */
   public fun namespaceArn(): String
 
+  /**
+   * Namespace Id for the Namespace.
+   */
   public fun namespaceId(): String
 
+  /**
+   * A name for the Namespace.
+   */
   public fun namespaceName(): String
 
+  /**
+   * A builder for [PrivateDnsNamespaceAttributes]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param namespaceArn Namespace ARN for the Namespace. 
+     */
     public fun namespaceArn(namespaceArn: String)
 
+    /**
+     * @param namespaceId Namespace Id for the Namespace. 
+     */
     public fun namespaceId(namespaceId: String)
 
+    /**
+     * @param namespaceName A name for the Namespace. 
+     */
     public fun namespaceName(namespaceName: String)
   }
 
@@ -23,14 +46,23 @@ public interface PrivateDnsNamespaceAttributes {
         software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespaceAttributes.Builder =
         software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespaceAttributes.builder()
 
+    /**
+     * @param namespaceArn Namespace ARN for the Namespace. 
+     */
     override fun namespaceArn(namespaceArn: String) {
       cdkBuilder.namespaceArn(namespaceArn)
     }
 
+    /**
+     * @param namespaceId Namespace Id for the Namespace. 
+     */
     override fun namespaceId(namespaceId: String) {
       cdkBuilder.namespaceId(namespaceId)
     }
 
+    /**
+     * @param namespaceName A name for the Namespace. 
+     */
     override fun namespaceName(namespaceName: String) {
       cdkBuilder.namespaceName(namespaceName)
     }
@@ -44,10 +76,19 @@ public interface PrivateDnsNamespaceAttributes {
     internal val cdkObject:
         software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespaceAttributes,
   ) : PrivateDnsNamespaceAttributes {
+    /**
+     * Namespace ARN for the Namespace.
+     */
     override fun namespaceArn(): String = unwrap(this).getNamespaceArn()
 
+    /**
+     * Namespace Id for the Namespace.
+     */
     override fun namespaceId(): String = unwrap(this).getNamespaceId()
 
+    /**
+     * A name for the Namespace.
+     */
     override fun namespaceName(): String = unwrap(this).getNamespaceName()
   }
 

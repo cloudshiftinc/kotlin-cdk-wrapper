@@ -1,15 +1,29 @@
 package io.cloudshiftdev.awscdk.services.codecommit
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Suppress
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
 public interface CodeConfig {
+  /**
+   * represents the underlying code structure.
+   */
   public fun code(): CfnRepository.CodeProperty
 
+  /**
+   * A builder for [CodeConfig]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param code represents the underlying code structure. 
+     */
     public fun code(code: CfnRepository.CodeProperty)
 
+    /**
+     * @param code represents the underlying code structure. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0e320a191f788d17c4e1cbebe454745d4d9c634022f63c5d114285817aaf6830")
     public fun code(code: CfnRepository.CodeProperty.Builder.() -> Unit)
@@ -19,10 +33,16 @@ public interface CodeConfig {
     private val cdkBuilder: software.amazon.awscdk.services.codecommit.CodeConfig.Builder =
         software.amazon.awscdk.services.codecommit.CodeConfig.builder()
 
+    /**
+     * @param code represents the underlying code structure. 
+     */
     override fun code(code: CfnRepository.CodeProperty) {
       cdkBuilder.code(code.let(CfnRepository.CodeProperty::unwrap))
     }
 
+    /**
+     * @param code represents the underlying code structure. 
+     */
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0e320a191f788d17c4e1cbebe454745d4d9c634022f63c5d114285817aaf6830")
     override fun code(code: CfnRepository.CodeProperty.Builder.() -> Unit): Unit =
@@ -34,6 +54,9 @@ public interface CodeConfig {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codecommit.CodeConfig,
   ) : CodeConfig {
+    /**
+     * represents the underlying code structure.
+     */
     override fun code(): CfnRepository.CodeProperty =
         unwrap(this).getCode().let(CfnRepository.CodeProperty::wrap)
   }

@@ -3,11 +3,17 @@ package io.cloudshiftdev.awscdk.services.apigatewayv2
 import kotlin.String
 
 public interface IMappingValue {
+  /**
+   * Represents a Mapping Value.
+   */
   public fun `value`(): String
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.apigatewayv2.IMappingValue,
   ) : IMappingValue {
+    /**
+     * Represents a Mapping Value.
+     */
     override fun `value`(): String = unwrap(this).getValue()
   }
 

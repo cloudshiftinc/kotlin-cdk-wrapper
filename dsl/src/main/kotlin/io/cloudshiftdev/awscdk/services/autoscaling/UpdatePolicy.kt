@@ -12,18 +12,18 @@ public abstract class UpdatePolicy internal constructor(
   ) : UpdatePolicy(cdkObject)
 
   public companion object {
-    public open fun replacingUpdate(): UpdatePolicy =
+    public fun replacingUpdate(): UpdatePolicy =
         software.amazon.awscdk.services.autoscaling.UpdatePolicy.replacingUpdate().let(UpdatePolicy::wrap)
 
-    public open fun rollingUpdate(): UpdatePolicy =
+    public fun rollingUpdate(): UpdatePolicy =
         software.amazon.awscdk.services.autoscaling.UpdatePolicy.rollingUpdate().let(UpdatePolicy::wrap)
 
-    public open fun rollingUpdate(options: RollingUpdateOptions): UpdatePolicy =
+    public fun rollingUpdate(options: RollingUpdateOptions): UpdatePolicy =
         software.amazon.awscdk.services.autoscaling.UpdatePolicy.rollingUpdate(options.let(RollingUpdateOptions::unwrap)).let(UpdatePolicy::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("429eeac013535c93986670fd396dc6358d4fc7f0e2075067e1f84f6ba74ef5fc")
-    public open fun rollingUpdate(options: RollingUpdateOptions.Builder.() -> Unit): UpdatePolicy =
+    public fun rollingUpdate(options: RollingUpdateOptions.Builder.() -> Unit): UpdatePolicy =
         rollingUpdate(RollingUpdateOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.UpdatePolicy):

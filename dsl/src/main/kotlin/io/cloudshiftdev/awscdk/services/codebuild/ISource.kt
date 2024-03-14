@@ -5,25 +5,51 @@ import kotlin.Boolean
 import kotlin.String
 
 public interface ISource {
+  /**
+   *
+   */
   public fun badgeSupported(): Boolean
 
-  public fun bind(arg0: Construct, arg1: IProject): SourceConfig
+  /**
+   * @param scope 
+   * @param project 
+   */
+  public fun bind(scope: Construct, project: IProject): SourceConfig
 
+  /**
+   *
+   */
   public fun identifier(): String? = unwrap(this).getIdentifier()
 
+  /**
+   *
+   */
   public fun type(): String
 
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.codebuild.ISource,
   ) : ISource {
+    /**
+     *
+     */
     override fun badgeSupported(): Boolean = unwrap(this).getBadgeSupported()
 
-    override fun bind(arg0: Construct, arg1: IProject): SourceConfig =
-        unwrap(this).bind(arg0.let(Construct::unwrap),
-        arg1.let(IProject::unwrap)).let(SourceConfig::wrap)
+    /**
+     * @param scope 
+     * @param project 
+     */
+    override fun bind(scope: Construct, project: IProject): SourceConfig =
+        unwrap(this).bind(scope.let(Construct::unwrap),
+        project.let(IProject::unwrap)).let(SourceConfig::wrap)
 
+    /**
+     *
+     */
     override fun identifier(): String? = unwrap(this).getIdentifier()
 
+    /**
+     *
+     */
     override fun type(): String = unwrap(this).getType()
   }
 

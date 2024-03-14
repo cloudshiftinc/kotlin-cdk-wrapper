@@ -4,16 +4,31 @@ import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.ec2.IConnectable
 
 public interface ILoadBalancerTarget : IConnectable {
-  public fun attachToClassicLb(arg0: LoadBalancer)
+  /**
+   * Attach load-balanced target to a classic ELB.
+   *
+   * @param loadBalancer [disable-awslint:ref-via-interface] The load balancer to attach the target
+   * to. 
+   */
+  public fun attachToClassicLb(loadBalancer: LoadBalancer)
 
   private class Wrapper internal constructor(
     internal val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancing.ILoadBalancerTarget,
   ) : ILoadBalancerTarget {
-    override fun attachToClassicLb(arg0: LoadBalancer) {
-      unwrap(this).attachToClassicLB(arg0.let(LoadBalancer::unwrap))
+    /**
+     * Attach load-balanced target to a classic ELB.
+     *
+     * @param loadBalancer [disable-awslint:ref-via-interface] The load balancer to attach the
+     * target to. 
+     */
+    override fun attachToClassicLb(loadBalancer: LoadBalancer) {
+      unwrap(this).attachToClassicLB(loadBalancer.let(LoadBalancer::unwrap))
     }
 
+    /**
+     * The network connections associated with this resource.
+     */
     override fun connections(): Connections = unwrap(this).getConnections().let(Connections::wrap)
   }
 

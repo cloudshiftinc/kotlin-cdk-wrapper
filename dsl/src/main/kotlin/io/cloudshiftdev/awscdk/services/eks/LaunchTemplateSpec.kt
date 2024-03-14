@@ -1,16 +1,35 @@
 package io.cloudshiftdev.awscdk.services.eks
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface LaunchTemplateSpec {
+  /**
+   * The Launch template ID.
+   */
   public fun id(): String
 
+  /**
+   * The launch template version to be used (optional).
+   *
+   * Default: - the default version of the launch template
+   */
   public fun version(): String? = unwrap(this).getVersion()
 
+  /**
+   * A builder for [LaunchTemplateSpec]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param id The Launch template ID. 
+     */
     public fun id(id: String)
 
+    /**
+     * @param version The launch template version to be used (optional).
+     */
     public fun version(version: String)
   }
 
@@ -18,10 +37,16 @@ public interface LaunchTemplateSpec {
     private val cdkBuilder: software.amazon.awscdk.services.eks.LaunchTemplateSpec.Builder =
         software.amazon.awscdk.services.eks.LaunchTemplateSpec.builder()
 
+    /**
+     * @param id The Launch template ID. 
+     */
     override fun id(id: String) {
       cdkBuilder.id(id)
     }
 
+    /**
+     * @param version The launch template version to be used (optional).
+     */
     override fun version(version: String) {
       cdkBuilder.version(version)
     }
@@ -32,8 +57,16 @@ public interface LaunchTemplateSpec {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.eks.LaunchTemplateSpec,
   ) : LaunchTemplateSpec {
+    /**
+     * The Launch template ID.
+     */
     override fun id(): String = unwrap(this).getId()
 
+    /**
+     * The launch template version to be used (optional).
+     *
+     * Default: - the default version of the launch template
+     */
     override fun version(): String? = unwrap(this).getVersion()
   }
 

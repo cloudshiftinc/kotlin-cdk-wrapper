@@ -6,8 +6,14 @@ import kotlin.String
 public abstract class BaseDeploymentConfig internal constructor(
   private val cdkObject: software.amazon.awscdk.services.codedeploy.BaseDeploymentConfig,
 ) : Resource(cdkObject), IBaseDeploymentConfig {
+  /**
+   * The arn of the deployment config.
+   */
   public override fun deploymentConfigArn(): String = unwrap(this).getDeploymentConfigArn()
 
+  /**
+   * The name of the deployment config.
+   */
   public override fun deploymentConfigName(): String = unwrap(this).getDeploymentConfigName()
 
   private class Wrapper internal constructor(

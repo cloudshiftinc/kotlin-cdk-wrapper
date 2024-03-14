@@ -7,25 +7,31 @@ import kotlin.collections.Map
 public open class CertificateValidation internal constructor(
   private val cdkObject: software.amazon.awscdk.services.certificatemanager.CertificateValidation,
 ) {
+  /**
+   * The validation method.
+   */
   public open fun method(): ValidationMethod = unwrap(this).getMethod().let(ValidationMethod::wrap)
 
+  /**
+   * Certification validation properties.
+   */
   public open fun props(): CertificationValidationProps =
       unwrap(this).getProps().let(CertificationValidationProps::wrap)
 
   public companion object {
-    public open fun fromDns(): CertificateValidation =
+    public fun fromDns(): CertificateValidation =
         software.amazon.awscdk.services.certificatemanager.CertificateValidation.fromDns().let(CertificateValidation::wrap)
 
-    public open fun fromDns(hostedZone: IHostedZone): CertificateValidation =
+    public fun fromDns(hostedZone: IHostedZone): CertificateValidation =
         software.amazon.awscdk.services.certificatemanager.CertificateValidation.fromDns(hostedZone.let(IHostedZone::unwrap)).let(CertificateValidation::wrap)
 
-    public open fun fromDnsMultiZone(hostedZones: Map<String, IHostedZone>): CertificateValidation =
+    public fun fromDnsMultiZone(hostedZones: Map<String, IHostedZone>): CertificateValidation =
         software.amazon.awscdk.services.certificatemanager.CertificateValidation.fromDnsMultiZone(hostedZones.mapValues{IHostedZone.unwrap(it.value)}).let(CertificateValidation::wrap)
 
-    public open fun fromEmail(): CertificateValidation =
+    public fun fromEmail(): CertificateValidation =
         software.amazon.awscdk.services.certificatemanager.CertificateValidation.fromEmail().let(CertificateValidation::wrap)
 
-    public open fun fromEmail(validationDomains: Map<String, String>): CertificateValidation =
+    public fun fromEmail(validationDomains: Map<String, String>): CertificateValidation =
         software.amazon.awscdk.services.certificatemanager.CertificateValidation.fromEmail(validationDomains).let(CertificateValidation::wrap)
 
     internal

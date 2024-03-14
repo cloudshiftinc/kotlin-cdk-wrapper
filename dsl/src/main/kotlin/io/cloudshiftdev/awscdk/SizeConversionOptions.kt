@@ -1,12 +1,25 @@
 package io.cloudshiftdev.awscdk
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Unit
 
 public interface SizeConversionOptions {
+  /**
+   * How conversions should behave when it encounters a non-integer result.
+   *
+   * Default: SizeRoundingBehavior.FAIL
+   */
   public fun rounding(): SizeRoundingBehavior? =
       unwrap(this).getRounding()?.let(SizeRoundingBehavior::wrap)
 
+  /**
+   * A builder for [SizeConversionOptions]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param rounding How conversions should behave when it encounters a non-integer result.
+     */
     public fun rounding(rounding: SizeRoundingBehavior)
   }
 
@@ -14,6 +27,9 @@ public interface SizeConversionOptions {
     private val cdkBuilder: software.amazon.awscdk.SizeConversionOptions.Builder =
         software.amazon.awscdk.SizeConversionOptions.builder()
 
+    /**
+     * @param rounding How conversions should behave when it encounters a non-integer result.
+     */
     override fun rounding(rounding: SizeRoundingBehavior) {
       cdkBuilder.rounding(rounding.let(SizeRoundingBehavior::unwrap))
     }
@@ -24,6 +40,11 @@ public interface SizeConversionOptions {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.SizeConversionOptions,
   ) : SizeConversionOptions {
+    /**
+     * How conversions should behave when it encounters a non-integer result.
+     *
+     * Default: SizeRoundingBehavior.FAIL
+     */
     override fun rounding(): SizeRoundingBehavior? =
         unwrap(this).getRounding()?.let(SizeRoundingBehavior::wrap)
   }

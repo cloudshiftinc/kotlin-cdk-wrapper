@@ -5,6 +5,11 @@ import kotlin.String
 public open class AttributeValuesStep internal constructor(
   private val cdkObject: software.amazon.awscdk.services.appsync.AttributeValuesStep,
 ) {
+  /**
+   * Assign the value to the current attribute.
+   *
+   * @param val 
+   */
   public open fun `is`(`val`: String): AttributeValues =
       unwrap(this).`is`(`val`).let(AttributeValues::wrap)
 

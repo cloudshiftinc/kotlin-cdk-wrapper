@@ -1,13 +1,25 @@
 package io.cloudshiftdev.awscdk.cloudassembly.schema
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
 
 public interface RuntimeInfo {
+  /**
+   * The list of libraries loaded in the application, associated with their versions.
+   */
   public fun libraries(): Map<String, String>
 
+  /**
+   * A builder for [RuntimeInfo]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param libraries The list of libraries loaded in the application, associated with their
+     * versions. 
+     */
     public fun libraries(libraries: Map<String, String>)
   }
 
@@ -15,6 +27,10 @@ public interface RuntimeInfo {
     private val cdkBuilder: software.amazon.awscdk.cloudassembly.schema.RuntimeInfo.Builder =
         software.amazon.awscdk.cloudassembly.schema.RuntimeInfo.builder()
 
+    /**
+     * @param libraries The list of libraries loaded in the application, associated with their
+     * versions. 
+     */
     override fun libraries(libraries: Map<String, String>) {
       cdkBuilder.libraries(libraries)
     }
@@ -25,6 +41,9 @@ public interface RuntimeInfo {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.cloudassembly.schema.RuntimeInfo,
   ) : RuntimeInfo {
+    /**
+     * The list of libraries loaded in the application, associated with their versions.
+     */
     override fun libraries(): Map<String, String> = unwrap(this).getLibraries() ?: emptyMap()
   }
 

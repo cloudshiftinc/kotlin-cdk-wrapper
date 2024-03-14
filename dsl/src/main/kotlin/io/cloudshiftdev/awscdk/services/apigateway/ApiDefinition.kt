@@ -12,9 +12,25 @@ import kotlin.jvm.JvmName
 public abstract class ApiDefinition internal constructor(
   private val cdkObject: software.amazon.awscdk.services.apigateway.ApiDefinition,
 ) {
-  public open fun bind(arg0: Construct): ApiDefinitionConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(ApiDefinitionConfig::wrap)
+  /**
+   * Called when the specification is initialized to allow this object to bind to the stack, add
+   * resources and have fun.
+   *
+   * @param scope The binding scope. 
+   */
+  public open fun bind(scope: Construct): ApiDefinitionConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(ApiDefinitionConfig::wrap)
 
+  /**
+   * Called after the CFN RestApi resource has been created to allow the Api Definition to bind to
+   * it.
+   *
+   * Specifically it's required to allow assets to add
+   * metadata for tooling like SAM CLI to be able to find their origins.
+   *
+   * @param _scope 
+   * @param _restApi 
+   */
   public open fun bindAfterCreate(_scope: Construct, _restApi: IRestApi) {
     unwrap(this).bindAfterCreate(_scope.let(Construct::unwrap), _restApi.let(IRestApi::unwrap))
   }
@@ -24,23 +40,23 @@ public abstract class ApiDefinition internal constructor(
   ) : ApiDefinition(cdkObject)
 
   public companion object {
-    public open fun fromAsset(`file`: String): AssetApiDefinition =
+    public fun fromAsset(`file`: String): AssetApiDefinition =
         software.amazon.awscdk.services.apigateway.ApiDefinition.fromAsset(`file`).let(AssetApiDefinition::wrap)
 
-    public open fun fromAsset(`file`: String, options: AssetOptions): AssetApiDefinition =
+    public fun fromAsset(`file`: String, options: AssetOptions): AssetApiDefinition =
         software.amazon.awscdk.services.apigateway.ApiDefinition.fromAsset(`file`,
         options.let(AssetOptions::unwrap)).let(AssetApiDefinition::wrap)
 
     @Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1fb7424fb7a8091c53e571077a35ba78a28ea3dcadc70091587f610eea2f9998")
-    public open fun fromAsset(`file`: String, options: AssetOptions.Builder.() -> Unit):
+    public fun fromAsset(`file`: String, options: AssetOptions.Builder.() -> Unit):
         AssetApiDefinition = fromAsset(`file`, AssetOptions(options))
 
-    public open fun fromBucket(bucket: IBucket, key: String): S3ApiDefinition =
+    public fun fromBucket(bucket: IBucket, key: String): S3ApiDefinition =
         software.amazon.awscdk.services.apigateway.ApiDefinition.fromBucket(bucket.let(IBucket::unwrap),
         key).let(S3ApiDefinition::wrap)
 
-    public open fun fromBucket(
+    public fun fromBucket(
       bucket: IBucket,
       key: String,
       objectVersion: String,
@@ -48,7 +64,7 @@ public abstract class ApiDefinition internal constructor(
         software.amazon.awscdk.services.apigateway.ApiDefinition.fromBucket(bucket.let(IBucket::unwrap),
         key, objectVersion).let(S3ApiDefinition::wrap)
 
-    public open fun fromInline(definition: Any): InlineApiDefinition =
+    public fun fromInline(definition: Any): InlineApiDefinition =
         software.amazon.awscdk.services.apigateway.ApiDefinition.fromInline(definition).let(InlineApiDefinition::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.ApiDefinition):

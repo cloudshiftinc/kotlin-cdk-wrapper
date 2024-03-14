@@ -1,16 +1,63 @@
 package io.cloudshiftdev.awscdk
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface Environment {
+  /**
+   * The AWS account ID for this environment.
+   *
+   * This can be either a concrete value such as `585191031104` or `Aws.ACCOUNT_ID` which
+   * indicates that account ID will only be determined during deployment (it
+   * will resolve to the CloudFormation intrinsic `{"Ref":"AWS::AccountId"}`).
+   * Note that certain features, such as cross-stack references and
+   * environmental context providers require concrete region information and
+   * will cause this stack to emit synthesis errors.
+   *
+   * Default: Aws.ACCOUNT_ID which means that the stack will be account-agnostic.
+   */
   public fun account(): String? = unwrap(this).getAccount()
 
+  /**
+   * The AWS region for this environment.
+   *
+   * This can be either a concrete value such as `eu-west-2` or `Aws.REGION`
+   * which indicates that account ID will only be determined during deployment
+   * (it will resolve to the CloudFormation intrinsic `{"Ref":"AWS::Region"}`).
+   * Note that certain features, such as cross-stack references and
+   * environmental context providers require concrete region information and
+   * will cause this stack to emit synthesis errors.
+   *
+   * Default: Aws.REGION which means that the stack will be region-agnostic.
+   */
   public fun region(): String? = unwrap(this).getRegion()
 
+  /**
+   * A builder for [Environment]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param account The AWS account ID for this environment.
+     * This can be either a concrete value such as `585191031104` or `Aws.ACCOUNT_ID` which
+     * indicates that account ID will only be determined during deployment (it
+     * will resolve to the CloudFormation intrinsic `{"Ref":"AWS::AccountId"}`).
+     * Note that certain features, such as cross-stack references and
+     * environmental context providers require concrete region information and
+     * will cause this stack to emit synthesis errors.
+     */
     public fun account(account: String)
 
+    /**
+     * @param region The AWS region for this environment.
+     * This can be either a concrete value such as `eu-west-2` or `Aws.REGION`
+     * which indicates that account ID will only be determined during deployment
+     * (it will resolve to the CloudFormation intrinsic `{"Ref":"AWS::Region"}`).
+     * Note that certain features, such as cross-stack references and
+     * environmental context providers require concrete region information and
+     * will cause this stack to emit synthesis errors.
+     */
     public fun region(region: String)
   }
 
@@ -18,10 +65,28 @@ public interface Environment {
     private val cdkBuilder: software.amazon.awscdk.Environment.Builder =
         software.amazon.awscdk.Environment.builder()
 
+    /**
+     * @param account The AWS account ID for this environment.
+     * This can be either a concrete value such as `585191031104` or `Aws.ACCOUNT_ID` which
+     * indicates that account ID will only be determined during deployment (it
+     * will resolve to the CloudFormation intrinsic `{"Ref":"AWS::AccountId"}`).
+     * Note that certain features, such as cross-stack references and
+     * environmental context providers require concrete region information and
+     * will cause this stack to emit synthesis errors.
+     */
     override fun account(account: String) {
       cdkBuilder.account(account)
     }
 
+    /**
+     * @param region The AWS region for this environment.
+     * This can be either a concrete value such as `eu-west-2` or `Aws.REGION`
+     * which indicates that account ID will only be determined during deployment
+     * (it will resolve to the CloudFormation intrinsic `{"Ref":"AWS::Region"}`).
+     * Note that certain features, such as cross-stack references and
+     * environmental context providers require concrete region information and
+     * will cause this stack to emit synthesis errors.
+     */
     override fun region(region: String) {
       cdkBuilder.region(region)
     }
@@ -32,8 +97,32 @@ public interface Environment {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.Environment,
   ) : Environment {
+    /**
+     * The AWS account ID for this environment.
+     *
+     * This can be either a concrete value such as `585191031104` or `Aws.ACCOUNT_ID` which
+     * indicates that account ID will only be determined during deployment (it
+     * will resolve to the CloudFormation intrinsic `{"Ref":"AWS::AccountId"}`).
+     * Note that certain features, such as cross-stack references and
+     * environmental context providers require concrete region information and
+     * will cause this stack to emit synthesis errors.
+     *
+     * Default: Aws.ACCOUNT_ID which means that the stack will be account-agnostic.
+     */
     override fun account(): String? = unwrap(this).getAccount()
 
+    /**
+     * The AWS region for this environment.
+     *
+     * This can be either a concrete value such as `eu-west-2` or `Aws.REGION`
+     * which indicates that account ID will only be determined during deployment
+     * (it will resolve to the CloudFormation intrinsic `{"Ref":"AWS::Region"}`).
+     * Note that certain features, such as cross-stack references and
+     * environmental context providers require concrete region information and
+     * will cause this stack to emit synthesis errors.
+     *
+     * Default: Aws.REGION which means that the stack will be region-agnostic.
+     */
     override fun region(): String? = unwrap(this).getRegion()
   }
 

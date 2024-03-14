@@ -1,20 +1,47 @@
 package io.cloudshiftdev.awscdk.services.ses
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 
 public interface CloudWatchDimension {
+  /**
+   * The default value of the dimension that is published to Amazon CloudWatch if you do not provide
+   * the value of the dimension when you send an email.
+   */
   public fun defaultValue(): String
 
+  /**
+   * The name of an Amazon CloudWatch dimension associated with an email sending metric.
+   */
   public fun name(): String
 
+  /**
+   * The place where Amazon SES finds the value of a dimension to publish to Amazon CloudWatch.
+   */
   public fun source(): CloudWatchDimensionSource
 
+  /**
+   * A builder for [CloudWatchDimension]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param defaultValue The default value of the dimension that is published to Amazon CloudWatch
+     * if you do not provide the value of the dimension when you send an email. 
+     */
     public fun defaultValue(defaultValue: String)
 
+    /**
+     * @param name The name of an Amazon CloudWatch dimension associated with an email sending
+     * metric. 
+     */
     public fun name(name: String)
 
+    /**
+     * @param source The place where Amazon SES finds the value of a dimension to publish to Amazon
+     * CloudWatch. 
+     */
     public fun source(source: CloudWatchDimensionSource)
   }
 
@@ -22,14 +49,26 @@ public interface CloudWatchDimension {
     private val cdkBuilder: software.amazon.awscdk.services.ses.CloudWatchDimension.Builder =
         software.amazon.awscdk.services.ses.CloudWatchDimension.builder()
 
+    /**
+     * @param defaultValue The default value of the dimension that is published to Amazon CloudWatch
+     * if you do not provide the value of the dimension when you send an email. 
+     */
     override fun defaultValue(defaultValue: String) {
       cdkBuilder.defaultValue(defaultValue)
     }
 
+    /**
+     * @param name The name of an Amazon CloudWatch dimension associated with an email sending
+     * metric. 
+     */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
+    /**
+     * @param source The place where Amazon SES finds the value of a dimension to publish to Amazon
+     * CloudWatch. 
+     */
     override fun source(source: CloudWatchDimensionSource) {
       cdkBuilder.source(source.let(CloudWatchDimensionSource::unwrap))
     }
@@ -40,10 +79,20 @@ public interface CloudWatchDimension {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ses.CloudWatchDimension,
   ) : CloudWatchDimension {
+    /**
+     * The default value of the dimension that is published to Amazon CloudWatch if you do not
+     * provide the value of the dimension when you send an email.
+     */
     override fun defaultValue(): String = unwrap(this).getDefaultValue()
 
+    /**
+     * The name of an Amazon CloudWatch dimension associated with an email sending metric.
+     */
     override fun name(): String = unwrap(this).getName()
 
+    /**
+     * The place where Amazon SES finds the value of a dimension to publish to Amazon CloudWatch.
+     */
     override fun source(): CloudWatchDimensionSource =
         unwrap(this).getSource().let(CloudWatchDimensionSource::wrap)
   }

@@ -11,10 +11,10 @@ public abstract class Endpoint internal constructor(
   ) : Endpoint(cdkObject)
 
   public companion object {
-    public open fun fromKinesisStream(stream: IStream): Endpoint =
+    public fun fromKinesisStream(stream: IStream): Endpoint =
         software.amazon.awscdk.services.cloudfront.Endpoint.fromKinesisStream(stream.let(IStream::unwrap)).let(Endpoint::wrap)
 
-    public open fun fromKinesisStream(stream: IStream, role: IRole): Endpoint =
+    public fun fromKinesisStream(stream: IStream, role: IRole): Endpoint =
         software.amazon.awscdk.services.cloudfront.Endpoint.fromKinesisStream(stream.let(IStream::unwrap),
         role.let(IRole::unwrap)).let(Endpoint::wrap)
 

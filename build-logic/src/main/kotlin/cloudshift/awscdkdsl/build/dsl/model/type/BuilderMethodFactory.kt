@@ -1,6 +1,5 @@
 package cloudshift.awscdkdsl.build.dsl.model.type
 
-import cloudshift.awscdkdsl.build.dsl.TypeGeneratorContext
 import cloudshift.awscdkdsl.build.dsl.model.CdkClass
 
 internal class BuilderMethodFactory(private val context: TypeGeneratorContext, ) : MethodSpecFactory {

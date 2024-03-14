@@ -1,15 +1,31 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 
 public interface NatGatewayProps {
+  /**
+   * EIP allocation IDs for the NAT gateways.
+   *
+   * Default: - No fixed EIPs allocated for the NAT gateways
+   */
   public fun eipAllocationIds(): List<String> = unwrap(this).getEipAllocationIds() ?: emptyList()
 
+  /**
+   * A builder for [NatGatewayProps]
+   */
+  @CdkDslMarker
   public interface Builder {
+    /**
+     * @param eipAllocationIds EIP allocation IDs for the NAT gateways.
+     */
     public fun eipAllocationIds(eipAllocationIds: List<String>)
 
+    /**
+     * @param eipAllocationIds EIP allocation IDs for the NAT gateways.
+     */
     public fun eipAllocationIds(vararg eipAllocationIds: String)
   }
 
@@ -17,10 +33,16 @@ public interface NatGatewayProps {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.NatGatewayProps.Builder =
         software.amazon.awscdk.services.ec2.NatGatewayProps.builder()
 
+    /**
+     * @param eipAllocationIds EIP allocation IDs for the NAT gateways.
+     */
     override fun eipAllocationIds(eipAllocationIds: List<String>) {
       cdkBuilder.eipAllocationIds(eipAllocationIds)
     }
 
+    /**
+     * @param eipAllocationIds EIP allocation IDs for the NAT gateways.
+     */
     override fun eipAllocationIds(vararg eipAllocationIds: String): Unit =
         eipAllocationIds(eipAllocationIds.toList())
 
@@ -30,6 +52,11 @@ public interface NatGatewayProps {
   private class Wrapper internal constructor(
     internal val cdkObject: software.amazon.awscdk.services.ec2.NatGatewayProps,
   ) : NatGatewayProps {
+    /**
+     * EIP allocation IDs for the NAT gateways.
+     *
+     * Default: - No fixed EIPs allocated for the NAT gateways
+     */
     override fun eipAllocationIds(): List<String> = unwrap(this).getEipAllocationIds() ?:
         emptyList()
   }
