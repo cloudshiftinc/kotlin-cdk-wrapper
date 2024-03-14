@@ -1,0 +1,369 @@
+package io.cloudshiftdev.awscdk.services.sagemaker
+
+import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
+import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggable
+import io.cloudshiftdev.awscdk.TagManager
+import io.cloudshiftdev.awscdk.TreeInspector
+import kotlin.Any
+import kotlin.Number
+import kotlin.String
+import kotlin.Suppress
+import kotlin.Unit
+import kotlin.collections.List
+import kotlin.jvm.JvmName
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
+import software.constructs.Construct as SoftwareConstructsConstruct
+
+public open class CfnNotebookInstance internal constructor(
+  private val cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstance,
+) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public open fun acceleratorTypes(): List<String> = unwrap(this).getAcceleratorTypes() ?:
+      emptyList()
+
+  public open fun acceleratorTypes(`value`: List<String>) {
+    unwrap(this).setAcceleratorTypes(`value`)
+  }
+
+  public open fun additionalCodeRepositories(): List<String> =
+      unwrap(this).getAdditionalCodeRepositories() ?: emptyList()
+
+  public open fun additionalCodeRepositories(`value`: List<String>) {
+    unwrap(this).setAdditionalCodeRepositories(`value`)
+  }
+
+  public open fun attrId(): String = unwrap(this).getAttrId()
+
+  public open fun attrNotebookInstanceName(): String = unwrap(this).getAttrNotebookInstanceName()
+
+  public open fun defaultCodeRepository(): String? = unwrap(this).getDefaultCodeRepository()
+
+  public open fun defaultCodeRepository(`value`: String) {
+    unwrap(this).setDefaultCodeRepository(`value`)
+  }
+
+  public open fun directInternetAccess(): String? = unwrap(this).getDirectInternetAccess()
+
+  public open fun directInternetAccess(`value`: String) {
+    unwrap(this).setDirectInternetAccess(`value`)
+  }
+
+  public override fun inspect(inspector: TreeInspector) {
+    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+  }
+
+  public open fun instanceMetadataServiceConfiguration(): Any? =
+      unwrap(this).getInstanceMetadataServiceConfiguration()
+
+  public open fun instanceMetadataServiceConfiguration(`value`: IResolvable) {
+    unwrap(this).setInstanceMetadataServiceConfiguration(`value`.let(IResolvable::unwrap))
+  }
+
+  public open
+      fun instanceMetadataServiceConfiguration(`value`: InstanceMetadataServiceConfigurationProperty) {
+    unwrap(this).setInstanceMetadataServiceConfiguration(`value`.let(InstanceMetadataServiceConfigurationProperty::unwrap))
+  }
+
+  @Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("5a654bf445f32c7dad3090c266d5d28ed405877f27b7f291154b5cec706e8970")
+  public open
+      fun instanceMetadataServiceConfiguration(`value`: InstanceMetadataServiceConfigurationProperty.Builder.() -> Unit):
+      Unit =
+      instanceMetadataServiceConfiguration(InstanceMetadataServiceConfigurationProperty(`value`))
+
+  public open fun instanceType(): String = unwrap(this).getInstanceType()
+
+  public open fun instanceType(`value`: String) {
+    unwrap(this).setInstanceType(`value`)
+  }
+
+  public open fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+  public open fun kmsKeyId(`value`: String) {
+    unwrap(this).setKmsKeyId(`value`)
+  }
+
+  public open fun lifecycleConfigName(): String? = unwrap(this).getLifecycleConfigName()
+
+  public open fun lifecycleConfigName(`value`: String) {
+    unwrap(this).setLifecycleConfigName(`value`)
+  }
+
+  public open fun notebookInstanceName(): String? = unwrap(this).getNotebookInstanceName()
+
+  public open fun notebookInstanceName(`value`: String) {
+    unwrap(this).setNotebookInstanceName(`value`)
+  }
+
+  public open fun platformIdentifier(): String? = unwrap(this).getPlatformIdentifier()
+
+  public open fun platformIdentifier(`value`: String) {
+    unwrap(this).setPlatformIdentifier(`value`)
+  }
+
+  public open fun roleArn(): String = unwrap(this).getRoleArn()
+
+  public open fun roleArn(`value`: String) {
+    unwrap(this).setRoleArn(`value`)
+  }
+
+  public open fun rootAccess(): String? = unwrap(this).getRootAccess()
+
+  public open fun rootAccess(`value`: String) {
+    unwrap(this).setRootAccess(`value`)
+  }
+
+  public open fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      emptyList()
+
+  public open fun securityGroupIds(`value`: List<String>) {
+    unwrap(this).setSecurityGroupIds(`value`)
+  }
+
+  public open fun subnetId(): String? = unwrap(this).getSubnetId()
+
+  public open fun subnetId(`value`: String) {
+    unwrap(this).setSubnetId(`value`)
+  }
+
+  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+
+  public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
+      emptyList()
+
+  public open fun tagsRaw(`value`: List<CfnTag>) {
+    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+  }
+
+  public open fun volumeSizeInGb(): Number? = unwrap(this).getVolumeSizeInGb()
+
+  public open fun volumeSizeInGb(`value`: Number) {
+    unwrap(this).setVolumeSizeInGb(`value`)
+  }
+
+  public interface Builder {
+    public fun acceleratorTypes(acceleratorTypes: List<String>) {
+    }
+
+    public fun additionalCodeRepositories(additionalCodeRepositories: List<String>) {
+    }
+
+    public fun defaultCodeRepository(defaultCodeRepository: String) {
+    }
+
+    public fun directInternetAccess(directInternetAccess: String) {
+    }
+
+    public
+        fun instanceMetadataServiceConfiguration(instanceMetadataServiceConfiguration: IResolvable) {
+    }
+
+    public
+        fun instanceMetadataServiceConfiguration(instanceMetadataServiceConfiguration: InstanceMetadataServiceConfigurationProperty) {
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8b053446600724a418f0f24fc84443bf425e028cfacad0c06880bafcbd6a26f5")
+    public
+        fun instanceMetadataServiceConfiguration(instanceMetadataServiceConfiguration: InstanceMetadataServiceConfigurationProperty.Builder.() -> Unit) {
+    }
+
+    public fun instanceType(instanceType: String) {
+    }
+
+    public fun kmsKeyId(kmsKeyId: String) {
+    }
+
+    public fun lifecycleConfigName(lifecycleConfigName: String) {
+    }
+
+    public fun notebookInstanceName(notebookInstanceName: String) {
+    }
+
+    public fun platformIdentifier(platformIdentifier: String) {
+    }
+
+    public fun roleArn(roleArn: String) {
+    }
+
+    public fun rootAccess(rootAccess: String) {
+    }
+
+    public fun securityGroupIds(securityGroupIds: List<String>) {
+    }
+
+    public fun subnetId(subnetId: String) {
+    }
+
+    public fun tags(tags: List<CfnTag>) {
+    }
+
+    public fun volumeSizeInGb(volumeSizeInGb: Number) {
+    }
+  }
+
+  private class BuilderImpl(
+    scope: SoftwareConstructsConstruct,
+    id: String,
+  ) : Builder {
+    private val cdkBuilder: software.amazon.awscdk.services.sagemaker.CfnNotebookInstance.Builder =
+        software.amazon.awscdk.services.sagemaker.CfnNotebookInstance.Builder.create(scope, id)
+
+    public override fun acceleratorTypes(acceleratorTypes: List<String>) {
+      cdkBuilder.acceleratorTypes(acceleratorTypes)
+    }
+
+    public override fun additionalCodeRepositories(additionalCodeRepositories: List<String>) {
+      cdkBuilder.additionalCodeRepositories(additionalCodeRepositories)
+    }
+
+    public override fun defaultCodeRepository(defaultCodeRepository: String) {
+      cdkBuilder.defaultCodeRepository(defaultCodeRepository)
+    }
+
+    public override fun directInternetAccess(directInternetAccess: String) {
+      cdkBuilder.directInternetAccess(directInternetAccess)
+    }
+
+    public override
+        fun instanceMetadataServiceConfiguration(instanceMetadataServiceConfiguration: IResolvable) {
+      cdkBuilder.instanceMetadataServiceConfiguration(instanceMetadataServiceConfiguration.let(IResolvable::unwrap))
+    }
+
+    public override
+        fun instanceMetadataServiceConfiguration(instanceMetadataServiceConfiguration: InstanceMetadataServiceConfigurationProperty) {
+      cdkBuilder.instanceMetadataServiceConfiguration(instanceMetadataServiceConfiguration.let(InstanceMetadataServiceConfigurationProperty::unwrap))
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8b053446600724a418f0f24fc84443bf425e028cfacad0c06880bafcbd6a26f5")
+    public override
+        fun instanceMetadataServiceConfiguration(instanceMetadataServiceConfiguration: InstanceMetadataServiceConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        instanceMetadataServiceConfiguration(InstanceMetadataServiceConfigurationProperty(instanceMetadataServiceConfiguration))
+
+    public override fun instanceType(instanceType: String) {
+      cdkBuilder.instanceType(instanceType)
+    }
+
+    public override fun kmsKeyId(kmsKeyId: String) {
+      cdkBuilder.kmsKeyId(kmsKeyId)
+    }
+
+    public override fun lifecycleConfigName(lifecycleConfigName: String) {
+      cdkBuilder.lifecycleConfigName(lifecycleConfigName)
+    }
+
+    public override fun notebookInstanceName(notebookInstanceName: String) {
+      cdkBuilder.notebookInstanceName(notebookInstanceName)
+    }
+
+    public override fun platformIdentifier(platformIdentifier: String) {
+      cdkBuilder.platformIdentifier(platformIdentifier)
+    }
+
+    public override fun roleArn(roleArn: String) {
+      cdkBuilder.roleArn(roleArn)
+    }
+
+    public override fun rootAccess(rootAccess: String) {
+      cdkBuilder.rootAccess(rootAccess)
+    }
+
+    public override fun securityGroupIds(securityGroupIds: List<String>) {
+      cdkBuilder.securityGroupIds(securityGroupIds)
+    }
+
+    public override fun subnetId(subnetId: String) {
+      cdkBuilder.subnetId(subnetId)
+    }
+
+    public override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+    }
+
+    public override fun volumeSizeInGb(volumeSizeInGb: Number) {
+      cdkBuilder.volumeSizeInGb(volumeSizeInGb)
+    }
+
+    public fun build(): software.amazon.awscdk.services.sagemaker.CfnNotebookInstance =
+        cdkBuilder.build()
+  }
+
+  public companion object {
+    init {
+
+    }
+
+    public operator fun invoke(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      block: Builder.() -> Unit = {},
+    ): CfnNotebookInstance {
+      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+      return CfnNotebookInstance(builderImpl.apply(block).build())
+    }
+
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstance):
+        CfnNotebookInstance = CfnNotebookInstance(cdkObject)
+
+    internal fun unwrap(wrapped: CfnNotebookInstance):
+        software.amazon.awscdk.services.sagemaker.CfnNotebookInstance = wrapped.cdkObject
+  }
+
+  public interface InstanceMetadataServiceConfigurationProperty {
+    public fun minimumInstanceMetadataServiceVersion(): String
+
+    public interface Builder {
+      public
+          fun minimumInstanceMetadataServiceVersion(minimumInstanceMetadataServiceVersion: String) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnNotebookInstance.InstanceMetadataServiceConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnNotebookInstance.InstanceMetadataServiceConfigurationProperty.builder()
+
+      public override
+          fun minimumInstanceMetadataServiceVersion(minimumInstanceMetadataServiceVersion: String) {
+        cdkBuilder.minimumInstanceMetadataServiceVersion(minimumInstanceMetadataServiceVersion)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnNotebookInstance.InstanceMetadataServiceConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.sagemaker.CfnNotebookInstance.InstanceMetadataServiceConfigurationProperty,
+    ) : InstanceMetadataServiceConfigurationProperty {
+      public override fun minimumInstanceMetadataServiceVersion(): String =
+          unwrap(this).getMinimumInstanceMetadataServiceVersion()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InstanceMetadataServiceConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstance.InstanceMetadataServiceConfigurationProperty):
+          InstanceMetadataServiceConfigurationProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InstanceMetadataServiceConfigurationProperty):
+          software.amazon.awscdk.services.sagemaker.CfnNotebookInstance.InstanceMetadataServiceConfigurationProperty
+          = (wrapped as Wrapper).cdkObject
+    }
+  }
+}

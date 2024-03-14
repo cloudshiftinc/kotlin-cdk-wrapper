@@ -1,0 +1,933 @@
+package io.cloudshiftdev.awscdk.services.iot
+
+import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
+import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggable
+import io.cloudshiftdev.awscdk.TagManager
+import io.cloudshiftdev.awscdk.TreeInspector
+import kotlin.Any
+import kotlin.Number
+import kotlin.String
+import kotlin.Suppress
+import kotlin.Unit
+import kotlin.collections.List
+import kotlin.jvm.JvmName
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
+import software.constructs.Construct as SoftwareConstructsConstruct
+
+public open class CfnJobTemplate internal constructor(
+  private val cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate,
+) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public open fun abortConfig(): Any? = unwrap(this).getAbortConfig()
+
+  public open fun abortConfig(`value`: Any) {
+    unwrap(this).setAbortConfig(`value`)
+  }
+
+  public open fun attrArn(): String = unwrap(this).getAttrArn()
+
+  public open fun description(): String = unwrap(this).getDescription()
+
+  public open fun description(`value`: String) {
+    unwrap(this).setDescription(`value`)
+  }
+
+  public open fun destinationPackageVersions(): List<String> =
+      unwrap(this).getDestinationPackageVersions() ?: emptyList()
+
+  public open fun destinationPackageVersions(`value`: List<String>) {
+    unwrap(this).setDestinationPackageVersions(`value`)
+  }
+
+  public open fun document(): String? = unwrap(this).getDocument()
+
+  public open fun document(`value`: String) {
+    unwrap(this).setDocument(`value`)
+  }
+
+  public open fun documentSource(): String? = unwrap(this).getDocumentSource()
+
+  public open fun documentSource(`value`: String) {
+    unwrap(this).setDocumentSource(`value`)
+  }
+
+  public override fun inspect(inspector: TreeInspector) {
+    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+  }
+
+  public open fun jobArn(): String? = unwrap(this).getJobArn()
+
+  public open fun jobArn(`value`: String) {
+    unwrap(this).setJobArn(`value`)
+  }
+
+  public open fun jobExecutionsRetryConfig(): Any? = unwrap(this).getJobExecutionsRetryConfig()
+
+  public open fun jobExecutionsRetryConfig(`value`: IResolvable) {
+    unwrap(this).setJobExecutionsRetryConfig(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun jobExecutionsRetryConfig(`value`: JobExecutionsRetryConfigProperty) {
+    unwrap(this).setJobExecutionsRetryConfig(`value`.let(JobExecutionsRetryConfigProperty::unwrap))
+  }
+
+  @Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("587ee1bebb4160b831e3a9c3ad3bf8a0ac25a736f62ecefff71478b4a1173066")
+  public open
+      fun jobExecutionsRetryConfig(`value`: JobExecutionsRetryConfigProperty.Builder.() -> Unit):
+      Unit = jobExecutionsRetryConfig(JobExecutionsRetryConfigProperty(`value`))
+
+  public open fun jobExecutionsRolloutConfig(): Any? = unwrap(this).getJobExecutionsRolloutConfig()
+
+  public open fun jobExecutionsRolloutConfig(`value`: Any) {
+    unwrap(this).setJobExecutionsRolloutConfig(`value`)
+  }
+
+  public open fun jobTemplateId(): String = unwrap(this).getJobTemplateId()
+
+  public open fun jobTemplateId(`value`: String) {
+    unwrap(this).setJobTemplateId(`value`)
+  }
+
+  public open fun maintenanceWindows(): Any? = unwrap(this).getMaintenanceWindows()
+
+  public open fun maintenanceWindows(`value`: IResolvable) {
+    unwrap(this).setMaintenanceWindows(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun maintenanceWindows(__idx_ac66f0: List<Any>) {
+    unwrap(this).setMaintenanceWindows(__idx_ac66f0)
+  }
+
+  public open fun presignedUrlConfig(): Any? = unwrap(this).getPresignedUrlConfig()
+
+  public open fun presignedUrlConfig(`value`: Any) {
+    unwrap(this).setPresignedUrlConfig(`value`)
+  }
+
+  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+
+  public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
+      emptyList()
+
+  public open fun tagsRaw(`value`: List<CfnTag>) {
+    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+  }
+
+  public open fun timeoutConfig(): Any? = unwrap(this).getTimeoutConfig()
+
+  public open fun timeoutConfig(`value`: Any) {
+    unwrap(this).setTimeoutConfig(`value`)
+  }
+
+  public interface Builder {
+    public fun abortConfig(abortConfig: Any) {
+    }
+
+    public fun description(description: String) {
+    }
+
+    public fun destinationPackageVersions(destinationPackageVersions: List<String>) {
+    }
+
+    public fun document(document: String) {
+    }
+
+    public fun documentSource(documentSource: String) {
+    }
+
+    public fun jobArn(jobArn: String) {
+    }
+
+    public fun jobExecutionsRetryConfig(jobExecutionsRetryConfig: IResolvable) {
+    }
+
+    public
+        fun jobExecutionsRetryConfig(jobExecutionsRetryConfig: JobExecutionsRetryConfigProperty) {
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("f07507e82a08fa344ea7db45333affff37b9c3f56a1162931589454f3e071196")
+    public
+        fun jobExecutionsRetryConfig(jobExecutionsRetryConfig: JobExecutionsRetryConfigProperty.Builder.() -> Unit) {
+    }
+
+    public fun jobExecutionsRolloutConfig(jobExecutionsRolloutConfig: Any) {
+    }
+
+    public fun jobTemplateId(jobTemplateId: String) {
+    }
+
+    public fun maintenanceWindows(maintenanceWindows: IResolvable) {
+    }
+
+    public fun maintenanceWindows(maintenanceWindows: List<Any>) {
+    }
+
+    public fun presignedUrlConfig(presignedUrlConfig: Any) {
+    }
+
+    public fun tags(tags: List<CfnTag>) {
+    }
+
+    public fun timeoutConfig(timeoutConfig: Any) {
+    }
+  }
+
+  private class BuilderImpl(
+    scope: SoftwareConstructsConstruct,
+    id: String,
+  ) : Builder {
+    private val cdkBuilder: software.amazon.awscdk.services.iot.CfnJobTemplate.Builder =
+        software.amazon.awscdk.services.iot.CfnJobTemplate.Builder.create(scope, id)
+
+    public override fun abortConfig(abortConfig: Any) {
+      cdkBuilder.abortConfig(abortConfig)
+    }
+
+    public override fun description(description: String) {
+      cdkBuilder.description(description)
+    }
+
+    public override fun destinationPackageVersions(destinationPackageVersions: List<String>) {
+      cdkBuilder.destinationPackageVersions(destinationPackageVersions)
+    }
+
+    public override fun document(document: String) {
+      cdkBuilder.document(document)
+    }
+
+    public override fun documentSource(documentSource: String) {
+      cdkBuilder.documentSource(documentSource)
+    }
+
+    public override fun jobArn(jobArn: String) {
+      cdkBuilder.jobArn(jobArn)
+    }
+
+    public override fun jobExecutionsRetryConfig(jobExecutionsRetryConfig: IResolvable) {
+      cdkBuilder.jobExecutionsRetryConfig(jobExecutionsRetryConfig.let(IResolvable::unwrap))
+    }
+
+    public override
+        fun jobExecutionsRetryConfig(jobExecutionsRetryConfig: JobExecutionsRetryConfigProperty) {
+      cdkBuilder.jobExecutionsRetryConfig(jobExecutionsRetryConfig.let(JobExecutionsRetryConfigProperty::unwrap))
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("f07507e82a08fa344ea7db45333affff37b9c3f56a1162931589454f3e071196")
+    public override
+        fun jobExecutionsRetryConfig(jobExecutionsRetryConfig: JobExecutionsRetryConfigProperty.Builder.() -> Unit):
+        Unit = jobExecutionsRetryConfig(JobExecutionsRetryConfigProperty(jobExecutionsRetryConfig))
+
+    public override fun jobExecutionsRolloutConfig(jobExecutionsRolloutConfig: Any) {
+      cdkBuilder.jobExecutionsRolloutConfig(jobExecutionsRolloutConfig)
+    }
+
+    public override fun jobTemplateId(jobTemplateId: String) {
+      cdkBuilder.jobTemplateId(jobTemplateId)
+    }
+
+    public override fun maintenanceWindows(maintenanceWindows: IResolvable) {
+      cdkBuilder.maintenanceWindows(maintenanceWindows.let(IResolvable::unwrap))
+    }
+
+    public override fun maintenanceWindows(maintenanceWindows: List<Any>) {
+      cdkBuilder.maintenanceWindows(maintenanceWindows)
+    }
+
+    public override fun presignedUrlConfig(presignedUrlConfig: Any) {
+      cdkBuilder.presignedUrlConfig(presignedUrlConfig)
+    }
+
+    public override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+    }
+
+    public override fun timeoutConfig(timeoutConfig: Any) {
+      cdkBuilder.timeoutConfig(timeoutConfig)
+    }
+
+    public fun build(): software.amazon.awscdk.services.iot.CfnJobTemplate = cdkBuilder.build()
+  }
+
+  public companion object {
+    init {
+
+    }
+
+    public operator fun invoke(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      block: Builder.() -> Unit = {},
+    ): CfnJobTemplate {
+      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+      return CfnJobTemplate(builderImpl.apply(block).build())
+    }
+
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate): CfnJobTemplate
+        = CfnJobTemplate(cdkObject)
+
+    internal fun unwrap(wrapped: CfnJobTemplate): software.amazon.awscdk.services.iot.CfnJobTemplate
+        = wrapped.cdkObject
+  }
+
+  public interface JobExecutionsRolloutConfigProperty {
+    public fun exponentialRolloutRate(): Any? = unwrap(this).getExponentialRolloutRate()
+
+    public fun maximumPerMinute(): Number? = unwrap(this).getMaximumPerMinute()
+
+    public interface Builder {
+      public fun exponentialRolloutRate(exponentialRolloutRate: IResolvable) {
+      }
+
+      public fun exponentialRolloutRate(exponentialRolloutRate: ExponentialRolloutRateProperty) {
+      }
+
+      @Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fee8f5419cc352070c35fa37873e10c1fc11252f5336d82a87ac177eca125449")
+      public
+          fun exponentialRolloutRate(exponentialRolloutRate: ExponentialRolloutRateProperty.Builder.() -> Unit) {
+      }
+
+      public fun maximumPerMinute(maximumPerMinute: Number) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty.builder()
+
+      public override fun exponentialRolloutRate(exponentialRolloutRate: IResolvable) {
+        cdkBuilder.exponentialRolloutRate(exponentialRolloutRate.let(IResolvable::unwrap))
+      }
+
+      public override
+          fun exponentialRolloutRate(exponentialRolloutRate: ExponentialRolloutRateProperty) {
+        cdkBuilder.exponentialRolloutRate(exponentialRolloutRate.let(ExponentialRolloutRateProperty::unwrap))
+      }
+
+      @Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fee8f5419cc352070c35fa37873e10c1fc11252f5336d82a87ac177eca125449")
+      public override
+          fun exponentialRolloutRate(exponentialRolloutRate: ExponentialRolloutRateProperty.Builder.() -> Unit):
+          Unit = exponentialRolloutRate(ExponentialRolloutRateProperty(exponentialRolloutRate))
+
+      public override fun maximumPerMinute(maximumPerMinute: Number) {
+        cdkBuilder.maximumPerMinute(maximumPerMinute)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty,
+    ) : JobExecutionsRolloutConfigProperty {
+      public override fun exponentialRolloutRate(): Any? = unwrap(this).getExponentialRolloutRate()
+
+      public override fun maximumPerMinute(): Number? = unwrap(this).getMaximumPerMinute()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          JobExecutionsRolloutConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty):
+          JobExecutionsRolloutConfigProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JobExecutionsRolloutConfigProperty):
+          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRolloutConfigProperty =
+          (wrapped as Wrapper).cdkObject
+    }
+  }
+
+  public interface AbortCriteriaProperty {
+    public fun action(): String
+
+    public fun failureType(): String
+
+    public fun minNumberOfExecutedThings(): Number
+
+    public fun thresholdPercentage(): Number
+
+    public interface Builder {
+      public fun action(action: String) {
+      }
+
+      public fun failureType(failureType: String) {
+      }
+
+      public fun minNumberOfExecutedThings(minNumberOfExecutedThings: Number) {
+      }
+
+      public fun thresholdPercentage(thresholdPercentage: Number) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.AbortCriteriaProperty.Builder =
+          software.amazon.awscdk.services.iot.CfnJobTemplate.AbortCriteriaProperty.builder()
+
+      public override fun action(action: String) {
+        cdkBuilder.action(action)
+      }
+
+      public override fun failureType(failureType: String) {
+        cdkBuilder.failureType(failureType)
+      }
+
+      public override fun minNumberOfExecutedThings(minNumberOfExecutedThings: Number) {
+        cdkBuilder.minNumberOfExecutedThings(minNumberOfExecutedThings)
+      }
+
+      public override fun thresholdPercentage(thresholdPercentage: Number) {
+        cdkBuilder.thresholdPercentage(thresholdPercentage)
+      }
+
+      public fun build(): software.amazon.awscdk.services.iot.CfnJobTemplate.AbortCriteriaProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.AbortCriteriaProperty,
+    ) : AbortCriteriaProperty {
+      public override fun action(): String = unwrap(this).getAction()
+
+      public override fun failureType(): String = unwrap(this).getFailureType()
+
+      public override fun minNumberOfExecutedThings(): Number =
+          unwrap(this).getMinNumberOfExecutedThings()
+
+      public override fun thresholdPercentage(): Number = unwrap(this).getThresholdPercentage()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): AbortCriteriaProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.AbortCriteriaProperty):
+          AbortCriteriaProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AbortCriteriaProperty):
+          software.amazon.awscdk.services.iot.CfnJobTemplate.AbortCriteriaProperty = (wrapped as
+          Wrapper).cdkObject
+    }
+  }
+
+  public interface TimeoutConfigProperty {
+    public fun inProgressTimeoutInMinutes(): Number
+
+    public interface Builder {
+      public fun inProgressTimeoutInMinutes(inProgressTimeoutInMinutes: Number) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty.Builder =
+          software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty.builder()
+
+      public override fun inProgressTimeoutInMinutes(inProgressTimeoutInMinutes: Number) {
+        cdkBuilder.inProgressTimeoutInMinutes(inProgressTimeoutInMinutes)
+      }
+
+      public fun build(): software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty,
+    ) : TimeoutConfigProperty {
+      public override fun inProgressTimeoutInMinutes(): Number =
+          unwrap(this).getInProgressTimeoutInMinutes()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): TimeoutConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty):
+          TimeoutConfigProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TimeoutConfigProperty):
+          software.amazon.awscdk.services.iot.CfnJobTemplate.TimeoutConfigProperty = (wrapped as
+          Wrapper).cdkObject
+    }
+  }
+
+  public interface PresignedUrlConfigProperty {
+    public fun expiresInSec(): Number? = unwrap(this).getExpiresInSec()
+
+    public fun roleArn(): String
+
+    public interface Builder {
+      public fun expiresInSec(expiresInSec: Number) {
+      }
+
+      public fun roleArn(roleArn: String) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty.Builder =
+          software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty.builder()
+
+      public override fun expiresInSec(expiresInSec: Number) {
+        cdkBuilder.expiresInSec(expiresInSec)
+      }
+
+      public override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty,
+    ) : PresignedUrlConfigProperty {
+      public override fun expiresInSec(): Number? = unwrap(this).getExpiresInSec()
+
+      public override fun roleArn(): String = unwrap(this).getRoleArn()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): PresignedUrlConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty):
+          PresignedUrlConfigProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PresignedUrlConfigProperty):
+          software.amazon.awscdk.services.iot.CfnJobTemplate.PresignedUrlConfigProperty = (wrapped
+          as Wrapper).cdkObject
+    }
+  }
+
+  public interface JobExecutionsRetryConfigProperty {
+    public fun retryCriteriaList(): Any? = unwrap(this).getRetryCriteriaList()
+
+    public interface Builder {
+      public fun retryCriteriaList(retryCriteriaList: IResolvable) {
+      }
+
+      public fun retryCriteriaList(retryCriteriaList: List<Any>) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty.builder()
+
+      public override fun retryCriteriaList(retryCriteriaList: IResolvable) {
+        cdkBuilder.retryCriteriaList(retryCriteriaList.let(IResolvable::unwrap))
+      }
+
+      public override fun retryCriteriaList(retryCriteriaList: List<Any>) {
+        cdkBuilder.retryCriteriaList(retryCriteriaList)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty,
+    ) : JobExecutionsRetryConfigProperty {
+      public override fun retryCriteriaList(): Any? = unwrap(this).getRetryCriteriaList()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): JobExecutionsRetryConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty):
+          JobExecutionsRetryConfigProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JobExecutionsRetryConfigProperty):
+          software.amazon.awscdk.services.iot.CfnJobTemplate.JobExecutionsRetryConfigProperty =
+          (wrapped as Wrapper).cdkObject
+    }
+  }
+
+  public interface RateIncreaseCriteriaProperty {
+    public fun numberOfNotifiedThings(): Number? = unwrap(this).getNumberOfNotifiedThings()
+
+    public fun numberOfSucceededThings(): Number? = unwrap(this).getNumberOfSucceededThings()
+
+    public interface Builder {
+      public fun numberOfNotifiedThings(numberOfNotifiedThings: Number) {
+      }
+
+      public fun numberOfSucceededThings(numberOfSucceededThings: Number) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty.Builder =
+          software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty.builder()
+
+      public override fun numberOfNotifiedThings(numberOfNotifiedThings: Number) {
+        cdkBuilder.numberOfNotifiedThings(numberOfNotifiedThings)
+      }
+
+      public override fun numberOfSucceededThings(numberOfSucceededThings: Number) {
+        cdkBuilder.numberOfSucceededThings(numberOfSucceededThings)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty,
+    ) : RateIncreaseCriteriaProperty {
+      public override fun numberOfNotifiedThings(): Number? =
+          unwrap(this).getNumberOfNotifiedThings()
+
+      public override fun numberOfSucceededThings(): Number? =
+          unwrap(this).getNumberOfSucceededThings()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): RateIncreaseCriteriaProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty):
+          RateIncreaseCriteriaProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RateIncreaseCriteriaProperty):
+          software.amazon.awscdk.services.iot.CfnJobTemplate.RateIncreaseCriteriaProperty = (wrapped
+          as Wrapper).cdkObject
+    }
+  }
+
+  public interface MaintenanceWindowProperty {
+    public fun durationInMinutes(): Number? = unwrap(this).getDurationInMinutes()
+
+    public fun startTime(): String? = unwrap(this).getStartTime()
+
+    public interface Builder {
+      public fun durationInMinutes(durationInMinutes: Number) {
+      }
+
+      public fun startTime(startTime: String) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty.Builder =
+          software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty.builder()
+
+      public override fun durationInMinutes(durationInMinutes: Number) {
+        cdkBuilder.durationInMinutes(durationInMinutes)
+      }
+
+      public override fun startTime(startTime: String) {
+        cdkBuilder.startTime(startTime)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty,
+    ) : MaintenanceWindowProperty {
+      public override fun durationInMinutes(): Number? = unwrap(this).getDurationInMinutes()
+
+      public override fun startTime(): String? = unwrap(this).getStartTime()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): MaintenanceWindowProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty):
+          MaintenanceWindowProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MaintenanceWindowProperty):
+          software.amazon.awscdk.services.iot.CfnJobTemplate.MaintenanceWindowProperty = (wrapped as
+          Wrapper).cdkObject
+    }
+  }
+
+  public interface AbortConfigProperty {
+    public fun criteriaList(): Any
+
+    public interface Builder {
+      public fun criteriaList(criteriaList: IResolvable) {
+      }
+
+      public fun criteriaList(criteriaList: List<Any>) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty.Builder =
+          software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty.builder()
+
+      public override fun criteriaList(criteriaList: IResolvable) {
+        cdkBuilder.criteriaList(criteriaList.let(IResolvable::unwrap))
+      }
+
+      public override fun criteriaList(criteriaList: List<Any>) {
+        cdkBuilder.criteriaList(criteriaList)
+      }
+
+      public fun build(): software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty,
+    ) : AbortConfigProperty {
+      public override fun criteriaList(): Any = unwrap(this).getCriteriaList()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): AbortConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty):
+          AbortConfigProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AbortConfigProperty):
+          software.amazon.awscdk.services.iot.CfnJobTemplate.AbortConfigProperty = (wrapped as
+          Wrapper).cdkObject
+    }
+  }
+
+  public interface ExponentialRolloutRateProperty {
+    public fun baseRatePerMinute(): Number
+
+    public fun incrementFactor(): Number
+
+    public fun rateIncreaseCriteria(): Any
+
+    public interface Builder {
+      public fun baseRatePerMinute(baseRatePerMinute: Number) {
+      }
+
+      public fun incrementFactor(incrementFactor: Number) {
+      }
+
+      public fun rateIncreaseCriteria(rateIncreaseCriteria: IResolvable) {
+      }
+
+      public fun rateIncreaseCriteria(rateIncreaseCriteria: RateIncreaseCriteriaProperty) {
+      }
+
+      @Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("edd0b24b3eb5a02d63c072c1c5088f14930c44fdb725bef7353a97719ebbf811")
+      public
+          fun rateIncreaseCriteria(rateIncreaseCriteria: RateIncreaseCriteriaProperty.Builder.() -> Unit) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.ExponentialRolloutRateProperty.Builder
+          =
+          software.amazon.awscdk.services.iot.CfnJobTemplate.ExponentialRolloutRateProperty.builder()
+
+      public override fun baseRatePerMinute(baseRatePerMinute: Number) {
+        cdkBuilder.baseRatePerMinute(baseRatePerMinute)
+      }
+
+      public override fun incrementFactor(incrementFactor: Number) {
+        cdkBuilder.incrementFactor(incrementFactor)
+      }
+
+      public override fun rateIncreaseCriteria(rateIncreaseCriteria: IResolvable) {
+        cdkBuilder.rateIncreaseCriteria(rateIncreaseCriteria.let(IResolvable::unwrap))
+      }
+
+      public override fun rateIncreaseCriteria(rateIncreaseCriteria: RateIncreaseCriteriaProperty) {
+        cdkBuilder.rateIncreaseCriteria(rateIncreaseCriteria.let(RateIncreaseCriteriaProperty::unwrap))
+      }
+
+      @Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("edd0b24b3eb5a02d63c072c1c5088f14930c44fdb725bef7353a97719ebbf811")
+      public override
+          fun rateIncreaseCriteria(rateIncreaseCriteria: RateIncreaseCriteriaProperty.Builder.() -> Unit):
+          Unit = rateIncreaseCriteria(RateIncreaseCriteriaProperty(rateIncreaseCriteria))
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnJobTemplate.ExponentialRolloutRateProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.ExponentialRolloutRateProperty,
+    ) : ExponentialRolloutRateProperty {
+      public override fun baseRatePerMinute(): Number = unwrap(this).getBaseRatePerMinute()
+
+      public override fun incrementFactor(): Number = unwrap(this).getIncrementFactor()
+
+      public override fun rateIncreaseCriteria(): Any = unwrap(this).getRateIncreaseCriteria()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): ExponentialRolloutRateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.ExponentialRolloutRateProperty):
+          ExponentialRolloutRateProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ExponentialRolloutRateProperty):
+          software.amazon.awscdk.services.iot.CfnJobTemplate.ExponentialRolloutRateProperty =
+          (wrapped as Wrapper).cdkObject
+    }
+  }
+
+  public interface RetryCriteriaProperty {
+    public fun failureType(): String? = unwrap(this).getFailureType()
+
+    public fun numberOfRetries(): Number? = unwrap(this).getNumberOfRetries()
+
+    public interface Builder {
+      public fun failureType(failureType: String) {
+      }
+
+      public fun numberOfRetries(numberOfRetries: Number) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.RetryCriteriaProperty.Builder =
+          software.amazon.awscdk.services.iot.CfnJobTemplate.RetryCriteriaProperty.builder()
+
+      public override fun failureType(failureType: String) {
+        cdkBuilder.failureType(failureType)
+      }
+
+      public override fun numberOfRetries(numberOfRetries: Number) {
+        cdkBuilder.numberOfRetries(numberOfRetries)
+      }
+
+      public fun build(): software.amazon.awscdk.services.iot.CfnJobTemplate.RetryCriteriaProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.iot.CfnJobTemplate.RetryCriteriaProperty,
+    ) : RetryCriteriaProperty {
+      public override fun failureType(): String? = unwrap(this).getFailureType()
+
+      public override fun numberOfRetries(): Number? = unwrap(this).getNumberOfRetries()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): RetryCriteriaProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnJobTemplate.RetryCriteriaProperty):
+          RetryCriteriaProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RetryCriteriaProperty):
+          software.amazon.awscdk.services.iot.CfnJobTemplate.RetryCriteriaProperty = (wrapped as
+          Wrapper).cdkObject
+    }
+  }
+}

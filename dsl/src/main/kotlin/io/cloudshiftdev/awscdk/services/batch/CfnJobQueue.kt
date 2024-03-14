@@ -1,0 +1,211 @@
+package io.cloudshiftdev.awscdk.services.batch
+
+import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggable
+import io.cloudshiftdev.awscdk.TagManager
+import io.cloudshiftdev.awscdk.TreeInspector
+import kotlin.Any
+import kotlin.Number
+import kotlin.String
+import kotlin.Unit
+import kotlin.collections.List
+import kotlin.collections.Map
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
+import software.constructs.Construct as SoftwareConstructsConstruct
+
+public open class CfnJobQueue internal constructor(
+  private val cdkObject: software.amazon.awscdk.services.batch.CfnJobQueue,
+) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public open fun attrJobQueueArn(): String = unwrap(this).getAttrJobQueueArn()
+
+  public open fun computeEnvironmentOrder(): Any = unwrap(this).getComputeEnvironmentOrder()
+
+  public open fun computeEnvironmentOrder(`value`: IResolvable) {
+    unwrap(this).setComputeEnvironmentOrder(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun computeEnvironmentOrder(__idx_ac66f0: List<Any>) {
+    unwrap(this).setComputeEnvironmentOrder(__idx_ac66f0)
+  }
+
+  public override fun inspect(inspector: TreeInspector) {
+    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+  }
+
+  public open fun jobQueueName(): String? = unwrap(this).getJobQueueName()
+
+  public open fun jobQueueName(`value`: String) {
+    unwrap(this).setJobQueueName(`value`)
+  }
+
+  public open fun priority(): Number = unwrap(this).getPriority()
+
+  public open fun priority(`value`: Number) {
+    unwrap(this).setPriority(`value`)
+  }
+
+  public open fun schedulingPolicyArn(): String? = unwrap(this).getSchedulingPolicyArn()
+
+  public open fun schedulingPolicyArn(`value`: String) {
+    unwrap(this).setSchedulingPolicyArn(`value`)
+  }
+
+  public open fun state(): String? = unwrap(this).getState()
+
+  public open fun state(`value`: String) {
+    unwrap(this).setState(`value`)
+  }
+
+  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+
+  public open fun tagsRaw(): Map<String, String> = unwrap(this).getTagsRaw() ?: emptyMap()
+
+  public open fun tagsRaw(`value`: Map<String, String>) {
+    unwrap(this).setTagsRaw(`value`)
+  }
+
+  public interface Builder {
+    public fun computeEnvironmentOrder(computeEnvironmentOrder: IResolvable) {
+    }
+
+    public fun computeEnvironmentOrder(computeEnvironmentOrder: List<Any>) {
+    }
+
+    public fun jobQueueName(jobQueueName: String) {
+    }
+
+    public fun priority(priority: Number) {
+    }
+
+    public fun schedulingPolicyArn(schedulingPolicyArn: String) {
+    }
+
+    public fun state(state: String) {
+    }
+
+    public fun tags(tags: Map<String, String>) {
+    }
+  }
+
+  private class BuilderImpl(
+    scope: SoftwareConstructsConstruct,
+    id: String,
+  ) : Builder {
+    private val cdkBuilder: software.amazon.awscdk.services.batch.CfnJobQueue.Builder =
+        software.amazon.awscdk.services.batch.CfnJobQueue.Builder.create(scope, id)
+
+    public override fun computeEnvironmentOrder(computeEnvironmentOrder: IResolvable) {
+      cdkBuilder.computeEnvironmentOrder(computeEnvironmentOrder.let(IResolvable::unwrap))
+    }
+
+    public override fun computeEnvironmentOrder(computeEnvironmentOrder: List<Any>) {
+      cdkBuilder.computeEnvironmentOrder(computeEnvironmentOrder)
+    }
+
+    public override fun jobQueueName(jobQueueName: String) {
+      cdkBuilder.jobQueueName(jobQueueName)
+    }
+
+    public override fun priority(priority: Number) {
+      cdkBuilder.priority(priority)
+    }
+
+    public override fun schedulingPolicyArn(schedulingPolicyArn: String) {
+      cdkBuilder.schedulingPolicyArn(schedulingPolicyArn)
+    }
+
+    public override fun state(state: String) {
+      cdkBuilder.state(state)
+    }
+
+    public override fun tags(tags: Map<String, String>) {
+      cdkBuilder.tags(tags)
+    }
+
+    public fun build(): software.amazon.awscdk.services.batch.CfnJobQueue = cdkBuilder.build()
+  }
+
+  public companion object {
+    init {
+
+    }
+
+    public operator fun invoke(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      block: Builder.() -> Unit = {},
+    ): CfnJobQueue {
+      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+      return CfnJobQueue(builderImpl.apply(block).build())
+    }
+
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobQueue): CfnJobQueue =
+        CfnJobQueue(cdkObject)
+
+    internal fun unwrap(wrapped: CfnJobQueue): software.amazon.awscdk.services.batch.CfnJobQueue =
+        wrapped.cdkObject
+  }
+
+  public interface ComputeEnvironmentOrderProperty {
+    public fun computeEnvironment(): String
+
+    public fun order(): Number
+
+    public interface Builder {
+      public fun computeEnvironment(computeEnvironment: String) {
+      }
+
+      public fun order(order: Number) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.batch.CfnJobQueue.ComputeEnvironmentOrderProperty.Builder
+          =
+          software.amazon.awscdk.services.batch.CfnJobQueue.ComputeEnvironmentOrderProperty.builder()
+
+      public override fun computeEnvironment(computeEnvironment: String) {
+        cdkBuilder.computeEnvironment(computeEnvironment)
+      }
+
+      public override fun order(order: Number) {
+        cdkBuilder.order(order)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.batch.CfnJobQueue.ComputeEnvironmentOrderProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.batch.CfnJobQueue.ComputeEnvironmentOrderProperty,
+    ) : ComputeEnvironmentOrderProperty {
+      public override fun computeEnvironment(): String = unwrap(this).getComputeEnvironment()
+
+      public override fun order(): Number = unwrap(this).getOrder()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): ComputeEnvironmentOrderProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobQueue.ComputeEnvironmentOrderProperty):
+          ComputeEnvironmentOrderProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ComputeEnvironmentOrderProperty):
+          software.amazon.awscdk.services.batch.CfnJobQueue.ComputeEnvironmentOrderProperty =
+          (wrapped as Wrapper).cdkObject
+    }
+  }
+}

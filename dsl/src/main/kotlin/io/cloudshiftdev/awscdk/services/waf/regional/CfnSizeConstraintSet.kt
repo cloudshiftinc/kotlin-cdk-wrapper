@@ -1,0 +1,258 @@
+package io.cloudshiftdev.awscdk.services.waf.regional
+
+import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.TreeInspector
+import kotlin.Any
+import kotlin.Number
+import kotlin.String
+import kotlin.Suppress
+import kotlin.Unit
+import kotlin.collections.List
+import kotlin.jvm.JvmName
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
+import software.constructs.Construct as SoftwareConstructsConstruct
+
+public open class CfnSizeConstraintSet internal constructor(
+  private val cdkObject: software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet,
+) : CfnResource(cdkObject), IInspectable {
+  public open fun attrId(): String = unwrap(this).getAttrId()
+
+  public override fun inspect(inspector: TreeInspector) {
+    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+  }
+
+  public open fun name(): String = unwrap(this).getName()
+
+  public open fun name(`value`: String) {
+    unwrap(this).setName(`value`)
+  }
+
+  public open fun sizeConstraints(): Any? = unwrap(this).getSizeConstraints()
+
+  public open fun sizeConstraints(`value`: IResolvable) {
+    unwrap(this).setSizeConstraints(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun sizeConstraints(__idx_ac66f0: List<Any>) {
+    unwrap(this).setSizeConstraints(__idx_ac66f0)
+  }
+
+  public interface Builder {
+    public fun name(name: String) {
+    }
+
+    public fun sizeConstraints(sizeConstraints: IResolvable) {
+    }
+
+    public fun sizeConstraints(sizeConstraints: List<Any>) {
+    }
+  }
+
+  private class BuilderImpl(
+    scope: SoftwareConstructsConstruct,
+    id: String,
+  ) : Builder {
+    private val cdkBuilder:
+        software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet.Builder =
+        software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet.Builder.create(scope, id)
+
+    public override fun name(name: String) {
+      cdkBuilder.name(name)
+    }
+
+    public override fun sizeConstraints(sizeConstraints: IResolvable) {
+      cdkBuilder.sizeConstraints(sizeConstraints.let(IResolvable::unwrap))
+    }
+
+    public override fun sizeConstraints(sizeConstraints: List<Any>) {
+      cdkBuilder.sizeConstraints(sizeConstraints)
+    }
+
+    public fun build(): software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet =
+        cdkBuilder.build()
+  }
+
+  public companion object {
+    init {
+
+    }
+
+    public operator fun invoke(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      block: Builder.() -> Unit = {},
+    ): CfnSizeConstraintSet {
+      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+      return CfnSizeConstraintSet(builderImpl.apply(block).build())
+    }
+
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet):
+        CfnSizeConstraintSet = CfnSizeConstraintSet(cdkObject)
+
+    internal fun unwrap(wrapped: CfnSizeConstraintSet):
+        software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet = wrapped.cdkObject
+  }
+
+  public interface FieldToMatchProperty {
+    public fun `data`(): String? = unwrap(this).getData()
+
+    public fun type(): String
+
+    public interface Builder {
+      public fun `data`(`data`: String) {
+      }
+
+      public fun type(type: String) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet.FieldToMatchProperty.Builder
+          =
+          software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet.FieldToMatchProperty.builder()
+
+      public override fun `data`(`data`: String) {
+        cdkBuilder.`data`(`data`)
+      }
+
+      public override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet.FieldToMatchProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet.FieldToMatchProperty,
+    ) : FieldToMatchProperty {
+      public override fun `data`(): String? = unwrap(this).getData()
+
+      public override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): FieldToMatchProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet.FieldToMatchProperty):
+          FieldToMatchProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FieldToMatchProperty):
+          software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet.FieldToMatchProperty =
+          (wrapped as Wrapper).cdkObject
+    }
+  }
+
+  public interface SizeConstraintProperty {
+    public fun comparisonOperator(): String
+
+    public fun fieldToMatch(): Any
+
+    public fun size(): Number
+
+    public fun textTransformation(): String
+
+    public interface Builder {
+      public fun comparisonOperator(comparisonOperator: String) {
+      }
+
+      public fun fieldToMatch(fieldToMatch: IResolvable) {
+      }
+
+      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
+      }
+
+      @Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7da431dacaaba41d435b9b01e697b3a6191eeb851118af65548c35a7fc8c6885")
+      public fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit) {
+      }
+
+      public fun size(size: Number) {
+      }
+
+      public fun textTransformation(textTransformation: String) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet.SizeConstraintProperty.Builder
+          =
+          software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet.SizeConstraintProperty.builder()
+
+      public override fun comparisonOperator(comparisonOperator: String) {
+        cdkBuilder.comparisonOperator(comparisonOperator)
+      }
+
+      public override fun fieldToMatch(fieldToMatch: IResolvable) {
+        cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable::unwrap))
+      }
+
+      public override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
+        cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty::unwrap))
+      }
+
+      @Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7da431dacaaba41d435b9b01e697b3a6191eeb851118af65548c35a7fc8c6885")
+      public override fun fieldToMatch(fieldToMatch: FieldToMatchProperty.Builder.() -> Unit): Unit
+          = fieldToMatch(FieldToMatchProperty(fieldToMatch))
+
+      public override fun size(size: Number) {
+        cdkBuilder.size(size)
+      }
+
+      public override fun textTransformation(textTransformation: String) {
+        cdkBuilder.textTransformation(textTransformation)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet.SizeConstraintProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet.SizeConstraintProperty,
+    ) : SizeConstraintProperty {
+      public override fun comparisonOperator(): String = unwrap(this).getComparisonOperator()
+
+      public override fun fieldToMatch(): Any = unwrap(this).getFieldToMatch()
+
+      public override fun size(): Number = unwrap(this).getSize()
+
+      public override fun textTransformation(): String = unwrap(this).getTextTransformation()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): SizeConstraintProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet.SizeConstraintProperty):
+          SizeConstraintProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SizeConstraintProperty):
+          software.amazon.awscdk.services.waf.regional.CfnSizeConstraintSet.SizeConstraintProperty =
+          (wrapped as Wrapper).cdkObject
+    }
+  }
+}

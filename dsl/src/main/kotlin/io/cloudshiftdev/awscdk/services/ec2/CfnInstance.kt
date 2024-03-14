@@ -1,0 +1,2244 @@
+package io.cloudshiftdev.awscdk.services.ec2
+
+import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
+import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggable
+import io.cloudshiftdev.awscdk.TagManager
+import io.cloudshiftdev.awscdk.TreeInspector
+import kotlin.Any
+import kotlin.Boolean
+import kotlin.Number
+import kotlin.String
+import kotlin.Suppress
+import kotlin.Unit
+import kotlin.collections.List
+import kotlin.jvm.JvmName
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
+import software.constructs.Construct as SoftwareConstructsConstruct
+
+public open class CfnInstance internal constructor(
+  private val cdkObject: software.amazon.awscdk.services.ec2.CfnInstance,
+) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public open fun additionalInfo(): String? = unwrap(this).getAdditionalInfo()
+
+  public open fun additionalInfo(`value`: String) {
+    unwrap(this).setAdditionalInfo(`value`)
+  }
+
+  public open fun affinity(): String? = unwrap(this).getAffinity()
+
+  public open fun affinity(`value`: String) {
+    unwrap(this).setAffinity(`value`)
+  }
+
+  public open fun attrAvailabilityZone(): String = unwrap(this).getAttrAvailabilityZone()
+
+  public open fun attrId(): String = unwrap(this).getAttrId()
+
+  public open fun attrPrivateDnsName(): String = unwrap(this).getAttrPrivateDnsName()
+
+  public open fun attrPrivateIp(): String = unwrap(this).getAttrPrivateIp()
+
+  public open fun attrPublicDnsName(): String = unwrap(this).getAttrPublicDnsName()
+
+  public open fun attrPublicIp(): String = unwrap(this).getAttrPublicIp()
+
+  public open fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+
+  public open fun availabilityZone(`value`: String) {
+    unwrap(this).setAvailabilityZone(`value`)
+  }
+
+  public open fun blockDeviceMappings(): Any? = unwrap(this).getBlockDeviceMappings()
+
+  public open fun blockDeviceMappings(`value`: IResolvable) {
+    unwrap(this).setBlockDeviceMappings(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun blockDeviceMappings(__idx_ac66f0: List<Any>) {
+    unwrap(this).setBlockDeviceMappings(__idx_ac66f0)
+  }
+
+  public open fun cpuOptions(): Any? = unwrap(this).getCpuOptions()
+
+  public open fun cpuOptions(`value`: IResolvable) {
+    unwrap(this).setCpuOptions(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun cpuOptions(`value`: CpuOptionsProperty) {
+    unwrap(this).setCpuOptions(`value`.let(CpuOptionsProperty::unwrap))
+  }
+
+  @Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("a5d2629f18af4b772606a95484a7287ddd10b446b95a51771dad200e69d8ef45")
+  public open fun cpuOptions(`value`: CpuOptionsProperty.Builder.() -> Unit): Unit =
+      cpuOptions(CpuOptionsProperty(`value`))
+
+  public open fun creditSpecification(): Any? = unwrap(this).getCreditSpecification()
+
+  public open fun creditSpecification(`value`: IResolvable) {
+    unwrap(this).setCreditSpecification(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun creditSpecification(`value`: CreditSpecificationProperty) {
+    unwrap(this).setCreditSpecification(`value`.let(CreditSpecificationProperty::unwrap))
+  }
+
+  @Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("e281afa738ad6808633f441ebce50d06b0f57696d1adf33fb9d1fc0e41a3b369")
+  public open fun creditSpecification(`value`: CreditSpecificationProperty.Builder.() -> Unit): Unit
+      = creditSpecification(CreditSpecificationProperty(`value`))
+
+  public open fun disableApiTermination(): Any? = unwrap(this).getDisableApiTermination()
+
+  public open fun disableApiTermination(`value`: Boolean) {
+    unwrap(this).setDisableApiTermination(`value`)
+  }
+
+  public open fun disableApiTermination(`value`: IResolvable) {
+    unwrap(this).setDisableApiTermination(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun ebsOptimized(): Any? = unwrap(this).getEbsOptimized()
+
+  public open fun ebsOptimized(`value`: Boolean) {
+    unwrap(this).setEbsOptimized(`value`)
+  }
+
+  public open fun ebsOptimized(`value`: IResolvable) {
+    unwrap(this).setEbsOptimized(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun elasticGpuSpecifications(): Any? = unwrap(this).getElasticGpuSpecifications()
+
+  public open fun elasticGpuSpecifications(`value`: IResolvable) {
+    unwrap(this).setElasticGpuSpecifications(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun elasticGpuSpecifications(__idx_ac66f0: List<Any>) {
+    unwrap(this).setElasticGpuSpecifications(__idx_ac66f0)
+  }
+
+  public open fun elasticInferenceAccelerators(): Any? =
+      unwrap(this).getElasticInferenceAccelerators()
+
+  public open fun elasticInferenceAccelerators(`value`: IResolvable) {
+    unwrap(this).setElasticInferenceAccelerators(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun elasticInferenceAccelerators(__idx_ac66f0: List<Any>) {
+    unwrap(this).setElasticInferenceAccelerators(__idx_ac66f0)
+  }
+
+  public open fun enclaveOptions(): Any? = unwrap(this).getEnclaveOptions()
+
+  public open fun enclaveOptions(`value`: IResolvable) {
+    unwrap(this).setEnclaveOptions(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun enclaveOptions(`value`: EnclaveOptionsProperty) {
+    unwrap(this).setEnclaveOptions(`value`.let(EnclaveOptionsProperty::unwrap))
+  }
+
+  @Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("d4f3f674bcf5681180c9e7721090e0e7b85b3c2271d40b0b45852e9b209a4684")
+  public open fun enclaveOptions(`value`: EnclaveOptionsProperty.Builder.() -> Unit): Unit =
+      enclaveOptions(EnclaveOptionsProperty(`value`))
+
+  public open fun hibernationOptions(): Any? = unwrap(this).getHibernationOptions()
+
+  public open fun hibernationOptions(`value`: IResolvable) {
+    unwrap(this).setHibernationOptions(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun hibernationOptions(`value`: HibernationOptionsProperty) {
+    unwrap(this).setHibernationOptions(`value`.let(HibernationOptionsProperty::unwrap))
+  }
+
+  @Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("a1daa1b727cd75c23fc47601d2198ed7d77a27aa5c3051afc107abaca836542c")
+  public open fun hibernationOptions(`value`: HibernationOptionsProperty.Builder.() -> Unit): Unit =
+      hibernationOptions(HibernationOptionsProperty(`value`))
+
+  public open fun hostId(): String? = unwrap(this).getHostId()
+
+  public open fun hostId(`value`: String) {
+    unwrap(this).setHostId(`value`)
+  }
+
+  public open fun hostResourceGroupArn(): String? = unwrap(this).getHostResourceGroupArn()
+
+  public open fun hostResourceGroupArn(`value`: String) {
+    unwrap(this).setHostResourceGroupArn(`value`)
+  }
+
+  public open fun iamInstanceProfile(): String? = unwrap(this).getIamInstanceProfile()
+
+  public open fun iamInstanceProfile(`value`: String) {
+    unwrap(this).setIamInstanceProfile(`value`)
+  }
+
+  public open fun imageId(): String? = unwrap(this).getImageId()
+
+  public open fun imageId(`value`: String) {
+    unwrap(this).setImageId(`value`)
+  }
+
+  public override fun inspect(inspector: TreeInspector) {
+    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+  }
+
+  public open fun instanceInitiatedShutdownBehavior(): String? =
+      unwrap(this).getInstanceInitiatedShutdownBehavior()
+
+  public open fun instanceInitiatedShutdownBehavior(`value`: String) {
+    unwrap(this).setInstanceInitiatedShutdownBehavior(`value`)
+  }
+
+  public open fun instanceType(): String? = unwrap(this).getInstanceType()
+
+  public open fun instanceType(`value`: String) {
+    unwrap(this).setInstanceType(`value`)
+  }
+
+  public open fun ipv6AddressCount(): Number? = unwrap(this).getIpv6AddressCount()
+
+  public open fun ipv6AddressCount(`value`: Number) {
+    unwrap(this).setIpv6AddressCount(`value`)
+  }
+
+  public open fun ipv6Addresses(): Any? = unwrap(this).getIpv6Addresses()
+
+  public open fun ipv6Addresses(`value`: IResolvable) {
+    unwrap(this).setIpv6Addresses(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun ipv6Addresses(__idx_ac66f0: List<Any>) {
+    unwrap(this).setIpv6Addresses(__idx_ac66f0)
+  }
+
+  public open fun kernelId(): String? = unwrap(this).getKernelId()
+
+  public open fun kernelId(`value`: String) {
+    unwrap(this).setKernelId(`value`)
+  }
+
+  public open fun keyName(): String? = unwrap(this).getKeyName()
+
+  public open fun keyName(`value`: String) {
+    unwrap(this).setKeyName(`value`)
+  }
+
+  public open fun launchTemplate(): Any? = unwrap(this).getLaunchTemplate()
+
+  public open fun launchTemplate(`value`: IResolvable) {
+    unwrap(this).setLaunchTemplate(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun launchTemplate(`value`: LaunchTemplateSpecificationProperty) {
+    unwrap(this).setLaunchTemplate(`value`.let(LaunchTemplateSpecificationProperty::unwrap))
+  }
+
+  @Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("535cb576814b4579419de7412d1256c1940139943ea2c243956fbc07001789a0")
+  public open fun launchTemplate(`value`: LaunchTemplateSpecificationProperty.Builder.() -> Unit):
+      Unit = launchTemplate(LaunchTemplateSpecificationProperty(`value`))
+
+  public open fun licenseSpecifications(): Any? = unwrap(this).getLicenseSpecifications()
+
+  public open fun licenseSpecifications(`value`: IResolvable) {
+    unwrap(this).setLicenseSpecifications(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun licenseSpecifications(__idx_ac66f0: List<Any>) {
+    unwrap(this).setLicenseSpecifications(__idx_ac66f0)
+  }
+
+  public open fun monitoring(): Any? = unwrap(this).getMonitoring()
+
+  public open fun monitoring(`value`: Boolean) {
+    unwrap(this).setMonitoring(`value`)
+  }
+
+  public open fun monitoring(`value`: IResolvable) {
+    unwrap(this).setMonitoring(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun networkInterfaces(): Any? = unwrap(this).getNetworkInterfaces()
+
+  public open fun networkInterfaces(`value`: IResolvable) {
+    unwrap(this).setNetworkInterfaces(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun networkInterfaces(__idx_ac66f0: List<Any>) {
+    unwrap(this).setNetworkInterfaces(__idx_ac66f0)
+  }
+
+  public open fun placementGroupName(): String? = unwrap(this).getPlacementGroupName()
+
+  public open fun placementGroupName(`value`: String) {
+    unwrap(this).setPlacementGroupName(`value`)
+  }
+
+  public open fun privateDnsNameOptions(): Any? = unwrap(this).getPrivateDnsNameOptions()
+
+  public open fun privateDnsNameOptions(`value`: IResolvable) {
+    unwrap(this).setPrivateDnsNameOptions(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun privateDnsNameOptions(`value`: PrivateDnsNameOptionsProperty) {
+    unwrap(this).setPrivateDnsNameOptions(`value`.let(PrivateDnsNameOptionsProperty::unwrap))
+  }
+
+  @Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("679ef0663bdcb803470ce65281f016c218e8a62b009e4f1f3644ad6be443da6a")
+  public open fun privateDnsNameOptions(`value`: PrivateDnsNameOptionsProperty.Builder.() -> Unit):
+      Unit = privateDnsNameOptions(PrivateDnsNameOptionsProperty(`value`))
+
+  public open fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
+
+  public open fun privateIpAddress(`value`: String) {
+    unwrap(this).setPrivateIpAddress(`value`)
+  }
+
+  public open fun propagateTagsToVolumeOnCreation(): Any? =
+      unwrap(this).getPropagateTagsToVolumeOnCreation()
+
+  public open fun propagateTagsToVolumeOnCreation(`value`: Boolean) {
+    unwrap(this).setPropagateTagsToVolumeOnCreation(`value`)
+  }
+
+  public open fun propagateTagsToVolumeOnCreation(`value`: IResolvable) {
+    unwrap(this).setPropagateTagsToVolumeOnCreation(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun ramdiskId(): String? = unwrap(this).getRamdiskId()
+
+  public open fun ramdiskId(`value`: String) {
+    unwrap(this).setRamdiskId(`value`)
+  }
+
+  public open fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
+      emptyList()
+
+  public open fun securityGroupIds(`value`: List<String>) {
+    unwrap(this).setSecurityGroupIds(`value`)
+  }
+
+  public open fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
+
+  public open fun securityGroups(`value`: List<String>) {
+    unwrap(this).setSecurityGroups(`value`)
+  }
+
+  public open fun sourceDestCheck(): Any? = unwrap(this).getSourceDestCheck()
+
+  public open fun sourceDestCheck(`value`: Boolean) {
+    unwrap(this).setSourceDestCheck(`value`)
+  }
+
+  public open fun sourceDestCheck(`value`: IResolvable) {
+    unwrap(this).setSourceDestCheck(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun ssmAssociations(): Any? = unwrap(this).getSsmAssociations()
+
+  public open fun ssmAssociations(`value`: IResolvable) {
+    unwrap(this).setSsmAssociations(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun ssmAssociations(__idx_ac66f0: List<Any>) {
+    unwrap(this).setSsmAssociations(__idx_ac66f0)
+  }
+
+  public open fun subnetId(): String? = unwrap(this).getSubnetId()
+
+  public open fun subnetId(`value`: String) {
+    unwrap(this).setSubnetId(`value`)
+  }
+
+  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+
+  public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
+      emptyList()
+
+  public open fun tagsRaw(`value`: List<CfnTag>) {
+    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+  }
+
+  public open fun tenancy(): String? = unwrap(this).getTenancy()
+
+  public open fun tenancy(`value`: String) {
+    unwrap(this).setTenancy(`value`)
+  }
+
+  public open fun userData(): String? = unwrap(this).getUserData()
+
+  public open fun userData(`value`: String) {
+    unwrap(this).setUserData(`value`)
+  }
+
+  public open fun volumes(): Any? = unwrap(this).getVolumes()
+
+  public open fun volumes(`value`: IResolvable) {
+    unwrap(this).setVolumes(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun volumes(__idx_ac66f0: List<Any>) {
+    unwrap(this).setVolumes(__idx_ac66f0)
+  }
+
+  public interface Builder {
+    public fun additionalInfo(additionalInfo: String) {
+    }
+
+    public fun affinity(affinity: String) {
+    }
+
+    public fun availabilityZone(availabilityZone: String) {
+    }
+
+    public fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
+    }
+
+    public fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
+    }
+
+    public fun cpuOptions(cpuOptions: IResolvable) {
+    }
+
+    public fun cpuOptions(cpuOptions: CpuOptionsProperty) {
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("200f802d6678d49e125ebc55394f3fe219b3c76085e543b3bcf74003b51b8940")
+    public fun cpuOptions(cpuOptions: CpuOptionsProperty.Builder.() -> Unit) {
+    }
+
+    public fun creditSpecification(creditSpecification: IResolvable) {
+    }
+
+    public fun creditSpecification(creditSpecification: CreditSpecificationProperty) {
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("557eb78c2cb1d5bc4288a9e41d6a454decbdb95ace5d44686d1217414b12da80")
+    public
+        fun creditSpecification(creditSpecification: CreditSpecificationProperty.Builder.() -> Unit) {
+    }
+
+    public fun disableApiTermination(disableApiTermination: Boolean) {
+    }
+
+    public fun disableApiTermination(disableApiTermination: IResolvable) {
+    }
+
+    public fun ebsOptimized(ebsOptimized: Boolean) {
+    }
+
+    public fun ebsOptimized(ebsOptimized: IResolvable) {
+    }
+
+    public fun elasticGpuSpecifications(elasticGpuSpecifications: IResolvable) {
+    }
+
+    public fun elasticGpuSpecifications(elasticGpuSpecifications: List<Any>) {
+    }
+
+    public fun elasticInferenceAccelerators(elasticInferenceAccelerators: IResolvable) {
+    }
+
+    public fun elasticInferenceAccelerators(elasticInferenceAccelerators: List<Any>) {
+    }
+
+    public fun enclaveOptions(enclaveOptions: IResolvable) {
+    }
+
+    public fun enclaveOptions(enclaveOptions: EnclaveOptionsProperty) {
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("4f759cdb2f8634a2d9e2950ad963a997445cd84d5a62e746ac0abfc8a77e0e5d")
+    public fun enclaveOptions(enclaveOptions: EnclaveOptionsProperty.Builder.() -> Unit) {
+    }
+
+    public fun hibernationOptions(hibernationOptions: IResolvable) {
+    }
+
+    public fun hibernationOptions(hibernationOptions: HibernationOptionsProperty) {
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8466dee098089da22e3064fb04b8975a80e569c6287108da8a3220d1a21b95da")
+    public
+        fun hibernationOptions(hibernationOptions: HibernationOptionsProperty.Builder.() -> Unit) {
+    }
+
+    public fun hostId(hostId: String) {
+    }
+
+    public fun hostResourceGroupArn(hostResourceGroupArn: String) {
+    }
+
+    public fun iamInstanceProfile(iamInstanceProfile: String) {
+    }
+
+    public fun imageId(imageId: String) {
+    }
+
+    public fun instanceInitiatedShutdownBehavior(instanceInitiatedShutdownBehavior: String) {
+    }
+
+    public fun instanceType(instanceType: String) {
+    }
+
+    public fun ipv6AddressCount(ipv6AddressCount: Number) {
+    }
+
+    public fun ipv6Addresses(ipv6Addresses: IResolvable) {
+    }
+
+    public fun ipv6Addresses(ipv6Addresses: List<Any>) {
+    }
+
+    public fun kernelId(kernelId: String) {
+    }
+
+    public fun keyName(keyName: String) {
+    }
+
+    public fun launchTemplate(launchTemplate: IResolvable) {
+    }
+
+    public fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty) {
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("1a96fad6d5019a3dd2182fee83a3a37fbea28f6c867f2ec0ff8c8d0b4e93680a")
+    public
+        fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty.Builder.() -> Unit) {
+    }
+
+    public fun licenseSpecifications(licenseSpecifications: IResolvable) {
+    }
+
+    public fun licenseSpecifications(licenseSpecifications: List<Any>) {
+    }
+
+    public fun monitoring(monitoring: Boolean) {
+    }
+
+    public fun monitoring(monitoring: IResolvable) {
+    }
+
+    public fun networkInterfaces(networkInterfaces: IResolvable) {
+    }
+
+    public fun networkInterfaces(networkInterfaces: List<Any>) {
+    }
+
+    public fun placementGroupName(placementGroupName: String) {
+    }
+
+    public fun privateDnsNameOptions(privateDnsNameOptions: IResolvable) {
+    }
+
+    public fun privateDnsNameOptions(privateDnsNameOptions: PrivateDnsNameOptionsProperty) {
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3e02ff10ec39ab61f51631930c93d6b96606843794b59eeb8c716656ba4304b9")
+    public
+        fun privateDnsNameOptions(privateDnsNameOptions: PrivateDnsNameOptionsProperty.Builder.() -> Unit) {
+    }
+
+    public fun privateIpAddress(privateIpAddress: String) {
+    }
+
+    public fun propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation: Boolean) {
+    }
+
+    public fun propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation: IResolvable) {
+    }
+
+    public fun ramdiskId(ramdiskId: String) {
+    }
+
+    public fun securityGroupIds(securityGroupIds: List<String>) {
+    }
+
+    public fun securityGroups(securityGroups: List<String>) {
+    }
+
+    public fun sourceDestCheck(sourceDestCheck: Boolean) {
+    }
+
+    public fun sourceDestCheck(sourceDestCheck: IResolvable) {
+    }
+
+    public fun ssmAssociations(ssmAssociations: IResolvable) {
+    }
+
+    public fun ssmAssociations(ssmAssociations: List<Any>) {
+    }
+
+    public fun subnetId(subnetId: String) {
+    }
+
+    public fun tags(tags: List<CfnTag>) {
+    }
+
+    public fun tenancy(tenancy: String) {
+    }
+
+    public fun userData(userData: String) {
+    }
+
+    public fun volumes(volumes: IResolvable) {
+    }
+
+    public fun volumes(volumes: List<Any>) {
+    }
+  }
+
+  private class BuilderImpl(
+    scope: SoftwareConstructsConstruct,
+    id: String,
+  ) : Builder {
+    private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnInstance.Builder =
+        software.amazon.awscdk.services.ec2.CfnInstance.Builder.create(scope, id)
+
+    public override fun additionalInfo(additionalInfo: String) {
+      cdkBuilder.additionalInfo(additionalInfo)
+    }
+
+    public override fun affinity(affinity: String) {
+      cdkBuilder.affinity(affinity)
+    }
+
+    public override fun availabilityZone(availabilityZone: String) {
+      cdkBuilder.availabilityZone(availabilityZone)
+    }
+
+    public override fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
+      cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable::unwrap))
+    }
+
+    public override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
+      cdkBuilder.blockDeviceMappings(blockDeviceMappings)
+    }
+
+    public override fun cpuOptions(cpuOptions: IResolvable) {
+      cdkBuilder.cpuOptions(cpuOptions.let(IResolvable::unwrap))
+    }
+
+    public override fun cpuOptions(cpuOptions: CpuOptionsProperty) {
+      cdkBuilder.cpuOptions(cpuOptions.let(CpuOptionsProperty::unwrap))
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("200f802d6678d49e125ebc55394f3fe219b3c76085e543b3bcf74003b51b8940")
+    public override fun cpuOptions(cpuOptions: CpuOptionsProperty.Builder.() -> Unit): Unit =
+        cpuOptions(CpuOptionsProperty(cpuOptions))
+
+    public override fun creditSpecification(creditSpecification: IResolvable) {
+      cdkBuilder.creditSpecification(creditSpecification.let(IResolvable::unwrap))
+    }
+
+    public override fun creditSpecification(creditSpecification: CreditSpecificationProperty) {
+      cdkBuilder.creditSpecification(creditSpecification.let(CreditSpecificationProperty::unwrap))
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("557eb78c2cb1d5bc4288a9e41d6a454decbdb95ace5d44686d1217414b12da80")
+    public override
+        fun creditSpecification(creditSpecification: CreditSpecificationProperty.Builder.() -> Unit):
+        Unit = creditSpecification(CreditSpecificationProperty(creditSpecification))
+
+    public override fun disableApiTermination(disableApiTermination: Boolean) {
+      cdkBuilder.disableApiTermination(disableApiTermination)
+    }
+
+    public override fun disableApiTermination(disableApiTermination: IResolvable) {
+      cdkBuilder.disableApiTermination(disableApiTermination.let(IResolvable::unwrap))
+    }
+
+    public override fun ebsOptimized(ebsOptimized: Boolean) {
+      cdkBuilder.ebsOptimized(ebsOptimized)
+    }
+
+    public override fun ebsOptimized(ebsOptimized: IResolvable) {
+      cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
+    }
+
+    public override fun elasticGpuSpecifications(elasticGpuSpecifications: IResolvable) {
+      cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications.let(IResolvable::unwrap))
+    }
+
+    public override fun elasticGpuSpecifications(elasticGpuSpecifications: List<Any>) {
+      cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications)
+    }
+
+    public override fun elasticInferenceAccelerators(elasticInferenceAccelerators: IResolvable) {
+      cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators.let(IResolvable::unwrap))
+    }
+
+    public override fun elasticInferenceAccelerators(elasticInferenceAccelerators: List<Any>) {
+      cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators)
+    }
+
+    public override fun enclaveOptions(enclaveOptions: IResolvable) {
+      cdkBuilder.enclaveOptions(enclaveOptions.let(IResolvable::unwrap))
+    }
+
+    public override fun enclaveOptions(enclaveOptions: EnclaveOptionsProperty) {
+      cdkBuilder.enclaveOptions(enclaveOptions.let(EnclaveOptionsProperty::unwrap))
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("4f759cdb2f8634a2d9e2950ad963a997445cd84d5a62e746ac0abfc8a77e0e5d")
+    public override fun enclaveOptions(enclaveOptions: EnclaveOptionsProperty.Builder.() -> Unit):
+        Unit = enclaveOptions(EnclaveOptionsProperty(enclaveOptions))
+
+    public override fun hibernationOptions(hibernationOptions: IResolvable) {
+      cdkBuilder.hibernationOptions(hibernationOptions.let(IResolvable::unwrap))
+    }
+
+    public override fun hibernationOptions(hibernationOptions: HibernationOptionsProperty) {
+      cdkBuilder.hibernationOptions(hibernationOptions.let(HibernationOptionsProperty::unwrap))
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8466dee098089da22e3064fb04b8975a80e569c6287108da8a3220d1a21b95da")
+    public override
+        fun hibernationOptions(hibernationOptions: HibernationOptionsProperty.Builder.() -> Unit):
+        Unit = hibernationOptions(HibernationOptionsProperty(hibernationOptions))
+
+    public override fun hostId(hostId: String) {
+      cdkBuilder.hostId(hostId)
+    }
+
+    public override fun hostResourceGroupArn(hostResourceGroupArn: String) {
+      cdkBuilder.hostResourceGroupArn(hostResourceGroupArn)
+    }
+
+    public override fun iamInstanceProfile(iamInstanceProfile: String) {
+      cdkBuilder.iamInstanceProfile(iamInstanceProfile)
+    }
+
+    public override fun imageId(imageId: String) {
+      cdkBuilder.imageId(imageId)
+    }
+
+    public override
+        fun instanceInitiatedShutdownBehavior(instanceInitiatedShutdownBehavior: String) {
+      cdkBuilder.instanceInitiatedShutdownBehavior(instanceInitiatedShutdownBehavior)
+    }
+
+    public override fun instanceType(instanceType: String) {
+      cdkBuilder.instanceType(instanceType)
+    }
+
+    public override fun ipv6AddressCount(ipv6AddressCount: Number) {
+      cdkBuilder.ipv6AddressCount(ipv6AddressCount)
+    }
+
+    public override fun ipv6Addresses(ipv6Addresses: IResolvable) {
+      cdkBuilder.ipv6Addresses(ipv6Addresses.let(IResolvable::unwrap))
+    }
+
+    public override fun ipv6Addresses(ipv6Addresses: List<Any>) {
+      cdkBuilder.ipv6Addresses(ipv6Addresses)
+    }
+
+    public override fun kernelId(kernelId: String) {
+      cdkBuilder.kernelId(kernelId)
+    }
+
+    public override fun keyName(keyName: String) {
+      cdkBuilder.keyName(keyName)
+    }
+
+    public override fun launchTemplate(launchTemplate: IResolvable) {
+      cdkBuilder.launchTemplate(launchTemplate.let(IResolvable::unwrap))
+    }
+
+    public override fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty) {
+      cdkBuilder.launchTemplate(launchTemplate.let(LaunchTemplateSpecificationProperty::unwrap))
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("1a96fad6d5019a3dd2182fee83a3a37fbea28f6c867f2ec0ff8c8d0b4e93680a")
+    public override
+        fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty.Builder.() -> Unit):
+        Unit = launchTemplate(LaunchTemplateSpecificationProperty(launchTemplate))
+
+    public override fun licenseSpecifications(licenseSpecifications: IResolvable) {
+      cdkBuilder.licenseSpecifications(licenseSpecifications.let(IResolvable::unwrap))
+    }
+
+    public override fun licenseSpecifications(licenseSpecifications: List<Any>) {
+      cdkBuilder.licenseSpecifications(licenseSpecifications)
+    }
+
+    public override fun monitoring(monitoring: Boolean) {
+      cdkBuilder.monitoring(monitoring)
+    }
+
+    public override fun monitoring(monitoring: IResolvable) {
+      cdkBuilder.monitoring(monitoring.let(IResolvable::unwrap))
+    }
+
+    public override fun networkInterfaces(networkInterfaces: IResolvable) {
+      cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable::unwrap))
+    }
+
+    public override fun networkInterfaces(networkInterfaces: List<Any>) {
+      cdkBuilder.networkInterfaces(networkInterfaces)
+    }
+
+    public override fun placementGroupName(placementGroupName: String) {
+      cdkBuilder.placementGroupName(placementGroupName)
+    }
+
+    public override fun privateDnsNameOptions(privateDnsNameOptions: IResolvable) {
+      cdkBuilder.privateDnsNameOptions(privateDnsNameOptions.let(IResolvable::unwrap))
+    }
+
+    public override
+        fun privateDnsNameOptions(privateDnsNameOptions: PrivateDnsNameOptionsProperty) {
+      cdkBuilder.privateDnsNameOptions(privateDnsNameOptions.let(PrivateDnsNameOptionsProperty::unwrap))
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3e02ff10ec39ab61f51631930c93d6b96606843794b59eeb8c716656ba4304b9")
+    public override
+        fun privateDnsNameOptions(privateDnsNameOptions: PrivateDnsNameOptionsProperty.Builder.() -> Unit):
+        Unit = privateDnsNameOptions(PrivateDnsNameOptionsProperty(privateDnsNameOptions))
+
+    public override fun privateIpAddress(privateIpAddress: String) {
+      cdkBuilder.privateIpAddress(privateIpAddress)
+    }
+
+    public override fun propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation: Boolean) {
+      cdkBuilder.propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation)
+    }
+
+    public override
+        fun propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation: IResolvable) {
+      cdkBuilder.propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation.let(IResolvable::unwrap))
+    }
+
+    public override fun ramdiskId(ramdiskId: String) {
+      cdkBuilder.ramdiskId(ramdiskId)
+    }
+
+    public override fun securityGroupIds(securityGroupIds: List<String>) {
+      cdkBuilder.securityGroupIds(securityGroupIds)
+    }
+
+    public override fun securityGroups(securityGroups: List<String>) {
+      cdkBuilder.securityGroups(securityGroups)
+    }
+
+    public override fun sourceDestCheck(sourceDestCheck: Boolean) {
+      cdkBuilder.sourceDestCheck(sourceDestCheck)
+    }
+
+    public override fun sourceDestCheck(sourceDestCheck: IResolvable) {
+      cdkBuilder.sourceDestCheck(sourceDestCheck.let(IResolvable::unwrap))
+    }
+
+    public override fun ssmAssociations(ssmAssociations: IResolvable) {
+      cdkBuilder.ssmAssociations(ssmAssociations.let(IResolvable::unwrap))
+    }
+
+    public override fun ssmAssociations(ssmAssociations: List<Any>) {
+      cdkBuilder.ssmAssociations(ssmAssociations)
+    }
+
+    public override fun subnetId(subnetId: String) {
+      cdkBuilder.subnetId(subnetId)
+    }
+
+    public override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+    }
+
+    public override fun tenancy(tenancy: String) {
+      cdkBuilder.tenancy(tenancy)
+    }
+
+    public override fun userData(userData: String) {
+      cdkBuilder.userData(userData)
+    }
+
+    public override fun volumes(volumes: IResolvable) {
+      cdkBuilder.volumes(volumes.let(IResolvable::unwrap))
+    }
+
+    public override fun volumes(volumes: List<Any>) {
+      cdkBuilder.volumes(volumes)
+    }
+
+    public fun build(): software.amazon.awscdk.services.ec2.CfnInstance = cdkBuilder.build()
+  }
+
+  public companion object {
+    init {
+
+    }
+
+    public operator fun invoke(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      block: Builder.() -> Unit = {},
+    ): CfnInstance {
+      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+      return CfnInstance(builderImpl.apply(block).build())
+    }
+
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance): CfnInstance =
+        CfnInstance(cdkObject)
+
+    internal fun unwrap(wrapped: CfnInstance): software.amazon.awscdk.services.ec2.CfnInstance =
+        wrapped.cdkObject
+  }
+
+  public interface CreditSpecificationProperty {
+    public fun cpuCredits(): String? = unwrap(this).getCpuCredits()
+
+    public interface Builder {
+      public fun cpuCredits(cpuCredits: String) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.CreditSpecificationProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.CreditSpecificationProperty.builder()
+
+      public override fun cpuCredits(cpuCredits: String) {
+        cdkBuilder.cpuCredits(cpuCredits)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnInstance.CreditSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnInstance.CreditSpecificationProperty,
+    ) : CreditSpecificationProperty {
+      public override fun cpuCredits(): String? = unwrap(this).getCpuCredits()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): CreditSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.CreditSpecificationProperty):
+          CreditSpecificationProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CreditSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.CreditSpecificationProperty = (wrapped as
+          Wrapper).cdkObject
+    }
+  }
+
+  public interface InstanceIpv6AddressProperty {
+    public fun ipv6Address(): String
+
+    public interface Builder {
+      public fun ipv6Address(ipv6Address: String) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty.builder()
+
+      public override fun ipv6Address(ipv6Address: String) {
+        cdkBuilder.ipv6Address(ipv6Address)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty,
+    ) : InstanceIpv6AddressProperty {
+      public override fun ipv6Address(): String = unwrap(this).getIpv6Address()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): InstanceIpv6AddressProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty):
+          InstanceIpv6AddressProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InstanceIpv6AddressProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty = (wrapped as
+          Wrapper).cdkObject
+    }
+  }
+
+  public interface VolumeProperty {
+    public fun device(): String
+
+    public fun volumeId(): String
+
+    public interface Builder {
+      public fun device(device: String) {
+      }
+
+      public fun volumeId(volumeId: String) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty.Builder
+          = software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty.builder()
+
+      public override fun device(device: String) {
+        cdkBuilder.device(device)
+      }
+
+      public override fun volumeId(volumeId: String) {
+        cdkBuilder.volumeId(volumeId)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty,
+    ) : VolumeProperty {
+      public override fun device(): String = unwrap(this).getDevice()
+
+      public override fun volumeId(): String = unwrap(this).getVolumeId()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): VolumeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty):
+          VolumeProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VolumeProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty = (wrapped as
+          Wrapper).cdkObject
+    }
+  }
+
+  public interface EbsProperty {
+    public fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
+
+    public fun encrypted(): Any? = unwrap(this).getEncrypted()
+
+    public fun iops(): Number? = unwrap(this).getIops()
+
+    public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    public fun snapshotId(): String? = unwrap(this).getSnapshotId()
+
+    public fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+
+    public fun volumeType(): String? = unwrap(this).getVolumeType()
+
+    public interface Builder {
+      public fun deleteOnTermination(deleteOnTermination: Boolean) {
+      }
+
+      public fun deleteOnTermination(deleteOnTermination: IResolvable) {
+      }
+
+      public fun encrypted(encrypted: Boolean) {
+      }
+
+      public fun encrypted(encrypted: IResolvable) {
+      }
+
+      public fun iops(iops: Number) {
+      }
+
+      public fun kmsKeyId(kmsKeyId: String) {
+      }
+
+      public fun snapshotId(snapshotId: String) {
+      }
+
+      public fun volumeSize(volumeSize: Number) {
+      }
+
+      public fun volumeType(volumeType: String) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnInstance.EbsProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.EbsProperty.builder()
+
+      public override fun deleteOnTermination(deleteOnTermination: Boolean) {
+        cdkBuilder.deleteOnTermination(deleteOnTermination)
+      }
+
+      public override fun deleteOnTermination(deleteOnTermination: IResolvable) {
+        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
+      }
+
+      public override fun encrypted(encrypted: Boolean) {
+        cdkBuilder.encrypted(encrypted)
+      }
+
+      public override fun encrypted(encrypted: IResolvable) {
+        cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
+      }
+
+      public override fun iops(iops: Number) {
+        cdkBuilder.iops(iops)
+      }
+
+      public override fun kmsKeyId(kmsKeyId: String) {
+        cdkBuilder.kmsKeyId(kmsKeyId)
+      }
+
+      public override fun snapshotId(snapshotId: String) {
+        cdkBuilder.snapshotId(snapshotId)
+      }
+
+      public override fun volumeSize(volumeSize: Number) {
+        cdkBuilder.volumeSize(volumeSize)
+      }
+
+      public override fun volumeType(volumeType: String) {
+        cdkBuilder.volumeType(volumeType)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnInstance.EbsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.EbsProperty,
+    ) : EbsProperty {
+      public override fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
+
+      public override fun encrypted(): Any? = unwrap(this).getEncrypted()
+
+      public override fun iops(): Number? = unwrap(this).getIops()
+
+      public override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+      public override fun snapshotId(): String? = unwrap(this).getSnapshotId()
+
+      public override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
+
+      public override fun volumeType(): String? = unwrap(this).getVolumeType()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): EbsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.EbsProperty):
+          EbsProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EbsProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.EbsProperty = (wrapped as
+          Wrapper).cdkObject
+    }
+  }
+
+  public interface PrivateDnsNameOptionsProperty {
+    public fun enableResourceNameDnsARecord(): Any? = unwrap(this).getEnableResourceNameDnsARecord()
+
+    public fun enableResourceNameDnsAaaaRecord(): Any? =
+        unwrap(this).getEnableResourceNameDnsAaaaRecord()
+
+    public fun hostnameType(): String? = unwrap(this).getHostnameType()
+
+    public interface Builder {
+      public fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: Boolean) {
+      }
+
+      public fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: IResolvable) {
+      }
+
+      public fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: Boolean) {
+      }
+
+      public fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: IResolvable) {
+      }
+
+      public fun hostnameType(hostnameType: String) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty.builder()
+
+      public override fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: Boolean) {
+        cdkBuilder.enableResourceNameDnsARecord(enableResourceNameDnsARecord)
+      }
+
+      public override fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: IResolvable) {
+        cdkBuilder.enableResourceNameDnsARecord(enableResourceNameDnsARecord.let(IResolvable::unwrap))
+      }
+
+      public override
+          fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: Boolean) {
+        cdkBuilder.enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord)
+      }
+
+      public override
+          fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: IResolvable) {
+        cdkBuilder.enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord.let(IResolvable::unwrap))
+      }
+
+      public override fun hostnameType(hostnameType: String) {
+        cdkBuilder.hostnameType(hostnameType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty,
+    ) : PrivateDnsNameOptionsProperty {
+      public override fun enableResourceNameDnsARecord(): Any? =
+          unwrap(this).getEnableResourceNameDnsARecord()
+
+      public override fun enableResourceNameDnsAaaaRecord(): Any? =
+          unwrap(this).getEnableResourceNameDnsAaaaRecord()
+
+      public override fun hostnameType(): String? = unwrap(this).getHostnameType()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): PrivateDnsNameOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty):
+          PrivateDnsNameOptionsProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PrivateDnsNameOptionsProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty = (wrapped
+          as Wrapper).cdkObject
+    }
+  }
+
+  public interface EnclaveOptionsProperty {
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    public interface Builder {
+      public fun enabled(enabled: Boolean) {
+      }
+
+      public fun enabled(enabled: IResolvable) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.EnclaveOptionsProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.EnclaveOptionsProperty.builder()
+
+      public override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      public override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnInstance.EnclaveOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnInstance.EnclaveOptionsProperty,
+    ) : EnclaveOptionsProperty {
+      public override fun enabled(): Any? = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): EnclaveOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.EnclaveOptionsProperty):
+          EnclaveOptionsProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: EnclaveOptionsProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.EnclaveOptionsProperty = (wrapped as
+          Wrapper).cdkObject
+    }
+  }
+
+  public interface NoDeviceProperty {
+    public interface Builder
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty.builder()
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty,
+    ) : NoDeviceProperty
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): NoDeviceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty):
+          NoDeviceProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NoDeviceProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty = (wrapped as
+          Wrapper).cdkObject
+    }
+  }
+
+  public interface PrivateIpAddressSpecificationProperty {
+    public fun primary(): Any
+
+    public fun privateIpAddress(): String
+
+    public interface Builder {
+      public fun primary(primary: Boolean) {
+      }
+
+      public fun primary(primary: IResolvable) {
+      }
+
+      public fun privateIpAddress(privateIpAddress: String) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty.builder()
+
+      public override fun primary(primary: Boolean) {
+        cdkBuilder.primary(primary)
+      }
+
+      public override fun primary(primary: IResolvable) {
+        cdkBuilder.primary(primary.let(IResolvable::unwrap))
+      }
+
+      public override fun privateIpAddress(privateIpAddress: String) {
+        cdkBuilder.privateIpAddress(privateIpAddress)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty,
+    ) : PrivateIpAddressSpecificationProperty {
+      public override fun primary(): Any = unwrap(this).getPrimary()
+
+      public override fun privateIpAddress(): String = unwrap(this).getPrivateIpAddress()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PrivateIpAddressSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty):
+          PrivateIpAddressSpecificationProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PrivateIpAddressSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty =
+          (wrapped as Wrapper).cdkObject
+    }
+  }
+
+  public interface HibernationOptionsProperty {
+    public fun configured(): Any? = unwrap(this).getConfigured()
+
+    public interface Builder {
+      public fun configured(configured: Boolean) {
+      }
+
+      public fun configured(configured: IResolvable) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.HibernationOptionsProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.HibernationOptionsProperty.builder()
+
+      public override fun configured(configured: Boolean) {
+        cdkBuilder.configured(configured)
+      }
+
+      public override fun configured(configured: IResolvable) {
+        cdkBuilder.configured(configured.let(IResolvable::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnInstance.HibernationOptionsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnInstance.HibernationOptionsProperty,
+    ) : HibernationOptionsProperty {
+      public override fun configured(): Any? = unwrap(this).getConfigured()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): HibernationOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.HibernationOptionsProperty):
+          HibernationOptionsProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HibernationOptionsProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.HibernationOptionsProperty = (wrapped as
+          Wrapper).cdkObject
+    }
+  }
+
+  public interface LicenseSpecificationProperty {
+    public fun licenseConfigurationArn(): String
+
+    public interface Builder {
+      public fun licenseConfigurationArn(licenseConfigurationArn: String) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.LicenseSpecificationProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.LicenseSpecificationProperty.builder()
+
+      public override fun licenseConfigurationArn(licenseConfigurationArn: String) {
+        cdkBuilder.licenseConfigurationArn(licenseConfigurationArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnInstance.LicenseSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnInstance.LicenseSpecificationProperty,
+    ) : LicenseSpecificationProperty {
+      public override fun licenseConfigurationArn(): String =
+          unwrap(this).getLicenseConfigurationArn()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): LicenseSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.LicenseSpecificationProperty):
+          LicenseSpecificationProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LicenseSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.LicenseSpecificationProperty = (wrapped as
+          Wrapper).cdkObject
+    }
+  }
+
+  public interface NetworkInterfaceProperty {
+    public fun associateCarrierIpAddress(): Any? = unwrap(this).getAssociateCarrierIpAddress()
+
+    public fun associatePublicIpAddress(): Any? = unwrap(this).getAssociatePublicIpAddress()
+
+    public fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
+
+    public fun description(): String? = unwrap(this).getDescription()
+
+    public fun deviceIndex(): String
+
+    public fun groupSet(): List<String> = unwrap(this).getGroupSet() ?: emptyList()
+
+    public fun ipv6AddressCount(): Number? = unwrap(this).getIpv6AddressCount()
+
+    public fun ipv6Addresses(): Any? = unwrap(this).getIpv6Addresses()
+
+    public fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
+
+    public fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
+
+    public fun privateIpAddresses(): Any? = unwrap(this).getPrivateIpAddresses()
+
+    public fun secondaryPrivateIpAddressCount(): Number? =
+        unwrap(this).getSecondaryPrivateIpAddressCount()
+
+    public fun subnetId(): String? = unwrap(this).getSubnetId()
+
+    public interface Builder {
+      public fun associateCarrierIpAddress(associateCarrierIpAddress: Boolean) {
+      }
+
+      public fun associateCarrierIpAddress(associateCarrierIpAddress: IResolvable) {
+      }
+
+      public fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
+      }
+
+      public fun associatePublicIpAddress(associatePublicIpAddress: IResolvable) {
+      }
+
+      public fun deleteOnTermination(deleteOnTermination: Boolean) {
+      }
+
+      public fun deleteOnTermination(deleteOnTermination: IResolvable) {
+      }
+
+      public fun description(description: String) {
+      }
+
+      public fun deviceIndex(deviceIndex: String) {
+      }
+
+      public fun groupSet(groupSet: List<String>) {
+      }
+
+      public fun ipv6AddressCount(ipv6AddressCount: Number) {
+      }
+
+      public fun ipv6Addresses(ipv6Addresses: IResolvable) {
+      }
+
+      public fun ipv6Addresses(ipv6Addresses: List<Any>) {
+      }
+
+      public fun networkInterfaceId(networkInterfaceId: String) {
+      }
+
+      public fun privateIpAddress(privateIpAddress: String) {
+      }
+
+      public fun privateIpAddresses(privateIpAddresses: IResolvable) {
+      }
+
+      public fun privateIpAddresses(privateIpAddresses: List<Any>) {
+      }
+
+      public fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number) {
+      }
+
+      public fun subnetId(subnetId: String) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.NetworkInterfaceProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.NetworkInterfaceProperty.builder()
+
+      public override fun associateCarrierIpAddress(associateCarrierIpAddress: Boolean) {
+        cdkBuilder.associateCarrierIpAddress(associateCarrierIpAddress)
+      }
+
+      public override fun associateCarrierIpAddress(associateCarrierIpAddress: IResolvable) {
+        cdkBuilder.associateCarrierIpAddress(associateCarrierIpAddress.let(IResolvable::unwrap))
+      }
+
+      public override fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
+        cdkBuilder.associatePublicIpAddress(associatePublicIpAddress)
+      }
+
+      public override fun associatePublicIpAddress(associatePublicIpAddress: IResolvable) {
+        cdkBuilder.associatePublicIpAddress(associatePublicIpAddress.let(IResolvable::unwrap))
+      }
+
+      public override fun deleteOnTermination(deleteOnTermination: Boolean) {
+        cdkBuilder.deleteOnTermination(deleteOnTermination)
+      }
+
+      public override fun deleteOnTermination(deleteOnTermination: IResolvable) {
+        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
+      }
+
+      public override fun description(description: String) {
+        cdkBuilder.description(description)
+      }
+
+      public override fun deviceIndex(deviceIndex: String) {
+        cdkBuilder.deviceIndex(deviceIndex)
+      }
+
+      public override fun groupSet(groupSet: List<String>) {
+        cdkBuilder.groupSet(groupSet)
+      }
+
+      public override fun ipv6AddressCount(ipv6AddressCount: Number) {
+        cdkBuilder.ipv6AddressCount(ipv6AddressCount)
+      }
+
+      public override fun ipv6Addresses(ipv6Addresses: IResolvable) {
+        cdkBuilder.ipv6Addresses(ipv6Addresses.let(IResolvable::unwrap))
+      }
+
+      public override fun ipv6Addresses(ipv6Addresses: List<Any>) {
+        cdkBuilder.ipv6Addresses(ipv6Addresses)
+      }
+
+      public override fun networkInterfaceId(networkInterfaceId: String) {
+        cdkBuilder.networkInterfaceId(networkInterfaceId)
+      }
+
+      public override fun privateIpAddress(privateIpAddress: String) {
+        cdkBuilder.privateIpAddress(privateIpAddress)
+      }
+
+      public override fun privateIpAddresses(privateIpAddresses: IResolvable) {
+        cdkBuilder.privateIpAddresses(privateIpAddresses.let(IResolvable::unwrap))
+      }
+
+      public override fun privateIpAddresses(privateIpAddresses: List<Any>) {
+        cdkBuilder.privateIpAddresses(privateIpAddresses)
+      }
+
+      public override fun secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount: Number) {
+        cdkBuilder.secondaryPrivateIpAddressCount(secondaryPrivateIpAddressCount)
+      }
+
+      public override fun subnetId(subnetId: String) {
+        cdkBuilder.subnetId(subnetId)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnInstance.NetworkInterfaceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnInstance.NetworkInterfaceProperty,
+    ) : NetworkInterfaceProperty {
+      public override fun associateCarrierIpAddress(): Any? =
+          unwrap(this).getAssociateCarrierIpAddress()
+
+      public override fun associatePublicIpAddress(): Any? =
+          unwrap(this).getAssociatePublicIpAddress()
+
+      public override fun deleteOnTermination(): Any? = unwrap(this).getDeleteOnTermination()
+
+      public override fun description(): String? = unwrap(this).getDescription()
+
+      public override fun deviceIndex(): String = unwrap(this).getDeviceIndex()
+
+      public override fun groupSet(): List<String> = unwrap(this).getGroupSet() ?: emptyList()
+
+      public override fun ipv6AddressCount(): Number? = unwrap(this).getIpv6AddressCount()
+
+      public override fun ipv6Addresses(): Any? = unwrap(this).getIpv6Addresses()
+
+      public override fun networkInterfaceId(): String? = unwrap(this).getNetworkInterfaceId()
+
+      public override fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
+
+      public override fun privateIpAddresses(): Any? = unwrap(this).getPrivateIpAddresses()
+
+      public override fun secondaryPrivateIpAddressCount(): Number? =
+          unwrap(this).getSecondaryPrivateIpAddressCount()
+
+      public override fun subnetId(): String? = unwrap(this).getSubnetId()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkInterfaceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.NetworkInterfaceProperty):
+          NetworkInterfaceProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NetworkInterfaceProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.NetworkInterfaceProperty = (wrapped as
+          Wrapper).cdkObject
+    }
+  }
+
+  public interface AssociationParameterProperty {
+    public fun key(): String
+
+    public fun `value`(): List<String>
+
+    public interface Builder {
+      public fun key(key: String) {
+      }
+
+      public fun `value`(`value`: List<String>) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty.builder()
+
+      public override fun key(key: String) {
+        cdkBuilder.key(key)
+      }
+
+      public override fun `value`(`value`: List<String>) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty,
+    ) : AssociationParameterProperty {
+      public override fun key(): String = unwrap(this).getKey()
+
+      public override fun `value`(): List<String> = unwrap(this).getValue() ?: emptyList()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): AssociationParameterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty):
+          AssociationParameterProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AssociationParameterProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty = (wrapped as
+          Wrapper).cdkObject
+    }
+  }
+
+  public interface BlockDeviceMappingProperty {
+    public fun deviceName(): String
+
+    public fun ebs(): Any? = unwrap(this).getEbs()
+
+    public fun noDevice(): Any? = unwrap(this).getNoDevice()
+
+    public fun virtualName(): String? = unwrap(this).getVirtualName()
+
+    public interface Builder {
+      public fun deviceName(deviceName: String) {
+      }
+
+      public fun ebs(ebs: IResolvable) {
+      }
+
+      public fun ebs(ebs: EbsProperty) {
+      }
+
+      @Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aa51ff763aa8bf568c51574263c3aeb2be7d9ce9d74abe4520311ed1d8e0670e")
+      public fun ebs(ebs: EbsProperty.Builder.() -> Unit) {
+      }
+
+      public fun noDevice(noDevice: IResolvable) {
+      }
+
+      public fun noDevice(noDevice: NoDeviceProperty) {
+      }
+
+      @Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2139cab1e957880340ddab108f407982c3aa163ffd0d1078ad6d0ca94c0bc64e")
+      public fun noDevice(noDevice: NoDeviceProperty.Builder.() -> Unit) {
+      }
+
+      public fun virtualName(virtualName: String) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty.builder()
+
+      public override fun deviceName(deviceName: String) {
+        cdkBuilder.deviceName(deviceName)
+      }
+
+      public override fun ebs(ebs: IResolvable) {
+        cdkBuilder.ebs(ebs.let(IResolvable::unwrap))
+      }
+
+      public override fun ebs(ebs: EbsProperty) {
+        cdkBuilder.ebs(ebs.let(EbsProperty::unwrap))
+      }
+
+      @Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aa51ff763aa8bf568c51574263c3aeb2be7d9ce9d74abe4520311ed1d8e0670e")
+      public override fun ebs(ebs: EbsProperty.Builder.() -> Unit): Unit = ebs(EbsProperty(ebs))
+
+      public override fun noDevice(noDevice: IResolvable) {
+        cdkBuilder.noDevice(noDevice.let(IResolvable::unwrap))
+      }
+
+      public override fun noDevice(noDevice: NoDeviceProperty) {
+        cdkBuilder.noDevice(noDevice.let(NoDeviceProperty::unwrap))
+      }
+
+      @Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2139cab1e957880340ddab108f407982c3aa163ffd0d1078ad6d0ca94c0bc64e")
+      public override fun noDevice(noDevice: NoDeviceProperty.Builder.() -> Unit): Unit =
+          noDevice(NoDeviceProperty(noDevice))
+
+      public override fun virtualName(virtualName: String) {
+        cdkBuilder.virtualName(virtualName)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty,
+    ) : BlockDeviceMappingProperty {
+      public override fun deviceName(): String = unwrap(this).getDeviceName()
+
+      public override fun ebs(): Any? = unwrap(this).getEbs()
+
+      public override fun noDevice(): Any? = unwrap(this).getNoDevice()
+
+      public override fun virtualName(): String? = unwrap(this).getVirtualName()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): BlockDeviceMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty):
+          BlockDeviceMappingProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BlockDeviceMappingProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty = (wrapped as
+          Wrapper).cdkObject
+    }
+  }
+
+  public interface SsmAssociationProperty {
+    public fun associationParameters(): Any? = unwrap(this).getAssociationParameters()
+
+    public fun documentName(): String
+
+    public interface Builder {
+      public fun associationParameters(associationParameters: IResolvable) {
+      }
+
+      public fun associationParameters(associationParameters: List<Any>) {
+      }
+
+      public fun documentName(documentName: String) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.SsmAssociationProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.SsmAssociationProperty.builder()
+
+      public override fun associationParameters(associationParameters: IResolvable) {
+        cdkBuilder.associationParameters(associationParameters.let(IResolvable::unwrap))
+      }
+
+      public override fun associationParameters(associationParameters: List<Any>) {
+        cdkBuilder.associationParameters(associationParameters)
+      }
+
+      public override fun documentName(documentName: String) {
+        cdkBuilder.documentName(documentName)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnInstance.SsmAssociationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnInstance.SsmAssociationProperty,
+    ) : SsmAssociationProperty {
+      public override fun associationParameters(): Any? = unwrap(this).getAssociationParameters()
+
+      public override fun documentName(): String = unwrap(this).getDocumentName()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): SsmAssociationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.SsmAssociationProperty):
+          SsmAssociationProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SsmAssociationProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.SsmAssociationProperty = (wrapped as
+          Wrapper).cdkObject
+    }
+  }
+
+  public interface CpuOptionsProperty {
+    public fun coreCount(): Number? = unwrap(this).getCoreCount()
+
+    public fun threadsPerCore(): Number? = unwrap(this).getThreadsPerCore()
+
+    public interface Builder {
+      public fun coreCount(coreCount: Number) {
+      }
+
+      public fun threadsPerCore(threadsPerCore: Number) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty.builder()
+
+      public override fun coreCount(coreCount: Number) {
+        cdkBuilder.coreCount(coreCount)
+      }
+
+      public override fun threadsPerCore(threadsPerCore: Number) {
+        cdkBuilder.threadsPerCore(threadsPerCore)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty,
+    ) : CpuOptionsProperty {
+      public override fun coreCount(): Number? = unwrap(this).getCoreCount()
+
+      public override fun threadsPerCore(): Number? = unwrap(this).getThreadsPerCore()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): CpuOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty):
+          CpuOptionsProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CpuOptionsProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty = (wrapped as
+          Wrapper).cdkObject
+    }
+  }
+
+  public interface ElasticInferenceAcceleratorProperty {
+    public fun count(): Number? = unwrap(this).getCount()
+
+    public fun type(): String
+
+    public interface Builder {
+      public fun count(count: Number) {
+      }
+
+      public fun type(type: String) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty.builder()
+
+      public override fun count(count: Number) {
+        cdkBuilder.count(count)
+      }
+
+      public override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty,
+    ) : ElasticInferenceAcceleratorProperty {
+      public override fun count(): Number? = unwrap(this).getCount()
+
+      public override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ElasticInferenceAcceleratorProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty):
+          ElasticInferenceAcceleratorProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ElasticInferenceAcceleratorProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty =
+          (wrapped as Wrapper).cdkObject
+    }
+  }
+
+  public interface ElasticGpuSpecificationProperty {
+    public fun type(): String
+
+    public interface Builder {
+      public fun type(type: String) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty.builder()
+
+      public override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty,
+    ) : ElasticGpuSpecificationProperty {
+      public override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): ElasticGpuSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty):
+          ElasticGpuSpecificationProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ElasticGpuSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty = (wrapped
+          as Wrapper).cdkObject
+    }
+  }
+
+  public interface LaunchTemplateSpecificationProperty {
+    public fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+
+    public fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
+
+    public fun version(): String
+
+    public interface Builder {
+      public fun launchTemplateId(launchTemplateId: String) {
+      }
+
+      public fun launchTemplateName(launchTemplateName: String) {
+      }
+
+      public fun version(version: String) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty.builder()
+
+      public override fun launchTemplateId(launchTemplateId: String) {
+        cdkBuilder.launchTemplateId(launchTemplateId)
+      }
+
+      public override fun launchTemplateName(launchTemplateName: String) {
+        cdkBuilder.launchTemplateName(launchTemplateName)
+      }
+
+      public override fun version(version: String) {
+        cdkBuilder.version(version)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty,
+    ) : LaunchTemplateSpecificationProperty {
+      public override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+
+      public override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
+
+      public override fun version(): String = unwrap(this).getVersion()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          LaunchTemplateSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty):
+          LaunchTemplateSpecificationProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LaunchTemplateSpecificationProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty =
+          (wrapped as Wrapper).cdkObject
+    }
+  }
+}

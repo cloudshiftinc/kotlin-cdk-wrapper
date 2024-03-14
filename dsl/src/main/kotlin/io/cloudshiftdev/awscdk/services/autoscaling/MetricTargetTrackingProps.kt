@@ -1,0 +1,93 @@
+package io.cloudshiftdev.awscdk.services.autoscaling
+
+import io.cloudshiftdev.awscdk.Duration
+import io.cloudshiftdev.awscdk.services.cloudwatch.IMetric
+import kotlin.Boolean
+import kotlin.Number
+import kotlin.Unit
+
+public interface MetricTargetTrackingProps : BaseTargetTrackingProps {
+  public fun metric(): IMetric
+
+  public fun targetValue(): Number
+
+  public interface Builder {
+    public fun cooldown(cooldown: Duration) {
+    }
+
+    public fun disableScaleIn(disableScaleIn: Boolean) {
+    }
+
+    public fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
+    }
+
+    public fun metric(metric: IMetric) {
+    }
+
+    public fun targetValue(targetValue: Number) {
+    }
+  }
+
+  private class BuilderImpl : Builder {
+    private val cdkBuilder:
+        software.amazon.awscdk.services.autoscaling.MetricTargetTrackingProps.Builder =
+        software.amazon.awscdk.services.autoscaling.MetricTargetTrackingProps.builder()
+
+    public override fun cooldown(cooldown: Duration) {
+      cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
+    }
+
+    public override fun disableScaleIn(disableScaleIn: Boolean) {
+      cdkBuilder.disableScaleIn(disableScaleIn)
+    }
+
+    public override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
+      cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup.let(Duration::unwrap))
+    }
+
+    public override fun metric(metric: IMetric) {
+      cdkBuilder.metric(metric.let(IMetric::unwrap))
+    }
+
+    public override fun targetValue(targetValue: Number) {
+      cdkBuilder.targetValue(targetValue)
+    }
+
+    public fun build(): software.amazon.awscdk.services.autoscaling.MetricTargetTrackingProps =
+        cdkBuilder.build()
+  }
+
+  private class Wrapper internal constructor(
+    internal val cdkObject: software.amazon.awscdk.services.autoscaling.MetricTargetTrackingProps,
+  ) : MetricTargetTrackingProps {
+    public override fun cooldown(): Duration? = unwrap(this).getCooldown()?.let(Duration::wrap)
+
+    public override fun disableScaleIn(): Boolean? = unwrap(this).getDisableScaleIn()
+
+    public override fun estimatedInstanceWarmup(): Duration? =
+        unwrap(this).getEstimatedInstanceWarmup()?.let(Duration::wrap)
+
+    public override fun metric(): IMetric = unwrap(this).getMetric().let(IMetric::wrap)
+
+    public override fun targetValue(): Number = unwrap(this).getTargetValue()
+  }
+
+  public companion object {
+    init {
+
+    }
+
+    public operator fun invoke(block: Builder.() -> Unit = {}): MetricTargetTrackingProps {
+      val builderImpl = BuilderImpl()
+      return Wrapper(builderImpl.apply(block).build())
+    }
+
+    internal
+        fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.MetricTargetTrackingProps):
+        MetricTargetTrackingProps = Wrapper(cdkObject)
+
+    internal fun unwrap(wrapped: MetricTargetTrackingProps):
+        software.amazon.awscdk.services.autoscaling.MetricTargetTrackingProps = (wrapped as
+        Wrapper).cdkObject
+  }
+}

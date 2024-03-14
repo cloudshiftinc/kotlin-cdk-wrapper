@@ -1,0 +1,142 @@
+package io.cloudshiftdev.awscdk.services.connect
+
+import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
+import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
+import io.cloudshiftdev.awscdk.TreeInspector
+import kotlin.Any
+import kotlin.String
+import kotlin.Unit
+import kotlin.collections.List
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
+import software.constructs.Construct as SoftwareConstructsConstruct
+
+public open class CfnView internal constructor(
+  private val cdkObject: software.amazon.awscdk.services.connect.CfnView,
+) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public open fun actions(): List<String> = unwrap(this).getActions() ?: emptyList()
+
+  public open fun actions(`value`: List<String>) {
+    unwrap(this).setActions(`value`)
+  }
+
+  public open fun attrViewArn(): String = unwrap(this).getAttrViewArn()
+
+  public open fun attrViewContentSha256(): String = unwrap(this).getAttrViewContentSha256()
+
+  public open fun attrViewId(): String = unwrap(this).getAttrViewId()
+
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
+
+  public open fun description(): String? = unwrap(this).getDescription()
+
+  public open fun description(`value`: String) {
+    unwrap(this).setDescription(`value`)
+  }
+
+  public override fun inspect(inspector: TreeInspector) {
+    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+  }
+
+  public open fun instanceArn(): String = unwrap(this).getInstanceArn()
+
+  public open fun instanceArn(`value`: String) {
+    unwrap(this).setInstanceArn(`value`)
+  }
+
+  public open fun name(): String = unwrap(this).getName()
+
+  public open fun name(`value`: String) {
+    unwrap(this).setName(`value`)
+  }
+
+  public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  public open fun tags(`value`: List<CfnTag>) {
+    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+  }
+
+  public open fun template(): Any = unwrap(this).getTemplate()
+
+  public open fun template(`value`: Any) {
+    unwrap(this).setTemplate(`value`)
+  }
+
+  public interface Builder {
+    public fun actions(actions: List<String>) {
+    }
+
+    public fun description(description: String) {
+    }
+
+    public fun instanceArn(instanceArn: String) {
+    }
+
+    public fun name(name: String) {
+    }
+
+    public fun tags(tags: List<CfnTag>) {
+    }
+
+    public fun template(template: Any) {
+    }
+  }
+
+  private class BuilderImpl(
+    scope: SoftwareConstructsConstruct,
+    id: String,
+  ) : Builder {
+    private val cdkBuilder: software.amazon.awscdk.services.connect.CfnView.Builder =
+        software.amazon.awscdk.services.connect.CfnView.Builder.create(scope, id)
+
+    public override fun actions(actions: List<String>) {
+      cdkBuilder.actions(actions)
+    }
+
+    public override fun description(description: String) {
+      cdkBuilder.description(description)
+    }
+
+    public override fun instanceArn(instanceArn: String) {
+      cdkBuilder.instanceArn(instanceArn)
+    }
+
+    public override fun name(name: String) {
+      cdkBuilder.name(name)
+    }
+
+    public override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+    }
+
+    public override fun template(template: Any) {
+      cdkBuilder.template(template)
+    }
+
+    public fun build(): software.amazon.awscdk.services.connect.CfnView = cdkBuilder.build()
+  }
+
+  public companion object {
+    init {
+
+    }
+
+    public operator fun invoke(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      block: Builder.() -> Unit = {},
+    ): CfnView {
+      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+      return CfnView(builderImpl.apply(block).build())
+    }
+
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnView): CfnView =
+        CfnView(cdkObject)
+
+    internal fun unwrap(wrapped: CfnView): software.amazon.awscdk.services.connect.CfnView =
+        wrapped.cdkObject
+  }
+}

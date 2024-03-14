@@ -1,0 +1,203 @@
+package io.cloudshiftdev.awscdk.services.ses
+
+import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
+import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggable
+import io.cloudshiftdev.awscdk.TagManager
+import io.cloudshiftdev.awscdk.TreeInspector
+import kotlin.Any
+import kotlin.String
+import kotlin.Unit
+import kotlin.collections.List
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
+import software.constructs.Construct as SoftwareConstructsConstruct
+
+public open class CfnContactList internal constructor(
+  private val cdkObject: software.amazon.awscdk.services.ses.CfnContactList,
+) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public open fun contactListName(): String? = unwrap(this).getContactListName()
+
+  public open fun contactListName(`value`: String) {
+    unwrap(this).setContactListName(`value`)
+  }
+
+  public open fun description(): String? = unwrap(this).getDescription()
+
+  public open fun description(`value`: String) {
+    unwrap(this).setDescription(`value`)
+  }
+
+  public override fun inspect(inspector: TreeInspector) {
+    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+  }
+
+  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+
+  public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
+      emptyList()
+
+  public open fun tagsRaw(`value`: List<CfnTag>) {
+    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+  }
+
+  public open fun topics(): Any? = unwrap(this).getTopics()
+
+  public open fun topics(`value`: IResolvable) {
+    unwrap(this).setTopics(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun topics(__idx_ac66f0: List<Any>) {
+    unwrap(this).setTopics(__idx_ac66f0)
+  }
+
+  public interface Builder {
+    public fun contactListName(contactListName: String) {
+    }
+
+    public fun description(description: String) {
+    }
+
+    public fun tags(tags: List<CfnTag>) {
+    }
+
+    public fun topics(topics: IResolvable) {
+    }
+
+    public fun topics(topics: List<Any>) {
+    }
+  }
+
+  private class BuilderImpl(
+    scope: SoftwareConstructsConstruct,
+    id: String,
+  ) : Builder {
+    private val cdkBuilder: software.amazon.awscdk.services.ses.CfnContactList.Builder =
+        software.amazon.awscdk.services.ses.CfnContactList.Builder.create(scope, id)
+
+    public override fun contactListName(contactListName: String) {
+      cdkBuilder.contactListName(contactListName)
+    }
+
+    public override fun description(description: String) {
+      cdkBuilder.description(description)
+    }
+
+    public override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+    }
+
+    public override fun topics(topics: IResolvable) {
+      cdkBuilder.topics(topics.let(IResolvable::unwrap))
+    }
+
+    public override fun topics(topics: List<Any>) {
+      cdkBuilder.topics(topics)
+    }
+
+    public fun build(): software.amazon.awscdk.services.ses.CfnContactList = cdkBuilder.build()
+  }
+
+  public companion object {
+    init {
+
+    }
+
+    public operator fun invoke(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      block: Builder.() -> Unit = {},
+    ): CfnContactList {
+      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+      return CfnContactList(builderImpl.apply(block).build())
+    }
+
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnContactList): CfnContactList
+        = CfnContactList(cdkObject)
+
+    internal fun unwrap(wrapped: CfnContactList): software.amazon.awscdk.services.ses.CfnContactList
+        = wrapped.cdkObject
+  }
+
+  public interface TopicProperty {
+    public fun defaultSubscriptionStatus(): String
+
+    public fun description(): String? = unwrap(this).getDescription()
+
+    public fun displayName(): String
+
+    public fun topicName(): String
+
+    public interface Builder {
+      public fun defaultSubscriptionStatus(defaultSubscriptionStatus: String) {
+      }
+
+      public fun description(description: String) {
+      }
+
+      public fun displayName(displayName: String) {
+      }
+
+      public fun topicName(topicName: String) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnContactList.TopicProperty.Builder =
+          software.amazon.awscdk.services.ses.CfnContactList.TopicProperty.builder()
+
+      public override fun defaultSubscriptionStatus(defaultSubscriptionStatus: String) {
+        cdkBuilder.defaultSubscriptionStatus(defaultSubscriptionStatus)
+      }
+
+      public override fun description(description: String) {
+        cdkBuilder.description(description)
+      }
+
+      public override fun displayName(displayName: String) {
+        cdkBuilder.displayName(displayName)
+      }
+
+      public override fun topicName(topicName: String) {
+        cdkBuilder.topicName(topicName)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ses.CfnContactList.TopicProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject: software.amazon.awscdk.services.ses.CfnContactList.TopicProperty,
+    ) : TopicProperty {
+      public override fun defaultSubscriptionStatus(): String =
+          unwrap(this).getDefaultSubscriptionStatus()
+
+      public override fun description(): String? = unwrap(this).getDescription()
+
+      public override fun displayName(): String = unwrap(this).getDisplayName()
+
+      public override fun topicName(): String = unwrap(this).getTopicName()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): TopicProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnContactList.TopicProperty):
+          TopicProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TopicProperty):
+          software.amazon.awscdk.services.ses.CfnContactList.TopicProperty = (wrapped as
+          Wrapper).cdkObject
+    }
+  }
+}

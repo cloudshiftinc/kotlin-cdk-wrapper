@@ -1,0 +1,125 @@
+package io.cloudshiftdev.awscdk.services.autoscaling
+
+import io.cloudshiftdev.awscdk.Duration
+import io.cloudshiftdev.awscdk.services.iam.IRole
+import kotlin.String
+import kotlin.Unit
+
+public interface BasicLifecycleHookProps {
+  public fun defaultResult(): DefaultResult? =
+      unwrap(this).getDefaultResult()?.let(DefaultResult::wrap)
+
+  public fun heartbeatTimeout(): Duration? = unwrap(this).getHeartbeatTimeout()?.let(Duration::wrap)
+
+  public fun lifecycleHookName(): String? = unwrap(this).getLifecycleHookName()
+
+  public fun lifecycleTransition(): LifecycleTransition
+
+  public fun notificationMetadata(): String? = unwrap(this).getNotificationMetadata()
+
+  public fun notificationTarget(): ILifecycleHookTarget? =
+      unwrap(this).getNotificationTarget()?.let(ILifecycleHookTarget::wrap)
+
+  public fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
+
+  public interface Builder {
+    public fun defaultResult(defaultResult: DefaultResult) {
+    }
+
+    public fun heartbeatTimeout(heartbeatTimeout: Duration) {
+    }
+
+    public fun lifecycleHookName(lifecycleHookName: String) {
+    }
+
+    public fun lifecycleTransition(lifecycleTransition: LifecycleTransition) {
+    }
+
+    public fun notificationMetadata(notificationMetadata: String) {
+    }
+
+    public fun notificationTarget(notificationTarget: ILifecycleHookTarget) {
+    }
+
+    public fun role(role: IRole) {
+    }
+  }
+
+  private class BuilderImpl : Builder {
+    private val cdkBuilder:
+        software.amazon.awscdk.services.autoscaling.BasicLifecycleHookProps.Builder =
+        software.amazon.awscdk.services.autoscaling.BasicLifecycleHookProps.builder()
+
+    public override fun defaultResult(defaultResult: DefaultResult) {
+      cdkBuilder.defaultResult(defaultResult.let(DefaultResult::unwrap))
+    }
+
+    public override fun heartbeatTimeout(heartbeatTimeout: Duration) {
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Duration::unwrap))
+    }
+
+    public override fun lifecycleHookName(lifecycleHookName: String) {
+      cdkBuilder.lifecycleHookName(lifecycleHookName)
+    }
+
+    public override fun lifecycleTransition(lifecycleTransition: LifecycleTransition) {
+      cdkBuilder.lifecycleTransition(lifecycleTransition.let(LifecycleTransition::unwrap))
+    }
+
+    public override fun notificationMetadata(notificationMetadata: String) {
+      cdkBuilder.notificationMetadata(notificationMetadata)
+    }
+
+    public override fun notificationTarget(notificationTarget: ILifecycleHookTarget) {
+      cdkBuilder.notificationTarget(notificationTarget.let(ILifecycleHookTarget::unwrap))
+    }
+
+    public override fun role(role: IRole) {
+      cdkBuilder.role(role.let(IRole::unwrap))
+    }
+
+    public fun build(): software.amazon.awscdk.services.autoscaling.BasicLifecycleHookProps =
+        cdkBuilder.build()
+  }
+
+  private class Wrapper internal constructor(
+    internal val cdkObject: software.amazon.awscdk.services.autoscaling.BasicLifecycleHookProps,
+  ) : BasicLifecycleHookProps {
+    public override fun defaultResult(): DefaultResult? =
+        unwrap(this).getDefaultResult()?.let(DefaultResult::wrap)
+
+    public override fun heartbeatTimeout(): Duration? =
+        unwrap(this).getHeartbeatTimeout()?.let(Duration::wrap)
+
+    public override fun lifecycleHookName(): String? = unwrap(this).getLifecycleHookName()
+
+    public override fun lifecycleTransition(): LifecycleTransition =
+        unwrap(this).getLifecycleTransition().let(LifecycleTransition::wrap)
+
+    public override fun notificationMetadata(): String? = unwrap(this).getNotificationMetadata()
+
+    public override fun notificationTarget(): ILifecycleHookTarget? =
+        unwrap(this).getNotificationTarget()?.let(ILifecycleHookTarget::wrap)
+
+    public override fun role(): IRole? = unwrap(this).getRole()?.let(IRole::wrap)
+  }
+
+  public companion object {
+    init {
+
+    }
+
+    public operator fun invoke(block: Builder.() -> Unit = {}): BasicLifecycleHookProps {
+      val builderImpl = BuilderImpl()
+      return Wrapper(builderImpl.apply(block).build())
+    }
+
+    internal
+        fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.BasicLifecycleHookProps):
+        BasicLifecycleHookProps = Wrapper(cdkObject)
+
+    internal fun unwrap(wrapped: BasicLifecycleHookProps):
+        software.amazon.awscdk.services.autoscaling.BasicLifecycleHookProps = (wrapped as
+        Wrapper).cdkObject
+  }
+}

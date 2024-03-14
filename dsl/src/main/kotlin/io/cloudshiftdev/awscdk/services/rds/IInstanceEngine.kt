@@ -1,0 +1,70 @@
+package io.cloudshiftdev.awscdk.services.rds
+
+import io.cloudshiftdev.awscdk.services.secretsmanager.SecretRotationApplication
+import io.cloudshiftdev.constructs.Construct
+import kotlin.Boolean
+import kotlin.String
+import kotlin.Suppress
+import kotlin.Unit
+import kotlin.jvm.JvmName
+
+public interface IInstanceEngine : IEngine {
+  public fun bindToInstance(arg0: Construct, arg1: InstanceEngineBindOptions): InstanceEngineConfig
+
+  @Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("448f711cfcc63a10acaf117d67161b9831a322dfb27d011d1dcf9ff4e8ec125f")
+  public fun bindToInstance(arg0: Construct, arg1: InstanceEngineBindOptions.Builder.() -> Unit):
+      InstanceEngineConfig
+
+  public fun multiUserRotationApplication(): SecretRotationApplication
+
+  public fun singleUserRotationApplication(): SecretRotationApplication
+
+  public fun supportsReadReplicaBackups(): Boolean? = unwrap(this).getSupportsReadReplicaBackups()
+
+  private class Wrapper internal constructor(
+    internal val cdkObject: software.amazon.awscdk.services.rds.IInstanceEngine,
+  ) : IInstanceEngine {
+    public override fun bindToInstance(arg0: Construct, arg1: InstanceEngineBindOptions):
+        InstanceEngineConfig = unwrap(this).bindToInstance(arg0.let(Construct::unwrap),
+        arg1.let(InstanceEngineBindOptions::unwrap)).let(InstanceEngineConfig::wrap)
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("448f711cfcc63a10acaf117d67161b9831a322dfb27d011d1dcf9ff4e8ec125f")
+    public override fun bindToInstance(arg0: Construct,
+        arg1: InstanceEngineBindOptions.Builder.() -> Unit): InstanceEngineConfig =
+        bindToInstance(arg0, InstanceEngineBindOptions(arg1))
+
+    public override fun defaultUsername(): String? = unwrap(this).getDefaultUsername()
+
+    public override fun engineFamily(): String? = unwrap(this).getEngineFamily()
+
+    public override fun engineType(): String = unwrap(this).getEngineType()
+
+    public override fun engineVersion(): EngineVersion? =
+        unwrap(this).getEngineVersion()?.let(EngineVersion::wrap)
+
+    public override fun multiUserRotationApplication(): SecretRotationApplication =
+        unwrap(this).getMultiUserRotationApplication().let(SecretRotationApplication::wrap)
+
+    public override fun parameterGroupFamily(): String? = unwrap(this).getParameterGroupFamily()
+
+    public override fun singleUserRotationApplication(): SecretRotationApplication =
+        unwrap(this).getSingleUserRotationApplication().let(SecretRotationApplication::wrap)
+
+    public override fun supportsReadReplicaBackups(): Boolean? =
+        unwrap(this).getSupportsReadReplicaBackups()
+  }
+
+  public companion object {
+    init {
+
+    }
+
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.IInstanceEngine):
+        IInstanceEngine = Wrapper(cdkObject)
+
+    internal fun unwrap(wrapped: IInstanceEngine):
+        software.amazon.awscdk.services.rds.IInstanceEngine = (wrapped as Wrapper).cdkObject
+  }
+}

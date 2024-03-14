@@ -1,5 +1,7 @@
 package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
+import software.constructs.Construct as SoftwareConstructsConstruct
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
@@ -7,15 +9,6 @@ import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
-import kotlin.Boolean
-import kotlin.Deprecated
-import kotlin.String
-import kotlin.Suppress
-import kotlin.Unit
-import kotlin.collections.List
-import kotlin.jvm.JvmName
-import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
-import software.constructs.Construct as SoftwareConstructsConstruct
 
 public open class ApplicationLoadBalancer internal constructor(
   private val cdkObject:
@@ -379,6 +372,8 @@ public open class ApplicationLoadBalancer internal constructor(
 
   public override fun metrics(): IApplicationLoadBalancerMetrics =
       unwrap(this).getMetrics().let(IApplicationLoadBalancerMetrics::wrap)
+
+  public override fun vpc(): IVpc? = IApplicationLoadBalancer.unwrap(this).vpc?.let(IVpc::wrap)
 
   public interface Builder {
     public fun deletionProtection(deletionProtection: Boolean) {

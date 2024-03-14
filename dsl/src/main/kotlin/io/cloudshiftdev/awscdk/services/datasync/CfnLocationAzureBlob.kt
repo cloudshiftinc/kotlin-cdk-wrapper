@@ -1,0 +1,254 @@
+package io.cloudshiftdev.awscdk.services.datasync
+
+import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
+import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
+import io.cloudshiftdev.awscdk.TreeInspector
+import kotlin.Any
+import kotlin.String
+import kotlin.Suppress
+import kotlin.Unit
+import kotlin.collections.List
+import kotlin.jvm.JvmName
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
+import software.constructs.Construct as SoftwareConstructsConstruct
+
+public open class CfnLocationAzureBlob internal constructor(
+  private val cdkObject: software.amazon.awscdk.services.datasync.CfnLocationAzureBlob,
+) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
+  public open fun agentArns(): List<String> = unwrap(this).getAgentArns() ?: emptyList()
+
+  public open fun agentArns(`value`: List<String>) {
+    unwrap(this).setAgentArns(`value`)
+  }
+
+  public open fun attrLocationArn(): String = unwrap(this).getAttrLocationArn()
+
+  public open fun attrLocationUri(): String = unwrap(this).getAttrLocationUri()
+
+  public open fun azureAccessTier(): String? = unwrap(this).getAzureAccessTier()
+
+  public open fun azureAccessTier(`value`: String) {
+    unwrap(this).setAzureAccessTier(`value`)
+  }
+
+  public open fun azureBlobAuthenticationType(): String =
+      unwrap(this).getAzureBlobAuthenticationType()
+
+  public open fun azureBlobAuthenticationType(`value`: String) {
+    unwrap(this).setAzureBlobAuthenticationType(`value`)
+  }
+
+  public open fun azureBlobContainerUrl(): String? = unwrap(this).getAzureBlobContainerUrl()
+
+  public open fun azureBlobContainerUrl(`value`: String) {
+    unwrap(this).setAzureBlobContainerUrl(`value`)
+  }
+
+  public open fun azureBlobSasConfiguration(): Any? = unwrap(this).getAzureBlobSasConfiguration()
+
+  public open fun azureBlobSasConfiguration(`value`: IResolvable) {
+    unwrap(this).setAzureBlobSasConfiguration(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun azureBlobSasConfiguration(`value`: AzureBlobSasConfigurationProperty) {
+    unwrap(this).setAzureBlobSasConfiguration(`value`.let(AzureBlobSasConfigurationProperty::unwrap))
+  }
+
+  @Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("cada99c19279ebff001010bf700bca5e722eb542e50b35ea2d0eb41ad3fc4b65")
+  public open
+      fun azureBlobSasConfiguration(`value`: AzureBlobSasConfigurationProperty.Builder.() -> Unit):
+      Unit = azureBlobSasConfiguration(AzureBlobSasConfigurationProperty(`value`))
+
+  public open fun azureBlobType(): String? = unwrap(this).getAzureBlobType()
+
+  public open fun azureBlobType(`value`: String) {
+    unwrap(this).setAzureBlobType(`value`)
+  }
+
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
+
+  public override fun inspect(inspector: TreeInspector) {
+    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+  }
+
+  public open fun subdirectory(): String? = unwrap(this).getSubdirectory()
+
+  public open fun subdirectory(`value`: String) {
+    unwrap(this).setSubdirectory(`value`)
+  }
+
+  public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  public open fun tags(`value`: List<CfnTag>) {
+    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+  }
+
+  public interface Builder {
+    public fun agentArns(agentArns: List<String>) {
+    }
+
+    public fun azureAccessTier(azureAccessTier: String) {
+    }
+
+    public fun azureBlobAuthenticationType(azureBlobAuthenticationType: String) {
+    }
+
+    public fun azureBlobContainerUrl(azureBlobContainerUrl: String) {
+    }
+
+    public fun azureBlobSasConfiguration(azureBlobSasConfiguration: IResolvable) {
+    }
+
+    public
+        fun azureBlobSasConfiguration(azureBlobSasConfiguration: AzureBlobSasConfigurationProperty) {
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("bd97209bbceaee8714b90bab2d971e3b0e0cab0fb697fdc1e7a493df4b5704fb")
+    public
+        fun azureBlobSasConfiguration(azureBlobSasConfiguration: AzureBlobSasConfigurationProperty.Builder.() -> Unit) {
+    }
+
+    public fun azureBlobType(azureBlobType: String) {
+    }
+
+    public fun subdirectory(subdirectory: String) {
+    }
+
+    public fun tags(tags: List<CfnTag>) {
+    }
+  }
+
+  private class BuilderImpl(
+    scope: SoftwareConstructsConstruct,
+    id: String,
+  ) : Builder {
+    private val cdkBuilder: software.amazon.awscdk.services.datasync.CfnLocationAzureBlob.Builder =
+        software.amazon.awscdk.services.datasync.CfnLocationAzureBlob.Builder.create(scope, id)
+
+    public override fun agentArns(agentArns: List<String>) {
+      cdkBuilder.agentArns(agentArns)
+    }
+
+    public override fun azureAccessTier(azureAccessTier: String) {
+      cdkBuilder.azureAccessTier(azureAccessTier)
+    }
+
+    public override fun azureBlobAuthenticationType(azureBlobAuthenticationType: String) {
+      cdkBuilder.azureBlobAuthenticationType(azureBlobAuthenticationType)
+    }
+
+    public override fun azureBlobContainerUrl(azureBlobContainerUrl: String) {
+      cdkBuilder.azureBlobContainerUrl(azureBlobContainerUrl)
+    }
+
+    public override fun azureBlobSasConfiguration(azureBlobSasConfiguration: IResolvable) {
+      cdkBuilder.azureBlobSasConfiguration(azureBlobSasConfiguration.let(IResolvable::unwrap))
+    }
+
+    public override
+        fun azureBlobSasConfiguration(azureBlobSasConfiguration: AzureBlobSasConfigurationProperty) {
+      cdkBuilder.azureBlobSasConfiguration(azureBlobSasConfiguration.let(AzureBlobSasConfigurationProperty::unwrap))
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("bd97209bbceaee8714b90bab2d971e3b0e0cab0fb697fdc1e7a493df4b5704fb")
+    public override
+        fun azureBlobSasConfiguration(azureBlobSasConfiguration: AzureBlobSasConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        azureBlobSasConfiguration(AzureBlobSasConfigurationProperty(azureBlobSasConfiguration))
+
+    public override fun azureBlobType(azureBlobType: String) {
+      cdkBuilder.azureBlobType(azureBlobType)
+    }
+
+    public override fun subdirectory(subdirectory: String) {
+      cdkBuilder.subdirectory(subdirectory)
+    }
+
+    public override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+    }
+
+    public fun build(): software.amazon.awscdk.services.datasync.CfnLocationAzureBlob =
+        cdkBuilder.build()
+  }
+
+  public companion object {
+    init {
+
+    }
+
+    public operator fun invoke(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      block: Builder.() -> Unit = {},
+    ): CfnLocationAzureBlob {
+      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+      return CfnLocationAzureBlob(builderImpl.apply(block).build())
+    }
+
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationAzureBlob):
+        CfnLocationAzureBlob = CfnLocationAzureBlob(cdkObject)
+
+    internal fun unwrap(wrapped: CfnLocationAzureBlob):
+        software.amazon.awscdk.services.datasync.CfnLocationAzureBlob = wrapped.cdkObject
+  }
+
+  public interface AzureBlobSasConfigurationProperty {
+    public fun azureBlobSasToken(): String
+
+    public interface Builder {
+      public fun azureBlobSasToken(azureBlobSasToken: String) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datasync.CfnLocationAzureBlob.AzureBlobSasConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.datasync.CfnLocationAzureBlob.AzureBlobSasConfigurationProperty.builder()
+
+      public override fun azureBlobSasToken(azureBlobSasToken: String) {
+        cdkBuilder.azureBlobSasToken(azureBlobSasToken)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.datasync.CfnLocationAzureBlob.AzureBlobSasConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.datasync.CfnLocationAzureBlob.AzureBlobSasConfigurationProperty,
+    ) : AzureBlobSasConfigurationProperty {
+      public override fun azureBlobSasToken(): String = unwrap(this).getAzureBlobSasToken()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AzureBlobSasConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationAzureBlob.AzureBlobSasConfigurationProperty):
+          AzureBlobSasConfigurationProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AzureBlobSasConfigurationProperty):
+          software.amazon.awscdk.services.datasync.CfnLocationAzureBlob.AzureBlobSasConfigurationProperty
+          = (wrapped as Wrapper).cdkObject
+    }
+  }
+}

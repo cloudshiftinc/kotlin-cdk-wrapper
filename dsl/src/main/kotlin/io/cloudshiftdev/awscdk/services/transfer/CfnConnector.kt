@@ -1,0 +1,365 @@
+package io.cloudshiftdev.awscdk.services.transfer
+
+import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
+import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggable
+import io.cloudshiftdev.awscdk.TagManager
+import io.cloudshiftdev.awscdk.TreeInspector
+import kotlin.Any
+import kotlin.String
+import kotlin.Suppress
+import kotlin.Unit
+import kotlin.collections.List
+import kotlin.jvm.JvmName
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
+import software.constructs.Construct as SoftwareConstructsConstruct
+
+public open class CfnConnector internal constructor(
+  private val cdkObject: software.amazon.awscdk.services.transfer.CfnConnector,
+) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public open fun accessRole(): String = unwrap(this).getAccessRole()
+
+  public open fun accessRole(`value`: String) {
+    unwrap(this).setAccessRole(`value`)
+  }
+
+  public open fun as2Config(): Any? = unwrap(this).getAs2Config()
+
+  public open fun as2Config(`value`: Any) {
+    unwrap(this).setAs2Config(`value`)
+  }
+
+  public open fun attrArn(): String = unwrap(this).getAttrArn()
+
+  public open fun attrConnectorId(): String = unwrap(this).getAttrConnectorId()
+
+  public override fun inspect(inspector: TreeInspector) {
+    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+  }
+
+  public open fun loggingRole(): String? = unwrap(this).getLoggingRole()
+
+  public open fun loggingRole(`value`: String) {
+    unwrap(this).setLoggingRole(`value`)
+  }
+
+  public open fun sftpConfig(): Any? = unwrap(this).getSftpConfig()
+
+  public open fun sftpConfig(`value`: IResolvable) {
+    unwrap(this).setSftpConfig(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun sftpConfig(`value`: SftpConfigProperty) {
+    unwrap(this).setSftpConfig(`value`.let(SftpConfigProperty::unwrap))
+  }
+
+  @Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("48dc8b5e1f62638ad400fbf6ab78f860243bbb09101238b3ce4e57d7a0381c84")
+  public open fun sftpConfig(`value`: SftpConfigProperty.Builder.() -> Unit): Unit =
+      sftpConfig(SftpConfigProperty(`value`))
+
+  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+
+  public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
+      emptyList()
+
+  public open fun tagsRaw(`value`: List<CfnTag>) {
+    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+  }
+
+  public open fun url(): String = unwrap(this).getUrl()
+
+  public open fun url(`value`: String) {
+    unwrap(this).setUrl(`value`)
+  }
+
+  public interface Builder {
+    public fun accessRole(accessRole: String) {
+    }
+
+    public fun as2Config(as2Config: Any) {
+    }
+
+    public fun loggingRole(loggingRole: String) {
+    }
+
+    public fun sftpConfig(sftpConfig: IResolvable) {
+    }
+
+    public fun sftpConfig(sftpConfig: SftpConfigProperty) {
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("551491faf5309b95d20254db285f3de1430e0c6d356bcef2291e1b6349cbf9d5")
+    public fun sftpConfig(sftpConfig: SftpConfigProperty.Builder.() -> Unit) {
+    }
+
+    public fun tags(tags: List<CfnTag>) {
+    }
+
+    public fun url(url: String) {
+    }
+  }
+
+  private class BuilderImpl(
+    scope: SoftwareConstructsConstruct,
+    id: String,
+  ) : Builder {
+    private val cdkBuilder: software.amazon.awscdk.services.transfer.CfnConnector.Builder =
+        software.amazon.awscdk.services.transfer.CfnConnector.Builder.create(scope, id)
+
+    public override fun accessRole(accessRole: String) {
+      cdkBuilder.accessRole(accessRole)
+    }
+
+    public override fun as2Config(as2Config: Any) {
+      cdkBuilder.as2Config(as2Config)
+    }
+
+    public override fun loggingRole(loggingRole: String) {
+      cdkBuilder.loggingRole(loggingRole)
+    }
+
+    public override fun sftpConfig(sftpConfig: IResolvable) {
+      cdkBuilder.sftpConfig(sftpConfig.let(IResolvable::unwrap))
+    }
+
+    public override fun sftpConfig(sftpConfig: SftpConfigProperty) {
+      cdkBuilder.sftpConfig(sftpConfig.let(SftpConfigProperty::unwrap))
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("551491faf5309b95d20254db285f3de1430e0c6d356bcef2291e1b6349cbf9d5")
+    public override fun sftpConfig(sftpConfig: SftpConfigProperty.Builder.() -> Unit): Unit =
+        sftpConfig(SftpConfigProperty(sftpConfig))
+
+    public override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+    }
+
+    public override fun url(url: String) {
+      cdkBuilder.url(url)
+    }
+
+    public fun build(): software.amazon.awscdk.services.transfer.CfnConnector = cdkBuilder.build()
+  }
+
+  public companion object {
+    init {
+
+    }
+
+    public operator fun invoke(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      block: Builder.() -> Unit = {},
+    ): CfnConnector {
+      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+      return CfnConnector(builderImpl.apply(block).build())
+    }
+
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnConnector):
+        CfnConnector = CfnConnector(cdkObject)
+
+    internal fun unwrap(wrapped: CfnConnector):
+        software.amazon.awscdk.services.transfer.CfnConnector = wrapped.cdkObject
+  }
+
+  public interface SftpConfigProperty {
+    public fun trustedHostKeys(): List<String> = unwrap(this).getTrustedHostKeys() ?: emptyList()
+
+    public fun userSecretId(): String? = unwrap(this).getUserSecretId()
+
+    public interface Builder {
+      public fun trustedHostKeys(trustedHostKeys: List<String>) {
+      }
+
+      public fun userSecretId(userSecretId: String) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty.Builder =
+          software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty.builder()
+
+      public override fun trustedHostKeys(trustedHostKeys: List<String>) {
+        cdkBuilder.trustedHostKeys(trustedHostKeys)
+      }
+
+      public override fun userSecretId(userSecretId: String) {
+        cdkBuilder.userSecretId(userSecretId)
+      }
+
+      public fun build(): software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty,
+    ) : SftpConfigProperty {
+      public override fun trustedHostKeys(): List<String> = unwrap(this).getTrustedHostKeys() ?:
+          emptyList()
+
+      public override fun userSecretId(): String? = unwrap(this).getUserSecretId()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): SftpConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty):
+          SftpConfigProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SftpConfigProperty):
+          software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty = (wrapped as
+          Wrapper).cdkObject
+    }
+  }
+
+  public interface As2ConfigProperty {
+    public fun basicAuthSecretId(): String? = unwrap(this).getBasicAuthSecretId()
+
+    public fun compression(): String? = unwrap(this).getCompression()
+
+    public fun encryptionAlgorithm(): String? = unwrap(this).getEncryptionAlgorithm()
+
+    public fun localProfileId(): String? = unwrap(this).getLocalProfileId()
+
+    public fun mdnResponse(): String? = unwrap(this).getMdnResponse()
+
+    public fun mdnSigningAlgorithm(): String? = unwrap(this).getMdnSigningAlgorithm()
+
+    public fun messageSubject(): String? = unwrap(this).getMessageSubject()
+
+    public fun partnerProfileId(): String? = unwrap(this).getPartnerProfileId()
+
+    public fun signingAlgorithm(): String? = unwrap(this).getSigningAlgorithm()
+
+    public interface Builder {
+      public fun basicAuthSecretId(basicAuthSecretId: String) {
+      }
+
+      public fun compression(compression: String) {
+      }
+
+      public fun encryptionAlgorithm(encryptionAlgorithm: String) {
+      }
+
+      public fun localProfileId(localProfileId: String) {
+      }
+
+      public fun mdnResponse(mdnResponse: String) {
+      }
+
+      public fun mdnSigningAlgorithm(mdnSigningAlgorithm: String) {
+      }
+
+      public fun messageSubject(messageSubject: String) {
+      }
+
+      public fun partnerProfileId(partnerProfileId: String) {
+      }
+
+      public fun signingAlgorithm(signingAlgorithm: String) {
+      }
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.transfer.CfnConnector.As2ConfigProperty.Builder =
+          software.amazon.awscdk.services.transfer.CfnConnector.As2ConfigProperty.builder()
+
+      public override fun basicAuthSecretId(basicAuthSecretId: String) {
+        cdkBuilder.basicAuthSecretId(basicAuthSecretId)
+      }
+
+      public override fun compression(compression: String) {
+        cdkBuilder.compression(compression)
+      }
+
+      public override fun encryptionAlgorithm(encryptionAlgorithm: String) {
+        cdkBuilder.encryptionAlgorithm(encryptionAlgorithm)
+      }
+
+      public override fun localProfileId(localProfileId: String) {
+        cdkBuilder.localProfileId(localProfileId)
+      }
+
+      public override fun mdnResponse(mdnResponse: String) {
+        cdkBuilder.mdnResponse(mdnResponse)
+      }
+
+      public override fun mdnSigningAlgorithm(mdnSigningAlgorithm: String) {
+        cdkBuilder.mdnSigningAlgorithm(mdnSigningAlgorithm)
+      }
+
+      public override fun messageSubject(messageSubject: String) {
+        cdkBuilder.messageSubject(messageSubject)
+      }
+
+      public override fun partnerProfileId(partnerProfileId: String) {
+        cdkBuilder.partnerProfileId(partnerProfileId)
+      }
+
+      public override fun signingAlgorithm(signingAlgorithm: String) {
+        cdkBuilder.signingAlgorithm(signingAlgorithm)
+      }
+
+      public fun build(): software.amazon.awscdk.services.transfer.CfnConnector.As2ConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper internal constructor(
+      internal val cdkObject:
+          software.amazon.awscdk.services.transfer.CfnConnector.As2ConfigProperty,
+    ) : As2ConfigProperty {
+      public override fun basicAuthSecretId(): String? = unwrap(this).getBasicAuthSecretId()
+
+      public override fun compression(): String? = unwrap(this).getCompression()
+
+      public override fun encryptionAlgorithm(): String? = unwrap(this).getEncryptionAlgorithm()
+
+      public override fun localProfileId(): String? = unwrap(this).getLocalProfileId()
+
+      public override fun mdnResponse(): String? = unwrap(this).getMdnResponse()
+
+      public override fun mdnSigningAlgorithm(): String? = unwrap(this).getMdnSigningAlgorithm()
+
+      public override fun messageSubject(): String? = unwrap(this).getMessageSubject()
+
+      public override fun partnerProfileId(): String? = unwrap(this).getPartnerProfileId()
+
+      public override fun signingAlgorithm(): String? = unwrap(this).getSigningAlgorithm()
+    }
+
+    public companion object {
+      init {
+
+      }
+
+      public operator fun invoke(block: Builder.() -> Unit = {}): As2ConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnConnector.As2ConfigProperty):
+          As2ConfigProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: As2ConfigProperty):
+          software.amazon.awscdk.services.transfer.CfnConnector.As2ConfigProperty = (wrapped as
+          Wrapper).cdkObject
+    }
+  }
+}

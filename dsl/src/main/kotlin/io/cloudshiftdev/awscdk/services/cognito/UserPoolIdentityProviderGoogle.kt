@@ -1,0 +1,109 @@
+package io.cloudshiftdev.awscdk.services.cognito
+
+import io.cloudshiftdev.awscdk.Resource
+import io.cloudshiftdev.awscdk.SecretValue
+import kotlin.Deprecated
+import kotlin.String
+import kotlin.Suppress
+import kotlin.Unit
+import kotlin.collections.List
+import kotlin.jvm.JvmName
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
+import software.constructs.Construct as SoftwareConstructsConstruct
+
+public open class UserPoolIdentityProviderGoogle internal constructor(
+  private val cdkObject: software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogle,
+) : Resource(cdkObject), IUserPoolIdentityProvider {
+  public override fun providerName(): String = unwrap(this).getProviderName()
+
+  public interface Builder {
+    public fun attributeMapping(attributeMapping: AttributeMapping) {
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b299248357b6ace644c21afff62e9dcb1eba6fe23e8a4f4d91ce66316ccf9d0a")
+    public fun attributeMapping(attributeMapping: AttributeMapping.Builder.() -> Unit) {
+    }
+
+    public fun clientId(clientId: String) {
+    }
+
+    @Deprecated(message = "deprecated in CDK")
+    public fun clientSecret(clientSecret: String) {
+    }
+
+    public fun clientSecretValue(clientSecretValue: SecretValue) {
+    }
+
+    public fun scopes(scopes: List<String>) {
+    }
+
+    public fun userPool(userPool: IUserPool) {
+    }
+  }
+
+  private class BuilderImpl(
+    scope: SoftwareConstructsConstruct,
+    id: String,
+  ) : Builder {
+    private val cdkBuilder:
+        software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogle.Builder =
+        software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogle.Builder.create(scope,
+        id)
+
+    public override fun attributeMapping(attributeMapping: AttributeMapping) {
+      cdkBuilder.attributeMapping(attributeMapping.let(AttributeMapping::unwrap))
+    }
+
+    @Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b299248357b6ace644c21afff62e9dcb1eba6fe23e8a4f4d91ce66316ccf9d0a")
+    public override fun attributeMapping(attributeMapping: AttributeMapping.Builder.() -> Unit):
+        Unit = attributeMapping(AttributeMapping(attributeMapping))
+
+    public override fun clientId(clientId: String) {
+      cdkBuilder.clientId(clientId)
+    }
+
+    @Deprecated(message = "deprecated in CDK")
+    public override fun clientSecret(clientSecret: String) {
+      cdkBuilder.clientSecret(clientSecret)
+    }
+
+    public override fun clientSecretValue(clientSecretValue: SecretValue) {
+      cdkBuilder.clientSecretValue(clientSecretValue.let(SecretValue::unwrap))
+    }
+
+    public override fun scopes(scopes: List<String>) {
+      cdkBuilder.scopes(scopes)
+    }
+
+    public override fun userPool(userPool: IUserPool) {
+      cdkBuilder.userPool(userPool.let(IUserPool::unwrap))
+    }
+
+    public fun build(): software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogle =
+        cdkBuilder.build()
+  }
+
+  public companion object {
+    init {
+
+    }
+
+    public operator fun invoke(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      block: Builder.() -> Unit = {},
+    ): UserPoolIdentityProviderGoogle {
+      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+      return UserPoolIdentityProviderGoogle(builderImpl.apply(block).build())
+    }
+
+    internal
+        fun wrap(cdkObject: software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogle):
+        UserPoolIdentityProviderGoogle = UserPoolIdentityProviderGoogle(cdkObject)
+
+    internal fun unwrap(wrapped: UserPoolIdentityProviderGoogle):
+        software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogle = wrapped.cdkObject
+  }
+}

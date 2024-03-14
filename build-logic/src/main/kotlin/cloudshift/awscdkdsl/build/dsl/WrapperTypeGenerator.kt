@@ -26,7 +26,7 @@ internal object WrapperTypeGenerator {
     fun generate(model: CdkModel): List<FileSpec> {
         val constructs =
             model.classes.filter { it.concreteClass && IConstruct in model.superTypesOf(it.className) }
-                .filter { it.className.packageName.startsWith("software.amazon.awscdk.services.elasticloadbalancingv2") }
+             //   .filter { it.className.packageName.startsWith("software.amazon.awscdk.services.elasticloadbalancingv2") }
 
         logger.lifecycle("Generating ${constructs.size} construct classes")
 
@@ -53,7 +53,10 @@ internal object WrapperTypeGenerator {
         return specs
     }
 
-    private fun generateWrapperTypeFile(cdkClass: CdkClass, ctx: TypeGeneratorContext): FileSpec {
+    private fun generateWrapperTypeFile(
+        cdkClass: CdkClass,
+        ctx: TypeGeneratorContext
+    ): FileSpec {
         val className = cdkClass.className.mappedClassName()
         val fileBuilder = FileSpec.builder(className)
         ctx.generatedClass(cdkClass.className)
@@ -115,7 +118,8 @@ internal object WrapperTypeGenerator {
         isStatic: Boolean = false,
         forceOverride: Boolean = false,
     ): List<MethodGenerator.CdkMethod> {
-        val generator = MethodGenerator(ctx.model,
+        val generator = MethodGenerator(
+            ctx.model,
             listOf(
                 DelegateMethodFactory(
                     ctx,
@@ -146,6 +150,10 @@ internal object WrapperTypeGenerator {
             )
             .addFunctions(methods.map { it.specFor(cdkClass) })
 
+        additionalMethods[cdkClass.className]?.let {
+            typeBuilder.addFunctions(it)
+        }
+
         val companionBuilder = TypeSpec.companionObjectBuilder()
         val companionMethods = generateMethods(
             cdkClass.publicStaticFunctions.filter { it.name != "builder" },
@@ -166,7 +174,8 @@ internal object WrapperTypeGenerator {
             val dslTypes = BuilderGenerator.generateBuilder(cdkBuilder, ctx)
             typeBuilder.addTypes(dslTypes)
 
-            val builderImplClass = cdkClass.className.mappedClassName().nestedClass("BuilderImpl")
+            val builderImplClass =
+                cdkClass.className.mappedClassName().nestedClass("BuilderImpl")
             val builderClass = cdkClass.className.mappedClassName().nestedClass("Builder")
 
             val parameters = cdkBuilder.builderFactoryFunction.parameters.map {
@@ -197,7 +206,9 @@ internal object WrapperTypeGenerator {
             }
 
             val implClass = when {
-                cdkClass.isInterface -> cdkClass.className.mappedClassName().nestedClass("Wrapper")
+                cdkClass.isInterface -> cdkClass.className.mappedClassName()
+                    .nestedClass("Wrapper")
+
                 else -> cdkClass.className.mappedClassName()
             }
 
@@ -319,7 +330,8 @@ internal object WrapperTypeGenerator {
         return wrapperBuilder.build()
     }
 
-    private const val CdkObjectName = "cdkObject"
+    private const
+    val CdkObjectName = "cdkObject"
     private val IConstruct = ClassName("software.constructs", "IConstruct")
 }
 
@@ -338,3 +350,47 @@ private fun TypeSpec.Builder.wrappedClassConstructor(
     )
     return this
 }
+
+private val additionalMethods = mapOf(
+    ClassName(
+        "software.amazon.awscdk.services.elasticloadbalancingv2",
+        "ApplicationLoadBalancer",
+    ) to listOf(
+        FunSpec.builder("vpc")
+            .addModifiers(KModifier.PUBLIC, KModifier.OVERRIDE)
+            .returns(
+                ClassName("software.amazon.awscdk.services.ec2", "IVpc").mappedClassName()
+                    .copy(nullable = true),
+            )
+            .addStatement(
+                "return %T.unwrap(this).vpc?.let(%T::wrap)",
+                ClassName(
+                    "software.amazon.awscdk.services.elasticloadbalancingv2",
+                    "IApplicationLoadBalancer",
+                ).mappedClassName(),
+                ClassName("software.amazon.awscdk.services.ec2", "IVpc").mappedClassName(),
+            )
+            .build(),
+    ),
+    ClassName(
+        "software.amazon.awscdk.services.elasticloadbalancingv2",
+        "NetworkLoadBalancer",
+    )
+        to listOf(
+        FunSpec.builder("vpc")
+            .addModifiers(KModifier.PUBLIC, KModifier.OVERRIDE)
+            .returns(
+                ClassName("software.amazon.awscdk.services.ec2", "IVpc").mappedClassName()
+                    .copy(nullable = true),
+            )
+            .addStatement(
+                "return %T.unwrap(this).vpc?.let(%T::wrap)",
+                ClassName(
+                    "software.amazon.awscdk.services.elasticloadbalancingv2",
+                    "INetworkLoadBalancer",
+                ).mappedClassName(),
+                ClassName("software.amazon.awscdk.services.ec2", "IVpc").mappedClassName(),
+            )
+            .build(),
+    ),
+)
