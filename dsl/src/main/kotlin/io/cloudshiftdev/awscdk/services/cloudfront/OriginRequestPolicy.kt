@@ -143,6 +143,27 @@ public open class OriginRequestPolicy internal constructor(
   }
 
   public companion object {
+    public val ALL_VIEWER: IOriginRequestPolicy =
+        IOriginRequestPolicy.wrap(software.amazon.awscdk.services.cloudfront.OriginRequestPolicy.ALL_VIEWER)
+
+    public val ALL_VIEWER_AND_CLOUDFRONT_2022: IOriginRequestPolicy =
+        IOriginRequestPolicy.wrap(software.amazon.awscdk.services.cloudfront.OriginRequestPolicy.ALL_VIEWER_AND_CLOUDFRONT_2022)
+
+    public val ALL_VIEWER_EXCEPT_HOST_HEADER: IOriginRequestPolicy =
+        IOriginRequestPolicy.wrap(software.amazon.awscdk.services.cloudfront.OriginRequestPolicy.ALL_VIEWER_EXCEPT_HOST_HEADER)
+
+    public val CORS_CUSTOM_ORIGIN: IOriginRequestPolicy =
+        IOriginRequestPolicy.wrap(software.amazon.awscdk.services.cloudfront.OriginRequestPolicy.CORS_CUSTOM_ORIGIN)
+
+    public val CORS_S3_ORIGIN: IOriginRequestPolicy =
+        IOriginRequestPolicy.wrap(software.amazon.awscdk.services.cloudfront.OriginRequestPolicy.CORS_S3_ORIGIN)
+
+    public val ELEMENTAL_MEDIA_TAILOR: IOriginRequestPolicy =
+        IOriginRequestPolicy.wrap(software.amazon.awscdk.services.cloudfront.OriginRequestPolicy.ELEMENTAL_MEDIA_TAILOR)
+
+    public val USER_AGENT_REFERER_HEADERS: IOriginRequestPolicy =
+        IOriginRequestPolicy.wrap(software.amazon.awscdk.services.cloudfront.OriginRequestPolicy.USER_AGENT_REFERER_HEADERS)
+
     public fun fromOriginRequestPolicyId(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

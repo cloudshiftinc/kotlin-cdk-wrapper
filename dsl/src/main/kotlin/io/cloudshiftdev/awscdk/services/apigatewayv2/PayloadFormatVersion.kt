@@ -13,6 +13,12 @@ public open class PayloadFormatVersion internal constructor(
   public open fun version(): String = unwrap(this).getVersion()
 
   public companion object {
+    public val VERSION_1_0: PayloadFormatVersion =
+        PayloadFormatVersion.wrap(software.amazon.awscdk.services.apigatewayv2.PayloadFormatVersion.VERSION_1_0)
+
+    public val VERSION_2_0: PayloadFormatVersion =
+        PayloadFormatVersion.wrap(software.amazon.awscdk.services.apigatewayv2.PayloadFormatVersion.VERSION_2_0)
+
     public fun custom(version: String): PayloadFormatVersion =
         software.amazon.awscdk.services.apigatewayv2.PayloadFormatVersion.custom(version).let(PayloadFormatVersion::wrap)
 

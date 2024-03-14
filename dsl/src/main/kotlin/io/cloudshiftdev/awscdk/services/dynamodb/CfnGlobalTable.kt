@@ -1194,6 +1194,9 @@ public open class CfnGlobalTable internal constructor(
   }
 
   public companion object {
+    public val CFN_RESOURCE_TYPE_NAME: String =
+        software.amazon.awscdk.services.dynamodb.CfnGlobalTable.CFN_RESOURCE_TYPE_NAME
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

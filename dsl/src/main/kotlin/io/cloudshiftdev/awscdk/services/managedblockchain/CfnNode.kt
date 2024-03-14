@@ -224,6 +224,9 @@ public open class CfnNode internal constructor(
   }
 
   public companion object {
+    public val CFN_RESOURCE_TYPE_NAME: String =
+        software.amazon.awscdk.services.managedblockchain.CfnNode.CFN_RESOURCE_TYPE_NAME
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

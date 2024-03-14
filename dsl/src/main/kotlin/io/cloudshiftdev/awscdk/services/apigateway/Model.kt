@@ -186,6 +186,12 @@ public open class Model internal constructor(
   }
 
   public companion object {
+    public val EMPTY_MODEL: IModel =
+        IModel.wrap(software.amazon.awscdk.services.apigateway.Model.EMPTY_MODEL)
+
+    public val ERROR_MODEL: IModel =
+        IModel.wrap(software.amazon.awscdk.services.apigateway.Model.ERROR_MODEL)
+
     public fun fromModelName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

@@ -494,6 +494,9 @@ public open class CfnIdMappingWorkflow internal constructor(
   }
 
   public companion object {
+    public val CFN_RESOURCE_TYPE_NAME: String =
+        software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow.CFN_RESOURCE_TYPE_NAME
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

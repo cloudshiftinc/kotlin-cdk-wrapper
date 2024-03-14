@@ -13,6 +13,9 @@ public open class TaskDefinitionRevision internal constructor(
   public open fun revision(): String = unwrap(this).getRevision()
 
   public companion object {
+    public val LATEST: TaskDefinitionRevision =
+        TaskDefinitionRevision.wrap(software.amazon.awscdk.services.ecs.TaskDefinitionRevision.LATEST)
+
     public fun of(revision: Number): TaskDefinitionRevision =
         software.amazon.awscdk.services.ecs.TaskDefinitionRevision.of(revision).let(TaskDefinitionRevision::wrap)
 

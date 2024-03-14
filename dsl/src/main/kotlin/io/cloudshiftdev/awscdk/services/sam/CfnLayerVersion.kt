@@ -288,6 +288,12 @@ public open class CfnLayerVersion internal constructor(
   }
 
   public companion object {
+    public val CFN_RESOURCE_TYPE_NAME: String =
+        software.amazon.awscdk.services.sam.CfnLayerVersion.CFN_RESOURCE_TYPE_NAME
+
+    public val REQUIRED_TRANSFORM: String =
+        software.amazon.awscdk.services.sam.CfnLayerVersion.REQUIRED_TRANSFORM
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

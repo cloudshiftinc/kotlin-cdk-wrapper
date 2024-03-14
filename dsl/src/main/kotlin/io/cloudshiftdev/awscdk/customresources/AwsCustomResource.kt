@@ -552,6 +552,9 @@ public open class AwsCustomResource internal constructor(
   }
 
   public companion object {
+    public val PROVIDER_FUNCTION_UUID: String =
+        software.amazon.awscdk.customresources.AwsCustomResource.PROVIDER_FUNCTION_UUID
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

@@ -17,6 +17,12 @@ public open class Architecture internal constructor(
   public open fun name(): String = unwrap(this).getName()
 
   public companion object {
+    public val ARM_64: Architecture =
+        Architecture.wrap(software.amazon.awscdk.services.lambda.Architecture.ARM_64)
+
+    public val X86_64: Architecture =
+        Architecture.wrap(software.amazon.awscdk.services.lambda.Architecture.X86_64)
+
     public fun custom(name: String): Architecture =
         software.amazon.awscdk.services.lambda.Architecture.custom(name).let(Architecture::wrap)
 

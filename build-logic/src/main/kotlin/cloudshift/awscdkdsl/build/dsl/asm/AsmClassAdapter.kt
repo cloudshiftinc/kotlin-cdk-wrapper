@@ -3,10 +3,26 @@ package cloudshift.awscdkdsl.build.dsl.asm
 import cloudshift.awscdkdsl.build.dsl.model.CdkClass
 import cloudshift.awscdkdsl.build.dsl.model.source.CdkSourceClass
 import com.squareup.kotlinpoet.ClassName
+import com.squareup.kotlinpoet.TypeName
+import org.aspectj.util.GenericSignatureParser
 import org.gradle.kotlin.dsl.provideDelegate
 import org.objectweb.asm.Type
 import org.objectweb.asm.tree.AnnotationNode
 import org.objectweb.asm.tree.ClassNode
+import org.objectweb.asm.tree.FieldNode
+
+internal class AsmStaticFieldAdapter(private val delegate: FieldNode) : CdkClass.StaticField {
+    override val name: String
+        get() = delegate.name
+    override val type: TypeName
+        get() = when (delegate.signature) {
+            null -> Type.getType(delegate.desc).toTypeName()
+            else ->
+                GenericSignatureParser()
+                    .parseAsFieldSignature(delegate.signature)
+                    .toTypeName()
+        }
+}
 
 internal class AsmClassAdapter(
     override val className: ClassName,
@@ -31,7 +47,7 @@ internal class AsmClassAdapter(
     }
     override val deprecated: Boolean = annotations.any { it.toString().contains("Deprecated") }
 
-    override val enumFields : List<CdkClass.EnumField> by lazy {
+    override val enumFields: List<CdkClass.EnumField> by lazy {
         delegate.fields.filter {
             it.accessFlags.isPublic()
         }.map { AsmEnumFieldAdapter(it.name) }
@@ -64,6 +80,13 @@ internal class AsmClassAdapter(
             }
             .map { AsmMethodAdapter(it) }
     }
+    override val publicStaticFields: List<CdkClass.StaticField>
+        get() = delegate.fields
+            .filter {
+                it.accessFlags.isPublic() &&
+                    it.accessFlags.isStatic()
+            }
+            .map { AsmStaticFieldAdapter(it) }
 
     private val allConstructors: List<CdkClass.Method> by
     lazy(LazyThreadSafetyMode.NONE) {

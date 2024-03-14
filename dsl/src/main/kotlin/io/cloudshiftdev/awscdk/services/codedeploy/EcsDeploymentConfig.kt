@@ -73,6 +73,21 @@ public open class EcsDeploymentConfig internal constructor(
   }
 
   public companion object {
+    public val ALL_AT_ONCE: IEcsDeploymentConfig =
+        IEcsDeploymentConfig.wrap(software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig.ALL_AT_ONCE)
+
+    public val CANARY_10_PERCENT_15_MINUTES: IEcsDeploymentConfig =
+        IEcsDeploymentConfig.wrap(software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig.CANARY_10_PERCENT_15_MINUTES)
+
+    public val CANARY_10_PERCENT_5_MINUTES: IEcsDeploymentConfig =
+        IEcsDeploymentConfig.wrap(software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig.CANARY_10_PERCENT_5_MINUTES)
+
+    public val LINEAR_10_PERCENT_EVERY_1_MINUTES: IEcsDeploymentConfig =
+        IEcsDeploymentConfig.wrap(software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig.LINEAR_10_PERCENT_EVERY_1_MINUTES)
+
+    public val LINEAR_10_PERCENT_EVERY_3_MINUTES: IEcsDeploymentConfig =
+        IEcsDeploymentConfig.wrap(software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig.LINEAR_10_PERCENT_EVERY_3_MINUTES)
+
     public fun fromEcsDeploymentConfigName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

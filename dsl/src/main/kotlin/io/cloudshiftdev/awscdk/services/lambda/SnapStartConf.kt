@@ -10,6 +10,9 @@ public abstract class SnapStartConf internal constructor(
   ) : SnapStartConf(cdkObject)
 
   public companion object {
+    public val ON_PUBLISHED_VERSIONS: SnapStartConf =
+        SnapStartConf.wrap(software.amazon.awscdk.services.lambda.SnapStartConf.ON_PUBLISHED_VERSIONS)
+
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.SnapStartConf):
         SnapStartConf = Wrapper(cdkObject)
 

@@ -23,6 +23,9 @@ public open class FunctionRuntime internal constructor(
   public open fun version(): String = unwrap(this).getVersion()
 
   public companion object {
+    public val JS_1_0_0: FunctionRuntime =
+        FunctionRuntime.wrap(software.amazon.awscdk.services.appsync.FunctionRuntime.JS_1_0_0)
+
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.FunctionRuntime):
         FunctionRuntime = FunctionRuntime(cdkObject)
 

@@ -24,6 +24,9 @@ public open class HttpRouteKey internal constructor(
   public open fun path(): String? = unwrap(this).getPath()
 
   public companion object {
+    public val DEFAULT: HttpRouteKey =
+        HttpRouteKey.wrap(software.amazon.awscdk.services.apigatewayv2.HttpRouteKey.DEFAULT)
+
     public fun with(path: String): HttpRouteKey =
         software.amazon.awscdk.services.apigatewayv2.HttpRouteKey.with(path).let(HttpRouteKey::wrap)
 

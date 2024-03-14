@@ -147,6 +147,9 @@ public open class KubernetesObjectValue internal constructor(
   }
 
   public companion object {
+    public val RESOURCE_TYPE: String =
+        software.amazon.awscdk.services.eks.KubernetesObjectValue.RESOURCE_TYPE
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

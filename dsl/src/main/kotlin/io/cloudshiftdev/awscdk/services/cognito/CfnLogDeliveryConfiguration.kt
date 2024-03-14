@@ -161,6 +161,9 @@ public open class CfnLogDeliveryConfiguration internal constructor(
   }
 
   public companion object {
+    public val CFN_RESOURCE_TYPE_NAME: String =
+        software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CFN_RESOURCE_TYPE_NAME
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

@@ -12,6 +12,15 @@ public open class KeyAlgorithm internal constructor(
   public open fun name(): String = unwrap(this).getName()
 
   public companion object {
+    public val EC_PRIME256_V1: KeyAlgorithm =
+        KeyAlgorithm.wrap(software.amazon.awscdk.services.certificatemanager.KeyAlgorithm.EC_PRIME256_V1)
+
+    public val EC_SECP384_R1: KeyAlgorithm =
+        KeyAlgorithm.wrap(software.amazon.awscdk.services.certificatemanager.KeyAlgorithm.EC_SECP384_R1)
+
+    public val RSA_2048: KeyAlgorithm =
+        KeyAlgorithm.wrap(software.amazon.awscdk.services.certificatemanager.KeyAlgorithm.RSA_2048)
+
     internal fun wrap(cdkObject: software.amazon.awscdk.services.certificatemanager.KeyAlgorithm):
         KeyAlgorithm = KeyAlgorithm(cdkObject)
 

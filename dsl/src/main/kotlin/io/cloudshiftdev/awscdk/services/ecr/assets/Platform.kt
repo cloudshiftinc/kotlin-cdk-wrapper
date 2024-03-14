@@ -12,6 +12,12 @@ public open class Platform internal constructor(
   public open fun platform(): String = unwrap(this).getPlatform()
 
   public companion object {
+    public val LINUX_AMD64: Platform =
+        Platform.wrap(software.amazon.awscdk.services.ecr.assets.Platform.LINUX_AMD64)
+
+    public val LINUX_ARM64: Platform =
+        Platform.wrap(software.amazon.awscdk.services.ecr.assets.Platform.LINUX_ARM64)
+
     public fun custom(platform: String): Platform =
         software.amazon.awscdk.services.ecr.assets.Platform.custom(platform).let(Platform::wrap)
 

@@ -174,6 +174,9 @@ public open class CfnSqlInjectionMatchSet internal constructor(
   }
 
   public companion object {
+    public val CFN_RESOURCE_TYPE_NAME: String =
+        software.amazon.awscdk.services.waf.CfnSqlInjectionMatchSet.CFN_RESOURCE_TYPE_NAME
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

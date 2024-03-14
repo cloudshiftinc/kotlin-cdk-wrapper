@@ -104,6 +104,8 @@ public open class Node internal constructor(
   public open fun validate(): List<String> = unwrap(this).validate()
 
   public companion object {
+    public val PATH_SEP: String = software.constructs.Node.PATH_SEP
+
     @Deprecated(message = "deprecated in CDK")
     public fun of(construct: IConstruct): Node =
         software.constructs.Node.of(construct.let(IConstruct::unwrap)).let(Node::wrap)

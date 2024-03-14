@@ -16,6 +16,33 @@ public abstract class LambdaInsightsVersion internal constructor(
   ) : LambdaInsightsVersion(cdkObject)
 
   public companion object {
+    public val VERSION_1_0_119_0: LambdaInsightsVersion =
+        LambdaInsightsVersion.wrap(software.amazon.awscdk.services.lambda.LambdaInsightsVersion.VERSION_1_0_119_0)
+
+    public val VERSION_1_0_135_0: LambdaInsightsVersion =
+        LambdaInsightsVersion.wrap(software.amazon.awscdk.services.lambda.LambdaInsightsVersion.VERSION_1_0_135_0)
+
+    public val VERSION_1_0_143_0: LambdaInsightsVersion =
+        LambdaInsightsVersion.wrap(software.amazon.awscdk.services.lambda.LambdaInsightsVersion.VERSION_1_0_143_0)
+
+    public val VERSION_1_0_178_0: LambdaInsightsVersion =
+        LambdaInsightsVersion.wrap(software.amazon.awscdk.services.lambda.LambdaInsightsVersion.VERSION_1_0_178_0)
+
+    public val VERSION_1_0_229_0: LambdaInsightsVersion =
+        LambdaInsightsVersion.wrap(software.amazon.awscdk.services.lambda.LambdaInsightsVersion.VERSION_1_0_229_0)
+
+    public val VERSION_1_0_54_0: LambdaInsightsVersion =
+        LambdaInsightsVersion.wrap(software.amazon.awscdk.services.lambda.LambdaInsightsVersion.VERSION_1_0_54_0)
+
+    public val VERSION_1_0_86_0: LambdaInsightsVersion =
+        LambdaInsightsVersion.wrap(software.amazon.awscdk.services.lambda.LambdaInsightsVersion.VERSION_1_0_86_0)
+
+    public val VERSION_1_0_89_0: LambdaInsightsVersion =
+        LambdaInsightsVersion.wrap(software.amazon.awscdk.services.lambda.LambdaInsightsVersion.VERSION_1_0_89_0)
+
+    public val VERSION_1_0_98_0: LambdaInsightsVersion =
+        LambdaInsightsVersion.wrap(software.amazon.awscdk.services.lambda.LambdaInsightsVersion.VERSION_1_0_98_0)
+
     public fun fromInsightVersionArn(arn: String): LambdaInsightsVersion =
         software.amazon.awscdk.services.lambda.LambdaInsightsVersion.fromInsightVersionArn(arn).let(LambdaInsightsVersion::wrap)
 

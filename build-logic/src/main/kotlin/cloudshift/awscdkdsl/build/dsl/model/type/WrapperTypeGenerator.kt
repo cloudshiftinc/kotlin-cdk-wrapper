@@ -15,6 +15,7 @@ import com.squareup.kotlinpoet.FunSpec
 import com.squareup.kotlinpoet.KModifier
 import com.squareup.kotlinpoet.LambdaTypeName
 import com.squareup.kotlinpoet.ParameterSpec
+import com.squareup.kotlinpoet.ParameterizedTypeName
 import com.squareup.kotlinpoet.PropertySpec
 import com.squareup.kotlinpoet.TypeSpec
 import com.squareup.kotlinpoet.UNIT
@@ -53,6 +54,8 @@ internal object WrapperTypeGenerator {
             pass++
         }
 
+//        val leftOvers = model.classes.map { it.className }.toSet() - ctx.generatedClasses.toSet()
+//        println("Leftovers: ${leftOvers.joinToString("\n")}")
 
         return specs + generateCdkObject()
     }
@@ -140,6 +143,26 @@ internal object WrapperTypeGenerator {
         return generator.generate(enclosingClass, methods)
     }
 
+    private fun staticPublicFields(cdkClass : CdkClass): List<PropertySpec> {
+        return cdkClass.publicStaticFields.map {
+            val builder = PropertySpec.builder(it.name, it.type.mapClassName())
+                .addModifiers(KModifier.PUBLIC)
+            val type = it.type
+            when {
+                type is ParameterizedTypeName && type.typeArguments.first().isCdkClass -> {
+                    builder.initializer("%T.%N.map(%T::wrap)",cdkClass.className, it.name, type.typeArguments.first().mapClassName())
+                }
+                type.isCdkClass -> {
+                    builder.initializer("%T.wrap(%T.%N)",it.type.mapClassName(),cdkClass.className, it.name)
+                }
+                else -> {
+                    builder.initializer("%T.%N",cdkClass.className, it.name)
+                }
+            }
+            builder.build()
+        }
+    }
+
     private fun generateClassOrInterface(
         typeBuilder: TypeSpec.Builder,
         cdkClass: CdkClass,
@@ -186,6 +209,7 @@ internal object WrapperTypeGenerator {
             x.build()
         }
         companionBuilder.addFunctions(companionMethods)
+        companionBuilder.addProperties(staticPublicFields(cdkClass))
 
         val cdkBuilder = ctx.model.builderFor(cdkClass.className)
 

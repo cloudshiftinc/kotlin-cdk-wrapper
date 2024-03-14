@@ -804,6 +804,12 @@ public open class DatabaseCluster internal constructor(
   }
 
   public companion object {
+    public val DEFAULT_NUM_INSTANCES: Number =
+        software.amazon.awscdk.services.docdb.DatabaseCluster.DEFAULT_NUM_INSTANCES
+
+    public val DEFAULT_PORT: Number =
+        software.amazon.awscdk.services.docdb.DatabaseCluster.DEFAULT_PORT
+
     public fun fromDatabaseClusterAttributes(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

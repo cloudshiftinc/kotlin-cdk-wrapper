@@ -67,6 +67,15 @@ public open class ServerDeploymentConfig internal constructor(
   }
 
   public companion object {
+    public val ALL_AT_ONCE: IServerDeploymentConfig =
+        IServerDeploymentConfig.wrap(software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig.ALL_AT_ONCE)
+
+    public val HALF_AT_A_TIME: IServerDeploymentConfig =
+        IServerDeploymentConfig.wrap(software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig.HALF_AT_A_TIME)
+
+    public val ONE_AT_A_TIME: IServerDeploymentConfig =
+        IServerDeploymentConfig.wrap(software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig.ONE_AT_A_TIME)
+
     public fun fromServerDeploymentConfigName(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

@@ -13,6 +13,12 @@ public open class AcceleratorClass internal constructor(
   public open fun version(): String = unwrap(this).getVersion()
 
   public companion object {
+    public val EIA1: AcceleratorClass =
+        AcceleratorClass.wrap(software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorClass.EIA1)
+
+    public val EIA2: AcceleratorClass =
+        AcceleratorClass.wrap(software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorClass.EIA2)
+
     public fun of(version: String): AcceleratorClass =
         software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorClass.of(version).let(AcceleratorClass::wrap)
 

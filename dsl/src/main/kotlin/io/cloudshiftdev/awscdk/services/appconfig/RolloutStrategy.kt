@@ -36,6 +36,18 @@ public abstract class RolloutStrategy internal constructor(
   ) : RolloutStrategy(cdkObject)
 
   public companion object {
+    public val ALL_AT_ONCE: RolloutStrategy =
+        RolloutStrategy.wrap(software.amazon.awscdk.services.appconfig.RolloutStrategy.ALL_AT_ONCE)
+
+    public val CANARY_10_PERCENT_20_MINUTES: RolloutStrategy =
+        RolloutStrategy.wrap(software.amazon.awscdk.services.appconfig.RolloutStrategy.CANARY_10_PERCENT_20_MINUTES)
+
+    public val LINEAR_20_PERCENT_EVERY_6_MINUTES: RolloutStrategy =
+        RolloutStrategy.wrap(software.amazon.awscdk.services.appconfig.RolloutStrategy.LINEAR_20_PERCENT_EVERY_6_MINUTES)
+
+    public val LINEAR_50_PERCENT_EVERY_30_SECONDS: RolloutStrategy =
+        RolloutStrategy.wrap(software.amazon.awscdk.services.appconfig.RolloutStrategy.LINEAR_50_PERCENT_EVERY_30_SECONDS)
+
     public fun exponential(props: RolloutStrategyProps): RolloutStrategy =
         software.amazon.awscdk.services.appconfig.RolloutStrategy.exponential(props.let(RolloutStrategyProps::unwrap)).let(RolloutStrategy::wrap)
 

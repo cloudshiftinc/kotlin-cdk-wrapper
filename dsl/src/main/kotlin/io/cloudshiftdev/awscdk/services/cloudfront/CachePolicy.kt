@@ -268,6 +268,21 @@ public open class CachePolicy internal constructor(
   }
 
   public companion object {
+    public val AMPLIFY: ICachePolicy =
+        ICachePolicy.wrap(software.amazon.awscdk.services.cloudfront.CachePolicy.AMPLIFY)
+
+    public val CACHING_DISABLED: ICachePolicy =
+        ICachePolicy.wrap(software.amazon.awscdk.services.cloudfront.CachePolicy.CACHING_DISABLED)
+
+    public val CACHING_OPTIMIZED: ICachePolicy =
+        ICachePolicy.wrap(software.amazon.awscdk.services.cloudfront.CachePolicy.CACHING_OPTIMIZED)
+
+    public val CACHING_OPTIMIZED_FOR_UNCOMPRESSED_OBJECTS: ICachePolicy =
+        ICachePolicy.wrap(software.amazon.awscdk.services.cloudfront.CachePolicy.CACHING_OPTIMIZED_FOR_UNCOMPRESSED_OBJECTS)
+
+    public val ELEMENTAL_MEDIA_PACKAGE: ICachePolicy =
+        ICachePolicy.wrap(software.amazon.awscdk.services.cloudfront.CachePolicy.ELEMENTAL_MEDIA_PACKAGE)
+
     public fun fromCachePolicyId(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

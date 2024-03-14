@@ -115,28 +115,32 @@ internal class AsmMethodAdapter(
         return "AsmMethodAdapter(name=$name; desc=${delegate.desc})"
     }
 
-    private fun TypeSignature.toTypeName(): TypeName {
-        return when (val sig = this) {
-            is ClassTypeSignature -> sig.toTypeName()
-            is ArrayTypeSignature -> sig.typeSig.toTypeName()
-            is BaseTypeSignature ->
-                when (sig.toString()) {
-                    "V" -> UNIT
-                    else -> error("Unsupported BaseTypeSignature: $this")
-                }
-            else -> error("Unsupported type $javaClass $this")
-        }
-    }
-
-    private fun ClassTypeSignature.toTypeName(): TypeName {
-        val typeName = ClassName.fromAsmClassName(outerType.identifier.drop(1))
-        if (outerType.typeArguments.isEmpty()) return typeName
-        val params = outerType.typeArguments.map { it.toTypeName() }
-        return typeName.parameterizedBy(params)
-    }
-
-    private fun TypeArgument.toTypeName(): TypeName = signature.toTypeName()
 
     private val MethodNode.allAnnotations: List<AnnotationNode>
         get() = (visibleAnnotations ?: emptyList()) + (invisibleAnnotations ?: emptyList())
+}
+
+
+private fun ClassTypeSignature.toTypeName(): TypeName {
+    val typeName = ClassName.fromAsmClassName(outerType.identifier.drop(1))
+    if (outerType.typeArguments.isEmpty()) return typeName
+    val params = outerType.typeArguments.map { it.toTypeName() }
+    return typeName.parameterizedBy(params)
+}
+
+private fun TypeArgument.toTypeName(): TypeName = signature.toTypeName()
+
+
+
+internal fun TypeSignature.toTypeName(): TypeName {
+    return when (val sig = this) {
+        is ClassTypeSignature -> sig.toTypeName()
+        is ArrayTypeSignature -> sig.typeSig.toTypeName()
+        is BaseTypeSignature ->
+            when (sig.toString()) {
+                "V" -> UNIT
+                else -> error("Unsupported BaseTypeSignature: $this")
+            }
+        else -> error("Unsupported type $javaClass $this")
+    }
 }

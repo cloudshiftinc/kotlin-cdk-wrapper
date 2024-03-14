@@ -291,6 +291,21 @@ public open class ResponseHeadersPolicy internal constructor(
   }
 
   public companion object {
+    public val CORS_ALLOW_ALL_ORIGINS: IResponseHeadersPolicy =
+        IResponseHeadersPolicy.wrap(software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicy.CORS_ALLOW_ALL_ORIGINS)
+
+    public val CORS_ALLOW_ALL_ORIGINS_AND_SECURITY_HEADERS: IResponseHeadersPolicy =
+        IResponseHeadersPolicy.wrap(software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicy.CORS_ALLOW_ALL_ORIGINS_AND_SECURITY_HEADERS)
+
+    public val CORS_ALLOW_ALL_ORIGINS_WITH_PREFLIGHT: IResponseHeadersPolicy =
+        IResponseHeadersPolicy.wrap(software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicy.CORS_ALLOW_ALL_ORIGINS_WITH_PREFLIGHT)
+
+    public val CORS_ALLOW_ALL_ORIGINS_WITH_PREFLIGHT_AND_SECURITY_HEADERS: IResponseHeadersPolicy =
+        IResponseHeadersPolicy.wrap(software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicy.CORS_ALLOW_ALL_ORIGINS_WITH_PREFLIGHT_AND_SECURITY_HEADERS)
+
+    public val SECURITY_HEADERS: IResponseHeadersPolicy =
+        IResponseHeadersPolicy.wrap(software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicy.SECURITY_HEADERS)
+
     public fun fromResponseHeadersPolicyId(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

@@ -78,6 +78,48 @@ public open class SecretRotationApplication internal constructor(
   }
 
   public companion object {
+    public val MARIADB_ROTATION_MULTI_USER: SecretRotationApplication =
+        SecretRotationApplication.wrap(software.amazon.awscdk.services.secretsmanager.SecretRotationApplication.MARIADB_ROTATION_MULTI_USER)
+
+    public val MARIADB_ROTATION_SINGLE_USER: SecretRotationApplication =
+        SecretRotationApplication.wrap(software.amazon.awscdk.services.secretsmanager.SecretRotationApplication.MARIADB_ROTATION_SINGLE_USER)
+
+    public val MONGODB_ROTATION_MULTI_USER: SecretRotationApplication =
+        SecretRotationApplication.wrap(software.amazon.awscdk.services.secretsmanager.SecretRotationApplication.MONGODB_ROTATION_MULTI_USER)
+
+    public val MONGODB_ROTATION_SINGLE_USER: SecretRotationApplication =
+        SecretRotationApplication.wrap(software.amazon.awscdk.services.secretsmanager.SecretRotationApplication.MONGODB_ROTATION_SINGLE_USER)
+
+    public val MYSQL_ROTATION_MULTI_USER: SecretRotationApplication =
+        SecretRotationApplication.wrap(software.amazon.awscdk.services.secretsmanager.SecretRotationApplication.MYSQL_ROTATION_MULTI_USER)
+
+    public val MYSQL_ROTATION_SINGLE_USER: SecretRotationApplication =
+        SecretRotationApplication.wrap(software.amazon.awscdk.services.secretsmanager.SecretRotationApplication.MYSQL_ROTATION_SINGLE_USER)
+
+    public val ORACLE_ROTATION_MULTI_USER: SecretRotationApplication =
+        SecretRotationApplication.wrap(software.amazon.awscdk.services.secretsmanager.SecretRotationApplication.ORACLE_ROTATION_MULTI_USER)
+
+    public val ORACLE_ROTATION_SINGLE_USER: SecretRotationApplication =
+        SecretRotationApplication.wrap(software.amazon.awscdk.services.secretsmanager.SecretRotationApplication.ORACLE_ROTATION_SINGLE_USER)
+
+    public val POSTGRES_ROTATION_MULTI_USER: SecretRotationApplication =
+        SecretRotationApplication.wrap(software.amazon.awscdk.services.secretsmanager.SecretRotationApplication.POSTGRES_ROTATION_MULTI_USER)
+
+    public val POSTGRES_ROTATION_SINGLE_USER: SecretRotationApplication =
+        SecretRotationApplication.wrap(software.amazon.awscdk.services.secretsmanager.SecretRotationApplication.POSTGRES_ROTATION_SINGLE_USER)
+
+    public val REDSHIFT_ROTATION_MULTI_USER: SecretRotationApplication =
+        SecretRotationApplication.wrap(software.amazon.awscdk.services.secretsmanager.SecretRotationApplication.REDSHIFT_ROTATION_MULTI_USER)
+
+    public val REDSHIFT_ROTATION_SINGLE_USER: SecretRotationApplication =
+        SecretRotationApplication.wrap(software.amazon.awscdk.services.secretsmanager.SecretRotationApplication.REDSHIFT_ROTATION_SINGLE_USER)
+
+    public val SQLSERVER_ROTATION_MULTI_USER: SecretRotationApplication =
+        SecretRotationApplication.wrap(software.amazon.awscdk.services.secretsmanager.SecretRotationApplication.SQLSERVER_ROTATION_MULTI_USER)
+
+    public val SQLSERVER_ROTATION_SINGLE_USER: SecretRotationApplication =
+        SecretRotationApplication.wrap(software.amazon.awscdk.services.secretsmanager.SecretRotationApplication.SQLSERVER_ROTATION_SINGLE_USER)
+
     public operator fun invoke(
       applicationId: String,
       semanticVersion: String,

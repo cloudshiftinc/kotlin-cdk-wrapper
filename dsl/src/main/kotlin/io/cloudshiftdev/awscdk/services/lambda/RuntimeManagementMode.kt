@@ -23,6 +23,12 @@ public open class RuntimeManagementMode internal constructor(
       unwrap(this).getRuntimeManagementConfig().let(CfnFunction.RuntimeManagementConfigProperty::wrap)
 
   public companion object {
+    public val AUTO: RuntimeManagementMode =
+        RuntimeManagementMode.wrap(software.amazon.awscdk.services.lambda.RuntimeManagementMode.AUTO)
+
+    public val FUNCTION_UPDATE: RuntimeManagementMode =
+        RuntimeManagementMode.wrap(software.amazon.awscdk.services.lambda.RuntimeManagementMode.FUNCTION_UPDATE)
+
     public fun manual(arn: String): RuntimeManagementMode =
         software.amazon.awscdk.services.lambda.RuntimeManagementMode.manual(arn).let(RuntimeManagementMode::wrap)
 

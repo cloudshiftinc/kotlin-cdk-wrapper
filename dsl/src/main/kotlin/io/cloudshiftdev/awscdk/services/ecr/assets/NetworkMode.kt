@@ -12,6 +12,15 @@ public open class NetworkMode internal constructor(
   public open fun mode(): String = unwrap(this).getMode()
 
   public companion object {
+    public val DEFAULT: NetworkMode =
+        NetworkMode.wrap(software.amazon.awscdk.services.ecr.assets.NetworkMode.DEFAULT)
+
+    public val HOST: NetworkMode =
+        NetworkMode.wrap(software.amazon.awscdk.services.ecr.assets.NetworkMode.HOST)
+
+    public val NONE: NetworkMode =
+        NetworkMode.wrap(software.amazon.awscdk.services.ecr.assets.NetworkMode.NONE)
+
     public fun custom(mode: String): NetworkMode =
         software.amazon.awscdk.services.ecr.assets.NetworkMode.custom(mode).let(NetworkMode::wrap)
 

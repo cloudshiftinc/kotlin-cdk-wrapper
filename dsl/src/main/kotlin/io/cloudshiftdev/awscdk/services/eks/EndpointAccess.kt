@@ -17,6 +17,15 @@ public open class EndpointAccess internal constructor(
       unwrap(this).onlyFrom(cidr).let(EndpointAccess::wrap)
 
   public companion object {
+    public val PRIVATE: EndpointAccess =
+        EndpointAccess.wrap(software.amazon.awscdk.services.eks.EndpointAccess.PRIVATE)
+
+    public val PUBLIC: EndpointAccess =
+        EndpointAccess.wrap(software.amazon.awscdk.services.eks.EndpointAccess.PUBLIC)
+
+    public val PUBLIC_AND_PRIVATE: EndpointAccess =
+        EndpointAccess.wrap(software.amazon.awscdk.services.eks.EndpointAccess.PUBLIC_AND_PRIVATE)
+
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.EndpointAccess): EndpointAccess
         = EndpointAccess(cdkObject)
 
