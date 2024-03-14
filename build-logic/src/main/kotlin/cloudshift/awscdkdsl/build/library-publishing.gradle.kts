@@ -50,7 +50,7 @@ signing {
 }
 
 val publishingPredicate = provider {
-    val ci = System.getenv()["CI"] == "true"
+    val ci = System.getenv("CI") == "true" && System.getenv("GITHUB_REF") == "refs/heads/main"
     when {
         !ci -> false
         else -> true
