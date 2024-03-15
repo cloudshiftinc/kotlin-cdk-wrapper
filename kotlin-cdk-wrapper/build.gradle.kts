@@ -12,19 +12,6 @@ dependencies {
     api(project(":kotlin-cdk-wrapper-common"))
 }
 
-
-// lots of generated Kotlin drives memory requirement
-//kotlin {
-//    when {
-//        System.getenv("CI") != null -> {
-//            kotlinDaemonJvmArgs =  listOf("-Xms10g", "-Xmx10g")
-//        }
-//        else -> {
-//            kotlinDaemonJvmArgs =  listOf("-Xms10g", "-Xmx10g")
-//        }
-//    }
-//}
-
 tasks.named<KotlinCompile>("compileKotlin") {
     onlyIf {
         // don't compile DSL code when in IntelliJ as it's large and takes considerable time

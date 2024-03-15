@@ -13,7 +13,7 @@ env:
 jobs:
   build:
     runs-on:
-    - 'Large_Runner'
+    - 'xlarge_runner'
     permissions:
       id-token: write
       contents: write
