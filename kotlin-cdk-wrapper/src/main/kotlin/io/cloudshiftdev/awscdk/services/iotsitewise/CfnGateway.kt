@@ -81,15 +81,15 @@ public open class CfnGateway internal constructor(
   /**
    * A list of gateway capability summaries that each contain a namespace and status.
    */
-  public open fun gatewayCapabilitySummaries(__idx_ac66f0: List<Any>) {
-    unwrap(this).setGatewayCapabilitySummaries(__idx_ac66f0)
+  public open fun gatewayCapabilitySummaries(_idx_ac66f0: List<Any>) {
+    unwrap(this).setGatewayCapabilitySummaries(_idx_ac66f0)
   }
 
   /**
    * A list of gateway capability summaries that each contain a namespace and status.
    */
-  public open fun gatewayCapabilitySummaries(vararg __idx_ac66f0: Any): Unit =
-      gatewayCapabilitySummaries(__idx_ac66f0.toList())
+  public open fun gatewayCapabilitySummaries(vararg _idx_ac66f0: Any): Unit =
+      gatewayCapabilitySummaries(_idx_ac66f0.toList())
 
   /**
    * A unique, friendly name for the gateway.

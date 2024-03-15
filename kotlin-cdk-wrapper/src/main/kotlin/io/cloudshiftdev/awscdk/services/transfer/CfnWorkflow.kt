@@ -147,16 +147,16 @@ public open class CfnWorkflow internal constructor(
    * Specifies the steps (actions) to take if errors are encountered during execution of the
    * workflow.
    */
-  public open fun onExceptionSteps(__idx_ac66f0: List<Any>) {
-    unwrap(this).setOnExceptionSteps(__idx_ac66f0)
+  public open fun onExceptionSteps(_idx_ac66f0: List<Any>) {
+    unwrap(this).setOnExceptionSteps(_idx_ac66f0)
   }
 
   /**
    * Specifies the steps (actions) to take if errors are encountered during execution of the
    * workflow.
    */
-  public open fun onExceptionSteps(vararg __idx_ac66f0: Any): Unit =
-      onExceptionSteps(__idx_ac66f0.toList())
+  public open fun onExceptionSteps(vararg _idx_ac66f0: Any): Unit =
+      onExceptionSteps(_idx_ac66f0.toList())
 
   /**
    * Specifies the details for the steps that are in the specified workflow.
@@ -173,14 +173,14 @@ public open class CfnWorkflow internal constructor(
   /**
    * Specifies the details for the steps that are in the specified workflow.
    */
-  public open fun steps(__idx_ac66f0: List<Any>) {
-    unwrap(this).setSteps(__idx_ac66f0)
+  public open fun steps(_idx_ac66f0: List<Any>) {
+    unwrap(this).setSteps(_idx_ac66f0)
   }
 
   /**
    * Specifies the details for the steps that are in the specified workflow.
    */
-  public open fun steps(vararg __idx_ac66f0: Any): Unit = steps(__idx_ac66f0.toList())
+  public open fun steps(vararg _idx_ac66f0: Any): Unit = steps(_idx_ac66f0.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

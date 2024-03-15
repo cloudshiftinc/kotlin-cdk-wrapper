@@ -42,7 +42,8 @@ import kotlin.String
 public open class DataIdentifier internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.logs.DataIdentifier,
 ) : CdkObject(cdkObject) {
-  public constructor(name: String) : this(software.amazon.awscdk.services.logs.DataIdentifier(name))
+  public constructor(name: String) : this(software.amazon.awscdk.services.logs.DataIdentifier(name)
+  )
 
   /**
    * * name of the identifier.

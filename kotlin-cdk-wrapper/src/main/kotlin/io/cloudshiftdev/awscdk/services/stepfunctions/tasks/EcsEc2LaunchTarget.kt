@@ -56,8 +56,8 @@ public open class EcsEc2LaunchTarget internal constructor(
    * @param _task 
    * @param launchTargetOptions 
    */
-  public override fun bind(_task: EcsRunTask, launchTargetOptions: LaunchTargetBindOptions):
-      EcsLaunchTargetConfig = unwrap(this).bind(_task.let(EcsRunTask::unwrap),
+  public override fun bind(task: EcsRunTask, launchTargetOptions: LaunchTargetBindOptions):
+      EcsLaunchTargetConfig = unwrap(this).bind(task.let(EcsRunTask::unwrap),
       launchTargetOptions.let(LaunchTargetBindOptions::unwrap)).let(EcsLaunchTargetConfig::wrap)
 
   /**
@@ -68,9 +68,9 @@ public open class EcsEc2LaunchTarget internal constructor(
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("9be8b1f0cae602d733f00715d7adf0ffaba00624095ed77fb348fca6a99c06a8")
-  public override fun bind(_task: EcsRunTask,
+  public override fun bind(task: EcsRunTask,
       launchTargetOptions: LaunchTargetBindOptions.Builder.() -> Unit): EcsLaunchTargetConfig =
-      bind(_task, LaunchTargetBindOptions(launchTargetOptions))
+      bind(task, LaunchTargetBindOptions(launchTargetOptions))
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.tasks.EcsEc2LaunchTarget].

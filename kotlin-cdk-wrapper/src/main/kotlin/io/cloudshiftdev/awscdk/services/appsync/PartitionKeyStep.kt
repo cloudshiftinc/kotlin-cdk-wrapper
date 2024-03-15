@@ -21,7 +21,8 @@ public open class PartitionKeyStep internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.PartitionKeyStep,
 ) : CdkObject(cdkObject) {
   public constructor(key: String) :
-      this(software.amazon.awscdk.services.appsync.PartitionKeyStep(key))
+      this(software.amazon.awscdk.services.appsync.PartitionKeyStep(key)
+  )
 
   /**
    * Assign an auto-generated value to the partition key.

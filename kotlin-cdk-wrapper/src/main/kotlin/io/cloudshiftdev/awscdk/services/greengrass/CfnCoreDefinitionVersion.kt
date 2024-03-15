@@ -91,14 +91,14 @@ public open class CfnCoreDefinitionVersion internal constructor(
   /**
    * The Greengrass core in this version.
    */
-  public open fun cores(__idx_ac66f0: List<Any>) {
-    unwrap(this).setCores(__idx_ac66f0)
+  public open fun cores(_idx_ac66f0: List<Any>) {
+    unwrap(this).setCores(_idx_ac66f0)
   }
 
   /**
    * The Greengrass core in this version.
    */
-  public open fun cores(vararg __idx_ac66f0: Any): Unit = cores(__idx_ac66f0.toList())
+  public open fun cores(vararg _idx_ac66f0: Any): Unit = cores(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

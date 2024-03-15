@@ -119,15 +119,15 @@ public open class CfnSchemaMapping internal constructor(
   /**
    * A list of `MappedInputFields` .
    */
-  public open fun mappedInputFields(__idx_ac66f0: List<Any>) {
-    unwrap(this).setMappedInputFields(__idx_ac66f0)
+  public open fun mappedInputFields(_idx_ac66f0: List<Any>) {
+    unwrap(this).setMappedInputFields(_idx_ac66f0)
   }
 
   /**
    * A list of `MappedInputFields` .
    */
-  public open fun mappedInputFields(vararg __idx_ac66f0: Any): Unit =
-      mappedInputFields(__idx_ac66f0.toList())
+  public open fun mappedInputFields(vararg _idx_ac66f0: Any): Unit =
+      mappedInputFields(_idx_ac66f0.toList())
 
   /**
    * The name of the schema.

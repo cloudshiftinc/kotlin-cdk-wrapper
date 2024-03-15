@@ -108,9 +108,9 @@ public open class Project internal constructor(
    *
    * @param _scope 
    */
-  public override fun bindAsNotificationRuleSource(_scope: CloudshiftdevConstructsConstruct):
+  public override fun bindAsNotificationRuleSource(scope: CloudshiftdevConstructsConstruct):
       NotificationRuleSourceConfig =
-      unwrap(this).bindAsNotificationRuleSource(_scope.let(CloudshiftdevConstructsConstruct::unwrap)).let(NotificationRuleSourceConfig::wrap)
+      unwrap(this).bindAsNotificationRuleSource(scope.let(CloudshiftdevConstructsConstruct::unwrap)).let(NotificationRuleSourceConfig::wrap)
 
   /**
    * A callback invoked when the given project is added to a CodePipeline.
@@ -118,9 +118,9 @@ public open class Project internal constructor(
    * @param _scope the construct the binding is taking place in. 
    * @param options additional options for the binding. 
    */
-  public open fun bindToCodePipeline(_scope: CloudshiftdevConstructsConstruct,
+  public open fun bindToCodePipeline(scope: CloudshiftdevConstructsConstruct,
       options: BindToCodePipelineOptions) {
-    unwrap(this).bindToCodePipeline(_scope.let(CloudshiftdevConstructsConstruct::unwrap),
+    unwrap(this).bindToCodePipeline(scope.let(CloudshiftdevConstructsConstruct::unwrap),
         options.let(BindToCodePipelineOptions::unwrap))
   }
 
@@ -132,8 +132,8 @@ public open class Project internal constructor(
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("d3776f8844ff84e2cebb59235661bfd8d91aa250665890ca01655160ba79b150")
-  public open fun bindToCodePipeline(_scope: CloudshiftdevConstructsConstruct,
-      options: BindToCodePipelineOptions.Builder.() -> Unit): Unit = bindToCodePipeline(_scope,
+  public open fun bindToCodePipeline(scope: CloudshiftdevConstructsConstruct,
+      options: BindToCodePipelineOptions.Builder.() -> Unit): Unit = bindToCodePipeline(scope,
       BindToCodePipelineOptions(options))
 
   /**

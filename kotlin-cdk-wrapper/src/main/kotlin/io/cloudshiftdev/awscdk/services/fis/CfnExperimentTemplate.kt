@@ -115,8 +115,8 @@ public open class CfnExperimentTemplate internal constructor(
   /**
    * The actions for the experiment.
    */
-  public open fun actions(__item_ac66f0: Map<String, Any>) {
-    unwrap(this).setActions(__item_ac66f0)
+  public open fun actions(_item_ac66f0: Map<String, Any>) {
+    unwrap(this).setActions(_item_ac66f0)
   }
 
   /**
@@ -228,15 +228,15 @@ public open class CfnExperimentTemplate internal constructor(
   /**
    * The stop conditions for the experiment.
    */
-  public open fun stopConditions(__idx_ac66f0: List<Any>) {
-    unwrap(this).setStopConditions(__idx_ac66f0)
+  public open fun stopConditions(_idx_ac66f0: List<Any>) {
+    unwrap(this).setStopConditions(_idx_ac66f0)
   }
 
   /**
    * The stop conditions for the experiment.
    */
-  public open fun stopConditions(vararg __idx_ac66f0: Any): Unit =
-      stopConditions(__idx_ac66f0.toList())
+  public open fun stopConditions(vararg _idx_ac66f0: Any): Unit =
+      stopConditions(_idx_ac66f0.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.
@@ -270,8 +270,8 @@ public open class CfnExperimentTemplate internal constructor(
   /**
    * The targets for the experiment.
    */
-  public open fun targets(__item_ac66f0: Map<String, Any>) {
-    unwrap(this).setTargets(__item_ac66f0)
+  public open fun targets(_item_ac66f0: Map<String, Any>) {
+    unwrap(this).setTargets(_item_ac66f0)
   }
 
   /**

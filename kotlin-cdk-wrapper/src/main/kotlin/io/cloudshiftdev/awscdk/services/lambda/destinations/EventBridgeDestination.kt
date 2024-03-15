@@ -32,11 +32,13 @@ public open class EventBridgeDestination internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.lambda.destinations.EventBridgeDestination,
 ) : CdkObject(cdkObject), IDestination {
-  public constructor(eventBus: IEventBus) :
-      this(software.amazon.awscdk.services.lambda.destinations.EventBridgeDestination(IEventBus.unwrap(eventBus)))
-
   public constructor() :
-      this(software.amazon.awscdk.services.lambda.destinations.EventBridgeDestination())
+      this(software.amazon.awscdk.services.lambda.destinations.EventBridgeDestination()
+  )
+
+  public constructor(eventBus: IEventBus) :
+      this(software.amazon.awscdk.services.lambda.destinations.EventBridgeDestination(eventBus.let(IEventBus::unwrap))
+  )
 
   /**
    * Returns a destination configuration.
@@ -45,8 +47,8 @@ public open class EventBridgeDestination internal constructor(
    * @param fn 
    * @param _options
    */
-  public override fun bind(_scope: Construct, fn: IFunction): DestinationConfig =
-      unwrap(this).bind(_scope.let(Construct::unwrap),
+  public override fun bind(scope: Construct, fn: IFunction): DestinationConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap),
       fn.let(IFunction::unwrap)).let(DestinationConfig::wrap)
 
   /**
@@ -57,11 +59,11 @@ public open class EventBridgeDestination internal constructor(
    * @param _options
    */
   public override fun bind(
-    _scope: Construct,
+    scope: Construct,
     fn: IFunction,
-    _options: DestinationOptions,
-  ): DestinationConfig = unwrap(this).bind(_scope.let(Construct::unwrap), fn.let(IFunction::unwrap),
-      _options.let(DestinationOptions::unwrap)).let(DestinationConfig::wrap)
+    options: DestinationOptions,
+  ): DestinationConfig = unwrap(this).bind(scope.let(Construct::unwrap), fn.let(IFunction::unwrap),
+      options.let(DestinationOptions::unwrap)).let(DestinationConfig::wrap)
 
   /**
    * Returns a destination configuration.
@@ -73,10 +75,10 @@ public open class EventBridgeDestination internal constructor(
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("2d6ad4acfbba31901bb8135560633af5578e09f84d84123fa0dbea6b67295dd3")
   public override fun bind(
-    _scope: Construct,
+    scope: Construct,
     fn: IFunction,
-    _options: DestinationOptions.Builder.() -> Unit,
-  ): DestinationConfig = bind(_scope, fn, DestinationOptions(_options))
+    options: DestinationOptions.Builder.() -> Unit,
+  ): DestinationConfig = bind(scope, fn, DestinationOptions(options))
 
   public companion object {
     internal

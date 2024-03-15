@@ -133,15 +133,14 @@ public open class CfnConfiguredTable internal constructor(
   /**
    * The entire created analysis rule.
    */
-  public open fun analysisRules(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAnalysisRules(__idx_ac66f0)
+  public open fun analysisRules(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAnalysisRules(_idx_ac66f0)
   }
 
   /**
    * The entire created analysis rule.
    */
-  public open fun analysisRules(vararg __idx_ac66f0: Any): Unit =
-      analysisRules(__idx_ac66f0.toList())
+  public open fun analysisRules(vararg _idx_ac66f0: Any): Unit = analysisRules(_idx_ac66f0.toList())
 
   /**
    * Returns the Amazon Resource Name (ARN) of the specified configured table.

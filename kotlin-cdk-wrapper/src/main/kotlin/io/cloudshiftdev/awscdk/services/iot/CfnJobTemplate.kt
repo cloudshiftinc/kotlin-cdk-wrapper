@@ -236,8 +236,8 @@ public open class CfnJobTemplate internal constructor(
    * with a predetermined start time and duration for the rollout of a job document to all devices in a
    * target group for a job.
    */
-  public open fun maintenanceWindows(__idx_ac66f0: List<Any>) {
-    unwrap(this).setMaintenanceWindows(__idx_ac66f0)
+  public open fun maintenanceWindows(_idx_ac66f0: List<Any>) {
+    unwrap(this).setMaintenanceWindows(_idx_ac66f0)
   }
 
   /**
@@ -245,8 +245,8 @@ public open class CfnJobTemplate internal constructor(
    * with a predetermined start time and duration for the rollout of a job document to all devices in a
    * target group for a job.
    */
-  public open fun maintenanceWindows(vararg __idx_ac66f0: Any): Unit =
-      maintenanceWindows(__idx_ac66f0.toList())
+  public open fun maintenanceWindows(vararg _idx_ac66f0: Any): Unit =
+      maintenanceWindows(_idx_ac66f0.toList())
 
   /**
    * Configuration for pre-signed S3 URLs.

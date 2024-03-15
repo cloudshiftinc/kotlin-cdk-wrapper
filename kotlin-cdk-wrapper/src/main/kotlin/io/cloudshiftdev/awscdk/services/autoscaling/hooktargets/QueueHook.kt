@@ -30,7 +30,8 @@ public open class QueueHook internal constructor(
       software.amazon.awscdk.services.autoscaling.hooktargets.QueueHook,
 ) : CdkObject(cdkObject), ILifecycleHookTarget {
   public constructor(queue: IQueue) :
-      this(software.amazon.awscdk.services.autoscaling.hooktargets.QueueHook(IQueue.unwrap(queue)))
+      this(software.amazon.awscdk.services.autoscaling.hooktargets.QueueHook(queue.let(IQueue::unwrap))
+  )
 
   /**
    * If an `IRole` is found in `options`, grant it access to send messages.
@@ -42,8 +43,8 @@ public open class QueueHook internal constructor(
    * @param _scope 
    * @param options 
    */
-  public override fun bind(_scope: Construct, options: BindHookTargetOptions):
-      LifecycleHookTargetConfig = unwrap(this).bind(_scope.let(Construct::unwrap),
+  public override fun bind(scope: Construct, options: BindHookTargetOptions):
+      LifecycleHookTargetConfig = unwrap(this).bind(scope.let(Construct::unwrap),
       options.let(BindHookTargetOptions::unwrap)).let(LifecycleHookTargetConfig::wrap)
 
   /**
@@ -58,8 +59,8 @@ public open class QueueHook internal constructor(
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("a256b345ffa3a5089e3c2315d1f614a5e6fb6ed617a236cb05a1ffe90b1f565d")
-  public override fun bind(_scope: Construct, options: BindHookTargetOptions.Builder.() -> Unit):
-      LifecycleHookTargetConfig = bind(_scope, BindHookTargetOptions(options))
+  public override fun bind(scope: Construct, options: BindHookTargetOptions.Builder.() -> Unit):
+      LifecycleHookTargetConfig = bind(scope, BindHookTargetOptions(options))
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.hooktargets.QueueHook):

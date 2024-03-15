@@ -4,7 +4,7 @@ import cloudshift.awscdkdsl.build.dsl.model.CdkClass
 
 internal class BuilderMethodFactory(private val context: TypeGeneratorContext, ) : MethodSpecFactory {
 
-    private val callGenerator = DelegateCallGenerator(context, true, "cdkBuilder")
+    private val callGenerator = DelegateCallGenerator(true, "cdkBuilder")
 
     override fun create(enclosingClass : CdkClass, method: CdkClass.Method): List<MethodSpec> {
         val spec = MethodSpec.fromCdkMethod(method, enclosingClass, context.model)

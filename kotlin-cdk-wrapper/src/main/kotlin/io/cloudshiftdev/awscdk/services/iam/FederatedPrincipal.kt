@@ -30,18 +30,21 @@ import kotlin.collections.Map
 public open class FederatedPrincipal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.FederatedPrincipal,
 ) : PrincipalBase(cdkObject) {
+  public constructor(federated: String) :
+      this(software.amazon.awscdk.services.iam.FederatedPrincipal(federated)
+  )
+
+  public constructor(federated: String, conditions: Map<String, Any>) :
+      this(software.amazon.awscdk.services.iam.FederatedPrincipal(federated, conditions)
+  )
+
   public constructor(
     federated: String,
     conditions: Map<String, Any>,
     assumeRoleAction: String,
   ) : this(software.amazon.awscdk.services.iam.FederatedPrincipal(federated, conditions,
-      assumeRoleAction))
-
-  public constructor(federated: String, conditions: Map<String, Any>) :
-      this(software.amazon.awscdk.services.iam.FederatedPrincipal(federated, conditions))
-
-  public constructor(federated: String) :
-      this(software.amazon.awscdk.services.iam.FederatedPrincipal(federated))
+      assumeRoleAction)
+  )
 
   /**
    * When this Principal is used in an AssumeRole policy, the action to use.

@@ -225,15 +225,15 @@ public open class CfnHostedZone internal constructor(
    * *Private hosted zones:* A complex type that contains information about the VPCs that are
    * associated with the specified hosted zone.
    */
-  public open fun vpcs(__idx_ac66f0: List<Any>) {
-    unwrap(this).setVpcs(__idx_ac66f0)
+  public open fun vpcs(_idx_ac66f0: List<Any>) {
+    unwrap(this).setVpcs(_idx_ac66f0)
   }
 
   /**
    * *Private hosted zones:* A complex type that contains information about the VPCs that are
    * associated with the specified hosted zone.
    */
-  public open fun vpcs(vararg __idx_ac66f0: Any): Unit = vpcs(__idx_ac66f0.toList())
+  public open fun vpcs(vararg _idx_ac66f0: Any): Unit = vpcs(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.route53.CfnHostedZone].

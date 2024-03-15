@@ -183,15 +183,15 @@ public open class CfnTable internal constructor(
   /**
    * A list of attributes that describe the key schema for the table and indexes.
    */
-  public open fun attributeDefinitions(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAttributeDefinitions(__idx_ac66f0)
+  public open fun attributeDefinitions(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAttributeDefinitions(_idx_ac66f0)
   }
 
   /**
    * A list of attributes that describe the key schema for the table and indexes.
    */
-  public open fun attributeDefinitions(vararg __idx_ac66f0: Any): Unit =
-      attributeDefinitions(__idx_ac66f0.toList())
+  public open fun attributeDefinitions(vararg _idx_ac66f0: Any): Unit =
+      attributeDefinitions(_idx_ac66f0.toList())
 
   /**
    * Specify how you are charged for read and write throughput and how you manage capacity.
@@ -275,8 +275,8 @@ public open class CfnTable internal constructor(
    *
    * You can create up to 20 global secondary indexes.
    */
-  public open fun globalSecondaryIndexes(__idx_ac66f0: List<Any>) {
-    unwrap(this).setGlobalSecondaryIndexes(__idx_ac66f0)
+  public open fun globalSecondaryIndexes(_idx_ac66f0: List<Any>) {
+    unwrap(this).setGlobalSecondaryIndexes(_idx_ac66f0)
   }
 
   /**
@@ -284,8 +284,8 @@ public open class CfnTable internal constructor(
    *
    * You can create up to 20 global secondary indexes.
    */
-  public open fun globalSecondaryIndexes(vararg __idx_ac66f0: Any): Unit =
-      globalSecondaryIndexes(__idx_ac66f0.toList())
+  public open fun globalSecondaryIndexes(vararg _idx_ac66f0: Any): Unit =
+      globalSecondaryIndexes(_idx_ac66f0.toList())
 
   /**
    * Specifies the properties of data being imported from the S3 bucket source to the table.
@@ -339,14 +339,14 @@ public open class CfnTable internal constructor(
   /**
    * Specifies the attributes that make up the primary key for the table.
    */
-  public open fun keySchema(__idx_ac66f0: List<Any>) {
-    unwrap(this).setKeySchema(__idx_ac66f0)
+  public open fun keySchema(_idx_ac66f0: List<Any>) {
+    unwrap(this).setKeySchema(_idx_ac66f0)
   }
 
   /**
    * Specifies the attributes that make up the primary key for the table.
    */
-  public open fun keySchema(vararg __idx_ac66f0: Any): Unit = keySchema(__idx_ac66f0.toList())
+  public open fun keySchema(vararg _idx_ac66f0: Any): Unit = keySchema(_idx_ac66f0.toList())
 
   /**
    * The Kinesis Data Streams configuration for the specified table.
@@ -391,15 +391,15 @@ public open class CfnTable internal constructor(
   /**
    * Local secondary indexes to be created on the table.
    */
-  public open fun localSecondaryIndexes(__idx_ac66f0: List<Any>) {
-    unwrap(this).setLocalSecondaryIndexes(__idx_ac66f0)
+  public open fun localSecondaryIndexes(_idx_ac66f0: List<Any>) {
+    unwrap(this).setLocalSecondaryIndexes(_idx_ac66f0)
   }
 
   /**
    * Local secondary indexes to be created on the table.
    */
-  public open fun localSecondaryIndexes(vararg __idx_ac66f0: Any): Unit =
-      localSecondaryIndexes(__idx_ac66f0.toList())
+  public open fun localSecondaryIndexes(vararg _idx_ac66f0: Any): Unit =
+      localSecondaryIndexes(_idx_ac66f0.toList())
 
   /**
    * The settings used to enable point in time recovery.

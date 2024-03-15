@@ -26,11 +26,13 @@ import kotlin.String
 public open class FunctionVersionUpgrade internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.FunctionVersionUpgrade,
 ) : CdkObject(cdkObject), IAspect {
-  public constructor(featureFlag: String, enabled: Boolean) :
-      this(software.amazon.awscdk.services.lambda.FunctionVersionUpgrade(featureFlag, enabled))
-
   public constructor(featureFlag: String) :
-      this(software.amazon.awscdk.services.lambda.FunctionVersionUpgrade(featureFlag))
+      this(software.amazon.awscdk.services.lambda.FunctionVersionUpgrade(featureFlag)
+  )
+
+  public constructor(featureFlag: String, enabled: Boolean) :
+      this(software.amazon.awscdk.services.lambda.FunctionVersionUpgrade(featureFlag, enabled)
+  )
 
   /**
    * All aspects can visit an IConstruct.

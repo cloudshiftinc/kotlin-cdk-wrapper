@@ -283,15 +283,15 @@ public open class CfnCacheCluster internal constructor(
   /**
    * Specifies the destination, format and type of the logs.
    */
-  public open fun logDeliveryConfigurations(__idx_ac66f0: List<Any>) {
-    unwrap(this).setLogDeliveryConfigurations(__idx_ac66f0)
+  public open fun logDeliveryConfigurations(_idx_ac66f0: List<Any>) {
+    unwrap(this).setLogDeliveryConfigurations(_idx_ac66f0)
   }
 
   /**
    * Specifies the destination, format and type of the logs.
    */
-  public open fun logDeliveryConfigurations(vararg __idx_ac66f0: Any): Unit =
-      logDeliveryConfigurations(__idx_ac66f0.toList())
+  public open fun logDeliveryConfigurations(vararg _idx_ac66f0: Any): Unit =
+      logDeliveryConfigurations(_idx_ac66f0.toList())
 
   /**
    * Must be either `ipv4` | `ipv6` | `dual_stack` .

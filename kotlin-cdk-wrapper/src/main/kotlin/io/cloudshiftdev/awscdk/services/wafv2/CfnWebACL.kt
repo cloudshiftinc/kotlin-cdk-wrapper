@@ -220,8 +220,8 @@ public open class CfnWebACL internal constructor(
   /**
    * A map of custom response keys and content bodies.
    */
-  public open fun customResponseBodies(__item_ac66f0: Map<String, Any>) {
-    unwrap(this).setCustomResponseBodies(__item_ac66f0)
+  public open fun customResponseBodies(_item_ac66f0: Map<String, Any>) {
+    unwrap(this).setCustomResponseBodies(_item_ac66f0)
   }
 
   /**
@@ -299,14 +299,14 @@ public open class CfnWebACL internal constructor(
   /**
    * The rule statements used to identify the web requests that you want to manage.
    */
-  public open fun rules(__idx_ac66f0: List<Any>) {
-    unwrap(this).setRules(__idx_ac66f0)
+  public open fun rules(_idx_ac66f0: List<Any>) {
+    unwrap(this).setRules(_idx_ac66f0)
   }
 
   /**
    * The rule statements used to identify the web requests that you want to manage.
    */
-  public open fun rules(vararg __idx_ac66f0: Any): Unit = rules(__idx_ac66f0.toList())
+  public open fun rules(vararg _idx_ac66f0: Any): Unit = rules(_idx_ac66f0.toList())
 
   /**
    * Specifies whether this is for an Amazon CloudFront distribution or for a regional application.

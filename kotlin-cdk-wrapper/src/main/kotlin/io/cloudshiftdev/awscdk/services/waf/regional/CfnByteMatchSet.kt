@@ -87,8 +87,8 @@ public open class CfnByteMatchSet internal constructor(
    * AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search,
    * and other settings.
    */
-  public open fun byteMatchTuples(__idx_ac66f0: List<Any>) {
-    unwrap(this).setByteMatchTuples(__idx_ac66f0)
+  public open fun byteMatchTuples(_idx_ac66f0: List<Any>) {
+    unwrap(this).setByteMatchTuples(_idx_ac66f0)
   }
 
   /**
@@ -96,8 +96,8 @@ public open class CfnByteMatchSet internal constructor(
    * AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search,
    * and other settings.
    */
-  public open fun byteMatchTuples(vararg __idx_ac66f0: Any): Unit =
-      byteMatchTuples(__idx_ac66f0.toList())
+  public open fun byteMatchTuples(vararg _idx_ac66f0: Any): Unit =
+      byteMatchTuples(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

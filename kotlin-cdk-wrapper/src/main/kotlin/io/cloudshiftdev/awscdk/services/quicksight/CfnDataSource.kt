@@ -395,16 +395,16 @@ public open class CfnDataSource internal constructor(
    * A set of alternate data source parameters that you want to share for the credentials stored
    * with this data source.
    */
-  public open fun alternateDataSourceParameters(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAlternateDataSourceParameters(__idx_ac66f0)
+  public open fun alternateDataSourceParameters(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAlternateDataSourceParameters(_idx_ac66f0)
   }
 
   /**
    * A set of alternate data source parameters that you want to share for the credentials stored
    * with this data source.
    */
-  public open fun alternateDataSourceParameters(vararg __idx_ac66f0: Any): Unit =
-      alternateDataSourceParameters(__idx_ac66f0.toList())
+  public open fun alternateDataSourceParameters(vararg _idx_ac66f0: Any): Unit =
+      alternateDataSourceParameters(_idx_ac66f0.toList())
 
   /**
    * The Amazon Resource Name (ARN) of the dataset.
@@ -567,14 +567,14 @@ public open class CfnDataSource internal constructor(
   /**
    * A list of resource permissions on the data source.
    */
-  public open fun permissions(__idx_ac66f0: List<Any>) {
-    unwrap(this).setPermissions(__idx_ac66f0)
+  public open fun permissions(_idx_ac66f0: List<Any>) {
+    unwrap(this).setPermissions(_idx_ac66f0)
   }
 
   /**
    * A list of resource permissions on the data source.
    */
-  public open fun permissions(vararg __idx_ac66f0: Any): Unit = permissions(__idx_ac66f0.toList())
+  public open fun permissions(vararg _idx_ac66f0: Any): Unit = permissions(_idx_ac66f0.toList())
 
   /**
    * Secure Socket Layer (SSL) properties that apply when Amazon QuickSight connects to your

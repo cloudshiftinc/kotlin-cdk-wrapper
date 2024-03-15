@@ -27,7 +27,8 @@ public open class SnsDlq internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.eventsources.SnsDlq,
 ) : CdkObject(cdkObject), IEventSourceDlq {
   public constructor(topic: ITopic) :
-      this(software.amazon.awscdk.services.lambda.eventsources.SnsDlq(ITopic.unwrap(topic)))
+      this(software.amazon.awscdk.services.lambda.eventsources.SnsDlq(topic.let(ITopic::unwrap))
+  )
 
   /**
    * Returns a destination configuration for the DLQ.
@@ -35,8 +36,8 @@ public open class SnsDlq internal constructor(
    * @param _target 
    * @param targetHandler 
    */
-  public override fun bind(_target: IEventSourceMapping, targetHandler: IFunction):
-      DlqDestinationConfig = unwrap(this).bind(_target.let(IEventSourceMapping::unwrap),
+  public override fun bind(target: IEventSourceMapping, targetHandler: IFunction):
+      DlqDestinationConfig = unwrap(this).bind(target.let(IEventSourceMapping::unwrap),
       targetHandler.let(IFunction::unwrap)).let(DlqDestinationConfig::wrap)
 
   public companion object {

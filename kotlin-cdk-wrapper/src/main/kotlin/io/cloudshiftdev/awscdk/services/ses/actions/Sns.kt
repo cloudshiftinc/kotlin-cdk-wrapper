@@ -51,8 +51,8 @@ public open class Sns internal constructor(
    *
    * @param _rule 
    */
-  public override fun bind(_rule: IReceiptRule): ReceiptRuleActionConfig =
-      unwrap(this).bind(_rule.let(IReceiptRule::unwrap)).let(ReceiptRuleActionConfig::wrap)
+  public override fun bind(rule: IReceiptRule): ReceiptRuleActionConfig =
+      unwrap(this).bind(rule.let(IReceiptRule::unwrap)).let(ReceiptRuleActionConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ses.actions.Sns].

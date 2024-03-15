@@ -44,8 +44,8 @@ public open class HttpUrlIntegration internal constructor(
    *
    * @param _options 
    */
-  public override fun bind(_options: HttpRouteIntegrationBindOptions): HttpRouteIntegrationConfig =
-      unwrap(this).bind(_options.let(HttpRouteIntegrationBindOptions::unwrap)).let(HttpRouteIntegrationConfig::wrap)
+  public override fun bind(options: HttpRouteIntegrationBindOptions): HttpRouteIntegrationConfig =
+      unwrap(this).bind(options.let(HttpRouteIntegrationBindOptions::unwrap)).let(HttpRouteIntegrationConfig::wrap)
 
   /**
    * Bind this integration to the route.
@@ -54,8 +54,8 @@ public open class HttpUrlIntegration internal constructor(
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("adeb585f7d049df388aeb961213ea487ef99967ed3fab3c9dbfc7653776fc180")
-  public override fun bind(_options: HttpRouteIntegrationBindOptions.Builder.() -> Unit):
-      HttpRouteIntegrationConfig = bind(HttpRouteIntegrationBindOptions(_options))
+  public override fun bind(options: HttpRouteIntegrationBindOptions.Builder.() -> Unit):
+      HttpRouteIntegrationConfig = bind(HttpRouteIntegrationBindOptions(options))
 
   /**
    * A fluent builder for

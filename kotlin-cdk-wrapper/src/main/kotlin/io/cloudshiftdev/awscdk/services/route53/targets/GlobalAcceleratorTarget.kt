@@ -24,7 +24,8 @@ public open class GlobalAcceleratorTarget internal constructor(
       software.amazon.awscdk.services.route53.targets.GlobalAcceleratorTarget,
 ) : GlobalAcceleratorDomainTarget(cdkObject) {
   public constructor(accelerator: IAccelerator) :
-      this(software.amazon.awscdk.services.route53.targets.GlobalAcceleratorTarget(IAccelerator.unwrap(accelerator)))
+      this(software.amazon.awscdk.services.route53.targets.GlobalAcceleratorTarget(accelerator.let(IAccelerator::unwrap))
+  )
 
   public companion object {
     internal

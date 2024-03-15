@@ -155,15 +155,14 @@ public open class CfnLifecyclePolicy internal constructor(
   /**
    * Configuration details for the lifecycle policy rules.
    */
-  public open fun policyDetails(__idx_ac66f0: List<Any>) {
-    unwrap(this).setPolicyDetails(__idx_ac66f0)
+  public open fun policyDetails(_idx_ac66f0: List<Any>) {
+    unwrap(this).setPolicyDetails(_idx_ac66f0)
   }
 
   /**
    * Configuration details for the lifecycle policy rules.
    */
-  public open fun policyDetails(vararg __idx_ac66f0: Any): Unit =
-      policyDetails(__idx_ac66f0.toList())
+  public open fun policyDetails(vararg _idx_ac66f0: Any): Unit = policyDetails(_idx_ac66f0.toList())
 
   /**
    * Selection criteria for the resources that the lifecycle policy applies to.

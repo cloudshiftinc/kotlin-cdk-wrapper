@@ -322,14 +322,14 @@ public open class CfnDataSet internal constructor(
   /**
    * Groupings of columns that work together in certain Amazon QuickSight features.
    */
-  public open fun columnGroups(__idx_ac66f0: List<Any>) {
-    unwrap(this).setColumnGroups(__idx_ac66f0)
+  public open fun columnGroups(_idx_ac66f0: List<Any>) {
+    unwrap(this).setColumnGroups(_idx_ac66f0)
   }
 
   /**
    * Groupings of columns that work together in certain Amazon QuickSight features.
    */
-  public open fun columnGroups(vararg __idx_ac66f0: Any): Unit = columnGroups(__idx_ac66f0.toList())
+  public open fun columnGroups(vararg _idx_ac66f0: Any): Unit = columnGroups(_idx_ac66f0.toList())
 
   /**
    * A set of one or more definitions of a `ColumnLevelPermissionRule` .
@@ -346,15 +346,15 @@ public open class CfnDataSet internal constructor(
   /**
    * A set of one or more definitions of a `ColumnLevelPermissionRule` .
    */
-  public open fun columnLevelPermissionRules(__idx_ac66f0: List<Any>) {
-    unwrap(this).setColumnLevelPermissionRules(__idx_ac66f0)
+  public open fun columnLevelPermissionRules(_idx_ac66f0: List<Any>) {
+    unwrap(this).setColumnLevelPermissionRules(_idx_ac66f0)
   }
 
   /**
    * A set of one or more definitions of a `ColumnLevelPermissionRule` .
    */
-  public open fun columnLevelPermissionRules(vararg __idx_ac66f0: Any): Unit =
-      columnLevelPermissionRules(__idx_ac66f0.toList())
+  public open fun columnLevelPermissionRules(vararg _idx_ac66f0: Any): Unit =
+      columnLevelPermissionRules(_idx_ac66f0.toList())
 
   /**
    * An ID for the dataset that you want to create.
@@ -439,15 +439,15 @@ public open class CfnDataSet internal constructor(
   /**
    * The parameters that are declared in a dataset.
    */
-  public open fun datasetParameters(__idx_ac66f0: List<Any>) {
-    unwrap(this).setDatasetParameters(__idx_ac66f0)
+  public open fun datasetParameters(_idx_ac66f0: List<Any>) {
+    unwrap(this).setDatasetParameters(_idx_ac66f0)
   }
 
   /**
    * The parameters that are declared in a dataset.
    */
-  public open fun datasetParameters(vararg __idx_ac66f0: Any): Unit =
-      datasetParameters(__idx_ac66f0.toList())
+  public open fun datasetParameters(vararg _idx_ac66f0: Any): Unit =
+      datasetParameters(_idx_ac66f0.toList())
 
   /**
    * The folder that contains fields and nested subfolders for your dataset.
@@ -464,8 +464,8 @@ public open class CfnDataSet internal constructor(
   /**
    * The folder that contains fields and nested subfolders for your dataset.
    */
-  public open fun fieldFolders(__item_ac66f0: Map<String, Any>) {
-    unwrap(this).setFieldFolders(__item_ac66f0)
+  public open fun fieldFolders(_item_ac66f0: Map<String, Any>) {
+    unwrap(this).setFieldFolders(_item_ac66f0)
   }
 
   /**
@@ -531,8 +531,8 @@ public open class CfnDataSet internal constructor(
   /**
    * Configures the combination and transformation of the data from the physical tables.
    */
-  public open fun logicalTableMap(__item_ac66f0: Map<String, Any>) {
-    unwrap(this).setLogicalTableMap(__item_ac66f0)
+  public open fun logicalTableMap(_item_ac66f0: Map<String, Any>) {
+    unwrap(this).setLogicalTableMap(_item_ac66f0)
   }
 
   /**
@@ -562,14 +562,14 @@ public open class CfnDataSet internal constructor(
   /**
    * A list of resource permissions on the dataset.
    */
-  public open fun permissions(__idx_ac66f0: List<Any>) {
-    unwrap(this).setPermissions(__idx_ac66f0)
+  public open fun permissions(_idx_ac66f0: List<Any>) {
+    unwrap(this).setPermissions(_idx_ac66f0)
   }
 
   /**
    * A list of resource permissions on the dataset.
    */
-  public open fun permissions(vararg __idx_ac66f0: Any): Unit = permissions(__idx_ac66f0.toList())
+  public open fun permissions(vararg _idx_ac66f0: Any): Unit = permissions(_idx_ac66f0.toList())
 
   /**
    * Declares the physical tables that are available in the underlying data sources.
@@ -586,8 +586,8 @@ public open class CfnDataSet internal constructor(
   /**
    * Declares the physical tables that are available in the underlying data sources.
    */
-  public open fun physicalTableMap(__item_ac66f0: Map<String, Any>) {
-    unwrap(this).setPhysicalTableMap(__item_ac66f0)
+  public open fun physicalTableMap(_item_ac66f0: Map<String, Any>) {
+    unwrap(this).setPhysicalTableMap(_item_ac66f0)
   }
 
   /**

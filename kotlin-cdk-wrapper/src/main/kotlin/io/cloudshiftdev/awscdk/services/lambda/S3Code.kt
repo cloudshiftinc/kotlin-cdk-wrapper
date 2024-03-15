@@ -24,15 +24,17 @@ import kotlin.String
 public open class S3Code internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.S3Code,
 ) : Code(cdkObject) {
+  public constructor(bucket: IBucket, key: String) :
+      this(software.amazon.awscdk.services.lambda.S3Code(bucket.let(IBucket::unwrap), key)
+  )
+
   public constructor(
     bucket: IBucket,
     key: String,
     objectVersion: String,
-  ) : this(software.amazon.awscdk.services.lambda.S3Code(IBucket.unwrap(bucket), key,
-      objectVersion))
-
-  public constructor(bucket: IBucket, key: String) :
-      this(software.amazon.awscdk.services.lambda.S3Code(IBucket.unwrap(bucket), key))
+  ) : this(software.amazon.awscdk.services.lambda.S3Code(bucket.let(IBucket::unwrap), key,
+      objectVersion)
+  )
 
   /**
    * Called when the lambda or layer is initialized to allow this object to bind to the stack, add
@@ -40,8 +42,8 @@ public open class S3Code internal constructor(
    *
    * @param _scope 
    */
-  public override fun bind(_scope: Construct): CodeConfig =
-      unwrap(this).bind(_scope.let(Construct::unwrap)).let(CodeConfig::wrap)
+  public override fun bind(scope: Construct): CodeConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(CodeConfig::wrap)
 
   /**
    * Determines whether this Code is inline code or not.

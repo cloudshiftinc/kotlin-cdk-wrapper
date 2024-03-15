@@ -80,15 +80,15 @@ public open class CfnProfilingGroup internal constructor(
   /**
    * Adds anomaly notifications for a profiling group.
    */
-  public open fun anomalyDetectionNotificationConfiguration(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAnomalyDetectionNotificationConfiguration(__idx_ac66f0)
+  public open fun anomalyDetectionNotificationConfiguration(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAnomalyDetectionNotificationConfiguration(_idx_ac66f0)
   }
 
   /**
    * Adds anomaly notifications for a profiling group.
    */
-  public open fun anomalyDetectionNotificationConfiguration(vararg __idx_ac66f0: Any): Unit =
-      anomalyDetectionNotificationConfiguration(__idx_ac66f0.toList())
+  public open fun anomalyDetectionNotificationConfiguration(vararg _idx_ac66f0: Any): Unit =
+      anomalyDetectionNotificationConfiguration(_idx_ac66f0.toList())
 
   /**
    * The full Amazon Resource Name (ARN) for that profiling group.

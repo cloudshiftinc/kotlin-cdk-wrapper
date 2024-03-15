@@ -21,7 +21,8 @@ public open class Assign internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.Assign,
 ) : CdkObject(cdkObject) {
   public constructor(attr: String, arg: String) :
-      this(software.amazon.awscdk.services.appsync.Assign(attr, arg))
+      this(software.amazon.awscdk.services.appsync.Assign(attr, arg)
+  )
 
   /**
    * Renders the assignment as a map element.

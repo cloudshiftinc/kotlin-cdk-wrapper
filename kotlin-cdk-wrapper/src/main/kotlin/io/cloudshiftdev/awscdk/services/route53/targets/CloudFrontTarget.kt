@@ -30,7 +30,8 @@ public open class CloudFrontTarget internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.route53.targets.CloudFrontTarget,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
   public constructor(distribution: IDistribution) :
-      this(software.amazon.awscdk.services.route53.targets.CloudFrontTarget(IDistribution.unwrap(distribution)))
+      this(software.amazon.awscdk.services.route53.targets.CloudFrontTarget(distribution.let(IDistribution::unwrap))
+  )
 
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
@@ -38,8 +39,8 @@ public open class CloudFrontTarget internal constructor(
    * @param _record 
    * @param _zone
    */
-  public override fun bind(_record: IRecordSet): AliasRecordTargetConfig =
-      unwrap(this).bind(_record.let(IRecordSet::unwrap)).let(AliasRecordTargetConfig::wrap)
+  public override fun bind(record: IRecordSet): AliasRecordTargetConfig =
+      unwrap(this).bind(record.let(IRecordSet::unwrap)).let(AliasRecordTargetConfig::wrap)
 
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
@@ -47,9 +48,9 @@ public open class CloudFrontTarget internal constructor(
    * @param _record 
    * @param _zone
    */
-  public override fun bind(_record: IRecordSet, _zone: IHostedZone): AliasRecordTargetConfig =
-      unwrap(this).bind(_record.let(IRecordSet::unwrap),
-      _zone.let(IHostedZone::unwrap)).let(AliasRecordTargetConfig::wrap)
+  public override fun bind(record: IRecordSet, zone: IHostedZone): AliasRecordTargetConfig =
+      unwrap(this).bind(record.let(IRecordSet::unwrap),
+      zone.let(IHostedZone::unwrap)).let(AliasRecordTargetConfig::wrap)
 
   public companion object {
     public val CLOUDFRONT_ZONE_ID: String =

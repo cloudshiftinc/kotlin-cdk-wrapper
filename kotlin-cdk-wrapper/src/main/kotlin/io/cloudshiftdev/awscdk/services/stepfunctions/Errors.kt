@@ -60,7 +60,8 @@ import kotlin.String
 public open class Errors internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Errors,
 ) : CdkObject(cdkObject) {
-  public constructor() : this(software.amazon.awscdk.services.stepfunctions.Errors())
+  public constructor() : this(software.amazon.awscdk.services.stepfunctions.Errors()
+  )
 
   public companion object {
     public val ALL: String = software.amazon.awscdk.services.stepfunctions.Errors.ALL

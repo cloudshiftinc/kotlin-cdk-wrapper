@@ -113,14 +113,14 @@ public open class CfnInstance internal constructor(
   /**
    * An array of add-ons for the instance.
    */
-  public open fun addOns(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAddOns(__idx_ac66f0)
+  public open fun addOns(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAddOns(_idx_ac66f0)
   }
 
   /**
    * An array of add-ons for the instance.
    */
-  public open fun addOns(vararg __idx_ac66f0: Any): Unit = addOns(__idx_ac66f0.toList())
+  public open fun addOns(vararg _idx_ac66f0: Any): Unit = addOns(_idx_ac66f0.toList())
 
   /**
    * The number of vCPUs the instance has.

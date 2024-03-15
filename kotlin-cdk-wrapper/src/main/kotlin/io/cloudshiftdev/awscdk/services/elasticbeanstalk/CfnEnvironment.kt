@@ -167,15 +167,15 @@ public open class CfnEnvironment internal constructor(
   /**
    * Key-value pairs defining configuration options for this environment, such as the instance type.
    */
-  public open fun optionSettings(__idx_ac66f0: List<Any>) {
-    unwrap(this).setOptionSettings(__idx_ac66f0)
+  public open fun optionSettings(_idx_ac66f0: List<Any>) {
+    unwrap(this).setOptionSettings(_idx_ac66f0)
   }
 
   /**
    * Key-value pairs defining configuration options for this environment, such as the instance type.
    */
-  public open fun optionSettings(vararg __idx_ac66f0: Any): Unit =
-      optionSettings(__idx_ac66f0.toList())
+  public open fun optionSettings(vararg _idx_ac66f0: Any): Unit =
+      optionSettings(_idx_ac66f0.toList())
 
   /**
    * The Amazon Resource Name (ARN) of the custom platform to use with the environment.

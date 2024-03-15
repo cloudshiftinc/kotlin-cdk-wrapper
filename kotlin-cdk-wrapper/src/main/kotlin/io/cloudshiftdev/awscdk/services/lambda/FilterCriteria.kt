@@ -32,7 +32,8 @@ import kotlin.collections.Map
 public open class FilterCriteria internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.FilterCriteria,
 ) : CdkObject(cdkObject) {
-  public constructor() : this(software.amazon.awscdk.services.lambda.FilterCriteria())
+  public constructor() : this(software.amazon.awscdk.services.lambda.FilterCriteria()
+  )
 
   public companion object {
     public fun filter(filter: Map<String, Any>): Map<String, Any> =

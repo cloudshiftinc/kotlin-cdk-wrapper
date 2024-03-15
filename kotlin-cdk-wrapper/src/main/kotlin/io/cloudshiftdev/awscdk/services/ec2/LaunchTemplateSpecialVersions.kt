@@ -22,7 +22,8 @@ public open class LaunchTemplateSpecialVersions internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.LaunchTemplateSpecialVersions,
 ) : CdkObject(cdkObject) {
-  public constructor() : this(software.amazon.awscdk.services.ec2.LaunchTemplateSpecialVersions())
+  public constructor() : this(software.amazon.awscdk.services.ec2.LaunchTemplateSpecialVersions()
+  )
 
   public companion object {
     public val DEFAULT_VERSION: String =

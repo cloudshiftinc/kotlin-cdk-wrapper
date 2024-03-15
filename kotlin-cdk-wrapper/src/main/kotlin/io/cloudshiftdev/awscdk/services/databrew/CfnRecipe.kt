@@ -110,14 +110,14 @@ public open class CfnRecipe internal constructor(
   /**
    * A list of steps that are defined by the recipe.
    */
-  public open fun steps(__idx_ac66f0: List<Any>) {
-    unwrap(this).setSteps(__idx_ac66f0)
+  public open fun steps(_idx_ac66f0: List<Any>) {
+    unwrap(this).setSteps(_idx_ac66f0)
   }
 
   /**
    * A list of steps that are defined by the recipe.
    */
-  public open fun steps(vararg __idx_ac66f0: Any): Unit = steps(__idx_ac66f0.toList())
+  public open fun steps(vararg _idx_ac66f0: Any): Unit = steps(_idx_ac66f0.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

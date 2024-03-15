@@ -24,7 +24,8 @@ public open class StringDefinitionBody internal constructor(
       software.amazon.awscdk.services.stepfunctions.StringDefinitionBody,
 ) : DefinitionBody(cdkObject) {
   public constructor(body: String) :
-      this(software.amazon.awscdk.services.stepfunctions.StringDefinitionBody(body))
+      this(software.amazon.awscdk.services.stepfunctions.StringDefinitionBody(body)
+  )
 
   /**
    * @param _scope 
@@ -33,12 +34,12 @@ public open class StringDefinitionBody internal constructor(
    * @param _graph
    */
   public override fun bind(
-    _scope: Construct,
-    _sfnPrincipal: IPrincipal,
-    _sfnProps: StateMachineProps,
-  ): DefinitionConfig = unwrap(this).bind(_scope.let(Construct::unwrap),
-      _sfnPrincipal.let(IPrincipal::unwrap),
-      _sfnProps.let(StateMachineProps::unwrap)).let(DefinitionConfig::wrap)
+    scope: Construct,
+    sfnPrincipal: IPrincipal,
+    sfnProps: StateMachineProps,
+  ): DefinitionConfig = unwrap(this).bind(scope.let(Construct::unwrap),
+      sfnPrincipal.let(IPrincipal::unwrap),
+      sfnProps.let(StateMachineProps::unwrap)).let(DefinitionConfig::wrap)
 
   /**
    * @param _scope 
@@ -49,10 +50,10 @@ public open class StringDefinitionBody internal constructor(
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("d2dbd4d1e5f21bba5dd51d75253d432be0ee512a924449cbb7efb61b2d333163")
   public override fun bind(
-    _scope: Construct,
-    _sfnPrincipal: IPrincipal,
-    _sfnProps: StateMachineProps.Builder.() -> Unit,
-  ): DefinitionConfig = bind(_scope, _sfnPrincipal, StateMachineProps(_sfnProps))
+    scope: Construct,
+    sfnPrincipal: IPrincipal,
+    sfnProps: StateMachineProps.Builder.() -> Unit,
+  ): DefinitionConfig = bind(scope, sfnPrincipal, StateMachineProps(sfnProps))
 
   /**
    * @param _scope 
@@ -61,13 +62,13 @@ public open class StringDefinitionBody internal constructor(
    * @param _graph
    */
   public override fun bind(
-    _scope: Construct,
-    _sfnPrincipal: IPrincipal,
-    _sfnProps: StateMachineProps,
-    _graph: StateGraph,
-  ): DefinitionConfig = unwrap(this).bind(_scope.let(Construct::unwrap),
-      _sfnPrincipal.let(IPrincipal::unwrap), _sfnProps.let(StateMachineProps::unwrap),
-      _graph.let(StateGraph::unwrap)).let(DefinitionConfig::wrap)
+    scope: Construct,
+    sfnPrincipal: IPrincipal,
+    sfnProps: StateMachineProps,
+    graph: StateGraph,
+  ): DefinitionConfig = unwrap(this).bind(scope.let(Construct::unwrap),
+      sfnPrincipal.let(IPrincipal::unwrap), sfnProps.let(StateMachineProps::unwrap),
+      graph.let(StateGraph::unwrap)).let(DefinitionConfig::wrap)
 
   /**
    *

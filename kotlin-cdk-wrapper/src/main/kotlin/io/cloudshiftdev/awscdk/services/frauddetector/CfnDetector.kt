@@ -144,15 +144,15 @@ public open class CfnDetector internal constructor(
   /**
    * The models to associate with this detector.
    */
-  public open fun associatedModels(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAssociatedModels(__idx_ac66f0)
+  public open fun associatedModels(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAssociatedModels(_idx_ac66f0)
   }
 
   /**
    * The models to associate with this detector.
    */
-  public open fun associatedModels(vararg __idx_ac66f0: Any): Unit =
-      associatedModels(__idx_ac66f0.toList())
+  public open fun associatedModels(vararg _idx_ac66f0: Any): Unit =
+      associatedModels(_idx_ac66f0.toList())
 
   /**
    * The detector ARN.
@@ -289,14 +289,14 @@ public open class CfnDetector internal constructor(
   /**
    * The rules to include in the detector version.
    */
-  public open fun rules(__idx_ac66f0: List<Any>) {
-    unwrap(this).setRules(__idx_ac66f0)
+  public open fun rules(_idx_ac66f0: List<Any>) {
+    unwrap(this).setRules(_idx_ac66f0)
   }
 
   /**
    * The rules to include in the detector version.
    */
-  public open fun rules(vararg __idx_ac66f0: Any): Unit = rules(__idx_ac66f0.toList())
+  public open fun rules(vararg _idx_ac66f0: Any): Unit = rules(_idx_ac66f0.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

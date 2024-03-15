@@ -214,15 +214,14 @@ public open class CfnAnomalyDetector internal constructor(
   /**
    * The detector's dataset.
    */
-  public open fun metricSetList(__idx_ac66f0: List<Any>) {
-    unwrap(this).setMetricSetList(__idx_ac66f0)
+  public open fun metricSetList(_idx_ac66f0: List<Any>) {
+    unwrap(this).setMetricSetList(_idx_ac66f0)
   }
 
   /**
    * The detector's dataset.
    */
-  public open fun metricSetList(vararg __idx_ac66f0: Any): Unit =
-      metricSetList(__idx_ac66f0.toList())
+  public open fun metricSetList(vararg _idx_ac66f0: Any): Unit = metricSetList(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.lookoutmetrics.CfnAnomalyDetector].

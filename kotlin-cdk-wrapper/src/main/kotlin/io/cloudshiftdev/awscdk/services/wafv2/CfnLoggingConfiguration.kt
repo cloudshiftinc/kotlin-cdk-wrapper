@@ -147,15 +147,15 @@ public open class CfnLoggingConfiguration internal constructor(
   /**
    * The parts of the request that you want to keep out of the logs.
    */
-  public open fun redactedFields(__idx_ac66f0: List<Any>) {
-    unwrap(this).setRedactedFields(__idx_ac66f0)
+  public open fun redactedFields(_idx_ac66f0: List<Any>) {
+    unwrap(this).setRedactedFields(_idx_ac66f0)
   }
 
   /**
    * The parts of the request that you want to keep out of the logs.
    */
-  public open fun redactedFields(vararg __idx_ac66f0: Any): Unit =
-      redactedFields(__idx_ac66f0.toList())
+  public open fun redactedFields(vararg _idx_ac66f0: Any): Unit =
+      redactedFields(_idx_ac66f0.toList())
 
   /**
    * The Amazon Resource Name (ARN) of the web ACL that you want to associate with

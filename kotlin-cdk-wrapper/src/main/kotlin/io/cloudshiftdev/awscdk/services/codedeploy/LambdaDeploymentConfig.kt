@@ -130,22 +130,21 @@ public open class LambdaDeploymentConfig internal constructor(
 
     @Deprecated(message = "deprecated in CDK")
     public fun doImport(
-      _scope: CloudshiftdevConstructsConstruct,
-      _id: String,
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
       props: LambdaDeploymentConfigImportProps,
     ): ILambdaDeploymentConfig =
-        software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig.doImport(_scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        _id,
-        props.let(LambdaDeploymentConfigImportProps::unwrap)).let(ILambdaDeploymentConfig::wrap)
+        software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig.doImport(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        id, props.let(LambdaDeploymentConfigImportProps::unwrap)).let(ILambdaDeploymentConfig::wrap)
 
     @Deprecated(message = "deprecated in CDK")
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fafbd60daf73a5800337fbe97f5b3805d8c2f09a126c3255cb4bcb3b42d78746")
     public fun doImport(
-      _scope: CloudshiftdevConstructsConstruct,
-      _id: String,
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
       props: LambdaDeploymentConfigImportProps.Builder.() -> Unit,
-    ): ILambdaDeploymentConfig = doImport(_scope, _id, LambdaDeploymentConfigImportProps(props))
+    ): ILambdaDeploymentConfig = doImport(scope, id, LambdaDeploymentConfigImportProps(props))
 
     public fun fromLambdaDeploymentConfigName(
       scope: CloudshiftdevConstructsConstruct,

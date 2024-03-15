@@ -194,14 +194,14 @@ public open class CfnRole internal constructor(
   /**
    * Adds or updates an inline policy document that is embedded in the specified IAM role.
    */
-  public open fun policies(__idx_ac66f0: List<Any>) {
-    unwrap(this).setPolicies(__idx_ac66f0)
+  public open fun policies(_idx_ac66f0: List<Any>) {
+    unwrap(this).setPolicies(_idx_ac66f0)
   }
 
   /**
    * Adds or updates an inline policy document that is embedded in the specified IAM role.
    */
-  public open fun policies(vararg __idx_ac66f0: Any): Unit = policies(__idx_ac66f0.toList())
+  public open fun policies(vararg _idx_ac66f0: Any): Unit = policies(_idx_ac66f0.toList())
 
   /**
    * A name for the IAM role, up to 64 characters in length.

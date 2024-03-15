@@ -101,14 +101,14 @@ public open class CfnUserPoolResourceServer internal constructor(
   /**
    * A list of scopes.
    */
-  public open fun scopes(__idx_ac66f0: List<Any>) {
-    unwrap(this).setScopes(__idx_ac66f0)
+  public open fun scopes(_idx_ac66f0: List<Any>) {
+    unwrap(this).setScopes(_idx_ac66f0)
   }
 
   /**
    * A list of scopes.
    */
-  public open fun scopes(vararg __idx_ac66f0: Any): Unit = scopes(__idx_ac66f0.toList())
+  public open fun scopes(vararg _idx_ac66f0: Any): Unit = scopes(_idx_ac66f0.toList())
 
   /**
    * The user pool ID for the user pool.

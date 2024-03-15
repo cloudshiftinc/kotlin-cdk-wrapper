@@ -53,10 +53,9 @@ public open class AppMeshProxyConfiguration internal constructor(
    * @param _scope 
    * @param _taskDefinition 
    */
-  public override fun bind(_scope: Construct, _taskDefinition: TaskDefinition):
-      CfnTaskDefinition.ProxyConfigurationProperty =
-      unwrap(this).bind(_scope.let(Construct::unwrap),
-      _taskDefinition.let(TaskDefinition::unwrap)).let(CfnTaskDefinition.ProxyConfigurationProperty::wrap)
+  public override fun bind(scope: Construct, taskDefinition: TaskDefinition):
+      CfnTaskDefinition.ProxyConfigurationProperty = unwrap(this).bind(scope.let(Construct::unwrap),
+      taskDefinition.let(TaskDefinition::unwrap)).let(CfnTaskDefinition.ProxyConfigurationProperty::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.AppMeshProxyConfiguration].

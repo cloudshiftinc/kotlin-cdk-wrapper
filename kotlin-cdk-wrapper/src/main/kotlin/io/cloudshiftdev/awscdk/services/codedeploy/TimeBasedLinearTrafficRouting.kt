@@ -29,8 +29,8 @@ public open class TimeBasedLinearTrafficRouting internal constructor(
    *
    * @param _scope 
    */
-  public override fun bind(_scope: Construct): TrafficRoutingConfig =
-      unwrap(this).bind(_scope.let(Construct::unwrap)).let(TrafficRoutingConfig::wrap)
+  public override fun bind(scope: Construct): TrafficRoutingConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(TrafficRoutingConfig::wrap)
 
   /**
    * The amount of time between additional traffic shifts.

@@ -22,7 +22,8 @@ public open class AwsCliLayer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.lambdalayer.awscli.AwsCliLayer,
 ) : LayerVersion(cdkObject) {
   public constructor(scope: Construct, id: String) :
-      this(software.amazon.awscdk.lambdalayer.awscli.AwsCliLayer(Construct.unwrap(scope), id))
+      this(software.amazon.awscdk.lambdalayer.awscli.AwsCliLayer(scope.let(Construct::unwrap), id)
+  )
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.lambdalayer.awscli.AwsCliLayer): AwsCliLayer

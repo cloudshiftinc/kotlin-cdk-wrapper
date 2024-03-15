@@ -24,7 +24,8 @@ public open class SnsDestination internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3.notifications.SnsDestination,
 ) : CdkObject(cdkObject), IBucketNotificationDestination {
   public constructor(topic: ITopic) :
-      this(software.amazon.awscdk.services.s3.notifications.SnsDestination(ITopic.unwrap(topic)))
+      this(software.amazon.awscdk.services.s3.notifications.SnsDestination(topic.let(ITopic::unwrap))
+  )
 
   /**
    * Registers this resource to receive notifications for the specified bucket.
@@ -36,8 +37,8 @@ public open class SnsDestination internal constructor(
    * @param _scope 
    * @param bucket 
    */
-  public override fun bind(_scope: Construct, bucket: IBucket): BucketNotificationDestinationConfig
-      = unwrap(this).bind(_scope.let(Construct::unwrap),
+  public override fun bind(scope: Construct, bucket: IBucket): BucketNotificationDestinationConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap),
       bucket.let(IBucket::unwrap)).let(BucketNotificationDestinationConfig::wrap)
 
   public companion object {

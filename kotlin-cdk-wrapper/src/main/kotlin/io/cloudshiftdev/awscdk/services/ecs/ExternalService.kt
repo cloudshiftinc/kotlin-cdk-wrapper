@@ -42,8 +42,8 @@ public open class ExternalService internal constructor(
    *
    * @param _options 
    */
-  public override fun associateCloudMapService(_options: AssociateCloudMapServiceOptions) {
-    unwrap(this).associateCloudMapService(_options.let(AssociateCloudMapServiceOptions::unwrap))
+  public override fun associateCloudMapService(options: AssociateCloudMapServiceOptions) {
+    unwrap(this).associateCloudMapService(options.let(AssociateCloudMapServiceOptions::unwrap))
   }
 
   /**
@@ -55,8 +55,8 @@ public open class ExternalService internal constructor(
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("9efdde89b809884516ab0c4bd40829d6167d5f1d27bdea442fed263281456fdd")
   public override
-      fun associateCloudMapService(_options: AssociateCloudMapServiceOptions.Builder.() -> Unit):
-      Unit = associateCloudMapService(AssociateCloudMapServiceOptions(_options))
+      fun associateCloudMapService(options: AssociateCloudMapServiceOptions.Builder.() -> Unit):
+      Unit = associateCloudMapService(AssociateCloudMapServiceOptions(options))
 
   /**
    * Overriden method to throw error as `attachToApplicationTargetGroup` is not supported for
@@ -64,17 +64,17 @@ public open class ExternalService internal constructor(
    *
    * @param _targetGroup 
    */
-  public override fun attachToApplicationTargetGroup(_targetGroup: IApplicationTargetGroup):
+  public override fun attachToApplicationTargetGroup(targetGroup: IApplicationTargetGroup):
       LoadBalancerTargetProps =
-      unwrap(this).attachToApplicationTargetGroup(_targetGroup.let(IApplicationTargetGroup::unwrap)).let(LoadBalancerTargetProps::wrap)
+      unwrap(this).attachToApplicationTargetGroup(targetGroup.let(IApplicationTargetGroup::unwrap)).let(LoadBalancerTargetProps::wrap)
 
   /**
    * Overriden method to throw error as `autoScaleTaskCount` is not supported for external service.
    *
    * @param _props 
    */
-  public override fun autoScaleTaskCount(_props: EnableScalingProps): ScalableTaskCount =
-      unwrap(this).autoScaleTaskCount(_props.let(EnableScalingProps::unwrap)).let(ScalableTaskCount::wrap)
+  public override fun autoScaleTaskCount(props: EnableScalingProps): ScalableTaskCount =
+      unwrap(this).autoScaleTaskCount(props.let(EnableScalingProps::unwrap)).let(ScalableTaskCount::wrap)
 
   /**
    * Overriden method to throw error as `autoScaleTaskCount` is not supported for external service.
@@ -83,16 +83,16 @@ public open class ExternalService internal constructor(
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("0163fbd7c68d4e9af9f18b4ef7de232b93ee41c4e9599b548a4b01bab6ca323c")
-  public override fun autoScaleTaskCount(_props: EnableScalingProps.Builder.() -> Unit):
-      ScalableTaskCount = autoScaleTaskCount(EnableScalingProps(_props))
+  public override fun autoScaleTaskCount(props: EnableScalingProps.Builder.() -> Unit):
+      ScalableTaskCount = autoScaleTaskCount(EnableScalingProps(props))
 
   /**
    * Overriden method to throw error as `enableCloudMap` is not supported for external service.
    *
    * @param _options 
    */
-  public override fun enableCloudMap(_options: CloudMapOptions): Service =
-      unwrap(this).enableCloudMap(_options.let(CloudMapOptions::unwrap)).let(Service::wrap)
+  public override fun enableCloudMap(options: CloudMapOptions): Service =
+      unwrap(this).enableCloudMap(options.let(CloudMapOptions::unwrap)).let(Service::wrap)
 
   /**
    * Overriden method to throw error as `enableCloudMap` is not supported for external service.
@@ -101,17 +101,17 @@ public open class ExternalService internal constructor(
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("2eb98c16499f233304e458ef17b6e5c9df09e38dbe3c56301d0f41038fbab0cc")
-  public override fun enableCloudMap(_options: CloudMapOptions.Builder.() -> Unit): Service =
-      enableCloudMap(CloudMapOptions(_options))
+  public override fun enableCloudMap(options: CloudMapOptions.Builder.() -> Unit): Service =
+      enableCloudMap(CloudMapOptions(options))
 
   /**
    * Overriden method to throw error as `loadBalancerTarget` is not supported for external service.
    *
    * @param _options 
    */
-  public override fun loadBalancerTarget(_options: LoadBalancerTargetOptions):
-      IEcsLoadBalancerTarget =
-      unwrap(this).loadBalancerTarget(_options.let(LoadBalancerTargetOptions::unwrap)).let(IEcsLoadBalancerTarget::wrap)
+  public override fun loadBalancerTarget(options: LoadBalancerTargetOptions): IEcsLoadBalancerTarget
+      =
+      unwrap(this).loadBalancerTarget(options.let(LoadBalancerTargetOptions::unwrap)).let(IEcsLoadBalancerTarget::wrap)
 
   /**
    * Overriden method to throw error as `loadBalancerTarget` is not supported for external service.
@@ -120,8 +120,8 @@ public open class ExternalService internal constructor(
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("5c1f6de1e98dab0564840813319e438b96687e7140defdd69ba7bee4103a780f")
-  public override fun loadBalancerTarget(_options: LoadBalancerTargetOptions.Builder.() -> Unit):
-      IEcsLoadBalancerTarget = loadBalancerTarget(LoadBalancerTargetOptions(_options))
+  public override fun loadBalancerTarget(options: LoadBalancerTargetOptions.Builder.() -> Unit):
+      IEcsLoadBalancerTarget = loadBalancerTarget(LoadBalancerTargetOptions(options))
 
   /**
    * Overriden method to throw error as `registerLoadBalancerTargets` is not supported for external
@@ -129,8 +129,8 @@ public open class ExternalService internal constructor(
    *
    * @param _targets 
    */
-  public override fun registerLoadBalancerTargets(_targets: EcsTarget) {
-    unwrap(this).registerLoadBalancerTargets(_targets.let(EcsTarget::unwrap))
+  public override fun registerLoadBalancerTargets(targets: EcsTarget) {
+    unwrap(this).registerLoadBalancerTargets(targets.let(EcsTarget::unwrap))
   }
 
   /**
@@ -141,8 +141,8 @@ public open class ExternalService internal constructor(
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("3682e9eed91689cc4ed6f8310140605bef4e35e0fda59587fde4c2fc019cfaa6")
-  public override fun registerLoadBalancerTargets(_targets: EcsTarget.Builder.() -> Unit): Unit =
-      registerLoadBalancerTargets(EcsTarget(_targets))
+  public override fun registerLoadBalancerTargets(targets: EcsTarget.Builder.() -> Unit): Unit =
+      registerLoadBalancerTargets(EcsTarget(targets))
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.ExternalService].

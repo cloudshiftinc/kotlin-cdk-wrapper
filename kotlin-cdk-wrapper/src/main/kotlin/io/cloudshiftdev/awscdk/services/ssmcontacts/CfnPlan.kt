@@ -115,15 +115,15 @@ public open class CfnPlan internal constructor(
    * A list of stages that the escalation plan or engagement plan uses to engage contacts and
    * contact methods.
    */
-  public open fun stages(__idx_ac66f0: List<Any>) {
-    unwrap(this).setStages(__idx_ac66f0)
+  public open fun stages(_idx_ac66f0: List<Any>) {
+    unwrap(this).setStages(_idx_ac66f0)
   }
 
   /**
    * A list of stages that the escalation plan or engagement plan uses to engage contacts and
    * contact methods.
    */
-  public open fun stages(vararg __idx_ac66f0: Any): Unit = stages(__idx_ac66f0.toList())
+  public open fun stages(vararg _idx_ac66f0: Any): Unit = stages(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ssmcontacts.CfnPlan].

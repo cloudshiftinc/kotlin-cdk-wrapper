@@ -37,8 +37,8 @@ public open class JsonNull internal constructor(
    *
    * @param _ctx 
    */
-  public override fun resolve(_ctx: IResolveContext): Any =
-      unwrap(this).resolve(_ctx.let(IResolveContext::unwrap))
+  public override fun resolve(ctx: IResolveContext): Any =
+      unwrap(this).resolve(ctx.let(IResolveContext::unwrap))
 
   /**
    * Obtains the JSON representation of this object (`null`).

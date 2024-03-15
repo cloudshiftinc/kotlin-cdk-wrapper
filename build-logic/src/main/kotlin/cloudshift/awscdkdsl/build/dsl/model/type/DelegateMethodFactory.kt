@@ -7,13 +7,14 @@ internal class DelegateMethodFactory(
     cdkObjectName: String,
     private val isStatic: Boolean = false,
     private val forceOverride: Boolean = false,
+    private val isConstructor: Boolean,
 ) : MethodSpecFactory {
 
-    private val callGenerator = DelegateCallGenerator(context, false, cdkObjectName)
+    private val callGenerator = DelegateCallGenerator(false, cdkObjectName)
 
     override fun create(enclosingClass : CdkClass, method: CdkClass.Method): List<MethodSpec> {
         val spec = MethodSpec.fromCdkMethod(method, enclosingClass, context.model)
-            .copy(isStatic = isStatic)
+            .copy(isStatic = isStatic, isConstructor = isConstructor)
 
         val theSpec = spec.copy(isOverride = forceOverride || spec.isOverride)
 

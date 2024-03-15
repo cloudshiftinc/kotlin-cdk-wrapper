@@ -23,15 +23,17 @@ import kotlin.String
 public open class S3Code internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.synthetics.S3Code,
 ) : Code(cdkObject) {
+  public constructor(bucket: IBucket, key: String) :
+      this(software.amazon.awscdk.services.synthetics.S3Code(bucket.let(IBucket::unwrap), key)
+  )
+
   public constructor(
     bucket: IBucket,
     key: String,
     objectVersion: String,
-  ) : this(software.amazon.awscdk.services.synthetics.S3Code(IBucket.unwrap(bucket), key,
-      objectVersion))
-
-  public constructor(bucket: IBucket, key: String) :
-      this(software.amazon.awscdk.services.synthetics.S3Code(IBucket.unwrap(bucket), key))
+  ) : this(software.amazon.awscdk.services.synthetics.S3Code(bucket.let(IBucket::unwrap), key,
+      objectVersion)
+  )
 
   /**
    * Called when the canary is initialized to allow this object to bind to the stack, add resources
@@ -42,11 +44,11 @@ public open class S3Code internal constructor(
    * @param _family 
    */
   public override fun bind(
-    _scope: Construct,
-    _handler: String,
-    _family: RuntimeFamily,
-  ): CodeConfig = unwrap(this).bind(_scope.let(Construct::unwrap), _handler,
-      _family.let(RuntimeFamily::unwrap)).let(CodeConfig::wrap)
+    scope: Construct,
+    handler: String,
+    family: RuntimeFamily,
+  ): CodeConfig = unwrap(this).bind(scope.let(Construct::unwrap), handler,
+      family.let(RuntimeFamily::unwrap)).let(CodeConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.S3Code): S3Code =

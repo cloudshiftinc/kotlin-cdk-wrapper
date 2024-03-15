@@ -125,16 +125,16 @@ public open class CfnUser internal constructor(
    * Logical directory mappings that specify what Amazon S3 or Amazon EFS paths and keys should be
    * visible to your user and how you want to make them visible.
    */
-  public open fun homeDirectoryMappings(__idx_ac66f0: List<Any>) {
-    unwrap(this).setHomeDirectoryMappings(__idx_ac66f0)
+  public open fun homeDirectoryMappings(_idx_ac66f0: List<Any>) {
+    unwrap(this).setHomeDirectoryMappings(_idx_ac66f0)
   }
 
   /**
    * Logical directory mappings that specify what Amazon S3 or Amazon EFS paths and keys should be
    * visible to your user and how you want to make them visible.
    */
-  public open fun homeDirectoryMappings(vararg __idx_ac66f0: Any): Unit =
-      homeDirectoryMappings(__idx_ac66f0.toList())
+  public open fun homeDirectoryMappings(vararg _idx_ac66f0: Any): Unit =
+      homeDirectoryMappings(_idx_ac66f0.toList())
 
   /**
    * The type of landing directory (folder) that you want your users' home directory to be when they

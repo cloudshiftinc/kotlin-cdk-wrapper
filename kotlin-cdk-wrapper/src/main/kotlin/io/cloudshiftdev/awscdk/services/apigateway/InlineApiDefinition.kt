@@ -22,7 +22,8 @@ public open class InlineApiDefinition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.InlineApiDefinition,
 ) : ApiDefinition(cdkObject) {
   public constructor(definition: Any) :
-      this(software.amazon.awscdk.services.apigateway.InlineApiDefinition(definition))
+      this(software.amazon.awscdk.services.apigateway.InlineApiDefinition(definition)
+  )
 
   /**
    * Called when the specification is initialized to allow this object to bind to the stack, add
@@ -30,8 +31,8 @@ public open class InlineApiDefinition internal constructor(
    *
    * @param _scope 
    */
-  public override fun bind(_scope: Construct): ApiDefinitionConfig =
-      unwrap(this).bind(_scope.let(Construct::unwrap)).let(ApiDefinitionConfig::wrap)
+  public override fun bind(scope: Construct): ApiDefinitionConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(ApiDefinitionConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.InlineApiDefinition):

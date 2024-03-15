@@ -29,7 +29,8 @@ public open class LoadBalancerTarget internal constructor(
       software.amazon.awscdk.services.route53.targets.LoadBalancerTarget,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
   public constructor(loadBalancer: ILoadBalancerV2) :
-      this(software.amazon.awscdk.services.route53.targets.LoadBalancerTarget(ILoadBalancerV2.unwrap(loadBalancer)))
+      this(software.amazon.awscdk.services.route53.targets.LoadBalancerTarget(loadBalancer.let(ILoadBalancerV2::unwrap))
+  )
 
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
@@ -37,8 +38,8 @@ public open class LoadBalancerTarget internal constructor(
    * @param _record 
    * @param _zone
    */
-  public override fun bind(_record: IRecordSet): AliasRecordTargetConfig =
-      unwrap(this).bind(_record.let(IRecordSet::unwrap)).let(AliasRecordTargetConfig::wrap)
+  public override fun bind(record: IRecordSet): AliasRecordTargetConfig =
+      unwrap(this).bind(record.let(IRecordSet::unwrap)).let(AliasRecordTargetConfig::wrap)
 
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
@@ -46,9 +47,9 @@ public open class LoadBalancerTarget internal constructor(
    * @param _record 
    * @param _zone
    */
-  public override fun bind(_record: IRecordSet, _zone: IHostedZone): AliasRecordTargetConfig =
-      unwrap(this).bind(_record.let(IRecordSet::unwrap),
-      _zone.let(IHostedZone::unwrap)).let(AliasRecordTargetConfig::wrap)
+  public override fun bind(record: IRecordSet, zone: IHostedZone): AliasRecordTargetConfig =
+      unwrap(this).bind(record.let(IRecordSet::unwrap),
+      zone.let(IHostedZone::unwrap)).let(AliasRecordTargetConfig::wrap)
 
   public companion object {
     internal

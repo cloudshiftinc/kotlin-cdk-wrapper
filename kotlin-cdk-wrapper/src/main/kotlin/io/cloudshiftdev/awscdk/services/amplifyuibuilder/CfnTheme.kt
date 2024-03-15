@@ -135,14 +135,14 @@ public open class CfnTheme internal constructor(
   /**
    * Describes the properties that can be overriden to customize a theme.
    */
-  public open fun overrides(__idx_ac66f0: List<Any>) {
-    unwrap(this).setOverrides(__idx_ac66f0)
+  public open fun overrides(_idx_ac66f0: List<Any>) {
+    unwrap(this).setOverrides(_idx_ac66f0)
   }
 
   /**
    * Describes the properties that can be overriden to customize a theme.
    */
-  public open fun overrides(vararg __idx_ac66f0: Any): Unit = overrides(__idx_ac66f0.toList())
+  public open fun overrides(vararg _idx_ac66f0: Any): Unit = overrides(_idx_ac66f0.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.
@@ -176,14 +176,14 @@ public open class CfnTheme internal constructor(
   /**
    * A list of key-value pairs that defines the properties of the theme.
    */
-  public open fun values(__idx_ac66f0: List<Any>) {
-    unwrap(this).setValues(__idx_ac66f0)
+  public open fun values(_idx_ac66f0: List<Any>) {
+    unwrap(this).setValues(_idx_ac66f0)
   }
 
   /**
    * A list of key-value pairs that defines the properties of the theme.
    */
-  public open fun values(vararg __idx_ac66f0: Any): Unit = values(__idx_ac66f0.toList())
+  public open fun values(vararg _idx_ac66f0: Any): Unit = values(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.amplifyuibuilder.CfnTheme].

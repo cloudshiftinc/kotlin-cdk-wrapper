@@ -61,12 +61,14 @@ import kotlin.String
 public open class PrimaryKey internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.PrimaryKey,
 ) : CdkObject(cdkObject) {
-  public constructor(pkey: Assign, skey: Assign) :
-      this(software.amazon.awscdk.services.appsync.PrimaryKey(Assign.unwrap(pkey),
-      Assign.unwrap(skey)))
-
   public constructor(pkey: Assign) :
-      this(software.amazon.awscdk.services.appsync.PrimaryKey(Assign.unwrap(pkey)))
+      this(software.amazon.awscdk.services.appsync.PrimaryKey(pkey.let(Assign::unwrap))
+  )
+
+  public constructor(pkey: Assign, skey: Assign) :
+      this(software.amazon.awscdk.services.appsync.PrimaryKey(pkey.let(Assign::unwrap),
+      skey.let(Assign::unwrap))
+  )
 
   /**
    * Renders the key assignment to a VTL string.

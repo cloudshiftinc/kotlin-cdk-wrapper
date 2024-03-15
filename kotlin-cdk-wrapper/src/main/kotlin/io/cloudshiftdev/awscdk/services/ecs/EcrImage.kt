@@ -24,8 +24,9 @@ public open class EcrImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.EcrImage,
 ) : ContainerImage(cdkObject) {
   public constructor(repository: IRepository, tagOrDigest: String) :
-      this(software.amazon.awscdk.services.ecs.EcrImage(IRepository.unwrap(repository),
-      tagOrDigest))
+      this(software.amazon.awscdk.services.ecs.EcrImage(repository.let(IRepository::unwrap),
+      tagOrDigest)
+  )
 
   /**
    * Called when the image is used by a ContainerDefinition.
@@ -33,8 +34,8 @@ public open class EcrImage internal constructor(
    * @param _scope 
    * @param containerDefinition 
    */
-  public override fun bind(_scope: Construct, containerDefinition: ContainerDefinition):
-      ContainerImageConfig = unwrap(this).bind(_scope.let(Construct::unwrap),
+  public override fun bind(scope: Construct, containerDefinition: ContainerDefinition):
+      ContainerImageConfig = unwrap(this).bind(scope.let(Construct::unwrap),
       containerDefinition.let(ContainerDefinition::unwrap)).let(ContainerImageConfig::wrap)
 
   /**

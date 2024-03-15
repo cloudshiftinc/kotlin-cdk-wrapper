@@ -155,15 +155,15 @@ public open class CfnLaunch internal constructor(
    * An array of structures that contains the feature and variations that are to be used for the
    * launch.
    */
-  public open fun groups(__idx_ac66f0: List<Any>) {
-    unwrap(this).setGroups(__idx_ac66f0)
+  public open fun groups(_idx_ac66f0: List<Any>) {
+    unwrap(this).setGroups(_idx_ac66f0)
   }
 
   /**
    * An array of structures that contains the feature and variations that are to be used for the
    * launch.
    */
-  public open fun groups(vararg __idx_ac66f0: Any): Unit = groups(__idx_ac66f0.toList())
+  public open fun groups(vararg _idx_ac66f0: Any): Unit = groups(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -192,16 +192,16 @@ public open class CfnLaunch internal constructor(
    * An array of structures that define the metrics that will be used to monitor the launch
    * performance.
    */
-  public open fun metricMonitors(__idx_ac66f0: List<Any>) {
-    unwrap(this).setMetricMonitors(__idx_ac66f0)
+  public open fun metricMonitors(_idx_ac66f0: List<Any>) {
+    unwrap(this).setMetricMonitors(_idx_ac66f0)
   }
 
   /**
    * An array of structures that define the metrics that will be used to monitor the launch
    * performance.
    */
-  public open fun metricMonitors(vararg __idx_ac66f0: Any): Unit =
-      metricMonitors(__idx_ac66f0.toList())
+  public open fun metricMonitors(vararg _idx_ac66f0: Any): Unit =
+      metricMonitors(_idx_ac66f0.toList())
 
   /**
    * The name for the launch.
@@ -259,16 +259,16 @@ public open class CfnLaunch internal constructor(
    * An array of structures that define the traffic allocation percentages among the feature
    * variations during each step of the launch.
    */
-  public open fun scheduledSplitsConfig(__idx_ac66f0: List<Any>) {
-    unwrap(this).setScheduledSplitsConfig(__idx_ac66f0)
+  public open fun scheduledSplitsConfig(_idx_ac66f0: List<Any>) {
+    unwrap(this).setScheduledSplitsConfig(_idx_ac66f0)
   }
 
   /**
    * An array of structures that define the traffic allocation percentages among the feature
    * variations during each step of the launch.
    */
-  public open fun scheduledSplitsConfig(vararg __idx_ac66f0: Any): Unit =
-      scheduledSplitsConfig(__idx_ac66f0.toList())
+  public open fun scheduledSplitsConfig(vararg _idx_ac66f0: Any): Unit =
+      scheduledSplitsConfig(_idx_ac66f0.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

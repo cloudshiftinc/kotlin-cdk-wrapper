@@ -29,16 +29,16 @@ public abstract class SubnetFilter internal constructor(
    *
    * @param _subnets 
    */
-  public open fun selectSubnets(_subnets: List<ISubnet>): List<ISubnet> =
-      unwrap(this).selectSubnets(_subnets.map(ISubnet::unwrap)).map(ISubnet::wrap)
+  public open fun selectSubnets(subnets: List<ISubnet>): List<ISubnet> =
+      unwrap(this).selectSubnets(subnets.map(ISubnet::unwrap)).map(ISubnet::wrap)
 
   /**
    * Executes the subnet filtering logic, returning a filtered set of subnets.
    *
    * @param _subnets 
    */
-  public open fun selectSubnets(vararg _subnets: ISubnet): List<ISubnet> =
-      selectSubnets(_subnets.toList())
+  public open fun selectSubnets(vararg subnets: ISubnet): List<ISubnet> =
+      selectSubnets(subnets.toList())
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ec2.SubnetFilter,

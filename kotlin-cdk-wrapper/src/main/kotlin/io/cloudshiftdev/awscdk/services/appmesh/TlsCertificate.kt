@@ -61,8 +61,8 @@ public abstract class TlsCertificate internal constructor(
    *
    * @param _scope 
    */
-  public open fun bind(_scope: Construct): TlsCertificateConfig =
-      unwrap(this).bind(_scope.let(Construct::unwrap)).let(TlsCertificateConfig::wrap)
+  public open fun bind(scope: Construct): TlsCertificateConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(TlsCertificateConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.TlsCertificate,

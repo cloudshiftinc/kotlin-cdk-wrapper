@@ -72,10 +72,10 @@ public open class CrossAccountDestination internal constructor(
    * @param _scope 
    * @param _sourceLogGroup 
    */
-  public override fun bind(_scope: CloudshiftdevConstructsConstruct, _sourceLogGroup: ILogGroup):
+  public override fun bind(scope: CloudshiftdevConstructsConstruct, sourceLogGroup: ILogGroup):
       LogSubscriptionDestinationConfig =
-      unwrap(this).bind(_scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      _sourceLogGroup.let(ILogGroup::unwrap)).let(LogSubscriptionDestinationConfig::wrap)
+      unwrap(this).bind(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      sourceLogGroup.let(ILogGroup::unwrap)).let(LogSubscriptionDestinationConfig::wrap)
 
   /**
    * The ARN of this CrossAccountDestination object.

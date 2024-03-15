@@ -152,16 +152,16 @@ public open class CfnHealthCheck internal constructor(
    * The `HealthCheckTags` property describes key-value pairs that are associated with an
    * `AWS::Route53::HealthCheck` resource.
    */
-  public open fun healthCheckTags(__idx_ac66f0: List<Any>) {
-    unwrap(this).setHealthCheckTags(__idx_ac66f0)
+  public open fun healthCheckTags(_idx_ac66f0: List<Any>) {
+    unwrap(this).setHealthCheckTags(_idx_ac66f0)
   }
 
   /**
    * The `HealthCheckTags` property describes key-value pairs that are associated with an
    * `AWS::Route53::HealthCheck` resource.
    */
-  public open fun healthCheckTags(vararg __idx_ac66f0: Any): Unit =
-      healthCheckTags(__idx_ac66f0.toList())
+  public open fun healthCheckTags(vararg _idx_ac66f0: Any): Unit =
+      healthCheckTags(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

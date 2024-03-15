@@ -399,16 +399,15 @@ public open class CfnDeploymentGroup internal constructor(
    * The Amazon EC2 tags that are already applied to Amazon EC2 instances that you want to include
    * in the deployment group.
    */
-  public open fun ec2TagFilters(__idx_ac66f0: List<Any>) {
-    unwrap(this).setEc2TagFilters(__idx_ac66f0)
+  public open fun ec2TagFilters(_idx_ac66f0: List<Any>) {
+    unwrap(this).setEc2TagFilters(_idx_ac66f0)
   }
 
   /**
    * The Amazon EC2 tags that are already applied to Amazon EC2 instances that you want to include
    * in the deployment group.
    */
-  public open fun ec2TagFilters(vararg __idx_ac66f0: Any): Unit =
-      ec2TagFilters(__idx_ac66f0.toList())
+  public open fun ec2TagFilters(vararg _idx_ac66f0: Any): Unit = ec2TagFilters(_idx_ac66f0.toList())
 
   /**
    * Information about groups of tags applied to Amazon EC2 instances.
@@ -452,14 +451,14 @@ public open class CfnDeploymentGroup internal constructor(
   /**
    * The target Amazon ECS services in the deployment group.
    */
-  public open fun ecsServices(__idx_ac66f0: List<Any>) {
-    unwrap(this).setEcsServices(__idx_ac66f0)
+  public open fun ecsServices(_idx_ac66f0: List<Any>) {
+    unwrap(this).setEcsServices(_idx_ac66f0)
   }
 
   /**
    * The target Amazon ECS services in the deployment group.
    */
-  public open fun ecsServices(vararg __idx_ac66f0: Any): Unit = ecsServices(__idx_ac66f0.toList())
+  public open fun ecsServices(vararg _idx_ac66f0: Any): Unit = ecsServices(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -516,16 +515,16 @@ public open class CfnDeploymentGroup internal constructor(
    * The on-premises instance tags already applied to on-premises instances that you want to include
    * in the deployment group.
    */
-  public open fun onPremisesInstanceTagFilters(__idx_ac66f0: List<Any>) {
-    unwrap(this).setOnPremisesInstanceTagFilters(__idx_ac66f0)
+  public open fun onPremisesInstanceTagFilters(_idx_ac66f0: List<Any>) {
+    unwrap(this).setOnPremisesInstanceTagFilters(_idx_ac66f0)
   }
 
   /**
    * The on-premises instance tags already applied to on-premises instances that you want to include
    * in the deployment group.
    */
-  public open fun onPremisesInstanceTagFilters(vararg __idx_ac66f0: Any): Unit =
-      onPremisesInstanceTagFilters(__idx_ac66f0.toList())
+  public open fun onPremisesInstanceTagFilters(vararg _idx_ac66f0: Any): Unit =
+      onPremisesInstanceTagFilters(_idx_ac66f0.toList())
 
   /**
    * Information about groups of tags applied to on-premises instances.
@@ -645,15 +644,15 @@ public open class CfnDeploymentGroup internal constructor(
   /**
    * Information about triggers associated with the deployment group.
    */
-  public open fun triggerConfigurations(__idx_ac66f0: List<Any>) {
-    unwrap(this).setTriggerConfigurations(__idx_ac66f0)
+  public open fun triggerConfigurations(_idx_ac66f0: List<Any>) {
+    unwrap(this).setTriggerConfigurations(_idx_ac66f0)
   }
 
   /**
    * Information about triggers associated with the deployment group.
    */
-  public open fun triggerConfigurations(vararg __idx_ac66f0: Any): Unit =
-      triggerConfigurations(__idx_ac66f0.toList())
+  public open fun triggerConfigurations(vararg _idx_ac66f0: Any): Unit =
+      triggerConfigurations(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.codedeploy.CfnDeploymentGroup].

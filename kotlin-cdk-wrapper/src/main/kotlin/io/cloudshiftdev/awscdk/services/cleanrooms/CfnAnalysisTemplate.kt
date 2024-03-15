@@ -71,15 +71,15 @@ public open class CfnAnalysisTemplate internal constructor(
   /**
    * The parameters of the analysis template.
    */
-  public open fun analysisParameters(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAnalysisParameters(__idx_ac66f0)
+  public open fun analysisParameters(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAnalysisParameters(_idx_ac66f0)
   }
 
   /**
    * The parameters of the analysis template.
    */
-  public open fun analysisParameters(vararg __idx_ac66f0: Any): Unit =
-      analysisParameters(__idx_ac66f0.toList())
+  public open fun analysisParameters(vararg _idx_ac66f0: Any): Unit =
+      analysisParameters(_idx_ac66f0.toList())
 
   /**
    * Returns the identifier for the analysis template.

@@ -332,14 +332,14 @@ public open class CfnConnector internal constructor(
   /**
    * Specifies which plugin to use for the connector.
    */
-  public open fun plugins(__idx_ac66f0: List<Any>) {
-    unwrap(this).setPlugins(__idx_ac66f0)
+  public open fun plugins(_idx_ac66f0: List<Any>) {
+    unwrap(this).setPlugins(_idx_ac66f0)
   }
 
   /**
    * Specifies which plugin to use for the connector.
    */
-  public open fun plugins(vararg __idx_ac66f0: Any): Unit = plugins(__idx_ac66f0.toList())
+  public open fun plugins(vararg _idx_ac66f0: Any): Unit = plugins(_idx_ac66f0.toList())
 
   /**
    * The Amazon Resource Name (ARN) of the IAM role used by the connector to access Amazon Web

@@ -17,10 +17,9 @@ public abstract class ProxyConfiguration internal constructor(
    * @param _scope 
    * @param _taskDefinition 
    */
-  public open fun bind(_scope: Construct, _taskDefinition: TaskDefinition):
-      CfnTaskDefinition.ProxyConfigurationProperty =
-      unwrap(this).bind(_scope.let(Construct::unwrap),
-      _taskDefinition.let(TaskDefinition::unwrap)).let(CfnTaskDefinition.ProxyConfigurationProperty::wrap)
+  public open fun bind(scope: Construct, taskDefinition: TaskDefinition):
+      CfnTaskDefinition.ProxyConfigurationProperty = unwrap(this).bind(scope.let(Construct::unwrap),
+      taskDefinition.let(TaskDefinition::unwrap)).let(CfnTaskDefinition.ProxyConfigurationProperty::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ecs.ProxyConfiguration,

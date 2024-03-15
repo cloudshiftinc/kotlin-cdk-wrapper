@@ -182,15 +182,15 @@ public open class CfnVPNConnection internal constructor(
   /**
    * The tunnel options for the VPN connection.
    */
-  public open fun vpnTunnelOptionsSpecifications(__idx_ac66f0: List<Any>) {
-    unwrap(this).setVpnTunnelOptionsSpecifications(__idx_ac66f0)
+  public open fun vpnTunnelOptionsSpecifications(_idx_ac66f0: List<Any>) {
+    unwrap(this).setVpnTunnelOptionsSpecifications(_idx_ac66f0)
   }
 
   /**
    * The tunnel options for the VPN connection.
    */
-  public open fun vpnTunnelOptionsSpecifications(vararg __idx_ac66f0: Any): Unit =
-      vpnTunnelOptionsSpecifications(__idx_ac66f0.toList())
+  public open fun vpnTunnelOptionsSpecifications(vararg _idx_ac66f0: Any): Unit =
+      vpnTunnelOptionsSpecifications(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.CfnVPNConnection].

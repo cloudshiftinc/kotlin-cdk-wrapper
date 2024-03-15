@@ -235,16 +235,16 @@ public open class CfnMigrationProject internal constructor(
    * Information about the source data provider, including the name or ARN, and AWS Secrets Manager
    * parameters.
    */
-  public open fun sourceDataProviderDescriptors(__idx_ac66f0: List<Any>) {
-    unwrap(this).setSourceDataProviderDescriptors(__idx_ac66f0)
+  public open fun sourceDataProviderDescriptors(_idx_ac66f0: List<Any>) {
+    unwrap(this).setSourceDataProviderDescriptors(_idx_ac66f0)
   }
 
   /**
    * Information about the source data provider, including the name or ARN, and AWS Secrets Manager
    * parameters.
    */
-  public open fun sourceDataProviderDescriptors(vararg __idx_ac66f0: Any): Unit =
-      sourceDataProviderDescriptors(__idx_ac66f0.toList())
+  public open fun sourceDataProviderDescriptors(vararg _idx_ac66f0: Any): Unit =
+      sourceDataProviderDescriptors(_idx_ac66f0.toList())
 
   /**
    * An array of key-value pairs to apply to this resource.
@@ -282,16 +282,16 @@ public open class CfnMigrationProject internal constructor(
    * Information about the target data provider, including the name or ARN, and AWS Secrets Manager
    * parameters.
    */
-  public open fun targetDataProviderDescriptors(__idx_ac66f0: List<Any>) {
-    unwrap(this).setTargetDataProviderDescriptors(__idx_ac66f0)
+  public open fun targetDataProviderDescriptors(_idx_ac66f0: List<Any>) {
+    unwrap(this).setTargetDataProviderDescriptors(_idx_ac66f0)
   }
 
   /**
    * Information about the target data provider, including the name or ARN, and AWS Secrets Manager
    * parameters.
    */
-  public open fun targetDataProviderDescriptors(vararg __idx_ac66f0: Any): Unit =
-      targetDataProviderDescriptors(__idx_ac66f0.toList())
+  public open fun targetDataProviderDescriptors(vararg _idx_ac66f0: Any): Unit =
+      targetDataProviderDescriptors(_idx_ac66f0.toList())
 
   /**
    * The settings in JSON format for migration rules.

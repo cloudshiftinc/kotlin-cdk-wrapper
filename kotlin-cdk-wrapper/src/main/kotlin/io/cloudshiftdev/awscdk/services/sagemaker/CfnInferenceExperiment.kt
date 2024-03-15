@@ -243,15 +243,14 @@ public open class CfnInferenceExperiment internal constructor(
   /**
    * An array of `ModelVariantConfigSummary` objects.
    */
-  public open fun modelVariants(__idx_ac66f0: List<Any>) {
-    unwrap(this).setModelVariants(__idx_ac66f0)
+  public open fun modelVariants(_idx_ac66f0: List<Any>) {
+    unwrap(this).setModelVariants(_idx_ac66f0)
   }
 
   /**
    * An array of `ModelVariantConfigSummary` objects.
    */
-  public open fun modelVariants(vararg __idx_ac66f0: Any): Unit =
-      modelVariants(__idx_ac66f0.toList())
+  public open fun modelVariants(vararg _idx_ac66f0: Any): Unit = modelVariants(_idx_ac66f0.toList())
 
   /**
    * The name of the inference experiment.

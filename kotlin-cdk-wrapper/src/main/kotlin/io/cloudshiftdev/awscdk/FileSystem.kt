@@ -23,7 +23,8 @@ import kotlin.jvm.JvmName
 public open class FileSystem internal constructor(
   internal override val cdkObject: software.amazon.awscdk.FileSystem,
 ) : CdkObject(cdkObject) {
-  public constructor() : this(software.amazon.awscdk.FileSystem())
+  public constructor() : this(software.amazon.awscdk.FileSystem()
+  )
 
   public companion object {
     public fun copyDirectory(srcDir: String, destDir: String) {

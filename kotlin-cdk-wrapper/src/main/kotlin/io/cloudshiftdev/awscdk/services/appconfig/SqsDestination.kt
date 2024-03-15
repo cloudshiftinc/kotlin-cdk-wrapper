@@ -27,7 +27,8 @@ public open class SqsDestination internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.SqsDestination,
 ) : CdkObject(cdkObject), IEventDestination {
   public constructor(queue: IQueue) :
-      this(software.amazon.awscdk.services.appconfig.SqsDestination(IQueue.unwrap(queue)))
+      this(software.amazon.awscdk.services.appconfig.SqsDestination(queue.let(IQueue::unwrap))
+  )
 
   /**
    * The URI of the extension event destination.

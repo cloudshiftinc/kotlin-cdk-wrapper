@@ -170,14 +170,14 @@ public open class CfnTask internal constructor(
   /**
    * Specifies a list of filter rules that exclude specific data during your transfer.
    */
-  public open fun excludes(__idx_ac66f0: List<Any>) {
-    unwrap(this).setExcludes(__idx_ac66f0)
+  public open fun excludes(_idx_ac66f0: List<Any>) {
+    unwrap(this).setExcludes(_idx_ac66f0)
   }
 
   /**
    * Specifies a list of filter rules that exclude specific data during your transfer.
    */
-  public open fun excludes(vararg __idx_ac66f0: Any): Unit = excludes(__idx_ac66f0.toList())
+  public open fun excludes(vararg _idx_ac66f0: Any): Unit = excludes(_idx_ac66f0.toList())
 
   /**
    * Specifies a list of filter rules that include specific data during your transfer.
@@ -194,14 +194,14 @@ public open class CfnTask internal constructor(
   /**
    * Specifies a list of filter rules that include specific data during your transfer.
    */
-  public open fun includes(__idx_ac66f0: List<Any>) {
-    unwrap(this).setIncludes(__idx_ac66f0)
+  public open fun includes(_idx_ac66f0: List<Any>) {
+    unwrap(this).setIncludes(_idx_ac66f0)
   }
 
   /**
    * Specifies a list of filter rules that include specific data during your transfer.
    */
-  public open fun includes(vararg __idx_ac66f0: Any): Unit = includes(__idx_ac66f0.toList())
+  public open fun includes(vararg _idx_ac66f0: Any): Unit = includes(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

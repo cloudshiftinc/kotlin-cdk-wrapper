@@ -26,8 +26,8 @@ public open class AlbArnTarget internal constructor(
       software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbArnTarget,
 ) : CdkObject(cdkObject), INetworkLoadBalancerTarget {
   public constructor(albArn: String, port: Number) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbArnTarget(albArn,
-      port))
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbArnTarget(albArn, port)
+  )
 
   /**
    * Register this alb target with a load balancer.

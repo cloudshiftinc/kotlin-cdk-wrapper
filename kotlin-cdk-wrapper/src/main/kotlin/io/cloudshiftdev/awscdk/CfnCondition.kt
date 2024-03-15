@@ -47,8 +47,8 @@ public open class CfnCondition internal constructor(
    *
    * @param _context 
    */
-  public override fun resolve(_context: IResolveContext): Any =
-      unwrap(this).resolve(_context.let(IResolveContext::unwrap))
+  public override fun resolve(context: IResolveContext): Any =
+      unwrap(this).resolve(context.let(IResolveContext::unwrap))
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.CfnCondition].

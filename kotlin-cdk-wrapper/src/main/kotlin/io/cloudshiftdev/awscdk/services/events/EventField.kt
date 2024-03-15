@@ -53,8 +53,8 @@ public open class EventField internal constructor(
    *
    * @param _ctx 
    */
-  public override fun resolve(_ctx: IResolveContext): Any =
-      unwrap(this).resolve(_ctx.let(IResolveContext::unwrap))
+  public override fun resolve(ctx: IResolveContext): Any =
+      unwrap(this).resolve(ctx.let(IResolveContext::unwrap))
 
   /**
    * Convert the path to the field in the event pattern to JSON.

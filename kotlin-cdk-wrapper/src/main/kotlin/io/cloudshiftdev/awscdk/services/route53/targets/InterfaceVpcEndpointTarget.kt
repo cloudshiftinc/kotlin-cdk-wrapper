@@ -29,7 +29,8 @@ public open class InterfaceVpcEndpointTarget internal constructor(
       software.amazon.awscdk.services.route53.targets.InterfaceVpcEndpointTarget,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
   public constructor(vpcEndpoint: InterfaceVpcEndpoint) :
-      this(software.amazon.awscdk.services.route53.targets.InterfaceVpcEndpointTarget(InterfaceVpcEndpoint.unwrap(vpcEndpoint)))
+      this(software.amazon.awscdk.services.route53.targets.InterfaceVpcEndpointTarget(vpcEndpoint.let(InterfaceVpcEndpoint::unwrap))
+  )
 
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
@@ -37,8 +38,8 @@ public open class InterfaceVpcEndpointTarget internal constructor(
    * @param _record 
    * @param _zone
    */
-  public override fun bind(_record: IRecordSet): AliasRecordTargetConfig =
-      unwrap(this).bind(_record.let(IRecordSet::unwrap)).let(AliasRecordTargetConfig::wrap)
+  public override fun bind(record: IRecordSet): AliasRecordTargetConfig =
+      unwrap(this).bind(record.let(IRecordSet::unwrap)).let(AliasRecordTargetConfig::wrap)
 
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
@@ -46,9 +47,9 @@ public open class InterfaceVpcEndpointTarget internal constructor(
    * @param _record 
    * @param _zone
    */
-  public override fun bind(_record: IRecordSet, _zone: IHostedZone): AliasRecordTargetConfig =
-      unwrap(this).bind(_record.let(IRecordSet::unwrap),
-      _zone.let(IHostedZone::unwrap)).let(AliasRecordTargetConfig::wrap)
+  public override fun bind(record: IRecordSet, zone: IHostedZone): AliasRecordTargetConfig =
+      unwrap(this).bind(record.let(IRecordSet::unwrap),
+      zone.let(IHostedZone::unwrap)).let(AliasRecordTargetConfig::wrap)
 
   public companion object {
     internal

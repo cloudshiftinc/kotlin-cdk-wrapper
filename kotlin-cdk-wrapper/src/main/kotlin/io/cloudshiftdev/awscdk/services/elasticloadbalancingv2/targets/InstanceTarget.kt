@@ -21,12 +21,14 @@ public open class InstanceTarget internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceTarget,
 ) : InstanceIdTarget(cdkObject) {
-  public constructor(instance: Instance, port: Number) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceTarget(Instance.unwrap(instance),
-      port))
-
   public constructor(instance: Instance) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceTarget(Instance.unwrap(instance)))
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceTarget(instance.let(Instance::unwrap))
+  )
+
+  public constructor(instance: Instance, port: Number) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceTarget(instance.let(Instance::unwrap),
+      port)
+  )
 
   public companion object {
     internal

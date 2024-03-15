@@ -111,15 +111,15 @@ public open class CfnCustomActionType internal constructor(
   /**
    * The configuration properties for the custom action.
    */
-  public open fun configurationProperties(__idx_ac66f0: List<Any>) {
-    unwrap(this).setConfigurationProperties(__idx_ac66f0)
+  public open fun configurationProperties(_idx_ac66f0: List<Any>) {
+    unwrap(this).setConfigurationProperties(_idx_ac66f0)
   }
 
   /**
    * The configuration properties for the custom action.
    */
-  public open fun configurationProperties(vararg __idx_ac66f0: Any): Unit =
-      configurationProperties(__idx_ac66f0.toList())
+  public open fun configurationProperties(vararg _idx_ac66f0: Any): Unit =
+      configurationProperties(_idx_ac66f0.toList())
 
   /**
    * The details of the input artifact for the action, such as its commit ID.

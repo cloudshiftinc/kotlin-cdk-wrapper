@@ -228,15 +228,15 @@ public open class CfnEC2Fleet internal constructor(
   /**
    * The configuration for the EC2 Fleet.
    */
-  public open fun launchTemplateConfigs(__idx_ac66f0: List<Any>) {
-    unwrap(this).setLaunchTemplateConfigs(__idx_ac66f0)
+  public open fun launchTemplateConfigs(_idx_ac66f0: List<Any>) {
+    unwrap(this).setLaunchTemplateConfigs(_idx_ac66f0)
   }
 
   /**
    * The configuration for the EC2 Fleet.
    */
-  public open fun launchTemplateConfigs(vararg __idx_ac66f0: Any): Unit =
-      launchTemplateConfigs(__idx_ac66f0.toList())
+  public open fun launchTemplateConfigs(vararg _idx_ac66f0: Any): Unit =
+      launchTemplateConfigs(_idx_ac66f0.toList())
 
   /**
    * Describes the configuration of On-Demand Instances in an EC2 Fleet.
@@ -335,8 +335,8 @@ public open class CfnEC2Fleet internal constructor(
    * For more information, see [Tag your
    * resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources) .
    */
-  public open fun tagSpecifications(__idx_ac66f0: List<Any>) {
-    unwrap(this).setTagSpecifications(__idx_ac66f0)
+  public open fun tagSpecifications(_idx_ac66f0: List<Any>) {
+    unwrap(this).setTagSpecifications(_idx_ac66f0)
   }
 
   /**
@@ -345,8 +345,8 @@ public open class CfnEC2Fleet internal constructor(
    * For more information, see [Tag your
    * resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources) .
    */
-  public open fun tagSpecifications(vararg __idx_ac66f0: Any): Unit =
-      tagSpecifications(__idx_ac66f0.toList())
+  public open fun tagSpecifications(vararg _idx_ac66f0: Any): Unit =
+      tagSpecifications(_idx_ac66f0.toList())
 
   /**
    * The number of units to request.

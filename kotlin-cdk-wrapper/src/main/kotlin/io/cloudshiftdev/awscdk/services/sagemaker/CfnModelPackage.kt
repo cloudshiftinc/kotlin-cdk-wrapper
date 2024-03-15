@@ -322,15 +322,15 @@ public open class CfnModelPackage internal constructor(
   /**
    * An array of additional Inference Specification objects.
    */
-  public open fun additionalInferenceSpecifications(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAdditionalInferenceSpecifications(__idx_ac66f0)
+  public open fun additionalInferenceSpecifications(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAdditionalInferenceSpecifications(_idx_ac66f0)
   }
 
   /**
    * An array of additional Inference Specification objects.
    */
-  public open fun additionalInferenceSpecifications(vararg __idx_ac66f0: Any): Unit =
-      additionalInferenceSpecifications(__idx_ac66f0.toList())
+  public open fun additionalInferenceSpecifications(vararg _idx_ac66f0: Any): Unit =
+      additionalInferenceSpecifications(_idx_ac66f0.toList())
 
   /**
    * An array of additional Inference Specification objects to be added to the existing array.
@@ -348,15 +348,15 @@ public open class CfnModelPackage internal constructor(
   /**
    * An array of additional Inference Specification objects to be added to the existing array.
    */
-  public open fun additionalInferenceSpecificationsToAdd(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAdditionalInferenceSpecificationsToAdd(__idx_ac66f0)
+  public open fun additionalInferenceSpecificationsToAdd(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAdditionalInferenceSpecificationsToAdd(_idx_ac66f0)
   }
 
   /**
    * An array of additional Inference Specification objects to be added to the existing array.
    */
-  public open fun additionalInferenceSpecificationsToAdd(vararg __idx_ac66f0: Any): Unit =
-      additionalInferenceSpecificationsToAdd(__idx_ac66f0.toList())
+  public open fun additionalInferenceSpecificationsToAdd(vararg _idx_ac66f0: Any): Unit =
+      additionalInferenceSpecificationsToAdd(_idx_ac66f0.toList())
 
   /**
    * A description provided when the model approval is set.

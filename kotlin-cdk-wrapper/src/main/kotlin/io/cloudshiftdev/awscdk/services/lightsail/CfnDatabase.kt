@@ -262,15 +262,15 @@ public open class CfnDatabase internal constructor(
   /**
    * An array of parameters for the database.
    */
-  public open fun relationalDatabaseParameters(__idx_ac66f0: List<Any>) {
-    unwrap(this).setRelationalDatabaseParameters(__idx_ac66f0)
+  public open fun relationalDatabaseParameters(_idx_ac66f0: List<Any>) {
+    unwrap(this).setRelationalDatabaseParameters(_idx_ac66f0)
   }
 
   /**
    * An array of parameters for the database.
    */
-  public open fun relationalDatabaseParameters(vararg __idx_ac66f0: Any): Unit =
-      relationalDatabaseParameters(__idx_ac66f0.toList())
+  public open fun relationalDatabaseParameters(vararg _idx_ac66f0: Any): Unit =
+      relationalDatabaseParameters(_idx_ac66f0.toList())
 
   /**
    * A Boolean value indicating whether to change the primary user password to a new, strong

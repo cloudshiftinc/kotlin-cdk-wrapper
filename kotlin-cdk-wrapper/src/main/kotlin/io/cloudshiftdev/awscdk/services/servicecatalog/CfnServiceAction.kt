@@ -76,14 +76,14 @@ public open class CfnServiceAction internal constructor(
   /**
    * A map that defines the self-service action.
    */
-  public open fun definition(__idx_ac66f0: List<Any>) {
-    unwrap(this).setDefinition(__idx_ac66f0)
+  public open fun definition(_idx_ac66f0: List<Any>) {
+    unwrap(this).setDefinition(_idx_ac66f0)
   }
 
   /**
    * A map that defines the self-service action.
    */
-  public open fun definition(vararg __idx_ac66f0: Any): Unit = definition(__idx_ac66f0.toList())
+  public open fun definition(vararg _idx_ac66f0: Any): Unit = definition(_idx_ac66f0.toList())
 
   /**
    * The self-service action definition type.

@@ -253,15 +253,15 @@ public open class CfnBranch internal constructor(
   /**
    * The environment variables for the branch.
    */
-  public open fun environmentVariables(__idx_ac66f0: List<Any>) {
-    unwrap(this).setEnvironmentVariables(__idx_ac66f0)
+  public open fun environmentVariables(_idx_ac66f0: List<Any>) {
+    unwrap(this).setEnvironmentVariables(_idx_ac66f0)
   }
 
   /**
    * The environment variables for the branch.
    */
-  public open fun environmentVariables(vararg __idx_ac66f0: Any): Unit =
-      environmentVariables(__idx_ac66f0.toList())
+  public open fun environmentVariables(vararg _idx_ac66f0: Any): Unit =
+      environmentVariables(_idx_ac66f0.toList())
 
   /**
    * The framework for the branch.

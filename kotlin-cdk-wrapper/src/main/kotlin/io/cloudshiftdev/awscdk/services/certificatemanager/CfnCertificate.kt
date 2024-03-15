@@ -143,15 +143,15 @@ public open class CfnCertificate internal constructor(
   /**
    * Domain information that domain name registrars use to verify your identity.
    */
-  public open fun domainValidationOptions(__idx_ac66f0: List<Any>) {
-    unwrap(this).setDomainValidationOptions(__idx_ac66f0)
+  public open fun domainValidationOptions(_idx_ac66f0: List<Any>) {
+    unwrap(this).setDomainValidationOptions(_idx_ac66f0)
   }
 
   /**
    * Domain information that domain name registrars use to verify your identity.
    */
-  public open fun domainValidationOptions(vararg __idx_ac66f0: Any): Unit =
-      domainValidationOptions(__idx_ac66f0.toList())
+  public open fun domainValidationOptions(vararg _idx_ac66f0: Any): Unit =
+      domainValidationOptions(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

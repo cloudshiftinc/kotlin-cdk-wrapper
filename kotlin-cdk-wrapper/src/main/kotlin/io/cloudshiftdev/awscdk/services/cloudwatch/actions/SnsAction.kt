@@ -25,7 +25,8 @@ public open class SnsAction internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.actions.SnsAction,
 ) : CdkObject(cdkObject), IAlarmAction {
   public constructor(topic: ITopic) :
-      this(software.amazon.awscdk.services.cloudwatch.actions.SnsAction(ITopic.unwrap(topic)))
+      this(software.amazon.awscdk.services.cloudwatch.actions.SnsAction(topic.let(ITopic::unwrap))
+  )
 
   /**
    * Returns an alarm action configuration to use an SNS topic as an alarm action.
@@ -33,9 +34,9 @@ public open class SnsAction internal constructor(
    * @param _scope 
    * @param _alarm 
    */
-  public override fun bind(_scope: Construct, _alarm: IAlarm): AlarmActionConfig =
-      unwrap(this).bind(_scope.let(Construct::unwrap),
-      _alarm.let(IAlarm::unwrap)).let(AlarmActionConfig::wrap)
+  public override fun bind(scope: Construct, alarm: IAlarm): AlarmActionConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap),
+      alarm.let(IAlarm::unwrap)).let(AlarmActionConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.actions.SnsAction):

@@ -52,11 +52,16 @@ internal class MethodGenerator(
             interfaceBuilder.addModifiers(KModifier.OVERRIDE)
         }
 
-        if (spec.isOpen && !spec.isOverride) {
+        if (spec.isOpen && !spec.isOverride && !spec.isConstructor) {
             implementationBuilder.addModifiers(KModifier.OPEN)
         }
 
-        spec.body?.let { implementationBuilder.addCode(it) }
+        spec.body?.let {
+            when {
+                spec.isConstructor -> implementationBuilder.callThisConstructor(it)
+                else -> implementationBuilder.addCode(it)
+            }
+        }
 
         if (spec.enclosingClass.isInterface) {
             if (spec.isAbstract) {
@@ -73,11 +78,14 @@ internal class MethodGenerator(
     }
 
     private fun functionBuilder(spec: MethodSpec): FunSpec.Builder {
-        val builder = FunSpec.builder(spec.name)
-            .addParameters(spec.parameters.map { it.toParameterSpec() })
+        val builder = when {
+            spec.isConstructor -> FunSpec.constructorBuilder()
+            else -> FunSpec.builder(spec.name)
+        }
+        builder.addParameters(spec.parameters.map { it.toParameterSpec() })
             .addModifiers(KModifier.PUBLIC)
 
-        if (!spec.omitReturnType) builder.returns(spec.returnType.mapClassName())
+        if (!(spec.omitReturnType || spec.isConstructor)) builder.returns(spec.returnType.mapClassName())
         if (spec.isDeprecated) builder.addAnnotation(Annotations.Deprecated)
         spec.comment?.let { builder.addKdoc("%L", it) }
 
@@ -102,6 +110,7 @@ internal data class MethodSpec(
     val body: CodeBlock? = null,
     val isOpen: Boolean = false,
     val isAbstract: Boolean = false,
+    val isConstructor: Boolean = false,
     val annotations: List<AnnotationSpec> = emptyList(),
 ) {
 
@@ -114,14 +123,14 @@ internal data class MethodSpec(
     data class Parameter(
         val name: String,
         val type: TypeName,
-        val varargs : Boolean = false
+        val varargs: Boolean = false
     ) {
         fun toParameterSpec(): ParameterSpec {
             val builder = ParameterSpec.builder(
                 name,
                 type.mapClassName(),
             )
-            if(varargs) builder.addModifiers(KModifier.VARARG)
+            if (varargs) builder.addModifiers(KModifier.VARARG)
             return builder.build()
         }
     }
@@ -136,12 +145,16 @@ internal data class MethodSpec(
                 Parameter(it.name, it.type)
             }
             val isOverride = model.isOverrideMethod(enclosingClass.className, method)
-            if(enclosingClass.className.simpleName == "EbsDeviceProps" && method.name.contains("deleteOnTermination")) {
+            if (enclosingClass.className.simpleName == "EbsDeviceProps" && method.name.contains("deleteOnTermination")) {
                 println("MethodSpec: EbsDeviceProps: ${method.name} ${method.signature} ${isOverride}")
+            }
+            val methodName = when (method.name) {
+                "<init>" -> "this"
+                else -> method.name
             }
             return MethodSpec(
                 signature = method.signature,
-                cdkName = method.name,
+                cdkName = methodName,
                 parameters = parameters,
                 returnType = method.returnType,
                 enclosingClass = enclosingClass,
@@ -154,7 +167,6 @@ internal data class MethodSpec(
         }
     }
 }
-
 
 
 val TypeName.isList: Boolean

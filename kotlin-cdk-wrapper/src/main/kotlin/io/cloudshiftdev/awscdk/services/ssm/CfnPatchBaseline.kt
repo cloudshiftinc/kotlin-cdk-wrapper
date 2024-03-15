@@ -326,15 +326,15 @@ public open class CfnPatchBaseline internal constructor(
    * Information about the patches to use to update the managed nodes, including target operating
    * systems and source repositories.
    */
-  public open fun sources(__idx_ac66f0: List<Any>) {
-    unwrap(this).setSources(__idx_ac66f0)
+  public open fun sources(_idx_ac66f0: List<Any>) {
+    unwrap(this).setSources(_idx_ac66f0)
   }
 
   /**
    * Information about the patches to use to update the managed nodes, including target operating
    * systems and source repositories.
    */
-  public open fun sources(vararg __idx_ac66f0: Any): Unit = sources(__idx_ac66f0.toList())
+  public open fun sources(vararg _idx_ac66f0: Any): Unit = sources(_idx_ac66f0.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

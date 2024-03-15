@@ -41,8 +41,8 @@ public open class EcrImageCode internal constructor(
    *
    * @param _scope 
    */
-  public override fun bind(_scope: Construct): CodeConfig =
-      unwrap(this).bind(_scope.let(Construct::unwrap)).let(CodeConfig::wrap)
+  public override fun bind(scope: Construct): CodeConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(CodeConfig::wrap)
 
   /**
    * Determines whether this Code is inline code or not.

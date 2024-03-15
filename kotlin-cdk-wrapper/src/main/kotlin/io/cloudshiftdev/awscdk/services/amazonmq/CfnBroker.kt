@@ -574,14 +574,14 @@ public open class CfnBroker internal constructor(
   /**
    * The list of broker users (persons or applications) who can access queues and topics.
    */
-  public open fun users(__idx_ac66f0: List<Any>) {
-    unwrap(this).setUsers(__idx_ac66f0)
+  public open fun users(_idx_ac66f0: List<Any>) {
+    unwrap(this).setUsers(_idx_ac66f0)
   }
 
   /**
    * The list of broker users (persons or applications) who can access queues and topics.
    */
-  public open fun users(vararg __idx_ac66f0: Any): Unit = users(__idx_ac66f0.toList())
+  public open fun users(vararg _idx_ac66f0: Any): Unit = users(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.amazonmq.CfnBroker].

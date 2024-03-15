@@ -206,14 +206,14 @@ public open class CfnRepository internal constructor(
   /**
    * The JSON block of configuration information for each trigger.
    */
-  public open fun triggers(__idx_ac66f0: List<Any>) {
-    unwrap(this).setTriggers(__idx_ac66f0)
+  public open fun triggers(_idx_ac66f0: List<Any>) {
+    unwrap(this).setTriggers(_idx_ac66f0)
   }
 
   /**
    * The JSON block of configuration information for each trigger.
    */
-  public open fun triggers(vararg __idx_ac66f0: Any): Unit = triggers(__idx_ac66f0.toList())
+  public open fun triggers(vararg _idx_ac66f0: Any): Unit = triggers(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.codecommit.CfnRepository].

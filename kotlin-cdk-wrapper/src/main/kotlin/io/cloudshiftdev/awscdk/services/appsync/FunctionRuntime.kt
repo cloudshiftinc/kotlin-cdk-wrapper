@@ -35,8 +35,9 @@ public open class FunctionRuntime internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.FunctionRuntime,
 ) : CdkObject(cdkObject) {
   public constructor(family: FunctionRuntimeFamily, version: String) :
-      this(software.amazon.awscdk.services.appsync.FunctionRuntime(FunctionRuntimeFamily.unwrap(family),
-      version))
+      this(software.amazon.awscdk.services.appsync.FunctionRuntime(family.let(FunctionRuntimeFamily::unwrap),
+      version)
+  )
 
   /**
    * The name of the runtime.

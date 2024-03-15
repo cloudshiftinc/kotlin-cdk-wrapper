@@ -39,7 +39,8 @@ public open class S3OnFailureDestination internal constructor(
       software.amazon.awscdk.services.lambda.eventsources.S3OnFailureDestination,
 ) : CdkObject(cdkObject), IEventSourceDlq {
   public constructor(bucket: IBucket) :
-      this(software.amazon.awscdk.services.lambda.eventsources.S3OnFailureDestination(IBucket.unwrap(bucket)))
+      this(software.amazon.awscdk.services.lambda.eventsources.S3OnFailureDestination(bucket.let(IBucket::unwrap))
+  )
 
   /**
    * Returns a destination configuration for the DLQ.
@@ -47,8 +48,8 @@ public open class S3OnFailureDestination internal constructor(
    * @param _target 
    * @param targetHandler 
    */
-  public override fun bind(_target: IEventSourceMapping, targetHandler: IFunction):
-      DlqDestinationConfig = unwrap(this).bind(_target.let(IEventSourceMapping::unwrap),
+  public override fun bind(target: IEventSourceMapping, targetHandler: IFunction):
+      DlqDestinationConfig = unwrap(this).bind(target.let(IEventSourceMapping::unwrap),
       targetHandler.let(IFunction::unwrap)).let(DlqDestinationConfig::wrap)
 
   public companion object {

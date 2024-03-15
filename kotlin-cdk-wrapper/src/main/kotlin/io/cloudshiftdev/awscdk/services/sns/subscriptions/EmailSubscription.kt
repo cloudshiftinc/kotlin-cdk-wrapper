@@ -37,8 +37,8 @@ public open class EmailSubscription internal constructor(
    *
    * @param _topic 
    */
-  public override fun bind(_topic: ITopic): TopicSubscriptionConfig =
-      unwrap(this).bind(_topic.let(ITopic::unwrap)).let(TopicSubscriptionConfig::wrap)
+  public override fun bind(topic: ITopic): TopicSubscriptionConfig =
+      unwrap(this).bind(topic.let(ITopic::unwrap)).let(TopicSubscriptionConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.sns.subscriptions.EmailSubscription].

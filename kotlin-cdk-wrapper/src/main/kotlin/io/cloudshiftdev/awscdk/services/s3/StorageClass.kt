@@ -45,7 +45,8 @@ public open class StorageClass internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3.StorageClass,
 ) : CdkObject(cdkObject) {
   public constructor(`value`: String) :
-      this(software.amazon.awscdk.services.s3.StorageClass(`value`))
+      this(software.amazon.awscdk.services.s3.StorageClass(`value`)
+  )
 
   /**
    *

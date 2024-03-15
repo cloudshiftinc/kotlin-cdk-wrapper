@@ -19,7 +19,8 @@ public open class Node internal constructor(
     host: Construct,
     scope: IConstruct,
     id: String,
-  ) : this(software.constructs.Node(Construct.unwrap(host), IConstruct.unwrap(scope), id))
+  ) : this(software.constructs.Node(host.let(Construct::unwrap), scope.let(IConstruct::unwrap), id)
+  )
 
   public open fun addDependency(deps: IDependable) {
     unwrap(this).addDependency(deps.let(IDependable::unwrap))

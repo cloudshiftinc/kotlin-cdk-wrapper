@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
+import kotlin.collections.List
 
 /**
  * Specifies the attribute value assignments.
@@ -59,7 +60,13 @@ public open class AttributeValues internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.AttributeValues,
 ) : CdkObject(cdkObject) {
   public constructor(container: String) :
-      this(software.amazon.awscdk.services.appsync.AttributeValues(container))
+      this(software.amazon.awscdk.services.appsync.AttributeValues(container)
+  )
+
+  public constructor(container: String, assignments: List<Assign>) :
+      this(software.amazon.awscdk.services.appsync.AttributeValues(container,
+      assignments.map(Assign::unwrap))
+  )
 
   /**
    * Allows assigning a value to the specified attribute.

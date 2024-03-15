@@ -136,15 +136,14 @@ public open class CfnFirewallRuleGroup internal constructor(
   /**
    * A list of the rules that you have defined.
    */
-  public open fun firewallRules(__idx_ac66f0: List<Any>) {
-    unwrap(this).setFirewallRules(__idx_ac66f0)
+  public open fun firewallRules(_idx_ac66f0: List<Any>) {
+    unwrap(this).setFirewallRules(_idx_ac66f0)
   }
 
   /**
    * A list of the rules that you have defined.
    */
-  public open fun firewallRules(vararg __idx_ac66f0: Any): Unit =
-      firewallRules(__idx_ac66f0.toList())
+  public open fun firewallRules(vararg _idx_ac66f0: Any): Unit = firewallRules(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

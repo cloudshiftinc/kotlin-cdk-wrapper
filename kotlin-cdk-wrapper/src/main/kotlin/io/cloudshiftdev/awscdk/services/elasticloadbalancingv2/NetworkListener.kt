@@ -54,8 +54,8 @@ public open class NetworkListener internal constructor(
    * @param _id 
    * @param props 
    */
-  public open fun addAction(_id: String, props: AddNetworkActionProps) {
-    unwrap(this).addAction(_id, props.let(AddNetworkActionProps::unwrap))
+  public open fun addAction(id: String, props: AddNetworkActionProps) {
+    unwrap(this).addAction(id, props.let(AddNetworkActionProps::unwrap))
   }
 
   /**
@@ -70,8 +70,8 @@ public open class NetworkListener internal constructor(
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("036aa6d3ab6bc8c429ccb9ac7b967253290c5479fa6b86a60dd00debbb34dec3")
-  public open fun addAction(_id: String, props: AddNetworkActionProps.Builder.() -> Unit): Unit =
-      addAction(_id, AddNetworkActionProps(props))
+  public open fun addAction(id: String, props: AddNetworkActionProps.Builder.() -> Unit): Unit =
+      addAction(id, AddNetworkActionProps(props))
 
   /**
    * Add one or more certificates to this listener.
@@ -96,8 +96,8 @@ public open class NetworkListener internal constructor(
    * @param _id 
    * @param targetGroups 
    */
-  public open fun addTargetGroups(_id: String, targetGroups: INetworkTargetGroup) {
-    unwrap(this).addTargetGroups(_id, targetGroups.let(INetworkTargetGroup::unwrap))
+  public open fun addTargetGroups(id: String, targetGroups: INetworkTargetGroup) {
+    unwrap(this).addTargetGroups(id, targetGroups.let(INetworkTargetGroup::unwrap))
   }
 
   /**

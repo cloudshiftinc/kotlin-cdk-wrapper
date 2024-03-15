@@ -23,8 +23,9 @@ public open class CfnDynamicReference internal constructor(
   internal override val cdkObject: software.amazon.awscdk.CfnDynamicReference,
 ) : Intrinsic(cdkObject) {
   public constructor(service: CfnDynamicReferenceService, key: String) :
-      this(software.amazon.awscdk.CfnDynamicReference(CfnDynamicReferenceService.unwrap(service),
-      key))
+      this(software.amazon.awscdk.CfnDynamicReference(service.let(CfnDynamicReferenceService::unwrap),
+      key)
+  )
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnDynamicReference): CfnDynamicReference =

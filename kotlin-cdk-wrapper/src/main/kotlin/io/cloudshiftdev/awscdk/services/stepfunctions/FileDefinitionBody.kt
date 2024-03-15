@@ -38,11 +38,11 @@ public open class FileDefinitionBody internal constructor(
    */
   public override fun bind(
     scope: Construct,
-    _sfnPrincipal: IPrincipal,
-    _sfnProps: StateMachineProps,
+    sfnPrincipal: IPrincipal,
+    sfnProps: StateMachineProps,
   ): DefinitionConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      _sfnPrincipal.let(IPrincipal::unwrap),
-      _sfnProps.let(StateMachineProps::unwrap)).let(DefinitionConfig::wrap)
+      sfnPrincipal.let(IPrincipal::unwrap),
+      sfnProps.let(StateMachineProps::unwrap)).let(DefinitionConfig::wrap)
 
   /**
    * @param scope 
@@ -54,9 +54,9 @@ public open class FileDefinitionBody internal constructor(
   @JvmName("d2dbd4d1e5f21bba5dd51d75253d432be0ee512a924449cbb7efb61b2d333163")
   public override fun bind(
     scope: Construct,
-    _sfnPrincipal: IPrincipal,
-    _sfnProps: StateMachineProps.Builder.() -> Unit,
-  ): DefinitionConfig = bind(scope, _sfnPrincipal, StateMachineProps(_sfnProps))
+    sfnPrincipal: IPrincipal,
+    sfnProps: StateMachineProps.Builder.() -> Unit,
+  ): DefinitionConfig = bind(scope, sfnPrincipal, StateMachineProps(sfnProps))
 
   /**
    * @param scope 
@@ -66,12 +66,12 @@ public open class FileDefinitionBody internal constructor(
    */
   public override fun bind(
     scope: Construct,
-    _sfnPrincipal: IPrincipal,
-    _sfnProps: StateMachineProps,
-    _graph: StateGraph,
+    sfnPrincipal: IPrincipal,
+    sfnProps: StateMachineProps,
+    graph: StateGraph,
   ): DefinitionConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      _sfnPrincipal.let(IPrincipal::unwrap), _sfnProps.let(StateMachineProps::unwrap),
-      _graph.let(StateGraph::unwrap)).let(DefinitionConfig::wrap)
+      sfnPrincipal.let(IPrincipal::unwrap), sfnProps.let(StateMachineProps::unwrap),
+      graph.let(StateGraph::unwrap)).let(DefinitionConfig::wrap)
 
   /**
    *

@@ -186,15 +186,15 @@ public open class CfnJob internal constructor(
   /**
    * One or more artifacts that represent the AWS Glue Data Catalog output from running the job.
    */
-  public open fun dataCatalogOutputs(__idx_ac66f0: List<Any>) {
-    unwrap(this).setDataCatalogOutputs(__idx_ac66f0)
+  public open fun dataCatalogOutputs(_idx_ac66f0: List<Any>) {
+    unwrap(this).setDataCatalogOutputs(_idx_ac66f0)
   }
 
   /**
    * One or more artifacts that represent the AWS Glue Data Catalog output from running the job.
    */
-  public open fun dataCatalogOutputs(vararg __idx_ac66f0: Any): Unit =
-      dataCatalogOutputs(__idx_ac66f0.toList())
+  public open fun dataCatalogOutputs(vararg _idx_ac66f0: Any): Unit =
+      dataCatalogOutputs(_idx_ac66f0.toList())
 
   /**
    * Represents a list of JDBC database output objects which defines the output destination for a
@@ -214,16 +214,16 @@ public open class CfnJob internal constructor(
    * Represents a list of JDBC database output objects which defines the output destination for a
    * DataBrew recipe job to write into.
    */
-  public open fun databaseOutputs(__idx_ac66f0: List<Any>) {
-    unwrap(this).setDatabaseOutputs(__idx_ac66f0)
+  public open fun databaseOutputs(_idx_ac66f0: List<Any>) {
+    unwrap(this).setDatabaseOutputs(_idx_ac66f0)
   }
 
   /**
    * Represents a list of JDBC database output objects which defines the output destination for a
    * DataBrew recipe job to write into.
    */
-  public open fun databaseOutputs(vararg __idx_ac66f0: Any): Unit =
-      databaseOutputs(__idx_ac66f0.toList())
+  public open fun databaseOutputs(vararg _idx_ac66f0: Any): Unit =
+      databaseOutputs(_idx_ac66f0.toList())
 
   /**
    * A dataset that the job is to process.
@@ -391,14 +391,14 @@ public open class CfnJob internal constructor(
   /**
    * One or more artifacts that represent output from running the job.
    */
-  public open fun outputs(__idx_ac66f0: List<Any>) {
-    unwrap(this).setOutputs(__idx_ac66f0)
+  public open fun outputs(_idx_ac66f0: List<Any>) {
+    unwrap(this).setOutputs(_idx_ac66f0)
   }
 
   /**
    * One or more artifacts that represent output from running the job.
    */
-  public open fun outputs(vararg __idx_ac66f0: Any): Unit = outputs(__idx_ac66f0.toList())
+  public open fun outputs(vararg _idx_ac66f0: Any): Unit = outputs(_idx_ac66f0.toList())
 
   /**
    * Configuration for profile jobs.
@@ -540,15 +540,15 @@ public open class CfnJob internal constructor(
   /**
    * List of validation configurations that are applied to the profile job.
    */
-  public open fun validationConfigurations(__idx_ac66f0: List<Any>) {
-    unwrap(this).setValidationConfigurations(__idx_ac66f0)
+  public open fun validationConfigurations(_idx_ac66f0: List<Any>) {
+    unwrap(this).setValidationConfigurations(_idx_ac66f0)
   }
 
   /**
    * List of validation configurations that are applied to the profile job.
    */
-  public open fun validationConfigurations(vararg __idx_ac66f0: Any): Unit =
-      validationConfigurations(__idx_ac66f0.toList())
+  public open fun validationConfigurations(vararg _idx_ac66f0: Any): Unit =
+      validationConfigurations(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.databrew.CfnJob].

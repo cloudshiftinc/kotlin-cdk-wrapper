@@ -224,16 +224,16 @@ public open class CfnGameServerGroup internal constructor(
    * The set of Amazon EC2 instance types that Amazon GameLift FleetIQ can use when balancing and
    * automatically scaling instances in the corresponding Auto Scaling group.
    */
-  public open fun instanceDefinitions(__idx_ac66f0: List<Any>) {
-    unwrap(this).setInstanceDefinitions(__idx_ac66f0)
+  public open fun instanceDefinitions(_idx_ac66f0: List<Any>) {
+    unwrap(this).setInstanceDefinitions(_idx_ac66f0)
   }
 
   /**
    * The set of Amazon EC2 instance types that Amazon GameLift FleetIQ can use when balancing and
    * automatically scaling instances in the corresponding Auto Scaling group.
    */
-  public open fun instanceDefinitions(vararg __idx_ac66f0: Any): Unit =
-      instanceDefinitions(__idx_ac66f0.toList())
+  public open fun instanceDefinitions(vararg _idx_ac66f0: Any): Unit =
+      instanceDefinitions(_idx_ac66f0.toList())
 
   /**
    * The Amazon EC2 launch template that contains configuration settings and game server code to be

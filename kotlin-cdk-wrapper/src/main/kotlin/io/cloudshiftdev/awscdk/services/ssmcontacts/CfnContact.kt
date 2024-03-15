@@ -111,14 +111,14 @@ public open class CfnContact internal constructor(
   /**
    * A list of stages.
    */
-  public open fun plan(__idx_ac66f0: List<Any>) {
-    unwrap(this).setPlan(__idx_ac66f0)
+  public open fun plan(_idx_ac66f0: List<Any>) {
+    unwrap(this).setPlan(_idx_ac66f0)
   }
 
   /**
    * A list of stages.
    */
-  public open fun plan(vararg __idx_ac66f0: Any): Unit = plan(__idx_ac66f0.toList())
+  public open fun plan(vararg _idx_ac66f0: Any): Unit = plan(_idx_ac66f0.toList())
 
   /**
    * The type of contact.

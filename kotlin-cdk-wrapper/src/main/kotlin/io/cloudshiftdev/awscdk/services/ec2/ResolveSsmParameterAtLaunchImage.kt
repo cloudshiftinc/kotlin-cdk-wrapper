@@ -47,8 +47,8 @@ public open class ResolveSsmParameterAtLaunchImage internal constructor(
    *
    * @param _ 
    */
-  public override fun image(`__`: Construct): MachineImageConfig =
-      unwrap(this).getImage(`__`.let(Construct::unwrap)).let(MachineImageConfig::wrap)
+  public override fun image(`_`: Construct): MachineImageConfig =
+      unwrap(this).getImage(`_`.let(Construct::unwrap)).let(MachineImageConfig::wrap)
 
   /**
    * Name of the SSM parameter we're looking up.

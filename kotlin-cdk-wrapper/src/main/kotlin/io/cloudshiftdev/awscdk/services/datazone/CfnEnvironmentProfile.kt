@@ -191,15 +191,15 @@ public open class CfnEnvironmentProfile internal constructor(
   /**
    * The user parameters of this Amazon DataZone environment profile.
    */
-  public open fun userParameters(__idx_ac66f0: List<Any>) {
-    unwrap(this).setUserParameters(__idx_ac66f0)
+  public open fun userParameters(_idx_ac66f0: List<Any>) {
+    unwrap(this).setUserParameters(_idx_ac66f0)
   }
 
   /**
    * The user parameters of this Amazon DataZone environment profile.
    */
-  public open fun userParameters(vararg __idx_ac66f0: Any): Unit =
-      userParameters(__idx_ac66f0.toList())
+  public open fun userParameters(vararg _idx_ac66f0: Any): Unit =
+      userParameters(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.datazone.CfnEnvironmentProfile].

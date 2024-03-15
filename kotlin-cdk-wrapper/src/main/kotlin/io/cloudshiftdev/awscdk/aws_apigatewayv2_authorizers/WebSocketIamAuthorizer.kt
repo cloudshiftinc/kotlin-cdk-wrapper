@@ -46,16 +46,17 @@ public open class WebSocketIamAuthorizer internal constructor(
       software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketIamAuthorizer,
 ) : CdkObject(cdkObject), IWebSocketRouteAuthorizer {
   public constructor() :
-      this(software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketIamAuthorizer())
+      this(software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketIamAuthorizer()
+  )
 
   /**
    * Bind this authorizer to a specified WebSocket route.
    *
    * @param _options 
    */
-  public override fun bind(_options: WebSocketRouteAuthorizerBindOptions):
+  public override fun bind(options: WebSocketRouteAuthorizerBindOptions):
       WebSocketRouteAuthorizerConfig =
-      unwrap(this).bind(_options.let(WebSocketRouteAuthorizerBindOptions::unwrap)).let(WebSocketRouteAuthorizerConfig::wrap)
+      unwrap(this).bind(options.let(WebSocketRouteAuthorizerBindOptions::unwrap)).let(WebSocketRouteAuthorizerConfig::wrap)
 
   /**
    * Bind this authorizer to a specified WebSocket route.
@@ -64,8 +65,8 @@ public open class WebSocketIamAuthorizer internal constructor(
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("4748e6838372195e9aa1a18e6e678999d779e421141e36cb85387a0736bf08b7")
-  public override fun bind(_options: WebSocketRouteAuthorizerBindOptions.Builder.() -> Unit):
-      WebSocketRouteAuthorizerConfig = bind(WebSocketRouteAuthorizerBindOptions(_options))
+  public override fun bind(options: WebSocketRouteAuthorizerBindOptions.Builder.() -> Unit):
+      WebSocketRouteAuthorizerConfig = bind(WebSocketRouteAuthorizerBindOptions(options))
 
   public companion object {
     internal

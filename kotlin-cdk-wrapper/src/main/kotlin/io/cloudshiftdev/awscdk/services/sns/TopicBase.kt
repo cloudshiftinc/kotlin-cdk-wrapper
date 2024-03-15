@@ -62,9 +62,8 @@ public abstract class TopicBase internal constructor(
    *
    * @param _scope 
    */
-  public override fun bindAsNotificationRuleTarget(_scope: Construct): NotificationRuleTargetConfig
-      =
-      unwrap(this).bindAsNotificationRuleTarget(_scope.let(Construct::unwrap)).let(NotificationRuleTargetConfig::wrap)
+  public override fun bindAsNotificationRuleTarget(scope: Construct): NotificationRuleTargetConfig =
+      unwrap(this).bindAsNotificationRuleTarget(scope.let(Construct::unwrap)).let(NotificationRuleTargetConfig::wrap)
 
   /**
    * Enables content-based deduplication for FIFO topics.

@@ -149,14 +149,14 @@ public open class CfnListener internal constructor(
   /**
    * The default SSL server certificate for a secure listener.
    */
-  public open fun certificates(__idx_ac66f0: List<Any>) {
-    unwrap(this).setCertificates(__idx_ac66f0)
+  public open fun certificates(_idx_ac66f0: List<Any>) {
+    unwrap(this).setCertificates(_idx_ac66f0)
   }
 
   /**
    * The default SSL server certificate for a secure listener.
    */
-  public open fun certificates(vararg __idx_ac66f0: Any): Unit = certificates(__idx_ac66f0.toList())
+  public open fun certificates(vararg _idx_ac66f0: Any): Unit = certificates(_idx_ac66f0.toList())
 
   /**
    * The actions for the default rule.
@@ -179,8 +179,8 @@ public open class CfnListener internal constructor(
    *
    * You cannot define a condition for a default rule.
    */
-  public open fun defaultActions(__idx_ac66f0: List<Any>) {
-    unwrap(this).setDefaultActions(__idx_ac66f0)
+  public open fun defaultActions(_idx_ac66f0: List<Any>) {
+    unwrap(this).setDefaultActions(_idx_ac66f0)
   }
 
   /**
@@ -188,8 +188,8 @@ public open class CfnListener internal constructor(
    *
    * You cannot define a condition for a default rule.
    */
-  public open fun defaultActions(vararg __idx_ac66f0: Any): Unit =
-      defaultActions(__idx_ac66f0.toList())
+  public open fun defaultActions(vararg _idx_ac66f0: Any): Unit =
+      defaultActions(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

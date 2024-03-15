@@ -75,9 +75,9 @@ public open class SlackChannelConfiguration internal constructor(
    *
    * @param _scope 
    */
-  public override fun bindAsNotificationRuleTarget(_scope: CloudshiftdevConstructsConstruct):
+  public override fun bindAsNotificationRuleTarget(scope: CloudshiftdevConstructsConstruct):
       NotificationRuleTargetConfig =
-      unwrap(this).bindAsNotificationRuleTarget(_scope.let(CloudshiftdevConstructsConstruct::unwrap)).let(NotificationRuleTargetConfig::wrap)
+      unwrap(this).bindAsNotificationRuleTarget(scope.let(CloudshiftdevConstructsConstruct::unwrap)).let(NotificationRuleTargetConfig::wrap)
 
   /**
    * The principal to grant permissions to.

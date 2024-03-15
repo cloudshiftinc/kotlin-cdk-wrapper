@@ -345,15 +345,15 @@ public open class CfnScalingPolicy internal constructor(
   /**
    * A set of adjustments that enable you to scale based on the size of the alarm breach.
    */
-  public open fun stepAdjustments(__idx_ac66f0: List<Any>) {
-    unwrap(this).setStepAdjustments(__idx_ac66f0)
+  public open fun stepAdjustments(_idx_ac66f0: List<Any>) {
+    unwrap(this).setStepAdjustments(_idx_ac66f0)
   }
 
   /**
    * A set of adjustments that enable you to scale based on the size of the alarm breach.
    */
-  public open fun stepAdjustments(vararg __idx_ac66f0: Any): Unit =
-      stepAdjustments(__idx_ac66f0.toList())
+  public open fun stepAdjustments(vararg _idx_ac66f0: Any): Unit =
+      stepAdjustments(_idx_ac66f0.toList())
 
   /**
    * A target tracking scaling policy.

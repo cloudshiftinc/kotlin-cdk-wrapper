@@ -169,15 +169,15 @@ public open class CfnScalableTarget internal constructor(
   /**
    * The scheduled actions for the scalable target.
    */
-  public open fun scheduledActions(__idx_ac66f0: List<Any>) {
-    unwrap(this).setScheduledActions(__idx_ac66f0)
+  public open fun scheduledActions(_idx_ac66f0: List<Any>) {
+    unwrap(this).setScheduledActions(_idx_ac66f0)
   }
 
   /**
    * The scheduled actions for the scalable target.
    */
-  public open fun scheduledActions(vararg __idx_ac66f0: Any): Unit =
-      scheduledActions(__idx_ac66f0.toList())
+  public open fun scheduledActions(vararg _idx_ac66f0: Any): Unit =
+      scheduledActions(_idx_ac66f0.toList())
 
   /**
    * The namespace of the AWS service that provides the resource, or a `custom-resource` .

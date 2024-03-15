@@ -27,7 +27,8 @@ public open class LambdaDestination internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.LambdaDestination,
 ) : CdkObject(cdkObject), IEventDestination {
   public constructor(func: IFunction) :
-      this(software.amazon.awscdk.services.appconfig.LambdaDestination(IFunction.unwrap(func)))
+      this(software.amazon.awscdk.services.appconfig.LambdaDestination(func.let(IFunction::unwrap))
+  )
 
   /**
    * The URI of the extension event destination.

@@ -173,15 +173,15 @@ public open class CfnStudioComponent internal constructor(
   /**
    * Initialization scripts for studio components.
    */
-  public open fun initializationScripts(__idx_ac66f0: List<Any>) {
-    unwrap(this).setInitializationScripts(__idx_ac66f0)
+  public open fun initializationScripts(_idx_ac66f0: List<Any>) {
+    unwrap(this).setInitializationScripts(_idx_ac66f0)
   }
 
   /**
    * Initialization scripts for studio components.
    */
-  public open fun initializationScripts(vararg __idx_ac66f0: Any): Unit =
-      initializationScripts(__idx_ac66f0.toList())
+  public open fun initializationScripts(vararg _idx_ac66f0: Any): Unit =
+      initializationScripts(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -233,15 +233,15 @@ public open class CfnStudioComponent internal constructor(
   /**
    * Parameters for the studio component scripts.
    */
-  public open fun scriptParameters(__idx_ac66f0: List<Any>) {
-    unwrap(this).setScriptParameters(__idx_ac66f0)
+  public open fun scriptParameters(_idx_ac66f0: List<Any>) {
+    unwrap(this).setScriptParameters(_idx_ac66f0)
   }
 
   /**
    * Parameters for the studio component scripts.
    */
-  public open fun scriptParameters(vararg __idx_ac66f0: Any): Unit =
-      scriptParameters(__idx_ac66f0.toList())
+  public open fun scriptParameters(vararg _idx_ac66f0: Any): Unit =
+      scriptParameters(_idx_ac66f0.toList())
 
   /**
    * An IAM role attached to Studio Component when the system initialization script runs which give

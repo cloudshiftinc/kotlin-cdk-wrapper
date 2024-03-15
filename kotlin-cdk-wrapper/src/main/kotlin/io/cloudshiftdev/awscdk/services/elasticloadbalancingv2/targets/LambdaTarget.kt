@@ -34,7 +34,8 @@ public open class LambdaTarget internal constructor(
       software.amazon.awscdk.services.elasticloadbalancingv2.targets.LambdaTarget,
 ) : CdkObject(cdkObject), IApplicationLoadBalancerTarget {
   public constructor(fn: IFunction) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.LambdaTarget(IFunction.unwrap(fn)))
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.LambdaTarget(fn.let(IFunction::unwrap))
+  )
 
   /**
    * Register this instance target with a load balancer.

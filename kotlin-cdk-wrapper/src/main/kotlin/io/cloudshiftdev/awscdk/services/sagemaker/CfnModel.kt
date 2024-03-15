@@ -142,14 +142,14 @@ public open class CfnModel internal constructor(
   /**
    * Specifies the containers in the inference pipeline.
    */
-  public open fun containers(__idx_ac66f0: List<Any>) {
-    unwrap(this).setContainers(__idx_ac66f0)
+  public open fun containers(_idx_ac66f0: List<Any>) {
+    unwrap(this).setContainers(_idx_ac66f0)
   }
 
   /**
    * Specifies the containers in the inference pipeline.
    */
-  public open fun containers(vararg __idx_ac66f0: Any): Unit = containers(__idx_ac66f0.toList())
+  public open fun containers(vararg _idx_ac66f0: Any): Unit = containers(_idx_ac66f0.toList())
 
   /**
    * Isolates the model container.

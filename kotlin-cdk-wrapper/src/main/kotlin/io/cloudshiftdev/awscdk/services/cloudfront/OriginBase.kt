@@ -22,8 +22,8 @@ public abstract class OriginBase internal constructor(
    * @param _scope 
    * @param options 
    */
-  public override fun bind(_scope: Construct, options: OriginBindOptions): OriginBindConfig =
-      unwrap(this).bind(_scope.let(Construct::unwrap),
+  public override fun bind(scope: Construct, options: OriginBindOptions): OriginBindConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap),
       options.let(OriginBindOptions::unwrap)).let(OriginBindConfig::wrap)
 
   /**
@@ -36,8 +36,8 @@ public abstract class OriginBase internal constructor(
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("a4d8f445ceb4e4ebb177be4645de7fd3d72f0f5d66bcf420280cc1b7bc73b342")
-  public override fun bind(_scope: Construct, options: OriginBindOptions.Builder.() -> Unit):
-      OriginBindConfig = bind(_scope, OriginBindOptions(options))
+  public override fun bind(scope: Construct, options: OriginBindOptions.Builder.() -> Unit):
+      OriginBindConfig = bind(scope, OriginBindOptions(options))
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.cloudfront.OriginBase,

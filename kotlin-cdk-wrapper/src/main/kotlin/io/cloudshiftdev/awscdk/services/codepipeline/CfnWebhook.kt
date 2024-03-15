@@ -136,14 +136,14 @@ public open class CfnWebhook internal constructor(
   /**
    * A list of rules applied to the body/payload sent in the POST request to a webhook URL.
    */
-  public open fun filters(__idx_ac66f0: List<Any>) {
-    unwrap(this).setFilters(__idx_ac66f0)
+  public open fun filters(_idx_ac66f0: List<Any>) {
+    unwrap(this).setFilters(_idx_ac66f0)
   }
 
   /**
    * A list of rules applied to the body/payload sent in the POST request to a webhook URL.
    */
-  public open fun filters(vararg __idx_ac66f0: Any): Unit = filters(__idx_ac66f0.toList())
+  public open fun filters(vararg _idx_ac66f0: Any): Unit = filters(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

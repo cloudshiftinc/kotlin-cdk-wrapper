@@ -88,16 +88,16 @@ public open class CfnPermissionSet internal constructor(
    * Specifies the names and paths of the customer managed policies that you have attached to your
    * permission set.
    */
-  public open fun customerManagedPolicyReferences(__idx_ac66f0: List<Any>) {
-    unwrap(this).setCustomerManagedPolicyReferences(__idx_ac66f0)
+  public open fun customerManagedPolicyReferences(_idx_ac66f0: List<Any>) {
+    unwrap(this).setCustomerManagedPolicyReferences(_idx_ac66f0)
   }
 
   /**
    * Specifies the names and paths of the customer managed policies that you have attached to your
    * permission set.
    */
-  public open fun customerManagedPolicyReferences(vararg __idx_ac66f0: Any): Unit =
-      customerManagedPolicyReferences(__idx_ac66f0.toList())
+  public open fun customerManagedPolicyReferences(vararg _idx_ac66f0: Any): Unit =
+      customerManagedPolicyReferences(_idx_ac66f0.toList())
 
   /**
    * The description of the `PermissionSet` .

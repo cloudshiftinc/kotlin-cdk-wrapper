@@ -107,14 +107,14 @@ public open class CfnResponsePlan internal constructor(
   /**
    * The actions that the response plan starts at the beginning of an incident.
    */
-  public open fun actions(__idx_ac66f0: List<Any>) {
-    unwrap(this).setActions(__idx_ac66f0)
+  public open fun actions(_idx_ac66f0: List<Any>) {
+    unwrap(this).setActions(_idx_ac66f0)
   }
 
   /**
    * The actions that the response plan starts at the beginning of an incident.
    */
-  public open fun actions(vararg __idx_ac66f0: Any): Unit = actions(__idx_ac66f0.toList())
+  public open fun actions(vararg _idx_ac66f0: Any): Unit = actions(_idx_ac66f0.toList())
 
   /**
    * The ARN of the response plan.
@@ -231,14 +231,14 @@ public open class CfnResponsePlan internal constructor(
   /**
    * Information about third-party services integrated into the response plan.
    */
-  public open fun integrations(__idx_ac66f0: List<Any>) {
-    unwrap(this).setIntegrations(__idx_ac66f0)
+  public open fun integrations(_idx_ac66f0: List<Any>) {
+    unwrap(this).setIntegrations(_idx_ac66f0)
   }
 
   /**
    * Information about third-party services integrated into the response plan.
    */
-  public open fun integrations(vararg __idx_ac66f0: Any): Unit = integrations(__idx_ac66f0.toList())
+  public open fun integrations(vararg _idx_ac66f0: Any): Unit = integrations(_idx_ac66f0.toList())
 
   /**
    * The name of the response plan.

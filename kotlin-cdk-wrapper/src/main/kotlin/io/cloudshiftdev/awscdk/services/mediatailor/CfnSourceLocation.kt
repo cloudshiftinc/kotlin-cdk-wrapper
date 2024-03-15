@@ -187,15 +187,15 @@ public open class CfnSourceLocation internal constructor(
   /**
    * The segment delivery configurations for the source location.
    */
-  public open fun segmentDeliveryConfigurations(__idx_ac66f0: List<Any>) {
-    unwrap(this).setSegmentDeliveryConfigurations(__idx_ac66f0)
+  public open fun segmentDeliveryConfigurations(_idx_ac66f0: List<Any>) {
+    unwrap(this).setSegmentDeliveryConfigurations(_idx_ac66f0)
   }
 
   /**
    * The segment delivery configurations for the source location.
    */
-  public open fun segmentDeliveryConfigurations(vararg __idx_ac66f0: Any): Unit =
-      segmentDeliveryConfigurations(__idx_ac66f0.toList())
+  public open fun segmentDeliveryConfigurations(vararg _idx_ac66f0: Any): Unit =
+      segmentDeliveryConfigurations(_idx_ac66f0.toList())
 
   /**
    * The name of the source location.

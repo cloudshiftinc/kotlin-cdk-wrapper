@@ -133,14 +133,14 @@ public open class CfnMultiRegionAccessPoint internal constructor(
   /**
    * A collection of the Regions and buckets associated with the Multi-Region Access Point.
    */
-  public open fun regions(__idx_ac66f0: List<Any>) {
-    unwrap(this).setRegions(__idx_ac66f0)
+  public open fun regions(_idx_ac66f0: List<Any>) {
+    unwrap(this).setRegions(_idx_ac66f0)
   }
 
   /**
    * A collection of the Regions and buckets associated with the Multi-Region Access Point.
    */
-  public open fun regions(vararg __idx_ac66f0: Any): Unit = regions(__idx_ac66f0.toList())
+  public open fun regions(vararg _idx_ac66f0: Any): Unit = regions(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.s3.CfnMultiRegionAccessPoint].

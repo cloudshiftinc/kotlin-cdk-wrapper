@@ -261,16 +261,16 @@ public open class CfnUser internal constructor(
    * One or more predefined attributes assigned to a user, with a numeric value that indicates how
    * their level of skill in a specified area.
    */
-  public open fun userProficiencies(__idx_ac66f0: List<Any>) {
-    unwrap(this).setUserProficiencies(__idx_ac66f0)
+  public open fun userProficiencies(_idx_ac66f0: List<Any>) {
+    unwrap(this).setUserProficiencies(_idx_ac66f0)
   }
 
   /**
    * One or more predefined attributes assigned to a user, with a numeric value that indicates how
    * their level of skill in a specified area.
    */
-  public open fun userProficiencies(vararg __idx_ac66f0: Any): Unit =
-      userProficiencies(__idx_ac66f0.toList())
+  public open fun userProficiencies(vararg _idx_ac66f0: Any): Unit =
+      userProficiencies(_idx_ac66f0.toList())
 
   /**
    * The user name assigned to the user account.

@@ -29,16 +29,18 @@ import kotlin.jvm.JvmName
 public open class ExtensibleBase internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.ExtensibleBase,
 ) : CdkObject(cdkObject), IExtensible {
+  public constructor(scope: Construct, resourceArn: String) :
+      this(software.amazon.awscdk.services.appconfig.ExtensibleBase(scope.let(Construct::unwrap),
+      resourceArn)
+  )
+
   public constructor(
     scope: Construct,
     resourceArn: String,
     resourceName: String,
-  ) : this(software.amazon.awscdk.services.appconfig.ExtensibleBase(Construct.unwrap(scope),
-      resourceArn, resourceName))
-
-  public constructor(scope: Construct, resourceArn: String) :
-      this(software.amazon.awscdk.services.appconfig.ExtensibleBase(Construct.unwrap(scope),
-      resourceArn))
+  ) : this(software.amazon.awscdk.services.appconfig.ExtensibleBase(scope.let(Construct::unwrap),
+      resourceArn, resourceName)
+  )
 
   /**
    * Adds an extension association to the derived resource.

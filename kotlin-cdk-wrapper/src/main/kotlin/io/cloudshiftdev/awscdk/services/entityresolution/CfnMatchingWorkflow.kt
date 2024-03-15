@@ -137,15 +137,15 @@ public open class CfnMatchingWorkflow internal constructor(
   /**
    * A list of `InputSource` objects, which have the fields `InputSourceARN` and `SchemaName` .
    */
-  public open fun inputSourceConfig(__idx_ac66f0: List<Any>) {
-    unwrap(this).setInputSourceConfig(__idx_ac66f0)
+  public open fun inputSourceConfig(_idx_ac66f0: List<Any>) {
+    unwrap(this).setInputSourceConfig(_idx_ac66f0)
   }
 
   /**
    * A list of `InputSource` objects, which have the fields `InputSourceARN` and `SchemaName` .
    */
-  public open fun inputSourceConfig(vararg __idx_ac66f0: Any): Unit =
-      inputSourceConfig(__idx_ac66f0.toList())
+  public open fun inputSourceConfig(vararg _idx_ac66f0: Any): Unit =
+      inputSourceConfig(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -174,16 +174,16 @@ public open class CfnMatchingWorkflow internal constructor(
    * A list of `OutputSource` objects, each of which contains fields `OutputS3Path` ,
    * `ApplyNormalization` , and `Output` .
    */
-  public open fun outputSourceConfig(__idx_ac66f0: List<Any>) {
-    unwrap(this).setOutputSourceConfig(__idx_ac66f0)
+  public open fun outputSourceConfig(_idx_ac66f0: List<Any>) {
+    unwrap(this).setOutputSourceConfig(_idx_ac66f0)
   }
 
   /**
    * A list of `OutputSource` objects, each of which contains fields `OutputS3Path` ,
    * `ApplyNormalization` , and `Output` .
    */
-  public open fun outputSourceConfig(vararg __idx_ac66f0: Any): Unit =
-      outputSourceConfig(__idx_ac66f0.toList())
+  public open fun outputSourceConfig(vararg _idx_ac66f0: Any): Unit =
+      outputSourceConfig(_idx_ac66f0.toList())
 
   /**
    * An object which defines the `resolutionType` and the `ruleBasedProperties` .

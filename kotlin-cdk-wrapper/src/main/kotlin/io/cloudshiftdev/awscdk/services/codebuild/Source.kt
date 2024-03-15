@@ -42,9 +42,9 @@ public abstract class Source internal constructor(
    * @param _scope 
    * @param _project 
    */
-  public override fun bind(_scope: Construct, _project: IProject): SourceConfig =
-      unwrap(this).bind(_scope.let(Construct::unwrap),
-      _project.let(IProject::unwrap)).let(SourceConfig::wrap)
+  public override fun bind(scope: Construct, project: IProject): SourceConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap),
+      project.let(IProject::unwrap)).let(SourceConfig::wrap)
 
   /**
    *

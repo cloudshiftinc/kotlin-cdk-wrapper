@@ -194,15 +194,15 @@ public open class CfnPipeline internal constructor(
   /**
    * A mapping of `artifactStore` objects and their corresponding AWS Regions.
    */
-  public open fun artifactStores(__idx_ac66f0: List<Any>) {
-    unwrap(this).setArtifactStores(__idx_ac66f0)
+  public open fun artifactStores(_idx_ac66f0: List<Any>) {
+    unwrap(this).setArtifactStores(_idx_ac66f0)
   }
 
   /**
    * A mapping of `artifactStore` objects and their corresponding AWS Regions.
    */
-  public open fun artifactStores(vararg __idx_ac66f0: Any): Unit =
-      artifactStores(__idx_ac66f0.toList())
+  public open fun artifactStores(vararg _idx_ac66f0: Any): Unit =
+      artifactStores(_idx_ac66f0.toList())
 
   /**
    *
@@ -234,15 +234,15 @@ public open class CfnPipeline internal constructor(
   /**
    * Represents the input of a `DisableStageTransition` action.
    */
-  public open fun disableInboundStageTransitions(__idx_ac66f0: List<Any>) {
-    unwrap(this).setDisableInboundStageTransitions(__idx_ac66f0)
+  public open fun disableInboundStageTransitions(_idx_ac66f0: List<Any>) {
+    unwrap(this).setDisableInboundStageTransitions(_idx_ac66f0)
   }
 
   /**
    * Represents the input of a `DisableStageTransition` action.
    */
-  public open fun disableInboundStageTransitions(vararg __idx_ac66f0: Any): Unit =
-      disableInboundStageTransitions(__idx_ac66f0.toList())
+  public open fun disableInboundStageTransitions(vararg _idx_ac66f0: Any): Unit =
+      disableInboundStageTransitions(_idx_ac66f0.toList())
 
   /**
    * The method that the pipeline will use to handle multiple executions.
@@ -339,14 +339,14 @@ public open class CfnPipeline internal constructor(
   /**
    * Represents information about a stage and its definition.
    */
-  public open fun stages(__idx_ac66f0: List<Any>) {
-    unwrap(this).setStages(__idx_ac66f0)
+  public open fun stages(_idx_ac66f0: List<Any>) {
+    unwrap(this).setStages(_idx_ac66f0)
   }
 
   /**
    * Represents information about a stage and its definition.
    */
-  public open fun stages(vararg __idx_ac66f0: Any): Unit = stages(__idx_ac66f0.toList())
+  public open fun stages(vararg _idx_ac66f0: Any): Unit = stages(_idx_ac66f0.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.
@@ -389,15 +389,15 @@ public open class CfnPipeline internal constructor(
    * The trigger configuration specifying a type of event, such as Git tags, that starts the
    * pipeline.
    */
-  public open fun triggers(__idx_ac66f0: List<Any>) {
-    unwrap(this).setTriggers(__idx_ac66f0)
+  public open fun triggers(_idx_ac66f0: List<Any>) {
+    unwrap(this).setTriggers(_idx_ac66f0)
   }
 
   /**
    * The trigger configuration specifying a type of event, such as Git tags, that starts the
    * pipeline.
    */
-  public open fun triggers(vararg __idx_ac66f0: Any): Unit = triggers(__idx_ac66f0.toList())
+  public open fun triggers(vararg _idx_ac66f0: Any): Unit = triggers(_idx_ac66f0.toList())
 
   /**
    * A list that defines the pipeline variables for a pipeline resource.
@@ -414,14 +414,14 @@ public open class CfnPipeline internal constructor(
   /**
    * A list that defines the pipeline variables for a pipeline resource.
    */
-  public open fun variables(__idx_ac66f0: List<Any>) {
-    unwrap(this).setVariables(__idx_ac66f0)
+  public open fun variables(_idx_ac66f0: List<Any>) {
+    unwrap(this).setVariables(_idx_ac66f0)
   }
 
   /**
    * A list that defines the pipeline variables for a pipeline resource.
    */
-  public open fun variables(vararg __idx_ac66f0: Any): Unit = variables(__idx_ac66f0.toList())
+  public open fun variables(vararg _idx_ac66f0: Any): Unit = variables(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.codepipeline.CfnPipeline].

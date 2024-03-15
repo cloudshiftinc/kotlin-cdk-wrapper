@@ -23,7 +23,8 @@ public open class GlobIgnoreStrategy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.GlobIgnoreStrategy,
 ) : IgnoreStrategy(cdkObject) {
   public constructor(absoluteRootPath: String, patterns: List<String>) :
-      this(software.amazon.awscdk.GlobIgnoreStrategy(absoluteRootPath, patterns))
+      this(software.amazon.awscdk.GlobIgnoreStrategy(absoluteRootPath, patterns)
+  )
 
   /**
    * Adds another pattern.

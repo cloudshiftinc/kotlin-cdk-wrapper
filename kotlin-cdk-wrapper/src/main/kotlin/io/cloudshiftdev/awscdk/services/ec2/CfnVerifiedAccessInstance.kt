@@ -216,15 +216,15 @@ public open class CfnVerifiedAccessInstance internal constructor(
   /**
    * The IDs of the AWS Verified Access trust providers.
    */
-  public open fun verifiedAccessTrustProviders(__idx_ac66f0: List<Any>) {
-    unwrap(this).setVerifiedAccessTrustProviders(__idx_ac66f0)
+  public open fun verifiedAccessTrustProviders(_idx_ac66f0: List<Any>) {
+    unwrap(this).setVerifiedAccessTrustProviders(_idx_ac66f0)
   }
 
   /**
    * The IDs of the AWS Verified Access trust providers.
    */
-  public open fun verifiedAccessTrustProviders(vararg __idx_ac66f0: Any): Unit =
-      verifiedAccessTrustProviders(__idx_ac66f0.toList())
+  public open fun verifiedAccessTrustProviders(vararg _idx_ac66f0: Any): Unit =
+      verifiedAccessTrustProviders(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.CfnVerifiedAccessInstance].

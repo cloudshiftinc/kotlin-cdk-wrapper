@@ -35,7 +35,8 @@ import kotlin.collections.Map
 public open class FilterRule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.FilterRule,
 ) : CdkObject(cdkObject) {
-  public constructor() : this(software.amazon.awscdk.services.lambda.FilterRule())
+  public constructor() : this(software.amazon.awscdk.services.lambda.FilterRule()
+  )
 
   public companion object {
     public fun beginsWith(elem: String): List<Map<String, String>> =

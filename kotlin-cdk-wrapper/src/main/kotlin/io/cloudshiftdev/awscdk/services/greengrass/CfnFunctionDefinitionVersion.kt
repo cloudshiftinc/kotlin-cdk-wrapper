@@ -152,14 +152,14 @@ public open class CfnFunctionDefinitionVersion internal constructor(
   /**
    * The functions in this version.
    */
-  public open fun functions(__idx_ac66f0: List<Any>) {
-    unwrap(this).setFunctions(__idx_ac66f0)
+  public open fun functions(_idx_ac66f0: List<Any>) {
+    unwrap(this).setFunctions(_idx_ac66f0)
   }
 
   /**
    * The functions in this version.
    */
-  public open fun functions(vararg __idx_ac66f0: Any): Unit = functions(__idx_ac66f0.toList())
+  public open fun functions(vararg _idx_ac66f0: Any): Unit = functions(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

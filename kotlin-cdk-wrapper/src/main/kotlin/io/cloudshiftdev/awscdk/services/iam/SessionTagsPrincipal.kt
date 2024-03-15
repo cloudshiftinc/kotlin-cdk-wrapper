@@ -27,7 +27,8 @@ public open class SessionTagsPrincipal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.SessionTagsPrincipal,
 ) : PrincipalBase(cdkObject) {
   public constructor(principal: IPrincipal) :
-      this(software.amazon.awscdk.services.iam.SessionTagsPrincipal(IPrincipal.unwrap(principal)))
+      this(software.amazon.awscdk.services.iam.SessionTagsPrincipal(principal.let(IPrincipal::unwrap))
+  )
 
   /**
    * Add the principal to the AssumeRolePolicyDocument.

@@ -109,14 +109,14 @@ public open class CfnDBProxy internal constructor(
   /**
    * The authorization mechanism that the proxy uses.
    */
-  public open fun auth(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAuth(__idx_ac66f0)
+  public open fun auth(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAuth(_idx_ac66f0)
   }
 
   /**
    * The authorization mechanism that the proxy uses.
    */
-  public open fun auth(vararg __idx_ac66f0: Any): Unit = auth(__idx_ac66f0.toList())
+  public open fun auth(vararg _idx_ac66f0: Any): Unit = auth(_idx_ac66f0.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

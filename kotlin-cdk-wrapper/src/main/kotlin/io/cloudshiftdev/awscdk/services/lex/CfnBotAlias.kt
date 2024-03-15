@@ -119,15 +119,15 @@ public open class CfnBotAlias internal constructor(
   /**
    * Specifies settings that are unique to a locale.
    */
-  public open fun botAliasLocaleSettings(__idx_ac66f0: List<Any>) {
-    unwrap(this).setBotAliasLocaleSettings(__idx_ac66f0)
+  public open fun botAliasLocaleSettings(_idx_ac66f0: List<Any>) {
+    unwrap(this).setBotAliasLocaleSettings(_idx_ac66f0)
   }
 
   /**
    * Specifies settings that are unique to a locale.
    */
-  public open fun botAliasLocaleSettings(vararg __idx_ac66f0: Any): Unit =
-      botAliasLocaleSettings(__idx_ac66f0.toList())
+  public open fun botAliasLocaleSettings(vararg _idx_ac66f0: Any): Unit =
+      botAliasLocaleSettings(_idx_ac66f0.toList())
 
   /**
    * The name of the bot alias.
@@ -156,14 +156,14 @@ public open class CfnBotAlias internal constructor(
   /**
    * An array of key-value pairs to apply to this resource.
    */
-  public open fun botAliasTags(__idx_ac66f0: List<Any>) {
-    unwrap(this).setBotAliasTags(__idx_ac66f0)
+  public open fun botAliasTags(_idx_ac66f0: List<Any>) {
+    unwrap(this).setBotAliasTags(_idx_ac66f0)
   }
 
   /**
    * An array of key-value pairs to apply to this resource.
    */
-  public open fun botAliasTags(vararg __idx_ac66f0: Any): Unit = botAliasTags(__idx_ac66f0.toList())
+  public open fun botAliasTags(vararg _idx_ac66f0: Any): Unit = botAliasTags(_idx_ac66f0.toList())
 
   /**
    * The unique identifier of the bot.

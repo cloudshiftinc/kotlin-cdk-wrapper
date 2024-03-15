@@ -148,15 +148,15 @@ public open class CfnDataflowEndpointGroup internal constructor(
   /**
    * List of Endpoint Details, containing address and port for each endpoint.
    */
-  public open fun endpointDetails(__idx_ac66f0: List<Any>) {
-    unwrap(this).setEndpointDetails(__idx_ac66f0)
+  public open fun endpointDetails(_idx_ac66f0: List<Any>) {
+    unwrap(this).setEndpointDetails(_idx_ac66f0)
   }
 
   /**
    * List of Endpoint Details, containing address and port for each endpoint.
    */
-  public open fun endpointDetails(vararg __idx_ac66f0: Any): Unit =
-      endpointDetails(__idx_ac66f0.toList())
+  public open fun endpointDetails(vararg _idx_ac66f0: Any): Unit =
+      endpointDetails(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

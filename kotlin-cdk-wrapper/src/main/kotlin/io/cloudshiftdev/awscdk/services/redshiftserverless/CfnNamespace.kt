@@ -349,15 +349,15 @@ public open class CfnNamespace internal constructor(
   /**
    * The snapshot copy configurations for the namespace.
    */
-  public open fun snapshotCopyConfigurations(__idx_ac66f0: List<Any>) {
-    unwrap(this).setSnapshotCopyConfigurations(__idx_ac66f0)
+  public open fun snapshotCopyConfigurations(_idx_ac66f0: List<Any>) {
+    unwrap(this).setSnapshotCopyConfigurations(_idx_ac66f0)
   }
 
   /**
    * The snapshot copy configurations for the namespace.
    */
-  public open fun snapshotCopyConfigurations(vararg __idx_ac66f0: Any): Unit =
-      snapshotCopyConfigurations(__idx_ac66f0.toList())
+  public open fun snapshotCopyConfigurations(vararg _idx_ac66f0: Any): Unit =
+      snapshotCopyConfigurations(_idx_ac66f0.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

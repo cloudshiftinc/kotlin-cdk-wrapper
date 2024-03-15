@@ -232,14 +232,14 @@ public open class CfnNetworkInterface internal constructor(
   /**
    * The IPv4 delegated prefixes that are assigned to the network interface.
    */
-  public open fun ipv4Prefixes(__idx_ac66f0: List<Any>) {
-    unwrap(this).setIpv4Prefixes(__idx_ac66f0)
+  public open fun ipv4Prefixes(_idx_ac66f0: List<Any>) {
+    unwrap(this).setIpv4Prefixes(_idx_ac66f0)
   }
 
   /**
    * The IPv4 delegated prefixes that are assigned to the network interface.
    */
-  public open fun ipv4Prefixes(vararg __idx_ac66f0: Any): Unit = ipv4Prefixes(__idx_ac66f0.toList())
+  public open fun ipv4Prefixes(vararg _idx_ac66f0: Any): Unit = ipv4Prefixes(_idx_ac66f0.toList())
 
   /**
    * The number of IPv6 addresses to assign to a network interface.
@@ -271,16 +271,15 @@ public open class CfnNetworkInterface internal constructor(
    * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate
    * with the network interface.
    */
-  public open fun ipv6Addresses(__idx_ac66f0: List<Any>) {
-    unwrap(this).setIpv6Addresses(__idx_ac66f0)
+  public open fun ipv6Addresses(_idx_ac66f0: List<Any>) {
+    unwrap(this).setIpv6Addresses(_idx_ac66f0)
   }
 
   /**
    * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate
    * with the network interface.
    */
-  public open fun ipv6Addresses(vararg __idx_ac66f0: Any): Unit =
-      ipv6Addresses(__idx_ac66f0.toList())
+  public open fun ipv6Addresses(vararg _idx_ac66f0: Any): Unit = ipv6Addresses(_idx_ac66f0.toList())
 
   /**
    * The number of IPv6 prefixes to be automatically assigned to the network interface.
@@ -309,14 +308,14 @@ public open class CfnNetworkInterface internal constructor(
   /**
    * The IPv6 delegated prefixes that are assigned to the network interface.
    */
-  public open fun ipv6Prefixes(__idx_ac66f0: List<Any>) {
-    unwrap(this).setIpv6Prefixes(__idx_ac66f0)
+  public open fun ipv6Prefixes(_idx_ac66f0: List<Any>) {
+    unwrap(this).setIpv6Prefixes(_idx_ac66f0)
   }
 
   /**
    * The IPv6 delegated prefixes that are assigned to the network interface.
    */
-  public open fun ipv6Prefixes(vararg __idx_ac66f0: Any): Unit = ipv6Prefixes(__idx_ac66f0.toList())
+  public open fun ipv6Prefixes(vararg _idx_ac66f0: Any): Unit = ipv6Prefixes(_idx_ac66f0.toList())
 
   /**
    * Assigns a single private IP address to the network interface, which is used as the primary
@@ -347,15 +346,15 @@ public open class CfnNetworkInterface internal constructor(
   /**
    * Assigns private IP addresses to the network interface.
    */
-  public open fun privateIpAddresses(__idx_ac66f0: List<Any>) {
-    unwrap(this).setPrivateIpAddresses(__idx_ac66f0)
+  public open fun privateIpAddresses(_idx_ac66f0: List<Any>) {
+    unwrap(this).setPrivateIpAddresses(_idx_ac66f0)
   }
 
   /**
    * Assigns private IP addresses to the network interface.
    */
-  public open fun privateIpAddresses(vararg __idx_ac66f0: Any): Unit =
-      privateIpAddresses(__idx_ac66f0.toList())
+  public open fun privateIpAddresses(vararg _idx_ac66f0: Any): Unit =
+      privateIpAddresses(_idx_ac66f0.toList())
 
   /**
    * The number of secondary private IPv4 addresses to assign to a network interface.

@@ -75,15 +75,15 @@ public open class CfnAppBlockBuilder internal constructor(
   /**
    * The access endpoints of the app block builder.
    */
-  public open fun accessEndpoints(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAccessEndpoints(__idx_ac66f0)
+  public open fun accessEndpoints(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAccessEndpoints(_idx_ac66f0)
   }
 
   /**
    * The access endpoints of the app block builder.
    */
-  public open fun accessEndpoints(vararg __idx_ac66f0: Any): Unit =
-      accessEndpoints(__idx_ac66f0.toList())
+  public open fun accessEndpoints(vararg _idx_ac66f0: Any): Unit =
+      accessEndpoints(_idx_ac66f0.toList())
 
   /**
    * The ARN of the app block.

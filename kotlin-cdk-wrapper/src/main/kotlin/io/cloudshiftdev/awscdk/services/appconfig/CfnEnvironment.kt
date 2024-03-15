@@ -127,14 +127,14 @@ public open class CfnEnvironment internal constructor(
   /**
    * Amazon CloudWatch alarms to monitor during the deployment process.
    */
-  public open fun monitors(__idx_ac66f0: List<Any>) {
-    unwrap(this).setMonitors(__idx_ac66f0)
+  public open fun monitors(_idx_ac66f0: List<Any>) {
+    unwrap(this).setMonitors(_idx_ac66f0)
   }
 
   /**
    * Amazon CloudWatch alarms to monitor during the deployment process.
    */
-  public open fun monitors(vararg __idx_ac66f0: Any): Unit = monitors(__idx_ac66f0.toList())
+  public open fun monitors(vararg _idx_ac66f0: Any): Unit = monitors(_idx_ac66f0.toList())
 
   /**
    * A name for the environment.

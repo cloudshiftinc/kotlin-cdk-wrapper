@@ -20,7 +20,8 @@ public open class OrganizationPrincipal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.OrganizationPrincipal,
 ) : PrincipalBase(cdkObject) {
   public constructor(organizationId: String) :
-      this(software.amazon.awscdk.services.iam.OrganizationPrincipal(organizationId))
+      this(software.amazon.awscdk.services.iam.OrganizationPrincipal(organizationId)
+  )
 
   /**
    * Return whether or not this principal is equal to the given principal.

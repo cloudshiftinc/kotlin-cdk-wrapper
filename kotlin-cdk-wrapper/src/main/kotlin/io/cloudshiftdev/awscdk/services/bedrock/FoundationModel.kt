@@ -41,11 +41,11 @@ public open class FoundationModel internal constructor(
   public companion object {
     public fun fromFoundationModelId(
       scope: Construct,
-      _id: String,
+      id: String,
       foundationModelId: FoundationModelIdentifier,
     ): FoundationModel =
         software.amazon.awscdk.services.bedrock.FoundationModel.fromFoundationModelId(scope.let(Construct::unwrap),
-        _id, foundationModelId.let(FoundationModelIdentifier::unwrap)).let(FoundationModel::wrap)
+        id, foundationModelId.let(FoundationModelIdentifier::unwrap)).let(FoundationModel::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.FoundationModel):
         FoundationModel = FoundationModel(cdkObject)

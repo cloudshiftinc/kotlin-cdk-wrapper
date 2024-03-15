@@ -22,7 +22,8 @@ public open class StackOutputsMap internal constructor(
   internal override val cdkObject: software.amazon.awscdk.pipelines.StackOutputsMap,
 ) : CdkObject(cdkObject) {
   public constructor(pipeline: PipelineBase) :
-      this(software.amazon.awscdk.pipelines.StackOutputsMap(PipelineBase.unwrap(pipeline)))
+      this(software.amazon.awscdk.pipelines.StackOutputsMap(pipeline.let(PipelineBase::unwrap))
+  )
 
   /**
    * Return the matching variable reference string for a StackOutputReference.

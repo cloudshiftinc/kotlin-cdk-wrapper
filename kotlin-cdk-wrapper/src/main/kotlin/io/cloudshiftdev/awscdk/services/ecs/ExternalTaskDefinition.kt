@@ -34,8 +34,8 @@ public open class ExternalTaskDefinition internal constructor(
    *
    * @param _inferenceAccelerator 
    */
-  public override fun addInferenceAccelerator(_inferenceAccelerator: InferenceAccelerator) {
-    unwrap(this).addInferenceAccelerator(_inferenceAccelerator.let(InferenceAccelerator::unwrap))
+  public override fun addInferenceAccelerator(inferenceAccelerator: InferenceAccelerator) {
+    unwrap(this).addInferenceAccelerator(inferenceAccelerator.let(InferenceAccelerator::unwrap))
   }
 
   /**
@@ -46,8 +46,8 @@ public open class ExternalTaskDefinition internal constructor(
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("5ed9df469538219aa4a519c5c670da4fa01bf9950e8d2a410fbf5d7fc465f966")
   public override
-      fun addInferenceAccelerator(_inferenceAccelerator: InferenceAccelerator.Builder.() -> Unit):
-      Unit = addInferenceAccelerator(InferenceAccelerator(_inferenceAccelerator))
+      fun addInferenceAccelerator(inferenceAccelerator: InferenceAccelerator.Builder.() -> Unit):
+      Unit = addInferenceAccelerator(InferenceAccelerator(inferenceAccelerator))
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.ExternalTaskDefinition].

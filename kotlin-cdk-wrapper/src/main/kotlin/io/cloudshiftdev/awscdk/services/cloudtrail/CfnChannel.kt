@@ -67,14 +67,14 @@ public open class CfnChannel internal constructor(
   /**
    * One or more event data stores to which events arriving through a channel will be logged.
    */
-  public open fun destinations(__idx_ac66f0: List<Any>) {
-    unwrap(this).setDestinations(__idx_ac66f0)
+  public open fun destinations(_idx_ac66f0: List<Any>) {
+    unwrap(this).setDestinations(_idx_ac66f0)
   }
 
   /**
    * One or more event data stores to which events arriving through a channel will be logged.
    */
-  public open fun destinations(vararg __idx_ac66f0: Any): Unit = destinations(__idx_ac66f0.toList())
+  public open fun destinations(vararg _idx_ac66f0: Any): Unit = destinations(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

@@ -228,15 +228,15 @@ public open class CfnCluster internal constructor(
   /**
    * The encryption configuration for the cluster.
    */
-  public open fun encryptionConfig(__idx_ac66f0: List<Any>) {
-    unwrap(this).setEncryptionConfig(__idx_ac66f0)
+  public open fun encryptionConfig(_idx_ac66f0: List<Any>) {
+    unwrap(this).setEncryptionConfig(_idx_ac66f0)
   }
 
   /**
    * The encryption configuration for the cluster.
    */
-  public open fun encryptionConfig(vararg __idx_ac66f0: Any): Unit =
-      encryptionConfig(__idx_ac66f0.toList())
+  public open fun encryptionConfig(vararg _idx_ac66f0: Any): Unit =
+      encryptionConfig(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

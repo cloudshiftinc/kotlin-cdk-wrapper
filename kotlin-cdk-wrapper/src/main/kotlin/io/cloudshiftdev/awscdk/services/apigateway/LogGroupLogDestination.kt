@@ -28,15 +28,16 @@ public open class LogGroupLogDestination internal constructor(
       software.amazon.awscdk.services.apigateway.LogGroupLogDestination,
 ) : CdkObject(cdkObject), IAccessLogDestination {
   public constructor(logGroup: ILogGroup) :
-      this(software.amazon.awscdk.services.apigateway.LogGroupLogDestination(ILogGroup.unwrap(logGroup)))
+      this(software.amazon.awscdk.services.apigateway.LogGroupLogDestination(logGroup.let(ILogGroup::unwrap))
+  )
 
   /**
    * Binds this destination to the CloudWatch Logs.
    *
    * @param _stage 
    */
-  public override fun bind(_stage: IStage): AccessLogDestinationConfig =
-      unwrap(this).bind(_stage.let(IStage::unwrap)).let(AccessLogDestinationConfig::wrap)
+  public override fun bind(stage: IStage): AccessLogDestinationConfig =
+      unwrap(this).bind(stage.let(IStage::unwrap)).let(AccessLogDestinationConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.LogGroupLogDestination):

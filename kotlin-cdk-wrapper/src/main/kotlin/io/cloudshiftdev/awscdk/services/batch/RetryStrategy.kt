@@ -31,8 +31,9 @@ public open class RetryStrategy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.RetryStrategy,
 ) : CdkObject(cdkObject) {
   public constructor(action: Action, on: Reason) :
-      this(software.amazon.awscdk.services.batch.RetryStrategy(Action.unwrap(action),
-      Reason.unwrap(on)))
+      this(software.amazon.awscdk.services.batch.RetryStrategy(action.let(Action::unwrap),
+      on.let(Reason::unwrap))
+  )
 
   /**
    * The action to take when the job exits with the Reason specified.

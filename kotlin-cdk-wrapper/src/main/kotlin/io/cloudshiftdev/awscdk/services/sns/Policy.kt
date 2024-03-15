@@ -22,6 +22,10 @@ import kotlin.collections.Map
 public open class Policy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sns.Policy,
 ) : FilterOrPolicy(cdkObject) {
+  public constructor(policyDoc: Map<String, FilterOrPolicy>) :
+      this(software.amazon.awscdk.services.sns.Policy(policyDoc.mapValues{FilterOrPolicy.unwrap(it.value)})
+  )
+
   /**
    * policy argument to construct.
    */

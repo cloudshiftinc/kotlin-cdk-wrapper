@@ -228,15 +228,15 @@ public open class CfnContainer internal constructor(
   /**
    * The public domain name of the container service, such as `example.com` and `www.example.com` .
    */
-  public open fun publicDomainNames(__idx_ac66f0: List<Any>) {
-    unwrap(this).setPublicDomainNames(__idx_ac66f0)
+  public open fun publicDomainNames(_idx_ac66f0: List<Any>) {
+    unwrap(this).setPublicDomainNames(_idx_ac66f0)
   }
 
   /**
    * The public domain name of the container service, such as `example.com` and `www.example.com` .
    */
-  public open fun publicDomainNames(vararg __idx_ac66f0: Any): Unit =
-      publicDomainNames(__idx_ac66f0.toList())
+  public open fun publicDomainNames(vararg _idx_ac66f0: Any): Unit =
+      publicDomainNames(_idx_ac66f0.toList())
 
   /**
    * The scale specification of the container service.

@@ -35,7 +35,8 @@ public open class LambdaAction internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.actions.LambdaAction,
 ) : CdkObject(cdkObject), IAlarmAction {
   public constructor(lambdaFunction: Any) :
-      this(software.amazon.awscdk.services.cloudwatch.actions.LambdaAction(lambdaFunction))
+      this(software.amazon.awscdk.services.cloudwatch.actions.LambdaAction(lambdaFunction)
+  )
 
   /**
    * Returns an alarm action configuration to use a Lambda action as an alarm action.

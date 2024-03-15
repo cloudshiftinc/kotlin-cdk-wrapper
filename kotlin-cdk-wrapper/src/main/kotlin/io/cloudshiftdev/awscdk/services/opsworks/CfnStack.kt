@@ -380,14 +380,14 @@ public open class CfnStack internal constructor(
   /**
    * A list of Elastic IP addresses to register with the AWS OpsWorks stack.
    */
-  public open fun elasticIps(__idx_ac66f0: List<Any>) {
-    unwrap(this).setElasticIps(__idx_ac66f0)
+  public open fun elasticIps(_idx_ac66f0: List<Any>) {
+    unwrap(this).setElasticIps(_idx_ac66f0)
   }
 
   /**
    * A list of Elastic IP addresses to register with the AWS OpsWorks stack.
    */
-  public open fun elasticIps(vararg __idx_ac66f0: Any): Unit = elasticIps(__idx_ac66f0.toList())
+  public open fun elasticIps(vararg _idx_ac66f0: Any): Unit = elasticIps(_idx_ac66f0.toList())
 
   /**
    * The stack's host name theme, with spaces replaced by underscores.
@@ -440,16 +440,16 @@ public open class CfnStack internal constructor(
    * The Amazon Relational Database Service ( Amazon RDS ) database instance to register with the
    * AWS OpsWorks stack.
    */
-  public open fun rdsDbInstances(__idx_ac66f0: List<Any>) {
-    unwrap(this).setRdsDbInstances(__idx_ac66f0)
+  public open fun rdsDbInstances(_idx_ac66f0: List<Any>) {
+    unwrap(this).setRdsDbInstances(_idx_ac66f0)
   }
 
   /**
    * The Amazon Relational Database Service ( Amazon RDS ) database instance to register with the
    * AWS OpsWorks stack.
    */
-  public open fun rdsDbInstances(vararg __idx_ac66f0: Any): Unit =
-      rdsDbInstances(__idx_ac66f0.toList())
+  public open fun rdsDbInstances(vararg _idx_ac66f0: Any): Unit =
+      rdsDbInstances(_idx_ac66f0.toList())
 
   /**
    * The stack's IAM role, which allows AWS OpsWorks Stacks to work with AWS resources on your

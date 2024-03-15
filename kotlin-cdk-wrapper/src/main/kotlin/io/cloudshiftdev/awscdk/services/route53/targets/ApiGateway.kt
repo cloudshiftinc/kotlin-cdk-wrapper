@@ -28,7 +28,8 @@ public open class ApiGateway internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.route53.targets.ApiGateway,
 ) : ApiGatewayDomain(cdkObject) {
   public constructor(api: RestApiBase) :
-      this(software.amazon.awscdk.services.route53.targets.ApiGateway(RestApiBase.unwrap(api)))
+      this(software.amazon.awscdk.services.route53.targets.ApiGateway(api.let(RestApiBase::unwrap))
+  )
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.targets.ApiGateway):

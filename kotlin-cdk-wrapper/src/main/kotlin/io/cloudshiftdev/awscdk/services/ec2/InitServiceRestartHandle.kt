@@ -39,7 +39,8 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 public open class InitServiceRestartHandle internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.InitServiceRestartHandle,
 ) : CdkObject(cdkObject) {
-  public constructor() : this(software.amazon.awscdk.services.ec2.InitServiceRestartHandle())
+  public constructor() : this(software.amazon.awscdk.services.ec2.InitServiceRestartHandle()
+  )
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.InitServiceRestartHandle):

@@ -51,7 +51,8 @@ public open class AmazonLinux2Kernel internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.AmazonLinux2Kernel,
 ) : CdkObject(cdkObject) {
   public constructor(version: String) :
-      this(software.amazon.awscdk.services.ec2.AmazonLinux2Kernel(version))
+      this(software.amazon.awscdk.services.ec2.AmazonLinux2Kernel(version)
+  )
 
   public companion object {
     public val CDK_LATEST: AmazonLinux2Kernel =

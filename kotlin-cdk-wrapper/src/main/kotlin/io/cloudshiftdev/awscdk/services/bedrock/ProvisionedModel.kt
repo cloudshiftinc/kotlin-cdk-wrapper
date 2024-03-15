@@ -34,12 +34,12 @@ public open class ProvisionedModel internal constructor(
 
   public companion object {
     public fun fromProvisionedModelArn(
-      _scope: Construct,
-      _id: String,
+      scope: Construct,
+      id: String,
       provisionedModelArn: String,
     ): IModel =
-        software.amazon.awscdk.services.bedrock.ProvisionedModel.fromProvisionedModelArn(_scope.let(Construct::unwrap),
-        _id, provisionedModelArn).let(IModel::wrap)
+        software.amazon.awscdk.services.bedrock.ProvisionedModel.fromProvisionedModelArn(scope.let(Construct::unwrap),
+        id, provisionedModelArn).let(IModel::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.ProvisionedModel):
         ProvisionedModel = ProvisionedModel(cdkObject)

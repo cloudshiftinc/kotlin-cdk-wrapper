@@ -23,8 +23,9 @@ public open class NodeProxyAgentLayer internal constructor(
       software.amazon.awscdk.lambda.layer.node.proxy.agent.NodeProxyAgentLayer,
 ) : LayerVersion(cdkObject) {
   public constructor(scope: Construct, id: String) :
-      this(software.amazon.awscdk.lambda.layer.node.proxy.agent.NodeProxyAgentLayer(Construct.unwrap(scope),
-      id))
+      this(software.amazon.awscdk.lambda.layer.node.proxy.agent.NodeProxyAgentLayer(scope.let(Construct::unwrap),
+      id)
+  )
 
   public companion object {
     internal

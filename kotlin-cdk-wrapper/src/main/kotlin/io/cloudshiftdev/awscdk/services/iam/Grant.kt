@@ -119,9 +119,9 @@ public open class Grant internal constructor(
     public fun addToPrincipalOrResource(options: GrantWithResourceOptions.Builder.() -> Unit): Grant
         = addToPrincipalOrResource(GrantWithResourceOptions(options))
 
-    public fun drop(grantee: IGrantable, _intent: String): Grant =
+    public fun drop(grantee: IGrantable, intent: String): Grant =
         software.amazon.awscdk.services.iam.Grant.drop(grantee.let(IGrantable::unwrap),
-        _intent).let(Grant::wrap)
+        intent).let(Grant::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.Grant): Grant =
         Grant(cdkObject)

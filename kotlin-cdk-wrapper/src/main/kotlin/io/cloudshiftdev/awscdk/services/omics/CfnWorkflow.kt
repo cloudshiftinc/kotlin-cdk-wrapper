@@ -172,8 +172,8 @@ public open class CfnWorkflow internal constructor(
   /**
    * The workflow's parameter template.
    */
-  public open fun parameterTemplate(__item_ac66f0: Map<String, Any>) {
-    unwrap(this).setParameterTemplate(__item_ac66f0)
+  public open fun parameterTemplate(_item_ac66f0: Map<String, Any>) {
+    unwrap(this).setParameterTemplate(_item_ac66f0)
   }
 
   /**

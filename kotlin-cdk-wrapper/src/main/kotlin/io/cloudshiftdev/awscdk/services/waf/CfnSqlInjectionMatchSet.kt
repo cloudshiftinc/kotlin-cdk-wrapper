@@ -105,16 +105,16 @@ public open class CfnSqlInjectionMatchSet internal constructor(
    * Specifies the parts of web requests that you want to inspect for snippets of malicious SQL
    * code.
    */
-  public open fun sqlInjectionMatchTuples(__idx_ac66f0: List<Any>) {
-    unwrap(this).setSqlInjectionMatchTuples(__idx_ac66f0)
+  public open fun sqlInjectionMatchTuples(_idx_ac66f0: List<Any>) {
+    unwrap(this).setSqlInjectionMatchTuples(_idx_ac66f0)
   }
 
   /**
    * Specifies the parts of web requests that you want to inspect for snippets of malicious SQL
    * code.
    */
-  public open fun sqlInjectionMatchTuples(vararg __idx_ac66f0: Any): Unit =
-      sqlInjectionMatchTuples(__idx_ac66f0.toList())
+  public open fun sqlInjectionMatchTuples(vararg _idx_ac66f0: Any): Unit =
+      sqlInjectionMatchTuples(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.waf.CfnSqlInjectionMatchSet].

@@ -148,15 +148,15 @@ public open class CfnApp internal constructor(
   /**
    * The list of events you would like to subscribe and get notification for.
    */
-  public open fun eventSubscriptions(__idx_ac66f0: List<Any>) {
-    unwrap(this).setEventSubscriptions(__idx_ac66f0)
+  public open fun eventSubscriptions(_idx_ac66f0: List<Any>) {
+    unwrap(this).setEventSubscriptions(_idx_ac66f0)
   }
 
   /**
    * The list of events you would like to subscribe and get notification for.
    */
-  public open fun eventSubscriptions(vararg __idx_ac66f0: Any): Unit =
-      eventSubscriptions(__idx_ac66f0.toList())
+  public open fun eventSubscriptions(vararg _idx_ac66f0: Any): Unit =
+      eventSubscriptions(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -237,15 +237,15 @@ public open class CfnApp internal constructor(
   /**
    * An array of `ResourceMapping` objects.
    */
-  public open fun resourceMappings(__idx_ac66f0: List<Any>) {
-    unwrap(this).setResourceMappings(__idx_ac66f0)
+  public open fun resourceMappings(_idx_ac66f0: List<Any>) {
+    unwrap(this).setResourceMappings(_idx_ac66f0)
   }
 
   /**
    * An array of `ResourceMapping` objects.
    */
-  public open fun resourceMappings(vararg __idx_ac66f0: Any): Unit =
-      resourceMappings(__idx_ac66f0.toList())
+  public open fun resourceMappings(vararg _idx_ac66f0: Any): Unit =
+      resourceMappings(_idx_ac66f0.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

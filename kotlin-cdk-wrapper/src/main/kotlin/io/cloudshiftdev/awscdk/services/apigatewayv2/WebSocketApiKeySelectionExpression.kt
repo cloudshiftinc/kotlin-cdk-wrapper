@@ -21,7 +21,8 @@ public open class WebSocketApiKeySelectionExpression internal constructor(
       software.amazon.awscdk.services.apigatewayv2.WebSocketApiKeySelectionExpression,
 ) : CdkObject(cdkObject) {
   public constructor(customApiKeySelector: String) :
-      this(software.amazon.awscdk.services.apigatewayv2.WebSocketApiKeySelectionExpression(customApiKeySelector))
+      this(software.amazon.awscdk.services.apigatewayv2.WebSocketApiKeySelectionExpression(customApiKeySelector)
+  )
 
   /**
    * The expression used by API Gateway.

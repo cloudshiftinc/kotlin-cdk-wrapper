@@ -136,15 +136,15 @@ public open class CfnIPAM internal constructor(
   /**
    * The operating Regions for an IPAM.
    */
-  public open fun operatingRegions(__idx_ac66f0: List<Any>) {
-    unwrap(this).setOperatingRegions(__idx_ac66f0)
+  public open fun operatingRegions(_idx_ac66f0: List<Any>) {
+    unwrap(this).setOperatingRegions(_idx_ac66f0)
   }
 
   /**
    * The operating Regions for an IPAM.
    */
-  public open fun operatingRegions(vararg __idx_ac66f0: Any): Unit =
-      operatingRegions(__idx_ac66f0.toList())
+  public open fun operatingRegions(vararg _idx_ac66f0: Any): Unit =
+      operatingRegions(_idx_ac66f0.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

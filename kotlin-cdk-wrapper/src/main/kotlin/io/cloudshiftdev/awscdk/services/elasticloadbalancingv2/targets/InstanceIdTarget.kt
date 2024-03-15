@@ -30,12 +30,14 @@ public open class InstanceIdTarget internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceIdTarget,
 ) : CdkObject(cdkObject), IApplicationLoadBalancerTarget, INetworkLoadBalancerTarget {
+  public constructor(instanceId: String) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceIdTarget(instanceId)
+  )
+
   public constructor(instanceId: String, port: Number) :
       this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceIdTarget(instanceId,
-      port))
-
-  public constructor(instanceId: String) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceIdTarget(instanceId))
+      port)
+  )
 
   /**
    * Register this instance target with a load balancer.

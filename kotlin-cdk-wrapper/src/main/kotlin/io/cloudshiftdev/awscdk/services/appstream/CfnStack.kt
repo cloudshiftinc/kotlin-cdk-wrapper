@@ -92,15 +92,15 @@ public open class CfnStack internal constructor(
   /**
    * The list of virtual private cloud (VPC) interface endpoint objects.
    */
-  public open fun accessEndpoints(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAccessEndpoints(__idx_ac66f0)
+  public open fun accessEndpoints(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAccessEndpoints(_idx_ac66f0)
   }
 
   /**
    * The list of virtual private cloud (VPC) interface endpoint objects.
    */
-  public open fun accessEndpoints(vararg __idx_ac66f0: Any): Unit =
-      accessEndpoints(__idx_ac66f0.toList())
+  public open fun accessEndpoints(vararg _idx_ac66f0: Any): Unit =
+      accessEndpoints(_idx_ac66f0.toList())
 
   /**
    * The persistent application settings for users of the stack.
@@ -278,15 +278,15 @@ public open class CfnStack internal constructor(
   /**
    * The storage connectors to enable.
    */
-  public open fun storageConnectors(__idx_ac66f0: List<Any>) {
-    unwrap(this).setStorageConnectors(__idx_ac66f0)
+  public open fun storageConnectors(_idx_ac66f0: List<Any>) {
+    unwrap(this).setStorageConnectors(_idx_ac66f0)
   }
 
   /**
    * The storage connectors to enable.
    */
-  public open fun storageConnectors(vararg __idx_ac66f0: Any): Unit =
-      storageConnectors(__idx_ac66f0.toList())
+  public open fun storageConnectors(vararg _idx_ac66f0: Any): Unit =
+      storageConnectors(_idx_ac66f0.toList())
 
   /**
    * The streaming protocol that you want your stack to prefer.
@@ -355,14 +355,14 @@ public open class CfnStack internal constructor(
   /**
    * The actions that are enabled or disabled for users during their streaming sessions.
    */
-  public open fun userSettings(__idx_ac66f0: List<Any>) {
-    unwrap(this).setUserSettings(__idx_ac66f0)
+  public open fun userSettings(_idx_ac66f0: List<Any>) {
+    unwrap(this).setUserSettings(_idx_ac66f0)
   }
 
   /**
    * The actions that are enabled or disabled for users during their streaming sessions.
    */
-  public open fun userSettings(vararg __idx_ac66f0: Any): Unit = userSettings(__idx_ac66f0.toList())
+  public open fun userSettings(vararg _idx_ac66f0: Any): Unit = userSettings(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.appstream.CfnStack].

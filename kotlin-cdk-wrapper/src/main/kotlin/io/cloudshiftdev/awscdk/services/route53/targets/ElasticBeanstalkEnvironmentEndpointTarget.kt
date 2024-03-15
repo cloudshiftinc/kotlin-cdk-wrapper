@@ -32,7 +32,8 @@ public open class ElasticBeanstalkEnvironmentEndpointTarget internal constructor
       software.amazon.awscdk.services.route53.targets.ElasticBeanstalkEnvironmentEndpointTarget,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
   public constructor(environmentEndpoint: String) :
-      this(software.amazon.awscdk.services.route53.targets.ElasticBeanstalkEnvironmentEndpointTarget(environmentEndpoint))
+      this(software.amazon.awscdk.services.route53.targets.ElasticBeanstalkEnvironmentEndpointTarget(environmentEndpoint)
+  )
 
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
@@ -40,8 +41,8 @@ public open class ElasticBeanstalkEnvironmentEndpointTarget internal constructor
    * @param _record 
    * @param _zone
    */
-  public override fun bind(_record: IRecordSet): AliasRecordTargetConfig =
-      unwrap(this).bind(_record.let(IRecordSet::unwrap)).let(AliasRecordTargetConfig::wrap)
+  public override fun bind(record: IRecordSet): AliasRecordTargetConfig =
+      unwrap(this).bind(record.let(IRecordSet::unwrap)).let(AliasRecordTargetConfig::wrap)
 
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
@@ -49,9 +50,9 @@ public open class ElasticBeanstalkEnvironmentEndpointTarget internal constructor
    * @param _record 
    * @param _zone
    */
-  public override fun bind(_record: IRecordSet, _zone: IHostedZone): AliasRecordTargetConfig =
-      unwrap(this).bind(_record.let(IRecordSet::unwrap),
-      _zone.let(IHostedZone::unwrap)).let(AliasRecordTargetConfig::wrap)
+  public override fun bind(record: IRecordSet, zone: IHostedZone): AliasRecordTargetConfig =
+      unwrap(this).bind(record.let(IRecordSet::unwrap),
+      zone.let(IHostedZone::unwrap)).let(AliasRecordTargetConfig::wrap)
 
   public companion object {
     internal

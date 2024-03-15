@@ -209,16 +209,16 @@ public open class CfnDBCluster internal constructor(
    * Provides a list of the AWS Identity and Access Management (IAM) roles that are associated with
    * the DB cluster.
    */
-  public open fun associatedRoles(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAssociatedRoles(__idx_ac66f0)
+  public open fun associatedRoles(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAssociatedRoles(_idx_ac66f0)
   }
 
   /**
    * Provides a list of the AWS Identity and Access Management (IAM) roles that are associated with
    * the DB cluster.
    */
-  public open fun associatedRoles(vararg __idx_ac66f0: Any): Unit =
-      associatedRoles(__idx_ac66f0.toList())
+  public open fun associatedRoles(vararg _idx_ac66f0: Any): Unit =
+      associatedRoles(_idx_ac66f0.toList())
 
   /**
    * The Amazon Resource Name (ARN) for the DB cluster.
