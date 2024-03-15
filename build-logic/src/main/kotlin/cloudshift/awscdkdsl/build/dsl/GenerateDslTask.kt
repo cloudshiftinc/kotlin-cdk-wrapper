@@ -12,7 +12,6 @@ import org.gradle.api.DefaultTask
 import org.gradle.api.file.ArchiveOperations
 import org.gradle.api.file.DirectoryProperty
 import org.gradle.api.file.FileSystemOperations
-import org.gradle.api.model.ObjectFactory
 import org.gradle.api.provider.SetProperty
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.OutputDirectory
@@ -22,8 +21,7 @@ abstract class GenerateDslTask
 @Inject
 constructor(
     private val fs: FileSystemOperations,
-    private val archiveOps: ArchiveOperations,
-    private val objects: ObjectFactory
+    private val archiveOps: ArchiveOperations
 ) : DefaultTask() {
     init {
         outputs.upToDateWhen { false }
@@ -33,11 +31,10 @@ constructor(
 
     @get:Input abstract val sources: SetProperty<File>
 
-    @get:OutputDirectory abstract val dslDir: DirectoryProperty
+    @get:OutputDirectory abstract val outputDirectory: DirectoryProperty
 
     @TaskAction
     fun action() {
-        // TODO: add in the constructs libs
         val sourcesDir = temporaryDir.resolve("cdk-sources")
         sourcesDir.mkdir()
 
@@ -49,22 +46,24 @@ constructor(
                         include("**/*.java")
                         exclude("**/package-info.java")
                     }
-                }
+                },
             )
             includeEmptyDirs = false
         }
 
-        fs.delete { delete(dslDir) }
 
-        val outDir = dslDir.get().asFile
+        val outDir = outputDirectory.get().asFile.resolve("src/main/kotlin")
+        fs.delete { delete(outDir) }
+        outDir.mkdirs()
 
         logger.lifecycle("Parsing sources...")
         val dev = false
-        val cdkSourceModel =when {
+        val cdkSourceModel = when {
             dev -> CdkSourceModel(
                 classMap = emptyMap(),
-                classes = emptyList()
+                classes = emptyList(),
             )
+
             else -> SourceParser.parse(sourcesDir)
         }
         logger.lifecycle("Sources: ${sources.get().map { it.name }}")
@@ -72,7 +71,11 @@ constructor(
         logger.lifecycle("Loading AWS CDK classes from ${classpath.get()}")
         val cdkClasses2 = AsmClassLoader2.loadClasses(classpath.get(), cdkSourceModel.classMap)
         val cdkModel2 = CdkModelFactory.createModel(cdkClasses2)
-        WrapperTypeGenerator.generate(cdkModel2).forEach { it.writeTo(outDir) }
+        val specs = WrapperTypeGenerator.generate(cdkModel2)
+
+        specs.forEach {
+            it.toBuilder().suppressWarningTypes(SUPPRESSIONS).build().writeTo(outDir)
+        }
     }
 }
 
@@ -85,7 +88,7 @@ internal val SUPPRESSIONS =
         "UnusedImport",
         "ClassName",
         "REDUNDANT_PROJECTION",
-        "DEPRECATION"
+        "DEPRECATION",
     )
 
 internal fun FileSpec.Builder.suppressWarningTypes(types: Collection<String>): FileSpec.Builder {
@@ -97,7 +100,7 @@ internal fun FileSpec.Builder.suppressWarningTypes(types: Collection<String>): F
     addAnnotation(
         AnnotationSpec.builder(ClassName("", "Suppress"))
             .addMember(format, *types.toTypedArray())
-            .build()
+            .build(),
     )
     return this
 }

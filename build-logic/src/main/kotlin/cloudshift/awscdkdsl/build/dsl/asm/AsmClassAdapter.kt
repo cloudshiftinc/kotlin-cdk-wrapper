@@ -1,5 +1,6 @@
 package cloudshift.awscdkdsl.build.dsl.asm
 
+import cloudshift.awscdkdsl.build.dsl.isOuterClass
 import cloudshift.awscdkdsl.build.dsl.model.CdkClass
 import cloudshift.awscdkdsl.build.dsl.model.source.CdkSourceClass
 import com.squareup.kotlinpoet.ClassName
@@ -53,7 +54,7 @@ internal class AsmClassAdapter(
         }.map { AsmEnumFieldAdapter(it.name) }
     }
     override val isOuterClass: Boolean
-        get() = className.simpleNames.size == 1
+        get() = className.isOuterClass()
 
     override val publicMemberFunctions: List<CdkClass.Method> by
     lazy(LazyThreadSafetyMode.NONE) {

@@ -23,11 +23,9 @@ dependencyResolutionManagement {
     repositories { maven("https://cache-redirector.jetbrains.com/repo1.maven.org/maven2") }
 }
 
-include(":common")
-
-include(":dsl")
-
-include(":dsl-extensions")
+include(":kotlin-cdk-wrapper")
+include(":kotlin-cdk-wrapper-common")
+include(":kotlin-cdk-wrapper-extensions")
 
 gradleEnterprise {
     if (System.getenv("CI") != null) {

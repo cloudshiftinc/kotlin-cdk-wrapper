@@ -1,0 +1,32 @@
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+
+package io.cloudshiftdev.awscdk.services.route53.targets
+
+/**
+ * Use a Global Accelerator instance domain name as an alias record target.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.globalaccelerator.*;
+ * HostedZone zone;
+ * Accelerator accelerator;
+ * ARecord.Builder.create(this, "AliasRecord")
+ * .zone(zone)
+ * .target(RecordTarget.fromAlias(new GlobalAcceleratorTarget(accelerator)))
+ * .build();
+ * ```
+ */
+public open class GlobalAcceleratorTarget internal constructor(
+  internal override val cdkObject:
+      software.amazon.awscdk.services.route53.targets.GlobalAcceleratorTarget,
+) : GlobalAcceleratorDomainTarget(cdkObject) {
+  public companion object {
+    internal
+        fun wrap(cdkObject: software.amazon.awscdk.services.route53.targets.GlobalAcceleratorTarget):
+        GlobalAcceleratorTarget = GlobalAcceleratorTarget(cdkObject)
+
+    internal fun unwrap(wrapped: GlobalAcceleratorTarget):
+        software.amazon.awscdk.services.route53.targets.GlobalAcceleratorTarget = wrapped.cdkObject
+  }
+}

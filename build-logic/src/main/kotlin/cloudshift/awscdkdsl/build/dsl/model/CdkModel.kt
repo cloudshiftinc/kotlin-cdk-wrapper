@@ -24,13 +24,13 @@ internal data class CdkModel(
     fun builderFor(type: TypeName) = builderMap[type]
 
     fun superTypesOf(className: ClassName): List<ClassName> {
-        val list = mutableSetOf<ClassName>()
-        superTypesOf(className, list)
-        return list.filter { it !in excludedClasses }.toList()
+        val acc = mutableSetOf<ClassName>()
+        superTypesOf(className, acc)
+        return acc.filter { it !in excludedClasses }.toList()
     }
 
     private fun superTypesOf(className: ClassName, acc: MutableSet<ClassName>) {
-        if (className.toString() == "kotlin.Any") return
+        if (className == ANY) return
         val cdkClass = classMap[className] ?: return
 
         acc.add(cdkClass.superClass)
