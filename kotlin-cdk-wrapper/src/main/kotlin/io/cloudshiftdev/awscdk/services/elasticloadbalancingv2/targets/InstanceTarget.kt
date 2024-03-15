@@ -2,6 +2,9 @@
 
 package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.targets
 
+import io.cloudshiftdev.awscdk.services.ec2.Instance
+import kotlin.Number
+
 /**
  * Example:
  *
@@ -18,6 +21,13 @@ public open class InstanceTarget internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceTarget,
 ) : InstanceIdTarget(cdkObject) {
+  public constructor(instance: Instance, port: Number) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceTarget(Instance.unwrap(instance),
+      port))
+
+  public constructor(instance: Instance) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceTarget(Instance.unwrap(instance)))
+
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceTarget):

@@ -36,6 +36,9 @@ import kotlin.String
 public open class ReleaseLabel internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ReleaseLabel,
 ) : CdkObject(cdkObject) {
+  public constructor(label: String) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.ReleaseLabel(label))
+
   /**
    * A literal string that contains the release-version ex.
    *

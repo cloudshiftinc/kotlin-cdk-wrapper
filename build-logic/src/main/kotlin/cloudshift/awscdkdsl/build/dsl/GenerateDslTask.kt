@@ -1,8 +1,18 @@
 package cloudshift.awscdkdsl.build.dsl
 
-import cloudshift.awscdkdsl.build.dsl.asm.AsmClassLoader2
+import cloudshift.awscdkdsl.build.dsl.asm.AsmClassLoader
 import cloudshift.awscdkdsl.build.dsl.model.source.CdkSourceModel
 import cloudshift.awscdkdsl.build.dsl.model.type.WrapperTypeGenerator
+import com.fasterxml.jackson.core.JsonGenerator
+import com.fasterxml.jackson.core.JsonParser
+import com.fasterxml.jackson.databind.DeserializationContext
+import com.fasterxml.jackson.databind.JsonDeserializer
+import com.fasterxml.jackson.databind.JsonSerializer
+import com.fasterxml.jackson.databind.KeyDeserializer
+import com.fasterxml.jackson.databind.SerializerProvider
+import com.fasterxml.jackson.databind.module.SimpleModule
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import com.fasterxml.jackson.module.kotlin.readValue
 import com.squareup.kotlinpoet.AnnotationSpec
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.FileSpec
@@ -36,6 +46,7 @@ constructor(
     @TaskAction
     fun action() {
         val sourcesDir = temporaryDir.resolve("cdk-sources")
+        fs.delete { delete(sourcesDir) }
         sourcesDir.mkdir()
 
         fs.sync {
@@ -51,31 +62,55 @@ constructor(
             includeEmptyDirs = false
         }
 
-
         val outDir = outputDirectory.get().asFile.resolve("src/main/kotlin")
         fs.delete { delete(outDir) }
         outDir.mkdirs()
 
         logger.lifecycle("Parsing sources...")
-        val dev = false
-        val cdkSourceModel = when {
-            dev -> CdkSourceModel(
-                classMap = emptyMap(),
-                classes = emptyList(),
-            )
-
-            else -> SourceParser.parse(sourcesDir)
-        }
+        val cdkSourceModel = cdkSourceModel(sourcesDir)
         logger.lifecycle("Sources: ${sources.get().map { it.name }}")
 
         logger.lifecycle("Loading AWS CDK classes from ${classpath.get()}")
-        val cdkClasses2 = AsmClassLoader2.loadClasses(classpath.get(), cdkSourceModel.classMap)
+        val cdkClasses2 = AsmClassLoader.loadClasses(classpath.get(), cdkSourceModel.classMap)
         val cdkModel2 = CdkModelFactory.createModel(cdkClasses2)
         val specs = WrapperTypeGenerator.generate(cdkModel2)
 
         specs.forEach {
             it.toBuilder().suppressWarningTypes(SUPPRESSIONS).build().writeTo(outDir)
         }
+    }
+
+    private fun cdkSourceModel(sourcesDir: File): CdkSourceModel {
+        val cacheKey = sources.get().joinToString("|") { it.name }.sha256()
+        val cacheFile = temporaryDir.resolve("cdk-source-model-$cacheKey.json")
+        val mapper = jacksonObjectMapper()
+
+        val module = SimpleModule()
+        module.addSerializer(ClassName::class.java, ClassNameSerializer())
+        module.addKeySerializer(ClassName::class.java, ClassNameKeySerializer())
+        module.addDeserializer(ClassName::class.java, ClassNameDeserializer())
+        module.addKeyDeserializer(ClassName::class.java, ClassNameKeyDeserializer())
+        mapper.registerModules(module)
+
+        // TODO: expire after an hour/day?
+
+        if (cacheFile.exists()) {
+            try {
+                logger.lifecycle("Loading cached cdk source model from $cacheFile")
+                return mapper.readValue<CdkSourceModel>(cacheFile)
+            } catch (e: Exception) {
+                logger.lifecycle("Cache failure: ${e.message}")
+            }
+        }
+
+        logger.lifecycle("Generating source model from sources: ${sources.get().map { it.name }}")
+        val model = loadCdkSourceModel(sourcesDir)
+        mapper.writeValue(cacheFile, model)
+        return model
+    }
+
+    private fun loadCdkSourceModel(sourcesDir: File): CdkSourceModel {
+        return SourceParser.parse(sourcesDir)
     }
 }
 
@@ -108,4 +143,36 @@ internal fun FileSpec.Builder.suppressWarningTypes(types: Collection<String>): F
 internal fun FileSpec.Builder.suppressWarningTypes(vararg types: String): FileSpec.Builder {
     suppressWarningTypes(*types)
     return this
+}
+
+
+private class ClassNameSerializer : JsonSerializer<ClassName>() {
+    override fun serialize(value: ClassName, gen: JsonGenerator, serializers: SerializerProvider) {
+        gen.writeString(value.packageName + "|" + value.simpleNames.joinToString("."))
+    }
+}
+
+private class ClassNameKeySerializer : JsonSerializer<ClassName>() {
+    override fun serialize(value: ClassName, gen: JsonGenerator, serializers: SerializerProvider) {
+        gen.writeFieldName(value.packageName + "|" + value.simpleNames.joinToString("."))
+    }
+}
+
+private class ClassNameDeserializer : JsonDeserializer<ClassName>() {
+
+    override fun deserialize(p: JsonParser, ctxt: DeserializationContext): ClassName {
+        return p.text.split("|").let {
+            ClassName(it[0], it[1].split("."))
+        }
+    }
+}
+
+private class ClassNameKeyDeserializer : KeyDeserializer() {
+
+
+    override fun deserializeKey(key: String, ctxt: DeserializationContext?): Any {
+        return key.split("|").let {
+            ClassName(it[0], it[1].split("."))
+        }
+    }
 }

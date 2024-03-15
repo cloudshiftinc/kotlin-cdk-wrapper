@@ -2,6 +2,10 @@
 
 package io.cloudshiftdev.awscdk.services.iam
 
+import kotlin.Any
+import kotlin.String
+import kotlin.collections.Map
+
 /**
  * A principal that represents a federated identity provider as Web Identity such as Cognito,
  * Amazon, Facebook, Google, etc.
@@ -19,6 +23,12 @@ package io.cloudshiftdev.awscdk.services.iam
 public open class WebIdentityPrincipal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.WebIdentityPrincipal,
 ) : FederatedPrincipal(cdkObject) {
+  public constructor(identityProvider: String, conditions: Map<String, Any>) :
+      this(software.amazon.awscdk.services.iam.WebIdentityPrincipal(identityProvider, conditions))
+
+  public constructor(identityProvider: String) :
+      this(software.amazon.awscdk.services.iam.WebIdentityPrincipal(identityProvider))
+
   /**
    * Return the policy fragment that identifies this principal in a Policy.
    */

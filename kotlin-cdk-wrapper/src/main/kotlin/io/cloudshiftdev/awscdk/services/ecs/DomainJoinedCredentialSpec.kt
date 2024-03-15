@@ -28,6 +28,9 @@ import kotlin.String
 public open class DomainJoinedCredentialSpec internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.DomainJoinedCredentialSpec,
 ) : CredentialSpec(cdkObject) {
+  public constructor(fileLocation: String) :
+      this(software.amazon.awscdk.services.ecs.DomainJoinedCredentialSpec(fileLocation))
+
   public companion object {
     public fun fromS3Bucket(bucket: IBucket, key: String): DomainJoinedCredentialSpec =
         software.amazon.awscdk.services.ecs.DomainJoinedCredentialSpec.fromS3Bucket(bucket.let(IBucket::unwrap),

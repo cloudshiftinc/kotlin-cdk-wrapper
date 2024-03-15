@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.route53.targets
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.ILoadBalancerV2
 import io.cloudshiftdev.awscdk.services.route53.AliasRecordTargetConfig
 import io.cloudshiftdev.awscdk.services.route53.IAliasRecordTarget
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
@@ -27,6 +28,9 @@ public open class LoadBalancerTarget internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53.targets.LoadBalancerTarget,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
+  public constructor(loadBalancer: ILoadBalancerV2) :
+      this(software.amazon.awscdk.services.route53.targets.LoadBalancerTarget(ILoadBalancerV2.unwrap(loadBalancer)))
+
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
    *

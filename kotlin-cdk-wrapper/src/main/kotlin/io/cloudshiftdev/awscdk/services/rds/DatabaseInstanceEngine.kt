@@ -34,6 +34,8 @@ import kotlin.jvm.JvmName
 public open class DatabaseInstanceEngine internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceEngine,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.rds.DatabaseInstanceEngine())
+
   public companion object {
     public val MARIADB: IInstanceEngine =
         IInstanceEngine.wrap(software.amazon.awscdk.services.rds.DatabaseInstanceEngine.MARIADB)

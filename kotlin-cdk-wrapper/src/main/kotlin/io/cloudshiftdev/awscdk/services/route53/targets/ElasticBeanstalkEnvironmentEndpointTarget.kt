@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.services.route53.AliasRecordTargetConfig
 import io.cloudshiftdev.awscdk.services.route53.IAliasRecordTarget
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
 import io.cloudshiftdev.awscdk.services.route53.IRecordSet
+import kotlin.String
 
 /**
  * Use an Elastic Beanstalk environment URL as an alias record target. E.g.
@@ -30,6 +31,9 @@ public open class ElasticBeanstalkEnvironmentEndpointTarget internal constructor
   internal override val cdkObject:
       software.amazon.awscdk.services.route53.targets.ElasticBeanstalkEnvironmentEndpointTarget,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
+  public constructor(environmentEndpoint: String) :
+      this(software.amazon.awscdk.services.route53.targets.ElasticBeanstalkEnvironmentEndpointTarget(environmentEndpoint))
+
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
    *

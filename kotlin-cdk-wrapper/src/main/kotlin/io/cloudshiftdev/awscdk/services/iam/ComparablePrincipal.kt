@@ -21,6 +21,8 @@ import kotlin.String
 public open class ComparablePrincipal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.ComparablePrincipal,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.iam.ComparablePrincipal())
+
   public companion object {
     public fun dedupeStringFor(x: IPrincipal): String? =
         software.amazon.awscdk.services.iam.ComparablePrincipal.dedupeStringFor(x.let(IPrincipal::unwrap))

@@ -30,6 +30,17 @@ import kotlin.String
 public open class GenericSSMParameterImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.GenericSSMParameterImage,
 ) : CdkObject(cdkObject), IMachineImage {
+  public constructor(
+    parameterName: String,
+    os: OperatingSystemType,
+    userData: UserData,
+  ) : this(software.amazon.awscdk.services.ec2.GenericSSMParameterImage(parameterName,
+      OperatingSystemType.unwrap(os), UserData.unwrap(userData)))
+
+  public constructor(parameterName: String, os: OperatingSystemType) :
+      this(software.amazon.awscdk.services.ec2.GenericSSMParameterImage(parameterName,
+      OperatingSystemType.unwrap(os)))
+
   /**
    * Return the image to use in the given context.
    *

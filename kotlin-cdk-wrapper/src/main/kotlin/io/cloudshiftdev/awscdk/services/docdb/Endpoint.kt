@@ -23,6 +23,9 @@ import kotlin.String
 public open class Endpoint internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.docdb.Endpoint,
 ) : CdkObject(cdkObject) {
+  public constructor(address: String, port: Number) :
+      this(software.amazon.awscdk.services.docdb.Endpoint(address, port))
+
   /**
    * The hostname of the endpoint.
    */

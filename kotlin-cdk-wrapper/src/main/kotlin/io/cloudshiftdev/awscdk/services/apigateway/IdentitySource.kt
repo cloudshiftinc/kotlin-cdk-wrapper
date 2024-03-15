@@ -28,6 +28,8 @@ import kotlin.String
 public open class IdentitySource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.IdentitySource,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.apigateway.IdentitySource())
+
   public companion object {
     public fun context(context: String): String =
         software.amazon.awscdk.services.apigateway.IdentitySource.context(context)

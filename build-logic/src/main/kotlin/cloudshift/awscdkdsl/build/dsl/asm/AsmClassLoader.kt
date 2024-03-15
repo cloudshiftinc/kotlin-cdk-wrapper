@@ -14,7 +14,7 @@ import org.objectweb.asm.tree.ClassNode
 import org.objectweb.asm.util.Textifier
 import org.objectweb.asm.util.TraceClassVisitor
 
-internal object AsmClassLoader2 : CdkClassLoader {
+internal object AsmClassLoader : CdkClassLoader {
     override fun loadClasses(
         classpath: Set<File>,
         sourceClasses: Map<ClassName, CdkSourceClass>

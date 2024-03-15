@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.s3.notifications
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.services.lambda.IFunction
 import io.cloudshiftdev.awscdk.services.s3.BucketNotificationDestinationConfig
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.awscdk.services.s3.IBucketNotificationDestination
@@ -29,6 +30,9 @@ public open class LambdaDestination internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.s3.notifications.LambdaDestination,
 ) : CdkObject(cdkObject), IBucketNotificationDestination {
+  public constructor(fn: IFunction) :
+      this(software.amazon.awscdk.services.s3.notifications.LambdaDestination(IFunction.unwrap(fn)))
+
   /**
    * Registers this resource to receive notifications for the specified bucket.
    *

@@ -30,6 +30,9 @@ public open class InstanceTarget internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancing.InstanceTarget,
 ) : CdkObject(cdkObject), ILoadBalancerTarget {
+  public constructor(instance: Instance) :
+      this(software.amazon.awscdk.services.elasticloadbalancing.InstanceTarget(Instance.unwrap(instance)))
+
   /**
    * Attach load-balanced target to a classic ELB.
    *

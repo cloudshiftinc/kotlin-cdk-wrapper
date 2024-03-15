@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.kms
 
+import io.cloudshiftdev.awscdk.services.iam.IPrincipal
 import io.cloudshiftdev.awscdk.services.iam.PrincipalBase
 import io.cloudshiftdev.awscdk.services.iam.PrincipalPolicyFragment
 import kotlin.String
@@ -23,6 +24,13 @@ import kotlin.String
 public open class ViaServicePrincipal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.kms.ViaServicePrincipal,
 ) : PrincipalBase(cdkObject) {
+  public constructor(serviceName: String, basePrincipal: IPrincipal) :
+      this(software.amazon.awscdk.services.kms.ViaServicePrincipal(serviceName,
+      IPrincipal.unwrap(basePrincipal)))
+
+  public constructor(serviceName: String) :
+      this(software.amazon.awscdk.services.kms.ViaServicePrincipal(serviceName))
+
   /**
    * Return whether or not this principal is equal to the given principal.
    */

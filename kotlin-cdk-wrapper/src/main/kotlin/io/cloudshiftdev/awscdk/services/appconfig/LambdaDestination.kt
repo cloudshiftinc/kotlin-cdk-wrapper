@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appconfig
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
+import io.cloudshiftdev.awscdk.services.lambda.IFunction
 import kotlin.String
 
 /**
@@ -25,6 +26,9 @@ import kotlin.String
 public open class LambdaDestination internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.LambdaDestination,
 ) : CdkObject(cdkObject), IEventDestination {
+  public constructor(func: IFunction) :
+      this(software.amazon.awscdk.services.appconfig.LambdaDestination(IFunction.unwrap(func)))
+
   /**
    * The URI of the extension event destination.
    */

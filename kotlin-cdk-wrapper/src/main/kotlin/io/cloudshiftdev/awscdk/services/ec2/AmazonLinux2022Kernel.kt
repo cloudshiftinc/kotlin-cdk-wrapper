@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import kotlin.String
 
 /**
  * Amazon Linux 2022 kernel versions.
@@ -19,6 +20,9 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 public open class AmazonLinux2022Kernel internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.AmazonLinux2022Kernel,
 ) : CdkObject(cdkObject) {
+  public constructor(version: String) :
+      this(software.amazon.awscdk.services.ec2.AmazonLinux2022Kernel(version))
+
   public companion object {
     public val CDK_LATEST: AmazonLinux2022Kernel =
         AmazonLinux2022Kernel.wrap(software.amazon.awscdk.services.ec2.AmazonLinux2022Kernel.CDK_LATEST)

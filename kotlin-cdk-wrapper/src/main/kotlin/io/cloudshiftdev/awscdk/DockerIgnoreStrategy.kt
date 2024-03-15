@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import kotlin.Boolean
 import kotlin.String
+import kotlin.collections.List
 
 /**
  * Ignores file paths based on the [`.dockerignore
@@ -22,6 +23,9 @@ import kotlin.String
 public open class DockerIgnoreStrategy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.DockerIgnoreStrategy,
 ) : IgnoreStrategy(cdkObject) {
+  public constructor(absoluteRootPath: String, patterns: List<String>) :
+      this(software.amazon.awscdk.DockerIgnoreStrategy(absoluteRootPath, patterns))
+
   /**
    * Adds another pattern.
    *

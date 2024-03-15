@@ -7,6 +7,9 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 public open class DependencyGroup internal constructor(
   internal override val cdkObject: software.constructs.DependencyGroup,
 ) : CdkObject(cdkObject), IDependable {
+  public constructor(deps: IDependable) :
+      this(software.constructs.DependencyGroup(IDependable.unwrap(deps)))
+
   public open fun add(scopes: IDependable) {
     unwrap(this).add(scopes.let(IDependable::unwrap))
   }

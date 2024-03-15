@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appconfig
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.services.events.IEventBus
 import kotlin.String
 
 /**
@@ -24,6 +25,9 @@ import kotlin.String
 public open class EventBridgeDestination internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.EventBridgeDestination,
 ) : CdkObject(cdkObject), IEventDestination {
+  public constructor(bus: IEventBus) :
+      this(software.amazon.awscdk.services.appconfig.EventBridgeDestination(IEventBus.unwrap(bus)))
+
   /**
    * The URI of the extension event destination.
    */

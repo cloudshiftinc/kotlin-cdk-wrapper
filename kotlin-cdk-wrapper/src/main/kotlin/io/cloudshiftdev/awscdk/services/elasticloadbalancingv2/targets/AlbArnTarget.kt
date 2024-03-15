@@ -6,6 +6,8 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancerTarget
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.INetworkTargetGroup
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.LoadBalancerTargetProps
+import kotlin.Number
+import kotlin.String
 
 /**
  * A single Application Load Balancer as the target for load balancing.
@@ -23,6 +25,10 @@ public open class AlbArnTarget internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbArnTarget,
 ) : CdkObject(cdkObject), INetworkLoadBalancerTarget {
+  public constructor(albArn: String, port: Number) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbArnTarget(albArn,
+      port))
+
   /**
    * Register this alb target with a load balancer.
    *

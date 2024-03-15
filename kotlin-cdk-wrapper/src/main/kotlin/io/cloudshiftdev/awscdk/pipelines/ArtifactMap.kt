@@ -20,6 +20,8 @@ import io.cloudshiftdev.awscdk.services.codepipeline.Artifact
 public open class ArtifactMap internal constructor(
   internal override val cdkObject: software.amazon.awscdk.pipelines.ArtifactMap,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.pipelines.ArtifactMap())
+
   /**
    * Return the matching CodePipeline artifact for a FileSet.
    *

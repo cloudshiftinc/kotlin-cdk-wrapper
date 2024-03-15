@@ -3,6 +3,8 @@
 package io.cloudshiftdev.awscdk.lambda.layer.node.proxy.agent
 
 import io.cloudshiftdev.awscdk.services.lambda.LayerVersion
+import io.cloudshiftdev.constructs.Construct
+import kotlin.String
 
 /**
  * An AWS Lambda layer that includes the NPM dependency `proxy-agent`.
@@ -20,6 +22,10 @@ public open class NodeProxyAgentLayer internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.lambda.layer.node.proxy.agent.NodeProxyAgentLayer,
 ) : LayerVersion(cdkObject) {
+  public constructor(scope: Construct, id: String) :
+      this(software.amazon.awscdk.lambda.layer.node.proxy.agent.NodeProxyAgentLayer(Construct.unwrap(scope),
+      id))
+
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.lambda.layer.node.proxy.agent.NodeProxyAgentLayer):

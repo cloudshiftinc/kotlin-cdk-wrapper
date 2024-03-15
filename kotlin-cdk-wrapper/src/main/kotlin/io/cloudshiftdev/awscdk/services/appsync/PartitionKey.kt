@@ -23,6 +23,9 @@ import kotlin.String
 public open class PartitionKey internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.PartitionKey,
 ) : PrimaryKey(cdkObject) {
+  public constructor(pkey: Assign) :
+      this(software.amazon.awscdk.services.appsync.PartitionKey(Assign.unwrap(pkey)))
+
   /**
    * Allows assigning a value to the sort key.
    *

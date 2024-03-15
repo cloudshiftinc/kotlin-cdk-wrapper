@@ -24,6 +24,8 @@ internal class AsmMethodAdapter(
     private val delegate: MethodNode,
     private val sourceMethod: CdkSourceMethod? = null
 ) : CdkClass.Method {
+    override val isPublic: Boolean
+        get() = delegate.accessFlags.isPublic()
     override val name: String = delegate.name
     override val signature: String = delegate.signature ?: delegate.desc
     private val annotations: List<ClassName> by

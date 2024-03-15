@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IApplicationLoadB
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IApplicationTargetGroup
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.INetworkTargetGroup
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.LoadBalancerTargetProps
+import io.cloudshiftdev.awscdk.services.lambda.IFunction
 
 /**
  * Example:
@@ -32,6 +33,9 @@ public open class LambdaTarget internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.targets.LambdaTarget,
 ) : CdkObject(cdkObject), IApplicationLoadBalancerTarget {
+  public constructor(fn: IFunction) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.LambdaTarget(IFunction.unwrap(fn)))
+
   /**
    * Register this instance target with a load balancer.
    *

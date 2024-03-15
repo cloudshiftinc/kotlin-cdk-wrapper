@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.services.lambda.DlqDestinationConfig
 import io.cloudshiftdev.awscdk.services.lambda.IEventSourceDlq
 import io.cloudshiftdev.awscdk.services.lambda.IEventSourceMapping
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
+import io.cloudshiftdev.awscdk.services.sns.ITopic
 
 /**
  * An SNS dead letter queue destination configuration for a Lambda event source.
@@ -25,6 +26,9 @@ import io.cloudshiftdev.awscdk.services.lambda.IFunction
 public open class SnsDlq internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.eventsources.SnsDlq,
 ) : CdkObject(cdkObject), IEventSourceDlq {
+  public constructor(topic: ITopic) :
+      this(software.amazon.awscdk.services.lambda.eventsources.SnsDlq(ITopic.unwrap(topic)))
+
   /**
    * Returns a destination configuration for the DLQ.
    *

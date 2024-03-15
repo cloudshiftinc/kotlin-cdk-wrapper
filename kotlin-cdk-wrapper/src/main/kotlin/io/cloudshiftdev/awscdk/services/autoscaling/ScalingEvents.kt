@@ -21,6 +21,9 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 public open class ScalingEvents internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.autoscaling.ScalingEvents,
 ) : CdkObject(cdkObject) {
+  public constructor(types: ScalingEvent) :
+      this(software.amazon.awscdk.services.autoscaling.ScalingEvents(ScalingEvent.unwrap(types)))
+
   public companion object {
     public val ALL: ScalingEvents =
         ScalingEvents.wrap(software.amazon.awscdk.services.autoscaling.ScalingEvents.ALL)

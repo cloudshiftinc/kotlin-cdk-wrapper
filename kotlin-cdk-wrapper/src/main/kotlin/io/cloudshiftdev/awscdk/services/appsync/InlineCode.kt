@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.constructs.Construct
+import kotlin.String
 
 /**
  * AppSync function code from an inline string.
@@ -19,6 +20,8 @@ import io.cloudshiftdev.constructs.Construct
 public open class InlineCode internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.InlineCode,
 ) : Code(cdkObject) {
+  public constructor(code: String) : this(software.amazon.awscdk.services.appsync.InlineCode(code))
+
   /**
    * Bind source code to an AppSync Function or resolver.
    *

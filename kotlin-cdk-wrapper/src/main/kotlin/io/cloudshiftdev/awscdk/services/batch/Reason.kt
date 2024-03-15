@@ -32,6 +32,8 @@ import kotlin.jvm.JvmName
 public open class Reason internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.Reason,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.batch.Reason())
+
   public companion object {
     public val CANNOT_PULL_CONTAINER: Reason =
         Reason.wrap(software.amazon.awscdk.services.batch.Reason.CANNOT_PULL_CONTAINER)

@@ -27,6 +27,8 @@ public open class StepFunctionsIntegration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.apigateway.StepFunctionsIntegration,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.apigateway.StepFunctionsIntegration())
+
   public companion object {
     public fun startExecution(stateMachine: IStateMachine): AwsIntegration =
         software.amazon.awscdk.services.apigateway.StepFunctionsIntegration.startExecution(stateMachine.let(IStateMachine::unwrap)).let(AwsIntegration::wrap)

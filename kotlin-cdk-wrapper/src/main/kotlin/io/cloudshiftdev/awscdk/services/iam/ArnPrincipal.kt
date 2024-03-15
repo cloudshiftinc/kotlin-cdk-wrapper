@@ -38,6 +38,8 @@ import kotlin.String
 public open class ArnPrincipal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.ArnPrincipal,
 ) : PrincipalBase(cdkObject) {
+  public constructor(arn: String) : this(software.amazon.awscdk.services.iam.ArnPrincipal(arn))
+
   /**
    * Amazon Resource Name (ARN) of the principal entity (i.e.
    * arn:aws:iam::123456789012:user/user-name).

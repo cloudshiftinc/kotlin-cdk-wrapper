@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
+import kotlin.collections.List
 
 /**
  * Utility class to allow assigning a value to an attribute.
@@ -22,6 +23,13 @@ import kotlin.String
 public open class AttributeValuesStep internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.AttributeValuesStep,
 ) : CdkObject(cdkObject) {
+  public constructor(
+    attr: String,
+    container: String,
+    assignments: List<Assign>,
+  ) : this(software.amazon.awscdk.services.appsync.AttributeValuesStep(attr, container,
+      List<Assign>.unwrap(assignments)))
+
   /**
    * Assign the value to the current attribute.
    *

@@ -21,6 +21,9 @@ import kotlin.String
 public open class SortKeyStep internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.SortKeyStep,
 ) : CdkObject(cdkObject) {
+  public constructor(pkey: Assign, skey: String) :
+      this(software.amazon.awscdk.services.appsync.SortKeyStep(Assign.unwrap(pkey), skey))
+
   /**
    * Assign an auto-generated value to the sort key.
    */

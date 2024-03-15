@@ -33,6 +33,9 @@ public open class HttpIamAuthorizer internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpIamAuthorizer,
 ) : CdkObject(cdkObject), IHttpRouteAuthorizer {
+  public constructor() :
+      this(software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpIamAuthorizer())
+
   /**
    * Bind this authorizer to a specified Http route.
    *

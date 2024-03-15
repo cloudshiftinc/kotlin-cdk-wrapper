@@ -8,6 +8,8 @@ import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IApplicationTarge
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancerTarget
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.INetworkTargetGroup
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.LoadBalancerTargetProps
+import kotlin.Number
+import kotlin.String
 
 /**
  * An EC2 instance that is the target for load balancing.
@@ -28,6 +30,13 @@ public open class InstanceIdTarget internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceIdTarget,
 ) : CdkObject(cdkObject), IApplicationLoadBalancerTarget, INetworkLoadBalancerTarget {
+  public constructor(instanceId: String, port: Number) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceIdTarget(instanceId,
+      port))
+
+  public constructor(instanceId: String) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceIdTarget(instanceId))
+
   /**
    * Register this instance target with a load balancer.
    *

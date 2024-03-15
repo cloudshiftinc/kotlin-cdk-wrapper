@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Boolean
+import kotlin.String
 
 /**
  * Lambda code from an inline string.
@@ -35,6 +36,8 @@ import kotlin.Boolean
 public open class InlineCode internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.InlineCode,
 ) : Code(cdkObject) {
+  public constructor(code: String) : this(software.amazon.awscdk.services.lambda.InlineCode(code))
+
   /**
    * Called when the lambda or layer is initialized to allow this object to bind to the stack, add
    * resources and have fun.

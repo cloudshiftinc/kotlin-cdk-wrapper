@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.ecs
 
+import io.cloudshiftdev.awscdk.services.ecr.IRepository
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 
@@ -185,6 +186,9 @@ import kotlin.String
 public open class TagParameterContainerImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.TagParameterContainerImage,
 ) : ContainerImage(cdkObject) {
+  public constructor(repository: IRepository) :
+      this(software.amazon.awscdk.services.ecs.TagParameterContainerImage(IRepository.unwrap(repository)))
+
   /**
    * Called when the image is used by a ContainerDefinition.
    *

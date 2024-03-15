@@ -18,6 +18,9 @@ package io.cloudshiftdev.awscdk.services.sns
 public open class Filter internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sns.Filter,
 ) : FilterOrPolicy(cdkObject) {
+  public constructor(filterDoc: SubscriptionFilter) :
+      this(software.amazon.awscdk.services.sns.Filter(SubscriptionFilter.unwrap(filterDoc)))
+
   /**
    * filter argument to construct.
    */

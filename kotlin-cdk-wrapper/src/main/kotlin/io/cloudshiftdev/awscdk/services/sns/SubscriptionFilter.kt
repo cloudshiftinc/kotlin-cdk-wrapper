@@ -43,6 +43,11 @@ import kotlin.jvm.JvmName
 public open class SubscriptionFilter internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sns.SubscriptionFilter,
 ) : CdkObject(cdkObject) {
+  public constructor(conditions: List<Any>) :
+      this(software.amazon.awscdk.services.sns.SubscriptionFilter(conditions))
+
+  public constructor() : this(software.amazon.awscdk.services.sns.SubscriptionFilter())
+
   /**
    * conditions that specify the message attributes that should be included, excluded, matched, etc.
    */

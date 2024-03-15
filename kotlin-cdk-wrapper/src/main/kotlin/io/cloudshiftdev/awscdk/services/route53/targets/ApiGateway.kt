@@ -2,6 +2,8 @@
 
 package io.cloudshiftdev.awscdk.services.route53.targets
 
+import io.cloudshiftdev.awscdk.services.apigateway.RestApiBase
+
 /**
  * Defines an API Gateway REST API as the alias target. Requires that the domain name will be
  * defined through `RestApiProps.domainName`.
@@ -25,6 +27,9 @@ package io.cloudshiftdev.awscdk.services.route53.targets
 public open class ApiGateway internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.route53.targets.ApiGateway,
 ) : ApiGatewayDomain(cdkObject) {
+  public constructor(api: RestApiBase) :
+      this(software.amazon.awscdk.services.route53.targets.ApiGateway(RestApiBase.unwrap(api)))
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.targets.ApiGateway):
         ApiGateway = ApiGateway(cdkObject)

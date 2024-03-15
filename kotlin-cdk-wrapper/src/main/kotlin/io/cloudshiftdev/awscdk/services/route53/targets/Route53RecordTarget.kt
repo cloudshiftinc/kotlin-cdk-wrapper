@@ -26,6 +26,9 @@ public open class Route53RecordTarget internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53.targets.Route53RecordTarget,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
+  public constructor(record: IRecordSet) :
+      this(software.amazon.awscdk.services.route53.targets.Route53RecordTarget(IRecordSet.unwrap(record)))
+
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
    *

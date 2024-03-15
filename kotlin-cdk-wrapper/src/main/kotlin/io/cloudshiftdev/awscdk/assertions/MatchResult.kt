@@ -28,6 +28,8 @@ import kotlin.jvm.JvmName
 public open class MatchResult internal constructor(
   internal override val cdkObject: software.amazon.awscdk.assertions.MatchResult,
 ) : CdkObject(cdkObject) {
+  public constructor(target: Any) : this(software.amazon.awscdk.assertions.MatchResult(target))
+
   /**
    * Compose the results of a previous match as a subtree.
    *

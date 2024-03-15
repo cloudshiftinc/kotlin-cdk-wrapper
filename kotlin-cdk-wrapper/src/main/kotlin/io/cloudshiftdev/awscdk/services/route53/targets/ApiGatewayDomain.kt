@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.route53.targets
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.services.apigateway.IDomainName
 import io.cloudshiftdev.awscdk.services.route53.AliasRecordTargetConfig
 import io.cloudshiftdev.awscdk.services.route53.IAliasRecordTarget
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
@@ -30,6 +31,9 @@ import io.cloudshiftdev.awscdk.services.route53.IRecordSet
 public open class ApiGatewayDomain internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.route53.targets.ApiGatewayDomain,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
+  public constructor(domainName: IDomainName) :
+      this(software.amazon.awscdk.services.route53.targets.ApiGatewayDomain(IDomainName.unwrap(domainName)))
+
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
    *

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.cloudwatch.actions
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.services.applicationautoscaling.StepScalingAction
 import io.cloudshiftdev.awscdk.services.cloudwatch.AlarmActionConfig
 import io.cloudshiftdev.awscdk.services.cloudwatch.IAlarm
 import io.cloudshiftdev.awscdk.services.cloudwatch.IAlarmAction
@@ -27,6 +28,9 @@ public open class ApplicationScalingAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cloudwatch.actions.ApplicationScalingAction,
 ) : CdkObject(cdkObject), IAlarmAction {
+  public constructor(stepScalingAction: StepScalingAction) :
+      this(software.amazon.awscdk.services.cloudwatch.actions.ApplicationScalingAction(StepScalingAction.unwrap(stepScalingAction)))
+
   /**
    * Returns an alarm action configuration to use an ApplicationScaling StepScalingAction as an
    * alarm action.

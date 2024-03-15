@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Boolean
+import kotlin.String
 
 /**
  * Instance type for EC2 instances.
@@ -32,6 +33,9 @@ import kotlin.Boolean
 public open class InstanceType internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.InstanceType,
 ) : CdkObject(cdkObject) {
+  public constructor(instanceTypeIdentifier: String) :
+      this(software.amazon.awscdk.services.ec2.InstanceType(instanceTypeIdentifier))
+
   /**
    * The instance's CPU architecture.
    */

@@ -23,6 +23,13 @@ import io.cloudshiftdev.constructs.Construct
 public open class SsmAction internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.actions.SsmAction,
 ) : CdkObject(cdkObject), IAlarmAction {
+  public constructor(severity: OpsItemSeverity, category: OpsItemCategory) :
+      this(software.amazon.awscdk.services.cloudwatch.actions.SsmAction(OpsItemSeverity.unwrap(severity),
+      OpsItemCategory.unwrap(category)))
+
+  public constructor(severity: OpsItemSeverity) :
+      this(software.amazon.awscdk.services.cloudwatch.actions.SsmAction(OpsItemSeverity.unwrap(severity)))
+
   /**
    * Returns an alarm action configuration to use an SSM OpsItem action as an alarm action.
    *

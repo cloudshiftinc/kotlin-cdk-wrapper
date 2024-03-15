@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
+import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
@@ -45,6 +46,10 @@ import kotlin.jvm.JvmName
 public open class StateGraph internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.StateGraph,
 ) : CdkObject(cdkObject) {
+  public constructor(startState: State, graphDescription: String) :
+      this(software.amazon.awscdk.services.stepfunctions.StateGraph(State.unwrap(startState),
+      graphDescription))
+
   /**
    * Binds this StateGraph to the StateMachine it defines and updates state machine permissions.
    *

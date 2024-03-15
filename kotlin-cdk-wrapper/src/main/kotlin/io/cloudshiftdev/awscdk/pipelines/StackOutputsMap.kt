@@ -21,6 +21,9 @@ import kotlin.String
 public open class StackOutputsMap internal constructor(
   internal override val cdkObject: software.amazon.awscdk.pipelines.StackOutputsMap,
 ) : CdkObject(cdkObject) {
+  public constructor(pipeline: PipelineBase) :
+      this(software.amazon.awscdk.pipelines.StackOutputsMap(PipelineBase.unwrap(pipeline)))
+
   /**
    * Return the matching variable reference string for a StackOutputReference.
    *

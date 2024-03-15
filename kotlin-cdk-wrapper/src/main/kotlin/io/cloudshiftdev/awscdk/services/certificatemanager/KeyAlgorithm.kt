@@ -29,6 +29,9 @@ import kotlin.String
 public open class KeyAlgorithm internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.certificatemanager.KeyAlgorithm,
 ) : CdkObject(cdkObject) {
+  public constructor(name: String) :
+      this(software.amazon.awscdk.services.certificatemanager.KeyAlgorithm(name))
+
   /**
    * The name of the algorithm.
    */

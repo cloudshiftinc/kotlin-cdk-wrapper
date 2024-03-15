@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.route53.targets
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.services.ec2.InterfaceVpcEndpoint
 import io.cloudshiftdev.awscdk.services.route53.AliasRecordTargetConfig
 import io.cloudshiftdev.awscdk.services.route53.IAliasRecordTarget
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
@@ -27,6 +28,9 @@ public open class InterfaceVpcEndpointTarget internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53.targets.InterfaceVpcEndpointTarget,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
+  public constructor(vpcEndpoint: InterfaceVpcEndpoint) :
+      this(software.amazon.awscdk.services.route53.targets.InterfaceVpcEndpointTarget(InterfaceVpcEndpoint.unwrap(vpcEndpoint)))
+
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
    *

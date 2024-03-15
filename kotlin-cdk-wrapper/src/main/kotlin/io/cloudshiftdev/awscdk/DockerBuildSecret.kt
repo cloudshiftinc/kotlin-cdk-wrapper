@@ -24,6 +24,8 @@ import kotlin.String
 public open class DockerBuildSecret internal constructor(
   internal override val cdkObject: software.amazon.awscdk.DockerBuildSecret,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.DockerBuildSecret())
+
   public companion object {
     public fun fromSrc(src: String): String = software.amazon.awscdk.DockerBuildSecret.fromSrc(src)
 

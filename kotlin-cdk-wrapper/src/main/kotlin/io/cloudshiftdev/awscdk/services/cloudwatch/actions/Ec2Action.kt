@@ -24,6 +24,9 @@ import io.cloudshiftdev.constructs.Construct
 public open class Ec2Action internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.actions.Ec2Action,
 ) : CdkObject(cdkObject), IAlarmAction {
+  public constructor(instanceAction: Ec2InstanceAction) :
+      this(software.amazon.awscdk.services.cloudwatch.actions.Ec2Action(Ec2InstanceAction.unwrap(instanceAction)))
+
   /**
    * Returns an alarm action configuration to use an EC2 action as an alarm action.
    *

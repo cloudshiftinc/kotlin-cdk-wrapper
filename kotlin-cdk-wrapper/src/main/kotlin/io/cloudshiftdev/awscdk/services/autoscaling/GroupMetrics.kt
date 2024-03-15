@@ -36,6 +36,9 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 public open class GroupMetrics internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.autoscaling.GroupMetrics,
 ) : CdkObject(cdkObject) {
+  public constructor(metrics: GroupMetric) :
+      this(software.amazon.awscdk.services.autoscaling.GroupMetrics(GroupMetric.unwrap(metrics)))
+
   public companion object {
     public fun all(): GroupMetrics =
         software.amazon.awscdk.services.autoscaling.GroupMetrics.all().let(GroupMetrics::wrap)

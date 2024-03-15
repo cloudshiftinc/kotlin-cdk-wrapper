@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import kotlin.String
 
 /**
  * Amazon Linux 2023 kernel versions.
@@ -24,6 +25,9 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 public open class AmazonLinux2023Kernel internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.AmazonLinux2023Kernel,
 ) : CdkObject(cdkObject) {
+  public constructor(version: String) :
+      this(software.amazon.awscdk.services.ec2.AmazonLinux2023Kernel(version))
+
   public companion object {
     public val CDK_LATEST: AmazonLinux2023Kernel =
         AmazonLinux2023Kernel.wrap(software.amazon.awscdk.services.ec2.AmazonLinux2023Kernel.CDK_LATEST)

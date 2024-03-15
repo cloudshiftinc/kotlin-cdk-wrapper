@@ -24,6 +24,8 @@ import kotlin.String
 public open class AccessLogField internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.AccessLogField,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.apigateway.AccessLogField())
+
   public companion object {
     @Deprecated(message = "deprecated in CDK")
     public fun contextAccountId(): String =

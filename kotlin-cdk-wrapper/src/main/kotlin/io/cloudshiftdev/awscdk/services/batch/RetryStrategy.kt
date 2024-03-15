@@ -30,6 +30,10 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 public open class RetryStrategy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.RetryStrategy,
 ) : CdkObject(cdkObject) {
+  public constructor(action: Action, on: Reason) :
+      this(software.amazon.awscdk.services.batch.RetryStrategy(Action.unwrap(action),
+      Reason.unwrap(on)))
+
   /**
    * The action to take when the job exits with the Reason specified.
    */

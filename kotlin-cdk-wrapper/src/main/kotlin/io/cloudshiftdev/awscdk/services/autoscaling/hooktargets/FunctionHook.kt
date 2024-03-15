@@ -6,6 +6,8 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.autoscaling.BindHookTargetOptions
 import io.cloudshiftdev.awscdk.services.autoscaling.ILifecycleHookTarget
 import io.cloudshiftdev.awscdk.services.autoscaling.LifecycleHookTargetConfig
+import io.cloudshiftdev.awscdk.services.kms.IKey
+import io.cloudshiftdev.awscdk.services.lambda.IFunction
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -32,6 +34,13 @@ public open class FunctionHook internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.autoscaling.hooktargets.FunctionHook,
 ) : CdkObject(cdkObject), ILifecycleHookTarget {
+  public constructor(fn: IFunction, encryptionKey: IKey) :
+      this(software.amazon.awscdk.services.autoscaling.hooktargets.FunctionHook(IFunction.unwrap(fn),
+      IKey.unwrap(encryptionKey)))
+
+  public constructor(fn: IFunction) :
+      this(software.amazon.awscdk.services.autoscaling.hooktargets.FunctionHook(IFunction.unwrap(fn)))
+
   /**
    * If the `IRole` does not exist in `options`, will create an `IRole` and an SNS Topic and attach
    * both to the lifecycle hook.

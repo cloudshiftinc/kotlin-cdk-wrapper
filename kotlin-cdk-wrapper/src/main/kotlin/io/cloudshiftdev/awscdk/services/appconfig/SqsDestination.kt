@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appconfig
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
+import io.cloudshiftdev.awscdk.services.sqs.IQueue
 import kotlin.String
 
 /**
@@ -25,6 +26,9 @@ import kotlin.String
 public open class SqsDestination internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.SqsDestination,
 ) : CdkObject(cdkObject), IEventDestination {
+  public constructor(queue: IQueue) :
+      this(software.amazon.awscdk.services.appconfig.SqsDestination(IQueue.unwrap(queue)))
+
   /**
    * The URI of the extension event destination.
    */

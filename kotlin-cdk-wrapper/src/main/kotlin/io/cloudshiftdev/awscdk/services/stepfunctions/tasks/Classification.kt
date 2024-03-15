@@ -36,6 +36,9 @@ public open class Classification internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.Classification,
 ) : CdkObject(cdkObject) {
+  public constructor(classificationStatement: String) :
+      this(software.amazon.awscdk.services.stepfunctions.tasks.Classification(classificationStatement))
+
   /**
    * A literal string in case a new EMR classification is released, if not already defined.
    */

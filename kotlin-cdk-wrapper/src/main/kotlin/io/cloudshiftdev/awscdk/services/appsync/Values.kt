@@ -58,6 +58,8 @@ import kotlin.String
 public open class Values internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.Values,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.appsync.Values())
+
   public companion object {
     public fun attribute(attr: String): AttributeValuesStep =
         software.amazon.awscdk.services.appsync.Values.attribute(attr).let(AttributeValuesStep::wrap)

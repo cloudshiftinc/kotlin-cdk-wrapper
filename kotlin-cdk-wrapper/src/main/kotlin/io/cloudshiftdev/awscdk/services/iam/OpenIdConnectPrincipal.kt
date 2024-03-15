@@ -2,6 +2,10 @@
 
 package io.cloudshiftdev.awscdk.services.iam
 
+import kotlin.Any
+import kotlin.String
+import kotlin.collections.Map
+
 /**
  * A principal that represents a federated identity provider as from a OpenID Connect provider.
  *
@@ -18,6 +22,13 @@ package io.cloudshiftdev.awscdk.services.iam
 public open class OpenIdConnectPrincipal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.OpenIdConnectPrincipal,
 ) : WebIdentityPrincipal(cdkObject) {
+  public constructor(openIdConnectProvider: IOpenIdConnectProvider, conditions: Map<String, Any>) :
+      this(software.amazon.awscdk.services.iam.OpenIdConnectPrincipal(IOpenIdConnectProvider.unwrap(openIdConnectProvider),
+      conditions))
+
+  public constructor(openIdConnectProvider: IOpenIdConnectProvider) :
+      this(software.amazon.awscdk.services.iam.OpenIdConnectPrincipal(IOpenIdConnectProvider.unwrap(openIdConnectProvider)))
+
   /**
    * Return the policy fragment that identifies this principal in a Policy.
    */

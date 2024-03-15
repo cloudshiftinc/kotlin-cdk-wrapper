@@ -26,6 +26,8 @@ import kotlin.jvm.JvmName
 public open class EnvironmentPlaceholders internal constructor(
   internal override val cdkObject: software.amazon.awscdk.cxapi.EnvironmentPlaceholders,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.cxapi.EnvironmentPlaceholders())
+
   public companion object {
     public val CURRENT_ACCOUNT: String =
         software.amazon.awscdk.cxapi.EnvironmentPlaceholders.CURRENT_ACCOUNT

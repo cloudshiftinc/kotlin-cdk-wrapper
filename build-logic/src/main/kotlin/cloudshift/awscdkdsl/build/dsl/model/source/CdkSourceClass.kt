@@ -1,5 +1,6 @@
 package cloudshift.awscdkdsl.build.dsl.model.source
 
+import com.fasterxml.jackson.annotation.JsonIgnore
 import com.squareup.kotlinpoet.ClassName
 
 data class CdkSourceClass(
@@ -13,6 +14,7 @@ data class CdkSourceClass(
 }
 
 data class CdkSourceMethod(val name: String, val parameterNames : List<String>, val comment: String?) {
+    @get:JsonIgnore
     val parameterCount: Int
         get() = parameterNames.size
 }

@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.services.lambda.DlqDestinationConfig
 import io.cloudshiftdev.awscdk.services.lambda.IEventSourceDlq
 import io.cloudshiftdev.awscdk.services.lambda.IEventSourceMapping
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
+import io.cloudshiftdev.awscdk.services.sqs.IQueue
 
 /**
  * An SQS dead letter queue destination configuration for a Lambda event source.
@@ -32,6 +33,9 @@ import io.cloudshiftdev.awscdk.services.lambda.IFunction
 public open class SqsDlq internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.eventsources.SqsDlq,
 ) : CdkObject(cdkObject), IEventSourceDlq {
+  public constructor(queue: IQueue) :
+      this(software.amazon.awscdk.services.lambda.eventsources.SqsDlq(IQueue.unwrap(queue)))
+
   /**
    * Returns a destination configuration for the DLQ.
    *

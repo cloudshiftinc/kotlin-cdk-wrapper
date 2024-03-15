@@ -40,6 +40,8 @@ public open class PhysicalResourceIdReference internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.customresources.PhysicalResourceIdReference,
 ) : CdkObject(cdkObject), IResolvable {
+  public constructor() : this(software.amazon.awscdk.customresources.PhysicalResourceIdReference())
+
   /**
    * The creation stack of this resolvable which will be appended to errors thrown during
    * resolution.

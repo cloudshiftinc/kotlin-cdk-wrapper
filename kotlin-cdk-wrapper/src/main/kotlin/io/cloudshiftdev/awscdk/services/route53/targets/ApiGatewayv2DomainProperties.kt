@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.services.route53.AliasRecordTargetConfig
 import io.cloudshiftdev.awscdk.services.route53.IAliasRecordTarget
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
 import io.cloudshiftdev.awscdk.services.route53.IRecordSet
+import kotlin.String
 
 /**
  * Defines an API Gateway V2 domain name as the alias target.
@@ -29,6 +30,10 @@ public open class ApiGatewayv2DomainProperties internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53.targets.ApiGatewayv2DomainProperties,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
+  public constructor(regionalDomainName: String, regionalHostedZoneId: String) :
+      this(software.amazon.awscdk.services.route53.targets.ApiGatewayv2DomainProperties(regionalDomainName,
+      regionalHostedZoneId))
+
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
    *

@@ -10,8 +10,8 @@ import kotlin.String
 public open class Construct internal constructor(
   internal override val cdkObject: software.constructs.Construct,
 ) : CdkObject(cdkObject), IConstruct {
-  protected constructor(scope: Construct, id: String) :
-      this(software.constructs.Construct(unwrap(scope), id))
+  public constructor(scope: Construct, id: String) :
+      this(software.constructs.Construct(Construct.unwrap(scope), id))
 
   public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
