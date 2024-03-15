@@ -18,25 +18,16 @@ package io.cloudshiftdev.awscdk.ext.core
 
 import io.kotest.common.ExperimentalKotest
 import io.kotest.core.config.AbstractProjectConfig
-import kotlin.math.max
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.seconds
 
 class KotestConfig : AbstractProjectConfig() {
 
-    override val parallelism: Int
-        get() {
-            val availableProcs = Runtime.getRuntime().availableProcessors()
-            val ci = System.getenv("CI") != null
-            return when (ci) {
-                true -> availableProcs
-                else -> max(availableProcs - 2, 2)
-            }
-        }
+    override val parallelism: Int = 1
 
-    @ExperimentalKotest override val concurrentSpecs: Int = 5
+    @ExperimentalKotest override val concurrentSpecs: Int = 1
 
-    @ExperimentalKotest override val concurrentTests: Int = 5
+    @ExperimentalKotest override val concurrentTests: Int = 1
 
     override val timeout: Duration = 45.seconds
 }
