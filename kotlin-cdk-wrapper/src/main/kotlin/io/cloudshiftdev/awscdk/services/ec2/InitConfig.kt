@@ -4,7 +4,6 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Boolean
-import kotlin.collections.List
 
 /**
  * A collection of configuration elements.
@@ -52,9 +51,6 @@ import kotlin.collections.List
 public open class InitConfig internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.InitConfig,
 ) : CdkObject(cdkObject) {
-  public constructor(elements: List<InitElement>) :
-      this(software.amazon.awscdk.services.ec2.InitConfig(List<InitElement>.unwrap(elements)))
-
   /**
    * Add one or more elements to the config.
    *

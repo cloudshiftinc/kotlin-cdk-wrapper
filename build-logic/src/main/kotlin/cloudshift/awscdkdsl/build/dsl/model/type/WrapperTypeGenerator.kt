@@ -3,6 +3,8 @@ package cloudshift.awscdkdsl.build.dsl.model.type
 import cloudshift.awscdkdsl.build.dsl.isBuilderClass
 import cloudshift.awscdkdsl.build.dsl.isCdkClass
 import cloudshift.awscdkdsl.build.dsl.isJssiClass
+import cloudshift.awscdkdsl.build.dsl.isListOfCdkObject
+import cloudshift.awscdkdsl.build.dsl.isMapWithCdkValue
 import cloudshift.awscdkdsl.build.dsl.isOuterClass
 import cloudshift.awscdkdsl.build.dsl.mapClassName
 import cloudshift.awscdkdsl.build.dsl.mappedClassName
@@ -194,7 +196,7 @@ internal object WrapperTypeGenerator {
         val cdkBuilder = ctx.model.builderFor(cdkClass.className)
 
         val usableConstructors =
-            cdkClass.publicConstructors.filter { it.parameters.none { it.type.isJssiClass } }
+            cdkClass.publicConstructors.filter { it.parameters.none { it.type.isJssiClass || (it.type.isListOfCdkObject() || it.type.isMapWithCdkValue()) } }
 
         if (cdkBuilder == null && cdkClass.className.isOuterClass() && usableConstructors.isNotEmpty()) {
 
