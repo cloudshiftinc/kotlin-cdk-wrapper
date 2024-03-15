@@ -1,0 +1,218 @@
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+
+package io.cloudshiftdev.awscdk.services.ses
+
+import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.TreeInspector
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObject
+import kotlin.Any
+import kotlin.String
+import kotlin.Unit
+import kotlin.jvm.JvmName
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
+import software.constructs.Construct as SoftwareConstructsConstruct
+
+public open class CfnReceiptFilter internal constructor(
+  internal override val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter,
+) : CfnResource(cdkObject), IInspectable {
+  public open fun attrId(): String = unwrap(this).getAttrId()
+
+  public open fun filter(): Any = unwrap(this).getFilter()
+
+  public open fun filter(`value`: IResolvable) {
+    unwrap(this).setFilter(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun filter(`value`: FilterProperty) {
+    unwrap(this).setFilter(`value`.let(FilterProperty::unwrap))
+  }
+
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("7f161bfe860732c11b7ee13cf4222091e0ae88ab012a0c924bc7d614a489431a")
+  public open fun filter(`value`: FilterProperty.Builder.() -> Unit): Unit =
+      filter(FilterProperty(`value`))
+
+  public override fun inspect(inspector: TreeInspector) {
+    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+  }
+
+  @CdkDslMarker
+  public interface Builder {
+    public fun filter(filter: IResolvable)
+
+    public fun filter(filter: FilterProperty)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("fad0b3c8597a7924fde228bf1290235e29ab81087c4ba41f540359d224fe12c1")
+    public fun filter(filter: FilterProperty.Builder.() -> Unit)
+  }
+
+  private class BuilderImpl(
+    scope: SoftwareConstructsConstruct,
+    id: String,
+  ) : Builder {
+    private val cdkBuilder: software.amazon.awscdk.services.ses.CfnReceiptFilter.Builder =
+        software.amazon.awscdk.services.ses.CfnReceiptFilter.Builder.create(scope, id)
+
+    override fun filter(filter: IResolvable) {
+      cdkBuilder.filter(filter.let(IResolvable::unwrap))
+    }
+
+    override fun filter(filter: FilterProperty) {
+      cdkBuilder.filter(filter.let(FilterProperty::unwrap))
+    }
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("fad0b3c8597a7924fde228bf1290235e29ab81087c4ba41f540359d224fe12c1")
+    override fun filter(filter: FilterProperty.Builder.() -> Unit): Unit =
+        filter(FilterProperty(filter))
+
+    public fun build(): software.amazon.awscdk.services.ses.CfnReceiptFilter = cdkBuilder.build()
+  }
+
+  public companion object {
+    public val CFN_RESOURCE_TYPE_NAME: String =
+        software.amazon.awscdk.services.ses.CfnReceiptFilter.CFN_RESOURCE_TYPE_NAME
+
+    public operator fun invoke(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      block: Builder.() -> Unit = {},
+    ): CfnReceiptFilter {
+      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+      return CfnReceiptFilter(builderImpl.apply(block).build())
+    }
+
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter):
+        CfnReceiptFilter = CfnReceiptFilter(cdkObject)
+
+    internal fun unwrap(wrapped: CfnReceiptFilter):
+        software.amazon.awscdk.services.ses.CfnReceiptFilter = wrapped.cdkObject
+  }
+
+  public interface IpFilterProperty {
+    public fun cidr(): String
+
+    public fun policy(): String
+
+    @CdkDslMarker
+    public interface Builder {
+      public fun cidr(cidr: String)
+
+      public fun policy(policy: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty.Builder =
+          software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty.builder()
+
+      override fun cidr(cidr: String) {
+        cdkBuilder.cidr(cidr)
+      }
+
+      override fun policy(policy: String) {
+        cdkBuilder.policy(policy)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty,
+    ) : CdkObject(cdkObject), IpFilterProperty {
+      override fun cidr(): String = unwrap(this).getCidr()
+
+      override fun policy(): String = unwrap(this).getPolicy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IpFilterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty):
+          IpFilterProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IpFilterProperty):
+          software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnReceiptFilter.IpFilterProperty
+    }
+  }
+
+  public interface FilterProperty {
+    public fun ipFilter(): Any
+
+    public fun name(): String? = unwrap(this).getName()
+
+    @CdkDslMarker
+    public interface Builder {
+      public fun ipFilter(ipFilter: IResolvable)
+
+      public fun ipFilter(ipFilter: IpFilterProperty)
+
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b3bada411daede1a2b72148c9e6d98cc81b2e0cf0db3151b4bbdb6fe53944ad1")
+      public fun ipFilter(ipFilter: IpFilterProperty.Builder.() -> Unit)
+
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnReceiptFilter.FilterProperty.Builder =
+          software.amazon.awscdk.services.ses.CfnReceiptFilter.FilterProperty.builder()
+
+      override fun ipFilter(ipFilter: IResolvable) {
+        cdkBuilder.ipFilter(ipFilter.let(IResolvable::unwrap))
+      }
+
+      override fun ipFilter(ipFilter: IpFilterProperty) {
+        cdkBuilder.ipFilter(ipFilter.let(IpFilterProperty::unwrap))
+      }
+
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b3bada411daede1a2b72148c9e6d98cc81b2e0cf0db3151b4bbdb6fe53944ad1")
+      override fun ipFilter(ipFilter: IpFilterProperty.Builder.() -> Unit): Unit =
+          ipFilter(IpFilterProperty(ipFilter))
+
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ses.CfnReceiptFilter.FilterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter.FilterProperty,
+    ) : CdkObject(cdkObject), FilterProperty {
+      override fun ipFilter(): Any = unwrap(this).getIpFilter()
+
+      override fun name(): String? = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FilterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnReceiptFilter.FilterProperty):
+          FilterProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FilterProperty):
+          software.amazon.awscdk.services.ses.CfnReceiptFilter.FilterProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnReceiptFilter.FilterProperty
+    }
+  }
+}

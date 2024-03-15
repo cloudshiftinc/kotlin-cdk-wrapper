@@ -29,6 +29,10 @@ internal fun dslFunctionSpec(prop: BuilderProperty, block: FunSpec.Builder.() ->
 }
 
 
+internal fun ClassName.isOuterClass(): Boolean {
+    return simpleNames.size == 1
+}
+
 internal fun ClassName.mappedClassName(): ClassName {
     val pkgName =
         packageName.replace("software.amazon.awscdk", "io.cloudshiftdev.awscdk")
@@ -48,9 +52,16 @@ internal val ClassName.isBuilderClass: Boolean
 internal val TypeName.isCdkClass: Boolean
     get() = when (this) {
         is ClassName -> this.isCdkClass
-        is ParameterizedTypeName -> this.rawType.isCdkClass
+        is ParameterizedTypeName -> this.rawType.isCdkClass || this.typeArguments.any { it.isCdkClass }
         else -> false
     }
+
+internal val TypeName.isJssiClass: Boolean
+    get() = when (this) {
+        is ClassName -> this.isJssiClass
+        else -> false
+    }
+
 
 internal fun TypeName.mapClassName(): TypeName {
     return when (this) {

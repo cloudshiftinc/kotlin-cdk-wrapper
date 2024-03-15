@@ -202,15 +202,6 @@ private class DelegatedCall(
         val defaultCallSegment = CallSegment("%N", listOf(name))
         return when {
             type is ParameterizedTypeName -> when {
-                type.isMapWithCdkValue() -> CallSegment(
-                    "%N$nullable.mapValues{%T.unwrap(it.value)}",
-                    listOf(
-                        name,
-                        type.typeArguments[1].mapClassName()
-                            .copy(nullable = false),
-                    ),
-                )
-
                 type.isMapWithCdkListValue() -> {
                     val listType =
                         type.typeArguments[1] as ParameterizedTypeName
@@ -222,6 +213,15 @@ private class DelegatedCall(
                         ),
                     )
                 }
+
+                type.isMapWithCdkValue() -> CallSegment(
+                    "%N$nullable.mapValues{%T.unwrap(it.value)}",
+                    listOf(
+                        name,
+                        type.typeArguments[1].mapClassName()
+                            .copy(nullable = false),
+                    ),
+                )
 
                 type.isListOfListsOfCdkObject() -> {
                     val listType =

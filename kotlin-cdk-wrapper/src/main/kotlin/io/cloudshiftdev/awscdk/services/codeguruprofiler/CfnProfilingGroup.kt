@@ -1,0 +1,268 @@
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+
+package io.cloudshiftdev.awscdk.services.codeguruprofiler
+
+import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
+import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggable
+import io.cloudshiftdev.awscdk.TagManager
+import io.cloudshiftdev.awscdk.TreeInspector
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObject
+import kotlin.Any
+import kotlin.String
+import kotlin.Unit
+import kotlin.collections.List
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
+import software.constructs.Construct as SoftwareConstructsConstruct
+
+public open class CfnProfilingGroup internal constructor(
+  internal override val cdkObject:
+      software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup,
+) : CfnResource(cdkObject), IInspectable, ITaggable {
+  public open fun agentPermissions(): Any? = unwrap(this).getAgentPermissions()
+
+  public open fun agentPermissions(`value`: Any) {
+    unwrap(this).setAgentPermissions(`value`)
+  }
+
+  public open fun anomalyDetectionNotificationConfiguration(): Any? =
+      unwrap(this).getAnomalyDetectionNotificationConfiguration()
+
+  public open fun anomalyDetectionNotificationConfiguration(`value`: IResolvable) {
+    unwrap(this).setAnomalyDetectionNotificationConfiguration(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun anomalyDetectionNotificationConfiguration(__idx_ac66f0: List<Any>) {
+    unwrap(this).setAnomalyDetectionNotificationConfiguration(__idx_ac66f0)
+  }
+
+  public open fun anomalyDetectionNotificationConfiguration(vararg __idx_ac66f0: Any): Unit =
+      anomalyDetectionNotificationConfiguration(__idx_ac66f0.toList())
+
+  public open fun attrArn(): String = unwrap(this).getAttrArn()
+
+  public open fun computePlatform(): String? = unwrap(this).getComputePlatform()
+
+  public open fun computePlatform(`value`: String) {
+    unwrap(this).setComputePlatform(`value`)
+  }
+
+  public override fun inspect(inspector: TreeInspector) {
+    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+  }
+
+  public open fun profilingGroupName(): String = unwrap(this).getProfilingGroupName()
+
+  public open fun profilingGroupName(`value`: String) {
+    unwrap(this).setProfilingGroupName(`value`)
+  }
+
+  public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
+
+  public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
+      emptyList()
+
+  public open fun tagsRaw(`value`: List<CfnTag>) {
+    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+  }
+
+  public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
+
+  @CdkDslMarker
+  public interface Builder {
+    public fun agentPermissions(agentPermissions: Any)
+
+    public
+        fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: IResolvable)
+
+    public
+        fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: List<Any>)
+
+    public fun anomalyDetectionNotificationConfiguration(vararg
+        anomalyDetectionNotificationConfiguration: Any)
+
+    public fun computePlatform(computePlatform: String)
+
+    public fun profilingGroupName(profilingGroupName: String)
+
+    public fun tags(tags: List<CfnTag>)
+
+    public fun tags(vararg tags: CfnTag)
+  }
+
+  private class BuilderImpl(
+    scope: SoftwareConstructsConstruct,
+    id: String,
+  ) : Builder {
+    private val cdkBuilder:
+        software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.Builder =
+        software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.Builder.create(scope, id)
+
+    override fun agentPermissions(agentPermissions: Any) {
+      cdkBuilder.agentPermissions(agentPermissions)
+    }
+
+    override
+        fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: IResolvable) {
+      cdkBuilder.anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration.let(IResolvable::unwrap))
+    }
+
+    override
+        fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: List<Any>) {
+      cdkBuilder.anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration)
+    }
+
+    override fun anomalyDetectionNotificationConfiguration(vararg
+        anomalyDetectionNotificationConfiguration: Any): Unit =
+        anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration.toList())
+
+    override fun computePlatform(computePlatform: String) {
+      cdkBuilder.computePlatform(computePlatform)
+    }
+
+    override fun profilingGroupName(profilingGroupName: String) {
+      cdkBuilder.profilingGroupName(profilingGroupName)
+    }
+
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+    }
+
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+    public fun build(): software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup =
+        cdkBuilder.build()
+  }
+
+  public companion object {
+    public val CFN_RESOURCE_TYPE_NAME: String =
+        software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.CFN_RESOURCE_TYPE_NAME
+
+    public operator fun invoke(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      block: Builder.() -> Unit = {},
+    ): CfnProfilingGroup {
+      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+      return CfnProfilingGroup(builderImpl.apply(block).build())
+    }
+
+    internal
+        fun wrap(cdkObject: software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup):
+        CfnProfilingGroup = CfnProfilingGroup(cdkObject)
+
+    internal fun unwrap(wrapped: CfnProfilingGroup):
+        software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup = wrapped.cdkObject
+  }
+
+  public interface AgentPermissionsProperty {
+    public fun principals(): List<String>
+
+    @CdkDslMarker
+    public interface Builder {
+      public fun principals(principals: List<String>)
+
+      public fun principals(vararg principals: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.AgentPermissionsProperty.Builder
+          =
+          software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.AgentPermissionsProperty.builder()
+
+      override fun principals(principals: List<String>) {
+        cdkBuilder.principals(principals)
+      }
+
+      override fun principals(vararg principals: String): Unit = principals(principals.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.AgentPermissionsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.AgentPermissionsProperty,
+    ) : CdkObject(cdkObject), AgentPermissionsProperty {
+      override fun principals(): List<String> = unwrap(this).getPrincipals()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AgentPermissionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.AgentPermissionsProperty):
+          AgentPermissionsProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AgentPermissionsProperty):
+          software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.AgentPermissionsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.AgentPermissionsProperty
+    }
+  }
+
+  public interface ChannelProperty {
+    public fun channelId(): String? = unwrap(this).getChannelId()
+
+    public fun channelUri(): String
+
+    @CdkDslMarker
+    public interface Builder {
+      public fun channelId(channelId: String)
+
+      public fun channelUri(channelUri: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.ChannelProperty.Builder
+          =
+          software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.ChannelProperty.builder()
+
+      override fun channelId(channelId: String) {
+        cdkBuilder.channelId(channelId)
+      }
+
+      override fun channelUri(channelUri: String) {
+        cdkBuilder.channelUri(channelUri)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.ChannelProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      override val cdkObject:
+          software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.ChannelProperty,
+    ) : CdkObject(cdkObject), ChannelProperty {
+      override fun channelId(): String? = unwrap(this).getChannelId()
+
+      override fun channelUri(): String = unwrap(this).getChannelUri()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ChannelProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.ChannelProperty):
+          ChannelProperty = Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ChannelProperty):
+          software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.ChannelProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup.ChannelProperty
+    }
+  }
+}

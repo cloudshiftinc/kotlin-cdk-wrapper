@@ -26,19 +26,78 @@ internal object WrapperTypeGenerator {
     private val logger = Logging.getLogger(WrapperTypeGenerator::class.java)
 
     fun generate(model: CdkModel): List<FileSpec> {
-        val outerClasses =
-            model.classes.filter { it.isOuterClass }
-        //   .filter { it.className.packageName.startsWith("software.amazon.awscdk.services.elasticloadbalancingv2") }
 
-        logger.lifecycle("Generating ${outerClasses.size} classes")
+        val classesToGenerate =
+            model.classes.filter { it.isOuterClass }.sortedBy { it.className }
+
+        logger.lifecycle("Total classes: ${classesToGenerate.size}")
 
         val ctx = TypeGeneratorContext(model)
-        val specs = outerClasses.map {
+        val specs = classesToGenerate.map {
             generateWrapperTypeFile(it, ctx)
         }
 
         return specs + generateCdkObject()
     }
+
+/*
+    private fun findAllReferences(classes: List<CdkClass>, model: CdkModel): Set<ClassName> {
+        val acc = mutableSetOf<ClassName>()
+        classes.forEach {
+            referencedClass(it.className, acc, model)
+        }
+        return acc.filter { it.isOuterClass() }.toSet()
+    }
+
+    private fun referencedClass(typeName: TypeName, acc: MutableSet<ClassName>, model: CdkModel) {
+        if (typeName in acc || (typeName is ClassName && typeName.copy(nullable = false) in acc) || typeName.isJssiClass || !typeName.isCdkClass) return
+
+        fun trackType(type: TypeName) {
+            when (type) {
+                is ClassName -> {
+                    acc.add(type.copy(nullable = false) as ClassName)
+                }
+
+                is ParameterizedTypeName -> {
+                    referencedClass(type.rawType, acc, model)
+                    type.typeArguments.forEach { referencedClass(it, acc, model) }
+                }
+
+                else -> error("Unhandled type: $type ${type::class}")
+            }
+        }
+
+        trackType(typeName)
+        if(typeName is ClassName && typeName.simpleNames.size > 1) referencedClass(typeName.enclosingClassName()!!, acc, model)
+        if (typeName !is ClassName) return
+
+        val cdkClass = model.resolveClass(typeName.copy(nullable = false) as ClassName)
+
+        model.superTypesOf(cdkClass.className).forEach {
+            referencedClass(it, acc, model)
+        }
+
+        cdkClass.publicMemberFunctions.forEach {
+            it.parameters.forEach {
+                referencedClass(it.type, acc, model)
+            }
+            referencedClass(it.returnType, acc, model)
+        }
+
+        cdkClass.publicStaticFunctions.forEach {
+            it.parameters.forEach {
+                referencedClass(it.type, acc, model)
+            }
+            referencedClass(it.returnType, acc, model)
+        }
+
+        cdkClass.publicStaticFields.forEach {
+            referencedClass(it.type, acc, model)
+        }
+
+        model.innerClasses(cdkClass.className).forEach { referencedClass(it, acc, model) }
+    }
+*/
 
     private fun generateWrapperTypeFile(
         cdkClass: CdkClass,
@@ -120,20 +179,32 @@ internal object WrapperTypeGenerator {
         return generator.generate(enclosingClass, methods)
     }
 
-    private fun staticPublicFields(cdkClass : CdkClass): List<PropertySpec> {
+    private fun staticPublicFields(cdkClass: CdkClass): List<PropertySpec> {
         return cdkClass.publicStaticFields.map {
             val builder = PropertySpec.builder(it.name, it.type.mapClassName())
                 .addModifiers(KModifier.PUBLIC)
             val type = it.type
             when {
                 type is ParameterizedTypeName && type.typeArguments.first().isCdkClass -> {
-                    builder.initializer("%T.%N.map(%T::wrap)",cdkClass.className, it.name, type.typeArguments.first().mapClassName())
+                    builder.initializer(
+                        "%T.%N.map(%T::wrap)",
+                        cdkClass.className,
+                        it.name,
+                        type.typeArguments.first().mapClassName(),
+                    )
                 }
+
                 type.isCdkClass -> {
-                    builder.initializer("%T.wrap(%T.%N)",it.type.mapClassName(),cdkClass.className, it.name)
+                    builder.initializer(
+                        "%T.wrap(%T.%N)",
+                        it.type.mapClassName(),
+                        cdkClass.className,
+                        it.name,
+                    )
                 }
+
                 else -> {
-                    builder.initializer("%T.%N",cdkClass.className, it.name)
+                    builder.initializer("%T.%N", cdkClass.className, it.name)
                 }
             }
             builder.build()
@@ -354,7 +425,7 @@ internal object WrapperTypeGenerator {
 
         wrapperBuilder.addProperty(
             PropertySpec.builder(CdkObjectName, cdkClass.className)
-                .addModifiers( KModifier.OVERRIDE)
+                .addModifiers(KModifier.OVERRIDE)
                 .initializer(CdkObjectName).build(),
         )
 
@@ -383,7 +454,7 @@ internal object WrapperTypeGenerator {
     }
 
     private const val CdkObjectName = "cdkObject"
-    private val CdkObject = ClassName("io.cloudshiftdev.awscdk", "CdkObject")
+    private val CdkObject = ClassName("io.cloudshiftdev.awscdk.common", "CdkObject")
     private val Construct = ClassName("software.constructs", "Construct")
 }
 

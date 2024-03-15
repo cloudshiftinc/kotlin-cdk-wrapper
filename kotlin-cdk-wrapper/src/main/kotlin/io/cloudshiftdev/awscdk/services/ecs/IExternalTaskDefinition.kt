@@ -1,0 +1,54 @@
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+
+package io.cloudshiftdev.awscdk.services.ecs
+
+import io.cloudshiftdev.awscdk.RemovalPolicy
+import io.cloudshiftdev.awscdk.ResourceEnvironment
+import io.cloudshiftdev.awscdk.Stack
+import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.services.iam.IRole
+import io.cloudshiftdev.constructs.Node
+import kotlin.Boolean
+import kotlin.String
+
+public interface IExternalTaskDefinition : ITaskDefinition {
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.ecs.IExternalTaskDefinition,
+  ) : CdkObject(cdkObject), IExternalTaskDefinition {
+    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
+      unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
+    }
+
+    override fun compatibility(): Compatibility =
+        unwrap(this).getCompatibility().let(Compatibility::wrap)
+
+    override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
+
+    override fun executionRole(): IRole? = unwrap(this).getExecutionRole()?.let(IRole::wrap)
+
+    override fun isEc2Compatible(): Boolean = unwrap(this).getIsEc2Compatible()
+
+    override fun isExternalCompatible(): Boolean = unwrap(this).getIsExternalCompatible()
+
+    override fun isFargateCompatible(): Boolean = unwrap(this).getIsFargateCompatible()
+
+    override fun networkMode(): NetworkMode = unwrap(this).getNetworkMode().let(NetworkMode::wrap)
+
+    override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
+
+    override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+
+    override fun taskDefinitionArn(): String = unwrap(this).getTaskDefinitionArn()
+
+    override fun taskRole(): IRole = unwrap(this).getTaskRole().let(IRole::wrap)
+  }
+
+  public companion object {
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.IExternalTaskDefinition):
+        IExternalTaskDefinition = Wrapper(cdkObject)
+
+    internal fun unwrap(wrapped: IExternalTaskDefinition):
+        software.amazon.awscdk.services.ecs.IExternalTaskDefinition = (wrapped as
+        CdkObject).cdkObject as software.amazon.awscdk.services.ecs.IExternalTaskDefinition
+  }
+}

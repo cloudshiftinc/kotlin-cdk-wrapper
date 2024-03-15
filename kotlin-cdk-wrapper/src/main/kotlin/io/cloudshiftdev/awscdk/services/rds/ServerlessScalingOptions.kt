@@ -1,0 +1,95 @@
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+
+package io.cloudshiftdev.awscdk.services.rds
+
+import io.cloudshiftdev.awscdk.Duration
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObject
+import kotlin.Unit
+
+public interface ServerlessScalingOptions {
+  public fun autoPause(): Duration? = unwrap(this).getAutoPause()?.let(Duration::wrap)
+
+  public fun maxCapacity(): AuroraCapacityUnit? =
+      unwrap(this).getMaxCapacity()?.let(AuroraCapacityUnit::wrap)
+
+  public fun minCapacity(): AuroraCapacityUnit? =
+      unwrap(this).getMinCapacity()?.let(AuroraCapacityUnit::wrap)
+
+  public fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+
+  public fun timeoutAction(): TimeoutAction? =
+      unwrap(this).getTimeoutAction()?.let(TimeoutAction::wrap)
+
+  @CdkDslMarker
+  public interface Builder {
+    public fun autoPause(autoPause: Duration)
+
+    public fun maxCapacity(maxCapacity: AuroraCapacityUnit)
+
+    public fun minCapacity(minCapacity: AuroraCapacityUnit)
+
+    public fun timeout(timeout: Duration)
+
+    public fun timeoutAction(timeoutAction: TimeoutAction)
+  }
+
+  private class BuilderImpl : Builder {
+    private val cdkBuilder: software.amazon.awscdk.services.rds.ServerlessScalingOptions.Builder =
+        software.amazon.awscdk.services.rds.ServerlessScalingOptions.builder()
+
+    override fun autoPause(autoPause: Duration) {
+      cdkBuilder.autoPause(autoPause.let(Duration::unwrap))
+    }
+
+    override fun maxCapacity(maxCapacity: AuroraCapacityUnit) {
+      cdkBuilder.maxCapacity(maxCapacity.let(AuroraCapacityUnit::unwrap))
+    }
+
+    override fun minCapacity(minCapacity: AuroraCapacityUnit) {
+      cdkBuilder.minCapacity(minCapacity.let(AuroraCapacityUnit::unwrap))
+    }
+
+    override fun timeout(timeout: Duration) {
+      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+    }
+
+    override fun timeoutAction(timeoutAction: TimeoutAction) {
+      cdkBuilder.timeoutAction(timeoutAction.let(TimeoutAction::unwrap))
+    }
+
+    public fun build(): software.amazon.awscdk.services.rds.ServerlessScalingOptions =
+        cdkBuilder.build()
+  }
+
+  private class Wrapper(
+    override val cdkObject: software.amazon.awscdk.services.rds.ServerlessScalingOptions,
+  ) : CdkObject(cdkObject), ServerlessScalingOptions {
+    override fun autoPause(): Duration? = unwrap(this).getAutoPause()?.let(Duration::wrap)
+
+    override fun maxCapacity(): AuroraCapacityUnit? =
+        unwrap(this).getMaxCapacity()?.let(AuroraCapacityUnit::wrap)
+
+    override fun minCapacity(): AuroraCapacityUnit? =
+        unwrap(this).getMinCapacity()?.let(AuroraCapacityUnit::wrap)
+
+    override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+
+    override fun timeoutAction(): TimeoutAction? =
+        unwrap(this).getTimeoutAction()?.let(TimeoutAction::wrap)
+  }
+
+  public companion object {
+    public operator fun invoke(block: Builder.() -> Unit = {}): ServerlessScalingOptions {
+      val builderImpl = BuilderImpl()
+      return Wrapper(builderImpl.apply(block).build())
+    }
+
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.ServerlessScalingOptions):
+        ServerlessScalingOptions = Wrapper(cdkObject)
+
+    internal fun unwrap(wrapped: ServerlessScalingOptions):
+        software.amazon.awscdk.services.rds.ServerlessScalingOptions = (wrapped as
+        CdkObject).cdkObject as software.amazon.awscdk.services.rds.ServerlessScalingOptions
+  }
+}

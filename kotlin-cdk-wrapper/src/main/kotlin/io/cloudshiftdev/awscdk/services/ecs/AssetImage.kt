@@ -1,0 +1,184 @@
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+
+package io.cloudshiftdev.awscdk.services.ecs
+
+import io.cloudshiftdev.awscdk.IgnoreMode
+import io.cloudshiftdev.awscdk.SymlinkFollowMode
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.services.ecr.assets.DockerCacheOption
+import io.cloudshiftdev.awscdk.services.ecr.assets.DockerImageAssetInvalidationOptions
+import io.cloudshiftdev.awscdk.services.ecr.assets.NetworkMode
+import io.cloudshiftdev.awscdk.services.ecr.assets.Platform
+import io.cloudshiftdev.constructs.Construct
+import kotlin.Boolean
+import kotlin.String
+import kotlin.Unit
+import kotlin.collections.List
+import kotlin.collections.Map
+import kotlin.jvm.JvmName
+
+public open class AssetImage internal constructor(
+  internal override val cdkObject: software.amazon.awscdk.services.ecs.AssetImage,
+) : ContainerImage(cdkObject) {
+  public override fun bind(scope: Construct, containerDefinition: ContainerDefinition):
+      ContainerImageConfig = unwrap(this).bind(scope.let(Construct::unwrap),
+      containerDefinition.let(ContainerDefinition::unwrap)).let(ContainerImageConfig::wrap)
+
+  @CdkDslMarker
+  public interface Builder {
+    public fun assetName(assetName: String)
+
+    public fun buildArgs(buildArgs: Map<String, String>)
+
+    public fun buildSecrets(buildSecrets: Map<String, String>)
+
+    public fun buildSsh(buildSsh: String)
+
+    public fun cacheDisabled(cacheDisabled: Boolean)
+
+    public fun cacheFrom(cacheFrom: List<DockerCacheOption>)
+
+    public fun cacheFrom(vararg cacheFrom: DockerCacheOption)
+
+    public fun cacheTo(cacheTo: DockerCacheOption)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3dbd4b2abcd3ab31ce315d550cfbf46c6067f6871850d113e1366ca33f1b6cdf")
+    public fun cacheTo(cacheTo: DockerCacheOption.Builder.() -> Unit)
+
+    public fun exclude(exclude: List<String>)
+
+    public fun exclude(vararg exclude: String)
+
+    public fun extraHash(extraHash: String)
+
+    public fun `file`(`file`: String)
+
+    public fun followSymlinks(followSymlinks: SymlinkFollowMode)
+
+    public fun ignoreMode(ignoreMode: IgnoreMode)
+
+    public fun invalidation(invalidation: DockerImageAssetInvalidationOptions)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("090b76bf3c87e88959d892da084be4ad746eb80512f3699f5ec4d70033e2578e")
+    public fun invalidation(invalidation: DockerImageAssetInvalidationOptions.Builder.() -> Unit)
+
+    public fun networkMode(networkMode: NetworkMode)
+
+    public fun outputs(outputs: List<String>)
+
+    public fun outputs(vararg outputs: String)
+
+    public fun platform(platform: Platform)
+
+    public fun target(target: String)
+  }
+
+  private class BuilderImpl(
+    directory: String,
+  ) : Builder {
+    private val cdkBuilder: software.amazon.awscdk.services.ecs.AssetImage.Builder =
+        software.amazon.awscdk.services.ecs.AssetImage.Builder.create(directory)
+
+    override fun assetName(assetName: String) {
+      cdkBuilder.assetName(assetName)
+    }
+
+    override fun buildArgs(buildArgs: Map<String, String>) {
+      cdkBuilder.buildArgs(buildArgs)
+    }
+
+    override fun buildSecrets(buildSecrets: Map<String, String>) {
+      cdkBuilder.buildSecrets(buildSecrets)
+    }
+
+    override fun buildSsh(buildSsh: String) {
+      cdkBuilder.buildSsh(buildSsh)
+    }
+
+    override fun cacheDisabled(cacheDisabled: Boolean) {
+      cdkBuilder.cacheDisabled(cacheDisabled)
+    }
+
+    override fun cacheFrom(cacheFrom: List<DockerCacheOption>) {
+      cdkBuilder.cacheFrom(cacheFrom.map(DockerCacheOption::unwrap))
+    }
+
+    override fun cacheFrom(vararg cacheFrom: DockerCacheOption): Unit =
+        cacheFrom(cacheFrom.toList())
+
+    override fun cacheTo(cacheTo: DockerCacheOption) {
+      cdkBuilder.cacheTo(cacheTo.let(DockerCacheOption::unwrap))
+    }
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3dbd4b2abcd3ab31ce315d550cfbf46c6067f6871850d113e1366ca33f1b6cdf")
+    override fun cacheTo(cacheTo: DockerCacheOption.Builder.() -> Unit): Unit =
+        cacheTo(DockerCacheOption(cacheTo))
+
+    override fun exclude(exclude: List<String>) {
+      cdkBuilder.exclude(exclude)
+    }
+
+    override fun exclude(vararg exclude: String): Unit = exclude(exclude.toList())
+
+    override fun extraHash(extraHash: String) {
+      cdkBuilder.extraHash(extraHash)
+    }
+
+    override fun `file`(`file`: String) {
+      cdkBuilder.`file`(`file`)
+    }
+
+    override fun followSymlinks(followSymlinks: SymlinkFollowMode) {
+      cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode::unwrap))
+    }
+
+    override fun ignoreMode(ignoreMode: IgnoreMode) {
+      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode::unwrap))
+    }
+
+    override fun invalidation(invalidation: DockerImageAssetInvalidationOptions) {
+      cdkBuilder.invalidation(invalidation.let(DockerImageAssetInvalidationOptions::unwrap))
+    }
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("090b76bf3c87e88959d892da084be4ad746eb80512f3699f5ec4d70033e2578e")
+    override fun invalidation(invalidation: DockerImageAssetInvalidationOptions.Builder.() -> Unit):
+        Unit = invalidation(DockerImageAssetInvalidationOptions(invalidation))
+
+    override fun networkMode(networkMode: NetworkMode) {
+      cdkBuilder.networkMode(networkMode.let(NetworkMode::unwrap))
+    }
+
+    override fun outputs(outputs: List<String>) {
+      cdkBuilder.outputs(outputs)
+    }
+
+    override fun outputs(vararg outputs: String): Unit = outputs(outputs.toList())
+
+    override fun platform(platform: Platform) {
+      cdkBuilder.platform(platform.let(Platform::unwrap))
+    }
+
+    override fun target(target: String) {
+      cdkBuilder.target(target)
+    }
+
+    public fun build(): software.amazon.awscdk.services.ecs.AssetImage = cdkBuilder.build()
+  }
+
+  public companion object {
+    public operator fun invoke(directory: String, block: Builder.() -> Unit = {}): AssetImage {
+      val builderImpl = BuilderImpl(directory)
+      return AssetImage(builderImpl.apply(block).build())
+    }
+
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.AssetImage): AssetImage =
+        AssetImage(cdkObject)
+
+    internal fun unwrap(wrapped: AssetImage): software.amazon.awscdk.services.ecs.AssetImage =
+        wrapped.cdkObject
+  }
+}

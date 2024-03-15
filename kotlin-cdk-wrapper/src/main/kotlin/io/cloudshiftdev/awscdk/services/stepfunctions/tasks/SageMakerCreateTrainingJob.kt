@@ -1,0 +1,288 @@
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+
+package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
+
+import io.cloudshiftdev.awscdk.Duration
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.services.ec2.Connections
+import io.cloudshiftdev.awscdk.services.ec2.IConnectable
+import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
+import io.cloudshiftdev.awscdk.services.iam.IGrantable
+import io.cloudshiftdev.awscdk.services.iam.IPrincipal
+import io.cloudshiftdev.awscdk.services.iam.IRole
+import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
+import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
+import io.cloudshiftdev.awscdk.services.stepfunctions.TaskStateBase
+import io.cloudshiftdev.awscdk.services.stepfunctions.Timeout
+import kotlin.Any
+import kotlin.Boolean
+import kotlin.Deprecated
+import kotlin.String
+import kotlin.Unit
+import kotlin.collections.List
+import kotlin.collections.Map
+import kotlin.jvm.JvmName
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
+import software.constructs.Construct as SoftwareConstructsConstruct
+
+public open class SageMakerCreateTrainingJob internal constructor(
+  internal override val cdkObject:
+      software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTrainingJob,
+) : TaskStateBase(cdkObject), IGrantable, IConnectable {
+  public open fun addSecurityGroup(securityGroup: ISecurityGroup) {
+    unwrap(this).addSecurityGroup(securityGroup.let(ISecurityGroup::unwrap))
+  }
+
+  public override fun connections(): Connections =
+      unwrap(this).getConnections().let(Connections::wrap)
+
+  public override fun grantPrincipal(): IPrincipal =
+      unwrap(this).getGrantPrincipal().let(IPrincipal::wrap)
+
+  public open fun role(): IRole = unwrap(this).getRole().let(IRole::wrap)
+
+  @CdkDslMarker
+  public interface Builder {
+    public fun algorithmSpecification(algorithmSpecification: AlgorithmSpecification)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("85e6251e82851749ffbb8345476f4721b28659397b56857d25217c9023ed399d")
+    public
+        fun algorithmSpecification(algorithmSpecification: AlgorithmSpecification.Builder.() -> Unit)
+
+    public fun comment(comment: String)
+
+    public fun credentials(credentials: Credentials)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("57a80a54a6aa13b345116065e55b816be8e93d9b56a8dbdba0d9da02f889cf4c")
+    public fun credentials(credentials: Credentials.Builder.() -> Unit)
+
+    public fun enableNetworkIsolation(enableNetworkIsolation: Boolean)
+
+    public fun environment(environment: Map<String, String>)
+
+    @Deprecated(message = "deprecated in CDK")
+    public fun heartbeat(heartbeat: Duration)
+
+    public fun heartbeatTimeout(heartbeatTimeout: Timeout)
+
+    public fun hyperparameters(hyperparameters: Map<String, Any>)
+
+    public fun inputDataConfig(inputDataConfig: List<Channel>)
+
+    public fun inputDataConfig(vararg inputDataConfig: Channel)
+
+    public fun inputPath(inputPath: String)
+
+    public fun integrationPattern(integrationPattern: IntegrationPattern)
+
+    public fun outputDataConfig(outputDataConfig: OutputDataConfig)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a76625af5b8863792b712fd8fd4cd0a98d17fffb031e83ee24c0ddc8f8a4d265")
+    public fun outputDataConfig(outputDataConfig: OutputDataConfig.Builder.() -> Unit)
+
+    public fun outputPath(outputPath: String)
+
+    public fun resourceConfig(resourceConfig: ResourceConfig)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ed81f6461e3639fa414b47bfe6ba51f523e2f2a8c294a32a70435e43ae4f8094")
+    public fun resourceConfig(resourceConfig: ResourceConfig.Builder.() -> Unit)
+
+    public fun resultPath(resultPath: String)
+
+    public fun resultSelector(resultSelector: Map<String, Any>)
+
+    public fun role(role: IRole)
+
+    public fun stateName(stateName: String)
+
+    public fun stoppingCondition(stoppingCondition: StoppingCondition)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ed05c1496d0f9c6d41b71d78070b05fc0dafae22a382a628e3bfb389053ea333")
+    public fun stoppingCondition(stoppingCondition: StoppingCondition.Builder.() -> Unit)
+
+    public fun tags(tags: Map<String, String>)
+
+    public fun taskTimeout(taskTimeout: Timeout)
+
+    @Deprecated(message = "deprecated in CDK")
+    public fun timeout(timeout: Duration)
+
+    public fun trainingJobName(trainingJobName: String)
+
+    public fun vpcConfig(vpcConfig: VpcConfig)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("f26418b73714fcc10e47b401365b2ecfc3c6a844dac0a52fe3e248eec3c5a157")
+    public fun vpcConfig(vpcConfig: VpcConfig.Builder.() -> Unit)
+  }
+
+  private class BuilderImpl(
+    scope: SoftwareConstructsConstruct,
+    id: String,
+  ) : Builder {
+    private val cdkBuilder:
+        software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTrainingJob.Builder =
+        software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTrainingJob.Builder.create(scope,
+        id)
+
+    override fun algorithmSpecification(algorithmSpecification: AlgorithmSpecification) {
+      cdkBuilder.algorithmSpecification(algorithmSpecification.let(AlgorithmSpecification::unwrap))
+    }
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("85e6251e82851749ffbb8345476f4721b28659397b56857d25217c9023ed399d")
+    override
+        fun algorithmSpecification(algorithmSpecification: AlgorithmSpecification.Builder.() -> Unit):
+        Unit = algorithmSpecification(AlgorithmSpecification(algorithmSpecification))
+
+    override fun comment(comment: String) {
+      cdkBuilder.comment(comment)
+    }
+
+    override fun credentials(credentials: Credentials) {
+      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+    }
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("57a80a54a6aa13b345116065e55b816be8e93d9b56a8dbdba0d9da02f889cf4c")
+    override fun credentials(credentials: Credentials.Builder.() -> Unit): Unit =
+        credentials(Credentials(credentials))
+
+    override fun enableNetworkIsolation(enableNetworkIsolation: Boolean) {
+      cdkBuilder.enableNetworkIsolation(enableNetworkIsolation)
+    }
+
+    override fun environment(environment: Map<String, String>) {
+      cdkBuilder.environment(environment)
+    }
+
+    @Deprecated(message = "deprecated in CDK")
+    override fun heartbeat(heartbeat: Duration) {
+      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+    }
+
+    override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+    }
+
+    override fun hyperparameters(hyperparameters: Map<String, Any>) {
+      cdkBuilder.hyperparameters(hyperparameters)
+    }
+
+    override fun inputDataConfig(inputDataConfig: List<Channel>) {
+      cdkBuilder.inputDataConfig(inputDataConfig.map(Channel::unwrap))
+    }
+
+    override fun inputDataConfig(vararg inputDataConfig: Channel): Unit =
+        inputDataConfig(inputDataConfig.toList())
+
+    override fun inputPath(inputPath: String) {
+      cdkBuilder.inputPath(inputPath)
+    }
+
+    override fun integrationPattern(integrationPattern: IntegrationPattern) {
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+    }
+
+    override fun outputDataConfig(outputDataConfig: OutputDataConfig) {
+      cdkBuilder.outputDataConfig(outputDataConfig.let(OutputDataConfig::unwrap))
+    }
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a76625af5b8863792b712fd8fd4cd0a98d17fffb031e83ee24c0ddc8f8a4d265")
+    override fun outputDataConfig(outputDataConfig: OutputDataConfig.Builder.() -> Unit): Unit =
+        outputDataConfig(OutputDataConfig(outputDataConfig))
+
+    override fun outputPath(outputPath: String) {
+      cdkBuilder.outputPath(outputPath)
+    }
+
+    override fun resourceConfig(resourceConfig: ResourceConfig) {
+      cdkBuilder.resourceConfig(resourceConfig.let(ResourceConfig::unwrap))
+    }
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ed81f6461e3639fa414b47bfe6ba51f523e2f2a8c294a32a70435e43ae4f8094")
+    override fun resourceConfig(resourceConfig: ResourceConfig.Builder.() -> Unit): Unit =
+        resourceConfig(ResourceConfig(resourceConfig))
+
+    override fun resultPath(resultPath: String) {
+      cdkBuilder.resultPath(resultPath)
+    }
+
+    override fun resultSelector(resultSelector: Map<String, Any>) {
+      cdkBuilder.resultSelector(resultSelector)
+    }
+
+    override fun role(role: IRole) {
+      cdkBuilder.role(role.let(IRole::unwrap))
+    }
+
+    override fun stateName(stateName: String) {
+      cdkBuilder.stateName(stateName)
+    }
+
+    override fun stoppingCondition(stoppingCondition: StoppingCondition) {
+      cdkBuilder.stoppingCondition(stoppingCondition.let(StoppingCondition::unwrap))
+    }
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ed05c1496d0f9c6d41b71d78070b05fc0dafae22a382a628e3bfb389053ea333")
+    override fun stoppingCondition(stoppingCondition: StoppingCondition.Builder.() -> Unit): Unit =
+        stoppingCondition(StoppingCondition(stoppingCondition))
+
+    override fun tags(tags: Map<String, String>) {
+      cdkBuilder.tags(tags)
+    }
+
+    override fun taskTimeout(taskTimeout: Timeout) {
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+    }
+
+    @Deprecated(message = "deprecated in CDK")
+    override fun timeout(timeout: Duration) {
+      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+    }
+
+    override fun trainingJobName(trainingJobName: String) {
+      cdkBuilder.trainingJobName(trainingJobName)
+    }
+
+    override fun vpcConfig(vpcConfig: VpcConfig) {
+      cdkBuilder.vpcConfig(vpcConfig.let(VpcConfig::unwrap))
+    }
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("f26418b73714fcc10e47b401365b2ecfc3c6a844dac0a52fe3e248eec3c5a157")
+    override fun vpcConfig(vpcConfig: VpcConfig.Builder.() -> Unit): Unit =
+        vpcConfig(VpcConfig(vpcConfig))
+
+    public fun build():
+        software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTrainingJob =
+        cdkBuilder.build()
+  }
+
+  public companion object {
+    public operator fun invoke(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      block: Builder.() -> Unit = {},
+    ): SageMakerCreateTrainingJob {
+      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+      return SageMakerCreateTrainingJob(builderImpl.apply(block).build())
+    }
+
+    internal
+        fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTrainingJob):
+        SageMakerCreateTrainingJob = SageMakerCreateTrainingJob(cdkObject)
+
+    internal fun unwrap(wrapped: SageMakerCreateTrainingJob):
+        software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTrainingJob =
+        wrapped.cdkObject
+  }
+}

@@ -1,0 +1,127 @@
+@file:Suppress("RedundantVisibilityModifier","RedundantUnitReturnType","RemoveRedundantQualifierName","unused","UnusedImport","ClassName","REDUNDANT_PROJECTION","DEPRECATION")
+
+package io.cloudshiftdev.awscdk.services.detective
+
+import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.TreeInspector
+import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import kotlin.Any
+import kotlin.Boolean
+import kotlin.String
+import kotlin.Unit
+import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
+import software.constructs.Construct as SoftwareConstructsConstruct
+
+public open class CfnMemberInvitation internal constructor(
+  internal override val cdkObject: software.amazon.awscdk.services.detective.CfnMemberInvitation,
+) : CfnResource(cdkObject), IInspectable {
+  public open fun disableEmailNotification(): Any? = unwrap(this).getDisableEmailNotification()
+
+  public open fun disableEmailNotification(`value`: Boolean) {
+    unwrap(this).setDisableEmailNotification(`value`)
+  }
+
+  public open fun disableEmailNotification(`value`: IResolvable) {
+    unwrap(this).setDisableEmailNotification(`value`.let(IResolvable::unwrap))
+  }
+
+  public open fun graphArn(): String = unwrap(this).getGraphArn()
+
+  public open fun graphArn(`value`: String) {
+    unwrap(this).setGraphArn(`value`)
+  }
+
+  public override fun inspect(inspector: TreeInspector) {
+    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+  }
+
+  public open fun memberEmailAddress(): String = unwrap(this).getMemberEmailAddress()
+
+  public open fun memberEmailAddress(`value`: String) {
+    unwrap(this).setMemberEmailAddress(`value`)
+  }
+
+  public open fun memberId(): String = unwrap(this).getMemberId()
+
+  public open fun memberId(`value`: String) {
+    unwrap(this).setMemberId(`value`)
+  }
+
+  public open fun message(): String? = unwrap(this).getMessage()
+
+  public open fun message(`value`: String) {
+    unwrap(this).setMessage(`value`)
+  }
+
+  @CdkDslMarker
+  public interface Builder {
+    public fun disableEmailNotification(disableEmailNotification: Boolean)
+
+    public fun disableEmailNotification(disableEmailNotification: IResolvable)
+
+    public fun graphArn(graphArn: String)
+
+    public fun memberEmailAddress(memberEmailAddress: String)
+
+    public fun memberId(memberId: String)
+
+    public fun message(message: String)
+  }
+
+  private class BuilderImpl(
+    scope: SoftwareConstructsConstruct,
+    id: String,
+  ) : Builder {
+    private val cdkBuilder: software.amazon.awscdk.services.detective.CfnMemberInvitation.Builder =
+        software.amazon.awscdk.services.detective.CfnMemberInvitation.Builder.create(scope, id)
+
+    override fun disableEmailNotification(disableEmailNotification: Boolean) {
+      cdkBuilder.disableEmailNotification(disableEmailNotification)
+    }
+
+    override fun disableEmailNotification(disableEmailNotification: IResolvable) {
+      cdkBuilder.disableEmailNotification(disableEmailNotification.let(IResolvable::unwrap))
+    }
+
+    override fun graphArn(graphArn: String) {
+      cdkBuilder.graphArn(graphArn)
+    }
+
+    override fun memberEmailAddress(memberEmailAddress: String) {
+      cdkBuilder.memberEmailAddress(memberEmailAddress)
+    }
+
+    override fun memberId(memberId: String) {
+      cdkBuilder.memberId(memberId)
+    }
+
+    override fun message(message: String) {
+      cdkBuilder.message(message)
+    }
+
+    public fun build(): software.amazon.awscdk.services.detective.CfnMemberInvitation =
+        cdkBuilder.build()
+  }
+
+  public companion object {
+    public val CFN_RESOURCE_TYPE_NAME: String =
+        software.amazon.awscdk.services.detective.CfnMemberInvitation.CFN_RESOURCE_TYPE_NAME
+
+    public operator fun invoke(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      block: Builder.() -> Unit = {},
+    ): CfnMemberInvitation {
+      val builderImpl = BuilderImpl(CloudshiftdevConstructsConstruct.unwrap(scope), id)
+      return CfnMemberInvitation(builderImpl.apply(block).build())
+    }
+
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.detective.CfnMemberInvitation):
+        CfnMemberInvitation = CfnMemberInvitation(cdkObject)
+
+    internal fun unwrap(wrapped: CfnMemberInvitation):
+        software.amazon.awscdk.services.detective.CfnMemberInvitation = wrapped.cdkObject
+  }
+}

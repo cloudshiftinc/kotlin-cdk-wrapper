@@ -16,11 +16,12 @@ import com.squareup.kotlinpoet.UNIT
 internal class DslEnhancer(private val model: CdkModel) {
 
     fun enhance(spec: MethodSpec): List<MethodSpec> {
+        if(spec.parameters.isEmpty()) return emptyList()
 
+        val lastParamType = spec.parameters.last().type
         return when {
-            spec.parameters.isEmpty() -> emptyList()
-            spec.parameters.last().type.isCdkClass -> handleBuildableCdkClass(spec)
-            spec.parameters.size == 1 && spec.parameters.last().type.isList -> handleSingleListParam(spec)
+            lastParamType is ClassName && lastParamType.isCdkClass -> handleBuildableCdkClass(spec)
+            spec.parameters.size == 1 && lastParamType.isList -> handleSingleListParam(spec)
             else -> return emptyList()
         }
     }

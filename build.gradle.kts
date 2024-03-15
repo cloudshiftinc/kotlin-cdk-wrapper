@@ -33,7 +33,7 @@ dependencies {
 
 tasks {
     register<GenerateDslTask>("generateDsl") {
-        dslDir = file("dsl/src/main/kotlin")
+        outputDirectory = layout.projectDirectory.dir("kotlin-cdk-wrapper")
         classpath = awscdk
         sources = awscdkSource
     }
