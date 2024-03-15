@@ -105,16 +105,15 @@ public open class CfnRateBasedRule internal constructor(
    * The `Predicates` object contains one `Predicate` element for each `ByteMatchSet` , `IPSet` , or
    * `SqlInjectionMatchSet&gt;` object that you want to include in a `RateBasedRule` .
    */
-  public open fun matchPredicates(_idx_ac66f0: List<Any>) {
-    unwrap(this).setMatchPredicates(_idx_ac66f0)
+  public open fun matchPredicates(`value`: List<Any>) {
+    unwrap(this).setMatchPredicates(`value`)
   }
 
   /**
    * The `Predicates` object contains one `Predicate` element for each `ByteMatchSet` , `IPSet` , or
    * `SqlInjectionMatchSet&gt;` object that you want to include in a `RateBasedRule` .
    */
-  public open fun matchPredicates(vararg _idx_ac66f0: Any): Unit =
-      matchPredicates(_idx_ac66f0.toList())
+  public open fun matchPredicates(vararg `value`: Any): Unit = matchPredicates(`value`.toList())
 
   /**
    * A name for the metrics for a `RateBasedRule` .

@@ -148,15 +148,15 @@ public open class CfnLoadBalancer internal constructor(
   /**
    * The load balancer attributes.
    */
-  public open fun loadBalancerAttributes(_idx_ac66f0: List<Any>) {
-    unwrap(this).setLoadBalancerAttributes(_idx_ac66f0)
+  public open fun loadBalancerAttributes(`value`: List<Any>) {
+    unwrap(this).setLoadBalancerAttributes(`value`)
   }
 
   /**
    * The load balancer attributes.
    */
-  public open fun loadBalancerAttributes(vararg _idx_ac66f0: Any): Unit =
-      loadBalancerAttributes(_idx_ac66f0.toList())
+  public open fun loadBalancerAttributes(vararg `value`: Any): Unit =
+      loadBalancerAttributes(`value`.toList())
 
   /**
    * The name of the load balancer.
@@ -217,15 +217,14 @@ public open class CfnLoadBalancer internal constructor(
   /**
    * The IDs of the subnets.
    */
-  public open fun subnetMappings(_idx_ac66f0: List<Any>) {
-    unwrap(this).setSubnetMappings(_idx_ac66f0)
+  public open fun subnetMappings(`value`: List<Any>) {
+    unwrap(this).setSubnetMappings(`value`)
   }
 
   /**
    * The IDs of the subnets.
    */
-  public open fun subnetMappings(vararg _idx_ac66f0: Any): Unit =
-      subnetMappings(_idx_ac66f0.toList())
+  public open fun subnetMappings(vararg `value`: Any): Unit = subnetMappings(`value`.toList())
 
   /**
    * The IDs of the subnets.

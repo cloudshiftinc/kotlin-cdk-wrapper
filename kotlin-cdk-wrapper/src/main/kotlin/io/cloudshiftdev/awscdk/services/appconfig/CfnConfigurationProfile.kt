@@ -232,14 +232,14 @@ public open class CfnConfigurationProfile internal constructor(
   /**
    * A list of methods for validating the configuration.
    */
-  public open fun validators(_idx_ac66f0: List<Any>) {
-    unwrap(this).setValidators(_idx_ac66f0)
+  public open fun validators(`value`: List<Any>) {
+    unwrap(this).setValidators(`value`)
   }
 
   /**
    * A list of methods for validating the configuration.
    */
-  public open fun validators(vararg _idx_ac66f0: Any): Unit = validators(_idx_ac66f0.toList())
+  public open fun validators(vararg `value`: Any): Unit = validators(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.appconfig.CfnConfigurationProfile].

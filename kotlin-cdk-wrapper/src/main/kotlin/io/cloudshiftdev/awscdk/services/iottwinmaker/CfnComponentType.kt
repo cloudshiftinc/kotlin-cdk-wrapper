@@ -194,8 +194,8 @@ public open class CfnComponentType internal constructor(
   /**
    * Maps strings to `compositeComponentTypes` of the `componentType` .
    */
-  public open fun compositeComponentTypes(_item_ac66f0: Map<String, Any>) {
-    unwrap(this).setCompositeComponentTypes(_item_ac66f0)
+  public open fun compositeComponentTypes(`value`: Map<String, Any>) {
+    unwrap(this).setCompositeComponentTypes(`value`)
   }
 
   /**
@@ -242,8 +242,8 @@ public open class CfnComponentType internal constructor(
   /**
    * An object that maps strings to the functions in the component type.
    */
-  public open fun functions(_item_ac66f0: Map<String, Any>) {
-    unwrap(this).setFunctions(_item_ac66f0)
+  public open fun functions(`value`: Map<String, Any>) {
+    unwrap(this).setFunctions(`value`)
   }
 
   /**
@@ -289,8 +289,8 @@ public open class CfnComponentType internal constructor(
   /**
    * An object that maps strings to the property definitions in the component type.
    */
-  public open fun propertyDefinitions(_item_ac66f0: Map<String, Any>) {
-    unwrap(this).setPropertyDefinitions(_item_ac66f0)
+  public open fun propertyDefinitions(`value`: Map<String, Any>) {
+    unwrap(this).setPropertyDefinitions(`value`)
   }
 
   /**
@@ -308,8 +308,8 @@ public open class CfnComponentType internal constructor(
   /**
    * An object that maps strings to the property groups in the component type.
    */
-  public open fun propertyGroups(_item_ac66f0: Map<String, Any>) {
-    unwrap(this).setPropertyGroups(_item_ac66f0)
+  public open fun propertyGroups(`value`: Map<String, Any>) {
+    unwrap(this).setPropertyGroups(`value`)
   }
 
   /**

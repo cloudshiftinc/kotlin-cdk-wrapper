@@ -99,15 +99,14 @@ public open class CfnInputSecurityGroup internal constructor(
   /**
    * The list of IPv4 CIDR addresses to include in the input security group as "allowed" addresses.
    */
-  public open fun whitelistRules(_idx_ac66f0: List<Any>) {
-    unwrap(this).setWhitelistRules(_idx_ac66f0)
+  public open fun whitelistRules(`value`: List<Any>) {
+    unwrap(this).setWhitelistRules(`value`)
   }
 
   /**
    * The list of IPv4 CIDR addresses to include in the input security group as "allowed" addresses.
    */
-  public open fun whitelistRules(vararg _idx_ac66f0: Any): Unit =
-      whitelistRules(_idx_ac66f0.toList())
+  public open fun whitelistRules(vararg `value`: Any): Unit = whitelistRules(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.medialive.CfnInputSecurityGroup].

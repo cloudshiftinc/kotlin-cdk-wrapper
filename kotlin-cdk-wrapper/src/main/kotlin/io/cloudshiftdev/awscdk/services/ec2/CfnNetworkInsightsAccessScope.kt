@@ -164,14 +164,14 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
   /**
    * The paths to exclude.
    */
-  public open fun excludePaths(_idx_ac66f0: List<Any>) {
-    unwrap(this).setExcludePaths(_idx_ac66f0)
+  public open fun excludePaths(`value`: List<Any>) {
+    unwrap(this).setExcludePaths(`value`)
   }
 
   /**
    * The paths to exclude.
    */
-  public open fun excludePaths(vararg _idx_ac66f0: Any): Unit = excludePaths(_idx_ac66f0.toList())
+  public open fun excludePaths(vararg `value`: Any): Unit = excludePaths(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -197,14 +197,14 @@ public open class CfnNetworkInsightsAccessScope internal constructor(
   /**
    * The paths to match.
    */
-  public open fun matchPaths(_idx_ac66f0: List<Any>) {
-    unwrap(this).setMatchPaths(_idx_ac66f0)
+  public open fun matchPaths(`value`: List<Any>) {
+    unwrap(this).setMatchPaths(`value`)
   }
 
   /**
    * The paths to match.
    */
-  public open fun matchPaths(vararg _idx_ac66f0: Any): Unit = matchPaths(_idx_ac66f0.toList())
+  public open fun matchPaths(vararg `value`: Any): Unit = matchPaths(`value`.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

@@ -211,15 +211,14 @@ public open class CfnEnvironment internal constructor(
   /**
    * The user parameters of this Amazon DataZone environment.
    */
-  public open fun userParameters(_idx_ac66f0: List<Any>) {
-    unwrap(this).setUserParameters(_idx_ac66f0)
+  public open fun userParameters(`value`: List<Any>) {
+    unwrap(this).setUserParameters(`value`)
   }
 
   /**
    * The user parameters of this Amazon DataZone environment.
    */
-  public open fun userParameters(vararg _idx_ac66f0: Any): Unit =
-      userParameters(_idx_ac66f0.toList())
+  public open fun userParameters(vararg `value`: Any): Unit = userParameters(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.datazone.CfnEnvironment].

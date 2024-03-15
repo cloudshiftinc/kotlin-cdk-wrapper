@@ -136,15 +136,14 @@ public open class CfnConfigurationTemplate internal constructor(
   /**
    * Option values for the Elastic Beanstalk configuration, such as the instance type.
    */
-  public open fun optionSettings(_idx_ac66f0: List<Any>) {
-    unwrap(this).setOptionSettings(_idx_ac66f0)
+  public open fun optionSettings(`value`: List<Any>) {
+    unwrap(this).setOptionSettings(`value`)
   }
 
   /**
    * Option values for the Elastic Beanstalk configuration, such as the instance type.
    */
-  public open fun optionSettings(vararg _idx_ac66f0: Any): Unit =
-      optionSettings(_idx_ac66f0.toList())
+  public open fun optionSettings(vararg `value`: Any): Unit = optionSettings(`value`.toList())
 
   /**
    * The Amazon Resource Name (ARN) of the custom platform.

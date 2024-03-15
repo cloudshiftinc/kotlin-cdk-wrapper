@@ -82,15 +82,14 @@ public open class CfnImageBuilder internal constructor(
   /**
    * The list of virtual private cloud (VPC) interface endpoint objects.
    */
-  public open fun accessEndpoints(_idx_ac66f0: List<Any>) {
-    unwrap(this).setAccessEndpoints(_idx_ac66f0)
+  public open fun accessEndpoints(`value`: List<Any>) {
+    unwrap(this).setAccessEndpoints(`value`)
   }
 
   /**
    * The list of virtual private cloud (VPC) interface endpoint objects.
    */
-  public open fun accessEndpoints(vararg _idx_ac66f0: Any): Unit =
-      accessEndpoints(_idx_ac66f0.toList())
+  public open fun accessEndpoints(vararg `value`: Any): Unit = accessEndpoints(`value`.toList())
 
   /**
    * The version of the AppStream 2.0 agent to use for this image builder. To use the latest version

@@ -142,15 +142,15 @@ public open class CfnImageRecipe internal constructor(
   /**
    * The block device mappings to apply when creating images from this recipe.
    */
-  public open fun blockDeviceMappings(_idx_ac66f0: List<Any>) {
-    unwrap(this).setBlockDeviceMappings(_idx_ac66f0)
+  public open fun blockDeviceMappings(`value`: List<Any>) {
+    unwrap(this).setBlockDeviceMappings(`value`)
   }
 
   /**
    * The block device mappings to apply when creating images from this recipe.
    */
-  public open fun blockDeviceMappings(vararg _idx_ac66f0: Any): Unit =
-      blockDeviceMappings(_idx_ac66f0.toList())
+  public open fun blockDeviceMappings(vararg `value`: Any): Unit =
+      blockDeviceMappings(`value`.toList())
 
   /**
    * The components of the image recipe.
@@ -167,14 +167,14 @@ public open class CfnImageRecipe internal constructor(
   /**
    * The components of the image recipe.
    */
-  public open fun components(_idx_ac66f0: List<Any>) {
-    unwrap(this).setComponents(_idx_ac66f0)
+  public open fun components(`value`: List<Any>) {
+    unwrap(this).setComponents(`value`)
   }
 
   /**
    * The components of the image recipe.
    */
-  public open fun components(vararg _idx_ac66f0: Any): Unit = components(_idx_ac66f0.toList())
+  public open fun components(vararg `value`: Any): Unit = components(`value`.toList())
 
   /**
    * The description of the image recipe.

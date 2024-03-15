@@ -172,14 +172,14 @@ public open class CfnAssessment internal constructor(
   /**
    * The delegations that are associated with the assessment.
    */
-  public open fun delegations(_idx_ac66f0: List<Any>) {
-    unwrap(this).setDelegations(_idx_ac66f0)
+  public open fun delegations(`value`: List<Any>) {
+    unwrap(this).setDelegations(`value`)
   }
 
   /**
    * The delegations that are associated with the assessment.
    */
-  public open fun delegations(vararg _idx_ac66f0: Any): Unit = delegations(_idx_ac66f0.toList())
+  public open fun delegations(vararg `value`: Any): Unit = delegations(`value`.toList())
 
   /**
    * The description of the assessment.
@@ -241,14 +241,14 @@ public open class CfnAssessment internal constructor(
   /**
    * The roles that are associated with the assessment.
    */
-  public open fun roles(_idx_ac66f0: List<Any>) {
-    unwrap(this).setRoles(_idx_ac66f0)
+  public open fun roles(`value`: List<Any>) {
+    unwrap(this).setRoles(`value`)
   }
 
   /**
    * The roles that are associated with the assessment.
    */
-  public open fun roles(vararg _idx_ac66f0: Any): Unit = roles(_idx_ac66f0.toList())
+  public open fun roles(vararg `value`: Any): Unit = roles(`value`.toList())
 
   /**
    * The wrapper of AWS accounts and services that are in scope for the assessment.

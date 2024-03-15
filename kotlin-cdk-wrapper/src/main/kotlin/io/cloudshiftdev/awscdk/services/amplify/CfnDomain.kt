@@ -252,15 +252,14 @@ public open class CfnDomain internal constructor(
   /**
    * The setting for the subdomain.
    */
-  public open fun subDomainSettings(_idx_ac66f0: List<Any>) {
-    unwrap(this).setSubDomainSettings(_idx_ac66f0)
+  public open fun subDomainSettings(`value`: List<Any>) {
+    unwrap(this).setSubDomainSettings(`value`)
   }
 
   /**
    * The setting for the subdomain.
    */
-  public open fun subDomainSettings(vararg _idx_ac66f0: Any): Unit =
-      subDomainSettings(_idx_ac66f0.toList())
+  public open fun subDomainSettings(vararg `value`: Any): Unit = subDomainSettings(`value`.toList())
 
   /**
    * The status of the domain update operation that is currently in progress.

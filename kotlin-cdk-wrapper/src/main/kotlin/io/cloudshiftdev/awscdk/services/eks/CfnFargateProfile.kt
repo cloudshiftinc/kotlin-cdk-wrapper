@@ -153,14 +153,14 @@ public open class CfnFargateProfile internal constructor(
   /**
    * The selectors to match for a `Pod` to use this Fargate profile.
    */
-  public open fun selectors(_idx_ac66f0: List<Any>) {
-    unwrap(this).setSelectors(_idx_ac66f0)
+  public open fun selectors(`value`: List<Any>) {
+    unwrap(this).setSelectors(`value`)
   }
 
   /**
    * The selectors to match for a `Pod` to use this Fargate profile.
    */
-  public open fun selectors(vararg _idx_ac66f0: Any): Unit = selectors(_idx_ac66f0.toList())
+  public open fun selectors(vararg `value`: Any): Unit = selectors(`value`.toList())
 
   /**
    * The IDs of subnets to launch a `Pod` into.

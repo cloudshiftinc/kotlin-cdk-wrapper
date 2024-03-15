@@ -182,15 +182,14 @@ public open class CfnDecoderManifest internal constructor(
   /**
    * (Optional) A list of information about available network interfaces.
    */
-  public open fun networkInterfaces(_idx_ac66f0: List<Any>) {
-    unwrap(this).setNetworkInterfaces(_idx_ac66f0)
+  public open fun networkInterfaces(`value`: List<Any>) {
+    unwrap(this).setNetworkInterfaces(`value`)
   }
 
   /**
    * (Optional) A list of information about available network interfaces.
    */
-  public open fun networkInterfaces(vararg _idx_ac66f0: Any): Unit =
-      networkInterfaces(_idx_ac66f0.toList())
+  public open fun networkInterfaces(vararg `value`: Any): Unit = networkInterfaces(`value`.toList())
 
   /**
    * (Optional) A list of information about signal decoders.
@@ -207,15 +206,14 @@ public open class CfnDecoderManifest internal constructor(
   /**
    * (Optional) A list of information about signal decoders.
    */
-  public open fun signalDecoders(_idx_ac66f0: List<Any>) {
-    unwrap(this).setSignalDecoders(_idx_ac66f0)
+  public open fun signalDecoders(`value`: List<Any>) {
+    unwrap(this).setSignalDecoders(`value`)
   }
 
   /**
    * (Optional) A list of information about signal decoders.
    */
-  public open fun signalDecoders(vararg _idx_ac66f0: Any): Unit =
-      signalDecoders(_idx_ac66f0.toList())
+  public open fun signalDecoders(vararg `value`: Any): Unit = signalDecoders(`value`.toList())
 
   /**
    * (Optional) The state of the decoder manifest.

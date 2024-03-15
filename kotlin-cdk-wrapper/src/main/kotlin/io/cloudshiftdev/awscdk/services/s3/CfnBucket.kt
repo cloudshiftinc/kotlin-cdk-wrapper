@@ -110,15 +110,15 @@ public open class CfnBucket internal constructor(
   /**
    * Specifies the configuration and any analyses for the analytics filter of an Amazon S3 bucket.
    */
-  public open fun analyticsConfigurations(_idx_ac66f0: List<Any>) {
-    unwrap(this).setAnalyticsConfigurations(_idx_ac66f0)
+  public open fun analyticsConfigurations(`value`: List<Any>) {
+    unwrap(this).setAnalyticsConfigurations(`value`)
   }
 
   /**
    * Specifies the configuration and any analyses for the analytics filter of an Amazon S3 bucket.
    */
-  public open fun analyticsConfigurations(vararg _idx_ac66f0: Any): Unit =
-      analyticsConfigurations(_idx_ac66f0.toList())
+  public open fun analyticsConfigurations(vararg `value`: Any): Unit =
+      analyticsConfigurations(`value`.toList())
 
   /**
    * Returns the Amazon Resource Name (ARN) of the specified bucket.
@@ -259,15 +259,15 @@ public open class CfnBucket internal constructor(
   /**
    * Defines how Amazon S3 handles Intelligent-Tiering storage.
    */
-  public open fun intelligentTieringConfigurations(_idx_ac66f0: List<Any>) {
-    unwrap(this).setIntelligentTieringConfigurations(_idx_ac66f0)
+  public open fun intelligentTieringConfigurations(`value`: List<Any>) {
+    unwrap(this).setIntelligentTieringConfigurations(`value`)
   }
 
   /**
    * Defines how Amazon S3 handles Intelligent-Tiering storage.
    */
-  public open fun intelligentTieringConfigurations(vararg _idx_ac66f0: Any): Unit =
-      intelligentTieringConfigurations(_idx_ac66f0.toList())
+  public open fun intelligentTieringConfigurations(vararg `value`: Any): Unit =
+      intelligentTieringConfigurations(`value`.toList())
 
   /**
    * Specifies the inventory configuration for an Amazon S3 bucket.
@@ -284,15 +284,15 @@ public open class CfnBucket internal constructor(
   /**
    * Specifies the inventory configuration for an Amazon S3 bucket.
    */
-  public open fun inventoryConfigurations(_idx_ac66f0: List<Any>) {
-    unwrap(this).setInventoryConfigurations(_idx_ac66f0)
+  public open fun inventoryConfigurations(`value`: List<Any>) {
+    unwrap(this).setInventoryConfigurations(`value`)
   }
 
   /**
    * Specifies the inventory configuration for an Amazon S3 bucket.
    */
-  public open fun inventoryConfigurations(vararg _idx_ac66f0: Any): Unit =
-      inventoryConfigurations(_idx_ac66f0.toList())
+  public open fun inventoryConfigurations(vararg `value`: Any): Unit =
+      inventoryConfigurations(`value`.toList())
 
   /**
    * Specifies the lifecycle configuration for objects in an Amazon S3 bucket.
@@ -367,16 +367,16 @@ public open class CfnBucket internal constructor(
    * Specifies a metrics configuration for the CloudWatch request metrics (specified by the metrics
    * configuration ID) from an Amazon S3 bucket.
    */
-  public open fun metricsConfigurations(_idx_ac66f0: List<Any>) {
-    unwrap(this).setMetricsConfigurations(_idx_ac66f0)
+  public open fun metricsConfigurations(`value`: List<Any>) {
+    unwrap(this).setMetricsConfigurations(`value`)
   }
 
   /**
    * Specifies a metrics configuration for the CloudWatch request metrics (specified by the metrics
    * configuration ID) from an Amazon S3 bucket.
    */
-  public open fun metricsConfigurations(vararg _idx_ac66f0: Any): Unit =
-      metricsConfigurations(_idx_ac66f0.toList())
+  public open fun metricsConfigurations(vararg `value`: Any): Unit =
+      metricsConfigurations(`value`.toList())
 
   /**
    * Configuration that defines how Amazon S3 handles bucket notifications.

@@ -83,15 +83,15 @@ public open class CfnBotVersion internal constructor(
   /**
    * Specifies the locales that Amazon Lex adds to this version.
    */
-  public open fun botVersionLocaleSpecification(_idx_ac66f0: List<Any>) {
-    unwrap(this).setBotVersionLocaleSpecification(_idx_ac66f0)
+  public open fun botVersionLocaleSpecification(`value`: List<Any>) {
+    unwrap(this).setBotVersionLocaleSpecification(`value`)
   }
 
   /**
    * Specifies the locales that Amazon Lex adds to this version.
    */
-  public open fun botVersionLocaleSpecification(vararg _idx_ac66f0: Any): Unit =
-      botVersionLocaleSpecification(_idx_ac66f0.toList())
+  public open fun botVersionLocaleSpecification(vararg `value`: Any): Unit =
+      botVersionLocaleSpecification(`value`.toList())
 
   /**
    * The description of the version.

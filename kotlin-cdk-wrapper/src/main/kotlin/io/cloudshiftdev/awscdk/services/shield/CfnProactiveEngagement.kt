@@ -95,8 +95,8 @@ public open class CfnProactiveEngagement internal constructor(
    * contact you for escalations to the SRT and to initiate proactive customer support, plus any
    * relevant notes.
    */
-  public open fun emergencyContactList(_idx_ac66f0: List<Any>) {
-    unwrap(this).setEmergencyContactList(_idx_ac66f0)
+  public open fun emergencyContactList(`value`: List<Any>) {
+    unwrap(this).setEmergencyContactList(`value`)
   }
 
   /**
@@ -104,8 +104,8 @@ public open class CfnProactiveEngagement internal constructor(
    * contact you for escalations to the SRT and to initiate proactive customer support, plus any
    * relevant notes.
    */
-  public open fun emergencyContactList(vararg _idx_ac66f0: Any): Unit =
-      emergencyContactList(_idx_ac66f0.toList())
+  public open fun emergencyContactList(vararg `value`: Any): Unit =
+      emergencyContactList(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

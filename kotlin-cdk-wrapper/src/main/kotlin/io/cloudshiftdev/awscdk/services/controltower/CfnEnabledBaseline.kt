@@ -110,14 +110,14 @@ public open class CfnEnabledBaseline internal constructor(
   /**
    * Parameters that are applied when enabling this `Baseline` .
    */
-  public open fun parameters(_idx_ac66f0: List<Any>) {
-    unwrap(this).setParameters(_idx_ac66f0)
+  public open fun parameters(`value`: List<Any>) {
+    unwrap(this).setParameters(`value`)
   }
 
   /**
    * Parameters that are applied when enabling this `Baseline` .
    */
-  public open fun parameters(vararg _idx_ac66f0: Any): Unit = parameters(_idx_ac66f0.toList())
+  public open fun parameters(vararg `value`: Any): Unit = parameters(`value`.toList())
 
   /**
    * Tags associated with input to `EnableBaseline` .

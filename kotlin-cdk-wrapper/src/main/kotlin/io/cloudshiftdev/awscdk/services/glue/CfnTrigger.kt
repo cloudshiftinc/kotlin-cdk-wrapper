@@ -93,14 +93,14 @@ public open class CfnTrigger internal constructor(
   /**
    * The actions initiated by this trigger.
    */
-  public open fun actions(_idx_ac66f0: List<Any>) {
-    unwrap(this).setActions(_idx_ac66f0)
+  public open fun actions(`value`: List<Any>) {
+    unwrap(this).setActions(`value`)
   }
 
   /**
    * The actions initiated by this trigger.
    */
-  public open fun actions(vararg _idx_ac66f0: Any): Unit = actions(_idx_ac66f0.toList())
+  public open fun actions(vararg `value`: Any): Unit = actions(`value`.toList())
 
   /**
    * Reserved for future use.

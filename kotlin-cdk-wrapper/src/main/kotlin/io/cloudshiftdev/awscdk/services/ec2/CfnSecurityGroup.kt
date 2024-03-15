@@ -160,15 +160,15 @@ public open class CfnSecurityGroup internal constructor(
   /**
    * The outbound rules associated with the security group.
    */
-  public open fun securityGroupEgress(_idx_ac66f0: List<Any>) {
-    unwrap(this).setSecurityGroupEgress(_idx_ac66f0)
+  public open fun securityGroupEgress(`value`: List<Any>) {
+    unwrap(this).setSecurityGroupEgress(`value`)
   }
 
   /**
    * The outbound rules associated with the security group.
    */
-  public open fun securityGroupEgress(vararg _idx_ac66f0: Any): Unit =
-      securityGroupEgress(_idx_ac66f0.toList())
+  public open fun securityGroupEgress(vararg `value`: Any): Unit =
+      securityGroupEgress(`value`.toList())
 
   /**
    * The inbound rules associated with the security group.
@@ -185,15 +185,15 @@ public open class CfnSecurityGroup internal constructor(
   /**
    * The inbound rules associated with the security group.
    */
-  public open fun securityGroupIngress(_idx_ac66f0: List<Any>) {
-    unwrap(this).setSecurityGroupIngress(_idx_ac66f0)
+  public open fun securityGroupIngress(`value`: List<Any>) {
+    unwrap(this).setSecurityGroupIngress(`value`)
   }
 
   /**
    * The inbound rules associated with the security group.
    */
-  public open fun securityGroupIngress(vararg _idx_ac66f0: Any): Unit =
-      securityGroupIngress(_idx_ac66f0.toList())
+  public open fun securityGroupIngress(vararg `value`: Any): Unit =
+      securityGroupIngress(`value`.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

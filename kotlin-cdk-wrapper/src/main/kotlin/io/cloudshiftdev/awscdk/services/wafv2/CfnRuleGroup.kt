@@ -521,15 +521,14 @@ public open class CfnRuleGroup internal constructor(
   /**
    * The labels that one or more rules in this rule group add to matching web requests.
    */
-  public open fun availableLabels(_idx_ac66f0: List<Any>) {
-    unwrap(this).setAvailableLabels(_idx_ac66f0)
+  public open fun availableLabels(`value`: List<Any>) {
+    unwrap(this).setAvailableLabels(`value`)
   }
 
   /**
    * The labels that one or more rules in this rule group add to matching web requests.
    */
-  public open fun availableLabels(vararg _idx_ac66f0: Any): Unit =
-      availableLabels(_idx_ac66f0.toList())
+  public open fun availableLabels(vararg `value`: Any): Unit = availableLabels(`value`.toList())
 
   /**
    * The web ACL capacity units (WCUs) required for this rule group.
@@ -558,15 +557,14 @@ public open class CfnRuleGroup internal constructor(
   /**
    * The labels that one or more rules in this rule group match against in label match statements.
    */
-  public open fun consumedLabels(_idx_ac66f0: List<Any>) {
-    unwrap(this).setConsumedLabels(_idx_ac66f0)
+  public open fun consumedLabels(`value`: List<Any>) {
+    unwrap(this).setConsumedLabels(`value`)
   }
 
   /**
    * The labels that one or more rules in this rule group match against in label match statements.
    */
-  public open fun consumedLabels(vararg _idx_ac66f0: Any): Unit =
-      consumedLabels(_idx_ac66f0.toList())
+  public open fun consumedLabels(vararg `value`: Any): Unit = consumedLabels(`value`.toList())
 
   /**
    * A map of custom response keys and content bodies.
@@ -583,8 +581,8 @@ public open class CfnRuleGroup internal constructor(
   /**
    * A map of custom response keys and content bodies.
    */
-  public open fun customResponseBodies(_item_ac66f0: Map<String, Any>) {
-    unwrap(this).setCustomResponseBodies(_item_ac66f0)
+  public open fun customResponseBodies(`value`: Map<String, Any>) {
+    unwrap(this).setCustomResponseBodies(`value`)
   }
 
   /**
@@ -635,14 +633,14 @@ public open class CfnRuleGroup internal constructor(
   /**
    * The rule statements used to identify the web requests that you want to allow, block, or count.
    */
-  public open fun rules(_idx_ac66f0: List<Any>) {
-    unwrap(this).setRules(_idx_ac66f0)
+  public open fun rules(`value`: List<Any>) {
+    unwrap(this).setRules(`value`)
   }
 
   /**
    * The rule statements used to identify the web requests that you want to allow, block, or count.
    */
-  public open fun rules(vararg _idx_ac66f0: Any): Unit = rules(_idx_ac66f0.toList())
+  public open fun rules(vararg `value`: Any): Unit = rules(`value`.toList())
 
   /**
    * Specifies whether this is for an Amazon CloudFront distribution or for a regional application.

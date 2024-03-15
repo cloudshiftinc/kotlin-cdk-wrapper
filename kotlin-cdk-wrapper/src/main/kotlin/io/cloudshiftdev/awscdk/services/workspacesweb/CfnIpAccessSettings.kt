@@ -159,14 +159,14 @@ public open class CfnIpAccessSettings internal constructor(
   /**
    * The IP rules of the IP access settings.
    */
-  public open fun ipRules(_idx_ac66f0: List<Any>) {
-    unwrap(this).setIpRules(_idx_ac66f0)
+  public open fun ipRules(`value`: List<Any>) {
+    unwrap(this).setIpRules(`value`)
   }
 
   /**
    * The IP rules of the IP access settings.
    */
-  public open fun ipRules(vararg _idx_ac66f0: Any): Unit = ipRules(_idx_ac66f0.toList())
+  public open fun ipRules(vararg `value`: Any): Unit = ipRules(`value`.toList())
 
   /**
    * The tags to add to the browser settings resource.

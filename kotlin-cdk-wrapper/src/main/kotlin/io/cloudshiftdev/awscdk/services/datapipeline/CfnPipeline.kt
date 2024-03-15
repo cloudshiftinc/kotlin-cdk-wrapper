@@ -172,15 +172,14 @@ public open class CfnPipeline internal constructor(
   /**
    * The parameter objects used with the pipeline.
    */
-  public open fun parameterObjects(_idx_ac66f0: List<Any>) {
-    unwrap(this).setParameterObjects(_idx_ac66f0)
+  public open fun parameterObjects(`value`: List<Any>) {
+    unwrap(this).setParameterObjects(`value`)
   }
 
   /**
    * The parameter objects used with the pipeline.
    */
-  public open fun parameterObjects(vararg _idx_ac66f0: Any): Unit =
-      parameterObjects(_idx_ac66f0.toList())
+  public open fun parameterObjects(vararg `value`: Any): Unit = parameterObjects(`value`.toList())
 
   /**
    * The parameter values used with the pipeline.
@@ -197,15 +196,14 @@ public open class CfnPipeline internal constructor(
   /**
    * The parameter values used with the pipeline.
    */
-  public open fun parameterValues(_idx_ac66f0: List<Any>) {
-    unwrap(this).setParameterValues(_idx_ac66f0)
+  public open fun parameterValues(`value`: List<Any>) {
+    unwrap(this).setParameterValues(`value`)
   }
 
   /**
    * The parameter values used with the pipeline.
    */
-  public open fun parameterValues(vararg _idx_ac66f0: Any): Unit =
-      parameterValues(_idx_ac66f0.toList())
+  public open fun parameterValues(vararg `value`: Any): Unit = parameterValues(`value`.toList())
 
   /**
    * The objects that define the pipeline.
@@ -222,15 +220,14 @@ public open class CfnPipeline internal constructor(
   /**
    * The objects that define the pipeline.
    */
-  public open fun pipelineObjects(_idx_ac66f0: List<Any>) {
-    unwrap(this).setPipelineObjects(_idx_ac66f0)
+  public open fun pipelineObjects(`value`: List<Any>) {
+    unwrap(this).setPipelineObjects(`value`)
   }
 
   /**
    * The objects that define the pipeline.
    */
-  public open fun pipelineObjects(vararg _idx_ac66f0: Any): Unit =
-      pipelineObjects(_idx_ac66f0.toList())
+  public open fun pipelineObjects(vararg `value`: Any): Unit = pipelineObjects(`value`.toList())
 
   /**
    * A list of arbitrary tags (key-value pairs) to associate with the pipeline, which you can use to

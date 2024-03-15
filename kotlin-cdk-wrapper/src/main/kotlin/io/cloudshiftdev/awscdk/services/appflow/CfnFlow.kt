@@ -368,15 +368,15 @@ public open class CfnFlow internal constructor(
   /**
    * The configuration that controls how Amazon AppFlow places data in the destination connector.
    */
-  public open fun destinationFlowConfigList(_idx_ac66f0: List<Any>) {
-    unwrap(this).setDestinationFlowConfigList(_idx_ac66f0)
+  public open fun destinationFlowConfigList(`value`: List<Any>) {
+    unwrap(this).setDestinationFlowConfigList(`value`)
   }
 
   /**
    * The configuration that controls how Amazon AppFlow places data in the destination connector.
    */
-  public open fun destinationFlowConfigList(vararg _idx_ac66f0: Any): Unit =
-      destinationFlowConfigList(_idx_ac66f0.toList())
+  public open fun destinationFlowConfigList(vararg `value`: Any): Unit =
+      destinationFlowConfigList(`value`.toList())
 
   /**
    * The specified name of the flow.
@@ -521,14 +521,14 @@ public open class CfnFlow internal constructor(
   /**
    * A list of tasks that Amazon AppFlow performs while transferring the data in the flow run.
    */
-  public open fun tasks(_idx_ac66f0: List<Any>) {
-    unwrap(this).setTasks(_idx_ac66f0)
+  public open fun tasks(`value`: List<Any>) {
+    unwrap(this).setTasks(`value`)
   }
 
   /**
    * A list of tasks that Amazon AppFlow performs while transferring the data in the flow run.
    */
-  public open fun tasks(vararg _idx_ac66f0: Any): Unit = tasks(_idx_ac66f0.toList())
+  public open fun tasks(vararg `value`: Any): Unit = tasks(`value`.toList())
 
   /**
    * The trigger settings that determine how and when Amazon AppFlow runs the specified flow.

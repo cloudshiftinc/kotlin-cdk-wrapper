@@ -283,8 +283,8 @@ public open class CfnForm internal constructor(
   /**
    * The configuration information for the form's fields.
    */
-  public open fun fields(_item_ac66f0: Map<String, Any>) {
-    unwrap(this).setFields(_item_ac66f0)
+  public open fun fields(`value`: Map<String, Any>) {
+    unwrap(this).setFields(`value`)
   }
 
   /**
@@ -359,8 +359,8 @@ public open class CfnForm internal constructor(
   /**
    * The configuration information for the visual helper elements for the form.
    */
-  public open fun sectionalElements(_item_ac66f0: Map<String, Any>) {
-    unwrap(this).setSectionalElements(_item_ac66f0)
+  public open fun sectionalElements(`value`: Map<String, Any>) {
+    unwrap(this).setSectionalElements(`value`)
   }
 
   /**

@@ -159,16 +159,16 @@ public open class CfnInstanceFleetConfig internal constructor(
    * `InstanceTypeConfigs` determine the EC2 instances that Amazon EMR attempts to provision to
    * fulfill On-Demand and Spot target capacities.
    */
-  public open fun instanceTypeConfigs(_idx_ac66f0: List<Any>) {
-    unwrap(this).setInstanceTypeConfigs(_idx_ac66f0)
+  public open fun instanceTypeConfigs(`value`: List<Any>) {
+    unwrap(this).setInstanceTypeConfigs(`value`)
   }
 
   /**
    * `InstanceTypeConfigs` determine the EC2 instances that Amazon EMR attempts to provision to
    * fulfill On-Demand and Spot target capacities.
    */
-  public open fun instanceTypeConfigs(vararg _idx_ac66f0: Any): Unit =
-      instanceTypeConfigs(_idx_ac66f0.toList())
+  public open fun instanceTypeConfigs(vararg `value`: Any): Unit =
+      instanceTypeConfigs(`value`.toList())
 
   /**
    * The launch specification for the instance fleet.

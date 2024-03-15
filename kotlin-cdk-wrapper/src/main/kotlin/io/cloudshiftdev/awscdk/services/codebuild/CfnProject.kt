@@ -416,15 +416,15 @@ public open class CfnProject internal constructor(
   /**
    * An array of `ProjectFileSystemLocation` objects for a CodeBuild build project.
    */
-  public open fun fileSystemLocations(_idx_ac66f0: List<Any>) {
-    unwrap(this).setFileSystemLocations(_idx_ac66f0)
+  public open fun fileSystemLocations(`value`: List<Any>) {
+    unwrap(this).setFileSystemLocations(`value`)
   }
 
   /**
    * An array of `ProjectFileSystemLocation` objects for a CodeBuild build project.
    */
-  public open fun fileSystemLocations(vararg _idx_ac66f0: Any): Unit =
-      fileSystemLocations(_idx_ac66f0.toList())
+  public open fun fileSystemLocations(vararg `value`: Any): Unit =
+      fileSystemLocations(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -515,15 +515,15 @@ public open class CfnProject internal constructor(
   /**
    * A list of `Artifacts` objects.
    */
-  public open fun secondaryArtifacts(_idx_ac66f0: List<Any>) {
-    unwrap(this).setSecondaryArtifacts(_idx_ac66f0)
+  public open fun secondaryArtifacts(`value`: List<Any>) {
+    unwrap(this).setSecondaryArtifacts(`value`)
   }
 
   /**
    * A list of `Artifacts` objects.
    */
-  public open fun secondaryArtifacts(vararg _idx_ac66f0: Any): Unit =
-      secondaryArtifacts(_idx_ac66f0.toList())
+  public open fun secondaryArtifacts(vararg `value`: Any): Unit =
+      secondaryArtifacts(`value`.toList())
 
   /**
    * An array of `ProjectSourceVersion` objects.
@@ -540,15 +540,15 @@ public open class CfnProject internal constructor(
   /**
    * An array of `ProjectSourceVersion` objects.
    */
-  public open fun secondarySourceVersions(_idx_ac66f0: List<Any>) {
-    unwrap(this).setSecondarySourceVersions(_idx_ac66f0)
+  public open fun secondarySourceVersions(`value`: List<Any>) {
+    unwrap(this).setSecondarySourceVersions(`value`)
   }
 
   /**
    * An array of `ProjectSourceVersion` objects.
    */
-  public open fun secondarySourceVersions(vararg _idx_ac66f0: Any): Unit =
-      secondarySourceVersions(_idx_ac66f0.toList())
+  public open fun secondarySourceVersions(vararg `value`: Any): Unit =
+      secondarySourceVersions(`value`.toList())
 
   /**
    * An array of `ProjectSource` objects.
@@ -565,15 +565,14 @@ public open class CfnProject internal constructor(
   /**
    * An array of `ProjectSource` objects.
    */
-  public open fun secondarySources(_idx_ac66f0: List<Any>) {
-    unwrap(this).setSecondarySources(_idx_ac66f0)
+  public open fun secondarySources(`value`: List<Any>) {
+    unwrap(this).setSecondarySources(`value`)
   }
 
   /**
    * An array of `ProjectSource` objects.
    */
-  public open fun secondarySources(vararg _idx_ac66f0: Any): Unit =
-      secondarySources(_idx_ac66f0.toList())
+  public open fun secondarySources(vararg `value`: Any): Unit = secondarySources(`value`.toList())
 
   /**
    * The ARN of the IAM role that enables AWS CodeBuild to interact with dependent AWS services on

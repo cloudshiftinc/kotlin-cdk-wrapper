@@ -198,14 +198,14 @@ public open class CfnOriginEndpoint internal constructor(
   /**
    * The HLS manfiests associated with the origin endpoint configuration.
    */
-  public open fun hlsManifests(_idx_ac66f0: List<Any>) {
-    unwrap(this).setHlsManifests(_idx_ac66f0)
+  public open fun hlsManifests(`value`: List<Any>) {
+    unwrap(this).setHlsManifests(`value`)
   }
 
   /**
    * The HLS manfiests associated with the origin endpoint configuration.
    */
-  public open fun hlsManifests(vararg _idx_ac66f0: Any): Unit = hlsManifests(_idx_ac66f0.toList())
+  public open fun hlsManifests(vararg `value`: Any): Unit = hlsManifests(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -231,15 +231,15 @@ public open class CfnOriginEndpoint internal constructor(
   /**
    * The low-latency HLS (LL-HLS) manifests associated with the origin endpoint.
    */
-  public open fun lowLatencyHlsManifests(_idx_ac66f0: List<Any>) {
-    unwrap(this).setLowLatencyHlsManifests(_idx_ac66f0)
+  public open fun lowLatencyHlsManifests(`value`: List<Any>) {
+    unwrap(this).setLowLatencyHlsManifests(`value`)
   }
 
   /**
    * The low-latency HLS (LL-HLS) manifests associated with the origin endpoint.
    */
-  public open fun lowLatencyHlsManifests(vararg _idx_ac66f0: Any): Unit =
-      lowLatencyHlsManifests(_idx_ac66f0.toList())
+  public open fun lowLatencyHlsManifests(vararg `value`: Any): Unit =
+      lowLatencyHlsManifests(`value`.toList())
 
   /**
    * The name of the origin endpoint associated with the origin endpoint configuration.

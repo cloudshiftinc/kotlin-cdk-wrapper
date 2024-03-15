@@ -130,15 +130,15 @@ public open class CfnInAppTemplate internal constructor(
    * An object that contains information about the content of an in-app message, including its title
    * and body text, text colors, background colors, images, buttons, and behaviors.
    */
-  public open fun content(_idx_ac66f0: List<Any>) {
-    unwrap(this).setContent(_idx_ac66f0)
+  public open fun content(`value`: List<Any>) {
+    unwrap(this).setContent(`value`)
   }
 
   /**
    * An object that contains information about the content of an in-app message, including its title
    * and body text, text colors, background colors, images, buttons, and behaviors.
    */
-  public open fun content(vararg _idx_ac66f0: Any): Unit = content(_idx_ac66f0.toList())
+  public open fun content(vararg `value`: Any): Unit = content(`value`.toList())
 
   /**
    * Custom data, in the form of key-value pairs, that is included in an in-app messaging payload.

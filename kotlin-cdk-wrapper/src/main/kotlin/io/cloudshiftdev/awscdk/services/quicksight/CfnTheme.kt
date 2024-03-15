@@ -284,14 +284,14 @@ public open class CfnTheme internal constructor(
   /**
    * A valid grouping of resource permissions to apply to the new theme.
    */
-  public open fun permissions(_idx_ac66f0: List<Any>) {
-    unwrap(this).setPermissions(_idx_ac66f0)
+  public open fun permissions(`value`: List<Any>) {
+    unwrap(this).setPermissions(`value`)
   }
 
   /**
    * A valid grouping of resource permissions to apply to the new theme.
    */
-  public open fun permissions(vararg _idx_ac66f0: Any): Unit = permissions(_idx_ac66f0.toList())
+  public open fun permissions(vararg `value`: Any): Unit = permissions(`value`.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

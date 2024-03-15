@@ -60,6 +60,7 @@ internal class AsmMethodAdapter(
                 val parameterName =
                     when {
                         delegate.parameters != null -> delegate.parameters[index].name
+                        sourceMethod?.parameterNames?.get(index) != null -> sourceMethod.parameterNames[index]
                         delegate.localVariables != null ->
                             when {
                                 delegate.accessFlags.isStatic() ->
@@ -68,7 +69,7 @@ internal class AsmMethodAdapter(
                                 // first index is 'this' for instance methods, skip it
                                 else -> delegate.localVariables[index + 1].name
                             }
-                        else -> sourceMethod?.parameterNames?.get(index) ?: "arg$index"
+                        else -> "arg$index"
 
                     }.removePrefix("_")
 

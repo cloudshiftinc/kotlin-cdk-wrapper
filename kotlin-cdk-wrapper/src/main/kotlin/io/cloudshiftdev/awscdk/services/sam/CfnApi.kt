@@ -453,14 +453,14 @@ public open class CfnApi internal constructor(
   /**
    *
    */
-  public open fun methodSettings(`this`: List<Any>) {
-    unwrap(this).setMethodSettings(`this`)
+  public open fun methodSettings(`value`: List<Any>) {
+    unwrap(this).setMethodSettings(`value`)
   }
 
   /**
    *
    */
-  public open fun methodSettings(vararg `this`: Any): Unit = methodSettings(`this`.toList())
+  public open fun methodSettings(vararg `value`: Any): Unit = methodSettings(`value`.toList())
 
   /**
    *

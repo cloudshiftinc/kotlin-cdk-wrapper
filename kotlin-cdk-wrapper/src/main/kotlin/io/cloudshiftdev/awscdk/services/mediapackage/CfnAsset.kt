@@ -81,15 +81,14 @@ public open class CfnAsset internal constructor(
   /**
    * List of playback endpoints that are available for this asset.
    */
-  public open fun egressEndpoints(_idx_ac66f0: List<Any>) {
-    unwrap(this).setEgressEndpoints(_idx_ac66f0)
+  public open fun egressEndpoints(`value`: List<Any>) {
+    unwrap(this).setEgressEndpoints(`value`)
   }
 
   /**
    * List of playback endpoints that are available for this asset.
    */
-  public open fun egressEndpoints(vararg _idx_ac66f0: Any): Unit =
-      egressEndpoints(_idx_ac66f0.toList())
+  public open fun egressEndpoints(vararg `value`: Any): Unit = egressEndpoints(`value`.toList())
 
   /**
    * Unique identifier that you assign to the asset.

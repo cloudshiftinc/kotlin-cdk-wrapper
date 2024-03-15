@@ -148,14 +148,14 @@ public open class CfnListenerRule internal constructor(
   /**
    * The actions.
    */
-  public open fun actions(_idx_ac66f0: List<Any>) {
-    unwrap(this).setActions(_idx_ac66f0)
+  public open fun actions(`value`: List<Any>) {
+    unwrap(this).setActions(`value`)
   }
 
   /**
    * The actions.
    */
-  public open fun actions(vararg _idx_ac66f0: Any): Unit = actions(_idx_ac66f0.toList())
+  public open fun actions(vararg `value`: Any): Unit = actions(`value`.toList())
 
   /**
    * Indicates whether this is the default rule.
@@ -183,14 +183,14 @@ public open class CfnListenerRule internal constructor(
   /**
    * The conditions.
    */
-  public open fun conditions(_idx_ac66f0: List<Any>) {
-    unwrap(this).setConditions(_idx_ac66f0)
+  public open fun conditions(`value`: List<Any>) {
+    unwrap(this).setConditions(`value`)
   }
 
   /**
    * The conditions.
    */
-  public open fun conditions(vararg _idx_ac66f0: Any): Unit = conditions(_idx_ac66f0.toList())
+  public open fun conditions(vararg `value`: Any): Unit = conditions(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

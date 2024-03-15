@@ -73,15 +73,15 @@ public open class CfnJobQueue internal constructor(
   /**
    * The set of compute environments mapped to a job queue and their order relative to each other.
    */
-  public open fun computeEnvironmentOrder(_idx_ac66f0: List<Any>) {
-    unwrap(this).setComputeEnvironmentOrder(_idx_ac66f0)
+  public open fun computeEnvironmentOrder(`value`: List<Any>) {
+    unwrap(this).setComputeEnvironmentOrder(`value`)
   }
 
   /**
    * The set of compute environments mapped to a job queue and their order relative to each other.
    */
-  public open fun computeEnvironmentOrder(vararg _idx_ac66f0: Any): Unit =
-      computeEnvironmentOrder(_idx_ac66f0.toList())
+  public open fun computeEnvironmentOrder(vararg `value`: Any): Unit =
+      computeEnvironmentOrder(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

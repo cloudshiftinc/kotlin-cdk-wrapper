@@ -198,15 +198,15 @@ public open class CfnInstance internal constructor(
   /**
    * An array of `BlockDeviceMapping` objects that specify the instance's block devices.
    */
-  public open fun blockDeviceMappings(_idx_ac66f0: List<Any>) {
-    unwrap(this).setBlockDeviceMappings(_idx_ac66f0)
+  public open fun blockDeviceMappings(`value`: List<Any>) {
+    unwrap(this).setBlockDeviceMappings(`value`)
   }
 
   /**
    * An array of `BlockDeviceMapping` objects that specify the instance's block devices.
    */
-  public open fun blockDeviceMappings(vararg _idx_ac66f0: Any): Unit =
-      blockDeviceMappings(_idx_ac66f0.toList())
+  public open fun blockDeviceMappings(vararg `value`: Any): Unit =
+      blockDeviceMappings(`value`.toList())
 
   /**
    * Whether to create an Amazon EBS-optimized instance.

@@ -176,14 +176,14 @@ public open class CfnChannel internal constructor(
   /**
    * The channel's output properties.
    */
-  public open fun outputs(_idx_ac66f0: List<Any>) {
-    unwrap(this).setOutputs(_idx_ac66f0)
+  public open fun outputs(`value`: List<Any>) {
+    unwrap(this).setOutputs(`value`)
   }
 
   /**
    * The channel's output properties.
    */
-  public open fun outputs(vararg _idx_ac66f0: Any): Unit = outputs(_idx_ac66f0.toList())
+  public open fun outputs(vararg `value`: Any): Unit = outputs(`value`.toList())
 
   /**
    * The type of playback mode for this channel.

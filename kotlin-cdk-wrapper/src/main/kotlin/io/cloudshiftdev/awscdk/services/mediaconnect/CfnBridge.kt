@@ -186,14 +186,14 @@ public open class CfnBridge internal constructor(
   /**
    * The outputs that you want to add to this bridge.
    */
-  public open fun outputs(_idx_ac66f0: List<Any>) {
-    unwrap(this).setOutputs(_idx_ac66f0)
+  public open fun outputs(`value`: List<Any>) {
+    unwrap(this).setOutputs(`value`)
   }
 
   /**
    * The outputs that you want to add to this bridge.
    */
-  public open fun outputs(vararg _idx_ac66f0: Any): Unit = outputs(_idx_ac66f0.toList())
+  public open fun outputs(vararg `value`: Any): Unit = outputs(`value`.toList())
 
   /**
    * The bridge placement Amazon Resource Number (ARN).
@@ -249,14 +249,14 @@ public open class CfnBridge internal constructor(
   /**
    * The sources that you want to add to this bridge.
    */
-  public open fun sources(_idx_ac66f0: List<Any>) {
-    unwrap(this).setSources(_idx_ac66f0)
+  public open fun sources(`value`: List<Any>) {
+    unwrap(this).setSources(`value`)
   }
 
   /**
    * The sources that you want to add to this bridge.
    */
-  public open fun sources(vararg _idx_ac66f0: Any): Unit = sources(_idx_ac66f0.toList())
+  public open fun sources(vararg `value`: Any): Unit = sources(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.mediaconnect.CfnBridge].

@@ -136,14 +136,14 @@ public open class CfnApp internal constructor(
   /**
    * The app's data source.
    */
-  public open fun dataSources(_idx_ac66f0: List<Any>) {
-    unwrap(this).setDataSources(_idx_ac66f0)
+  public open fun dataSources(`value`: List<Any>) {
+    unwrap(this).setDataSources(`value`)
   }
 
   /**
    * The app's data source.
    */
-  public open fun dataSources(vararg _idx_ac66f0: Any): Unit = dataSources(_idx_ac66f0.toList())
+  public open fun dataSources(vararg `value`: Any): Unit = dataSources(`value`.toList())
 
   /**
    * A description of the app.
@@ -211,15 +211,15 @@ public open class CfnApp internal constructor(
    * An array of `EnvironmentVariable` objects that specify environment variables to be associated
    * with the app.
    */
-  public open fun environment(_idx_ac66f0: List<Any>) {
-    unwrap(this).setEnvironment(_idx_ac66f0)
+  public open fun environment(`value`: List<Any>) {
+    unwrap(this).setEnvironment(`value`)
   }
 
   /**
    * An array of `EnvironmentVariable` objects that specify environment variables to be associated
    * with the app.
    */
-  public open fun environment(vararg _idx_ac66f0: Any): Unit = environment(_idx_ac66f0.toList())
+  public open fun environment(vararg `value`: Any): Unit = environment(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

@@ -270,16 +270,15 @@ public open class CfnFileSystem internal constructor(
    * An array of `LifecyclePolicy` objects that define the file system's `LifecycleConfiguration`
    * object.
    */
-  public open fun lifecyclePolicies(_idx_ac66f0: List<Any>) {
-    unwrap(this).setLifecyclePolicies(_idx_ac66f0)
+  public open fun lifecyclePolicies(`value`: List<Any>) {
+    unwrap(this).setLifecyclePolicies(`value`)
   }
 
   /**
    * An array of `LifecyclePolicy` objects that define the file system's `LifecycleConfiguration`
    * object.
    */
-  public open fun lifecyclePolicies(vararg _idx_ac66f0: Any): Unit =
-      lifecyclePolicies(_idx_ac66f0.toList())
+  public open fun lifecyclePolicies(vararg `value`: Any): Unit = lifecyclePolicies(`value`.toList())
 
   /**
    * The performance mode of the file system.

@@ -307,15 +307,15 @@ public open class CfnPolicy internal constructor(
    * An array of `ResourceTag` objects, used to explicitly include resources in the policy scope or
    * explicitly exclude them.
    */
-  public open fun resourceTags(_idx_ac66f0: List<Any>) {
-    unwrap(this).setResourceTags(_idx_ac66f0)
+  public open fun resourceTags(`value`: List<Any>) {
+    unwrap(this).setResourceTags(`value`)
   }
 
   /**
    * An array of `ResourceTag` objects, used to explicitly include resources in the policy scope or
    * explicitly exclude them.
    */
-  public open fun resourceTags(vararg _idx_ac66f0: Any): Unit = resourceTags(_idx_ac66f0.toList())
+  public open fun resourceTags(vararg `value`: Any): Unit = resourceTags(`value`.toList())
 
   /**
    * The type of resource protected by or in scope of the policy.

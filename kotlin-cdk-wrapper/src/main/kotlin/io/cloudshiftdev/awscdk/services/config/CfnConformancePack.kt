@@ -66,15 +66,15 @@ public open class CfnConformancePack internal constructor(
   /**
    * A list of ConformancePackInputParameter objects.
    */
-  public open fun conformancePackInputParameters(_idx_ac66f0: List<Any>) {
-    unwrap(this).setConformancePackInputParameters(_idx_ac66f0)
+  public open fun conformancePackInputParameters(`value`: List<Any>) {
+    unwrap(this).setConformancePackInputParameters(`value`)
   }
 
   /**
    * A list of ConformancePackInputParameter objects.
    */
-  public open fun conformancePackInputParameters(vararg _idx_ac66f0: Any): Unit =
-      conformancePackInputParameters(_idx_ac66f0.toList())
+  public open fun conformancePackInputParameters(vararg `value`: Any): Unit =
+      conformancePackInputParameters(`value`.toList())
 
   /**
    * Name of the conformance pack you want to create.

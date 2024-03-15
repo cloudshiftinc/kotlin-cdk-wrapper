@@ -73,15 +73,15 @@ public open class CfnConfigurationAggregator internal constructor(
   /**
    * Provides a list of source accounts and regions to be aggregated.
    */
-  public open fun accountAggregationSources(_idx_ac66f0: List<Any>) {
-    unwrap(this).setAccountAggregationSources(_idx_ac66f0)
+  public open fun accountAggregationSources(`value`: List<Any>) {
+    unwrap(this).setAccountAggregationSources(`value`)
   }
 
   /**
    * Provides a list of source accounts and regions to be aggregated.
    */
-  public open fun accountAggregationSources(vararg _idx_ac66f0: Any): Unit =
-      accountAggregationSources(_idx_ac66f0.toList())
+  public open fun accountAggregationSources(vararg `value`: Any): Unit =
+      accountAggregationSources(`value`.toList())
 
   /**
    * The Amazon Resource Name (ARN) of the aggregator.

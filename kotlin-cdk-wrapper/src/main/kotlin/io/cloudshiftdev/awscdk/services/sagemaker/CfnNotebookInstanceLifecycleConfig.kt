@@ -95,14 +95,14 @@ public open class CfnNotebookInstanceLifecycleConfig internal constructor(
   /**
    * A shell script that runs only once, when you create a notebook instance.
    */
-  public open fun onCreate(_idx_ac66f0: List<Any>) {
-    unwrap(this).setOnCreate(_idx_ac66f0)
+  public open fun onCreate(`value`: List<Any>) {
+    unwrap(this).setOnCreate(`value`)
   }
 
   /**
    * A shell script that runs only once, when you create a notebook instance.
    */
-  public open fun onCreate(vararg _idx_ac66f0: Any): Unit = onCreate(_idx_ac66f0.toList())
+  public open fun onCreate(vararg `value`: Any): Unit = onCreate(`value`.toList())
 
   /**
    * A shell script that runs every time you start a notebook instance, including when you create
@@ -122,15 +122,15 @@ public open class CfnNotebookInstanceLifecycleConfig internal constructor(
    * A shell script that runs every time you start a notebook instance, including when you create
    * the notebook instance.
    */
-  public open fun onStart(_idx_ac66f0: List<Any>) {
-    unwrap(this).setOnStart(_idx_ac66f0)
+  public open fun onStart(`value`: List<Any>) {
+    unwrap(this).setOnStart(`value`)
   }
 
   /**
    * A shell script that runs every time you start a notebook instance, including when you create
    * the notebook instance.
    */
-  public open fun onStart(vararg _idx_ac66f0: Any): Unit = onStart(_idx_ac66f0.toList())
+  public open fun onStart(vararg `value`: Any): Unit = onStart(`value`.toList())
 
   /**
    * A fluent builder for

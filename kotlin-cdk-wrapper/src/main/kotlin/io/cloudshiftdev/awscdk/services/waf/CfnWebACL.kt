@@ -150,15 +150,15 @@ public open class CfnWebACL internal constructor(
    * An array that contains the action for each `Rule` in a `WebACL` , the priority of the `Rule` ,
    * and the ID of the `Rule` .
    */
-  public open fun rules(_idx_ac66f0: List<Any>) {
-    unwrap(this).setRules(_idx_ac66f0)
+  public open fun rules(`value`: List<Any>) {
+    unwrap(this).setRules(`value`)
   }
 
   /**
    * An array that contains the action for each `Rule` in a `WebACL` , the priority of the `Rule` ,
    * and the ID of the `Rule` .
    */
-  public open fun rules(vararg _idx_ac66f0: Any): Unit = rules(_idx_ac66f0.toList())
+  public open fun rules(vararg `value`: Any): Unit = rules(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.waf.CfnWebACL].

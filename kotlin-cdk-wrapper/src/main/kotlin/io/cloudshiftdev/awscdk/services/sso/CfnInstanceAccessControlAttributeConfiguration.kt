@@ -84,16 +84,16 @@ public open class CfnInstanceAccessControlAttributeConfiguration internal constr
    * Lists the attributes that are configured for ABAC in the specified IAM Identity Center
    * instance.
    */
-  public open fun accessControlAttributes(_idx_ac66f0: List<Any>) {
-    unwrap(this).setAccessControlAttributes(_idx_ac66f0)
+  public open fun accessControlAttributes(`value`: List<Any>) {
+    unwrap(this).setAccessControlAttributes(`value`)
   }
 
   /**
    * Lists the attributes that are configured for ABAC in the specified IAM Identity Center
    * instance.
    */
-  public open fun accessControlAttributes(vararg _idx_ac66f0: Any): Unit =
-      accessControlAttributes(_idx_ac66f0.toList())
+  public open fun accessControlAttributes(vararg `value`: Any): Unit =
+      accessControlAttributes(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

@@ -184,15 +184,14 @@ public open class CfnSecret internal constructor(
   /**
    * A custom type that specifies a `Region` and the `KmsKeyId` for a replica secret.
    */
-  public open fun replicaRegions(_idx_ac66f0: List<Any>) {
-    unwrap(this).setReplicaRegions(_idx_ac66f0)
+  public open fun replicaRegions(`value`: List<Any>) {
+    unwrap(this).setReplicaRegions(`value`)
   }
 
   /**
    * A custom type that specifies a `Region` and the `KmsKeyId` for a replica secret.
    */
-  public open fun replicaRegions(vararg _idx_ac66f0: Any): Unit =
-      replicaRegions(_idx_ac66f0.toList())
+  public open fun replicaRegions(vararg `value`: Any): Unit = replicaRegions(`value`.toList())
 
   /**
    * The text to encrypt and store in the secret.

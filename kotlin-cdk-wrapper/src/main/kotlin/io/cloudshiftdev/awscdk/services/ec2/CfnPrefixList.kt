@@ -108,14 +108,14 @@ public open class CfnPrefixList internal constructor(
   /**
    * One or more entries for the prefix list.
    */
-  public open fun entries(_idx_ac66f0: List<Any>) {
-    unwrap(this).setEntries(_idx_ac66f0)
+  public open fun entries(`value`: List<Any>) {
+    unwrap(this).setEntries(`value`)
   }
 
   /**
    * One or more entries for the prefix list.
    */
-  public open fun entries(vararg _idx_ac66f0: Any): Unit = entries(_idx_ac66f0.toList())
+  public open fun entries(vararg `value`: Any): Unit = entries(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

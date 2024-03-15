@@ -146,14 +146,14 @@ public open class CfnRecordSetGroup internal constructor(
   /**
    * A complex type that contains one `RecordSet` element for each record that you want to create.
    */
-  public open fun recordSets(_idx_ac66f0: List<Any>) {
-    unwrap(this).setRecordSets(_idx_ac66f0)
+  public open fun recordSets(`value`: List<Any>) {
+    unwrap(this).setRecordSets(`value`)
   }
 
   /**
    * A complex type that contains one `RecordSet` element for each record that you want to create.
    */
-  public open fun recordSets(vararg _idx_ac66f0: Any): Unit = recordSets(_idx_ac66f0.toList())
+  public open fun recordSets(vararg `value`: Any): Unit = recordSets(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.route53.CfnRecordSetGroup].

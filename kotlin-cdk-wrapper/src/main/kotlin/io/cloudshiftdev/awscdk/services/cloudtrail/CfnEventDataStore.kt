@@ -86,15 +86,15 @@ public open class CfnEventDataStore internal constructor(
   /**
    * The advanced event selectors to use to select the events for the data store.
    */
-  public open fun advancedEventSelectors(_idx_ac66f0: List<Any>) {
-    unwrap(this).setAdvancedEventSelectors(_idx_ac66f0)
+  public open fun advancedEventSelectors(`value`: List<Any>) {
+    unwrap(this).setAdvancedEventSelectors(`value`)
   }
 
   /**
    * The advanced event selectors to use to select the events for the data store.
    */
-  public open fun advancedEventSelectors(vararg _idx_ac66f0: Any): Unit =
-      advancedEventSelectors(_idx_ac66f0.toList())
+  public open fun advancedEventSelectors(vararg `value`: Any): Unit =
+      advancedEventSelectors(`value`.toList())
 
   /**
    * `Ref` returns the time stamp of the creation of the event data store, such as `1248496624` .
@@ -208,15 +208,14 @@ public open class CfnEventDataStore internal constructor(
   /**
    * A JSON string that contains the Insights types you want to log on an event data store.
    */
-  public open fun insightSelectors(_idx_ac66f0: List<Any>) {
-    unwrap(this).setInsightSelectors(_idx_ac66f0)
+  public open fun insightSelectors(`value`: List<Any>) {
+    unwrap(this).setInsightSelectors(`value`)
   }
 
   /**
    * A JSON string that contains the Insights types you want to log on an event data store.
    */
-  public open fun insightSelectors(vararg _idx_ac66f0: Any): Unit =
-      insightSelectors(_idx_ac66f0.toList())
+  public open fun insightSelectors(vararg `value`: Any): Unit = insightSelectors(`value`.toList())
 
   /**
    * The ARN (or ID suffix of the ARN) of the destination event data store that logs Insights

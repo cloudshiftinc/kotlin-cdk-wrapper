@@ -90,16 +90,15 @@ public open class CfnIPSet internal constructor(
    * The IP address type ( `IPV4` or `IPV6` ) and the IP address range (in CIDR notation) that web
    * requests originate from.
    */
-  public open fun ipSetDescriptors(_idx_ac66f0: List<Any>) {
-    unwrap(this).setIpSetDescriptors(_idx_ac66f0)
+  public open fun ipSetDescriptors(`value`: List<Any>) {
+    unwrap(this).setIpSetDescriptors(`value`)
   }
 
   /**
    * The IP address type ( `IPV4` or `IPV6` ) and the IP address range (in CIDR notation) that web
    * requests originate from.
    */
-  public open fun ipSetDescriptors(vararg _idx_ac66f0: Any): Unit =
-      ipSetDescriptors(_idx_ac66f0.toList())
+  public open fun ipSetDescriptors(vararg `value`: Any): Unit = ipSetDescriptors(`value`.toList())
 
   /**
    * A friendly name or description of the `IPSet` .

@@ -207,15 +207,14 @@ public open class CfnMatchmakingConfiguration internal constructor(
   /**
    * A set of custom properties for a game session, formatted as key-value pairs.
    */
-  public open fun gameProperties(_idx_ac66f0: List<Any>) {
-    unwrap(this).setGameProperties(_idx_ac66f0)
+  public open fun gameProperties(`value`: List<Any>) {
+    unwrap(this).setGameProperties(`value`)
   }
 
   /**
    * A set of custom properties for a game session, formatted as key-value pairs.
    */
-  public open fun gameProperties(vararg _idx_ac66f0: Any): Unit =
-      gameProperties(_idx_ac66f0.toList())
+  public open fun gameProperties(vararg `value`: Any): Unit = gameProperties(`value`.toList())
 
   /**
    * A set of custom game session properties, formatted as a single string value.

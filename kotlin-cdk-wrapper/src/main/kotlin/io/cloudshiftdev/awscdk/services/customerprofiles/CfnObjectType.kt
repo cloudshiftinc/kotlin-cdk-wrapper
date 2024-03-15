@@ -164,14 +164,14 @@ public open class CfnObjectType internal constructor(
   /**
    * A list of field definitions for the object type mapping.
    */
-  public open fun fields(_idx_ac66f0: List<Any>) {
-    unwrap(this).setFields(_idx_ac66f0)
+  public open fun fields(`value`: List<Any>) {
+    unwrap(this).setFields(`value`)
   }
 
   /**
    * A list of field definitions for the object type mapping.
    */
-  public open fun fields(vararg _idx_ac66f0: Any): Unit = fields(_idx_ac66f0.toList())
+  public open fun fields(vararg `value`: Any): Unit = fields(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -197,14 +197,14 @@ public open class CfnObjectType internal constructor(
   /**
    * A list of keys that can be used to map data to the profile or search for the profile.
    */
-  public open fun keys(_idx_ac66f0: List<Any>) {
-    unwrap(this).setKeys(_idx_ac66f0)
+  public open fun keys(`value`: List<Any>) {
+    unwrap(this).setKeys(`value`)
   }
 
   /**
    * A list of keys that can be used to map data to the profile or search for the profile.
    */
-  public open fun keys(vararg _idx_ac66f0: Any): Unit = keys(_idx_ac66f0.toList())
+  public open fun keys(vararg `value`: Any): Unit = keys(`value`.toList())
 
   /**
    * The name of the profile object type.

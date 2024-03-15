@@ -131,8 +131,8 @@ public open class CfnFeatureGroup internal constructor(
    *
    * Each `Feature` must include a `FeatureName` and a `FeatureType` .
    */
-  public open fun featureDefinitions(_idx_ac66f0: List<Any>) {
-    unwrap(this).setFeatureDefinitions(_idx_ac66f0)
+  public open fun featureDefinitions(`value`: List<Any>) {
+    unwrap(this).setFeatureDefinitions(`value`)
   }
 
   /**
@@ -140,8 +140,8 @@ public open class CfnFeatureGroup internal constructor(
    *
    * Each `Feature` must include a `FeatureName` and a `FeatureType` .
    */
-  public open fun featureDefinitions(vararg _idx_ac66f0: Any): Unit =
-      featureDefinitions(_idx_ac66f0.toList())
+  public open fun featureDefinitions(vararg `value`: Any): Unit =
+      featureDefinitions(`value`.toList())
 
   /**
    * The name of the `FeatureGroup` .

@@ -129,14 +129,14 @@ public open class CfnAnomalySubscription internal constructor(
   /**
    * Tags to assign to subscription.
    */
-  public open fun resourceTags(_idx_ac66f0: List<Any>) {
-    unwrap(this).setResourceTags(_idx_ac66f0)
+  public open fun resourceTags(`value`: List<Any>) {
+    unwrap(this).setResourceTags(`value`)
   }
 
   /**
    * Tags to assign to subscription.
    */
-  public open fun resourceTags(vararg _idx_ac66f0: Any): Unit = resourceTags(_idx_ac66f0.toList())
+  public open fun resourceTags(vararg `value`: Any): Unit = resourceTags(`value`.toList())
 
   /**
    * A list of subscribers to notify.
@@ -153,14 +153,14 @@ public open class CfnAnomalySubscription internal constructor(
   /**
    * A list of subscribers to notify.
    */
-  public open fun subscribers(_idx_ac66f0: List<Any>) {
-    unwrap(this).setSubscribers(_idx_ac66f0)
+  public open fun subscribers(`value`: List<Any>) {
+    unwrap(this).setSubscribers(`value`)
   }
 
   /**
    * A list of subscribers to notify.
    */
-  public open fun subscribers(vararg _idx_ac66f0: Any): Unit = subscribers(_idx_ac66f0.toList())
+  public open fun subscribers(vararg `value`: Any): Unit = subscribers(`value`.toList())
 
   /**
    * The name for the subscription.

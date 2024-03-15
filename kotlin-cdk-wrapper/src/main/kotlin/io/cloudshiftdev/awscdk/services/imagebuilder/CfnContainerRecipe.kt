@@ -113,14 +113,14 @@ public open class CfnContainerRecipe internal constructor(
   /**
    * Build and test components that are included in the container recipe.
    */
-  public open fun components(_idx_ac66f0: List<Any>) {
-    unwrap(this).setComponents(_idx_ac66f0)
+  public open fun components(`value`: List<Any>) {
+    unwrap(this).setComponents(`value`)
   }
 
   /**
    * Build and test components that are included in the container recipe.
    */
-  public open fun components(vararg _idx_ac66f0: Any): Unit = components(_idx_ac66f0.toList())
+  public open fun components(vararg `value`: Any): Unit = components(`value`.toList())
 
   /**
    * Specifies the type of container, such as Docker.

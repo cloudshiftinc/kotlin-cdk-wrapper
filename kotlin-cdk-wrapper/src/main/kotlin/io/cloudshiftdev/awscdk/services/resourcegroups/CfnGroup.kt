@@ -99,15 +99,15 @@ public open class CfnGroup internal constructor(
    * The service configuration currently associated with the resource group and in effect for the
    * members of the resource group.
    */
-  public open fun configuration(_idx_ac66f0: List<Any>) {
-    unwrap(this).setConfiguration(_idx_ac66f0)
+  public open fun configuration(`value`: List<Any>) {
+    unwrap(this).setConfiguration(`value`)
   }
 
   /**
    * The service configuration currently associated with the resource group and in effect for the
    * members of the resource group.
    */
-  public open fun configuration(vararg _idx_ac66f0: Any): Unit = configuration(_idx_ac66f0.toList())
+  public open fun configuration(vararg `value`: Any): Unit = configuration(`value`.toList())
 
   /**
    * The description of the resource group.

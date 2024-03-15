@@ -146,14 +146,14 @@ public open class CfnLicense internal constructor(
   /**
    * License entitlements.
    */
-  public open fun entitlements(_idx_ac66f0: List<Any>) {
-    unwrap(this).setEntitlements(_idx_ac66f0)
+  public open fun entitlements(`value`: List<Any>) {
+    unwrap(this).setEntitlements(`value`)
   }
 
   /**
    * License entitlements.
    */
-  public open fun entitlements(vararg _idx_ac66f0: Any): Unit = entitlements(_idx_ac66f0.toList())
+  public open fun entitlements(vararg `value`: Any): Unit = entitlements(`value`.toList())
 
   /**
    * Home Region of the license.
@@ -218,15 +218,14 @@ public open class CfnLicense internal constructor(
   /**
    * License metadata.
    */
-  public open fun licenseMetadata(_idx_ac66f0: List<Any>) {
-    unwrap(this).setLicenseMetadata(_idx_ac66f0)
+  public open fun licenseMetadata(`value`: List<Any>) {
+    unwrap(this).setLicenseMetadata(`value`)
   }
 
   /**
    * License metadata.
    */
-  public open fun licenseMetadata(vararg _idx_ac66f0: Any): Unit =
-      licenseMetadata(_idx_ac66f0.toList())
+  public open fun licenseMetadata(vararg `value`: Any): Unit = licenseMetadata(`value`.toList())
 
   /**
    * License name.

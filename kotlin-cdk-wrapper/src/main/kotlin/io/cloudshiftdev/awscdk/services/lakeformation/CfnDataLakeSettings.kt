@@ -110,14 +110,14 @@ public open class CfnDataLakeSettings internal constructor(
   /**
    * A list of AWS Lake Formation principals.
    */
-  public open fun admins(_idx_ac66f0: List<Any>) {
-    unwrap(this).setAdmins(_idx_ac66f0)
+  public open fun admins(`value`: List<Any>) {
+    unwrap(this).setAdmins(`value`)
   }
 
   /**
    * A list of AWS Lake Formation principals.
    */
-  public open fun admins(vararg _idx_ac66f0: Any): Unit = admins(_idx_ac66f0.toList())
+  public open fun admins(vararg `value`: Any): Unit = admins(`value`.toList())
 
   /**
    * Whether to allow Amazon EMR clusters or other third-party query engines to access data managed
@@ -210,16 +210,16 @@ public open class CfnDataLakeSettings internal constructor(
    * Specifies whether access control on a newly created database is managed by Lake Formation
    * permissions or exclusively by IAM permissions.
    */
-  public open fun createDatabaseDefaultPermissions(_idx_ac66f0: List<Any>) {
-    unwrap(this).setCreateDatabaseDefaultPermissions(_idx_ac66f0)
+  public open fun createDatabaseDefaultPermissions(`value`: List<Any>) {
+    unwrap(this).setCreateDatabaseDefaultPermissions(`value`)
   }
 
   /**
    * Specifies whether access control on a newly created database is managed by Lake Formation
    * permissions or exclusively by IAM permissions.
    */
-  public open fun createDatabaseDefaultPermissions(vararg _idx_ac66f0: Any): Unit =
-      createDatabaseDefaultPermissions(_idx_ac66f0.toList())
+  public open fun createDatabaseDefaultPermissions(vararg `value`: Any): Unit =
+      createDatabaseDefaultPermissions(`value`.toList())
 
   /**
    * Specifies whether access control on a newly created table is managed by Lake Formation
@@ -240,16 +240,16 @@ public open class CfnDataLakeSettings internal constructor(
    * Specifies whether access control on a newly created table is managed by Lake Formation
    * permissions or exclusively by IAM permissions.
    */
-  public open fun createTableDefaultPermissions(_idx_ac66f0: List<Any>) {
-    unwrap(this).setCreateTableDefaultPermissions(_idx_ac66f0)
+  public open fun createTableDefaultPermissions(`value`: List<Any>) {
+    unwrap(this).setCreateTableDefaultPermissions(`value`)
   }
 
   /**
    * Specifies whether access control on a newly created table is managed by Lake Formation
    * permissions or exclusively by IAM permissions.
    */
-  public open fun createTableDefaultPermissions(vararg _idx_ac66f0: Any): Unit =
-      createTableDefaultPermissions(_idx_ac66f0.toList())
+  public open fun createTableDefaultPermissions(vararg `value`: Any): Unit =
+      createTableDefaultPermissions(`value`.toList())
 
   /**
    * A list of the account IDs of AWS accounts with Amazon EMR clusters or third-party engines that
@@ -270,16 +270,16 @@ public open class CfnDataLakeSettings internal constructor(
    * A list of the account IDs of AWS accounts with Amazon EMR clusters or third-party engines that
    * are allwed to perform data filtering.
    */
-  public open fun externalDataFilteringAllowList(_idx_ac66f0: List<Any>) {
-    unwrap(this).setExternalDataFilteringAllowList(_idx_ac66f0)
+  public open fun externalDataFilteringAllowList(`value`: List<Any>) {
+    unwrap(this).setExternalDataFilteringAllowList(`value`)
   }
 
   /**
    * A list of the account IDs of AWS accounts with Amazon EMR clusters or third-party engines that
    * are allwed to perform data filtering.
    */
-  public open fun externalDataFilteringAllowList(vararg _idx_ac66f0: Any): Unit =
-      externalDataFilteringAllowList(_idx_ac66f0.toList())
+  public open fun externalDataFilteringAllowList(vararg `value`: Any): Unit =
+      externalDataFilteringAllowList(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

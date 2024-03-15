@@ -152,15 +152,14 @@ public open class CfnUserPoolUser internal constructor(
   /**
    * An array of name-value pairs that contain user attributes and attribute values.
    */
-  public open fun userAttributes(_idx_ac66f0: List<Any>) {
-    unwrap(this).setUserAttributes(_idx_ac66f0)
+  public open fun userAttributes(`value`: List<Any>) {
+    unwrap(this).setUserAttributes(`value`)
   }
 
   /**
    * An array of name-value pairs that contain user attributes and attribute values.
    */
-  public open fun userAttributes(vararg _idx_ac66f0: Any): Unit =
-      userAttributes(_idx_ac66f0.toList())
+  public open fun userAttributes(vararg `value`: Any): Unit = userAttributes(`value`.toList())
 
   /**
    * The user pool ID for the user pool where the user will be created.
@@ -201,15 +200,14 @@ public open class CfnUserPoolUser internal constructor(
   /**
    * Temporary user attributes that contribute to the outcomes of your pre sign-up Lambda trigger.
    */
-  public open fun validationData(_idx_ac66f0: List<Any>) {
-    unwrap(this).setValidationData(_idx_ac66f0)
+  public open fun validationData(`value`: List<Any>) {
+    unwrap(this).setValidationData(`value`)
   }
 
   /**
    * Temporary user attributes that contribute to the outcomes of your pre sign-up Lambda trigger.
    */
-  public open fun validationData(vararg _idx_ac66f0: Any): Unit =
-      validationData(_idx_ac66f0.toList())
+  public open fun validationData(vararg `value`: Any): Unit = validationData(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.cognito.CfnUserPoolUser].

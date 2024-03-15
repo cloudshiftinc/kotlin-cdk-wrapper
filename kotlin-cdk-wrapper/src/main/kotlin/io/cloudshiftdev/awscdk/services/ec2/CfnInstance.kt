@@ -256,16 +256,16 @@ public open class CfnInstance internal constructor(
    * The block device mapping entries that defines the block devices to attach to the instance at
    * launch.
    */
-  public open fun blockDeviceMappings(_idx_ac66f0: List<Any>) {
-    unwrap(this).setBlockDeviceMappings(_idx_ac66f0)
+  public open fun blockDeviceMappings(`value`: List<Any>) {
+    unwrap(this).setBlockDeviceMappings(`value`)
   }
 
   /**
    * The block device mapping entries that defines the block devices to attach to the instance at
    * launch.
    */
-  public open fun blockDeviceMappings(vararg _idx_ac66f0: Any): Unit =
-      blockDeviceMappings(_idx_ac66f0.toList())
+  public open fun blockDeviceMappings(vararg `value`: Any): Unit =
+      blockDeviceMappings(`value`.toList())
 
   /**
    * The CPU options for the instance.
@@ -377,15 +377,15 @@ public open class CfnInstance internal constructor(
   /**
    * Deprecated.
    */
-  public open fun elasticGpuSpecifications(_idx_ac66f0: List<Any>) {
-    unwrap(this).setElasticGpuSpecifications(_idx_ac66f0)
+  public open fun elasticGpuSpecifications(`value`: List<Any>) {
+    unwrap(this).setElasticGpuSpecifications(`value`)
   }
 
   /**
    * Deprecated.
    */
-  public open fun elasticGpuSpecifications(vararg _idx_ac66f0: Any): Unit =
-      elasticGpuSpecifications(_idx_ac66f0.toList())
+  public open fun elasticGpuSpecifications(vararg `value`: Any): Unit =
+      elasticGpuSpecifications(`value`.toList())
 
   /**
    * An elastic inference accelerator to associate with the instance.
@@ -403,15 +403,15 @@ public open class CfnInstance internal constructor(
   /**
    * An elastic inference accelerator to associate with the instance.
    */
-  public open fun elasticInferenceAccelerators(_idx_ac66f0: List<Any>) {
-    unwrap(this).setElasticInferenceAccelerators(_idx_ac66f0)
+  public open fun elasticInferenceAccelerators(`value`: List<Any>) {
+    unwrap(this).setElasticInferenceAccelerators(`value`)
   }
 
   /**
    * An elastic inference accelerator to associate with the instance.
    */
-  public open fun elasticInferenceAccelerators(vararg _idx_ac66f0: Any): Unit =
-      elasticInferenceAccelerators(_idx_ac66f0.toList())
+  public open fun elasticInferenceAccelerators(vararg `value`: Any): Unit =
+      elasticInferenceAccelerators(`value`.toList())
 
   /**
    * Indicates whether the instance is enabled for AWS Nitro Enclaves.
@@ -591,15 +591,15 @@ public open class CfnInstance internal constructor(
    * The IPv6 addresses from the range of the subnet to associate with the primary network
    * interface.
    */
-  public open fun ipv6Addresses(_idx_ac66f0: List<Any>) {
-    unwrap(this).setIpv6Addresses(_idx_ac66f0)
+  public open fun ipv6Addresses(`value`: List<Any>) {
+    unwrap(this).setIpv6Addresses(`value`)
   }
 
   /**
    * The IPv6 addresses from the range of the subnet to associate with the primary network
    * interface.
    */
-  public open fun ipv6Addresses(vararg _idx_ac66f0: Any): Unit = ipv6Addresses(_idx_ac66f0.toList())
+  public open fun ipv6Addresses(vararg `value`: Any): Unit = ipv6Addresses(`value`.toList())
 
   /**
    * The ID of the kernel.
@@ -675,15 +675,15 @@ public open class CfnInstance internal constructor(
   /**
    * The license configurations.
    */
-  public open fun licenseSpecifications(_idx_ac66f0: List<Any>) {
-    unwrap(this).setLicenseSpecifications(_idx_ac66f0)
+  public open fun licenseSpecifications(`value`: List<Any>) {
+    unwrap(this).setLicenseSpecifications(`value`)
   }
 
   /**
    * The license configurations.
    */
-  public open fun licenseSpecifications(vararg _idx_ac66f0: Any): Unit =
-      licenseSpecifications(_idx_ac66f0.toList())
+  public open fun licenseSpecifications(vararg `value`: Any): Unit =
+      licenseSpecifications(`value`.toList())
 
   /**
    * Specifies whether detailed monitoring is enabled for the instance.
@@ -719,15 +719,14 @@ public open class CfnInstance internal constructor(
   /**
    * The network interfaces to associate with the instance.
    */
-  public open fun networkInterfaces(_idx_ac66f0: List<Any>) {
-    unwrap(this).setNetworkInterfaces(_idx_ac66f0)
+  public open fun networkInterfaces(`value`: List<Any>) {
+    unwrap(this).setNetworkInterfaces(`value`)
   }
 
   /**
    * The network interfaces to associate with the instance.
    */
-  public open fun networkInterfaces(vararg _idx_ac66f0: Any): Unit =
-      networkInterfaces(_idx_ac66f0.toList())
+  public open fun networkInterfaces(vararg `value`: Any): Unit = networkInterfaces(`value`.toList())
 
   /**
    * The name of an existing placement group that you want to launch the instance into (cluster |
@@ -918,8 +917,8 @@ public open class CfnInstance internal constructor(
    * Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-configuring-access-role.html)
    * in the *AWS Systems Manager User Guide* .
    */
-  public open fun ssmAssociations(_idx_ac66f0: List<Any>) {
-    unwrap(this).setSsmAssociations(_idx_ac66f0)
+  public open fun ssmAssociations(`value`: List<Any>) {
+    unwrap(this).setSsmAssociations(`value`)
   }
 
   /**
@@ -931,8 +930,7 @@ public open class CfnInstance internal constructor(
    * Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-configuring-access-role.html)
    * in the *AWS Systems Manager User Guide* .
    */
-  public open fun ssmAssociations(vararg _idx_ac66f0: Any): Unit =
-      ssmAssociations(_idx_ac66f0.toList())
+  public open fun ssmAssociations(vararg `value`: Any): Unit = ssmAssociations(`value`.toList())
 
   /**
    * The ID of the subnet to launch the instance into.
@@ -1008,14 +1006,14 @@ public open class CfnInstance internal constructor(
   /**
    * The volumes to attach to the instance.
    */
-  public open fun volumes(_idx_ac66f0: List<Any>) {
-    unwrap(this).setVolumes(_idx_ac66f0)
+  public open fun volumes(`value`: List<Any>) {
+    unwrap(this).setVolumes(`value`)
   }
 
   /**
    * The volumes to attach to the instance.
    */
-  public open fun volumes(vararg _idx_ac66f0: Any): Unit = volumes(_idx_ac66f0.toList())
+  public open fun volumes(vararg `value`: Any): Unit = volumes(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.CfnInstance].

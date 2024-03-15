@@ -153,8 +153,8 @@ public open class CfnStateMachine internal constructor(
   /**
    *
    */
-  public open fun events(_item_ac66f0: Map<String, Any>) {
-    unwrap(this).setEvents(_item_ac66f0)
+  public open fun events(`value`: Map<String, Any>) {
+    unwrap(this).setEvents(`value`)
   }
 
   /**
@@ -254,14 +254,14 @@ public open class CfnStateMachine internal constructor(
   /**
    *
    */
-  public open fun policies(_idx_ac66f0: List<Any>) {
-    unwrap(this).setPolicies(_idx_ac66f0)
+  public open fun policies(`value`: List<Any>) {
+    unwrap(this).setPolicies(`value`)
   }
 
   /**
    *
    */
-  public open fun policies(vararg _idx_ac66f0: Any): Unit = policies(_idx_ac66f0.toList())
+  public open fun policies(vararg `value`: Any): Unit = policies(`value`.toList())
 
   /**
    *

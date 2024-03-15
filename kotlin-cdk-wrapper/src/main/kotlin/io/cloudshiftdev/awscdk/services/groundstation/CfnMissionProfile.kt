@@ -121,14 +121,14 @@ public open class CfnMissionProfile internal constructor(
   /**
    * A list containing lists of config ARNs.
    */
-  public open fun dataflowEdges(_idx_ac66f0: List<Any>) {
-    unwrap(this).setDataflowEdges(_idx_ac66f0)
+  public open fun dataflowEdges(`value`: List<Any>) {
+    unwrap(this).setDataflowEdges(`value`)
   }
 
   /**
    * A list containing lists of config ARNs.
    */
-  public open fun dataflowEdges(vararg _idx_ac66f0: Any): Unit = dataflowEdges(_idx_ac66f0.toList())
+  public open fun dataflowEdges(vararg `value`: Any): Unit = dataflowEdges(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

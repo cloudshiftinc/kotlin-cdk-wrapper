@@ -261,14 +261,14 @@ public open class CfnStackSet internal constructor(
   /**
    * The input parameters for the stack set template.
    */
-  public open fun parameters(_idx_ac66f0: List<Any>) {
-    unwrap(this).setParameters(_idx_ac66f0)
+  public open fun parameters(`value`: List<Any>) {
+    unwrap(this).setParameters(`value`)
   }
 
   /**
    * The input parameters for the stack set template.
    */
-  public open fun parameters(vararg _idx_ac66f0: Any): Unit = parameters(_idx_ac66f0.toList())
+  public open fun parameters(vararg `value`: Any): Unit = parameters(`value`.toList())
 
   /**
    * Describes how the IAM roles required for stack set operations are created.
@@ -297,15 +297,15 @@ public open class CfnStackSet internal constructor(
   /**
    * A group of stack instances with parameters in some specific accounts and Regions.
    */
-  public open fun stackInstancesGroup(_idx_ac66f0: List<Any>) {
-    unwrap(this).setStackInstancesGroup(_idx_ac66f0)
+  public open fun stackInstancesGroup(`value`: List<Any>) {
+    unwrap(this).setStackInstancesGroup(`value`)
   }
 
   /**
    * A group of stack instances with parameters in some specific accounts and Regions.
    */
-  public open fun stackInstancesGroup(vararg _idx_ac66f0: Any): Unit =
-      stackInstancesGroup(_idx_ac66f0.toList())
+  public open fun stackInstancesGroup(vararg `value`: Any): Unit =
+      stackInstancesGroup(`value`.toList())
 
   /**
    * The name to associate with the stack set.

@@ -177,15 +177,15 @@ public open class CfnScalingPlan internal constructor(
   /**
    * The scaling instructions.
    */
-  public open fun scalingInstructions(_idx_ac66f0: List<Any>) {
-    unwrap(this).setScalingInstructions(_idx_ac66f0)
+  public open fun scalingInstructions(`value`: List<Any>) {
+    unwrap(this).setScalingInstructions(`value`)
   }
 
   /**
    * The scaling instructions.
    */
-  public open fun scalingInstructions(vararg _idx_ac66f0: Any): Unit =
-      scalingInstructions(_idx_ac66f0.toList())
+  public open fun scalingInstructions(vararg `value`: Any): Unit =
+      scalingInstructions(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.autoscalingplans.CfnScalingPlan].

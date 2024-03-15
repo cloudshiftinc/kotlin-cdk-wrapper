@@ -188,15 +188,15 @@ public open class CfnCampaign internal constructor(
   /**
    * (Optional) The destination where the campaign sends data.
    */
-  public open fun dataDestinationConfigs(_idx_ac66f0: List<Any>) {
-    unwrap(this).setDataDestinationConfigs(_idx_ac66f0)
+  public open fun dataDestinationConfigs(`value`: List<Any>) {
+    unwrap(this).setDataDestinationConfigs(`value`)
   }
 
   /**
    * (Optional) The destination where the campaign sends data.
    */
-  public open fun dataDestinationConfigs(vararg _idx_ac66f0: Any): Unit =
-      dataDestinationConfigs(_idx_ac66f0.toList())
+  public open fun dataDestinationConfigs(vararg `value`: Any): Unit =
+      dataDestinationConfigs(`value`.toList())
 
   /**
    * (Optional) A list of vehicle attributes to associate with a campaign.
@@ -332,15 +332,14 @@ public open class CfnCampaign internal constructor(
   /**
    * (Optional) A list of information about signals to collect.
    */
-  public open fun signalsToCollect(_idx_ac66f0: List<Any>) {
-    unwrap(this).setSignalsToCollect(_idx_ac66f0)
+  public open fun signalsToCollect(`value`: List<Any>) {
+    unwrap(this).setSignalsToCollect(`value`)
   }
 
   /**
    * (Optional) A list of information about signals to collect.
    */
-  public open fun signalsToCollect(vararg _idx_ac66f0: Any): Unit =
-      signalsToCollect(_idx_ac66f0.toList())
+  public open fun signalsToCollect(vararg `value`: Any): Unit = signalsToCollect(`value`.toList())
 
   /**
    * (Optional) Whether to store collected data after a vehicle lost a connection with the cloud.

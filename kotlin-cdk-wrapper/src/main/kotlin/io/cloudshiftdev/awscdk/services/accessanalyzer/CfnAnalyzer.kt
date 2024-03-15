@@ -123,14 +123,14 @@ public open class CfnAnalyzer internal constructor(
   /**
    * Specifies the archive rules to add for the analyzer.
    */
-  public open fun archiveRules(_idx_ac66f0: List<Any>) {
-    unwrap(this).setArchiveRules(_idx_ac66f0)
+  public open fun archiveRules(`value`: List<Any>) {
+    unwrap(this).setArchiveRules(`value`)
   }
 
   /**
    * Specifies the archive rules to add for the analyzer.
    */
-  public open fun archiveRules(vararg _idx_ac66f0: Any): Unit = archiveRules(_idx_ac66f0.toList())
+  public open fun archiveRules(vararg `value`: Any): Unit = archiveRules(`value`.toList())
 
   /**
    * The ARN of the analyzer that was created.

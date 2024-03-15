@@ -111,15 +111,14 @@ public open class CfnFeature internal constructor(
   /**
    * Specify users that should always be served a specific variation of a feature.
    */
-  public open fun entityOverrides(_idx_ac66f0: List<Any>) {
-    unwrap(this).setEntityOverrides(_idx_ac66f0)
+  public open fun entityOverrides(`value`: List<Any>) {
+    unwrap(this).setEntityOverrides(`value`)
   }
 
   /**
    * Specify users that should always be served a specific variation of a feature.
    */
-  public open fun entityOverrides(vararg _idx_ac66f0: Any): Unit =
-      entityOverrides(_idx_ac66f0.toList())
+  public open fun entityOverrides(vararg `value`: Any): Unit = entityOverrides(`value`.toList())
 
   /**
    * Specify `ALL_RULES` to activate the traffic allocation specified by any ongoing launches or
@@ -206,14 +205,14 @@ public open class CfnFeature internal constructor(
   /**
    * An array of structures that contain the configuration of the feature's different variations.
    */
-  public open fun variations(_idx_ac66f0: List<Any>) {
-    unwrap(this).setVariations(_idx_ac66f0)
+  public open fun variations(`value`: List<Any>) {
+    unwrap(this).setVariations(`value`)
   }
 
   /**
    * An array of structures that contain the configuration of the feature's different variations.
    */
-  public open fun variations(vararg _idx_ac66f0: Any): Unit = variations(_idx_ac66f0.toList())
+  public open fun variations(vararg `value`: Any): Unit = variations(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.evidently.CfnFeature].

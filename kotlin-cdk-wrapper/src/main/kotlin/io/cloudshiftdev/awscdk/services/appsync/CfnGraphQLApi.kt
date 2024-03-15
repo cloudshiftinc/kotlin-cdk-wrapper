@@ -123,15 +123,15 @@ public open class CfnGraphQLApi internal constructor(
   /**
    * A list of additional authentication providers for the `GraphqlApi` API.
    */
-  public open fun additionalAuthenticationProviders(_idx_ac66f0: List<Any>) {
-    unwrap(this).setAdditionalAuthenticationProviders(_idx_ac66f0)
+  public open fun additionalAuthenticationProviders(`value`: List<Any>) {
+    unwrap(this).setAdditionalAuthenticationProviders(`value`)
   }
 
   /**
    * A list of additional authentication providers for the `GraphqlApi` API.
    */
-  public open fun additionalAuthenticationProviders(vararg _idx_ac66f0: Any): Unit =
-      additionalAuthenticationProviders(_idx_ac66f0.toList())
+  public open fun additionalAuthenticationProviders(vararg `value`: Any): Unit =
+      additionalAuthenticationProviders(`value`.toList())
 
   /**
    * The value that indicates whether the GraphQL API is a standard API ( `GRAPHQL` ) or merged API

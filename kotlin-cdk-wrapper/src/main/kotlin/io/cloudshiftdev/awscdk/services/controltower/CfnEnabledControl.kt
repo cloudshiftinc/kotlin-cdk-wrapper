@@ -95,14 +95,14 @@ public open class CfnEnabledControl internal constructor(
   /**
    * Array of `EnabledControlParameter` objects.
    */
-  public open fun parameters(_idx_ac66f0: List<Any>) {
-    unwrap(this).setParameters(_idx_ac66f0)
+  public open fun parameters(`value`: List<Any>) {
+    unwrap(this).setParameters(`value`)
   }
 
   /**
    * Array of `EnabledControlParameter` objects.
    */
-  public open fun parameters(vararg _idx_ac66f0: Any): Unit = parameters(_idx_ac66f0.toList())
+  public open fun parameters(vararg `value`: Any): Unit = parameters(`value`.toList())
 
   /**
    * Tags to be applied to the enabled control.

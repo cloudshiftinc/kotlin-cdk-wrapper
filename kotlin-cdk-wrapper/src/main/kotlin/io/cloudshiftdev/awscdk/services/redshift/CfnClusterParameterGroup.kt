@@ -118,8 +118,8 @@ public open class CfnClusterParameterGroup internal constructor(
    *
    * A maximum of 20 parameters can be modified in a single request.
    */
-  public open fun parameters(_idx_ac66f0: List<Any>) {
-    unwrap(this).setParameters(_idx_ac66f0)
+  public open fun parameters(`value`: List<Any>) {
+    unwrap(this).setParameters(`value`)
   }
 
   /**
@@ -127,7 +127,7 @@ public open class CfnClusterParameterGroup internal constructor(
    *
    * A maximum of 20 parameters can be modified in a single request.
    */
-  public open fun parameters(vararg _idx_ac66f0: Any): Unit = parameters(_idx_ac66f0.toList())
+  public open fun parameters(vararg `value`: Any): Unit = parameters(`value`.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

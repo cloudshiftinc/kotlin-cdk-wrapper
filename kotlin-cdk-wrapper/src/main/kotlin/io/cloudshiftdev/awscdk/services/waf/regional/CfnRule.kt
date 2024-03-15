@@ -120,15 +120,15 @@ public open class CfnRule internal constructor(
    * The `Predicates` object contains one `Predicate` element for each `ByteMatchSet` , `IPSet` , or
    * `SqlInjectionMatchSet` object that you want to include in a `Rule` .
    */
-  public open fun predicates(_idx_ac66f0: List<Any>) {
-    unwrap(this).setPredicates(_idx_ac66f0)
+  public open fun predicates(`value`: List<Any>) {
+    unwrap(this).setPredicates(`value`)
   }
 
   /**
    * The `Predicates` object contains one `Predicate` element for each `ByteMatchSet` , `IPSet` , or
    * `SqlInjectionMatchSet` object that you want to include in a `Rule` .
    */
-  public open fun predicates(vararg _idx_ac66f0: Any): Unit = predicates(_idx_ac66f0.toList())
+  public open fun predicates(vararg `value`: Any): Unit = predicates(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.waf.regional.CfnRule].

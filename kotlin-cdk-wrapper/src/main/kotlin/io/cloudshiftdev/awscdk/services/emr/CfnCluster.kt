@@ -520,15 +520,15 @@ public open class CfnCluster internal constructor(
    * The applications to install on this cluster, for example, Spark, Flink, Oozie, Zeppelin, and so
    * on.
    */
-  public open fun applications(_idx_ac66f0: List<Any>) {
-    unwrap(this).setApplications(_idx_ac66f0)
+  public open fun applications(`value`: List<Any>) {
+    unwrap(this).setApplications(`value`)
   }
 
   /**
    * The applications to install on this cluster, for example, Spark, Flink, Oozie, Zeppelin, and so
    * on.
    */
-  public open fun applications(vararg _idx_ac66f0: Any): Unit = applications(_idx_ac66f0.toList())
+  public open fun applications(vararg `value`: Any): Unit = applications(`value`.toList())
 
   /**
    * The unique identifier for the cluster.
@@ -599,15 +599,14 @@ public open class CfnCluster internal constructor(
   /**
    * A list of bootstrap actions to run before Hadoop starts on the cluster nodes.
    */
-  public open fun bootstrapActions(_idx_ac66f0: List<Any>) {
-    unwrap(this).setBootstrapActions(_idx_ac66f0)
+  public open fun bootstrapActions(`value`: List<Any>) {
+    unwrap(this).setBootstrapActions(`value`)
   }
 
   /**
    * A list of bootstrap actions to run before Hadoop starts on the cluster nodes.
    */
-  public open fun bootstrapActions(vararg _idx_ac66f0: Any): Unit =
-      bootstrapActions(_idx_ac66f0.toList())
+  public open fun bootstrapActions(vararg `value`: Any): Unit = bootstrapActions(`value`.toList())
 
   /**
    * Applies only to Amazon EMR releases 4.x and later. The list of configurations that are supplied
@@ -627,16 +626,15 @@ public open class CfnCluster internal constructor(
    * Applies only to Amazon EMR releases 4.x and later. The list of configurations that are supplied
    * to the Amazon EMR cluster.
    */
-  public open fun configurations(_idx_ac66f0: List<Any>) {
-    unwrap(this).setConfigurations(_idx_ac66f0)
+  public open fun configurations(`value`: List<Any>) {
+    unwrap(this).setConfigurations(`value`)
   }
 
   /**
    * Applies only to Amazon EMR releases 4.x and later. The list of configurations that are supplied
    * to the Amazon EMR cluster.
    */
-  public open fun configurations(vararg _idx_ac66f0: Any): Unit =
-      configurations(_idx_ac66f0.toList())
+  public open fun configurations(vararg `value`: Any): Unit = configurations(`value`.toList())
 
   /**
    * Available only in Amazon EMR releases 5.7.0 and later. The ID of a custom Amazon EBS-backed
@@ -863,15 +861,15 @@ public open class CfnCluster internal constructor(
   /**
    *
    */
-  public open fun placementGroupConfigs(_idx_ac66f0: List<Any>) {
-    unwrap(this).setPlacementGroupConfigs(_idx_ac66f0)
+  public open fun placementGroupConfigs(`value`: List<Any>) {
+    unwrap(this).setPlacementGroupConfigs(`value`)
   }
 
   /**
    *
    */
-  public open fun placementGroupConfigs(vararg _idx_ac66f0: Any): Unit =
-      placementGroupConfigs(_idx_ac66f0.toList())
+  public open fun placementGroupConfigs(vararg `value`: Any): Unit =
+      placementGroupConfigs(`value`.toList())
 
   /**
    * The Amazon EMR release label, which determines the version of open-source application packages
@@ -952,14 +950,14 @@ public open class CfnCluster internal constructor(
   /**
    * A list of steps to run.
    */
-  public open fun steps(_idx_ac66f0: List<Any>) {
-    unwrap(this).setSteps(_idx_ac66f0)
+  public open fun steps(`value`: List<Any>) {
+    unwrap(this).setSteps(`value`)
   }
 
   /**
    * A list of steps to run.
    */
-  public open fun steps(vararg _idx_ac66f0: Any): Unit = steps(_idx_ac66f0.toList())
+  public open fun steps(vararg `value`: Any): Unit = steps(`value`.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

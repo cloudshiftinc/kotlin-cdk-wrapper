@@ -83,15 +83,14 @@ public open class CfnAccessEntry internal constructor(
   /**
    * The access policies to associate to the access entry.
    */
-  public open fun accessPolicies(_idx_ac66f0: List<Any>) {
-    unwrap(this).setAccessPolicies(_idx_ac66f0)
+  public open fun accessPolicies(`value`: List<Any>) {
+    unwrap(this).setAccessPolicies(`value`)
   }
 
   /**
    * The access policies to associate to the access entry.
    */
-  public open fun accessPolicies(vararg _idx_ac66f0: Any): Unit =
-      accessPolicies(_idx_ac66f0.toList())
+  public open fun accessPolicies(vararg `value`: Any): Unit = accessPolicies(`value`.toList())
 
   /**
    * The ARN of the access entry.

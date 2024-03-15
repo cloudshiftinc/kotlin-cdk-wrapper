@@ -274,16 +274,16 @@ public open class CfnTaskDefinition internal constructor(
    * A list of container definitions in JSON format that describe the different containers that make
    * up your task.
    */
-  public open fun containerDefinitions(_idx_ac66f0: List<Any>) {
-    unwrap(this).setContainerDefinitions(_idx_ac66f0)
+  public open fun containerDefinitions(`value`: List<Any>) {
+    unwrap(this).setContainerDefinitions(`value`)
   }
 
   /**
    * A list of container definitions in JSON format that describe the different containers that make
    * up your task.
    */
-  public open fun containerDefinitions(vararg _idx_ac66f0: Any): Unit =
-      containerDefinitions(_idx_ac66f0.toList())
+  public open fun containerDefinitions(vararg `value`: Any): Unit =
+      containerDefinitions(`value`.toList())
 
   /**
    * The number of `cpu` units used by the task.
@@ -365,15 +365,15 @@ public open class CfnTaskDefinition internal constructor(
   /**
    * The Elastic Inference accelerators to use for the containers in the task.
    */
-  public open fun inferenceAccelerators(_idx_ac66f0: List<Any>) {
-    unwrap(this).setInferenceAccelerators(_idx_ac66f0)
+  public open fun inferenceAccelerators(`value`: List<Any>) {
+    unwrap(this).setInferenceAccelerators(`value`)
   }
 
   /**
    * The Elastic Inference accelerators to use for the containers in the task.
    */
-  public open fun inferenceAccelerators(vararg _idx_ac66f0: Any): Unit =
-      inferenceAccelerators(_idx_ac66f0.toList())
+  public open fun inferenceAccelerators(vararg `value`: Any): Unit =
+      inferenceAccelerators(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -447,15 +447,15 @@ public open class CfnTaskDefinition internal constructor(
   /**
    * An array of placement constraint objects to use for tasks.
    */
-  public open fun placementConstraints(_idx_ac66f0: List<Any>) {
-    unwrap(this).setPlacementConstraints(_idx_ac66f0)
+  public open fun placementConstraints(`value`: List<Any>) {
+    unwrap(this).setPlacementConstraints(`value`)
   }
 
   /**
    * An array of placement constraint objects to use for tasks.
    */
-  public open fun placementConstraints(vararg _idx_ac66f0: Any): Unit =
-      placementConstraints(_idx_ac66f0.toList())
+  public open fun placementConstraints(vararg `value`: Any): Unit =
+      placementConstraints(`value`.toList())
 
   /**
    * The configuration details for the App Mesh proxy.
@@ -582,14 +582,14 @@ public open class CfnTaskDefinition internal constructor(
   /**
    * The list of data volume definitions for the task.
    */
-  public open fun volumes(_idx_ac66f0: List<Any>) {
-    unwrap(this).setVolumes(_idx_ac66f0)
+  public open fun volumes(`value`: List<Any>) {
+    unwrap(this).setVolumes(`value`)
   }
 
   /**
    * The list of data volume definitions for the task.
    */
-  public open fun volumes(vararg _idx_ac66f0: Any): Unit = volumes(_idx_ac66f0.toList())
+  public open fun volumes(vararg `value`: Any): Unit = volumes(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.CfnTaskDefinition].

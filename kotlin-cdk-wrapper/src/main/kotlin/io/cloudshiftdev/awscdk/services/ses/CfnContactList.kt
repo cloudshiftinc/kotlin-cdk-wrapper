@@ -120,14 +120,14 @@ public open class CfnContactList internal constructor(
   /**
    * An interest group, theme, or label within a list.
    */
-  public open fun topics(_idx_ac66f0: List<Any>) {
-    unwrap(this).setTopics(_idx_ac66f0)
+  public open fun topics(`value`: List<Any>) {
+    unwrap(this).setTopics(`value`)
   }
 
   /**
    * An interest group, theme, or label within a list.
    */
-  public open fun topics(vararg _idx_ac66f0: Any): Unit = topics(_idx_ac66f0.toList())
+  public open fun topics(vararg `value`: Any): Unit = topics(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ses.CfnContactList].

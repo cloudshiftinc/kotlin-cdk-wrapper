@@ -431,8 +431,8 @@ public open class CfnDomain internal constructor(
    * An object with one or more of the following keys: `SEARCH_SLOW_LOGS` , `ES_APPLICATION_LOGS` ,
    * `INDEX_SLOW_LOGS` , `AUDIT_LOGS` , depending on the types of logs you want to publish.
    */
-  public open fun logPublishingOptions(_item_ac66f0: Map<String, Any>) {
-    unwrap(this).setLogPublishingOptions(_item_ac66f0)
+  public open fun logPublishingOptions(`value`: Map<String, Any>) {
+    unwrap(this).setLogPublishingOptions(`value`)
   }
 
   /**

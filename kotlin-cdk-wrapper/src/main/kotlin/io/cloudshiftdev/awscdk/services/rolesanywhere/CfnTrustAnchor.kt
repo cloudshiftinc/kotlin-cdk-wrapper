@@ -125,15 +125,15 @@ public open class CfnTrustAnchor internal constructor(
   /**
    * A list of notification settings to be associated to the trust anchor.
    */
-  public open fun notificationSettings(_idx_ac66f0: List<Any>) {
-    unwrap(this).setNotificationSettings(_idx_ac66f0)
+  public open fun notificationSettings(`value`: List<Any>) {
+    unwrap(this).setNotificationSettings(`value`)
   }
 
   /**
    * A list of notification settings to be associated to the trust anchor.
    */
-  public open fun notificationSettings(vararg _idx_ac66f0: Any): Unit =
-      notificationSettings(_idx_ac66f0.toList())
+  public open fun notificationSettings(vararg `value`: Any): Unit =
+      notificationSettings(`value`.toList())
 
   /**
    * The trust anchor type and its related certificate data.

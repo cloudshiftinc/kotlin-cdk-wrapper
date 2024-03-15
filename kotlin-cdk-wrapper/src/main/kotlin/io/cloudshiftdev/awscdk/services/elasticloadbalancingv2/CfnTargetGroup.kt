@@ -334,15 +334,15 @@ public open class CfnTargetGroup internal constructor(
   /**
    * The attributes.
    */
-  public open fun targetGroupAttributes(_idx_ac66f0: List<Any>) {
-    unwrap(this).setTargetGroupAttributes(_idx_ac66f0)
+  public open fun targetGroupAttributes(`value`: List<Any>) {
+    unwrap(this).setTargetGroupAttributes(`value`)
   }
 
   /**
    * The attributes.
    */
-  public open fun targetGroupAttributes(vararg _idx_ac66f0: Any): Unit =
-      targetGroupAttributes(_idx_ac66f0.toList())
+  public open fun targetGroupAttributes(vararg `value`: Any): Unit =
+      targetGroupAttributes(`value`.toList())
 
   /**
    * The type of target that you must specify when registering targets with this target group.
@@ -371,14 +371,14 @@ public open class CfnTargetGroup internal constructor(
   /**
    * The targets.
    */
-  public open fun targets(_idx_ac66f0: List<Any>) {
-    unwrap(this).setTargets(_idx_ac66f0)
+  public open fun targets(`value`: List<Any>) {
+    unwrap(this).setTargets(`value`)
   }
 
   /**
    * The targets.
    */
-  public open fun targets(vararg _idx_ac66f0: Any): Unit = targets(_idx_ac66f0.toList())
+  public open fun targets(vararg `value`: Any): Unit = targets(`value`.toList())
 
   /**
    * The number of consecutive health check failures required before considering a target unhealthy.

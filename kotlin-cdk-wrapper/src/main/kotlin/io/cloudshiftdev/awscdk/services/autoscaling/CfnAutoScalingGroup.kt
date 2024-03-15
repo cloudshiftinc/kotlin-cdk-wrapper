@@ -457,15 +457,15 @@ public open class CfnAutoScalingGroup internal constructor(
   /**
    * One or more lifecycle hooks to add to the Auto Scaling group before instances are launched.
    */
-  public open fun lifecycleHookSpecificationList(_idx_ac66f0: List<Any>) {
-    unwrap(this).setLifecycleHookSpecificationList(_idx_ac66f0)
+  public open fun lifecycleHookSpecificationList(`value`: List<Any>) {
+    unwrap(this).setLifecycleHookSpecificationList(`value`)
   }
 
   /**
    * One or more lifecycle hooks to add to the Auto Scaling group before instances are launched.
    */
-  public open fun lifecycleHookSpecificationList(vararg _idx_ac66f0: Any): Unit =
-      lifecycleHookSpecificationList(_idx_ac66f0.toList())
+  public open fun lifecycleHookSpecificationList(vararg `value`: Any): Unit =
+      lifecycleHookSpecificationList(`value`.toList())
 
   /**
    * A list of Classic Load Balancers associated with this Auto Scaling group.
@@ -525,15 +525,14 @@ public open class CfnAutoScalingGroup internal constructor(
   /**
    * Enables the monitoring of group metrics of an Auto Scaling group.
    */
-  public open fun metricsCollection(_idx_ac66f0: List<Any>) {
-    unwrap(this).setMetricsCollection(_idx_ac66f0)
+  public open fun metricsCollection(`value`: List<Any>) {
+    unwrap(this).setMetricsCollection(`value`)
   }
 
   /**
    * Enables the monitoring of group metrics of an Auto Scaling group.
    */
-  public open fun metricsCollection(vararg _idx_ac66f0: Any): Unit =
-      metricsCollection(_idx_ac66f0.toList())
+  public open fun metricsCollection(vararg `value`: Any): Unit = metricsCollection(`value`.toList())
 
   /**
    * The minimum size of the group.
@@ -644,15 +643,15 @@ public open class CfnAutoScalingGroup internal constructor(
   /**
    * Configures an Auto Scaling group to send notifications when specified events take place.
    */
-  public open fun notificationConfigurations(_idx_ac66f0: List<Any>) {
-    unwrap(this).setNotificationConfigurations(_idx_ac66f0)
+  public open fun notificationConfigurations(`value`: List<Any>) {
+    unwrap(this).setNotificationConfigurations(`value`)
   }
 
   /**
    * Configures an Auto Scaling group to send notifications when specified events take place.
    */
-  public open fun notificationConfigurations(vararg _idx_ac66f0: Any): Unit =
-      notificationConfigurations(_idx_ac66f0.toList())
+  public open fun notificationConfigurations(vararg `value`: Any): Unit =
+      notificationConfigurations(`value`.toList())
 
   /**
    * The name of the placement group into which to launch your instances.

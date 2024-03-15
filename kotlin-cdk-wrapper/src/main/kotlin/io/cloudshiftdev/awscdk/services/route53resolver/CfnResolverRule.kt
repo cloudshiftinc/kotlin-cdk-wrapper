@@ -199,15 +199,15 @@ public open class CfnResolverRule internal constructor(
    * An array that contains the IP addresses and ports that an outbound endpoint forwards DNS
    * queries to.
    */
-  public open fun targetIps(_idx_ac66f0: List<Any>) {
-    unwrap(this).setTargetIps(_idx_ac66f0)
+  public open fun targetIps(`value`: List<Any>) {
+    unwrap(this).setTargetIps(`value`)
   }
 
   /**
    * An array that contains the IP addresses and ports that an outbound endpoint forwards DNS
    * queries to.
    */
-  public open fun targetIps(vararg _idx_ac66f0: Any): Unit = targetIps(_idx_ac66f0.toList())
+  public open fun targetIps(vararg `value`: Any): Unit = targetIps(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.route53resolver.CfnResolverRule].

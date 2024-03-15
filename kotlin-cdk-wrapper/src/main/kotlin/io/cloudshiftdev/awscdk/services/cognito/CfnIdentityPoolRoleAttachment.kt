@@ -98,8 +98,8 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
   /**
    * How users for a specific identity provider are mapped to roles.
    */
-  public open fun roleMappings(_item_ac66f0: Map<String, Any>) {
-    unwrap(this).setRoleMappings(_item_ac66f0)
+  public open fun roleMappings(`value`: Map<String, Any>) {
+    unwrap(this).setRoleMappings(`value`)
   }
 
   /**

@@ -136,14 +136,14 @@ public open class CfnReplicator internal constructor(
   /**
    * Specifies a list of Kafka clusters which are targets of the replicator.
    */
-  public open fun kafkaClusters(_idx_ac66f0: List<Any>) {
-    unwrap(this).setKafkaClusters(_idx_ac66f0)
+  public open fun kafkaClusters(`value`: List<Any>) {
+    unwrap(this).setKafkaClusters(`value`)
   }
 
   /**
    * Specifies a list of Kafka clusters which are targets of the replicator.
    */
-  public open fun kafkaClusters(vararg _idx_ac66f0: Any): Unit = kafkaClusters(_idx_ac66f0.toList())
+  public open fun kafkaClusters(vararg `value`: Any): Unit = kafkaClusters(`value`.toList())
 
   /**
    * A list of replication configurations, where each configuration targets a given source cluster
@@ -163,16 +163,16 @@ public open class CfnReplicator internal constructor(
    * A list of replication configurations, where each configuration targets a given source cluster
    * to target cluster replication flow.
    */
-  public open fun replicationInfoList(_idx_ac66f0: List<Any>) {
-    unwrap(this).setReplicationInfoList(_idx_ac66f0)
+  public open fun replicationInfoList(`value`: List<Any>) {
+    unwrap(this).setReplicationInfoList(`value`)
   }
 
   /**
    * A list of replication configurations, where each configuration targets a given source cluster
    * to target cluster replication flow.
    */
-  public open fun replicationInfoList(vararg _idx_ac66f0: Any): Unit =
-      replicationInfoList(_idx_ac66f0.toList())
+  public open fun replicationInfoList(vararg `value`: Any): Unit =
+      replicationInfoList(`value`.toList())
 
   /**
    * The name of the replicator.
