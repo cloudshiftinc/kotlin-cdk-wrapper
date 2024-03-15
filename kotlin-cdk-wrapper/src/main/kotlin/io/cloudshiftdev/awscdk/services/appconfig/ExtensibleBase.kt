@@ -3,6 +3,8 @@
 package io.cloudshiftdev.awscdk.services.appconfig
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.constructs.Construct
+import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -27,6 +29,17 @@ import kotlin.jvm.JvmName
 public open class ExtensibleBase internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.ExtensibleBase,
 ) : CdkObject(cdkObject), IExtensible {
+  public constructor(
+    scope: Construct,
+    resourceArn: String,
+    resourceName: String,
+  ) : this(software.amazon.awscdk.services.appconfig.ExtensibleBase(Construct.unwrap(scope),
+      resourceArn, resourceName))
+
+  public constructor(scope: Construct, resourceArn: String) :
+      this(software.amazon.awscdk.services.appconfig.ExtensibleBase(Construct.unwrap(scope),
+      resourceArn))
+
   /**
    * Adds an extension association to the derived resource.
    *

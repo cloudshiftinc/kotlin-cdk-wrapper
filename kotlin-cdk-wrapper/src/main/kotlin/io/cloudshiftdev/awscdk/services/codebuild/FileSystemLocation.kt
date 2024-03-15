@@ -27,6 +27,8 @@ import kotlin.jvm.JvmName
 public open class FileSystemLocation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codebuild.FileSystemLocation,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.codebuild.FileSystemLocation())
+
   public companion object {
     public fun efs(props: EfsFileSystemLocationProps): IFileSystemLocation =
         software.amazon.awscdk.services.codebuild.FileSystemLocation.efs(props.let(EfsFileSystemLocationProps::unwrap)).let(IFileSystemLocation::wrap)

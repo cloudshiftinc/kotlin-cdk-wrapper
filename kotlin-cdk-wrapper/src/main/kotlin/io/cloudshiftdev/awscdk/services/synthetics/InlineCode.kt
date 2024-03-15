@@ -20,6 +20,9 @@ import kotlin.String
 public open class InlineCode internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.synthetics.InlineCode,
 ) : Code(cdkObject) {
+  public constructor(code: String) :
+      this(software.amazon.awscdk.services.synthetics.InlineCode(code))
+
   /**
    * Called when the canary is initialized to allow this object to bind to the stack, add resources
    * and have fun.

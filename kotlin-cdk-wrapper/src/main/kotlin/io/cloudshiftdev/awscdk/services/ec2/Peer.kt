@@ -35,6 +35,8 @@ import kotlin.String
 public open class Peer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.Peer,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.ec2.Peer())
+
   public companion object {
     public fun anyIpv4(): IPeer =
         software.amazon.awscdk.services.ec2.Peer.anyIpv4().let(IPeer::wrap)

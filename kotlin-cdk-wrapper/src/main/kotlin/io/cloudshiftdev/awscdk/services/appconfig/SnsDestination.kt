@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appconfig
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
+import io.cloudshiftdev.awscdk.services.sns.ITopic
 import kotlin.String
 
 /**
@@ -25,6 +26,9 @@ import kotlin.String
 public open class SnsDestination internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.SnsDestination,
 ) : CdkObject(cdkObject), IEventDestination {
+  public constructor(topic: ITopic) :
+      this(software.amazon.awscdk.services.appconfig.SnsDestination(ITopic.unwrap(topic)))
+
   /**
    * The URI of the extension event destination.
    */

@@ -46,6 +46,10 @@ import kotlin.collections.Map
 public open class Capture internal constructor(
   internal override val cdkObject: software.amazon.awscdk.assertions.Capture,
 ) : Matcher(cdkObject) {
+  public constructor(pattern: Any) : this(software.amazon.awscdk.assertions.Capture(pattern))
+
+  public constructor() : this(software.amazon.awscdk.assertions.Capture())
+
   /**
    * Retrieve the captured value as an array.
    *

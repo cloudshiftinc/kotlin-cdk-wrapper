@@ -22,6 +22,8 @@ import kotlin.collections.Map
 public open class TreeInspector internal constructor(
   internal override val cdkObject: software.amazon.awscdk.TreeInspector,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.TreeInspector())
+
   /**
    * Adds attribute to bag.
    *

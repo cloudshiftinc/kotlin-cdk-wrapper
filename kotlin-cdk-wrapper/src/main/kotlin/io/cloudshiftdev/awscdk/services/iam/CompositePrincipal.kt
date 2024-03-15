@@ -34,6 +34,9 @@ import kotlin.jvm.JvmName
 public open class CompositePrincipal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.CompositePrincipal,
 ) : PrincipalBase(cdkObject) {
+  public constructor(principals: IPrincipal) :
+      this(software.amazon.awscdk.services.iam.CompositePrincipal(IPrincipal.unwrap(principals)))
+
   /**
    * Adds IAM principals to the composite principal.
    *

@@ -27,6 +27,11 @@ dependencies {
     implementation(libs.aspectj.tools)
     implementation(libs.javaparser.core)
 
+    implementation(platform(libs.jackson.bom))
+    implementation(libs.jackson.core)
+    implementation(libs.jackson.databind)
+    implementation(libs.jackson.module.kotlin)
+
     implementation("net.pearx.kasechange:kasechange:1.4.1")
 
     // release management

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.s3.BucketNotificationDestinationConfig
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.awscdk.services.s3.IBucketNotificationDestination
+import io.cloudshiftdev.awscdk.services.sqs.IQueue
 import io.cloudshiftdev.constructs.Construct
 
 /**
@@ -26,6 +27,9 @@ import io.cloudshiftdev.constructs.Construct
 public open class SqsDestination internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3.notifications.SqsDestination,
 ) : CdkObject(cdkObject), IBucketNotificationDestination {
+  public constructor(queue: IQueue) :
+      this(software.amazon.awscdk.services.s3.notifications.SqsDestination(IQueue.unwrap(queue)))
+
   /**
    * Allows using SQS queues as destinations for bucket notifications.
    *

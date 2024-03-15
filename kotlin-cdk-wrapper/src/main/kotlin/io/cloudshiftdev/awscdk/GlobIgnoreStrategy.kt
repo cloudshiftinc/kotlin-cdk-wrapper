@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import kotlin.Boolean
 import kotlin.String
+import kotlin.collections.List
 
 /**
  * Ignores file paths based on simple glob patterns.
@@ -21,6 +22,9 @@ import kotlin.String
 public open class GlobIgnoreStrategy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.GlobIgnoreStrategy,
 ) : IgnoreStrategy(cdkObject) {
+  public constructor(absoluteRootPath: String, patterns: List<String>) :
+      this(software.amazon.awscdk.GlobIgnoreStrategy(absoluteRootPath, patterns))
+
   /**
    * Adds another pattern.
    *

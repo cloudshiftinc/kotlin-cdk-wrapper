@@ -49,6 +49,8 @@ import kotlin.jvm.JvmName
 public open class HttpNoneAuthorizer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpNoneAuthorizer,
 ) : CdkObject(cdkObject), IHttpRouteAuthorizer {
+  public constructor() : this(software.amazon.awscdk.services.apigatewayv2.HttpNoneAuthorizer())
+
   /**
    * Bind this authorizer to a specified Http route.
    *

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.route53.targets
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.services.cognito.UserPoolDomain
 import io.cloudshiftdev.awscdk.services.route53.AliasRecordTargetConfig
 import io.cloudshiftdev.awscdk.services.route53.IAliasRecordTarget
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
@@ -27,6 +28,9 @@ public open class UserPoolDomainTarget internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53.targets.UserPoolDomainTarget,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
+  public constructor(domain: UserPoolDomain) :
+      this(software.amazon.awscdk.services.route53.targets.UserPoolDomainTarget(UserPoolDomain.unwrap(domain)))
+
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
    *

@@ -22,6 +22,9 @@ public open class WebSocketNoneAuthorizer internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.apigatewayv2.WebSocketNoneAuthorizer,
 ) : CdkObject(cdkObject), IWebSocketRouteAuthorizer {
+  public constructor() :
+      this(software.amazon.awscdk.services.apigatewayv2.WebSocketNoneAuthorizer())
+
   /**
    * Bind this authorizer to a specified WebSocket route.
    *

@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.services.cloudwatch.AlarmActionConfig
 import io.cloudshiftdev.awscdk.services.cloudwatch.IAlarm
 import io.cloudshiftdev.awscdk.services.cloudwatch.IAlarmAction
 import io.cloudshiftdev.constructs.Construct
+import kotlin.String
 
 /**
  * Use an SSM Incident Response Plan as an Alarm action.
@@ -24,6 +25,9 @@ public open class SsmIncidentAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cloudwatch.actions.SsmIncidentAction,
 ) : CdkObject(cdkObject), IAlarmAction {
+  public constructor(responsePlanName: String) :
+      this(software.amazon.awscdk.services.cloudwatch.actions.SsmIncidentAction(responsePlanName))
+
   /**
    * Returns an alarm action configuration to use an SSM Incident as an alarm action based on an
    * Incident Manager Response Plan.

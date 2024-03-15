@@ -26,6 +26,9 @@ import io.cloudshiftdev.constructs.IDependable
 public open class CompositeDependable internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.CompositeDependable,
 ) : CdkObject(cdkObject), IDependable {
+  public constructor(dependables: IDependable) :
+      this(software.amazon.awscdk.services.iam.CompositeDependable(IDependable.unwrap(dependables)))
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.CompositeDependable):
         CompositeDependable = CompositeDependable(cdkObject)

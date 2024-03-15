@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.route53.targets
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.services.cloudfront.IDistribution
 import io.cloudshiftdev.awscdk.services.route53.AliasRecordTargetConfig
 import io.cloudshiftdev.awscdk.services.route53.IAliasRecordTarget
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
@@ -28,6 +29,9 @@ import kotlin.String
 public open class CloudFrontTarget internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.route53.targets.CloudFrontTarget,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
+  public constructor(distribution: IDistribution) :
+      this(software.amazon.awscdk.services.route53.targets.CloudFrontTarget(IDistribution.unwrap(distribution)))
+
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
    *

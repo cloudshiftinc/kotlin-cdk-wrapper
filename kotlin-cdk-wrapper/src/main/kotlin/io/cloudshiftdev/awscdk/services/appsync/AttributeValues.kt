@@ -58,6 +58,9 @@ import kotlin.String
 public open class AttributeValues internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.AttributeValues,
 ) : CdkObject(cdkObject) {
+  public constructor(container: String) :
+      this(software.amazon.awscdk.services.appsync.AttributeValues(container))
+
   /**
    * Allows assigning a value to the specified attribute.
    *

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.services.kinesisfirehose.CfnDeliveryStream
 
 /**
  * Use a Firehose delivery stream as a custom access log destination for API Gateway.
@@ -33,6 +34,9 @@ public open class FirehoseLogDestination internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.apigateway.FirehoseLogDestination,
 ) : CdkObject(cdkObject), IAccessLogDestination {
+  public constructor(stream: CfnDeliveryStream) :
+      this(software.amazon.awscdk.services.apigateway.FirehoseLogDestination(CfnDeliveryStream.unwrap(stream)))
+
   /**
    * Binds this destination to the Firehose delivery stream.
    *

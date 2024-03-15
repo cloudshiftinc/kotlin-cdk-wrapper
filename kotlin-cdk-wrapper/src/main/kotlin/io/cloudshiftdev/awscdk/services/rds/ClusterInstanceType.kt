@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import kotlin.String
 
 /**
  * The type of Aurora Cluster Instance.
@@ -23,6 +24,10 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 public open class ClusterInstanceType internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.ClusterInstanceType,
 ) : CdkObject(cdkObject) {
+  public constructor(instanceType: String, type: InstanceType) :
+      this(software.amazon.awscdk.services.rds.ClusterInstanceType(instanceType,
+      InstanceType.unwrap(type)))
+
   /**
    *
    */

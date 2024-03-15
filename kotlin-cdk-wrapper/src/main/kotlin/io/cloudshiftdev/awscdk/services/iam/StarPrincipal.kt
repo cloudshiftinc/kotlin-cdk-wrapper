@@ -25,6 +25,8 @@ import kotlin.String
 public open class StarPrincipal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.StarPrincipal,
 ) : PrincipalBase(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.iam.StarPrincipal())
+
   /**
    * Return whether or not this principal is equal to the given principal.
    */

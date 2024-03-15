@@ -22,6 +22,9 @@ public open class ChainDefinitionBody internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.ChainDefinitionBody,
 ) : DefinitionBody(cdkObject) {
+  public constructor(chainable: IChainable) :
+      this(software.amazon.awscdk.services.stepfunctions.ChainDefinitionBody(IChainable.unwrap(chainable)))
+
   /**
    * @param scope 
    * @param _sfnPrincipal 

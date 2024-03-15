@@ -15,6 +15,12 @@ import kotlin.jvm.JvmName
 public open class Node internal constructor(
   internal override val cdkObject: software.constructs.Node,
 ) : CdkObject(cdkObject) {
+  public constructor(
+    host: Construct,
+    scope: IConstruct,
+    id: String,
+  ) : this(software.constructs.Node(Construct.unwrap(host), IConstruct.unwrap(scope), id))
+
   public open fun addDependency(deps: IDependable) {
     unwrap(this).addDependency(deps.let(IDependable::unwrap))
   }

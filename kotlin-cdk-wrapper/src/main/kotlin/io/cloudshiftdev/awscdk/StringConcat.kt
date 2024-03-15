@@ -22,6 +22,8 @@ import kotlin.Any
 public open class StringConcat internal constructor(
   internal override val cdkObject: software.amazon.awscdk.StringConcat,
 ) : CdkObject(cdkObject), IFragmentConcatenator {
+  public constructor() : this(software.amazon.awscdk.StringConcat())
+
   /**
    * Join the fragment on the left and on the right.
    *

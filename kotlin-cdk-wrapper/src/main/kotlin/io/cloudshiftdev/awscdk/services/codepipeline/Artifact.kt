@@ -46,6 +46,11 @@ import kotlin.String
 public open class Artifact internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codepipeline.Artifact,
 ) : CdkObject(cdkObject) {
+  public constructor(artifactName: String) :
+      this(software.amazon.awscdk.services.codepipeline.Artifact(artifactName))
+
+  public constructor() : this(software.amazon.awscdk.services.codepipeline.Artifact())
+
   /**
    *
    */

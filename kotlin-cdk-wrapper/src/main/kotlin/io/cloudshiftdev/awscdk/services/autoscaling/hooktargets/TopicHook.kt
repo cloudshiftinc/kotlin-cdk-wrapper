@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.autoscaling.BindHookTargetOptions
 import io.cloudshiftdev.awscdk.services.autoscaling.ILifecycleHookTarget
 import io.cloudshiftdev.awscdk.services.autoscaling.LifecycleHookTargetConfig
+import io.cloudshiftdev.awscdk.services.sns.ITopic
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -28,6 +29,9 @@ public open class TopicHook internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.autoscaling.hooktargets.TopicHook,
 ) : CdkObject(cdkObject), ILifecycleHookTarget {
+  public constructor(topic: ITopic) :
+      this(software.amazon.awscdk.services.autoscaling.hooktargets.TopicHook(ITopic.unwrap(topic)))
+
   /**
    * If an `IRole` is found in `options`, grant it topic publishing permissions.
    *

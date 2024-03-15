@@ -48,3 +48,9 @@ awscdk = { module = "software.amazon.awscdk:aws-cdk-lib", version = "2.132.0" }
 awscdk-constructs = { module = "software.constructs:constructs", version = "10.3.0" }
 squareup-kotlinpoet = { module = "com.squareup:kotlinpoet", version = "1.16.0" }
 javaparser-core = { module = "com.github.javaparser:javaparser-core", version = "3.25.9" }
+
+jackson-bom = { module = "com.fasterxml.jackson:jackson-bom", version = "2.16.1" }
+jackson-core = { module = "com.fasterxml.jackson.core:jackson-core" }
+jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind" }
+jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version = "2.16.1" }
+

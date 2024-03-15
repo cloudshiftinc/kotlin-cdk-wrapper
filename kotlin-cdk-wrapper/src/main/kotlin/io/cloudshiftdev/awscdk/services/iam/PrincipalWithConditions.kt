@@ -31,6 +31,10 @@ import kotlin.jvm.JvmName
 public open class PrincipalWithConditions internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.PrincipalWithConditions,
 ) : PrincipalBase(cdkObject) {
+  public constructor(principal: IPrincipal, conditions: Map<String, Any>) :
+      this(software.amazon.awscdk.services.iam.PrincipalWithConditions(IPrincipal.unwrap(principal),
+      conditions))
+
   /**
    * Add a condition to the principal.
    *

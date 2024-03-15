@@ -8,6 +8,8 @@ import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IApplicationTarge
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancerTarget
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.INetworkTargetGroup
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.LoadBalancerTargetProps
+import kotlin.Number
+import kotlin.String
 
 /**
  * An IP address that is a target for load balancing.
@@ -33,6 +35,19 @@ public open class IpTarget internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.targets.IpTarget,
 ) : CdkObject(cdkObject), IApplicationLoadBalancerTarget, INetworkLoadBalancerTarget {
+  public constructor(
+    ipAddress: String,
+    port: Number,
+    availabilityZone: String,
+  ) : this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.IpTarget(ipAddress, port,
+      availabilityZone))
+
+  public constructor(ipAddress: String, port: Number) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.IpTarget(ipAddress, port))
+
+  public constructor(ipAddress: String) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.IpTarget(ipAddress))
+
   /**
    * Register this instance target with a load balancer.
    *

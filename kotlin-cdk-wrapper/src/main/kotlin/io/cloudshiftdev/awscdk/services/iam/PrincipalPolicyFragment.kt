@@ -40,6 +40,12 @@ import kotlin.collections.Map
 public open class PrincipalPolicyFragment internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.PrincipalPolicyFragment,
 ) : CdkObject(cdkObject) {
+  public constructor(principalJson: Map<String, List<String>>, conditions: Map<String, Any>) :
+      this(software.amazon.awscdk.services.iam.PrincipalPolicyFragment(principalJson, conditions))
+
+  public constructor(principalJson: Map<String, List<String>>) :
+      this(software.amazon.awscdk.services.iam.PrincipalPolicyFragment(principalJson))
+
   /**
    * The conditions under which the policy is in effect.
    *

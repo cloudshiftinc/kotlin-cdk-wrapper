@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.lambda.destinations
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.services.events.IEventBus
 import io.cloudshiftdev.awscdk.services.lambda.DestinationConfig
 import io.cloudshiftdev.awscdk.services.lambda.DestinationOptions
 import io.cloudshiftdev.awscdk.services.lambda.IDestination
@@ -31,6 +32,12 @@ public open class EventBridgeDestination internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.lambda.destinations.EventBridgeDestination,
 ) : CdkObject(cdkObject), IDestination {
+  public constructor(eventBus: IEventBus) :
+      this(software.amazon.awscdk.services.lambda.destinations.EventBridgeDestination(IEventBus.unwrap(eventBus)))
+
+  public constructor() :
+      this(software.amazon.awscdk.services.lambda.destinations.EventBridgeDestination())
+
   /**
    * Returns a destination configuration.
    *

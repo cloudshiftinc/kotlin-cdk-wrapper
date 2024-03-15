@@ -26,6 +26,9 @@ import kotlin.jvm.JvmName
 public open class SessionTagsPrincipal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.SessionTagsPrincipal,
 ) : PrincipalBase(cdkObject) {
+  public constructor(principal: IPrincipal) :
+      this(software.amazon.awscdk.services.iam.SessionTagsPrincipal(IPrincipal.unwrap(principal)))
+
   /**
    * Add the principal to the AssumeRolePolicyDocument.
    *

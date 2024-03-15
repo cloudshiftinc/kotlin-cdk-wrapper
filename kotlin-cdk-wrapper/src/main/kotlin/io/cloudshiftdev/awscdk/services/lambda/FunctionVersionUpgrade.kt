@@ -5,6 +5,8 @@ package io.cloudshiftdev.awscdk.services.lambda
 import io.cloudshiftdev.awscdk.IAspect
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.constructs.IConstruct
+import kotlin.Boolean
+import kotlin.String
 
 /**
  * Aspect for upgrading function versions when the provided feature flag is enabled.
@@ -24,6 +26,12 @@ import io.cloudshiftdev.constructs.IConstruct
 public open class FunctionVersionUpgrade internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.FunctionVersionUpgrade,
 ) : CdkObject(cdkObject), IAspect {
+  public constructor(featureFlag: String, enabled: Boolean) :
+      this(software.amazon.awscdk.services.lambda.FunctionVersionUpgrade(featureFlag, enabled))
+
+  public constructor(featureFlag: String) :
+      this(software.amazon.awscdk.services.lambda.FunctionVersionUpgrade(featureFlag))
+
   /**
    * All aspects can visit an IConstruct.
    *

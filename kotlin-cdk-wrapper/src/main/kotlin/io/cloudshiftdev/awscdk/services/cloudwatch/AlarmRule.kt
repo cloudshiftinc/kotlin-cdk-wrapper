@@ -27,6 +27,8 @@ import kotlin.String
 public open class AlarmRule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmRule,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.cloudwatch.AlarmRule())
+
   public companion object {
     public fun allOf(operands: IAlarmRule): IAlarmRule =
         software.amazon.awscdk.services.cloudwatch.AlarmRule.allOf(operands.let(IAlarmRule::unwrap)).let(IAlarmRule::wrap)

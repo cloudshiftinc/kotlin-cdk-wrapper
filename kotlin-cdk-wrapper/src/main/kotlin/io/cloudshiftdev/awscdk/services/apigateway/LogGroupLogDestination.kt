@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.services.logs.ILogGroup
 
 /**
  * Use CloudWatch Logs as a custom access log destination for API Gateway.
@@ -26,6 +27,9 @@ public open class LogGroupLogDestination internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.apigateway.LogGroupLogDestination,
 ) : CdkObject(cdkObject), IAccessLogDestination {
+  public constructor(logGroup: ILogGroup) :
+      this(software.amazon.awscdk.services.apigateway.LogGroupLogDestination(ILogGroup.unwrap(logGroup)))
+
   /**
    * Binds this destination to the CloudWatch Logs.
    *

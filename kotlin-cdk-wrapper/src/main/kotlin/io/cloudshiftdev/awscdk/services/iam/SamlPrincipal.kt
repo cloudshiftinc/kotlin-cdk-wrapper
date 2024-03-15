@@ -2,6 +2,10 @@
 
 package io.cloudshiftdev.awscdk.services.iam
 
+import kotlin.Any
+import kotlin.String
+import kotlin.collections.Map
+
 /**
  * Principal entity that represents a SAML federated identity provider.
  *
@@ -19,6 +23,10 @@ package io.cloudshiftdev.awscdk.services.iam
 public open class SamlPrincipal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.SamlPrincipal,
 ) : FederatedPrincipal(cdkObject) {
+  public constructor(samlProvider: ISamlProvider, conditions: Map<String, Any>) :
+      this(software.amazon.awscdk.services.iam.SamlPrincipal(ISamlProvider.unwrap(samlProvider),
+      conditions))
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.SamlPrincipal): SamlPrincipal =
         SamlPrincipal(cdkObject)

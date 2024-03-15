@@ -2,7 +2,9 @@
 
 package io.cloudshiftdev.awscdk.services.ecs
 
+import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.constructs.Construct
+import kotlin.String
 
 /**
  * Environment file from S3.
@@ -21,6 +23,16 @@ import io.cloudshiftdev.constructs.Construct
 public open class S3EnvironmentFile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.S3EnvironmentFile,
 ) : EnvironmentFile(cdkObject) {
+  public constructor(
+    bucket: IBucket,
+    key: String,
+    objectVersion: String,
+  ) : this(software.amazon.awscdk.services.ecs.S3EnvironmentFile(IBucket.unwrap(bucket), key,
+      objectVersion))
+
+  public constructor(bucket: IBucket, key: String) :
+      this(software.amazon.awscdk.services.ecs.S3EnvironmentFile(IBucket.unwrap(bucket), key))
+
   /**
    * Called when the container is initialized to allow this object to bind to the stack.
    *

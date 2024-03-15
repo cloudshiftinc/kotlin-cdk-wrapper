@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.constructs.Construct
+import kotlin.Any
 
 /**
  * OpenAPI specification from an inline JSON object.
@@ -20,6 +21,9 @@ import io.cloudshiftdev.constructs.Construct
 public open class InlineApiDefinition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.InlineApiDefinition,
 ) : ApiDefinition(cdkObject) {
+  public constructor(definition: Any) :
+      this(software.amazon.awscdk.services.apigateway.InlineApiDefinition(definition))
+
   /**
    * Called when the specification is initialized to allow this object to bind to the stack, add
    * resources and have fun.

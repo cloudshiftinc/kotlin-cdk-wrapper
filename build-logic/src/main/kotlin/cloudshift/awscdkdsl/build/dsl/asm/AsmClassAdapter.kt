@@ -88,11 +88,13 @@ internal class AsmClassAdapter(
                     it.accessFlags.isStatic()
             }
             .map { AsmStaticFieldAdapter(it) }
+    override val publicConstructors: List<CdkClass.Method>
+        get() = allConstructors.filter { it.isPublic }
 
     private val allConstructors: List<CdkClass.Method> by
     lazy(LazyThreadSafetyMode.NONE) {
         delegate.methods
-            .filter { it.isConstructor() && !it.accessFlags.isGenerated() }
+            .filter { it.isConstructor() && !it.accessFlags.isGenerated()  }
             .map { AsmMethodAdapter(it) }
     }
 

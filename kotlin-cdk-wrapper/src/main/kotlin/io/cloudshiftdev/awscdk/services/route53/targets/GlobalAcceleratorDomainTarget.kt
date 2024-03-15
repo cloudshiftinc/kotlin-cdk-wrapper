@@ -26,6 +26,9 @@ public open class GlobalAcceleratorDomainTarget internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53.targets.GlobalAcceleratorDomainTarget,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
+  public constructor(acceleratorDomainName: String) :
+      this(software.amazon.awscdk.services.route53.targets.GlobalAcceleratorDomainTarget(acceleratorDomainName))
+
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
    *

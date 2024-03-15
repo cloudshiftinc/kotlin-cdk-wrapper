@@ -61,6 +61,10 @@ import kotlin.String
 public open class ArtifactPath internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codepipeline.ArtifactPath,
 ) : CdkObject(cdkObject) {
+  public constructor(artifact: Artifact, fileName: String) :
+      this(software.amazon.awscdk.services.codepipeline.ArtifactPath(Artifact.unwrap(artifact),
+      fileName))
+
   /**
    *
    */

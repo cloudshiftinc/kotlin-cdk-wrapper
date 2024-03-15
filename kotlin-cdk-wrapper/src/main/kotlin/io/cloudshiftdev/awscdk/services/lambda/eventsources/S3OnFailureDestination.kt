@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.services.lambda.DlqDestinationConfig
 import io.cloudshiftdev.awscdk.services.lambda.IEventSourceDlq
 import io.cloudshiftdev.awscdk.services.lambda.IEventSourceMapping
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
+import io.cloudshiftdev.awscdk.services.s3.IBucket
 
 /**
  * An S3 dead letter bucket destination configuration for a Lambda event source.
@@ -37,6 +38,9 @@ public open class S3OnFailureDestination internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.lambda.eventsources.S3OnFailureDestination,
 ) : CdkObject(cdkObject), IEventSourceDlq {
+  public constructor(bucket: IBucket) :
+      this(software.amazon.awscdk.services.lambda.eventsources.S3OnFailureDestination(IBucket.unwrap(bucket)))
+
   /**
    * Returns a destination configuration for the DLQ.
    *

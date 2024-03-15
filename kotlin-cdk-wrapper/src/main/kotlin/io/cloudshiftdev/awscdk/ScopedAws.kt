@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 import kotlin.collections.List
 
@@ -24,6 +25,9 @@ import kotlin.collections.List
 public open class ScopedAws internal constructor(
   internal override val cdkObject: software.amazon.awscdk.ScopedAws,
 ) : CdkObject(cdkObject) {
+  public constructor(scope: Construct) :
+      this(software.amazon.awscdk.ScopedAws(Construct.unwrap(scope)))
+
   /**
    *
    */

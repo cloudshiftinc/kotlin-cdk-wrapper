@@ -5,7 +5,7 @@ import cloudshift.awscdkdsl.build.dsl.isListOfCdkObject
 import cloudshift.awscdkdsl.build.dsl.mapClassName
 import cloudshift.awscdkdsl.build.dsl.mappedClassName
 import cloudshift.awscdkdsl.build.dsl.model.CdkModel
-import com.google.common.hash.Hashing
+import cloudshift.awscdkdsl.build.dsl.sha256
 import com.squareup.kotlinpoet.AnnotationSpec
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.CodeBlock
@@ -114,9 +114,6 @@ internal class DslEnhancer(private val model: CdkModel) {
     }
 }
 
-private fun String.sha256(): String {
-    return Hashing.sha256().hashString(this, Charsets.UTF_8).toString()
-}
 
 internal class FormatSpecifiers {
     private val formatValues = mutableListOf<Any>()

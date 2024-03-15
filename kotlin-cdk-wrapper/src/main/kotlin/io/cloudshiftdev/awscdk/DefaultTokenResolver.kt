@@ -23,6 +23,9 @@ import kotlin.collections.List
 public open class DefaultTokenResolver internal constructor(
   internal override val cdkObject: software.amazon.awscdk.DefaultTokenResolver,
 ) : CdkObject(cdkObject), ITokenResolver {
+  public constructor(concat: IFragmentConcatenator) :
+      this(software.amazon.awscdk.DefaultTokenResolver(IFragmentConcatenator.unwrap(concat)))
+
   /**
    * Resolve a tokenized list.
    *

@@ -5,6 +5,8 @@ package io.cloudshiftdev.awscdk.services.elasticloadbalancing
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.ec2.IConnectable
+import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
+import io.cloudshiftdev.awscdk.services.ec2.Port
 
 /**
  * Reference to a listener's port just created.
@@ -35,6 +37,10 @@ public open class ListenerPort internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancing.ListenerPort,
 ) : CdkObject(cdkObject), IConnectable {
+  public constructor(securityGroup: ISecurityGroup, defaultPort: Port) :
+      this(software.amazon.awscdk.services.elasticloadbalancing.ListenerPort(ISecurityGroup.unwrap(securityGroup),
+      Port.unwrap(defaultPort)))
+
   /**
    * The network connections associated with this resource.
    */

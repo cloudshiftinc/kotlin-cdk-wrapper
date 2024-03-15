@@ -20,6 +20,9 @@ import kotlin.String
 public open class CredentialSpec internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.CredentialSpec,
 ) : CdkObject(cdkObject) {
+  public constructor(prefixId: String, fileLocation: String) :
+      this(software.amazon.awscdk.services.ecs.CredentialSpec(prefixId, fileLocation))
+
   /**
    * Called when the container is initialized to allow this object to bind to the stack.
    */

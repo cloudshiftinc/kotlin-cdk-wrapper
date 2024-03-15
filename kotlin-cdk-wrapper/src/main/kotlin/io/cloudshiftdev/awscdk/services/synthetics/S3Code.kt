@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.synthetics
 
+import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 
@@ -22,6 +23,16 @@ import kotlin.String
 public open class S3Code internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.synthetics.S3Code,
 ) : Code(cdkObject) {
+  public constructor(
+    bucket: IBucket,
+    key: String,
+    objectVersion: String,
+  ) : this(software.amazon.awscdk.services.synthetics.S3Code(IBucket.unwrap(bucket), key,
+      objectVersion))
+
+  public constructor(bucket: IBucket, key: String) :
+      this(software.amazon.awscdk.services.synthetics.S3Code(IBucket.unwrap(bucket), key))
+
   /**
    * Called when the canary is initialized to allow this object to bind to the stack, add resources
    * and have fun.

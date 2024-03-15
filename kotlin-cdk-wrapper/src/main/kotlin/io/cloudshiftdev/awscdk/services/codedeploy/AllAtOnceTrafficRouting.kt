@@ -20,6 +20,8 @@ public open class AllAtOnceTrafficRouting internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codedeploy.AllAtOnceTrafficRouting,
 ) : TrafficRouting(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.codedeploy.AllAtOnceTrafficRouting())
+
   /**
    * Return a TrafficRoutingConfig of type `AllAtOnce`.
    *

@@ -36,6 +36,8 @@ import kotlin.jvm.JvmName
 public open class DatabaseClusterEngine internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.DatabaseClusterEngine,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.rds.DatabaseClusterEngine())
+
   public companion object {
     public val AURORA: IClusterEngine =
         IClusterEngine.wrap(software.amazon.awscdk.services.rds.DatabaseClusterEngine.AURORA)

@@ -23,6 +23,9 @@ public open class StringDefinitionBody internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.StringDefinitionBody,
 ) : DefinitionBody(cdkObject) {
+  public constructor(body: String) :
+      this(software.amazon.awscdk.services.stepfunctions.StringDefinitionBody(body))
+
   /**
    * @param _scope 
    * @param _sfnPrincipal 

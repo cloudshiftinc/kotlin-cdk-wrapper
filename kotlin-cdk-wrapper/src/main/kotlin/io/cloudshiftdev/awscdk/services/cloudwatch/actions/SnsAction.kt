@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.cloudwatch.AlarmActionConfig
 import io.cloudshiftdev.awscdk.services.cloudwatch.IAlarm
 import io.cloudshiftdev.awscdk.services.cloudwatch.IAlarmAction
+import io.cloudshiftdev.awscdk.services.sns.ITopic
 import io.cloudshiftdev.constructs.Construct
 
 /**
@@ -23,6 +24,9 @@ import io.cloudshiftdev.constructs.Construct
 public open class SnsAction internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.actions.SnsAction,
 ) : CdkObject(cdkObject), IAlarmAction {
+  public constructor(topic: ITopic) :
+      this(software.amazon.awscdk.services.cloudwatch.actions.SnsAction(ITopic.unwrap(topic)))
+
   /**
    * Returns an alarm action configuration to use an SNS topic as an alarm action.
    *

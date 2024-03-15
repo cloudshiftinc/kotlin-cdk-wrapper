@@ -32,6 +32,8 @@ import kotlin.jvm.JvmName
 public open class AssetManifestBuilder internal constructor(
   internal override val cdkObject: software.amazon.awscdk.AssetManifestBuilder,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.AssetManifestBuilder())
+
   /**
    * Add a docker asset source and destination to the manifest.
    *

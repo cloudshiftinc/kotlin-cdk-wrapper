@@ -45,6 +45,9 @@ public open class WebSocketIamAuthorizer internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketIamAuthorizer,
 ) : CdkObject(cdkObject), IWebSocketRouteAuthorizer {
+  public constructor() :
+      this(software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketIamAuthorizer())
+
   /**
    * Bind this authorizer to a specified WebSocket route.
    *

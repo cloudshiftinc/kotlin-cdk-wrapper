@@ -3,6 +3,9 @@ package cloudshift.awscdkdsl.build.dsl.model.type
 import cloudshift.awscdkdsl.build.dsl.isBuilderClass
 import cloudshift.awscdkdsl.build.dsl.isCdkClass
 import cloudshift.awscdkdsl.build.dsl.isJssiClass
+import cloudshift.awscdkdsl.build.dsl.isListOfCdkObject
+import cloudshift.awscdkdsl.build.dsl.isMapWithCdkValue
+import cloudshift.awscdkdsl.build.dsl.isOuterClass
 import cloudshift.awscdkdsl.build.dsl.mapClassName
 import cloudshift.awscdkdsl.build.dsl.mappedClassName
 import cloudshift.awscdkdsl.build.dsl.model.CdkClass
@@ -165,18 +168,6 @@ internal object WrapperTypeGenerator {
             ctx,
         )
 
-        if (cdkClass.className == Construct) {
-            // protected constructor(scope: Construct, id: String) : this(software.constructs.Construct(unwrap(scope), id))
-            val constructConstructor = FunSpec.constructorBuilder()
-                .addParameter("scope", Construct.mappedClassName())
-                .addParameter("id", String::class)
-                .addModifiers(KModifier.PROTECTED)
-                .callThisConstructor(CodeBlock.of("%T(unwrap(scope), id)", Construct))
-                .build()
-
-            typeBuilder.addFunction(constructConstructor)
-        }
-
         typeBuilder
             .addSuperinterfaces(
                 cdkClass.interfaces.filter { !it.isJssiClass }
@@ -203,6 +194,35 @@ internal object WrapperTypeGenerator {
         companionBuilder.addProperties(staticPublicFields(cdkClass))
 
         val cdkBuilder = ctx.model.builderFor(cdkClass.className)
+
+        val usableConstructors =
+            cdkClass.publicConstructors.filter { it.parameters.none { it.type.isJssiClass || (it.type.isListOfCdkObject() || it.type.isMapWithCdkValue()) } }
+
+        if (cdkBuilder == null && cdkClass.className.isOuterClass() && usableConstructors.isNotEmpty()) {
+
+            val constructors = usableConstructors.map { method ->
+                val params = method.parameters.map {
+                    when {
+                        it.type.isCdkClass -> Pair("%T.unwrap(%N)", listOf(it.type.mapClassName(), it.name))
+                        else -> Pair("%N", listOf(it.name))
+                    }
+                }
+
+                val paramFormatStr = params.joinToString(", ") { it.first }
+                val paramArgs = params.map { it.second }.flatten().toTypedArray()
+
+                val constructorBuilder = FunSpec.constructorBuilder()
+                    .addModifiers(KModifier.PUBLIC)
+                    .callThisConstructor(CodeBlock.of("%T($paramFormatStr)", cdkClass.className, *paramArgs))
+
+                method.parameters.forEach {
+                    constructorBuilder.addParameter(it.name, it.type.mapClassName())
+                }
+
+                constructorBuilder.build()
+            }
+            typeBuilder.addFunctions(constructors)
+        }
 
         cdkBuilder?.let {
             val dslTypes = BuilderGenerator.generateBuilder(cdkBuilder, ctx)

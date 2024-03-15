@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.services.lambda.DestinationConfig
 import io.cloudshiftdev.awscdk.services.lambda.DestinationOptions
 import io.cloudshiftdev.awscdk.services.lambda.IDestination
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
+import io.cloudshiftdev.awscdk.services.sqs.IQueue
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -33,6 +34,9 @@ public open class SqsDestination internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.lambda.destinations.SqsDestination,
 ) : CdkObject(cdkObject), IDestination {
+  public constructor(queue: IQueue) :
+      this(software.amazon.awscdk.services.lambda.destinations.SqsDestination(IQueue.unwrap(queue)))
+
   /**
    * Returns a destination configuration.
    *

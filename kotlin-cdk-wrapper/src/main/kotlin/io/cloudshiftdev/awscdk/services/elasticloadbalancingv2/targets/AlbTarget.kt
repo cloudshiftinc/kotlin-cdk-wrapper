@@ -2,6 +2,9 @@
 
 package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.targets
 
+import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancer
+import kotlin.Number
+
 /**
  * A single Application Load Balancer as the target for load balancing.
  *
@@ -43,6 +46,10 @@ public open class AlbTarget internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbTarget,
 ) : AlbArnTarget(cdkObject) {
+  public constructor(alb: IApplicationLoadBalancer, port: Number) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbTarget(IApplicationLoadBalancer.unwrap(alb),
+      port))
+
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbTarget):

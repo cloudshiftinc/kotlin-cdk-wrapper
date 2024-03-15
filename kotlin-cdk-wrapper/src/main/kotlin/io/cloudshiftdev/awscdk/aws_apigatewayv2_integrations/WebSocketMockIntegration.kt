@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations
 import io.cloudshiftdev.awscdk.services.apigatewayv2.WebSocketRouteIntegration
 import io.cloudshiftdev.awscdk.services.apigatewayv2.WebSocketRouteIntegrationBindOptions
 import io.cloudshiftdev.awscdk.services.apigatewayv2.WebSocketRouteIntegrationConfig
+import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -24,6 +25,9 @@ public open class WebSocketMockIntegration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketMockIntegration,
 ) : WebSocketRouteIntegration(cdkObject) {
+  public constructor(id: String) :
+      this(software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketMockIntegration(id))
+
   /**
    * Bind this integration to the route.
    *

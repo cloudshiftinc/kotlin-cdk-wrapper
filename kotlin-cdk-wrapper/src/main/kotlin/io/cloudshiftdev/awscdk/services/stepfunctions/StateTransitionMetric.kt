@@ -28,6 +28,8 @@ public open class StateTransitionMetric internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.StateTransitionMetric,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.stepfunctions.StateTransitionMetric())
+
   public companion object {
     public fun metric(metricName: String): Metric =
         software.amazon.awscdk.services.stepfunctions.StateTransitionMetric.metric(metricName).let(Metric::wrap)

@@ -3,6 +3,8 @@
 package io.cloudshiftdev.awscdk.lambdalayer.kubectl
 
 import io.cloudshiftdev.awscdk.services.lambda.LayerVersion
+import io.cloudshiftdev.constructs.Construct
+import kotlin.String
 
 /**
  * An AWS Lambda layer that includes `kubectl` and `helm`.
@@ -19,6 +21,9 @@ import io.cloudshiftdev.awscdk.services.lambda.LayerVersion
 public open class KubectlLayer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.lambdalayer.kubectl.KubectlLayer,
 ) : LayerVersion(cdkObject) {
+  public constructor(scope: Construct, id: String) :
+      this(software.amazon.awscdk.lambdalayer.kubectl.KubectlLayer(Construct.unwrap(scope), id))
+
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.lambdalayer.kubectl.KubectlLayer):
         KubectlLayer = KubectlLayer(cdkObject)

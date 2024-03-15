@@ -26,6 +26,9 @@ import kotlin.String
 public open class AccountPrincipal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.AccountPrincipal,
 ) : ArnPrincipal(cdkObject) {
+  public constructor(accountId: Any) :
+      this(software.amazon.awscdk.services.iam.AccountPrincipal(accountId))
+
   /**
    * AWS account ID (i.e. '123456789012').
    */

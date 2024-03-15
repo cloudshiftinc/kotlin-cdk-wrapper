@@ -23,6 +23,9 @@ import kotlin.collections.List
 public open class Column internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.Column,
 ) : CdkObject(cdkObject), IWidget {
+  public constructor(widgets: IWidget) :
+      this(software.amazon.awscdk.services.cloudwatch.Column(IWidget.unwrap(widgets)))
+
   /**
    * Add the widget to this container.
    *

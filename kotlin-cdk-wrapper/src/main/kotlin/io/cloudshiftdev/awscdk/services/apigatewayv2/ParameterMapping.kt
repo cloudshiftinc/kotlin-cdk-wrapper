@@ -30,6 +30,8 @@ import kotlin.collections.Map
 public open class ParameterMapping internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.ParameterMapping,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.apigatewayv2.ParameterMapping())
+
   /**
    * Creates a mapping to append a header.
    *

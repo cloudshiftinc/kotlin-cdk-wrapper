@@ -2,7 +2,9 @@
 
 package io.cloudshiftdev.awscdk.services.apigateway
 
+import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.constructs.Construct
+import kotlin.String
 
 /**
  * OpenAPI specification from an S3 archive.
@@ -21,6 +23,16 @@ import io.cloudshiftdev.constructs.Construct
 public open class S3ApiDefinition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.S3ApiDefinition,
 ) : ApiDefinition(cdkObject) {
+  public constructor(
+    bucket: IBucket,
+    key: String,
+    objectVersion: String,
+  ) : this(software.amazon.awscdk.services.apigateway.S3ApiDefinition(IBucket.unwrap(bucket), key,
+      objectVersion))
+
+  public constructor(bucket: IBucket, key: String) :
+      this(software.amazon.awscdk.services.apigateway.S3ApiDefinition(IBucket.unwrap(bucket), key))
+
   /**
    * Called when the specification is initialized to allow this object to bind to the stack, add
    * resources and have fun.

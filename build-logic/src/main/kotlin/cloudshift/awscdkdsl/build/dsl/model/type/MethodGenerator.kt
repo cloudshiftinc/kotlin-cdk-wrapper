@@ -10,6 +10,7 @@ import com.squareup.kotlinpoet.CodeBlock
 import com.squareup.kotlinpoet.FunSpec
 import com.squareup.kotlinpoet.KModifier
 import com.squareup.kotlinpoet.LIST
+import com.squareup.kotlinpoet.MAP
 import com.squareup.kotlinpoet.ParameterSpec
 import com.squareup.kotlinpoet.ParameterizedTypeName
 import com.squareup.kotlinpoet.TypeName
@@ -162,6 +163,14 @@ val TypeName.isList: Boolean
         is ClassName -> this == LIST
         else -> false
     }
+
+val TypeName.isMap: Boolean
+    get() = when (this) {
+        is ParameterizedTypeName -> rawType == MAP
+        is ClassName -> this == LIST
+        else -> false
+    }
+
 
 internal fun interface MethodSpecFactory {
     fun create(enclosingClass: CdkClass, method: CdkClass.Method): List<MethodSpec>

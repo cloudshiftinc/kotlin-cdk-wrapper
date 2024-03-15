@@ -5,6 +5,8 @@ package io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations
 import io.cloudshiftdev.awscdk.services.apigatewayv2.WebSocketRouteIntegration
 import io.cloudshiftdev.awscdk.services.apigatewayv2.WebSocketRouteIntegrationBindOptions
 import io.cloudshiftdev.awscdk.services.apigatewayv2.WebSocketRouteIntegrationConfig
+import io.cloudshiftdev.awscdk.services.lambda.IFunction
+import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -31,6 +33,10 @@ public open class WebSocketLambdaIntegration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketLambdaIntegration,
 ) : WebSocketRouteIntegration(cdkObject) {
+  public constructor(id: String, handler: IFunction) :
+      this(software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketLambdaIntegration(id,
+      IFunction.unwrap(handler)))
+
   /**
    * Bind this integration to the route.
    *

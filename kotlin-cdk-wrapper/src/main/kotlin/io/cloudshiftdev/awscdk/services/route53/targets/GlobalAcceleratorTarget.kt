@@ -2,6 +2,8 @@
 
 package io.cloudshiftdev.awscdk.services.route53.targets
 
+import io.cloudshiftdev.awscdk.services.globalaccelerator.IAccelerator
+
 /**
  * Use a Global Accelerator instance domain name as an alias record target.
  *
@@ -21,6 +23,9 @@ public open class GlobalAcceleratorTarget internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53.targets.GlobalAcceleratorTarget,
 ) : GlobalAcceleratorDomainTarget(cdkObject) {
+  public constructor(accelerator: IAccelerator) :
+      this(software.amazon.awscdk.services.route53.targets.GlobalAcceleratorTarget(IAccelerator.unwrap(accelerator)))
+
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53.targets.GlobalAcceleratorTarget):

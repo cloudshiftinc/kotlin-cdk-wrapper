@@ -22,6 +22,9 @@ public open class FoundationModelIdentifier internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.bedrock.FoundationModelIdentifier,
 ) : CdkObject(cdkObject) {
+  public constructor(modelId: String) :
+      this(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier(modelId))
+
   /**
    * the model identifier.
    */

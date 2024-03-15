@@ -22,6 +22,8 @@ import kotlin.String
 public open class FactName internal constructor(
   internal override val cdkObject: software.amazon.awscdk.regioninfo.FactName,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.regioninfo.FactName())
+
   public companion object {
     public val APPMESH_ECR_ACCOUNT: String =
         software.amazon.awscdk.regioninfo.FactName.APPMESH_ECR_ACCOUNT

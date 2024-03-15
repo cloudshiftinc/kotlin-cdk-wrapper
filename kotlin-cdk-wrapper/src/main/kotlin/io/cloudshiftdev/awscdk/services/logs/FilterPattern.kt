@@ -25,6 +25,8 @@ import kotlin.collections.List
 public open class FilterPattern internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.logs.FilterPattern,
 ) : CdkObject(cdkObject) {
+  public constructor() : this(software.amazon.awscdk.services.logs.FilterPattern())
+
   public companion object {
     public fun all(patterns: JsonPattern): JsonPattern =
         software.amazon.awscdk.services.logs.FilterPattern.all(patterns.let(JsonPattern::unwrap)).let(JsonPattern::wrap)

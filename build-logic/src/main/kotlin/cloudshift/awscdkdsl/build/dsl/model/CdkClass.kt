@@ -10,6 +10,7 @@ internal interface CdkClass {
     val publicMemberFunctions: List<Method>
     val publicStaticFunctions: List<Method>
     val publicStaticFields: List<StaticField>
+    val publicConstructors: List<Method>
     val deprecated: Boolean
     val comment: String?
     val concreteClass: Boolean
@@ -27,6 +28,7 @@ internal interface CdkClass {
     fun isBuilder() = implementsInterface(BuilderInterface)
 
     interface Method {
+        val isPublic: Boolean
         val name: String
         val signature: String
         val parameters: List<Parameter>

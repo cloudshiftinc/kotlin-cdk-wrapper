@@ -20,6 +20,9 @@ public open class AutoScalingGroupRequireImdsv2Aspect internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.autoscaling.AutoScalingGroupRequireImdsv2Aspect,
 ) : CdkObject(cdkObject), IAspect {
+  public constructor() :
+      this(software.amazon.awscdk.services.autoscaling.AutoScalingGroupRequireImdsv2Aspect())
+
   /**
    * All aspects can visit an IConstruct.
    *

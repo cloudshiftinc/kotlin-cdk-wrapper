@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import kotlin.Boolean
 import kotlin.String
+import kotlin.collections.List
 
 /**
  * Ignores file paths based on the [`.gitignore specification`](https://git-scm.com/docs/gitignore).
@@ -21,6 +22,9 @@ import kotlin.String
 public open class GitIgnoreStrategy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.GitIgnoreStrategy,
 ) : IgnoreStrategy(cdkObject) {
+  public constructor(absoluteRootPath: String, patterns: List<String>) :
+      this(software.amazon.awscdk.GitIgnoreStrategy(absoluteRootPath, patterns))
+
   /**
    * Adds another pattern.
    *

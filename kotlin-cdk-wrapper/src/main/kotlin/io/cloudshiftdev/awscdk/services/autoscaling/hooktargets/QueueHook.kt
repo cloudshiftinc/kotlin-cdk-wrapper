@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.autoscaling.BindHookTargetOptions
 import io.cloudshiftdev.awscdk.services.autoscaling.ILifecycleHookTarget
 import io.cloudshiftdev.awscdk.services.autoscaling.LifecycleHookTargetConfig
+import io.cloudshiftdev.awscdk.services.sqs.IQueue
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -28,6 +29,9 @@ public open class QueueHook internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.autoscaling.hooktargets.QueueHook,
 ) : CdkObject(cdkObject), ILifecycleHookTarget {
+  public constructor(queue: IQueue) :
+      this(software.amazon.awscdk.services.autoscaling.hooktargets.QueueHook(IQueue.unwrap(queue)))
+
   /**
    * If an `IRole` is found in `options`, grant it access to send messages.
    *

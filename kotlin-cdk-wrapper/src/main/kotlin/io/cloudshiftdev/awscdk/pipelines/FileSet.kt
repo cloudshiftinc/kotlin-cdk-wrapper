@@ -46,6 +46,11 @@ import kotlin.String
 public open class FileSet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.pipelines.FileSet,
 ) : CdkObject(cdkObject), IFileSetProducer {
+  public constructor(id: String, producer: Step) : this(software.amazon.awscdk.pipelines.FileSet(id,
+      Step.unwrap(producer)))
+
+  public constructor(id: String) : this(software.amazon.awscdk.pipelines.FileSet(id))
+
   /**
    * Human-readable descriptor for this file set (does not need to be unique).
    */
