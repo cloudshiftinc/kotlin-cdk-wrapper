@@ -26,7 +26,8 @@ public open class ScopedAws internal constructor(
   internal override val cdkObject: software.amazon.awscdk.ScopedAws,
 ) : CdkObject(cdkObject) {
   public constructor(scope: Construct) :
-      this(software.amazon.awscdk.ScopedAws(Construct.unwrap(scope)))
+      this(software.amazon.awscdk.ScopedAws(scope.let(Construct::unwrap))
+  )
 
   /**
    *

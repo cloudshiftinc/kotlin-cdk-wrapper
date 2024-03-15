@@ -120,16 +120,15 @@ public open class CfnDistributionConfiguration internal constructor(
    * The distributions of this distribution configuration formatted as an array of Distribution
    * objects.
    */
-  public open fun distributions(__idx_ac66f0: List<Any>) {
-    unwrap(this).setDistributions(__idx_ac66f0)
+  public open fun distributions(_idx_ac66f0: List<Any>) {
+    unwrap(this).setDistributions(_idx_ac66f0)
   }
 
   /**
    * The distributions of this distribution configuration formatted as an array of Distribution
    * objects.
    */
-  public open fun distributions(vararg __idx_ac66f0: Any): Unit =
-      distributions(__idx_ac66f0.toList())
+  public open fun distributions(vararg _idx_ac66f0: Any): Unit = distributions(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

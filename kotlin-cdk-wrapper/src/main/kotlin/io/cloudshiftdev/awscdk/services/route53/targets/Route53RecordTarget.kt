@@ -27,7 +27,8 @@ public open class Route53RecordTarget internal constructor(
       software.amazon.awscdk.services.route53.targets.Route53RecordTarget,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
   public constructor(record: IRecordSet) :
-      this(software.amazon.awscdk.services.route53.targets.Route53RecordTarget(IRecordSet.unwrap(record)))
+      this(software.amazon.awscdk.services.route53.targets.Route53RecordTarget(record.let(IRecordSet::unwrap))
+  )
 
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
@@ -35,8 +36,8 @@ public open class Route53RecordTarget internal constructor(
    * @param _record 
    * @param zone
    */
-  public override fun bind(_record: IRecordSet): AliasRecordTargetConfig =
-      unwrap(this).bind(_record.let(IRecordSet::unwrap)).let(AliasRecordTargetConfig::wrap)
+  public override fun bind(record: IRecordSet): AliasRecordTargetConfig =
+      unwrap(this).bind(record.let(IRecordSet::unwrap)).let(AliasRecordTargetConfig::wrap)
 
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
@@ -44,8 +45,8 @@ public open class Route53RecordTarget internal constructor(
    * @param _record 
    * @param zone
    */
-  public override fun bind(_record: IRecordSet, zone: IHostedZone): AliasRecordTargetConfig =
-      unwrap(this).bind(_record.let(IRecordSet::unwrap),
+  public override fun bind(record: IRecordSet, zone: IHostedZone): AliasRecordTargetConfig =
+      unwrap(this).bind(record.let(IRecordSet::unwrap),
       zone.let(IHostedZone::unwrap)).let(AliasRecordTargetConfig::wrap)
 
   public companion object {

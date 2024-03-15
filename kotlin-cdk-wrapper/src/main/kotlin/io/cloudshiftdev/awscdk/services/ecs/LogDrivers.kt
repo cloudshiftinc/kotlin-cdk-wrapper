@@ -28,7 +28,8 @@ import kotlin.jvm.JvmName
 public open class LogDrivers internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.LogDrivers,
 ) : CdkObject(cdkObject) {
-  public constructor() : this(software.amazon.awscdk.services.ecs.LogDrivers())
+  public constructor() : this(software.amazon.awscdk.services.ecs.LogDrivers()
+  )
 
   public companion object {
     public fun awsLogs(props: AwsLogDriverProps): LogDriver =

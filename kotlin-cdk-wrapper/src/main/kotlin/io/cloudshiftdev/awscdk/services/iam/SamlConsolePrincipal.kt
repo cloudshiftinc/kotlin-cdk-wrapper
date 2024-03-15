@@ -24,12 +24,14 @@ import kotlin.collections.Map
 public open class SamlConsolePrincipal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.SamlConsolePrincipal,
 ) : SamlPrincipal(cdkObject) {
-  public constructor(samlProvider: ISamlProvider, conditions: Map<String, Any>) :
-      this(software.amazon.awscdk.services.iam.SamlConsolePrincipal(ISamlProvider.unwrap(samlProvider),
-      conditions))
-
   public constructor(samlProvider: ISamlProvider) :
-      this(software.amazon.awscdk.services.iam.SamlConsolePrincipal(ISamlProvider.unwrap(samlProvider)))
+      this(software.amazon.awscdk.services.iam.SamlConsolePrincipal(samlProvider.let(ISamlProvider::unwrap))
+  )
+
+  public constructor(samlProvider: ISamlProvider, conditions: Map<String, Any>) :
+      this(software.amazon.awscdk.services.iam.SamlConsolePrincipal(samlProvider.let(ISamlProvider::unwrap),
+      conditions)
+  )
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.SamlConsolePrincipal):

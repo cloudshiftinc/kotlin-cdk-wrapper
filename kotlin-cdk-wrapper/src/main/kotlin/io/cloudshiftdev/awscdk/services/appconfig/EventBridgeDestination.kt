@@ -26,7 +26,8 @@ public open class EventBridgeDestination internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.EventBridgeDestination,
 ) : CdkObject(cdkObject), IEventDestination {
   public constructor(bus: IEventBus) :
-      this(software.amazon.awscdk.services.appconfig.EventBridgeDestination(IEventBus.unwrap(bus)))
+      this(software.amazon.awscdk.services.appconfig.EventBridgeDestination(bus.let(IEventBus::unwrap))
+  )
 
   /**
    * The URI of the extension event destination.

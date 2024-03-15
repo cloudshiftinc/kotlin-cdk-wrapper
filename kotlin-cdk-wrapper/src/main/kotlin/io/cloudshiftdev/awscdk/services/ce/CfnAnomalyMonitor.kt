@@ -144,14 +144,14 @@ public open class CfnAnomalyMonitor internal constructor(
   /**
    * Tags to assign to monitor.
    */
-  public open fun resourceTags(__idx_ac66f0: List<Any>) {
-    unwrap(this).setResourceTags(__idx_ac66f0)
+  public open fun resourceTags(_idx_ac66f0: List<Any>) {
+    unwrap(this).setResourceTags(_idx_ac66f0)
   }
 
   /**
    * Tags to assign to monitor.
    */
-  public open fun resourceTags(vararg __idx_ac66f0: Any): Unit = resourceTags(__idx_ac66f0.toList())
+  public open fun resourceTags(vararg _idx_ac66f0: Any): Unit = resourceTags(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ce.CfnAnomalyMonitor].

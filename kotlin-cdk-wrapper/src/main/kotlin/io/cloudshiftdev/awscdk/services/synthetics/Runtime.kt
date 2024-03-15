@@ -27,7 +27,9 @@ public open class Runtime internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.synthetics.Runtime,
 ) : CdkObject(cdkObject) {
   public constructor(name: String, family: RuntimeFamily) :
-      this(software.amazon.awscdk.services.synthetics.Runtime(name, RuntimeFamily.unwrap(family)))
+      this(software.amazon.awscdk.services.synthetics.Runtime(name,
+      family.let(RuntimeFamily::unwrap))
+  )
 
   /**
    * The Lambda runtime family.

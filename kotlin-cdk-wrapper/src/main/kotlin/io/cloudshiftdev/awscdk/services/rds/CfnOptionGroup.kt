@@ -107,15 +107,15 @@ public open class CfnOptionGroup internal constructor(
   /**
    * A list of options and the settings for each option.
    */
-  public open fun optionConfigurations(__idx_ac66f0: List<Any>) {
-    unwrap(this).setOptionConfigurations(__idx_ac66f0)
+  public open fun optionConfigurations(_idx_ac66f0: List<Any>) {
+    unwrap(this).setOptionConfigurations(_idx_ac66f0)
   }
 
   /**
    * A list of options and the settings for each option.
    */
-  public open fun optionConfigurations(vararg __idx_ac66f0: Any): Unit =
-      optionConfigurations(__idx_ac66f0.toList())
+  public open fun optionConfigurations(vararg _idx_ac66f0: Any): Unit =
+      optionConfigurations(_idx_ac66f0.toList())
 
   /**
    * The description of the option group.

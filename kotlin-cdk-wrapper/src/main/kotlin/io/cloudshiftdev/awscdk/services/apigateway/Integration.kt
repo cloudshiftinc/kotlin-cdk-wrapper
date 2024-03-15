@@ -43,8 +43,8 @@ public open class Integration internal constructor(
    *
    * @param _method 
    */
-  public open fun bind(_method: Method): IntegrationConfig =
-      unwrap(this).bind(_method.let(Method::unwrap)).let(IntegrationConfig::wrap)
+  public open fun bind(method: Method): IntegrationConfig =
+      unwrap(this).bind(method.let(Method::unwrap)).let(IntegrationConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.apigateway.Integration].

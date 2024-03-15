@@ -203,15 +203,15 @@ public open class CfnFirewall internal constructor(
   /**
    * The public subnets that Network Firewall is using for the firewall.
    */
-  public open fun subnetMappings(__idx_ac66f0: List<Any>) {
-    unwrap(this).setSubnetMappings(__idx_ac66f0)
+  public open fun subnetMappings(_idx_ac66f0: List<Any>) {
+    unwrap(this).setSubnetMappings(_idx_ac66f0)
   }
 
   /**
    * The public subnets that Network Firewall is using for the firewall.
    */
-  public open fun subnetMappings(vararg __idx_ac66f0: Any): Unit =
-      subnetMappings(__idx_ac66f0.toList())
+  public open fun subnetMappings(vararg _idx_ac66f0: Any): Unit =
+      subnetMappings(_idx_ac66f0.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

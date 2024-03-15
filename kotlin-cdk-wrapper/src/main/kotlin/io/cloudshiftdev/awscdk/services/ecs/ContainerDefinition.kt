@@ -382,9 +382,9 @@ public open class ContainerDefinition internal constructor(
    * @param _taskDefinition [disable-awslint:ref-via-interface] (unused but kept to avoid breaking
    * change).
    */
-  public open fun renderContainerDefinition(_taskDefinition: TaskDefinition):
+  public open fun renderContainerDefinition(taskDefinition: TaskDefinition):
       CfnTaskDefinition.ContainerDefinitionProperty =
-      unwrap(this).renderContainerDefinition(_taskDefinition.let(TaskDefinition::unwrap)).let(CfnTaskDefinition.ContainerDefinitionProperty::wrap)
+      unwrap(this).renderContainerDefinition(taskDefinition.let(TaskDefinition::unwrap)).let(CfnTaskDefinition.ContainerDefinitionProperty::wrap)
 
   /**
    * The name of the task definition that includes this container definition.

@@ -38,7 +38,8 @@ public open class BucketWebsiteTarget internal constructor(
       software.amazon.awscdk.services.route53.targets.BucketWebsiteTarget,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
   public constructor(bucket: IBucket) :
-      this(software.amazon.awscdk.services.route53.targets.BucketWebsiteTarget(IBucket.unwrap(bucket)))
+      this(software.amazon.awscdk.services.route53.targets.BucketWebsiteTarget(bucket.let(IBucket::unwrap))
+  )
 
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
@@ -46,8 +47,8 @@ public open class BucketWebsiteTarget internal constructor(
    * @param _record 
    * @param _zone
    */
-  public override fun bind(_record: IRecordSet): AliasRecordTargetConfig =
-      unwrap(this).bind(_record.let(IRecordSet::unwrap)).let(AliasRecordTargetConfig::wrap)
+  public override fun bind(record: IRecordSet): AliasRecordTargetConfig =
+      unwrap(this).bind(record.let(IRecordSet::unwrap)).let(AliasRecordTargetConfig::wrap)
 
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
@@ -55,9 +56,9 @@ public open class BucketWebsiteTarget internal constructor(
    * @param _record 
    * @param _zone
    */
-  public override fun bind(_record: IRecordSet, _zone: IHostedZone): AliasRecordTargetConfig =
-      unwrap(this).bind(_record.let(IRecordSet::unwrap),
-      _zone.let(IHostedZone::unwrap)).let(AliasRecordTargetConfig::wrap)
+  public override fun bind(record: IRecordSet, zone: IHostedZone): AliasRecordTargetConfig =
+      unwrap(this).bind(record.let(IRecordSet::unwrap),
+      zone.let(IHostedZone::unwrap)).let(AliasRecordTargetConfig::wrap)
 
   public companion object {
     internal

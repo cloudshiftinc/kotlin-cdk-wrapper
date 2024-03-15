@@ -23,7 +23,8 @@ public open class ChainDefinitionBody internal constructor(
       software.amazon.awscdk.services.stepfunctions.ChainDefinitionBody,
 ) : DefinitionBody(cdkObject) {
   public constructor(chainable: IChainable) :
-      this(software.amazon.awscdk.services.stepfunctions.ChainDefinitionBody(IChainable.unwrap(chainable)))
+      this(software.amazon.awscdk.services.stepfunctions.ChainDefinitionBody(chainable.let(IChainable::unwrap))
+  )
 
   /**
    * @param scope 
@@ -33,10 +34,10 @@ public open class ChainDefinitionBody internal constructor(
    */
   public override fun bind(
     scope: Construct,
-    _sfnPrincipal: IPrincipal,
+    sfnPrincipal: IPrincipal,
     sfnProps: StateMachineProps,
   ): DefinitionConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      _sfnPrincipal.let(IPrincipal::unwrap),
+      sfnPrincipal.let(IPrincipal::unwrap),
       sfnProps.let(StateMachineProps::unwrap)).let(DefinitionConfig::wrap)
 
   /**
@@ -49,9 +50,9 @@ public open class ChainDefinitionBody internal constructor(
   @JvmName("d2dbd4d1e5f21bba5dd51d75253d432be0ee512a924449cbb7efb61b2d333163")
   public override fun bind(
     scope: Construct,
-    _sfnPrincipal: IPrincipal,
+    sfnPrincipal: IPrincipal,
     sfnProps: StateMachineProps.Builder.() -> Unit,
-  ): DefinitionConfig = bind(scope, _sfnPrincipal, StateMachineProps(sfnProps))
+  ): DefinitionConfig = bind(scope, sfnPrincipal, StateMachineProps(sfnProps))
 
   /**
    * @param scope 
@@ -61,11 +62,11 @@ public open class ChainDefinitionBody internal constructor(
    */
   public override fun bind(
     scope: Construct,
-    _sfnPrincipal: IPrincipal,
+    sfnPrincipal: IPrincipal,
     sfnProps: StateMachineProps,
     graph: StateGraph,
   ): DefinitionConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      _sfnPrincipal.let(IPrincipal::unwrap), sfnProps.let(StateMachineProps::unwrap),
+      sfnPrincipal.let(IPrincipal::unwrap), sfnProps.let(StateMachineProps::unwrap),
       graph.let(StateGraph::unwrap)).let(DefinitionConfig::wrap)
 
   /**

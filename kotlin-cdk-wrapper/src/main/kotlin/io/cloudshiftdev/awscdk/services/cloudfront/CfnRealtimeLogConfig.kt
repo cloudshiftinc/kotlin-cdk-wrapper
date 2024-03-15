@@ -72,15 +72,15 @@ public open class CfnRealtimeLogConfig internal constructor(
    * Contains information about the Amazon Kinesis data stream where you are sending real-time log
    * data for this real-time log configuration.
    */
-  public open fun endPoints(__idx_ac66f0: List<Any>) {
-    unwrap(this).setEndPoints(__idx_ac66f0)
+  public open fun endPoints(_idx_ac66f0: List<Any>) {
+    unwrap(this).setEndPoints(_idx_ac66f0)
   }
 
   /**
    * Contains information about the Amazon Kinesis data stream where you are sending real-time log
    * data for this real-time log configuration.
    */
-  public open fun endPoints(vararg __idx_ac66f0: Any): Unit = endPoints(__idx_ac66f0.toList())
+  public open fun endPoints(vararg _idx_ac66f0: Any): Unit = endPoints(_idx_ac66f0.toList())
 
   /**
    * A list of fields that are included in each real-time log record.

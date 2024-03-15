@@ -24,8 +24,9 @@ public open class SamlPrincipal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.SamlPrincipal,
 ) : FederatedPrincipal(cdkObject) {
   public constructor(samlProvider: ISamlProvider, conditions: Map<String, Any>) :
-      this(software.amazon.awscdk.services.iam.SamlPrincipal(ISamlProvider.unwrap(samlProvider),
-      conditions))
+      this(software.amazon.awscdk.services.iam.SamlPrincipal(samlProvider.let(ISamlProvider::unwrap),
+      conditions)
+  )
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.SamlPrincipal): SamlPrincipal =

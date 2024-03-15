@@ -38,7 +38,8 @@ import kotlin.jvm.JvmName
 public open class LegacyStackSynthesizer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.LegacyStackSynthesizer,
 ) : StackSynthesizer(cdkObject), IReusableStackSynthesizer, IBoundStackSynthesizer {
-  public constructor() : this(software.amazon.awscdk.LegacyStackSynthesizer())
+  public constructor() : this(software.amazon.awscdk.LegacyStackSynthesizer()
+  )
 
   /**
    * Register a Docker Image Asset.

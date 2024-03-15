@@ -23,7 +23,8 @@ public open class GitIgnoreStrategy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.GitIgnoreStrategy,
 ) : IgnoreStrategy(cdkObject) {
   public constructor(absoluteRootPath: String, patterns: List<String>) :
-      this(software.amazon.awscdk.GitIgnoreStrategy(absoluteRootPath, patterns))
+      this(software.amazon.awscdk.GitIgnoreStrategy(absoluteRootPath, patterns)
+  )
 
   /**
    * Adds another pattern.

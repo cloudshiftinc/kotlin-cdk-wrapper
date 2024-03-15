@@ -215,14 +215,14 @@ public open class CfnBudgetsAction internal constructor(
   /**
    * A list of subscribers.
    */
-  public open fun subscribers(__idx_ac66f0: List<Any>) {
-    unwrap(this).setSubscribers(__idx_ac66f0)
+  public open fun subscribers(_idx_ac66f0: List<Any>) {
+    unwrap(this).setSubscribers(_idx_ac66f0)
   }
 
   /**
    * A list of subscribers.
    */
-  public open fun subscribers(vararg __idx_ac66f0: Any): Unit = subscribers(__idx_ac66f0.toList())
+  public open fun subscribers(vararg _idx_ac66f0: Any): Unit = subscribers(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.budgets.CfnBudgetsAction].

@@ -119,15 +119,15 @@ public open class CfnIdentityPool internal constructor(
   /**
    * The Amazon Cognito user pools and their client IDs.
    */
-  public open fun cognitoIdentityProviders(__idx_ac66f0: List<Any>) {
-    unwrap(this).setCognitoIdentityProviders(__idx_ac66f0)
+  public open fun cognitoIdentityProviders(_idx_ac66f0: List<Any>) {
+    unwrap(this).setCognitoIdentityProviders(_idx_ac66f0)
   }
 
   /**
    * The Amazon Cognito user pools and their client IDs.
    */
-  public open fun cognitoIdentityProviders(vararg __idx_ac66f0: Any): Unit =
-      cognitoIdentityProviders(__idx_ac66f0.toList())
+  public open fun cognitoIdentityProviders(vararg _idx_ac66f0: Any): Unit =
+      cognitoIdentityProviders(_idx_ac66f0.toList())
 
   /**
    * Configuration options for configuring Amazon Cognito streams.

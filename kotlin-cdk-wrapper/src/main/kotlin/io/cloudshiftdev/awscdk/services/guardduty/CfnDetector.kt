@@ -139,14 +139,14 @@ public open class CfnDetector internal constructor(
   /**
    * A list of features that will be configured for the detector.
    */
-  public open fun features(__idx_ac66f0: List<Any>) {
-    unwrap(this).setFeatures(__idx_ac66f0)
+  public open fun features(_idx_ac66f0: List<Any>) {
+    unwrap(this).setFeatures(_idx_ac66f0)
   }
 
   /**
    * A list of features that will be configured for the detector.
    */
-  public open fun features(vararg __idx_ac66f0: Any): Unit = features(__idx_ac66f0.toList())
+  public open fun features(vararg _idx_ac66f0: Any): Unit = features(_idx_ac66f0.toList())
 
   /**
    * Specifies how frequently updated findings are exported.

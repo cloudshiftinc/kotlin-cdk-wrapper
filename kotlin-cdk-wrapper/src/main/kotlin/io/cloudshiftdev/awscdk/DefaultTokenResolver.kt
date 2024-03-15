@@ -24,7 +24,8 @@ public open class DefaultTokenResolver internal constructor(
   internal override val cdkObject: software.amazon.awscdk.DefaultTokenResolver,
 ) : CdkObject(cdkObject), ITokenResolver {
   public constructor(concat: IFragmentConcatenator) :
-      this(software.amazon.awscdk.DefaultTokenResolver(IFragmentConcatenator.unwrap(concat)))
+      this(software.amazon.awscdk.DefaultTokenResolver(concat.let(IFragmentConcatenator::unwrap))
+  )
 
   /**
    * Resolve a tokenized list.

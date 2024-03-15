@@ -139,16 +139,16 @@ public open class CfnLaunchConfiguration internal constructor(
    * The block device mapping entries that define the block devices to attach to the instances at
    * launch.
    */
-  public open fun blockDeviceMappings(__idx_ac66f0: List<Any>) {
-    unwrap(this).setBlockDeviceMappings(__idx_ac66f0)
+  public open fun blockDeviceMappings(_idx_ac66f0: List<Any>) {
+    unwrap(this).setBlockDeviceMappings(_idx_ac66f0)
   }
 
   /**
    * The block device mapping entries that define the block devices to attach to the instances at
    * launch.
    */
-  public open fun blockDeviceMappings(vararg __idx_ac66f0: Any): Unit =
-      blockDeviceMappings(__idx_ac66f0.toList())
+  public open fun blockDeviceMappings(vararg _idx_ac66f0: Any): Unit =
+      blockDeviceMappings(_idx_ac66f0.toList())
 
   /**
    * Available for backward compatibility.

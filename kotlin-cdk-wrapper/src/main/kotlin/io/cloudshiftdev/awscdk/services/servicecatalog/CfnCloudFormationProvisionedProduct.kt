@@ -235,15 +235,15 @@ public open class CfnCloudFormationProvisionedProduct internal constructor(
   /**
    * Parameters specified by the administrator that are required for provisioning the product.
    */
-  public open fun provisioningParameters(__idx_ac66f0: List<Any>) {
-    unwrap(this).setProvisioningParameters(__idx_ac66f0)
+  public open fun provisioningParameters(_idx_ac66f0: List<Any>) {
+    unwrap(this).setProvisioningParameters(_idx_ac66f0)
   }
 
   /**
    * Parameters specified by the administrator that are required for provisioning the product.
    */
-  public open fun provisioningParameters(vararg __idx_ac66f0: Any): Unit =
-      provisioningParameters(__idx_ac66f0.toList())
+  public open fun provisioningParameters(vararg _idx_ac66f0: Any): Unit =
+      provisioningParameters(_idx_ac66f0.toList())
 
   /**
    * StackSet preferences that are required for provisioning the product or updating a provisioned

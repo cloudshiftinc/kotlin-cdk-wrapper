@@ -24,7 +24,15 @@ import kotlin.collections.List
 public open class ValidationResults internal constructor(
   internal override val cdkObject: software.amazon.awscdk.ValidationResults,
 ) : CdkObject(cdkObject) {
-  public constructor() : this(software.amazon.awscdk.ValidationResults())
+  public constructor() : this(software.amazon.awscdk.ValidationResults()
+  )
+
+  public constructor(results: List<ValidationResult>) :
+      this(software.amazon.awscdk.ValidationResults(results.map(ValidationResult::unwrap))
+  )
+
+  public constructor(vararg results: ValidationResult) : this(results.toList()
+  )
 
   /**
    * @param result 

@@ -29,7 +29,8 @@ public open class ApplicationScalingAction internal constructor(
       software.amazon.awscdk.services.cloudwatch.actions.ApplicationScalingAction,
 ) : CdkObject(cdkObject), IAlarmAction {
   public constructor(stepScalingAction: StepScalingAction) :
-      this(software.amazon.awscdk.services.cloudwatch.actions.ApplicationScalingAction(StepScalingAction.unwrap(stepScalingAction)))
+      this(software.amazon.awscdk.services.cloudwatch.actions.ApplicationScalingAction(stepScalingAction.let(StepScalingAction::unwrap))
+  )
 
   /**
    * Returns an alarm action configuration to use an ApplicationScaling StepScalingAction as an
@@ -38,9 +39,9 @@ public open class ApplicationScalingAction internal constructor(
    * @param _scope 
    * @param _alarm 
    */
-  public override fun bind(_scope: Construct, _alarm: IAlarm): AlarmActionConfig =
-      unwrap(this).bind(_scope.let(Construct::unwrap),
-      _alarm.let(IAlarm::unwrap)).let(AlarmActionConfig::wrap)
+  public override fun bind(scope: Construct, alarm: IAlarm): AlarmActionConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap),
+      alarm.let(IAlarm::unwrap)).let(AlarmActionConfig::wrap)
 
   public companion object {
     internal

@@ -41,9 +41,9 @@ public open class FireLensLogDriver internal constructor(
    * @param _scope 
    * @param _containerDefinition 
    */
-  public override fun bind(_scope: Construct, _containerDefinition: ContainerDefinition):
-      LogDriverConfig = unwrap(this).bind(_scope.let(Construct::unwrap),
-      _containerDefinition.let(ContainerDefinition::unwrap)).let(LogDriverConfig::wrap)
+  public override fun bind(scope: Construct, containerDefinition: ContainerDefinition):
+      LogDriverConfig = unwrap(this).bind(scope.let(Construct::unwrap),
+      containerDefinition.let(ContainerDefinition::unwrap)).let(LogDriverConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.FireLensLogDriver].

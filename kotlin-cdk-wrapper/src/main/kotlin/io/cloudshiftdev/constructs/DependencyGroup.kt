@@ -8,7 +8,8 @@ public open class DependencyGroup internal constructor(
   internal override val cdkObject: software.constructs.DependencyGroup,
 ) : CdkObject(cdkObject), IDependable {
   public constructor(deps: IDependable) :
-      this(software.constructs.DependencyGroup(IDependable.unwrap(deps)))
+      this(software.constructs.DependencyGroup(deps.let(IDependable::unwrap))
+  )
 
   public open fun add(scopes: IDependable) {
     unwrap(this).add(scopes.let(IDependable::unwrap))

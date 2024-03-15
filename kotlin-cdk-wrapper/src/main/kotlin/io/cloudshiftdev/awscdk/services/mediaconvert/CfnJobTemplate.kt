@@ -148,15 +148,15 @@ public open class CfnJobTemplate internal constructor(
   /**
    * Optional.
    */
-  public open fun hopDestinations(__idx_ac66f0: List<Any>) {
-    unwrap(this).setHopDestinations(__idx_ac66f0)
+  public open fun hopDestinations(_idx_ac66f0: List<Any>) {
+    unwrap(this).setHopDestinations(_idx_ac66f0)
   }
 
   /**
    * Optional.
    */
-  public open fun hopDestinations(vararg __idx_ac66f0: Any): Unit =
-      hopDestinations(__idx_ac66f0.toList())
+  public open fun hopDestinations(vararg _idx_ac66f0: Any): Unit =
+      hopDestinations(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

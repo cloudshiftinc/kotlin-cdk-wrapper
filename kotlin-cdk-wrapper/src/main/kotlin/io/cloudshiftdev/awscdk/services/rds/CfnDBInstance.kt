@@ -261,15 +261,15 @@ public open class CfnDBInstance internal constructor(
   /**
    * The AWS Identity and Access Management (IAM) roles associated with the DB instance.
    */
-  public open fun associatedRoles(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAssociatedRoles(__idx_ac66f0)
+  public open fun associatedRoles(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAssociatedRoles(_idx_ac66f0)
   }
 
   /**
    * The AWS Identity and Access Management (IAM) roles associated with the DB instance.
    */
-  public open fun associatedRoles(vararg __idx_ac66f0: Any): Unit =
-      associatedRoles(__idx_ac66f0.toList())
+  public open fun associatedRoles(vararg _idx_ac66f0: Any): Unit =
+      associatedRoles(_idx_ac66f0.toList())
 
   /**
    * The CA identifier of the CA certificate used for the DB instance's server certificate.
@@ -1171,16 +1171,16 @@ public open class CfnDBInstance internal constructor(
    * The number of CPU cores and the number of threads per core for the DB instance class of the DB
    * instance.
    */
-  public open fun processorFeatures(__idx_ac66f0: List<Any>) {
-    unwrap(this).setProcessorFeatures(__idx_ac66f0)
+  public open fun processorFeatures(_idx_ac66f0: List<Any>) {
+    unwrap(this).setProcessorFeatures(_idx_ac66f0)
   }
 
   /**
    * The number of CPU cores and the number of threads per core for the DB instance class of the DB
    * instance.
    */
-  public open fun processorFeatures(vararg __idx_ac66f0: Any): Unit =
-      processorFeatures(__idx_ac66f0.toList())
+  public open fun processorFeatures(vararg _idx_ac66f0: Any): Unit =
+      processorFeatures(_idx_ac66f0.toList())
 
   /**
    * The order of priority in which an Aurora Replica is promoted to the primary instance after a

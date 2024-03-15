@@ -41,10 +41,10 @@ public open class LinuxGpuBuildImage internal constructor(
   public override fun bind(
     scope: Construct,
     project: IProject,
-    _options: BuildImageBindOptions,
+    options: BuildImageBindOptions,
   ): BuildImageConfig = unwrap(this).bind(scope.let(Construct::unwrap),
       project.let(IProject::unwrap),
-      _options.let(BuildImageBindOptions::unwrap)).let(BuildImageConfig::wrap)
+      options.let(BuildImageBindOptions::unwrap)).let(BuildImageConfig::wrap)
 
   /**
    * Function that allows the build image access to the construct tree.
@@ -58,8 +58,8 @@ public open class LinuxGpuBuildImage internal constructor(
   public override fun bind(
     scope: Construct,
     project: IProject,
-    _options: BuildImageBindOptions.Builder.() -> Unit,
-  ): BuildImageConfig = bind(scope, project, BuildImageBindOptions(_options))
+    options: BuildImageBindOptions.Builder.() -> Unit,
+  ): BuildImageConfig = bind(scope, project, BuildImageBindOptions(options))
 
   /**
    * The default `ComputeType` to use with this image, if one was not specified in

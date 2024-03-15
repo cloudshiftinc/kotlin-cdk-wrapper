@@ -28,10 +28,12 @@ import kotlin.jvm.JvmName
 public open class DockerImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.DockerImage,
 ) : CdkObject(cdkObject) {
-  public constructor(image: String, _imageHash: String) :
-      this(software.amazon.awscdk.DockerImage(image, _imageHash))
+  public constructor(image: String) : this(software.amazon.awscdk.DockerImage(image)
+  )
 
-  public constructor(image: String) : this(software.amazon.awscdk.DockerImage(image))
+  public constructor(image: String, imageHash: String) :
+      this(software.amazon.awscdk.DockerImage(image, imageHash)
+  )
 
   /**
    * Copies a file or directory out of the Docker image to the local filesystem.

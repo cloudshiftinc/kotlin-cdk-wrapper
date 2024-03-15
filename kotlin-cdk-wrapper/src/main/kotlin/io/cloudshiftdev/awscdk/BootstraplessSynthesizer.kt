@@ -53,9 +53,8 @@ public open class BootstraplessSynthesizer internal constructor(
    *
    * @param _asset 
    */
-  public override fun addDockerImageAsset(_asset: DockerImageAssetSource): DockerImageAssetLocation
-      =
-      unwrap(this).addDockerImageAsset(_asset.let(DockerImageAssetSource::unwrap)).let(DockerImageAssetLocation::wrap)
+  public override fun addDockerImageAsset(asset: DockerImageAssetSource): DockerImageAssetLocation =
+      unwrap(this).addDockerImageAsset(asset.let(DockerImageAssetSource::unwrap)).let(DockerImageAssetLocation::wrap)
 
   /**
    * Register a Docker Image Asset.
@@ -72,8 +71,8 @@ public open class BootstraplessSynthesizer internal constructor(
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("60e85405255a4559d9d101644bfe36735011455aae5a7b2c0ff140d999863ded")
-  public override fun addDockerImageAsset(_asset: DockerImageAssetSource.Builder.() -> Unit):
-      DockerImageAssetLocation = addDockerImageAsset(DockerImageAssetSource(_asset))
+  public override fun addDockerImageAsset(asset: DockerImageAssetSource.Builder.() -> Unit):
+      DockerImageAssetLocation = addDockerImageAsset(DockerImageAssetSource(asset))
 
   /**
    * Register a File Asset.
@@ -88,8 +87,8 @@ public open class BootstraplessSynthesizer internal constructor(
    *
    * @param _asset 
    */
-  public override fun addFileAsset(_asset: FileAssetSource): FileAssetLocation =
-      unwrap(this).addFileAsset(_asset.let(FileAssetSource::unwrap)).let(FileAssetLocation::wrap)
+  public override fun addFileAsset(asset: FileAssetSource): FileAssetLocation =
+      unwrap(this).addFileAsset(asset.let(FileAssetSource::unwrap)).let(FileAssetLocation::wrap)
 
   /**
    * Register a File Asset.
@@ -106,8 +105,8 @@ public open class BootstraplessSynthesizer internal constructor(
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("b8c4a8252dd3ca6f0e54c1277f4347dc34084a3d362bd2ed69cb738a218590d6")
-  public override fun addFileAsset(_asset: FileAssetSource.Builder.() -> Unit): FileAssetLocation =
-      addFileAsset(FileAssetSource(_asset))
+  public override fun addFileAsset(asset: FileAssetSource.Builder.() -> Unit): FileAssetLocation =
+      addFileAsset(FileAssetSource(asset))
 
   /**
    * Synthesize the associated stack to the session.

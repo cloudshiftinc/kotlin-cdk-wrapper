@@ -166,15 +166,15 @@ public open class CfnIndex internal constructor(
   /**
    * Specifies the properties of an index field.
    */
-  public open fun documentMetadataConfigurations(__idx_ac66f0: List<Any>) {
-    unwrap(this).setDocumentMetadataConfigurations(__idx_ac66f0)
+  public open fun documentMetadataConfigurations(_idx_ac66f0: List<Any>) {
+    unwrap(this).setDocumentMetadataConfigurations(_idx_ac66f0)
   }
 
   /**
    * Specifies the properties of an index field.
    */
-  public open fun documentMetadataConfigurations(vararg __idx_ac66f0: Any): Unit =
-      documentMetadataConfigurations(__idx_ac66f0.toList())
+  public open fun documentMetadataConfigurations(vararg _idx_ac66f0: Any): Unit =
+      documentMetadataConfigurations(_idx_ac66f0.toList())
 
   /**
    * Indicates whether the index is a Enterprise Edition index or a Developer Edition index.
@@ -307,15 +307,15 @@ public open class CfnIndex internal constructor(
   /**
    * Defines the type of user token used for the index.
    */
-  public open fun userTokenConfigurations(__idx_ac66f0: List<Any>) {
-    unwrap(this).setUserTokenConfigurations(__idx_ac66f0)
+  public open fun userTokenConfigurations(_idx_ac66f0: List<Any>) {
+    unwrap(this).setUserTokenConfigurations(_idx_ac66f0)
   }
 
   /**
    * Defines the type of user token used for the index.
    */
-  public open fun userTokenConfigurations(vararg __idx_ac66f0: Any): Unit =
-      userTokenConfigurations(__idx_ac66f0.toList())
+  public open fun userTokenConfigurations(vararg _idx_ac66f0: Any): Unit =
+      userTokenConfigurations(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.kendra.CfnIndex].

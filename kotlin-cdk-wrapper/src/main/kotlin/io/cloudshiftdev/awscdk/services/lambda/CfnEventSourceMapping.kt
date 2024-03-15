@@ -524,16 +524,16 @@ public open class CfnEventSourceMapping internal constructor(
    * An array of the authentication protocol, VPC components, or virtual host to secure and define
    * your event source.
    */
-  public open fun sourceAccessConfigurations(__idx_ac66f0: List<Any>) {
-    unwrap(this).setSourceAccessConfigurations(__idx_ac66f0)
+  public open fun sourceAccessConfigurations(_idx_ac66f0: List<Any>) {
+    unwrap(this).setSourceAccessConfigurations(_idx_ac66f0)
   }
 
   /**
    * An array of the authentication protocol, VPC components, or virtual host to secure and define
    * your event source.
    */
-  public open fun sourceAccessConfigurations(vararg __idx_ac66f0: Any): Unit =
-      sourceAccessConfigurations(__idx_ac66f0.toList())
+  public open fun sourceAccessConfigurations(vararg _idx_ac66f0: Any): Unit =
+      sourceAccessConfigurations(_idx_ac66f0.toList())
 
   /**
    * The position in a stream from which to start reading.

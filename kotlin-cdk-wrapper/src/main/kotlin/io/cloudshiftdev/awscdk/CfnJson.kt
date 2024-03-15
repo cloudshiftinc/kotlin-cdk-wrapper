@@ -54,8 +54,8 @@ public open class CfnJson internal constructor(
    *
    * @param _context 
    */
-  public override fun resolve(_context: IResolveContext): Any =
-      unwrap(this).resolve(_context.let(IResolveContext::unwrap))
+  public override fun resolve(context: IResolveContext): Any =
+      unwrap(this).resolve(context.let(IResolveContext::unwrap))
 
   /**
    * This is required in case someone JSON.stringifys an object which references this object.

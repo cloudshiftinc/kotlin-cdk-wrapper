@@ -25,13 +25,17 @@ import kotlin.String
 public open class ValidationResult internal constructor(
   internal override val cdkObject: software.amazon.awscdk.ValidationResult,
 ) : CdkObject(cdkObject) {
-  public constructor(errorMessage: String, results: ValidationResults) :
-      this(software.amazon.awscdk.ValidationResult(errorMessage, ValidationResults.unwrap(results)))
+  public constructor() : this(software.amazon.awscdk.ValidationResult()
+  )
 
   public constructor(errorMessage: String) :
-      this(software.amazon.awscdk.ValidationResult(errorMessage))
+      this(software.amazon.awscdk.ValidationResult(errorMessage)
+  )
 
-  public constructor() : this(software.amazon.awscdk.ValidationResult())
+  public constructor(errorMessage: String, results: ValidationResults) :
+      this(software.amazon.awscdk.ValidationResult(errorMessage,
+      results.let(ValidationResults::unwrap))
+  )
 
   /**
    * Turn a failed validation into an exception.

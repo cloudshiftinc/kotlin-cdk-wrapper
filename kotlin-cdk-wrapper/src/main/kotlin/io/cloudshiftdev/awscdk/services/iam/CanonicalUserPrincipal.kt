@@ -29,7 +29,8 @@ public open class CanonicalUserPrincipal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.CanonicalUserPrincipal,
 ) : PrincipalBase(cdkObject) {
   public constructor(canonicalUserId: String) :
-      this(software.amazon.awscdk.services.iam.CanonicalUserPrincipal(canonicalUserId))
+      this(software.amazon.awscdk.services.iam.CanonicalUserPrincipal(canonicalUserId)
+  )
 
   /**
    * unique identifier assigned by AWS for every account.

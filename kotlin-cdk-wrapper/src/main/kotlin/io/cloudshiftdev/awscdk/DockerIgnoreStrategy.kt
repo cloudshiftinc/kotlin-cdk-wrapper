@@ -24,7 +24,8 @@ public open class DockerIgnoreStrategy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.DockerIgnoreStrategy,
 ) : IgnoreStrategy(cdkObject) {
   public constructor(absoluteRootPath: String, patterns: List<String>) :
-      this(software.amazon.awscdk.DockerIgnoreStrategy(absoluteRootPath, patterns))
+      this(software.amazon.awscdk.DockerIgnoreStrategy(absoluteRootPath, patterns)
+  )
 
   /**
    * Adds another pattern.

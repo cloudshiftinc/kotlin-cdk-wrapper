@@ -111,15 +111,15 @@ public open class CfnClientVpnEndpoint internal constructor(
   /**
    * Information about the authentication method to be used to authenticate clients.
    */
-  public open fun authenticationOptions(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAuthenticationOptions(__idx_ac66f0)
+  public open fun authenticationOptions(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAuthenticationOptions(_idx_ac66f0)
   }
 
   /**
    * Information about the authentication method to be used to authenticate clients.
    */
-  public open fun authenticationOptions(vararg __idx_ac66f0: Any): Unit =
-      authenticationOptions(__idx_ac66f0.toList())
+  public open fun authenticationOptions(vararg _idx_ac66f0: Any): Unit =
+      authenticationOptions(_idx_ac66f0.toList())
 
   /**
    * The IPv4 address range, in CIDR notation, from which to assign client IP addresses.
@@ -346,15 +346,15 @@ public open class CfnClientVpnEndpoint internal constructor(
   /**
    * The tags to apply to the Client VPN endpoint during creation.
    */
-  public open fun tagSpecifications(__idx_ac66f0: List<Any>) {
-    unwrap(this).setTagSpecifications(__idx_ac66f0)
+  public open fun tagSpecifications(_idx_ac66f0: List<Any>) {
+    unwrap(this).setTagSpecifications(_idx_ac66f0)
   }
 
   /**
    * The tags to apply to the Client VPN endpoint during creation.
    */
-  public open fun tagSpecifications(vararg __idx_ac66f0: Any): Unit =
-      tagSpecifications(__idx_ac66f0.toList())
+  public open fun tagSpecifications(vararg _idx_ac66f0: Any): Unit =
+      tagSpecifications(_idx_ac66f0.toList())
 
   /**
    * The transport protocol to be used by the VPN session.

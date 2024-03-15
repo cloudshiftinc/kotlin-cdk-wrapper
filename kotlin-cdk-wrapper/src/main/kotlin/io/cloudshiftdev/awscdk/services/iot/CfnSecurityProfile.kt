@@ -120,15 +120,15 @@ public open class CfnSecurityProfile internal constructor(
   /**
    * A list of metrics whose data is retained (stored).
    */
-  public open fun additionalMetricsToRetainV2(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAdditionalMetricsToRetainV2(__idx_ac66f0)
+  public open fun additionalMetricsToRetainV2(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAdditionalMetricsToRetainV2(_idx_ac66f0)
   }
 
   /**
    * A list of metrics whose data is retained (stored).
    */
-  public open fun additionalMetricsToRetainV2(vararg __idx_ac66f0: Any): Unit =
-      additionalMetricsToRetainV2(__idx_ac66f0.toList())
+  public open fun additionalMetricsToRetainV2(vararg _idx_ac66f0: Any): Unit =
+      additionalMetricsToRetainV2(_idx_ac66f0.toList())
 
   /**
    * Specifies the destinations to which alerts are sent.
@@ -145,8 +145,8 @@ public open class CfnSecurityProfile internal constructor(
   /**
    * Specifies the destinations to which alerts are sent.
    */
-  public open fun alertTargets(__item_ac66f0: Map<String, Any>) {
-    unwrap(this).setAlertTargets(__item_ac66f0)
+  public open fun alertTargets(_item_ac66f0: Map<String, Any>) {
+    unwrap(this).setAlertTargets(_item_ac66f0)
   }
 
   /**
@@ -169,14 +169,14 @@ public open class CfnSecurityProfile internal constructor(
   /**
    * Specifies the behaviors that, when violated by a device (thing), cause an alert.
    */
-  public open fun behaviors(__idx_ac66f0: List<Any>) {
-    unwrap(this).setBehaviors(__idx_ac66f0)
+  public open fun behaviors(_idx_ac66f0: List<Any>) {
+    unwrap(this).setBehaviors(_idx_ac66f0)
   }
 
   /**
    * Specifies the behaviors that, when violated by a device (thing), cause an alert.
    */
-  public open fun behaviors(vararg __idx_ac66f0: Any): Unit = behaviors(__idx_ac66f0.toList())
+  public open fun behaviors(vararg _idx_ac66f0: Any): Unit = behaviors(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

@@ -35,18 +35,21 @@ public open class IpTarget internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.targets.IpTarget,
 ) : CdkObject(cdkObject), IApplicationLoadBalancerTarget, INetworkLoadBalancerTarget {
+  public constructor(ipAddress: String) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.IpTarget(ipAddress)
+  )
+
+  public constructor(ipAddress: String, port: Number) :
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.IpTarget(ipAddress, port)
+  )
+
   public constructor(
     ipAddress: String,
     port: Number,
     availabilityZone: String,
   ) : this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.IpTarget(ipAddress, port,
-      availabilityZone))
-
-  public constructor(ipAddress: String, port: Number) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.IpTarget(ipAddress, port))
-
-  public constructor(ipAddress: String) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.IpTarget(ipAddress))
+      availabilityZone)
+  )
 
   /**
    * Register this instance target with a load balancer.

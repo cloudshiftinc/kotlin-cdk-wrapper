@@ -38,8 +38,8 @@ public open class Spacer internal constructor(
    * @param _x 
    * @param _y 
    */
-  public override fun position(_x: Number, _y: Number) {
-    unwrap(this).position(_x, _y)
+  public override fun position(x: Number, y: Number) {
+    unwrap(this).position(x, y)
   }
 
   /**

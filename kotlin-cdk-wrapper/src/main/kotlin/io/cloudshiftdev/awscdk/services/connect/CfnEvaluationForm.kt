@@ -169,14 +169,14 @@ public open class CfnEvaluationForm internal constructor(
   /**
    * Items that are part of the evaluation form.
    */
-  public open fun items(__idx_ac66f0: List<Any>) {
-    unwrap(this).setItems(__idx_ac66f0)
+  public open fun items(_idx_ac66f0: List<Any>) {
+    unwrap(this).setItems(_idx_ac66f0)
   }
 
   /**
    * Items that are part of the evaluation form.
    */
-  public open fun items(vararg __idx_ac66f0: Any): Unit = items(__idx_ac66f0.toList())
+  public open fun items(vararg _idx_ac66f0: Any): Unit = items(_idx_ac66f0.toList())
 
   /**
    * A scoring strategy of the evaluation form.

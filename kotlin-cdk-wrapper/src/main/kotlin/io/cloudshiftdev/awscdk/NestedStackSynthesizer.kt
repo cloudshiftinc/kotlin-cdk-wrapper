@@ -28,7 +28,8 @@ public open class NestedStackSynthesizer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.NestedStackSynthesizer,
 ) : StackSynthesizer(cdkObject) {
   public constructor(parentDeployment: IStackSynthesizer) :
-      this(software.amazon.awscdk.NestedStackSynthesizer(IStackSynthesizer.unwrap(parentDeployment)))
+      this(software.amazon.awscdk.NestedStackSynthesizer(parentDeployment.let(IStackSynthesizer::unwrap))
+  )
 
   /**
    * Register a Docker Image Asset.

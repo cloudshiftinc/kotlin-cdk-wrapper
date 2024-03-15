@@ -35,7 +35,8 @@ public open class WebSocketLambdaIntegration internal constructor(
 ) : WebSocketRouteIntegration(cdkObject) {
   public constructor(id: String, handler: IFunction) :
       this(software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketLambdaIntegration(id,
-      IFunction.unwrap(handler)))
+      handler.let(IFunction::unwrap))
+  )
 
   /**
    * Bind this integration to the route.

@@ -70,7 +70,8 @@ internal class AsmMethodAdapter(
                             }
                         else -> sourceMethod?.parameterNames?.get(index) ?: "arg$index"
 
-                    }
+                    }.removePrefix("_")
+
                 var theType: TypeName = type.toTypeName()
                 if (genericParams.isNotEmpty()) {
                     theType = genericParams[index]

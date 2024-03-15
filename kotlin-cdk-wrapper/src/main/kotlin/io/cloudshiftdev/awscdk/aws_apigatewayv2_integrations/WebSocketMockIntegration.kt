@@ -26,7 +26,8 @@ public open class WebSocketMockIntegration internal constructor(
       software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketMockIntegration,
 ) : WebSocketRouteIntegration(cdkObject) {
   public constructor(id: String) :
-      this(software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketMockIntegration(id))
+      this(software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketMockIntegration(id)
+  )
 
   /**
    * Bind this integration to the route.

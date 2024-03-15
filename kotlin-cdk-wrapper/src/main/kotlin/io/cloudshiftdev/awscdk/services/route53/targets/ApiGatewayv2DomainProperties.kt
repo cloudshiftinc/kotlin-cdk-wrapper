@@ -32,7 +32,8 @@ public open class ApiGatewayv2DomainProperties internal constructor(
 ) : CdkObject(cdkObject), IAliasRecordTarget {
   public constructor(regionalDomainName: String, regionalHostedZoneId: String) :
       this(software.amazon.awscdk.services.route53.targets.ApiGatewayv2DomainProperties(regionalDomainName,
-      regionalHostedZoneId))
+      regionalHostedZoneId)
+  )
 
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
@@ -40,8 +41,8 @@ public open class ApiGatewayv2DomainProperties internal constructor(
    * @param _record 
    * @param _zone
    */
-  public override fun bind(_record: IRecordSet): AliasRecordTargetConfig =
-      unwrap(this).bind(_record.let(IRecordSet::unwrap)).let(AliasRecordTargetConfig::wrap)
+  public override fun bind(record: IRecordSet): AliasRecordTargetConfig =
+      unwrap(this).bind(record.let(IRecordSet::unwrap)).let(AliasRecordTargetConfig::wrap)
 
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
@@ -49,9 +50,9 @@ public open class ApiGatewayv2DomainProperties internal constructor(
    * @param _record 
    * @param _zone
    */
-  public override fun bind(_record: IRecordSet, _zone: IHostedZone): AliasRecordTargetConfig =
-      unwrap(this).bind(_record.let(IRecordSet::unwrap),
-      _zone.let(IHostedZone::unwrap)).let(AliasRecordTargetConfig::wrap)
+  public override fun bind(record: IRecordSet, zone: IHostedZone): AliasRecordTargetConfig =
+      unwrap(this).bind(record.let(IRecordSet::unwrap),
+      zone.let(IHostedZone::unwrap)).let(AliasRecordTargetConfig::wrap)
 
   public companion object {
     internal

@@ -68,15 +68,15 @@ public open class CfnResourceGroup internal constructor(
   /**
    * The tags (key and value pairs) that will be associated with the resource group.
    */
-  public open fun resourceGroupTags(__idx_ac66f0: List<Any>) {
-    unwrap(this).setResourceGroupTags(__idx_ac66f0)
+  public open fun resourceGroupTags(_idx_ac66f0: List<Any>) {
+    unwrap(this).setResourceGroupTags(_idx_ac66f0)
   }
 
   /**
    * The tags (key and value pairs) that will be associated with the resource group.
    */
-  public open fun resourceGroupTags(vararg __idx_ac66f0: Any): Unit =
-      resourceGroupTags(__idx_ac66f0.toList())
+  public open fun resourceGroupTags(vararg _idx_ac66f0: Any): Unit =
+      resourceGroupTags(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.inspector.CfnResourceGroup].

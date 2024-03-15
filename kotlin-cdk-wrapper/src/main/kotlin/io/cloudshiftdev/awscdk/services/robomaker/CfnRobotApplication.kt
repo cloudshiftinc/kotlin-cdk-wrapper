@@ -151,14 +151,14 @@ public open class CfnRobotApplication internal constructor(
   /**
    * The sources of the robot application.
    */
-  public open fun sources(__idx_ac66f0: List<Any>) {
-    unwrap(this).setSources(__idx_ac66f0)
+  public open fun sources(_idx_ac66f0: List<Any>) {
+    unwrap(this).setSources(_idx_ac66f0)
   }
 
   /**
    * The sources of the robot application.
    */
-  public open fun sources(vararg __idx_ac66f0: Any): Unit = sources(__idx_ac66f0.toList())
+  public open fun sources(vararg _idx_ac66f0: Any): Unit = sources(_idx_ac66f0.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

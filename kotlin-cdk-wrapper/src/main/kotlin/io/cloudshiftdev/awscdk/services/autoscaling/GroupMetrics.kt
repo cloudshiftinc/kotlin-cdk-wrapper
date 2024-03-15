@@ -37,7 +37,8 @@ public open class GroupMetrics internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.autoscaling.GroupMetrics,
 ) : CdkObject(cdkObject) {
   public constructor(metrics: GroupMetric) :
-      this(software.amazon.awscdk.services.autoscaling.GroupMetrics(GroupMetric.unwrap(metrics)))
+      this(software.amazon.awscdk.services.autoscaling.GroupMetrics(metrics.let(GroupMetric::unwrap))
+  )
 
   public companion object {
     public fun all(): GroupMetrics =

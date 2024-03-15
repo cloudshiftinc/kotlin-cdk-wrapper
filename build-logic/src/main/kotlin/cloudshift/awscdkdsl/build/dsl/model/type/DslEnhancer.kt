@@ -43,13 +43,25 @@ internal class DslEnhancer(private val model: CdkModel) {
                     varargs = true,
                 )
 
-                val code = CodeBlock.builder()
-                    .addStatement(
-                        "return %N(%N.toList())",
-                        spec.name,
-                        lastParam.name,
-                    )
-                    .build()
+                val code = when {
+                    spec.isConstructor -> {
+                        CodeBlock.builder()
+                            .addStatement(
+                                "%N.toList()",
+                                lastParam.name,
+                            )
+                            .build()
+                    }
+                        else -> {
+                            CodeBlock.builder()
+                                .addStatement(
+                                    "return %N(%N.toList())",
+                                    spec.name,
+                                    lastParam.name,
+                                )
+                                .build()
+                        }
+                }
 
                 listOf(
                     spec.copy(
@@ -82,12 +94,24 @@ internal class DslEnhancer(private val model: CdkModel) {
         val formatSpecs = FormatSpecifiers()
         baseParams.forEach { formatSpecs.add("%N", it.name) }
 
-        val formatStr = "return %N(${formatSpecs.formatString(true)}%T(%N))"
+        val formatArgs = mutableListOf<Any>()
+        val prefix = when {
+            spec.isConstructor ->""
+            else -> {
+                formatArgs.add(spec.name)
+                "return %N("
+            }
+        }
+        val suffix = when {
+            spec.isConstructor -> ""
+            else -> ")"
+        }
+        val formatStr = "$prefix${formatSpecs.formatString(true)}%T(%N)$suffix"
 
         val body = CodeBlock.builder()
             .addStatement(
                 formatStr,
-                spec.name,
+                *formatArgs.toTypedArray(),
                 *formatSpecs.formatArgs(),
                 lastParam.type.mapClassName(),
                 lastParam.name,
@@ -102,7 +126,10 @@ internal class DslEnhancer(private val model: CdkModel) {
             .addMember("%S", "${spec.name}${spec.signature}".sha256())
             .build()
 
-        val annotations = listOf(suppressJvmAnnotation, jvmNameAnnotation)
+        val annotations = when {
+            spec.isConstructor -> emptyList()
+            else -> listOf(suppressJvmAnnotation, jvmNameAnnotation)
+        }
 
         return listOf(
             spec.copy(

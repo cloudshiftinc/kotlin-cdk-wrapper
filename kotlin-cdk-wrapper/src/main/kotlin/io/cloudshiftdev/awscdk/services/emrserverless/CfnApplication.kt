@@ -243,15 +243,15 @@ public open class CfnApplication internal constructor(
   /**
    * The initial capacity of the application.
    */
-  public open fun initialCapacity(__idx_ac66f0: List<Any>) {
-    unwrap(this).setInitialCapacity(__idx_ac66f0)
+  public open fun initialCapacity(_idx_ac66f0: List<Any>) {
+    unwrap(this).setInitialCapacity(_idx_ac66f0)
   }
 
   /**
    * The initial capacity of the application.
    */
-  public open fun initialCapacity(vararg __idx_ac66f0: Any): Unit =
-      initialCapacity(__idx_ac66f0.toList())
+  public open fun initialCapacity(vararg _idx_ac66f0: Any): Unit =
+      initialCapacity(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -401,8 +401,8 @@ public open class CfnApplication internal constructor(
    * [GetApplication](https://docs.aws.amazon.com/emr-serverless/latest/APIReference/API_GetApplication.html)
    * API operation.
    */
-  public open fun runtimeConfiguration(__idx_ac66f0: List<Any>) {
-    unwrap(this).setRuntimeConfiguration(__idx_ac66f0)
+  public open fun runtimeConfiguration(_idx_ac66f0: List<Any>) {
+    unwrap(this).setRuntimeConfiguration(_idx_ac66f0)
   }
 
   /**
@@ -414,8 +414,8 @@ public open class CfnApplication internal constructor(
    * [GetApplication](https://docs.aws.amazon.com/emr-serverless/latest/APIReference/API_GetApplication.html)
    * API operation.
    */
-  public open fun runtimeConfiguration(vararg __idx_ac66f0: Any): Unit =
-      runtimeConfiguration(__idx_ac66f0.toList())
+  public open fun runtimeConfiguration(vararg _idx_ac66f0: Any): Unit =
+      runtimeConfiguration(_idx_ac66f0.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.
@@ -467,8 +467,8 @@ public open class CfnApplication internal constructor(
   /**
    * The specification applied to each worker type.
    */
-  public open fun workerTypeSpecifications(__item_ac66f0: Map<String, Any>) {
-    unwrap(this).setWorkerTypeSpecifications(__item_ac66f0)
+  public open fun workerTypeSpecifications(_item_ac66f0: Map<String, Any>) {
+    unwrap(this).setWorkerTypeSpecifications(_item_ac66f0)
   }
 
   /**

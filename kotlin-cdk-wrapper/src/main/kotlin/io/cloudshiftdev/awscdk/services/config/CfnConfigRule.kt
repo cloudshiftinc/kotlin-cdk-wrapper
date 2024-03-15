@@ -200,15 +200,15 @@ public open class CfnConfigRule internal constructor(
   /**
    * The modes the AWS Config rule can be evaluated in.
    */
-  public open fun evaluationModes(__idx_ac66f0: List<Any>) {
-    unwrap(this).setEvaluationModes(__idx_ac66f0)
+  public open fun evaluationModes(_idx_ac66f0: List<Any>) {
+    unwrap(this).setEvaluationModes(_idx_ac66f0)
   }
 
   /**
    * The modes the AWS Config rule can be evaluated in.
    */
-  public open fun evaluationModes(vararg __idx_ac66f0: Any): Unit =
-      evaluationModes(__idx_ac66f0.toList())
+  public open fun evaluationModes(vararg _idx_ac66f0: Any): Unit =
+      evaluationModes(_idx_ac66f0.toList())
 
   /**
    * A string, in JSON format, that is passed to the AWS Config rule Lambda function.

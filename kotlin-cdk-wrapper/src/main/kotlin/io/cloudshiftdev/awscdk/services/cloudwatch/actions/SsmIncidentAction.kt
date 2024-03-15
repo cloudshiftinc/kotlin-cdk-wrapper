@@ -26,7 +26,8 @@ public open class SsmIncidentAction internal constructor(
       software.amazon.awscdk.services.cloudwatch.actions.SsmIncidentAction,
 ) : CdkObject(cdkObject), IAlarmAction {
   public constructor(responsePlanName: String) :
-      this(software.amazon.awscdk.services.cloudwatch.actions.SsmIncidentAction(responsePlanName))
+      this(software.amazon.awscdk.services.cloudwatch.actions.SsmIncidentAction(responsePlanName)
+  )
 
   /**
    * Returns an alarm action configuration to use an SSM Incident as an alarm action based on an
@@ -35,9 +36,9 @@ public open class SsmIncidentAction internal constructor(
    * @param _scope 
    * @param _alarm 
    */
-  public override fun bind(_scope: Construct, _alarm: IAlarm): AlarmActionConfig =
-      unwrap(this).bind(_scope.let(Construct::unwrap),
-      _alarm.let(IAlarm::unwrap)).let(AlarmActionConfig::wrap)
+  public override fun bind(scope: Construct, alarm: IAlarm): AlarmActionConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap),
+      alarm.let(IAlarm::unwrap)).let(AlarmActionConfig::wrap)
 
   public companion object {
     internal

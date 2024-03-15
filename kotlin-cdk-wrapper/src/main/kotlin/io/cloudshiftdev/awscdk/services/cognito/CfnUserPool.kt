@@ -488,8 +488,8 @@ public open class CfnUserPool internal constructor(
    *
    * These attributes can be standard or custom attributes.
    */
-  public open fun schema(__idx_ac66f0: List<Any>) {
-    unwrap(this).setSchema(__idx_ac66f0)
+  public open fun schema(_idx_ac66f0: List<Any>) {
+    unwrap(this).setSchema(_idx_ac66f0)
   }
 
   /**
@@ -497,7 +497,7 @@ public open class CfnUserPool internal constructor(
    *
    * These attributes can be standard or custom attributes.
    */
-  public open fun schema(vararg __idx_ac66f0: Any): Unit = schema(__idx_ac66f0.toList())
+  public open fun schema(vararg _idx_ac66f0: Any): Unit = schema(_idx_ac66f0.toList())
 
   /**
    * A string representing the SMS authentication message.

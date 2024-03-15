@@ -21,7 +21,8 @@ public open class InlineCode internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.synthetics.InlineCode,
 ) : Code(cdkObject) {
   public constructor(code: String) :
-      this(software.amazon.awscdk.services.synthetics.InlineCode(code))
+      this(software.amazon.awscdk.services.synthetics.InlineCode(code)
+  )
 
   /**
    * Called when the canary is initialized to allow this object to bind to the stack, add resources
@@ -32,11 +33,11 @@ public open class InlineCode internal constructor(
    * @param _family 
    */
   public override fun bind(
-    _scope: Construct,
+    scope: Construct,
     handler: String,
-    _family: RuntimeFamily,
-  ): CodeConfig = unwrap(this).bind(_scope.let(Construct::unwrap), handler,
-      _family.let(RuntimeFamily::unwrap)).let(CodeConfig::wrap)
+    family: RuntimeFamily,
+  ): CodeConfig = unwrap(this).bind(scope.let(Construct::unwrap), handler,
+      family.let(RuntimeFamily::unwrap)).let(CodeConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.InlineCode): InlineCode

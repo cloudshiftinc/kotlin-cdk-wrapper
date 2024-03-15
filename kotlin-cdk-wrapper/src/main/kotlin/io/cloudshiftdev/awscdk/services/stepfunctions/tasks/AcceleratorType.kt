@@ -27,7 +27,8 @@ public open class AcceleratorType internal constructor(
       software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorType,
 ) : CdkObject(cdkObject) {
   public constructor(instanceTypeIdentifier: String) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorType(instanceTypeIdentifier))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorType(instanceTypeIdentifier)
+  )
 
   public companion object {
     public fun of(acceleratorClass: AcceleratorClass, instanceSize: InstanceSize): AcceleratorType =

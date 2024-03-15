@@ -152,16 +152,16 @@ public open class CfnCapability internal constructor(
    * Specifies one or more locations in Amazon S3, each specifying an EDI document that can be used
    * with this capability.
    */
-  public open fun instructionsDocuments(__idx_ac66f0: List<Any>) {
-    unwrap(this).setInstructionsDocuments(__idx_ac66f0)
+  public open fun instructionsDocuments(_idx_ac66f0: List<Any>) {
+    unwrap(this).setInstructionsDocuments(_idx_ac66f0)
   }
 
   /**
    * Specifies one or more locations in Amazon S3, each specifying an EDI document that can be used
    * with this capability.
    */
-  public open fun instructionsDocuments(vararg __idx_ac66f0: Any): Unit =
-      instructionsDocuments(__idx_ac66f0.toList())
+  public open fun instructionsDocuments(vararg _idx_ac66f0: Any): Unit =
+      instructionsDocuments(_idx_ac66f0.toList())
 
   /**
    * The display name of the capability.

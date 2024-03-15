@@ -87,8 +87,8 @@ public open class PublicHostedZone internal constructor(
    *
    * @param _vpc 
    */
-  public override fun addVpc(_vpc: IVpc) {
-    unwrap(this).addVpc(_vpc.let(IVpc::unwrap))
+  public override fun addVpc(vpc: IVpc) {
+    unwrap(this).addVpc(vpc.let(IVpc::unwrap))
   }
 
   /**

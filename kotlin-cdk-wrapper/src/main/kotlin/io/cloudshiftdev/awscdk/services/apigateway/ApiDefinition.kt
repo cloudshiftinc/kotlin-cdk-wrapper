@@ -47,8 +47,8 @@ public abstract class ApiDefinition internal constructor(
    * @param _scope 
    * @param _restApi 
    */
-  public open fun bindAfterCreate(_scope: Construct, _restApi: IRestApi) {
-    unwrap(this).bindAfterCreate(_scope.let(Construct::unwrap), _restApi.let(IRestApi::unwrap))
+  public open fun bindAfterCreate(scope: Construct, restApi: IRestApi) {
+    unwrap(this).bindAfterCreate(scope.let(Construct::unwrap), restApi.let(IRestApi::unwrap))
   }
 
   private class Wrapper(

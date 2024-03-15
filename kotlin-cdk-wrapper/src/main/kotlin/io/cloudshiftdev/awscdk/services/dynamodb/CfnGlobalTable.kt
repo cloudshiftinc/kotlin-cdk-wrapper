@@ -296,15 +296,15 @@ public open class CfnGlobalTable internal constructor(
   /**
    * A list of attributes that describe the key schema for the global table and indexes.
    */
-  public open fun attributeDefinitions(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAttributeDefinitions(__idx_ac66f0)
+  public open fun attributeDefinitions(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAttributeDefinitions(_idx_ac66f0)
   }
 
   /**
    * A list of attributes that describe the key schema for the global table and indexes.
    */
-  public open fun attributeDefinitions(vararg __idx_ac66f0: Any): Unit =
-      attributeDefinitions(__idx_ac66f0.toList())
+  public open fun attributeDefinitions(vararg _idx_ac66f0: Any): Unit =
+      attributeDefinitions(_idx_ac66f0.toList())
 
   /**
    * Specifies how you are charged for read and write throughput and how you manage capacity.
@@ -337,15 +337,15 @@ public open class CfnGlobalTable internal constructor(
   /**
    * Global secondary indexes to be created on the global table.
    */
-  public open fun globalSecondaryIndexes(__idx_ac66f0: List<Any>) {
-    unwrap(this).setGlobalSecondaryIndexes(__idx_ac66f0)
+  public open fun globalSecondaryIndexes(_idx_ac66f0: List<Any>) {
+    unwrap(this).setGlobalSecondaryIndexes(_idx_ac66f0)
   }
 
   /**
    * Global secondary indexes to be created on the global table.
    */
-  public open fun globalSecondaryIndexes(vararg __idx_ac66f0: Any): Unit =
-      globalSecondaryIndexes(__idx_ac66f0.toList())
+  public open fun globalSecondaryIndexes(vararg _idx_ac66f0: Any): Unit =
+      globalSecondaryIndexes(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -371,14 +371,14 @@ public open class CfnGlobalTable internal constructor(
   /**
    * Specifies the attributes that make up the primary key for the table.
    */
-  public open fun keySchema(__idx_ac66f0: List<Any>) {
-    unwrap(this).setKeySchema(__idx_ac66f0)
+  public open fun keySchema(_idx_ac66f0: List<Any>) {
+    unwrap(this).setKeySchema(_idx_ac66f0)
   }
 
   /**
    * Specifies the attributes that make up the primary key for the table.
    */
-  public open fun keySchema(vararg __idx_ac66f0: Any): Unit = keySchema(__idx_ac66f0.toList())
+  public open fun keySchema(vararg _idx_ac66f0: Any): Unit = keySchema(_idx_ac66f0.toList())
 
   /**
    * Local secondary indexes to be created on the table.
@@ -395,15 +395,15 @@ public open class CfnGlobalTable internal constructor(
   /**
    * Local secondary indexes to be created on the table.
    */
-  public open fun localSecondaryIndexes(__idx_ac66f0: List<Any>) {
-    unwrap(this).setLocalSecondaryIndexes(__idx_ac66f0)
+  public open fun localSecondaryIndexes(_idx_ac66f0: List<Any>) {
+    unwrap(this).setLocalSecondaryIndexes(_idx_ac66f0)
   }
 
   /**
    * Local secondary indexes to be created on the table.
    */
-  public open fun localSecondaryIndexes(vararg __idx_ac66f0: Any): Unit =
-      localSecondaryIndexes(__idx_ac66f0.toList())
+  public open fun localSecondaryIndexes(vararg _idx_ac66f0: Any): Unit =
+      localSecondaryIndexes(_idx_ac66f0.toList())
 
   /**
    * Specifies the list of replicas for your global table.
@@ -420,14 +420,14 @@ public open class CfnGlobalTable internal constructor(
   /**
    * Specifies the list of replicas for your global table.
    */
-  public open fun replicas(__idx_ac66f0: List<Any>) {
-    unwrap(this).setReplicas(__idx_ac66f0)
+  public open fun replicas(_idx_ac66f0: List<Any>) {
+    unwrap(this).setReplicas(_idx_ac66f0)
   }
 
   /**
    * Specifies the list of replicas for your global table.
    */
-  public open fun replicas(vararg __idx_ac66f0: Any): Unit = replicas(__idx_ac66f0.toList())
+  public open fun replicas(vararg _idx_ac66f0: Any): Unit = replicas(_idx_ac66f0.toList())
 
   /**
    * Specifies the settings to enable server-side encryption.

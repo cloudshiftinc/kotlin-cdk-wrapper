@@ -113,15 +113,15 @@ public open class CfnFramework internal constructor(
   /**
    * Contains detailed information about all of the controls of a framework.
    */
-  public open fun frameworkControls(__idx_ac66f0: List<Any>) {
-    unwrap(this).setFrameworkControls(__idx_ac66f0)
+  public open fun frameworkControls(_idx_ac66f0: List<Any>) {
+    unwrap(this).setFrameworkControls(_idx_ac66f0)
   }
 
   /**
    * Contains detailed information about all of the controls of a framework.
    */
-  public open fun frameworkControls(vararg __idx_ac66f0: Any): Unit =
-      frameworkControls(__idx_ac66f0.toList())
+  public open fun frameworkControls(vararg _idx_ac66f0: Any): Unit =
+      frameworkControls(_idx_ac66f0.toList())
 
   /**
    * An optional description of the framework with a maximum 1,024 characters.

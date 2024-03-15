@@ -104,15 +104,15 @@ public open class CfnSizeConstraintSet internal constructor(
   /**
    * The size constraint and the part of the web request to check.
    */
-  public open fun sizeConstraints(__idx_ac66f0: List<Any>) {
-    unwrap(this).setSizeConstraints(__idx_ac66f0)
+  public open fun sizeConstraints(_idx_ac66f0: List<Any>) {
+    unwrap(this).setSizeConstraints(_idx_ac66f0)
   }
 
   /**
    * The size constraint and the part of the web request to check.
    */
-  public open fun sizeConstraints(vararg __idx_ac66f0: Any): Unit =
-      sizeConstraints(__idx_ac66f0.toList())
+  public open fun sizeConstraints(vararg _idx_ac66f0: Any): Unit =
+      sizeConstraints(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.waf.regional.CfnSizeConstraintSet].

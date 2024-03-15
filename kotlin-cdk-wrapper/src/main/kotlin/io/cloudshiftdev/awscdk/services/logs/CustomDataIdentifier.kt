@@ -43,7 +43,8 @@ public open class CustomDataIdentifier internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.logs.CustomDataIdentifier,
 ) : DataIdentifier(cdkObject) {
   public constructor(name: String, regex: String) :
-      this(software.amazon.awscdk.services.logs.CustomDataIdentifier(name, regex))
+      this(software.amazon.awscdk.services.logs.CustomDataIdentifier(name, regex)
+  )
 
   /**
    * * the name of the custom data identifier.

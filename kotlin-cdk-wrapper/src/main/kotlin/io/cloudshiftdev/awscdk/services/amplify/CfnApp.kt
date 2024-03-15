@@ -217,14 +217,14 @@ public open class CfnApp internal constructor(
   /**
    * The custom rewrite and redirect rules for an Amplify app.
    */
-  public open fun customRules(__idx_ac66f0: List<Any>) {
-    unwrap(this).setCustomRules(__idx_ac66f0)
+  public open fun customRules(_idx_ac66f0: List<Any>) {
+    unwrap(this).setCustomRules(_idx_ac66f0)
   }
 
   /**
    * The custom rewrite and redirect rules for an Amplify app.
    */
-  public open fun customRules(vararg __idx_ac66f0: Any): Unit = customRules(__idx_ac66f0.toList())
+  public open fun customRules(vararg _idx_ac66f0: Any): Unit = customRules(_idx_ac66f0.toList())
 
   /**
    * The description of the Amplify app.
@@ -275,15 +275,15 @@ public open class CfnApp internal constructor(
   /**
    * The environment variables map for an Amplify app.
    */
-  public open fun environmentVariables(__idx_ac66f0: List<Any>) {
-    unwrap(this).setEnvironmentVariables(__idx_ac66f0)
+  public open fun environmentVariables(_idx_ac66f0: List<Any>) {
+    unwrap(this).setEnvironmentVariables(_idx_ac66f0)
   }
 
   /**
    * The environment variables map for an Amplify app.
    */
-  public open fun environmentVariables(vararg __idx_ac66f0: Any): Unit =
-      environmentVariables(__idx_ac66f0.toList())
+  public open fun environmentVariables(vararg _idx_ac66f0: Any): Unit =
+      environmentVariables(_idx_ac66f0.toList())
 
   /**
    * AWS Identity and Access Management ( IAM ) service role for the Amazon Resource Name (ARN) of

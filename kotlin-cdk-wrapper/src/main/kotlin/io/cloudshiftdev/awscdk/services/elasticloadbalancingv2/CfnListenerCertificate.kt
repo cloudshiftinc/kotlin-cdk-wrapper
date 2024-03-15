@@ -59,14 +59,14 @@ public open class CfnListenerCertificate internal constructor(
   /**
    * The certificate.
    */
-  public open fun certificates(__idx_ac66f0: List<Any>) {
-    unwrap(this).setCertificates(__idx_ac66f0)
+  public open fun certificates(_idx_ac66f0: List<Any>) {
+    unwrap(this).setCertificates(_idx_ac66f0)
   }
 
   /**
    * The certificate.
    */
-  public open fun certificates(vararg __idx_ac66f0: Any): Unit = certificates(__idx_ac66f0.toList())
+  public open fun certificates(vararg _idx_ac66f0: Any): Unit = certificates(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

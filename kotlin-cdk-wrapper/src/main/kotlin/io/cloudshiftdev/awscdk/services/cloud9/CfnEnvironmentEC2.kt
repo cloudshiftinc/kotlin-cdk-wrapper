@@ -186,14 +186,14 @@ public open class CfnEnvironmentEC2 internal constructor(
   /**
    * Any AWS CodeCommit source code repositories to be cloned into the development environment.
    */
-  public open fun repositories(__idx_ac66f0: List<Any>) {
-    unwrap(this).setRepositories(__idx_ac66f0)
+  public open fun repositories(_idx_ac66f0: List<Any>) {
+    unwrap(this).setRepositories(_idx_ac66f0)
   }
 
   /**
    * Any AWS CodeCommit source code repositories to be cloned into the development environment.
    */
-  public open fun repositories(vararg __idx_ac66f0: Any): Unit = repositories(__idx_ac66f0.toList())
+  public open fun repositories(vararg _idx_ac66f0: Any): Unit = repositories(_idx_ac66f0.toList())
 
   /**
    * The ID of the subnet in Amazon Virtual Private Cloud (Amazon VPC) that AWS Cloud9 will use to

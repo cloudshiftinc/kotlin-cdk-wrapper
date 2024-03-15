@@ -41,17 +41,20 @@ public open class InterfaceVpcEndpointAwsService internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService,
 ) : CdkObject(cdkObject), IInterfaceVpcEndpointService {
+  public constructor(name: String) :
+      this(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService(name)
+  )
+
+  public constructor(name: String, prefix: String) :
+      this(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService(name, prefix)
+  )
+
   public constructor(
     name: String,
     prefix: String,
     port: Number,
-  ) : this(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService(name, prefix, port))
-
-  public constructor(name: String, prefix: String) :
-      this(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService(name, prefix))
-
-  public constructor(name: String) :
-      this(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService(name))
+  ) : this(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService(name, prefix, port)
+  )
 
   /**
    * The name of the service.

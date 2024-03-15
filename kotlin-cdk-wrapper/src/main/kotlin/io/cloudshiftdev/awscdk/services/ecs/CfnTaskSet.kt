@@ -154,15 +154,14 @@ public open class CfnTaskSet internal constructor(
   /**
    * A load balancer object representing the load balancer to use with the task set.
    */
-  public open fun loadBalancers(__idx_ac66f0: List<Any>) {
-    unwrap(this).setLoadBalancers(__idx_ac66f0)
+  public open fun loadBalancers(_idx_ac66f0: List<Any>) {
+    unwrap(this).setLoadBalancers(_idx_ac66f0)
   }
 
   /**
    * A load balancer object representing the load balancer to use with the task set.
    */
-  public open fun loadBalancers(vararg __idx_ac66f0: Any): Unit =
-      loadBalancers(__idx_ac66f0.toList())
+  public open fun loadBalancers(vararg _idx_ac66f0: Any): Unit = loadBalancers(_idx_ac66f0.toList())
 
   /**
    * The network configuration for the task set.
@@ -261,15 +260,15 @@ public open class CfnTaskSet internal constructor(
   /**
    * The details of the service discovery registries to assign to this task set.
    */
-  public open fun serviceRegistries(__idx_ac66f0: List<Any>) {
-    unwrap(this).setServiceRegistries(__idx_ac66f0)
+  public open fun serviceRegistries(_idx_ac66f0: List<Any>) {
+    unwrap(this).setServiceRegistries(_idx_ac66f0)
   }
 
   /**
    * The details of the service discovery registries to assign to this task set.
    */
-  public open fun serviceRegistries(vararg __idx_ac66f0: Any): Unit =
-      serviceRegistries(__idx_ac66f0.toList())
+  public open fun serviceRegistries(vararg _idx_ac66f0: Any): Unit =
+      serviceRegistries(_idx_ac66f0.toList())
 
   /**
    * The metadata that you apply to the task set to help you categorize and organize them.

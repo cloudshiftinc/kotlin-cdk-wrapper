@@ -116,14 +116,14 @@ public open class CfnRuleset internal constructor(
   /**
    * Contains metadata about the ruleset.
    */
-  public open fun rules(__idx_ac66f0: List<Any>) {
-    unwrap(this).setRules(__idx_ac66f0)
+  public open fun rules(_idx_ac66f0: List<Any>) {
+    unwrap(this).setRules(_idx_ac66f0)
   }
 
   /**
    * Contains metadata about the ruleset.
    */
-  public open fun rules(vararg __idx_ac66f0: Any): Unit = rules(__idx_ac66f0.toList())
+  public open fun rules(vararg _idx_ac66f0: Any): Unit = rules(_idx_ac66f0.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

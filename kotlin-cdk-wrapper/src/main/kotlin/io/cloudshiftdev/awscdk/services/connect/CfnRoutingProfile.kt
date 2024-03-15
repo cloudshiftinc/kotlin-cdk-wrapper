@@ -150,15 +150,15 @@ public open class CfnRoutingProfile internal constructor(
   /**
    * The channels agents can handle in the Contact Control Panel (CCP) for this routing profile.
    */
-  public open fun mediaConcurrencies(__idx_ac66f0: List<Any>) {
-    unwrap(this).setMediaConcurrencies(__idx_ac66f0)
+  public open fun mediaConcurrencies(_idx_ac66f0: List<Any>) {
+    unwrap(this).setMediaConcurrencies(_idx_ac66f0)
   }
 
   /**
    * The channels agents can handle in the Contact Control Panel (CCP) for this routing profile.
    */
-  public open fun mediaConcurrencies(vararg __idx_ac66f0: Any): Unit =
-      mediaConcurrencies(__idx_ac66f0.toList())
+  public open fun mediaConcurrencies(vararg _idx_ac66f0: Any): Unit =
+      mediaConcurrencies(_idx_ac66f0.toList())
 
   /**
    * The name of the routing profile.
@@ -187,14 +187,14 @@ public open class CfnRoutingProfile internal constructor(
   /**
    * The inbound queues associated with the routing profile.
    */
-  public open fun queueConfigs(__idx_ac66f0: List<Any>) {
-    unwrap(this).setQueueConfigs(__idx_ac66f0)
+  public open fun queueConfigs(_idx_ac66f0: List<Any>) {
+    unwrap(this).setQueueConfigs(_idx_ac66f0)
   }
 
   /**
    * The inbound queues associated with the routing profile.
    */
-  public open fun queueConfigs(vararg __idx_ac66f0: Any): Unit = queueConfigs(__idx_ac66f0.toList())
+  public open fun queueConfigs(vararg _idx_ac66f0: Any): Unit = queueConfigs(_idx_ac66f0.toList())
 
   /**
    * The tags used to organize, track, or control access for this resource.

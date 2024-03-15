@@ -132,15 +132,15 @@ public open class CfnCapacityReservationFleet internal constructor(
   /**
    * Information about the instance types for which to reserve the capacity.
    */
-  public open fun instanceTypeSpecifications(__idx_ac66f0: List<Any>) {
-    unwrap(this).setInstanceTypeSpecifications(__idx_ac66f0)
+  public open fun instanceTypeSpecifications(_idx_ac66f0: List<Any>) {
+    unwrap(this).setInstanceTypeSpecifications(_idx_ac66f0)
   }
 
   /**
    * Information about the instance types for which to reserve the capacity.
    */
-  public open fun instanceTypeSpecifications(vararg __idx_ac66f0: Any): Unit =
-      instanceTypeSpecifications(__idx_ac66f0.toList())
+  public open fun instanceTypeSpecifications(vararg _idx_ac66f0: Any): Unit =
+      instanceTypeSpecifications(_idx_ac66f0.toList())
 
   /**
    * Used to add an end date to a Capacity Reservation Fleet that has no end date and time.
@@ -198,15 +198,15 @@ public open class CfnCapacityReservationFleet internal constructor(
   /**
    * The tags to assign to the Capacity Reservation Fleet.
    */
-  public open fun tagSpecifications(__idx_ac66f0: List<Any>) {
-    unwrap(this).setTagSpecifications(__idx_ac66f0)
+  public open fun tagSpecifications(_idx_ac66f0: List<Any>) {
+    unwrap(this).setTagSpecifications(_idx_ac66f0)
   }
 
   /**
    * The tags to assign to the Capacity Reservation Fleet.
    */
-  public open fun tagSpecifications(vararg __idx_ac66f0: Any): Unit =
-      tagSpecifications(__idx_ac66f0.toList())
+  public open fun tagSpecifications(vararg _idx_ac66f0: Any): Unit =
+      tagSpecifications(_idx_ac66f0.toList())
 
   /**
    * Indicates the tenancy of the Capacity Reservation Fleet.

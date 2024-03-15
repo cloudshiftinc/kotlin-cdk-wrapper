@@ -18,7 +18,8 @@ import kotlin.String
 public open class EnvironmentUtils internal constructor(
   internal override val cdkObject: software.amazon.awscdk.cxapi.EnvironmentUtils,
 ) : CdkObject(cdkObject) {
-  public constructor() : this(software.amazon.awscdk.cxapi.EnvironmentUtils())
+  public constructor() : this(software.amazon.awscdk.cxapi.EnvironmentUtils()
+  )
 
   public companion object {
     public fun format(account: String, region: String): String =

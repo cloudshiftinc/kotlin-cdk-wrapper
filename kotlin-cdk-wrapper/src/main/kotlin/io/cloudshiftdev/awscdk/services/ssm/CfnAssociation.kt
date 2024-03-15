@@ -325,14 +325,14 @@ public open class CfnAssociation internal constructor(
   /**
    * The targets for the association.
    */
-  public open fun targets(__idx_ac66f0: List<Any>) {
-    unwrap(this).setTargets(__idx_ac66f0)
+  public open fun targets(_idx_ac66f0: List<Any>) {
+    unwrap(this).setTargets(_idx_ac66f0)
   }
 
   /**
    * The targets for the association.
    */
-  public open fun targets(vararg __idx_ac66f0: Any): Unit = targets(__idx_ac66f0.toList())
+  public open fun targets(vararg _idx_ac66f0: Any): Unit = targets(_idx_ac66f0.toList())
 
   /**
    * The number of seconds the service should wait for the association status to show "Success"

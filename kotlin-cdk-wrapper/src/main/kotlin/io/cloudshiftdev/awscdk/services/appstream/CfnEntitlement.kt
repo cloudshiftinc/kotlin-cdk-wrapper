@@ -85,14 +85,14 @@ public open class CfnEntitlement internal constructor(
   /**
    * The attributes of the entitlement.
    */
-  public open fun attributes(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAttributes(__idx_ac66f0)
+  public open fun attributes(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAttributes(_idx_ac66f0)
   }
 
   /**
    * The attributes of the entitlement.
    */
-  public open fun attributes(vararg __idx_ac66f0: Any): Unit = attributes(__idx_ac66f0.toList())
+  public open fun attributes(vararg _idx_ac66f0: Any): Unit = attributes(_idx_ac66f0.toList())
 
   /**
    * The description of the entitlement.

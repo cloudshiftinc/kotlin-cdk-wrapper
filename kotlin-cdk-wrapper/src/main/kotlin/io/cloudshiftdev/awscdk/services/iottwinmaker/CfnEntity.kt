@@ -177,8 +177,8 @@ public open class CfnEntity internal constructor(
   /**
    * An object that maps strings to the components in the entity.
    */
-  public open fun components(__item_ac66f0: Map<String, Any>) {
-    unwrap(this).setComponents(__item_ac66f0)
+  public open fun components(_item_ac66f0: Map<String, Any>) {
+    unwrap(this).setComponents(_item_ac66f0)
   }
 
   /**
@@ -196,8 +196,8 @@ public open class CfnEntity internal constructor(
   /**
    * Maps string to `compositeComponent` updates in the request.
    */
-  public open fun compositeComponents(__item_ac66f0: Map<String, Any>) {
-    unwrap(this).setCompositeComponents(__item_ac66f0)
+  public open fun compositeComponents(_item_ac66f0: Map<String, Any>) {
+    unwrap(this).setCompositeComponents(_item_ac66f0)
   }
 
   /**

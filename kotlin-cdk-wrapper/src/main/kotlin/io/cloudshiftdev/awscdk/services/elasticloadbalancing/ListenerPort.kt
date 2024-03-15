@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.ec2.IConnectable
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.Port
+import kotlin.Unit
 
 /**
  * Reference to a listener's port just created.
@@ -38,8 +39,13 @@ public open class ListenerPort internal constructor(
       software.amazon.awscdk.services.elasticloadbalancing.ListenerPort,
 ) : CdkObject(cdkObject), IConnectable {
   public constructor(securityGroup: ISecurityGroup, defaultPort: Port) :
-      this(software.amazon.awscdk.services.elasticloadbalancing.ListenerPort(ISecurityGroup.unwrap(securityGroup),
-      Port.unwrap(defaultPort)))
+      this(software.amazon.awscdk.services.elasticloadbalancing.ListenerPort(securityGroup.let(ISecurityGroup::unwrap),
+      defaultPort.let(Port::unwrap))
+  )
+
+  public constructor(securityGroup: ISecurityGroup, defaultPort: Port.Builder.() -> Unit) :
+      this(securityGroup, Port(defaultPort)
+  )
 
   /**
    * The network connections associated with this resource.

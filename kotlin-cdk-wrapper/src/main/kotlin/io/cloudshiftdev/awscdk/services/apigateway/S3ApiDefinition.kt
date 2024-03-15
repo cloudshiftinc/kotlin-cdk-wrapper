@@ -23,15 +23,18 @@ import kotlin.String
 public open class S3ApiDefinition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.S3ApiDefinition,
 ) : ApiDefinition(cdkObject) {
+  public constructor(bucket: IBucket, key: String) :
+      this(software.amazon.awscdk.services.apigateway.S3ApiDefinition(bucket.let(IBucket::unwrap),
+      key)
+  )
+
   public constructor(
     bucket: IBucket,
     key: String,
     objectVersion: String,
-  ) : this(software.amazon.awscdk.services.apigateway.S3ApiDefinition(IBucket.unwrap(bucket), key,
-      objectVersion))
-
-  public constructor(bucket: IBucket, key: String) :
-      this(software.amazon.awscdk.services.apigateway.S3ApiDefinition(IBucket.unwrap(bucket), key))
+  ) : this(software.amazon.awscdk.services.apigateway.S3ApiDefinition(bucket.let(IBucket::unwrap),
+      key, objectVersion)
+  )
 
   /**
    * Called when the specification is initialized to allow this object to bind to the stack, add
@@ -39,8 +42,8 @@ public open class S3ApiDefinition internal constructor(
    *
    * @param _scope 
    */
-  public override fun bind(_scope: Construct): ApiDefinitionConfig =
-      unwrap(this).bind(_scope.let(Construct::unwrap)).let(ApiDefinitionConfig::wrap)
+  public override fun bind(scope: Construct): ApiDefinitionConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(ApiDefinitionConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.S3ApiDefinition):

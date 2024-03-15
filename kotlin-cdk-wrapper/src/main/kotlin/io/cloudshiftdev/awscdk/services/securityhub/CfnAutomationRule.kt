@@ -266,15 +266,15 @@ public open class CfnAutomationRule internal constructor(
    * One or more actions to update finding fields if a finding matches the conditions specified in
    * `Criteria` .
    */
-  public open fun actions(__idx_ac66f0: List<Any>) {
-    unwrap(this).setActions(__idx_ac66f0)
+  public open fun actions(_idx_ac66f0: List<Any>) {
+    unwrap(this).setActions(_idx_ac66f0)
   }
 
   /**
    * One or more actions to update finding fields if a finding matches the conditions specified in
    * `Criteria` .
    */
-  public open fun actions(vararg __idx_ac66f0: Any): Unit = actions(__idx_ac66f0.toList())
+  public open fun actions(vararg _idx_ac66f0: Any): Unit = actions(_idx_ac66f0.toList())
 
   /**
    * A timestamp that indicates when the rule was created.

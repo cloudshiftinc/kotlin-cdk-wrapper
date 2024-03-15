@@ -123,14 +123,14 @@ public open class CfnTaskTemplate internal constructor(
   /**
    * The default values for fields when a task is created by referencing this template.
    */
-  public open fun defaults(__idx_ac66f0: List<Any>) {
-    unwrap(this).setDefaults(__idx_ac66f0)
+  public open fun defaults(_idx_ac66f0: List<Any>) {
+    unwrap(this).setDefaults(_idx_ac66f0)
   }
 
   /**
    * The default values for fields when a task is created by referencing this template.
    */
-  public open fun defaults(vararg __idx_ac66f0: Any): Unit = defaults(__idx_ac66f0.toList())
+  public open fun defaults(vararg _idx_ac66f0: Any): Unit = defaults(_idx_ac66f0.toList())
 
   /**
    * The description of the task template.
@@ -159,14 +159,14 @@ public open class CfnTaskTemplate internal constructor(
   /**
    * Fields that are part of the template.
    */
-  public open fun fields(__idx_ac66f0: List<Any>) {
-    unwrap(this).setFields(__idx_ac66f0)
+  public open fun fields(_idx_ac66f0: List<Any>) {
+    unwrap(this).setFields(_idx_ac66f0)
   }
 
   /**
    * Fields that are part of the template.
    */
-  public open fun fields(vararg __idx_ac66f0: Any): Unit = fields(__idx_ac66f0.toList())
+  public open fun fields(vararg _idx_ac66f0: Any): Unit = fields(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

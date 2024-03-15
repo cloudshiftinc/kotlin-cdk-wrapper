@@ -137,15 +137,15 @@ public open class CfnStateMachineAlias internal constructor(
   /**
    * The routing configuration of an alias.
    */
-  public open fun routingConfiguration(__idx_ac66f0: List<Any>) {
-    unwrap(this).setRoutingConfiguration(__idx_ac66f0)
+  public open fun routingConfiguration(_idx_ac66f0: List<Any>) {
+    unwrap(this).setRoutingConfiguration(_idx_ac66f0)
   }
 
   /**
    * The routing configuration of an alias.
    */
-  public open fun routingConfiguration(vararg __idx_ac66f0: Any): Unit =
-      routingConfiguration(__idx_ac66f0.toList())
+  public open fun routingConfiguration(vararg _idx_ac66f0: Any): Unit =
+      routingConfiguration(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.CfnStateMachineAlias].

@@ -172,15 +172,15 @@ public open class CfnPipeline internal constructor(
   /**
    * The parameter objects used with the pipeline.
    */
-  public open fun parameterObjects(__idx_ac66f0: List<Any>) {
-    unwrap(this).setParameterObjects(__idx_ac66f0)
+  public open fun parameterObjects(_idx_ac66f0: List<Any>) {
+    unwrap(this).setParameterObjects(_idx_ac66f0)
   }
 
   /**
    * The parameter objects used with the pipeline.
    */
-  public open fun parameterObjects(vararg __idx_ac66f0: Any): Unit =
-      parameterObjects(__idx_ac66f0.toList())
+  public open fun parameterObjects(vararg _idx_ac66f0: Any): Unit =
+      parameterObjects(_idx_ac66f0.toList())
 
   /**
    * The parameter values used with the pipeline.
@@ -197,15 +197,15 @@ public open class CfnPipeline internal constructor(
   /**
    * The parameter values used with the pipeline.
    */
-  public open fun parameterValues(__idx_ac66f0: List<Any>) {
-    unwrap(this).setParameterValues(__idx_ac66f0)
+  public open fun parameterValues(_idx_ac66f0: List<Any>) {
+    unwrap(this).setParameterValues(_idx_ac66f0)
   }
 
   /**
    * The parameter values used with the pipeline.
    */
-  public open fun parameterValues(vararg __idx_ac66f0: Any): Unit =
-      parameterValues(__idx_ac66f0.toList())
+  public open fun parameterValues(vararg _idx_ac66f0: Any): Unit =
+      parameterValues(_idx_ac66f0.toList())
 
   /**
    * The objects that define the pipeline.
@@ -222,15 +222,15 @@ public open class CfnPipeline internal constructor(
   /**
    * The objects that define the pipeline.
    */
-  public open fun pipelineObjects(__idx_ac66f0: List<Any>) {
-    unwrap(this).setPipelineObjects(__idx_ac66f0)
+  public open fun pipelineObjects(_idx_ac66f0: List<Any>) {
+    unwrap(this).setPipelineObjects(_idx_ac66f0)
   }
 
   /**
    * The objects that define the pipeline.
    */
-  public open fun pipelineObjects(vararg __idx_ac66f0: Any): Unit =
-      pipelineObjects(__idx_ac66f0.toList())
+  public open fun pipelineObjects(vararg _idx_ac66f0: Any): Unit =
+      pipelineObjects(_idx_ac66f0.toList())
 
   /**
    * A list of arbitrary tags (key-value pairs) to associate with the pipeline, which you can use to

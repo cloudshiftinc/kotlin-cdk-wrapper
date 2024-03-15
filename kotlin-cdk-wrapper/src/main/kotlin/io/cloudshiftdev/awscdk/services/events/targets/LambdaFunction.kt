@@ -61,8 +61,8 @@ public open class LambdaFunction internal constructor(
    * @param rule 
    * @param _id
    */
-  public override fun bind(rule: IRule, _id: String): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap), _id).let(RuleTargetConfig::wrap)
+  public override fun bind(rule: IRule, id: String): RuleTargetConfig =
+      unwrap(this).bind(rule.let(IRule::unwrap), id).let(RuleTargetConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.events.targets.LambdaFunction].

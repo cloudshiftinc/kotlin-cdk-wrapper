@@ -67,9 +67,9 @@ public open class SchemaFile internal constructor(
    * @param api The binding GraphQL Api. 
    * @param _options
    */
-  public override fun bind(api: IGraphqlApi, _options: SchemaBindOptions): ISchemaConfig =
+  public override fun bind(api: IGraphqlApi, options: SchemaBindOptions): ISchemaConfig =
       unwrap(this).bind(api.let(IGraphqlApi::unwrap),
-      _options.let(SchemaBindOptions::unwrap)).let(ISchemaConfig::wrap)
+      options.let(SchemaBindOptions::unwrap)).let(ISchemaConfig::wrap)
 
   /**
    * Called when the GraphQL Api is initialized to allow this object to bind to the stack.
@@ -79,8 +79,8 @@ public open class SchemaFile internal constructor(
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("3253a33994cbabdedb099d3bff4a9072399bc8fd0da1ebf43f0cb17424e01216")
-  public override fun bind(api: IGraphqlApi, _options: SchemaBindOptions.Builder.() -> Unit):
-      ISchemaConfig = bind(api, SchemaBindOptions(_options))
+  public override fun bind(api: IGraphqlApi, options: SchemaBindOptions.Builder.() -> Unit):
+      ISchemaConfig = bind(api, SchemaBindOptions(options))
 
   /**
    * The definition for this schema.

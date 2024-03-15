@@ -222,15 +222,15 @@ public open class CfnTable internal constructor(
   /**
    * One or more columns that determine how the table data is sorted.
    */
-  public open fun clusteringKeyColumns(__idx_ac66f0: List<Any>) {
-    unwrap(this).setClusteringKeyColumns(__idx_ac66f0)
+  public open fun clusteringKeyColumns(_idx_ac66f0: List<Any>) {
+    unwrap(this).setClusteringKeyColumns(_idx_ac66f0)
   }
 
   /**
    * One or more columns that determine how the table data is sorted.
    */
-  public open fun clusteringKeyColumns(vararg __idx_ac66f0: Any): Unit =
-      clusteringKeyColumns(__idx_ac66f0.toList())
+  public open fun clusteringKeyColumns(vararg _idx_ac66f0: Any): Unit =
+      clusteringKeyColumns(_idx_ac66f0.toList())
 
   /**
    * The default Time To Live (TTL) value for all rows in a table in seconds.
@@ -308,15 +308,15 @@ public open class CfnTable internal constructor(
   /**
    * One or more columns that uniquely identify every row in the table.
    */
-  public open fun partitionKeyColumns(__idx_ac66f0: List<Any>) {
-    unwrap(this).setPartitionKeyColumns(__idx_ac66f0)
+  public open fun partitionKeyColumns(_idx_ac66f0: List<Any>) {
+    unwrap(this).setPartitionKeyColumns(_idx_ac66f0)
   }
 
   /**
    * One or more columns that uniquely identify every row in the table.
    */
-  public open fun partitionKeyColumns(vararg __idx_ac66f0: Any): Unit =
-      partitionKeyColumns(__idx_ac66f0.toList())
+  public open fun partitionKeyColumns(vararg _idx_ac66f0: Any): Unit =
+      partitionKeyColumns(_idx_ac66f0.toList())
 
   /**
    * Specifies if point-in-time recovery is enabled or disabled for the table.
@@ -355,16 +355,16 @@ public open class CfnTable internal constructor(
    * One or more columns that are not part of the primary key - that is, columns that are *not*
    * defined as partition key columns or clustering key columns.
    */
-  public open fun regularColumns(__idx_ac66f0: List<Any>) {
-    unwrap(this).setRegularColumns(__idx_ac66f0)
+  public open fun regularColumns(_idx_ac66f0: List<Any>) {
+    unwrap(this).setRegularColumns(_idx_ac66f0)
   }
 
   /**
    * One or more columns that are not part of the primary key - that is, columns that are *not*
    * defined as partition key columns or clustering key columns.
    */
-  public open fun regularColumns(vararg __idx_ac66f0: Any): Unit =
-      regularColumns(__idx_ac66f0.toList())
+  public open fun regularColumns(vararg _idx_ac66f0: Any): Unit =
+      regularColumns(_idx_ac66f0.toList())
 
   /**
    * The AWS Region specific settings of a multi-Region table.
@@ -381,15 +381,15 @@ public open class CfnTable internal constructor(
   /**
    * The AWS Region specific settings of a multi-Region table.
    */
-  public open fun replicaSpecifications(__idx_ac66f0: List<Any>) {
-    unwrap(this).setReplicaSpecifications(__idx_ac66f0)
+  public open fun replicaSpecifications(_idx_ac66f0: List<Any>) {
+    unwrap(this).setReplicaSpecifications(_idx_ac66f0)
   }
 
   /**
    * The AWS Region specific settings of a multi-Region table.
    */
-  public open fun replicaSpecifications(vararg __idx_ac66f0: Any): Unit =
-      replicaSpecifications(__idx_ac66f0.toList())
+  public open fun replicaSpecifications(vararg _idx_ac66f0: Any): Unit =
+      replicaSpecifications(_idx_ac66f0.toList())
 
   /**
    * The name of the table to be created.

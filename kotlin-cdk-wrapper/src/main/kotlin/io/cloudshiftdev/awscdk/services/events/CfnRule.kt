@@ -319,15 +319,15 @@ public open class CfnRule internal constructor(
    * Adds the specified targets to the specified rule, or updates the targets if they are already
    * associated with the rule.
    */
-  public open fun targets(__idx_ac66f0: List<Any>) {
-    unwrap(this).setTargets(__idx_ac66f0)
+  public open fun targets(_idx_ac66f0: List<Any>) {
+    unwrap(this).setTargets(_idx_ac66f0)
   }
 
   /**
    * Adds the specified targets to the specified rule, or updates the targets if they are already
    * associated with the rule.
    */
-  public open fun targets(vararg __idx_ac66f0: Any): Unit = targets(__idx_ac66f0.toList())
+  public open fun targets(vararg _idx_ac66f0: Any): Unit = targets(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.events.CfnRule].

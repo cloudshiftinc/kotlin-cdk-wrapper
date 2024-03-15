@@ -189,15 +189,15 @@ public open class CfnWorkgroup internal constructor(
   /**
    * A list of parameters to set for finer control over a database.
    */
-  public open fun configParameters(__idx_ac66f0: List<Any>) {
-    unwrap(this).setConfigParameters(__idx_ac66f0)
+  public open fun configParameters(_idx_ac66f0: List<Any>) {
+    unwrap(this).setConfigParameters(_idx_ac66f0)
   }
 
   /**
    * A list of parameters to set for finer control over a database.
    */
-  public open fun configParameters(vararg __idx_ac66f0: Any): Unit =
-      configParameters(__idx_ac66f0.toList())
+  public open fun configParameters(vararg _idx_ac66f0: Any): Unit =
+      configParameters(_idx_ac66f0.toList())
 
   /**
    * The value that specifies whether to enable enhanced virtual private cloud (VPC) routing, which

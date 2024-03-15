@@ -143,8 +143,8 @@ public open class CfnTopic internal constructor(
    * sent from your Amazon SNS topic to subscribed endpoints with the following supported delivery
    * protocols:.
    */
-  public open fun deliveryStatusLogging(__idx_ac66f0: List<Any>) {
-    unwrap(this).setDeliveryStatusLogging(__idx_ac66f0)
+  public open fun deliveryStatusLogging(_idx_ac66f0: List<Any>) {
+    unwrap(this).setDeliveryStatusLogging(_idx_ac66f0)
   }
 
   /**
@@ -152,8 +152,8 @@ public open class CfnTopic internal constructor(
    * sent from your Amazon SNS topic to subscribed endpoints with the following supported delivery
    * protocols:.
    */
-  public open fun deliveryStatusLogging(vararg __idx_ac66f0: Any): Unit =
-      deliveryStatusLogging(__idx_ac66f0.toList())
+  public open fun deliveryStatusLogging(vararg _idx_ac66f0: Any): Unit =
+      deliveryStatusLogging(_idx_ac66f0.toList())
 
   /**
    * The display name to use for an Amazon SNS topic with SMS subscriptions.
@@ -238,14 +238,14 @@ public open class CfnTopic internal constructor(
   /**
    * The Amazon SNS subscriptions (endpoints) for this topic.
    */
-  public open fun subscription(__idx_ac66f0: List<Any>) {
-    unwrap(this).setSubscription(__idx_ac66f0)
+  public open fun subscription(_idx_ac66f0: List<Any>) {
+    unwrap(this).setSubscription(_idx_ac66f0)
   }
 
   /**
    * The Amazon SNS subscriptions (endpoints) for this topic.
    */
-  public open fun subscription(vararg __idx_ac66f0: Any): Unit = subscription(__idx_ac66f0.toList())
+  public open fun subscription(vararg _idx_ac66f0: Any): Unit = subscription(_idx_ac66f0.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

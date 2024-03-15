@@ -49,8 +49,8 @@ public abstract class Backend internal constructor(
    *
    * @param _scope 
    */
-  public open fun bind(_scope: Construct): BackendConfig =
-      unwrap(this).bind(_scope.let(Construct::unwrap)).let(BackendConfig::wrap)
+  public open fun bind(scope: Construct): BackendConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(BackendConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.Backend,

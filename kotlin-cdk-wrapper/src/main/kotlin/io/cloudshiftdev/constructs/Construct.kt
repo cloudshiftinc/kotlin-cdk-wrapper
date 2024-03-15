@@ -11,7 +11,8 @@ public open class Construct internal constructor(
   internal override val cdkObject: software.constructs.Construct,
 ) : CdkObject(cdkObject), IConstruct {
   public constructor(scope: Construct, id: String) :
-      this(software.constructs.Construct(Construct.unwrap(scope), id))
+      this(software.constructs.Construct(scope.let(Construct::unwrap), id)
+  )
 
   public override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 

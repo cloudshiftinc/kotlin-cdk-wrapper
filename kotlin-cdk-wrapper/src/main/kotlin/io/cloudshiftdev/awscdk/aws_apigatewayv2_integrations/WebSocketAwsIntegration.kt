@@ -54,9 +54,9 @@ public open class WebSocketAwsIntegration internal constructor(
    *
    * @param _options 
    */
-  public override fun bind(_options: WebSocketRouteIntegrationBindOptions):
+  public override fun bind(options: WebSocketRouteIntegrationBindOptions):
       WebSocketRouteIntegrationConfig =
-      unwrap(this).bind(_options.let(WebSocketRouteIntegrationBindOptions::unwrap)).let(WebSocketRouteIntegrationConfig::wrap)
+      unwrap(this).bind(options.let(WebSocketRouteIntegrationBindOptions::unwrap)).let(WebSocketRouteIntegrationConfig::wrap)
 
   /**
    * Bind this integration to the route.
@@ -65,8 +65,8 @@ public open class WebSocketAwsIntegration internal constructor(
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("7a7b031c3048abbe6ba7d40d85e75a2ef504b8009c343d60be7d0e9d137fa9bc")
-  public override fun bind(_options: WebSocketRouteIntegrationBindOptions.Builder.() -> Unit):
-      WebSocketRouteIntegrationConfig = bind(WebSocketRouteIntegrationBindOptions(_options))
+  public override fun bind(options: WebSocketRouteIntegrationBindOptions.Builder.() -> Unit):
+      WebSocketRouteIntegrationConfig = bind(WebSocketRouteIntegrationBindOptions(options))
 
   /**
    * A fluent builder for

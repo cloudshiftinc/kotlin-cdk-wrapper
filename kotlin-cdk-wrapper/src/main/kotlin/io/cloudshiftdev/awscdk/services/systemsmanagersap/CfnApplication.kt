@@ -95,14 +95,14 @@ public open class CfnApplication internal constructor(
   /**
    * The credentials of the SAP application.
    */
-  public open fun credentials(__idx_ac66f0: List<Any>) {
-    unwrap(this).setCredentials(__idx_ac66f0)
+  public open fun credentials(_idx_ac66f0: List<Any>) {
+    unwrap(this).setCredentials(_idx_ac66f0)
   }
 
   /**
    * The credentials of the SAP application.
    */
-  public open fun credentials(vararg __idx_ac66f0: Any): Unit = credentials(__idx_ac66f0.toList())
+  public open fun credentials(vararg _idx_ac66f0: Any): Unit = credentials(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

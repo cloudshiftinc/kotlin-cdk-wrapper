@@ -96,15 +96,15 @@ public open class CfnTrail internal constructor(
   /**
    * Specifies the settings for advanced event selectors.
    */
-  public open fun advancedEventSelectors(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAdvancedEventSelectors(__idx_ac66f0)
+  public open fun advancedEventSelectors(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAdvancedEventSelectors(_idx_ac66f0)
   }
 
   /**
    * Specifies the settings for advanced event selectors.
    */
-  public open fun advancedEventSelectors(vararg __idx_ac66f0: Any): Unit =
-      advancedEventSelectors(__idx_ac66f0.toList())
+  public open fun advancedEventSelectors(vararg _idx_ac66f0: Any): Unit =
+      advancedEventSelectors(_idx_ac66f0.toList())
 
   /**
    * `Ref` returns the ARN of the CloudTrail trail, such as
@@ -184,15 +184,15 @@ public open class CfnTrail internal constructor(
   /**
    * Use event selectors to further specify the management and data event settings for your trail.
    */
-  public open fun eventSelectors(__idx_ac66f0: List<Any>) {
-    unwrap(this).setEventSelectors(__idx_ac66f0)
+  public open fun eventSelectors(_idx_ac66f0: List<Any>) {
+    unwrap(this).setEventSelectors(_idx_ac66f0)
   }
 
   /**
    * Use event selectors to further specify the management and data event settings for your trail.
    */
-  public open fun eventSelectors(vararg __idx_ac66f0: Any): Unit =
-      eventSelectors(__idx_ac66f0.toList())
+  public open fun eventSelectors(vararg _idx_ac66f0: Any): Unit =
+      eventSelectors(_idx_ac66f0.toList())
 
   /**
    * Specifies whether the trail is publishing events from global services such as IAM to the log
@@ -231,15 +231,15 @@ public open class CfnTrail internal constructor(
   /**
    * A JSON string that contains the Insights types you want to log on a trail.
    */
-  public open fun insightSelectors(__idx_ac66f0: List<Any>) {
-    unwrap(this).setInsightSelectors(__idx_ac66f0)
+  public open fun insightSelectors(_idx_ac66f0: List<Any>) {
+    unwrap(this).setInsightSelectors(_idx_ac66f0)
   }
 
   /**
    * A JSON string that contains the Insights types you want to log on a trail.
    */
-  public open fun insightSelectors(vararg __idx_ac66f0: Any): Unit =
-      insightSelectors(__idx_ac66f0.toList())
+  public open fun insightSelectors(vararg _idx_ac66f0: Any): Unit =
+      insightSelectors(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

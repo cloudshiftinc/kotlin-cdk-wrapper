@@ -113,14 +113,14 @@ public open class CfnGateway internal constructor(
   /**
    * The list of networks that you want to add.
    */
-  public open fun networks(__idx_ac66f0: List<Any>) {
-    unwrap(this).setNetworks(__idx_ac66f0)
+  public open fun networks(_idx_ac66f0: List<Any>) {
+    unwrap(this).setNetworks(_idx_ac66f0)
   }
 
   /**
    * The list of networks that you want to add.
    */
-  public open fun networks(vararg __idx_ac66f0: Any): Unit = networks(__idx_ac66f0.toList())
+  public open fun networks(vararg _idx_ac66f0: Any): Unit = networks(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.mediaconnect.CfnGateway].

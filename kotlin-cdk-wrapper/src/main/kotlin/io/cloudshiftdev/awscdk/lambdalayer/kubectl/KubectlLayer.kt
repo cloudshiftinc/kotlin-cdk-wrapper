@@ -22,7 +22,8 @@ public open class KubectlLayer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.lambdalayer.kubectl.KubectlLayer,
 ) : LayerVersion(cdkObject) {
   public constructor(scope: Construct, id: String) :
-      this(software.amazon.awscdk.lambdalayer.kubectl.KubectlLayer(Construct.unwrap(scope), id))
+      this(software.amazon.awscdk.lambdalayer.kubectl.KubectlLayer(scope.let(Construct::unwrap), id)
+  )
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.lambdalayer.kubectl.KubectlLayer):

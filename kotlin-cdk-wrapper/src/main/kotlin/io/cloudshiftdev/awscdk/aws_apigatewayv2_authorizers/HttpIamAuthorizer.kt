@@ -34,15 +34,16 @@ public open class HttpIamAuthorizer internal constructor(
       software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpIamAuthorizer,
 ) : CdkObject(cdkObject), IHttpRouteAuthorizer {
   public constructor() :
-      this(software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpIamAuthorizer())
+      this(software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpIamAuthorizer()
+  )
 
   /**
    * Bind this authorizer to a specified Http route.
    *
    * @param _options 
    */
-  public override fun bind(_options: HttpRouteAuthorizerBindOptions): HttpRouteAuthorizerConfig =
-      unwrap(this).bind(_options.let(HttpRouteAuthorizerBindOptions::unwrap)).let(HttpRouteAuthorizerConfig::wrap)
+  public override fun bind(options: HttpRouteAuthorizerBindOptions): HttpRouteAuthorizerConfig =
+      unwrap(this).bind(options.let(HttpRouteAuthorizerBindOptions::unwrap)).let(HttpRouteAuthorizerConfig::wrap)
 
   /**
    * Bind this authorizer to a specified Http route.
@@ -51,8 +52,8 @@ public open class HttpIamAuthorizer internal constructor(
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("7264f1d1173f23e66027e915fda55df480ab8eab246316ad2f01f98a1f9a28cc")
-  public override fun bind(_options: HttpRouteAuthorizerBindOptions.Builder.() -> Unit):
-      HttpRouteAuthorizerConfig = bind(HttpRouteAuthorizerBindOptions(_options))
+  public override fun bind(options: HttpRouteAuthorizerBindOptions.Builder.() -> Unit):
+      HttpRouteAuthorizerConfig = bind(HttpRouteAuthorizerBindOptions(options))
 
   public companion object {
     internal

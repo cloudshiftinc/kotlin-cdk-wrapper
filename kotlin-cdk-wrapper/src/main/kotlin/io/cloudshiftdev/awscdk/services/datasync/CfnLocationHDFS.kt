@@ -191,14 +191,14 @@ public open class CfnLocationHDFS internal constructor(
   /**
    * The NameNode that manages the HDFS namespace.
    */
-  public open fun nameNodes(__idx_ac66f0: List<Any>) {
-    unwrap(this).setNameNodes(__idx_ac66f0)
+  public open fun nameNodes(_idx_ac66f0: List<Any>) {
+    unwrap(this).setNameNodes(_idx_ac66f0)
   }
 
   /**
    * The NameNode that manages the HDFS namespace.
    */
-  public open fun nameNodes(vararg __idx_ac66f0: Any): Unit = nameNodes(__idx_ac66f0.toList())
+  public open fun nameNodes(vararg _idx_ac66f0: Any): Unit = nameNodes(_idx_ac66f0.toList())
 
   /**
    * The Quality of Protection (QOP) configuration specifies the Remote Procedure Call (RPC) and

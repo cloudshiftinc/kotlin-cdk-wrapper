@@ -29,7 +29,8 @@ public open class DomainlessCredentialSpec internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.DomainlessCredentialSpec,
 ) : CredentialSpec(cdkObject) {
   public constructor(fileLocation: String) :
-      this(software.amazon.awscdk.services.ecs.DomainlessCredentialSpec(fileLocation))
+      this(software.amazon.awscdk.services.ecs.DomainlessCredentialSpec(fileLocation)
+  )
 
   public companion object {
     public fun fromS3Bucket(bucket: IBucket, key: String): DomainlessCredentialSpec =

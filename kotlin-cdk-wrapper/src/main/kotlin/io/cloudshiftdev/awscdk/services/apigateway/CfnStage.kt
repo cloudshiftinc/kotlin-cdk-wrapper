@@ -236,15 +236,15 @@ public open class CfnStage internal constructor(
   /**
    * A map that defines the method settings for a Stage resource.
    */
-  public open fun methodSettings(__idx_ac66f0: List<Any>) {
-    unwrap(this).setMethodSettings(__idx_ac66f0)
+  public open fun methodSettings(_idx_ac66f0: List<Any>) {
+    unwrap(this).setMethodSettings(_idx_ac66f0)
   }
 
   /**
    * A map that defines the method settings for a Stage resource.
    */
-  public open fun methodSettings(vararg __idx_ac66f0: Any): Unit =
-      methodSettings(__idx_ac66f0.toList())
+  public open fun methodSettings(vararg _idx_ac66f0: Any): Unit =
+      methodSettings(_idx_ac66f0.toList())
 
   /**
    * The string identifier of the associated RestApi.

@@ -200,14 +200,14 @@ public open class CfnGlobalReplicationGroup internal constructor(
   /**
    * The replication groups that comprise the Global datastore.
    */
-  public open fun members(__idx_ac66f0: List<Any>) {
-    unwrap(this).setMembers(__idx_ac66f0)
+  public open fun members(_idx_ac66f0: List<Any>) {
+    unwrap(this).setMembers(_idx_ac66f0)
   }
 
   /**
    * The replication groups that comprise the Global datastore.
    */
-  public open fun members(vararg __idx_ac66f0: Any): Unit = members(__idx_ac66f0.toList())
+  public open fun members(vararg _idx_ac66f0: Any): Unit = members(_idx_ac66f0.toList())
 
   /**
    * The Regions that comprise the Global Datastore.
@@ -224,15 +224,15 @@ public open class CfnGlobalReplicationGroup internal constructor(
   /**
    * The Regions that comprise the Global Datastore.
    */
-  public open fun regionalConfigurations(__idx_ac66f0: List<Any>) {
-    unwrap(this).setRegionalConfigurations(__idx_ac66f0)
+  public open fun regionalConfigurations(_idx_ac66f0: List<Any>) {
+    unwrap(this).setRegionalConfigurations(_idx_ac66f0)
   }
 
   /**
    * The Regions that comprise the Global Datastore.
    */
-  public open fun regionalConfigurations(vararg __idx_ac66f0: Any): Unit =
-      regionalConfigurations(__idx_ac66f0.toList())
+  public open fun regionalConfigurations(vararg _idx_ac66f0: Any): Unit =
+      regionalConfigurations(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.elasticache.CfnGlobalReplicationGroup].

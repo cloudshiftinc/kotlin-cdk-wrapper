@@ -250,15 +250,15 @@ public open class CfnEnvironment internal constructor(
   /**
    * Defines the storage configuration for a runtime environment.
    */
-  public open fun storageConfigurations(__idx_ac66f0: List<Any>) {
-    unwrap(this).setStorageConfigurations(__idx_ac66f0)
+  public open fun storageConfigurations(_idx_ac66f0: List<Any>) {
+    unwrap(this).setStorageConfigurations(_idx_ac66f0)
   }
 
   /**
    * Defines the storage configuration for a runtime environment.
    */
-  public open fun storageConfigurations(vararg __idx_ac66f0: Any): Unit =
-      storageConfigurations(__idx_ac66f0.toList())
+  public open fun storageConfigurations(vararg _idx_ac66f0: Any): Unit =
+      storageConfigurations(_idx_ac66f0.toList())
 
   /**
    * The list of subnets associated with the VPC for this runtime environment.

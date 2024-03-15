@@ -23,7 +23,8 @@ public open class FoundationModelIdentifier internal constructor(
       software.amazon.awscdk.services.bedrock.FoundationModelIdentifier,
 ) : CdkObject(cdkObject) {
   public constructor(modelId: String) :
-      this(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier(modelId))
+      this(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier(modelId)
+  )
 
   /**
    * the model identifier.

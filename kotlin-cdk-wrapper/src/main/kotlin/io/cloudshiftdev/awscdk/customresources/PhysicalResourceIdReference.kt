@@ -40,7 +40,8 @@ public open class PhysicalResourceIdReference internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.customresources.PhysicalResourceIdReference,
 ) : CdkObject(cdkObject), IResolvable {
-  public constructor() : this(software.amazon.awscdk.customresources.PhysicalResourceIdReference())
+  public constructor() : this(software.amazon.awscdk.customresources.PhysicalResourceIdReference()
+  )
 
   /**
    * The creation stack of this resolvable which will be appended to errors thrown during
@@ -56,8 +57,8 @@ public open class PhysicalResourceIdReference internal constructor(
    *
    * @param _context 
    */
-  public override fun resolve(_context: IResolveContext): Any =
-      unwrap(this).resolve(_context.let(IResolveContext::unwrap))
+  public override fun resolve(context: IResolveContext): Any =
+      unwrap(this).resolve(context.let(IResolveContext::unwrap))
 
   /**
    * toJSON serialization to replace `PhysicalResourceIdReference` with a magic string.

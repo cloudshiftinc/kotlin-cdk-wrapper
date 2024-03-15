@@ -18,8 +18,8 @@ public abstract class StreamEventSource internal constructor(
    *
    * @param _target 
    */
-  public override fun bind(_target: IFunction) {
-    unwrap(this).bind(_target.let(IFunction::unwrap))
+  public override fun bind(target: IFunction) {
+    unwrap(this).bind(target.let(IFunction::unwrap))
   }
 
   private class Wrapper(

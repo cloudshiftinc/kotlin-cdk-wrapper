@@ -351,16 +351,16 @@ public open class CfnEndpointConfig internal constructor(
    * A list of `ProductionVariant` objects, one for each model that you want to host at this
    * endpoint.
    */
-  public open fun productionVariants(__idx_ac66f0: List<Any>) {
-    unwrap(this).setProductionVariants(__idx_ac66f0)
+  public open fun productionVariants(_idx_ac66f0: List<Any>) {
+    unwrap(this).setProductionVariants(_idx_ac66f0)
   }
 
   /**
    * A list of `ProductionVariant` objects, one for each model that you want to host at this
    * endpoint.
    */
-  public open fun productionVariants(vararg __idx_ac66f0: Any): Unit =
-      productionVariants(__idx_ac66f0.toList())
+  public open fun productionVariants(vararg _idx_ac66f0: Any): Unit =
+      productionVariants(_idx_ac66f0.toList())
 
   /**
    * Array of `ProductionVariant` objects.
@@ -377,15 +377,15 @@ public open class CfnEndpointConfig internal constructor(
   /**
    * Array of `ProductionVariant` objects.
    */
-  public open fun shadowProductionVariants(__idx_ac66f0: List<Any>) {
-    unwrap(this).setShadowProductionVariants(__idx_ac66f0)
+  public open fun shadowProductionVariants(_idx_ac66f0: List<Any>) {
+    unwrap(this).setShadowProductionVariants(_idx_ac66f0)
   }
 
   /**
    * Array of `ProductionVariant` objects.
    */
-  public open fun shadowProductionVariants(vararg __idx_ac66f0: Any): Unit =
-      shadowProductionVariants(__idx_ac66f0.toList())
+  public open fun shadowProductionVariants(vararg _idx_ac66f0: Any): Unit =
+      shadowProductionVariants(_idx_ac66f0.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

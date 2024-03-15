@@ -36,7 +36,8 @@ import kotlin.String
 public open class InlineCode internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.InlineCode,
 ) : Code(cdkObject) {
-  public constructor(code: String) : this(software.amazon.awscdk.services.lambda.InlineCode(code))
+  public constructor(code: String) : this(software.amazon.awscdk.services.lambda.InlineCode(code)
+  )
 
   /**
    * Called when the lambda or layer is initialized to allow this object to bind to the stack, add
@@ -44,8 +45,8 @@ public open class InlineCode internal constructor(
    *
    * @param _scope 
    */
-  public override fun bind(_scope: Construct): CodeConfig =
-      unwrap(this).bind(_scope.let(Construct::unwrap)).let(CodeConfig::wrap)
+  public override fun bind(scope: Construct): CodeConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(CodeConfig::wrap)
 
   /**
    * Determines whether this Code is inline code or not.

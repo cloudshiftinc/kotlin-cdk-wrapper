@@ -160,15 +160,15 @@ public open class CfnEnvironmentBlueprintConfiguration internal constructor(
   /**
    * The regional parameters of the environment blueprint.
    */
-  public open fun regionalParameters(__idx_ac66f0: List<Any>) {
-    unwrap(this).setRegionalParameters(__idx_ac66f0)
+  public open fun regionalParameters(_idx_ac66f0: List<Any>) {
+    unwrap(this).setRegionalParameters(_idx_ac66f0)
   }
 
   /**
    * The regional parameters of the environment blueprint.
    */
-  public open fun regionalParameters(vararg __idx_ac66f0: Any): Unit =
-      regionalParameters(__idx_ac66f0.toList())
+  public open fun regionalParameters(vararg _idx_ac66f0: Any): Unit =
+      regionalParameters(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for

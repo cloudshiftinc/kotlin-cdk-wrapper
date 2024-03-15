@@ -22,12 +22,14 @@ import kotlin.collections.Map
 public open class OpenIdConnectPrincipal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.OpenIdConnectPrincipal,
 ) : WebIdentityPrincipal(cdkObject) {
-  public constructor(openIdConnectProvider: IOpenIdConnectProvider, conditions: Map<String, Any>) :
-      this(software.amazon.awscdk.services.iam.OpenIdConnectPrincipal(IOpenIdConnectProvider.unwrap(openIdConnectProvider),
-      conditions))
-
   public constructor(openIdConnectProvider: IOpenIdConnectProvider) :
-      this(software.amazon.awscdk.services.iam.OpenIdConnectPrincipal(IOpenIdConnectProvider.unwrap(openIdConnectProvider)))
+      this(software.amazon.awscdk.services.iam.OpenIdConnectPrincipal(openIdConnectProvider.let(IOpenIdConnectProvider::unwrap))
+  )
+
+  public constructor(openIdConnectProvider: IOpenIdConnectProvider, conditions: Map<String, Any>) :
+      this(software.amazon.awscdk.services.iam.OpenIdConnectPrincipal(openIdConnectProvider.let(IOpenIdConnectProvider::unwrap),
+      conditions)
+  )
 
   /**
    * Return the policy fragment that identifies this principal in a Policy.

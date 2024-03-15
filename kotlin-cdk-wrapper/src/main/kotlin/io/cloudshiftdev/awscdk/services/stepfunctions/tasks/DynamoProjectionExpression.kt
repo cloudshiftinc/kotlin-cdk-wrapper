@@ -23,7 +23,8 @@ public open class DynamoProjectionExpression internal constructor(
       software.amazon.awscdk.services.stepfunctions.tasks.DynamoProjectionExpression,
 ) : CdkObject(cdkObject) {
   public constructor() :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.DynamoProjectionExpression())
+      this(software.amazon.awscdk.services.stepfunctions.tasks.DynamoProjectionExpression()
+  )
 
   /**
    * Adds the array literal access for passed index.

@@ -163,14 +163,14 @@ public open class CfnApiKey internal constructor(
   /**
    * DEPRECATED FOR USAGE PLANS - Specifies stages associated with the API key.
    */
-  public open fun stageKeys(__idx_ac66f0: List<Any>) {
-    unwrap(this).setStageKeys(__idx_ac66f0)
+  public open fun stageKeys(_idx_ac66f0: List<Any>) {
+    unwrap(this).setStageKeys(_idx_ac66f0)
   }
 
   /**
    * DEPRECATED FOR USAGE PLANS - Specifies stages associated with the API key.
    */
-  public open fun stageKeys(vararg __idx_ac66f0: Any): Unit = stageKeys(__idx_ac66f0.toList())
+  public open fun stageKeys(vararg _idx_ac66f0: Any): Unit = stageKeys(_idx_ac66f0.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

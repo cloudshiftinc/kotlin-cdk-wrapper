@@ -24,12 +24,14 @@ import kotlin.String
 public open class ViaServicePrincipal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.kms.ViaServicePrincipal,
 ) : PrincipalBase(cdkObject) {
+  public constructor(serviceName: String) :
+      this(software.amazon.awscdk.services.kms.ViaServicePrincipal(serviceName)
+  )
+
   public constructor(serviceName: String, basePrincipal: IPrincipal) :
       this(software.amazon.awscdk.services.kms.ViaServicePrincipal(serviceName,
-      IPrincipal.unwrap(basePrincipal)))
-
-  public constructor(serviceName: String) :
-      this(software.amazon.awscdk.services.kms.ViaServicePrincipal(serviceName))
+      basePrincipal.let(IPrincipal::unwrap))
+  )
 
   /**
    * Return whether or not this principal is equal to the given principal.

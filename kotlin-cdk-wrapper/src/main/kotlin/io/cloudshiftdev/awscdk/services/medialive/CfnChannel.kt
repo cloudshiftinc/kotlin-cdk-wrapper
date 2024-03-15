@@ -110,14 +110,14 @@ public open class CfnChannel internal constructor(
   /**
    * The settings that identify the destination for the outputs in this MediaLive output package.
    */
-  public open fun destinations(__idx_ac66f0: List<Any>) {
-    unwrap(this).setDestinations(__idx_ac66f0)
+  public open fun destinations(_idx_ac66f0: List<Any>) {
+    unwrap(this).setDestinations(_idx_ac66f0)
   }
 
   /**
    * The settings that identify the destination for the outputs in this MediaLive output package.
    */
-  public open fun destinations(vararg __idx_ac66f0: Any): Unit = destinations(__idx_ac66f0.toList())
+  public open fun destinations(vararg _idx_ac66f0: Any): Unit = destinations(_idx_ac66f0.toList())
 
   /**
    * The encoding configuration for the output content.
@@ -161,15 +161,15 @@ public open class CfnChannel internal constructor(
   /**
    * The list of input attachments for the channel.
    */
-  public open fun inputAttachments(__idx_ac66f0: List<Any>) {
-    unwrap(this).setInputAttachments(__idx_ac66f0)
+  public open fun inputAttachments(_idx_ac66f0: List<Any>) {
+    unwrap(this).setInputAttachments(_idx_ac66f0)
   }
 
   /**
    * The list of input attachments for the channel.
    */
-  public open fun inputAttachments(vararg __idx_ac66f0: Any): Unit =
-      inputAttachments(__idx_ac66f0.toList())
+  public open fun inputAttachments(vararg _idx_ac66f0: Any): Unit =
+      inputAttachments(_idx_ac66f0.toList())
 
   /**
    * The input specification for this channel.

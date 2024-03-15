@@ -272,14 +272,14 @@ public open class CfnTopic internal constructor(
   /**
    * The data sets that the topic is associated with.
    */
-  public open fun dataSets(__idx_ac66f0: List<Any>) {
-    unwrap(this).setDataSets(__idx_ac66f0)
+  public open fun dataSets(_idx_ac66f0: List<Any>) {
+    unwrap(this).setDataSets(_idx_ac66f0)
   }
 
   /**
    * The data sets that the topic is associated with.
    */
-  public open fun dataSets(vararg __idx_ac66f0: Any): Unit = dataSets(__idx_ac66f0.toList())
+  public open fun dataSets(vararg _idx_ac66f0: Any): Unit = dataSets(_idx_ac66f0.toList())
 
   /**
    * The description of the topic.

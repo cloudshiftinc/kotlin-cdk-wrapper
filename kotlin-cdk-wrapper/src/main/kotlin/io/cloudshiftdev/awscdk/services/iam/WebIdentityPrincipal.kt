@@ -23,11 +23,13 @@ import kotlin.collections.Map
 public open class WebIdentityPrincipal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.WebIdentityPrincipal,
 ) : FederatedPrincipal(cdkObject) {
-  public constructor(identityProvider: String, conditions: Map<String, Any>) :
-      this(software.amazon.awscdk.services.iam.WebIdentityPrincipal(identityProvider, conditions))
-
   public constructor(identityProvider: String) :
-      this(software.amazon.awscdk.services.iam.WebIdentityPrincipal(identityProvider))
+      this(software.amazon.awscdk.services.iam.WebIdentityPrincipal(identityProvider)
+  )
+
+  public constructor(identityProvider: String, conditions: Map<String, Any>) :
+      this(software.amazon.awscdk.services.iam.WebIdentityPrincipal(identityProvider, conditions)
+  )
 
   /**
    * Return the policy fragment that identifies this principal in a Policy.

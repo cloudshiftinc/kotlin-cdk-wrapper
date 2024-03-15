@@ -27,7 +27,8 @@ public open class GlobalAcceleratorDomainTarget internal constructor(
       software.amazon.awscdk.services.route53.targets.GlobalAcceleratorDomainTarget,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
   public constructor(acceleratorDomainName: String) :
-      this(software.amazon.awscdk.services.route53.targets.GlobalAcceleratorDomainTarget(acceleratorDomainName))
+      this(software.amazon.awscdk.services.route53.targets.GlobalAcceleratorDomainTarget(acceleratorDomainName)
+  )
 
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
@@ -35,8 +36,8 @@ public open class GlobalAcceleratorDomainTarget internal constructor(
    * @param _record 
    * @param _zone
    */
-  public override fun bind(_record: IRecordSet): AliasRecordTargetConfig =
-      unwrap(this).bind(_record.let(IRecordSet::unwrap)).let(AliasRecordTargetConfig::wrap)
+  public override fun bind(record: IRecordSet): AliasRecordTargetConfig =
+      unwrap(this).bind(record.let(IRecordSet::unwrap)).let(AliasRecordTargetConfig::wrap)
 
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
@@ -44,9 +45,9 @@ public open class GlobalAcceleratorDomainTarget internal constructor(
    * @param _record 
    * @param _zone
    */
-  public override fun bind(_record: IRecordSet, _zone: IHostedZone): AliasRecordTargetConfig =
-      unwrap(this).bind(_record.let(IRecordSet::unwrap),
-      _zone.let(IHostedZone::unwrap)).let(AliasRecordTargetConfig::wrap)
+  public override fun bind(record: IRecordSet, zone: IHostedZone): AliasRecordTargetConfig =
+      unwrap(this).bind(record.let(IRecordSet::unwrap),
+      zone.let(IHostedZone::unwrap)).let(AliasRecordTargetConfig::wrap)
 
   public companion object {
     public val GLOBAL_ACCELERATOR_ZONE_ID: String =

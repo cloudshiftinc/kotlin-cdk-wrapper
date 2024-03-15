@@ -34,7 +34,8 @@ public open class SqsDlq internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.eventsources.SqsDlq,
 ) : CdkObject(cdkObject), IEventSourceDlq {
   public constructor(queue: IQueue) :
-      this(software.amazon.awscdk.services.lambda.eventsources.SqsDlq(IQueue.unwrap(queue)))
+      this(software.amazon.awscdk.services.lambda.eventsources.SqsDlq(queue.let(IQueue::unwrap))
+  )
 
   /**
    * Returns a destination configuration for the DLQ.
@@ -42,8 +43,8 @@ public open class SqsDlq internal constructor(
    * @param _target 
    * @param targetHandler 
    */
-  public override fun bind(_target: IEventSourceMapping, targetHandler: IFunction):
-      DlqDestinationConfig = unwrap(this).bind(_target.let(IEventSourceMapping::unwrap),
+  public override fun bind(target: IEventSourceMapping, targetHandler: IFunction):
+      DlqDestinationConfig = unwrap(this).bind(target.let(IEventSourceMapping::unwrap),
       targetHandler.let(IFunction::unwrap)).let(DlqDestinationConfig::wrap)
 
   public companion object {

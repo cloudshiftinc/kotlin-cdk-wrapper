@@ -213,15 +213,15 @@ public open class CfnMethod internal constructor(
   /**
    * Gets a method response associated with a given HTTP status code.
    */
-  public open fun methodResponses(__idx_ac66f0: List<Any>) {
-    unwrap(this).setMethodResponses(__idx_ac66f0)
+  public open fun methodResponses(_idx_ac66f0: List<Any>) {
+    unwrap(this).setMethodResponses(_idx_ac66f0)
   }
 
   /**
    * Gets a method response associated with a given HTTP status code.
    */
-  public open fun methodResponses(vararg __idx_ac66f0: Any): Unit =
-      methodResponses(__idx_ac66f0.toList())
+  public open fun methodResponses(vararg _idx_ac66f0: Any): Unit =
+      methodResponses(_idx_ac66f0.toList())
 
   /**
    * A human-friendly operation identifier for the method.
@@ -275,8 +275,8 @@ public open class CfnMethod internal constructor(
    * A key-value map defining required or optional method request parameters that can be accepted by
    * API Gateway.
    */
-  public open fun requestParameters(__item_ac66f0: Map<String, Any>) {
-    unwrap(this).setRequestParameters(__item_ac66f0)
+  public open fun requestParameters(_item_ac66f0: Map<String, Any>) {
+    unwrap(this).setRequestParameters(_item_ac66f0)
   }
 
   /**

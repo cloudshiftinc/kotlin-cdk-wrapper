@@ -30,7 +30,8 @@ import kotlin.jvm.JvmName
 public open class ClientAttributes internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cognito.ClientAttributes,
 ) : CdkObject(cdkObject) {
-  public constructor() : this(software.amazon.awscdk.services.cognito.ClientAttributes())
+  public constructor() : this(software.amazon.awscdk.services.cognito.ClientAttributes()
+  )
 
   /**
    * The list of attributes represented by this ClientAttributes.

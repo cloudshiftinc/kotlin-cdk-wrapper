@@ -207,15 +207,15 @@ public open class CfnNotificationRule internal constructor(
    * A list of Amazon Resource Names (ARNs) of Amazon SNS topics and AWS Chatbot clients to
    * associate with the notification rule.
    */
-  public open fun targets(__idx_ac66f0: List<Any>) {
-    unwrap(this).setTargets(__idx_ac66f0)
+  public open fun targets(_idx_ac66f0: List<Any>) {
+    unwrap(this).setTargets(_idx_ac66f0)
   }
 
   /**
    * A list of Amazon Resource Names (ARNs) of Amazon SNS topics and AWS Chatbot clients to
    * associate with the notification rule.
    */
-  public open fun targets(vararg __idx_ac66f0: Any): Unit = targets(__idx_ac66f0.toList())
+  public open fun targets(vararg _idx_ac66f0: Any): Unit = targets(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for

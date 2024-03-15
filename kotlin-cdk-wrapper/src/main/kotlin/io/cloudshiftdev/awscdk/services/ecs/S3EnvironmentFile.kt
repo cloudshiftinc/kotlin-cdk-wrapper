@@ -23,23 +23,25 @@ import kotlin.String
 public open class S3EnvironmentFile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.S3EnvironmentFile,
 ) : EnvironmentFile(cdkObject) {
+  public constructor(bucket: IBucket, key: String) :
+      this(software.amazon.awscdk.services.ecs.S3EnvironmentFile(bucket.let(IBucket::unwrap), key)
+  )
+
   public constructor(
     bucket: IBucket,
     key: String,
     objectVersion: String,
-  ) : this(software.amazon.awscdk.services.ecs.S3EnvironmentFile(IBucket.unwrap(bucket), key,
-      objectVersion))
-
-  public constructor(bucket: IBucket, key: String) :
-      this(software.amazon.awscdk.services.ecs.S3EnvironmentFile(IBucket.unwrap(bucket), key))
+  ) : this(software.amazon.awscdk.services.ecs.S3EnvironmentFile(bucket.let(IBucket::unwrap), key,
+      objectVersion)
+  )
 
   /**
    * Called when the container is initialized to allow this object to bind to the stack.
    *
    * @param _scope 
    */
-  public override fun bind(_scope: Construct): EnvironmentFileConfig =
-      unwrap(this).bind(_scope.let(Construct::unwrap)).let(EnvironmentFileConfig::wrap)
+  public override fun bind(scope: Construct): EnvironmentFileConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(EnvironmentFileConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.S3EnvironmentFile):

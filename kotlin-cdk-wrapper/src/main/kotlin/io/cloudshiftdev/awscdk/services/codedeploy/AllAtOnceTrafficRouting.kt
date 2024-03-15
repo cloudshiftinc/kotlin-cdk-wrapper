@@ -20,15 +20,16 @@ public open class AllAtOnceTrafficRouting internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codedeploy.AllAtOnceTrafficRouting,
 ) : TrafficRouting(cdkObject) {
-  public constructor() : this(software.amazon.awscdk.services.codedeploy.AllAtOnceTrafficRouting())
+  public constructor() : this(software.amazon.awscdk.services.codedeploy.AllAtOnceTrafficRouting()
+  )
 
   /**
    * Return a TrafficRoutingConfig of type `AllAtOnce`.
    *
    * @param _scope 
    */
-  public override fun bind(_scope: Construct): TrafficRoutingConfig =
-      unwrap(this).bind(_scope.let(Construct::unwrap)).let(TrafficRoutingConfig::wrap)
+  public override fun bind(scope: Construct): TrafficRoutingConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(TrafficRoutingConfig::wrap)
 
   public companion object {
     internal

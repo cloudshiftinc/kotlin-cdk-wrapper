@@ -103,15 +103,15 @@ public open class CfnAsset internal constructor(
   /**
    * A list of asset hierarchies that each contain a `hierarchyLogicalId` .
    */
-  public open fun assetHierarchies(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAssetHierarchies(__idx_ac66f0)
+  public open fun assetHierarchies(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAssetHierarchies(_idx_ac66f0)
   }
 
   /**
    * A list of asset hierarchies that each contain a `hierarchyLogicalId` .
    */
-  public open fun assetHierarchies(vararg __idx_ac66f0: Any): Unit =
-      assetHierarchies(__idx_ac66f0.toList())
+  public open fun assetHierarchies(vararg _idx_ac66f0: Any): Unit =
+      assetHierarchies(_idx_ac66f0.toList())
 
   /**
    * The ID of the asset model from which to create the asset.
@@ -152,15 +152,15 @@ public open class CfnAsset internal constructor(
   /**
    * The list of asset properties for the asset.
    */
-  public open fun assetProperties(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAssetProperties(__idx_ac66f0)
+  public open fun assetProperties(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAssetProperties(_idx_ac66f0)
   }
 
   /**
    * The list of asset properties for the asset.
    */
-  public open fun assetProperties(vararg __idx_ac66f0: Any): Unit =
-      assetProperties(__idx_ac66f0.toList())
+  public open fun assetProperties(vararg _idx_ac66f0: Any): Unit =
+      assetProperties(_idx_ac66f0.toList())
 
   /**
    * The ARN of the asset.

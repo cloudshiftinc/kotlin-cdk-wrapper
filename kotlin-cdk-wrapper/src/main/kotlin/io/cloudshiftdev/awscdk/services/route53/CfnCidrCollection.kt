@@ -74,14 +74,14 @@ public open class CfnCidrCollection internal constructor(
   /**
    * A complex type that contains information about the list of CIDR locations.
    */
-  public open fun locations(__idx_ac66f0: List<Any>) {
-    unwrap(this).setLocations(__idx_ac66f0)
+  public open fun locations(_idx_ac66f0: List<Any>) {
+    unwrap(this).setLocations(_idx_ac66f0)
   }
 
   /**
    * A complex type that contains information about the list of CIDR locations.
    */
-  public open fun locations(vararg __idx_ac66f0: Any): Unit = locations(__idx_ac66f0.toList())
+  public open fun locations(vararg _idx_ac66f0: Any): Unit = locations(_idx_ac66f0.toList())
 
   /**
    * The name of a CIDR collection.

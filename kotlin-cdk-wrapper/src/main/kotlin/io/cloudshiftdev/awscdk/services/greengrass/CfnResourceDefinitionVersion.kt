@@ -143,14 +143,14 @@ public open class CfnResourceDefinitionVersion internal constructor(
   /**
    * The resources in this version.
    */
-  public open fun resources(__idx_ac66f0: List<Any>) {
-    unwrap(this).setResources(__idx_ac66f0)
+  public open fun resources(_idx_ac66f0: List<Any>) {
+    unwrap(this).setResources(_idx_ac66f0)
   }
 
   /**
    * The resources in this version.
    */
-  public open fun resources(vararg __idx_ac66f0: Any): Unit = resources(__idx_ac66f0.toList())
+  public open fun resources(vararg _idx_ac66f0: Any): Unit = resources(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for

@@ -29,11 +29,13 @@ import kotlin.String
 public open class InterfaceVpcEndpointService internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.InterfaceVpcEndpointService,
 ) : CdkObject(cdkObject), IInterfaceVpcEndpointService {
-  public constructor(name: String, port: Number) :
-      this(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointService(name, port))
-
   public constructor(name: String) :
-      this(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointService(name))
+      this(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointService(name)
+  )
+
+  public constructor(name: String, port: Number) :
+      this(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointService(name, port)
+  )
 
   /**
    * The name of the service.

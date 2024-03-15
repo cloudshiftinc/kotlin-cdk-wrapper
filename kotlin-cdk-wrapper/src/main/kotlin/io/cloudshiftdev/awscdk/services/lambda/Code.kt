@@ -54,8 +54,8 @@ public abstract class Code internal constructor(
    * @param _resource 
    * @param _options
    */
-  public open fun bindToResource(_resource: CfnResource) {
-    unwrap(this).bindToResource(_resource.let(CfnResource::unwrap))
+  public open fun bindToResource(resource: CfnResource) {
+    unwrap(this).bindToResource(resource.let(CfnResource::unwrap))
   }
 
   /**
@@ -67,9 +67,9 @@ public abstract class Code internal constructor(
    * @param _resource 
    * @param _options
    */
-  public open fun bindToResource(_resource: CfnResource, _options: ResourceBindOptions) {
-    unwrap(this).bindToResource(_resource.let(CfnResource::unwrap),
-        _options.let(ResourceBindOptions::unwrap))
+  public open fun bindToResource(resource: CfnResource, options: ResourceBindOptions) {
+    unwrap(this).bindToResource(resource.let(CfnResource::unwrap),
+        options.let(ResourceBindOptions::unwrap))
   }
 
   /**
@@ -83,9 +83,9 @@ public abstract class Code internal constructor(
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("83fd80fe1e3901a0f5645c4dd596ca04d5fabc7f1c05c24fc53008c232b144f1")
-  public open fun bindToResource(_resource: CfnResource,
-      _options: ResourceBindOptions.Builder.() -> Unit): Unit = bindToResource(_resource,
-      ResourceBindOptions(_options))
+  public open fun bindToResource(resource: CfnResource,
+      options: ResourceBindOptions.Builder.() -> Unit): Unit = bindToResource(resource,
+      ResourceBindOptions(options))
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.lambda.Code,

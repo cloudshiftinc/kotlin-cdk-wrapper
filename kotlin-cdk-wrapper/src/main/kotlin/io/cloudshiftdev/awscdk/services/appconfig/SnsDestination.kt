@@ -27,7 +27,8 @@ public open class SnsDestination internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.SnsDestination,
 ) : CdkObject(cdkObject), IEventDestination {
   public constructor(topic: ITopic) :
-      this(software.amazon.awscdk.services.appconfig.SnsDestination(ITopic.unwrap(topic)))
+      this(software.amazon.awscdk.services.appconfig.SnsDestination(topic.let(ITopic::unwrap))
+  )
 
   /**
    * The URI of the extension event destination.

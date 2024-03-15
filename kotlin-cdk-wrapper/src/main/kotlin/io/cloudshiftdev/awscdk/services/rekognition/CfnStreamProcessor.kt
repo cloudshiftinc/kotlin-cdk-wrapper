@@ -138,15 +138,15 @@ public open class CfnStreamProcessor internal constructor(
   /**
    * List of BoundingBox objects, each of which denotes a region of interest on screen.
    */
-  public open fun boundingBoxRegionsOfInterest(__idx_ac66f0: List<Any>) {
-    unwrap(this).setBoundingBoxRegionsOfInterest(__idx_ac66f0)
+  public open fun boundingBoxRegionsOfInterest(_idx_ac66f0: List<Any>) {
+    unwrap(this).setBoundingBoxRegionsOfInterest(_idx_ac66f0)
   }
 
   /**
    * List of BoundingBox objects, each of which denotes a region of interest on screen.
    */
-  public open fun boundingBoxRegionsOfInterest(vararg __idx_ac66f0: Any): Unit =
-      boundingBoxRegionsOfInterest(__idx_ac66f0.toList())
+  public open fun boundingBoxRegionsOfInterest(vararg _idx_ac66f0: Any): Unit =
+      boundingBoxRegionsOfInterest(_idx_ac66f0.toList())
 
   /**
    * Connected home settings to use on a streaming video.

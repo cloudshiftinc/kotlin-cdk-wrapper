@@ -408,14 +408,14 @@ public open class CfnNodegroup internal constructor(
   /**
    * The Kubernetes taints to be applied to the nodes in the node group when they are created.
    */
-  public open fun taints(__idx_ac66f0: List<Any>) {
-    unwrap(this).setTaints(__idx_ac66f0)
+  public open fun taints(_idx_ac66f0: List<Any>) {
+    unwrap(this).setTaints(_idx_ac66f0)
   }
 
   /**
    * The Kubernetes taints to be applied to the nodes in the node group when they are created.
    */
-  public open fun taints(vararg __idx_ac66f0: Any): Unit = taints(__idx_ac66f0.toList())
+  public open fun taints(vararg _idx_ac66f0: Any): Unit = taints(_idx_ac66f0.toList())
 
   /**
    * The node group update configuration.

@@ -216,8 +216,8 @@ public open class CfnParameter internal constructor(
   /**
    * @param _context 
    */
-  public open fun resolve(_context: IResolveContext): Any =
-      unwrap(this).resolve(_context.let(IResolveContext::unwrap))
+  public open fun resolve(context: IResolveContext): Any =
+      unwrap(this).resolve(context.let(IResolveContext::unwrap))
 
   /**
    * The data type for the parameter (DataType).

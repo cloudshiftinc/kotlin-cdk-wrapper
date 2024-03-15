@@ -62,9 +62,9 @@ public open class Repository internal constructor(
    *
    * @param _scope 
    */
-  public override fun bindAsNotificationRuleSource(_scope: CloudshiftdevConstructsConstruct):
+  public override fun bindAsNotificationRuleSource(scope: CloudshiftdevConstructsConstruct):
       NotificationRuleSourceConfig =
-      unwrap(this).bindAsNotificationRuleSource(_scope.let(CloudshiftdevConstructsConstruct::unwrap)).let(NotificationRuleSourceConfig::wrap)
+      unwrap(this).bindAsNotificationRuleSource(scope.let(CloudshiftdevConstructsConstruct::unwrap)).let(NotificationRuleSourceConfig::wrap)
 
   /**
    * Grant the given principal identity permissions to perform the actions on this repository.

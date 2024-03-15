@@ -131,9 +131,9 @@ public open class FirelensLogRouter internal constructor(
    *
    * @param _taskDefinition
    */
-  public override fun renderContainerDefinition(_taskDefinition: TaskDefinition):
+  public override fun renderContainerDefinition(taskDefinition: TaskDefinition):
       CfnTaskDefinition.ContainerDefinitionProperty =
-      unwrap(this).renderContainerDefinition(_taskDefinition.let(TaskDefinition::unwrap)).let(CfnTaskDefinition.ContainerDefinitionProperty::wrap)
+      unwrap(this).renderContainerDefinition(taskDefinition.let(TaskDefinition::unwrap)).let(CfnTaskDefinition.ContainerDefinitionProperty::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.FirelensLogRouter].

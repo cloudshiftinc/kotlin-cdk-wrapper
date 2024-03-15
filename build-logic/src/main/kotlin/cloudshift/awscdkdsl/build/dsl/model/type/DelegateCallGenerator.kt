@@ -14,7 +14,6 @@ import com.squareup.kotlinpoet.TypeName
 import com.squareup.kotlinpoet.UNIT
 
 internal class DelegateCallGenerator(
-    private val context: TypeGeneratorContext,
     private val directUnwrap: Boolean,
     private val cdkObjectName: String
 ) {
@@ -22,10 +21,11 @@ internal class DelegateCallGenerator(
     fun delegateMethodCall(spec: MethodSpec): CodeBlock {
 
         val returnType = when {
-            spec.omitReturnType -> UNIT
+            spec.omitReturnType || spec.isConstructor -> UNIT
             else -> spec.returnType
         }
-        return DelegatedCall(spec.cdkName, returnType, directUnwrap).apply {
+
+        return DelegatedCall(spec.cdkName, returnType, spec.enclosingClass.className, directUnwrap, spec.isConstructor,).apply {
             when {
                 spec.isStatic -> receiverType(spec.enclosingClass.className)
                 else -> receiverName(cdkObjectName)
@@ -41,7 +41,9 @@ internal class DelegateCallGenerator(
 private class DelegatedCall(
     private val methodName: String,
     private val returnType: TypeName,
-    private val directUnwrap: Boolean
+    private val enclosingClass: ClassName,
+    private val directUnwrap: Boolean,
+    private val isCallThisConstructor : Boolean
 ) {
 
     private var receiverType: ClassName? = null
@@ -79,12 +81,17 @@ private class DelegatedCall(
                     formatArgs.add(methodName)
                 }
 
-                else -> {
-                    if (directUnwrap) {
+                else -> when {
+                    isCallThisConstructor -> {
+                        append("%T(")
+                        formatArgs.add(enclosingClass)
+                    }
+                    directUnwrap -> {
                         append("%N.%N(")
                         formatArgs.add(receiverName!!)
                         formatArgs.add(methodName)
-                    } else {
+                    }
+                    else -> {
                         append("unwrap(this).%N(")
                         formatArgs.add(methodName)
                     }

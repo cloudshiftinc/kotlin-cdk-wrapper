@@ -26,7 +26,8 @@ public open class ClusterInstanceType internal constructor(
 ) : CdkObject(cdkObject) {
   public constructor(instanceType: String, type: InstanceType) :
       this(software.amazon.awscdk.services.rds.ClusterInstanceType(instanceType,
-      InstanceType.unwrap(type)))
+      type.let(InstanceType::unwrap))
+  )
 
   /**
    *

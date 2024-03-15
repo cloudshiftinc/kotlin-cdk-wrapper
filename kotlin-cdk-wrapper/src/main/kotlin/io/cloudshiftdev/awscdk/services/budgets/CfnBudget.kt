@@ -151,15 +151,15 @@ public open class CfnBudget internal constructor(
   /**
    * A notification that you want to associate with a budget.
    */
-  public open fun notificationsWithSubscribers(__idx_ac66f0: List<Any>) {
-    unwrap(this).setNotificationsWithSubscribers(__idx_ac66f0)
+  public open fun notificationsWithSubscribers(_idx_ac66f0: List<Any>) {
+    unwrap(this).setNotificationsWithSubscribers(_idx_ac66f0)
   }
 
   /**
    * A notification that you want to associate with a budget.
    */
-  public open fun notificationsWithSubscribers(vararg __idx_ac66f0: Any): Unit =
-      notificationsWithSubscribers(__idx_ac66f0.toList())
+  public open fun notificationsWithSubscribers(vararg _idx_ac66f0: Any): Unit =
+      notificationsWithSubscribers(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.budgets.CfnBudget].

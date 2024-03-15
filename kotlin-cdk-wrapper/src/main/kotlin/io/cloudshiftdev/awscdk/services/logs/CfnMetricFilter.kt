@@ -116,15 +116,15 @@ public open class CfnMetricFilter internal constructor(
   /**
    * The metric transformations.
    */
-  public open fun metricTransformations(__idx_ac66f0: List<Any>) {
-    unwrap(this).setMetricTransformations(__idx_ac66f0)
+  public open fun metricTransformations(_idx_ac66f0: List<Any>) {
+    unwrap(this).setMetricTransformations(_idx_ac66f0)
   }
 
   /**
    * The metric transformations.
    */
-  public open fun metricTransformations(vararg __idx_ac66f0: Any): Unit =
-      metricTransformations(__idx_ac66f0.toList())
+  public open fun metricTransformations(vararg _idx_ac66f0: Any): Unit =
+      metricTransformations(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.logs.CfnMetricFilter].

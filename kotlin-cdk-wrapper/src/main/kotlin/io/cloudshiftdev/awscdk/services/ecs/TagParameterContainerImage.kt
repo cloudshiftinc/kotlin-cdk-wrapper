@@ -187,7 +187,8 @@ public open class TagParameterContainerImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.TagParameterContainerImage,
 ) : ContainerImage(cdkObject) {
   public constructor(repository: IRepository) :
-      this(software.amazon.awscdk.services.ecs.TagParameterContainerImage(IRepository.unwrap(repository)))
+      this(software.amazon.awscdk.services.ecs.TagParameterContainerImage(repository.let(IRepository::unwrap))
+  )
 
   /**
    * Called when the image is used by a ContainerDefinition.

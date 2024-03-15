@@ -28,7 +28,8 @@ public open class SqsDestination internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3.notifications.SqsDestination,
 ) : CdkObject(cdkObject), IBucketNotificationDestination {
   public constructor(queue: IQueue) :
-      this(software.amazon.awscdk.services.s3.notifications.SqsDestination(IQueue.unwrap(queue)))
+      this(software.amazon.awscdk.services.s3.notifications.SqsDestination(queue.let(IQueue::unwrap))
+  )
 
   /**
    * Allows using SQS queues as destinations for bucket notifications.
@@ -38,8 +39,8 @@ public open class SqsDestination internal constructor(
    * @param _scope 
    * @param bucket 
    */
-  public override fun bind(_scope: Construct, bucket: IBucket): BucketNotificationDestinationConfig
-      = unwrap(this).bind(_scope.let(Construct::unwrap),
+  public override fun bind(scope: Construct, bucket: IBucket): BucketNotificationDestinationConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap),
       bucket.let(IBucket::unwrap)).let(BucketNotificationDestinationConfig::wrap)
 
   public companion object {

@@ -81,15 +81,15 @@ public open class CfnDBSecurityGroup internal constructor(
   /**
    * Ingress rules to be applied to the DB security group.
    */
-  public open fun dbSecurityGroupIngress(__idx_ac66f0: List<Any>) {
-    unwrap(this).setDbSecurityGroupIngress(__idx_ac66f0)
+  public open fun dbSecurityGroupIngress(_idx_ac66f0: List<Any>) {
+    unwrap(this).setDbSecurityGroupIngress(_idx_ac66f0)
   }
 
   /**
    * Ingress rules to be applied to the DB security group.
    */
-  public open fun dbSecurityGroupIngress(vararg __idx_ac66f0: Any): Unit =
-      dbSecurityGroupIngress(__idx_ac66f0.toList())
+  public open fun dbSecurityGroupIngress(vararg _idx_ac66f0: Any): Unit =
+      dbSecurityGroupIngress(_idx_ac66f0.toList())
 
   /**
    * The identifier of an Amazon VPC.

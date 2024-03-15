@@ -152,15 +152,15 @@ public open class CfnResolverEndpoint internal constructor(
    * The subnets and IP addresses in your VPC that DNS queries originate from (for outbound
    * endpoints) or that you forward DNS queries to (for inbound endpoints).
    */
-  public open fun ipAddresses(__idx_ac66f0: List<Any>) {
-    unwrap(this).setIpAddresses(__idx_ac66f0)
+  public open fun ipAddresses(_idx_ac66f0: List<Any>) {
+    unwrap(this).setIpAddresses(_idx_ac66f0)
   }
 
   /**
    * The subnets and IP addresses in your VPC that DNS queries originate from (for outbound
    * endpoints) or that you forward DNS queries to (for inbound endpoints).
    */
-  public open fun ipAddresses(vararg __idx_ac66f0: Any): Unit = ipAddresses(__idx_ac66f0.toList())
+  public open fun ipAddresses(vararg _idx_ac66f0: Any): Unit = ipAddresses(_idx_ac66f0.toList())
 
   /**
    * A friendly name that lets you easily find a configuration in the Resolver dashboard in the

@@ -25,7 +25,8 @@ public open class Ec2Action internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.actions.Ec2Action,
 ) : CdkObject(cdkObject), IAlarmAction {
   public constructor(instanceAction: Ec2InstanceAction) :
-      this(software.amazon.awscdk.services.cloudwatch.actions.Ec2Action(Ec2InstanceAction.unwrap(instanceAction)))
+      this(software.amazon.awscdk.services.cloudwatch.actions.Ec2Action(instanceAction.let(Ec2InstanceAction::unwrap))
+  )
 
   /**
    * Returns an alarm action configuration to use an EC2 action as an alarm action.
@@ -33,9 +34,9 @@ public open class Ec2Action internal constructor(
    * @param _scope 
    * @param _alarm 
    */
-  public override fun bind(_scope: Construct, _alarm: IAlarm): AlarmActionConfig =
-      unwrap(this).bind(_scope.let(Construct::unwrap),
-      _alarm.let(IAlarm::unwrap)).let(AlarmActionConfig::wrap)
+  public override fun bind(scope: Construct, alarm: IAlarm): AlarmActionConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap),
+      alarm.let(IAlarm::unwrap)).let(AlarmActionConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.actions.Ec2Action):

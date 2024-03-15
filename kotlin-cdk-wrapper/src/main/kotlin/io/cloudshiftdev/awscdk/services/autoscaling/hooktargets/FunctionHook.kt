@@ -34,12 +34,14 @@ public open class FunctionHook internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.autoscaling.hooktargets.FunctionHook,
 ) : CdkObject(cdkObject), ILifecycleHookTarget {
-  public constructor(fn: IFunction, encryptionKey: IKey) :
-      this(software.amazon.awscdk.services.autoscaling.hooktargets.FunctionHook(IFunction.unwrap(fn),
-      IKey.unwrap(encryptionKey)))
-
   public constructor(fn: IFunction) :
-      this(software.amazon.awscdk.services.autoscaling.hooktargets.FunctionHook(IFunction.unwrap(fn)))
+      this(software.amazon.awscdk.services.autoscaling.hooktargets.FunctionHook(fn.let(IFunction::unwrap))
+  )
+
+  public constructor(fn: IFunction, encryptionKey: IKey) :
+      this(software.amazon.awscdk.services.autoscaling.hooktargets.FunctionHook(fn.let(IFunction::unwrap),
+      encryptionKey.let(IKey::unwrap))
+  )
 
   /**
    * If the `IRole` does not exist in `options`, will create an `IRole` and an SNS Topic and attach
@@ -51,8 +53,8 @@ public open class FunctionHook internal constructor(
    * @param _scope 
    * @param options 
    */
-  public override fun bind(_scope: Construct, options: BindHookTargetOptions):
-      LifecycleHookTargetConfig = unwrap(this).bind(_scope.let(Construct::unwrap),
+  public override fun bind(scope: Construct, options: BindHookTargetOptions):
+      LifecycleHookTargetConfig = unwrap(this).bind(scope.let(Construct::unwrap),
       options.let(BindHookTargetOptions::unwrap)).let(LifecycleHookTargetConfig::wrap)
 
   /**
@@ -67,8 +69,8 @@ public open class FunctionHook internal constructor(
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("a256b345ffa3a5089e3c2315d1f614a5e6fb6ed617a236cb05a1ffe90b1f565d")
-  public override fun bind(_scope: Construct, options: BindHookTargetOptions.Builder.() -> Unit):
-      LifecycleHookTargetConfig = bind(_scope, BindHookTargetOptions(options))
+  public override fun bind(scope: Construct, options: BindHookTargetOptions.Builder.() -> Unit):
+      LifecycleHookTargetConfig = bind(scope, BindHookTargetOptions(options))
 
   public companion object {
     internal

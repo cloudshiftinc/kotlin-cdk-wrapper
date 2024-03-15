@@ -78,9 +78,8 @@ public abstract class PrincipalBase internal constructor(
    *
    * @param _statement 
    */
-  public override fun addToPrincipalPolicy(_statement: PolicyStatement): AddToPrincipalPolicyResult
-      =
-      unwrap(this).addToPrincipalPolicy(_statement.let(PolicyStatement::unwrap)).let(AddToPrincipalPolicyResult::wrap)
+  public override fun addToPrincipalPolicy(statement: PolicyStatement): AddToPrincipalPolicyResult =
+      unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement::unwrap)).let(AddToPrincipalPolicyResult::wrap)
 
   /**
    * Add to the policy of this principal.
@@ -89,8 +88,8 @@ public abstract class PrincipalBase internal constructor(
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("e5a2b0fec5c17722d0dc719c3fd27344bee07d931f9f715b331523f4aadc0661")
-  public override fun addToPrincipalPolicy(_statement: PolicyStatement.Builder.() -> Unit):
-      AddToPrincipalPolicyResult = addToPrincipalPolicy(PolicyStatement(_statement))
+  public override fun addToPrincipalPolicy(statement: PolicyStatement.Builder.() -> Unit):
+      AddToPrincipalPolicyResult = addToPrincipalPolicy(PolicyStatement(statement))
 
   /**
    * When this Principal is used in an AssumeRole policy, the action to use.

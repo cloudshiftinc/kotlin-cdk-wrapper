@@ -74,15 +74,15 @@ public open class CfnLiveSource internal constructor(
   /**
    * The HTTP package configurations for the live source.
    */
-  public open fun httpPackageConfigurations(__idx_ac66f0: List<Any>) {
-    unwrap(this).setHttpPackageConfigurations(__idx_ac66f0)
+  public open fun httpPackageConfigurations(_idx_ac66f0: List<Any>) {
+    unwrap(this).setHttpPackageConfigurations(_idx_ac66f0)
   }
 
   /**
    * The HTTP package configurations for the live source.
    */
-  public open fun httpPackageConfigurations(vararg __idx_ac66f0: Any): Unit =
-      httpPackageConfigurations(__idx_ac66f0.toList())
+  public open fun httpPackageConfigurations(vararg _idx_ac66f0: Any): Unit =
+      httpPackageConfigurations(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

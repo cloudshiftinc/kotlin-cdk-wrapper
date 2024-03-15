@@ -101,14 +101,14 @@ public open class CfnLoggerDefinitionVersion internal constructor(
   /**
    * The loggers in this version.
    */
-  public open fun loggers(__idx_ac66f0: List<Any>) {
-    unwrap(this).setLoggers(__idx_ac66f0)
+  public open fun loggers(_idx_ac66f0: List<Any>) {
+    unwrap(this).setLoggers(_idx_ac66f0)
   }
 
   /**
    * The loggers in this version.
    */
-  public open fun loggers(vararg __idx_ac66f0: Any): Unit = loggers(__idx_ac66f0.toList())
+  public open fun loggers(vararg _idx_ac66f0: Any): Unit = loggers(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.greengrass.CfnLoggerDefinitionVersion].

@@ -22,7 +22,8 @@ import kotlin.collections.List
 public open class TokenizedStringFragments internal constructor(
   internal override val cdkObject: software.amazon.awscdk.TokenizedStringFragments,
 ) : CdkObject(cdkObject) {
-  public constructor() : this(software.amazon.awscdk.TokenizedStringFragments())
+  public constructor() : this(software.amazon.awscdk.TokenizedStringFragments()
+  )
 
   /**
    * @param value 

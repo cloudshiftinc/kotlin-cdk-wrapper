@@ -73,15 +73,15 @@ public open class CfnStandard internal constructor(
   /**
    * Specifies which controls are to be disabled in a standard.
    */
-  public open fun disabledStandardsControls(__idx_ac66f0: List<Any>) {
-    unwrap(this).setDisabledStandardsControls(__idx_ac66f0)
+  public open fun disabledStandardsControls(_idx_ac66f0: List<Any>) {
+    unwrap(this).setDisabledStandardsControls(_idx_ac66f0)
   }
 
   /**
    * Specifies which controls are to be disabled in a standard.
    */
-  public open fun disabledStandardsControls(vararg __idx_ac66f0: Any): Unit =
-      disabledStandardsControls(__idx_ac66f0.toList())
+  public open fun disabledStandardsControls(vararg _idx_ac66f0: Any): Unit =
+      disabledStandardsControls(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

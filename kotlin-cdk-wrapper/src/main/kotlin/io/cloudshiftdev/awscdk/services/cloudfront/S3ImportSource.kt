@@ -23,7 +23,9 @@ public open class S3ImportSource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.S3ImportSource,
 ) : ImportSource(cdkObject) {
   public constructor(bucket: IBucket, key: String) :
-      this(software.amazon.awscdk.services.cloudfront.S3ImportSource(IBucket.unwrap(bucket), key))
+      this(software.amazon.awscdk.services.cloudfront.S3ImportSource(bucket.let(IBucket::unwrap),
+      key)
+  )
 
   /**
    * the S3 bucket that contains the data.

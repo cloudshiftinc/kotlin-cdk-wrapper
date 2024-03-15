@@ -74,15 +74,15 @@ public open class CfnLogDeliveryConfiguration internal constructor(
   /**
    * The detailed activity logging destination of a user pool.
    */
-  public open fun logConfigurations(__idx_ac66f0: List<Any>) {
-    unwrap(this).setLogConfigurations(__idx_ac66f0)
+  public open fun logConfigurations(_idx_ac66f0: List<Any>) {
+    unwrap(this).setLogConfigurations(_idx_ac66f0)
   }
 
   /**
    * The detailed activity logging destination of a user pool.
    */
-  public open fun logConfigurations(vararg __idx_ac66f0: Any): Unit =
-      logConfigurations(__idx_ac66f0.toList())
+  public open fun logConfigurations(vararg _idx_ac66f0: Any): Unit =
+      logConfigurations(_idx_ac66f0.toList())
 
   /**
    * The ID of the user pool where you configured detailed activity logging.

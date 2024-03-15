@@ -182,15 +182,15 @@ public open class CfnInstanceGroupConfig internal constructor(
   /**
    * Amazon EMR releases 4.x or later.
    */
-  public open fun configurations(__idx_ac66f0: List<Any>) {
-    unwrap(this).setConfigurations(__idx_ac66f0)
+  public open fun configurations(_idx_ac66f0: List<Any>) {
+    unwrap(this).setConfigurations(_idx_ac66f0)
   }
 
   /**
    * Amazon EMR releases 4.x or later.
    */
-  public open fun configurations(vararg __idx_ac66f0: Any): Unit =
-      configurations(__idx_ac66f0.toList())
+  public open fun configurations(vararg _idx_ac66f0: Any): Unit =
+      configurations(_idx_ac66f0.toList())
 
   /**
    * The custom AMI ID to use for the provisioned instance group.

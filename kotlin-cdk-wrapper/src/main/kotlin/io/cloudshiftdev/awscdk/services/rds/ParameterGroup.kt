@@ -70,9 +70,9 @@ public open class ParameterGroup internal constructor(
    *
    * @param _options 
    */
-  public override fun bindToCluster(_options: ParameterGroupClusterBindOptions):
+  public override fun bindToCluster(options: ParameterGroupClusterBindOptions):
       ParameterGroupClusterConfig =
-      unwrap(this).bindToCluster(_options.let(ParameterGroupClusterBindOptions::unwrap)).let(ParameterGroupClusterConfig::wrap)
+      unwrap(this).bindToCluster(options.let(ParameterGroupClusterBindOptions::unwrap)).let(ParameterGroupClusterConfig::wrap)
 
   /**
    * Method called when this Parameter Group is used when defining a database cluster.
@@ -81,17 +81,17 @@ public open class ParameterGroup internal constructor(
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("d28cdc7226268867666e1b55a9f41f9760704e0a8aea5aed647fb9bc4accfa14")
-  public override fun bindToCluster(_options: ParameterGroupClusterBindOptions.Builder.() -> Unit):
-      ParameterGroupClusterConfig = bindToCluster(ParameterGroupClusterBindOptions(_options))
+  public override fun bindToCluster(options: ParameterGroupClusterBindOptions.Builder.() -> Unit):
+      ParameterGroupClusterConfig = bindToCluster(ParameterGroupClusterBindOptions(options))
 
   /**
    * Method called when this Parameter Group is used when defining a database instance.
    *
    * @param _options 
    */
-  public override fun bindToInstance(_options: ParameterGroupInstanceBindOptions):
+  public override fun bindToInstance(options: ParameterGroupInstanceBindOptions):
       ParameterGroupInstanceConfig =
-      unwrap(this).bindToInstance(_options.let(ParameterGroupInstanceBindOptions::unwrap)).let(ParameterGroupInstanceConfig::wrap)
+      unwrap(this).bindToInstance(options.let(ParameterGroupInstanceBindOptions::unwrap)).let(ParameterGroupInstanceConfig::wrap)
 
   /**
    * Method called when this Parameter Group is used when defining a database instance.
@@ -100,9 +100,8 @@ public open class ParameterGroup internal constructor(
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("fda7f99b0973a1794d583b4748a0034342e5fc0557269fbcea9db1b8801b312b")
-  public override
-      fun bindToInstance(_options: ParameterGroupInstanceBindOptions.Builder.() -> Unit):
-      ParameterGroupInstanceConfig = bindToInstance(ParameterGroupInstanceBindOptions(_options))
+  public override fun bindToInstance(options: ParameterGroupInstanceBindOptions.Builder.() -> Unit):
+      ParameterGroupInstanceConfig = bindToInstance(ParameterGroupInstanceBindOptions(options))
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.rds.ParameterGroup].

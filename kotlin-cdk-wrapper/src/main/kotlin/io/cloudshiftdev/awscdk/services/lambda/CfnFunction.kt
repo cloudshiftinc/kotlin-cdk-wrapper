@@ -335,15 +335,15 @@ public open class CfnFunction internal constructor(
   /**
    * Connection settings for an Amazon EFS file system.
    */
-  public open fun fileSystemConfigs(__idx_ac66f0: List<Any>) {
-    unwrap(this).setFileSystemConfigs(__idx_ac66f0)
+  public open fun fileSystemConfigs(_idx_ac66f0: List<Any>) {
+    unwrap(this).setFileSystemConfigs(_idx_ac66f0)
   }
 
   /**
    * Connection settings for an Amazon EFS file system.
    */
-  public open fun fileSystemConfigs(vararg __idx_ac66f0: Any): Unit =
-      fileSystemConfigs(__idx_ac66f0.toList())
+  public open fun fileSystemConfigs(vararg _idx_ac66f0: Any): Unit =
+      fileSystemConfigs(_idx_ac66f0.toList())
 
   /**
    * The name of the Lambda function, up to 64 characters in length.

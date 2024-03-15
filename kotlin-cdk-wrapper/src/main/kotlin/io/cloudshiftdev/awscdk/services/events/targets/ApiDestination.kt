@@ -49,8 +49,8 @@ public open class ApiDestination internal constructor(
    * @param _rule 
    * @param _id
    */
-  public override fun bind(_rule: IRule): RuleTargetConfig =
-      unwrap(this).bind(_rule.let(IRule::unwrap)).let(RuleTargetConfig::wrap)
+  public override fun bind(rule: IRule): RuleTargetConfig =
+      unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetConfig::wrap)
 
   /**
    * Returns a RuleTarget that can be used to trigger API destinations from an EventBridge event.
@@ -58,8 +58,8 @@ public open class ApiDestination internal constructor(
    * @param _rule 
    * @param _id
    */
-  public override fun bind(_rule: IRule, _id: String): RuleTargetConfig =
-      unwrap(this).bind(_rule.let(IRule::unwrap), _id).let(RuleTargetConfig::wrap)
+  public override fun bind(rule: IRule, id: String): RuleTargetConfig =
+      unwrap(this).bind(rule.let(IRule::unwrap), id).let(RuleTargetConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.events.targets.ApiDestination].

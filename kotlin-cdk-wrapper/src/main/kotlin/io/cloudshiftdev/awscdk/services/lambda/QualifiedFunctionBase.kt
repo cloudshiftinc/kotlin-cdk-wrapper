@@ -47,9 +47,8 @@ public abstract class QualifiedFunctionBase internal constructor(
    * @param _scope 
    * @param _action 
    */
-  public override fun considerWarningOnInvokeFunctionPermissions(_scope: Construct,
-      _action: String) {
-    unwrap(this).considerWarningOnInvokeFunctionPermissions(_scope.let(Construct::unwrap), _action)
+  public override fun considerWarningOnInvokeFunctionPermissions(scope: Construct, action: String) {
+    unwrap(this).considerWarningOnInvokeFunctionPermissions(scope.let(Construct::unwrap), action)
   }
 
   /**

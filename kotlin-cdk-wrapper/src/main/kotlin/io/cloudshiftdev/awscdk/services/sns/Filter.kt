@@ -19,7 +19,8 @@ public open class Filter internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sns.Filter,
 ) : FilterOrPolicy(cdkObject) {
   public constructor(filterDoc: SubscriptionFilter) :
-      this(software.amazon.awscdk.services.sns.Filter(SubscriptionFilter.unwrap(filterDoc)))
+      this(software.amazon.awscdk.services.sns.Filter(filterDoc.let(SubscriptionFilter::unwrap))
+  )
 
   /**
    * filter argument to construct.

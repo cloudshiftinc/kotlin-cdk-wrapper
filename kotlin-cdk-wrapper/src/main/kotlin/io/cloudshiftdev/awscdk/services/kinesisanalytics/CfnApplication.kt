@@ -143,14 +143,14 @@ public open class CfnApplication internal constructor(
   /**
    * Use this parameter to configure the application input.
    */
-  public open fun inputs(__idx_ac66f0: List<Any>) {
-    unwrap(this).setInputs(__idx_ac66f0)
+  public open fun inputs(_idx_ac66f0: List<Any>) {
+    unwrap(this).setInputs(_idx_ac66f0)
   }
 
   /**
    * Use this parameter to configure the application input.
    */
-  public open fun inputs(vararg __idx_ac66f0: Any): Unit = inputs(__idx_ac66f0.toList())
+  public open fun inputs(vararg _idx_ac66f0: Any): Unit = inputs(_idx_ac66f0.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

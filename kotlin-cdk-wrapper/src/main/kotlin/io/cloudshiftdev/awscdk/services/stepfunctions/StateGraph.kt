@@ -47,8 +47,9 @@ public open class StateGraph internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.StateGraph,
 ) : CdkObject(cdkObject) {
   public constructor(startState: State, graphDescription: String) :
-      this(software.amazon.awscdk.services.stepfunctions.StateGraph(State.unwrap(startState),
-      graphDescription))
+      this(software.amazon.awscdk.services.stepfunctions.StateGraph(startState.let(State::unwrap),
+      graphDescription)
+  )
 
   /**
    * Binds this StateGraph to the StateMachine it defines and updates state machine permissions.

@@ -202,15 +202,15 @@ public open class CfnAssetModel internal constructor(
   /**
    * The composite asset models that are part of this asset model.
    */
-  public open fun assetModelCompositeModels(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAssetModelCompositeModels(__idx_ac66f0)
+  public open fun assetModelCompositeModels(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAssetModelCompositeModels(_idx_ac66f0)
   }
 
   /**
    * The composite asset models that are part of this asset model.
    */
-  public open fun assetModelCompositeModels(vararg __idx_ac66f0: Any): Unit =
-      assetModelCompositeModels(__idx_ac66f0.toList())
+  public open fun assetModelCompositeModels(vararg _idx_ac66f0: Any): Unit =
+      assetModelCompositeModels(_idx_ac66f0.toList())
 
   /**
    * A description for the asset model.
@@ -251,15 +251,15 @@ public open class CfnAssetModel internal constructor(
   /**
    * The hierarchy definitions of the asset model.
    */
-  public open fun assetModelHierarchies(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAssetModelHierarchies(__idx_ac66f0)
+  public open fun assetModelHierarchies(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAssetModelHierarchies(_idx_ac66f0)
   }
 
   /**
    * The hierarchy definitions of the asset model.
    */
-  public open fun assetModelHierarchies(vararg __idx_ac66f0: Any): Unit =
-      assetModelHierarchies(__idx_ac66f0.toList())
+  public open fun assetModelHierarchies(vararg _idx_ac66f0: Any): Unit =
+      assetModelHierarchies(_idx_ac66f0.toList())
 
   /**
    * A unique, friendly name for the asset model.
@@ -288,15 +288,15 @@ public open class CfnAssetModel internal constructor(
   /**
    * The property definitions of the asset model.
    */
-  public open fun assetModelProperties(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAssetModelProperties(__idx_ac66f0)
+  public open fun assetModelProperties(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAssetModelProperties(_idx_ac66f0)
   }
 
   /**
    * The property definitions of the asset model.
    */
-  public open fun assetModelProperties(vararg __idx_ac66f0: Any): Unit =
-      assetModelProperties(__idx_ac66f0.toList())
+  public open fun assetModelProperties(vararg _idx_ac66f0: Any): Unit =
+      assetModelProperties(_idx_ac66f0.toList())
 
   /**
    * The type of the asset model (ASSET_MODEL OR COMPONENT_MODEL).

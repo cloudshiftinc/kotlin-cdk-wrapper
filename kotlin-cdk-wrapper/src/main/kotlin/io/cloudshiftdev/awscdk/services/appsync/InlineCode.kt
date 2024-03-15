@@ -20,15 +20,16 @@ import kotlin.String
 public open class InlineCode internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.InlineCode,
 ) : Code(cdkObject) {
-  public constructor(code: String) : this(software.amazon.awscdk.services.appsync.InlineCode(code))
+  public constructor(code: String) : this(software.amazon.awscdk.services.appsync.InlineCode(code)
+  )
 
   /**
    * Bind source code to an AppSync Function or resolver.
    *
    * @param _scope 
    */
-  public override fun bind(_scope: Construct): CodeConfig =
-      unwrap(this).bind(_scope.let(Construct::unwrap)).let(CodeConfig::wrap)
+  public override fun bind(scope: Construct): CodeConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(CodeConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.InlineCode): InlineCode =

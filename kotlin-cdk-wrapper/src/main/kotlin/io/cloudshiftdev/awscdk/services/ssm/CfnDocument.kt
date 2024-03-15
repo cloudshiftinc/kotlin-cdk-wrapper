@@ -59,14 +59,14 @@ public open class CfnDocument internal constructor(
   /**
    * A list of key-value pairs that describe attachments to a version of a document.
    */
-  public open fun attachments(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAttachments(__idx_ac66f0)
+  public open fun attachments(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAttachments(_idx_ac66f0)
   }
 
   /**
    * A list of key-value pairs that describe attachments to a version of a document.
    */
-  public open fun attachments(vararg __idx_ac66f0: Any): Unit = attachments(__idx_ac66f0.toList())
+  public open fun attachments(vararg _idx_ac66f0: Any): Unit = attachments(_idx_ac66f0.toList())
 
   /**
    * The content for the new SSM document in JSON or YAML.
@@ -140,14 +140,14 @@ public open class CfnDocument internal constructor(
   /**
    * A list of SSM documents required by a document.
    */
-  public open fun requires(__idx_ac66f0: List<Any>) {
-    unwrap(this).setRequires(__idx_ac66f0)
+  public open fun requires(_idx_ac66f0: List<Any>) {
+    unwrap(this).setRequires(_idx_ac66f0)
   }
 
   /**
    * A list of SSM documents required by a document.
    */
-  public open fun requires(vararg __idx_ac66f0: Any): Unit = requires(__idx_ac66f0.toList())
+  public open fun requires(vararg _idx_ac66f0: Any): Unit = requires(_idx_ac66f0.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

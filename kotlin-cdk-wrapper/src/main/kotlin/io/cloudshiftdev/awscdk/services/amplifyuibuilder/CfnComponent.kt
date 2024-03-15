@@ -79,8 +79,8 @@ public open class CfnComponent internal constructor(
   /**
    * The information to connect a component's properties to data at runtime.
    */
-  public open fun bindingProperties(__item_ac66f0: Map<String, Any>) {
-    unwrap(this).setBindingProperties(__item_ac66f0)
+  public open fun bindingProperties(_item_ac66f0: Map<String, Any>) {
+    unwrap(this).setBindingProperties(_item_ac66f0)
   }
 
   /**
@@ -98,14 +98,14 @@ public open class CfnComponent internal constructor(
   /**
    * A list of the component's `ComponentChild` instances.
    */
-  public open fun children(__idx_ac66f0: List<Any>) {
-    unwrap(this).setChildren(__idx_ac66f0)
+  public open fun children(_idx_ac66f0: List<Any>) {
+    unwrap(this).setChildren(_idx_ac66f0)
   }
 
   /**
    * A list of the component's `ComponentChild` instances.
    */
-  public open fun children(vararg __idx_ac66f0: Any): Unit = children(__idx_ac66f0.toList())
+  public open fun children(vararg _idx_ac66f0: Any): Unit = children(_idx_ac66f0.toList())
 
   /**
    * The data binding configuration for the component's properties.
@@ -122,8 +122,8 @@ public open class CfnComponent internal constructor(
   /**
    * The data binding configuration for the component's properties.
    */
-  public open fun collectionProperties(__item_ac66f0: Map<String, Any>) {
-    unwrap(this).setCollectionProperties(__item_ac66f0)
+  public open fun collectionProperties(_item_ac66f0: Map<String, Any>) {
+    unwrap(this).setCollectionProperties(_item_ac66f0)
   }
 
   /**
@@ -165,8 +165,8 @@ public open class CfnComponent internal constructor(
   /**
    * Describes the events that can be raised on the component.
    */
-  public open fun events(__item_ac66f0: Map<String, Any>) {
-    unwrap(this).setEvents(__item_ac66f0)
+  public open fun events(_item_ac66f0: Map<String, Any>) {
+    unwrap(this).setEvents(_item_ac66f0)
   }
 
   /**
@@ -219,8 +219,8 @@ public open class CfnComponent internal constructor(
   /**
    * Describes the component's properties.
    */
-  public open fun properties(__item_ac66f0: Map<String, Any>) {
-    unwrap(this).setProperties(__item_ac66f0)
+  public open fun properties(_item_ac66f0: Map<String, Any>) {
+    unwrap(this).setProperties(_item_ac66f0)
   }
 
   /**
@@ -279,14 +279,14 @@ public open class CfnComponent internal constructor(
   /**
    * A list of the component's variants.
    */
-  public open fun variants(__idx_ac66f0: List<Any>) {
-    unwrap(this).setVariants(__idx_ac66f0)
+  public open fun variants(_idx_ac66f0: List<Any>) {
+    unwrap(this).setVariants(_idx_ac66f0)
   }
 
   /**
    * A list of the component's variants.
    */
-  public open fun variants(vararg __idx_ac66f0: Any): Unit = variants(__idx_ac66f0.toList())
+  public open fun variants(vararg _idx_ac66f0: Any): Unit = variants(_idx_ac66f0.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.amplifyuibuilder.CfnComponent].

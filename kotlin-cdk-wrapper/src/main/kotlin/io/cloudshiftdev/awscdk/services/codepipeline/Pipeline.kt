@@ -136,9 +136,9 @@ public open class Pipeline internal constructor(
    *
    * @param _scope 
    */
-  public override fun bindAsNotificationRuleSource(_scope: CloudshiftdevConstructsConstruct):
+  public override fun bindAsNotificationRuleSource(scope: CloudshiftdevConstructsConstruct):
       NotificationRuleSourceConfig =
-      unwrap(this).bindAsNotificationRuleSource(_scope.let(CloudshiftdevConstructsConstruct::unwrap)).let(NotificationRuleSourceConfig::wrap)
+      unwrap(this).bindAsNotificationRuleSource(scope.let(CloudshiftdevConstructsConstruct::unwrap)).let(NotificationRuleSourceConfig::wrap)
 
   /**
    * Returns all of the `CrossRegionSupportStack`s that were generated automatically when dealing

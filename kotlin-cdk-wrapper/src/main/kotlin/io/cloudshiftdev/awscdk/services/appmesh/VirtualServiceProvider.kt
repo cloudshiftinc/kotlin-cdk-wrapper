@@ -31,8 +31,8 @@ public abstract class VirtualServiceProvider internal constructor(
    *
    * @param _construct 
    */
-  public open fun bind(_construct: Construct): VirtualServiceProviderConfig =
-      unwrap(this).bind(_construct.let(Construct::unwrap)).let(VirtualServiceProviderConfig::wrap)
+  public open fun bind(construct: Construct): VirtualServiceProviderConfig =
+      unwrap(this).bind(construct.let(Construct::unwrap)).let(VirtualServiceProviderConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceProvider,

@@ -68,16 +68,16 @@ public open class CfnSecurityProfile internal constructor(
    * The list of tags that a security profile uses to restrict access to resources in Amazon
    * Connect.
    */
-  public open fun allowedAccessControlTags(__idx_ac66f0: List<Any>) {
-    unwrap(this).setAllowedAccessControlTags(__idx_ac66f0)
+  public open fun allowedAccessControlTags(_idx_ac66f0: List<Any>) {
+    unwrap(this).setAllowedAccessControlTags(_idx_ac66f0)
   }
 
   /**
    * The list of tags that a security profile uses to restrict access to resources in Amazon
    * Connect.
    */
-  public open fun allowedAccessControlTags(vararg __idx_ac66f0: Any): Unit =
-      allowedAccessControlTags(__idx_ac66f0.toList())
+  public open fun allowedAccessControlTags(vararg _idx_ac66f0: Any): Unit =
+      allowedAccessControlTags(_idx_ac66f0.toList())
 
   /**
    * The Amazon Resource Name (ARN) of the security profile.

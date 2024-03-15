@@ -48,9 +48,9 @@ public open class KinesisDestination internal constructor(
    * @param scope 
    * @param _sourceLogGroup 
    */
-  public override fun bind(scope: Construct, _sourceLogGroup: ILogGroup):
+  public override fun bind(scope: Construct, sourceLogGroup: ILogGroup):
       LogSubscriptionDestinationConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      _sourceLogGroup.let(ILogGroup::unwrap)).let(LogSubscriptionDestinationConfig::wrap)
+      sourceLogGroup.let(ILogGroup::unwrap)).let(LogSubscriptionDestinationConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.logs.destinations.KinesisDestination].
