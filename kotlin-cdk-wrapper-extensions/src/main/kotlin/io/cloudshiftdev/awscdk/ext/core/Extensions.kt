@@ -36,7 +36,7 @@ public fun CfnResource.addMetadata(newMetadata: Map<String, Any>) {
         return
     }
     var metadata = cfnOptions().metadata()
-    metadata = metadata?.toMutableMap() ?: mutableMapOf()
+    metadata = metadata.toMutableMap()
     metadata.putAll(newMetadata)
     cfnOptions().metadata(metadata.toMap())
 }

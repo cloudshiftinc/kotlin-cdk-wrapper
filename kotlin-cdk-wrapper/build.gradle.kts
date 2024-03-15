@@ -17,10 +17,10 @@ dependencies {
 kotlin {
     when {
         System.getenv("CI") != null -> {
-            kotlinDaemonJvmArgs =  listOf("-Xms10g", "-Xmx10g")
+            kotlinDaemonJvmArgs =  listOf("-Xms9g", "-Xmx9gg")
         }
         else -> {
-            kotlinDaemonJvmArgs =  listOf("-Xms10g", "-Xmx10g")
+            kotlinDaemonJvmArgs =  listOf("-Xms9g", "-Xmx9g")
         }
     }
 }
