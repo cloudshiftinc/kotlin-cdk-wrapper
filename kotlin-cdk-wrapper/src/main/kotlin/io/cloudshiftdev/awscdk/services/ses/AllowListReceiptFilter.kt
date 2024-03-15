@@ -9,13 +9,37 @@ import kotlin.collections.List
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * An allow list receipt filter.
+ *
+ * Example:
+ *
+ * ```
+ * AllowListReceiptFilter.Builder.create(this, "AllowList")
+ * .ips(List.of("10.0.0.0/16", "1.2.3.4/16"))
+ * .build();
+ * ```
+ */
 public open class AllowListReceiptFilter internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.AllowListReceiptFilter,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.ses.AllowListReceiptFilter].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * A list of ip addresses or ranges to allow list.
+     *
+     * @param ips A list of ip addresses or ranges to allow list. 
+     */
     public fun ips(ips: List<String>)
 
+    /**
+     * A list of ip addresses or ranges to allow list.
+     *
+     * @param ips A list of ip addresses or ranges to allow list. 
+     */
     public fun ips(vararg ips: String)
   }
 
@@ -26,10 +50,20 @@ public open class AllowListReceiptFilter internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ses.AllowListReceiptFilter.Builder =
         software.amazon.awscdk.services.ses.AllowListReceiptFilter.Builder.create(scope, id)
 
+    /**
+     * A list of ip addresses or ranges to allow list.
+     *
+     * @param ips A list of ip addresses or ranges to allow list. 
+     */
     override fun ips(ips: List<String>) {
       cdkBuilder.ips(ips)
     }
 
+    /**
+     * A list of ip addresses or ranges to allow list.
+     *
+     * @param ips A list of ip addresses or ranges to allow list. 
+     */
     override fun ips(vararg ips: String): Unit = ips(ips.toList())
 
     public fun build(): software.amazon.awscdk.services.ses.AllowListReceiptFilter =

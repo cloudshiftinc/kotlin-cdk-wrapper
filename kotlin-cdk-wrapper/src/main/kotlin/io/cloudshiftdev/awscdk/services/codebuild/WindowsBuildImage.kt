@@ -12,31 +12,95 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
+/**
+ * A CodeBuild image running Windows.
+ *
+ * This class has a bunch of public constants that represent the most popular images.
+ *
+ * You can also specify a custom image using one of the static methods:
+ *
+ * * WindowsBuildImage.fromDockerRegistry(image[, { secretsManagerCredentials }, imageType])
+ * * WindowsBuildImage.fromEcrRepository(repo[, tag, imageType])
+ * * WindowsBuildImage.fromAsset(parent, id, props, [, imageType])
+ *
+ * Example:
+ *
+ * ```
+ * Repository ecrRepository;
+ * Project.Builder.create(this, "Project")
+ * .environment(BuildEnvironment.builder()
+ * .buildImage(WindowsBuildImage.fromEcrRepository(ecrRepository, "v1.0",
+ * WindowsImageType.SERVER_2019))
+ * // optional certificate to include in the build image
+ * .certificate(BuildEnvironmentCertificate.builder()
+ * .bucket(Bucket.fromBucketName(this, "Bucket", "my-bucket"))
+ * .objectKey("path/to/cert.pem")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html)
+ */
 public open class WindowsBuildImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codebuild.WindowsBuildImage,
 ) : CdkObject(cdkObject), IBuildImage {
+  /**
+   * The default `ComputeType` to use with this image, if one was not specified in
+   * `BuildEnvironment#computeType` explicitly.
+   */
   public override fun defaultComputeType(): ComputeType =
       unwrap(this).getDefaultComputeType().let(ComputeType::wrap)
 
+  /**
+   * The Docker image identifier that the build environment uses.
+   */
   public override fun imageId(): String = unwrap(this).getImageId()
 
+  /**
+   * The type of principal that CodeBuild will use to pull this build Docker image.
+   */
   public override fun imagePullPrincipalType(): ImagePullPrincipalType? =
       unwrap(this).getImagePullPrincipalType()?.let(ImagePullPrincipalType::wrap)
 
+  /**
+   * An optional ECR repository that the image is hosted in.
+   */
   public override fun repository(): IRepository? =
       unwrap(this).getRepository()?.let(IRepository::wrap)
 
+  /**
+   * Make a buildspec to run the indicated script.
+   *
+   * @param entrypoint 
+   */
   public override fun runScriptBuildspec(entrypoint: String): BuildSpec =
       unwrap(this).runScriptBuildspec(entrypoint).let(BuildSpec::wrap)
 
+  /**
+   * The secretsManagerCredentials for access to a private registry.
+   */
   public override fun secretsManagerCredentials(): ISecret? =
       unwrap(this).getSecretsManagerCredentials()?.let(ISecret::wrap)
 
+  /**
+   * The type of build environment.
+   */
   public override fun type(): String = unwrap(this).getType()
 
+  /**
+   * Allows the image a chance to validate whether the passed configuration is correct.
+   *
+   * @param buildEnvironment 
+   */
   public override fun validate(buildEnvironment: BuildEnvironment): List<String> =
       unwrap(this).validate(buildEnvironment.let(BuildEnvironment::unwrap))
 
+  /**
+   * Allows the image a chance to validate whether the passed configuration is correct.
+   *
+   * @param buildEnvironment 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("ff36d333164150adb92277700abb7153d45f26e16fa225966e7bf6fc0bedfcee")
   public override fun validate(buildEnvironment: BuildEnvironment.Builder.() -> Unit): List<String>

@@ -8,15 +8,54 @@ import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for defining a `CfnTopicInlinePolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.sns.*;
+ * Object policyDocument;
+ * CfnTopicInlinePolicyProps cfnTopicInlinePolicyProps = CfnTopicInlinePolicyProps.builder()
+ * .policyDocument(policyDocument)
+ * .topicArn("topicArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topicinlinepolicy.html)
+ */
 public interface CfnTopicInlinePolicyProps {
+  /**
+   * A policy document that contains permissions to add to the specified Amazon SNS topic.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topicinlinepolicy.html#cfn-sns-topicinlinepolicy-policydocument)
+   */
   public fun policyDocument(): Any
 
+  /**
+   * The Amazon Resource Name (ARN) of the topic to which you want to add the policy.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topicinlinepolicy.html#cfn-sns-topicinlinepolicy-topicarn)
+   */
   public fun topicArn(): String
 
+  /**
+   * A builder for [CfnTopicInlinePolicyProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param policyDocument A policy document that contains permissions to add to the specified
+     * Amazon SNS topic. 
+     */
     public fun policyDocument(policyDocument: Any)
 
+    /**
+     * @param topicArn The Amazon Resource Name (ARN) of the topic to which you want to add the
+     * policy. 
+     */
     public fun topicArn(topicArn: String)
   }
 
@@ -24,10 +63,18 @@ public interface CfnTopicInlinePolicyProps {
     private val cdkBuilder: software.amazon.awscdk.services.sns.CfnTopicInlinePolicyProps.Builder =
         software.amazon.awscdk.services.sns.CfnTopicInlinePolicyProps.builder()
 
+    /**
+     * @param policyDocument A policy document that contains permissions to add to the specified
+     * Amazon SNS topic. 
+     */
     override fun policyDocument(policyDocument: Any) {
       cdkBuilder.policyDocument(policyDocument)
     }
 
+    /**
+     * @param topicArn The Amazon Resource Name (ARN) of the topic to which you want to add the
+     * policy. 
+     */
     override fun topicArn(topicArn: String) {
       cdkBuilder.topicArn(topicArn)
     }
@@ -39,8 +86,18 @@ public interface CfnTopicInlinePolicyProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.sns.CfnTopicInlinePolicyProps,
   ) : CdkObject(cdkObject), CfnTopicInlinePolicyProps {
+    /**
+     * A policy document that contains permissions to add to the specified Amazon SNS topic.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topicinlinepolicy.html#cfn-sns-topicinlinepolicy-policydocument)
+     */
     override fun policyDocument(): Any = unwrap(this).getPolicyDocument()
 
+    /**
+     * The Amazon Resource Name (ARN) of the topic to which you want to add the policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sns-topicinlinepolicy.html#cfn-sns-topicinlinepolicy-topicarn)
+     */
     override fun topicArn(): String = unwrap(this).getTopicArn()
   }
 

@@ -8,15 +8,51 @@ import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.Number
 import kotlin.Unit
 
+/**
+ * Base interface for Item Reader configuration properties.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.s3.*;
+ * import io.cloudshiftdev.awscdk.services.stepfunctions.*;
+ * Bucket bucket;
+ * ItemReaderProps itemReaderProps = ItemReaderProps.builder()
+ * .bucket(bucket)
+ * // the properties below are optional
+ * .maxItems(123)
+ * .build();
+ * ```
+ */
 public interface ItemReaderProps {
+  /**
+   * S3 Bucket containing objects to iterate over or a file with a list to iterate over.
+   */
   public fun bucket(): IBucket
 
+  /**
+   * Limits the number of items passed to the Distributed Map state.
+   *
+   * Default: - Distributed Map state will iterate over all items provided by the ItemReader
+   */
   public fun maxItems(): Number? = unwrap(this).getMaxItems()
 
+  /**
+   * A builder for [ItemReaderProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param bucket S3 Bucket containing objects to iterate over or a file with a list to iterate
+     * over. 
+     */
     public fun bucket(bucket: IBucket)
 
+    /**
+     * @param maxItems Limits the number of items passed to the Distributed Map state.
+     */
     public fun maxItems(maxItems: Number)
   }
 
@@ -24,10 +60,17 @@ public interface ItemReaderProps {
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.ItemReaderProps.Builder =
         software.amazon.awscdk.services.stepfunctions.ItemReaderProps.builder()
 
+    /**
+     * @param bucket S3 Bucket containing objects to iterate over or a file with a list to iterate
+     * over. 
+     */
     override fun bucket(bucket: IBucket) {
       cdkBuilder.bucket(bucket.let(IBucket::unwrap))
     }
 
+    /**
+     * @param maxItems Limits the number of items passed to the Distributed Map state.
+     */
     override fun maxItems(maxItems: Number) {
       cdkBuilder.maxItems(maxItems)
     }
@@ -39,8 +82,16 @@ public interface ItemReaderProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.stepfunctions.ItemReaderProps,
   ) : CdkObject(cdkObject), ItemReaderProps {
+    /**
+     * S3 Bucket containing objects to iterate over or a file with a list to iterate over.
+     */
     override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
 
+    /**
+     * Limits the number of items passed to the Distributed Map state.
+     *
+     * Default: - Distributed Map state will iterate over all items provided by the ItemReader
+     */
     override fun maxItems(): Number? = unwrap(this).getMaxItems()
   }
 

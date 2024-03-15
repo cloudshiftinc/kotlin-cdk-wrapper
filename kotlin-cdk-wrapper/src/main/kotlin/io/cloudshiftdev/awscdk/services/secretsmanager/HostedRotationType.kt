@@ -6,12 +6,30 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Boolean
 import kotlin.String
 
+/**
+ * Hosted rotation type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.secretsmanager.*;
+ * HostedRotationType hostedRotationType = HostedRotationType.MARIADB_MULTI_USER;
+ * ```
+ */
 public open class HostedRotationType internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.secretsmanager.HostedRotationType,
 ) : CdkObject(cdkObject) {
+  /**
+   * Whether the rotation uses the mutli user scheme.
+   */
   public open fun isMultiUser(): Boolean? = unwrap(this).getIsMultiUser()
 
+  /**
+   * The type of rotation.
+   */
   public open fun name(): String = unwrap(this).getName()
 
   public companion object {

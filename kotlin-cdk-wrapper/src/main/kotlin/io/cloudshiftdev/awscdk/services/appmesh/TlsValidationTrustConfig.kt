@@ -7,14 +7,52 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * All Properties for TLS Validation Trusts for both Client Policy and Listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.appmesh.*;
+ * TlsValidationTrustConfig tlsValidationTrustConfig = TlsValidationTrustConfig.builder()
+ * .tlsValidationTrust(TlsValidationContextTrustProperty.builder()
+ * .acm(TlsValidationContextAcmTrustProperty.builder()
+ * .certificateAuthorityArns(List.of("certificateAuthorityArns"))
+ * .build())
+ * .file(TlsValidationContextFileTrustProperty.builder()
+ * .certificateChain("certificateChain")
+ * .build())
+ * .sds(TlsValidationContextSdsTrustProperty.builder()
+ * .secretName("secretName")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ */
 public interface TlsValidationTrustConfig {
+  /**
+   * VirtualNode CFN configuration for client policy's TLS Validation Trust.
+   */
   public fun tlsValidationTrust(): CfnVirtualNode.TlsValidationContextTrustProperty
 
+  /**
+   * A builder for [TlsValidationTrustConfig]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param tlsValidationTrust VirtualNode CFN configuration for client policy's TLS Validation
+     * Trust. 
+     */
     public
         fun tlsValidationTrust(tlsValidationTrust: CfnVirtualNode.TlsValidationContextTrustProperty)
 
+    /**
+     * @param tlsValidationTrust VirtualNode CFN configuration for client policy's TLS Validation
+     * Trust. 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f3761029aeee45f9e93536bbc797ae362b78e888146f6ea5e2b3da424f3578ec")
     public
@@ -25,11 +63,19 @@ public interface TlsValidationTrustConfig {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.TlsValidationTrustConfig.Builder
         = software.amazon.awscdk.services.appmesh.TlsValidationTrustConfig.builder()
 
+    /**
+     * @param tlsValidationTrust VirtualNode CFN configuration for client policy's TLS Validation
+     * Trust. 
+     */
     override
         fun tlsValidationTrust(tlsValidationTrust: CfnVirtualNode.TlsValidationContextTrustProperty) {
       cdkBuilder.tlsValidationTrust(tlsValidationTrust.let(CfnVirtualNode.TlsValidationContextTrustProperty::unwrap))
     }
 
+    /**
+     * @param tlsValidationTrust VirtualNode CFN configuration for client policy's TLS Validation
+     * Trust. 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f3761029aeee45f9e93536bbc797ae362b78e888146f6ea5e2b3da424f3578ec")
     override
@@ -44,6 +90,9 @@ public interface TlsValidationTrustConfig {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.TlsValidationTrustConfig,
   ) : CdkObject(cdkObject), TlsValidationTrustConfig {
+    /**
+     * VirtualNode CFN configuration for client policy's TLS Validation Trust.
+     */
     override fun tlsValidationTrust(): CfnVirtualNode.TlsValidationContextTrustProperty =
         unwrap(this).getTlsValidationTrust().let(CfnVirtualNode.TlsValidationContextTrustProperty::wrap)
   }

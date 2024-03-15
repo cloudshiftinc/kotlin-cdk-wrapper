@@ -5,9 +5,24 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Either an IPv4 or an IPv6 CIDR.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * AclCidr aclCidr = AclCidr.anyIpv4();
+ * ```
+ */
 public abstract class AclCidr internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.AclCidr,
 ) : CdkObject(cdkObject) {
+  /**
+   *
+   */
   public open fun toCidrConfig(): AclCidrConfig =
       unwrap(this).toCidrConfig().let(AclCidrConfig::wrap)
 

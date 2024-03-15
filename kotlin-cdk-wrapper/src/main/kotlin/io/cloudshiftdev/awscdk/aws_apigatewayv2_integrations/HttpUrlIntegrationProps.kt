@@ -8,16 +8,55 @@ import io.cloudshiftdev.awscdk.services.apigatewayv2.HttpMethod
 import io.cloudshiftdev.awscdk.services.apigatewayv2.ParameterMapping
 import kotlin.Unit
 
+/**
+ * Properties to initialize a new `HttpProxyIntegration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
+ * import io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations.*;
+ * ParameterMapping parameterMapping;
+ * HttpUrlIntegrationProps httpUrlIntegrationProps = HttpUrlIntegrationProps.builder()
+ * .method(HttpMethod.ANY)
+ * .parameterMapping(parameterMapping)
+ * .build();
+ * ```
+ */
 public interface HttpUrlIntegrationProps {
+  /**
+   * The HTTP method that must be used to invoke the underlying HTTP proxy.
+   *
+   * Default: HttpMethod.ANY
+   */
   public fun method(): HttpMethod? = unwrap(this).getMethod()?.let(HttpMethod::wrap)
 
+  /**
+   * Specifies how to transform HTTP requests before sending them to the backend.
+   *
+   * Default: undefined requests are sent to the backend unmodified
+   *
+   * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html)
+   */
   public fun parameterMapping(): ParameterMapping? =
       unwrap(this).getParameterMapping()?.let(ParameterMapping::wrap)
 
+  /**
+   * A builder for [HttpUrlIntegrationProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param method The HTTP method that must be used to invoke the underlying HTTP proxy.
+     */
     public fun method(method: HttpMethod)
 
+    /**
+     * @param parameterMapping Specifies how to transform HTTP requests before sending them to the
+     * backend.
+     */
     public fun parameterMapping(parameterMapping: ParameterMapping)
   }
 
@@ -26,10 +65,17 @@ public interface HttpUrlIntegrationProps {
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegrationProps.Builder =
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegrationProps.builder()
 
+    /**
+     * @param method The HTTP method that must be used to invoke the underlying HTTP proxy.
+     */
     override fun method(method: HttpMethod) {
       cdkBuilder.method(method.let(HttpMethod::unwrap))
     }
 
+    /**
+     * @param parameterMapping Specifies how to transform HTTP requests before sending them to the
+     * backend.
+     */
     override fun parameterMapping(parameterMapping: ParameterMapping) {
       cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping::unwrap))
     }
@@ -42,8 +88,20 @@ public interface HttpUrlIntegrationProps {
     override val cdkObject:
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegrationProps,
   ) : CdkObject(cdkObject), HttpUrlIntegrationProps {
+    /**
+     * The HTTP method that must be used to invoke the underlying HTTP proxy.
+     *
+     * Default: HttpMethod.ANY
+     */
     override fun method(): HttpMethod? = unwrap(this).getMethod()?.let(HttpMethod::wrap)
 
+    /**
+     * Specifies how to transform HTTP requests before sending them to the backend.
+     *
+     * Default: undefined requests are sent to the backend unmodified
+     *
+     * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html)
+     */
     override fun parameterMapping(): ParameterMapping? =
         unwrap(this).getParameterMapping()?.let(ParameterMapping::wrap)
   }

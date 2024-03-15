@@ -7,15 +7,42 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Attributes for importing a WebSocketApi into the CDK.
+ *
+ * Example:
+ *
+ * ```
+ * IWebSocketApi webSocketApi = WebSocketApi.fromWebSocketApiAttributes(this, "mywsapi",
+ * WebSocketApiAttributes.builder().webSocketId("api-1234").build());
+ * ```
+ */
 public interface WebSocketApiAttributes {
+  /**
+   * The endpoint URL of the WebSocketApi.
+   *
+   * Default: - throw san error if apiEndpoint is accessed.
+   */
   public fun apiEndpoint(): String? = unwrap(this).getApiEndpoint()
 
+  /**
+   * The identifier of the WebSocketApi.
+   */
   public fun webSocketId(): String
 
+  /**
+   * A builder for [WebSocketApiAttributes]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param apiEndpoint The endpoint URL of the WebSocketApi.
+     */
     public fun apiEndpoint(apiEndpoint: String)
 
+    /**
+     * @param webSocketId The identifier of the WebSocketApi. 
+     */
     public fun webSocketId(webSocketId: String)
   }
 
@@ -24,10 +51,16 @@ public interface WebSocketApiAttributes {
         software.amazon.awscdk.services.apigatewayv2.WebSocketApiAttributes.Builder =
         software.amazon.awscdk.services.apigatewayv2.WebSocketApiAttributes.builder()
 
+    /**
+     * @param apiEndpoint The endpoint URL of the WebSocketApi.
+     */
     override fun apiEndpoint(apiEndpoint: String) {
       cdkBuilder.apiEndpoint(apiEndpoint)
     }
 
+    /**
+     * @param webSocketId The identifier of the WebSocketApi. 
+     */
     override fun webSocketId(webSocketId: String) {
       cdkBuilder.webSocketId(webSocketId)
     }
@@ -39,8 +72,16 @@ public interface WebSocketApiAttributes {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketApiAttributes,
   ) : CdkObject(cdkObject), WebSocketApiAttributes {
+    /**
+     * The endpoint URL of the WebSocketApi.
+     *
+     * Default: - throw san error if apiEndpoint is accessed.
+     */
     override fun apiEndpoint(): String? = unwrap(this).getApiEndpoint()
 
+    /**
+     * The identifier of the WebSocketApi.
+     */
     override fun webSocketId(): String = unwrap(this).getWebSocketId()
   }
 

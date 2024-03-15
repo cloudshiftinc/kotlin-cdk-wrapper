@@ -9,6 +9,12 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Functions for devising unique names for constructs.
+ *
+ * For example, those can be
+ * used to allocate unique physical names for resources.
+ */
 public open class Names internal constructor(
   internal override val cdkObject: software.amazon.awscdk.Names,
 ) : CdkObject(cdkObject) {

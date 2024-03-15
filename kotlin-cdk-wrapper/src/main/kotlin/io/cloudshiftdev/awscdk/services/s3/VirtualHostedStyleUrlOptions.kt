@@ -7,11 +7,35 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Boolean
 import kotlin.Unit
 
+/**
+ * Options for creating Virtual-Hosted style URL.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket bucket = new Bucket(this, "MyBucket");
+ * bucket.urlForObject("objectname"); // Path-Style URL
+ * bucket.virtualHostedUrlForObject("objectname"); // Virtual Hosted-Style URL
+ * bucket.virtualHostedUrlForObject("objectname",
+ * VirtualHostedStyleUrlOptions.builder().regional(false).build());
+ * ```
+ */
 public interface VirtualHostedStyleUrlOptions {
+  /**
+   * Specifies the URL includes the region.
+   *
+   * Default: - true
+   */
   public fun regional(): Boolean? = unwrap(this).getRegional()
 
+  /**
+   * A builder for [VirtualHostedStyleUrlOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param regional Specifies the URL includes the region.
+     */
     public fun regional(regional: Boolean)
   }
 
@@ -19,6 +43,9 @@ public interface VirtualHostedStyleUrlOptions {
     private val cdkBuilder: software.amazon.awscdk.services.s3.VirtualHostedStyleUrlOptions.Builder
         = software.amazon.awscdk.services.s3.VirtualHostedStyleUrlOptions.builder()
 
+    /**
+     * @param regional Specifies the URL includes the region.
+     */
     override fun regional(regional: Boolean) {
       cdkBuilder.regional(regional)
     }
@@ -30,6 +57,11 @@ public interface VirtualHostedStyleUrlOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.s3.VirtualHostedStyleUrlOptions,
   ) : CdkObject(cdkObject), VirtualHostedStyleUrlOptions {
+    /**
+     * Specifies the URL includes the region.
+     *
+     * Default: - true
+     */
     override fun regional(): Boolean? = unwrap(this).getRegional()
   }
 

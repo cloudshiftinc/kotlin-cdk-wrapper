@@ -5,6 +5,25 @@ package io.cloudshiftdev.awscdk.services.config
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Managed rules that are supported by AWS Config.
+ *
+ * Example:
+ *
+ * ```
+ * // https://docs.aws.amazon.com/config/latest/developerguide/access-keys-rotated.html
+ * // https://docs.aws.amazon.com/config/latest/developerguide/access-keys-rotated.html
+ * ManagedRule.Builder.create(this, "AccessKeysRotated")
+ * .identifier(ManagedRuleIdentifiers.ACCESS_KEYS_ROTATED)
+ * .inputParameters(Map.of(
+ * "maxAccessKeyAge", 60))
+ * // default is 24 hours
+ * .maximumExecutionFrequency(MaximumExecutionFrequency.TWELVE_HOURS)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/config/latest/developerguide/managed-rules-by-aws-config.html)
+ */
 public open class ManagedRuleIdentifiers internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.config.ManagedRuleIdentifiers,
 ) : CdkObject(cdkObject) {

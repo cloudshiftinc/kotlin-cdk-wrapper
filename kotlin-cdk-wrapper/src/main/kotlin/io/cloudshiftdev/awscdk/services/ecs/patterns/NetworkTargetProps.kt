@@ -8,15 +8,51 @@ import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties to define a network load balancer target group.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ecs.patterns.*;
+ * NetworkTargetProps networkTargetProps = NetworkTargetProps.builder()
+ * .containerPort(123)
+ * // the properties below are optional
+ * .listener("listener")
+ * .build();
+ * ```
+ */
 public interface NetworkTargetProps {
+  /**
+   * The port number of the container.
+   *
+   * Only applicable when using application/network load balancers.
+   */
   public fun containerPort(): Number
 
+  /**
+   * Name of the listener the target group attached to.
+   *
+   * Default: - default listener (first added listener)
+   */
   public fun listener(): String? = unwrap(this).getListener()
 
+  /**
+   * A builder for [NetworkTargetProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param containerPort The port number of the container. 
+     * Only applicable when using application/network load balancers.
+     */
     public fun containerPort(containerPort: Number)
 
+    /**
+     * @param listener Name of the listener the target group attached to.
+     */
     public fun listener(listener: String)
   }
 
@@ -24,10 +60,17 @@ public interface NetworkTargetProps {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.patterns.NetworkTargetProps.Builder
         = software.amazon.awscdk.services.ecs.patterns.NetworkTargetProps.builder()
 
+    /**
+     * @param containerPort The port number of the container. 
+     * Only applicable when using application/network load balancers.
+     */
     override fun containerPort(containerPort: Number) {
       cdkBuilder.containerPort(containerPort)
     }
 
+    /**
+     * @param listener Name of the listener the target group attached to.
+     */
     override fun listener(listener: String) {
       cdkBuilder.listener(listener)
     }
@@ -39,8 +82,18 @@ public interface NetworkTargetProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkTargetProps,
   ) : CdkObject(cdkObject), NetworkTargetProps {
+    /**
+     * The port number of the container.
+     *
+     * Only applicable when using application/network load balancers.
+     */
     override fun containerPort(): Number = unwrap(this).getContainerPort()
 
+    /**
+     * Name of the listener the target group attached to.
+     *
+     * Default: - default listener (first added listener)
+     */
     override fun listener(): String? = unwrap(this).getListener()
   }
 

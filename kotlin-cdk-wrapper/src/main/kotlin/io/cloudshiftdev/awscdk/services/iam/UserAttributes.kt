@@ -7,11 +7,34 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Represents a user defined outside of this stack.
+ *
+ * Example:
+ *
+ * ```
+ * IUser user = User.fromUserAttributes(this, "MyImportedUserByAttributes", UserAttributes.builder()
+ * .userArn("arn:aws:iam::123456789012:user/johnsmith")
+ * .build());
+ * ```
+ */
 public interface UserAttributes {
+  /**
+   * The ARN of the user.
+   *
+   * Format: arn:<partition>:iam::<account-id>:user/<user-name-with-path>
+   */
   public fun userArn(): String
 
+  /**
+   * A builder for [UserAttributes]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param userArn The ARN of the user. 
+     * Format: arn:<partition>:iam::<account-id>:user/<user-name-with-path>
+     */
     public fun userArn(userArn: String)
   }
 
@@ -19,6 +42,10 @@ public interface UserAttributes {
     private val cdkBuilder: software.amazon.awscdk.services.iam.UserAttributes.Builder =
         software.amazon.awscdk.services.iam.UserAttributes.builder()
 
+    /**
+     * @param userArn The ARN of the user. 
+     * Format: arn:<partition>:iam::<account-id>:user/<user-name-with-path>
+     */
     override fun userArn(userArn: String) {
       cdkBuilder.userArn(userArn)
     }
@@ -29,6 +56,11 @@ public interface UserAttributes {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.iam.UserAttributes,
   ) : CdkObject(cdkObject), UserAttributes {
+    /**
+     * The ARN of the user.
+     *
+     * Format: arn:<partition>:iam::<account-id>:user/<user-name-with-path>
+     */
     override fun userArn(): String = unwrap(this).getUserArn()
   }
 

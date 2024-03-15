@@ -10,6 +10,26 @@ import kotlin.Number
 import kotlin.String
 import kotlin.collections.List
 
+/**
+ * Extract a field from the State Machine data or context that gets passed around between states.
+ *
+ * Example:
+ *
+ * ```
+ * Activity submitJobActivity = new Activity(this, "SubmitJob");
+ * StepFunctionsInvokeActivity.Builder.create(this, "Submit Job")
+ * .activity(submitJobActivity)
+ * .parameters(Map.of(
+ * "comment", "Selecting what I care about.",
+ * "MyDetails", Map.of(
+ * "size", JsonPath.stringAt("$.product.details.size"),
+ * "exists", JsonPath.stringAt("$.product.availability"),
+ * "StaticValue", "foo")))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-paths.html)
+ */
 public open class JsonPath internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.JsonPath,
 ) : CdkObject(cdkObject) {

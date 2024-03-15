@@ -11,31 +11,98 @@ import kotlin.collections.List
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * A managed prefix list.
+ *
+ * Example:
+ *
+ * ```
+ * PrefixList.Builder.create(this, "EmptyPrefixList")
+ * .maxEntries(100)
+ * .build();
+ * ```
+ */
 public open class PrefixList internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.PrefixList,
 ) : Resource(cdkObject), IPrefixList {
+  /**
+   * The address family of the prefix list.
+   */
   public open fun addressFamily(): String = unwrap(this).getAddressFamily()
 
+  /**
+   * The owner ID of the prefix list.
+   */
   public open fun ownerId(): String = unwrap(this).getOwnerId()
 
+  /**
+   * The ARN of the prefix list.
+   */
   public open fun prefixListArn(): String = unwrap(this).getPrefixListArn()
 
+  /**
+   * The ID of the prefix list.
+   */
   public override fun prefixListId(): String = unwrap(this).getPrefixListId()
 
+  /**
+   * The name of the prefix list.
+   */
   public open fun prefixListName(): String = unwrap(this).getPrefixListName()
 
+  /**
+   * The version of the prefix list.
+   */
   public open fun version(): Number = unwrap(this).getVersion()
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.PrefixList].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The address family of the prefix list.
+     *
+     * Default: AddressFamily.IP_V4
+     *
+     * @param addressFamily The address family of the prefix list. 
+     */
     public fun addressFamily(addressFamily: AddressFamily)
 
+    /**
+     * The list of entries for the prefix list.
+     *
+     * Default: []
+     *
+     * @param entries The list of entries for the prefix list. 
+     */
     public fun entries(entries: List<CfnPrefixList.EntryProperty>)
 
+    /**
+     * The list of entries for the prefix list.
+     *
+     * Default: []
+     *
+     * @param entries The list of entries for the prefix list. 
+     */
     public fun entries(vararg entries: CfnPrefixList.EntryProperty)
 
+    /**
+     * The maximum number of entries for the prefix list.
+     *
+     * Default: Automatically-calculated
+     *
+     * @param maxEntries The maximum number of entries for the prefix list. 
+     */
     public fun maxEntries(maxEntries: Number)
 
+    /**
+     * The name of the prefix list.
+     *
+     * Default: None
+     *
+     * @param prefixListName The name of the prefix list. 
+     */
     public fun prefixListName(prefixListName: String)
   }
 
@@ -46,21 +113,56 @@ public open class PrefixList internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.PrefixList.Builder =
         software.amazon.awscdk.services.ec2.PrefixList.Builder.create(scope, id)
 
+    /**
+     * The address family of the prefix list.
+     *
+     * Default: AddressFamily.IP_V4
+     *
+     * @param addressFamily The address family of the prefix list. 
+     */
     override fun addressFamily(addressFamily: AddressFamily) {
       cdkBuilder.addressFamily(addressFamily.let(AddressFamily::unwrap))
     }
 
+    /**
+     * The list of entries for the prefix list.
+     *
+     * Default: []
+     *
+     * @param entries The list of entries for the prefix list. 
+     */
     override fun entries(entries: List<CfnPrefixList.EntryProperty>) {
       cdkBuilder.entries(entries.map(CfnPrefixList.EntryProperty::unwrap))
     }
 
+    /**
+     * The list of entries for the prefix list.
+     *
+     * Default: []
+     *
+     * @param entries The list of entries for the prefix list. 
+     */
     override fun entries(vararg entries: CfnPrefixList.EntryProperty): Unit =
         entries(entries.toList())
 
+    /**
+     * The maximum number of entries for the prefix list.
+     *
+     * Default: Automatically-calculated
+     *
+     * @param maxEntries The maximum number of entries for the prefix list. 
+     */
     override fun maxEntries(maxEntries: Number) {
       cdkBuilder.maxEntries(maxEntries)
     }
 
+    /**
+     * The name of the prefix list.
+     *
+     * Default: None
+     *
+     * @param prefixListName The name of the prefix list. 
+     */
     override fun prefixListName(prefixListName: String) {
       cdkBuilder.prefixListName(prefixListName)
     }

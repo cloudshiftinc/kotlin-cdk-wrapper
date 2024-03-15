@@ -7,11 +7,37 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Boolean
 import kotlin.Unit
 
+/**
+ * Options for creating a Transfer Acceleration URL.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.s3.*;
+ * TransferAccelerationUrlOptions transferAccelerationUrlOptions =
+ * TransferAccelerationUrlOptions.builder()
+ * .dualStack(false)
+ * .build();
+ * ```
+ */
 public interface TransferAccelerationUrlOptions {
+  /**
+   * Dual-stack support to connect to the bucket over IPv6.
+   *
+   * Default: - false
+   */
   public fun dualStack(): Boolean? = unwrap(this).getDualStack()
 
+  /**
+   * A builder for [TransferAccelerationUrlOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param dualStack Dual-stack support to connect to the bucket over IPv6.
+     */
     public fun dualStack(dualStack: Boolean)
   }
 
@@ -20,6 +46,9 @@ public interface TransferAccelerationUrlOptions {
         software.amazon.awscdk.services.s3.TransferAccelerationUrlOptions.Builder =
         software.amazon.awscdk.services.s3.TransferAccelerationUrlOptions.builder()
 
+    /**
+     * @param dualStack Dual-stack support to connect to the bucket over IPv6.
+     */
     override fun dualStack(dualStack: Boolean) {
       cdkBuilder.dualStack(dualStack)
     }
@@ -31,6 +60,11 @@ public interface TransferAccelerationUrlOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.s3.TransferAccelerationUrlOptions,
   ) : CdkObject(cdkObject), TransferAccelerationUrlOptions {
+    /**
+     * Dual-stack support to connect to the bucket over IPv6.
+     *
+     * Default: - false
+     */
     override fun dualStack(): Boolean? = unwrap(this).getDualStack()
   }
 

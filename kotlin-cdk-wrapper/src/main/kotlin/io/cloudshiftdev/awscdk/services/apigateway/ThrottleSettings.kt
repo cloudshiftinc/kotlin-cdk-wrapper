@@ -7,15 +7,60 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Number
 import kotlin.Unit
 
+/**
+ * Container for defining throttling parameters to API stages or methods.
+ *
+ * Example:
+ *
+ * ```
+ * LambdaIntegration integration;
+ * RestApi api = new RestApi(this, "hello-api");
+ * Resource v1 = api.root.addResource("v1");
+ * Resource echo = v1.addResource("echo");
+ * Method echoMethod = echo.addMethod("GET", integration,
+ * MethodOptions.builder().apiKeyRequired(true).build());
+ * UsagePlan plan = api.addUsagePlan("UsagePlan", UsagePlanProps.builder()
+ * .name("Easy")
+ * .throttle(ThrottleSettings.builder()
+ * .rateLimit(10)
+ * .burstLimit(2)
+ * .build())
+ * .build());
+ * IApiKey key = api.addApiKey("ApiKey");
+ * plan.addApiKey(key);
+ * ```
+ */
 public interface ThrottleSettings {
+  /**
+   * The maximum API request rate limit over a time ranging from one to a few seconds.
+   *
+   * Default: none
+   */
   public fun burstLimit(): Number? = unwrap(this).getBurstLimit()
 
+  /**
+   * The API request steady-state rate limit (average requests per second over an extended period of
+   * time).
+   *
+   * Default: none
+   */
   public fun rateLimit(): Number? = unwrap(this).getRateLimit()
 
+  /**
+   * A builder for [ThrottleSettings]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param burstLimit The maximum API request rate limit over a time ranging from one to a few
+     * seconds.
+     */
     public fun burstLimit(burstLimit: Number)
 
+    /**
+     * @param rateLimit The API request steady-state rate limit (average requests per second over an
+     * extended period of time).
+     */
     public fun rateLimit(rateLimit: Number)
   }
 
@@ -23,10 +68,18 @@ public interface ThrottleSettings {
     private val cdkBuilder: software.amazon.awscdk.services.apigateway.ThrottleSettings.Builder =
         software.amazon.awscdk.services.apigateway.ThrottleSettings.builder()
 
+    /**
+     * @param burstLimit The maximum API request rate limit over a time ranging from one to a few
+     * seconds.
+     */
     override fun burstLimit(burstLimit: Number) {
       cdkBuilder.burstLimit(burstLimit)
     }
 
+    /**
+     * @param rateLimit The API request steady-state rate limit (average requests per second over an
+     * extended period of time).
+     */
     override fun rateLimit(rateLimit: Number) {
       cdkBuilder.rateLimit(rateLimit)
     }
@@ -38,8 +91,19 @@ public interface ThrottleSettings {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.apigateway.ThrottleSettings,
   ) : CdkObject(cdkObject), ThrottleSettings {
+    /**
+     * The maximum API request rate limit over a time ranging from one to a few seconds.
+     *
+     * Default: none
+     */
     override fun burstLimit(): Number? = unwrap(this).getBurstLimit()
 
+    /**
+     * The API request steady-state rate limit (average requests per second over an extended period
+     * of time).
+     *
+     * Default: none
+     */
     override fun rateLimit(): Number? = unwrap(this).getRateLimit()
   }
 

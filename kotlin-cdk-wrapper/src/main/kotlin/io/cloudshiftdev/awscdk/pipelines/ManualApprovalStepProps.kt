@@ -7,11 +7,36 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Construction properties for a `ManualApprovalStep`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.pipelines.*;
+ * ManualApprovalStepProps manualApprovalStepProps = ManualApprovalStepProps.builder()
+ * .comment("comment")
+ * .build();
+ * ```
+ */
 public interface ManualApprovalStepProps {
+  /**
+   * The comment to display with this manual approval.
+   *
+   * Default: - No comment
+   */
   public fun comment(): String? = unwrap(this).getComment()
 
+  /**
+   * A builder for [ManualApprovalStepProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param comment The comment to display with this manual approval.
+     */
     public fun comment(comment: String)
   }
 
@@ -19,6 +44,9 @@ public interface ManualApprovalStepProps {
     private val cdkBuilder: software.amazon.awscdk.pipelines.ManualApprovalStepProps.Builder =
         software.amazon.awscdk.pipelines.ManualApprovalStepProps.builder()
 
+    /**
+     * @param comment The comment to display with this manual approval.
+     */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
@@ -30,6 +58,11 @@ public interface ManualApprovalStepProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.pipelines.ManualApprovalStepProps,
   ) : CdkObject(cdkObject), ManualApprovalStepProps {
+    /**
+     * The comment to display with this manual approval.
+     *
+     * Default: - No comment
+     */
     override fun comment(): String? = unwrap(this).getComment()
   }
 

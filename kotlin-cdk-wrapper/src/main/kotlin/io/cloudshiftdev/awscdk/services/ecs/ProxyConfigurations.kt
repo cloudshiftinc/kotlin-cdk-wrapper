@@ -6,6 +6,18 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * The base class for proxy configurations.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ecs.*;
+ * ProxyConfigurations proxyConfigurations = new ProxyConfigurations();
+ * ```
+ */
 public open class ProxyConfigurations internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.ProxyConfigurations,
 ) : CdkObject(cdkObject) {

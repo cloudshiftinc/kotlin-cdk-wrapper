@@ -7,15 +7,62 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Unit
 
+/**
+ * Encryption Configuration of the S3 bucket.
+ *
+ * Example:
+ *
+ * ```
+ * AthenaStartQueryExecution startQueryExecutionJob = AthenaStartQueryExecution.Builder.create(this,
+ * "Start Athena Query")
+ * .queryString(JsonPath.stringAt("$.queryString"))
+ * .queryExecutionContext(QueryExecutionContext.builder()
+ * .databaseName("mydatabase")
+ * .build())
+ * .resultConfiguration(ResultConfiguration.builder()
+ * .encryptionConfiguration(EncryptionConfiguration.builder()
+ * .encryptionOption(EncryptionOption.S3_MANAGED)
+ * .build())
+ * .outputLocation(Location.builder()
+ * .bucketName("query-results-bucket")
+ * .objectKey("folder")
+ * .build())
+ * .build())
+ * .executionParameters(List.of("param1", "param2"))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/athena/latest/APIReference/API_EncryptionConfiguration.html)
+ */
 public interface EncryptionConfiguration {
+  /**
+   * KMS key ARN or ID.
+   *
+   * Default: - No KMS key for Encryption Option SSE_S3 and default master key for Encryption Option
+   * SSE_KMS and CSE_KMS
+   */
   public fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
 
+  /**
+   * Type of S3 server-side encryption enabled.
+   *
+   * Default: EncryptionOption.S3_MANAGED
+   */
   public fun encryptionOption(): EncryptionOption
 
+  /**
+   * A builder for [EncryptionConfiguration]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param encryptionKey KMS key ARN or ID.
+     */
     public fun encryptionKey(encryptionKey: IKey)
 
+    /**
+     * @param encryptionOption Type of S3 server-side encryption enabled. 
+     */
     public fun encryptionOption(encryptionOption: EncryptionOption)
   }
 
@@ -24,10 +71,16 @@ public interface EncryptionConfiguration {
         software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration.builder()
 
+    /**
+     * @param encryptionKey KMS key ARN or ID.
+     */
     override fun encryptionKey(encryptionKey: IKey) {
       cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
     }
 
+    /**
+     * @param encryptionOption Type of S3 server-side encryption enabled. 
+     */
     override fun encryptionOption(encryptionOption: EncryptionOption) {
       cdkBuilder.encryptionOption(encryptionOption.let(EncryptionOption::unwrap))
     }
@@ -40,8 +93,19 @@ public interface EncryptionConfiguration {
     override val cdkObject:
         software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration,
   ) : CdkObject(cdkObject), EncryptionConfiguration {
+    /**
+     * KMS key ARN or ID.
+     *
+     * Default: - No KMS key for Encryption Option SSE_S3 and default master key for Encryption
+     * Option SSE_KMS and CSE_KMS
+     */
     override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
 
+    /**
+     * Type of S3 server-side encryption enabled.
+     *
+     * Default: EncryptionOption.S3_MANAGED
+     */
     override fun encryptionOption(): EncryptionOption =
         unwrap(this).getEncryptionOption().let(EncryptionOption::wrap)
   }

@@ -7,11 +7,40 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * ELB Heath check options.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+ * ElbHealthCheckOptions elbHealthCheckOptions = ElbHealthCheckOptions.builder()
+ * .grace(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 public interface ElbHealthCheckOptions {
+  /**
+   * Specified the time Auto Scaling waits before checking the health status of an EC2 instance that
+   * has come into service.
+   *
+   * This option is required for ELB health checks.
+   */
   public fun grace(): Duration
 
+  /**
+   * A builder for [ElbHealthCheckOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param grace Specified the time Auto Scaling waits before checking the health status of an
+     * EC2 instance that has come into service. 
+     * This option is required for ELB health checks.
+     */
     public fun grace(grace: Duration)
   }
 
@@ -20,6 +49,11 @@ public interface ElbHealthCheckOptions {
         software.amazon.awscdk.services.autoscaling.ElbHealthCheckOptions.Builder =
         software.amazon.awscdk.services.autoscaling.ElbHealthCheckOptions.builder()
 
+    /**
+     * @param grace Specified the time Auto Scaling waits before checking the health status of an
+     * EC2 instance that has come into service. 
+     * This option is required for ELB health checks.
+     */
     override fun grace(grace: Duration) {
       cdkBuilder.grace(grace.let(Duration::unwrap))
     }
@@ -31,6 +65,12 @@ public interface ElbHealthCheckOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.autoscaling.ElbHealthCheckOptions,
   ) : CdkObject(cdkObject), ElbHealthCheckOptions {
+    /**
+     * Specified the time Auto Scaling waits before checking the health status of an EC2 instance
+     * that has come into service.
+     *
+     * This option is required for ELB health checks.
+     */
     override fun grace(): Duration = unwrap(this).getGrace().let(Duration::wrap)
   }
 

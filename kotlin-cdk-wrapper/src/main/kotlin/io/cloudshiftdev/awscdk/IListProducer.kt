@@ -6,14 +6,27 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.collections.List
 
+/**
+ * Interface for lazy list producers.
+ */
 public interface IListProducer {
-  public fun produce(arg0: IResolveContext): List<String>
+  /**
+   * Produce the list value.
+   *
+   * @param context 
+   */
+  public fun produce(context: IResolveContext): List<String>
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.IListProducer,
   ) : CdkObject(cdkObject), IListProducer {
-    override fun produce(arg0: IResolveContext): List<String> =
-        unwrap(this).produce(arg0.let(IResolveContext::unwrap)) ?: emptyList()
+    /**
+     * Produce the list value.
+     *
+     * @param context 
+     */
+    override fun produce(context: IResolveContext): List<String> =
+        unwrap(this).produce(context.let(IResolveContext::unwrap)) ?: emptyList()
   }
 
   public companion object {

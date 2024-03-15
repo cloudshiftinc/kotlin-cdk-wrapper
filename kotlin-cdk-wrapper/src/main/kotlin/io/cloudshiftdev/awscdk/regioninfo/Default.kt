@@ -5,6 +5,9 @@ package io.cloudshiftdev.awscdk.regioninfo
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Provides default values for certain regional information points.
+ */
 public open class Default internal constructor(
   internal override val cdkObject: software.amazon.awscdk.regioninfo.Default,
 ) : CdkObject(cdkObject) {

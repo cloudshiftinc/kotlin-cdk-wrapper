@@ -8,11 +8,32 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
 
+/**
+ * Options for looking up an ApplicationLoadBalancer.
+ *
+ * Example:
+ *
+ * ```
+ * IApplicationLoadBalancer loadBalancer = ApplicationLoadBalancer.fromLookup(this, "ALB",
+ * ApplicationLoadBalancerLookupOptions.builder()
+ * .loadBalancerArn("arn:aws:elasticloadbalancing:us-east-2:123456789012:loadbalancer/app/my-load-balancer/1234567890123456")
+ * .build());
+ * ```
+ */
 public interface ApplicationLoadBalancerLookupOptions : BaseLoadBalancerLookupOptions {
+  /**
+   * A builder for [ApplicationLoadBalancerLookupOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param loadBalancerArn Find by load balancer's ARN.
+     */
     public fun loadBalancerArn(loadBalancerArn: String)
 
+    /**
+     * @param loadBalancerTags Match load balancer tags.
+     */
     public fun loadBalancerTags(loadBalancerTags: Map<String, String>)
   }
 
@@ -22,10 +43,16 @@ public interface ApplicationLoadBalancerLookupOptions : BaseLoadBalancerLookupOp
         =
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerLookupOptions.builder()
 
+    /**
+     * @param loadBalancerArn Find by load balancer's ARN.
+     */
     override fun loadBalancerArn(loadBalancerArn: String) {
       cdkBuilder.loadBalancerArn(loadBalancerArn)
     }
 
+    /**
+     * @param loadBalancerTags Match load balancer tags.
+     */
     override fun loadBalancerTags(loadBalancerTags: Map<String, String>) {
       cdkBuilder.loadBalancerTags(loadBalancerTags)
     }
@@ -39,8 +66,18 @@ public interface ApplicationLoadBalancerLookupOptions : BaseLoadBalancerLookupOp
     override val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerLookupOptions,
   ) : CdkObject(cdkObject), ApplicationLoadBalancerLookupOptions {
+    /**
+     * Find by load balancer's ARN.
+     *
+     * Default: - does not search by load balancer arn
+     */
     override fun loadBalancerArn(): String? = unwrap(this).getLoadBalancerArn()
 
+    /**
+     * Match load balancer tags.
+     *
+     * Default: - does not match load balancers by tags
+     */
     override fun loadBalancerTags(): Map<String, String> = unwrap(this).getLoadBalancerTags() ?:
         emptyMap()
   }

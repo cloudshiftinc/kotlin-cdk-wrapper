@@ -5,6 +5,20 @@ package io.cloudshiftdev.awscdk.regioninfo
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * All standardized fact names.
+ *
+ * Example:
+ *
+ * ```
+ * public class MyFact implements IFact {
+ * public final Object region;
+ * public final Object name;
+ * public final Object value;
+ * }
+ * Fact.register(new MyFact());
+ * ```
+ */
 public open class FactName internal constructor(
   internal override val cdkObject: software.amazon.awscdk.regioninfo.FactName,
 ) : CdkObject(cdkObject) {

@@ -7,26 +7,61 @@ import io.cloudshiftdev.awscdk.services.codepipeline.IStage
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Factory for explicit CodePipeline Actions.
+ *
+ * If you have specific types of Actions you want to add to a
+ * CodePipeline, write a subclass of `Step` that implements this
+ * interface, and add the action or actions you want in the `produce` method.
+ *
+ * There needs to be a level of indirection here, because some aspects of the
+ * Action creation need to be controlled by the workflow engine (name and
+ * runOrder). All the rest of the properties are controlled by the factory.
+ */
 public interface ICodePipelineActionFactory {
-  public fun produceAction(arg0: IStage, arg1: ProduceActionOptions):
+  /**
+   * Create the desired Action and add it to the pipeline.
+   *
+   * @param stage 
+   * @param options 
+   */
+  public fun produceAction(stage: IStage, options: ProduceActionOptions):
       CodePipelineActionFactoryResult
 
+  /**
+   * Create the desired Action and add it to the pipeline.
+   *
+   * @param stage 
+   * @param options 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("ee07f43e69cfd8f0f23331f5dcd6cba92444f51437e346ca00f2e5d5a3e0c72e")
-  public fun produceAction(arg0: IStage, arg1: ProduceActionOptions.Builder.() -> Unit):
+  public fun produceAction(stage: IStage, options: ProduceActionOptions.Builder.() -> Unit):
       CodePipelineActionFactoryResult
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.pipelines.ICodePipelineActionFactory,
   ) : CdkObject(cdkObject), ICodePipelineActionFactory {
-    override fun produceAction(arg0: IStage, arg1: ProduceActionOptions):
-        CodePipelineActionFactoryResult = unwrap(this).produceAction(arg0.let(IStage::unwrap),
-        arg1.let(ProduceActionOptions::unwrap)).let(CodePipelineActionFactoryResult::wrap)
+    /**
+     * Create the desired Action and add it to the pipeline.
+     *
+     * @param stage 
+     * @param options 
+     */
+    override fun produceAction(stage: IStage, options: ProduceActionOptions):
+        CodePipelineActionFactoryResult = unwrap(this).produceAction(stage.let(IStage::unwrap),
+        options.let(ProduceActionOptions::unwrap)).let(CodePipelineActionFactoryResult::wrap)
 
+    /**
+     * Create the desired Action and add it to the pipeline.
+     *
+     * @param stage 
+     * @param options 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ee07f43e69cfd8f0f23331f5dcd6cba92444f51437e346ca00f2e5d5a3e0c72e")
-    override fun produceAction(arg0: IStage, arg1: ProduceActionOptions.Builder.() -> Unit):
-        CodePipelineActionFactoryResult = produceAction(arg0, ProduceActionOptions(arg1))
+    override fun produceAction(stage: IStage, options: ProduceActionOptions.Builder.() -> Unit):
+        CodePipelineActionFactoryResult = produceAction(stage, ProduceActionOptions(options))
   }
 
   public companion object {

@@ -5,9 +5,41 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Group metrics that an Auto Scaling group sends to Amazon CloudWatch.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * InstanceType instanceType;
+ * IMachineImage machineImage;
+ * // Enable monitoring of all group metrics
+ * // Enable monitoring of all group metrics
+ * AutoScalingGroup.Builder.create(this, "ASG")
+ * .vpc(vpc)
+ * .instanceType(instanceType)
+ * .machineImage(machineImage)
+ * // ...
+ * .groupMetrics(List.of(GroupMetrics.all()))
+ * .build();
+ * // Enable monitoring for a subset of group metrics
+ * // Enable monitoring for a subset of group metrics
+ * AutoScalingGroup.Builder.create(this, "ASG")
+ * .vpc(vpc)
+ * .instanceType(instanceType)
+ * .machineImage(machineImage)
+ * // ...
+ * .groupMetrics(List.of(new GroupMetrics(GroupMetric.MIN_SIZE, GroupMetric.MAX_SIZE)))
+ * .build();
+ * ```
+ */
 public open class GroupMetric internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.autoscaling.GroupMetric,
 ) : CdkObject(cdkObject) {
+  /**
+   * The name of the group metric.
+   */
   public open fun name(): String = unwrap(this).getName()
 
   public companion object {

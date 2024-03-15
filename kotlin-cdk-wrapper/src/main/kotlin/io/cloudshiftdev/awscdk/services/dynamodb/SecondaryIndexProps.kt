@@ -8,22 +8,67 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 
+/**
+ * Properties for a secondary index.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+ * SecondaryIndexProps secondaryIndexProps = SecondaryIndexProps.builder()
+ * .indexName("indexName")
+ * // the properties below are optional
+ * .nonKeyAttributes(List.of("nonKeyAttributes"))
+ * .projectionType(ProjectionType.KEYS_ONLY)
+ * .build();
+ * ```
+ */
 public interface SecondaryIndexProps {
+  /**
+   * The name of the secondary index.
+   */
   public fun indexName(): String
 
+  /**
+   * The non-key attributes that are projected into the secondary index.
+   *
+   * Default: - No additional attributes
+   */
   public fun nonKeyAttributes(): List<String> = unwrap(this).getNonKeyAttributes() ?: emptyList()
 
+  /**
+   * The set of attributes that are projected into the secondary index.
+   *
+   * Default: ALL
+   */
   public fun projectionType(): ProjectionType? =
       unwrap(this).getProjectionType()?.let(ProjectionType::wrap)
 
+  /**
+   * A builder for [SecondaryIndexProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param indexName The name of the secondary index. 
+     */
     public fun indexName(indexName: String)
 
+    /**
+     * @param nonKeyAttributes The non-key attributes that are projected into the secondary index.
+     */
     public fun nonKeyAttributes(nonKeyAttributes: List<String>)
 
+    /**
+     * @param nonKeyAttributes The non-key attributes that are projected into the secondary index.
+     */
     public fun nonKeyAttributes(vararg nonKeyAttributes: String)
 
+    /**
+     * @param projectionType The set of attributes that are projected into the secondary index.
+     */
     public fun projectionType(projectionType: ProjectionType)
   }
 
@@ -31,17 +76,29 @@ public interface SecondaryIndexProps {
     private val cdkBuilder: software.amazon.awscdk.services.dynamodb.SecondaryIndexProps.Builder =
         software.amazon.awscdk.services.dynamodb.SecondaryIndexProps.builder()
 
+    /**
+     * @param indexName The name of the secondary index. 
+     */
     override fun indexName(indexName: String) {
       cdkBuilder.indexName(indexName)
     }
 
+    /**
+     * @param nonKeyAttributes The non-key attributes that are projected into the secondary index.
+     */
     override fun nonKeyAttributes(nonKeyAttributes: List<String>) {
       cdkBuilder.nonKeyAttributes(nonKeyAttributes)
     }
 
+    /**
+     * @param nonKeyAttributes The non-key attributes that are projected into the secondary index.
+     */
     override fun nonKeyAttributes(vararg nonKeyAttributes: String): Unit =
         nonKeyAttributes(nonKeyAttributes.toList())
 
+    /**
+     * @param projectionType The set of attributes that are projected into the secondary index.
+     */
     override fun projectionType(projectionType: ProjectionType) {
       cdkBuilder.projectionType(projectionType.let(ProjectionType::unwrap))
     }
@@ -53,11 +110,24 @@ public interface SecondaryIndexProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.dynamodb.SecondaryIndexProps,
   ) : CdkObject(cdkObject), SecondaryIndexProps {
+    /**
+     * The name of the secondary index.
+     */
     override fun indexName(): String = unwrap(this).getIndexName()
 
+    /**
+     * The non-key attributes that are projected into the secondary index.
+     *
+     * Default: - No additional attributes
+     */
     override fun nonKeyAttributes(): List<String> = unwrap(this).getNonKeyAttributes() ?:
         emptyList()
 
+    /**
+     * The set of attributes that are projected into the secondary index.
+     *
+     * Default: ALL
+     */
     override fun projectionType(): ProjectionType? =
         unwrap(this).getProjectionType()?.let(ProjectionType::wrap)
   }

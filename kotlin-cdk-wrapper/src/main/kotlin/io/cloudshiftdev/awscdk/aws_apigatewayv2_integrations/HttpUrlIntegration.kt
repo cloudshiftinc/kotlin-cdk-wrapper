@@ -12,22 +12,75 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * The HTTP Proxy integration resource for HTTP API.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.aws_apigatewayv2_authorizers.HttpLambdaAuthorizer;
+ * import io.cloudshiftdev.awscdk.aws_apigatewayv2_authorizers.HttpLambdaResponseType;
+ * import io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegration;
+ * // This function handles your auth logic
+ * Function authHandler;
+ * HttpLambdaAuthorizer authorizer = HttpLambdaAuthorizer.Builder.create("BooksAuthorizer",
+ * authHandler)
+ * .responseTypes(List.of(HttpLambdaResponseType.SIMPLE))
+ * .build();
+ * HttpApi api = new HttpApi(this, "HttpApi");
+ * api.addRoutes(AddRoutesOptions.builder()
+ * .integration(new HttpUrlIntegration("BooksIntegration", "https://get-books-proxy.example.com"))
+ * .path("/books")
+ * .authorizer(authorizer)
+ * .build());
+ * ```
+ */
 public open class HttpUrlIntegration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegration,
 ) : HttpRouteIntegration(cdkObject) {
+  /**
+   * Bind this integration to the route.
+   *
+   * @param _options 
+   */
   public override fun bind(_options: HttpRouteIntegrationBindOptions): HttpRouteIntegrationConfig =
       unwrap(this).bind(_options.let(HttpRouteIntegrationBindOptions::unwrap)).let(HttpRouteIntegrationConfig::wrap)
 
+  /**
+   * Bind this integration to the route.
+   *
+   * @param _options 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("adeb585f7d049df388aeb961213ea487ef99967ed3fab3c9dbfc7653776fc180")
   public override fun bind(_options: HttpRouteIntegrationBindOptions.Builder.() -> Unit):
       HttpRouteIntegrationConfig = bind(HttpRouteIntegrationBindOptions(_options))
 
+  /**
+   * A fluent builder for
+   * [io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegration].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The HTTP method that must be used to invoke the underlying HTTP proxy.
+     *
+     * Default: HttpMethod.ANY
+     *
+     * @param method The HTTP method that must be used to invoke the underlying HTTP proxy. 
+     */
     public fun method(method: HttpMethod)
 
+    /**
+     * Specifies how to transform HTTP requests before sending them to the backend.
+     *
+     * Default: undefined requests are sent to the backend unmodified
+     *
+     * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html)
+     * @param parameterMapping Specifies how to transform HTTP requests before sending them to the
+     * backend. 
+     */
     public fun parameterMapping(parameterMapping: ParameterMapping)
   }
 
@@ -40,10 +93,26 @@ public open class HttpUrlIntegration internal constructor(
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegration.Builder.create(id,
         url)
 
+    /**
+     * The HTTP method that must be used to invoke the underlying HTTP proxy.
+     *
+     * Default: HttpMethod.ANY
+     *
+     * @param method The HTTP method that must be used to invoke the underlying HTTP proxy. 
+     */
     override fun method(method: HttpMethod) {
       cdkBuilder.method(method.let(HttpMethod::unwrap))
     }
 
+    /**
+     * Specifies how to transform HTTP requests before sending them to the backend.
+     *
+     * Default: undefined requests are sent to the backend unmodified
+     *
+     * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html)
+     * @param parameterMapping Specifies how to transform HTTP requests before sending them to the
+     * backend. 
+     */
     override fun parameterMapping(parameterMapping: ParameterMapping) {
       cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping::unwrap))
     }

@@ -5,6 +5,19 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * A class that provides convenient access to special version tokens for LaunchTemplate versions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * LaunchTemplateSpecialVersions launchTemplateSpecialVersions = new
+ * LaunchTemplateSpecialVersions();
+ * ```
+ */
 public open class LaunchTemplateSpecialVersions internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.LaunchTemplateSpecialVersions,

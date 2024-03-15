@@ -57,7 +57,7 @@ constructor(
         outDir.mkdirs()
 
         logger.lifecycle("Parsing sources...")
-        val dev = true
+        val dev = false
         val cdkSourceModel = when {
             dev -> CdkSourceModel(
                 classMap = emptyMap(),

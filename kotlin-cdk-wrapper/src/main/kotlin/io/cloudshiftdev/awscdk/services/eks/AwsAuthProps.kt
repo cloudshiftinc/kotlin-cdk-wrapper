@@ -6,11 +6,38 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Configuration props for the AwsAuth construct.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.eks.*;
+ * Cluster cluster;
+ * AwsAuthProps awsAuthProps = AwsAuthProps.builder()
+ * .cluster(cluster)
+ * .build();
+ * ```
+ */
 public interface AwsAuthProps {
+  /**
+   * The EKS cluster to apply this configuration to.
+   *
+   * [disable-awslint:ref-via-interface]
+   */
   public fun cluster(): Cluster
 
+  /**
+   * A builder for [AwsAuthProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param cluster The EKS cluster to apply this configuration to. 
+     * [disable-awslint:ref-via-interface]
+     */
     public fun cluster(cluster: Cluster)
   }
 
@@ -18,6 +45,10 @@ public interface AwsAuthProps {
     private val cdkBuilder: software.amazon.awscdk.services.eks.AwsAuthProps.Builder =
         software.amazon.awscdk.services.eks.AwsAuthProps.builder()
 
+    /**
+     * @param cluster The EKS cluster to apply this configuration to. 
+     * [disable-awslint:ref-via-interface]
+     */
     override fun cluster(cluster: Cluster) {
       cdkBuilder.cluster(cluster.let(Cluster::unwrap))
     }
@@ -28,6 +59,11 @@ public interface AwsAuthProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.eks.AwsAuthProps,
   ) : CdkObject(cdkObject), AwsAuthProps {
+    /**
+     * The EKS cluster to apply this configuration to.
+     *
+     * [disable-awslint:ref-via-interface]
+     */
     override fun cluster(): Cluster = unwrap(this).getCluster().let(Cluster::wrap)
   }
 

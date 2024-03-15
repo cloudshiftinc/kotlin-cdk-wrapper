@@ -9,17 +9,51 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Source provider definition for a CodeBuild Project.
+ *
+ * Example:
+ *
+ * ```
+ * Project project = Project.Builder.create(this, "MyProject")
+ * .buildSpec(BuildSpec.fromSourceFilename("my-buildspec.yml"))
+ * .source(Source.gitHub(GitHubSourceProps.builder()
+ * .owner("awslabs")
+ * .repo("aws-cdk")
+ * .build()))
+ * .build();
+ * ```
+ */
 public abstract class Source internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codebuild.Source,
 ) : CdkObject(cdkObject), ISource {
+  /**
+   *
+   */
   public override fun badgeSupported(): Boolean = unwrap(this).getBadgeSupported()
 
+  /**
+   * Called by the project when the source is added so that the source can perform binding
+   * operations on the source.
+   *
+   * For example, it can grant permissions to the
+   * code build project to read from the S3 bucket.
+   *
+   * @param _scope 
+   * @param _project 
+   */
   public override fun bind(_scope: Construct, _project: IProject): SourceConfig =
       unwrap(this).bind(_scope.let(Construct::unwrap),
       _project.let(IProject::unwrap)).let(SourceConfig::wrap)
 
+  /**
+   *
+   */
   public override fun identifier(): String? = unwrap(this).getIdentifier()
 
+  /**
+   *
+   */
   public override fun type(): String = unwrap(this).getType()
 
   private class Wrapper(

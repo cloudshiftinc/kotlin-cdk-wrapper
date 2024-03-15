@@ -11,12 +11,42 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Represents an OpenAPI definition asset.
+ *
+ * Example:
+ *
+ * ```
+ * Integration integration;
+ * SpecRestApi api = SpecRestApi.Builder.create(this, "books-api")
+ * .apiDefinition(ApiDefinition.fromAsset("path-to-file.json"))
+ * .build();
+ * Resource booksResource = api.root.addResource("books");
+ * booksResource.addMethod("GET", integration);
+ * ```
+ */
 public abstract class ApiDefinition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.ApiDefinition,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct): ApiDefinitionConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(ApiDefinitionConfig::wrap)
+  /**
+   * Called when the specification is initialized to allow this object to bind to the stack, add
+   * resources and have fun.
+   *
+   * @param scope The binding scope. 
+   */
+  public open fun bind(scope: Construct): ApiDefinitionConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(ApiDefinitionConfig::wrap)
 
+  /**
+   * Called after the CFN RestApi resource has been created to allow the Api Definition to bind to
+   * it.
+   *
+   * Specifically it's required to allow assets to add
+   * metadata for tooling like SAM CLI to be able to find their origins.
+   *
+   * @param _scope 
+   * @param _restApi 
+   */
   public open fun bindAfterCreate(_scope: Construct, _restApi: IRestApi) {
     unwrap(this).bindAfterCreate(_scope.let(Construct::unwrap), _restApi.let(IRestApi::unwrap))
   }

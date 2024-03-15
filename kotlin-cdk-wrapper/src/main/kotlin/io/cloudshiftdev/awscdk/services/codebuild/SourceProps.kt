@@ -7,11 +7,37 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties common to all Source classes.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.codebuild.*;
+ * SourceProps sourceProps = SourceProps.builder()
+ * .identifier("identifier")
+ * .build();
+ * ```
+ */
 public interface SourceProps {
+  /**
+   * The source identifier.
+   *
+   * This property is required on secondary sources.
+   */
   public fun identifier(): String? = unwrap(this).getIdentifier()
 
+  /**
+   * A builder for [SourceProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param identifier The source identifier.
+     * This property is required on secondary sources.
+     */
     public fun identifier(identifier: String)
   }
 
@@ -19,6 +45,10 @@ public interface SourceProps {
     private val cdkBuilder: software.amazon.awscdk.services.codebuild.SourceProps.Builder =
         software.amazon.awscdk.services.codebuild.SourceProps.builder()
 
+    /**
+     * @param identifier The source identifier.
+     * This property is required on secondary sources.
+     */
     override fun identifier(identifier: String) {
       cdkBuilder.identifier(identifier)
     }
@@ -29,6 +59,11 @@ public interface SourceProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.codebuild.SourceProps,
   ) : CdkObject(cdkObject), SourceProps {
+    /**
+     * The source identifier.
+     *
+     * This property is required on secondary sources.
+     */
     override fun identifier(): String? = unwrap(this).getIdentifier()
   }
 

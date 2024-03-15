@@ -5,9 +5,28 @@ package io.cloudshiftdev.awscdk.services.eks
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Endpoint access characteristics.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster = Cluster.Builder.create(this, "hello-eks")
+ * .version(KubernetesVersion.V1_29)
+ * .endpointAccess(EndpointAccess.PRIVATE)
+ * .build();
+ * ```
+ */
 public open class EndpointAccess internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.eks.EndpointAccess,
 ) : CdkObject(cdkObject) {
+  /**
+   * Restrict public access to specific CIDR blocks.
+   *
+   * If public access is disabled, this method will result in an error.
+   *
+   * @param cidr CIDR blocks. 
+   */
   public open fun onlyFrom(cidr: String): EndpointAccess =
       unwrap(this).onlyFrom(cidr).let(EndpointAccess::wrap)
 

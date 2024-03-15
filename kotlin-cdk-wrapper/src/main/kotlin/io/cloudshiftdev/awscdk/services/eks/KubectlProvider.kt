@@ -11,17 +11,57 @@ import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * Implementation of Kubectl Lambda.
+ *
+ * Example:
+ *
+ * ```
+ * IRole handlerRole = Role.fromRoleArn(this, "HandlerRole",
+ * "arn:aws:iam::123456789012:role/lambda-role");
+ * // get the serivceToken from the custom resource provider
+ * String functionArn = Function.fromFunctionName(this, "ProviderOnEventFunc",
+ * "ProviderframeworkonEvent-XXX").getFunctionArn();
+ * IKubectlProvider kubectlProvider = KubectlProvider.fromKubectlProviderAttributes(this,
+ * "KubectlProvider", KubectlProviderAttributes.builder()
+ * .functionArn(functionArn)
+ * .kubectlRoleArn("arn:aws:iam::123456789012:role/kubectl-role")
+ * .handlerRole(handlerRole)
+ * .build());
+ * ICluster cluster = Cluster.fromClusterAttributes(this, "Cluster", ClusterAttributes.builder()
+ * .clusterName("cluster")
+ * .kubectlProvider(kubectlProvider)
+ * .build());
+ * ```
+ */
 public open class KubectlProvider internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.eks.KubectlProvider,
 ) : NestedStack(cdkObject), IKubectlProvider {
+  /**
+   * The IAM execution role of the handler.
+   */
   public override fun handlerRole(): IRole = unwrap(this).getHandlerRole().let(IRole::wrap)
 
+  /**
+   * The IAM role to assume in order to perform kubectl operations against this cluster.
+   */
   public override fun roleArn(): String = unwrap(this).getRoleArn()
 
+  /**
+   * The custom resource provider's service token.
+   */
   public override fun serviceToken(): String = unwrap(this).getServiceToken()
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.eks.KubectlProvider].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The cluster to control.
+     *
+     * @param cluster The cluster to control. 
+     */
     public fun cluster(cluster: ICluster)
   }
 
@@ -32,6 +72,11 @@ public open class KubectlProvider internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.eks.KubectlProvider.Builder =
         software.amazon.awscdk.services.eks.KubectlProvider.Builder.create(scope, id)
 
+    /**
+     * The cluster to control.
+     *
+     * @param cluster The cluster to control. 
+     */
     override fun cluster(cluster: ICluster) {
       cdkBuilder.cluster(cluster.let(ICluster::unwrap))
     }

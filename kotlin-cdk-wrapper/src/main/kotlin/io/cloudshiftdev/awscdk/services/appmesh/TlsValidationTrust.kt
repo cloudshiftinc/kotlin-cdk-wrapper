@@ -8,11 +8,52 @@ import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 import kotlin.collections.List
 
+/**
+ * Defines the TLS Validation Context Trust.
+ *
+ * Example:
+ *
+ * ```
+ * Mesh mesh;
+ * Service service;
+ * VirtualNode node = VirtualNode.Builder.create(this, "node")
+ * .mesh(mesh)
+ * .serviceDiscovery(ServiceDiscovery.cloudMap(service))
+ * .listeners(List.of(VirtualNodeListener.http(HttpVirtualNodeListenerOptions.builder()
+ * .port(8080)
+ * .healthCheck(HealthCheck.http(HttpHealthCheckOptions.builder()
+ * .healthyThreshold(3)
+ * .interval(Duration.seconds(5))
+ * .path("/ping")
+ * .timeout(Duration.seconds(2))
+ * .unhealthyThreshold(2)
+ * .build()))
+ * .timeout(HttpTimeout.builder()
+ * .idle(Duration.seconds(5))
+ * .build())
+ * .build())))
+ * .backendDefaults(BackendDefaults.builder()
+ * .tlsClientPolicy(TlsClientPolicy.builder()
+ * .validation(TlsValidation.builder()
+ * .trust(TlsValidationTrust.file("/keys/local_cert_chain.pem"))
+ * .build())
+ * .build())
+ * .build())
+ * .accessLog(AccessLog.fromFilePath("/dev/stdout"))
+ * .build();
+ * Tags.of(node).add("Environment", "Dev");
+ * ```
+ */
 public abstract class TlsValidationTrust internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.TlsValidationTrust,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct): TlsValidationTrustConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(TlsValidationTrustConfig::wrap)
+  /**
+   * Returns Trust context based on trust type.
+   *
+   * @param scope 
+   */
+  public open fun bind(scope: Construct): TlsValidationTrustConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(TlsValidationTrustConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.TlsValidationTrust,

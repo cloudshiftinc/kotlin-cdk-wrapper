@@ -7,11 +7,37 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.lambda.*;
+ * ResourceBindOptions resourceBindOptions = ResourceBindOptions.builder()
+ * .resourceProperty("resourceProperty")
+ * .build();
+ * ```
+ */
 public interface ResourceBindOptions {
+  /**
+   * The name of the CloudFormation property to annotate with asset metadata.
+   *
+   * Default: Code
+   *
+   * [Documentation](https://github.com/aws/aws-cdk/issues/1432)
+   */
   public fun resourceProperty(): String? = unwrap(this).getResourceProperty()
 
+  /**
+   * A builder for [ResourceBindOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param resourceProperty The name of the CloudFormation property to annotate with asset
+     * metadata.
+     */
     public fun resourceProperty(resourceProperty: String)
   }
 
@@ -19,6 +45,10 @@ public interface ResourceBindOptions {
     private val cdkBuilder: software.amazon.awscdk.services.lambda.ResourceBindOptions.Builder =
         software.amazon.awscdk.services.lambda.ResourceBindOptions.builder()
 
+    /**
+     * @param resourceProperty The name of the CloudFormation property to annotate with asset
+     * metadata.
+     */
     override fun resourceProperty(resourceProperty: String) {
       cdkBuilder.resourceProperty(resourceProperty)
     }
@@ -30,6 +60,13 @@ public interface ResourceBindOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.lambda.ResourceBindOptions,
   ) : CdkObject(cdkObject), ResourceBindOptions {
+    /**
+     * The name of the CloudFormation property to annotate with asset metadata.
+     *
+     * Default: Code
+     *
+     * [Documentation](https://github.com/aws/aws-cdk/issues/1432)
+     */
     override fun resourceProperty(): String? = unwrap(this).getResourceProperty()
   }
 

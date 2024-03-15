@@ -9,11 +9,42 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Represents source code for an AppSync Function or Resolver.
+ *
+ * Example:
+ *
+ * ```
+ * GraphqlApi api;
+ * AppsyncFunction myJsFunction = AppsyncFunction.Builder.create(this, "function")
+ * .name("my_js_function")
+ * .api(api)
+ * .dataSource(api.addNoneDataSource("none"))
+ * .code(Code.fromAsset("directory/function_code.js"))
+ * .runtime(FunctionRuntime.JS_1_0_0)
+ * .build();
+ * Resolver.Builder.create(this, "PipelineResolver")
+ * .api(api)
+ * .typeName("typeName")
+ * .fieldName("fieldName")
+ * .code(Code.fromInline("\n    // The before step\n    export function request(...args) {\n     
+ * console.log(args);\n      return {}\n    }\n\n    // The after step\n    export function
+ * response(ctx) {\n      return ctx.prev.result\n    }\n  "))
+ * .runtime(FunctionRuntime.JS_1_0_0)
+ * .pipelineConfig(List.of(myJsFunction))
+ * .build();
+ * ```
+ */
 public abstract class Code internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.Code,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct): CodeConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(CodeConfig::wrap)
+  /**
+   * Bind source code to an AppSync Function or resolver.
+   *
+   * @param scope 
+   */
+  public open fun bind(scope: Construct): CodeConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(CodeConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appsync.Code,

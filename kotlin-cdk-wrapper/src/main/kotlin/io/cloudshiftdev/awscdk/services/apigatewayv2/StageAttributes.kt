@@ -7,11 +7,34 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * The attributes used to import existing Stage.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
+ * StageAttributes stageAttributes = StageAttributes.builder()
+ * .stageName("stageName")
+ * .build();
+ * ```
+ */
 public interface StageAttributes {
+  /**
+   * The name of the stage.
+   */
   public fun stageName(): String
 
+  /**
+   * A builder for [StageAttributes]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param stageName The name of the stage. 
+     */
     public fun stageName(stageName: String)
   }
 
@@ -19,6 +42,9 @@ public interface StageAttributes {
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.StageAttributes.Builder =
         software.amazon.awscdk.services.apigatewayv2.StageAttributes.builder()
 
+    /**
+     * @param stageName The name of the stage. 
+     */
     override fun stageName(stageName: String) {
       cdkBuilder.stageName(stageName)
     }
@@ -30,6 +56,9 @@ public interface StageAttributes {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.apigatewayv2.StageAttributes,
   ) : CdkObject(cdkObject), StageAttributes {
+    /**
+     * The name of the stage.
+     */
     override fun stageName(): String = unwrap(this).getStageName()
   }
 

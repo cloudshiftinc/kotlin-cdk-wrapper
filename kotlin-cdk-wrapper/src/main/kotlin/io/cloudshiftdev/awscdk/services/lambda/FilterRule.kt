@@ -10,6 +10,28 @@ import kotlin.String
 import kotlin.collections.List
 import kotlin.collections.Map
 
+/**
+ * Filter rules for Lambda event filtering.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.lambda.eventsources.*;
+ * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+ * Function fn;
+ * Table table = Table.Builder.create(this, "Table")
+ * .partitionKey(Attribute.builder()
+ * .name("id")
+ * .type(AttributeType.STRING)
+ * .build())
+ * .stream(StreamViewType.NEW_IMAGE)
+ * .build();
+ * fn.addEventSource(DynamoEventSource.Builder.create(table)
+ * .startingPosition(StartingPosition.LATEST)
+ * .filters(List.of(FilterCriteria.filter(Map.of("eventName", FilterRule.isEqual("INSERT")))))
+ * .build());
+ * ```
+ */
 public open class FilterRule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.FilterRule,
 ) : CdkObject(cdkObject) {

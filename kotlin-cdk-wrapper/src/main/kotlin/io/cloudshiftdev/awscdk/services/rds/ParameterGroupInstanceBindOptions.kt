@@ -6,7 +6,23 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Options for `IParameterGroup.bindToInstance`. Empty for now, but can be extended later.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.rds.*;
+ * ParameterGroupInstanceBindOptions parameterGroupInstanceBindOptions =
+ * ParameterGroupInstanceBindOptions.builder().build();
+ * ```
+ */
 public interface ParameterGroupInstanceBindOptions {
+  /**
+   * A builder for [ParameterGroupInstanceBindOptions]
+   */
   @CdkDslMarker
   public interface Builder
 

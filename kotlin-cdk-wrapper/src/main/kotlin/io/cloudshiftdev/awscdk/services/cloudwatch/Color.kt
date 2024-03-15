@@ -5,6 +5,21 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * A set of standard colours that can be used in annotations in a GraphWidget.
+ *
+ * Example:
+ *
+ * ```
+ * Dashboard dashboard;
+ * dashboard.addWidgets(GraphWidget.Builder.create()
+ * // ...
+ * .leftAnnotations(List.of(HorizontalAnnotation.builder().value(1800).label(Duration.minutes(30).toHumanString()).color(Color.RED).build(),
+ * HorizontalAnnotation.builder().value(3600).label("1 hour").color("#2ca02c").build()))
+ * .verticalAnnotations(List.of(VerticalAnnotation.builder().date("2022-10-19T00:00:00Z").label("Deployment").color(Color.RED).build()))
+ * .build());
+ * ```
+ */
 public open class Color internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.Color,
 ) : CdkObject(cdkObject) {

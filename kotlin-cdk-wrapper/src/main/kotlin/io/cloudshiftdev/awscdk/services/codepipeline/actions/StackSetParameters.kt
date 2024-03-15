@@ -8,6 +8,17 @@ import kotlin.String
 import kotlin.collections.List
 import kotlin.collections.Map
 
+/**
+ * Base parameters for the StackSet.
+ *
+ * Example:
+ *
+ * ```
+ * StackSetParameters parameters = StackSetParameters.fromLiteral(Map.of(
+ * "BucketName", "my-bucket",
+ * "Asset1", "true"));
+ * ```
+ */
 public abstract class StackSetParameters internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.StackSetParameters,

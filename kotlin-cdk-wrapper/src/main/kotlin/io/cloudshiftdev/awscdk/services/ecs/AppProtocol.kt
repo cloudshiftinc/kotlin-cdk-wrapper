@@ -5,9 +5,24 @@ package io.cloudshiftdev.awscdk.services.ecs
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Service connect app protocol.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ecs.*;
+ * AppProtocol appProtocol = AppProtocol.getGrpc();
+ * ```
+ */
 public open class AppProtocol internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.AppProtocol,
 ) : CdkObject(cdkObject) {
+  /**
+   * Custom value.
+   */
   public open fun `value`(): String = unwrap(this).getValue()
 
   public companion object {

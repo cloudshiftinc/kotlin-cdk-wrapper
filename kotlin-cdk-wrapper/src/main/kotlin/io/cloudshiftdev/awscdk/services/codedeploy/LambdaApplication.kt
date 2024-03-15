@@ -9,15 +9,42 @@ import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * A CodeDeploy Application that deploys to an AWS Lambda function.
+ *
+ * Example:
+ *
+ * ```
+ * LambdaApplication application = LambdaApplication.Builder.create(this, "CodeDeployApplication")
+ * .applicationName("MyApplication")
+ * .build();
+ * ```
+ */
 public open class LambdaApplication internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codedeploy.LambdaApplication,
 ) : Resource(cdkObject), ILambdaApplication {
+  /**
+   *
+   */
   public override fun applicationArn(): String = unwrap(this).getApplicationArn()
 
+  /**
+   *
+   */
   public override fun applicationName(): String = unwrap(this).getApplicationName()
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.codedeploy.LambdaApplication].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The physical, human-readable name of the CodeDeploy Application.
+     *
+     * Default: an auto-generated name will be used
+     *
+     * @param applicationName The physical, human-readable name of the CodeDeploy Application. 
+     */
     public fun applicationName(applicationName: String)
   }
 
@@ -28,6 +55,13 @@ public open class LambdaApplication internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codedeploy.LambdaApplication.Builder =
         software.amazon.awscdk.services.codedeploy.LambdaApplication.Builder.create(scope, id)
 
+    /**
+     * The physical, human-readable name of the CodeDeploy Application.
+     *
+     * Default: an auto-generated name will be used
+     *
+     * @param applicationName The physical, human-readable name of the CodeDeploy Application. 
+     */
     override fun applicationName(applicationName: String) {
       cdkBuilder.applicationName(applicationName)
     }

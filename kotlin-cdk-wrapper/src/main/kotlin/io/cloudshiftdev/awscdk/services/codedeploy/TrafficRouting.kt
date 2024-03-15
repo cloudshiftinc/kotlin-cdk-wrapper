@@ -7,11 +7,31 @@ import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Represents how traffic is shifted during a CodeDeploy deployment.
+ *
+ * Example:
+ *
+ * ```
+ * LambdaDeploymentConfig config = LambdaDeploymentConfig.Builder.create(this, "CustomConfig")
+ * .trafficRouting(TimeBasedCanaryTrafficRouting.Builder.create()
+ * .interval(Duration.minutes(15))
+ * .percentage(5)
+ * .build())
+ * .deploymentConfigName("MyDeploymentConfig")
+ * .build();
+ * ```
+ */
 public abstract class TrafficRouting internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codedeploy.TrafficRouting,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct): TrafficRoutingConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(TrafficRoutingConfig::wrap)
+  /**
+   * Returns the traffic routing configuration.
+   *
+   * @param scope 
+   */
+  public open fun bind(scope: Construct): TrafficRoutingConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(TrafficRoutingConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.codedeploy.TrafficRouting,

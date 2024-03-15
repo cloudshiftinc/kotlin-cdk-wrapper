@@ -7,15 +7,48 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Options for specifying a role.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * RoleOptions roleOptions = RoleOptions.builder()
+ * .assumeRoleArn("assumeRoleArn")
+ * // the properties below are optional
+ * .assumeRoleExternalId("assumeRoleExternalId")
+ * .build();
+ * ```
+ */
 public interface RoleOptions {
+  /**
+   * ARN of the role to assume.
+   */
   public fun assumeRoleArn(): String
 
+  /**
+   * External ID to use when assuming the role.
+   *
+   * Default: - No external ID
+   */
   public fun assumeRoleExternalId(): String? = unwrap(this).getAssumeRoleExternalId()
 
+  /**
+   * A builder for [RoleOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param assumeRoleArn ARN of the role to assume. 
+     */
     public fun assumeRoleArn(assumeRoleArn: String)
 
+    /**
+     * @param assumeRoleExternalId External ID to use when assuming the role.
+     */
     public fun assumeRoleExternalId(assumeRoleExternalId: String)
   }
 
@@ -23,10 +56,16 @@ public interface RoleOptions {
     private val cdkBuilder: software.amazon.awscdk.RoleOptions.Builder =
         software.amazon.awscdk.RoleOptions.builder()
 
+    /**
+     * @param assumeRoleArn ARN of the role to assume. 
+     */
     override fun assumeRoleArn(assumeRoleArn: String) {
       cdkBuilder.assumeRoleArn(assumeRoleArn)
     }
 
+    /**
+     * @param assumeRoleExternalId External ID to use when assuming the role.
+     */
     override fun assumeRoleExternalId(assumeRoleExternalId: String) {
       cdkBuilder.assumeRoleExternalId(assumeRoleExternalId)
     }
@@ -37,8 +76,16 @@ public interface RoleOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.RoleOptions,
   ) : CdkObject(cdkObject), RoleOptions {
+    /**
+     * ARN of the role to assume.
+     */
     override fun assumeRoleArn(): String = unwrap(this).getAssumeRoleArn()
 
+    /**
+     * External ID to use when assuming the role.
+     *
+     * Default: - No external ID
+     */
     override fun assumeRoleExternalId(): String? = unwrap(this).getAssumeRoleExternalId()
   }
 

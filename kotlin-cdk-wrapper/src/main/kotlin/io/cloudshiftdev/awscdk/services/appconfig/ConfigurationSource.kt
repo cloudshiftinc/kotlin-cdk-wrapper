@@ -11,13 +11,39 @@ import io.cloudshiftdev.awscdk.services.ssm.CfnDocument
 import io.cloudshiftdev.awscdk.services.ssm.IParameter
 import kotlin.String
 
+/**
+ * Defines the integrated configuration sources.
+ *
+ * Example:
+ *
+ * ```
+ * Application application;
+ * Bucket bucket;
+ * SourcedConfiguration.Builder.create(this, "MySourcedConfiguration")
+ * .application(application)
+ * .location(ConfigurationSource.fromBucket(bucket, "path/to/file.json"))
+ * .type(ConfigurationType.FEATURE_FLAGS)
+ * .name("MyConfig")
+ * .description("This is my sourced configuration from CDK.")
+ * .build();
+ * ```
+ */
 public abstract class ConfigurationSource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.ConfigurationSource,
 ) : CdkObject(cdkObject) {
+  /**
+   * The KMS Key that encrypts the configuration.
+   */
   public open fun key(): IKey? = unwrap(this).getKey()?.let(IKey::wrap)
 
+  /**
+   * The URI of the configuration source.
+   */
   public open fun locationUri(): String = unwrap(this).getLocationUri()
 
+  /**
+   * The type of the configuration source.
+   */
   public open fun type(): ConfigurationSourceType =
       unwrap(this).getType().let(ConfigurationSourceType::wrap)
 

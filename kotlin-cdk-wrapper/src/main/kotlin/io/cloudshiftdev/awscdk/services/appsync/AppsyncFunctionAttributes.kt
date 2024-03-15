@@ -7,11 +7,34 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * The attributes for imported AppSync Functions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.appsync.*;
+ * AppsyncFunctionAttributes appsyncFunctionAttributes = AppsyncFunctionAttributes.builder()
+ * .functionArn("functionArn")
+ * .build();
+ * ```
+ */
 public interface AppsyncFunctionAttributes {
+  /**
+   * the ARN of the AppSync function.
+   */
   public fun functionArn(): String
 
+  /**
+   * A builder for [AppsyncFunctionAttributes]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param functionArn the ARN of the AppSync function. 
+     */
     public fun functionArn(functionArn: String)
   }
 
@@ -20,6 +43,9 @@ public interface AppsyncFunctionAttributes {
         software.amazon.awscdk.services.appsync.AppsyncFunctionAttributes.Builder =
         software.amazon.awscdk.services.appsync.AppsyncFunctionAttributes.builder()
 
+    /**
+     * @param functionArn the ARN of the AppSync function. 
+     */
     override fun functionArn(functionArn: String) {
       cdkBuilder.functionArn(functionArn)
     }
@@ -31,6 +57,9 @@ public interface AppsyncFunctionAttributes {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appsync.AppsyncFunctionAttributes,
   ) : CdkObject(cdkObject), AppsyncFunctionAttributes {
+    /**
+     * the ARN of the AppSync function.
+     */
     override fun functionArn(): String = unwrap(this).getFunctionArn()
   }
 

@@ -7,15 +7,44 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Construction properties of `BitBucketSourceCredentials`.
+ *
+ * Example:
+ *
+ * ```
+ * BitBucketSourceCredentials.Builder.create(this, "CodeBuildBitBucketCreds")
+ * .username(SecretValue.secretsManager("my-bitbucket-creds",
+ * SecretsManagerSecretOptions.builder().jsonField("username").build()))
+ * .password(SecretValue.secretsManager("my-bitbucket-creds",
+ * SecretsManagerSecretOptions.builder().jsonField("password").build()))
+ * .build();
+ * ```
+ */
 public interface BitBucketSourceCredentialsProps {
+  /**
+   * Your BitBucket application password.
+   */
   public fun password(): SecretValue
 
+  /**
+   * Your BitBucket username.
+   */
   public fun username(): SecretValue
 
+  /**
+   * A builder for [BitBucketSourceCredentialsProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param password Your BitBucket application password. 
+     */
     public fun password(password: SecretValue)
 
+    /**
+     * @param username Your BitBucket username. 
+     */
     public fun username(username: SecretValue)
   }
 
@@ -24,10 +53,16 @@ public interface BitBucketSourceCredentialsProps {
         software.amazon.awscdk.services.codebuild.BitBucketSourceCredentialsProps.Builder =
         software.amazon.awscdk.services.codebuild.BitBucketSourceCredentialsProps.builder()
 
+    /**
+     * @param password Your BitBucket application password. 
+     */
     override fun password(password: SecretValue) {
       cdkBuilder.password(password.let(SecretValue::unwrap))
     }
 
+    /**
+     * @param username Your BitBucket username. 
+     */
     override fun username(username: SecretValue) {
       cdkBuilder.username(username.let(SecretValue::unwrap))
     }
@@ -40,8 +75,14 @@ public interface BitBucketSourceCredentialsProps {
     override val cdkObject:
         software.amazon.awscdk.services.codebuild.BitBucketSourceCredentialsProps,
   ) : CdkObject(cdkObject), BitBucketSourceCredentialsProps {
+    /**
+     * Your BitBucket application password.
+     */
     override fun password(): SecretValue = unwrap(this).getPassword().let(SecretValue::wrap)
 
+    /**
+     * Your BitBucket username.
+     */
     override fun username(): SecretValue = unwrap(this).getUsername().let(SecretValue::wrap)
   }
 

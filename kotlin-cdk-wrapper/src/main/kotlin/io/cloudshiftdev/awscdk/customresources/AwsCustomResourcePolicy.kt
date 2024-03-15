@@ -9,11 +9,39 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
+/**
+ * The IAM Policy that will be applied to the different calls.
+ *
+ * Example:
+ *
+ * ```
+ * AwsCustomResource getParameter = AwsCustomResource.Builder.create(this, "GetParameter")
+ * .onUpdate(AwsSdkCall.builder() // will also be called for a CREATE event
+ * .service("SSM")
+ * .action("GetParameter")
+ * .parameters(Map.of(
+ * "Name", "my-parameter",
+ * "WithDecryption", true))
+ * .physicalResourceId(PhysicalResourceId.of(Date.now().toString())).build())
+ * .policy(AwsCustomResourcePolicy.fromSdkCalls(SdkCallsPolicyOptions.builder()
+ * .resources(AwsCustomResourcePolicy.ANY_RESOURCE)
+ * .build()))
+ * .build();
+ * // Use the value in another construct with
+ * getParameter.getResponseField("Parameter.Value");
+ * ```
+ */
 public open class AwsCustomResourcePolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.customresources.AwsCustomResourcePolicy,
 ) : CdkObject(cdkObject) {
+  /**
+   * resources for auto-generated from SDK calls.
+   */
   public open fun resources(): List<String> = unwrap(this).getResources() ?: emptyList()
 
+  /**
+   * statements for explicit policy.
+   */
   public open fun statements(): List<PolicyStatement> =
       unwrap(this).getStatements().map(PolicyStatement::wrap)
 

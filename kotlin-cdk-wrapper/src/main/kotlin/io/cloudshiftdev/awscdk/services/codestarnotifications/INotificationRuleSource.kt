@@ -5,15 +5,29 @@ package io.cloudshiftdev.awscdk.services.codestarnotifications
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.constructs.Construct
 
+/**
+ * Represents a notification source The source that allows CodeBuild and CodePipeline to associate
+ * with this rule.
+ */
 public interface INotificationRuleSource {
-  public fun bindAsNotificationRuleSource(arg0: Construct): NotificationRuleSourceConfig
+  /**
+   * Returns a source configuration for notification rule.
+   *
+   * @param scope 
+   */
+  public fun bindAsNotificationRuleSource(scope: Construct): NotificationRuleSourceConfig
 
   private class Wrapper(
     override val cdkObject:
         software.amazon.awscdk.services.codestarnotifications.INotificationRuleSource,
   ) : CdkObject(cdkObject), INotificationRuleSource {
-    override fun bindAsNotificationRuleSource(arg0: Construct): NotificationRuleSourceConfig =
-        unwrap(this).bindAsNotificationRuleSource(arg0.let(Construct::unwrap)).let(NotificationRuleSourceConfig::wrap)
+    /**
+     * Returns a source configuration for notification rule.
+     *
+     * @param scope 
+     */
+    override fun bindAsNotificationRuleSource(scope: Construct): NotificationRuleSourceConfig =
+        unwrap(this).bindAsNotificationRuleSource(scope.let(Construct::unwrap)).let(NotificationRuleSourceConfig::wrap)
   }
 
   public companion object {

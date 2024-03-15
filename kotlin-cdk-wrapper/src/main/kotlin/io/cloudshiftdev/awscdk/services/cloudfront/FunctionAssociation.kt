@@ -6,15 +6,48 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Represents a CloudFront function and event type when using CF Functions.
+ *
+ * The type of the `AddBehaviorOptions.functionAssociations` property.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+ * Function function_;
+ * FunctionAssociation functionAssociation = FunctionAssociation.builder()
+ * .eventType(FunctionEventType.VIEWER_REQUEST)
+ * .function(function_)
+ * .build();
+ * ```
+ */
 public interface FunctionAssociation {
+  /**
+   * The type of event which should invoke the function.
+   */
   public fun eventType(): FunctionEventType
 
+  /**
+   * The CloudFront function that will be invoked.
+   */
   public fun function(): IFunction
 
+  /**
+   * A builder for [FunctionAssociation]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param eventType The type of event which should invoke the function. 
+     */
     public fun eventType(eventType: FunctionEventType)
 
+    /**
+     * @param function The CloudFront function that will be invoked. 
+     */
     public fun function(function: IFunction)
   }
 
@@ -22,10 +55,16 @@ public interface FunctionAssociation {
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.FunctionAssociation.Builder =
         software.amazon.awscdk.services.cloudfront.FunctionAssociation.builder()
 
+    /**
+     * @param eventType The type of event which should invoke the function. 
+     */
     override fun eventType(eventType: FunctionEventType) {
       cdkBuilder.eventType(eventType.let(FunctionEventType::unwrap))
     }
 
+    /**
+     * @param function The CloudFront function that will be invoked. 
+     */
     override fun function(function: IFunction) {
       cdkBuilder.function(function.let(IFunction::unwrap))
     }
@@ -37,9 +76,15 @@ public interface FunctionAssociation {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.cloudfront.FunctionAssociation,
   ) : CdkObject(cdkObject), FunctionAssociation {
+    /**
+     * The type of event which should invoke the function.
+     */
     override fun eventType(): FunctionEventType =
         unwrap(this).getEventType().let(FunctionEventType::wrap)
 
+    /**
+     * The CloudFront function that will be invoked.
+     */
     override fun function(): IFunction = unwrap(this).getFunction().let(IFunction::wrap)
   }
 

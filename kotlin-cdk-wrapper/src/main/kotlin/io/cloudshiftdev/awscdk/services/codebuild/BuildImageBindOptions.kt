@@ -6,7 +6,22 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Optional arguments to `IBuildImage.binder` - currently empty.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.codebuild.*;
+ * BuildImageBindOptions buildImageBindOptions = BuildImageBindOptions.builder().build();
+ * ```
+ */
 public interface BuildImageBindOptions {
+  /**
+   * A builder for [BuildImageBindOptions]
+   */
   @CdkDslMarker
   public interface Builder
 

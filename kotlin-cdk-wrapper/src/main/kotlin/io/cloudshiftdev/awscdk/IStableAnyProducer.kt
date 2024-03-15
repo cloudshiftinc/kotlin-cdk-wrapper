@@ -5,12 +5,21 @@ package io.cloudshiftdev.awscdk
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Any
 
+/**
+ * Interface for (stable) lazy untyped value producers.
+ */
 public interface IStableAnyProducer {
+  /**
+   * Produce the value.
+   */
   public fun produce(): Any
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.IStableAnyProducer,
   ) : CdkObject(cdkObject), IStableAnyProducer {
+    /**
+     * Produce the value.
+     */
     override fun produce(): Any = unwrap(this).produce()
   }
 

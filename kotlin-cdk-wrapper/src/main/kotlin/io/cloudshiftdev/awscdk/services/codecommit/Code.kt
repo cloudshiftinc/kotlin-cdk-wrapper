@@ -7,11 +7,29 @@ import io.cloudshiftdev.awscdk.services.s3.assets.Asset
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 
+/**
+ * Represents the contents to initialize the repository with.
+ *
+ * Example:
+ *
+ * ```
+ * Repository repo = Repository.Builder.create(this, "Repository")
+ * .repositoryName("MyRepositoryName")
+ * .code(Code.fromDirectory(join(__dirname, "directory/"), "develop"))
+ * .build();
+ * ```
+ */
 public abstract class Code internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codecommit.Code,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct): CodeConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(CodeConfig::wrap)
+  /**
+   * This method is called after a repository is passed this instance of Code in its 'code'
+   * property.
+   *
+   * @param scope the binding scope. 
+   */
+  public open fun bind(scope: Construct): CodeConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(CodeConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.codecommit.Code,

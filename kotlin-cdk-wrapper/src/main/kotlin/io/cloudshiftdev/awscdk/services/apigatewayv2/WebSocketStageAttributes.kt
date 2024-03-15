@@ -7,13 +7,41 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * The attributes used to import existing WebSocketStage.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
+ * WebSocketApi webSocketApi;
+ * WebSocketStageAttributes webSocketStageAttributes = WebSocketStageAttributes.builder()
+ * .api(webSocketApi)
+ * .stageName("stageName")
+ * .build();
+ * ```
+ */
 public interface WebSocketStageAttributes : StageAttributes {
+  /**
+   * The API to which this stage is associated.
+   */
   public fun api(): IWebSocketApi
 
+  /**
+   * A builder for [WebSocketStageAttributes]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param api The API to which this stage is associated. 
+     */
     public fun api(api: IWebSocketApi)
 
+    /**
+     * @param stageName The name of the stage. 
+     */
     public fun stageName(stageName: String)
   }
 
@@ -22,10 +50,16 @@ public interface WebSocketStageAttributes : StageAttributes {
         software.amazon.awscdk.services.apigatewayv2.WebSocketStageAttributes.Builder =
         software.amazon.awscdk.services.apigatewayv2.WebSocketStageAttributes.builder()
 
+    /**
+     * @param api The API to which this stage is associated. 
+     */
     override fun api(api: IWebSocketApi) {
       cdkBuilder.api(api.let(IWebSocketApi::unwrap))
     }
 
+    /**
+     * @param stageName The name of the stage. 
+     */
     override fun stageName(stageName: String) {
       cdkBuilder.stageName(stageName)
     }
@@ -37,8 +71,14 @@ public interface WebSocketStageAttributes : StageAttributes {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketStageAttributes,
   ) : CdkObject(cdkObject), WebSocketStageAttributes {
+    /**
+     * The API to which this stage is associated.
+     */
     override fun api(): IWebSocketApi = unwrap(this).getApi().let(IWebSocketApi::wrap)
 
+    /**
+     * The name of the stage.
+     */
     override fun stageName(): String = unwrap(this).getStageName()
   }
 

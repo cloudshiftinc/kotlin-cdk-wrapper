@@ -7,11 +7,39 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Options for TarballImageAsset.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.ecr.assets.TarballImageAsset;
+ * TarballImageAsset asset = TarballImageAsset.Builder.create(this, "MyBuildImage")
+ * .tarballFile("local-image.tar")
+ * .build();
+ * ```
+ */
 public interface TarballImageAssetProps {
+  /**
+   * Absolute path to the tarball.
+   *
+   * It is recommended to to use the script running directory (e.g. `__dirname`
+   * in Node.js projects or dirname of `__file__` in Python) if your tarball
+   * is located as a resource inside your project.
+   */
   public fun tarballFile(): String
 
+  /**
+   * A builder for [TarballImageAssetProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param tarballFile Absolute path to the tarball. 
+     * It is recommended to to use the script running directory (e.g. `__dirname`
+     * in Node.js projects or dirname of `__file__` in Python) if your tarball
+     * is located as a resource inside your project.
+     */
     public fun tarballFile(tarballFile: String)
   }
 
@@ -20,6 +48,12 @@ public interface TarballImageAssetProps {
         software.amazon.awscdk.services.ecr.assets.TarballImageAssetProps.Builder =
         software.amazon.awscdk.services.ecr.assets.TarballImageAssetProps.builder()
 
+    /**
+     * @param tarballFile Absolute path to the tarball. 
+     * It is recommended to to use the script running directory (e.g. `__dirname`
+     * in Node.js projects or dirname of `__file__` in Python) if your tarball
+     * is located as a resource inside your project.
+     */
     override fun tarballFile(tarballFile: String) {
       cdkBuilder.tarballFile(tarballFile)
     }
@@ -31,6 +65,13 @@ public interface TarballImageAssetProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ecr.assets.TarballImageAssetProps,
   ) : CdkObject(cdkObject), TarballImageAssetProps {
+    /**
+     * Absolute path to the tarball.
+     *
+     * It is recommended to to use the script running directory (e.g. `__dirname`
+     * in Node.js projects or dirname of `__file__` in Python) if your tarball
+     * is located as a resource inside your project.
+     */
     override fun tarballFile(): String = unwrap(this).getTarballFile()
   }
 

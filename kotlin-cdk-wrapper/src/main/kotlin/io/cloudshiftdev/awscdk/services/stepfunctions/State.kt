@@ -11,26 +11,57 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
+/**
+ * Base class for all other state classes.
+ */
 public abstract class State internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.State,
 ) : Construct(cdkObject), IChainable {
+  /**
+   * Add a prefix to the stateId of this state.
+   *
+   * @param x 
+   */
   public open fun addPrefix(x: String) {
     unwrap(this).addPrefix(x)
   }
 
+  /**
+   * Register this state as part of the given graph.
+   *
+   * Don't call this. It will be called automatically when you work
+   * with states normally.
+   *
+   * @param graph 
+   */
   public open fun bindToGraph(graph: StateGraph) {
     unwrap(this).bindToGraph(graph.let(StateGraph::unwrap))
   }
 
+  /**
+   * Continuable states of this Chainable.
+   */
   public override fun endStates(): List<INextable> =
       unwrap(this).getEndStates().map(INextable::wrap)
 
+  /**
+   * Descriptive identifier for this chainable.
+   */
   public override fun id(): String = unwrap(this).getId()
 
+  /**
+   * First state of this Chainable.
+   */
   public override fun startState(): State = unwrap(this).getStartState().let(State::wrap)
 
+  /**
+   * Tokenized string that evaluates to the state's ID.
+   */
   public open fun stateId(): String = unwrap(this).getStateId()
 
+  /**
+   * Render the state as JSON.
+   */
   public open fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
 
   private class Wrapper(

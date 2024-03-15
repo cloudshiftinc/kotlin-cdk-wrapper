@@ -6,7 +6,25 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Properties for defining a `CfnWaitConditionHandle`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.cloudformation.*;
+ * CfnWaitConditionHandleProps cfnWaitConditionHandleProps =
+ * CfnWaitConditionHandleProps.builder().build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-waitconditionhandle.html)
+ */
 public interface CfnWaitConditionHandleProps {
+  /**
+   * A builder for [CfnWaitConditionHandleProps]
+   */
   @CdkDslMarker
   public interface Builder
 

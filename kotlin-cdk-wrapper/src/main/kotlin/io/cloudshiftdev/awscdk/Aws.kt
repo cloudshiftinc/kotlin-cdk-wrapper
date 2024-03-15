@@ -6,6 +6,13 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.collections.List
 
+/**
+ * Accessor for pseudo parameters.
+ *
+ * Since pseudo parameters need to be anchored to a stack somewhere in the
+ * construct tree, this class takes an scope parameter; the pseudo parameter
+ * values can be obtained as properties from an scoped object.
+ */
 public open class Aws internal constructor(
   internal override val cdkObject: software.amazon.awscdk.Aws,
 ) : CdkObject(cdkObject) {

@@ -6,12 +6,43 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.collections.List
 
+/**
+ * Determines whether any cookies in viewer requests (and if so, which cookies) are included in
+ * requests that CloudFront sends to the origin.
+ *
+ * Example:
+ *
+ * ```
+ * // Creating a custom origin request policy for a Distribution -- all parameters optional
+ * S3Origin bucketOrigin;
+ * OriginRequestPolicy myOriginRequestPolicy = OriginRequestPolicy.Builder.create(this,
+ * "OriginRequestPolicy")
+ * .originRequestPolicyName("MyPolicy")
+ * .comment("A default policy")
+ * .cookieBehavior(OriginRequestCookieBehavior.none())
+ * .headerBehavior(OriginRequestHeaderBehavior.all("CloudFront-Is-Android-Viewer"))
+ * .queryStringBehavior(OriginRequestQueryStringBehavior.allowList("username"))
+ * .build();
+ * Distribution.Builder.create(this, "myDistCustomPolicy")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(bucketOrigin)
+ * .originRequestPolicy(myOriginRequestPolicy)
+ * .build())
+ * .build();
+ * ```
+ */
 public open class OriginRequestCookieBehavior internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cloudfront.OriginRequestCookieBehavior,
 ) : CdkObject(cdkObject) {
+  /**
+   * The behavior of cookies: allow all, none or an allow list.
+   */
   public open fun behavior(): String = unwrap(this).getBehavior()
 
+  /**
+   * The cookies to allow, if the behavior is an allow list.
+   */
   public open fun cookies(): List<String> = unwrap(this).getCookies() ?: emptyList()
 
   public companion object {

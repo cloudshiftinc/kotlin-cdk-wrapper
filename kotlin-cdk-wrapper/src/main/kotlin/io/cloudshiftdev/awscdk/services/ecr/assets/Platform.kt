@@ -5,9 +5,26 @@ package io.cloudshiftdev.awscdk.services.ecr.assets
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * platform supported by docker.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.ecr.assets.DockerImageAsset;
+ * import io.cloudshiftdev.awscdk.services.ecr.assets.Platform;
+ * DockerImageAsset asset = DockerImageAsset.Builder.create(this, "MyBuildImage")
+ * .directory(join(__dirname, "my-image"))
+ * .platform(Platform.LINUX_ARM64)
+ * .build();
+ * ```
+ */
 public open class Platform internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecr.assets.Platform,
 ) : CdkObject(cdkObject) {
+  /**
+   * The platform to use for docker build.
+   */
   public open fun platform(): String = unwrap(this).getPlatform()
 
   public companion object {

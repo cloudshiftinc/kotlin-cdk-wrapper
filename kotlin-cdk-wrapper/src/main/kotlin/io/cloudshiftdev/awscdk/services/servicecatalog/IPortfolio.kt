@@ -16,284 +16,759 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * A Service Catalog portfolio.
+ */
 public interface IPortfolio : IResource {
-  public fun addProduct(arg0: IProduct)
+  /**
+   * Associate portfolio with the given product.
+   *
+   * @param product A service catalog produt. 
+   */
+  public fun addProduct(product: IProduct)
 
-  public fun associateTagOptions(arg0: TagOptions)
+  /**
+   * Associate Tag Options.
+   *
+   * A TagOption is a key-value pair managed in AWS Service Catalog.
+   * It is not an AWS tag, but serves as a template for creating an AWS tag based on the TagOption.
+   *
+   * @param tagOptions 
+   */
+  public fun associateTagOptions(tagOptions: TagOptions)
 
-  public fun constrainCloudFormationParameters(arg0: IProduct,
-      arg1: CloudFormationRuleConstraintOptions)
+  /**
+   * Set provisioning rules for the product.
+   *
+   * @param product A service catalog product. 
+   * @param options options for the constraint. 
+   */
+  public fun constrainCloudFormationParameters(product: IProduct,
+      options: CloudFormationRuleConstraintOptions)
 
+  /**
+   * Set provisioning rules for the product.
+   *
+   * @param product A service catalog product. 
+   * @param options options for the constraint. 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("32bd369b539af8a90f2d7eeba368e4aa7a21c37de31a02b54c2303a5be146028")
-  public fun constrainCloudFormationParameters(arg0: IProduct,
-      arg1: CloudFormationRuleConstraintOptions.Builder.() -> Unit)
+  public fun constrainCloudFormationParameters(product: IProduct,
+      options: CloudFormationRuleConstraintOptions.Builder.() -> Unit)
 
-  public fun constrainTagUpdates(arg0: IProduct)
+  /**
+   * Add a Resource Update Constraint.
+   *
+   * @param product 
+   * @param options
+   */
+  public fun constrainTagUpdates(product: IProduct)
 
-  public fun constrainTagUpdates(arg0: IProduct, arg1: TagUpdateConstraintOptions)
+  /**
+   * Add a Resource Update Constraint.
+   *
+   * @param product 
+   * @param options
+   */
+  public fun constrainTagUpdates(product: IProduct, options: TagUpdateConstraintOptions)
 
+  /**
+   * Add a Resource Update Constraint.
+   *
+   * @param product 
+   * @param options
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("919b36b21cc39a414fd014dc28ebcbcb3f794d52cc5f005a69d0019a3a2698f1")
-  public fun constrainTagUpdates(arg0: IProduct,
-      arg1: TagUpdateConstraintOptions.Builder.() -> Unit)
+  public fun constrainTagUpdates(product: IProduct,
+      options: TagUpdateConstraintOptions.Builder.() -> Unit)
 
-  public fun deployWithStackSets(arg0: IProduct, arg1: StackSetsConstraintOptions)
+  /**
+   * Configure deployment options using AWS Cloudformation StackSets.
+   *
+   * @param product A service catalog product. 
+   * @param options Configuration options for the constraint. 
+   */
+  public fun deployWithStackSets(product: IProduct, options: StackSetsConstraintOptions)
 
+  /**
+   * Configure deployment options using AWS Cloudformation StackSets.
+   *
+   * @param product A service catalog product. 
+   * @param options Configuration options for the constraint. 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("476ed84dec221f7c2f3642fe8196cc1d576449c54c5b15ebcdb41211e260b952")
-  public fun deployWithStackSets(arg0: IProduct,
-      arg1: StackSetsConstraintOptions.Builder.() -> Unit)
+  public fun deployWithStackSets(product: IProduct,
+      options: StackSetsConstraintOptions.Builder.() -> Unit)
 
-  public fun giveAccessToGroup(arg0: IGroup)
+  /**
+   * Associate portfolio with an IAM Group.
+   *
+   * @param group an IAM Group. 
+   */
+  public fun giveAccessToGroup(group: IGroup)
 
-  public fun giveAccessToRole(arg0: IRole)
+  /**
+   * Associate portfolio with an IAM Role.
+   *
+   * @param role an IAM role. 
+   */
+  public fun giveAccessToRole(role: IRole)
 
-  public fun giveAccessToUser(arg0: IUser)
+  /**
+   * Associate portfolio with an IAM User.
+   *
+   * @param user an IAM user. 
+   */
+  public fun giveAccessToUser(user: IUser)
 
-  public fun launchRole(arg0: IProduct, arg1: IRole)
+  /**
+   * Force users to assume a certain role when launching a product.
+   *
+   * This sets the launch role using the role arn which is tied to the account this role exists in.
+   * This is useful if you will be provisioning products from the account where this role exists.
+   * If you intend to share the portfolio across accounts, use a local launch role.
+   *
+   * @param product A service catalog product. 
+   * @param launchRole The IAM role a user must assume when provisioning the product. 
+   * @param options options for the constraint.
+   */
+  public fun launchRole(product: IProduct, launchRole: IRole)
 
+  /**
+   * Force users to assume a certain role when launching a product.
+   *
+   * This sets the launch role using the role arn which is tied to the account this role exists in.
+   * This is useful if you will be provisioning products from the account where this role exists.
+   * If you intend to share the portfolio across accounts, use a local launch role.
+   *
+   * @param product A service catalog product. 
+   * @param launchRole The IAM role a user must assume when provisioning the product. 
+   * @param options options for the constraint.
+   */
   public fun launchRole(
-    arg0: IProduct,
-    arg1: IRole,
-    arg2: CommonConstraintOptions,
+    product: IProduct,
+    launchRole: IRole,
+    options: CommonConstraintOptions,
   )
 
+  /**
+   * Force users to assume a certain role when launching a product.
+   *
+   * This sets the launch role using the role arn which is tied to the account this role exists in.
+   * This is useful if you will be provisioning products from the account where this role exists.
+   * If you intend to share the portfolio across accounts, use a local launch role.
+   *
+   * @param product A service catalog product. 
+   * @param launchRole The IAM role a user must assume when provisioning the product. 
+   * @param options options for the constraint.
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("98c41e7622968105b9c940bb8b9d23876232e99fe93e56e1ceccc3e68180e189")
   public fun launchRole(
-    arg0: IProduct,
-    arg1: IRole,
-    arg2: CommonConstraintOptions.Builder.() -> Unit,
+    product: IProduct,
+    launchRole: IRole,
+    options: CommonConstraintOptions.Builder.() -> Unit,
   )
 
-  public fun localLaunchRole(arg0: IProduct, arg1: IRole)
+  /**
+   * Force users to assume a certain role when launching a product.
+   *
+   * The role name will be referenced by in the local account and must be set explicitly.
+   * This is useful when sharing the portfolio with multiple accounts.
+   *
+   * @param product A service catalog product. 
+   * @param launchRole The IAM role a user must assume when provisioning the product. 
+   * @param options options for the constraint.
+   */
+  public fun localLaunchRole(product: IProduct, launchRole: IRole)
 
+  /**
+   * Force users to assume a certain role when launching a product.
+   *
+   * The role name will be referenced by in the local account and must be set explicitly.
+   * This is useful when sharing the portfolio with multiple accounts.
+   *
+   * @param product A service catalog product. 
+   * @param launchRole The IAM role a user must assume when provisioning the product. 
+   * @param options options for the constraint.
+   */
   public fun localLaunchRole(
-    arg0: IProduct,
-    arg1: IRole,
-    arg2: CommonConstraintOptions,
+    product: IProduct,
+    launchRole: IRole,
+    options: CommonConstraintOptions,
   )
 
+  /**
+   * Force users to assume a certain role when launching a product.
+   *
+   * The role name will be referenced by in the local account and must be set explicitly.
+   * This is useful when sharing the portfolio with multiple accounts.
+   *
+   * @param product A service catalog product. 
+   * @param launchRole The IAM role a user must assume when provisioning the product. 
+   * @param options options for the constraint.
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("2a2436b7c82af62c4bbb20f6c53c9c4a3bb0b6044330b1ece2432fcc67a711d2")
   public fun localLaunchRole(
-    arg0: IProduct,
-    arg1: IRole,
-    arg2: CommonConstraintOptions.Builder.() -> Unit,
+    product: IProduct,
+    launchRole: IRole,
+    options: CommonConstraintOptions.Builder.() -> Unit,
   )
 
-  public fun localLaunchRoleName(arg0: IProduct, arg1: String): IRole
+  /**
+   * Force users to assume a certain role when launching a product.
+   *
+   * The role will be referenced by name in the local account instead of a static role arn.
+   * A role with this name will automatically be created and assumable by Service Catalog in this
+   * account.
+   * This is useful when sharing the portfolio with multiple accounts.
+   *
+   * @param product A service catalog product. 
+   * @param launchRoleName The name of the IAM role a user must assume when provisioning the
+   * product. 
+   * @param options options for the constraint.
+   */
+  public fun localLaunchRoleName(product: IProduct, launchRoleName: String): IRole
 
+  /**
+   * Force users to assume a certain role when launching a product.
+   *
+   * The role will be referenced by name in the local account instead of a static role arn.
+   * A role with this name will automatically be created and assumable by Service Catalog in this
+   * account.
+   * This is useful when sharing the portfolio with multiple accounts.
+   *
+   * @param product A service catalog product. 
+   * @param launchRoleName The name of the IAM role a user must assume when provisioning the
+   * product. 
+   * @param options options for the constraint.
+   */
   public fun localLaunchRoleName(
-    arg0: IProduct,
-    arg1: String,
-    arg2: CommonConstraintOptions,
+    product: IProduct,
+    launchRoleName: String,
+    options: CommonConstraintOptions,
   ): IRole
 
+  /**
+   * Force users to assume a certain role when launching a product.
+   *
+   * The role will be referenced by name in the local account instead of a static role arn.
+   * A role with this name will automatically be created and assumable by Service Catalog in this
+   * account.
+   * This is useful when sharing the portfolio with multiple accounts.
+   *
+   * @param product A service catalog product. 
+   * @param launchRoleName The name of the IAM role a user must assume when provisioning the
+   * product. 
+   * @param options options for the constraint.
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("2b21d056b146d924a5bf7908dfbd822cdd3fc6e4f92eec800d58dd3f534e3936")
   public fun localLaunchRoleName(
-    arg0: IProduct,
-    arg1: String,
-    arg2: CommonConstraintOptions.Builder.() -> Unit,
+    product: IProduct,
+    launchRoleName: String,
+    options: CommonConstraintOptions.Builder.() -> Unit,
   ): IRole
 
-  public fun notifyOnStackEvents(arg0: IProduct, arg1: ITopic)
+  /**
+   * Add notifications for supplied topics on the provisioned product.
+   *
+   * @param product A service catalog product. 
+   * @param topic A SNS Topic to receive notifications on events related to the provisioned product.
+   * 
+   * @param options
+   */
+  public fun notifyOnStackEvents(product: IProduct, topic: ITopic)
 
+  /**
+   * Add notifications for supplied topics on the provisioned product.
+   *
+   * @param product A service catalog product. 
+   * @param topic A SNS Topic to receive notifications on events related to the provisioned product.
+   * 
+   * @param options
+   */
   public fun notifyOnStackEvents(
-    arg0: IProduct,
-    arg1: ITopic,
-    arg2: CommonConstraintOptions,
+    product: IProduct,
+    topic: ITopic,
+    options: CommonConstraintOptions,
   )
 
+  /**
+   * Add notifications for supplied topics on the provisioned product.
+   *
+   * @param product A service catalog product. 
+   * @param topic A SNS Topic to receive notifications on events related to the provisioned product.
+   * 
+   * @param options
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("8c956a9bd1f74ede14814e6f7193ab364f4ec8d2e27dcce869f7d90985ee9f22")
   public fun notifyOnStackEvents(
-    arg0: IProduct,
-    arg1: ITopic,
-    arg2: CommonConstraintOptions.Builder.() -> Unit,
+    product: IProduct,
+    topic: ITopic,
+    options: CommonConstraintOptions.Builder.() -> Unit,
   )
 
+  /**
+   * The ARN of the portfolio.
+   */
   public fun portfolioArn(): String
 
+  /**
+   * The ID of the portfolio.
+   */
   public fun portfolioId(): String
 
-  public fun shareWithAccount(arg0: String)
+  /**
+   * Initiate a portfolio share with another account.
+   *
+   * @param accountId AWS account to share portfolio with. 
+   * @param options Options for the initiate share.
+   */
+  public fun shareWithAccount(accountId: String)
 
-  public fun shareWithAccount(arg0: String, arg1: PortfolioShareOptions)
+  /**
+   * Initiate a portfolio share with another account.
+   *
+   * @param accountId AWS account to share portfolio with. 
+   * @param options Options for the initiate share.
+   */
+  public fun shareWithAccount(accountId: String, options: PortfolioShareOptions)
 
+  /**
+   * Initiate a portfolio share with another account.
+   *
+   * @param accountId AWS account to share portfolio with. 
+   * @param options Options for the initiate share.
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("6f9ea6bd3614654a35a908789dc09bbfdc040e68f2d5a1bbc5fd1b26439d1ad4")
-  public fun shareWithAccount(arg0: String, arg1: PortfolioShareOptions.Builder.() -> Unit)
+  public fun shareWithAccount(accountId: String, options: PortfolioShareOptions.Builder.() -> Unit)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.servicecatalog.IPortfolio,
   ) : CdkObject(cdkObject), IPortfolio {
-    override fun addProduct(arg0: IProduct) {
-      unwrap(this).addProduct(arg0.let(IProduct::unwrap))
+    /**
+     * Associate portfolio with the given product.
+     *
+     * @param product A service catalog produt. 
+     */
+    override fun addProduct(product: IProduct) {
+      unwrap(this).addProduct(product.let(IProduct::unwrap))
     }
 
-    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
+    /**
+     * Apply the given removal policy to this resource.
+     *
+     * The Removal Policy controls what happens to this resource when it stops
+     * being managed by CloudFormation, either because you've removed it from the
+     * CDK application or because you've made a change that requires the resource
+     * to be replaced.
+     *
+     * The resource can be deleted (`RemovalPolicy.DESTROY`), or left in your AWS
+     * account for data recovery and cleanup later (`RemovalPolicy.RETAIN`).
+     *
+     * @param policy 
+     */
+    override fun applyRemovalPolicy(policy: RemovalPolicy) {
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
     }
 
-    override fun associateTagOptions(arg0: TagOptions) {
-      unwrap(this).associateTagOptions(arg0.let(TagOptions::unwrap))
+    /**
+     * Associate Tag Options.
+     *
+     * A TagOption is a key-value pair managed in AWS Service Catalog.
+     * It is not an AWS tag, but serves as a template for creating an AWS tag based on the
+     * TagOption.
+     *
+     * @param tagOptions 
+     */
+    override fun associateTagOptions(tagOptions: TagOptions) {
+      unwrap(this).associateTagOptions(tagOptions.let(TagOptions::unwrap))
     }
 
-    override fun constrainCloudFormationParameters(arg0: IProduct,
-        arg1: CloudFormationRuleConstraintOptions) {
-      unwrap(this).constrainCloudFormationParameters(arg0.let(IProduct::unwrap),
-          arg1.let(CloudFormationRuleConstraintOptions::unwrap))
+    /**
+     * Set provisioning rules for the product.
+     *
+     * @param product A service catalog product. 
+     * @param options options for the constraint. 
+     */
+    override fun constrainCloudFormationParameters(product: IProduct,
+        options: CloudFormationRuleConstraintOptions) {
+      unwrap(this).constrainCloudFormationParameters(product.let(IProduct::unwrap),
+          options.let(CloudFormationRuleConstraintOptions::unwrap))
     }
 
+    /**
+     * Set provisioning rules for the product.
+     *
+     * @param product A service catalog product. 
+     * @param options options for the constraint. 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("32bd369b539af8a90f2d7eeba368e4aa7a21c37de31a02b54c2303a5be146028")
-    override fun constrainCloudFormationParameters(arg0: IProduct,
-        arg1: CloudFormationRuleConstraintOptions.Builder.() -> Unit): Unit =
-        constrainCloudFormationParameters(arg0, CloudFormationRuleConstraintOptions(arg1))
+    override fun constrainCloudFormationParameters(product: IProduct,
+        options: CloudFormationRuleConstraintOptions.Builder.() -> Unit): Unit =
+        constrainCloudFormationParameters(product, CloudFormationRuleConstraintOptions(options))
 
-    override fun constrainTagUpdates(arg0: IProduct) {
-      unwrap(this).constrainTagUpdates(arg0.let(IProduct::unwrap))
+    /**
+     * Add a Resource Update Constraint.
+     *
+     * @param product 
+     * @param options
+     */
+    override fun constrainTagUpdates(product: IProduct) {
+      unwrap(this).constrainTagUpdates(product.let(IProduct::unwrap))
     }
 
-    override fun constrainTagUpdates(arg0: IProduct, arg1: TagUpdateConstraintOptions) {
-      unwrap(this).constrainTagUpdates(arg0.let(IProduct::unwrap),
-          arg1.let(TagUpdateConstraintOptions::unwrap))
+    /**
+     * Add a Resource Update Constraint.
+     *
+     * @param product 
+     * @param options
+     */
+    override fun constrainTagUpdates(product: IProduct, options: TagUpdateConstraintOptions) {
+      unwrap(this).constrainTagUpdates(product.let(IProduct::unwrap),
+          options.let(TagUpdateConstraintOptions::unwrap))
     }
 
+    /**
+     * Add a Resource Update Constraint.
+     *
+     * @param product 
+     * @param options
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("919b36b21cc39a414fd014dc28ebcbcb3f794d52cc5f005a69d0019a3a2698f1")
-    override fun constrainTagUpdates(arg0: IProduct,
-        arg1: TagUpdateConstraintOptions.Builder.() -> Unit): Unit = constrainTagUpdates(arg0,
-        TagUpdateConstraintOptions(arg1))
+    override fun constrainTagUpdates(product: IProduct,
+        options: TagUpdateConstraintOptions.Builder.() -> Unit): Unit = constrainTagUpdates(product,
+        TagUpdateConstraintOptions(options))
 
-    override fun deployWithStackSets(arg0: IProduct, arg1: StackSetsConstraintOptions) {
-      unwrap(this).deployWithStackSets(arg0.let(IProduct::unwrap),
-          arg1.let(StackSetsConstraintOptions::unwrap))
+    /**
+     * Configure deployment options using AWS Cloudformation StackSets.
+     *
+     * @param product A service catalog product. 
+     * @param options Configuration options for the constraint. 
+     */
+    override fun deployWithStackSets(product: IProduct, options: StackSetsConstraintOptions) {
+      unwrap(this).deployWithStackSets(product.let(IProduct::unwrap),
+          options.let(StackSetsConstraintOptions::unwrap))
     }
 
+    /**
+     * Configure deployment options using AWS Cloudformation StackSets.
+     *
+     * @param product A service catalog product. 
+     * @param options Configuration options for the constraint. 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("476ed84dec221f7c2f3642fe8196cc1d576449c54c5b15ebcdb41211e260b952")
-    override fun deployWithStackSets(arg0: IProduct,
-        arg1: StackSetsConstraintOptions.Builder.() -> Unit): Unit = deployWithStackSets(arg0,
-        StackSetsConstraintOptions(arg1))
+    override fun deployWithStackSets(product: IProduct,
+        options: StackSetsConstraintOptions.Builder.() -> Unit): Unit = deployWithStackSets(product,
+        StackSetsConstraintOptions(options))
 
+    /**
+     * The environment this resource belongs to.
+     *
+     * For resources that are created and managed by the CDK
+     * (generally, those created by creating new class instances like Role, Bucket, etc.),
+     * this is always the same as the environment of the stack they belong to;
+     * however, for imported resources
+     * (those obtained from static methods like fromRoleArn, fromBucketName, etc.),
+     * that might be different than the stack they were imported into.
+     */
     override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
-    override fun giveAccessToGroup(arg0: IGroup) {
-      unwrap(this).giveAccessToGroup(arg0.let(IGroup::unwrap))
+    /**
+     * Associate portfolio with an IAM Group.
+     *
+     * @param group an IAM Group. 
+     */
+    override fun giveAccessToGroup(group: IGroup) {
+      unwrap(this).giveAccessToGroup(group.let(IGroup::unwrap))
     }
 
-    override fun giveAccessToRole(arg0: IRole) {
-      unwrap(this).giveAccessToRole(arg0.let(IRole::unwrap))
+    /**
+     * Associate portfolio with an IAM Role.
+     *
+     * @param role an IAM role. 
+     */
+    override fun giveAccessToRole(role: IRole) {
+      unwrap(this).giveAccessToRole(role.let(IRole::unwrap))
     }
 
-    override fun giveAccessToUser(arg0: IUser) {
-      unwrap(this).giveAccessToUser(arg0.let(IUser::unwrap))
+    /**
+     * Associate portfolio with an IAM User.
+     *
+     * @param user an IAM user. 
+     */
+    override fun giveAccessToUser(user: IUser) {
+      unwrap(this).giveAccessToUser(user.let(IUser::unwrap))
     }
 
-    override fun launchRole(arg0: IProduct, arg1: IRole) {
-      unwrap(this).setLaunchRole(arg0.let(IProduct::unwrap), arg1.let(IRole::unwrap))
+    /**
+     * Force users to assume a certain role when launching a product.
+     *
+     * This sets the launch role using the role arn which is tied to the account this role exists
+     * in.
+     * This is useful if you will be provisioning products from the account where this role exists.
+     * If you intend to share the portfolio across accounts, use a local launch role.
+     *
+     * @param product A service catalog product. 
+     * @param launchRole The IAM role a user must assume when provisioning the product. 
+     * @param options options for the constraint.
+     */
+    override fun launchRole(product: IProduct, launchRole: IRole) {
+      unwrap(this).setLaunchRole(product.let(IProduct::unwrap), launchRole.let(IRole::unwrap))
     }
 
+    /**
+     * Force users to assume a certain role when launching a product.
+     *
+     * This sets the launch role using the role arn which is tied to the account this role exists
+     * in.
+     * This is useful if you will be provisioning products from the account where this role exists.
+     * If you intend to share the portfolio across accounts, use a local launch role.
+     *
+     * @param product A service catalog product. 
+     * @param launchRole The IAM role a user must assume when provisioning the product. 
+     * @param options options for the constraint.
+     */
     override fun launchRole(
-      arg0: IProduct,
-      arg1: IRole,
-      arg2: CommonConstraintOptions,
+      product: IProduct,
+      launchRole: IRole,
+      options: CommonConstraintOptions,
     ) {
-      unwrap(this).setLaunchRole(arg0.let(IProduct::unwrap), arg1.let(IRole::unwrap),
-          arg2.let(CommonConstraintOptions::unwrap))
+      unwrap(this).setLaunchRole(product.let(IProduct::unwrap), launchRole.let(IRole::unwrap),
+          options.let(CommonConstraintOptions::unwrap))
     }
 
+    /**
+     * Force users to assume a certain role when launching a product.
+     *
+     * This sets the launch role using the role arn which is tied to the account this role exists
+     * in.
+     * This is useful if you will be provisioning products from the account where this role exists.
+     * If you intend to share the portfolio across accounts, use a local launch role.
+     *
+     * @param product A service catalog product. 
+     * @param launchRole The IAM role a user must assume when provisioning the product. 
+     * @param options options for the constraint.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("98c41e7622968105b9c940bb8b9d23876232e99fe93e56e1ceccc3e68180e189")
     override fun launchRole(
-      arg0: IProduct,
-      arg1: IRole,
-      arg2: CommonConstraintOptions.Builder.() -> Unit,
-    ): Unit = launchRole(arg0, arg1, CommonConstraintOptions(arg2))
+      product: IProduct,
+      launchRole: IRole,
+      options: CommonConstraintOptions.Builder.() -> Unit,
+    ): Unit = launchRole(product, launchRole, CommonConstraintOptions(options))
 
-    override fun localLaunchRole(arg0: IProduct, arg1: IRole) {
-      unwrap(this).setLocalLaunchRole(arg0.let(IProduct::unwrap), arg1.let(IRole::unwrap))
+    /**
+     * Force users to assume a certain role when launching a product.
+     *
+     * The role name will be referenced by in the local account and must be set explicitly.
+     * This is useful when sharing the portfolio with multiple accounts.
+     *
+     * @param product A service catalog product. 
+     * @param launchRole The IAM role a user must assume when provisioning the product. 
+     * @param options options for the constraint.
+     */
+    override fun localLaunchRole(product: IProduct, launchRole: IRole) {
+      unwrap(this).setLocalLaunchRole(product.let(IProduct::unwrap), launchRole.let(IRole::unwrap))
     }
 
+    /**
+     * Force users to assume a certain role when launching a product.
+     *
+     * The role name will be referenced by in the local account and must be set explicitly.
+     * This is useful when sharing the portfolio with multiple accounts.
+     *
+     * @param product A service catalog product. 
+     * @param launchRole The IAM role a user must assume when provisioning the product. 
+     * @param options options for the constraint.
+     */
     override fun localLaunchRole(
-      arg0: IProduct,
-      arg1: IRole,
-      arg2: CommonConstraintOptions,
+      product: IProduct,
+      launchRole: IRole,
+      options: CommonConstraintOptions,
     ) {
-      unwrap(this).setLocalLaunchRole(arg0.let(IProduct::unwrap), arg1.let(IRole::unwrap),
-          arg2.let(CommonConstraintOptions::unwrap))
+      unwrap(this).setLocalLaunchRole(product.let(IProduct::unwrap), launchRole.let(IRole::unwrap),
+          options.let(CommonConstraintOptions::unwrap))
     }
 
+    /**
+     * Force users to assume a certain role when launching a product.
+     *
+     * The role name will be referenced by in the local account and must be set explicitly.
+     * This is useful when sharing the portfolio with multiple accounts.
+     *
+     * @param product A service catalog product. 
+     * @param launchRole The IAM role a user must assume when provisioning the product. 
+     * @param options options for the constraint.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2a2436b7c82af62c4bbb20f6c53c9c4a3bb0b6044330b1ece2432fcc67a711d2")
     override fun localLaunchRole(
-      arg0: IProduct,
-      arg1: IRole,
-      arg2: CommonConstraintOptions.Builder.() -> Unit,
-    ): Unit = localLaunchRole(arg0, arg1, CommonConstraintOptions(arg2))
+      product: IProduct,
+      launchRole: IRole,
+      options: CommonConstraintOptions.Builder.() -> Unit,
+    ): Unit = localLaunchRole(product, launchRole, CommonConstraintOptions(options))
 
-    override fun localLaunchRoleName(arg0: IProduct, arg1: String): IRole =
-        unwrap(this).setLocalLaunchRoleName(arg0.let(IProduct::unwrap), arg1).let(IRole::wrap)
+    /**
+     * Force users to assume a certain role when launching a product.
+     *
+     * The role will be referenced by name in the local account instead of a static role arn.
+     * A role with this name will automatically be created and assumable by Service Catalog in this
+     * account.
+     * This is useful when sharing the portfolio with multiple accounts.
+     *
+     * @param product A service catalog product. 
+     * @param launchRoleName The name of the IAM role a user must assume when provisioning the
+     * product. 
+     * @param options options for the constraint.
+     */
+    override fun localLaunchRoleName(product: IProduct, launchRoleName: String): IRole =
+        unwrap(this).setLocalLaunchRoleName(product.let(IProduct::unwrap),
+        launchRoleName).let(IRole::wrap)
 
+    /**
+     * Force users to assume a certain role when launching a product.
+     *
+     * The role will be referenced by name in the local account instead of a static role arn.
+     * A role with this name will automatically be created and assumable by Service Catalog in this
+     * account.
+     * This is useful when sharing the portfolio with multiple accounts.
+     *
+     * @param product A service catalog product. 
+     * @param launchRoleName The name of the IAM role a user must assume when provisioning the
+     * product. 
+     * @param options options for the constraint.
+     */
     override fun localLaunchRoleName(
-      arg0: IProduct,
-      arg1: String,
-      arg2: CommonConstraintOptions,
-    ): IRole = unwrap(this).setLocalLaunchRoleName(arg0.let(IProduct::unwrap), arg1,
-        arg2.let(CommonConstraintOptions::unwrap)).let(IRole::wrap)
+      product: IProduct,
+      launchRoleName: String,
+      options: CommonConstraintOptions,
+    ): IRole = unwrap(this).setLocalLaunchRoleName(product.let(IProduct::unwrap), launchRoleName,
+        options.let(CommonConstraintOptions::unwrap)).let(IRole::wrap)
 
+    /**
+     * Force users to assume a certain role when launching a product.
+     *
+     * The role will be referenced by name in the local account instead of a static role arn.
+     * A role with this name will automatically be created and assumable by Service Catalog in this
+     * account.
+     * This is useful when sharing the portfolio with multiple accounts.
+     *
+     * @param product A service catalog product. 
+     * @param launchRoleName The name of the IAM role a user must assume when provisioning the
+     * product. 
+     * @param options options for the constraint.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2b21d056b146d924a5bf7908dfbd822cdd3fc6e4f92eec800d58dd3f534e3936")
     override fun localLaunchRoleName(
-      arg0: IProduct,
-      arg1: String,
-      arg2: CommonConstraintOptions.Builder.() -> Unit,
-    ): IRole = localLaunchRoleName(arg0, arg1, CommonConstraintOptions(arg2))
+      product: IProduct,
+      launchRoleName: String,
+      options: CommonConstraintOptions.Builder.() -> Unit,
+    ): IRole = localLaunchRoleName(product, launchRoleName, CommonConstraintOptions(options))
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    override fun notifyOnStackEvents(arg0: IProduct, arg1: ITopic) {
-      unwrap(this).notifyOnStackEvents(arg0.let(IProduct::unwrap), arg1.let(ITopic::unwrap))
+    /**
+     * Add notifications for supplied topics on the provisioned product.
+     *
+     * @param product A service catalog product. 
+     * @param topic A SNS Topic to receive notifications on events related to the provisioned
+     * product. 
+     * @param options
+     */
+    override fun notifyOnStackEvents(product: IProduct, topic: ITopic) {
+      unwrap(this).notifyOnStackEvents(product.let(IProduct::unwrap), topic.let(ITopic::unwrap))
     }
 
+    /**
+     * Add notifications for supplied topics on the provisioned product.
+     *
+     * @param product A service catalog product. 
+     * @param topic A SNS Topic to receive notifications on events related to the provisioned
+     * product. 
+     * @param options
+     */
     override fun notifyOnStackEvents(
-      arg0: IProduct,
-      arg1: ITopic,
-      arg2: CommonConstraintOptions,
+      product: IProduct,
+      topic: ITopic,
+      options: CommonConstraintOptions,
     ) {
-      unwrap(this).notifyOnStackEvents(arg0.let(IProduct::unwrap), arg1.let(ITopic::unwrap),
-          arg2.let(CommonConstraintOptions::unwrap))
+      unwrap(this).notifyOnStackEvents(product.let(IProduct::unwrap), topic.let(ITopic::unwrap),
+          options.let(CommonConstraintOptions::unwrap))
     }
 
+    /**
+     * Add notifications for supplied topics on the provisioned product.
+     *
+     * @param product A service catalog product. 
+     * @param topic A SNS Topic to receive notifications on events related to the provisioned
+     * product. 
+     * @param options
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8c956a9bd1f74ede14814e6f7193ab364f4ec8d2e27dcce869f7d90985ee9f22")
     override fun notifyOnStackEvents(
-      arg0: IProduct,
-      arg1: ITopic,
-      arg2: CommonConstraintOptions.Builder.() -> Unit,
-    ): Unit = notifyOnStackEvents(arg0, arg1, CommonConstraintOptions(arg2))
+      product: IProduct,
+      topic: ITopic,
+      options: CommonConstraintOptions.Builder.() -> Unit,
+    ): Unit = notifyOnStackEvents(product, topic, CommonConstraintOptions(options))
 
+    /**
+     * The ARN of the portfolio.
+     */
     override fun portfolioArn(): String = unwrap(this).getPortfolioArn()
 
+    /**
+     * The ID of the portfolio.
+     */
     override fun portfolioId(): String = unwrap(this).getPortfolioId()
 
-    override fun shareWithAccount(arg0: String) {
-      unwrap(this).shareWithAccount(arg0)
+    /**
+     * Initiate a portfolio share with another account.
+     *
+     * @param accountId AWS account to share portfolio with. 
+     * @param options Options for the initiate share.
+     */
+    override fun shareWithAccount(accountId: String) {
+      unwrap(this).shareWithAccount(accountId)
     }
 
-    override fun shareWithAccount(arg0: String, arg1: PortfolioShareOptions) {
-      unwrap(this).shareWithAccount(arg0, arg1.let(PortfolioShareOptions::unwrap))
+    /**
+     * Initiate a portfolio share with another account.
+     *
+     * @param accountId AWS account to share portfolio with. 
+     * @param options Options for the initiate share.
+     */
+    override fun shareWithAccount(accountId: String, options: PortfolioShareOptions) {
+      unwrap(this).shareWithAccount(accountId, options.let(PortfolioShareOptions::unwrap))
     }
 
+    /**
+     * Initiate a portfolio share with another account.
+     *
+     * @param accountId AWS account to share portfolio with. 
+     * @param options Options for the initiate share.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6f9ea6bd3614654a35a908789dc09bbfdc040e68f2d5a1bbc5fd1b26439d1ad4")
-    override fun shareWithAccount(arg0: String, arg1: PortfolioShareOptions.Builder.() -> Unit):
-        Unit = shareWithAccount(arg0, PortfolioShareOptions(arg1))
+    override fun shareWithAccount(accountId: String,
+        options: PortfolioShareOptions.Builder.() -> Unit): Unit = shareWithAccount(accountId,
+        PortfolioShareOptions(options))
 
+    /**
+     * The stack in which this resource is defined.
+     */
     override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 

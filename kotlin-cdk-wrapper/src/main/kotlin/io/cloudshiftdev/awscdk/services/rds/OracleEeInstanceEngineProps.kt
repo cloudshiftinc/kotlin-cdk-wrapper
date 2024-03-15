@@ -6,11 +6,37 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Properties for Oracle Enterprise Edition instance engines.
+ *
+ * Used in `DatabaseInstanceEngine.oracleEe`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.rds.*;
+ * OracleEngineVersion oracleEngineVersion;
+ * OracleEeInstanceEngineProps oracleEeInstanceEngineProps = OracleEeInstanceEngineProps.builder()
+ * .version(oracleEngineVersion)
+ * .build();
+ * ```
+ */
 public interface OracleEeInstanceEngineProps {
+  /**
+   * The exact version of the engine to use.
+   */
   public fun version(): OracleEngineVersion
 
+  /**
+   * A builder for [OracleEeInstanceEngineProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param version The exact version of the engine to use. 
+     */
     public fun version(version: OracleEngineVersion)
   }
 
@@ -18,6 +44,9 @@ public interface OracleEeInstanceEngineProps {
     private val cdkBuilder: software.amazon.awscdk.services.rds.OracleEeInstanceEngineProps.Builder
         = software.amazon.awscdk.services.rds.OracleEeInstanceEngineProps.builder()
 
+    /**
+     * @param version The exact version of the engine to use. 
+     */
     override fun version(version: OracleEngineVersion) {
       cdkBuilder.version(version.let(OracleEngineVersion::unwrap))
     }
@@ -29,6 +58,9 @@ public interface OracleEeInstanceEngineProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.rds.OracleEeInstanceEngineProps,
   ) : CdkObject(cdkObject), OracleEeInstanceEngineProps {
+    /**
+     * The exact version of the engine to use.
+     */
     override fun version(): OracleEngineVersion =
         unwrap(this).getVersion().let(OracleEngineVersion::wrap)
   }

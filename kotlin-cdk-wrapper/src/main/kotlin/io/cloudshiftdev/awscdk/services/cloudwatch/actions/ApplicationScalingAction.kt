@@ -8,10 +8,32 @@ import io.cloudshiftdev.awscdk.services.cloudwatch.IAlarm
 import io.cloudshiftdev.awscdk.services.cloudwatch.IAlarmAction
 import io.cloudshiftdev.constructs.Construct
 
+/**
+ * Use an ApplicationAutoScaling StepScalingAction as an Alarm Action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.applicationautoscaling.*;
+ * import io.cloudshiftdev.awscdk.services.cloudwatch.actions.*;
+ * StepScalingAction stepScalingAction;
+ * ApplicationScalingAction applicationScalingAction = new
+ * ApplicationScalingAction(stepScalingAction);
+ * ```
+ */
 public open class ApplicationScalingAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cloudwatch.actions.ApplicationScalingAction,
 ) : CdkObject(cdkObject), IAlarmAction {
+  /**
+   * Returns an alarm action configuration to use an ApplicationScaling StepScalingAction as an
+   * alarm action.
+   *
+   * @param _scope 
+   * @param _alarm 
+   */
   public override fun bind(_scope: Construct, _alarm: IAlarm): AlarmActionConfig =
       unwrap(this).bind(_scope.let(Construct::unwrap),
       _alarm.let(IAlarm::unwrap)).let(AlarmActionConfig::wrap)

@@ -6,6 +6,25 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * The base class for log drivers.
+ *
+ * Example:
+ *
+ * ```
+ * Secret secret;
+ * // Create a Task Definition for the container to start
+ * Ec2TaskDefinition taskDefinition = new Ec2TaskDefinition(this, "TaskDef");
+ * taskDefinition.addContainer("TheContainer", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("example-image"))
+ * .memoryLimitMiB(256)
+ * .logging(LogDrivers.splunk(SplunkLogDriverProps.builder()
+ * .secretToken(secret)
+ * .url("my-splunk-url")
+ * .build()))
+ * .build());
+ * ```
+ */
 public open class LogDrivers internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.LogDrivers,
 ) : CdkObject(cdkObject) {

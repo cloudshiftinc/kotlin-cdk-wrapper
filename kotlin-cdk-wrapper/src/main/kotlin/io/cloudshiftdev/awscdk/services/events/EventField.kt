@@ -9,18 +9,56 @@ import kotlin.Any
 import kotlin.String
 import kotlin.collections.List
 
+/**
+ * Represents a field in the event pattern.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.logs.*;
+ * LogGroup logGroup;
+ * Rule rule;
+ * rule.addTarget(CloudWatchLogGroup.Builder.create(logGroup)
+ * .logEvent(LogGroupTargetInput.fromObject(LogGroupTargetInputOptions.builder()
+ * .timestamp(EventField.fromPath("$.time"))
+ * .message(EventField.fromPath("$.detail-type"))
+ * .build()))
+ * .build());
+ * ```
+ */
 public open class EventField internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.EventField,
 ) : CdkObject(cdkObject), IResolvable {
+  /**
+   * The creation stack of this resolvable which will be appended to errors thrown during
+   * resolution.
+   *
+   * This may return an array with a single informational element indicating how
+   * to get this property populated, if it was skipped for performance reasons.
+   */
   public override fun creationStack(): List<String> = unwrap(this).getCreationStack()
 
+  /**
+   * Human readable display hint about the event pattern.
+   */
   public open fun displayHint(): String = unwrap(this).getDisplayHint()
 
+  /**
+   * the path to a field in the event pattern.
+   */
   public open fun path(): String = unwrap(this).getPath()
 
+  /**
+   * Produce the Token's value at resolution time.
+   *
+   * @param _ctx 
+   */
   public override fun resolve(_ctx: IResolveContext): Any =
       unwrap(this).resolve(_ctx.let(IResolveContext::unwrap))
 
+  /**
+   * Convert the path to the field in the event pattern to JSON.
+   */
   public open fun toJson(): String = unwrap(this).toJSON()
 
   public companion object {

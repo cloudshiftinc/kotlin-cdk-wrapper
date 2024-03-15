@@ -6,12 +6,33 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Options for how to convert time to a different unit.
+ *
+ * Example:
+ *
+ * ```
+ * Size.mebibytes(2).toKibibytes(); // yields 2048
+ * Size.kibibytes(2050).toMebibytes(SizeConversionOptions.builder().rounding(SizeRoundingBehavior.FLOOR).build());
+ * ```
+ */
 public interface SizeConversionOptions {
+  /**
+   * How conversions should behave when it encounters a non-integer result.
+   *
+   * Default: SizeRoundingBehavior.FAIL
+   */
   public fun rounding(): SizeRoundingBehavior? =
       unwrap(this).getRounding()?.let(SizeRoundingBehavior::wrap)
 
+  /**
+   * A builder for [SizeConversionOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param rounding How conversions should behave when it encounters a non-integer result.
+     */
     public fun rounding(rounding: SizeRoundingBehavior)
   }
 
@@ -19,6 +40,9 @@ public interface SizeConversionOptions {
     private val cdkBuilder: software.amazon.awscdk.SizeConversionOptions.Builder =
         software.amazon.awscdk.SizeConversionOptions.builder()
 
+    /**
+     * @param rounding How conversions should behave when it encounters a non-integer result.
+     */
     override fun rounding(rounding: SizeRoundingBehavior) {
       cdkBuilder.rounding(rounding.let(SizeRoundingBehavior::unwrap))
     }
@@ -29,6 +53,11 @@ public interface SizeConversionOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.SizeConversionOptions,
   ) : CdkObject(cdkObject), SizeConversionOptions {
+    /**
+     * How conversions should behave when it encounters a non-integer result.
+     *
+     * Default: SizeRoundingBehavior.FAIL
+     */
     override fun rounding(): SizeRoundingBehavior? =
         unwrap(this).getRounding()?.let(SizeRoundingBehavior::wrap)
   }

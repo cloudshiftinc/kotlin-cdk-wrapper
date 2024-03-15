@@ -7,15 +7,53 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Reference to a hosted zone.
+ *
+ * Example:
+ *
+ * ```
+ * App app;
+ * Stack stack = Stack.Builder.create(app, "Stack")
+ * .crossRegionReferences(true)
+ * .env(Environment.builder()
+ * .region("us-east-2")
+ * .build())
+ * .build();
+ * HttpsRedirect.Builder.create(this, "Redirect")
+ * .recordNames(List.of("foo.example.com"))
+ * .targetDomain("bar.example.com")
+ * .zone(HostedZone.fromHostedZoneAttributes(this, "HostedZone", HostedZoneAttributes.builder()
+ * .hostedZoneId("ID")
+ * .zoneName("example.com")
+ * .build()))
+ * .build();
+ * ```
+ */
 public interface HostedZoneAttributes {
+  /**
+   * Identifier of the hosted zone.
+   */
   public fun hostedZoneId(): String
 
+  /**
+   * Name of the hosted zone.
+   */
   public fun zoneName(): String
 
+  /**
+   * A builder for [HostedZoneAttributes]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param hostedZoneId Identifier of the hosted zone. 
+     */
     public fun hostedZoneId(hostedZoneId: String)
 
+    /**
+     * @param zoneName Name of the hosted zone. 
+     */
     public fun zoneName(zoneName: String)
   }
 
@@ -23,10 +61,16 @@ public interface HostedZoneAttributes {
     private val cdkBuilder: software.amazon.awscdk.services.route53.HostedZoneAttributes.Builder =
         software.amazon.awscdk.services.route53.HostedZoneAttributes.builder()
 
+    /**
+     * @param hostedZoneId Identifier of the hosted zone. 
+     */
     override fun hostedZoneId(hostedZoneId: String) {
       cdkBuilder.hostedZoneId(hostedZoneId)
     }
 
+    /**
+     * @param zoneName Name of the hosted zone. 
+     */
     override fun zoneName(zoneName: String) {
       cdkBuilder.zoneName(zoneName)
     }
@@ -38,8 +82,14 @@ public interface HostedZoneAttributes {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.route53.HostedZoneAttributes,
   ) : CdkObject(cdkObject), HostedZoneAttributes {
+    /**
+     * Identifier of the hosted zone.
+     */
     override fun hostedZoneId(): String = unwrap(this).getHostedZoneId()
 
+    /**
+     * Name of the hosted zone.
+     */
     override fun zoneName(): String = unwrap(this).getZoneName()
   }
 

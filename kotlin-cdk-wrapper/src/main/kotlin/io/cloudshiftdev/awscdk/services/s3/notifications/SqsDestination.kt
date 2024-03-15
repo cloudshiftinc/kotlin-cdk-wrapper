@@ -8,9 +8,32 @@ import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.awscdk.services.s3.IBucketNotificationDestination
 import io.cloudshiftdev.constructs.Construct
 
+/**
+ * Use an SQS queue as a bucket notification destination.
+ *
+ * Example:
+ *
+ * ```
+ * Queue myQueue;
+ * Bucket bucket = new Bucket(this, "MyBucket");
+ * bucket.addEventNotification(EventType.OBJECT_REMOVED, new SqsDestination(myQueue),
+ * NotificationKeyFilter.builder()
+ * .prefix("foo/")
+ * .suffix(".jpg")
+ * .build());
+ * ```
+ */
 public open class SqsDestination internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3.notifications.SqsDestination,
 ) : CdkObject(cdkObject), IBucketNotificationDestination {
+  /**
+   * Allows using SQS queues as destinations for bucket notifications.
+   *
+   * Use `bucket.onEvent(event, queue)` to subscribe.
+   *
+   * @param _scope 
+   * @param bucket 
+   */
   public override fun bind(_scope: Construct, bucket: IBucket): BucketNotificationDestinationConfig
       = unwrap(this).bind(_scope.let(Construct::unwrap),
       bucket.let(IBucket::unwrap)).let(BucketNotificationDestinationConfig::wrap)

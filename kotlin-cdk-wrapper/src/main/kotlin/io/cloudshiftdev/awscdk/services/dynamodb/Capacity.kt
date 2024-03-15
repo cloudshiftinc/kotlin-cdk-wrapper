@@ -7,9 +7,37 @@ import kotlin.Number
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Represents the amount of read and write operations supported by a DynamoDB table.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.*;
+ * App app = new App();
+ * Stack stack = Stack.Builder.create(app,
+ * "Stack").env(Environment.builder().region("us-west-2").build()).build();
+ * TableV2 globalTable = TableV2.Builder.create(stack, "GlobalTable")
+ * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
+ * .billing(Billing.provisioned(ThroughputProps.builder()
+ * .readCapacity(Capacity.fixed(10))
+ * .writeCapacity(Capacity.autoscaled(AutoscaledCapacityOptions.builder().maxCapacity(15).build()))
+ * .build()))
+ * .replicas(List.of(ReplicaTableProps.builder()
+ * .region("us-east-1")
+ * .build(), ReplicaTableProps.builder()
+ * .region("us-east-2")
+ * .readCapacity(Capacity.autoscaled(AutoscaledCapacityOptions.builder().maxCapacity(20).targetUtilizationPercent(50).build()))
+ * .build()))
+ * .build();
+ * ```
+ */
 public abstract class Capacity internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.dynamodb.Capacity,
 ) : CdkObject(cdkObject) {
+  /**
+   *
+   */
   public open fun mode(): CapacityMode = unwrap(this).getMode().let(CapacityMode::wrap)
 
   private class Wrapper(

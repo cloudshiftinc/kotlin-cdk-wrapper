@@ -6,12 +6,35 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 
+/**
+ * Used to generate host name matching methods.
+ *
+ * Example:
+ *
+ * ```
+ * VirtualGateway gateway;
+ * VirtualService virtualService;
+ * gateway.addGatewayRoute("gateway-route-grpc", GatewayRouteBaseProps.builder()
+ * .routeSpec(GatewayRouteSpec.grpc(GrpcGatewayRouteSpecOptions.builder()
+ * .routeTarget(virtualService)
+ * .match(GrpcGatewayRouteMatch.builder()
+ * .hostname(GatewayRouteHostnameMatch.endsWith(".example.com"))
+ * .build())
+ * .build()))
+ * .build());
+ * ```
+ */
 public abstract class GatewayRouteHostnameMatch internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.appmesh.GatewayRouteHostnameMatch,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct): GatewayRouteHostnameMatchConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(GatewayRouteHostnameMatchConfig::wrap)
+  /**
+   * Returns the gateway route host name match configuration.
+   *
+   * @param scope 
+   */
+  public open fun bind(scope: Construct): GatewayRouteHostnameMatchConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(GatewayRouteHostnameMatchConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteHostnameMatch,

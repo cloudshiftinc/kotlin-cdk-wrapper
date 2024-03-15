@@ -5,6 +5,16 @@ package io.cloudshiftdev.awscdk.cxapi
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.cxapi.*;
+ * EnvironmentUtils environmentUtils = new EnvironmentUtils();
+ * ```
+ */
 public open class EnvironmentUtils internal constructor(
   internal override val cdkObject: software.amazon.awscdk.cxapi.EnvironmentUtils,
 ) : CdkObject(cdkObject) {

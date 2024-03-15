@@ -7,11 +7,52 @@ import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Defines listener for a VirtualNode.
+ *
+ * Example:
+ *
+ * ```
+ * Mesh mesh;
+ * Service service;
+ * VirtualNode node = VirtualNode.Builder.create(this, "node")
+ * .mesh(mesh)
+ * .serviceDiscovery(ServiceDiscovery.cloudMap(service))
+ * .listeners(List.of(VirtualNodeListener.http(HttpVirtualNodeListenerOptions.builder()
+ * .port(8080)
+ * .healthCheck(HealthCheck.http(HttpHealthCheckOptions.builder()
+ * .healthyThreshold(3)
+ * .interval(Duration.seconds(5))
+ * .path("/ping")
+ * .timeout(Duration.seconds(2))
+ * .unhealthyThreshold(2)
+ * .build()))
+ * .timeout(HttpTimeout.builder()
+ * .idle(Duration.seconds(5))
+ * .build())
+ * .build())))
+ * .backendDefaults(BackendDefaults.builder()
+ * .tlsClientPolicy(TlsClientPolicy.builder()
+ * .validation(TlsValidation.builder()
+ * .trust(TlsValidationTrust.file("/keys/local_cert_chain.pem"))
+ * .build())
+ * .build())
+ * .build())
+ * .accessLog(AccessLog.fromFilePath("/dev/stdout"))
+ * .build();
+ * Tags.of(node).add("Environment", "Dev");
+ * ```
+ */
 public abstract class VirtualNodeListener internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualNodeListener,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct): VirtualNodeListenerConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(VirtualNodeListenerConfig::wrap)
+  /**
+   * Binds the current object when adding Listener to a VirtualNode.
+   *
+   * @param scope 
+   */
+  public open fun bind(scope: Construct): VirtualNodeListenerConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(VirtualNodeListenerConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualNodeListener,

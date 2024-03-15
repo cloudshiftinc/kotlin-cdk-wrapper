@@ -7,33 +7,78 @@ import kotlin.Any
 import kotlin.String
 import kotlin.collections.List
 
+/**
+ * How to resolve tokens.
+ */
 public interface ITokenResolver {
-  public fun resolveList(arg0: List<String>, arg1: IResolveContext): Any
+  /**
+   * Resolve a tokenized list.
+   *
+   * @param l 
+   * @param context 
+   */
+  public fun resolveList(l: List<String>, context: IResolveContext): Any
 
-  public fun resolveString(arg0: TokenizedStringFragments, arg1: IResolveContext): Any
+  /**
+   * Resolve a string with at least one stringified token in it.
+   *
+   * (May use concatenation)
+   *
+   * @param s 
+   * @param context 
+   */
+  public fun resolveString(s: TokenizedStringFragments, context: IResolveContext): Any
 
+  /**
+   * Resolve a single token.
+   *
+   * @param t 
+   * @param context 
+   * @param postProcessor 
+   */
   public fun resolveToken(
-    arg0: IResolvable,
-    arg1: IResolveContext,
-    arg2: IPostProcessor,
+    t: IResolvable,
+    context: IResolveContext,
+    postProcessor: IPostProcessor,
   ): Any
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.ITokenResolver,
   ) : CdkObject(cdkObject), ITokenResolver {
-    override fun resolveList(arg0: List<String>, arg1: IResolveContext): Any =
-        unwrap(this).resolveList(arg0, arg1.let(IResolveContext::unwrap))
+    /**
+     * Resolve a tokenized list.
+     *
+     * @param l 
+     * @param context 
+     */
+    override fun resolveList(l: List<String>, context: IResolveContext): Any =
+        unwrap(this).resolveList(l, context.let(IResolveContext::unwrap))
 
-    override fun resolveString(arg0: TokenizedStringFragments, arg1: IResolveContext): Any =
-        unwrap(this).resolveString(arg0.let(TokenizedStringFragments::unwrap),
-        arg1.let(IResolveContext::unwrap))
+    /**
+     * Resolve a string with at least one stringified token in it.
+     *
+     * (May use concatenation)
+     *
+     * @param s 
+     * @param context 
+     */
+    override fun resolveString(s: TokenizedStringFragments, context: IResolveContext): Any =
+        unwrap(this).resolveString(s.let(TokenizedStringFragments::unwrap),
+        context.let(IResolveContext::unwrap))
 
+    /**
+     * Resolve a single token.
+     *
+     * @param t 
+     * @param context 
+     * @param postProcessor 
+     */
     override fun resolveToken(
-      arg0: IResolvable,
-      arg1: IResolveContext,
-      arg2: IPostProcessor,
-    ): Any = unwrap(this).resolveToken(arg0.let(IResolvable::unwrap),
-        arg1.let(IResolveContext::unwrap), arg2.let(IPostProcessor::unwrap))
+      t: IResolvable,
+      context: IResolveContext,
+      postProcessor: IPostProcessor,
+    ): Any = unwrap(this).resolveToken(t.let(IResolvable::unwrap),
+        context.let(IResolveContext::unwrap), postProcessor.let(IPostProcessor::unwrap))
   }
 
   public companion object {

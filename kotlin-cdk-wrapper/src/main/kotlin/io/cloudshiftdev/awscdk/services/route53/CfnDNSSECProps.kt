@@ -7,11 +7,41 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for defining a `CfnDNSSEC`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.route53.*;
+ * CfnDNSSECProps cfnDNSSECProps = CfnDNSSECProps.builder()
+ * .hostedZoneId("hostedZoneId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-dnssec.html)
+ */
 public interface CfnDNSSECProps {
+  /**
+   * A unique string (ID) that is used to identify a hosted zone.
+   *
+   * For example: `Z00001111A1ABCaaABC11` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-dnssec.html#cfn-route53-dnssec-hostedzoneid)
+   */
   public fun hostedZoneId(): String
 
+  /**
+   * A builder for [CfnDNSSECProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param hostedZoneId A unique string (ID) that is used to identify a hosted zone. 
+     * For example: `Z00001111A1ABCaaABC11` .
+     */
     public fun hostedZoneId(hostedZoneId: String)
   }
 
@@ -19,6 +49,10 @@ public interface CfnDNSSECProps {
     private val cdkBuilder: software.amazon.awscdk.services.route53.CfnDNSSECProps.Builder =
         software.amazon.awscdk.services.route53.CfnDNSSECProps.builder()
 
+    /**
+     * @param hostedZoneId A unique string (ID) that is used to identify a hosted zone. 
+     * For example: `Z00001111A1ABCaaABC11` .
+     */
     override fun hostedZoneId(hostedZoneId: String) {
       cdkBuilder.hostedZoneId(hostedZoneId)
     }
@@ -29,6 +63,13 @@ public interface CfnDNSSECProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.route53.CfnDNSSECProps,
   ) : CdkObject(cdkObject), CfnDNSSECProps {
+    /**
+     * A unique string (ID) that is used to identify a hosted zone.
+     *
+     * For example: `Z00001111A1ABCaaABC11` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-dnssec.html#cfn-route53-dnssec-hostedzoneid)
+     */
     override fun hostedZoneId(): String = unwrap(this).getHostedZoneId()
   }
 

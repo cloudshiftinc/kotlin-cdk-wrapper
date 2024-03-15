@@ -7,11 +7,43 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * The versions for the Aurora PostgreSQL cluster engine (those returned by
+ * `DatabaseClusterEngine.auroraPostgres`).
+ *
+ * https://docs.aws.amazon.com/AmazonRDS/latest/AuroraPostgreSQLReleaseNotes/AuroraPostgreSQL.Updates.html
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
+ * .engine(DatabaseClusterEngine.auroraPostgres(AuroraPostgresClusterEngineProps.builder().version(AuroraPostgresEngineVersion.VER_15_2).build()))
+ * .credentials(Credentials.fromUsername("adminuser",
+ * CredentialsFromUsernameOptions.builder().password(SecretValue.unsafePlainText("7959866cacc02c2d243ecfe177464fe6")).build()))
+ * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
+ * .publiclyAccessible(false)
+ * .build()))
+ * .readers(List.of(ClusterInstance.provisioned("reader")))
+ * .storageType(DBClusterStorageType.AURORA_IOPT1)
+ * .vpcSubnets(SubnetSelection.builder()
+ * .subnetType(SubnetType.PRIVATE_WITH_EGRESS)
+ * .build())
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 public open class AuroraPostgresEngineVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion,
 ) : CdkObject(cdkObject) {
+  /**
+   * The full version string, for example, "9.6.25.1".
+   */
   public open fun auroraPostgresFullVersion(): String = unwrap(this).getAuroraPostgresFullVersion()
 
+  /**
+   * The major version of the engine, for example, "9.6".
+   */
   public open fun auroraPostgresMajorVersion(): String =
       unwrap(this).getAuroraPostgresMajorVersion()
 

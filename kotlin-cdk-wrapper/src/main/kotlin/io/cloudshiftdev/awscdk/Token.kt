@@ -11,6 +11,16 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
+/**
+ * Represents a special or lazily-evaluated value.
+ *
+ * Can be used to delay evaluation of a certain value in case, for example,
+ * that it requires some context or late-bound data. Can also be used to
+ * mark values that need special processing at document rendering time.
+ *
+ * Tokens can be embedded into strings while retaining their original
+ * semantics.
+ */
 public open class Token internal constructor(
   internal override val cdkObject: software.amazon.awscdk.Token,
 ) : CdkObject(cdkObject) {

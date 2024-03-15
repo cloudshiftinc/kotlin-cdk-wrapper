@@ -8,15 +8,47 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Number
 import kotlin.Unit
 
+/**
+ * Common properties of traffic shifting routing configurations.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * import io.cloudshiftdev.awscdk.services.codedeploy.*;
+ * BaseTrafficShiftingConfigProps baseTrafficShiftingConfigProps =
+ * BaseTrafficShiftingConfigProps.builder()
+ * .interval(Duration.minutes(30))
+ * .percentage(123)
+ * .build();
+ * ```
+ */
 public interface BaseTrafficShiftingConfigProps {
+  /**
+   * The amount of time between traffic shifts.
+   */
   public fun interval(): Duration
 
+  /**
+   * The percentage to increase traffic on each traffic shift.
+   */
   public fun percentage(): Number
 
+  /**
+   * A builder for [BaseTrafficShiftingConfigProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param interval The amount of time between traffic shifts. 
+     */
     public fun interval(interval: Duration)
 
+    /**
+     * @param percentage The percentage to increase traffic on each traffic shift. 
+     */
     public fun percentage(percentage: Number)
   }
 
@@ -25,10 +57,16 @@ public interface BaseTrafficShiftingConfigProps {
         software.amazon.awscdk.services.codedeploy.BaseTrafficShiftingConfigProps.Builder =
         software.amazon.awscdk.services.codedeploy.BaseTrafficShiftingConfigProps.builder()
 
+    /**
+     * @param interval The amount of time between traffic shifts. 
+     */
     override fun interval(interval: Duration) {
       cdkBuilder.interval(interval.let(Duration::unwrap))
     }
 
+    /**
+     * @param percentage The percentage to increase traffic on each traffic shift. 
+     */
     override fun percentage(percentage: Number) {
       cdkBuilder.percentage(percentage)
     }
@@ -41,8 +79,14 @@ public interface BaseTrafficShiftingConfigProps {
     override val cdkObject:
         software.amazon.awscdk.services.codedeploy.BaseTrafficShiftingConfigProps,
   ) : CdkObject(cdkObject), BaseTrafficShiftingConfigProps {
+    /**
+     * The amount of time between traffic shifts.
+     */
     override fun interval(): Duration = unwrap(this).getInterval().let(Duration::wrap)
 
+    /**
+     * The percentage to increase traffic on each traffic shift.
+     */
     override fun percentage(): Number = unwrap(this).getPercentage()
   }
 

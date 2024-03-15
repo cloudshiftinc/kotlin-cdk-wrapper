@@ -5,6 +5,9 @@ package io.cloudshiftdev.awscdk.services.lambda
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Lambda function handler.
+ */
 public open class Handler internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.Handler,
 ) : CdkObject(cdkObject) {

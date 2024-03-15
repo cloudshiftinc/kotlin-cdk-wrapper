@@ -9,27 +9,95 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 
+/**
+ * Properties for defining a `CfnUserGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.elasticache.*;
+ * CfnUserGroupProps cfnUserGroupProps = CfnUserGroupProps.builder()
+ * .engine("engine")
+ * .userGroupId("userGroupId")
+ * .userIds(List.of("userIds"))
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html)
+ */
 public interface CfnUserGroupProps {
+  /**
+   * The current supported value is redis.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-engine)
+   */
   public fun engine(): String
 
+  /**
+   * An array of key-value pairs to apply to this user.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-tags)
+   */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
+  /**
+   * The ID of the user group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-usergroupid)
+   */
   public fun userGroupId(): String
 
+  /**
+   * The list of user IDs that belong to the user group.
+   *
+   * A user named `default` must be included.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-userids)
+   */
   public fun userIds(): List<String>
 
+  /**
+   * A builder for [CfnUserGroupProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param engine The current supported value is redis. 
+     */
     public fun engine(engine: String)
 
+    /**
+     * @param tags An array of key-value pairs to apply to this user.
+     */
     public fun tags(tags: List<CfnTag>)
 
+    /**
+     * @param tags An array of key-value pairs to apply to this user.
+     */
     public fun tags(vararg tags: CfnTag)
 
+    /**
+     * @param userGroupId The ID of the user group. 
+     */
     public fun userGroupId(userGroupId: String)
 
+    /**
+     * @param userIds The list of user IDs that belong to the user group. 
+     * A user named `default` must be included.
+     */
     public fun userIds(userIds: List<String>)
 
+    /**
+     * @param userIds The list of user IDs that belong to the user group. 
+     * A user named `default` must be included.
+     */
     public fun userIds(vararg userIds: String)
   }
 
@@ -37,24 +105,44 @@ public interface CfnUserGroupProps {
     private val cdkBuilder: software.amazon.awscdk.services.elasticache.CfnUserGroupProps.Builder =
         software.amazon.awscdk.services.elasticache.CfnUserGroupProps.builder()
 
+    /**
+     * @param engine The current supported value is redis. 
+     */
     override fun engine(engine: String) {
       cdkBuilder.engine(engine)
     }
 
+    /**
+     * @param tags An array of key-value pairs to apply to this user.
+     */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    /**
+     * @param tags An array of key-value pairs to apply to this user.
+     */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
+    /**
+     * @param userGroupId The ID of the user group. 
+     */
     override fun userGroupId(userGroupId: String) {
       cdkBuilder.userGroupId(userGroupId)
     }
 
+    /**
+     * @param userIds The list of user IDs that belong to the user group. 
+     * A user named `default` must be included.
+     */
     override fun userIds(userIds: List<String>) {
       cdkBuilder.userIds(userIds)
     }
 
+    /**
+     * @param userIds The list of user IDs that belong to the user group. 
+     * A user named `default` must be included.
+     */
     override fun userIds(vararg userIds: String): Unit = userIds(userIds.toList())
 
     public fun build(): software.amazon.awscdk.services.elasticache.CfnUserGroupProps =
@@ -64,12 +152,34 @@ public interface CfnUserGroupProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.elasticache.CfnUserGroupProps,
   ) : CdkObject(cdkObject), CfnUserGroupProps {
+    /**
+     * The current supported value is redis.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-engine)
+     */
     override fun engine(): String = unwrap(this).getEngine()
 
+    /**
+     * An array of key-value pairs to apply to this user.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-tags)
+     */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
+    /**
+     * The ID of the user group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-usergroupid)
+     */
     override fun userGroupId(): String = unwrap(this).getUserGroupId()
 
+    /**
+     * The list of user IDs that belong to the user group.
+     *
+     * A user named `default` must be included.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-userids)
+     */
     override fun userIds(): List<String> = unwrap(this).getUserIds()
   }
 

@@ -9,21 +9,59 @@ import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * Represents a CloudFormation condition, for resources which must be conditionally created and the
+ * determination must be made at deploy time.
+ *
+ * Example:
+ *
+ * ```
+ * CfnBucket rawBucket = CfnBucket.Builder.create(this, "Bucket").build();
+ * // -or-
+ * CfnBucket rawBucketAlt = (CfnBucket)myBucket.getNode().getDefaultChild();
+ * // then
+ * rawBucket.getCfnOptions().getCondition() = CfnCondition.Builder.create(this,
+ * "EnableBucket").build();
+ * rawBucket.getCfnOptions().getMetadata() = Map.of(
+ * "metadataKey", "MetadataValue");
+ * ```
+ */
 public open class CfnCondition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.CfnCondition,
 ) : CfnElement(cdkObject), ICfnConditionExpression, IResolvable {
+  /**
+   * The condition statement.
+   */
   public open fun expression(): ICfnConditionExpression? =
       unwrap(this).getExpression()?.let(ICfnConditionExpression::wrap)
 
+  /**
+   * The condition statement.
+   */
   public open fun expression(`value`: ICfnConditionExpression) {
     unwrap(this).setExpression(`value`.let(ICfnConditionExpression::unwrap))
   }
 
+  /**
+   * Synthesizes the condition.
+   *
+   * @param _context 
+   */
   public override fun resolve(_context: IResolveContext): Any =
       unwrap(this).resolve(_context.let(IResolveContext::unwrap))
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.CfnCondition].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The expression that the condition will evaluate.
+     *
+     * Default: - None.
+     *
+     * @param expression The expression that the condition will evaluate. 
+     */
     public fun expression(expression: ICfnConditionExpression)
   }
 
@@ -34,6 +72,13 @@ public open class CfnCondition internal constructor(
     private val cdkBuilder: software.amazon.awscdk.CfnCondition.Builder =
         software.amazon.awscdk.CfnCondition.Builder.create(scope, id)
 
+    /**
+     * The expression that the condition will evaluate.
+     *
+     * Default: - None.
+     *
+     * @param expression The expression that the condition will evaluate. 
+     */
     override fun expression(expression: ICfnConditionExpression) {
       cdkBuilder.expression(expression.let(ICfnConditionExpression::unwrap))
     }

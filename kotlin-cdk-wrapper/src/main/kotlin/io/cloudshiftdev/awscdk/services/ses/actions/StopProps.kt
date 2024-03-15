@@ -7,11 +7,36 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.sns.ITopic
 import kotlin.Unit
 
+/**
+ * Construction properties for a stop action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ses.actions.*;
+ * import io.cloudshiftdev.awscdk.services.sns.*;
+ * Topic topic;
+ * StopProps stopProps = StopProps.builder()
+ * .topic(topic)
+ * .build();
+ * ```
+ */
 public interface StopProps {
+  /**
+   * The SNS topic to notify when the stop action is taken.
+   */
   public fun topic(): ITopic? = unwrap(this).getTopic()?.let(ITopic::wrap)
 
+  /**
+   * A builder for [StopProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param topic The SNS topic to notify when the stop action is taken.
+     */
     public fun topic(topic: ITopic)
   }
 
@@ -19,6 +44,9 @@ public interface StopProps {
     private val cdkBuilder: software.amazon.awscdk.services.ses.actions.StopProps.Builder =
         software.amazon.awscdk.services.ses.actions.StopProps.builder()
 
+    /**
+     * @param topic The SNS topic to notify when the stop action is taken.
+     */
     override fun topic(topic: ITopic) {
       cdkBuilder.topic(topic.let(ITopic::unwrap))
     }
@@ -29,6 +57,9 @@ public interface StopProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ses.actions.StopProps,
   ) : CdkObject(cdkObject), StopProps {
+    /**
+     * The SNS topic to notify when the stop action is taken.
+     */
     override fun topic(): ITopic? = unwrap(this).getTopic()?.let(ITopic::wrap)
   }
 

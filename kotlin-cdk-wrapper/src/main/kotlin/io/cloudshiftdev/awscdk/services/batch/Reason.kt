@@ -6,6 +6,29 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Common job exit reasons.
+ *
+ * Example:
+ *
+ * ```
+ * EcsJobDefinition jobDefn = EcsJobDefinition.Builder.create(this, "JobDefn")
+ * .container(EcsEc2ContainerDefinition.Builder.create(this, "containerDefn")
+ * .image(ContainerImage.fromRegistry("public.ecr.aws/amazonlinux/amazonlinux:latest"))
+ * .memory(Size.mebibytes(2048))
+ * .cpu(256)
+ * .build())
+ * .retryAttempts(5)
+ * .retryStrategies(List.of(RetryStrategy.of(Action.EXIT, Reason.CANNOT_PULL_CONTAINER)))
+ * .build();
+ * jobDefn.addRetryStrategy(RetryStrategy.of(Action.EXIT, Reason.SPOT_INSTANCE_RECLAIMED));
+ * jobDefn.addRetryStrategy(RetryStrategy.of(Action.EXIT, Reason.CANNOT_PULL_CONTAINER));
+ * jobDefn.addRetryStrategy(RetryStrategy.of(Action.EXIT, Reason.custom(CustomReason.builder()
+ * .onExitCode("40*")
+ * .onReason("some reason")
+ * .build())));
+ * ```
+ */
 public open class Reason internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.Reason,
 ) : CdkObject(cdkObject) {

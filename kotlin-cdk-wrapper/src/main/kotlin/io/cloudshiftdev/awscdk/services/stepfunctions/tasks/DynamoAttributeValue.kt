@@ -10,12 +10,40 @@ import kotlin.String
 import kotlin.collections.List
 import kotlin.collections.Map
 
+/**
+ * Represents the data for an attribute.
+ *
+ * Each attribute value is described as a name-value pair.
+ * The name is the data type, and the value is the data itself.
+ *
+ * Example:
+ *
+ * ```
+ * Table myTable;
+ * DynamoDeleteItem.Builder.create(this, "DeleteItem")
+ * .key(Map.of("MessageId", DynamoAttributeValue.fromString("message-007")))
+ * .table(myTable)
+ * .resultPath(JsonPath.DISCARD)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_AttributeValue.html)
+ */
 public open class DynamoAttributeValue internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue,
 ) : CdkObject(cdkObject) {
+  /**
+   * Represents the data for the attribute.
+   *
+   * Data can be
+   * i.e. "S": "Hello"
+   */
   public open fun attributeValue(): Any = unwrap(this).getAttributeValue()
 
+  /**
+   * Returns the DynamoDB attribute value.
+   */
   public open fun toObject(): Any = unwrap(this).toObject()
 
   public companion object {

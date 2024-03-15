@@ -12,21 +12,75 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Represents the Lambda Handler Code.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.signer.*;
+ * SigningProfile signingProfile = SigningProfile.Builder.create(this, "SigningProfile")
+ * .platform(Platform.AWS_LAMBDA_SHA384_ECDSA)
+ * .build();
+ * CodeSigningConfig codeSigningConfig = CodeSigningConfig.Builder.create(this, "CodeSigningConfig")
+ * .signingProfiles(List.of(signingProfile))
+ * .build();
+ * Function.Builder.create(this, "Function")
+ * .codeSigningConfig(codeSigningConfig)
+ * .runtime(Runtime.NODEJS_18_X)
+ * .handler("index.handler")
+ * .code(Code.fromAsset(join(__dirname, "lambda-handler")))
+ * .build();
+ * ```
+ */
 public abstract class Code internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.Code,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct): CodeConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(CodeConfig::wrap)
+  /**
+   * Called when the lambda or layer is initialized to allow this object to bind to the stack, add
+   * resources and have fun.
+   *
+   * @param scope The binding scope. 
+   */
+  public open fun bind(scope: Construct): CodeConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(CodeConfig::wrap)
 
+  /**
+   * Called after the CFN function resource has been created to allow the code class to bind to it.
+   *
+   * Specifically it's required to allow assets to add
+   * metadata for tooling like SAM CLI to be able to find their origins.
+   *
+   * @param _resource 
+   * @param _options
+   */
   public open fun bindToResource(_resource: CfnResource) {
     unwrap(this).bindToResource(_resource.let(CfnResource::unwrap))
   }
 
+  /**
+   * Called after the CFN function resource has been created to allow the code class to bind to it.
+   *
+   * Specifically it's required to allow assets to add
+   * metadata for tooling like SAM CLI to be able to find their origins.
+   *
+   * @param _resource 
+   * @param _options
+   */
   public open fun bindToResource(_resource: CfnResource, _options: ResourceBindOptions) {
     unwrap(this).bindToResource(_resource.let(CfnResource::unwrap),
         _options.let(ResourceBindOptions::unwrap))
   }
 
+  /**
+   * Called after the CFN function resource has been created to allow the code class to bind to it.
+   *
+   * Specifically it's required to allow assets to add
+   * metadata for tooling like SAM CLI to be able to find their origins.
+   *
+   * @param _resource 
+   * @param _options
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("83fd80fe1e3901a0f5645c4dd596ca04d5fabc7f1c05c24fc53008c232b144f1")
   public open fun bindToResource(_resource: CfnResource,

@@ -8,17 +8,55 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
+/**
+ * What to do when a client makes a request to a listener.
+ *
+ * Some actions can be combined with other ones (specifically,
+ * you can perform authentication before serving the request).
+ *
+ * Multiple actions form a linked chain; the chain must always terminate in a
+ * *(weighted)forward*, *fixedResponse* or *redirect* action.
+ *
+ * If an action supports chaining, the next action can be indicated
+ * by passing it in the `next` property.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+ * NetworkTargetGroup networkTargetGroup;
+ * NetworkListenerAction networkListenerAction =
+ * NetworkListenerAction.forward(List.of(networkTargetGroup), NetworkForwardOptions.builder()
+ * .stickinessDuration(Duration.minutes(30))
+ * .build());
+ * ```
+ */
 public open class NetworkListenerAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction,
 ) : CdkObject(cdkObject), IListenerAction {
+  /**
+   * Called when the action is being used in a listener.
+   *
+   * @param scope 
+   * @param listener 
+   */
   public open fun bind(scope: Construct, listener: INetworkListener) {
     unwrap(this).bind(scope.let(Construct::unwrap), listener.let(INetworkListener::unwrap))
   }
 
+  /**
+   * Render the listener default actions in this chain.
+   */
   public override fun renderActions(): List<CfnListener.ActionProperty> =
       unwrap(this).renderActions().map(CfnListener.ActionProperty::wrap)
 
+  /**
+   * Render the listener rule actions in this chain.
+   */
   public override fun renderRuleActions(): List<CfnListenerRule.ActionProperty> =
       unwrap(this).renderRuleActions().map(CfnListenerRule.ActionProperty::wrap)
 

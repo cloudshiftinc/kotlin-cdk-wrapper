@@ -6,20 +6,41 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.collections.List
 
+/**
+ * Interface for objects that can be used in a Chain.
+ */
 public interface IChainable {
+  /**
+   * The chainable end state(s) of this chainable.
+   */
   public fun endStates(): List<INextable>
 
+  /**
+   * Descriptive identifier for this chainable.
+   */
   public fun id(): String
 
+  /**
+   * The start state of this chainable.
+   */
   public fun startState(): State
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.stepfunctions.IChainable,
   ) : CdkObject(cdkObject), IChainable {
+    /**
+     * The chainable end state(s) of this chainable.
+     */
     override fun endStates(): List<INextable> = unwrap(this).getEndStates().map(INextable::wrap)
 
+    /**
+     * Descriptive identifier for this chainable.
+     */
     override fun id(): String = unwrap(this).getId()
 
+    /**
+     * The start state of this chainable.
+     */
     override fun startState(): State = unwrap(this).getStartState().let(State::wrap)
   }
 

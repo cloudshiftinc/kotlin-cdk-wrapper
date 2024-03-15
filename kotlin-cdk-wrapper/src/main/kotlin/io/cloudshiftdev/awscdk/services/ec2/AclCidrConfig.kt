@@ -7,15 +7,45 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Acl Configuration for CIDR.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * AclCidrConfig aclCidrConfig = AclCidrConfig.builder()
+ * .cidrBlock("cidrBlock")
+ * .ipv6CidrBlock("ipv6CidrBlock")
+ * .build();
+ * ```
+ */
 public interface AclCidrConfig {
+  /**
+   * Ipv4 CIDR.
+   */
   public fun cidrBlock(): String? = unwrap(this).getCidrBlock()
 
+  /**
+   * Ipv6 CIDR.
+   */
   public fun ipv6CidrBlock(): String? = unwrap(this).getIpv6CidrBlock()
 
+  /**
+   * A builder for [AclCidrConfig]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param cidrBlock Ipv4 CIDR.
+     */
     public fun cidrBlock(cidrBlock: String)
 
+    /**
+     * @param ipv6CidrBlock Ipv6 CIDR.
+     */
     public fun ipv6CidrBlock(ipv6CidrBlock: String)
   }
 
@@ -23,10 +53,16 @@ public interface AclCidrConfig {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.AclCidrConfig.Builder =
         software.amazon.awscdk.services.ec2.AclCidrConfig.builder()
 
+    /**
+     * @param cidrBlock Ipv4 CIDR.
+     */
     override fun cidrBlock(cidrBlock: String) {
       cdkBuilder.cidrBlock(cidrBlock)
     }
 
+    /**
+     * @param ipv6CidrBlock Ipv6 CIDR.
+     */
     override fun ipv6CidrBlock(ipv6CidrBlock: String) {
       cdkBuilder.ipv6CidrBlock(ipv6CidrBlock)
     }
@@ -37,8 +73,14 @@ public interface AclCidrConfig {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ec2.AclCidrConfig,
   ) : CdkObject(cdkObject), AclCidrConfig {
+    /**
+     * Ipv4 CIDR.
+     */
     override fun cidrBlock(): String? = unwrap(this).getCidrBlock()
 
+    /**
+     * Ipv6 CIDR.
+     */
     override fun ipv6CidrBlock(): String? = unwrap(this).getIpv6CidrBlock()
   }
 

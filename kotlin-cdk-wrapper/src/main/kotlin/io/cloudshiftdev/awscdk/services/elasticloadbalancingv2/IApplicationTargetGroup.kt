@@ -12,65 +12,179 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * A Target Group for Application Load Balancers.
+ */
 public interface IApplicationTargetGroup : ITargetGroup {
-  public fun addTarget(arg0: IApplicationLoadBalancerTarget)
+  /**
+   * Add a load balancing target to this target group.
+   *
+   * @param targets 
+   */
+  public fun addTarget(targets: IApplicationLoadBalancerTarget)
 
+  /**
+   * All metrics available for this target group.
+   */
   public fun metrics(): IApplicationTargetGroupMetrics
 
-  public fun registerConnectable(arg0: IConnectable)
+  /**
+   * Register a connectable as a member of this target group.
+   *
+   * Don't call this directly. It will be called by load balancing targets.
+   *
+   * @param connectable 
+   * @param portRange
+   */
+  public fun registerConnectable(connectable: IConnectable)
 
-  public fun registerConnectable(arg0: IConnectable, arg1: Port)
+  /**
+   * Register a connectable as a member of this target group.
+   *
+   * Don't call this directly. It will be called by load balancing targets.
+   *
+   * @param connectable 
+   * @param portRange
+   */
+  public fun registerConnectable(connectable: IConnectable, portRange: Port)
 
+  /**
+   * Register a connectable as a member of this target group.
+   *
+   * Don't call this directly. It will be called by load balancing targets.
+   *
+   * @param connectable 
+   * @param portRange
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("bcc196a279cd8df29b10150b2d6fcd0fb653d88666d4c7b6871b5f67e18a087a")
-  public fun registerConnectable(arg0: IConnectable, arg1: Port.Builder.() -> Unit)
+  public fun registerConnectable(connectable: IConnectable, portRange: Port.Builder.() -> Unit)
 
-  public fun registerListener(arg0: IApplicationListener)
+  /**
+   * Register a listener that is load balancing to this target group.
+   *
+   * Don't call this directly. It will be called by listeners.
+   *
+   * @param listener 
+   * @param associatingConstruct
+   */
+  public fun registerListener(listener: IApplicationListener)
 
-  public fun registerListener(arg0: IApplicationListener, arg1: IConstruct)
+  /**
+   * Register a listener that is load balancing to this target group.
+   *
+   * Don't call this directly. It will be called by listeners.
+   *
+   * @param listener 
+   * @param associatingConstruct
+   */
+  public fun registerListener(listener: IApplicationListener, associatingConstruct: IConstruct)
 
   private class Wrapper(
     override val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationTargetGroup,
   ) : CdkObject(cdkObject), IApplicationTargetGroup {
-    override fun addTarget(arg0: IApplicationLoadBalancerTarget) {
-      unwrap(this).addTarget(arg0.let(IApplicationLoadBalancerTarget::unwrap))
+    /**
+     * Add a load balancing target to this target group.
+     *
+     * @param targets 
+     */
+    override fun addTarget(targets: IApplicationLoadBalancerTarget) {
+      unwrap(this).addTarget(targets.let(IApplicationLoadBalancerTarget::unwrap))
     }
 
+    /**
+     * A token representing a list of ARNs of the load balancers that route traffic to this target
+     * group.
+     */
     override fun loadBalancerArns(): String = unwrap(this).getLoadBalancerArns()
 
+    /**
+     * Return an object to depend on the listeners added to this target group.
+     */
     override fun loadBalancerAttached(): IDependable =
         unwrap(this).getLoadBalancerAttached().let(IDependable::wrap)
 
+    /**
+     * All metrics available for this target group.
+     */
     override fun metrics(): IApplicationTargetGroupMetrics =
         unwrap(this).getMetrics().let(IApplicationTargetGroupMetrics::wrap)
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
-    override fun registerConnectable(arg0: IConnectable) {
-      unwrap(this).registerConnectable(arg0.let(IConnectable::unwrap))
+    /**
+     * Register a connectable as a member of this target group.
+     *
+     * Don't call this directly. It will be called by load balancing targets.
+     *
+     * @param connectable 
+     * @param portRange
+     */
+    override fun registerConnectable(connectable: IConnectable) {
+      unwrap(this).registerConnectable(connectable.let(IConnectable::unwrap))
     }
 
-    override fun registerConnectable(arg0: IConnectable, arg1: Port) {
-      unwrap(this).registerConnectable(arg0.let(IConnectable::unwrap), arg1.let(Port::unwrap))
+    /**
+     * Register a connectable as a member of this target group.
+     *
+     * Don't call this directly. It will be called by load balancing targets.
+     *
+     * @param connectable 
+     * @param portRange
+     */
+    override fun registerConnectable(connectable: IConnectable, portRange: Port) {
+      unwrap(this).registerConnectable(connectable.let(IConnectable::unwrap),
+          portRange.let(Port::unwrap))
     }
 
+    /**
+     * Register a connectable as a member of this target group.
+     *
+     * Don't call this directly. It will be called by load balancing targets.
+     *
+     * @param connectable 
+     * @param portRange
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bcc196a279cd8df29b10150b2d6fcd0fb653d88666d4c7b6871b5f67e18a087a")
-    override fun registerConnectable(arg0: IConnectable, arg1: Port.Builder.() -> Unit): Unit =
-        registerConnectable(arg0, Port(arg1))
+    override fun registerConnectable(connectable: IConnectable, portRange: Port.Builder.() -> Unit):
+        Unit = registerConnectable(connectable, Port(portRange))
 
-    override fun registerListener(arg0: IApplicationListener) {
-      unwrap(this).registerListener(arg0.let(IApplicationListener::unwrap))
+    /**
+     * Register a listener that is load balancing to this target group.
+     *
+     * Don't call this directly. It will be called by listeners.
+     *
+     * @param listener 
+     * @param associatingConstruct
+     */
+    override fun registerListener(listener: IApplicationListener) {
+      unwrap(this).registerListener(listener.let(IApplicationListener::unwrap))
     }
 
-    override fun registerListener(arg0: IApplicationListener, arg1: IConstruct) {
-      unwrap(this).registerListener(arg0.let(IApplicationListener::unwrap),
-          arg1.let(IConstruct::unwrap))
+    /**
+     * Register a listener that is load balancing to this target group.
+     *
+     * Don't call this directly. It will be called by listeners.
+     *
+     * @param listener 
+     * @param associatingConstruct
+     */
+    override fun registerListener(listener: IApplicationListener,
+        associatingConstruct: IConstruct) {
+      unwrap(this).registerListener(listener.let(IApplicationListener::unwrap),
+          associatingConstruct.let(IConstruct::unwrap))
     }
 
+    /**
+     * ARN of the target group.
+     */
     override fun targetGroupArn(): String = unwrap(this).getTargetGroupArn()
 
+    /**
+     * The name of the target group.
+     */
     override fun targetGroupName(): String = unwrap(this).getTargetGroupName()
   }
 

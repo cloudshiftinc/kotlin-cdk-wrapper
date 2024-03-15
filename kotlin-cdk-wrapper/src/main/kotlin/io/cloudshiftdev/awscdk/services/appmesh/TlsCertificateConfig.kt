@@ -7,13 +7,50 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * A wrapper for the tls config returned by `TlsCertificate.bind`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.appmesh.*;
+ * TlsCertificateConfig tlsCertificateConfig = TlsCertificateConfig.builder()
+ * .tlsCertificate(ListenerTlsCertificateProperty.builder()
+ * .acm(ListenerTlsAcmCertificateProperty.builder()
+ * .certificateArn("certificateArn")
+ * .build())
+ * .file(ListenerTlsFileCertificateProperty.builder()
+ * .certificateChain("certificateChain")
+ * .privateKey("privateKey")
+ * .build())
+ * .sds(ListenerTlsSdsCertificateProperty.builder()
+ * .secretName("secretName")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ */
 public interface TlsCertificateConfig {
+  /**
+   * The CFN shape for a TLS certificate.
+   */
   public fun tlsCertificate(): CfnVirtualNode.ListenerTlsCertificateProperty
 
+  /**
+   * A builder for [TlsCertificateConfig]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param tlsCertificate The CFN shape for a TLS certificate. 
+     */
     public fun tlsCertificate(tlsCertificate: CfnVirtualNode.ListenerTlsCertificateProperty)
 
+    /**
+     * @param tlsCertificate The CFN shape for a TLS certificate. 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("02dbfb837280fdac52206b09a351538961e07b762c00eb82064d2ea26299024e")
     public
@@ -24,10 +61,16 @@ public interface TlsCertificateConfig {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.TlsCertificateConfig.Builder =
         software.amazon.awscdk.services.appmesh.TlsCertificateConfig.builder()
 
+    /**
+     * @param tlsCertificate The CFN shape for a TLS certificate. 
+     */
     override fun tlsCertificate(tlsCertificate: CfnVirtualNode.ListenerTlsCertificateProperty) {
       cdkBuilder.tlsCertificate(tlsCertificate.let(CfnVirtualNode.ListenerTlsCertificateProperty::unwrap))
     }
 
+    /**
+     * @param tlsCertificate The CFN shape for a TLS certificate. 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("02dbfb837280fdac52206b09a351538961e07b762c00eb82064d2ea26299024e")
     override
@@ -41,6 +84,9 @@ public interface TlsCertificateConfig {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.TlsCertificateConfig,
   ) : CdkObject(cdkObject), TlsCertificateConfig {
+    /**
+     * The CFN shape for a TLS certificate.
+     */
     override fun tlsCertificate(): CfnVirtualNode.ListenerTlsCertificateProperty =
         unwrap(this).getTlsCertificate().let(CfnVirtualNode.ListenerTlsCertificateProperty::wrap)
   }

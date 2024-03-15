@@ -8,39 +8,86 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Interface for scalable attributes.
+ */
 public interface IScalableTableAttribute {
-  public fun scaleOnSchedule(arg0: String, arg1: ScalingSchedule)
+  /**
+   * Add scheduled scaling for this scaling attribute.
+   *
+   * @param id 
+   * @param actions 
+   */
+  public fun scaleOnSchedule(id: String, actions: ScalingSchedule)
 
+  /**
+   * Add scheduled scaling for this scaling attribute.
+   *
+   * @param id 
+   * @param actions 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("0e652746809f3e4412c49544d1500446974784d78cd2e4c1d569436b4931291f")
-  public fun scaleOnSchedule(arg0: String, arg1: ScalingSchedule.Builder.() -> Unit)
+  public fun scaleOnSchedule(id: String, actions: ScalingSchedule.Builder.() -> Unit)
 
-  public fun scaleOnUtilization(arg0: UtilizationScalingProps)
+  /**
+   * Scale out or in to keep utilization at a given level.
+   *
+   * @param props 
+   */
+  public fun scaleOnUtilization(props: UtilizationScalingProps)
 
+  /**
+   * Scale out or in to keep utilization at a given level.
+   *
+   * @param props 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("df7aa7d44150d61decd5c4ccb502479fe291ac38d35d0eed8af5ae5676750e45")
-  public fun scaleOnUtilization(arg0: UtilizationScalingProps.Builder.() -> Unit)
+  public fun scaleOnUtilization(props: UtilizationScalingProps.Builder.() -> Unit)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.dynamodb.IScalableTableAttribute,
   ) : CdkObject(cdkObject), IScalableTableAttribute {
-    override fun scaleOnSchedule(arg0: String, arg1: ScalingSchedule) {
-      unwrap(this).scaleOnSchedule(arg0, arg1.let(ScalingSchedule::unwrap))
+    /**
+     * Add scheduled scaling for this scaling attribute.
+     *
+     * @param id 
+     * @param actions 
+     */
+    override fun scaleOnSchedule(id: String, actions: ScalingSchedule) {
+      unwrap(this).scaleOnSchedule(id, actions.let(ScalingSchedule::unwrap))
     }
 
+    /**
+     * Add scheduled scaling for this scaling attribute.
+     *
+     * @param id 
+     * @param actions 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0e652746809f3e4412c49544d1500446974784d78cd2e4c1d569436b4931291f")
-    override fun scaleOnSchedule(arg0: String, arg1: ScalingSchedule.Builder.() -> Unit): Unit =
-        scaleOnSchedule(arg0, ScalingSchedule(arg1))
+    override fun scaleOnSchedule(id: String, actions: ScalingSchedule.Builder.() -> Unit): Unit =
+        scaleOnSchedule(id, ScalingSchedule(actions))
 
-    override fun scaleOnUtilization(arg0: UtilizationScalingProps) {
-      unwrap(this).scaleOnUtilization(arg0.let(UtilizationScalingProps::unwrap))
+    /**
+     * Scale out or in to keep utilization at a given level.
+     *
+     * @param props 
+     */
+    override fun scaleOnUtilization(props: UtilizationScalingProps) {
+      unwrap(this).scaleOnUtilization(props.let(UtilizationScalingProps::unwrap))
     }
 
+    /**
+     * Scale out or in to keep utilization at a given level.
+     *
+     * @param props 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("df7aa7d44150d61decd5c4ccb502479fe291ac38d35d0eed8af5ae5676750e45")
-    override fun scaleOnUtilization(arg0: UtilizationScalingProps.Builder.() -> Unit): Unit =
-        scaleOnUtilization(UtilizationScalingProps(arg0))
+    override fun scaleOnUtilization(props: UtilizationScalingProps.Builder.() -> Unit): Unit =
+        scaleOnUtilization(UtilizationScalingProps(props))
   }
 
   public companion object {

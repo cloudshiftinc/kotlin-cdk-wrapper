@@ -5,11 +5,31 @@ package io.cloudshiftdev.awscdk.services.appconfig
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Defines the hosted configuration content.
+ *
+ * Example:
+ *
+ * ```
+ * Application application;
+ * HostedConfiguration.Builder.create(this, "MyHostedConfiguration")
+ * .application(application)
+ * .content(ConfigurationContent.fromInlineText("This is my configuration content."))
+ * .type(ConfigurationType.FEATURE_FLAGS)
+ * .build();
+ * ```
+ */
 public abstract class ConfigurationContent internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.ConfigurationContent,
 ) : CdkObject(cdkObject) {
+  /**
+   * The configuration content.
+   */
   public open fun content(): String = unwrap(this).getContent()
 
+  /**
+   * The configuration content type.
+   */
   public open fun contentType(): String = unwrap(this).getContentType()
 
   private class Wrapper(

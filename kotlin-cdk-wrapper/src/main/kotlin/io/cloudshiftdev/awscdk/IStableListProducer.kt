@@ -6,12 +6,21 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.collections.List
 
+/**
+ * Interface for (stable) lazy list producers.
+ */
 public interface IStableListProducer {
+  /**
+   * Produce the list value.
+   */
   public fun produce(): List<String>
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.IStableListProducer,
   ) : CdkObject(cdkObject), IStableListProducer {
+    /**
+     * Produce the list value.
+     */
     override fun produce(): List<String> = unwrap(this).produce() ?: emptyList()
   }
 

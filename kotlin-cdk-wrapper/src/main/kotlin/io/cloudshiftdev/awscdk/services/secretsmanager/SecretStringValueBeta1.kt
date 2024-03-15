@@ -6,10 +6,34 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Deprecated
 import kotlin.String
 
+/**
+ * (deprecated) An experimental class used to specify an initial secret value for a Secret.
+ *
+ * The class wraps a simple string (or JSON representation) in order to provide some safety checks
+ * and warnings
+ * about the dangers of using plaintext strings as initial secret seed values via
+ * CDK/CloudFormation.
+ *
+ * Example:
+ *
+ * ```
+ * User user = new User(this, "User");
+ * AccessKey accessKey = AccessKey.Builder.create(this, "AccessKey").user(user).build();
+ * SecretStringValueBeta1 secretValue = SecretStringValueBeta1.fromToken(JSON.stringify(Map.of(
+ * "username", user.getUserName(),
+ * "database", "foo",
+ * "password", accessKey.secretAccessKey.unsafeUnwrap())));
+ * ```
+ *
+ * @deprecated Use `cdk.SecretValue` instead.
+ */
 public open class SecretStringValueBeta1 internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.secretsmanager.SecretStringValueBeta1,
 ) : CdkObject(cdkObject) {
+  /**
+   * (deprecated) Returns the secret value.
+   */
   @Deprecated(message = "deprecated in CDK")
   public open fun secretValue(): String = unwrap(this).secretValue()
 

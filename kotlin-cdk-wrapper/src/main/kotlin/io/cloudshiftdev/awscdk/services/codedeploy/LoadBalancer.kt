@@ -7,12 +7,38 @@ import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IApplicationTarge
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.INetworkTargetGroup
 import kotlin.String
 
+/**
+ * An interface of an abstract load balancer, as needed by CodeDeploy.
+ *
+ * Create instances using the static factory methods:
+ * `#classic`, `#application` and `#network`.
+ *
+ * Example:
+ *
+ * ```
+ * ApplicationLoadBalancer alb;
+ * ApplicationListener listener = alb.addListener("Listener",
+ * BaseApplicationListenerProps.builder().port(80).build());
+ * ApplicationTargetGroup targetGroup = listener.addTargets("Fleet",
+ * AddApplicationTargetsProps.builder().port(80).build());
+ * ServerDeploymentGroup deploymentGroup = ServerDeploymentGroup.Builder.create(this,
+ * "DeploymentGroup")
+ * .loadBalancer(LoadBalancer.application(targetGroup))
+ * .build();
+ * ```
+ */
 public abstract class LoadBalancer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codedeploy.LoadBalancer,
 ) : CdkObject(cdkObject) {
+  /**
+   *
+   */
   public open fun generation(): LoadBalancerGeneration =
       unwrap(this).getGeneration().let(LoadBalancerGeneration::wrap)
 
+  /**
+   *
+   */
   public open fun name(): String = unwrap(this).getName()
 
   private class Wrapper(

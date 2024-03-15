@@ -10,13 +10,50 @@ import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * Resource Policy for SecretsManager Secrets.
+ *
+ * Policies define the operations that are allowed on this resource.
+ *
+ * You almost never need to define this construct directly.
+ *
+ * All AWS resources that support resource policies have a method called
+ * `addToResourcePolicy()`, which will automatically create a new resource
+ * policy if one doesn't exist yet, otherwise it will add to the existing
+ * policy.
+ *
+ * Prefer to use `addToResourcePolicy()` instead.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.secretsmanager.*;
+ * Secret secret;
+ * ResourcePolicy resourcePolicy = ResourcePolicy.Builder.create(this, "MyResourcePolicy")
+ * .secret(secret)
+ * .build();
+ * ```
+ */
 public open class ResourcePolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.secretsmanager.ResourcePolicy,
 ) : Resource(cdkObject) {
+  /**
+   * The IAM policy document for this policy.
+   */
   public open fun document(): PolicyDocument = unwrap(this).getDocument().let(PolicyDocument::wrap)
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.secretsmanager.ResourcePolicy].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The secret to attach a resource-based permissions policy.
+     *
+     * @param secret The secret to attach a resource-based permissions policy. 
+     */
     public fun secret(secret: ISecret)
   }
 
@@ -27,6 +64,11 @@ public open class ResourcePolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.secretsmanager.ResourcePolicy.Builder =
         software.amazon.awscdk.services.secretsmanager.ResourcePolicy.Builder.create(scope, id)
 
+    /**
+     * The secret to attach a resource-based permissions policy.
+     *
+     * @param secret The secret to attach a resource-based permissions policy. 
+     */
     override fun secret(secret: ISecret) {
       cdkBuilder.secret(secret.let(ISecret::unwrap))
     }

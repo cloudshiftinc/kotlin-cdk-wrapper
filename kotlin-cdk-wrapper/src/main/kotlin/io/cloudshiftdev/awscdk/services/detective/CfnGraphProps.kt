@@ -11,19 +11,82 @@ import kotlin.Boolean
 import kotlin.Unit
 import kotlin.collections.List
 
+/**
+ * Properties for defining a `CfnGraph`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.detective.*;
+ * CfnGraphProps cfnGraphProps = CfnGraphProps.builder()
+ * .autoEnableMembers(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-graph.html)
+ */
 public interface CfnGraphProps {
+  /**
+   * Indicates whether to automatically enable new organization accounts as member accounts in the
+   * organization behavior graph.
+   *
+   * By default, this property is set to `false` . If you want to change the value of this property,
+   * you must be the Detective administrator for the organization. For more information on setting a
+   * Detective administrator account, see
+   * [AWS::Detective::OrganizationAdmin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)
+   *
+   * Default: - false
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-graph.html#cfn-detective-graph-autoenablemembers)
+   */
   public fun autoEnableMembers(): Any? = unwrap(this).getAutoEnableMembers()
 
+  /**
+   * The tag values to assign to the new behavior graph.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-graph.html#cfn-detective-graph-tags)
+   */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
+  /**
+   * A builder for [CfnGraphProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param autoEnableMembers Indicates whether to automatically enable new organization accounts
+     * as member accounts in the organization behavior graph.
+     * By default, this property is set to `false` . If you want to change the value of this
+     * property, you must be the Detective administrator for the organization. For more information on
+     * setting a Detective administrator account, see
+     * [AWS::Detective::OrganizationAdmin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)
+     */
     public fun autoEnableMembers(autoEnableMembers: Boolean)
 
+    /**
+     * @param autoEnableMembers Indicates whether to automatically enable new organization accounts
+     * as member accounts in the organization behavior graph.
+     * By default, this property is set to `false` . If you want to change the value of this
+     * property, you must be the Detective administrator for the organization. For more information on
+     * setting a Detective administrator account, see
+     * [AWS::Detective::OrganizationAdmin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)
+     */
     public fun autoEnableMembers(autoEnableMembers: IResolvable)
 
+    /**
+     * @param tags The tag values to assign to the new behavior graph.
+     */
     public fun tags(tags: List<CfnTag>)
 
+    /**
+     * @param tags The tag values to assign to the new behavior graph.
+     */
     public fun tags(vararg tags: CfnTag)
   }
 
@@ -31,18 +94,40 @@ public interface CfnGraphProps {
     private val cdkBuilder: software.amazon.awscdk.services.detective.CfnGraphProps.Builder =
         software.amazon.awscdk.services.detective.CfnGraphProps.builder()
 
+    /**
+     * @param autoEnableMembers Indicates whether to automatically enable new organization accounts
+     * as member accounts in the organization behavior graph.
+     * By default, this property is set to `false` . If you want to change the value of this
+     * property, you must be the Detective administrator for the organization. For more information on
+     * setting a Detective administrator account, see
+     * [AWS::Detective::OrganizationAdmin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)
+     */
     override fun autoEnableMembers(autoEnableMembers: Boolean) {
       cdkBuilder.autoEnableMembers(autoEnableMembers)
     }
 
+    /**
+     * @param autoEnableMembers Indicates whether to automatically enable new organization accounts
+     * as member accounts in the organization behavior graph.
+     * By default, this property is set to `false` . If you want to change the value of this
+     * property, you must be the Detective administrator for the organization. For more information on
+     * setting a Detective administrator account, see
+     * [AWS::Detective::OrganizationAdmin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)
+     */
     override fun autoEnableMembers(autoEnableMembers: IResolvable) {
       cdkBuilder.autoEnableMembers(autoEnableMembers.let(IResolvable::unwrap))
     }
 
+    /**
+     * @param tags The tag values to assign to the new behavior graph.
+     */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    /**
+     * @param tags The tag values to assign to the new behavior graph.
+     */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.detective.CfnGraphProps = cdkBuilder.build()
@@ -51,8 +136,26 @@ public interface CfnGraphProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.detective.CfnGraphProps,
   ) : CdkObject(cdkObject), CfnGraphProps {
+    /**
+     * Indicates whether to automatically enable new organization accounts as member accounts in the
+     * organization behavior graph.
+     *
+     * By default, this property is set to `false` . If you want to change the value of this
+     * property, you must be the Detective administrator for the organization. For more information on
+     * setting a Detective administrator account, see
+     * [AWS::Detective::OrganizationAdmin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)
+     *
+     * Default: - false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-graph.html#cfn-detective-graph-autoenablemembers)
+     */
     override fun autoEnableMembers(): Any? = unwrap(this).getAutoEnableMembers()
 
+    /**
+     * The tag values to assign to the new behavior graph.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-graph.html#cfn-detective-graph-tags)
+     */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
   }
 

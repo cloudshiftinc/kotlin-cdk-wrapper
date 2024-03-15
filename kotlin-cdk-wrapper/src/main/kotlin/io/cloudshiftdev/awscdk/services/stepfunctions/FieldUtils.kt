@@ -9,6 +9,9 @@ import kotlin.String
 import kotlin.collections.List
 import kotlin.collections.Map
 
+/**
+ * Helper functions to work with structures containing fields.
+ */
 public open class FieldUtils internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.FieldUtils,
 ) : CdkObject(cdkObject) {

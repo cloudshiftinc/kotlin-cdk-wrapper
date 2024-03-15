@@ -8,16 +8,54 @@ import kotlin.Number
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Configure whether the AutoScalingGroup waits for signals.
+ *
+ * If you do configure waiting for signals, you should make sure the instances
+ * invoke `cfn-signal` somewhere in their UserData to signal that they have
+ * started up (either successfully or unsuccessfully).
+ *
+ * Signals are used both during intial creation and subsequent updates.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * InstanceType instanceType;
+ * IMachineImage machineImage;
+ * AutoScalingGroup.Builder.create(this, "ASG")
+ * .vpc(vpc)
+ * .instanceType(instanceType)
+ * .machineImage(machineImage)
+ * // ...
+ * .init(CloudFormationInit.fromElements(InitFile.fromString("/etc/my_instance", "This got written
+ * during instance startup")))
+ * .signals(Signals.waitForAll(SignalsOptions.builder()
+ * .timeout(Duration.minutes(10))
+ * .build()))
+ * .build();
+ * ```
+ */
 public abstract class Signals internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.autoscaling.Signals,
 ) : CdkObject(cdkObject) {
-  public open fun renderCreationPolicy(arg0: RenderSignalsOptions): CfnCreationPolicy =
-      unwrap(this).renderCreationPolicy(arg0.let(RenderSignalsOptions::unwrap)).let(CfnCreationPolicy::wrap)
+  /**
+   * Render the ASG's CreationPolicy.
+   *
+   * @param renderOptions 
+   */
+  public open fun renderCreationPolicy(renderOptions: RenderSignalsOptions): CfnCreationPolicy =
+      unwrap(this).renderCreationPolicy(renderOptions.let(RenderSignalsOptions::unwrap)).let(CfnCreationPolicy::wrap)
 
+  /**
+   * Render the ASG's CreationPolicy.
+   *
+   * @param renderOptions 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("9e6894cb911f30f7b42ee393580a5093316e05aace45596c013289c9d8909406")
-  public open fun renderCreationPolicy(arg0: RenderSignalsOptions.Builder.() -> Unit):
-      CfnCreationPolicy = renderCreationPolicy(RenderSignalsOptions(arg0))
+  public open fun renderCreationPolicy(renderOptions: RenderSignalsOptions.Builder.() -> Unit):
+      CfnCreationPolicy = renderCreationPolicy(RenderSignalsOptions(renderOptions))
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.autoscaling.Signals,

@@ -11,24 +11,77 @@ import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * You can use the `AWS::SupportApp::AccountAlias` resource to specify your AWS account when you
+ * configure the AWS Support App in Slack.
+ *
+ * Your alias name appears on the AWS Support App page in the Support Center Console and in messages
+ * from the AWS Support App. You can use this alias to identify the account you've configured with the
+ * AWS Support App .
+ *
+ * For more information, see [AWS Support App in
+ * Slack](https://docs.aws.amazon.com/awssupport/latest/user/aws-support-app-for-slack.html) in the
+ * *AWS Support User Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.supportapp.*;
+ * CfnAccountAlias cfnAccountAlias = CfnAccountAlias.Builder.create(this, "MyCfnAccountAlias")
+ * .accountAlias("accountAlias")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-supportapp-accountalias.html)
+ */
 public open class CfnAccountAlias internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.supportapp.CfnAccountAlias,
 ) : CfnResource(cdkObject), IInspectable {
+  /**
+   * An alias or short name for an AWS account .
+   */
   public open fun accountAlias(): String = unwrap(this).getAccountAlias()
 
+  /**
+   * An alias or short name for an AWS account .
+   */
   public open fun accountAlias(`value`: String) {
     unwrap(this).setAccountAlias(`value`)
   }
 
+  /**
+   * The `AccountAlias` resource type has an attribute `AccountAliasResourceId` . You can use this
+   * attribute to identify the resource.
+   *
+   * The `AccountAliasResourceId` will be `AccountAlias_for_accountId` . In this example,
+   * `AccountAlias_for_` is the prefix and `accountId` is your AWS account number, such as
+   * `AccountAlias_for_123456789012` .
+   */
   public open fun attrAccountAliasResourceId(): String =
       unwrap(this).getAttrAccountAliasResourceId()
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.supportapp.CfnAccountAlias].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * An alias or short name for an AWS account .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-supportapp-accountalias.html#cfn-supportapp-accountalias-accountalias)
+     * @param accountAlias An alias or short name for an AWS account . 
+     */
     public fun accountAlias(accountAlias: String)
   }
 
@@ -39,6 +92,12 @@ public open class CfnAccountAlias internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.supportapp.CfnAccountAlias.Builder =
         software.amazon.awscdk.services.supportapp.CfnAccountAlias.Builder.create(scope, id)
 
+    /**
+     * An alias or short name for an AWS account .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-supportapp-accountalias.html#cfn-supportapp-accountalias-accountalias)
+     * @param accountAlias An alias or short name for an AWS account . 
+     */
     override fun accountAlias(accountAlias: String) {
       cdkBuilder.accountAlias(accountAlias)
     }

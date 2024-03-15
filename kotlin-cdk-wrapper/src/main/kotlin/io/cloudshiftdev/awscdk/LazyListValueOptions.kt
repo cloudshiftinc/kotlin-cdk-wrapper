@@ -8,15 +8,49 @@ import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Options for creating a lazy list token.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * LazyListValueOptions lazyListValueOptions = LazyListValueOptions.builder()
+ * .displayHint("displayHint")
+ * .omitEmpty(false)
+ * .build();
+ * ```
+ */
 public interface LazyListValueOptions {
+  /**
+   * Use the given name as a display hint.
+   *
+   * Default: - No hint
+   */
   public fun displayHint(): String? = unwrap(this).getDisplayHint()
 
+  /**
+   * If the produced list is empty, return 'undefined' instead.
+   *
+   * Default: false
+   */
   public fun omitEmpty(): Boolean? = unwrap(this).getOmitEmpty()
 
+  /**
+   * A builder for [LazyListValueOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param displayHint Use the given name as a display hint.
+     */
     public fun displayHint(displayHint: String)
 
+    /**
+     * @param omitEmpty If the produced list is empty, return 'undefined' instead.
+     */
     public fun omitEmpty(omitEmpty: Boolean)
   }
 
@@ -24,10 +58,16 @@ public interface LazyListValueOptions {
     private val cdkBuilder: software.amazon.awscdk.LazyListValueOptions.Builder =
         software.amazon.awscdk.LazyListValueOptions.builder()
 
+    /**
+     * @param displayHint Use the given name as a display hint.
+     */
     override fun displayHint(displayHint: String) {
       cdkBuilder.displayHint(displayHint)
     }
 
+    /**
+     * @param omitEmpty If the produced list is empty, return 'undefined' instead.
+     */
     override fun omitEmpty(omitEmpty: Boolean) {
       cdkBuilder.omitEmpty(omitEmpty)
     }
@@ -38,8 +78,18 @@ public interface LazyListValueOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.LazyListValueOptions,
   ) : CdkObject(cdkObject), LazyListValueOptions {
+    /**
+     * Use the given name as a display hint.
+     *
+     * Default: - No hint
+     */
     override fun displayHint(): String? = unwrap(this).getDisplayHint()
 
+    /**
+     * If the produced list is empty, return 'undefined' instead.
+     *
+     * Default: false
+     */
     override fun omitEmpty(): Boolean? = unwrap(this).getOmitEmpty()
   }
 

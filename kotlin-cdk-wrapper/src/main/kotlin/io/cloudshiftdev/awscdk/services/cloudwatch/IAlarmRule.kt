@@ -5,12 +5,22 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Interface for Alarm Rule.
+ */
 public interface IAlarmRule {
+  /**
+   * serialized representation of Alarm Rule to be used when building the Composite Alarm resource.
+   */
   public fun renderAlarmRule(): String
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.cloudwatch.IAlarmRule,
   ) : CdkObject(cdkObject), IAlarmRule {
+    /**
+     * serialized representation of Alarm Rule to be used when building the Composite Alarm
+     * resource.
+     */
     override fun renderAlarmRule(): String = unwrap(this).renderAlarmRule()
   }
 

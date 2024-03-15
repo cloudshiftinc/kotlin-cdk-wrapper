@@ -7,11 +7,36 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for defining a new Step Functions Activity.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.stepfunctions.*;
+ * ActivityProps activityProps = ActivityProps.builder()
+ * .activityName("activityName")
+ * .build();
+ * ```
+ */
 public interface ActivityProps {
+  /**
+   * The name for this activity.
+   *
+   * Default: - If not supplied, a name is generated
+   */
   public fun activityName(): String? = unwrap(this).getActivityName()
 
+  /**
+   * A builder for [ActivityProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param activityName The name for this activity.
+     */
     public fun activityName(activityName: String)
   }
 
@@ -19,6 +44,9 @@ public interface ActivityProps {
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.ActivityProps.Builder =
         software.amazon.awscdk.services.stepfunctions.ActivityProps.builder()
 
+    /**
+     * @param activityName The name for this activity.
+     */
     override fun activityName(activityName: String) {
       cdkBuilder.activityName(activityName)
     }
@@ -30,6 +58,11 @@ public interface ActivityProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.stepfunctions.ActivityProps,
   ) : CdkObject(cdkObject), ActivityProps {
+    /**
+     * The name for this activity.
+     *
+     * Default: - If not supplied, a name is generated
+     */
     override fun activityName(): String? = unwrap(this).getActivityName()
   }
 

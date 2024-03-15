@@ -11,12 +11,35 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * The destination type for the flow log.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * LogGroup logGroup = new LogGroup(this, "MyCustomLogGroup");
+ * Role role = Role.Builder.create(this, "MyCustomRole")
+ * .assumedBy(new ServicePrincipal("vpc-flow-logs.amazonaws.com"))
+ * .build();
+ * FlowLog.Builder.create(this, "FlowLog")
+ * .resourceType(FlowLogResourceType.fromVpc(vpc))
+ * .destination(FlowLogDestination.toCloudWatchLogs(logGroup, role))
+ * .build();
+ * ```
+ */
 public abstract class FlowLogDestination internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.FlowLogDestination,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct, arg1: FlowLog): FlowLogDestinationConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap),
-      arg1.let(FlowLog::unwrap)).let(FlowLogDestinationConfig::wrap)
+  /**
+   * Generates a flow log destination configuration.
+   *
+   * @param scope 
+   * @param flowLog 
+   */
+  public open fun bind(scope: Construct, flowLog: FlowLog): FlowLogDestinationConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap),
+      flowLog.let(FlowLog::unwrap)).let(FlowLogDestinationConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ec2.FlowLogDestination,

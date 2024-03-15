@@ -7,12 +7,36 @@ import kotlin.Number
 import kotlin.String
 import kotlin.collections.List
 
+/**
+ * Contains logic which chooses a set of subnets from a larger list, in conjunction with
+ * SubnetSelection, to determine where to place AWS resources such as VPC endpoints, EC2 instances,
+ * etc.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * SubnetFilter subnetFilter = SubnetFilter.availabilityZones(List.of("availabilityZones"));
+ * ```
+ */
 public abstract class SubnetFilter internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.SubnetFilter,
 ) : CdkObject(cdkObject) {
+  /**
+   * Executes the subnet filtering logic, returning a filtered set of subnets.
+   *
+   * @param _subnets 
+   */
   public open fun selectSubnets(_subnets: List<ISubnet>): List<ISubnet> =
       unwrap(this).selectSubnets(_subnets.map(ISubnet::unwrap)).map(ISubnet::wrap)
 
+  /**
+   * Executes the subnet filtering logic, returning a filtered set of subnets.
+   *
+   * @param _subnets 
+   */
   public open fun selectSubnets(vararg _subnets: ISubnet): List<ISubnet> =
       selectSubnets(_subnets.toList())
 

@@ -5,14 +5,28 @@ package io.cloudshiftdev.awscdk
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Any
 
+/**
+ * Interface to apply operation to tokens in a string.
+ *
+ * Interface so it can be exported via jsii.
+ */
 public interface ITokenMapper {
-  public fun mapToken(arg0: IResolvable): Any
+  /**
+   * Replace a single token.
+   *
+   * @param t 
+   */
+  public fun mapToken(t: IResolvable): Any
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.ITokenMapper,
   ) : CdkObject(cdkObject), ITokenMapper {
-    override fun mapToken(arg0: IResolvable): Any =
-        unwrap(this).mapToken(arg0.let(IResolvable::unwrap))
+    /**
+     * Replace a single token.
+     *
+     * @param t 
+     */
+    override fun mapToken(t: IResolvable): Any = unwrap(this).mapToken(t.let(IResolvable::unwrap))
   }
 
   public companion object {

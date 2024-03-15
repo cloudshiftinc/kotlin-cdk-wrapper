@@ -5,9 +5,34 @@ package io.cloudshiftdev.awscdk.services.config
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Resources types that are supported by AWS Config.
+ *
+ * Example:
+ *
+ * ```
+ * // Lambda function containing logic that evaluates compliance with the rule.
+ * Function evalComplianceFn = Function.Builder.create(this, "CustomFunction")
+ * .code(AssetCode.fromInline("exports.handler = (event) =&gt; console.log(event);"))
+ * .handler("index.handler")
+ * .runtime(Runtime.NODEJS_18_X)
+ * .build();
+ * // A custom rule that runs on configuration changes of EC2 instances
+ * CustomRule customRule = CustomRule.Builder.create(this, "Custom")
+ * .configurationChanges(true)
+ * .lambdaFunction(evalComplianceFn)
+ * .ruleScope(RuleScope.fromResource(ResourceType.EC2_INSTANCE))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html)
+ */
 public open class ResourceType internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.config.ResourceType,
 ) : CdkObject(cdkObject) {
+  /**
+   * Valid value of resource type.
+   */
   public open fun complianceResourceType(): String = unwrap(this).getComplianceResourceType()
 
   public companion object {

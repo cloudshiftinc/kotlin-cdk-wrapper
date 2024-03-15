@@ -9,28 +9,107 @@ import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * A Construct that contains a Service Catalog product stack with its previous deployments
+ * maintained.
+ *
+ * Example:
+ *
+ * ```
+ * public class S3BucketProduct extends ProductStack {
+ * public S3BucketProduct(Construct scope, String id) {
+ * super(scope, id);
+ * new Bucket(this, "BucketProductV2");
+ * }
+ * }
+ * ProductStackHistory productStackHistory = ProductStackHistory.Builder.create(this,
+ * "ProductStackHistory")
+ * .productStack(new S3BucketProduct(this, "S3BucketProduct"))
+ * .currentVersionName("v2")
+ * .currentVersionLocked(true)
+ * .build();
+ * CloudFormationProduct product = CloudFormationProduct.Builder.create(this, "MyFirstProduct")
+ * .productName("My Product")
+ * .owner("Product Owner")
+ * .productVersions(List.of(productStackHistory.currentVersion()))
+ * .build();
+ * ```
+ */
 public open class ProductStackHistory internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.servicecatalog.ProductStackHistory,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
+  /**
+   * Retains product stack template as a snapshot when deployed and retrieves a
+   * CloudFormationProductVersion for the current product version.
+   */
   public open fun currentVersion(): CloudFormationProductVersion =
       unwrap(this).currentVersion().let(CloudFormationProductVersion::wrap)
 
+  /**
+   * Retrieves a CloudFormationProductVersion from a previously deployed productVersionName.
+   *
+   * @param productVersionName 
+   */
   public open fun versionFromSnapshot(productVersionName: String): CloudFormationProductVersion =
       unwrap(this).versionFromSnapshot(productVersionName).let(CloudFormationProductVersion::wrap)
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.servicecatalog.ProductStackHistory].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * If this is set to true, the ProductStack will not be overwritten if a snapshot is found for
+     * the currentVersionName.
+     *
+     * @param currentVersionLocked If this is set to true, the ProductStack will not be overwritten
+     * if a snapshot is found for the currentVersionName. 
+     */
     public fun currentVersionLocked(currentVersionLocked: Boolean)
 
+    /**
+     * The current version name of the ProductStack.
+     *
+     * @param currentVersionName The current version name of the ProductStack. 
+     */
     public fun currentVersionName(currentVersionName: String)
 
+    /**
+     * The description of the product version.
+     *
+     * Default: - No description provided
+     *
+     * @param description The description of the product version. 
+     */
     public fun description(description: String)
 
+    /**
+     * The directory where template snapshots will be stored.
+     *
+     * Default: 'product-stack-snapshots'
+     *
+     * @param directory The directory where template snapshots will be stored. 
+     */
     public fun directory(directory: String)
 
+    /**
+     * The ProductStack whose history will be retained as a snapshot.
+     *
+     * @param productStack The ProductStack whose history will be retained as a snapshot. 
+     */
     public fun productStack(productStack: ProductStack)
 
+    /**
+     * Whether the specified product template will be validated by CloudFormation.
+     *
+     * If turned off, an invalid template configuration can be stored.
+     *
+     * Default: true
+     *
+     * @param validateTemplate Whether the specified product template will be validated by
+     * CloudFormation. 
+     */
     public fun validateTemplate(validateTemplate: Boolean)
   }
 
@@ -42,26 +121,67 @@ public open class ProductStackHistory internal constructor(
         software.amazon.awscdk.services.servicecatalog.ProductStackHistory.Builder =
         software.amazon.awscdk.services.servicecatalog.ProductStackHistory.Builder.create(scope, id)
 
+    /**
+     * If this is set to true, the ProductStack will not be overwritten if a snapshot is found for
+     * the currentVersionName.
+     *
+     * @param currentVersionLocked If this is set to true, the ProductStack will not be overwritten
+     * if a snapshot is found for the currentVersionName. 
+     */
     override fun currentVersionLocked(currentVersionLocked: Boolean) {
       cdkBuilder.currentVersionLocked(currentVersionLocked)
     }
 
+    /**
+     * The current version name of the ProductStack.
+     *
+     * @param currentVersionName The current version name of the ProductStack. 
+     */
     override fun currentVersionName(currentVersionName: String) {
       cdkBuilder.currentVersionName(currentVersionName)
     }
 
+    /**
+     * The description of the product version.
+     *
+     * Default: - No description provided
+     *
+     * @param description The description of the product version. 
+     */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
+    /**
+     * The directory where template snapshots will be stored.
+     *
+     * Default: 'product-stack-snapshots'
+     *
+     * @param directory The directory where template snapshots will be stored. 
+     */
     override fun directory(directory: String) {
       cdkBuilder.directory(directory)
     }
 
+    /**
+     * The ProductStack whose history will be retained as a snapshot.
+     *
+     * @param productStack The ProductStack whose history will be retained as a snapshot. 
+     */
     override fun productStack(productStack: ProductStack) {
       cdkBuilder.productStack(productStack.let(ProductStack::unwrap))
     }
 
+    /**
+     * Whether the specified product template will be validated by CloudFormation.
+     *
+     * If turned off, an invalid template configuration can be stored.
+     *
+     * Default: true
+     *
+     * @param validateTemplate Whether the specified product template will be validated by
+     * CloudFormation. 
+     */
     override fun validateTemplate(validateTemplate: Boolean) {
       cdkBuilder.validateTemplate(validateTemplate)
     }

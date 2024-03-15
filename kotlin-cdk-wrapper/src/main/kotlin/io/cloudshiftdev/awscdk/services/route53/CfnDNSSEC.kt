@@ -11,21 +11,59 @@ import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * The `AWS::Route53::DNSSEC` resource is used to enable DNSSEC signing in a hosted zone.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.route53.*;
+ * CfnDNSSEC cfnDNSSEC = CfnDNSSEC.Builder.create(this, "MyCfnDNSSEC")
+ * .hostedZoneId("hostedZoneId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-dnssec.html)
+ */
 public open class CfnDNSSEC internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.route53.CfnDNSSEC,
 ) : CfnResource(cdkObject), IInspectable {
+  /**
+   * A unique string (ID) that is used to identify a hosted zone.
+   */
   public open fun hostedZoneId(): String = unwrap(this).getHostedZoneId()
 
+  /**
+   * A unique string (ID) that is used to identify a hosted zone.
+   */
   public open fun hostedZoneId(`value`: String) {
     unwrap(this).setHostedZoneId(`value`)
   }
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.route53.CfnDNSSEC].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * A unique string (ID) that is used to identify a hosted zone.
+     *
+     * For example: `Z00001111A1ABCaaABC11` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-dnssec.html#cfn-route53-dnssec-hostedzoneid)
+     * @param hostedZoneId A unique string (ID) that is used to identify a hosted zone. 
+     */
     public fun hostedZoneId(hostedZoneId: String)
   }
 
@@ -36,6 +74,14 @@ public open class CfnDNSSEC internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.route53.CfnDNSSEC.Builder =
         software.amazon.awscdk.services.route53.CfnDNSSEC.Builder.create(scope, id)
 
+    /**
+     * A unique string (ID) that is used to identify a hosted zone.
+     *
+     * For example: `Z00001111A1ABCaaABC11` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-dnssec.html#cfn-route53-dnssec-hostedzoneid)
+     * @param hostedZoneId A unique string (ID) that is used to identify a hosted zone. 
+     */
     override fun hostedZoneId(hostedZoneId: String) {
       cdkBuilder.hostedZoneId(hostedZoneId)
     }

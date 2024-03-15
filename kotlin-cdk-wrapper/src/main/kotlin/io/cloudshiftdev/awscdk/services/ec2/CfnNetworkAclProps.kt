@@ -9,17 +9,60 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 
+/**
+ * Properties for defining a `CfnNetworkAcl`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * CfnNetworkAclProps cfnNetworkAclProps = CfnNetworkAclProps.builder()
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkacl.html)
+ */
 public interface CfnNetworkAclProps {
+  /**
+   * The tags for the network ACL.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkacl.html#cfn-ec2-networkacl-tags)
+   */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
+  /**
+   * The ID of the VPC for the network ACL.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkacl.html#cfn-ec2-networkacl-vpcid)
+   */
   public fun vpcId(): String
 
+  /**
+   * A builder for [CfnNetworkAclProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param tags The tags for the network ACL.
+     */
     public fun tags(tags: List<CfnTag>)
 
+    /**
+     * @param tags The tags for the network ACL.
+     */
     public fun tags(vararg tags: CfnTag)
 
+    /**
+     * @param vpcId The ID of the VPC for the network ACL. 
+     */
     public fun vpcId(vpcId: String)
   }
 
@@ -27,12 +70,21 @@ public interface CfnNetworkAclProps {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnNetworkAclProps.Builder =
         software.amazon.awscdk.services.ec2.CfnNetworkAclProps.builder()
 
+    /**
+     * @param tags The tags for the network ACL.
+     */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    /**
+     * @param tags The tags for the network ACL.
+     */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
+    /**
+     * @param vpcId The ID of the VPC for the network ACL. 
+     */
     override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
@@ -43,8 +95,18 @@ public interface CfnNetworkAclProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkAclProps,
   ) : CdkObject(cdkObject), CfnNetworkAclProps {
+    /**
+     * The tags for the network ACL.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkacl.html#cfn-ec2-networkacl-tags)
+     */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
+    /**
+     * The ID of the VPC for the network ACL.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkacl.html#cfn-ec2-networkacl-vpcid)
+     */
     override fun vpcId(): String = unwrap(this).getVpcId()
   }
 

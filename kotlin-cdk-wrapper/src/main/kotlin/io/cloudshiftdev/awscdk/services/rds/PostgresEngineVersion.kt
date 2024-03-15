@@ -7,11 +7,41 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * The versions for the PostgreSQL instance engines (those returned by
+ * `DatabaseInstanceEngine.postgres`).
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * IInstanceEngine engine =
+ * DatabaseInstanceEngine.postgres(PostgresInstanceEngineProps.builder().version(PostgresEngineVersion.VER_15_2).build());
+ * Key myKey = new Key(this, "MyKey");
+ * DatabaseInstance.Builder.create(this, "InstanceWithCustomizedSecret")
+ * .engine(engine)
+ * .vpc(vpc)
+ * .credentials(Credentials.fromGeneratedSecret("postgres", CredentialsBaseOptions.builder()
+ * .secretName("my-cool-name")
+ * .encryptionKey(myKey)
+ * .excludeCharacters("!&amp;*^#&#64;()")
+ * .replicaRegions(List.of(ReplicaRegion.builder().region("eu-west-1").build(),
+ * ReplicaRegion.builder().region("eu-west-2").build()))
+ * .build()))
+ * .build();
+ * ```
+ */
 public open class PostgresEngineVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.PostgresEngineVersion,
 ) : CdkObject(cdkObject) {
+  /**
+   * The full version string, for example, "13.11".
+   */
   public open fun postgresFullVersion(): String = unwrap(this).getPostgresFullVersion()
 
+  /**
+   * The major version of the engine, for example, "13".
+   */
   public open fun postgresMajorVersion(): String = unwrap(this).getPostgresMajorVersion()
 
   public companion object {

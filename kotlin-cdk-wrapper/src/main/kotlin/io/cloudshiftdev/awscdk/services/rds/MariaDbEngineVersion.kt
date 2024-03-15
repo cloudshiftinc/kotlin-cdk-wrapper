@@ -5,11 +5,30 @@ package io.cloudshiftdev.awscdk.services.rds
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * The versions for the MariaDB instance engines (those returned by
+ * `DatabaseInstanceEngine.mariaDb`).
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.rds.*;
+ * MariaDbEngineVersion mariaDbEngineVersion = MariaDbEngineVersion.VER_10_11;
+ * ```
+ */
 public open class MariaDbEngineVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.MariaDbEngineVersion,
 ) : CdkObject(cdkObject) {
+  /**
+   * The full version string, for example, "10.5.28".
+   */
   public open fun mariaDbFullVersion(): String = unwrap(this).getMariaDbFullVersion()
 
+  /**
+   * The major version of the engine, for example, "10.5".
+   */
   public open fun mariaDbMajorVersion(): String = unwrap(this).getMariaDbMajorVersion()
 
   public companion object {

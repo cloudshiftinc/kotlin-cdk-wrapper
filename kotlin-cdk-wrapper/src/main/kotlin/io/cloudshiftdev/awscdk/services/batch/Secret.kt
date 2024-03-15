@@ -12,14 +12,43 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * A secret environment variable.
+ *
+ * Example:
+ *
+ * ```
+ * ISecret mySecret;
+ * EcsJobDefinition jobDefn = EcsJobDefinition.Builder.create(this, "JobDefn")
+ * .container(EcsEc2ContainerDefinition.Builder.create(this, "containerDefn")
+ * .image(ContainerImage.fromRegistry("public.ecr.aws/amazonlinux/amazonlinux:latest"))
+ * .memory(Size.mebibytes(2048))
+ * .cpu(256)
+ * .secrets(Map.of(
+ * "MY_SECRET_ENV_VAR", Secret.fromSecretsManager(mySecret)))
+ * .build())
+ * .build();
+ * ```
+ */
 public abstract class Secret internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.Secret,
 ) : CdkObject(cdkObject) {
+  /**
+   * The ARN of the secret.
+   */
   public open fun arn(): String = unwrap(this).getArn()
 
-  public open fun grantRead(arg0: IGrantable): Grant =
-      unwrap(this).grantRead(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
+  /**
+   * Grants reading the secret to a principal.
+   *
+   * @param grantee 
+   */
+  public open fun grantRead(grantee: IGrantable): Grant =
+      unwrap(this).grantRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
 
+  /**
+   * Whether this secret uses a specific JSON field.
+   */
   public open fun hasField(): Boolean? = unwrap(this).getHasField()
 
   private class Wrapper(

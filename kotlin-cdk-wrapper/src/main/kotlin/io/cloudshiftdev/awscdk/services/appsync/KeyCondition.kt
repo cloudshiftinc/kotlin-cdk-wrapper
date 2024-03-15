@@ -5,12 +5,32 @@ package io.cloudshiftdev.awscdk.services.appsync
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Factory class for DynamoDB key conditions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.appsync.*;
+ * KeyCondition keyCondition = KeyCondition.beginsWith("keyName", "arg");
+ * ```
+ */
 public open class KeyCondition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.KeyCondition,
 ) : CdkObject(cdkObject) {
+  /**
+   * Conjunction between two conditions.
+   *
+   * @param keyCond 
+   */
   public open fun and(keyCond: KeyCondition): KeyCondition =
       unwrap(this).and(keyCond.let(KeyCondition::unwrap)).let(KeyCondition::wrap)
 
+  /**
+   * Renders the key condition to a VTL string.
+   */
   public open fun renderTemplate(): String = unwrap(this).renderTemplate()
 
   public companion object {

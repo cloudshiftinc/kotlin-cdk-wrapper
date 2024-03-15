@@ -6,12 +6,37 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Example:
+ *
+ * ```
+ * CfnBucket rawBucket = CfnBucket.Builder.create(this, "Bucket").build();
+ * // -or-
+ * CfnBucket rawBucketAlt = (CfnBucket)myBucket.getNode().getDefaultChild();
+ * // then
+ * rawBucket.getCfnOptions().getCondition() = CfnCondition.Builder.create(this,
+ * "EnableBucket").build();
+ * rawBucket.getCfnOptions().getMetadata() = Map.of(
+ * "metadataKey", "MetadataValue");
+ * ```
+ */
 public interface CfnConditionProps {
+  /**
+   * The expression that the condition will evaluate.
+   *
+   * Default: - None.
+   */
   public fun expression(): ICfnConditionExpression? =
       unwrap(this).getExpression()?.let(ICfnConditionExpression::wrap)
 
+  /**
+   * A builder for [CfnConditionProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param expression The expression that the condition will evaluate.
+     */
     public fun expression(expression: ICfnConditionExpression)
   }
 
@@ -19,6 +44,9 @@ public interface CfnConditionProps {
     private val cdkBuilder: software.amazon.awscdk.CfnConditionProps.Builder =
         software.amazon.awscdk.CfnConditionProps.builder()
 
+    /**
+     * @param expression The expression that the condition will evaluate.
+     */
     override fun expression(expression: ICfnConditionExpression) {
       cdkBuilder.expression(expression.let(ICfnConditionExpression::unwrap))
     }
@@ -29,6 +57,11 @@ public interface CfnConditionProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.CfnConditionProps,
   ) : CdkObject(cdkObject), CfnConditionProps {
+    /**
+     * The expression that the condition will evaluate.
+     *
+     * Default: - None.
+     */
     override fun expression(): ICfnConditionExpression? =
         unwrap(this).getExpression()?.let(ICfnConditionExpression::wrap)
   }

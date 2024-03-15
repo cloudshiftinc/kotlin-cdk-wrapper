@@ -10,9 +10,34 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
+/**
+ * A CodeBuild GPU image running Linux.
+ *
+ * This class has public constants that represent the most popular GPU images from AWS Deep Learning
+ * Containers.
+ *
+ * Example:
+ *
+ * ```
+ * Project.Builder.create(this, "Project")
+ * .environment(BuildEnvironment.builder()
+ * .buildImage(LinuxGpuBuildImage.DLC_TENSORFLOW_2_1_0_INFERENCE)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](https://aws.amazon.com/releasenotes/available-deep-learning-containers-images)
+ */
 public open class LinuxGpuBuildImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codebuild.LinuxGpuBuildImage,
 ) : CdkObject(cdkObject), IBindableBuildImage {
+  /**
+   * Function that allows the build image access to the construct tree.
+   *
+   * @param scope 
+   * @param project 
+   * @param _options 
+   */
   public override fun bind(
     scope: Construct,
     project: IProject,
@@ -21,6 +46,13 @@ public open class LinuxGpuBuildImage internal constructor(
       project.let(IProject::unwrap),
       _options.let(BuildImageBindOptions::unwrap)).let(BuildImageConfig::wrap)
 
+  /**
+   * Function that allows the build image access to the construct tree.
+   *
+   * @param scope 
+   * @param project 
+   * @param _options 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("2217a711d386432885489a755d119db8cc713f4afd5a62af3c63f8f8f7197cd5")
   public override fun bind(
@@ -29,22 +61,50 @@ public open class LinuxGpuBuildImage internal constructor(
     _options: BuildImageBindOptions.Builder.() -> Unit,
   ): BuildImageConfig = bind(scope, project, BuildImageBindOptions(_options))
 
+  /**
+   * The default `ComputeType` to use with this image, if one was not specified in
+   * `BuildEnvironment#computeType` explicitly.
+   */
   public override fun defaultComputeType(): ComputeType =
       unwrap(this).getDefaultComputeType().let(ComputeType::wrap)
 
+  /**
+   * The Docker image identifier that the build environment uses.
+   */
   public override fun imageId(): String = unwrap(this).getImageId()
 
+  /**
+   * The type of principal that CodeBuild will use to pull this build Docker image.
+   */
   public override fun imagePullPrincipalType(): ImagePullPrincipalType? =
       unwrap(this).getImagePullPrincipalType()?.let(ImagePullPrincipalType::wrap)
 
+  /**
+   * Make a buildspec to run the indicated script.
+   *
+   * @param entrypoint 
+   */
   public override fun runScriptBuildspec(entrypoint: String): BuildSpec =
       unwrap(this).runScriptBuildspec(entrypoint).let(BuildSpec::wrap)
 
+  /**
+   * The type of build environment.
+   */
   public override fun type(): String = unwrap(this).getType()
 
+  /**
+   * Allows the image a chance to validate whether the passed configuration is correct.
+   *
+   * @param buildEnvironment 
+   */
   public override fun validate(buildEnvironment: BuildEnvironment): List<String> =
       unwrap(this).validate(buildEnvironment.let(BuildEnvironment::unwrap))
 
+  /**
+   * Allows the image a chance to validate whether the passed configuration is correct.
+   *
+   * @param buildEnvironment 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("ff36d333164150adb92277700abb7153d45f26e16fa225966e7bf6fc0bedfcee")
   public override fun validate(buildEnvironment: BuildEnvironment.Builder.() -> Unit): List<String>

@@ -8,13 +8,49 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Represents a Volume that can be mounted to a container that uses ECS.
+ *
+ * Example:
+ *
+ * ```
+ * IFileSystem myFileSystem;
+ * Role myJobRole;
+ * myFileSystem.grantRead(myJobRole);
+ * EcsJobDefinition jobDefn = EcsJobDefinition.Builder.create(this, "JobDefn")
+ * .container(EcsEc2ContainerDefinition.Builder.create(this, "containerDefn")
+ * .image(ContainerImage.fromRegistry("public.ecr.aws/amazonlinux/amazonlinux:latest"))
+ * .memory(Size.mebibytes(2048))
+ * .cpu(256)
+ * .volumes(List.of(EcsVolume.efs(EfsVolumeOptions.builder()
+ * .name("myVolume")
+ * .fileSystem(myFileSystem)
+ * .containerPath("/Volumes/myVolume")
+ * .useJobRole(true)
+ * .build())))
+ * .jobRole(myJobRole)
+ * .build())
+ * .build();
+ * ```
+ */
 public abstract class EcsVolume internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.EcsVolume,
 ) : CdkObject(cdkObject) {
+  /**
+   * The path on the container that this volume will be mounted to.
+   */
   public open fun containerPath(): String = unwrap(this).getContainerPath()
 
+  /**
+   * The name of this volume.
+   */
   public open fun name(): String = unwrap(this).getName()
 
+  /**
+   * Whether or not the container has readonly access to this volume.
+   *
+   * Default: false
+   */
   public open fun readonly(): Boolean? = unwrap(this).getReadonly()
 
   private class Wrapper(

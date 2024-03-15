@@ -5,6 +5,33 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Peer object factories (to be used in Security Group management).
+ *
+ * The static methods on this object can be used to create peer objects
+ * which represent a connection partner in Security Group rules.
+ *
+ * Use this object if you need to represent connection partners using plain IP
+ * addresses, or a prefix list ID.
+ *
+ * If you want to address a connection partner by Security Group, you can just
+ * use the Security Group (or the construct that contains a Security Group)
+ * directly, as it already implements `IPeer`.
+ *
+ * Example:
+ *
+ * ```
+ * InstanceType instanceType;
+ * NatInstanceProviderV2 provider = NatProvider.instanceV2(NatInstanceProps.builder()
+ * .instanceType(instanceType)
+ * .defaultAllowedTraffic(NatTrafficDirection.OUTBOUND_ONLY)
+ * .build());
+ * Vpc.Builder.create(this, "TheVPC")
+ * .natGatewayProvider(provider)
+ * .build();
+ * provider.connections.allowFrom(Peer.ipv4("1.2.3.4/8"), Port.tcp(80));
+ * ```
+ */
 public open class Peer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.Peer,
 ) : CdkObject(cdkObject) {

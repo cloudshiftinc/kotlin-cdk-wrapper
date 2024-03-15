@@ -5,12 +5,21 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Represents a Cache Policy.
+ */
 public interface ICachePolicy {
+  /**
+   * The ID of the cache policy.
+   */
   public fun cachePolicyId(): String
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.cloudfront.ICachePolicy,
   ) : CdkObject(cdkObject), ICachePolicy {
+    /**
+     * The ID of the cache policy.
+     */
     override fun cachePolicyId(): String = unwrap(this).getCachePolicyId()
   }
 

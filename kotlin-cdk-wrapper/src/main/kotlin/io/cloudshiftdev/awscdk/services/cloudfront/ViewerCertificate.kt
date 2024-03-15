@@ -9,11 +9,39 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
+/**
+ * Viewer certificate configuration class.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket s3BucketSource = new Bucket(this, "Bucket");
+ * CloudFrontWebDistribution distribution = CloudFrontWebDistribution.Builder.create(this,
+ * "AnAmazingWebsiteProbably")
+ * .originConfigs(List.of(SourceConfiguration.builder()
+ * .s3OriginSource(S3OriginConfig.builder().s3BucketSource(s3BucketSource).build())
+ * .behaviors(List.of(Behavior.builder().isDefaultBehavior(true).build()))
+ * .build()))
+ * .viewerCertificate(ViewerCertificate.fromIamCertificate("certificateId",
+ * ViewerCertificateOptions.builder()
+ * .aliases(List.of("example.com"))
+ * .securityPolicy(SecurityPolicyProtocol.SSL_V3) // default
+ * .sslMethod(SSLMethod.SNI)
+ * .build()))
+ * .build();
+ * ```
+ */
 public open class ViewerCertificate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.ViewerCertificate,
 ) : CdkObject(cdkObject) {
+  /**
+   *
+   */
   public open fun aliases(): List<String> = unwrap(this).getAliases()
 
+  /**
+   *
+   */
   public open fun props(): CfnDistribution.ViewerCertificateProperty =
       unwrap(this).getProps().let(CfnDistribution.ViewerCertificateProperty::wrap)
 

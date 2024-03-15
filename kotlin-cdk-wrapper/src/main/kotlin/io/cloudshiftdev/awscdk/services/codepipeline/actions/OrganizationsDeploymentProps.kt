@@ -6,12 +6,45 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Properties for configuring service-managed (Organizations) permissions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.codepipeline.actions.*;
+ * OrganizationsDeploymentProps organizationsDeploymentProps =
+ * OrganizationsDeploymentProps.builder()
+ * .autoDeployment(StackSetOrganizationsAutoDeployment.ENABLED)
+ * .build();
+ * ```
+ */
 public interface OrganizationsDeploymentProps {
+  /**
+   * Automatically deploy to new accounts added to Organizational Units.
+   *
+   * Whether AWS CloudFormation StackSets automatically deploys to AWS
+   * Organizations accounts that are added to a target organization or
+   * organizational unit (OU).
+   *
+   * Default: Disabled
+   */
   public fun autoDeployment(): StackSetOrganizationsAutoDeployment? =
       unwrap(this).getAutoDeployment()?.let(StackSetOrganizationsAutoDeployment::wrap)
 
+  /**
+   * A builder for [OrganizationsDeploymentProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param autoDeployment Automatically deploy to new accounts added to Organizational Units.
+     * Whether AWS CloudFormation StackSets automatically deploys to AWS
+     * Organizations accounts that are added to a target organization or
+     * organizational unit (OU).
+     */
     public fun autoDeployment(autoDeployment: StackSetOrganizationsAutoDeployment)
   }
 
@@ -20,6 +53,12 @@ public interface OrganizationsDeploymentProps {
         software.amazon.awscdk.services.codepipeline.actions.OrganizationsDeploymentProps.Builder =
         software.amazon.awscdk.services.codepipeline.actions.OrganizationsDeploymentProps.builder()
 
+    /**
+     * @param autoDeployment Automatically deploy to new accounts added to Organizational Units.
+     * Whether AWS CloudFormation StackSets automatically deploys to AWS
+     * Organizations accounts that are added to a target organization or
+     * organizational unit (OU).
+     */
     override fun autoDeployment(autoDeployment: StackSetOrganizationsAutoDeployment) {
       cdkBuilder.autoDeployment(autoDeployment.let(StackSetOrganizationsAutoDeployment::unwrap))
     }
@@ -33,6 +72,15 @@ public interface OrganizationsDeploymentProps {
     override val cdkObject:
         software.amazon.awscdk.services.codepipeline.actions.OrganizationsDeploymentProps,
   ) : CdkObject(cdkObject), OrganizationsDeploymentProps {
+    /**
+     * Automatically deploy to new accounts added to Organizational Units.
+     *
+     * Whether AWS CloudFormation StackSets automatically deploys to AWS
+     * Organizations accounts that are added to a target organization or
+     * organizational unit (OU).
+     *
+     * Default: Disabled
+     */
     override fun autoDeployment(): StackSetOrganizationsAutoDeployment? =
         unwrap(this).getAutoDeployment()?.let(StackSetOrganizationsAutoDeployment::wrap)
   }

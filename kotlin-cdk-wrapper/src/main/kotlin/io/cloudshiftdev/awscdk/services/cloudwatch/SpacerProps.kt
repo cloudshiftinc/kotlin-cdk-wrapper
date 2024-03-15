@@ -7,15 +7,49 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Number
 import kotlin.Unit
 
+/**
+ * Props of the spacer.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
+ * SpacerProps spacerProps = SpacerProps.builder()
+ * .height(123)
+ * .width(123)
+ * .build();
+ * ```
+ */
 public interface SpacerProps {
+  /**
+   * Height of the spacer.
+   *
+   * Default: : 1
+   */
   public fun height(): Number? = unwrap(this).getHeight()
 
+  /**
+   * Width of the spacer.
+   *
+   * Default: 1
+   */
   public fun width(): Number? = unwrap(this).getWidth()
 
+  /**
+   * A builder for [SpacerProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param height Height of the spacer.
+     */
     public fun height(height: Number)
 
+    /**
+     * @param width Width of the spacer.
+     */
     public fun width(width: Number)
   }
 
@@ -23,10 +57,16 @@ public interface SpacerProps {
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.SpacerProps.Builder =
         software.amazon.awscdk.services.cloudwatch.SpacerProps.builder()
 
+    /**
+     * @param height Height of the spacer.
+     */
     override fun height(height: Number) {
       cdkBuilder.height(height)
     }
 
+    /**
+     * @param width Width of the spacer.
+     */
     override fun width(width: Number) {
       cdkBuilder.width(width)
     }
@@ -37,8 +77,18 @@ public interface SpacerProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.cloudwatch.SpacerProps,
   ) : CdkObject(cdkObject), SpacerProps {
+    /**
+     * Height of the spacer.
+     *
+     * Default: : 1
+     */
     override fun height(): Number? = unwrap(this).getHeight()
 
+    /**
+     * Width of the spacer.
+     *
+     * Default: 1
+     */
     override fun width(): Number? = unwrap(this).getWidth()
   }
 

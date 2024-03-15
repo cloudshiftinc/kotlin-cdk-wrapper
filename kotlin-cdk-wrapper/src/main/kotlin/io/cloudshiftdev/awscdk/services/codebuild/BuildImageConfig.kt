@@ -6,7 +6,22 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * The return type from `IBuildImage.binder` - currently empty.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.codebuild.*;
+ * BuildImageConfig buildImageConfig = BuildImageConfig.builder().build();
+ * ```
+ */
 public interface BuildImageConfig {
+  /**
+   * A builder for [BuildImageConfig]
+   */
   @CdkDslMarker
   public interface Builder
 

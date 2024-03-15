@@ -7,15 +7,45 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * AddHeaderAction configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ses.*;
+ * AddHeaderActionConfig addHeaderActionConfig = AddHeaderActionConfig.builder()
+ * .headerName("headerName")
+ * .headerValue("headerValue")
+ * .build();
+ * ```
+ */
 public interface AddHeaderActionConfig {
+  /**
+   * The name of the header that you want to add to the incoming message.
+   */
   public fun headerName(): String
 
+  /**
+   * The content that you want to include in the header.
+   */
   public fun headerValue(): String
 
+  /**
+   * A builder for [AddHeaderActionConfig]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param headerName The name of the header that you want to add to the incoming message. 
+     */
     public fun headerName(headerName: String)
 
+    /**
+     * @param headerValue The content that you want to include in the header. 
+     */
     public fun headerValue(headerValue: String)
   }
 
@@ -23,10 +53,16 @@ public interface AddHeaderActionConfig {
     private val cdkBuilder: software.amazon.awscdk.services.ses.AddHeaderActionConfig.Builder =
         software.amazon.awscdk.services.ses.AddHeaderActionConfig.builder()
 
+    /**
+     * @param headerName The name of the header that you want to add to the incoming message. 
+     */
     override fun headerName(headerName: String) {
       cdkBuilder.headerName(headerName)
     }
 
+    /**
+     * @param headerValue The content that you want to include in the header. 
+     */
     override fun headerValue(headerValue: String) {
       cdkBuilder.headerValue(headerValue)
     }
@@ -38,8 +74,14 @@ public interface AddHeaderActionConfig {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ses.AddHeaderActionConfig,
   ) : CdkObject(cdkObject), AddHeaderActionConfig {
+    /**
+     * The name of the header that you want to add to the incoming message.
+     */
     override fun headerName(): String = unwrap(this).getHeaderName()
 
+    /**
+     * The content that you want to include in the header.
+     */
     override fun headerValue(): String = unwrap(this).getHeaderValue()
   }
 

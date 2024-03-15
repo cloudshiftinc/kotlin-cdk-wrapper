@@ -5,11 +5,34 @@ package io.cloudshiftdev.awscdk.services.appmesh
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.constructs.Construct
 
+/**
+ * Represents the properties needed to define the provider for a VirtualService.
+ *
+ * Example:
+ *
+ * ```
+ * Mesh mesh;
+ * VirtualNode node = VirtualNode.Builder.create(this, "node")
+ * .mesh(mesh)
+ * .serviceDiscovery(ServiceDiscovery.dns("node"))
+ * .build();
+ * VirtualService virtualService = VirtualService.Builder.create(this, "service-1")
+ * .virtualServiceProvider(VirtualServiceProvider.virtualNode(node))
+ * .virtualServiceName("service1.domain.local")
+ * .build();
+ * node.addBackend(Backend.virtualService(virtualService));
+ * ```
+ */
 public abstract class VirtualServiceProvider internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceProvider,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct): VirtualServiceProviderConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(VirtualServiceProviderConfig::wrap)
+  /**
+   * Enforces mutual exclusivity for VirtualService provider types.
+   *
+   * @param _construct 
+   */
+  public open fun bind(_construct: Construct): VirtualServiceProviderConfig =
+      unwrap(this).bind(_construct.let(Construct::unwrap)).let(VirtualServiceProviderConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceProvider,

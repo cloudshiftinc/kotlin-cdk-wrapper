@@ -8,6 +8,9 @@ import kotlin.String
 import kotlin.collections.List
 import kotlin.collections.Map
 
+/**
+ * Partial and special matching during template assertions.
+ */
 public abstract class Match internal constructor(
   internal override val cdkObject: software.amazon.awscdk.assertions.Match,
 ) : CdkObject(cdkObject) {

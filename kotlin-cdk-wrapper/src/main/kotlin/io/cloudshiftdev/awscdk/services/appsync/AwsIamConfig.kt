@@ -7,15 +7,57 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * The authorization config in case the HTTP endpoint requires authorization.
+ *
+ * Example:
+ *
+ * ```
+ * GraphqlApi api = GraphqlApi.Builder.create(this, "api")
+ * .name("api")
+ * .definition(Definition.fromFile(join(__dirname, "schema.graphql")))
+ * .build();
+ * HttpDataSource httpDs = api.addHttpDataSource("ds", "https://states.amazonaws.com",
+ * HttpDataSourceOptions.builder()
+ * .name("httpDsWithStepF")
+ * .description("from appsync to StepFunctions Workflow")
+ * .authorizationConfig(AwsIamConfig.builder()
+ * .signingRegion("us-east-1")
+ * .signingServiceName("states")
+ * .build())
+ * .build());
+ * httpDs.createResolver("MutationCallStepFunctionResolver", BaseResolverProps.builder()
+ * .typeName("Mutation")
+ * .fieldName("callStepFunction")
+ * .requestMappingTemplate(MappingTemplate.fromFile("request.vtl"))
+ * .responseMappingTemplate(MappingTemplate.fromFile("response.vtl"))
+ * .build());
+ * ```
+ */
 public interface AwsIamConfig {
+  /**
+   * The signing region for AWS IAM authorization.
+   */
   public fun signingRegion(): String
 
+  /**
+   * The signing service name for AWS IAM authorization.
+   */
   public fun signingServiceName(): String
 
+  /**
+   * A builder for [AwsIamConfig]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param signingRegion The signing region for AWS IAM authorization. 
+     */
     public fun signingRegion(signingRegion: String)
 
+    /**
+     * @param signingServiceName The signing service name for AWS IAM authorization. 
+     */
     public fun signingServiceName(signingServiceName: String)
   }
 
@@ -23,10 +65,16 @@ public interface AwsIamConfig {
     private val cdkBuilder: software.amazon.awscdk.services.appsync.AwsIamConfig.Builder =
         software.amazon.awscdk.services.appsync.AwsIamConfig.builder()
 
+    /**
+     * @param signingRegion The signing region for AWS IAM authorization. 
+     */
     override fun signingRegion(signingRegion: String) {
       cdkBuilder.signingRegion(signingRegion)
     }
 
+    /**
+     * @param signingServiceName The signing service name for AWS IAM authorization. 
+     */
     override fun signingServiceName(signingServiceName: String) {
       cdkBuilder.signingServiceName(signingServiceName)
     }
@@ -37,8 +85,14 @@ public interface AwsIamConfig {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appsync.AwsIamConfig,
   ) : CdkObject(cdkObject), AwsIamConfig {
+    /**
+     * The signing region for AWS IAM authorization.
+     */
     override fun signingRegion(): String = unwrap(this).getSigningRegion()
 
+    /**
+     * The signing service name for AWS IAM authorization.
+     */
     override fun signingServiceName(): String = unwrap(this).getSigningServiceName()
   }
 

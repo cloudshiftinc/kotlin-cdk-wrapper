@@ -7,11 +7,33 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Construction properties for `LambdaApplication`.
+ *
+ * Example:
+ *
+ * ```
+ * LambdaApplication application = LambdaApplication.Builder.create(this, "CodeDeployApplication")
+ * .applicationName("MyApplication")
+ * .build();
+ * ```
+ */
 public interface LambdaApplicationProps {
+  /**
+   * The physical, human-readable name of the CodeDeploy Application.
+   *
+   * Default: an auto-generated name will be used
+   */
   public fun applicationName(): String? = unwrap(this).getApplicationName()
 
+  /**
+   * A builder for [LambdaApplicationProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param applicationName The physical, human-readable name of the CodeDeploy Application.
+     */
     public fun applicationName(applicationName: String)
   }
 
@@ -20,6 +42,9 @@ public interface LambdaApplicationProps {
         software.amazon.awscdk.services.codedeploy.LambdaApplicationProps.Builder =
         software.amazon.awscdk.services.codedeploy.LambdaApplicationProps.builder()
 
+    /**
+     * @param applicationName The physical, human-readable name of the CodeDeploy Application.
+     */
     override fun applicationName(applicationName: String) {
       cdkBuilder.applicationName(applicationName)
     }
@@ -31,6 +56,11 @@ public interface LambdaApplicationProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.codedeploy.LambdaApplicationProps,
   ) : CdkObject(cdkObject), LambdaApplicationProps {
+    /**
+     * The physical, human-readable name of the CodeDeploy Application.
+     *
+     * Default: an auto-generated name will be used
+     */
     override fun applicationName(): String? = unwrap(this).getApplicationName()
   }
 

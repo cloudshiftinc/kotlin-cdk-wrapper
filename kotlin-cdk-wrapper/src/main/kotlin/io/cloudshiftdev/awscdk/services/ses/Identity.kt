@@ -6,12 +6,34 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.route53.IPublicHostedZone
 import kotlin.String
 
+/**
+ * Identity.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.iam.*;
+ * User user;
+ * EmailIdentity identity = EmailIdentity.Builder.create(this, "Identity")
+ * .identity(Identity.domain("cdk.dev"))
+ * .build();
+ * identity.grantSendEmail(user);
+ * ```
+ */
 public abstract class Identity internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.Identity,
 ) : CdkObject(cdkObject) {
+  /**
+   * The hosted zone associated with this identity.
+   *
+   * Default: - no hosted zone is associated and no records are created
+   */
   public open fun hostedZone(): IPublicHostedZone? =
       unwrap(this).getHostedZone()?.let(IPublicHostedZone::wrap)
 
+  /**
+   * The value of the identity.
+   */
   public open fun `value`(): String = unwrap(this).getValue()
 
   private class Wrapper(

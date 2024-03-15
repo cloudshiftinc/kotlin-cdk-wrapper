@@ -5,10 +5,32 @@ package io.cloudshiftdev.awscdk.services.elasticsearch
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Elasticsearch version.
+ *
+ * Example:
+ *
+ * ```
+ * Domain domain = Domain.Builder.create(this, "Domain")
+ * .version(ElasticsearchVersion.V7_4)
+ * .ebs(EbsOptions.builder()
+ * .volumeSize(100)
+ * .volumeType(EbsDeviceVolumeType.GENERAL_PURPOSE_SSD)
+ * .build())
+ * .nodeToNodeEncryption(true)
+ * .encryptionAtRest(EncryptionAtRestOptions.builder()
+ * .enabled(true)
+ * .build())
+ * .build();
+ * ```
+ */
 public open class ElasticsearchVersion internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticsearch.ElasticsearchVersion,
 ) : CdkObject(cdkObject) {
+  /**
+   * Elasticsearch version number.
+   */
   public open fun version(): String = unwrap(this).getVersion()
 
   public companion object {

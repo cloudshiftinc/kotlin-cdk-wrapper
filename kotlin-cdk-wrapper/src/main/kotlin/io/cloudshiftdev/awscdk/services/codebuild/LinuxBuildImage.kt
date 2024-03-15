@@ -12,31 +12,106 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
+/**
+ * A CodeBuild image running x86-64 Linux.
+ *
+ * This class has a bunch of public constants that represent the most popular images.
+ *
+ * You can also specify a custom image using one of the static methods:
+ *
+ * * LinuxBuildImage.fromDockerRegistry(image[, { secretsManagerCredentials }])
+ * * LinuxBuildImage.fromEcrRepository(repo[, tag])
+ * * LinuxBuildImage.fromAsset(parent, id, props)
+ *
+ * Example:
+ *
+ * ```
+ * CodePipeline pipeline = CodePipeline.Builder.create(this, "Pipeline")
+ * .synth(ShellStep.Builder.create("Synth")
+ * .input(CodePipelineSource.connection("my-org/my-app", "main", ConnectionSourceOptions.builder()
+ * .connectionArn("arn:aws:codestar-connections:us-east-1:222222222222:connection/7d2469ff-514a-4e4f-9003-5ca4a43cdc41")
+ * .build()))
+ * .commands(List.of("npm ci", "npm run build", "npx cdk synth"))
+ * .build())
+ * // Turn this on because the pipeline uses Docker image assets
+ * .dockerEnabledForSelfMutation(true)
+ * .build();
+ * pipeline.addWave("MyWave", WaveOptions.builder()
+ * .post(List.of(
+ * CodeBuildStep.Builder.create("RunApproval")
+ * .commands(List.of("command-from-image"))
+ * .buildEnvironment(BuildEnvironment.builder()
+ * // The user of a Docker image asset in the pipeline requires turning on
+ * // 'dockerEnabledForSelfMutation'.
+ * .buildImage(LinuxBuildImage.fromAsset(this, "Image", DockerImageAssetProps.builder()
+ * .directory("./docker-image")
+ * .build()))
+ * .build())
+ * .build()))
+ * .build());
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html)
+ */
 public open class LinuxBuildImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codebuild.LinuxBuildImage,
 ) : CdkObject(cdkObject), IBuildImage {
+  /**
+   * The default `ComputeType` to use with this image, if one was not specified in
+   * `BuildEnvironment#computeType` explicitly.
+   */
   public override fun defaultComputeType(): ComputeType =
       unwrap(this).getDefaultComputeType().let(ComputeType::wrap)
 
+  /**
+   * The Docker image identifier that the build environment uses.
+   */
   public override fun imageId(): String = unwrap(this).getImageId()
 
+  /**
+   * The type of principal that CodeBuild will use to pull this build Docker image.
+   */
   public override fun imagePullPrincipalType(): ImagePullPrincipalType? =
       unwrap(this).getImagePullPrincipalType()?.let(ImagePullPrincipalType::wrap)
 
+  /**
+   * An optional ECR repository that the image is hosted in.
+   */
   public override fun repository(): IRepository? =
       unwrap(this).getRepository()?.let(IRepository::wrap)
 
+  /**
+   * Make a buildspec to run the indicated script.
+   *
+   * @param entrypoint 
+   */
   public override fun runScriptBuildspec(entrypoint: String): BuildSpec =
       unwrap(this).runScriptBuildspec(entrypoint).let(BuildSpec::wrap)
 
+  /**
+   * The secretsManagerCredentials for access to a private registry.
+   */
   public override fun secretsManagerCredentials(): ISecret? =
       unwrap(this).getSecretsManagerCredentials()?.let(ISecret::wrap)
 
+  /**
+   * The type of build environment.
+   */
   public override fun type(): String = unwrap(this).getType()
 
+  /**
+   * Allows the image a chance to validate whether the passed configuration is correct.
+   *
+   * @param env 
+   */
   public override fun validate(env: BuildEnvironment): List<String> =
       unwrap(this).validate(env.let(BuildEnvironment::unwrap))
 
+  /**
+   * Allows the image a chance to validate whether the passed configuration is correct.
+   *
+   * @param env 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("ff36d333164150adb92277700abb7153d45f26e16fa225966e7bf6fc0bedfcee")
   public override fun validate(env: BuildEnvironment.Builder.() -> Unit): List<String> =

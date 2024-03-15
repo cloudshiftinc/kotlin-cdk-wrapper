@@ -4,6 +4,18 @@ package io.cloudshiftdev.awscdk.lambdalayer.kubectl
 
 import io.cloudshiftdev.awscdk.services.lambda.LayerVersion
 
+/**
+ * An AWS Lambda layer that includes `kubectl` and `helm`.
+ *
+ * Example:
+ *
+ * ```
+ * // KubectlLayer bundles the 'kubectl' and 'helm' command lines
+ * import io.cloudshiftdev.awscdk.lambdalayer.kubectl.KubectlLayer;
+ * Function fn;
+ * fn.addLayers(new KubectlLayer(this, "KubectlLayer"));
+ * ```
+ */
 public open class KubectlLayer internal constructor(
   internal override val cdkObject: software.amazon.awscdk.lambdalayer.kubectl.KubectlLayer,
 ) : LayerVersion(cdkObject) {

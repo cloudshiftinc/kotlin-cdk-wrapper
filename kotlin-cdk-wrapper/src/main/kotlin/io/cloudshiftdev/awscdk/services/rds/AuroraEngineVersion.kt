@@ -5,11 +5,34 @@ package io.cloudshiftdev.awscdk.services.rds
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * The versions for the Aurora cluster engine (those returned by `DatabaseClusterEngine.aurora`).
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * DatabaseClusterFromSnapshot.Builder.create(this, "Database")
+ * .engine(DatabaseClusterEngine.aurora(AuroraClusterEngineProps.builder().version(AuroraEngineVersion.VER_1_22_2).build()))
+ * .writer(ClusterInstance.provisioned("writer"))
+ * .vpc(vpc)
+ * .snapshotIdentifier("mySnapshot")
+ * .build();
+ * ```
+ */
 public open class AuroraEngineVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.AuroraEngineVersion,
 ) : CdkObject(cdkObject) {
+  /**
+   * The full version string, for example, "5.6.mysql_aurora.1.78.3.6".
+   */
   public open fun auroraFullVersion(): String = unwrap(this).getAuroraFullVersion()
 
+  /**
+   * The major version of the engine.
+   *
+   * Currently, it's always "5.6".
+   */
   public open fun auroraMajorVersion(): String = unwrap(this).getAuroraMajorVersion()
 
   public companion object {

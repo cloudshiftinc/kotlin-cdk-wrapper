@@ -6,12 +6,35 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Used for HTTP cache-control header, which influences downstream caches.
+ *
+ * Use the provided static factory methods to construct instances of this class.
+ * Used in the `S3DeployActionProps.cacheControl` property.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.codepipeline.actions.*;
+ * CacheControl cacheControl = CacheControl.fromString("s");
+ * ```
+ *
+ * [Documentation](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9)
+ */
 public open class CacheControl internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.CacheControl,
 ) : CdkObject(cdkObject) {
+  /**
+   * the actual text value of the created directive.
+   */
   public open fun `value`(): String = unwrap(this).getValue()
 
+  /**
+   * the actual text value of the created directive.
+   */
   public open fun `value`(`value`: String) {
     unwrap(this).setValue(`value`)
   }

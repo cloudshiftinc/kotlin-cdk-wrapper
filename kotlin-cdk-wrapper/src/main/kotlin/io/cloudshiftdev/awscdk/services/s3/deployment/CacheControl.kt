@@ -7,9 +7,37 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Any
 import kotlin.String
 
+/**
+ * Used for HTTP cache-control header, which influences downstream caches.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket destinationBucket;
+ * BucketDeployment.Builder.create(this, "BucketDeployment")
+ * .sources(List.of(Source.asset("./website",
+ * AssetOptions.builder().exclude(List.of("index.html")).build())))
+ * .destinationBucket(destinationBucket)
+ * .cacheControl(List.of(CacheControl.maxAge(Duration.days(365)), CacheControl.immutable()))
+ * .prune(false)
+ * .build();
+ * BucketDeployment.Builder.create(this, "HTMLBucketDeployment")
+ * .sources(List.of(Source.asset("./website", AssetOptions.builder().exclude(List.of("*",
+ * "!index.html")).build())))
+ * .destinationBucket(destinationBucket)
+ * .cacheControl(List.of(CacheControl.maxAge(Duration.seconds(0))))
+ * .prune(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingMetadata.html#SysMetadata)
+ */
 public open class CacheControl internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3.deployment.CacheControl,
 ) : CdkObject(cdkObject) {
+  /**
+   * The raw cache control setting.
+   */
   public open fun `value`(): Any = unwrap(this).getValue()
 
   public companion object {

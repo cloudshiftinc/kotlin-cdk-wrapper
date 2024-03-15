@@ -5,12 +5,21 @@ package io.cloudshiftdev.awscdk.services.logs
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Interface for objects that can render themselves to log patterns.
+ */
 public interface IFilterPattern {
+  /**
+   *
+   */
   public fun logPatternString(): String
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.logs.IFilterPattern,
   ) : CdkObject(cdkObject), IFilterPattern {
+    /**
+     *
+     */
     override fun logPatternString(): String = unwrap(this).getLogPatternString()
   }
 

@@ -7,19 +7,70 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for defining a `CfnMaster`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.guardduty.*;
+ * CfnMasterProps cfnMasterProps = CfnMasterProps.builder()
+ * .detectorId("detectorId")
+ * .masterId("masterId")
+ * // the properties below are optional
+ * .invitationId("invitationId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html)
+ */
 public interface CfnMasterProps {
+  /**
+   * The unique ID of the detector of the GuardDuty member account.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html#cfn-guardduty-master-detectorid)
+   */
   public fun detectorId(): String
 
+  /**
+   * The ID of the invitation that is sent to the account designated as a member account.
+   *
+   * You can find the invitation ID by using the ListInvitation action of the GuardDuty API.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html#cfn-guardduty-master-invitationid)
+   */
   public fun invitationId(): String? = unwrap(this).getInvitationId()
 
+  /**
+   * The AWS account ID of the account designated as the GuardDuty administrator account.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html#cfn-guardduty-master-masterid)
+   */
   public fun masterId(): String
 
+  /**
+   * A builder for [CfnMasterProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param detectorId The unique ID of the detector of the GuardDuty member account. 
+     */
     public fun detectorId(detectorId: String)
 
+    /**
+     * @param invitationId The ID of the invitation that is sent to the account designated as a
+     * member account.
+     * You can find the invitation ID by using the ListInvitation action of the GuardDuty API.
+     */
     public fun invitationId(invitationId: String)
 
+    /**
+     * @param masterId The AWS account ID of the account designated as the GuardDuty administrator
+     * account. 
+     */
     public fun masterId(masterId: String)
   }
 
@@ -27,14 +78,26 @@ public interface CfnMasterProps {
     private val cdkBuilder: software.amazon.awscdk.services.guardduty.CfnMasterProps.Builder =
         software.amazon.awscdk.services.guardduty.CfnMasterProps.builder()
 
+    /**
+     * @param detectorId The unique ID of the detector of the GuardDuty member account. 
+     */
     override fun detectorId(detectorId: String) {
       cdkBuilder.detectorId(detectorId)
     }
 
+    /**
+     * @param invitationId The ID of the invitation that is sent to the account designated as a
+     * member account.
+     * You can find the invitation ID by using the ListInvitation action of the GuardDuty API.
+     */
     override fun invitationId(invitationId: String) {
       cdkBuilder.invitationId(invitationId)
     }
 
+    /**
+     * @param masterId The AWS account ID of the account designated as the GuardDuty administrator
+     * account. 
+     */
     override fun masterId(masterId: String) {
       cdkBuilder.masterId(masterId)
     }
@@ -46,10 +109,27 @@ public interface CfnMasterProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.guardduty.CfnMasterProps,
   ) : CdkObject(cdkObject), CfnMasterProps {
+    /**
+     * The unique ID of the detector of the GuardDuty member account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html#cfn-guardduty-master-detectorid)
+     */
     override fun detectorId(): String = unwrap(this).getDetectorId()
 
+    /**
+     * The ID of the invitation that is sent to the account designated as a member account.
+     *
+     * You can find the invitation ID by using the ListInvitation action of the GuardDuty API.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html#cfn-guardduty-master-invitationid)
+     */
     override fun invitationId(): String? = unwrap(this).getInvitationId()
 
+    /**
+     * The AWS account ID of the account designated as the GuardDuty administrator account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-master.html#cfn-guardduty-master-masterid)
+     */
     override fun masterId(): String = unwrap(this).getMasterId()
   }
 

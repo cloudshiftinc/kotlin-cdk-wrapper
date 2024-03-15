@@ -11,23 +11,69 @@ import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * Creates an empty receipt rule set.
+ *
+ * For information about setting up receipt rule sets, see the [Amazon SES Developer
+ * Guide](https://docs.aws.amazon.com/ses/latest/dg/receiving-email-concepts.html#receiving-email-concepts-rules)
+ * .
+ *
+ * You can execute this operation no more than once per second.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ses.*;
+ * CfnReceiptRuleSet cfnReceiptRuleSet = CfnReceiptRuleSet.Builder.create(this,
+ * "MyCfnReceiptRuleSet")
+ * .ruleSetName("ruleSetName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptruleset.html)
+ */
 public open class CfnReceiptRuleSet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRuleSet,
 ) : CfnResource(cdkObject), IInspectable {
+  /**
+   *
+   */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * The name of the receipt rule set to reorder.
+   */
   public open fun ruleSetName(): String? = unwrap(this).getRuleSetName()
 
+  /**
+   * The name of the receipt rule set to reorder.
+   */
   public open fun ruleSetName(`value`: String) {
     unwrap(this).setRuleSetName(`value`)
   }
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.ses.CfnReceiptRuleSet].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The name of the receipt rule set to reorder.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptruleset.html#cfn-ses-receiptruleset-rulesetname)
+     * @param ruleSetName The name of the receipt rule set to reorder. 
+     */
     public fun ruleSetName(ruleSetName: String)
   }
 
@@ -38,6 +84,12 @@ public open class CfnReceiptRuleSet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ses.CfnReceiptRuleSet.Builder =
         software.amazon.awscdk.services.ses.CfnReceiptRuleSet.Builder.create(scope, id)
 
+    /**
+     * The name of the receipt rule set to reorder.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptruleset.html#cfn-ses-receiptruleset-rulesetname)
+     * @param ruleSetName The name of the receipt rule set to reorder. 
+     */
     override fun ruleSetName(ruleSetName: String) {
       cdkBuilder.ruleSetName(ruleSetName)
     }

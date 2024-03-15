@@ -6,10 +6,25 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.certificatemanager.ICertificate
 import kotlin.String
 
+/**
+ * A certificate source for an ELBv2 listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+ * ListenerCertificate listenerCertificate = ListenerCertificate.fromArn("certificateArn");
+ * ```
+ */
 public open class ListenerCertificate internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCertificate,
 ) : CdkObject(cdkObject), IListenerCertificate {
+  /**
+   * The ARN of the certificate to use.
+   */
   public override fun certificateArn(): String = unwrap(this).getCertificateArn()
 
   public companion object {

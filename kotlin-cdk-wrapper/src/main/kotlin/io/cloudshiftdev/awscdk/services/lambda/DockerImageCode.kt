@@ -8,6 +8,17 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Code property for the DockerImageFunction construct.
+ *
+ * Example:
+ *
+ * ```
+ * DockerImageFunction.Builder.create(this, "AssetFunction")
+ * .code(DockerImageCode.fromImageAsset(join(__dirname, "docker-handler")))
+ * .build();
+ * ```
+ */
 public abstract class DockerImageCode internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.DockerImageCode,
 ) : CdkObject(cdkObject) {

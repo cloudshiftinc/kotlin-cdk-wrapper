@@ -11,9 +11,34 @@ import kotlin.Unit
 import kotlin.collections.Map
 import kotlin.jvm.JvmName
 
+/**
+ * Create files on the EC2 instance.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * InstanceType instanceType;
+ * Instance.Builder.create(this, "Instance")
+ * .vpc(vpc)
+ * .instanceType(instanceType)
+ * .machineImage(MachineImage.latestAmazonLinux2023())
+ * .init(CloudFormationInit.fromElements(InitService.systemdConfigFile("simpleserver",
+ * SystemdConfigFileOptions.builder()
+ * .command("/usr/bin/python3 -m http.server 8080")
+ * .cwd("/var/www/html")
+ * .build()), InitService.enable("simpleserver", InitServiceOptions.builder()
+ * .serviceManager(ServiceManager.SYSTEMD)
+ * .build()), InitFile.fromString("/var/www/html/index.html", "Hello! It's working!")))
+ * .build();
+ * ```
+ */
 public abstract class InitFile internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.InitFile,
 ) : InitElement(cdkObject) {
+  /**
+   * Returns the init element type for this element.
+   */
   public override fun elementType(): String = unwrap(this).getElementType()
 
   private class Wrapper(

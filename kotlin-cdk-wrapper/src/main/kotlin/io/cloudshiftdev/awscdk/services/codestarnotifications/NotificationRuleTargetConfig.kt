@@ -7,15 +7,50 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Information about the SNS topic or AWS Chatbot client associated with a notification target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.codestarnotifications.*;
+ * NotificationRuleTargetConfig notificationRuleTargetConfig =
+ * NotificationRuleTargetConfig.builder()
+ * .targetAddress("targetAddress")
+ * .targetType("targetType")
+ * .build();
+ * ```
+ */
 public interface NotificationRuleTargetConfig {
+  /**
+   * The Amazon Resource Name (ARN) of the Amazon SNS topic or AWS Chatbot client.
+   */
   public fun targetAddress(): String
 
+  /**
+   * The target type.
+   *
+   * Can be an Amazon SNS topic or AWS Chatbot client.
+   */
   public fun targetType(): String
 
+  /**
+   * A builder for [NotificationRuleTargetConfig]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param targetAddress The Amazon Resource Name (ARN) of the Amazon SNS topic or AWS Chatbot
+     * client. 
+     */
     public fun targetAddress(targetAddress: String)
 
+    /**
+     * @param targetType The target type. 
+     * Can be an Amazon SNS topic or AWS Chatbot client.
+     */
     public fun targetType(targetType: String)
   }
 
@@ -24,10 +59,18 @@ public interface NotificationRuleTargetConfig {
         software.amazon.awscdk.services.codestarnotifications.NotificationRuleTargetConfig.Builder =
         software.amazon.awscdk.services.codestarnotifications.NotificationRuleTargetConfig.builder()
 
+    /**
+     * @param targetAddress The Amazon Resource Name (ARN) of the Amazon SNS topic or AWS Chatbot
+     * client. 
+     */
     override fun targetAddress(targetAddress: String) {
       cdkBuilder.targetAddress(targetAddress)
     }
 
+    /**
+     * @param targetType The target type. 
+     * Can be an Amazon SNS topic or AWS Chatbot client.
+     */
     override fun targetType(targetType: String) {
       cdkBuilder.targetType(targetType)
     }
@@ -41,8 +84,16 @@ public interface NotificationRuleTargetConfig {
     override val cdkObject:
         software.amazon.awscdk.services.codestarnotifications.NotificationRuleTargetConfig,
   ) : CdkObject(cdkObject), NotificationRuleTargetConfig {
+    /**
+     * The Amazon Resource Name (ARN) of the Amazon SNS topic or AWS Chatbot client.
+     */
     override fun targetAddress(): String = unwrap(this).getTargetAddress()
 
+    /**
+     * The target type.
+     *
+     * Can be an Amazon SNS topic or AWS Chatbot client.
+     */
     override fun targetType(): String = unwrap(this).getTargetType()
   }
 

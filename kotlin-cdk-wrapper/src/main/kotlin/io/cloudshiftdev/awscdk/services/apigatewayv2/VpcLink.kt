@@ -15,35 +15,113 @@ import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * Define a new VPC Link Specifies an API Gateway VPC link for a HTTP API to access resources in an
+ * Amazon Virtual Private Cloud (VPC).
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+ * import io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations.HttpAlbIntegration;
+ * Vpc vpc = new Vpc(this, "VPC");
+ * ApplicationLoadBalancer alb = ApplicationLoadBalancer.Builder.create(this,
+ * "AppLoadBalancer").vpc(vpc).build();
+ * VpcLink vpcLink = VpcLink.Builder.create(this, "VpcLink").vpc(vpc).build();
+ * // Creating an HTTP ALB Integration:
+ * HttpAlbIntegration albIntegration = HttpAlbIntegration.Builder.create("ALBIntegration",
+ * alb.getListeners()[0]).build();
+ * ```
+ */
 public open class VpcLink internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.VpcLink,
 ) : Resource(cdkObject), IVpcLink {
+  /**
+   * Adds the provided security groups to the vpc link.
+   *
+   * @param groups 
+   */
   public open fun addSecurityGroups(groups: ISecurityGroup) {
     unwrap(this).addSecurityGroups(groups.let(ISecurityGroup::unwrap))
   }
 
+  /**
+   * Adds the provided subnets to the vpc link.
+   *
+   * @param subnets 
+   */
   public open fun addSubnets(subnets: ISubnet) {
     unwrap(this).addSubnets(subnets.let(ISubnet::unwrap))
   }
 
+  /**
+   * The VPC to which this VPC Link is associated with.
+   */
   public override fun vpc(): IVpc = unwrap(this).getVpc().let(IVpc::wrap)
 
+  /**
+   * Physical ID of the VpcLink resource.
+   */
   public override fun vpcLinkId(): String = unwrap(this).getVpcLinkId()
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.apigatewayv2.VpcLink].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * A list of security groups for the VPC link.
+     *
+     * Default: - no security groups. Use `addSecurityGroups` to add security groups
+     *
+     * @param securityGroups A list of security groups for the VPC link. 
+     */
     public fun securityGroups(securityGroups: List<ISecurityGroup>)
 
+    /**
+     * A list of security groups for the VPC link.
+     *
+     * Default: - no security groups. Use `addSecurityGroups` to add security groups
+     *
+     * @param securityGroups A list of security groups for the VPC link. 
+     */
     public fun securityGroups(vararg securityGroups: ISecurityGroup)
 
+    /**
+     * A list of subnets for the VPC link.
+     *
+     * Default: - private subnets of the provided VPC. Use `addSubnets` to add more subnets
+     *
+     * @param subnets A list of subnets for the VPC link. 
+     */
     public fun subnets(subnets: SubnetSelection)
 
+    /**
+     * A list of subnets for the VPC link.
+     *
+     * Default: - private subnets of the provided VPC. Use `addSubnets` to add more subnets
+     *
+     * @param subnets A list of subnets for the VPC link. 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4e9a30b66ec339f577be96e7497ab4fa16491a572bfd3f02c33f8af0ec3021eb")
     public fun subnets(subnets: SubnetSelection.Builder.() -> Unit)
 
+    /**
+     * The VPC in which the private resources reside.
+     *
+     * @param vpc The VPC in which the private resources reside. 
+     */
     public fun vpc(vpc: IVpc)
 
+    /**
+     * The name used to label and identify the VPC link.
+     *
+     * Default: - automatically generated name
+     *
+     * @param vpcLinkName The name used to label and identify the VPC link. 
+     */
     public fun vpcLinkName(vpcLinkName: String)
   }
 
@@ -54,26 +132,66 @@ public open class VpcLink internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.VpcLink.Builder =
         software.amazon.awscdk.services.apigatewayv2.VpcLink.Builder.create(scope, id)
 
+    /**
+     * A list of security groups for the VPC link.
+     *
+     * Default: - no security groups. Use `addSecurityGroups` to add security groups
+     *
+     * @param securityGroups A list of security groups for the VPC link. 
+     */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
       cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
     }
 
+    /**
+     * A list of security groups for the VPC link.
+     *
+     * Default: - no security groups. Use `addSecurityGroups` to add security groups
+     *
+     * @param securityGroups A list of security groups for the VPC link. 
+     */
     override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
         securityGroups(securityGroups.toList())
 
+    /**
+     * A list of subnets for the VPC link.
+     *
+     * Default: - private subnets of the provided VPC. Use `addSubnets` to add more subnets
+     *
+     * @param subnets A list of subnets for the VPC link. 
+     */
     override fun subnets(subnets: SubnetSelection) {
       cdkBuilder.subnets(subnets.let(SubnetSelection::unwrap))
     }
 
+    /**
+     * A list of subnets for the VPC link.
+     *
+     * Default: - private subnets of the provided VPC. Use `addSubnets` to add more subnets
+     *
+     * @param subnets A list of subnets for the VPC link. 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4e9a30b66ec339f577be96e7497ab4fa16491a572bfd3f02c33f8af0ec3021eb")
     override fun subnets(subnets: SubnetSelection.Builder.() -> Unit): Unit =
         subnets(SubnetSelection(subnets))
 
+    /**
+     * The VPC in which the private resources reside.
+     *
+     * @param vpc The VPC in which the private resources reside. 
+     */
     override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }
 
+    /**
+     * The name used to label and identify the VPC link.
+     *
+     * Default: - automatically generated name
+     *
+     * @param vpcLinkName The name used to label and identify the VPC link. 
+     */
     override fun vpcLinkName(vpcLinkName: String) {
       cdkBuilder.vpcLinkName(vpcLinkName)
     }

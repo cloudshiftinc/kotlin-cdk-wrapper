@@ -7,11 +7,39 @@ import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Used to generate specs with different protocols for a GatewayRoute.
+ *
+ * Example:
+ *
+ * ```
+ * VirtualGateway gateway;
+ * VirtualService virtualService;
+ * gateway.addGatewayRoute("gateway-route-grpc", GatewayRouteBaseProps.builder()
+ * .routeSpec(GatewayRouteSpec.grpc(GrpcGatewayRouteSpecOptions.builder()
+ * .routeTarget(virtualService)
+ * .match(GrpcGatewayRouteMatch.builder()
+ * .hostname(GatewayRouteHostnameMatch.exactly("example.com"))
+ * // This disables the default rewrite to virtual service name and retain original request.
+ * .rewriteRequestHostname(false)
+ * .build())
+ * .build()))
+ * .build());
+ * ```
+ */
 public abstract class GatewayRouteSpec internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteSpec,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct): GatewayRouteSpecConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(GatewayRouteSpecConfig::wrap)
+  /**
+   * Called when the GatewayRouteSpec type is initialized.
+   *
+   * Can be used to enforce
+   * mutual exclusivity with future properties
+   *
+   * @param scope 
+   */
+  public open fun bind(scope: Construct): GatewayRouteSpecConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(GatewayRouteSpecConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteSpec,

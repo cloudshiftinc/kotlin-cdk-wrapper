@@ -7,11 +7,37 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.Unit
 
+/**
+ * The extra options passed to the `IProject.bindToCodePipeline` method.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.codebuild.*;
+ * import io.cloudshiftdev.awscdk.services.s3.*;
+ * Bucket bucket;
+ * BindToCodePipelineOptions bindToCodePipelineOptions = BindToCodePipelineOptions.builder()
+ * .artifactBucket(bucket)
+ * .build();
+ * ```
+ */
 public interface BindToCodePipelineOptions {
+  /**
+   * The artifact bucket that will be used by the action that invokes this project.
+   */
   public fun artifactBucket(): IBucket
 
+  /**
+   * A builder for [BindToCodePipelineOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param artifactBucket The artifact bucket that will be used by the action that invokes this
+     * project. 
+     */
     public fun artifactBucket(artifactBucket: IBucket)
   }
 
@@ -20,6 +46,10 @@ public interface BindToCodePipelineOptions {
         software.amazon.awscdk.services.codebuild.BindToCodePipelineOptions.Builder =
         software.amazon.awscdk.services.codebuild.BindToCodePipelineOptions.builder()
 
+    /**
+     * @param artifactBucket The artifact bucket that will be used by the action that invokes this
+     * project. 
+     */
     override fun artifactBucket(artifactBucket: IBucket) {
       cdkBuilder.artifactBucket(artifactBucket.let(IBucket::unwrap))
     }
@@ -31,6 +61,9 @@ public interface BindToCodePipelineOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.codebuild.BindToCodePipelineOptions,
   ) : CdkObject(cdkObject), BindToCodePipelineOptions {
+    /**
+     * The artifact bucket that will be used by the action that invokes this project.
+     */
     override fun artifactBucket(): IBucket = unwrap(this).getArtifactBucket().let(IBucket::wrap)
   }
 

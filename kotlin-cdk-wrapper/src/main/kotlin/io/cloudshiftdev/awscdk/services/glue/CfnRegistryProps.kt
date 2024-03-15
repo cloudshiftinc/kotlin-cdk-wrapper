@@ -9,21 +9,75 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 
+/**
+ * Properties for defining a `CfnRegistry`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.glue.*;
+ * CfnRegistryProps cfnRegistryProps = CfnRegistryProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-registry.html)
+ */
 public interface CfnRegistryProps {
+  /**
+   * A description of the registry.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-registry.html#cfn-glue-registry-description)
+   */
   public fun description(): String? = unwrap(this).getDescription()
 
+  /**
+   * The name of the registry.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-registry.html#cfn-glue-registry-name)
+   */
   public fun name(): String
 
+  /**
+   * AWS tags that contain a key value pair and may be searched by console, command line, or API.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-registry.html#cfn-glue-registry-tags)
+   */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
+  /**
+   * A builder for [CfnRegistryProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param description A description of the registry.
+     */
     public fun description(description: String)
 
+    /**
+     * @param name The name of the registry. 
+     */
     public fun name(name: String)
 
+    /**
+     * @param tags AWS tags that contain a key value pair and may be searched by console, command
+     * line, or API.
+     */
     public fun tags(tags: List<CfnTag>)
 
+    /**
+     * @param tags AWS tags that contain a key value pair and may be searched by console, command
+     * line, or API.
+     */
     public fun tags(vararg tags: CfnTag)
   }
 
@@ -31,18 +85,32 @@ public interface CfnRegistryProps {
     private val cdkBuilder: software.amazon.awscdk.services.glue.CfnRegistryProps.Builder =
         software.amazon.awscdk.services.glue.CfnRegistryProps.builder()
 
+    /**
+     * @param description A description of the registry.
+     */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
+    /**
+     * @param name The name of the registry. 
+     */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
+    /**
+     * @param tags AWS tags that contain a key value pair and may be searched by console, command
+     * line, or API.
+     */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    /**
+     * @param tags AWS tags that contain a key value pair and may be searched by console, command
+     * line, or API.
+     */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.glue.CfnRegistryProps = cdkBuilder.build()
@@ -51,10 +119,25 @@ public interface CfnRegistryProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.glue.CfnRegistryProps,
   ) : CdkObject(cdkObject), CfnRegistryProps {
+    /**
+     * A description of the registry.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-registry.html#cfn-glue-registry-description)
+     */
     override fun description(): String? = unwrap(this).getDescription()
 
+    /**
+     * The name of the registry.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-registry.html#cfn-glue-registry-name)
+     */
     override fun name(): String = unwrap(this).getName()
 
+    /**
+     * AWS tags that contain a key value pair and may be searched by console, command line, or API.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-registry.html#cfn-glue-registry-tags)
+     */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
   }
 

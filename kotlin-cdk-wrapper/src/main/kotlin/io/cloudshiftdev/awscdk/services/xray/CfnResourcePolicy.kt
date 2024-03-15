@@ -14,43 +14,123 @@ import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * Use `AWS::XRay::ResourcePolicy` to specify an X-Ray resource-based policy, which grants one or
+ * more AWS services and accounts permissions to access X-Ray .
+ *
+ * Each resource-based policy is associated with a specific AWS account.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.xray.*;
+ * CfnResourcePolicy cfnResourcePolicy = CfnResourcePolicy.Builder.create(this,
+ * "MyCfnResourcePolicy")
+ * .policyDocument("policyDocument")
+ * .policyName("policyName")
+ * // the properties below are optional
+ * .bypassPolicyLockoutCheck(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-resourcepolicy.html)
+ */
 public open class CfnResourcePolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.xray.CfnResourcePolicy,
 ) : CfnResource(cdkObject), IInspectable {
+  /**
+   * A flag to indicate whether to bypass the resource-based policy lockout safety check.
+   */
   public open fun bypassPolicyLockoutCheck(): Any? = unwrap(this).getBypassPolicyLockoutCheck()
 
+  /**
+   * A flag to indicate whether to bypass the resource-based policy lockout safety check.
+   */
   public open fun bypassPolicyLockoutCheck(`value`: Boolean) {
     unwrap(this).setBypassPolicyLockoutCheck(`value`)
   }
 
+  /**
+   * A flag to indicate whether to bypass the resource-based policy lockout safety check.
+   */
   public open fun bypassPolicyLockoutCheck(`value`: IResolvable) {
     unwrap(this).setBypassPolicyLockoutCheck(`value`.let(IResolvable::unwrap))
   }
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * The resource-based policy document, which can be up to 5kb in size.
+   */
   public open fun policyDocument(): String = unwrap(this).getPolicyDocument()
 
+  /**
+   * The resource-based policy document, which can be up to 5kb in size.
+   */
   public open fun policyDocument(`value`: String) {
     unwrap(this).setPolicyDocument(`value`)
   }
 
+  /**
+   * The name of the resource-based policy.
+   */
   public open fun policyName(): String = unwrap(this).getPolicyName()
 
+  /**
+   * The name of the resource-based policy.
+   */
   public open fun policyName(`value`: String) {
     unwrap(this).setPolicyName(`value`)
   }
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.xray.CfnResourcePolicy].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * A flag to indicate whether to bypass the resource-based policy lockout safety check.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-resourcepolicy.html#cfn-xray-resourcepolicy-bypasspolicylockoutcheck)
+     * @param bypassPolicyLockoutCheck A flag to indicate whether to bypass the resource-based
+     * policy lockout safety check. 
+     */
     public fun bypassPolicyLockoutCheck(bypassPolicyLockoutCheck: Boolean)
 
+    /**
+     * A flag to indicate whether to bypass the resource-based policy lockout safety check.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-resourcepolicy.html#cfn-xray-resourcepolicy-bypasspolicylockoutcheck)
+     * @param bypassPolicyLockoutCheck A flag to indicate whether to bypass the resource-based
+     * policy lockout safety check. 
+     */
     public fun bypassPolicyLockoutCheck(bypassPolicyLockoutCheck: IResolvable)
 
+    /**
+     * The resource-based policy document, which can be up to 5kb in size.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-resourcepolicy.html#cfn-xray-resourcepolicy-policydocument)
+     * @param policyDocument The resource-based policy document, which can be up to 5kb in size. 
+     */
     public fun policyDocument(policyDocument: String)
 
+    /**
+     * The name of the resource-based policy.
+     *
+     * Must be unique within a specific AWS account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-resourcepolicy.html#cfn-xray-resourcepolicy-policyname)
+     * @param policyName The name of the resource-based policy. 
+     */
     public fun policyName(policyName: String)
   }
 
@@ -61,18 +141,46 @@ public open class CfnResourcePolicy internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.xray.CfnResourcePolicy.Builder =
         software.amazon.awscdk.services.xray.CfnResourcePolicy.Builder.create(scope, id)
 
+    /**
+     * A flag to indicate whether to bypass the resource-based policy lockout safety check.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-resourcepolicy.html#cfn-xray-resourcepolicy-bypasspolicylockoutcheck)
+     * @param bypassPolicyLockoutCheck A flag to indicate whether to bypass the resource-based
+     * policy lockout safety check. 
+     */
     override fun bypassPolicyLockoutCheck(bypassPolicyLockoutCheck: Boolean) {
       cdkBuilder.bypassPolicyLockoutCheck(bypassPolicyLockoutCheck)
     }
 
+    /**
+     * A flag to indicate whether to bypass the resource-based policy lockout safety check.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-resourcepolicy.html#cfn-xray-resourcepolicy-bypasspolicylockoutcheck)
+     * @param bypassPolicyLockoutCheck A flag to indicate whether to bypass the resource-based
+     * policy lockout safety check. 
+     */
     override fun bypassPolicyLockoutCheck(bypassPolicyLockoutCheck: IResolvable) {
       cdkBuilder.bypassPolicyLockoutCheck(bypassPolicyLockoutCheck.let(IResolvable::unwrap))
     }
 
+    /**
+     * The resource-based policy document, which can be up to 5kb in size.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-resourcepolicy.html#cfn-xray-resourcepolicy-policydocument)
+     * @param policyDocument The resource-based policy document, which can be up to 5kb in size. 
+     */
     override fun policyDocument(policyDocument: String) {
       cdkBuilder.policyDocument(policyDocument)
     }
 
+    /**
+     * The name of the resource-based policy.
+     *
+     * Must be unique within a specific AWS account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-xray-resourcepolicy.html#cfn-xray-resourcepolicy-policyname)
+     * @param policyName The name of the resource-based policy. 
+     */
     override fun policyName(policyName: String) {
       cdkBuilder.policyName(policyName)
     }

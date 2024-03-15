@@ -5,11 +5,44 @@ package io.cloudshiftdev.awscdk.services.rds
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * The versions for the Oracle instance engines.
+ *
+ * Those returned by the following list.
+ *
+ * * `DatabaseInstanceEngine.oracleSe2`
+ * * `DatabaseInstanceEngine.oracleSe2Cdb`
+ * * `DatabaseInstanceEngine.oracleEe`
+ * * `DatabaseInstanceEngine.oracleEeCdb`.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * DatabaseInstance instance = DatabaseInstance.Builder.create(this, "Instance")
+ * .engine(DatabaseInstanceEngine.oracleSe2(OracleSe2InstanceEngineProps.builder().version(OracleEngineVersion.VER_19_0_0_0_2020_04_R1).build()))
+ * // optional, defaults to m5.large
+ * .instanceType(InstanceType.of(InstanceClass.BURSTABLE3, InstanceSize.SMALL))
+ * .credentials(Credentials.fromGeneratedSecret("syscdk")) // Optional - will default to 'admin'
+ * username and generated password
+ * .vpc(vpc)
+ * .vpcSubnets(SubnetSelection.builder()
+ * .subnetType(SubnetType.PRIVATE_WITH_EGRESS)
+ * .build())
+ * .build();
+ * ```
+ */
 public open class OracleEngineVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.OracleEngineVersion,
 ) : CdkObject(cdkObject) {
+  /**
+   * The full version string, for example, "19.0.0.0.ru-2019-10.rur-2019-10.r1".
+   */
   public open fun oracleFullVersion(): String = unwrap(this).getOracleFullVersion()
 
+  /**
+   * The major version of the engine, for example, "19".
+   */
   public open fun oracleMajorVersion(): String = unwrap(this).getOracleMajorVersion()
 
   public companion object {

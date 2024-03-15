@@ -4,6 +4,20 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 
+/**
+ * A list of ScalingEvents, you can use one of the predefined lists, such as ScalingEvents.ERRORS or
+ * create a custom group by instantiating a `NotificationTypes` object, e.g: `new
+ * NotificationTypes(`NotificationType.INSTANCE_LAUNCH`)`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+ * ScalingEvents scalingEvents = ScalingEvents.ALL;
+ * ```
+ */
 public open class ScalingEvents internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.autoscaling.ScalingEvents,
 ) : CdkObject(cdkObject) {

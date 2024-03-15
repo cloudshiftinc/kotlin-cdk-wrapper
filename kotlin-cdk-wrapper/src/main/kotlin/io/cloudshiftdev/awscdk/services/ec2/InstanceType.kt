@@ -5,14 +5,47 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Boolean
 
+/**
+ * Instance type for EC2 instances.
+ *
+ * This class takes a literal string, good if you already
+ * know the identifier of the type you want.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
+ * .masterUser(Login.builder()
+ * .username("myuser")
+ * .build())
+ * .instanceType(InstanceType.of(InstanceClass.MEMORY5, InstanceSize.LARGE))
+ * .vpcSubnets(SubnetSelection.builder()
+ * .subnetType(SubnetType.PUBLIC)
+ * .build())
+ * .vpc(vpc)
+ * .removalPolicy(RemovalPolicy.SNAPSHOT)
+ * .instanceRemovalPolicy(RemovalPolicy.RETAIN)
+ * .build();
+ * ```
+ */
 public open class InstanceType internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.InstanceType,
 ) : CdkObject(cdkObject) {
+  /**
+   * The instance's CPU architecture.
+   */
   public open fun architecture(): InstanceArchitecture =
       unwrap(this).getArchitecture().let(InstanceArchitecture::wrap)
 
+  /**
+   * Return whether this instance type is a burstable instance type.
+   */
   public open fun isBurstable(): Boolean = unwrap(this).isBurstable()
 
+  /**
+   * @param other 
+   */
   public open fun sameInstanceClassAs(other: InstanceType): Boolean =
       unwrap(this).sameInstanceClassAs(other.let(InstanceType::unwrap))
 

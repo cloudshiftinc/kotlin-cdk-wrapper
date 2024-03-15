@@ -11,32 +11,85 @@ import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * Associate the specified TagOption with the specified portfolio or product.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.servicecatalog.*;
+ * CfnTagOptionAssociation cfnTagOptionAssociation = CfnTagOptionAssociation.Builder.create(this,
+ * "MyCfnTagOptionAssociation")
+ * .resourceId("resourceId")
+ * .tagOptionId("tagOptionId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoptionassociation.html)
+ */
 public open class CfnTagOptionAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.servicecatalog.CfnTagOptionAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  /**
+   *
+   */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * The resource identifier.
+   */
   public open fun resourceId(): String = unwrap(this).getResourceId()
 
+  /**
+   * The resource identifier.
+   */
   public open fun resourceId(`value`: String) {
     unwrap(this).setResourceId(`value`)
   }
 
+  /**
+   * The TagOption identifier.
+   */
   public open fun tagOptionId(): String = unwrap(this).getTagOptionId()
 
+  /**
+   * The TagOption identifier.
+   */
   public open fun tagOptionId(`value`: String) {
     unwrap(this).setTagOptionId(`value`)
   }
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.servicecatalog.CfnTagOptionAssociation].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The resource identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoptionassociation.html#cfn-servicecatalog-tagoptionassociation-resourceid)
+     * @param resourceId The resource identifier. 
+     */
     public fun resourceId(resourceId: String)
 
+    /**
+     * The TagOption identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoptionassociation.html#cfn-servicecatalog-tagoptionassociation-tagoptionid)
+     * @param tagOptionId The TagOption identifier. 
+     */
     public fun tagOptionId(tagOptionId: String)
   }
 
@@ -49,10 +102,22 @@ public open class CfnTagOptionAssociation internal constructor(
         software.amazon.awscdk.services.servicecatalog.CfnTagOptionAssociation.Builder.create(scope,
         id)
 
+    /**
+     * The resource identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoptionassociation.html#cfn-servicecatalog-tagoptionassociation-resourceid)
+     * @param resourceId The resource identifier. 
+     */
     override fun resourceId(resourceId: String) {
       cdkBuilder.resourceId(resourceId)
     }
 
+    /**
+     * The TagOption identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-tagoptionassociation.html#cfn-servicecatalog-tagoptionassociation-tagoptionid)
+     * @param tagOptionId The TagOption identifier. 
+     */
     override fun tagOptionId(tagOptionId: String) {
       cdkBuilder.tagOptionId(tagOptionId)
     }

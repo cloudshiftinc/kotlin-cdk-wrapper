@@ -10,19 +10,70 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 
+/**
+ * Properties for defining a `CfnSizeConstraintSet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.waf.*;
+ * CfnSizeConstraintSetProps cfnSizeConstraintSetProps = CfnSizeConstraintSetProps.builder()
+ * .name("name")
+ * .sizeConstraints(List.of(SizeConstraintProperty.builder()
+ * .comparisonOperator("comparisonOperator")
+ * .fieldToMatch(FieldToMatchProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .data("data")
+ * .build())
+ * .size(123)
+ * .textTransformation("textTransformation")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sizeconstraintset.html)
+ */
 public interface CfnSizeConstraintSetProps {
+  /**
+   * The name, if any, of the `SizeConstraintSet` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sizeconstraintset.html#cfn-waf-sizeconstraintset-name)
+   */
   public fun name(): String
 
+  /**
+   * The size constraint and the part of the web request to check.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sizeconstraintset.html#cfn-waf-sizeconstraintset-sizeconstraints)
+   */
   public fun sizeConstraints(): Any
 
+  /**
+   * A builder for [CfnSizeConstraintSetProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param name The name, if any, of the `SizeConstraintSet` . 
+     */
     public fun name(name: String)
 
+    /**
+     * @param sizeConstraints The size constraint and the part of the web request to check. 
+     */
     public fun sizeConstraints(sizeConstraints: IResolvable)
 
+    /**
+     * @param sizeConstraints The size constraint and the part of the web request to check. 
+     */
     public fun sizeConstraints(sizeConstraints: List<Any>)
 
+    /**
+     * @param sizeConstraints The size constraint and the part of the web request to check. 
+     */
     public fun sizeConstraints(vararg sizeConstraints: Any)
   }
 
@@ -30,18 +81,30 @@ public interface CfnSizeConstraintSetProps {
     private val cdkBuilder: software.amazon.awscdk.services.waf.CfnSizeConstraintSetProps.Builder =
         software.amazon.awscdk.services.waf.CfnSizeConstraintSetProps.builder()
 
+    /**
+     * @param name The name, if any, of the `SizeConstraintSet` . 
+     */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
+    /**
+     * @param sizeConstraints The size constraint and the part of the web request to check. 
+     */
     override fun sizeConstraints(sizeConstraints: IResolvable) {
       cdkBuilder.sizeConstraints(sizeConstraints.let(IResolvable::unwrap))
     }
 
+    /**
+     * @param sizeConstraints The size constraint and the part of the web request to check. 
+     */
     override fun sizeConstraints(sizeConstraints: List<Any>) {
       cdkBuilder.sizeConstraints(sizeConstraints)
     }
 
+    /**
+     * @param sizeConstraints The size constraint and the part of the web request to check. 
+     */
     override fun sizeConstraints(vararg sizeConstraints: Any): Unit =
         sizeConstraints(sizeConstraints.toList())
 
@@ -52,8 +115,18 @@ public interface CfnSizeConstraintSetProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.waf.CfnSizeConstraintSetProps,
   ) : CdkObject(cdkObject), CfnSizeConstraintSetProps {
+    /**
+     * The name, if any, of the `SizeConstraintSet` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sizeconstraintset.html#cfn-waf-sizeconstraintset-name)
+     */
     override fun name(): String = unwrap(this).getName()
 
+    /**
+     * The size constraint and the part of the web request to check.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sizeconstraintset.html#cfn-waf-sizeconstraintset-sizeconstraints)
+     */
     override fun sizeConstraints(): Any = unwrap(this).getSizeConstraints()
   }
 

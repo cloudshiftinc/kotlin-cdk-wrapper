@@ -5,19 +5,43 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * The type of resource to create the flow log for.
+ *
+ * Example:
+ *
+ * ```
+ * CfnTransitGateway tgw;
+ * FlowLog.Builder.create(this, "TransitGatewayFlowLog")
+ * .resourceType(FlowLogResourceType.fromTransitGatewayId(tgw.getRef()))
+ * .build();
+ * ```
+ */
 public abstract class FlowLogResourceType internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.FlowLogResourceType,
 ) : CdkObject(cdkObject) {
+  /**
+   * The Id of the resource that the flow log should be attached to.
+   */
   public open fun resourceId(): String = unwrap(this).getResourceId()
 
-  public open fun resourceId(arg0: String) {
-    unwrap(this).setResourceId(arg0)
+  /**
+   * The Id of the resource that the flow log should be attached to.
+   */
+  public open fun resourceId(`value`: String) {
+    unwrap(this).setResourceId(`value`)
   }
 
+  /**
+   * The type of resource to attach a flow log to.
+   */
   public open fun resourceType(): String = unwrap(this).getResourceType()
 
-  public open fun resourceType(arg0: String) {
-    unwrap(this).setResourceType(arg0)
+  /**
+   * The type of resource to attach a flow log to.
+   */
+  public open fun resourceType(`value`: String) {
+    unwrap(this).setResourceType(`value`)
   }
 
   private class Wrapper(

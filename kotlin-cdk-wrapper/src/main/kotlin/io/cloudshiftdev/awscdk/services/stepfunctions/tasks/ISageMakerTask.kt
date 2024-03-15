@@ -6,10 +6,16 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.awscdk.services.iam.IPrincipal
 
+/**
+ * Task to train a machine learning model using Amazon SageMaker.
+ */
 public interface ISageMakerTask : IGrantable {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ISageMakerTask,
   ) : CdkObject(cdkObject), ISageMakerTask {
+    /**
+     * The principal to grant permissions to.
+     */
     override fun grantPrincipal(): IPrincipal =
         unwrap(this).getGrantPrincipal().let(IPrincipal::wrap)
   }

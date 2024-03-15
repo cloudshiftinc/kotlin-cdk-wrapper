@@ -8,20 +8,66 @@ import io.cloudshiftdev.awscdk.services.lambda.IFunction
 import io.cloudshiftdev.awscdk.services.sns.ITopic
 import kotlin.Unit
 
+/**
+ * Construction properties for a Lambda action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.lambda.*;
+ * import io.cloudshiftdev.awscdk.services.ses.actions.*;
+ * import io.cloudshiftdev.awscdk.services.sns.*;
+ * Function function_;
+ * Topic topic;
+ * LambdaProps lambdaProps = LambdaProps.builder()
+ * .function(function_)
+ * // the properties below are optional
+ * .invocationType(LambdaInvocationType.EVENT)
+ * .topic(topic)
+ * .build();
+ * ```
+ */
 public interface LambdaProps {
+  /**
+   * The Lambda function to invoke.
+   */
   public fun function(): IFunction
 
+  /**
+   * The invocation type of the Lambda function.
+   *
+   * Default: Event
+   */
   public fun invocationType(): LambdaInvocationType? =
       unwrap(this).getInvocationType()?.let(LambdaInvocationType::wrap)
 
+  /**
+   * The SNS topic to notify when the Lambda action is taken.
+   *
+   * Default: no notification
+   */
   public fun topic(): ITopic? = unwrap(this).getTopic()?.let(ITopic::wrap)
 
+  /**
+   * A builder for [LambdaProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param function The Lambda function to invoke. 
+     */
     public fun function(function: IFunction)
 
+    /**
+     * @param invocationType The invocation type of the Lambda function.
+     */
     public fun invocationType(invocationType: LambdaInvocationType)
 
+    /**
+     * @param topic The SNS topic to notify when the Lambda action is taken.
+     */
     public fun topic(topic: ITopic)
   }
 
@@ -29,14 +75,23 @@ public interface LambdaProps {
     private val cdkBuilder: software.amazon.awscdk.services.ses.actions.LambdaProps.Builder =
         software.amazon.awscdk.services.ses.actions.LambdaProps.builder()
 
+    /**
+     * @param function The Lambda function to invoke. 
+     */
     override fun function(function: IFunction) {
       cdkBuilder.function(function.let(IFunction::unwrap))
     }
 
+    /**
+     * @param invocationType The invocation type of the Lambda function.
+     */
     override fun invocationType(invocationType: LambdaInvocationType) {
       cdkBuilder.invocationType(invocationType.let(LambdaInvocationType::unwrap))
     }
 
+    /**
+     * @param topic The SNS topic to notify when the Lambda action is taken.
+     */
     override fun topic(topic: ITopic) {
       cdkBuilder.topic(topic.let(ITopic::unwrap))
     }
@@ -47,11 +102,24 @@ public interface LambdaProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ses.actions.LambdaProps,
   ) : CdkObject(cdkObject), LambdaProps {
+    /**
+     * The Lambda function to invoke.
+     */
     override fun function(): IFunction = unwrap(this).getFunction().let(IFunction::wrap)
 
+    /**
+     * The invocation type of the Lambda function.
+     *
+     * Default: Event
+     */
     override fun invocationType(): LambdaInvocationType? =
         unwrap(this).getInvocationType()?.let(LambdaInvocationType::wrap)
 
+    /**
+     * The SNS topic to notify when the Lambda action is taken.
+     *
+     * Default: no notification
+     */
     override fun topic(): ITopic? = unwrap(this).getTopic()?.let(ITopic::wrap)
   }
 

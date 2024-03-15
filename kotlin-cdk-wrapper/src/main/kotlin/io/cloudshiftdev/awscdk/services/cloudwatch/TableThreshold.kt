@@ -7,9 +7,26 @@ import kotlin.Any
 import kotlin.Number
 import kotlin.String
 
+/**
+ * Thresholds for highlighting cells in TableWidget.
+ *
+ * Example:
+ *
+ * ```
+ * Dashboard dashboard;
+ * dashboard.addWidgets(TableWidget.Builder.create()
+ * // ...
+ * .thresholds(List.of(TableThreshold.above(1000, Color.RED), TableThreshold.between(500, 1000,
+ * Color.ORANGE), TableThreshold.below(500, Color.GREEN)))
+ * .build());
+ * ```
+ */
 public open class TableThreshold internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.TableThreshold,
 ) : CdkObject(cdkObject) {
+  /**
+   *
+   */
   public open fun toJson(): Any = unwrap(this).toJson()
 
   public companion object {

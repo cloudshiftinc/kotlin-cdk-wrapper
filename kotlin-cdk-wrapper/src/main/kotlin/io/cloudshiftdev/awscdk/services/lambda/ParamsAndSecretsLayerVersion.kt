@@ -7,6 +7,36 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Parameters and Secrets Extension layer version.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.secretsmanager.*;
+ * import io.cloudshiftdev.awscdk.services.ssm.*;
+ * Secret secret = new Secret(this, "Secret");
+ * StringParameter parameter = StringParameter.Builder.create(this, "Parameter")
+ * .parameterName("mySsmParameterName")
+ * .stringValue("mySsmParameterValue")
+ * .build();
+ * ParamsAndSecretsLayerVersion paramsAndSecrets =
+ * ParamsAndSecretsLayerVersion.fromVersion(ParamsAndSecretsVersions.V1_0_103,
+ * ParamsAndSecretsOptions.builder()
+ * .cacheSize(500)
+ * .logLevel(ParamsAndSecretsLogLevel.DEBUG)
+ * .build());
+ * Function lambdaFunction = Function.Builder.create(this, "MyFunction")
+ * .runtime(Runtime.NODEJS_18_X)
+ * .handler("index.handler")
+ * .architecture(Architecture.ARM_64)
+ * .code(Code.fromAsset(join(__dirname, "lambda-handler")))
+ * .paramsAndSecrets(paramsAndSecrets)
+ * .build();
+ * secret.grantRead(lambdaFunction);
+ * parameter.grantRead(lambdaFunction);
+ * ```
+ */
 public abstract class ParamsAndSecretsLayerVersion internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.lambda.ParamsAndSecretsLayerVersion,

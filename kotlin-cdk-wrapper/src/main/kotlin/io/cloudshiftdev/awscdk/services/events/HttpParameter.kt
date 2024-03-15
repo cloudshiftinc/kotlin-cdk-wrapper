@@ -6,6 +6,20 @@ import io.cloudshiftdev.awscdk.SecretValue
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * An additional HTTP parameter to send along with the OAuth request.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * import io.cloudshiftdev.awscdk.services.events.*;
+ * SecretValue secretValue;
+ * HttpParameter httpParameter = HttpParameter.fromSecret(secretValue);
+ * ```
+ */
 public abstract class HttpParameter internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.HttpParameter,
 ) : CdkObject(cdkObject) {

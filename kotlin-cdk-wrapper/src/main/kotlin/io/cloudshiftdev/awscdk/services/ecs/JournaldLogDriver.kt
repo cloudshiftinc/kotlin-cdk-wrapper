@@ -8,25 +8,117 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 
+/**
+ * A log driver that sends log information to journald Logs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ecs.*;
+ * JournaldLogDriver journaldLogDriver = JournaldLogDriver.Builder.create()
+ * .env(List.of("env"))
+ * .envRegex("envRegex")
+ * .labels(List.of("labels"))
+ * .tag("tag")
+ * .build();
+ * ```
+ */
 public open class JournaldLogDriver internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.JournaldLogDriver,
 ) : LogDriver(cdkObject) {
+  /**
+   * Called when the log driver is configured on a container.
+   *
+   * @param _scope 
+   * @param _containerDefinition 
+   */
   public override fun bind(_scope: Construct, _containerDefinition: ContainerDefinition):
       LogDriverConfig = unwrap(this).bind(_scope.let(Construct::unwrap),
       _containerDefinition.let(ContainerDefinition::unwrap)).let(LogDriverConfig::wrap)
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.JournaldLogDriver].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The env option takes an array of keys.
+     *
+     * If there is collision between
+     * label and env keys, the value of the env takes precedence. Adds additional fields
+     * to the extra attributes of a logging message.
+     *
+     * Default: - No env
+     *
+     * @param env The env option takes an array of keys. 
+     */
     public fun env(env: List<String>)
 
+    /**
+     * The env option takes an array of keys.
+     *
+     * If there is collision between
+     * label and env keys, the value of the env takes precedence. Adds additional fields
+     * to the extra attributes of a logging message.
+     *
+     * Default: - No env
+     *
+     * @param env The env option takes an array of keys. 
+     */
     public fun env(vararg env: String)
 
+    /**
+     * The env-regex option is similar to and compatible with env.
+     *
+     * Its value is a regular
+     * expression to match logging-related environment variables. It is used for advanced
+     * log tag options.
+     *
+     * Default: - No envRegex
+     *
+     * @param envRegex The env-regex option is similar to and compatible with env. 
+     */
     public fun envRegex(envRegex: String)
 
+    /**
+     * The labels option takes an array of keys.
+     *
+     * If there is collision
+     * between label and env keys, the value of the env takes precedence. Adds additional
+     * fields to the extra attributes of a logging message.
+     *
+     * Default: - No labels
+     *
+     * @param labels The labels option takes an array of keys. 
+     */
     public fun labels(labels: List<String>)
 
+    /**
+     * The labels option takes an array of keys.
+     *
+     * If there is collision
+     * between label and env keys, the value of the env takes precedence. Adds additional
+     * fields to the extra attributes of a logging message.
+     *
+     * Default: - No labels
+     *
+     * @param labels The labels option takes an array of keys. 
+     */
     public fun labels(vararg labels: String)
 
+    /**
+     * By default, Docker uses the first 12 characters of the container ID to tag log messages.
+     *
+     * Refer to the log tag option documentation for customizing the
+     * log tag format.
+     *
+     * Default: - The first 12 characters of the container ID
+     *
+     * @param tag By default, Docker uses the first 12 characters of the container ID to tag log
+     * messages. 
+     */
     public fun tag(tag: String)
   }
 
@@ -34,22 +126,88 @@ public open class JournaldLogDriver internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ecs.JournaldLogDriver.Builder =
         software.amazon.awscdk.services.ecs.JournaldLogDriver.Builder.create()
 
+    /**
+     * The env option takes an array of keys.
+     *
+     * If there is collision between
+     * label and env keys, the value of the env takes precedence. Adds additional fields
+     * to the extra attributes of a logging message.
+     *
+     * Default: - No env
+     *
+     * @param env The env option takes an array of keys. 
+     */
     override fun env(env: List<String>) {
       cdkBuilder.env(env)
     }
 
+    /**
+     * The env option takes an array of keys.
+     *
+     * If there is collision between
+     * label and env keys, the value of the env takes precedence. Adds additional fields
+     * to the extra attributes of a logging message.
+     *
+     * Default: - No env
+     *
+     * @param env The env option takes an array of keys. 
+     */
     override fun env(vararg env: String): Unit = env(env.toList())
 
+    /**
+     * The env-regex option is similar to and compatible with env.
+     *
+     * Its value is a regular
+     * expression to match logging-related environment variables. It is used for advanced
+     * log tag options.
+     *
+     * Default: - No envRegex
+     *
+     * @param envRegex The env-regex option is similar to and compatible with env. 
+     */
     override fun envRegex(envRegex: String) {
       cdkBuilder.envRegex(envRegex)
     }
 
+    /**
+     * The labels option takes an array of keys.
+     *
+     * If there is collision
+     * between label and env keys, the value of the env takes precedence. Adds additional
+     * fields to the extra attributes of a logging message.
+     *
+     * Default: - No labels
+     *
+     * @param labels The labels option takes an array of keys. 
+     */
     override fun labels(labels: List<String>) {
       cdkBuilder.labels(labels)
     }
 
+    /**
+     * The labels option takes an array of keys.
+     *
+     * If there is collision
+     * between label and env keys, the value of the env takes precedence. Adds additional
+     * fields to the extra attributes of a logging message.
+     *
+     * Default: - No labels
+     *
+     * @param labels The labels option takes an array of keys. 
+     */
     override fun labels(vararg labels: String): Unit = labels(labels.toList())
 
+    /**
+     * By default, Docker uses the first 12 characters of the container ID to tag log messages.
+     *
+     * Refer to the log tag option documentation for customizing the
+     * log tag format.
+     *
+     * Default: - The first 12 characters of the container ID
+     *
+     * @param tag By default, Docker uses the first 12 characters of the container ID to tag log
+     * messages. 
+     */
     override fun tag(tag: String) {
       cdkBuilder.tag(tag)
     }

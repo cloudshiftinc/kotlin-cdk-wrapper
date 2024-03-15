@@ -7,11 +7,36 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.constructs.IConstruct
 import kotlin.Unit
 
+/**
+ * Properties for an UnknownPrincipal.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.iam.*;
+ * import software.constructs.*;
+ * Construct construct;
+ * UnknownPrincipalProps unknownPrincipalProps = UnknownPrincipalProps.builder()
+ * .resource(construct)
+ * .build();
+ * ```
+ */
 public interface UnknownPrincipalProps {
+  /**
+   * The resource the role proxy is for.
+   */
   public fun resource(): IConstruct
 
+  /**
+   * A builder for [UnknownPrincipalProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param resource The resource the role proxy is for. 
+     */
     public fun resource(resource: IConstruct)
   }
 
@@ -19,6 +44,9 @@ public interface UnknownPrincipalProps {
     private val cdkBuilder: software.amazon.awscdk.services.iam.UnknownPrincipalProps.Builder =
         software.amazon.awscdk.services.iam.UnknownPrincipalProps.builder()
 
+    /**
+     * @param resource The resource the role proxy is for. 
+     */
     override fun resource(resource: IConstruct) {
       cdkBuilder.resource(resource.let(IConstruct::unwrap))
     }
@@ -30,6 +58,9 @@ public interface UnknownPrincipalProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.iam.UnknownPrincipalProps,
   ) : CdkObject(cdkObject), UnknownPrincipalProps {
+    /**
+     * The resource the role proxy is for.
+     */
     override fun resource(): IConstruct = unwrap(this).getResource().let(IConstruct::wrap)
   }
 

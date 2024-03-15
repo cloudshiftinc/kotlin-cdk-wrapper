@@ -10,24 +10,81 @@ import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * Route represents a new or existing route attached to a VirtualRouter and Mesh.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.appmesh.*;
+ * Mesh mesh;
+ * RouteSpec routeSpec;
+ * VirtualRouter virtualRouter;
+ * Route route = Route.Builder.create(this, "MyRoute")
+ * .mesh(mesh)
+ * .routeSpec(routeSpec)
+ * .virtualRouter(virtualRouter)
+ * // the properties below are optional
+ * .routeName("routeName")
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/app-mesh/latest/userguide/routes.html)
+ */
 public open class Route internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.Route,
 ) : Resource(cdkObject), IRoute {
+  /**
+   * The Amazon Resource Name (ARN) for the route.
+   */
   public override fun routeArn(): String = unwrap(this).getRouteArn()
 
+  /**
+   * The name of the Route.
+   */
   public override fun routeName(): String = unwrap(this).getRouteName()
 
+  /**
+   * The VirtualRouter the Route belongs to.
+   */
   public override fun virtualRouter(): IVirtualRouter =
       unwrap(this).getVirtualRouter().let(IVirtualRouter::wrap)
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.appmesh.Route].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The service mesh to define the route in.
+     *
+     * @param mesh The service mesh to define the route in. 
+     */
     public fun mesh(mesh: IMesh)
 
+    /**
+     * The name of the route.
+     *
+     * Default: - An automatically generated name
+     *
+     * @param routeName The name of the route. 
+     */
     public fun routeName(routeName: String)
 
+    /**
+     * Protocol specific spec.
+     *
+     * @param routeSpec Protocol specific spec. 
+     */
     public fun routeSpec(routeSpec: RouteSpec)
 
+    /**
+     * The VirtualRouter the Route belongs to.
+     *
+     * @param virtualRouter The VirtualRouter the Route belongs to. 
+     */
     public fun virtualRouter(virtualRouter: IVirtualRouter)
   }
 
@@ -38,18 +95,40 @@ public open class Route internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.Route.Builder =
         software.amazon.awscdk.services.appmesh.Route.Builder.create(scope, id)
 
+    /**
+     * The service mesh to define the route in.
+     *
+     * @param mesh The service mesh to define the route in. 
+     */
     override fun mesh(mesh: IMesh) {
       cdkBuilder.mesh(mesh.let(IMesh::unwrap))
     }
 
+    /**
+     * The name of the route.
+     *
+     * Default: - An automatically generated name
+     *
+     * @param routeName The name of the route. 
+     */
     override fun routeName(routeName: String) {
       cdkBuilder.routeName(routeName)
     }
 
+    /**
+     * Protocol specific spec.
+     *
+     * @param routeSpec Protocol specific spec. 
+     */
     override fun routeSpec(routeSpec: RouteSpec) {
       cdkBuilder.routeSpec(routeSpec.let(RouteSpec::unwrap))
     }
 
+    /**
+     * The VirtualRouter the Route belongs to.
+     *
+     * @param virtualRouter The VirtualRouter the Route belongs to. 
+     */
     override fun virtualRouter(virtualRouter: IVirtualRouter) {
       cdkBuilder.virtualRouter(virtualRouter.let(IVirtualRouter::unwrap))
     }

@@ -7,16 +7,62 @@ import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 
+/**
+ * An AWS service for an interface VPC endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * // Add gateway endpoints when creating the VPC
+ * Vpc vpc = Vpc.Builder.create(this, "MyVpc")
+ * .gatewayEndpoints(Map.of(
+ * "S3", GatewayVpcEndpointOptions.builder()
+ * .service(GatewayVpcEndpointAwsService.S3)
+ * .build()))
+ * .build();
+ * // Alternatively gateway endpoints can be added on the VPC
+ * GatewayVpcEndpoint dynamoDbEndpoint = vpc.addGatewayEndpoint("DynamoDbEndpoint",
+ * GatewayVpcEndpointOptions.builder()
+ * .service(GatewayVpcEndpointAwsService.DYNAMODB)
+ * .build());
+ * // This allows to customize the endpoint policy
+ * dynamoDbEndpoint.addToPolicy(
+ * PolicyStatement.Builder.create() // Restrict to listing and describing tables
+ * .principals(List.of(new AnyPrincipal()))
+ * .actions(List.of("dynamodb:DescribeTable", "dynamodb:ListTables"))
+ * .resources(List.of("*")).build());
+ * // Add an interface endpoint
+ * vpc.addInterfaceEndpoint("EcrDockerEndpoint", InterfaceVpcEndpointOptions.builder()
+ * .service(InterfaceVpcEndpointAwsService.ECR_DOCKER)
+ * .build());
+ * ```
+ */
 public open class InterfaceVpcEndpointAwsService internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService,
 ) : CdkObject(cdkObject), IInterfaceVpcEndpointService {
+  /**
+   * The name of the service.
+   *
+   * e.g. com.amazonaws.us-east-1.ecs
+   */
   public override fun name(): String = unwrap(this).getName()
 
+  /**
+   * The port of the service.
+   */
   public override fun port(): Number = unwrap(this).getPort()
 
+  /**
+   * Whether Private DNS is supported by default.
+   */
   public override fun privateDnsDefault(): Boolean? = unwrap(this).getPrivateDnsDefault()
 
+  /**
+   * The short name of the service.
+   *
+   * e.g. ecs
+   */
   public open fun shortName(): String = unwrap(this).getShortName()
 
   public companion object {

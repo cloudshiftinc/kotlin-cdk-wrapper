@@ -11,16 +11,46 @@ import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * Information about the integration of DevOps Guru with CloudWatch log groups for log anomaly
+ * detection.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.devopsguru.*;
+ * CfnLogAnomalyDetectionIntegration cfnLogAnomalyDetectionIntegration =
+ * CfnLogAnomalyDetectionIntegration.Builder.create(this,
+ * "MyCfnLogAnomalyDetectionIntegration").build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-loganomalydetectionintegration.html)
+ */
 public open class CfnLogAnomalyDetectionIntegration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.devopsguru.CfnLogAnomalyDetectionIntegration,
 ) : CfnResource(cdkObject), IInspectable {
+  /**
+   * The account ID associated with the integration of DevOps Guru with CloudWatch log groups for
+   * log anomaly detection.
+   */
   public open fun attrAccountId(): String = unwrap(this).getAttrAccountId()
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * A fluent builder for
+   * [io.cloudshiftdev.awscdk.services.devopsguru.CfnLogAnomalyDetectionIntegration].
+   */
   @CdkDslMarker
   public interface Builder
 

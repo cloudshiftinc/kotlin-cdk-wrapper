@@ -5,9 +5,27 @@ package io.cloudshiftdev.awscdk.services.lambda
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Version of CloudWatch Lambda Insights.
+ *
+ * Example:
+ *
+ * ```
+ * String layerArn = "arn:aws:lambda:us-east-1:580247275435:layer:LambdaInsightsExtension:14";
+ * Function.Builder.create(this, "MyFunction")
+ * .runtime(Runtime.NODEJS_18_X)
+ * .handler("index.handler")
+ * .code(Code.fromAsset(join(__dirname, "lambda-handler")))
+ * .insightsVersion(LambdaInsightsVersion.fromInsightVersionArn(layerArn))
+ * .build();
+ * ```
+ */
 public abstract class LambdaInsightsVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.LambdaInsightsVersion,
 ) : CdkObject(cdkObject) {
+  /**
+   * The arn of the Lambda Insights extension.
+   */
   public open fun layerVersionArn(): String = unwrap(this).getLayerVersionArn()
 
   private class Wrapper(

@@ -7,10 +7,30 @@ import kotlin.Any
 import kotlin.String
 import kotlin.collections.List
 
+/**
+ * ListenerCondition providers definition.
+ *
+ * Example:
+ *
+ * ```
+ * ApplicationListener listener;
+ * AutoScalingGroup asg;
+ * listener.addTargets("Example.Com Fleet", AddApplicationTargetsProps.builder()
+ * .priority(10)
+ * .conditions(List.of(ListenerCondition.hostHeaders(List.of("example.com")),
+ * ListenerCondition.pathPatterns(List.of("/ok", "/path"))))
+ * .port(8080)
+ * .targets(List.of(asg))
+ * .build());
+ * ```
+ */
 public abstract class ListenerCondition internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCondition,
 ) : CdkObject(cdkObject) {
+  /**
+   * Render the raw Cfn listener rule condition object.
+   */
   public open fun renderRawCondition(): Any = unwrap(this).renderRawCondition()
 
   private class Wrapper(

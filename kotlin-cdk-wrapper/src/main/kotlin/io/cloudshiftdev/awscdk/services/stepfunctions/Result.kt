@@ -10,9 +10,28 @@ import kotlin.String
 import kotlin.collections.List
 import kotlin.collections.Map
 
+/**
+ * The result of a Pass operation.
+ *
+ * Example:
+ *
+ * ```
+ * // Makes the current JSON state { ..., "subObject": { "hello": "world" } }
+ * Pass pass = Pass.Builder.create(this, "Add Hello World")
+ * .result(Result.fromObject(Map.of("hello", "world")))
+ * .resultPath("$.subObject")
+ * .build();
+ * // Set the next state
+ * Pass nextState = new Pass(this, "NextState");
+ * pass.next(nextState);
+ * ```
+ */
 public open class Result internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Result,
 ) : CdkObject(cdkObject) {
+  /**
+   * result of the Pass operation.
+   */
   public open fun `value`(): Any = unwrap(this).getValue()
 
   public companion object {

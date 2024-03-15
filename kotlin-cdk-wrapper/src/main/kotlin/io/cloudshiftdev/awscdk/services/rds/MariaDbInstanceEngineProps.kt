@@ -6,11 +6,37 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Properties for MariaDB instance engines.
+ *
+ * Used in `DatabaseInstanceEngine.mariaDb`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.rds.*;
+ * MariaDbEngineVersion mariaDbEngineVersion;
+ * MariaDbInstanceEngineProps mariaDbInstanceEngineProps = MariaDbInstanceEngineProps.builder()
+ * .version(mariaDbEngineVersion)
+ * .build();
+ * ```
+ */
 public interface MariaDbInstanceEngineProps {
+  /**
+   * The exact version of the engine to use.
+   */
   public fun version(): MariaDbEngineVersion
 
+  /**
+   * A builder for [MariaDbInstanceEngineProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param version The exact version of the engine to use. 
+     */
     public fun version(version: MariaDbEngineVersion)
   }
 
@@ -18,6 +44,9 @@ public interface MariaDbInstanceEngineProps {
     private val cdkBuilder: software.amazon.awscdk.services.rds.MariaDbInstanceEngineProps.Builder =
         software.amazon.awscdk.services.rds.MariaDbInstanceEngineProps.builder()
 
+    /**
+     * @param version The exact version of the engine to use. 
+     */
     override fun version(version: MariaDbEngineVersion) {
       cdkBuilder.version(version.let(MariaDbEngineVersion::unwrap))
     }
@@ -29,6 +58,9 @@ public interface MariaDbInstanceEngineProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.rds.MariaDbInstanceEngineProps,
   ) : CdkObject(cdkObject), MariaDbInstanceEngineProps {
+    /**
+     * The exact version of the engine to use.
+     */
     override fun version(): MariaDbEngineVersion =
         unwrap(this).getVersion().let(MariaDbEngineVersion::wrap)
   }

@@ -4,14 +4,27 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 
+/**
+ * Access log destination for a RestApi Stage.
+ */
 public interface IAccessLogDestination {
-  public fun bind(arg0: IStage): AccessLogDestinationConfig
+  /**
+   * Binds this destination to the RestApi Stage.
+   *
+   * @param stage 
+   */
+  public fun bind(stage: IStage): AccessLogDestinationConfig
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.apigateway.IAccessLogDestination,
   ) : CdkObject(cdkObject), IAccessLogDestination {
-    override fun bind(arg0: IStage): AccessLogDestinationConfig =
-        unwrap(this).bind(arg0.let(IStage::unwrap)).let(AccessLogDestinationConfig::wrap)
+    /**
+     * Binds this destination to the RestApi Stage.
+     *
+     * @param stage 
+     */
+    override fun bind(stage: IStage): AccessLogDestinationConfig =
+        unwrap(this).bind(stage.let(IStage::unwrap)).let(AccessLogDestinationConfig::wrap)
   }
 
   public companion object {

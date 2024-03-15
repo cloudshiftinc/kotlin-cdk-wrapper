@@ -11,56 +11,153 @@ import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * Specifies a template constraint.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.servicecatalog.*;
+ * CfnLaunchTemplateConstraint cfnLaunchTemplateConstraint =
+ * CfnLaunchTemplateConstraint.Builder.create(this, "MyCfnLaunchTemplateConstraint")
+ * .portfolioId("portfolioId")
+ * .productId("productId")
+ * .rules("rules")
+ * // the properties below are optional
+ * .acceptLanguage("acceptLanguage")
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchtemplateconstraint.html)
+ */
 public open class CfnLaunchTemplateConstraint internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstraint,
 ) : CfnResource(cdkObject), IInspectable {
+  /**
+   * The language code.
+   */
   public open fun acceptLanguage(): String? = unwrap(this).getAcceptLanguage()
 
+  /**
+   * The language code.
+   */
   public open fun acceptLanguage(`value`: String) {
     unwrap(this).setAcceptLanguage(`value`)
   }
 
+  /**
+   *
+   */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
+  /**
+   * The description of the constraint.
+   */
   public open fun description(): String? = unwrap(this).getDescription()
 
+  /**
+   * The description of the constraint.
+   */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
   }
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * The portfolio identifier.
+   */
   public open fun portfolioId(): String = unwrap(this).getPortfolioId()
 
+  /**
+   * The portfolio identifier.
+   */
   public open fun portfolioId(`value`: String) {
     unwrap(this).setPortfolioId(`value`)
   }
 
+  /**
+   * The product identifier.
+   */
   public open fun productId(): String = unwrap(this).getProductId()
 
+  /**
+   * The product identifier.
+   */
   public open fun productId(`value`: String) {
     unwrap(this).setProductId(`value`)
   }
 
+  /**
+   * The constraint rules.
+   */
   public open fun rules(): String = unwrap(this).getRules()
 
+  /**
+   * The constraint rules.
+   */
   public open fun rules(`value`: String) {
     unwrap(this).setRules(`value`)
   }
 
+  /**
+   * A fluent builder for
+   * [io.cloudshiftdev.awscdk.services.servicecatalog.CfnLaunchTemplateConstraint].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The language code.
+     *
+     * * `jp` - Japanese
+     * * `zh` - Chinese
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchtemplateconstraint.html#cfn-servicecatalog-launchtemplateconstraint-acceptlanguage)
+     * @param acceptLanguage The language code. 
+     */
     public fun acceptLanguage(acceptLanguage: String)
 
+    /**
+     * The description of the constraint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchtemplateconstraint.html#cfn-servicecatalog-launchtemplateconstraint-description)
+     * @param description The description of the constraint. 
+     */
     public fun description(description: String)
 
+    /**
+     * The portfolio identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchtemplateconstraint.html#cfn-servicecatalog-launchtemplateconstraint-portfolioid)
+     * @param portfolioId The portfolio identifier. 
+     */
     public fun portfolioId(portfolioId: String)
 
+    /**
+     * The product identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchtemplateconstraint.html#cfn-servicecatalog-launchtemplateconstraint-productid)
+     * @param productId The product identifier. 
+     */
     public fun productId(productId: String)
 
+    /**
+     * The constraint rules.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchtemplateconstraint.html#cfn-servicecatalog-launchtemplateconstraint-rules)
+     * @param rules The constraint rules. 
+     */
     public fun rules(rules: String)
   }
 
@@ -73,22 +170,55 @@ public open class CfnLaunchTemplateConstraint internal constructor(
         software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstraint.Builder.create(scope,
         id)
 
+    /**
+     * The language code.
+     *
+     * * `jp` - Japanese
+     * * `zh` - Chinese
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchtemplateconstraint.html#cfn-servicecatalog-launchtemplateconstraint-acceptlanguage)
+     * @param acceptLanguage The language code. 
+     */
     override fun acceptLanguage(acceptLanguage: String) {
       cdkBuilder.acceptLanguage(acceptLanguage)
     }
 
+    /**
+     * The description of the constraint.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchtemplateconstraint.html#cfn-servicecatalog-launchtemplateconstraint-description)
+     * @param description The description of the constraint. 
+     */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
+    /**
+     * The portfolio identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchtemplateconstraint.html#cfn-servicecatalog-launchtemplateconstraint-portfolioid)
+     * @param portfolioId The portfolio identifier. 
+     */
     override fun portfolioId(portfolioId: String) {
       cdkBuilder.portfolioId(portfolioId)
     }
 
+    /**
+     * The product identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchtemplateconstraint.html#cfn-servicecatalog-launchtemplateconstraint-productid)
+     * @param productId The product identifier. 
+     */
     override fun productId(productId: String) {
       cdkBuilder.productId(productId)
     }
 
+    /**
+     * The constraint rules.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-launchtemplateconstraint.html#cfn-servicecatalog-launchtemplateconstraint-rules)
+     * @param rules The constraint rules. 
+     */
     override fun rules(rules: String) {
       cdkBuilder.rules(rules)
     }

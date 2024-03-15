@@ -7,14 +7,42 @@ import kotlin.Boolean
 import kotlin.String
 import kotlin.collections.List
 
+/**
+ * Represents file path ignoring behavior.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * IgnoreStrategy ignoreStrategy = IgnoreStrategy.fromCopyOptions(CopyOptions.builder()
+ * .exclude(List.of("exclude"))
+ * .follow(SymlinkFollowMode.NEVER)
+ * .ignoreMode(IgnoreMode.GLOB)
+ * .build(), "absoluteRootPath");
+ * ```
+ */
 public abstract class IgnoreStrategy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.IgnoreStrategy,
 ) : CdkObject(cdkObject) {
-  public open fun add(arg0: String) {
-    unwrap(this).add(arg0)
+  /**
+   * Adds another pattern.
+   *
+   * @param pattern 
+   */
+  public open fun add(pattern: String) {
+    unwrap(this).add(pattern)
   }
 
-  public open fun ignores(arg0: String): Boolean = unwrap(this).ignores(arg0)
+  /**
+   * Determines whether a given file path should be ignored or not.
+   *
+   * @return `true` if the file should be ignored
+   * @param absoluteFilePath absolute file path to be assessed against the pattern. 
+   */
+  public open fun ignores(absoluteFilePath: String): Boolean =
+      unwrap(this).ignores(absoluteFilePath)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.IgnoreStrategy,

@@ -6,12 +6,36 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 
+/**
+ * Defines HTTP gateway route matching based on the URL path of the request.
+ *
+ * Example:
+ *
+ * ```
+ * VirtualGateway gateway;
+ * VirtualService virtualService;
+ * gateway.addGatewayRoute("gateway-route-http-2", GatewayRouteBaseProps.builder()
+ * .routeSpec(GatewayRouteSpec.http(HttpGatewayRouteSpecOptions.builder()
+ * .routeTarget(virtualService)
+ * .match(HttpGatewayRouteMatch.builder()
+ * // This rewrites the path from '/test' to '/rewrittenPath'.
+ * .path(HttpGatewayRoutePathMatch.exactly("/test", "/rewrittenPath"))
+ * .build())
+ * .build()))
+ * .build());
+ * ```
+ */
 public abstract class HttpGatewayRoutePathMatch internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.appmesh.HttpGatewayRoutePathMatch,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct): HttpGatewayRoutePathMatchConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(HttpGatewayRoutePathMatchConfig::wrap)
+  /**
+   * Returns the gateway route path match configuration.
+   *
+   * @param scope 
+   */
+  public open fun bind(scope: Construct): HttpGatewayRoutePathMatchConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(HttpGatewayRoutePathMatchConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.HttpGatewayRoutePathMatch,

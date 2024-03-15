@@ -6,11 +6,41 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 
+/**
+ * Used to generate query parameter matching methods.
+ *
+ * Example:
+ *
+ * ```
+ * VirtualRouter router;
+ * VirtualNode node;
+ * router.addRoute("route-http2", RouteBaseProps.builder()
+ * .routeSpec(RouteSpec.http2(HttpRouteSpecOptions.builder()
+ * .weightedTargets(List.of(WeightedTarget.builder()
+ * .virtualNode(node)
+ * .build()))
+ * .match(HttpRouteMatch.builder()
+ * .path(HttpRoutePathMatch.exactly("/exact"))
+ * .method(HttpRouteMethod.POST)
+ * .protocol(HttpRouteProtocol.HTTPS)
+ * .headers(List.of(HeaderMatch.valueIs("Content-Type", "application/json"),
+ * HeaderMatch.valueIsNot("Content-Type", "application/json")))
+ * .queryParameters(List.of(QueryParameterMatch.valueIs("query-field", "value")))
+ * .build())
+ * .build()))
+ * .build());
+ * ```
+ */
 public abstract class QueryParameterMatch internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.QueryParameterMatch,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct): QueryParameterMatchConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(QueryParameterMatchConfig::wrap)
+  /**
+   * Returns the query parameter match configuration.
+   *
+   * @param scope 
+   */
+  public open fun bind(scope: Construct): QueryParameterMatchConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(QueryParameterMatchConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.QueryParameterMatch,

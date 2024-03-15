@@ -6,6 +6,26 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Number
 import kotlin.String
 
+/**
+ * Factory functions for standard statistics strings.
+ *
+ * Example:
+ *
+ * ```
+ * Dashboard dashboard;
+ * Metric executionCountMetric;
+ * Metric errorCountMetric;
+ * dashboard.addWidgets(GraphWidget.Builder.create()
+ * .title("Executions vs error rate")
+ * .left(List.of(executionCountMetric))
+ * .right(List.of(errorCountMetric.with(MetricOptions.builder()
+ * .statistic(Stats.AVERAGE)
+ * .label("Error rate")
+ * .color(Color.GREEN)
+ * .build())))
+ * .build());
+ * ```
+ */
 public abstract class Stats internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.Stats,
 ) : CdkObject(cdkObject) {

@@ -8,19 +8,61 @@ import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.logs.*;
+ * ColumnRestriction columnRestriction = ColumnRestriction.builder()
+ * .comparison("comparison")
+ * // the properties below are optional
+ * .numberValue(123)
+ * .stringValue("stringValue")
+ * .build();
+ * ```
+ */
 public interface ColumnRestriction {
+  /**
+   * Comparison operator to use.
+   */
   public fun comparison(): String
 
+  /**
+   * Number value to compare to.
+   *
+   * Exactly one of 'stringValue' and 'numberValue' must be set.
+   */
   public fun numberValue(): Number? = unwrap(this).getNumberValue()
 
+  /**
+   * String value to compare to.
+   *
+   * Exactly one of 'stringValue' and 'numberValue' must be set.
+   */
   public fun stringValue(): String? = unwrap(this).getStringValue()
 
+  /**
+   * A builder for [ColumnRestriction]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param comparison Comparison operator to use. 
+     */
     public fun comparison(comparison: String)
 
+    /**
+     * @param numberValue Number value to compare to.
+     * Exactly one of 'stringValue' and 'numberValue' must be set.
+     */
     public fun numberValue(numberValue: Number)
 
+    /**
+     * @param stringValue String value to compare to.
+     * Exactly one of 'stringValue' and 'numberValue' must be set.
+     */
     public fun stringValue(stringValue: String)
   }
 
@@ -28,14 +70,25 @@ public interface ColumnRestriction {
     private val cdkBuilder: software.amazon.awscdk.services.logs.ColumnRestriction.Builder =
         software.amazon.awscdk.services.logs.ColumnRestriction.builder()
 
+    /**
+     * @param comparison Comparison operator to use. 
+     */
     override fun comparison(comparison: String) {
       cdkBuilder.comparison(comparison)
     }
 
+    /**
+     * @param numberValue Number value to compare to.
+     * Exactly one of 'stringValue' and 'numberValue' must be set.
+     */
     override fun numberValue(numberValue: Number) {
       cdkBuilder.numberValue(numberValue)
     }
 
+    /**
+     * @param stringValue String value to compare to.
+     * Exactly one of 'stringValue' and 'numberValue' must be set.
+     */
     override fun stringValue(stringValue: String) {
       cdkBuilder.stringValue(stringValue)
     }
@@ -46,10 +99,23 @@ public interface ColumnRestriction {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.logs.ColumnRestriction,
   ) : CdkObject(cdkObject), ColumnRestriction {
+    /**
+     * Comparison operator to use.
+     */
     override fun comparison(): String = unwrap(this).getComparison()
 
+    /**
+     * Number value to compare to.
+     *
+     * Exactly one of 'stringValue' and 'numberValue' must be set.
+     */
     override fun numberValue(): Number? = unwrap(this).getNumberValue()
 
+    /**
+     * String value to compare to.
+     *
+     * Exactly one of 'stringValue' and 'numberValue' must be set.
+     */
     override fun stringValue(): String? = unwrap(this).getStringValue()
   }
 

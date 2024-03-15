@@ -10,41 +10,128 @@ import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * Define a Public DNS Namespace.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.*;
+ * import io.cloudshiftdev.awscdk.*;
+ * App app = new App();
+ * Stack stack = new Stack(app, "aws-servicediscovery-integ");
+ * PublicDnsNamespace namespace = PublicDnsNamespace.Builder.create(stack, "Namespace")
+ * .name("foobar.com")
+ * .build();
+ * Service service = namespace.createService("Service", DnsServiceProps.builder()
+ * .name("foo")
+ * .dnsRecordType(DnsRecordType.A)
+ * .dnsTtl(Duration.seconds(30))
+ * .healthCheck(HealthCheckConfig.builder()
+ * .type(HealthCheckType.HTTPS)
+ * .resourcePath("/healthcheck")
+ * .failureThreshold(2)
+ * .build())
+ * .build());
+ * service.registerIpInstance("IpInstance", IpInstanceBaseProps.builder()
+ * .ipv4("54.239.25.192")
+ * .port(443)
+ * .build());
+ * app.synth();
+ * ```
+ */
 public open class PublicDnsNamespace internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.servicediscovery.PublicDnsNamespace,
 ) : Resource(cdkObject), IPublicDnsNamespace {
+  /**
+   * Creates a service within the namespace.
+   *
+   * @param id 
+   * @param props
+   */
   public open fun createService(id: String): Service =
       unwrap(this).createService(id).let(Service::wrap)
 
+  /**
+   * Creates a service within the namespace.
+   *
+   * @param id 
+   * @param props
+   */
   public open fun createService(id: String, props: DnsServiceProps): Service =
       unwrap(this).createService(id, props.let(DnsServiceProps::unwrap)).let(Service::wrap)
 
+  /**
+   * Creates a service within the namespace.
+   *
+   * @param id 
+   * @param props
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("69f3a5b00b7381d4c2046bf3fc80e0f9c6eac9693318682de7bf91ea41fd33e7")
   public open fun createService(id: String, props: DnsServiceProps.Builder.() -> Unit): Service =
       createService(id, DnsServiceProps(props))
 
+  /**
+   * Namespace Arn for the namespace.
+   */
   public override fun namespaceArn(): String = unwrap(this).getNamespaceArn()
 
+  /**
+   * ID of hosted zone created by namespace.
+   */
   public open fun namespaceHostedZoneId(): String = unwrap(this).getNamespaceHostedZoneId()
 
+  /**
+   * Namespace Id for the namespace.
+   */
   public override fun namespaceId(): String = unwrap(this).getNamespaceId()
 
+  /**
+   * A name for the namespace.
+   */
   public override fun namespaceName(): String = unwrap(this).getNamespaceName()
 
+  /**
+   *
+   */
   public open fun publicDnsNamespaceArn(): String = unwrap(this).getPublicDnsNamespaceArn()
 
+  /**
+   *
+   */
   public open fun publicDnsNamespaceId(): String = unwrap(this).getPublicDnsNamespaceId()
 
+  /**
+   *
+   */
   public open fun publicDnsNamespaceName(): String = unwrap(this).getPublicDnsNamespaceName()
 
+  /**
+   * Type of the namespace.
+   */
   public override fun type(): NamespaceType = unwrap(this).getType().let(NamespaceType::wrap)
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.servicediscovery.PublicDnsNamespace].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * A description of the Namespace.
+     *
+     * Default: none
+     *
+     * @param description A description of the Namespace. 
+     */
     public fun description(description: String)
 
+    /**
+     * A name for the Namespace.
+     *
+     * @param name A name for the Namespace. 
+     */
     public fun name(name: String)
   }
 
@@ -57,10 +144,22 @@ public open class PublicDnsNamespace internal constructor(
         software.amazon.awscdk.services.servicediscovery.PublicDnsNamespace.Builder.create(scope,
         id)
 
+    /**
+     * A description of the Namespace.
+     *
+     * Default: none
+     *
+     * @param description A description of the Namespace. 
+     */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
+    /**
+     * A name for the Namespace.
+     *
+     * @param name A name for the Namespace. 
+     */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }

@@ -7,15 +7,49 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 
+/**
+ * Input to the bind() operation, that binds an authorizer to a route.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
+ * import software.constructs.*;
+ * Construct construct;
+ * WebSocketRoute webSocketRoute;
+ * WebSocketRouteAuthorizerBindOptions webSocketRouteAuthorizerBindOptions =
+ * WebSocketRouteAuthorizerBindOptions.builder()
+ * .route(webSocketRoute)
+ * .scope(construct)
+ * .build();
+ * ```
+ */
 public interface WebSocketRouteAuthorizerBindOptions {
+  /**
+   * The route to which the authorizer is being bound.
+   */
   public fun route(): IWebSocketRoute
 
+  /**
+   * The scope for any constructs created as part of the bind.
+   */
   public fun scope(): Construct
 
+  /**
+   * A builder for [WebSocketRouteAuthorizerBindOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param route The route to which the authorizer is being bound. 
+     */
     public fun route(route: IWebSocketRoute)
 
+    /**
+     * @param scope The scope for any constructs created as part of the bind. 
+     */
     public fun scope(scope: Construct)
   }
 
@@ -24,10 +58,16 @@ public interface WebSocketRouteAuthorizerBindOptions {
         software.amazon.awscdk.services.apigatewayv2.WebSocketRouteAuthorizerBindOptions.Builder =
         software.amazon.awscdk.services.apigatewayv2.WebSocketRouteAuthorizerBindOptions.builder()
 
+    /**
+     * @param route The route to which the authorizer is being bound. 
+     */
     override fun route(route: IWebSocketRoute) {
       cdkBuilder.route(route.let(IWebSocketRoute::unwrap))
     }
 
+    /**
+     * @param scope The scope for any constructs created as part of the bind. 
+     */
     override fun scope(scope: Construct) {
       cdkBuilder.scope(scope.let(Construct::unwrap))
     }
@@ -41,8 +81,14 @@ public interface WebSocketRouteAuthorizerBindOptions {
     override val cdkObject:
         software.amazon.awscdk.services.apigatewayv2.WebSocketRouteAuthorizerBindOptions,
   ) : CdkObject(cdkObject), WebSocketRouteAuthorizerBindOptions {
+    /**
+     * The route to which the authorizer is being bound.
+     */
     override fun route(): IWebSocketRoute = unwrap(this).getRoute().let(IWebSocketRoute::wrap)
 
+    /**
+     * The scope for any constructs created as part of the bind.
+     */
     override fun scope(): Construct = unwrap(this).getScope().let(Construct::wrap)
   }
 

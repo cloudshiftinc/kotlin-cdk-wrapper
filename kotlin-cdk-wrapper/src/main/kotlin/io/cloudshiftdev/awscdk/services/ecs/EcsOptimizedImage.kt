@@ -9,9 +9,45 @@ import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Construct a Linux or Windows machine image from the latest ECS Optimized AMI published in SSM.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * Cluster cluster = Cluster.Builder.create(this, "Cluster")
+ * .vpc(vpc)
+ * .build();
+ * // Either add default capacity
+ * cluster.addCapacity("DefaultAutoScalingGroupCapacity", AddCapacityOptions.builder()
+ * .instanceType(new InstanceType("t2.xlarge"))
+ * .desiredCapacity(3)
+ * .build());
+ * // Or add customized capacity. Be sure to start the Amazon ECS-optimized AMI.
+ * AutoScalingGroup autoScalingGroup = AutoScalingGroup.Builder.create(this, "ASG")
+ * .vpc(vpc)
+ * .instanceType(new InstanceType("t2.xlarge"))
+ * .machineImage(EcsOptimizedImage.amazonLinux())
+ * // Or use Amazon ECS-Optimized Amazon Linux 2 AMI
+ * // machineImage: EcsOptimizedImage.amazonLinux2(),
+ * .desiredCapacity(3)
+ * .build();
+ * AsgCapacityProvider capacityProvider = AsgCapacityProvider.Builder.create(this,
+ * "AsgCapacityProvider")
+ * .autoScalingGroup(autoScalingGroup)
+ * .build();
+ * cluster.addAsgCapacityProvider(capacityProvider);
+ * ```
+ */
 public open class EcsOptimizedImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.EcsOptimizedImage,
 ) : CdkObject(cdkObject), IMachineImage {
+  /**
+   * Return the correct image.
+   *
+   * @param scope 
+   */
   public override fun image(scope: Construct): MachineImageConfig =
       unwrap(this).getImage(scope.let(Construct::unwrap)).let(MachineImageConfig::wrap)
 

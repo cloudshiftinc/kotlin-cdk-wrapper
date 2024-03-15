@@ -9,6 +9,12 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
+/**
+ * Lazily produce a value.
+ *
+ * Can be used to return a string, list or numeric value whose actual value
+ * will only be calculated later, during synthesis.
+ */
 public open class Lazy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.Lazy,
 ) : CdkObject(cdkObject) {

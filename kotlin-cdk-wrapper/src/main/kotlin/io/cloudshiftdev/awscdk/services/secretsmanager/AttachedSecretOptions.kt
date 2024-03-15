@@ -6,11 +6,35 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Options to add a secret attachment to a secret.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.secretsmanager.*;
+ * ISecretAttachmentTarget secretAttachmentTarget;
+ * AttachedSecretOptions attachedSecretOptions = AttachedSecretOptions.builder()
+ * .target(secretAttachmentTarget)
+ * .build();
+ * ```
+ */
 public interface AttachedSecretOptions {
+  /**
+   * The target to attach the secret to.
+   */
   public fun target(): ISecretAttachmentTarget
 
+  /**
+   * A builder for [AttachedSecretOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param target The target to attach the secret to. 
+     */
     public fun target(target: ISecretAttachmentTarget)
   }
 
@@ -19,6 +43,9 @@ public interface AttachedSecretOptions {
         software.amazon.awscdk.services.secretsmanager.AttachedSecretOptions.Builder =
         software.amazon.awscdk.services.secretsmanager.AttachedSecretOptions.builder()
 
+    /**
+     * @param target The target to attach the secret to. 
+     */
     override fun target(target: ISecretAttachmentTarget) {
       cdkBuilder.target(target.let(ISecretAttachmentTarget::unwrap))
     }
@@ -30,6 +57,9 @@ public interface AttachedSecretOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.secretsmanager.AttachedSecretOptions,
   ) : CdkObject(cdkObject), AttachedSecretOptions {
+    /**
+     * The target to attach the secret to.
+     */
     override fun target(): ISecretAttachmentTarget =
         unwrap(this).getTarget().let(ISecretAttachmentTarget::wrap)
   }

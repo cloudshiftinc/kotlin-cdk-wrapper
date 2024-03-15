@@ -11,16 +11,48 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Base class for configuring listener when registering targets.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * TaskDefinition taskDefinition;
+ * Vpc vpc;
+ * FargateService service = FargateService.Builder.create(this,
+ * "Service").cluster(cluster).taskDefinition(taskDefinition).build();
+ * ApplicationLoadBalancer lb = ApplicationLoadBalancer.Builder.create(this,
+ * "LB").vpc(vpc).internetFacing(true).build();
+ * ApplicationListener listener = lb.addListener("Listener",
+ * BaseApplicationListenerProps.builder().port(80).build());
+ * service.registerLoadBalancerTargets(EcsTarget.builder()
+ * .containerName("web")
+ * .containerPort(80)
+ * .newTargetGroupId("ECS")
+ * .listener(ListenerConfig.applicationListener(listener, AddApplicationTargetsProps.builder()
+ * .protocol(ApplicationProtocol.HTTPS)
+ * .build()))
+ * .build());
+ * ```
+ */
 public abstract class ListenerConfig internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.ListenerConfig,
 ) : CdkObject(cdkObject) {
+  /**
+   * Create and attach a target group to listener.
+   *
+   * @param id 
+   * @param target 
+   * @param service 
+   */
   public open fun addTargets(
-    arg0: String,
-    arg1: LoadBalancerTargetOptions,
-    arg2: BaseService,
+    id: String,
+    target: LoadBalancerTargetOptions,
+    service: BaseService,
   ) {
-    unwrap(this).addTargets(arg0, arg1.let(LoadBalancerTargetOptions::unwrap),
-        arg2.let(BaseService::unwrap))
+    unwrap(this).addTargets(id, target.let(LoadBalancerTargetOptions::unwrap),
+        service.let(BaseService::unwrap))
   }
 
   private class Wrapper(

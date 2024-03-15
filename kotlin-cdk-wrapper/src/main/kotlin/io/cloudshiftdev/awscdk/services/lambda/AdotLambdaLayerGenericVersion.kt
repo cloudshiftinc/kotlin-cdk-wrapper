@@ -6,10 +6,29 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.constructs.IConstruct
 import kotlin.String
 
+/**
+ * The collection of versions of the ADOT Lambda Layer for generic purpose.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.lambda.*;
+ * AdotLambdaLayerGenericVersion adotLambdaLayerGenericVersion =
+ * AdotLambdaLayerGenericVersion.LATEST;
+ * ```
+ */
 public open class AdotLambdaLayerGenericVersion internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.lambda.AdotLambdaLayerGenericVersion,
 ) : CdkObject(cdkObject) {
+  /**
+   * The ARN of the Lambda layer.
+   *
+   * @param scope The binding scope. 
+   * @param architecture The architecture of the Lambda layer (either X86_64 or ARM_64). 
+   */
   public open fun layerArn(scope: IConstruct, architecture: Architecture): String =
       unwrap(this).layerArn(scope.let(IConstruct::unwrap), architecture.let(Architecture::unwrap))
 

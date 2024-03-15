@@ -5,11 +5,33 @@ package io.cloudshiftdev.awscdk.services.appconfig
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Use an Amazon EventBridge event bus as an event destination.
+ *
+ * Example:
+ *
+ * ```
+ * IEventBus bus = EventBus.fromEventBusName(this, "MyEventBus", "default");
+ * Extension.Builder.create(this, "MyExtension")
+ * .actions(List.of(
+ * Action.Builder.create()
+ * .actionPoints(List.of(ActionPoint.ON_DEPLOYMENT_START))
+ * .eventDestination(new EventBridgeDestination(bus))
+ * .build()))
+ * .build();
+ * ```
+ */
 public open class EventBridgeDestination internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.EventBridgeDestination,
 ) : CdkObject(cdkObject), IEventDestination {
+  /**
+   * The URI of the extension event destination.
+   */
   public override fun extensionUri(): String = unwrap(this).getExtensionUri()
 
+  /**
+   * The type of the extension event destination.
+   */
   public override fun type(): SourceType = unwrap(this).getType().let(SourceType::wrap)
 
   public companion object {

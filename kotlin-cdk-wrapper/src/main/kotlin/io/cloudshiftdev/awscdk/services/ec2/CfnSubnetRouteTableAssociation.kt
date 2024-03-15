@@ -11,32 +11,93 @@ import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * Associates a subnet with a route table.
+ *
+ * The subnet and route table must be in the same VPC. This association causes traffic originating
+ * from the subnet to be routed according to the routes in the route table. A route table can be
+ * associated with multiple subnets. To create a route table, see
+ * [AWS::EC2::RouteTable](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-routetable.html)
+ * .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * CfnSubnetRouteTableAssociation cfnSubnetRouteTableAssociation =
+ * CfnSubnetRouteTableAssociation.Builder.create(this, "MyCfnSubnetRouteTableAssociation")
+ * .routeTableId("routeTableId")
+ * .subnetId("subnetId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetroutetableassociation.html)
+ */
 public open class CfnSubnetRouteTableAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.CfnSubnetRouteTableAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  /**
+   * The ID of the subnet route table association.
+   */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * The ID of the route table.
+   */
   public open fun routeTableId(): String = unwrap(this).getRouteTableId()
 
+  /**
+   * The ID of the route table.
+   */
   public open fun routeTableId(`value`: String) {
     unwrap(this).setRouteTableId(`value`)
   }
 
+  /**
+   * The ID of the subnet.
+   */
   public open fun subnetId(): String = unwrap(this).getSubnetId()
 
+  /**
+   * The ID of the subnet.
+   */
   public open fun subnetId(`value`: String) {
     unwrap(this).setSubnetId(`value`)
   }
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.CfnSubnetRouteTableAssociation].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The ID of the route table.
+     *
+     * The physical ID changes when the route table ID is changed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetroutetableassociation.html#cfn-ec2-subnetroutetableassociation-routetableid)
+     * @param routeTableId The ID of the route table. 
+     */
     public fun routeTableId(routeTableId: String)
 
+    /**
+     * The ID of the subnet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetroutetableassociation.html#cfn-ec2-subnetroutetableassociation-subnetid)
+     * @param subnetId The ID of the subnet. 
+     */
     public fun subnetId(subnetId: String)
   }
 
@@ -48,10 +109,24 @@ public open class CfnSubnetRouteTableAssociation internal constructor(
         software.amazon.awscdk.services.ec2.CfnSubnetRouteTableAssociation.Builder =
         software.amazon.awscdk.services.ec2.CfnSubnetRouteTableAssociation.Builder.create(scope, id)
 
+    /**
+     * The ID of the route table.
+     *
+     * The physical ID changes when the route table ID is changed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetroutetableassociation.html#cfn-ec2-subnetroutetableassociation-routetableid)
+     * @param routeTableId The ID of the route table. 
+     */
     override fun routeTableId(routeTableId: String) {
       cdkBuilder.routeTableId(routeTableId)
     }
 
+    /**
+     * The ID of the subnet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnetroutetableassociation.html#cfn-ec2-subnetroutetableassociation-subnetid)
+     * @param subnetId The ID of the subnet. 
+     */
     override fun subnetId(subnetId: String) {
       cdkBuilder.subnetId(subnetId)
     }

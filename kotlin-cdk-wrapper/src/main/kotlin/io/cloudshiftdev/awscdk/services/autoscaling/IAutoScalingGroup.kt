@@ -15,178 +15,447 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * An AutoScalingGroup.
+ */
 public interface IAutoScalingGroup : IResource, IGrantable {
-  public fun addLifecycleHook(arg0: String, arg1: BasicLifecycleHookProps): LifecycleHook
+  /**
+   * Send a message to either an SQS queue or SNS topic when instances launch or terminate.
+   *
+   * @param id 
+   * @param props 
+   */
+  public fun addLifecycleHook(id: String, props: BasicLifecycleHookProps): LifecycleHook
 
+  /**
+   * Send a message to either an SQS queue or SNS topic when instances launch or terminate.
+   *
+   * @param id 
+   * @param props 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("e73b58a332c5f3bcf737c3c3902fb97721571b04a55f030350ee06a5be61db31")
-  public fun addLifecycleHook(arg0: String, arg1: BasicLifecycleHookProps.Builder.() -> Unit):
+  public fun addLifecycleHook(id: String, props: BasicLifecycleHookProps.Builder.() -> Unit):
       LifecycleHook
 
-  public fun addUserData(arg0: String)
+  /**
+   * Add command to the startup script of fleet instances.
+   *
+   * The command must be in the scripting language supported by the fleet's OS (i.e. Linux/Windows).
+   * Does nothing for imported ASGs.
+   *
+   * @param commands 
+   */
+  public fun addUserData(commands: String)
 
+  /**
+   * Add a pool of pre-initialized EC2 instances that sits alongside an Auto Scaling group.
+   *
+   * @param options
+   */
   public fun addWarmPool(): WarmPool
 
-  public fun addWarmPool(arg0: WarmPoolOptions): WarmPool
+  /**
+   * Add a pool of pre-initialized EC2 instances that sits alongside an Auto Scaling group.
+   *
+   * @param options
+   */
+  public fun addWarmPool(options: WarmPoolOptions): WarmPool
 
+  /**
+   * Add a pool of pre-initialized EC2 instances that sits alongside an Auto Scaling group.
+   *
+   * @param options
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("ebe3a17babce83c2ccb570a7464dccb7ae43140da33baacb05b1a15a27a69e43")
-  public fun addWarmPool(arg0: WarmPoolOptions.Builder.() -> Unit): WarmPool
+  public fun addWarmPool(options: WarmPoolOptions.Builder.() -> Unit): WarmPool
 
+  /**
+   * The arn of the AutoScalingGroup.
+   */
   public fun autoScalingGroupArn(): String
 
+  /**
+   * The name of the AutoScalingGroup.
+   */
   public fun autoScalingGroupName(): String
 
+  /**
+   * The operating system family that the instances in this auto-scaling group belong to.
+   *
+   * Is 'UNKNOWN' for imported ASGs.
+   */
   public fun osType(): OperatingSystemType
 
-  public fun scaleOnCpuUtilization(arg0: String, arg1: CpuUtilizationScalingProps):
+  /**
+   * Scale out or in to achieve a target CPU utilization.
+   *
+   * @param id 
+   * @param props 
+   */
+  public fun scaleOnCpuUtilization(id: String, props: CpuUtilizationScalingProps):
       TargetTrackingScalingPolicy
 
+  /**
+   * Scale out or in to achieve a target CPU utilization.
+   *
+   * @param id 
+   * @param props 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("54ff0f79a3a0e98af41f878332105ce744cc94709e6dfa3c31c968213fde0127")
-  public fun scaleOnCpuUtilization(arg0: String,
-      arg1: CpuUtilizationScalingProps.Builder.() -> Unit): TargetTrackingScalingPolicy
+  public fun scaleOnCpuUtilization(id: String,
+      props: CpuUtilizationScalingProps.Builder.() -> Unit): TargetTrackingScalingPolicy
 
-  public fun scaleOnIncomingBytes(arg0: String, arg1: NetworkUtilizationScalingProps):
+  /**
+   * Scale out or in to achieve a target network ingress rate.
+   *
+   * @param id 
+   * @param props 
+   */
+  public fun scaleOnIncomingBytes(id: String, props: NetworkUtilizationScalingProps):
       TargetTrackingScalingPolicy
 
+  /**
+   * Scale out or in to achieve a target network ingress rate.
+   *
+   * @param id 
+   * @param props 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("53d48012d390303ce4bdadda813caeca6ef440c93ff99ecf347c830212960766")
-  public fun scaleOnIncomingBytes(arg0: String,
-      arg1: NetworkUtilizationScalingProps.Builder.() -> Unit): TargetTrackingScalingPolicy
+  public fun scaleOnIncomingBytes(id: String,
+      props: NetworkUtilizationScalingProps.Builder.() -> Unit): TargetTrackingScalingPolicy
 
-  public fun scaleOnMetric(arg0: String, arg1: BasicStepScalingPolicyProps): StepScalingPolicy
+  /**
+   * Scale out or in, in response to a metric.
+   *
+   * @param id 
+   * @param props 
+   */
+  public fun scaleOnMetric(id: String, props: BasicStepScalingPolicyProps): StepScalingPolicy
 
+  /**
+   * Scale out or in, in response to a metric.
+   *
+   * @param id 
+   * @param props 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("97c636215f9ded1865259a4c15b81d08ffc6cf47e1b5af030d3b308ae6eba808")
-  public fun scaleOnMetric(arg0: String, arg1: BasicStepScalingPolicyProps.Builder.() -> Unit):
+  public fun scaleOnMetric(id: String, props: BasicStepScalingPolicyProps.Builder.() -> Unit):
       StepScalingPolicy
 
-  public fun scaleOnOutgoingBytes(arg0: String, arg1: NetworkUtilizationScalingProps):
+  /**
+   * Scale out or in to achieve a target network egress rate.
+   *
+   * @param id 
+   * @param props 
+   */
+  public fun scaleOnOutgoingBytes(id: String, props: NetworkUtilizationScalingProps):
       TargetTrackingScalingPolicy
 
+  /**
+   * Scale out or in to achieve a target network egress rate.
+   *
+   * @param id 
+   * @param props 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("041c27ca62dcbebfcb1881e27b18d9a65a9e76a73700f64dc5640d2cb3dd2620")
-  public fun scaleOnOutgoingBytes(arg0: String,
-      arg1: NetworkUtilizationScalingProps.Builder.() -> Unit): TargetTrackingScalingPolicy
+  public fun scaleOnOutgoingBytes(id: String,
+      props: NetworkUtilizationScalingProps.Builder.() -> Unit): TargetTrackingScalingPolicy
 
-  public fun scaleOnSchedule(arg0: String, arg1: BasicScheduledActionProps): ScheduledAction
+  /**
+   * Scale out or in based on time.
+   *
+   * @param id 
+   * @param props 
+   */
+  public fun scaleOnSchedule(id: String, props: BasicScheduledActionProps): ScheduledAction
 
+  /**
+   * Scale out or in based on time.
+   *
+   * @param id 
+   * @param props 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("b8a0caadcedcb277caddacbd0e88af40e8ebf1b6606474968554ce75d027168a")
-  public fun scaleOnSchedule(arg0: String, arg1: BasicScheduledActionProps.Builder.() -> Unit):
+  public fun scaleOnSchedule(id: String, props: BasicScheduledActionProps.Builder.() -> Unit):
       ScheduledAction
 
-  public fun scaleToTrackMetric(arg0: String, arg1: MetricTargetTrackingProps):
+  /**
+   * Scale out or in in order to keep a metric around a target value.
+   *
+   * @param id 
+   * @param props 
+   */
+  public fun scaleToTrackMetric(id: String, props: MetricTargetTrackingProps):
       TargetTrackingScalingPolicy
 
+  /**
+   * Scale out or in in order to keep a metric around a target value.
+   *
+   * @param id 
+   * @param props 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("783dfddcfc4313e0ba0ad62e98c32ed03381c60b8a7586ca584816685414690c")
-  public fun scaleToTrackMetric(arg0: String, arg1: MetricTargetTrackingProps.Builder.() -> Unit):
+  public fun scaleToTrackMetric(id: String, props: MetricTargetTrackingProps.Builder.() -> Unit):
       TargetTrackingScalingPolicy
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.autoscaling.IAutoScalingGroup,
   ) : CdkObject(cdkObject), IAutoScalingGroup {
-    override fun addLifecycleHook(arg0: String, arg1: BasicLifecycleHookProps): LifecycleHook =
-        unwrap(this).addLifecycleHook(arg0,
-        arg1.let(BasicLifecycleHookProps::unwrap)).let(LifecycleHook::wrap)
+    /**
+     * Send a message to either an SQS queue or SNS topic when instances launch or terminate.
+     *
+     * @param id 
+     * @param props 
+     */
+    override fun addLifecycleHook(id: String, props: BasicLifecycleHookProps): LifecycleHook =
+        unwrap(this).addLifecycleHook(id,
+        props.let(BasicLifecycleHookProps::unwrap)).let(LifecycleHook::wrap)
 
+    /**
+     * Send a message to either an SQS queue or SNS topic when instances launch or terminate.
+     *
+     * @param id 
+     * @param props 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e73b58a332c5f3bcf737c3c3902fb97721571b04a55f030350ee06a5be61db31")
-    override fun addLifecycleHook(arg0: String, arg1: BasicLifecycleHookProps.Builder.() -> Unit):
-        LifecycleHook = addLifecycleHook(arg0, BasicLifecycleHookProps(arg1))
+    override fun addLifecycleHook(id: String, props: BasicLifecycleHookProps.Builder.() -> Unit):
+        LifecycleHook = addLifecycleHook(id, BasicLifecycleHookProps(props))
 
-    override fun addUserData(arg0: String) {
-      unwrap(this).addUserData(arg0)
+    /**
+     * Add command to the startup script of fleet instances.
+     *
+     * The command must be in the scripting language supported by the fleet's OS (i.e.
+     * Linux/Windows).
+     * Does nothing for imported ASGs.
+     *
+     * @param commands 
+     */
+    override fun addUserData(commands: String) {
+      unwrap(this).addUserData(commands)
     }
 
+    /**
+     * Add a pool of pre-initialized EC2 instances that sits alongside an Auto Scaling group.
+     *
+     * @param options
+     */
     override fun addWarmPool(): WarmPool = unwrap(this).addWarmPool().let(WarmPool::wrap)
 
-    override fun addWarmPool(arg0: WarmPoolOptions): WarmPool =
-        unwrap(this).addWarmPool(arg0.let(WarmPoolOptions::unwrap)).let(WarmPool::wrap)
+    /**
+     * Add a pool of pre-initialized EC2 instances that sits alongside an Auto Scaling group.
+     *
+     * @param options
+     */
+    override fun addWarmPool(options: WarmPoolOptions): WarmPool =
+        unwrap(this).addWarmPool(options.let(WarmPoolOptions::unwrap)).let(WarmPool::wrap)
 
+    /**
+     * Add a pool of pre-initialized EC2 instances that sits alongside an Auto Scaling group.
+     *
+     * @param options
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ebe3a17babce83c2ccb570a7464dccb7ae43140da33baacb05b1a15a27a69e43")
-    override fun addWarmPool(arg0: WarmPoolOptions.Builder.() -> Unit): WarmPool =
-        addWarmPool(WarmPoolOptions(arg0))
+    override fun addWarmPool(options: WarmPoolOptions.Builder.() -> Unit): WarmPool =
+        addWarmPool(WarmPoolOptions(options))
 
-    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
+    /**
+     * Apply the given removal policy to this resource.
+     *
+     * The Removal Policy controls what happens to this resource when it stops
+     * being managed by CloudFormation, either because you've removed it from the
+     * CDK application or because you've made a change that requires the resource
+     * to be replaced.
+     *
+     * The resource can be deleted (`RemovalPolicy.DESTROY`), or left in your AWS
+     * account for data recovery and cleanup later (`RemovalPolicy.RETAIN`).
+     *
+     * @param policy 
+     */
+    override fun applyRemovalPolicy(policy: RemovalPolicy) {
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
     }
 
+    /**
+     * The arn of the AutoScalingGroup.
+     */
     override fun autoScalingGroupArn(): String = unwrap(this).getAutoScalingGroupArn()
 
+    /**
+     * The name of the AutoScalingGroup.
+     */
     override fun autoScalingGroupName(): String = unwrap(this).getAutoScalingGroupName()
 
+    /**
+     * The environment this resource belongs to.
+     *
+     * For resources that are created and managed by the CDK
+     * (generally, those created by creating new class instances like Role, Bucket, etc.),
+     * this is always the same as the environment of the stack they belong to;
+     * however, for imported resources
+     * (those obtained from static methods like fromRoleArn, fromBucketName, etc.),
+     * that might be different than the stack they were imported into.
+     */
     override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
+    /**
+     * The principal to grant permissions to.
+     */
     override fun grantPrincipal(): IPrincipal =
         unwrap(this).getGrantPrincipal().let(IPrincipal::wrap)
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
+    /**
+     * The operating system family that the instances in this auto-scaling group belong to.
+     *
+     * Is 'UNKNOWN' for imported ASGs.
+     */
     override fun osType(): OperatingSystemType =
         unwrap(this).getOsType().let(OperatingSystemType::wrap)
 
-    override fun scaleOnCpuUtilization(arg0: String, arg1: CpuUtilizationScalingProps):
-        TargetTrackingScalingPolicy = unwrap(this).scaleOnCpuUtilization(arg0,
-        arg1.let(CpuUtilizationScalingProps::unwrap)).let(TargetTrackingScalingPolicy::wrap)
+    /**
+     * Scale out or in to achieve a target CPU utilization.
+     *
+     * @param id 
+     * @param props 
+     */
+    override fun scaleOnCpuUtilization(id: String, props: CpuUtilizationScalingProps):
+        TargetTrackingScalingPolicy = unwrap(this).scaleOnCpuUtilization(id,
+        props.let(CpuUtilizationScalingProps::unwrap)).let(TargetTrackingScalingPolicy::wrap)
 
+    /**
+     * Scale out or in to achieve a target CPU utilization.
+     *
+     * @param id 
+     * @param props 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("54ff0f79a3a0e98af41f878332105ce744cc94709e6dfa3c31c968213fde0127")
-    override fun scaleOnCpuUtilization(arg0: String,
-        arg1: CpuUtilizationScalingProps.Builder.() -> Unit): TargetTrackingScalingPolicy =
-        scaleOnCpuUtilization(arg0, CpuUtilizationScalingProps(arg1))
+    override fun scaleOnCpuUtilization(id: String,
+        props: CpuUtilizationScalingProps.Builder.() -> Unit): TargetTrackingScalingPolicy =
+        scaleOnCpuUtilization(id, CpuUtilizationScalingProps(props))
 
-    override fun scaleOnIncomingBytes(arg0: String, arg1: NetworkUtilizationScalingProps):
-        TargetTrackingScalingPolicy = unwrap(this).scaleOnIncomingBytes(arg0,
-        arg1.let(NetworkUtilizationScalingProps::unwrap)).let(TargetTrackingScalingPolicy::wrap)
+    /**
+     * Scale out or in to achieve a target network ingress rate.
+     *
+     * @param id 
+     * @param props 
+     */
+    override fun scaleOnIncomingBytes(id: String, props: NetworkUtilizationScalingProps):
+        TargetTrackingScalingPolicy = unwrap(this).scaleOnIncomingBytes(id,
+        props.let(NetworkUtilizationScalingProps::unwrap)).let(TargetTrackingScalingPolicy::wrap)
 
+    /**
+     * Scale out or in to achieve a target network ingress rate.
+     *
+     * @param id 
+     * @param props 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("53d48012d390303ce4bdadda813caeca6ef440c93ff99ecf347c830212960766")
-    override fun scaleOnIncomingBytes(arg0: String,
-        arg1: NetworkUtilizationScalingProps.Builder.() -> Unit): TargetTrackingScalingPolicy =
-        scaleOnIncomingBytes(arg0, NetworkUtilizationScalingProps(arg1))
+    override fun scaleOnIncomingBytes(id: String,
+        props: NetworkUtilizationScalingProps.Builder.() -> Unit): TargetTrackingScalingPolicy =
+        scaleOnIncomingBytes(id, NetworkUtilizationScalingProps(props))
 
-    override fun scaleOnMetric(arg0: String, arg1: BasicStepScalingPolicyProps): StepScalingPolicy =
-        unwrap(this).scaleOnMetric(arg0,
-        arg1.let(BasicStepScalingPolicyProps::unwrap)).let(StepScalingPolicy::wrap)
+    /**
+     * Scale out or in, in response to a metric.
+     *
+     * @param id 
+     * @param props 
+     */
+    override fun scaleOnMetric(id: String, props: BasicStepScalingPolicyProps): StepScalingPolicy =
+        unwrap(this).scaleOnMetric(id,
+        props.let(BasicStepScalingPolicyProps::unwrap)).let(StepScalingPolicy::wrap)
 
+    /**
+     * Scale out or in, in response to a metric.
+     *
+     * @param id 
+     * @param props 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("97c636215f9ded1865259a4c15b81d08ffc6cf47e1b5af030d3b308ae6eba808")
-    override fun scaleOnMetric(arg0: String, arg1: BasicStepScalingPolicyProps.Builder.() -> Unit):
-        StepScalingPolicy = scaleOnMetric(arg0, BasicStepScalingPolicyProps(arg1))
+    override fun scaleOnMetric(id: String, props: BasicStepScalingPolicyProps.Builder.() -> Unit):
+        StepScalingPolicy = scaleOnMetric(id, BasicStepScalingPolicyProps(props))
 
-    override fun scaleOnOutgoingBytes(arg0: String, arg1: NetworkUtilizationScalingProps):
-        TargetTrackingScalingPolicy = unwrap(this).scaleOnOutgoingBytes(arg0,
-        arg1.let(NetworkUtilizationScalingProps::unwrap)).let(TargetTrackingScalingPolicy::wrap)
+    /**
+     * Scale out or in to achieve a target network egress rate.
+     *
+     * @param id 
+     * @param props 
+     */
+    override fun scaleOnOutgoingBytes(id: String, props: NetworkUtilizationScalingProps):
+        TargetTrackingScalingPolicy = unwrap(this).scaleOnOutgoingBytes(id,
+        props.let(NetworkUtilizationScalingProps::unwrap)).let(TargetTrackingScalingPolicy::wrap)
 
+    /**
+     * Scale out or in to achieve a target network egress rate.
+     *
+     * @param id 
+     * @param props 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("041c27ca62dcbebfcb1881e27b18d9a65a9e76a73700f64dc5640d2cb3dd2620")
-    override fun scaleOnOutgoingBytes(arg0: String,
-        arg1: NetworkUtilizationScalingProps.Builder.() -> Unit): TargetTrackingScalingPolicy =
-        scaleOnOutgoingBytes(arg0, NetworkUtilizationScalingProps(arg1))
+    override fun scaleOnOutgoingBytes(id: String,
+        props: NetworkUtilizationScalingProps.Builder.() -> Unit): TargetTrackingScalingPolicy =
+        scaleOnOutgoingBytes(id, NetworkUtilizationScalingProps(props))
 
-    override fun scaleOnSchedule(arg0: String, arg1: BasicScheduledActionProps): ScheduledAction =
-        unwrap(this).scaleOnSchedule(arg0,
-        arg1.let(BasicScheduledActionProps::unwrap)).let(ScheduledAction::wrap)
+    /**
+     * Scale out or in based on time.
+     *
+     * @param id 
+     * @param props 
+     */
+    override fun scaleOnSchedule(id: String, props: BasicScheduledActionProps): ScheduledAction =
+        unwrap(this).scaleOnSchedule(id,
+        props.let(BasicScheduledActionProps::unwrap)).let(ScheduledAction::wrap)
 
+    /**
+     * Scale out or in based on time.
+     *
+     * @param id 
+     * @param props 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b8a0caadcedcb277caddacbd0e88af40e8ebf1b6606474968554ce75d027168a")
-    override fun scaleOnSchedule(arg0: String, arg1: BasicScheduledActionProps.Builder.() -> Unit):
-        ScheduledAction = scaleOnSchedule(arg0, BasicScheduledActionProps(arg1))
+    override fun scaleOnSchedule(id: String, props: BasicScheduledActionProps.Builder.() -> Unit):
+        ScheduledAction = scaleOnSchedule(id, BasicScheduledActionProps(props))
 
-    override fun scaleToTrackMetric(arg0: String, arg1: MetricTargetTrackingProps):
-        TargetTrackingScalingPolicy = unwrap(this).scaleToTrackMetric(arg0,
-        arg1.let(MetricTargetTrackingProps::unwrap)).let(TargetTrackingScalingPolicy::wrap)
+    /**
+     * Scale out or in in order to keep a metric around a target value.
+     *
+     * @param id 
+     * @param props 
+     */
+    override fun scaleToTrackMetric(id: String, props: MetricTargetTrackingProps):
+        TargetTrackingScalingPolicy = unwrap(this).scaleToTrackMetric(id,
+        props.let(MetricTargetTrackingProps::unwrap)).let(TargetTrackingScalingPolicy::wrap)
 
+    /**
+     * Scale out or in in order to keep a metric around a target value.
+     *
+     * @param id 
+     * @param props 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("783dfddcfc4313e0ba0ad62e98c32ed03381c60b8a7586ca584816685414690c")
-    override fun scaleToTrackMetric(arg0: String,
-        arg1: MetricTargetTrackingProps.Builder.() -> Unit): TargetTrackingScalingPolicy =
-        scaleToTrackMetric(arg0, MetricTargetTrackingProps(arg1))
+    override fun scaleToTrackMetric(id: String,
+        props: MetricTargetTrackingProps.Builder.() -> Unit): TargetTrackingScalingPolicy =
+        scaleToTrackMetric(id, MetricTargetTrackingProps(props))
 
+    /**
+     * The stack in which this resource is defined.
+     */
     override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 

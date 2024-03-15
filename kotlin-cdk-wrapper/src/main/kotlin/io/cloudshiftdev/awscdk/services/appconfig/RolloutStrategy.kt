@@ -8,16 +8,46 @@ import kotlin.Number
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Defines the rollout strategy for a deployment strategy and includes the growth factor, deployment
+ * duration, growth type, and optionally final bake time.
+ *
+ * Example:
+ *
+ * ```
+ * DeploymentStrategy.Builder.create(this, "MyDeploymentStrategy")
+ * .rolloutStrategy(RolloutStrategy.linear(RolloutStrategyProps.builder()
+ * .growthFactor(20)
+ * .deploymentDuration(Duration.minutes(30))
+ * .finalBakeTime(Duration.minutes(30))
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-deployment-strategy.html)
+ */
 public abstract class RolloutStrategy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.RolloutStrategy,
 ) : CdkObject(cdkObject) {
+  /**
+   * The deployment duration of the rollout strategy.
+   */
   public open fun deploymentDuration(): Duration =
       unwrap(this).getDeploymentDuration().let(Duration::wrap)
 
+  /**
+   * The final bake time of the deployment strategy.
+   */
   public open fun finalBakeTime(): Duration? = unwrap(this).getFinalBakeTime()?.let(Duration::wrap)
 
+  /**
+   * The growth factor of the rollout strategy.
+   */
   public open fun growthFactor(): Number = unwrap(this).getGrowthFactor()
 
+  /**
+   * The growth type of the rollout strategy.
+   */
   public open fun growthType(): GrowthType? = unwrap(this).getGrowthType()?.let(GrowthType::wrap)
 
   private class Wrapper(

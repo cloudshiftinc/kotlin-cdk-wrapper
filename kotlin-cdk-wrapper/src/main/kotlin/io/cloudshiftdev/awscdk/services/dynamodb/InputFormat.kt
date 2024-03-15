@@ -6,6 +6,31 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * The format of the source data.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.*;
+ * import io.cloudshiftdev.awscdk.services.s3.*;
+ * IBucket bucket;
+ * App app = new App();
+ * Stack stack = new Stack(app, "Stack");
+ * Table.Builder.create(stack, "Table")
+ * .partitionKey(Attribute.builder()
+ * .name("id")
+ * .type(AttributeType.STRING)
+ * .build())
+ * .importSource(ImportSourceSpecification.builder()
+ * .compressionType(InputCompressionType.GZIP)
+ * .inputFormat(InputFormat.dynamoDBJson())
+ * .bucket(bucket)
+ * .keyPrefix("prefix")
+ * .build())
+ * .build();
+ * ```
+ */
 public abstract class InputFormat internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.dynamodb.InputFormat,
 ) : CdkObject(cdkObject) {

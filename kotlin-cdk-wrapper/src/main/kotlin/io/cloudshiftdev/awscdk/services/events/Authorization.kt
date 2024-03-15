@@ -8,6 +8,27 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Authorization type for an API Destination Connection.
+ *
+ * Example:
+ *
+ * ```
+ * Connection connection = Connection.Builder.create(this, "Connection")
+ * .authorization(Authorization.apiKey("x-api-key", SecretValue.secretsManager("ApiSecretName")))
+ * .description("Connection with API Key x-api-key")
+ * .build();
+ * ApiDestination destination = ApiDestination.Builder.create(this, "Destination")
+ * .connection(connection)
+ * .endpoint("https://example.com")
+ * .description("Calling example.com with API key x-api-key")
+ * .build();
+ * Rule rule = Rule.Builder.create(this, "Rule")
+ * .schedule(Schedule.rate(Duration.minutes(1)))
+ * .targets(List.of(new ApiDestination(destination)))
+ * .build();
+ * ```
+ */
 public abstract class Authorization internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.Authorization,
 ) : CdkObject(cdkObject) {

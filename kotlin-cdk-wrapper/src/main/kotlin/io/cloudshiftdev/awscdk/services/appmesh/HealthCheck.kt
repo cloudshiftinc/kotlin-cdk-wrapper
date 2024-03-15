@@ -7,17 +7,64 @@ import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Contains static factory methods for creating health checks for different protocols.
+ *
+ * Example:
+ *
+ * ```
+ * Mesh mesh;
+ * Vpc vpc = new Vpc(this, "vpc");
+ * PrivateDnsNamespace namespace = PrivateDnsNamespace.Builder.create(this, "test-namespace")
+ * .vpc(vpc)
+ * .name("domain.local")
+ * .build();
+ * Service service = namespace.createService("Svc");
+ * VirtualNode node = mesh.addVirtualNode("virtual-node", VirtualNodeBaseProps.builder()
+ * .serviceDiscovery(ServiceDiscovery.cloudMap(service))
+ * .listeners(List.of(VirtualNodeListener.http(HttpVirtualNodeListenerOptions.builder()
+ * .port(8081)
+ * .healthCheck(HealthCheck.http(HttpHealthCheckOptions.builder()
+ * .healthyThreshold(3)
+ * .interval(Duration.seconds(5)) // minimum
+ * .path("/health-check-path")
+ * .timeout(Duration.seconds(2)) // minimum
+ * .unhealthyThreshold(2)
+ * .build()))
+ * .build())))
+ * .accessLog(AccessLog.fromFilePath("/dev/stdout"))
+ * .build());
+ * ```
+ */
 public abstract class HealthCheck internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.HealthCheck,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct, arg1: HealthCheckBindOptions): HealthCheckConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap),
-      arg1.let(HealthCheckBindOptions::unwrap)).let(HealthCheckConfig::wrap)
+  /**
+   * Called when the AccessLog type is initialized.
+   *
+   * Can be used to enforce
+   * mutual exclusivity with future properties
+   *
+   * @param scope 
+   * @param options 
+   */
+  public open fun bind(scope: Construct, options: HealthCheckBindOptions): HealthCheckConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap),
+      options.let(HealthCheckBindOptions::unwrap)).let(HealthCheckConfig::wrap)
 
+  /**
+   * Called when the AccessLog type is initialized.
+   *
+   * Can be used to enforce
+   * mutual exclusivity with future properties
+   *
+   * @param scope 
+   * @param options 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("e14868d4f0eef12d5bfd839171646876cecc6acfb144938855aea88892fd5219")
-  public open fun bind(arg0: Construct, arg1: HealthCheckBindOptions.Builder.() -> Unit):
-      HealthCheckConfig = bind(arg0, HealthCheckBindOptions(arg1))
+  public open fun bind(scope: Construct, options: HealthCheckBindOptions.Builder.() -> Unit):
+      HealthCheckConfig = bind(scope, HealthCheckBindOptions(options))
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.HealthCheck,

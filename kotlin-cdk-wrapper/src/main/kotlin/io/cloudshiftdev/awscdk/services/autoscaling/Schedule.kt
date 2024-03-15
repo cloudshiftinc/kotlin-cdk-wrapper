@@ -7,9 +7,29 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Schedule for scheduled scaling actions.
+ *
+ * Example:
+ *
+ * ```
+ * AutoScalingGroup autoScalingGroup;
+ * autoScalingGroup.scaleOnSchedule("PrescaleInTheMorning", BasicScheduledActionProps.builder()
+ * .schedule(Schedule.cron(CronOptions.builder().hour("8").minute("0").build()))
+ * .minCapacity(20)
+ * .build());
+ * autoScalingGroup.scaleOnSchedule("AllowDownscalingAtNight", BasicScheduledActionProps.builder()
+ * .schedule(Schedule.cron(CronOptions.builder().hour("20").minute("0").build()))
+ * .minCapacity(1)
+ * .build());
+ * ```
+ */
 public abstract class Schedule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.autoscaling.Schedule,
 ) : CdkObject(cdkObject) {
+  /**
+   * Retrieve the expression for this schedule.
+   */
   public open fun expressionString(): String = unwrap(this).getExpressionString()
 
   private class Wrapper(

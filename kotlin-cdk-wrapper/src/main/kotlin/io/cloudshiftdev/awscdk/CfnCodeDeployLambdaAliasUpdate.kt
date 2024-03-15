@@ -7,23 +7,75 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * To perform an AWS CodeDeploy deployment when the version changes on an AWS::Lambda::Alias
+ * resource, use the CodeDeployLambdaAliasUpdate update policy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * CfnCodeDeployLambdaAliasUpdate cfnCodeDeployLambdaAliasUpdate =
+ * CfnCodeDeployLambdaAliasUpdate.builder()
+ * .applicationName("applicationName")
+ * .deploymentGroupName("deploymentGroupName")
+ * // the properties below are optional
+ * .afterAllowTrafficHook("afterAllowTrafficHook")
+ * .beforeAllowTrafficHook("beforeAllowTrafficHook")
+ * .build();
+ * ```
+ */
 public interface CfnCodeDeployLambdaAliasUpdate {
+  /**
+   * The name of the Lambda function to run after traffic routing completes.
+   */
   public fun afterAllowTrafficHook(): String? = unwrap(this).getAfterAllowTrafficHook()
 
+  /**
+   * The name of the AWS CodeDeploy application.
+   */
   public fun applicationName(): String
 
+  /**
+   * The name of the Lambda function to run before traffic routing starts.
+   */
   public fun beforeAllowTrafficHook(): String? = unwrap(this).getBeforeAllowTrafficHook()
 
+  /**
+   * The name of the AWS CodeDeploy deployment group.
+   *
+   * This is where the traffic-shifting policy is set.
+   */
   public fun deploymentGroupName(): String
 
+  /**
+   * A builder for [CfnCodeDeployLambdaAliasUpdate]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param afterAllowTrafficHook The name of the Lambda function to run after traffic routing
+     * completes.
+     */
     public fun afterAllowTrafficHook(afterAllowTrafficHook: String)
 
+    /**
+     * @param applicationName The name of the AWS CodeDeploy application. 
+     */
     public fun applicationName(applicationName: String)
 
+    /**
+     * @param beforeAllowTrafficHook The name of the Lambda function to run before traffic routing
+     * starts.
+     */
     public fun beforeAllowTrafficHook(beforeAllowTrafficHook: String)
 
+    /**
+     * @param deploymentGroupName The name of the AWS CodeDeploy deployment group. 
+     * This is where the traffic-shifting policy is set.
+     */
     public fun deploymentGroupName(deploymentGroupName: String)
   }
 
@@ -31,18 +83,33 @@ public interface CfnCodeDeployLambdaAliasUpdate {
     private val cdkBuilder: software.amazon.awscdk.CfnCodeDeployLambdaAliasUpdate.Builder =
         software.amazon.awscdk.CfnCodeDeployLambdaAliasUpdate.builder()
 
+    /**
+     * @param afterAllowTrafficHook The name of the Lambda function to run after traffic routing
+     * completes.
+     */
     override fun afterAllowTrafficHook(afterAllowTrafficHook: String) {
       cdkBuilder.afterAllowTrafficHook(afterAllowTrafficHook)
     }
 
+    /**
+     * @param applicationName The name of the AWS CodeDeploy application. 
+     */
     override fun applicationName(applicationName: String) {
       cdkBuilder.applicationName(applicationName)
     }
 
+    /**
+     * @param beforeAllowTrafficHook The name of the Lambda function to run before traffic routing
+     * starts.
+     */
     override fun beforeAllowTrafficHook(beforeAllowTrafficHook: String) {
       cdkBuilder.beforeAllowTrafficHook(beforeAllowTrafficHook)
     }
 
+    /**
+     * @param deploymentGroupName The name of the AWS CodeDeploy deployment group. 
+     * This is where the traffic-shifting policy is set.
+     */
     override fun deploymentGroupName(deploymentGroupName: String) {
       cdkBuilder.deploymentGroupName(deploymentGroupName)
     }
@@ -53,12 +120,26 @@ public interface CfnCodeDeployLambdaAliasUpdate {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.CfnCodeDeployLambdaAliasUpdate,
   ) : CdkObject(cdkObject), CfnCodeDeployLambdaAliasUpdate {
+    /**
+     * The name of the Lambda function to run after traffic routing completes.
+     */
     override fun afterAllowTrafficHook(): String? = unwrap(this).getAfterAllowTrafficHook()
 
+    /**
+     * The name of the AWS CodeDeploy application.
+     */
     override fun applicationName(): String = unwrap(this).getApplicationName()
 
+    /**
+     * The name of the Lambda function to run before traffic routing starts.
+     */
     override fun beforeAllowTrafficHook(): String? = unwrap(this).getBeforeAllowTrafficHook()
 
+    /**
+     * The name of the AWS CodeDeploy deployment group.
+     *
+     * This is where the traffic-shifting policy is set.
+     */
     override fun deploymentGroupName(): String = unwrap(this).getDeploymentGroupName()
   }
 

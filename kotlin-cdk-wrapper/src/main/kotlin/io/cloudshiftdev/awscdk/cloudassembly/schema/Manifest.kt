@@ -7,6 +7,9 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Protocol utility class.
+ */
 public open class Manifest internal constructor(
   internal override val cdkObject: software.amazon.awscdk.cloudassembly.schema.Manifest,
 ) : CdkObject(cdkObject) {

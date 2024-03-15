@@ -7,16 +7,51 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Construction properties for CloudAssemblyBuilder.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.cxapi.*;
+ * CloudAssemblyBuilder cloudAssemblyBuilder;
+ * CloudAssemblyBuilderProps cloudAssemblyBuilderProps = CloudAssemblyBuilderProps.builder()
+ * .assetOutdir("assetOutdir")
+ * .parentBuilder(cloudAssemblyBuilder)
+ * .build();
+ * ```
+ */
 public interface CloudAssemblyBuilderProps {
+  /**
+   * Use the given asset output directory.
+   *
+   * Default: - Same as the manifest outdir
+   */
   public fun assetOutdir(): String? = unwrap(this).getAssetOutdir()
 
+  /**
+   * If this builder is for a nested assembly, the parent assembly builder.
+   *
+   * Default: - This is a root assembly
+   */
   public fun parentBuilder(): CloudAssemblyBuilder? =
       unwrap(this).getParentBuilder()?.let(CloudAssemblyBuilder::wrap)
 
+  /**
+   * A builder for [CloudAssemblyBuilderProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param assetOutdir Use the given asset output directory.
+     */
     public fun assetOutdir(assetOutdir: String)
 
+    /**
+     * @param parentBuilder If this builder is for a nested assembly, the parent assembly builder.
+     */
     public fun parentBuilder(parentBuilder: CloudAssemblyBuilder)
   }
 
@@ -24,10 +59,16 @@ public interface CloudAssemblyBuilderProps {
     private val cdkBuilder: software.amazon.awscdk.cxapi.CloudAssemblyBuilderProps.Builder =
         software.amazon.awscdk.cxapi.CloudAssemblyBuilderProps.builder()
 
+    /**
+     * @param assetOutdir Use the given asset output directory.
+     */
     override fun assetOutdir(assetOutdir: String) {
       cdkBuilder.assetOutdir(assetOutdir)
     }
 
+    /**
+     * @param parentBuilder If this builder is for a nested assembly, the parent assembly builder.
+     */
     override fun parentBuilder(parentBuilder: CloudAssemblyBuilder) {
       cdkBuilder.parentBuilder(parentBuilder.let(CloudAssemblyBuilder::unwrap))
     }
@@ -38,8 +79,18 @@ public interface CloudAssemblyBuilderProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.cxapi.CloudAssemblyBuilderProps,
   ) : CdkObject(cdkObject), CloudAssemblyBuilderProps {
+    /**
+     * Use the given asset output directory.
+     *
+     * Default: - Same as the manifest outdir
+     */
     override fun assetOutdir(): String? = unwrap(this).getAssetOutdir()
 
+    /**
+     * If this builder is for a nested assembly, the parent assembly builder.
+     *
+     * Default: - This is a root assembly
+     */
     override fun parentBuilder(): CloudAssemblyBuilder? =
         unwrap(this).getParentBuilder()?.let(CloudAssemblyBuilder::wrap)
   }

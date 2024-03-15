@@ -6,11 +6,31 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Number
 
+/**
+ * Represents the properties needed to define listeners for a VirtualRouter.
+ *
+ * Example:
+ *
+ * ```
+ * Mesh mesh;
+ * VirtualRouter router = mesh.addVirtualRouter("router", VirtualRouterBaseProps.builder()
+ * .listeners(List.of(VirtualRouterListener.http(8080)))
+ * .build());
+ * ```
+ */
 public abstract class VirtualRouterListener internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouterListener,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct): VirtualRouterListenerConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(VirtualRouterListenerConfig::wrap)
+  /**
+   * Called when the VirtualRouterListener type is initialized.
+   *
+   * Can be used to enforce
+   * mutual exclusivity
+   *
+   * @param scope 
+   */
+  public open fun bind(scope: Construct): VirtualRouterListenerConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(VirtualRouterListenerConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouterListener,

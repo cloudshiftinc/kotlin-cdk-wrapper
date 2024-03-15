@@ -7,11 +7,34 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * A destination configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.lambda.*;
+ * DestinationConfig destinationConfig = DestinationConfig.builder()
+ * .destination("destination")
+ * .build();
+ * ```
+ */
 public interface DestinationConfig {
+  /**
+   * The Amazon Resource Name (ARN) of the destination resource.
+   */
   public fun destination(): String
 
+  /**
+   * A builder for [DestinationConfig]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param destination The Amazon Resource Name (ARN) of the destination resource. 
+     */
     public fun destination(destination: String)
   }
 
@@ -19,6 +42,9 @@ public interface DestinationConfig {
     private val cdkBuilder: software.amazon.awscdk.services.lambda.DestinationConfig.Builder =
         software.amazon.awscdk.services.lambda.DestinationConfig.builder()
 
+    /**
+     * @param destination The Amazon Resource Name (ARN) of the destination resource. 
+     */
     override fun destination(destination: String) {
       cdkBuilder.destination(destination)
     }
@@ -30,6 +56,9 @@ public interface DestinationConfig {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.lambda.DestinationConfig,
   ) : CdkObject(cdkObject), DestinationConfig {
+    /**
+     * The Amazon Resource Name (ARN) of the destination resource.
+     */
     override fun destination(): String = unwrap(this).getDestination()
   }
 

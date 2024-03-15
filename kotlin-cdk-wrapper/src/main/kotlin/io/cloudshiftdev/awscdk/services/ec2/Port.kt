@@ -10,21 +10,71 @@ import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Interface for classes that provide the connection-specification parts of a security group rule.
+ *
+ * Example:
+ *
+ * ```
+ * InstanceType instanceType;
+ * NatInstanceProviderV2 provider = NatProvider.instanceV2(NatInstanceProps.builder()
+ * .instanceType(instanceType)
+ * .defaultAllowedTraffic(NatTrafficDirection.OUTBOUND_ONLY)
+ * .build());
+ * Vpc.Builder.create(this, "TheVPC")
+ * .natGatewayProvider(provider)
+ * .build();
+ * provider.connections.allowFrom(Peer.ipv4("1.2.3.4/8"), Port.tcp(80));
+ * ```
+ */
 public open class Port internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.Port,
 ) : CdkObject(cdkObject) {
+  /**
+   * Whether the rule containing this port range can be inlined into a securitygroup or not.
+   */
   public open fun canInlineRule(): Boolean = unwrap(this).getCanInlineRule()
 
+  /**
+   * Produce the ingress/egress rule JSON for the given connection.
+   */
   public open fun toRuleJson(): Any = unwrap(this).toRuleJson()
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.Port].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The starting port for the range.
+     *
+     * Default: - Not included in the rule
+     *
+     * @param fromPort The starting port for the range. 
+     */
     public fun fromPort(fromPort: Number)
 
+    /**
+     * The protocol for the range.
+     *
+     * @param protocol The protocol for the range. 
+     */
     public fun protocol(protocol: Protocol)
 
+    /**
+     * String representation for this object.
+     *
+     * @param stringRepresentation String representation for this object. 
+     */
     public fun stringRepresentation(stringRepresentation: String)
 
+    /**
+     * The ending port for the range.
+     *
+     * Default: - Not included in the rule
+     *
+     * @param toPort The ending port for the range. 
+     */
     public fun toPort(toPort: Number)
   }
 
@@ -32,18 +82,42 @@ public open class Port internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.Port.Builder =
         software.amazon.awscdk.services.ec2.Port.Builder.create()
 
+    /**
+     * The starting port for the range.
+     *
+     * Default: - Not included in the rule
+     *
+     * @param fromPort The starting port for the range. 
+     */
     override fun fromPort(fromPort: Number) {
       cdkBuilder.fromPort(fromPort)
     }
 
+    /**
+     * The protocol for the range.
+     *
+     * @param protocol The protocol for the range. 
+     */
     override fun protocol(protocol: Protocol) {
       cdkBuilder.protocol(protocol.let(Protocol::unwrap))
     }
 
+    /**
+     * String representation for this object.
+     *
+     * @param stringRepresentation String representation for this object. 
+     */
     override fun stringRepresentation(stringRepresentation: String) {
       cdkBuilder.stringRepresentation(stringRepresentation)
     }
 
+    /**
+     * The ending port for the range.
+     *
+     * Default: - Not included in the rule
+     *
+     * @param toPort The ending port for the range. 
+     */
     override fun toPort(toPort: Number) {
       cdkBuilder.toPort(toPort)
     }

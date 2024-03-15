@@ -5,6 +5,11 @@ package io.cloudshiftdev.awscdk.services.codecommit
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Fields of CloudWatch Events that change references.
+ *
+ * [Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/EventTypes.html#codebuild_event_type)
+ */
 public open class ReferenceEvent internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codecommit.ReferenceEvent,
 ) : CdkObject(cdkObject) {

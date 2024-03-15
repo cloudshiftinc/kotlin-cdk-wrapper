@@ -4,6 +4,18 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 
+/**
+ * Amazon Linux 2022 kernel versions.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * AmazonLinux2022Kernel amazonLinux2022Kernel = AmazonLinux2022Kernel.CDK_LATEST;
+ * ```
+ */
 public open class AmazonLinux2022Kernel internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.AmazonLinux2022Kernel,
 ) : CdkObject(cdkObject) {

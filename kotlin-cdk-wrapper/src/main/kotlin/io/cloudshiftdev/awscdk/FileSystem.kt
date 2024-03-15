@@ -8,6 +8,18 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * File system utilities.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * FileSystem fileSystem = new FileSystem();
+ * ```
+ */
 public open class FileSystem internal constructor(
   internal override val cdkObject: software.amazon.awscdk.FileSystem,
 ) : CdkObject(cdkObject) {

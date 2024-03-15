@@ -7,11 +7,44 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.ecs.FargateTaskDefinition
 import kotlin.Unit
 
+/**
+ * The properties for the ScheduledFargateTask using a task definition.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ecs.*;
+ * import io.cloudshiftdev.awscdk.services.ecs.patterns.*;
+ * FargateTaskDefinition fargateTaskDefinition;
+ * ScheduledFargateTaskDefinitionOptions scheduledFargateTaskDefinitionOptions =
+ * ScheduledFargateTaskDefinitionOptions.builder()
+ * .taskDefinition(fargateTaskDefinition)
+ * .build();
+ * ```
+ */
 public interface ScheduledFargateTaskDefinitionOptions {
+  /**
+   * The task definition to use for tasks in the service. Image or taskDefinition must be specified,
+   * but not both.
+   *
+   * [disable-awslint:ref-via-interface]
+   *
+   * Default: - none
+   */
   public fun taskDefinition(): FargateTaskDefinition
 
+  /**
+   * A builder for [ScheduledFargateTaskDefinitionOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param taskDefinition The task definition to use for tasks in the service. Image or
+     * taskDefinition must be specified, but not both. 
+     * [disable-awslint:ref-via-interface]
+     */
     public fun taskDefinition(taskDefinition: FargateTaskDefinition)
   }
 
@@ -20,6 +53,11 @@ public interface ScheduledFargateTaskDefinitionOptions {
         software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskDefinitionOptions.Builder =
         software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskDefinitionOptions.builder()
 
+    /**
+     * @param taskDefinition The task definition to use for tasks in the service. Image or
+     * taskDefinition must be specified, but not both. 
+     * [disable-awslint:ref-via-interface]
+     */
     override fun taskDefinition(taskDefinition: FargateTaskDefinition) {
       cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition::unwrap))
     }
@@ -33,6 +71,14 @@ public interface ScheduledFargateTaskDefinitionOptions {
     override val cdkObject:
         software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskDefinitionOptions,
   ) : CdkObject(cdkObject), ScheduledFargateTaskDefinitionOptions {
+    /**
+     * The task definition to use for tasks in the service. Image or taskDefinition must be
+     * specified, but not both.
+     *
+     * [disable-awslint:ref-via-interface]
+     *
+     * Default: - none
+     */
     override fun taskDefinition(): FargateTaskDefinition =
         unwrap(this).getTaskDefinition().let(FargateTaskDefinition::wrap)
   }

@@ -6,7 +6,23 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Options for `IParameterGroup.bindToCluster`. Empty for now, but can be extended later.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.rds.*;
+ * ParameterGroupClusterBindOptions parameterGroupClusterBindOptions =
+ * ParameterGroupClusterBindOptions.builder().build();
+ * ```
+ */
 public interface ParameterGroupClusterBindOptions {
+  /**
+   * A builder for [ParameterGroupClusterBindOptions]
+   */
   @CdkDslMarker
   public interface Builder
 

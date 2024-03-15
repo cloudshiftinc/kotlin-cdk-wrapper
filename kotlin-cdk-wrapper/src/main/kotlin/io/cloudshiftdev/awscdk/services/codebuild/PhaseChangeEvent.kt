@@ -5,6 +5,11 @@ package io.cloudshiftdev.awscdk.services.codebuild
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Event fields for the CodeBuild "phase change" event.
+ *
+ * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/sample-build-notifications.html#sample-build-notifications-ref)
+ */
 public open class PhaseChangeEvent internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codebuild.PhaseChangeEvent,
 ) : CdkObject(cdkObject) {

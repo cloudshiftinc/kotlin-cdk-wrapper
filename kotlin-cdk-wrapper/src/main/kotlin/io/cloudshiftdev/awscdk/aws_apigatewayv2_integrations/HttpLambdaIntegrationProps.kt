@@ -8,17 +8,59 @@ import io.cloudshiftdev.awscdk.services.apigatewayv2.ParameterMapping
 import io.cloudshiftdev.awscdk.services.apigatewayv2.PayloadFormatVersion
 import kotlin.Unit
 
+/**
+ * Lambda Proxy integration properties.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
+ * import io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations.*;
+ * ParameterMapping parameterMapping;
+ * PayloadFormatVersion payloadFormatVersion;
+ * HttpLambdaIntegrationProps httpLambdaIntegrationProps = HttpLambdaIntegrationProps.builder()
+ * .parameterMapping(parameterMapping)
+ * .payloadFormatVersion(payloadFormatVersion)
+ * .build();
+ * ```
+ */
 public interface HttpLambdaIntegrationProps {
+  /**
+   * Specifies how to transform HTTP requests before sending them to the backend.
+   *
+   * Default: undefined requests are sent to the backend unmodified
+   *
+   * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html)
+   */
   public fun parameterMapping(): ParameterMapping? =
       unwrap(this).getParameterMapping()?.let(ParameterMapping::wrap)
 
+  /**
+   * Version of the payload sent to the lambda handler.
+   *
+   * Default: PayloadFormatVersion.VERSION_2_0
+   *
+   * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html)
+   */
   public fun payloadFormatVersion(): PayloadFormatVersion? =
       unwrap(this).getPayloadFormatVersion()?.let(PayloadFormatVersion::wrap)
 
+  /**
+   * A builder for [HttpLambdaIntegrationProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param parameterMapping Specifies how to transform HTTP requests before sending them to the
+     * backend.
+     */
     public fun parameterMapping(parameterMapping: ParameterMapping)
 
+    /**
+     * @param payloadFormatVersion Version of the payload sent to the lambda handler.
+     */
     public fun payloadFormatVersion(payloadFormatVersion: PayloadFormatVersion)
   }
 
@@ -27,10 +69,17 @@ public interface HttpLambdaIntegrationProps {
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegrationProps.Builder =
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegrationProps.builder()
 
+    /**
+     * @param parameterMapping Specifies how to transform HTTP requests before sending them to the
+     * backend.
+     */
     override fun parameterMapping(parameterMapping: ParameterMapping) {
       cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping::unwrap))
     }
 
+    /**
+     * @param payloadFormatVersion Version of the payload sent to the lambda handler.
+     */
     override fun payloadFormatVersion(payloadFormatVersion: PayloadFormatVersion) {
       cdkBuilder.payloadFormatVersion(payloadFormatVersion.let(PayloadFormatVersion::unwrap))
     }
@@ -44,9 +93,23 @@ public interface HttpLambdaIntegrationProps {
     override val cdkObject:
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegrationProps,
   ) : CdkObject(cdkObject), HttpLambdaIntegrationProps {
+    /**
+     * Specifies how to transform HTTP requests before sending them to the backend.
+     *
+     * Default: undefined requests are sent to the backend unmodified
+     *
+     * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html)
+     */
     override fun parameterMapping(): ParameterMapping? =
         unwrap(this).getParameterMapping()?.let(ParameterMapping::wrap)
 
+    /**
+     * Version of the payload sent to the lambda handler.
+     *
+     * Default: PayloadFormatVersion.VERSION_2_0
+     *
+     * [Documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html)
+     */
     override fun payloadFormatVersion(): PayloadFormatVersion? =
         unwrap(this).getPayloadFormatVersion()?.let(PayloadFormatVersion::wrap)
   }

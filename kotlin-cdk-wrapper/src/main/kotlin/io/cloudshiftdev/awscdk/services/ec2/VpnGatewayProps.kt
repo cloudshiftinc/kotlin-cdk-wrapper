@@ -8,15 +8,48 @@ import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * The VpnGateway Properties.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * VpnGatewayProps vpnGatewayProps = VpnGatewayProps.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .amazonSideAsn(123)
+ * .build();
+ * ```
+ */
 public interface VpnGatewayProps {
+  /**
+   * Explicitly specify an Asn or let aws pick an Asn for you.
+   *
+   * Default: 65000
+   */
   public fun amazonSideAsn(): Number? = unwrap(this).getAmazonSideAsn()
 
+  /**
+   * Default type ipsec.1.
+   */
   public fun type(): String
 
+  /**
+   * A builder for [VpnGatewayProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param amazonSideAsn Explicitly specify an Asn or let aws pick an Asn for you.
+     */
     public fun amazonSideAsn(amazonSideAsn: Number)
 
+    /**
+     * @param type Default type ipsec.1. 
+     */
     public fun type(type: String)
   }
 
@@ -24,10 +57,16 @@ public interface VpnGatewayProps {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.VpnGatewayProps.Builder =
         software.amazon.awscdk.services.ec2.VpnGatewayProps.builder()
 
+    /**
+     * @param amazonSideAsn Explicitly specify an Asn or let aws pick an Asn for you.
+     */
     override fun amazonSideAsn(amazonSideAsn: Number) {
       cdkBuilder.amazonSideAsn(amazonSideAsn)
     }
 
+    /**
+     * @param type Default type ipsec.1. 
+     */
     override fun type(type: String) {
       cdkBuilder.type(type)
     }
@@ -38,8 +77,16 @@ public interface VpnGatewayProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ec2.VpnGatewayProps,
   ) : CdkObject(cdkObject), VpnGatewayProps {
+    /**
+     * Explicitly specify an Asn or let aws pick an Asn for you.
+     *
+     * Default: 65000
+     */
     override fun amazonSideAsn(): Number? = unwrap(this).getAmazonSideAsn()
 
+    /**
+     * Default type ipsec.1.
+     */
     override fun type(): String = unwrap(this).getType()
   }
 

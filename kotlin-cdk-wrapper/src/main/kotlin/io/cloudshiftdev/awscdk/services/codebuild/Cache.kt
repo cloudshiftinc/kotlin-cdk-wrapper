@@ -7,6 +7,35 @@ import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Cache options for CodeBuild Project.
+ *
+ * A cache can store reusable pieces of your build environment and use them across multiple builds.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket myCachingBucket;
+ * Project.Builder.create(this, "Project")
+ * .source(Source.bitBucket(BitBucketSourceProps.builder()
+ * .owner("awslabs")
+ * .repo("aws-cdk")
+ * .build()))
+ * .cache(Cache.bucket(myCachingBucket))
+ * // BuildSpec with a 'cache' section necessary for S3 caching. This can
+ * // also come from 'buildspec.yml' in your source.
+ * .buildSpec(BuildSpec.fromObject(Map.of(
+ * "version", "0.2",
+ * "phases", Map.of(
+ * "build", Map.of(
+ * "commands", List.of("..."))),
+ * "cache", Map.of(
+ * "paths", List.of("/root/cachedir/ **&#47;*")))))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/build-caching.html)
+ */
 public abstract class Cache internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codebuild.Cache,
 ) : CdkObject(cdkObject) {

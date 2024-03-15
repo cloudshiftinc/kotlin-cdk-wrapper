@@ -5,17 +5,32 @@ package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.collections.List
 
+/**
+ * Interface for listener actions.
+ */
 public interface IListenerAction {
+  /**
+   * Render the listener default actions in this chain.
+   */
   public fun renderActions(): List<CfnListener.ActionProperty>
 
+  /**
+   * Render the listener rule actions in this chain.
+   */
   public fun renderRuleActions(): List<CfnListenerRule.ActionProperty>
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IListenerAction,
   ) : CdkObject(cdkObject), IListenerAction {
+    /**
+     * Render the listener default actions in this chain.
+     */
     override fun renderActions(): List<CfnListener.ActionProperty> =
         unwrap(this).renderActions().map(CfnListener.ActionProperty::wrap)
 
+    /**
+     * Render the listener rule actions in this chain.
+     */
     override fun renderRuleActions(): List<CfnListenerRule.ActionProperty> =
         unwrap(this).renderRuleActions().map(CfnListenerRule.ActionProperty::wrap)
   }

@@ -11,30 +11,88 @@ import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * Registers a transit gateway in your global network.
+ *
+ * Not all Regions support transit gateways for global networks. For a list of the supported
+ * Regions, see [Region
+ * Availability](https://docs.aws.amazon.com/network-manager/latest/tgwnm/what-are-global-networks.html#nm-available-regions)
+ * in the *AWS Transit Gateways for Global Networks User Guide* . The transit gateway can be in any of
+ * the supported AWS Regions, but it must be owned by the same AWS account that owns the global
+ * network. You cannot register a transit gateway in more than one global network.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.networkmanager.*;
+ * CfnTransitGatewayRegistration cfnTransitGatewayRegistration =
+ * CfnTransitGatewayRegistration.Builder.create(this, "MyCfnTransitGatewayRegistration")
+ * .globalNetworkId("globalNetworkId")
+ * .transitGatewayArn("transitGatewayArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayregistration.html)
+ */
 public open class CfnTransitGatewayRegistration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRegistration,
 ) : CfnResource(cdkObject), IInspectable {
+  /**
+   * The ID of the global network.
+   */
   public open fun globalNetworkId(): String = unwrap(this).getGlobalNetworkId()
 
+  /**
+   * The ID of the global network.
+   */
   public open fun globalNetworkId(`value`: String) {
     unwrap(this).setGlobalNetworkId(`value`)
   }
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * The Amazon Resource Name (ARN) of the transit gateway.
+   */
   public open fun transitGatewayArn(): String = unwrap(this).getTransitGatewayArn()
 
+  /**
+   * The Amazon Resource Name (ARN) of the transit gateway.
+   */
   public open fun transitGatewayArn(`value`: String) {
     unwrap(this).setTransitGatewayArn(`value`)
   }
 
+  /**
+   * A fluent builder for
+   * [io.cloudshiftdev.awscdk.services.networkmanager.CfnTransitGatewayRegistration].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The ID of the global network.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayregistration.html#cfn-networkmanager-transitgatewayregistration-globalnetworkid)
+     * @param globalNetworkId The ID of the global network. 
+     */
     public fun globalNetworkId(globalNetworkId: String)
 
+    /**
+     * The Amazon Resource Name (ARN) of the transit gateway.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayregistration.html#cfn-networkmanager-transitgatewayregistration-transitgatewayarn)
+     * @param transitGatewayArn The Amazon Resource Name (ARN) of the transit gateway. 
+     */
     public fun transitGatewayArn(transitGatewayArn: String)
   }
 
@@ -47,10 +105,22 @@ public open class CfnTransitGatewayRegistration internal constructor(
         software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRegistration.Builder.create(scope,
         id)
 
+    /**
+     * The ID of the global network.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayregistration.html#cfn-networkmanager-transitgatewayregistration-globalnetworkid)
+     * @param globalNetworkId The ID of the global network. 
+     */
     override fun globalNetworkId(globalNetworkId: String) {
       cdkBuilder.globalNetworkId(globalNetworkId)
     }
 
+    /**
+     * The Amazon Resource Name (ARN) of the transit gateway.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-networkmanager-transitgatewayregistration.html#cfn-networkmanager-transitgatewayregistration-transitgatewayarn)
+     * @param transitGatewayArn The Amazon Resource Name (ARN) of the transit gateway. 
+     */
     override fun transitGatewayArn(transitGatewayArn: String) {
       cdkBuilder.transitGatewayArn(transitGatewayArn)
     }

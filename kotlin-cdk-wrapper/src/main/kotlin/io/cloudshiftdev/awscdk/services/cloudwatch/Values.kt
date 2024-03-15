@@ -8,9 +8,36 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * A class for providing values for use with [VariableInputType.SELECT] and
+ * [VariableInputType.RADIO] dashboard variables.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
+ * Dashboard dashboard = Dashboard.Builder.create(this, "Dash")
+ * .defaultInterval(Duration.days(7))
+ * .variables(List.of(DashboardVariable.Builder.create()
+ * .id("region")
+ * .type(VariableType.PROPERTY)
+ * .label("Region")
+ * .inputType(VariableInputType.RADIO)
+ * .value("region")
+ * .values(Values.fromValues(VariableValue.builder().label("IAD").value("us-east-1").build(),
+ * VariableValue.builder().label("DUB").value("us-west-2").build()))
+ * .defaultValue(DefaultValue.value("us-east-1"))
+ * .visible(true)
+ * .build()))
+ * .build();
+ * ```
+ */
 public abstract class Values internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.Values,
 ) : CdkObject(cdkObject) {
+  /**
+   *
+   */
   public open fun toJson(): Any = unwrap(this).toJson()
 
   private class Wrapper(

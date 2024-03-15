@@ -4,9 +4,28 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 
+/**
+ * The type of Aurora Cluster Instance.
+ *
+ * Can be either serverless v2
+ * or provisioned
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.rds.*;
+ * ClusterInstanceType clusterInstanceType = new ClusterInstanceType("instanceType",
+ * InstanceType.PROVISIONED);
+ * ```
+ */
 public open class ClusterInstanceType internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.ClusterInstanceType,
 ) : CdkObject(cdkObject) {
+  /**
+   *
+   */
   public open fun type(): InstanceType = unwrap(this).getType().let(InstanceType::wrap)
 
   public companion object {

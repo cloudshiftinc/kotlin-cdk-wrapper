@@ -10,23 +10,85 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Properties for defining a `CfnGroupMembership`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.identitystore.*;
+ * CfnGroupMembershipProps cfnGroupMembershipProps = CfnGroupMembershipProps.builder()
+ * .groupId("groupId")
+ * .identityStoreId("identityStoreId")
+ * .memberId(MemberIdProperty.builder()
+ * .userId("userId")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-groupmembership.html)
+ */
 public interface CfnGroupMembershipProps {
+  /**
+   * The unique identifier for a group in the identity store.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-groupmembership.html#cfn-identitystore-groupmembership-groupid)
+   */
   public fun groupId(): String
 
+  /**
+   * The globally unique identifier for the identity store.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-groupmembership.html#cfn-identitystore-groupmembership-identitystoreid)
+   */
   public fun identityStoreId(): String
 
+  /**
+   * An object containing the identifier of a group member.
+   *
+   * Setting `MemberId` 's `UserId` field to a specific User's ID indicates we should consider that
+   * User as a group member.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-groupmembership.html#cfn-identitystore-groupmembership-memberid)
+   */
   public fun memberId(): Any
 
+  /**
+   * A builder for [CfnGroupMembershipProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param groupId The unique identifier for a group in the identity store. 
+     */
     public fun groupId(groupId: String)
 
+    /**
+     * @param identityStoreId The globally unique identifier for the identity store. 
+     */
     public fun identityStoreId(identityStoreId: String)
 
+    /**
+     * @param memberId An object containing the identifier of a group member. 
+     * Setting `MemberId` 's `UserId` field to a specific User's ID indicates we should consider
+     * that User as a group member.
+     */
     public fun memberId(memberId: IResolvable)
 
+    /**
+     * @param memberId An object containing the identifier of a group member. 
+     * Setting `MemberId` 's `UserId` field to a specific User's ID indicates we should consider
+     * that User as a group member.
+     */
     public fun memberId(memberId: CfnGroupMembership.MemberIdProperty)
 
+    /**
+     * @param memberId An object containing the identifier of a group member. 
+     * Setting `MemberId` 's `UserId` field to a specific User's ID indicates we should consider
+     * that User as a group member.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fa3e7416f49dd106ef3a316c7088dc5389fea36b39fe7170fef8f8f5c32d2000")
     public fun memberId(memberId: CfnGroupMembership.MemberIdProperty.Builder.() -> Unit)
@@ -37,22 +99,43 @@ public interface CfnGroupMembershipProps {
         software.amazon.awscdk.services.identitystore.CfnGroupMembershipProps.Builder =
         software.amazon.awscdk.services.identitystore.CfnGroupMembershipProps.builder()
 
+    /**
+     * @param groupId The unique identifier for a group in the identity store. 
+     */
     override fun groupId(groupId: String) {
       cdkBuilder.groupId(groupId)
     }
 
+    /**
+     * @param identityStoreId The globally unique identifier for the identity store. 
+     */
     override fun identityStoreId(identityStoreId: String) {
       cdkBuilder.identityStoreId(identityStoreId)
     }
 
+    /**
+     * @param memberId An object containing the identifier of a group member. 
+     * Setting `MemberId` 's `UserId` field to a specific User's ID indicates we should consider
+     * that User as a group member.
+     */
     override fun memberId(memberId: IResolvable) {
       cdkBuilder.memberId(memberId.let(IResolvable::unwrap))
     }
 
+    /**
+     * @param memberId An object containing the identifier of a group member. 
+     * Setting `MemberId` 's `UserId` field to a specific User's ID indicates we should consider
+     * that User as a group member.
+     */
     override fun memberId(memberId: CfnGroupMembership.MemberIdProperty) {
       cdkBuilder.memberId(memberId.let(CfnGroupMembership.MemberIdProperty::unwrap))
     }
 
+    /**
+     * @param memberId An object containing the identifier of a group member. 
+     * Setting `MemberId` 's `UserId` field to a specific User's ID indicates we should consider
+     * that User as a group member.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fa3e7416f49dd106ef3a316c7088dc5389fea36b39fe7170fef8f8f5c32d2000")
     override fun memberId(memberId: CfnGroupMembership.MemberIdProperty.Builder.() -> Unit): Unit =
@@ -65,10 +148,28 @@ public interface CfnGroupMembershipProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.identitystore.CfnGroupMembershipProps,
   ) : CdkObject(cdkObject), CfnGroupMembershipProps {
+    /**
+     * The unique identifier for a group in the identity store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-groupmembership.html#cfn-identitystore-groupmembership-groupid)
+     */
     override fun groupId(): String = unwrap(this).getGroupId()
 
+    /**
+     * The globally unique identifier for the identity store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-groupmembership.html#cfn-identitystore-groupmembership-identitystoreid)
+     */
     override fun identityStoreId(): String = unwrap(this).getIdentityStoreId()
 
+    /**
+     * An object containing the identifier of a group member.
+     *
+     * Setting `MemberId` 's `UserId` field to a specific User's ID indicates we should consider
+     * that User as a group member.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-groupmembership.html#cfn-identitystore-groupmembership-memberid)
+     */
     override fun memberId(): Any = unwrap(this).getMemberId()
   }
 

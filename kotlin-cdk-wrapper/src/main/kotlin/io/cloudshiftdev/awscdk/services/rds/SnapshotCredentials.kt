@@ -13,25 +13,94 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
+/**
+ * Credentials to update the password for a `DatabaseInstanceFromSnapshot`.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * IInstanceEngine engine =
+ * DatabaseInstanceEngine.postgres(PostgresInstanceEngineProps.builder().version(PostgresEngineVersion.VER_15_2).build());
+ * Key myKey = new Key(this, "MyKey");
+ * DatabaseInstanceFromSnapshot.Builder.create(this, "InstanceFromSnapshotWithCustomizedSecret")
+ * .engine(engine)
+ * .vpc(vpc)
+ * .snapshotIdentifier("mySnapshot")
+ * .credentials(SnapshotCredentials.fromGeneratedSecret("username",
+ * SnapshotCredentialsFromGeneratedPasswordOptions.builder()
+ * .encryptionKey(myKey)
+ * .excludeCharacters("!&amp;*^#&#64;()")
+ * .replicaRegions(List.of(ReplicaRegion.builder().region("eu-west-1").build(),
+ * ReplicaRegion.builder().region("eu-west-2").build()))
+ * .build()))
+ * .build();
+ * ```
+ */
 public abstract class SnapshotCredentials internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.SnapshotCredentials,
 ) : CdkObject(cdkObject) {
+  /**
+   * KMS encryption key to encrypt the generated secret.
+   *
+   * Default: - default master key
+   */
   public open fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
 
+  /**
+   * The characters to exclude from the generated password.
+   *
+   * Only used if `generatePassword` if true.
+   *
+   * Default: - the DatabaseSecret default exclude character set (" %+~`#$&*()|[]{}:;<>?!'/@\"\\")
+   */
   public open fun excludeCharacters(): String? = unwrap(this).getExcludeCharacters()
 
+  /**
+   * Whether a new password should be generated.
+   */
   public open fun generatePassword(): Boolean = unwrap(this).getGeneratePassword()
 
+  /**
+   * The master user password.
+   *
+   * Do not put passwords in your CDK code directly.
+   *
+   * Default: - the existing password from the snapshot
+   */
   public open fun password(): SecretValue? = unwrap(this).getPassword()?.let(SecretValue::wrap)
 
+  /**
+   * Whether to replace the generated secret when the criteria for the password change.
+   *
+   * Default: false
+   */
   public open fun replaceOnPasswordCriteriaChanges(): Boolean? =
       unwrap(this).getReplaceOnPasswordCriteriaChanges()
 
+  /**
+   * A list of regions where to replicate the generated secret.
+   *
+   * Default: - Secret is not replicated
+   */
   public open fun replicaRegions(): List<ReplicaRegion> =
       unwrap(this).getReplicaRegions()?.map(ReplicaRegion::wrap) ?: emptyList()
 
+  /**
+   * Secret used to instantiate this Login.
+   *
+   * Default: - none
+   */
   public open fun secret(): ISecret? = unwrap(this).getSecret()?.let(ISecret::wrap)
 
+  /**
+   * The master user name.
+   *
+   * Must be the **current** master user name of the snapshot.
+   * It is not possible to change the master user name of a RDS instance.
+   *
+   * Default: - the existing username from the snapshot
+   */
   public open fun username(): String? = unwrap(this).getUsername()
 
   private class Wrapper(

@@ -8,6 +8,21 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Placeholders which can be used manifests.
+ *
+ * These can occur both in the Asset Manifest as well as the general
+ * Cloud Assembly manifest.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.cxapi.*;
+ * EnvironmentPlaceholders environmentPlaceholders = new EnvironmentPlaceholders();
+ * ```
+ */
 public open class EnvironmentPlaceholders internal constructor(
   internal override val cdkObject: software.amazon.awscdk.cxapi.EnvironmentPlaceholders,
 ) : CdkObject(cdkObject) {

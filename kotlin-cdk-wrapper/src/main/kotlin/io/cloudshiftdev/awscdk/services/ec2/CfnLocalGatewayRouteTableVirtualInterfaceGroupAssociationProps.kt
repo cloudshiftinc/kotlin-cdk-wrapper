@@ -9,21 +9,75 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 
+/**
+ * Properties for defining a `CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps
+ * cfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps =
+ * CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps.builder()
+ * .localGatewayRouteTableId("localGatewayRouteTableId")
+ * .localGatewayVirtualInterfaceGroupId("localGatewayVirtualInterfaceGroupId")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroutetablevirtualinterfacegroupassociation.html)
+ */
 public interface CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps {
+  /**
+   * The ID of the local gateway route table.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroutetablevirtualinterfacegroupassociation.html#cfn-ec2-localgatewayroutetablevirtualinterfacegroupassociation-localgatewayroutetableid)
+   */
   public fun localGatewayRouteTableId(): String
 
+  /**
+   * The ID of the virtual interface group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroutetablevirtualinterfacegroupassociation.html#cfn-ec2-localgatewayroutetablevirtualinterfacegroupassociation-localgatewayvirtualinterfacegroupid)
+   */
   public fun localGatewayVirtualInterfaceGroupId(): String
 
+  /**
+   * The tags assigned to the association.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroutetablevirtualinterfacegroupassociation.html#cfn-ec2-localgatewayroutetablevirtualinterfacegroupassociation-tags)
+   */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
+  /**
+   * A builder for [CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param localGatewayRouteTableId The ID of the local gateway route table. 
+     */
     public fun localGatewayRouteTableId(localGatewayRouteTableId: String)
 
+    /**
+     * @param localGatewayVirtualInterfaceGroupId The ID of the virtual interface group. 
+     */
     public fun localGatewayVirtualInterfaceGroupId(localGatewayVirtualInterfaceGroupId: String)
 
+    /**
+     * @param tags The tags assigned to the association.
+     */
     public fun tags(tags: List<CfnTag>)
 
+    /**
+     * @param tags The tags assigned to the association.
+     */
     public fun tags(vararg tags: CfnTag)
   }
 
@@ -33,18 +87,30 @@ public interface CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps 
         =
         software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps.builder()
 
+    /**
+     * @param localGatewayRouteTableId The ID of the local gateway route table. 
+     */
     override fun localGatewayRouteTableId(localGatewayRouteTableId: String) {
       cdkBuilder.localGatewayRouteTableId(localGatewayRouteTableId)
     }
 
+    /**
+     * @param localGatewayVirtualInterfaceGroupId The ID of the virtual interface group. 
+     */
     override fun localGatewayVirtualInterfaceGroupId(localGatewayVirtualInterfaceGroupId: String) {
       cdkBuilder.localGatewayVirtualInterfaceGroupId(localGatewayVirtualInterfaceGroupId)
     }
 
+    /**
+     * @param tags The tags assigned to the association.
+     */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    /**
+     * @param tags The tags assigned to the association.
+     */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build():
@@ -56,11 +122,26 @@ public interface CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps 
     override val cdkObject:
         software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps,
   ) : CdkObject(cdkObject), CfnLocalGatewayRouteTableVirtualInterfaceGroupAssociationProps {
+    /**
+     * The ID of the local gateway route table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroutetablevirtualinterfacegroupassociation.html#cfn-ec2-localgatewayroutetablevirtualinterfacegroupassociation-localgatewayroutetableid)
+     */
     override fun localGatewayRouteTableId(): String = unwrap(this).getLocalGatewayRouteTableId()
 
+    /**
+     * The ID of the virtual interface group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroutetablevirtualinterfacegroupassociation.html#cfn-ec2-localgatewayroutetablevirtualinterfacegroupassociation-localgatewayvirtualinterfacegroupid)
+     */
     override fun localGatewayVirtualInterfaceGroupId(): String =
         unwrap(this).getLocalGatewayVirtualInterfaceGroupId()
 
+    /**
+     * The tags assigned to the association.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-localgatewayroutetablevirtualinterfacegroupassociation.html#cfn-ec2-localgatewayroutetablevirtualinterfacegroupassociation-tags)
+     */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
   }
 

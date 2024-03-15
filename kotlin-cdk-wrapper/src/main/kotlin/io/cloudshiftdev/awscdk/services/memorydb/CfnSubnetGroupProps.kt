@@ -9,27 +9,101 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 
+/**
+ * Properties for defining a `CfnSubnetGroup`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.memorydb.*;
+ * CfnSubnetGroupProps cfnSubnetGroupProps = CfnSubnetGroupProps.builder()
+ * .subnetGroupName("subnetGroupName")
+ * .subnetIds(List.of("subnetIds"))
+ * // the properties below are optional
+ * .description("description")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-subnetgroup.html)
+ */
 public interface CfnSubnetGroupProps {
+  /**
+   * A description of the subnet group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-subnetgroup.html#cfn-memorydb-subnetgroup-description)
+   */
   public fun description(): String? = unwrap(this).getDescription()
 
+  /**
+   * The name of the subnet group to be used for the cluster .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-subnetgroup.html#cfn-memorydb-subnetgroup-subnetgroupname)
+   */
   public fun subnetGroupName(): String
 
+  /**
+   * A list of Amazon VPC subnet IDs for the subnet group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-subnetgroup.html#cfn-memorydb-subnetgroup-subnetids)
+   */
   public fun subnetIds(): List<String>
 
+  /**
+   * An array of key-value pairs to apply to this resource.
+   *
+   * For more information, see
+   * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-subnetgroup.html#cfn-memorydb-subnetgroup-tags)
+   */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
+  /**
+   * A builder for [CfnSubnetGroupProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param description A description of the subnet group.
+     */
     public fun description(description: String)
 
+    /**
+     * @param subnetGroupName The name of the subnet group to be used for the cluster . 
+     */
     public fun subnetGroupName(subnetGroupName: String)
 
+    /**
+     * @param subnetIds A list of Amazon VPC subnet IDs for the subnet group. 
+     */
     public fun subnetIds(subnetIds: List<String>)
 
+    /**
+     * @param subnetIds A list of Amazon VPC subnet IDs for the subnet group. 
+     */
     public fun subnetIds(vararg subnetIds: String)
 
+    /**
+     * @param tags An array of key-value pairs to apply to this resource.
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     */
     public fun tags(tags: List<CfnTag>)
 
+    /**
+     * @param tags An array of key-value pairs to apply to this resource.
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     */
     public fun tags(vararg tags: CfnTag)
   }
 
@@ -37,24 +111,48 @@ public interface CfnSubnetGroupProps {
     private val cdkBuilder: software.amazon.awscdk.services.memorydb.CfnSubnetGroupProps.Builder =
         software.amazon.awscdk.services.memorydb.CfnSubnetGroupProps.builder()
 
+    /**
+     * @param description A description of the subnet group.
+     */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
+    /**
+     * @param subnetGroupName The name of the subnet group to be used for the cluster . 
+     */
     override fun subnetGroupName(subnetGroupName: String) {
       cdkBuilder.subnetGroupName(subnetGroupName)
     }
 
+    /**
+     * @param subnetIds A list of Amazon VPC subnet IDs for the subnet group. 
+     */
     override fun subnetIds(subnetIds: List<String>) {
       cdkBuilder.subnetIds(subnetIds)
     }
 
+    /**
+     * @param subnetIds A list of Amazon VPC subnet IDs for the subnet group. 
+     */
     override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
+    /**
+     * @param tags An array of key-value pairs to apply to this resource.
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    /**
+     * @param tags An array of key-value pairs to apply to this resource.
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.memorydb.CfnSubnetGroupProps =
@@ -64,12 +162,36 @@ public interface CfnSubnetGroupProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.memorydb.CfnSubnetGroupProps,
   ) : CdkObject(cdkObject), CfnSubnetGroupProps {
+    /**
+     * A description of the subnet group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-subnetgroup.html#cfn-memorydb-subnetgroup-description)
+     */
     override fun description(): String? = unwrap(this).getDescription()
 
+    /**
+     * The name of the subnet group to be used for the cluster .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-subnetgroup.html#cfn-memorydb-subnetgroup-subnetgroupname)
+     */
     override fun subnetGroupName(): String = unwrap(this).getSubnetGroupName()
 
+    /**
+     * A list of Amazon VPC subnet IDs for the subnet group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-subnetgroup.html#cfn-memorydb-subnetgroup-subnetids)
+     */
     override fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
 
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-subnetgroup.html#cfn-memorydb-subnetgroup-tags)
+     */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
   }
 

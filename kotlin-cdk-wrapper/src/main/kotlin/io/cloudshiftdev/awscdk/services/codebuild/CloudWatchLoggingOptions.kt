@@ -9,19 +9,61 @@ import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Information about logs built to a CloudWatch Log Group for a build project.
+ *
+ * Example:
+ *
+ * ```
+ * Project.Builder.create(this, "Project")
+ * .logging(LoggingOptions.builder()
+ * .cloudWatch(CloudWatchLoggingOptions.builder()
+ * .logGroup(new LogGroup(this, "MyLogGroup"))
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ */
 public interface CloudWatchLoggingOptions {
+  /**
+   * The current status of the logs in Amazon CloudWatch Logs for a build project.
+   *
+   * Default: true
+   */
   public fun enabled(): Boolean? = unwrap(this).getEnabled()
 
+  /**
+   * The Log Group to send logs to.
+   *
+   * Default: - no log group specified
+   */
   public fun logGroup(): ILogGroup? = unwrap(this).getLogGroup()?.let(ILogGroup::wrap)
 
+  /**
+   * The prefix of the stream name of the Amazon CloudWatch Logs.
+   *
+   * Default: - no prefix
+   */
   public fun prefix(): String? = unwrap(this).getPrefix()
 
+  /**
+   * A builder for [CloudWatchLoggingOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param enabled The current status of the logs in Amazon CloudWatch Logs for a build project.
+     */
     public fun enabled(enabled: Boolean)
 
+    /**
+     * @param logGroup The Log Group to send logs to.
+     */
     public fun logGroup(logGroup: ILogGroup)
 
+    /**
+     * @param prefix The prefix of the stream name of the Amazon CloudWatch Logs.
+     */
     public fun prefix(prefix: String)
   }
 
@@ -30,14 +72,23 @@ public interface CloudWatchLoggingOptions {
         software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions.Builder =
         software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions.builder()
 
+    /**
+     * @param enabled The current status of the logs in Amazon CloudWatch Logs for a build project.
+     */
     override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
+    /**
+     * @param logGroup The Log Group to send logs to.
+     */
     override fun logGroup(logGroup: ILogGroup) {
       cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
     }
 
+    /**
+     * @param prefix The prefix of the stream name of the Amazon CloudWatch Logs.
+     */
     override fun prefix(prefix: String) {
       cdkBuilder.prefix(prefix)
     }
@@ -49,10 +100,25 @@ public interface CloudWatchLoggingOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.codebuild.CloudWatchLoggingOptions,
   ) : CdkObject(cdkObject), CloudWatchLoggingOptions {
+    /**
+     * The current status of the logs in Amazon CloudWatch Logs for a build project.
+     *
+     * Default: true
+     */
     override fun enabled(): Boolean? = unwrap(this).getEnabled()
 
+    /**
+     * The Log Group to send logs to.
+     *
+     * Default: - no log group specified
+     */
     override fun logGroup(): ILogGroup? = unwrap(this).getLogGroup()?.let(ILogGroup::wrap)
 
+    /**
+     * The prefix of the stream name of the Amazon CloudWatch Logs.
+     *
+     * Default: - no prefix
+     */
     override fun prefix(): String? = unwrap(this).getPrefix()
   }
 

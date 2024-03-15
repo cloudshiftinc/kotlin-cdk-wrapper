@@ -9,6 +9,21 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Metrics on the rate limiting performed on state machine execution.
+ *
+ * These rate limits are shared across all state machines.
+ *
+ * Example:
+ *
+ * ```
+ * Alarm.Builder.create(this, "ThrottledAlarm")
+ * .metric(StateTransitionMetric.metricThrottledEvents())
+ * .threshold(10)
+ * .evaluationPeriods(2)
+ * .build();
+ * ```
+ */
 public open class StateTransitionMetric internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.StateTransitionMetric,

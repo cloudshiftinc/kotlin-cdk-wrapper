@@ -5,11 +5,31 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.String
 
+/**
+ * An import source from an S3 object.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+ * import io.cloudshiftdev.awscdk.services.s3.*;
+ * Bucket bucket;
+ * S3ImportSource s3ImportSource = new S3ImportSource(bucket, "key");
+ * ```
+ */
 public open class S3ImportSource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.S3ImportSource,
 ) : ImportSource(cdkObject) {
+  /**
+   * the S3 bucket that contains the data.
+   */
   public open fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
 
+  /**
+   * the key within the S3 bucket that contains the data.
+   */
   public open fun key(): String = unwrap(this).getKey()
 
   public companion object {

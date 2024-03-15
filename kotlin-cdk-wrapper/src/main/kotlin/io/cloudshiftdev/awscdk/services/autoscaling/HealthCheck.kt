@@ -8,11 +8,32 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Health check settings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+ * HealthCheck healthCheck = HealthCheck.ec2(Ec2HealthCheckOptions.builder()
+ * .grace(Duration.minutes(30))
+ * .build());
+ * ```
+ */
 public open class HealthCheck internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.autoscaling.HealthCheck,
 ) : CdkObject(cdkObject) {
+  /**
+   *
+   */
   public open fun gracePeriod(): Duration? = unwrap(this).getGracePeriod()?.let(Duration::wrap)
 
+  /**
+   *
+   */
   public open fun type(): String = unwrap(this).getType()
 
   public companion object {

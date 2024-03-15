@@ -7,11 +7,35 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * The type returned from `IParameterGroup.bindToInstance`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.rds.*;
+ * ParameterGroupInstanceConfig parameterGroupInstanceConfig =
+ * ParameterGroupInstanceConfig.builder()
+ * .parameterGroupName("parameterGroupName")
+ * .build();
+ * ```
+ */
 public interface ParameterGroupInstanceConfig {
+  /**
+   * The name of this parameter group.
+   */
   public fun parameterGroupName(): String
 
+  /**
+   * A builder for [ParameterGroupInstanceConfig]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param parameterGroupName The name of this parameter group. 
+     */
     public fun parameterGroupName(parameterGroupName: String)
   }
 
@@ -19,6 +43,9 @@ public interface ParameterGroupInstanceConfig {
     private val cdkBuilder: software.amazon.awscdk.services.rds.ParameterGroupInstanceConfig.Builder
         = software.amazon.awscdk.services.rds.ParameterGroupInstanceConfig.builder()
 
+    /**
+     * @param parameterGroupName The name of this parameter group. 
+     */
     override fun parameterGroupName(parameterGroupName: String) {
       cdkBuilder.parameterGroupName(parameterGroupName)
     }
@@ -30,6 +57,9 @@ public interface ParameterGroupInstanceConfig {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.rds.ParameterGroupInstanceConfig,
   ) : CdkObject(cdkObject), ParameterGroupInstanceConfig {
+    /**
+     * The name of this parameter group.
+     */
     override fun parameterGroupName(): String = unwrap(this).getParameterGroupName()
   }
 

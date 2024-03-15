@@ -9,29 +9,133 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 
+/**
+ * Properties for defining a `CfnVpcConnector`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.apprunner.*;
+ * CfnVpcConnectorProps cfnVpcConnectorProps = CfnVpcConnectorProps.builder()
+ * .subnets(List.of("subnets"))
+ * // the properties below are optional
+ * .securityGroups(List.of("securityGroups"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .vpcConnectorName("vpcConnectorName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-vpcconnector.html)
+ */
 public interface CfnVpcConnectorProps {
+  /**
+   * A list of IDs of security groups that App Runner should use for access to AWS resources under
+   * the specified subnets.
+   *
+   * If not specified, App Runner uses the default security group of the Amazon VPC. The default
+   * security group allows all outbound traffic.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-vpcconnector.html#cfn-apprunner-vpcconnector-securitygroups)
+   */
   public fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
 
+  /**
+   * A list of IDs of subnets that App Runner should use when it associates your service with a
+   * custom Amazon VPC.
+   *
+   * Specify IDs of subnets of a single Amazon VPC. App Runner determines the Amazon VPC from the
+   * subnets you specify.
+   *
+   *
+   * App Runner currently only provides support for IPv4.
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-vpcconnector.html#cfn-apprunner-vpcconnector-subnets)
+   */
   public fun subnets(): List<String>
 
+  /**
+   * A list of metadata items that you can associate with your VPC connector resource.
+   *
+   * A tag is a key-value pair.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-vpcconnector.html#cfn-apprunner-vpcconnector-tags)
+   */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
+  /**
+   * A name for the VPC connector.
+   *
+   * If you don't specify a name, AWS CloudFormation generates a name for your VPC connector.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-vpcconnector.html#cfn-apprunner-vpcconnector-vpcconnectorname)
+   */
   public fun vpcConnectorName(): String? = unwrap(this).getVpcConnectorName()
 
+  /**
+   * A builder for [CfnVpcConnectorProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param securityGroups A list of IDs of security groups that App Runner should use for access
+     * to AWS resources under the specified subnets.
+     * If not specified, App Runner uses the default security group of the Amazon VPC. The default
+     * security group allows all outbound traffic.
+     */
     public fun securityGroups(securityGroups: List<String>)
 
+    /**
+     * @param securityGroups A list of IDs of security groups that App Runner should use for access
+     * to AWS resources under the specified subnets.
+     * If not specified, App Runner uses the default security group of the Amazon VPC. The default
+     * security group allows all outbound traffic.
+     */
     public fun securityGroups(vararg securityGroups: String)
 
+    /**
+     * @param subnets A list of IDs of subnets that App Runner should use when it associates your
+     * service with a custom Amazon VPC. 
+     * Specify IDs of subnets of a single Amazon VPC. App Runner determines the Amazon VPC from the
+     * subnets you specify.
+     *
+     *
+     * App Runner currently only provides support for IPv4.
+     */
     public fun subnets(subnets: List<String>)
 
+    /**
+     * @param subnets A list of IDs of subnets that App Runner should use when it associates your
+     * service with a custom Amazon VPC. 
+     * Specify IDs of subnets of a single Amazon VPC. App Runner determines the Amazon VPC from the
+     * subnets you specify.
+     *
+     *
+     * App Runner currently only provides support for IPv4.
+     */
     public fun subnets(vararg subnets: String)
 
+    /**
+     * @param tags A list of metadata items that you can associate with your VPC connector resource.
+     * A tag is a key-value pair.
+     */
     public fun tags(tags: List<CfnTag>)
 
+    /**
+     * @param tags A list of metadata items that you can associate with your VPC connector resource.
+     * A tag is a key-value pair.
+     */
     public fun tags(vararg tags: CfnTag)
 
+    /**
+     * @param vpcConnectorName A name for the VPC connector.
+     * If you don't specify a name, AWS CloudFormation generates a name for your VPC connector.
+     */
     public fun vpcConnectorName(vpcConnectorName: String)
   }
 
@@ -39,25 +143,67 @@ public interface CfnVpcConnectorProps {
     private val cdkBuilder: software.amazon.awscdk.services.apprunner.CfnVpcConnectorProps.Builder =
         software.amazon.awscdk.services.apprunner.CfnVpcConnectorProps.builder()
 
+    /**
+     * @param securityGroups A list of IDs of security groups that App Runner should use for access
+     * to AWS resources under the specified subnets.
+     * If not specified, App Runner uses the default security group of the Amazon VPC. The default
+     * security group allows all outbound traffic.
+     */
     override fun securityGroups(securityGroups: List<String>) {
       cdkBuilder.securityGroups(securityGroups)
     }
 
+    /**
+     * @param securityGroups A list of IDs of security groups that App Runner should use for access
+     * to AWS resources under the specified subnets.
+     * If not specified, App Runner uses the default security group of the Amazon VPC. The default
+     * security group allows all outbound traffic.
+     */
     override fun securityGroups(vararg securityGroups: String): Unit =
         securityGroups(securityGroups.toList())
 
+    /**
+     * @param subnets A list of IDs of subnets that App Runner should use when it associates your
+     * service with a custom Amazon VPC. 
+     * Specify IDs of subnets of a single Amazon VPC. App Runner determines the Amazon VPC from the
+     * subnets you specify.
+     *
+     *
+     * App Runner currently only provides support for IPv4.
+     */
     override fun subnets(subnets: List<String>) {
       cdkBuilder.subnets(subnets)
     }
 
+    /**
+     * @param subnets A list of IDs of subnets that App Runner should use when it associates your
+     * service with a custom Amazon VPC. 
+     * Specify IDs of subnets of a single Amazon VPC. App Runner determines the Amazon VPC from the
+     * subnets you specify.
+     *
+     *
+     * App Runner currently only provides support for IPv4.
+     */
     override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
 
+    /**
+     * @param tags A list of metadata items that you can associate with your VPC connector resource.
+     * A tag is a key-value pair.
+     */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    /**
+     * @param tags A list of metadata items that you can associate with your VPC connector resource.
+     * A tag is a key-value pair.
+     */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
+    /**
+     * @param vpcConnectorName A name for the VPC connector.
+     * If you don't specify a name, AWS CloudFormation generates a name for your VPC connector.
+     */
     override fun vpcConnectorName(vpcConnectorName: String) {
       cdkBuilder.vpcConnectorName(vpcConnectorName)
     }
@@ -69,12 +215,48 @@ public interface CfnVpcConnectorProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.apprunner.CfnVpcConnectorProps,
   ) : CdkObject(cdkObject), CfnVpcConnectorProps {
+    /**
+     * A list of IDs of security groups that App Runner should use for access to AWS resources under
+     * the specified subnets.
+     *
+     * If not specified, App Runner uses the default security group of the Amazon VPC. The default
+     * security group allows all outbound traffic.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-vpcconnector.html#cfn-apprunner-vpcconnector-securitygroups)
+     */
     override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
 
+    /**
+     * A list of IDs of subnets that App Runner should use when it associates your service with a
+     * custom Amazon VPC.
+     *
+     * Specify IDs of subnets of a single Amazon VPC. App Runner determines the Amazon VPC from the
+     * subnets you specify.
+     *
+     *
+     * App Runner currently only provides support for IPv4.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-vpcconnector.html#cfn-apprunner-vpcconnector-subnets)
+     */
     override fun subnets(): List<String> = unwrap(this).getSubnets()
 
+    /**
+     * A list of metadata items that you can associate with your VPC connector resource.
+     *
+     * A tag is a key-value pair.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-vpcconnector.html#cfn-apprunner-vpcconnector-tags)
+     */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
+    /**
+     * A name for the VPC connector.
+     *
+     * If you don't specify a name, AWS CloudFormation generates a name for your VPC connector.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-vpcconnector.html#cfn-apprunner-vpcconnector-vpcconnectorname)
+     */
     override fun vpcConnectorName(): String? = unwrap(this).getVpcConnectorName()
   }
 

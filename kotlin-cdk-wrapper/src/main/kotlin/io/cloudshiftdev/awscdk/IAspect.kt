@@ -5,14 +5,27 @@ package io.cloudshiftdev.awscdk
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.constructs.IConstruct
 
+/**
+ * Represents an Aspect.
+ */
 public interface IAspect {
-  public fun visit(arg0: IConstruct)
+  /**
+   * All aspects can visit an IConstruct.
+   *
+   * @param node 
+   */
+  public fun visit(node: IConstruct)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.IAspect,
   ) : CdkObject(cdkObject), IAspect {
-    override fun visit(arg0: IConstruct) {
-      unwrap(this).visit(arg0.let(IConstruct::unwrap))
+    /**
+     * All aspects can visit an IConstruct.
+     *
+     * @param node 
+     */
+    override fun visit(node: IConstruct) {
+      unwrap(this).visit(node.let(IConstruct::unwrap))
     }
   }
 

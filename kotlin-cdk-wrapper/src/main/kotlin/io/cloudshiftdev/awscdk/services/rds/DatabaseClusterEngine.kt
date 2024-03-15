@@ -6,6 +6,33 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * A database cluster engine.
+ *
+ * Provides mapping to the serverless application
+ * used for secret rotation.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
+ * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_3_01_0).build()))
+ * .credentials(Credentials.fromGeneratedSecret("clusteradmin")) // Optional - will default to
+ * 'admin' username and generated password
+ * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
+ * .publiclyAccessible(false)
+ * .build()))
+ * .readers(List.of(ClusterInstance.provisioned("reader1",
+ * ProvisionedClusterInstanceProps.builder().promotionTier(1).build()),
+ * ClusterInstance.serverlessV2("reader2")))
+ * .vpcSubnets(SubnetSelection.builder()
+ * .subnetType(SubnetType.PRIVATE_WITH_EGRESS)
+ * .build())
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 public open class DatabaseClusterEngine internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.DatabaseClusterEngine,
 ) : CdkObject(cdkObject) {

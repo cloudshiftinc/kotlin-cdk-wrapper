@@ -9,64 +9,200 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Contains all metrics for a Target Group of a Network Load Balancer.
+ */
 public interface INetworkTargetGroupMetrics {
-  public fun custom(arg0: String): Metric
+  /**
+   * Return the given named metric for this Network Target Group.
+   *
+   * Default: Average over 5 minutes
+   *
+   * @param metricName 
+   * @param props
+   */
+  public fun custom(metricName: String): Metric
 
-  public fun custom(arg0: String, arg1: MetricOptions): Metric
+  /**
+   * Return the given named metric for this Network Target Group.
+   *
+   * Default: Average over 5 minutes
+   *
+   * @param metricName 
+   * @param props
+   */
+  public fun custom(metricName: String, props: MetricOptions): Metric
 
+  /**
+   * Return the given named metric for this Network Target Group.
+   *
+   * Default: Average over 5 minutes
+   *
+   * @param metricName 
+   * @param props
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("e3a7bf310cfbfe77339a32a3f576ae6834193015bd367fe25d8280f53f24860b")
-  public fun custom(arg0: String, arg1: MetricOptions.Builder.() -> Unit): Metric
+  public fun custom(metricName: String, props: MetricOptions.Builder.() -> Unit): Metric
 
+  /**
+   * The number of targets that are considered healthy.
+   *
+   * Default: Average over 5 minutes
+   *
+   * @param props
+   */
   public fun healthyHostCount(): Metric
 
-  public fun healthyHostCount(arg0: MetricOptions): Metric
+  /**
+   * The number of targets that are considered healthy.
+   *
+   * Default: Average over 5 minutes
+   *
+   * @param props
+   */
+  public fun healthyHostCount(props: MetricOptions): Metric
 
+  /**
+   * The number of targets that are considered healthy.
+   *
+   * Default: Average over 5 minutes
+   *
+   * @param props
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("86001b538e3d7af3f82ae55f087e4d922defb3087f332d19bda9d0eca9b8461c")
-  public fun healthyHostCount(arg0: MetricOptions.Builder.() -> Unit): Metric
+  public fun healthyHostCount(props: MetricOptions.Builder.() -> Unit): Metric
 
+  /**
+   * The number of targets that are considered unhealthy.
+   *
+   * Default: Average over 5 minutes
+   *
+   * @param props
+   */
   public fun unHealthyHostCount(): Metric
 
-  public fun unHealthyHostCount(arg0: MetricOptions): Metric
+  /**
+   * The number of targets that are considered unhealthy.
+   *
+   * Default: Average over 5 minutes
+   *
+   * @param props
+   */
+  public fun unHealthyHostCount(props: MetricOptions): Metric
 
+  /**
+   * The number of targets that are considered unhealthy.
+   *
+   * Default: Average over 5 minutes
+   *
+   * @param props
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("18773188c6bc1c1f2a98c9e673b30d76254c9d1f8e6cbdbe47b05dbffe2faf6e")
-  public fun unHealthyHostCount(arg0: MetricOptions.Builder.() -> Unit): Metric
+  public fun unHealthyHostCount(props: MetricOptions.Builder.() -> Unit): Metric
 
   private class Wrapper(
     override val cdkObject:
         software.amazon.awscdk.services.elasticloadbalancingv2.INetworkTargetGroupMetrics,
   ) : CdkObject(cdkObject), INetworkTargetGroupMetrics {
-    override fun custom(arg0: String): Metric = unwrap(this).custom(arg0).let(Metric::wrap)
+    /**
+     * Return the given named metric for this Network Target Group.
+     *
+     * Default: Average over 5 minutes
+     *
+     * @param metricName 
+     * @param props
+     */
+    override fun custom(metricName: String): Metric =
+        unwrap(this).custom(metricName).let(Metric::wrap)
 
-    override fun custom(arg0: String, arg1: MetricOptions): Metric = unwrap(this).custom(arg0,
-        arg1.let(MetricOptions::unwrap)).let(Metric::wrap)
+    /**
+     * Return the given named metric for this Network Target Group.
+     *
+     * Default: Average over 5 minutes
+     *
+     * @param metricName 
+     * @param props
+     */
+    override fun custom(metricName: String, props: MetricOptions): Metric =
+        unwrap(this).custom(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
+    /**
+     * Return the given named metric for this Network Target Group.
+     *
+     * Default: Average over 5 minutes
+     *
+     * @param metricName 
+     * @param props
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e3a7bf310cfbfe77339a32a3f576ae6834193015bd367fe25d8280f53f24860b")
-    override fun custom(arg0: String, arg1: MetricOptions.Builder.() -> Unit): Metric = custom(arg0,
-        MetricOptions(arg1))
+    override fun custom(metricName: String, props: MetricOptions.Builder.() -> Unit): Metric =
+        custom(metricName, MetricOptions(props))
 
+    /**
+     * The number of targets that are considered healthy.
+     *
+     * Default: Average over 5 minutes
+     *
+     * @param props
+     */
     override fun healthyHostCount(): Metric = unwrap(this).healthyHostCount().let(Metric::wrap)
 
-    override fun healthyHostCount(arg0: MetricOptions): Metric =
-        unwrap(this).healthyHostCount(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
+    /**
+     * The number of targets that are considered healthy.
+     *
+     * Default: Average over 5 minutes
+     *
+     * @param props
+     */
+    override fun healthyHostCount(props: MetricOptions): Metric =
+        unwrap(this).healthyHostCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
+    /**
+     * The number of targets that are considered healthy.
+     *
+     * Default: Average over 5 minutes
+     *
+     * @param props
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("86001b538e3d7af3f82ae55f087e4d922defb3087f332d19bda9d0eca9b8461c")
-    override fun healthyHostCount(arg0: MetricOptions.Builder.() -> Unit): Metric =
-        healthyHostCount(MetricOptions(arg0))
+    override fun healthyHostCount(props: MetricOptions.Builder.() -> Unit): Metric =
+        healthyHostCount(MetricOptions(props))
 
+    /**
+     * The number of targets that are considered unhealthy.
+     *
+     * Default: Average over 5 minutes
+     *
+     * @param props
+     */
     override fun unHealthyHostCount(): Metric = unwrap(this).unHealthyHostCount().let(Metric::wrap)
 
-    override fun unHealthyHostCount(arg0: MetricOptions): Metric =
-        unwrap(this).unHealthyHostCount(arg0.let(MetricOptions::unwrap)).let(Metric::wrap)
+    /**
+     * The number of targets that are considered unhealthy.
+     *
+     * Default: Average over 5 minutes
+     *
+     * @param props
+     */
+    override fun unHealthyHostCount(props: MetricOptions): Metric =
+        unwrap(this).unHealthyHostCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
+    /**
+     * The number of targets that are considered unhealthy.
+     *
+     * Default: Average over 5 minutes
+     *
+     * @param props
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("18773188c6bc1c1f2a98c9e673b30d76254c9d1f8e6cbdbe47b05dbffe2faf6e")
-    override fun unHealthyHostCount(arg0: MetricOptions.Builder.() -> Unit): Metric =
-        unHealthyHostCount(MetricOptions(arg0))
+    override fun unHealthyHostCount(props: MetricOptions.Builder.() -> Unit): Metric =
+        unHealthyHostCount(MetricOptions(props))
   }
 
   public companion object {

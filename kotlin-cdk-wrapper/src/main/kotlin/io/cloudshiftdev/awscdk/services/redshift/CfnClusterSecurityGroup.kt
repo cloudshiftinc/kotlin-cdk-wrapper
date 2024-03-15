@@ -15,38 +15,118 @@ import kotlin.collections.List
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * Specifies a new Amazon Redshift security group. You use security groups to control access to
+ * non-VPC clusters.
+ *
+ * For information about managing security groups, go to [Amazon Redshift Cluster Security
+ * Groups](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html) in the
+ * *Amazon Redshift Cluster Management Guide* .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.redshift.*;
+ * CfnClusterSecurityGroup cfnClusterSecurityGroup = CfnClusterSecurityGroup.Builder.create(this,
+ * "MyCfnClusterSecurityGroup")
+ * .description("description")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroup.html)
+ */
 public open class CfnClusterSecurityGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.redshift.CfnClusterSecurityGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
+  /**
+   *
+   */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
+  /**
+   * A description for the security group.
+   */
   public open fun description(): String = unwrap(this).getDescription()
 
+  /**
+   * A description for the security group.
+   */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
   }
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
+  /**
+   * Specifies an arbitrary set of tags (key–value pairs) to associate with this security group.
+   */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
+  /**
+   * Specifies an arbitrary set of tags (key–value pairs) to associate with this security group.
+   */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
+  /**
+   * Specifies an arbitrary set of tags (key–value pairs) to associate with this security group.
+   */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.redshift.CfnClusterSecurityGroup].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * A description for the security group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroup.html#cfn-redshift-clustersecuritygroup-description)
+     * @param description A description for the security group. 
+     */
     public fun description(description: String)
 
+    /**
+     * Specifies an arbitrary set of tags (key–value pairs) to associate with this security group.
+     *
+     * Use tags to manage your resources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroup.html#cfn-redshift-clustersecuritygroup-tags)
+     * @param tags Specifies an arbitrary set of tags (key–value pairs) to associate with this
+     * security group. 
+     */
     public fun tags(tags: List<CfnTag>)
 
+    /**
+     * Specifies an arbitrary set of tags (key–value pairs) to associate with this security group.
+     *
+     * Use tags to manage your resources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroup.html#cfn-redshift-clustersecuritygroup-tags)
+     * @param tags Specifies an arbitrary set of tags (key–value pairs) to associate with this
+     * security group. 
+     */
     public fun tags(vararg tags: CfnTag)
   }
 
@@ -57,14 +137,38 @@ public open class CfnClusterSecurityGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.redshift.CfnClusterSecurityGroup.Builder
         = software.amazon.awscdk.services.redshift.CfnClusterSecurityGroup.Builder.create(scope, id)
 
+    /**
+     * A description for the security group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroup.html#cfn-redshift-clustersecuritygroup-description)
+     * @param description A description for the security group. 
+     */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
+    /**
+     * Specifies an arbitrary set of tags (key–value pairs) to associate with this security group.
+     *
+     * Use tags to manage your resources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroup.html#cfn-redshift-clustersecuritygroup-tags)
+     * @param tags Specifies an arbitrary set of tags (key–value pairs) to associate with this
+     * security group. 
+     */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    /**
+     * Specifies an arbitrary set of tags (key–value pairs) to associate with this security group.
+     *
+     * Use tags to manage your resources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-clustersecuritygroup.html#cfn-redshift-clustersecuritygroup-tags)
+     * @param tags Specifies an arbitrary set of tags (key–value pairs) to associate with this
+     * security group. 
+     */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.redshift.CfnClusterSecurityGroup =

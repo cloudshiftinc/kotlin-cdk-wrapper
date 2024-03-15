@@ -8,13 +8,46 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 import kotlin.collections.List
 
+/**
+ * Properties for defining a `CfnInternetGateway`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * CfnInternetGatewayProps cfnInternetGatewayProps = CfnInternetGatewayProps.builder()
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-internetgateway.html)
+ */
 public interface CfnInternetGatewayProps {
+  /**
+   * Any tags to assign to the internet gateway.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-internetgateway.html#cfn-ec2-internetgateway-tags)
+   */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
+  /**
+   * A builder for [CfnInternetGatewayProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param tags Any tags to assign to the internet gateway.
+     */
     public fun tags(tags: List<CfnTag>)
 
+    /**
+     * @param tags Any tags to assign to the internet gateway.
+     */
     public fun tags(vararg tags: CfnTag)
   }
 
@@ -22,10 +55,16 @@ public interface CfnInternetGatewayProps {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnInternetGatewayProps.Builder =
         software.amazon.awscdk.services.ec2.CfnInternetGatewayProps.builder()
 
+    /**
+     * @param tags Any tags to assign to the internet gateway.
+     */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    /**
+     * @param tags Any tags to assign to the internet gateway.
+     */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.CfnInternetGatewayProps =
@@ -35,6 +74,11 @@ public interface CfnInternetGatewayProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ec2.CfnInternetGatewayProps,
   ) : CdkObject(cdkObject), CfnInternetGatewayProps {
+    /**
+     * Any tags to assign to the internet gateway.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-internetgateway.html#cfn-ec2-internetgateway-tags)
+     */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
   }
 

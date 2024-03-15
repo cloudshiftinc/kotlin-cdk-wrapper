@@ -9,6 +9,23 @@ import kotlin.Unit
 import kotlin.collections.Map
 import kotlin.jvm.JvmName
 
+/**
+ * Factory functions for standard Amazon Machine Image objects.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * SecurityGroup mySecurityGroup = SecurityGroup.Builder.create(this,
+ * "SecurityGroup").vpc(vpc).build();
+ * AutoScalingGroup.Builder.create(this, "ASG")
+ * .vpc(vpc)
+ * .instanceType(InstanceType.of(InstanceClass.BURSTABLE2, InstanceSize.MICRO))
+ * .machineImage(MachineImage.latestAmazonLinux2())
+ * .securityGroup(mySecurityGroup)
+ * .build();
+ * ```
+ */
 public abstract class MachineImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.MachineImage,
 ) : CdkObject(cdkObject) {

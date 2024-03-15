@@ -4,6 +4,12 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 
+/**
+ * Low-level class for generic CodePipeline Actions.
+ *
+ * If you're implementing your own IAction,
+ * prefer to use the Action class from the codepipeline module.
+ */
 public abstract class Action internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codepipeline.actions.Action,
 ) : io.cloudshiftdev.awscdk.services.codepipeline.Action(cdkObject) {

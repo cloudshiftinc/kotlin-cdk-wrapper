@@ -7,23 +7,100 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for defining a `CfnHookTypeConfig`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.cloudformation.*;
+ * CfnHookTypeConfigProps cfnHookTypeConfigProps = CfnHookTypeConfigProps.builder()
+ * .configuration("configuration")
+ * // the properties below are optional
+ * .configurationAlias("configurationAlias")
+ * .typeArn("typeArn")
+ * .typeName("typeName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hooktypeconfig.html)
+ */
 public interface CfnHookTypeConfigProps {
+  /**
+   * Specifies the activated hook type configuration, in this AWS account and AWS Region .
+   *
+   * You must specify either `TypeName` and `Configuration` or `TypeARN` and `Configuration` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hooktypeconfig.html#cfn-cloudformation-hooktypeconfig-configuration)
+   */
   public fun configuration(): String
 
+  /**
+   * Specifies the activated hook type configuration, in this AWS account and AWS Region .
+   *
+   * Defaults to `default` alias. Hook types currently support default configuration alias.
+   *
+   * Default: - "default"
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hooktypeconfig.html#cfn-cloudformation-hooktypeconfig-configurationalias)
+   */
   public fun configurationAlias(): String? = unwrap(this).getConfigurationAlias()
 
+  /**
+   * The Amazon Resource Number (ARN) for the hook to set `Configuration` for.
+   *
+   * You must specify either `TypeName` and `Configuration` or `TypeARN` and `Configuration` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hooktypeconfig.html#cfn-cloudformation-hooktypeconfig-typearn)
+   */
   public fun typeArn(): String? = unwrap(this).getTypeArn()
 
+  /**
+   * The unique name for your hook.
+   *
+   * Specifies a three-part namespace for your hook, with a recommended pattern of
+   * `Organization::Service::Hook` .
+   *
+   * You must specify either `TypeName` and `Configuration` or `TypeARN` and `Configuration` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hooktypeconfig.html#cfn-cloudformation-hooktypeconfig-typename)
+   */
   public fun typeName(): String? = unwrap(this).getTypeName()
 
+  /**
+   * A builder for [CfnHookTypeConfigProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param configuration Specifies the activated hook type configuration, in this AWS account and
+     * AWS Region . 
+     * You must specify either `TypeName` and `Configuration` or `TypeARN` and `Configuration` .
+     */
     public fun configuration(configuration: String)
 
+    /**
+     * @param configurationAlias Specifies the activated hook type configuration, in this AWS
+     * account and AWS Region .
+     * Defaults to `default` alias. Hook types currently support default configuration alias.
+     */
     public fun configurationAlias(configurationAlias: String)
 
+    /**
+     * @param typeArn The Amazon Resource Number (ARN) for the hook to set `Configuration` for.
+     * You must specify either `TypeName` and `Configuration` or `TypeARN` and `Configuration` .
+     */
     public fun typeArn(typeArn: String)
 
+    /**
+     * @param typeName The unique name for your hook.
+     * Specifies a three-part namespace for your hook, with a recommended pattern of
+     * `Organization::Service::Hook` .
+     *
+     * You must specify either `TypeName` and `Configuration` or `TypeARN` and `Configuration` .
+     */
     public fun typeName(typeName: String)
   }
 
@@ -32,18 +109,39 @@ public interface CfnHookTypeConfigProps {
         software.amazon.awscdk.services.cloudformation.CfnHookTypeConfigProps.Builder =
         software.amazon.awscdk.services.cloudformation.CfnHookTypeConfigProps.builder()
 
+    /**
+     * @param configuration Specifies the activated hook type configuration, in this AWS account and
+     * AWS Region . 
+     * You must specify either `TypeName` and `Configuration` or `TypeARN` and `Configuration` .
+     */
     override fun configuration(configuration: String) {
       cdkBuilder.configuration(configuration)
     }
 
+    /**
+     * @param configurationAlias Specifies the activated hook type configuration, in this AWS
+     * account and AWS Region .
+     * Defaults to `default` alias. Hook types currently support default configuration alias.
+     */
     override fun configurationAlias(configurationAlias: String) {
       cdkBuilder.configurationAlias(configurationAlias)
     }
 
+    /**
+     * @param typeArn The Amazon Resource Number (ARN) for the hook to set `Configuration` for.
+     * You must specify either `TypeName` and `Configuration` or `TypeARN` and `Configuration` .
+     */
     override fun typeArn(typeArn: String) {
       cdkBuilder.typeArn(typeArn)
     }
 
+    /**
+     * @param typeName The unique name for your hook.
+     * Specifies a three-part namespace for your hook, with a recommended pattern of
+     * `Organization::Service::Hook` .
+     *
+     * You must specify either `TypeName` and `Configuration` or `TypeARN` and `Configuration` .
+     */
     override fun typeName(typeName: String) {
       cdkBuilder.typeName(typeName)
     }
@@ -55,12 +153,45 @@ public interface CfnHookTypeConfigProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.cloudformation.CfnHookTypeConfigProps,
   ) : CdkObject(cdkObject), CfnHookTypeConfigProps {
+    /**
+     * Specifies the activated hook type configuration, in this AWS account and AWS Region .
+     *
+     * You must specify either `TypeName` and `Configuration` or `TypeARN` and `Configuration` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hooktypeconfig.html#cfn-cloudformation-hooktypeconfig-configuration)
+     */
     override fun configuration(): String = unwrap(this).getConfiguration()
 
+    /**
+     * Specifies the activated hook type configuration, in this AWS account and AWS Region .
+     *
+     * Defaults to `default` alias. Hook types currently support default configuration alias.
+     *
+     * Default: - "default"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hooktypeconfig.html#cfn-cloudformation-hooktypeconfig-configurationalias)
+     */
     override fun configurationAlias(): String? = unwrap(this).getConfigurationAlias()
 
+    /**
+     * The Amazon Resource Number (ARN) for the hook to set `Configuration` for.
+     *
+     * You must specify either `TypeName` and `Configuration` or `TypeARN` and `Configuration` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hooktypeconfig.html#cfn-cloudformation-hooktypeconfig-typearn)
+     */
     override fun typeArn(): String? = unwrap(this).getTypeArn()
 
+    /**
+     * The unique name for your hook.
+     *
+     * Specifies a three-part namespace for your hook, with a recommended pattern of
+     * `Organization::Service::Hook` .
+     *
+     * You must specify either `TypeName` and `Configuration` or `TypeARN` and `Configuration` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hooktypeconfig.html#cfn-cloudformation-hooktypeconfig-typename)
+     */
     override fun typeName(): String? = unwrap(this).getTypeName()
   }
 

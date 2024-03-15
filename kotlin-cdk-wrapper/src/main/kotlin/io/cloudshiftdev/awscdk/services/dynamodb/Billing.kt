@@ -6,9 +6,38 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Represents how capacity is managed and how you are charged for read and write throughput for a
+ * DynamoDB table.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.*;
+ * App app = new App();
+ * Stack stack = Stack.Builder.create(app,
+ * "Stack").env(Environment.builder().region("us-west-2").build()).build();
+ * TableV2 globalTable = TableV2.Builder.create(stack, "GlobalTable")
+ * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
+ * .billing(Billing.provisioned(ThroughputProps.builder()
+ * .readCapacity(Capacity.fixed(10))
+ * .writeCapacity(Capacity.autoscaled(AutoscaledCapacityOptions.builder().maxCapacity(15).build()))
+ * .build()))
+ * .replicas(List.of(ReplicaTableProps.builder()
+ * .region("us-east-1")
+ * .build(), ReplicaTableProps.builder()
+ * .region("us-east-2")
+ * .readCapacity(Capacity.autoscaled(AutoscaledCapacityOptions.builder().maxCapacity(20).targetUtilizationPercent(50).build()))
+ * .build()))
+ * .build();
+ * ```
+ */
 public abstract class Billing internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.dynamodb.Billing,
 ) : CdkObject(cdkObject) {
+  /**
+   *
+   */
   public open fun mode(): BillingMode = unwrap(this).getMode().let(BillingMode::wrap)
 
   private class Wrapper(

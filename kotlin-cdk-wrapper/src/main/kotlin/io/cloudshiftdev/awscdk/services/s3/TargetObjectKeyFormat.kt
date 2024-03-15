@@ -4,6 +4,22 @@ package io.cloudshiftdev.awscdk.services.s3
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 
+/**
+ * The key format for the log object.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket accessLogsBucket = new Bucket(this, "AccessLogsBucket");
+ * Bucket bucket = Bucket.Builder.create(this, "MyBucket")
+ * .serverAccessLogsBucket(accessLogsBucket)
+ * .serverAccessLogsPrefix("logs")
+ * // You can use a simple prefix with `TargetObjectKeyFormat.simplePrefix()`, but it is the same
+ * even if you do not specify `targetObjectKeyFormat` property.
+ * .targetObjectKeyFormat(TargetObjectKeyFormat.simplePrefix())
+ * .build();
+ * ```
+ */
 public abstract class TargetObjectKeyFormat internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3.TargetObjectKeyFormat,
 ) : CdkObject(cdkObject) {

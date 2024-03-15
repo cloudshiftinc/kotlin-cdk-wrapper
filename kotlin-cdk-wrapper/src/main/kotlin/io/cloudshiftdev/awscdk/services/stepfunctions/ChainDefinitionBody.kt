@@ -7,10 +7,27 @@ import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.stepfunctions.*;
+ * IChainable chainable;
+ * DefinitionBody chainDefinitionBody = ChainDefinitionBody.fromChainable(chainable);
+ * ```
+ */
 public open class ChainDefinitionBody internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.ChainDefinitionBody,
 ) : DefinitionBody(cdkObject) {
+  /**
+   * @param scope 
+   * @param _sfnPrincipal 
+   * @param sfnProps 
+   * @param graph
+   */
   public override fun bind(
     scope: Construct,
     _sfnPrincipal: IPrincipal,
@@ -19,6 +36,12 @@ public open class ChainDefinitionBody internal constructor(
       _sfnPrincipal.let(IPrincipal::unwrap),
       sfnProps.let(StateMachineProps::unwrap)).let(DefinitionConfig::wrap)
 
+  /**
+   * @param scope 
+   * @param _sfnPrincipal 
+   * @param sfnProps 
+   * @param graph
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("d2dbd4d1e5f21bba5dd51d75253d432be0ee512a924449cbb7efb61b2d333163")
   public override fun bind(
@@ -27,6 +50,12 @@ public open class ChainDefinitionBody internal constructor(
     sfnProps: StateMachineProps.Builder.() -> Unit,
   ): DefinitionConfig = bind(scope, _sfnPrincipal, StateMachineProps(sfnProps))
 
+  /**
+   * @param scope 
+   * @param _sfnPrincipal 
+   * @param sfnProps 
+   * @param graph
+   */
   public override fun bind(
     scope: Construct,
     _sfnPrincipal: IPrincipal,
@@ -36,6 +65,9 @@ public open class ChainDefinitionBody internal constructor(
       _sfnPrincipal.let(IPrincipal::unwrap), sfnProps.let(StateMachineProps::unwrap),
       graph.let(StateGraph::unwrap)).let(DefinitionConfig::wrap)
 
+  /**
+   *
+   */
   public open fun chainable(): IChainable = unwrap(this).getChainable().let(IChainable::wrap)
 
   public companion object {

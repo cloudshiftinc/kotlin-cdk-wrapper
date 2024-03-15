@@ -7,19 +7,76 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for creating a Public Key.
+ *
+ * Example:
+ *
+ * ```
+ * // Validating signed URLs or signed cookies with Trusted Key Groups
+ * // public key in PEM format
+ * String publicKey;
+ * PublicKey pubKey = PublicKey.Builder.create(this, "MyPubKey")
+ * .encodedKey(publicKey)
+ * .build();
+ * KeyGroup keyGroup = KeyGroup.Builder.create(this, "MyKeyGroup")
+ * .items(List.of(pubKey))
+ * .build();
+ * Distribution.Builder.create(this, "Dist")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(new HttpOrigin("www.example.com"))
+ * .trustedKeyGroups(List.of(keyGroup))
+ * .build())
+ * .build();
+ * ```
+ */
 public interface PublicKeyProps {
+  /**
+   * A comment to describe the public key.
+   *
+   * Default: - no comment
+   */
   public fun comment(): String? = unwrap(this).getComment()
 
+  /**
+   * The public key that you can use with signed URLs and signed cookies, or with field-level
+   * encryption.
+   *
+   * The `encodedKey` parameter must include `-----BEGIN PUBLIC KEY-----` and `-----END PUBLIC
+   * KEY-----` lines.
+   *
+   * [Documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/field-level-encryption.html)
+   */
   public fun encodedKey(): String
 
+  /**
+   * A name to identify the public key.
+   *
+   * Default: - generated from the `id`
+   */
   public fun publicKeyName(): String? = unwrap(this).getPublicKeyName()
 
+  /**
+   * A builder for [PublicKeyProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param comment A comment to describe the public key.
+     */
     public fun comment(comment: String)
 
+    /**
+     * @param encodedKey The public key that you can use with signed URLs and signed cookies, or
+     * with field-level encryption. 
+     * The `encodedKey` parameter must include `-----BEGIN PUBLIC KEY-----` and `-----END PUBLIC
+     * KEY-----` lines.
+     */
     public fun encodedKey(encodedKey: String)
 
+    /**
+     * @param publicKeyName A name to identify the public key.
+     */
     public fun publicKeyName(publicKeyName: String)
   }
 
@@ -27,14 +84,26 @@ public interface PublicKeyProps {
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.PublicKeyProps.Builder =
         software.amazon.awscdk.services.cloudfront.PublicKeyProps.builder()
 
+    /**
+     * @param comment A comment to describe the public key.
+     */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
+    /**
+     * @param encodedKey The public key that you can use with signed URLs and signed cookies, or
+     * with field-level encryption. 
+     * The `encodedKey` parameter must include `-----BEGIN PUBLIC KEY-----` and `-----END PUBLIC
+     * KEY-----` lines.
+     */
     override fun encodedKey(encodedKey: String) {
       cdkBuilder.encodedKey(encodedKey)
     }
 
+    /**
+     * @param publicKeyName A name to identify the public key.
+     */
     override fun publicKeyName(publicKeyName: String) {
       cdkBuilder.publicKeyName(publicKeyName)
     }
@@ -46,10 +115,29 @@ public interface PublicKeyProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.cloudfront.PublicKeyProps,
   ) : CdkObject(cdkObject), PublicKeyProps {
+    /**
+     * A comment to describe the public key.
+     *
+     * Default: - no comment
+     */
     override fun comment(): String? = unwrap(this).getComment()
 
+    /**
+     * The public key that you can use with signed URLs and signed cookies, or with field-level
+     * encryption.
+     *
+     * The `encodedKey` parameter must include `-----BEGIN PUBLIC KEY-----` and `-----END PUBLIC
+     * KEY-----` lines.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/field-level-encryption.html)
+     */
     override fun encodedKey(): String = unwrap(this).getEncodedKey()
 
+    /**
+     * A name to identify the public key.
+     *
+     * Default: - generated from the `id`
+     */
     override fun publicKeyName(): String? = unwrap(this).getPublicKeyName()
   }
 

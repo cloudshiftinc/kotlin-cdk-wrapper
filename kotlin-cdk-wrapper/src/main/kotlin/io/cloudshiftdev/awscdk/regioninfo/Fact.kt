@@ -7,6 +7,20 @@ import kotlin.Boolean
 import kotlin.String
 import kotlin.collections.List
 
+/**
+ * A database of regional information.
+ *
+ * Example:
+ *
+ * ```
+ * public class MyFact implements IFact {
+ * public final Object region;
+ * public final Object name;
+ * public final Object value;
+ * }
+ * Fact.register(new MyFact());
+ * ```
+ */
 public open class Fact internal constructor(
   internal override val cdkObject: software.amazon.awscdk.regioninfo.Fact,
 ) : CdkObject(cdkObject) {

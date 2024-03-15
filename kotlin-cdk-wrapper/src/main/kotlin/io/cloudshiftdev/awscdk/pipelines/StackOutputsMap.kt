@@ -5,9 +5,27 @@ package io.cloudshiftdev.awscdk.pipelines
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Translate stack outputs to Codepipline variable references.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.pipelines.*;
+ * PipelineBase pipelineBase;
+ * StackOutputsMap stackOutputsMap = new StackOutputsMap(pipelineBase);
+ * ```
+ */
 public open class StackOutputsMap internal constructor(
   internal override val cdkObject: software.amazon.awscdk.pipelines.StackOutputsMap,
 ) : CdkObject(cdkObject) {
+  /**
+   * Return the matching variable reference string for a StackOutputReference.
+   *
+   * @param x 
+   */
   public open fun toCodePipeline(x: StackOutputReference): String =
       unwrap(this).toCodePipeline(x.let(StackOutputReference::unwrap))
 

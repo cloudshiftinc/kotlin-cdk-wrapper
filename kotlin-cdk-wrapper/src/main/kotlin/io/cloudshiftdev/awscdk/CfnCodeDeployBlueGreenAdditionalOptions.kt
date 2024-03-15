@@ -7,12 +7,41 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Number
 import kotlin.Unit
 
+/**
+ * Additional options for the blue/green deployment.
+ *
+ * The type of the `CfnCodeDeployBlueGreenHookProps.additionalOptions` property.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * CfnCodeDeployBlueGreenAdditionalOptions cfnCodeDeployBlueGreenAdditionalOptions =
+ * CfnCodeDeployBlueGreenAdditionalOptions.builder()
+ * .terminationWaitTimeInMinutes(123)
+ * .build();
+ * ```
+ */
 public interface CfnCodeDeployBlueGreenAdditionalOptions {
+  /**
+   * Specifies time to wait, in minutes, before terminating the blue resources.
+   *
+   * Default: - 5 minutes
+   */
   public fun terminationWaitTimeInMinutes(): Number? =
       unwrap(this).getTerminationWaitTimeInMinutes()
 
+  /**
+   * A builder for [CfnCodeDeployBlueGreenAdditionalOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param terminationWaitTimeInMinutes Specifies time to wait, in minutes, before terminating
+     * the blue resources.
+     */
     public fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number)
   }
 
@@ -20,6 +49,10 @@ public interface CfnCodeDeployBlueGreenAdditionalOptions {
     private val cdkBuilder: software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions.Builder =
         software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions.builder()
 
+    /**
+     * @param terminationWaitTimeInMinutes Specifies time to wait, in minutes, before terminating
+     * the blue resources.
+     */
     override fun terminationWaitTimeInMinutes(terminationWaitTimeInMinutes: Number) {
       cdkBuilder.terminationWaitTimeInMinutes(terminationWaitTimeInMinutes)
     }
@@ -31,6 +64,11 @@ public interface CfnCodeDeployBlueGreenAdditionalOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.CfnCodeDeployBlueGreenAdditionalOptions,
   ) : CdkObject(cdkObject), CfnCodeDeployBlueGreenAdditionalOptions {
+    /**
+     * Specifies time to wait, in minutes, before terminating the blue resources.
+     *
+     * Default: - 5 minutes
+     */
     override fun terminationWaitTimeInMinutes(): Number? =
         unwrap(this).getTerminationWaitTimeInMinutes()
   }

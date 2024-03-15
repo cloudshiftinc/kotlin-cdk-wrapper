@@ -7,11 +7,36 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Number
 import kotlin.Unit
 
+/**
+ * Connection pool properties for HTTP2 listeners.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.appmesh.*;
+ * Http2ConnectionPool http2ConnectionPool = Http2ConnectionPool.builder()
+ * .maxRequests(123)
+ * .build();
+ * ```
+ */
 public interface Http2ConnectionPool {
+  /**
+   * The maximum requests in the pool.
+   *
+   * Default: - none
+   */
   public fun maxRequests(): Number
 
+  /**
+   * A builder for [Http2ConnectionPool]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param maxRequests The maximum requests in the pool. 
+     */
     public fun maxRequests(maxRequests: Number)
   }
 
@@ -19,6 +44,9 @@ public interface Http2ConnectionPool {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.Http2ConnectionPool.Builder =
         software.amazon.awscdk.services.appmesh.Http2ConnectionPool.builder()
 
+    /**
+     * @param maxRequests The maximum requests in the pool. 
+     */
     override fun maxRequests(maxRequests: Number) {
       cdkBuilder.maxRequests(maxRequests)
     }
@@ -30,6 +58,11 @@ public interface Http2ConnectionPool {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.Http2ConnectionPool,
   ) : CdkObject(cdkObject), Http2ConnectionPool {
+    /**
+     * The maximum requests in the pool.
+     *
+     * Default: - none
+     */
     override fun maxRequests(): Number = unwrap(this).getMaxRequests()
   }
 

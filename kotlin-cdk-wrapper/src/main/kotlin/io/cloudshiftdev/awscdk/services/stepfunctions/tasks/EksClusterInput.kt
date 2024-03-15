@@ -7,10 +7,25 @@ import io.cloudshiftdev.awscdk.services.eks.ICluster
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskInput
 import kotlin.String
 
+/**
+ * Class that supports methods which return the EKS cluster name depending on input type.
+ *
+ * Example:
+ *
+ * ```
+ * EmrContainersCreateVirtualCluster.Builder.create(this, "Create a Virtual Cluster")
+ * .eksCluster(EksClusterInput.fromTaskInput(TaskInput.fromText("clusterId")))
+ * .eksNamespace("specified-namespace")
+ * .build();
+ * ```
+ */
 public open class EksClusterInput internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.EksClusterInput,
 ) : CdkObject(cdkObject) {
+  /**
+   * The name of the EKS Cluster.
+   */
   public open fun clusterName(): String = unwrap(this).getClusterName()
 
   public companion object {

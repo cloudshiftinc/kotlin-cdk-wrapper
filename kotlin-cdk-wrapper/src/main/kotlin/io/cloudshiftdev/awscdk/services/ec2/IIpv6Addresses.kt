@@ -9,64 +9,173 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
+/**
+ * Implementations for IPv6 address management.
+ *
+ * Note this is specific to the IPv6 CIDR.
+ */
 public interface IIpv6Addresses {
-  public fun allocateSubnetsIpv6Cidr(arg0: AllocateIpv6CidrRequest): SubnetIpamOptions
+  /**
+   * Allocates Subnets IPv6 CIDRs. Called by VPC when creating subnets with IPv6 enabled.
+   *
+   * Note this is specific to the IPv6 CIDR.
+   *
+   * @param input 
+   */
+  public fun allocateSubnetsIpv6Cidr(input: AllocateIpv6CidrRequest): SubnetIpamOptions
 
+  /**
+   * Allocates Subnets IPv6 CIDRs. Called by VPC when creating subnets with IPv6 enabled.
+   *
+   * Note this is specific to the IPv6 CIDR.
+   *
+   * @param input 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("b11eafea023bf232cdcf7b16ae5e1c33fde28cdffb7726ed3679ccbd5c38e319")
-  public fun allocateSubnetsIpv6Cidr(arg0: AllocateIpv6CidrRequest.Builder.() -> Unit):
+  public fun allocateSubnetsIpv6Cidr(input: AllocateIpv6CidrRequest.Builder.() -> Unit):
       SubnetIpamOptions
 
-  public fun allocateVpcIpv6Cidr(arg0: AllocateVpcIpv6CidrRequest): CfnVPCCidrBlock
+  /**
+   * Called by VPC to allocate IPv6 CIDR.
+   *
+   * Note this is specific to the IPv6 CIDR.
+   *
+   * @param input 
+   */
+  public fun allocateVpcIpv6Cidr(input: AllocateVpcIpv6CidrRequest): CfnVPCCidrBlock
 
+  /**
+   * Called by VPC to allocate IPv6 CIDR.
+   *
+   * Note this is specific to the IPv6 CIDR.
+   *
+   * @param input 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("543a72d089263d71a3d77af2e66d9e0082d97d5c4b524095d1b8e9d1acaca31c")
-  public fun allocateVpcIpv6Cidr(arg0: AllocateVpcIpv6CidrRequest.Builder.() -> Unit):
+  public fun allocateVpcIpv6Cidr(input: AllocateVpcIpv6CidrRequest.Builder.() -> Unit):
       CfnVPCCidrBlock
 
+  /**
+   * Whether the IPv6 CIDR is Amazon provided or not.
+   *
+   * Note this is specific to the IPv6 CIDR.
+   */
   public fun amazonProvided(): Boolean
 
-  public fun amazonProvided(arg0: Boolean)
+  /**
+   * Whether the IPv6 CIDR is Amazon provided or not.
+   *
+   * Note this is specific to the IPv6 CIDR.
+   */
+  public fun amazonProvided(`value`: Boolean)
 
-  public fun createIpv6CidrBlocks(arg0: CreateIpv6CidrBlocksRequest): List<String>
+  /**
+   * Split IPv6 CIDR block up for subnets.
+   *
+   * Note this is specific to the IPv6 CIDR.
+   *
+   * @param input 
+   */
+  public fun createIpv6CidrBlocks(input: CreateIpv6CidrBlocksRequest): List<String>
 
+  /**
+   * Split IPv6 CIDR block up for subnets.
+   *
+   * Note this is specific to the IPv6 CIDR.
+   *
+   * @param input 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("d2abe7832c051bc6bb30a8c48bbd31a9320e5be2c4c7819500bd41b1f161a206")
-  public fun createIpv6CidrBlocks(arg0: CreateIpv6CidrBlocksRequest.Builder.() -> Unit):
+  public fun createIpv6CidrBlocks(input: CreateIpv6CidrBlocksRequest.Builder.() -> Unit):
       List<String>
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ec2.IIpv6Addresses,
   ) : CdkObject(cdkObject), IIpv6Addresses {
-    override fun allocateSubnetsIpv6Cidr(arg0: AllocateIpv6CidrRequest): SubnetIpamOptions =
-        unwrap(this).allocateSubnetsIpv6Cidr(arg0.let(AllocateIpv6CidrRequest::unwrap)).let(SubnetIpamOptions::wrap)
+    /**
+     * Allocates Subnets IPv6 CIDRs. Called by VPC when creating subnets with IPv6 enabled.
+     *
+     * Note this is specific to the IPv6 CIDR.
+     *
+     * @param input 
+     */
+    override fun allocateSubnetsIpv6Cidr(input: AllocateIpv6CidrRequest): SubnetIpamOptions =
+        unwrap(this).allocateSubnetsIpv6Cidr(input.let(AllocateIpv6CidrRequest::unwrap)).let(SubnetIpamOptions::wrap)
 
+    /**
+     * Allocates Subnets IPv6 CIDRs. Called by VPC when creating subnets with IPv6 enabled.
+     *
+     * Note this is specific to the IPv6 CIDR.
+     *
+     * @param input 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b11eafea023bf232cdcf7b16ae5e1c33fde28cdffb7726ed3679ccbd5c38e319")
-    override fun allocateSubnetsIpv6Cidr(arg0: AllocateIpv6CidrRequest.Builder.() -> Unit):
-        SubnetIpamOptions = allocateSubnetsIpv6Cidr(AllocateIpv6CidrRequest(arg0))
+    override fun allocateSubnetsIpv6Cidr(input: AllocateIpv6CidrRequest.Builder.() -> Unit):
+        SubnetIpamOptions = allocateSubnetsIpv6Cidr(AllocateIpv6CidrRequest(input))
 
-    override fun allocateVpcIpv6Cidr(arg0: AllocateVpcIpv6CidrRequest): CfnVPCCidrBlock =
-        unwrap(this).allocateVpcIpv6Cidr(arg0.let(AllocateVpcIpv6CidrRequest::unwrap)).let(CfnVPCCidrBlock::wrap)
+    /**
+     * Called by VPC to allocate IPv6 CIDR.
+     *
+     * Note this is specific to the IPv6 CIDR.
+     *
+     * @param input 
+     */
+    override fun allocateVpcIpv6Cidr(input: AllocateVpcIpv6CidrRequest): CfnVPCCidrBlock =
+        unwrap(this).allocateVpcIpv6Cidr(input.let(AllocateVpcIpv6CidrRequest::unwrap)).let(CfnVPCCidrBlock::wrap)
 
+    /**
+     * Called by VPC to allocate IPv6 CIDR.
+     *
+     * Note this is specific to the IPv6 CIDR.
+     *
+     * @param input 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("543a72d089263d71a3d77af2e66d9e0082d97d5c4b524095d1b8e9d1acaca31c")
-    override fun allocateVpcIpv6Cidr(arg0: AllocateVpcIpv6CidrRequest.Builder.() -> Unit):
-        CfnVPCCidrBlock = allocateVpcIpv6Cidr(AllocateVpcIpv6CidrRequest(arg0))
+    override fun allocateVpcIpv6Cidr(input: AllocateVpcIpv6CidrRequest.Builder.() -> Unit):
+        CfnVPCCidrBlock = allocateVpcIpv6Cidr(AllocateVpcIpv6CidrRequest(input))
 
+    /**
+     * Whether the IPv6 CIDR is Amazon provided or not.
+     *
+     * Note this is specific to the IPv6 CIDR.
+     */
     override fun amazonProvided(): Boolean = unwrap(this).getAmazonProvided()
 
-    override fun amazonProvided(arg0: Boolean) {
-      unwrap(this).setAmazonProvided(arg0)
+    /**
+     * Whether the IPv6 CIDR is Amazon provided or not.
+     *
+     * Note this is specific to the IPv6 CIDR.
+     */
+    override fun amazonProvided(`value`: Boolean) {
+      unwrap(this).setAmazonProvided(`value`)
     }
 
-    override fun createIpv6CidrBlocks(arg0: CreateIpv6CidrBlocksRequest): List<String> =
-        unwrap(this).createIpv6CidrBlocks(arg0.let(CreateIpv6CidrBlocksRequest::unwrap))
+    /**
+     * Split IPv6 CIDR block up for subnets.
+     *
+     * Note this is specific to the IPv6 CIDR.
+     *
+     * @param input 
+     */
+    override fun createIpv6CidrBlocks(input: CreateIpv6CidrBlocksRequest): List<String> =
+        unwrap(this).createIpv6CidrBlocks(input.let(CreateIpv6CidrBlocksRequest::unwrap))
 
+    /**
+     * Split IPv6 CIDR block up for subnets.
+     *
+     * Note this is specific to the IPv6 CIDR.
+     *
+     * @param input 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d2abe7832c051bc6bb30a8c48bbd31a9320e5be2c4c7819500bd41b1f161a206")
-    override fun createIpv6CidrBlocks(arg0: CreateIpv6CidrBlocksRequest.Builder.() -> Unit):
-        List<String> = createIpv6CidrBlocks(CreateIpv6CidrBlocksRequest(arg0))
+    override fun createIpv6CidrBlocks(input: CreateIpv6CidrBlocksRequest.Builder.() -> Unit):
+        List<String> = createIpv6CidrBlocks(CreateIpv6CidrBlocksRequest(input))
   }
 
   public companion object {

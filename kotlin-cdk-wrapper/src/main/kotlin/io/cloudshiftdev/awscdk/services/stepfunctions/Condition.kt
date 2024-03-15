@@ -8,9 +8,37 @@ import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 
+/**
+ * A Condition for use in a Choice state branch.
+ *
+ * Example:
+ *
+ * ```
+ * Map map = Map.Builder.create(this, "Map State")
+ * .maxConcurrency(1)
+ * .itemsPath(JsonPath.stringAt("$.inputForMap"))
+ * .itemSelector(Map.of(
+ * "item", JsonPath.stringAt("$.Map.Item.Value")))
+ * .resultPath("$.mapOutput")
+ * .build();
+ * // The Map iterator can contain a IChainable, which can be an individual or multiple steps
+ * chained together.
+ * // Below example is with a Choice and Pass step
+ * Choice choice = new Choice(this, "Choice");
+ * Condition condition1 = Condition.stringEquals("$.item.status", "SUCCESS");
+ * Pass step1 = new Pass(this, "Step1");
+ * Pass step2 = new Pass(this, "Step2");
+ * Pass finish = new Pass(this, "Finish");
+ * Chain definition = choice.when(condition1, step1).otherwise(step2).afterwards().next(finish);
+ * map.itemProcessor(definition);
+ * ```
+ */
 public abstract class Condition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Condition,
 ) : CdkObject(cdkObject) {
+  /**
+   * Render Amazon States Language JSON for the condition.
+   */
   public open fun renderCondition(): Any = unwrap(this).renderCondition()
 
   private class Wrapper(

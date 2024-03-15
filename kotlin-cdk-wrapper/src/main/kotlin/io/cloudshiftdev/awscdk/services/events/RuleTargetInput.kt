@@ -6,11 +6,42 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Any
 import kotlin.String
 
+/**
+ * The input to send to the event target.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.iam.*;
+ * import io.cloudshiftdev.awscdk.services.stepfunctions.*;
+ * Rule rule = Rule.Builder.create(this, "Rule")
+ * .schedule(Schedule.rate(Duration.minutes(1)))
+ * .build();
+ * Queue dlq = new Queue(this, "DeadLetterQueue");
+ * Role role = Role.Builder.create(this, "Role")
+ * .assumedBy(new ServicePrincipal("events.amazonaws.com"))
+ * .build();
+ * StateMachine stateMachine = StateMachine.Builder.create(this, "SM")
+ * .definition(Wait.Builder.create(this,
+ * "Hello").time(WaitTime.duration(Duration.seconds(10))).build())
+ * .build();
+ * rule.addTarget(SfnStateMachine.Builder.create(stateMachine)
+ * .input(RuleTargetInput.fromObject(Map.of("SomeParam", "SomeValue")))
+ * .deadLetterQueue(dlq)
+ * .role(role)
+ * .build());
+ * ```
+ */
 public abstract class RuleTargetInput internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.RuleTargetInput,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: IRule): RuleTargetInputProperties =
-      unwrap(this).bind(arg0.let(IRule::unwrap)).let(RuleTargetInputProperties::wrap)
+  /**
+   * Return the input properties for this input object.
+   *
+   * @param rule 
+   */
+  public open fun bind(rule: IRule): RuleTargetInputProperties =
+      unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetInputProperties::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.events.RuleTargetInput,

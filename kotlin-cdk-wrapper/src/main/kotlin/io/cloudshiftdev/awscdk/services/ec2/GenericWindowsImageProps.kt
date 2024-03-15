@@ -6,11 +6,37 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Configuration options for GenericWindowsImage.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * UserData userData;
+ * GenericWindowsImageProps genericWindowsImageProps = GenericWindowsImageProps.builder()
+ * .userData(userData)
+ * .build();
+ * ```
+ */
 public interface GenericWindowsImageProps {
+  /**
+   * Initial user data.
+   *
+   * Default: - Empty UserData for Windows machines
+   */
   public fun userData(): UserData? = unwrap(this).getUserData()?.let(UserData::wrap)
 
+  /**
+   * A builder for [GenericWindowsImageProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param userData Initial user data.
+     */
     public fun userData(userData: UserData)
   }
 
@@ -18,6 +44,9 @@ public interface GenericWindowsImageProps {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.GenericWindowsImageProps.Builder =
         software.amazon.awscdk.services.ec2.GenericWindowsImageProps.builder()
 
+    /**
+     * @param userData Initial user data.
+     */
     override fun userData(userData: UserData) {
       cdkBuilder.userData(userData.let(UserData::unwrap))
     }
@@ -29,6 +58,11 @@ public interface GenericWindowsImageProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ec2.GenericWindowsImageProps,
   ) : CdkObject(cdkObject), GenericWindowsImageProps {
+    /**
+     * Initial user data.
+     *
+     * Default: - Empty UserData for Windows machines
+     */
     override fun userData(): UserData? = unwrap(this).getUserData()?.let(UserData::wrap)
   }
 

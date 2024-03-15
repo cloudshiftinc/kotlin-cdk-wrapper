@@ -6,17 +6,34 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Boolean
 import kotlin.Number
 
+/**
+ *
+ */
 public interface IRandomGenerator {
+  /**
+   *
+   */
   public fun nextBoolean(): Boolean
 
-  public fun nextInt(arg0: Number, arg1: Number): Number
+  /**
+   * @param min 
+   * @param max 
+   */
+  public fun nextInt(min: Number, max: Number): Number
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.autoscaling.common.IRandomGenerator,
   ) : CdkObject(cdkObject), IRandomGenerator {
+    /**
+     *
+     */
     override fun nextBoolean(): Boolean = unwrap(this).nextBoolean()
 
-    override fun nextInt(arg0: Number, arg1: Number): Number = unwrap(this).nextInt(arg0, arg1)
+    /**
+     * @param min 
+     * @param max 
+     */
+    override fun nextInt(min: Number, max: Number): Number = unwrap(this).nextInt(min, max)
   }
 
   public companion object {

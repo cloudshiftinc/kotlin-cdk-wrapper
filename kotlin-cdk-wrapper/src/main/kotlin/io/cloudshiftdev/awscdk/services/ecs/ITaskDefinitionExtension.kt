@@ -4,14 +4,33 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 
+/**
+ * An extension for Task Definitions.
+ *
+ * Classes that want to make changes to a TaskDefinition (such as
+ * adding helper containers) can implement this interface, and can
+ * then be "added" to a TaskDefinition like so:
+ *
+ * taskDefinition.addExtension(new MyExtension("some_parameter"));
+ */
 public interface ITaskDefinitionExtension {
-  public fun extend(arg0: TaskDefinition)
+  /**
+   * Apply the extension to the given TaskDefinition.
+   *
+   * @param taskDefinition [disable-awslint:ref-via-interface]. 
+   */
+  public fun extend(taskDefinition: TaskDefinition)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ecs.ITaskDefinitionExtension,
   ) : CdkObject(cdkObject), ITaskDefinitionExtension {
-    override fun extend(arg0: TaskDefinition) {
-      unwrap(this).extend(arg0.let(TaskDefinition::unwrap))
+    /**
+     * Apply the extension to the given TaskDefinition.
+     *
+     * @param taskDefinition [disable-awslint:ref-via-interface]. 
+     */
+    override fun extend(taskDefinition: TaskDefinition) {
+      unwrap(this).extend(taskDefinition.let(TaskDefinition::unwrap))
     }
   }
 

@@ -5,6 +5,9 @@ package io.cloudshiftdev.awscdk
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Includes special markers for automatic generation of physical names.
+ */
 public open class PhysicalName internal constructor(
   internal override val cdkObject: software.amazon.awscdk.PhysicalName,
 ) : CdkObject(cdkObject) {

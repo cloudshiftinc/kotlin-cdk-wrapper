@@ -6,11 +6,43 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Creation properties of the Aurora MySQL database cluster engine.
+ *
+ * Used in `DatabaseClusterEngine.auroraMysql`.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
+ * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_3_01_0).build()))
+ * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
+ * .instanceType(InstanceType.of(InstanceClass.R6G, InstanceSize.XLARGE4))
+ * .build()))
+ * .serverlessV2MinCapacity(6.5)
+ * .serverlessV2MaxCapacity(64)
+ * .readers(List.of(ClusterInstance.serverlessV2("reader1",
+ * ServerlessV2ClusterInstanceProps.builder().scaleWithWriter(true).build()),
+ * ClusterInstance.serverlessV2("reader2")))
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 public interface AuroraMysqlClusterEngineProps {
+  /**
+   * The version of the Aurora MySQL cluster engine.
+   */
   public fun version(): AuroraMysqlEngineVersion
 
+  /**
+   * A builder for [AuroraMysqlClusterEngineProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param version The version of the Aurora MySQL cluster engine. 
+     */
     public fun version(version: AuroraMysqlEngineVersion)
   }
 
@@ -19,6 +51,9 @@ public interface AuroraMysqlClusterEngineProps {
         software.amazon.awscdk.services.rds.AuroraMysqlClusterEngineProps.Builder =
         software.amazon.awscdk.services.rds.AuroraMysqlClusterEngineProps.builder()
 
+    /**
+     * @param version The version of the Aurora MySQL cluster engine. 
+     */
     override fun version(version: AuroraMysqlEngineVersion) {
       cdkBuilder.version(version.let(AuroraMysqlEngineVersion::unwrap))
     }
@@ -30,6 +65,9 @@ public interface AuroraMysqlClusterEngineProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.rds.AuroraMysqlClusterEngineProps,
   ) : CdkObject(cdkObject), AuroraMysqlClusterEngineProps {
+    /**
+     * The version of the Aurora MySQL cluster engine.
+     */
     override fun version(): AuroraMysqlEngineVersion =
         unwrap(this).getVersion().let(AuroraMysqlEngineVersion::wrap)
   }

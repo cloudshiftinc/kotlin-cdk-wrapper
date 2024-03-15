@@ -8,19 +8,63 @@ import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Options for creating a unique resource name.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * UniqueResourceNameOptions uniqueResourceNameOptions = UniqueResourceNameOptions.builder()
+ * .allowedSpecialCharacters("allowedSpecialCharacters")
+ * .maxLength(123)
+ * .separator("separator")
+ * .build();
+ * ```
+ */
 public interface UniqueResourceNameOptions {
+  /**
+   * Non-alphanumeric characters allowed in the unique resource name.
+   *
+   * Default: - none
+   */
   public fun allowedSpecialCharacters(): String? = unwrap(this).getAllowedSpecialCharacters()
 
+  /**
+   * The maximum length of the unique resource name.
+   *
+   * Default: - 256
+   */
   public fun maxLength(): Number? = unwrap(this).getMaxLength()
 
+  /**
+   * The separator used between the path components.
+   *
+   * Default: - none
+   */
   public fun separator(): String? = unwrap(this).getSeparator()
 
+  /**
+   * A builder for [UniqueResourceNameOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param allowedSpecialCharacters Non-alphanumeric characters allowed in the unique resource
+     * name.
+     */
     public fun allowedSpecialCharacters(allowedSpecialCharacters: String)
 
+    /**
+     * @param maxLength The maximum length of the unique resource name.
+     */
     public fun maxLength(maxLength: Number)
 
+    /**
+     * @param separator The separator used between the path components.
+     */
     public fun separator(separator: String)
   }
 
@@ -28,14 +72,24 @@ public interface UniqueResourceNameOptions {
     private val cdkBuilder: software.amazon.awscdk.UniqueResourceNameOptions.Builder =
         software.amazon.awscdk.UniqueResourceNameOptions.builder()
 
+    /**
+     * @param allowedSpecialCharacters Non-alphanumeric characters allowed in the unique resource
+     * name.
+     */
     override fun allowedSpecialCharacters(allowedSpecialCharacters: String) {
       cdkBuilder.allowedSpecialCharacters(allowedSpecialCharacters)
     }
 
+    /**
+     * @param maxLength The maximum length of the unique resource name.
+     */
     override fun maxLength(maxLength: Number) {
       cdkBuilder.maxLength(maxLength)
     }
 
+    /**
+     * @param separator The separator used between the path components.
+     */
     override fun separator(separator: String) {
       cdkBuilder.separator(separator)
     }
@@ -46,10 +100,25 @@ public interface UniqueResourceNameOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.UniqueResourceNameOptions,
   ) : CdkObject(cdkObject), UniqueResourceNameOptions {
+    /**
+     * Non-alphanumeric characters allowed in the unique resource name.
+     *
+     * Default: - none
+     */
     override fun allowedSpecialCharacters(): String? = unwrap(this).getAllowedSpecialCharacters()
 
+    /**
+     * The maximum length of the unique resource name.
+     *
+     * Default: - 256
+     */
     override fun maxLength(): Number? = unwrap(this).getMaxLength()
 
+    /**
+     * The separator used between the path components.
+     *
+     * Default: - none
+     */
     override fun separator(): String? = unwrap(this).getSeparator()
   }
 

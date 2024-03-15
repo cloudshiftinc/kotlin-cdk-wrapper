@@ -7,11 +7,48 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.*;
+ * import io.cloudshiftdev.awscdk.*;
+ * App app = new App();
+ * Stack stack = new Stack(app, "aws-servicediscovery-integ");
+ * PublicDnsNamespace namespace = PublicDnsNamespace.Builder.create(stack, "Namespace")
+ * .name("foobar.com")
+ * .build();
+ * Service service = namespace.createService("Service", DnsServiceProps.builder()
+ * .name("foo")
+ * .dnsRecordType(DnsRecordType.A)
+ * .dnsTtl(Duration.seconds(30))
+ * .healthCheck(HealthCheckConfig.builder()
+ * .type(HealthCheckType.HTTPS)
+ * .resourcePath("/healthcheck")
+ * .failureThreshold(2)
+ * .build())
+ * .build());
+ * service.registerIpInstance("IpInstance", IpInstanceBaseProps.builder()
+ * .ipv4("54.239.25.192")
+ * .port(443)
+ * .build());
+ * app.synth();
+ * ```
+ */
 public interface PublicDnsNamespaceProps : BaseNamespaceProps {
+  /**
+   * A builder for [PublicDnsNamespaceProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param description A description of the Namespace.
+     */
     public fun description(description: String)
 
+    /**
+     * @param name A name for the Namespace. 
+     */
     public fun name(name: String)
   }
 
@@ -20,10 +57,16 @@ public interface PublicDnsNamespaceProps : BaseNamespaceProps {
         software.amazon.awscdk.services.servicediscovery.PublicDnsNamespaceProps.Builder =
         software.amazon.awscdk.services.servicediscovery.PublicDnsNamespaceProps.builder()
 
+    /**
+     * @param description A description of the Namespace.
+     */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
+    /**
+     * @param name A name for the Namespace. 
+     */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -36,8 +79,16 @@ public interface PublicDnsNamespaceProps : BaseNamespaceProps {
     override val cdkObject:
         software.amazon.awscdk.services.servicediscovery.PublicDnsNamespaceProps,
   ) : CdkObject(cdkObject), PublicDnsNamespaceProps {
+    /**
+     * A description of the Namespace.
+     *
+     * Default: none
+     */
     override fun description(): String? = unwrap(this).getDescription()
 
+    /**
+     * A name for the Namespace.
+     */
     override fun name(): String = unwrap(this).getName()
   }
 

@@ -12,41 +12,150 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
+/**
+ * Properties for defining a `CfnAnalyzer`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.accessanalyzer.*;
+ * CfnAnalyzerProps cfnAnalyzerProps = CfnAnalyzerProps.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .analyzerConfiguration(AnalyzerConfigurationProperty.builder()
+ * .unusedAccessConfiguration(UnusedAccessConfigurationProperty.builder()
+ * .unusedAccessAge(123)
+ * .build())
+ * .build())
+ * .analyzerName("analyzerName")
+ * .archiveRules(List.of(ArchiveRuleProperty.builder()
+ * .filter(List.of(FilterProperty.builder()
+ * .property("property")
+ * // the properties below are optional
+ * .contains(List.of("contains"))
+ * .eq(List.of("eq"))
+ * .exists(false)
+ * .neq(List.of("neq"))
+ * .build()))
+ * .ruleName("ruleName")
+ * .build()))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html)
+ */
 public interface CfnAnalyzerProps {
+  /**
+   * Contains information about the configuration of an unused access analyzer for an AWS
+   * organization or account.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-analyzerconfiguration)
+   */
   public fun analyzerConfiguration(): Any? = unwrap(this).getAnalyzerConfiguration()
 
+  /**
+   * The name of the analyzer.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-analyzername)
+   */
   public fun analyzerName(): String? = unwrap(this).getAnalyzerName()
 
+  /**
+   * Specifies the archive rules to add for the analyzer.
+   *
+   * Archive rules automatically archive findings that meet the criteria you define for the rule.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-archiverules)
+   */
   public fun archiveRules(): Any? = unwrap(this).getArchiveRules()
 
+  /**
+   * An array of key-value pairs to apply to the analyzer.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-tags)
+   */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
+  /**
+   * The type represents the zone of trust for the analyzer.
+   *
+   * *Allowed Values* : ACCOUNT | ORGANIZATION | ACCOUNT_UNUSED_ACCESS | ORGANIZATION_UNUSED_ACCESS
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-type)
+   */
   public fun type(): String
 
+  /**
+   * A builder for [CfnAnalyzerProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param analyzerConfiguration Contains information about the configuration of an unused access
+     * analyzer for an AWS organization or account.
+     */
     public fun analyzerConfiguration(analyzerConfiguration: IResolvable)
 
+    /**
+     * @param analyzerConfiguration Contains information about the configuration of an unused access
+     * analyzer for an AWS organization or account.
+     */
     public
         fun analyzerConfiguration(analyzerConfiguration: CfnAnalyzer.AnalyzerConfigurationProperty)
 
+    /**
+     * @param analyzerConfiguration Contains information about the configuration of an unused access
+     * analyzer for an AWS organization or account.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4e8ef999c1ee18f5f538bd76caa12533cc428031c70ead9e147324a194fc0e6c")
     public
         fun analyzerConfiguration(analyzerConfiguration: CfnAnalyzer.AnalyzerConfigurationProperty.Builder.() -> Unit)
 
+    /**
+     * @param analyzerName The name of the analyzer.
+     */
     public fun analyzerName(analyzerName: String)
 
+    /**
+     * @param archiveRules Specifies the archive rules to add for the analyzer.
+     * Archive rules automatically archive findings that meet the criteria you define for the rule.
+     */
     public fun archiveRules(archiveRules: IResolvable)
 
+    /**
+     * @param archiveRules Specifies the archive rules to add for the analyzer.
+     * Archive rules automatically archive findings that meet the criteria you define for the rule.
+     */
     public fun archiveRules(archiveRules: List<Any>)
 
+    /**
+     * @param archiveRules Specifies the archive rules to add for the analyzer.
+     * Archive rules automatically archive findings that meet the criteria you define for the rule.
+     */
     public fun archiveRules(vararg archiveRules: Any)
 
+    /**
+     * @param tags An array of key-value pairs to apply to the analyzer.
+     */
     public fun tags(tags: List<CfnTag>)
 
+    /**
+     * @param tags An array of key-value pairs to apply to the analyzer.
+     */
     public fun tags(vararg tags: CfnTag)
 
+    /**
+     * @param type The type represents the zone of trust for the analyzer. 
+     * *Allowed Values* : ACCOUNT | ORGANIZATION | ACCOUNT_UNUSED_ACCESS |
+     * ORGANIZATION_UNUSED_ACCESS
+     */
     public fun type(type: String)
   }
 
@@ -54,15 +163,27 @@ public interface CfnAnalyzerProps {
     private val cdkBuilder: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzerProps.Builder
         = software.amazon.awscdk.services.accessanalyzer.CfnAnalyzerProps.builder()
 
+    /**
+     * @param analyzerConfiguration Contains information about the configuration of an unused access
+     * analyzer for an AWS organization or account.
+     */
     override fun analyzerConfiguration(analyzerConfiguration: IResolvable) {
       cdkBuilder.analyzerConfiguration(analyzerConfiguration.let(IResolvable::unwrap))
     }
 
+    /**
+     * @param analyzerConfiguration Contains information about the configuration of an unused access
+     * analyzer for an AWS organization or account.
+     */
     override
         fun analyzerConfiguration(analyzerConfiguration: CfnAnalyzer.AnalyzerConfigurationProperty) {
       cdkBuilder.analyzerConfiguration(analyzerConfiguration.let(CfnAnalyzer.AnalyzerConfigurationProperty::unwrap))
     }
 
+    /**
+     * @param analyzerConfiguration Contains information about the configuration of an unused access
+     * analyzer for an AWS organization or account.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4e8ef999c1ee18f5f538bd76caa12533cc428031c70ead9e147324a194fc0e6c")
     override
@@ -70,26 +191,52 @@ public interface CfnAnalyzerProps {
         Unit =
         analyzerConfiguration(CfnAnalyzer.AnalyzerConfigurationProperty(analyzerConfiguration))
 
+    /**
+     * @param analyzerName The name of the analyzer.
+     */
     override fun analyzerName(analyzerName: String) {
       cdkBuilder.analyzerName(analyzerName)
     }
 
+    /**
+     * @param archiveRules Specifies the archive rules to add for the analyzer.
+     * Archive rules automatically archive findings that meet the criteria you define for the rule.
+     */
     override fun archiveRules(archiveRules: IResolvable) {
       cdkBuilder.archiveRules(archiveRules.let(IResolvable::unwrap))
     }
 
+    /**
+     * @param archiveRules Specifies the archive rules to add for the analyzer.
+     * Archive rules automatically archive findings that meet the criteria you define for the rule.
+     */
     override fun archiveRules(archiveRules: List<Any>) {
       cdkBuilder.archiveRules(archiveRules)
     }
 
+    /**
+     * @param archiveRules Specifies the archive rules to add for the analyzer.
+     * Archive rules automatically archive findings that meet the criteria you define for the rule.
+     */
     override fun archiveRules(vararg archiveRules: Any): Unit = archiveRules(archiveRules.toList())
 
+    /**
+     * @param tags An array of key-value pairs to apply to the analyzer.
+     */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    /**
+     * @param tags An array of key-value pairs to apply to the analyzer.
+     */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
+    /**
+     * @param type The type represents the zone of trust for the analyzer. 
+     * *Allowed Values* : ACCOUNT | ORGANIZATION | ACCOUNT_UNUSED_ACCESS |
+     * ORGANIZATION_UNUSED_ACCESS
+     */
     override fun type(type: String) {
       cdkBuilder.type(type)
     }
@@ -101,14 +248,45 @@ public interface CfnAnalyzerProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzerProps,
   ) : CdkObject(cdkObject), CfnAnalyzerProps {
+    /**
+     * Contains information about the configuration of an unused access analyzer for an AWS
+     * organization or account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-analyzerconfiguration)
+     */
     override fun analyzerConfiguration(): Any? = unwrap(this).getAnalyzerConfiguration()
 
+    /**
+     * The name of the analyzer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-analyzername)
+     */
     override fun analyzerName(): String? = unwrap(this).getAnalyzerName()
 
+    /**
+     * Specifies the archive rules to add for the analyzer.
+     *
+     * Archive rules automatically archive findings that meet the criteria you define for the rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-archiverules)
+     */
     override fun archiveRules(): Any? = unwrap(this).getArchiveRules()
 
+    /**
+     * An array of key-value pairs to apply to the analyzer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-tags)
+     */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
+    /**
+     * The type represents the zone of trust for the analyzer.
+     *
+     * *Allowed Values* : ACCOUNT | ORGANIZATION | ACCOUNT_UNUSED_ACCESS |
+     * ORGANIZATION_UNUSED_ACCESS
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-type)
+     */
     override fun type(): String = unwrap(this).getType()
   }
 

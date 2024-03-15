@@ -7,15 +7,43 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ecr.*;
+ * RepositoryAttributes repositoryAttributes = RepositoryAttributes.builder()
+ * .repositoryArn("repositoryArn")
+ * .repositoryName("repositoryName")
+ * .build();
+ * ```
+ */
 public interface RepositoryAttributes {
+  /**
+   *
+   */
   public fun repositoryArn(): String
 
+  /**
+   *
+   */
   public fun repositoryName(): String
 
+  /**
+   * A builder for [RepositoryAttributes]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param repositoryArn the value to be set. 
+     */
     public fun repositoryArn(repositoryArn: String)
 
+    /**
+     * @param repositoryName the value to be set. 
+     */
     public fun repositoryName(repositoryName: String)
   }
 
@@ -23,10 +51,16 @@ public interface RepositoryAttributes {
     private val cdkBuilder: software.amazon.awscdk.services.ecr.RepositoryAttributes.Builder =
         software.amazon.awscdk.services.ecr.RepositoryAttributes.builder()
 
+    /**
+     * @param repositoryArn the value to be set. 
+     */
     override fun repositoryArn(repositoryArn: String) {
       cdkBuilder.repositoryArn(repositoryArn)
     }
 
+    /**
+     * @param repositoryName the value to be set. 
+     */
     override fun repositoryName(repositoryName: String) {
       cdkBuilder.repositoryName(repositoryName)
     }
@@ -38,8 +72,14 @@ public interface RepositoryAttributes {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ecr.RepositoryAttributes,
   ) : CdkObject(cdkObject), RepositoryAttributes {
+    /**
+     *
+     */
     override fun repositoryArn(): String = unwrap(this).getRepositoryArn()
 
+    /**
+     *
+     */
     override fun repositoryName(): String = unwrap(this).getRepositoryName()
   }
 

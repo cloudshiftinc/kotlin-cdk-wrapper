@@ -4,12 +4,21 @@ package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 
+/**
+ * Represents a custom attribute type.
+ */
 public interface ICustomAttribute {
+  /**
+   * Bind this custom attribute type to the values as expected by CloudFormation.
+   */
   public fun bind(): CustomAttributeConfig
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.cognito.ICustomAttribute,
   ) : CdkObject(cdkObject), ICustomAttribute {
+    /**
+     * Bind this custom attribute type to the values as expected by CloudFormation.
+     */
     override fun bind(): CustomAttributeConfig =
         unwrap(this).bind().let(CustomAttributeConfig::wrap)
   }

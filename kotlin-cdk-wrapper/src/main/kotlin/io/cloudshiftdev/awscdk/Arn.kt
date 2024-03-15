@@ -7,6 +7,9 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ *
+ */
 public open class Arn internal constructor(
   internal override val cdkObject: software.amazon.awscdk.Arn,
 ) : CdkObject(cdkObject) {

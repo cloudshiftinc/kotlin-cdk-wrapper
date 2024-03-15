@@ -5,9 +5,33 @@ package io.cloudshiftdev.awscdk.services.apigatewayv2
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Represents a Mapping Value.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations.HttpAlbIntegration;
+ * ApplicationLoadBalancer lb;
+ * ApplicationListener listener = lb.addListener("listener",
+ * BaseApplicationListenerProps.builder().port(80).build());
+ * listener.addTargets("target", AddApplicationTargetsProps.builder()
+ * .port(80)
+ * .build());
+ * HttpApi httpEndpoint = HttpApi.Builder.create(this, "HttpProxyPrivateApi")
+ * .defaultIntegration(HttpAlbIntegration.Builder.create("DefaultIntegration", listener)
+ * .parameterMapping(new ParameterMapping().appendHeader("header2",
+ * MappingValue.requestHeader("header1")).removeHeader("header1"))
+ * .build())
+ * .build();
+ * ```
+ */
 public open class MappingValue internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigatewayv2.MappingValue,
 ) : CdkObject(cdkObject), IMappingValue {
+  /**
+   * Represents a Mapping Value.
+   */
   public override fun `value`(): String = unwrap(this).getValue()
 
   public companion object {

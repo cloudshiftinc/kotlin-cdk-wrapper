@@ -7,11 +7,34 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Options when reading the function's code from an external file.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+ * FileCodeOptions fileCodeOptions = FileCodeOptions.builder()
+ * .filePath("filePath")
+ * .build();
+ * ```
+ */
 public interface FileCodeOptions {
+  /**
+   * The path of the file to read the code from.
+   */
   public fun filePath(): String
 
+  /**
+   * A builder for [FileCodeOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param filePath The path of the file to read the code from. 
+     */
     public fun filePath(filePath: String)
   }
 
@@ -19,6 +42,9 @@ public interface FileCodeOptions {
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.FileCodeOptions.Builder =
         software.amazon.awscdk.services.cloudfront.FileCodeOptions.builder()
 
+    /**
+     * @param filePath The path of the file to read the code from. 
+     */
     override fun filePath(filePath: String) {
       cdkBuilder.filePath(filePath)
     }
@@ -30,6 +56,9 @@ public interface FileCodeOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.cloudfront.FileCodeOptions,
   ) : CdkObject(cdkObject), FileCodeOptions {
+    /**
+     * The path of the file to read the code from.
+     */
     override fun filePath(): String = unwrap(this).getFilePath()
   }
 

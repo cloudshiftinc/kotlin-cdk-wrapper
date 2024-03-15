@@ -6,6 +6,18 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Boolean
 import kotlin.String
 
+/**
+ * Helper class for working with `IComparablePrincipal`s.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.iam.*;
+ * ComparablePrincipal comparablePrincipal = new ComparablePrincipal();
+ * ```
+ */
 public open class ComparablePrincipal internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.ComparablePrincipal,
 ) : CdkObject(cdkObject) {

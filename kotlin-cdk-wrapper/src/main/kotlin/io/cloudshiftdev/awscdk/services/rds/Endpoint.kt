@@ -6,13 +6,36 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Number
 import kotlin.String
 
+/**
+ * Connection endpoint of a database cluster or instance.
+ *
+ * Consists of a combination of hostname and port.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.rds.*;
+ * Endpoint endpoint = new Endpoint("address", 123);
+ * ```
+ */
 public open class Endpoint internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.Endpoint,
 ) : CdkObject(cdkObject) {
+  /**
+   * The hostname of the endpoint.
+   */
   public open fun hostname(): String = unwrap(this).getHostname()
 
+  /**
+   * The port of the endpoint.
+   */
   public open fun port(): Number = unwrap(this).getPort()
 
+  /**
+   * The combination of "HOSTNAME:PORT" for this endpoint.
+   */
   public open fun socketAddress(): String = unwrap(this).getSocketAddress()
 
   public companion object {

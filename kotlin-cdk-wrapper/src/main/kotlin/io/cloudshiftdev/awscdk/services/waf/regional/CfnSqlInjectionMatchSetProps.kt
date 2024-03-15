@@ -10,19 +10,74 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 
+/**
+ * Properties for defining a `CfnSqlInjectionMatchSet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.waf.regional.*;
+ * CfnSqlInjectionMatchSetProps cfnSqlInjectionMatchSetProps =
+ * CfnSqlInjectionMatchSetProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .sqlInjectionMatchTuples(List.of(SqlInjectionMatchTupleProperty.builder()
+ * .fieldToMatch(FieldToMatchProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .data("data")
+ * .build())
+ * .textTransformation("textTransformation")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sqlinjectionmatchset.html)
+ */
 public interface CfnSqlInjectionMatchSetProps {
+  /**
+   * The name, if any, of the `SqlInjectionMatchSet` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sqlinjectionmatchset.html#cfn-wafregional-sqlinjectionmatchset-name)
+   */
   public fun name(): String
 
+  /**
+   * Specifies the parts of web requests that you want to inspect for snippets of malicious SQL
+   * code.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sqlinjectionmatchset.html#cfn-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuples)
+   */
   public fun sqlInjectionMatchTuples(): Any? = unwrap(this).getSqlInjectionMatchTuples()
 
+  /**
+   * A builder for [CfnSqlInjectionMatchSetProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param name The name, if any, of the `SqlInjectionMatchSet` . 
+     */
     public fun name(name: String)
 
+    /**
+     * @param sqlInjectionMatchTuples Specifies the parts of web requests that you want to inspect
+     * for snippets of malicious SQL code.
+     */
     public fun sqlInjectionMatchTuples(sqlInjectionMatchTuples: IResolvable)
 
+    /**
+     * @param sqlInjectionMatchTuples Specifies the parts of web requests that you want to inspect
+     * for snippets of malicious SQL code.
+     */
     public fun sqlInjectionMatchTuples(sqlInjectionMatchTuples: List<Any>)
 
+    /**
+     * @param sqlInjectionMatchTuples Specifies the parts of web requests that you want to inspect
+     * for snippets of malicious SQL code.
+     */
     public fun sqlInjectionMatchTuples(vararg sqlInjectionMatchTuples: Any)
   }
 
@@ -31,18 +86,33 @@ public interface CfnSqlInjectionMatchSetProps {
         software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSetProps.Builder =
         software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSetProps.builder()
 
+    /**
+     * @param name The name, if any, of the `SqlInjectionMatchSet` . 
+     */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
+    /**
+     * @param sqlInjectionMatchTuples Specifies the parts of web requests that you want to inspect
+     * for snippets of malicious SQL code.
+     */
     override fun sqlInjectionMatchTuples(sqlInjectionMatchTuples: IResolvable) {
       cdkBuilder.sqlInjectionMatchTuples(sqlInjectionMatchTuples.let(IResolvable::unwrap))
     }
 
+    /**
+     * @param sqlInjectionMatchTuples Specifies the parts of web requests that you want to inspect
+     * for snippets of malicious SQL code.
+     */
     override fun sqlInjectionMatchTuples(sqlInjectionMatchTuples: List<Any>) {
       cdkBuilder.sqlInjectionMatchTuples(sqlInjectionMatchTuples)
     }
 
+    /**
+     * @param sqlInjectionMatchTuples Specifies the parts of web requests that you want to inspect
+     * for snippets of malicious SQL code.
+     */
     override fun sqlInjectionMatchTuples(vararg sqlInjectionMatchTuples: Any): Unit =
         sqlInjectionMatchTuples(sqlInjectionMatchTuples.toList())
 
@@ -54,8 +124,19 @@ public interface CfnSqlInjectionMatchSetProps {
     override val cdkObject:
         software.amazon.awscdk.services.waf.regional.CfnSqlInjectionMatchSetProps,
   ) : CdkObject(cdkObject), CfnSqlInjectionMatchSetProps {
+    /**
+     * The name, if any, of the `SqlInjectionMatchSet` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sqlinjectionmatchset.html#cfn-wafregional-sqlinjectionmatchset-name)
+     */
     override fun name(): String = unwrap(this).getName()
 
+    /**
+     * Specifies the parts of web requests that you want to inspect for snippets of malicious SQL
+     * code.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-sqlinjectionmatchset.html#cfn-wafregional-sqlinjectionmatchset-sqlinjectionmatchtuples)
+     */
     override fun sqlInjectionMatchTuples(): Any? = unwrap(this).getSqlInjectionMatchTuples()
   }
 

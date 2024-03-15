@@ -8,19 +8,91 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 
+/**
+ * Git push filter for trigger.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+ * GitPushFilter gitPushFilter = GitPushFilter.builder()
+ * .tagsExcludes(List.of("tagsExcludes"))
+ * .tagsIncludes(List.of("tagsIncludes"))
+ * .build();
+ * ```
+ */
 public interface GitPushFilter {
+  /**
+   * The list of patterns of Git tags that, when pushed, are to be excluded from starting the
+   * pipeline.
+   *
+   * You can filter with glob patterns. The `tagsExcludes` takes priority
+   * over the `tagsIncludes`.
+   *
+   * Maximum length of this array is 8.
+   *
+   * Default: - no tags.
+   */
   public fun tagsExcludes(): List<String> = unwrap(this).getTagsExcludes() ?: emptyList()
 
+  /**
+   * The list of patterns of Git tags that, when pushed, are to be included as criteria that starts
+   * the pipeline.
+   *
+   * You can filter with glob patterns. The `tagsExcludes` takes priority
+   * over the `tagsIncludes`.
+   *
+   * Maximum length of this array is 8.
+   *
+   * Default: - no tags.
+   */
   public fun tagsIncludes(): List<String> = unwrap(this).getTagsIncludes() ?: emptyList()
 
+  /**
+   * A builder for [GitPushFilter]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param tagsExcludes The list of patterns of Git tags that, when pushed, are to be excluded
+     * from starting the pipeline.
+     * You can filter with glob patterns. The `tagsExcludes` takes priority
+     * over the `tagsIncludes`.
+     *
+     * Maximum length of this array is 8.
+     */
     public fun tagsExcludes(tagsExcludes: List<String>)
 
+    /**
+     * @param tagsExcludes The list of patterns of Git tags that, when pushed, are to be excluded
+     * from starting the pipeline.
+     * You can filter with glob patterns. The `tagsExcludes` takes priority
+     * over the `tagsIncludes`.
+     *
+     * Maximum length of this array is 8.
+     */
     public fun tagsExcludes(vararg tagsExcludes: String)
 
+    /**
+     * @param tagsIncludes The list of patterns of Git tags that, when pushed, are to be included as
+     * criteria that starts the pipeline.
+     * You can filter with glob patterns. The `tagsExcludes` takes priority
+     * over the `tagsIncludes`.
+     *
+     * Maximum length of this array is 8.
+     */
     public fun tagsIncludes(tagsIncludes: List<String>)
 
+    /**
+     * @param tagsIncludes The list of patterns of Git tags that, when pushed, are to be included as
+     * criteria that starts the pipeline.
+     * You can filter with glob patterns. The `tagsExcludes` takes priority
+     * over the `tagsIncludes`.
+     *
+     * Maximum length of this array is 8.
+     */
     public fun tagsIncludes(vararg tagsIncludes: String)
   }
 
@@ -28,17 +100,49 @@ public interface GitPushFilter {
     private val cdkBuilder: software.amazon.awscdk.services.codepipeline.GitPushFilter.Builder =
         software.amazon.awscdk.services.codepipeline.GitPushFilter.builder()
 
+    /**
+     * @param tagsExcludes The list of patterns of Git tags that, when pushed, are to be excluded
+     * from starting the pipeline.
+     * You can filter with glob patterns. The `tagsExcludes` takes priority
+     * over the `tagsIncludes`.
+     *
+     * Maximum length of this array is 8.
+     */
     override fun tagsExcludes(tagsExcludes: List<String>) {
       cdkBuilder.tagsExcludes(tagsExcludes)
     }
 
+    /**
+     * @param tagsExcludes The list of patterns of Git tags that, when pushed, are to be excluded
+     * from starting the pipeline.
+     * You can filter with glob patterns. The `tagsExcludes` takes priority
+     * over the `tagsIncludes`.
+     *
+     * Maximum length of this array is 8.
+     */
     override fun tagsExcludes(vararg tagsExcludes: String): Unit =
         tagsExcludes(tagsExcludes.toList())
 
+    /**
+     * @param tagsIncludes The list of patterns of Git tags that, when pushed, are to be included as
+     * criteria that starts the pipeline.
+     * You can filter with glob patterns. The `tagsExcludes` takes priority
+     * over the `tagsIncludes`.
+     *
+     * Maximum length of this array is 8.
+     */
     override fun tagsIncludes(tagsIncludes: List<String>) {
       cdkBuilder.tagsIncludes(tagsIncludes)
     }
 
+    /**
+     * @param tagsIncludes The list of patterns of Git tags that, when pushed, are to be included as
+     * criteria that starts the pipeline.
+     * You can filter with glob patterns. The `tagsExcludes` takes priority
+     * over the `tagsIncludes`.
+     *
+     * Maximum length of this array is 8.
+     */
     override fun tagsIncludes(vararg tagsIncludes: String): Unit =
         tagsIncludes(tagsIncludes.toList())
 
@@ -49,8 +153,30 @@ public interface GitPushFilter {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.codepipeline.GitPushFilter,
   ) : CdkObject(cdkObject), GitPushFilter {
+    /**
+     * The list of patterns of Git tags that, when pushed, are to be excluded from starting the
+     * pipeline.
+     *
+     * You can filter with glob patterns. The `tagsExcludes` takes priority
+     * over the `tagsIncludes`.
+     *
+     * Maximum length of this array is 8.
+     *
+     * Default: - no tags.
+     */
     override fun tagsExcludes(): List<String> = unwrap(this).getTagsExcludes() ?: emptyList()
 
+    /**
+     * The list of patterns of Git tags that, when pushed, are to be included as criteria that
+     * starts the pipeline.
+     *
+     * You can filter with glob patterns. The `tagsExcludes` takes priority
+     * over the `tagsIncludes`.
+     *
+     * Maximum length of this array is 8.
+     *
+     * Default: - no tags.
+     */
     override fun tagsIncludes(): List<String> = unwrap(this).getTagsIncludes() ?: emptyList()
   }
 

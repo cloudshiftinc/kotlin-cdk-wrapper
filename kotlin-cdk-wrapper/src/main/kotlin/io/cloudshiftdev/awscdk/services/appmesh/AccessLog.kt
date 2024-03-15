@@ -6,11 +6,48 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 
+/**
+ * Configuration for Envoy Access logs for mesh endpoints.
+ *
+ * Example:
+ *
+ * ```
+ * Mesh mesh;
+ * Vpc vpc = new Vpc(this, "vpc");
+ * PrivateDnsNamespace namespace = PrivateDnsNamespace.Builder.create(this, "test-namespace")
+ * .vpc(vpc)
+ * .name("domain.local")
+ * .build();
+ * Service service = namespace.createService("Svc");
+ * VirtualNode node = mesh.addVirtualNode("virtual-node", VirtualNodeBaseProps.builder()
+ * .serviceDiscovery(ServiceDiscovery.cloudMap(service))
+ * .listeners(List.of(VirtualNodeListener.http(HttpVirtualNodeListenerOptions.builder()
+ * .port(8081)
+ * .healthCheck(HealthCheck.http(HttpHealthCheckOptions.builder()
+ * .healthyThreshold(3)
+ * .interval(Duration.seconds(5)) // minimum
+ * .path("/health-check-path")
+ * .timeout(Duration.seconds(2)) // minimum
+ * .unhealthyThreshold(2)
+ * .build()))
+ * .build())))
+ * .accessLog(AccessLog.fromFilePath("/dev/stdout"))
+ * .build());
+ * ```
+ */
 public abstract class AccessLog internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.AccessLog,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct): AccessLogConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(AccessLogConfig::wrap)
+  /**
+   * Called when the AccessLog type is initialized.
+   *
+   * Can be used to enforce
+   * mutual exclusivity with future properties
+   *
+   * @param scope 
+   */
+  public open fun bind(scope: Construct): AccessLogConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(AccessLogConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.AccessLog,

@@ -6,6 +6,24 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * FileSystemLocation provider definition for a CodeBuild Project.
+ *
+ * Example:
+ *
+ * ```
+ * Project.Builder.create(this, "MyProject")
+ * .buildSpec(BuildSpec.fromObject(Map.of(
+ * "version", "0.2")))
+ * .fileSystemLocations(List.of(FileSystemLocation.efs(EfsFileSystemLocationProps.builder()
+ * .identifier("myidentifier2")
+ * .location("myclodation.mydnsroot.com:/loc")
+ * .mountPoint("/media")
+ * .mountOptions("opts")
+ * .build())))
+ * .build();
+ * ```
+ */
 public open class FileSystemLocation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codebuild.FileSystemLocation,
 ) : CdkObject(cdkObject) {

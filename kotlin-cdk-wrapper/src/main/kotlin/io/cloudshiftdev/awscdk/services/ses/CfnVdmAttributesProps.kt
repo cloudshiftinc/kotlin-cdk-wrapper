@@ -9,27 +9,85 @@ import kotlin.Any
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Properties for defining a `CfnVdmAttributes`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ses.*;
+ * CfnVdmAttributesProps cfnVdmAttributesProps = CfnVdmAttributesProps.builder()
+ * .dashboardAttributes(DashboardAttributesProperty.builder()
+ * .engagementMetrics("engagementMetrics")
+ * .build())
+ * .guardianAttributes(GuardianAttributesProperty.builder()
+ * .optimizedSharedDelivery("optimizedSharedDelivery")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-vdmattributes.html)
+ */
 public interface CfnVdmAttributesProps {
+  /**
+   * Specifies additional settings for your VDM configuration as applicable to the Dashboard.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-vdmattributes.html#cfn-ses-vdmattributes-dashboardattributes)
+   */
   public fun dashboardAttributes(): Any? = unwrap(this).getDashboardAttributes()
 
+  /**
+   * Specifies additional settings for your VDM configuration as applicable to the Guardian.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-vdmattributes.html#cfn-ses-vdmattributes-guardianattributes)
+   */
   public fun guardianAttributes(): Any? = unwrap(this).getGuardianAttributes()
 
+  /**
+   * A builder for [CfnVdmAttributesProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param dashboardAttributes Specifies additional settings for your VDM configuration as
+     * applicable to the Dashboard.
+     */
     public fun dashboardAttributes(dashboardAttributes: IResolvable)
 
+    /**
+     * @param dashboardAttributes Specifies additional settings for your VDM configuration as
+     * applicable to the Dashboard.
+     */
     public
         fun dashboardAttributes(dashboardAttributes: CfnVdmAttributes.DashboardAttributesProperty)
 
+    /**
+     * @param dashboardAttributes Specifies additional settings for your VDM configuration as
+     * applicable to the Dashboard.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2f29a620aed7b3d3866833ecc1d67bc124c357912a32772b2aa408fbb13bbfc7")
     public
         fun dashboardAttributes(dashboardAttributes: CfnVdmAttributes.DashboardAttributesProperty.Builder.() -> Unit)
 
+    /**
+     * @param guardianAttributes Specifies additional settings for your VDM configuration as
+     * applicable to the Guardian.
+     */
     public fun guardianAttributes(guardianAttributes: IResolvable)
 
+    /**
+     * @param guardianAttributes Specifies additional settings for your VDM configuration as
+     * applicable to the Guardian.
+     */
     public fun guardianAttributes(guardianAttributes: CfnVdmAttributes.GuardianAttributesProperty)
 
+    /**
+     * @param guardianAttributes Specifies additional settings for your VDM configuration as
+     * applicable to the Guardian.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0daeb328c2f21c5fd6884fd4c6e83934280a8ca4e0b0009ec66239d8c597210c")
     public
@@ -40,15 +98,27 @@ public interface CfnVdmAttributesProps {
     private val cdkBuilder: software.amazon.awscdk.services.ses.CfnVdmAttributesProps.Builder =
         software.amazon.awscdk.services.ses.CfnVdmAttributesProps.builder()
 
+    /**
+     * @param dashboardAttributes Specifies additional settings for your VDM configuration as
+     * applicable to the Dashboard.
+     */
     override fun dashboardAttributes(dashboardAttributes: IResolvable) {
       cdkBuilder.dashboardAttributes(dashboardAttributes.let(IResolvable::unwrap))
     }
 
+    /**
+     * @param dashboardAttributes Specifies additional settings for your VDM configuration as
+     * applicable to the Dashboard.
+     */
     override
         fun dashboardAttributes(dashboardAttributes: CfnVdmAttributes.DashboardAttributesProperty) {
       cdkBuilder.dashboardAttributes(dashboardAttributes.let(CfnVdmAttributes.DashboardAttributesProperty::unwrap))
     }
 
+    /**
+     * @param dashboardAttributes Specifies additional settings for your VDM configuration as
+     * applicable to the Dashboard.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2f29a620aed7b3d3866833ecc1d67bc124c357912a32772b2aa408fbb13bbfc7")
     override
@@ -56,15 +126,27 @@ public interface CfnVdmAttributesProps {
         Unit =
         dashboardAttributes(CfnVdmAttributes.DashboardAttributesProperty(dashboardAttributes))
 
+    /**
+     * @param guardianAttributes Specifies additional settings for your VDM configuration as
+     * applicable to the Guardian.
+     */
     override fun guardianAttributes(guardianAttributes: IResolvable) {
       cdkBuilder.guardianAttributes(guardianAttributes.let(IResolvable::unwrap))
     }
 
+    /**
+     * @param guardianAttributes Specifies additional settings for your VDM configuration as
+     * applicable to the Guardian.
+     */
     override
         fun guardianAttributes(guardianAttributes: CfnVdmAttributes.GuardianAttributesProperty) {
       cdkBuilder.guardianAttributes(guardianAttributes.let(CfnVdmAttributes.GuardianAttributesProperty::unwrap))
     }
 
+    /**
+     * @param guardianAttributes Specifies additional settings for your VDM configuration as
+     * applicable to the Guardian.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0daeb328c2f21c5fd6884fd4c6e83934280a8ca4e0b0009ec66239d8c597210c")
     override
@@ -78,8 +160,18 @@ public interface CfnVdmAttributesProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ses.CfnVdmAttributesProps,
   ) : CdkObject(cdkObject), CfnVdmAttributesProps {
+    /**
+     * Specifies additional settings for your VDM configuration as applicable to the Dashboard.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-vdmattributes.html#cfn-ses-vdmattributes-dashboardattributes)
+     */
     override fun dashboardAttributes(): Any? = unwrap(this).getDashboardAttributes()
 
+    /**
+     * Specifies additional settings for your VDM configuration as applicable to the Guardian.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-vdmattributes.html#cfn-ses-vdmattributes-guardianattributes)
+     */
     override fun guardianAttributes(): Any? = unwrap(this).getGuardianAttributes()
   }
 

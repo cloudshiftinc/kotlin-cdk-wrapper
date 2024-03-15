@@ -7,11 +7,40 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Options for Choice Transition.
+ *
+ * Example:
+ *
+ * ```
+ * Choice choice = Choice.Builder.create(this, "What color is it?")
+ * .comment("color comment")
+ * .build();
+ * Pass handleBlueItem = new Pass(this, "HandleBlueItem");
+ * Pass handleOtherItemColor = new Pass(this, "HanldeOtherItemColor");
+ * choice.when(Condition.stringEquals("$.color", "BLUE"), handleBlueItem,
+ * ChoiceTransitionOptions.builder()
+ * .comment("blue item comment")
+ * .build());
+ * choice.otherwise(handleOtherItemColor);
+ * ```
+ */
 public interface ChoiceTransitionOptions {
+  /**
+   * An optional description for the choice transition.
+   *
+   * Default: No comment
+   */
   public fun comment(): String? = unwrap(this).getComment()
 
+  /**
+   * A builder for [ChoiceTransitionOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param comment An optional description for the choice transition.
+     */
     public fun comment(comment: String)
   }
 
@@ -20,6 +49,9 @@ public interface ChoiceTransitionOptions {
         software.amazon.awscdk.services.stepfunctions.ChoiceTransitionOptions.Builder =
         software.amazon.awscdk.services.stepfunctions.ChoiceTransitionOptions.builder()
 
+    /**
+     * @param comment An optional description for the choice transition.
+     */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
@@ -31,6 +63,11 @@ public interface ChoiceTransitionOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.stepfunctions.ChoiceTransitionOptions,
   ) : CdkObject(cdkObject), ChoiceTransitionOptions {
+    /**
+     * An optional description for the choice transition.
+     *
+     * Default: No comment
+     */
     override fun comment(): String? = unwrap(this).getComment()
   }
 

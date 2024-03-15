@@ -8,19 +8,68 @@ import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for defining a `CfnApiKey`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.appsync.*;
+ * CfnApiKeyProps cfnApiKeyProps = CfnApiKeyProps.builder()
+ * .apiId("apiId")
+ * // the properties below are optional
+ * .description("description")
+ * .expires(123)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html)
+ */
 public interface CfnApiKeyProps {
+  /**
+   * Unique AWS AppSync GraphQL API ID for this API key.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html#cfn-appsync-apikey-apiid)
+   */
   public fun apiId(): String
 
+  /**
+   * Unique description of your API key.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html#cfn-appsync-apikey-description)
+   */
   public fun description(): String? = unwrap(this).getDescription()
 
+  /**
+   * The time after which the API key expires.
+   *
+   * The date is represented as seconds since the epoch, rounded down to the nearest hour.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html#cfn-appsync-apikey-expires)
+   */
   public fun expires(): Number? = unwrap(this).getExpires()
 
+  /**
+   * A builder for [CfnApiKeyProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param apiId Unique AWS AppSync GraphQL API ID for this API key. 
+     */
     public fun apiId(apiId: String)
 
+    /**
+     * @param description Unique description of your API key.
+     */
     public fun description(description: String)
 
+    /**
+     * @param expires The time after which the API key expires.
+     * The date is represented as seconds since the epoch, rounded down to the nearest hour.
+     */
     public fun expires(expires: Number)
   }
 
@@ -28,14 +77,24 @@ public interface CfnApiKeyProps {
     private val cdkBuilder: software.amazon.awscdk.services.appsync.CfnApiKeyProps.Builder =
         software.amazon.awscdk.services.appsync.CfnApiKeyProps.builder()
 
+    /**
+     * @param apiId Unique AWS AppSync GraphQL API ID for this API key. 
+     */
     override fun apiId(apiId: String) {
       cdkBuilder.apiId(apiId)
     }
 
+    /**
+     * @param description Unique description of your API key.
+     */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
+    /**
+     * @param expires The time after which the API key expires.
+     * The date is represented as seconds since the epoch, rounded down to the nearest hour.
+     */
     override fun expires(expires: Number) {
       cdkBuilder.expires(expires)
     }
@@ -46,10 +105,27 @@ public interface CfnApiKeyProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appsync.CfnApiKeyProps,
   ) : CdkObject(cdkObject), CfnApiKeyProps {
+    /**
+     * Unique AWS AppSync GraphQL API ID for this API key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html#cfn-appsync-apikey-apiid)
+     */
     override fun apiId(): String = unwrap(this).getApiId()
 
+    /**
+     * Unique description of your API key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html#cfn-appsync-apikey-description)
+     */
     override fun description(): String? = unwrap(this).getDescription()
 
+    /**
+     * The time after which the API key expires.
+     *
+     * The date is represented as seconds since the epoch, rounded down to the nearest hour.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-apikey.html#cfn-appsync-apikey-expires)
+     */
     override fun expires(): Number? = unwrap(this).getExpires()
   }
 

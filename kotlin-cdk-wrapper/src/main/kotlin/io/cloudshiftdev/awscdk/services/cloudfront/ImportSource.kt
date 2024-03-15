@@ -9,6 +9,18 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * The data to be imported to the key value store.
+ *
+ * Example:
+ *
+ * ```
+ * KeyValueStore store = KeyValueStore.Builder.create(this, "KeyValueStore")
+ * .keyValueStoreName("KeyValueStore")
+ * .source(ImportSource.fromAsset("path-to-data.json"))
+ * .build();
+ * ```
+ */
 public abstract class ImportSource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.ImportSource,
 ) : CdkObject(cdkObject) {

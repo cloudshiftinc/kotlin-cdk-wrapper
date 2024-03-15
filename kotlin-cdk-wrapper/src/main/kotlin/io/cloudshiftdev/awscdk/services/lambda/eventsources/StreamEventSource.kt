@@ -6,12 +6,20 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.lambda.IEventSource
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
 
+/**
+ * Use an stream as an event source for AWS Lambda.
+ */
 public abstract class StreamEventSource internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.lambda.eventsources.StreamEventSource,
 ) : CdkObject(cdkObject), IEventSource {
-  public override fun bind(arg0: IFunction) {
-    unwrap(this).bind(arg0.let(IFunction::unwrap))
+  /**
+   * Called by `lambda.addEventSource` to allow the event source to bind to this function.
+   *
+   * @param _target 
+   */
+  public override fun bind(_target: IFunction) {
+    unwrap(this).bind(_target.let(IFunction::unwrap))
   }
 
   private class Wrapper(

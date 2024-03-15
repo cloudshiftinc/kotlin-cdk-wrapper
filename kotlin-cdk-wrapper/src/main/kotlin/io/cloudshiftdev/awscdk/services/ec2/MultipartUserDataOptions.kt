@@ -7,11 +7,42 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Options for creating `MultipartUserData`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * MultipartUserDataOptions multipartUserDataOptions = MultipartUserDataOptions.builder()
+ * .partsSeparator("partsSeparator")
+ * .build();
+ * ```
+ */
 public interface MultipartUserDataOptions {
+  /**
+   * The string used to separate parts in multipart user data archive (it's like MIME boundary).
+   *
+   * This string should contain [a-zA-Z0-9()+,-./:=?] characters only, and should not be present in
+   * any part, or in text content of archive.
+   *
+   * Default: `+AWS+CDK+User+Data+Separator==`
+   */
   public fun partsSeparator(): String? = unwrap(this).getPartsSeparator()
 
+  /**
+   * A builder for [MultipartUserDataOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param partsSeparator The string used to separate parts in multipart user data archive (it's
+     * like MIME boundary).
+     * This string should contain [a-zA-Z0-9()+,-./:=?] characters only, and should not be present
+     * in any part, or in text content of archive.
+     */
     public fun partsSeparator(partsSeparator: String)
   }
 
@@ -19,6 +50,12 @@ public interface MultipartUserDataOptions {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.MultipartUserDataOptions.Builder =
         software.amazon.awscdk.services.ec2.MultipartUserDataOptions.builder()
 
+    /**
+     * @param partsSeparator The string used to separate parts in multipart user data archive (it's
+     * like MIME boundary).
+     * This string should contain [a-zA-Z0-9()+,-./:=?] characters only, and should not be present
+     * in any part, or in text content of archive.
+     */
     override fun partsSeparator(partsSeparator: String) {
       cdkBuilder.partsSeparator(partsSeparator)
     }
@@ -30,6 +67,14 @@ public interface MultipartUserDataOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ec2.MultipartUserDataOptions,
   ) : CdkObject(cdkObject), MultipartUserDataOptions {
+    /**
+     * The string used to separate parts in multipart user data archive (it's like MIME boundary).
+     *
+     * This string should contain [a-zA-Z0-9()+,-./:=?] characters only, and should not be present
+     * in any part, or in text content of archive.
+     *
+     * Default: `+AWS+CDK+User+Data+Separator==`
+     */
     override fun partsSeparator(): String? = unwrap(this).getPartsSeparator()
   }
 

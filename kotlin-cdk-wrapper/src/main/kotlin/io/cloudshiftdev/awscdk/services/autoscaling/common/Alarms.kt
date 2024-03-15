@@ -7,15 +7,43 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Number
 import kotlin.Unit
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.autoscaling.common.*;
+ * Alarms alarms = Alarms.builder()
+ * .lowerAlarmIntervalIndex(123)
+ * .upperAlarmIntervalIndex(123)
+ * .build();
+ * ```
+ */
 public interface Alarms {
+  /**
+   *
+   */
   public fun lowerAlarmIntervalIndex(): Number? = unwrap(this).getLowerAlarmIntervalIndex()
 
+  /**
+   *
+   */
   public fun upperAlarmIntervalIndex(): Number? = unwrap(this).getUpperAlarmIntervalIndex()
 
+  /**
+   * A builder for [Alarms]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param lowerAlarmIntervalIndex the value to be set.
+     */
     public fun lowerAlarmIntervalIndex(lowerAlarmIntervalIndex: Number)
 
+    /**
+     * @param upperAlarmIntervalIndex the value to be set.
+     */
     public fun upperAlarmIntervalIndex(upperAlarmIntervalIndex: Number)
   }
 
@@ -23,10 +51,16 @@ public interface Alarms {
     private val cdkBuilder: software.amazon.awscdk.services.autoscaling.common.Alarms.Builder =
         software.amazon.awscdk.services.autoscaling.common.Alarms.builder()
 
+    /**
+     * @param lowerAlarmIntervalIndex the value to be set.
+     */
     override fun lowerAlarmIntervalIndex(lowerAlarmIntervalIndex: Number) {
       cdkBuilder.lowerAlarmIntervalIndex(lowerAlarmIntervalIndex)
     }
 
+    /**
+     * @param upperAlarmIntervalIndex the value to be set.
+     */
     override fun upperAlarmIntervalIndex(upperAlarmIntervalIndex: Number) {
       cdkBuilder.upperAlarmIntervalIndex(upperAlarmIntervalIndex)
     }
@@ -38,8 +72,14 @@ public interface Alarms {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.autoscaling.common.Alarms,
   ) : CdkObject(cdkObject), Alarms {
+    /**
+     *
+     */
     override fun lowerAlarmIntervalIndex(): Number? = unwrap(this).getLowerAlarmIntervalIndex()
 
+    /**
+     *
+     */
     override fun upperAlarmIntervalIndex(): Number? = unwrap(this).getUpperAlarmIntervalIndex()
   }
 

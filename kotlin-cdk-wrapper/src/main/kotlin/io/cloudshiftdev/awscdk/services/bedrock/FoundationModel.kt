@@ -6,11 +6,36 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 
+/**
+ * A Bedrock base foundation model.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.bedrock.*;
+ * FoundationModel.fromFoundationModelId(this, "Model",
+ * FoundationModelIdentifier.ANTHROPIC_CLAUDE_V2);
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html)
+ */
 public open class FoundationModel internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.bedrock.FoundationModel,
 ) : CdkObject(cdkObject), IModel {
+  /**
+   * The foundation model ARN.
+   */
   public override fun modelArn(): String = unwrap(this).getModelArn()
 
+  /**
+   * The foundation model ID.
+   *
+   * Example:
+   *
+   * ```
+   * "amazon.titan-text-express-v1";
+   * ```
+   */
   public open fun modelId(): String = unwrap(this).getModelId()
 
   public companion object {

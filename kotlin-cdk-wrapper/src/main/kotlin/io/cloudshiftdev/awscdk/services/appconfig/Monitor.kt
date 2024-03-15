@@ -10,15 +10,43 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Defines monitors that will be associated with an AWS AppConfig environment.
+ *
+ * Example:
+ *
+ * ```
+ * Application application;
+ * Alarm alarm;
+ * CompositeAlarm compositeAlarm;
+ * Environment.Builder.create(this, "MyEnvironment")
+ * .application(application)
+ * .monitors(List.of(Monitor.fromCloudWatchAlarm(alarm),
+ * Monitor.fromCloudWatchAlarm(compositeAlarm)))
+ * .build();
+ * ```
+ */
 public abstract class Monitor internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.Monitor,
 ) : CdkObject(cdkObject) {
+  /**
+   * The alarm ARN for AWS AppConfig to monitor.
+   */
   public open fun alarmArn(): String = unwrap(this).getAlarmArn()
 
+  /**
+   * The IAM role ARN for AWS AppConfig to view the alarm state.
+   */
   public open fun alarmRoleArn(): String? = unwrap(this).getAlarmRoleArn()
 
+  /**
+   * Indicates whether a CloudWatch alarm is a composite alarm.
+   */
   public open fun isCompositeAlarm(): Boolean? = unwrap(this).getIsCompositeAlarm()
 
+  /**
+   * The type of monitor.
+   */
   public open fun monitorType(): MonitorType = unwrap(this).getMonitorType().let(MonitorType::wrap)
 
   private class Wrapper(

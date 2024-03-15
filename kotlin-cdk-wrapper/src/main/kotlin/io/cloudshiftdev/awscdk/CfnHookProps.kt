@@ -9,15 +9,50 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
 
+/**
+ * Construction properties of `CfnHook`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * Object properties;
+ * CfnHookProps cfnHookProps = CfnHookProps.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .properties(Map.of(
+ * "propertiesKey", properties))
+ * .build();
+ * ```
+ */
 public interface CfnHookProps {
+  /**
+   * The properties of the hook.
+   *
+   * Default: - no properties
+   */
   public fun properties(): Map<String, Any> = unwrap(this).getProperties() ?: emptyMap()
 
+  /**
+   * The type of the hook (for example, "AWS::CodeDeploy::BlueGreen").
+   */
   public fun type(): String
 
+  /**
+   * A builder for [CfnHookProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param properties The properties of the hook.
+     */
     public fun properties(properties: Map<String, Any>)
 
+    /**
+     * @param type The type of the hook (for example, "AWS::CodeDeploy::BlueGreen"). 
+     */
     public fun type(type: String)
   }
 
@@ -25,10 +60,16 @@ public interface CfnHookProps {
     private val cdkBuilder: software.amazon.awscdk.CfnHookProps.Builder =
         software.amazon.awscdk.CfnHookProps.builder()
 
+    /**
+     * @param properties The properties of the hook.
+     */
     override fun properties(properties: Map<String, Any>) {
       cdkBuilder.properties(properties)
     }
 
+    /**
+     * @param type The type of the hook (for example, "AWS::CodeDeploy::BlueGreen"). 
+     */
     override fun type(type: String) {
       cdkBuilder.type(type)
     }
@@ -39,8 +80,16 @@ public interface CfnHookProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.CfnHookProps,
   ) : CdkObject(cdkObject), CfnHookProps {
+    /**
+     * The properties of the hook.
+     *
+     * Default: - no properties
+     */
     override fun properties(): Map<String, Any> = unwrap(this).getProperties() ?: emptyMap()
 
+    /**
+     * The type of the hook (for example, "AWS::CodeDeploy::BlueGreen").
+     */
     override fun type(): String = unwrap(this).getType()
   }
 

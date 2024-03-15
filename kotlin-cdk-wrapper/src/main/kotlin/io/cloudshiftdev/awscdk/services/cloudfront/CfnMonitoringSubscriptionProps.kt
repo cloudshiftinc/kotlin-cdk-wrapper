@@ -10,20 +10,70 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Properties for defining a `CfnMonitoringSubscription`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+ * CfnMonitoringSubscriptionProps cfnMonitoringSubscriptionProps =
+ * CfnMonitoringSubscriptionProps.builder()
+ * .distributionId("distributionId")
+ * .monitoringSubscription(MonitoringSubscriptionProperty.builder()
+ * .realtimeMetricsSubscriptionConfig(RealtimeMetricsSubscriptionConfigProperty.builder()
+ * .realtimeMetricsSubscriptionStatus("realtimeMetricsSubscriptionStatus")
+ * .build())
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-monitoringsubscription.html)
+ */
 public interface CfnMonitoringSubscriptionProps {
+  /**
+   * The ID of the distribution that you are enabling metrics for.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-monitoringsubscription.html#cfn-cloudfront-monitoringsubscription-distributionid)
+   */
   public fun distributionId(): String
 
+  /**
+   * A subscription configuration for additional CloudWatch metrics.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-monitoringsubscription.html#cfn-cloudfront-monitoringsubscription-monitoringsubscription)
+   */
   public fun monitoringSubscription(): Any
 
+  /**
+   * A builder for [CfnMonitoringSubscriptionProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param distributionId The ID of the distribution that you are enabling metrics for. 
+     */
     public fun distributionId(distributionId: String)
 
+    /**
+     * @param monitoringSubscription A subscription configuration for additional CloudWatch metrics.
+     * 
+     */
     public fun monitoringSubscription(monitoringSubscription: IResolvable)
 
+    /**
+     * @param monitoringSubscription A subscription configuration for additional CloudWatch metrics.
+     * 
+     */
     public
         fun monitoringSubscription(monitoringSubscription: CfnMonitoringSubscription.MonitoringSubscriptionProperty)
 
+    /**
+     * @param monitoringSubscription A subscription configuration for additional CloudWatch metrics.
+     * 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("48bc0b317ad573210e1cdc19178d49bd6ec64141b19569d559cb15ce654a7051")
     public
@@ -35,19 +85,34 @@ public interface CfnMonitoringSubscriptionProps {
         software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscriptionProps.Builder =
         software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscriptionProps.builder()
 
+    /**
+     * @param distributionId The ID of the distribution that you are enabling metrics for. 
+     */
     override fun distributionId(distributionId: String) {
       cdkBuilder.distributionId(distributionId)
     }
 
+    /**
+     * @param monitoringSubscription A subscription configuration for additional CloudWatch metrics.
+     * 
+     */
     override fun monitoringSubscription(monitoringSubscription: IResolvable) {
       cdkBuilder.monitoringSubscription(monitoringSubscription.let(IResolvable::unwrap))
     }
 
+    /**
+     * @param monitoringSubscription A subscription configuration for additional CloudWatch metrics.
+     * 
+     */
     override
         fun monitoringSubscription(monitoringSubscription: CfnMonitoringSubscription.MonitoringSubscriptionProperty) {
       cdkBuilder.monitoringSubscription(monitoringSubscription.let(CfnMonitoringSubscription.MonitoringSubscriptionProperty::unwrap))
     }
 
+    /**
+     * @param monitoringSubscription A subscription configuration for additional CloudWatch metrics.
+     * 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("48bc0b317ad573210e1cdc19178d49bd6ec64141b19569d559cb15ce654a7051")
     override
@@ -63,8 +128,18 @@ public interface CfnMonitoringSubscriptionProps {
     override val cdkObject:
         software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscriptionProps,
   ) : CdkObject(cdkObject), CfnMonitoringSubscriptionProps {
+    /**
+     * The ID of the distribution that you are enabling metrics for.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-monitoringsubscription.html#cfn-cloudfront-monitoringsubscription-distributionid)
+     */
     override fun distributionId(): String = unwrap(this).getDistributionId()
 
+    /**
+     * A subscription configuration for additional CloudWatch metrics.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-monitoringsubscription.html#cfn-cloudfront-monitoringsubscription-monitoringsubscription)
+     */
     override fun monitoringSubscription(): Any = unwrap(this).getMonitoringSubscription()
   }
 

@@ -7,23 +7,77 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * S3Action configuration.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ses.*;
+ * S3ActionConfig s3ActionConfig = S3ActionConfig.builder()
+ * .bucketName("bucketName")
+ * // the properties below are optional
+ * .kmsKeyArn("kmsKeyArn")
+ * .objectKeyPrefix("objectKeyPrefix")
+ * .topicArn("topicArn")
+ * .build();
+ * ```
+ */
 public interface S3ActionConfig {
+  /**
+   * The name of the Amazon S3 bucket that you want to send incoming mail to.
+   */
   public fun bucketName(): String
 
+  /**
+   * The customer master key that Amazon SES should use to encrypt your emails before saving them to
+   * the Amazon S3 bucket.
+   *
+   * Default: - Emails are not encrypted.
+   */
   public fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
 
+  /**
+   * The key prefix of the Amazon S3 bucket.
+   *
+   * Default: - No prefix.
+   */
   public fun objectKeyPrefix(): String? = unwrap(this).getObjectKeyPrefix()
 
+  /**
+   * The ARN of the Amazon SNS topic to notify when the message is saved to the Amazon S3 bucket.
+   *
+   * Default: - No notification is sent to SNS.
+   */
   public fun topicArn(): String? = unwrap(this).getTopicArn()
 
+  /**
+   * A builder for [S3ActionConfig]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param bucketName The name of the Amazon S3 bucket that you want to send incoming mail to. 
+     */
     public fun bucketName(bucketName: String)
 
+    /**
+     * @param kmsKeyArn The customer master key that Amazon SES should use to encrypt your emails
+     * before saving them to the Amazon S3 bucket.
+     */
     public fun kmsKeyArn(kmsKeyArn: String)
 
+    /**
+     * @param objectKeyPrefix The key prefix of the Amazon S3 bucket.
+     */
     public fun objectKeyPrefix(objectKeyPrefix: String)
 
+    /**
+     * @param topicArn The ARN of the Amazon SNS topic to notify when the message is saved to the
+     * Amazon S3 bucket.
+     */
     public fun topicArn(topicArn: String)
   }
 
@@ -31,18 +85,32 @@ public interface S3ActionConfig {
     private val cdkBuilder: software.amazon.awscdk.services.ses.S3ActionConfig.Builder =
         software.amazon.awscdk.services.ses.S3ActionConfig.builder()
 
+    /**
+     * @param bucketName The name of the Amazon S3 bucket that you want to send incoming mail to. 
+     */
     override fun bucketName(bucketName: String) {
       cdkBuilder.bucketName(bucketName)
     }
 
+    /**
+     * @param kmsKeyArn The customer master key that Amazon SES should use to encrypt your emails
+     * before saving them to the Amazon S3 bucket.
+     */
     override fun kmsKeyArn(kmsKeyArn: String) {
       cdkBuilder.kmsKeyArn(kmsKeyArn)
     }
 
+    /**
+     * @param objectKeyPrefix The key prefix of the Amazon S3 bucket.
+     */
     override fun objectKeyPrefix(objectKeyPrefix: String) {
       cdkBuilder.objectKeyPrefix(objectKeyPrefix)
     }
 
+    /**
+     * @param topicArn The ARN of the Amazon SNS topic to notify when the message is saved to the
+     * Amazon S3 bucket.
+     */
     override fun topicArn(topicArn: String) {
       cdkBuilder.topicArn(topicArn)
     }
@@ -53,12 +121,31 @@ public interface S3ActionConfig {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ses.S3ActionConfig,
   ) : CdkObject(cdkObject), S3ActionConfig {
+    /**
+     * The name of the Amazon S3 bucket that you want to send incoming mail to.
+     */
     override fun bucketName(): String = unwrap(this).getBucketName()
 
+    /**
+     * The customer master key that Amazon SES should use to encrypt your emails before saving them
+     * to the Amazon S3 bucket.
+     *
+     * Default: - Emails are not encrypted.
+     */
     override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
 
+    /**
+     * The key prefix of the Amazon S3 bucket.
+     *
+     * Default: - No prefix.
+     */
     override fun objectKeyPrefix(): String? = unwrap(this).getObjectKeyPrefix()
 
+    /**
+     * The ARN of the Amazon SNS topic to notify when the message is saved to the Amazon S3 bucket.
+     *
+     * Default: - No notification is sent to SNS.
+     */
     override fun topicArn(): String? = unwrap(this).getTopicArn()
   }
 

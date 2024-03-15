@@ -5,12 +5,29 @@ package io.cloudshiftdev.awscdk
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Common interface for all assets.
+ */
 public interface IAsset {
+  /**
+   * A hash of this asset, which is available at construction time.
+   *
+   * As this is a plain string, it
+   * can be used in construct IDs in order to enforce creation of a new resource when the content
+   * hash has changed.
+   */
   public fun assetHash(): String
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.IAsset,
   ) : CdkObject(cdkObject), IAsset {
+    /**
+     * A hash of this asset, which is available at construction time.
+     *
+     * As this is a plain string, it
+     * can be used in construct IDs in order to enforce creation of a new resource when the content
+     * hash has changed.
+     */
     override fun assetHash(): String = unwrap(this).getAssetHash()
   }
 

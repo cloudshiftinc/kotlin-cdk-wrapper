@@ -8,15 +8,65 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
 
+/**
+ * Properties for defining a `CfnIndex`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.resourceexplorer2.*;
+ * CfnIndexProps cfnIndexProps = CfnIndexProps.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .tags(Map.of(
+ * "tagsKey", "tags"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-index.html)
+ */
 public interface CfnIndexProps {
+  /**
+   * The specified tags are attached to only the index created in this AWS Region .
+   *
+   * The tags don't attach to any of the resources listed in the index.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-index.html#cfn-resourceexplorer2-index-tags)
+   */
   public fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
 
+  /**
+   * Specifies the type of the index in this Region.
+   *
+   * For information about the aggregator index and how it differs from a local index, see [Turning
+   * on cross-Region search by creating an aggregator
+   * index](https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-aggregator-region.html)
+   * in the *AWS Resource Explorer User Guide.* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-index.html#cfn-resourceexplorer2-index-type)
+   */
   public fun type(): String
 
+  /**
+   * A builder for [CfnIndexProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param tags The specified tags are attached to only the index created in this AWS Region .
+     * The tags don't attach to any of the resources listed in the index.
+     */
     public fun tags(tags: Map<String, String>)
 
+    /**
+     * @param type Specifies the type of the index in this Region. 
+     * For information about the aggregator index and how it differs from a local index, see
+     * [Turning on cross-Region search by creating an aggregator
+     * index](https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-aggregator-region.html)
+     * in the *AWS Resource Explorer User Guide.* .
+     */
     public fun type(type: String)
   }
 
@@ -24,10 +74,21 @@ public interface CfnIndexProps {
     private val cdkBuilder: software.amazon.awscdk.services.resourceexplorer2.CfnIndexProps.Builder
         = software.amazon.awscdk.services.resourceexplorer2.CfnIndexProps.builder()
 
+    /**
+     * @param tags The specified tags are attached to only the index created in this AWS Region .
+     * The tags don't attach to any of the resources listed in the index.
+     */
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
     }
 
+    /**
+     * @param type Specifies the type of the index in this Region. 
+     * For information about the aggregator index and how it differs from a local index, see
+     * [Turning on cross-Region search by creating an aggregator
+     * index](https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-aggregator-region.html)
+     * in the *AWS Resource Explorer User Guide.* .
+     */
     override fun type(type: String) {
       cdkBuilder.type(type)
     }
@@ -39,8 +100,25 @@ public interface CfnIndexProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnIndexProps,
   ) : CdkObject(cdkObject), CfnIndexProps {
+    /**
+     * The specified tags are attached to only the index created in this AWS Region .
+     *
+     * The tags don't attach to any of the resources listed in the index.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-index.html#cfn-resourceexplorer2-index-tags)
+     */
     override fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
 
+    /**
+     * Specifies the type of the index in this Region.
+     *
+     * For information about the aggregator index and how it differs from a local index, see
+     * [Turning on cross-Region search by creating an aggregator
+     * index](https://docs.aws.amazon.com/resource-explorer/latest/userguide/manage-aggregator-region.html)
+     * in the *AWS Resource Explorer User Guide.* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-index.html#cfn-resourceexplorer2-index-type)
+     */
     override fun type(): String = unwrap(this).getType()
   }
 

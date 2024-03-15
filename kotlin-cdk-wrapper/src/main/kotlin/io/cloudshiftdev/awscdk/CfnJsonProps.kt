@@ -7,11 +7,39 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Any
 import kotlin.Unit
 
+/**
+ * Example:
+ *
+ * ```
+ * CfnParameter tagParam = new CfnParameter(this, "TagName");
+ * CfnJson stringEquals = CfnJson.Builder.create(this, "ConditionJson")
+ * .value(Map.of(
+ * String.format("aws:PrincipalTag/%s", tagParam.getValueAsString()), true))
+ * .build();
+ * PrincipalBase principal = new AccountRootPrincipal().withConditions(Map.of(
+ * "StringEquals", stringEquals));
+ * Role.Builder.create(this, "MyRole").assumedBy(principal).build();
+ * ```
+ */
 public interface CfnJsonProps {
+  /**
+   * The value to resolve.
+   *
+   * Can be any JavaScript object, including tokens and
+   * references in keys or values.
+   */
   public fun `value`(): Any
 
+  /**
+   * A builder for [CfnJsonProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param value The value to resolve. 
+     * Can be any JavaScript object, including tokens and
+     * references in keys or values.
+     */
     public fun `value`(`value`: Any)
   }
 
@@ -19,6 +47,11 @@ public interface CfnJsonProps {
     private val cdkBuilder: software.amazon.awscdk.CfnJsonProps.Builder =
         software.amazon.awscdk.CfnJsonProps.builder()
 
+    /**
+     * @param value The value to resolve. 
+     * Can be any JavaScript object, including tokens and
+     * references in keys or values.
+     */
     override fun `value`(`value`: Any) {
       cdkBuilder.`value`(`value`)
     }
@@ -29,6 +62,12 @@ public interface CfnJsonProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.CfnJsonProps,
   ) : CdkObject(cdkObject), CfnJsonProps {
+    /**
+     * The value to resolve.
+     *
+     * Can be any JavaScript object, including tokens and
+     * references in keys or values.
+     */
     override fun `value`(): Any = unwrap(this).getValue()
   }
 

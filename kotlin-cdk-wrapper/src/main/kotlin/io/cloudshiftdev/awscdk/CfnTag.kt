@@ -7,15 +7,43 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * CfnTag cfnTag = CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build();
+ * ```
+ */
 public interface CfnTag {
+  /**
+   *
+   */
   public fun key(): String
 
+  /**
+   *
+   */
   public fun `value`(): String
 
+  /**
+   * A builder for [CfnTag]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param key the value to be set. 
+     */
     public fun key(key: String)
 
+    /**
+     * @param value the value to be set. 
+     */
     public fun `value`(`value`: String)
   }
 
@@ -23,10 +51,16 @@ public interface CfnTag {
     private val cdkBuilder: software.amazon.awscdk.CfnTag.Builder =
         software.amazon.awscdk.CfnTag.builder()
 
+    /**
+     * @param key the value to be set. 
+     */
     override fun key(key: String) {
       cdkBuilder.key(key)
     }
 
+    /**
+     * @param value the value to be set. 
+     */
     override fun `value`(`value`: String) {
       cdkBuilder.`value`(`value`)
     }
@@ -37,8 +71,14 @@ public interface CfnTag {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.CfnTag,
   ) : CdkObject(cdkObject), CfnTag {
+    /**
+     *
+     */
     override fun key(): String = unwrap(this).getKey()
 
+    /**
+     *
+     */
     override fun `value`(): String = unwrap(this).getValue()
   }
 

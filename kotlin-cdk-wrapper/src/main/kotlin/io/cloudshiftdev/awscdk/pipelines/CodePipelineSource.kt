@@ -12,21 +12,86 @@ import kotlin.jvm.JvmName
 import io.cloudshiftdev.awscdk.services.codecommit.IRepository as CodecommitIRepository
 import io.cloudshiftdev.awscdk.services.ecr.IRepository as EcrIRepository
 
+/**
+ * Factory for CodePipeline source steps.
+ *
+ * This class contains a number of factory methods for the different types
+ * of sources that CodePipeline supports.
+ *
+ * Example:
+ *
+ * ```
+ * // Access the CommitId of a GitHub source in the synth
+ * CodePipelineSource source = CodePipelineSource.gitHub("owner/repo", "main");
+ * CodePipeline pipeline = CodePipeline.Builder.create(scope, "MyPipeline")
+ * .synth(ShellStep.Builder.create("Synth")
+ * .input(source)
+ * .commands(List.of())
+ * .env(Map.of(
+ * "COMMIT_ID", source.sourceAttribute("CommitId")))
+ * .build())
+ * .build();
+ * ```
+ */
 public abstract class CodePipelineSource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.pipelines.CodePipelineSource,
 ) : Step(cdkObject), ICodePipelineActionFactory {
+  /**
+   * Whether or not this is a Source step.
+   *
+   * What it means to be a Source step depends on the engine.
+   */
   public override fun isSource(): Boolean = unwrap(this).getIsSource()
 
+  /**
+   * Create the desired Action and add it to the pipeline.
+   *
+   * @param stage 
+   * @param options 
+   */
   public override fun produceAction(stage: IStage, options: ProduceActionOptions):
       CodePipelineActionFactoryResult = unwrap(this).produceAction(stage.let(IStage::unwrap),
       options.let(ProduceActionOptions::unwrap)).let(CodePipelineActionFactoryResult::wrap)
 
+  /**
+   * Create the desired Action and add it to the pipeline.
+   *
+   * @param stage 
+   * @param options 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("ee07f43e69cfd8f0f23331f5dcd6cba92444f51437e346ca00f2e5d5a3e0c72e")
   public override fun produceAction(stage: IStage,
       options: ProduceActionOptions.Builder.() -> Unit): CodePipelineActionFactoryResult =
       produceAction(stage, ProduceActionOptions(options))
 
+  /**
+   * Return an attribute of the current source revision.
+   *
+   * These values can be passed into the environment variables of pipeline steps,
+   * so your steps can access information about the source revision.
+   *
+   * Pipeline synth step has some source attributes predefined in the environment.
+   * If these suffice, you don't need to use this method for the synth step.
+   *
+   * Example:
+   *
+   * ```
+   * // Access the CommitId of a GitHub source in the synth
+   * CodePipelineSource source = CodePipelineSource.gitHub("owner/repo", "main");
+   * CodePipeline pipeline = CodePipeline.Builder.create(scope, "MyPipeline")
+   * .synth(ShellStep.Builder.create("Synth")
+   * .input(source)
+   * .commands(List.of())
+   * .env(Map.of(
+   * "COMMIT_ID", source.sourceAttribute("CommitId")))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-variables.html#reference-variables-list)
+   * @param name 
+   */
   public open fun sourceAttribute(name: String): String = unwrap(this).sourceAttribute(name)
 
   private class Wrapper(

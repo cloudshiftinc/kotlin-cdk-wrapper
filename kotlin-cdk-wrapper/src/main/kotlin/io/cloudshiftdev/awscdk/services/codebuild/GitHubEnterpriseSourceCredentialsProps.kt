@@ -7,11 +7,38 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Creation properties for `GitHubEnterpriseSourceCredentials`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * import io.cloudshiftdev.awscdk.services.codebuild.*;
+ * SecretValue secretValue;
+ * GitHubEnterpriseSourceCredentialsProps gitHubEnterpriseSourceCredentialsProps =
+ * GitHubEnterpriseSourceCredentialsProps.builder()
+ * .accessToken(secretValue)
+ * .build();
+ * ```
+ */
 public interface GitHubEnterpriseSourceCredentialsProps {
+  /**
+   * The personal access token to use when contacting the instance of the GitHub Enterprise API.
+   */
   public fun accessToken(): SecretValue
 
+  /**
+   * A builder for [GitHubEnterpriseSourceCredentialsProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param accessToken The personal access token to use when contacting the instance of the
+     * GitHub Enterprise API. 
+     */
     public fun accessToken(accessToken: SecretValue)
   }
 
@@ -20,6 +47,10 @@ public interface GitHubEnterpriseSourceCredentialsProps {
         software.amazon.awscdk.services.codebuild.GitHubEnterpriseSourceCredentialsProps.Builder =
         software.amazon.awscdk.services.codebuild.GitHubEnterpriseSourceCredentialsProps.builder()
 
+    /**
+     * @param accessToken The personal access token to use when contacting the instance of the
+     * GitHub Enterprise API. 
+     */
     override fun accessToken(accessToken: SecretValue) {
       cdkBuilder.accessToken(accessToken.let(SecretValue::unwrap))
     }
@@ -33,6 +64,9 @@ public interface GitHubEnterpriseSourceCredentialsProps {
     override val cdkObject:
         software.amazon.awscdk.services.codebuild.GitHubEnterpriseSourceCredentialsProps,
   ) : CdkObject(cdkObject), GitHubEnterpriseSourceCredentialsProps {
+    /**
+     * The personal access token to use when contacting the instance of the GitHub Enterprise API.
+     */
     override fun accessToken(): SecretValue = unwrap(this).getAccessToken().let(SecretValue::wrap)
   }
 

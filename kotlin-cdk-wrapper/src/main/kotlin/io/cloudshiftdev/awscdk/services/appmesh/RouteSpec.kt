@@ -7,11 +7,44 @@ import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Used to generate specs with different protocols for a RouteSpec.
+ *
+ * Example:
+ *
+ * ```
+ * VirtualRouter router;
+ * VirtualNode node;
+ * router.addRoute("route-http2-retry", RouteBaseProps.builder()
+ * .routeSpec(RouteSpec.http2(HttpRouteSpecOptions.builder()
+ * .weightedTargets(List.of(WeightedTarget.builder().virtualNode(node).build()))
+ * .retryPolicy(HttpRetryPolicy.builder()
+ * // Retry if the connection failed
+ * .tcpRetryEvents(List.of(TcpRetryEvent.CONNECTION_ERROR))
+ * // Retry if HTTP responds with a gateway error (502, 503, 504)
+ * .httpRetryEvents(List.of(HttpRetryEvent.GATEWAY_ERROR))
+ * // Retry five times
+ * .retryAttempts(5)
+ * // Use a 1 second timeout per retry
+ * .retryTimeout(Duration.seconds(1))
+ * .build())
+ * .build()))
+ * .build());
+ * ```
+ */
 public abstract class RouteSpec internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.RouteSpec,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct): RouteSpecConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(RouteSpecConfig::wrap)
+  /**
+   * Called when the RouteSpec type is initialized.
+   *
+   * Can be used to enforce
+   * mutual exclusivity with future properties
+   *
+   * @param scope 
+   */
+  public open fun bind(scope: Construct): RouteSpecConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(RouteSpecConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.RouteSpec,

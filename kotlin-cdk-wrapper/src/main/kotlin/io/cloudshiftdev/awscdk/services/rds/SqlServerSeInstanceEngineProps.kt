@@ -6,11 +6,38 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Properties for SQL Server Standard Edition instance engines.
+ *
+ * Used in `DatabaseInstanceEngine.sqlServerSe`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.rds.*;
+ * SqlServerEngineVersion sqlServerEngineVersion;
+ * SqlServerSeInstanceEngineProps sqlServerSeInstanceEngineProps =
+ * SqlServerSeInstanceEngineProps.builder()
+ * .version(sqlServerEngineVersion)
+ * .build();
+ * ```
+ */
 public interface SqlServerSeInstanceEngineProps {
+  /**
+   * The exact version of the engine to use.
+   */
   public fun version(): SqlServerEngineVersion
 
+  /**
+   * A builder for [SqlServerSeInstanceEngineProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param version The exact version of the engine to use. 
+     */
     public fun version(version: SqlServerEngineVersion)
   }
 
@@ -19,6 +46,9 @@ public interface SqlServerSeInstanceEngineProps {
         software.amazon.awscdk.services.rds.SqlServerSeInstanceEngineProps.Builder =
         software.amazon.awscdk.services.rds.SqlServerSeInstanceEngineProps.builder()
 
+    /**
+     * @param version The exact version of the engine to use. 
+     */
     override fun version(version: SqlServerEngineVersion) {
       cdkBuilder.version(version.let(SqlServerEngineVersion::unwrap))
     }
@@ -30,6 +60,9 @@ public interface SqlServerSeInstanceEngineProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.rds.SqlServerSeInstanceEngineProps,
   ) : CdkObject(cdkObject), SqlServerSeInstanceEngineProps {
+    /**
+     * The exact version of the engine to use.
+     */
     override fun version(): SqlServerEngineVersion =
         unwrap(this).getVersion().let(SqlServerEngineVersion::wrap)
   }

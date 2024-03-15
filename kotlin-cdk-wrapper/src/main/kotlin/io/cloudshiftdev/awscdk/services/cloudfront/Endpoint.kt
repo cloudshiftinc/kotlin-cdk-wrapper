@@ -6,6 +6,29 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.kinesis.IStream
 
+/**
+ * Represents the endpoints available for targetting within a realtime log config resource.
+ *
+ * Example:
+ *
+ * ```
+ * // Adding realtime logs config to a Cloudfront Distribution on default behavior.
+ * import io.cloudshiftdev.awscdk.services.kinesis.*;
+ * Stream stream;
+ * RealtimeLogConfig realTimeConfig = RealtimeLogConfig.Builder.create(this, "realtimeLog")
+ * .endPoints(List.of(Endpoint.fromKinesisStream(stream)))
+ * .fields(List.of("timestamp", "c-ip", "time-to-first-byte", "sc-status"))
+ * .realtimeLogConfigName("my-delivery-stream")
+ * .samplingRate(100)
+ * .build();
+ * Distribution.Builder.create(this, "myCdn")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(new HttpOrigin("www.example.com"))
+ * .realtimeLogConfig(realTimeConfig)
+ * .build())
+ * .build();
+ * ```
+ */
 public abstract class Endpoint internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.Endpoint,
 ) : CdkObject(cdkObject) {

@@ -8,15 +8,48 @@ import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties to define an network listener.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ecs.patterns.*;
+ * NetworkListenerProps networkListenerProps = NetworkListenerProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .port(123)
+ * .build();
+ * ```
+ */
 public interface NetworkListenerProps {
+  /**
+   * Name of the listener.
+   */
   public fun name(): String
 
+  /**
+   * The port on which the listener listens for requests.
+   *
+   * Default: 80
+   */
   public fun port(): Number? = unwrap(this).getPort()
 
+  /**
+   * A builder for [NetworkListenerProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param name Name of the listener. 
+     */
     public fun name(name: String)
 
+    /**
+     * @param port The port on which the listener listens for requests.
+     */
     public fun port(port: Number)
   }
 
@@ -25,10 +58,16 @@ public interface NetworkListenerProps {
         software.amazon.awscdk.services.ecs.patterns.NetworkListenerProps.Builder =
         software.amazon.awscdk.services.ecs.patterns.NetworkListenerProps.builder()
 
+    /**
+     * @param name Name of the listener. 
+     */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
+    /**
+     * @param port The port on which the listener listens for requests.
+     */
     override fun port(port: Number) {
       cdkBuilder.port(port)
     }
@@ -40,8 +79,16 @@ public interface NetworkListenerProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkListenerProps,
   ) : CdkObject(cdkObject), NetworkListenerProps {
+    /**
+     * Name of the listener.
+     */
     override fun name(): String = unwrap(this).getName()
 
+    /**
+     * The port on which the listener listens for requests.
+     *
+     * Default: 80
+     */
     override fun port(): Number? = unwrap(this).getPort()
   }
 

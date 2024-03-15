@@ -7,11 +7,41 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for defining a `CfnResolverDNSSECConfig`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.route53resolver.*;
+ * CfnResolverDNSSECConfigProps cfnResolverDNSSECConfigProps =
+ * CfnResolverDNSSECConfigProps.builder()
+ * .resourceId("resourceId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverdnssecconfig.html)
+ */
 public interface CfnResolverDNSSECConfigProps {
+  /**
+   * The ID of the virtual private cloud (VPC) that you're configuring the DNSSEC validation status
+   * for.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverdnssecconfig.html#cfn-route53resolver-resolverdnssecconfig-resourceid)
+   */
   public fun resourceId(): String? = unwrap(this).getResourceId()
 
+  /**
+   * A builder for [CfnResolverDNSSECConfigProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param resourceId The ID of the virtual private cloud (VPC) that you're configuring the
+     * DNSSEC validation status for.
+     */
     public fun resourceId(resourceId: String)
   }
 
@@ -20,6 +50,10 @@ public interface CfnResolverDNSSECConfigProps {
         software.amazon.awscdk.services.route53resolver.CfnResolverDNSSECConfigProps.Builder =
         software.amazon.awscdk.services.route53resolver.CfnResolverDNSSECConfigProps.builder()
 
+    /**
+     * @param resourceId The ID of the virtual private cloud (VPC) that you're configuring the
+     * DNSSEC validation status for.
+     */
     override fun resourceId(resourceId: String) {
       cdkBuilder.resourceId(resourceId)
     }
@@ -32,6 +66,12 @@ public interface CfnResolverDNSSECConfigProps {
     override val cdkObject:
         software.amazon.awscdk.services.route53resolver.CfnResolverDNSSECConfigProps,
   ) : CdkObject(cdkObject), CfnResolverDNSSECConfigProps {
+    /**
+     * The ID of the virtual private cloud (VPC) that you're configuring the DNSSEC validation
+     * status for.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverdnssecconfig.html#cfn-route53resolver-resolverdnssecconfig-resourceid)
+     */
     override fun resourceId(): String? = unwrap(this).getResourceId()
   }
 

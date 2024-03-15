@@ -7,11 +7,36 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Boolean
 import kotlin.Unit
 
+/**
+ * Options that may be provided to LambdaDestination.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.logs.destinations.*;
+ * LambdaDestinationOptions lambdaDestinationOptions = LambdaDestinationOptions.builder()
+ * .addPermissions(false)
+ * .build();
+ * ```
+ */
 public interface LambdaDestinationOptions {
+  /**
+   * Whether or not to add Lambda Permissions.
+   *
+   * Default: true
+   */
   public fun addPermissions(): Boolean? = unwrap(this).getAddPermissions()
 
+  /**
+   * A builder for [LambdaDestinationOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param addPermissions Whether or not to add Lambda Permissions.
+     */
     public fun addPermissions(addPermissions: Boolean)
   }
 
@@ -20,6 +45,9 @@ public interface LambdaDestinationOptions {
         software.amazon.awscdk.services.logs.destinations.LambdaDestinationOptions.Builder =
         software.amazon.awscdk.services.logs.destinations.LambdaDestinationOptions.builder()
 
+    /**
+     * @param addPermissions Whether or not to add Lambda Permissions.
+     */
     override fun addPermissions(addPermissions: Boolean) {
       cdkBuilder.addPermissions(addPermissions)
     }
@@ -32,6 +60,11 @@ public interface LambdaDestinationOptions {
     override val cdkObject:
         software.amazon.awscdk.services.logs.destinations.LambdaDestinationOptions,
   ) : CdkObject(cdkObject), LambdaDestinationOptions {
+    /**
+     * Whether or not to add Lambda Permissions.
+     *
+     * Default: true
+     */
     override fun addPermissions(): Boolean? = unwrap(this).getAddPermissions()
   }
 

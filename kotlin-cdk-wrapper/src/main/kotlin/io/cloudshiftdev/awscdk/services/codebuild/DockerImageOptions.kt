@@ -7,12 +7,41 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
 import kotlin.Unit
 
+/**
+ * The options when creating a CodeBuild Docker build image using
+ * `LinuxBuildImage.fromDockerRegistry` or `WindowsBuildImage.fromDockerRegistry`.
+ *
+ * Example:
+ *
+ * ```
+ * .environment(BuildEnvironment.builder()
+ * .buildImage(LinuxBuildImage.fromDockerRegistry("my-registry/my-repo",
+ * DockerImageOptions.builder()
+ * .secretsManagerCredentials(secrets)
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ */
 public interface DockerImageOptions {
+  /**
+   * The credentials, stored in Secrets Manager, used for accessing the repository holding the
+   * image, if the repository is private.
+   *
+   * Default: no credentials will be used (we assume the repository is public)
+   */
   public fun secretsManagerCredentials(): ISecret? =
       unwrap(this).getSecretsManagerCredentials()?.let(ISecret::wrap)
 
+  /**
+   * A builder for [DockerImageOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param secretsManagerCredentials The credentials, stored in Secrets Manager, used for
+     * accessing the repository holding the image, if the repository is private.
+     */
     public fun secretsManagerCredentials(secretsManagerCredentials: ISecret)
   }
 
@@ -20,6 +49,10 @@ public interface DockerImageOptions {
     private val cdkBuilder: software.amazon.awscdk.services.codebuild.DockerImageOptions.Builder =
         software.amazon.awscdk.services.codebuild.DockerImageOptions.builder()
 
+    /**
+     * @param secretsManagerCredentials The credentials, stored in Secrets Manager, used for
+     * accessing the repository holding the image, if the repository is private.
+     */
     override fun secretsManagerCredentials(secretsManagerCredentials: ISecret) {
       cdkBuilder.secretsManagerCredentials(secretsManagerCredentials.let(ISecret::unwrap))
     }
@@ -31,6 +64,12 @@ public interface DockerImageOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.codebuild.DockerImageOptions,
   ) : CdkObject(cdkObject), DockerImageOptions {
+    /**
+     * The credentials, stored in Secrets Manager, used for accessing the repository holding the
+     * image, if the repository is private.
+     *
+     * Default: no credentials will be used (we assume the repository is public)
+     */
     override fun secretsManagerCredentials(): ISecret? =
         unwrap(this).getSecretsManagerCredentials()?.let(ISecret::wrap)
   }

@@ -7,11 +7,31 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Creation properties for `GitHubSourceCredentials`.
+ *
+ * Example:
+ *
+ * ```
+ * GitHubSourceCredentials.Builder.create(this, "CodeBuildGitHubCreds")
+ * .accessToken(SecretValue.secretsManager("my-token"))
+ * .build();
+ * ```
+ */
 public interface GitHubSourceCredentialsProps {
+  /**
+   * The personal access token to use when contacting the GitHub API.
+   */
   public fun accessToken(): SecretValue
 
+  /**
+   * A builder for [GitHubSourceCredentialsProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param accessToken The personal access token to use when contacting the GitHub API. 
+     */
     public fun accessToken(accessToken: SecretValue)
   }
 
@@ -20,6 +40,9 @@ public interface GitHubSourceCredentialsProps {
         software.amazon.awscdk.services.codebuild.GitHubSourceCredentialsProps.Builder =
         software.amazon.awscdk.services.codebuild.GitHubSourceCredentialsProps.builder()
 
+    /**
+     * @param accessToken The personal access token to use when contacting the GitHub API. 
+     */
     override fun accessToken(accessToken: SecretValue) {
       cdkBuilder.accessToken(accessToken.let(SecretValue::unwrap))
     }
@@ -31,6 +54,9 @@ public interface GitHubSourceCredentialsProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.codebuild.GitHubSourceCredentialsProps,
   ) : CdkObject(cdkObject), GitHubSourceCredentialsProps {
+    /**
+     * The personal access token to use when contacting the GitHub API.
+     */
     override fun accessToken(): SecretValue = unwrap(this).getAccessToken().let(SecretValue::wrap)
   }
 

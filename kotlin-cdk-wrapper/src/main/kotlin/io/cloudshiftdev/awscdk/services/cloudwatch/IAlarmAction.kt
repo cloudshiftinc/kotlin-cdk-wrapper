@@ -5,15 +5,30 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.constructs.Construct
 
+/**
+ * Interface for objects that can be the targets of CloudWatch alarm actions.
+ */
 public interface IAlarmAction {
-  public fun bind(arg0: Construct, arg1: IAlarm): AlarmActionConfig
+  /**
+   * Return the properties required to send alarm actions to this CloudWatch alarm.
+   *
+   * @param scope root Construct that allows creating new Constructs. 
+   * @param alarm CloudWatch alarm that the action will target. 
+   */
+  public fun bind(scope: Construct, alarm: IAlarm): AlarmActionConfig
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.cloudwatch.IAlarmAction,
   ) : CdkObject(cdkObject), IAlarmAction {
-    override fun bind(arg0: Construct, arg1: IAlarm): AlarmActionConfig =
-        unwrap(this).bind(arg0.let(Construct::unwrap),
-        arg1.let(IAlarm::unwrap)).let(AlarmActionConfig::wrap)
+    /**
+     * Return the properties required to send alarm actions to this CloudWatch alarm.
+     *
+     * @param scope root Construct that allows creating new Constructs. 
+     * @param alarm CloudWatch alarm that the action will target. 
+     */
+    override fun bind(scope: Construct, alarm: IAlarm): AlarmActionConfig =
+        unwrap(this).bind(scope.let(Construct::unwrap),
+        alarm.let(IAlarm::unwrap)).let(AlarmActionConfig::wrap)
   }
 
   public companion object {

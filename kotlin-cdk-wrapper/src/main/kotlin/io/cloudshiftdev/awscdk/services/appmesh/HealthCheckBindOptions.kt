@@ -7,11 +7,36 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Number
 import kotlin.Unit
 
+/**
+ * Options used for creating the Health Check object.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.appmesh.*;
+ * HealthCheckBindOptions healthCheckBindOptions = HealthCheckBindOptions.builder()
+ * .defaultPort(123)
+ * .build();
+ * ```
+ */
 public interface HealthCheckBindOptions {
+  /**
+   * Port for Health Check interface.
+   *
+   * Default: - no default port is provided
+   */
   public fun defaultPort(): Number? = unwrap(this).getDefaultPort()
 
+  /**
+   * A builder for [HealthCheckBindOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param defaultPort Port for Health Check interface.
+     */
     public fun defaultPort(defaultPort: Number)
   }
 
@@ -19,6 +44,9 @@ public interface HealthCheckBindOptions {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.HealthCheckBindOptions.Builder =
         software.amazon.awscdk.services.appmesh.HealthCheckBindOptions.builder()
 
+    /**
+     * @param defaultPort Port for Health Check interface.
+     */
     override fun defaultPort(defaultPort: Number) {
       cdkBuilder.defaultPort(defaultPort)
     }
@@ -30,6 +58,11 @@ public interface HealthCheckBindOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.HealthCheckBindOptions,
   ) : CdkObject(cdkObject), HealthCheckBindOptions {
+    /**
+     * Port for Health Check interface.
+     *
+     * Default: - no default port is provided
+     */
     override fun defaultPort(): Number? = unwrap(this).getDefaultPort()
   }
 

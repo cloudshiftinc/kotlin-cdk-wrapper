@@ -7,19 +7,66 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Options for a ClientVpnAuthorizationRule.
+ *
+ * Example:
+ *
+ * ```
+ * ClientVpnEndpoint endpoint = vpc.addClientVpnEndpoint("Endpoint",
+ * ClientVpnEndpointOptions.builder()
+ * .cidr("10.100.0.0/16")
+ * .serverCertificateArn("arn:aws:acm:us-east-1:123456789012:certificate/server-certificate-id")
+ * .userBasedAuthentication(ClientVpnUserBasedAuthentication.federated(samlProvider))
+ * .authorizeAllUsersToVpcCidr(false)
+ * .build());
+ * endpoint.addAuthorizationRule("Rule", ClientVpnAuthorizationRuleOptions.builder()
+ * .cidr("10.0.10.0/32")
+ * .groupId("group-id")
+ * .build());
+ * ```
+ */
 public interface ClientVpnAuthorizationRuleOptions {
+  /**
+   * The IPv4 address range, in CIDR notation, of the network for which access is being authorized.
+   */
   public fun cidr(): String
 
+  /**
+   * A brief description of the authorization rule.
+   *
+   * Default: - no description
+   */
   public fun description(): String? = unwrap(this).getDescription()
 
+  /**
+   * The ID of the group to grant access to, for example, the Active Directory group or identity
+   * provider (IdP) group.
+   *
+   * Default: - authorize all groups
+   */
   public fun groupId(): String? = unwrap(this).getGroupId()
 
+  /**
+   * A builder for [ClientVpnAuthorizationRuleOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param cidr The IPv4 address range, in CIDR notation, of the network for which access is
+     * being authorized. 
+     */
     public fun cidr(cidr: String)
 
+    /**
+     * @param description A brief description of the authorization rule.
+     */
     public fun description(description: String)
 
+    /**
+     * @param groupId The ID of the group to grant access to, for example, the Active Directory
+     * group or identity provider (IdP) group.
+     */
     public fun groupId(groupId: String)
   }
 
@@ -28,14 +75,25 @@ public interface ClientVpnAuthorizationRuleOptions {
         software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRuleOptions.Builder =
         software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRuleOptions.builder()
 
+    /**
+     * @param cidr The IPv4 address range, in CIDR notation, of the network for which access is
+     * being authorized. 
+     */
     override fun cidr(cidr: String) {
       cdkBuilder.cidr(cidr)
     }
 
+    /**
+     * @param description A brief description of the authorization rule.
+     */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
+    /**
+     * @param groupId The ID of the group to grant access to, for example, the Active Directory
+     * group or identity provider (IdP) group.
+     */
     override fun groupId(groupId: String) {
       cdkBuilder.groupId(groupId)
     }
@@ -47,10 +105,25 @@ public interface ClientVpnAuthorizationRuleOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRuleOptions,
   ) : CdkObject(cdkObject), ClientVpnAuthorizationRuleOptions {
+    /**
+     * The IPv4 address range, in CIDR notation, of the network for which access is being
+     * authorized.
+     */
     override fun cidr(): String = unwrap(this).getCidr()
 
+    /**
+     * A brief description of the authorization rule.
+     *
+     * Default: - no description
+     */
     override fun description(): String? = unwrap(this).getDescription()
 
+    /**
+     * The ID of the group to grant access to, for example, the Active Directory group or identity
+     * provider (IdP) group.
+     *
+     * Default: - authorize all groups
+     */
     override fun groupId(): String? = unwrap(this).getGroupId()
   }
 

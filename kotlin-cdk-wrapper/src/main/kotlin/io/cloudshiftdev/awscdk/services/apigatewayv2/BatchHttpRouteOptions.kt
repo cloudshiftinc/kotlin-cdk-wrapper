@@ -6,11 +6,37 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Options used when configuring multiple routes, at once.
+ *
+ * The options here are the ones that would be configured for all being set up.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
+ * HttpRouteIntegration httpRouteIntegration;
+ * BatchHttpRouteOptions batchHttpRouteOptions = BatchHttpRouteOptions.builder()
+ * .integration(httpRouteIntegration)
+ * .build();
+ * ```
+ */
 public interface BatchHttpRouteOptions {
+  /**
+   * The integration to be configured on this route.
+   */
   public fun integration(): HttpRouteIntegration
 
+  /**
+   * A builder for [BatchHttpRouteOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param integration The integration to be configured on this route. 
+     */
     public fun integration(integration: HttpRouteIntegration)
   }
 
@@ -19,6 +45,9 @@ public interface BatchHttpRouteOptions {
         software.amazon.awscdk.services.apigatewayv2.BatchHttpRouteOptions.Builder =
         software.amazon.awscdk.services.apigatewayv2.BatchHttpRouteOptions.builder()
 
+    /**
+     * @param integration The integration to be configured on this route. 
+     */
     override fun integration(integration: HttpRouteIntegration) {
       cdkBuilder.integration(integration.let(HttpRouteIntegration::unwrap))
     }
@@ -30,6 +59,9 @@ public interface BatchHttpRouteOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.apigatewayv2.BatchHttpRouteOptions,
   ) : CdkObject(cdkObject), BatchHttpRouteOptions {
+    /**
+     * The integration to be configured on this route.
+     */
     override fun integration(): HttpRouteIntegration =
         unwrap(this).getIntegration().let(HttpRouteIntegration::wrap)
   }

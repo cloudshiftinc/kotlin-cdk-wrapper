@@ -8,13 +8,52 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * A Volume that can be mounted to a container supported by EKS.
+ *
+ * Example:
+ *
+ * ```
+ * EksJobDefinition jobDefn = EksJobDefinition.Builder.create(this, "eksf2")
+ * .container(EksContainerDefinition.Builder.create(this, "container")
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .volumes(List.of(EksVolume.emptyDir(EmptyDirVolumeOptions.builder()
+ * .name("myEmptyDirVolume")
+ * .mountPath("/mount/path")
+ * .medium(EmptyDirMediumType.MEMORY)
+ * .readonly(true)
+ * .sizeLimit(Size.mebibytes(2048))
+ * .build())))
+ * .build())
+ * .build();
+ * ```
+ */
 public abstract class EksVolume internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.batch.EksVolume,
 ) : CdkObject(cdkObject) {
+  /**
+   * The path on the container where the container is mounted.
+   *
+   * Default: - the container is not mounted
+   */
   public open fun containerPath(): String? = unwrap(this).getContainerPath()
 
+  /**
+   * The name of this volume.
+   *
+   * The name must be a valid DNS subdomain name.
+   *
+   * [Documentation](https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-subdomain-names)
+   */
   public open fun name(): String = unwrap(this).getName()
 
+  /**
+   * If specified, the container has readonly access to the volume.
+   *
+   * Otherwise, the container has read/write access.
+   *
+   * Default: false
+   */
   public open fun readonly(): Boolean? = unwrap(this).getReadonly()
 
   private class Wrapper(

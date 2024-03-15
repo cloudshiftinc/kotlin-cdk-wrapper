@@ -7,16 +7,50 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Boolean
 import kotlin.Unit
 
+/**
+ * Customization properties for an Intrinsic token.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * IntrinsicProps intrinsicProps = IntrinsicProps.builder()
+ * .stackTrace(false)
+ * .typeHint(ResolutionTypeHint.STRING)
+ * .build();
+ * ```
+ */
 public interface IntrinsicProps {
+  /**
+   * Capture the stack trace of where this token is created.
+   *
+   * Default: true
+   */
   public fun stackTrace(): Boolean? = unwrap(this).getStackTrace()
 
+  /**
+   * Type that this token is expected to evaluate to.
+   *
+   * Default: ResolutionTypeHint.STRING
+   */
   public fun typeHint(): ResolutionTypeHint? =
       unwrap(this).getTypeHint()?.let(ResolutionTypeHint::wrap)
 
+  /**
+   * A builder for [IntrinsicProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param stackTrace Capture the stack trace of where this token is created.
+     */
     public fun stackTrace(stackTrace: Boolean)
 
+    /**
+     * @param typeHint Type that this token is expected to evaluate to.
+     */
     public fun typeHint(typeHint: ResolutionTypeHint)
   }
 
@@ -24,10 +58,16 @@ public interface IntrinsicProps {
     private val cdkBuilder: software.amazon.awscdk.IntrinsicProps.Builder =
         software.amazon.awscdk.IntrinsicProps.builder()
 
+    /**
+     * @param stackTrace Capture the stack trace of where this token is created.
+     */
     override fun stackTrace(stackTrace: Boolean) {
       cdkBuilder.stackTrace(stackTrace)
     }
 
+    /**
+     * @param typeHint Type that this token is expected to evaluate to.
+     */
     override fun typeHint(typeHint: ResolutionTypeHint) {
       cdkBuilder.typeHint(typeHint.let(ResolutionTypeHint::unwrap))
     }
@@ -38,8 +78,18 @@ public interface IntrinsicProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.IntrinsicProps,
   ) : CdkObject(cdkObject), IntrinsicProps {
+    /**
+     * Capture the stack trace of where this token is created.
+     *
+     * Default: true
+     */
     override fun stackTrace(): Boolean? = unwrap(this).getStackTrace()
 
+    /**
+     * Type that this token is expected to evaluate to.
+     *
+     * Default: ResolutionTypeHint.STRING
+     */
     override fun typeHint(): ResolutionTypeHint? =
         unwrap(this).getTypeHint()?.let(ResolutionTypeHint::wrap)
   }

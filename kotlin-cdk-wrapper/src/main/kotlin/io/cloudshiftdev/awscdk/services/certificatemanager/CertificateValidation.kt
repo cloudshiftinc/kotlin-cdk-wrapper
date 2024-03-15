@@ -7,12 +7,40 @@ import io.cloudshiftdev.awscdk.services.route53.IHostedZone
 import kotlin.String
 import kotlin.collections.Map
 
+/**
+ * How to validate a certificate.
+ *
+ * Example:
+ *
+ * ```
+ * HostedZone exampleCom = HostedZone.Builder.create(this, "ExampleCom")
+ * .zoneName("example.com")
+ * .build();
+ * HostedZone exampleNet = HostedZone.Builder.create(this, "ExampleNet")
+ * .zoneName("example.net")
+ * .build();
+ * Certificate cert = Certificate.Builder.create(this, "Certificate")
+ * .domainName("test.example.com")
+ * .subjectAlternativeNames(List.of("cool.example.com", "test.example.net"))
+ * .validation(CertificateValidation.fromDnsMultiZone(Map.of(
+ * "test.example.com", exampleCom,
+ * "cool.example.com", exampleCom,
+ * "test.example.net", exampleNet)))
+ * .build();
+ * ```
+ */
 public open class CertificateValidation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.certificatemanager.CertificateValidation,
 ) : CdkObject(cdkObject) {
+  /**
+   * The validation method.
+   */
   public open fun method(): ValidationMethod = unwrap(this).getMethod().let(ValidationMethod::wrap)
 
+  /**
+   * Certification validation properties.
+   */
   public open fun props(): CertificationValidationProps =
       unwrap(this).getProps().let(CertificationValidationProps::wrap)
 

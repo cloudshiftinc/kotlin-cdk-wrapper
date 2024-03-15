@@ -5,6 +5,22 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.ec2.InstanceSize
 
+/**
+ * The size of the Elastic Inference (EI) instance to use for the production variant.
+ *
+ * EI instances provide on-demand GPU computing for inference
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.stepfunctions.tasks.*;
+ * AcceleratorType acceleratorType = new AcceleratorType("instanceTypeIdentifier");
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/ei.html)
+ */
 public open class AcceleratorType internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorType,

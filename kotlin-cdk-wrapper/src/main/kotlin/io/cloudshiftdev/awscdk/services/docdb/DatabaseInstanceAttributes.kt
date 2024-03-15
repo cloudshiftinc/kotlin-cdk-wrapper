@@ -8,19 +8,56 @@ import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties that describe an existing instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.docdb.*;
+ * DatabaseInstanceAttributes databaseInstanceAttributes = DatabaseInstanceAttributes.builder()
+ * .instanceEndpointAddress("instanceEndpointAddress")
+ * .instanceIdentifier("instanceIdentifier")
+ * .port(123)
+ * .build();
+ * ```
+ */
 public interface DatabaseInstanceAttributes {
+  /**
+   * The endpoint address.
+   */
   public fun instanceEndpointAddress(): String
 
+  /**
+   * The instance identifier.
+   */
   public fun instanceIdentifier(): String
 
+  /**
+   * The database port.
+   */
   public fun port(): Number
 
+  /**
+   * A builder for [DatabaseInstanceAttributes]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param instanceEndpointAddress The endpoint address. 
+     */
     public fun instanceEndpointAddress(instanceEndpointAddress: String)
 
+    /**
+     * @param instanceIdentifier The instance identifier. 
+     */
     public fun instanceIdentifier(instanceIdentifier: String)
 
+    /**
+     * @param port The database port. 
+     */
     public fun port(port: Number)
   }
 
@@ -28,14 +65,23 @@ public interface DatabaseInstanceAttributes {
     private val cdkBuilder: software.amazon.awscdk.services.docdb.DatabaseInstanceAttributes.Builder
         = software.amazon.awscdk.services.docdb.DatabaseInstanceAttributes.builder()
 
+    /**
+     * @param instanceEndpointAddress The endpoint address. 
+     */
     override fun instanceEndpointAddress(instanceEndpointAddress: String) {
       cdkBuilder.instanceEndpointAddress(instanceEndpointAddress)
     }
 
+    /**
+     * @param instanceIdentifier The instance identifier. 
+     */
     override fun instanceIdentifier(instanceIdentifier: String) {
       cdkBuilder.instanceIdentifier(instanceIdentifier)
     }
 
+    /**
+     * @param port The database port. 
+     */
     override fun port(port: Number) {
       cdkBuilder.port(port)
     }
@@ -47,10 +93,19 @@ public interface DatabaseInstanceAttributes {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.docdb.DatabaseInstanceAttributes,
   ) : CdkObject(cdkObject), DatabaseInstanceAttributes {
+    /**
+     * The endpoint address.
+     */
     override fun instanceEndpointAddress(): String = unwrap(this).getInstanceEndpointAddress()
 
+    /**
+     * The instance identifier.
+     */
     override fun instanceIdentifier(): String = unwrap(this).getInstanceIdentifier()
 
+    /**
+     * The database port.
+     */
     override fun port(): Number = unwrap(this).getPort()
   }
 

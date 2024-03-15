@@ -4,6 +4,11 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 
+/**
+ * An abstract Provider of Ipv6Addresses.
+ *
+ * Note this is specific to the IPv6 CIDR.
+ */
 public open class Ipv6Addresses internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.Ipv6Addresses,
 ) : CdkObject(cdkObject) {

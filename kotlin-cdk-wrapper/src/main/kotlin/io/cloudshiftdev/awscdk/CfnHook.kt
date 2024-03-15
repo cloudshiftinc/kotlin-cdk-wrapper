@@ -10,15 +10,47 @@ import kotlin.collections.Map
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * Represents a CloudFormation resource.
+ *
+ * Example:
+ *
+ * ```
+ * CfnInclude cfnTemplate;
+ * // mutating the hook
+ * Role myRole;
+ * CfnHook hook = cfnTemplate.getHook("MyOutput");
+ * CfnCodeDeployBlueGreenHook codeDeployHook = (CfnCodeDeployBlueGreenHook)hook;
+ * codeDeployHook.getServiceRole() = myRole.getRoleArn();
+ * ```
+ */
 public open class CfnHook internal constructor(
   internal override val cdkObject: software.amazon.awscdk.CfnHook,
 ) : CfnElement(cdkObject) {
+  /**
+   * The type of the hook (for example, "AWS::CodeDeploy::BlueGreen").
+   */
   public open fun type(): String = unwrap(this).getType()
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.CfnHook].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The properties of the hook.
+     *
+     * Default: - no properties
+     *
+     * @param properties The properties of the hook. 
+     */
     public fun properties(properties: Map<String, Any>)
 
+    /**
+     * The type of the hook (for example, "AWS::CodeDeploy::BlueGreen").
+     *
+     * @param type The type of the hook (for example, "AWS::CodeDeploy::BlueGreen"). 
+     */
     public fun type(type: String)
   }
 
@@ -29,10 +61,22 @@ public open class CfnHook internal constructor(
     private val cdkBuilder: software.amazon.awscdk.CfnHook.Builder =
         software.amazon.awscdk.CfnHook.Builder.create(scope, id)
 
+    /**
+     * The properties of the hook.
+     *
+     * Default: - no properties
+     *
+     * @param properties The properties of the hook. 
+     */
     override fun properties(properties: Map<String, Any>) {
       cdkBuilder.properties(properties)
     }
 
+    /**
+     * The type of the hook (for example, "AWS::CodeDeploy::BlueGreen").
+     *
+     * @param type The type of the hook (for example, "AWS::CodeDeploy::BlueGreen"). 
+     */
     override fun type(type: String) {
       cdkBuilder.type(type)
     }

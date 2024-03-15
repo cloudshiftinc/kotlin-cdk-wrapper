@@ -7,15 +7,49 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties of a reference to an existing KMS Alias.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.kms.*;
+ * Key key;
+ * AliasAttributes aliasAttributes = AliasAttributes.builder()
+ * .aliasName("aliasName")
+ * .aliasTargetKey(key)
+ * .build();
+ * ```
+ */
 public interface AliasAttributes {
+  /**
+   * Specifies the alias name.
+   *
+   * This value must begin with alias/ followed by a name (i.e. alias/ExampleAlias)
+   */
   public fun aliasName(): String
 
+  /**
+   * The customer master key (CMK) to which the Alias refers.
+   */
   public fun aliasTargetKey(): IKey
 
+  /**
+   * A builder for [AliasAttributes]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param aliasName Specifies the alias name. 
+     * This value must begin with alias/ followed by a name (i.e. alias/ExampleAlias)
+     */
     public fun aliasName(aliasName: String)
 
+    /**
+     * @param aliasTargetKey The customer master key (CMK) to which the Alias refers. 
+     */
     public fun aliasTargetKey(aliasTargetKey: IKey)
   }
 
@@ -23,10 +57,17 @@ public interface AliasAttributes {
     private val cdkBuilder: software.amazon.awscdk.services.kms.AliasAttributes.Builder =
         software.amazon.awscdk.services.kms.AliasAttributes.builder()
 
+    /**
+     * @param aliasName Specifies the alias name. 
+     * This value must begin with alias/ followed by a name (i.e. alias/ExampleAlias)
+     */
     override fun aliasName(aliasName: String) {
       cdkBuilder.aliasName(aliasName)
     }
 
+    /**
+     * @param aliasTargetKey The customer master key (CMK) to which the Alias refers. 
+     */
     override fun aliasTargetKey(aliasTargetKey: IKey) {
       cdkBuilder.aliasTargetKey(aliasTargetKey.let(IKey::unwrap))
     }
@@ -37,8 +78,16 @@ public interface AliasAttributes {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.kms.AliasAttributes,
   ) : CdkObject(cdkObject), AliasAttributes {
+    /**
+     * Specifies the alias name.
+     *
+     * This value must begin with alias/ followed by a name (i.e. alias/ExampleAlias)
+     */
     override fun aliasName(): String = unwrap(this).getAliasName()
 
+    /**
+     * The customer master key (CMK) to which the Alias refers.
+     */
     override fun aliasTargetKey(): IKey = unwrap(this).getAliasTargetKey().let(IKey::wrap)
   }
 

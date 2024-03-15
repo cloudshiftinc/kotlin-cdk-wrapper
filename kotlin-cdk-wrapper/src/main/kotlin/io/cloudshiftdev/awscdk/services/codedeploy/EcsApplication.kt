@@ -9,15 +9,42 @@ import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * A CodeDeploy Application that deploys to an Amazon ECS service.
+ *
+ * Example:
+ *
+ * ```
+ * EcsApplication application = EcsApplication.Builder.create(this, "CodeDeployApplication")
+ * .applicationName("MyApplication")
+ * .build();
+ * ```
+ */
 public open class EcsApplication internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codedeploy.EcsApplication,
 ) : Resource(cdkObject), IEcsApplication {
+  /**
+   *
+   */
   public override fun applicationArn(): String = unwrap(this).getApplicationArn()
 
+  /**
+   *
+   */
   public override fun applicationName(): String = unwrap(this).getApplicationName()
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.codedeploy.EcsApplication].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The physical, human-readable name of the CodeDeploy Application.
+     *
+     * Default: an auto-generated name will be used
+     *
+     * @param applicationName The physical, human-readable name of the CodeDeploy Application. 
+     */
     public fun applicationName(applicationName: String)
   }
 
@@ -28,6 +55,13 @@ public open class EcsApplication internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.codedeploy.EcsApplication.Builder =
         software.amazon.awscdk.services.codedeploy.EcsApplication.Builder.create(scope, id)
 
+    /**
+     * The physical, human-readable name of the CodeDeploy Application.
+     *
+     * Default: an auto-generated name will be used
+     *
+     * @param applicationName The physical, human-readable name of the CodeDeploy Application. 
+     */
     override fun applicationName(applicationName: String) {
       cdkBuilder.applicationName(applicationName)
     }

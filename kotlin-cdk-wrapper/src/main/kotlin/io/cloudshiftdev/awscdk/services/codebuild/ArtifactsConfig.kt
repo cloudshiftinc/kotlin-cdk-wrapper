@@ -7,13 +7,50 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * The type returned from `IArtifacts#bind`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.codebuild.*;
+ * ArtifactsConfig artifactsConfig = ArtifactsConfig.builder()
+ * .artifactsProperty(ArtifactsProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .artifactIdentifier("artifactIdentifier")
+ * .encryptionDisabled(false)
+ * .location("location")
+ * .name("name")
+ * .namespaceType("namespaceType")
+ * .overrideArtifactName(false)
+ * .packaging("packaging")
+ * .path("path")
+ * .build())
+ * .build();
+ * ```
+ */
 public interface ArtifactsConfig {
+  /**
+   * The low-level CloudFormation artifacts property.
+   */
   public fun artifactsProperty(): CfnProject.ArtifactsProperty
 
+  /**
+   * A builder for [ArtifactsConfig]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param artifactsProperty The low-level CloudFormation artifacts property. 
+     */
     public fun artifactsProperty(artifactsProperty: CfnProject.ArtifactsProperty)
 
+    /**
+     * @param artifactsProperty The low-level CloudFormation artifacts property. 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fd8935f7ad6245680de0de4af3f7d1be4f61f6e9d9c33c6c82b2fad8ef785825")
     public fun artifactsProperty(artifactsProperty: CfnProject.ArtifactsProperty.Builder.() -> Unit)
@@ -23,10 +60,16 @@ public interface ArtifactsConfig {
     private val cdkBuilder: software.amazon.awscdk.services.codebuild.ArtifactsConfig.Builder =
         software.amazon.awscdk.services.codebuild.ArtifactsConfig.builder()
 
+    /**
+     * @param artifactsProperty The low-level CloudFormation artifacts property. 
+     */
     override fun artifactsProperty(artifactsProperty: CfnProject.ArtifactsProperty) {
       cdkBuilder.artifactsProperty(artifactsProperty.let(CfnProject.ArtifactsProperty::unwrap))
     }
 
+    /**
+     * @param artifactsProperty The low-level CloudFormation artifacts property. 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fd8935f7ad6245680de0de4af3f7d1be4f61f6e9d9c33c6c82b2fad8ef785825")
     override
@@ -40,6 +83,9 @@ public interface ArtifactsConfig {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.codebuild.ArtifactsConfig,
   ) : CdkObject(cdkObject), ArtifactsConfig {
+    /**
+     * The low-level CloudFormation artifacts property.
+     */
     override fun artifactsProperty(): CfnProject.ArtifactsProperty =
         unwrap(this).getArtifactsProperty().let(CfnProject.ArtifactsProperty::wrap)
   }

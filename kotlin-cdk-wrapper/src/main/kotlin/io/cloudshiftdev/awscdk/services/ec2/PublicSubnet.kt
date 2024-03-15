@@ -10,27 +10,107 @@ import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * Represents a public VPC subnet resource.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * PublicSubnet publicSubnet = PublicSubnet.Builder.create(this, "MyPublicSubnet")
+ * .availabilityZone("availabilityZone")
+ * .cidrBlock("cidrBlock")
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .assignIpv6AddressOnCreation(false)
+ * .ipv6CidrBlock("ipv6CidrBlock")
+ * .mapPublicIpOnLaunch(false)
+ * .build();
+ * ```
+ */
 public open class PublicSubnet internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.PublicSubnet,
 ) : Subnet(cdkObject), IPublicSubnet {
+  /**
+   * Creates a new managed NAT gateway attached to this public subnet.
+   *
+   * Also adds the EIP for the managed NAT.
+   *
+   * @return A ref to the the NAT Gateway ID
+   * @param eipAllocationId
+   */
   public open fun addNatGateway(): CfnNatGateway =
       unwrap(this).addNatGateway().let(CfnNatGateway::wrap)
 
+  /**
+   * Creates a new managed NAT gateway attached to this public subnet.
+   *
+   * Also adds the EIP for the managed NAT.
+   *
+   * @return A ref to the the NAT Gateway ID
+   * @param eipAllocationId
+   */
   public open fun addNatGateway(eipAllocationId: String): CfnNatGateway =
       unwrap(this).addNatGateway(eipAllocationId).let(CfnNatGateway::wrap)
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.PublicSubnet].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * Indicates whether a network interface created in this subnet receives an IPv6 address.
+     *
+     * If you specify AssignIpv6AddressOnCreation, you must also specify Ipv6CidrBlock.
+     *
+     * Default: false
+     *
+     * @param assignIpv6AddressOnCreation Indicates whether a network interface created in this
+     * subnet receives an IPv6 address. 
+     */
     public fun assignIpv6AddressOnCreation(assignIpv6AddressOnCreation: Boolean)
 
+    /**
+     * The availability zone for the subnet.
+     *
+     * @param availabilityZone The availability zone for the subnet. 
+     */
     public fun availabilityZone(availabilityZone: String)
 
+    /**
+     * The CIDR notation for this subnet.
+     *
+     * @param cidrBlock The CIDR notation for this subnet. 
+     */
     public fun cidrBlock(cidrBlock: String)
 
+    /**
+     * The IPv6 CIDR block.
+     *
+     * If you specify AssignIpv6AddressOnCreation, you must also specify Ipv6CidrBlock.
+     *
+     * Default: - no IPv6 CIDR block.
+     *
+     * @param ipv6CidrBlock The IPv6 CIDR block. 
+     */
     public fun ipv6CidrBlock(ipv6CidrBlock: String)
 
+    /**
+     * Controls if a public IP is associated to an instance at launch.
+     *
+     * Default: true in Subnet.Public, false in Subnet.Private or Subnet.Isolated.
+     *
+     * @param mapPublicIpOnLaunch Controls if a public IP is associated to an instance at launch. 
+     */
     public fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: Boolean)
 
+    /**
+     * The VPC which this subnet is part of.
+     *
+     * @param vpcId The VPC which this subnet is part of. 
+     */
     public fun vpcId(vpcId: String)
   }
 
@@ -41,26 +121,67 @@ public open class PublicSubnet internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.PublicSubnet.Builder =
         software.amazon.awscdk.services.ec2.PublicSubnet.Builder.create(scope, id)
 
+    /**
+     * Indicates whether a network interface created in this subnet receives an IPv6 address.
+     *
+     * If you specify AssignIpv6AddressOnCreation, you must also specify Ipv6CidrBlock.
+     *
+     * Default: false
+     *
+     * @param assignIpv6AddressOnCreation Indicates whether a network interface created in this
+     * subnet receives an IPv6 address. 
+     */
     override fun assignIpv6AddressOnCreation(assignIpv6AddressOnCreation: Boolean) {
       cdkBuilder.assignIpv6AddressOnCreation(assignIpv6AddressOnCreation)
     }
 
+    /**
+     * The availability zone for the subnet.
+     *
+     * @param availabilityZone The availability zone for the subnet. 
+     */
     override fun availabilityZone(availabilityZone: String) {
       cdkBuilder.availabilityZone(availabilityZone)
     }
 
+    /**
+     * The CIDR notation for this subnet.
+     *
+     * @param cidrBlock The CIDR notation for this subnet. 
+     */
     override fun cidrBlock(cidrBlock: String) {
       cdkBuilder.cidrBlock(cidrBlock)
     }
 
+    /**
+     * The IPv6 CIDR block.
+     *
+     * If you specify AssignIpv6AddressOnCreation, you must also specify Ipv6CidrBlock.
+     *
+     * Default: - no IPv6 CIDR block.
+     *
+     * @param ipv6CidrBlock The IPv6 CIDR block. 
+     */
     override fun ipv6CidrBlock(ipv6CidrBlock: String) {
       cdkBuilder.ipv6CidrBlock(ipv6CidrBlock)
     }
 
+    /**
+     * Controls if a public IP is associated to an instance at launch.
+     *
+     * Default: true in Subnet.Public, false in Subnet.Private or Subnet.Isolated.
+     *
+     * @param mapPublicIpOnLaunch Controls if a public IP is associated to an instance at launch. 
+     */
     override fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: Boolean) {
       cdkBuilder.mapPublicIpOnLaunch(mapPublicIpOnLaunch)
     }
 
+    /**
+     * The VPC which this subnet is part of.
+     *
+     * @param vpcId The VPC which this subnet is part of. 
+     */
     override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }

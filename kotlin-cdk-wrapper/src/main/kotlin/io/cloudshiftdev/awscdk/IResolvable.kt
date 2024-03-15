@@ -7,24 +7,64 @@ import kotlin.Any
 import kotlin.String
 import kotlin.collections.List
 
+/**
+ * Interface for values that can be resolvable later.
+ *
+ * Tokens are special objects that participate in synthesis.
+ */
 public interface IResolvable {
+  /**
+   * The creation stack of this resolvable which will be appended to errors thrown during
+   * resolution.
+   *
+   * This may return an array with a single informational element indicating how
+   * to get this property populated, if it was skipped for performance reasons.
+   */
   public fun creationStack(): List<String>
 
-  public fun resolve(arg0: IResolveContext): Any
+  /**
+   * Produce the Token's value at resolution time.
+   *
+   * @param context 
+   */
+  public fun resolve(context: IResolveContext): Any
 
+  /**
+   * The type that this token will likely resolve to.
+   */
   public fun typeHint(): ResolutionTypeHint? =
       unwrap(this).getTypeHint()?.let(ResolutionTypeHint::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.IResolvable,
   ) : CdkObject(cdkObject), IResolvable {
+    /**
+     * The creation stack of this resolvable which will be appended to errors thrown during
+     * resolution.
+     *
+     * This may return an array with a single informational element indicating how
+     * to get this property populated, if it was skipped for performance reasons.
+     */
     override fun creationStack(): List<String> = unwrap(this).getCreationStack()
 
-    override fun resolve(arg0: IResolveContext): Any =
-        unwrap(this).resolve(arg0.let(IResolveContext::unwrap))
+    /**
+     * Produce the Token's value at resolution time.
+     *
+     * @param context 
+     */
+    override fun resolve(context: IResolveContext): Any =
+        unwrap(this).resolve(context.let(IResolveContext::unwrap))
 
+    /**
+     * Return a string representation of this resolvable object.
+     *
+     * Returns a reversible string representation.
+     */
     override fun toString(): String = unwrap(this).toString()
 
+    /**
+     * The type that this token will likely resolve to.
+     */
     override fun typeHint(): ResolutionTypeHint? =
         unwrap(this).getTypeHint()?.let(ResolutionTypeHint::wrap)
   }

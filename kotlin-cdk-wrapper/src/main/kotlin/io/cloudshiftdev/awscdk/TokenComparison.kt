@@ -4,6 +4,20 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 
+/**
+ * An enum-like class that represents the result of comparing two Tokens.
+ *
+ * The return type of `Token.compareStrings`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * TokenComparison tokenComparison = TokenComparison.BOTH_UNRESOLVED;
+ * ```
+ */
 public open class TokenComparison internal constructor(
   internal override val cdkObject: software.amazon.awscdk.TokenComparison,
 ) : CdkObject(cdkObject) {

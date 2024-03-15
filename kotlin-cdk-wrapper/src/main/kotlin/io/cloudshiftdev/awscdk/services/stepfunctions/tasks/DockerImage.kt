@@ -11,11 +11,32 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Creates `IDockerImage` instances.
+ *
+ * Example:
+ *
+ * ```
+ * SageMakerCreateModel.Builder.create(this, "Sagemaker")
+ * .modelName("MyModel")
+ * .primaryContainer(ContainerDefinition.Builder.create()
+ * .image(DockerImage.fromJsonExpression(JsonPath.stringAt("$.Model.imageName")))
+ * .mode(Mode.SINGLE_MODEL)
+ * .modelS3Location(S3Location.fromJsonExpression("$.TrainingJob.ModelArtifacts.S3ModelArtifacts"))
+ * .build())
+ * .build();
+ * ```
+ */
 public abstract class DockerImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DockerImage,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: ISageMakerTask): DockerImageConfig =
-      unwrap(this).bind(arg0.let(ISageMakerTask::unwrap)).let(DockerImageConfig::wrap)
+  /**
+   * Called when the image is used by a SageMaker task.
+   *
+   * @param task 
+   */
+  public open fun bind(task: ISageMakerTask): DockerImageConfig =
+      unwrap(this).bind(task.let(ISageMakerTask::unwrap)).let(DockerImageConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DockerImage,

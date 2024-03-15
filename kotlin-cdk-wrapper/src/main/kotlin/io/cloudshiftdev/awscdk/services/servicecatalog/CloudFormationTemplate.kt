@@ -9,12 +9,42 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Represents the Product Provisioning Artifact Template.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.*;
+ * public class S3BucketProduct extends ProductStack {
+ * public S3BucketProduct(Construct scope, String id) {
+ * super(scope, id);
+ * new Bucket(this, "BucketProduct");
+ * }
+ * }
+ * CloudFormationProduct product = CloudFormationProduct.Builder.create(this, "Product")
+ * .productName("My Product")
+ * .owner("Product Owner")
+ * .productVersions(List.of(CloudFormationProductVersion.builder()
+ * .productVersionName("v1")
+ * .cloudFormationTemplate(CloudFormationTemplate.fromProductStack(new S3BucketProduct(this,
+ * "S3BucketProduct")))
+ * .build()))
+ * .build();
+ * ```
+ */
 public abstract class CloudFormationTemplate internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.servicecatalog.CloudFormationTemplate,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct): CloudFormationTemplateConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(CloudFormationTemplateConfig::wrap)
+  /**
+   * Called when the product is initialized to allow this object to bind to the stack, add resources
+   * and have fun.
+   *
+   * @param scope The binding scope. 
+   */
+  public open fun bind(scope: Construct): CloudFormationTemplateConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(CloudFormationTemplateConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.servicecatalog.CloudFormationTemplate,

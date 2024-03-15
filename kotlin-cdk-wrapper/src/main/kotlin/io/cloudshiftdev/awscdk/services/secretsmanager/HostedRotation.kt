@@ -9,14 +9,35 @@ import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * A hosted rotation.
+ *
+ * Example:
+ *
+ * ```
+ * Secret secret = new Secret(this, "Secret");
+ * secret.addRotationSchedule("RotationSchedule", RotationScheduleOptions.builder()
+ * .hostedRotation(HostedRotation.mysqlSingleUser())
+ * .build());
+ * ```
+ */
 public open class HostedRotation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.secretsmanager.HostedRotation,
 ) : CdkObject(cdkObject), IConnectable {
+  /**
+   * Binds this hosted rotation to a secret.
+   *
+   * @param secret 
+   * @param scope 
+   */
   public open fun bind(secret: ISecret, scope: Construct):
       CfnRotationSchedule.HostedRotationLambdaProperty =
       unwrap(this).bind(secret.let(ISecret::unwrap),
       scope.let(Construct::unwrap)).let(CfnRotationSchedule.HostedRotationLambdaProperty::wrap)
 
+  /**
+   * Security group connections for this hosted rotation.
+   */
   public override fun connections(): Connections =
       unwrap(this).getConnections().let(Connections::wrap)
 

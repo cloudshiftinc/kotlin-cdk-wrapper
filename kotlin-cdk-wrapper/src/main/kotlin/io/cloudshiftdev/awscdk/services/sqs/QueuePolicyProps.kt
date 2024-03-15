@@ -7,13 +7,40 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 import kotlin.collections.List
 
+/**
+ * Properties to associate SQS queues with a policy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.sqs.*;
+ * Queue queue;
+ * QueuePolicyProps queuePolicyProps = QueuePolicyProps.builder()
+ * .queues(List.of(queue))
+ * .build();
+ * ```
+ */
 public interface QueuePolicyProps {
+  /**
+   * The set of queues this policy applies to.
+   */
   public fun queues(): List<IQueue>
 
+  /**
+   * A builder for [QueuePolicyProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param queues The set of queues this policy applies to. 
+     */
     public fun queues(queues: List<IQueue>)
 
+    /**
+     * @param queues The set of queues this policy applies to. 
+     */
     public fun queues(vararg queues: IQueue)
   }
 
@@ -21,10 +48,16 @@ public interface QueuePolicyProps {
     private val cdkBuilder: software.amazon.awscdk.services.sqs.QueuePolicyProps.Builder =
         software.amazon.awscdk.services.sqs.QueuePolicyProps.builder()
 
+    /**
+     * @param queues The set of queues this policy applies to. 
+     */
     override fun queues(queues: List<IQueue>) {
       cdkBuilder.queues(queues.map(IQueue::unwrap))
     }
 
+    /**
+     * @param queues The set of queues this policy applies to. 
+     */
     override fun queues(vararg queues: IQueue): Unit = queues(queues.toList())
 
     public fun build(): software.amazon.awscdk.services.sqs.QueuePolicyProps = cdkBuilder.build()
@@ -33,6 +66,9 @@ public interface QueuePolicyProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.sqs.QueuePolicyProps,
   ) : CdkObject(cdkObject), QueuePolicyProps {
+    /**
+     * The set of queues this policy applies to.
+     */
     override fun queues(): List<IQueue> = unwrap(this).getQueues().map(IQueue::wrap)
   }
 

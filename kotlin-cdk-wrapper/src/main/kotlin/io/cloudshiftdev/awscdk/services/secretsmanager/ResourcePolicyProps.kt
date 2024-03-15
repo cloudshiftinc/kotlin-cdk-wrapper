@@ -6,11 +6,35 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Construction properties for a ResourcePolicy.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.secretsmanager.*;
+ * Secret secret;
+ * ResourcePolicyProps resourcePolicyProps = ResourcePolicyProps.builder()
+ * .secret(secret)
+ * .build();
+ * ```
+ */
 public interface ResourcePolicyProps {
+  /**
+   * The secret to attach a resource-based permissions policy.
+   */
   public fun secret(): ISecret
 
+  /**
+   * A builder for [ResourcePolicyProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param secret The secret to attach a resource-based permissions policy. 
+     */
     public fun secret(secret: ISecret)
   }
 
@@ -19,6 +43,9 @@ public interface ResourcePolicyProps {
         software.amazon.awscdk.services.secretsmanager.ResourcePolicyProps.Builder =
         software.amazon.awscdk.services.secretsmanager.ResourcePolicyProps.builder()
 
+    /**
+     * @param secret The secret to attach a resource-based permissions policy. 
+     */
     override fun secret(secret: ISecret) {
       cdkBuilder.secret(secret.let(ISecret::unwrap))
     }
@@ -30,6 +57,9 @@ public interface ResourcePolicyProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.secretsmanager.ResourcePolicyProps,
   ) : CdkObject(cdkObject), ResourcePolicyProps {
+    /**
+     * The secret to attach a resource-based permissions policy.
+     */
     override fun secret(): ISecret = unwrap(this).getSecret().let(ISecret::wrap)
   }
 

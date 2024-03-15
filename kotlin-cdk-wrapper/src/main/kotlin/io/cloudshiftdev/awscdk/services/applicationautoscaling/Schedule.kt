@@ -9,9 +9,36 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Schedule for scheduled scaling actions.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.TimeZone;
+ * SomeScalableResource resource;
+ * ScalableAttribute capacity = resource.autoScaleCapacity(new Caps()
+ * .minCapacity(1)
+ * .maxCapacity(50)
+ * );
+ * capacity.scaleOnSchedule("PrescaleInTheMorning", ScalingSchedule.builder()
+ * .schedule(Schedule.cron(CronOptions.builder().hour("8").minute("0").build()))
+ * .minCapacity(20)
+ * .timeZone(TimeZone.AMERICA_DENVER)
+ * .build());
+ * capacity.scaleOnSchedule("AllowDownscalingAtNight", ScalingSchedule.builder()
+ * .schedule(Schedule.cron(CronOptions.builder().hour("20").minute("0").build()))
+ * .minCapacity(1)
+ * .timeZone(TimeZone.AMERICA_DENVER)
+ * .build());
+ * ```
+ */
 public abstract class Schedule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.applicationautoscaling.Schedule,
 ) : CdkObject(cdkObject) {
+  /**
+   * Retrieve the expression for this schedule.
+   */
   public open fun expressionString(): String = unwrap(this).getExpressionString()
 
   private class Wrapper(

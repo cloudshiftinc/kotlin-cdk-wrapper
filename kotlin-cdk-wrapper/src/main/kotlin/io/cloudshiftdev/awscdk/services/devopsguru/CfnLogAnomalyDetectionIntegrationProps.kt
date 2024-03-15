@@ -6,7 +6,25 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Properties for defining a `CfnLogAnomalyDetectionIntegration`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.devopsguru.*;
+ * CfnLogAnomalyDetectionIntegrationProps cfnLogAnomalyDetectionIntegrationProps =
+ * CfnLogAnomalyDetectionIntegrationProps.builder().build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-devopsguru-loganomalydetectionintegration.html)
+ */
 public interface CfnLogAnomalyDetectionIntegrationProps {
+  /**
+   * A builder for [CfnLogAnomalyDetectionIntegrationProps]
+   */
   @CdkDslMarker
   public interface Builder
 

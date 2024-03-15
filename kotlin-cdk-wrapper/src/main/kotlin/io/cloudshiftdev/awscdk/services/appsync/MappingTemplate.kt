@@ -6,9 +6,33 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Boolean
 import kotlin.String
 
+/**
+ * MappingTemplates for AppSync resolvers.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.events.*;
+ * GraphqlApi api = GraphqlApi.Builder.create(this, "EventBridgeApi")
+ * .name("EventBridgeApi")
+ * .definition(Definition.fromFile(join(__dirname, "appsync.eventbridge.graphql")))
+ * .build();
+ * EventBus bus = EventBus.Builder.create(this, "DestinationEventBus").build();
+ * EventBridgeDataSource dataSource = api.addEventBridgeDataSource("NoneDS", bus);
+ * dataSource.createResolver("EventResolver", BaseResolverProps.builder()
+ * .typeName("Mutation")
+ * .fieldName("emitEvent")
+ * .requestMappingTemplate(MappingTemplate.fromFile("request.vtl"))
+ * .responseMappingTemplate(MappingTemplate.fromFile("response.vtl"))
+ * .build());
+ * ```
+ */
 public abstract class MappingTemplate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.MappingTemplate,
 ) : CdkObject(cdkObject) {
+  /**
+   * this is called to render the mapping template to a VTL string.
+   */
   public open fun renderTemplate(): String = unwrap(this).renderTemplate()
 
   private class Wrapper(

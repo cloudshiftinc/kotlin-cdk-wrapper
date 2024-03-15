@@ -5,9 +5,32 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * The following table describes all of the available fields for a flow log record.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc = new Vpc(this, "Vpc");
+ * vpc.addFlowLog("FlowLog", FlowLogOptions.builder()
+ * .logFormat(List.of(LogFormat.DST_PORT, LogFormat.SRC_PORT))
+ * .build());
+ * // If you just want to add a field to the default field
+ * vpc.addFlowLog("FlowLog", FlowLogOptions.builder()
+ * .logFormat(List.of(LogFormat.VERSION, LogFormat.ALL_DEFAULT_FIELDS))
+ * .build());
+ * // If AWS CDK does not support the new fields
+ * vpc.addFlowLog("FlowLog", FlowLogOptions.builder()
+ * .logFormat(List.of(LogFormat.SRC_PORT, LogFormat.custom("${new-field}")))
+ * .build());
+ * ```
+ */
 public open class LogFormat internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.LogFormat,
 ) : CdkObject(cdkObject) {
+  /**
+   *
+   */
   public open fun `value`(): String = unwrap(this).getValue()
 
   public companion object {

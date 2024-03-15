@@ -7,15 +7,51 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Number
 import kotlin.Unit
 
+/**
+ * Properties to create PortRange.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * AclPortRange aclPortRange = AclPortRange.builder()
+ * .from(123)
+ * .to(123)
+ * .build();
+ * ```
+ */
 public interface AclPortRange {
+  /**
+   * The first port in the range.
+   *
+   * Required if you specify 6 (TCP) or 17 (UDP) for the protocol parameter.
+   */
   public fun from(): Number? = unwrap(this).getFrom()
 
+  /**
+   * The last port in the range.
+   *
+   * Required if you specify 6 (TCP) or 17 (UDP) for the protocol parameter.
+   */
   public fun to(): Number? = unwrap(this).getTo()
 
+  /**
+   * A builder for [AclPortRange]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param from The first port in the range.
+     * Required if you specify 6 (TCP) or 17 (UDP) for the protocol parameter.
+     */
     public fun from(from: Number)
 
+    /**
+     * @param to The last port in the range.
+     * Required if you specify 6 (TCP) or 17 (UDP) for the protocol parameter.
+     */
     public fun to(to: Number)
   }
 
@@ -23,10 +59,18 @@ public interface AclPortRange {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.AclPortRange.Builder =
         software.amazon.awscdk.services.ec2.AclPortRange.builder()
 
+    /**
+     * @param from The first port in the range.
+     * Required if you specify 6 (TCP) or 17 (UDP) for the protocol parameter.
+     */
     override fun from(from: Number) {
       cdkBuilder.from(from)
     }
 
+    /**
+     * @param to The last port in the range.
+     * Required if you specify 6 (TCP) or 17 (UDP) for the protocol parameter.
+     */
     override fun to(to: Number) {
       cdkBuilder.to(to)
     }
@@ -37,8 +81,18 @@ public interface AclPortRange {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ec2.AclPortRange,
   ) : CdkObject(cdkObject), AclPortRange {
+    /**
+     * The first port in the range.
+     *
+     * Required if you specify 6 (TCP) or 17 (UDP) for the protocol parameter.
+     */
     override fun from(): Number? = unwrap(this).getFrom()
 
+    /**
+     * The last port in the range.
+     *
+     * Required if you specify 6 (TCP) or 17 (UDP) for the protocol parameter.
+     */
     override fun to(): Number? = unwrap(this).getTo()
   }
 

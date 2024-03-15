@@ -5,9 +5,34 @@ package io.cloudshiftdev.awscdk.services.cognito
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * An attribute available from a third party identity provider.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool userpool = new UserPool(this, "Pool");
+ * UserPoolIdentityProviderAmazon.Builder.create(this, "Amazon")
+ * .clientId("amzn-client-id")
+ * .clientSecret("amzn-client-secret")
+ * .userPool(userpool)
+ * .attributeMapping(AttributeMapping.builder()
+ * .email(ProviderAttribute.AMAZON_EMAIL)
+ * .website(ProviderAttribute.other("url")) // use other() when an attribute is not pre-defined in
+ * the CDK
+ * .custom(Map.of(
+ * // custom user pool attributes go here
+ * "uniqueId", ProviderAttribute.AMAZON_USER_ID))
+ * .build())
+ * .build();
+ * ```
+ */
 public open class ProviderAttribute internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cognito.ProviderAttribute,
 ) : CdkObject(cdkObject) {
+  /**
+   * The attribute value string as recognized by the provider.
+   */
   public open fun attributeName(): String = unwrap(this).getAttributeName()
 
   public companion object {

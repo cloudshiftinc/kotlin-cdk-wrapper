@@ -7,15 +7,44 @@ import io.cloudshiftdev.awscdk.services.route53.IPublicHostedZone
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * The identity to use for DKIM.
+ *
+ * Example:
+ *
+ * ```
+ * IPublicHostedZone myHostedZone;
+ * EmailIdentity.Builder.create(this, "Identity")
+ * .identity(Identity.publicHostedZone(myHostedZone))
+ * .dkimIdentity(DkimIdentity.byoDkim(ByoDkimOptions.builder()
+ * .privateKey(SecretValue.secretsManager("dkim-private-key"))
+ * .publicKey("...base64-encoded-public-key...")
+ * .selector("selector")
+ * .build()))
+ * .build();
+ * ```
+ */
 public abstract class DkimIdentity internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.DkimIdentity,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: EmailIdentity): DkimIdentityConfig? =
-      unwrap(this).bind(arg0.let(EmailIdentity::unwrap))?.let(DkimIdentityConfig::wrap)
+  /**
+   * Binds this DKIM identity to the email identity.
+   *
+   * @param emailIdentity 
+   * @param hostedZone
+   */
+  public open fun bind(emailIdentity: EmailIdentity): DkimIdentityConfig? =
+      unwrap(this).bind(emailIdentity.let(EmailIdentity::unwrap))?.let(DkimIdentityConfig::wrap)
 
-  public open fun bind(arg0: EmailIdentity, arg1: IPublicHostedZone): DkimIdentityConfig? =
-      unwrap(this).bind(arg0.let(EmailIdentity::unwrap),
-      arg1.let(IPublicHostedZone::unwrap))?.let(DkimIdentityConfig::wrap)
+  /**
+   * Binds this DKIM identity to the email identity.
+   *
+   * @param emailIdentity 
+   * @param hostedZone
+   */
+  public open fun bind(emailIdentity: EmailIdentity, hostedZone: IPublicHostedZone):
+      DkimIdentityConfig? = unwrap(this).bind(emailIdentity.let(EmailIdentity::unwrap),
+      hostedZone.let(IPublicHostedZone::unwrap))?.let(DkimIdentityConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ses.DkimIdentity,

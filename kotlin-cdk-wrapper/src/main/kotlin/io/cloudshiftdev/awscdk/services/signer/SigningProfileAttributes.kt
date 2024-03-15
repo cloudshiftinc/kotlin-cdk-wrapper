@@ -7,15 +7,45 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * A reference to a Signing Profile.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.signer.*;
+ * SigningProfileAttributes signingProfileAttributes = SigningProfileAttributes.builder()
+ * .signingProfileName("signingProfileName")
+ * .signingProfileVersion("signingProfileVersion")
+ * .build();
+ * ```
+ */
 public interface SigningProfileAttributes {
+  /**
+   * The name of signing profile.
+   */
   public fun signingProfileName(): String
 
+  /**
+   * The version of signing profile.
+   */
   public fun signingProfileVersion(): String
 
+  /**
+   * A builder for [SigningProfileAttributes]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param signingProfileName The name of signing profile. 
+     */
     public fun signingProfileName(signingProfileName: String)
 
+    /**
+     * @param signingProfileVersion The version of signing profile. 
+     */
     public fun signingProfileVersion(signingProfileVersion: String)
   }
 
@@ -23,10 +53,16 @@ public interface SigningProfileAttributes {
     private val cdkBuilder: software.amazon.awscdk.services.signer.SigningProfileAttributes.Builder
         = software.amazon.awscdk.services.signer.SigningProfileAttributes.builder()
 
+    /**
+     * @param signingProfileName The name of signing profile. 
+     */
     override fun signingProfileName(signingProfileName: String) {
       cdkBuilder.signingProfileName(signingProfileName)
     }
 
+    /**
+     * @param signingProfileVersion The version of signing profile. 
+     */
     override fun signingProfileVersion(signingProfileVersion: String) {
       cdkBuilder.signingProfileVersion(signingProfileVersion)
     }
@@ -38,8 +74,14 @@ public interface SigningProfileAttributes {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.signer.SigningProfileAttributes,
   ) : CdkObject(cdkObject), SigningProfileAttributes {
+    /**
+     * The name of signing profile.
+     */
     override fun signingProfileName(): String = unwrap(this).getSigningProfileName()
 
+    /**
+     * The version of signing profile.
+     */
     override fun signingProfileVersion(): String = unwrap(this).getSigningProfileVersion()
   }
 

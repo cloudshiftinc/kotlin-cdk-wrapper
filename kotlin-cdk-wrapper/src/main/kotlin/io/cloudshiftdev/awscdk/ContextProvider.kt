@@ -7,6 +7,15 @@ import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Base class for the model side of context providers.
+ *
+ * Instances of this class communicate with context provider plugins in the 'cdk
+ * toolkit' via context variables (input), outputting specialized queries for
+ * more context variables (output).
+ *
+ * ContextProvider needs access to a Construct to hook into the context mechanism.
+ */
 public open class ContextProvider internal constructor(
   internal override val cdkObject: software.amazon.awscdk.ContextProvider,
 ) : CdkObject(cdkObject) {

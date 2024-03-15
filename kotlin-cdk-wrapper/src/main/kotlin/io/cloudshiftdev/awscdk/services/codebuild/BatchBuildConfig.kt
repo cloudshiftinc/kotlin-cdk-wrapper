@@ -7,11 +7,36 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Unit
 
+/**
+ * The type returned from `IProject#enableBatchBuilds`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.codebuild.*;
+ * import io.cloudshiftdev.awscdk.services.iam.*;
+ * Role role;
+ * BatchBuildConfig batchBuildConfig = BatchBuildConfig.builder()
+ * .role(role)
+ * .build();
+ * ```
+ */
 public interface BatchBuildConfig {
+  /**
+   * The IAM batch service Role of this Project.
+   */
   public fun role(): IRole
 
+  /**
+   * A builder for [BatchBuildConfig]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param role The IAM batch service Role of this Project. 
+     */
     public fun role(role: IRole)
   }
 
@@ -19,6 +44,9 @@ public interface BatchBuildConfig {
     private val cdkBuilder: software.amazon.awscdk.services.codebuild.BatchBuildConfig.Builder =
         software.amazon.awscdk.services.codebuild.BatchBuildConfig.builder()
 
+    /**
+     * @param role The IAM batch service Role of this Project. 
+     */
     override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }
@@ -30,6 +58,9 @@ public interface BatchBuildConfig {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.codebuild.BatchBuildConfig,
   ) : CdkObject(cdkObject), BatchBuildConfig {
+    /**
+     * The IAM batch service Role of this Project.
+     */
     override fun role(): IRole = unwrap(this).getRole().let(IRole::wrap)
   }
 

@@ -6,9 +6,27 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.collections.List
 
+/**
+ * A class used to generate resource arns for AppSync.
+ *
+ * Example:
+ *
+ * ```
+ * IGraphqlApi api;
+ * Role role = Role.Builder.create(this, "Role")
+ * .assumedBy(new ServicePrincipal("lambda.amazonaws.com"))
+ * .build();
+ * api.grant(role, IamResource.custom("types/Mutation/fields/updateExample"), "appsync:GraphQL");
+ * ```
+ */
 public open class IamResource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.IamResource,
 ) : CdkObject(cdkObject) {
+  /**
+   * Return the Resource ARN.
+   *
+   * @param api The GraphQL API to give permissions. 
+   */
   public open fun resourceArns(api: GraphqlApiBase): List<String> =
       unwrap(this).resourceArns(api.let(GraphqlApiBase::unwrap))
 

@@ -11,29 +11,136 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 
+/**
+ * Properties for defining a `CfnResourceSet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.route53recoveryreadiness.*;
+ * CfnResourceSetProps cfnResourceSetProps = CfnResourceSetProps.builder()
+ * .resources(List.of(ResourceProperty.builder()
+ * .componentId("componentId")
+ * .dnsTargetResource(DNSTargetResourceProperty.builder()
+ * .domainName("domainName")
+ * .hostedZoneArn("hostedZoneArn")
+ * .recordSetId("recordSetId")
+ * .recordType("recordType")
+ * .targetResource(TargetResourceProperty.builder()
+ * .nlbResource(NLBResourceProperty.builder()
+ * .arn("arn")
+ * .build())
+ * .r53Resource(R53ResourceRecordProperty.builder()
+ * .domainName("domainName")
+ * .recordSetId("recordSetId")
+ * .build())
+ * .build())
+ * .build())
+ * .readinessScopes(List.of("readinessScopes"))
+ * .resourceArn("resourceArn")
+ * .build()))
+ * .resourceSetType("resourceSetType")
+ * // the properties below are optional
+ * .resourceSetName("resourceSetName")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-resourceset.html)
+ */
 public interface CfnResourceSetProps {
+  /**
+   * The name of the resource set to create.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-resourceset.html#cfn-route53recoveryreadiness-resourceset-resourcesetname)
+   */
   public fun resourceSetName(): String? = unwrap(this).getResourceSetName()
 
+  /**
+   * The resource type of the resources in the resource set. Enter one of the following values for
+   * resource type:.
+   *
+   * AWS::ApiGateway::Stage, AWS::ApiGatewayV2::Stage, AWS::AutoScaling::AutoScalingGroup,
+   * AWS::CloudWatch::Alarm, AWS::EC2::CustomerGateway, AWS::DynamoDB::Table, AWS::EC2::Volume,
+   * AWS::ElasticLoadBalancing::LoadBalancer, AWS::ElasticLoadBalancingV2::LoadBalancer,
+   * AWS::Lambda::Function, AWS::MSK::Cluster, AWS::RDS::DBCluster, AWS::Route53::HealthCheck,
+   * AWS::SQS::Queue, AWS::SNS::Topic, AWS::SNS::Subscription, AWS::EC2::VPC, AWS::EC2::VPNConnection,
+   * AWS::EC2::VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource.
+   *
+   * Note that AWS::Route53RecoveryReadiness::DNSTargetResource is only used for this setting. It
+   * isn't an actual AWS CloudFormation resource type.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-resourceset.html#cfn-route53recoveryreadiness-resourceset-resourcesettype)
+   */
   public fun resourceSetType(): String
 
+  /**
+   * A list of resource objects in the resource set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-resourceset.html#cfn-route53recoveryreadiness-resourceset-resources)
+   */
   public fun resources(): Any
 
+  /**
+   * A tag to associate with the parameters for a resource set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-resourceset.html#cfn-route53recoveryreadiness-resourceset-tags)
+   */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
+  /**
+   * A builder for [CfnResourceSetProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param resourceSetName The name of the resource set to create.
+     */
     public fun resourceSetName(resourceSetName: String)
 
+    /**
+     * @param resourceSetType The resource type of the resources in the resource set. Enter one of
+     * the following values for resource type:. 
+     * AWS::ApiGateway::Stage, AWS::ApiGatewayV2::Stage, AWS::AutoScaling::AutoScalingGroup,
+     * AWS::CloudWatch::Alarm, AWS::EC2::CustomerGateway, AWS::DynamoDB::Table, AWS::EC2::Volume,
+     * AWS::ElasticLoadBalancing::LoadBalancer, AWS::ElasticLoadBalancingV2::LoadBalancer,
+     * AWS::Lambda::Function, AWS::MSK::Cluster, AWS::RDS::DBCluster, AWS::Route53::HealthCheck,
+     * AWS::SQS::Queue, AWS::SNS::Topic, AWS::SNS::Subscription, AWS::EC2::VPC,
+     * AWS::EC2::VPNConnection, AWS::EC2::VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource.
+     *
+     * Note that AWS::Route53RecoveryReadiness::DNSTargetResource is only used for this setting. It
+     * isn't an actual AWS CloudFormation resource type.
+     */
     public fun resourceSetType(resourceSetType: String)
 
+    /**
+     * @param resources A list of resource objects in the resource set. 
+     */
     public fun resources(resources: IResolvable)
 
+    /**
+     * @param resources A list of resource objects in the resource set. 
+     */
     public fun resources(resources: List<Any>)
 
+    /**
+     * @param resources A list of resource objects in the resource set. 
+     */
     public fun resources(vararg resources: Any)
 
+    /**
+     * @param tags A tag to associate with the parameters for a resource set.
+     */
     public fun tags(tags: List<CfnTag>)
 
+    /**
+     * @param tags A tag to associate with the parameters for a resource set.
+     */
     public fun tags(vararg tags: CfnTag)
   }
 
@@ -42,28 +149,59 @@ public interface CfnResourceSetProps {
         software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSetProps.Builder =
         software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSetProps.builder()
 
+    /**
+     * @param resourceSetName The name of the resource set to create.
+     */
     override fun resourceSetName(resourceSetName: String) {
       cdkBuilder.resourceSetName(resourceSetName)
     }
 
+    /**
+     * @param resourceSetType The resource type of the resources in the resource set. Enter one of
+     * the following values for resource type:. 
+     * AWS::ApiGateway::Stage, AWS::ApiGatewayV2::Stage, AWS::AutoScaling::AutoScalingGroup,
+     * AWS::CloudWatch::Alarm, AWS::EC2::CustomerGateway, AWS::DynamoDB::Table, AWS::EC2::Volume,
+     * AWS::ElasticLoadBalancing::LoadBalancer, AWS::ElasticLoadBalancingV2::LoadBalancer,
+     * AWS::Lambda::Function, AWS::MSK::Cluster, AWS::RDS::DBCluster, AWS::Route53::HealthCheck,
+     * AWS::SQS::Queue, AWS::SNS::Topic, AWS::SNS::Subscription, AWS::EC2::VPC,
+     * AWS::EC2::VPNConnection, AWS::EC2::VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource.
+     *
+     * Note that AWS::Route53RecoveryReadiness::DNSTargetResource is only used for this setting. It
+     * isn't an actual AWS CloudFormation resource type.
+     */
     override fun resourceSetType(resourceSetType: String) {
       cdkBuilder.resourceSetType(resourceSetType)
     }
 
+    /**
+     * @param resources A list of resource objects in the resource set. 
+     */
     override fun resources(resources: IResolvable) {
       cdkBuilder.resources(resources.let(IResolvable::unwrap))
     }
 
+    /**
+     * @param resources A list of resource objects in the resource set. 
+     */
     override fun resources(resources: List<Any>) {
       cdkBuilder.resources(resources)
     }
 
+    /**
+     * @param resources A list of resource objects in the resource set. 
+     */
     override fun resources(vararg resources: Any): Unit = resources(resources.toList())
 
+    /**
+     * @param tags A tag to associate with the parameters for a resource set.
+     */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    /**
+     * @param tags A tag to associate with the parameters for a resource set.
+     */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSetProps
@@ -74,12 +212,43 @@ public interface CfnResourceSetProps {
     override val cdkObject:
         software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSetProps,
   ) : CdkObject(cdkObject), CfnResourceSetProps {
+    /**
+     * The name of the resource set to create.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-resourceset.html#cfn-route53recoveryreadiness-resourceset-resourcesetname)
+     */
     override fun resourceSetName(): String? = unwrap(this).getResourceSetName()
 
+    /**
+     * The resource type of the resources in the resource set. Enter one of the following values for
+     * resource type:.
+     *
+     * AWS::ApiGateway::Stage, AWS::ApiGatewayV2::Stage, AWS::AutoScaling::AutoScalingGroup,
+     * AWS::CloudWatch::Alarm, AWS::EC2::CustomerGateway, AWS::DynamoDB::Table, AWS::EC2::Volume,
+     * AWS::ElasticLoadBalancing::LoadBalancer, AWS::ElasticLoadBalancingV2::LoadBalancer,
+     * AWS::Lambda::Function, AWS::MSK::Cluster, AWS::RDS::DBCluster, AWS::Route53::HealthCheck,
+     * AWS::SQS::Queue, AWS::SNS::Topic, AWS::SNS::Subscription, AWS::EC2::VPC,
+     * AWS::EC2::VPNConnection, AWS::EC2::VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource.
+     *
+     * Note that AWS::Route53RecoveryReadiness::DNSTargetResource is only used for this setting. It
+     * isn't an actual AWS CloudFormation resource type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-resourceset.html#cfn-route53recoveryreadiness-resourceset-resourcesettype)
+     */
     override fun resourceSetType(): String = unwrap(this).getResourceSetType()
 
+    /**
+     * A list of resource objects in the resource set.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-resourceset.html#cfn-route53recoveryreadiness-resourceset-resources)
+     */
     override fun resources(): Any = unwrap(this).getResources()
 
+    /**
+     * A tag to associate with the parameters for a resource set.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoveryreadiness-resourceset.html#cfn-route53recoveryreadiness-resourceset-tags)
+     */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
   }
 

@@ -7,15 +7,53 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for defining a `CfnVPCDHCPOptionsAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * CfnVPCDHCPOptionsAssociationProps cfnVPCDHCPOptionsAssociationProps =
+ * CfnVPCDHCPOptionsAssociationProps.builder()
+ * .dhcpOptionsId("dhcpOptionsId")
+ * .vpcId("vpcId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcdhcpoptionsassociation.html)
+ */
 public interface CfnVPCDHCPOptionsAssociationProps {
+  /**
+   * The ID of the DHCP options set, or `default` to associate no DHCP options with the VPC.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcdhcpoptionsassociation.html#cfn-ec2-vpcdhcpoptionsassociation-dhcpoptionsid)
+   */
   public fun dhcpOptionsId(): String
 
+  /**
+   * The ID of the VPC.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcdhcpoptionsassociation.html#cfn-ec2-vpcdhcpoptionsassociation-vpcid)
+   */
   public fun vpcId(): String
 
+  /**
+   * A builder for [CfnVPCDHCPOptionsAssociationProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param dhcpOptionsId The ID of the DHCP options set, or `default` to associate no DHCP
+     * options with the VPC. 
+     */
     public fun dhcpOptionsId(dhcpOptionsId: String)
 
+    /**
+     * @param vpcId The ID of the VPC. 
+     */
     public fun vpcId(vpcId: String)
   }
 
@@ -24,10 +62,17 @@ public interface CfnVPCDHCPOptionsAssociationProps {
         software.amazon.awscdk.services.ec2.CfnVPCDHCPOptionsAssociationProps.Builder =
         software.amazon.awscdk.services.ec2.CfnVPCDHCPOptionsAssociationProps.builder()
 
+    /**
+     * @param dhcpOptionsId The ID of the DHCP options set, or `default` to associate no DHCP
+     * options with the VPC. 
+     */
     override fun dhcpOptionsId(dhcpOptionsId: String) {
       cdkBuilder.dhcpOptionsId(dhcpOptionsId)
     }
 
+    /**
+     * @param vpcId The ID of the VPC. 
+     */
     override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
@@ -39,8 +84,18 @@ public interface CfnVPCDHCPOptionsAssociationProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ec2.CfnVPCDHCPOptionsAssociationProps,
   ) : CdkObject(cdkObject), CfnVPCDHCPOptionsAssociationProps {
+    /**
+     * The ID of the DHCP options set, or `default` to associate no DHCP options with the VPC.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcdhcpoptionsassociation.html#cfn-ec2-vpcdhcpoptionsassociation-dhcpoptionsid)
+     */
     override fun dhcpOptionsId(): String = unwrap(this).getDhcpOptionsId()
 
+    /**
+     * The ID of the VPC.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcdhcpoptionsassociation.html#cfn-ec2-vpcdhcpoptionsassociation-vpcid)
+     */
     override fun vpcId(): String = unwrap(this).getVpcId()
   }
 

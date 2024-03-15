@@ -6,6 +6,18 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.collections.List
 
+/**
+ * Example:
+ *
+ * ```
+ * RestApi.Builder.create(this, "api")
+ * .defaultCorsPreflightOptions(CorsOptions.builder()
+ * .allowOrigins(Cors.ALL_ORIGINS)
+ * .allowMethods(Cors.ALL_METHODS)
+ * .build())
+ * .build();
+ * ```
+ */
 public open class Cors internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.Cors,
 ) : CdkObject(cdkObject) {

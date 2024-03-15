@@ -7,6 +7,31 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * factory methods for access log format.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket destinationBucket = new Bucket(this, "Bucket");
+ * Role deliveryStreamRole = Role.Builder.create(this, "Role")
+ * .assumedBy(new ServicePrincipal("firehose.amazonaws.com"))
+ * .build();
+ * CfnDeliveryStream stream = CfnDeliveryStream.Builder.create(this, "MyStream")
+ * .deliveryStreamName("amazon-apigateway-delivery-stream")
+ * .s3DestinationConfiguration(S3DestinationConfigurationProperty.builder()
+ * .bucketArn(destinationBucket.getBucketArn())
+ * .roleArn(deliveryStreamRole.getRoleArn())
+ * .build())
+ * .build();
+ * RestApi api = RestApi.Builder.create(this, "books")
+ * .deployOptions(StageOptions.builder()
+ * .accessLogDestination(new FirehoseLogDestination(stream))
+ * .accessLogFormat(AccessLogFormat.jsonWithStandardFields())
+ * .build())
+ * .build();
+ * ```
+ */
 public open class AccessLogFormat internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.AccessLogFormat,
 ) : CdkObject(cdkObject) {

@@ -7,11 +7,34 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Options when binding a log destination to a RestApi Stage.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.apigateway.*;
+ * AccessLogDestinationConfig accessLogDestinationConfig = AccessLogDestinationConfig.builder()
+ * .destinationArn("destinationArn")
+ * .build();
+ * ```
+ */
 public interface AccessLogDestinationConfig {
+  /**
+   * The Amazon Resource Name (ARN) of the destination resource.
+   */
   public fun destinationArn(): String
 
+  /**
+   * A builder for [AccessLogDestinationConfig]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param destinationArn The Amazon Resource Name (ARN) of the destination resource. 
+     */
     public fun destinationArn(destinationArn: String)
   }
 
@@ -20,6 +43,9 @@ public interface AccessLogDestinationConfig {
         software.amazon.awscdk.services.apigateway.AccessLogDestinationConfig.Builder =
         software.amazon.awscdk.services.apigateway.AccessLogDestinationConfig.builder()
 
+    /**
+     * @param destinationArn The Amazon Resource Name (ARN) of the destination resource. 
+     */
     override fun destinationArn(destinationArn: String) {
       cdkBuilder.destinationArn(destinationArn)
     }
@@ -31,6 +57,9 @@ public interface AccessLogDestinationConfig {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.apigateway.AccessLogDestinationConfig,
   ) : CdkObject(cdkObject), AccessLogDestinationConfig {
+    /**
+     * The Amazon Resource Name (ARN) of the destination resource.
+     */
     override fun destinationArn(): String = unwrap(this).getDestinationArn()
   }
 

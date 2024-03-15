@@ -7,12 +7,37 @@ import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * The base class for log drivers.
+ *
+ * Example:
+ *
+ * ```
+ * // Create a Task Definition for the container to start
+ * Ec2TaskDefinition taskDefinition = new Ec2TaskDefinition(this, "TaskDef");
+ * taskDefinition.addContainer("TheContainer", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("example-image"))
+ * .memoryLimitMiB(256)
+ * .logging(LogDrivers.awsLogs(AwsLogDriverProps.builder()
+ * .streamPrefix("EventDemo")
+ * .mode(AwsLogDriverMode.NON_BLOCKING)
+ * .maxBufferSize(Size.mebibytes(25))
+ * .build()))
+ * .build());
+ * ```
+ */
 public abstract class LogDriver internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.LogDriver,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct, arg1: ContainerDefinition): LogDriverConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap),
-      arg1.let(ContainerDefinition::unwrap)).let(LogDriverConfig::wrap)
+  /**
+   * Called when the log driver is configured on a container.
+   *
+   * @param scope 
+   * @param containerDefinition 
+   */
+  public open fun bind(scope: Construct, containerDefinition: ContainerDefinition): LogDriverConfig
+      = unwrap(this).bind(scope.let(Construct::unwrap),
+      containerDefinition.let(ContainerDefinition::unwrap)).let(LogDriverConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ecs.LogDriver,

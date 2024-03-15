@@ -7,11 +7,39 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Options to configure TagManager behavior.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * TagManagerOptions tagManagerOptions = TagManagerOptions.builder()
+ * .tagPropertyName("tagPropertyName")
+ * .build();
+ * ```
+ */
 public interface TagManagerOptions {
+  /**
+   * The name of the property in CloudFormation for these tags.
+   *
+   * Normally this is `tags`, but Cognito UserPool uses UserPoolTags
+   *
+   * Default: "tags"
+   */
   public fun tagPropertyName(): String? = unwrap(this).getTagPropertyName()
 
+  /**
+   * A builder for [TagManagerOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param tagPropertyName The name of the property in CloudFormation for these tags.
+     * Normally this is `tags`, but Cognito UserPool uses UserPoolTags
+     */
     public fun tagPropertyName(tagPropertyName: String)
   }
 
@@ -19,6 +47,10 @@ public interface TagManagerOptions {
     private val cdkBuilder: software.amazon.awscdk.TagManagerOptions.Builder =
         software.amazon.awscdk.TagManagerOptions.builder()
 
+    /**
+     * @param tagPropertyName The name of the property in CloudFormation for these tags.
+     * Normally this is `tags`, but Cognito UserPool uses UserPoolTags
+     */
     override fun tagPropertyName(tagPropertyName: String) {
       cdkBuilder.tagPropertyName(tagPropertyName)
     }
@@ -29,6 +61,13 @@ public interface TagManagerOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.TagManagerOptions,
   ) : CdkObject(cdkObject), TagManagerOptions {
+    /**
+     * The name of the property in CloudFormation for these tags.
+     *
+     * Normally this is `tags`, but Cognito UserPool uses UserPoolTags
+     *
+     * Default: "tags"
+     */
     override fun tagPropertyName(): String? = unwrap(this).getTagPropertyName()
   }
 

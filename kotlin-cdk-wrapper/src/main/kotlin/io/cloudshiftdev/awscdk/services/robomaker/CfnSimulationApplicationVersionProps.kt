@@ -7,15 +7,56 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for defining a `CfnSimulationApplicationVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.robomaker.*;
+ * CfnSimulationApplicationVersionProps cfnSimulationApplicationVersionProps =
+ * CfnSimulationApplicationVersionProps.builder()
+ * .application("application")
+ * // the properties below are optional
+ * .currentRevisionId("currentRevisionId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-simulationapplicationversion.html)
+ */
 public interface CfnSimulationApplicationVersionProps {
+  /**
+   * The application information for the simulation application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-simulationapplicationversion.html#cfn-robomaker-simulationapplicationversion-application)
+   */
   public fun application(): String
 
+  /**
+   * The current revision id for the simulation application.
+   *
+   * If you provide a value and it matches the latest revision ID, a new version will be created.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-simulationapplicationversion.html#cfn-robomaker-simulationapplicationversion-currentrevisionid)
+   */
   public fun currentRevisionId(): String? = unwrap(this).getCurrentRevisionId()
 
+  /**
+   * A builder for [CfnSimulationApplicationVersionProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param application The application information for the simulation application. 
+     */
     public fun application(application: String)
 
+    /**
+     * @param currentRevisionId The current revision id for the simulation application.
+     * If you provide a value and it matches the latest revision ID, a new version will be created.
+     */
     public fun currentRevisionId(currentRevisionId: String)
   }
 
@@ -24,10 +65,17 @@ public interface CfnSimulationApplicationVersionProps {
         software.amazon.awscdk.services.robomaker.CfnSimulationApplicationVersionProps.Builder =
         software.amazon.awscdk.services.robomaker.CfnSimulationApplicationVersionProps.builder()
 
+    /**
+     * @param application The application information for the simulation application. 
+     */
     override fun application(application: String) {
       cdkBuilder.application(application)
     }
 
+    /**
+     * @param currentRevisionId The current revision id for the simulation application.
+     * If you provide a value and it matches the latest revision ID, a new version will be created.
+     */
     override fun currentRevisionId(currentRevisionId: String) {
       cdkBuilder.currentRevisionId(currentRevisionId)
     }
@@ -41,8 +89,20 @@ public interface CfnSimulationApplicationVersionProps {
     override val cdkObject:
         software.amazon.awscdk.services.robomaker.CfnSimulationApplicationVersionProps,
   ) : CdkObject(cdkObject), CfnSimulationApplicationVersionProps {
+    /**
+     * The application information for the simulation application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-simulationapplicationversion.html#cfn-robomaker-simulationapplicationversion-application)
+     */
     override fun application(): String = unwrap(this).getApplication()
 
+    /**
+     * The current revision id for the simulation application.
+     *
+     * If you provide a value and it matches the latest revision ID, a new version will be created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-robomaker-simulationapplicationversion.html#cfn-robomaker-simulationapplicationversion-currentrevisionid)
+     */
     override fun currentRevisionId(): String? = unwrap(this).getCurrentRevisionId()
   }
 

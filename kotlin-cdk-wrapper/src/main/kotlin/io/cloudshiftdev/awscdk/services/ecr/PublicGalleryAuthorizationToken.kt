@@ -5,6 +5,18 @@ package io.cloudshiftdev.awscdk.services.ecr
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 
+/**
+ * Authorization token to access the global public ECR Gallery via Docker CLI.
+ *
+ * Example:
+ *
+ * ```
+ * User user = new User(this, "User");
+ * PublicGalleryAuthorizationToken.grantRead(user);
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/AmazonECR/latest/public/public-registries.html#public-registry-auth)
+ */
 public open class PublicGalleryAuthorizationToken internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ecr.PublicGalleryAuthorizationToken,

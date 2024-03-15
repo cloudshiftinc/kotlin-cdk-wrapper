@@ -6,6 +6,21 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Deprecated
 import kotlin.String
 
+/**
+ * $context variables that can be used to customize access log pattern.
+ *
+ * Example:
+ *
+ * ```
+ * AccessLogFormat.custom(JSON.stringify(Map.of(
+ * "requestId", AccessLogField.contextRequestId(),
+ * "sourceIp", AccessLogField.contextIdentitySourceIp(),
+ * "method", AccessLogField.contextHttpMethod(),
+ * "userContext", Map.of(
+ * "sub", AccessLogField.contextAuthorizerClaims("sub"),
+ * "email", AccessLogField.contextAuthorizerClaims("email")))));
+ * ```
+ */
 public open class AccessLogField internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.AccessLogField,
 ) : CdkObject(cdkObject) {

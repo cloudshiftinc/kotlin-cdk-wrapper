@@ -5,10 +5,26 @@ package io.cloudshiftdev.awscdk.services.bedrock
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * The model identifiers for the Bedrock base foundation models.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.bedrock.*;
+ * FoundationModel.fromFoundationModelId(this, "Model",
+ * FoundationModelIdentifier.ANTHROPIC_CLAUDE_V2);
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/model-ids.html)
+ */
 public open class FoundationModelIdentifier internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.bedrock.FoundationModelIdentifier,
 ) : CdkObject(cdkObject) {
+  /**
+   * the model identifier.
+   */
   public open fun modelId(): String = unwrap(this).getModelId()
 
   public companion object {

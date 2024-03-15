@@ -7,11 +7,34 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for an alarm action.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
+ * AlarmActionConfig alarmActionConfig = AlarmActionConfig.builder()
+ * .alarmActionArn("alarmActionArn")
+ * .build();
+ * ```
+ */
 public interface AlarmActionConfig {
+  /**
+   * Return the ARN that should be used for a CloudWatch Alarm action.
+   */
   public fun alarmActionArn(): String
 
+  /**
+   * A builder for [AlarmActionConfig]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param alarmActionArn Return the ARN that should be used for a CloudWatch Alarm action. 
+     */
     public fun alarmActionArn(alarmActionArn: String)
   }
 
@@ -19,6 +42,9 @@ public interface AlarmActionConfig {
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.AlarmActionConfig.Builder =
         software.amazon.awscdk.services.cloudwatch.AlarmActionConfig.builder()
 
+    /**
+     * @param alarmActionArn Return the ARN that should be used for a CloudWatch Alarm action. 
+     */
     override fun alarmActionArn(alarmActionArn: String) {
       cdkBuilder.alarmActionArn(alarmActionArn)
     }
@@ -30,6 +56,9 @@ public interface AlarmActionConfig {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmActionConfig,
   ) : CdkObject(cdkObject), AlarmActionConfig {
+    /**
+     * Return the ARN that should be used for a CloudWatch Alarm action.
+     */
     override fun alarmActionArn(): String = unwrap(this).getAlarmActionArn()
   }
 

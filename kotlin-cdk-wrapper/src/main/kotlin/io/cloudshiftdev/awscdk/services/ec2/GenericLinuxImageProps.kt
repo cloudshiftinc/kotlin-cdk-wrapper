@@ -6,11 +6,37 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Configuration options for GenericLinuxImage.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * UserData userData;
+ * GenericLinuxImageProps genericLinuxImageProps = GenericLinuxImageProps.builder()
+ * .userData(userData)
+ * .build();
+ * ```
+ */
 public interface GenericLinuxImageProps {
+  /**
+   * Initial user data.
+   *
+   * Default: - Empty UserData for Linux machines
+   */
   public fun userData(): UserData? = unwrap(this).getUserData()?.let(UserData::wrap)
 
+  /**
+   * A builder for [GenericLinuxImageProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param userData Initial user data.
+     */
     public fun userData(userData: UserData)
   }
 
@@ -18,6 +44,9 @@ public interface GenericLinuxImageProps {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.GenericLinuxImageProps.Builder =
         software.amazon.awscdk.services.ec2.GenericLinuxImageProps.builder()
 
+    /**
+     * @param userData Initial user data.
+     */
     override fun userData(userData: UserData) {
       cdkBuilder.userData(userData.let(UserData::unwrap))
     }
@@ -29,6 +58,11 @@ public interface GenericLinuxImageProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ec2.GenericLinuxImageProps,
   ) : CdkObject(cdkObject), GenericLinuxImageProps {
+    /**
+     * Initial user data.
+     *
+     * Default: - Empty UserData for Linux machines
+     */
     override fun userData(): UserData? = unwrap(this).getUserData()?.let(UserData::wrap)
   }
 

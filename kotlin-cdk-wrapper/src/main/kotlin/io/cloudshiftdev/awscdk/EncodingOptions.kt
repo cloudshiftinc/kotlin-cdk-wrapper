@@ -7,11 +7,34 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties to string encodings.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * EncodingOptions encodingOptions = EncodingOptions.builder()
+ * .displayHint("displayHint")
+ * .build();
+ * ```
+ */
 public interface EncodingOptions {
+  /**
+   * A hint for the Token's purpose when stringifying it.
+   */
   public fun displayHint(): String? = unwrap(this).getDisplayHint()
 
+  /**
+   * A builder for [EncodingOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param displayHint A hint for the Token's purpose when stringifying it.
+     */
     public fun displayHint(displayHint: String)
   }
 
@@ -19,6 +42,9 @@ public interface EncodingOptions {
     private val cdkBuilder: software.amazon.awscdk.EncodingOptions.Builder =
         software.amazon.awscdk.EncodingOptions.builder()
 
+    /**
+     * @param displayHint A hint for the Token's purpose when stringifying it.
+     */
     override fun displayHint(displayHint: String) {
       cdkBuilder.displayHint(displayHint)
     }
@@ -29,6 +55,9 @@ public interface EncodingOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.EncodingOptions,
   ) : CdkObject(cdkObject), EncodingOptions {
+    /**
+     * A hint for the Token's purpose when stringifying it.
+     */
     override fun displayHint(): String? = unwrap(this).getDisplayHint()
   }
 

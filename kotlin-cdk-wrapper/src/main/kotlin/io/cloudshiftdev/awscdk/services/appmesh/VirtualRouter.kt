@@ -11,31 +11,91 @@ import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * Example:
+ *
+ * ```
+ * Mesh mesh;
+ * VirtualRouter router = mesh.addVirtualRouter("router", VirtualRouterBaseProps.builder()
+ * .listeners(List.of(VirtualRouterListener.http(8080)))
+ * .build());
+ * ```
+ */
 public open class VirtualRouter internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouter,
 ) : Resource(cdkObject), IVirtualRouter {
+  /**
+   * Add a single route to the router.
+   *
+   * @param id 
+   * @param props 
+   */
   public override fun addRoute(id: String, props: RouteBaseProps): Route = unwrap(this).addRoute(id,
       props.let(RouteBaseProps::unwrap)).let(Route::wrap)
 
+  /**
+   * Add a single route to the router.
+   *
+   * @param id 
+   * @param props 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("26d15a55ebceab0f13f1422d758ccb5af6cd5a843b834697e7f3e7e5194e110e")
   public override fun addRoute(id: String, props: RouteBaseProps.Builder.() -> Unit): Route =
       addRoute(id, RouteBaseProps(props))
 
+  /**
+   * The Mesh which the VirtualRouter belongs to.
+   */
   public override fun mesh(): IMesh = unwrap(this).getMesh().let(IMesh::wrap)
 
+  /**
+   * The Amazon Resource Name (ARN) for the VirtualRouter.
+   */
   public override fun virtualRouterArn(): String = unwrap(this).getVirtualRouterArn()
 
+  /**
+   * The name of the VirtualRouter.
+   */
   public override fun virtualRouterName(): String = unwrap(this).getVirtualRouterName()
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.appmesh.VirtualRouter].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * Listener specification for the VirtualRouter.
+     *
+     * Default: - A listener on HTTP port 8080
+     *
+     * @param listeners Listener specification for the VirtualRouter. 
+     */
     public fun listeners(listeners: List<VirtualRouterListener>)
 
+    /**
+     * Listener specification for the VirtualRouter.
+     *
+     * Default: - A listener on HTTP port 8080
+     *
+     * @param listeners Listener specification for the VirtualRouter. 
+     */
     public fun listeners(vararg listeners: VirtualRouterListener)
 
+    /**
+     * The Mesh which the VirtualRouter belongs to.
+     *
+     * @param mesh The Mesh which the VirtualRouter belongs to. 
+     */
     public fun mesh(mesh: IMesh)
 
+    /**
+     * The name of the VirtualRouter.
+     *
+     * Default: - A name is automatically determined
+     *
+     * @param virtualRouterName The name of the VirtualRouter. 
+     */
     public fun virtualRouterName(virtualRouterName: String)
   }
 
@@ -46,17 +106,43 @@ public open class VirtualRouter internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.VirtualRouter.Builder =
         software.amazon.awscdk.services.appmesh.VirtualRouter.Builder.create(scope, id)
 
+    /**
+     * Listener specification for the VirtualRouter.
+     *
+     * Default: - A listener on HTTP port 8080
+     *
+     * @param listeners Listener specification for the VirtualRouter. 
+     */
     override fun listeners(listeners: List<VirtualRouterListener>) {
       cdkBuilder.listeners(listeners.map(VirtualRouterListener::unwrap))
     }
 
+    /**
+     * Listener specification for the VirtualRouter.
+     *
+     * Default: - A listener on HTTP port 8080
+     *
+     * @param listeners Listener specification for the VirtualRouter. 
+     */
     override fun listeners(vararg listeners: VirtualRouterListener): Unit =
         listeners(listeners.toList())
 
+    /**
+     * The Mesh which the VirtualRouter belongs to.
+     *
+     * @param mesh The Mesh which the VirtualRouter belongs to. 
+     */
     override fun mesh(mesh: IMesh) {
       cdkBuilder.mesh(mesh.let(IMesh::unwrap))
     }
 
+    /**
+     * The name of the VirtualRouter.
+     *
+     * Default: - A name is automatically determined
+     *
+     * @param virtualRouterName The name of the VirtualRouter. 
+     */
     override fun virtualRouterName(virtualRouterName: String) {
       cdkBuilder.virtualRouterName(virtualRouterName)
     }

@@ -9,12 +9,34 @@ import io.cloudshiftdev.awscdk.services.events.RuleTargetInputProperties
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * The input to send to the CloudWatch LogGroup target.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.logs.*;
+ * LogGroup logGroup;
+ * Rule rule;
+ * rule.addTarget(CloudWatchLogGroup.Builder.create(logGroup)
+ * .logEvent(LogGroupTargetInput.fromObject(LogGroupTargetInputOptions.builder()
+ * .timestamp(EventField.fromPath("$.time"))
+ * .message(EventField.fromPath("$.detail-type"))
+ * .build()))
+ * .build());
+ * ```
+ */
 public abstract class LogGroupTargetInput internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.events.targets.LogGroupTargetInput,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: IRule): RuleTargetInputProperties =
-      unwrap(this).bind(arg0.let(IRule::unwrap)).let(RuleTargetInputProperties::wrap)
+  /**
+   * Return the input properties for this input object.
+   *
+   * @param rule 
+   */
+  public open fun bind(rule: IRule): RuleTargetInputProperties =
+      unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetInputProperties::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.events.targets.LogGroupTargetInput,

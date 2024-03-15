@@ -10,31 +10,88 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
+/**
+ * A CodeBuild image running aarch64 Linux.
+ *
+ * This class has a bunch of public constants that represent the CodeBuild ARM images.
+ *
+ * You can also specify a custom image using the static method:
+ *
+ * * LinuxBuildImage.fromEcrRepository(repo[, tag])
+ * * LinuxBuildImage.fromDockerRegistry(image[, { secretsManagerCredentials }])
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.codebuild.*;
+ * IBuildImage linuxArmBuildImage = LinuxArmBuildImage.fromCodeBuildImageId("id");
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html)
+ */
 public open class LinuxArmBuildImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codebuild.LinuxArmBuildImage,
 ) : CdkObject(cdkObject), IBuildImage {
+  /**
+   * The default `ComputeType` to use with this image, if one was not specified in
+   * `BuildEnvironment#computeType` explicitly.
+   */
   public override fun defaultComputeType(): ComputeType =
       unwrap(this).getDefaultComputeType().let(ComputeType::wrap)
 
+  /**
+   * The Docker image identifier that the build environment uses.
+   */
   public override fun imageId(): String = unwrap(this).getImageId()
 
+  /**
+   * The type of principal that CodeBuild will use to pull this build Docker image.
+   */
   public override fun imagePullPrincipalType(): ImagePullPrincipalType? =
       unwrap(this).getImagePullPrincipalType()?.let(ImagePullPrincipalType::wrap)
 
+  /**
+   * An optional ECR repository that the image is hosted in.
+   */
   public override fun repository(): IRepository? =
       unwrap(this).getRepository()?.let(IRepository::wrap)
 
+  /**
+   * Make a buildspec to run the indicated script.
+   *
+   * @param entrypoint 
+   */
   public override fun runScriptBuildspec(entrypoint: String): BuildSpec =
       unwrap(this).runScriptBuildspec(entrypoint).let(BuildSpec::wrap)
 
+  /**
+   * The secretsManagerCredentials for access to a private registry.
+   */
   public override fun secretsManagerCredentials(): ISecret? =
       unwrap(this).getSecretsManagerCredentials()?.let(ISecret::wrap)
 
+  /**
+   * The type of build environment.
+   */
   public override fun type(): String = unwrap(this).getType()
 
+  /**
+   * Validates by checking the BuildEnvironment computeType as aarch64 images only support
+   * ComputeType.SMALL and ComputeType.LARGE.
+   *
+   * @param buildEnvironment BuildEnvironment. 
+   */
   public override fun validate(buildEnvironment: BuildEnvironment): List<String> =
       unwrap(this).validate(buildEnvironment.let(BuildEnvironment::unwrap))
 
+  /**
+   * Validates by checking the BuildEnvironment computeType as aarch64 images only support
+   * ComputeType.SMALL and ComputeType.LARGE.
+   *
+   * @param buildEnvironment BuildEnvironment. 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("ff36d333164150adb92277700abb7153d45f26e16fa225966e7bf6fc0bedfcee")
   public override fun validate(buildEnvironment: BuildEnvironment.Builder.() -> Unit): List<String>

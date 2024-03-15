@@ -7,11 +7,41 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Number
 import kotlin.Unit
 
+/**
+ * Properties for a NetworkLoadBalancerEndpoint.
+ *
+ * Example:
+ *
+ * ```
+ * Listener listener;
+ * CfnEIP eip;
+ * listener.addEndpointGroup("Group", EndpointGroupOptions.builder()
+ * .endpoints(List.of(
+ * CfnEipEndpoint.Builder.create(eip)
+ * .weight(128)
+ * .build()))
+ * .build());
+ * ```
+ */
 public interface CfnEipEndpointProps {
+  /**
+   * Endpoint weight across all endpoints in the group.
+   *
+   * Must be a value between 0 and 255.
+   *
+   * Default: 128
+   */
   public fun weight(): Number? = unwrap(this).getWeight()
 
+  /**
+   * A builder for [CfnEipEndpointProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param weight Endpoint weight across all endpoints in the group.
+     * Must be a value between 0 and 255.
+     */
     public fun weight(weight: Number)
   }
 
@@ -20,6 +50,10 @@ public interface CfnEipEndpointProps {
         software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpointProps.Builder =
         software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpointProps.builder()
 
+    /**
+     * @param weight Endpoint weight across all endpoints in the group.
+     * Must be a value between 0 and 255.
+     */
     override fun weight(weight: Number) {
       cdkBuilder.weight(weight)
     }
@@ -33,6 +67,13 @@ public interface CfnEipEndpointProps {
     override val cdkObject:
         software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpointProps,
   ) : CdkObject(cdkObject), CfnEipEndpointProps {
+    /**
+     * Endpoint weight across all endpoints in the group.
+     *
+     * Must be a value between 0 and 255.
+     *
+     * Default: 128
+     */
     override fun weight(): Number? = unwrap(this).getWeight()
   }
 

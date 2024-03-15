@@ -7,15 +7,49 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties to define a new GatewayRoute.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.appmesh.*;
+ * GatewayRouteSpec gatewayRouteSpec;
+ * VirtualGateway virtualGateway;
+ * GatewayRouteProps gatewayRouteProps = GatewayRouteProps.builder()
+ * .routeSpec(gatewayRouteSpec)
+ * .virtualGateway(virtualGateway)
+ * // the properties below are optional
+ * .gatewayRouteName("gatewayRouteName")
+ * .build();
+ * ```
+ */
 public interface GatewayRouteProps : GatewayRouteBaseProps {
+  /**
+   * The VirtualGateway this GatewayRoute is associated with.
+   */
   public fun virtualGateway(): IVirtualGateway
 
+  /**
+   * A builder for [GatewayRouteProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param gatewayRouteName The name of the GatewayRoute.
+     */
     public fun gatewayRouteName(gatewayRouteName: String)
 
+    /**
+     * @param routeSpec What protocol the route uses. 
+     */
     public fun routeSpec(routeSpec: GatewayRouteSpec)
 
+    /**
+     * @param virtualGateway The VirtualGateway this GatewayRoute is associated with. 
+     */
     public fun virtualGateway(virtualGateway: IVirtualGateway)
   }
 
@@ -23,14 +57,23 @@ public interface GatewayRouteProps : GatewayRouteBaseProps {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.GatewayRouteProps.Builder =
         software.amazon.awscdk.services.appmesh.GatewayRouteProps.builder()
 
+    /**
+     * @param gatewayRouteName The name of the GatewayRoute.
+     */
     override fun gatewayRouteName(gatewayRouteName: String) {
       cdkBuilder.gatewayRouteName(gatewayRouteName)
     }
 
+    /**
+     * @param routeSpec What protocol the route uses. 
+     */
     override fun routeSpec(routeSpec: GatewayRouteSpec) {
       cdkBuilder.routeSpec(routeSpec.let(GatewayRouteSpec::unwrap))
     }
 
+    /**
+     * @param virtualGateway The VirtualGateway this GatewayRoute is associated with. 
+     */
     override fun virtualGateway(virtualGateway: IVirtualGateway) {
       cdkBuilder.virtualGateway(virtualGateway.let(IVirtualGateway::unwrap))
     }
@@ -42,11 +85,22 @@ public interface GatewayRouteProps : GatewayRouteBaseProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteProps,
   ) : CdkObject(cdkObject), GatewayRouteProps {
+    /**
+     * The name of the GatewayRoute.
+     *
+     * Default: - an automatically generated name
+     */
     override fun gatewayRouteName(): String? = unwrap(this).getGatewayRouteName()
 
+    /**
+     * What protocol the route uses.
+     */
     override fun routeSpec(): GatewayRouteSpec =
         unwrap(this).getRouteSpec().let(GatewayRouteSpec::wrap)
 
+    /**
+     * The VirtualGateway this GatewayRoute is associated with.
+     */
     override fun virtualGateway(): IVirtualGateway =
         unwrap(this).getVirtualGateway().let(IVirtualGateway::wrap)
   }

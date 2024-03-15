@@ -4,12 +4,27 @@ package io.cloudshiftdev.awscdk.pipelines
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 
+/**
+ * Any class that produces, or is itself, a `FileSet`.
+ *
+ * Steps implicitly produce a primary FileSet as an output.
+ */
 public interface IFileSetProducer {
+  /**
+   * The `FileSet` produced by this file set producer.
+   *
+   * Default: - This producer doesn't produce any file set
+   */
   public fun primaryOutput(): FileSet? = unwrap(this).getPrimaryOutput()?.let(FileSet::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.pipelines.IFileSetProducer,
   ) : CdkObject(cdkObject), IFileSetProducer {
+    /**
+     * The `FileSet` produced by this file set producer.
+     *
+     * Default: - This producer doesn't produce any file set
+     */
     override fun primaryOutput(): FileSet? = unwrap(this).getPrimaryOutput()?.let(FileSet::wrap)
   }
 

@@ -8,13 +8,53 @@ import io.cloudshiftdev.awscdk.services.s3.Location
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Location to retrieve the input data, prior to calling Bedrock InvokeModel.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.stepfunctions.tasks.*;
+ * BedrockInvokeModelInputProps bedrockInvokeModelInputProps =
+ * BedrockInvokeModelInputProps.builder()
+ * .s3Location(Location.builder()
+ * .bucketName("bucketName")
+ * .objectKey("objectKey")
+ * // the properties below are optional
+ * .objectVersion("objectVersion")
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/connect-bedrock.html)
+ */
 public interface BedrockInvokeModelInputProps {
+  /**
+   * S3 object to retrieve the input data from.
+   *
+   * If the S3 location is not set, then the Body must be set.
+   *
+   * Default: Input data is retrieved from the `body` field
+   */
   public fun s3Location(): Location? = unwrap(this).getS3Location()?.let(Location::wrap)
 
+  /**
+   * A builder for [BedrockInvokeModelInputProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param s3Location S3 object to retrieve the input data from.
+     * If the S3 location is not set, then the Body must be set.
+     */
     public fun s3Location(s3Location: Location)
 
+    /**
+     * @param s3Location S3 object to retrieve the input data from.
+     * If the S3 location is not set, then the Body must be set.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2b187a28fa1b63eb5484ceff47fbc536aae7c8a9ff0f76477660323bf8a8a376")
     public fun s3Location(s3Location: Location.Builder.() -> Unit)
@@ -25,10 +65,18 @@ public interface BedrockInvokeModelInputProps {
         software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelInputProps.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelInputProps.builder()
 
+    /**
+     * @param s3Location S3 object to retrieve the input data from.
+     * If the S3 location is not set, then the Body must be set.
+     */
     override fun s3Location(s3Location: Location) {
       cdkBuilder.s3Location(s3Location.let(Location::unwrap))
     }
 
+    /**
+     * @param s3Location S3 object to retrieve the input data from.
+     * If the S3 location is not set, then the Body must be set.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2b187a28fa1b63eb5484ceff47fbc536aae7c8a9ff0f76477660323bf8a8a376")
     override fun s3Location(s3Location: Location.Builder.() -> Unit): Unit =
@@ -43,6 +91,13 @@ public interface BedrockInvokeModelInputProps {
     override val cdkObject:
         software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelInputProps,
   ) : CdkObject(cdkObject), BedrockInvokeModelInputProps {
+    /**
+     * S3 object to retrieve the input data from.
+     *
+     * If the S3 location is not set, then the Body must be set.
+     *
+     * Default: Input data is retrieved from the `body` field
+     */
     override fun s3Location(): Location? = unwrap(this).getS3Location()?.let(Location::wrap)
   }
 

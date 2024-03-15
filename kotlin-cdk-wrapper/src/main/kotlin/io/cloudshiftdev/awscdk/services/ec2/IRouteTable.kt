@@ -5,12 +5,21 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * An abstract route table.
+ */
 public interface IRouteTable {
+  /**
+   * Route table ID.
+   */
   public fun routeTableId(): String
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ec2.IRouteTable,
   ) : CdkObject(cdkObject), IRouteTable {
+    /**
+     * Route table ID.
+     */
     override fun routeTableId(): String = unwrap(this).getRouteTableId()
   }
 

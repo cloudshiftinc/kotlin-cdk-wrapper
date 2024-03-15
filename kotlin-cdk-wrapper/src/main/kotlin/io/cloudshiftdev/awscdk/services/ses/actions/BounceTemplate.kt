@@ -7,18 +7,53 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * A bounce template.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ses.actions.*;
+ * BounceTemplate bounceTemplate = BounceTemplate.MAILBOX_DOES_NOT_EXIST;
+ * ```
+ */
 public open class BounceTemplate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.actions.BounceTemplate,
 ) : CdkObject(cdkObject) {
+  /**
+   *
+   */
   public open fun props(): BounceTemplateProps =
       unwrap(this).getProps().let(BounceTemplateProps::wrap)
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.ses.actions.BounceTemplate].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * Human-readable text to include in the bounce message.
+     *
+     * @param message Human-readable text to include in the bounce message. 
+     */
     public fun message(message: String)
 
+    /**
+     * The SMTP reply code, as defined by RFC 5321.
+     *
+     * [Documentation](https://tools.ietf.org/html/rfc5321)
+     * @param smtpReplyCode The SMTP reply code, as defined by RFC 5321. 
+     */
     public fun smtpReplyCode(smtpReplyCode: String)
 
+    /**
+     * The SMTP enhanced status code, as defined by RFC 3463.
+     *
+     * [Documentation](https://tools.ietf.org/html/rfc3463)
+     * @param statusCode The SMTP enhanced status code, as defined by RFC 3463. 
+     */
     public fun statusCode(statusCode: String)
   }
 
@@ -26,14 +61,31 @@ public open class BounceTemplate internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ses.actions.BounceTemplate.Builder =
         software.amazon.awscdk.services.ses.actions.BounceTemplate.Builder.create()
 
+    /**
+     * Human-readable text to include in the bounce message.
+     *
+     * @param message Human-readable text to include in the bounce message. 
+     */
     override fun message(message: String) {
       cdkBuilder.message(message)
     }
 
+    /**
+     * The SMTP reply code, as defined by RFC 5321.
+     *
+     * [Documentation](https://tools.ietf.org/html/rfc5321)
+     * @param smtpReplyCode The SMTP reply code, as defined by RFC 5321. 
+     */
     override fun smtpReplyCode(smtpReplyCode: String) {
       cdkBuilder.smtpReplyCode(smtpReplyCode)
     }
 
+    /**
+     * The SMTP enhanced status code, as defined by RFC 3463.
+     *
+     * [Documentation](https://tools.ietf.org/html/rfc3463)
+     * @param statusCode The SMTP enhanced status code, as defined by RFC 3463. 
+     */
     override fun statusCode(statusCode: String) {
       cdkBuilder.statusCode(statusCode)
     }

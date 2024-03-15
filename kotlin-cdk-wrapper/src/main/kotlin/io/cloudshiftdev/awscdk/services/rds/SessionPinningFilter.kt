@@ -5,9 +5,26 @@ package io.cloudshiftdev.awscdk.services.rds
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * SessionPinningFilter.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.rds.*;
+ * SessionPinningFilter sessionPinningFilter = SessionPinningFilter.of("filterName");
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy.html#rds-proxy-pinning)
+ */
 public open class SessionPinningFilter internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.SessionPinningFilter,
 ) : CdkObject(cdkObject) {
+  /**
+   * Filter name.
+   */
   public open fun filterName(): String = unwrap(this).getFilterName()
 
   public companion object {

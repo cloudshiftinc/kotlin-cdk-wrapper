@@ -4,14 +4,27 @@ package io.cloudshiftdev.awscdk.services.sns
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 
+/**
+ * Topic subscription.
+ */
 public interface ITopicSubscription {
-  public fun bind(arg0: ITopic): TopicSubscriptionConfig
+  /**
+   * Returns a configuration used to subscribe to an SNS topic.
+   *
+   * @param topic topic for which subscription will be configured. 
+   */
+  public fun bind(topic: ITopic): TopicSubscriptionConfig
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.sns.ITopicSubscription,
   ) : CdkObject(cdkObject), ITopicSubscription {
-    override fun bind(arg0: ITopic): TopicSubscriptionConfig =
-        unwrap(this).bind(arg0.let(ITopic::unwrap)).let(TopicSubscriptionConfig::wrap)
+    /**
+     * Returns a configuration used to subscribe to an SNS topic.
+     *
+     * @param topic topic for which subscription will be configured. 
+     */
+    override fun bind(topic: ITopic): TopicSubscriptionConfig =
+        unwrap(this).bind(topic.let(ITopic::unwrap)).let(TopicSubscriptionConfig::wrap)
   }
 
   public companion object {

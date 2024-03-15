@@ -5,11 +5,39 @@ package io.cloudshiftdev.awscdk.services.rds
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * The versions for the MySQL instance engines (those returned by `DatabaseInstanceEngine.mysql`).
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * DatabaseInstance iopsInstance = DatabaseInstance.Builder.create(this, "IopsInstance")
+ * .engine(DatabaseInstanceEngine.mysql(MySqlInstanceEngineProps.builder().version(MysqlEngineVersion.VER_8_0_30).build()))
+ * .vpc(vpc)
+ * .storageType(StorageType.IO1)
+ * .iops(5000)
+ * .build();
+ * DatabaseInstance gp3Instance = DatabaseInstance.Builder.create(this, "Gp3Instance")
+ * .engine(DatabaseInstanceEngine.mysql(MySqlInstanceEngineProps.builder().version(MysqlEngineVersion.VER_8_0_30).build()))
+ * .vpc(vpc)
+ * .allocatedStorage(500)
+ * .storageType(StorageType.GP3)
+ * .storageThroughput(500)
+ * .build();
+ * ```
+ */
 public open class MysqlEngineVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.MysqlEngineVersion,
 ) : CdkObject(cdkObject) {
+  /**
+   * The full version string, for example, "10.5.28".
+   */
   public open fun mysqlFullVersion(): String = unwrap(this).getMysqlFullVersion()
 
+  /**
+   * The major version of the engine, for example, "10.5".
+   */
   public open fun mysqlMajorVersion(): String = unwrap(this).getMysqlMajorVersion()
 
   public companion object {

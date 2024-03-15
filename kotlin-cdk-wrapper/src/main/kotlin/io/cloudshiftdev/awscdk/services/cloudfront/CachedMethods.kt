@@ -6,9 +6,24 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.collections.List
 
+/**
+ * The HTTP methods that the Behavior will cache requests on.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+ * CachedMethods cachedMethods = CachedMethods.CACHE_GET_HEAD;
+ * ```
+ */
 public open class CachedMethods internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.CachedMethods,
 ) : CdkObject(cdkObject) {
+  /**
+   * HTTP methods supported.
+   */
   public open fun methods(): List<String> = unwrap(this).getMethods()
 
   public companion object {

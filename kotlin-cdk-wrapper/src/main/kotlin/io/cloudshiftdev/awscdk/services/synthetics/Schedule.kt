@@ -8,9 +8,30 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Schedule for canary runs.
+ *
+ * Example:
+ *
+ * ```
+ * Canary canary = Canary.Builder.create(this, "MyCanary")
+ * .schedule(Schedule.rate(Duration.minutes(5)))
+ * .test(Test.custom(CustomTestOptions.builder()
+ * .code(Code.fromAsset(join(__dirname, "canary")))
+ * .handler("index.handler")
+ * .build()))
+ * .runtime(Runtime.SYNTHETICS_NODEJS_PUPPETEER_6_2)
+ * .environmentVariables(Map.of(
+ * "stage", "prod"))
+ * .build();
+ * ```
+ */
 public open class Schedule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.synthetics.Schedule,
 ) : CdkObject(cdkObject) {
+  /**
+   * The Schedule expression.
+   */
   public open fun expressionString(): String = unwrap(this).getExpressionString()
 
   public companion object {

@@ -8,15 +8,47 @@ import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Result of binding a lifecycle hook to a target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+ * import io.cloudshiftdev.awscdk.services.iam.*;
+ * Role role;
+ * LifecycleHookTargetConfig lifecycleHookTargetConfig = LifecycleHookTargetConfig.builder()
+ * .createdRole(role)
+ * .notificationTargetArn("notificationTargetArn")
+ * .build();
+ * ```
+ */
 public interface LifecycleHookTargetConfig {
+  /**
+   * The IRole that was used to bind the lifecycle hook to the target.
+   */
   public fun createdRole(): IRole
 
+  /**
+   * The targetArn that the lifecycle hook was bound to.
+   */
   public fun notificationTargetArn(): String
 
+  /**
+   * A builder for [LifecycleHookTargetConfig]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param createdRole The IRole that was used to bind the lifecycle hook to the target. 
+     */
     public fun createdRole(createdRole: IRole)
 
+    /**
+     * @param notificationTargetArn The targetArn that the lifecycle hook was bound to. 
+     */
     public fun notificationTargetArn(notificationTargetArn: String)
   }
 
@@ -25,10 +57,16 @@ public interface LifecycleHookTargetConfig {
         software.amazon.awscdk.services.autoscaling.LifecycleHookTargetConfig.Builder =
         software.amazon.awscdk.services.autoscaling.LifecycleHookTargetConfig.builder()
 
+    /**
+     * @param createdRole The IRole that was used to bind the lifecycle hook to the target. 
+     */
     override fun createdRole(createdRole: IRole) {
       cdkBuilder.createdRole(createdRole.let(IRole::unwrap))
     }
 
+    /**
+     * @param notificationTargetArn The targetArn that the lifecycle hook was bound to. 
+     */
     override fun notificationTargetArn(notificationTargetArn: String) {
       cdkBuilder.notificationTargetArn(notificationTargetArn)
     }
@@ -40,8 +78,14 @@ public interface LifecycleHookTargetConfig {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.autoscaling.LifecycleHookTargetConfig,
   ) : CdkObject(cdkObject), LifecycleHookTargetConfig {
+    /**
+     * The IRole that was used to bind the lifecycle hook to the target.
+     */
     override fun createdRole(): IRole = unwrap(this).getCreatedRole().let(IRole::wrap)
 
+    /**
+     * The targetArn that the lifecycle hook was bound to.
+     */
     override fun notificationTargetArn(): String = unwrap(this).getNotificationTargetArn()
   }
 

@@ -10,14 +10,64 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
+/**
+ * What to do when a client makes a request to a listener.
+ *
+ * Some actions can be combined with other ones (specifically,
+ * you can perform authentication before serving the request).
+ *
+ * Multiple actions form a linked chain; the chain must always terminate in a
+ * *(weighted)forward*, *fixedResponse* or *redirect* action.
+ *
+ * If an action supports chaining, the next action can be indicated
+ * by passing it in the `next` property.
+ *
+ * (Called `ListenerAction` instead of the more strictly correct
+ * `ListenerAction` because this is the class most users interact
+ * with, and we want to make it not too visually overwhelming).
+ *
+ * Example:
+ *
+ * ```
+ * ApplicationListener listener;
+ * ApplicationTargetGroup myTargetGroup;
+ * listener.addAction("DefaultAction", AddApplicationActionProps.builder()
+ * .action(ListenerAction.authenticateOidc(AuthenticateOidcOptions.builder()
+ * .authorizationEndpoint("https://example.com/openid")
+ * // Other OIDC properties here
+ * .clientId("...")
+ * .clientSecret(SecretValue.secretsManager("..."))
+ * .issuer("...")
+ * .tokenEndpoint("...")
+ * .userInfoEndpoint("...")
+ * // Next
+ * .next(ListenerAction.forward(List.of(myTargetGroup)))
+ * .build()))
+ * .build());
+ * ```
+ */
 public open class ListenerAction internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction,
 ) : CdkObject(cdkObject), IListenerAction {
+  /**
+   * Called when the action is being used in a listener.
+   *
+   * @param scope 
+   * @param listener 
+   * @param associatingConstruct
+   */
   public open fun bind(scope: Construct, listener: IApplicationListener) {
     unwrap(this).bind(scope.let(Construct::unwrap), listener.let(IApplicationListener::unwrap))
   }
 
+  /**
+   * Called when the action is being used in a listener.
+   *
+   * @param scope 
+   * @param listener 
+   * @param associatingConstruct
+   */
   public open fun bind(
     scope: Construct,
     listener: IApplicationListener,
@@ -27,9 +77,15 @@ public open class ListenerAction internal constructor(
         associatingConstruct.let(IConstruct::unwrap))
   }
 
+  /**
+   * Render the listener default actions in this chain.
+   */
   public override fun renderActions(): List<CfnListener.ActionProperty> =
       unwrap(this).renderActions().map(CfnListener.ActionProperty::wrap)
 
+  /**
+   * Render the listener rule actions in this chain.
+   */
   public override fun renderRuleActions(): List<CfnListenerRule.ActionProperty> =
       unwrap(this).renderRuleActions().map(CfnListenerRule.ActionProperty::wrap)
 

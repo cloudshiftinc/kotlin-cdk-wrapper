@@ -6,11 +6,40 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 
+/**
+ * Defines HTTP route matching based on the URL path of the request.
+ *
+ * Example:
+ *
+ * ```
+ * VirtualRouter router;
+ * VirtualNode node;
+ * router.addRoute("route-http", RouteBaseProps.builder()
+ * .routeSpec(RouteSpec.http(HttpRouteSpecOptions.builder()
+ * .weightedTargets(List.of(WeightedTarget.builder()
+ * .virtualNode(node)
+ * .weight(50)
+ * .build(), WeightedTarget.builder()
+ * .virtualNode(node)
+ * .weight(50)
+ * .build()))
+ * .match(HttpRouteMatch.builder()
+ * .path(HttpRoutePathMatch.startsWith("/path-to-app"))
+ * .build())
+ * .build()))
+ * .build());
+ * ```
+ */
 public abstract class HttpRoutePathMatch internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.HttpRoutePathMatch,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct): HttpRoutePathMatchConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(HttpRoutePathMatchConfig::wrap)
+  /**
+   * Returns the route path match configuration.
+   *
+   * @param scope 
+   */
+  public open fun bind(scope: Construct): HttpRoutePathMatchConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(HttpRoutePathMatchConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.HttpRoutePathMatch,

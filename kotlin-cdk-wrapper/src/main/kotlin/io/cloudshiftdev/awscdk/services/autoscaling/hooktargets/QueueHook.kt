@@ -10,14 +10,48 @@ import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Use an SQS queue as a hook target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.autoscaling.hooktargets.*;
+ * import io.cloudshiftdev.awscdk.services.sqs.*;
+ * Queue queue;
+ * QueueHook queueHook = new QueueHook(queue);
+ * ```
+ */
 public open class QueueHook internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.autoscaling.hooktargets.QueueHook,
 ) : CdkObject(cdkObject), ILifecycleHookTarget {
+  /**
+   * If an `IRole` is found in `options`, grant it access to send messages.
+   *
+   * Otherwise, create a new `IRole` and grant it access to send messages.
+   *
+   * @return the `IRole` with access to send messages and the ARN of the queue it has access to send
+   * messages to.
+   * @param _scope 
+   * @param options 
+   */
   public override fun bind(_scope: Construct, options: BindHookTargetOptions):
       LifecycleHookTargetConfig = unwrap(this).bind(_scope.let(Construct::unwrap),
       options.let(BindHookTargetOptions::unwrap)).let(LifecycleHookTargetConfig::wrap)
 
+  /**
+   * If an `IRole` is found in `options`, grant it access to send messages.
+   *
+   * Otherwise, create a new `IRole` and grant it access to send messages.
+   *
+   * @return the `IRole` with access to send messages and the ARN of the queue it has access to send
+   * messages to.
+   * @param _scope 
+   * @param options 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("a256b345ffa3a5089e3c2315d1f614a5e6fb6ed617a236cb05a1ffe90b1f565d")
   public override fun bind(_scope: Construct, options: BindHookTargetOptions.Builder.() -> Unit):

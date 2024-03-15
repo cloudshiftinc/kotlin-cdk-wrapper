@@ -13,31 +13,114 @@ import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * Define a VPN Connection.
+ *
+ * Example:
+ *
+ * ```
+ * // Across all tunnels in the account/region
+ * Metric allDataOut = VpnConnection.metricAllTunnelDataOut();
+ * // For a specific vpn connection
+ * VpnConnection vpnConnection = vpc.addVpnConnection("Dynamic", VpnConnectionOptions.builder()
+ * .ip("1.2.3.4")
+ * .build());
+ * Metric state = vpnConnection.metricTunnelState();
+ * ```
+ */
 public open class VpnConnection internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.VpnConnection,
 ) : VpnConnectionBase(cdkObject) {
+  /**
+   * The ASN of the customer gateway.
+   */
   public override fun customerGatewayAsn(): Number = unwrap(this).getCustomerGatewayAsn()
 
+  /**
+   * The id of the customer gateway.
+   */
   public override fun customerGatewayId(): String = unwrap(this).getCustomerGatewayId()
 
+  /**
+   * The ip address of the customer gateway.
+   */
   public override fun customerGatewayIp(): String = unwrap(this).getCustomerGatewayIp()
 
+  /**
+   * The id of the VPN connection.
+   */
   public override fun vpnId(): String = unwrap(this).getVpnId()
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.VpnConnection].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The ASN of the customer gateway.
+     *
+     * Default: 65000
+     *
+     * @param asn The ASN of the customer gateway. 
+     */
     public fun asn(asn: Number)
 
+    /**
+     * The ip address of the customer gateway.
+     *
+     * @param ip The ip address of the customer gateway. 
+     */
     public fun ip(ip: String)
 
+    /**
+     * The static routes to be routed from the VPN gateway to the customer gateway.
+     *
+     * Default: Dynamic routing (BGP)
+     *
+     * @param staticRoutes The static routes to be routed from the VPN gateway to the customer
+     * gateway. 
+     */
     public fun staticRoutes(staticRoutes: List<String>)
 
+    /**
+     * The static routes to be routed from the VPN gateway to the customer gateway.
+     *
+     * Default: Dynamic routing (BGP)
+     *
+     * @param staticRoutes The static routes to be routed from the VPN gateway to the customer
+     * gateway. 
+     */
     public fun staticRoutes(vararg staticRoutes: String)
 
+    /**
+     * The tunnel options for the VPN connection.
+     *
+     * At most two elements (one per tunnel).
+     * Duplicates not allowed.
+     *
+     * Default: Amazon generated tunnel options
+     *
+     * @param tunnelOptions The tunnel options for the VPN connection. 
+     */
     public fun tunnelOptions(tunnelOptions: List<VpnTunnelOption>)
 
+    /**
+     * The tunnel options for the VPN connection.
+     *
+     * At most two elements (one per tunnel).
+     * Duplicates not allowed.
+     *
+     * Default: Amazon generated tunnel options
+     *
+     * @param tunnelOptions The tunnel options for the VPN connection. 
+     */
     public fun tunnelOptions(vararg tunnelOptions: VpnTunnelOption)
 
+    /**
+     * The VPC to connect to.
+     *
+     * @param vpc The VPC to connect to. 
+     */
     public fun vpc(vpc: IVpc)
   }
 
@@ -48,28 +131,81 @@ public open class VpnConnection internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.VpnConnection.Builder =
         software.amazon.awscdk.services.ec2.VpnConnection.Builder.create(scope, id)
 
+    /**
+     * The ASN of the customer gateway.
+     *
+     * Default: 65000
+     *
+     * @param asn The ASN of the customer gateway. 
+     */
     override fun asn(asn: Number) {
       cdkBuilder.asn(asn)
     }
 
+    /**
+     * The ip address of the customer gateway.
+     *
+     * @param ip The ip address of the customer gateway. 
+     */
     override fun ip(ip: String) {
       cdkBuilder.ip(ip)
     }
 
+    /**
+     * The static routes to be routed from the VPN gateway to the customer gateway.
+     *
+     * Default: Dynamic routing (BGP)
+     *
+     * @param staticRoutes The static routes to be routed from the VPN gateway to the customer
+     * gateway. 
+     */
     override fun staticRoutes(staticRoutes: List<String>) {
       cdkBuilder.staticRoutes(staticRoutes)
     }
 
+    /**
+     * The static routes to be routed from the VPN gateway to the customer gateway.
+     *
+     * Default: Dynamic routing (BGP)
+     *
+     * @param staticRoutes The static routes to be routed from the VPN gateway to the customer
+     * gateway. 
+     */
     override fun staticRoutes(vararg staticRoutes: String): Unit =
         staticRoutes(staticRoutes.toList())
 
+    /**
+     * The tunnel options for the VPN connection.
+     *
+     * At most two elements (one per tunnel).
+     * Duplicates not allowed.
+     *
+     * Default: Amazon generated tunnel options
+     *
+     * @param tunnelOptions The tunnel options for the VPN connection. 
+     */
     override fun tunnelOptions(tunnelOptions: List<VpnTunnelOption>) {
       cdkBuilder.tunnelOptions(tunnelOptions.map(VpnTunnelOption::unwrap))
     }
 
+    /**
+     * The tunnel options for the VPN connection.
+     *
+     * At most two elements (one per tunnel).
+     * Duplicates not allowed.
+     *
+     * Default: Amazon generated tunnel options
+     *
+     * @param tunnelOptions The tunnel options for the VPN connection. 
+     */
     override fun tunnelOptions(vararg tunnelOptions: VpnTunnelOption): Unit =
         tunnelOptions(tunnelOptions.toList())
 
+    /**
+     * The VPC to connect to.
+     *
+     * @param vpc The VPC to connect to. 
+     */
     override fun vpc(vpc: IVpc) {
       cdkBuilder.vpc(vpc.let(IVpc::unwrap))
     }

@@ -6,15 +6,45 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Boolean
 import kotlin.String
 
+/**
+ * Defines a parameter for an extension.
+ *
+ * Example:
+ *
+ * ```
+ * Function fn;
+ * Extension.Builder.create(this, "MyExtension")
+ * .actions(List.of(
+ * Action.Builder.create()
+ * .actionPoints(List.of(ActionPoint.ON_DEPLOYMENT_START))
+ * .eventDestination(new LambdaDestination(fn))
+ * .build()))
+ * .parameters(List.of(Parameter.required("testParam", "true"),
+ * Parameter.notRequired("testNotRequiredParam")))
+ * .build();
+ * ```
+ */
 public open class Parameter internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.Parameter,
 ) : CdkObject(cdkObject) {
+  /**
+   * The description of the parameter.
+   */
   public open fun description(): String? = unwrap(this).getDescription()
 
+  /**
+   * A boolean that indicates if the parameter is required or optional.
+   */
   public open fun isRequired(): Boolean = unwrap(this).getIsRequired()
 
+  /**
+   * The name of the parameter.
+   */
   public open fun name(): String = unwrap(this).getName()
 
+  /**
+   * The value of the parameter.
+   */
   public open fun `value`(): String? = unwrap(this).getValue()
 
   public companion object {

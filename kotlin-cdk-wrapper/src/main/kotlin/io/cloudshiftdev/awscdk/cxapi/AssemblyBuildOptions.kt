@@ -6,7 +6,20 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.cxapi.*;
+ * AssemblyBuildOptions assemblyBuildOptions = AssemblyBuildOptions.builder().build();
+ * ```
+ */
 public interface AssemblyBuildOptions {
+  /**
+   * A builder for [AssemblyBuildOptions]
+   */
   @CdkDslMarker
   public interface Builder
 

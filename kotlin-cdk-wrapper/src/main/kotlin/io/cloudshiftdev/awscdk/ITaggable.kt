@@ -4,12 +4,21 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 
+/**
+ * Interface to implement tags.
+ */
 public interface ITaggable {
+  /**
+   * TagManager to set, remove and format tags.
+   */
   public fun tags(): TagManager
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.ITaggable,
   ) : CdkObject(cdkObject), ITaggable {
+    /**
+     * TagManager to set, remove and format tags.
+     */
     override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
   }
 

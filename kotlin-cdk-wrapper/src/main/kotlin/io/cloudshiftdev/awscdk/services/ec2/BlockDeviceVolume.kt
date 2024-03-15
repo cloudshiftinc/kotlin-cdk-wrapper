@@ -8,12 +8,42 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Describes a block device mapping for an EC2 instance or Auto Scaling group.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * InstanceType instanceType;
+ * IMachineImage machineImage;
+ * Instance.Builder.create(this, "Instance")
+ * .vpc(vpc)
+ * .instanceType(instanceType)
+ * .machineImage(machineImage)
+ * // ...
+ * .blockDevices(List.of(BlockDevice.builder()
+ * .deviceName("/dev/sda1")
+ * .volume(BlockDeviceVolume.ebs(50))
+ * .build(), BlockDevice.builder()
+ * .deviceName("/dev/sdm")
+ * .volume(BlockDeviceVolume.ebs(100))
+ * .build()))
+ * .build();
+ * ```
+ */
 public open class BlockDeviceVolume internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.BlockDeviceVolume,
 ) : CdkObject(cdkObject) {
+  /**
+   * EBS device info.
+   */
   public open fun ebsDevice(): EbsDeviceProps? =
       unwrap(this).getEbsDevice()?.let(EbsDeviceProps::wrap)
 
+  /**
+   * Virtual device name.
+   */
   public open fun virtualName(): String? = unwrap(this).getVirtualName()
 
   public companion object {

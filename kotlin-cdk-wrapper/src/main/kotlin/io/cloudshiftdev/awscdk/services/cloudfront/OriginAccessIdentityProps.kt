@@ -7,11 +7,36 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties of CloudFront OriginAccessIdentity.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.cloudfront.*;
+ * OriginAccessIdentityProps originAccessIdentityProps = OriginAccessIdentityProps.builder()
+ * .comment("comment")
+ * .build();
+ * ```
+ */
 public interface OriginAccessIdentityProps {
+  /**
+   * Any comments you want to include about the origin access identity.
+   *
+   * Default: "Allows CloudFront to reach the bucket"
+   */
   public fun comment(): String? = unwrap(this).getComment()
 
+  /**
+   * A builder for [OriginAccessIdentityProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param comment Any comments you want to include about the origin access identity.
+     */
     public fun comment(comment: String)
   }
 
@@ -20,6 +45,9 @@ public interface OriginAccessIdentityProps {
         software.amazon.awscdk.services.cloudfront.OriginAccessIdentityProps.Builder =
         software.amazon.awscdk.services.cloudfront.OriginAccessIdentityProps.builder()
 
+    /**
+     * @param comment Any comments you want to include about the origin access identity.
+     */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
@@ -31,6 +59,11 @@ public interface OriginAccessIdentityProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.cloudfront.OriginAccessIdentityProps,
   ) : CdkObject(cdkObject), OriginAccessIdentityProps {
+    /**
+     * Any comments you want to include about the origin access identity.
+     *
+     * Default: "Allows CloudFront to reach the bucket"
+     */
     override fun comment(): String? = unwrap(this).getComment()
   }
 

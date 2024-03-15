@@ -6,13 +6,38 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Boolean
 import kotlin.String
 
+/**
+ * Controller version.
+ *
+ * Corresponds to the image tag of 'amazon/aws-load-balancer-controller' image.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster.Builder.create(this, "HelloEKS")
+ * .version(KubernetesVersion.V1_29)
+ * .albController(AlbControllerOptions.builder()
+ * .version(AlbControllerVersion.V2_6_2)
+ * .build())
+ * .build();
+ * ```
+ */
 public open class AlbControllerVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.eks.AlbControllerVersion,
 ) : CdkObject(cdkObject) {
+  /**
+   * Whether or not its a custom version.
+   */
   public open fun custom(): Boolean = unwrap(this).getCustom()
 
+  /**
+   * The version of the helm chart to use.
+   */
   public open fun helmChartVersion(): String = unwrap(this).getHelmChartVersion()
 
+  /**
+   * The version string.
+   */
   public open fun version(): String = unwrap(this).getVersion()
 
   public companion object {

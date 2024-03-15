@@ -7,23 +7,84 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for defining a `CfnPortfolioProductAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.servicecatalog.*;
+ * CfnPortfolioProductAssociationProps cfnPortfolioProductAssociationProps =
+ * CfnPortfolioProductAssociationProps.builder()
+ * .portfolioId("portfolioId")
+ * .productId("productId")
+ * // the properties below are optional
+ * .acceptLanguage("acceptLanguage")
+ * .sourcePortfolioId("sourcePortfolioId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioproductassociation.html)
+ */
 public interface CfnPortfolioProductAssociationProps {
+  /**
+   * The language code.
+   *
+   * * `jp` - Japanese
+   * * `zh` - Chinese
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioproductassociation.html#cfn-servicecatalog-portfolioproductassociation-acceptlanguage)
+   */
   public fun acceptLanguage(): String? = unwrap(this).getAcceptLanguage()
 
+  /**
+   * The portfolio identifier.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioproductassociation.html#cfn-servicecatalog-portfolioproductassociation-portfolioid)
+   */
   public fun portfolioId(): String
 
+  /**
+   * The product identifier.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioproductassociation.html#cfn-servicecatalog-portfolioproductassociation-productid)
+   */
   public fun productId(): String
 
+  /**
+   * The identifier of the source portfolio.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioproductassociation.html#cfn-servicecatalog-portfolioproductassociation-sourceportfolioid)
+   */
   public fun sourcePortfolioId(): String? = unwrap(this).getSourcePortfolioId()
 
+  /**
+   * A builder for [CfnPortfolioProductAssociationProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param acceptLanguage The language code.
+     * * `jp` - Japanese
+     * * `zh` - Chinese
+     */
     public fun acceptLanguage(acceptLanguage: String)
 
+    /**
+     * @param portfolioId The portfolio identifier. 
+     */
     public fun portfolioId(portfolioId: String)
 
+    /**
+     * @param productId The product identifier. 
+     */
     public fun productId(productId: String)
 
+    /**
+     * @param sourcePortfolioId The identifier of the source portfolio.
+     */
     public fun sourcePortfolioId(sourcePortfolioId: String)
   }
 
@@ -32,18 +93,32 @@ public interface CfnPortfolioProductAssociationProps {
         software.amazon.awscdk.services.servicecatalog.CfnPortfolioProductAssociationProps.Builder =
         software.amazon.awscdk.services.servicecatalog.CfnPortfolioProductAssociationProps.builder()
 
+    /**
+     * @param acceptLanguage The language code.
+     * * `jp` - Japanese
+     * * `zh` - Chinese
+     */
     override fun acceptLanguage(acceptLanguage: String) {
       cdkBuilder.acceptLanguage(acceptLanguage)
     }
 
+    /**
+     * @param portfolioId The portfolio identifier. 
+     */
     override fun portfolioId(portfolioId: String) {
       cdkBuilder.portfolioId(portfolioId)
     }
 
+    /**
+     * @param productId The product identifier. 
+     */
     override fun productId(productId: String) {
       cdkBuilder.productId(productId)
     }
 
+    /**
+     * @param sourcePortfolioId The identifier of the source portfolio.
+     */
     override fun sourcePortfolioId(sourcePortfolioId: String) {
       cdkBuilder.sourcePortfolioId(sourcePortfolioId)
     }
@@ -57,12 +132,35 @@ public interface CfnPortfolioProductAssociationProps {
     override val cdkObject:
         software.amazon.awscdk.services.servicecatalog.CfnPortfolioProductAssociationProps,
   ) : CdkObject(cdkObject), CfnPortfolioProductAssociationProps {
+    /**
+     * The language code.
+     *
+     * * `jp` - Japanese
+     * * `zh` - Chinese
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioproductassociation.html#cfn-servicecatalog-portfolioproductassociation-acceptlanguage)
+     */
     override fun acceptLanguage(): String? = unwrap(this).getAcceptLanguage()
 
+    /**
+     * The portfolio identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioproductassociation.html#cfn-servicecatalog-portfolioproductassociation-portfolioid)
+     */
     override fun portfolioId(): String = unwrap(this).getPortfolioId()
 
+    /**
+     * The product identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioproductassociation.html#cfn-servicecatalog-portfolioproductassociation-productid)
+     */
     override fun productId(): String = unwrap(this).getProductId()
 
+    /**
+     * The identifier of the source portfolio.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioproductassociation.html#cfn-servicecatalog-portfolioproductassociation-sourceportfolioid)
+     */
     override fun sourcePortfolioId(): String? = unwrap(this).getSourcePortfolioId()
   }
 

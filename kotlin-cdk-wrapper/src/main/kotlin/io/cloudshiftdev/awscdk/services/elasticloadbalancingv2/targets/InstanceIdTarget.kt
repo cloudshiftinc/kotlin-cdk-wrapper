@@ -9,14 +9,45 @@ import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.INetworkLoadBalan
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.INetworkTargetGroup
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.LoadBalancerTargetProps
 
+/**
+ * An EC2 instance that is the target for load balancing.
+ *
+ * If you register a target of this type, you are responsible for making
+ * sure the load balancer's security group can connect to the instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.targets.*;
+ * InstanceIdTarget instanceIdTarget = new InstanceIdTarget("instanceId", 123);
+ * ```
+ */
 public open class InstanceIdTarget internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceIdTarget,
 ) : CdkObject(cdkObject), IApplicationLoadBalancerTarget, INetworkLoadBalancerTarget {
+  /**
+   * Register this instance target with a load balancer.
+   *
+   * Don't call this, it is called automatically when you add the target to a
+   * load balancer.
+   *
+   * @param targetGroup 
+   */
   public override fun attachToApplicationTargetGroup(targetGroup: IApplicationTargetGroup):
       LoadBalancerTargetProps =
       unwrap(this).attachToApplicationTargetGroup(targetGroup.let(IApplicationTargetGroup::unwrap)).let(LoadBalancerTargetProps::wrap)
 
+  /**
+   * Register this instance target with a load balancer.
+   *
+   * Don't call this, it is called automatically when you add the target to a
+   * load balancer.
+   *
+   * @param targetGroup 
+   */
   public override fun attachToNetworkTargetGroup(targetGroup: INetworkTargetGroup):
       LoadBalancerTargetProps =
       unwrap(this).attachToNetworkTargetGroup(targetGroup.let(INetworkTargetGroup::unwrap)).let(LoadBalancerTargetProps::wrap)

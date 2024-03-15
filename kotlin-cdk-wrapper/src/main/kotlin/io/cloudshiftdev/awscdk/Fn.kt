@@ -9,6 +9,22 @@ import kotlin.String
 import kotlin.collections.List
 import kotlin.collections.Map
 
+/**
+ * CloudFormation intrinsic functions.
+ *
+ * http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference.html
+ *
+ * Example:
+ *
+ * ```
+ * CfnInclude cfnTemplate;
+ * // mutating the rule
+ * CfnParameter myParameter;
+ * CfnRule rule = cfnTemplate.getRule("MyRule");
+ * rule.addAssertion(Fn.conditionContains(List.of("m1.small"), myParameter.getValueAsString()),
+ * "MyParameter has to be m1.small");
+ * ```
+ */
 public open class Fn internal constructor(
   internal override val cdkObject: software.amazon.awscdk.Fn,
 ) : CdkObject(cdkObject) {

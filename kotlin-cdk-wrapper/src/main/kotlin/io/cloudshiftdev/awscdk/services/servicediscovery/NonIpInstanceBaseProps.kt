@@ -8,11 +8,50 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
 
+/**
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.*;
+ * import io.cloudshiftdev.awscdk.*;
+ * App app = new App();
+ * Stack stack = new Stack(app, "aws-servicediscovery-integ");
+ * HttpNamespace namespace = HttpNamespace.Builder.create(stack, "MyNamespace")
+ * .name("MyHTTPNamespace")
+ * .build();
+ * Service service1 = namespace.createService("NonIpService", BaseServiceProps.builder()
+ * .description("service registering non-ip instances")
+ * .build());
+ * service1.registerNonIpInstance("NonIpInstance", NonIpInstanceBaseProps.builder()
+ * .customAttributes(Map.of("arn", "arn:aws:s3:::mybucket"))
+ * .build());
+ * Service service2 = namespace.createService("IpService", BaseServiceProps.builder()
+ * .description("service registering ip instances")
+ * .healthCheck(HealthCheckConfig.builder()
+ * .type(HealthCheckType.HTTP)
+ * .resourcePath("/check")
+ * .build())
+ * .build());
+ * service2.registerIpInstance("IpInstance", IpInstanceBaseProps.builder()
+ * .ipv4("54.239.25.192")
+ * .build());
+ * app.synth();
+ * ```
+ */
 public interface NonIpInstanceBaseProps : BaseInstanceProps {
+  /**
+   * A builder for [NonIpInstanceBaseProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param customAttributes Custom attributes of the instance.
+     */
     public fun customAttributes(customAttributes: Map<String, String>)
 
+    /**
+     * @param instanceId The id of the instance resource.
+     */
     public fun instanceId(instanceId: String)
   }
 
@@ -21,10 +60,16 @@ public interface NonIpInstanceBaseProps : BaseInstanceProps {
         software.amazon.awscdk.services.servicediscovery.NonIpInstanceBaseProps.Builder =
         software.amazon.awscdk.services.servicediscovery.NonIpInstanceBaseProps.builder()
 
+    /**
+     * @param customAttributes Custom attributes of the instance.
+     */
     override fun customAttributes(customAttributes: Map<String, String>) {
       cdkBuilder.customAttributes(customAttributes)
     }
 
+    /**
+     * @param instanceId The id of the instance resource.
+     */
     override fun instanceId(instanceId: String) {
       cdkBuilder.instanceId(instanceId)
     }
@@ -36,9 +81,19 @@ public interface NonIpInstanceBaseProps : BaseInstanceProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.servicediscovery.NonIpInstanceBaseProps,
   ) : CdkObject(cdkObject), NonIpInstanceBaseProps {
+    /**
+     * Custom attributes of the instance.
+     *
+     * Default: none
+     */
     override fun customAttributes(): Map<String, String> = unwrap(this).getCustomAttributes() ?:
         emptyMap()
 
+    /**
+     * The id of the instance resource.
+     *
+     * Default: Automatically generated name
+     */
     override fun instanceId(): String? = unwrap(this).getInstanceId()
   }
 

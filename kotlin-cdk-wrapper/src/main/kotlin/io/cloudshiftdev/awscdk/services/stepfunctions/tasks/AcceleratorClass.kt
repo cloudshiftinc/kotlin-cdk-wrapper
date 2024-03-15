@@ -5,10 +5,27 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * The generation of Elastic Inference (EI) instance.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.stepfunctions.tasks.*;
+ * AcceleratorClass acceleratorClass = AcceleratorClass.of("version");
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/sagemaker/latest/dg/ei.html)
+ */
 public open class AcceleratorClass internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorClass,
 ) : CdkObject(cdkObject) {
+  /**
+   * * Elastic Inference accelerator generation.
+   */
   public open fun version(): String = unwrap(this).getVersion()
 
   public companion object {

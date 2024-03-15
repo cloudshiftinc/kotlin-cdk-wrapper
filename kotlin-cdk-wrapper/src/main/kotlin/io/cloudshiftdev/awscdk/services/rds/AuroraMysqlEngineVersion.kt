@@ -5,11 +5,46 @@ package io.cloudshiftdev.awscdk.services.rds
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * The versions for the Aurora MySQL cluster engine (those returned by
+ * `DatabaseClusterEngine.auroraMysql`).
+ *
+ * https://docs.aws.amazon.com/AmazonRDS/latest/AuroraMySQLReleaseNotes/Welcome.html
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
+ * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_3_01_0).build()))
+ * .credentials(Credentials.fromGeneratedSecret("clusteradmin")) // Optional - will default to
+ * 'admin' username and generated password
+ * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
+ * .publiclyAccessible(false)
+ * .build()))
+ * .readers(List.of(ClusterInstance.provisioned("reader1",
+ * ProvisionedClusterInstanceProps.builder().promotionTier(1).build()),
+ * ClusterInstance.serverlessV2("reader2")))
+ * .vpcSubnets(SubnetSelection.builder()
+ * .subnetType(SubnetType.PRIVATE_WITH_EGRESS)
+ * .build())
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 public open class AuroraMysqlEngineVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion,
 ) : CdkObject(cdkObject) {
+  /**
+   * The full version string, for example, "5.7.mysql_aurora.1.78.3.6".
+   */
   public open fun auroraMysqlFullVersion(): String = unwrap(this).getAuroraMysqlFullVersion()
 
+  /**
+   * The major version of the engine.
+   *
+   * Currently, it's either "5.7", or "8.0".
+   */
   public open fun auroraMysqlMajorVersion(): String = unwrap(this).getAuroraMysqlMajorVersion()
 
   public companion object {

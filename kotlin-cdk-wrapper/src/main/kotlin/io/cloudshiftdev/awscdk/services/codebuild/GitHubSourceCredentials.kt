@@ -10,12 +10,35 @@ import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * The source credentials used when contacting the GitHub API.
+ *
+ * **Note**: CodeBuild only allows a single credential for GitHub
+ * to be saved in a given AWS account in a given region -
+ * any attempt to add more than one will result in an error.
+ *
+ * Example:
+ *
+ * ```
+ * GitHubSourceCredentials.Builder.create(this, "CodeBuildGitHubCreds")
+ * .accessToken(SecretValue.secretsManager("my-token"))
+ * .build();
+ * ```
+ */
 public open class GitHubSourceCredentials internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codebuild.GitHubSourceCredentials,
 ) : Resource(cdkObject) {
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.codebuild.GitHubSourceCredentials].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The personal access token to use when contacting the GitHub API.
+     *
+     * @param accessToken The personal access token to use when contacting the GitHub API. 
+     */
     public fun accessToken(accessToken: SecretValue)
   }
 
@@ -27,6 +50,11 @@ public open class GitHubSourceCredentials internal constructor(
         software.amazon.awscdk.services.codebuild.GitHubSourceCredentials.Builder =
         software.amazon.awscdk.services.codebuild.GitHubSourceCredentials.Builder.create(scope, id)
 
+    /**
+     * The personal access token to use when contacting the GitHub API.
+     *
+     * @param accessToken The personal access token to use when contacting the GitHub API. 
+     */
     override fun accessToken(accessToken: SecretValue) {
       cdkBuilder.accessToken(accessToken.let(SecretValue::unwrap))
     }

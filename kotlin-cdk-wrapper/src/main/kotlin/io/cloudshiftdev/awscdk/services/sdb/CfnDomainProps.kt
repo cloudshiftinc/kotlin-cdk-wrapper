@@ -7,11 +7,38 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for defining a `CfnDomain`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.sdb.*;
+ * CfnDomainProps cfnDomainProps = CfnDomainProps.builder()
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sdb-domain.html)
+ */
 public interface CfnDomainProps {
+  /**
+   * Information about the SimpleDB domain.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sdb-domain.html#cfn-sdb-domain-description)
+   */
   public fun description(): String? = unwrap(this).getDescription()
 
+  /**
+   * A builder for [CfnDomainProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param description Information about the SimpleDB domain.
+     */
     public fun description(description: String)
   }
 
@@ -19,6 +46,9 @@ public interface CfnDomainProps {
     private val cdkBuilder: software.amazon.awscdk.services.sdb.CfnDomainProps.Builder =
         software.amazon.awscdk.services.sdb.CfnDomainProps.builder()
 
+    /**
+     * @param description Information about the SimpleDB domain.
+     */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
@@ -29,6 +59,11 @@ public interface CfnDomainProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.sdb.CfnDomainProps,
   ) : CdkObject(cdkObject), CfnDomainProps {
+    /**
+     * Information about the SimpleDB domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sdb-domain.html#cfn-sdb-domain-description)
+     */
     override fun description(): String? = unwrap(this).getDescription()
   }
 

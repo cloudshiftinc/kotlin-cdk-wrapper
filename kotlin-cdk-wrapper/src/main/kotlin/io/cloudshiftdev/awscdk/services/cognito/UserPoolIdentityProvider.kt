@@ -6,6 +6,9 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 
+/**
+ * User pool third-party identity providers.
+ */
 public open class UserPoolIdentityProvider internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cognito.UserPoolIdentityProvider,
 ) : CdkObject(cdkObject) {

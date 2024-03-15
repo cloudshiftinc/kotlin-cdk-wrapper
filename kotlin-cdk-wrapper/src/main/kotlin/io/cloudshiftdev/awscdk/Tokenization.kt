@@ -11,6 +11,9 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
+/**
+ * Less oft-needed functions to manipulate Tokens.
+ */
 public open class Tokenization internal constructor(
   internal override val cdkObject: software.amazon.awscdk.Tokenization,
 ) : CdkObject(cdkObject) {

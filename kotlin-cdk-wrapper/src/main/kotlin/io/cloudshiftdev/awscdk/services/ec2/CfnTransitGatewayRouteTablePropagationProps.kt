@@ -7,15 +7,52 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for defining a `CfnTransitGatewayRouteTablePropagation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * CfnTransitGatewayRouteTablePropagationProps cfnTransitGatewayRouteTablePropagationProps =
+ * CfnTransitGatewayRouteTablePropagationProps.builder()
+ * .transitGatewayAttachmentId("transitGatewayAttachmentId")
+ * .transitGatewayRouteTableId("transitGatewayRouteTableId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetablepropagation.html)
+ */
 public interface CfnTransitGatewayRouteTablePropagationProps {
+  /**
+   * The ID of the attachment.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetablepropagation.html#cfn-ec2-transitgatewayroutetablepropagation-transitgatewayattachmentid)
+   */
   public fun transitGatewayAttachmentId(): String
 
+  /**
+   * The ID of the propagation route table.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetablepropagation.html#cfn-ec2-transitgatewayroutetablepropagation-transitgatewayroutetableid)
+   */
   public fun transitGatewayRouteTableId(): String
 
+  /**
+   * A builder for [CfnTransitGatewayRouteTablePropagationProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param transitGatewayAttachmentId The ID of the attachment. 
+     */
     public fun transitGatewayAttachmentId(transitGatewayAttachmentId: String)
 
+    /**
+     * @param transitGatewayRouteTableId The ID of the propagation route table. 
+     */
     public fun transitGatewayRouteTableId(transitGatewayRouteTableId: String)
   }
 
@@ -24,10 +61,16 @@ public interface CfnTransitGatewayRouteTablePropagationProps {
         software.amazon.awscdk.services.ec2.CfnTransitGatewayRouteTablePropagationProps.Builder =
         software.amazon.awscdk.services.ec2.CfnTransitGatewayRouteTablePropagationProps.builder()
 
+    /**
+     * @param transitGatewayAttachmentId The ID of the attachment. 
+     */
     override fun transitGatewayAttachmentId(transitGatewayAttachmentId: String) {
       cdkBuilder.transitGatewayAttachmentId(transitGatewayAttachmentId)
     }
 
+    /**
+     * @param transitGatewayRouteTableId The ID of the propagation route table. 
+     */
     override fun transitGatewayRouteTableId(transitGatewayRouteTableId: String) {
       cdkBuilder.transitGatewayRouteTableId(transitGatewayRouteTableId)
     }
@@ -41,8 +84,18 @@ public interface CfnTransitGatewayRouteTablePropagationProps {
     override val cdkObject:
         software.amazon.awscdk.services.ec2.CfnTransitGatewayRouteTablePropagationProps,
   ) : CdkObject(cdkObject), CfnTransitGatewayRouteTablePropagationProps {
+    /**
+     * The ID of the attachment.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetablepropagation.html#cfn-ec2-transitgatewayroutetablepropagation-transitgatewayattachmentid)
+     */
     override fun transitGatewayAttachmentId(): String = unwrap(this).getTransitGatewayAttachmentId()
 
+    /**
+     * The ID of the propagation route table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroutetablepropagation.html#cfn-ec2-transitgatewayroutetablepropagation-transitgatewayroutetableid)
+     */
     override fun transitGatewayRouteTableId(): String = unwrap(this).getTransitGatewayRouteTableId()
   }
 

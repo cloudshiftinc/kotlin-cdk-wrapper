@@ -7,6 +7,21 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Configure how Cognito sends emails.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool.Builder.create(this, "myuserpool")
+ * .email(UserPoolEmail.withSES(UserPoolSESOptions.builder()
+ * .fromEmail("noreply&#64;myawesomeapp.com")
+ * .fromName("Awesome App")
+ * .replyTo("support&#64;myawesomeapp.com")
+ * .build()))
+ * .build();
+ * ```
+ */
 public abstract class UserPoolEmail internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cognito.UserPoolEmail,
 ) : CdkObject(cdkObject) {

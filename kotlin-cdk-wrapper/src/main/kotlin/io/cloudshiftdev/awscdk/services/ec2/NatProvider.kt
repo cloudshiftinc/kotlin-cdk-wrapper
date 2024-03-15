@@ -8,22 +8,66 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
+/**
+ * NAT providers.
+ *
+ * Determines what type of NAT provider to create, either NAT gateways or NAT
+ * instance.
+ *
+ * Example:
+ *
+ * ```
+ * InstanceType instanceType;
+ * NatInstanceProviderV2 provider = NatProvider.instanceV2(NatInstanceProps.builder()
+ * .instanceType(instanceType)
+ * .defaultAllowedTraffic(NatTrafficDirection.OUTBOUND_ONLY)
+ * .build());
+ * Vpc.Builder.create(this, "TheVPC")
+ * .natGatewayProvider(provider)
+ * .build();
+ * provider.connections.allowFrom(Peer.ipv4("1.2.3.4/8"), Port.tcp(80));
+ * ```
+ */
 public abstract class NatProvider internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.NatProvider,
 ) : CdkObject(cdkObject) {
-  public open fun configureNat(arg0: ConfigureNatOptions) {
-    unwrap(this).configureNat(arg0.let(ConfigureNatOptions::unwrap))
+  /**
+   * Called by the VPC to configure NAT.
+   *
+   * Don't call this directly, the VPC will call it automatically.
+   *
+   * @param options 
+   */
+  public open fun configureNat(options: ConfigureNatOptions) {
+    unwrap(this).configureNat(options.let(ConfigureNatOptions::unwrap))
   }
 
+  /**
+   * Called by the VPC to configure NAT.
+   *
+   * Don't call this directly, the VPC will call it automatically.
+   *
+   * @param options 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("dd4e1c7dc445ecccb0628de1d2dc0402a07b93c21145f259b74eb40763acacfd")
-  public open fun configureNat(arg0: ConfigureNatOptions.Builder.() -> Unit): Unit =
-      configureNat(ConfigureNatOptions(arg0))
+  public open fun configureNat(options: ConfigureNatOptions.Builder.() -> Unit): Unit =
+      configureNat(ConfigureNatOptions(options))
 
-  public open fun configureSubnet(arg0: PrivateSubnet) {
-    unwrap(this).configureSubnet(arg0.let(PrivateSubnet::unwrap))
+  /**
+   * Configures subnet with the gateway.
+   *
+   * Don't call this directly, the VPC will call it automatically.
+   *
+   * @param subnet 
+   */
+  public open fun configureSubnet(subnet: PrivateSubnet) {
+    unwrap(this).configureSubnet(subnet.let(PrivateSubnet::unwrap))
   }
 
+  /**
+   * Return list of gateways spawned by the provider.
+   */
   public open fun configuredGateways(): List<GatewayConfig> =
       unwrap(this).getConfiguredGateways().map(GatewayConfig::wrap)
 

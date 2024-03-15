@@ -7,11 +7,44 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * AppSync definition.
+ *
+ * Specify how you want to define your AppSync API.
+ *
+ * Example:
+ *
+ * ```
+ * GraphqlApi sourceApi = GraphqlApi.Builder.create(this, "FirstSourceAPI")
+ * .name("FirstSourceAPI")
+ * .definition(Definition.fromFile(join(__dirname, "appsync.merged-api-1.graphql")))
+ * .build();
+ * IGraphqlApi importedMergedApi = GraphqlApi.fromGraphqlApiAttributes(this, "ImportedMergedApi",
+ * GraphqlApiAttributes.builder()
+ * .graphqlApiId("MyApiId")
+ * .graphqlApiArn("MyApiArn")
+ * .build());
+ * IRole importedExecutionRole = Role.fromRoleArn(this, "ExecutionRole",
+ * "arn:aws:iam::ACCOUNT:role/MyExistingRole");
+ * SourceApiAssociation.Builder.create(this, "SourceApiAssociation2")
+ * .sourceApi(sourceApi)
+ * .mergedApi(importedMergedApi)
+ * .mergeType(MergeType.MANUAL_MERGE)
+ * .mergedApiExecutionRole(importedExecutionRole)
+ * .build();
+ * ```
+ */
 public abstract class Definition internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appsync.Definition,
 ) : CdkObject(cdkObject) {
+  /**
+   * Schema, when AppSync API is created from schema file.
+   */
   public open fun schema(): ISchema? = unwrap(this).getSchema()?.let(ISchema::wrap)
 
+  /**
+   * Source APIs for Merged API.
+   */
   public open fun sourceApiOptions(): SourceApiOptions? =
       unwrap(this).getSourceApiOptions()?.let(SourceApiOptions::wrap)
 

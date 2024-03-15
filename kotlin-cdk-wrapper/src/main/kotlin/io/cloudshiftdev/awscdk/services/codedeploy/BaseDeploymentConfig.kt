@@ -6,11 +6,21 @@ import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * The base class for ServerDeploymentConfig, EcsDeploymentConfig, and LambdaDeploymentConfig
+ * deployment configurations.
+ */
 public abstract class BaseDeploymentConfig internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codedeploy.BaseDeploymentConfig,
 ) : Resource(cdkObject), IBaseDeploymentConfig {
+  /**
+   * The arn of the deployment config.
+   */
   public override fun deploymentConfigArn(): String = unwrap(this).getDeploymentConfigArn()
 
+  /**
+   * The name of the deployment config.
+   */
   public override fun deploymentConfigName(): String = unwrap(this).getDeploymentConfigName()
 
   private class Wrapper(

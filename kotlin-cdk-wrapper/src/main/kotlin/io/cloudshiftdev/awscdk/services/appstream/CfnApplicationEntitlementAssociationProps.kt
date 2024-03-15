@@ -7,19 +7,65 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for defining a `CfnApplicationEntitlementAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.appstream.*;
+ * CfnApplicationEntitlementAssociationProps cfnApplicationEntitlementAssociationProps =
+ * CfnApplicationEntitlementAssociationProps.builder()
+ * .applicationIdentifier("applicationIdentifier")
+ * .entitlementName("entitlementName")
+ * .stackName("stackName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-applicationentitlementassociation.html)
+ */
 public interface CfnApplicationEntitlementAssociationProps {
+  /**
+   * The identifier of the application.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-applicationentitlementassociation.html#cfn-appstream-applicationentitlementassociation-applicationidentifier)
+   */
   public fun applicationIdentifier(): String
 
+  /**
+   * The name of the entitlement.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-applicationentitlementassociation.html#cfn-appstream-applicationentitlementassociation-entitlementname)
+   */
   public fun entitlementName(): String
 
+  /**
+   * The name of the stack.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-applicationentitlementassociation.html#cfn-appstream-applicationentitlementassociation-stackname)
+   */
   public fun stackName(): String
 
+  /**
+   * A builder for [CfnApplicationEntitlementAssociationProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param applicationIdentifier The identifier of the application. 
+     */
     public fun applicationIdentifier(applicationIdentifier: String)
 
+    /**
+     * @param entitlementName The name of the entitlement. 
+     */
     public fun entitlementName(entitlementName: String)
 
+    /**
+     * @param stackName The name of the stack. 
+     */
     public fun stackName(stackName: String)
   }
 
@@ -29,14 +75,23 @@ public interface CfnApplicationEntitlementAssociationProps {
         =
         software.amazon.awscdk.services.appstream.CfnApplicationEntitlementAssociationProps.builder()
 
+    /**
+     * @param applicationIdentifier The identifier of the application. 
+     */
     override fun applicationIdentifier(applicationIdentifier: String) {
       cdkBuilder.applicationIdentifier(applicationIdentifier)
     }
 
+    /**
+     * @param entitlementName The name of the entitlement. 
+     */
     override fun entitlementName(entitlementName: String) {
       cdkBuilder.entitlementName(entitlementName)
     }
 
+    /**
+     * @param stackName The name of the stack. 
+     */
     override fun stackName(stackName: String) {
       cdkBuilder.stackName(stackName)
     }
@@ -50,10 +105,25 @@ public interface CfnApplicationEntitlementAssociationProps {
     override val cdkObject:
         software.amazon.awscdk.services.appstream.CfnApplicationEntitlementAssociationProps,
   ) : CdkObject(cdkObject), CfnApplicationEntitlementAssociationProps {
+    /**
+     * The identifier of the application.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-applicationentitlementassociation.html#cfn-appstream-applicationentitlementassociation-applicationidentifier)
+     */
     override fun applicationIdentifier(): String = unwrap(this).getApplicationIdentifier()
 
+    /**
+     * The name of the entitlement.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-applicationentitlementassociation.html#cfn-appstream-applicationentitlementassociation-entitlementname)
+     */
     override fun entitlementName(): String = unwrap(this).getEntitlementName()
 
+    /**
+     * The name of the stack.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-applicationentitlementassociation.html#cfn-appstream-applicationentitlementassociation-stackname)
+     */
     override fun stackName(): String = unwrap(this).getStackName()
   }
 

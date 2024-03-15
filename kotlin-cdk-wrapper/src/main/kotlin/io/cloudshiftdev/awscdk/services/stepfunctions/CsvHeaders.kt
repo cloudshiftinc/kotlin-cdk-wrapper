@@ -6,12 +6,30 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.collections.List
 
+/**
+ * Configuration for CSV header options for a CSV Item Reader.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.stepfunctions.*;
+ * CsvHeaders csvHeaders = CsvHeaders.use(List.of("headers"));
+ * ```
+ */
 public open class CsvHeaders internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.CsvHeaders,
 ) : CdkObject(cdkObject) {
+  /**
+   * Location of headers in CSV file.
+   */
   public open fun headerLocation(): CsvHeaderLocation =
       unwrap(this).getHeaderLocation().let(CsvHeaderLocation::wrap)
 
+  /**
+   * List of headers if `headerLocation` is `GIVEN`.
+   */
   public open fun headers(): List<String> = unwrap(this).getHeaders() ?: emptyList()
 
   public companion object {

@@ -6,6 +6,31 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * A database instance engine.
+ *
+ * Provides mapping to DatabaseEngine used for
+ * secret rotation.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * DatabaseInstance iopsInstance = DatabaseInstance.Builder.create(this, "IopsInstance")
+ * .engine(DatabaseInstanceEngine.mysql(MySqlInstanceEngineProps.builder().version(MysqlEngineVersion.VER_8_0_30).build()))
+ * .vpc(vpc)
+ * .storageType(StorageType.IO1)
+ * .iops(5000)
+ * .build();
+ * DatabaseInstance gp3Instance = DatabaseInstance.Builder.create(this, "Gp3Instance")
+ * .engine(DatabaseInstanceEngine.mysql(MySqlInstanceEngineProps.builder().version(MysqlEngineVersion.VER_8_0_30).build()))
+ * .vpc(vpc)
+ * .allocatedStorage(500)
+ * .storageType(StorageType.GP3)
+ * .storageThroughput(500)
+ * .build();
+ * ```
+ */
 public open class DatabaseInstanceEngine internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceEngine,
 ) : CdkObject(cdkObject) {

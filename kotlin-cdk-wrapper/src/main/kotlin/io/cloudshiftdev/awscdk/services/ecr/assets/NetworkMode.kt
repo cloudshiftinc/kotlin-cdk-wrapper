@@ -5,9 +5,26 @@ package io.cloudshiftdev.awscdk.services.ecr.assets
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * networking mode on build time supported by docker.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.ecr.assets.DockerImageAsset;
+ * import io.cloudshiftdev.awscdk.services.ecr.assets.NetworkMode;
+ * DockerImageAsset asset = DockerImageAsset.Builder.create(this, "MyBuildImage")
+ * .directory(join(__dirname, "my-image"))
+ * .networkMode(NetworkMode.HOST)
+ * .build();
+ * ```
+ */
 public open class NetworkMode internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecr.assets.NetworkMode,
 ) : CdkObject(cdkObject) {
+  /**
+   * The networking mode to use for docker build.
+   */
   public open fun mode(): String = unwrap(this).getMode()
 
   public companion object {

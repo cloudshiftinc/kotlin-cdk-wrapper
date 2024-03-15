@@ -10,14 +10,56 @@ import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * A custom Deployment Configuration for a Lambda Deployment Group.
+ *
+ * Example:
+ *
+ * ```
+ * LambdaApplication application;
+ * Alias alias;
+ * LambdaDeploymentConfig config = LambdaDeploymentConfig.Builder.create(this, "CustomConfig")
+ * .trafficRouting(TimeBasedCanaryTrafficRouting.Builder.create()
+ * .interval(Duration.minutes(15))
+ * .percentage(5)
+ * .build())
+ * .build();
+ * LambdaDeploymentGroup deploymentGroup = LambdaDeploymentGroup.Builder.create(this,
+ * "BlueGreenDeployment")
+ * .application(application)
+ * .alias(alias)
+ * .deploymentConfig(config)
+ * .build();
+ * ```
+ */
 public open class LambdaDeploymentConfig internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig,
 ) : BaseDeploymentConfig(cdkObject), ILambdaDeploymentConfig {
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.codedeploy.LambdaDeploymentConfig].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The physical, human-readable name of the Deployment Configuration.
+     *
+     * Default: - automatically generated name
+     *
+     * @param deploymentConfigName The physical, human-readable name of the Deployment
+     * Configuration. 
+     */
     public fun deploymentConfigName(deploymentConfigName: String)
 
+    /**
+     * The configuration that specifies how traffic is shifted from the 'blue' target group to the
+     * 'green' target group during a deployment.
+     *
+     * Default: AllAtOnce
+     *
+     * @param trafficRouting The configuration that specifies how traffic is shifted from the 'blue'
+     * target group to the 'green' target group during a deployment. 
+     */
     public fun trafficRouting(trafficRouting: TrafficRouting)
   }
 
@@ -29,10 +71,27 @@ public open class LambdaDeploymentConfig internal constructor(
         software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig.Builder =
         software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig.Builder.create(scope, id)
 
+    /**
+     * The physical, human-readable name of the Deployment Configuration.
+     *
+     * Default: - automatically generated name
+     *
+     * @param deploymentConfigName The physical, human-readable name of the Deployment
+     * Configuration. 
+     */
     override fun deploymentConfigName(deploymentConfigName: String) {
       cdkBuilder.deploymentConfigName(deploymentConfigName)
     }
 
+    /**
+     * The configuration that specifies how traffic is shifted from the 'blue' target group to the
+     * 'green' target group during a deployment.
+     *
+     * Default: AllAtOnce
+     *
+     * @param trafficRouting The configuration that specifies how traffic is shifted from the 'blue'
+     * target group to the 'green' target group during a deployment. 
+     */
     override fun trafficRouting(trafficRouting: TrafficRouting) {
       cdkBuilder.trafficRouting(trafficRouting.let(TrafficRouting::unwrap))
     }

@@ -8,15 +8,53 @@ import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for defining a `CfnResourcePolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ssm.*;
+ * Object policy;
+ * CfnResourcePolicyProps cfnResourcePolicyProps = CfnResourcePolicyProps.builder()
+ * .policy(policy)
+ * .resourceArn("resourceArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcepolicy.html)
+ */
 public interface CfnResourcePolicyProps {
+  /**
+   * A policy you want to associate with a resource.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcepolicy.html#cfn-ssm-resourcepolicy-policy)
+   */
   public fun policy(): Any
 
+  /**
+   * The Amazon Resource Name (ARN) of the resource to which you want to attach a policy.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcepolicy.html#cfn-ssm-resourcepolicy-resourcearn)
+   */
   public fun resourceArn(): String
 
+  /**
+   * A builder for [CfnResourcePolicyProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param policy A policy you want to associate with a resource. 
+     */
     public fun policy(policy: Any)
 
+    /**
+     * @param resourceArn The Amazon Resource Name (ARN) of the resource to which you want to attach
+     * a policy. 
+     */
     public fun resourceArn(resourceArn: String)
   }
 
@@ -24,10 +62,17 @@ public interface CfnResourcePolicyProps {
     private val cdkBuilder: software.amazon.awscdk.services.ssm.CfnResourcePolicyProps.Builder =
         software.amazon.awscdk.services.ssm.CfnResourcePolicyProps.builder()
 
+    /**
+     * @param policy A policy you want to associate with a resource. 
+     */
     override fun policy(policy: Any) {
       cdkBuilder.policy(policy)
     }
 
+    /**
+     * @param resourceArn The Amazon Resource Name (ARN) of the resource to which you want to attach
+     * a policy. 
+     */
     override fun resourceArn(resourceArn: String) {
       cdkBuilder.resourceArn(resourceArn)
     }
@@ -39,8 +84,18 @@ public interface CfnResourcePolicyProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ssm.CfnResourcePolicyProps,
   ) : CdkObject(cdkObject), CfnResourcePolicyProps {
+    /**
+     * A policy you want to associate with a resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcepolicy.html#cfn-ssm-resourcepolicy-policy)
+     */
     override fun policy(): Any = unwrap(this).getPolicy()
 
+    /**
+     * The Amazon Resource Name (ARN) of the resource to which you want to attach a policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcepolicy.html#cfn-ssm-resourcepolicy-resourcearn)
+     */
     override fun resourceArn(): String = unwrap(this).getResourceArn()
   }
 

@@ -7,15 +7,51 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * An environment variable to be set in the container run as a task.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.stepfunctions.tasks.*;
+ * TaskEnvironmentVariable taskEnvironmentVariable = TaskEnvironmentVariable.builder()
+ * .name("name")
+ * .value("value")
+ * .build();
+ * ```
+ */
 public interface TaskEnvironmentVariable {
+  /**
+   * Name for the environment variable.
+   *
+   * Use `JsonPath` class's static methods to specify name from a JSON path.
+   */
   public fun name(): String
 
+  /**
+   * Value of the environment variable.
+   *
+   * Use `JsonPath` class's static methods to specify value from a JSON path.
+   */
   public fun `value`(): String
 
+  /**
+   * A builder for [TaskEnvironmentVariable]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param name Name for the environment variable. 
+     * Use `JsonPath` class's static methods to specify name from a JSON path.
+     */
     public fun name(name: String)
 
+    /**
+     * @param value Value of the environment variable. 
+     * Use `JsonPath` class's static methods to specify value from a JSON path.
+     */
     public fun `value`(`value`: String)
   }
 
@@ -24,10 +60,18 @@ public interface TaskEnvironmentVariable {
         software.amazon.awscdk.services.stepfunctions.tasks.TaskEnvironmentVariable.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.TaskEnvironmentVariable.builder()
 
+    /**
+     * @param name Name for the environment variable. 
+     * Use `JsonPath` class's static methods to specify name from a JSON path.
+     */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
+    /**
+     * @param value Value of the environment variable. 
+     * Use `JsonPath` class's static methods to specify value from a JSON path.
+     */
     override fun `value`(`value`: String) {
       cdkBuilder.`value`(`value`)
     }
@@ -40,8 +84,18 @@ public interface TaskEnvironmentVariable {
     override val cdkObject:
         software.amazon.awscdk.services.stepfunctions.tasks.TaskEnvironmentVariable,
   ) : CdkObject(cdkObject), TaskEnvironmentVariable {
+    /**
+     * Name for the environment variable.
+     *
+     * Use `JsonPath` class's static methods to specify name from a JSON path.
+     */
     override fun name(): String = unwrap(this).getName()
 
+    /**
+     * Value of the environment variable.
+     *
+     * Use `JsonPath` class's static methods to specify value from a JSON path.
+     */
     override fun `value`(): String = unwrap(this).getValue()
   }
 

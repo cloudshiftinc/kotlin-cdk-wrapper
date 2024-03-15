@@ -9,16 +9,49 @@ import io.cloudshiftdev.constructs.IConstruct
 import kotlin.Boolean
 import kotlin.Unit
 
+/**
+ * Aspect that applies IMDS configuration on EC2 Launch Template constructs.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * LaunchTemplateRequireImdsv2Aspect launchTemplateRequireImdsv2Aspect =
+ * LaunchTemplateRequireImdsv2Aspect.Builder.create()
+ * .suppressWarnings(false)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-metadataoptions.html)
+ */
 public open class LaunchTemplateRequireImdsv2Aspect internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2Aspect,
 ) : CdkObject(cdkObject), IAspect {
+  /**
+   * All aspects can visit an IConstruct.
+   *
+   * @param node 
+   */
   public override fun visit(node: IConstruct) {
     unwrap(this).visit(node.let(IConstruct::unwrap))
   }
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.LaunchTemplateRequireImdsv2Aspect].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * Whether warning annotations from this Aspect should be suppressed or not.
+     *
+     * Default: - false
+     *
+     * @param suppressWarnings Whether warning annotations from this Aspect should be suppressed or
+     * not. 
+     */
     public fun suppressWarnings(suppressWarnings: Boolean)
   }
 
@@ -27,6 +60,14 @@ public open class LaunchTemplateRequireImdsv2Aspect internal constructor(
         software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2Aspect.Builder =
         software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2Aspect.Builder.create()
 
+    /**
+     * Whether warning annotations from this Aspect should be suppressed or not.
+     *
+     * Default: - false
+     *
+     * @param suppressWarnings Whether warning annotations from this Aspect should be suppressed or
+     * not. 
+     */
     override fun suppressWarnings(suppressWarnings: Boolean) {
       cdkBuilder.suppressWarnings(suppressWarnings)
     }

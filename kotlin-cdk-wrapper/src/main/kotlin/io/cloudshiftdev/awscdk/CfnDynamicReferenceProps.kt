@@ -7,15 +7,45 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for a Dynamic Reference.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * CfnDynamicReferenceProps cfnDynamicReferenceProps = CfnDynamicReferenceProps.builder()
+ * .referenceKey("referenceKey")
+ * .service(CfnDynamicReferenceService.SSM)
+ * .build();
+ * ```
+ */
 public interface CfnDynamicReferenceProps {
+  /**
+   * The reference key of the dynamic reference.
+   */
   public fun referenceKey(): String
 
+  /**
+   * The service to retrieve the dynamic reference from.
+   */
   public fun service(): CfnDynamicReferenceService
 
+  /**
+   * A builder for [CfnDynamicReferenceProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param referenceKey The reference key of the dynamic reference. 
+     */
     public fun referenceKey(referenceKey: String)
 
+    /**
+     * @param service The service to retrieve the dynamic reference from. 
+     */
     public fun service(service: CfnDynamicReferenceService)
   }
 
@@ -23,10 +53,16 @@ public interface CfnDynamicReferenceProps {
     private val cdkBuilder: software.amazon.awscdk.CfnDynamicReferenceProps.Builder =
         software.amazon.awscdk.CfnDynamicReferenceProps.builder()
 
+    /**
+     * @param referenceKey The reference key of the dynamic reference. 
+     */
     override fun referenceKey(referenceKey: String) {
       cdkBuilder.referenceKey(referenceKey)
     }
 
+    /**
+     * @param service The service to retrieve the dynamic reference from. 
+     */
     override fun service(service: CfnDynamicReferenceService) {
       cdkBuilder.service(service.let(CfnDynamicReferenceService::unwrap))
     }
@@ -37,8 +73,14 @@ public interface CfnDynamicReferenceProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.CfnDynamicReferenceProps,
   ) : CdkObject(cdkObject), CfnDynamicReferenceProps {
+    /**
+     * The reference key of the dynamic reference.
+     */
     override fun referenceKey(): String = unwrap(this).getReferenceKey()
 
+    /**
+     * The service to retrieve the dynamic reference from.
+     */
     override fun service(): CfnDynamicReferenceService =
         unwrap(this).getService().let(CfnDynamicReferenceService::wrap)
   }

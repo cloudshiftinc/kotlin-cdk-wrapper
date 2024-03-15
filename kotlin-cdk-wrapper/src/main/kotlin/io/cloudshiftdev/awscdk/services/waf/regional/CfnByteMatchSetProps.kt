@@ -10,19 +10,84 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 
+/**
+ * Properties for defining a `CfnByteMatchSet`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.waf.regional.*;
+ * CfnByteMatchSetProps cfnByteMatchSetProps = CfnByteMatchSetProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .byteMatchTuples(List.of(ByteMatchTupleProperty.builder()
+ * .fieldToMatch(FieldToMatchProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .data("data")
+ * .build())
+ * .positionalConstraint("positionalConstraint")
+ * .textTransformation("textTransformation")
+ * // the properties below are optional
+ * .targetString("targetString")
+ * .targetStringBase64("targetStringBase64")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-bytematchset.html)
+ */
 public interface CfnByteMatchSetProps {
+  /**
+   * Specifies the bytes (typically a string that corresponds with ASCII characters) that you want
+   * AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search,
+   * and other settings.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-bytematchset.html#cfn-wafregional-bytematchset-bytematchtuples)
+   */
   public fun byteMatchTuples(): Any? = unwrap(this).getByteMatchTuples()
 
+  /**
+   * A friendly name or description of the `ByteMatchSet` .
+   *
+   * You can't change `Name` after you create a `ByteMatchSet` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-bytematchset.html#cfn-wafregional-bytematchset-name)
+   */
   public fun name(): String
 
+  /**
+   * A builder for [CfnByteMatchSetProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param byteMatchTuples Specifies the bytes (typically a string that corresponds with ASCII
+     * characters) that you want AWS WAF to search for in web requests, the location in requests that
+     * you want AWS WAF to search, and other settings.
+     */
     public fun byteMatchTuples(byteMatchTuples: IResolvable)
 
+    /**
+     * @param byteMatchTuples Specifies the bytes (typically a string that corresponds with ASCII
+     * characters) that you want AWS WAF to search for in web requests, the location in requests that
+     * you want AWS WAF to search, and other settings.
+     */
     public fun byteMatchTuples(byteMatchTuples: List<Any>)
 
+    /**
+     * @param byteMatchTuples Specifies the bytes (typically a string that corresponds with ASCII
+     * characters) that you want AWS WAF to search for in web requests, the location in requests that
+     * you want AWS WAF to search, and other settings.
+     */
     public fun byteMatchTuples(vararg byteMatchTuples: Any)
 
+    /**
+     * @param name A friendly name or description of the `ByteMatchSet` . 
+     * You can't change `Name` after you create a `ByteMatchSet` .
+     */
     public fun name(name: String)
   }
 
@@ -31,17 +96,36 @@ public interface CfnByteMatchSetProps {
         software.amazon.awscdk.services.waf.regional.CfnByteMatchSetProps.Builder =
         software.amazon.awscdk.services.waf.regional.CfnByteMatchSetProps.builder()
 
+    /**
+     * @param byteMatchTuples Specifies the bytes (typically a string that corresponds with ASCII
+     * characters) that you want AWS WAF to search for in web requests, the location in requests that
+     * you want AWS WAF to search, and other settings.
+     */
     override fun byteMatchTuples(byteMatchTuples: IResolvable) {
       cdkBuilder.byteMatchTuples(byteMatchTuples.let(IResolvable::unwrap))
     }
 
+    /**
+     * @param byteMatchTuples Specifies the bytes (typically a string that corresponds with ASCII
+     * characters) that you want AWS WAF to search for in web requests, the location in requests that
+     * you want AWS WAF to search, and other settings.
+     */
     override fun byteMatchTuples(byteMatchTuples: List<Any>) {
       cdkBuilder.byteMatchTuples(byteMatchTuples)
     }
 
+    /**
+     * @param byteMatchTuples Specifies the bytes (typically a string that corresponds with ASCII
+     * characters) that you want AWS WAF to search for in web requests, the location in requests that
+     * you want AWS WAF to search, and other settings.
+     */
     override fun byteMatchTuples(vararg byteMatchTuples: Any): Unit =
         byteMatchTuples(byteMatchTuples.toList())
 
+    /**
+     * @param name A friendly name or description of the `ByteMatchSet` . 
+     * You can't change `Name` after you create a `ByteMatchSet` .
+     */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
@@ -53,8 +137,22 @@ public interface CfnByteMatchSetProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.waf.regional.CfnByteMatchSetProps,
   ) : CdkObject(cdkObject), CfnByteMatchSetProps {
+    /**
+     * Specifies the bytes (typically a string that corresponds with ASCII characters) that you want
+     * AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search,
+     * and other settings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-bytematchset.html#cfn-wafregional-bytematchset-bytematchtuples)
+     */
     override fun byteMatchTuples(): Any? = unwrap(this).getByteMatchTuples()
 
+    /**
+     * A friendly name or description of the `ByteMatchSet` .
+     *
+     * You can't change `Name` after you create a `ByteMatchSet` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-bytematchset.html#cfn-wafregional-bytematchset-name)
+     */
     override fun name(): String = unwrap(this).getName()
   }
 

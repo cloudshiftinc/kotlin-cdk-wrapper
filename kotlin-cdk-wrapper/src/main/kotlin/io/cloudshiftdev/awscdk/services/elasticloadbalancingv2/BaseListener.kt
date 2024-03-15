@@ -6,10 +6,16 @@ import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Base class for listeners.
+ */
 public abstract class BaseListener internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.elasticloadbalancingv2.BaseListener,
 ) : Resource(cdkObject), IListener {
+  /**
+   * ARN of the listener.
+   */
   public override fun listenerArn(): String = unwrap(this).getListenerArn()
 
   private class Wrapper(

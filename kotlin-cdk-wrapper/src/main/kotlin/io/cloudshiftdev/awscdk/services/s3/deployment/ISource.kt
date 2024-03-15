@@ -7,29 +7,69 @@ import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Represents a source for bucket deployments.
+ */
 public interface ISource {
-  public fun bind(arg0: Construct): SourceConfig
+  /**
+   * Binds the source to a bucket deployment.
+   *
+   * @param scope The construct tree context. 
+   * @param context
+   */
+  public fun bind(scope: Construct): SourceConfig
 
-  public fun bind(arg0: Construct, arg1: DeploymentSourceContext): SourceConfig
+  /**
+   * Binds the source to a bucket deployment.
+   *
+   * @param scope The construct tree context. 
+   * @param context
+   */
+  public fun bind(scope: Construct, context: DeploymentSourceContext): SourceConfig
 
+  /**
+   * Binds the source to a bucket deployment.
+   *
+   * @param scope The construct tree context. 
+   * @param context
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("c74ab7b3dbc4afb550f71f4c55a9031c91cd50dd6eb18151c81c70e8d6e8f10f")
-  public fun bind(arg0: Construct, arg1: DeploymentSourceContext.Builder.() -> Unit): SourceConfig
+  public fun bind(scope: Construct, context: DeploymentSourceContext.Builder.() -> Unit):
+      SourceConfig
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.s3.deployment.ISource,
   ) : CdkObject(cdkObject), ISource {
-    override fun bind(arg0: Construct): SourceConfig =
-        unwrap(this).bind(arg0.let(Construct::unwrap)).let(SourceConfig::wrap)
+    /**
+     * Binds the source to a bucket deployment.
+     *
+     * @param scope The construct tree context. 
+     * @param context
+     */
+    override fun bind(scope: Construct): SourceConfig =
+        unwrap(this).bind(scope.let(Construct::unwrap)).let(SourceConfig::wrap)
 
-    override fun bind(arg0: Construct, arg1: DeploymentSourceContext): SourceConfig =
-        unwrap(this).bind(arg0.let(Construct::unwrap),
-        arg1.let(DeploymentSourceContext::unwrap)).let(SourceConfig::wrap)
+    /**
+     * Binds the source to a bucket deployment.
+     *
+     * @param scope The construct tree context. 
+     * @param context
+     */
+    override fun bind(scope: Construct, context: DeploymentSourceContext): SourceConfig =
+        unwrap(this).bind(scope.let(Construct::unwrap),
+        context.let(DeploymentSourceContext::unwrap)).let(SourceConfig::wrap)
 
+    /**
+     * Binds the source to a bucket deployment.
+     *
+     * @param scope The construct tree context. 
+     * @param context
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c74ab7b3dbc4afb550f71f4c55a9031c91cd50dd6eb18151c81c70e8d6e8f10f")
-    override fun bind(arg0: Construct, arg1: DeploymentSourceContext.Builder.() -> Unit):
-        SourceConfig = bind(arg0, DeploymentSourceContext(arg1))
+    override fun bind(scope: Construct, context: DeploymentSourceContext.Builder.() -> Unit):
+        SourceConfig = bind(scope, DeploymentSourceContext(context))
   }
 
   public companion object {

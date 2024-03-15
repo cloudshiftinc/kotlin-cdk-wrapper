@@ -7,9 +7,50 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * OAuth scopes that are allowed with this client.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool pool = new UserPool(this, "Pool");
+ * ResourceServerScope readOnlyScope =
+ * ResourceServerScope.Builder.create().scopeName("read").scopeDescription("Read-only access").build();
+ * ResourceServerScope fullAccessScope =
+ * ResourceServerScope.Builder.create().scopeName("*").scopeDescription("Full access").build();
+ * UserPoolResourceServer userServer = pool.addResourceServer("ResourceServer",
+ * UserPoolResourceServerOptions.builder()
+ * .identifier("users")
+ * .scopes(List.of(readOnlyScope, fullAccessScope))
+ * .build());
+ * UserPoolClient readOnlyClient = pool.addClient("read-only-client",
+ * UserPoolClientOptions.builder()
+ * // ...
+ * .oAuth(OAuthSettings.builder()
+ * // ...
+ * .scopes(List.of(OAuthScope.resourceServer(userServer, readOnlyScope)))
+ * .build())
+ * .build());
+ * UserPoolClient fullAccessClient = pool.addClient("full-access-client",
+ * UserPoolClientOptions.builder()
+ * // ...
+ * .oAuth(OAuthSettings.builder()
+ * // ...
+ * .scopes(List.of(OAuthScope.resourceServer(userServer, fullAccessScope)))
+ * .build())
+ * .build());
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-app-idp-settings.html)
+ */
 public open class OAuthScope internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cognito.OAuthScope,
 ) : CdkObject(cdkObject) {
+  /**
+   * The name of this scope as recognized by CloudFormation.
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-allowedoauthscopes)
+   */
   public open fun scopeName(): String = unwrap(this).getScopeName()
 
   public companion object {

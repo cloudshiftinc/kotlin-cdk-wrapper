@@ -7,15 +7,47 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Number
 import kotlin.Unit
 
+/**
+ * Properties for enabling DynamoDB capacity scaling.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+ * Table table;
+ * IScalableTableAttribute readCapacity = table.autoScaleReadCapacity(EnableScalingProps.builder()
+ * .minCapacity(10)
+ * .maxCapacity(1000)
+ * .build());
+ * readCapacity.scaleOnUtilization(UtilizationScalingProps.builder()
+ * .targetUtilizationPercent(60)
+ * .build());
+ * ```
+ */
 public interface EnableScalingProps {
+  /**
+   * Maximum capacity to scale to.
+   */
   public fun maxCapacity(): Number
 
+  /**
+   * Minimum capacity to scale to.
+   */
   public fun minCapacity(): Number
 
+  /**
+   * A builder for [EnableScalingProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param maxCapacity Maximum capacity to scale to. 
+     */
     public fun maxCapacity(maxCapacity: Number)
 
+    /**
+     * @param minCapacity Minimum capacity to scale to. 
+     */
     public fun minCapacity(minCapacity: Number)
   }
 
@@ -23,10 +55,16 @@ public interface EnableScalingProps {
     private val cdkBuilder: software.amazon.awscdk.services.dynamodb.EnableScalingProps.Builder =
         software.amazon.awscdk.services.dynamodb.EnableScalingProps.builder()
 
+    /**
+     * @param maxCapacity Maximum capacity to scale to. 
+     */
     override fun maxCapacity(maxCapacity: Number) {
       cdkBuilder.maxCapacity(maxCapacity)
     }
 
+    /**
+     * @param minCapacity Minimum capacity to scale to. 
+     */
     override fun minCapacity(minCapacity: Number) {
       cdkBuilder.minCapacity(minCapacity)
     }
@@ -38,8 +76,14 @@ public interface EnableScalingProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.dynamodb.EnableScalingProps,
   ) : CdkObject(cdkObject), EnableScalingProps {
+    /**
+     * Maximum capacity to scale to.
+     */
     override fun maxCapacity(): Number = unwrap(this).getMaxCapacity()
 
+    /**
+     * Minimum capacity to scale to.
+     */
     override fun minCapacity(): Number = unwrap(this).getMinCapacity()
   }
 

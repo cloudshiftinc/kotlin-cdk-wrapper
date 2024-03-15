@@ -8,15 +8,68 @@ import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for defining a `CfnBucketPolicy`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.s3express.*;
+ * Object policyDocument;
+ * CfnBucketPolicyProps cfnBucketPolicyProps = CfnBucketPolicyProps.builder()
+ * .bucket("bucket")
+ * .policyDocument(policyDocument)
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3express-bucketpolicy.html)
+ */
 public interface CfnBucketPolicyProps {
+  /**
+   * The name of the S3 directory bucket to which the policy applies.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3express-bucketpolicy.html#cfn-s3express-bucketpolicy-bucket)
+   */
   public fun bucket(): String
 
+  /**
+   * A policy document containing permissions to add to the specified bucket.
+   *
+   * In IAM, you must provide policy documents in JSON format. However, in CloudFormation you can
+   * provide the policy in JSON or YAML format because CloudFormation converts YAML to JSON before
+   * submitting it to IAM. For more information, see the AWS::IAM::Policy
+   * [PolicyDocument](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-policydocument)
+   * resource description in this guide and [Policies and Permissions in Amazon
+   * S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-policy-language-overview.html) in the
+   * *Amazon S3 User Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3express-bucketpolicy.html#cfn-s3express-bucketpolicy-policydocument)
+   */
   public fun policyDocument(): Any
 
+  /**
+   * A builder for [CfnBucketPolicyProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param bucket The name of the S3 directory bucket to which the policy applies. 
+     */
     public fun bucket(bucket: String)
 
+    /**
+     * @param policyDocument A policy document containing permissions to add to the specified
+     * bucket. 
+     * In IAM, you must provide policy documents in JSON format. However, in CloudFormation you can
+     * provide the policy in JSON or YAML format because CloudFormation converts YAML to JSON before
+     * submitting it to IAM. For more information, see the AWS::IAM::Policy
+     * [PolicyDocument](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-policydocument)
+     * resource description in this guide and [Policies and Permissions in Amazon
+     * S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-policy-language-overview.html) in the
+     * *Amazon S3 User Guide* .
+     */
     public fun policyDocument(policyDocument: Any)
   }
 
@@ -24,10 +77,24 @@ public interface CfnBucketPolicyProps {
     private val cdkBuilder: software.amazon.awscdk.services.s3express.CfnBucketPolicyProps.Builder =
         software.amazon.awscdk.services.s3express.CfnBucketPolicyProps.builder()
 
+    /**
+     * @param bucket The name of the S3 directory bucket to which the policy applies. 
+     */
     override fun bucket(bucket: String) {
       cdkBuilder.bucket(bucket)
     }
 
+    /**
+     * @param policyDocument A policy document containing permissions to add to the specified
+     * bucket. 
+     * In IAM, you must provide policy documents in JSON format. However, in CloudFormation you can
+     * provide the policy in JSON or YAML format because CloudFormation converts YAML to JSON before
+     * submitting it to IAM. For more information, see the AWS::IAM::Policy
+     * [PolicyDocument](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-policydocument)
+     * resource description in this guide and [Policies and Permissions in Amazon
+     * S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-policy-language-overview.html) in the
+     * *Amazon S3 User Guide* .
+     */
     override fun policyDocument(policyDocument: Any) {
       cdkBuilder.policyDocument(policyDocument)
     }
@@ -39,8 +106,26 @@ public interface CfnBucketPolicyProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.s3express.CfnBucketPolicyProps,
   ) : CdkObject(cdkObject), CfnBucketPolicyProps {
+    /**
+     * The name of the S3 directory bucket to which the policy applies.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3express-bucketpolicy.html#cfn-s3express-bucketpolicy-bucket)
+     */
     override fun bucket(): String = unwrap(this).getBucket()
 
+    /**
+     * A policy document containing permissions to add to the specified bucket.
+     *
+     * In IAM, you must provide policy documents in JSON format. However, in CloudFormation you can
+     * provide the policy in JSON or YAML format because CloudFormation converts YAML to JSON before
+     * submitting it to IAM. For more information, see the AWS::IAM::Policy
+     * [PolicyDocument](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-policydocument)
+     * resource description in this guide and [Policies and Permissions in Amazon
+     * S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/access-policy-language-overview.html) in the
+     * *Amazon S3 User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3express-bucketpolicy.html#cfn-s3express-bucketpolicy-policydocument)
+     */
     override fun policyDocument(): Any = unwrap(this).getPolicyDocument()
   }
 

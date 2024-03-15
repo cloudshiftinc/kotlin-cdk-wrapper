@@ -7,11 +7,37 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties common to all Artifacts classes.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.codebuild.*;
+ * ArtifactsProps artifactsProps = ArtifactsProps.builder()
+ * .identifier("identifier")
+ * .build();
+ * ```
+ */
 public interface ArtifactsProps {
+  /**
+   * The artifact identifier.
+   *
+   * This property is required on secondary artifacts.
+   */
   public fun identifier(): String? = unwrap(this).getIdentifier()
 
+  /**
+   * A builder for [ArtifactsProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param identifier The artifact identifier.
+     * This property is required on secondary artifacts.
+     */
     public fun identifier(identifier: String)
   }
 
@@ -19,6 +45,10 @@ public interface ArtifactsProps {
     private val cdkBuilder: software.amazon.awscdk.services.codebuild.ArtifactsProps.Builder =
         software.amazon.awscdk.services.codebuild.ArtifactsProps.builder()
 
+    /**
+     * @param identifier The artifact identifier.
+     * This property is required on secondary artifacts.
+     */
     override fun identifier(identifier: String) {
       cdkBuilder.identifier(identifier)
     }
@@ -30,6 +60,11 @@ public interface ArtifactsProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.codebuild.ArtifactsProps,
   ) : CdkObject(cdkObject), ArtifactsProps {
+    /**
+     * The artifact identifier.
+     *
+     * This property is required on secondary artifacts.
+     */
     override fun identifier(): String? = unwrap(this).getIdentifier()
   }
 

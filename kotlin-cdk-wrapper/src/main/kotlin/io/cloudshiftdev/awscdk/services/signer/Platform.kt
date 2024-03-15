@@ -5,9 +5,35 @@ package io.cloudshiftdev.awscdk.services.signer
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Platforms that are allowed with signing config.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.signer.*;
+ * SigningProfile signingProfile = SigningProfile.Builder.create(this, "SigningProfile")
+ * .platform(Platform.AWS_LAMBDA_SHA384_ECDSA)
+ * .build();
+ * CodeSigningConfig codeSigningConfig = CodeSigningConfig.Builder.create(this, "CodeSigningConfig")
+ * .signingProfiles(List.of(signingProfile))
+ * .build();
+ * Function.Builder.create(this, "Function")
+ * .codeSigningConfig(codeSigningConfig)
+ * .runtime(Runtime.NODEJS_18_X)
+ * .handler("index.handler")
+ * .code(Code.fromAsset(join(__dirname, "lambda-handler")))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/signer/latest/developerguide/gs-platform.html)
+ */
 public open class Platform internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.signer.Platform,
 ) : CdkObject(cdkObject) {
+  /**
+   * * The id of signing platform.
+   */
   public open fun platformId(): String = unwrap(this).getPlatformId()
 
   public companion object {

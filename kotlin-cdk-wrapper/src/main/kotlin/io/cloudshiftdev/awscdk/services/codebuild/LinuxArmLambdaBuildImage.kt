@@ -8,23 +8,64 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
+/**
+ * A CodeBuild image running aarch64 Lambda.
+ *
+ * This class has a bunch of public constants that represent the CodeBuild aarch64 Lambda images.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.codebuild.*;
+ * IBuildImage linuxArmLambdaBuildImage = LinuxArmLambdaBuildImage.AMAZON_LINUX_2_CORRETTO_11;
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html)
+ */
 public open class LinuxArmLambdaBuildImage internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codebuild.LinuxArmLambdaBuildImage,
 ) : CdkObject(cdkObject), IBuildImage {
+  /**
+   * The default `ComputeType` to use with this image, if one was not specified in
+   * `BuildEnvironment#computeType` explicitly.
+   */
   public override fun defaultComputeType(): ComputeType =
       unwrap(this).getDefaultComputeType().let(ComputeType::wrap)
 
+  /**
+   * The Docker image identifier that the build environment uses.
+   */
   public override fun imageId(): String = unwrap(this).getImageId()
 
+  /**
+   * Make a buildspec to run the indicated script.
+   *
+   * @param entrypoint 
+   */
   public override fun runScriptBuildspec(entrypoint: String): BuildSpec =
       unwrap(this).runScriptBuildspec(entrypoint).let(BuildSpec::wrap)
 
+  /**
+   * The type of build environment.
+   */
   public override fun type(): String = unwrap(this).getType()
 
+  /**
+   * Allows the image a chance to validate whether the passed configuration is correct.
+   *
+   * @param buildEnvironment 
+   */
   public override fun validate(buildEnvironment: BuildEnvironment): List<String> =
       unwrap(this).validate(buildEnvironment.let(BuildEnvironment::unwrap))
 
+  /**
+   * Allows the image a chance to validate whether the passed configuration is correct.
+   *
+   * @param buildEnvironment 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("ff36d333164150adb92277700abb7153d45f26e16fa225966e7bf6fc0bedfcee")
   public override fun validate(buildEnvironment: BuildEnvironment.Builder.() -> Unit): List<String>

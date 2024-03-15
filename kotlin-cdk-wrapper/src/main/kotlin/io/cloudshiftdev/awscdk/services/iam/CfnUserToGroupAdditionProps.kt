@@ -8,17 +8,65 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 
+/**
+ * Properties for defining a `CfnUserToGroupAddition`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.iam.*;
+ * CfnUserToGroupAdditionProps cfnUserToGroupAdditionProps = CfnUserToGroupAdditionProps.builder()
+ * .groupName("groupName")
+ * .users(List.of("users"))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-usertogroupaddition.html)
+ */
 public interface CfnUserToGroupAdditionProps {
+  /**
+   * The name of the group to update.
+   *
+   * This parameter allows (through its [regex
+   * pattern](https://docs.aws.amazon.com/http://wikipedia.org/wiki/regex) ) a string of characters
+   * consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any
+   * of the following characters: _+=,.&#64;-
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-usertogroupaddition.html#cfn-iam-usertogroupaddition-groupname)
+   */
   public fun groupName(): String
 
+  /**
+   * A list of the names of the users that you want to add to the group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-usertogroupaddition.html#cfn-iam-usertogroupaddition-users)
+   */
   public fun users(): List<String>
 
+  /**
+   * A builder for [CfnUserToGroupAdditionProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param groupName The name of the group to update. 
+     * This parameter allows (through its [regex
+     * pattern](https://docs.aws.amazon.com/http://wikipedia.org/wiki/regex) ) a string of characters
+     * consisting of upper and lowercase alphanumeric characters with no spaces. You can also include
+     * any of the following characters: _+=,.&#64;-
+     */
     public fun groupName(groupName: String)
 
+    /**
+     * @param users A list of the names of the users that you want to add to the group. 
+     */
     public fun users(users: List<String>)
 
+    /**
+     * @param users A list of the names of the users that you want to add to the group. 
+     */
     public fun users(vararg users: String)
   }
 
@@ -26,14 +74,27 @@ public interface CfnUserToGroupAdditionProps {
     private val cdkBuilder: software.amazon.awscdk.services.iam.CfnUserToGroupAdditionProps.Builder
         = software.amazon.awscdk.services.iam.CfnUserToGroupAdditionProps.builder()
 
+    /**
+     * @param groupName The name of the group to update. 
+     * This parameter allows (through its [regex
+     * pattern](https://docs.aws.amazon.com/http://wikipedia.org/wiki/regex) ) a string of characters
+     * consisting of upper and lowercase alphanumeric characters with no spaces. You can also include
+     * any of the following characters: _+=,.&#64;-
+     */
     override fun groupName(groupName: String) {
       cdkBuilder.groupName(groupName)
     }
 
+    /**
+     * @param users A list of the names of the users that you want to add to the group. 
+     */
     override fun users(users: List<String>) {
       cdkBuilder.users(users)
     }
 
+    /**
+     * @param users A list of the names of the users that you want to add to the group. 
+     */
     override fun users(vararg users: String): Unit = users(users.toList())
 
     public fun build(): software.amazon.awscdk.services.iam.CfnUserToGroupAdditionProps =
@@ -43,8 +104,23 @@ public interface CfnUserToGroupAdditionProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.iam.CfnUserToGroupAdditionProps,
   ) : CdkObject(cdkObject), CfnUserToGroupAdditionProps {
+    /**
+     * The name of the group to update.
+     *
+     * This parameter allows (through its [regex
+     * pattern](https://docs.aws.amazon.com/http://wikipedia.org/wiki/regex) ) a string of characters
+     * consisting of upper and lowercase alphanumeric characters with no spaces. You can also include
+     * any of the following characters: _+=,.&#64;-
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-usertogroupaddition.html#cfn-iam-usertogroupaddition-groupname)
+     */
     override fun groupName(): String = unwrap(this).getGroupName()
 
+    /**
+     * A list of the names of the users that you want to add to the group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-usertogroupaddition.html#cfn-iam-usertogroupaddition-users)
+     */
     override fun users(): List<String> = unwrap(this).getUsers()
   }
 

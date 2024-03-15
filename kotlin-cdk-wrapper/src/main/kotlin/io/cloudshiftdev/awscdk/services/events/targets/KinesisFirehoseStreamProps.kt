@@ -7,11 +7,41 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.events.RuleTargetInput
 import kotlin.Unit
 
+/**
+ * Customize the Firehose Stream Event Target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.events.*;
+ * import io.cloudshiftdev.awscdk.services.events.targets.*;
+ * RuleTargetInput ruleTargetInput;
+ * KinesisFirehoseStreamProps kinesisFirehoseStreamProps = KinesisFirehoseStreamProps.builder()
+ * .message(ruleTargetInput)
+ * .build();
+ * ```
+ */
 public interface KinesisFirehoseStreamProps {
+  /**
+   * The message to send to the stream.
+   *
+   * Must be a valid JSON text passed to the target stream.
+   *
+   * Default: - the entire Event Bridge event
+   */
   public fun message(): RuleTargetInput? = unwrap(this).getMessage()?.let(RuleTargetInput::wrap)
 
+  /**
+   * A builder for [KinesisFirehoseStreamProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param message The message to send to the stream.
+     * Must be a valid JSON text passed to the target stream.
+     */
     public fun message(message: RuleTargetInput)
   }
 
@@ -20,6 +50,10 @@ public interface KinesisFirehoseStreamProps {
         software.amazon.awscdk.services.events.targets.KinesisFirehoseStreamProps.Builder =
         software.amazon.awscdk.services.events.targets.KinesisFirehoseStreamProps.builder()
 
+    /**
+     * @param message The message to send to the stream.
+     * Must be a valid JSON text passed to the target stream.
+     */
     override fun message(message: RuleTargetInput) {
       cdkBuilder.message(message.let(RuleTargetInput::unwrap))
     }
@@ -32,6 +66,13 @@ public interface KinesisFirehoseStreamProps {
     override val cdkObject:
         software.amazon.awscdk.services.events.targets.KinesisFirehoseStreamProps,
   ) : CdkObject(cdkObject), KinesisFirehoseStreamProps {
+    /**
+     * The message to send to the stream.
+     *
+     * Must be a valid JSON text passed to the target stream.
+     *
+     * Default: - the entire Event Bridge event
+     */
     override fun message(): RuleTargetInput? = unwrap(this).getMessage()?.let(RuleTargetInput::wrap)
   }
 

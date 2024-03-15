@@ -5,11 +5,40 @@ package io.cloudshiftdev.awscdk.services.rds
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * The versions for the SQL Server instance engines (those returned by
+ * `DatabaseInstanceEngine.sqlServerSe`, `DatabaseInstanceEngine.sqlServerEx`,
+ * `DatabaseInstanceEngine.sqlServerWeb` and `DatabaseInstanceEngine.sqlServerEe`).
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * ParameterGroup parameterGroup = ParameterGroup.Builder.create(this, "ParameterGroup")
+ * .engine(DatabaseInstanceEngine.sqlServerEe(SqlServerEeInstanceEngineProps.builder()
+ * .version(SqlServerEngineVersion.VER_11)
+ * .build()))
+ * .parameters(Map.of(
+ * "locks", "100"))
+ * .build();
+ * DatabaseInstance.Builder.create(this, "Database")
+ * .engine(DatabaseInstanceEngine.SQL_SERVER_EE)
+ * .vpc(vpc)
+ * .parameterGroup(parameterGroup)
+ * .build();
+ * ```
+ */
 public open class SqlServerEngineVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.SqlServerEngineVersion,
 ) : CdkObject(cdkObject) {
+  /**
+   * The full version string, for example, "15.00.3049.1.v1".
+   */
   public open fun sqlServerFullVersion(): String = unwrap(this).getSqlServerFullVersion()
 
+  /**
+   * The major version of the engine, for example, "15.00".
+   */
   public open fun sqlServerMajorVersion(): String = unwrap(this).getSqlServerMajorVersion()
 
   public companion object {

@@ -10,17 +10,52 @@ import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * Virtual Deliverablity Manager (VDM) attributes.
+ *
+ * Example:
+ *
+ * ```
+ * // Enables engagement tracking and optimized shared delivery by default
+ * // Enables engagement tracking and optimized shared delivery by default
+ * new VdmAttributes(this, "Vdm");
+ * ```
+ */
 public open class VdmAttributes internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.VdmAttributes,
 ) : Resource(cdkObject), IVdmAttributes {
+  /**
+   * The name of the resource behind the Virtual Deliverablity Manager attributes.
+   */
   public override fun vdmAttributesName(): String = unwrap(this).getVdmAttributesName()
 
+  /**
+   * Resource ID for the Virtual Deliverablity Manager attributes.
+   */
   public open fun vdmAttributesResourceId(): String = unwrap(this).getVdmAttributesResourceId()
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.ses.VdmAttributes].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * Whether engagement metrics are enabled for your account.
+     *
+     * Default: true
+     *
+     * @param engagementMetrics Whether engagement metrics are enabled for your account. 
+     */
     public fun engagementMetrics(engagementMetrics: Boolean)
 
+    /**
+     * Whether optimized shared delivery is enabled for your account.
+     *
+     * Default: true
+     *
+     * @param optimizedSharedDelivery Whether optimized shared delivery is enabled for your account.
+     * 
+     */
     public fun optimizedSharedDelivery(optimizedSharedDelivery: Boolean)
   }
 
@@ -31,10 +66,25 @@ public open class VdmAttributes internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ses.VdmAttributes.Builder =
         software.amazon.awscdk.services.ses.VdmAttributes.Builder.create(scope, id)
 
+    /**
+     * Whether engagement metrics are enabled for your account.
+     *
+     * Default: true
+     *
+     * @param engagementMetrics Whether engagement metrics are enabled for your account. 
+     */
     override fun engagementMetrics(engagementMetrics: Boolean) {
       cdkBuilder.engagementMetrics(engagementMetrics)
     }
 
+    /**
+     * Whether optimized shared delivery is enabled for your account.
+     *
+     * Default: true
+     *
+     * @param optimizedSharedDelivery Whether optimized shared delivery is enabled for your account.
+     * 
+     */
     override fun optimizedSharedDelivery(optimizedSharedDelivery: Boolean) {
       cdkBuilder.optimizedSharedDelivery(optimizedSharedDelivery)
     }

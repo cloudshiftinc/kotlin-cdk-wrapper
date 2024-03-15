@@ -6,6 +6,24 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Boolean
 import kotlin.String
 
+/**
+ * Class with static functions to build AlarmRule for Composite Alarms.
+ *
+ * Example:
+ *
+ * ```
+ * Alarm alarm1;
+ * Alarm alarm2;
+ * Alarm alarm3;
+ * Alarm alarm4;
+ * IAlarmRule alarmRule = AlarmRule.anyOf(AlarmRule.allOf(AlarmRule.anyOf(alarm1,
+ * AlarmRule.fromAlarm(alarm2, AlarmState.OK), alarm3), AlarmRule.not(AlarmRule.fromAlarm(alarm4,
+ * AlarmState.INSUFFICIENT_DATA))), AlarmRule.fromBoolean(false));
+ * CompositeAlarm.Builder.create(this, "MyAwesomeCompositeAlarm")
+ * .alarmRule(alarmRule)
+ * .build();
+ * ```
+ */
 public open class AlarmRule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmRule,
 ) : CdkObject(cdkObject) {

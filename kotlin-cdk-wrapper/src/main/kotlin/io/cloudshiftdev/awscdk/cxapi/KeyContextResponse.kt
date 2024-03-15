@@ -7,11 +7,34 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties of a discovered key.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.cxapi.*;
+ * KeyContextResponse keyContextResponse = KeyContextResponse.builder()
+ * .keyId("keyId")
+ * .build();
+ * ```
+ */
 public interface KeyContextResponse {
+  /**
+   * Id of the key.
+   */
   public fun keyId(): String
 
+  /**
+   * A builder for [KeyContextResponse]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param keyId Id of the key. 
+     */
     public fun keyId(keyId: String)
   }
 
@@ -19,6 +42,9 @@ public interface KeyContextResponse {
     private val cdkBuilder: software.amazon.awscdk.cxapi.KeyContextResponse.Builder =
         software.amazon.awscdk.cxapi.KeyContextResponse.builder()
 
+    /**
+     * @param keyId Id of the key. 
+     */
     override fun keyId(keyId: String) {
       cdkBuilder.keyId(keyId)
     }
@@ -29,6 +55,9 @@ public interface KeyContextResponse {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.cxapi.KeyContextResponse,
   ) : CdkObject(cdkObject), KeyContextResponse {
+    /**
+     * Id of the key.
+     */
     override fun keyId(): String = unwrap(this).getKeyId()
   }
 

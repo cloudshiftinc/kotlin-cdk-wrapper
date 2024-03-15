@@ -8,9 +8,28 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
+/**
+ * The base class for all classes which can be used as `MultipartUserData`.
+ *
+ * Example:
+ *
+ * ```
+ * MultipartUserData multipartUserData = new MultipartUserData();
+ * UserData commandsUserData = UserData.forLinux();
+ * multipartUserData.addUserDataPart(commandsUserData, MultipartBody.SHELL_SCRIPT, true);
+ * // Adding commands to the multipartUserData adds them to commandsUserData, and vice-versa.
+ * multipartUserData.addCommands("touch /root/multi.txt");
+ * commandsUserData.addCommands("touch /root/userdata.txt");
+ * ```
+ */
 public abstract class MultipartBody internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.MultipartBody,
 ) : CdkObject(cdkObject) {
+  /**
+   * Render body part as the string.
+   *
+   * Subclasses should not add leading nor trailing new line characters (\r \n)
+   */
   public open fun renderBodyPart(): List<String> = unwrap(this).renderBodyPart()
 
   private class Wrapper(

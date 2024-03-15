@@ -8,9 +8,44 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
+/**
+ * A subscription filter for an attribute.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.lambda.*;
+ * Function fn;
+ * Topic myTopic = new Topic(this, "MyTopic");
+ * // Lambda should receive only message matching the following conditions on attributes:
+ * // color: 'red' or 'orange' or begins with 'bl'
+ * // size: anything but 'small' or 'medium'
+ * // price: between 100 and 200 or greater than 300
+ * // store: attribute must be present
+ * myTopic.addSubscription(LambdaSubscription.Builder.create(fn)
+ * .filterPolicy(Map.of(
+ * "color", SubscriptionFilter.stringFilter(StringConditions.builder()
+ * .allowlist(List.of("red", "orange"))
+ * .matchPrefixes(List.of("bl"))
+ * .matchSuffixes(List.of("ue"))
+ * .build()),
+ * "size", SubscriptionFilter.stringFilter(StringConditions.builder()
+ * .denylist(List.of("small", "medium"))
+ * .build()),
+ * "price", SubscriptionFilter.numericFilter(NumericConditions.builder()
+ * .between(BetweenCondition.builder().start(100).stop(200).build())
+ * .greaterThan(300)
+ * .build()),
+ * "store", SubscriptionFilter.existsFilter()))
+ * .build());
+ * ```
+ */
 public open class SubscriptionFilter internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.sns.SubscriptionFilter,
 ) : CdkObject(cdkObject) {
+  /**
+   * conditions that specify the message attributes that should be included, excluded, matched, etc.
+   */
   public open fun conditions(): List<Any> = unwrap(this).getConditions()
 
   public companion object {

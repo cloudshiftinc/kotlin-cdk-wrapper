@@ -6,12 +6,21 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.collections.List
 
+/**
+ * Context available to the validation plugin.
+ */
 public interface IPolicyValidationContextBeta1 {
+  /**
+   * The absolute path of all templates to be processed.
+   */
   public fun templatePaths(): List<String>
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.IPolicyValidationContextBeta1,
   ) : CdkObject(cdkObject), IPolicyValidationContextBeta1 {
+    /**
+     * The absolute path of all templates to be processed.
+     */
     override fun templatePaths(): List<String> = unwrap(this).getTemplatePaths()
   }
 

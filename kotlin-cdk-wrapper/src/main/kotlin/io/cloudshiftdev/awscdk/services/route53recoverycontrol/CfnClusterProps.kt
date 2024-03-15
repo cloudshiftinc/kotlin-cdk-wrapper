@@ -9,17 +9,65 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 
+/**
+ * Properties for defining a `CfnCluster`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.route53recoverycontrol.*;
+ * CfnClusterProps cfnClusterProps = CfnClusterProps.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-cluster.html)
+ */
 public interface CfnClusterProps {
+  /**
+   * Name of the cluster.
+   *
+   * You can use any non-white space character in the name except the following: &amp; &gt; &lt; '
+   * (single quote) " (double quote) ; (semicolon).
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-cluster.html#cfn-route53recoverycontrol-cluster-name)
+   */
   public fun name(): String
 
+  /**
+   * The tags associated with the cluster.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-cluster.html#cfn-route53recoverycontrol-cluster-tags)
+   */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
+  /**
+   * A builder for [CfnClusterProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param name Name of the cluster. 
+     * You can use any non-white space character in the name except the following: &amp; &gt; &lt; '
+     * (single quote) " (double quote) ; (semicolon).
+     */
     public fun name(name: String)
 
+    /**
+     * @param tags The tags associated with the cluster.
+     */
     public fun tags(tags: List<CfnTag>)
 
+    /**
+     * @param tags The tags associated with the cluster.
+     */
     public fun tags(vararg tags: CfnTag)
   }
 
@@ -28,14 +76,25 @@ public interface CfnClusterProps {
         software.amazon.awscdk.services.route53recoverycontrol.CfnClusterProps.Builder =
         software.amazon.awscdk.services.route53recoverycontrol.CfnClusterProps.builder()
 
+    /**
+     * @param name Name of the cluster. 
+     * You can use any non-white space character in the name except the following: &amp; &gt; &lt; '
+     * (single quote) " (double quote) ; (semicolon).
+     */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
+    /**
+     * @param tags The tags associated with the cluster.
+     */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    /**
+     * @param tags The tags associated with the cluster.
+     */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.route53recoverycontrol.CfnClusterProps =
@@ -45,8 +104,21 @@ public interface CfnClusterProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnClusterProps,
   ) : CdkObject(cdkObject), CfnClusterProps {
+    /**
+     * Name of the cluster.
+     *
+     * You can use any non-white space character in the name except the following: &amp; &gt; &lt; '
+     * (single quote) " (double quote) ; (semicolon).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-cluster.html#cfn-route53recoverycontrol-cluster-name)
+     */
     override fun name(): String = unwrap(this).getName()
 
+    /**
+     * The tags associated with the cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53recoverycontrol-cluster.html#cfn-route53recoverycontrol-cluster-tags)
+     */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
   }
 

@@ -12,34 +12,85 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
+/**
+ * Result of a grant() operation.
+ *
+ * This class is not instantiable by consumers on purpose, so that they will be
+ * required to call the Grant factory functions.
+ *
+ * Example:
+ *
+ * ```
+ * Instance instance;
+ * Volume volume;
+ * Grant attachGrant = volume.grantAttachVolumeByResourceTag(instance.getGrantPrincipal(),
+ * List.of(instance));
+ * Grant detachGrant = volume.grantDetachVolumeByResourceTag(instance.getGrantPrincipal(),
+ * List.of(instance));
+ * ```
+ */
 public open class Grant internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.Grant,
 ) : CdkObject(cdkObject), IDependable {
+  /**
+   * Make sure this grant is applied before the given constructs are deployed.
+   *
+   * The same as construct.node.addDependency(grant), but slightly nicer to read.
+   *
+   * @param constructs 
+   */
   public open fun applyBefore(constructs: IConstruct) {
     unwrap(this).applyBefore(constructs.let(IConstruct::unwrap))
   }
 
+  /**
+   * Throw an error if this grant wasn't successful.
+   */
   public open fun assertSuccess() {
     unwrap(this).assertSuccess()
   }
 
+  /**
+   * Combine two grants into a new one.
+   *
+   * @param rhs 
+   */
   public open fun combine(rhs: Grant): Grant =
       unwrap(this).combine(rhs.let(Grant::unwrap)).let(Grant::wrap)
 
+  /**
+   * (deprecated) The statement that was added to the principal's policy.
+   *
+   * @deprecated Use `principalStatements` instead
+   */
   @Deprecated(message = "deprecated in CDK")
   public open fun principalStatement(): PolicyStatement? =
       unwrap(this).getPrincipalStatement()?.let(PolicyStatement::wrap)
 
+  /**
+   * The statements that were added to the principal's policy.
+   */
   public open fun principalStatements(): List<PolicyStatement> =
       unwrap(this).getPrincipalStatements().map(PolicyStatement::wrap)
 
+  /**
+   * (deprecated) The statement that was added to the resource policy.
+   *
+   * @deprecated Use `resourceStatements` instead
+   */
   @Deprecated(message = "deprecated in CDK")
   public open fun resourceStatement(): PolicyStatement? =
       unwrap(this).getResourceStatement()?.let(PolicyStatement::wrap)
 
+  /**
+   * The statements that were added to the principal's policy.
+   */
   public open fun resourceStatements(): List<PolicyStatement> =
       unwrap(this).getResourceStatements().map(PolicyStatement::wrap)
 
+  /**
+   * Whether the grant operation was successful.
+   */
   public open fun success(): Boolean = unwrap(this).getSuccess()
 
   public companion object {

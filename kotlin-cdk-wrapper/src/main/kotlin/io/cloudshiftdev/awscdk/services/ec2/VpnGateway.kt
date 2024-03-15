@@ -10,15 +10,49 @@ import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * The VPN Gateway that shall be added to the VPC.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * VpnGateway vpnGateway = VpnGateway.Builder.create(this, "MyVpnGateway")
+ * .type("type")
+ * // the properties below are optional
+ * .amazonSideAsn(123)
+ * .build();
+ * ```
+ */
 public open class VpnGateway internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.VpnGateway,
 ) : Resource(cdkObject), IVpnGateway {
+  /**
+   * The virtual private gateway Id.
+   */
   public override fun gatewayId(): String = unwrap(this).getGatewayId()
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.VpnGateway].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * Explicitly specify an Asn or let aws pick an Asn for you.
+     *
+     * Default: 65000
+     *
+     * @param amazonSideAsn Explicitly specify an Asn or let aws pick an Asn for you. 
+     */
     public fun amazonSideAsn(amazonSideAsn: Number)
 
+    /**
+     * Default type ipsec.1.
+     *
+     * @param type Default type ipsec.1. 
+     */
     public fun type(type: String)
   }
 
@@ -29,10 +63,22 @@ public open class VpnGateway internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.VpnGateway.Builder =
         software.amazon.awscdk.services.ec2.VpnGateway.Builder.create(scope, id)
 
+    /**
+     * Explicitly specify an Asn or let aws pick an Asn for you.
+     *
+     * Default: 65000
+     *
+     * @param amazonSideAsn Explicitly specify an Asn or let aws pick an Asn for you. 
+     */
     override fun amazonSideAsn(amazonSideAsn: Number) {
       cdkBuilder.amazonSideAsn(amazonSideAsn)
     }
 
+    /**
+     * Default type ipsec.1.
+     *
+     * @param type Default type ipsec.1. 
+     */
     override fun type(type: String) {
       cdkBuilder.type(type)
     }

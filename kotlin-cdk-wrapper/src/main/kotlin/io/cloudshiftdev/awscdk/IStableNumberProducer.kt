@@ -5,12 +5,21 @@ package io.cloudshiftdev.awscdk
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Number
 
+/**
+ * Interface for (stable) lazy number producers.
+ */
 public interface IStableNumberProducer {
+  /**
+   * Produce the number value.
+   */
   public fun produce(): Number?
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.IStableNumberProducer,
   ) : CdkObject(cdkObject), IStableNumberProducer {
+    /**
+     * Produce the number value.
+     */
     override fun produce(): Number? = unwrap(this).produce()
   }
 

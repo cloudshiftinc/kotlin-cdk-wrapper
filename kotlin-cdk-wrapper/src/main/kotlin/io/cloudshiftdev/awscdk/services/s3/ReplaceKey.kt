@@ -5,11 +5,35 @@ package io.cloudshiftdev.awscdk.services.s3
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Example:
+ *
+ * ```
+ * Bucket bucket = Bucket.Builder.create(this, "MyRedirectedBucket")
+ * .websiteRoutingRules(List.of(RoutingRule.builder()
+ * .hostName("www.example.com")
+ * .httpRedirectCode("302")
+ * .protocol(RedirectProtocol.HTTPS)
+ * .replaceKey(ReplaceKey.prefixWith("test/"))
+ * .condition(RoutingRuleCondition.builder()
+ * .httpErrorCodeReturnedEquals("200")
+ * .keyPrefixEquals("prefix")
+ * .build())
+ * .build()))
+ * .build();
+ * ```
+ */
 public open class ReplaceKey internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3.ReplaceKey,
 ) : CdkObject(cdkObject) {
+  /**
+   *
+   */
   public open fun prefixWithKey(): String? = unwrap(this).getPrefixWithKey()
 
+  /**
+   *
+   */
   public open fun withKey(): String? = unwrap(this).getWithKey()
 
   public companion object {

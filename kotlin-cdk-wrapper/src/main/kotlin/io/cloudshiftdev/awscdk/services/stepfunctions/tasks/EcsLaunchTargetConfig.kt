@@ -9,11 +9,38 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
 
+/**
+ * Configuration options for the ECS launch type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.stepfunctions.tasks.*;
+ * Object parameters;
+ * EcsLaunchTargetConfig ecsLaunchTargetConfig = EcsLaunchTargetConfig.builder()
+ * .parameters(Map.of(
+ * "parametersKey", parameters))
+ * .build();
+ * ```
+ */
 public interface EcsLaunchTargetConfig {
+  /**
+   * Additional parameters to pass to the base task.
+   *
+   * Default: - No additional parameters passed
+   */
   public fun parameters(): Map<String, Any> = unwrap(this).getParameters() ?: emptyMap()
 
+  /**
+   * A builder for [EcsLaunchTargetConfig]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param parameters Additional parameters to pass to the base task.
+     */
     public fun parameters(parameters: Map<String, Any>)
   }
 
@@ -22,6 +49,9 @@ public interface EcsLaunchTargetConfig {
         software.amazon.awscdk.services.stepfunctions.tasks.EcsLaunchTargetConfig.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.EcsLaunchTargetConfig.builder()
 
+    /**
+     * @param parameters Additional parameters to pass to the base task.
+     */
     override fun parameters(parameters: Map<String, Any>) {
       cdkBuilder.parameters(parameters)
     }
@@ -34,6 +64,11 @@ public interface EcsLaunchTargetConfig {
     override val cdkObject:
         software.amazon.awscdk.services.stepfunctions.tasks.EcsLaunchTargetConfig,
   ) : CdkObject(cdkObject), EcsLaunchTargetConfig {
+    /**
+     * Additional parameters to pass to the base task.
+     *
+     * Default: - No additional parameters passed
+     */
     override fun parameters(): Map<String, Any> = unwrap(this).getParameters() ?: emptyMap()
   }
 

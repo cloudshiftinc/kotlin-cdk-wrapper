@@ -6,7 +6,23 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Options for binding a Permissions Boundary to a construct scope.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * PermissionsBoundaryBindOptions permissionsBoundaryBindOptions =
+ * PermissionsBoundaryBindOptions.builder().build();
+ * ```
+ */
 public interface PermissionsBoundaryBindOptions {
+  /**
+   * A builder for [PermissionsBoundaryBindOptions]
+   */
   @CdkDslMarker
   public interface Builder
 

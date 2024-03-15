@@ -5,9 +5,37 @@ package io.cloudshiftdev.awscdk.services.cognito
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * User pool operations to which lambda triggers can be attached.
+ *
+ * Example:
+ *
+ * ```
+ * Function authChallengeFn = Function.Builder.create(this, "authChallengeFn")
+ * .runtime(Runtime.NODEJS_LATEST)
+ * .handler("index.handler")
+ * .code(Code.fromAsset(join(__dirname, "path/to/asset")))
+ * .build();
+ * UserPool userpool = UserPool.Builder.create(this, "myuserpool")
+ * // ...
+ * .lambdaTriggers(UserPoolTriggers.builder()
+ * .createAuthChallenge(authChallengeFn)
+ * .build())
+ * .build();
+ * userpool.addTrigger(UserPoolOperation.USER_MIGRATION, Function.Builder.create(this,
+ * "userMigrationFn")
+ * .runtime(Runtime.NODEJS_LATEST)
+ * .handler("index.handler")
+ * .code(Code.fromAsset(join(__dirname, "path/to/asset")))
+ * .build());
+ * ```
+ */
 public open class UserPoolOperation internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cognito.UserPoolOperation,
 ) : CdkObject(cdkObject) {
+  /**
+   * The key to use in `CfnUserPool.LambdaConfigProperty`.
+   */
   public open fun operationName(): String = unwrap(this).getOperationName()
 
   public companion object {

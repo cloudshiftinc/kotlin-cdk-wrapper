@@ -9,17 +9,65 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 
+/**
+ * Properties for defining a `CfnUserAccessLoggingSettings`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.workspacesweb.*;
+ * CfnUserAccessLoggingSettingsProps cfnUserAccessLoggingSettingsProps =
+ * CfnUserAccessLoggingSettingsProps.builder()
+ * .kinesisStreamArn("kinesisStreamArn")
+ * // the properties below are optional
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-useraccessloggingsettings.html)
+ */
 public interface CfnUserAccessLoggingSettingsProps {
+  /**
+   * The ARN of the Kinesis stream.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-useraccessloggingsettings.html#cfn-workspacesweb-useraccessloggingsettings-kinesisstreamarn)
+   */
   public fun kinesisStreamArn(): String
 
+  /**
+   * The tags to add to the user access logging settings resource.
+   *
+   * A tag is a key-value pair.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-useraccessloggingsettings.html#cfn-workspacesweb-useraccessloggingsettings-tags)
+   */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
+  /**
+   * A builder for [CfnUserAccessLoggingSettingsProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param kinesisStreamArn The ARN of the Kinesis stream. 
+     */
     public fun kinesisStreamArn(kinesisStreamArn: String)
 
+    /**
+     * @param tags The tags to add to the user access logging settings resource.
+     * A tag is a key-value pair.
+     */
     public fun tags(tags: List<CfnTag>)
 
+    /**
+     * @param tags The tags to add to the user access logging settings resource.
+     * A tag is a key-value pair.
+     */
     public fun tags(vararg tags: CfnTag)
   }
 
@@ -28,14 +76,25 @@ public interface CfnUserAccessLoggingSettingsProps {
         software.amazon.awscdk.services.workspacesweb.CfnUserAccessLoggingSettingsProps.Builder =
         software.amazon.awscdk.services.workspacesweb.CfnUserAccessLoggingSettingsProps.builder()
 
+    /**
+     * @param kinesisStreamArn The ARN of the Kinesis stream. 
+     */
     override fun kinesisStreamArn(kinesisStreamArn: String) {
       cdkBuilder.kinesisStreamArn(kinesisStreamArn)
     }
 
+    /**
+     * @param tags The tags to add to the user access logging settings resource.
+     * A tag is a key-value pair.
+     */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
+    /**
+     * @param tags The tags to add to the user access logging settings resource.
+     * A tag is a key-value pair.
+     */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build():
@@ -47,8 +106,20 @@ public interface CfnUserAccessLoggingSettingsProps {
     override val cdkObject:
         software.amazon.awscdk.services.workspacesweb.CfnUserAccessLoggingSettingsProps,
   ) : CdkObject(cdkObject), CfnUserAccessLoggingSettingsProps {
+    /**
+     * The ARN of the Kinesis stream.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-useraccessloggingsettings.html#cfn-workspacesweb-useraccessloggingsettings-kinesisstreamarn)
+     */
     override fun kinesisStreamArn(): String = unwrap(this).getKinesisStreamArn()
 
+    /**
+     * The tags to add to the user access logging settings resource.
+     *
+     * A tag is a key-value pair.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-useraccessloggingsettings.html#cfn-workspacesweb-useraccessloggingsettings-tags)
+     */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
   }
 

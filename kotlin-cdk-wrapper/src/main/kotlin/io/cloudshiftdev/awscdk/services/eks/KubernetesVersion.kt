@@ -5,9 +5,32 @@ package io.cloudshiftdev.awscdk.services.eks
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Kubernetes cluster version.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster = Cluster.Builder.create(this, "HelloEKS")
+ * .version(KubernetesVersion.V1_29)
+ * .defaultCapacity(0)
+ * .build();
+ * cluster.addNodegroupCapacity("custom-node-group", NodegroupOptions.builder()
+ * .instanceTypes(List.of(new InstanceType("m5.large")))
+ * .minSize(4)
+ * .diskSize(100)
+ * .amiType(NodegroupAmiType.AL2_X86_64_GPU)
+ * .build());
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/eks/latest/userguide/kubernetes-versions.html#kubernetes-release-calendar)
+ */
 public open class KubernetesVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.eks.KubernetesVersion,
 ) : CdkObject(cdkObject) {
+  /**
+   * cluster version number.
+   */
   public open fun version(): String = unwrap(this).getVersion()
 
   public companion object {

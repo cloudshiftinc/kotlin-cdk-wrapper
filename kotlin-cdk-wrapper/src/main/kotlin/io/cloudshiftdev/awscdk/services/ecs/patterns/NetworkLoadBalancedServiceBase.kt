@@ -10,20 +10,41 @@ import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.NetworkTargetGrou
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Number
 
+/**
+ * The base class for NetworkLoadBalancedEc2Service and NetworkLoadBalancedFargateService services.
+ */
 public abstract class NetworkLoadBalancedServiceBase internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedServiceBase,
 ) : Construct(cdkObject) {
+  /**
+   * The cluster that hosts the service.
+   */
   public open fun cluster(): ICluster = unwrap(this).getCluster().let(ICluster::wrap)
 
+  /**
+   * The desired number of instantiations of the task definition to keep running on the service.
+   *
+   * The default is 1 for all new services and uses the existing services desired count
+   * when updating an existing service, if one is not provided.
+   */
   public open fun internalDesiredCount(): Number? = unwrap(this).getInternalDesiredCount()
 
+  /**
+   * The listener for the service.
+   */
   public open fun listener(): NetworkListener =
       unwrap(this).getListener().let(NetworkListener::wrap)
 
+  /**
+   * The Network Load Balancer for the service.
+   */
   public open fun loadBalancer(): NetworkLoadBalancer =
       unwrap(this).getLoadBalancer().let(NetworkLoadBalancer::wrap)
 
+  /**
+   * The target group for the service.
+   */
   public open fun targetGroup(): NetworkTargetGroup =
       unwrap(this).getTargetGroup().let(NetworkTargetGroup::wrap)
 

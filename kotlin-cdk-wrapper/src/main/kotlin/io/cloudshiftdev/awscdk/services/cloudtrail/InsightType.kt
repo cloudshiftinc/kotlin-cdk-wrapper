@@ -5,9 +5,23 @@ package io.cloudshiftdev.awscdk.services.cloudtrail
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Util element for InsightSelector.
+ *
+ * Example:
+ *
+ * ```
+ * Trail.Builder.create(this, "Insights")
+ * .insightTypes(List.of(InsightType.API_CALL_RATE, InsightType.API_ERROR_RATE))
+ * .build();
+ * ```
+ */
 public open class InsightType internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudtrail.InsightType,
 ) : CdkObject(cdkObject) {
+  /**
+   *
+   */
   public open fun `value`(): String = unwrap(this).getValue()
 
   public companion object {

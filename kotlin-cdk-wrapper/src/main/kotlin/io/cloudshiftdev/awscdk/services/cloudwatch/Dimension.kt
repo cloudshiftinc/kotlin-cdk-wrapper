@@ -8,15 +8,48 @@ import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Metric dimension.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.cloudwatch.*;
+ * Object value;
+ * Dimension dimension = Dimension.builder()
+ * .name("name")
+ * .value(value)
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-dimension.html)
+ */
 public interface Dimension {
+  /**
+   * Name of the dimension.
+   */
   public fun name(): String
 
+  /**
+   * Value of the dimension.
+   */
   public fun `value`(): Any
 
+  /**
+   * A builder for [Dimension]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param name Name of the dimension. 
+     */
     public fun name(name: String)
 
+    /**
+     * @param value Value of the dimension. 
+     */
     public fun `value`(`value`: Any)
   }
 
@@ -24,10 +57,16 @@ public interface Dimension {
     private val cdkBuilder: software.amazon.awscdk.services.cloudwatch.Dimension.Builder =
         software.amazon.awscdk.services.cloudwatch.Dimension.builder()
 
+    /**
+     * @param name Name of the dimension. 
+     */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
+    /**
+     * @param value Value of the dimension. 
+     */
     override fun `value`(`value`: Any) {
       cdkBuilder.`value`(`value`)
     }
@@ -38,8 +77,14 @@ public interface Dimension {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.cloudwatch.Dimension,
   ) : CdkObject(cdkObject), Dimension {
+    /**
+     * Name of the dimension.
+     */
     override fun name(): String = unwrap(this).getName()
 
+    /**
+     * Value of the dimension.
+     */
     override fun `value`(): Any = unwrap(this).getValue()
   }
 

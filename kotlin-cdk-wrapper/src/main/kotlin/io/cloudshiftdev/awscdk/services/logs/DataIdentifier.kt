@@ -5,9 +5,46 @@ package io.cloudshiftdev.awscdk.services.logs
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * A data protection identifier.
+ *
+ * If an identifier is supported but not in this class, it can be passed in the constructor instead.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.kinesisfirehose.alpha.*;
+ * import io.cloudshiftdev.awscdk.services.kinesisfirehose.destinations.alpha.*;
+ * LogGroup logGroupDestination = LogGroup.Builder.create(this, "LogGroupLambdaAudit")
+ * .logGroupName("auditDestinationForCDK")
+ * .build();
+ * Bucket bucket = new Bucket(this, "audit-bucket");
+ * S3Bucket s3Destination = new S3Bucket(bucket);
+ * DeliveryStream deliveryStream = DeliveryStream.Builder.create(this, "Delivery Stream")
+ * .destinations(List.of(s3Destination))
+ * .build();
+ * DataProtectionPolicy dataProtectionPolicy = DataProtectionPolicy.Builder.create()
+ * .name("data protection policy")
+ * .description("policy description")
+ * .identifiers(List.of(DataIdentifier.DRIVERSLICENSE_US,  // managed data identifier
+ * new DataIdentifier("EmailAddress"),  // forward compatibility for new managed data identifiers
+ * new CustomDataIdentifier("EmployeeId", "EmployeeId-\\d{9}"))) // custom data identifier
+ * .logGroupAuditDestination(logGroupDestination)
+ * .s3BucketAuditDestination(bucket)
+ * .deliveryStreamNameAuditDestination(deliveryStream.getDeliveryStreamName())
+ * .build();
+ * LogGroup.Builder.create(this, "LogGroupLambda")
+ * .logGroupName("cdkIntegLogGroup")
+ * .dataProtectionPolicy(dataProtectionPolicy)
+ * .build();
+ * ```
+ */
 public open class DataIdentifier internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.logs.DataIdentifier,
 ) : CdkObject(cdkObject) {
+  /**
+   * * name of the identifier.
+   */
   public open fun name(): String = unwrap(this).getName()
 
   public companion object {

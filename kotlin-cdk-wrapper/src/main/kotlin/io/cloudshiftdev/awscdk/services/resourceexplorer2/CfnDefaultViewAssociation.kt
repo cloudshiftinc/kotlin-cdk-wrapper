@@ -11,25 +11,80 @@ import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * Sets the specified view as the default for the AWS Region in which you call this operation.
+ *
+ * If a user makes a search query that doesn't explicitly specify the view to use, Resource Explorer
+ * chooses this default view automatically for searches performed in this AWS Region .
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.resourceexplorer2.*;
+ * CfnDefaultViewAssociation cfnDefaultViewAssociation =
+ * CfnDefaultViewAssociation.Builder.create(this, "MyCfnDefaultViewAssociation")
+ * .viewArn("viewArn")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-defaultviewassociation.html)
+ */
 public open class CfnDefaultViewAssociation internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.resourceexplorer2.CfnDefaultViewAssociation,
 ) : CfnResource(cdkObject), IInspectable {
+  /**
+   * The unique identifier of the principal for which the specified view was made the default for
+   * the AWS Region that contains the view.
+   *
+   * For example:
+   *
+   * `123456789012`
+   */
   public open fun attrAssociatedAwsPrincipal(): String =
       unwrap(this).getAttrAssociatedAwsPrincipal()
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * The ARN of the view to set as the default for the AWS Region and AWS account in which you call
+   * this operation.
+   */
   public open fun viewArn(): String = unwrap(this).getViewArn()
 
+  /**
+   * The ARN of the view to set as the default for the AWS Region and AWS account in which you call
+   * this operation.
+   */
   public open fun viewArn(`value`: String) {
     unwrap(this).setViewArn(`value`)
   }
 
+  /**
+   * A fluent builder for
+   * [io.cloudshiftdev.awscdk.services.resourceexplorer2.CfnDefaultViewAssociation].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The ARN of the view to set as the default for the AWS Region and AWS account in which you
+     * call this operation.
+     *
+     * The specified view must already exist in the specified Region.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-defaultviewassociation.html#cfn-resourceexplorer2-defaultviewassociation-viewarn)
+     * @param viewArn The ARN of the view to set as the default for the AWS Region and AWS account
+     * in which you call this operation. 
+     */
     public fun viewArn(viewArn: String)
   }
 
@@ -42,6 +97,16 @@ public open class CfnDefaultViewAssociation internal constructor(
         software.amazon.awscdk.services.resourceexplorer2.CfnDefaultViewAssociation.Builder.create(scope,
         id)
 
+    /**
+     * The ARN of the view to set as the default for the AWS Region and AWS account in which you
+     * call this operation.
+     *
+     * The specified view must already exist in the specified Region.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resourceexplorer2-defaultviewassociation.html#cfn-resourceexplorer2-defaultviewassociation-viewarn)
+     * @param viewArn The ARN of the view to set as the default for the AWS Region and AWS account
+     * in which you call this operation. 
+     */
     override fun viewArn(viewArn: String) {
       cdkBuilder.viewArn(viewArn)
     }

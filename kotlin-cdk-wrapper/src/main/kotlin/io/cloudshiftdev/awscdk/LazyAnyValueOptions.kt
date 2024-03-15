@@ -8,15 +8,50 @@ import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Options for creating lazy untyped tokens.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * LazyAnyValueOptions lazyAnyValueOptions = LazyAnyValueOptions.builder()
+ * .displayHint("displayHint")
+ * .omitEmptyArray(false)
+ * .build();
+ * ```
+ */
 public interface LazyAnyValueOptions {
+  /**
+   * Use the given name as a display hint.
+   *
+   * Default: - No hint
+   */
   public fun displayHint(): String? = unwrap(this).getDisplayHint()
 
+  /**
+   * If the produced value is an array and it is empty, return 'undefined' instead.
+   *
+   * Default: false
+   */
   public fun omitEmptyArray(): Boolean? = unwrap(this).getOmitEmptyArray()
 
+  /**
+   * A builder for [LazyAnyValueOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param displayHint Use the given name as a display hint.
+     */
     public fun displayHint(displayHint: String)
 
+    /**
+     * @param omitEmptyArray If the produced value is an array and it is empty, return 'undefined'
+     * instead.
+     */
     public fun omitEmptyArray(omitEmptyArray: Boolean)
   }
 
@@ -24,10 +59,17 @@ public interface LazyAnyValueOptions {
     private val cdkBuilder: software.amazon.awscdk.LazyAnyValueOptions.Builder =
         software.amazon.awscdk.LazyAnyValueOptions.builder()
 
+    /**
+     * @param displayHint Use the given name as a display hint.
+     */
     override fun displayHint(displayHint: String) {
       cdkBuilder.displayHint(displayHint)
     }
 
+    /**
+     * @param omitEmptyArray If the produced value is an array and it is empty, return 'undefined'
+     * instead.
+     */
     override fun omitEmptyArray(omitEmptyArray: Boolean) {
       cdkBuilder.omitEmptyArray(omitEmptyArray)
     }
@@ -38,8 +80,18 @@ public interface LazyAnyValueOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.LazyAnyValueOptions,
   ) : CdkObject(cdkObject), LazyAnyValueOptions {
+    /**
+     * Use the given name as a display hint.
+     *
+     * Default: - No hint
+     */
     override fun displayHint(): String? = unwrap(this).getDisplayHint()
 
+    /**
+     * If the produced value is an array and it is empty, return 'undefined' instead.
+     *
+     * Default: false
+     */
     override fun omitEmptyArray(): Boolean? = unwrap(this).getOmitEmptyArray()
   }
 

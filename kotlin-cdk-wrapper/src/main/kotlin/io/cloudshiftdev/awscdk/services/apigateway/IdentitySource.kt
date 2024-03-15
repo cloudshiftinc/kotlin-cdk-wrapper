@@ -5,6 +5,26 @@ package io.cloudshiftdev.awscdk.services.apigateway
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Represents an identity source.
+ *
+ * The source can be specified either as a literal value (e.g: `Auth`) which
+ * cannot be blank, or as an unresolved string token.
+ *
+ * Example:
+ *
+ * ```
+ * Function authFn;
+ * Resource books;
+ * RequestAuthorizer auth = RequestAuthorizer.Builder.create(this, "booksAuthorizer")
+ * .handler(authFn)
+ * .identitySources(List.of(IdentitySource.header("Authorization")))
+ * .build();
+ * books.addMethod("GET", new HttpIntegration("http://amazon.com"), MethodOptions.builder()
+ * .authorizer(auth)
+ * .build());
+ * ```
+ */
 public open class IdentitySource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.apigateway.IdentitySource,
 ) : CdkObject(cdkObject) {

@@ -7,19 +7,63 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * The properties to create a Key Value Store.
+ *
+ * Example:
+ *
+ * ```
+ * KeyValueStore store = KeyValueStore.Builder.create(this, "KeyValueStore")
+ * .keyValueStoreName("KeyValueStore")
+ * .source(ImportSource.fromAsset("path-to-data.json"))
+ * .build();
+ * ```
+ */
 public interface KeyValueStoreProps {
+  /**
+   * A comment for the Key Value Store.
+   *
+   * Default: No comment will be specified
+   */
   public fun comment(): String? = unwrap(this).getComment()
 
+  /**
+   * The unique name of the Key Value Store.
+   *
+   * Default: A generated name
+   */
   public fun keyValueStoreName(): String? = unwrap(this).getKeyValueStoreName()
 
+  /**
+   * The import source for the Key Value Store.
+   *
+   * This will populate the initial items in the Key Value Store. The
+   * source data must be in a valid JSON format.
+   *
+   * Default: No data will be imported to the store
+   */
   public fun source(): ImportSource? = unwrap(this).getSource()?.let(ImportSource::wrap)
 
+  /**
+   * A builder for [KeyValueStoreProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param comment A comment for the Key Value Store.
+     */
     public fun comment(comment: String)
 
+    /**
+     * @param keyValueStoreName The unique name of the Key Value Store.
+     */
     public fun keyValueStoreName(keyValueStoreName: String)
 
+    /**
+     * @param source The import source for the Key Value Store.
+     * This will populate the initial items in the Key Value Store. The
+     * source data must be in a valid JSON format.
+     */
     public fun source(source: ImportSource)
   }
 
@@ -27,14 +71,25 @@ public interface KeyValueStoreProps {
     private val cdkBuilder: software.amazon.awscdk.services.cloudfront.KeyValueStoreProps.Builder =
         software.amazon.awscdk.services.cloudfront.KeyValueStoreProps.builder()
 
+    /**
+     * @param comment A comment for the Key Value Store.
+     */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
+    /**
+     * @param keyValueStoreName The unique name of the Key Value Store.
+     */
     override fun keyValueStoreName(keyValueStoreName: String) {
       cdkBuilder.keyValueStoreName(keyValueStoreName)
     }
 
+    /**
+     * @param source The import source for the Key Value Store.
+     * This will populate the initial items in the Key Value Store. The
+     * source data must be in a valid JSON format.
+     */
     override fun source(source: ImportSource) {
       cdkBuilder.source(source.let(ImportSource::unwrap))
     }
@@ -46,10 +101,28 @@ public interface KeyValueStoreProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.cloudfront.KeyValueStoreProps,
   ) : CdkObject(cdkObject), KeyValueStoreProps {
+    /**
+     * A comment for the Key Value Store.
+     *
+     * Default: No comment will be specified
+     */
     override fun comment(): String? = unwrap(this).getComment()
 
+    /**
+     * The unique name of the Key Value Store.
+     *
+     * Default: A generated name
+     */
     override fun keyValueStoreName(): String? = unwrap(this).getKeyValueStoreName()
 
+    /**
+     * The import source for the Key Value Store.
+     *
+     * This will populate the initial items in the Key Value Store. The
+     * source data must be in a valid JSON format.
+     *
+     * Default: No data will be imported to the store
+     */
     override fun source(): ImportSource? = unwrap(this).getSource()?.let(ImportSource::wrap)
   }
 

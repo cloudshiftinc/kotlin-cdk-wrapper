@@ -24,381 +24,909 @@ import kotlin.jvm.JvmName
 import io.cloudshiftdev.awscdk.services.elasticsearch.IDomain as ElasticsearchIDomain
 import io.cloudshiftdev.awscdk.services.opensearchservice.IDomain as OpensearchserviceIDomain
 
+/**
+ * Interface for GraphQL.
+ */
 public interface IGraphqlApi : IResource {
-  public fun addDynamoDbDataSource(arg0: String, arg1: ITable): DynamoDbDataSource
+  /**
+   * add a new DynamoDB data source to this API.
+   *
+   * @param id The data source's id. 
+   * @param table The DynamoDB table backing this data source. 
+   * @param options The optional configuration for this data source.
+   */
+  public fun addDynamoDbDataSource(id: String, table: ITable): DynamoDbDataSource
 
+  /**
+   * add a new DynamoDB data source to this API.
+   *
+   * @param id The data source's id. 
+   * @param table The DynamoDB table backing this data source. 
+   * @param options The optional configuration for this data source.
+   */
   public fun addDynamoDbDataSource(
-    arg0: String,
-    arg1: ITable,
-    arg2: DataSourceOptions,
+    id: String,
+    table: ITable,
+    options: DataSourceOptions,
   ): DynamoDbDataSource
 
+  /**
+   * add a new DynamoDB data source to this API.
+   *
+   * @param id The data source's id. 
+   * @param table The DynamoDB table backing this data source. 
+   * @param options The optional configuration for this data source.
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("530dd82c95ed746875fe350e7cde2e4fbc011d487637179a7db2e8e6deacaf0f")
   public fun addDynamoDbDataSource(
-    arg0: String,
-    arg1: ITable,
-    arg2: DataSourceOptions.Builder.() -> Unit,
+    id: String,
+    table: ITable,
+    options: DataSourceOptions.Builder.() -> Unit,
   ): DynamoDbDataSource
 
+  /**
+   * (deprecated) add a new elasticsearch data source to this API.
+   *
+   * * use `addOpenSearchDataSource`
+   * @param id The data source's id. 
+   * @param domain The elasticsearch domain for this data source. 
+   * @param options The optional configuration for this data source.
+   */
   @Deprecated(message = "deprecated in CDK")
-  public fun addElasticsearchDataSource(arg0: String, arg1: ElasticsearchIDomain):
+  public fun addElasticsearchDataSource(id: String, domain: ElasticsearchIDomain):
       ElasticsearchDataSource
 
+  /**
+   * (deprecated) add a new elasticsearch data source to this API.
+   *
+   * * use `addOpenSearchDataSource`
+   * @param id The data source's id. 
+   * @param domain The elasticsearch domain for this data source. 
+   * @param options The optional configuration for this data source.
+   */
   @Deprecated(message = "deprecated in CDK")
   public fun addElasticsearchDataSource(
-    arg0: String,
-    arg1: ElasticsearchIDomain,
-    arg2: DataSourceOptions,
+    id: String,
+    domain: ElasticsearchIDomain,
+    options: DataSourceOptions,
   ): ElasticsearchDataSource
 
+  /**
+   * (deprecated) add a new elasticsearch data source to this API.
+   *
+   * * use `addOpenSearchDataSource`
+   * @param id The data source's id. 
+   * @param domain The elasticsearch domain for this data source. 
+   * @param options The optional configuration for this data source.
+   */
   @Deprecated(message = "deprecated in CDK")
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("0140c82b8b61fcbf955d362494e2dda1c27bce203e323f42c39a2f0d210d07e3")
   public fun addElasticsearchDataSource(
-    arg0: String,
-    arg1: ElasticsearchIDomain,
-    arg2: DataSourceOptions.Builder.() -> Unit,
+    id: String,
+    domain: ElasticsearchIDomain,
+    options: DataSourceOptions.Builder.() -> Unit,
   ): ElasticsearchDataSource
 
-  public fun addEventBridgeDataSource(arg0: String, arg1: IEventBus): EventBridgeDataSource
+  /**
+   * Add an EventBridge data source to this api.
+   *
+   * @param id The data source's id. 
+   * @param eventBus The EventBridge EventBus on which to put events. 
+   * @param options The optional configuration for this data source.
+   */
+  public fun addEventBridgeDataSource(id: String, eventBus: IEventBus): EventBridgeDataSource
 
+  /**
+   * Add an EventBridge data source to this api.
+   *
+   * @param id The data source's id. 
+   * @param eventBus The EventBridge EventBus on which to put events. 
+   * @param options The optional configuration for this data source.
+   */
   public fun addEventBridgeDataSource(
-    arg0: String,
-    arg1: IEventBus,
-    arg2: DataSourceOptions,
+    id: String,
+    eventBus: IEventBus,
+    options: DataSourceOptions,
   ): EventBridgeDataSource
 
+  /**
+   * Add an EventBridge data source to this api.
+   *
+   * @param id The data source's id. 
+   * @param eventBus The EventBridge EventBus on which to put events. 
+   * @param options The optional configuration for this data source.
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("d1a221338235f20da91d27739af1cae4d12b3f101b872bc80ef0dc52cb587b3d")
   public fun addEventBridgeDataSource(
-    arg0: String,
-    arg1: IEventBus,
-    arg2: DataSourceOptions.Builder.() -> Unit,
+    id: String,
+    eventBus: IEventBus,
+    options: DataSourceOptions.Builder.() -> Unit,
   ): EventBridgeDataSource
 
-  public fun addHttpDataSource(arg0: String, arg1: String): HttpDataSource
+  /**
+   * add a new http data source to this API.
+   *
+   * @param id The data source's id. 
+   * @param endpoint The http endpoint. 
+   * @param options The optional configuration for this data source.
+   */
+  public fun addHttpDataSource(id: String, endpoint: String): HttpDataSource
 
+  /**
+   * add a new http data source to this API.
+   *
+   * @param id The data source's id. 
+   * @param endpoint The http endpoint. 
+   * @param options The optional configuration for this data source.
+   */
   public fun addHttpDataSource(
-    arg0: String,
-    arg1: String,
-    arg2: HttpDataSourceOptions,
+    id: String,
+    endpoint: String,
+    options: HttpDataSourceOptions,
   ): HttpDataSource
 
+  /**
+   * add a new http data source to this API.
+   *
+   * @param id The data source's id. 
+   * @param endpoint The http endpoint. 
+   * @param options The optional configuration for this data source.
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("adc715bb04cde12e0c5e1b70042b159e2aab45f9ee3bfd1d56778b2f941f73b6")
   public fun addHttpDataSource(
-    arg0: String,
-    arg1: String,
-    arg2: HttpDataSourceOptions.Builder.() -> Unit,
+    id: String,
+    endpoint: String,
+    options: HttpDataSourceOptions.Builder.() -> Unit,
   ): HttpDataSource
 
-  public fun addLambdaDataSource(arg0: String, arg1: IFunction): LambdaDataSource
+  /**
+   * add a new Lambda data source to this API.
+   *
+   * @param id The data source's id. 
+   * @param lambdaFunction The Lambda function to call to interact with this data source. 
+   * @param options The optional configuration for this data source.
+   */
+  public fun addLambdaDataSource(id: String, lambdaFunction: IFunction): LambdaDataSource
 
+  /**
+   * add a new Lambda data source to this API.
+   *
+   * @param id The data source's id. 
+   * @param lambdaFunction The Lambda function to call to interact with this data source. 
+   * @param options The optional configuration for this data source.
+   */
   public fun addLambdaDataSource(
-    arg0: String,
-    arg1: IFunction,
-    arg2: DataSourceOptions,
+    id: String,
+    lambdaFunction: IFunction,
+    options: DataSourceOptions,
   ): LambdaDataSource
 
+  /**
+   * add a new Lambda data source to this API.
+   *
+   * @param id The data source's id. 
+   * @param lambdaFunction The Lambda function to call to interact with this data source. 
+   * @param options The optional configuration for this data source.
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("f5743d20f6e9bffad5b7739c473ab2a90eb35b8c23f6c85534da3967bd9c0a1a")
   public fun addLambdaDataSource(
-    arg0: String,
-    arg1: IFunction,
-    arg2: DataSourceOptions.Builder.() -> Unit,
+    id: String,
+    lambdaFunction: IFunction,
+    options: DataSourceOptions.Builder.() -> Unit,
   ): LambdaDataSource
 
-  public fun addNoneDataSource(arg0: String): NoneDataSource
+  /**
+   * add a new dummy data source to this API.
+   *
+   * Useful for pipeline resolvers
+   * and for backend changes that don't require a data source.
+   *
+   * @param id The data source's id. 
+   * @param options The optional configuration for this data source.
+   */
+  public fun addNoneDataSource(id: String): NoneDataSource
 
-  public fun addNoneDataSource(arg0: String, arg1: DataSourceOptions): NoneDataSource
+  /**
+   * add a new dummy data source to this API.
+   *
+   * Useful for pipeline resolvers
+   * and for backend changes that don't require a data source.
+   *
+   * @param id The data source's id. 
+   * @param options The optional configuration for this data source.
+   */
+  public fun addNoneDataSource(id: String, options: DataSourceOptions): NoneDataSource
 
+  /**
+   * add a new dummy data source to this API.
+   *
+   * Useful for pipeline resolvers
+   * and for backend changes that don't require a data source.
+   *
+   * @param id The data source's id. 
+   * @param options The optional configuration for this data source.
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("f6ad3c2d0d3a1e70a3c0a4d1b13a764aaf821c23e6022c32e77eafd2e3511485")
-  public fun addNoneDataSource(arg0: String, arg1: DataSourceOptions.Builder.() -> Unit):
+  public fun addNoneDataSource(id: String, options: DataSourceOptions.Builder.() -> Unit):
       NoneDataSource
 
-  public fun addOpenSearchDataSource(arg0: String, arg1: OpensearchserviceIDomain):
+  /**
+   * Add a new OpenSearch data source to this API.
+   *
+   * @param id The data source's id. 
+   * @param domain The OpenSearch domain for this data source. 
+   * @param options The optional configuration for this data source.
+   */
+  public fun addOpenSearchDataSource(id: String, domain: OpensearchserviceIDomain):
       OpenSearchDataSource
 
+  /**
+   * Add a new OpenSearch data source to this API.
+   *
+   * @param id The data source's id. 
+   * @param domain The OpenSearch domain for this data source. 
+   * @param options The optional configuration for this data source.
+   */
   public fun addOpenSearchDataSource(
-    arg0: String,
-    arg1: OpensearchserviceIDomain,
-    arg2: DataSourceOptions,
+    id: String,
+    domain: OpensearchserviceIDomain,
+    options: DataSourceOptions,
   ): OpenSearchDataSource
 
+  /**
+   * Add a new OpenSearch data source to this API.
+   *
+   * @param id The data source's id. 
+   * @param domain The OpenSearch domain for this data source. 
+   * @param options The optional configuration for this data source.
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("0a4cb979329edf469eb722bd82ee676e144874290e4bf8b25e186aa1b5331890")
   public fun addOpenSearchDataSource(
-    arg0: String,
-    arg1: OpensearchserviceIDomain,
-    arg2: DataSourceOptions.Builder.() -> Unit,
+    id: String,
+    domain: OpensearchserviceIDomain,
+    options: DataSourceOptions.Builder.() -> Unit,
   ): OpenSearchDataSource
 
+  /**
+   * add a new Rds data source to this API.
+   *
+   * @param id The data source's id. 
+   * @param serverlessCluster The serverless cluster to interact with this data source. 
+   * @param secretStore The secret store that contains the username and password for the serverless
+   * cluster. 
+   * @param databaseName The optional name of the database to use within the cluster.
+   * @param options The optional configuration for this data source.
+   */
   public fun addRdsDataSource(
-    arg0: String,
-    arg1: IServerlessCluster,
-    arg2: ISecret,
+    id: String,
+    serverlessCluster: IServerlessCluster,
+    secretStore: ISecret,
   ): RdsDataSource
 
+  /**
+   * add a new Rds data source to this API.
+   *
+   * @param id The data source's id. 
+   * @param serverlessCluster The serverless cluster to interact with this data source. 
+   * @param secretStore The secret store that contains the username and password for the serverless
+   * cluster. 
+   * @param databaseName The optional name of the database to use within the cluster.
+   * @param options The optional configuration for this data source.
+   */
   public fun addRdsDataSource(
-    arg0: String,
-    arg1: IServerlessCluster,
-    arg2: ISecret,
-    arg3: String,
+    id: String,
+    serverlessCluster: IServerlessCluster,
+    secretStore: ISecret,
+    databaseName: String,
   ): RdsDataSource
 
+  /**
+   * add a new Rds data source to this API.
+   *
+   * @param id The data source's id. 
+   * @param serverlessCluster The serverless cluster to interact with this data source. 
+   * @param secretStore The secret store that contains the username and password for the serverless
+   * cluster. 
+   * @param databaseName The optional name of the database to use within the cluster.
+   * @param options The optional configuration for this data source.
+   */
   public fun addRdsDataSource(
-    arg0: String,
-    arg1: IServerlessCluster,
-    arg2: ISecret,
-    arg3: String,
-    arg4: DataSourceOptions,
+    id: String,
+    serverlessCluster: IServerlessCluster,
+    secretStore: ISecret,
+    databaseName: String,
+    options: DataSourceOptions,
   ): RdsDataSource
 
+  /**
+   * add a new Rds data source to this API.
+   *
+   * @param id The data source's id. 
+   * @param serverlessCluster The serverless cluster to interact with this data source. 
+   * @param secretStore The secret store that contains the username and password for the serverless
+   * cluster. 
+   * @param databaseName The optional name of the database to use within the cluster.
+   * @param options The optional configuration for this data source.
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("3a9fffa2af175b82843c8d257699a3a39f51c1a5f014c37a8b7fc18df18205e9")
   public fun addRdsDataSource(
-    arg0: String,
-    arg1: IServerlessCluster,
-    arg2: ISecret,
-    arg3: String,
-    arg4: DataSourceOptions.Builder.() -> Unit,
+    id: String,
+    serverlessCluster: IServerlessCluster,
+    secretStore: ISecret,
+    databaseName: String,
+    options: DataSourceOptions.Builder.() -> Unit,
   ): RdsDataSource
 
-  public fun addSchemaDependency(arg0: CfnResource): Boolean
+  /**
+   * Add schema dependency if not imported.
+   *
+   * @param construct the dependee. 
+   */
+  public fun addSchemaDependency(construct: CfnResource): Boolean
 
+  /**
+   * an unique AWS AppSync GraphQL API identifier i.e. 'lxz775lwdrgcndgz3nurvac7oa'.
+   */
   public fun apiId(): String
 
+  /**
+   * the ARN of the API.
+   */
   public fun arn(): String
 
-  public fun createResolver(arg0: String, arg1: ExtendedResolverProps): Resolver
+  /**
+   * creates a new resolver for this datasource and API using the given properties.
+   *
+   * @param id 
+   * @param props 
+   */
+  public fun createResolver(id: String, props: ExtendedResolverProps): Resolver
 
+  /**
+   * creates a new resolver for this datasource and API using the given properties.
+   *
+   * @param id 
+   * @param props 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("dfac965a6b25365e261bc8f10e37f75dee20d44ce736e5d6bb3be729ca63320e")
-  public fun createResolver(arg0: String, arg1: ExtendedResolverProps.Builder.() -> Unit): Resolver
+  public fun createResolver(id: String, props: ExtendedResolverProps.Builder.() -> Unit): Resolver
 
+  /**
+   * Adds an IAM policy statement associated with this GraphQLApi to an IAM principal's policy.
+   *
+   * @param grantee The principal. 
+   * @param resources The set of resources to allow (i.e.
+   * ...:[region]:[accountId]:apis/GraphQLId/...). 
+   * @param actions The actions that should be granted to the principal (i.e. appsync:graphql ). 
+   */
   public fun grant(
-    arg0: IGrantable,
-    arg1: IamResource,
-    arg2: String,
+    grantee: IGrantable,
+    resources: IamResource,
+    actions: String,
   ): Grant
 
-  public fun grantMutation(arg0: IGrantable, arg1: String): Grant
+  /**
+   * Adds an IAM policy statement for Mutation access to this GraphQLApi to an IAM principal's
+   * policy.
+   *
+   * @param grantee The principal. 
+   * @param fields The fields to grant access to that are Mutations (leave blank for all). 
+   */
+  public fun grantMutation(grantee: IGrantable, fields: String): Grant
 
-  public fun grantQuery(arg0: IGrantable, arg1: String): Grant
+  /**
+   * Adds an IAM policy statement for Query access to this GraphQLApi to an IAM principal's policy.
+   *
+   * @param grantee The principal. 
+   * @param fields The fields to grant access to that are Queries (leave blank for all). 
+   */
+  public fun grantQuery(grantee: IGrantable, fields: String): Grant
 
-  public fun grantSubscription(arg0: IGrantable, arg1: String): Grant
+  /**
+   * Adds an IAM policy statement for Subscription access to this GraphQLApi to an IAM principal's
+   * policy.
+   *
+   * @param grantee The principal. 
+   * @param fields The fields to grant access to that are Subscriptions (leave blank for all). 
+   */
+  public fun grantSubscription(grantee: IGrantable, fields: String): Grant
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appsync.IGraphqlApi,
   ) : CdkObject(cdkObject), IGraphqlApi {
-    override fun addDynamoDbDataSource(arg0: String, arg1: ITable): DynamoDbDataSource =
-        unwrap(this).addDynamoDbDataSource(arg0,
-        arg1.let(ITable::unwrap)).let(DynamoDbDataSource::wrap)
+    /**
+     * add a new DynamoDB data source to this API.
+     *
+     * @param id The data source's id. 
+     * @param table The DynamoDB table backing this data source. 
+     * @param options The optional configuration for this data source.
+     */
+    override fun addDynamoDbDataSource(id: String, table: ITable): DynamoDbDataSource =
+        unwrap(this).addDynamoDbDataSource(id,
+        table.let(ITable::unwrap)).let(DynamoDbDataSource::wrap)
 
+    /**
+     * add a new DynamoDB data source to this API.
+     *
+     * @param id The data source's id. 
+     * @param table The DynamoDB table backing this data source. 
+     * @param options The optional configuration for this data source.
+     */
     override fun addDynamoDbDataSource(
-      arg0: String,
-      arg1: ITable,
-      arg2: DataSourceOptions,
-    ): DynamoDbDataSource = unwrap(this).addDynamoDbDataSource(arg0, arg1.let(ITable::unwrap),
-        arg2.let(DataSourceOptions::unwrap)).let(DynamoDbDataSource::wrap)
+      id: String,
+      table: ITable,
+      options: DataSourceOptions,
+    ): DynamoDbDataSource = unwrap(this).addDynamoDbDataSource(id, table.let(ITable::unwrap),
+        options.let(DataSourceOptions::unwrap)).let(DynamoDbDataSource::wrap)
 
+    /**
+     * add a new DynamoDB data source to this API.
+     *
+     * @param id The data source's id. 
+     * @param table The DynamoDB table backing this data source. 
+     * @param options The optional configuration for this data source.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("530dd82c95ed746875fe350e7cde2e4fbc011d487637179a7db2e8e6deacaf0f")
     override fun addDynamoDbDataSource(
-      arg0: String,
-      arg1: ITable,
-      arg2: DataSourceOptions.Builder.() -> Unit,
-    ): DynamoDbDataSource = addDynamoDbDataSource(arg0, arg1, DataSourceOptions(arg2))
+      id: String,
+      table: ITable,
+      options: DataSourceOptions.Builder.() -> Unit,
+    ): DynamoDbDataSource = addDynamoDbDataSource(id, table, DataSourceOptions(options))
 
+    /**
+     * (deprecated) add a new elasticsearch data source to this API.
+     *
+     * * use `addOpenSearchDataSource`
+     * @param id The data source's id. 
+     * @param domain The elasticsearch domain for this data source. 
+     * @param options The optional configuration for this data source.
+     */
     @Deprecated(message = "deprecated in CDK")
-    override fun addElasticsearchDataSource(arg0: String, arg1: ElasticsearchIDomain):
-        ElasticsearchDataSource = unwrap(this).addElasticsearchDataSource(arg0,
-        arg1.let(ElasticsearchIDomain::unwrap)).let(ElasticsearchDataSource::wrap)
+    override fun addElasticsearchDataSource(id: String, domain: ElasticsearchIDomain):
+        ElasticsearchDataSource = unwrap(this).addElasticsearchDataSource(id,
+        domain.let(ElasticsearchIDomain::unwrap)).let(ElasticsearchDataSource::wrap)
 
+    /**
+     * (deprecated) add a new elasticsearch data source to this API.
+     *
+     * * use `addOpenSearchDataSource`
+     * @param id The data source's id. 
+     * @param domain The elasticsearch domain for this data source. 
+     * @param options The optional configuration for this data source.
+     */
     @Deprecated(message = "deprecated in CDK")
     override fun addElasticsearchDataSource(
-      arg0: String,
-      arg1: ElasticsearchIDomain,
-      arg2: DataSourceOptions,
-    ): ElasticsearchDataSource = unwrap(this).addElasticsearchDataSource(arg0,
-        arg1.let(ElasticsearchIDomain::unwrap),
-        arg2.let(DataSourceOptions::unwrap)).let(ElasticsearchDataSource::wrap)
+      id: String,
+      domain: ElasticsearchIDomain,
+      options: DataSourceOptions,
+    ): ElasticsearchDataSource = unwrap(this).addElasticsearchDataSource(id,
+        domain.let(ElasticsearchIDomain::unwrap),
+        options.let(DataSourceOptions::unwrap)).let(ElasticsearchDataSource::wrap)
 
+    /**
+     * (deprecated) add a new elasticsearch data source to this API.
+     *
+     * * use `addOpenSearchDataSource`
+     * @param id The data source's id. 
+     * @param domain The elasticsearch domain for this data source. 
+     * @param options The optional configuration for this data source.
+     */
     @Deprecated(message = "deprecated in CDK")
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0140c82b8b61fcbf955d362494e2dda1c27bce203e323f42c39a2f0d210d07e3")
     override fun addElasticsearchDataSource(
-      arg0: String,
-      arg1: ElasticsearchIDomain,
-      arg2: DataSourceOptions.Builder.() -> Unit,
-    ): ElasticsearchDataSource = addElasticsearchDataSource(arg0, arg1, DataSourceOptions(arg2))
+      id: String,
+      domain: ElasticsearchIDomain,
+      options: DataSourceOptions.Builder.() -> Unit,
+    ): ElasticsearchDataSource = addElasticsearchDataSource(id, domain, DataSourceOptions(options))
 
-    override fun addEventBridgeDataSource(arg0: String, arg1: IEventBus): EventBridgeDataSource =
-        unwrap(this).addEventBridgeDataSource(arg0,
-        arg1.let(IEventBus::unwrap)).let(EventBridgeDataSource::wrap)
+    /**
+     * Add an EventBridge data source to this api.
+     *
+     * @param id The data source's id. 
+     * @param eventBus The EventBridge EventBus on which to put events. 
+     * @param options The optional configuration for this data source.
+     */
+    override fun addEventBridgeDataSource(id: String, eventBus: IEventBus): EventBridgeDataSource =
+        unwrap(this).addEventBridgeDataSource(id,
+        eventBus.let(IEventBus::unwrap)).let(EventBridgeDataSource::wrap)
 
+    /**
+     * Add an EventBridge data source to this api.
+     *
+     * @param id The data source's id. 
+     * @param eventBus The EventBridge EventBus on which to put events. 
+     * @param options The optional configuration for this data source.
+     */
     override fun addEventBridgeDataSource(
-      arg0: String,
-      arg1: IEventBus,
-      arg2: DataSourceOptions,
-    ): EventBridgeDataSource = unwrap(this).addEventBridgeDataSource(arg0,
-        arg1.let(IEventBus::unwrap),
-        arg2.let(DataSourceOptions::unwrap)).let(EventBridgeDataSource::wrap)
+      id: String,
+      eventBus: IEventBus,
+      options: DataSourceOptions,
+    ): EventBridgeDataSource = unwrap(this).addEventBridgeDataSource(id,
+        eventBus.let(IEventBus::unwrap),
+        options.let(DataSourceOptions::unwrap)).let(EventBridgeDataSource::wrap)
 
+    /**
+     * Add an EventBridge data source to this api.
+     *
+     * @param id The data source's id. 
+     * @param eventBus The EventBridge EventBus on which to put events. 
+     * @param options The optional configuration for this data source.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d1a221338235f20da91d27739af1cae4d12b3f101b872bc80ef0dc52cb587b3d")
     override fun addEventBridgeDataSource(
-      arg0: String,
-      arg1: IEventBus,
-      arg2: DataSourceOptions.Builder.() -> Unit,
-    ): EventBridgeDataSource = addEventBridgeDataSource(arg0, arg1, DataSourceOptions(arg2))
+      id: String,
+      eventBus: IEventBus,
+      options: DataSourceOptions.Builder.() -> Unit,
+    ): EventBridgeDataSource = addEventBridgeDataSource(id, eventBus, DataSourceOptions(options))
 
-    override fun addHttpDataSource(arg0: String, arg1: String): HttpDataSource =
-        unwrap(this).addHttpDataSource(arg0, arg1).let(HttpDataSource::wrap)
+    /**
+     * add a new http data source to this API.
+     *
+     * @param id The data source's id. 
+     * @param endpoint The http endpoint. 
+     * @param options The optional configuration for this data source.
+     */
+    override fun addHttpDataSource(id: String, endpoint: String): HttpDataSource =
+        unwrap(this).addHttpDataSource(id, endpoint).let(HttpDataSource::wrap)
 
+    /**
+     * add a new http data source to this API.
+     *
+     * @param id The data source's id. 
+     * @param endpoint The http endpoint. 
+     * @param options The optional configuration for this data source.
+     */
     override fun addHttpDataSource(
-      arg0: String,
-      arg1: String,
-      arg2: HttpDataSourceOptions,
-    ): HttpDataSource = unwrap(this).addHttpDataSource(arg0, arg1,
-        arg2.let(HttpDataSourceOptions::unwrap)).let(HttpDataSource::wrap)
+      id: String,
+      endpoint: String,
+      options: HttpDataSourceOptions,
+    ): HttpDataSource = unwrap(this).addHttpDataSource(id, endpoint,
+        options.let(HttpDataSourceOptions::unwrap)).let(HttpDataSource::wrap)
 
+    /**
+     * add a new http data source to this API.
+     *
+     * @param id The data source's id. 
+     * @param endpoint The http endpoint. 
+     * @param options The optional configuration for this data source.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("adc715bb04cde12e0c5e1b70042b159e2aab45f9ee3bfd1d56778b2f941f73b6")
     override fun addHttpDataSource(
-      arg0: String,
-      arg1: String,
-      arg2: HttpDataSourceOptions.Builder.() -> Unit,
-    ): HttpDataSource = addHttpDataSource(arg0, arg1, HttpDataSourceOptions(arg2))
+      id: String,
+      endpoint: String,
+      options: HttpDataSourceOptions.Builder.() -> Unit,
+    ): HttpDataSource = addHttpDataSource(id, endpoint, HttpDataSourceOptions(options))
 
-    override fun addLambdaDataSource(arg0: String, arg1: IFunction): LambdaDataSource =
-        unwrap(this).addLambdaDataSource(arg0,
-        arg1.let(IFunction::unwrap)).let(LambdaDataSource::wrap)
+    /**
+     * add a new Lambda data source to this API.
+     *
+     * @param id The data source's id. 
+     * @param lambdaFunction The Lambda function to call to interact with this data source. 
+     * @param options The optional configuration for this data source.
+     */
+    override fun addLambdaDataSource(id: String, lambdaFunction: IFunction): LambdaDataSource =
+        unwrap(this).addLambdaDataSource(id,
+        lambdaFunction.let(IFunction::unwrap)).let(LambdaDataSource::wrap)
 
+    /**
+     * add a new Lambda data source to this API.
+     *
+     * @param id The data source's id. 
+     * @param lambdaFunction The Lambda function to call to interact with this data source. 
+     * @param options The optional configuration for this data source.
+     */
     override fun addLambdaDataSource(
-      arg0: String,
-      arg1: IFunction,
-      arg2: DataSourceOptions,
-    ): LambdaDataSource = unwrap(this).addLambdaDataSource(arg0, arg1.let(IFunction::unwrap),
-        arg2.let(DataSourceOptions::unwrap)).let(LambdaDataSource::wrap)
+      id: String,
+      lambdaFunction: IFunction,
+      options: DataSourceOptions,
+    ): LambdaDataSource = unwrap(this).addLambdaDataSource(id,
+        lambdaFunction.let(IFunction::unwrap),
+        options.let(DataSourceOptions::unwrap)).let(LambdaDataSource::wrap)
 
+    /**
+     * add a new Lambda data source to this API.
+     *
+     * @param id The data source's id. 
+     * @param lambdaFunction The Lambda function to call to interact with this data source. 
+     * @param options The optional configuration for this data source.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f5743d20f6e9bffad5b7739c473ab2a90eb35b8c23f6c85534da3967bd9c0a1a")
     override fun addLambdaDataSource(
-      arg0: String,
-      arg1: IFunction,
-      arg2: DataSourceOptions.Builder.() -> Unit,
-    ): LambdaDataSource = addLambdaDataSource(arg0, arg1, DataSourceOptions(arg2))
+      id: String,
+      lambdaFunction: IFunction,
+      options: DataSourceOptions.Builder.() -> Unit,
+    ): LambdaDataSource = addLambdaDataSource(id, lambdaFunction, DataSourceOptions(options))
 
-    override fun addNoneDataSource(arg0: String): NoneDataSource =
-        unwrap(this).addNoneDataSource(arg0).let(NoneDataSource::wrap)
+    /**
+     * add a new dummy data source to this API.
+     *
+     * Useful for pipeline resolvers
+     * and for backend changes that don't require a data source.
+     *
+     * @param id The data source's id. 
+     * @param options The optional configuration for this data source.
+     */
+    override fun addNoneDataSource(id: String): NoneDataSource =
+        unwrap(this).addNoneDataSource(id).let(NoneDataSource::wrap)
 
-    override fun addNoneDataSource(arg0: String, arg1: DataSourceOptions): NoneDataSource =
-        unwrap(this).addNoneDataSource(arg0,
-        arg1.let(DataSourceOptions::unwrap)).let(NoneDataSource::wrap)
+    /**
+     * add a new dummy data source to this API.
+     *
+     * Useful for pipeline resolvers
+     * and for backend changes that don't require a data source.
+     *
+     * @param id The data source's id. 
+     * @param options The optional configuration for this data source.
+     */
+    override fun addNoneDataSource(id: String, options: DataSourceOptions): NoneDataSource =
+        unwrap(this).addNoneDataSource(id,
+        options.let(DataSourceOptions::unwrap)).let(NoneDataSource::wrap)
 
+    /**
+     * add a new dummy data source to this API.
+     *
+     * Useful for pipeline resolvers
+     * and for backend changes that don't require a data source.
+     *
+     * @param id The data source's id. 
+     * @param options The optional configuration for this data source.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f6ad3c2d0d3a1e70a3c0a4d1b13a764aaf821c23e6022c32e77eafd2e3511485")
-    override fun addNoneDataSource(arg0: String, arg1: DataSourceOptions.Builder.() -> Unit):
-        NoneDataSource = addNoneDataSource(arg0, DataSourceOptions(arg1))
+    override fun addNoneDataSource(id: String, options: DataSourceOptions.Builder.() -> Unit):
+        NoneDataSource = addNoneDataSource(id, DataSourceOptions(options))
 
-    override fun addOpenSearchDataSource(arg0: String, arg1: OpensearchserviceIDomain):
-        OpenSearchDataSource = unwrap(this).addOpenSearchDataSource(arg0,
-        arg1.let(OpensearchserviceIDomain::unwrap)).let(OpenSearchDataSource::wrap)
+    /**
+     * Add a new OpenSearch data source to this API.
+     *
+     * @param id The data source's id. 
+     * @param domain The OpenSearch domain for this data source. 
+     * @param options The optional configuration for this data source.
+     */
+    override fun addOpenSearchDataSource(id: String, domain: OpensearchserviceIDomain):
+        OpenSearchDataSource = unwrap(this).addOpenSearchDataSource(id,
+        domain.let(OpensearchserviceIDomain::unwrap)).let(OpenSearchDataSource::wrap)
 
+    /**
+     * Add a new OpenSearch data source to this API.
+     *
+     * @param id The data source's id. 
+     * @param domain The OpenSearch domain for this data source. 
+     * @param options The optional configuration for this data source.
+     */
     override fun addOpenSearchDataSource(
-      arg0: String,
-      arg1: OpensearchserviceIDomain,
-      arg2: DataSourceOptions,
-    ): OpenSearchDataSource = unwrap(this).addOpenSearchDataSource(arg0,
-        arg1.let(OpensearchserviceIDomain::unwrap),
-        arg2.let(DataSourceOptions::unwrap)).let(OpenSearchDataSource::wrap)
+      id: String,
+      domain: OpensearchserviceIDomain,
+      options: DataSourceOptions,
+    ): OpenSearchDataSource = unwrap(this).addOpenSearchDataSource(id,
+        domain.let(OpensearchserviceIDomain::unwrap),
+        options.let(DataSourceOptions::unwrap)).let(OpenSearchDataSource::wrap)
 
+    /**
+     * Add a new OpenSearch data source to this API.
+     *
+     * @param id The data source's id. 
+     * @param domain The OpenSearch domain for this data source. 
+     * @param options The optional configuration for this data source.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0a4cb979329edf469eb722bd82ee676e144874290e4bf8b25e186aa1b5331890")
     override fun addOpenSearchDataSource(
-      arg0: String,
-      arg1: OpensearchserviceIDomain,
-      arg2: DataSourceOptions.Builder.() -> Unit,
-    ): OpenSearchDataSource = addOpenSearchDataSource(arg0, arg1, DataSourceOptions(arg2))
+      id: String,
+      domain: OpensearchserviceIDomain,
+      options: DataSourceOptions.Builder.() -> Unit,
+    ): OpenSearchDataSource = addOpenSearchDataSource(id, domain, DataSourceOptions(options))
 
+    /**
+     * add a new Rds data source to this API.
+     *
+     * @param id The data source's id. 
+     * @param serverlessCluster The serverless cluster to interact with this data source. 
+     * @param secretStore The secret store that contains the username and password for the
+     * serverless cluster. 
+     * @param databaseName The optional name of the database to use within the cluster.
+     * @param options The optional configuration for this data source.
+     */
     override fun addRdsDataSource(
-      arg0: String,
-      arg1: IServerlessCluster,
-      arg2: ISecret,
-    ): RdsDataSource = unwrap(this).addRdsDataSource(arg0, arg1.let(IServerlessCluster::unwrap),
-        arg2.let(ISecret::unwrap)).let(RdsDataSource::wrap)
+      id: String,
+      serverlessCluster: IServerlessCluster,
+      secretStore: ISecret,
+    ): RdsDataSource = unwrap(this).addRdsDataSource(id,
+        serverlessCluster.let(IServerlessCluster::unwrap),
+        secretStore.let(ISecret::unwrap)).let(RdsDataSource::wrap)
 
+    /**
+     * add a new Rds data source to this API.
+     *
+     * @param id The data source's id. 
+     * @param serverlessCluster The serverless cluster to interact with this data source. 
+     * @param secretStore The secret store that contains the username and password for the
+     * serverless cluster. 
+     * @param databaseName The optional name of the database to use within the cluster.
+     * @param options The optional configuration for this data source.
+     */
     override fun addRdsDataSource(
-      arg0: String,
-      arg1: IServerlessCluster,
-      arg2: ISecret,
-      arg3: String,
-    ): RdsDataSource = unwrap(this).addRdsDataSource(arg0, arg1.let(IServerlessCluster::unwrap),
-        arg2.let(ISecret::unwrap), arg3).let(RdsDataSource::wrap)
+      id: String,
+      serverlessCluster: IServerlessCluster,
+      secretStore: ISecret,
+      databaseName: String,
+    ): RdsDataSource = unwrap(this).addRdsDataSource(id,
+        serverlessCluster.let(IServerlessCluster::unwrap), secretStore.let(ISecret::unwrap),
+        databaseName).let(RdsDataSource::wrap)
 
+    /**
+     * add a new Rds data source to this API.
+     *
+     * @param id The data source's id. 
+     * @param serverlessCluster The serverless cluster to interact with this data source. 
+     * @param secretStore The secret store that contains the username and password for the
+     * serverless cluster. 
+     * @param databaseName The optional name of the database to use within the cluster.
+     * @param options The optional configuration for this data source.
+     */
     override fun addRdsDataSource(
-      arg0: String,
-      arg1: IServerlessCluster,
-      arg2: ISecret,
-      arg3: String,
-      arg4: DataSourceOptions,
-    ): RdsDataSource = unwrap(this).addRdsDataSource(arg0, arg1.let(IServerlessCluster::unwrap),
-        arg2.let(ISecret::unwrap), arg3,
-        arg4.let(DataSourceOptions::unwrap)).let(RdsDataSource::wrap)
+      id: String,
+      serverlessCluster: IServerlessCluster,
+      secretStore: ISecret,
+      databaseName: String,
+      options: DataSourceOptions,
+    ): RdsDataSource = unwrap(this).addRdsDataSource(id,
+        serverlessCluster.let(IServerlessCluster::unwrap), secretStore.let(ISecret::unwrap),
+        databaseName, options.let(DataSourceOptions::unwrap)).let(RdsDataSource::wrap)
 
+    /**
+     * add a new Rds data source to this API.
+     *
+     * @param id The data source's id. 
+     * @param serverlessCluster The serverless cluster to interact with this data source. 
+     * @param secretStore The secret store that contains the username and password for the
+     * serverless cluster. 
+     * @param databaseName The optional name of the database to use within the cluster.
+     * @param options The optional configuration for this data source.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3a9fffa2af175b82843c8d257699a3a39f51c1a5f014c37a8b7fc18df18205e9")
     override fun addRdsDataSource(
-      arg0: String,
-      arg1: IServerlessCluster,
-      arg2: ISecret,
-      arg3: String,
-      arg4: DataSourceOptions.Builder.() -> Unit,
-    ): RdsDataSource = addRdsDataSource(arg0, arg1, arg2, arg3, DataSourceOptions(arg4))
+      id: String,
+      serverlessCluster: IServerlessCluster,
+      secretStore: ISecret,
+      databaseName: String,
+      options: DataSourceOptions.Builder.() -> Unit,
+    ): RdsDataSource = addRdsDataSource(id, serverlessCluster, secretStore, databaseName,
+        DataSourceOptions(options))
 
-    override fun addSchemaDependency(arg0: CfnResource): Boolean =
-        unwrap(this).addSchemaDependency(arg0.let(CfnResource::unwrap))
+    /**
+     * Add schema dependency if not imported.
+     *
+     * @param construct the dependee. 
+     */
+    override fun addSchemaDependency(construct: CfnResource): Boolean =
+        unwrap(this).addSchemaDependency(construct.let(CfnResource::unwrap))
 
+    /**
+     * an unique AWS AppSync GraphQL API identifier i.e. 'lxz775lwdrgcndgz3nurvac7oa'.
+     */
     override fun apiId(): String = unwrap(this).getApiId()
 
-    override fun applyRemovalPolicy(arg0: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(arg0.let(RemovalPolicy::unwrap))
+    /**
+     * Apply the given removal policy to this resource.
+     *
+     * The Removal Policy controls what happens to this resource when it stops
+     * being managed by CloudFormation, either because you've removed it from the
+     * CDK application or because you've made a change that requires the resource
+     * to be replaced.
+     *
+     * The resource can be deleted (`RemovalPolicy.DESTROY`), or left in your AWS
+     * account for data recovery and cleanup later (`RemovalPolicy.RETAIN`).
+     *
+     * @param policy 
+     */
+    override fun applyRemovalPolicy(policy: RemovalPolicy) {
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
     }
 
+    /**
+     * the ARN of the API.
+     */
     override fun arn(): String = unwrap(this).getArn()
 
-    override fun createResolver(arg0: String, arg1: ExtendedResolverProps): Resolver =
-        unwrap(this).createResolver(arg0,
-        arg1.let(ExtendedResolverProps::unwrap)).let(Resolver::wrap)
+    /**
+     * creates a new resolver for this datasource and API using the given properties.
+     *
+     * @param id 
+     * @param props 
+     */
+    override fun createResolver(id: String, props: ExtendedResolverProps): Resolver =
+        unwrap(this).createResolver(id,
+        props.let(ExtendedResolverProps::unwrap)).let(Resolver::wrap)
 
+    /**
+     * creates a new resolver for this datasource and API using the given properties.
+     *
+     * @param id 
+     * @param props 
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("dfac965a6b25365e261bc8f10e37f75dee20d44ce736e5d6bb3be729ca63320e")
-    override fun createResolver(arg0: String, arg1: ExtendedResolverProps.Builder.() -> Unit):
-        Resolver = createResolver(arg0, ExtendedResolverProps(arg1))
+    override fun createResolver(id: String, props: ExtendedResolverProps.Builder.() -> Unit):
+        Resolver = createResolver(id, ExtendedResolverProps(props))
 
+    /**
+     * The environment this resource belongs to.
+     *
+     * For resources that are created and managed by the CDK
+     * (generally, those created by creating new class instances like Role, Bucket, etc.),
+     * this is always the same as the environment of the stack they belong to;
+     * however, for imported resources
+     * (those obtained from static methods like fromRoleArn, fromBucketName, etc.),
+     * that might be different than the stack they were imported into.
+     */
     override fun env(): ResourceEnvironment = unwrap(this).getEnv().let(ResourceEnvironment::wrap)
 
+    /**
+     * Adds an IAM policy statement associated with this GraphQLApi to an IAM principal's policy.
+     *
+     * @param grantee The principal. 
+     * @param resources The set of resources to allow (i.e.
+     * ...:[region]:[accountId]:apis/GraphQLId/...). 
+     * @param actions The actions that should be granted to the principal (i.e. appsync:graphql ). 
+     */
     override fun grant(
-      arg0: IGrantable,
-      arg1: IamResource,
-      arg2: String,
-    ): Grant = unwrap(this).grant(arg0.let(IGrantable::unwrap), arg1.let(IamResource::unwrap),
-        arg2).let(Grant::wrap)
+      grantee: IGrantable,
+      resources: IamResource,
+      actions: String,
+    ): Grant = unwrap(this).grant(grantee.let(IGrantable::unwrap),
+        resources.let(IamResource::unwrap), actions).let(Grant::wrap)
 
-    override fun grantMutation(arg0: IGrantable, arg1: String): Grant =
-        unwrap(this).grantMutation(arg0.let(IGrantable::unwrap), arg1).let(Grant::wrap)
+    /**
+     * Adds an IAM policy statement for Mutation access to this GraphQLApi to an IAM principal's
+     * policy.
+     *
+     * @param grantee The principal. 
+     * @param fields The fields to grant access to that are Mutations (leave blank for all). 
+     */
+    override fun grantMutation(grantee: IGrantable, fields: String): Grant =
+        unwrap(this).grantMutation(grantee.let(IGrantable::unwrap), fields).let(Grant::wrap)
 
-    override fun grantQuery(arg0: IGrantable, arg1: String): Grant =
-        unwrap(this).grantQuery(arg0.let(IGrantable::unwrap), arg1).let(Grant::wrap)
+    /**
+     * Adds an IAM policy statement for Query access to this GraphQLApi to an IAM principal's
+     * policy.
+     *
+     * @param grantee The principal. 
+     * @param fields The fields to grant access to that are Queries (leave blank for all). 
+     */
+    override fun grantQuery(grantee: IGrantable, fields: String): Grant =
+        unwrap(this).grantQuery(grantee.let(IGrantable::unwrap), fields).let(Grant::wrap)
 
-    override fun grantSubscription(arg0: IGrantable, arg1: String): Grant =
-        unwrap(this).grantSubscription(arg0.let(IGrantable::unwrap), arg1).let(Grant::wrap)
+    /**
+     * Adds an IAM policy statement for Subscription access to this GraphQLApi to an IAM principal's
+     * policy.
+     *
+     * @param grantee The principal. 
+     * @param fields The fields to grant access to that are Subscriptions (leave blank for all). 
+     */
+    override fun grantSubscription(grantee: IGrantable, fields: String): Grant =
+        unwrap(this).grantSubscription(grantee.let(IGrantable::unwrap), fields).let(Grant::wrap)
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
+    /**
+     * The stack in which this resource is defined.
+     */
     override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
   }
 

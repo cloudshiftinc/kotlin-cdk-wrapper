@@ -7,9 +7,24 @@ import kotlin.Number
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * The traffic that is configured using a Network ACL entry.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * AclTraffic aclTraffic = AclTraffic.allTraffic();
+ * ```
+ */
 public abstract class AclTraffic internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.AclTraffic,
 ) : CdkObject(cdkObject) {
+  /**
+   *
+   */
   public open fun toTrafficConfig(): AclTrafficConfig =
       unwrap(this).toTrafficConfig().let(AclTrafficConfig::wrap)
 

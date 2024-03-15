@@ -11,11 +11,45 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
+/**
+ * Represents credentials used to access a Docker registry.
+ *
+ * Example:
+ *
+ * ```
+ * ISecret dockerHubSecret = Secret.fromSecretCompleteArn(this, "DHSecret", "arn:aws:...");
+ * ISecret customRegSecret = Secret.fromSecretCompleteArn(this, "CRSecret", "arn:aws:...");
+ * IRepository repo1 = Repository.fromRepositoryArn(this, "Repo",
+ * "arn:aws:ecr:eu-west-1:0123456789012:repository/Repo1");
+ * IRepository repo2 = Repository.fromRepositoryArn(this, "Repo",
+ * "arn:aws:ecr:eu-west-1:0123456789012:repository/Repo2");
+ * CodePipeline pipeline = CodePipeline.Builder.create(this, "Pipeline")
+ * .dockerCredentials(List.of(DockerCredential.dockerHub(dockerHubSecret),
+ * DockerCredential.customRegistry("dockerregistry.example.com", customRegSecret),
+ * DockerCredential.ecr(List.of(repo1, repo2))))
+ * .synth(ShellStep.Builder.create("Synth")
+ * .input(CodePipelineSource.connection("my-org/my-app", "main", ConnectionSourceOptions.builder()
+ * .connectionArn("arn:aws:codestar-connections:us-east-1:222222222222:connection/7d2469ff-514a-4e4f-9003-5ca4a43cdc41")
+ * .build()))
+ * .commands(List.of("npm ci", "npm run build", "npx cdk synth"))
+ * .build())
+ * .build();
+ * ```
+ */
 public abstract class DockerCredential internal constructor(
   internal override val cdkObject: software.amazon.awscdk.pipelines.DockerCredential,
 ) : CdkObject(cdkObject) {
-  public open fun grantRead(arg0: IGrantable, arg1: DockerCredentialUsage) {
-    unwrap(this).grantRead(arg0.let(IGrantable::unwrap), arg1.let(DockerCredentialUsage::unwrap))
+  /**
+   * Grant read-only access to the registry credentials.
+   *
+   * This grants read access to any secrets, and pull access to any repositories.
+   *
+   * @param grantee 
+   * @param usage 
+   */
+  public open fun grantRead(grantee: IGrantable, usage: DockerCredentialUsage) {
+    unwrap(this).grantRead(grantee.let(IGrantable::unwrap),
+        usage.let(DockerCredentialUsage::unwrap))
   }
 
   private class Wrapper(

@@ -10,13 +10,50 @@ import kotlin.Number
 import kotlin.String
 import kotlin.collections.List
 
+/**
+ * An event pattern matcher.
+ *
+ * Example:
+ *
+ * ```
+ * Rule rule = Rule.Builder.create(this, "rule")
+ * .eventPattern(EventPattern.builder()
+ * .detail(Map.of(
+ * "object", Map.of(
+ * // Matchers may appear at any level
+ * "size", Match.greaterThan(1024)),
+ * // 'OR' condition
+ * "source-storage-class", Match.anyOf(Match.prefix("GLACIER"), Match.exactString("DEEP_ARCHIVE"))))
+ * .detailType(Match.equalsIgnoreCase("object created"))
+ * // If you prefer, you can use a low level array of strings, as directly consumed by EventBridge
+ * .source(List.of("aws.s3"))
+ * .region(Match.anythingButPrefix("us-gov"))
+ * .build())
+ * .build();
+ * ```
+ */
 public open class Match internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.Match,
 ) : CdkObject(cdkObject), IResolvable {
+  /**
+   * A representation of this matcher as a list of strings.
+   */
   public open fun asList(): List<String> = unwrap(this).asList()
 
+  /**
+   * The creation stack of this resolvable which will be appended to errors thrown during
+   * resolution.
+   *
+   * This may return an array with a single informational element indicating how
+   * to get this property populated, if it was skipped for performance reasons.
+   */
   public override fun creationStack(): List<String> = unwrap(this).getCreationStack()
 
+  /**
+   * Produce the Token's value at resolution time.
+   *
+   * @param context 
+   */
   public override fun resolve(context: IResolveContext): Any =
       unwrap(this).resolve(context.let(IResolveContext::unwrap))
 

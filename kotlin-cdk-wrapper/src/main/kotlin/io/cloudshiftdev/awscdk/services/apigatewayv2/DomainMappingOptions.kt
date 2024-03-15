@@ -7,15 +7,54 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Options for DomainMapping.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegration;
+ * Function handler;
+ * DomainName dn;
+ * HttpApi apiDemo = HttpApi.Builder.create(this, "DemoApi")
+ * .defaultIntegration(new HttpLambdaIntegration("DefaultIntegration", handler))
+ * // https://${dn.domainName}/demo goes to apiDemo $default stage
+ * .defaultDomainMapping(DomainMappingOptions.builder()
+ * .domainName(dn)
+ * .mappingKey("demo")
+ * .build())
+ * .build();
+ * ```
+ */
 public interface DomainMappingOptions {
+  /**
+   * The domain name for the mapping.
+   */
   public fun domainName(): IDomainName
 
+  /**
+   * The API mapping key.
+   *
+   * Leave it undefined for the root path mapping.
+   *
+   * Default: - empty key for the root path mapping
+   */
   public fun mappingKey(): String? = unwrap(this).getMappingKey()
 
+  /**
+   * A builder for [DomainMappingOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param domainName The domain name for the mapping. 
+     */
     public fun domainName(domainName: IDomainName)
 
+    /**
+     * @param mappingKey The API mapping key.
+     * Leave it undefined for the root path mapping.
+     */
     public fun mappingKey(mappingKey: String)
   }
 
@@ -24,10 +63,17 @@ public interface DomainMappingOptions {
         software.amazon.awscdk.services.apigatewayv2.DomainMappingOptions.Builder =
         software.amazon.awscdk.services.apigatewayv2.DomainMappingOptions.builder()
 
+    /**
+     * @param domainName The domain name for the mapping. 
+     */
     override fun domainName(domainName: IDomainName) {
       cdkBuilder.domainName(domainName.let(IDomainName::unwrap))
     }
 
+    /**
+     * @param mappingKey The API mapping key.
+     * Leave it undefined for the root path mapping.
+     */
     override fun mappingKey(mappingKey: String) {
       cdkBuilder.mappingKey(mappingKey)
     }
@@ -39,8 +85,18 @@ public interface DomainMappingOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.apigatewayv2.DomainMappingOptions,
   ) : CdkObject(cdkObject), DomainMappingOptions {
+    /**
+     * The domain name for the mapping.
+     */
     override fun domainName(): IDomainName = unwrap(this).getDomainName().let(IDomainName::wrap)
 
+    /**
+     * The API mapping key.
+     *
+     * Leave it undefined for the root path mapping.
+     *
+     * Default: - empty key for the root path mapping
+     */
     override fun mappingKey(): String? = unwrap(this).getMappingKey()
   }
 

@@ -12,14 +12,47 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * A secret environment variable.
+ *
+ * Example:
+ *
+ * ```
+ * Secret secret;
+ * StringParameter parameter;
+ * Ec2TaskDefinition taskDefinition = new Ec2TaskDefinition(this, "TaskDef");
+ * taskDefinition.addContainer("TheContainer", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("example-image"))
+ * .memoryLimitMiB(256)
+ * .logging(LogDrivers.firelens(FireLensLogDriverProps.builder()
+ * .options(Map.of())
+ * .secretOptions(Map.of( // Retrieved from AWS Secrets Manager or AWS Systems Manager Parameter
+ * Store
+ * "apikey", Secret.fromSecretsManager(secret),
+ * "host", Secret.fromSsmParameter(parameter)))
+ * .build()))
+ * .build());
+ * ```
+ */
 public abstract class Secret internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.Secret,
 ) : CdkObject(cdkObject) {
+  /**
+   * The ARN of the secret.
+   */
   public open fun arn(): String = unwrap(this).getArn()
 
-  public open fun grantRead(arg0: IGrantable): Grant =
-      unwrap(this).grantRead(arg0.let(IGrantable::unwrap)).let(Grant::wrap)
+  /**
+   * Grants reading the secret to a principal.
+   *
+   * @param grantee 
+   */
+  public open fun grantRead(grantee: IGrantable): Grant =
+      unwrap(this).grantRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
 
+  /**
+   * Whether this secret uses a specific JSON field.
+   */
   public open fun hasField(): Boolean? = unwrap(this).getHasField()
 
   private class Wrapper(

@@ -7,11 +7,50 @@ import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Contains static factory methods to create backends.
+ *
+ * Example:
+ *
+ * ```
+ * Mesh mesh;
+ * VirtualRouter router;
+ * Service service;
+ * VirtualNode node = VirtualNode.Builder.create(this, "node")
+ * .mesh(mesh)
+ * .serviceDiscovery(ServiceDiscovery.cloudMap(service))
+ * .listeners(List.of(VirtualNodeListener.http(HttpVirtualNodeListenerOptions.builder()
+ * .port(8080)
+ * .healthCheck(HealthCheck.http(HttpHealthCheckOptions.builder()
+ * .healthyThreshold(3)
+ * .interval(Duration.seconds(5))
+ * .path("/ping")
+ * .timeout(Duration.seconds(2))
+ * .unhealthyThreshold(2)
+ * .build()))
+ * .timeout(HttpTimeout.builder()
+ * .idle(Duration.seconds(5))
+ * .build())
+ * .build())))
+ * .accessLog(AccessLog.fromFilePath("/dev/stdout"))
+ * .build();
+ * VirtualService virtualService = VirtualService.Builder.create(this, "service-1")
+ * .virtualServiceProvider(VirtualServiceProvider.virtualRouter(router))
+ * .virtualServiceName("service1.domain.local")
+ * .build();
+ * node.addBackend(Backend.virtualService(virtualService));
+ * ```
+ */
 public abstract class Backend internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.Backend,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct): BackendConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(BackendConfig::wrap)
+  /**
+   * Return backend config.
+   *
+   * @param _scope 
+   */
+  public open fun bind(_scope: Construct): BackendConfig =
+      unwrap(this).bind(_scope.let(Construct::unwrap)).let(BackendConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.Backend,

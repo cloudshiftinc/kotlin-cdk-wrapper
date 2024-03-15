@@ -7,11 +7,39 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Boolean
 import kotlin.Unit
 
+/**
+ * Options for the 'reverse()' operation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * ReverseOptions reverseOptions = ReverseOptions.builder()
+ * .failConcat(false)
+ * .build();
+ * ```
+ */
 public interface ReverseOptions {
+  /**
+   * Fail if the given string is a concatenation.
+   *
+   * If `false`, just return `undefined`.
+   *
+   * Default: true
+   */
   public fun failConcat(): Boolean? = unwrap(this).getFailConcat()
 
+  /**
+   * A builder for [ReverseOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param failConcat Fail if the given string is a concatenation.
+     * If `false`, just return `undefined`.
+     */
     public fun failConcat(failConcat: Boolean)
   }
 
@@ -19,6 +47,10 @@ public interface ReverseOptions {
     private val cdkBuilder: software.amazon.awscdk.ReverseOptions.Builder =
         software.amazon.awscdk.ReverseOptions.builder()
 
+    /**
+     * @param failConcat Fail if the given string is a concatenation.
+     * If `false`, just return `undefined`.
+     */
     override fun failConcat(failConcat: Boolean) {
       cdkBuilder.failConcat(failConcat)
     }
@@ -29,6 +61,13 @@ public interface ReverseOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.ReverseOptions,
   ) : CdkObject(cdkObject), ReverseOptions {
+    /**
+     * Fail if the given string is a concatenation.
+     *
+     * If `false`, just return `undefined`.
+     *
+     * Default: true
+     */
     override fun failConcat(): Boolean? = unwrap(this).getFailConcat()
   }
 

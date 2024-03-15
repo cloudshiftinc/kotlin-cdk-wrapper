@@ -7,15 +7,52 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Boolean
 import kotlin.Unit
 
+/**
+ * The deployment circuit breaker to use for the service.
+ *
+ * Example:
+ *
+ * ```
+ * Cluster cluster;
+ * TaskDefinition taskDefinition;
+ * FargateService service = FargateService.Builder.create(this, "Service")
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .circuitBreaker(DeploymentCircuitBreaker.builder()
+ * .enable(true)
+ * .rollback(true)
+ * .build())
+ * .build();
+ * ```
+ */
 public interface DeploymentCircuitBreaker {
+  /**
+   * Whether to enable the deployment circuit breaker logic.
+   *
+   * Default: true
+   */
   public fun enable(): Boolean? = unwrap(this).getEnable()
 
+  /**
+   * Whether to enable rollback on deployment failure.
+   *
+   * Default: false
+   */
   public fun rollback(): Boolean? = unwrap(this).getRollback()
 
+  /**
+   * A builder for [DeploymentCircuitBreaker]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param enable Whether to enable the deployment circuit breaker logic.
+     */
     public fun enable(enable: Boolean)
 
+    /**
+     * @param rollback Whether to enable rollback on deployment failure.
+     */
     public fun rollback(rollback: Boolean)
   }
 
@@ -23,10 +60,16 @@ public interface DeploymentCircuitBreaker {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker.Builder =
         software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker.builder()
 
+    /**
+     * @param enable Whether to enable the deployment circuit breaker logic.
+     */
     override fun enable(enable: Boolean) {
       cdkBuilder.enable(enable)
     }
 
+    /**
+     * @param rollback Whether to enable rollback on deployment failure.
+     */
     override fun rollback(rollback: Boolean) {
       cdkBuilder.rollback(rollback)
     }
@@ -38,8 +81,18 @@ public interface DeploymentCircuitBreaker {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ecs.DeploymentCircuitBreaker,
   ) : CdkObject(cdkObject), DeploymentCircuitBreaker {
+    /**
+     * Whether to enable the deployment circuit breaker logic.
+     *
+     * Default: true
+     */
     override fun enable(): Boolean? = unwrap(this).getEnable()
 
+    /**
+     * Whether to enable rollback on deployment failure.
+     *
+     * Default: false
+     */
     override fun rollback(): Boolean? = unwrap(this).getRollback()
   }
 

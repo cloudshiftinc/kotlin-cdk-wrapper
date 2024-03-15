@@ -9,11 +9,38 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
 
+/**
+ * Configuration options for the ContainerDefinition.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.stepfunctions.tasks.*;
+ * Object parameters;
+ * ContainerDefinitionConfig containerDefinitionConfig = ContainerDefinitionConfig.builder()
+ * .parameters(Map.of(
+ * "parametersKey", parameters))
+ * .build();
+ * ```
+ */
 public interface ContainerDefinitionConfig {
+  /**
+   * Additional parameters to pass to the base task.
+   *
+   * Default: - No additional parameters passed
+   */
   public fun parameters(): Map<String, Any> = unwrap(this).getParameters() ?: emptyMap()
 
+  /**
+   * A builder for [ContainerDefinitionConfig]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param parameters Additional parameters to pass to the base task.
+     */
     public fun parameters(parameters: Map<String, Any>)
   }
 
@@ -22,6 +49,9 @@ public interface ContainerDefinitionConfig {
         software.amazon.awscdk.services.stepfunctions.tasks.ContainerDefinitionConfig.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.ContainerDefinitionConfig.builder()
 
+    /**
+     * @param parameters Additional parameters to pass to the base task.
+     */
     override fun parameters(parameters: Map<String, Any>) {
       cdkBuilder.parameters(parameters)
     }
@@ -35,6 +65,11 @@ public interface ContainerDefinitionConfig {
     override val cdkObject:
         software.amazon.awscdk.services.stepfunctions.tasks.ContainerDefinitionConfig,
   ) : CdkObject(cdkObject), ContainerDefinitionConfig {
+    /**
+     * Additional parameters to pass to the base task.
+     *
+     * Default: - No additional parameters passed
+     */
     override fun parameters(): Map<String, Any> = unwrap(this).getParameters() ?: emptyMap()
   }
 

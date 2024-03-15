@@ -8,9 +8,40 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Create an RDS Aurora Cluster Instance.
+ *
+ * You can create either provisioned or
+ * serverless v2 instances.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * DatabaseCluster myCluster = DatabaseCluster.Builder.create(this, "Database")
+ * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_2_08_1).build()))
+ * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
+ * .instanceType(InstanceType.of(InstanceClass.R6G, InstanceSize.XLARGE4))
+ * .build()))
+ * .serverlessV2MinCapacity(6.5)
+ * .serverlessV2MaxCapacity(64)
+ * .readers(List.of(ClusterInstance.serverlessV2("reader1",
+ * ServerlessV2ClusterInstanceProps.builder().scaleWithWriter(true).build()),
+ * ClusterInstance.serverlessV2("reader2")))
+ * .vpc(vpc)
+ * .build();
+ * ```
+ */
 public open class ClusterInstance internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.ClusterInstance,
 ) : CdkObject(cdkObject), IClusterInstance {
+  /**
+   * Add the ClusterInstance to the cluster.
+   *
+   * @param scope 
+   * @param cluster 
+   * @param props 
+   */
   public override fun bind(
     scope: Construct,
     cluster: IDatabaseCluster,
@@ -19,6 +50,13 @@ public open class ClusterInstance internal constructor(
       cluster.let(IDatabaseCluster::unwrap),
       props.let(ClusterInstanceBindOptions::unwrap)).let(IAuroraClusterInstance::wrap)
 
+  /**
+   * Add the ClusterInstance to the cluster.
+   *
+   * @param scope 
+   * @param cluster 
+   * @param props 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("399891285f8ba8d6e579258f766002e872fa6db6740626abf35971b320798eee")
   public override fun bind(

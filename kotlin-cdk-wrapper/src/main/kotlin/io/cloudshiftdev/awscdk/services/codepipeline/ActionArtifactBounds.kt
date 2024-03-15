@@ -7,23 +7,73 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Number
 import kotlin.Unit
 
+/**
+ * Specifies the constraints on the number of input and output artifacts an action can have.
+ *
+ * The constraints for each action type are documented on the
+ * [Pipeline Structure
+ * Reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html)
+ * page.
+ *
+ * Example:
+ *
+ * ```
+ * // MyAction is some action type that produces variables, like EcrSourceAction
+ * MyAction myAction = new MyAction(new MyActionProps()
+ * // ...
+ * .actionName("myAction")
+ * );
+ * new OtherAction(new OtherActionProps()
+ * // ...
+ * .config(myAction.getVariables().getMyVariable())
+ * .actionName("otherAction")
+ * );
+ * ```
+ */
 public interface ActionArtifactBounds {
+  /**
+   *
+   */
   public fun maxInputs(): Number
 
+  /**
+   *
+   */
   public fun maxOutputs(): Number
 
+  /**
+   *
+   */
   public fun minInputs(): Number
 
+  /**
+   *
+   */
   public fun minOutputs(): Number
 
+  /**
+   * A builder for [ActionArtifactBounds]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param maxInputs the value to be set. 
+     */
     public fun maxInputs(maxInputs: Number)
 
+    /**
+     * @param maxOutputs the value to be set. 
+     */
     public fun maxOutputs(maxOutputs: Number)
 
+    /**
+     * @param minInputs the value to be set. 
+     */
     public fun minInputs(minInputs: Number)
 
+    /**
+     * @param minOutputs the value to be set. 
+     */
     public fun minOutputs(minOutputs: Number)
   }
 
@@ -32,18 +82,30 @@ public interface ActionArtifactBounds {
         software.amazon.awscdk.services.codepipeline.ActionArtifactBounds.Builder =
         software.amazon.awscdk.services.codepipeline.ActionArtifactBounds.builder()
 
+    /**
+     * @param maxInputs the value to be set. 
+     */
     override fun maxInputs(maxInputs: Number) {
       cdkBuilder.maxInputs(maxInputs)
     }
 
+    /**
+     * @param maxOutputs the value to be set. 
+     */
     override fun maxOutputs(maxOutputs: Number) {
       cdkBuilder.maxOutputs(maxOutputs)
     }
 
+    /**
+     * @param minInputs the value to be set. 
+     */
     override fun minInputs(minInputs: Number) {
       cdkBuilder.minInputs(minInputs)
     }
 
+    /**
+     * @param minOutputs the value to be set. 
+     */
     override fun minOutputs(minOutputs: Number) {
       cdkBuilder.minOutputs(minOutputs)
     }
@@ -55,12 +117,24 @@ public interface ActionArtifactBounds {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.codepipeline.ActionArtifactBounds,
   ) : CdkObject(cdkObject), ActionArtifactBounds {
+    /**
+     *
+     */
     override fun maxInputs(): Number = unwrap(this).getMaxInputs()
 
+    /**
+     *
+     */
     override fun maxOutputs(): Number = unwrap(this).getMaxOutputs()
 
+    /**
+     *
+     */
     override fun minInputs(): Number = unwrap(this).getMinInputs()
 
+    /**
+     *
+     */
     override fun minOutputs(): Number = unwrap(this).getMinOutputs()
   }
 

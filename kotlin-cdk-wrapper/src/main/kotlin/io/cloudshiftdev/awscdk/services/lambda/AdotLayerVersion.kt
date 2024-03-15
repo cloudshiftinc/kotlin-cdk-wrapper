@@ -4,6 +4,26 @@ package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 
+/**
+ * An ADOT Lambda layer version that's specific to a lambda layer type and an architecture.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.lambda.AdotLambdaExecWrapper;
+ * import io.cloudshiftdev.awscdk.services.lambda.AdotLayerVersion;
+ * import io.cloudshiftdev.awscdk.services.lambda.AdotLambdaLayerJavaScriptSdkVersion;
+ * Function fn = Function.Builder.create(this, "MyFunction")
+ * .runtime(Runtime.NODEJS_18_X)
+ * .handler("index.handler")
+ * .code(Code.fromInline("exports.handler = function(event, ctx, cb) { return cb(null, \"hi\"); }"))
+ * .adotInstrumentation(AdotInstrumentationConfig.builder()
+ * .layerVersion(AdotLayerVersion.fromJavaScriptSdkLayerVersion(AdotLambdaLayerJavaScriptSdkVersion.LATEST))
+ * .execWrapper(AdotLambdaExecWrapper.REGULAR_HANDLER)
+ * .build())
+ * .build();
+ * ```
+ */
 public abstract class AdotLayerVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.AdotLayerVersion,
 ) : CdkObject(cdkObject) {

@@ -5,13 +5,30 @@ package io.cloudshiftdev.awscdk
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Any
 
+/**
+ * Function used to concatenate symbols in the target document language.
+ *
+ * Interface so it could potentially be exposed over jsii.
+ */
 public interface IFragmentConcatenator {
-  public fun join(arg0: Any, arg1: Any): Any
+  /**
+   * Join the fragment on the left and on the right.
+   *
+   * @param left 
+   * @param right 
+   */
+  public fun join(left: Any, right: Any): Any
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.IFragmentConcatenator,
   ) : CdkObject(cdkObject), IFragmentConcatenator {
-    override fun join(arg0: Any, arg1: Any): Any = unwrap(this).join(arg0, arg1)
+    /**
+     * Join the fragment on the left and on the right.
+     *
+     * @param left 
+     * @param right 
+     */
+    override fun join(left: Any, right: Any): Any = unwrap(this).join(left, right)
   }
 
   public companion object {

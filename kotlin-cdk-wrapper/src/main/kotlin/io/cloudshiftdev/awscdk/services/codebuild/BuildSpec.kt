@@ -9,15 +9,54 @@ import kotlin.Boolean
 import kotlin.String
 import kotlin.collections.Map
 
+/**
+ * BuildSpec for CodeBuild projects.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.codebuild.*;
+ * Project codebuildProject = Project.Builder.create(this, "Project")
+ * .projectName("MyTestProject")
+ * .buildSpec(BuildSpec.fromObject(Map.of(
+ * "version", "0.2",
+ * "phases", Map.of(
+ * "build", Map.of(
+ * "commands", List.of("echo \"Hello, CodeBuild!\""))))))
+ * .build();
+ * CodeBuildStartBuild task = CodeBuildStartBuild.Builder.create(this, "Task")
+ * .project(codebuildProject)
+ * .integrationPattern(IntegrationPattern.RUN_JOB)
+ * .environmentVariablesOverride(Map.of(
+ * "ZONE", BuildEnvironmentVariable.builder()
+ * .type(BuildEnvironmentVariableType.PLAINTEXT)
+ * .value(JsonPath.stringAt("$.envVariables.zone"))
+ * .build()))
+ * .build();
+ * ```
+ */
 public abstract class BuildSpec internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codebuild.BuildSpec,
 ) : CdkObject(cdkObject) {
+  /**
+   * Whether the buildspec is directly available or deferred until build-time.
+   */
   public open fun isImmediate(): Boolean = unwrap(this).getIsImmediate()
 
+  /**
+   * Render the represented BuildSpec.
+   *
+   * @param scope
+   */
   public open fun toBuildSpec(): String = unwrap(this).toBuildSpec()
 
-  public open fun toBuildSpec(arg0: Construct): String =
-      unwrap(this).toBuildSpec(arg0.let(Construct::unwrap))
+  /**
+   * Render the represented BuildSpec.
+   *
+   * @param scope
+   */
+  public open fun toBuildSpec(scope: Construct): String =
+      unwrap(this).toBuildSpec(scope.let(Construct::unwrap))
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.codebuild.BuildSpec,

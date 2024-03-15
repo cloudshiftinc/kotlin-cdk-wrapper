@@ -7,23 +7,88 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for defining a Choice state.
+ *
+ * Example:
+ *
+ * ```
+ * Choice choice = Choice.Builder.create(this, "What color is it?")
+ * .comment("color comment")
+ * .build();
+ * Pass handleBlueItem = new Pass(this, "HandleBlueItem");
+ * Pass handleOtherItemColor = new Pass(this, "HanldeOtherItemColor");
+ * choice.when(Condition.stringEquals("$.color", "BLUE"), handleBlueItem,
+ * ChoiceTransitionOptions.builder()
+ * .comment("blue item comment")
+ * .build());
+ * choice.otherwise(handleOtherItemColor);
+ * ```
+ */
 public interface ChoiceProps {
+  /**
+   * An optional description for this state.
+   *
+   * Default: No comment
+   */
   public fun comment(): String? = unwrap(this).getComment()
 
+  /**
+   * JSONPath expression to select part of the state to be the input to this state.
+   *
+   * May also be the special value JsonPath.DISCARD, which will cause the effective
+   * input to be the empty object {}.
+   *
+   * Default: $
+   */
   public fun inputPath(): String? = unwrap(this).getInputPath()
 
+  /**
+   * JSONPath expression to select part of the state to be the output to this state.
+   *
+   * May also be the special value JsonPath.DISCARD, which will cause the effective
+   * output to be the empty object {}.
+   *
+   * Default: $
+   */
   public fun outputPath(): String? = unwrap(this).getOutputPath()
 
+  /**
+   * Optional name for this state.
+   *
+   * Default: - The construct ID will be used as state name
+   */
   public fun stateName(): String? = unwrap(this).getStateName()
 
+  /**
+   * A builder for [ChoiceProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param comment An optional description for this state.
+     */
     public fun comment(comment: String)
 
+    /**
+     * @param inputPath JSONPath expression to select part of the state to be the input to this
+     * state.
+     * May also be the special value JsonPath.DISCARD, which will cause the effective
+     * input to be the empty object {}.
+     */
     public fun inputPath(inputPath: String)
 
+    /**
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state.
+     * May also be the special value JsonPath.DISCARD, which will cause the effective
+     * output to be the empty object {}.
+     */
     public fun outputPath(outputPath: String)
 
+    /**
+     * @param stateName Optional name for this state.
+     */
     public fun stateName(stateName: String)
   }
 
@@ -31,18 +96,36 @@ public interface ChoiceProps {
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.ChoiceProps.Builder =
         software.amazon.awscdk.services.stepfunctions.ChoiceProps.builder()
 
+    /**
+     * @param comment An optional description for this state.
+     */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
+    /**
+     * @param inputPath JSONPath expression to select part of the state to be the input to this
+     * state.
+     * May also be the special value JsonPath.DISCARD, which will cause the effective
+     * input to be the empty object {}.
+     */
     override fun inputPath(inputPath: String) {
       cdkBuilder.inputPath(inputPath)
     }
 
+    /**
+     * @param outputPath JSONPath expression to select part of the state to be the output to this
+     * state.
+     * May also be the special value JsonPath.DISCARD, which will cause the effective
+     * output to be the empty object {}.
+     */
     override fun outputPath(outputPath: String) {
       cdkBuilder.outputPath(outputPath)
     }
 
+    /**
+     * @param stateName Optional name for this state.
+     */
     override fun stateName(stateName: String) {
       cdkBuilder.stateName(stateName)
     }
@@ -54,12 +137,38 @@ public interface ChoiceProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.stepfunctions.ChoiceProps,
   ) : CdkObject(cdkObject), ChoiceProps {
+    /**
+     * An optional description for this state.
+     *
+     * Default: No comment
+     */
     override fun comment(): String? = unwrap(this).getComment()
 
+    /**
+     * JSONPath expression to select part of the state to be the input to this state.
+     *
+     * May also be the special value JsonPath.DISCARD, which will cause the effective
+     * input to be the empty object {}.
+     *
+     * Default: $
+     */
     override fun inputPath(): String? = unwrap(this).getInputPath()
 
+    /**
+     * JSONPath expression to select part of the state to be the output to this state.
+     *
+     * May also be the special value JsonPath.DISCARD, which will cause the effective
+     * output to be the empty object {}.
+     *
+     * Default: $
+     */
     override fun outputPath(): String? = unwrap(this).getOutputPath()
 
+    /**
+     * Optional name for this state.
+     *
+     * Default: - The construct ID will be used as state name
+     */
     override fun stateName(): String? = unwrap(this).getStateName()
   }
 

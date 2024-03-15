@@ -6,11 +6,34 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Options when binding a destination to a function.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.lambda.*;
+ * DestinationOptions destinationOptions = DestinationOptions.builder()
+ * .type(DestinationType.FAILURE)
+ * .build();
+ * ```
+ */
 public interface DestinationOptions {
+  /**
+   * The destination type.
+   */
   public fun type(): DestinationType
 
+  /**
+   * A builder for [DestinationOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param type The destination type. 
+     */
     public fun type(type: DestinationType)
   }
 
@@ -18,6 +41,9 @@ public interface DestinationOptions {
     private val cdkBuilder: software.amazon.awscdk.services.lambda.DestinationOptions.Builder =
         software.amazon.awscdk.services.lambda.DestinationOptions.builder()
 
+    /**
+     * @param type The destination type. 
+     */
     override fun type(type: DestinationType) {
       cdkBuilder.type(type.let(DestinationType::unwrap))
     }
@@ -29,6 +55,9 @@ public interface DestinationOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.lambda.DestinationOptions,
   ) : CdkObject(cdkObject), DestinationOptions {
+    /**
+     * The destination type.
+     */
     override fun type(): DestinationType = unwrap(this).getType().let(DestinationType::wrap)
   }
 

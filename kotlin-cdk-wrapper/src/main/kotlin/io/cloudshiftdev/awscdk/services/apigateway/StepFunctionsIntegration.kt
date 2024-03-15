@@ -7,6 +7,22 @@ import io.cloudshiftdev.awscdk.services.stepfunctions.IStateMachine
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Options to integrate with various StepFunction API.
+ *
+ * Example:
+ *
+ * ```
+ * StateMachine stateMachine = StateMachine.Builder.create(this, "MyStateMachine")
+ * .stateMachineType(StateMachineType.EXPRESS)
+ * .definition(Chain.start(new Pass(this, "Pass")))
+ * .build();
+ * RestApi api = RestApi.Builder.create(this, "Api")
+ * .restApiName("MyApi")
+ * .build();
+ * api.root.addMethod("GET", StepFunctionsIntegration.startExecution(stateMachine));
+ * ```
+ */
 public open class StepFunctionsIntegration internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.apigateway.StepFunctionsIntegration,

@@ -8,9 +8,40 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Schedule for scheduled event rules.
+ *
+ * Note that rates cannot be defined in fractions of minutes.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.ecs.*;
+ * ICluster cluster;
+ * TaskDefinition taskDefinition;
+ * Rule rule = Rule.Builder.create(this, "Rule")
+ * .schedule(Schedule.rate(Duration.hours(1)))
+ * .build();
+ * rule.addTarget(EcsTask.Builder.create()
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .taskCount(1)
+ * .containerOverrides(List.of(ContainerOverride.builder()
+ * .containerName("TheContainer")
+ * .command(List.of("echo", EventField.fromPath("$.detail.event")))
+ * .build()))
+ * .enableExecuteCommand(true)
+ * .build());
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/eventbridge/latest/userguide/scheduled-events.html)
+ */
 public abstract class Schedule internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.events.Schedule,
 ) : CdkObject(cdkObject) {
+  /**
+   * Retrieve the expression for this schedule.
+   */
   public open fun expressionString(): String = unwrap(this).getExpressionString()
 
   private class Wrapper(

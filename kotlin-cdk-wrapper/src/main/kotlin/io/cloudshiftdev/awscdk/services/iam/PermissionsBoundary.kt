@@ -5,13 +5,40 @@ package io.cloudshiftdev.awscdk.services.iam
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.constructs.IConstruct
 
+/**
+ * Modify the Permissions Boundaries of Users and Roles in a construct tree.
+ *
+ * ```
+ * IManagedPolicy policy = ManagedPolicy.fromAwsManagedPolicyName("ReadOnlyAccess");
+ * PermissionsBoundary.of(this).apply(policy);
+ * ```
+ *
+ * Example:
+ *
+ * ```
+ * Project project;
+ * PermissionsBoundary.of(project).apply(new UntrustedCodeBoundaryPolicy(this, "Boundary"));
+ * ```
+ */
 public open class PermissionsBoundary internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.PermissionsBoundary,
 ) : CdkObject(cdkObject) {
+  /**
+   * Apply the given policy as Permissions Boundary to all Roles and Users in the scope.
+   *
+   * Will override any Permissions Boundaries configured previously; in case
+   * a Permission Boundary is applied in multiple scopes, the Boundary applied
+   * closest to the Role wins.
+   *
+   * @param boundaryPolicy 
+   */
   public open fun apply(boundaryPolicy: IManagedPolicy) {
     unwrap(this).apply(boundaryPolicy.let(IManagedPolicy::unwrap))
   }
 
+  /**
+   * Remove previously applied Permissions Boundaries.
+   */
   public open fun clear() {
     unwrap(this).clear()
   }

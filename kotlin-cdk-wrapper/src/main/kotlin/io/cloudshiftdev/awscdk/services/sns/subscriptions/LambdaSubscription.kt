@@ -16,19 +16,73 @@ import kotlin.collections.Map
 import io.cloudshiftdev.awscdk.services.lambda.IFunction as CloudshiftdevAwscdkServicesLambdaIFunction
 import software.amazon.awscdk.services.lambda.IFunction as AmazonAwscdkServicesLambdaIFunction
 
+/**
+ * Use a Lambda function as a subscription target.
+ *
+ * Example:
+ *
+ * ```
+ * import io.cloudshiftdev.awscdk.services.lambda.*;
+ * Function fn;
+ * Topic myTopic = new Topic(this, "MyTopic");
+ * // Lambda should receive only message matching the following conditions on message body:
+ * // color: 'red' or 'orange'
+ * myTopic.addSubscription(LambdaSubscription.Builder.create(fn)
+ * .filterPolicyWithMessageBody(Map.of(
+ * "background", FilterOrPolicy.policy(Map.of(
+ * "color", FilterOrPolicy.filter(SubscriptionFilter.stringFilter(StringConditions.builder()
+ * .allowlist(List.of("red", "orange"))
+ * .build()))))))
+ * .build());
+ * ```
+ */
 public open class LambdaSubscription internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.sns.subscriptions.LambdaSubscription,
 ) : CdkObject(cdkObject), ITopicSubscription {
+  /**
+   * Returns a configuration for a Lambda function to subscribe to an SNS topic.
+   *
+   * @param topic 
+   */
   public override fun bind(topic: ITopic): TopicSubscriptionConfig =
       unwrap(this).bind(topic.let(ITopic::unwrap)).let(TopicSubscriptionConfig::wrap)
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.sns.subscriptions.LambdaSubscription].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * Queue to be used as dead letter queue.
+     *
+     * If not passed no dead letter queue is enabled.
+     *
+     * Default: - No dead letter queue enabled.
+     *
+     * @param deadLetterQueue Queue to be used as dead letter queue. 
+     */
     public fun deadLetterQueue(deadLetterQueue: IQueue)
 
+    /**
+     * The filter policy.
+     *
+     * Default: - all messages are delivered
+     *
+     * @param filterPolicy The filter policy. 
+     */
     public fun filterPolicy(filterPolicy: Map<String, SubscriptionFilter>)
 
+    /**
+     * The filter policy that is applied on the message body.
+     *
+     * To apply a filter policy to the message attributes, use `filterPolicy`. A maximum of one of
+     * `filterPolicyWithMessageBody` and `filterPolicy` may be used.
+     *
+     * Default: - all messages are delivered
+     *
+     * @param filterPolicyWithMessageBody The filter policy that is applied on the message body. 
+     */
     public fun filterPolicyWithMessageBody(filterPolicyWithMessageBody: Map<String, FilterOrPolicy>)
   }
 
@@ -39,14 +93,40 @@ public open class LambdaSubscription internal constructor(
         software.amazon.awscdk.services.sns.subscriptions.LambdaSubscription.Builder =
         software.amazon.awscdk.services.sns.subscriptions.LambdaSubscription.Builder.create(fn)
 
+    /**
+     * Queue to be used as dead letter queue.
+     *
+     * If not passed no dead letter queue is enabled.
+     *
+     * Default: - No dead letter queue enabled.
+     *
+     * @param deadLetterQueue Queue to be used as dead letter queue. 
+     */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
       cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
     }
 
+    /**
+     * The filter policy.
+     *
+     * Default: - all messages are delivered
+     *
+     * @param filterPolicy The filter policy. 
+     */
     override fun filterPolicy(filterPolicy: Map<String, SubscriptionFilter>) {
       cdkBuilder.filterPolicy(filterPolicy.mapValues{SubscriptionFilter.unwrap(it.value)})
     }
 
+    /**
+     * The filter policy that is applied on the message body.
+     *
+     * To apply a filter policy to the message attributes, use `filterPolicy`. A maximum of one of
+     * `filterPolicyWithMessageBody` and `filterPolicy` may be used.
+     *
+     * Default: - all messages are delivered
+     *
+     * @param filterPolicyWithMessageBody The filter policy that is applied on the message body. 
+     */
     override
         fun filterPolicyWithMessageBody(filterPolicyWithMessageBody: Map<String, FilterOrPolicy>) {
       cdkBuilder.filterPolicyWithMessageBody(filterPolicyWithMessageBody.mapValues{FilterOrPolicy.unwrap(it.value)})

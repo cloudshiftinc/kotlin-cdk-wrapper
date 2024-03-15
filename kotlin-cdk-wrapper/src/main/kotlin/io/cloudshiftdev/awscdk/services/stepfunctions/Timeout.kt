@@ -7,11 +7,32 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Number
 import kotlin.String
 
+/**
+ * Timeout for a task or heartbeat.
+ *
+ * Example:
+ *
+ * ```
+ * GlueStartJobRun.Builder.create(this, "Task")
+ * .glueJobName("my-glue-job")
+ * .arguments(TaskInput.fromObject(Map.of(
+ * "key", "value")))
+ * .taskTimeout(Timeout.duration(Duration.minutes(30)))
+ * .notifyDelayAfter(Duration.minutes(5))
+ * .build();
+ * ```
+ */
 public abstract class Timeout internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Timeout,
 ) : CdkObject(cdkObject) {
+  /**
+   * Path for this timeout.
+   */
   public open fun path(): String? = unwrap(this).getPath()
 
+  /**
+   * Seconds for this timeout.
+   */
   public open fun seconds(): Number? = unwrap(this).getSeconds()
 
   private class Wrapper(

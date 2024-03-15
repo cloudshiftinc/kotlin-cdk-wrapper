@@ -4,15 +4,30 @@ package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 
+/**
+ * A DLQ for an event source.
+ */
 public interface IEventSourceDlq {
-  public fun bind(arg0: IEventSourceMapping, arg1: IFunction): DlqDestinationConfig
+  /**
+   * Returns the DLQ destination config of the DLQ.
+   *
+   * @param target 
+   * @param targetHandler 
+   */
+  public fun bind(target: IEventSourceMapping, targetHandler: IFunction): DlqDestinationConfig
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.lambda.IEventSourceDlq,
   ) : CdkObject(cdkObject), IEventSourceDlq {
-    override fun bind(arg0: IEventSourceMapping, arg1: IFunction): DlqDestinationConfig =
-        unwrap(this).bind(arg0.let(IEventSourceMapping::unwrap),
-        arg1.let(IFunction::unwrap)).let(DlqDestinationConfig::wrap)
+    /**
+     * Returns the DLQ destination config of the DLQ.
+     *
+     * @param target 
+     * @param targetHandler 
+     */
+    override fun bind(target: IEventSourceMapping, targetHandler: IFunction): DlqDestinationConfig =
+        unwrap(this).bind(target.let(IEventSourceMapping::unwrap),
+        targetHandler.let(IFunction::unwrap)).let(DlqDestinationConfig::wrap)
   }
 
   public companion object {

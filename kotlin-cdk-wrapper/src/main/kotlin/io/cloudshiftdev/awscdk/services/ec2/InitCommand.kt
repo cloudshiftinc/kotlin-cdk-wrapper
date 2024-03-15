@@ -7,9 +7,24 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
 
+/**
+ * Command to execute on the instance.
+ *
+ * Example:
+ *
+ * ```
+ * InitServiceRestartHandle handle = new InitServiceRestartHandle();
+ * CloudFormationInit.fromElements(InitCommand.shellCommand("/usr/bin/custom-nginx-install.sh",
+ * InitCommandOptions.builder().serviceRestartHandles(List.of(handle)).build()),
+ * InitService.enable("nginx", InitServiceOptions.builder().serviceRestartHandle(handle).build()));
+ * ```
+ */
 public open class InitCommand internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.InitCommand,
 ) : InitElement(cdkObject) {
+  /**
+   * Returns the init element type for this element.
+   */
   public override fun elementType(): String = unwrap(this).getElementType()
 
   public companion object {

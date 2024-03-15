@@ -7,19 +7,67 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for defining a `CfnResolverRuleAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.route53resolver.*;
+ * CfnResolverRuleAssociationProps cfnResolverRuleAssociationProps =
+ * CfnResolverRuleAssociationProps.builder()
+ * .resolverRuleId("resolverRuleId")
+ * .vpcId("vpcId")
+ * // the properties below are optional
+ * .name("name")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverruleassociation.html)
+ */
 public interface CfnResolverRuleAssociationProps {
+  /**
+   * The name of an association between a Resolver rule and a VPC.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverruleassociation.html#cfn-route53resolver-resolverruleassociation-name)
+   */
   public fun name(): String? = unwrap(this).getName()
 
+  /**
+   * The ID of the Resolver rule that you associated with the VPC that is specified by `VPCId` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverruleassociation.html#cfn-route53resolver-resolverruleassociation-resolverruleid)
+   */
   public fun resolverRuleId(): String
 
+  /**
+   * The ID of the VPC that you associated the Resolver rule with.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverruleassociation.html#cfn-route53resolver-resolverruleassociation-vpcid)
+   */
   public fun vpcId(): String
 
+  /**
+   * A builder for [CfnResolverRuleAssociationProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param name The name of an association between a Resolver rule and a VPC.
+     */
     public fun name(name: String)
 
+    /**
+     * @param resolverRuleId The ID of the Resolver rule that you associated with the VPC that is
+     * specified by `VPCId` . 
+     */
     public fun resolverRuleId(resolverRuleId: String)
 
+    /**
+     * @param vpcId The ID of the VPC that you associated the Resolver rule with. 
+     */
     public fun vpcId(vpcId: String)
   }
 
@@ -28,14 +76,24 @@ public interface CfnResolverRuleAssociationProps {
         software.amazon.awscdk.services.route53resolver.CfnResolverRuleAssociationProps.Builder =
         software.amazon.awscdk.services.route53resolver.CfnResolverRuleAssociationProps.builder()
 
+    /**
+     * @param name The name of an association between a Resolver rule and a VPC.
+     */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
+    /**
+     * @param resolverRuleId The ID of the Resolver rule that you associated with the VPC that is
+     * specified by `VPCId` . 
+     */
     override fun resolverRuleId(resolverRuleId: String) {
       cdkBuilder.resolverRuleId(resolverRuleId)
     }
 
+    /**
+     * @param vpcId The ID of the VPC that you associated the Resolver rule with. 
+     */
     override fun vpcId(vpcId: String) {
       cdkBuilder.vpcId(vpcId)
     }
@@ -49,10 +107,25 @@ public interface CfnResolverRuleAssociationProps {
     override val cdkObject:
         software.amazon.awscdk.services.route53resolver.CfnResolverRuleAssociationProps,
   ) : CdkObject(cdkObject), CfnResolverRuleAssociationProps {
+    /**
+     * The name of an association between a Resolver rule and a VPC.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverruleassociation.html#cfn-route53resolver-resolverruleassociation-name)
+     */
     override fun name(): String? = unwrap(this).getName()
 
+    /**
+     * The ID of the Resolver rule that you associated with the VPC that is specified by `VPCId` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverruleassociation.html#cfn-route53resolver-resolverruleassociation-resolverruleid)
+     */
     override fun resolverRuleId(): String = unwrap(this).getResolverRuleId()
 
+    /**
+     * The ID of the VPC that you associated the Resolver rule with.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverruleassociation.html#cfn-route53resolver-resolverruleassociation-vpcid)
+     */
     override fun vpcId(): String = unwrap(this).getVpcId()
   }
 

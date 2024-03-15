@@ -10,12 +10,36 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Constructs for types of container images.
+ *
+ * Example:
+ *
+ * ```
+ * ISecret mySecret;
+ * EcsJobDefinition jobDefn = EcsJobDefinition.Builder.create(this, "JobDefn")
+ * .container(EcsEc2ContainerDefinition.Builder.create(this, "containerDefn")
+ * .image(ContainerImage.fromRegistry("public.ecr.aws/amazonlinux/amazonlinux:latest"))
+ * .memory(Size.mebibytes(2048))
+ * .cpu(256)
+ * .secrets(Map.of(
+ * "MY_SECRET_ENV_VAR", Secret.fromSecretsManager(mySecret)))
+ * .build())
+ * .build();
+ * ```
+ */
 public abstract class ContainerImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.ContainerImage,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct, arg1: ContainerDefinition): ContainerImageConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap),
-      arg1.let(ContainerDefinition::unwrap)).let(ContainerImageConfig::wrap)
+  /**
+   * Called when the image is used by a ContainerDefinition.
+   *
+   * @param scope 
+   * @param containerDefinition 
+   */
+  public open fun bind(scope: Construct, containerDefinition: ContainerDefinition):
+      ContainerImageConfig = unwrap(this).bind(scope.let(Construct::unwrap),
+      containerDefinition.let(ContainerDefinition::unwrap)).let(ContainerImageConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ecs.ContainerImage,

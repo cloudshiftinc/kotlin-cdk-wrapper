@@ -7,11 +7,40 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 
+/**
+ * Represents timeouts for TCP protocols.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * import io.cloudshiftdev.awscdk.services.appmesh.*;
+ * TcpTimeout tcpTimeout = TcpTimeout.builder()
+ * .idle(Duration.minutes(30))
+ * .build();
+ * ```
+ */
 public interface TcpTimeout {
+  /**
+   * Represents an idle timeout.
+   *
+   * The amount of time that a connection may be idle.
+   *
+   * Default: - none
+   */
   public fun idle(): Duration? = unwrap(this).getIdle()?.let(Duration::wrap)
 
+  /**
+   * A builder for [TcpTimeout]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param idle Represents an idle timeout.
+     * The amount of time that a connection may be idle.
+     */
     public fun idle(idle: Duration)
   }
 
@@ -19,6 +48,10 @@ public interface TcpTimeout {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.TcpTimeout.Builder =
         software.amazon.awscdk.services.appmesh.TcpTimeout.builder()
 
+    /**
+     * @param idle Represents an idle timeout.
+     * The amount of time that a connection may be idle.
+     */
     override fun idle(idle: Duration) {
       cdkBuilder.idle(idle.let(Duration::unwrap))
     }
@@ -29,6 +62,13 @@ public interface TcpTimeout {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.TcpTimeout,
   ) : CdkObject(cdkObject), TcpTimeout {
+    /**
+     * Represents an idle timeout.
+     *
+     * The amount of time that a connection may be idle.
+     *
+     * Default: - none
+     */
     override fun idle(): Duration? = unwrap(this).getIdle()?.let(Duration::wrap)
   }
 

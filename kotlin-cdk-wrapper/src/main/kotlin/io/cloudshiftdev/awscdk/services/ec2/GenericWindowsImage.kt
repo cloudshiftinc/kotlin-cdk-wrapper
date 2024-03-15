@@ -9,14 +9,47 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
 
+/**
+ * Construct a Windows machine image from an AMI map.
+ *
+ * Allows you to create a generic Windows EC2 , manually specify an AMI map.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * UserData userData;
+ * GenericWindowsImage genericWindowsImage = GenericWindowsImage.Builder.create(Map.of(
+ * "amiMapKey", "amiMap"))
+ * .userData(userData)
+ * .build();
+ * ```
+ */
 public open class GenericWindowsImage internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.GenericWindowsImage,
 ) : CdkObject(cdkObject), IMachineImage {
+  /**
+   * Return the image to use in the given context.
+   *
+   * @param scope 
+   */
   public override fun image(scope: Construct): MachineImageConfig =
       unwrap(this).getImage(scope.let(Construct::unwrap)).let(MachineImageConfig::wrap)
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.GenericWindowsImage].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * Initial user data.
+     *
+     * Default: - Empty UserData for Windows machines
+     *
+     * @param userData Initial user data. 
+     */
     public fun userData(userData: UserData)
   }
 
@@ -26,6 +59,13 @@ public open class GenericWindowsImage internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.ec2.GenericWindowsImage.Builder =
         software.amazon.awscdk.services.ec2.GenericWindowsImage.Builder.create(amiMap)
 
+    /**
+     * Initial user data.
+     *
+     * Default: - Empty UserData for Windows machines
+     *
+     * @param userData Initial user data. 
+     */
     override fun userData(userData: UserData) {
       cdkBuilder.userData(userData.let(UserData::unwrap))
     }

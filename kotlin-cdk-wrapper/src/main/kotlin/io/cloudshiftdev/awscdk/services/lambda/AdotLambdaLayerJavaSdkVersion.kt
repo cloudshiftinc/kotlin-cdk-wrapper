@@ -6,10 +6,27 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.constructs.IConstruct
 import kotlin.String
 
+/**
+ * The collection of versions of the ADOT Lambda Layer for Java SDK.
+ *
+ * Example:
+ *
+ * ```
+ * Function fn;
+ * String layerArn = AdotLambdaLayerJavaSdkVersion.V1_19_0.layerArn(fn.getStack(),
+ * fn.getArchitecture());
+ * ```
+ */
 public open class AdotLambdaLayerJavaSdkVersion internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.lambda.AdotLambdaLayerJavaSdkVersion,
 ) : CdkObject(cdkObject) {
+  /**
+   * The ARN of the Lambda layer.
+   *
+   * @param scope The binding scope. 
+   * @param architecture The architecture of the Lambda layer (either X86_64 or ARM_64). 
+   */
   public open fun layerArn(scope: IConstruct, architecture: Architecture): String =
       unwrap(this).layerArn(scope.let(IConstruct::unwrap), architecture.let(Architecture::unwrap))
 

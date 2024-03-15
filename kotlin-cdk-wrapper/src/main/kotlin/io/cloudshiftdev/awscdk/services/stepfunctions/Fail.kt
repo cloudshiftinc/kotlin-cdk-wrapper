@@ -10,26 +10,93 @@ import kotlin.collections.List
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * Define a Fail state in the state machine.
+ *
+ * Reaching a Fail state terminates the state execution in failure.
+ *
+ * Example:
+ *
+ * ```
+ * Fail fail = Fail.Builder.create(this, "Fail")
+ * .errorPath(JsonPath.stringAt("$.someError"))
+ * .causePath(JsonPath.stringAt("$.someCause"))
+ * .build();
+ * ```
+ */
 public open class Fail internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.Fail,
 ) : State(cdkObject) {
+  /**
+   * Continuable states of this Chainable.
+   */
   public override fun endStates(): List<INextable> =
       unwrap(this).getEndStates().map(INextable::wrap)
 
+  /**
+   * Return the Amazon States Language object for this state.
+   */
   public override fun toStateJson(): ObjectNode = unwrap(this).toStateJson()
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.Fail].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * A description for the cause of the failure.
+     *
+     * Default: - No description
+     *
+     * @param cause A description for the cause of the failure. 
+     */
     public fun cause(cause: String)
 
+    /**
+     * JsonPath expression to select part of the state to be the cause to this state.
+     *
+     * Default: - No cause path
+     *
+     * @param causePath JsonPath expression to select part of the state to be the cause to this
+     * state. 
+     */
     public fun causePath(causePath: String)
 
+    /**
+     * An optional description for this state.
+     *
+     * Default: - No comment
+     *
+     * @param comment An optional description for this state. 
+     */
     public fun comment(comment: String)
 
+    /**
+     * Error code used to represent this failure.
+     *
+     * Default: - No error code
+     *
+     * @param error Error code used to represent this failure. 
+     */
     public fun error(error: String)
 
+    /**
+     * JsonPath expression to select part of the state to be the error to this state.
+     *
+     * Default: - No error path
+     *
+     * @param errorPath JsonPath expression to select part of the state to be the error to this
+     * state. 
+     */
     public fun errorPath(errorPath: String)
 
+    /**
+     * Optional name for this state.
+     *
+     * Default: - The construct ID will be used as state name
+     *
+     * @param stateName Optional name for this state. 
+     */
     public fun stateName(stateName: String)
   }
 
@@ -40,26 +107,70 @@ public open class Fail internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.stepfunctions.Fail.Builder =
         software.amazon.awscdk.services.stepfunctions.Fail.Builder.create(scope, id)
 
+    /**
+     * A description for the cause of the failure.
+     *
+     * Default: - No description
+     *
+     * @param cause A description for the cause of the failure. 
+     */
     override fun cause(cause: String) {
       cdkBuilder.cause(cause)
     }
 
+    /**
+     * JsonPath expression to select part of the state to be the cause to this state.
+     *
+     * Default: - No cause path
+     *
+     * @param causePath JsonPath expression to select part of the state to be the cause to this
+     * state. 
+     */
     override fun causePath(causePath: String) {
       cdkBuilder.causePath(causePath)
     }
 
+    /**
+     * An optional description for this state.
+     *
+     * Default: - No comment
+     *
+     * @param comment An optional description for this state. 
+     */
     override fun comment(comment: String) {
       cdkBuilder.comment(comment)
     }
 
+    /**
+     * Error code used to represent this failure.
+     *
+     * Default: - No error code
+     *
+     * @param error Error code used to represent this failure. 
+     */
     override fun error(error: String) {
       cdkBuilder.error(error)
     }
 
+    /**
+     * JsonPath expression to select part of the state to be the error to this state.
+     *
+     * Default: - No error path
+     *
+     * @param errorPath JsonPath expression to select part of the state to be the error to this
+     * state. 
+     */
     override fun errorPath(errorPath: String) {
       cdkBuilder.errorPath(errorPath)
     }
 
+    /**
+     * Optional name for this state.
+     *
+     * Default: - The construct ID will be used as state name
+     *
+     * @param stateName Optional name for this state. 
+     */
     override fun stateName(stateName: String) {
       cdkBuilder.stateName(stateName)
     }

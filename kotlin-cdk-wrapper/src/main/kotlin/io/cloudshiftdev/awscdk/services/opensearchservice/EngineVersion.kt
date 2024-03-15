@@ -5,9 +5,31 @@ package io.cloudshiftdev.awscdk.services.opensearchservice
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * OpenSearch version.
+ *
+ * Example:
+ *
+ * ```
+ * Domain domain = Domain.Builder.create(this, "Domain")
+ * .version(EngineVersion.OPENSEARCH_1_0)
+ * .ebs(EbsOptions.builder()
+ * .volumeSize(100)
+ * .volumeType(EbsDeviceVolumeType.GENERAL_PURPOSE_SSD)
+ * .build())
+ * .nodeToNodeEncryption(true)
+ * .encryptionAtRest(EncryptionAtRestOptions.builder()
+ * .enabled(true)
+ * .build())
+ * .build();
+ * ```
+ */
 public open class EngineVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.opensearchservice.EngineVersion,
 ) : CdkObject(cdkObject) {
+  /**
+   * engine version identifier.
+   */
   public open fun version(): String = unwrap(this).getVersion()
 
   public companion object {

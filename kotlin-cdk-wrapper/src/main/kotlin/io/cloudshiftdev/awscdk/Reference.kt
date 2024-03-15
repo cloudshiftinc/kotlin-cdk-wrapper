@@ -8,11 +8,22 @@ import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 
+/**
+ * An intrinsic Token that represents a reference to a construct.
+ *
+ * References are recorded.
+ */
 public abstract class Reference internal constructor(
   internal override val cdkObject: software.amazon.awscdk.Reference,
 ) : Intrinsic(cdkObject) {
+  /**
+   *
+   */
   public open fun displayName(): String = unwrap(this).getDisplayName()
 
+  /**
+   *
+   */
   public open fun target(): IConstruct = unwrap(this).getTarget().let(IConstruct::wrap)
 
   private class Wrapper(

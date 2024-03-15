@@ -10,15 +10,42 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * The code the canary should execute.
+ *
+ * Example:
+ *
+ * ```
+ * Canary canary = Canary.Builder.create(this, "MyCanary")
+ * .schedule(Schedule.rate(Duration.minutes(5)))
+ * .test(Test.custom(CustomTestOptions.builder()
+ * .code(Code.fromAsset(join(__dirname, "canary")))
+ * .handler("index.handler")
+ * .build()))
+ * .runtime(Runtime.SYNTHETICS_NODEJS_PUPPETEER_6_2)
+ * .environmentVariables(Map.of(
+ * "stage", "prod"))
+ * .build();
+ * ```
+ */
 public abstract class Code internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.synthetics.Code,
 ) : CdkObject(cdkObject) {
+  /**
+   * Called when the canary is initialized to allow this object to bind to the stack, add resources
+   * and have fun.
+   *
+   * @return a bound `CodeConfig`.
+   * @param scope The binding scope. 
+   * @param handler 
+   * @param family 
+   */
   public open fun bind(
-    arg0: Construct,
-    arg1: String,
-    arg2: RuntimeFamily,
-  ): CodeConfig = unwrap(this).bind(arg0.let(Construct::unwrap), arg1,
-      arg2.let(RuntimeFamily::unwrap)).let(CodeConfig::wrap)
+    scope: Construct,
+    handler: String,
+    family: RuntimeFamily,
+  ): CodeConfig = unwrap(this).bind(scope.let(Construct::unwrap), handler,
+      family.let(RuntimeFamily::unwrap)).let(CodeConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.synthetics.Code,

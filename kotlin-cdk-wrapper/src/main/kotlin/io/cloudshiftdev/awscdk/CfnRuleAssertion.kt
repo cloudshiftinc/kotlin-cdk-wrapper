@@ -7,15 +7,46 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * A rule assertion.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
+ * ICfnConditionExpression cfnConditionExpression;
+ * CfnRuleAssertion cfnRuleAssertion = CfnRuleAssertion.builder()
+ * .assert(cfnConditionExpression)
+ * .assertDescription("assertDescription")
+ * .build();
+ * ```
+ */
 public interface CfnRuleAssertion {
+  /**
+   * The assertion description.
+   */
   public fun assertDescription(): String
 
+  /**
+   * The assertion.
+   */
   public fun assertValue(): ICfnConditionExpression
 
+  /**
+   * A builder for [CfnRuleAssertion]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param assertDescription The assertion description. 
+     */
     public fun assertDescription(assertDescription: String)
 
+    /**
+     * @param assertValue The assertion. 
+     */
     public fun assertValue(assertValue: ICfnConditionExpression)
   }
 
@@ -23,10 +54,16 @@ public interface CfnRuleAssertion {
     private val cdkBuilder: software.amazon.awscdk.CfnRuleAssertion.Builder =
         software.amazon.awscdk.CfnRuleAssertion.builder()
 
+    /**
+     * @param assertDescription The assertion description. 
+     */
     override fun assertDescription(assertDescription: String) {
       cdkBuilder.assertDescription(assertDescription)
     }
 
+    /**
+     * @param assertValue The assertion. 
+     */
     override fun assertValue(assertValue: ICfnConditionExpression) {
       cdkBuilder.assertValue(assertValue.let(ICfnConditionExpression::unwrap))
     }
@@ -37,8 +74,14 @@ public interface CfnRuleAssertion {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.CfnRuleAssertion,
   ) : CdkObject(cdkObject), CfnRuleAssertion {
+    /**
+     * The assertion description.
+     */
     override fun assertDescription(): String = unwrap(this).getAssertDescription()
 
+    /**
+     * The assertion.
+     */
     override fun assertValue(): ICfnConditionExpression =
         unwrap(this).getAssertValue().let(ICfnConditionExpression::wrap)
   }

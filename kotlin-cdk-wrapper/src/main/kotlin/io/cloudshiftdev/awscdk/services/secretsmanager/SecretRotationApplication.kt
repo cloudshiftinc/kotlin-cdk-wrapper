@@ -8,20 +8,69 @@ import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * A secret rotation serverless application.
+ *
+ * Example:
+ *
+ * ```
+ * Secret myUserSecret;
+ * Secret myMasterSecret;
+ * IConnectable myDatabase;
+ * Vpc myVpc;
+ * SecretRotation.Builder.create(this, "SecretRotation")
+ * .application(SecretRotationApplication.MYSQL_ROTATION_MULTI_USER)
+ * .secret(myUserSecret) // The secret that will be rotated
+ * .masterSecret(myMasterSecret) // The secret used for the rotation
+ * .target(myDatabase)
+ * .vpc(myVpc)
+ * .build();
+ * ```
+ */
 public open class SecretRotationApplication internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.secretsmanager.SecretRotationApplication,
 ) : CdkObject(cdkObject) {
+  /**
+   * Returns the application ARN for the current partition.
+   *
+   * Can be used in combination with a `CfnMapping` to automatically select the correct ARN based on
+   * the current partition.
+   *
+   * @param partition 
+   */
   public open fun applicationArnForPartition(partition: String): String =
       unwrap(this).applicationArnForPartition(partition)
 
+  /**
+   * Whether the rotation application uses the mutli user scheme.
+   */
   public open fun isMultiUser(): Boolean? = unwrap(this).getIsMultiUser()
 
+  /**
+   * The semantic version of the app for the current partition.
+   *
+   * Can be used in combination with a `CfnMapping` to automatically select the correct version
+   * based on the current partition.
+   *
+   * @param partition 
+   */
   public open fun semanticVersionForPartition(partition: String): String =
       unwrap(this).semanticVersionForPartition(partition)
 
+  /**
+   * A fluent builder for
+   * [io.cloudshiftdev.awscdk.services.secretsmanager.SecretRotationApplication].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * Whether the rotation application uses the mutli user scheme.
+     *
+     * Default: false
+     *
+     * @param isMultiUser Whether the rotation application uses the mutli user scheme. 
+     */
     public fun isMultiUser(isMultiUser: Boolean)
   }
 
@@ -34,6 +83,13 @@ public open class SecretRotationApplication internal constructor(
         software.amazon.awscdk.services.secretsmanager.SecretRotationApplication.Builder.create(applicationId,
         semanticVersion)
 
+    /**
+     * Whether the rotation application uses the mutli user scheme.
+     *
+     * Default: false
+     *
+     * @param isMultiUser Whether the rotation application uses the mutli user scheme. 
+     */
     override fun isMultiUser(isMultiUser: Boolean) {
       cdkBuilder.isMultiUser(isMultiUser)
     }

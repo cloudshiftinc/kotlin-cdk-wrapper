@@ -5,14 +5,27 @@ package io.cloudshiftdev.awscdk
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Interface for lazy string producers.
+ */
 public interface IStringProducer {
-  public fun produce(arg0: IResolveContext): String?
+  /**
+   * Produce the string value.
+   *
+   * @param context 
+   */
+  public fun produce(context: IResolveContext): String?
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.IStringProducer,
   ) : CdkObject(cdkObject), IStringProducer {
-    override fun produce(arg0: IResolveContext): String? =
-        unwrap(this).produce(arg0.let(IResolveContext::unwrap))
+    /**
+     * Produce the string value.
+     *
+     * @param context 
+     */
+    override fun produce(context: IResolveContext): String? =
+        unwrap(this).produce(context.let(IResolveContext::unwrap))
   }
 
   public companion object {

@@ -5,9 +5,40 @@ package io.cloudshiftdev.awscdk
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Canonical names of the IANA time zones, derived from the IANA Time Zone Database.
+ *
+ * For more information, see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.
+ *
+ * Example:
+ *
+ * ```
+ * LambdaInvoke target;
+ * Schedule rateBasedSchedule = Schedule.Builder.create(this, "Schedule")
+ * .schedule(ScheduleExpression.rate(Duration.minutes(10)))
+ * .target(target)
+ * .description("This is a test rate-based schedule")
+ * .build();
+ * Schedule cronBasedSchedule = Schedule.Builder.create(this, "Schedule")
+ * .schedule(ScheduleExpression.cron(CronOptionsWithTimezone.builder()
+ * .minute("0")
+ * .hour("23")
+ * .day("20")
+ * .month("11")
+ * .timeZone(TimeZone.AMERICA_NEW_YORK)
+ * .build()))
+ * .target(target)
+ * .description("This is a test cron-based schedule that will run at 11:00 PM, on day 20 of the
+ * month, only in November in New York timezone")
+ * .build();
+ * ```
+ */
 public open class TimeZone internal constructor(
   internal override val cdkObject: software.amazon.awscdk.TimeZone,
 ) : CdkObject(cdkObject) {
+  /**
+   * The name of the timezone.
+   */
   public open fun timezoneName(): String = unwrap(this).getTimezoneName()
 
   public companion object {

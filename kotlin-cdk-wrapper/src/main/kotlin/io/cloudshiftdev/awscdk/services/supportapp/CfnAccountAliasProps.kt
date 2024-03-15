@@ -7,11 +7,38 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for defining a `CfnAccountAlias`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.supportapp.*;
+ * CfnAccountAliasProps cfnAccountAliasProps = CfnAccountAliasProps.builder()
+ * .accountAlias("accountAlias")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-supportapp-accountalias.html)
+ */
 public interface CfnAccountAliasProps {
+  /**
+   * An alias or short name for an AWS account .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-supportapp-accountalias.html#cfn-supportapp-accountalias-accountalias)
+   */
   public fun accountAlias(): String
 
+  /**
+   * A builder for [CfnAccountAliasProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param accountAlias An alias or short name for an AWS account . 
+     */
     public fun accountAlias(accountAlias: String)
   }
 
@@ -19,6 +46,9 @@ public interface CfnAccountAliasProps {
     private val cdkBuilder: software.amazon.awscdk.services.supportapp.CfnAccountAliasProps.Builder
         = software.amazon.awscdk.services.supportapp.CfnAccountAliasProps.builder()
 
+    /**
+     * @param accountAlias An alias or short name for an AWS account . 
+     */
     override fun accountAlias(accountAlias: String) {
       cdkBuilder.accountAlias(accountAlias)
     }
@@ -30,6 +60,11 @@ public interface CfnAccountAliasProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.supportapp.CfnAccountAliasProps,
   ) : CdkObject(cdkObject), CfnAccountAliasProps {
+    /**
+     * An alias or short name for an AWS account .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-supportapp-accountalias.html#cfn-supportapp-accountalias-accountalias)
+     */
     override fun accountAlias(): String = unwrap(this).getAccountAlias()
   }
 

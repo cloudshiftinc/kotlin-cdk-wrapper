@@ -5,11 +5,35 @@ package io.cloudshiftdev.awscdk.services.synthetics
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Runtime options for a canary.
+ *
+ * Example:
+ *
+ * ```
+ * Canary canary = Canary.Builder.create(this, "MyCanary")
+ * .schedule(Schedule.rate(Duration.minutes(5)))
+ * .test(Test.custom(CustomTestOptions.builder()
+ * .code(Code.fromAsset(join(__dirname, "canary")))
+ * .handler("index.handler")
+ * .build()))
+ * .runtime(Runtime.SYNTHETICS_NODEJS_PUPPETEER_6_2)
+ * .environmentVariables(Map.of(
+ * "stage", "prod"))
+ * .build();
+ * ```
+ */
 public open class Runtime internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.synthetics.Runtime,
 ) : CdkObject(cdkObject) {
+  /**
+   * The Lambda runtime family.
+   */
   public open fun family(): RuntimeFamily = unwrap(this).getFamily().let(RuntimeFamily::wrap)
 
+  /**
+   * The name of the runtime version.
+   */
   public open fun name(): String = unwrap(this).getName()
 
   public companion object {

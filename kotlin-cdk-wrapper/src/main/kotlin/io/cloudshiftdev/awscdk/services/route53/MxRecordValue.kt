@@ -8,15 +8,45 @@ import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for a MX record value.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.route53.*;
+ * MxRecordValue mxRecordValue = MxRecordValue.builder()
+ * .hostName("hostName")
+ * .priority(123)
+ * .build();
+ * ```
+ */
 public interface MxRecordValue {
+  /**
+   * The mail server host name.
+   */
   public fun hostName(): String
 
+  /**
+   * The priority.
+   */
   public fun priority(): Number
 
+  /**
+   * A builder for [MxRecordValue]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param hostName The mail server host name. 
+     */
     public fun hostName(hostName: String)
 
+    /**
+     * @param priority The priority. 
+     */
     public fun priority(priority: Number)
   }
 
@@ -24,10 +54,16 @@ public interface MxRecordValue {
     private val cdkBuilder: software.amazon.awscdk.services.route53.MxRecordValue.Builder =
         software.amazon.awscdk.services.route53.MxRecordValue.builder()
 
+    /**
+     * @param hostName The mail server host name. 
+     */
     override fun hostName(hostName: String) {
       cdkBuilder.hostName(hostName)
     }
 
+    /**
+     * @param priority The priority. 
+     */
     override fun priority(priority: Number) {
       cdkBuilder.priority(priority)
     }
@@ -38,8 +74,14 @@ public interface MxRecordValue {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.route53.MxRecordValue,
   ) : CdkObject(cdkObject), MxRecordValue {
+    /**
+     * The mail server host name.
+     */
     override fun hostName(): String = unwrap(this).getHostName()
 
+    /**
+     * The priority.
+     */
     override fun priority(): Number = unwrap(this).getPriority()
   }
 

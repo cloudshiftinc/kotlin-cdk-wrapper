@@ -6,6 +6,25 @@ import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.awscdk.services.ssm.IParameter
 import kotlin.String
 
+/**
+ * Credential specification for domainless gMSA.
+ *
+ * Example:
+ *
+ * ```
+ * // Make sure the task definition's execution role has permissions to read from the S3 bucket or
+ * SSM parameter where the CredSpec file is stored.
+ * Bucket bucket;
+ * TaskDefinition taskDefinition;
+ * // Domainless gMSA container from a S3 bucket object.
+ * taskDefinition.addContainer("gmsa-domainless-container", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .cpu(128)
+ * .memoryLimitMiB(256)
+ * .credentialSpecs(List.of(DomainlessCredentialSpec.fromS3Bucket(bucket, "credSpec")))
+ * .build());
+ * ```
+ */
 public open class DomainlessCredentialSpec internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.DomainlessCredentialSpec,
 ) : CredentialSpec(cdkObject) {

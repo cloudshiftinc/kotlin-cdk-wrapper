@@ -7,11 +7,50 @@ import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Represents the properties needed to define listeners for a VirtualGateway.
+ *
+ * Example:
+ *
+ * ```
+ * Mesh mesh;
+ * String certificateAuthorityArn =
+ * "arn:aws:acm-pca:us-east-1:123456789012:certificate-authority/12345678-1234-1234-1234-123456789012";
+ * VirtualGateway gateway = VirtualGateway.Builder.create(this, "gateway")
+ * .mesh(mesh)
+ * .listeners(List.of(VirtualGatewayListener.http(HttpGatewayListenerOptions.builder()
+ * .port(443)
+ * .healthCheck(HealthCheck.http(HttpHealthCheckOptions.builder()
+ * .interval(Duration.seconds(10))
+ * .build()))
+ * .build())))
+ * .backendDefaults(BackendDefaults.builder()
+ * .tlsClientPolicy(TlsClientPolicy.builder()
+ * .ports(List.of(8080, 8081))
+ * .validation(TlsValidation.builder()
+ * .trust(TlsValidationTrust.acm(List.of(CertificateAuthority.fromCertificateAuthorityArn(this,
+ * "certificate", certificateAuthorityArn))))
+ * .build())
+ * .build())
+ * .build())
+ * .accessLog(AccessLog.fromFilePath("/dev/stdout"))
+ * .virtualGatewayName("virtualGateway")
+ * .build();
+ * ```
+ */
 public abstract class VirtualGatewayListener internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualGatewayListener,
 ) : CdkObject(cdkObject) {
-  public open fun bind(arg0: Construct): VirtualGatewayListenerConfig =
-      unwrap(this).bind(arg0.let(Construct::unwrap)).let(VirtualGatewayListenerConfig::wrap)
+  /**
+   * Called when the GatewayListener type is initialized.
+   *
+   * Can be used to enforce
+   * mutual exclusivity
+   *
+   * @param scope 
+   */
+  public open fun bind(scope: Construct): VirtualGatewayListenerConfig =
+      unwrap(this).bind(scope.let(Construct::unwrap)).let(VirtualGatewayListenerConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualGatewayListener,

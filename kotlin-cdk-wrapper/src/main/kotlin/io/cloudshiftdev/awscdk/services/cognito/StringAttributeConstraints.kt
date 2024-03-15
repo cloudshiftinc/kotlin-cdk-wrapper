@@ -7,15 +7,49 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Number
 import kotlin.Unit
 
+/**
+ * Constraints that can be applied to a custom attribute of string type.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.cognito.*;
+ * StringAttributeConstraints stringAttributeConstraints = StringAttributeConstraints.builder()
+ * .maxLen(123)
+ * .minLen(123)
+ * .build();
+ * ```
+ */
 public interface StringAttributeConstraints {
+  /**
+   * Maximum length of this attribute.
+   *
+   * Default: 2048
+   */
   public fun maxLen(): Number? = unwrap(this).getMaxLen()
 
+  /**
+   * Minimum length of this attribute.
+   *
+   * Default: 0
+   */
   public fun minLen(): Number? = unwrap(this).getMinLen()
 
+  /**
+   * A builder for [StringAttributeConstraints]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param maxLen Maximum length of this attribute.
+     */
     public fun maxLen(maxLen: Number)
 
+    /**
+     * @param minLen Minimum length of this attribute.
+     */
     public fun minLen(minLen: Number)
   }
 
@@ -24,10 +58,16 @@ public interface StringAttributeConstraints {
         software.amazon.awscdk.services.cognito.StringAttributeConstraints.Builder =
         software.amazon.awscdk.services.cognito.StringAttributeConstraints.builder()
 
+    /**
+     * @param maxLen Maximum length of this attribute.
+     */
     override fun maxLen(maxLen: Number) {
       cdkBuilder.maxLen(maxLen)
     }
 
+    /**
+     * @param minLen Minimum length of this attribute.
+     */
     override fun minLen(minLen: Number) {
       cdkBuilder.minLen(minLen)
     }
@@ -39,8 +79,18 @@ public interface StringAttributeConstraints {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.cognito.StringAttributeConstraints,
   ) : CdkObject(cdkObject), StringAttributeConstraints {
+    /**
+     * Maximum length of this attribute.
+     *
+     * Default: 2048
+     */
     override fun maxLen(): Number? = unwrap(this).getMaxLen()
 
+    /**
+     * Minimum length of this attribute.
+     *
+     * Default: 0
+     */
     override fun minLen(): Number? = unwrap(this).getMinLen()
   }
 

@@ -5,6 +5,22 @@ package io.cloudshiftdev.awscdk.services.rds
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * The CA certificate used for a DB instance.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * DatabaseInstance.Builder.create(this, "Instance")
+ * .engine(DatabaseInstanceEngine.mysql(MySqlInstanceEngineProps.builder().version(MysqlEngineVersion.VER_8_0_30).build()))
+ * .vpc(vpc)
+ * .caCertificate(CaCertificate.of("future-rds-ca"))
+ * .build();
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html)
+ */
 public open class CaCertificate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.rds.CaCertificate,
 ) : CdkObject(cdkObject) {

@@ -7,15 +7,49 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * An object representing an AWS Batch job dependency.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.stepfunctions.tasks.*;
+ * JobDependency jobDependency = JobDependency.builder()
+ * .jobId("jobId")
+ * .type("type")
+ * .build();
+ * ```
+ */
 public interface JobDependency {
+  /**
+   * The job ID of the AWS Batch job associated with this dependency.
+   *
+   * Default: - No jobId
+   */
   public fun jobId(): String? = unwrap(this).getJobId()
 
+  /**
+   * The type of the job dependency.
+   *
+   * Default: - No type
+   */
   public fun type(): String? = unwrap(this).getType()
 
+  /**
+   * A builder for [JobDependency]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param jobId The job ID of the AWS Batch job associated with this dependency.
+     */
     public fun jobId(jobId: String)
 
+    /**
+     * @param type The type of the job dependency.
+     */
     public fun type(type: String)
   }
 
@@ -24,10 +58,16 @@ public interface JobDependency {
         software.amazon.awscdk.services.stepfunctions.tasks.JobDependency.Builder =
         software.amazon.awscdk.services.stepfunctions.tasks.JobDependency.builder()
 
+    /**
+     * @param jobId The job ID of the AWS Batch job associated with this dependency.
+     */
     override fun jobId(jobId: String) {
       cdkBuilder.jobId(jobId)
     }
 
+    /**
+     * @param type The type of the job dependency.
+     */
     override fun type(type: String) {
       cdkBuilder.type(type)
     }
@@ -39,8 +79,18 @@ public interface JobDependency {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.JobDependency,
   ) : CdkObject(cdkObject), JobDependency {
+    /**
+     * The job ID of the AWS Batch job associated with this dependency.
+     *
+     * Default: - No jobId
+     */
     override fun jobId(): String? = unwrap(this).getJobId()
 
+    /**
+     * The type of the job dependency.
+     *
+     * Default: - No type
+     */
     override fun type(): String? = unwrap(this).getType()
   }
 

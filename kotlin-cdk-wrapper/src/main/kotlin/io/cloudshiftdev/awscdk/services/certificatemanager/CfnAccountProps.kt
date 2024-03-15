@@ -9,16 +9,67 @@ import kotlin.Any
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Properties for defining a `CfnAccount`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.certificatemanager.*;
+ * CfnAccountProps cfnAccountProps = CfnAccountProps.builder()
+ * .expiryEventsConfiguration(ExpiryEventsConfigurationProperty.builder()
+ * .daysBeforeExpiry(123)
+ * .build())
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-account.html)
+ */
 public interface CfnAccountProps {
+  /**
+   * Object containing expiration events options associated with an AWS account .
+   *
+   * For more information, see
+   * [ExpiryEventsConfiguration](https://docs.aws.amazon.com/acm/latest/APIReference/API_ExpiryEventsConfiguration.html)
+   * in the API reference.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-account.html#cfn-certificatemanager-account-expiryeventsconfiguration)
+   */
   public fun expiryEventsConfiguration(): Any
 
+  /**
+   * A builder for [CfnAccountProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param expiryEventsConfiguration Object containing expiration events options associated with
+     * an AWS account . 
+     * For more information, see
+     * [ExpiryEventsConfiguration](https://docs.aws.amazon.com/acm/latest/APIReference/API_ExpiryEventsConfiguration.html)
+     * in the API reference.
+     */
     public fun expiryEventsConfiguration(expiryEventsConfiguration: IResolvable)
 
+    /**
+     * @param expiryEventsConfiguration Object containing expiration events options associated with
+     * an AWS account . 
+     * For more information, see
+     * [ExpiryEventsConfiguration](https://docs.aws.amazon.com/acm/latest/APIReference/API_ExpiryEventsConfiguration.html)
+     * in the API reference.
+     */
     public
         fun expiryEventsConfiguration(expiryEventsConfiguration: CfnAccount.ExpiryEventsConfigurationProperty)
 
+    /**
+     * @param expiryEventsConfiguration Object containing expiration events options associated with
+     * an AWS account . 
+     * For more information, see
+     * [ExpiryEventsConfiguration](https://docs.aws.amazon.com/acm/latest/APIReference/API_ExpiryEventsConfiguration.html)
+     * in the API reference.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9c334ce57706c50333654102ee39ddd67179959ff51452eb7b2cdb325dffdfa2")
     public
@@ -30,15 +81,36 @@ public interface CfnAccountProps {
         software.amazon.awscdk.services.certificatemanager.CfnAccountProps.Builder =
         software.amazon.awscdk.services.certificatemanager.CfnAccountProps.builder()
 
+    /**
+     * @param expiryEventsConfiguration Object containing expiration events options associated with
+     * an AWS account . 
+     * For more information, see
+     * [ExpiryEventsConfiguration](https://docs.aws.amazon.com/acm/latest/APIReference/API_ExpiryEventsConfiguration.html)
+     * in the API reference.
+     */
     override fun expiryEventsConfiguration(expiryEventsConfiguration: IResolvable) {
       cdkBuilder.expiryEventsConfiguration(expiryEventsConfiguration.let(IResolvable::unwrap))
     }
 
+    /**
+     * @param expiryEventsConfiguration Object containing expiration events options associated with
+     * an AWS account . 
+     * For more information, see
+     * [ExpiryEventsConfiguration](https://docs.aws.amazon.com/acm/latest/APIReference/API_ExpiryEventsConfiguration.html)
+     * in the API reference.
+     */
     override
         fun expiryEventsConfiguration(expiryEventsConfiguration: CfnAccount.ExpiryEventsConfigurationProperty) {
       cdkBuilder.expiryEventsConfiguration(expiryEventsConfiguration.let(CfnAccount.ExpiryEventsConfigurationProperty::unwrap))
     }
 
+    /**
+     * @param expiryEventsConfiguration Object containing expiration events options associated with
+     * an AWS account . 
+     * For more information, see
+     * [ExpiryEventsConfiguration](https://docs.aws.amazon.com/acm/latest/APIReference/API_ExpiryEventsConfiguration.html)
+     * in the API reference.
+     */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9c334ce57706c50333654102ee39ddd67179959ff51452eb7b2cdb325dffdfa2")
     override
@@ -53,6 +125,15 @@ public interface CfnAccountProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.certificatemanager.CfnAccountProps,
   ) : CdkObject(cdkObject), CfnAccountProps {
+    /**
+     * Object containing expiration events options associated with an AWS account .
+     *
+     * For more information, see
+     * [ExpiryEventsConfiguration](https://docs.aws.amazon.com/acm/latest/APIReference/API_ExpiryEventsConfiguration.html)
+     * in the API reference.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-account.html#cfn-certificatemanager-account-expiryeventsconfiguration)
+     */
     override fun expiryEventsConfiguration(): Any = unwrap(this).getExpiryEventsConfiguration()
   }
 

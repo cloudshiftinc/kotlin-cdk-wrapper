@@ -7,19 +7,73 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for defining a `CfnHookDefaultVersion`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.cloudformation.*;
+ * CfnHookDefaultVersionProps cfnHookDefaultVersionProps = CfnHookDefaultVersionProps.builder()
+ * .typeName("typeName")
+ * .typeVersionArn("typeVersionArn")
+ * .versionId("versionId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookdefaultversion.html)
+ */
 public interface CfnHookDefaultVersionProps {
+  /**
+   * The name of the hook.
+   *
+   * You must specify either `TypeVersionArn` , or `TypeName` and `VersionId` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookdefaultversion.html#cfn-cloudformation-hookdefaultversion-typename)
+   */
   public fun typeName(): String? = unwrap(this).getTypeName()
 
+  /**
+   * The version ID of the type configuration.
+   *
+   * You must specify either `TypeVersionArn` , or `TypeName` and `VersionId` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookdefaultversion.html#cfn-cloudformation-hookdefaultversion-typeversionarn)
+   */
   public fun typeVersionArn(): String? = unwrap(this).getTypeVersionArn()
 
+  /**
+   * The version ID of the type specified.
+   *
+   * You must specify either `TypeVersionArn` , or `TypeName` and `VersionId` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookdefaultversion.html#cfn-cloudformation-hookdefaultversion-versionid)
+   */
   public fun versionId(): String? = unwrap(this).getVersionId()
 
+  /**
+   * A builder for [CfnHookDefaultVersionProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param typeName The name of the hook.
+     * You must specify either `TypeVersionArn` , or `TypeName` and `VersionId` .
+     */
     public fun typeName(typeName: String)
 
+    /**
+     * @param typeVersionArn The version ID of the type configuration.
+     * You must specify either `TypeVersionArn` , or `TypeName` and `VersionId` .
+     */
     public fun typeVersionArn(typeVersionArn: String)
 
+    /**
+     * @param versionId The version ID of the type specified.
+     * You must specify either `TypeVersionArn` , or `TypeName` and `VersionId` .
+     */
     public fun versionId(versionId: String)
   }
 
@@ -28,14 +82,26 @@ public interface CfnHookDefaultVersionProps {
         software.amazon.awscdk.services.cloudformation.CfnHookDefaultVersionProps.Builder =
         software.amazon.awscdk.services.cloudformation.CfnHookDefaultVersionProps.builder()
 
+    /**
+     * @param typeName The name of the hook.
+     * You must specify either `TypeVersionArn` , or `TypeName` and `VersionId` .
+     */
     override fun typeName(typeName: String) {
       cdkBuilder.typeName(typeName)
     }
 
+    /**
+     * @param typeVersionArn The version ID of the type configuration.
+     * You must specify either `TypeVersionArn` , or `TypeName` and `VersionId` .
+     */
     override fun typeVersionArn(typeVersionArn: String) {
       cdkBuilder.typeVersionArn(typeVersionArn)
     }
 
+    /**
+     * @param versionId The version ID of the type specified.
+     * You must specify either `TypeVersionArn` , or `TypeName` and `VersionId` .
+     */
     override fun versionId(versionId: String) {
       cdkBuilder.versionId(versionId)
     }
@@ -48,10 +114,31 @@ public interface CfnHookDefaultVersionProps {
     override val cdkObject:
         software.amazon.awscdk.services.cloudformation.CfnHookDefaultVersionProps,
   ) : CdkObject(cdkObject), CfnHookDefaultVersionProps {
+    /**
+     * The name of the hook.
+     *
+     * You must specify either `TypeVersionArn` , or `TypeName` and `VersionId` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookdefaultversion.html#cfn-cloudformation-hookdefaultversion-typename)
+     */
     override fun typeName(): String? = unwrap(this).getTypeName()
 
+    /**
+     * The version ID of the type configuration.
+     *
+     * You must specify either `TypeVersionArn` , or `TypeName` and `VersionId` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookdefaultversion.html#cfn-cloudformation-hookdefaultversion-typeversionarn)
+     */
     override fun typeVersionArn(): String? = unwrap(this).getTypeVersionArn()
 
+    /**
+     * The version ID of the type specified.
+     *
+     * You must specify either `TypeVersionArn` , or `TypeName` and `VersionId` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookdefaultversion.html#cfn-cloudformation-hookdefaultversion-versionid)
+     */
     override fun versionId(): String? = unwrap(this).getVersionId()
   }
 

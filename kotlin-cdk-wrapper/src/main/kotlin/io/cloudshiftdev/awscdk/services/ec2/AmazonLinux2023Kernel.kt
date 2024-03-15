@@ -4,6 +4,23 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 
+/**
+ * Amazon Linux 2023 kernel versions.
+ *
+ * Example:
+ *
+ * ```
+ * Vpc vpc;
+ * Instance.Builder.create(this, "LatestAl2023")
+ * .vpc(vpc)
+ * .instanceType(InstanceType.of(InstanceClass.C7G, InstanceSize.LARGE))
+ * // context cache is turned on by default
+ * .machineImage(AmazonLinux2023ImageSsmParameter.Builder.create()
+ * .kernel(AmazonLinux2023Kernel.KERNEL_6_1)
+ * .build())
+ * .build();
+ * ```
+ */
 public open class AmazonLinux2023Kernel internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.AmazonLinux2023Kernel,
 ) : CdkObject(cdkObject) {

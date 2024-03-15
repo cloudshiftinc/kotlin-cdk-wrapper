@@ -6,12 +6,35 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.sns.ITopic
 import kotlin.collections.List
 
+/**
+ * An event destination.
+ *
+ * Example:
+ *
+ * ```
+ * ConfigurationSet myConfigurationSet;
+ * Topic myTopic;
+ * myConfigurationSet.addEventDestination("ToSns", ConfigurationSetEventDestinationOptions.builder()
+ * .destination(EventDestination.snsTopic(myTopic))
+ * .build());
+ * ```
+ */
 public abstract class EventDestination internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ses.EventDestination,
 ) : CdkObject(cdkObject) {
+  /**
+   * A list of CloudWatch dimensions upon which to categorize your emails.
+   *
+   * Default: - do not send events to CloudWatch
+   */
   public open fun dimensions(): List<CloudWatchDimension> =
       unwrap(this).getDimensions()?.map(CloudWatchDimension::wrap) ?: emptyList()
 
+  /**
+   * A SNS topic to use as event destination.
+   *
+   * Default: - do not send events to a SNS topic
+   */
   public open fun topic(): ITopic? = unwrap(this).getTopic()?.let(ITopic::wrap)
 
   private class Wrapper(

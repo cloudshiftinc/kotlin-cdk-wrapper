@@ -7,10 +7,32 @@ import io.cloudshiftdev.awscdk.services.iam.ISamlProvider
 import kotlin.Any
 import kotlin.String
 
+/**
+ * User-based authentication for a client VPN endpoint.
+ *
+ * Example:
+ *
+ * ```
+ * ClientVpnEndpoint endpoint = vpc.addClientVpnEndpoint("Endpoint",
+ * ClientVpnEndpointOptions.builder()
+ * .cidr("10.100.0.0/16")
+ * .serverCertificateArn("arn:aws:acm:us-east-1:123456789012:certificate/server-certificate-id")
+ * .userBasedAuthentication(ClientVpnUserBasedAuthentication.federated(samlProvider))
+ * .authorizeAllUsersToVpcCidr(false)
+ * .build());
+ * endpoint.addAuthorizationRule("Rule", ClientVpnAuthorizationRuleOptions.builder()
+ * .cidr("10.0.10.0/32")
+ * .groupId("group-id")
+ * .build());
+ * ```
+ */
 public abstract class ClientVpnUserBasedAuthentication internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.ec2.ClientVpnUserBasedAuthentication,
 ) : CdkObject(cdkObject) {
+  /**
+   * Renders the user based authentication.
+   */
   public open fun render(): Any = unwrap(this).render()
 
   private class Wrapper(

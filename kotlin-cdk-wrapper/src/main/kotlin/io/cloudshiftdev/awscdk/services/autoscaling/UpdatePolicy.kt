@@ -6,6 +6,18 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * How existing instances should be updated.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+ * UpdatePolicy updatePolicy = UpdatePolicy.replacingUpdate();
+ * ```
+ */
 public abstract class UpdatePolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.autoscaling.UpdatePolicy,
 ) : CdkObject(cdkObject) {

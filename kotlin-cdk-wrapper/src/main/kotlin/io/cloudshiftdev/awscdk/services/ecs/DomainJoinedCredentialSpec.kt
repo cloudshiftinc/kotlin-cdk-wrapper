@@ -6,6 +6,25 @@ import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.awscdk.services.ssm.IParameter
 import kotlin.String
 
+/**
+ * Credential specification (CredSpec) file.
+ *
+ * Example:
+ *
+ * ```
+ * // Make sure the task definition's execution role has permissions to read from the S3 bucket or
+ * SSM parameter where the CredSpec file is stored.
+ * IParameter parameter;
+ * TaskDefinition taskDefinition;
+ * // Domain-joined gMSA container from a SSM parameter
+ * taskDefinition.addContainer("gmsa-domain-joined-container", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * .cpu(128)
+ * .memoryLimitMiB(256)
+ * .credentialSpecs(List.of(DomainJoinedCredentialSpec.fromSsmParameter(parameter)))
+ * .build());
+ * ```
+ */
 public open class DomainJoinedCredentialSpec internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ecs.DomainJoinedCredentialSpec,
 ) : CredentialSpec(cdkObject) {

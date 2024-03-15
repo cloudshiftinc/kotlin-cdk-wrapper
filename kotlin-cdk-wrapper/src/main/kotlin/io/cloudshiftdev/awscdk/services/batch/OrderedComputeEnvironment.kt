@@ -7,15 +7,48 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Number
 import kotlin.Unit
 
+/**
+ * Assigns an order to a ComputeEnvironment.
+ *
+ * The JobQueue will prioritize the lowest-order ComputeEnvironment.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.batch.*;
+ * IComputeEnvironment computeEnvironment;
+ * OrderedComputeEnvironment orderedComputeEnvironment = OrderedComputeEnvironment.builder()
+ * .computeEnvironment(computeEnvironment)
+ * .order(123)
+ * .build();
+ * ```
+ */
 public interface OrderedComputeEnvironment {
+  /**
+   * The ComputeEnvironment to link to this JobQueue.
+   */
   public fun computeEnvironment(): IComputeEnvironment
 
+  /**
+   * The order associated with `computeEnvironment`.
+   */
   public fun order(): Number
 
+  /**
+   * A builder for [OrderedComputeEnvironment]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param computeEnvironment The ComputeEnvironment to link to this JobQueue. 
+     */
     public fun computeEnvironment(computeEnvironment: IComputeEnvironment)
 
+    /**
+     * @param order The order associated with `computeEnvironment`. 
+     */
     public fun order(order: Number)
   }
 
@@ -23,10 +56,16 @@ public interface OrderedComputeEnvironment {
     private val cdkBuilder: software.amazon.awscdk.services.batch.OrderedComputeEnvironment.Builder
         = software.amazon.awscdk.services.batch.OrderedComputeEnvironment.builder()
 
+    /**
+     * @param computeEnvironment The ComputeEnvironment to link to this JobQueue. 
+     */
     override fun computeEnvironment(computeEnvironment: IComputeEnvironment) {
       cdkBuilder.computeEnvironment(computeEnvironment.let(IComputeEnvironment::unwrap))
     }
 
+    /**
+     * @param order The order associated with `computeEnvironment`. 
+     */
     override fun order(order: Number) {
       cdkBuilder.order(order)
     }
@@ -38,9 +77,15 @@ public interface OrderedComputeEnvironment {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.batch.OrderedComputeEnvironment,
   ) : CdkObject(cdkObject), OrderedComputeEnvironment {
+    /**
+     * The ComputeEnvironment to link to this JobQueue.
+     */
     override fun computeEnvironment(): IComputeEnvironment =
         unwrap(this).getComputeEnvironment().let(IComputeEnvironment::wrap)
 
+    /**
+     * The order associated with `computeEnvironment`.
+     */
     override fun order(): Number = unwrap(this).getOrder()
   }
 

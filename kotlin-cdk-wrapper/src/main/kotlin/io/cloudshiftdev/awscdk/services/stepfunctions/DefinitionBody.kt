@@ -10,31 +10,66 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Example:
+ *
+ * ```
+ * StateMachine stateMachine = StateMachine.Builder.create(this, "SM")
+ * .definitionBody(DefinitionBody.fromChainable(Wait.Builder.create(this,
+ * "Hello").time(WaitTime.duration(Duration.seconds(10))).build()))
+ * .build();
+ * TopicRule.Builder.create(this, "TopicRule")
+ * .sql(IotSql.fromStringAsVer20160323("SELECT * FROM 'device/+/data'"))
+ * .actions(List.of(
+ * new StepFunctionsStateMachineAction(stateMachine)))
+ * .build();
+ * ```
+ */
 public abstract class DefinitionBody internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.stepfunctions.DefinitionBody,
 ) : CdkObject(cdkObject) {
+  /**
+   * @param scope 
+   * @param sfnPrincipal 
+   * @param sfnProps 
+   * @param graph
+   */
   public open fun bind(
-    arg0: Construct,
-    arg1: IPrincipal,
-    arg2: StateMachineProps,
-  ): DefinitionConfig = unwrap(this).bind(arg0.let(Construct::unwrap), arg1.let(IPrincipal::unwrap),
-      arg2.let(StateMachineProps::unwrap)).let(DefinitionConfig::wrap)
+    scope: Construct,
+    sfnPrincipal: IPrincipal,
+    sfnProps: StateMachineProps,
+  ): DefinitionConfig = unwrap(this).bind(scope.let(Construct::unwrap),
+      sfnPrincipal.let(IPrincipal::unwrap),
+      sfnProps.let(StateMachineProps::unwrap)).let(DefinitionConfig::wrap)
 
+  /**
+   * @param scope 
+   * @param sfnPrincipal 
+   * @param sfnProps 
+   * @param graph
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("d2dbd4d1e5f21bba5dd51d75253d432be0ee512a924449cbb7efb61b2d333163")
   public open fun bind(
-    arg0: Construct,
-    arg1: IPrincipal,
-    arg2: StateMachineProps.Builder.() -> Unit,
-  ): DefinitionConfig = bind(arg0, arg1, StateMachineProps(arg2))
+    scope: Construct,
+    sfnPrincipal: IPrincipal,
+    sfnProps: StateMachineProps.Builder.() -> Unit,
+  ): DefinitionConfig = bind(scope, sfnPrincipal, StateMachineProps(sfnProps))
 
+  /**
+   * @param scope 
+   * @param sfnPrincipal 
+   * @param sfnProps 
+   * @param graph
+   */
   public open fun bind(
-    arg0: Construct,
-    arg1: IPrincipal,
-    arg2: StateMachineProps,
-    arg3: StateGraph,
-  ): DefinitionConfig = unwrap(this).bind(arg0.let(Construct::unwrap), arg1.let(IPrincipal::unwrap),
-      arg2.let(StateMachineProps::unwrap), arg3.let(StateGraph::unwrap)).let(DefinitionConfig::wrap)
+    scope: Construct,
+    sfnPrincipal: IPrincipal,
+    sfnProps: StateMachineProps,
+    graph: StateGraph,
+  ): DefinitionConfig = unwrap(this).bind(scope.let(Construct::unwrap),
+      sfnPrincipal.let(IPrincipal::unwrap), sfnProps.let(StateMachineProps::unwrap),
+      graph.let(StateGraph::unwrap)).let(DefinitionConfig::wrap)
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.stepfunctions.DefinitionBody,

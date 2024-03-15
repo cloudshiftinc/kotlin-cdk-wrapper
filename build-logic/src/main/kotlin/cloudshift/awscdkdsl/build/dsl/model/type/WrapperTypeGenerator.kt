@@ -40,64 +40,6 @@ internal object WrapperTypeGenerator {
         return specs + generateCdkObject()
     }
 
-/*
-    private fun findAllReferences(classes: List<CdkClass>, model: CdkModel): Set<ClassName> {
-        val acc = mutableSetOf<ClassName>()
-        classes.forEach {
-            referencedClass(it.className, acc, model)
-        }
-        return acc.filter { it.isOuterClass() }.toSet()
-    }
-
-    private fun referencedClass(typeName: TypeName, acc: MutableSet<ClassName>, model: CdkModel) {
-        if (typeName in acc || (typeName is ClassName && typeName.copy(nullable = false) in acc) || typeName.isJssiClass || !typeName.isCdkClass) return
-
-        fun trackType(type: TypeName) {
-            when (type) {
-                is ClassName -> {
-                    acc.add(type.copy(nullable = false) as ClassName)
-                }
-
-                is ParameterizedTypeName -> {
-                    referencedClass(type.rawType, acc, model)
-                    type.typeArguments.forEach { referencedClass(it, acc, model) }
-                }
-
-                else -> error("Unhandled type: $type ${type::class}")
-            }
-        }
-
-        trackType(typeName)
-        if(typeName is ClassName && typeName.simpleNames.size > 1) referencedClass(typeName.enclosingClassName()!!, acc, model)
-        if (typeName !is ClassName) return
-
-        val cdkClass = model.resolveClass(typeName.copy(nullable = false) as ClassName)
-
-        model.superTypesOf(cdkClass.className).forEach {
-            referencedClass(it, acc, model)
-        }
-
-        cdkClass.publicMemberFunctions.forEach {
-            it.parameters.forEach {
-                referencedClass(it.type, acc, model)
-            }
-            referencedClass(it.returnType, acc, model)
-        }
-
-        cdkClass.publicStaticFunctions.forEach {
-            it.parameters.forEach {
-                referencedClass(it.type, acc, model)
-            }
-            referencedClass(it.returnType, acc, model)
-        }
-
-        cdkClass.publicStaticFields.forEach {
-            referencedClass(it.type, acc, model)
-        }
-
-        model.innerClasses(cdkClass.className).forEach { referencedClass(it, acc, model) }
-    }
-*/
 
     private fun generateWrapperTypeFile(
         cdkClass: CdkClass,
@@ -216,6 +158,7 @@ internal object WrapperTypeGenerator {
         cdkClass: CdkClass,
         ctx: TypeGeneratorContext
     ) {
+        cdkClass.comment?.let { typeBuilder.addKdoc("%L", it) }
         val methods = generateMethods(
             cdkClass.publicMemberFunctions.filter { it.name != "toString" },
             cdkClass,

@@ -11,28 +11,86 @@ import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * The `AWS::Route53Resolver::ResolverDNSSECConfig` resource is a complex type that contains
+ * information about a configuration for DNSSEC validation.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.route53resolver.*;
+ * CfnResolverDNSSECConfig cfnResolverDNSSECConfig = CfnResolverDNSSECConfig.Builder.create(this,
+ * "MyCfnResolverDNSSECConfig")
+ * .resourceId("resourceId")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverdnssecconfig.html)
+ */
 public open class CfnResolverDNSSECConfig internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.route53resolver.CfnResolverDNSSECConfig,
 ) : CfnResource(cdkObject), IInspectable {
+  /**
+   * The primary identifier of this `ResolverDNSSECConfig` resource.
+   *
+   * For example: `rdsc-689d45d1ae623bf3` .
+   */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
+  /**
+   * The AWS account of the owner.
+   *
+   * For example: `111122223333` .
+   */
   public open fun attrOwnerId(): String = unwrap(this).getAttrOwnerId()
 
+  /**
+   * The current status of this `ResolverDNSSECConfig` resource.
+   *
+   * For example: `Enabled` .
+   */
   public open fun attrValidationStatus(): String = unwrap(this).getAttrValidationStatus()
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * The ID of the virtual private cloud (VPC) that you're configuring the DNSSEC validation status
+   * for.
+   */
   public open fun resourceId(): String? = unwrap(this).getResourceId()
 
+  /**
+   * The ID of the virtual private cloud (VPC) that you're configuring the DNSSEC validation status
+   * for.
+   */
   public open fun resourceId(`value`: String) {
     unwrap(this).setResourceId(`value`)
   }
 
+  /**
+   * A fluent builder for
+   * [io.cloudshiftdev.awscdk.services.route53resolver.CfnResolverDNSSECConfig].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The ID of the virtual private cloud (VPC) that you're configuring the DNSSEC validation
+     * status for.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverdnssecconfig.html#cfn-route53resolver-resolverdnssecconfig-resourceid)
+     * @param resourceId The ID of the virtual private cloud (VPC) that you're configuring the
+     * DNSSEC validation status for. 
+     */
     public fun resourceId(resourceId: String)
   }
 
@@ -45,6 +103,14 @@ public open class CfnResolverDNSSECConfig internal constructor(
         software.amazon.awscdk.services.route53resolver.CfnResolverDNSSECConfig.Builder.create(scope,
         id)
 
+    /**
+     * The ID of the virtual private cloud (VPC) that you're configuring the DNSSEC validation
+     * status for.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverdnssecconfig.html#cfn-route53resolver-resolverdnssecconfig-resourceid)
+     * @param resourceId The ID of the virtual private cloud (VPC) that you're configuring the
+     * DNSSEC validation status for. 
+     */
     override fun resourceId(resourceId: String) {
       cdkBuilder.resourceId(resourceId)
     }

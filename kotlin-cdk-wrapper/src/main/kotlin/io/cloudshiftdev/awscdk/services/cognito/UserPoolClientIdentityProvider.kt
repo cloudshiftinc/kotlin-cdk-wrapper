@@ -5,10 +5,28 @@ package io.cloudshiftdev.awscdk.services.cognito
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Identity providers supported by the UserPoolClient.
+ *
+ * Example:
+ *
+ * ```
+ * UserPool pool = new UserPool(this, "Pool");
+ * pool.addClient("app-client", UserPoolClientOptions.builder()
+ * // ...
+ * .supportedIdentityProviders(List.of(UserPoolClientIdentityProvider.AMAZON,
+ * UserPoolClientIdentityProvider.COGNITO))
+ * .build());
+ * ```
+ */
 public open class UserPoolClientIdentityProvider internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cognito.UserPoolClientIdentityProvider,
 ) : CdkObject(cdkObject) {
+  /**
+   * The name of the identity provider as recognized by CloudFormation property
+   * `SupportedIdentityProviders`.
+   */
   public open fun name(): String = unwrap(this).getName()
 
   public companion object {

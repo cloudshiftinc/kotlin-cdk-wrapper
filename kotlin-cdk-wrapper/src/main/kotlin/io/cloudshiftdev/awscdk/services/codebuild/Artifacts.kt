@@ -8,15 +8,49 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Artifacts definition for a CodeBuild Project.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket bucket;
+ * Project project = Project.Builder.create(this, "MyProject")
+ * .buildSpec(BuildSpec.fromObject(Map.of(
+ * "version", "0.2")))
+ * .artifacts(Artifacts.s3(S3ArtifactsProps.builder()
+ * .bucket(bucket)
+ * .includeBuildId(false)
+ * .packageZip(true)
+ * .path("another/path")
+ * .identifier("AddArtifact1")
+ * .build()))
+ * .build();
+ * ```
+ */
 public abstract class Artifacts internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.codebuild.Artifacts,
 ) : CdkObject(cdkObject), IArtifacts {
+  /**
+   * Callback when an Artifacts class is used in a CodeBuild Project.
+   *
+   * @param _scope 
+   * @param _project 
+   */
   public override fun bind(_scope: Construct, _project: IProject): ArtifactsConfig =
       unwrap(this).bind(_scope.let(Construct::unwrap),
       _project.let(IProject::unwrap)).let(ArtifactsConfig::wrap)
 
+  /**
+   * The artifact identifier.
+   *
+   * This property is required on secondary artifacts.
+   */
   public override fun identifier(): String? = unwrap(this).getIdentifier()
 
+  /**
+   * The CodeBuild type of this artifact.
+   */
   public override fun type(): String = unwrap(this).getType()
 
   private class Wrapper(

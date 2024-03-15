@@ -7,11 +7,37 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Construction properties of `BaseDeploymentConfig`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.codedeploy.*;
+ * BaseDeploymentConfigOptions baseDeploymentConfigOptions = BaseDeploymentConfigOptions.builder()
+ * .deploymentConfigName("deploymentConfigName")
+ * .build();
+ * ```
+ */
 public interface BaseDeploymentConfigOptions {
+  /**
+   * The physical, human-readable name of the Deployment Configuration.
+   *
+   * Default: - automatically generated name
+   */
   public fun deploymentConfigName(): String? = unwrap(this).getDeploymentConfigName()
 
+  /**
+   * A builder for [BaseDeploymentConfigOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param deploymentConfigName The physical, human-readable name of the Deployment
+     * Configuration.
+     */
     public fun deploymentConfigName(deploymentConfigName: String)
   }
 
@@ -20,6 +46,10 @@ public interface BaseDeploymentConfigOptions {
         software.amazon.awscdk.services.codedeploy.BaseDeploymentConfigOptions.Builder =
         software.amazon.awscdk.services.codedeploy.BaseDeploymentConfigOptions.builder()
 
+    /**
+     * @param deploymentConfigName The physical, human-readable name of the Deployment
+     * Configuration.
+     */
     override fun deploymentConfigName(deploymentConfigName: String) {
       cdkBuilder.deploymentConfigName(deploymentConfigName)
     }
@@ -31,6 +61,11 @@ public interface BaseDeploymentConfigOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.codedeploy.BaseDeploymentConfigOptions,
   ) : CdkObject(cdkObject), BaseDeploymentConfigOptions {
+    /**
+     * The physical, human-readable name of the Deployment Configuration.
+     *
+     * Default: - automatically generated name
+     */
     override fun deploymentConfigName(): String? = unwrap(this).getDeploymentConfigName()
   }
 

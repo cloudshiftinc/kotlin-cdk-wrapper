@@ -7,11 +7,35 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Specify a test that the canary should run.
+ *
+ * Example:
+ *
+ * ```
+ * Canary canary = Canary.Builder.create(this, "MyCanary")
+ * .schedule(Schedule.rate(Duration.minutes(5)))
+ * .test(Test.custom(CustomTestOptions.builder()
+ * .code(Code.fromAsset(join(__dirname, "canary")))
+ * .handler("index.handler")
+ * .build()))
+ * .runtime(Runtime.SYNTHETICS_NODEJS_PUPPETEER_6_2)
+ * .environmentVariables(Map.of(
+ * "stage", "prod"))
+ * .build();
+ * ```
+ */
 public open class Test internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.synthetics.Test,
 ) : CdkObject(cdkObject) {
+  /**
+   * The code that the canary should run.
+   */
   public open fun code(): Code = unwrap(this).getCode().let(Code::wrap)
 
+  /**
+   * The handler of the canary.
+   */
   public open fun handler(): String = unwrap(this).getHandler()
 
   public companion object {

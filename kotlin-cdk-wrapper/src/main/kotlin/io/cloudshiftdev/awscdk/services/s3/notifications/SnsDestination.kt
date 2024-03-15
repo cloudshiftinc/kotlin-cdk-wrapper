@@ -8,9 +8,30 @@ import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.awscdk.services.s3.IBucketNotificationDestination
 import io.cloudshiftdev.constructs.Construct
 
+/**
+ * Use an SNS topic as a bucket notification destination.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket bucket = new Bucket(this, "MyBucket");
+ * Topic topic = new Topic(this, "MyTopic");
+ * bucket.addEventNotification(EventType.OBJECT_CREATED, new SnsDestination(topic));
+ * ```
+ */
 public open class SnsDestination internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.s3.notifications.SnsDestination,
 ) : CdkObject(cdkObject), IBucketNotificationDestination {
+  /**
+   * Registers this resource to receive notifications for the specified bucket.
+   *
+   * This method will only be called once for each destination/bucket
+   * pair and the result will be cached, so there is no need to implement
+   * idempotency in each destination.
+   *
+   * @param _scope 
+   * @param bucket 
+   */
   public override fun bind(_scope: Construct, bucket: IBucket): BucketNotificationDestinationConfig
       = unwrap(this).bind(_scope.let(Construct::unwrap),
       bucket.let(IBucket::unwrap)).let(BucketNotificationDestinationConfig::wrap)

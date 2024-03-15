@@ -13,16 +13,57 @@ import kotlin.Unit
 import io.cloudshiftdev.awscdk.services.kinesis.IStream as CloudshiftdevAwscdkServicesKinesisIStream
 import software.amazon.awscdk.services.kinesis.IStream as AmazonAwscdkServicesKinesisIStream
 
+/**
+ * Use a Kinesis stream as the destination for a log subscription.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.iam.*;
+ * import io.cloudshiftdev.awscdk.services.kinesis.*;
+ * import io.cloudshiftdev.awscdk.services.logs.destinations.*;
+ * Role role;
+ * Stream stream;
+ * KinesisDestination kinesisDestination = KinesisDestination.Builder.create(stream)
+ * .role(role)
+ * .build();
+ * ```
+ */
 public open class KinesisDestination internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.logs.destinations.KinesisDestination,
 ) : CdkObject(cdkObject), ILogSubscriptionDestination {
+  /**
+   * Return the properties required to send subscription events to this destination.
+   *
+   * If necessary, the destination can use the properties of the SubscriptionFilter
+   * object itself to configure its permissions to allow the subscription to write
+   * to it.
+   *
+   * The destination may reconfigure its own permissions in response to this
+   * function call.
+   *
+   * @param scope 
+   * @param _sourceLogGroup 
+   */
   public override fun bind(scope: Construct, _sourceLogGroup: ILogGroup):
       LogSubscriptionDestinationConfig = unwrap(this).bind(scope.let(Construct::unwrap),
       _sourceLogGroup.let(ILogGroup::unwrap)).let(LogSubscriptionDestinationConfig::wrap)
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.logs.destinations.KinesisDestination].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The role to assume to write log events to the destination.
+     *
+     * Default: - A new Role is created
+     *
+     * @param role The role to assume to write log events to the destination. 
+     */
     public fun role(role: IRole)
   }
 
@@ -33,6 +74,13 @@ public open class KinesisDestination internal constructor(
         software.amazon.awscdk.services.logs.destinations.KinesisDestination.Builder =
         software.amazon.awscdk.services.logs.destinations.KinesisDestination.Builder.create(stream)
 
+    /**
+     * The role to assume to write log events to the destination.
+     *
+     * Default: - A new Role is created
+     *
+     * @param role The role to assume to write log events to the destination. 
+     */
     override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole::unwrap))
     }

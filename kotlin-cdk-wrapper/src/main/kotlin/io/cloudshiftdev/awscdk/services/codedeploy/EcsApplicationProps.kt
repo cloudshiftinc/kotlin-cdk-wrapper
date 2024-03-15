@@ -7,11 +7,33 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Construction properties for `EcsApplication`.
+ *
+ * Example:
+ *
+ * ```
+ * EcsApplication application = EcsApplication.Builder.create(this, "CodeDeployApplication")
+ * .applicationName("MyApplication")
+ * .build();
+ * ```
+ */
 public interface EcsApplicationProps {
+  /**
+   * The physical, human-readable name of the CodeDeploy Application.
+   *
+   * Default: an auto-generated name will be used
+   */
   public fun applicationName(): String? = unwrap(this).getApplicationName()
 
+  /**
+   * A builder for [EcsApplicationProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param applicationName The physical, human-readable name of the CodeDeploy Application.
+     */
     public fun applicationName(applicationName: String)
   }
 
@@ -19,6 +41,9 @@ public interface EcsApplicationProps {
     private val cdkBuilder: software.amazon.awscdk.services.codedeploy.EcsApplicationProps.Builder =
         software.amazon.awscdk.services.codedeploy.EcsApplicationProps.builder()
 
+    /**
+     * @param applicationName The physical, human-readable name of the CodeDeploy Application.
+     */
     override fun applicationName(applicationName: String) {
       cdkBuilder.applicationName(applicationName)
     }
@@ -30,6 +55,11 @@ public interface EcsApplicationProps {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.codedeploy.EcsApplicationProps,
   ) : CdkObject(cdkObject), EcsApplicationProps {
+    /**
+     * The physical, human-readable name of the CodeDeploy Application.
+     *
+     * Default: an auto-generated name will be used
+     */
     override fun applicationName(): String? = unwrap(this).getApplicationName()
   }
 

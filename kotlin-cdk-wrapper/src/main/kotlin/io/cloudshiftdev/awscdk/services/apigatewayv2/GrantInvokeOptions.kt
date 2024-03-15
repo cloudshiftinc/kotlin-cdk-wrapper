@@ -7,14 +7,42 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Unit
 import kotlin.collections.List
 
+/**
+ * Options for granting invoke access.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
+ * GrantInvokeOptions grantInvokeOptions = GrantInvokeOptions.builder()
+ * .httpMethods(List.of(HttpMethod.ANY))
+ * .build();
+ * ```
+ */
 public interface GrantInvokeOptions {
+  /**
+   * The HTTP methods to allow.
+   *
+   * Default: - the HttpMethod of the route
+   */
   public fun httpMethods(): List<HttpMethod> = unwrap(this).getHttpMethods()?.map(HttpMethod::wrap)
       ?: emptyList()
 
+  /**
+   * A builder for [GrantInvokeOptions]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param httpMethods The HTTP methods to allow.
+     */
     public fun httpMethods(httpMethods: List<HttpMethod>)
 
+    /**
+     * @param httpMethods The HTTP methods to allow.
+     */
     public fun httpMethods(vararg httpMethods: HttpMethod)
   }
 
@@ -22,10 +50,16 @@ public interface GrantInvokeOptions {
     private val cdkBuilder: software.amazon.awscdk.services.apigatewayv2.GrantInvokeOptions.Builder
         = software.amazon.awscdk.services.apigatewayv2.GrantInvokeOptions.builder()
 
+    /**
+     * @param httpMethods The HTTP methods to allow.
+     */
     override fun httpMethods(httpMethods: List<HttpMethod>) {
       cdkBuilder.httpMethods(httpMethods.map(HttpMethod::unwrap))
     }
 
+    /**
+     * @param httpMethods The HTTP methods to allow.
+     */
     override fun httpMethods(vararg httpMethods: HttpMethod): Unit =
         httpMethods(httpMethods.toList())
 
@@ -36,6 +70,11 @@ public interface GrantInvokeOptions {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.apigatewayv2.GrantInvokeOptions,
   ) : CdkObject(cdkObject), GrantInvokeOptions {
+    /**
+     * The HTTP methods to allow.
+     *
+     * Default: - the HttpMethod of the route
+     */
     override fun httpMethods(): List<HttpMethod> =
         unwrap(this).getHttpMethods()?.map(HttpMethod::wrap) ?: emptyList()
   }

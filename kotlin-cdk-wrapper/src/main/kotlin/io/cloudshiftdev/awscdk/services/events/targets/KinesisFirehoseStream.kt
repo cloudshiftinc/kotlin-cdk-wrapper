@@ -13,18 +13,63 @@ import kotlin.Unit
 import io.cloudshiftdev.awscdk.services.kinesisfirehose.CfnDeliveryStream as CloudshiftdevAwscdkServicesKinesisfirehoseCfnDeliveryStream
 import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream as AmazonAwscdkServicesKinesisfirehoseCfnDeliveryStream
 
+/**
+ * Customize the Firehose Stream Event Target.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.events.*;
+ * import io.cloudshiftdev.awscdk.services.events.targets.*;
+ * import io.cloudshiftdev.awscdk.services.kinesisfirehose.*;
+ * CfnDeliveryStream cfnDeliveryStream;
+ * RuleTargetInput ruleTargetInput;
+ * KinesisFirehoseStream kinesisFirehoseStream =
+ * KinesisFirehoseStream.Builder.create(cfnDeliveryStream)
+ * .message(ruleTargetInput)
+ * .build();
+ * ```
+ */
 public open class KinesisFirehoseStream internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.events.targets.KinesisFirehoseStream,
 ) : CdkObject(cdkObject), IRuleTarget {
+  /**
+   * Returns a RuleTarget that can be used to trigger this Firehose Stream as a result from a Event
+   * Bridge event.
+   *
+   * @param _rule 
+   * @param _id
+   */
   public override fun bind(_rule: IRule): RuleTargetConfig =
       unwrap(this).bind(_rule.let(IRule::unwrap)).let(RuleTargetConfig::wrap)
 
+  /**
+   * Returns a RuleTarget that can be used to trigger this Firehose Stream as a result from a Event
+   * Bridge event.
+   *
+   * @param _rule 
+   * @param _id
+   */
   public override fun bind(_rule: IRule, _id: String): RuleTargetConfig =
       unwrap(this).bind(_rule.let(IRule::unwrap), _id).let(RuleTargetConfig::wrap)
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.events.targets.KinesisFirehoseStream].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The message to send to the stream.
+     *
+     * Must be a valid JSON text passed to the target stream.
+     *
+     * Default: - the entire Event Bridge event
+     *
+     * @param message The message to send to the stream. 
+     */
     public fun message(message: RuleTargetInput)
   }
 
@@ -35,6 +80,15 @@ public open class KinesisFirehoseStream internal constructor(
         software.amazon.awscdk.services.events.targets.KinesisFirehoseStream.Builder =
         software.amazon.awscdk.services.events.targets.KinesisFirehoseStream.Builder.create(stream)
 
+    /**
+     * The message to send to the stream.
+     *
+     * Must be a valid JSON text passed to the target stream.
+     *
+     * Default: - the entire Event Bridge event
+     *
+     * @param message The message to send to the stream. 
+     */
     override fun message(message: RuleTargetInput) {
       cdkBuilder.message(message.let(RuleTargetInput::unwrap))
     }

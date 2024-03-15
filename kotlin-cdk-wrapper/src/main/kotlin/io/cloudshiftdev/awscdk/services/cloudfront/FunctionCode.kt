@@ -7,9 +7,35 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Represents the function's source code.
+ *
+ * Example:
+ *
+ * ```
+ * Bucket s3Bucket;
+ * // Add a cloudfront Function to a Distribution
+ * Function cfFunction = Function.Builder.create(this, "Function")
+ * .code(FunctionCode.fromInline("function handler(event) { return event.request }"))
+ * .runtime(FunctionRuntime.JS_2_0)
+ * .build();
+ * Distribution.Builder.create(this, "distro")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(new S3Origin(s3Bucket))
+ * .functionAssociations(List.of(FunctionAssociation.builder()
+ * .function(cfFunction)
+ * .eventType(FunctionEventType.VIEWER_REQUEST)
+ * .build()))
+ * .build())
+ * .build();
+ * ```
+ */
 public abstract class FunctionCode internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.FunctionCode,
 ) : CdkObject(cdkObject) {
+  /**
+   * renders the function code.
+   */
   public open fun render(): String = unwrap(this).render()
 
   private class Wrapper(

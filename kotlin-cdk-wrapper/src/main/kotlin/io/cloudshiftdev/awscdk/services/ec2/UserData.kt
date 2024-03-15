@@ -8,38 +8,92 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
+/**
+ * Instance User Data.
+ *
+ * Example:
+ *
+ * ```
+ * MultipartUserData multipartUserData = new MultipartUserData();
+ * UserData commandsUserData = UserData.forLinux();
+ * multipartUserData.addUserDataPart(commandsUserData, MultipartBody.SHELL_SCRIPT, true);
+ * // Adding commands to the multipartUserData adds them to commandsUserData, and vice-versa.
+ * multipartUserData.addCommands("touch /root/multi.txt");
+ * commandsUserData.addCommands("touch /root/userdata.txt");
+ * ```
+ */
 public abstract class UserData internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.ec2.UserData,
 ) : CdkObject(cdkObject) {
-  public open fun addCommands(arg0: String) {
-    unwrap(this).addCommands(arg0)
+  /**
+   * Add one or more commands to the user data.
+   *
+   * @param commands 
+   */
+  public open fun addCommands(commands: String) {
+    unwrap(this).addCommands(commands)
   }
 
-  public open fun addExecuteFileCommand(arg0: ExecuteFileOptions) {
-    unwrap(this).addExecuteFileCommand(arg0.let(ExecuteFileOptions::unwrap))
+  /**
+   * Adds commands to execute a file.
+   *
+   * @param params 
+   */
+  public open fun addExecuteFileCommand(params: ExecuteFileOptions) {
+    unwrap(this).addExecuteFileCommand(params.let(ExecuteFileOptions::unwrap))
   }
 
+  /**
+   * Adds commands to execute a file.
+   *
+   * @param params 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("b557a6f4a2ca15b71d1150c77bb51fd8c3435694ec30126636099a14c197a4fd")
-  public open fun addExecuteFileCommand(arg0: ExecuteFileOptions.Builder.() -> Unit): Unit =
-      addExecuteFileCommand(ExecuteFileOptions(arg0))
+  public open fun addExecuteFileCommand(params: ExecuteFileOptions.Builder.() -> Unit): Unit =
+      addExecuteFileCommand(ExecuteFileOptions(params))
 
-  public open fun addOnExitCommands(arg0: String) {
-    unwrap(this).addOnExitCommands(arg0)
+  /**
+   * Add one or more commands to the user data that will run when the script exits.
+   *
+   * @param commands 
+   */
+  public open fun addOnExitCommands(commands: String) {
+    unwrap(this).addOnExitCommands(commands)
   }
 
-  public open fun addS3DownloadCommand(arg0: S3DownloadOptions): String =
-      unwrap(this).addS3DownloadCommand(arg0.let(S3DownloadOptions::unwrap))
+  /**
+   * Adds commands to download a file from S3.
+   *
+   * @return : The local path that the file will be downloaded to
+   * @param params 
+   */
+  public open fun addS3DownloadCommand(params: S3DownloadOptions): String =
+      unwrap(this).addS3DownloadCommand(params.let(S3DownloadOptions::unwrap))
 
+  /**
+   * Adds commands to download a file from S3.
+   *
+   * @return : The local path that the file will be downloaded to
+   * @param params 
+   */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("ca5291b6617557daf5643d9f19e97f8894451b651dc29154159b383765d7c98b")
-  public open fun addS3DownloadCommand(arg0: S3DownloadOptions.Builder.() -> Unit): String =
-      addS3DownloadCommand(S3DownloadOptions(arg0))
+  public open fun addS3DownloadCommand(params: S3DownloadOptions.Builder.() -> Unit): String =
+      addS3DownloadCommand(S3DownloadOptions(params))
 
-  public open fun addSignalOnExitCommand(arg0: Resource) {
-    unwrap(this).addSignalOnExitCommand(arg0.let(Resource::unwrap))
+  /**
+   * Adds a command which will send a cfn-signal when the user data script ends.
+   *
+   * @param resource 
+   */
+  public open fun addSignalOnExitCommand(resource: Resource) {
+    unwrap(this).addSignalOnExitCommand(resource.let(Resource::unwrap))
   }
 
+  /**
+   * Render the UserData for use in a construct.
+   */
   public open fun render(): String = unwrap(this).render()
 
   private class Wrapper(

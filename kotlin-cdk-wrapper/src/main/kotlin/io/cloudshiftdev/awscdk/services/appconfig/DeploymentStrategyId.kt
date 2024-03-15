@@ -5,9 +5,24 @@ package io.cloudshiftdev.awscdk.services.appconfig
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Defines the deployment strategy ID's of AWS AppConfig deployment strategies.
+ *
+ * Example:
+ *
+ * ```
+ * DeploymentStrategy.fromDeploymentStrategyId(this, "MyImportedDeploymentStrategy",
+ * DeploymentStrategyId.fromString("abc123"));
+ * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-deployment-strategy.html)
+ */
 public abstract class DeploymentStrategyId internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appconfig.DeploymentStrategyId,
 ) : CdkObject(cdkObject) {
+  /**
+   * The deployment strategy ID.
+   */
   public open fun id(): String = unwrap(this).getId()
 
   private class Wrapper(

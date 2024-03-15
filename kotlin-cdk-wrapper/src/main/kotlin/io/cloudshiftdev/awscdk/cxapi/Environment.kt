@@ -7,19 +7,56 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Models an AWS execution environment, for use within the CDK toolkit.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.cxapi.*;
+ * Environment environment = Environment.builder()
+ * .account("account")
+ * .name("name")
+ * .region("region")
+ * .build();
+ * ```
+ */
 public interface Environment {
+  /**
+   * The AWS account this environment deploys into.
+   */
   public fun account(): String
 
+  /**
+   * The arbitrary name of this environment (user-set, or at least user-meaningful).
+   */
   public fun name(): String
 
+  /**
+   * The AWS region name where this environment deploys into.
+   */
   public fun region(): String
 
+  /**
+   * A builder for [Environment]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param account The AWS account this environment deploys into. 
+     */
     public fun account(account: String)
 
+    /**
+     * @param name The arbitrary name of this environment (user-set, or at least user-meaningful). 
+     */
     public fun name(name: String)
 
+    /**
+     * @param region The AWS region name where this environment deploys into. 
+     */
     public fun region(region: String)
   }
 
@@ -27,14 +64,23 @@ public interface Environment {
     private val cdkBuilder: software.amazon.awscdk.cxapi.Environment.Builder =
         software.amazon.awscdk.cxapi.Environment.builder()
 
+    /**
+     * @param account The AWS account this environment deploys into. 
+     */
     override fun account(account: String) {
       cdkBuilder.account(account)
     }
 
+    /**
+     * @param name The arbitrary name of this environment (user-set, or at least user-meaningful). 
+     */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
+    /**
+     * @param region The AWS region name where this environment deploys into. 
+     */
     override fun region(region: String) {
       cdkBuilder.region(region)
     }
@@ -45,10 +91,19 @@ public interface Environment {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.cxapi.Environment,
   ) : CdkObject(cdkObject), Environment {
+    /**
+     * The AWS account this environment deploys into.
+     */
     override fun account(): String = unwrap(this).getAccount()
 
+    /**
+     * The arbitrary name of this environment (user-set, or at least user-meaningful).
+     */
     override fun name(): String = unwrap(this).getName()
 
+    /**
+     * The AWS region name where this environment deploys into.
+     */
     override fun region(): String = unwrap(this).getRegion()
   }
 

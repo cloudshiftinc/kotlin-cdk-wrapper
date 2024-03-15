@@ -7,11 +7,36 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Unit
 
+/**
+ * Bind context for ISources.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.iam.*;
+ * import io.cloudshiftdev.awscdk.services.s3.deployment.*;
+ * Role role;
+ * DeploymentSourceContext deploymentSourceContext = DeploymentSourceContext.builder()
+ * .handlerRole(role)
+ * .build();
+ * ```
+ */
 public interface DeploymentSourceContext {
+  /**
+   * The role for the handler.
+   */
   public fun handlerRole(): IRole
 
+  /**
+   * A builder for [DeploymentSourceContext]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param handlerRole The role for the handler. 
+     */
     public fun handlerRole(handlerRole: IRole)
   }
 
@@ -20,6 +45,9 @@ public interface DeploymentSourceContext {
         software.amazon.awscdk.services.s3.deployment.DeploymentSourceContext.Builder =
         software.amazon.awscdk.services.s3.deployment.DeploymentSourceContext.builder()
 
+    /**
+     * @param handlerRole The role for the handler. 
+     */
     override fun handlerRole(handlerRole: IRole) {
       cdkBuilder.handlerRole(handlerRole.let(IRole::unwrap))
     }
@@ -31,6 +59,9 @@ public interface DeploymentSourceContext {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.s3.deployment.DeploymentSourceContext,
   ) : CdkObject(cdkObject), DeploymentSourceContext {
+    /**
+     * The role for the handler.
+     */
     override fun handlerRole(): IRole = unwrap(this).getHandlerRole().let(IRole::wrap)
   }
 

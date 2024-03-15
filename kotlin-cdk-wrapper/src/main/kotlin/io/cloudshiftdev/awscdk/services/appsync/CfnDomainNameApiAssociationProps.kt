@@ -7,15 +7,52 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for defining a `CfnDomainNameApiAssociation`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.appsync.*;
+ * CfnDomainNameApiAssociationProps cfnDomainNameApiAssociationProps =
+ * CfnDomainNameApiAssociationProps.builder()
+ * .apiId("apiId")
+ * .domainName("domainName")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-domainnameapiassociation.html)
+ */
 public interface CfnDomainNameApiAssociationProps {
+  /**
+   * The API ID.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-domainnameapiassociation.html#cfn-appsync-domainnameapiassociation-apiid)
+   */
   public fun apiId(): String
 
+  /**
+   * The domain name.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-domainnameapiassociation.html#cfn-appsync-domainnameapiassociation-domainname)
+   */
   public fun domainName(): String
 
+  /**
+   * A builder for [CfnDomainNameApiAssociationProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param apiId The API ID. 
+     */
     public fun apiId(apiId: String)
 
+    /**
+     * @param domainName The domain name. 
+     */
     public fun domainName(domainName: String)
   }
 
@@ -24,10 +61,16 @@ public interface CfnDomainNameApiAssociationProps {
         software.amazon.awscdk.services.appsync.CfnDomainNameApiAssociationProps.Builder =
         software.amazon.awscdk.services.appsync.CfnDomainNameApiAssociationProps.builder()
 
+    /**
+     * @param apiId The API ID. 
+     */
     override fun apiId(apiId: String) {
       cdkBuilder.apiId(apiId)
     }
 
+    /**
+     * @param domainName The domain name. 
+     */
     override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
@@ -40,8 +83,18 @@ public interface CfnDomainNameApiAssociationProps {
     override val cdkObject:
         software.amazon.awscdk.services.appsync.CfnDomainNameApiAssociationProps,
   ) : CdkObject(cdkObject), CfnDomainNameApiAssociationProps {
+    /**
+     * The API ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-domainnameapiassociation.html#cfn-appsync-domainnameapiassociation-apiid)
+     */
     override fun apiId(): String = unwrap(this).getApiId()
 
+    /**
+     * The domain name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-domainnameapiassociation.html#cfn-appsync-domainnameapiassociation-domainname)
+     */
     override fun domainName(): String = unwrap(this).getDomainName()
   }
 

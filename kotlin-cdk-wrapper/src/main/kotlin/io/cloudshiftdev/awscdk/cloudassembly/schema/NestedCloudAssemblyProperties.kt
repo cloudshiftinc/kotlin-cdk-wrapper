@@ -7,15 +7,49 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Artifact properties for nested cloud assemblies.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.cloudassembly.schema.*;
+ * NestedCloudAssemblyProperties nestedCloudAssemblyProperties =
+ * NestedCloudAssemblyProperties.builder()
+ * .directoryName("directoryName")
+ * // the properties below are optional
+ * .displayName("displayName")
+ * .build();
+ * ```
+ */
 public interface NestedCloudAssemblyProperties {
+  /**
+   * Relative path to the nested cloud assembly.
+   */
   public fun directoryName(): String
 
+  /**
+   * Display name for the cloud assembly.
+   *
+   * Default: - The artifact ID
+   */
   public fun displayName(): String? = unwrap(this).getDisplayName()
 
+  /**
+   * A builder for [NestedCloudAssemblyProperties]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param directoryName Relative path to the nested cloud assembly. 
+     */
     public fun directoryName(directoryName: String)
 
+    /**
+     * @param displayName Display name for the cloud assembly.
+     */
     public fun displayName(displayName: String)
   }
 
@@ -24,10 +58,16 @@ public interface NestedCloudAssemblyProperties {
         software.amazon.awscdk.cloudassembly.schema.NestedCloudAssemblyProperties.Builder =
         software.amazon.awscdk.cloudassembly.schema.NestedCloudAssemblyProperties.builder()
 
+    /**
+     * @param directoryName Relative path to the nested cloud assembly. 
+     */
     override fun directoryName(directoryName: String) {
       cdkBuilder.directoryName(directoryName)
     }
 
+    /**
+     * @param displayName Display name for the cloud assembly.
+     */
     override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
@@ -40,8 +80,16 @@ public interface NestedCloudAssemblyProperties {
     override val cdkObject:
         software.amazon.awscdk.cloudassembly.schema.NestedCloudAssemblyProperties,
   ) : CdkObject(cdkObject), NestedCloudAssemblyProperties {
+    /**
+     * Relative path to the nested cloud assembly.
+     */
     override fun directoryName(): String = unwrap(this).getDirectoryName()
 
+    /**
+     * Display name for the cloud assembly.
+     *
+     * Default: - The artifact ID
+     */
     override fun displayName(): String? = unwrap(this).getDisplayName()
   }
 

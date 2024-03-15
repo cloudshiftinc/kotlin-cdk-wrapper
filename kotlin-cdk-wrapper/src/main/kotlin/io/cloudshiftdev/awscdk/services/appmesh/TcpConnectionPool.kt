@@ -7,11 +7,36 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Number
 import kotlin.Unit
 
+/**
+ * Connection pool properties for TCP listeners.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.appmesh.*;
+ * TcpConnectionPool tcpConnectionPool = TcpConnectionPool.builder()
+ * .maxConnections(123)
+ * .build();
+ * ```
+ */
 public interface TcpConnectionPool {
+  /**
+   * The maximum connections in the pool.
+   *
+   * Default: - none
+   */
   public fun maxConnections(): Number
 
+  /**
+   * A builder for [TcpConnectionPool]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param maxConnections The maximum connections in the pool. 
+     */
     public fun maxConnections(maxConnections: Number)
   }
 
@@ -19,6 +44,9 @@ public interface TcpConnectionPool {
     private val cdkBuilder: software.amazon.awscdk.services.appmesh.TcpConnectionPool.Builder =
         software.amazon.awscdk.services.appmesh.TcpConnectionPool.builder()
 
+    /**
+     * @param maxConnections The maximum connections in the pool. 
+     */
     override fun maxConnections(maxConnections: Number) {
       cdkBuilder.maxConnections(maxConnections)
     }
@@ -30,6 +58,11 @@ public interface TcpConnectionPool {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.appmesh.TcpConnectionPool,
   ) : CdkObject(cdkObject), TcpConnectionPool {
+    /**
+     * The maximum connections in the pool.
+     *
+     * Default: - none
+     */
     override fun maxConnections(): Number = unwrap(this).getMaxConnections()
   }
 

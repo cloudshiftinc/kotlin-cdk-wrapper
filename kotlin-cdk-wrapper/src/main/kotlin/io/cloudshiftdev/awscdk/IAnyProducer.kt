@@ -5,14 +5,27 @@ package io.cloudshiftdev.awscdk
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Any
 
+/**
+ * Interface for lazy untyped value producers.
+ */
 public interface IAnyProducer {
-  public fun produce(arg0: IResolveContext): Any
+  /**
+   * Produce the value.
+   *
+   * @param context 
+   */
+  public fun produce(context: IResolveContext): Any
 
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.IAnyProducer,
   ) : CdkObject(cdkObject), IAnyProducer {
-    override fun produce(arg0: IResolveContext): Any =
-        unwrap(this).produce(arg0.let(IResolveContext::unwrap))
+    /**
+     * Produce the value.
+     *
+     * @param context 
+     */
+    override fun produce(context: IResolveContext): Any =
+        unwrap(this).produce(context.let(IResolveContext::unwrap))
   }
 
   public companion object {

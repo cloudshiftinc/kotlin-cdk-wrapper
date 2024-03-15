@@ -8,21 +8,61 @@ import io.cloudshiftdev.constructs.Construct
 import kotlin.Number
 import kotlin.Unit
 
+/**
+ * Define a traffic routing config of type 'TimeBasedCanary'.
+ *
+ * Example:
+ *
+ * ```
+ * LambdaDeploymentConfig config = LambdaDeploymentConfig.Builder.create(this, "CustomConfig")
+ * .trafficRouting(TimeBasedCanaryTrafficRouting.Builder.create()
+ * .interval(Duration.minutes(15))
+ * .percentage(5)
+ * .build())
+ * .deploymentConfigName("MyDeploymentConfig")
+ * .build();
+ * ```
+ */
 public open class TimeBasedCanaryTrafficRouting internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRouting,
 ) : TrafficRouting(cdkObject) {
+  /**
+   * Return a TrafficRoutingConfig of type `TimeBasedCanary`.
+   *
+   * @param _scope 
+   */
   public override fun bind(_scope: Construct): TrafficRoutingConfig =
       unwrap(this).bind(_scope.let(Construct::unwrap)).let(TrafficRoutingConfig::wrap)
 
+  /**
+   * The amount of time between additional traffic shifts.
+   */
   public open fun interval(): Duration = unwrap(this).getInterval().let(Duration::wrap)
 
+  /**
+   * The percentage to increase traffic on each traffic shift.
+   */
   public open fun percentage(): Number = unwrap(this).getPercentage()
 
+  /**
+   * A fluent builder for
+   * [io.cloudshiftdev.awscdk.services.codedeploy.TimeBasedCanaryTrafficRouting].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The amount of time between traffic shifts.
+     *
+     * @param interval The amount of time between traffic shifts. 
+     */
     public fun interval(interval: Duration)
 
+    /**
+     * The percentage to increase traffic on each traffic shift.
+     *
+     * @param percentage The percentage to increase traffic on each traffic shift. 
+     */
     public fun percentage(percentage: Number)
   }
 
@@ -31,10 +71,20 @@ public open class TimeBasedCanaryTrafficRouting internal constructor(
         software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRouting.Builder =
         software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRouting.Builder.create()
 
+    /**
+     * The amount of time between traffic shifts.
+     *
+     * @param interval The amount of time between traffic shifts. 
+     */
     override fun interval(interval: Duration) {
       cdkBuilder.interval(interval.let(Duration::unwrap))
     }
 
+    /**
+     * The percentage to increase traffic on each traffic shift.
+     *
+     * @param percentage The percentage to increase traffic on each traffic shift. 
+     */
     override fun percentage(percentage: Number) {
       cdkBuilder.percentage(percentage)
     }

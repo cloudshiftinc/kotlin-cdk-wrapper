@@ -8,19 +8,59 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 
+/**
+ * Request for subnet IPv6 CIDRs to be allocated for a VPC.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * AllocateIpv6CidrRequest allocateIpv6CidrRequest = AllocateIpv6CidrRequest.builder()
+ * .allocatedSubnets(List.of(AllocatedSubnet.builder()
+ * .cidr("cidr")
+ * // the properties below are optional
+ * .ipv6Cidr("ipv6Cidr")
+ * .build()))
+ * .ipv6Cidrs(List.of("ipv6Cidrs"))
+ * .build();
+ * ```
+ */
 public interface AllocateIpv6CidrRequest {
+  /**
+   * List of subnets allocated with IPv4 CIDRs.
+   */
   public fun allocatedSubnets(): List<AllocatedSubnet>
 
+  /**
+   * The IPv6 CIDRs to be allocated to the subnets.
+   */
   public fun ipv6Cidrs(): List<String>
 
+  /**
+   * A builder for [AllocateIpv6CidrRequest]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param allocatedSubnets List of subnets allocated with IPv4 CIDRs. 
+     */
     public fun allocatedSubnets(allocatedSubnets: List<AllocatedSubnet>)
 
+    /**
+     * @param allocatedSubnets List of subnets allocated with IPv4 CIDRs. 
+     */
     public fun allocatedSubnets(vararg allocatedSubnets: AllocatedSubnet)
 
+    /**
+     * @param ipv6Cidrs The IPv6 CIDRs to be allocated to the subnets. 
+     */
     public fun ipv6Cidrs(ipv6Cidrs: List<String>)
 
+    /**
+     * @param ipv6Cidrs The IPv6 CIDRs to be allocated to the subnets. 
+     */
     public fun ipv6Cidrs(vararg ipv6Cidrs: String)
   }
 
@@ -28,17 +68,29 @@ public interface AllocateIpv6CidrRequest {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.AllocateIpv6CidrRequest.Builder =
         software.amazon.awscdk.services.ec2.AllocateIpv6CidrRequest.builder()
 
+    /**
+     * @param allocatedSubnets List of subnets allocated with IPv4 CIDRs. 
+     */
     override fun allocatedSubnets(allocatedSubnets: List<AllocatedSubnet>) {
       cdkBuilder.allocatedSubnets(allocatedSubnets.map(AllocatedSubnet::unwrap))
     }
 
+    /**
+     * @param allocatedSubnets List of subnets allocated with IPv4 CIDRs. 
+     */
     override fun allocatedSubnets(vararg allocatedSubnets: AllocatedSubnet): Unit =
         allocatedSubnets(allocatedSubnets.toList())
 
+    /**
+     * @param ipv6Cidrs The IPv6 CIDRs to be allocated to the subnets. 
+     */
     override fun ipv6Cidrs(ipv6Cidrs: List<String>) {
       cdkBuilder.ipv6Cidrs(ipv6Cidrs)
     }
 
+    /**
+     * @param ipv6Cidrs The IPv6 CIDRs to be allocated to the subnets. 
+     */
     override fun ipv6Cidrs(vararg ipv6Cidrs: String): Unit = ipv6Cidrs(ipv6Cidrs.toList())
 
     public fun build(): software.amazon.awscdk.services.ec2.AllocateIpv6CidrRequest =
@@ -48,9 +100,15 @@ public interface AllocateIpv6CidrRequest {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ec2.AllocateIpv6CidrRequest,
   ) : CdkObject(cdkObject), AllocateIpv6CidrRequest {
+    /**
+     * List of subnets allocated with IPv4 CIDRs.
+     */
     override fun allocatedSubnets(): List<AllocatedSubnet> =
         unwrap(this).getAllocatedSubnets().map(AllocatedSubnet::wrap)
 
+    /**
+     * The IPv6 CIDRs to be allocated to the subnets.
+     */
     override fun ipv6Cidrs(): List<String> = unwrap(this).getIpv6Cidrs()
   }
 

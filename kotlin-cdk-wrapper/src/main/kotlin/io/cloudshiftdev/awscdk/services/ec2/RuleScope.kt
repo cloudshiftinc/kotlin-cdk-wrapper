@@ -7,15 +7,46 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * The scope and id in which a given SecurityGroup rule should be defined.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * SecurityGroup securityGroup;
+ * RuleScope ruleScope = RuleScope.builder()
+ * .id("id")
+ * .scope(securityGroup)
+ * .build();
+ * ```
+ */
 public interface RuleScope {
+  /**
+   * The construct ID to use for the rule.
+   */
   public fun id(): String
 
+  /**
+   * The SecurityGroup in which a rule should be scoped.
+   */
   public fun scope(): ISecurityGroup
 
+  /**
+   * A builder for [RuleScope]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param id The construct ID to use for the rule. 
+     */
     public fun id(id: String)
 
+    /**
+     * @param scope The SecurityGroup in which a rule should be scoped. 
+     */
     public fun scope(scope: ISecurityGroup)
   }
 
@@ -23,10 +54,16 @@ public interface RuleScope {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.RuleScope.Builder =
         software.amazon.awscdk.services.ec2.RuleScope.builder()
 
+    /**
+     * @param id The construct ID to use for the rule. 
+     */
     override fun id(id: String) {
       cdkBuilder.id(id)
     }
 
+    /**
+     * @param scope The SecurityGroup in which a rule should be scoped. 
+     */
     override fun scope(scope: ISecurityGroup) {
       cdkBuilder.scope(scope.let(ISecurityGroup::unwrap))
     }
@@ -37,8 +74,14 @@ public interface RuleScope {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.ec2.RuleScope,
   ) : CdkObject(cdkObject), RuleScope {
+    /**
+     * The construct ID to use for the rule.
+     */
     override fun id(): String = unwrap(this).getId()
 
+    /**
+     * The SecurityGroup in which a rule should be scoped.
+     */
     override fun scope(): ISecurityGroup = unwrap(this).getScope().let(ISecurityGroup::wrap)
   }
 

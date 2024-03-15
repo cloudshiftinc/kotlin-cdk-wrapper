@@ -5,12 +5,31 @@ package io.cloudshiftdev.awscdk.services.cognito
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * Metadata for a SAML user pool identity provider.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.cognito.*;
+ * UserPoolIdentityProviderSamlMetadata userPoolIdentityProviderSamlMetadata =
+ * UserPoolIdentityProviderSamlMetadata.file("fileContent");
+ * ```
+ */
 public open class UserPoolIdentityProviderSamlMetadata internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.cognito.UserPoolIdentityProviderSamlMetadata,
 ) : CdkObject(cdkObject) {
+  /**
+   * A URL hosting SAML metadata, or the content of a file containing SAML metadata.
+   */
   public open fun metadataContent(): String = unwrap(this).getMetadataContent()
 
+  /**
+   * The type of metadata, either a URL or file content.
+   */
   public open fun metadataType(): UserPoolIdentityProviderSamlMetadataType =
       unwrap(this).getMetadataType().let(UserPoolIdentityProviderSamlMetadataType::wrap)
 

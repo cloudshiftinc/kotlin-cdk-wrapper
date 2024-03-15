@@ -11,39 +11,107 @@ import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
+/**
+ * A group object, which contains a specified group’s metadata and attributes.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.identitystore.*;
+ * CfnGroup cfnGroup = CfnGroup.Builder.create(this, "MyCfnGroup")
+ * .displayName("displayName")
+ * .identityStoreId("identityStoreId")
+ * // the properties below are optional
+ * .description("description")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-group.html)
+ */
 public open class CfnGroup internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.identitystore.CfnGroup,
 ) : CfnResource(cdkObject), IInspectable {
+  /**
+   * The identifier of the newly created group in the identity store.
+   */
   public open fun attrGroupId(): String = unwrap(this).getAttrGroupId()
 
+  /**
+   * A string containing the description of the group.
+   */
   public open fun description(): String? = unwrap(this).getDescription()
 
+  /**
+   * A string containing the description of the group.
+   */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
   }
 
+  /**
+   * A string containing the name of the group.
+   */
   public open fun displayName(): String = unwrap(this).getDisplayName()
 
+  /**
+   * A string containing the name of the group.
+   */
   public open fun displayName(`value`: String) {
     unwrap(this).setDisplayName(`value`)
   }
 
+  /**
+   * The globally unique identifier for the identity store.
+   */
   public open fun identityStoreId(): String = unwrap(this).getIdentityStoreId()
 
+  /**
+   * The globally unique identifier for the identity store.
+   */
   public open fun identityStoreId(`value`: String) {
     unwrap(this).setIdentityStoreId(`value`)
   }
 
+  /**
+   * Examines the CloudFormation resource and discloses attributes.
+   *
+   * @param inspector tree inspector to collect and process attributes. 
+   */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
 
+  /**
+   * A fluent builder for [io.cloudshiftdev.awscdk.services.identitystore.CfnGroup].
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * A string containing the description of the group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-group.html#cfn-identitystore-group-description)
+     * @param description A string containing the description of the group. 
+     */
     public fun description(description: String)
 
+    /**
+     * A string containing the name of the group.
+     *
+     * This value is commonly displayed when the group is referenced.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-group.html#cfn-identitystore-group-displayname)
+     * @param displayName A string containing the name of the group. 
+     */
     public fun displayName(displayName: String)
 
+    /**
+     * The globally unique identifier for the identity store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-group.html#cfn-identitystore-group-identitystoreid)
+     * @param identityStoreId The globally unique identifier for the identity store. 
+     */
     public fun identityStoreId(identityStoreId: String)
   }
 
@@ -54,14 +122,34 @@ public open class CfnGroup internal constructor(
     private val cdkBuilder: software.amazon.awscdk.services.identitystore.CfnGroup.Builder =
         software.amazon.awscdk.services.identitystore.CfnGroup.Builder.create(scope, id)
 
+    /**
+     * A string containing the description of the group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-group.html#cfn-identitystore-group-description)
+     * @param description A string containing the description of the group. 
+     */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
+    /**
+     * A string containing the name of the group.
+     *
+     * This value is commonly displayed when the group is referenced.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-group.html#cfn-identitystore-group-displayname)
+     * @param displayName A string containing the name of the group. 
+     */
     override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
     }
 
+    /**
+     * The globally unique identifier for the identity store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-group.html#cfn-identitystore-group-identitystoreid)
+     * @param identityStoreId The globally unique identifier for the identity store. 
+     */
     override fun identityStoreId(identityStoreId: String) {
       cdkBuilder.identityStoreId(identityStoreId)
     }

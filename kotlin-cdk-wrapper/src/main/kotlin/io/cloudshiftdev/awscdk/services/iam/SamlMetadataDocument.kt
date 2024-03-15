@@ -5,9 +5,26 @@ package io.cloudshiftdev.awscdk.services.iam
 import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 
+/**
+ * A SAML metadata document.
+ *
+ * Example:
+ *
+ * ```
+ * SamlProvider provider = SamlProvider.Builder.create(this, "Provider")
+ * .metadataDocument(SamlMetadataDocument.fromFile("/path/to/saml-metadata-document.xml"))
+ * .build();
+ * SamlPrincipal principal = new SamlPrincipal(provider, Map.of(
+ * "StringEquals", Map.of(
+ * "SAML:iss", "issuer")));
+ * ```
+ */
 public abstract class SamlMetadataDocument internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.iam.SamlMetadataDocument,
 ) : CdkObject(cdkObject) {
+  /**
+   * The XML content of the metadata document.
+   */
   public open fun xml(): String = unwrap(this).getXml()
 
   private class Wrapper(

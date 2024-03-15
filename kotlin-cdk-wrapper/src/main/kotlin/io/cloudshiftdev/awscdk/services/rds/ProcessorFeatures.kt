@@ -7,15 +7,49 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.Number
 import kotlin.Unit
 
+/**
+ * The processor features.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.rds.*;
+ * ProcessorFeatures processorFeatures = ProcessorFeatures.builder()
+ * .coreCount(123)
+ * .threadsPerCore(123)
+ * .build();
+ * ```
+ */
 public interface ProcessorFeatures {
+  /**
+   * The number of CPU core.
+   *
+   * Default: - the default number of CPU cores for the chosen instance class.
+   */
   public fun coreCount(): Number? = unwrap(this).getCoreCount()
 
+  /**
+   * The number of threads per core.
+   *
+   * Default: - the default number of threads per core for the chosen instance class.
+   */
   public fun threadsPerCore(): Number? = unwrap(this).getThreadsPerCore()
 
+  /**
+   * A builder for [ProcessorFeatures]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param coreCount The number of CPU core.
+     */
     public fun coreCount(coreCount: Number)
 
+    /**
+     * @param threadsPerCore The number of threads per core.
+     */
     public fun threadsPerCore(threadsPerCore: Number)
   }
 
@@ -23,10 +57,16 @@ public interface ProcessorFeatures {
     private val cdkBuilder: software.amazon.awscdk.services.rds.ProcessorFeatures.Builder =
         software.amazon.awscdk.services.rds.ProcessorFeatures.builder()
 
+    /**
+     * @param coreCount The number of CPU core.
+     */
     override fun coreCount(coreCount: Number) {
       cdkBuilder.coreCount(coreCount)
     }
 
+    /**
+     * @param threadsPerCore The number of threads per core.
+     */
     override fun threadsPerCore(threadsPerCore: Number) {
       cdkBuilder.threadsPerCore(threadsPerCore)
     }
@@ -37,8 +77,18 @@ public interface ProcessorFeatures {
   private class Wrapper(
     override val cdkObject: software.amazon.awscdk.services.rds.ProcessorFeatures,
   ) : CdkObject(cdkObject), ProcessorFeatures {
+    /**
+     * The number of CPU core.
+     *
+     * Default: - the default number of CPU cores for the chosen instance class.
+     */
     override fun coreCount(): Number? = unwrap(this).getCoreCount()
 
+    /**
+     * The number of threads per core.
+     *
+     * Default: - the default number of threads per core for the chosen instance class.
+     */
     override fun threadsPerCore(): Number? = unwrap(this).getThreadsPerCore()
   }
 

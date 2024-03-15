@@ -7,15 +7,58 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import kotlin.String
 import kotlin.Unit
 
+/**
+ * Properties for defining a `CfnAcceptedPortfolioShare`.
+ *
+ * Example:
+ *
+ * ```
+ * // The code below shows an example of how to instantiate this type.
+ * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.services.servicecatalog.*;
+ * CfnAcceptedPortfolioShareProps cfnAcceptedPortfolioShareProps =
+ * CfnAcceptedPortfolioShareProps.builder()
+ * .portfolioId("portfolioId")
+ * // the properties below are optional
+ * .acceptLanguage("acceptLanguage")
+ * .build();
+ * ```
+ *
+ * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-acceptedportfolioshare.html)
+ */
 public interface CfnAcceptedPortfolioShareProps {
+  /**
+   * The language code.
+   *
+   * * `jp` - Japanese
+   * * `zh` - Chinese
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-acceptedportfolioshare.html#cfn-servicecatalog-acceptedportfolioshare-acceptlanguage)
+   */
   public fun acceptLanguage(): String? = unwrap(this).getAcceptLanguage()
 
+  /**
+   * The portfolio identifier.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-acceptedportfolioshare.html#cfn-servicecatalog-acceptedportfolioshare-portfolioid)
+   */
   public fun portfolioId(): String
 
+  /**
+   * A builder for [CfnAcceptedPortfolioShareProps]
+   */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param acceptLanguage The language code.
+     * * `jp` - Japanese
+     * * `zh` - Chinese
+     */
     public fun acceptLanguage(acceptLanguage: String)
 
+    /**
+     * @param portfolioId The portfolio identifier. 
+     */
     public fun portfolioId(portfolioId: String)
   }
 
@@ -24,10 +67,18 @@ public interface CfnAcceptedPortfolioShareProps {
         software.amazon.awscdk.services.servicecatalog.CfnAcceptedPortfolioShareProps.Builder =
         software.amazon.awscdk.services.servicecatalog.CfnAcceptedPortfolioShareProps.builder()
 
+    /**
+     * @param acceptLanguage The language code.
+     * * `jp` - Japanese
+     * * `zh` - Chinese
+     */
     override fun acceptLanguage(acceptLanguage: String) {
       cdkBuilder.acceptLanguage(acceptLanguage)
     }
 
+    /**
+     * @param portfolioId The portfolio identifier. 
+     */
     override fun portfolioId(portfolioId: String) {
       cdkBuilder.portfolioId(portfolioId)
     }
@@ -41,8 +92,21 @@ public interface CfnAcceptedPortfolioShareProps {
     override val cdkObject:
         software.amazon.awscdk.services.servicecatalog.CfnAcceptedPortfolioShareProps,
   ) : CdkObject(cdkObject), CfnAcceptedPortfolioShareProps {
+    /**
+     * The language code.
+     *
+     * * `jp` - Japanese
+     * * `zh` - Chinese
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-acceptedportfolioshare.html#cfn-servicecatalog-acceptedportfolioshare-acceptlanguage)
+     */
     override fun acceptLanguage(): String? = unwrap(this).getAcceptLanguage()
 
+    /**
+     * The portfolio identifier.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-acceptedportfolioshare.html#cfn-servicecatalog-acceptedportfolioshare-portfolioid)
+     */
     override fun portfolioId(): String = unwrap(this).getPortfolioId()
   }
 
