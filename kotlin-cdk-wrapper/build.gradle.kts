@@ -14,16 +14,16 @@ dependencies {
 
 
 // lots of generated Kotlin drives memory requirement
-kotlin {
-    when {
-        System.getenv("CI") != null -> {
-            kotlinDaemonJvmArgs =  listOf("-Xms9g", "-Xmx9gg")
-        }
-        else -> {
-            kotlinDaemonJvmArgs =  listOf("-Xms9g", "-Xmx9g")
-        }
-    }
-}
+//kotlin {
+//    when {
+//        System.getenv("CI") != null -> {
+//            kotlinDaemonJvmArgs =  listOf("-Xms10g", "-Xmx10g")
+//        }
+//        else -> {
+//            kotlinDaemonJvmArgs =  listOf("-Xms10g", "-Xmx10g")
+//        }
+//    }
+//}
 
 tasks.named<KotlinCompile>("compileKotlin") {
     onlyIf {
