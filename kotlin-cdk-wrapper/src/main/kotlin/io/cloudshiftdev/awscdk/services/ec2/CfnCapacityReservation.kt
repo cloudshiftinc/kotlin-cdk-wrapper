@@ -279,15 +279,14 @@ public open class CfnCapacityReservation internal constructor(
   /**
    * The tags to apply to the Capacity Reservation during launch.
    */
-  public open fun tagSpecifications(_idx_ac66f0: List<Any>) {
-    unwrap(this).setTagSpecifications(_idx_ac66f0)
+  public open fun tagSpecifications(`value`: List<Any>) {
+    unwrap(this).setTagSpecifications(`value`)
   }
 
   /**
    * The tags to apply to the Capacity Reservation during launch.
    */
-  public open fun tagSpecifications(vararg _idx_ac66f0: Any): Unit =
-      tagSpecifications(_idx_ac66f0.toList())
+  public open fun tagSpecifications(vararg `value`: Any): Unit = tagSpecifications(`value`.toList())
 
   /**
    * Indicates the tenancy of the Capacity Reservation.

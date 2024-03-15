@@ -242,15 +242,14 @@ public open class CfnServer internal constructor(
   /**
    * Optional engine attributes on a specified server.
    */
-  public open fun engineAttributes(_idx_ac66f0: List<Any>) {
-    unwrap(this).setEngineAttributes(_idx_ac66f0)
+  public open fun engineAttributes(`value`: List<Any>) {
+    unwrap(this).setEngineAttributes(`value`)
   }
 
   /**
    * Optional engine attributes on a specified server.
    */
-  public open fun engineAttributes(vararg _idx_ac66f0: Any): Unit =
-      engineAttributes(_idx_ac66f0.toList())
+  public open fun engineAttributes(vararg `value`: Any): Unit = engineAttributes(`value`.toList())
 
   /**
    * The engine model of the server.

@@ -217,14 +217,14 @@ public open class CfnSimulationApplication internal constructor(
   /**
    * The sources of the simulation application.
    */
-  public open fun sources(_idx_ac66f0: List<Any>) {
-    unwrap(this).setSources(_idx_ac66f0)
+  public open fun sources(`value`: List<Any>) {
+    unwrap(this).setSources(`value`)
   }
 
   /**
    * The sources of the simulation application.
    */
-  public open fun sources(vararg _idx_ac66f0: Any): Unit = sources(_idx_ac66f0.toList())
+  public open fun sources(vararg `value`: Any): Unit = sources(`value`.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

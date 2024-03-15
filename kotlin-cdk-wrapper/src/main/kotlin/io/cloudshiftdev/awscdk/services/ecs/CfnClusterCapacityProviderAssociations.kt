@@ -92,15 +92,15 @@ public open class CfnClusterCapacityProviderAssociations internal constructor(
   /**
    * The default capacity provider strategy to associate with the cluster.
    */
-  public open fun defaultCapacityProviderStrategy(_idx_ac66f0: List<Any>) {
-    unwrap(this).setDefaultCapacityProviderStrategy(_idx_ac66f0)
+  public open fun defaultCapacityProviderStrategy(`value`: List<Any>) {
+    unwrap(this).setDefaultCapacityProviderStrategy(`value`)
   }
 
   /**
    * The default capacity provider strategy to associate with the cluster.
    */
-  public open fun defaultCapacityProviderStrategy(vararg _idx_ac66f0: Any): Unit =
-      defaultCapacityProviderStrategy(_idx_ac66f0.toList())
+  public open fun defaultCapacityProviderStrategy(vararg `value`: Any): Unit =
+      defaultCapacityProviderStrategy(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

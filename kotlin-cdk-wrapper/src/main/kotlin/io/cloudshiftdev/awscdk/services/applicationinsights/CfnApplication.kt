@@ -271,15 +271,15 @@ public open class CfnApplication internal constructor(
   /**
    * The monitoring settings of the components.
    */
-  public open fun componentMonitoringSettings(_idx_ac66f0: List<Any>) {
-    unwrap(this).setComponentMonitoringSettings(_idx_ac66f0)
+  public open fun componentMonitoringSettings(`value`: List<Any>) {
+    unwrap(this).setComponentMonitoringSettings(`value`)
   }
 
   /**
    * The monitoring settings of the components.
    */
-  public open fun componentMonitoringSettings(vararg _idx_ac66f0: Any): Unit =
-      componentMonitoringSettings(_idx_ac66f0.toList())
+  public open fun componentMonitoringSettings(vararg `value`: Any): Unit =
+      componentMonitoringSettings(`value`.toList())
 
   /**
    * Describes a custom component by grouping similar standalone instances to monitor.
@@ -296,15 +296,14 @@ public open class CfnApplication internal constructor(
   /**
    * Describes a custom component by grouping similar standalone instances to monitor.
    */
-  public open fun customComponents(_idx_ac66f0: List<Any>) {
-    unwrap(this).setCustomComponents(_idx_ac66f0)
+  public open fun customComponents(`value`: List<Any>) {
+    unwrap(this).setCustomComponents(`value`)
   }
 
   /**
    * Describes a custom component by grouping similar standalone instances to monitor.
    */
-  public open fun customComponents(vararg _idx_ac66f0: Any): Unit =
-      customComponents(_idx_ac66f0.toList())
+  public open fun customComponents(vararg `value`: Any): Unit = customComponents(`value`.toList())
 
   /**
    * Indicates whether Application Insights can listen to CloudWatch events for the application
@@ -364,15 +363,14 @@ public open class CfnApplication internal constructor(
   /**
    * The log pattern sets.
    */
-  public open fun logPatternSets(_idx_ac66f0: List<Any>) {
-    unwrap(this).setLogPatternSets(_idx_ac66f0)
+  public open fun logPatternSets(`value`: List<Any>) {
+    unwrap(this).setLogPatternSets(`value`)
   }
 
   /**
    * The log pattern sets.
    */
-  public open fun logPatternSets(vararg _idx_ac66f0: Any): Unit =
-      logPatternSets(_idx_ac66f0.toList())
+  public open fun logPatternSets(vararg `value`: Any): Unit = logPatternSets(`value`.toList())
 
   /**
    * Indicates whether Application Insights will create OpsItems for any problem that is detected by

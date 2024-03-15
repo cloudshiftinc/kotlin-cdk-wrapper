@@ -157,15 +157,14 @@ public open class CfnDistribution internal constructor(
   /**
    * An array of objects that describe the per-path cache behavior of the distribution.
    */
-  public open fun cacheBehaviors(_idx_ac66f0: List<Any>) {
-    unwrap(this).setCacheBehaviors(_idx_ac66f0)
+  public open fun cacheBehaviors(`value`: List<Any>) {
+    unwrap(this).setCacheBehaviors(`value`)
   }
 
   /**
    * An array of objects that describe the per-path cache behavior of the distribution.
    */
-  public open fun cacheBehaviors(vararg _idx_ac66f0: Any): Unit =
-      cacheBehaviors(_idx_ac66f0.toList())
+  public open fun cacheBehaviors(vararg `value`: Any): Unit = cacheBehaviors(`value`.toList())
 
   /**
    * The name of the SSL/TLS certificate attached to the distribution.

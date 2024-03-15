@@ -111,16 +111,15 @@ public open class CfnWorkteam internal constructor(
    * A list of `MemberDefinition` objects that contains objects that identify the workers that make
    * up the work team.
    */
-  public open fun memberDefinitions(_idx_ac66f0: List<Any>) {
-    unwrap(this).setMemberDefinitions(_idx_ac66f0)
+  public open fun memberDefinitions(`value`: List<Any>) {
+    unwrap(this).setMemberDefinitions(`value`)
   }
 
   /**
    * A list of `MemberDefinition` objects that contains objects that identify the workers that make
    * up the work team.
    */
-  public open fun memberDefinitions(vararg _idx_ac66f0: Any): Unit =
-      memberDefinitions(_idx_ac66f0.toList())
+  public open fun memberDefinitions(vararg `value`: Any): Unit = memberDefinitions(`value`.toList())
 
   /**
    * Configures SNS notifications of available or expiring work items for work teams.

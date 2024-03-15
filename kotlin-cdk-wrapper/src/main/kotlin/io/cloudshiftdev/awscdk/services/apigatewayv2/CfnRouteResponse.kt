@@ -114,8 +114,8 @@ public open class CfnRouteResponse internal constructor(
   /**
    * The route response parameters.
    */
-  public open fun responseParameters(_item_ac66f0: Map<String, Any>) {
-    unwrap(this).setResponseParameters(_item_ac66f0)
+  public open fun responseParameters(`value`: Map<String, Any>) {
+    unwrap(this).setResponseParameters(`value`)
   }
 
   /**

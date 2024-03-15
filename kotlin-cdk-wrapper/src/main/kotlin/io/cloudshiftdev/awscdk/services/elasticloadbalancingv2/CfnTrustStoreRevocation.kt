@@ -80,15 +80,15 @@ public open class CfnTrustStoreRevocation internal constructor(
   /**
    * The revocation file to add.
    */
-  public open fun revocationContents(_idx_ac66f0: List<Any>) {
-    unwrap(this).setRevocationContents(_idx_ac66f0)
+  public open fun revocationContents(`value`: List<Any>) {
+    unwrap(this).setRevocationContents(`value`)
   }
 
   /**
    * The revocation file to add.
    */
-  public open fun revocationContents(vararg _idx_ac66f0: Any): Unit =
-      revocationContents(_idx_ac66f0.toList())
+  public open fun revocationContents(vararg `value`: Any): Unit =
+      revocationContents(`value`.toList())
 
   /**
    * The Amazon Resource Name (ARN) of the trust store.

@@ -101,8 +101,8 @@ public open class CfnResiliencyPolicy internal constructor(
   /**
    * The resiliency policy.
    */
-  public open fun policy(_item_ac66f0: Map<String, Any>) {
-    unwrap(this).setPolicy(_item_ac66f0)
+  public open fun policy(`value`: Map<String, Any>) {
+    unwrap(this).setPolicy(`value`)
   }
 
   /**

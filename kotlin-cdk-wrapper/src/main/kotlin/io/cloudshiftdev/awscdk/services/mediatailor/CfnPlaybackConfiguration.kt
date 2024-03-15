@@ -233,8 +233,8 @@ public open class CfnPlaybackConfiguration internal constructor(
   /**
    * The player parameters and aliases used as dynamic variables during session initialization.
    */
-  public open fun configurationAliases(`this`: Map<String, Any>) {
-    unwrap(this).setConfigurationAliases(`this`)
+  public open fun configurationAliases(`value`: Map<String, Any>) {
+    unwrap(this).setConfigurationAliases(`value`)
   }
 
   /**

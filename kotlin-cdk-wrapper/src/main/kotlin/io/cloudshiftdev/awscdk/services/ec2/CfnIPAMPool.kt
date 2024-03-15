@@ -139,15 +139,15 @@ public open class CfnIPAMPool internal constructor(
   /**
    * Tags that are required for resources that use CIDRs from this IPAM pool.
    */
-  public open fun allocationResourceTags(_idx_ac66f0: List<Any>) {
-    unwrap(this).setAllocationResourceTags(_idx_ac66f0)
+  public open fun allocationResourceTags(`value`: List<Any>) {
+    unwrap(this).setAllocationResourceTags(`value`)
   }
 
   /**
    * Tags that are required for resources that use CIDRs from this IPAM pool.
    */
-  public open fun allocationResourceTags(vararg _idx_ac66f0: Any): Unit =
-      allocationResourceTags(_idx_ac66f0.toList())
+  public open fun allocationResourceTags(vararg `value`: Any): Unit =
+      allocationResourceTags(`value`.toList())
 
   /**
    * The ARN of the IPAM pool.
@@ -285,15 +285,14 @@ public open class CfnIPAMPool internal constructor(
   /**
    * Information about the CIDRs provisioned to an IPAM pool.
    */
-  public open fun provisionedCidrs(_idx_ac66f0: List<Any>) {
-    unwrap(this).setProvisionedCidrs(_idx_ac66f0)
+  public open fun provisionedCidrs(`value`: List<Any>) {
+    unwrap(this).setProvisionedCidrs(`value`)
   }
 
   /**
    * Information about the CIDRs provisioned to an IPAM pool.
    */
-  public open fun provisionedCidrs(vararg _idx_ac66f0: Any): Unit =
-      provisionedCidrs(_idx_ac66f0.toList())
+  public open fun provisionedCidrs(vararg `value`: Any): Unit = provisionedCidrs(`value`.toList())
 
   /**
    * The IP address source for pools in the public scope.

@@ -111,14 +111,14 @@ public open class CfnBot internal constructor(
   /**
    * A list of locales for the bot.
    */
-  public open fun botLocales(_idx_ac66f0: List<Any>) {
-    unwrap(this).setBotLocales(_idx_ac66f0)
+  public open fun botLocales(`value`: List<Any>) {
+    unwrap(this).setBotLocales(`value`)
   }
 
   /**
    * A list of locales for the bot.
    */
-  public open fun botLocales(vararg _idx_ac66f0: Any): Unit = botLocales(_idx_ac66f0.toList())
+  public open fun botLocales(vararg `value`: Any): Unit = botLocales(`value`.toList())
 
   /**
    * A list of tags to add to the bot.
@@ -135,14 +135,14 @@ public open class CfnBot internal constructor(
   /**
    * A list of tags to add to the bot.
    */
-  public open fun botTags(_idx_ac66f0: List<Any>) {
-    unwrap(this).setBotTags(_idx_ac66f0)
+  public open fun botTags(`value`: List<Any>) {
+    unwrap(this).setBotTags(`value`)
   }
 
   /**
    * A list of tags to add to the bot.
    */
-  public open fun botTags(vararg _idx_ac66f0: Any): Unit = botTags(_idx_ac66f0.toList())
+  public open fun botTags(vararg `value`: Any): Unit = botTags(`value`.toList())
 
   /**
    * By default, data stored by Amazon Lex is encrypted.
@@ -257,15 +257,14 @@ public open class CfnBot internal constructor(
   /**
    * A list of tags to add to the test alias for a bot.
    */
-  public open fun testBotAliasTags(_idx_ac66f0: List<Any>) {
-    unwrap(this).setTestBotAliasTags(_idx_ac66f0)
+  public open fun testBotAliasTags(`value`: List<Any>) {
+    unwrap(this).setTestBotAliasTags(`value`)
   }
 
   /**
    * A list of tags to add to the test alias for a bot.
    */
-  public open fun testBotAliasTags(vararg _idx_ac66f0: Any): Unit =
-      testBotAliasTags(_idx_ac66f0.toList())
+  public open fun testBotAliasTags(vararg `value`: Any): Unit = testBotAliasTags(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.lex.CfnBot].

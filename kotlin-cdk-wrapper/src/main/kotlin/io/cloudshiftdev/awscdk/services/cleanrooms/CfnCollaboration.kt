@@ -219,14 +219,14 @@ public open class CfnCollaboration internal constructor(
   /**
    * A list of initial members, not including the creator.
    */
-  public open fun members(_idx_ac66f0: List<Any>) {
-    unwrap(this).setMembers(_idx_ac66f0)
+  public open fun members(`value`: List<Any>) {
+    unwrap(this).setMembers(`value`)
   }
 
   /**
    * A list of initial members, not including the creator.
    */
-  public open fun members(vararg _idx_ac66f0: Any): Unit = members(_idx_ac66f0.toList())
+  public open fun members(vararg `value`: Any): Unit = members(`value`.toList())
 
   /**
    * A human-readable identifier provided by the collaboration owner.

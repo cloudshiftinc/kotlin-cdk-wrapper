@@ -74,16 +74,16 @@ public open class CfnGeoMatchSet internal constructor(
    * An array of `GeoMatchConstraint` objects, which contain the country that you want AWS WAF to
    * search for.
    */
-  public open fun geoMatchConstraints(_idx_ac66f0: List<Any>) {
-    unwrap(this).setGeoMatchConstraints(_idx_ac66f0)
+  public open fun geoMatchConstraints(`value`: List<Any>) {
+    unwrap(this).setGeoMatchConstraints(`value`)
   }
 
   /**
    * An array of `GeoMatchConstraint` objects, which contain the country that you want AWS WAF to
    * search for.
    */
-  public open fun geoMatchConstraints(vararg _idx_ac66f0: Any): Unit =
-      geoMatchConstraints(_idx_ac66f0.toList())
+  public open fun geoMatchConstraints(vararg `value`: Any): Unit =
+      geoMatchConstraints(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

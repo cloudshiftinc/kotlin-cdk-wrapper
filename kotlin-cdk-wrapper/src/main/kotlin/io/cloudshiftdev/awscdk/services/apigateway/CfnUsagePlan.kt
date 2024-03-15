@@ -89,14 +89,14 @@ public open class CfnUsagePlan internal constructor(
   /**
    * The associated API stages of a usage plan.
    */
-  public open fun apiStages(_idx_ac66f0: List<Any>) {
-    unwrap(this).setApiStages(_idx_ac66f0)
+  public open fun apiStages(`value`: List<Any>) {
+    unwrap(this).setApiStages(`value`)
   }
 
   /**
    * The associated API stages of a usage plan.
    */
-  public open fun apiStages(vararg _idx_ac66f0: Any): Unit = apiStages(_idx_ac66f0.toList())
+  public open fun apiStages(vararg `value`: Any): Unit = apiStages(`value`.toList())
 
   /**
    * The ID for the usage plan.

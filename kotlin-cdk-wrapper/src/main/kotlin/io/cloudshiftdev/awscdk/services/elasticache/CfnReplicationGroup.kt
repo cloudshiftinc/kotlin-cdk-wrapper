@@ -444,15 +444,15 @@ public open class CfnReplicationGroup internal constructor(
   /**
    * Specifies the destination, format and type of the logs.
    */
-  public open fun logDeliveryConfigurations(_idx_ac66f0: List<Any>) {
-    unwrap(this).setLogDeliveryConfigurations(_idx_ac66f0)
+  public open fun logDeliveryConfigurations(`value`: List<Any>) {
+    unwrap(this).setLogDeliveryConfigurations(`value`)
   }
 
   /**
    * Specifies the destination, format and type of the logs.
    */
-  public open fun logDeliveryConfigurations(vararg _idx_ac66f0: Any): Unit =
-      logDeliveryConfigurations(_idx_ac66f0.toList())
+  public open fun logDeliveryConfigurations(vararg `value`: Any): Unit =
+      logDeliveryConfigurations(`value`.toList())
 
   /**
    * A flag indicating if you have Multi-AZ enabled to enhance fault tolerance.
@@ -503,16 +503,16 @@ public open class CfnReplicationGroup internal constructor(
    * `NodeGroupConfiguration` is a property of the `AWS::ElastiCache::ReplicationGroup` resource
    * that configures an Amazon ElastiCache (ElastiCache) Redis cluster node group.
    */
-  public open fun nodeGroupConfiguration(_idx_ac66f0: List<Any>) {
-    unwrap(this).setNodeGroupConfiguration(_idx_ac66f0)
+  public open fun nodeGroupConfiguration(`value`: List<Any>) {
+    unwrap(this).setNodeGroupConfiguration(`value`)
   }
 
   /**
    * `NodeGroupConfiguration` is a property of the `AWS::ElastiCache::ReplicationGroup` resource
    * that configures an Amazon ElastiCache (ElastiCache) Redis cluster node group.
    */
-  public open fun nodeGroupConfiguration(vararg _idx_ac66f0: Any): Unit =
-      nodeGroupConfiguration(_idx_ac66f0.toList())
+  public open fun nodeGroupConfiguration(vararg `value`: Any): Unit =
+      nodeGroupConfiguration(`value`.toList())
 
   /**
    * The Amazon Resource Name (ARN) of the Amazon Simple Notification Service (SNS) topic to which

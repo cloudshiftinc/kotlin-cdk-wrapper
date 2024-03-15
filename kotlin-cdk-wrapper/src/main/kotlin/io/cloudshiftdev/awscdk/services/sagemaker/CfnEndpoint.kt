@@ -208,8 +208,8 @@ public open class CfnEndpoint internal constructor(
    * `ExcludeAllVariantProperties` , no variant properties are overridden. Don't use this property when
    * creating new endpoint resources or when `RetainAllVariantProperties` is set to `false` .
    */
-  public open fun excludeRetainedVariantProperties(_idx_ac66f0: List<Any>) {
-    unwrap(this).setExcludeRetainedVariantProperties(_idx_ac66f0)
+  public open fun excludeRetainedVariantProperties(`value`: List<Any>) {
+    unwrap(this).setExcludeRetainedVariantProperties(`value`)
   }
 
   /**
@@ -221,8 +221,8 @@ public open class CfnEndpoint internal constructor(
    * `ExcludeAllVariantProperties` , no variant properties are overridden. Don't use this property when
    * creating new endpoint resources or when `RetainAllVariantProperties` is set to `false` .
    */
-  public open fun excludeRetainedVariantProperties(vararg _idx_ac66f0: Any): Unit =
-      excludeRetainedVariantProperties(_idx_ac66f0.toList())
+  public open fun excludeRetainedVariantProperties(vararg `value`: Any): Unit =
+      excludeRetainedVariantProperties(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

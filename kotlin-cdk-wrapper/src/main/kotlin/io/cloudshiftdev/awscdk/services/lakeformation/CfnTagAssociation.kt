@@ -141,14 +141,14 @@ public open class CfnTagAssociation internal constructor(
   /**
    * A structure containing an LF-tag key-value pair.
    */
-  public open fun lfTags(_idx_ac66f0: List<Any>) {
-    unwrap(this).setLfTags(_idx_ac66f0)
+  public open fun lfTags(`value`: List<Any>) {
+    unwrap(this).setLfTags(`value`)
   }
 
   /**
    * A structure containing an LF-tag key-value pair.
    */
-  public open fun lfTags(vararg _idx_ac66f0: Any): Unit = lfTags(_idx_ac66f0.toList())
+  public open fun lfTags(vararg `value`: Any): Unit = lfTags(`value`.toList())
 
   /**
    * UTF-8 string (valid values: `DATABASE | TABLE` ).

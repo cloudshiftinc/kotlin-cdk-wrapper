@@ -479,15 +479,15 @@ public open class CfnLayer internal constructor(
   /**
    * A `VolumeConfigurations` object that describes the layer's Amazon EBS volumes.
    */
-  public open fun volumeConfigurations(_idx_ac66f0: List<Any>) {
-    unwrap(this).setVolumeConfigurations(_idx_ac66f0)
+  public open fun volumeConfigurations(`value`: List<Any>) {
+    unwrap(this).setVolumeConfigurations(`value`)
   }
 
   /**
    * A `VolumeConfigurations` object that describes the layer's Amazon EBS volumes.
    */
-  public open fun volumeConfigurations(vararg _idx_ac66f0: Any): Unit =
-      volumeConfigurations(_idx_ac66f0.toList())
+  public open fun volumeConfigurations(vararg `value`: Any): Unit =
+      volumeConfigurations(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.opsworks.CfnLayer].

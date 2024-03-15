@@ -132,15 +132,15 @@ public open class CfnContainer internal constructor(
    * Sets the cross-origin resource sharing (CORS) configuration on a container so that the
    * container can service cross-origin requests.
    */
-  public open fun corsPolicy(_idx_ac66f0: List<Any>) {
-    unwrap(this).setCorsPolicy(_idx_ac66f0)
+  public open fun corsPolicy(`value`: List<Any>) {
+    unwrap(this).setCorsPolicy(`value`)
   }
 
   /**
    * Sets the cross-origin resource sharing (CORS) configuration on a container so that the
    * container can service cross-origin requests.
    */
-  public open fun corsPolicy(vararg _idx_ac66f0: Any): Unit = corsPolicy(_idx_ac66f0.toList())
+  public open fun corsPolicy(vararg `value`: Any): Unit = corsPolicy(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

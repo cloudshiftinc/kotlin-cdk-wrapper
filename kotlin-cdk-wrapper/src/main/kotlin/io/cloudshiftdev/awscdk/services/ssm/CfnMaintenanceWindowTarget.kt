@@ -128,14 +128,14 @@ public open class CfnMaintenanceWindowTarget internal constructor(
   /**
    * The targets to register with the maintenance window.
    */
-  public open fun targets(_idx_ac66f0: List<Any>) {
-    unwrap(this).setTargets(_idx_ac66f0)
+  public open fun targets(`value`: List<Any>) {
+    unwrap(this).setTargets(`value`)
   }
 
   /**
    * The targets to register with the maintenance window.
    */
-  public open fun targets(vararg _idx_ac66f0: Any): Unit = targets(_idx_ac66f0.toList())
+  public open fun targets(vararg `value`: Any): Unit = targets(`value`.toList())
 
   /**
    * The ID of the maintenance window to register the target with.

@@ -206,15 +206,15 @@ public open class CfnService internal constructor(
   /**
    * The capacity provider strategy to use for the service.
    */
-  public open fun capacityProviderStrategy(_idx_ac66f0: List<Any>) {
-    unwrap(this).setCapacityProviderStrategy(_idx_ac66f0)
+  public open fun capacityProviderStrategy(`value`: List<Any>) {
+    unwrap(this).setCapacityProviderStrategy(`value`)
   }
 
   /**
    * The capacity provider strategy to use for the service.
    */
-  public open fun capacityProviderStrategy(vararg _idx_ac66f0: Any): Unit =
-      capacityProviderStrategy(_idx_ac66f0.toList())
+  public open fun capacityProviderStrategy(vararg `value`: Any): Unit =
+      capacityProviderStrategy(`value`.toList())
 
   /**
    * The short name or full Amazon Resource Name (ARN) of the cluster that you run your service on.
@@ -390,14 +390,14 @@ public open class CfnService internal constructor(
   /**
    * A list of load balancer objects to associate with the service.
    */
-  public open fun loadBalancers(_idx_ac66f0: List<Any>) {
-    unwrap(this).setLoadBalancers(_idx_ac66f0)
+  public open fun loadBalancers(`value`: List<Any>) {
+    unwrap(this).setLoadBalancers(`value`)
   }
 
   /**
    * A list of load balancer objects to associate with the service.
    */
-  public open fun loadBalancers(vararg _idx_ac66f0: Any): Unit = loadBalancers(_idx_ac66f0.toList())
+  public open fun loadBalancers(vararg `value`: Any): Unit = loadBalancers(`value`.toList())
 
   /**
    * The network configuration for the service.
@@ -441,15 +441,15 @@ public open class CfnService internal constructor(
   /**
    * An array of placement constraint objects to use for tasks in your service.
    */
-  public open fun placementConstraints(_idx_ac66f0: List<Any>) {
-    unwrap(this).setPlacementConstraints(_idx_ac66f0)
+  public open fun placementConstraints(`value`: List<Any>) {
+    unwrap(this).setPlacementConstraints(`value`)
   }
 
   /**
    * An array of placement constraint objects to use for tasks in your service.
    */
-  public open fun placementConstraints(vararg _idx_ac66f0: Any): Unit =
-      placementConstraints(_idx_ac66f0.toList())
+  public open fun placementConstraints(vararg `value`: Any): Unit =
+      placementConstraints(`value`.toList())
 
   /**
    * The placement strategy objects to use for tasks in your service.
@@ -466,15 +466,15 @@ public open class CfnService internal constructor(
   /**
    * The placement strategy objects to use for tasks in your service.
    */
-  public open fun placementStrategies(_idx_ac66f0: List<Any>) {
-    unwrap(this).setPlacementStrategies(_idx_ac66f0)
+  public open fun placementStrategies(`value`: List<Any>) {
+    unwrap(this).setPlacementStrategies(`value`)
   }
 
   /**
    * The placement strategy objects to use for tasks in your service.
    */
-  public open fun placementStrategies(vararg _idx_ac66f0: Any): Unit =
-      placementStrategies(_idx_ac66f0.toList())
+  public open fun placementStrategies(vararg `value`: Any): Unit =
+      placementStrategies(`value`.toList())
 
   /**
    * The platform version that your tasks in the service are running on.
@@ -601,8 +601,8 @@ public open class CfnService internal constructor(
    * For more information, see [Service
    * discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html) .
    */
-  public open fun serviceRegistries(_idx_ac66f0: List<Any>) {
-    unwrap(this).setServiceRegistries(_idx_ac66f0)
+  public open fun serviceRegistries(`value`: List<Any>) {
+    unwrap(this).setServiceRegistries(`value`)
   }
 
   /**
@@ -611,8 +611,7 @@ public open class CfnService internal constructor(
    * For more information, see [Service
    * discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html) .
    */
-  public open fun serviceRegistries(vararg _idx_ac66f0: Any): Unit =
-      serviceRegistries(_idx_ac66f0.toList())
+  public open fun serviceRegistries(vararg `value`: Any): Unit = serviceRegistries(`value`.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.
@@ -669,16 +668,16 @@ public open class CfnService internal constructor(
    * The configuration for a volume specified in the task definition as a volume that is configured
    * at launch time.
    */
-  public open fun volumeConfigurations(_idx_ac66f0: List<Any>) {
-    unwrap(this).setVolumeConfigurations(_idx_ac66f0)
+  public open fun volumeConfigurations(`value`: List<Any>) {
+    unwrap(this).setVolumeConfigurations(`value`)
   }
 
   /**
    * The configuration for a volume specified in the task definition as a volume that is configured
    * at launch time.
    */
-  public open fun volumeConfigurations(vararg _idx_ac66f0: Any): Unit =
-      volumeConfigurations(_idx_ac66f0.toList())
+  public open fun volumeConfigurations(vararg `value`: Any): Unit =
+      volumeConfigurations(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.CfnService].

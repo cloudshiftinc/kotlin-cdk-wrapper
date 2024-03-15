@@ -350,14 +350,14 @@ public open class CfnImagePipeline internal constructor(
   /**
    * Contains the workflows that run for the image pipeline.
    */
-  public open fun workflows(_idx_ac66f0: List<Any>) {
-    unwrap(this).setWorkflows(_idx_ac66f0)
+  public open fun workflows(`value`: List<Any>) {
+    unwrap(this).setWorkflows(`value`)
   }
 
   /**
    * Contains the workflows that run for the image pipeline.
    */
-  public open fun workflows(vararg _idx_ac66f0: Any): Unit = workflows(_idx_ac66f0.toList())
+  public open fun workflows(vararg `value`: Any): Unit = workflows(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.imagebuilder.CfnImagePipeline].

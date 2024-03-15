@@ -98,15 +98,15 @@ public open class CfnDomainName internal constructor(
   /**
    * The domain name configurations.
    */
-  public open fun domainNameConfigurations(_idx_ac66f0: List<Any>) {
-    unwrap(this).setDomainNameConfigurations(_idx_ac66f0)
+  public open fun domainNameConfigurations(`value`: List<Any>) {
+    unwrap(this).setDomainNameConfigurations(`value`)
   }
 
   /**
    * The domain name configurations.
    */
-  public open fun domainNameConfigurations(vararg _idx_ac66f0: Any): Unit =
-      domainNameConfigurations(_idx_ac66f0.toList())
+  public open fun domainNameConfigurations(vararg `value`: Any): Unit =
+      domainNameConfigurations(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

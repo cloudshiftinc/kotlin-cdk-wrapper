@@ -145,14 +145,14 @@ public open class CfnAnomalyDetector internal constructor(
   /**
    * The dimensions of the metric associated with the anomaly detection band.
    */
-  public open fun dimensions(_idx_ac66f0: List<Any>) {
-    unwrap(this).setDimensions(_idx_ac66f0)
+  public open fun dimensions(`value`: List<Any>) {
+    unwrap(this).setDimensions(`value`)
   }
 
   /**
    * The dimensions of the metric associated with the anomaly detection band.
    */
-  public open fun dimensions(vararg _idx_ac66f0: Any): Unit = dimensions(_idx_ac66f0.toList())
+  public open fun dimensions(vararg `value`: Any): Unit = dimensions(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

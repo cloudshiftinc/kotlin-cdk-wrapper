@@ -248,14 +248,14 @@ public open class CfnMaintenanceWindowTask internal constructor(
   /**
    * The targets, either instances or window target IDs.
    */
-  public open fun targets(_idx_ac66f0: List<Any>) {
-    unwrap(this).setTargets(_idx_ac66f0)
+  public open fun targets(`value`: List<Any>) {
+    unwrap(this).setTargets(`value`)
   }
 
   /**
    * The targets, either instances or window target IDs.
    */
-  public open fun targets(vararg _idx_ac66f0: Any): Unit = targets(_idx_ac66f0.toList())
+  public open fun targets(vararg `value`: Any): Unit = targets(`value`.toList())
 
   /**
    * The resource that the task uses during execution.

@@ -125,16 +125,15 @@ public open class CfnMetricStream internal constructor(
    * If you specify this parameter, the stream sends metrics from all metric namespaces except for
    * the namespaces that you specify here.
    */
-  public open fun excludeFilters(_idx_ac66f0: List<Any>) {
-    unwrap(this).setExcludeFilters(_idx_ac66f0)
+  public open fun excludeFilters(`value`: List<Any>) {
+    unwrap(this).setExcludeFilters(`value`)
   }
 
   /**
    * If you specify this parameter, the stream sends metrics from all metric namespaces except for
    * the namespaces that you specify here.
    */
-  public open fun excludeFilters(vararg _idx_ac66f0: Any): Unit =
-      excludeFilters(_idx_ac66f0.toList())
+  public open fun excludeFilters(vararg `value`: Any): Unit = excludeFilters(`value`.toList())
 
   /**
    * The ARN of the Amazon Kinesis Firehose delivery stream to use for this metric stream.
@@ -166,16 +165,15 @@ public open class CfnMetricStream internal constructor(
    * If you specify this parameter, the stream sends only the metrics from the metric namespaces
    * that you specify here.
    */
-  public open fun includeFilters(_idx_ac66f0: List<Any>) {
-    unwrap(this).setIncludeFilters(_idx_ac66f0)
+  public open fun includeFilters(`value`: List<Any>) {
+    unwrap(this).setIncludeFilters(`value`)
   }
 
   /**
    * If you specify this parameter, the stream sends only the metrics from the metric namespaces
    * that you specify here.
    */
-  public open fun includeFilters(vararg _idx_ac66f0: Any): Unit =
-      includeFilters(_idx_ac66f0.toList())
+  public open fun includeFilters(vararg `value`: Any): Unit = includeFilters(`value`.toList())
 
   /**
    * If you are creating a metric stream in a monitoring account, specify `true` to include metrics
@@ -265,16 +263,16 @@ public open class CfnMetricStream internal constructor(
    * By default, a metric stream always sends the MAX, MIN, SUM, and SAMPLECOUNT statistics for each
    * metric that is streamed.
    */
-  public open fun statisticsConfigurations(_idx_ac66f0: List<Any>) {
-    unwrap(this).setStatisticsConfigurations(_idx_ac66f0)
+  public open fun statisticsConfigurations(`value`: List<Any>) {
+    unwrap(this).setStatisticsConfigurations(`value`)
   }
 
   /**
    * By default, a metric stream always sends the MAX, MIN, SUM, and SAMPLECOUNT statistics for each
    * metric that is streamed.
    */
-  public open fun statisticsConfigurations(vararg _idx_ac66f0: Any): Unit =
-      statisticsConfigurations(_idx_ac66f0.toList())
+  public open fun statisticsConfigurations(vararg `value`: Any): Unit =
+      statisticsConfigurations(`value`.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

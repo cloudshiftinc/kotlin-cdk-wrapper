@@ -482,16 +482,16 @@ public open class CfnCampaign internal constructor(
    * An array of requests that defines additional treatments for the campaign, in addition to the
    * default treatment for the campaign.
    */
-  public open fun additionalTreatments(_idx_ac66f0: List<Any>) {
-    unwrap(this).setAdditionalTreatments(_idx_ac66f0)
+  public open fun additionalTreatments(`value`: List<Any>) {
+    unwrap(this).setAdditionalTreatments(`value`)
   }
 
   /**
    * An array of requests that defines additional treatments for the campaign, in addition to the
    * default treatment for the campaign.
    */
-  public open fun additionalTreatments(vararg _idx_ac66f0: Any): Unit =
-      additionalTreatments(_idx_ac66f0.toList())
+  public open fun additionalTreatments(vararg `value`: Any): Unit =
+      additionalTreatments(`value`.toList())
 
   /**
    * The unique identifier for the Amazon Pinpoint application that the campaign is associated with.

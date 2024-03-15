@@ -104,14 +104,14 @@ public open class CfnListener internal constructor(
   /**
    * The list of port ranges for the connections from clients to the accelerator.
    */
-  public open fun portRanges(_idx_ac66f0: List<Any>) {
-    unwrap(this).setPortRanges(_idx_ac66f0)
+  public open fun portRanges(`value`: List<Any>) {
+    unwrap(this).setPortRanges(`value`)
   }
 
   /**
    * The list of port ranges for the connections from clients to the accelerator.
    */
-  public open fun portRanges(vararg _idx_ac66f0: Any): Unit = portRanges(_idx_ac66f0.toList())
+  public open fun portRanges(vararg `value`: Any): Unit = portRanges(`value`.toList())
 
   /**
    * The protocol for the connections from clients to the accelerator.

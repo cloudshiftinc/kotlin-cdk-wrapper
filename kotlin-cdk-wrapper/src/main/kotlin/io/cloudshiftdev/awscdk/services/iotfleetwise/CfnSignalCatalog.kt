@@ -213,14 +213,14 @@ public open class CfnSignalCatalog internal constructor(
   /**
    * (Optional) A list of information about nodes, which are a general abstraction of signals.
    */
-  public open fun nodes(_idx_ac66f0: List<Any>) {
-    unwrap(this).setNodes(_idx_ac66f0)
+  public open fun nodes(`value`: List<Any>) {
+    unwrap(this).setNodes(`value`)
   }
 
   /**
    * (Optional) A list of information about nodes, which are a general abstraction of signals.
    */
-  public open fun nodes(vararg _idx_ac66f0: Any): Unit = nodes(_idx_ac66f0.toList())
+  public open fun nodes(vararg `value`: Any): Unit = nodes(`value`.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

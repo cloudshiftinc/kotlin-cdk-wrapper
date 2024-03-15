@@ -79,14 +79,14 @@ public open class CfnHoursOfOperation internal constructor(
   /**
    * Configuration information for the hours of operation.
    */
-  public open fun config(_idx_ac66f0: List<Any>) {
-    unwrap(this).setConfig(_idx_ac66f0)
+  public open fun config(`value`: List<Any>) {
+    unwrap(this).setConfig(`value`)
   }
 
   /**
    * Configuration information for the hours of operation.
    */
-  public open fun config(vararg _idx_ac66f0: Any): Unit = config(_idx_ac66f0.toList())
+  public open fun config(vararg `value`: Any): Unit = config(`value`.toList())
 
   /**
    * The description for the hours of operation.

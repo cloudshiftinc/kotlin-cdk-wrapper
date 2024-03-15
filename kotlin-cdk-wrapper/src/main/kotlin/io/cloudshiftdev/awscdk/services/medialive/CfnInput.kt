@@ -107,14 +107,14 @@ public open class CfnInput internal constructor(
   /**
    * Settings that apply only if the input is a push type of input.
    */
-  public open fun destinations(_idx_ac66f0: List<Any>) {
-    unwrap(this).setDestinations(_idx_ac66f0)
+  public open fun destinations(`value`: List<Any>) {
+    unwrap(this).setDestinations(`value`)
   }
 
   /**
    * Settings that apply only if the input is a push type of input.
    */
-  public open fun destinations(vararg _idx_ac66f0: Any): Unit = destinations(_idx_ac66f0.toList())
+  public open fun destinations(vararg `value`: Any): Unit = destinations(`value`.toList())
 
   /**
    * Settings that apply only if the input is an Elemental Link input.
@@ -131,14 +131,14 @@ public open class CfnInput internal constructor(
   /**
    * Settings that apply only if the input is an Elemental Link input.
    */
-  public open fun inputDevices(_idx_ac66f0: List<Any>) {
-    unwrap(this).setInputDevices(_idx_ac66f0)
+  public open fun inputDevices(`value`: List<Any>) {
+    unwrap(this).setInputDevices(`value`)
   }
 
   /**
    * Settings that apply only if the input is an Elemental Link input.
    */
-  public open fun inputDevices(vararg _idx_ac66f0: Any): Unit = inputDevices(_idx_ac66f0.toList())
+  public open fun inputDevices(vararg `value`: Any): Unit = inputDevices(`value`.toList())
 
   /**
    * The list of input security groups (referenced by IDs) to attach to the input if the input is a
@@ -186,15 +186,14 @@ public open class CfnInput internal constructor(
   /**
    * Settings that apply only if the input is a MediaConnect input.
    */
-  public open fun mediaConnectFlows(_idx_ac66f0: List<Any>) {
-    unwrap(this).setMediaConnectFlows(_idx_ac66f0)
+  public open fun mediaConnectFlows(`value`: List<Any>) {
+    unwrap(this).setMediaConnectFlows(`value`)
   }
 
   /**
    * Settings that apply only if the input is a MediaConnect input.
    */
-  public open fun mediaConnectFlows(vararg _idx_ac66f0: Any): Unit =
-      mediaConnectFlows(_idx_ac66f0.toList())
+  public open fun mediaConnectFlows(vararg `value`: Any): Unit = mediaConnectFlows(`value`.toList())
 
   /**
    * A name for the input.
@@ -235,14 +234,14 @@ public open class CfnInput internal constructor(
   /**
    * Settings that apply only if the input is a pull type of input.
    */
-  public open fun sources(_idx_ac66f0: List<Any>) {
-    unwrap(this).setSources(_idx_ac66f0)
+  public open fun sources(`value`: List<Any>) {
+    unwrap(this).setSources(`value`)
   }
 
   /**
    * Settings that apply only if the input is a pull type of input.
    */
-  public open fun sources(vararg _idx_ac66f0: Any): Unit = sources(_idx_ac66f0.toList())
+  public open fun sources(vararg `value`: Any): Unit = sources(`value`.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

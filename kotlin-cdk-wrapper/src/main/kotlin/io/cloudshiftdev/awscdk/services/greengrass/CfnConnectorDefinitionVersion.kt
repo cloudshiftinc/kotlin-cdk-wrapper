@@ -91,14 +91,14 @@ public open class CfnConnectorDefinitionVersion internal constructor(
   /**
    * The connectors in this version.
    */
-  public open fun connectors(_idx_ac66f0: List<Any>) {
-    unwrap(this).setConnectors(_idx_ac66f0)
+  public open fun connectors(`value`: List<Any>) {
+    unwrap(this).setConnectors(`value`)
   }
 
   /**
    * The connectors in this version.
    */
-  public open fun connectors(vararg _idx_ac66f0: Any): Unit = connectors(_idx_ac66f0.toList())
+  public open fun connectors(vararg `value`: Any): Unit = connectors(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

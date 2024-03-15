@@ -104,15 +104,15 @@ public open class CfnView internal constructor(
   /**
    * A list of fields that provide additional information about the view.
    */
-  public open fun includedProperties(_idx_ac66f0: List<Any>) {
-    unwrap(this).setIncludedProperties(_idx_ac66f0)
+  public open fun includedProperties(`value`: List<Any>) {
+    unwrap(this).setIncludedProperties(`value`)
   }
 
   /**
    * A list of fields that provide additional information about the view.
    */
-  public open fun includedProperties(vararg _idx_ac66f0: Any): Unit =
-      includedProperties(_idx_ac66f0.toList())
+  public open fun includedProperties(vararg `value`: Any): Unit =
+      includedProperties(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

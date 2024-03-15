@@ -214,15 +214,15 @@ public open class CfnSubscriptionTarget internal constructor(
   /**
    * The configuration of the subscription target.
    */
-  public open fun subscriptionTargetConfig(_idx_ac66f0: List<Any>) {
-    unwrap(this).setSubscriptionTargetConfig(_idx_ac66f0)
+  public open fun subscriptionTargetConfig(`value`: List<Any>) {
+    unwrap(this).setSubscriptionTargetConfig(`value`)
   }
 
   /**
    * The configuration of the subscription target.
    */
-  public open fun subscriptionTargetConfig(vararg _idx_ac66f0: Any): Unit =
-      subscriptionTargetConfig(_idx_ac66f0.toList())
+  public open fun subscriptionTargetConfig(vararg `value`: Any): Unit =
+      subscriptionTargetConfig(`value`.toList())
 
   /**
    * The type of the subscription target.

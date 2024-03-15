@@ -134,15 +134,15 @@ public open class CfnExperiment internal constructor(
    * An array of structures that defines the metrics used for the experiment, and whether a higher
    * or lower value for each metric is the goal.
    */
-  public open fun metricGoals(_idx_ac66f0: List<Any>) {
-    unwrap(this).setMetricGoals(_idx_ac66f0)
+  public open fun metricGoals(`value`: List<Any>) {
+    unwrap(this).setMetricGoals(`value`)
   }
 
   /**
    * An array of structures that defines the metrics used for the experiment, and whether a higher
    * or lower value for each metric is the goal.
    */
-  public open fun metricGoals(vararg _idx_ac66f0: Any): Unit = metricGoals(_idx_ac66f0.toList())
+  public open fun metricGoals(vararg `value`: Any): Unit = metricGoals(`value`.toList())
 
   /**
    * A name for the new experiment.
@@ -322,15 +322,15 @@ public open class CfnExperiment internal constructor(
    * An array of structures that describe the configuration of each feature variation used in the
    * experiment.
    */
-  public open fun treatments(_idx_ac66f0: List<Any>) {
-    unwrap(this).setTreatments(_idx_ac66f0)
+  public open fun treatments(`value`: List<Any>) {
+    unwrap(this).setTreatments(`value`)
   }
 
   /**
    * An array of structures that describe the configuration of each feature variation used in the
    * experiment.
    */
-  public open fun treatments(vararg _idx_ac66f0: Any): Unit = treatments(_idx_ac66f0.toList())
+  public open fun treatments(vararg `value`: Any): Unit = treatments(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.evidently.CfnExperiment].

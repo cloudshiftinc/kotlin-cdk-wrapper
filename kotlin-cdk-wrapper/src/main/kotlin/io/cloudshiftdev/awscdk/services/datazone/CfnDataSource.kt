@@ -114,15 +114,14 @@ public open class CfnDataSource internal constructor(
   /**
    * The metadata forms attached to the assets that the data source works with.
    */
-  public open fun assetFormsInput(_idx_ac66f0: List<Any>) {
-    unwrap(this).setAssetFormsInput(_idx_ac66f0)
+  public open fun assetFormsInput(`value`: List<Any>) {
+    unwrap(this).setAssetFormsInput(`value`)
   }
 
   /**
    * The metadata forms attached to the assets that the data source works with.
    */
-  public open fun assetFormsInput(vararg _idx_ac66f0: Any): Unit =
-      assetFormsInput(_idx_ac66f0.toList())
+  public open fun assetFormsInput(vararg `value`: Any): Unit = assetFormsInput(`value`.toList())
 
   /**
    * The timestamp of when the data source was created.

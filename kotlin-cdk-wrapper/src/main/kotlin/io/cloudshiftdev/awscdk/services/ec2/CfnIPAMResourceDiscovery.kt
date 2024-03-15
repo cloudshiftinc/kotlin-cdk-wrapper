@@ -134,15 +134,14 @@ public open class CfnIPAMResourceDiscovery internal constructor(
   /**
    * The operating Regions for the resource discovery.
    */
-  public open fun operatingRegions(_idx_ac66f0: List<Any>) {
-    unwrap(this).setOperatingRegions(_idx_ac66f0)
+  public open fun operatingRegions(`value`: List<Any>) {
+    unwrap(this).setOperatingRegions(`value`)
   }
 
   /**
    * The operating Regions for the resource discovery.
    */
-  public open fun operatingRegions(vararg _idx_ac66f0: Any): Unit =
-      operatingRegions(_idx_ac66f0.toList())
+  public open fun operatingRegions(vararg `value`: Any): Unit = operatingRegions(`value`.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

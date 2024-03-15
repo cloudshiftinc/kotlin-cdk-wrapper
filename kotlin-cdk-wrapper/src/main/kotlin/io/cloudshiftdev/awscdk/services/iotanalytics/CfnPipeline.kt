@@ -148,15 +148,15 @@ public open class CfnPipeline internal constructor(
   /**
    * A list of "PipelineActivity" objects.
    */
-  public open fun pipelineActivities(_idx_ac66f0: List<Any>) {
-    unwrap(this).setPipelineActivities(_idx_ac66f0)
+  public open fun pipelineActivities(`value`: List<Any>) {
+    unwrap(this).setPipelineActivities(`value`)
   }
 
   /**
    * A list of "PipelineActivity" objects.
    */
-  public open fun pipelineActivities(vararg _idx_ac66f0: Any): Unit =
-      pipelineActivities(_idx_ac66f0.toList())
+  public open fun pipelineActivities(vararg `value`: Any): Unit =
+      pipelineActivities(`value`.toList())
 
   /**
    * The name of the pipeline.

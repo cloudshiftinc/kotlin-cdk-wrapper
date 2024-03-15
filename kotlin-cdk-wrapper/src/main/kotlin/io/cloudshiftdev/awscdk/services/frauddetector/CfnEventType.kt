@@ -132,14 +132,14 @@ public open class CfnEventType internal constructor(
   /**
    * The event type entity types.
    */
-  public open fun entityTypes(_idx_ac66f0: List<Any>) {
-    unwrap(this).setEntityTypes(_idx_ac66f0)
+  public open fun entityTypes(`value`: List<Any>) {
+    unwrap(this).setEntityTypes(`value`)
   }
 
   /**
    * The event type entity types.
    */
-  public open fun entityTypes(vararg _idx_ac66f0: Any): Unit = entityTypes(_idx_ac66f0.toList())
+  public open fun entityTypes(vararg `value`: Any): Unit = entityTypes(`value`.toList())
 
   /**
    * The event type event variables.
@@ -156,15 +156,14 @@ public open class CfnEventType internal constructor(
   /**
    * The event type event variables.
    */
-  public open fun eventVariables(_idx_ac66f0: List<Any>) {
-    unwrap(this).setEventVariables(_idx_ac66f0)
+  public open fun eventVariables(`value`: List<Any>) {
+    unwrap(this).setEventVariables(`value`)
   }
 
   /**
    * The event type event variables.
    */
-  public open fun eventVariables(vararg _idx_ac66f0: Any): Unit =
-      eventVariables(_idx_ac66f0.toList())
+  public open fun eventVariables(vararg `value`: Any): Unit = eventVariables(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -190,14 +189,14 @@ public open class CfnEventType internal constructor(
   /**
    * The event type labels.
    */
-  public open fun labels(_idx_ac66f0: List<Any>) {
-    unwrap(this).setLabels(_idx_ac66f0)
+  public open fun labels(`value`: List<Any>) {
+    unwrap(this).setLabels(`value`)
   }
 
   /**
    * The event type labels.
    */
-  public open fun labels(vararg _idx_ac66f0: Any): Unit = labels(_idx_ac66f0.toList())
+  public open fun labels(vararg `value`: Any): Unit = labels(`value`.toList())
 
   /**
    * The event type name.

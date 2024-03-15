@@ -146,14 +146,14 @@ public open class CfnDataset internal constructor(
   /**
    * The `DatasetAction` objects that automatically create the dataset contents.
    */
-  public open fun actions(_idx_ac66f0: List<Any>) {
-    unwrap(this).setActions(_idx_ac66f0)
+  public open fun actions(`value`: List<Any>) {
+    unwrap(this).setActions(`value`)
   }
 
   /**
    * The `DatasetAction` objects that automatically create the dataset contents.
    */
-  public open fun actions(vararg _idx_ac66f0: Any): Unit = actions(_idx_ac66f0.toList())
+  public open fun actions(vararg `value`: Any): Unit = actions(`value`.toList())
 
   /**
    *
@@ -175,15 +175,15 @@ public open class CfnDataset internal constructor(
   /**
    * When dataset contents are created they are delivered to destinations specified here.
    */
-  public open fun contentDeliveryRules(_idx_ac66f0: List<Any>) {
-    unwrap(this).setContentDeliveryRules(_idx_ac66f0)
+  public open fun contentDeliveryRules(`value`: List<Any>) {
+    unwrap(this).setContentDeliveryRules(`value`)
   }
 
   /**
    * When dataset contents are created they are delivered to destinations specified here.
    */
-  public open fun contentDeliveryRules(vararg _idx_ac66f0: Any): Unit =
-      contentDeliveryRules(_idx_ac66f0.toList())
+  public open fun contentDeliveryRules(vararg `value`: Any): Unit =
+      contentDeliveryRules(`value`.toList())
 
   /**
    * The name of the dataset.
@@ -221,14 +221,14 @@ public open class CfnDataset internal constructor(
   /**
    * A list of data rules that send notifications to CloudWatch, when data arrives late.
    */
-  public open fun lateDataRules(_idx_ac66f0: List<Any>) {
-    unwrap(this).setLateDataRules(_idx_ac66f0)
+  public open fun lateDataRules(`value`: List<Any>) {
+    unwrap(this).setLateDataRules(`value`)
   }
 
   /**
    * A list of data rules that send notifications to CloudWatch, when data arrives late.
    */
-  public open fun lateDataRules(vararg _idx_ac66f0: Any): Unit = lateDataRules(_idx_ac66f0.toList())
+  public open fun lateDataRules(vararg `value`: Any): Unit = lateDataRules(`value`.toList())
 
   /**
    * Optional.
@@ -295,14 +295,14 @@ public open class CfnDataset internal constructor(
   /**
    * The `DatasetTrigger` objects that specify when the dataset is automatically updated.
    */
-  public open fun triggers(_idx_ac66f0: List<Any>) {
-    unwrap(this).setTriggers(_idx_ac66f0)
+  public open fun triggers(`value`: List<Any>) {
+    unwrap(this).setTriggers(`value`)
   }
 
   /**
    * The `DatasetTrigger` objects that specify when the dataset is automatically updated.
    */
-  public open fun triggers(vararg _idx_ac66f0: Any): Unit = triggers(_idx_ac66f0.toList())
+  public open fun triggers(vararg `value`: Any): Unit = triggers(`value`.toList())
 
   /**
    * Optional.

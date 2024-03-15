@@ -74,14 +74,14 @@ public open class CfnDisk internal constructor(
   /**
    * An array of add-ons for the disk.
    */
-  public open fun addOns(_idx_ac66f0: List<Any>) {
-    unwrap(this).setAddOns(_idx_ac66f0)
+  public open fun addOns(`value`: List<Any>) {
+    unwrap(this).setAddOns(`value`)
   }
 
   /**
    * An array of add-ons for the disk.
    */
-  public open fun addOns(vararg _idx_ac66f0: Any): Unit = addOns(_idx_ac66f0.toList())
+  public open fun addOns(vararg `value`: Any): Unit = addOns(`value`.toList())
 
   /**
    * The resources to which the disk is attached.

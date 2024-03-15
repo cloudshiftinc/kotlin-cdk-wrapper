@@ -101,14 +101,14 @@ public open class CfnReplicationSet internal constructor(
   /**
    * Specifies the Regions of the replication set.
    */
-  public open fun regions(_idx_ac66f0: List<Any>) {
-    unwrap(this).setRegions(_idx_ac66f0)
+  public open fun regions(`value`: List<Any>) {
+    unwrap(this).setRegions(`value`)
   }
 
   /**
    * Specifies the Regions of the replication set.
    */
-  public open fun regions(vararg _idx_ac66f0: Any): Unit = regions(_idx_ac66f0.toList())
+  public open fun regions(vararg `value`: Any): Unit = regions(`value`.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

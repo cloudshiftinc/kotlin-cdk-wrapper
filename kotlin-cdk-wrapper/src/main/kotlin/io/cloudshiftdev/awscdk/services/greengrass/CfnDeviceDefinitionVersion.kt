@@ -91,14 +91,14 @@ public open class CfnDeviceDefinitionVersion internal constructor(
   /**
    * The devices in this version.
    */
-  public open fun devices(_idx_ac66f0: List<Any>) {
-    unwrap(this).setDevices(_idx_ac66f0)
+  public open fun devices(`value`: List<Any>) {
+    unwrap(this).setDevices(`value`)
   }
 
   /**
    * The devices in this version.
    */
-  public open fun devices(vararg _idx_ac66f0: Any): Unit = devices(_idx_ac66f0.toList())
+  public open fun devices(vararg `value`: Any): Unit = devices(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

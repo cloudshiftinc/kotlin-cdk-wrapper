@@ -183,16 +183,15 @@ public open class CfnMultiplexprogram internal constructor(
    * Contains information about the current sources for the specified program in the specified
    * multiplex.
    */
-  public open fun pipelineDetails(_idx_ac66f0: List<Any>) {
-    unwrap(this).setPipelineDetails(_idx_ac66f0)
+  public open fun pipelineDetails(`value`: List<Any>) {
+    unwrap(this).setPipelineDetails(`value`)
   }
 
   /**
    * Contains information about the current sources for the specified program in the specified
    * multiplex.
    */
-  public open fun pipelineDetails(vararg _idx_ac66f0: Any): Unit =
-      pipelineDetails(_idx_ac66f0.toList())
+  public open fun pipelineDetails(vararg `value`: Any): Unit = pipelineDetails(`value`.toList())
 
   /**
    * Indicates which pipeline is preferred by the multiplex for program ingest.

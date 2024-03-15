@@ -100,15 +100,14 @@ public open class CfnXssMatchSet internal constructor(
   /**
    * Specifies the parts of web requests that you want to inspect for cross-site scripting attacks.
    */
-  public open fun xssMatchTuples(_idx_ac66f0: List<Any>) {
-    unwrap(this).setXssMatchTuples(_idx_ac66f0)
+  public open fun xssMatchTuples(`value`: List<Any>) {
+    unwrap(this).setXssMatchTuples(`value`)
   }
 
   /**
    * Specifies the parts of web requests that you want to inspect for cross-site scripting attacks.
    */
-  public open fun xssMatchTuples(vararg _idx_ac66f0: Any): Unit =
-      xssMatchTuples(_idx_ac66f0.toList())
+  public open fun xssMatchTuples(vararg `value`: Any): Unit = xssMatchTuples(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.waf.CfnXssMatchSet].

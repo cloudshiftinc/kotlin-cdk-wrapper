@@ -199,14 +199,14 @@ public open class CfnAlarm internal constructor(
   /**
    * The dimensions for the metric associated with the alarm.
    */
-  public open fun dimensions(_idx_ac66f0: List<Any>) {
-    unwrap(this).setDimensions(_idx_ac66f0)
+  public open fun dimensions(`value`: List<Any>) {
+    unwrap(this).setDimensions(`value`)
   }
 
   /**
    * The dimensions for the metric associated with the alarm.
    */
-  public open fun dimensions(vararg _idx_ac66f0: Any): Unit = dimensions(_idx_ac66f0.toList())
+  public open fun dimensions(vararg `value`: Any): Unit = dimensions(`value`.toList())
 
   /**
    * Used only for alarms based on percentiles.
@@ -307,14 +307,14 @@ public open class CfnAlarm internal constructor(
   /**
    * An array that enables you to create an alarm based on the result of a metric math expression.
    */
-  public open fun metrics(_idx_ac66f0: List<Any>) {
-    unwrap(this).setMetrics(_idx_ac66f0)
+  public open fun metrics(`value`: List<Any>) {
+    unwrap(this).setMetrics(`value`)
   }
 
   /**
    * An array that enables you to create an alarm based on the result of a metric math expression.
    */
-  public open fun metrics(vararg _idx_ac66f0: Any): Unit = metrics(_idx_ac66f0.toList())
+  public open fun metrics(vararg `value`: Any): Unit = metrics(`value`.toList())
 
   /**
    * The namespace of the metric associated with the alarm.

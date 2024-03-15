@@ -140,14 +140,14 @@ public open class CfnServerlessCluster internal constructor(
   /**
    *
    */
-  public open fun vpcConfigs(_idx_ac66f0: List<Any>) {
-    unwrap(this).setVpcConfigs(_idx_ac66f0)
+  public open fun vpcConfigs(`value`: List<Any>) {
+    unwrap(this).setVpcConfigs(`value`)
   }
 
   /**
    *
    */
-  public open fun vpcConfigs(vararg _idx_ac66f0: Any): Unit = vpcConfigs(_idx_ac66f0.toList())
+  public open fun vpcConfigs(vararg `value`: Any): Unit = vpcConfigs(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.msk.CfnServerlessCluster].

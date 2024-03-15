@@ -149,15 +149,15 @@ public open class CfnLoadBalancer internal constructor(
   /**
    * Information about a policy for application-controlled session stickiness.
    */
-  public open fun appCookieStickinessPolicy(_idx_ac66f0: List<Any>) {
-    unwrap(this).setAppCookieStickinessPolicy(_idx_ac66f0)
+  public open fun appCookieStickinessPolicy(`value`: List<Any>) {
+    unwrap(this).setAppCookieStickinessPolicy(`value`)
   }
 
   /**
    * Information about a policy for application-controlled session stickiness.
    */
-  public open fun appCookieStickinessPolicy(vararg _idx_ac66f0: Any): Unit =
-      appCookieStickinessPolicy(_idx_ac66f0.toList())
+  public open fun appCookieStickinessPolicy(vararg `value`: Any): Unit =
+      appCookieStickinessPolicy(`value`.toList())
 
   /**
    * The name of the Route 53 hosted zone that is associated with the load balancer.
@@ -374,15 +374,15 @@ public open class CfnLoadBalancer internal constructor(
   /**
    * Information about a policy for duration-based session stickiness.
    */
-  public open fun lbCookieStickinessPolicy(_idx_ac66f0: List<Any>) {
-    unwrap(this).setLbCookieStickinessPolicy(_idx_ac66f0)
+  public open fun lbCookieStickinessPolicy(`value`: List<Any>) {
+    unwrap(this).setLbCookieStickinessPolicy(`value`)
   }
 
   /**
    * Information about a policy for duration-based session stickiness.
    */
-  public open fun lbCookieStickinessPolicy(vararg _idx_ac66f0: Any): Unit =
-      lbCookieStickinessPolicy(_idx_ac66f0.toList())
+  public open fun lbCookieStickinessPolicy(vararg `value`: Any): Unit =
+      lbCookieStickinessPolicy(`value`.toList())
 
   /**
    * The listeners for the load balancer.
@@ -405,8 +405,8 @@ public open class CfnLoadBalancer internal constructor(
    *
    * You can specify at most one listener per port.
    */
-  public open fun listeners(_idx_ac66f0: List<Any>) {
-    unwrap(this).setListeners(_idx_ac66f0)
+  public open fun listeners(`value`: List<Any>) {
+    unwrap(this).setListeners(`value`)
   }
 
   /**
@@ -414,7 +414,7 @@ public open class CfnLoadBalancer internal constructor(
    *
    * You can specify at most one listener per port.
    */
-  public open fun listeners(vararg _idx_ac66f0: Any): Unit = listeners(_idx_ac66f0.toList())
+  public open fun listeners(vararg `value`: Any): Unit = listeners(`value`.toList())
 
   /**
    * The name of the load balancer.
@@ -443,14 +443,14 @@ public open class CfnLoadBalancer internal constructor(
   /**
    * The policies defined for your Classic Load Balancer.
    */
-  public open fun policies(_idx_ac66f0: List<Any>) {
-    unwrap(this).setPolicies(_idx_ac66f0)
+  public open fun policies(`value`: List<Any>) {
+    unwrap(this).setPolicies(`value`)
   }
 
   /**
    * The policies defined for your Classic Load Balancer.
    */
-  public open fun policies(vararg _idx_ac66f0: Any): Unit = policies(_idx_ac66f0.toList())
+  public open fun policies(vararg `value`: Any): Unit = policies(`value`.toList())
 
   /**
    * The type of load balancer.

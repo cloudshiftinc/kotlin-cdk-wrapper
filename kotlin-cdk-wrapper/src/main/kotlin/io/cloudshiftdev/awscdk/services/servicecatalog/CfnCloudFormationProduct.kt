@@ -194,15 +194,15 @@ public open class CfnCloudFormationProduct internal constructor(
   /**
    * The configuration of the provisioning artifact (also known as a version).
    */
-  public open fun provisioningArtifactParameters(_idx_ac66f0: List<Any>) {
-    unwrap(this).setProvisioningArtifactParameters(_idx_ac66f0)
+  public open fun provisioningArtifactParameters(`value`: List<Any>) {
+    unwrap(this).setProvisioningArtifactParameters(`value`)
   }
 
   /**
    * The configuration of the provisioning artifact (also known as a version).
    */
-  public open fun provisioningArtifactParameters(vararg _idx_ac66f0: Any): Unit =
-      provisioningArtifactParameters(_idx_ac66f0.toList())
+  public open fun provisioningArtifactParameters(vararg `value`: Any): Unit =
+      provisioningArtifactParameters(`value`.toList())
 
   /**
    * This property is turned off by default.

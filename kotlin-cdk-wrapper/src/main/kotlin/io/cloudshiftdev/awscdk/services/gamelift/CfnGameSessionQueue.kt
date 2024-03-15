@@ -110,15 +110,15 @@ public open class CfnGameSessionQueue internal constructor(
    * A list of fleets and/or fleet aliases that can be used to fulfill game session placement
    * requests in the queue.
    */
-  public open fun destinations(_idx_ac66f0: List<Any>) {
-    unwrap(this).setDestinations(_idx_ac66f0)
+  public open fun destinations(`value`: List<Any>) {
+    unwrap(this).setDestinations(`value`)
   }
 
   /**
    * A list of fleets and/or fleet aliases that can be used to fulfill game session placement
    * requests in the queue.
    */
-  public open fun destinations(vararg _idx_ac66f0: Any): Unit = destinations(_idx_ac66f0.toList())
+  public open fun destinations(vararg `value`: Any): Unit = destinations(`value`.toList())
 
   /**
    * A list of locations where a queue is allowed to place new game sessions.
@@ -195,15 +195,15 @@ public open class CfnGameSessionQueue internal constructor(
   /**
    * A set of policies that act as a sliding cap on player latency.
    */
-  public open fun playerLatencyPolicies(_idx_ac66f0: List<Any>) {
-    unwrap(this).setPlayerLatencyPolicies(_idx_ac66f0)
+  public open fun playerLatencyPolicies(`value`: List<Any>) {
+    unwrap(this).setPlayerLatencyPolicies(`value`)
   }
 
   /**
    * A set of policies that act as a sliding cap on player latency.
    */
-  public open fun playerLatencyPolicies(vararg _idx_ac66f0: Any): Unit =
-      playerLatencyPolicies(_idx_ac66f0.toList())
+  public open fun playerLatencyPolicies(vararg `value`: Any): Unit =
+      playerLatencyPolicies(`value`.toList())
 
   /**
    * Custom settings to use when prioritizing destinations and locations for game session

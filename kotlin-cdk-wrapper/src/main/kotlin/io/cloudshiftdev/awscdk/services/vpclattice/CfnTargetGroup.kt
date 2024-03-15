@@ -194,14 +194,14 @@ public open class CfnTargetGroup internal constructor(
   /**
    * Describes a target.
    */
-  public open fun targets(_idx_ac66f0: List<Any>) {
-    unwrap(this).setTargets(_idx_ac66f0)
+  public open fun targets(`value`: List<Any>) {
+    unwrap(this).setTargets(`value`)
   }
 
   /**
    * Describes a target.
    */
-  public open fun targets(vararg _idx_ac66f0: Any): Unit = targets(_idx_ac66f0.toList())
+  public open fun targets(vararg `value`: Any): Unit = targets(`value`.toList())
 
   /**
    * The type of target group.

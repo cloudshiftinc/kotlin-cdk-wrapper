@@ -81,15 +81,15 @@ public open class CfnEndpointGroup internal constructor(
   /**
    * The list of endpoint objects.
    */
-  public open fun endpointConfigurations(_idx_ac66f0: List<Any>) {
-    unwrap(this).setEndpointConfigurations(_idx_ac66f0)
+  public open fun endpointConfigurations(`value`: List<Any>) {
+    unwrap(this).setEndpointConfigurations(`value`)
   }
 
   /**
    * The list of endpoint objects.
    */
-  public open fun endpointConfigurations(vararg _idx_ac66f0: Any): Unit =
-      endpointConfigurations(_idx_ac66f0.toList())
+  public open fun endpointConfigurations(vararg `value`: Any): Unit =
+      endpointConfigurations(`value`.toList())
 
   /**
    * The AWS Regions where the endpoint group is located.
@@ -194,14 +194,14 @@ public open class CfnEndpointGroup internal constructor(
   /**
    * Allows you to override the destination ports used to route traffic to an endpoint.
    */
-  public open fun portOverrides(_idx_ac66f0: List<Any>) {
-    unwrap(this).setPortOverrides(_idx_ac66f0)
+  public open fun portOverrides(`value`: List<Any>) {
+    unwrap(this).setPortOverrides(`value`)
   }
 
   /**
    * Allows you to override the destination ports used to route traffic to an endpoint.
    */
-  public open fun portOverrides(vararg _idx_ac66f0: Any): Unit = portOverrides(_idx_ac66f0.toList())
+  public open fun portOverrides(vararg `value`: Any): Unit = portOverrides(`value`.toList())
 
   /**
    * The number of consecutive health checks required to set the state of a healthy endpoint to

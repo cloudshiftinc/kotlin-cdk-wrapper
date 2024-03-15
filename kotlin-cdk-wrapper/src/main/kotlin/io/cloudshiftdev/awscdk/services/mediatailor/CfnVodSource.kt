@@ -74,15 +74,15 @@ public open class CfnVodSource internal constructor(
   /**
    * The HTTP package configurations for the VOD source.
    */
-  public open fun httpPackageConfigurations(_idx_ac66f0: List<Any>) {
-    unwrap(this).setHttpPackageConfigurations(_idx_ac66f0)
+  public open fun httpPackageConfigurations(`value`: List<Any>) {
+    unwrap(this).setHttpPackageConfigurations(`value`)
   }
 
   /**
    * The HTTP package configurations for the VOD source.
    */
-  public open fun httpPackageConfigurations(vararg _idx_ac66f0: Any): Unit =
-      httpPackageConfigurations(_idx_ac66f0.toList())
+  public open fun httpPackageConfigurations(vararg `value`: Any): Unit =
+      httpPackageConfigurations(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

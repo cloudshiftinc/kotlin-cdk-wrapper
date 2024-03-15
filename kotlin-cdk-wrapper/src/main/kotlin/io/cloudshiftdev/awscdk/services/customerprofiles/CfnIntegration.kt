@@ -205,15 +205,14 @@ public open class CfnIntegration internal constructor(
   /**
    * The object type mapping.
    */
-  public open fun objectTypeNames(_idx_ac66f0: List<Any>) {
-    unwrap(this).setObjectTypeNames(_idx_ac66f0)
+  public open fun objectTypeNames(`value`: List<Any>) {
+    unwrap(this).setObjectTypeNames(`value`)
   }
 
   /**
    * The object type mapping.
    */
-  public open fun objectTypeNames(vararg _idx_ac66f0: Any): Unit =
-      objectTypeNames(_idx_ac66f0.toList())
+  public open fun objectTypeNames(vararg `value`: Any): Unit = objectTypeNames(`value`.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.

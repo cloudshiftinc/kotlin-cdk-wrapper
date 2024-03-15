@@ -112,14 +112,14 @@ public open class CfnEndpoint internal constructor(
   /**
    * The event buses being used by the endpoint.
    */
-  public open fun eventBuses(_idx_ac66f0: List<Any>) {
-    unwrap(this).setEventBuses(_idx_ac66f0)
+  public open fun eventBuses(`value`: List<Any>) {
+    unwrap(this).setEventBuses(`value`)
   }
 
   /**
    * The event buses being used by the endpoint.
    */
-  public open fun eventBuses(vararg _idx_ac66f0: Any): Unit = eventBuses(_idx_ac66f0.toList())
+  public open fun eventBuses(vararg `value`: Any): Unit = eventBuses(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

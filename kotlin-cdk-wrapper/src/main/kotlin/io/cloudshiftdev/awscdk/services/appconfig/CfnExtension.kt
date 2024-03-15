@@ -162,8 +162,8 @@ public open class CfnExtension internal constructor(
   /**
    * The parameters accepted by the extension.
    */
-  public open fun parameters(_item_ac66f0: Map<String, Any>) {
-    unwrap(this).setParameters(_item_ac66f0)
+  public open fun parameters(`value`: Map<String, Any>) {
+    unwrap(this).setParameters(`value`)
   }
 
   /**

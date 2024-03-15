@@ -145,9 +145,7 @@ internal data class MethodSpec(
                 Parameter(it.name, it.type)
             }
             val isOverride = model.isOverrideMethod(enclosingClass.className, method)
-            if (enclosingClass.className.simpleName == "EbsDeviceProps" && method.name.contains("deleteOnTermination")) {
-                println("MethodSpec: EbsDeviceProps: ${method.name} ${method.signature} ${isOverride}")
-            }
+
             val methodName = when (method.name) {
                 "<init>" -> "this"
                 else -> method.name

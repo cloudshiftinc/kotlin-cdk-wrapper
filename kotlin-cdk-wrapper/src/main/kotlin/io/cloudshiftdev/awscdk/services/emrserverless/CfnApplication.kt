@@ -243,15 +243,14 @@ public open class CfnApplication internal constructor(
   /**
    * The initial capacity of the application.
    */
-  public open fun initialCapacity(_idx_ac66f0: List<Any>) {
-    unwrap(this).setInitialCapacity(_idx_ac66f0)
+  public open fun initialCapacity(`value`: List<Any>) {
+    unwrap(this).setInitialCapacity(`value`)
   }
 
   /**
    * The initial capacity of the application.
    */
-  public open fun initialCapacity(vararg _idx_ac66f0: Any): Unit =
-      initialCapacity(_idx_ac66f0.toList())
+  public open fun initialCapacity(vararg `value`: Any): Unit = initialCapacity(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -401,8 +400,8 @@ public open class CfnApplication internal constructor(
    * [GetApplication](https://docs.aws.amazon.com/emr-serverless/latest/APIReference/API_GetApplication.html)
    * API operation.
    */
-  public open fun runtimeConfiguration(_idx_ac66f0: List<Any>) {
-    unwrap(this).setRuntimeConfiguration(_idx_ac66f0)
+  public open fun runtimeConfiguration(`value`: List<Any>) {
+    unwrap(this).setRuntimeConfiguration(`value`)
   }
 
   /**
@@ -414,8 +413,8 @@ public open class CfnApplication internal constructor(
    * [GetApplication](https://docs.aws.amazon.com/emr-serverless/latest/APIReference/API_GetApplication.html)
    * API operation.
    */
-  public open fun runtimeConfiguration(vararg _idx_ac66f0: Any): Unit =
-      runtimeConfiguration(_idx_ac66f0.toList())
+  public open fun runtimeConfiguration(vararg `value`: Any): Unit =
+      runtimeConfiguration(`value`.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.
@@ -467,8 +466,8 @@ public open class CfnApplication internal constructor(
   /**
    * The specification applied to each worker type.
    */
-  public open fun workerTypeSpecifications(_item_ac66f0: Map<String, Any>) {
-    unwrap(this).setWorkerTypeSpecifications(_item_ac66f0)
+  public open fun workerTypeSpecifications(`value`: Map<String, Any>) {
+    unwrap(this).setWorkerTypeSpecifications(`value`)
   }
 
   /**

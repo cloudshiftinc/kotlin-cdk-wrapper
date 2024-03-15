@@ -99,14 +99,14 @@ public open class CfnSubscriptionDefinitionVersion internal constructor(
   /**
    * The subscriptions in this version.
    */
-  public open fun subscriptions(_idx_ac66f0: List<Any>) {
-    unwrap(this).setSubscriptions(_idx_ac66f0)
+  public open fun subscriptions(`value`: List<Any>) {
+    unwrap(this).setSubscriptions(`value`)
   }
 
   /**
    * The subscriptions in this version.
    */
-  public open fun subscriptions(vararg _idx_ac66f0: Any): Unit = subscriptions(_idx_ac66f0.toList())
+  public open fun subscriptions(vararg `value`: Any): Unit = subscriptions(`value`.toList())
 
   /**
    * A fluent builder for

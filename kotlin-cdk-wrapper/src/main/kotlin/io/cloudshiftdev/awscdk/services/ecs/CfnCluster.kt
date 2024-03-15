@@ -123,15 +123,14 @@ public open class CfnCluster internal constructor(
   /**
    * The settings to use when creating a cluster.
    */
-  public open fun clusterSettings(_idx_ac66f0: List<Any>) {
-    unwrap(this).setClusterSettings(_idx_ac66f0)
+  public open fun clusterSettings(`value`: List<Any>) {
+    unwrap(this).setClusterSettings(`value`)
   }
 
   /**
    * The settings to use when creating a cluster.
    */
-  public open fun clusterSettings(vararg _idx_ac66f0: Any): Unit =
-      clusterSettings(_idx_ac66f0.toList())
+  public open fun clusterSettings(vararg `value`: Any): Unit = clusterSettings(`value`.toList())
 
   /**
    * The execute command configuration for the cluster.
@@ -176,15 +175,15 @@ public open class CfnCluster internal constructor(
   /**
    * The default capacity provider strategy for the cluster.
    */
-  public open fun defaultCapacityProviderStrategy(_idx_ac66f0: List<Any>) {
-    unwrap(this).setDefaultCapacityProviderStrategy(_idx_ac66f0)
+  public open fun defaultCapacityProviderStrategy(`value`: List<Any>) {
+    unwrap(this).setDefaultCapacityProviderStrategy(`value`)
   }
 
   /**
    * The default capacity provider strategy for the cluster.
    */
-  public open fun defaultCapacityProviderStrategy(vararg _idx_ac66f0: Any): Unit =
-      defaultCapacityProviderStrategy(_idx_ac66f0.toList())
+  public open fun defaultCapacityProviderStrategy(vararg `value`: Any): Unit =
+      defaultCapacityProviderStrategy(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.

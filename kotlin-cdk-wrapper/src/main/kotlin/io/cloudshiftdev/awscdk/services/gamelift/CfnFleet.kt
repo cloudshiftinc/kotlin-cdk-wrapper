@@ -251,16 +251,16 @@ public open class CfnFleet internal constructor(
    * The allowed IP address ranges and port settings that allow inbound traffic to access game
    * sessions on this fleet.
    */
-  public open fun ec2InboundPermissions(_idx_ac66f0: List<Any>) {
-    unwrap(this).setEc2InboundPermissions(_idx_ac66f0)
+  public open fun ec2InboundPermissions(`value`: List<Any>) {
+    unwrap(this).setEc2InboundPermissions(`value`)
   }
 
   /**
    * The allowed IP address ranges and port settings that allow inbound traffic to access game
    * sessions on this fleet.
    */
-  public open fun ec2InboundPermissions(vararg _idx_ac66f0: Any): Unit =
-      ec2InboundPermissions(_idx_ac66f0.toList())
+  public open fun ec2InboundPermissions(vararg `value`: Any): Unit =
+      ec2InboundPermissions(`value`.toList())
 
   /**
    * The Amazon GameLift-supported Amazon EC2 instance type to use for all fleet instances.
@@ -337,14 +337,14 @@ public open class CfnFleet internal constructor(
   /**
    * A set of remote locations to deploy additional instances to and manage as part of the fleet.
    */
-  public open fun locations(_idx_ac66f0: List<Any>) {
-    unwrap(this).setLocations(_idx_ac66f0)
+  public open fun locations(`value`: List<Any>) {
+    unwrap(this).setLocations(`value`)
   }
 
   /**
    * A set of remote locations to deploy additional instances to and manage as part of the fleet.
    */
-  public open fun locations(vararg _idx_ac66f0: Any): Unit = locations(_idx_ac66f0.toList())
+  public open fun locations(vararg `value`: Any): Unit = locations(`value`.toList())
 
   /**
    * (deprecated) This parameter is no longer used.
@@ -539,15 +539,14 @@ public open class CfnFleet internal constructor(
   /**
    * Rule that controls how a fleet is scaled.
    */
-  public open fun scalingPolicies(_idx_ac66f0: List<Any>) {
-    unwrap(this).setScalingPolicies(_idx_ac66f0)
+  public open fun scalingPolicies(`value`: List<Any>) {
+    unwrap(this).setScalingPolicies(`value`)
   }
 
   /**
    * Rule that controls how a fleet is scaled.
    */
-  public open fun scalingPolicies(vararg _idx_ac66f0: Any): Unit =
-      scalingPolicies(_idx_ac66f0.toList())
+  public open fun scalingPolicies(vararg `value`: Any): Unit = scalingPolicies(`value`.toList())
 
   /**
    * The unique identifier for a Realtime configuration script to be deployed on fleet instances.
