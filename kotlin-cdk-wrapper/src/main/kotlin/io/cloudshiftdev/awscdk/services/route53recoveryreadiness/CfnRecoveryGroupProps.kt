@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.route53recoveryreadiness
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -158,7 +159,7 @@ public interface CfnRecoveryGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnRecoveryGroupProps):
-        CfnRecoveryGroupProps = Wrapper(cdkObject)
+        CfnRecoveryGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnRecoveryGroupProps
 
     internal fun unwrap(wrapped: CfnRecoveryGroupProps):
         software.amazon.awscdk.services.route53recoveryreadiness.CfnRecoveryGroupProps = (wrapped as

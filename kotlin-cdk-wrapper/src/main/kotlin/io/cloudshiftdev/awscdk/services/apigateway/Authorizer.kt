@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -25,16 +26,12 @@ public abstract class Authorizer internal constructor(
    */
   public override fun authorizerId(): String = unwrap(this).getAuthorizerId()
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.Authorizer,
-  ) : Authorizer(cdkObject)
-
   public companion object {
     public fun isAuthorizer(x: Any): Boolean =
         software.amazon.awscdk.services.apigateway.Authorizer.isAuthorizer(x)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.Authorizer): Authorizer
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as Authorizer
 
     internal fun unwrap(wrapped: Authorizer): software.amazon.awscdk.services.apigateway.Authorizer
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.apigateway.Authorizer

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.servicecatalog
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -106,7 +107,8 @@ public interface CfnTagOptionAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnTagOptionAssociationProps):
-        CfnTagOptionAssociationProps = Wrapper(cdkObject)
+        CfnTagOptionAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnTagOptionAssociationProps
 
     internal fun unwrap(wrapped: CfnTagOptionAssociationProps):
         software.amazon.awscdk.services.servicecatalog.CfnTagOptionAssociationProps = (wrapped as

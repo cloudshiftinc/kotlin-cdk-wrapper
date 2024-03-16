@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -865,7 +866,7 @@ public open class CfnAuthorizer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer.JWTConfigurationProperty):
-          JWTConfigurationProperty = Wrapper(cdkObject)
+          JWTConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as JWTConfigurationProperty
 
       internal fun unwrap(wrapped: JWTConfigurationProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer.JWTConfigurationProperty =

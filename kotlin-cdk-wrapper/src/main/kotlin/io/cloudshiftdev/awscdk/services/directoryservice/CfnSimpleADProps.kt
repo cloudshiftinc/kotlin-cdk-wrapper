@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.directoryservice
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -432,7 +433,7 @@ public interface CfnSimpleADProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.directoryservice.CfnSimpleADProps):
-        CfnSimpleADProps = Wrapper(cdkObject)
+        CfnSimpleADProps = CdkObjectWrappers.wrap(cdkObject) as CfnSimpleADProps
 
     internal fun unwrap(wrapped: CfnSimpleADProps):
         software.amazon.awscdk.services.directoryservice.CfnSimpleADProps = (wrapped as

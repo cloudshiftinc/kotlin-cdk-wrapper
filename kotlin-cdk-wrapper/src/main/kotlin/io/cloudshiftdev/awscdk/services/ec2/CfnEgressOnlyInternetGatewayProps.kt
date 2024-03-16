@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -78,7 +79,8 @@ public interface CfnEgressOnlyInternetGatewayProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnEgressOnlyInternetGatewayProps):
-        CfnEgressOnlyInternetGatewayProps = Wrapper(cdkObject)
+        CfnEgressOnlyInternetGatewayProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnEgressOnlyInternetGatewayProps
 
     internal fun unwrap(wrapped: CfnEgressOnlyInternetGatewayProps):
         software.amazon.awscdk.services.ec2.CfnEgressOnlyInternetGatewayProps = (wrapped as

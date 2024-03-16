@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.IConstruct
 import kotlin.Unit
 
@@ -71,7 +72,7 @@ public interface UnknownPrincipalProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.UnknownPrincipalProps):
-        UnknownPrincipalProps = Wrapper(cdkObject)
+        UnknownPrincipalProps = CdkObjectWrappers.wrap(cdkObject) as UnknownPrincipalProps
 
     internal fun unwrap(wrapped: UnknownPrincipalProps):
         software.amazon.awscdk.services.iam.UnknownPrincipalProps = (wrapped as CdkObject).cdkObject

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -461,7 +462,7 @@ public open class CfnThingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnThingGroup.AttributePayloadProperty):
-          AttributePayloadProperty = Wrapper(cdkObject)
+          AttributePayloadProperty = CdkObjectWrappers.wrap(cdkObject) as AttributePayloadProperty
 
       internal fun unwrap(wrapped: AttributePayloadProperty):
           software.amazon.awscdk.services.iot.CfnThingGroup.AttributePayloadProperty = (wrapped as
@@ -600,7 +601,8 @@ public open class CfnThingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnThingGroup.ThingGroupPropertiesProperty):
-          ThingGroupPropertiesProperty = Wrapper(cdkObject)
+          ThingGroupPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ThingGroupPropertiesProperty
 
       internal fun unwrap(wrapped: ThingGroupPropertiesProperty):
           software.amazon.awscdk.services.iot.CfnThingGroup.ThingGroupPropertiesProperty = (wrapped

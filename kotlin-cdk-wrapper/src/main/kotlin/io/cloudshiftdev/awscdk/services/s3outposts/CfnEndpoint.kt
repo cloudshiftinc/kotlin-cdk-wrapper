@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -493,7 +494,7 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnEndpoint.FailedReasonProperty):
-          FailedReasonProperty = Wrapper(cdkObject)
+          FailedReasonProperty = CdkObjectWrappers.wrap(cdkObject) as FailedReasonProperty
 
       internal fun unwrap(wrapped: FailedReasonProperty):
           software.amazon.awscdk.services.s3outposts.CfnEndpoint.FailedReasonProperty = (wrapped as
@@ -574,7 +575,7 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnEndpoint.NetworkInterfaceProperty):
-          NetworkInterfaceProperty = Wrapper(cdkObject)
+          NetworkInterfaceProperty = CdkObjectWrappers.wrap(cdkObject) as NetworkInterfaceProperty
 
       internal fun unwrap(wrapped: NetworkInterfaceProperty):
           software.amazon.awscdk.services.s3outposts.CfnEndpoint.NetworkInterfaceProperty = (wrapped

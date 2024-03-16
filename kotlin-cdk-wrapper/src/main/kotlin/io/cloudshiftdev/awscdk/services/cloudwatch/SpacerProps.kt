@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -99,7 +100,7 @@ public interface SpacerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.SpacerProps):
-        SpacerProps = Wrapper(cdkObject)
+        SpacerProps = CdkObjectWrappers.wrap(cdkObject) as SpacerProps
 
     internal fun unwrap(wrapped: SpacerProps):
         software.amazon.awscdk.services.cloudwatch.SpacerProps = (wrapped as CdkObject).cdkObject as

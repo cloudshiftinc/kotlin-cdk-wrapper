@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appconfig
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.IPipeline
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.s3.IBucket
@@ -47,10 +48,6 @@ public abstract class ConfigurationSource internal constructor(
   public open fun type(): ConfigurationSourceType =
       unwrap(this).getType().let(ConfigurationSourceType::wrap)
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.ConfigurationSource,
-  ) : ConfigurationSource(cdkObject)
-
   public companion object {
     public fun fromBucket(bucket: IBucket, objectKey: String): ConfigurationSource =
         software.amazon.awscdk.services.appconfig.ConfigurationSource.fromBucket(bucket.let(IBucket::unwrap),
@@ -81,7 +78,7 @@ public abstract class ConfigurationSource internal constructor(
         software.amazon.awscdk.services.appconfig.ConfigurationSource.fromSecret(secret.let(ISecret::unwrap)).let(ConfigurationSource::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.ConfigurationSource):
-        ConfigurationSource = Wrapper(cdkObject)
+        ConfigurationSource = CdkObjectWrappers.wrap(cdkObject) as ConfigurationSource
 
     internal fun unwrap(wrapped: ConfigurationSource):
         software.amazon.awscdk.services.appconfig.ConfigurationSource = (wrapped as

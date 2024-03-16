@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1177,7 +1178,7 @@ public open class CfnApi internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApi.BodyS3LocationProperty):
-          BodyS3LocationProperty = Wrapper(cdkObject)
+          BodyS3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as BodyS3LocationProperty
 
       internal fun unwrap(wrapped: BodyS3LocationProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnApi.BodyS3LocationProperty = (wrapped as
@@ -1499,7 +1500,7 @@ public open class CfnApi internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApi.CorsProperty):
-          CorsProperty = Wrapper(cdkObject)
+          CorsProperty = CdkObjectWrappers.wrap(cdkObject) as CorsProperty
 
       internal fun unwrap(wrapped: CorsProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnApi.CorsProperty = (wrapped as

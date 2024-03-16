@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -790,7 +791,8 @@ public open class CfnStateMachineAlias internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty):
-          RoutingConfigurationVersionProperty = Wrapper(cdkObject)
+          RoutingConfigurationVersionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          RoutingConfigurationVersionProperty
 
       internal fun unwrap(wrapped: RoutingConfigurationVersionProperty):
           software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.RoutingConfigurationVersionProperty
@@ -1105,7 +1107,8 @@ public open class CfnStateMachineAlias internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.DeploymentPreferenceProperty):
-          DeploymentPreferenceProperty = Wrapper(cdkObject)
+          DeploymentPreferenceProperty = CdkObjectWrappers.wrap(cdkObject) as
+          DeploymentPreferenceProperty
 
       internal fun unwrap(wrapped: DeploymentPreferenceProperty):
           software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias.DeploymentPreferenceProperty

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -362,7 +363,7 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnChannel.IngestEndpointProperty):
-          IngestEndpointProperty = Wrapper(cdkObject)
+          IngestEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as IngestEndpointProperty
 
       internal fun unwrap(wrapped: IngestEndpointProperty):
           software.amazon.awscdk.services.mediapackagev2.CfnChannel.IngestEndpointProperty =

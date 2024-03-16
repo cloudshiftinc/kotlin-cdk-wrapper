@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -97,7 +98,7 @@ public interface CfnTrafficRoute {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnTrafficRoute): CfnTrafficRoute =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as CfnTrafficRoute
 
     internal fun unwrap(wrapped: CfnTrafficRoute): software.amazon.awscdk.CfnTrafficRoute = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.CfnTrafficRoute

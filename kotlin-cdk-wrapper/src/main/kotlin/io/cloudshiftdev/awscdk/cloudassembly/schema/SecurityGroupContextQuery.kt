@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -203,7 +204,7 @@ public interface SecurityGroupContextQuery {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.SecurityGroupContextQuery):
-        SecurityGroupContextQuery = Wrapper(cdkObject)
+        SecurityGroupContextQuery = CdkObjectWrappers.wrap(cdkObject) as SecurityGroupContextQuery
 
     internal fun unwrap(wrapped: SecurityGroupContextQuery):
         software.amazon.awscdk.cloudassembly.schema.SecurityGroupContextQuery = (wrapped as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -150,7 +151,7 @@ public interface CfnPublicKeyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnPublicKeyProps):
-        CfnPublicKeyProps = Wrapper(cdkObject)
+        CfnPublicKeyProps = CdkObjectWrappers.wrap(cdkObject) as CfnPublicKeyProps
 
     internal fun unwrap(wrapped: CfnPublicKeyProps):
         software.amazon.awscdk.services.cloudfront.CfnPublicKeyProps = (wrapped as

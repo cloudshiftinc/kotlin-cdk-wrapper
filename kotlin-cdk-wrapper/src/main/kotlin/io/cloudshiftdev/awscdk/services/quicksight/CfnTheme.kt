@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -940,7 +941,8 @@ public open class CfnTheme internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.ThemeConfigurationProperty):
-          ThemeConfigurationProperty = Wrapper(cdkObject)
+          ThemeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ThemeConfigurationProperty
 
       internal fun unwrap(wrapped: ThemeConfigurationProperty):
           software.amazon.awscdk.services.quicksight.CfnTheme.ThemeConfigurationProperty = (wrapped
@@ -1048,7 +1050,7 @@ public open class CfnTheme internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.TileStyleProperty):
-          TileStyleProperty = Wrapper(cdkObject)
+          TileStyleProperty = CdkObjectWrappers.wrap(cdkObject) as TileStyleProperty
 
       internal fun unwrap(wrapped: TileStyleProperty):
           software.amazon.awscdk.services.quicksight.CfnTheme.TileStyleProperty = (wrapped as
@@ -1153,7 +1155,7 @@ public open class CfnTheme internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.TypographyProperty):
-          TypographyProperty = Wrapper(cdkObject)
+          TypographyProperty = CdkObjectWrappers.wrap(cdkObject) as TypographyProperty
 
       internal fun unwrap(wrapped: TypographyProperty):
           software.amazon.awscdk.services.quicksight.CfnTheme.TypographyProperty = (wrapped as
@@ -1319,7 +1321,7 @@ public open class CfnTheme internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.TileLayoutStyleProperty):
-          TileLayoutStyleProperty = Wrapper(cdkObject)
+          TileLayoutStyleProperty = CdkObjectWrappers.wrap(cdkObject) as TileLayoutStyleProperty
 
       internal fun unwrap(wrapped: TileLayoutStyleProperty):
           software.amazon.awscdk.services.quicksight.CfnTheme.TileLayoutStyleProperty = (wrapped as
@@ -1698,7 +1700,7 @@ public open class CfnTheme internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.ThemeVersionProperty):
-          ThemeVersionProperty = Wrapper(cdkObject)
+          ThemeVersionProperty = CdkObjectWrappers.wrap(cdkObject) as ThemeVersionProperty
 
       internal fun unwrap(wrapped: ThemeVersionProperty):
           software.amazon.awscdk.services.quicksight.CfnTheme.ThemeVersionProperty = (wrapped as
@@ -1790,7 +1792,7 @@ public open class CfnTheme internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.BorderStyleProperty):
-          BorderStyleProperty = Wrapper(cdkObject)
+          BorderStyleProperty = CdkObjectWrappers.wrap(cdkObject) as BorderStyleProperty
 
       internal fun unwrap(wrapped: BorderStyleProperty):
           software.amazon.awscdk.services.quicksight.CfnTheme.BorderStyleProperty = (wrapped as
@@ -1882,7 +1884,7 @@ public open class CfnTheme internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.MarginStyleProperty):
-          MarginStyleProperty = Wrapper(cdkObject)
+          MarginStyleProperty = CdkObjectWrappers.wrap(cdkObject) as MarginStyleProperty
 
       internal fun unwrap(wrapped: MarginStyleProperty):
           software.amazon.awscdk.services.quicksight.CfnTheme.MarginStyleProperty = (wrapped as
@@ -2416,7 +2418,7 @@ public open class CfnTheme internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.UIColorPaletteProperty):
-          UIColorPaletteProperty = Wrapper(cdkObject)
+          UIColorPaletteProperty = CdkObjectWrappers.wrap(cdkObject) as UIColorPaletteProperty
 
       internal fun unwrap(wrapped: UIColorPaletteProperty):
           software.amazon.awscdk.services.quicksight.CfnTheme.UIColorPaletteProperty = (wrapped as
@@ -2523,7 +2525,7 @@ public open class CfnTheme internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.ThemeErrorProperty):
-          ThemeErrorProperty = Wrapper(cdkObject)
+          ThemeErrorProperty = CdkObjectWrappers.wrap(cdkObject) as ThemeErrorProperty
 
       internal fun unwrap(wrapped: ThemeErrorProperty):
           software.amazon.awscdk.services.quicksight.CfnTheme.ThemeErrorProperty = (wrapped as
@@ -2696,7 +2698,8 @@ public open class CfnTheme internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.ResourcePermissionProperty):
-          ResourcePermissionProperty = Wrapper(cdkObject)
+          ResourcePermissionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ResourcePermissionProperty
 
       internal fun unwrap(wrapped: ResourcePermissionProperty):
           software.amazon.awscdk.services.quicksight.CfnTheme.ResourcePermissionProperty = (wrapped
@@ -2775,7 +2778,7 @@ public open class CfnTheme internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.FontProperty):
-          FontProperty = Wrapper(cdkObject)
+          FontProperty = CdkObjectWrappers.wrap(cdkObject) as FontProperty
 
       internal fun unwrap(wrapped: FontProperty):
           software.amazon.awscdk.services.quicksight.CfnTheme.FontProperty = (wrapped as
@@ -2939,7 +2942,7 @@ public open class CfnTheme internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.DataColorPaletteProperty):
-          DataColorPaletteProperty = Wrapper(cdkObject)
+          DataColorPaletteProperty = CdkObjectWrappers.wrap(cdkObject) as DataColorPaletteProperty
 
       internal fun unwrap(wrapped: DataColorPaletteProperty):
           software.amazon.awscdk.services.quicksight.CfnTheme.DataColorPaletteProperty = (wrapped as
@@ -3035,7 +3038,7 @@ public open class CfnTheme internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.GutterStyleProperty):
-          GutterStyleProperty = Wrapper(cdkObject)
+          GutterStyleProperty = CdkObjectWrappers.wrap(cdkObject) as GutterStyleProperty
 
       internal fun unwrap(wrapped: GutterStyleProperty):
           software.amazon.awscdk.services.quicksight.CfnTheme.GutterStyleProperty = (wrapped as
@@ -3207,7 +3210,7 @@ public open class CfnTheme internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnTheme.SheetStyleProperty):
-          SheetStyleProperty = Wrapper(cdkObject)
+          SheetStyleProperty = CdkObjectWrappers.wrap(cdkObject) as SheetStyleProperty
 
       internal fun unwrap(wrapped: SheetStyleProperty):
           software.amazon.awscdk.services.quicksight.CfnTheme.SheetStyleProperty = (wrapped as

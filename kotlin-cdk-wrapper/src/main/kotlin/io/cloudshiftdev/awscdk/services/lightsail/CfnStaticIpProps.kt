@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.lightsail
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -103,7 +104,7 @@ public interface CfnStaticIpProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnStaticIpProps):
-        CfnStaticIpProps = Wrapper(cdkObject)
+        CfnStaticIpProps = CdkObjectWrappers.wrap(cdkObject) as CfnStaticIpProps
 
     internal fun unwrap(wrapped: CfnStaticIpProps):
         software.amazon.awscdk.services.lightsail.CfnStaticIpProps = (wrapped as

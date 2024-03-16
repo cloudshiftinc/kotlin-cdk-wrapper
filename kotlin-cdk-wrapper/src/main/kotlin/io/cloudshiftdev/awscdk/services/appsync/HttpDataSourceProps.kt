@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -181,7 +182,7 @@ public interface HttpDataSourceProps : BaseDataSourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.HttpDataSourceProps):
-        HttpDataSourceProps = Wrapper(cdkObject)
+        HttpDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as HttpDataSourceProps
 
     internal fun unwrap(wrapped: HttpDataSourceProps):
         software.amazon.awscdk.services.appsync.HttpDataSourceProps = (wrapped as

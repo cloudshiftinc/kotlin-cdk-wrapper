@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -1026,7 +1027,7 @@ public open class CfnLoadBalancer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty):
-          SubnetMappingProperty = Wrapper(cdkObject)
+          SubnetMappingProperty = CdkObjectWrappers.wrap(cdkObject) as SubnetMappingProperty
 
       internal fun unwrap(wrapped: SubnetMappingProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.SubnetMappingProperty
@@ -1459,7 +1460,8 @@ public open class CfnLoadBalancer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.LoadBalancerAttributeProperty):
-          LoadBalancerAttributeProperty = Wrapper(cdkObject)
+          LoadBalancerAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as
+          LoadBalancerAttributeProperty
 
       internal fun unwrap(wrapped: LoadBalancerAttributeProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.LoadBalancerAttributeProperty

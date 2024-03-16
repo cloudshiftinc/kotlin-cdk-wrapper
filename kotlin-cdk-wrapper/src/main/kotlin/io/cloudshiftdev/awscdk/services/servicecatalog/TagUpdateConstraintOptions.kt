@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.servicecatalog
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -122,7 +123,7 @@ public interface TagUpdateConstraintOptions : CommonConstraintOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.TagUpdateConstraintOptions):
-        TagUpdateConstraintOptions = Wrapper(cdkObject)
+        TagUpdateConstraintOptions = CdkObjectWrappers.wrap(cdkObject) as TagUpdateConstraintOptions
 
     internal fun unwrap(wrapped: TagUpdateConstraintOptions):
         software.amazon.awscdk.services.servicecatalog.TagUpdateConstraintOptions = (wrapped as

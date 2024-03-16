@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.batch
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -53,10 +54,6 @@ public abstract class EcsVolume internal constructor(
    */
   public open fun readonly(): Boolean? = unwrap(this).getReadonly()
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.EcsVolume,
-  ) : EcsVolume(cdkObject)
-
   public companion object {
     public fun efs(options: EfsVolumeOptions): EfsVolume =
         software.amazon.awscdk.services.batch.EcsVolume.efs(options.let(EfsVolumeOptions::unwrap)).let(EfsVolume::wrap)
@@ -75,7 +72,7 @@ public abstract class EcsVolume internal constructor(
         host(HostVolumeOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.EcsVolume): EcsVolume =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as EcsVolume
 
     internal fun unwrap(wrapped: EcsVolume): software.amazon.awscdk.services.batch.EcsVolume =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.batch.EcsVolume

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.apprunner
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -266,7 +267,8 @@ public interface CfnAutoScalingConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apprunner.CfnAutoScalingConfigurationProps):
-        CfnAutoScalingConfigurationProps = Wrapper(cdkObject)
+        CfnAutoScalingConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnAutoScalingConfigurationProps
 
     internal fun unwrap(wrapped: CfnAutoScalingConfigurationProps):
         software.amazon.awscdk.services.apprunner.CfnAutoScalingConfigurationProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.pipelines
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -229,7 +230,7 @@ public interface ConnectionSourceOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.ConnectionSourceOptions):
-        ConnectionSourceOptions = Wrapper(cdkObject)
+        ConnectionSourceOptions = CdkObjectWrappers.wrap(cdkObject) as ConnectionSourceOptions
 
     internal fun unwrap(wrapped: ConnectionSourceOptions):
         software.amazon.awscdk.pipelines.ConnectionSourceOptions = (wrapped as CdkObject).cdkObject

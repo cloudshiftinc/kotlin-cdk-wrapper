@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.oam
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -165,7 +166,7 @@ public interface CfnSinkProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.oam.CfnSinkProps): CfnSinkProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as CfnSinkProps
 
     internal fun unwrap(wrapped: CfnSinkProps): software.amazon.awscdk.services.oam.CfnSinkProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.oam.CfnSinkProps

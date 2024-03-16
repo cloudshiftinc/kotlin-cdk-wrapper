@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.lambda.IVersion
 import kotlin.Boolean
 import kotlin.Unit
@@ -145,7 +146,7 @@ public interface EdgeLambda {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.EdgeLambda): EdgeLambda
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as EdgeLambda
 
     internal fun unwrap(wrapped: EdgeLambda): software.amazon.awscdk.services.cloudfront.EdgeLambda
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cloudfront.EdgeLambda

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.actions
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cognito.IUserPool
 import io.cloudshiftdev.awscdk.services.cognito.IUserPoolClient
 import io.cloudshiftdev.awscdk.services.cognito.IUserPoolDomain
@@ -403,7 +404,8 @@ public interface AuthenticateCognitoActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.actions.AuthenticateCognitoActionProps):
-        AuthenticateCognitoActionProps = Wrapper(cdkObject)
+        AuthenticateCognitoActionProps = CdkObjectWrappers.wrap(cdkObject) as
+        AuthenticateCognitoActionProps
 
     internal fun unwrap(wrapped: AuthenticateCognitoActionProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.actions.AuthenticateCognitoActionProps

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.ISamlProvider
 import kotlin.Any
 import kotlin.String
@@ -35,10 +36,6 @@ public abstract class ClientVpnUserBasedAuthentication internal constructor(
    */
   public open fun render(): Any = unwrap(this).render()
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.ClientVpnUserBasedAuthentication,
-  ) : ClientVpnUserBasedAuthentication(cdkObject)
-
   public companion object {
     public fun activeDirectory(directoryId: String): ClientVpnUserBasedAuthentication =
         software.amazon.awscdk.services.ec2.ClientVpnUserBasedAuthentication.activeDirectory(directoryId).let(ClientVpnUserBasedAuthentication::wrap)
@@ -53,7 +50,8 @@ public abstract class ClientVpnUserBasedAuthentication internal constructor(
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.ClientVpnUserBasedAuthentication):
-        ClientVpnUserBasedAuthentication = Wrapper(cdkObject)
+        ClientVpnUserBasedAuthentication = CdkObjectWrappers.wrap(cdkObject) as
+        ClientVpnUserBasedAuthentication
 
     internal fun unwrap(wrapped: ClientVpnUserBasedAuthentication):
         software.amazon.awscdk.services.ec2.ClientVpnUserBasedAuthentication = (wrapped as

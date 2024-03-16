@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.logs.ILogGroup
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.Boolean
@@ -221,7 +222,8 @@ public interface ExecuteCommandLogConfiguration {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ExecuteCommandLogConfiguration):
-        ExecuteCommandLogConfiguration = Wrapper(cdkObject)
+        ExecuteCommandLogConfiguration = CdkObjectWrappers.wrap(cdkObject) as
+        ExecuteCommandLogConfiguration
 
     internal fun unwrap(wrapped: ExecuteCommandLogConfiguration):
         software.amazon.awscdk.services.ecs.ExecuteCommandLogConfiguration = (wrapped as

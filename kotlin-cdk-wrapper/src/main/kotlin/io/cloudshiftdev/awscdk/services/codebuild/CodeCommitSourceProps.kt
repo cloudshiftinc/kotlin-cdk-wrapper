@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codecommit.IRepository
 import kotlin.Boolean
 import kotlin.Number
@@ -206,7 +207,7 @@ public interface CodeCommitSourceProps : SourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CodeCommitSourceProps):
-        CodeCommitSourceProps = Wrapper(cdkObject)
+        CodeCommitSourceProps = CdkObjectWrappers.wrap(cdkObject) as CodeCommitSourceProps
 
     internal fun unwrap(wrapped: CodeCommitSourceProps):
         software.amazon.awscdk.services.codebuild.CodeCommitSourceProps = (wrapped as

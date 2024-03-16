@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -304,7 +305,7 @@ public interface SecurityGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.SecurityGroupProps):
-        SecurityGroupProps = Wrapper(cdkObject)
+        SecurityGroupProps = CdkObjectWrappers.wrap(cdkObject) as SecurityGroupProps
 
     internal fun unwrap(wrapped: SecurityGroupProps):
         software.amazon.awscdk.services.ec2.SecurityGroupProps = (wrapped as CdkObject).cdkObject as

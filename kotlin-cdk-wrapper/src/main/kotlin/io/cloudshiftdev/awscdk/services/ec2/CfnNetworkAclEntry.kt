@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -701,7 +702,7 @@ public open class CfnNetworkAclEntry internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkAclEntry.IcmpProperty):
-          IcmpProperty = Wrapper(cdkObject)
+          IcmpProperty = CdkObjectWrappers.wrap(cdkObject) as IcmpProperty
 
       internal fun unwrap(wrapped: IcmpProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkAclEntry.IcmpProperty = (wrapped as
@@ -820,7 +821,7 @@ public open class CfnNetworkAclEntry internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkAclEntry.PortRangeProperty):
-          PortRangeProperty = Wrapper(cdkObject)
+          PortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as PortRangeProperty
 
       internal fun unwrap(wrapped: PortRangeProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkAclEntry.PortRangeProperty = (wrapped as

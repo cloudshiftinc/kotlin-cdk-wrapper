@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.opensearchserverless
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -275,7 +276,7 @@ public interface CfnCollectionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnCollectionProps):
-        CfnCollectionProps = Wrapper(cdkObject)
+        CfnCollectionProps = CdkObjectWrappers.wrap(cdkObject) as CfnCollectionProps
 
     internal fun unwrap(wrapped: CfnCollectionProps):
         software.amazon.awscdk.services.opensearchserverless.CfnCollectionProps = (wrapped as

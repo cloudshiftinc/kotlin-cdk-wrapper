@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.resourceexplorer2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -90,7 +91,8 @@ public interface CfnDefaultViewAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnDefaultViewAssociationProps):
-        CfnDefaultViewAssociationProps = Wrapper(cdkObject)
+        CfnDefaultViewAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnDefaultViewAssociationProps
 
     internal fun unwrap(wrapped: CfnDefaultViewAssociationProps):
         software.amazon.awscdk.services.resourceexplorer2.CfnDefaultViewAssociationProps = (wrapped

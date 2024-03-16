@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.Unit
@@ -150,7 +151,8 @@ public interface NetworkUtilizationScalingProps : BaseTargetTrackingProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.NetworkUtilizationScalingProps):
-        NetworkUtilizationScalingProps = Wrapper(cdkObject)
+        NetworkUtilizationScalingProps = CdkObjectWrappers.wrap(cdkObject) as
+        NetworkUtilizationScalingProps
 
     internal fun unwrap(wrapped: NetworkUtilizationScalingProps):
         software.amazon.awscdk.services.autoscaling.NetworkUtilizationScalingProps = (wrapped as

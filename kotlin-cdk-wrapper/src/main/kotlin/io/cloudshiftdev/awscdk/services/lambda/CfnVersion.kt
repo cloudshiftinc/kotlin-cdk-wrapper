@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -498,7 +499,8 @@ public open class CfnVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnVersion.ProvisionedConcurrencyConfigurationProperty):
-          ProvisionedConcurrencyConfigurationProperty = Wrapper(cdkObject)
+          ProvisionedConcurrencyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ProvisionedConcurrencyConfigurationProperty
 
       internal fun unwrap(wrapped: ProvisionedConcurrencyConfigurationProperty):
           software.amazon.awscdk.services.lambda.CfnVersion.ProvisionedConcurrencyConfigurationProperty
@@ -612,7 +614,7 @@ public open class CfnVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnVersion.RuntimePolicyProperty):
-          RuntimePolicyProperty = Wrapper(cdkObject)
+          RuntimePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as RuntimePolicyProperty
 
       internal fun unwrap(wrapped: RuntimePolicyProperty):
           software.amazon.awscdk.services.lambda.CfnVersion.RuntimePolicyProperty = (wrapped as

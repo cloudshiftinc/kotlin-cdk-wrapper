@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -679,7 +680,7 @@ public interface CfnStageProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnStageProps):
-        CfnStageProps = Wrapper(cdkObject)
+        CfnStageProps = CdkObjectWrappers.wrap(cdkObject) as CfnStageProps
 
     internal fun unwrap(wrapped: CfnStageProps):
         software.amazon.awscdk.services.apigateway.CfnStageProps = (wrapped as CdkObject).cdkObject

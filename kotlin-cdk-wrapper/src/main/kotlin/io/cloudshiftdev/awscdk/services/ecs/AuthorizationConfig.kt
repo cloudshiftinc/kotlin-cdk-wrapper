@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -131,7 +132,7 @@ public interface AuthorizationConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.AuthorizationConfig):
-        AuthorizationConfig = Wrapper(cdkObject)
+        AuthorizationConfig = CdkObjectWrappers.wrap(cdkObject) as AuthorizationConfig
 
     internal fun unwrap(wrapped: AuthorizationConfig):
         software.amazon.awscdk.services.ecs.AuthorizationConfig = (wrapped as CdkObject).cdkObject

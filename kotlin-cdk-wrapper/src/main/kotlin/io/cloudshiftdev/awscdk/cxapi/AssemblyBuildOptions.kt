@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cxapi
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -41,7 +42,7 @@ public interface AssemblyBuildOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.AssemblyBuildOptions):
-        AssemblyBuildOptions = Wrapper(cdkObject)
+        AssemblyBuildOptions = CdkObjectWrappers.wrap(cdkObject) as AssemblyBuildOptions
 
     internal fun unwrap(wrapped: AssemblyBuildOptions):
         software.amazon.awscdk.cxapi.AssemblyBuildOptions = (wrapped as CdkObject).cdkObject as

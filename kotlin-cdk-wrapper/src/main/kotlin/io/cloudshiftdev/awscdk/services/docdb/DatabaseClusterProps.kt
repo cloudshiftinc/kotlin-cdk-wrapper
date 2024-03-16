@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.docdb
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.InstanceType
@@ -916,7 +917,7 @@ public interface DatabaseClusterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.docdb.DatabaseClusterProps):
-        DatabaseClusterProps = Wrapper(cdkObject)
+        DatabaseClusterProps = CdkObjectWrappers.wrap(cdkObject) as DatabaseClusterProps
 
     internal fun unwrap(wrapped: DatabaseClusterProps):
         software.amazon.awscdk.services.docdb.DatabaseClusterProps = (wrapped as

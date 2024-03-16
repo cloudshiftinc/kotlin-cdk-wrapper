@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -419,7 +420,7 @@ public open class CfnMetricFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.logs.CfnMetricFilter.DimensionProperty):
-          DimensionProperty = Wrapper(cdkObject)
+          DimensionProperty = CdkObjectWrappers.wrap(cdkObject) as DimensionProperty
 
       internal fun unwrap(wrapped: DimensionProperty):
           software.amazon.awscdk.services.logs.CfnMetricFilter.DimensionProperty = (wrapped as
@@ -834,7 +835,8 @@ public open class CfnMetricFilter internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.logs.CfnMetricFilter.MetricTransformationProperty):
-          MetricTransformationProperty = Wrapper(cdkObject)
+          MetricTransformationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MetricTransformationProperty
 
       internal fun unwrap(wrapped: MetricTransformationProperty):
           software.amazon.awscdk.services.logs.CfnMetricFilter.MetricTransformationProperty =

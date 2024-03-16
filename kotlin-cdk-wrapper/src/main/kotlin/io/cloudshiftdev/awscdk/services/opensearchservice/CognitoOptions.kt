@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.opensearchservice
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.String
 import kotlin.Unit
@@ -139,7 +140,7 @@ public interface CognitoOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CognitoOptions):
-        CognitoOptions = Wrapper(cdkObject)
+        CognitoOptions = CdkObjectWrappers.wrap(cdkObject) as CognitoOptions
 
     internal fun unwrap(wrapped: CognitoOptions):
         software.amazon.awscdk.services.opensearchservice.CognitoOptions = (wrapped as

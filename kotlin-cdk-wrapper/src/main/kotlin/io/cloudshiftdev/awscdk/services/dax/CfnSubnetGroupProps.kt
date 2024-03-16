@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.dax
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -140,7 +141,7 @@ public interface CfnSubnetGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dax.CfnSubnetGroupProps):
-        CfnSubnetGroupProps = Wrapper(cdkObject)
+        CfnSubnetGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnSubnetGroupProps
 
     internal fun unwrap(wrapped: CfnSubnetGroupProps):
         software.amazon.awscdk.services.dax.CfnSubnetGroupProps = (wrapped as CdkObject).cdkObject

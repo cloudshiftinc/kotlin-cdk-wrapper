@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.glue
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -132,7 +133,8 @@ public interface CfnSchemaVersionMetadataProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSchemaVersionMetadataProps):
-        CfnSchemaVersionMetadataProps = Wrapper(cdkObject)
+        CfnSchemaVersionMetadataProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnSchemaVersionMetadataProps
 
     internal fun unwrap(wrapped: CfnSchemaVersionMetadataProps):
         software.amazon.awscdk.services.glue.CfnSchemaVersionMetadataProps = (wrapped as

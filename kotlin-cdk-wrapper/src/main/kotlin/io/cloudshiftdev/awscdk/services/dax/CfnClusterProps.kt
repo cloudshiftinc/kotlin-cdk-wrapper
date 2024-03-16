@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.dax
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -663,7 +664,7 @@ public interface CfnClusterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dax.CfnClusterProps):
-        CfnClusterProps = Wrapper(cdkObject)
+        CfnClusterProps = CdkObjectWrappers.wrap(cdkObject) as CfnClusterProps
 
     internal fun unwrap(wrapped: CfnClusterProps):
         software.amazon.awscdk.services.dax.CfnClusterProps = (wrapped as CdkObject).cdkObject as

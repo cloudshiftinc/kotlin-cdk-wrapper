@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -319,7 +320,7 @@ public interface CfnRouteProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.refactorspaces.CfnRouteProps):
-        CfnRouteProps = Wrapper(cdkObject)
+        CfnRouteProps = CdkObjectWrappers.wrap(cdkObject) as CfnRouteProps
 
     internal fun unwrap(wrapped: CfnRouteProps):
         software.amazon.awscdk.services.refactorspaces.CfnRouteProps = (wrapped as

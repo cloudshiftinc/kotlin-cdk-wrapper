@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -806,7 +807,8 @@ public open class CfnLicense internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty):
-          ProvisionalConfigurationProperty = Wrapper(cdkObject)
+          ProvisionalConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ProvisionalConfigurationProperty
 
       internal fun unwrap(wrapped: ProvisionalConfigurationProperty):
           software.amazon.awscdk.services.licensemanager.CfnLicense.ProvisionalConfigurationProperty
@@ -913,7 +915,7 @@ public open class CfnLicense internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty):
-          MetadataProperty = Wrapper(cdkObject)
+          MetadataProperty = CdkObjectWrappers.wrap(cdkObject) as MetadataProperty
 
       internal fun unwrap(wrapped: MetadataProperty):
           software.amazon.awscdk.services.licensemanager.CfnLicense.MetadataProperty = (wrapped as
@@ -1166,7 +1168,7 @@ public open class CfnLicense internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty):
-          EntitlementProperty = Wrapper(cdkObject)
+          EntitlementProperty = CdkObjectWrappers.wrap(cdkObject) as EntitlementProperty
 
       internal fun unwrap(wrapped: EntitlementProperty):
           software.amazon.awscdk.services.licensemanager.CfnLicense.EntitlementProperty = (wrapped
@@ -1275,7 +1277,8 @@ public open class CfnLicense internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty):
-          ValidityDateFormatProperty = Wrapper(cdkObject)
+          ValidityDateFormatProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ValidityDateFormatProperty
 
       internal fun unwrap(wrapped: ValidityDateFormatProperty):
           software.amazon.awscdk.services.licensemanager.CfnLicense.ValidityDateFormatProperty =
@@ -1394,7 +1397,7 @@ public open class CfnLicense internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty):
-          IssuerDataProperty = Wrapper(cdkObject)
+          IssuerDataProperty = CdkObjectWrappers.wrap(cdkObject) as IssuerDataProperty
 
       internal fun unwrap(wrapped: IssuerDataProperty):
           software.amazon.awscdk.services.licensemanager.CfnLicense.IssuerDataProperty = (wrapped as
@@ -1515,7 +1518,8 @@ public open class CfnLicense internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.BorrowConfigurationProperty):
-          BorrowConfigurationProperty = Wrapper(cdkObject)
+          BorrowConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          BorrowConfigurationProperty
 
       internal fun unwrap(wrapped: BorrowConfigurationProperty):
           software.amazon.awscdk.services.licensemanager.CfnLicense.BorrowConfigurationProperty =
@@ -1718,7 +1722,8 @@ public open class CfnLicense internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.licensemanager.CfnLicense.ConsumptionConfigurationProperty):
-          ConsumptionConfigurationProperty = Wrapper(cdkObject)
+          ConsumptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ConsumptionConfigurationProperty
 
       internal fun unwrap(wrapped: ConsumptionConfigurationProperty):
           software.amazon.awscdk.services.licensemanager.CfnLicense.ConsumptionConfigurationProperty

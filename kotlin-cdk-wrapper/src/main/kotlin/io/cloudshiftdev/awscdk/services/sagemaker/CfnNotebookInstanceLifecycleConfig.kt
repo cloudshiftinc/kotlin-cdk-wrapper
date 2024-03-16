@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -413,7 +414,8 @@ public open class CfnNotebookInstanceLifecycleConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig.NotebookInstanceLifecycleHookProperty):
-          NotebookInstanceLifecycleHookProperty = Wrapper(cdkObject)
+          NotebookInstanceLifecycleHookProperty = CdkObjectWrappers.wrap(cdkObject) as
+          NotebookInstanceLifecycleHookProperty
 
       internal fun unwrap(wrapped: NotebookInstanceLifecycleHookProperty):
           software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig.NotebookInstanceLifecycleHookProperty

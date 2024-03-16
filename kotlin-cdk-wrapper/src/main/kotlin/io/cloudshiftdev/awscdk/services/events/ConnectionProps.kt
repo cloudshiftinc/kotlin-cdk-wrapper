@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.events
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -219,7 +220,7 @@ public interface ConnectionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.ConnectionProps):
-        ConnectionProps = Wrapper(cdkObject)
+        ConnectionProps = CdkObjectWrappers.wrap(cdkObject) as ConnectionProps
 
     internal fun unwrap(wrapped: ConnectionProps):
         software.amazon.awscdk.services.events.ConnectionProps = (wrapped as CdkObject).cdkObject as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -133,7 +134,7 @@ public interface CfnCachePolicyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicyProps):
-        CfnCachePolicyProps = Wrapper(cdkObject)
+        CfnCachePolicyProps = CdkObjectWrappers.wrap(cdkObject) as CfnCachePolicyProps
 
     internal fun unwrap(wrapped: CfnCachePolicyProps):
         software.amazon.awscdk.services.cloudfront.CfnCachePolicyProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -409,7 +410,7 @@ public interface NestedStackProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.NestedStackProps): NestedStackProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as NestedStackProps
 
     internal fun unwrap(wrapped: NestedStackProps): software.amazon.awscdk.NestedStackProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.NestedStackProps

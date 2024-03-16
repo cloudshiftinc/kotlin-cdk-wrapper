@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigatewayv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -301,7 +302,7 @@ public interface WebSocketApiProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketApiProps):
-        WebSocketApiProps = Wrapper(cdkObject)
+        WebSocketApiProps = CdkObjectWrappers.wrap(cdkObject) as WebSocketApiProps
 
     internal fun unwrap(wrapped: WebSocketApiProps):
         software.amazon.awscdk.services.apigatewayv2.WebSocketApiProps = (wrapped as

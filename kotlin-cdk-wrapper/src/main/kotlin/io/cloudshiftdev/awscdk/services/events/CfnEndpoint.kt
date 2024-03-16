@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -571,7 +572,7 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.SecondaryProperty):
-          SecondaryProperty = Wrapper(cdkObject)
+          SecondaryProperty = CdkObjectWrappers.wrap(cdkObject) as SecondaryProperty
 
       internal fun unwrap(wrapped: SecondaryProperty):
           software.amazon.awscdk.services.events.CfnEndpoint.SecondaryProperty = (wrapped as
@@ -695,7 +696,7 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty):
-          RoutingConfigProperty = Wrapper(cdkObject)
+          RoutingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as RoutingConfigProperty
 
       internal fun unwrap(wrapped: RoutingConfigProperty):
           software.amazon.awscdk.services.events.CfnEndpoint.RoutingConfigProperty = (wrapped as
@@ -870,7 +871,7 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.FailoverConfigProperty):
-          FailoverConfigProperty = Wrapper(cdkObject)
+          FailoverConfigProperty = CdkObjectWrappers.wrap(cdkObject) as FailoverConfigProperty
 
       internal fun unwrap(wrapped: FailoverConfigProperty):
           software.amazon.awscdk.services.events.CfnEndpoint.FailoverConfigProperty = (wrapped as
@@ -951,7 +952,7 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.ReplicationConfigProperty):
-          ReplicationConfigProperty = Wrapper(cdkObject)
+          ReplicationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as ReplicationConfigProperty
 
       internal fun unwrap(wrapped: ReplicationConfigProperty):
           software.amazon.awscdk.services.events.CfnEndpoint.ReplicationConfigProperty = (wrapped as
@@ -1032,7 +1033,7 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.EndpointEventBusProperty):
-          EndpointEventBusProperty = Wrapper(cdkObject)
+          EndpointEventBusProperty = CdkObjectWrappers.wrap(cdkObject) as EndpointEventBusProperty
 
       internal fun unwrap(wrapped: EndpointEventBusProperty):
           software.amazon.awscdk.services.events.CfnEndpoint.EndpointEventBusProperty = (wrapped as
@@ -1114,7 +1115,7 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnEndpoint.PrimaryProperty):
-          PrimaryProperty = Wrapper(cdkObject)
+          PrimaryProperty = CdkObjectWrappers.wrap(cdkObject) as PrimaryProperty
 
       internal fun unwrap(wrapped: PrimaryProperty):
           software.amazon.awscdk.services.events.CfnEndpoint.PrimaryProperty = (wrapped as

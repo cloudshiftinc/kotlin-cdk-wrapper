@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.omics
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -222,7 +223,7 @@ public interface CfnSequenceStoreProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnSequenceStoreProps):
-        CfnSequenceStoreProps = Wrapper(cdkObject)
+        CfnSequenceStoreProps = CdkObjectWrappers.wrap(cdkObject) as CfnSequenceStoreProps
 
     internal fun unwrap(wrapped: CfnSequenceStoreProps):
         software.amazon.awscdk.services.omics.CfnSequenceStoreProps = (wrapped as

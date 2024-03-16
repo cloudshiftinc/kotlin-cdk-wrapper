@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -461,7 +462,7 @@ public interface CfnNatGatewayProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNatGatewayProps):
-        CfnNatGatewayProps = Wrapper(cdkObject)
+        CfnNatGatewayProps = CdkObjectWrappers.wrap(cdkObject) as CfnNatGatewayProps
 
     internal fun unwrap(wrapped: CfnNatGatewayProps):
         software.amazon.awscdk.services.ec2.CfnNatGatewayProps = (wrapped as CdkObject).cdkObject as

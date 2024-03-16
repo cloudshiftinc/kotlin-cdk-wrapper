@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.glue
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -168,7 +169,7 @@ public interface CfnDatabaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDatabaseProps):
-        CfnDatabaseProps = Wrapper(cdkObject)
+        CfnDatabaseProps = CdkObjectWrappers.wrap(cdkObject) as CfnDatabaseProps
 
     internal fun unwrap(wrapped: CfnDatabaseProps):
         software.amazon.awscdk.services.glue.CfnDatabaseProps = (wrapped as CdkObject).cdkObject as

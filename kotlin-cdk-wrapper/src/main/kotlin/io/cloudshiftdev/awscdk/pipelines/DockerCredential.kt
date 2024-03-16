@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.pipelines
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecr.IRepository
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
@@ -51,10 +52,6 @@ public abstract class DockerCredential internal constructor(
     unwrap(this).grantRead(grantee.let(IGrantable::unwrap),
         usage.let(DockerCredentialUsage::unwrap))
   }
-
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.DockerCredential,
-  ) : DockerCredential(cdkObject)
 
   public companion object {
     public fun customRegistry(registryDomain: String, secret: ISecret): DockerCredential =
@@ -108,7 +105,7 @@ public abstract class DockerCredential internal constructor(
         EcrDockerCredentialOptions(opts))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.DockerCredential):
-        DockerCredential = Wrapper(cdkObject)
+        DockerCredential = CdkObjectWrappers.wrap(cdkObject) as DockerCredential
 
     internal fun unwrap(wrapped: DockerCredential):
         software.amazon.awscdk.pipelines.DockerCredential = (wrapped as CdkObject).cdkObject as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.CommonAwsActionProps
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.sns.ITopic
@@ -292,7 +293,7 @@ public interface ManualApprovalActionProps : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.ManualApprovalActionProps):
-        ManualApprovalActionProps = Wrapper(cdkObject)
+        ManualApprovalActionProps = CdkObjectWrappers.wrap(cdkObject) as ManualApprovalActionProps
 
     internal fun unwrap(wrapped: ManualApprovalActionProps):
         software.amazon.awscdk.services.codepipeline.actions.ManualApprovalActionProps = (wrapped as

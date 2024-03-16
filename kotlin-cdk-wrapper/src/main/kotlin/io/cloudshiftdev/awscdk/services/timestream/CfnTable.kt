@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -698,7 +699,8 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreWritePropertiesProperty):
-          MagneticStoreWritePropertiesProperty = Wrapper(cdkObject)
+          MagneticStoreWritePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MagneticStoreWritePropertiesProperty
 
       internal fun unwrap(wrapped: MagneticStoreWritePropertiesProperty):
           software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreWritePropertiesProperty =
@@ -869,7 +871,7 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnTable.S3ConfigurationProperty):
-          S3ConfigurationProperty = Wrapper(cdkObject)
+          S3ConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as S3ConfigurationProperty
 
       internal fun unwrap(wrapped: S3ConfigurationProperty):
           software.amazon.awscdk.services.timestream.CfnTable.S3ConfigurationProperty = (wrapped as
@@ -995,7 +997,8 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreRejectedDataLocationProperty):
-          MagneticStoreRejectedDataLocationProperty = Wrapper(cdkObject)
+          MagneticStoreRejectedDataLocationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MagneticStoreRejectedDataLocationProperty
 
       internal fun unwrap(wrapped: MagneticStoreRejectedDataLocationProperty):
           software.amazon.awscdk.services.timestream.CfnTable.MagneticStoreRejectedDataLocationProperty
@@ -1152,7 +1155,7 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnTable.PartitionKeyProperty):
-          PartitionKeyProperty = Wrapper(cdkObject)
+          PartitionKeyProperty = CdkObjectWrappers.wrap(cdkObject) as PartitionKeyProperty
 
       internal fun unwrap(wrapped: PartitionKeyProperty):
           software.amazon.awscdk.services.timestream.CfnTable.PartitionKeyProperty = (wrapped as
@@ -1292,7 +1295,7 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnTable.SchemaProperty):
-          SchemaProperty = Wrapper(cdkObject)
+          SchemaProperty = CdkObjectWrappers.wrap(cdkObject) as SchemaProperty
 
       internal fun unwrap(wrapped: SchemaProperty):
           software.amazon.awscdk.services.timestream.CfnTable.SchemaProperty = (wrapped as
@@ -1408,7 +1411,8 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnTable.RetentionPropertiesProperty):
-          RetentionPropertiesProperty = Wrapper(cdkObject)
+          RetentionPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
+          RetentionPropertiesProperty
 
       internal fun unwrap(wrapped: RetentionPropertiesProperty):
           software.amazon.awscdk.services.timestream.CfnTable.RetentionPropertiesProperty = (wrapped

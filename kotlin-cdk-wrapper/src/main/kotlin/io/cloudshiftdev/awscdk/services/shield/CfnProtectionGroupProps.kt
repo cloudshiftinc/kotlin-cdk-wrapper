@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.shield
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -344,7 +345,7 @@ public interface CfnProtectionGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.shield.CfnProtectionGroupProps):
-        CfnProtectionGroupProps = Wrapper(cdkObject)
+        CfnProtectionGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnProtectionGroupProps
 
     internal fun unwrap(wrapped: CfnProtectionGroupProps):
         software.amazon.awscdk.services.shield.CfnProtectionGroupProps = (wrapped as

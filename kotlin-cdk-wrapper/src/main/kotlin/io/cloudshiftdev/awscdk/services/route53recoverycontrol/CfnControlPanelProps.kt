@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.route53recoverycontrol
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -154,7 +155,7 @@ public interface CfnControlPanelProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnControlPanelProps):
-        CfnControlPanelProps = Wrapper(cdkObject)
+        CfnControlPanelProps = CdkObjectWrappers.wrap(cdkObject) as CfnControlPanelProps
 
     internal fun unwrap(wrapped: CfnControlPanelProps):
         software.amazon.awscdk.services.route53recoverycontrol.CfnControlPanelProps = (wrapped as

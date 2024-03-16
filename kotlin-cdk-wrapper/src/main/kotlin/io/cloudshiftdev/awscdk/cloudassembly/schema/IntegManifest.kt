@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -276,7 +277,7 @@ public interface IntegManifest {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.IntegManifest):
-        IntegManifest = Wrapper(cdkObject)
+        IntegManifest = CdkObjectWrappers.wrap(cdkObject) as IntegManifest
 
     internal fun unwrap(wrapped: IntegManifest):
         software.amazon.awscdk.cloudassembly.schema.IntegManifest = (wrapped as CdkObject).cdkObject

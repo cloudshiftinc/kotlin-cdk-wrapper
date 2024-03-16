@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.healthimaging
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -135,7 +136,7 @@ public interface CfnDatastoreProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.healthimaging.CfnDatastoreProps):
-        CfnDatastoreProps = Wrapper(cdkObject)
+        CfnDatastoreProps = CdkObjectWrappers.wrap(cdkObject) as CfnDatastoreProps
 
     internal fun unwrap(wrapped: CfnDatastoreProps):
         software.amazon.awscdk.services.healthimaging.CfnDatastoreProps = (wrapped as

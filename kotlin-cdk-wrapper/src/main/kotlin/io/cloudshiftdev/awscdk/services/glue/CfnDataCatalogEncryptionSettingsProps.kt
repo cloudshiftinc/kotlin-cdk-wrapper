@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.glue
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -159,7 +160,8 @@ public interface CfnDataCatalogEncryptionSettingsProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettingsProps):
-        CfnDataCatalogEncryptionSettingsProps = Wrapper(cdkObject)
+        CfnDataCatalogEncryptionSettingsProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnDataCatalogEncryptionSettingsProps
 
     internal fun unwrap(wrapped: CfnDataCatalogEncryptionSettingsProps):
         software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettingsProps = (wrapped as

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -38,10 +39,6 @@ public abstract class FunctionCode internal constructor(
    */
   public open fun render(): String = unwrap(this).render()
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.FunctionCode,
-  ) : FunctionCode(cdkObject)
-
   public companion object {
     public fun fromFile(options: FileCodeOptions): FunctionCode =
         software.amazon.awscdk.services.cloudfront.FunctionCode.fromFile(options.let(FileCodeOptions::unwrap)).let(FunctionCode::wrap)
@@ -55,7 +52,7 @@ public abstract class FunctionCode internal constructor(
         software.amazon.awscdk.services.cloudfront.FunctionCode.fromInline(code).let(FunctionCode::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.FunctionCode):
-        FunctionCode = Wrapper(cdkObject)
+        FunctionCode = CdkObjectWrappers.wrap(cdkObject) as FunctionCode
 
     internal fun unwrap(wrapped: FunctionCode):
         software.amazon.awscdk.services.cloudfront.FunctionCode = (wrapped as CdkObject).cdkObject

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigatewayv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -74,7 +75,7 @@ public interface BatchHttpRouteOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.BatchHttpRouteOptions):
-        BatchHttpRouteOptions = Wrapper(cdkObject)
+        BatchHttpRouteOptions = CdkObjectWrappers.wrap(cdkObject) as BatchHttpRouteOptions
 
     internal fun unwrap(wrapped: BatchHttpRouteOptions):
         software.amazon.awscdk.services.apigatewayv2.BatchHttpRouteOptions = (wrapped as

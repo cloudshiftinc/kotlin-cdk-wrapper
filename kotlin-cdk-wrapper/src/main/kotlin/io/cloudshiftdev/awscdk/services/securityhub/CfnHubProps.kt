@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.securityhub
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -305,7 +306,7 @@ public interface CfnHubProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnHubProps):
-        CfnHubProps = Wrapper(cdkObject)
+        CfnHubProps = CdkObjectWrappers.wrap(cdkObject) as CfnHubProps
 
     internal fun unwrap(wrapped: CfnHubProps):
         software.amazon.awscdk.services.securityhub.CfnHubProps = (wrapped as CdkObject).cdkObject

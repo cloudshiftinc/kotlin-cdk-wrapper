@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.servicecatalog
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -360,7 +361,7 @@ public interface CloudFormationProductProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CloudFormationProductProps):
-        CloudFormationProductProps = Wrapper(cdkObject)
+        CloudFormationProductProps = CdkObjectWrappers.wrap(cdkObject) as CloudFormationProductProps
 
     internal fun unwrap(wrapped: CloudFormationProductProps):
         software.amazon.awscdk.services.servicecatalog.CloudFormationProductProps = (wrapped as

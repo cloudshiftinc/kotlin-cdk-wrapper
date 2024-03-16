@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.route53
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -80,7 +81,7 @@ public interface CfnDNSSECProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnDNSSECProps):
-        CfnDNSSECProps = Wrapper(cdkObject)
+        CfnDNSSECProps = CdkObjectWrappers.wrap(cdkObject) as CfnDNSSECProps
 
     internal fun unwrap(wrapped: CfnDNSSECProps):
         software.amazon.awscdk.services.route53.CfnDNSSECProps = (wrapped as CdkObject).cdkObject as

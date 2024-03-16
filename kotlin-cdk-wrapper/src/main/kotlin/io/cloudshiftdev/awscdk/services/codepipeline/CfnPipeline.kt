@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1224,7 +1225,7 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty):
-          OutputArtifactProperty = Wrapper(cdkObject)
+          OutputArtifactProperty = CdkObjectWrappers.wrap(cdkObject) as OutputArtifactProperty
 
       internal fun unwrap(wrapped: OutputArtifactProperty):
           software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty = (wrapped
@@ -1367,7 +1368,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitTagFilterCriteriaProperty):
-          GitTagFilterCriteriaProperty = Wrapper(cdkObject)
+          GitTagFilterCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as
+          GitTagFilterCriteriaProperty
 
       internal fun unwrap(wrapped: GitTagFilterCriteriaProperty):
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitTagFilterCriteriaProperty =
@@ -1490,7 +1492,7 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty):
-          StageTransitionProperty = Wrapper(cdkObject)
+          StageTransitionProperty = CdkObjectWrappers.wrap(cdkObject) as StageTransitionProperty
 
       internal fun unwrap(wrapped: StageTransitionProperty):
           software.amazon.awscdk.services.codepipeline.CfnPipeline.StageTransitionProperty =
@@ -1739,7 +1741,7 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitConfigurationProperty):
-          GitConfigurationProperty = Wrapper(cdkObject)
+          GitConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as GitConfigurationProperty
 
       internal fun unwrap(wrapped: GitConfigurationProperty):
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitConfigurationProperty =
@@ -1858,7 +1860,7 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.InputArtifactProperty):
-          InputArtifactProperty = Wrapper(cdkObject)
+          InputArtifactProperty = CdkObjectWrappers.wrap(cdkObject) as InputArtifactProperty
 
       internal fun unwrap(wrapped: InputArtifactProperty):
           software.amazon.awscdk.services.codepipeline.CfnPipeline.InputArtifactProperty = (wrapped
@@ -2044,7 +2046,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty):
-          PipelineTriggerDeclarationProperty = Wrapper(cdkObject)
+          PipelineTriggerDeclarationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          PipelineTriggerDeclarationProperty
 
       internal fun unwrap(wrapped: PipelineTriggerDeclarationProperty):
           software.amazon.awscdk.services.codepipeline.CfnPipeline.PipelineTriggerDeclarationProperty
@@ -2288,7 +2291,7 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionTypeIdProperty):
-          ActionTypeIdProperty = Wrapper(cdkObject)
+          ActionTypeIdProperty = CdkObjectWrappers.wrap(cdkObject) as ActionTypeIdProperty
 
       internal fun unwrap(wrapped: ActionTypeIdProperty):
           software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionTypeIdProperty = (wrapped
@@ -2515,7 +2518,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPullRequestFilterProperty):
-          GitPullRequestFilterProperty = Wrapper(cdkObject)
+          GitPullRequestFilterProperty = CdkObjectWrappers.wrap(cdkObject) as
+          GitPullRequestFilterProperty
 
       internal fun unwrap(wrapped: GitPullRequestFilterProperty):
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPullRequestFilterProperty =
@@ -2708,7 +2712,7 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreMapProperty):
-          ArtifactStoreMapProperty = Wrapper(cdkObject)
+          ArtifactStoreMapProperty = CdkObjectWrappers.wrap(cdkObject) as ArtifactStoreMapProperty
 
       internal fun unwrap(wrapped: ArtifactStoreMapProperty):
           software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreMapProperty =
@@ -2935,7 +2939,7 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty):
-          ArtifactStoreProperty = Wrapper(cdkObject)
+          ArtifactStoreProperty = CdkObjectWrappers.wrap(cdkObject) as ArtifactStoreProperty
 
       internal fun unwrap(wrapped: ArtifactStoreProperty):
           software.amazon.awscdk.services.codepipeline.CfnPipeline.ArtifactStoreProperty = (wrapped
@@ -3044,7 +3048,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty):
-          BlockerDeclarationProperty = Wrapper(cdkObject)
+          BlockerDeclarationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          BlockerDeclarationProperty
 
       internal fun unwrap(wrapped: BlockerDeclarationProperty):
           software.amazon.awscdk.services.codepipeline.CfnPipeline.BlockerDeclarationProperty =
@@ -3249,7 +3254,7 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.StageDeclarationProperty):
-          StageDeclarationProperty = Wrapper(cdkObject)
+          StageDeclarationProperty = CdkObjectWrappers.wrap(cdkObject) as StageDeclarationProperty
 
       internal fun unwrap(wrapped: StageDeclarationProperty):
           software.amazon.awscdk.services.codepipeline.CfnPipeline.StageDeclarationProperty =
@@ -3400,7 +3405,7 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty):
-          EncryptionKeyProperty = Wrapper(cdkObject)
+          EncryptionKeyProperty = CdkObjectWrappers.wrap(cdkObject) as EncryptionKeyProperty
 
       internal fun unwrap(wrapped: EncryptionKeyProperty):
           software.amazon.awscdk.services.codepipeline.CfnPipeline.EncryptionKeyProperty = (wrapped
@@ -4018,7 +4023,7 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionDeclarationProperty):
-          ActionDeclarationProperty = Wrapper(cdkObject)
+          ActionDeclarationProperty = CdkObjectWrappers.wrap(cdkObject) as ActionDeclarationProperty
 
       internal fun unwrap(wrapped: ActionDeclarationProperty):
           software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionDeclarationProperty =
@@ -4246,7 +4251,7 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPushFilterProperty):
-          GitPushFilterProperty = Wrapper(cdkObject)
+          GitPushFilterProperty = CdkObjectWrappers.wrap(cdkObject) as GitPushFilterProperty
 
       internal fun unwrap(wrapped: GitPushFilterProperty):
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitPushFilterProperty = (wrapped
@@ -4393,7 +4398,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.VariableDeclarationProperty):
-          VariableDeclarationProperty = Wrapper(cdkObject)
+          VariableDeclarationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VariableDeclarationProperty
 
       internal fun unwrap(wrapped: VariableDeclarationProperty):
           software.amazon.awscdk.services.codepipeline.CfnPipeline.VariableDeclarationProperty =
@@ -4536,7 +4542,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitFilePathFilterCriteriaProperty):
-          GitFilePathFilterCriteriaProperty = Wrapper(cdkObject)
+          GitFilePathFilterCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as
+          GitFilePathFilterCriteriaProperty
 
       internal fun unwrap(wrapped: GitFilePathFilterCriteriaProperty):
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitFilePathFilterCriteriaProperty
@@ -4678,7 +4685,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.GitBranchFilterCriteriaProperty):
-          GitBranchFilterCriteriaProperty = Wrapper(cdkObject)
+          GitBranchFilterCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as
+          GitBranchFilterCriteriaProperty
 
       internal fun unwrap(wrapped: GitBranchFilterCriteriaProperty):
           software.amazon.awscdk.services.codepipeline.CfnPipeline.GitBranchFilterCriteriaProperty =

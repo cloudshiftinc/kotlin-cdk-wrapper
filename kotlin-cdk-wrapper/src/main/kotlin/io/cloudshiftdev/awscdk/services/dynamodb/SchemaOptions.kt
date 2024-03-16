@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.dynamodb
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -131,7 +132,7 @@ public interface SchemaOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.SchemaOptions):
-        SchemaOptions = Wrapper(cdkObject)
+        SchemaOptions = CdkObjectWrappers.wrap(cdkObject) as SchemaOptions
 
     internal fun unwrap(wrapped: SchemaOptions):
         software.amazon.awscdk.services.dynamodb.SchemaOptions = (wrapped as CdkObject).cdkObject as

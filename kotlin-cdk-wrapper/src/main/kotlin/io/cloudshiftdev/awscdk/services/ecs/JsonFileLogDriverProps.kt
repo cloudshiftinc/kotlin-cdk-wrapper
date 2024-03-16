@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -307,7 +308,7 @@ public interface JsonFileLogDriverProps : BaseLogDriverProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.JsonFileLogDriverProps):
-        JsonFileLogDriverProps = Wrapper(cdkObject)
+        JsonFileLogDriverProps = CdkObjectWrappers.wrap(cdkObject) as JsonFileLogDriverProps
 
     internal fun unwrap(wrapped: JsonFileLogDriverProps):
         software.amazon.awscdk.services.ecs.JsonFileLogDriverProps = (wrapped as

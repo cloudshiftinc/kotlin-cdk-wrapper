@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.codebuild
 import io.cloudshiftdev.awscdk.SecretValue
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -94,7 +95,8 @@ public interface BitBucketSourceCredentialsProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.BitBucketSourceCredentialsProps):
-        BitBucketSourceCredentialsProps = Wrapper(cdkObject)
+        BitBucketSourceCredentialsProps = CdkObjectWrappers.wrap(cdkObject) as
+        BitBucketSourceCredentialsProps
 
     internal fun unwrap(wrapped: BitBucketSourceCredentialsProps):
         software.amazon.awscdk.services.codebuild.BitBucketSourceCredentialsProps = (wrapped as

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -667,7 +668,7 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.FieldValueProperty):
-          FieldValueProperty = Wrapper(cdkObject)
+          FieldValueProperty = CdkObjectWrappers.wrap(cdkObject) as FieldValueProperty
 
       internal fun unwrap(wrapped: FieldValueProperty):
           software.amazon.awscdk.services.connect.CfnRule.FieldValueProperty = (wrapped as
@@ -777,7 +778,7 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.UpdateCaseActionProperty):
-          UpdateCaseActionProperty = Wrapper(cdkObject)
+          UpdateCaseActionProperty = CdkObjectWrappers.wrap(cdkObject) as UpdateCaseActionProperty
 
       internal fun unwrap(wrapped: UpdateCaseActionProperty):
           software.amazon.awscdk.services.connect.CfnRule.UpdateCaseActionProperty = (wrapped as
@@ -914,7 +915,7 @@ public open class CfnRule internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.FieldProperty):
-          FieldProperty = Wrapper(cdkObject)
+          FieldProperty = CdkObjectWrappers.wrap(cdkObject) as FieldProperty
 
       internal fun unwrap(wrapped: FieldProperty):
           software.amazon.awscdk.services.connect.CfnRule.FieldProperty = (wrapped as
@@ -1051,7 +1052,7 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.CreateCaseActionProperty):
-          CreateCaseActionProperty = Wrapper(cdkObject)
+          CreateCaseActionProperty = CdkObjectWrappers.wrap(cdkObject) as CreateCaseActionProperty
 
       internal fun unwrap(wrapped: CreateCaseActionProperty):
           software.amazon.awscdk.services.connect.CfnRule.CreateCaseActionProperty = (wrapped as
@@ -1174,7 +1175,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.RuleTriggerEventSourceProperty):
-          RuleTriggerEventSourceProperty = Wrapper(cdkObject)
+          RuleTriggerEventSourceProperty = CdkObjectWrappers.wrap(cdkObject) as
+          RuleTriggerEventSourceProperty
 
       internal fun unwrap(wrapped: RuleTriggerEventSourceProperty):
           software.amazon.awscdk.services.connect.CfnRule.RuleTriggerEventSourceProperty = (wrapped
@@ -1396,7 +1398,7 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.TaskActionProperty):
-          TaskActionProperty = Wrapper(cdkObject)
+          TaskActionProperty = CdkObjectWrappers.wrap(cdkObject) as TaskActionProperty
 
       internal fun unwrap(wrapped: TaskActionProperty):
           software.amazon.awscdk.services.connect.CfnRule.TaskActionProperty = (wrapped as
@@ -1657,7 +1659,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.SendNotificationActionProperty):
-          SendNotificationActionProperty = Wrapper(cdkObject)
+          SendNotificationActionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SendNotificationActionProperty
 
       internal fun unwrap(wrapped: SendNotificationActionProperty):
           software.amazon.awscdk.services.connect.CfnRule.SendNotificationActionProperty = (wrapped
@@ -1737,7 +1740,7 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.EventBridgeActionProperty):
-          EventBridgeActionProperty = Wrapper(cdkObject)
+          EventBridgeActionProperty = CdkObjectWrappers.wrap(cdkObject) as EventBridgeActionProperty
 
       internal fun unwrap(wrapped: EventBridgeActionProperty):
           software.amazon.awscdk.services.connect.CfnRule.EventBridgeActionProperty = (wrapped as
@@ -1861,7 +1864,7 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.ReferenceProperty):
-          ReferenceProperty = Wrapper(cdkObject)
+          ReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as ReferenceProperty
 
       internal fun unwrap(wrapped: ReferenceProperty):
           software.amazon.awscdk.services.connect.CfnRule.ReferenceProperty = (wrapped as
@@ -2008,7 +2011,8 @@ public open class CfnRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.NotificationRecipientTypeProperty):
-          NotificationRecipientTypeProperty = Wrapper(cdkObject)
+          NotificationRecipientTypeProperty = CdkObjectWrappers.wrap(cdkObject) as
+          NotificationRecipientTypeProperty
 
       internal fun unwrap(wrapped: NotificationRecipientTypeProperty):
           software.amazon.awscdk.services.connect.CfnRule.NotificationRecipientTypeProperty =
@@ -2490,7 +2494,7 @@ public open class CfnRule internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnRule.ActionsProperty):
-          ActionsProperty = Wrapper(cdkObject)
+          ActionsProperty = CdkObjectWrappers.wrap(cdkObject) as ActionsProperty
 
       internal fun unwrap(wrapped: ActionsProperty):
           software.amazon.awscdk.services.connect.CfnRule.ActionsProperty = (wrapped as

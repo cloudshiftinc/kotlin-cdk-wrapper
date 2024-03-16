@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -111,7 +112,7 @@ public interface FixedResponseOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions):
-        FixedResponseOptions = Wrapper(cdkObject)
+        FixedResponseOptions = CdkObjectWrappers.wrap(cdkObject) as FixedResponseOptions
 
     internal fun unwrap(wrapped: FixedResponseOptions):
         software.amazon.awscdk.services.elasticloadbalancingv2.FixedResponseOptions = (wrapped as

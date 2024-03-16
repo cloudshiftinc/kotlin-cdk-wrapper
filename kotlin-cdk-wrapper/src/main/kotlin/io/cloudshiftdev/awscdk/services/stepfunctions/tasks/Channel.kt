@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -290,7 +291,7 @@ public interface Channel {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.Channel):
-        Channel = Wrapper(cdkObject)
+        Channel = CdkObjectWrappers.wrap(cdkObject) as Channel
 
     internal fun unwrap(wrapped: Channel):
         software.amazon.awscdk.services.stepfunctions.tasks.Channel = (wrapped as

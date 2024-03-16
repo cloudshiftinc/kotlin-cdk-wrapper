@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.mediaconnect
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -740,7 +741,7 @@ public interface CfnFlowSourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowSourceProps):
-        CfnFlowSourceProps = Wrapper(cdkObject)
+        CfnFlowSourceProps = CdkObjectWrappers.wrap(cdkObject) as CfnFlowSourceProps
 
     internal fun unwrap(wrapped: CfnFlowSourceProps):
         software.amazon.awscdk.services.mediaconnect.CfnFlowSourceProps = (wrapped as

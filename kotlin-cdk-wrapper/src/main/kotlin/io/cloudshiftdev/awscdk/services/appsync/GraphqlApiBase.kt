@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.dynamodb.ITable
 import io.cloudshiftdev.awscdk.services.events.IEventBus
 import io.cloudshiftdev.awscdk.services.iam.Grant
@@ -473,13 +474,9 @@ public abstract class GraphqlApiBase internal constructor(
   public override fun grantSubscription(grantee: IGrantable, fields: String): Grant =
       unwrap(this).grantSubscription(grantee.let(IGrantable::unwrap), fields).let(Grant::wrap)
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.GraphqlApiBase,
-  ) : GraphqlApiBase(cdkObject)
-
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.GraphqlApiBase):
-        GraphqlApiBase = Wrapper(cdkObject)
+        GraphqlApiBase = CdkObjectWrappers.wrap(cdkObject) as GraphqlApiBase
 
     internal fun unwrap(wrapped: GraphqlApiBase):
         software.amazon.awscdk.services.appsync.GraphqlApiBase = (wrapped as CdkObject).cdkObject as

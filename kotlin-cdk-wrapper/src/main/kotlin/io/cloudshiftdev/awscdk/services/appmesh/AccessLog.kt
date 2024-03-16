@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 
@@ -49,10 +50,6 @@ public abstract class AccessLog internal constructor(
   public open fun bind(scope: Construct): AccessLogConfig =
       unwrap(this).bind(scope.let(Construct::unwrap)).let(AccessLogConfig::wrap)
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.AccessLog,
-  ) : AccessLog(cdkObject)
-
   public companion object {
     public fun fromFilePath(filePath: String): AccessLog =
         software.amazon.awscdk.services.appmesh.AccessLog.fromFilePath(filePath).let(AccessLog::wrap)
@@ -62,7 +59,7 @@ public abstract class AccessLog internal constructor(
         loggingFormat.let(LoggingFormat::unwrap)).let(AccessLog::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.AccessLog): AccessLog =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as AccessLog
 
     internal fun unwrap(wrapped: AccessLog): software.amazon.awscdk.services.appmesh.AccessLog =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appmesh.AccessLog

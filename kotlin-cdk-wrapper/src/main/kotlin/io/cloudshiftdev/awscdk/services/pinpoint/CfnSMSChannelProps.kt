@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.pinpoint
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -229,7 +230,7 @@ public interface CfnSMSChannelProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnSMSChannelProps):
-        CfnSMSChannelProps = Wrapper(cdkObject)
+        CfnSMSChannelProps = CdkObjectWrappers.wrap(cdkObject) as CfnSMSChannelProps
 
     internal fun unwrap(wrapped: CfnSMSChannelProps):
         software.amazon.awscdk.services.pinpoint.CfnSMSChannelProps = (wrapped as

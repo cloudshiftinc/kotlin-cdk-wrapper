@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.eks
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.iam.IOpenIdConnectProvider
 import io.cloudshiftdev.awscdk.services.iam.IRole
@@ -848,7 +849,7 @@ public interface ClusterAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.ClusterAttributes):
-        ClusterAttributes = Wrapper(cdkObject)
+        ClusterAttributes = CdkObjectWrappers.wrap(cdkObject) as ClusterAttributes
 
     internal fun unwrap(wrapped: ClusterAttributes):
         software.amazon.awscdk.services.eks.ClusterAttributes = (wrapped as CdkObject).cdkObject as

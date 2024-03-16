@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.batch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -158,7 +159,7 @@ public interface Share {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.Share): Share =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as Share
 
     internal fun unwrap(wrapped: Share): software.amazon.awscdk.services.batch.Share = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.batch.Share

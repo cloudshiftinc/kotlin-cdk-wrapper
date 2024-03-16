@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -219,7 +220,8 @@ public interface CfnServiceNetworkServiceAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociationProps):
-        CfnServiceNetworkServiceAssociationProps = Wrapper(cdkObject)
+        CfnServiceNetworkServiceAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnServiceNetworkServiceAssociationProps
 
     internal fun unwrap(wrapped: CfnServiceNetworkServiceAssociationProps):
         software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociationProps =

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.Expiration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -245,7 +246,7 @@ public interface LaunchTemplateSpotOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplateSpotOptions):
-        LaunchTemplateSpotOptions = Wrapper(cdkObject)
+        LaunchTemplateSpotOptions = CdkObjectWrappers.wrap(cdkObject) as LaunchTemplateSpotOptions
 
     internal fun unwrap(wrapped: LaunchTemplateSpotOptions):
         software.amazon.awscdk.services.ec2.LaunchTemplateSpotOptions = (wrapped as

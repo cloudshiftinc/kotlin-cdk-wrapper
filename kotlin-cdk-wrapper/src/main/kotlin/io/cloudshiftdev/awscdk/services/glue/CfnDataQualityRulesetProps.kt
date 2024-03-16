@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.glue
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -256,7 +257,7 @@ public interface CfnDataQualityRulesetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDataQualityRulesetProps):
-        CfnDataQualityRulesetProps = Wrapper(cdkObject)
+        CfnDataQualityRulesetProps = CdkObjectWrappers.wrap(cdkObject) as CfnDataQualityRulesetProps
 
     internal fun unwrap(wrapped: CfnDataQualityRulesetProps):
         software.amazon.awscdk.services.glue.CfnDataQualityRulesetProps = (wrapped as

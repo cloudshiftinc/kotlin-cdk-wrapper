@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -862,7 +863,7 @@ public open class CfnEventType internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnEventType.LabelProperty):
-          LabelProperty = Wrapper(cdkObject)
+          LabelProperty = CdkObjectWrappers.wrap(cdkObject) as LabelProperty
 
       internal fun unwrap(wrapped: LabelProperty):
           software.amazon.awscdk.services.frauddetector.CfnEventType.LabelProperty = (wrapped as
@@ -1223,7 +1224,7 @@ public open class CfnEventType internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnEventType.EntityTypeProperty):
-          EntityTypeProperty = Wrapper(cdkObject)
+          EntityTypeProperty = CdkObjectWrappers.wrap(cdkObject) as EntityTypeProperty
 
       internal fun unwrap(wrapped: EntityTypeProperty):
           software.amazon.awscdk.services.frauddetector.CfnEventType.EntityTypeProperty = (wrapped
@@ -1728,7 +1729,7 @@ public open class CfnEventType internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnEventType.EventVariableProperty):
-          EventVariableProperty = Wrapper(cdkObject)
+          EventVariableProperty = CdkObjectWrappers.wrap(cdkObject) as EventVariableProperty
 
       internal fun unwrap(wrapped: EventVariableProperty):
           software.amazon.awscdk.services.frauddetector.CfnEventType.EventVariableProperty =

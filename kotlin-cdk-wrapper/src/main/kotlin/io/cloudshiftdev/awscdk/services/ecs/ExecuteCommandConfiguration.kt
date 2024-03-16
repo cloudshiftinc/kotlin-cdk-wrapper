@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -180,7 +181,8 @@ public interface ExecuteCommandConfiguration {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ExecuteCommandConfiguration):
-        ExecuteCommandConfiguration = Wrapper(cdkObject)
+        ExecuteCommandConfiguration = CdkObjectWrappers.wrap(cdkObject) as
+        ExecuteCommandConfiguration
 
     internal fun unwrap(wrapped: ExecuteCommandConfiguration):
         software.amazon.awscdk.services.ecs.ExecuteCommandConfiguration = (wrapped as

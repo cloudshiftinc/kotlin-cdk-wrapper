@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -948,7 +949,7 @@ public open class CfnScheduledQuery internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.DimensionMappingProperty):
-          DimensionMappingProperty = Wrapper(cdkObject)
+          DimensionMappingProperty = CdkObjectWrappers.wrap(cdkObject) as DimensionMappingProperty
 
       internal fun unwrap(wrapped: DimensionMappingProperty):
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.DimensionMappingProperty =
@@ -1099,7 +1100,8 @@ public open class CfnScheduledQuery internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.TargetConfigurationProperty):
-          TargetConfigurationProperty = Wrapper(cdkObject)
+          TargetConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          TargetConfigurationProperty
 
       internal fun unwrap(wrapped: TargetConfigurationProperty):
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.TargetConfigurationProperty =
@@ -1479,7 +1481,8 @@ public open class CfnScheduledQuery internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.TimestreamConfigurationProperty):
-          TimestreamConfigurationProperty = Wrapper(cdkObject)
+          TimestreamConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          TimestreamConfigurationProperty
 
       internal fun unwrap(wrapped: TimestreamConfigurationProperty):
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.TimestreamConfigurationProperty
@@ -1563,7 +1566,7 @@ public open class CfnScheduledQuery internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.SnsConfigurationProperty):
-          SnsConfigurationProperty = Wrapper(cdkObject)
+          SnsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as SnsConfigurationProperty
 
       internal fun unwrap(wrapped: SnsConfigurationProperty):
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.SnsConfigurationProperty =
@@ -1712,7 +1715,8 @@ public open class CfnScheduledQuery internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureAttributeMappingProperty):
-          MultiMeasureAttributeMappingProperty = Wrapper(cdkObject)
+          MultiMeasureAttributeMappingProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MultiMeasureAttributeMappingProperty
 
       internal fun unwrap(wrapped: MultiMeasureAttributeMappingProperty):
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureAttributeMappingProperty
@@ -1803,7 +1807,8 @@ public open class CfnScheduledQuery internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.ScheduleConfigurationProperty):
-          ScheduleConfigurationProperty = Wrapper(cdkObject)
+          ScheduleConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ScheduleConfigurationProperty
 
       internal fun unwrap(wrapped: ScheduleConfigurationProperty):
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.ScheduleConfigurationProperty
@@ -1952,7 +1957,7 @@ public open class CfnScheduledQuery internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.S3ConfigurationProperty):
-          S3ConfigurationProperty = Wrapper(cdkObject)
+          S3ConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as S3ConfigurationProperty
 
       internal fun unwrap(wrapped: S3ConfigurationProperty):
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.S3ConfigurationProperty =
@@ -2068,7 +2073,8 @@ public open class CfnScheduledQuery internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.NotificationConfigurationProperty):
-          NotificationConfigurationProperty = Wrapper(cdkObject)
+          NotificationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          NotificationConfigurationProperty
 
       internal fun unwrap(wrapped: NotificationConfigurationProperty):
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.NotificationConfigurationProperty
@@ -2326,7 +2332,8 @@ public open class CfnScheduledQuery internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.MixedMeasureMappingProperty):
-          MixedMeasureMappingProperty = Wrapper(cdkObject)
+          MixedMeasureMappingProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MixedMeasureMappingProperty
 
       internal fun unwrap(wrapped: MixedMeasureMappingProperty):
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.MixedMeasureMappingProperty =
@@ -2498,7 +2505,8 @@ public open class CfnScheduledQuery internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureMappingsProperty):
-          MultiMeasureMappingsProperty = Wrapper(cdkObject)
+          MultiMeasureMappingsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MultiMeasureMappingsProperty
 
       internal fun unwrap(wrapped: MultiMeasureMappingsProperty):
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.MultiMeasureMappingsProperty
@@ -2613,7 +2621,8 @@ public open class CfnScheduledQuery internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnScheduledQuery.ErrorReportConfigurationProperty):
-          ErrorReportConfigurationProperty = Wrapper(cdkObject)
+          ErrorReportConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ErrorReportConfigurationProperty
 
       internal fun unwrap(wrapped: ErrorReportConfigurationProperty):
           software.amazon.awscdk.services.timestream.CfnScheduledQuery.ErrorReportConfigurationProperty

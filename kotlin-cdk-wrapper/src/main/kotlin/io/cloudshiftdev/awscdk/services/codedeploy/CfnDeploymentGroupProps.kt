@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -1610,7 +1611,7 @@ public interface CfnDeploymentGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentGroupProps):
-        CfnDeploymentGroupProps = Wrapper(cdkObject)
+        CfnDeploymentGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnDeploymentGroupProps
 
     internal fun unwrap(wrapped: CfnDeploymentGroupProps):
         software.amazon.awscdk.services.codedeploy.CfnDeploymentGroupProps = (wrapped as

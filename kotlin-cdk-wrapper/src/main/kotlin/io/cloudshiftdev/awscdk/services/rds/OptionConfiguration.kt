@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import kotlin.Number
@@ -258,7 +259,7 @@ public interface OptionConfiguration {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.OptionConfiguration):
-        OptionConfiguration = Wrapper(cdkObject)
+        OptionConfiguration = CdkObjectWrappers.wrap(cdkObject) as OptionConfiguration
 
     internal fun unwrap(wrapped: OptionConfiguration):
         software.amazon.awscdk.services.rds.OptionConfiguration = (wrapped as CdkObject).cdkObject

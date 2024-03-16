@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs.patterns
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecs.Protocol
 import kotlin.Number
 import kotlin.String
@@ -280,7 +281,7 @@ public interface ApplicationTargetProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationTargetProps):
-        ApplicationTargetProps = Wrapper(cdkObject)
+        ApplicationTargetProps = CdkObjectWrappers.wrap(cdkObject) as ApplicationTargetProps
 
     internal fun unwrap(wrapped: ApplicationTargetProps):
         software.amazon.awscdk.services.ecs.patterns.ApplicationTargetProps = (wrapped as

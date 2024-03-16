@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -615,7 +616,8 @@ public open class CfnSqlInjectionMatchSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.waf.CfnSqlInjectionMatchSet.SqlInjectionMatchTupleProperty):
-          SqlInjectionMatchTupleProperty = Wrapper(cdkObject)
+          SqlInjectionMatchTupleProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SqlInjectionMatchTupleProperty
 
       internal fun unwrap(wrapped: SqlInjectionMatchTupleProperty):
           software.amazon.awscdk.services.waf.CfnSqlInjectionMatchSet.SqlInjectionMatchTupleProperty
@@ -851,7 +853,7 @@ public open class CfnSqlInjectionMatchSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.waf.CfnSqlInjectionMatchSet.FieldToMatchProperty):
-          FieldToMatchProperty = Wrapper(cdkObject)
+          FieldToMatchProperty = CdkObjectWrappers.wrap(cdkObject) as FieldToMatchProperty
 
       internal fun unwrap(wrapped: FieldToMatchProperty):
           software.amazon.awscdk.services.waf.CfnSqlInjectionMatchSet.FieldToMatchProperty =

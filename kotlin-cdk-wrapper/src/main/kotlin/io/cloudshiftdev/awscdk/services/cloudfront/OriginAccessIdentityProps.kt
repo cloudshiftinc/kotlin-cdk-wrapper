@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -75,7 +76,7 @@ public interface OriginAccessIdentityProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.OriginAccessIdentityProps):
-        OriginAccessIdentityProps = Wrapper(cdkObject)
+        OriginAccessIdentityProps = CdkObjectWrappers.wrap(cdkObject) as OriginAccessIdentityProps
 
     internal fun unwrap(wrapped: OriginAccessIdentityProps):
         software.amazon.awscdk.services.cloudfront.OriginAccessIdentityProps = (wrapped as

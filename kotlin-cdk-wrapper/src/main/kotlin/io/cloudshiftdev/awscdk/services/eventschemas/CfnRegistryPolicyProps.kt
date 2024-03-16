@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.eventschemas
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -134,7 +135,7 @@ public interface CfnRegistryPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.eventschemas.CfnRegistryPolicyProps):
-        CfnRegistryPolicyProps = Wrapper(cdkObject)
+        CfnRegistryPolicyProps = CdkObjectWrappers.wrap(cdkObject) as CfnRegistryPolicyProps
 
     internal fun unwrap(wrapped: CfnRegistryPolicyProps):
         software.amazon.awscdk.services.eventschemas.CfnRegistryPolicyProps = (wrapped as

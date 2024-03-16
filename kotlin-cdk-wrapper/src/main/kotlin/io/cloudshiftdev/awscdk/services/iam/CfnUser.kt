@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -969,7 +970,7 @@ public open class CfnUser internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iam.CfnUser.LoginProfileProperty):
-          LoginProfileProperty = Wrapper(cdkObject)
+          LoginProfileProperty = CdkObjectWrappers.wrap(cdkObject) as LoginProfileProperty
 
       internal fun unwrap(wrapped: LoginProfileProperty):
           software.amazon.awscdk.services.iam.CfnUser.LoginProfileProperty = (wrapped as
@@ -1093,7 +1094,7 @@ public open class CfnUser internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.CfnUser.PolicyProperty):
-          PolicyProperty = Wrapper(cdkObject)
+          PolicyProperty = CdkObjectWrappers.wrap(cdkObject) as PolicyProperty
 
       internal fun unwrap(wrapped: PolicyProperty):
           software.amazon.awscdk.services.iam.CfnUser.PolicyProperty = (wrapped as

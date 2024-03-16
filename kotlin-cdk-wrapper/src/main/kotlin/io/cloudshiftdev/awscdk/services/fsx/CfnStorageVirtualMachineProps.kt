@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -344,7 +345,8 @@ public interface CfnStorageVirtualMachineProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnStorageVirtualMachineProps):
-        CfnStorageVirtualMachineProps = Wrapper(cdkObject)
+        CfnStorageVirtualMachineProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnStorageVirtualMachineProps
 
     internal fun unwrap(wrapped: CfnStorageVirtualMachineProps):
         software.amazon.awscdk.services.fsx.CfnStorageVirtualMachineProps = (wrapped as

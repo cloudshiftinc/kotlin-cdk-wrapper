@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -540,7 +541,7 @@ public interface StageProps : StageOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.StageProps): StageProps
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as StageProps
 
     internal fun unwrap(wrapped: StageProps): software.amazon.awscdk.services.apigateway.StageProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.apigateway.StageProps

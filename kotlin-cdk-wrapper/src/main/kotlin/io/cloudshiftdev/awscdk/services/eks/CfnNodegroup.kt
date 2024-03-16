@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1549,7 +1550,7 @@ public open class CfnNodegroup internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.TaintProperty):
-          TaintProperty = Wrapper(cdkObject)
+          TaintProperty = CdkObjectWrappers.wrap(cdkObject) as TaintProperty
 
       internal fun unwrap(wrapped: TaintProperty):
           software.amazon.awscdk.services.eks.CfnNodegroup.TaintProperty = (wrapped as
@@ -1733,7 +1734,8 @@ public open class CfnNodegroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.LaunchTemplateSpecificationProperty):
-          LaunchTemplateSpecificationProperty = Wrapper(cdkObject)
+          LaunchTemplateSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          LaunchTemplateSpecificationProperty
 
       internal fun unwrap(wrapped: LaunchTemplateSpecificationProperty):
           software.amazon.awscdk.services.eks.CfnNodegroup.LaunchTemplateSpecificationProperty =
@@ -1919,7 +1921,7 @@ public open class CfnNodegroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.RemoteAccessProperty):
-          RemoteAccessProperty = Wrapper(cdkObject)
+          RemoteAccessProperty = CdkObjectWrappers.wrap(cdkObject) as RemoteAccessProperty
 
       internal fun unwrap(wrapped: RemoteAccessProperty):
           software.amazon.awscdk.services.eks.CfnNodegroup.RemoteAccessProperty = (wrapped as
@@ -2049,7 +2051,7 @@ public open class CfnNodegroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty):
-          UpdateConfigProperty = Wrapper(cdkObject)
+          UpdateConfigProperty = CdkObjectWrappers.wrap(cdkObject) as UpdateConfigProperty
 
       internal fun unwrap(wrapped: UpdateConfigProperty):
           software.amazon.awscdk.services.eks.CfnNodegroup.UpdateConfigProperty = (wrapped as
@@ -2279,7 +2281,7 @@ public open class CfnNodegroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.ScalingConfigProperty):
-          ScalingConfigProperty = Wrapper(cdkObject)
+          ScalingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as ScalingConfigProperty
 
       internal fun unwrap(wrapped: ScalingConfigProperty):
           software.amazon.awscdk.services.eks.CfnNodegroup.ScalingConfigProperty = (wrapped as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -375,7 +376,7 @@ public interface GelfLogDriverProps : BaseLogDriverProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.GelfLogDriverProps):
-        GelfLogDriverProps = Wrapper(cdkObject)
+        GelfLogDriverProps = CdkObjectWrappers.wrap(cdkObject) as GelfLogDriverProps
 
     internal fun unwrap(wrapped: GelfLogDriverProps):
         software.amazon.awscdk.services.ecs.GelfLogDriverProps = (wrapped as CdkObject).cdkObject as

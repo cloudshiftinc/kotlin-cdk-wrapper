@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.resourceexplorer2
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -406,7 +407,7 @@ public interface CfnViewProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnViewProps):
-        CfnViewProps = Wrapper(cdkObject)
+        CfnViewProps = CdkObjectWrappers.wrap(cdkObject) as CfnViewProps
 
     internal fun unwrap(wrapped: CfnViewProps):
         software.amazon.awscdk.services.resourceexplorer2.CfnViewProps = (wrapped as

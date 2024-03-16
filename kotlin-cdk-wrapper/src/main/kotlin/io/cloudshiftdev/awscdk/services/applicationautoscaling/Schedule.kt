@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.applicationautoscaling
 
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import java.time.Instant
 import kotlin.String
 import kotlin.Unit
@@ -41,10 +42,6 @@ public abstract class Schedule internal constructor(
    */
   public open fun expressionString(): String = unwrap(this).getExpressionString()
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.applicationautoscaling.Schedule,
-  ) : Schedule(cdkObject)
-
   public companion object {
     public fun at(moment: Instant): Schedule =
         software.amazon.awscdk.services.applicationautoscaling.Schedule.at(moment).let(Schedule::wrap)
@@ -63,7 +60,7 @@ public abstract class Schedule internal constructor(
         software.amazon.awscdk.services.applicationautoscaling.Schedule.rate(duration.let(Duration::unwrap)).let(Schedule::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.Schedule):
-        Schedule = Wrapper(cdkObject)
+        Schedule = CdkObjectWrappers.wrap(cdkObject) as Schedule
 
     internal fun unwrap(wrapped: Schedule):
         software.amazon.awscdk.services.applicationautoscaling.Schedule = (wrapped as

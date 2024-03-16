@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.kinesisvideo
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -209,7 +210,7 @@ public interface CfnSignalingChannelProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannelProps):
-        CfnSignalingChannelProps = Wrapper(cdkObject)
+        CfnSignalingChannelProps = CdkObjectWrappers.wrap(cdkObject) as CfnSignalingChannelProps
 
     internal fun unwrap(wrapped: CfnSignalingChannelProps):
         software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannelProps = (wrapped as

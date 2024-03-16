@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.route53
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -2344,7 +2345,7 @@ public interface CfnRecordSetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetProps):
-        CfnRecordSetProps = Wrapper(cdkObject)
+        CfnRecordSetProps = CdkObjectWrappers.wrap(cdkObject) as CfnRecordSetProps
 
     internal fun unwrap(wrapped: CfnRecordSetProps):
         software.amazon.awscdk.services.route53.CfnRecordSetProps = (wrapped as CdkObject).cdkObject

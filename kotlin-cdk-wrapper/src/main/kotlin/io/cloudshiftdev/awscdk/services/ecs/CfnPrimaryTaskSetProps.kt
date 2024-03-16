@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -139,7 +140,7 @@ public interface CfnPrimaryTaskSetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnPrimaryTaskSetProps):
-        CfnPrimaryTaskSetProps = Wrapper(cdkObject)
+        CfnPrimaryTaskSetProps = CdkObjectWrappers.wrap(cdkObject) as CfnPrimaryTaskSetProps
 
     internal fun unwrap(wrapped: CfnPrimaryTaskSetProps):
         software.amazon.awscdk.services.ecs.CfnPrimaryTaskSetProps = (wrapped as

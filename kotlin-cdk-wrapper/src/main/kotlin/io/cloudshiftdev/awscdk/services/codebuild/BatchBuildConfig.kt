@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Unit
 
@@ -71,7 +72,7 @@ public interface BatchBuildConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.BatchBuildConfig):
-        BatchBuildConfig = Wrapper(cdkObject)
+        BatchBuildConfig = CdkObjectWrappers.wrap(cdkObject) as BatchBuildConfig
 
     internal fun unwrap(wrapped: BatchBuildConfig):
         software.amazon.awscdk.services.codebuild.BatchBuildConfig = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.Artifact
 import io.cloudshiftdev.awscdk.services.codepipeline.CommonAwsActionProps
 import io.cloudshiftdev.awscdk.services.iam.IRole
@@ -407,7 +408,8 @@ public interface CloudFormationExecuteChangeSetActionProps : CommonAwsActionProp
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.CloudFormationExecuteChangeSetActionProps):
-        CloudFormationExecuteChangeSetActionProps = Wrapper(cdkObject)
+        CloudFormationExecuteChangeSetActionProps = CdkObjectWrappers.wrap(cdkObject) as
+        CloudFormationExecuteChangeSetActionProps
 
     internal fun unwrap(wrapped: CloudFormationExecuteChangeSetActionProps):
         software.amazon.awscdk.services.codepipeline.actions.CloudFormationExecuteChangeSetActionProps

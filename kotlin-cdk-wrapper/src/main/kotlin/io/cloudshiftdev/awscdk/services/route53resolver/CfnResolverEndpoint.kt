@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -845,7 +846,7 @@ public open class CfnResolverEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverEndpoint.IpAddressRequestProperty):
-          IpAddressRequestProperty = Wrapper(cdkObject)
+          IpAddressRequestProperty = CdkObjectWrappers.wrap(cdkObject) as IpAddressRequestProperty
 
       internal fun unwrap(wrapped: IpAddressRequestProperty):
           software.amazon.awscdk.services.route53resolver.CfnResolverEndpoint.IpAddressRequestProperty

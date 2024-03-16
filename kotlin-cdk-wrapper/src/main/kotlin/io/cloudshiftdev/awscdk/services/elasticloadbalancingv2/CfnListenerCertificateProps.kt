@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -143,7 +144,8 @@ public interface CfnListenerCertificateProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificateProps):
-        CfnListenerCertificateProps = Wrapper(cdkObject)
+        CfnListenerCertificateProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnListenerCertificateProps
 
     internal fun unwrap(wrapped: CfnListenerCertificateProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificateProps =

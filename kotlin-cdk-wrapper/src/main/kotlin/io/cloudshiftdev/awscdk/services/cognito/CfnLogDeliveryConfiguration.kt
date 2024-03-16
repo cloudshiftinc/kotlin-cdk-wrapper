@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -378,7 +379,7 @@ public open class CfnLogDeliveryConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.LogConfigurationProperty):
-          LogConfigurationProperty = Wrapper(cdkObject)
+          LogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as LogConfigurationProperty
 
       internal fun unwrap(wrapped: LogConfigurationProperty):
           software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.LogConfigurationProperty
@@ -500,7 +501,8 @@ public open class CfnLogDeliveryConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty):
-          CloudWatchLogsConfigurationProperty = Wrapper(cdkObject)
+          CloudWatchLogsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CloudWatchLogsConfigurationProperty
 
       internal fun unwrap(wrapped: CloudWatchLogsConfigurationProperty):
           software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration.CloudWatchLogsConfigurationProperty

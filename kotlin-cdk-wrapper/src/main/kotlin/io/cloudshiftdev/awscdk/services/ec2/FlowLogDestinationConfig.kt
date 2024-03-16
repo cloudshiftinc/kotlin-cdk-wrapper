@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.logs.ILogGroup
 import io.cloudshiftdev.awscdk.services.s3.IBucket
@@ -270,7 +271,7 @@ public interface FlowLogDestinationConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.FlowLogDestinationConfig):
-        FlowLogDestinationConfig = Wrapper(cdkObject)
+        FlowLogDestinationConfig = CdkObjectWrappers.wrap(cdkObject) as FlowLogDestinationConfig
 
     internal fun unwrap(wrapped: FlowLogDestinationConfig):
         software.amazon.awscdk.services.ec2.FlowLogDestinationConfig = (wrapped as

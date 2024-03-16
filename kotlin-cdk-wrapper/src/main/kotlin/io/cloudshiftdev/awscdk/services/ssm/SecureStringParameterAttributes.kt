@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ssm
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Boolean
 import kotlin.Number
@@ -192,7 +193,8 @@ public interface SecureStringParameterAttributes : CommonStringParameterAttribut
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ssm.SecureStringParameterAttributes):
-        SecureStringParameterAttributes = Wrapper(cdkObject)
+        SecureStringParameterAttributes = CdkObjectWrappers.wrap(cdkObject) as
+        SecureStringParameterAttributes
 
     internal fun unwrap(wrapped: SecureStringParameterAttributes):
         software.amazon.awscdk.services.ssm.SecureStringParameterAttributes = (wrapped as

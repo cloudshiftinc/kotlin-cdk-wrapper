@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.servicecatalog
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.awscdk.services.s3.deployment.ServerSideEncryption
 import kotlin.String
@@ -160,7 +161,7 @@ public interface ProductStackProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.ProductStackProps):
-        ProductStackProps = Wrapper(cdkObject)
+        ProductStackProps = CdkObjectWrappers.wrap(cdkObject) as ProductStackProps
 
     internal fun unwrap(wrapped: ProductStackProps):
         software.amazon.awscdk.services.servicecatalog.ProductStackProps = (wrapped as

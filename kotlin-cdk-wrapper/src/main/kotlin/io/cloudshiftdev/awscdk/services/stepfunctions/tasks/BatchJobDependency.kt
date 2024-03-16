@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -102,7 +103,7 @@ public interface BatchJobDependency {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.BatchJobDependency):
-        BatchJobDependency = Wrapper(cdkObject)
+        BatchJobDependency = CdkObjectWrappers.wrap(cdkObject) as BatchJobDependency
 
     internal fun unwrap(wrapped: BatchJobDependency):
         software.amazon.awscdk.services.stepfunctions.tasks.BatchJobDependency = (wrapped as

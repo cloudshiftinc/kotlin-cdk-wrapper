@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -251,7 +252,7 @@ public interface VirtualNodeProps : VirtualNodeBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.VirtualNodeProps):
-        VirtualNodeProps = Wrapper(cdkObject)
+        VirtualNodeProps = CdkObjectWrappers.wrap(cdkObject) as VirtualNodeProps
 
     internal fun unwrap(wrapped: VirtualNodeProps):
         software.amazon.awscdk.services.appmesh.VirtualNodeProps = (wrapped as CdkObject).cdkObject

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -18,14 +19,10 @@ public abstract class BaseListener internal constructor(
    */
   public override fun listenerArn(): String = unwrap(this).getListenerArn()
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseListener,
-  ) : BaseListener(cdkObject)
-
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseListener):
-        BaseListener = Wrapper(cdkObject)
+        BaseListener = CdkObjectWrappers.wrap(cdkObject) as BaseListener
 
     internal fun unwrap(wrapped: BaseListener):
         software.amazon.awscdk.services.elasticloadbalancingv2.BaseListener = (wrapped as

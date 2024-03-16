@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -52,10 +53,6 @@ public abstract class VirtualGatewayListener internal constructor(
   public open fun bind(scope: Construct): VirtualGatewayListenerConfig =
       unwrap(this).bind(scope.let(Construct::unwrap)).let(VirtualGatewayListenerConfig::wrap)
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualGatewayListener,
-  ) : VirtualGatewayListener(cdkObject)
-
   public companion object {
     public fun grpc(): VirtualGatewayListener =
         software.amazon.awscdk.services.appmesh.VirtualGatewayListener.grpc().let(VirtualGatewayListener::wrap)
@@ -91,7 +88,7 @@ public abstract class VirtualGatewayListener internal constructor(
         VirtualGatewayListener = http2(Http2GatewayListenerOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.VirtualGatewayListener):
-        VirtualGatewayListener = Wrapper(cdkObject)
+        VirtualGatewayListener = CdkObjectWrappers.wrap(cdkObject) as VirtualGatewayListener
 
     internal fun unwrap(wrapped: VirtualGatewayListener):
         software.amazon.awscdk.services.appmesh.VirtualGatewayListener = (wrapped as

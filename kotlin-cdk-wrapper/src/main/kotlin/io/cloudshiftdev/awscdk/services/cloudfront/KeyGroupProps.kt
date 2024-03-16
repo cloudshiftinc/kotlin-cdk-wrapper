@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -141,7 +142,7 @@ public interface KeyGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.KeyGroupProps):
-        KeyGroupProps = Wrapper(cdkObject)
+        KeyGroupProps = CdkObjectWrappers.wrap(cdkObject) as KeyGroupProps
 
     internal fun unwrap(wrapped: KeyGroupProps):
         software.amazon.awscdk.services.cloudfront.KeyGroupProps = (wrapped as CdkObject).cdkObject

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.logs.RetentionDays
 import kotlin.Any
@@ -186,7 +187,7 @@ public interface LogConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.LogConfig): LogConfig =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as LogConfig
 
     internal fun unwrap(wrapped: LogConfig): software.amazon.awscdk.services.appsync.LogConfig =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appsync.LogConfig

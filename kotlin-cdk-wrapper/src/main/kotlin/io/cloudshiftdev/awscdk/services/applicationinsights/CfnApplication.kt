@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1028,7 +1029,7 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmProperty):
-          AlarmProperty = Wrapper(cdkObject)
+          AlarmProperty = CdkObjectWrappers.wrap(cdkObject) as AlarmProperty
 
       internal fun unwrap(wrapped: AlarmProperty):
           software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmProperty =
@@ -1180,7 +1181,7 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternSetProperty):
-          LogPatternSetProperty = Wrapper(cdkObject)
+          LogPatternSetProperty = CdkObjectWrappers.wrap(cdkObject) as LogPatternSetProperty
 
       internal fun unwrap(wrapped: LogPatternSetProperty):
           software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternSetProperty =
@@ -1387,7 +1388,7 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.WindowsEventProperty):
-          WindowsEventProperty = Wrapper(cdkObject)
+          WindowsEventProperty = CdkObjectWrappers.wrap(cdkObject) as WindowsEventProperty
 
       internal fun unwrap(wrapped: WindowsEventProperty):
           software.amazon.awscdk.services.applicationinsights.CfnApplication.WindowsEventProperty =
@@ -1482,7 +1483,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.HAClusterPrometheusExporterProperty):
-          HAClusterPrometheusExporterProperty = Wrapper(cdkObject)
+          HAClusterPrometheusExporterProperty = CdkObjectWrappers.wrap(cdkObject) as
+          HAClusterPrometheusExporterProperty
 
       internal fun unwrap(wrapped: HAClusterPrometheusExporterProperty):
           software.amazon.awscdk.services.applicationinsights.CfnApplication.HAClusterPrometheusExporterProperty
@@ -1709,7 +1711,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentConfigurationProperty):
-          ComponentConfigurationProperty = Wrapper(cdkObject)
+          ComponentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ComponentConfigurationProperty
 
       internal fun unwrap(wrapped: ComponentConfigurationProperty):
           software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentConfigurationProperty
@@ -2208,7 +2211,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.ConfigurationDetailsProperty):
-          ConfigurationDetailsProperty = Wrapper(cdkObject)
+          ConfigurationDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ConfigurationDetailsProperty
 
       internal fun unwrap(wrapped: ConfigurationDetailsProperty):
           software.amazon.awscdk.services.applicationinsights.CfnApplication.ConfigurationDetailsProperty
@@ -2460,7 +2464,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.SubComponentConfigurationDetailsProperty):
-          SubComponentConfigurationDetailsProperty = Wrapper(cdkObject)
+          SubComponentConfigurationDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SubComponentConfigurationDetailsProperty
 
       internal fun unwrap(wrapped: SubComponentConfigurationDetailsProperty):
           software.amazon.awscdk.services.applicationinsights.CfnApplication.SubComponentConfigurationDetailsProperty
@@ -2614,7 +2619,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.JMXPrometheusExporterProperty):
-          JMXPrometheusExporterProperty = Wrapper(cdkObject)
+          JMXPrometheusExporterProperty = CdkObjectWrappers.wrap(cdkObject) as
+          JMXPrometheusExporterProperty
 
       internal fun unwrap(wrapped: JMXPrometheusExporterProperty):
           software.amazon.awscdk.services.applicationinsights.CfnApplication.JMXPrometheusExporterProperty
@@ -2885,7 +2891,7 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.LogProperty):
-          LogProperty = Wrapper(cdkObject)
+          LogProperty = CdkObjectWrappers.wrap(cdkObject) as LogProperty
 
       internal fun unwrap(wrapped: LogProperty):
           software.amazon.awscdk.services.applicationinsights.CfnApplication.LogProperty = (wrapped
@@ -3049,7 +3055,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.SubComponentTypeConfigurationProperty):
-          SubComponentTypeConfigurationProperty = Wrapper(cdkObject)
+          SubComponentTypeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SubComponentTypeConfigurationProperty
 
       internal fun unwrap(wrapped: SubComponentTypeConfigurationProperty):
           software.amazon.awscdk.services.applicationinsights.CfnApplication.SubComponentTypeConfigurationProperty
@@ -3170,7 +3177,7 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.CustomComponentProperty):
-          CustomComponentProperty = Wrapper(cdkObject)
+          CustomComponentProperty = CdkObjectWrappers.wrap(cdkObject) as CustomComponentProperty
 
       internal fun unwrap(wrapped: CustomComponentProperty):
           software.amazon.awscdk.services.applicationinsights.CfnApplication.CustomComponentProperty
@@ -3401,7 +3408,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.HANAPrometheusExporterProperty):
-          HANAPrometheusExporterProperty = Wrapper(cdkObject)
+          HANAPrometheusExporterProperty = CdkObjectWrappers.wrap(cdkObject) as
+          HANAPrometheusExporterProperty
 
       internal fun unwrap(wrapped: HANAPrometheusExporterProperty):
           software.amazon.awscdk.services.applicationinsights.CfnApplication.HANAPrometheusExporterProperty
@@ -3554,7 +3562,7 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternProperty):
-          LogPatternProperty = Wrapper(cdkObject)
+          LogPatternProperty = CdkObjectWrappers.wrap(cdkObject) as LogPatternProperty
 
       internal fun unwrap(wrapped: LogPatternProperty):
           software.amazon.awscdk.services.applicationinsights.CfnApplication.LogPatternProperty =
@@ -4053,7 +4061,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentMonitoringSettingProperty):
-          ComponentMonitoringSettingProperty = Wrapper(cdkObject)
+          ComponentMonitoringSettingProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ComponentMonitoringSettingProperty
 
       internal fun unwrap(wrapped: ComponentMonitoringSettingProperty):
           software.amazon.awscdk.services.applicationinsights.CfnApplication.ComponentMonitoringSettingProperty
@@ -4154,7 +4163,7 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmMetricProperty):
-          AlarmMetricProperty = Wrapper(cdkObject)
+          AlarmMetricProperty = CdkObjectWrappers.wrap(cdkObject) as AlarmMetricProperty
 
       internal fun unwrap(wrapped: AlarmMetricProperty):
           software.amazon.awscdk.services.applicationinsights.CfnApplication.AlarmMetricProperty =

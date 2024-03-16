@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -264,7 +265,7 @@ public interface AlarmStatusWidgetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmStatusWidgetProps):
-        AlarmStatusWidgetProps = Wrapper(cdkObject)
+        AlarmStatusWidgetProps = CdkObjectWrappers.wrap(cdkObject) as AlarmStatusWidgetProps
 
     internal fun unwrap(wrapped: AlarmStatusWidgetProps):
         software.amazon.awscdk.services.cloudwatch.AlarmStatusWidgetProps = (wrapped as

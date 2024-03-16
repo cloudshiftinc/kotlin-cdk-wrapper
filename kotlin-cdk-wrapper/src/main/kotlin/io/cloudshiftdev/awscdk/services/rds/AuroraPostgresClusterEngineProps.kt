@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -82,7 +83,8 @@ public interface AuroraPostgresClusterEngineProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rds.AuroraPostgresClusterEngineProps):
-        AuroraPostgresClusterEngineProps = Wrapper(cdkObject)
+        AuroraPostgresClusterEngineProps = CdkObjectWrappers.wrap(cdkObject) as
+        AuroraPostgresClusterEngineProps
 
     internal fun unwrap(wrapped: AuroraPostgresClusterEngineProps):
         software.amazon.awscdk.services.rds.AuroraPostgresClusterEngineProps = (wrapped as

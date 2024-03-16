@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -368,7 +369,8 @@ public interface ResponseHeadersCorsBehavior {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersCorsBehavior):
-        ResponseHeadersCorsBehavior = Wrapper(cdkObject)
+        ResponseHeadersCorsBehavior = CdkObjectWrappers.wrap(cdkObject) as
+        ResponseHeadersCorsBehavior
 
     internal fun unwrap(wrapped: ResponseHeadersCorsBehavior):
         software.amazon.awscdk.services.cloudfront.ResponseHeadersCorsBehavior = (wrapped as

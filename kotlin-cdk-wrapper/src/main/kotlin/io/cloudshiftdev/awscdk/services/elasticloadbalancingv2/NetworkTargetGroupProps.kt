@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import kotlin.Boolean
 import kotlin.Number
@@ -418,7 +419,7 @@ public interface NetworkTargetGroupProps : BaseTargetGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkTargetGroupProps):
-        NetworkTargetGroupProps = Wrapper(cdkObject)
+        NetworkTargetGroupProps = CdkObjectWrappers.wrap(cdkObject) as NetworkTargetGroupProps
 
     internal fun unwrap(wrapped: NetworkTargetGroupProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkTargetGroupProps = (wrapped as

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -543,7 +544,7 @@ public open class CfnFramework internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty):
-          FrameworkControlProperty = Wrapper(cdkObject)
+          FrameworkControlProperty = CdkObjectWrappers.wrap(cdkObject) as FrameworkControlProperty
 
       internal fun unwrap(wrapped: FrameworkControlProperty):
           software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty = (wrapped as
@@ -774,7 +775,7 @@ public open class CfnFramework internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty):
-          ControlScopeProperty = Wrapper(cdkObject)
+          ControlScopeProperty = CdkObjectWrappers.wrap(cdkObject) as ControlScopeProperty
 
       internal fun unwrap(wrapped: ControlScopeProperty):
           software.amazon.awscdk.services.backup.CfnFramework.ControlScopeProperty = (wrapped as
@@ -888,7 +889,8 @@ public open class CfnFramework internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty):
-          ControlInputParameterProperty = Wrapper(cdkObject)
+          ControlInputParameterProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ControlInputParameterProperty
 
       internal fun unwrap(wrapped: ControlInputParameterProperty):
           software.amazon.awscdk.services.backup.CfnFramework.ControlInputParameterProperty =

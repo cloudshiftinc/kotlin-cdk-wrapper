@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Deprecated
 import kotlin.String
@@ -536,7 +537,7 @@ public interface TaskStateBaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.TaskStateBaseProps):
-        TaskStateBaseProps = Wrapper(cdkObject)
+        TaskStateBaseProps = CdkObjectWrappers.wrap(cdkObject) as TaskStateBaseProps
 
     internal fun unwrap(wrapped: TaskStateBaseProps):
         software.amazon.awscdk.services.stepfunctions.TaskStateBaseProps = (wrapped as

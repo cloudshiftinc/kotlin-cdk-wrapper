@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.batch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -99,7 +100,7 @@ public interface SecretVersionInfo {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.SecretVersionInfo):
-        SecretVersionInfo = Wrapper(cdkObject)
+        SecretVersionInfo = CdkObjectWrappers.wrap(cdkObject) as SecretVersionInfo
 
     internal fun unwrap(wrapped: SecretVersionInfo):
         software.amazon.awscdk.services.batch.SecretVersionInfo = (wrapped as CdkObject).cdkObject

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.servicediscovery.IService
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
@@ -48,10 +49,6 @@ public abstract class ServiceDiscovery internal constructor(
   public open fun bind(scope: Construct): ServiceDiscoveryConfig =
       unwrap(this).bind(scope.let(Construct::unwrap)).let(ServiceDiscoveryConfig::wrap)
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.ServiceDiscovery,
-  ) : ServiceDiscovery(cdkObject)
-
   public companion object {
     public fun cloudMap(service: IService): ServiceDiscovery =
         software.amazon.awscdk.services.appmesh.ServiceDiscovery.cloudMap(service.let(IService::unwrap)).let(ServiceDiscovery::wrap)
@@ -85,7 +82,7 @@ public abstract class ServiceDiscovery internal constructor(
         ipPreference.let(IpPreference::unwrap)).let(ServiceDiscovery::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.ServiceDiscovery):
-        ServiceDiscovery = Wrapper(cdkObject)
+        ServiceDiscovery = CdkObjectWrappers.wrap(cdkObject) as ServiceDiscovery
 
     internal fun unwrap(wrapped: ServiceDiscovery):
         software.amazon.awscdk.services.appmesh.ServiceDiscovery = (wrapped as CdkObject).cdkObject

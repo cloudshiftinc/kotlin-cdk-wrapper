@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lambda.eventsources
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.lambda.IEventSourceDlq
 import io.cloudshiftdev.awscdk.services.lambda.StartingPosition
 import kotlin.Any
@@ -384,7 +385,7 @@ public interface DynamoEventSourceProps : StreamEventSourceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.eventsources.DynamoEventSourceProps):
-        DynamoEventSourceProps = Wrapper(cdkObject)
+        DynamoEventSourceProps = CdkObjectWrappers.wrap(cdkObject) as DynamoEventSourceProps
 
     internal fun unwrap(wrapped: DynamoEventSourceProps):
         software.amazon.awscdk.services.lambda.eventsources.DynamoEventSourceProps = (wrapped as

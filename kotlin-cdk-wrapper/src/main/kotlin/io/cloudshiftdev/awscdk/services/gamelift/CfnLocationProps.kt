@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.gamelift
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -144,7 +145,7 @@ public interface CfnLocationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnLocationProps):
-        CfnLocationProps = Wrapper(cdkObject)
+        CfnLocationProps = CdkObjectWrappers.wrap(cdkObject) as CfnLocationProps
 
     internal fun unwrap(wrapped: CfnLocationProps):
         software.amazon.awscdk.services.gamelift.CfnLocationProps = (wrapped as CdkObject).cdkObject

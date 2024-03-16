@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -103,7 +104,7 @@ public interface AclPortRange {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.AclPortRange): AclPortRange =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as AclPortRange
 
     internal fun unwrap(wrapped: AclPortRange): software.amazon.awscdk.services.ec2.AclPortRange =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.AclPortRange

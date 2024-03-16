@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1891,7 +1892,8 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.DefaultCacheBehaviorProperty):
-          DefaultCacheBehaviorProperty = Wrapper(cdkObject)
+          DefaultCacheBehaviorProperty = CdkObjectWrappers.wrap(cdkObject) as
+          DefaultCacheBehaviorProperty
 
       internal fun unwrap(wrapped: DefaultCacheBehaviorProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.DefaultCacheBehaviorProperty =
@@ -3632,7 +3634,7 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.CacheBehaviorProperty):
-          CacheBehaviorProperty = Wrapper(cdkObject)
+          CacheBehaviorProperty = CdkObjectWrappers.wrap(cdkObject) as CacheBehaviorProperty
 
       internal fun unwrap(wrapped: CacheBehaviorProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.CacheBehaviorProperty =
@@ -3777,7 +3779,7 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupsProperty):
-          OriginGroupsProperty = Wrapper(cdkObject)
+          OriginGroupsProperty = CdkObjectWrappers.wrap(cdkObject) as OriginGroupsProperty
 
       internal fun unwrap(wrapped: OriginGroupsProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupsProperty = (wrapped
@@ -4118,7 +4120,8 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.CustomErrorResponseProperty):
-          CustomErrorResponseProperty = Wrapper(cdkObject)
+          CustomErrorResponseProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CustomErrorResponseProperty
 
       internal fun unwrap(wrapped: CustomErrorResponseProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.CustomErrorResponseProperty =
@@ -4332,7 +4335,7 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.GeoRestrictionProperty):
-          GeoRestrictionProperty = Wrapper(cdkObject)
+          GeoRestrictionProperty = CdkObjectWrappers.wrap(cdkObject) as GeoRestrictionProperty
 
       internal fun unwrap(wrapped: GeoRestrictionProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.GeoRestrictionProperty =
@@ -4527,7 +4530,7 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.S3OriginConfigProperty):
-          S3OriginConfigProperty = Wrapper(cdkObject)
+          S3OriginConfigProperty = CdkObjectWrappers.wrap(cdkObject) as S3OriginConfigProperty
 
       internal fun unwrap(wrapped: S3OriginConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.S3OriginConfigProperty =
@@ -4732,7 +4735,7 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.LoggingProperty):
-          LoggingProperty = Wrapper(cdkObject)
+          LoggingProperty = CdkObjectWrappers.wrap(cdkObject) as LoggingProperty
 
       internal fun unwrap(wrapped: LoggingProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.LoggingProperty = (wrapped as
@@ -5086,7 +5089,7 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.CookiesProperty):
-          CookiesProperty = Wrapper(cdkObject)
+          CookiesProperty = CdkObjectWrappers.wrap(cdkObject) as CookiesProperty
 
       internal fun unwrap(wrapped: CookiesProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.CookiesProperty = (wrapped as
@@ -5207,7 +5210,8 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.FunctionAssociationProperty):
-          FunctionAssociationProperty = Wrapper(cdkObject)
+          FunctionAssociationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          FunctionAssociationProperty
 
       internal fun unwrap(wrapped: FunctionAssociationProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.FunctionAssociationProperty =
@@ -5587,7 +5591,8 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.CustomOriginConfigProperty):
-          CustomOriginConfigProperty = Wrapper(cdkObject)
+          CustomOriginConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CustomOriginConfigProperty
 
       internal fun unwrap(wrapped: CustomOriginConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.CustomOriginConfigProperty =
@@ -6377,7 +6382,7 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.ForwardedValuesProperty):
-          ForwardedValuesProperty = Wrapper(cdkObject)
+          ForwardedValuesProperty = CdkObjectWrappers.wrap(cdkObject) as ForwardedValuesProperty
 
       internal fun unwrap(wrapped: ForwardedValuesProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.ForwardedValuesProperty =
@@ -6917,7 +6922,7 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.ViewerCertificateProperty):
-          ViewerCertificateProperty = Wrapper(cdkObject)
+          ViewerCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as ViewerCertificateProperty
 
       internal fun unwrap(wrapped: ViewerCertificateProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.ViewerCertificateProperty =
@@ -8635,7 +8640,8 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.DistributionConfigProperty):
-          DistributionConfigProperty = Wrapper(cdkObject)
+          DistributionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          DistributionConfigProperty
 
       internal fun unwrap(wrapped: DistributionConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.DistributionConfigProperty =
@@ -8818,7 +8824,7 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginShieldProperty):
-          OriginShieldProperty = Wrapper(cdkObject)
+          OriginShieldProperty = CdkObjectWrappers.wrap(cdkObject) as OriginShieldProperty
 
       internal fun unwrap(wrapped: OriginShieldProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginShieldProperty = (wrapped
@@ -8949,7 +8955,7 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.StatusCodesProperty):
-          StatusCodesProperty = Wrapper(cdkObject)
+          StatusCodesProperty = CdkObjectWrappers.wrap(cdkObject) as StatusCodesProperty
 
       internal fun unwrap(wrapped: StatusCodesProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.StatusCodesProperty = (wrapped
@@ -9073,7 +9079,8 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupFailoverCriteriaProperty):
-          OriginGroupFailoverCriteriaProperty = Wrapper(cdkObject)
+          OriginGroupFailoverCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as
+          OriginGroupFailoverCriteriaProperty
 
       internal fun unwrap(wrapped: OriginGroupFailoverCriteriaProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupFailoverCriteriaProperty
@@ -9206,7 +9213,8 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupMembersProperty):
-          OriginGroupMembersProperty = Wrapper(cdkObject)
+          OriginGroupMembersProperty = CdkObjectWrappers.wrap(cdkObject) as
+          OriginGroupMembersProperty
 
       internal fun unwrap(wrapped: OriginGroupMembersProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupMembersProperty =
@@ -9444,7 +9452,8 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.LambdaFunctionAssociationProperty):
-          LambdaFunctionAssociationProperty = Wrapper(cdkObject)
+          LambdaFunctionAssociationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          LambdaFunctionAssociationProperty
 
       internal fun unwrap(wrapped: LambdaFunctionAssociationProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.LambdaFunctionAssociationProperty
@@ -9548,7 +9557,7 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.LegacyS3OriginProperty):
-          LegacyS3OriginProperty = Wrapper(cdkObject)
+          LegacyS3OriginProperty = CdkObjectWrappers.wrap(cdkObject) as LegacyS3OriginProperty
 
       internal fun unwrap(wrapped: LegacyS3OriginProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.LegacyS3OriginProperty =
@@ -9767,7 +9776,7 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupProperty):
-          OriginGroupProperty = Wrapper(cdkObject)
+          OriginGroupProperty = CdkObjectWrappers.wrap(cdkObject) as OriginGroupProperty
 
       internal fun unwrap(wrapped: OriginGroupProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupProperty = (wrapped
@@ -10500,7 +10509,7 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginProperty):
-          OriginProperty = Wrapper(cdkObject)
+          OriginProperty = CdkObjectWrappers.wrap(cdkObject) as OriginProperty
 
       internal fun unwrap(wrapped: OriginProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginProperty = (wrapped as
@@ -10582,7 +10591,7 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupMemberProperty):
-          OriginGroupMemberProperty = Wrapper(cdkObject)
+          OriginGroupMemberProperty = CdkObjectWrappers.wrap(cdkObject) as OriginGroupMemberProperty
 
       internal fun unwrap(wrapped: OriginGroupMemberProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginGroupMemberProperty =
@@ -10706,7 +10715,8 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginCustomHeaderProperty):
-          OriginCustomHeaderProperty = Wrapper(cdkObject)
+          OriginCustomHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as
+          OriginCustomHeaderProperty
 
       internal fun unwrap(wrapped: OriginCustomHeaderProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.OriginCustomHeaderProperty =
@@ -10858,7 +10868,7 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.RestrictionsProperty):
-          RestrictionsProperty = Wrapper(cdkObject)
+          RestrictionsProperty = CdkObjectWrappers.wrap(cdkObject) as RestrictionsProperty
 
       internal fun unwrap(wrapped: RestrictionsProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.RestrictionsProperty = (wrapped
@@ -11046,7 +11056,8 @@ public open class CfnDistribution internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnDistribution.LegacyCustomOriginProperty):
-          LegacyCustomOriginProperty = Wrapper(cdkObject)
+          LegacyCustomOriginProperty = CdkObjectWrappers.wrap(cdkObject) as
+          LegacyCustomOriginProperty
 
       internal fun unwrap(wrapped: LegacyCustomOriginProperty):
           software.amazon.awscdk.services.cloudfront.CfnDistribution.LegacyCustomOriginProperty =

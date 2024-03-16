@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskStateBaseProps
@@ -501,7 +502,8 @@ public interface EmrContainersCreateVirtualClusterProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersCreateVirtualClusterProps):
-        EmrContainersCreateVirtualClusterProps = Wrapper(cdkObject)
+        EmrContainersCreateVirtualClusterProps = CdkObjectWrappers.wrap(cdkObject) as
+        EmrContainersCreateVirtualClusterProps
 
     internal fun unwrap(wrapped: EmrContainersCreateVirtualClusterProps):
         software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersCreateVirtualClusterProps =

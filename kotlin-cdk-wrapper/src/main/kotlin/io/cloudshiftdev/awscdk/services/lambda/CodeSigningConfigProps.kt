@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.signer.ISigningProfile
 import kotlin.String
 import kotlin.Unit
@@ -170,7 +171,7 @@ public interface CodeSigningConfigProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CodeSigningConfigProps):
-        CodeSigningConfigProps = Wrapper(cdkObject)
+        CodeSigningConfigProps = CdkObjectWrappers.wrap(cdkObject) as CodeSigningConfigProps
 
     internal fun unwrap(wrapped: CodeSigningConfigProps):
         software.amazon.awscdk.services.lambda.CodeSigningConfigProps = (wrapped as

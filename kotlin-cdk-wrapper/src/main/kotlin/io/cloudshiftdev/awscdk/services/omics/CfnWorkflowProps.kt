@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.omics
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -307,7 +308,7 @@ public interface CfnWorkflowProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.omics.CfnWorkflowProps):
-        CfnWorkflowProps = Wrapper(cdkObject)
+        CfnWorkflowProps = CdkObjectWrappers.wrap(cdkObject) as CfnWorkflowProps
 
     internal fun unwrap(wrapped: CfnWorkflowProps):
         software.amazon.awscdk.services.omics.CfnWorkflowProps = (wrapped as CdkObject).cdkObject as

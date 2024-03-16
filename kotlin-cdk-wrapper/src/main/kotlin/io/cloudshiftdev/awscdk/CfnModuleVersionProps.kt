@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -137,7 +138,7 @@ public interface CfnModuleVersionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnModuleVersionProps):
-        CfnModuleVersionProps = Wrapper(cdkObject)
+        CfnModuleVersionProps = CdkObjectWrappers.wrap(cdkObject) as CfnModuleVersionProps
 
     internal fun unwrap(wrapped: CfnModuleVersionProps):
         software.amazon.awscdk.CfnModuleVersionProps = (wrapped as CdkObject).cdkObject as

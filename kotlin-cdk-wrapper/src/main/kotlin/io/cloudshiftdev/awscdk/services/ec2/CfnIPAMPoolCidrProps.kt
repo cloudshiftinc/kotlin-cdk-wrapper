@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -159,7 +160,7 @@ public interface CfnIPAMPoolCidrProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnIPAMPoolCidrProps):
-        CfnIPAMPoolCidrProps = Wrapper(cdkObject)
+        CfnIPAMPoolCidrProps = CdkObjectWrappers.wrap(cdkObject) as CfnIPAMPoolCidrProps
 
     internal fun unwrap(wrapped: CfnIPAMPoolCidrProps):
         software.amazon.awscdk.services.ec2.CfnIPAMPoolCidrProps = (wrapped as CdkObject).cdkObject

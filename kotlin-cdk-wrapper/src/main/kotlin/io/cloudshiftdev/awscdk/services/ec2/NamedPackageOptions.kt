@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -124,7 +125,7 @@ public interface NamedPackageOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.NamedPackageOptions):
-        NamedPackageOptions = Wrapper(cdkObject)
+        NamedPackageOptions = CdkObjectWrappers.wrap(cdkObject) as NamedPackageOptions
 
     internal fun unwrap(wrapped: NamedPackageOptions):
         software.amazon.awscdk.services.ec2.NamedPackageOptions = (wrapped as CdkObject).cdkObject

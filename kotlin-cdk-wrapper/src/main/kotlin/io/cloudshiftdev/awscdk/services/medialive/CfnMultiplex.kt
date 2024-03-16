@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -503,7 +504,8 @@ public open class CfnMultiplex internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexMediaConnectOutputDestinationSettingsProperty):
-          MultiplexMediaConnectOutputDestinationSettingsProperty = Wrapper(cdkObject)
+          MultiplexMediaConnectOutputDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject)
+          as MultiplexMediaConnectOutputDestinationSettingsProperty
 
       internal fun unwrap(wrapped: MultiplexMediaConnectOutputDestinationSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexMediaConnectOutputDestinationSettingsProperty
@@ -671,7 +673,7 @@ public open class CfnMultiplex internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexSettingsProperty):
-          MultiplexSettingsProperty = Wrapper(cdkObject)
+          MultiplexSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as MultiplexSettingsProperty
 
       internal fun unwrap(wrapped: MultiplexSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexSettingsProperty =
@@ -799,7 +801,8 @@ public open class CfnMultiplex internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty):
-          MultiplexOutputDestinationProperty = Wrapper(cdkObject)
+          MultiplexOutputDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MultiplexOutputDestinationProperty
 
       internal fun unwrap(wrapped: MultiplexOutputDestinationProperty):
           software.amazon.awscdk.services.medialive.CfnMultiplex.MultiplexOutputDestinationProperty

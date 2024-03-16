@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -120,7 +121,7 @@ public interface FunctionAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.FunctionAttributes):
-        FunctionAttributes = Wrapper(cdkObject)
+        FunctionAttributes = CdkObjectWrappers.wrap(cdkObject) as FunctionAttributes
 
     internal fun unwrap(wrapped: FunctionAttributes):
         software.amazon.awscdk.services.cloudfront.FunctionAttributes = (wrapped as

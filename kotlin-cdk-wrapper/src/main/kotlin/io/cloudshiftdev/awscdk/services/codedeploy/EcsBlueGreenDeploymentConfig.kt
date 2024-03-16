@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.codedeploy
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IListener
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.ITargetGroup
 import kotlin.Unit
@@ -412,7 +413,8 @@ public interface EcsBlueGreenDeploymentConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.EcsBlueGreenDeploymentConfig):
-        EcsBlueGreenDeploymentConfig = Wrapper(cdkObject)
+        EcsBlueGreenDeploymentConfig = CdkObjectWrappers.wrap(cdkObject) as
+        EcsBlueGreenDeploymentConfig
 
     internal fun unwrap(wrapped: EcsBlueGreenDeploymentConfig):
         software.amazon.awscdk.services.codedeploy.EcsBlueGreenDeploymentConfig = (wrapped as

@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -746,7 +747,7 @@ public open class CfnWebhook internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookFilterRuleProperty):
-          WebhookFilterRuleProperty = Wrapper(cdkObject)
+          WebhookFilterRuleProperty = CdkObjectWrappers.wrap(cdkObject) as WebhookFilterRuleProperty
 
       internal fun unwrap(wrapped: WebhookFilterRuleProperty):
           software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookFilterRuleProperty =
@@ -874,7 +875,8 @@ public open class CfnWebhook internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty):
-          WebhookAuthConfigurationProperty = Wrapper(cdkObject)
+          WebhookAuthConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          WebhookAuthConfigurationProperty
 
       internal fun unwrap(wrapped: WebhookAuthConfigurationProperty):
           software.amazon.awscdk.services.codepipeline.CfnWebhook.WebhookAuthConfigurationProperty =

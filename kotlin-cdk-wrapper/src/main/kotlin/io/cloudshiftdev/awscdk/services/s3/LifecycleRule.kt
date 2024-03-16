@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.s3
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import java.time.Instant
 import kotlin.Any
 import kotlin.Boolean
@@ -706,7 +707,7 @@ public interface LifecycleRule {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.LifecycleRule): LifecycleRule =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as LifecycleRule
 
     internal fun unwrap(wrapped: LifecycleRule): software.amazon.awscdk.services.s3.LifecycleRule =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.s3.LifecycleRule

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.cloudformation.include
 import io.cloudshiftdev.awscdk.NestedStack
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -96,7 +97,7 @@ public interface IncludedNestedStack {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudformation.include.IncludedNestedStack):
-        IncludedNestedStack = Wrapper(cdkObject)
+        IncludedNestedStack = CdkObjectWrappers.wrap(cdkObject) as IncludedNestedStack
 
     internal fun unwrap(wrapped: IncludedNestedStack):
         software.amazon.awscdk.cloudformation.include.IncludedNestedStack = (wrapped as

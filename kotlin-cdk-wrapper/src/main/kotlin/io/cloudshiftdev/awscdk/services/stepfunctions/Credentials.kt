@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -78,7 +79,7 @@ public interface Credentials {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.Credentials):
-        Credentials = Wrapper(cdkObject)
+        Credentials = CdkObjectWrappers.wrap(cdkObject) as Credentials
 
     internal fun unwrap(wrapped: Credentials):
         software.amazon.awscdk.services.stepfunctions.Credentials = (wrapped as CdkObject).cdkObject

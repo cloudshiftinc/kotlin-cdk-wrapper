@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -657,7 +658,7 @@ public open class CfnWirelessDevice internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV11Property):
-          AbpV11Property = Wrapper(cdkObject)
+          AbpV11Property = CdkObjectWrappers.wrap(cdkObject) as AbpV11Property
 
       internal fun unwrap(wrapped: AbpV11Property):
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV11Property = (wrapped as
@@ -892,7 +893,7 @@ public open class CfnWirelessDevice internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property):
-          SessionKeysAbpV11Property = Wrapper(cdkObject)
+          SessionKeysAbpV11Property = CdkObjectWrappers.wrap(cdkObject) as SessionKeysAbpV11Property
 
       internal fun unwrap(wrapped: SessionKeysAbpV11Property):
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV11Property =
@@ -1063,7 +1064,7 @@ public open class CfnWirelessDevice internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property):
-          OtaaV11Property = Wrapper(cdkObject)
+          OtaaV11Property = CdkObjectWrappers.wrap(cdkObject) as OtaaV11Property
 
       internal fun unwrap(wrapped: OtaaV11Property):
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV11Property = (wrapped
@@ -1201,7 +1202,7 @@ public open class CfnWirelessDevice internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty):
-          AbpV10xProperty = Wrapper(cdkObject)
+          AbpV10xProperty = CdkObjectWrappers.wrap(cdkObject) as AbpV10xProperty
 
       internal fun unwrap(wrapped: AbpV10xProperty):
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.AbpV10xProperty = (wrapped
@@ -1313,7 +1314,7 @@ public open class CfnWirelessDevice internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty):
-          OtaaV10xProperty = Wrapper(cdkObject)
+          OtaaV10xProperty = CdkObjectWrappers.wrap(cdkObject) as OtaaV10xProperty
 
       internal fun unwrap(wrapped: OtaaV10xProperty):
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.OtaaV10xProperty = (wrapped
@@ -1422,7 +1423,8 @@ public open class CfnWirelessDevice internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty):
-          SessionKeysAbpV10xProperty = Wrapper(cdkObject)
+          SessionKeysAbpV10xProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SessionKeysAbpV10xProperty
 
       internal fun unwrap(wrapped: SessionKeysAbpV10xProperty):
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.SessionKeysAbpV10xProperty =
@@ -1795,7 +1797,7 @@ public open class CfnWirelessDevice internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.LoRaWANDeviceProperty):
-          LoRaWANDeviceProperty = Wrapper(cdkObject)
+          LoRaWANDeviceProperty = CdkObjectWrappers.wrap(cdkObject) as LoRaWANDeviceProperty
 
       internal fun unwrap(wrapped: LoRaWANDeviceProperty):
           software.amazon.awscdk.services.iotwireless.CfnWirelessDevice.LoRaWANDeviceProperty =

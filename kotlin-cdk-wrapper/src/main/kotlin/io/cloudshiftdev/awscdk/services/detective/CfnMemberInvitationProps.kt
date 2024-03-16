@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.detective
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -223,7 +224,7 @@ public interface CfnMemberInvitationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.detective.CfnMemberInvitationProps):
-        CfnMemberInvitationProps = Wrapper(cdkObject)
+        CfnMemberInvitationProps = CdkObjectWrappers.wrap(cdkObject) as CfnMemberInvitationProps
 
     internal fun unwrap(wrapped: CfnMemberInvitationProps):
         software.amazon.awscdk.services.detective.CfnMemberInvitationProps = (wrapped as

@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1416,7 +1417,7 @@ public open class CfnApi internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.AccessLogSettingProperty):
-          AccessLogSettingProperty = Wrapper(cdkObject)
+          AccessLogSettingProperty = CdkObjectWrappers.wrap(cdkObject) as AccessLogSettingProperty
 
       internal fun unwrap(wrapped: AccessLogSettingProperty):
           software.amazon.awscdk.services.sam.CfnApi.AccessLogSettingProperty = (wrapped as
@@ -1607,7 +1608,8 @@ public open class CfnApi internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty):
-          Route53ConfigurationProperty = Wrapper(cdkObject)
+          Route53ConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          Route53ConfigurationProperty
 
       internal fun unwrap(wrapped: Route53ConfigurationProperty):
           software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty = (wrapped as
@@ -1705,7 +1707,8 @@ public open class CfnApi internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty):
-          MutualTlsAuthenticationProperty = Wrapper(cdkObject)
+          MutualTlsAuthenticationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MutualTlsAuthenticationProperty
 
       internal fun unwrap(wrapped: MutualTlsAuthenticationProperty):
           software.amazon.awscdk.services.sam.CfnApi.MutualTlsAuthenticationProperty = (wrapped as
@@ -2020,7 +2023,8 @@ public open class CfnApi internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.DomainConfigurationProperty):
-          DomainConfigurationProperty = Wrapper(cdkObject)
+          DomainConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          DomainConfigurationProperty
 
       internal fun unwrap(wrapped: DomainConfigurationProperty):
           software.amazon.awscdk.services.sam.CfnApi.DomainConfigurationProperty = (wrapped as
@@ -2137,7 +2141,7 @@ public open class CfnApi internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.S3LocationProperty):
-          S3LocationProperty = Wrapper(cdkObject)
+          S3LocationProperty = CdkObjectWrappers.wrap(cdkObject) as S3LocationProperty
 
       internal fun unwrap(wrapped: S3LocationProperty):
           software.amazon.awscdk.services.sam.CfnApi.S3LocationProperty = (wrapped as
@@ -2271,7 +2275,7 @@ public open class CfnApi internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.AuthProperty):
-          AuthProperty = Wrapper(cdkObject)
+          AuthProperty = CdkObjectWrappers.wrap(cdkObject) as AuthProperty
 
       internal fun unwrap(wrapped: AuthProperty):
           software.amazon.awscdk.services.sam.CfnApi.AuthProperty = (wrapped as CdkObject).cdkObject
@@ -2379,7 +2383,8 @@ public open class CfnApi internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty):
-          EndpointConfigurationProperty = Wrapper(cdkObject)
+          EndpointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EndpointConfigurationProperty
 
       internal fun unwrap(wrapped: EndpointConfigurationProperty):
           software.amazon.awscdk.services.sam.CfnApi.EndpointConfigurationProperty = (wrapped as
@@ -2546,7 +2551,7 @@ public open class CfnApi internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.CanarySettingProperty):
-          CanarySettingProperty = Wrapper(cdkObject)
+          CanarySettingProperty = CdkObjectWrappers.wrap(cdkObject) as CanarySettingProperty
 
       internal fun unwrap(wrapped: CanarySettingProperty):
           software.amazon.awscdk.services.sam.CfnApi.CanarySettingProperty = (wrapped as
@@ -2723,7 +2728,7 @@ public open class CfnApi internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApi.CorsConfigurationProperty):
-          CorsConfigurationProperty = Wrapper(cdkObject)
+          CorsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as CorsConfigurationProperty
 
       internal fun unwrap(wrapped: CorsConfigurationProperty):
           software.amazon.awscdk.services.sam.CfnApi.CorsConfigurationProperty = (wrapped as

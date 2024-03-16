@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -453,7 +454,7 @@ public interface BastionHostLinuxProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.BastionHostLinuxProps):
-        BastionHostLinuxProps = Wrapper(cdkObject)
+        BastionHostLinuxProps = CdkObjectWrappers.wrap(cdkObject) as BastionHostLinuxProps
 
     internal fun unwrap(wrapped: BastionHostLinuxProps):
         software.amazon.awscdk.services.ec2.BastionHostLinuxProps = (wrapped as CdkObject).cdkObject

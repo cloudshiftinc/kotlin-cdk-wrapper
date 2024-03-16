@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.s3
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -314,7 +315,7 @@ public interface Inventory {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.Inventory): Inventory =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as Inventory
 
     internal fun unwrap(wrapped: Inventory): software.amazon.awscdk.services.s3.Inventory = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.s3.Inventory

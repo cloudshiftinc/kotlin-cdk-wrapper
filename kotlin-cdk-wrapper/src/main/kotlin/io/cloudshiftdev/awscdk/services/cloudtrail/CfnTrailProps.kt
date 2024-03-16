@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -1181,7 +1182,7 @@ public interface CfnTrailProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrailProps):
-        CfnTrailProps = Wrapper(cdkObject)
+        CfnTrailProps = CdkObjectWrappers.wrap(cdkObject) as CfnTrailProps
 
     internal fun unwrap(wrapped: CfnTrailProps):
         software.amazon.awscdk.services.cloudtrail.CfnTrailProps = (wrapped as CdkObject).cdkObject

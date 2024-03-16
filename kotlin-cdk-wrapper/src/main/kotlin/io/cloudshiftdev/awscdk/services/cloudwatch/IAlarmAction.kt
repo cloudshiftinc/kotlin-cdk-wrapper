@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 
 /**
@@ -17,23 +18,9 @@ public interface IAlarmAction {
    */
   public fun bind(scope: Construct, alarm: IAlarm): AlarmActionConfig
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.IAlarmAction,
-  ) : CdkObject(cdkObject), IAlarmAction {
-    /**
-     * Return the properties required to send alarm actions to this CloudWatch alarm.
-     *
-     * @param scope root Construct that allows creating new Constructs. 
-     * @param alarm CloudWatch alarm that the action will target. 
-     */
-    override fun bind(scope: Construct, alarm: IAlarm): AlarmActionConfig =
-        unwrap(this).bind(scope.let(Construct::unwrap),
-        alarm.let(IAlarm::unwrap)).let(AlarmActionConfig::wrap)
-  }
-
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.IAlarmAction):
-        IAlarmAction = Wrapper(cdkObject)
+        IAlarmAction = CdkObjectWrappers.wrap(cdkObject) as IAlarmAction
 
     internal fun unwrap(wrapped: IAlarmAction):
         software.amazon.awscdk.services.cloudwatch.IAlarmAction = (wrapped as CdkObject).cdkObject

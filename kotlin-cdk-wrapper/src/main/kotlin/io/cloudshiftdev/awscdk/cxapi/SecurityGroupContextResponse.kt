@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cxapi
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -108,7 +109,8 @@ public interface SecurityGroupContextResponse {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.SecurityGroupContextResponse):
-        SecurityGroupContextResponse = Wrapper(cdkObject)
+        SecurityGroupContextResponse = CdkObjectWrappers.wrap(cdkObject) as
+        SecurityGroupContextResponse
 
     internal fun unwrap(wrapped: SecurityGroupContextResponse):
         software.amazon.awscdk.cxapi.SecurityGroupContextResponse = (wrapped as CdkObject).cdkObject

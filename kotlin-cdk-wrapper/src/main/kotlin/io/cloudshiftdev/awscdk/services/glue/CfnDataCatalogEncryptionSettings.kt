@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -365,7 +366,7 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty):
-          EncryptionAtRestProperty = Wrapper(cdkObject)
+          EncryptionAtRestProperty = CdkObjectWrappers.wrap(cdkObject) as EncryptionAtRestProperty
 
       internal fun unwrap(wrapped: EncryptionAtRestProperty):
           software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.EncryptionAtRestProperty
@@ -581,7 +582,8 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty):
-          DataCatalogEncryptionSettingsProperty = Wrapper(cdkObject)
+          DataCatalogEncryptionSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          DataCatalogEncryptionSettingsProperty
 
       internal fun unwrap(wrapped: DataCatalogEncryptionSettingsProperty):
           software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty
@@ -755,7 +757,8 @@ public open class CfnDataCatalogEncryptionSettings internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty):
-          ConnectionPasswordEncryptionProperty = Wrapper(cdkObject)
+          ConnectionPasswordEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ConnectionPasswordEncryptionProperty
 
       internal fun unwrap(wrapped: ConnectionPasswordEncryptionProperty):
           software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings.ConnectionPasswordEncryptionProperty

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.sns.subscriptions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.sns.FilterOrPolicy
 import io.cloudshiftdev.awscdk.services.sns.SubscriptionFilter
 import io.cloudshiftdev.awscdk.services.sqs.IQueue
@@ -168,7 +169,7 @@ public interface SqsSubscriptionProps : SubscriptionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.sns.subscriptions.SqsSubscriptionProps):
-        SqsSubscriptionProps = Wrapper(cdkObject)
+        SqsSubscriptionProps = CdkObjectWrappers.wrap(cdkObject) as SqsSubscriptionProps
 
     internal fun unwrap(wrapped: SqsSubscriptionProps):
         software.amazon.awscdk.services.sns.subscriptions.SqsSubscriptionProps = (wrapped as

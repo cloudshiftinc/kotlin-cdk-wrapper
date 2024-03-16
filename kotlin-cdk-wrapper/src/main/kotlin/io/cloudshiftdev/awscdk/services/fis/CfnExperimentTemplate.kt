@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -723,7 +724,8 @@ public open class CfnExperimentTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateTargetFilterProperty):
-          ExperimentTemplateTargetFilterProperty = Wrapper(cdkObject)
+          ExperimentTemplateTargetFilterProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ExperimentTemplateTargetFilterProperty
 
       internal fun unwrap(wrapped: ExperimentTemplateTargetFilterProperty):
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateTargetFilterProperty
@@ -1011,7 +1013,8 @@ public open class CfnExperimentTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateTargetProperty):
-          ExperimentTemplateTargetProperty = Wrapper(cdkObject)
+          ExperimentTemplateTargetProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ExperimentTemplateTargetProperty
 
       internal fun unwrap(wrapped: ExperimentTemplateTargetProperty):
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateTargetProperty
@@ -1159,7 +1162,8 @@ public open class CfnExperimentTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty):
-          ExperimentTemplateLogConfigurationProperty = Wrapper(cdkObject)
+          ExperimentTemplateLogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ExperimentTemplateLogConfigurationProperty
 
       internal fun unwrap(wrapped: ExperimentTemplateLogConfigurationProperty):
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty
@@ -1273,7 +1277,8 @@ public open class CfnExperimentTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty):
-          ExperimentTemplateExperimentOptionsProperty = Wrapper(cdkObject)
+          ExperimentTemplateExperimentOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ExperimentTemplateExperimentOptionsProperty
 
       internal fun unwrap(wrapped: ExperimentTemplateExperimentOptionsProperty):
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty
@@ -1383,7 +1388,7 @@ public open class CfnExperimentTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.S3ConfigurationProperty):
-          S3ConfigurationProperty = Wrapper(cdkObject)
+          S3ConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as S3ConfigurationProperty
 
       internal fun unwrap(wrapped: S3ConfigurationProperty):
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.S3ConfigurationProperty =
@@ -1499,7 +1504,8 @@ public open class CfnExperimentTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateStopConditionProperty):
-          ExperimentTemplateStopConditionProperty = Wrapper(cdkObject)
+          ExperimentTemplateStopConditionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ExperimentTemplateStopConditionProperty
 
       internal fun unwrap(wrapped: ExperimentTemplateStopConditionProperty):
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateStopConditionProperty
@@ -1735,7 +1741,8 @@ public open class CfnExperimentTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateActionProperty):
-          ExperimentTemplateActionProperty = Wrapper(cdkObject)
+          ExperimentTemplateActionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ExperimentTemplateActionProperty
 
       internal fun unwrap(wrapped: ExperimentTemplateActionProperty):
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateActionProperty
@@ -1821,7 +1828,8 @@ public open class CfnExperimentTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty):
-          CloudWatchLogsConfigurationProperty = Wrapper(cdkObject)
+          CloudWatchLogsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CloudWatchLogsConfigurationProperty
 
       internal fun unwrap(wrapped: CloudWatchLogsConfigurationProperty):
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty

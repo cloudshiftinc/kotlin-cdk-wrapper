@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.sns.ITopic
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
@@ -727,7 +728,7 @@ public interface SnsPublishProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SnsPublishProps):
-        SnsPublishProps = Wrapper(cdkObject)
+        SnsPublishProps = CdkObjectWrappers.wrap(cdkObject) as SnsPublishProps
 
     internal fun unwrap(wrapped: SnsPublishProps):
         software.amazon.awscdk.services.stepfunctions.tasks.SnsPublishProps = (wrapped as

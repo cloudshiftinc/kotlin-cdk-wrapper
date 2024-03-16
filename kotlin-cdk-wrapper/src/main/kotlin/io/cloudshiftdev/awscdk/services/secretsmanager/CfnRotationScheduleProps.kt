@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.secretsmanager
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -474,7 +475,7 @@ public interface CfnRotationScheduleProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.CfnRotationScheduleProps):
-        CfnRotationScheduleProps = Wrapper(cdkObject)
+        CfnRotationScheduleProps = CdkObjectWrappers.wrap(cdkObject) as CfnRotationScheduleProps
 
     internal fun unwrap(wrapped: CfnRotationScheduleProps):
         software.amazon.awscdk.services.secretsmanager.CfnRotationScheduleProps = (wrapped as

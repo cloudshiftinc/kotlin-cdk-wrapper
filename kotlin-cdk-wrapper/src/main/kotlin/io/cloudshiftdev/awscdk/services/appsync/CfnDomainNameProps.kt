@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -136,7 +137,7 @@ public interface CfnDomainNameProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnDomainNameProps):
-        CfnDomainNameProps = Wrapper(cdkObject)
+        CfnDomainNameProps = CdkObjectWrappers.wrap(cdkObject) as CfnDomainNameProps
 
     internal fun unwrap(wrapped: CfnDomainNameProps):
         software.amazon.awscdk.services.appsync.CfnDomainNameProps = (wrapped as

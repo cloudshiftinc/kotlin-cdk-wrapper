@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -102,7 +103,7 @@ public interface LazyAnyValueOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.LazyAnyValueOptions): LazyAnyValueOptions =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as LazyAnyValueOptions
 
     internal fun unwrap(wrapped: LazyAnyValueOptions): software.amazon.awscdk.LazyAnyValueOptions =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.LazyAnyValueOptions

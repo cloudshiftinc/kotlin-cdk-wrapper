@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1173,7 +1174,7 @@ public open class CfnPatchBaseline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterProperty):
-          PatchFilterProperty = Wrapper(cdkObject)
+          PatchFilterProperty = CdkObjectWrappers.wrap(cdkObject) as PatchFilterProperty
 
       internal fun unwrap(wrapped: PatchFilterProperty):
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterProperty = (wrapped as
@@ -1287,7 +1288,7 @@ public open class CfnPatchBaseline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty):
-          PatchFilterGroupProperty = Wrapper(cdkObject)
+          PatchFilterGroupProperty = CdkObjectWrappers.wrap(cdkObject) as PatchFilterGroupProperty
 
       internal fun unwrap(wrapped: PatchFilterGroupProperty):
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty = (wrapped
@@ -1512,7 +1513,7 @@ public open class CfnPatchBaseline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchSourceProperty):
-          PatchSourceProperty = Wrapper(cdkObject)
+          PatchSourceProperty = CdkObjectWrappers.wrap(cdkObject) as PatchSourceProperty
 
       internal fun unwrap(wrapped: PatchSourceProperty):
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchSourceProperty = (wrapped as
@@ -1825,7 +1826,7 @@ public open class CfnPatchBaseline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleProperty):
-          RuleProperty = Wrapper(cdkObject)
+          RuleProperty = CdkObjectWrappers.wrap(cdkObject) as RuleProperty
 
       internal fun unwrap(wrapped: RuleProperty):
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleProperty = (wrapped as
@@ -1942,7 +1943,7 @@ public open class CfnPatchBaseline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty):
-          RuleGroupProperty = Wrapper(cdkObject)
+          RuleGroupProperty = CdkObjectWrappers.wrap(cdkObject) as RuleGroupProperty
 
       internal fun unwrap(wrapped: RuleGroupProperty):
           software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty = (wrapped as

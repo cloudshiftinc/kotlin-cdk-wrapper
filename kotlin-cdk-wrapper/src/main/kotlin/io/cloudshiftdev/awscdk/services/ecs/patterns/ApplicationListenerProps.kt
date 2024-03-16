@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs.patterns
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.certificatemanager.ICertificate
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.ApplicationProtocol
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.SslPolicy
@@ -219,7 +220,7 @@ public interface ApplicationListenerProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationListenerProps):
-        ApplicationListenerProps = Wrapper(cdkObject)
+        ApplicationListenerProps = CdkObjectWrappers.wrap(cdkObject) as ApplicationListenerProps
 
     internal fun unwrap(wrapped: ApplicationListenerProps):
         software.amazon.awscdk.services.ecs.patterns.ApplicationListenerProps = (wrapped as

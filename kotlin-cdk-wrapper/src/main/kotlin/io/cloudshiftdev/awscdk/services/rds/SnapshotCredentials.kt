@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.SecretValue
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
 import io.cloudshiftdev.awscdk.services.secretsmanager.ReplicaRegion
@@ -103,10 +104,6 @@ public abstract class SnapshotCredentials internal constructor(
    */
   public open fun username(): String? = unwrap(this).getUsername()
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.SnapshotCredentials,
-  ) : SnapshotCredentials(cdkObject)
-
   public companion object {
     public fun fromGeneratedPassword(username: String): SnapshotCredentials =
         software.amazon.awscdk.services.rds.SnapshotCredentials.fromGeneratedPassword(username).let(SnapshotCredentials::wrap)
@@ -145,7 +142,7 @@ public abstract class SnapshotCredentials internal constructor(
         software.amazon.awscdk.services.rds.SnapshotCredentials.fromSecret(secret.let(ISecret::unwrap)).let(SnapshotCredentials::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.SnapshotCredentials):
-        SnapshotCredentials = Wrapper(cdkObject)
+        SnapshotCredentials = CdkObjectWrappers.wrap(cdkObject) as SnapshotCredentials
 
     internal fun unwrap(wrapped: SnapshotCredentials):
         software.amazon.awscdk.services.rds.SnapshotCredentials = (wrapped as CdkObject).cdkObject

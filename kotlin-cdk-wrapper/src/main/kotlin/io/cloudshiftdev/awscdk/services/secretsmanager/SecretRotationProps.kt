@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.secretsmanager
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IConnectable
 import io.cloudshiftdev.awscdk.services.ec2.IInterfaceVpcEndpoint
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
@@ -452,7 +453,7 @@ public interface SecretRotationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.SecretRotationProps):
-        SecretRotationProps = Wrapper(cdkObject)
+        SecretRotationProps = CdkObjectWrappers.wrap(cdkObject) as SecretRotationProps
 
     internal fun unwrap(wrapped: SecretRotationProps):
         software.amazon.awscdk.services.secretsmanager.SecretRotationProps = (wrapped as

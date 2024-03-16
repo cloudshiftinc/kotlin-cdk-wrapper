@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -112,7 +113,8 @@ public interface CfnSubnetRouteTableAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSubnetRouteTableAssociationProps):
-        CfnSubnetRouteTableAssociationProps = Wrapper(cdkObject)
+        CfnSubnetRouteTableAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnSubnetRouteTableAssociationProps
 
     internal fun unwrap(wrapped: CfnSubnetRouteTableAssociationProps):
         software.amazon.awscdk.services.ec2.CfnSubnetRouteTableAssociationProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.resourceexplorer2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -129,7 +130,7 @@ public interface CfnIndexProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnIndexProps):
-        CfnIndexProps = Wrapper(cdkObject)
+        CfnIndexProps = CdkObjectWrappers.wrap(cdkObject) as CfnIndexProps
 
     internal fun unwrap(wrapped: CfnIndexProps):
         software.amazon.awscdk.services.resourceexplorer2.CfnIndexProps = (wrapped as

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Boolean
 import kotlin.Number
@@ -620,7 +621,7 @@ public interface VolumeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.VolumeProps): VolumeProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as VolumeProps
 
     internal fun unwrap(wrapped: VolumeProps): software.amazon.awscdk.services.ec2.VolumeProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.VolumeProps

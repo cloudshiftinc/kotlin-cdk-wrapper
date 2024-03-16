@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -90,7 +91,7 @@ public interface AliasAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.AliasAttributes):
-        AliasAttributes = Wrapper(cdkObject)
+        AliasAttributes = CdkObjectWrappers.wrap(cdkObject) as AliasAttributes
 
     internal fun unwrap(wrapped: AliasAttributes):
         software.amazon.awscdk.services.lambda.AliasAttributes = (wrapped as CdkObject).cdkObject as

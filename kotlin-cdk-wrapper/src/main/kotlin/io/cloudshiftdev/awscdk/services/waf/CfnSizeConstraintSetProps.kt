@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.waf
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -137,7 +138,7 @@ public interface CfnSizeConstraintSetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.waf.CfnSizeConstraintSetProps):
-        CfnSizeConstraintSetProps = Wrapper(cdkObject)
+        CfnSizeConstraintSetProps = CdkObjectWrappers.wrap(cdkObject) as CfnSizeConstraintSetProps
 
     internal fun unwrap(wrapped: CfnSizeConstraintSetProps):
         software.amazon.awscdk.services.waf.CfnSizeConstraintSetProps = (wrapped as

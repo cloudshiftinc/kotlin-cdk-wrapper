@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -276,7 +277,7 @@ public interface ProxyResourceProps : ProxyResourceOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.ProxyResourceProps):
-        ProxyResourceProps = Wrapper(cdkObject)
+        ProxyResourceProps = CdkObjectWrappers.wrap(cdkObject) as ProxyResourceProps
 
     internal fun unwrap(wrapped: ProxyResourceProps):
         software.amazon.awscdk.services.apigateway.ProxyResourceProps = (wrapped as

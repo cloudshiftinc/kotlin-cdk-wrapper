@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.securityhub
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -157,7 +158,7 @@ public interface CfnStandardProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.securityhub.CfnStandardProps):
-        CfnStandardProps = Wrapper(cdkObject)
+        CfnStandardProps = CdkObjectWrappers.wrap(cdkObject) as CfnStandardProps
 
     internal fun unwrap(wrapped: CfnStandardProps):
         software.amazon.awscdk.services.securityhub.CfnStandardProps = (wrapped as

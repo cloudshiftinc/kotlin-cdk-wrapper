@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -729,7 +730,7 @@ public open class CfnRepository internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.CodeProperty):
-          CodeProperty = Wrapper(cdkObject)
+          CodeProperty = CdkObjectWrappers.wrap(cdkObject) as CodeProperty
 
       internal fun unwrap(wrapped: CodeProperty):
           software.amazon.awscdk.services.codecommit.CfnRepository.CodeProperty = (wrapped as
@@ -910,7 +911,7 @@ public open class CfnRepository internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.S3Property):
-          S3Property = Wrapper(cdkObject)
+          S3Property = CdkObjectWrappers.wrap(cdkObject) as S3Property
 
       internal fun unwrap(wrapped: S3Property):
           software.amazon.awscdk.services.codecommit.CfnRepository.S3Property = (wrapped as
@@ -1185,7 +1186,7 @@ public open class CfnRepository internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codecommit.CfnRepository.RepositoryTriggerProperty):
-          RepositoryTriggerProperty = Wrapper(cdkObject)
+          RepositoryTriggerProperty = CdkObjectWrappers.wrap(cdkObject) as RepositoryTriggerProperty
 
       internal fun unwrap(wrapped: RepositoryTriggerProperty):
           software.amazon.awscdk.services.codecommit.CfnRepository.RepositoryTriggerProperty =

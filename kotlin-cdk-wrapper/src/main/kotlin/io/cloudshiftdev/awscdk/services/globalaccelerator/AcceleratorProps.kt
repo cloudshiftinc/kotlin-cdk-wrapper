@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.globalaccelerator
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -263,7 +264,7 @@ public interface AcceleratorProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.AcceleratorProps):
-        AcceleratorProps = Wrapper(cdkObject)
+        AcceleratorProps = CdkObjectWrappers.wrap(cdkObject) as AcceleratorProps
 
     internal fun unwrap(wrapped: AcceleratorProps):
         software.amazon.awscdk.services.globalaccelerator.AcceleratorProps = (wrapped as

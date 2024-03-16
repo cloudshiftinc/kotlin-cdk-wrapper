@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ses
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -381,7 +382,7 @@ public interface ReceiptRuleActionConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.ReceiptRuleActionConfig):
-        ReceiptRuleActionConfig = Wrapper(cdkObject)
+        ReceiptRuleActionConfig = CdkObjectWrappers.wrap(cdkObject) as ReceiptRuleActionConfig
 
     internal fun unwrap(wrapped: ReceiptRuleActionConfig):
         software.amazon.awscdk.services.ses.ReceiptRuleActionConfig = (wrapped as

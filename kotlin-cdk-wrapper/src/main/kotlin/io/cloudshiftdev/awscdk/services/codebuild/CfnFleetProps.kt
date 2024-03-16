@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.codebuild
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -424,7 +425,7 @@ public interface CfnFleetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnFleetProps):
-        CfnFleetProps = Wrapper(cdkObject)
+        CfnFleetProps = CdkObjectWrappers.wrap(cdkObject) as CfnFleetProps
 
     internal fun unwrap(wrapped: CfnFleetProps):
         software.amazon.awscdk.services.codebuild.CfnFleetProps = (wrapped as CdkObject).cdkObject

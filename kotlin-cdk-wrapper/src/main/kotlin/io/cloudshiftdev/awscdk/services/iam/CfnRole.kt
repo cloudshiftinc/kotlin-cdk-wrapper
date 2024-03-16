@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -959,7 +960,7 @@ public open class CfnRole internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.CfnRole.PolicyProperty):
-          PolicyProperty = Wrapper(cdkObject)
+          PolicyProperty = CdkObjectWrappers.wrap(cdkObject) as PolicyProperty
 
       internal fun unwrap(wrapped: PolicyProperty):
           software.amazon.awscdk.services.iam.CfnRole.PolicyProperty = (wrapped as

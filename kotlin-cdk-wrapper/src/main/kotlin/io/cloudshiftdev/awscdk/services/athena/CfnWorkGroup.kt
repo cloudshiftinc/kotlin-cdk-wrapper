@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Deprecated
@@ -875,7 +876,7 @@ public open class CfnWorkGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.EngineVersionProperty):
-          EngineVersionProperty = Wrapper(cdkObject)
+          EngineVersionProperty = CdkObjectWrappers.wrap(cdkObject) as EngineVersionProperty
 
       internal fun unwrap(wrapped: EngineVersionProperty):
           software.amazon.awscdk.services.athena.CfnWorkGroup.EngineVersionProperty = (wrapped as
@@ -1501,7 +1502,8 @@ public open class CfnWorkGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationUpdatesProperty):
-          ResultConfigurationUpdatesProperty = Wrapper(cdkObject)
+          ResultConfigurationUpdatesProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ResultConfigurationUpdatesProperty
 
       internal fun unwrap(wrapped: ResultConfigurationUpdatesProperty):
           software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationUpdatesProperty =
@@ -1894,7 +1896,8 @@ public open class CfnWorkGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationProperty):
-          ResultConfigurationProperty = Wrapper(cdkObject)
+          ResultConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ResultConfigurationProperty
 
       internal fun unwrap(wrapped: ResultConfigurationProperty):
           software.amazon.awscdk.services.athena.CfnWorkGroup.ResultConfigurationProperty = (wrapped
@@ -2508,7 +2511,8 @@ public open class CfnWorkGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationUpdatesProperty):
-          WorkGroupConfigurationUpdatesProperty = Wrapper(cdkObject)
+          WorkGroupConfigurationUpdatesProperty = CdkObjectWrappers.wrap(cdkObject) as
+          WorkGroupConfigurationUpdatesProperty
 
       internal fun unwrap(wrapped: WorkGroupConfigurationUpdatesProperty):
           software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationUpdatesProperty
@@ -2623,7 +2627,7 @@ public open class CfnWorkGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.AclConfigurationProperty):
-          AclConfigurationProperty = Wrapper(cdkObject)
+          AclConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as AclConfigurationProperty
 
       internal fun unwrap(wrapped: AclConfigurationProperty):
           software.amazon.awscdk.services.athena.CfnWorkGroup.AclConfigurationProperty = (wrapped as
@@ -3219,7 +3223,8 @@ public open class CfnWorkGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationProperty):
-          WorkGroupConfigurationProperty = Wrapper(cdkObject)
+          WorkGroupConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          WorkGroupConfigurationProperty
 
       internal fun unwrap(wrapped: WorkGroupConfigurationProperty):
           software.amazon.awscdk.services.athena.CfnWorkGroup.WorkGroupConfigurationProperty =
@@ -3353,7 +3358,8 @@ public open class CfnWorkGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.EncryptionConfigurationProperty):
-          EncryptionConfigurationProperty = Wrapper(cdkObject)
+          EncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EncryptionConfigurationProperty
 
       internal fun unwrap(wrapped: EncryptionConfigurationProperty):
           software.amazon.awscdk.services.athena.CfnWorkGroup.EncryptionConfigurationProperty =
@@ -3443,7 +3449,8 @@ public open class CfnWorkGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnWorkGroup.CustomerContentEncryptionConfigurationProperty):
-          CustomerContentEncryptionConfigurationProperty = Wrapper(cdkObject)
+          CustomerContentEncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CustomerContentEncryptionConfigurationProperty
 
       internal fun unwrap(wrapped: CustomerContentEncryptionConfigurationProperty):
           software.amazon.awscdk.services.athena.CfnWorkGroup.CustomerContentEncryptionConfigurationProperty

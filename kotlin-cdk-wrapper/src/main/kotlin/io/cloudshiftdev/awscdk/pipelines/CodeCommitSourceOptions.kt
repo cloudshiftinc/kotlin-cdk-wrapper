@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.pipelines
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.actions.CodeCommitTrigger
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Boolean
@@ -193,7 +194,7 @@ public interface CodeCommitSourceOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.CodeCommitSourceOptions):
-        CodeCommitSourceOptions = Wrapper(cdkObject)
+        CodeCommitSourceOptions = CdkObjectWrappers.wrap(cdkObject) as CodeCommitSourceOptions
 
     internal fun unwrap(wrapped: CodeCommitSourceOptions):
         software.amazon.awscdk.pipelines.CodeCommitSourceOptions = (wrapped as CdkObject).cdkObject

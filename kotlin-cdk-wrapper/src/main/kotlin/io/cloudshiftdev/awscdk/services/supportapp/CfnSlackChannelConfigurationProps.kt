@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.supportapp
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -356,7 +357,8 @@ public interface CfnSlackChannelConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.supportapp.CfnSlackChannelConfigurationProps):
-        CfnSlackChannelConfigurationProps = Wrapper(cdkObject)
+        CfnSlackChannelConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnSlackChannelConfigurationProps
 
     internal fun unwrap(wrapped: CfnSlackChannelConfigurationProps):
         software.amazon.awscdk.services.supportapp.CfnSlackChannelConfigurationProps = (wrapped as

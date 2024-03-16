@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.waf.regional
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -283,7 +284,7 @@ public interface CfnRateBasedRuleProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnRateBasedRuleProps):
-        CfnRateBasedRuleProps = Wrapper(cdkObject)
+        CfnRateBasedRuleProps = CdkObjectWrappers.wrap(cdkObject) as CfnRateBasedRuleProps
 
     internal fun unwrap(wrapped: CfnRateBasedRuleProps):
         software.amazon.awscdk.services.waf.regional.CfnRateBasedRuleProps = (wrapped as

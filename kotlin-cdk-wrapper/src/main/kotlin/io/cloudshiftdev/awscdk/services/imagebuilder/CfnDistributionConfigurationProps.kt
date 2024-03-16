@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.imagebuilder
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -224,7 +225,8 @@ public interface CfnDistributionConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnDistributionConfigurationProps):
-        CfnDistributionConfigurationProps = Wrapper(cdkObject)
+        CfnDistributionConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnDistributionConfigurationProps
 
     internal fun unwrap(wrapped: CfnDistributionConfigurationProps):
         software.amazon.awscdk.services.imagebuilder.CfnDistributionConfigurationProps = (wrapped as

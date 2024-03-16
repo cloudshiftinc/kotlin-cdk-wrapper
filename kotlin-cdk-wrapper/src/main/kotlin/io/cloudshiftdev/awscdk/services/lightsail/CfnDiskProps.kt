@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -358,7 +359,7 @@ public interface CfnDiskProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDiskProps):
-        CfnDiskProps = Wrapper(cdkObject)
+        CfnDiskProps = CdkObjectWrappers.wrap(cdkObject) as CfnDiskProps
 
     internal fun unwrap(wrapped: CfnDiskProps):
         software.amazon.awscdk.services.lightsail.CfnDiskProps = (wrapped as CdkObject).cdkObject as

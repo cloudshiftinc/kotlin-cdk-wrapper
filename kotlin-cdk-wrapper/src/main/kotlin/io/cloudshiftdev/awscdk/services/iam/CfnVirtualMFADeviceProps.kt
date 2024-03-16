@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.iam
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -304,7 +305,7 @@ public interface CfnVirtualMFADeviceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.CfnVirtualMFADeviceProps):
-        CfnVirtualMFADeviceProps = Wrapper(cdkObject)
+        CfnVirtualMFADeviceProps = CdkObjectWrappers.wrap(cdkObject) as CfnVirtualMFADeviceProps
 
     internal fun unwrap(wrapped: CfnVirtualMFADeviceProps):
         software.amazon.awscdk.services.iam.CfnVirtualMFADeviceProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -106,7 +107,7 @@ public interface SchemaProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.SchemaProps): SchemaProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as SchemaProps
 
     internal fun unwrap(wrapped: SchemaProps): software.amazon.awscdk.services.appsync.SchemaProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appsync.SchemaProps

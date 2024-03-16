@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -1023,7 +1024,7 @@ public open class CfnByteMatchSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnByteMatchSet.ByteMatchTupleProperty):
-          ByteMatchTupleProperty = Wrapper(cdkObject)
+          ByteMatchTupleProperty = CdkObjectWrappers.wrap(cdkObject) as ByteMatchTupleProperty
 
       internal fun unwrap(wrapped: ByteMatchTupleProperty):
           software.amazon.awscdk.services.waf.regional.CfnByteMatchSet.ByteMatchTupleProperty =
@@ -1267,7 +1268,7 @@ public open class CfnByteMatchSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnByteMatchSet.FieldToMatchProperty):
-          FieldToMatchProperty = Wrapper(cdkObject)
+          FieldToMatchProperty = CdkObjectWrappers.wrap(cdkObject) as FieldToMatchProperty
 
       internal fun unwrap(wrapped: FieldToMatchProperty):
           software.amazon.awscdk.services.waf.regional.CfnByteMatchSet.FieldToMatchProperty =

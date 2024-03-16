@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1022,7 +1023,7 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable.StorageDescriptorProperty):
-          StorageDescriptorProperty = Wrapper(cdkObject)
+          StorageDescriptorProperty = CdkObjectWrappers.wrap(cdkObject) as StorageDescriptorProperty
 
       internal fun unwrap(wrapped: StorageDescriptorProperty):
           software.amazon.awscdk.services.glue.CfnTable.StorageDescriptorProperty = (wrapped as
@@ -1139,7 +1140,8 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable.OpenTableFormatInputProperty):
-          OpenTableFormatInputProperty = Wrapper(cdkObject)
+          OpenTableFormatInputProperty = CdkObjectWrappers.wrap(cdkObject) as
+          OpenTableFormatInputProperty
 
       internal fun unwrap(wrapped: OpenTableFormatInputProperty):
           software.amazon.awscdk.services.glue.CfnTable.OpenTableFormatInputProperty = (wrapped as
@@ -1327,7 +1329,7 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable.SchemaReferenceProperty):
-          SchemaReferenceProperty = Wrapper(cdkObject)
+          SchemaReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as SchemaReferenceProperty
 
       internal fun unwrap(wrapped: SchemaReferenceProperty):
           software.amazon.awscdk.services.glue.CfnTable.SchemaReferenceProperty = (wrapped as
@@ -1923,7 +1925,7 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable.TableInputProperty):
-          TableInputProperty = Wrapper(cdkObject)
+          TableInputProperty = CdkObjectWrappers.wrap(cdkObject) as TableInputProperty
 
       internal fun unwrap(wrapped: TableInputProperty):
           software.amazon.awscdk.services.glue.CfnTable.TableInputProperty = (wrapped as
@@ -2092,7 +2094,7 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable.SkewedInfoProperty):
-          SkewedInfoProperty = Wrapper(cdkObject)
+          SkewedInfoProperty = CdkObjectWrappers.wrap(cdkObject) as SkewedInfoProperty
 
       internal fun unwrap(wrapped: SkewedInfoProperty):
           software.amazon.awscdk.services.glue.CfnTable.SkewedInfoProperty = (wrapped as
@@ -2231,7 +2233,7 @@ public open class CfnTable internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable.SerdeInfoProperty):
-          SerdeInfoProperty = Wrapper(cdkObject)
+          SerdeInfoProperty = CdkObjectWrappers.wrap(cdkObject) as SerdeInfoProperty
 
       internal fun unwrap(wrapped: SerdeInfoProperty):
           software.amazon.awscdk.services.glue.CfnTable.SerdeInfoProperty = (wrapped as
@@ -2390,7 +2392,7 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable.TableIdentifierProperty):
-          TableIdentifierProperty = Wrapper(cdkObject)
+          TableIdentifierProperty = CdkObjectWrappers.wrap(cdkObject) as TableIdentifierProperty
 
       internal fun unwrap(wrapped: TableIdentifierProperty):
           software.amazon.awscdk.services.glue.CfnTable.TableIdentifierProperty = (wrapped as
@@ -2498,7 +2500,7 @@ public open class CfnTable internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable.OrderProperty):
-          OrderProperty = Wrapper(cdkObject)
+          OrderProperty = CdkObjectWrappers.wrap(cdkObject) as OrderProperty
 
       internal fun unwrap(wrapped: OrderProperty):
           software.amazon.awscdk.services.glue.CfnTable.OrderProperty = (wrapped as
@@ -2647,7 +2649,7 @@ public open class CfnTable internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable.SchemaIdProperty):
-          SchemaIdProperty = Wrapper(cdkObject)
+          SchemaIdProperty = CdkObjectWrappers.wrap(cdkObject) as SchemaIdProperty
 
       internal fun unwrap(wrapped: SchemaIdProperty):
           software.amazon.awscdk.services.glue.CfnTable.SchemaIdProperty = (wrapped as
@@ -2764,7 +2766,7 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable.IcebergInputProperty):
-          IcebergInputProperty = Wrapper(cdkObject)
+          IcebergInputProperty = CdkObjectWrappers.wrap(cdkObject) as IcebergInputProperty
 
       internal fun unwrap(wrapped: IcebergInputProperty):
           software.amazon.awscdk.services.glue.CfnTable.IcebergInputProperty = (wrapped as
@@ -2895,7 +2897,7 @@ public open class CfnTable internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTable.ColumnProperty):
-          ColumnProperty = Wrapper(cdkObject)
+          ColumnProperty = CdkObjectWrappers.wrap(cdkObject) as ColumnProperty
 
       internal fun unwrap(wrapped: ColumnProperty):
           software.amazon.awscdk.services.glue.CfnTable.ColumnProperty = (wrapped as

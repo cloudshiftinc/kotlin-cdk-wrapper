@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.dynamodb
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.applicationautoscaling.BaseTargetTrackingProps
 import kotlin.Boolean
 import kotlin.Number
@@ -181,7 +182,7 @@ public interface UtilizationScalingProps : BaseTargetTrackingProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.UtilizationScalingProps):
-        UtilizationScalingProps = Wrapper(cdkObject)
+        UtilizationScalingProps = CdkObjectWrappers.wrap(cdkObject) as UtilizationScalingProps
 
     internal fun unwrap(wrapped: UtilizationScalingProps):
         software.amazon.awscdk.services.dynamodb.UtilizationScalingProps = (wrapped as

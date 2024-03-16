@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -181,7 +182,7 @@ public interface CfnBillingGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnBillingGroupProps):
-        CfnBillingGroupProps = Wrapper(cdkObject)
+        CfnBillingGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnBillingGroupProps
 
     internal fun unwrap(wrapped: CfnBillingGroupProps):
         software.amazon.awscdk.services.iot.CfnBillingGroupProps = (wrapped as CdkObject).cdkObject

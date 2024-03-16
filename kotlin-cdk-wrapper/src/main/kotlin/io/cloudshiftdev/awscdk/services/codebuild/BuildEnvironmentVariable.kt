@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 
@@ -163,7 +164,7 @@ public interface BuildEnvironmentVariable {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.BuildEnvironmentVariable):
-        BuildEnvironmentVariable = Wrapper(cdkObject)
+        BuildEnvironmentVariable = CdkObjectWrappers.wrap(cdkObject) as BuildEnvironmentVariable
 
     internal fun unwrap(wrapped: BuildEnvironmentVariable):
         software.amazon.awscdk.services.codebuild.BuildEnvironmentVariable = (wrapped as

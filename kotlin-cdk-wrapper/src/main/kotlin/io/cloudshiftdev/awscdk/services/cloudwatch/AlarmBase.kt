@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -60,13 +61,9 @@ public abstract class AlarmBase internal constructor(
    */
   public override fun renderAlarmRule(): String = unwrap(this).renderAlarmRule()
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmBase,
-  ) : AlarmBase(cdkObject)
-
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmBase): AlarmBase =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as AlarmBase
 
     internal fun unwrap(wrapped: AlarmBase): software.amazon.awscdk.services.cloudwatch.AlarmBase =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cloudwatch.AlarmBase

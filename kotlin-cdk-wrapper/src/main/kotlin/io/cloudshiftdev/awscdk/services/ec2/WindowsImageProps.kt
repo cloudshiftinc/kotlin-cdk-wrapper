@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -72,7 +73,7 @@ public interface WindowsImageProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.WindowsImageProps):
-        WindowsImageProps = Wrapper(cdkObject)
+        WindowsImageProps = CdkObjectWrappers.wrap(cdkObject) as WindowsImageProps
 
     internal fun unwrap(wrapped: WindowsImageProps):
         software.amazon.awscdk.services.ec2.WindowsImageProps = (wrapped as CdkObject).cdkObject as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.managedblockchain
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -189,7 +190,7 @@ public interface CfnNodeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.managedblockchain.CfnNodeProps):
-        CfnNodeProps = Wrapper(cdkObject)
+        CfnNodeProps = CdkObjectWrappers.wrap(cdkObject) as CfnNodeProps
 
     internal fun unwrap(wrapped: CfnNodeProps):
         software.amazon.awscdk.services.managedblockchain.CfnNodeProps = (wrapped as

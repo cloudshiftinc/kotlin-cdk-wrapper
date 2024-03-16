@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -40,10 +41,6 @@ public abstract class Condition internal constructor(
    * Render Amazon States Language JSON for the condition.
    */
   public open fun renderCondition(): Any = unwrap(this).renderCondition()
-
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.stepfunctions.Condition,
-  ) : Condition(cdkObject)
 
   public companion object {
     public fun and(conditions: Condition): Condition =
@@ -224,7 +221,7 @@ public abstract class Condition internal constructor(
         `value`).let(Condition::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.Condition): Condition
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as Condition
 
     internal fun unwrap(wrapped: Condition): software.amazon.awscdk.services.stepfunctions.Condition
         = (wrapped as CdkObject).cdkObject as

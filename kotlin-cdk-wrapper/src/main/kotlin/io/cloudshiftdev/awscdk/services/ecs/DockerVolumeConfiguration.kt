@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -188,7 +189,7 @@ public interface DockerVolumeConfiguration {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.DockerVolumeConfiguration):
-        DockerVolumeConfiguration = Wrapper(cdkObject)
+        DockerVolumeConfiguration = CdkObjectWrappers.wrap(cdkObject) as DockerVolumeConfiguration
 
     internal fun unwrap(wrapped: DockerVolumeConfiguration):
         software.amazon.awscdk.services.ecs.DockerVolumeConfiguration = (wrapped as

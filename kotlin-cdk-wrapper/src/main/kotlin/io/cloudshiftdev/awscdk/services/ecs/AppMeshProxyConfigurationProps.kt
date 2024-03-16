@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -316,7 +317,8 @@ public interface AppMeshProxyConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.AppMeshProxyConfigurationProps):
-        AppMeshProxyConfigurationProps = Wrapper(cdkObject)
+        AppMeshProxyConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
+        AppMeshProxyConfigurationProps
 
     internal fun unwrap(wrapped: AppMeshProxyConfigurationProps):
         software.amazon.awscdk.services.ecs.AppMeshProxyConfigurationProps = (wrapped as

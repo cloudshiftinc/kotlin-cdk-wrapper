@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -597,7 +598,7 @@ public open class CfnDatabase internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDatabase.DatabaseInputProperty):
-          DatabaseInputProperty = Wrapper(cdkObject)
+          DatabaseInputProperty = CdkObjectWrappers.wrap(cdkObject) as DatabaseInputProperty
 
       internal fun unwrap(wrapped: DatabaseInputProperty):
           software.amazon.awscdk.services.glue.CfnDatabase.DatabaseInputProperty = (wrapped as
@@ -704,7 +705,7 @@ public open class CfnDatabase internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDatabase.FederatedDatabaseProperty):
-          FederatedDatabaseProperty = Wrapper(cdkObject)
+          FederatedDatabaseProperty = CdkObjectWrappers.wrap(cdkObject) as FederatedDatabaseProperty
 
       internal fun unwrap(wrapped: FederatedDatabaseProperty):
           software.amazon.awscdk.services.glue.CfnDatabase.FederatedDatabaseProperty = (wrapped as
@@ -786,7 +787,7 @@ public open class CfnDatabase internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDatabase.DataLakePrincipalProperty):
-          DataLakePrincipalProperty = Wrapper(cdkObject)
+          DataLakePrincipalProperty = CdkObjectWrappers.wrap(cdkObject) as DataLakePrincipalProperty
 
       internal fun unwrap(wrapped: DataLakePrincipalProperty):
           software.amazon.awscdk.services.glue.CfnDatabase.DataLakePrincipalProperty = (wrapped as
@@ -933,7 +934,8 @@ public open class CfnDatabase internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDatabase.PrincipalPrivilegesProperty):
-          PrincipalPrivilegesProperty = Wrapper(cdkObject)
+          PrincipalPrivilegesProperty = CdkObjectWrappers.wrap(cdkObject) as
+          PrincipalPrivilegesProperty
 
       internal fun unwrap(wrapped: PrincipalPrivilegesProperty):
           software.amazon.awscdk.services.glue.CfnDatabase.PrincipalPrivilegesProperty = (wrapped as
@@ -1068,7 +1070,8 @@ public open class CfnDatabase internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDatabase.DatabaseIdentifierProperty):
-          DatabaseIdentifierProperty = Wrapper(cdkObject)
+          DatabaseIdentifierProperty = CdkObjectWrappers.wrap(cdkObject) as
+          DatabaseIdentifierProperty
 
       internal fun unwrap(wrapped: DatabaseIdentifierProperty):
           software.amazon.awscdk.services.glue.CfnDatabase.DatabaseIdentifierProperty = (wrapped as

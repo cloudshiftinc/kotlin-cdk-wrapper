@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -245,7 +246,8 @@ public interface TagProps {
       return Wrapper(builderImpl.apply(block).build())
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.TagProps): TagProps = Wrapper(cdkObject)
+    internal fun wrap(cdkObject: software.amazon.awscdk.TagProps): TagProps =
+        CdkObjectWrappers.wrap(cdkObject) as TagProps
 
     internal fun unwrap(wrapped: TagProps): software.amazon.awscdk.TagProps = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.TagProps

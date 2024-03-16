@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.Artifact
 import io.cloudshiftdev.awscdk.services.codepipeline.CommonActionProps
 import kotlin.Number
@@ -273,7 +274,7 @@ public interface JenkinsActionProps : CommonActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.JenkinsActionProps):
-        JenkinsActionProps = Wrapper(cdkObject)
+        JenkinsActionProps = CdkObjectWrappers.wrap(cdkObject) as JenkinsActionProps
 
     internal fun unwrap(wrapped: JenkinsActionProps):
         software.amazon.awscdk.services.codepipeline.actions.JenkinsActionProps = (wrapped as

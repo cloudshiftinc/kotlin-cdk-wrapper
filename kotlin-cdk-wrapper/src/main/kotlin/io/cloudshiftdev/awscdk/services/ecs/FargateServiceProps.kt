@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import kotlin.Boolean
@@ -804,7 +805,7 @@ public interface FargateServiceProps : BaseServiceOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.FargateServiceProps):
-        FargateServiceProps = Wrapper(cdkObject)
+        FargateServiceProps = CdkObjectWrappers.wrap(cdkObject) as FargateServiceProps
 
     internal fun unwrap(wrapped: FargateServiceProps):
         software.amazon.awscdk.services.ecs.FargateServiceProps = (wrapped as CdkObject).cdkObject

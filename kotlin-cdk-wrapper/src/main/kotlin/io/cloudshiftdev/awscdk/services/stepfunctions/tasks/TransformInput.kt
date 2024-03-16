@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -185,7 +186,7 @@ public interface TransformInput {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.TransformInput):
-        TransformInput = Wrapper(cdkObject)
+        TransformInput = CdkObjectWrappers.wrap(cdkObject) as TransformInput
 
     internal fun unwrap(wrapped: TransformInput):
         software.amazon.awscdk.services.stepfunctions.tasks.TransformInput = (wrapped as

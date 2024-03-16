@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -144,7 +145,8 @@ public interface ClientVpnAuthorizationRuleProps : ClientVpnAuthorizationRuleOpt
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRuleProps):
-        ClientVpnAuthorizationRuleProps = Wrapper(cdkObject)
+        ClientVpnAuthorizationRuleProps = CdkObjectWrappers.wrap(cdkObject) as
+        ClientVpnAuthorizationRuleProps
 
     internal fun unwrap(wrapped: ClientVpnAuthorizationRuleProps):
         software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRuleProps = (wrapped as

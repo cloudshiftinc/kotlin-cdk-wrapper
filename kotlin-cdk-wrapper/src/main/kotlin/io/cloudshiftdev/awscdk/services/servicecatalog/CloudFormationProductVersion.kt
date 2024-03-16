@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.servicecatalog
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -168,7 +169,8 @@ public interface CloudFormationProductVersion {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion):
-        CloudFormationProductVersion = Wrapper(cdkObject)
+        CloudFormationProductVersion = CdkObjectWrappers.wrap(cdkObject) as
+        CloudFormationProductVersion
 
     internal fun unwrap(wrapped: CloudFormationProductVersion):
         software.amazon.awscdk.services.servicecatalog.CloudFormationProductVersion = (wrapped as

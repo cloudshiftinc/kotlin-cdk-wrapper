@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskStateBaseProps
@@ -418,7 +419,7 @@ public interface EmrTerminateClusterProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EmrTerminateClusterProps):
-        EmrTerminateClusterProps = Wrapper(cdkObject)
+        EmrTerminateClusterProps = CdkObjectWrappers.wrap(cdkObject) as EmrTerminateClusterProps
 
     internal fun unwrap(wrapped: EmrTerminateClusterProps):
         software.amazon.awscdk.services.stepfunctions.tasks.EmrTerminateClusterProps = (wrapped as

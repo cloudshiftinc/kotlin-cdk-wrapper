@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -80,7 +81,8 @@ public interface PostgresInstanceEngineProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.PostgresInstanceEngineProps):
-        PostgresInstanceEngineProps = Wrapper(cdkObject)
+        PostgresInstanceEngineProps = CdkObjectWrappers.wrap(cdkObject) as
+        PostgresInstanceEngineProps
 
     internal fun unwrap(wrapped: PostgresInstanceEngineProps):
         software.amazon.awscdk.services.rds.PostgresInstanceEngineProps = (wrapped as

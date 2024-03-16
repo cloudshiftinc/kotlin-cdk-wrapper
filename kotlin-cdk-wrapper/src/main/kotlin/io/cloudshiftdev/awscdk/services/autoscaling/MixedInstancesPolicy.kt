@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ILaunchTemplate
 import kotlin.Unit
 import kotlin.collections.List
@@ -197,7 +198,7 @@ public interface MixedInstancesPolicy {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.MixedInstancesPolicy):
-        MixedInstancesPolicy = Wrapper(cdkObject)
+        MixedInstancesPolicy = CdkObjectWrappers.wrap(cdkObject) as MixedInstancesPolicy
 
     internal fun unwrap(wrapped: MixedInstancesPolicy):
         software.amazon.awscdk.services.autoscaling.MixedInstancesPolicy = (wrapped as

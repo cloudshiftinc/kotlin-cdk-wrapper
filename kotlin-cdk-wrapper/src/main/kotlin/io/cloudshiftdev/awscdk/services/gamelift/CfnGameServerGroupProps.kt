@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -882,7 +883,7 @@ public interface CfnGameServerGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameServerGroupProps):
-        CfnGameServerGroupProps = Wrapper(cdkObject)
+        CfnGameServerGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnGameServerGroupProps
 
     internal fun unwrap(wrapped: CfnGameServerGroupProps):
         software.amazon.awscdk.services.gamelift.CfnGameServerGroupProps = (wrapped as

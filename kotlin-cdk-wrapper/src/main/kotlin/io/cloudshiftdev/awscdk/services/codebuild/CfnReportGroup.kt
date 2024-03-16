@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -580,7 +581,8 @@ public open class CfnReportGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnReportGroup.ReportExportConfigProperty):
-          ReportExportConfigProperty = Wrapper(cdkObject)
+          ReportExportConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ReportExportConfigProperty
 
       internal fun unwrap(wrapped: ReportExportConfigProperty):
           software.amazon.awscdk.services.codebuild.CfnReportGroup.ReportExportConfigProperty =
@@ -839,7 +841,8 @@ public open class CfnReportGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnReportGroup.S3ReportExportConfigProperty):
-          S3ReportExportConfigProperty = Wrapper(cdkObject)
+          S3ReportExportConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          S3ReportExportConfigProperty
 
       internal fun unwrap(wrapped: S3ReportExportConfigProperty):
           software.amazon.awscdk.services.codebuild.CfnReportGroup.S3ReportExportConfigProperty =

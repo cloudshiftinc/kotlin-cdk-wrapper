@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.msk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -236,7 +237,7 @@ public interface CfnVpcConnectionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnVpcConnectionProps):
-        CfnVpcConnectionProps = Wrapper(cdkObject)
+        CfnVpcConnectionProps = CdkObjectWrappers.wrap(cdkObject) as CfnVpcConnectionProps
 
     internal fun unwrap(wrapped: CfnVpcConnectionProps):
         software.amazon.awscdk.services.msk.CfnVpcConnectionProps = (wrapped as CdkObject).cdkObject

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -71,7 +72,7 @@ public interface TreeArtifactProperties {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties):
-        TreeArtifactProperties = Wrapper(cdkObject)
+        TreeArtifactProperties = CdkObjectWrappers.wrap(cdkObject) as TreeArtifactProperties
 
     internal fun unwrap(wrapped: TreeArtifactProperties):
         software.amazon.awscdk.cloudassembly.schema.TreeArtifactProperties = (wrapped as

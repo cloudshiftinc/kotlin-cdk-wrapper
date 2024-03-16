@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.mediaconnect
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -453,7 +454,7 @@ public interface CfnBridgeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnBridgeProps):
-        CfnBridgeProps = Wrapper(cdkObject)
+        CfnBridgeProps = CdkObjectWrappers.wrap(cdkObject) as CfnBridgeProps
 
     internal fun unwrap(wrapped: CfnBridgeProps):
         software.amazon.awscdk.services.mediaconnect.CfnBridgeProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -203,7 +204,7 @@ public interface HttpGatewayListenerOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.HttpGatewayListenerOptions):
-        HttpGatewayListenerOptions = Wrapper(cdkObject)
+        HttpGatewayListenerOptions = CdkObjectWrappers.wrap(cdkObject) as HttpGatewayListenerOptions
 
     internal fun unwrap(wrapped: HttpGatewayListenerOptions):
         software.amazon.awscdk.services.appmesh.HttpGatewayListenerOptions = (wrapped as

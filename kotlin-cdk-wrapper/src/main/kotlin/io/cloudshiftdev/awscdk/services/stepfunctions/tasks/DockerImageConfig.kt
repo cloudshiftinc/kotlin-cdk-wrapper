@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -71,7 +72,7 @@ public interface DockerImageConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DockerImageConfig):
-        DockerImageConfig = Wrapper(cdkObject)
+        DockerImageConfig = CdkObjectWrappers.wrap(cdkObject) as DockerImageConfig
 
     internal fun unwrap(wrapped: DockerImageConfig):
         software.amazon.awscdk.services.stepfunctions.tasks.DockerImageConfig = (wrapped as

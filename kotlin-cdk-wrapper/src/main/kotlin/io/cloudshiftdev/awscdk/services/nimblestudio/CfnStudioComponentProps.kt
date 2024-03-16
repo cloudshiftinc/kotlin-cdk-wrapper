@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.nimblestudio
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -536,7 +537,7 @@ public interface CfnStudioComponentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStudioComponentProps):
-        CfnStudioComponentProps = Wrapper(cdkObject)
+        CfnStudioComponentProps = CdkObjectWrappers.wrap(cdkObject) as CfnStudioComponentProps
 
     internal fun unwrap(wrapped: CfnStudioComponentProps):
         software.amazon.awscdk.services.nimblestudio.CfnStudioComponentProps = (wrapped as

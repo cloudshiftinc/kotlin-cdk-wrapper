@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.mediaconnect
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -355,7 +356,7 @@ public interface CfnFlowEntitlementProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlementProps):
-        CfnFlowEntitlementProps = Wrapper(cdkObject)
+        CfnFlowEntitlementProps = CdkObjectWrappers.wrap(cdkObject) as CfnFlowEntitlementProps
 
     internal fun unwrap(wrapped: CfnFlowEntitlementProps):
         software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlementProps = (wrapped as

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -1083,7 +1084,8 @@ public open class CfnAPIKey internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.location.CfnAPIKey.ApiKeyRestrictionsProperty):
-          ApiKeyRestrictionsProperty = Wrapper(cdkObject)
+          ApiKeyRestrictionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ApiKeyRestrictionsProperty
 
       internal fun unwrap(wrapped: ApiKeyRestrictionsProperty):
           software.amazon.awscdk.services.location.CfnAPIKey.ApiKeyRestrictionsProperty = (wrapped

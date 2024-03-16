@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -608,7 +609,7 @@ public open class CfnStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty):
-          StreamModeDetailsProperty = Wrapper(cdkObject)
+          StreamModeDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as StreamModeDetailsProperty
 
       internal fun unwrap(wrapped: StreamModeDetailsProperty):
           software.amazon.awscdk.services.kinesis.CfnStream.StreamModeDetailsProperty = (wrapped as
@@ -782,7 +783,7 @@ public open class CfnStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesis.CfnStream.StreamEncryptionProperty):
-          StreamEncryptionProperty = Wrapper(cdkObject)
+          StreamEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as StreamEncryptionProperty
 
       internal fun unwrap(wrapped: StreamEncryptionProperty):
           software.amazon.awscdk.services.kinesis.CfnStream.StreamEncryptionProperty = (wrapped as

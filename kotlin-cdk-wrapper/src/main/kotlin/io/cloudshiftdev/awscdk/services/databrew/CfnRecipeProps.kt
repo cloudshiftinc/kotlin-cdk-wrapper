@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -209,7 +210,7 @@ public interface CfnRecipeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.databrew.CfnRecipeProps):
-        CfnRecipeProps = Wrapper(cdkObject)
+        CfnRecipeProps = CdkObjectWrappers.wrap(cdkObject) as CfnRecipeProps
 
     internal fun unwrap(wrapped: CfnRecipeProps):
         software.amazon.awscdk.services.databrew.CfnRecipeProps = (wrapped as CdkObject).cdkObject

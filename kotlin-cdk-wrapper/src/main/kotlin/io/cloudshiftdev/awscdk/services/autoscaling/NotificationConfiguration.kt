@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.sns.ITopic
 import kotlin.Unit
 
@@ -107,7 +108,7 @@ public interface NotificationConfiguration {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.NotificationConfiguration):
-        NotificationConfiguration = Wrapper(cdkObject)
+        NotificationConfiguration = CdkObjectWrappers.wrap(cdkObject) as NotificationConfiguration
 
     internal fun unwrap(wrapped: NotificationConfiguration):
         software.amazon.awscdk.services.autoscaling.NotificationConfiguration = (wrapped as

@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1333,7 +1334,8 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.RepositoryCredentialsProperty):
-          RepositoryCredentialsProperty = Wrapper(cdkObject)
+          RepositoryCredentialsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          RepositoryCredentialsProperty
 
       internal fun unwrap(wrapped: RepositoryCredentialsProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.RepositoryCredentialsProperty =
@@ -2012,7 +2014,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.LinuxParametersProperty):
-          LinuxParametersProperty = Wrapper(cdkObject)
+          LinuxParametersProperty = CdkObjectWrappers.wrap(cdkObject) as LinuxParametersProperty
 
       internal fun unwrap(wrapped: LinuxParametersProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.LinuxParametersProperty = (wrapped
@@ -2111,7 +2113,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.ResourcesProperty):
-          ResourcesProperty = Wrapper(cdkObject)
+          ResourcesProperty = CdkObjectWrappers.wrap(cdkObject) as ResourcesProperty
 
       internal fun unwrap(wrapped: ResourcesProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.ResourcesProperty = (wrapped as
@@ -2570,7 +2572,8 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.ResourceRequirementProperty):
-          ResourceRequirementProperty = Wrapper(cdkObject)
+          ResourceRequirementProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ResourceRequirementProperty
 
       internal fun unwrap(wrapped: ResourceRequirementProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.ResourceRequirementProperty =
@@ -2684,7 +2687,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.TimeoutProperty):
-          TimeoutProperty = Wrapper(cdkObject)
+          TimeoutProperty = CdkObjectWrappers.wrap(cdkObject) as TimeoutProperty
 
       internal fun unwrap(wrapped: TimeoutProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.TimeoutProperty = (wrapped as
@@ -2833,7 +2836,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.SecretProperty):
-          SecretProperty = Wrapper(cdkObject)
+          SecretProperty = CdkObjectWrappers.wrap(cdkObject) as SecretProperty
 
       internal fun unwrap(wrapped: SecretProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.SecretProperty = (wrapped as
@@ -2960,7 +2963,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.VolumesHostProperty):
-          VolumesHostProperty = Wrapper(cdkObject)
+          VolumesHostProperty = CdkObjectWrappers.wrap(cdkObject) as VolumesHostProperty
 
       internal fun unwrap(wrapped: VolumesHostProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.VolumesHostProperty = (wrapped as
@@ -3125,7 +3128,8 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.AuthorizationConfigProperty):
-          AuthorizationConfigProperty = Wrapper(cdkObject)
+          AuthorizationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AuthorizationConfigProperty
 
       internal fun unwrap(wrapped: AuthorizationConfigProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.AuthorizationConfigProperty =
@@ -3445,7 +3449,8 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EfsVolumeConfigurationProperty):
-          EfsVolumeConfigurationProperty = Wrapper(cdkObject)
+          EfsVolumeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EfsVolumeConfigurationProperty
 
       internal fun unwrap(wrapped: EfsVolumeConfigurationProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.EfsVolumeConfigurationProperty =
@@ -3603,7 +3608,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.MountPointsProperty):
-          MountPointsProperty = Wrapper(cdkObject)
+          MountPointsProperty = CdkObjectWrappers.wrap(cdkObject) as MountPointsProperty
 
       internal fun unwrap(wrapped: MountPointsProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.MountPointsProperty = (wrapped as
@@ -3741,7 +3746,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EksSecretProperty):
-          EksSecretProperty = Wrapper(cdkObject)
+          EksSecretProperty = CdkObjectWrappers.wrap(cdkObject) as EksSecretProperty
 
       internal fun unwrap(wrapped: EksSecretProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksSecretProperty = (wrapped as
@@ -3904,7 +3909,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EksPropertiesProperty):
-          EksPropertiesProperty = Wrapper(cdkObject)
+          EksPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as EksPropertiesProperty
 
       internal fun unwrap(wrapped: EksPropertiesProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksPropertiesProperty = (wrapped as
@@ -4178,7 +4183,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.NodePropertiesProperty):
-          NodePropertiesProperty = Wrapper(cdkObject)
+          NodePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as NodePropertiesProperty
 
       internal fun unwrap(wrapped: NodePropertiesProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.NodePropertiesProperty = (wrapped
@@ -4607,7 +4612,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.LogConfigurationProperty):
-          LogConfigurationProperty = Wrapper(cdkObject)
+          LogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as LogConfigurationProperty
 
       internal fun unwrap(wrapped: LogConfigurationProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.LogConfigurationProperty = (wrapped
@@ -4719,7 +4724,8 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.FargatePlatformConfigurationProperty):
-          FargatePlatformConfigurationProperty = Wrapper(cdkObject)
+          FargatePlatformConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          FargatePlatformConfigurationProperty
 
       internal fun unwrap(wrapped: FargatePlatformConfigurationProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.FargatePlatformConfigurationProperty
@@ -4793,7 +4799,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.HostPathProperty):
-          HostPathProperty = Wrapper(cdkObject)
+          HostPathProperty = CdkObjectWrappers.wrap(cdkObject) as HostPathProperty
 
       internal fun unwrap(wrapped: HostPathProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.HostPathProperty = (wrapped as
@@ -5021,7 +5027,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EvaluateOnExitProperty):
-          EvaluateOnExitProperty = Wrapper(cdkObject)
+          EvaluateOnExitProperty = CdkObjectWrappers.wrap(cdkObject) as EvaluateOnExitProperty
 
       internal fun unwrap(wrapped: EvaluateOnExitProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.EvaluateOnExitProperty = (wrapped
@@ -5216,7 +5222,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.TmpfsProperty):
-          TmpfsProperty = Wrapper(cdkObject)
+          TmpfsProperty = CdkObjectWrappers.wrap(cdkObject) as TmpfsProperty
 
       internal fun unwrap(wrapped: TmpfsProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.TmpfsProperty = (wrapped as
@@ -5313,7 +5319,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EmptyDirProperty):
-          EmptyDirProperty = Wrapper(cdkObject)
+          EmptyDirProperty = CdkObjectWrappers.wrap(cdkObject) as EmptyDirProperty
 
       internal fun unwrap(wrapped: EmptyDirProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.EmptyDirProperty = (wrapped as
@@ -5570,7 +5576,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.NodeRangePropertyProperty):
-          NodeRangePropertyProperty = Wrapper(cdkObject)
+          NodeRangePropertyProperty = CdkObjectWrappers.wrap(cdkObject) as NodeRangePropertyProperty
 
       internal fun unwrap(wrapped: NodeRangePropertyProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.NodeRangePropertyProperty =
@@ -5914,7 +5920,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EksVolumeProperty):
-          EksVolumeProperty = Wrapper(cdkObject)
+          EksVolumeProperty = CdkObjectWrappers.wrap(cdkObject) as EksVolumeProperty
 
       internal fun unwrap(wrapped: EksVolumeProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksVolumeProperty = (wrapped as
@@ -6027,7 +6033,8 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.NetworkConfigurationProperty):
-          NetworkConfigurationProperty = Wrapper(cdkObject)
+          NetworkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          NetworkConfigurationProperty
 
       internal fun unwrap(wrapped: NetworkConfigurationProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.NetworkConfigurationProperty =
@@ -6175,7 +6182,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.UlimitProperty):
-          UlimitProperty = Wrapper(cdkObject)
+          UlimitProperty = CdkObjectWrappers.wrap(cdkObject) as UlimitProperty
 
       internal fun unwrap(wrapped: UlimitProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.UlimitProperty = (wrapped as
@@ -6964,7 +6971,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EksContainerProperty):
-          EksContainerProperty = Wrapper(cdkObject)
+          EksContainerProperty = CdkObjectWrappers.wrap(cdkObject) as EksContainerProperty
 
       internal fun unwrap(wrapped: EksContainerProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksContainerProperty = (wrapped as
@@ -7280,7 +7287,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.VolumesProperty):
-          VolumesProperty = Wrapper(cdkObject)
+          VolumesProperty = CdkObjectWrappers.wrap(cdkObject) as VolumesProperty
 
       internal fun unwrap(wrapped: VolumesProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.VolumesProperty = (wrapped as
@@ -7483,7 +7490,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.SecurityContextProperty):
-          SecurityContextProperty = Wrapper(cdkObject)
+          SecurityContextProperty = CdkObjectWrappers.wrap(cdkObject) as SecurityContextProperty
 
       internal fun unwrap(wrapped: SecurityContextProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.SecurityContextProperty = (wrapped
@@ -7686,7 +7693,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.RuntimePlatformProperty):
-          RuntimePlatformProperty = Wrapper(cdkObject)
+          RuntimePlatformProperty = CdkObjectWrappers.wrap(cdkObject) as RuntimePlatformProperty
 
       internal fun unwrap(wrapped: RuntimePlatformProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.RuntimePlatformProperty = (wrapped
@@ -8167,7 +8174,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.PodPropertiesProperty):
-          PodPropertiesProperty = Wrapper(cdkObject)
+          PodPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as PodPropertiesProperty
 
       internal fun unwrap(wrapped: PodPropertiesProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.PodPropertiesProperty = (wrapped as
@@ -8266,7 +8273,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.MetadataProperty):
-          MetadataProperty = Wrapper(cdkObject)
+          MetadataProperty = CdkObjectWrappers.wrap(cdkObject) as MetadataProperty
 
       internal fun unwrap(wrapped: MetadataProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.MetadataProperty = (wrapped as
@@ -8373,7 +8380,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EnvironmentProperty):
-          EnvironmentProperty = Wrapper(cdkObject)
+          EnvironmentProperty = CdkObjectWrappers.wrap(cdkObject) as EnvironmentProperty
 
       internal fun unwrap(wrapped: EnvironmentProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.EnvironmentProperty = (wrapped as
@@ -8485,7 +8492,8 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EksContainerEnvironmentVariableProperty):
-          EksContainerEnvironmentVariableProperty = Wrapper(cdkObject)
+          EksContainerEnvironmentVariableProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EksContainerEnvironmentVariableProperty
 
       internal fun unwrap(wrapped: EksContainerEnvironmentVariableProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksContainerEnvironmentVariableProperty
@@ -8575,7 +8583,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EphemeralStorageProperty):
-          EphemeralStorageProperty = Wrapper(cdkObject)
+          EphemeralStorageProperty = CdkObjectWrappers.wrap(cdkObject) as EphemeralStorageProperty
 
       internal fun unwrap(wrapped: EphemeralStorageProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.EphemeralStorageProperty = (wrapped
@@ -10746,7 +10754,8 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.ContainerPropertiesProperty):
-          ContainerPropertiesProperty = Wrapper(cdkObject)
+          ContainerPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ContainerPropertiesProperty
 
       internal fun unwrap(wrapped: ContainerPropertiesProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.ContainerPropertiesProperty =
@@ -10921,7 +10930,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.RetryStrategyProperty):
-          RetryStrategyProperty = Wrapper(cdkObject)
+          RetryStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as RetryStrategyProperty
 
       internal fun unwrap(wrapped: RetryStrategyProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.RetryStrategyProperty = (wrapped as
@@ -11088,7 +11097,8 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EksContainerVolumeMountProperty):
-          EksContainerVolumeMountProperty = Wrapper(cdkObject)
+          EksContainerVolumeMountProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EksContainerVolumeMountProperty
 
       internal fun unwrap(wrapped: EksContainerVolumeMountProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.EksContainerVolumeMountProperty =
@@ -11255,7 +11265,7 @@ public open class CfnJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.DeviceProperty):
-          DeviceProperty = Wrapper(cdkObject)
+          DeviceProperty = CdkObjectWrappers.wrap(cdkObject) as DeviceProperty
 
       internal fun unwrap(wrapped: DeviceProperty):
           software.amazon.awscdk.services.batch.CfnJobDefinition.DeviceProperty = (wrapped as

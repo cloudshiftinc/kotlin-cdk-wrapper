@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.dynamodb
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.collections.List
 import kotlin.collections.Map
@@ -354,7 +355,7 @@ public interface OperationsMetricOptions : SystemErrorsForOperationsMetricOption
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.OperationsMetricOptions):
-        OperationsMetricOptions = Wrapper(cdkObject)
+        OperationsMetricOptions = CdkObjectWrappers.wrap(cdkObject) as OperationsMetricOptions
 
     internal fun unwrap(wrapped: OperationsMetricOptions):
         software.amazon.awscdk.services.dynamodb.OperationsMetricOptions = (wrapped as

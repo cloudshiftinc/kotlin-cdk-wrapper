@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.events.targets
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.RuleTargetInput
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.sqs.IQueue
@@ -212,7 +213,7 @@ public interface SfnStateMachineProps : TargetBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.SfnStateMachineProps):
-        SfnStateMachineProps = Wrapper(cdkObject)
+        SfnStateMachineProps = CdkObjectWrappers.wrap(cdkObject) as SfnStateMachineProps
 
     internal fun unwrap(wrapped: SfnStateMachineProps):
         software.amazon.awscdk.services.events.targets.SfnStateMachineProps = (wrapped as

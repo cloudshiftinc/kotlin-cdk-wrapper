@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 
 /**
@@ -18,20 +19,9 @@ public interface ITokenMapper {
    */
   public fun mapToken(t: IResolvable): Any
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.ITokenMapper,
-  ) : CdkObject(cdkObject), ITokenMapper {
-    /**
-     * Replace a single token.
-     *
-     * @param t 
-     */
-    override fun mapToken(t: IResolvable): Any = unwrap(this).mapToken(t.let(IResolvable::unwrap))
-  }
-
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.ITokenMapper): ITokenMapper =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as ITokenMapper
 
     internal fun unwrap(wrapped: ITokenMapper): software.amazon.awscdk.ITokenMapper = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.ITokenMapper

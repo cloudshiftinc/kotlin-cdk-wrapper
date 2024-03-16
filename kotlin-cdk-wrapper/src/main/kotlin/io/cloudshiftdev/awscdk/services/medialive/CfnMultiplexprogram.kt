@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -986,7 +987,8 @@ public open class CfnMultiplexprogram internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramPacketIdentifiersMapProperty):
-          MultiplexProgramPacketIdentifiersMapProperty = Wrapper(cdkObject)
+          MultiplexProgramPacketIdentifiersMapProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MultiplexProgramPacketIdentifiersMapProperty
 
       internal fun unwrap(wrapped: MultiplexProgramPacketIdentifiersMapProperty):
           software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramPacketIdentifiersMapProperty
@@ -1101,7 +1103,8 @@ public open class CfnMultiplexprogram internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramPipelineDetailProperty):
-          MultiplexProgramPipelineDetailProperty = Wrapper(cdkObject)
+          MultiplexProgramPipelineDetailProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MultiplexProgramPipelineDetailProperty
 
       internal fun unwrap(wrapped: MultiplexProgramPipelineDetailProperty):
           software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramPipelineDetailProperty
@@ -1260,7 +1263,8 @@ public open class CfnMultiplexprogram internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexVideoSettingsProperty):
-          MultiplexVideoSettingsProperty = Wrapper(cdkObject)
+          MultiplexVideoSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MultiplexVideoSettingsProperty
 
       internal fun unwrap(wrapped: MultiplexVideoSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexVideoSettingsProperty
@@ -1499,7 +1503,8 @@ public open class CfnMultiplexprogram internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramSettingsProperty):
-          MultiplexProgramSettingsProperty = Wrapper(cdkObject)
+          MultiplexProgramSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MultiplexProgramSettingsProperty
 
       internal fun unwrap(wrapped: MultiplexProgramSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramSettingsProperty
@@ -1655,7 +1660,8 @@ public open class CfnMultiplexprogram internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexStatmuxVideoSettingsProperty):
-          MultiplexStatmuxVideoSettingsProperty = Wrapper(cdkObject)
+          MultiplexStatmuxVideoSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MultiplexStatmuxVideoSettingsProperty
 
       internal fun unwrap(wrapped: MultiplexStatmuxVideoSettingsProperty):
           software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexStatmuxVideoSettingsProperty
@@ -1766,7 +1772,8 @@ public open class CfnMultiplexprogram internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramServiceDescriptorProperty):
-          MultiplexProgramServiceDescriptorProperty = Wrapper(cdkObject)
+          MultiplexProgramServiceDescriptorProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MultiplexProgramServiceDescriptorProperty
 
       internal fun unwrap(wrapped: MultiplexProgramServiceDescriptorProperty):
           software.amazon.awscdk.services.medialive.CfnMultiplexprogram.MultiplexProgramServiceDescriptorProperty

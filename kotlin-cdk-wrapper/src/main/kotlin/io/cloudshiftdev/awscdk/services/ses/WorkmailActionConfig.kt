@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ses
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -101,7 +102,7 @@ public interface WorkmailActionConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.WorkmailActionConfig):
-        WorkmailActionConfig = Wrapper(cdkObject)
+        WorkmailActionConfig = CdkObjectWrappers.wrap(cdkObject) as WorkmailActionConfig
 
     internal fun unwrap(wrapped: WorkmailActionConfig):
         software.amazon.awscdk.services.ses.WorkmailActionConfig = (wrapped as CdkObject).cdkObject

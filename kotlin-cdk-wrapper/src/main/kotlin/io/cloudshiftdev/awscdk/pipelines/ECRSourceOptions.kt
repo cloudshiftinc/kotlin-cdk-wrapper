@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.pipelines
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -96,7 +97,7 @@ public interface ECRSourceOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.ECRSourceOptions):
-        ECRSourceOptions = Wrapper(cdkObject)
+        ECRSourceOptions = CdkObjectWrappers.wrap(cdkObject) as ECRSourceOptions
 
     internal fun unwrap(wrapped: ECRSourceOptions):
         software.amazon.awscdk.pipelines.ECRSourceOptions = (wrapped as CdkObject).cdkObject as

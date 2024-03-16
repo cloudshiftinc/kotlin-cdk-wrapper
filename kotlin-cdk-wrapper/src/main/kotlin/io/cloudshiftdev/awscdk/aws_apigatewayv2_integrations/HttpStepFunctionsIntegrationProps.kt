@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.apigatewayv2.HttpIntegrationSubtype
 import io.cloudshiftdev.awscdk.services.apigatewayv2.ParameterMapping
 import io.cloudshiftdev.awscdk.services.stepfunctions.StateMachine
@@ -184,7 +185,8 @@ public interface HttpStepFunctionsIntegrationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpStepFunctionsIntegrationProps):
-        HttpStepFunctionsIntegrationProps = Wrapper(cdkObject)
+        HttpStepFunctionsIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as
+        HttpStepFunctionsIntegrationProps
 
     internal fun unwrap(wrapped: HttpStepFunctionsIntegrationProps):
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpStepFunctionsIntegrationProps =

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.lambda.eventsources
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.sns.FilterOrPolicy
 import io.cloudshiftdev.awscdk.services.sns.SubscriptionFilter
 import io.cloudshiftdev.awscdk.services.sns.subscriptions.LambdaSubscriptionProps
@@ -129,7 +130,7 @@ public interface SnsEventSourceProps : LambdaSubscriptionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.eventsources.SnsEventSourceProps):
-        SnsEventSourceProps = Wrapper(cdkObject)
+        SnsEventSourceProps = CdkObjectWrappers.wrap(cdkObject) as SnsEventSourceProps
 
     internal fun unwrap(wrapped: SnsEventSourceProps):
         software.amazon.awscdk.services.lambda.eventsources.SnsEventSourceProps = (wrapped as

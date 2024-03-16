@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -97,7 +98,7 @@ public interface TargetGroupAttributes {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupAttributes):
-        TargetGroupAttributes = Wrapper(cdkObject)
+        TargetGroupAttributes = CdkObjectWrappers.wrap(cdkObject) as TargetGroupAttributes
 
     internal fun unwrap(wrapped: TargetGroupAttributes):
         software.amazon.awscdk.services.elasticloadbalancingv2.TargetGroupAttributes = (wrapped as

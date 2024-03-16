@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.eventschemas
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -233,7 +234,7 @@ public interface CfnSchemaProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eventschemas.CfnSchemaProps):
-        CfnSchemaProps = Wrapper(cdkObject)
+        CfnSchemaProps = CdkObjectWrappers.wrap(cdkObject) as CfnSchemaProps
 
     internal fun unwrap(wrapped: CfnSchemaProps):
         software.amazon.awscdk.services.eventschemas.CfnSchemaProps = (wrapped as

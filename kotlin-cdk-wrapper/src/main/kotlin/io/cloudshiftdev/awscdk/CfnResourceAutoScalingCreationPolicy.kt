@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -108,7 +109,8 @@ public interface CfnResourceAutoScalingCreationPolicy {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnResourceAutoScalingCreationPolicy):
-        CfnResourceAutoScalingCreationPolicy = Wrapper(cdkObject)
+        CfnResourceAutoScalingCreationPolicy = CdkObjectWrappers.wrap(cdkObject) as
+        CfnResourceAutoScalingCreationPolicy
 
     internal fun unwrap(wrapped: CfnResourceAutoScalingCreationPolicy):
         software.amazon.awscdk.CfnResourceAutoScalingCreationPolicy = (wrapped as

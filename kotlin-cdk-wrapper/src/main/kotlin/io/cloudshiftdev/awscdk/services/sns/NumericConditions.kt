@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.sns
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 import kotlin.collections.List
@@ -293,7 +294,7 @@ public interface NumericConditions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sns.NumericConditions):
-        NumericConditions = Wrapper(cdkObject)
+        NumericConditions = CdkObjectWrappers.wrap(cdkObject) as NumericConditions
 
     internal fun unwrap(wrapped: NumericConditions):
         software.amazon.awscdk.services.sns.NumericConditions = (wrapped as CdkObject).cdkObject as

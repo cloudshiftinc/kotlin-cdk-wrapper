@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 /**
  * Represents a TLS certificate that is supported for mutual TLS authentication.
@@ -51,13 +52,9 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 public abstract class MutualTlsCertificate internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.MutualTlsCertificate,
 ) : TlsCertificate(cdkObject) {
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.MutualTlsCertificate,
-  ) : MutualTlsCertificate(cdkObject)
-
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.MutualTlsCertificate):
-        MutualTlsCertificate = Wrapper(cdkObject)
+        MutualTlsCertificate = CdkObjectWrappers.wrap(cdkObject) as MutualTlsCertificate
 
     internal fun unwrap(wrapped: MutualTlsCertificate):
         software.amazon.awscdk.services.appmesh.MutualTlsCertificate = (wrapped as

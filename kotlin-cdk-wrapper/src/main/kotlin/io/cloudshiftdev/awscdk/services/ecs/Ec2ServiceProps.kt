@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import kotlin.Boolean
@@ -936,7 +937,7 @@ public interface Ec2ServiceProps : BaseServiceOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.Ec2ServiceProps):
-        Ec2ServiceProps = Wrapper(cdkObject)
+        Ec2ServiceProps = CdkObjectWrappers.wrap(cdkObject) as Ec2ServiceProps
 
     internal fun unwrap(wrapped: Ec2ServiceProps):
         software.amazon.awscdk.services.ecs.Ec2ServiceProps = (wrapped as CdkObject).cdkObject as

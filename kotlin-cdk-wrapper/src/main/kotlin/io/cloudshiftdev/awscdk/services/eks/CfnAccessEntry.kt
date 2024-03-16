@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -704,7 +705,7 @@ public open class CfnAccessEntry internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty):
-          AccessScopeProperty = Wrapper(cdkObject)
+          AccessScopeProperty = CdkObjectWrappers.wrap(cdkObject) as AccessScopeProperty
 
       internal fun unwrap(wrapped: AccessScopeProperty):
           software.amazon.awscdk.services.eks.CfnAccessEntry.AccessScopeProperty = (wrapped as
@@ -852,7 +853,7 @@ public open class CfnAccessEntry internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnAccessEntry.AccessPolicyProperty):
-          AccessPolicyProperty = Wrapper(cdkObject)
+          AccessPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as AccessPolicyProperty
 
       internal fun unwrap(wrapped: AccessPolicyProperty):
           software.amazon.awscdk.services.eks.CfnAccessEntry.AccessPolicyProperty = (wrapped as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.applicationautoscaling.BaseTargetTrackingProps
 import io.cloudshiftdev.awscdk.services.cloudwatch.IMetric
 import kotlin.Boolean
@@ -228,7 +229,7 @@ public interface TrackCustomMetricProps : BaseTargetTrackingProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.TrackCustomMetricProps):
-        TrackCustomMetricProps = Wrapper(cdkObject)
+        TrackCustomMetricProps = CdkObjectWrappers.wrap(cdkObject) as TrackCustomMetricProps
 
     internal fun unwrap(wrapped: TrackCustomMetricProps):
         software.amazon.awscdk.services.ecs.TrackCustomMetricProps = (wrapped as

@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -850,7 +851,7 @@ public open class CfnInfrastructureConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty):
-          S3LogsProperty = Wrapper(cdkObject)
+          S3LogsProperty = CdkObjectWrappers.wrap(cdkObject) as S3LogsProperty
 
       internal fun unwrap(wrapped: S3LogsProperty):
           software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.S3LogsProperty
@@ -962,7 +963,7 @@ public open class CfnInfrastructureConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty):
-          LoggingProperty = Wrapper(cdkObject)
+          LoggingProperty = CdkObjectWrappers.wrap(cdkObject) as LoggingProperty
 
       internal fun unwrap(wrapped: LoggingProperty):
           software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty
@@ -1134,7 +1135,8 @@ public open class CfnInfrastructureConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.InstanceMetadataOptionsProperty):
-          InstanceMetadataOptionsProperty = Wrapper(cdkObject)
+          InstanceMetadataOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          InstanceMetadataOptionsProperty
 
       internal fun unwrap(wrapped: InstanceMetadataOptionsProperty):
           software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.InstanceMetadataOptionsProperty

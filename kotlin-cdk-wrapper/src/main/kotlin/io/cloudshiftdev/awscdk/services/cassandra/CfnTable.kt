@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1466,7 +1467,7 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.ScalingPolicyProperty):
-          ScalingPolicyProperty = Wrapper(cdkObject)
+          ScalingPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as ScalingPolicyProperty
 
       internal fun unwrap(wrapped: ScalingPolicyProperty):
           software.amazon.awscdk.services.cassandra.CfnTable.ScalingPolicyProperty = (wrapped as
@@ -1619,7 +1620,8 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.ClusteringKeyColumnProperty):
-          ClusteringKeyColumnProperty = Wrapper(cdkObject)
+          ClusteringKeyColumnProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ClusteringKeyColumnProperty
 
       internal fun unwrap(wrapped: ClusteringKeyColumnProperty):
           software.amazon.awscdk.services.cassandra.CfnTable.ClusteringKeyColumnProperty = (wrapped
@@ -1833,7 +1835,7 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.BillingModeProperty):
-          BillingModeProperty = Wrapper(cdkObject)
+          BillingModeProperty = CdkObjectWrappers.wrap(cdkObject) as BillingModeProperty
 
       internal fun unwrap(wrapped: BillingModeProperty):
           software.amazon.awscdk.services.cassandra.CfnTable.BillingModeProperty = (wrapped as
@@ -2027,7 +2029,8 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSpecificationProperty):
-          AutoScalingSpecificationProperty = Wrapper(cdkObject)
+          AutoScalingSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AutoScalingSpecificationProperty
 
       internal fun unwrap(wrapped: AutoScalingSpecificationProperty):
           software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSpecificationProperty =
@@ -2285,7 +2288,8 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.TargetTrackingScalingPolicyConfigurationProperty):
-          TargetTrackingScalingPolicyConfigurationProperty = Wrapper(cdkObject)
+          TargetTrackingScalingPolicyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          TargetTrackingScalingPolicyConfigurationProperty
 
       internal fun unwrap(wrapped: TargetTrackingScalingPolicyConfigurationProperty):
           software.amazon.awscdk.services.cassandra.CfnTable.TargetTrackingScalingPolicyConfigurationProperty
@@ -2481,7 +2485,8 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.ReplicaSpecificationProperty):
-          ReplicaSpecificationProperty = Wrapper(cdkObject)
+          ReplicaSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ReplicaSpecificationProperty
 
       internal fun unwrap(wrapped: ReplicaSpecificationProperty):
           software.amazon.awscdk.services.cassandra.CfnTable.ReplicaSpecificationProperty = (wrapped
@@ -2634,7 +2639,8 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.EncryptionSpecificationProperty):
-          EncryptionSpecificationProperty = Wrapper(cdkObject)
+          EncryptionSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EncryptionSpecificationProperty
 
       internal fun unwrap(wrapped: EncryptionSpecificationProperty):
           software.amazon.awscdk.services.cassandra.CfnTable.EncryptionSpecificationProperty =
@@ -2920,7 +2926,8 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSettingProperty):
-          AutoScalingSettingProperty = Wrapper(cdkObject)
+          AutoScalingSettingProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AutoScalingSettingProperty
 
       internal fun unwrap(wrapped: AutoScalingSettingProperty):
           software.amazon.awscdk.services.cassandra.CfnTable.AutoScalingSettingProperty = (wrapped
@@ -3058,7 +3065,8 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.ProvisionedThroughputProperty):
-          ProvisionedThroughputProperty = Wrapper(cdkObject)
+          ProvisionedThroughputProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ProvisionedThroughputProperty
 
       internal fun unwrap(wrapped: ProvisionedThroughputProperty):
           software.amazon.awscdk.services.cassandra.CfnTable.ProvisionedThroughputProperty =
@@ -3199,7 +3207,7 @@ public open class CfnTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cassandra.CfnTable.ColumnProperty):
-          ColumnProperty = Wrapper(cdkObject)
+          ColumnProperty = CdkObjectWrappers.wrap(cdkObject) as ColumnProperty
 
       internal fun unwrap(wrapped: ColumnProperty):
           software.amazon.awscdk.services.cassandra.CfnTable.ColumnProperty = (wrapped as

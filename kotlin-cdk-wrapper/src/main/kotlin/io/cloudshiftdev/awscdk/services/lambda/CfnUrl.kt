@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -731,7 +732,7 @@ public open class CfnUrl internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnUrl.CorsProperty):
-          CorsProperty = Wrapper(cdkObject)
+          CorsProperty = CdkObjectWrappers.wrap(cdkObject) as CorsProperty
 
       internal fun unwrap(wrapped: CorsProperty):
           software.amazon.awscdk.services.lambda.CfnUrl.CorsProperty = (wrapped as

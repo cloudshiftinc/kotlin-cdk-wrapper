@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -115,7 +116,7 @@ public interface TransformS3DataSource {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.TransformS3DataSource):
-        TransformS3DataSource = Wrapper(cdkObject)
+        TransformS3DataSource = CdkObjectWrappers.wrap(cdkObject) as TransformS3DataSource
 
     internal fun unwrap(wrapped: TransformS3DataSource):
         software.amazon.awscdk.services.stepfunctions.tasks.TransformS3DataSource = (wrapped as

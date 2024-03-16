@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lookoutequipment
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -398,7 +399,7 @@ public interface CfnInferenceSchedulerProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lookoutequipment.CfnInferenceSchedulerProps):
-        CfnInferenceSchedulerProps = Wrapper(cdkObject)
+        CfnInferenceSchedulerProps = CdkObjectWrappers.wrap(cdkObject) as CfnInferenceSchedulerProps
 
     internal fun unwrap(wrapped: CfnInferenceSchedulerProps):
         software.amazon.awscdk.services.lookoutequipment.CfnInferenceSchedulerProps = (wrapped as

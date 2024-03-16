@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1280,7 +1281,7 @@ public open class CfnTargetGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup.MatcherProperty):
-          MatcherProperty = Wrapper(cdkObject)
+          MatcherProperty = CdkObjectWrappers.wrap(cdkObject) as MatcherProperty
 
       internal fun unwrap(wrapped: MatcherProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup.MatcherProperty =
@@ -1811,7 +1812,8 @@ public open class CfnTargetGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup.TargetGroupAttributeProperty):
-          TargetGroupAttributeProperty = Wrapper(cdkObject)
+          TargetGroupAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as
+          TargetGroupAttributeProperty
 
       internal fun unwrap(wrapped: TargetGroupAttributeProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup.TargetGroupAttributeProperty
@@ -2062,7 +2064,7 @@ public open class CfnTargetGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup.TargetDescriptionProperty):
-          TargetDescriptionProperty = Wrapper(cdkObject)
+          TargetDescriptionProperty = CdkObjectWrappers.wrap(cdkObject) as TargetDescriptionProperty
 
       internal fun unwrap(wrapped: TargetDescriptionProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnTargetGroup.TargetDescriptionProperty

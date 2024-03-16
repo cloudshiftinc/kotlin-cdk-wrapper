@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.opensearchserverless
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -189,7 +190,7 @@ public interface CfnVpcEndpointProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpointProps):
-        CfnVpcEndpointProps = Wrapper(cdkObject)
+        CfnVpcEndpointProps = CdkObjectWrappers.wrap(cdkObject) as CfnVpcEndpointProps
 
     internal fun unwrap(wrapped: CfnVpcEndpointProps):
         software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpointProps = (wrapped as

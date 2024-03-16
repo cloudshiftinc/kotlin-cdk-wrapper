@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -430,7 +431,8 @@ public open class CfnEnabledControl internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.controltower.CfnEnabledControl.EnabledControlParameterProperty):
-          EnabledControlParameterProperty = Wrapper(cdkObject)
+          EnabledControlParameterProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EnabledControlParameterProperty
 
       internal fun unwrap(wrapped: EnabledControlParameterProperty):
           software.amazon.awscdk.services.controltower.CfnEnabledControl.EnabledControlParameterProperty

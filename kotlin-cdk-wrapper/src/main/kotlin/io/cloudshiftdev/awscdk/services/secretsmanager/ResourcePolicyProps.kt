@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.secretsmanager
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -71,7 +72,7 @@ public interface ResourcePolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.ResourcePolicyProps):
-        ResourcePolicyProps = Wrapper(cdkObject)
+        ResourcePolicyProps = CdkObjectWrappers.wrap(cdkObject) as ResourcePolicyProps
 
     internal fun unwrap(wrapped: ResourcePolicyProps):
         software.amazon.awscdk.services.secretsmanager.ResourcePolicyProps = (wrapped as

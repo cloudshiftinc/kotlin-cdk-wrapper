@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.batch
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
@@ -51,10 +52,6 @@ public abstract class Secret internal constructor(
    */
   public open fun hasField(): Boolean? = unwrap(this).getHasField()
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.batch.Secret,
-  ) : Secret(cdkObject)
-
   public companion object {
     public fun fromSecretsManager(secret: ISecret): Secret =
         software.amazon.awscdk.services.batch.Secret.fromSecretsManager(secret.let(ISecret::unwrap)).let(Secret::wrap)
@@ -85,7 +82,7 @@ public abstract class Secret internal constructor(
         software.amazon.awscdk.services.batch.Secret.fromSsmParameter(parameter.let(IParameter::unwrap)).let(Secret::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.Secret): Secret =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as Secret
 
     internal fun unwrap(wrapped: Secret): software.amazon.awscdk.services.batch.Secret = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.batch.Secret

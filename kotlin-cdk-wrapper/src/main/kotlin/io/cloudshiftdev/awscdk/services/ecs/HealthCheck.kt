@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -262,7 +263,7 @@ public interface HealthCheck {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.HealthCheck): HealthCheck =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as HealthCheck
 
     internal fun unwrap(wrapped: HealthCheck): software.amazon.awscdk.services.ecs.HealthCheck =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecs.HealthCheck

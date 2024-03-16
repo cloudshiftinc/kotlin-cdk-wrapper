@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -947,7 +948,7 @@ public open class CfnFunctionConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.SyncConfigProperty):
-          SyncConfigProperty = Wrapper(cdkObject)
+          SyncConfigProperty = CdkObjectWrappers.wrap(cdkObject) as SyncConfigProperty
 
       internal fun unwrap(wrapped: SyncConfigProperty):
           software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.SyncConfigProperty =
@@ -1033,7 +1034,8 @@ public open class CfnFunctionConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty):
-          LambdaConflictHandlerConfigProperty = Wrapper(cdkObject)
+          LambdaConflictHandlerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          LambdaConflictHandlerConfigProperty
 
       internal fun unwrap(wrapped: LambdaConflictHandlerConfigProperty):
           software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.LambdaConflictHandlerConfigProperty
@@ -1157,7 +1159,7 @@ public open class CfnFunctionConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty):
-          AppSyncRuntimeProperty = Wrapper(cdkObject)
+          AppSyncRuntimeProperty = CdkObjectWrappers.wrap(cdkObject) as AppSyncRuntimeProperty
 
       internal fun unwrap(wrapped: AppSyncRuntimeProperty):
           software.amazon.awscdk.services.appsync.CfnFunctionConfiguration.AppSyncRuntimeProperty =

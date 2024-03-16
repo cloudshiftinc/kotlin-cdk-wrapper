@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.servicecatalog
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -222,7 +223,8 @@ public interface CfnResourceUpdateConstraintProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CfnResourceUpdateConstraintProps):
-        CfnResourceUpdateConstraintProps = Wrapper(cdkObject)
+        CfnResourceUpdateConstraintProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnResourceUpdateConstraintProps
 
     internal fun unwrap(wrapped: CfnResourceUpdateConstraintProps):
         software.amazon.awscdk.services.servicecatalog.CfnResourceUpdateConstraintProps = (wrapped

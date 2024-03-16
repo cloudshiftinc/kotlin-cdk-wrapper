@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.wafv2
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -473,7 +474,7 @@ public interface CfnIPSetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.wafv2.CfnIPSetProps): CfnIPSetProps
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as CfnIPSetProps
 
     internal fun unwrap(wrapped: CfnIPSetProps): software.amazon.awscdk.services.wafv2.CfnIPSetProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.wafv2.CfnIPSetProps

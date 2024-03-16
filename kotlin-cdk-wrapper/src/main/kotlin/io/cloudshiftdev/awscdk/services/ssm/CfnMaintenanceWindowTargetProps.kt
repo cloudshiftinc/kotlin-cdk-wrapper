@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ssm
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -272,7 +273,8 @@ public interface CfnMaintenanceWindowTargetProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTargetProps):
-        CfnMaintenanceWindowTargetProps = Wrapper(cdkObject)
+        CfnMaintenanceWindowTargetProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnMaintenanceWindowTargetProps
 
     internal fun unwrap(wrapped: CfnMaintenanceWindowTargetProps):
         software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTargetProps = (wrapped as

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1169,7 +1170,7 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.AutoSnapshotAddOnProperty):
-          AutoSnapshotAddOnProperty = Wrapper(cdkObject)
+          AutoSnapshotAddOnProperty = CdkObjectWrappers.wrap(cdkObject) as AutoSnapshotAddOnProperty
 
       internal fun unwrap(wrapped: AutoSnapshotAddOnProperty):
           software.amazon.awscdk.services.lightsail.CfnInstance.AutoSnapshotAddOnProperty = (wrapped
@@ -1362,7 +1363,7 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.AddOnProperty):
-          AddOnProperty = Wrapper(cdkObject)
+          AddOnProperty = CdkObjectWrappers.wrap(cdkObject) as AddOnProperty
 
       internal fun unwrap(wrapped: AddOnProperty):
           software.amazon.awscdk.services.lightsail.CfnInstance.AddOnProperty = (wrapped as
@@ -1471,7 +1472,7 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.LocationProperty):
-          LocationProperty = Wrapper(cdkObject)
+          LocationProperty = CdkObjectWrappers.wrap(cdkObject) as LocationProperty
 
       internal fun unwrap(wrapped: LocationProperty):
           software.amazon.awscdk.services.lightsail.CfnInstance.LocationProperty = (wrapped as
@@ -1556,7 +1557,7 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.MonthlyTransferProperty):
-          MonthlyTransferProperty = Wrapper(cdkObject)
+          MonthlyTransferProperty = CdkObjectWrappers.wrap(cdkObject) as MonthlyTransferProperty
 
       internal fun unwrap(wrapped: MonthlyTransferProperty):
           software.amazon.awscdk.services.lightsail.CfnInstance.MonthlyTransferProperty = (wrapped
@@ -2187,7 +2188,7 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.PortProperty):
-          PortProperty = Wrapper(cdkObject)
+          PortProperty = CdkObjectWrappers.wrap(cdkObject) as PortProperty
 
       internal fun unwrap(wrapped: PortProperty):
           software.amazon.awscdk.services.lightsail.CfnInstance.PortProperty = (wrapped as
@@ -2404,7 +2405,7 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.HardwareProperty):
-          HardwareProperty = Wrapper(cdkObject)
+          HardwareProperty = CdkObjectWrappers.wrap(cdkObject) as HardwareProperty
 
       internal fun unwrap(wrapped: HardwareProperty):
           software.amazon.awscdk.services.lightsail.CfnInstance.HardwareProperty = (wrapped as
@@ -2583,7 +2584,7 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty):
-          NetworkingProperty = Wrapper(cdkObject)
+          NetworkingProperty = CdkObjectWrappers.wrap(cdkObject) as NetworkingProperty
 
       internal fun unwrap(wrapped: NetworkingProperty):
           software.amazon.awscdk.services.lightsail.CfnInstance.NetworkingProperty = (wrapped as
@@ -2691,7 +2692,7 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.StateProperty):
-          StateProperty = Wrapper(cdkObject)
+          StateProperty = CdkObjectWrappers.wrap(cdkObject) as StateProperty
 
       internal fun unwrap(wrapped: StateProperty):
           software.amazon.awscdk.services.lightsail.CfnInstance.StateProperty = (wrapped as
@@ -2973,7 +2974,7 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnInstance.DiskProperty):
-          DiskProperty = Wrapper(cdkObject)
+          DiskProperty = CdkObjectWrappers.wrap(cdkObject) as DiskProperty
 
       internal fun unwrap(wrapped: DiskProperty):
           software.amazon.awscdk.services.lightsail.CfnInstance.DiskProperty = (wrapped as

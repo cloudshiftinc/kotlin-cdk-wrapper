@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.sns.subscriptions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.sns.FilterOrPolicy
 import io.cloudshiftdev.awscdk.services.sns.SubscriptionFilter
 import io.cloudshiftdev.awscdk.services.sns.SubscriptionProtocol
@@ -198,7 +199,7 @@ public interface UrlSubscriptionProps : SubscriptionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.sns.subscriptions.UrlSubscriptionProps):
-        UrlSubscriptionProps = Wrapper(cdkObject)
+        UrlSubscriptionProps = CdkObjectWrappers.wrap(cdkObject) as UrlSubscriptionProps
 
     internal fun unwrap(wrapped: UrlSubscriptionProps):
         software.amazon.awscdk.services.sns.subscriptions.UrlSubscriptionProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigatewayv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.certificatemanager.ICertificate
 import kotlin.String
 import kotlin.Unit
@@ -245,7 +246,7 @@ public interface DomainNameProps : EndpointOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.DomainNameProps):
-        DomainNameProps = Wrapper(cdkObject)
+        DomainNameProps = CdkObjectWrappers.wrap(cdkObject) as DomainNameProps
 
     internal fun unwrap(wrapped: DomainNameProps):
         software.amazon.awscdk.services.apigatewayv2.DomainNameProps = (wrapped as

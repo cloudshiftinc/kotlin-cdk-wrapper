@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -459,7 +460,7 @@ public open class CfnCodeRepository internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnCodeRepository.GitConfigProperty):
-          GitConfigProperty = Wrapper(cdkObject)
+          GitConfigProperty = CdkObjectWrappers.wrap(cdkObject) as GitConfigProperty
 
       internal fun unwrap(wrapped: GitConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnCodeRepository.GitConfigProperty = (wrapped

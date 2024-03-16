@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codecommit
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.EventPattern
 import io.cloudshiftdev.awscdk.services.events.IRuleTarget
 import io.cloudshiftdev.awscdk.services.events.OnEventOptions
@@ -227,7 +228,7 @@ public interface OnCommitOptions : OnEventOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codecommit.OnCommitOptions):
-        OnCommitOptions = Wrapper(cdkObject)
+        OnCommitOptions = CdkObjectWrappers.wrap(cdkObject) as OnCommitOptions
 
     internal fun unwrap(wrapped: OnCommitOptions):
         software.amazon.awscdk.services.codecommit.OnCommitOptions = (wrapped as

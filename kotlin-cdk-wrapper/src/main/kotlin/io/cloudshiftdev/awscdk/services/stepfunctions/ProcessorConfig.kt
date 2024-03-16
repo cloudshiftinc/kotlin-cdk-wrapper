@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -111,7 +112,7 @@ public interface ProcessorConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.ProcessorConfig):
-        ProcessorConfig = Wrapper(cdkObject)
+        ProcessorConfig = CdkObjectWrappers.wrap(cdkObject) as ProcessorConfig
 
     internal fun unwrap(wrapped: ProcessorConfig):
         software.amazon.awscdk.services.stepfunctions.ProcessorConfig = (wrapped as

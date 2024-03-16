@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.emr
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -576,7 +577,8 @@ public interface CfnInstanceGroupConfigProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfigProps):
-        CfnInstanceGroupConfigProps = Wrapper(cdkObject)
+        CfnInstanceGroupConfigProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnInstanceGroupConfigProps
 
     internal fun unwrap(wrapped: CfnInstanceGroupConfigProps):
         software.amazon.awscdk.services.emr.CfnInstanceGroupConfigProps = (wrapped as

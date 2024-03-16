@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.awscdk.services.s3.assets.AssetOptions
 import kotlin.String
@@ -24,10 +25,6 @@ import kotlin.jvm.JvmName
 public abstract class ImportSource internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cloudfront.ImportSource,
 ) : CdkObject(cdkObject) {
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.ImportSource,
-  ) : ImportSource(cdkObject)
-
   public companion object {
     public fun fromAsset(path: String): ImportSource =
         software.amazon.awscdk.services.cloudfront.ImportSource.fromAsset(path).let(ImportSource::wrap)
@@ -46,7 +43,7 @@ public abstract class ImportSource internal constructor(
         key).let(ImportSource::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.ImportSource):
-        ImportSource = Wrapper(cdkObject)
+        ImportSource = CdkObjectWrappers.wrap(cdkObject) as ImportSource
 
     internal fun unwrap(wrapped: ImportSource):
         software.amazon.awscdk.services.cloudfront.ImportSource = (wrapped as CdkObject).cdkObject

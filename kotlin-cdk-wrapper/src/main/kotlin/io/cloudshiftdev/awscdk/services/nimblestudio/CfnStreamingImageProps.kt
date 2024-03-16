@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.nimblestudio
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -208,7 +209,7 @@ public interface CfnStreamingImageProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnStreamingImageProps):
-        CfnStreamingImageProps = Wrapper(cdkObject)
+        CfnStreamingImageProps = CdkObjectWrappers.wrap(cdkObject) as CfnStreamingImageProps
 
     internal fun unwrap(wrapped: CfnStreamingImageProps):
         software.amazon.awscdk.services.nimblestudio.CfnStreamingImageProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.backup
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -141,7 +142,7 @@ public interface TagCondition {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.backup.TagCondition): TagCondition
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as TagCondition
 
     internal fun unwrap(wrapped: TagCondition): software.amazon.awscdk.services.backup.TagCondition
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.backup.TagCondition

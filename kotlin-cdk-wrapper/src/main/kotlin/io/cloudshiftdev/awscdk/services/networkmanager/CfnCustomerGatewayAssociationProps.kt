@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.networkmanager
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -162,7 +163,8 @@ public interface CfnCustomerGatewayAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnCustomerGatewayAssociationProps):
-        CfnCustomerGatewayAssociationProps = Wrapper(cdkObject)
+        CfnCustomerGatewayAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnCustomerGatewayAssociationProps
 
     internal fun unwrap(wrapped: CfnCustomerGatewayAssociationProps):
         software.amazon.awscdk.services.networkmanager.CfnCustomerGatewayAssociationProps = (wrapped

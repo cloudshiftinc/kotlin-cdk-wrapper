@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.codepipeline
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.IRuleTarget
 import io.cloudshiftdev.awscdk.services.events.Rule
 import io.cloudshiftdev.awscdk.services.events.RuleProps
@@ -73,76 +74,9 @@ public interface IStage {
    */
   public fun stageName(): String
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.IStage,
-  ) : CdkObject(cdkObject), IStage {
-    /**
-     * The actions belonging to this stage.
-     */
-    override fun actions(): List<IAction> = unwrap(this).getActions().map(IAction::wrap)
-
-    /**
-     * @param action 
-     */
-    override fun addAction(action: IAction) {
-      unwrap(this).addAction(action.let(IAction::unwrap))
-    }
-
-    /**
-     * @param name 
-     * @param target
-     * @param options
-     */
-    override fun onStateChange(name: String): Rule =
-        unwrap(this).onStateChange(name).let(Rule::wrap)
-
-    /**
-     * @param name 
-     * @param target
-     * @param options
-     */
-    override fun onStateChange(name: String, target: IRuleTarget): Rule =
-        unwrap(this).onStateChange(name, target.let(IRuleTarget::unwrap)).let(Rule::wrap)
-
-    /**
-     * @param name 
-     * @param target
-     * @param options
-     */
-    override fun onStateChange(
-      name: String,
-      target: IRuleTarget,
-      options: RuleProps,
-    ): Rule = unwrap(this).onStateChange(name, target.let(IRuleTarget::unwrap),
-        options.let(RuleProps::unwrap)).let(Rule::wrap)
-
-    /**
-     * @param name 
-     * @param target
-     * @param options
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("83ca362934f6f86114f7601f1f93b6cd0f94a44e6ee3262ddc4ccfd9f4986058")
-    override fun onStateChange(
-      name: String,
-      target: IRuleTarget,
-      options: RuleProps.Builder.() -> Unit,
-    ): Rule = onStateChange(name, target, RuleProps(options))
-
-    /**
-     *
-     */
-    override fun pipeline(): IPipeline = unwrap(this).getPipeline().let(IPipeline::wrap)
-
-    /**
-     * The physical, human-readable name of this Pipeline Stage.
-     */
-    override fun stageName(): String = unwrap(this).getStageName()
-  }
-
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.IStage): IStage =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as IStage
 
     internal fun unwrap(wrapped: IStage): software.amazon.awscdk.services.codepipeline.IStage =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.codepipeline.IStage

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -263,7 +264,8 @@ public interface GrantOnPrincipalAndResourceOptions : CommonGrantOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iam.GrantOnPrincipalAndResourceOptions):
-        GrantOnPrincipalAndResourceOptions = Wrapper(cdkObject)
+        GrantOnPrincipalAndResourceOptions = CdkObjectWrappers.wrap(cdkObject) as
+        GrantOnPrincipalAndResourceOptions
 
     internal fun unwrap(wrapped: GrantOnPrincipalAndResourceOptions):
         software.amazon.awscdk.services.iam.GrantOnPrincipalAndResourceOptions = (wrapped as

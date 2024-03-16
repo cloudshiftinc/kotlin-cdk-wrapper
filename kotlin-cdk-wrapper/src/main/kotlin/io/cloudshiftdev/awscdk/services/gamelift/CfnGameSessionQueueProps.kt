@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -611,7 +612,7 @@ public interface CfnGameSessionQueueProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueueProps):
-        CfnGameSessionQueueProps = Wrapper(cdkObject)
+        CfnGameSessionQueueProps = CdkObjectWrappers.wrap(cdkObject) as CfnGameSessionQueueProps
 
     internal fun unwrap(wrapped: CfnGameSessionQueueProps):
         software.amazon.awscdk.services.gamelift.CfnGameSessionQueueProps = (wrapped as

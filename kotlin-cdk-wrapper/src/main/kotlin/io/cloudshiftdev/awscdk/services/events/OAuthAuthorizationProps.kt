@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.events
 import io.cloudshiftdev.awscdk.SecretValue
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -247,7 +248,7 @@ public interface OAuthAuthorizationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.OAuthAuthorizationProps):
-        OAuthAuthorizationProps = Wrapper(cdkObject)
+        OAuthAuthorizationProps = CdkObjectWrappers.wrap(cdkObject) as OAuthAuthorizationProps
 
     internal fun unwrap(wrapped: OAuthAuthorizationProps):
         software.amazon.awscdk.services.events.OAuthAuthorizationProps = (wrapped as

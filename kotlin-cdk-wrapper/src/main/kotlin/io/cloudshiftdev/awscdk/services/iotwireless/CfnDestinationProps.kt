@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.iotwireless
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -240,7 +241,7 @@ public interface CfnDestinationProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnDestinationProps):
-        CfnDestinationProps = Wrapper(cdkObject)
+        CfnDestinationProps = CdkObjectWrappers.wrap(cdkObject) as CfnDestinationProps
 
     internal fun unwrap(wrapped: CfnDestinationProps):
         software.amazon.awscdk.services.iotwireless.CfnDestinationProps = (wrapped as

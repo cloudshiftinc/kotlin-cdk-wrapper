@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -183,7 +184,7 @@ public interface CfnDocumentationPartProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDocumentationPartProps):
-        CfnDocumentationPartProps = Wrapper(cdkObject)
+        CfnDocumentationPartProps = CdkObjectWrappers.wrap(cdkObject) as CfnDocumentationPartProps
 
     internal fun unwrap(wrapped: CfnDocumentationPartProps):
         software.amazon.awscdk.services.apigateway.CfnDocumentationPartProps = (wrapped as

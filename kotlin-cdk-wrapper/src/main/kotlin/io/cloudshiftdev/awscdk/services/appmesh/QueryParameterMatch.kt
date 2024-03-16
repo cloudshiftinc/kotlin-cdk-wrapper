@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 
@@ -42,17 +43,13 @@ public abstract class QueryParameterMatch internal constructor(
   public open fun bind(scope: Construct): QueryParameterMatchConfig =
       unwrap(this).bind(scope.let(Construct::unwrap)).let(QueryParameterMatchConfig::wrap)
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.QueryParameterMatch,
-  ) : QueryParameterMatch(cdkObject)
-
   public companion object {
     public fun valueIs(queryParameterName: String, queryParameterValue: String): QueryParameterMatch
         = software.amazon.awscdk.services.appmesh.QueryParameterMatch.valueIs(queryParameterName,
         queryParameterValue).let(QueryParameterMatch::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.QueryParameterMatch):
-        QueryParameterMatch = Wrapper(cdkObject)
+        QueryParameterMatch = CdkObjectWrappers.wrap(cdkObject) as QueryParameterMatch
 
     internal fun unwrap(wrapped: QueryParameterMatch):
         software.amazon.awscdk.services.appmesh.QueryParameterMatch = (wrapped as

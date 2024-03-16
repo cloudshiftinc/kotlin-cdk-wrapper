@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.synthetics
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.String
 import kotlin.Unit
@@ -111,7 +112,7 @@ public interface ArtifactsBucketLocation {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.ArtifactsBucketLocation):
-        ArtifactsBucketLocation = Wrapper(cdkObject)
+        ArtifactsBucketLocation = CdkObjectWrappers.wrap(cdkObject) as ArtifactsBucketLocation
 
     internal fun unwrap(wrapped: ArtifactsBucketLocation):
         software.amazon.awscdk.services.synthetics.ArtifactsBucketLocation = (wrapped as

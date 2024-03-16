@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.connect
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -287,7 +288,7 @@ public interface CfnPhoneNumberProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnPhoneNumberProps):
-        CfnPhoneNumberProps = Wrapper(cdkObject)
+        CfnPhoneNumberProps = CdkObjectWrappers.wrap(cdkObject) as CfnPhoneNumberProps
 
     internal fun unwrap(wrapped: CfnPhoneNumberProps):
         software.amazon.awscdk.services.connect.CfnPhoneNumberProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -132,7 +133,8 @@ public interface CfnNetworkInterfacePermissionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterfacePermissionProps):
-        CfnNetworkInterfacePermissionProps = Wrapper(cdkObject)
+        CfnNetworkInterfacePermissionProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnNetworkInterfacePermissionProps
 
     internal fun unwrap(wrapped: CfnNetworkInterfacePermissionProps):
         software.amazon.awscdk.services.ec2.CfnNetworkInterfacePermissionProps = (wrapped as

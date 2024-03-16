@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.Artifact
 import io.cloudshiftdev.awscdk.services.codepipeline.CommonAwsActionProps
 import io.cloudshiftdev.awscdk.services.ecr.IRepository
@@ -243,7 +244,7 @@ public interface EcrSourceActionProps : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.EcrSourceActionProps):
-        EcrSourceActionProps = Wrapper(cdkObject)
+        EcrSourceActionProps = CdkObjectWrappers.wrap(cdkObject) as EcrSourceActionProps
 
     internal fun unwrap(wrapped: EcrSourceActionProps):
         software.amazon.awscdk.services.codepipeline.actions.EcrSourceActionProps = (wrapped as

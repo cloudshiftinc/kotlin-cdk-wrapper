@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.String
 import kotlin.Unit
@@ -273,7 +274,7 @@ public interface CommonTaskDefinitionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CommonTaskDefinitionProps):
-        CommonTaskDefinitionProps = Wrapper(cdkObject)
+        CommonTaskDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as CommonTaskDefinitionProps
 
     internal fun unwrap(wrapped: CommonTaskDefinitionProps):
         software.amazon.awscdk.services.ecs.CommonTaskDefinitionProps = (wrapped as

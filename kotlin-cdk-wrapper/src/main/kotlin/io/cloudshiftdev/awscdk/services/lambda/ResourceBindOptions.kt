@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -77,7 +78,7 @@ public interface ResourceBindOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.ResourceBindOptions):
-        ResourceBindOptions = Wrapper(cdkObject)
+        ResourceBindOptions = CdkObjectWrappers.wrap(cdkObject) as ResourceBindOptions
 
     internal fun unwrap(wrapped: ResourceBindOptions):
         software.amazon.awscdk.services.lambda.ResourceBindOptions = (wrapped as

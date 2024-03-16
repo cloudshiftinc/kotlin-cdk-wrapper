@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.route53
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IVpcEndpointService
 import kotlin.String
 import kotlin.Unit
@@ -140,7 +141,8 @@ public interface VpcEndpointServiceDomainNameProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53.VpcEndpointServiceDomainNameProps):
-        VpcEndpointServiceDomainNameProps = Wrapper(cdkObject)
+        VpcEndpointServiceDomainNameProps = CdkObjectWrappers.wrap(cdkObject) as
+        VpcEndpointServiceDomainNameProps
 
     internal fun unwrap(wrapped: VpcEndpointServiceDomainNameProps):
         software.amazon.awscdk.services.route53.VpcEndpointServiceDomainNameProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.mediapackagev2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -166,7 +167,8 @@ public interface CfnOriginEndpointPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpointPolicyProps):
-        CfnOriginEndpointPolicyProps = Wrapper(cdkObject)
+        CfnOriginEndpointPolicyProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnOriginEndpointPolicyProps
 
     internal fun unwrap(wrapped: CfnOriginEndpointPolicyProps):
         software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpointPolicyProps = (wrapped as

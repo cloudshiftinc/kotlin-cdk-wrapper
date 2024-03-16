@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.amplifyuibuilder
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -579,7 +580,7 @@ public interface CfnComponentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponentProps):
-        CfnComponentProps = Wrapper(cdkObject)
+        CfnComponentProps = CdkObjectWrappers.wrap(cdkObject) as CfnComponentProps
 
     internal fun unwrap(wrapped: CfnComponentProps):
         software.amazon.awscdk.services.amplifyuibuilder.CfnComponentProps = (wrapped as

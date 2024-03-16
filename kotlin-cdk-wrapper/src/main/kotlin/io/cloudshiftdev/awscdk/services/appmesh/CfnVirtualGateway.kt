@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -754,7 +755,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsCertificateProperty):
-          VirtualGatewayListenerTlsCertificateProperty = Wrapper(cdkObject)
+          VirtualGatewayListenerTlsCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayListenerTlsCertificateProperty
 
       internal fun unwrap(wrapped: VirtualGatewayListenerTlsCertificateProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsCertificateProperty
@@ -1096,7 +1098,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewaySpecProperty):
-          VirtualGatewaySpecProperty = Wrapper(cdkObject)
+          VirtualGatewaySpecProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewaySpecProperty
 
       internal fun unwrap(wrapped: VirtualGatewaySpecProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewaySpecProperty =
@@ -1229,7 +1232,7 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.LoggingFormatProperty):
-          LoggingFormatProperty = Wrapper(cdkObject)
+          LoggingFormatProperty = CdkObjectWrappers.wrap(cdkObject) as LoggingFormatProperty
 
       internal fun unwrap(wrapped: LoggingFormatProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.LoggingFormatProperty = (wrapped
@@ -1348,7 +1351,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttpConnectionPoolProperty):
-          VirtualGatewayHttpConnectionPoolProperty = Wrapper(cdkObject)
+          VirtualGatewayHttpConnectionPoolProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayHttpConnectionPoolProperty
 
       internal fun unwrap(wrapped: VirtualGatewayHttpConnectionPoolProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttpConnectionPoolProperty
@@ -1599,7 +1603,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextTrustProperty):
-          VirtualGatewayTlsValidationContextTrustProperty = Wrapper(cdkObject)
+          VirtualGatewayTlsValidationContextTrustProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayTlsValidationContextTrustProperty
 
       internal fun unwrap(wrapped: VirtualGatewayTlsValidationContextTrustProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextTrustProperty
@@ -1694,7 +1699,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextSdsTrustProperty):
-          VirtualGatewayTlsValidationContextSdsTrustProperty = Wrapper(cdkObject)
+          VirtualGatewayTlsValidationContextSdsTrustProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayTlsValidationContextSdsTrustProperty
 
       internal fun unwrap(wrapped: VirtualGatewayTlsValidationContextSdsTrustProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextSdsTrustProperty
@@ -1814,7 +1820,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayAccessLogProperty):
-          VirtualGatewayAccessLogProperty = Wrapper(cdkObject)
+          VirtualGatewayAccessLogProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayAccessLogProperty
 
       internal fun unwrap(wrapped: VirtualGatewayAccessLogProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayAccessLogProperty
@@ -2102,7 +2109,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty):
-          VirtualGatewayHealthCheckPolicyProperty = Wrapper(cdkObject)
+          VirtualGatewayHealthCheckPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayHealthCheckPolicyProperty
 
       internal fun unwrap(wrapped: VirtualGatewayHealthCheckPolicyProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHealthCheckPolicyProperty
@@ -2248,7 +2256,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty):
-          VirtualGatewayBackendDefaultsProperty = Wrapper(cdkObject)
+          VirtualGatewayBackendDefaultsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayBackendDefaultsProperty
 
       internal fun unwrap(wrapped: VirtualGatewayBackendDefaultsProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayBackendDefaultsProperty
@@ -2448,7 +2457,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextProperty):
-          VirtualGatewayListenerTlsValidationContextProperty = Wrapper(cdkObject)
+          VirtualGatewayListenerTlsValidationContextProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayListenerTlsValidationContextProperty
 
       internal fun unwrap(wrapped: VirtualGatewayListenerTlsValidationContextProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextProperty
@@ -2621,7 +2631,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayFileAccessLogProperty):
-          VirtualGatewayFileAccessLogProperty = Wrapper(cdkObject)
+          VirtualGatewayFileAccessLogProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayFileAccessLogProperty
 
       internal fun unwrap(wrapped: VirtualGatewayFileAccessLogProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayFileAccessLogProperty
@@ -2961,7 +2972,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerProperty):
-          VirtualGatewayListenerProperty = Wrapper(cdkObject)
+          VirtualGatewayListenerProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayListenerProperty
 
       internal fun unwrap(wrapped: VirtualGatewayListenerProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerProperty =
@@ -3056,7 +3068,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsSdsCertificateProperty):
-          VirtualGatewayListenerTlsSdsCertificateProperty = Wrapper(cdkObject)
+          VirtualGatewayListenerTlsSdsCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayListenerTlsSdsCertificateProperty
 
       internal fun unwrap(wrapped: VirtualGatewayListenerTlsSdsCertificateProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsSdsCertificateProperty
@@ -3154,7 +3167,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextAcmTrustProperty):
-          VirtualGatewayTlsValidationContextAcmTrustProperty = Wrapper(cdkObject)
+          VirtualGatewayTlsValidationContextAcmTrustProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayTlsValidationContextAcmTrustProperty
 
       internal fun unwrap(wrapped: VirtualGatewayTlsValidationContextAcmTrustProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextAcmTrustProperty
@@ -3271,7 +3285,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayPortMappingProperty):
-          VirtualGatewayPortMappingProperty = Wrapper(cdkObject)
+          VirtualGatewayPortMappingProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayPortMappingProperty
 
       internal fun unwrap(wrapped: VirtualGatewayPortMappingProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayPortMappingProperty
@@ -3359,7 +3374,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayGrpcConnectionPoolProperty):
-          VirtualGatewayGrpcConnectionPoolProperty = Wrapper(cdkObject)
+          VirtualGatewayGrpcConnectionPoolProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayGrpcConnectionPoolProperty
 
       internal fun unwrap(wrapped: VirtualGatewayGrpcConnectionPoolProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayGrpcConnectionPoolProperty
@@ -3666,7 +3682,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyTlsProperty):
-          VirtualGatewayClientPolicyTlsProperty = Wrapper(cdkObject)
+          VirtualGatewayClientPolicyTlsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayClientPolicyTlsProperty
 
       internal fun unwrap(wrapped: VirtualGatewayClientPolicyTlsProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyTlsProperty
@@ -3788,7 +3805,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayLoggingProperty):
-          VirtualGatewayLoggingProperty = Wrapper(cdkObject)
+          VirtualGatewayLoggingProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayLoggingProperty
 
       internal fun unwrap(wrapped: VirtualGatewayLoggingProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayLoggingProperty =
@@ -3896,7 +3914,7 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.JsonFormatRefProperty):
-          JsonFormatRefProperty = Wrapper(cdkObject)
+          JsonFormatRefProperty = CdkObjectWrappers.wrap(cdkObject) as JsonFormatRefProperty
 
       internal fun unwrap(wrapped: JsonFormatRefProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.JsonFormatRefProperty = (wrapped
@@ -3984,7 +4002,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttp2ConnectionPoolProperty):
-          VirtualGatewayHttp2ConnectionPoolProperty = Wrapper(cdkObject)
+          VirtualGatewayHttp2ConnectionPoolProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayHttp2ConnectionPoolProperty
 
       internal fun unwrap(wrapped: VirtualGatewayHttp2ConnectionPoolProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayHttp2ConnectionPoolProperty
@@ -4133,7 +4152,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyProperty):
-          VirtualGatewayClientPolicyProperty = Wrapper(cdkObject)
+          VirtualGatewayClientPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayClientPolicyProperty
 
       internal fun unwrap(wrapped: VirtualGatewayClientPolicyProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientPolicyProperty
@@ -4228,7 +4248,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNameMatchersProperty):
-          SubjectAlternativeNameMatchersProperty = Wrapper(cdkObject)
+          SubjectAlternativeNameMatchersProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SubjectAlternativeNameMatchersProperty
 
       internal fun unwrap(wrapped: SubjectAlternativeNameMatchersProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNameMatchersProperty
@@ -4460,7 +4481,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayConnectionPoolProperty):
-          VirtualGatewayConnectionPoolProperty = Wrapper(cdkObject)
+          VirtualGatewayConnectionPoolProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayConnectionPoolProperty
 
       internal fun unwrap(wrapped: VirtualGatewayConnectionPoolProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayConnectionPoolProperty
@@ -4550,7 +4572,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty):
-          VirtualGatewayTlsValidationContextFileTrustProperty = Wrapper(cdkObject)
+          VirtualGatewayTlsValidationContextFileTrustProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayTlsValidationContextFileTrustProperty
 
       internal fun unwrap(wrapped: VirtualGatewayTlsValidationContextFileTrustProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextFileTrustProperty
@@ -4739,7 +4762,9 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextTrustProperty):
-          VirtualGatewayListenerTlsValidationContextTrustProperty = Wrapper(cdkObject)
+          VirtualGatewayListenerTlsValidationContextTrustProperty =
+          CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayListenerTlsValidationContextTrustProperty
 
       internal fun unwrap(wrapped: VirtualGatewayListenerTlsValidationContextTrustProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsValidationContextTrustProperty
@@ -4851,7 +4876,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNamesProperty):
-          SubjectAlternativeNamesProperty = Wrapper(cdkObject)
+          SubjectAlternativeNamesProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SubjectAlternativeNamesProperty
 
       internal fun unwrap(wrapped: SubjectAlternativeNamesProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.SubjectAlternativeNamesProperty
@@ -5096,7 +5122,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsProperty):
-          VirtualGatewayListenerTlsProperty = Wrapper(cdkObject)
+          VirtualGatewayListenerTlsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayListenerTlsProperty
 
       internal fun unwrap(wrapped: VirtualGatewayListenerTlsProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsProperty
@@ -5302,7 +5329,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientTlsCertificateProperty):
-          VirtualGatewayClientTlsCertificateProperty = Wrapper(cdkObject)
+          VirtualGatewayClientTlsCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayClientTlsCertificateProperty
 
       internal fun unwrap(wrapped: VirtualGatewayClientTlsCertificateProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayClientTlsCertificateProperty
@@ -5501,7 +5529,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextProperty):
-          VirtualGatewayTlsValidationContextProperty = Wrapper(cdkObject)
+          VirtualGatewayTlsValidationContextProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayTlsValidationContextProperty
 
       internal fun unwrap(wrapped: VirtualGatewayTlsValidationContextProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayTlsValidationContextProperty
@@ -5603,7 +5632,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsAcmCertificateProperty):
-          VirtualGatewayListenerTlsAcmCertificateProperty = Wrapper(cdkObject)
+          VirtualGatewayListenerTlsAcmCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayListenerTlsAcmCertificateProperty
 
       internal fun unwrap(wrapped: VirtualGatewayListenerTlsAcmCertificateProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsAcmCertificateProperty
@@ -5724,7 +5754,8 @@ public open class CfnVirtualGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsFileCertificateProperty):
-          VirtualGatewayListenerTlsFileCertificateProperty = Wrapper(cdkObject)
+          VirtualGatewayListenerTlsFileCertificateProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VirtualGatewayListenerTlsFileCertificateProperty
 
       internal fun unwrap(wrapped: VirtualGatewayListenerTlsFileCertificateProperty):
           software.amazon.awscdk.services.appmesh.CfnVirtualGateway.VirtualGatewayListenerTlsFileCertificateProperty

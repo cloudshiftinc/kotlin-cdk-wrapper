@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -417,7 +418,7 @@ public open class CfnResponseHeadersPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.FrameOptionsProperty):
-          FrameOptionsProperty = Wrapper(cdkObject)
+          FrameOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as FrameOptionsProperty
 
       internal fun unwrap(wrapped: FrameOptionsProperty):
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.FrameOptionsProperty =
@@ -578,7 +579,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowMethodsProperty):
-          AccessControlAllowMethodsProperty = Wrapper(cdkObject)
+          AccessControlAllowMethodsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AccessControlAllowMethodsProperty
 
       internal fun unwrap(wrapped: AccessControlAllowMethodsProperty):
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowMethodsProperty
@@ -735,7 +737,7 @@ public open class CfnResponseHeadersPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeaderProperty):
-          CustomHeaderProperty = Wrapper(cdkObject)
+          CustomHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as CustomHeaderProperty
 
       internal fun unwrap(wrapped: CustomHeaderProperty):
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeaderProperty =
@@ -1376,7 +1378,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.SecurityHeadersConfigProperty):
-          SecurityHeadersConfigProperty = Wrapper(cdkObject)
+          SecurityHeadersConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SecurityHeadersConfigProperty
 
       internal fun unwrap(wrapped: SecurityHeadersConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.SecurityHeadersConfigProperty
@@ -1564,7 +1567,7 @@ public open class CfnResponseHeadersPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ReferrerPolicyProperty):
-          ReferrerPolicyProperty = Wrapper(cdkObject)
+          ReferrerPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as ReferrerPolicyProperty
 
       internal fun unwrap(wrapped: ReferrerPolicyProperty):
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ReferrerPolicyProperty
@@ -1671,7 +1674,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowOriginsProperty):
-          AccessControlAllowOriginsProperty = Wrapper(cdkObject)
+          AccessControlAllowOriginsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AccessControlAllowOriginsProperty
 
       internal fun unwrap(wrapped: AccessControlAllowOriginsProperty):
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowOriginsProperty
@@ -2168,7 +2172,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty):
-          ResponseHeadersPolicyConfigProperty = Wrapper(cdkObject)
+          ResponseHeadersPolicyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ResponseHeadersPolicyConfigProperty
 
       internal fun unwrap(wrapped: ResponseHeadersPolicyConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty
@@ -2330,7 +2335,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ServerTimingHeadersConfigProperty):
-          ServerTimingHeadersConfigProperty = Wrapper(cdkObject)
+          ServerTimingHeadersConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ServerTimingHeadersConfigProperty
 
       internal fun unwrap(wrapped: ServerTimingHeadersConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ServerTimingHeadersConfigProperty
@@ -2563,7 +2569,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.StrictTransportSecurityProperty):
-          StrictTransportSecurityProperty = Wrapper(cdkObject)
+          StrictTransportSecurityProperty = CdkObjectWrappers.wrap(cdkObject) as
+          StrictTransportSecurityProperty
 
       internal fun unwrap(wrapped: StrictTransportSecurityProperty):
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.StrictTransportSecurityProperty
@@ -3163,7 +3170,7 @@ public open class CfnResponseHeadersPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CorsConfigProperty):
-          CorsConfigProperty = Wrapper(cdkObject)
+          CorsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as CorsConfigProperty
 
       internal fun unwrap(wrapped: CorsConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CorsConfigProperty =
@@ -3246,7 +3253,7 @@ public open class CfnResponseHeadersPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeaderProperty):
-          RemoveHeaderProperty = Wrapper(cdkObject)
+          RemoveHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as RemoveHeaderProperty
 
       internal fun unwrap(wrapped: RemoveHeaderProperty):
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeaderProperty =
@@ -3357,7 +3364,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeadersConfigProperty):
-          CustomHeadersConfigProperty = Wrapper(cdkObject)
+          CustomHeadersConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CustomHeadersConfigProperty
 
       internal fun unwrap(wrapped: CustomHeadersConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.CustomHeadersConfigProperty
@@ -3464,7 +3472,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeadersConfigProperty):
-          RemoveHeadersConfigProperty = Wrapper(cdkObject)
+          RemoveHeadersConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          RemoveHeadersConfigProperty
 
       internal fun unwrap(wrapped: RemoveHeadersConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.RemoveHeadersConfigProperty
@@ -3606,7 +3615,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentSecurityPolicyProperty):
-          ContentSecurityPolicyProperty = Wrapper(cdkObject)
+          ContentSecurityPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ContentSecurityPolicyProperty
 
       internal fun unwrap(wrapped: ContentSecurityPolicyProperty):
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentSecurityPolicyProperty
@@ -3713,7 +3723,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty):
-          AccessControlAllowHeadersProperty = Wrapper(cdkObject)
+          AccessControlAllowHeadersProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AccessControlAllowHeadersProperty
 
       internal fun unwrap(wrapped: AccessControlAllowHeadersProperty):
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlAllowHeadersProperty
@@ -3820,7 +3831,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlExposeHeadersProperty):
-          AccessControlExposeHeadersProperty = Wrapper(cdkObject)
+          AccessControlExposeHeadersProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AccessControlExposeHeadersProperty
 
       internal fun unwrap(wrapped: AccessControlExposeHeadersProperty):
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.AccessControlExposeHeadersProperty
@@ -4129,7 +4141,7 @@ public open class CfnResponseHeadersPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.XSSProtectionProperty):
-          XSSProtectionProperty = Wrapper(cdkObject)
+          XSSProtectionProperty = CdkObjectWrappers.wrap(cdkObject) as XSSProtectionProperty
 
       internal fun unwrap(wrapped: XSSProtectionProperty):
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.XSSProtectionProperty
@@ -4239,7 +4251,8 @@ public open class CfnResponseHeadersPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentTypeOptionsProperty):
-          ContentTypeOptionsProperty = Wrapper(cdkObject)
+          ContentTypeOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ContentTypeOptionsProperty
 
       internal fun unwrap(wrapped: ContentTypeOptionsProperty):
           software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy.ContentTypeOptionsProperty

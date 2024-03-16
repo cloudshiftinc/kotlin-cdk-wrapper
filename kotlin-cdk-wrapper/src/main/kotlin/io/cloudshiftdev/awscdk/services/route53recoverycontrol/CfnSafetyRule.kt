@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -830,7 +831,7 @@ public open class CfnSafetyRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty):
-          RuleConfigProperty = Wrapper(cdkObject)
+          RuleConfigProperty = CdkObjectWrappers.wrap(cdkObject) as RuleConfigProperty
 
       internal fun unwrap(wrapped: RuleConfigProperty):
           software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.RuleConfigProperty =
@@ -1062,7 +1063,7 @@ public open class CfnSafetyRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.GatingRuleProperty):
-          GatingRuleProperty = Wrapper(cdkObject)
+          GatingRuleProperty = CdkObjectWrappers.wrap(cdkObject) as GatingRuleProperty
 
       internal fun unwrap(wrapped: GatingRuleProperty):
           software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.GatingRuleProperty =
@@ -1216,7 +1217,7 @@ public open class CfnSafetyRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty):
-          AssertionRuleProperty = Wrapper(cdkObject)
+          AssertionRuleProperty = CdkObjectWrappers.wrap(cdkObject) as AssertionRuleProperty
 
       internal fun unwrap(wrapped: AssertionRuleProperty):
           software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule.AssertionRuleProperty

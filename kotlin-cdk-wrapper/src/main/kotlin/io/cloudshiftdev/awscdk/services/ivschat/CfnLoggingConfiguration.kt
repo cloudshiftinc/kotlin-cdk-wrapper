@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -418,7 +419,8 @@ public open class CfnLoggingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.CloudWatchLogsDestinationConfigurationProperty):
-          CloudWatchLogsDestinationConfigurationProperty = Wrapper(cdkObject)
+          CloudWatchLogsDestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CloudWatchLogsDestinationConfigurationProperty
 
       internal fun unwrap(wrapped: CloudWatchLogsDestinationConfigurationProperty):
           software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.CloudWatchLogsDestinationConfigurationProperty
@@ -505,7 +507,8 @@ public open class CfnLoggingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty):
-          FirehoseDestinationConfigurationProperty = Wrapper(cdkObject)
+          FirehoseDestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          FirehoseDestinationConfigurationProperty
 
       internal fun unwrap(wrapped: FirehoseDestinationConfigurationProperty):
           software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.FirehoseDestinationConfigurationProperty
@@ -747,7 +750,8 @@ public open class CfnLoggingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.DestinationConfigurationProperty):
-          DestinationConfigurationProperty = Wrapper(cdkObject)
+          DestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          DestinationConfigurationProperty
 
       internal fun unwrap(wrapped: DestinationConfigurationProperty):
           software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.DestinationConfigurationProperty
@@ -832,7 +836,8 @@ public open class CfnLoggingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.S3DestinationConfigurationProperty):
-          S3DestinationConfigurationProperty = Wrapper(cdkObject)
+          S3DestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          S3DestinationConfigurationProperty
 
       internal fun unwrap(wrapped: S3DestinationConfigurationProperty):
           software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration.S3DestinationConfigurationProperty

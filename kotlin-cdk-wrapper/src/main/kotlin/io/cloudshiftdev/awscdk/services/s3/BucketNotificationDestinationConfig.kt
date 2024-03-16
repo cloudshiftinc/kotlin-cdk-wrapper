@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.s3
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.IDependable
 import kotlin.String
 import kotlin.Unit
@@ -144,7 +145,8 @@ public interface BucketNotificationDestinationConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.s3.BucketNotificationDestinationConfig):
-        BucketNotificationDestinationConfig = Wrapper(cdkObject)
+        BucketNotificationDestinationConfig = CdkObjectWrappers.wrap(cdkObject) as
+        BucketNotificationDestinationConfig
 
     internal fun unwrap(wrapped: BucketNotificationDestinationConfig):
         software.amazon.awscdk.services.s3.BucketNotificationDestinationConfig = (wrapped as

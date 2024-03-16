@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1179,7 +1180,8 @@ public open class CfnMaintenanceWindowTask internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowLambdaParametersProperty):
-          MaintenanceWindowLambdaParametersProperty = Wrapper(cdkObject)
+          MaintenanceWindowLambdaParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MaintenanceWindowLambdaParametersProperty
 
       internal fun unwrap(wrapped: MaintenanceWindowLambdaParametersProperty):
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowLambdaParametersProperty
@@ -1712,7 +1714,8 @@ public open class CfnMaintenanceWindowTask internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty):
-          MaintenanceWindowRunCommandParametersProperty = Wrapper(cdkObject)
+          MaintenanceWindowRunCommandParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MaintenanceWindowRunCommandParametersProperty
 
       internal fun unwrap(wrapped: MaintenanceWindowRunCommandParametersProperty):
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty
@@ -1921,7 +1924,8 @@ public open class CfnMaintenanceWindowTask internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.NotificationConfigProperty):
-          NotificationConfigProperty = Wrapper(cdkObject)
+          NotificationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          NotificationConfigProperty
 
       internal fun unwrap(wrapped: NotificationConfigProperty):
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.NotificationConfigProperty =
@@ -2119,7 +2123,7 @@ public open class CfnMaintenanceWindowTask internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TargetProperty):
-          TargetProperty = Wrapper(cdkObject)
+          TargetProperty = CdkObjectWrappers.wrap(cdkObject) as TargetProperty
 
       internal fun unwrap(wrapped: TargetProperty):
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TargetProperty = (wrapped as
@@ -2241,7 +2245,8 @@ public open class CfnMaintenanceWindowTask internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty):
-          MaintenanceWindowAutomationParametersProperty = Wrapper(cdkObject)
+          MaintenanceWindowAutomationParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MaintenanceWindowAutomationParametersProperty
 
       internal fun unwrap(wrapped: MaintenanceWindowAutomationParametersProperty):
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty
@@ -2358,7 +2363,8 @@ public open class CfnMaintenanceWindowTask internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty):
-          MaintenanceWindowStepFunctionsParametersProperty = Wrapper(cdkObject)
+          MaintenanceWindowStepFunctionsParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MaintenanceWindowStepFunctionsParametersProperty
 
       internal fun unwrap(wrapped: MaintenanceWindowStepFunctionsParametersProperty):
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty
@@ -2504,7 +2510,8 @@ public open class CfnMaintenanceWindowTask internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty):
-          CloudWatchOutputConfigProperty = Wrapper(cdkObject)
+          CloudWatchOutputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CloudWatchOutputConfigProperty
 
       internal fun unwrap(wrapped: CloudWatchOutputConfigProperty):
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.CloudWatchOutputConfigProperty
@@ -2853,7 +2860,8 @@ public open class CfnMaintenanceWindowTask internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TaskInvocationParametersProperty):
-          TaskInvocationParametersProperty = Wrapper(cdkObject)
+          TaskInvocationParametersProperty = CdkObjectWrappers.wrap(cdkObject) as
+          TaskInvocationParametersProperty
 
       internal fun unwrap(wrapped: TaskInvocationParametersProperty):
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TaskInvocationParametersProperty
@@ -3003,7 +3011,7 @@ public open class CfnMaintenanceWindowTask internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty):
-          LoggingInfoProperty = Wrapper(cdkObject)
+          LoggingInfoProperty = CdkObjectWrappers.wrap(cdkObject) as LoggingInfoProperty
 
       internal fun unwrap(wrapped: LoggingInfoProperty):
           software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty =

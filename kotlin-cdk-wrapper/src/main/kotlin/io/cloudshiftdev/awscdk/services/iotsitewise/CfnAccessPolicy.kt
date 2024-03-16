@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -435,7 +436,7 @@ public open class CfnAccessPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamRoleProperty):
-          IamRoleProperty = Wrapper(cdkObject)
+          IamRoleProperty = CdkObjectWrappers.wrap(cdkObject) as IamRoleProperty
 
       internal fun unwrap(wrapped: IamRoleProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamRoleProperty = (wrapped as
@@ -540,7 +541,7 @@ public open class CfnAccessPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamUserProperty):
-          IamUserProperty = Wrapper(cdkObject)
+          IamUserProperty = CdkObjectWrappers.wrap(cdkObject) as IamUserProperty
 
       internal fun unwrap(wrapped: IamUserProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.IamUserProperty = (wrapped as
@@ -710,7 +711,8 @@ public open class CfnAccessPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyResourceProperty):
-          AccessPolicyResourceProperty = Wrapper(cdkObject)
+          AccessPolicyResourceProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AccessPolicyResourceProperty
 
       internal fun unwrap(wrapped: AccessPolicyResourceProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyResourceProperty =
@@ -792,7 +794,7 @@ public open class CfnAccessPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.UserProperty):
-          UserProperty = Wrapper(cdkObject)
+          UserProperty = CdkObjectWrappers.wrap(cdkObject) as UserProperty
 
       internal fun unwrap(wrapped: UserProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.UserProperty = (wrapped as
@@ -1016,7 +1018,8 @@ public open class CfnAccessPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyIdentityProperty):
-          AccessPolicyIdentityProperty = Wrapper(cdkObject)
+          AccessPolicyIdentityProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AccessPolicyIdentityProperty
 
       internal fun unwrap(wrapped: AccessPolicyIdentityProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.AccessPolicyIdentityProperty =
@@ -1098,7 +1101,7 @@ public open class CfnAccessPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.PortalProperty):
-          PortalProperty = Wrapper(cdkObject)
+          PortalProperty = CdkObjectWrappers.wrap(cdkObject) as PortalProperty
 
       internal fun unwrap(wrapped: PortalProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.PortalProperty = (wrapped as
@@ -1181,7 +1184,7 @@ public open class CfnAccessPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.ProjectProperty):
-          ProjectProperty = Wrapper(cdkObject)
+          ProjectProperty = CdkObjectWrappers.wrap(cdkObject) as ProjectProperty
 
       internal fun unwrap(wrapped: ProjectProperty):
           software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy.ProjectProperty = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -85,7 +86,7 @@ public interface NatGatewayProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.NatGatewayProps):
-        NatGatewayProps = Wrapper(cdkObject)
+        NatGatewayProps = CdkObjectWrappers.wrap(cdkObject) as NatGatewayProps
 
     internal fun unwrap(wrapped: NatGatewayProps):
         software.amazon.awscdk.services.ec2.NatGatewayProps = (wrapped as CdkObject).cdkObject as

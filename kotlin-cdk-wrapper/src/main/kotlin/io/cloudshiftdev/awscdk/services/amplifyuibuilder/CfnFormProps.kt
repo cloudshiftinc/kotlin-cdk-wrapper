@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.amplifyuibuilder
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -626,7 +627,7 @@ public interface CfnFormProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnFormProps):
-        CfnFormProps = Wrapper(cdkObject)
+        CfnFormProps = CdkObjectWrappers.wrap(cdkObject) as CfnFormProps
 
     internal fun unwrap(wrapped: CfnFormProps):
         software.amazon.awscdk.services.amplifyuibuilder.CfnFormProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ssm
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -206,7 +207,7 @@ public interface ListParameterAttributes : CommonStringParameterAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ssm.ListParameterAttributes):
-        ListParameterAttributes = Wrapper(cdkObject)
+        ListParameterAttributes = CdkObjectWrappers.wrap(cdkObject) as ListParameterAttributes
 
     internal fun unwrap(wrapped: ListParameterAttributes):
         software.amazon.awscdk.services.ssm.ListParameterAttributes = (wrapped as

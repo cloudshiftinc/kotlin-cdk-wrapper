@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling.common
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -117,7 +118,7 @@ public interface CompleteScalingInterval {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.common.CompleteScalingInterval):
-        CompleteScalingInterval = Wrapper(cdkObject)
+        CompleteScalingInterval = CdkObjectWrappers.wrap(cdkObject) as CompleteScalingInterval
 
     internal fun unwrap(wrapped: CompleteScalingInterval):
         software.amazon.awscdk.services.autoscaling.common.CompleteScalingInterval = (wrapped as

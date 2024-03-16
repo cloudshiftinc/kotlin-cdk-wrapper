@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.String
 import kotlin.Unit
@@ -190,7 +191,7 @@ public interface SelfManagedDeploymentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.SelfManagedDeploymentProps):
-        SelfManagedDeploymentProps = Wrapper(cdkObject)
+        SelfManagedDeploymentProps = CdkObjectWrappers.wrap(cdkObject) as SelfManagedDeploymentProps
 
     internal fun unwrap(wrapped: SelfManagedDeploymentProps):
         software.amazon.awscdk.services.codepipeline.actions.SelfManagedDeploymentProps = (wrapped

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -79,7 +80,7 @@ public interface MySqlInstanceEngineProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.MySqlInstanceEngineProps):
-        MySqlInstanceEngineProps = Wrapper(cdkObject)
+        MySqlInstanceEngineProps = CdkObjectWrappers.wrap(cdkObject) as MySqlInstanceEngineProps
 
     internal fun unwrap(wrapped: MySqlInstanceEngineProps):
         software.amazon.awscdk.services.rds.MySqlInstanceEngineProps = (wrapped as

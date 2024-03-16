@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -40,10 +41,6 @@ public abstract class Values internal constructor(
    */
   public open fun toJson(): Any = unwrap(this).toJson()
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudwatch.Values,
-  ) : Values(cdkObject)
-
   public companion object {
     public fun fromSearch(expression: String, populateFrom: String): Values =
         software.amazon.awscdk.services.cloudwatch.Values.fromSearch(expression,
@@ -66,7 +63,7 @@ public abstract class Values internal constructor(
         fromValues(VariableValue(values))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.Values): Values =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as Values
 
     internal fun unwrap(wrapped: Values): software.amazon.awscdk.services.cloudwatch.Values =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cloudwatch.Values

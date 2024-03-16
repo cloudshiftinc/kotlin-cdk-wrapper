@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.pipelines
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -73,7 +74,7 @@ public interface ManualApprovalStepProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.ManualApprovalStepProps):
-        ManualApprovalStepProps = Wrapper(cdkObject)
+        ManualApprovalStepProps = CdkObjectWrappers.wrap(cdkObject) as ManualApprovalStepProps
 
     internal fun unwrap(wrapped: ManualApprovalStepProps):
         software.amazon.awscdk.pipelines.ManualApprovalStepProps = (wrapped as CdkObject).cdkObject

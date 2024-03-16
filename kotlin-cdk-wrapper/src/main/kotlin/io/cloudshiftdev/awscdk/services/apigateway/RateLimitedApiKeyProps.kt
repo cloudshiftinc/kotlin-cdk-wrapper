@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Deprecated
 import kotlin.String
@@ -502,7 +503,7 @@ public interface RateLimitedApiKeyProps : ApiKeyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.RateLimitedApiKeyProps):
-        RateLimitedApiKeyProps = Wrapper(cdkObject)
+        RateLimitedApiKeyProps = CdkObjectWrappers.wrap(cdkObject) as RateLimitedApiKeyProps
 
     internal fun unwrap(wrapped: RateLimitedApiKeyProps):
         software.amazon.awscdk.services.apigateway.RateLimitedApiKeyProps = (wrapped as

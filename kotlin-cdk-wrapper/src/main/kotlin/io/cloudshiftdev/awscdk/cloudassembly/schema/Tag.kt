@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -119,7 +120,7 @@ public interface Tag {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.Tag): Tag =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as Tag
 
     internal fun unwrap(wrapped: Tag): software.amazon.awscdk.cloudassembly.schema.Tag = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.cloudassembly.schema.Tag

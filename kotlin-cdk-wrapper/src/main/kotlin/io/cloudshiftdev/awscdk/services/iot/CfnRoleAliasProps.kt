@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.iot
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -196,7 +197,7 @@ public interface CfnRoleAliasProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnRoleAliasProps):
-        CfnRoleAliasProps = Wrapper(cdkObject)
+        CfnRoleAliasProps = CdkObjectWrappers.wrap(cdkObject) as CfnRoleAliasProps
 
     internal fun unwrap(wrapped: CfnRoleAliasProps):
         software.amazon.awscdk.services.iot.CfnRoleAliasProps = (wrapped as CdkObject).cdkObject as

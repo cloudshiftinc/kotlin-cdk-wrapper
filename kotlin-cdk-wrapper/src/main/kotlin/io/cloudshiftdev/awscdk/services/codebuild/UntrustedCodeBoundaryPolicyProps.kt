@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import kotlin.String
 import kotlin.Unit
@@ -121,7 +122,8 @@ public interface UntrustedCodeBoundaryPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicyProps):
-        UntrustedCodeBoundaryPolicyProps = Wrapper(cdkObject)
+        UntrustedCodeBoundaryPolicyProps = CdkObjectWrappers.wrap(cdkObject) as
+        UntrustedCodeBoundaryPolicyProps
 
     internal fun unwrap(wrapped: UntrustedCodeBoundaryPolicyProps):
         software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicyProps = (wrapped as

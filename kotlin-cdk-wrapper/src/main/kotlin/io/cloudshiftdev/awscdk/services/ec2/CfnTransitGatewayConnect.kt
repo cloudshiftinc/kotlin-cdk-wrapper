@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -381,7 +382,8 @@ public open class CfnTransitGatewayConnect internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect.TransitGatewayConnectOptionsProperty):
-          TransitGatewayConnectOptionsProperty = Wrapper(cdkObject)
+          TransitGatewayConnectOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          TransitGatewayConnectOptionsProperty
 
       internal fun unwrap(wrapped: TransitGatewayConnectOptionsProperty):
           software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect.TransitGatewayConnectOptionsProperty

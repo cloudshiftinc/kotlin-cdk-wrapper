@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cxapi
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -116,7 +117,8 @@ public interface EnvironmentPlaceholderValues {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.EnvironmentPlaceholderValues):
-        EnvironmentPlaceholderValues = Wrapper(cdkObject)
+        EnvironmentPlaceholderValues = CdkObjectWrappers.wrap(cdkObject) as
+        EnvironmentPlaceholderValues
 
     internal fun unwrap(wrapped: EnvironmentPlaceholderValues):
         software.amazon.awscdk.cxapi.EnvironmentPlaceholderValues = (wrapped as CdkObject).cdkObject

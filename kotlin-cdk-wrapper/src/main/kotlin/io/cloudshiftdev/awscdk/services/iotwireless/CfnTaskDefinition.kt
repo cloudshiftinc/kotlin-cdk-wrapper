@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -681,7 +682,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty):
-          UpdateWirelessGatewayTaskCreateProperty = Wrapper(cdkObject)
+          UpdateWirelessGatewayTaskCreateProperty = CdkObjectWrappers.wrap(cdkObject) as
+          UpdateWirelessGatewayTaskCreateProperty
 
       internal fun unwrap(wrapped: UpdateWirelessGatewayTaskCreateProperty):
           software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty
@@ -908,7 +910,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANUpdateGatewayTaskCreateProperty):
-          LoRaWANUpdateGatewayTaskCreateProperty = Wrapper(cdkObject)
+          LoRaWANUpdateGatewayTaskCreateProperty = CdkObjectWrappers.wrap(cdkObject) as
+          LoRaWANUpdateGatewayTaskCreateProperty
 
       internal fun unwrap(wrapped: LoRaWANUpdateGatewayTaskCreateProperty):
           software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANUpdateGatewayTaskCreateProperty
@@ -1081,7 +1084,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANUpdateGatewayTaskEntryProperty):
-          LoRaWANUpdateGatewayTaskEntryProperty = Wrapper(cdkObject)
+          LoRaWANUpdateGatewayTaskEntryProperty = CdkObjectWrappers.wrap(cdkObject) as
+          LoRaWANUpdateGatewayTaskEntryProperty
 
       internal fun unwrap(wrapped: LoRaWANUpdateGatewayTaskEntryProperty):
           software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANUpdateGatewayTaskEntryProperty
@@ -1218,7 +1222,8 @@ public open class CfnTaskDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANGatewayVersionProperty):
-          LoRaWANGatewayVersionProperty = Wrapper(cdkObject)
+          LoRaWANGatewayVersionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          LoRaWANGatewayVersionProperty
 
       internal fun unwrap(wrapped: LoRaWANGatewayVersionProperty):
           software.amazon.awscdk.services.iotwireless.CfnTaskDefinition.LoRaWANGatewayVersionProperty

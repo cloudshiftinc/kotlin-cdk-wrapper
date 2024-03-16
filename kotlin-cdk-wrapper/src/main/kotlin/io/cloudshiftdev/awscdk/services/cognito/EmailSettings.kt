@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -111,7 +112,7 @@ public interface EmailSettings {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.EmailSettings):
-        EmailSettings = Wrapper(cdkObject)
+        EmailSettings = CdkObjectWrappers.wrap(cdkObject) as EmailSettings
 
     internal fun unwrap(wrapped: EmailSettings):
         software.amazon.awscdk.services.cognito.EmailSettings = (wrapped as CdkObject).cdkObject as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecr
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -370,7 +371,7 @@ public interface LifecycleRule {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecr.LifecycleRule): LifecycleRule =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as LifecycleRule
 
     internal fun unwrap(wrapped: LifecycleRule): software.amazon.awscdk.services.ecr.LifecycleRule =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecr.LifecycleRule

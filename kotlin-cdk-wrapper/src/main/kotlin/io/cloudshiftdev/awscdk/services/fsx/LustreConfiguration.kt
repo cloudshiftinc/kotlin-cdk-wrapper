@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.fsx
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -450,7 +451,7 @@ public interface LustreConfiguration {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.fsx.LustreConfiguration):
-        LustreConfiguration = Wrapper(cdkObject)
+        LustreConfiguration = CdkObjectWrappers.wrap(cdkObject) as LustreConfiguration
 
     internal fun unwrap(wrapped: LustreConfiguration):
         software.amazon.awscdk.services.fsx.LustreConfiguration = (wrapped as CdkObject).cdkObject

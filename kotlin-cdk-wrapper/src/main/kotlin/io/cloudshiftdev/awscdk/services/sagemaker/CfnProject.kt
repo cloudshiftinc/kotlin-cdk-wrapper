@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -619,7 +620,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty):
-          ServiceCatalogProvisioningDetailsProperty = Wrapper(cdkObject)
+          ServiceCatalogProvisioningDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ServiceCatalogProvisioningDetailsProperty
 
       internal fun unwrap(wrapped: ServiceCatalogProvisioningDetailsProperty):
           software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisioningDetailsProperty
@@ -732,7 +734,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty):
-          ProvisioningParameterProperty = Wrapper(cdkObject)
+          ProvisioningParameterProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ProvisioningParameterProperty
 
       internal fun unwrap(wrapped: ProvisioningParameterProperty):
           software.amazon.awscdk.services.sagemaker.CfnProject.ProvisioningParameterProperty =
@@ -902,7 +905,8 @@ public open class CfnProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty):
-          ServiceCatalogProvisionedProductDetailsProperty = Wrapper(cdkObject)
+          ServiceCatalogProvisionedProductDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ServiceCatalogProvisionedProductDetailsProperty
 
       internal fun unwrap(wrapped: ServiceCatalogProvisionedProductDetailsProperty):
           software.amazon.awscdk.services.sagemaker.CfnProject.ServiceCatalogProvisionedProductDetailsProperty

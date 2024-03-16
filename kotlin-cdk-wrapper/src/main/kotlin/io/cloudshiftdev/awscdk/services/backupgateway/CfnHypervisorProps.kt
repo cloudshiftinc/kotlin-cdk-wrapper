@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.backupgateway
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -264,7 +265,7 @@ public interface CfnHypervisorProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.backupgateway.CfnHypervisorProps):
-        CfnHypervisorProps = Wrapper(cdkObject)
+        CfnHypervisorProps = CdkObjectWrappers.wrap(cdkObject) as CfnHypervisorProps
 
     internal fun unwrap(wrapped: CfnHypervisorProps):
         software.amazon.awscdk.services.backupgateway.CfnHypervisorProps = (wrapped as

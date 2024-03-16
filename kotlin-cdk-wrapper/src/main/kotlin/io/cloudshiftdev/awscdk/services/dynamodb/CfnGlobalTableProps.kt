@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.dynamodb
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -1111,7 +1112,7 @@ public interface CfnGlobalTableProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTableProps):
-        CfnGlobalTableProps = Wrapper(cdkObject)
+        CfnGlobalTableProps = CdkObjectWrappers.wrap(cdkObject) as CfnGlobalTableProps
 
     internal fun unwrap(wrapped: CfnGlobalTableProps):
         software.amazon.awscdk.services.dynamodb.CfnGlobalTableProps = (wrapped as

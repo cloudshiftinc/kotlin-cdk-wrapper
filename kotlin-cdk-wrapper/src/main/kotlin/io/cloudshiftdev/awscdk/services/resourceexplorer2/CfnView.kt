@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -631,7 +632,7 @@ public open class CfnView internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnView.SearchFilterProperty):
-          SearchFilterProperty = Wrapper(cdkObject)
+          SearchFilterProperty = CdkObjectWrappers.wrap(cdkObject) as SearchFilterProperty
 
       internal fun unwrap(wrapped: SearchFilterProperty):
           software.amazon.awscdk.services.resourceexplorer2.CfnView.SearchFilterProperty = (wrapped
@@ -714,7 +715,7 @@ public open class CfnView internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty):
-          IncludedPropertyProperty = Wrapper(cdkObject)
+          IncludedPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as IncludedPropertyProperty
 
       internal fun unwrap(wrapped: IncludedPropertyProperty):
           software.amazon.awscdk.services.resourceexplorer2.CfnView.IncludedPropertyProperty =
@@ -788,7 +789,7 @@ public open class CfnView internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty):
-          FiltersProperty = Wrapper(cdkObject)
+          FiltersProperty = CdkObjectWrappers.wrap(cdkObject) as FiltersProperty
 
       internal fun unwrap(wrapped: FiltersProperty):
           software.amazon.awscdk.services.resourceexplorer2.CfnView.FiltersProperty = (wrapped as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.route53
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 import kotlin.collections.List
@@ -215,7 +216,7 @@ public interface CfnHealthCheckProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHealthCheckProps):
-        CfnHealthCheckProps = Wrapper(cdkObject)
+        CfnHealthCheckProps = CdkObjectWrappers.wrap(cdkObject) as CfnHealthCheckProps
 
     internal fun unwrap(wrapped: CfnHealthCheckProps):
         software.amazon.awscdk.services.route53.CfnHealthCheckProps = (wrapped as

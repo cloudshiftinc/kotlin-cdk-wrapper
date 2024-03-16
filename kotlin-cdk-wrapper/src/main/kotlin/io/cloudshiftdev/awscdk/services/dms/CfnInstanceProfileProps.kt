@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -456,7 +457,7 @@ public interface CfnInstanceProfileProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnInstanceProfileProps):
-        CfnInstanceProfileProps = Wrapper(cdkObject)
+        CfnInstanceProfileProps = CdkObjectWrappers.wrap(cdkObject) as CfnInstanceProfileProps
 
     internal fun unwrap(wrapped: CfnInstanceProfileProps):
         software.amazon.awscdk.services.dms.CfnInstanceProfileProps = (wrapped as

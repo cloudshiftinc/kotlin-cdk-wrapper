@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -403,7 +404,7 @@ public interface CustomResourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CustomResourceProps): CustomResourceProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as CustomResourceProps
 
     internal fun unwrap(wrapped: CustomResourceProps): software.amazon.awscdk.CustomResourceProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.CustomResourceProps

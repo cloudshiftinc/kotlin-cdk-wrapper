@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.guardduty
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -259,7 +260,7 @@ public interface CfnMemberProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnMemberProps):
-        CfnMemberProps = Wrapper(cdkObject)
+        CfnMemberProps = CdkObjectWrappers.wrap(cdkObject) as CfnMemberProps
 
     internal fun unwrap(wrapped: CfnMemberProps):
         software.amazon.awscdk.services.guardduty.CfnMemberProps = (wrapped as CdkObject).cdkObject

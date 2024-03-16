@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.awscdk.services.s3.assets.Asset
 import kotlin.Any
@@ -40,10 +41,6 @@ public abstract class InitFile internal constructor(
    * Returns the init element type for this element.
    */
   public override fun elementType(): String = unwrap(this).getElementType()
-
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.InitFile,
-  ) : InitFile(cdkObject)
 
   public companion object {
     public fun fromAsset(targetFileName: String, path: String): InitFile =
@@ -201,7 +198,7 @@ public abstract class InitFile internal constructor(
     ): InitFile = symlink(fileName, target, InitFileOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.InitFile): InitFile =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as InitFile
 
     internal fun unwrap(wrapped: InitFile): software.amazon.awscdk.services.ec2.InitFile = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.InitFile

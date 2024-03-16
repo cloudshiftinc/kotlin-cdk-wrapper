@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.rds
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
@@ -762,7 +763,7 @@ public interface DatabaseProxyOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.DatabaseProxyOptions):
-        DatabaseProxyOptions = Wrapper(cdkObject)
+        DatabaseProxyOptions = CdkObjectWrappers.wrap(cdkObject) as DatabaseProxyOptions
 
     internal fun unwrap(wrapped: DatabaseProxyOptions):
         software.amazon.awscdk.services.rds.DatabaseProxyOptions = (wrapped as CdkObject).cdkObject

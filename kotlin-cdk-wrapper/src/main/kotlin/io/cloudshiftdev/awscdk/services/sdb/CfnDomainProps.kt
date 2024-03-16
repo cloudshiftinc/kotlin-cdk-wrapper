@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.sdb
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -74,7 +75,7 @@ public interface CfnDomainProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sdb.CfnDomainProps): CfnDomainProps
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as CfnDomainProps
 
     internal fun unwrap(wrapped: CfnDomainProps): software.amazon.awscdk.services.sdb.CfnDomainProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.sdb.CfnDomainProps

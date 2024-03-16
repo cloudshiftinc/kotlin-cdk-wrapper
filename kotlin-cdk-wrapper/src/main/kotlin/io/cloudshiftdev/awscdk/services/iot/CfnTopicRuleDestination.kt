@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -509,7 +510,8 @@ public open class CfnTopicRuleDestination internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRuleDestination.VpcDestinationPropertiesProperty):
-          VpcDestinationPropertiesProperty = Wrapper(cdkObject)
+          VpcDestinationPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VpcDestinationPropertiesProperty
 
       internal fun unwrap(wrapped: VpcDestinationPropertiesProperty):
           software.amazon.awscdk.services.iot.CfnTopicRuleDestination.VpcDestinationPropertiesProperty
@@ -593,7 +595,8 @@ public open class CfnTopicRuleDestination internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty):
-          HttpUrlDestinationSummaryProperty = Wrapper(cdkObject)
+          HttpUrlDestinationSummaryProperty = CdkObjectWrappers.wrap(cdkObject) as
+          HttpUrlDestinationSummaryProperty
 
       internal fun unwrap(wrapped: HttpUrlDestinationSummaryProperty):
           software.amazon.awscdk.services.iot.CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.kinesisanalytics
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -154,7 +155,8 @@ public interface CfnApplicationCloudWatchLoggingOptionV2Props {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.kinesisanalytics.CfnApplicationCloudWatchLoggingOptionV2Props):
-        CfnApplicationCloudWatchLoggingOptionV2Props = Wrapper(cdkObject)
+        CfnApplicationCloudWatchLoggingOptionV2Props = CdkObjectWrappers.wrap(cdkObject) as
+        CfnApplicationCloudWatchLoggingOptionV2Props
 
     internal fun unwrap(wrapped: CfnApplicationCloudWatchLoggingOptionV2Props):
         software.amazon.awscdk.services.kinesisanalytics.CfnApplicationCloudWatchLoggingOptionV2Props

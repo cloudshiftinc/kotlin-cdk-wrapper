@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -1054,7 +1055,7 @@ public open class CfnUser internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty):
-          PosixProfileProperty = Wrapper(cdkObject)
+          PosixProfileProperty = CdkObjectWrappers.wrap(cdkObject) as PosixProfileProperty
 
       internal fun unwrap(wrapped: PosixProfileProperty):
           software.amazon.awscdk.services.transfer.CfnUser.PosixProfileProperty = (wrapped as
@@ -1223,7 +1224,8 @@ public open class CfnUser internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty):
-          HomeDirectoryMapEntryProperty = Wrapper(cdkObject)
+          HomeDirectoryMapEntryProperty = CdkObjectWrappers.wrap(cdkObject) as
+          HomeDirectoryMapEntryProperty
 
       internal fun unwrap(wrapped: HomeDirectoryMapEntryProperty):
           software.amazon.awscdk.services.transfer.CfnUser.HomeDirectoryMapEntryProperty = (wrapped

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.route53
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -115,7 +116,7 @@ public interface CaaRecordValue {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.CaaRecordValue):
-        CaaRecordValue = Wrapper(cdkObject)
+        CaaRecordValue = CdkObjectWrappers.wrap(cdkObject) as CaaRecordValue
 
     internal fun unwrap(wrapped: CaaRecordValue):
         software.amazon.awscdk.services.route53.CaaRecordValue = (wrapped as CdkObject).cdkObject as

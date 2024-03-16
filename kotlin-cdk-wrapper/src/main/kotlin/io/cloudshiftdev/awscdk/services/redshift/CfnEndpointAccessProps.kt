@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.redshift
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -204,7 +205,7 @@ public interface CfnEndpointAccessProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnEndpointAccessProps):
-        CfnEndpointAccessProps = Wrapper(cdkObject)
+        CfnEndpointAccessProps = CdkObjectWrappers.wrap(cdkObject) as CfnEndpointAccessProps
 
     internal fun unwrap(wrapped: CfnEndpointAccessProps):
         software.amazon.awscdk.services.redshift.CfnEndpointAccessProps = (wrapped as

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -932,7 +933,7 @@ public open class CfnDocument internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnDocument.AttachmentsSourceProperty):
-          AttachmentsSourceProperty = Wrapper(cdkObject)
+          AttachmentsSourceProperty = CdkObjectWrappers.wrap(cdkObject) as AttachmentsSourceProperty
 
       internal fun unwrap(wrapped: AttachmentsSourceProperty):
           software.amazon.awscdk.services.ssm.CfnDocument.AttachmentsSourceProperty = (wrapped as
@@ -1045,7 +1046,7 @@ public open class CfnDocument internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnDocument.DocumentRequiresProperty):
-          DocumentRequiresProperty = Wrapper(cdkObject)
+          DocumentRequiresProperty = CdkObjectWrappers.wrap(cdkObject) as DocumentRequiresProperty
 
       internal fun unwrap(wrapped: DocumentRequiresProperty):
           software.amazon.awscdk.services.ssm.CfnDocument.DocumentRequiresProperty = (wrapped as

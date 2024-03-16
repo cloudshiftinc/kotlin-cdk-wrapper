@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.awscdk.services.s3.assets.AssetOptions
 import io.cloudshiftdev.constructs.Construct
@@ -56,10 +57,6 @@ public abstract class EnvironmentFile internal constructor(
   public open fun bind(scope: Construct): EnvironmentFileConfig =
       unwrap(this).bind(scope.let(Construct::unwrap)).let(EnvironmentFileConfig::wrap)
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.EnvironmentFile,
-  ) : EnvironmentFile(cdkObject)
-
   public companion object {
     public fun fromAsset(path: String): AssetEnvironmentFile =
         software.amazon.awscdk.services.ecs.EnvironmentFile.fromAsset(path).let(AssetEnvironmentFile::wrap)
@@ -86,7 +83,7 @@ public abstract class EnvironmentFile internal constructor(
         key, objectVersion).let(S3EnvironmentFile::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.EnvironmentFile):
-        EnvironmentFile = Wrapper(cdkObject)
+        EnvironmentFile = CdkObjectWrappers.wrap(cdkObject) as EnvironmentFile
 
     internal fun unwrap(wrapped: EnvironmentFile):
         software.amazon.awscdk.services.ecs.EnvironmentFile = (wrapped as CdkObject).cdkObject as

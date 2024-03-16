@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -265,7 +266,7 @@ public interface CfnAllowListProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.macie.CfnAllowListProps):
-        CfnAllowListProps = Wrapper(cdkObject)
+        CfnAllowListProps = CdkObjectWrappers.wrap(cdkObject) as CfnAllowListProps
 
     internal fun unwrap(wrapped: CfnAllowListProps):
         software.amazon.awscdk.services.macie.CfnAllowListProps = (wrapped as CdkObject).cdkObject

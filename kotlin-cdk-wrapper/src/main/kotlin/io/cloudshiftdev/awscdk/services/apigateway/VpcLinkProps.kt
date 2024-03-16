@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer
 import kotlin.String
 import kotlin.Unit
@@ -156,7 +157,7 @@ public interface VpcLinkProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.VpcLinkProps):
-        VpcLinkProps = Wrapper(cdkObject)
+        VpcLinkProps = CdkObjectWrappers.wrap(cdkObject) as VpcLinkProps
 
     internal fun unwrap(wrapped: VpcLinkProps):
         software.amazon.awscdk.services.apigateway.VpcLinkProps = (wrapped as CdkObject).cdkObject

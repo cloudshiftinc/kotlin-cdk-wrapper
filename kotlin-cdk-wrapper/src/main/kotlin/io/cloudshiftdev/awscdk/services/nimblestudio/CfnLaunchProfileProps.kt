@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.nimblestudio
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -403,7 +404,7 @@ public interface CfnLaunchProfileProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfileProps):
-        CfnLaunchProfileProps = Wrapper(cdkObject)
+        CfnLaunchProfileProps = CdkObjectWrappers.wrap(cdkObject) as CfnLaunchProfileProps
 
     internal fun unwrap(wrapped: CfnLaunchProfileProps):
         software.amazon.awscdk.services.nimblestudio.CfnLaunchProfileProps = (wrapped as

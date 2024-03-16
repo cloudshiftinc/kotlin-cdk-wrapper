@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -118,7 +119,7 @@ public interface ContainerImageConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ContainerImageConfig):
-        ContainerImageConfig = Wrapper(cdkObject)
+        ContainerImageConfig = CdkObjectWrappers.wrap(cdkObject) as ContainerImageConfig
 
     internal fun unwrap(wrapped: ContainerImageConfig):
         software.amazon.awscdk.services.ecs.ContainerImageConfig = (wrapped as CdkObject).cdkObject

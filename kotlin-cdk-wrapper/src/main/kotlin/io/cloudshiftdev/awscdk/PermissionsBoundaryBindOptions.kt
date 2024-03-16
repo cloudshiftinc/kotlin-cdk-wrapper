@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -44,7 +45,8 @@ public interface PermissionsBoundaryBindOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.PermissionsBoundaryBindOptions):
-        PermissionsBoundaryBindOptions = Wrapper(cdkObject)
+        PermissionsBoundaryBindOptions = CdkObjectWrappers.wrap(cdkObject) as
+        PermissionsBoundaryBindOptions
 
     internal fun unwrap(wrapped: PermissionsBoundaryBindOptions):
         software.amazon.awscdk.PermissionsBoundaryBindOptions = (wrapped as CdkObject).cdkObject as

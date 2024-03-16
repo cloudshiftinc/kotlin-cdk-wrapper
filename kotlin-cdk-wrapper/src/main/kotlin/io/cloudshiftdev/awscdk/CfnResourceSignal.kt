@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -133,7 +134,7 @@ public interface CfnResourceSignal {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnResourceSignal): CfnResourceSignal =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as CfnResourceSignal
 
     internal fun unwrap(wrapped: CfnResourceSignal): software.amazon.awscdk.CfnResourceSignal =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.CfnResourceSignal

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -27,10 +28,6 @@ public abstract class SamlMetadataDocument internal constructor(
    */
   public open fun xml(): String = unwrap(this).getXml()
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.iam.SamlMetadataDocument,
-  ) : SamlMetadataDocument(cdkObject)
-
   public companion object {
     public fun fromFile(path: String): SamlMetadataDocument =
         software.amazon.awscdk.services.iam.SamlMetadataDocument.fromFile(path).let(SamlMetadataDocument::wrap)
@@ -39,7 +36,7 @@ public abstract class SamlMetadataDocument internal constructor(
         software.amazon.awscdk.services.iam.SamlMetadataDocument.fromXml(xml).let(SamlMetadataDocument::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.SamlMetadataDocument):
-        SamlMetadataDocument = Wrapper(cdkObject)
+        SamlMetadataDocument = CdkObjectWrappers.wrap(cdkObject) as SamlMetadataDocument
 
     internal fun unwrap(wrapped: SamlMetadataDocument):
         software.amazon.awscdk.services.iam.SamlMetadataDocument = (wrapped as CdkObject).cdkObject

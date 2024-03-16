@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
 import io.cloudshiftdev.awscdk.services.secretsmanager.ReplicaRegion
@@ -321,7 +322,7 @@ public interface DatabaseSecretProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.DatabaseSecretProps):
-        DatabaseSecretProps = Wrapper(cdkObject)
+        DatabaseSecretProps = CdkObjectWrappers.wrap(cdkObject) as DatabaseSecretProps
 
     internal fun unwrap(wrapped: DatabaseSecretProps):
         software.amazon.awscdk.services.rds.DatabaseSecretProps = (wrapped as CdkObject).cdkObject

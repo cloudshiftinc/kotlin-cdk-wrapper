@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ses
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -117,7 +118,7 @@ public interface CfnTemplateProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnTemplateProps):
-        CfnTemplateProps = Wrapper(cdkObject)
+        CfnTemplateProps = CdkObjectWrappers.wrap(cdkObject) as CfnTemplateProps
 
     internal fun unwrap(wrapped: CfnTemplateProps):
         software.amazon.awscdk.services.ses.CfnTemplateProps = (wrapped as CdkObject).cdkObject as

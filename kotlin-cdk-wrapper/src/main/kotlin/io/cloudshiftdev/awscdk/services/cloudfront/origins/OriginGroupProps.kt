@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront.origins
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudfront.IOrigin
 import kotlin.Number
 import kotlin.Unit
@@ -145,7 +146,7 @@ public interface OriginGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.origins.OriginGroupProps):
-        OriginGroupProps = Wrapper(cdkObject)
+        OriginGroupProps = CdkObjectWrappers.wrap(cdkObject) as OriginGroupProps
 
     internal fun unwrap(wrapped: OriginGroupProps):
         software.amazon.awscdk.services.cloudfront.origins.OriginGroupProps = (wrapped as

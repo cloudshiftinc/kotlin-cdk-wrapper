@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -448,7 +449,7 @@ public interface CfnResourceShareProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ram.CfnResourceShareProps):
-        CfnResourceShareProps = Wrapper(cdkObject)
+        CfnResourceShareProps = CdkObjectWrappers.wrap(cdkObject) as CfnResourceShareProps
 
     internal fun unwrap(wrapped: CfnResourceShareProps):
         software.amazon.awscdk.services.ram.CfnResourceShareProps = (wrapped as CdkObject).cdkObject

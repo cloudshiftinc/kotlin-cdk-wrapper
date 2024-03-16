@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.batch
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -268,7 +269,7 @@ public interface JobDefinitionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.JobDefinitionProps):
-        JobDefinitionProps = Wrapper(cdkObject)
+        JobDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as JobDefinitionProps
 
     internal fun unwrap(wrapped: JobDefinitionProps):
         software.amazon.awscdk.services.batch.JobDefinitionProps = (wrapped as CdkObject).cdkObject

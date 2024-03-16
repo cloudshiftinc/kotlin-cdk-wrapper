@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lakeformation
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -400,7 +401,7 @@ public interface CfnDataCellsFilterProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataCellsFilterProps):
-        CfnDataCellsFilterProps = Wrapper(cdkObject)
+        CfnDataCellsFilterProps = CdkObjectWrappers.wrap(cdkObject) as CfnDataCellsFilterProps
 
     internal fun unwrap(wrapped: CfnDataCellsFilterProps):
         software.amazon.awscdk.services.lakeformation.CfnDataCellsFilterProps = (wrapped as

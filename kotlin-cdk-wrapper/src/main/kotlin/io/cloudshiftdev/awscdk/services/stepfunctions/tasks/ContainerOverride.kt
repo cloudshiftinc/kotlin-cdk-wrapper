@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecs.ContainerDefinition
 import kotlin.Number
 import kotlin.String
@@ -260,7 +261,7 @@ public interface ContainerOverride {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ContainerOverride):
-        ContainerOverride = Wrapper(cdkObject)
+        ContainerOverride = CdkObjectWrappers.wrap(cdkObject) as ContainerOverride
 
     internal fun unwrap(wrapped: ContainerOverride):
         software.amazon.awscdk.services.stepfunctions.tasks.ContainerOverride = (wrapped as

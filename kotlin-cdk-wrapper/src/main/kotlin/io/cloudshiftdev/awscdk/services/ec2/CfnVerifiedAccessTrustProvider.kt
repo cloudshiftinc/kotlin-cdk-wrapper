@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -835,7 +836,7 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.OidcOptionsProperty):
-          OidcOptionsProperty = Wrapper(cdkObject)
+          OidcOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as OidcOptionsProperty
 
       internal fun unwrap(wrapped: OidcOptionsProperty):
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.OidcOptionsProperty =
@@ -946,7 +947,7 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty):
-          DeviceOptionsProperty = Wrapper(cdkObject)
+          DeviceOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as DeviceOptionsProperty
 
       internal fun unwrap(wrapped: DeviceOptionsProperty):
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.DeviceOptionsProperty =
@@ -1083,7 +1084,7 @@ public open class CfnVerifiedAccessTrustProvider internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.SseSpecificationProperty):
-          SseSpecificationProperty = Wrapper(cdkObject)
+          SseSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as SseSpecificationProperty
 
       internal fun unwrap(wrapped: SseSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider.SseSpecificationProperty

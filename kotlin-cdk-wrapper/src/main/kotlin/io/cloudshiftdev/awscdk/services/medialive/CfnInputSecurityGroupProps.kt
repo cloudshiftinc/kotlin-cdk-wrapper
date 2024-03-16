@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.medialive
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 import kotlin.collections.List
@@ -145,7 +146,7 @@ public interface CfnInputSecurityGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInputSecurityGroupProps):
-        CfnInputSecurityGroupProps = Wrapper(cdkObject)
+        CfnInputSecurityGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnInputSecurityGroupProps
 
     internal fun unwrap(wrapped: CfnInputSecurityGroupProps):
         software.amazon.awscdk.services.medialive.CfnInputSecurityGroupProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -113,7 +114,7 @@ public interface AutoVerifiedAttrs {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.AutoVerifiedAttrs):
-        AutoVerifiedAttrs = Wrapper(cdkObject)
+        AutoVerifiedAttrs = CdkObjectWrappers.wrap(cdkObject) as AutoVerifiedAttrs
 
     internal fun unwrap(wrapped: AutoVerifiedAttrs):
         software.amazon.awscdk.services.cognito.AutoVerifiedAttrs = (wrapped as CdkObject).cdkObject

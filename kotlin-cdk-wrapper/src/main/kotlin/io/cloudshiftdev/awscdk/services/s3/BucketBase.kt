@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.s3
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.Rule
 import io.cloudshiftdev.awscdk.services.iam.AddToResourcePolicyResult
 import io.cloudshiftdev.awscdk.services.iam.Grant
@@ -873,13 +874,9 @@ public abstract class BucketBase internal constructor(
       options: VirtualHostedStyleUrlOptions.Builder.() -> Unit): String =
       virtualHostedUrlForObject(key, VirtualHostedStyleUrlOptions(options))
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.s3.BucketBase,
-  ) : BucketBase(cdkObject)
-
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.BucketBase): BucketBase =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as BucketBase
 
     internal fun unwrap(wrapped: BucketBase): software.amazon.awscdk.services.s3.BucketBase =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.s3.BucketBase

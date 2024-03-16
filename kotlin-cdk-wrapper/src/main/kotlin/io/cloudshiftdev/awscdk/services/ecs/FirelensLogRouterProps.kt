@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -1168,7 +1169,7 @@ public interface FirelensLogRouterProps : ContainerDefinitionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.FirelensLogRouterProps):
-        FirelensLogRouterProps = Wrapper(cdkObject)
+        FirelensLogRouterProps = CdkObjectWrappers.wrap(cdkObject) as FirelensLogRouterProps
 
     internal fun unwrap(wrapped: FirelensLogRouterProps):
         software.amazon.awscdk.services.ecs.FirelensLogRouterProps = (wrapped as

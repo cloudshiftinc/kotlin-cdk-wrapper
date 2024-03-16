@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -651,7 +652,7 @@ public open class CfnAnomalySubscription internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ce.CfnAnomalySubscription.ResourceTagProperty):
-          ResourceTagProperty = Wrapper(cdkObject)
+          ResourceTagProperty = CdkObjectWrappers.wrap(cdkObject) as ResourceTagProperty
 
       internal fun unwrap(wrapped: ResourceTagProperty):
           software.amazon.awscdk.services.ce.CfnAnomalySubscription.ResourceTagProperty = (wrapped
@@ -789,7 +790,7 @@ public open class CfnAnomalySubscription internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ce.CfnAnomalySubscription.SubscriberProperty):
-          SubscriberProperty = Wrapper(cdkObject)
+          SubscriberProperty = CdkObjectWrappers.wrap(cdkObject) as SubscriberProperty
 
       internal fun unwrap(wrapped: SubscriberProperty):
           software.amazon.awscdk.services.ce.CfnAnomalySubscription.SubscriberProperty = (wrapped as

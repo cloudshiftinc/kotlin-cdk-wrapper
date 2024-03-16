@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.certificatemanager.ICertificate
 import kotlin.String
 import kotlin.Unit
@@ -121,7 +122,7 @@ public interface DomainOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.DomainOptions):
-        DomainOptions = Wrapper(cdkObject)
+        DomainOptions = CdkObjectWrappers.wrap(cdkObject) as DomainOptions
 
     internal fun unwrap(wrapped: DomainOptions):
         software.amazon.awscdk.services.appsync.DomainOptions = (wrapped as CdkObject).cdkObject as

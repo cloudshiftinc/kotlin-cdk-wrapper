@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -571,7 +572,7 @@ public open class CfnWebACL internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnWebACL.RuleProperty):
-          RuleProperty = Wrapper(cdkObject)
+          RuleProperty = CdkObjectWrappers.wrap(cdkObject) as RuleProperty
 
       internal fun unwrap(wrapped: RuleProperty):
           software.amazon.awscdk.services.waf.regional.CfnWebACL.RuleProperty = (wrapped as
@@ -697,7 +698,7 @@ public open class CfnWebACL internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnWebACL.ActionProperty):
-          ActionProperty = Wrapper(cdkObject)
+          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as ActionProperty
 
       internal fun unwrap(wrapped: ActionProperty):
           software.amazon.awscdk.services.waf.regional.CfnWebACL.ActionProperty = (wrapped as

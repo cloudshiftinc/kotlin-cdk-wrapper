@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -237,7 +238,7 @@ public interface UserVerificationConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.UserVerificationConfig):
-        UserVerificationConfig = Wrapper(cdkObject)
+        UserVerificationConfig = CdkObjectWrappers.wrap(cdkObject) as UserVerificationConfig
 
     internal fun unwrap(wrapped: UserVerificationConfig):
         software.amazon.awscdk.services.cognito.UserVerificationConfig = (wrapped as

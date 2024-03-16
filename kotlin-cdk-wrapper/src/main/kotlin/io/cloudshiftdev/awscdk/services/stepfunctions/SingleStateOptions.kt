@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -261,7 +262,7 @@ public interface SingleStateOptions : ParallelProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.SingleStateOptions):
-        SingleStateOptions = Wrapper(cdkObject)
+        SingleStateOptions = CdkObjectWrappers.wrap(cdkObject) as SingleStateOptions
 
     internal fun unwrap(wrapped: SingleStateOptions):
         software.amazon.awscdk.services.stepfunctions.SingleStateOptions = (wrapped as

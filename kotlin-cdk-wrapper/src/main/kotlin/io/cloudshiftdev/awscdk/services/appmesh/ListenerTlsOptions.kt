@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -175,7 +176,7 @@ public interface ListenerTlsOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.ListenerTlsOptions):
-        ListenerTlsOptions = Wrapper(cdkObject)
+        ListenerTlsOptions = CdkObjectWrappers.wrap(cdkObject) as ListenerTlsOptions
 
     internal fun unwrap(wrapped: ListenerTlsOptions):
         software.amazon.awscdk.services.appmesh.ListenerTlsOptions = (wrapped as

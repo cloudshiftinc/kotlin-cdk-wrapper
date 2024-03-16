@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.InstanceType
 import kotlin.Number
 import kotlin.String
@@ -278,7 +279,7 @@ public interface BatchContainerOverrides {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.BatchContainerOverrides):
-        BatchContainerOverrides = Wrapper(cdkObject)
+        BatchContainerOverrides = CdkObjectWrappers.wrap(cdkObject) as BatchContainerOverrides
 
     internal fun unwrap(wrapped: BatchContainerOverrides):
         software.amazon.awscdk.services.stepfunctions.tasks.BatchContainerOverrides = (wrapped as

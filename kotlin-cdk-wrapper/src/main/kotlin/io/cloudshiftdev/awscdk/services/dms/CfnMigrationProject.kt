@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Deprecated
 import kotlin.String
@@ -933,7 +934,8 @@ public open class CfnMigrationProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnMigrationProject.DataProviderDescriptorProperty):
-          DataProviderDescriptorProperty = Wrapper(cdkObject)
+          DataProviderDescriptorProperty = CdkObjectWrappers.wrap(cdkObject) as
+          DataProviderDescriptorProperty
 
       internal fun unwrap(wrapped: DataProviderDescriptorProperty):
           software.amazon.awscdk.services.dms.CfnMigrationProject.DataProviderDescriptorProperty =
@@ -1036,7 +1038,8 @@ public open class CfnMigrationProject internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnMigrationProject.SchemaConversionApplicationAttributesProperty):
-          SchemaConversionApplicationAttributesProperty = Wrapper(cdkObject)
+          SchemaConversionApplicationAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SchemaConversionApplicationAttributesProperty
 
       internal fun unwrap(wrapped: SchemaConversionApplicationAttributesProperty):
           software.amazon.awscdk.services.dms.CfnMigrationProject.SchemaConversionApplicationAttributesProperty

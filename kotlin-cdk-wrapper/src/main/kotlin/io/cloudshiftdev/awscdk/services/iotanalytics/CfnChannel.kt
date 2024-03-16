@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -526,7 +527,7 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnChannel.CustomerManagedS3Property):
-          CustomerManagedS3Property = Wrapper(cdkObject)
+          CustomerManagedS3Property = CdkObjectWrappers.wrap(cdkObject) as CustomerManagedS3Property
 
       internal fun unwrap(wrapped: CustomerManagedS3Property):
           software.amazon.awscdk.services.iotanalytics.CfnChannel.CustomerManagedS3Property =
@@ -697,7 +698,7 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnChannel.ChannelStorageProperty):
-          ChannelStorageProperty = Wrapper(cdkObject)
+          ChannelStorageProperty = CdkObjectWrappers.wrap(cdkObject) as ChannelStorageProperty
 
       internal fun unwrap(wrapped: ChannelStorageProperty):
           software.amazon.awscdk.services.iotanalytics.CfnChannel.ChannelStorageProperty = (wrapped
@@ -823,7 +824,7 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnChannel.RetentionPeriodProperty):
-          RetentionPeriodProperty = Wrapper(cdkObject)
+          RetentionPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as RetentionPeriodProperty
 
       internal fun unwrap(wrapped: RetentionPeriodProperty):
           software.amazon.awscdk.services.iotanalytics.CfnChannel.RetentionPeriodProperty = (wrapped

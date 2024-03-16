@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -457,7 +458,7 @@ public open class CfnContactList internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnContactList.TopicProperty):
-          TopicProperty = Wrapper(cdkObject)
+          TopicProperty = CdkObjectWrappers.wrap(cdkObject) as TopicProperty
 
       internal fun unwrap(wrapped: TopicProperty):
           software.amazon.awscdk.services.ses.CfnContactList.TopicProperty = (wrapped as

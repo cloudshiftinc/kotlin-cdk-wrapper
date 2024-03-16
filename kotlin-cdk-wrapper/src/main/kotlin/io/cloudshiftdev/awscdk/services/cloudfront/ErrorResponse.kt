@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -182,7 +183,7 @@ public interface ErrorResponse {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.ErrorResponse):
-        ErrorResponse = Wrapper(cdkObject)
+        ErrorResponse = CdkObjectWrappers.wrap(cdkObject) as ErrorResponse
 
     internal fun unwrap(wrapped: ErrorResponse):
         software.amazon.awscdk.services.cloudfront.ErrorResponse = (wrapped as CdkObject).cdkObject

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.s3.deployment
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Unit
 
@@ -73,7 +74,7 @@ public interface DeploymentSourceContext {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.s3.deployment.DeploymentSourceContext):
-        DeploymentSourceContext = Wrapper(cdkObject)
+        DeploymentSourceContext = CdkObjectWrappers.wrap(cdkObject) as DeploymentSourceContext
 
     internal fun unwrap(wrapped: DeploymentSourceContext):
         software.amazon.awscdk.services.s3.deployment.DeploymentSourceContext = (wrapped as

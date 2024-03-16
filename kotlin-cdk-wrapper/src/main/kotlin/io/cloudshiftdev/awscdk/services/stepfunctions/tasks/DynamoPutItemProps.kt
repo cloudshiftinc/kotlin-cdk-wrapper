@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.dynamodb.ITable
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
@@ -667,7 +668,7 @@ public interface DynamoPutItemProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DynamoPutItemProps):
-        DynamoPutItemProps = Wrapper(cdkObject)
+        DynamoPutItemProps = CdkObjectWrappers.wrap(cdkObject) as DynamoPutItemProps
 
     internal fun unwrap(wrapped: DynamoPutItemProps):
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoPutItemProps = (wrapped as

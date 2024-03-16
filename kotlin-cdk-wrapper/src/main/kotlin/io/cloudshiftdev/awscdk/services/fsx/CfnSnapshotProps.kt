@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.fsx
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -144,7 +145,7 @@ public interface CfnSnapshotProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnSnapshotProps):
-        CfnSnapshotProps = Wrapper(cdkObject)
+        CfnSnapshotProps = CdkObjectWrappers.wrap(cdkObject) as CfnSnapshotProps
 
     internal fun unwrap(wrapped: CfnSnapshotProps):
         software.amazon.awscdk.services.fsx.CfnSnapshotProps = (wrapped as CdkObject).cdkObject as

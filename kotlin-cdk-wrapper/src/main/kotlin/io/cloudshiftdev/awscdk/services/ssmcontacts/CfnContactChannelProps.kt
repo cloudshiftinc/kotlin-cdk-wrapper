@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ssmcontacts
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -233,7 +234,7 @@ public interface CfnContactChannelProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContactChannelProps):
-        CfnContactChannelProps = Wrapper(cdkObject)
+        CfnContactChannelProps = CdkObjectWrappers.wrap(cdkObject) as CfnContactChannelProps
 
     internal fun unwrap(wrapped: CfnContactChannelProps):
         software.amazon.awscdk.services.ssmcontacts.CfnContactChannelProps = (wrapped as

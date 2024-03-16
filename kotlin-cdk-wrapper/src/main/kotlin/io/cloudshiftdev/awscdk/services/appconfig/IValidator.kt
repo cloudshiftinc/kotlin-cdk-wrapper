@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appconfig
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -19,23 +20,9 @@ public interface IValidator {
    */
   public fun type(): ValidatorType
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.IValidator,
-  ) : CdkObject(cdkObject), IValidator {
-    /**
-     * The content of the validator.
-     */
-    override fun content(): String = unwrap(this).getContent()
-
-    /**
-     * The type of validator.
-     */
-    override fun type(): ValidatorType = unwrap(this).getType().let(ValidatorType::wrap)
-  }
-
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.IValidator): IValidator =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as IValidator
 
     internal fun unwrap(wrapped: IValidator): software.amazon.awscdk.services.appconfig.IValidator =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appconfig.IValidator

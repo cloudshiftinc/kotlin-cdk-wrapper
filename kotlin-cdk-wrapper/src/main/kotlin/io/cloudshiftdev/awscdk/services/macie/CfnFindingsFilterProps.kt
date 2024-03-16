@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -339,7 +340,7 @@ public interface CfnFindingsFilterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.macie.CfnFindingsFilterProps):
-        CfnFindingsFilterProps = Wrapper(cdkObject)
+        CfnFindingsFilterProps = CdkObjectWrappers.wrap(cdkObject) as CfnFindingsFilterProps
 
     internal fun unwrap(wrapped: CfnFindingsFilterProps):
         software.amazon.awscdk.services.macie.CfnFindingsFilterProps = (wrapped as

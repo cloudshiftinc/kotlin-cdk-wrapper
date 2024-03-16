@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.sns
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.awscdk.services.codestarnotifications.NotificationRuleTargetConfig
@@ -430,13 +431,9 @@ public abstract class TopicBase internal constructor(
    */
   public override fun topicName(): String = unwrap(this).getTopicName()
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sns.TopicBase,
-  ) : TopicBase(cdkObject)
-
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sns.TopicBase): TopicBase =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as TopicBase
 
     internal fun unwrap(wrapped: TopicBase): software.amazon.awscdk.services.sns.TopicBase =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.sns.TopicBase

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 import kotlin.collections.List
@@ -189,7 +190,7 @@ public interface PolicyDocumentProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.PolicyDocumentProps):
-        PolicyDocumentProps = Wrapper(cdkObject)
+        PolicyDocumentProps = CdkObjectWrappers.wrap(cdkObject) as PolicyDocumentProps
 
     internal fun unwrap(wrapped: PolicyDocumentProps):
         software.amazon.awscdk.services.iam.PolicyDocumentProps = (wrapped as CdkObject).cdkObject

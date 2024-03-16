@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -1089,7 +1090,8 @@ public open class CfnPushTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnPushTemplate.DefaultPushNotificationTemplateProperty):
-          DefaultPushNotificationTemplateProperty = Wrapper(cdkObject)
+          DefaultPushNotificationTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as
+          DefaultPushNotificationTemplateProperty
 
       internal fun unwrap(wrapped: DefaultPushNotificationTemplateProperty):
           software.amazon.awscdk.services.pinpoint.CfnPushTemplate.DefaultPushNotificationTemplateProperty
@@ -1442,7 +1444,8 @@ public open class CfnPushTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnPushTemplate.AndroidPushNotificationTemplateProperty):
-          AndroidPushNotificationTemplateProperty = Wrapper(cdkObject)
+          AndroidPushNotificationTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AndroidPushNotificationTemplateProperty
 
       internal fun unwrap(wrapped: AndroidPushNotificationTemplateProperty):
           software.amazon.awscdk.services.pinpoint.CfnPushTemplate.AndroidPushNotificationTemplateProperty
@@ -1738,7 +1741,8 @@ public open class CfnPushTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnPushTemplate.APNSPushNotificationTemplateProperty):
-          APNSPushNotificationTemplateProperty = Wrapper(cdkObject)
+          APNSPushNotificationTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as
+          APNSPushNotificationTemplateProperty
 
       internal fun unwrap(wrapped: APNSPushNotificationTemplateProperty):
           software.amazon.awscdk.services.pinpoint.CfnPushTemplate.APNSPushNotificationTemplateProperty

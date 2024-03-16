@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -482,7 +483,7 @@ public open class CfnContact internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContact.StageProperty):
-          StageProperty = Wrapper(cdkObject)
+          StageProperty = CdkObjectWrappers.wrap(cdkObject) as StageProperty
 
       internal fun unwrap(wrapped: StageProperty):
           software.amazon.awscdk.services.ssmcontacts.CfnContact.StageProperty = (wrapped as
@@ -608,7 +609,7 @@ public open class CfnContact internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContact.ContactTargetInfoProperty):
-          ContactTargetInfoProperty = Wrapper(cdkObject)
+          ContactTargetInfoProperty = CdkObjectWrappers.wrap(cdkObject) as ContactTargetInfoProperty
 
       internal fun unwrap(wrapped: ContactTargetInfoProperty):
           software.amazon.awscdk.services.ssmcontacts.CfnContact.ContactTargetInfoProperty =
@@ -783,7 +784,7 @@ public open class CfnContact internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContact.TargetsProperty):
-          TargetsProperty = Wrapper(cdkObject)
+          TargetsProperty = CdkObjectWrappers.wrap(cdkObject) as TargetsProperty
 
       internal fun unwrap(wrapped: TargetsProperty):
           software.amazon.awscdk.services.ssmcontacts.CfnContact.TargetsProperty = (wrapped as
@@ -895,7 +896,7 @@ public open class CfnContact internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnContact.ChannelTargetInfoProperty):
-          ChannelTargetInfoProperty = Wrapper(cdkObject)
+          ChannelTargetInfoProperty = CdkObjectWrappers.wrap(cdkObject) as ChannelTargetInfoProperty
 
       internal fun unwrap(wrapped: ChannelTargetInfoProperty):
           software.amazon.awscdk.services.ssmcontacts.CfnContact.ChannelTargetInfoProperty =

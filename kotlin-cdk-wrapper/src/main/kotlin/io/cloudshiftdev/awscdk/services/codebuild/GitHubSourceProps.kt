@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -491,7 +492,7 @@ public interface GitHubSourceProps : SourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.GitHubSourceProps):
-        GitHubSourceProps = Wrapper(cdkObject)
+        GitHubSourceProps = CdkObjectWrappers.wrap(cdkObject) as GitHubSourceProps
 
     internal fun unwrap(wrapped: GitHubSourceProps):
         software.amazon.awscdk.services.codebuild.GitHubSourceProps = (wrapped as

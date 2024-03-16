@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 import com.fasterxml.jackson.databind.node.ObjectNode
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -240,7 +241,7 @@ public interface ItemBatcherProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.ItemBatcherProps):
-        ItemBatcherProps = Wrapper(cdkObject)
+        ItemBatcherProps = CdkObjectWrappers.wrap(cdkObject) as ItemBatcherProps
 
     internal fun unwrap(wrapped: ItemBatcherProps):
         software.amazon.awscdk.services.stepfunctions.ItemBatcherProps = (wrapped as

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -4578,7 +4579,7 @@ public interface CfnDBClusterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBClusterProps):
-        CfnDBClusterProps = Wrapper(cdkObject)
+        CfnDBClusterProps = CdkObjectWrappers.wrap(cdkObject) as CfnDBClusterProps
 
     internal fun unwrap(wrapped: CfnDBClusterProps):
         software.amazon.awscdk.services.rds.CfnDBClusterProps = (wrapped as CdkObject).cdkObject as

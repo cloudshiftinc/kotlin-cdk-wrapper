@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -324,7 +325,7 @@ public interface CreateAlarmOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CreateAlarmOptions):
-        CreateAlarmOptions = Wrapper(cdkObject)
+        CreateAlarmOptions = CdkObjectWrappers.wrap(cdkObject) as CreateAlarmOptions
 
     internal fun unwrap(wrapped: CreateAlarmOptions):
         software.amazon.awscdk.services.cloudwatch.CreateAlarmOptions = (wrapped as

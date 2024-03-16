@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -109,7 +110,7 @@ public interface StagePlacement {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.StagePlacement):
-        StagePlacement = Wrapper(cdkObject)
+        StagePlacement = CdkObjectWrappers.wrap(cdkObject) as StagePlacement
 
     internal fun unwrap(wrapped: StagePlacement):
         software.amazon.awscdk.services.codepipeline.StagePlacement = (wrapped as

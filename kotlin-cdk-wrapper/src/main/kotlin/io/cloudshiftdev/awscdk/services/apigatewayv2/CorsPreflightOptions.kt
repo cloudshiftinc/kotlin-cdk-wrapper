@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.apigatewayv2
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -256,7 +257,7 @@ public interface CorsPreflightOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CorsPreflightOptions):
-        CorsPreflightOptions = Wrapper(cdkObject)
+        CorsPreflightOptions = CdkObjectWrappers.wrap(cdkObject) as CorsPreflightOptions
 
     internal fun unwrap(wrapped: CorsPreflightOptions):
         software.amazon.awscdk.services.apigatewayv2.CorsPreflightOptions = (wrapped as

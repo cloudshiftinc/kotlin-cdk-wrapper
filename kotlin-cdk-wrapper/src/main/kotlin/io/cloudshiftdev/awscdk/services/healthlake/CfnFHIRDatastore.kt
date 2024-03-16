@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -667,7 +668,7 @@ public open class CfnFHIRDatastore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.PreloadDataConfigProperty):
-          PreloadDataConfigProperty = Wrapper(cdkObject)
+          PreloadDataConfigProperty = CdkObjectWrappers.wrap(cdkObject) as PreloadDataConfigProperty
 
       internal fun unwrap(wrapped: PreloadDataConfigProperty):
           software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.PreloadDataConfigProperty =
@@ -933,7 +934,8 @@ public open class CfnFHIRDatastore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.IdentityProviderConfigurationProperty):
-          IdentityProviderConfigurationProperty = Wrapper(cdkObject)
+          IdentityProviderConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          IdentityProviderConfigurationProperty
 
       internal fun unwrap(wrapped: IdentityProviderConfigurationProperty):
           software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.IdentityProviderConfigurationProperty
@@ -1054,7 +1056,7 @@ public open class CfnFHIRDatastore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.SseConfigurationProperty):
-          SseConfigurationProperty = Wrapper(cdkObject)
+          SseConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as SseConfigurationProperty
 
       internal fun unwrap(wrapped: SseConfigurationProperty):
           software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.SseConfigurationProperty =
@@ -1162,7 +1164,7 @@ public open class CfnFHIRDatastore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.CreatedAtProperty):
-          CreatedAtProperty = Wrapper(cdkObject)
+          CreatedAtProperty = CdkObjectWrappers.wrap(cdkObject) as CreatedAtProperty
 
       internal fun unwrap(wrapped: CreatedAtProperty):
           software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.CreatedAtProperty = (wrapped
@@ -1294,7 +1296,8 @@ public open class CfnFHIRDatastore internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.KmsEncryptionConfigProperty):
-          KmsEncryptionConfigProperty = Wrapper(cdkObject)
+          KmsEncryptionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          KmsEncryptionConfigProperty
 
       internal fun unwrap(wrapped: KmsEncryptionConfigProperty):
           software.amazon.awscdk.services.healthlake.CfnFHIRDatastore.KmsEncryptionConfigProperty =

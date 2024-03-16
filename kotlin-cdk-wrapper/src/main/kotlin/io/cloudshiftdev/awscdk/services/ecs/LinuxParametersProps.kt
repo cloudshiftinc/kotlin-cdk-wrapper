@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.Unit
@@ -222,7 +223,7 @@ public interface LinuxParametersProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.LinuxParametersProps):
-        LinuxParametersProps = Wrapper(cdkObject)
+        LinuxParametersProps = CdkObjectWrappers.wrap(cdkObject) as LinuxParametersProps
 
     internal fun unwrap(wrapped: LinuxParametersProps):
         software.amazon.awscdk.services.ecs.LinuxParametersProps = (wrapped as CdkObject).cdkObject

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 import kotlin.collections.List
@@ -398,7 +399,7 @@ public interface BehaviorOptions : AddBehaviorOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.BehaviorOptions):
-        BehaviorOptions = Wrapper(cdkObject)
+        BehaviorOptions = CdkObjectWrappers.wrap(cdkObject) as BehaviorOptions
 
     internal fun unwrap(wrapped: BehaviorOptions):
         software.amazon.awscdk.services.cloudfront.BehaviorOptions = (wrapped as

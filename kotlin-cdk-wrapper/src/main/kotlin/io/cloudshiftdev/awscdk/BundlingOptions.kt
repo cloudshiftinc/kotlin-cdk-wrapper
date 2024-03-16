@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -529,7 +530,7 @@ public interface BundlingOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.BundlingOptions): BundlingOptions =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as BundlingOptions
 
     internal fun unwrap(wrapped: BundlingOptions): software.amazon.awscdk.BundlingOptions = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.BundlingOptions

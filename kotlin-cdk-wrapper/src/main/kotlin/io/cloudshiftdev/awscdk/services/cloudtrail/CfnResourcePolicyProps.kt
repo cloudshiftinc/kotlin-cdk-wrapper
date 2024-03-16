@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudtrail
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -144,7 +145,7 @@ public interface CfnResourcePolicyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnResourcePolicyProps):
-        CfnResourcePolicyProps = Wrapper(cdkObject)
+        CfnResourcePolicyProps = CdkObjectWrappers.wrap(cdkObject) as CfnResourcePolicyProps
 
     internal fun unwrap(wrapped: CfnResourcePolicyProps):
         software.amazon.awscdk.services.cloudtrail.CfnResourcePolicyProps = (wrapped as

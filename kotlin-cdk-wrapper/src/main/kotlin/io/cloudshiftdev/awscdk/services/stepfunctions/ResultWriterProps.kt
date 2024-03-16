@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.String
 import kotlin.Unit
@@ -104,7 +105,7 @@ public interface ResultWriterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.ResultWriterProps):
-        ResultWriterProps = Wrapper(cdkObject)
+        ResultWriterProps = CdkObjectWrappers.wrap(cdkObject) as ResultWriterProps
 
     internal fun unwrap(wrapped: ResultWriterProps):
         software.amazon.awscdk.services.stepfunctions.ResultWriterProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -187,7 +188,7 @@ public interface VerticalAnnotation {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.VerticalAnnotation):
-        VerticalAnnotation = Wrapper(cdkObject)
+        VerticalAnnotation = CdkObjectWrappers.wrap(cdkObject) as VerticalAnnotation
 
     internal fun unwrap(wrapped: VerticalAnnotation):
         software.amazon.awscdk.services.cloudwatch.VerticalAnnotation = (wrapped as

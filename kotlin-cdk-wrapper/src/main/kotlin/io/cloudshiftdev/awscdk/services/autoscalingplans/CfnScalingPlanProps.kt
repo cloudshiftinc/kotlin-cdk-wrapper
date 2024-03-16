@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.autoscalingplans
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 import kotlin.collections.List
@@ -237,7 +238,7 @@ public interface CfnScalingPlanProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscalingplans.CfnScalingPlanProps):
-        CfnScalingPlanProps = Wrapper(cdkObject)
+        CfnScalingPlanProps = CdkObjectWrappers.wrap(cdkObject) as CfnScalingPlanProps
 
     internal fun unwrap(wrapped: CfnScalingPlanProps):
         software.amazon.awscdk.services.autoscalingplans.CfnScalingPlanProps = (wrapped as

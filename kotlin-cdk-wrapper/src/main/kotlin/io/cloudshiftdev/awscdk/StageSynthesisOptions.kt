@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -138,7 +139,7 @@ public interface StageSynthesisOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.StageSynthesisOptions):
-        StageSynthesisOptions = Wrapper(cdkObject)
+        StageSynthesisOptions = CdkObjectWrappers.wrap(cdkObject) as StageSynthesisOptions
 
     internal fun unwrap(wrapped: StageSynthesisOptions):
         software.amazon.awscdk.StageSynthesisOptions = (wrapped as CdkObject).cdkObject as

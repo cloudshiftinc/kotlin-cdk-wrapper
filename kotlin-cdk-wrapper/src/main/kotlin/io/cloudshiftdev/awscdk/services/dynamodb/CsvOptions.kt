@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.dynamodb
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -181,7 +182,7 @@ public interface CsvOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CsvOptions): CsvOptions =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as CsvOptions
 
     internal fun unwrap(wrapped: CsvOptions): software.amazon.awscdk.services.dynamodb.CsvOptions =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.dynamodb.CsvOptions

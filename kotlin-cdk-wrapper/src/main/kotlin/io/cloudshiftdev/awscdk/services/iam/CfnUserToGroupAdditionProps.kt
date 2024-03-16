@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -131,7 +132,8 @@ public interface CfnUserToGroupAdditionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.CfnUserToGroupAdditionProps):
-        CfnUserToGroupAdditionProps = Wrapper(cdkObject)
+        CfnUserToGroupAdditionProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnUserToGroupAdditionProps
 
     internal fun unwrap(wrapped: CfnUserToGroupAdditionProps):
         software.amazon.awscdk.services.iam.CfnUserToGroupAdditionProps = (wrapped as

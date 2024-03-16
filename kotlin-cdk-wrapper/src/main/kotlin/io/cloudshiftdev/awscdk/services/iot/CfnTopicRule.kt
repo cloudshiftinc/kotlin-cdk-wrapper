@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -834,7 +835,8 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.TimestreamDimensionProperty):
-          TimestreamDimensionProperty = Wrapper(cdkObject)
+          TimestreamDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          TimestreamDimensionProperty
 
       internal fun unwrap(wrapped: TimestreamDimensionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.TimestreamDimensionProperty = (wrapped as
@@ -944,7 +946,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.KafkaActionHeaderProperty):
-          KafkaActionHeaderProperty = Wrapper(cdkObject)
+          KafkaActionHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as KafkaActionHeaderProperty
 
       internal fun unwrap(wrapped: KafkaActionHeaderProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.KafkaActionHeaderProperty = (wrapped as
@@ -2462,7 +2464,7 @@ public open class CfnTopicRule internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.ActionProperty):
-          ActionProperty = Wrapper(cdkObject)
+          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as ActionProperty
 
       internal fun unwrap(wrapped: ActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.ActionProperty = (wrapped as
@@ -2596,7 +2598,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.KinesisActionProperty):
-          KinesisActionProperty = Wrapper(cdkObject)
+          KinesisActionProperty = CdkObjectWrappers.wrap(cdkObject) as KinesisActionProperty
 
       internal fun unwrap(wrapped: KinesisActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.KinesisActionProperty = (wrapped as
@@ -3049,7 +3051,8 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.RepublishActionHeadersProperty):
-          RepublishActionHeadersProperty = Wrapper(cdkObject)
+          RepublishActionHeadersProperty = CdkObjectWrappers.wrap(cdkObject) as
+          RepublishActionHeadersProperty
 
       internal fun unwrap(wrapped: RepublishActionHeadersProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.RepublishActionHeadersProperty = (wrapped
@@ -3129,7 +3132,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.PutItemInputProperty):
-          PutItemInputProperty = Wrapper(cdkObject)
+          PutItemInputProperty = CdkObjectWrappers.wrap(cdkObject) as PutItemInputProperty
 
       internal fun unwrap(wrapped: PutItemInputProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.PutItemInputProperty = (wrapped as
@@ -3840,7 +3843,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.TopicRulePayloadProperty):
-          TopicRulePayloadProperty = Wrapper(cdkObject)
+          TopicRulePayloadProperty = CdkObjectWrappers.wrap(cdkObject) as TopicRulePayloadProperty
 
       internal fun unwrap(wrapped: TopicRulePayloadProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.TopicRulePayloadProperty = (wrapped as
@@ -4060,7 +4063,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.FirehoseActionProperty):
-          FirehoseActionProperty = Wrapper(cdkObject)
+          FirehoseActionProperty = CdkObjectWrappers.wrap(cdkObject) as FirehoseActionProperty
 
       internal fun unwrap(wrapped: FirehoseActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.FirehoseActionProperty = (wrapped as
@@ -4206,7 +4209,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.SqsActionProperty):
-          SqsActionProperty = Wrapper(cdkObject)
+          SqsActionProperty = CdkObjectWrappers.wrap(cdkObject) as SqsActionProperty
 
       internal fun unwrap(wrapped: SqsActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.SqsActionProperty = (wrapped as
@@ -4393,7 +4396,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.OpenSearchActionProperty):
-          OpenSearchActionProperty = Wrapper(cdkObject)
+          OpenSearchActionProperty = CdkObjectWrappers.wrap(cdkObject) as OpenSearchActionProperty
 
       internal fun unwrap(wrapped: OpenSearchActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.OpenSearchActionProperty = (wrapped as
@@ -4580,7 +4583,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.DynamoDBv2ActionProperty):
-          DynamoDBv2ActionProperty = Wrapper(cdkObject)
+          DynamoDBv2ActionProperty = CdkObjectWrappers.wrap(cdkObject) as DynamoDBv2ActionProperty
 
       internal fun unwrap(wrapped: DynamoDBv2ActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.DynamoDBv2ActionProperty = (wrapped as
@@ -4834,7 +4837,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.KafkaActionProperty):
-          KafkaActionProperty = Wrapper(cdkObject)
+          KafkaActionProperty = CdkObjectWrappers.wrap(cdkObject) as KafkaActionProperty
 
       internal fun unwrap(wrapped: KafkaActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.KafkaActionProperty = (wrapped as
@@ -4987,7 +4990,8 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.CloudwatchLogsActionProperty):
-          CloudwatchLogsActionProperty = Wrapper(cdkObject)
+          CloudwatchLogsActionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CloudwatchLogsActionProperty
 
       internal fun unwrap(wrapped: CloudwatchLogsActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.CloudwatchLogsActionProperty = (wrapped
@@ -5265,7 +5269,8 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.PutAssetPropertyValueEntryProperty):
-          PutAssetPropertyValueEntryProperty = Wrapper(cdkObject)
+          PutAssetPropertyValueEntryProperty = CdkObjectWrappers.wrap(cdkObject) as
+          PutAssetPropertyValueEntryProperty
 
       internal fun unwrap(wrapped: PutAssetPropertyValueEntryProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.PutAssetPropertyValueEntryProperty =
@@ -5387,7 +5392,8 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.AssetPropertyTimestampProperty):
-          AssetPropertyTimestampProperty = Wrapper(cdkObject)
+          AssetPropertyTimestampProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AssetPropertyTimestampProperty
 
       internal fun unwrap(wrapped: AssetPropertyTimestampProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.AssetPropertyTimestampProperty = (wrapped
@@ -5556,7 +5562,8 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.CloudwatchAlarmActionProperty):
-          CloudwatchAlarmActionProperty = Wrapper(cdkObject)
+          CloudwatchAlarmActionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CloudwatchAlarmActionProperty
 
       internal fun unwrap(wrapped: CloudwatchAlarmActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.CloudwatchAlarmActionProperty = (wrapped
@@ -5777,7 +5784,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.RepublishActionProperty):
-          RepublishActionProperty = Wrapper(cdkObject)
+          RepublishActionProperty = CdkObjectWrappers.wrap(cdkObject) as RepublishActionProperty
 
       internal fun unwrap(wrapped: RepublishActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.RepublishActionProperty = (wrapped as
@@ -6112,7 +6119,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.DynamoDBActionProperty):
-          DynamoDBActionProperty = Wrapper(cdkObject)
+          DynamoDBActionProperty = CdkObjectWrappers.wrap(cdkObject) as DynamoDBActionProperty
 
       internal fun unwrap(wrapped: DynamoDBActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.DynamoDBActionProperty = (wrapped as
@@ -6248,7 +6255,8 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.SigV4AuthorizationProperty):
-          SigV4AuthorizationProperty = Wrapper(cdkObject)
+          SigV4AuthorizationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SigV4AuthorizationProperty
 
       internal fun unwrap(wrapped: SigV4AuthorizationProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.SigV4AuthorizationProperty = (wrapped as
@@ -6499,7 +6507,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.HttpActionProperty):
-          HttpActionProperty = Wrapper(cdkObject)
+          HttpActionProperty = CdkObjectWrappers.wrap(cdkObject) as HttpActionProperty
 
       internal fun unwrap(wrapped: HttpActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.HttpActionProperty = (wrapped as
@@ -6666,7 +6674,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.IotSiteWiseActionProperty):
-          IotSiteWiseActionProperty = Wrapper(cdkObject)
+          IotSiteWiseActionProperty = CdkObjectWrappers.wrap(cdkObject) as IotSiteWiseActionProperty
 
       internal fun unwrap(wrapped: IotSiteWiseActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.IotSiteWiseActionProperty = (wrapped as
@@ -6875,7 +6883,8 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.AssetPropertyValueProperty):
-          AssetPropertyValueProperty = Wrapper(cdkObject)
+          AssetPropertyValueProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AssetPropertyValueProperty
 
       internal fun unwrap(wrapped: AssetPropertyValueProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.AssetPropertyValueProperty = (wrapped as
@@ -7031,7 +7040,8 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.StepFunctionsActionProperty):
-          StepFunctionsActionProperty = Wrapper(cdkObject)
+          StepFunctionsActionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          StepFunctionsActionProperty
 
       internal fun unwrap(wrapped: StepFunctionsActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.StepFunctionsActionProperty = (wrapped as
@@ -7160,7 +7170,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.HttpAuthorizationProperty):
-          HttpAuthorizationProperty = Wrapper(cdkObject)
+          HttpAuthorizationProperty = CdkObjectWrappers.wrap(cdkObject) as HttpAuthorizationProperty
 
       internal fun unwrap(wrapped: HttpAuthorizationProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.HttpAuthorizationProperty = (wrapped as
@@ -7408,7 +7418,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.IotEventsActionProperty):
-          IotEventsActionProperty = Wrapper(cdkObject)
+          IotEventsActionProperty = CdkObjectWrappers.wrap(cdkObject) as IotEventsActionProperty
 
       internal fun unwrap(wrapped: IotEventsActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.IotEventsActionProperty = (wrapped as
@@ -7588,7 +7598,8 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.IotAnalyticsActionProperty):
-          IotAnalyticsActionProperty = Wrapper(cdkObject)
+          IotAnalyticsActionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          IotAnalyticsActionProperty
 
       internal fun unwrap(wrapped: IotAnalyticsActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.IotAnalyticsActionProperty = (wrapped as
@@ -7701,7 +7712,8 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.TimestreamTimestampProperty):
-          TimestreamTimestampProperty = Wrapper(cdkObject)
+          TimestreamTimestampProperty = CdkObjectWrappers.wrap(cdkObject) as
+          TimestreamTimestampProperty
 
       internal fun unwrap(wrapped: TimestreamTimestampProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.TimestreamTimestampProperty = (wrapped as
@@ -7895,7 +7907,8 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.AssetPropertyVariantProperty):
-          AssetPropertyVariantProperty = Wrapper(cdkObject)
+          AssetPropertyVariantProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AssetPropertyVariantProperty
 
       internal fun unwrap(wrapped: AssetPropertyVariantProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.AssetPropertyVariantProperty = (wrapped
@@ -8001,7 +8014,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.UserPropertyProperty):
-          UserPropertyProperty = Wrapper(cdkObject)
+          UserPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as UserPropertyProperty
 
       internal fun unwrap(wrapped: UserPropertyProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.UserPropertyProperty = (wrapped as
@@ -8114,7 +8127,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.HttpActionHeaderProperty):
-          HttpActionHeaderProperty = Wrapper(cdkObject)
+          HttpActionHeaderProperty = CdkObjectWrappers.wrap(cdkObject) as HttpActionHeaderProperty
 
       internal fun unwrap(wrapped: HttpActionHeaderProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.HttpActionHeaderProperty = (wrapped as
@@ -8270,7 +8283,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.SnsActionProperty):
-          SnsActionProperty = Wrapper(cdkObject)
+          SnsActionProperty = CdkObjectWrappers.wrap(cdkObject) as SnsActionProperty
 
       internal fun unwrap(wrapped: SnsActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.SnsActionProperty = (wrapped as
@@ -8539,7 +8552,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.LocationActionProperty):
-          LocationActionProperty = Wrapper(cdkObject)
+          LocationActionProperty = CdkObjectWrappers.wrap(cdkObject) as LocationActionProperty
 
       internal fun unwrap(wrapped: LocationActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.LocationActionProperty = (wrapped as
@@ -8722,7 +8735,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.S3ActionProperty):
-          S3ActionProperty = Wrapper(cdkObject)
+          S3ActionProperty = CdkObjectWrappers.wrap(cdkObject) as S3ActionProperty
 
       internal fun unwrap(wrapped: S3ActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.S3ActionProperty = (wrapped as
@@ -8832,7 +8845,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.TimestampProperty):
-          TimestampProperty = Wrapper(cdkObject)
+          TimestampProperty = CdkObjectWrappers.wrap(cdkObject) as TimestampProperty
 
       internal fun unwrap(wrapped: TimestampProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.TimestampProperty = (wrapped as
@@ -9065,7 +9078,8 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.CloudwatchMetricActionProperty):
-          CloudwatchMetricActionProperty = Wrapper(cdkObject)
+          CloudwatchMetricActionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CloudwatchMetricActionProperty
 
       internal fun unwrap(wrapped: CloudwatchMetricActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.CloudwatchMetricActionProperty = (wrapped
@@ -9331,7 +9345,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.TimestreamActionProperty):
-          TimestreamActionProperty = Wrapper(cdkObject)
+          TimestreamActionProperty = CdkObjectWrappers.wrap(cdkObject) as TimestreamActionProperty
 
       internal fun unwrap(wrapped: TimestreamActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.TimestreamActionProperty = (wrapped as
@@ -9410,7 +9424,7 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.LambdaActionProperty):
-          LambdaActionProperty = Wrapper(cdkObject)
+          LambdaActionProperty = CdkObjectWrappers.wrap(cdkObject) as LambdaActionProperty
 
       internal fun unwrap(wrapped: LambdaActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.LambdaActionProperty = (wrapped as
@@ -9607,7 +9621,8 @@ public open class CfnTopicRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnTopicRule.ElasticsearchActionProperty):
-          ElasticsearchActionProperty = Wrapper(cdkObject)
+          ElasticsearchActionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ElasticsearchActionProperty
 
       internal fun unwrap(wrapped: ElasticsearchActionProperty):
           software.amazon.awscdk.services.iot.CfnTopicRule.ElasticsearchActionProperty = (wrapped as

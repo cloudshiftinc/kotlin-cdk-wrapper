@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -335,7 +336,7 @@ public interface CfnAnalysisTemplateProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplateProps):
-        CfnAnalysisTemplateProps = Wrapper(cdkObject)
+        CfnAnalysisTemplateProps = CdkObjectWrappers.wrap(cdkObject) as CfnAnalysisTemplateProps
 
     internal fun unwrap(wrapped: CfnAnalysisTemplateProps):
         software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplateProps = (wrapped as

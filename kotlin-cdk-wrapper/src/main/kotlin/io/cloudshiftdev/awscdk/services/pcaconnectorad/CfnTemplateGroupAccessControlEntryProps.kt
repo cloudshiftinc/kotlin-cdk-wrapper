@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.pcaconnectorad
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -230,7 +231,8 @@ public interface CfnTemplateGroupAccessControlEntryProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntryProps):
-        CfnTemplateGroupAccessControlEntryProps = Wrapper(cdkObject)
+        CfnTemplateGroupAccessControlEntryProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnTemplateGroupAccessControlEntryProps
 
     internal fun unwrap(wrapped: CfnTemplateGroupAccessControlEntryProps):
         software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntryProps =

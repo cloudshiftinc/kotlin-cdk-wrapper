@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.apigatewayv2
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -288,7 +289,8 @@ public interface CfnApiGatewayManagedOverridesProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverridesProps):
-        CfnApiGatewayManagedOverridesProps = Wrapper(cdkObject)
+        CfnApiGatewayManagedOverridesProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnApiGatewayManagedOverridesProps
 
     internal fun unwrap(wrapped: CfnApiGatewayManagedOverridesProps):
         software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverridesProps = (wrapped

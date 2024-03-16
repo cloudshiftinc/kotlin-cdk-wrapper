@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.docdb
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -116,7 +117,7 @@ public interface DatabaseInstanceAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.docdb.DatabaseInstanceAttributes):
-        DatabaseInstanceAttributes = Wrapper(cdkObject)
+        DatabaseInstanceAttributes = CdkObjectWrappers.wrap(cdkObject) as DatabaseInstanceAttributes
 
     internal fun unwrap(wrapped: DatabaseInstanceAttributes):
         software.amazon.awscdk.services.docdb.DatabaseInstanceAttributes = (wrapped as

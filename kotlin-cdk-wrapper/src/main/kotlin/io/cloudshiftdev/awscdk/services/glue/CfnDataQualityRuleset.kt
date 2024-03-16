@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -451,7 +452,8 @@ public open class CfnDataQualityRuleset internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnDataQualityRuleset.DataQualityTargetTableProperty):
-          DataQualityTargetTableProperty = Wrapper(cdkObject)
+          DataQualityTargetTableProperty = CdkObjectWrappers.wrap(cdkObject) as
+          DataQualityTargetTableProperty
 
       internal fun unwrap(wrapped: DataQualityTargetTableProperty):
           software.amazon.awscdk.services.glue.CfnDataQualityRuleset.DataQualityTargetTableProperty

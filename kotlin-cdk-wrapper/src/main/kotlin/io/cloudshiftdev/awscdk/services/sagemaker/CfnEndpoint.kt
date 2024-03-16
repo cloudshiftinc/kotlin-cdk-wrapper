@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -971,7 +972,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.BlueGreenUpdatePolicyProperty):
-          BlueGreenUpdatePolicyProperty = Wrapper(cdkObject)
+          BlueGreenUpdatePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as
+          BlueGreenUpdatePolicyProperty
 
       internal fun unwrap(wrapped: BlueGreenUpdatePolicyProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.BlueGreenUpdatePolicyProperty =
@@ -1100,7 +1102,7 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.CapacitySizeProperty):
-          CapacitySizeProperty = Wrapper(cdkObject)
+          CapacitySizeProperty = CdkObjectWrappers.wrap(cdkObject) as CapacitySizeProperty
 
       internal fun unwrap(wrapped: CapacitySizeProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.CapacitySizeProperty = (wrapped as
@@ -1179,7 +1181,7 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.AlarmProperty):
-          AlarmProperty = Wrapper(cdkObject)
+          AlarmProperty = CdkObjectWrappers.wrap(cdkObject) as AlarmProperty
 
       internal fun unwrap(wrapped: AlarmProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.AlarmProperty = (wrapped as
@@ -1312,7 +1314,7 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.VariantPropertyProperty):
-          VariantPropertyProperty = Wrapper(cdkObject)
+          VariantPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as VariantPropertyProperty
 
       internal fun unwrap(wrapped: VariantPropertyProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.VariantPropertyProperty = (wrapped
@@ -1602,7 +1604,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.RollingUpdatePolicyProperty):
-          RollingUpdatePolicyProperty = Wrapper(cdkObject)
+          RollingUpdatePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as
+          RollingUpdatePolicyProperty
 
       internal fun unwrap(wrapped: RollingUpdatePolicyProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.RollingUpdatePolicyProperty =
@@ -1886,7 +1889,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.TrafficRoutingConfigProperty):
-          TrafficRoutingConfigProperty = Wrapper(cdkObject)
+          TrafficRoutingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          TrafficRoutingConfigProperty
 
       internal fun unwrap(wrapped: TrafficRoutingConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.TrafficRoutingConfigProperty =
@@ -2009,7 +2013,8 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.AutoRollbackConfigProperty):
-          AutoRollbackConfigProperty = Wrapper(cdkObject)
+          AutoRollbackConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AutoRollbackConfigProperty
 
       internal fun unwrap(wrapped: AutoRollbackConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.AutoRollbackConfigProperty =
@@ -2320,7 +2325,7 @@ public open class CfnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnEndpoint.DeploymentConfigProperty):
-          DeploymentConfigProperty = Wrapper(cdkObject)
+          DeploymentConfigProperty = CdkObjectWrappers.wrap(cdkObject) as DeploymentConfigProperty
 
       internal fun unwrap(wrapped: DeploymentConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnEndpoint.DeploymentConfigProperty = (wrapped

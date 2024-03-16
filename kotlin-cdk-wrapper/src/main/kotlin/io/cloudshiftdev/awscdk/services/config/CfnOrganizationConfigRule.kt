@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -1000,7 +1001,8 @@ public open class CfnOrganizationConfigRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty):
-          OrganizationCustomRuleMetadataProperty = Wrapper(cdkObject)
+          OrganizationCustomRuleMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as
+          OrganizationCustomRuleMetadataProperty
 
       internal fun unwrap(wrapped: OrganizationCustomRuleMetadataProperty):
           software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty
@@ -1521,7 +1523,8 @@ public open class CfnOrganizationConfigRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomPolicyRuleMetadataProperty):
-          OrganizationCustomPolicyRuleMetadataProperty = Wrapper(cdkObject)
+          OrganizationCustomPolicyRuleMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as
+          OrganizationCustomPolicyRuleMetadataProperty
 
       internal fun unwrap(wrapped: OrganizationCustomPolicyRuleMetadataProperty):
           software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationCustomPolicyRuleMetadataProperty
@@ -1875,7 +1878,8 @@ public open class CfnOrganizationConfigRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationManagedRuleMetadataProperty):
-          OrganizationManagedRuleMetadataProperty = Wrapper(cdkObject)
+          OrganizationManagedRuleMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as
+          OrganizationManagedRuleMetadataProperty
 
       internal fun unwrap(wrapped: OrganizationManagedRuleMetadataProperty):
           software.amazon.awscdk.services.config.CfnOrganizationConfigRule.OrganizationManagedRuleMetadataProperty

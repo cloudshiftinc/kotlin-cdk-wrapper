@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecr.IRepository
 import kotlin.String
 import kotlin.Unit
@@ -22,10 +23,6 @@ import kotlin.jvm.JvmName
 public abstract class DockerImageCode internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.DockerImageCode,
 ) : CdkObject(cdkObject) {
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.DockerImageCode,
-  ) : DockerImageCode(cdkObject)
-
   public companion object {
     public fun fromEcr(repository: IRepository): DockerImageCode =
         software.amazon.awscdk.services.lambda.DockerImageCode.fromEcr(repository.let(IRepository::unwrap)).let(DockerImageCode::wrap)
@@ -52,7 +49,7 @@ public abstract class DockerImageCode internal constructor(
         DockerImageCode = fromImageAsset(directory, AssetImageCodeProps(props))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.DockerImageCode):
-        DockerImageCode = Wrapper(cdkObject)
+        DockerImageCode = CdkObjectWrappers.wrap(cdkObject) as DockerImageCode
 
     internal fun unwrap(wrapped: DockerImageCode):
         software.amazon.awscdk.services.lambda.DockerImageCode = (wrapped as CdkObject).cdkObject as

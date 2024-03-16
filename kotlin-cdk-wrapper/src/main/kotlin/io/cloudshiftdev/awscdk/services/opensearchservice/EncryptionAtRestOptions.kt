@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.opensearchservice
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Boolean
 import kotlin.Unit
@@ -118,7 +119,7 @@ public interface EncryptionAtRestOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.EncryptionAtRestOptions):
-        EncryptionAtRestOptions = Wrapper(cdkObject)
+        EncryptionAtRestOptions = CdkObjectWrappers.wrap(cdkObject) as EncryptionAtRestOptions
 
     internal fun unwrap(wrapped: EncryptionAtRestOptions):
         software.amazon.awscdk.services.opensearchservice.EncryptionAtRestOptions = (wrapped as

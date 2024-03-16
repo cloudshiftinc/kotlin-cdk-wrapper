@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import java.time.Instant
 import kotlin.Any
 import kotlin.Boolean
@@ -1178,7 +1179,7 @@ public open class CfnScalableTarget internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScheduledActionProperty):
-          ScheduledActionProperty = Wrapper(cdkObject)
+          ScheduledActionProperty = CdkObjectWrappers.wrap(cdkObject) as ScheduledActionProperty
 
       internal fun unwrap(wrapped: ScheduledActionProperty):
           software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScheduledActionProperty
@@ -1408,7 +1409,7 @@ public open class CfnScalableTarget internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.SuspendedStateProperty):
-          SuspendedStateProperty = Wrapper(cdkObject)
+          SuspendedStateProperty = CdkObjectWrappers.wrap(cdkObject) as SuspendedStateProperty
 
       internal fun unwrap(wrapped: SuspendedStateProperty):
           software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.SuspendedStateProperty
@@ -1521,7 +1522,8 @@ public open class CfnScalableTarget internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty):
-          ScalableTargetActionProperty = Wrapper(cdkObject)
+          ScalableTargetActionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ScalableTargetActionProperty
 
       internal fun unwrap(wrapped: ScalableTargetActionProperty):
           software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget.ScalableTargetActionProperty

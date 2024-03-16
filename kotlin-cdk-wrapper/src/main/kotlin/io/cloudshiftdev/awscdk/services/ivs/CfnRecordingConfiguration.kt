@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -927,7 +928,8 @@ public open class CfnRecordingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.ThumbnailConfigurationProperty):
-          ThumbnailConfigurationProperty = Wrapper(cdkObject)
+          ThumbnailConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ThumbnailConfigurationProperty
 
       internal fun unwrap(wrapped: ThumbnailConfigurationProperty):
           software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.ThumbnailConfigurationProperty
@@ -1098,7 +1100,8 @@ public open class CfnRecordingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty):
-          RenditionConfigurationProperty = Wrapper(cdkObject)
+          RenditionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          RenditionConfigurationProperty
 
       internal fun unwrap(wrapped: RenditionConfigurationProperty):
           software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.RenditionConfigurationProperty
@@ -1183,7 +1186,8 @@ public open class CfnRecordingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty):
-          S3DestinationConfigurationProperty = Wrapper(cdkObject)
+          S3DestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          S3DestinationConfigurationProperty
 
       internal fun unwrap(wrapped: S3DestinationConfigurationProperty):
           software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.S3DestinationConfigurationProperty
@@ -1325,7 +1329,8 @@ public open class CfnRecordingConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty):
-          DestinationConfigurationProperty = Wrapper(cdkObject)
+          DestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          DestinationConfigurationProperty
 
       internal fun unwrap(wrapped: DestinationConfigurationProperty):
           software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.DestinationConfigurationProperty

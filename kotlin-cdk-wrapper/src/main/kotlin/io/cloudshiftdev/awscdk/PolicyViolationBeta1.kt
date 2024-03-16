@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -235,7 +236,7 @@ public interface PolicyViolationBeta1 {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.PolicyViolationBeta1): PolicyViolationBeta1
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as PolicyViolationBeta1
 
     internal fun unwrap(wrapped: PolicyViolationBeta1): software.amazon.awscdk.PolicyViolationBeta1
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.PolicyViolationBeta1

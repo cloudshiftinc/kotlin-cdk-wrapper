@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -71,7 +72,7 @@ public interface S3LocationConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig):
-        S3LocationConfig = Wrapper(cdkObject)
+        S3LocationConfig = CdkObjectWrappers.wrap(cdkObject) as S3LocationConfig
 
     internal fun unwrap(wrapped: S3LocationConfig):
         software.amazon.awscdk.services.stepfunctions.tasks.S3LocationConfig = (wrapped as

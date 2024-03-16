@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -690,7 +691,8 @@ public open class CfnOptionGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnOptionGroup.OptionConfigurationProperty):
-          OptionConfigurationProperty = Wrapper(cdkObject)
+          OptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          OptionConfigurationProperty
 
       internal fun unwrap(wrapped: OptionConfigurationProperty):
           software.amazon.awscdk.services.rds.CfnOptionGroup.OptionConfigurationProperty = (wrapped
@@ -798,7 +800,7 @@ public open class CfnOptionGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnOptionGroup.OptionSettingProperty):
-          OptionSettingProperty = Wrapper(cdkObject)
+          OptionSettingProperty = CdkObjectWrappers.wrap(cdkObject) as OptionSettingProperty
 
       internal fun unwrap(wrapped: OptionSettingProperty):
           software.amazon.awscdk.services.rds.CfnOptionGroup.OptionSettingProperty = (wrapped as

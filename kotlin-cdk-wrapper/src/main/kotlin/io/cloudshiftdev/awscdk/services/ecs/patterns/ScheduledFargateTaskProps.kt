@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs.patterns
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.applicationautoscaling.Schedule
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
@@ -779,7 +780,7 @@ public interface ScheduledFargateTaskProps : ScheduledTaskBaseProps, FargateServ
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskProps):
-        ScheduledFargateTaskProps = Wrapper(cdkObject)
+        ScheduledFargateTaskProps = CdkObjectWrappers.wrap(cdkObject) as ScheduledFargateTaskProps
 
     internal fun unwrap(wrapped: ScheduledFargateTaskProps):
         software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskProps = (wrapped as

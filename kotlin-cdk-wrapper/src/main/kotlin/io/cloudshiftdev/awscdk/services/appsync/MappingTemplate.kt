@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 
@@ -34,10 +35,6 @@ public abstract class MappingTemplate internal constructor(
    * this is called to render the mapping template to a VTL string.
    */
   public open fun renderTemplate(): String = unwrap(this).renderTemplate()
-
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.MappingTemplate,
-  ) : MappingTemplate(cdkObject)
 
   public companion object {
     public fun dynamoDbDeleteItem(keyName: String, idArg: String): MappingTemplate =
@@ -107,7 +104,7 @@ public abstract class MappingTemplate internal constructor(
         software.amazon.awscdk.services.appsync.MappingTemplate.lambdaResult().let(MappingTemplate::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.MappingTemplate):
-        MappingTemplate = Wrapper(cdkObject)
+        MappingTemplate = CdkObjectWrappers.wrap(cdkObject) as MappingTemplate
 
     internal fun unwrap(wrapped: MappingTemplate):
         software.amazon.awscdk.services.appsync.MappingTemplate = (wrapped as CdkObject).cdkObject

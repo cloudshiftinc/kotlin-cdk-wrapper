@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -170,7 +171,7 @@ public interface FromRoleArnOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.FromRoleArnOptions):
-        FromRoleArnOptions = Wrapper(cdkObject)
+        FromRoleArnOptions = CdkObjectWrappers.wrap(cdkObject) as FromRoleArnOptions
 
     internal fun unwrap(wrapped: FromRoleArnOptions):
         software.amazon.awscdk.services.iam.FromRoleArnOptions = (wrapped as CdkObject).cdkObject as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -97,7 +98,7 @@ public interface MetricDefinition {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.MetricDefinition):
-        MetricDefinition = Wrapper(cdkObject)
+        MetricDefinition = CdkObjectWrappers.wrap(cdkObject) as MetricDefinition
 
     internal fun unwrap(wrapped: MetricDefinition):
         software.amazon.awscdk.services.stepfunctions.tasks.MetricDefinition = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.servicediscovery
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -116,7 +117,7 @@ public interface HttpNamespaceAttributes {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.HttpNamespaceAttributes):
-        HttpNamespaceAttributes = Wrapper(cdkObject)
+        HttpNamespaceAttributes = CdkObjectWrappers.wrap(cdkObject) as HttpNamespaceAttributes
 
     internal fun unwrap(wrapped: HttpNamespaceAttributes):
         software.amazon.awscdk.services.servicediscovery.HttpNamespaceAttributes = (wrapped as

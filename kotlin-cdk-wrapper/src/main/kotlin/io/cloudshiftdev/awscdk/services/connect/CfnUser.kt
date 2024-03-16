@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -905,7 +906,7 @@ public open class CfnUser internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnUser.UserIdentityInfoProperty):
-          UserIdentityInfoProperty = Wrapper(cdkObject)
+          UserIdentityInfoProperty = CdkObjectWrappers.wrap(cdkObject) as UserIdentityInfoProperty
 
       internal fun unwrap(wrapped: UserIdentityInfoProperty):
           software.amazon.awscdk.services.connect.CfnUser.UserIdentityInfoProperty = (wrapped as
@@ -1063,7 +1064,7 @@ public open class CfnUser internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnUser.UserProficiencyProperty):
-          UserProficiencyProperty = Wrapper(cdkObject)
+          UserProficiencyProperty = CdkObjectWrappers.wrap(cdkObject) as UserProficiencyProperty
 
       internal fun unwrap(wrapped: UserProficiencyProperty):
           software.amazon.awscdk.services.connect.CfnUser.UserProficiencyProperty = (wrapped as
@@ -1274,7 +1275,7 @@ public open class CfnUser internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnUser.UserPhoneConfigProperty):
-          UserPhoneConfigProperty = Wrapper(cdkObject)
+          UserPhoneConfigProperty = CdkObjectWrappers.wrap(cdkObject) as UserPhoneConfigProperty
 
       internal fun unwrap(wrapped: UserPhoneConfigProperty):
           software.amazon.awscdk.services.connect.CfnUser.UserPhoneConfigProperty = (wrapped as

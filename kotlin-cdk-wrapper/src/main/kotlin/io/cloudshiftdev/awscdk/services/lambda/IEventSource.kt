@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 /**
  * An abstract class which represents an AWS Lambda event source.
@@ -15,22 +16,9 @@ public interface IEventSource {
    */
   public fun bind(target: IFunction)
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.IEventSource,
-  ) : CdkObject(cdkObject), IEventSource {
-    /**
-     * Called by `lambda.addEventSource` to allow the event source to bind to this function.
-     *
-     * @param target That lambda function to bind to. 
-     */
-    override fun bind(target: IFunction) {
-      unwrap(this).bind(target.let(IFunction::unwrap))
-    }
-  }
-
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.IEventSource): IEventSource
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as IEventSource
 
     internal fun unwrap(wrapped: IEventSource): software.amazon.awscdk.services.lambda.IEventSource
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.lambda.IEventSource

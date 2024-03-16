@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.InstanceArchitecture
 import kotlin.Boolean
 import kotlin.Unit
@@ -185,7 +186,7 @@ public interface BottleRocketImageProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.BottleRocketImageProps):
-        BottleRocketImageProps = Wrapper(cdkObject)
+        BottleRocketImageProps = CdkObjectWrappers.wrap(cdkObject) as BottleRocketImageProps
 
     internal fun unwrap(wrapped: BottleRocketImageProps):
         software.amazon.awscdk.services.ecs.BottleRocketImageProps = (wrapped as

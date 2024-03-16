@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.backup
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -183,7 +184,7 @@ public interface BackupPlanProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.backup.BackupPlanProps):
-        BackupPlanProps = Wrapper(cdkObject)
+        BackupPlanProps = CdkObjectWrappers.wrap(cdkObject) as BackupPlanProps
 
     internal fun unwrap(wrapped: BackupPlanProps):
         software.amazon.awscdk.services.backup.BackupPlanProps = (wrapped as CdkObject).cdkObject as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Deprecated
 import kotlin.String
@@ -616,7 +617,7 @@ public interface Behavior {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.Behavior): Behavior =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as Behavior
 
     internal fun unwrap(wrapped: Behavior): software.amazon.awscdk.services.cloudfront.Behavior =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cloudfront.Behavior

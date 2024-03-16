@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -937,7 +938,8 @@ public open class CfnEvaluationForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormQuestionProperty):
-          EvaluationFormQuestionProperty = Wrapper(cdkObject)
+          EvaluationFormQuestionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EvaluationFormQuestionProperty
 
       internal fun unwrap(wrapped: EvaluationFormQuestionProperty):
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormQuestionProperty =
@@ -1146,7 +1148,8 @@ public open class CfnEvaluationForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormQuestionTypePropertiesProperty):
-          EvaluationFormQuestionTypePropertiesProperty = Wrapper(cdkObject)
+          EvaluationFormQuestionTypePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EvaluationFormQuestionTypePropertiesProperty
 
       internal fun unwrap(wrapped: EvaluationFormQuestionTypePropertiesProperty):
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormQuestionTypePropertiesProperty
@@ -1369,7 +1372,8 @@ public open class CfnEvaluationForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormItemProperty):
-          EvaluationFormItemProperty = Wrapper(cdkObject)
+          EvaluationFormItemProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EvaluationFormItemProperty
 
       internal fun unwrap(wrapped: EvaluationFormItemProperty):
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormItemProperty =
@@ -1549,7 +1553,8 @@ public open class CfnEvaluationForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationProperty):
-          EvaluationFormSingleSelectQuestionAutomationProperty = Wrapper(cdkObject)
+          EvaluationFormSingleSelectQuestionAutomationProperty = CdkObjectWrappers.wrap(cdkObject)
+          as EvaluationFormSingleSelectQuestionAutomationProperty
 
       internal fun unwrap(wrapped: EvaluationFormSingleSelectQuestionAutomationProperty):
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationProperty
@@ -1776,7 +1781,8 @@ public open class CfnEvaluationForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionPropertiesProperty):
-          EvaluationFormNumericQuestionPropertiesProperty = Wrapper(cdkObject)
+          EvaluationFormNumericQuestionPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EvaluationFormNumericQuestionPropertiesProperty
 
       internal fun unwrap(wrapped: EvaluationFormNumericQuestionPropertiesProperty):
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionPropertiesProperty
@@ -1969,7 +1975,8 @@ public open class CfnEvaluationForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.SingleSelectQuestionRuleCategoryAutomationProperty):
-          SingleSelectQuestionRuleCategoryAutomationProperty = Wrapper(cdkObject)
+          SingleSelectQuestionRuleCategoryAutomationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SingleSelectQuestionRuleCategoryAutomationProperty
 
       internal fun unwrap(wrapped: SingleSelectQuestionRuleCategoryAutomationProperty):
           software.amazon.awscdk.services.connect.CfnEvaluationForm.SingleSelectQuestionRuleCategoryAutomationProperty
@@ -2208,7 +2215,8 @@ public open class CfnEvaluationForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionPropertiesProperty):
-          EvaluationFormSingleSelectQuestionPropertiesProperty = Wrapper(cdkObject)
+          EvaluationFormSingleSelectQuestionPropertiesProperty = CdkObjectWrappers.wrap(cdkObject)
+          as EvaluationFormSingleSelectQuestionPropertiesProperty
 
       internal fun unwrap(wrapped: EvaluationFormSingleSelectQuestionPropertiesProperty):
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionPropertiesProperty
@@ -2423,7 +2431,8 @@ public open class CfnEvaluationForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionOptionProperty):
-          EvaluationFormSingleSelectQuestionOptionProperty = Wrapper(cdkObject)
+          EvaluationFormSingleSelectQuestionOptionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EvaluationFormSingleSelectQuestionOptionProperty
 
       internal fun unwrap(wrapped: EvaluationFormSingleSelectQuestionOptionProperty):
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionOptionProperty
@@ -2544,7 +2553,7 @@ public open class CfnEvaluationForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.ScoringStrategyProperty):
-          ScoringStrategyProperty = Wrapper(cdkObject)
+          ScoringStrategyProperty = CdkObjectWrappers.wrap(cdkObject) as ScoringStrategyProperty
 
       internal fun unwrap(wrapped: ScoringStrategyProperty):
           software.amazon.awscdk.services.connect.CfnEvaluationForm.ScoringStrategyProperty =
@@ -2716,7 +2725,8 @@ public open class CfnEvaluationForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormBaseItemProperty):
-          EvaluationFormBaseItemProperty = Wrapper(cdkObject)
+          EvaluationFormBaseItemProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EvaluationFormBaseItemProperty
 
       internal fun unwrap(wrapped: EvaluationFormBaseItemProperty):
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormBaseItemProperty =
@@ -2916,7 +2926,8 @@ public open class CfnEvaluationForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionOptionProperty):
-          EvaluationFormNumericQuestionOptionProperty = Wrapper(cdkObject)
+          EvaluationFormNumericQuestionOptionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EvaluationFormNumericQuestionOptionProperty
 
       internal fun unwrap(wrapped: EvaluationFormNumericQuestionOptionProperty):
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionOptionProperty
@@ -3000,7 +3011,8 @@ public open class CfnEvaluationForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.NumericQuestionPropertyValueAutomationProperty):
-          NumericQuestionPropertyValueAutomationProperty = Wrapper(cdkObject)
+          NumericQuestionPropertyValueAutomationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          NumericQuestionPropertyValueAutomationProperty
 
       internal fun unwrap(wrapped: NumericQuestionPropertyValueAutomationProperty):
           software.amazon.awscdk.services.connect.CfnEvaluationForm.NumericQuestionPropertyValueAutomationProperty
@@ -3115,7 +3127,8 @@ public open class CfnEvaluationForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty):
-          EvaluationFormNumericQuestionAutomationProperty = Wrapper(cdkObject)
+          EvaluationFormNumericQuestionAutomationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EvaluationFormNumericQuestionAutomationProperty
 
       internal fun unwrap(wrapped: EvaluationFormNumericQuestionAutomationProperty):
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormNumericQuestionAutomationProperty
@@ -3239,7 +3252,9 @@ public open class CfnEvaluationForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationOptionProperty):
-          EvaluationFormSingleSelectQuestionAutomationOptionProperty = Wrapper(cdkObject)
+          EvaluationFormSingleSelectQuestionAutomationOptionProperty =
+          CdkObjectWrappers.wrap(cdkObject) as
+          EvaluationFormSingleSelectQuestionAutomationOptionProperty
 
       internal fun unwrap(wrapped: EvaluationFormSingleSelectQuestionAutomationOptionProperty):
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSingleSelectQuestionAutomationOptionProperty
@@ -3547,7 +3562,8 @@ public open class CfnEvaluationForm internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSectionProperty):
-          EvaluationFormSectionProperty = Wrapper(cdkObject)
+          EvaluationFormSectionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EvaluationFormSectionProperty
 
       internal fun unwrap(wrapped: EvaluationFormSectionProperty):
           software.amazon.awscdk.services.connect.CfnEvaluationForm.EvaluationFormSectionProperty =

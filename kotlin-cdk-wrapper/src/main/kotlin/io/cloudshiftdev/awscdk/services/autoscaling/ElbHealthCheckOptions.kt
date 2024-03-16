@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -81,7 +82,7 @@ public interface ElbHealthCheckOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.ElbHealthCheckOptions):
-        ElbHealthCheckOptions = Wrapper(cdkObject)
+        ElbHealthCheckOptions = CdkObjectWrappers.wrap(cdkObject) as ElbHealthCheckOptions
 
     internal fun unwrap(wrapped: ElbHealthCheckOptions):
         software.amazon.awscdk.services.autoscaling.ElbHealthCheckOptions = (wrapped as

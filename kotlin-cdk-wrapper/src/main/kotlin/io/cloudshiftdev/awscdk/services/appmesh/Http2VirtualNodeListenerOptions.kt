@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -300,7 +301,8 @@ public interface Http2VirtualNodeListenerOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.Http2VirtualNodeListenerOptions):
-        Http2VirtualNodeListenerOptions = Wrapper(cdkObject)
+        Http2VirtualNodeListenerOptions = CdkObjectWrappers.wrap(cdkObject) as
+        Http2VirtualNodeListenerOptions
 
     internal fun unwrap(wrapped: Http2VirtualNodeListenerOptions):
         software.amazon.awscdk.services.appmesh.Http2VirtualNodeListenerOptions = (wrapped as

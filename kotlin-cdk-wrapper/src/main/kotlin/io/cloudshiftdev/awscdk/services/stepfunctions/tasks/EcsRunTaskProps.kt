@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import io.cloudshiftdev.awscdk.services.ecs.ICluster
@@ -741,7 +742,7 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EcsRunTaskProps):
-        EcsRunTaskProps = Wrapper(cdkObject)
+        EcsRunTaskProps = CdkObjectWrappers.wrap(cdkObject) as EcsRunTaskProps
 
     internal fun unwrap(wrapped: EcsRunTaskProps):
         software.amazon.awscdk.services.stepfunctions.tasks.EcsRunTaskProps = (wrapped as

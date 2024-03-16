@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.opensearchservice
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -258,7 +259,7 @@ public interface SAMLOptionsProperty {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.SAMLOptionsProperty):
-        SAMLOptionsProperty = Wrapper(cdkObject)
+        SAMLOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as SAMLOptionsProperty
 
     internal fun unwrap(wrapped: SAMLOptionsProperty):
         software.amazon.awscdk.services.opensearchservice.SAMLOptionsProperty = (wrapped as

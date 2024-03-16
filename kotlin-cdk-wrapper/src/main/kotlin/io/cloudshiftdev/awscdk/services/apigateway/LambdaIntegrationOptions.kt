@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Boolean
 import kotlin.String
@@ -503,7 +504,7 @@ public interface LambdaIntegrationOptions : IntegrationOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.LambdaIntegrationOptions):
-        LambdaIntegrationOptions = Wrapper(cdkObject)
+        LambdaIntegrationOptions = CdkObjectWrappers.wrap(cdkObject) as LambdaIntegrationOptions
 
     internal fun unwrap(wrapped: LambdaIntegrationOptions):
         software.amazon.awscdk.services.apigateway.LambdaIntegrationOptions = (wrapped as

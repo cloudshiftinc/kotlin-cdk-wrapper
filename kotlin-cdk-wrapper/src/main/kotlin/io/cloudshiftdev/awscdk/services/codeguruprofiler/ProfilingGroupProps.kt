@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codeguruprofiler
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -100,7 +101,7 @@ public interface ProfilingGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codeguruprofiler.ProfilingGroupProps):
-        ProfilingGroupProps = Wrapper(cdkObject)
+        ProfilingGroupProps = CdkObjectWrappers.wrap(cdkObject) as ProfilingGroupProps
 
     internal fun unwrap(wrapped: ProfilingGroupProps):
         software.amazon.awscdk.services.codeguruprofiler.ProfilingGroupProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -108,7 +109,7 @@ public interface EngineVersion {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.EngineVersion): EngineVersion =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as EngineVersion
 
     internal fun unwrap(wrapped: EngineVersion): software.amazon.awscdk.services.rds.EngineVersion =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.rds.EngineVersion

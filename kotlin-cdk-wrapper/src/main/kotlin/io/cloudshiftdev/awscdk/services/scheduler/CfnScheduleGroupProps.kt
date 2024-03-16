@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.scheduler
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -137,7 +138,7 @@ public interface CfnScheduleGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.scheduler.CfnScheduleGroupProps):
-        CfnScheduleGroupProps = Wrapper(cdkObject)
+        CfnScheduleGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnScheduleGroupProps
 
     internal fun unwrap(wrapped: CfnScheduleGroupProps):
         software.amazon.awscdk.services.scheduler.CfnScheduleGroupProps = (wrapped as

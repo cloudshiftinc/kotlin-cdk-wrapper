@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.events
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Boolean
 import kotlin.String
@@ -333,7 +334,7 @@ public interface RuleProps : EventCommonOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.RuleProps): RuleProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as RuleProps
 
     internal fun unwrap(wrapped: RuleProps): software.amazon.awscdk.services.events.RuleProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.events.RuleProps

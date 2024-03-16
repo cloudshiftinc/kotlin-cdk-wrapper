@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.opensearchservice
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -108,7 +109,7 @@ public interface WindowStartTime {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.WindowStartTime):
-        WindowStartTime = Wrapper(cdkObject)
+        WindowStartTime = CdkObjectWrappers.wrap(cdkObject) as WindowStartTime
 
     internal fun unwrap(wrapped: WindowStartTime):
         software.amazon.awscdk.services.opensearchservice.WindowStartTime = (wrapped as

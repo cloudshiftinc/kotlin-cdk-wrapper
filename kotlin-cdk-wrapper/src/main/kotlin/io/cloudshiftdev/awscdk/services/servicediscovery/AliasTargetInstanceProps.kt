@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.servicediscovery
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -138,7 +139,7 @@ public interface AliasTargetInstanceProps : BaseInstanceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicediscovery.AliasTargetInstanceProps):
-        AliasTargetInstanceProps = Wrapper(cdkObject)
+        AliasTargetInstanceProps = CdkObjectWrappers.wrap(cdkObject) as AliasTargetInstanceProps
 
     internal fun unwrap(wrapped: AliasTargetInstanceProps):
         software.amazon.awscdk.services.servicediscovery.AliasTargetInstanceProps = (wrapped as

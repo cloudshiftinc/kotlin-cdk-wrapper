@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -153,7 +154,7 @@ public interface Environment {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.Environment): Environment =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as Environment
 
     internal fun unwrap(wrapped: Environment): software.amazon.awscdk.Environment = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.Environment

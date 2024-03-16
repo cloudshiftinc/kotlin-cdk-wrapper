@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.robomaker
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -113,7 +114,8 @@ public interface CfnRobotApplicationVersionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.robomaker.CfnRobotApplicationVersionProps):
-        CfnRobotApplicationVersionProps = Wrapper(cdkObject)
+        CfnRobotApplicationVersionProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnRobotApplicationVersionProps
 
     internal fun unwrap(wrapped: CfnRobotApplicationVersionProps):
         software.amazon.awscdk.services.robomaker.CfnRobotApplicationVersionProps = (wrapped as

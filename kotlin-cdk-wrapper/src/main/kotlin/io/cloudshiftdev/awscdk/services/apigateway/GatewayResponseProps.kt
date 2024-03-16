@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -156,7 +157,7 @@ public interface GatewayResponseProps : GatewayResponseOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.GatewayResponseProps):
-        GatewayResponseProps = Wrapper(cdkObject)
+        GatewayResponseProps = CdkObjectWrappers.wrap(cdkObject) as GatewayResponseProps
 
     internal fun unwrap(wrapped: GatewayResponseProps):
         software.amazon.awscdk.services.apigateway.GatewayResponseProps = (wrapped as

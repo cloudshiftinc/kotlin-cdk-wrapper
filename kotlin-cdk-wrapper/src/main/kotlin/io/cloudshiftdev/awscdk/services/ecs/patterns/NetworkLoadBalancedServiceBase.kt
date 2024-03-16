@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ecs.patterns
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecs.ICluster
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.NetworkListener
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancer
@@ -48,15 +49,11 @@ public abstract class NetworkLoadBalancedServiceBase internal constructor(
   public open fun targetGroup(): NetworkTargetGroup =
       unwrap(this).getTargetGroup().let(NetworkTargetGroup::wrap)
 
-  private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedServiceBase,
-  ) : NetworkLoadBalancedServiceBase(cdkObject)
-
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedServiceBase):
-        NetworkLoadBalancedServiceBase = Wrapper(cdkObject)
+        NetworkLoadBalancedServiceBase = CdkObjectWrappers.wrap(cdkObject) as
+        NetworkLoadBalancedServiceBase
 
     internal fun unwrap(wrapped: NetworkLoadBalancedServiceBase):
         software.amazon.awscdk.services.ecs.patterns.NetworkLoadBalancedServiceBase = (wrapped as

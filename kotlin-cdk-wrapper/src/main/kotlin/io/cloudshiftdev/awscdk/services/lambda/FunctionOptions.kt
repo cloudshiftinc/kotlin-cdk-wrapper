@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codeguruprofiler.IProfilingGroup
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
@@ -1943,7 +1944,7 @@ public interface FunctionOptions : EventInvokeConfigOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.FunctionOptions):
-        FunctionOptions = Wrapper(cdkObject)
+        FunctionOptions = CdkObjectWrappers.wrap(cdkObject) as FunctionOptions
 
     internal fun unwrap(wrapped: FunctionOptions):
         software.amazon.awscdk.services.lambda.FunctionOptions = (wrapped as CdkObject).cdkObject as

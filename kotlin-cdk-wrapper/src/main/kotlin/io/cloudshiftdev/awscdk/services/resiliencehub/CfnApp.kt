@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -1326,7 +1327,8 @@ public open class CfnApp internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.PhysicalResourceIdProperty):
-          PhysicalResourceIdProperty = Wrapper(cdkObject)
+          PhysicalResourceIdProperty = CdkObjectWrappers.wrap(cdkObject) as
+          PhysicalResourceIdProperty
 
       internal fun unwrap(wrapped: PhysicalResourceIdProperty):
           software.amazon.awscdk.services.resiliencehub.CfnApp.PhysicalResourceIdProperty = (wrapped
@@ -1576,7 +1578,7 @@ public open class CfnApp internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty):
-          PermissionModelProperty = Wrapper(cdkObject)
+          PermissionModelProperty = CdkObjectWrappers.wrap(cdkObject) as PermissionModelProperty
 
       internal fun unwrap(wrapped: PermissionModelProperty):
           software.amazon.awscdk.services.resiliencehub.CfnApp.PermissionModelProperty = (wrapped as
@@ -1854,7 +1856,7 @@ public open class CfnApp internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.ResourceMappingProperty):
-          ResourceMappingProperty = Wrapper(cdkObject)
+          ResourceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as ResourceMappingProperty
 
       internal fun unwrap(wrapped: ResourceMappingProperty):
           software.amazon.awscdk.services.resiliencehub.CfnApp.ResourceMappingProperty = (wrapped as
@@ -2023,7 +2025,7 @@ public open class CfnApp internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty):
-          EventSubscriptionProperty = Wrapper(cdkObject)
+          EventSubscriptionProperty = CdkObjectWrappers.wrap(cdkObject) as EventSubscriptionProperty
 
       internal fun unwrap(wrapped: EventSubscriptionProperty):
           software.amazon.awscdk.services.resiliencehub.CfnApp.EventSubscriptionProperty = (wrapped

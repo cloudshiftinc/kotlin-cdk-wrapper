@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -364,7 +365,7 @@ public open class CfnCachePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.HeadersConfigProperty):
-          HeadersConfigProperty = Wrapper(cdkObject)
+          HeadersConfigProperty = CdkObjectWrappers.wrap(cdkObject) as HeadersConfigProperty
 
       internal fun unwrap(wrapped: HeadersConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.HeadersConfigProperty = (wrapped
@@ -999,7 +1000,8 @@ public open class CfnCachePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty):
-          ParametersInCacheKeyAndForwardedToOriginProperty = Wrapper(cdkObject)
+          ParametersInCacheKeyAndForwardedToOriginProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ParametersInCacheKeyAndForwardedToOriginProperty
 
       internal fun unwrap(wrapped: ParametersInCacheKeyAndForwardedToOriginProperty):
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.ParametersInCacheKeyAndForwardedToOriginProperty
@@ -1173,7 +1175,7 @@ public open class CfnCachePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty):
-          CookiesConfigProperty = Wrapper(cdkObject)
+          CookiesConfigProperty = CdkObjectWrappers.wrap(cdkObject) as CookiesConfigProperty
 
       internal fun unwrap(wrapped: CookiesConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CookiesConfigProperty = (wrapped
@@ -1353,7 +1355,8 @@ public open class CfnCachePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.QueryStringsConfigProperty):
-          QueryStringsConfigProperty = Wrapper(cdkObject)
+          QueryStringsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          QueryStringsConfigProperty
 
       internal fun unwrap(wrapped: QueryStringsConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.QueryStringsConfigProperty =
@@ -1773,7 +1776,7 @@ public open class CfnCachePolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty):
-          CachePolicyConfigProperty = Wrapper(cdkObject)
+          CachePolicyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as CachePolicyConfigProperty
 
       internal fun unwrap(wrapped: CachePolicyConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnCachePolicy.CachePolicyConfigProperty =

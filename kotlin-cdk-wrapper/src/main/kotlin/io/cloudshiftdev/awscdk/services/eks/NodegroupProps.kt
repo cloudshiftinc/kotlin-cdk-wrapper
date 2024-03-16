@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.eks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.InstanceType
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import io.cloudshiftdev.awscdk.services.iam.IRole
@@ -746,7 +747,7 @@ public interface NodegroupProps : NodegroupOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.NodegroupProps): NodegroupProps
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as NodegroupProps
 
     internal fun unwrap(wrapped: NodegroupProps): software.amazon.awscdk.services.eks.NodegroupProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.eks.NodegroupProps

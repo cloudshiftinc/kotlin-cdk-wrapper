@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -440,7 +441,7 @@ public open class CfnEnabledBaseline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.controltower.CfnEnabledBaseline.ParameterProperty):
-          ParameterProperty = Wrapper(cdkObject)
+          ParameterProperty = CdkObjectWrappers.wrap(cdkObject) as ParameterProperty
 
       internal fun unwrap(wrapped: ParameterProperty):
           software.amazon.awscdk.services.controltower.CfnEnabledBaseline.ParameterProperty =

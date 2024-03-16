@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigatewayv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.collections.List
 
@@ -86,7 +87,7 @@ public interface GrantInvokeOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.GrantInvokeOptions):
-        GrantInvokeOptions = Wrapper(cdkObject)
+        GrantInvokeOptions = CdkObjectWrappers.wrap(cdkObject) as GrantInvokeOptions
 
     internal fun unwrap(wrapped: GrantInvokeOptions):
         software.amazon.awscdk.services.apigatewayv2.GrantInvokeOptions = (wrapped as

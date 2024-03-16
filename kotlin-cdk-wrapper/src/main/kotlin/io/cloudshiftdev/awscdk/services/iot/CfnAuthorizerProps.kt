@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -406,7 +407,7 @@ public interface CfnAuthorizerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnAuthorizerProps):
-        CfnAuthorizerProps = Wrapper(cdkObject)
+        CfnAuthorizerProps = CdkObjectWrappers.wrap(cdkObject) as CfnAuthorizerProps
 
     internal fun unwrap(wrapped: CfnAuthorizerProps):
         software.amazon.awscdk.services.iot.CfnAuthorizerProps = (wrapped as CdkObject).cdkObject as

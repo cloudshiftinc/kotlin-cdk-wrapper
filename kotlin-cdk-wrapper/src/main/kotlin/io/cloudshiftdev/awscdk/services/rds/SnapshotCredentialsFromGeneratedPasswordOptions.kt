@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.secretsmanager.ReplicaRegion
 import kotlin.String
@@ -157,7 +158,8 @@ public interface SnapshotCredentialsFromGeneratedPasswordOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rds.SnapshotCredentialsFromGeneratedPasswordOptions):
-        SnapshotCredentialsFromGeneratedPasswordOptions = Wrapper(cdkObject)
+        SnapshotCredentialsFromGeneratedPasswordOptions = CdkObjectWrappers.wrap(cdkObject) as
+        SnapshotCredentialsFromGeneratedPasswordOptions
 
     internal fun unwrap(wrapped: SnapshotCredentialsFromGeneratedPasswordOptions):
         software.amazon.awscdk.services.rds.SnapshotCredentialsFromGeneratedPasswordOptions =

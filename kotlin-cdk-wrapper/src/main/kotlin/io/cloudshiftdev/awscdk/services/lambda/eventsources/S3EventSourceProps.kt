@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.lambda.eventsources
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.EventType
 import io.cloudshiftdev.awscdk.services.s3.NotificationKeyFilter
 import kotlin.Unit
@@ -137,7 +138,7 @@ public interface S3EventSourceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.eventsources.S3EventSourceProps):
-        S3EventSourceProps = Wrapper(cdkObject)
+        S3EventSourceProps = CdkObjectWrappers.wrap(cdkObject) as S3EventSourceProps
 
     internal fun unwrap(wrapped: S3EventSourceProps):
         software.amazon.awscdk.services.lambda.eventsources.S3EventSourceProps = (wrapped as

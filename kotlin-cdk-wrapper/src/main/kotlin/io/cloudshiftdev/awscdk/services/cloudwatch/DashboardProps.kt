@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -367,7 +368,7 @@ public interface DashboardProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.DashboardProps):
-        DashboardProps = Wrapper(cdkObject)
+        DashboardProps = CdkObjectWrappers.wrap(cdkObject) as DashboardProps
 
     internal fun unwrap(wrapped: DashboardProps):
         software.amazon.awscdk.services.cloudwatch.DashboardProps = (wrapped as CdkObject).cdkObject

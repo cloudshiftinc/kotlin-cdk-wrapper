@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -359,7 +360,7 @@ public interface CfnTaskDefinitionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnTaskDefinitionProps):
-        CfnTaskDefinitionProps = Wrapper(cdkObject)
+        CfnTaskDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as CfnTaskDefinitionProps
 
     internal fun unwrap(wrapped: CfnTaskDefinitionProps):
         software.amazon.awscdk.services.iotwireless.CfnTaskDefinitionProps = (wrapped as

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.ArtifactPath
 import kotlin.String
 import kotlin.collections.List
@@ -45,10 +46,6 @@ public abstract class StackInstances internal constructor(
   internal override val cdkObject:
       software.amazon.awscdk.services.codepipeline.actions.StackInstances,
 ) : CdkObject(cdkObject) {
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codepipeline.actions.StackInstances,
-  ) : StackInstances(cdkObject)
-
   public companion object {
     public fun fromArtifactPath(artifactPath: ArtifactPath, regions: List<String>): StackInstances =
         software.amazon.awscdk.services.codepipeline.actions.StackInstances.fromArtifactPath(artifactPath.let(ArtifactPath::unwrap),
@@ -64,7 +61,7 @@ public abstract class StackInstances internal constructor(
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.StackInstances):
-        StackInstances = Wrapper(cdkObject)
+        StackInstances = CdkObjectWrappers.wrap(cdkObject) as StackInstances
 
     internal fun unwrap(wrapped: StackInstances):
         software.amazon.awscdk.services.codepipeline.actions.StackInstances = (wrapped as

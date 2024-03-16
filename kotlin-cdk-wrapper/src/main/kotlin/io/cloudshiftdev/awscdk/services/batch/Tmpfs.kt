@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.batch
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -150,7 +151,7 @@ public interface Tmpfs {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.Tmpfs): Tmpfs =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as Tmpfs
 
     internal fun unwrap(wrapped: Tmpfs): software.amazon.awscdk.services.batch.Tmpfs = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.batch.Tmpfs

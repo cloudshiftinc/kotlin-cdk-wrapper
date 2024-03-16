@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.elasticache
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -144,7 +145,8 @@ public interface CfnSecurityGroupIngressProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnSecurityGroupIngressProps):
-        CfnSecurityGroupIngressProps = Wrapper(cdkObject)
+        CfnSecurityGroupIngressProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnSecurityGroupIngressProps
 
     internal fun unwrap(wrapped: CfnSecurityGroupIngressProps):
         software.amazon.awscdk.services.elasticache.CfnSecurityGroupIngressProps = (wrapped as

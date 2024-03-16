@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.IMetric
 import kotlin.Number
 import kotlin.Unit
@@ -345,7 +346,7 @@ public interface StepScalingPolicyProps : BasicStepScalingPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.StepScalingPolicyProps):
-        StepScalingPolicyProps = Wrapper(cdkObject)
+        StepScalingPolicyProps = CdkObjectWrappers.wrap(cdkObject) as StepScalingPolicyProps
 
     internal fun unwrap(wrapped: StepScalingPolicyProps):
         software.amazon.awscdk.services.autoscaling.StepScalingPolicyProps = (wrapped as

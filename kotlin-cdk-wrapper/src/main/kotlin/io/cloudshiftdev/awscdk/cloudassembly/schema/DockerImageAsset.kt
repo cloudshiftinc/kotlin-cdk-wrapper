@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -144,7 +145,7 @@ public interface DockerImageAsset {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.DockerImageAsset):
-        DockerImageAsset = Wrapper(cdkObject)
+        DockerImageAsset = CdkObjectWrappers.wrap(cdkObject) as DockerImageAsset
 
     internal fun unwrap(wrapped: DockerImageAsset):
         software.amazon.awscdk.cloudassembly.schema.DockerImageAsset = (wrapped as

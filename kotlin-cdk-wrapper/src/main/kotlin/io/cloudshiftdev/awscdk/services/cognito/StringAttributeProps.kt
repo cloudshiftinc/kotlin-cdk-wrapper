@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.Unit
@@ -136,7 +137,7 @@ public interface StringAttributeProps : StringAttributeConstraints, CustomAttrib
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.StringAttributeProps):
-        StringAttributeProps = Wrapper(cdkObject)
+        StringAttributeProps = CdkObjectWrappers.wrap(cdkObject) as StringAttributeProps
 
     internal fun unwrap(wrapped: StringAttributeProps):
         software.amazon.awscdk.services.cognito.StringAttributeProps = (wrapped as

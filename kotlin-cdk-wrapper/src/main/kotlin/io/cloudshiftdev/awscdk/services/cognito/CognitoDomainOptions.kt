@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -82,7 +83,7 @@ public interface CognitoDomainOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CognitoDomainOptions):
-        CognitoDomainOptions = Wrapper(cdkObject)
+        CognitoDomainOptions = CdkObjectWrappers.wrap(cdkObject) as CognitoDomainOptions
 
     internal fun unwrap(wrapped: CognitoDomainOptions):
         software.amazon.awscdk.services.cognito.CognitoDomainOptions = (wrapped as

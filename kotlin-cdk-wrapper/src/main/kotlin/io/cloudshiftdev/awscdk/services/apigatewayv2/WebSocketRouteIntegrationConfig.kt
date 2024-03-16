@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigatewayv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.String
 import kotlin.Unit
@@ -273,7 +274,8 @@ public interface WebSocketRouteIntegrationConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegrationConfig):
-        WebSocketRouteIntegrationConfig = Wrapper(cdkObject)
+        WebSocketRouteIntegrationConfig = CdkObjectWrappers.wrap(cdkObject) as
+        WebSocketRouteIntegrationConfig
 
     internal fun unwrap(wrapped: WebSocketRouteIntegrationConfig):
         software.amazon.awscdk.services.apigatewayv2.WebSocketRouteIntegrationConfig = (wrapped as

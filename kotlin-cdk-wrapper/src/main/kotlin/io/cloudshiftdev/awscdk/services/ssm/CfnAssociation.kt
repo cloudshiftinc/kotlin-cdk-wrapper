@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1216,7 +1217,7 @@ public open class CfnAssociation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation.TargetProperty):
-          TargetProperty = Wrapper(cdkObject)
+          TargetProperty = CdkObjectWrappers.wrap(cdkObject) as TargetProperty
 
       internal fun unwrap(wrapped: TargetProperty):
           software.amazon.awscdk.services.ssm.CfnAssociation.TargetProperty = (wrapped as
@@ -1353,7 +1354,7 @@ public open class CfnAssociation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty):
-          S3OutputLocationProperty = Wrapper(cdkObject)
+          S3OutputLocationProperty = CdkObjectWrappers.wrap(cdkObject) as S3OutputLocationProperty
 
       internal fun unwrap(wrapped: S3OutputLocationProperty):
           software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty = (wrapped as
@@ -1499,7 +1500,8 @@ public open class CfnAssociation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty):
-          InstanceAssociationOutputLocationProperty = Wrapper(cdkObject)
+          InstanceAssociationOutputLocationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          InstanceAssociationOutputLocationProperty
 
       internal fun unwrap(wrapped: InstanceAssociationOutputLocationProperty):
           software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty

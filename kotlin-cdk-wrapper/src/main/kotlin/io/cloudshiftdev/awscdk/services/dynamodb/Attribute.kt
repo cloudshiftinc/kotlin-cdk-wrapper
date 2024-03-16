@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.dynamodb
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -95,7 +96,7 @@ public interface Attribute {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.Attribute): Attribute =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as Attribute
 
     internal fun unwrap(wrapped: Attribute): software.amazon.awscdk.services.dynamodb.Attribute =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.dynamodb.Attribute

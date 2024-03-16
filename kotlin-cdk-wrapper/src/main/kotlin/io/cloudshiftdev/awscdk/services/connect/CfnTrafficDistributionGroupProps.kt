@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.connect
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -184,7 +185,8 @@ public interface CfnTrafficDistributionGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnTrafficDistributionGroupProps):
-        CfnTrafficDistributionGroupProps = Wrapper(cdkObject)
+        CfnTrafficDistributionGroupProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnTrafficDistributionGroupProps
 
     internal fun unwrap(wrapped: CfnTrafficDistributionGroupProps):
         software.amazon.awscdk.services.connect.CfnTrafficDistributionGroupProps = (wrapped as

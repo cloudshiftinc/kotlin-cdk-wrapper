@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnOutput
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codebuild.BuildEnvironment
 import io.cloudshiftdev.awscdk.services.codebuild.BuildSpec
 import io.cloudshiftdev.awscdk.services.codebuild.Cache
@@ -882,7 +883,7 @@ public interface CodeBuildStepProps : ShellStepProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.CodeBuildStepProps):
-        CodeBuildStepProps = Wrapper(cdkObject)
+        CodeBuildStepProps = CdkObjectWrappers.wrap(cdkObject) as CodeBuildStepProps
 
     internal fun unwrap(wrapped: CodeBuildStepProps):
         software.amazon.awscdk.pipelines.CodeBuildStepProps = (wrapped as CdkObject).cdkObject as

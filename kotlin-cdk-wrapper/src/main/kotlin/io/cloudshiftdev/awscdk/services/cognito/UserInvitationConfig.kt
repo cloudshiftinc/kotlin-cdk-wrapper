@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -140,7 +141,7 @@ public interface UserInvitationConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.UserInvitationConfig):
-        UserInvitationConfig = Wrapper(cdkObject)
+        UserInvitationConfig = CdkObjectWrappers.wrap(cdkObject) as UserInvitationConfig
 
     internal fun unwrap(wrapped: UserInvitationConfig):
         software.amazon.awscdk.services.cognito.UserInvitationConfig = (wrapped as

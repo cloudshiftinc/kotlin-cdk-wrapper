@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.workspacesweb
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -369,7 +370,7 @@ public interface CfnIdentityProviderProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.workspacesweb.CfnIdentityProviderProps):
-        CfnIdentityProviderProps = Wrapper(cdkObject)
+        CfnIdentityProviderProps = CdkObjectWrappers.wrap(cdkObject) as CfnIdentityProviderProps
 
     internal fun unwrap(wrapped: CfnIdentityProviderProps):
         software.amazon.awscdk.services.workspacesweb.CfnIdentityProviderProps = (wrapped as

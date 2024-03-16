@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -198,7 +199,7 @@ public interface EventInvokeConfigProps : EventInvokeConfigOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.EventInvokeConfigProps):
-        EventInvokeConfigProps = Wrapper(cdkObject)
+        EventInvokeConfigProps = CdkObjectWrappers.wrap(cdkObject) as EventInvokeConfigProps
 
     internal fun unwrap(wrapped: EventInvokeConfigProps):
         software.amazon.awscdk.services.lambda.EventInvokeConfigProps = (wrapped as

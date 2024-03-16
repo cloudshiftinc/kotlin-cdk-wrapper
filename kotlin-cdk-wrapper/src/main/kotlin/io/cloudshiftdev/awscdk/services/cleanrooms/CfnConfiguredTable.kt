@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -646,7 +647,7 @@ public open class CfnConfiguredTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty):
-          TableReferenceProperty = Wrapper(cdkObject)
+          TableReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as TableReferenceProperty
 
       internal fun unwrap(wrapped: TableReferenceProperty):
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.TableReferenceProperty =
@@ -806,7 +807,8 @@ public open class CfnConfiguredTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregationConstraintProperty):
-          AggregationConstraintProperty = Wrapper(cdkObject)
+          AggregationConstraintProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AggregationConstraintProperty
 
       internal fun unwrap(wrapped: AggregationConstraintProperty):
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregationConstraintProperty
@@ -1204,7 +1206,8 @@ public open class CfnConfiguredTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleAggregationProperty):
-          AnalysisRuleAggregationProperty = Wrapper(cdkObject)
+          AnalysisRuleAggregationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AnalysisRuleAggregationProperty
 
       internal fun unwrap(wrapped: AnalysisRuleAggregationProperty):
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleAggregationProperty
@@ -1357,7 +1360,8 @@ public open class CfnConfiguredTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleCustomProperty):
-          AnalysisRuleCustomProperty = Wrapper(cdkObject)
+          AnalysisRuleCustomProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AnalysisRuleCustomProperty
 
       internal fun unwrap(wrapped: AnalysisRuleCustomProperty):
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleCustomProperty =
@@ -1476,7 +1480,7 @@ public open class CfnConfiguredTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregateColumnProperty):
-          AggregateColumnProperty = Wrapper(cdkObject)
+          AggregateColumnProperty = CdkObjectWrappers.wrap(cdkObject) as AggregateColumnProperty
 
       internal fun unwrap(wrapped: AggregateColumnProperty):
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AggregateColumnProperty =
@@ -1616,7 +1620,8 @@ public open class CfnConfiguredTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyProperty):
-          ConfiguredTableAnalysisRulePolicyProperty = Wrapper(cdkObject)
+          ConfiguredTableAnalysisRulePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ConfiguredTableAnalysisRulePolicyProperty
 
       internal fun unwrap(wrapped: ConfiguredTableAnalysisRulePolicyProperty):
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyProperty
@@ -1725,7 +1730,8 @@ public open class CfnConfiguredTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.GlueTableReferenceProperty):
-          GlueTableReferenceProperty = Wrapper(cdkObject)
+          GlueTableReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as
+          GlueTableReferenceProperty
 
       internal fun unwrap(wrapped: GlueTableReferenceProperty):
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.GlueTableReferenceProperty =
@@ -1913,7 +1919,7 @@ public open class CfnConfiguredTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleListProperty):
-          AnalysisRuleListProperty = Wrapper(cdkObject)
+          AnalysisRuleListProperty = CdkObjectWrappers.wrap(cdkObject) as AnalysisRuleListProperty
 
       internal fun unwrap(wrapped: AnalysisRuleListProperty):
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleListProperty =
@@ -2080,7 +2086,7 @@ public open class CfnConfiguredTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleProperty):
-          AnalysisRuleProperty = Wrapper(cdkObject)
+          AnalysisRuleProperty = CdkObjectWrappers.wrap(cdkObject) as AnalysisRuleProperty
 
       internal fun unwrap(wrapped: AnalysisRuleProperty):
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleProperty =
@@ -2330,7 +2336,8 @@ public open class CfnConfiguredTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyV1Property):
-          ConfiguredTableAnalysisRulePolicyV1Property = Wrapper(cdkObject)
+          ConfiguredTableAnalysisRulePolicyV1Property = CdkObjectWrappers.wrap(cdkObject) as
+          ConfiguredTableAnalysisRulePolicyV1Property
 
       internal fun unwrap(wrapped: ConfiguredTableAnalysisRulePolicyV1Property):
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyV1Property

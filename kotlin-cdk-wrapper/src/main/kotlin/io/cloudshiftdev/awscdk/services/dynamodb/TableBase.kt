@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.dynamodb
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.IMetric
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
@@ -551,13 +552,9 @@ public abstract class TableBase internal constructor(
    */
   public override fun tableStreamArn(): String? = unwrap(this).getTableStreamArn()
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.TableBase,
-  ) : TableBase(cdkObject)
-
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.TableBase): TableBase =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as TableBase
 
     internal fun unwrap(wrapped: TableBase): software.amazon.awscdk.services.dynamodb.TableBase =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.dynamodb.TableBase

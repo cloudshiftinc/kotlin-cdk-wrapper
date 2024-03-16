@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.events
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -159,7 +160,7 @@ public interface RuleTargetInputProperties {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.RuleTargetInputProperties):
-        RuleTargetInputProperties = Wrapper(cdkObject)
+        RuleTargetInputProperties = CdkObjectWrappers.wrap(cdkObject) as RuleTargetInputProperties
 
     internal fun unwrap(wrapped: RuleTargetInputProperties):
         software.amazon.awscdk.services.events.RuleTargetInputProperties = (wrapped as

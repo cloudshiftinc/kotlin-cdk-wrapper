@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -634,7 +635,8 @@ public open class CfnConnectPeer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectPeer.ConnectPeerBgpConfigurationProperty):
-          ConnectPeerBgpConfigurationProperty = Wrapper(cdkObject)
+          ConnectPeerBgpConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ConnectPeerBgpConfigurationProperty
 
       internal fun unwrap(wrapped: ConnectPeerBgpConfigurationProperty):
           software.amazon.awscdk.services.networkmanager.CfnConnectPeer.ConnectPeerBgpConfigurationProperty
@@ -715,7 +717,7 @@ public open class CfnConnectPeer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectPeer.BgpOptionsProperty):
-          BgpOptionsProperty = Wrapper(cdkObject)
+          BgpOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as BgpOptionsProperty
 
       internal fun unwrap(wrapped: BgpOptionsProperty):
           software.amazon.awscdk.services.networkmanager.CfnConnectPeer.BgpOptionsProperty =
@@ -946,7 +948,8 @@ public open class CfnConnectPeer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectPeer.ConnectPeerConfigurationProperty):
-          ConnectPeerConfigurationProperty = Wrapper(cdkObject)
+          ConnectPeerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ConnectPeerConfigurationProperty
 
       internal fun unwrap(wrapped: ConnectPeerConfigurationProperty):
           software.amazon.awscdk.services.networkmanager.CfnConnectPeer.ConnectPeerConfigurationProperty

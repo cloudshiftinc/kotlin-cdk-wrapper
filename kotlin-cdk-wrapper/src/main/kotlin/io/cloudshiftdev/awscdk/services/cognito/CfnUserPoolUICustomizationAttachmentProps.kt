@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -146,7 +147,8 @@ public interface CfnUserPoolUICustomizationAttachmentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnUserPoolUICustomizationAttachmentProps):
-        CfnUserPoolUICustomizationAttachmentProps = Wrapper(cdkObject)
+        CfnUserPoolUICustomizationAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnUserPoolUICustomizationAttachmentProps
 
     internal fun unwrap(wrapped: CfnUserPoolUICustomizationAttachmentProps):
         software.amazon.awscdk.services.cognito.CfnUserPoolUICustomizationAttachmentProps = (wrapped

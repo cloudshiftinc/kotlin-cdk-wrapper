@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.transfer
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -386,7 +387,7 @@ public interface CfnAgreementProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnAgreementProps):
-        CfnAgreementProps = Wrapper(cdkObject)
+        CfnAgreementProps = CdkObjectWrappers.wrap(cdkObject) as CfnAgreementProps
 
     internal fun unwrap(wrapped: CfnAgreementProps):
         software.amazon.awscdk.services.transfer.CfnAgreementProps = (wrapped as

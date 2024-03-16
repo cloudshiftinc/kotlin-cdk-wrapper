@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecr
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.OnEventOptions
 import io.cloudshiftdev.awscdk.services.events.Rule
 import io.cloudshiftdev.awscdk.services.iam.AddToResourcePolicyResult
@@ -307,13 +308,9 @@ public abstract class RepositoryBase internal constructor(
   public override fun repositoryUriForTagOrDigest(tagOrDigest: String): String =
       unwrap(this).repositoryUriForTagOrDigest(tagOrDigest)
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecr.RepositoryBase,
-  ) : RepositoryBase(cdkObject)
-
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecr.RepositoryBase): RepositoryBase
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as RepositoryBase
 
     internal fun unwrap(wrapped: RepositoryBase): software.amazon.awscdk.services.ecr.RepositoryBase
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecr.RepositoryBase

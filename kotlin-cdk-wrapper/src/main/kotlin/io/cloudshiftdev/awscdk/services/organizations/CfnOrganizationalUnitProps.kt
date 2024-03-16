@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.organizations
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -274,7 +275,7 @@ public interface CfnOrganizationalUnitProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.organizations.CfnOrganizationalUnitProps):
-        CfnOrganizationalUnitProps = Wrapper(cdkObject)
+        CfnOrganizationalUnitProps = CdkObjectWrappers.wrap(cdkObject) as CfnOrganizationalUnitProps
 
     internal fun unwrap(wrapped: CfnOrganizationalUnitProps):
         software.amazon.awscdk.services.organizations.CfnOrganizationalUnitProps = (wrapped as

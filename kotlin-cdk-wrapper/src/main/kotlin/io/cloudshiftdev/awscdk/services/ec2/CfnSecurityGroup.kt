@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -1019,7 +1020,7 @@ public open class CfnSecurityGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroup.IngressProperty):
-          IngressProperty = Wrapper(cdkObject)
+          IngressProperty = CdkObjectWrappers.wrap(cdkObject) as IngressProperty
 
       internal fun unwrap(wrapped: IngressProperty):
           software.amazon.awscdk.services.ec2.CfnSecurityGroup.IngressProperty = (wrapped as
@@ -1455,7 +1456,7 @@ public open class CfnSecurityGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnSecurityGroup.EgressProperty):
-          EgressProperty = Wrapper(cdkObject)
+          EgressProperty = CdkObjectWrappers.wrap(cdkObject) as EgressProperty
 
       internal fun unwrap(wrapped: EgressProperty):
           software.amazon.awscdk.services.ec2.CfnSecurityGroup.EgressProperty = (wrapped as

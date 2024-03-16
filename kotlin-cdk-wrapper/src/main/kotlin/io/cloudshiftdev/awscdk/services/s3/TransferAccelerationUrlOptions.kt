@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.s3
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -75,7 +76,8 @@ public interface TransferAccelerationUrlOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.TransferAccelerationUrlOptions):
-        TransferAccelerationUrlOptions = Wrapper(cdkObject)
+        TransferAccelerationUrlOptions = CdkObjectWrappers.wrap(cdkObject) as
+        TransferAccelerationUrlOptions
 
     internal fun unwrap(wrapped: TransferAccelerationUrlOptions):
         software.amazon.awscdk.services.s3.TransferAccelerationUrlOptions = (wrapped as

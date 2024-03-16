@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront.origins
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudfront.IOriginAccessIdentity
 import io.cloudshiftdev.awscdk.services.cloudfront.OriginProps
 import kotlin.Boolean
@@ -256,7 +257,7 @@ public interface S3OriginProps : OriginProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.origins.S3OriginProps):
-        S3OriginProps = Wrapper(cdkObject)
+        S3OriginProps = CdkObjectWrappers.wrap(cdkObject) as S3OriginProps
 
     internal fun unwrap(wrapped: S3OriginProps):
         software.amazon.awscdk.services.cloudfront.origins.S3OriginProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -256,7 +257,7 @@ public interface RestApiAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.RestApiAttributes):
-        RestApiAttributes = Wrapper(cdkObject)
+        RestApiAttributes = CdkObjectWrappers.wrap(cdkObject) as RestApiAttributes
 
     internal fun unwrap(wrapped: RestApiAttributes):
         software.amazon.awscdk.services.apigateway.RestApiAttributes = (wrapped as

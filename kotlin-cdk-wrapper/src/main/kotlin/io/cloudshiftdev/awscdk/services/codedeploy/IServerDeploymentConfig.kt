@@ -3,7 +3,7 @@
 package io.cloudshiftdev.awscdk.services.codedeploy
 
 import io.cloudshiftdev.awscdk.common.CdkObject
-import kotlin.String
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 /**
  * The Deployment Configuration of an EC2/on-premise Deployment Group.
@@ -15,24 +15,10 @@ import kotlin.String
  * instantiate the `ServerDeploymentConfig` Construct.
  */
 public interface IServerDeploymentConfig : IBaseDeploymentConfig {
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codedeploy.IServerDeploymentConfig,
-  ) : CdkObject(cdkObject), IServerDeploymentConfig {
-    /**
-     * The ARN of the Deployment Configuration.
-     */
-    override fun deploymentConfigArn(): String = unwrap(this).getDeploymentConfigArn()
-
-    /**
-     * The physical, human-readable name of the Deployment Configuration.
-     */
-    override fun deploymentConfigName(): String = unwrap(this).getDeploymentConfigName()
-  }
-
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.IServerDeploymentConfig):
-        IServerDeploymentConfig = Wrapper(cdkObject)
+        IServerDeploymentConfig = CdkObjectWrappers.wrap(cdkObject) as IServerDeploymentConfig
 
     internal fun unwrap(wrapped: IServerDeploymentConfig):
         software.amazon.awscdk.services.codedeploy.IServerDeploymentConfig = (wrapped as

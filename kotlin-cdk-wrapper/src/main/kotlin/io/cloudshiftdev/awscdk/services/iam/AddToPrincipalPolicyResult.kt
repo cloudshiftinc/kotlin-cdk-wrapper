@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.IDependable
 import kotlin.Boolean
 import kotlin.Unit
@@ -102,7 +103,7 @@ public interface AddToPrincipalPolicyResult {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.AddToPrincipalPolicyResult):
-        AddToPrincipalPolicyResult = Wrapper(cdkObject)
+        AddToPrincipalPolicyResult = CdkObjectWrappers.wrap(cdkObject) as AddToPrincipalPolicyResult
 
     internal fun unwrap(wrapped: AddToPrincipalPolicyResult):
         software.amazon.awscdk.services.iam.AddToPrincipalPolicyResult = (wrapped as

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -324,7 +325,7 @@ public interface CfnRoomProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ivschat.CfnRoomProps): CfnRoomProps
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as CfnRoomProps
 
     internal fun unwrap(wrapped: CfnRoomProps): software.amazon.awscdk.services.ivschat.CfnRoomProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ivschat.CfnRoomProps

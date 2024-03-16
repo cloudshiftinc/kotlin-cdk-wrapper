@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -70,7 +71,7 @@ public interface AppsyncFunctionAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.AppsyncFunctionAttributes):
-        AppsyncFunctionAttributes = Wrapper(cdkObject)
+        AppsyncFunctionAttributes = CdkObjectWrappers.wrap(cdkObject) as AppsyncFunctionAttributes
 
     internal fun unwrap(wrapped: AppsyncFunctionAttributes):
         software.amazon.awscdk.services.appsync.AppsyncFunctionAttributes = (wrapped as

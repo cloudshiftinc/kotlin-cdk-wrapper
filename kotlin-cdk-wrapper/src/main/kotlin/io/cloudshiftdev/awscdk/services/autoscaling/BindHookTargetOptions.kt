@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Unit
 
@@ -116,7 +117,7 @@ public interface BindHookTargetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.BindHookTargetOptions):
-        BindHookTargetOptions = Wrapper(cdkObject)
+        BindHookTargetOptions = CdkObjectWrappers.wrap(cdkObject) as BindHookTargetOptions
 
     internal fun unwrap(wrapped: BindHookTargetOptions):
         software.amazon.awscdk.services.autoscaling.BindHookTargetOptions = (wrapped as

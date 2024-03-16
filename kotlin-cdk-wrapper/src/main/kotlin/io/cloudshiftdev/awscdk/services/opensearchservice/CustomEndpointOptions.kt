@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.opensearchservice
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.certificatemanager.ICertificate
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
 import kotlin.String
@@ -126,7 +127,7 @@ public interface CustomEndpointOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CustomEndpointOptions):
-        CustomEndpointOptions = Wrapper(cdkObject)
+        CustomEndpointOptions = CdkObjectWrappers.wrap(cdkObject) as CustomEndpointOptions
 
     internal fun unwrap(wrapped: CustomEndpointOptions):
         software.amazon.awscdk.services.opensearchservice.CustomEndpointOptions = (wrapped as

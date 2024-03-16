@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -496,7 +497,8 @@ public open class CfnCapacityReservation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnCapacityReservation.CapacityAssignmentConfigurationProperty):
-          CapacityAssignmentConfigurationProperty = Wrapper(cdkObject)
+          CapacityAssignmentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CapacityAssignmentConfigurationProperty
 
       internal fun unwrap(wrapped: CapacityAssignmentConfigurationProperty):
           software.amazon.awscdk.services.athena.CfnCapacityReservation.CapacityAssignmentConfigurationProperty
@@ -589,7 +591,8 @@ public open class CfnCapacityReservation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnCapacityReservation.CapacityAssignmentProperty):
-          CapacityAssignmentProperty = Wrapper(cdkObject)
+          CapacityAssignmentProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CapacityAssignmentProperty
 
       internal fun unwrap(wrapped: CapacityAssignmentProperty):
           software.amazon.awscdk.services.athena.CfnCapacityReservation.CapacityAssignmentProperty =

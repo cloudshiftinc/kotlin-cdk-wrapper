@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -620,7 +621,7 @@ public open class CfnSkill internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.SkillPackageProperty):
-          SkillPackageProperty = Wrapper(cdkObject)
+          SkillPackageProperty = CdkObjectWrappers.wrap(cdkObject) as SkillPackageProperty
 
       internal fun unwrap(wrapped: SkillPackageProperty):
           software.amazon.awscdk.alexa.ask.CfnSkill.SkillPackageProperty = (wrapped as
@@ -709,7 +710,7 @@ public open class CfnSkill internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty):
-          OverridesProperty = Wrapper(cdkObject)
+          OverridesProperty = CdkObjectWrappers.wrap(cdkObject) as OverridesProperty
 
       internal fun unwrap(wrapped: OverridesProperty):
           software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty = (wrapped as
@@ -860,7 +861,8 @@ public open class CfnSkill internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty):
-          AuthenticationConfigurationProperty = Wrapper(cdkObject)
+          AuthenticationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AuthenticationConfigurationProperty
 
       internal fun unwrap(wrapped: AuthenticationConfigurationProperty):
           software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty = (wrapped

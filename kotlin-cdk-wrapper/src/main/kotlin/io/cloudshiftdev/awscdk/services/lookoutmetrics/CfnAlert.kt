@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -467,7 +468,7 @@ public open class CfnAlert internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAlert.ActionProperty):
-          ActionProperty = Wrapper(cdkObject)
+          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as ActionProperty
 
       internal fun unwrap(wrapped: ActionProperty):
           software.amazon.awscdk.services.lookoutmetrics.CfnAlert.ActionProperty = (wrapped as
@@ -576,7 +577,8 @@ public open class CfnAlert internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAlert.LambdaConfigurationProperty):
-          LambdaConfigurationProperty = Wrapper(cdkObject)
+          LambdaConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          LambdaConfigurationProperty
 
       internal fun unwrap(wrapped: LambdaConfigurationProperty):
           software.amazon.awscdk.services.lookoutmetrics.CfnAlert.LambdaConfigurationProperty =
@@ -685,7 +687,7 @@ public open class CfnAlert internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lookoutmetrics.CfnAlert.SNSConfigurationProperty):
-          SNSConfigurationProperty = Wrapper(cdkObject)
+          SNSConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as SNSConfigurationProperty
 
       internal fun unwrap(wrapped: SNSConfigurationProperty):
           software.amazon.awscdk.services.lookoutmetrics.CfnAlert.SNSConfigurationProperty =

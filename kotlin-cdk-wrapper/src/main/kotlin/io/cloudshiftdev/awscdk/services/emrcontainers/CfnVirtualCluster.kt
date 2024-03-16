@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -396,7 +397,7 @@ public open class CfnVirtualCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty):
-          EksInfoProperty = Wrapper(cdkObject)
+          EksInfoProperty = CdkObjectWrappers.wrap(cdkObject) as EksInfoProperty
 
       internal fun unwrap(wrapped: EksInfoProperty):
           software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.EksInfoProperty = (wrapped
@@ -591,7 +592,7 @@ public open class CfnVirtualCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerProviderProperty):
-          ContainerProviderProperty = Wrapper(cdkObject)
+          ContainerProviderProperty = CdkObjectWrappers.wrap(cdkObject) as ContainerProviderProperty
 
       internal fun unwrap(wrapped: ContainerProviderProperty):
           software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerProviderProperty
@@ -702,7 +703,7 @@ public open class CfnVirtualCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty):
-          ContainerInfoProperty = Wrapper(cdkObject)
+          ContainerInfoProperty = CdkObjectWrappers.wrap(cdkObject) as ContainerInfoProperty
 
       internal fun unwrap(wrapped: ContainerInfoProperty):
           software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster.ContainerInfoProperty =

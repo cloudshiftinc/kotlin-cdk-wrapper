@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -303,7 +304,7 @@ public interface AuthorizationMode {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.AuthorizationMode):
-        AuthorizationMode = Wrapper(cdkObject)
+        AuthorizationMode = CdkObjectWrappers.wrap(cdkObject) as AuthorizationMode
 
     internal fun unwrap(wrapped: AuthorizationMode):
         software.amazon.awscdk.services.appsync.AuthorizationMode = (wrapped as CdkObject).cdkObject

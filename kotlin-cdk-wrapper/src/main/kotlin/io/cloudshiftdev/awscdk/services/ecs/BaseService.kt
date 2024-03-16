@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.applicationautoscaling.EnableScalingProps
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
@@ -545,10 +546,6 @@ public abstract class BaseService internal constructor(
   public open fun taskDefinition(): TaskDefinition =
       unwrap(this).getTaskDefinition().let(TaskDefinition::wrap)
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ecs.BaseService,
-  ) : BaseService(cdkObject)
-
   public companion object {
     public fun fromServiceArnWithCluster(
       scope: Construct,
@@ -559,7 +556,7 @@ public abstract class BaseService internal constructor(
         id, serviceArn).let(IBaseService::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.BaseService): BaseService =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as BaseService
 
     internal fun unwrap(wrapped: BaseService): software.amazon.awscdk.services.ecs.BaseService =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecs.BaseService

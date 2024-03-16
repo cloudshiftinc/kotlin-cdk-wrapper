@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.apigatewayv2.ParameterMapping
 import io.cloudshiftdev.awscdk.services.apigatewayv2.PayloadFormatVersion
 import kotlin.Unit
@@ -122,7 +123,7 @@ public interface HttpLambdaIntegrationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegrationProps):
-        HttpLambdaIntegrationProps = Wrapper(cdkObject)
+        HttpLambdaIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as HttpLambdaIntegrationProps
 
     internal fun unwrap(wrapped: HttpLambdaIntegrationProps):
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegrationProps = (wrapped

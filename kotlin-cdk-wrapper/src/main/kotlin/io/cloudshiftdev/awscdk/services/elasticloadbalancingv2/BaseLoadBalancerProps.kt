@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import kotlin.Boolean
@@ -213,7 +214,7 @@ public interface BaseLoadBalancerProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseLoadBalancerProps):
-        BaseLoadBalancerProps = Wrapper(cdkObject)
+        BaseLoadBalancerProps = CdkObjectWrappers.wrap(cdkObject) as BaseLoadBalancerProps
 
     internal fun unwrap(wrapped: BaseLoadBalancerProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.BaseLoadBalancerProps = (wrapped as

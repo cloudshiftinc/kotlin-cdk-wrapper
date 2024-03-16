@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.pipelines
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codebuild.BuildEnvironment
 import io.cloudshiftdev.awscdk.services.codebuild.BuildSpec
 import io.cloudshiftdev.awscdk.services.codebuild.Cache
@@ -508,7 +509,7 @@ public interface CodeBuildOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.CodeBuildOptions):
-        CodeBuildOptions = Wrapper(cdkObject)
+        CodeBuildOptions = CdkObjectWrappers.wrap(cdkObject) as CodeBuildOptions
 
     internal fun unwrap(wrapped: CodeBuildOptions):
         software.amazon.awscdk.pipelines.CodeBuildOptions = (wrapped as CdkObject).cdkObject as

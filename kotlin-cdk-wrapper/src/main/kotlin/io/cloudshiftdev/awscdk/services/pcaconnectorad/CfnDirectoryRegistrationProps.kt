@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.pcaconnectorad
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -109,7 +110,8 @@ public interface CfnDirectoryRegistrationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnDirectoryRegistrationProps):
-        CfnDirectoryRegistrationProps = Wrapper(cdkObject)
+        CfnDirectoryRegistrationProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnDirectoryRegistrationProps
 
     internal fun unwrap(wrapped: CfnDirectoryRegistrationProps):
         software.amazon.awscdk.services.pcaconnectorad.CfnDirectoryRegistrationProps = (wrapped as

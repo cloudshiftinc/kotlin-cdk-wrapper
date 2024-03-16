@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.applicationautoscaling
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Number
 import kotlin.String
@@ -186,7 +187,7 @@ public interface BaseScalableAttributeProps : EnableScalingProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.BaseScalableAttributeProps):
-        BaseScalableAttributeProps = Wrapper(cdkObject)
+        BaseScalableAttributeProps = CdkObjectWrappers.wrap(cdkObject) as BaseScalableAttributeProps
 
     internal fun unwrap(wrapped: BaseScalableAttributeProps):
         software.amazon.awscdk.services.applicationautoscaling.BaseScalableAttributeProps = (wrapped

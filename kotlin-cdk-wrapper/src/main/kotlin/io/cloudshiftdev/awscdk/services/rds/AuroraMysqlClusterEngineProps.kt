@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -79,7 +80,8 @@ public interface AuroraMysqlClusterEngineProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.AuroraMysqlClusterEngineProps):
-        AuroraMysqlClusterEngineProps = Wrapper(cdkObject)
+        AuroraMysqlClusterEngineProps = CdkObjectWrappers.wrap(cdkObject) as
+        AuroraMysqlClusterEngineProps
 
     internal fun unwrap(wrapped: AuroraMysqlClusterEngineProps):
         software.amazon.awscdk.services.rds.AuroraMysqlClusterEngineProps = (wrapped as

@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -783,7 +784,7 @@ public open class CfnApplicationSettings internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.LimitsProperty):
-          LimitsProperty = Wrapper(cdkObject)
+          LimitsProperty = CdkObjectWrappers.wrap(cdkObject) as LimitsProperty
 
       internal fun unwrap(wrapped: LimitsProperty):
           software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.LimitsProperty = (wrapped
@@ -950,7 +951,7 @@ public open class CfnApplicationSettings internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty):
-          CampaignHookProperty = Wrapper(cdkObject)
+          CampaignHookProperty = CdkObjectWrappers.wrap(cdkObject) as CampaignHookProperty
 
       internal fun unwrap(wrapped: CampaignHookProperty):
           software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.CampaignHookProperty =
@@ -1088,7 +1089,7 @@ public open class CfnApplicationSettings internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.QuietTimeProperty):
-          QuietTimeProperty = Wrapper(cdkObject)
+          QuietTimeProperty = CdkObjectWrappers.wrap(cdkObject) as QuietTimeProperty
 
       internal fun unwrap(wrapped: QuietTimeProperty):
           software.amazon.awscdk.services.pinpoint.CfnApplicationSettings.QuietTimeProperty =

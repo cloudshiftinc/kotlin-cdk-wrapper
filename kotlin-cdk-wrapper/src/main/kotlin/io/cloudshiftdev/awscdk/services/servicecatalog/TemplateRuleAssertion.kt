@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.servicecatalog
 import io.cloudshiftdev.awscdk.ICfnRuleConditionExpression
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -103,7 +104,7 @@ public interface TemplateRuleAssertion {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.TemplateRuleAssertion):
-        TemplateRuleAssertion = Wrapper(cdkObject)
+        TemplateRuleAssertion = CdkObjectWrappers.wrap(cdkObject) as TemplateRuleAssertion
 
     internal fun unwrap(wrapped: TemplateRuleAssertion):
         software.amazon.awscdk.services.servicecatalog.TemplateRuleAssertion = (wrapped as

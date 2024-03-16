@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.pipelines
 import io.cloudshiftdev.awscdk.Stage
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.sns.ITopic
 import kotlin.Unit
 
@@ -105,7 +106,8 @@ public interface PermissionsBroadeningCheckProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.PermissionsBroadeningCheckProps):
-        PermissionsBroadeningCheckProps = Wrapper(cdkObject)
+        PermissionsBroadeningCheckProps = CdkObjectWrappers.wrap(cdkObject) as
+        PermissionsBroadeningCheckProps
 
     internal fun unwrap(wrapped: PermissionsBroadeningCheckProps):
         software.amazon.awscdk.pipelines.PermissionsBroadeningCheckProps = (wrapped as

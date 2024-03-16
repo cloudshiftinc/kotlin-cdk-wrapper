@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -530,7 +531,8 @@ public open class CfnSiteToSiteVpnAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment.ProposedSegmentChangeProperty):
-          ProposedSegmentChangeProperty = Wrapper(cdkObject)
+          ProposedSegmentChangeProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ProposedSegmentChangeProperty
 
       internal fun unwrap(wrapped: ProposedSegmentChangeProperty):
           software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment.ProposedSegmentChangeProperty

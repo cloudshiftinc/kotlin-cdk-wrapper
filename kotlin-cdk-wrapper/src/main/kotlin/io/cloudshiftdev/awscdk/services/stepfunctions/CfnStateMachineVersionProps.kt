@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -159,7 +160,8 @@ public interface CfnStateMachineVersionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachineVersionProps):
-        CfnStateMachineVersionProps = Wrapper(cdkObject)
+        CfnStateMachineVersionProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnStateMachineVersionProps
 
     internal fun unwrap(wrapped: CfnStateMachineVersionProps):
         software.amazon.awscdk.services.stepfunctions.CfnStateMachineVersionProps = (wrapped as

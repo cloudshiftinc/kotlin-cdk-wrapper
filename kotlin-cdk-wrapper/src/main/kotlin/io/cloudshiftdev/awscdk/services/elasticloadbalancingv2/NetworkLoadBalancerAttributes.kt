@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import kotlin.String
 import kotlin.Unit
@@ -217,7 +218,8 @@ public interface NetworkLoadBalancerAttributes {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancerAttributes):
-        NetworkLoadBalancerAttributes = Wrapper(cdkObject)
+        NetworkLoadBalancerAttributes = CdkObjectWrappers.wrap(cdkObject) as
+        NetworkLoadBalancerAttributes
 
     internal fun unwrap(wrapped: NetworkLoadBalancerAttributes):
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancerAttributes =

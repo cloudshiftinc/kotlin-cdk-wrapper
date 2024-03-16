@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.collections.Map
 
@@ -412,7 +413,7 @@ public interface CommonMetricOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CommonMetricOptions):
-        CommonMetricOptions = Wrapper(cdkObject)
+        CommonMetricOptions = CdkObjectWrappers.wrap(cdkObject) as CommonMetricOptions
 
     internal fun unwrap(wrapped: CommonMetricOptions):
         software.amazon.awscdk.services.cloudwatch.CommonMetricOptions = (wrapped as

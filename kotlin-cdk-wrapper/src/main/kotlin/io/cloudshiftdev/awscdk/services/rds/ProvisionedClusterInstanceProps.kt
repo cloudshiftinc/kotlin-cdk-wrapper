@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.InstanceType
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Boolean
@@ -436,7 +437,8 @@ public interface ProvisionedClusterInstanceProps : ClusterInstanceOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.rds.ProvisionedClusterInstanceProps):
-        ProvisionedClusterInstanceProps = Wrapper(cdkObject)
+        ProvisionedClusterInstanceProps = CdkObjectWrappers.wrap(cdkObject) as
+        ProvisionedClusterInstanceProps
 
     internal fun unwrap(wrapped: ProvisionedClusterInstanceProps):
         software.amazon.awscdk.services.rds.ProvisionedClusterInstanceProps = (wrapped as

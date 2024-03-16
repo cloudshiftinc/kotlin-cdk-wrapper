@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.route53
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -405,7 +406,7 @@ public interface MxRecordProps : RecordSetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.MxRecordProps):
-        MxRecordProps = Wrapper(cdkObject)
+        MxRecordProps = CdkObjectWrappers.wrap(cdkObject) as MxRecordProps
 
     internal fun unwrap(wrapped: MxRecordProps):
         software.amazon.awscdk.services.route53.MxRecordProps = (wrapped as CdkObject).cdkObject as

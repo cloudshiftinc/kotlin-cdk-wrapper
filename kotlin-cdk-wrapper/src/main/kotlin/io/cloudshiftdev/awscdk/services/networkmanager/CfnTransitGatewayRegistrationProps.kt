@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.networkmanager
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -107,7 +108,8 @@ public interface CfnTransitGatewayRegistrationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRegistrationProps):
-        CfnTransitGatewayRegistrationProps = Wrapper(cdkObject)
+        CfnTransitGatewayRegistrationProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnTransitGatewayRegistrationProps
 
     internal fun unwrap(wrapped: CfnTransitGatewayRegistrationProps):
         software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRegistrationProps = (wrapped

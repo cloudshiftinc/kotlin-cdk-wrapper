@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.InstanceType
 import kotlin.Number
 import kotlin.String
@@ -221,7 +222,7 @@ public interface ProductionVariant {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.ProductionVariant):
-        ProductionVariant = Wrapper(cdkObject)
+        ProductionVariant = CdkObjectWrappers.wrap(cdkObject) as ProductionVariant
 
     internal fun unwrap(wrapped: ProductionVariant):
         software.amazon.awscdk.services.stepfunctions.tasks.ProductionVariant = (wrapped as

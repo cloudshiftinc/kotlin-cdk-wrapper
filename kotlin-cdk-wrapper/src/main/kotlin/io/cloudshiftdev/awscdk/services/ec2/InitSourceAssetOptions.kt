@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IgnoreMode
 import io.cloudshiftdev.awscdk.SymlinkFollowMode
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.awscdk.services.s3.assets.AssetOptions
 import kotlin.Boolean
@@ -428,7 +429,7 @@ public interface InitSourceAssetOptions : InitSourceOptions, AssetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.InitSourceAssetOptions):
-        InitSourceAssetOptions = Wrapper(cdkObject)
+        InitSourceAssetOptions = CdkObjectWrappers.wrap(cdkObject) as InitSourceAssetOptions
 
     internal fun unwrap(wrapped: InitSourceAssetOptions):
         software.amazon.awscdk.services.ec2.InitSourceAssetOptions = (wrapped as

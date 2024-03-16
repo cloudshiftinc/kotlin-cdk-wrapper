@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.certificatemanager
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.acmpca.ICertificateAuthority
 import kotlin.String
 import kotlin.Unit
@@ -203,7 +204,7 @@ public interface PrivateCertificateProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.certificatemanager.PrivateCertificateProps):
-        PrivateCertificateProps = Wrapper(cdkObject)
+        PrivateCertificateProps = CdkObjectWrappers.wrap(cdkObject) as PrivateCertificateProps
 
     internal fun unwrap(wrapped: PrivateCertificateProps):
         software.amazon.awscdk.services.certificatemanager.PrivateCertificateProps = (wrapped as

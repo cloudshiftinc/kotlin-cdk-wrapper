@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.rds
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -509,7 +510,8 @@ public interface CfnCustomDBEngineVersionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnCustomDBEngineVersionProps):
-        CfnCustomDBEngineVersionProps = Wrapper(cdkObject)
+        CfnCustomDBEngineVersionProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnCustomDBEngineVersionProps
 
     internal fun unwrap(wrapped: CfnCustomDBEngineVersionProps):
         software.amazon.awscdk.services.rds.CfnCustomDBEngineVersionProps = (wrapped as

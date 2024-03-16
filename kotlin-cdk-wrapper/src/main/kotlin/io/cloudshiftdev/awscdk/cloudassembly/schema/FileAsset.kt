@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -120,7 +121,7 @@ public interface FileAsset {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.FileAsset): FileAsset =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as FileAsset
 
     internal fun unwrap(wrapped: FileAsset): software.amazon.awscdk.cloudassembly.schema.FileAsset =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.cloudassembly.schema.FileAsset

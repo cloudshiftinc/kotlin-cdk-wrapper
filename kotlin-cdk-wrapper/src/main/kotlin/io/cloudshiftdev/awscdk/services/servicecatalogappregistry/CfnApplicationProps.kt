@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.servicecatalogappregistry
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -142,7 +143,7 @@ public interface CfnApplicationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalogappregistry.CfnApplicationProps):
-        CfnApplicationProps = Wrapper(cdkObject)
+        CfnApplicationProps = CdkObjectWrappers.wrap(cdkObject) as CfnApplicationProps
 
     internal fun unwrap(wrapped: CfnApplicationProps):
         software.amazon.awscdk.services.servicecatalogappregistry.CfnApplicationProps = (wrapped as

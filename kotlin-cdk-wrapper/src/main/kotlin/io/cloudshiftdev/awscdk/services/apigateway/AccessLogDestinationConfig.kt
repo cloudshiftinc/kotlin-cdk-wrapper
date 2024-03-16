@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -71,7 +72,7 @@ public interface AccessLogDestinationConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.AccessLogDestinationConfig):
-        AccessLogDestinationConfig = Wrapper(cdkObject)
+        AccessLogDestinationConfig = CdkObjectWrappers.wrap(cdkObject) as AccessLogDestinationConfig
 
     internal fun unwrap(wrapped: AccessLogDestinationConfig):
         software.amazon.awscdk.services.apigateway.AccessLogDestinationConfig = (wrapped as

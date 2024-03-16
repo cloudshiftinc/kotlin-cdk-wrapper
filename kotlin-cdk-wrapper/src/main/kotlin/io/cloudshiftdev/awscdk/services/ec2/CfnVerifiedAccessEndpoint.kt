@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -978,7 +979,8 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty):
-          NetworkInterfaceOptionsProperty = Wrapper(cdkObject)
+          NetworkInterfaceOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          NetworkInterfaceOptionsProperty
 
       internal fun unwrap(wrapped: NetworkInterfaceOptionsProperty):
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty
@@ -1115,7 +1117,7 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.SseSpecificationProperty):
-          SseSpecificationProperty = Wrapper(cdkObject)
+          SseSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as SseSpecificationProperty
 
       internal fun unwrap(wrapped: SseSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.SseSpecificationProperty =
@@ -1289,7 +1291,8 @@ public open class CfnVerifiedAccessEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty):
-          LoadBalancerOptionsProperty = Wrapper(cdkObject)
+          LoadBalancerOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          LoadBalancerOptionsProperty
 
       internal fun unwrap(wrapped: LoadBalancerOptionsProperty):
           software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty

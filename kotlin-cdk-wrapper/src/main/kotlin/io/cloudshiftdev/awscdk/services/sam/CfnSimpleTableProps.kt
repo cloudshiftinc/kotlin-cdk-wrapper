@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.sam
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -265,7 +266,7 @@ public interface CfnSimpleTableProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTableProps):
-        CfnSimpleTableProps = Wrapper(cdkObject)
+        CfnSimpleTableProps = CdkObjectWrappers.wrap(cdkObject) as CfnSimpleTableProps
 
     internal fun unwrap(wrapped: CfnSimpleTableProps):
         software.amazon.awscdk.services.sam.CfnSimpleTableProps = (wrapped as CdkObject).cdkObject

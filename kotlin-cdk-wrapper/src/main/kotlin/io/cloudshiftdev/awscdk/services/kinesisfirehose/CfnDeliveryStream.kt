@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -2025,7 +2026,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SchemaConfigurationProperty):
-          SchemaConfigurationProperty = Wrapper(cdkObject)
+          SchemaConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SchemaConfigurationProperty
 
       internal fun unwrap(wrapped: SchemaConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SchemaConfigurationProperty
@@ -2152,7 +2154,7 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DocumentIdOptionsProperty):
-          DocumentIdOptionsProperty = Wrapper(cdkObject)
+          DocumentIdOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as DocumentIdOptionsProperty
 
       internal fun unwrap(wrapped: DocumentIdOptionsProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DocumentIdOptionsProperty
@@ -2308,7 +2310,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ElasticsearchBufferingHintsProperty):
-          ElasticsearchBufferingHintsProperty = Wrapper(cdkObject)
+          ElasticsearchBufferingHintsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ElasticsearchBufferingHintsProperty
 
       internal fun unwrap(wrapped: ElasticsearchBufferingHintsProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ElasticsearchBufferingHintsProperty
@@ -3133,7 +3136,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty):
-          ElasticsearchDestinationConfigurationProperty = Wrapper(cdkObject)
+          ElasticsearchDestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ElasticsearchDestinationConfigurationProperty
 
       internal fun unwrap(wrapped: ElasticsearchDestinationConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty
@@ -3245,7 +3249,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.KinesisStreamSourceConfigurationProperty):
-          KinesisStreamSourceConfigurationProperty = Wrapper(cdkObject)
+          KinesisStreamSourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          KinesisStreamSourceConfigurationProperty
 
       internal fun unwrap(wrapped: KinesisStreamSourceConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.KinesisStreamSourceConfigurationProperty
@@ -3343,7 +3348,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeVpcConfigurationProperty):
-          SnowflakeVpcConfigurationProperty = Wrapper(cdkObject)
+          SnowflakeVpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SnowflakeVpcConfigurationProperty
 
       internal fun unwrap(wrapped: SnowflakeVpcConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeVpcConfigurationProperty
@@ -3932,7 +3938,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SplunkDestinationConfigurationProperty):
-          SplunkDestinationConfigurationProperty = Wrapper(cdkObject)
+          SplunkDestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SplunkDestinationConfigurationProperty
 
       internal fun unwrap(wrapped: SplunkDestinationConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SplunkDestinationConfigurationProperty
@@ -4035,7 +4042,7 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.RetryOptionsProperty):
-          RetryOptionsProperty = Wrapper(cdkObject)
+          RetryOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as RetryOptionsProperty
 
       internal fun unwrap(wrapped: RetryOptionsProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.RetryOptionsProperty =
@@ -4181,7 +4188,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointConfigurationProperty):
-          HttpEndpointConfigurationProperty = Wrapper(cdkObject)
+          HttpEndpointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          HttpEndpointConfigurationProperty
 
       internal fun unwrap(wrapped: HttpEndpointConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointConfigurationProperty
@@ -4312,7 +4320,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SplunkBufferingHintsProperty):
-          SplunkBufferingHintsProperty = Wrapper(cdkObject)
+          SplunkBufferingHintsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SplunkBufferingHintsProperty
 
       internal fun unwrap(wrapped: SplunkBufferingHintsProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SplunkBufferingHintsProperty
@@ -4801,7 +4810,7 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.OrcSerDeProperty):
-          OrcSerDeProperty = Wrapper(cdkObject)
+          OrcSerDeProperty = CdkObjectWrappers.wrap(cdkObject) as OrcSerDeProperty
 
       internal fun unwrap(wrapped: OrcSerDeProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.OrcSerDeProperty =
@@ -5050,7 +5059,7 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.OpenXJsonSerDeProperty):
-          OpenXJsonSerDeProperty = Wrapper(cdkObject)
+          OpenXJsonSerDeProperty = CdkObjectWrappers.wrap(cdkObject) as OpenXJsonSerDeProperty
 
       internal fun unwrap(wrapped: OpenXJsonSerDeProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.OpenXJsonSerDeProperty =
@@ -5389,7 +5398,7 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.VpcConfigurationProperty):
-          VpcConfigurationProperty = Wrapper(cdkObject)
+          VpcConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as VpcConfigurationProperty
 
       internal fun unwrap(wrapped: VpcConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.VpcConfigurationProperty
@@ -5497,7 +5506,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ElasticsearchRetryOptionsProperty):
-          ElasticsearchRetryOptionsProperty = Wrapper(cdkObject)
+          ElasticsearchRetryOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ElasticsearchRetryOptionsProperty
 
       internal fun unwrap(wrapped: ElasticsearchRetryOptionsProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ElasticsearchRetryOptionsProperty
@@ -5639,7 +5649,7 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ProcessorProperty):
-          ProcessorProperty = Wrapper(cdkObject)
+          ProcessorProperty = CdkObjectWrappers.wrap(cdkObject) as ProcessorProperty
 
       internal fun unwrap(wrapped: ProcessorProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ProcessorProperty =
@@ -5764,7 +5774,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeRoleConfigurationProperty):
-          SnowflakeRoleConfigurationProperty = Wrapper(cdkObject)
+          SnowflakeRoleConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SnowflakeRoleConfigurationProperty
 
       internal fun unwrap(wrapped: SnowflakeRoleConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeRoleConfigurationProperty
@@ -6539,7 +6550,9 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonopensearchserviceDestinationConfigurationProperty):
-          AmazonopensearchserviceDestinationConfigurationProperty = Wrapper(cdkObject)
+          AmazonopensearchserviceDestinationConfigurationProperty =
+          CdkObjectWrappers.wrap(cdkObject) as
+          AmazonopensearchserviceDestinationConfigurationProperty
 
       internal fun unwrap(wrapped: AmazonopensearchserviceDestinationConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonopensearchserviceDestinationConfigurationProperty
@@ -6640,7 +6653,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.RedshiftRetryOptionsProperty):
-          RedshiftRetryOptionsProperty = Wrapper(cdkObject)
+          RedshiftRetryOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          RedshiftRetryOptionsProperty
 
       internal fun unwrap(wrapped: RedshiftRetryOptionsProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.RedshiftRetryOptionsProperty
@@ -6926,7 +6940,7 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ParquetSerDeProperty):
-          ParquetSerDeProperty = Wrapper(cdkObject)
+          ParquetSerDeProperty = CdkObjectWrappers.wrap(cdkObject) as ParquetSerDeProperty
 
       internal fun unwrap(wrapped: ParquetSerDeProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ParquetSerDeProperty =
@@ -7037,7 +7051,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AuthenticationConfigurationProperty):
-          AuthenticationConfigurationProperty = Wrapper(cdkObject)
+          AuthenticationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AuthenticationConfigurationProperty
 
       internal fun unwrap(wrapped: AuthenticationConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AuthenticationConfigurationProperty
@@ -7216,7 +7231,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.MSKSourceConfigurationProperty):
-          MSKSourceConfigurationProperty = Wrapper(cdkObject)
+          MSKSourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MSKSourceConfigurationProperty
 
       internal fun unwrap(wrapped: MSKSourceConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.MSKSourceConfigurationProperty
@@ -8079,7 +8095,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeDestinationConfigurationProperty):
-          SnowflakeDestinationConfigurationProperty = Wrapper(cdkObject)
+          SnowflakeDestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SnowflakeDestinationConfigurationProperty
 
       internal fun unwrap(wrapped: SnowflakeDestinationConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeDestinationConfigurationProperty
@@ -8218,7 +8235,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonopensearchserviceBufferingHintsProperty):
-          AmazonopensearchserviceBufferingHintsProperty = Wrapper(cdkObject)
+          AmazonopensearchserviceBufferingHintsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AmazonopensearchserviceBufferingHintsProperty
 
       internal fun unwrap(wrapped: AmazonopensearchserviceBufferingHintsProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonopensearchserviceBufferingHintsProperty
@@ -8372,7 +8390,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointRequestConfigurationProperty):
-          HttpEndpointRequestConfigurationProperty = Wrapper(cdkObject)
+          HttpEndpointRequestConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          HttpEndpointRequestConfigurationProperty
 
       internal fun unwrap(wrapped: HttpEndpointRequestConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointRequestConfigurationProperty
@@ -8847,7 +8866,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.S3DestinationConfigurationProperty):
-          S3DestinationConfigurationProperty = Wrapper(cdkObject)
+          S3DestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          S3DestinationConfigurationProperty
 
       internal fun unwrap(wrapped: S3DestinationConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.S3DestinationConfigurationProperty
@@ -8995,7 +9015,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonOpenSearchServerlessBufferingHintsProperty):
-          AmazonOpenSearchServerlessBufferingHintsProperty = Wrapper(cdkObject)
+          AmazonOpenSearchServerlessBufferingHintsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AmazonOpenSearchServerlessBufferingHintsProperty
 
       internal fun unwrap(wrapped: AmazonOpenSearchServerlessBufferingHintsProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonOpenSearchServerlessBufferingHintsProperty
@@ -9096,7 +9117,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonopensearchserviceRetryOptionsProperty):
-          AmazonopensearchserviceRetryOptionsProperty = Wrapper(cdkObject)
+          AmazonopensearchserviceRetryOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AmazonopensearchserviceRetryOptionsProperty
 
       internal fun unwrap(wrapped: AmazonopensearchserviceRetryOptionsProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonopensearchserviceRetryOptionsProperty
@@ -9340,7 +9362,7 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DeserializerProperty):
-          DeserializerProperty = Wrapper(cdkObject)
+          DeserializerProperty = CdkObjectWrappers.wrap(cdkObject) as DeserializerProperty
 
       internal fun unwrap(wrapped: DeserializerProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DeserializerProperty =
@@ -9577,7 +9599,7 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SerializerProperty):
-          SerializerProperty = Wrapper(cdkObject)
+          SerializerProperty = CdkObjectWrappers.wrap(cdkObject) as SerializerProperty
 
       internal fun unwrap(wrapped: SerializerProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SerializerProperty =
@@ -9748,7 +9770,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.CloudWatchLoggingOptionsProperty):
-          CloudWatchLoggingOptionsProperty = Wrapper(cdkObject)
+          CloudWatchLoggingOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CloudWatchLoggingOptionsProperty
 
       internal fun unwrap(wrapped: CloudWatchLoggingOptionsProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.CloudWatchLoggingOptionsProperty
@@ -9888,7 +9911,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.InputFormatConfigurationProperty):
-          InputFormatConfigurationProperty = Wrapper(cdkObject)
+          InputFormatConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          InputFormatConfigurationProperty
 
       internal fun unwrap(wrapped: InputFormatConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.InputFormatConfigurationProperty
@@ -9990,7 +10014,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonOpenSearchServerlessRetryOptionsProperty):
-          AmazonOpenSearchServerlessRetryOptionsProperty = Wrapper(cdkObject)
+          AmazonOpenSearchServerlessRetryOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AmazonOpenSearchServerlessRetryOptionsProperty
 
       internal fun unwrap(wrapped: AmazonOpenSearchServerlessRetryOptionsProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonOpenSearchServerlessRetryOptionsProperty
@@ -10104,7 +10129,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointCommonAttributeProperty):
-          HttpEndpointCommonAttributeProperty = Wrapper(cdkObject)
+          HttpEndpointCommonAttributeProperty = CdkObjectWrappers.wrap(cdkObject) as
+          HttpEndpointCommonAttributeProperty
 
       internal fun unwrap(wrapped: HttpEndpointCommonAttributeProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointCommonAttributeProperty
@@ -10751,7 +10777,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointDestinationConfigurationProperty):
-          HttpEndpointDestinationConfigurationProperty = Wrapper(cdkObject)
+          HttpEndpointDestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          HttpEndpointDestinationConfigurationProperty
 
       internal fun unwrap(wrapped: HttpEndpointDestinationConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HttpEndpointDestinationConfigurationProperty
@@ -10888,7 +10915,7 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HiveJsonSerDeProperty):
-          HiveJsonSerDeProperty = Wrapper(cdkObject)
+          HiveJsonSerDeProperty = CdkObjectWrappers.wrap(cdkObject) as HiveJsonSerDeProperty
 
       internal fun unwrap(wrapped: HiveJsonSerDeProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.HiveJsonSerDeProperty =
@@ -11812,7 +11839,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty):
-          ExtendedS3DestinationConfigurationProperty = Wrapper(cdkObject)
+          ExtendedS3DestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ExtendedS3DestinationConfigurationProperty
 
       internal fun unwrap(wrapped: ExtendedS3DestinationConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty
@@ -11940,7 +11968,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ProcessorParameterProperty):
-          ProcessorParameterProperty = Wrapper(cdkObject)
+          ProcessorParameterProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ProcessorParameterProperty
 
       internal fun unwrap(wrapped: ProcessorParameterProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ProcessorParameterProperty
@@ -12099,7 +12128,7 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.CopyCommandProperty):
-          CopyCommandProperty = Wrapper(cdkObject)
+          CopyCommandProperty = CdkObjectWrappers.wrap(cdkObject) as CopyCommandProperty
 
       internal fun unwrap(wrapped: CopyCommandProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.CopyCommandProperty =
@@ -12264,7 +12293,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.EncryptionConfigurationProperty):
-          EncryptionConfigurationProperty = Wrapper(cdkObject)
+          EncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EncryptionConfigurationProperty
 
       internal fun unwrap(wrapped: EncryptionConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.EncryptionConfigurationProperty
@@ -12361,7 +12391,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SplunkRetryOptionsProperty):
-          SplunkRetryOptionsProperty = Wrapper(cdkObject)
+          SplunkRetryOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SplunkRetryOptionsProperty
 
       internal fun unwrap(wrapped: SplunkRetryOptionsProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SplunkRetryOptionsProperty
@@ -12513,7 +12544,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ProcessingConfigurationProperty):
-          ProcessingConfigurationProperty = Wrapper(cdkObject)
+          ProcessingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ProcessingConfigurationProperty
 
       internal fun unwrap(wrapped: ProcessingConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ProcessingConfigurationProperty
@@ -12662,7 +12694,7 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.BufferingHintsProperty):
-          BufferingHintsProperty = Wrapper(cdkObject)
+          BufferingHintsProperty = CdkObjectWrappers.wrap(cdkObject) as BufferingHintsProperty
 
       internal fun unwrap(wrapped: BufferingHintsProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.BufferingHintsProperty =
@@ -12759,7 +12791,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeRetryOptionsProperty):
-          SnowflakeRetryOptionsProperty = Wrapper(cdkObject)
+          SnowflakeRetryOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SnowflakeRetryOptionsProperty
 
       internal fun unwrap(wrapped: SnowflakeRetryOptionsProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SnowflakeRetryOptionsProperty
@@ -12934,7 +12967,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DeliveryStreamEncryptionConfigurationInputProperty):
-          DeliveryStreamEncryptionConfigurationInputProperty = Wrapper(cdkObject)
+          DeliveryStreamEncryptionConfigurationInputProperty = CdkObjectWrappers.wrap(cdkObject) as
+          DeliveryStreamEncryptionConfigurationInputProperty
 
       internal fun unwrap(wrapped: DeliveryStreamEncryptionConfigurationInputProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DeliveryStreamEncryptionConfigurationInputProperty
@@ -13634,7 +13668,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.RedshiftDestinationConfigurationProperty):
-          RedshiftDestinationConfigurationProperty = Wrapper(cdkObject)
+          RedshiftDestinationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          RedshiftDestinationConfigurationProperty
 
       internal fun unwrap(wrapped: RedshiftDestinationConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.RedshiftDestinationConfigurationProperty
@@ -13802,7 +13837,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DynamicPartitioningConfigurationProperty):
-          DynamicPartitioningConfigurationProperty = Wrapper(cdkObject)
+          DynamicPartitioningConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          DynamicPartitioningConfigurationProperty
 
       internal fun unwrap(wrapped: DynamicPartitioningConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DynamicPartitioningConfigurationProperty
@@ -13896,7 +13932,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.KMSEncryptionConfigProperty):
-          KMSEncryptionConfigProperty = Wrapper(cdkObject)
+          KMSEncryptionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          KMSEncryptionConfigProperty
 
       internal fun unwrap(wrapped: KMSEncryptionConfigProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.KMSEncryptionConfigProperty
@@ -14049,7 +14086,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.OutputFormatConfigurationProperty):
-          OutputFormatConfigurationProperty = Wrapper(cdkObject)
+          OutputFormatConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          OutputFormatConfigurationProperty
 
       internal fun unwrap(wrapped: OutputFormatConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.OutputFormatConfigurationProperty
@@ -14654,7 +14692,9 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonOpenSearchServerlessDestinationConfigurationProperty):
-          AmazonOpenSearchServerlessDestinationConfigurationProperty = Wrapper(cdkObject)
+          AmazonOpenSearchServerlessDestinationConfigurationProperty =
+          CdkObjectWrappers.wrap(cdkObject) as
+          AmazonOpenSearchServerlessDestinationConfigurationProperty
 
       internal fun unwrap(wrapped: AmazonOpenSearchServerlessDestinationConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.AmazonOpenSearchServerlessDestinationConfigurationProperty
@@ -15039,7 +15079,8 @@ public open class CfnDeliveryStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DataFormatConversionConfigurationProperty):
-          DataFormatConversionConfigurationProperty = Wrapper(cdkObject)
+          DataFormatConversionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          DataFormatConversionConfigurationProperty
 
       internal fun unwrap(wrapped: DataFormatConversionConfigurationProperty):
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DataFormatConversionConfigurationProperty

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -494,7 +495,8 @@ public open class CfnThingType internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnThingType.ThingTypePropertiesProperty):
-          ThingTypePropertiesProperty = Wrapper(cdkObject)
+          ThingTypePropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ThingTypePropertiesProperty
 
       internal fun unwrap(wrapped: ThingTypePropertiesProperty):
           software.amazon.awscdk.services.iot.CfnThingType.ThingTypePropertiesProperty = (wrapped as

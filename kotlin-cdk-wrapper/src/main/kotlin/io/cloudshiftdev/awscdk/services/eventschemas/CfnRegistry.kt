@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -313,7 +314,7 @@ public open class CfnRegistry internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.eventschemas.CfnRegistry.TagsEntryProperty):
-          TagsEntryProperty = Wrapper(cdkObject)
+          TagsEntryProperty = CdkObjectWrappers.wrap(cdkObject) as TagsEntryProperty
 
       internal fun unwrap(wrapped: TagsEntryProperty):
           software.amazon.awscdk.services.eventschemas.CfnRegistry.TagsEntryProperty = (wrapped as

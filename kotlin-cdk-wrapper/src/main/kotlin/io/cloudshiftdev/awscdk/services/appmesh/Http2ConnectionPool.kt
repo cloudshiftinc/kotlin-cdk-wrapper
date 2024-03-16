@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -73,7 +74,7 @@ public interface Http2ConnectionPool {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.Http2ConnectionPool):
-        Http2ConnectionPool = Wrapper(cdkObject)
+        Http2ConnectionPool = CdkObjectWrappers.wrap(cdkObject) as Http2ConnectionPool
 
     internal fun unwrap(wrapped: Http2ConnectionPool):
         software.amazon.awscdk.services.appmesh.Http2ConnectionPool = (wrapped as

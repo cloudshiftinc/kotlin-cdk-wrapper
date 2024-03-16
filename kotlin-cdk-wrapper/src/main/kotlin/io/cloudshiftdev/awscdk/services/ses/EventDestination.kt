@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ses
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.sns.ITopic
 import kotlin.collections.List
 
@@ -37,10 +38,6 @@ public abstract class EventDestination internal constructor(
    */
   public open fun topic(): ITopic? = unwrap(this).getTopic()?.let(ITopic::wrap)
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.EventDestination,
-  ) : EventDestination(cdkObject)
-
   public companion object {
     public fun cloudWatchDimensions(dimensions: List<CloudWatchDimension>): EventDestination =
         software.amazon.awscdk.services.ses.EventDestination.cloudWatchDimensions(dimensions.map(CloudWatchDimension::unwrap)).let(EventDestination::wrap)
@@ -52,7 +49,7 @@ public abstract class EventDestination internal constructor(
         software.amazon.awscdk.services.ses.EventDestination.snsTopic(topic.let(ITopic::unwrap)).let(EventDestination::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.EventDestination):
-        EventDestination = Wrapper(cdkObject)
+        EventDestination = CdkObjectWrappers.wrap(cdkObject) as EventDestination
 
     internal fun unwrap(wrapped: EventDestination):
         software.amazon.awscdk.services.ses.EventDestination = (wrapped as CdkObject).cdkObject as

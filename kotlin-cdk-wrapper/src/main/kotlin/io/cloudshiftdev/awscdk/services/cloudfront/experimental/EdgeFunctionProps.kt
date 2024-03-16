@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codeguruprofiler.IProfilingGroup
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
@@ -1584,7 +1585,7 @@ public interface EdgeFunctionProps : FunctionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.experimental.EdgeFunctionProps):
-        EdgeFunctionProps = Wrapper(cdkObject)
+        EdgeFunctionProps = CdkObjectWrappers.wrap(cdkObject) as EdgeFunctionProps
 
     internal fun unwrap(wrapped: EdgeFunctionProps):
         software.amazon.awscdk.services.cloudfront.experimental.EdgeFunctionProps = (wrapped as

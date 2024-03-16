@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.String
 import kotlin.Unit
@@ -141,7 +142,8 @@ public interface FargateTaskDefinitionAttributes : CommonTaskDefinitionAttribute
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.FargateTaskDefinitionAttributes):
-        FargateTaskDefinitionAttributes = Wrapper(cdkObject)
+        FargateTaskDefinitionAttributes = CdkObjectWrappers.wrap(cdkObject) as
+        FargateTaskDefinitionAttributes
 
     internal fun unwrap(wrapped: FargateTaskDefinitionAttributes):
         software.amazon.awscdk.services.ecs.FargateTaskDefinitionAttributes = (wrapped as

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.dynamodb
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -40,10 +41,6 @@ public abstract class Billing internal constructor(
    */
   public open fun mode(): BillingMode = unwrap(this).getMode().let(BillingMode::wrap)
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.Billing,
-  ) : Billing(cdkObject)
-
   public companion object {
     public fun onDemand(): Billing =
         software.amazon.awscdk.services.dynamodb.Billing.onDemand().let(Billing::wrap)
@@ -57,7 +54,7 @@ public abstract class Billing internal constructor(
         provisioned(ThroughputProps(props))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.Billing): Billing =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as Billing
 
     internal fun unwrap(wrapped: Billing): software.amazon.awscdk.services.dynamodb.Billing =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.dynamodb.Billing

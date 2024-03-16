@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ses
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -156,7 +157,7 @@ public interface S3ActionConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.S3ActionConfig): S3ActionConfig
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as S3ActionConfig
 
     internal fun unwrap(wrapped: S3ActionConfig): software.amazon.awscdk.services.ses.S3ActionConfig
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ses.S3ActionConfig

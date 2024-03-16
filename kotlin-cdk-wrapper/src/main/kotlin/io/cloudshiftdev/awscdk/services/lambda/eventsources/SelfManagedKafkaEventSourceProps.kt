@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lambda.eventsources
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
@@ -547,7 +548,8 @@ public interface SelfManagedKafkaEventSourceProps : KafkaEventSourceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.eventsources.SelfManagedKafkaEventSourceProps):
-        SelfManagedKafkaEventSourceProps = Wrapper(cdkObject)
+        SelfManagedKafkaEventSourceProps = CdkObjectWrappers.wrap(cdkObject) as
+        SelfManagedKafkaEventSourceProps
 
     internal fun unwrap(wrapped: SelfManagedKafkaEventSourceProps):
         software.amazon.awscdk.services.lambda.eventsources.SelfManagedKafkaEventSourceProps =

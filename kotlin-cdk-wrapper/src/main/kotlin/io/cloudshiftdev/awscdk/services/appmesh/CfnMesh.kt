@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -412,7 +413,8 @@ public open class CfnMesh internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty):
-          MeshServiceDiscoveryProperty = Wrapper(cdkObject)
+          MeshServiceDiscoveryProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MeshServiceDiscoveryProperty
 
       internal fun unwrap(wrapped: MeshServiceDiscoveryProperty):
           software.amazon.awscdk.services.appmesh.CfnMesh.MeshServiceDiscoveryProperty = (wrapped as
@@ -531,7 +533,7 @@ public open class CfnMesh internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.EgressFilterProperty):
-          EgressFilterProperty = Wrapper(cdkObject)
+          EgressFilterProperty = CdkObjectWrappers.wrap(cdkObject) as EgressFilterProperty
 
       internal fun unwrap(wrapped: EgressFilterProperty):
           software.amazon.awscdk.services.appmesh.CfnMesh.EgressFilterProperty = (wrapped as
@@ -702,7 +704,7 @@ public open class CfnMesh internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh.MeshSpecProperty):
-          MeshSpecProperty = Wrapper(cdkObject)
+          MeshSpecProperty = CdkObjectWrappers.wrap(cdkObject) as MeshSpecProperty
 
       internal fun unwrap(wrapped: MeshSpecProperty):
           software.amazon.awscdk.services.appmesh.CfnMesh.MeshSpecProperty = (wrapped as

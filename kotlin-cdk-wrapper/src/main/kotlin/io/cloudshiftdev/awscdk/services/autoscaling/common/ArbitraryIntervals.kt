@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling.common
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 import kotlin.collections.List
@@ -109,7 +110,7 @@ public interface ArbitraryIntervals {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.common.ArbitraryIntervals):
-        ArbitraryIntervals = Wrapper(cdkObject)
+        ArbitraryIntervals = CdkObjectWrappers.wrap(cdkObject) as ArbitraryIntervals
 
     internal fun unwrap(wrapped: ArbitraryIntervals):
         software.amazon.awscdk.services.autoscaling.common.ArbitraryIntervals = (wrapped as

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -452,7 +453,8 @@ public open class CfnCoreNetwork internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkSegmentProperty):
-          CoreNetworkSegmentProperty = Wrapper(cdkObject)
+          CoreNetworkSegmentProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CoreNetworkSegmentProperty
 
       internal fun unwrap(wrapped: CoreNetworkSegmentProperty):
           software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkSegmentProperty =
@@ -600,7 +602,7 @@ public open class CfnCoreNetwork internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty):
-          CoreNetworkEdgeProperty = Wrapper(cdkObject)
+          CoreNetworkEdgeProperty = CdkObjectWrappers.wrap(cdkObject) as CoreNetworkEdgeProperty
 
       internal fun unwrap(wrapped: CoreNetworkEdgeProperty):
           software.amazon.awscdk.services.networkmanager.CfnCoreNetwork.CoreNetworkEdgeProperty =

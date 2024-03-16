@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codecommit
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -171,7 +172,7 @@ public interface RepositoryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codecommit.RepositoryProps):
-        RepositoryProps = Wrapper(cdkObject)
+        RepositoryProps = CdkObjectWrappers.wrap(cdkObject) as RepositoryProps
 
     internal fun unwrap(wrapped: RepositoryProps):
         software.amazon.awscdk.services.codecommit.RepositoryProps = (wrapped as

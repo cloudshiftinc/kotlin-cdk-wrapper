@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -3525,7 +3526,8 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.CreditSpecificationProperty):
-          CreditSpecificationProperty = Wrapper(cdkObject)
+          CreditSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CreditSpecificationProperty
 
       internal fun unwrap(wrapped: CreditSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnInstance.CreditSpecificationProperty = (wrapped as
@@ -3610,7 +3612,8 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty):
-          InstanceIpv6AddressProperty = Wrapper(cdkObject)
+          InstanceIpv6AddressProperty = CdkObjectWrappers.wrap(cdkObject) as
+          InstanceIpv6AddressProperty
 
       internal fun unwrap(wrapped: InstanceIpv6AddressProperty):
           software.amazon.awscdk.services.ec2.CfnInstance.InstanceIpv6AddressProperty = (wrapped as
@@ -3724,7 +3727,7 @@ public open class CfnInstance internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty):
-          VolumeProperty = Wrapper(cdkObject)
+          VolumeProperty = CdkObjectWrappers.wrap(cdkObject) as VolumeProperty
 
       internal fun unwrap(wrapped: VolumeProperty):
           software.amazon.awscdk.services.ec2.CfnInstance.VolumeProperty = (wrapped as
@@ -4407,7 +4410,7 @@ public open class CfnInstance internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.EbsProperty):
-          EbsProperty = Wrapper(cdkObject)
+          EbsProperty = CdkObjectWrappers.wrap(cdkObject) as EbsProperty
 
       internal fun unwrap(wrapped: EbsProperty):
           software.amazon.awscdk.services.ec2.CfnInstance.EbsProperty = (wrapped as
@@ -4650,7 +4653,8 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty):
-          PrivateDnsNameOptionsProperty = Wrapper(cdkObject)
+          PrivateDnsNameOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          PrivateDnsNameOptionsProperty
 
       internal fun unwrap(wrapped: PrivateDnsNameOptionsProperty):
           software.amazon.awscdk.services.ec2.CfnInstance.PrivateDnsNameOptionsProperty = (wrapped
@@ -4754,7 +4758,7 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.EnclaveOptionsProperty):
-          EnclaveOptionsProperty = Wrapper(cdkObject)
+          EnclaveOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as EnclaveOptionsProperty
 
       internal fun unwrap(wrapped: EnclaveOptionsProperty):
           software.amazon.awscdk.services.ec2.CfnInstance.EnclaveOptionsProperty = (wrapped as
@@ -4803,7 +4807,7 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty):
-          NoDeviceProperty = Wrapper(cdkObject)
+          NoDeviceProperty = CdkObjectWrappers.wrap(cdkObject) as NoDeviceProperty
 
       internal fun unwrap(wrapped: NoDeviceProperty):
           software.amazon.awscdk.services.ec2.CfnInstance.NoDeviceProperty = (wrapped as
@@ -4937,7 +4941,8 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty):
-          PrivateIpAddressSpecificationProperty = Wrapper(cdkObject)
+          PrivateIpAddressSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          PrivateIpAddressSpecificationProperty
 
       internal fun unwrap(wrapped: PrivateIpAddressSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnInstance.PrivateIpAddressSpecificationProperty =
@@ -5095,7 +5100,8 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.HibernationOptionsProperty):
-          HibernationOptionsProperty = Wrapper(cdkObject)
+          HibernationOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          HibernationOptionsProperty
 
       internal fun unwrap(wrapped: HibernationOptionsProperty):
           software.amazon.awscdk.services.ec2.CfnInstance.HibernationOptionsProperty = (wrapped as
@@ -5183,7 +5189,8 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.LicenseSpecificationProperty):
-          LicenseSpecificationProperty = Wrapper(cdkObject)
+          LicenseSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          LicenseSpecificationProperty
 
       internal fun unwrap(wrapped: LicenseSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnInstance.LicenseSpecificationProperty = (wrapped as
@@ -5899,7 +5906,7 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.NetworkInterfaceProperty):
-          NetworkInterfaceProperty = Wrapper(cdkObject)
+          NetworkInterfaceProperty = CdkObjectWrappers.wrap(cdkObject) as NetworkInterfaceProperty
 
       internal fun unwrap(wrapped: NetworkInterfaceProperty):
           software.amazon.awscdk.services.ec2.CfnInstance.NetworkInterfaceProperty = (wrapped as
@@ -6022,7 +6029,8 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty):
-          AssociationParameterProperty = Wrapper(cdkObject)
+          AssociationParameterProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AssociationParameterProperty
 
       internal fun unwrap(wrapped: AssociationParameterProperty):
           software.amazon.awscdk.services.ec2.CfnInstance.AssociationParameterProperty = (wrapped as
@@ -6438,7 +6446,8 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty):
-          BlockDeviceMappingProperty = Wrapper(cdkObject)
+          BlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as
+          BlockDeviceMappingProperty
 
       internal fun unwrap(wrapped: BlockDeviceMappingProperty):
           software.amazon.awscdk.services.ec2.CfnInstance.BlockDeviceMappingProperty = (wrapped as
@@ -6583,7 +6592,7 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.SsmAssociationProperty):
-          SsmAssociationProperty = Wrapper(cdkObject)
+          SsmAssociationProperty = CdkObjectWrappers.wrap(cdkObject) as SsmAssociationProperty
 
       internal fun unwrap(wrapped: SsmAssociationProperty):
           software.amazon.awscdk.services.ec2.CfnInstance.SsmAssociationProperty = (wrapped as
@@ -6700,7 +6709,7 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty):
-          CpuOptionsProperty = Wrapper(cdkObject)
+          CpuOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as CpuOptionsProperty
 
       internal fun unwrap(wrapped: CpuOptionsProperty):
           software.amazon.awscdk.services.ec2.CfnInstance.CpuOptionsProperty = (wrapped as
@@ -6825,7 +6834,8 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty):
-          ElasticInferenceAcceleratorProperty = Wrapper(cdkObject)
+          ElasticInferenceAcceleratorProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ElasticInferenceAcceleratorProperty
 
       internal fun unwrap(wrapped: ElasticInferenceAcceleratorProperty):
           software.amazon.awscdk.services.ec2.CfnInstance.ElasticInferenceAcceleratorProperty =
@@ -6938,7 +6948,8 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty):
-          ElasticGpuSpecificationProperty = Wrapper(cdkObject)
+          ElasticGpuSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ElasticGpuSpecificationProperty
 
       internal fun unwrap(wrapped: ElasticGpuSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnInstance.ElasticGpuSpecificationProperty = (wrapped
@@ -7130,7 +7141,8 @@ public open class CfnInstance internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty):
-          LaunchTemplateSpecificationProperty = Wrapper(cdkObject)
+          LaunchTemplateSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          LaunchTemplateSpecificationProperty
 
       internal fun unwrap(wrapped: LaunchTemplateSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnInstance.LaunchTemplateSpecificationProperty =

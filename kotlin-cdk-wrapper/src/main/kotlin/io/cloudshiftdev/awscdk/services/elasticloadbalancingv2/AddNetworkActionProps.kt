@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -73,7 +74,7 @@ public interface AddNetworkActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps):
-        AddNetworkActionProps = Wrapper(cdkObject)
+        AddNetworkActionProps = CdkObjectWrappers.wrap(cdkObject) as AddNetworkActionProps
 
     internal fun unwrap(wrapped: AddNetworkActionProps):
         software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps = (wrapped as

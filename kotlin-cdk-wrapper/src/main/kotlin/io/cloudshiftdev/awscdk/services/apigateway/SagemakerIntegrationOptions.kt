@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Boolean
 import kotlin.String
@@ -455,7 +456,8 @@ public interface SagemakerIntegrationOptions : IntegrationOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.SagemakerIntegrationOptions):
-        SagemakerIntegrationOptions = Wrapper(cdkObject)
+        SagemakerIntegrationOptions = CdkObjectWrappers.wrap(cdkObject) as
+        SagemakerIntegrationOptions
 
     internal fun unwrap(wrapped: SagemakerIntegrationOptions):
         software.amazon.awscdk.services.apigateway.SagemakerIntegrationOptions = (wrapped as

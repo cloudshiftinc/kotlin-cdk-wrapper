@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 import io.cloudshiftdev.awscdk.SecretValue
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.Artifact
 import io.cloudshiftdev.awscdk.services.codepipeline.CommonActionProps
 import kotlin.Number
@@ -269,7 +270,8 @@ public interface AlexaSkillDeployActionProps : CommonActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.AlexaSkillDeployActionProps):
-        AlexaSkillDeployActionProps = Wrapper(cdkObject)
+        AlexaSkillDeployActionProps = CdkObjectWrappers.wrap(cdkObject) as
+        AlexaSkillDeployActionProps
 
     internal fun unwrap(wrapped: AlexaSkillDeployActionProps):
         software.amazon.awscdk.services.codepipeline.actions.AlexaSkillDeployActionProps = (wrapped

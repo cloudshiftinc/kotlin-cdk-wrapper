@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.glue
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -808,7 +809,7 @@ public interface CfnMLTransformProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnMLTransformProps):
-        CfnMLTransformProps = Wrapper(cdkObject)
+        CfnMLTransformProps = CdkObjectWrappers.wrap(cdkObject) as CfnMLTransformProps
 
     internal fun unwrap(wrapped: CfnMLTransformProps):
         software.amazon.awscdk.services.glue.CfnMLTransformProps = (wrapped as CdkObject).cdkObject

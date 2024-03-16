@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.s3outposts
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -202,7 +203,7 @@ public interface CfnAccessPointProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnAccessPointProps):
-        CfnAccessPointProps = Wrapper(cdkObject)
+        CfnAccessPointProps = CdkObjectWrappers.wrap(cdkObject) as CfnAccessPointProps
 
     internal fun unwrap(wrapped: CfnAccessPointProps):
         software.amazon.awscdk.services.s3outposts.CfnAccessPointProps = (wrapped as

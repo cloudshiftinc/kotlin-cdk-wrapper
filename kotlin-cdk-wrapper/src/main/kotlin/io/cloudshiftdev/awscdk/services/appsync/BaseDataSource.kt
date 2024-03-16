@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 import kotlin.Unit
@@ -83,13 +84,9 @@ public abstract class BaseDataSource internal constructor(
    */
   public open fun name(): String = unwrap(this).getName()
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appsync.BaseDataSource,
-  ) : BaseDataSource(cdkObject)
-
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.BaseDataSource):
-        BaseDataSource = Wrapper(cdkObject)
+        BaseDataSource = CdkObjectWrappers.wrap(cdkObject) as BaseDataSource
 
     internal fun unwrap(wrapped: BaseDataSource):
         software.amazon.awscdk.services.appsync.BaseDataSource = (wrapped as CdkObject).cdkObject as

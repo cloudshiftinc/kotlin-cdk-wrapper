@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ses
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.route53.IPublicHostedZone
 import kotlin.String
 
@@ -36,10 +37,6 @@ public abstract class Identity internal constructor(
    */
   public open fun `value`(): String = unwrap(this).getValue()
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ses.Identity,
-  ) : Identity(cdkObject)
-
   public companion object {
     public fun domain(domain: String): Identity =
         software.amazon.awscdk.services.ses.Identity.domain(domain).let(Identity::wrap)
@@ -51,7 +48,7 @@ public abstract class Identity internal constructor(
         software.amazon.awscdk.services.ses.Identity.publicHostedZone(hostedZone.let(IPublicHostedZone::unwrap)).let(Identity::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.Identity): Identity =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as Identity
 
     internal fun unwrap(wrapped: Identity): software.amazon.awscdk.services.ses.Identity = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.ses.Identity

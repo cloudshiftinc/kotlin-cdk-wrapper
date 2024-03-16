@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.collections.List
 
@@ -148,7 +149,7 @@ public interface ConfigureNatOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.ConfigureNatOptions):
-        ConfigureNatOptions = Wrapper(cdkObject)
+        ConfigureNatOptions = CdkObjectWrappers.wrap(cdkObject) as ConfigureNatOptions
 
     internal fun unwrap(wrapped: ConfigureNatOptions):
         software.amazon.awscdk.services.ec2.ConfigureNatOptions = (wrapped as CdkObject).cdkObject

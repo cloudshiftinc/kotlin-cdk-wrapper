@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.pinpoint
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -118,7 +119,7 @@ public interface CfnAppProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnAppProps): CfnAppProps
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as CfnAppProps
 
     internal fun unwrap(wrapped: CfnAppProps): software.amazon.awscdk.services.pinpoint.CfnAppProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.pinpoint.CfnAppProps

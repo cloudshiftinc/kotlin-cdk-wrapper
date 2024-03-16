@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.glue
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -159,7 +160,8 @@ public interface CfnSecurityConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfigurationProps):
-        CfnSecurityConfigurationProps = Wrapper(cdkObject)
+        CfnSecurityConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnSecurityConfigurationProps
 
     internal fun unwrap(wrapped: CfnSecurityConfigurationProps):
         software.amazon.awscdk.services.glue.CfnSecurityConfigurationProps = (wrapped as

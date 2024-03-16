@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -99,7 +100,7 @@ public interface ExportValueOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.ExportValueOptions): ExportValueOptions =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as ExportValueOptions
 
     internal fun unwrap(wrapped: ExportValueOptions): software.amazon.awscdk.ExportValueOptions =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.ExportValueOptions

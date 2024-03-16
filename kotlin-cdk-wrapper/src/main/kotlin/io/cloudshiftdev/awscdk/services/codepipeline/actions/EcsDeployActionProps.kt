@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.Artifact
 import io.cloudshiftdev.awscdk.services.codepipeline.ArtifactPath
 import io.cloudshiftdev.awscdk.services.codepipeline.CommonAwsActionProps
@@ -350,7 +351,7 @@ public interface EcsDeployActionProps : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.EcsDeployActionProps):
-        EcsDeployActionProps = Wrapper(cdkObject)
+        EcsDeployActionProps = CdkObjectWrappers.wrap(cdkObject) as EcsDeployActionProps
 
     internal fun unwrap(wrapped: EcsDeployActionProps):
         software.amazon.awscdk.services.codepipeline.actions.EcsDeployActionProps = (wrapped as

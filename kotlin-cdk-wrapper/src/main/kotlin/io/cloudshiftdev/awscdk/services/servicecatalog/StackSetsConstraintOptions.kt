@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.servicecatalog
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Boolean
 import kotlin.String
@@ -240,7 +241,7 @@ public interface StackSetsConstraintOptions : CommonConstraintOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.StackSetsConstraintOptions):
-        StackSetsConstraintOptions = Wrapper(cdkObject)
+        StackSetsConstraintOptions = CdkObjectWrappers.wrap(cdkObject) as StackSetsConstraintOptions
 
     internal fun unwrap(wrapped: StackSetsConstraintOptions):
         software.amazon.awscdk.services.servicecatalog.StackSetsConstraintOptions = (wrapped as

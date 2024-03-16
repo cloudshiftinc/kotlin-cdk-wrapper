@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -364,7 +365,7 @@ public interface Volume {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.Volume): Volume =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as Volume
 
     internal fun unwrap(wrapped: Volume): software.amazon.awscdk.services.ecs.Volume = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.ecs.Volume

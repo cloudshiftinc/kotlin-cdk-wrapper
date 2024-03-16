@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.String
 import kotlin.Unit
@@ -97,7 +98,7 @@ public interface LifecycleHookTargetConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.LifecycleHookTargetConfig):
-        LifecycleHookTargetConfig = Wrapper(cdkObject)
+        LifecycleHookTargetConfig = CdkObjectWrappers.wrap(cdkObject) as LifecycleHookTargetConfig
 
     internal fun unwrap(wrapped: LifecycleHookTargetConfig):
         software.amazon.awscdk.services.autoscaling.LifecycleHookTargetConfig = (wrapped as

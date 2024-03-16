@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.iot
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -109,7 +110,8 @@ public interface CfnPolicyPrincipalAttachmentProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnPolicyPrincipalAttachmentProps):
-        CfnPolicyPrincipalAttachmentProps = Wrapper(cdkObject)
+        CfnPolicyPrincipalAttachmentProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnPolicyPrincipalAttachmentProps
 
     internal fun unwrap(wrapped: CfnPolicyPrincipalAttachmentProps):
         software.amazon.awscdk.services.iot.CfnPolicyPrincipalAttachmentProps = (wrapped as

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -575,7 +576,7 @@ public interface CfnAlarmModelProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnAlarmModelProps):
-        CfnAlarmModelProps = Wrapper(cdkObject)
+        CfnAlarmModelProps = CdkObjectWrappers.wrap(cdkObject) as CfnAlarmModelProps
 
     internal fun unwrap(wrapped: CfnAlarmModelProps):
         software.amazon.awscdk.services.iotevents.CfnAlarmModelProps = (wrapped as

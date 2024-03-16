@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.dynamodb.ITable
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
@@ -687,7 +688,7 @@ public interface DynamoDeleteItemProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DynamoDeleteItemProps):
-        DynamoDeleteItemProps = Wrapper(cdkObject)
+        DynamoDeleteItemProps = CdkObjectWrappers.wrap(cdkObject) as DynamoDeleteItemProps
 
     internal fun unwrap(wrapped: DynamoDeleteItemProps):
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoDeleteItemProps = (wrapped as

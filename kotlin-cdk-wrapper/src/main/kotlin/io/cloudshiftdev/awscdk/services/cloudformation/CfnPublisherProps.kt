@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudformation
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -162,7 +163,7 @@ public interface CfnPublisherProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnPublisherProps):
-        CfnPublisherProps = Wrapper(cdkObject)
+        CfnPublisherProps = CdkObjectWrappers.wrap(cdkObject) as CfnPublisherProps
 
     internal fun unwrap(wrapped: CfnPublisherProps):
         software.amazon.awscdk.services.cloudformation.CfnPublisherProps = (wrapped as

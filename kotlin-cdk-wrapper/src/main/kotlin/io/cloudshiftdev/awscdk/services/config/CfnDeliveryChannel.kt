@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -561,7 +562,8 @@ public open class CfnDeliveryChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.config.CfnDeliveryChannel.ConfigSnapshotDeliveryPropertiesProperty):
-          ConfigSnapshotDeliveryPropertiesProperty = Wrapper(cdkObject)
+          ConfigSnapshotDeliveryPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ConfigSnapshotDeliveryPropertiesProperty
 
       internal fun unwrap(wrapped: ConfigSnapshotDeliveryPropertiesProperty):
           software.amazon.awscdk.services.config.CfnDeliveryChannel.ConfigSnapshotDeliveryPropertiesProperty

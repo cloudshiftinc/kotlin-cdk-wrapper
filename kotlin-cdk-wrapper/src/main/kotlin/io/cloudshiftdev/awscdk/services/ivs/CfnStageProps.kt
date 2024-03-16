@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ivs
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -136,7 +137,7 @@ public interface CfnStageProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ivs.CfnStageProps): CfnStageProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as CfnStageProps
 
     internal fun unwrap(wrapped: CfnStageProps): software.amazon.awscdk.services.ivs.CfnStageProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ivs.CfnStageProps

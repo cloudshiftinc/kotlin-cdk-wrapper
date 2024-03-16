@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.servicecatalog
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -110,7 +111,7 @@ public interface PortfolioShareOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.PortfolioShareOptions):
-        PortfolioShareOptions = Wrapper(cdkObject)
+        PortfolioShareOptions = CdkObjectWrappers.wrap(cdkObject) as PortfolioShareOptions
 
     internal fun unwrap(wrapped: PortfolioShareOptions):
         software.amazon.awscdk.services.servicecatalog.PortfolioShareOptions = (wrapped as

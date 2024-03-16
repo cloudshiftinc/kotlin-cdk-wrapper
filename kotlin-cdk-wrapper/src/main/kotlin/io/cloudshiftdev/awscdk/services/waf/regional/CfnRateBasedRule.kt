@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -596,7 +597,7 @@ public open class CfnRateBasedRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.waf.regional.CfnRateBasedRule.PredicateProperty):
-          PredicateProperty = Wrapper(cdkObject)
+          PredicateProperty = CdkObjectWrappers.wrap(cdkObject) as PredicateProperty
 
       internal fun unwrap(wrapped: PredicateProperty):
           software.amazon.awscdk.services.waf.regional.CfnRateBasedRule.PredicateProperty = (wrapped

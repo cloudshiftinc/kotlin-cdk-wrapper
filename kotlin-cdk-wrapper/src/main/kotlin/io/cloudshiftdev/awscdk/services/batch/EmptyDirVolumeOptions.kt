@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.batch
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -175,7 +176,7 @@ public interface EmptyDirVolumeOptions : EksVolumeOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.EmptyDirVolumeOptions):
-        EmptyDirVolumeOptions = Wrapper(cdkObject)
+        EmptyDirVolumeOptions = CdkObjectWrappers.wrap(cdkObject) as EmptyDirVolumeOptions
 
     internal fun unwrap(wrapped: EmptyDirVolumeOptions):
         software.amazon.awscdk.services.batch.EmptyDirVolumeOptions = (wrapped as

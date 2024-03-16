@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -201,7 +202,7 @@ public interface CfnMacroProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnMacroProps): CfnMacroProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as CfnMacroProps
 
     internal fun unwrap(wrapped: CfnMacroProps): software.amazon.awscdk.CfnMacroProps = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.CfnMacroProps

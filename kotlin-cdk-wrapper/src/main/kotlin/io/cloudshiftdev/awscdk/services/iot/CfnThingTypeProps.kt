@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -269,7 +270,7 @@ public interface CfnThingTypeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnThingTypeProps):
-        CfnThingTypeProps = Wrapper(cdkObject)
+        CfnThingTypeProps = CdkObjectWrappers.wrap(cdkObject) as CfnThingTypeProps
 
     internal fun unwrap(wrapped: CfnThingTypeProps):
         software.amazon.awscdk.services.iot.CfnThingTypeProps = (wrapped as CdkObject).cdkObject as

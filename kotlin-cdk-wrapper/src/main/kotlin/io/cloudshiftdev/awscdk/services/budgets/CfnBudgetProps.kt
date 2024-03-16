@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.budgets
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 import kotlin.collections.List
@@ -231,7 +232,7 @@ public interface CfnBudgetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.budgets.CfnBudgetProps):
-        CfnBudgetProps = Wrapper(cdkObject)
+        CfnBudgetProps = CdkObjectWrappers.wrap(cdkObject) as CfnBudgetProps
 
     internal fun unwrap(wrapped: CfnBudgetProps):
         software.amazon.awscdk.services.budgets.CfnBudgetProps = (wrapped as CdkObject).cdkObject as

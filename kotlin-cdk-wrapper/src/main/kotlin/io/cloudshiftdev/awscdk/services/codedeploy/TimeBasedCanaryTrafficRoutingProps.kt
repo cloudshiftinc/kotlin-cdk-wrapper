@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.codedeploy
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -87,7 +88,8 @@ public interface TimeBasedCanaryTrafficRoutingProps : BaseTrafficShiftingConfigP
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRoutingProps):
-        TimeBasedCanaryTrafficRoutingProps = Wrapper(cdkObject)
+        TimeBasedCanaryTrafficRoutingProps = CdkObjectWrappers.wrap(cdkObject) as
+        TimeBasedCanaryTrafficRoutingProps
 
     internal fun unwrap(wrapped: TimeBasedCanaryTrafficRoutingProps):
         software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRoutingProps = (wrapped as

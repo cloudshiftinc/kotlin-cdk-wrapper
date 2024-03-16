@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.logs.ILogGroup
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.Boolean
@@ -214,7 +215,7 @@ public interface Monitoring {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.Monitoring):
-        Monitoring = Wrapper(cdkObject)
+        Monitoring = CdkObjectWrappers.wrap(cdkObject) as Monitoring
 
     internal fun unwrap(wrapped: Monitoring):
         software.amazon.awscdk.services.stepfunctions.tasks.Monitoring = (wrapped as

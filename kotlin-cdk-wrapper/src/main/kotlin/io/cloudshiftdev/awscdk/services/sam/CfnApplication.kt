@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -426,7 +427,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnApplication.ApplicationLocationProperty):
-          ApplicationLocationProperty = Wrapper(cdkObject)
+          ApplicationLocationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ApplicationLocationProperty
 
       internal fun unwrap(wrapped: ApplicationLocationProperty):
           software.amazon.awscdk.services.sam.CfnApplication.ApplicationLocationProperty = (wrapped

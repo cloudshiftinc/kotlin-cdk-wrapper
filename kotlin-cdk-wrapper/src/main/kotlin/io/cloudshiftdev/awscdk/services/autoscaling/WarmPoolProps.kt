@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.Unit
@@ -175,7 +176,7 @@ public interface WarmPoolProps : WarmPoolOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.WarmPoolProps):
-        WarmPoolProps = Wrapper(cdkObject)
+        WarmPoolProps = CdkObjectWrappers.wrap(cdkObject) as WarmPoolProps
 
     internal fun unwrap(wrapped: WarmPoolProps):
         software.amazon.awscdk.services.autoscaling.WarmPoolProps = (wrapped as CdkObject).cdkObject

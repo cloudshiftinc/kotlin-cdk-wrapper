@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -185,7 +186,7 @@ public interface OptionGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.OptionGroupProps):
-        OptionGroupProps = Wrapper(cdkObject)
+        OptionGroupProps = CdkObjectWrappers.wrap(cdkObject) as OptionGroupProps
 
     internal fun unwrap(wrapped: OptionGroupProps):
         software.amazon.awscdk.services.rds.OptionGroupProps = (wrapped as CdkObject).cdkObject as

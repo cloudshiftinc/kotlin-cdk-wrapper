@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -513,7 +514,7 @@ public open class CfnResourceSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.TargetResourceProperty):
-          TargetResourceProperty = Wrapper(cdkObject)
+          TargetResourceProperty = CdkObjectWrappers.wrap(cdkObject) as TargetResourceProperty
 
       internal fun unwrap(wrapped: TargetResourceProperty):
           software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.TargetResourceProperty
@@ -595,7 +596,7 @@ public open class CfnResourceSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.NLBResourceProperty):
-          NLBResourceProperty = Wrapper(cdkObject)
+          NLBResourceProperty = CdkObjectWrappers.wrap(cdkObject) as NLBResourceProperty
 
       internal fun unwrap(wrapped: NLBResourceProperty):
           software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.NLBResourceProperty
@@ -704,7 +705,7 @@ public open class CfnResourceSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.R53ResourceRecordProperty):
-          R53ResourceRecordProperty = Wrapper(cdkObject)
+          R53ResourceRecordProperty = CdkObjectWrappers.wrap(cdkObject) as R53ResourceRecordProperty
 
       internal fun unwrap(wrapped: R53ResourceRecordProperty):
           software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.R53ResourceRecordProperty
@@ -969,7 +970,7 @@ public open class CfnResourceSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.ResourceProperty):
-          ResourceProperty = Wrapper(cdkObject)
+          ResourceProperty = CdkObjectWrappers.wrap(cdkObject) as ResourceProperty
 
       internal fun unwrap(wrapped: ResourceProperty):
           software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.ResourceProperty =
@@ -1204,7 +1205,7 @@ public open class CfnResourceSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.DNSTargetResourceProperty):
-          DNSTargetResourceProperty = Wrapper(cdkObject)
+          DNSTargetResourceProperty = CdkObjectWrappers.wrap(cdkObject) as DNSTargetResourceProperty
 
       internal fun unwrap(wrapped: DNSTargetResourceProperty):
           software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet.DNSTargetResourceProperty

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs.patterns
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecs.ContainerImage
 import io.cloudshiftdev.awscdk.services.ecs.LogDriver
 import io.cloudshiftdev.awscdk.services.ecs.Secret
@@ -504,7 +505,8 @@ public interface ApplicationLoadBalancedTaskImageProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedTaskImageProps):
-        ApplicationLoadBalancedTaskImageProps = Wrapper(cdkObject)
+        ApplicationLoadBalancedTaskImageProps = CdkObjectWrappers.wrap(cdkObject) as
+        ApplicationLoadBalancedTaskImageProps
 
     internal fun unwrap(wrapped: ApplicationLoadBalancedTaskImageProps):
         software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedTaskImageProps =

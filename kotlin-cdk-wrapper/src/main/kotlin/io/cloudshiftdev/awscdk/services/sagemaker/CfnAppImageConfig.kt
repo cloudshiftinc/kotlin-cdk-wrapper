@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -539,7 +540,8 @@ public open class CfnAppImageConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.JupyterLabAppImageConfigProperty):
-          JupyterLabAppImageConfigProperty = Wrapper(cdkObject)
+          JupyterLabAppImageConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          JupyterLabAppImageConfigProperty
 
       internal fun unwrap(wrapped: JupyterLabAppImageConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.JupyterLabAppImageConfigProperty
@@ -654,7 +656,7 @@ public open class CfnAppImageConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelSpecProperty):
-          KernelSpecProperty = Wrapper(cdkObject)
+          KernelSpecProperty = CdkObjectWrappers.wrap(cdkObject) as KernelSpecProperty
 
       internal fun unwrap(wrapped: KernelSpecProperty):
           software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelSpecProperty = (wrapped
@@ -848,7 +850,7 @@ public open class CfnAppImageConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.ContainerConfigProperty):
-          ContainerConfigProperty = Wrapper(cdkObject)
+          ContainerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as ContainerConfigProperty
 
       internal fun unwrap(wrapped: ContainerConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.ContainerConfigProperty =
@@ -1023,7 +1025,8 @@ public open class CfnAppImageConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelGatewayImageConfigProperty):
-          KernelGatewayImageConfigProperty = Wrapper(cdkObject)
+          KernelGatewayImageConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          KernelGatewayImageConfigProperty
 
       internal fun unwrap(wrapped: KernelGatewayImageConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.KernelGatewayImageConfigProperty
@@ -1177,7 +1180,7 @@ public open class CfnAppImageConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.FileSystemConfigProperty):
-          FileSystemConfigProperty = Wrapper(cdkObject)
+          FileSystemConfigProperty = CdkObjectWrappers.wrap(cdkObject) as FileSystemConfigProperty
 
       internal fun unwrap(wrapped: FileSystemConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.FileSystemConfigProperty =
@@ -1288,7 +1291,8 @@ public open class CfnAppImageConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CustomImageContainerEnvironmentVariableProperty):
-          CustomImageContainerEnvironmentVariableProperty = Wrapper(cdkObject)
+          CustomImageContainerEnvironmentVariableProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CustomImageContainerEnvironmentVariableProperty
 
       internal fun unwrap(wrapped: CustomImageContainerEnvironmentVariableProperty):
           software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CustomImageContainerEnvironmentVariableProperty

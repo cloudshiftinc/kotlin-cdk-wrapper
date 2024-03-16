@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -623,7 +624,8 @@ public open class CfnVPNConnection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnVPNConnection.VpnTunnelOptionsSpecificationProperty):
-          VpnTunnelOptionsSpecificationProperty = Wrapper(cdkObject)
+          VpnTunnelOptionsSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VpnTunnelOptionsSpecificationProperty
 
       internal fun unwrap(wrapped: VpnTunnelOptionsSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnVPNConnection.VpnTunnelOptionsSpecificationProperty

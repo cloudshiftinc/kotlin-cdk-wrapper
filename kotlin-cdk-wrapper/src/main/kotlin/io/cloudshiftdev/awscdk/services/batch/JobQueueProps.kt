@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.batch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -333,7 +334,7 @@ public interface JobQueueProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.JobQueueProps): JobQueueProps
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as JobQueueProps
 
     internal fun unwrap(wrapped: JobQueueProps): software.amazon.awscdk.services.batch.JobQueueProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.batch.JobQueueProps

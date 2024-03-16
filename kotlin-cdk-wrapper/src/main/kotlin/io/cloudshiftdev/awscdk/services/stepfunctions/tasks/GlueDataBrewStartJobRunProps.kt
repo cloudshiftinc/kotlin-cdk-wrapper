@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskStateBaseProps
@@ -419,7 +420,8 @@ public interface GlueDataBrewStartJobRunProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.GlueDataBrewStartJobRunProps):
-        GlueDataBrewStartJobRunProps = Wrapper(cdkObject)
+        GlueDataBrewStartJobRunProps = CdkObjectWrappers.wrap(cdkObject) as
+        GlueDataBrewStartJobRunProps
 
     internal fun unwrap(wrapped: GlueDataBrewStartJobRunProps):
         software.amazon.awscdk.services.stepfunctions.tasks.GlueDataBrewStartJobRunProps = (wrapped

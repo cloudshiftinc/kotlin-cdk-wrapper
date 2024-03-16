@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.iam
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -514,7 +515,7 @@ public interface RoleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.RoleProps): RoleProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as RoleProps
 
     internal fun unwrap(wrapped: RoleProps): software.amazon.awscdk.services.iam.RoleProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.iam.RoleProps

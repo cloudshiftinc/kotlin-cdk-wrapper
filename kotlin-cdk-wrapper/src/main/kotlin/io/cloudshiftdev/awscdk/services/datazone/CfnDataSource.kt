@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -900,7 +901,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftServerlessStorageProperty):
-          RedshiftServerlessStorageProperty = Wrapper(cdkObject)
+          RedshiftServerlessStorageProperty = CdkObjectWrappers.wrap(cdkObject) as
+          RedshiftServerlessStorageProperty
 
       internal fun unwrap(wrapped: RedshiftServerlessStorageProperty):
           software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftServerlessStorageProperty =
@@ -1008,7 +1010,7 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.FilterExpressionProperty):
-          FilterExpressionProperty = Wrapper(cdkObject)
+          FilterExpressionProperty = CdkObjectWrappers.wrap(cdkObject) as FilterExpressionProperty
 
       internal fun unwrap(wrapped: FilterExpressionProperty):
           software.amazon.awscdk.services.datazone.CfnDataSource.FilterExpressionProperty = (wrapped
@@ -1111,7 +1113,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.RecommendationConfigurationProperty):
-          RecommendationConfigurationProperty = Wrapper(cdkObject)
+          RecommendationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          RecommendationConfigurationProperty
 
       internal fun unwrap(wrapped: RecommendationConfigurationProperty):
           software.amazon.awscdk.services.datazone.CfnDataSource.RecommendationConfigurationProperty
@@ -1287,7 +1290,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.RelationalFilterConfigurationProperty):
-          RelationalFilterConfigurationProperty = Wrapper(cdkObject)
+          RelationalFilterConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          RelationalFilterConfigurationProperty
 
       internal fun unwrap(wrapped: RelationalFilterConfigurationProperty):
           software.amazon.awscdk.services.datazone.CfnDataSource.RelationalFilterConfigurationProperty
@@ -1467,7 +1471,7 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftStorageProperty):
-          RedshiftStorageProperty = Wrapper(cdkObject)
+          RedshiftStorageProperty = CdkObjectWrappers.wrap(cdkObject) as RedshiftStorageProperty
 
       internal fun unwrap(wrapped: RedshiftStorageProperty):
           software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftStorageProperty = (wrapped
@@ -1577,7 +1581,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.ScheduleConfigurationProperty):
-          ScheduleConfigurationProperty = Wrapper(cdkObject)
+          ScheduleConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ScheduleConfigurationProperty
 
       internal fun unwrap(wrapped: ScheduleConfigurationProperty):
           software.amazon.awscdk.services.datazone.CfnDataSource.ScheduleConfigurationProperty =
@@ -1784,7 +1789,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.DataSourceConfigurationInputProperty):
-          DataSourceConfigurationInputProperty = Wrapper(cdkObject)
+          DataSourceConfigurationInputProperty = CdkObjectWrappers.wrap(cdkObject) as
+          DataSourceConfigurationInputProperty
 
       internal fun unwrap(wrapped: DataSourceConfigurationInputProperty):
           software.amazon.awscdk.services.datazone.CfnDataSource.DataSourceConfigurationInputProperty
@@ -1867,7 +1873,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftClusterStorageProperty):
-          RedshiftClusterStorageProperty = Wrapper(cdkObject)
+          RedshiftClusterStorageProperty = CdkObjectWrappers.wrap(cdkObject) as
+          RedshiftClusterStorageProperty
 
       internal fun unwrap(wrapped: RedshiftClusterStorageProperty):
           software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftClusterStorageProperty =
@@ -1951,7 +1958,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftCredentialConfigurationProperty):
-          RedshiftCredentialConfigurationProperty = Wrapper(cdkObject)
+          RedshiftCredentialConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          RedshiftCredentialConfigurationProperty
 
       internal fun unwrap(wrapped: RedshiftCredentialConfigurationProperty):
           software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftCredentialConfigurationProperty
@@ -2245,7 +2253,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftRunConfigurationInputProperty):
-          RedshiftRunConfigurationInputProperty = Wrapper(cdkObject)
+          RedshiftRunConfigurationInputProperty = CdkObjectWrappers.wrap(cdkObject) as
+          RedshiftRunConfigurationInputProperty
 
       internal fun unwrap(wrapped: RedshiftRunConfigurationInputProperty):
           software.amazon.awscdk.services.datazone.CfnDataSource.RedshiftRunConfigurationInputProperty
@@ -2399,7 +2408,8 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty):
-          GlueRunConfigurationInputProperty = Wrapper(cdkObject)
+          GlueRunConfigurationInputProperty = CdkObjectWrappers.wrap(cdkObject) as
+          GlueRunConfigurationInputProperty
 
       internal fun unwrap(wrapped: GlueRunConfigurationInputProperty):
           software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty =
@@ -2561,7 +2571,7 @@ public open class CfnDataSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.FormInputProperty):
-          FormInputProperty = Wrapper(cdkObject)
+          FormInputProperty = CdkObjectWrappers.wrap(cdkObject) as FormInputProperty
 
       internal fun unwrap(wrapped: FormInputProperty):
           software.amazon.awscdk.services.datazone.CfnDataSource.FormInputProperty = (wrapped as

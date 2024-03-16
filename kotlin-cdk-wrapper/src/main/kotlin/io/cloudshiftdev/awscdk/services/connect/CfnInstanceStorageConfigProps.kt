@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.connect
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -396,7 +397,8 @@ public interface CfnInstanceStorageConfigProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnInstanceStorageConfigProps):
-        CfnInstanceStorageConfigProps = Wrapper(cdkObject)
+        CfnInstanceStorageConfigProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnInstanceStorageConfigProps
 
     internal fun unwrap(wrapped: CfnInstanceStorageConfigProps):
         software.amazon.awscdk.services.connect.CfnInstanceStorageConfigProps = (wrapped as

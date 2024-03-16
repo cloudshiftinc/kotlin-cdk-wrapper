@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -188,7 +189,7 @@ public interface GrpcRouteMatch {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.GrpcRouteMatch):
-        GrpcRouteMatch = Wrapper(cdkObject)
+        GrpcRouteMatch = CdkObjectWrappers.wrap(cdkObject) as GrpcRouteMatch
 
     internal fun unwrap(wrapped: GrpcRouteMatch):
         software.amazon.awscdk.services.appmesh.GrpcRouteMatch = (wrapped as CdkObject).cdkObject as

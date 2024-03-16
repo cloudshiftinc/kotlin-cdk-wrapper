@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.s3
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -72,7 +73,8 @@ public interface VirtualHostedStyleUrlOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.VirtualHostedStyleUrlOptions):
-        VirtualHostedStyleUrlOptions = Wrapper(cdkObject)
+        VirtualHostedStyleUrlOptions = CdkObjectWrappers.wrap(cdkObject) as
+        VirtualHostedStyleUrlOptions
 
     internal fun unwrap(wrapped: VirtualHostedStyleUrlOptions):
         software.amazon.awscdk.services.s3.VirtualHostedStyleUrlOptions = (wrapped as

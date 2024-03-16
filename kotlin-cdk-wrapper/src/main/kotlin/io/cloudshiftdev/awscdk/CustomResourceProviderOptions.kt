@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -294,7 +295,8 @@ public interface CustomResourceProviderOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CustomResourceProviderOptions):
-        CustomResourceProviderOptions = Wrapper(cdkObject)
+        CustomResourceProviderOptions = CdkObjectWrappers.wrap(cdkObject) as
+        CustomResourceProviderOptions
 
     internal fun unwrap(wrapped: CustomResourceProviderOptions):
         software.amazon.awscdk.CustomResourceProviderOptions = (wrapped as CdkObject).cdkObject as

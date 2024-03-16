@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -131,7 +132,7 @@ public interface AssetManifestOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.AssetManifestOptions):
-        AssetManifestOptions = Wrapper(cdkObject)
+        AssetManifestOptions = CdkObjectWrappers.wrap(cdkObject) as AssetManifestOptions
 
     internal fun unwrap(wrapped: AssetManifestOptions):
         software.amazon.awscdk.cloudassembly.schema.AssetManifestOptions = (wrapped as

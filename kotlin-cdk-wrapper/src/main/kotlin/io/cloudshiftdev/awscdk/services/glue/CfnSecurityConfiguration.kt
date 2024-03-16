@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -453,7 +454,8 @@ public open class CfnSecurityConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.EncryptionConfigurationProperty):
-          EncryptionConfigurationProperty = Wrapper(cdkObject)
+          EncryptionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EncryptionConfigurationProperty
 
       internal fun unwrap(wrapped: EncryptionConfigurationProperty):
           software.amazon.awscdk.services.glue.CfnSecurityConfiguration.EncryptionConfigurationProperty
@@ -565,7 +567,8 @@ public open class CfnSecurityConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty):
-          CloudWatchEncryptionProperty = Wrapper(cdkObject)
+          CloudWatchEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CloudWatchEncryptionProperty
 
       internal fun unwrap(wrapped: CloudWatchEncryptionProperty):
           software.amazon.awscdk.services.glue.CfnSecurityConfiguration.CloudWatchEncryptionProperty
@@ -676,7 +679,7 @@ public open class CfnSecurityConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty):
-          S3EncryptionProperty = Wrapper(cdkObject)
+          S3EncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as S3EncryptionProperty
 
       internal fun unwrap(wrapped: S3EncryptionProperty):
           software.amazon.awscdk.services.glue.CfnSecurityConfiguration.S3EncryptionProperty =
@@ -789,7 +792,8 @@ public open class CfnSecurityConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty):
-          JobBookmarksEncryptionProperty = Wrapper(cdkObject)
+          JobBookmarksEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          JobBookmarksEncryptionProperty
 
       internal fun unwrap(wrapped: JobBookmarksEncryptionProperty):
           software.amazon.awscdk.services.glue.CfnSecurityConfiguration.JobBookmarksEncryptionProperty

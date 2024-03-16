@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.String
 import kotlin.Unit
@@ -53,10 +54,6 @@ public abstract class Artifacts internal constructor(
    */
   public override fun type(): String = unwrap(this).getType()
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.Artifacts,
-  ) : Artifacts(cdkObject)
-
   public companion object {
     public fun s3(props: S3ArtifactsProps): IArtifacts =
         software.amazon.awscdk.services.codebuild.Artifacts.s3(props.let(S3ArtifactsProps::unwrap)).let(IArtifacts::wrap)
@@ -67,7 +64,7 @@ public abstract class Artifacts internal constructor(
         s3(S3ArtifactsProps(props))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.Artifacts): Artifacts =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as Artifacts
 
     internal fun unwrap(wrapped: Artifacts): software.amazon.awscdk.services.codebuild.Artifacts =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.codebuild.Artifacts

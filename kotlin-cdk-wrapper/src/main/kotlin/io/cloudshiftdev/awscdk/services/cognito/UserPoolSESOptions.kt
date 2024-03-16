@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -248,7 +249,7 @@ public interface UserPoolSESOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.UserPoolSESOptions):
-        UserPoolSESOptions = Wrapper(cdkObject)
+        UserPoolSESOptions = CdkObjectWrappers.wrap(cdkObject) as UserPoolSESOptions
 
     internal fun unwrap(wrapped: UserPoolSESOptions):
         software.amazon.awscdk.services.cognito.UserPoolSESOptions = (wrapped as

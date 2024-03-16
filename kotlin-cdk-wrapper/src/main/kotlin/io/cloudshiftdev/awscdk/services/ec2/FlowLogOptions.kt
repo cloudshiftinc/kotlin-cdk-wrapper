@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.collections.List
 
@@ -253,7 +254,7 @@ public interface FlowLogOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.FlowLogOptions): FlowLogOptions
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as FlowLogOptions
 
     internal fun unwrap(wrapped: FlowLogOptions): software.amazon.awscdk.services.ec2.FlowLogOptions
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.FlowLogOptions

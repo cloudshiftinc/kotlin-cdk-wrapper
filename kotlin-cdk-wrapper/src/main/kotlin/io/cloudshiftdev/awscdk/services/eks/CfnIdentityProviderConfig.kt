@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -685,7 +686,8 @@ public open class CfnIdentityProviderConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnIdentityProviderConfig.OidcIdentityProviderConfigProperty):
-          OidcIdentityProviderConfigProperty = Wrapper(cdkObject)
+          OidcIdentityProviderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          OidcIdentityProviderConfigProperty
 
       internal fun unwrap(wrapped: OidcIdentityProviderConfigProperty):
           software.amazon.awscdk.services.eks.CfnIdentityProviderConfig.OidcIdentityProviderConfigProperty
@@ -796,7 +798,7 @@ public open class CfnIdentityProviderConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnIdentityProviderConfig.RequiredClaimProperty):
-          RequiredClaimProperty = Wrapper(cdkObject)
+          RequiredClaimProperty = CdkObjectWrappers.wrap(cdkObject) as RequiredClaimProperty
 
       internal fun unwrap(wrapped: RequiredClaimProperty):
           software.amazon.awscdk.services.eks.CfnIdentityProviderConfig.RequiredClaimProperty =

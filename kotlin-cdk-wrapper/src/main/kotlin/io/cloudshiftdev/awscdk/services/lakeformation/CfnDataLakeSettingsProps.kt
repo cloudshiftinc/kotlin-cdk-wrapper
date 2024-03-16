@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lakeformation
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -916,7 +917,7 @@ public interface CfnDataLakeSettingsProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataLakeSettingsProps):
-        CfnDataLakeSettingsProps = Wrapper(cdkObject)
+        CfnDataLakeSettingsProps = CdkObjectWrappers.wrap(cdkObject) as CfnDataLakeSettingsProps
 
     internal fun unwrap(wrapped: CfnDataLakeSettingsProps):
         software.amazon.awscdk.services.lakeformation.CfnDataLakeSettingsProps = (wrapped as

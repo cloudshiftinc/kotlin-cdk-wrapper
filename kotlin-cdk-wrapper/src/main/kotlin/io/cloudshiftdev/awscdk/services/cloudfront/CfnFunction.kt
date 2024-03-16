@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -527,7 +528,7 @@ public open class CfnFunction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty):
-          FunctionMetadataProperty = Wrapper(cdkObject)
+          FunctionMetadataProperty = CdkObjectWrappers.wrap(cdkObject) as FunctionMetadataProperty
 
       internal fun unwrap(wrapped: FunctionMetadataProperty):
           software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionMetadataProperty = (wrapped
@@ -688,7 +689,7 @@ public open class CfnFunction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionConfigProperty):
-          FunctionConfigProperty = Wrapper(cdkObject)
+          FunctionConfigProperty = CdkObjectWrappers.wrap(cdkObject) as FunctionConfigProperty
 
       internal fun unwrap(wrapped: FunctionConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnFunction.FunctionConfigProperty = (wrapped
@@ -771,7 +772,8 @@ public open class CfnFunction internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnFunction.KeyValueStoreAssociationProperty):
-          KeyValueStoreAssociationProperty = Wrapper(cdkObject)
+          KeyValueStoreAssociationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          KeyValueStoreAssociationProperty
 
       internal fun unwrap(wrapped: KeyValueStoreAssociationProperty):
           software.amazon.awscdk.services.cloudfront.CfnFunction.KeyValueStoreAssociationProperty =

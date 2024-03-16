@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.secretsmanager
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
@@ -222,7 +223,8 @@ public interface MultiUserHostedRotationOptions : SingleUserHostedRotationOption
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.MultiUserHostedRotationOptions):
-        MultiUserHostedRotationOptions = Wrapper(cdkObject)
+        MultiUserHostedRotationOptions = CdkObjectWrappers.wrap(cdkObject) as
+        MultiUserHostedRotationOptions
 
     internal fun unwrap(wrapped: MultiUserHostedRotationOptions):
         software.amazon.awscdk.services.secretsmanager.MultiUserHostedRotationOptions = (wrapped as

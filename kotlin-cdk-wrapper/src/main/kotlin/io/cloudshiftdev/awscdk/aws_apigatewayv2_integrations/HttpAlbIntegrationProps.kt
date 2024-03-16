@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.apigatewayv2.HttpMethod
 import io.cloudshiftdev.awscdk.services.apigatewayv2.IVpcLink
 import io.cloudshiftdev.awscdk.services.apigatewayv2.ParameterMapping
@@ -144,7 +145,7 @@ public interface HttpAlbIntegrationProps : HttpPrivateIntegrationOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.HttpAlbIntegrationProps):
-        HttpAlbIntegrationProps = Wrapper(cdkObject)
+        HttpAlbIntegrationProps = CdkObjectWrappers.wrap(cdkObject) as HttpAlbIntegrationProps
 
     internal fun unwrap(wrapped: HttpAlbIntegrationProps):
         software.amazon.awscdk.aws_apigatewayv2_integrations.HttpAlbIntegrationProps = (wrapped as

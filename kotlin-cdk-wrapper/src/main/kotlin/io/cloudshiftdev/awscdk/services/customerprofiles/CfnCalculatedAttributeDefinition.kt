@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -589,7 +590,7 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty):
-          AttributeItemProperty = Wrapper(cdkObject)
+          AttributeItemProperty = CdkObjectWrappers.wrap(cdkObject) as AttributeItemProperty
 
       internal fun unwrap(wrapped: AttributeItemProperty):
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeItemProperty
@@ -741,7 +742,7 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeDetailsProperty):
-          AttributeDetailsProperty = Wrapper(cdkObject)
+          AttributeDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as AttributeDetailsProperty
 
       internal fun unwrap(wrapped: AttributeDetailsProperty):
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.AttributeDetailsProperty
@@ -850,7 +851,7 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty):
-          ThresholdProperty = Wrapper(cdkObject)
+          ThresholdProperty = CdkObjectWrappers.wrap(cdkObject) as ThresholdProperty
 
       internal fun unwrap(wrapped: ThresholdProperty):
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ThresholdProperty
@@ -959,7 +960,7 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty):
-          RangeProperty = Wrapper(cdkObject)
+          RangeProperty = CdkObjectWrappers.wrap(cdkObject) as RangeProperty
 
       internal fun unwrap(wrapped: RangeProperty):
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.RangeProperty
@@ -1155,7 +1156,7 @@ public open class CfnCalculatedAttributeDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ConditionsProperty):
-          ConditionsProperty = Wrapper(cdkObject)
+          ConditionsProperty = CdkObjectWrappers.wrap(cdkObject) as ConditionsProperty
 
       internal fun unwrap(wrapped: ConditionsProperty):
           software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition.ConditionsProperty

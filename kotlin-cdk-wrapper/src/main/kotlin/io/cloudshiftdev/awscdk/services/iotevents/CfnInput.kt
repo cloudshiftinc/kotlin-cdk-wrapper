@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -417,7 +418,7 @@ public open class CfnInput internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnInput.AttributeProperty):
-          AttributeProperty = Wrapper(cdkObject)
+          AttributeProperty = CdkObjectWrappers.wrap(cdkObject) as AttributeProperty
 
       internal fun unwrap(wrapped: AttributeProperty):
           software.amazon.awscdk.services.iotevents.CfnInput.AttributeProperty = (wrapped as
@@ -561,7 +562,7 @@ public open class CfnInput internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotevents.CfnInput.InputDefinitionProperty):
-          InputDefinitionProperty = Wrapper(cdkObject)
+          InputDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as InputDefinitionProperty
 
       internal fun unwrap(wrapped: InputDefinitionProperty):
           software.amazon.awscdk.services.iotevents.CfnInput.InputDefinitionProperty = (wrapped as

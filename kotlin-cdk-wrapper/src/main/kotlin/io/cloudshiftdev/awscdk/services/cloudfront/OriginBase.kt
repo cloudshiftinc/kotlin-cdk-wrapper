@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -39,13 +40,9 @@ public abstract class OriginBase internal constructor(
   public override fun bind(scope: Construct, options: OriginBindOptions.Builder.() -> Unit):
       OriginBindConfig = bind(scope, OriginBindOptions(options))
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.OriginBase,
-  ) : OriginBase(cdkObject)
-
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.OriginBase): OriginBase
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as OriginBase
 
     internal fun unwrap(wrapped: OriginBase): software.amazon.awscdk.services.cloudfront.OriginBase
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cloudfront.OriginBase

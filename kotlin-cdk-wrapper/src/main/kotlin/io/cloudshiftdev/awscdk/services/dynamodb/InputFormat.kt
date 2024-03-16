@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.dynamodb
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -34,10 +35,6 @@ import kotlin.jvm.JvmName
 public abstract class InputFormat internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.dynamodb.InputFormat,
 ) : CdkObject(cdkObject) {
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.InputFormat,
-  ) : InputFormat(cdkObject)
-
   public companion object {
     public fun csv(): InputFormat =
         software.amazon.awscdk.services.dynamodb.InputFormat.csv().let(InputFormat::wrap)
@@ -56,7 +53,7 @@ public abstract class InputFormat internal constructor(
         software.amazon.awscdk.services.dynamodb.InputFormat.ion().let(InputFormat::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.InputFormat): InputFormat
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as InputFormat
 
     internal fun unwrap(wrapped: InputFormat): software.amazon.awscdk.services.dynamodb.InputFormat
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.dynamodb.InputFormat

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -428,7 +429,7 @@ public open class CfnEventIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appintegrations.CfnEventIntegration.EventFilterProperty):
-          EventFilterProperty = Wrapper(cdkObject)
+          EventFilterProperty = CdkObjectWrappers.wrap(cdkObject) as EventFilterProperty
 
       internal fun unwrap(wrapped: EventFilterProperty):
           software.amazon.awscdk.services.appintegrations.CfnEventIntegration.EventFilterProperty =

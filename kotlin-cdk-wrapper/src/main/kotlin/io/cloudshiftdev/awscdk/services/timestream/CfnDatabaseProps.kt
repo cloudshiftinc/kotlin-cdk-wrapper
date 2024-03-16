@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.timestream
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -152,7 +153,7 @@ public interface CfnDatabaseProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.timestream.CfnDatabaseProps):
-        CfnDatabaseProps = Wrapper(cdkObject)
+        CfnDatabaseProps = CdkObjectWrappers.wrap(cdkObject) as CfnDatabaseProps
 
     internal fun unwrap(wrapped: CfnDatabaseProps):
         software.amazon.awscdk.services.timestream.CfnDatabaseProps = (wrapped as

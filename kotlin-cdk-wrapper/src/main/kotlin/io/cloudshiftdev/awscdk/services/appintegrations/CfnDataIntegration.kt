@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -649,7 +650,7 @@ public open class CfnDataIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appintegrations.CfnDataIntegration.ScheduleConfigProperty):
-          ScheduleConfigProperty = Wrapper(cdkObject)
+          ScheduleConfigProperty = CdkObjectWrappers.wrap(cdkObject) as ScheduleConfigProperty
 
       internal fun unwrap(wrapped: ScheduleConfigProperty):
           software.amazon.awscdk.services.appintegrations.CfnDataIntegration.ScheduleConfigProperty
@@ -770,7 +771,7 @@ public open class CfnDataIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty):
-          FileConfigurationProperty = Wrapper(cdkObject)
+          FileConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as FileConfigurationProperty
 
       internal fun unwrap(wrapped: FileConfigurationProperty):
           software.amazon.awscdk.services.appintegrations.CfnDataIntegration.FileConfigurationProperty

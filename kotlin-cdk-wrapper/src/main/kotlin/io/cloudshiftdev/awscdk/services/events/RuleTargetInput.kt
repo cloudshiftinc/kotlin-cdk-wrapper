@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.events
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 
@@ -43,10 +44,6 @@ public abstract class RuleTargetInput internal constructor(
   public open fun bind(rule: IRule): RuleTargetInputProperties =
       unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetInputProperties::wrap)
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.events.RuleTargetInput,
-  ) : RuleTargetInput(cdkObject)
-
   public companion object {
     public fun fromEventPath(path: String): RuleTargetInput =
         software.amazon.awscdk.services.events.RuleTargetInput.fromEventPath(path).let(RuleTargetInput::wrap)
@@ -61,7 +58,7 @@ public abstract class RuleTargetInput internal constructor(
         software.amazon.awscdk.services.events.RuleTargetInput.fromText(text).let(RuleTargetInput::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.RuleTargetInput):
-        RuleTargetInput = Wrapper(cdkObject)
+        RuleTargetInput = CdkObjectWrappers.wrap(cdkObject) as RuleTargetInput
 
     internal fun unwrap(wrapped: RuleTargetInput):
         software.amazon.awscdk.services.events.RuleTargetInput = (wrapped as CdkObject).cdkObject as

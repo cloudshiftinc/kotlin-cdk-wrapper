@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -211,7 +212,7 @@ public interface AlgorithmSpecification {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.AlgorithmSpecification):
-        AlgorithmSpecification = Wrapper(cdkObject)
+        AlgorithmSpecification = CdkObjectWrappers.wrap(cdkObject) as AlgorithmSpecification
 
     internal fun unwrap(wrapped: AlgorithmSpecification):
         software.amazon.awscdk.services.stepfunctions.tasks.AlgorithmSpecification = (wrapped as

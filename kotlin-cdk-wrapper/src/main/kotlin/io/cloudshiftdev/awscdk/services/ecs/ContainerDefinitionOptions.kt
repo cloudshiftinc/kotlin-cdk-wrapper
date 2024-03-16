@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -1355,7 +1356,7 @@ public interface ContainerDefinitionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ContainerDefinitionOptions):
-        ContainerDefinitionOptions = Wrapper(cdkObject)
+        ContainerDefinitionOptions = CdkObjectWrappers.wrap(cdkObject) as ContainerDefinitionOptions
 
     internal fun unwrap(wrapped: ContainerDefinitionOptions):
         software.amazon.awscdk.services.ecs.ContainerDefinitionOptions = (wrapped as

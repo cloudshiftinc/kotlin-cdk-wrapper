@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -571,7 +572,8 @@ public open class CfnConnectAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectAttachment.ConnectAttachmentOptionsProperty):
-          ConnectAttachmentOptionsProperty = Wrapper(cdkObject)
+          ConnectAttachmentOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ConnectAttachmentOptionsProperty
 
       internal fun unwrap(wrapped: ConnectAttachmentOptionsProperty):
           software.amazon.awscdk.services.networkmanager.CfnConnectAttachment.ConnectAttachmentOptionsProperty
@@ -726,7 +728,8 @@ public open class CfnConnectAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnConnectAttachment.ProposedSegmentChangeProperty):
-          ProposedSegmentChangeProperty = Wrapper(cdkObject)
+          ProposedSegmentChangeProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ProposedSegmentChangeProperty
 
       internal fun unwrap(wrapped: ProposedSegmentChangeProperty):
           software.amazon.awscdk.services.networkmanager.CfnConnectAttachment.ProposedSegmentChangeProperty

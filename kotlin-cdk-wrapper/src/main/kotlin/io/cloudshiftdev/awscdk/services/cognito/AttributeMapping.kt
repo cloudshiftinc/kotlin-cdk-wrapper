@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -558,7 +559,7 @@ public interface AttributeMapping {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.AttributeMapping):
-        AttributeMapping = Wrapper(cdkObject)
+        AttributeMapping = CdkObjectWrappers.wrap(cdkObject) as AttributeMapping
 
     internal fun unwrap(wrapped: AttributeMapping):
         software.amazon.awscdk.services.cognito.AttributeMapping = (wrapped as CdkObject).cdkObject

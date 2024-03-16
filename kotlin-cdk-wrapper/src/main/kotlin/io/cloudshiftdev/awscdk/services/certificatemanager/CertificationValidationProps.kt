@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.certificatemanager
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
 import kotlin.String
 import kotlin.Unit
@@ -169,7 +170,8 @@ public interface CertificationValidationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.certificatemanager.CertificationValidationProps):
-        CertificationValidationProps = Wrapper(cdkObject)
+        CertificationValidationProps = CdkObjectWrappers.wrap(cdkObject) as
+        CertificationValidationProps
 
     internal fun unwrap(wrapped: CertificationValidationProps):
         software.amazon.awscdk.services.certificatemanager.CertificationValidationProps = (wrapped

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cxapi
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -151,7 +152,7 @@ public interface VpcSubnetGroup {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.VpcSubnetGroup): VpcSubnetGroup =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as VpcSubnetGroup
 
     internal fun unwrap(wrapped: VpcSubnetGroup): software.amazon.awscdk.cxapi.VpcSubnetGroup =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.cxapi.VpcSubnetGroup

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecr
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -250,7 +251,7 @@ public interface CfnPublicRepositoryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecr.CfnPublicRepositoryProps):
-        CfnPublicRepositoryProps = Wrapper(cdkObject)
+        CfnPublicRepositoryProps = CdkObjectWrappers.wrap(cdkObject) as CfnPublicRepositoryProps
 
     internal fun unwrap(wrapped: CfnPublicRepositoryProps):
         software.amazon.awscdk.services.ecr.CfnPublicRepositoryProps = (wrapped as

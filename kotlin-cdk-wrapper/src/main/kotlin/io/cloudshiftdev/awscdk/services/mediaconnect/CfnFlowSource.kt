@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -1242,7 +1243,7 @@ public open class CfnFlowSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowSource.EncryptionProperty):
-          EncryptionProperty = Wrapper(cdkObject)
+          EncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as EncryptionProperty
 
       internal fun unwrap(wrapped: EncryptionProperty):
           software.amazon.awscdk.services.mediaconnect.CfnFlowSource.EncryptionProperty = (wrapped
@@ -1325,7 +1326,8 @@ public open class CfnFlowSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowSource.VpcInterfaceAttachmentProperty):
-          VpcInterfaceAttachmentProperty = Wrapper(cdkObject)
+          VpcInterfaceAttachmentProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VpcInterfaceAttachmentProperty
 
       internal fun unwrap(wrapped: VpcInterfaceAttachmentProperty):
           software.amazon.awscdk.services.mediaconnect.CfnFlowSource.VpcInterfaceAttachmentProperty
@@ -1472,7 +1474,8 @@ public open class CfnFlowSource internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowSource.GatewayBridgeSourceProperty):
-          GatewayBridgeSourceProperty = Wrapper(cdkObject)
+          GatewayBridgeSourceProperty = CdkObjectWrappers.wrap(cdkObject) as
+          GatewayBridgeSourceProperty
 
       internal fun unwrap(wrapped: GatewayBridgeSourceProperty):
           software.amazon.awscdk.services.mediaconnect.CfnFlowSource.GatewayBridgeSourceProperty =

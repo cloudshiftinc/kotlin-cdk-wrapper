@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -624,7 +625,8 @@ public open class CfnPartnerAccount internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkUpdateAccountProperty):
-          SidewalkUpdateAccountProperty = Wrapper(cdkObject)
+          SidewalkUpdateAccountProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SidewalkUpdateAccountProperty
 
       internal fun unwrap(wrapped: SidewalkUpdateAccountProperty):
           software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkUpdateAccountProperty
@@ -762,7 +764,8 @@ public open class CfnPartnerAccount internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoWithFingerprintProperty):
-          SidewalkAccountInfoWithFingerprintProperty = Wrapper(cdkObject)
+          SidewalkAccountInfoWithFingerprintProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SidewalkAccountInfoWithFingerprintProperty
 
       internal fun unwrap(wrapped: SidewalkAccountInfoWithFingerprintProperty):
           software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoWithFingerprintProperty
@@ -866,7 +869,8 @@ public open class CfnPartnerAccount internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoProperty):
-          SidewalkAccountInfoProperty = Wrapper(cdkObject)
+          SidewalkAccountInfoProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SidewalkAccountInfoProperty
 
       internal fun unwrap(wrapped: SidewalkAccountInfoProperty):
           software.amazon.awscdk.services.iotwireless.CfnPartnerAccount.SidewalkAccountInfoProperty

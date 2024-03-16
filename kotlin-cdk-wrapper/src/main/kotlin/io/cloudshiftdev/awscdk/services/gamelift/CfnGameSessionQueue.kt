@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -1033,7 +1034,8 @@ public open class CfnGameSessionQueue internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PriorityConfigurationProperty):
-          PriorityConfigurationProperty = Wrapper(cdkObject)
+          PriorityConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          PriorityConfigurationProperty
 
       internal fun unwrap(wrapped: PriorityConfigurationProperty):
           software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PriorityConfigurationProperty
@@ -1108,7 +1110,7 @@ public open class CfnGameSessionQueue internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.DestinationProperty):
-          DestinationProperty = Wrapper(cdkObject)
+          DestinationProperty = CdkObjectWrappers.wrap(cdkObject) as DestinationProperty
 
       internal fun unwrap(wrapped: DestinationProperty):
           software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.DestinationProperty =
@@ -1243,7 +1245,8 @@ public open class CfnGameSessionQueue internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PlayerLatencyPolicyProperty):
-          PlayerLatencyPolicyProperty = Wrapper(cdkObject)
+          PlayerLatencyPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as
+          PlayerLatencyPolicyProperty
 
       internal fun unwrap(wrapped: PlayerLatencyPolicyProperty):
           software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.PlayerLatencyPolicyProperty =
@@ -1347,7 +1350,8 @@ public open class CfnGameSessionQueue internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.FilterConfigurationProperty):
-          FilterConfigurationProperty = Wrapper(cdkObject)
+          FilterConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          FilterConfigurationProperty
 
       internal fun unwrap(wrapped: FilterConfigurationProperty):
           software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.FilterConfigurationProperty =
@@ -1446,7 +1450,8 @@ public open class CfnGameSessionQueue internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.GameSessionQueueDestinationProperty):
-          GameSessionQueueDestinationProperty = Wrapper(cdkObject)
+          GameSessionQueueDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          GameSessionQueueDestinationProperty
 
       internal fun unwrap(wrapped: GameSessionQueueDestinationProperty):
           software.amazon.awscdk.services.gamelift.CfnGameSessionQueue.GameSessionQueueDestinationProperty

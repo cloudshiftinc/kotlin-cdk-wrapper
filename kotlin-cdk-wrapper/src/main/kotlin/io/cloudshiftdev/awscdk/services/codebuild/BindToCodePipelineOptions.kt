@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.Unit
 
@@ -75,7 +76,7 @@ public interface BindToCodePipelineOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.BindToCodePipelineOptions):
-        BindToCodePipelineOptions = Wrapper(cdkObject)
+        BindToCodePipelineOptions = CdkObjectWrappers.wrap(cdkObject) as BindToCodePipelineOptions
 
     internal fun unwrap(wrapped: BindToCodePipelineOptions):
         software.amazon.awscdk.services.codebuild.BindToCodePipelineOptions = (wrapped as

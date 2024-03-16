@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.glue
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -235,7 +236,7 @@ public interface CfnTableOptimizerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnTableOptimizerProps):
-        CfnTableOptimizerProps = Wrapper(cdkObject)
+        CfnTableOptimizerProps = CdkObjectWrappers.wrap(cdkObject) as CfnTableOptimizerProps
 
     internal fun unwrap(wrapped: CfnTableOptimizerProps):
         software.amazon.awscdk.services.glue.CfnTableOptimizerProps = (wrapped as

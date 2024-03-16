@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.batch
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1076,7 +1077,7 @@ public interface CfnComputeEnvironmentProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironmentProps):
-        CfnComputeEnvironmentProps = Wrapper(cdkObject)
+        CfnComputeEnvironmentProps = CdkObjectWrappers.wrap(cdkObject) as CfnComputeEnvironmentProps
 
     internal fun unwrap(wrapped: CfnComputeEnvironmentProps):
         software.amazon.awscdk.services.batch.CfnComputeEnvironmentProps = (wrapped as

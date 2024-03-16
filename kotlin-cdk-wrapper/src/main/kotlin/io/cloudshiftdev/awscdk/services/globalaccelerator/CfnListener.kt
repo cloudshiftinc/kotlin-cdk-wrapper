@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -423,7 +424,7 @@ public open class CfnListener internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.CfnListener.PortRangeProperty):
-          PortRangeProperty = Wrapper(cdkObject)
+          PortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as PortRangeProperty
 
       internal fun unwrap(wrapped: PortRangeProperty):
           software.amazon.awscdk.services.globalaccelerator.CfnListener.PortRangeProperty = (wrapped

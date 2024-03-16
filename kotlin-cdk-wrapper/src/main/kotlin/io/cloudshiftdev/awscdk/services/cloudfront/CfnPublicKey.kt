@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -435,7 +436,7 @@ public open class CfnPublicKey internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnPublicKey.PublicKeyConfigProperty):
-          PublicKeyConfigProperty = Wrapper(cdkObject)
+          PublicKeyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as PublicKeyConfigProperty
 
       internal fun unwrap(wrapped: PublicKeyConfigProperty):
           software.amazon.awscdk.services.cloudfront.CfnPublicKey.PublicKeyConfigProperty = (wrapped

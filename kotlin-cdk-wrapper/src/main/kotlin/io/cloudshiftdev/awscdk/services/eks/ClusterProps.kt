@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.eks
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.InstanceType
@@ -963,7 +964,7 @@ public interface ClusterProps : ClusterOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.ClusterProps): ClusterProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as ClusterProps
 
     internal fun unwrap(wrapped: ClusterProps): software.amazon.awscdk.services.eks.ClusterProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.eks.ClusterProps

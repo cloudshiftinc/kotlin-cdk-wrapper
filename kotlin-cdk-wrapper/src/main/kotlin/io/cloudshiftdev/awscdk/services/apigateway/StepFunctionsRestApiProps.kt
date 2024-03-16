@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
 import io.cloudshiftdev.awscdk.services.stepfunctions.IStateMachine
@@ -1257,7 +1258,7 @@ public interface StepFunctionsRestApiProps : RestApiProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.StepFunctionsRestApiProps):
-        StepFunctionsRestApiProps = Wrapper(cdkObject)
+        StepFunctionsRestApiProps = CdkObjectWrappers.wrap(cdkObject) as StepFunctionsRestApiProps
 
     internal fun unwrap(wrapped: StepFunctionsRestApiProps):
         software.amazon.awscdk.services.apigateway.StepFunctionsRestApiProps = (wrapped as

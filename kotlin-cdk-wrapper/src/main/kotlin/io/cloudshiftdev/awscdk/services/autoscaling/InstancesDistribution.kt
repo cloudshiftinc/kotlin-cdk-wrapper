@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -391,7 +392,7 @@ public interface InstancesDistribution {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.InstancesDistribution):
-        InstancesDistribution = Wrapper(cdkObject)
+        InstancesDistribution = CdkObjectWrappers.wrap(cdkObject) as InstancesDistribution
 
     internal fun unwrap(wrapped: InstancesDistribution):
         software.amazon.awscdk.services.autoscaling.InstancesDistribution = (wrapped as

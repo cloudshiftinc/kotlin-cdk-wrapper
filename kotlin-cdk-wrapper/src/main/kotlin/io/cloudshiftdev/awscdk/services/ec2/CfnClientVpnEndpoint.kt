@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1253,7 +1254,7 @@ public open class CfnClientVpnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.TagSpecificationProperty):
-          TagSpecificationProperty = Wrapper(cdkObject)
+          TagSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as TagSpecificationProperty
 
       internal fun unwrap(wrapped: TagSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.TagSpecificationProperty =
@@ -1337,7 +1338,8 @@ public open class CfnClientVpnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty):
-          DirectoryServiceAuthenticationRequestProperty = Wrapper(cdkObject)
+          DirectoryServiceAuthenticationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
+          DirectoryServiceAuthenticationRequestProperty
 
       internal fun unwrap(wrapped: DirectoryServiceAuthenticationRequestProperty):
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.DirectoryServiceAuthenticationRequestProperty
@@ -1640,7 +1642,8 @@ public open class CfnClientVpnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientAuthenticationRequestProperty):
-          ClientAuthenticationRequestProperty = Wrapper(cdkObject)
+          ClientAuthenticationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ClientAuthenticationRequestProperty
 
       internal fun unwrap(wrapped: ClientAuthenticationRequestProperty):
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientAuthenticationRequestProperty
@@ -1800,7 +1803,8 @@ public open class CfnClientVpnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientLoginBannerOptionsProperty):
-          ClientLoginBannerOptionsProperty = Wrapper(cdkObject)
+          ClientLoginBannerOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ClientLoginBannerOptionsProperty
 
       internal fun unwrap(wrapped: ClientLoginBannerOptionsProperty):
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientLoginBannerOptionsProperty
@@ -1958,7 +1962,8 @@ public open class CfnClientVpnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ConnectionLogOptionsProperty):
-          ConnectionLogOptionsProperty = Wrapper(cdkObject)
+          ConnectionLogOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ConnectionLogOptionsProperty
 
       internal fun unwrap(wrapped: ConnectionLogOptionsProperty):
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ConnectionLogOptionsProperty =
@@ -2074,7 +2079,8 @@ public open class CfnClientVpnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.FederatedAuthenticationRequestProperty):
-          FederatedAuthenticationRequestProperty = Wrapper(cdkObject)
+          FederatedAuthenticationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
+          FederatedAuthenticationRequestProperty
 
       internal fun unwrap(wrapped: FederatedAuthenticationRequestProperty):
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.FederatedAuthenticationRequestProperty
@@ -2169,7 +2175,8 @@ public open class CfnClientVpnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty):
-          CertificateAuthenticationRequestProperty = Wrapper(cdkObject)
+          CertificateAuthenticationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CertificateAuthenticationRequestProperty
 
       internal fun unwrap(wrapped: CertificateAuthenticationRequestProperty):
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.CertificateAuthenticationRequestProperty
@@ -2305,7 +2312,8 @@ public open class CfnClientVpnEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientConnectOptionsProperty):
-          ClientConnectOptionsProperty = Wrapper(cdkObject)
+          ClientConnectOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ClientConnectOptionsProperty
 
       internal fun unwrap(wrapped: ClientConnectOptionsProperty):
           software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint.ClientConnectOptionsProperty =

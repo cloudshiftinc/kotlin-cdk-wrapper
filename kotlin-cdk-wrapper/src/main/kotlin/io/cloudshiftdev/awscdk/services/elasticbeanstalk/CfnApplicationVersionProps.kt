@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.elasticbeanstalk
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -198,7 +199,7 @@ public interface CfnApplicationVersionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersionProps):
-        CfnApplicationVersionProps = Wrapper(cdkObject)
+        CfnApplicationVersionProps = CdkObjectWrappers.wrap(cdkObject) as CfnApplicationVersionProps
 
     internal fun unwrap(wrapped: CfnApplicationVersionProps):
         software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersionProps = (wrapped as

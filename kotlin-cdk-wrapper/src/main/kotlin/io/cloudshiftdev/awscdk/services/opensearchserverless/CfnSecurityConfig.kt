@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -452,7 +453,7 @@ public open class CfnSecurityConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig.SamlConfigOptionsProperty):
-          SamlConfigOptionsProperty = Wrapper(cdkObject)
+          SamlConfigOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as SamlConfigOptionsProperty
 
       internal fun unwrap(wrapped: SamlConfigOptionsProperty):
           software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig.SamlConfigOptionsProperty

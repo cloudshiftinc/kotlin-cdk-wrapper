@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ses.actions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
 import io.cloudshiftdev.awscdk.services.sns.ITopic
 import kotlin.Unit
@@ -130,7 +131,7 @@ public interface LambdaProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.actions.LambdaProps):
-        LambdaProps = Wrapper(cdkObject)
+        LambdaProps = CdkObjectWrappers.wrap(cdkObject) as LambdaProps
 
     internal fun unwrap(wrapped: LambdaProps):
         software.amazon.awscdk.services.ses.actions.LambdaProps = (wrapped as CdkObject).cdkObject

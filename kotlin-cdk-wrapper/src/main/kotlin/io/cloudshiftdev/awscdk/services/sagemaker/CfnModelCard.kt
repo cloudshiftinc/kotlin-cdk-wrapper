@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -1060,7 +1061,7 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.MetricGroupProperty):
-          MetricGroupProperty = Wrapper(cdkObject)
+          MetricGroupProperty = CdkObjectWrappers.wrap(cdkObject) as MetricGroupProperty
 
       internal fun unwrap(wrapped: MetricGroupProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.MetricGroupProperty = (wrapped as
@@ -1196,7 +1197,7 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingMetricProperty):
-          TrainingMetricProperty = Wrapper(cdkObject)
+          TrainingMetricProperty = CdkObjectWrappers.wrap(cdkObject) as TrainingMetricProperty
 
       internal fun unwrap(wrapped: TrainingMetricProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingMetricProperty = (wrapped
@@ -1415,7 +1416,7 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.MetricDataItemsProperty):
-          MetricDataItemsProperty = Wrapper(cdkObject)
+          MetricDataItemsProperty = CdkObjectWrappers.wrap(cdkObject) as MetricDataItemsProperty
 
       internal fun unwrap(wrapped: MetricDataItemsProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.MetricDataItemsProperty = (wrapped
@@ -1564,7 +1565,7 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.ObjectiveFunctionProperty):
-          ObjectiveFunctionProperty = Wrapper(cdkObject)
+          ObjectiveFunctionProperty = CdkObjectWrappers.wrap(cdkObject) as ObjectiveFunctionProperty
 
       internal fun unwrap(wrapped: ObjectiveFunctionProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.ObjectiveFunctionProperty =
@@ -1839,7 +1840,7 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.EvaluationDetailProperty):
-          EvaluationDetailProperty = Wrapper(cdkObject)
+          EvaluationDetailProperty = CdkObjectWrappers.wrap(cdkObject) as EvaluationDetailProperty
 
       internal fun unwrap(wrapped: EvaluationDetailProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.EvaluationDetailProperty = (wrapped
@@ -1986,7 +1987,7 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.SourceAlgorithmProperty):
-          SourceAlgorithmProperty = Wrapper(cdkObject)
+          SourceAlgorithmProperty = CdkObjectWrappers.wrap(cdkObject) as SourceAlgorithmProperty
 
       internal fun unwrap(wrapped: SourceAlgorithmProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.SourceAlgorithmProperty = (wrapped
@@ -2389,7 +2390,8 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingJobDetailsProperty):
-          TrainingJobDetailsProperty = Wrapper(cdkObject)
+          TrainingJobDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          TrainingJobDetailsProperty
 
       internal fun unwrap(wrapped: TrainingJobDetailsProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingJobDetailsProperty =
@@ -2524,7 +2526,7 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.BusinessDetailsProperty):
-          BusinessDetailsProperty = Wrapper(cdkObject)
+          BusinessDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as BusinessDetailsProperty
 
       internal fun unwrap(wrapped: BusinessDetailsProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.BusinessDetailsProperty = (wrapped
@@ -2740,7 +2742,7 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.IntendedUsesProperty):
-          IntendedUsesProperty = Wrapper(cdkObject)
+          IntendedUsesProperty = CdkObjectWrappers.wrap(cdkObject) as IntendedUsesProperty
 
       internal fun unwrap(wrapped: IntendedUsesProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.IntendedUsesProperty = (wrapped as
@@ -3106,7 +3108,7 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.ModelOverviewProperty):
-          ModelOverviewProperty = Wrapper(cdkObject)
+          ModelOverviewProperty = CdkObjectWrappers.wrap(cdkObject) as ModelOverviewProperty
 
       internal fun unwrap(wrapped: ModelOverviewProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.ModelOverviewProperty = (wrapped as
@@ -3608,7 +3610,8 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.ModelPackageDetailsProperty):
-          ModelPackageDetailsProperty = Wrapper(cdkObject)
+          ModelPackageDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ModelPackageDetailsProperty
 
       internal fun unwrap(wrapped: ModelPackageDetailsProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.ModelPackageDetailsProperty =
@@ -3753,7 +3756,7 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.ContainerProperty):
-          ContainerProperty = Wrapper(cdkObject)
+          ContainerProperty = CdkObjectWrappers.wrap(cdkObject) as ContainerProperty
 
       internal fun unwrap(wrapped: ContainerProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.ContainerProperty = (wrapped as
@@ -3842,7 +3845,7 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.SecurityConfigProperty):
-          SecurityConfigProperty = Wrapper(cdkObject)
+          SecurityConfigProperty = CdkObjectWrappers.wrap(cdkObject) as SecurityConfigProperty
 
       internal fun unwrap(wrapped: SecurityConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.SecurityConfigProperty = (wrapped
@@ -4067,7 +4070,7 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingDetailsProperty):
-          TrainingDetailsProperty = Wrapper(cdkObject)
+          TrainingDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as TrainingDetailsProperty
 
       internal fun unwrap(wrapped: TrainingDetailsProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingDetailsProperty = (wrapped
@@ -4615,7 +4618,7 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.ContentProperty):
-          ContentProperty = Wrapper(cdkObject)
+          ContentProperty = CdkObjectWrappers.wrap(cdkObject) as ContentProperty
 
       internal fun unwrap(wrapped: ContentProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.ContentProperty = (wrapped as
@@ -4799,7 +4802,7 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.FunctionProperty):
-          FunctionProperty = Wrapper(cdkObject)
+          FunctionProperty = CdkObjectWrappers.wrap(cdkObject) as FunctionProperty
 
       internal fun unwrap(wrapped: FunctionProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.FunctionProperty = (wrapped as
@@ -4879,7 +4882,8 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.ModelPackageCreatorProperty):
-          ModelPackageCreatorProperty = Wrapper(cdkObject)
+          ModelPackageCreatorProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ModelPackageCreatorProperty
 
       internal fun unwrap(wrapped: ModelPackageCreatorProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.ModelPackageCreatorProperty =
@@ -4972,7 +4976,8 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingEnvironmentProperty):
-          TrainingEnvironmentProperty = Wrapper(cdkObject)
+          TrainingEnvironmentProperty = CdkObjectWrappers.wrap(cdkObject) as
+          TrainingEnvironmentProperty
 
       internal fun unwrap(wrapped: TrainingEnvironmentProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingEnvironmentProperty =
@@ -5127,7 +5132,8 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.AdditionalInformationProperty):
-          AdditionalInformationProperty = Wrapper(cdkObject)
+          AdditionalInformationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AdditionalInformationProperty
 
       internal fun unwrap(wrapped: AdditionalInformationProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.AdditionalInformationProperty =
@@ -5274,7 +5280,7 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.UserContextProperty):
-          UserContextProperty = Wrapper(cdkObject)
+          UserContextProperty = CdkObjectWrappers.wrap(cdkObject) as UserContextProperty
 
       internal fun unwrap(wrapped: UserContextProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.UserContextProperty = (wrapped as
@@ -5384,7 +5390,8 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingHyperParameterProperty):
-          TrainingHyperParameterProperty = Wrapper(cdkObject)
+          TrainingHyperParameterProperty = CdkObjectWrappers.wrap(cdkObject) as
+          TrainingHyperParameterProperty
 
       internal fun unwrap(wrapped: TrainingHyperParameterProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.TrainingHyperParameterProperty =
@@ -5500,7 +5507,8 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.InferenceSpecificationProperty):
-          InferenceSpecificationProperty = Wrapper(cdkObject)
+          InferenceSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          InferenceSpecificationProperty
 
       internal fun unwrap(wrapped: InferenceSpecificationProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.InferenceSpecificationProperty =
@@ -5594,7 +5602,8 @@ public open class CfnModelCard internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelCard.InferenceEnvironmentProperty):
-          InferenceEnvironmentProperty = Wrapper(cdkObject)
+          InferenceEnvironmentProperty = CdkObjectWrappers.wrap(cdkObject) as
+          InferenceEnvironmentProperty
 
       internal fun unwrap(wrapped: InferenceEnvironmentProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelCard.InferenceEnvironmentProperty =

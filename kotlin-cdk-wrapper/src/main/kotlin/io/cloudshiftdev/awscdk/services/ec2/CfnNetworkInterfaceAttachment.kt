@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -466,7 +467,8 @@ public open class CfnNetworkInterfaceAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty):
-          EnaSrdUdpSpecificationProperty = Wrapper(cdkObject)
+          EnaSrdUdpSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EnaSrdUdpSpecificationProperty
 
       internal fun unwrap(wrapped: EnaSrdUdpSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdUdpSpecificationProperty
@@ -628,7 +630,8 @@ public open class CfnNetworkInterfaceAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdSpecificationProperty):
-          EnaSrdSpecificationProperty = Wrapper(cdkObject)
+          EnaSrdSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EnaSrdSpecificationProperty
 
       internal fun unwrap(wrapped: EnaSrdSpecificationProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment.EnaSrdSpecificationProperty

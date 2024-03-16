@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.sqs
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.awscdk.services.iam.AddToResourcePolicyResult
@@ -473,13 +474,9 @@ public abstract class QueueBase internal constructor(
    */
   public override fun queueUrl(): String = unwrap(this).getQueueUrl()
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.sqs.QueueBase,
-  ) : QueueBase(cdkObject)
-
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sqs.QueueBase): QueueBase =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as QueueBase
 
     internal fun unwrap(wrapped: QueueBase): software.amazon.awscdk.services.sqs.QueueBase =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.sqs.QueueBase

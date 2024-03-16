@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -279,7 +280,7 @@ public interface ArnComponents {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.ArnComponents): ArnComponents =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as ArnComponents
 
     internal fun unwrap(wrapped: ArnComponents): software.amazon.awscdk.ArnComponents = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.ArnComponents

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -723,7 +724,7 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty):
-          SftpConfigProperty = Wrapper(cdkObject)
+          SftpConfigProperty = CdkObjectWrappers.wrap(cdkObject) as SftpConfigProperty
 
       internal fun unwrap(wrapped: SftpConfigProperty):
           software.amazon.awscdk.services.transfer.CfnConnector.SftpConfigProperty = (wrapped as
@@ -1191,7 +1192,7 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnConnector.As2ConfigProperty):
-          As2ConfigProperty = Wrapper(cdkObject)
+          As2ConfigProperty = CdkObjectWrappers.wrap(cdkObject) as As2ConfigProperty
 
       internal fun unwrap(wrapped: As2ConfigProperty):
           software.amazon.awscdk.services.transfer.CfnConnector.As2ConfigProperty = (wrapped as

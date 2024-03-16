@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -338,7 +339,8 @@ public interface CfnTLSInspectionConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfigurationProps):
-        CfnTLSInspectionConfigurationProps = Wrapper(cdkObject)
+        CfnTLSInspectionConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnTLSInspectionConfigurationProps
 
     internal fun unwrap(wrapped: CfnTLSInspectionConfigurationProps):
         software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfigurationProps =

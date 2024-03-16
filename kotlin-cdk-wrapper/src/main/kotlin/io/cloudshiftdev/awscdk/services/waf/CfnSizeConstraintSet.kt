@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -446,7 +447,7 @@ public open class CfnSizeConstraintSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.waf.CfnSizeConstraintSet.FieldToMatchProperty):
-          FieldToMatchProperty = Wrapper(cdkObject)
+          FieldToMatchProperty = CdkObjectWrappers.wrap(cdkObject) as FieldToMatchProperty
 
       internal fun unwrap(wrapped: FieldToMatchProperty):
           software.amazon.awscdk.services.waf.CfnSizeConstraintSet.FieldToMatchProperty = (wrapped
@@ -1007,7 +1008,7 @@ public open class CfnSizeConstraintSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.waf.CfnSizeConstraintSet.SizeConstraintProperty):
-          SizeConstraintProperty = Wrapper(cdkObject)
+          SizeConstraintProperty = CdkObjectWrappers.wrap(cdkObject) as SizeConstraintProperty
 
       internal fun unwrap(wrapped: SizeConstraintProperty):
           software.amazon.awscdk.services.waf.CfnSizeConstraintSet.SizeConstraintProperty = (wrapped

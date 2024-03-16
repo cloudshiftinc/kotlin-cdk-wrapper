@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.eks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -255,7 +256,7 @@ public interface BootstrapOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.BootstrapOptions):
-        BootstrapOptions = Wrapper(cdkObject)
+        BootstrapOptions = CdkObjectWrappers.wrap(cdkObject) as BootstrapOptions
 
     internal fun unwrap(wrapped: BootstrapOptions):
         software.amazon.awscdk.services.eks.BootstrapOptions = (wrapped as CdkObject).cdkObject as

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -1044,7 +1045,8 @@ public open class CfnMetricStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty):
-          MetricStreamStatisticsConfigurationProperty = Wrapper(cdkObject)
+          MetricStreamStatisticsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MetricStreamStatisticsConfigurationProperty
 
       internal fun unwrap(wrapped: MetricStreamStatisticsConfigurationProperty):
           software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsConfigurationProperty
@@ -1156,7 +1158,8 @@ public open class CfnMetricStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty):
-          MetricStreamStatisticsMetricProperty = Wrapper(cdkObject)
+          MetricStreamStatisticsMetricProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MetricStreamStatisticsMetricProperty
 
       internal fun unwrap(wrapped: MetricStreamStatisticsMetricProperty):
           software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamStatisticsMetricProperty
@@ -1328,7 +1331,8 @@ public open class CfnMetricStream internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty):
-          MetricStreamFilterProperty = Wrapper(cdkObject)
+          MetricStreamFilterProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MetricStreamFilterProperty
 
       internal fun unwrap(wrapped: MetricStreamFilterProperty):
           software.amazon.awscdk.services.cloudwatch.CfnMetricStream.MetricStreamFilterProperty =

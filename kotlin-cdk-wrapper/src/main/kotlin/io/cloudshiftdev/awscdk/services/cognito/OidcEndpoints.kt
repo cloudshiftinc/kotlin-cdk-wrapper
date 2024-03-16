@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -137,7 +138,7 @@ public interface OidcEndpoints {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.OidcEndpoints):
-        OidcEndpoints = Wrapper(cdkObject)
+        OidcEndpoints = CdkObjectWrappers.wrap(cdkObject) as OidcEndpoints
 
     internal fun unwrap(wrapped: OidcEndpoints):
         software.amazon.awscdk.services.cognito.OidcEndpoints = (wrapped as CdkObject).cdkObject as

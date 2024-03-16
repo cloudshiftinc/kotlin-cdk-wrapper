@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -132,7 +133,7 @@ public interface SamlProviderProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.SamlProviderProps):
-        SamlProviderProps = Wrapper(cdkObject)
+        SamlProviderProps = CdkObjectWrappers.wrap(cdkObject) as SamlProviderProps
 
     internal fun unwrap(wrapped: SamlProviderProps):
         software.amazon.awscdk.services.iam.SamlProviderProps = (wrapped as CdkObject).cdkObject as

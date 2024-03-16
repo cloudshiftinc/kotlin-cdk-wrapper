@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -112,7 +113,7 @@ public interface BlockDevice {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.BlockDevice):
-        BlockDevice = Wrapper(cdkObject)
+        BlockDevice = CdkObjectWrappers.wrap(cdkObject) as BlockDevice
 
     internal fun unwrap(wrapped: BlockDevice):
         software.amazon.awscdk.services.autoscaling.BlockDevice = (wrapped as CdkObject).cdkObject

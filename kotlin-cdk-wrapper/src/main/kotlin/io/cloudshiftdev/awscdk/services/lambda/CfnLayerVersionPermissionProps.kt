@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -183,7 +184,8 @@ public interface CfnLayerVersionPermissionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnLayerVersionPermissionProps):
-        CfnLayerVersionPermissionProps = Wrapper(cdkObject)
+        CfnLayerVersionPermissionProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnLayerVersionPermissionProps
 
     internal fun unwrap(wrapped: CfnLayerVersionPermissionProps):
         software.amazon.awscdk.services.lambda.CfnLayerVersionPermissionProps = (wrapped as

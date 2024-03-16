@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.eks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -107,7 +108,7 @@ public interface AwsAuthMapping {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.AwsAuthMapping): AwsAuthMapping
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as AwsAuthMapping
 
     internal fun unwrap(wrapped: AwsAuthMapping): software.amazon.awscdk.services.eks.AwsAuthMapping
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.eks.AwsAuthMapping

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -475,7 +476,8 @@ public open class CfnGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.xray.CfnGroup.InsightsConfigurationProperty):
-          InsightsConfigurationProperty = Wrapper(cdkObject)
+          InsightsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          InsightsConfigurationProperty
 
       internal fun unwrap(wrapped: InsightsConfigurationProperty):
           software.amazon.awscdk.services.xray.CfnGroup.InsightsConfigurationProperty = (wrapped as

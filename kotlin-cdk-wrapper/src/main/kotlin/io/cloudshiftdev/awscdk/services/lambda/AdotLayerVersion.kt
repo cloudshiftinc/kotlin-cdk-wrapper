@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 /**
  * An ADOT Lambda layer version that's specific to a lambda layer type and an architecture.
@@ -27,10 +28,6 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 public abstract class AdotLayerVersion internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.lambda.AdotLayerVersion,
 ) : CdkObject(cdkObject) {
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.AdotLayerVersion,
-  ) : AdotLayerVersion(cdkObject)
-
   public companion object {
     public fun fromGenericLayerVersion(version: AdotLambdaLayerGenericVersion): AdotLayerVersion =
         software.amazon.awscdk.services.lambda.AdotLayerVersion.fromGenericLayerVersion(version.let(AdotLambdaLayerGenericVersion::unwrap)).let(AdotLayerVersion::wrap)
@@ -52,7 +49,7 @@ public abstract class AdotLayerVersion internal constructor(
         software.amazon.awscdk.services.lambda.AdotLayerVersion.fromPythonSdkLayerVersion(version.let(AdotLambdaLayerPythonSdkVersion::unwrap)).let(AdotLayerVersion::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.AdotLayerVersion):
-        AdotLayerVersion = Wrapper(cdkObject)
+        AdotLayerVersion = CdkObjectWrappers.wrap(cdkObject) as AdotLayerVersion
 
     internal fun unwrap(wrapped: AdotLayerVersion):
         software.amazon.awscdk.services.lambda.AdotLayerVersion = (wrapped as CdkObject).cdkObject

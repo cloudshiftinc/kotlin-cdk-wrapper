@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -933,7 +934,7 @@ public open class CfnLaunch internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.LaunchGroupObjectProperty):
-          LaunchGroupObjectProperty = Wrapper(cdkObject)
+          LaunchGroupObjectProperty = CdkObjectWrappers.wrap(cdkObject) as LaunchGroupObjectProperty
 
       internal fun unwrap(wrapped: LaunchGroupObjectProperty):
           software.amazon.awscdk.services.evidently.CfnLaunch.LaunchGroupObjectProperty = (wrapped
@@ -1091,7 +1092,8 @@ public open class CfnLaunch internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.ExecutionStatusObjectProperty):
-          ExecutionStatusObjectProperty = Wrapper(cdkObject)
+          ExecutionStatusObjectProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ExecutionStatusObjectProperty
 
       internal fun unwrap(wrapped: ExecutionStatusObjectProperty):
           software.amazon.awscdk.services.evidently.CfnLaunch.ExecutionStatusObjectProperty =
@@ -1214,7 +1216,7 @@ public open class CfnLaunch internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.GroupToWeightProperty):
-          GroupToWeightProperty = Wrapper(cdkObject)
+          GroupToWeightProperty = CdkObjectWrappers.wrap(cdkObject) as GroupToWeightProperty
 
       internal fun unwrap(wrapped: GroupToWeightProperty):
           software.amazon.awscdk.services.evidently.CfnLaunch.GroupToWeightProperty = (wrapped as
@@ -1433,7 +1435,8 @@ public open class CfnLaunch internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.MetricDefinitionObjectProperty):
-          MetricDefinitionObjectProperty = Wrapper(cdkObject)
+          MetricDefinitionObjectProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MetricDefinitionObjectProperty
 
       internal fun unwrap(wrapped: MetricDefinitionObjectProperty):
           software.amazon.awscdk.services.evidently.CfnLaunch.MetricDefinitionObjectProperty =
@@ -1646,7 +1649,7 @@ public open class CfnLaunch internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.SegmentOverrideProperty):
-          SegmentOverrideProperty = Wrapper(cdkObject)
+          SegmentOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as SegmentOverrideProperty
 
       internal fun unwrap(wrapped: SegmentOverrideProperty):
           software.amazon.awscdk.services.evidently.CfnLaunch.SegmentOverrideProperty = (wrapped as
@@ -1918,7 +1921,7 @@ public open class CfnLaunch internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnLaunch.StepConfigProperty):
-          StepConfigProperty = Wrapper(cdkObject)
+          StepConfigProperty = CdkObjectWrappers.wrap(cdkObject) as StepConfigProperty
 
       internal fun unwrap(wrapped: StepConfigProperty):
           software.amazon.awscdk.services.evidently.CfnLaunch.StepConfigProperty = (wrapped as

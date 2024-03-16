@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -273,7 +274,7 @@ public interface VpcContextQuery {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.VpcContextQuery):
-        VpcContextQuery = Wrapper(cdkObject)
+        VpcContextQuery = CdkObjectWrappers.wrap(cdkObject) as VpcContextQuery
 
     internal fun unwrap(wrapped: VpcContextQuery):
         software.amazon.awscdk.cloudassembly.schema.VpcContextQuery = (wrapped as

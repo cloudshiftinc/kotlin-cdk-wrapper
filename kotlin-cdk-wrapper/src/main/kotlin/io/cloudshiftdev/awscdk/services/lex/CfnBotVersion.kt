@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -407,7 +408,8 @@ public open class CfnBotVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleSpecificationProperty):
-          BotVersionLocaleSpecificationProperty = Wrapper(cdkObject)
+          BotVersionLocaleSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          BotVersionLocaleSpecificationProperty
 
       internal fun unwrap(wrapped: BotVersionLocaleSpecificationProperty):
           software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleSpecificationProperty =
@@ -490,7 +492,8 @@ public open class CfnBotVersion internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty):
-          BotVersionLocaleDetailsProperty = Wrapper(cdkObject)
+          BotVersionLocaleDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          BotVersionLocaleDetailsProperty
 
       internal fun unwrap(wrapped: BotVersionLocaleDetailsProperty):
           software.amazon.awscdk.services.lex.CfnBotVersion.BotVersionLocaleDetailsProperty =

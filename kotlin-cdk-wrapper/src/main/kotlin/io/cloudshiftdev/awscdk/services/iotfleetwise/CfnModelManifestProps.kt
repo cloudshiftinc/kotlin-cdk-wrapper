@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.iotfleetwise
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -254,7 +255,7 @@ public interface CfnModelManifestProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnModelManifestProps):
-        CfnModelManifestProps = Wrapper(cdkObject)
+        CfnModelManifestProps = CdkObjectWrappers.wrap(cdkObject) as CfnModelManifestProps
 
     internal fun unwrap(wrapped: CfnModelManifestProps):
         software.amazon.awscdk.services.iotfleetwise.CfnModelManifestProps = (wrapped as

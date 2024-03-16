@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -619,7 +620,7 @@ public open class CfnLocationEFS internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnLocationEFS.Ec2ConfigProperty):
-          Ec2ConfigProperty = Wrapper(cdkObject)
+          Ec2ConfigProperty = CdkObjectWrappers.wrap(cdkObject) as Ec2ConfigProperty
 
       internal fun unwrap(wrapped: Ec2ConfigProperty):
           software.amazon.awscdk.services.datasync.CfnLocationEFS.Ec2ConfigProperty = (wrapped as

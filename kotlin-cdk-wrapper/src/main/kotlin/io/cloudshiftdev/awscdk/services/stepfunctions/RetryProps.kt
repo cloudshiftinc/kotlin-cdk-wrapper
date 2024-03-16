@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -255,7 +256,7 @@ public interface RetryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.RetryProps):
-        RetryProps = Wrapper(cdkObject)
+        RetryProps = CdkObjectWrappers.wrap(cdkObject) as RetryProps
 
     internal fun unwrap(wrapped: RetryProps):
         software.amazon.awscdk.services.stepfunctions.RetryProps = (wrapped as CdkObject).cdkObject

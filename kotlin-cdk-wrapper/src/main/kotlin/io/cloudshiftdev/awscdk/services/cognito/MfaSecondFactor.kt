@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -114,7 +115,7 @@ public interface MfaSecondFactor {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.MfaSecondFactor):
-        MfaSecondFactor = Wrapper(cdkObject)
+        MfaSecondFactor = CdkObjectWrappers.wrap(cdkObject) as MfaSecondFactor
 
     internal fun unwrap(wrapped: MfaSecondFactor):
         software.amazon.awscdk.services.cognito.MfaSecondFactor = (wrapped as CdkObject).cdkObject

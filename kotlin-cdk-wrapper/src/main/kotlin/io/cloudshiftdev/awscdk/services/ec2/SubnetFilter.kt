@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.collections.List
@@ -40,10 +41,6 @@ public abstract class SubnetFilter internal constructor(
   public open fun selectSubnets(vararg subnets: ISubnet): List<ISubnet> =
       selectSubnets(subnets.toList())
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.SubnetFilter,
-  ) : SubnetFilter(cdkObject)
-
   public companion object {
     public fun availabilityZones(availabilityZones: List<String>): SubnetFilter =
         software.amazon.awscdk.services.ec2.SubnetFilter.availabilityZones(availabilityZones).let(SubnetFilter::wrap)
@@ -74,7 +71,7 @@ public abstract class SubnetFilter internal constructor(
         software.amazon.awscdk.services.ec2.SubnetFilter.onePerAz().let(SubnetFilter::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.SubnetFilter): SubnetFilter =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as SubnetFilter
 
     internal fun unwrap(wrapped: SubnetFilter): software.amazon.awscdk.services.ec2.SubnetFilter =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.SubnetFilter

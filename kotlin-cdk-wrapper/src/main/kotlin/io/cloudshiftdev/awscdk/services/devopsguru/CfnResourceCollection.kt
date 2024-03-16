@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -558,7 +559,8 @@ public open class CfnResourceCollection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection.ResourceCollectionFilterProperty):
-          ResourceCollectionFilterProperty = Wrapper(cdkObject)
+          ResourceCollectionFilterProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ResourceCollectionFilterProperty
 
       internal fun unwrap(wrapped: ResourceCollectionFilterProperty):
           software.amazon.awscdk.services.devopsguru.CfnResourceCollection.ResourceCollectionFilterProperty
@@ -789,7 +791,7 @@ public open class CfnResourceCollection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection.TagCollectionProperty):
-          TagCollectionProperty = Wrapper(cdkObject)
+          TagCollectionProperty = CdkObjectWrappers.wrap(cdkObject) as TagCollectionProperty
 
       internal fun unwrap(wrapped: TagCollectionProperty):
           software.amazon.awscdk.services.devopsguru.CfnResourceCollection.TagCollectionProperty =
@@ -888,7 +890,8 @@ public open class CfnResourceCollection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.devopsguru.CfnResourceCollection.CloudFormationCollectionFilterProperty):
-          CloudFormationCollectionFilterProperty = Wrapper(cdkObject)
+          CloudFormationCollectionFilterProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CloudFormationCollectionFilterProperty
 
       internal fun unwrap(wrapped: CloudFormationCollectionFilterProperty):
           software.amazon.awscdk.services.devopsguru.CfnResourceCollection.CloudFormationCollectionFilterProperty

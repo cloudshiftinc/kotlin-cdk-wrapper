@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.config
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -177,7 +178,7 @@ public interface ManagedRuleProps : RuleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.config.ManagedRuleProps):
-        ManagedRuleProps = Wrapper(cdkObject)
+        ManagedRuleProps = CdkObjectWrappers.wrap(cdkObject) as ManagedRuleProps
 
     internal fun unwrap(wrapped: ManagedRuleProps):
         software.amazon.awscdk.services.config.ManagedRuleProps = (wrapped as CdkObject).cdkObject

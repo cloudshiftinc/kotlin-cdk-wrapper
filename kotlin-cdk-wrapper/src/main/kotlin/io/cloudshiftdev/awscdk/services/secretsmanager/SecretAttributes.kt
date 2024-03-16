@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.secretsmanager
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.String
 import kotlin.Unit
@@ -145,7 +146,7 @@ public interface SecretAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.SecretAttributes):
-        SecretAttributes = Wrapper(cdkObject)
+        SecretAttributes = CdkObjectWrappers.wrap(cdkObject) as SecretAttributes
 
     internal fun unwrap(wrapped: SecretAttributes):
         software.amazon.awscdk.services.secretsmanager.SecretAttributes = (wrapped as

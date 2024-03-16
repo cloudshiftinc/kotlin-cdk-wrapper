@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appconfig
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -141,7 +142,7 @@ public interface EnvironmentProps : EnvironmentOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.EnvironmentProps):
-        EnvironmentProps = Wrapper(cdkObject)
+        EnvironmentProps = CdkObjectWrappers.wrap(cdkObject) as EnvironmentProps
 
     internal fun unwrap(wrapped: EnvironmentProps):
         software.amazon.awscdk.services.appconfig.EnvironmentProps = (wrapped as

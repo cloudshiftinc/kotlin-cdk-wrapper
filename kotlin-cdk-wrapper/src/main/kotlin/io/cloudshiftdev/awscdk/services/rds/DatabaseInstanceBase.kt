@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.awscdk.services.ec2.Connections
@@ -395,10 +396,6 @@ public abstract class DatabaseInstanceBase internal constructor(
   public override fun onEvent(id: String, options: OnEventOptions.Builder.() -> Unit): Rule =
       onEvent(id, OnEventOptions(options))
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceBase,
-  ) : DatabaseInstanceBase(cdkObject)
-
   public companion object {
     public fun fromDatabaseInstanceAttributes(
       scope: Construct,
@@ -418,7 +415,7 @@ public abstract class DatabaseInstanceBase internal constructor(
         DatabaseInstanceAttributes(attrs))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceBase):
-        DatabaseInstanceBase = Wrapper(cdkObject)
+        DatabaseInstanceBase = CdkObjectWrappers.wrap(cdkObject) as DatabaseInstanceBase
 
     internal fun unwrap(wrapped: DatabaseInstanceBase):
         software.amazon.awscdk.services.rds.DatabaseInstanceBase = (wrapped as CdkObject).cdkObject

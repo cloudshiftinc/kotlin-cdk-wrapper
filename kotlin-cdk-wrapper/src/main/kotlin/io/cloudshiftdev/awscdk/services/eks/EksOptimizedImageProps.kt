@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.eks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -127,7 +128,7 @@ public interface EksOptimizedImageProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.EksOptimizedImageProps):
-        EksOptimizedImageProps = Wrapper(cdkObject)
+        EksOptimizedImageProps = CdkObjectWrappers.wrap(cdkObject) as EksOptimizedImageProps
 
     internal fun unwrap(wrapped: EksOptimizedImageProps):
         software.amazon.awscdk.services.eks.EksOptimizedImageProps = (wrapped as

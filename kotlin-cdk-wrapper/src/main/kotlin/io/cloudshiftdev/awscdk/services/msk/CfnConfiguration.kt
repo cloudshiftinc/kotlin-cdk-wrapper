@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -479,7 +480,7 @@ public open class CfnConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnConfiguration.LatestRevisionProperty):
-          LatestRevisionProperty = Wrapper(cdkObject)
+          LatestRevisionProperty = CdkObjectWrappers.wrap(cdkObject) as LatestRevisionProperty
 
       internal fun unwrap(wrapped: LatestRevisionProperty):
           software.amazon.awscdk.services.msk.CfnConfiguration.LatestRevisionProperty = (wrapped as

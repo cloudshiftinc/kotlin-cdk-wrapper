@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.secretsmanager
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -78,7 +79,8 @@ public interface SecretRotationApplicationOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.SecretRotationApplicationOptions):
-        SecretRotationApplicationOptions = Wrapper(cdkObject)
+        SecretRotationApplicationOptions = CdkObjectWrappers.wrap(cdkObject) as
+        SecretRotationApplicationOptions
 
     internal fun unwrap(wrapped: SecretRotationApplicationOptions):
         software.amazon.awscdk.services.secretsmanager.SecretRotationApplicationOptions = (wrapped

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -363,7 +364,7 @@ public interface CfnCustomLineItemProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItemProps):
-        CfnCustomLineItemProps = Wrapper(cdkObject)
+        CfnCustomLineItemProps = CdkObjectWrappers.wrap(cdkObject) as CfnCustomLineItemProps
 
     internal fun unwrap(wrapped: CfnCustomLineItemProps):
         software.amazon.awscdk.services.billingconductor.CfnCustomLineItemProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import kotlin.String
 import kotlin.Unit
@@ -154,7 +155,7 @@ public interface DatabaseProxyAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.DatabaseProxyAttributes):
-        DatabaseProxyAttributes = Wrapper(cdkObject)
+        DatabaseProxyAttributes = CdkObjectWrappers.wrap(cdkObject) as DatabaseProxyAttributes
 
     internal fun unwrap(wrapped: DatabaseProxyAttributes):
         software.amazon.awscdk.services.rds.DatabaseProxyAttributes = (wrapped as

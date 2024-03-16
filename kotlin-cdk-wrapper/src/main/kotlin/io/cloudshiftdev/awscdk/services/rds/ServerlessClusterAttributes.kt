@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
 import kotlin.Number
@@ -226,7 +227,8 @@ public interface ServerlessClusterAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.ServerlessClusterAttributes):
-        ServerlessClusterAttributes = Wrapper(cdkObject)
+        ServerlessClusterAttributes = CdkObjectWrappers.wrap(cdkObject) as
+        ServerlessClusterAttributes
 
     internal fun unwrap(wrapped: ServerlessClusterAttributes):
         software.amazon.awscdk.services.rds.ServerlessClusterAttributes = (wrapped as

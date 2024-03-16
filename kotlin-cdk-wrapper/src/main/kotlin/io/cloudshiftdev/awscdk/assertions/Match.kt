@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.assertions
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.List
@@ -14,10 +15,6 @@ import kotlin.collections.Map
 public abstract class Match internal constructor(
   internal override val cdkObject: software.amazon.awscdk.assertions.Match,
 ) : CdkObject(cdkObject) {
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.assertions.Match,
-  ) : Match(cdkObject)
-
   public companion object {
     public fun absent(): Matcher =
         software.amazon.awscdk.assertions.Match.absent().let(Matcher::wrap)
@@ -54,7 +51,7 @@ public abstract class Match internal constructor(
         software.amazon.awscdk.assertions.Match.stringLikeRegexp(pattern).let(Matcher::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.assertions.Match): Match =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as Match
 
     internal fun unwrap(wrapped: Match): software.amazon.awscdk.assertions.Match = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.assertions.Match

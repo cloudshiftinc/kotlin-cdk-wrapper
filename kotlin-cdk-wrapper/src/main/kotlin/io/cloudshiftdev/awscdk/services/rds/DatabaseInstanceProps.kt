@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.InstanceType
@@ -1454,7 +1455,7 @@ public interface DatabaseInstanceProps : DatabaseInstanceSourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.DatabaseInstanceProps):
-        DatabaseInstanceProps = Wrapper(cdkObject)
+        DatabaseInstanceProps = CdkObjectWrappers.wrap(cdkObject) as DatabaseInstanceProps
 
     internal fun unwrap(wrapped: DatabaseInstanceProps):
         software.amazon.awscdk.services.rds.DatabaseInstanceProps = (wrapped as CdkObject).cdkObject

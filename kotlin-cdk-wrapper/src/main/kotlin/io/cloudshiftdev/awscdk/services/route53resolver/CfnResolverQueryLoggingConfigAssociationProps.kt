@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.route53resolver
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -113,7 +114,8 @@ public interface CfnResolverQueryLoggingConfigAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfigAssociationProps):
-        CfnResolverQueryLoggingConfigAssociationProps = Wrapper(cdkObject)
+        CfnResolverQueryLoggingConfigAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnResolverQueryLoggingConfigAssociationProps
 
     internal fun unwrap(wrapped: CfnResolverQueryLoggingConfigAssociationProps):
         software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfigAssociationProps

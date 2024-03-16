@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -796,7 +797,7 @@ public interface CfnReplicaKeyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.kms.CfnReplicaKeyProps):
-        CfnReplicaKeyProps = Wrapper(cdkObject)
+        CfnReplicaKeyProps = CdkObjectWrappers.wrap(cdkObject) as CfnReplicaKeyProps
 
     internal fun unwrap(wrapped: CfnReplicaKeyProps):
         software.amazon.awscdk.services.kms.CfnReplicaKeyProps = (wrapped as CdkObject).cdkObject as

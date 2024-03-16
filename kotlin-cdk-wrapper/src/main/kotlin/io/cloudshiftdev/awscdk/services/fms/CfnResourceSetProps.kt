@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.fms
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -231,7 +232,7 @@ public interface CfnResourceSetProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.fms.CfnResourceSetProps):
-        CfnResourceSetProps = Wrapper(cdkObject)
+        CfnResourceSetProps = CdkObjectWrappers.wrap(cdkObject) as CfnResourceSetProps
 
     internal fun unwrap(wrapped: CfnResourceSetProps):
         software.amazon.awscdk.services.fms.CfnResourceSetProps = (wrapped as CdkObject).cdkObject

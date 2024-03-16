@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.Boolean
@@ -592,7 +593,7 @@ public interface PipelineProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.PipelineProps):
-        PipelineProps = Wrapper(cdkObject)
+        PipelineProps = CdkObjectWrappers.wrap(cdkObject) as PipelineProps
 
     internal fun unwrap(wrapped: PipelineProps):
         software.amazon.awscdk.services.codepipeline.PipelineProps = (wrapped as

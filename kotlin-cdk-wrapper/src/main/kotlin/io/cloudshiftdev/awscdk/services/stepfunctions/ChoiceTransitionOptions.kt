@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -79,7 +80,7 @@ public interface ChoiceTransitionOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.ChoiceTransitionOptions):
-        ChoiceTransitionOptions = Wrapper(cdkObject)
+        ChoiceTransitionOptions = CdkObjectWrappers.wrap(cdkObject) as ChoiceTransitionOptions
 
     internal fun unwrap(wrapped: ChoiceTransitionOptions):
         software.amazon.awscdk.services.stepfunctions.ChoiceTransitionOptions = (wrapped as

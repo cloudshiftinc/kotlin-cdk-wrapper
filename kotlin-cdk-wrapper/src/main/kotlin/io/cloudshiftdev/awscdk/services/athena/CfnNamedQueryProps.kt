@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.athena
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -184,7 +185,7 @@ public interface CfnNamedQueryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.athena.CfnNamedQueryProps):
-        CfnNamedQueryProps = Wrapper(cdkObject)
+        CfnNamedQueryProps = CdkObjectWrappers.wrap(cdkObject) as CfnNamedQueryProps
 
     internal fun unwrap(wrapped: CfnNamedQueryProps):
         software.amazon.awscdk.services.athena.CfnNamedQueryProps = (wrapped as CdkObject).cdkObject

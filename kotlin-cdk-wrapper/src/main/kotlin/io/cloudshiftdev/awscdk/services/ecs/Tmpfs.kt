@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -144,7 +145,7 @@ public interface Tmpfs {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.Tmpfs): Tmpfs =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as Tmpfs
 
     internal fun unwrap(wrapped: Tmpfs): software.amazon.awscdk.services.ecs.Tmpfs = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.ecs.Tmpfs

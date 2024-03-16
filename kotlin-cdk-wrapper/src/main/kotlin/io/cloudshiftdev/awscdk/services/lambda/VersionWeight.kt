@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -92,7 +93,7 @@ public interface VersionWeight {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.VersionWeight):
-        VersionWeight = Wrapper(cdkObject)
+        VersionWeight = CdkObjectWrappers.wrap(cdkObject) as VersionWeight
 
     internal fun unwrap(wrapped: VersionWeight):
         software.amazon.awscdk.services.lambda.VersionWeight = (wrapped as CdkObject).cdkObject as

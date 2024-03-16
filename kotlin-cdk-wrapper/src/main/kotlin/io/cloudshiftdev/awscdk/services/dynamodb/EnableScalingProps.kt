@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.dynamodb
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -94,7 +95,7 @@ public interface EnableScalingProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.EnableScalingProps):
-        EnableScalingProps = Wrapper(cdkObject)
+        EnableScalingProps = CdkObjectWrappers.wrap(cdkObject) as EnableScalingProps
 
     internal fun unwrap(wrapped: EnableScalingProps):
         software.amazon.awscdk.services.dynamodb.EnableScalingProps = (wrapped as

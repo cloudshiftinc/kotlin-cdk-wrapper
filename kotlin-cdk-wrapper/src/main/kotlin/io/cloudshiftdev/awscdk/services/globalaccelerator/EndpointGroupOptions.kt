@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.globalaccelerator
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -384,7 +385,7 @@ public interface EndpointGroupOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.EndpointGroupOptions):
-        EndpointGroupOptions = Wrapper(cdkObject)
+        EndpointGroupOptions = CdkObjectWrappers.wrap(cdkObject) as EndpointGroupOptions
 
     internal fun unwrap(wrapped: EndpointGroupOptions):
         software.amazon.awscdk.services.globalaccelerator.EndpointGroupOptions = (wrapped as

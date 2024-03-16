@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs.patterns
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ecs.FargateTaskDefinition
 import kotlin.Unit
 
@@ -92,7 +93,8 @@ public interface ScheduledFargateTaskDefinitionOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskDefinitionOptions):
-        ScheduledFargateTaskDefinitionOptions = Wrapper(cdkObject)
+        ScheduledFargateTaskDefinitionOptions = CdkObjectWrappers.wrap(cdkObject) as
+        ScheduledFargateTaskDefinitionOptions
 
     internal fun unwrap(wrapped: ScheduledFargateTaskDefinitionOptions):
         software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTaskDefinitionOptions =

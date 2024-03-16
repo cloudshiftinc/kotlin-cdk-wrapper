@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -1157,7 +1158,7 @@ public open class CfnServerlessCache internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnServerlessCache.CacheUsageLimitsProperty):
-          CacheUsageLimitsProperty = Wrapper(cdkObject)
+          CacheUsageLimitsProperty = CdkObjectWrappers.wrap(cdkObject) as CacheUsageLimitsProperty
 
       internal fun unwrap(wrapped: CacheUsageLimitsProperty):
           software.amazon.awscdk.services.elasticache.CfnServerlessCache.CacheUsageLimitsProperty =
@@ -1242,7 +1243,7 @@ public open class CfnServerlessCache internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnServerlessCache.ECPUPerSecondProperty):
-          ECPUPerSecondProperty = Wrapper(cdkObject)
+          ECPUPerSecondProperty = CdkObjectWrappers.wrap(cdkObject) as ECPUPerSecondProperty
 
       internal fun unwrap(wrapped: ECPUPerSecondProperty):
           software.amazon.awscdk.services.elasticache.CfnServerlessCache.ECPUPerSecondProperty =
@@ -1352,7 +1353,7 @@ public open class CfnServerlessCache internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnServerlessCache.EndpointProperty):
-          EndpointProperty = Wrapper(cdkObject)
+          EndpointProperty = CdkObjectWrappers.wrap(cdkObject) as EndpointProperty
 
       internal fun unwrap(wrapped: EndpointProperty):
           software.amazon.awscdk.services.elasticache.CfnServerlessCache.EndpointProperty = (wrapped
@@ -1461,7 +1462,7 @@ public open class CfnServerlessCache internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnServerlessCache.DataStorageProperty):
-          DataStorageProperty = Wrapper(cdkObject)
+          DataStorageProperty = CdkObjectWrappers.wrap(cdkObject) as DataStorageProperty
 
       internal fun unwrap(wrapped: DataStorageProperty):
           software.amazon.awscdk.services.elasticache.CfnServerlessCache.DataStorageProperty =

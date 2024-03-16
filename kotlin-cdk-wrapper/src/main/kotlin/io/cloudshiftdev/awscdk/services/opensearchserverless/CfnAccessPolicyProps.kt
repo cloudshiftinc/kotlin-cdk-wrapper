@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.opensearchserverless
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -166,7 +167,7 @@ public interface CfnAccessPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnAccessPolicyProps):
-        CfnAccessPolicyProps = Wrapper(cdkObject)
+        CfnAccessPolicyProps = CdkObjectWrappers.wrap(cdkObject) as CfnAccessPolicyProps
 
     internal fun unwrap(wrapped: CfnAccessPolicyProps):
         software.amazon.awscdk.services.opensearchserverless.CfnAccessPolicyProps = (wrapped as

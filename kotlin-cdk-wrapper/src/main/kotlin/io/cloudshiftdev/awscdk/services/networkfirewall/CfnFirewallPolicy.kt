@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -479,7 +480,8 @@ public open class CfnFirewallPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PublishMetricActionProperty):
-          PublishMetricActionProperty = Wrapper(cdkObject)
+          PublishMetricActionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          PublishMetricActionProperty
 
       internal fun unwrap(wrapped: PublishMetricActionProperty):
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PublishMetricActionProperty
@@ -682,7 +684,8 @@ public open class CfnFirewallPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty):
-          StatefulEngineOptionsProperty = Wrapper(cdkObject)
+          StatefulEngineOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          StatefulEngineOptionsProperty
 
       internal fun unwrap(wrapped: StatefulEngineOptionsProperty):
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty
@@ -855,7 +858,7 @@ public open class CfnFirewallPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.ActionDefinitionProperty):
-          ActionDefinitionProperty = Wrapper(cdkObject)
+          ActionDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as ActionDefinitionProperty
 
       internal fun unwrap(wrapped: ActionDefinitionProperty):
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.ActionDefinitionProperty
@@ -985,7 +988,8 @@ public open class CfnFirewallPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatelessRuleGroupReferenceProperty):
-          StatelessRuleGroupReferenceProperty = Wrapper(cdkObject)
+          StatelessRuleGroupReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as
+          StatelessRuleGroupReferenceProperty
 
       internal fun unwrap(wrapped: StatelessRuleGroupReferenceProperty):
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatelessRuleGroupReferenceProperty
@@ -1208,7 +1212,8 @@ public open class CfnFirewallPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupReferenceProperty):
-          StatefulRuleGroupReferenceProperty = Wrapper(cdkObject)
+          StatefulRuleGroupReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as
+          StatefulRuleGroupReferenceProperty
 
       internal fun unwrap(wrapped: StatefulRuleGroupReferenceProperty):
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupReferenceProperty
@@ -1301,7 +1306,7 @@ public open class CfnFirewallPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.DimensionProperty):
-          DimensionProperty = Wrapper(cdkObject)
+          DimensionProperty = CdkObjectWrappers.wrap(cdkObject) as DimensionProperty
 
       internal fun unwrap(wrapped: DimensionProperty):
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.DimensionProperty =
@@ -1422,7 +1427,7 @@ public open class CfnFirewallPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PolicyVariablesProperty):
-          PolicyVariablesProperty = Wrapper(cdkObject)
+          PolicyVariablesProperty = CdkObjectWrappers.wrap(cdkObject) as PolicyVariablesProperty
 
       internal fun unwrap(wrapped: PolicyVariablesProperty):
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.PolicyVariablesProperty
@@ -1586,7 +1591,7 @@ public open class CfnFirewallPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.CustomActionProperty):
-          CustomActionProperty = Wrapper(cdkObject)
+          CustomActionProperty = CdkObjectWrappers.wrap(cdkObject) as CustomActionProperty
 
       internal fun unwrap(wrapped: CustomActionProperty):
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.CustomActionProperty =
@@ -2386,7 +2391,7 @@ public open class CfnFirewallPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.FirewallPolicyProperty):
-          FirewallPolicyProperty = Wrapper(cdkObject)
+          FirewallPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as FirewallPolicyProperty
 
       internal fun unwrap(wrapped: FirewallPolicyProperty):
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.FirewallPolicyProperty =
@@ -2477,7 +2482,8 @@ public open class CfnFirewallPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupOverrideProperty):
-          StatefulRuleGroupOverrideProperty = Wrapper(cdkObject)
+          StatefulRuleGroupOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as
+          StatefulRuleGroupOverrideProperty
 
       internal fun unwrap(wrapped: StatefulRuleGroupOverrideProperty):
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulRuleGroupOverrideProperty
@@ -2569,7 +2575,7 @@ public open class CfnFirewallPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.IPSetProperty):
-          IPSetProperty = Wrapper(cdkObject)
+          IPSetProperty = CdkObjectWrappers.wrap(cdkObject) as IPSetProperty
 
       internal fun unwrap(wrapped: IPSetProperty):
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.IPSetProperty = (wrapped

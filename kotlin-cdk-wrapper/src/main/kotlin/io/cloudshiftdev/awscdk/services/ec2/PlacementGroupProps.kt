@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -217,7 +218,7 @@ public interface PlacementGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.PlacementGroupProps):
-        PlacementGroupProps = Wrapper(cdkObject)
+        PlacementGroupProps = CdkObjectWrappers.wrap(cdkObject) as PlacementGroupProps
 
     internal fun unwrap(wrapped: PlacementGroupProps):
         software.amazon.awscdk.services.ec2.PlacementGroupProps = (wrapped as CdkObject).cdkObject

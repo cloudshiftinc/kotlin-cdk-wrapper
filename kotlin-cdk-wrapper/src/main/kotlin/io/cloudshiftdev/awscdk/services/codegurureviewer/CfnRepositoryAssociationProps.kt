@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.codegurureviewer
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -362,7 +363,8 @@ public interface CfnRepositoryAssociationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codegurureviewer.CfnRepositoryAssociationProps):
-        CfnRepositoryAssociationProps = Wrapper(cdkObject)
+        CfnRepositoryAssociationProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnRepositoryAssociationProps
 
     internal fun unwrap(wrapped: CfnRepositoryAssociationProps):
         software.amazon.awscdk.services.codegurureviewer.CfnRepositoryAssociationProps = (wrapped as

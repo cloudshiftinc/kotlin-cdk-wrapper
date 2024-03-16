@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudtrail
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.logs.ILogGroup
 import io.cloudshiftdev.awscdk.services.logs.RetentionDays
@@ -631,7 +632,7 @@ public interface TrailProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.TrailProps): TrailProps
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as TrailProps
 
     internal fun unwrap(wrapped: TrailProps): software.amazon.awscdk.services.cloudtrail.TrailProps
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.cloudtrail.TrailProps

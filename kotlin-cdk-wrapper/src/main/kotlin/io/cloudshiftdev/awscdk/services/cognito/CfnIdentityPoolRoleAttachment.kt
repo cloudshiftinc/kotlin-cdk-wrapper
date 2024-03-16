@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -389,7 +390,8 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty):
-          RulesConfigurationTypeProperty = Wrapper(cdkObject)
+          RulesConfigurationTypeProperty = CdkObjectWrappers.wrap(cdkObject) as
+          RulesConfigurationTypeProperty
 
       internal fun unwrap(wrapped: RulesConfigurationTypeProperty):
           software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty
@@ -574,7 +576,7 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.MappingRuleProperty):
-          MappingRuleProperty = Wrapper(cdkObject)
+          MappingRuleProperty = CdkObjectWrappers.wrap(cdkObject) as MappingRuleProperty
 
       internal fun unwrap(wrapped: MappingRuleProperty):
           software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.MappingRuleProperty
@@ -846,7 +848,7 @@ public open class CfnIdentityPoolRoleAttachment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RoleMappingProperty):
-          RoleMappingProperty = Wrapper(cdkObject)
+          RoleMappingProperty = CdkObjectWrappers.wrap(cdkObject) as RoleMappingProperty
 
       internal fun unwrap(wrapped: RoleMappingProperty):
           software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RoleMappingProperty

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.docdb
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -150,7 +151,7 @@ public interface ClusterParameterGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.docdb.ClusterParameterGroupProps):
-        ClusterParameterGroupProps = Wrapper(cdkObject)
+        ClusterParameterGroupProps = CdkObjectWrappers.wrap(cdkObject) as ClusterParameterGroupProps
 
     internal fun unwrap(wrapped: ClusterParameterGroupProps):
         software.amazon.awscdk.services.docdb.ClusterParameterGroupProps = (wrapped as

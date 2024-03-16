@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -115,7 +116,7 @@ public interface SourceAccessConfiguration {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.SourceAccessConfiguration):
-        SourceAccessConfiguration = Wrapper(cdkObject)
+        SourceAccessConfiguration = CdkObjectWrappers.wrap(cdkObject) as SourceAccessConfiguration
 
     internal fun unwrap(wrapped: SourceAccessConfiguration):
         software.amazon.awscdk.services.lambda.SourceAccessConfiguration = (wrapped as

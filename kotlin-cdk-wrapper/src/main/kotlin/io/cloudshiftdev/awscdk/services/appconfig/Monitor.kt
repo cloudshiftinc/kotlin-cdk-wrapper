@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appconfig
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.IAlarm
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Boolean
@@ -49,10 +50,6 @@ public abstract class Monitor internal constructor(
    */
   public open fun monitorType(): MonitorType = unwrap(this).getMonitorType().let(MonitorType::wrap)
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.Monitor,
-  ) : Monitor(cdkObject)
-
   public companion object {
     public fun fromCfnMonitorsProperty(monitorsProperty: CfnEnvironment.MonitorsProperty): Monitor =
         software.amazon.awscdk.services.appconfig.Monitor.fromCfnMonitorsProperty(monitorsProperty.let(CfnEnvironment.MonitorsProperty::unwrap)).let(Monitor::wrap)
@@ -71,7 +68,7 @@ public abstract class Monitor internal constructor(
         alarmRole.let(IRole::unwrap)).let(Monitor::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.Monitor): Monitor =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as Monitor
 
     internal fun unwrap(wrapped: Monitor): software.amazon.awscdk.services.appconfig.Monitor =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appconfig.Monitor

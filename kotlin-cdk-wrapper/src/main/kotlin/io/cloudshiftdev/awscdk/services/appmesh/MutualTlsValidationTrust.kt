@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 
 /**
  * Represents a TLS Validation Context Trust that is supported for mutual TLS authentication.
@@ -51,13 +52,9 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 public abstract class MutualTlsValidationTrust internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.appmesh.MutualTlsValidationTrust,
 ) : TlsValidationTrust(cdkObject) {
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.MutualTlsValidationTrust,
-  ) : MutualTlsValidationTrust(cdkObject)
-
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.MutualTlsValidationTrust):
-        MutualTlsValidationTrust = Wrapper(cdkObject)
+        MutualTlsValidationTrust = CdkObjectWrappers.wrap(cdkObject) as MutualTlsValidationTrust
 
     internal fun unwrap(wrapped: MutualTlsValidationTrust):
         software.amazon.awscdk.services.appmesh.MutualTlsValidationTrust = (wrapped as

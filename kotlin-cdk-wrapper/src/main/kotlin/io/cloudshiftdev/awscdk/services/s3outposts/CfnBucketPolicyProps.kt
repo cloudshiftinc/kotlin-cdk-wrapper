@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.s3outposts
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -136,7 +137,7 @@ public interface CfnBucketPolicyProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3outposts.CfnBucketPolicyProps):
-        CfnBucketPolicyProps = Wrapper(cdkObject)
+        CfnBucketPolicyProps = CdkObjectWrappers.wrap(cdkObject) as CfnBucketPolicyProps
 
     internal fun unwrap(wrapped: CfnBucketPolicyProps):
         software.amazon.awscdk.services.s3outposts.CfnBucketPolicyProps = (wrapped as

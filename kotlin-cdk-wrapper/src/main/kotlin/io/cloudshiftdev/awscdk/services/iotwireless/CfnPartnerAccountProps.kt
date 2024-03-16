@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -375,7 +376,7 @@ public interface CfnPartnerAccountProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccountProps):
-        CfnPartnerAccountProps = Wrapper(cdkObject)
+        CfnPartnerAccountProps = CdkObjectWrappers.wrap(cdkObject) as CfnPartnerAccountProps
 
     internal fun unwrap(wrapped: CfnPartnerAccountProps):
         software.amazon.awscdk.services.iotwireless.CfnPartnerAccountProps = (wrapped as

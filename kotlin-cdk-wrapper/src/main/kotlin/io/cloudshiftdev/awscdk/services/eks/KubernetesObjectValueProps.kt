@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.eks
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -215,7 +216,7 @@ public interface KubernetesObjectValueProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.KubernetesObjectValueProps):
-        KubernetesObjectValueProps = Wrapper(cdkObject)
+        KubernetesObjectValueProps = CdkObjectWrappers.wrap(cdkObject) as KubernetesObjectValueProps
 
     internal fun unwrap(wrapped: KubernetesObjectValueProps):
         software.amazon.awscdk.services.eks.KubernetesObjectValueProps = (wrapped as

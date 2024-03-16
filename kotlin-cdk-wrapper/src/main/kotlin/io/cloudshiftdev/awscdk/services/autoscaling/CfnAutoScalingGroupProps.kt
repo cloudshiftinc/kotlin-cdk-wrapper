@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Deprecated
@@ -2297,7 +2298,7 @@ public interface CfnAutoScalingGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroupProps):
-        CfnAutoScalingGroupProps = Wrapper(cdkObject)
+        CfnAutoScalingGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnAutoScalingGroupProps
 
     internal fun unwrap(wrapped: CfnAutoScalingGroupProps):
         software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroupProps = (wrapped as

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -631,7 +632,7 @@ public open class CfnApiKey internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnApiKey.StageKeyProperty):
-          StageKeyProperty = Wrapper(cdkObject)
+          StageKeyProperty = CdkObjectWrappers.wrap(cdkObject) as StageKeyProperty
 
       internal fun unwrap(wrapped: StageKeyProperty):
           software.amazon.awscdk.services.apigateway.CfnApiKey.StageKeyProperty = (wrapped as

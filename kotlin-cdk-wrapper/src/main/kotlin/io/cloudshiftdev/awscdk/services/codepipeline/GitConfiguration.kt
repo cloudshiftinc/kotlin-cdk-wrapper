@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.collections.List
 
@@ -174,7 +175,7 @@ public interface GitConfiguration {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.GitConfiguration):
-        GitConfiguration = Wrapper(cdkObject)
+        GitConfiguration = CdkObjectWrappers.wrap(cdkObject) as GitConfiguration
 
     internal fun unwrap(wrapped: GitConfiguration):
         software.amazon.awscdk.services.codepipeline.GitConfiguration = (wrapped as

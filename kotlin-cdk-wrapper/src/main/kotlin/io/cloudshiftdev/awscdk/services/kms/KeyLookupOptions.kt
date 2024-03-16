@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.kms
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -75,7 +76,7 @@ public interface KeyLookupOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.kms.KeyLookupOptions):
-        KeyLookupOptions = Wrapper(cdkObject)
+        KeyLookupOptions = CdkObjectWrappers.wrap(cdkObject) as KeyLookupOptions
 
     internal fun unwrap(wrapped: KeyLookupOptions):
         software.amazon.awscdk.services.kms.KeyLookupOptions = (wrapped as CdkObject).cdkObject as

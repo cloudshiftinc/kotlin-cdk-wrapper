@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1100,7 +1101,7 @@ public interface JsonSchema {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.JsonSchema): JsonSchema
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as JsonSchema
 
     internal fun unwrap(wrapped: JsonSchema): software.amazon.awscdk.services.apigateway.JsonSchema
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.apigateway.JsonSchema

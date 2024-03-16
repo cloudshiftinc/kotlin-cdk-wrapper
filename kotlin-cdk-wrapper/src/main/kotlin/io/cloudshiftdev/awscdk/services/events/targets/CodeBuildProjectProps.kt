@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.events.targets
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.RuleTargetInput
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.sqs.IQueue
@@ -220,7 +221,7 @@ public interface CodeBuildProjectProps : TargetBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.events.targets.CodeBuildProjectProps):
-        CodeBuildProjectProps = Wrapper(cdkObject)
+        CodeBuildProjectProps = CdkObjectWrappers.wrap(cdkObject) as CodeBuildProjectProps
 
     internal fun unwrap(wrapped: CodeBuildProjectProps):
         software.amazon.awscdk.services.events.targets.CodeBuildProjectProps = (wrapped as

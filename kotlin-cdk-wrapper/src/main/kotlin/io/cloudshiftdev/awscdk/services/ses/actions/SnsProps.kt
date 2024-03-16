@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ses.actions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.sns.ITopic
 import kotlin.Unit
 
@@ -113,7 +114,7 @@ public interface SnsProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.actions.SnsProps): SnsProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as SnsProps
 
     internal fun unwrap(wrapped: SnsProps): software.amazon.awscdk.services.ses.actions.SnsProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ses.actions.SnsProps

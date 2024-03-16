@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -411,7 +412,8 @@ public open class CfnSigningProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.signer.CfnSigningProfile.SignatureValidityPeriodProperty):
-          SignatureValidityPeriodProperty = Wrapper(cdkObject)
+          SignatureValidityPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SignatureValidityPeriodProperty
 
       internal fun unwrap(wrapped: SignatureValidityPeriodProperty):
           software.amazon.awscdk.services.signer.CfnSigningProfile.SignatureValidityPeriodProperty =

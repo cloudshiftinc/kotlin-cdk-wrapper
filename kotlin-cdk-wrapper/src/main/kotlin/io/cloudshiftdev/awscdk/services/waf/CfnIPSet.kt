@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -437,7 +438,7 @@ public open class CfnIPSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.waf.CfnIPSet.IPSetDescriptorProperty):
-          IPSetDescriptorProperty = Wrapper(cdkObject)
+          IPSetDescriptorProperty = CdkObjectWrappers.wrap(cdkObject) as IPSetDescriptorProperty
 
       internal fun unwrap(wrapped: IPSetDescriptorProperty):
           software.amazon.awscdk.services.waf.CfnIPSet.IPSetDescriptorProperty = (wrapped as

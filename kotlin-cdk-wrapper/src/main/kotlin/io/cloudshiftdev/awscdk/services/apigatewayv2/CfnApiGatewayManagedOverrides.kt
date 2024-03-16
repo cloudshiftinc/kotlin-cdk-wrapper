@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -654,7 +655,7 @@ public open class CfnApiGatewayManagedOverrides internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.RouteOverridesProperty):
-          RouteOverridesProperty = Wrapper(cdkObject)
+          RouteOverridesProperty = CdkObjectWrappers.wrap(cdkObject) as RouteOverridesProperty
 
       internal fun unwrap(wrapped: RouteOverridesProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.RouteOverridesProperty
@@ -899,7 +900,7 @@ public open class CfnApiGatewayManagedOverrides internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.RouteSettingsProperty):
-          RouteSettingsProperty = Wrapper(cdkObject)
+          RouteSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as RouteSettingsProperty
 
       internal fun unwrap(wrapped: RouteSettingsProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.RouteSettingsProperty
@@ -1018,7 +1019,7 @@ public open class CfnApiGatewayManagedOverrides internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.AccessLogSettingsProperty):
-          AccessLogSettingsProperty = Wrapper(cdkObject)
+          AccessLogSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as AccessLogSettingsProperty
 
       internal fun unwrap(wrapped: AccessLogSettingsProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.AccessLogSettingsProperty
@@ -1217,7 +1218,8 @@ public open class CfnApiGatewayManagedOverrides internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.IntegrationOverridesProperty):
-          IntegrationOverridesProperty = Wrapper(cdkObject)
+          IntegrationOverridesProperty = CdkObjectWrappers.wrap(cdkObject) as
+          IntegrationOverridesProperty
 
       internal fun unwrap(wrapped: IntegrationOverridesProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.IntegrationOverridesProperty
@@ -1539,7 +1541,7 @@ public open class CfnApiGatewayManagedOverrides internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.StageOverridesProperty):
-          StageOverridesProperty = Wrapper(cdkObject)
+          StageOverridesProperty = CdkObjectWrappers.wrap(cdkObject) as StageOverridesProperty
 
       internal fun unwrap(wrapped: StageOverridesProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides.StageOverridesProperty

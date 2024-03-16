@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.emr
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -203,7 +204,8 @@ public interface CfnStudioSessionMappingProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnStudioSessionMappingProps):
-        CfnStudioSessionMappingProps = Wrapper(cdkObject)
+        CfnStudioSessionMappingProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnStudioSessionMappingProps
 
     internal fun unwrap(wrapped: CfnStudioSessionMappingProps):
         software.amazon.awscdk.services.emr.CfnStudioSessionMappingProps = (wrapped as

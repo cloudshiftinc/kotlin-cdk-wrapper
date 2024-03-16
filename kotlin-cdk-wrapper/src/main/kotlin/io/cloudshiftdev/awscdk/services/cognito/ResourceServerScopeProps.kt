@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -111,7 +112,7 @@ public interface ResourceServerScopeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.ResourceServerScopeProps):
-        ResourceServerScopeProps = Wrapper(cdkObject)
+        ResourceServerScopeProps = CdkObjectWrappers.wrap(cdkObject) as ResourceServerScopeProps
 
     internal fun unwrap(wrapped: ResourceServerScopeProps):
         software.amazon.awscdk.services.cognito.ResourceServerScopeProps = (wrapped as

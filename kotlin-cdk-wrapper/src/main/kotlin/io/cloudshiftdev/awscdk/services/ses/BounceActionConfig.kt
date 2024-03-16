@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ses
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -179,7 +180,7 @@ public interface BounceActionConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.BounceActionConfig):
-        BounceActionConfig = Wrapper(cdkObject)
+        BounceActionConfig = CdkObjectWrappers.wrap(cdkObject) as BounceActionConfig
 
     internal fun unwrap(wrapped: BounceActionConfig):
         software.amazon.awscdk.services.ses.BounceActionConfig = (wrapped as CdkObject).cdkObject as

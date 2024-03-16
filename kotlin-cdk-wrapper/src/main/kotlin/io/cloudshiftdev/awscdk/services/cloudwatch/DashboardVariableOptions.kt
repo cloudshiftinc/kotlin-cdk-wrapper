@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -263,7 +264,7 @@ public interface DashboardVariableOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.DashboardVariableOptions):
-        DashboardVariableOptions = Wrapper(cdkObject)
+        DashboardVariableOptions = CdkObjectWrappers.wrap(cdkObject) as DashboardVariableOptions
 
     internal fun unwrap(wrapped: DashboardVariableOptions):
         software.amazon.awscdk.services.cloudwatch.DashboardVariableOptions = (wrapped as

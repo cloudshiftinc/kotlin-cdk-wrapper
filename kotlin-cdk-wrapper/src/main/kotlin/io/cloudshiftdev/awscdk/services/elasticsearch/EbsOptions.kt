@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.elasticsearch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.EbsDeviceVolumeType
 import kotlin.Boolean
 import kotlin.Deprecated
@@ -274,7 +275,7 @@ public interface EbsOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.EbsOptions):
-        EbsOptions = Wrapper(cdkObject)
+        EbsOptions = CdkObjectWrappers.wrap(cdkObject) as EbsOptions
 
     internal fun unwrap(wrapped: EbsOptions):
         software.amazon.awscdk.services.elasticsearch.EbsOptions = (wrapped as CdkObject).cdkObject

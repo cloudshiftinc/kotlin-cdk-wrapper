@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.docdb
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -370,7 +371,7 @@ public interface CfnEventSubscriptionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.docdb.CfnEventSubscriptionProps):
-        CfnEventSubscriptionProps = Wrapper(cdkObject)
+        CfnEventSubscriptionProps = CdkObjectWrappers.wrap(cdkObject) as CfnEventSubscriptionProps
 
     internal fun unwrap(wrapped: CfnEventSubscriptionProps):
         software.amazon.awscdk.services.docdb.CfnEventSubscriptionProps = (wrapped as

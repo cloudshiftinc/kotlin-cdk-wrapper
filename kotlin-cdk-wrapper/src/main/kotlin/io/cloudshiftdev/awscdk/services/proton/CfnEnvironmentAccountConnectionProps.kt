@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.proton
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -353,7 +354,8 @@ public interface CfnEnvironmentAccountConnectionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.proton.CfnEnvironmentAccountConnectionProps):
-        CfnEnvironmentAccountConnectionProps = Wrapper(cdkObject)
+        CfnEnvironmentAccountConnectionProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnEnvironmentAccountConnectionProps
 
     internal fun unwrap(wrapped: CfnEnvironmentAccountConnectionProps):
         software.amazon.awscdk.services.proton.CfnEnvironmentAccountConnectionProps = (wrapped as

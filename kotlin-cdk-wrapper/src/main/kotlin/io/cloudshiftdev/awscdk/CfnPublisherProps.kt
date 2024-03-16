@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -160,7 +161,7 @@ public interface CfnPublisherProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnPublisherProps): CfnPublisherProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as CfnPublisherProps
 
     internal fun unwrap(wrapped: CfnPublisherProps): software.amazon.awscdk.CfnPublisherProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.CfnPublisherProps

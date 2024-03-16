@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.s3
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -206,7 +207,7 @@ public interface Location {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.Location): Location =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as Location
 
     internal fun unwrap(wrapped: Location): software.amazon.awscdk.services.s3.Location = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.s3.Location

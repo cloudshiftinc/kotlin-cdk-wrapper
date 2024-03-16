@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1077,7 +1078,7 @@ public open class CfnMethod internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty):
-          MethodResponseProperty = Wrapper(cdkObject)
+          MethodResponseProperty = CdkObjectWrappers.wrap(cdkObject) as MethodResponseProperty
 
       internal fun unwrap(wrapped: MethodResponseProperty):
           software.amazon.awscdk.services.apigateway.CfnMethod.MethodResponseProperty = (wrapped as
@@ -1888,7 +1889,7 @@ public open class CfnMethod internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnMethod.IntegrationProperty):
-          IntegrationProperty = Wrapper(cdkObject)
+          IntegrationProperty = CdkObjectWrappers.wrap(cdkObject) as IntegrationProperty
 
       internal fun unwrap(wrapped: IntegrationProperty):
           software.amazon.awscdk.services.apigateway.CfnMethod.IntegrationProperty = (wrapped as
@@ -2227,7 +2228,8 @@ public open class CfnMethod internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnMethod.IntegrationResponseProperty):
-          IntegrationResponseProperty = Wrapper(cdkObject)
+          IntegrationResponseProperty = CdkObjectWrappers.wrap(cdkObject) as
+          IntegrationResponseProperty
 
       internal fun unwrap(wrapped: IntegrationResponseProperty):
           software.amazon.awscdk.services.apigateway.CfnMethod.IntegrationResponseProperty =

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -349,7 +350,7 @@ public interface CustomOriginConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CustomOriginConfig):
-        CustomOriginConfig = Wrapper(cdkObject)
+        CustomOriginConfig = CdkObjectWrappers.wrap(cdkObject) as CustomOriginConfig
 
     internal fun unwrap(wrapped: CustomOriginConfig):
         software.amazon.awscdk.services.cloudfront.CustomOriginConfig = (wrapped as

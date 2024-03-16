@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.batch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -155,7 +156,7 @@ public interface CustomReason {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.CustomReason): CustomReason =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as CustomReason
 
     internal fun unwrap(wrapped: CustomReason): software.amazon.awscdk.services.batch.CustomReason =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.batch.CustomReason

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -2183,7 +2184,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.ElasticsearchClusterConfigProperty):
-          ElasticsearchClusterConfigProperty = Wrapper(cdkObject)
+          ElasticsearchClusterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ElasticsearchClusterConfigProperty
 
       internal fun unwrap(wrapped: ElasticsearchClusterConfigProperty):
           software.amazon.awscdk.services.elasticsearch.CfnDomain.ElasticsearchClusterConfigProperty
@@ -2349,7 +2351,7 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.MasterUserOptionsProperty):
-          MasterUserOptionsProperty = Wrapper(cdkObject)
+          MasterUserOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as MasterUserOptionsProperty
 
       internal fun unwrap(wrapped: MasterUserOptionsProperty):
           software.amazon.awscdk.services.elasticsearch.CfnDomain.MasterUserOptionsProperty =
@@ -2598,7 +2600,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.AdvancedSecurityOptionsInputProperty):
-          AdvancedSecurityOptionsInputProperty = Wrapper(cdkObject)
+          AdvancedSecurityOptionsInputProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AdvancedSecurityOptionsInputProperty
 
       internal fun unwrap(wrapped: AdvancedSecurityOptionsInputProperty):
           software.amazon.awscdk.services.elasticsearch.CfnDomain.AdvancedSecurityOptionsInputProperty
@@ -2751,7 +2754,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.LogPublishingOptionProperty):
-          LogPublishingOptionProperty = Wrapper(cdkObject)
+          LogPublishingOptionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          LogPublishingOptionProperty
 
       internal fun unwrap(wrapped: LogPublishingOptionProperty):
           software.amazon.awscdk.services.elasticsearch.CfnDomain.LogPublishingOptionProperty =
@@ -2895,7 +2899,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.EncryptionAtRestOptionsProperty):
-          EncryptionAtRestOptionsProperty = Wrapper(cdkObject)
+          EncryptionAtRestOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EncryptionAtRestOptionsProperty
 
       internal fun unwrap(wrapped: EncryptionAtRestOptionsProperty):
           software.amazon.awscdk.services.elasticsearch.CfnDomain.EncryptionAtRestOptionsProperty =
@@ -3002,7 +3007,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.NodeToNodeEncryptionOptionsProperty):
-          NodeToNodeEncryptionOptionsProperty = Wrapper(cdkObject)
+          NodeToNodeEncryptionOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          NodeToNodeEncryptionOptionsProperty
 
       internal fun unwrap(wrapped: NodeToNodeEncryptionOptionsProperty):
           software.amazon.awscdk.services.elasticsearch.CfnDomain.NodeToNodeEncryptionOptionsProperty
@@ -3111,7 +3117,7 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.SnapshotOptionsProperty):
-          SnapshotOptionsProperty = Wrapper(cdkObject)
+          SnapshotOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as SnapshotOptionsProperty
 
       internal fun unwrap(wrapped: SnapshotOptionsProperty):
           software.amazon.awscdk.services.elasticsearch.CfnDomain.SnapshotOptionsProperty = (wrapped
@@ -3214,7 +3220,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.ZoneAwarenessConfigProperty):
-          ZoneAwarenessConfigProperty = Wrapper(cdkObject)
+          ZoneAwarenessConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ZoneAwarenessConfigProperty
 
       internal fun unwrap(wrapped: ZoneAwarenessConfigProperty):
           software.amazon.awscdk.services.elasticsearch.CfnDomain.ZoneAwarenessConfigProperty =
@@ -3485,7 +3492,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.DomainEndpointOptionsProperty):
-          DomainEndpointOptionsProperty = Wrapper(cdkObject)
+          DomainEndpointOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          DomainEndpointOptionsProperty
 
       internal fun unwrap(wrapped: DomainEndpointOptionsProperty):
           software.amazon.awscdk.services.elasticsearch.CfnDomain.DomainEndpointOptionsProperty =
@@ -3601,7 +3609,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.ColdStorageOptionsProperty):
-          ColdStorageOptionsProperty = Wrapper(cdkObject)
+          ColdStorageOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ColdStorageOptionsProperty
 
       internal fun unwrap(wrapped: ColdStorageOptionsProperty):
           software.amazon.awscdk.services.elasticsearch.CfnDomain.ColdStorageOptionsProperty =
@@ -3812,7 +3821,7 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.VPCOptionsProperty):
-          VPCOptionsProperty = Wrapper(cdkObject)
+          VPCOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as VPCOptionsProperty
 
       internal fun unwrap(wrapped: VPCOptionsProperty):
           software.amazon.awscdk.services.elasticsearch.CfnDomain.VPCOptionsProperty = (wrapped as
@@ -4048,7 +4057,7 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.EBSOptionsProperty):
-          EBSOptionsProperty = Wrapper(cdkObject)
+          EBSOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as EBSOptionsProperty
 
       internal fun unwrap(wrapped: EBSOptionsProperty):
           software.amazon.awscdk.services.elasticsearch.CfnDomain.EBSOptionsProperty = (wrapped as
@@ -4287,7 +4296,7 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.CfnDomain.CognitoOptionsProperty):
-          CognitoOptionsProperty = Wrapper(cdkObject)
+          CognitoOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as CognitoOptionsProperty
 
       internal fun unwrap(wrapped: CognitoOptionsProperty):
           software.amazon.awscdk.services.elasticsearch.CfnDomain.CognitoOptionsProperty = (wrapped

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1277,7 +1278,7 @@ public open class CfnStackSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackSet.ManagedExecutionProperty):
-          ManagedExecutionProperty = Wrapper(cdkObject)
+          ManagedExecutionProperty = CdkObjectWrappers.wrap(cdkObject) as ManagedExecutionProperty
 
       internal fun unwrap(wrapped: ManagedExecutionProperty):
           software.amazon.awscdk.services.cloudformation.CfnStackSet.ManagedExecutionProperty =
@@ -1457,7 +1458,7 @@ public open class CfnStackSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackSet.AutoDeploymentProperty):
-          AutoDeploymentProperty = Wrapper(cdkObject)
+          AutoDeploymentProperty = CdkObjectWrappers.wrap(cdkObject) as AutoDeploymentProperty
 
       internal fun unwrap(wrapped: AutoDeploymentProperty):
           software.amazon.awscdk.services.cloudformation.CfnStackSet.AutoDeploymentProperty =
@@ -1722,7 +1723,7 @@ public open class CfnStackSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackSet.DeploymentTargetsProperty):
-          DeploymentTargetsProperty = Wrapper(cdkObject)
+          DeploymentTargetsProperty = CdkObjectWrappers.wrap(cdkObject) as DeploymentTargetsProperty
 
       internal fun unwrap(wrapped: DeploymentTargetsProperty):
           software.amazon.awscdk.services.cloudformation.CfnStackSet.DeploymentTargetsProperty =
@@ -1840,7 +1841,7 @@ public open class CfnStackSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackSet.ParameterProperty):
-          ParameterProperty = Wrapper(cdkObject)
+          ParameterProperty = CdkObjectWrappers.wrap(cdkObject) as ParameterProperty
 
       internal fun unwrap(wrapped: ParameterProperty):
           software.amazon.awscdk.services.cloudformation.CfnStackSet.ParameterProperty = (wrapped as
@@ -2245,7 +2246,8 @@ public open class CfnStackSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackSet.OperationPreferencesProperty):
-          OperationPreferencesProperty = Wrapper(cdkObject)
+          OperationPreferencesProperty = CdkObjectWrappers.wrap(cdkObject) as
+          OperationPreferencesProperty
 
       internal fun unwrap(wrapped: OperationPreferencesProperty):
           software.amazon.awscdk.services.cloudformation.CfnStackSet.OperationPreferencesProperty =
@@ -2473,7 +2475,7 @@ public open class CfnStackSet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnStackSet.StackInstancesProperty):
-          StackInstancesProperty = Wrapper(cdkObject)
+          StackInstancesProperty = CdkObjectWrappers.wrap(cdkObject) as StackInstancesProperty
 
       internal fun unwrap(wrapped: StackInstancesProperty):
           software.amazon.awscdk.services.cloudformation.CfnStackSet.StackInstancesProperty =

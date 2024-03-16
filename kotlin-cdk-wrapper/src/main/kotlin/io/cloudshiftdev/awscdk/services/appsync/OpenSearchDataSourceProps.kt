@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.opensearchservice.IDomain
 import kotlin.String
@@ -158,7 +159,7 @@ public interface OpenSearchDataSourceProps : BackedDataSourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.OpenSearchDataSourceProps):
-        OpenSearchDataSourceProps = Wrapper(cdkObject)
+        OpenSearchDataSourceProps = CdkObjectWrappers.wrap(cdkObject) as OpenSearchDataSourceProps
 
     internal fun unwrap(wrapped: OpenSearchDataSourceProps):
         software.amazon.awscdk.services.appsync.OpenSearchDataSourceProps = (wrapped as

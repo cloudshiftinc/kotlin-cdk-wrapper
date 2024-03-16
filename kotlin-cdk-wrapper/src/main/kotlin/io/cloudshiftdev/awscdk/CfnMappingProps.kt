@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -120,7 +121,7 @@ public interface CfnMappingProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnMappingProps): CfnMappingProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as CfnMappingProps
 
     internal fun unwrap(wrapped: CfnMappingProps): software.amazon.awscdk.CfnMappingProps = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.CfnMappingProps

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.connect
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -163,7 +164,8 @@ public interface CfnPredefinedAttributeProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnPredefinedAttributeProps):
-        CfnPredefinedAttributeProps = Wrapper(cdkObject)
+        CfnPredefinedAttributeProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnPredefinedAttributeProps
 
     internal fun unwrap(wrapped: CfnPredefinedAttributeProps):
         software.amazon.awscdk.services.connect.CfnPredefinedAttributeProps = (wrapped as

@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Deprecated
@@ -2562,7 +2563,7 @@ public open class CfnAutoScalingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryMiBRequestProperty):
-          MemoryMiBRequestProperty = Wrapper(cdkObject)
+          MemoryMiBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as MemoryMiBRequestProperty
 
       internal fun unwrap(wrapped: MemoryMiBRequestProperty):
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryMiBRequestProperty =
@@ -2677,7 +2678,8 @@ public open class CfnAutoScalingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty):
-          TotalLocalStorageGBRequestProperty = Wrapper(cdkObject)
+          TotalLocalStorageGBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
+          TotalLocalStorageGBRequestProperty
 
       internal fun unwrap(wrapped: TotalLocalStorageGBRequestProperty):
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty
@@ -2895,7 +2897,8 @@ public open class CfnAutoScalingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateSpecificationProperty):
-          LaunchTemplateSpecificationProperty = Wrapper(cdkObject)
+          LaunchTemplateSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          LaunchTemplateSpecificationProperty
 
       internal fun unwrap(wrapped: LaunchTemplateSpecificationProperty):
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateSpecificationProperty
@@ -3010,7 +3013,8 @@ public open class CfnAutoScalingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty):
-          NetworkInterfaceCountRequestProperty = Wrapper(cdkObject)
+          NetworkInterfaceCountRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
+          NetworkInterfaceCountRequestProperty
 
       internal fun unwrap(wrapped: NetworkInterfaceCountRequestProperty):
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkInterfaceCountRequestProperty
@@ -3192,7 +3196,7 @@ public open class CfnAutoScalingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TagPropertyProperty):
-          TagPropertyProperty = Wrapper(cdkObject)
+          TagPropertyProperty = CdkObjectWrappers.wrap(cdkObject) as TagPropertyProperty
 
       internal fun unwrap(wrapped: TagPropertyProperty):
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TagPropertyProperty =
@@ -3316,7 +3320,8 @@ public open class CfnAutoScalingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty):
-          NetworkBandwidthGbpsRequestProperty = Wrapper(cdkObject)
+          NetworkBandwidthGbpsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
+          NetworkBandwidthGbpsRequestProperty
 
       internal fun unwrap(wrapped: NetworkBandwidthGbpsRequestProperty):
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NetworkBandwidthGbpsRequestProperty
@@ -3428,7 +3433,7 @@ public open class CfnAutoScalingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.VCpuCountRequestProperty):
-          VCpuCountRequestProperty = Wrapper(cdkObject)
+          VCpuCountRequestProperty = CdkObjectWrappers.wrap(cdkObject) as VCpuCountRequestProperty
 
       internal fun unwrap(wrapped: VCpuCountRequestProperty):
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.VCpuCountRequestProperty =
@@ -3541,7 +3546,8 @@ public open class CfnAutoScalingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorCountRequestProperty):
-          AcceleratorCountRequestProperty = Wrapper(cdkObject)
+          AcceleratorCountRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AcceleratorCountRequestProperty
 
       internal fun unwrap(wrapped: AcceleratorCountRequestProperty):
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorCountRequestProperty
@@ -3655,7 +3661,8 @@ public open class CfnAutoScalingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryGiBPerVCpuRequestProperty):
-          MemoryGiBPerVCpuRequestProperty = Wrapper(cdkObject)
+          MemoryGiBPerVCpuRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MemoryGiBPerVCpuRequestProperty
 
       internal fun unwrap(wrapped: MemoryGiBPerVCpuRequestProperty):
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MemoryGiBPerVCpuRequestProperty
@@ -4230,7 +4237,8 @@ public open class CfnAutoScalingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateOverridesProperty):
-          LaunchTemplateOverridesProperty = Wrapper(cdkObject)
+          LaunchTemplateOverridesProperty = CdkObjectWrappers.wrap(cdkObject) as
+          LaunchTemplateOverridesProperty
 
       internal fun unwrap(wrapped: LaunchTemplateOverridesProperty):
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateOverridesProperty
@@ -4797,7 +4805,8 @@ public open class CfnAutoScalingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstancesDistributionProperty):
-          InstancesDistributionProperty = Wrapper(cdkObject)
+          InstancesDistributionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          InstancesDistributionProperty
 
       internal fun unwrap(wrapped: InstancesDistributionProperty):
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstancesDistributionProperty
@@ -4983,7 +4992,8 @@ public open class CfnAutoScalingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NotificationConfigurationProperty):
-          NotificationConfigurationProperty = Wrapper(cdkObject)
+          NotificationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          NotificationConfigurationProperty
 
       internal fun unwrap(wrapped: NotificationConfigurationProperty):
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.NotificationConfigurationProperty
@@ -5290,7 +5300,7 @@ public open class CfnAutoScalingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MetricsCollectionProperty):
-          MetricsCollectionProperty = Wrapper(cdkObject)
+          MetricsCollectionProperty = CdkObjectWrappers.wrap(cdkObject) as MetricsCollectionProperty
 
       internal fun unwrap(wrapped: MetricsCollectionProperty):
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MetricsCollectionProperty
@@ -7338,7 +7348,8 @@ public open class CfnAutoScalingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceRequirementsProperty):
-          InstanceRequirementsProperty = Wrapper(cdkObject)
+          InstanceRequirementsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          InstanceRequirementsProperty
 
       internal fun unwrap(wrapped: InstanceRequirementsProperty):
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceRequirementsProperty
@@ -7507,7 +7518,8 @@ public open class CfnAutoScalingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceMaintenancePolicyProperty):
-          InstanceMaintenancePolicyProperty = Wrapper(cdkObject)
+          InstanceMaintenancePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as
+          InstanceMaintenancePolicyProperty
 
       internal fun unwrap(wrapped: InstanceMaintenancePolicyProperty):
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.InstanceMaintenancePolicyProperty
@@ -7622,7 +7634,8 @@ public open class CfnAutoScalingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty):
-          BaselineEbsBandwidthMbpsRequestProperty = Wrapper(cdkObject)
+          BaselineEbsBandwidthMbpsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
+          BaselineEbsBandwidthMbpsRequestProperty
 
       internal fun unwrap(wrapped: BaselineEbsBandwidthMbpsRequestProperty):
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty
@@ -7972,7 +7985,8 @@ public open class CfnAutoScalingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LifecycleHookSpecificationProperty):
-          LifecycleHookSpecificationProperty = Wrapper(cdkObject)
+          LifecycleHookSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          LifecycleHookSpecificationProperty
 
       internal fun unwrap(wrapped: LifecycleHookSpecificationProperty):
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LifecycleHookSpecificationProperty
@@ -8249,7 +8263,8 @@ public open class CfnAutoScalingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MixedInstancesPolicyProperty):
-          MixedInstancesPolicyProperty = Wrapper(cdkObject)
+          MixedInstancesPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MixedInstancesPolicyProperty
 
       internal fun unwrap(wrapped: MixedInstancesPolicyProperty):
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.MixedInstancesPolicyProperty
@@ -8364,7 +8379,8 @@ public open class CfnAutoScalingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorTotalMemoryMiBRequestProperty):
-          AcceleratorTotalMemoryMiBRequestProperty = Wrapper(cdkObject)
+          AcceleratorTotalMemoryMiBRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AcceleratorTotalMemoryMiBRequestProperty
 
       internal fun unwrap(wrapped: AcceleratorTotalMemoryMiBRequestProperty):
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AcceleratorTotalMemoryMiBRequestProperty
@@ -8608,7 +8624,7 @@ public open class CfnAutoScalingGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateProperty):
-          LaunchTemplateProperty = Wrapper(cdkObject)
+          LaunchTemplateProperty = CdkObjectWrappers.wrap(cdkObject) as LaunchTemplateProperty
 
       internal fun unwrap(wrapped: LaunchTemplateProperty):
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.LaunchTemplateProperty =

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudtrail
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 import kotlin.collections.List
@@ -171,7 +172,7 @@ public interface AddEventSelectorOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.AddEventSelectorOptions):
-        AddEventSelectorOptions = Wrapper(cdkObject)
+        AddEventSelectorOptions = CdkObjectWrappers.wrap(cdkObject) as AddEventSelectorOptions
 
     internal fun unwrap(wrapped: AddEventSelectorOptions):
         software.amazon.awscdk.services.cloudtrail.AddEventSelectorOptions = (wrapped as

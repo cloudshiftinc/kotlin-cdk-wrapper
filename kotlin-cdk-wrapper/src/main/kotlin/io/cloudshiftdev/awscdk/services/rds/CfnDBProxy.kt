@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -940,7 +941,7 @@ public open class CfnDBProxy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBProxy.AuthFormatProperty):
-          AuthFormatProperty = Wrapper(cdkObject)
+          AuthFormatProperty = CdkObjectWrappers.wrap(cdkObject) as AuthFormatProperty
 
       internal fun unwrap(wrapped: AuthFormatProperty):
           software.amazon.awscdk.services.rds.CfnDBProxy.AuthFormatProperty = (wrapped as
@@ -1073,7 +1074,7 @@ public open class CfnDBProxy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBProxy.TagFormatProperty):
-          TagFormatProperty = Wrapper(cdkObject)
+          TagFormatProperty = CdkObjectWrappers.wrap(cdkObject) as TagFormatProperty
 
       internal fun unwrap(wrapped: TagFormatProperty):
           software.amazon.awscdk.services.rds.CfnDBProxy.TagFormatProperty = (wrapped as

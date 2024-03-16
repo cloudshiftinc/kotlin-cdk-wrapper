@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -72,7 +73,7 @@ public interface RuntimeInfo {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.RuntimeInfo):
-        RuntimeInfo = Wrapper(cdkObject)
+        RuntimeInfo = CdkObjectWrappers.wrap(cdkObject) as RuntimeInfo
 
     internal fun unwrap(wrapped: RuntimeInfo):
         software.amazon.awscdk.cloudassembly.schema.RuntimeInfo = (wrapped as CdkObject).cdkObject

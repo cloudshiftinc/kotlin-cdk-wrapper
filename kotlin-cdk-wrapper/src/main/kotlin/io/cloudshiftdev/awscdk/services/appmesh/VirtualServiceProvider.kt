@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 
 /**
@@ -34,10 +35,6 @@ public abstract class VirtualServiceProvider internal constructor(
   public open fun bind(construct: Construct): VirtualServiceProviderConfig =
       unwrap(this).bind(construct.let(Construct::unwrap)).let(VirtualServiceProviderConfig::wrap)
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceProvider,
-  ) : VirtualServiceProvider(cdkObject)
-
   public companion object {
     public fun none(mesh: IMesh): VirtualServiceProvider =
         software.amazon.awscdk.services.appmesh.VirtualServiceProvider.none(mesh.let(IMesh::unwrap)).let(VirtualServiceProvider::wrap)
@@ -49,7 +46,7 @@ public abstract class VirtualServiceProvider internal constructor(
         software.amazon.awscdk.services.appmesh.VirtualServiceProvider.virtualRouter(virtualRouter.let(IVirtualRouter::unwrap)).let(VirtualServiceProvider::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceProvider):
-        VirtualServiceProvider = Wrapper(cdkObject)
+        VirtualServiceProvider = CdkObjectWrappers.wrap(cdkObject) as VirtualServiceProvider
 
     internal fun unwrap(wrapped: VirtualServiceProvider):
         software.amazon.awscdk.services.appmesh.VirtualServiceProvider = (wrapped as

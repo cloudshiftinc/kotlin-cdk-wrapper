@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.dynamodb
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -40,10 +41,6 @@ public abstract class Capacity internal constructor(
    */
   public open fun mode(): CapacityMode = unwrap(this).getMode().let(CapacityMode::wrap)
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.dynamodb.Capacity,
-  ) : Capacity(cdkObject)
-
   public companion object {
     public fun autoscaled(options: AutoscaledCapacityOptions): Capacity =
         software.amazon.awscdk.services.dynamodb.Capacity.autoscaled(options.let(AutoscaledCapacityOptions::unwrap)).let(Capacity::wrap)
@@ -57,7 +54,7 @@ public abstract class Capacity internal constructor(
         software.amazon.awscdk.services.dynamodb.Capacity.fixed(iops).let(Capacity::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.Capacity): Capacity =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as Capacity
 
     internal fun unwrap(wrapped: Capacity): software.amazon.awscdk.services.dynamodb.Capacity =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.dynamodb.Capacity

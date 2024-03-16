@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -150,7 +151,8 @@ public interface EndpointServiceAvailabilityZonesContextQuery {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.EndpointServiceAvailabilityZonesContextQuery):
-        EndpointServiceAvailabilityZonesContextQuery = Wrapper(cdkObject)
+        EndpointServiceAvailabilityZonesContextQuery = CdkObjectWrappers.wrap(cdkObject) as
+        EndpointServiceAvailabilityZonesContextQuery
 
     internal fun unwrap(wrapped: EndpointServiceAvailabilityZonesContextQuery):
         software.amazon.awscdk.cloudassembly.schema.EndpointServiceAvailabilityZonesContextQuery =

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1093,7 +1094,8 @@ public open class CfnModelBiasJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.MonitoringResourcesProperty):
-          MonitoringResourcesProperty = Wrapper(cdkObject)
+          MonitoringResourcesProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MonitoringResourcesProperty
 
       internal fun unwrap(wrapped: MonitoringResourcesProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.MonitoringResourcesProperty
@@ -1260,7 +1262,7 @@ public open class CfnModelBiasJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.VpcConfigProperty):
-          VpcConfigProperty = Wrapper(cdkObject)
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as VpcConfigProperty
 
       internal fun unwrap(wrapped: VpcConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.VpcConfigProperty =
@@ -1719,7 +1721,8 @@ public open class CfnModelBiasJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.BatchTransformInputProperty):
-          BatchTransformInputProperty = Wrapper(cdkObject)
+          BatchTransformInputProperty = CdkObjectWrappers.wrap(cdkObject) as
+          BatchTransformInputProperty
 
       internal fun unwrap(wrapped: BatchTransformInputProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.BatchTransformInputProperty
@@ -1873,7 +1876,7 @@ public open class CfnModelBiasJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.S3OutputProperty):
-          S3OutputProperty = Wrapper(cdkObject)
+          S3OutputProperty = CdkObjectWrappers.wrap(cdkObject) as S3OutputProperty
 
       internal fun unwrap(wrapped: S3OutputProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.S3OutputProperty =
@@ -2077,7 +2080,7 @@ public open class CfnModelBiasJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.DatasetFormatProperty):
-          DatasetFormatProperty = Wrapper(cdkObject)
+          DatasetFormatProperty = CdkObjectWrappers.wrap(cdkObject) as DatasetFormatProperty
 
       internal fun unwrap(wrapped: DatasetFormatProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.DatasetFormatProperty
@@ -2197,7 +2200,7 @@ public open class CfnModelBiasJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.MonitoringOutputProperty):
-          MonitoringOutputProperty = Wrapper(cdkObject)
+          MonitoringOutputProperty = CdkObjectWrappers.wrap(cdkObject) as MonitoringOutputProperty
 
       internal fun unwrap(wrapped: MonitoringOutputProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.MonitoringOutputProperty
@@ -2363,7 +2366,8 @@ public open class CfnModelBiasJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.ModelBiasAppSpecificationProperty):
-          ModelBiasAppSpecificationProperty = Wrapper(cdkObject)
+          ModelBiasAppSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ModelBiasAppSpecificationProperty
 
       internal fun unwrap(wrapped: ModelBiasAppSpecificationProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.ModelBiasAppSpecificationProperty
@@ -2456,7 +2460,7 @@ public open class CfnModelBiasJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.CsvProperty):
-          CsvProperty = Wrapper(cdkObject)
+          CsvProperty = CdkObjectWrappers.wrap(cdkObject) as CsvProperty
 
       internal fun unwrap(wrapped: CsvProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.CsvProperty = (wrapped
@@ -2608,7 +2612,7 @@ public open class CfnModelBiasJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.StoppingConditionProperty):
-          StoppingConditionProperty = Wrapper(cdkObject)
+          StoppingConditionProperty = CdkObjectWrappers.wrap(cdkObject) as StoppingConditionProperty
 
       internal fun unwrap(wrapped: StoppingConditionProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.StoppingConditionProperty
@@ -2749,7 +2753,8 @@ public open class CfnModelBiasJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.ModelBiasBaselineConfigProperty):
-          ModelBiasBaselineConfigProperty = Wrapper(cdkObject)
+          ModelBiasBaselineConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ModelBiasBaselineConfigProperty
 
       internal fun unwrap(wrapped: ModelBiasBaselineConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.ModelBiasBaselineConfigProperty
@@ -2935,7 +2940,7 @@ public open class CfnModelBiasJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.ClusterConfigProperty):
-          ClusterConfigProperty = Wrapper(cdkObject)
+          ClusterConfigProperty = CdkObjectWrappers.wrap(cdkObject) as ClusterConfigProperty
 
       internal fun unwrap(wrapped: ClusterConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.ClusterConfigProperty
@@ -3019,7 +3024,8 @@ public open class CfnModelBiasJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.MonitoringGroundTruthS3InputProperty):
-          MonitoringGroundTruthS3InputProperty = Wrapper(cdkObject)
+          MonitoringGroundTruthS3InputProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MonitoringGroundTruthS3InputProperty
 
       internal fun unwrap(wrapped: MonitoringGroundTruthS3InputProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.MonitoringGroundTruthS3InputProperty
@@ -3112,7 +3118,7 @@ public open class CfnModelBiasJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.JsonProperty):
-          JsonProperty = Wrapper(cdkObject)
+          JsonProperty = CdkObjectWrappers.wrap(cdkObject) as JsonProperty
 
       internal fun unwrap(wrapped: JsonProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.JsonProperty =
@@ -3267,7 +3273,8 @@ public open class CfnModelBiasJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.MonitoringOutputConfigProperty):
-          MonitoringOutputConfigProperty = Wrapper(cdkObject)
+          MonitoringOutputConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MonitoringOutputConfigProperty
 
       internal fun unwrap(wrapped: MonitoringOutputConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.MonitoringOutputConfigProperty
@@ -3524,7 +3531,7 @@ public open class CfnModelBiasJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.ModelBiasJobInputProperty):
-          ModelBiasJobInputProperty = Wrapper(cdkObject)
+          ModelBiasJobInputProperty = CdkObjectWrappers.wrap(cdkObject) as ModelBiasJobInputProperty
 
       internal fun unwrap(wrapped: ModelBiasJobInputProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.ModelBiasJobInputProperty
@@ -3924,7 +3931,7 @@ public open class CfnModelBiasJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.EndpointInputProperty):
-          EndpointInputProperty = Wrapper(cdkObject)
+          EndpointInputProperty = CdkObjectWrappers.wrap(cdkObject) as EndpointInputProperty
 
       internal fun unwrap(wrapped: EndpointInputProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.EndpointInputProperty
@@ -4156,7 +4163,7 @@ public open class CfnModelBiasJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.NetworkConfigProperty):
-          NetworkConfigProperty = Wrapper(cdkObject)
+          NetworkConfigProperty = CdkObjectWrappers.wrap(cdkObject) as NetworkConfigProperty
 
       internal fun unwrap(wrapped: NetworkConfigProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.NetworkConfigProperty
@@ -4238,7 +4245,8 @@ public open class CfnModelBiasJobDefinition internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.ConstraintsResourceProperty):
-          ConstraintsResourceProperty = Wrapper(cdkObject)
+          ConstraintsResourceProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ConstraintsResourceProperty
 
       internal fun unwrap(wrapped: ConstraintsResourceProperty):
           software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition.ConstraintsResourceProperty

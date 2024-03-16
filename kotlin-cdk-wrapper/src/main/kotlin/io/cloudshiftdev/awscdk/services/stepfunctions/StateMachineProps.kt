@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Boolean
 import kotlin.Deprecated
@@ -372,7 +373,7 @@ public interface StateMachineProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.StateMachineProps):
-        StateMachineProps = Wrapper(cdkObject)
+        StateMachineProps = CdkObjectWrappers.wrap(cdkObject) as StateMachineProps
 
     internal fun unwrap(wrapped: StateMachineProps):
         software.amazon.awscdk.services.stepfunctions.StateMachineProps = (wrapped as

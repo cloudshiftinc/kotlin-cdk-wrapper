@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -688,7 +689,7 @@ public open class CfnTypeActivation internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnTypeActivation.LoggingConfigProperty):
-          LoggingConfigProperty = Wrapper(cdkObject)
+          LoggingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as LoggingConfigProperty
 
       internal fun unwrap(wrapped: LoggingConfigProperty):
           software.amazon.awscdk.services.cloudformation.CfnTypeActivation.LoggingConfigProperty =

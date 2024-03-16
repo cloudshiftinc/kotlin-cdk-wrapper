@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -73,7 +74,7 @@ public interface FindStateOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.FindStateOptions):
-        FindStateOptions = Wrapper(cdkObject)
+        FindStateOptions = CdkObjectWrappers.wrap(cdkObject) as FindStateOptions
 
     internal fun unwrap(wrapped: FindStateOptions):
         software.amazon.awscdk.services.stepfunctions.FindStateOptions = (wrapped as

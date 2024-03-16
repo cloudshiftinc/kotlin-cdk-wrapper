@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -1072,7 +1073,7 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.ActivityProperty):
-          ActivityProperty = Wrapper(cdkObject)
+          ActivityProperty = CdkObjectWrappers.wrap(cdkObject) as ActivityProperty
 
       internal fun unwrap(wrapped: ActivityProperty):
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.ActivityProperty = (wrapped as
@@ -1179,7 +1180,7 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty):
-          DatastoreProperty = Wrapper(cdkObject)
+          DatastoreProperty = CdkObjectWrappers.wrap(cdkObject) as DatastoreProperty
 
       internal fun unwrap(wrapped: DatastoreProperty):
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.DatastoreProperty = (wrapped as
@@ -1356,7 +1357,7 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.AddAttributesProperty):
-          AddAttributesProperty = Wrapper(cdkObject)
+          AddAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as AddAttributesProperty
 
       internal fun unwrap(wrapped: AddAttributesProperty):
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.AddAttributesProperty = (wrapped
@@ -1493,7 +1494,7 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.FilterProperty):
-          FilterProperty = Wrapper(cdkObject)
+          FilterProperty = CdkObjectWrappers.wrap(cdkObject) as FilterProperty
 
       internal fun unwrap(wrapped: FilterProperty):
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.FilterProperty = (wrapped as
@@ -1665,7 +1666,7 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.LambdaProperty):
-          LambdaProperty = Wrapper(cdkObject)
+          LambdaProperty = CdkObjectWrappers.wrap(cdkObject) as LambdaProperty
 
       internal fun unwrap(wrapped: LambdaProperty):
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.LambdaProperty = (wrapped as
@@ -1858,7 +1859,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceShadowEnrichProperty):
-          DeviceShadowEnrichProperty = Wrapper(cdkObject)
+          DeviceShadowEnrichProperty = CdkObjectWrappers.wrap(cdkObject) as
+          DeviceShadowEnrichProperty
 
       internal fun unwrap(wrapped: DeviceShadowEnrichProperty):
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceShadowEnrichProperty =
@@ -2005,7 +2007,7 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty):
-          SelectAttributesProperty = Wrapper(cdkObject)
+          SelectAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as SelectAttributesProperty
 
       internal fun unwrap(wrapped: SelectAttributesProperty):
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.SelectAttributesProperty =
@@ -2152,7 +2154,7 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty):
-          RemoveAttributesProperty = Wrapper(cdkObject)
+          RemoveAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as RemoveAttributesProperty
 
       internal fun unwrap(wrapped: RemoveAttributesProperty):
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.RemoveAttributesProperty =
@@ -2315,7 +2317,7 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.MathProperty):
-          MathProperty = Wrapper(cdkObject)
+          MathProperty = CdkObjectWrappers.wrap(cdkObject) as MathProperty
 
       internal fun unwrap(wrapped: MathProperty):
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.MathProperty = (wrapped as
@@ -2450,7 +2452,7 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty):
-          ChannelProperty = Wrapper(cdkObject)
+          ChannelProperty = CdkObjectWrappers.wrap(cdkObject) as ChannelProperty
 
       internal fun unwrap(wrapped: ChannelProperty):
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.ChannelProperty = (wrapped as
@@ -2646,7 +2648,8 @@ public open class CfnPipeline internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty):
-          DeviceRegistryEnrichProperty = Wrapper(cdkObject)
+          DeviceRegistryEnrichProperty = CdkObjectWrappers.wrap(cdkObject) as
+          DeviceRegistryEnrichProperty
 
       internal fun unwrap(wrapped: DeviceRegistryEnrichProperty):
           software.amazon.awscdk.services.iotanalytics.CfnPipeline.DeviceRegistryEnrichProperty =

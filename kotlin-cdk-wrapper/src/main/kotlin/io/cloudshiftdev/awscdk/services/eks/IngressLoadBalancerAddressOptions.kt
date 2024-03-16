@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.eks
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -91,7 +92,8 @@ public interface IngressLoadBalancerAddressOptions : ServiceLoadBalancerAddressO
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.eks.IngressLoadBalancerAddressOptions):
-        IngressLoadBalancerAddressOptions = Wrapper(cdkObject)
+        IngressLoadBalancerAddressOptions = CdkObjectWrappers.wrap(cdkObject) as
+        IngressLoadBalancerAddressOptions
 
     internal fun unwrap(wrapped: IngressLoadBalancerAddressOptions):
         software.amazon.awscdk.services.eks.IngressLoadBalancerAddressOptions = (wrapped as

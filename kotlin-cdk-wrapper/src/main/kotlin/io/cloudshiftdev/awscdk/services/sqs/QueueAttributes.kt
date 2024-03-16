@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.sqs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -196,7 +197,7 @@ public interface QueueAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sqs.QueueAttributes):
-        QueueAttributes = Wrapper(cdkObject)
+        QueueAttributes = CdkObjectWrappers.wrap(cdkObject) as QueueAttributes
 
     internal fun unwrap(wrapped: QueueAttributes):
         software.amazon.awscdk.services.sqs.QueueAttributes = (wrapped as CdkObject).cdkObject as

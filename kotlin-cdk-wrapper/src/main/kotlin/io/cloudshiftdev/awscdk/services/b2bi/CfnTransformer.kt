@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -626,7 +627,7 @@ public open class CfnTransformer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty):
-          X12DetailsProperty = Wrapper(cdkObject)
+          X12DetailsProperty = CdkObjectWrappers.wrap(cdkObject) as X12DetailsProperty
 
       internal fun unwrap(wrapped: X12DetailsProperty):
           software.amazon.awscdk.services.b2bi.CfnTransformer.X12DetailsProperty = (wrapped as
@@ -762,7 +763,7 @@ public open class CfnTransformer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.EdiTypeProperty):
-          EdiTypeProperty = Wrapper(cdkObject)
+          EdiTypeProperty = CdkObjectWrappers.wrap(cdkObject) as EdiTypeProperty
 
       internal fun unwrap(wrapped: EdiTypeProperty):
           software.amazon.awscdk.services.b2bi.CfnTransformer.EdiTypeProperty = (wrapped as

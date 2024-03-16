@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cxapi
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -68,7 +69,7 @@ public interface KeyContextResponse {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.KeyContextResponse):
-        KeyContextResponse = Wrapper(cdkObject)
+        KeyContextResponse = CdkObjectWrappers.wrap(cdkObject) as KeyContextResponse
 
     internal fun unwrap(wrapped: KeyContextResponse):
         software.amazon.awscdk.cxapi.KeyContextResponse = (wrapped as CdkObject).cdkObject as

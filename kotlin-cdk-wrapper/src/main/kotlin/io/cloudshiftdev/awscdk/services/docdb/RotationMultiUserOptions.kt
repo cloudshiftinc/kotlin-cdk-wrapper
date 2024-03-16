@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.docdb
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
 import kotlin.Unit
 
@@ -172,7 +173,7 @@ public interface RotationMultiUserOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.docdb.RotationMultiUserOptions):
-        RotationMultiUserOptions = Wrapper(cdkObject)
+        RotationMultiUserOptions = CdkObjectWrappers.wrap(cdkObject) as RotationMultiUserOptions
 
     internal fun unwrap(wrapped: RotationMultiUserOptions):
         software.amazon.awscdk.services.docdb.RotationMultiUserOptions = (wrapped as

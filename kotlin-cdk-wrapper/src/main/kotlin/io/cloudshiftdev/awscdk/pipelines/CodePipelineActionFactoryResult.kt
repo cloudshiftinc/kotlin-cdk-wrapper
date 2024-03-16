@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.pipelines
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codebuild.IProject
 import kotlin.Number
 import kotlin.Unit
@@ -107,7 +108,8 @@ public interface CodePipelineActionFactoryResult {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.CodePipelineActionFactoryResult):
-        CodePipelineActionFactoryResult = Wrapper(cdkObject)
+        CodePipelineActionFactoryResult = CdkObjectWrappers.wrap(cdkObject) as
+        CodePipelineActionFactoryResult
 
     internal fun unwrap(wrapped: CodePipelineActionFactoryResult):
         software.amazon.awscdk.pipelines.CodePipelineActionFactoryResult = (wrapped as

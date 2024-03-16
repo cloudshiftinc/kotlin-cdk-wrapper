@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -101,7 +102,7 @@ public interface IntrinsicProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.IntrinsicProps): IntrinsicProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as IntrinsicProps
 
     internal fun unwrap(wrapped: IntrinsicProps): software.amazon.awscdk.IntrinsicProps = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.IntrinsicProps

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.eks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import kotlin.String
 import kotlin.Unit
@@ -150,7 +151,7 @@ public interface NodegroupRemoteAccess {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.NodegroupRemoteAccess):
-        NodegroupRemoteAccess = Wrapper(cdkObject)
+        NodegroupRemoteAccess = CdkObjectWrappers.wrap(cdkObject) as NodegroupRemoteAccess
 
     internal fun unwrap(wrapped: NodegroupRemoteAccess):
         software.amazon.awscdk.services.eks.NodegroupRemoteAccess = (wrapped as CdkObject).cdkObject

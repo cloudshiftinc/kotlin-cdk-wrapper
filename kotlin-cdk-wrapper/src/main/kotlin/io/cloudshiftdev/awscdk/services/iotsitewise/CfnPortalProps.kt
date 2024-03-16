@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.iotsitewise
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -418,7 +419,7 @@ public interface CfnPortalProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnPortalProps):
-        CfnPortalProps = Wrapper(cdkObject)
+        CfnPortalProps = CdkObjectWrappers.wrap(cdkObject) as CfnPortalProps
 
     internal fun unwrap(wrapped: CfnPortalProps):
         software.amazon.awscdk.services.iotsitewise.CfnPortalProps = (wrapped as

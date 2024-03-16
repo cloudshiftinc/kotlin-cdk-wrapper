@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -1983,7 +1984,7 @@ public open class CfnStack internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.ElasticIpProperty):
-          ElasticIpProperty = Wrapper(cdkObject)
+          ElasticIpProperty = CdkObjectWrappers.wrap(cdkObject) as ElasticIpProperty
 
       internal fun unwrap(wrapped: ElasticIpProperty):
           software.amazon.awscdk.services.opsworks.CfnStack.ElasticIpProperty = (wrapped as
@@ -2101,7 +2102,7 @@ public open class CfnStack internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.ChefConfigurationProperty):
-          ChefConfigurationProperty = Wrapper(cdkObject)
+          ChefConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as ChefConfigurationProperty
 
       internal fun unwrap(wrapped: ChefConfigurationProperty):
           software.amazon.awscdk.services.opsworks.CfnStack.ChefConfigurationProperty = (wrapped as
@@ -2226,7 +2227,8 @@ public open class CfnStack internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.StackConfigurationManagerProperty):
-          StackConfigurationManagerProperty = Wrapper(cdkObject)
+          StackConfigurationManagerProperty = CdkObjectWrappers.wrap(cdkObject) as
+          StackConfigurationManagerProperty
 
       internal fun unwrap(wrapped: StackConfigurationManagerProperty):
           software.amazon.awscdk.services.opsworks.CfnStack.StackConfigurationManagerProperty =
@@ -2543,7 +2545,7 @@ public open class CfnStack internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.SourceProperty):
-          SourceProperty = Wrapper(cdkObject)
+          SourceProperty = CdkObjectWrappers.wrap(cdkObject) as SourceProperty
 
       internal fun unwrap(wrapped: SourceProperty):
           software.amazon.awscdk.services.opsworks.CfnStack.SourceProperty = (wrapped as
@@ -2676,7 +2678,7 @@ public open class CfnStack internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.opsworks.CfnStack.RdsDbInstanceProperty):
-          RdsDbInstanceProperty = Wrapper(cdkObject)
+          RdsDbInstanceProperty = CdkObjectWrappers.wrap(cdkObject) as RdsDbInstanceProperty
 
       internal fun unwrap(wrapped: RdsDbInstanceProperty):
           software.amazon.awscdk.services.opsworks.CfnStack.RdsDbInstanceProperty = (wrapped as

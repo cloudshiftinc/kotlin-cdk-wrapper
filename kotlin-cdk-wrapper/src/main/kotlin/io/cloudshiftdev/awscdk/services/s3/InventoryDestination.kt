@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.s3
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -145,7 +146,7 @@ public interface InventoryDestination {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.InventoryDestination):
-        InventoryDestination = Wrapper(cdkObject)
+        InventoryDestination = CdkObjectWrappers.wrap(cdkObject) as InventoryDestination
 
     internal fun unwrap(wrapped: InventoryDestination):
         software.amazon.awscdk.services.s3.InventoryDestination = (wrapped as CdkObject).cdkObject

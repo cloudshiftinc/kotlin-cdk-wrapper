@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -999,7 +1000,7 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.TierProperty):
-          TierProperty = Wrapper(cdkObject)
+          TierProperty = CdkObjectWrappers.wrap(cdkObject) as TierProperty
 
       internal fun unwrap(wrapped: TierProperty):
           software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.TierProperty = (wrapped as
@@ -1181,7 +1182,7 @@ public open class CfnEnvironment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.OptionSettingProperty):
-          OptionSettingProperty = Wrapper(cdkObject)
+          OptionSettingProperty = CdkObjectWrappers.wrap(cdkObject) as OptionSettingProperty
 
       internal fun unwrap(wrapped: OptionSettingProperty):
           software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment.OptionSettingProperty =

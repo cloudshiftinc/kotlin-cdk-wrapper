@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.logs.ILogGroup
 import kotlin.Boolean
 import kotlin.Unit
@@ -126,7 +127,7 @@ public interface LogOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.LogOptions):
-        LogOptions = Wrapper(cdkObject)
+        LogOptions = CdkObjectWrappers.wrap(cdkObject) as LogOptions
 
     internal fun unwrap(wrapped: LogOptions):
         software.amazon.awscdk.services.stepfunctions.LogOptions = (wrapped as CdkObject).cdkObject

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.secretsmanager
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -384,7 +385,7 @@ public interface SecretStringGenerator {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.SecretStringGenerator):
-        SecretStringGenerator = Wrapper(cdkObject)
+        SecretStringGenerator = CdkObjectWrappers.wrap(cdkObject) as SecretStringGenerator
 
     internal fun unwrap(wrapped: SecretStringGenerator):
         software.amazon.awscdk.services.secretsmanager.SecretStringGenerator = (wrapped as

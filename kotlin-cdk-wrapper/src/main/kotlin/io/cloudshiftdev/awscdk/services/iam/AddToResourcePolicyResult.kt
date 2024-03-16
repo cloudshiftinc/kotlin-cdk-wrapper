@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.IDependable
 import kotlin.Boolean
 import kotlin.Unit
@@ -102,7 +103,7 @@ public interface AddToResourcePolicyResult {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.AddToResourcePolicyResult):
-        AddToResourcePolicyResult = Wrapper(cdkObject)
+        AddToResourcePolicyResult = CdkObjectWrappers.wrap(cdkObject) as AddToResourcePolicyResult
 
     internal fun unwrap(wrapped: AddToResourcePolicyResult):
         software.amazon.awscdk.services.iam.AddToResourcePolicyResult = (wrapped as

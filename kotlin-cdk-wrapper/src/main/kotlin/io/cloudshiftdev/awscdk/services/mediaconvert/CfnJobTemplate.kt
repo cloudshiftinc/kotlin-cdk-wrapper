@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -817,7 +818,8 @@ public open class CfnJobTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconvert.CfnJobTemplate.AccelerationSettingsProperty):
-          AccelerationSettingsProperty = Wrapper(cdkObject)
+          AccelerationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AccelerationSettingsProperty
 
       internal fun unwrap(wrapped: AccelerationSettingsProperty):
           software.amazon.awscdk.services.mediaconvert.CfnJobTemplate.AccelerationSettingsProperty =
@@ -1000,7 +1002,7 @@ public open class CfnJobTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconvert.CfnJobTemplate.HopDestinationProperty):
-          HopDestinationProperty = Wrapper(cdkObject)
+          HopDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as HopDestinationProperty
 
       internal fun unwrap(wrapped: HopDestinationProperty):
           software.amazon.awscdk.services.mediaconvert.CfnJobTemplate.HopDestinationProperty =

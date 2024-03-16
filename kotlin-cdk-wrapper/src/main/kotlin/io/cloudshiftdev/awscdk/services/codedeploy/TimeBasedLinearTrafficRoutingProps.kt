@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.codedeploy
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -89,7 +90,8 @@ public interface TimeBasedLinearTrafficRoutingProps : BaseTrafficShiftingConfigP
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.TimeBasedLinearTrafficRoutingProps):
-        TimeBasedLinearTrafficRoutingProps = Wrapper(cdkObject)
+        TimeBasedLinearTrafficRoutingProps = CdkObjectWrappers.wrap(cdkObject) as
+        TimeBasedLinearTrafficRoutingProps
 
     internal fun unwrap(wrapped: TimeBasedLinearTrafficRoutingProps):
         software.amazon.awscdk.services.codedeploy.TimeBasedLinearTrafficRoutingProps = (wrapped as

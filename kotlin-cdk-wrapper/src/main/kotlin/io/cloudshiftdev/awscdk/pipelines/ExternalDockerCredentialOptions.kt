@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.pipelines
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.String
 import kotlin.Unit
@@ -171,7 +172,8 @@ public interface ExternalDockerCredentialOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.ExternalDockerCredentialOptions):
-        ExternalDockerCredentialOptions = Wrapper(cdkObject)
+        ExternalDockerCredentialOptions = CdkObjectWrappers.wrap(cdkObject) as
+        ExternalDockerCredentialOptions
 
     internal fun unwrap(wrapped: ExternalDockerCredentialOptions):
         software.amazon.awscdk.pipelines.ExternalDockerCredentialOptions = (wrapped as

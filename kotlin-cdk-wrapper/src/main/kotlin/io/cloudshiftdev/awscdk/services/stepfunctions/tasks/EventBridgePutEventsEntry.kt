@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.events.IEventBus
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskInput
 import kotlin.String
@@ -201,7 +202,7 @@ public interface EventBridgePutEventsEntry {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEventsEntry):
-        EventBridgePutEventsEntry = Wrapper(cdkObject)
+        EventBridgePutEventsEntry = CdkObjectWrappers.wrap(cdkObject) as EventBridgePutEventsEntry
 
     internal fun unwrap(wrapped: EventBridgePutEventsEntry):
         software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEventsEntry = (wrapped as

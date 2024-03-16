@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IVpcEndpoint
 import kotlin.Unit
 import kotlin.collections.List
@@ -124,7 +125,7 @@ public interface EndpointConfiguration {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.EndpointConfiguration):
-        EndpointConfiguration = Wrapper(cdkObject)
+        EndpointConfiguration = CdkObjectWrappers.wrap(cdkObject) as EndpointConfiguration
 
     internal fun unwrap(wrapped: EndpointConfiguration):
         software.amazon.awscdk.services.apigateway.EndpointConfiguration = (wrapped as

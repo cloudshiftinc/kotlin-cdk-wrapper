@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -764,7 +765,8 @@ public open class CfnRestoreTestingSelection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.ProtectedResourceConditionsProperty):
-          ProtectedResourceConditionsProperty = Wrapper(cdkObject)
+          ProtectedResourceConditionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ProtectedResourceConditionsProperty
 
       internal fun unwrap(wrapped: ProtectedResourceConditionsProperty):
           software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.ProtectedResourceConditionsProperty
@@ -904,7 +906,7 @@ public open class CfnRestoreTestingSelection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty):
-          KeyValueProperty = Wrapper(cdkObject)
+          KeyValueProperty = CdkObjectWrappers.wrap(cdkObject) as KeyValueProperty
 
       internal fun unwrap(wrapped: KeyValueProperty):
           software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty =

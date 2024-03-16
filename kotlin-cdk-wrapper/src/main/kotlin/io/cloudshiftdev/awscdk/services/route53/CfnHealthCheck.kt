@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -497,7 +498,7 @@ public open class CfnHealthCheck internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty):
-          HealthCheckTagProperty = Wrapper(cdkObject)
+          HealthCheckTagProperty = CdkObjectWrappers.wrap(cdkObject) as HealthCheckTagProperty
 
       internal fun unwrap(wrapped: HealthCheckTagProperty):
           software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty = (wrapped
@@ -668,7 +669,7 @@ public open class CfnHealthCheck internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHealthCheck.AlarmIdentifierProperty):
-          AlarmIdentifierProperty = Wrapper(cdkObject)
+          AlarmIdentifierProperty = CdkObjectWrappers.wrap(cdkObject) as AlarmIdentifierProperty
 
       internal fun unwrap(wrapped: AlarmIdentifierProperty):
           software.amazon.awscdk.services.route53.CfnHealthCheck.AlarmIdentifierProperty = (wrapped
@@ -2256,7 +2257,7 @@ public open class CfnHealthCheck internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckConfigProperty):
-          HealthCheckConfigProperty = Wrapper(cdkObject)
+          HealthCheckConfigProperty = CdkObjectWrappers.wrap(cdkObject) as HealthCheckConfigProperty
 
       internal fun unwrap(wrapped: HealthCheckConfigProperty):
           software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckConfigProperty =

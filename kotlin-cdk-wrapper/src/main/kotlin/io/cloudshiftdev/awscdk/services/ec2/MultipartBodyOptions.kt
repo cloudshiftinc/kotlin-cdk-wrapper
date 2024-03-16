@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -150,7 +151,7 @@ public interface MultipartBodyOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.MultipartBodyOptions):
-        MultipartBodyOptions = Wrapper(cdkObject)
+        MultipartBodyOptions = CdkObjectWrappers.wrap(cdkObject) as MultipartBodyOptions
 
     internal fun unwrap(wrapped: MultipartBodyOptions):
         software.amazon.awscdk.services.ec2.MultipartBodyOptions = (wrapped as CdkObject).cdkObject

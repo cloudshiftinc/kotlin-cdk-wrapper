@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.connect
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -212,7 +213,7 @@ public interface CfnPromptProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnPromptProps):
-        CfnPromptProps = Wrapper(cdkObject)
+        CfnPromptProps = CdkObjectWrappers.wrap(cdkObject) as CfnPromptProps
 
     internal fun unwrap(wrapped: CfnPromptProps):
         software.amazon.awscdk.services.connect.CfnPromptProps = (wrapped as CdkObject).cdkObject as

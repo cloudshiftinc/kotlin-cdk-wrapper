@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -2037,7 +2038,7 @@ public open class CfnServer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnServer.ProtocolDetailsProperty):
-          ProtocolDetailsProperty = Wrapper(cdkObject)
+          ProtocolDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as ProtocolDetailsProperty
 
       internal fun unwrap(wrapped: ProtocolDetailsProperty):
           software.amazon.awscdk.services.transfer.CfnServer.ProtocolDetailsProperty = (wrapped as
@@ -2277,7 +2278,7 @@ public open class CfnServer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty):
-          WorkflowDetailsProperty = Wrapper(cdkObject)
+          WorkflowDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as WorkflowDetailsProperty
 
       internal fun unwrap(wrapped: WorkflowDetailsProperty):
           software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailsProperty = (wrapped as
@@ -2393,7 +2394,7 @@ public open class CfnServer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailProperty):
-          WorkflowDetailProperty = Wrapper(cdkObject)
+          WorkflowDetailProperty = CdkObjectWrappers.wrap(cdkObject) as WorkflowDetailProperty
 
       internal fun unwrap(wrapped: WorkflowDetailProperty):
           software.amazon.awscdk.services.transfer.CfnServer.WorkflowDetailProperty = (wrapped as
@@ -2494,7 +2495,7 @@ public open class CfnServer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnServer.S3StorageOptionsProperty):
-          S3StorageOptionsProperty = Wrapper(cdkObject)
+          S3StorageOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as S3StorageOptionsProperty
 
       internal fun unwrap(wrapped: S3StorageOptionsProperty):
           software.amazon.awscdk.services.transfer.CfnServer.S3StorageOptionsProperty = (wrapped as
@@ -2743,7 +2744,8 @@ public open class CfnServer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnServer.IdentityProviderDetailsProperty):
-          IdentityProviderDetailsProperty = Wrapper(cdkObject)
+          IdentityProviderDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          IdentityProviderDetailsProperty
 
       internal fun unwrap(wrapped: IdentityProviderDetailsProperty):
           software.amazon.awscdk.services.transfer.CfnServer.IdentityProviderDetailsProperty =
@@ -3237,7 +3239,7 @@ public open class CfnServer internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.transfer.CfnServer.EndpointDetailsProperty):
-          EndpointDetailsProperty = Wrapper(cdkObject)
+          EndpointDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as EndpointDetailsProperty
 
       internal fun unwrap(wrapped: EndpointDetailsProperty):
           software.amazon.awscdk.services.transfer.CfnServer.EndpointDetailsProperty = (wrapped as

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.pipelines
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.IStage
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.Boolean
@@ -94,10 +95,6 @@ public abstract class CodePipelineSource internal constructor(
    */
   public open fun sourceAttribute(name: String): String = unwrap(this).sourceAttribute(name)
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.CodePipelineSource,
-  ) : CodePipelineSource(cdkObject)
-
   public companion object {
     public fun codeCommit(repository: CodecommitIRepository, branch: String): CodePipelineSource =
         software.amazon.awscdk.pipelines.CodePipelineSource.codeCommit(repository.let(CodecommitIRepository::unwrap),
@@ -187,7 +184,7 @@ public abstract class CodePipelineSource internal constructor(
     ): CodePipelineSource = s3(bucket, objectKey, S3SourceOptions(props))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.CodePipelineSource):
-        CodePipelineSource = Wrapper(cdkObject)
+        CodePipelineSource = CdkObjectWrappers.wrap(cdkObject) as CodePipelineSource
 
     internal fun unwrap(wrapped: CodePipelineSource):
         software.amazon.awscdk.pipelines.CodePipelineSource = (wrapped as CdkObject).cdkObject as

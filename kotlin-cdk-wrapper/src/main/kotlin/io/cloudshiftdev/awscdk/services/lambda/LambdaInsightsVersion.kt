@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -27,10 +28,6 @@ public abstract class LambdaInsightsVersion internal constructor(
    * The arn of the Lambda Insights extension.
    */
   public open fun layerVersionArn(): String = unwrap(this).getLayerVersionArn()
-
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.LambdaInsightsVersion,
-  ) : LambdaInsightsVersion(cdkObject)
 
   public companion object {
     public val VERSION_1_0_119_0: LambdaInsightsVersion =
@@ -64,7 +61,7 @@ public abstract class LambdaInsightsVersion internal constructor(
         software.amazon.awscdk.services.lambda.LambdaInsightsVersion.fromInsightVersionArn(arn).let(LambdaInsightsVersion::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.LambdaInsightsVersion):
-        LambdaInsightsVersion = Wrapper(cdkObject)
+        LambdaInsightsVersion = CdkObjectWrappers.wrap(cdkObject) as LambdaInsightsVersion
 
     internal fun unwrap(wrapped: LambdaInsightsVersion):
         software.amazon.awscdk.services.lambda.LambdaInsightsVersion = (wrapped as

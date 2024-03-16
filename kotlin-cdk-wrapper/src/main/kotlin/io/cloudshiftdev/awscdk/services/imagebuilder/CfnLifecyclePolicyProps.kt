@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.imagebuilder
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -376,7 +377,7 @@ public interface CfnLifecyclePolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicyProps):
-        CfnLifecyclePolicyProps = Wrapper(cdkObject)
+        CfnLifecyclePolicyProps = CdkObjectWrappers.wrap(cdkObject) as CfnLifecyclePolicyProps
 
     internal fun unwrap(wrapped: CfnLifecyclePolicyProps):
         software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicyProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -214,7 +215,7 @@ public interface GitHubSourceVariables {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.GitHubSourceVariables):
-        GitHubSourceVariables = Wrapper(cdkObject)
+        GitHubSourceVariables = CdkObjectWrappers.wrap(cdkObject) as GitHubSourceVariables
 
     internal fun unwrap(wrapped: GitHubSourceVariables):
         software.amazon.awscdk.services.codepipeline.actions.GitHubSourceVariables = (wrapped as

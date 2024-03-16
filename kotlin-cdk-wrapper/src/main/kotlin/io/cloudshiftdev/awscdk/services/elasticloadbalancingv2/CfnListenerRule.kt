@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -743,7 +744,7 @@ public open class CfnListenerRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RedirectConfigProperty):
-          RedirectConfigProperty = Wrapper(cdkObject)
+          RedirectConfigProperty = CdkObjectWrappers.wrap(cdkObject) as RedirectConfigProperty
 
       internal fun unwrap(wrapped: RedirectConfigProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RedirectConfigProperty
@@ -1336,7 +1337,7 @@ public open class CfnListenerRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ActionProperty):
-          ActionProperty = Wrapper(cdkObject)
+          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as ActionProperty
 
       internal fun unwrap(wrapped: ActionProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ActionProperty =
@@ -1506,7 +1507,7 @@ public open class CfnListenerRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringConfigProperty):
-          QueryStringConfigProperty = Wrapper(cdkObject)
+          QueryStringConfigProperty = CdkObjectWrappers.wrap(cdkObject) as QueryStringConfigProperty
 
       internal fun unwrap(wrapped: QueryStringConfigProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringConfigProperty
@@ -1641,7 +1642,7 @@ public open class CfnListenerRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.PathPatternConfigProperty):
-          PathPatternConfigProperty = Wrapper(cdkObject)
+          PathPatternConfigProperty = CdkObjectWrappers.wrap(cdkObject) as PathPatternConfigProperty
 
       internal fun unwrap(wrapped: PathPatternConfigProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.PathPatternConfigProperty
@@ -1774,7 +1775,8 @@ public open class CfnListenerRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupStickinessConfigProperty):
-          TargetGroupStickinessConfigProperty = Wrapper(cdkObject)
+          TargetGroupStickinessConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          TargetGroupStickinessConfigProperty
 
       internal fun unwrap(wrapped: TargetGroupStickinessConfigProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupStickinessConfigProperty
@@ -1890,7 +1892,7 @@ public open class CfnListenerRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupTupleProperty):
-          TargetGroupTupleProperty = Wrapper(cdkObject)
+          TargetGroupTupleProperty = CdkObjectWrappers.wrap(cdkObject) as TargetGroupTupleProperty
 
       internal fun unwrap(wrapped: TargetGroupTupleProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.TargetGroupTupleProperty
@@ -2604,7 +2606,7 @@ public open class CfnListenerRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RuleConditionProperty):
-          RuleConditionProperty = Wrapper(cdkObject)
+          RuleConditionProperty = CdkObjectWrappers.wrap(cdkObject) as RuleConditionProperty
 
       internal fun unwrap(wrapped: RuleConditionProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.RuleConditionProperty
@@ -2719,7 +2721,8 @@ public open class CfnListenerRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringKeyValueProperty):
-          QueryStringKeyValueProperty = Wrapper(cdkObject)
+          QueryStringKeyValueProperty = CdkObjectWrappers.wrap(cdkObject) as
+          QueryStringKeyValueProperty
 
       internal fun unwrap(wrapped: QueryStringKeyValueProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.QueryStringKeyValueProperty
@@ -2861,7 +2864,8 @@ public open class CfnListenerRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpRequestMethodConfigProperty):
-          HttpRequestMethodConfigProperty = Wrapper(cdkObject)
+          HttpRequestMethodConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          HttpRequestMethodConfigProperty
 
       internal fun unwrap(wrapped: HttpRequestMethodConfigProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpRequestMethodConfigProperty
@@ -3051,7 +3055,7 @@ public open class CfnListenerRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ForwardConfigProperty):
-          ForwardConfigProperty = Wrapper(cdkObject)
+          ForwardConfigProperty = CdkObjectWrappers.wrap(cdkObject) as ForwardConfigProperty
 
       internal fun unwrap(wrapped: ForwardConfigProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.ForwardConfigProperty
@@ -3244,7 +3248,7 @@ public open class CfnListenerRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpHeaderConfigProperty):
-          HttpHeaderConfigProperty = Wrapper(cdkObject)
+          HttpHeaderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as HttpHeaderConfigProperty
 
       internal fun unwrap(wrapped: HttpHeaderConfigProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HttpHeaderConfigProperty
@@ -3585,7 +3589,8 @@ public open class CfnListenerRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateCognitoConfigProperty):
-          AuthenticateCognitoConfigProperty = Wrapper(cdkObject)
+          AuthenticateCognitoConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AuthenticateCognitoConfigProperty
 
       internal fun unwrap(wrapped: AuthenticateCognitoConfigProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateCognitoConfigProperty
@@ -3715,7 +3720,7 @@ public open class CfnListenerRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HostHeaderConfigProperty):
-          HostHeaderConfigProperty = Wrapper(cdkObject)
+          HostHeaderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as HostHeaderConfigProperty
 
       internal fun unwrap(wrapped: HostHeaderConfigProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.HostHeaderConfigProperty
@@ -3837,7 +3842,7 @@ public open class CfnListenerRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.SourceIpConfigProperty):
-          SourceIpConfigProperty = Wrapper(cdkObject)
+          SourceIpConfigProperty = CdkObjectWrappers.wrap(cdkObject) as SourceIpConfigProperty
 
       internal fun unwrap(wrapped: SourceIpConfigProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.SourceIpConfigProperty
@@ -4339,7 +4344,8 @@ public open class CfnListenerRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateOidcConfigProperty):
-          AuthenticateOidcConfigProperty = Wrapper(cdkObject)
+          AuthenticateOidcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AuthenticateOidcConfigProperty
 
       internal fun unwrap(wrapped: AuthenticateOidcConfigProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.AuthenticateOidcConfigProperty
@@ -4482,7 +4488,8 @@ public open class CfnListenerRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.FixedResponseConfigProperty):
-          FixedResponseConfigProperty = Wrapper(cdkObject)
+          FixedResponseConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          FixedResponseConfigProperty
 
       internal fun unwrap(wrapped: FixedResponseConfigProperty):
           software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerRule.FixedResponseConfigProperty

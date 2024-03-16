@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -72,7 +73,8 @@ public interface OracleEeInstanceEngineProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.OracleEeInstanceEngineProps):
-        OracleEeInstanceEngineProps = Wrapper(cdkObject)
+        OracleEeInstanceEngineProps = CdkObjectWrappers.wrap(cdkObject) as
+        OracleEeInstanceEngineProps
 
     internal fun unwrap(wrapped: OracleEeInstanceEngineProps):
         software.amazon.awscdk.services.rds.OracleEeInstanceEngineProps = (wrapped as

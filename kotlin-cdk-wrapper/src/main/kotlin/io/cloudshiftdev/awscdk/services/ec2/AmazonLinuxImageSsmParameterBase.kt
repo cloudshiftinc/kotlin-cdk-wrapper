@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 
 /**
@@ -20,14 +21,11 @@ public abstract class AmazonLinuxImageSsmParameterBase internal constructor(
   public override fun image(scope: Construct): MachineImageConfig =
       unwrap(this).getImage(scope.let(Construct::unwrap)).let(MachineImageConfig::wrap)
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterBase,
-  ) : AmazonLinuxImageSsmParameterBase(cdkObject)
-
   public companion object {
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterBase):
-        AmazonLinuxImageSsmParameterBase = Wrapper(cdkObject)
+        AmazonLinuxImageSsmParameterBase = CdkObjectWrappers.wrap(cdkObject) as
+        AmazonLinuxImageSsmParameterBase
 
     internal fun unwrap(wrapped: AmazonLinuxImageSsmParameterBase):
         software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterBase = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -124,7 +125,7 @@ public interface WeightedTarget {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.WeightedTarget):
-        WeightedTarget = Wrapper(cdkObject)
+        WeightedTarget = CdkObjectWrappers.wrap(cdkObject) as WeightedTarget
 
     internal fun unwrap(wrapped: WeightedTarget):
         software.amazon.awscdk.services.appmesh.WeightedTarget = (wrapped as CdkObject).cdkObject as

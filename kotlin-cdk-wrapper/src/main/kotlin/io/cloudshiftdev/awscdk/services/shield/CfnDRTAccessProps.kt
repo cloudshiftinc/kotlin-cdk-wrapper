@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.shield
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -297,7 +298,7 @@ public interface CfnDRTAccessProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.shield.CfnDRTAccessProps):
-        CfnDRTAccessProps = Wrapper(cdkObject)
+        CfnDRTAccessProps = CdkObjectWrappers.wrap(cdkObject) as CfnDRTAccessProps
 
     internal fun unwrap(wrapped: CfnDRTAccessProps):
         software.amazon.awscdk.services.shield.CfnDRTAccessProps = (wrapped as CdkObject).cdkObject

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cxapi
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -144,7 +145,7 @@ public interface VpcSubnet {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.VpcSubnet): VpcSubnet =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as VpcSubnet
 
     internal fun unwrap(wrapped: VpcSubnet): software.amazon.awscdk.cxapi.VpcSubnet = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.cxapi.VpcSubnet

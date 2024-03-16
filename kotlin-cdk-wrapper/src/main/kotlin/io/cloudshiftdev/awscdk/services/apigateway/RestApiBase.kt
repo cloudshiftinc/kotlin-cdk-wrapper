@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import kotlin.String
@@ -510,13 +511,9 @@ public abstract class RestApiBase internal constructor(
    */
   public open fun urlForPath(path: String): String = unwrap(this).urlForPath(path)
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.apigateway.RestApiBase,
-  ) : RestApiBase(cdkObject)
-
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.RestApiBase):
-        RestApiBase = Wrapper(cdkObject)
+        RestApiBase = CdkObjectWrappers.wrap(cdkObject) as RestApiBase
 
     internal fun unwrap(wrapped: RestApiBase):
         software.amazon.awscdk.services.apigateway.RestApiBase = (wrapped as CdkObject).cdkObject as

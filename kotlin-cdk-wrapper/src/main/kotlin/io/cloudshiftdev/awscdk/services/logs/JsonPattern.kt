@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.logs
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -32,13 +33,9 @@ public abstract class JsonPattern internal constructor(
    */
   public override fun logPatternString(): String = unwrap(this).getLogPatternString()
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.logs.JsonPattern,
-  ) : JsonPattern(cdkObject)
-
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.JsonPattern): JsonPattern =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as JsonPattern
 
     internal fun unwrap(wrapped: JsonPattern): software.amazon.awscdk.services.logs.JsonPattern =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.logs.JsonPattern

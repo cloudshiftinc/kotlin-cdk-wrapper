@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -692,7 +693,8 @@ public open class CfnLaunchProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.VolumeConfigurationProperty):
-          VolumeConfigurationProperty = Wrapper(cdkObject)
+          VolumeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VolumeConfigurationProperty
 
       internal fun unwrap(wrapped: VolumeConfigurationProperty):
           software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.VolumeConfigurationProperty
@@ -1305,7 +1307,8 @@ public open class CfnLaunchProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationProperty):
-          StreamConfigurationProperty = Wrapper(cdkObject)
+          StreamConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          StreamConfigurationProperty
 
       internal fun unwrap(wrapped: StreamConfigurationProperty):
           software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationProperty
@@ -1416,7 +1419,8 @@ public open class CfnLaunchProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamingSessionStorageRootProperty):
-          StreamingSessionStorageRootProperty = Wrapper(cdkObject)
+          StreamingSessionStorageRootProperty = CdkObjectWrappers.wrap(cdkObject) as
+          StreamingSessionStorageRootProperty
 
       internal fun unwrap(wrapped: StreamingSessionStorageRootProperty):
           software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamingSessionStorageRootProperty
@@ -1576,7 +1580,8 @@ public open class CfnLaunchProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionStorageProperty):
-          StreamConfigurationSessionStorageProperty = Wrapper(cdkObject)
+          StreamConfigurationSessionStorageProperty = CdkObjectWrappers.wrap(cdkObject) as
+          StreamConfigurationSessionStorageProperty
 
       internal fun unwrap(wrapped: StreamConfigurationSessionStorageProperty):
           software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionStorageProperty
@@ -1709,7 +1714,8 @@ public open class CfnLaunchProfile internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionBackupProperty):
-          StreamConfigurationSessionBackupProperty = Wrapper(cdkObject)
+          StreamConfigurationSessionBackupProperty = CdkObjectWrappers.wrap(cdkObject) as
+          StreamConfigurationSessionBackupProperty
 
       internal fun unwrap(wrapped: StreamConfigurationSessionBackupProperty):
           software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile.StreamConfigurationSessionBackupProperty

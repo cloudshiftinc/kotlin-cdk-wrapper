@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -317,7 +318,7 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.route53recoverycontrol.CfnCluster.ClusterEndpointProperty):
-          ClusterEndpointProperty = Wrapper(cdkObject)
+          ClusterEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as ClusterEndpointProperty
 
       internal fun unwrap(wrapped: ClusterEndpointProperty):
           software.amazon.awscdk.services.route53recoverycontrol.CfnCluster.ClusterEndpointProperty

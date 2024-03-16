@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -216,7 +217,7 @@ public interface MethodProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.MethodProps):
-        MethodProps = Wrapper(cdkObject)
+        MethodProps = CdkObjectWrappers.wrap(cdkObject) as MethodProps
 
     internal fun unwrap(wrapped: MethodProps):
         software.amazon.awscdk.services.apigateway.MethodProps = (wrapped as CdkObject).cdkObject as

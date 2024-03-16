@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.IgnoreMode
 import io.cloudshiftdev.awscdk.SymlinkFollowMode
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -542,7 +543,7 @@ public interface DockerImageAssetProps : DockerImageAssetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecr.assets.DockerImageAssetProps):
-        DockerImageAssetProps = Wrapper(cdkObject)
+        DockerImageAssetProps = CdkObjectWrappers.wrap(cdkObject) as DockerImageAssetProps
 
     internal fun unwrap(wrapped: DockerImageAssetProps):
         software.amazon.awscdk.services.ecr.assets.DockerImageAssetProps = (wrapped as

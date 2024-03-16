@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -115,7 +116,8 @@ public interface CfnTrafficRoutingTimeBasedLinear {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnTrafficRoutingTimeBasedLinear):
-        CfnTrafficRoutingTimeBasedLinear = Wrapper(cdkObject)
+        CfnTrafficRoutingTimeBasedLinear = CdkObjectWrappers.wrap(cdkObject) as
+        CfnTrafficRoutingTimeBasedLinear
 
     internal fun unwrap(wrapped: CfnTrafficRoutingTimeBasedLinear):
         software.amazon.awscdk.CfnTrafficRoutingTimeBasedLinear = (wrapped as CdkObject).cdkObject

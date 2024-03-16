@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.s3
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -108,7 +109,8 @@ public interface CfnMultiRegionAccessPointPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicyProps):
-        CfnMultiRegionAccessPointPolicyProps = Wrapper(cdkObject)
+        CfnMultiRegionAccessPointPolicyProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnMultiRegionAccessPointPolicyProps
 
     internal fun unwrap(wrapped: CfnMultiRegionAccessPointPolicyProps):
         software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicyProps = (wrapped as

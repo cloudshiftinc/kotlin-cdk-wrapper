@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.s3
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import java.time.Instant
 import kotlin.Unit
 
@@ -138,7 +139,7 @@ public interface Transition {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.Transition): Transition =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as Transition
 
     internal fun unwrap(wrapped: Transition): software.amazon.awscdk.services.s3.Transition =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.s3.Transition

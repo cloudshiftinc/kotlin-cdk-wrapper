@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline
 import io.cloudshiftdev.awscdk.IResource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Number
 import kotlin.String
@@ -509,7 +510,7 @@ public interface ActionProperties {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.ActionProperties):
-        ActionProperties = Wrapper(cdkObject)
+        ActionProperties = CdkObjectWrappers.wrap(cdkObject) as ActionProperties
 
     internal fun unwrap(wrapped: ActionProperties):
         software.amazon.awscdk.services.codepipeline.ActionProperties = (wrapped as

@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1647,7 +1648,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignCustomMessageProperty):
-          CampaignCustomMessageProperty = Wrapper(cdkObject)
+          CampaignCustomMessageProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CampaignCustomMessageProperty
 
       internal fun unwrap(wrapped: CampaignCustomMessageProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignCustomMessageProperty =
@@ -1811,7 +1813,7 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignHookProperty):
-          CampaignHookProperty = Wrapper(cdkObject)
+          CampaignHookProperty = CdkObjectWrappers.wrap(cdkObject) as CampaignHookProperty
 
       internal fun unwrap(wrapped: CampaignHookProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignHookProperty = (wrapped as
@@ -1958,7 +1960,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageBodyConfigProperty):
-          InAppMessageBodyConfigProperty = Wrapper(cdkObject)
+          InAppMessageBodyConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          InAppMessageBodyConfigProperty
 
       internal fun unwrap(wrapped: InAppMessageBodyConfigProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageBodyConfigProperty =
@@ -2110,7 +2113,7 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateProperty):
-          TemplateProperty = Wrapper(cdkObject)
+          TemplateProperty = CdkObjectWrappers.wrap(cdkObject) as TemplateProperty
 
       internal fun unwrap(wrapped: TemplateProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateProperty = (wrapped as
@@ -2257,7 +2260,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageHeaderConfigProperty):
-          InAppMessageHeaderConfigProperty = Wrapper(cdkObject)
+          InAppMessageHeaderConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          InAppMessageHeaderConfigProperty
 
       internal fun unwrap(wrapped: InAppMessageHeaderConfigProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageHeaderConfigProperty =
@@ -2437,7 +2441,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEmailMessageProperty):
-          CampaignEmailMessageProperty = Wrapper(cdkObject)
+          CampaignEmailMessageProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CampaignEmailMessageProperty
 
       internal fun unwrap(wrapped: CampaignEmailMessageProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEmailMessageProperty =
@@ -2704,7 +2709,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignInAppMessageProperty):
-          CampaignInAppMessageProperty = Wrapper(cdkObject)
+          CampaignInAppMessageProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CampaignInAppMessageProperty
 
       internal fun unwrap(wrapped: CampaignInAppMessageProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignInAppMessageProperty =
@@ -2929,7 +2935,7 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.LimitsProperty):
-          LimitsProperty = Wrapper(cdkObject)
+          LimitsProperty = CdkObjectWrappers.wrap(cdkObject) as LimitsProperty
 
       internal fun unwrap(wrapped: LimitsProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.LimitsProperty = (wrapped as
@@ -3199,7 +3205,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignSmsMessageProperty):
-          CampaignSmsMessageProperty = Wrapper(cdkObject)
+          CampaignSmsMessageProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CampaignSmsMessageProperty
 
       internal fun unwrap(wrapped: CampaignSmsMessageProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignSmsMessageProperty = (wrapped
@@ -3335,7 +3342,7 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.QuietTimeProperty):
-          QuietTimeProperty = Wrapper(cdkObject)
+          QuietTimeProperty = CdkObjectWrappers.wrap(cdkObject) as QuietTimeProperty
 
       internal fun unwrap(wrapped: QuietTimeProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.QuietTimeProperty = (wrapped as
@@ -3471,7 +3478,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.OverrideButtonConfigurationProperty):
-          OverrideButtonConfigurationProperty = Wrapper(cdkObject)
+          OverrideButtonConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          OverrideButtonConfigurationProperty
 
       internal fun unwrap(wrapped: OverrideButtonConfigurationProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.OverrideButtonConfigurationProperty =
@@ -3633,7 +3641,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CustomDeliveryConfigurationProperty):
-          CustomDeliveryConfigurationProperty = Wrapper(cdkObject)
+          CustomDeliveryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CustomDeliveryConfigurationProperty
 
       internal fun unwrap(wrapped: CustomDeliveryConfigurationProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.CustomDeliveryConfigurationProperty =
@@ -4039,7 +4048,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageContentProperty):
-          InAppMessageContentProperty = Wrapper(cdkObject)
+          InAppMessageContentProperty = CdkObjectWrappers.wrap(cdkObject) as
+          InAppMessageContentProperty
 
       internal fun unwrap(wrapped: InAppMessageContentProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageContentProperty =
@@ -4509,7 +4519,7 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.ScheduleProperty):
-          ScheduleProperty = Wrapper(cdkObject)
+          ScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as ScheduleProperty
 
       internal fun unwrap(wrapped: ScheduleProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.ScheduleProperty = (wrapped as
@@ -5094,7 +5104,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.WriteTreatmentResourceProperty):
-          WriteTreatmentResourceProperty = Wrapper(cdkObject)
+          WriteTreatmentResourceProperty = CdkObjectWrappers.wrap(cdkObject) as
+          WriteTreatmentResourceProperty
 
       internal fun unwrap(wrapped: WriteTreatmentResourceProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.WriteTreatmentResourceProperty =
@@ -5915,7 +5926,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.MessageConfigurationProperty):
-          MessageConfigurationProperty = Wrapper(cdkObject)
+          MessageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MessageConfigurationProperty
 
       internal fun unwrap(wrapped: MessageConfigurationProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.MessageConfigurationProperty =
@@ -6149,7 +6161,7 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.EventDimensionsProperty):
-          EventDimensionsProperty = Wrapper(cdkObject)
+          EventDimensionsProperty = CdkObjectWrappers.wrap(cdkObject) as EventDimensionsProperty
 
       internal fun unwrap(wrapped: EventDimensionsProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.EventDimensionsProperty = (wrapped as
@@ -6290,7 +6302,7 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.SetDimensionProperty):
-          SetDimensionProperty = Wrapper(cdkObject)
+          SetDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as SetDimensionProperty
 
       internal fun unwrap(wrapped: SetDimensionProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.SetDimensionProperty = (wrapped as
@@ -6584,7 +6596,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateConfigurationProperty):
-          TemplateConfigurationProperty = Wrapper(cdkObject)
+          TemplateConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          TemplateConfigurationProperty
 
       internal fun unwrap(wrapped: TemplateConfigurationProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.TemplateConfigurationProperty =
@@ -6738,7 +6751,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEventFilterProperty):
-          CampaignEventFilterProperty = Wrapper(cdkObject)
+          CampaignEventFilterProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CampaignEventFilterProperty
 
       internal fun unwrap(wrapped: CampaignEventFilterProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.CampaignEventFilterProperty =
@@ -6991,7 +7005,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.DefaultButtonConfigurationProperty):
-          DefaultButtonConfigurationProperty = Wrapper(cdkObject)
+          DefaultButtonConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          DefaultButtonConfigurationProperty
 
       internal fun unwrap(wrapped: DefaultButtonConfigurationProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.DefaultButtonConfigurationProperty =
@@ -7089,7 +7104,7 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.MetricDimensionProperty):
-          MetricDimensionProperty = Wrapper(cdkObject)
+          MetricDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as MetricDimensionProperty
 
       internal fun unwrap(wrapped: MetricDimensionProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.MetricDimensionProperty = (wrapped as
@@ -7581,7 +7596,7 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.MessageProperty):
-          MessageProperty = Wrapper(cdkObject)
+          MessageProperty = CdkObjectWrappers.wrap(cdkObject) as MessageProperty
 
       internal fun unwrap(wrapped: MessageProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.MessageProperty = (wrapped as
@@ -7689,7 +7704,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.AttributeDimensionProperty):
-          AttributeDimensionProperty = Wrapper(cdkObject)
+          AttributeDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AttributeDimensionProperty
 
       internal fun unwrap(wrapped: AttributeDimensionProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.AttributeDimensionProperty = (wrapped
@@ -8005,7 +8021,8 @@ public open class CfnCampaign internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageButtonProperty):
-          InAppMessageButtonProperty = Wrapper(cdkObject)
+          InAppMessageButtonProperty = CdkObjectWrappers.wrap(cdkObject) as
+          InAppMessageButtonProperty
 
       internal fun unwrap(wrapped: InAppMessageButtonProperty):
           software.amazon.awscdk.services.pinpoint.CfnCampaign.InAppMessageButtonProperty = (wrapped

@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -549,7 +550,8 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty):
-          CFNS3LogsConfigurationProperty = Wrapper(cdkObject)
+          CFNS3LogsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CFNS3LogsConfigurationProperty
 
       internal fun unwrap(wrapped: CFNS3LogsConfigurationProperty):
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNS3LogsConfigurationProperty =
@@ -787,7 +789,8 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNDataSourceConfigurationsProperty):
-          CFNDataSourceConfigurationsProperty = Wrapper(cdkObject)
+          CFNDataSourceConfigurationsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CFNDataSourceConfigurationsProperty
 
       internal fun unwrap(wrapped: CFNDataSourceConfigurationsProperty):
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNDataSourceConfigurationsProperty
@@ -885,7 +888,8 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty):
-          CFNScanEc2InstanceWithFindingsConfigurationProperty = Wrapper(cdkObject)
+          CFNScanEc2InstanceWithFindingsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CFNScanEc2InstanceWithFindingsConfigurationProperty
 
       internal fun unwrap(wrapped: CFNScanEc2InstanceWithFindingsConfigurationProperty):
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNScanEc2InstanceWithFindingsConfigurationProperty
@@ -991,7 +995,7 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty):
-          TagItemProperty = Wrapper(cdkObject)
+          TagItemProperty = CdkObjectWrappers.wrap(cdkObject) as TagItemProperty
 
       internal fun unwrap(wrapped: TagItemProperty):
           software.amazon.awscdk.services.guardduty.CfnDetector.TagItemProperty = (wrapped as
@@ -1161,7 +1165,8 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureConfigurationProperty):
-          CFNFeatureConfigurationProperty = Wrapper(cdkObject)
+          CFNFeatureConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CFNFeatureConfigurationProperty
 
       internal fun unwrap(wrapped: CFNFeatureConfigurationProperty):
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureConfigurationProperty =
@@ -1282,7 +1287,8 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesConfigurationProperty):
-          CFNKubernetesConfigurationProperty = Wrapper(cdkObject)
+          CFNKubernetesConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CFNKubernetesConfigurationProperty
 
       internal fun unwrap(wrapped: CFNKubernetesConfigurationProperty):
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesConfigurationProperty =
@@ -1407,7 +1413,8 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNMalwareProtectionConfigurationProperty):
-          CFNMalwareProtectionConfigurationProperty = Wrapper(cdkObject)
+          CFNMalwareProtectionConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CFNMalwareProtectionConfigurationProperty
 
       internal fun unwrap(wrapped: CFNMalwareProtectionConfigurationProperty):
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNMalwareProtectionConfigurationProperty
@@ -1507,7 +1514,8 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty):
-          CFNKubernetesAuditLogsConfigurationProperty = Wrapper(cdkObject)
+          CFNKubernetesAuditLogsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CFNKubernetesAuditLogsConfigurationProperty
 
       internal fun unwrap(wrapped: CFNKubernetesAuditLogsConfigurationProperty):
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNKubernetesAuditLogsConfigurationProperty
@@ -1618,7 +1626,8 @@ public open class CfnDetector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty):
-          CFNFeatureAdditionalConfigurationProperty = Wrapper(cdkObject)
+          CFNFeatureAdditionalConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CFNFeatureAdditionalConfigurationProperty
 
       internal fun unwrap(wrapped: CFNFeatureAdditionalConfigurationProperty):
           software.amazon.awscdk.services.guardduty.CfnDetector.CFNFeatureAdditionalConfigurationProperty

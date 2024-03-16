@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.networkmanager
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -149,7 +150,8 @@ public interface CfnTransitGatewayPeeringProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeeringProps):
-        CfnTransitGatewayPeeringProps = Wrapper(cdkObject)
+        CfnTransitGatewayPeeringProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnTransitGatewayPeeringProps
 
     internal fun unwrap(wrapped: CfnTransitGatewayPeeringProps):
         software.amazon.awscdk.services.networkmanager.CfnTransitGatewayPeeringProps = (wrapped as

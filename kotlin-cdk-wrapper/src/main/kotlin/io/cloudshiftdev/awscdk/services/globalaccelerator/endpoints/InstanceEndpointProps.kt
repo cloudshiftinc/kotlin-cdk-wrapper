@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.globalaccelerator.endpoints
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.Unit
@@ -135,7 +136,7 @@ public interface InstanceEndpointProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpointProps):
-        InstanceEndpointProps = Wrapper(cdkObject)
+        InstanceEndpointProps = CdkObjectWrappers.wrap(cdkObject) as InstanceEndpointProps
 
     internal fun unwrap(wrapped: InstanceEndpointProps):
         software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpointProps = (wrapped

@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -349,7 +350,7 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnTemplate.TemplateProperty):
-          TemplateProperty = Wrapper(cdkObject)
+          TemplateProperty = CdkObjectWrappers.wrap(cdkObject) as TemplateProperty
 
       internal fun unwrap(wrapped: TemplateProperty):
           software.amazon.awscdk.services.ses.CfnTemplate.TemplateProperty = (wrapped as

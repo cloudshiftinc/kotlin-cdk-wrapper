@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -524,7 +525,7 @@ public open class CfnReceiptRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.LambdaActionProperty):
-          LambdaActionProperty = Wrapper(cdkObject)
+          LambdaActionProperty = CdkObjectWrappers.wrap(cdkObject) as LambdaActionProperty
 
       internal fun unwrap(wrapped: LambdaActionProperty):
           software.amazon.awscdk.services.ses.CfnReceiptRule.LambdaActionProperty = (wrapped as
@@ -711,7 +712,7 @@ public open class CfnReceiptRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.WorkmailActionProperty):
-          WorkmailActionProperty = Wrapper(cdkObject)
+          WorkmailActionProperty = CdkObjectWrappers.wrap(cdkObject) as WorkmailActionProperty
 
       internal fun unwrap(wrapped: WorkmailActionProperty):
           software.amazon.awscdk.services.ses.CfnReceiptRule.WorkmailActionProperty = (wrapped as
@@ -841,7 +842,7 @@ public open class CfnReceiptRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.AddHeaderActionProperty):
-          AddHeaderActionProperty = Wrapper(cdkObject)
+          AddHeaderActionProperty = CdkObjectWrappers.wrap(cdkObject) as AddHeaderActionProperty
 
       internal fun unwrap(wrapped: AddHeaderActionProperty):
           software.amazon.awscdk.services.ses.CfnReceiptRule.AddHeaderActionProperty = (wrapped as
@@ -1176,7 +1177,7 @@ public open class CfnReceiptRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.S3ActionProperty):
-          S3ActionProperty = Wrapper(cdkObject)
+          S3ActionProperty = CdkObjectWrappers.wrap(cdkObject) as S3ActionProperty
 
       internal fun unwrap(wrapped: S3ActionProperty):
           software.amazon.awscdk.services.ses.CfnReceiptRule.S3ActionProperty = (wrapped as
@@ -1415,7 +1416,7 @@ public open class CfnReceiptRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.BounceActionProperty):
-          BounceActionProperty = Wrapper(cdkObject)
+          BounceActionProperty = CdkObjectWrappers.wrap(cdkObject) as BounceActionProperty
 
       internal fun unwrap(wrapped: BounceActionProperty):
           software.amazon.awscdk.services.ses.CfnReceiptRule.BounceActionProperty = (wrapped as
@@ -1814,7 +1815,7 @@ public open class CfnReceiptRule internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.RuleProperty):
-          RuleProperty = Wrapper(cdkObject)
+          RuleProperty = CdkObjectWrappers.wrap(cdkObject) as RuleProperty
 
       internal fun unwrap(wrapped: RuleProperty):
           software.amazon.awscdk.services.ses.CfnReceiptRule.RuleProperty = (wrapped as
@@ -1979,7 +1980,7 @@ public open class CfnReceiptRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.SNSActionProperty):
-          SNSActionProperty = Wrapper(cdkObject)
+          SNSActionProperty = CdkObjectWrappers.wrap(cdkObject) as SNSActionProperty
 
       internal fun unwrap(wrapped: SNSActionProperty):
           software.amazon.awscdk.services.ses.CfnReceiptRule.SNSActionProperty = (wrapped as
@@ -2126,7 +2127,7 @@ public open class CfnReceiptRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.StopActionProperty):
-          StopActionProperty = Wrapper(cdkObject)
+          StopActionProperty = CdkObjectWrappers.wrap(cdkObject) as StopActionProperty
 
       internal fun unwrap(wrapped: StopActionProperty):
           software.amazon.awscdk.services.ses.CfnReceiptRule.StopActionProperty = (wrapped as
@@ -2631,7 +2632,7 @@ public open class CfnReceiptRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.ActionProperty):
-          ActionProperty = Wrapper(cdkObject)
+          ActionProperty = CdkObjectWrappers.wrap(cdkObject) as ActionProperty
 
       internal fun unwrap(wrapped: ActionProperty):
           software.amazon.awscdk.services.ses.CfnReceiptRule.ActionProperty = (wrapped as

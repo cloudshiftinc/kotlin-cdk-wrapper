@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -729,7 +730,7 @@ public interface DefaultCdkOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.DefaultCdkOptions):
-        DefaultCdkOptions = Wrapper(cdkObject)
+        DefaultCdkOptions = CdkObjectWrappers.wrap(cdkObject) as DefaultCdkOptions
 
     internal fun unwrap(wrapped: DefaultCdkOptions):
         software.amazon.awscdk.cloudassembly.schema.DefaultCdkOptions = (wrapped as

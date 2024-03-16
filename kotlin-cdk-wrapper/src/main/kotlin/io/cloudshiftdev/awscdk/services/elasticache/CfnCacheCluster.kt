@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1892,7 +1893,8 @@ public open class CfnCacheCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnCacheCluster.LogDeliveryConfigurationRequestProperty):
-          LogDeliveryConfigurationRequestProperty = Wrapper(cdkObject)
+          LogDeliveryConfigurationRequestProperty = CdkObjectWrappers.wrap(cdkObject) as
+          LogDeliveryConfigurationRequestProperty
 
       internal fun unwrap(wrapped: LogDeliveryConfigurationRequestProperty):
           software.amazon.awscdk.services.elasticache.CfnCacheCluster.LogDeliveryConfigurationRequestProperty
@@ -1979,7 +1981,8 @@ public open class CfnCacheCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty):
-          KinesisFirehoseDestinationDetailsProperty = Wrapper(cdkObject)
+          KinesisFirehoseDestinationDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          KinesisFirehoseDestinationDetailsProperty
 
       internal fun unwrap(wrapped: KinesisFirehoseDestinationDetailsProperty):
           software.amazon.awscdk.services.elasticache.CfnCacheCluster.KinesisFirehoseDestinationDetailsProperty
@@ -2066,7 +2069,8 @@ public open class CfnCacheCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnCacheCluster.CloudWatchLogsDestinationDetailsProperty):
-          CloudWatchLogsDestinationDetailsProperty = Wrapper(cdkObject)
+          CloudWatchLogsDestinationDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CloudWatchLogsDestinationDetailsProperty
 
       internal fun unwrap(wrapped: CloudWatchLogsDestinationDetailsProperty):
           software.amazon.awscdk.services.elasticache.CfnCacheCluster.CloudWatchLogsDestinationDetailsProperty
@@ -2286,7 +2290,8 @@ public open class CfnCacheCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.elasticache.CfnCacheCluster.DestinationDetailsProperty):
-          DestinationDetailsProperty = Wrapper(cdkObject)
+          DestinationDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          DestinationDetailsProperty
 
       internal fun unwrap(wrapped: DestinationDetailsProperty):
           software.amazon.awscdk.services.elasticache.CfnCacheCluster.DestinationDetailsProperty =

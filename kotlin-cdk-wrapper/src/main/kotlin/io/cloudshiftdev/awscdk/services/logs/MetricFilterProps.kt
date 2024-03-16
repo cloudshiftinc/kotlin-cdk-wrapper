@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.logs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.collections.Map
@@ -255,7 +256,7 @@ public interface MetricFilterProps : MetricFilterOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.MetricFilterProps):
-        MetricFilterProps = Wrapper(cdkObject)
+        MetricFilterProps = CdkObjectWrappers.wrap(cdkObject) as MetricFilterProps
 
     internal fun unwrap(wrapped: MetricFilterProps):
         software.amazon.awscdk.services.logs.MetricFilterProps = (wrapped as CdkObject).cdkObject as

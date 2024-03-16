@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -122,7 +123,7 @@ public interface ApiDefinitionS3Location {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.ApiDefinitionS3Location):
-        ApiDefinitionS3Location = Wrapper(cdkObject)
+        ApiDefinitionS3Location = CdkObjectWrappers.wrap(cdkObject) as ApiDefinitionS3Location
 
     internal fun unwrap(wrapped: ApiDefinitionS3Location):
         software.amazon.awscdk.services.apigateway.ApiDefinitionS3Location = (wrapped as

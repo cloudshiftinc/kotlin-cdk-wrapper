@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -640,7 +641,7 @@ public open class CfnDisk internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty):
-          AutoSnapshotAddOnProperty = Wrapper(cdkObject)
+          AutoSnapshotAddOnProperty = CdkObjectWrappers.wrap(cdkObject) as AutoSnapshotAddOnProperty
 
       internal fun unwrap(wrapped: AutoSnapshotAddOnProperty):
           software.amazon.awscdk.services.lightsail.CfnDisk.AutoSnapshotAddOnProperty = (wrapped as
@@ -832,7 +833,7 @@ public open class CfnDisk internal constructor(
       }
 
       internal fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty):
-          AddOnProperty = Wrapper(cdkObject)
+          AddOnProperty = CdkObjectWrappers.wrap(cdkObject) as AddOnProperty
 
       internal fun unwrap(wrapped: AddOnProperty):
           software.amazon.awscdk.services.lightsail.CfnDisk.AddOnProperty = (wrapped as
@@ -937,7 +938,7 @@ public open class CfnDisk internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty):
-          LocationProperty = Wrapper(cdkObject)
+          LocationProperty = CdkObjectWrappers.wrap(cdkObject) as LocationProperty
 
       internal fun unwrap(wrapped: LocationProperty):
           software.amazon.awscdk.services.lightsail.CfnDisk.LocationProperty = (wrapped as

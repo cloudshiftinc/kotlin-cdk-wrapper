@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.codebuild
 import io.cloudshiftdev.awscdk.SecretValue
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -68,7 +69,8 @@ public interface GitHubSourceCredentialsProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.GitHubSourceCredentialsProps):
-        GitHubSourceCredentialsProps = Wrapper(cdkObject)
+        GitHubSourceCredentialsProps = CdkObjectWrappers.wrap(cdkObject) as
+        GitHubSourceCredentialsProps
 
     internal fun unwrap(wrapped: GitHubSourceCredentialsProps):
         software.amazon.awscdk.services.codebuild.GitHubSourceCredentialsProps = (wrapped as

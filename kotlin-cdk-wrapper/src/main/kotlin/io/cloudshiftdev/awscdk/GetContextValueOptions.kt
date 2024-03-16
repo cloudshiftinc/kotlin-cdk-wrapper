@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -141,7 +142,7 @@ public interface GetContextValueOptions : GetContextKeyOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.GetContextValueOptions):
-        GetContextValueOptions = Wrapper(cdkObject)
+        GetContextValueOptions = CdkObjectWrappers.wrap(cdkObject) as GetContextValueOptions
 
     internal fun unwrap(wrapped: GetContextValueOptions):
         software.amazon.awscdk.GetContextValueOptions = (wrapped as CdkObject).cdkObject as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appconfig
 
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -50,10 +51,6 @@ public abstract class RolloutStrategy internal constructor(
    */
   public open fun growthType(): GrowthType? = unwrap(this).getGrowthType()?.let(GrowthType::wrap)
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.appconfig.RolloutStrategy,
-  ) : RolloutStrategy(cdkObject)
-
   public companion object {
     public val ALL_AT_ONCE: RolloutStrategy =
         RolloutStrategy.wrap(software.amazon.awscdk.services.appconfig.RolloutStrategy.ALL_AT_ONCE)
@@ -84,7 +81,7 @@ public abstract class RolloutStrategy internal constructor(
         linear(RolloutStrategyProps(props))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.RolloutStrategy):
-        RolloutStrategy = Wrapper(cdkObject)
+        RolloutStrategy = CdkObjectWrappers.wrap(cdkObject) as RolloutStrategy
 
     internal fun unwrap(wrapped: RolloutStrategy):
         software.amazon.awscdk.services.appconfig.RolloutStrategy = (wrapped as CdkObject).cdkObject

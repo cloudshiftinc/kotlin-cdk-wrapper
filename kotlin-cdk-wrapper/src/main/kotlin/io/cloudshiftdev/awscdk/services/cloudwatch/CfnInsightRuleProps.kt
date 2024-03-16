@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -248,7 +249,7 @@ public interface CfnInsightRuleProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.CfnInsightRuleProps):
-        CfnInsightRuleProps = Wrapper(cdkObject)
+        CfnInsightRuleProps = CdkObjectWrappers.wrap(cdkObject) as CfnInsightRuleProps
 
     internal fun unwrap(wrapped: CfnInsightRuleProps):
         software.amazon.awscdk.services.cloudwatch.CfnInsightRuleProps = (wrapped as

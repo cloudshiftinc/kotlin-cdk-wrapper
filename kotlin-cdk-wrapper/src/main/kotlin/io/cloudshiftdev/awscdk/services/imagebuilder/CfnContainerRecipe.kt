@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -961,7 +962,8 @@ public open class CfnContainerRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentParameterProperty):
-          ComponentParameterProperty = Wrapper(cdkObject)
+          ComponentParameterProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ComponentParameterProperty
 
       internal fun unwrap(wrapped: ComponentParameterProperty):
           software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentParameterProperty
@@ -1260,7 +1262,8 @@ public open class CfnContainerRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.EbsInstanceBlockDeviceSpecificationProperty):
-          EbsInstanceBlockDeviceSpecificationProperty = Wrapper(cdkObject)
+          EbsInstanceBlockDeviceSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EbsInstanceBlockDeviceSpecificationProperty
 
       internal fun unwrap(wrapped: EbsInstanceBlockDeviceSpecificationProperty):
           software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.EbsInstanceBlockDeviceSpecificationProperty
@@ -1403,7 +1406,8 @@ public open class CfnContainerRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentConfigurationProperty):
-          ComponentConfigurationProperty = Wrapper(cdkObject)
+          ComponentConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ComponentConfigurationProperty
 
       internal fun unwrap(wrapped: ComponentConfigurationProperty):
           software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.ComponentConfigurationProperty
@@ -1522,7 +1526,8 @@ public open class CfnContainerRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.TargetContainerRepositoryProperty):
-          TargetContainerRepositoryProperty = Wrapper(cdkObject)
+          TargetContainerRepositoryProperty = CdkObjectWrappers.wrap(cdkObject) as
+          TargetContainerRepositoryProperty
 
       internal fun unwrap(wrapped: TargetContainerRepositoryProperty):
           software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.TargetContainerRepositoryProperty
@@ -1723,7 +1728,8 @@ public open class CfnContainerRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.InstanceBlockDeviceMappingProperty):
-          InstanceBlockDeviceMappingProperty = Wrapper(cdkObject)
+          InstanceBlockDeviceMappingProperty = CdkObjectWrappers.wrap(cdkObject) as
+          InstanceBlockDeviceMappingProperty
 
       internal fun unwrap(wrapped: InstanceBlockDeviceMappingProperty):
           software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.InstanceBlockDeviceMappingProperty
@@ -1883,7 +1889,8 @@ public open class CfnContainerRecipe internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.InstanceConfigurationProperty):
-          InstanceConfigurationProperty = Wrapper(cdkObject)
+          InstanceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          InstanceConfigurationProperty
 
       internal fun unwrap(wrapped: InstanceConfigurationProperty):
           software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe.InstanceConfigurationProperty

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -93,7 +94,7 @@ public interface VirtualGatewayAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes):
-        VirtualGatewayAttributes = Wrapper(cdkObject)
+        VirtualGatewayAttributes = CdkObjectWrappers.wrap(cdkObject) as VirtualGatewayAttributes
 
     internal fun unwrap(wrapped: VirtualGatewayAttributes):
         software.amazon.awscdk.services.appmesh.VirtualGatewayAttributes = (wrapped as

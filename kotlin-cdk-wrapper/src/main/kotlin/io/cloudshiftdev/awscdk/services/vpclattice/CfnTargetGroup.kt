@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -872,7 +873,7 @@ public open class CfnTargetGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup.HealthCheckConfigProperty):
-          HealthCheckConfigProperty = Wrapper(cdkObject)
+          HealthCheckConfigProperty = CdkObjectWrappers.wrap(cdkObject) as HealthCheckConfigProperty
 
       internal fun unwrap(wrapped: HealthCheckConfigProperty):
           software.amazon.awscdk.services.vpclattice.CfnTargetGroup.HealthCheckConfigProperty =
@@ -955,7 +956,7 @@ public open class CfnTargetGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup.MatcherProperty):
-          MatcherProperty = Wrapper(cdkObject)
+          MatcherProperty = CdkObjectWrappers.wrap(cdkObject) as MatcherProperty
 
       internal fun unwrap(wrapped: MatcherProperty):
           software.amazon.awscdk.services.vpclattice.CfnTargetGroup.MatcherProperty = (wrapped as
@@ -1086,7 +1087,7 @@ public open class CfnTargetGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetProperty):
-          TargetProperty = Wrapper(cdkObject)
+          TargetProperty = CdkObjectWrappers.wrap(cdkObject) as TargetProperty
 
       internal fun unwrap(wrapped: TargetProperty):
           software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetProperty = (wrapped as
@@ -1440,7 +1441,7 @@ public open class CfnTargetGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetGroupConfigProperty):
-          TargetGroupConfigProperty = Wrapper(cdkObject)
+          TargetGroupConfigProperty = CdkObjectWrappers.wrap(cdkObject) as TargetGroupConfigProperty
 
       internal fun unwrap(wrapped: TargetGroupConfigProperty):
           software.amazon.awscdk.services.vpclattice.CfnTargetGroup.TargetGroupConfigProperty =

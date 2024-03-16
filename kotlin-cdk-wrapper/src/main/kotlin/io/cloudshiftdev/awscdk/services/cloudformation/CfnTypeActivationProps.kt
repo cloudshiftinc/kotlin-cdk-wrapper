@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudformation
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -497,7 +498,7 @@ public interface CfnTypeActivationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudformation.CfnTypeActivationProps):
-        CfnTypeActivationProps = Wrapper(cdkObject)
+        CfnTypeActivationProps = CdkObjectWrappers.wrap(cdkObject) as CfnTypeActivationProps
 
     internal fun unwrap(wrapped: CfnTypeActivationProps):
         software.amazon.awscdk.services.cloudformation.CfnTypeActivationProps = (wrapped as

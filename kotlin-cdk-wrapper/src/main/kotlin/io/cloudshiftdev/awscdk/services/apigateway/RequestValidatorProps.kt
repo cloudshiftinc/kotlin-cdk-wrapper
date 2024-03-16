@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -151,7 +152,7 @@ public interface RequestValidatorProps : RequestValidatorOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.RequestValidatorProps):
-        RequestValidatorProps = Wrapper(cdkObject)
+        RequestValidatorProps = CdkObjectWrappers.wrap(cdkObject) as RequestValidatorProps
 
     internal fun unwrap(wrapped: RequestValidatorProps):
         software.amazon.awscdk.services.apigateway.RequestValidatorProps = (wrapped as

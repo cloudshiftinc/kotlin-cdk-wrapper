@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -1501,7 +1502,8 @@ public open class CfnTrail internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrail.AdvancedEventSelectorProperty):
-          AdvancedEventSelectorProperty = Wrapper(cdkObject)
+          AdvancedEventSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AdvancedEventSelectorProperty
 
       internal fun unwrap(wrapped: AdvancedEventSelectorProperty):
           software.amazon.awscdk.services.cloudtrail.CfnTrail.AdvancedEventSelectorProperty =
@@ -1930,7 +1932,7 @@ public open class CfnTrail internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrail.EventSelectorProperty):
-          EventSelectorProperty = Wrapper(cdkObject)
+          EventSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as EventSelectorProperty
 
       internal fun unwrap(wrapped: EventSelectorProperty):
           software.amazon.awscdk.services.cloudtrail.CfnTrail.EventSelectorProperty = (wrapped as
@@ -4066,7 +4068,8 @@ public open class CfnTrail internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrail.AdvancedFieldSelectorProperty):
-          AdvancedFieldSelectorProperty = Wrapper(cdkObject)
+          AdvancedFieldSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AdvancedFieldSelectorProperty
 
       internal fun unwrap(wrapped: AdvancedFieldSelectorProperty):
           software.amazon.awscdk.services.cloudtrail.CfnTrail.AdvancedFieldSelectorProperty =
@@ -4476,7 +4479,7 @@ public open class CfnTrail internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrail.DataResourceProperty):
-          DataResourceProperty = Wrapper(cdkObject)
+          DataResourceProperty = CdkObjectWrappers.wrap(cdkObject) as DataResourceProperty
 
       internal fun unwrap(wrapped: DataResourceProperty):
           software.amazon.awscdk.services.cloudtrail.CfnTrail.DataResourceProperty = (wrapped as
@@ -4583,7 +4586,7 @@ public open class CfnTrail internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloudtrail.CfnTrail.InsightSelectorProperty):
-          InsightSelectorProperty = Wrapper(cdkObject)
+          InsightSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as InsightSelectorProperty
 
       internal fun unwrap(wrapped: InsightSelectorProperty):
           software.amazon.awscdk.services.cloudtrail.CfnTrail.InsightSelectorProperty = (wrapped as

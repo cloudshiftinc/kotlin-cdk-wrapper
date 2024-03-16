@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.greengrass
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -299,7 +300,7 @@ public interface CfnLoggerDefinitionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.greengrass.CfnLoggerDefinitionProps):
-        CfnLoggerDefinitionProps = Wrapper(cdkObject)
+        CfnLoggerDefinitionProps = CdkObjectWrappers.wrap(cdkObject) as CfnLoggerDefinitionProps
 
     internal fun unwrap(wrapped: CfnLoggerDefinitionProps):
         software.amazon.awscdk.services.greengrass.CfnLoggerDefinitionProps = (wrapped as

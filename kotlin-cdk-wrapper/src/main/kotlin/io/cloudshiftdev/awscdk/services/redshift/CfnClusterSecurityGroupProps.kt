@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.redshift
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -133,7 +134,8 @@ public interface CfnClusterSecurityGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnClusterSecurityGroupProps):
-        CfnClusterSecurityGroupProps = Wrapper(cdkObject)
+        CfnClusterSecurityGroupProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnClusterSecurityGroupProps
 
     internal fun unwrap(wrapped: CfnClusterSecurityGroupProps):
         software.amazon.awscdk.services.redshift.CfnClusterSecurityGroupProps = (wrapped as

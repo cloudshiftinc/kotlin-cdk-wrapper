@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ses
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -125,7 +126,7 @@ public interface DedicatedIpPoolProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.DedicatedIpPoolProps):
-        DedicatedIpPoolProps = Wrapper(cdkObject)
+        DedicatedIpPoolProps = CdkObjectWrappers.wrap(cdkObject) as DedicatedIpPoolProps
 
     internal fun unwrap(wrapped: DedicatedIpPoolProps):
         software.amazon.awscdk.services.ses.DedicatedIpPoolProps = (wrapped as CdkObject).cdkObject

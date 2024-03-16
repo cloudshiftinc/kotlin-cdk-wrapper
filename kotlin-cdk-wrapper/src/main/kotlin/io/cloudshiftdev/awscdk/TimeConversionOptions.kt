@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -76,7 +77,7 @@ public interface TimeConversionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.TimeConversionOptions):
-        TimeConversionOptions = Wrapper(cdkObject)
+        TimeConversionOptions = CdkObjectWrappers.wrap(cdkObject) as TimeConversionOptions
 
     internal fun unwrap(wrapped: TimeConversionOptions):
         software.amazon.awscdk.TimeConversionOptions = (wrapped as CdkObject).cdkObject as

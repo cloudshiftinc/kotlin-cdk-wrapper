@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -210,7 +211,7 @@ public interface JenkinsProviderProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.JenkinsProviderProps):
-        JenkinsProviderProps = Wrapper(cdkObject)
+        JenkinsProviderProps = CdkObjectWrappers.wrap(cdkObject) as JenkinsProviderProps
 
     internal fun unwrap(wrapped: JenkinsProviderProps):
         software.amazon.awscdk.services.codepipeline.actions.JenkinsProviderProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.synthetics
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -178,7 +179,7 @@ public interface CronOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CronOptions):
-        CronOptions = Wrapper(cdkObject)
+        CronOptions = CdkObjectWrappers.wrap(cdkObject) as CronOptions
 
     internal fun unwrap(wrapped: CronOptions):
         software.amazon.awscdk.services.synthetics.CronOptions = (wrapped as CdkObject).cdkObject as

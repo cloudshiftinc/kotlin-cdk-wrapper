@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -652,7 +653,7 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.S3ExportingConfigProperty):
-          S3ExportingConfigProperty = Wrapper(cdkObject)
+          S3ExportingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as S3ExportingConfigProperty
 
       internal fun unwrap(wrapped: S3ExportingConfigProperty):
           software.amazon.awscdk.services.customerprofiles.CfnDomain.S3ExportingConfigProperty =
@@ -947,7 +948,7 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.AutoMergingProperty):
-          AutoMergingProperty = Wrapper(cdkObject)
+          AutoMergingProperty = CdkObjectWrappers.wrap(cdkObject) as AutoMergingProperty
 
       internal fun unwrap(wrapped: AutoMergingProperty):
           software.amazon.awscdk.services.customerprofiles.CfnDomain.AutoMergingProperty = (wrapped
@@ -1412,7 +1413,7 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.RuleBasedMatchingProperty):
-          RuleBasedMatchingProperty = Wrapper(cdkObject)
+          RuleBasedMatchingProperty = CdkObjectWrappers.wrap(cdkObject) as RuleBasedMatchingProperty
 
       internal fun unwrap(wrapped: RuleBasedMatchingProperty):
           software.amazon.awscdk.services.customerprofiles.CfnDomain.RuleBasedMatchingProperty =
@@ -1702,7 +1703,7 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingProperty):
-          MatchingProperty = Wrapper(cdkObject)
+          MatchingProperty = CdkObjectWrappers.wrap(cdkObject) as MatchingProperty
 
       internal fun unwrap(wrapped: MatchingProperty):
           software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingProperty = (wrapped as
@@ -1821,7 +1822,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.ConflictResolutionProperty):
-          ConflictResolutionProperty = Wrapper(cdkObject)
+          ConflictResolutionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ConflictResolutionProperty
 
       internal fun unwrap(wrapped: ConflictResolutionProperty):
           software.amazon.awscdk.services.customerprofiles.CfnDomain.ConflictResolutionProperty =
@@ -1935,7 +1937,7 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.ExportingConfigProperty):
-          ExportingConfigProperty = Wrapper(cdkObject)
+          ExportingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as ExportingConfigProperty
 
       internal fun unwrap(wrapped: ExportingConfigProperty):
           software.amazon.awscdk.services.customerprofiles.CfnDomain.ExportingConfigProperty =
@@ -2226,7 +2228,8 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.AttributeTypesSelectorProperty):
-          AttributeTypesSelectorProperty = Wrapper(cdkObject)
+          AttributeTypesSelectorProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AttributeTypesSelectorProperty
 
       internal fun unwrap(wrapped: AttributeTypesSelectorProperty):
           software.amazon.awscdk.services.customerprofiles.CfnDomain.AttributeTypesSelectorProperty
@@ -2333,7 +2336,7 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.ConsolidationProperty):
-          ConsolidationProperty = Wrapper(cdkObject)
+          ConsolidationProperty = CdkObjectWrappers.wrap(cdkObject) as ConsolidationProperty
 
       internal fun unwrap(wrapped: ConsolidationProperty):
           software.amazon.awscdk.services.customerprofiles.CfnDomain.ConsolidationProperty =
@@ -2441,7 +2444,7 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.JobScheduleProperty):
-          JobScheduleProperty = Wrapper(cdkObject)
+          JobScheduleProperty = CdkObjectWrappers.wrap(cdkObject) as JobScheduleProperty
 
       internal fun unwrap(wrapped: JobScheduleProperty):
           software.amazon.awscdk.services.customerprofiles.CfnDomain.JobScheduleProperty = (wrapped
@@ -2540,7 +2543,7 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingRuleProperty):
-          MatchingRuleProperty = Wrapper(cdkObject)
+          MatchingRuleProperty = CdkObjectWrappers.wrap(cdkObject) as MatchingRuleProperty
 
       internal fun unwrap(wrapped: MatchingRuleProperty):
           software.amazon.awscdk.services.customerprofiles.CfnDomain.MatchingRuleProperty = (wrapped
@@ -2714,7 +2717,7 @@ public open class CfnDomain internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.customerprofiles.CfnDomain.DomainStatsProperty):
-          DomainStatsProperty = Wrapper(cdkObject)
+          DomainStatsProperty = CdkObjectWrappers.wrap(cdkObject) as DomainStatsProperty
 
       internal fun unwrap(wrapped: DomainStatsProperty):
           software.amazon.awscdk.services.customerprofiles.CfnDomain.DomainStatsProperty = (wrapped

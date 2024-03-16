@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -14,18 +15,9 @@ public interface IOriginRequestPolicy {
    */
   public fun originRequestPolicyId(): String
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cloudfront.IOriginRequestPolicy,
-  ) : CdkObject(cdkObject), IOriginRequestPolicy {
-    /**
-     * The ID of the origin request policy.
-     */
-    override fun originRequestPolicyId(): String = unwrap(this).getOriginRequestPolicyId()
-  }
-
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.IOriginRequestPolicy):
-        IOriginRequestPolicy = Wrapper(cdkObject)
+        IOriginRequestPolicy = CdkObjectWrappers.wrap(cdkObject) as IOriginRequestPolicy
 
     internal fun unwrap(wrapped: IOriginRequestPolicy):
         software.amazon.awscdk.services.cloudfront.IOriginRequestPolicy = (wrapped as

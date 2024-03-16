@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.backup
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -249,7 +250,7 @@ public interface CfnReportPlanProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.backup.CfnReportPlanProps):
-        CfnReportPlanProps = Wrapper(cdkObject)
+        CfnReportPlanProps = CdkObjectWrappers.wrap(cdkObject) as CfnReportPlanProps
 
     internal fun unwrap(wrapped: CfnReportPlanProps):
         software.amazon.awscdk.services.backup.CfnReportPlanProps = (wrapped as CdkObject).cdkObject

@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1124,7 +1125,8 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.ApacheKafkaClusterProperty):
-          ApacheKafkaClusterProperty = Wrapper(cdkObject)
+          ApacheKafkaClusterProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ApacheKafkaClusterProperty
 
       internal fun unwrap(wrapped: ApacheKafkaClusterProperty):
           software.amazon.awscdk.services.kafkaconnect.CfnConnector.ApacheKafkaClusterProperty =
@@ -1250,7 +1252,8 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.CloudWatchLogsLogDeliveryProperty):
-          CloudWatchLogsLogDeliveryProperty = Wrapper(cdkObject)
+          CloudWatchLogsLogDeliveryProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CloudWatchLogsLogDeliveryProperty
 
       internal fun unwrap(wrapped: CloudWatchLogsLogDeliveryProperty):
           software.amazon.awscdk.services.kafkaconnect.CfnConnector.CloudWatchLogsLogDeliveryProperty
@@ -1402,7 +1405,7 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.S3LogDeliveryProperty):
-          S3LogDeliveryProperty = Wrapper(cdkObject)
+          S3LogDeliveryProperty = CdkObjectWrappers.wrap(cdkObject) as S3LogDeliveryProperty
 
       internal fun unwrap(wrapped: S3LogDeliveryProperty):
           software.amazon.awscdk.services.kafkaconnect.CfnConnector.S3LogDeliveryProperty = (wrapped
@@ -1486,7 +1489,8 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterEncryptionInTransitProperty):
-          KafkaClusterEncryptionInTransitProperty = Wrapper(cdkObject)
+          KafkaClusterEncryptionInTransitProperty = CdkObjectWrappers.wrap(cdkObject) as
+          KafkaClusterEncryptionInTransitProperty
 
       internal fun unwrap(wrapped: KafkaClusterEncryptionInTransitProperty):
           software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterEncryptionInTransitProperty
@@ -1663,7 +1667,7 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.CapacityProperty):
-          CapacityProperty = Wrapper(cdkObject)
+          CapacityProperty = CdkObjectWrappers.wrap(cdkObject) as CapacityProperty
 
       internal fun unwrap(wrapped: CapacityProperty):
           software.amazon.awscdk.services.kafkaconnect.CfnConnector.CapacityProperty = (wrapped as
@@ -1772,7 +1776,8 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerConfigurationProperty):
-          WorkerConfigurationProperty = Wrapper(cdkObject)
+          WorkerConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          WorkerConfigurationProperty
 
       internal fun unwrap(wrapped: WorkerConfigurationProperty):
           software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerConfigurationProperty =
@@ -1899,7 +1904,7 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.VpcProperty):
-          VpcProperty = Wrapper(cdkObject)
+          VpcProperty = CdkObjectWrappers.wrap(cdkObject) as VpcProperty
 
       internal fun unwrap(wrapped: VpcProperty):
           software.amazon.awscdk.services.kafkaconnect.CfnConnector.VpcProperty = (wrapped as
@@ -1984,7 +1989,7 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleOutPolicyProperty):
-          ScaleOutPolicyProperty = Wrapper(cdkObject)
+          ScaleOutPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as ScaleOutPolicyProperty
 
       internal fun unwrap(wrapped: ScaleOutPolicyProperty):
           software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleOutPolicyProperty =
@@ -2069,7 +2074,7 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleInPolicyProperty):
-          ScaleInPolicyProperty = Wrapper(cdkObject)
+          ScaleInPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as ScaleInPolicyProperty
 
       internal fun unwrap(wrapped: ScaleInPolicyProperty):
           software.amazon.awscdk.services.kafkaconnect.CfnConnector.ScaleInPolicyProperty = (wrapped
@@ -2187,7 +2192,8 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.ProvisionedCapacityProperty):
-          ProvisionedCapacityProperty = Wrapper(cdkObject)
+          ProvisionedCapacityProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ProvisionedCapacityProperty
 
       internal fun unwrap(wrapped: ProvisionedCapacityProperty):
           software.amazon.awscdk.services.kafkaconnect.CfnConnector.ProvisionedCapacityProperty =
@@ -2295,7 +2301,7 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.CustomPluginProperty):
-          CustomPluginProperty = Wrapper(cdkObject)
+          CustomPluginProperty = CdkObjectWrappers.wrap(cdkObject) as CustomPluginProperty
 
       internal fun unwrap(wrapped: CustomPluginProperty):
           software.amazon.awscdk.services.kafkaconnect.CfnConnector.CustomPluginProperty = (wrapped
@@ -2425,7 +2431,8 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.FirehoseLogDeliveryProperty):
-          FirehoseLogDeliveryProperty = Wrapper(cdkObject)
+          FirehoseLogDeliveryProperty = CdkObjectWrappers.wrap(cdkObject) as
+          FirehoseLogDeliveryProperty
 
       internal fun unwrap(wrapped: FirehoseLogDeliveryProperty):
           software.amazon.awscdk.services.kafkaconnect.CfnConnector.FirehoseLogDeliveryProperty =
@@ -2518,7 +2525,8 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterClientAuthenticationProperty):
-          KafkaClusterClientAuthenticationProperty = Wrapper(cdkObject)
+          KafkaClusterClientAuthenticationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          KafkaClusterClientAuthenticationProperty
 
       internal fun unwrap(wrapped: KafkaClusterClientAuthenticationProperty):
           software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterClientAuthenticationProperty
@@ -2634,7 +2642,7 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterProperty):
-          KafkaClusterProperty = Wrapper(cdkObject)
+          KafkaClusterProperty = CdkObjectWrappers.wrap(cdkObject) as KafkaClusterProperty
 
       internal fun unwrap(wrapped: KafkaClusterProperty):
           software.amazon.awscdk.services.kafkaconnect.CfnConnector.KafkaClusterProperty = (wrapped
@@ -2868,7 +2876,7 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerLogDeliveryProperty):
-          WorkerLogDeliveryProperty = Wrapper(cdkObject)
+          WorkerLogDeliveryProperty = CdkObjectWrappers.wrap(cdkObject) as WorkerLogDeliveryProperty
 
       internal fun unwrap(wrapped: WorkerLogDeliveryProperty):
           software.amazon.awscdk.services.kafkaconnect.CfnConnector.WorkerLogDeliveryProperty =
@@ -3004,7 +3012,7 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.LogDeliveryProperty):
-          LogDeliveryProperty = Wrapper(cdkObject)
+          LogDeliveryProperty = CdkObjectWrappers.wrap(cdkObject) as LogDeliveryProperty
 
       internal fun unwrap(wrapped: LogDeliveryProperty):
           software.amazon.awscdk.services.kafkaconnect.CfnConnector.LogDeliveryProperty = (wrapped
@@ -3114,7 +3122,7 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.PluginProperty):
-          PluginProperty = Wrapper(cdkObject)
+          PluginProperty = CdkObjectWrappers.wrap(cdkObject) as PluginProperty
 
       internal fun unwrap(wrapped: PluginProperty):
           software.amazon.awscdk.services.kafkaconnect.CfnConnector.PluginProperty = (wrapped as
@@ -3369,7 +3377,7 @@ public open class CfnConnector internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector.AutoScalingProperty):
-          AutoScalingProperty = Wrapper(cdkObject)
+          AutoScalingProperty = CdkObjectWrappers.wrap(cdkObject) as AutoScalingProperty
 
       internal fun unwrap(wrapped: AutoScalingProperty):
           software.amazon.awscdk.services.kafkaconnect.CfnConnector.AutoScalingProperty = (wrapped

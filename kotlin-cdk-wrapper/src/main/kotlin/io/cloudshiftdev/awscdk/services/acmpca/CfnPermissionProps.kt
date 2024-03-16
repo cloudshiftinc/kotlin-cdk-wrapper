@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.acmpca
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -184,7 +185,7 @@ public interface CfnPermissionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CfnPermissionProps):
-        CfnPermissionProps = Wrapper(cdkObject)
+        CfnPermissionProps = CdkObjectWrappers.wrap(cdkObject) as CfnPermissionProps
 
     internal fun unwrap(wrapped: CfnPermissionProps):
         software.amazon.awscdk.services.acmpca.CfnPermissionProps = (wrapped as CdkObject).cdkObject

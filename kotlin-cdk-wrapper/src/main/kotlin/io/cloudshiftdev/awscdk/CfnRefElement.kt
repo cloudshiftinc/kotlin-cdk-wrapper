@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -26,13 +27,9 @@ public abstract class CfnRefElement internal constructor(
    */
   public open fun ref(): String = unwrap(this).getRef()
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.CfnRefElement,
-  ) : CfnRefElement(cdkObject)
-
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.CfnRefElement): CfnRefElement =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as CfnRefElement
 
     internal fun unwrap(wrapped: CfnRefElement): software.amazon.awscdk.CfnRefElement = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.CfnRefElement

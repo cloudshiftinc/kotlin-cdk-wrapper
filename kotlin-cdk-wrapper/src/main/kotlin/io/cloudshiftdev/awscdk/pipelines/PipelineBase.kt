@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.pipelines
 
 import io.cloudshiftdev.awscdk.Stage
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Any
 import kotlin.Boolean
@@ -158,16 +159,12 @@ public abstract class PipelineBase internal constructor(
    */
   public open fun waves(): List<Wave> = unwrap(this).getWaves().map(Wave::wrap)
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.pipelines.PipelineBase,
-  ) : PipelineBase(cdkObject)
-
   public companion object {
     public fun isPipeline(x: Any): Boolean =
         software.amazon.awscdk.pipelines.PipelineBase.isPipeline(x)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.PipelineBase): PipelineBase =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as PipelineBase
 
     internal fun unwrap(wrapped: PipelineBase): software.amazon.awscdk.pipelines.PipelineBase =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.pipelines.PipelineBase

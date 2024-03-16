@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -716,7 +717,7 @@ public open class CfnEnvironmentEC2 internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2.RepositoryProperty):
-          RepositoryProperty = Wrapper(cdkObject)
+          RepositoryProperty = CdkObjectWrappers.wrap(cdkObject) as RepositoryProperty
 
       internal fun unwrap(wrapped: RepositoryProperty):
           software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2.RepositoryProperty = (wrapped as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -680,7 +681,7 @@ public interface CfnStateMachineProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachineProps):
-        CfnStateMachineProps = Wrapper(cdkObject)
+        CfnStateMachineProps = CdkObjectWrappers.wrap(cdkObject) as CfnStateMachineProps
 
     internal fun unwrap(wrapped: CfnStateMachineProps):
         software.amazon.awscdk.services.stepfunctions.CfnStateMachineProps = (wrapped as

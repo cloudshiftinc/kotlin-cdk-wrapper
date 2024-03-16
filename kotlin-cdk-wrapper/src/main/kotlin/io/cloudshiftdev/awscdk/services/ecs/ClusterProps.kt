@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import kotlin.Boolean
 import kotlin.String
@@ -319,7 +320,7 @@ public interface ClusterProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.ClusterProps): ClusterProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as ClusterProps
 
     internal fun unwrap(wrapped: ClusterProps): software.amazon.awscdk.services.ecs.ClusterProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ecs.ClusterProps

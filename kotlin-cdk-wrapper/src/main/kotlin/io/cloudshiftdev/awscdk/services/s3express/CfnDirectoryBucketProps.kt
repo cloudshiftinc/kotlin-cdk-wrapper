@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.s3express
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -199,7 +200,7 @@ public interface CfnDirectoryBucketProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3express.CfnDirectoryBucketProps):
-        CfnDirectoryBucketProps = Wrapper(cdkObject)
+        CfnDirectoryBucketProps = CdkObjectWrappers.wrap(cdkObject) as CfnDirectoryBucketProps
 
     internal fun unwrap(wrapped: CfnDirectoryBucketProps):
         software.amazon.awscdk.services.s3express.CfnDirectoryBucketProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Deprecated
 import kotlin.Number
@@ -1135,7 +1136,7 @@ public interface VpcProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.VpcProps): VpcProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as VpcProps
 
     internal fun unwrap(wrapped: VpcProps): software.amazon.awscdk.services.ec2.VpcProps = (wrapped
         as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.VpcProps

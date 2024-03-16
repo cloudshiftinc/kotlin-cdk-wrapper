@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -384,7 +385,7 @@ public open class CfnPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan.ChannelTargetInfoProperty):
-          ChannelTargetInfoProperty = Wrapper(cdkObject)
+          ChannelTargetInfoProperty = CdkObjectWrappers.wrap(cdkObject) as ChannelTargetInfoProperty
 
       internal fun unwrap(wrapped: ChannelTargetInfoProperty):
           software.amazon.awscdk.services.ssmcontacts.CfnPlan.ChannelTargetInfoProperty = (wrapped
@@ -558,7 +559,7 @@ public open class CfnPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan.TargetsProperty):
-          TargetsProperty = Wrapper(cdkObject)
+          TargetsProperty = CdkObjectWrappers.wrap(cdkObject) as TargetsProperty
 
       internal fun unwrap(wrapped: TargetsProperty):
           software.amazon.awscdk.services.ssmcontacts.CfnPlan.TargetsProperty = (wrapped as
@@ -684,7 +685,7 @@ public open class CfnPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan.ContactTargetInfoProperty):
-          ContactTargetInfoProperty = Wrapper(cdkObject)
+          ContactTargetInfoProperty = CdkObjectWrappers.wrap(cdkObject) as ContactTargetInfoProperty
 
       internal fun unwrap(wrapped: ContactTargetInfoProperty):
           software.amazon.awscdk.services.ssmcontacts.CfnPlan.ContactTargetInfoProperty = (wrapped
@@ -835,7 +836,7 @@ public open class CfnPlan internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ssmcontacts.CfnPlan.StageProperty):
-          StageProperty = Wrapper(cdkObject)
+          StageProperty = CdkObjectWrappers.wrap(cdkObject) as StageProperty
 
       internal fun unwrap(wrapped: StageProperty):
           software.amazon.awscdk.services.ssmcontacts.CfnPlan.StageProperty = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.secretsmanager
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.String
 import kotlin.Unit
@@ -102,7 +103,7 @@ public interface ReplicaRegion {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.secretsmanager.ReplicaRegion):
-        ReplicaRegion = Wrapper(cdkObject)
+        ReplicaRegion = CdkObjectWrappers.wrap(cdkObject) as ReplicaRegion
 
     internal fun unwrap(wrapped: ReplicaRegion):
         software.amazon.awscdk.services.secretsmanager.ReplicaRegion = (wrapped as

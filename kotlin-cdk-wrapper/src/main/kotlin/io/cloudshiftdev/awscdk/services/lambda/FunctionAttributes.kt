@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Boolean
@@ -311,7 +312,7 @@ public interface FunctionAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.FunctionAttributes):
-        FunctionAttributes = Wrapper(cdkObject)
+        FunctionAttributes = CdkObjectWrappers.wrap(cdkObject) as FunctionAttributes
 
     internal fun unwrap(wrapped: FunctionAttributes):
         software.amazon.awscdk.services.lambda.FunctionAttributes = (wrapped as CdkObject).cdkObject

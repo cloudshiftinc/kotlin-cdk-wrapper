@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -406,7 +407,7 @@ public interface CfnMatchingWorkflowProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflowProps):
-        CfnMatchingWorkflowProps = Wrapper(cdkObject)
+        CfnMatchingWorkflowProps = CdkObjectWrappers.wrap(cdkObject) as CfnMatchingWorkflowProps
 
     internal fun unwrap(wrapped: CfnMatchingWorkflowProps):
         software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflowProps = (wrapped as

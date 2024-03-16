@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.Artifact
 import kotlin.String
 import kotlin.Unit
@@ -146,7 +147,8 @@ public interface CodeDeployEcsContainerImageInput {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeDeployEcsContainerImageInput):
-        CodeDeployEcsContainerImageInput = Wrapper(cdkObject)
+        CodeDeployEcsContainerImageInput = CdkObjectWrappers.wrap(cdkObject) as
+        CodeDeployEcsContainerImageInput
 
     internal fun unwrap(wrapped: CodeDeployEcsContainerImageInput):
         software.amazon.awscdk.services.codepipeline.actions.CodeDeployEcsContainerImageInput =

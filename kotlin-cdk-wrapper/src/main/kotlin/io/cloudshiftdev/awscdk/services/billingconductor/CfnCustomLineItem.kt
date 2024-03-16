@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -705,7 +706,7 @@ public open class CfnCustomLineItem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty):
-          LineItemFilterProperty = Wrapper(cdkObject)
+          LineItemFilterProperty = CdkObjectWrappers.wrap(cdkObject) as LineItemFilterProperty
 
       internal fun unwrap(wrapped: LineItemFilterProperty):
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.LineItemFilterProperty
@@ -791,7 +792,8 @@ public open class CfnCustomLineItem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty):
-          CustomLineItemFlatChargeDetailsProperty = Wrapper(cdkObject)
+          CustomLineItemFlatChargeDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CustomLineItemFlatChargeDetailsProperty
 
       internal fun unwrap(wrapped: CustomLineItemFlatChargeDetailsProperty):
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemFlatChargeDetailsProperty
@@ -1066,7 +1068,8 @@ public open class CfnCustomLineItem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemChargeDetailsProperty):
-          CustomLineItemChargeDetailsProperty = Wrapper(cdkObject)
+          CustomLineItemChargeDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CustomLineItemChargeDetailsProperty
 
       internal fun unwrap(wrapped: CustomLineItemChargeDetailsProperty):
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemChargeDetailsProperty
@@ -1186,7 +1189,8 @@ public open class CfnCustomLineItem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.BillingPeriodRangeProperty):
-          BillingPeriodRangeProperty = Wrapper(cdkObject)
+          BillingPeriodRangeProperty = CdkObjectWrappers.wrap(cdkObject) as
+          BillingPeriodRangeProperty
 
       internal fun unwrap(wrapped: BillingPeriodRangeProperty):
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.BillingPeriodRangeProperty
@@ -1325,7 +1329,8 @@ public open class CfnCustomLineItem internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemPercentageChargeDetailsProperty):
-          CustomLineItemPercentageChargeDetailsProperty = Wrapper(cdkObject)
+          CustomLineItemPercentageChargeDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CustomLineItemPercentageChargeDetailsProperty
 
       internal fun unwrap(wrapped: CustomLineItemPercentageChargeDetailsProperty):
           software.amazon.awscdk.services.billingconductor.CfnCustomLineItem.CustomLineItemPercentageChargeDetailsProperty

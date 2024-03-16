@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.controltower
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -149,7 +150,7 @@ public interface CfnLandingZoneProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.controltower.CfnLandingZoneProps):
-        CfnLandingZoneProps = Wrapper(cdkObject)
+        CfnLandingZoneProps = CdkObjectWrappers.wrap(cdkObject) as CfnLandingZoneProps
 
     internal fun unwrap(wrapped: CfnLandingZoneProps):
         software.amazon.awscdk.services.controltower.CfnLandingZoneProps = (wrapped as

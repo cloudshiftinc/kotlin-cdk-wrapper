@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.s3
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Unit
 
@@ -146,7 +147,7 @@ public interface BlockPublicAccessOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.BlockPublicAccessOptions):
-        BlockPublicAccessOptions = Wrapper(cdkObject)
+        BlockPublicAccessOptions = CdkObjectWrappers.wrap(cdkObject) as BlockPublicAccessOptions
 
     internal fun unwrap(wrapped: BlockPublicAccessOptions):
         software.amazon.awscdk.services.s3.BlockPublicAccessOptions = (wrapped as

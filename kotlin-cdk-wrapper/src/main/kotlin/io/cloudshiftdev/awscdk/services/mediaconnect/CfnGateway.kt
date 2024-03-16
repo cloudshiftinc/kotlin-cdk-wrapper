@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -405,7 +406,7 @@ public open class CfnGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnGateway.GatewayNetworkProperty):
-          GatewayNetworkProperty = Wrapper(cdkObject)
+          GatewayNetworkProperty = CdkObjectWrappers.wrap(cdkObject) as GatewayNetworkProperty
 
       internal fun unwrap(wrapped: GatewayNetworkProperty):
           software.amazon.awscdk.services.mediaconnect.CfnGateway.GatewayNetworkProperty = (wrapped

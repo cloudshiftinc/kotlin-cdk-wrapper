@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -813,7 +814,7 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV3Property):
-          ExtensionsV3Property = Wrapper(cdkObject)
+          ExtensionsV3Property = CdkObjectWrappers.wrap(cdkObject) as ExtensionsV3Property
 
       internal fun unwrap(wrapped: ExtensionsV3Property):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV3Property = (wrapped
@@ -1090,7 +1091,7 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageFlagsProperty):
-          KeyUsageFlagsProperty = Wrapper(cdkObject)
+          KeyUsageFlagsProperty = CdkObjectWrappers.wrap(cdkObject) as KeyUsageFlagsProperty
 
       internal fun unwrap(wrapped: KeyUsageFlagsProperty):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageFlagsProperty =
@@ -1700,7 +1701,7 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV2Property):
-          TemplateV2Property = Wrapper(cdkObject)
+          TemplateV2Property = CdkObjectWrappers.wrap(cdkObject) as TemplateV2Property
 
       internal fun unwrap(wrapped: TemplateV2Property):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV2Property = (wrapped
@@ -1863,7 +1864,7 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageProperty):
-          KeyUsageProperty = Wrapper(cdkObject)
+          KeyUsageProperty = CdkObjectWrappers.wrap(cdkObject) as KeyUsageProperty
 
       internal fun unwrap(wrapped: KeyUsageProperty):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsageProperty = (wrapped as
@@ -2518,7 +2519,7 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV3Property):
-          TemplateV3Property = Wrapper(cdkObject)
+          TemplateV3Property = CdkObjectWrappers.wrap(cdkObject) as TemplateV3Property
 
       internal fun unwrap(wrapped: TemplateV3Property):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV3Property = (wrapped
@@ -3044,7 +3045,8 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateDefinitionProperty):
-          TemplateDefinitionProperty = Wrapper(cdkObject)
+          TemplateDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          TemplateDefinitionProperty
 
       internal fun unwrap(wrapped: TemplateDefinitionProperty):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateDefinitionProperty =
@@ -3208,7 +3210,7 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyProperty):
-          KeyUsagePropertyProperty = Wrapper(cdkObject)
+          KeyUsagePropertyProperty = CdkObjectWrappers.wrap(cdkObject) as KeyUsagePropertyProperty
 
       internal fun unwrap(wrapped: KeyUsagePropertyProperty):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyProperty =
@@ -3668,7 +3670,8 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV2Property):
-          SubjectNameFlagsV2Property = Wrapper(cdkObject)
+          SubjectNameFlagsV2Property = CdkObjectWrappers.wrap(cdkObject) as
+          SubjectNameFlagsV2Property
 
       internal fun unwrap(wrapped: SubjectNameFlagsV2Property):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV2Property =
@@ -4128,7 +4131,8 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV4Property):
-          SubjectNameFlagsV4Property = Wrapper(cdkObject)
+          SubjectNameFlagsV4Property = CdkObjectWrappers.wrap(cdkObject) as
+          SubjectNameFlagsV4Property
 
       internal fun unwrap(wrapped: SubjectNameFlagsV4Property):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV4Property =
@@ -4278,7 +4282,7 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV4Property):
-          GeneralFlagsV4Property = Wrapper(cdkObject)
+          GeneralFlagsV4Property = CdkObjectWrappers.wrap(cdkObject) as GeneralFlagsV4Property
 
       internal fun unwrap(wrapped: GeneralFlagsV4Property):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV4Property =
@@ -4438,7 +4442,8 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV2Property):
-          PrivateKeyAttributesV2Property = Wrapper(cdkObject)
+          PrivateKeyAttributesV2Property = CdkObjectWrappers.wrap(cdkObject) as
+          PrivateKeyAttributesV2Property
 
       internal fun unwrap(wrapped: PrivateKeyAttributesV2Property):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV2Property
@@ -4702,7 +4707,8 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV4Property):
-          PrivateKeyAttributesV4Property = Wrapper(cdkObject)
+          PrivateKeyAttributesV4Property = CdkObjectWrappers.wrap(cdkObject) as
+          PrivateKeyAttributesV4Property
 
       internal fun unwrap(wrapped: PrivateKeyAttributesV4Property):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV4Property
@@ -4966,7 +4972,8 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV3Property):
-          PrivateKeyAttributesV3Property = Wrapper(cdkObject)
+          PrivateKeyAttributesV3Property = CdkObjectWrappers.wrap(cdkObject) as
+          PrivateKeyAttributesV3Property
 
       internal fun unwrap(wrapped: PrivateKeyAttributesV3Property):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyAttributesV3Property
@@ -5256,7 +5263,7 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV3Property):
-          EnrollmentFlagsV3Property = Wrapper(cdkObject)
+          EnrollmentFlagsV3Property = CdkObjectWrappers.wrap(cdkObject) as EnrollmentFlagsV3Property
 
       internal fun unwrap(wrapped: EnrollmentFlagsV3Property):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV3Property =
@@ -5546,7 +5553,7 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV2Property):
-          EnrollmentFlagsV2Property = Wrapper(cdkObject)
+          EnrollmentFlagsV2Property = CdkObjectWrappers.wrap(cdkObject) as EnrollmentFlagsV2Property
 
       internal fun unwrap(wrapped: EnrollmentFlagsV2Property):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV2Property =
@@ -5655,7 +5662,7 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPolicyProperty):
-          ApplicationPolicyProperty = Wrapper(cdkObject)
+          ApplicationPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as ApplicationPolicyProperty
 
       internal fun unwrap(wrapped: ApplicationPolicyProperty):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPolicyProperty =
@@ -5802,7 +5809,8 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPoliciesProperty):
-          ApplicationPoliciesProperty = Wrapper(cdkObject)
+          ApplicationPoliciesProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ApplicationPoliciesProperty
 
       internal fun unwrap(wrapped: ApplicationPoliciesProperty):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ApplicationPoliciesProperty =
@@ -5975,7 +5983,8 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyFlagsProperty):
-          KeyUsagePropertyFlagsProperty = Wrapper(cdkObject)
+          KeyUsagePropertyFlagsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          KeyUsagePropertyFlagsProperty
 
       internal fun unwrap(wrapped: KeyUsagePropertyFlagsProperty):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.KeyUsagePropertyFlagsProperty =
@@ -6171,7 +6180,7 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV2Property):
-          ExtensionsV2Property = Wrapper(cdkObject)
+          ExtensionsV2Property = CdkObjectWrappers.wrap(cdkObject) as ExtensionsV2Property
 
       internal fun unwrap(wrapped: ExtensionsV2Property):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV2Property = (wrapped
@@ -6631,7 +6640,8 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV3Property):
-          SubjectNameFlagsV3Property = Wrapper(cdkObject)
+          SubjectNameFlagsV3Property = CdkObjectWrappers.wrap(cdkObject) as
+          SubjectNameFlagsV3Property
 
       internal fun unwrap(wrapped: SubjectNameFlagsV3Property):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.SubjectNameFlagsV3Property =
@@ -6851,7 +6861,7 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV3Property):
-          PrivateKeyFlagsV3Property = Wrapper(cdkObject)
+          PrivateKeyFlagsV3Property = CdkObjectWrappers.wrap(cdkObject) as PrivateKeyFlagsV3Property
 
       internal fun unwrap(wrapped: PrivateKeyFlagsV3Property):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV3Property =
@@ -7018,7 +7028,7 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV2Property):
-          PrivateKeyFlagsV2Property = Wrapper(cdkObject)
+          PrivateKeyFlagsV2Property = CdkObjectWrappers.wrap(cdkObject) as PrivateKeyFlagsV2Property
 
       internal fun unwrap(wrapped: PrivateKeyFlagsV2Property):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV2Property =
@@ -7308,7 +7318,7 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV4Property):
-          EnrollmentFlagsV4Property = Wrapper(cdkObject)
+          EnrollmentFlagsV4Property = CdkObjectWrappers.wrap(cdkObject) as EnrollmentFlagsV4Property
 
       internal fun unwrap(wrapped: EnrollmentFlagsV4Property):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.EnrollmentFlagsV4Property =
@@ -7458,7 +7468,7 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV2Property):
-          GeneralFlagsV2Property = Wrapper(cdkObject)
+          GeneralFlagsV2Property = CdkObjectWrappers.wrap(cdkObject) as GeneralFlagsV2Property
 
       internal fun unwrap(wrapped: GeneralFlagsV2Property):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV2Property =
@@ -8135,7 +8145,7 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV4Property):
-          TemplateV4Property = Wrapper(cdkObject)
+          TemplateV4Property = CdkObjectWrappers.wrap(cdkObject) as TemplateV4Property
 
       internal fun unwrap(wrapped: TemplateV4Property):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.TemplateV4Property = (wrapped
@@ -8383,7 +8393,8 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.CertificateValidityProperty):
-          CertificateValidityProperty = Wrapper(cdkObject)
+          CertificateValidityProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CertificateValidityProperty
 
       internal fun unwrap(wrapped: CertificateValidityProperty):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.CertificateValidityProperty =
@@ -8699,7 +8710,7 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV4Property):
-          PrivateKeyFlagsV4Property = Wrapper(cdkObject)
+          PrivateKeyFlagsV4Property = CdkObjectWrappers.wrap(cdkObject) as PrivateKeyFlagsV4Property
 
       internal fun unwrap(wrapped: PrivateKeyFlagsV4Property):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.PrivateKeyFlagsV4Property =
@@ -8895,7 +8906,7 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV4Property):
-          ExtensionsV4Property = Wrapper(cdkObject)
+          ExtensionsV4Property = CdkObjectWrappers.wrap(cdkObject) as ExtensionsV4Property
 
       internal fun unwrap(wrapped: ExtensionsV4Property):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ExtensionsV4Property = (wrapped
@@ -9045,7 +9056,7 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV3Property):
-          GeneralFlagsV3Property = Wrapper(cdkObject)
+          GeneralFlagsV3Property = CdkObjectWrappers.wrap(cdkObject) as GeneralFlagsV3Property
 
       internal fun unwrap(wrapped: GeneralFlagsV3Property):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.GeneralFlagsV3Property =
@@ -9167,7 +9178,7 @@ public open class CfnTemplate internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ValidityPeriodProperty):
-          ValidityPeriodProperty = Wrapper(cdkObject)
+          ValidityPeriodProperty = CdkObjectWrappers.wrap(cdkObject) as ValidityPeriodProperty
 
       internal fun unwrap(wrapped: ValidityPeriodProperty):
           software.amazon.awscdk.services.pcaconnectorad.CfnTemplate.ValidityPeriodProperty =

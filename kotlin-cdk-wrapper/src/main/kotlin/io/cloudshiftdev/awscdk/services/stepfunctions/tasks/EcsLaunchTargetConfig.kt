@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -80,7 +81,7 @@ public interface EcsLaunchTargetConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EcsLaunchTargetConfig):
-        EcsLaunchTargetConfig = Wrapper(cdkObject)
+        EcsLaunchTargetConfig = CdkObjectWrappers.wrap(cdkObject) as EcsLaunchTargetConfig
 
     internal fun unwrap(wrapped: EcsLaunchTargetConfig):
         software.amazon.awscdk.services.stepfunctions.tasks.EcsLaunchTargetConfig = (wrapped as

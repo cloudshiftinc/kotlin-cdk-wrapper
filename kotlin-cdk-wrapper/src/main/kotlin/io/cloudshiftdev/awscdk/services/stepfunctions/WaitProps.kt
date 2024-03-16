@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -136,7 +137,7 @@ public interface WaitProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.WaitProps): WaitProps
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as WaitProps
 
     internal fun unwrap(wrapped: WaitProps): software.amazon.awscdk.services.stepfunctions.WaitProps
         = (wrapped as CdkObject).cdkObject as

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
@@ -80,13 +81,9 @@ public abstract class QualifiedFunctionBase internal constructor(
   public override fun resourceArnsForGrantInvoke(): List<String> =
       unwrap(this).getResourceArnsForGrantInvoke()
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.lambda.QualifiedFunctionBase,
-  ) : QualifiedFunctionBase(cdkObject)
-
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.QualifiedFunctionBase):
-        QualifiedFunctionBase = Wrapper(cdkObject)
+        QualifiedFunctionBase = CdkObjectWrappers.wrap(cdkObject) as QualifiedFunctionBase
 
     internal fun unwrap(wrapped: QualifiedFunctionBase):
         software.amazon.awscdk.services.lambda.QualifiedFunctionBase = (wrapped as

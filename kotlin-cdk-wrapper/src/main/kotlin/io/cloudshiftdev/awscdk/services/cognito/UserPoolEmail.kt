@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -25,10 +26,6 @@ import kotlin.jvm.JvmName
 public abstract class UserPoolEmail internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.cognito.UserPoolEmail,
 ) : CdkObject(cdkObject) {
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.cognito.UserPoolEmail,
-  ) : UserPoolEmail(cdkObject)
-
   public companion object {
     public fun withCognito(): UserPoolEmail =
         software.amazon.awscdk.services.cognito.UserPoolEmail.withCognito().let(UserPoolEmail::wrap)
@@ -45,7 +42,7 @@ public abstract class UserPoolEmail internal constructor(
         withSes(UserPoolSESOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.UserPoolEmail):
-        UserPoolEmail = Wrapper(cdkObject)
+        UserPoolEmail = CdkObjectWrappers.wrap(cdkObject) as UserPoolEmail
 
     internal fun unwrap(wrapped: UserPoolEmail):
         software.amazon.awscdk.services.cognito.UserPoolEmail = (wrapped as CdkObject).cdkObject as

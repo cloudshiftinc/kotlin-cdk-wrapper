@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.List
@@ -32,11 +33,6 @@ public abstract class ListenerCondition internal constructor(
    * Render the raw Cfn listener rule condition object.
    */
   public open fun renderRawCondition(): Any = unwrap(this).renderRawCondition()
-
-  private class Wrapper(
-    override val cdkObject:
-        software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCondition,
-  ) : ListenerCondition(cdkObject)
 
   public companion object {
     public fun hostHeaders(values: List<String>): ListenerCondition =
@@ -73,7 +69,7 @@ public abstract class ListenerCondition internal constructor(
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCondition):
-        ListenerCondition = Wrapper(cdkObject)
+        ListenerCondition = CdkObjectWrappers.wrap(cdkObject) as ListenerCondition
 
     internal fun unwrap(wrapped: ListenerCondition):
         software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCondition = (wrapped as

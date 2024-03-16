@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigatewayv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -106,7 +107,7 @@ public interface ThrottleSettings {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.ThrottleSettings):
-        ThrottleSettings = Wrapper(cdkObject)
+        ThrottleSettings = CdkObjectWrappers.wrap(cdkObject) as ThrottleSettings
 
     internal fun unwrap(wrapped: ThrottleSettings):
         software.amazon.awscdk.services.apigatewayv2.ThrottleSettings = (wrapped as

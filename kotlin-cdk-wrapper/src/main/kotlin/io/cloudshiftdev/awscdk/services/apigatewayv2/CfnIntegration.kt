@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -1071,7 +1072,8 @@ public open class CfnIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterListProperty):
-          ResponseParameterListProperty = Wrapper(cdkObject)
+          ResponseParameterListProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ResponseParameterListProperty
 
       internal fun unwrap(wrapped: ResponseParameterListProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterListProperty
@@ -1169,7 +1171,7 @@ public open class CfnIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegration.TlsConfigProperty):
-          TlsConfigProperty = Wrapper(cdkObject)
+          TlsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as TlsConfigProperty
 
       internal fun unwrap(wrapped: TlsConfigProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnIntegration.TlsConfigProperty = (wrapped
@@ -1268,7 +1270,7 @@ public open class CfnIntegration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterProperty):
-          ResponseParameterProperty = Wrapper(cdkObject)
+          ResponseParameterProperty = CdkObjectWrappers.wrap(cdkObject) as ResponseParameterProperty
 
       internal fun unwrap(wrapped: ResponseParameterProperty):
           software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterProperty =

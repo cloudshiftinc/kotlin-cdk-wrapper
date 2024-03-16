@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecs.patterns
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.certificatemanager.ICertificate
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
@@ -1368,7 +1369,8 @@ public interface ApplicationLoadBalancedFargateServiceProps :
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedFargateServiceProps):
-        ApplicationLoadBalancedFargateServiceProps = Wrapper(cdkObject)
+        ApplicationLoadBalancedFargateServiceProps = CdkObjectWrappers.wrap(cdkObject) as
+        ApplicationLoadBalancedFargateServiceProps
 
     internal fun unwrap(wrapped: ApplicationLoadBalancedFargateServiceProps):
         software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedFargateServiceProps =

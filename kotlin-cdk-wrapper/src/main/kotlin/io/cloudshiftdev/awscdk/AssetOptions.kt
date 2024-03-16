@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -255,7 +256,7 @@ public interface AssetOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.AssetOptions): AssetOptions =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as AssetOptions
 
     internal fun unwrap(wrapped: AssetOptions): software.amazon.awscdk.AssetOptions = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.AssetOptions

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -969,7 +970,7 @@ public open class CfnImageBuilder internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder.DomainJoinInfoProperty):
-          DomainJoinInfoProperty = Wrapper(cdkObject)
+          DomainJoinInfoProperty = CdkObjectWrappers.wrap(cdkObject) as DomainJoinInfoProperty
 
       internal fun unwrap(wrapped: DomainJoinInfoProperty):
           software.amazon.awscdk.services.appstream.CfnImageBuilder.DomainJoinInfoProperty =
@@ -1081,7 +1082,7 @@ public open class CfnImageBuilder internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty):
-          AccessEndpointProperty = Wrapper(cdkObject)
+          AccessEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as AccessEndpointProperty
 
       internal fun unwrap(wrapped: AccessEndpointProperty):
           software.amazon.awscdk.services.appstream.CfnImageBuilder.AccessEndpointProperty =
@@ -1225,7 +1226,7 @@ public open class CfnImageBuilder internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.appstream.CfnImageBuilder.VpcConfigProperty):
-          VpcConfigProperty = Wrapper(cdkObject)
+          VpcConfigProperty = CdkObjectWrappers.wrap(cdkObject) as VpcConfigProperty
 
       internal fun unwrap(wrapped: VpcConfigProperty):
           software.amazon.awscdk.services.appstream.CfnImageBuilder.VpcConfigProperty = (wrapped as

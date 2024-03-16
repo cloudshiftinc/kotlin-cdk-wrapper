@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.servicediscovery.NamespaceType
 import kotlin.Boolean
@@ -176,7 +177,7 @@ public interface CloudMapNamespaceOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CloudMapNamespaceOptions):
-        CloudMapNamespaceOptions = Wrapper(cdkObject)
+        CloudMapNamespaceOptions = CdkObjectWrappers.wrap(cdkObject) as CloudMapNamespaceOptions
 
     internal fun unwrap(wrapped: CloudMapNamespaceOptions):
         software.amazon.awscdk.services.ecs.CloudMapNamespaceOptions = (wrapped as

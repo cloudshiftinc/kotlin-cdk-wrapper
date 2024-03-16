@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -753,7 +754,7 @@ public open class CfnConnection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnConnection.ConnectionInputProperty):
-          ConnectionInputProperty = Wrapper(cdkObject)
+          ConnectionInputProperty = CdkObjectWrappers.wrap(cdkObject) as ConnectionInputProperty
 
       internal fun unwrap(wrapped: ConnectionInputProperty):
           software.amazon.awscdk.services.glue.CfnConnection.ConnectionInputProperty = (wrapped as
@@ -914,7 +915,8 @@ public open class CfnConnection internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnConnection.PhysicalConnectionRequirementsProperty):
-          PhysicalConnectionRequirementsProperty = Wrapper(cdkObject)
+          PhysicalConnectionRequirementsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          PhysicalConnectionRequirementsProperty
 
       internal fun unwrap(wrapped: PhysicalConnectionRequirementsProperty):
           software.amazon.awscdk.services.glue.CfnConnection.PhysicalConnectionRequirementsProperty

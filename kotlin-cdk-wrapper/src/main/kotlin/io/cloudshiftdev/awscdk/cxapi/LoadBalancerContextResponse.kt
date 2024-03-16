@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cxapi
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -198,7 +199,8 @@ public interface LoadBalancerContextResponse {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.LoadBalancerContextResponse):
-        LoadBalancerContextResponse = Wrapper(cdkObject)
+        LoadBalancerContextResponse = CdkObjectWrappers.wrap(cdkObject) as
+        LoadBalancerContextResponse
 
     internal fun unwrap(wrapped: LoadBalancerContextResponse):
         software.amazon.awscdk.cxapi.LoadBalancerContextResponse = (wrapped as CdkObject).cdkObject

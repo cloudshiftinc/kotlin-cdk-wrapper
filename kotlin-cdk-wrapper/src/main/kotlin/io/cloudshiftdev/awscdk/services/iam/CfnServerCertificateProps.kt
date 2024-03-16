@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.iam
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -373,7 +374,7 @@ public interface CfnServerCertificateProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.CfnServerCertificateProps):
-        CfnServerCertificateProps = Wrapper(cdkObject)
+        CfnServerCertificateProps = CdkObjectWrappers.wrap(cdkObject) as CfnServerCertificateProps
 
     internal fun unwrap(wrapped: CfnServerCertificateProps):
         software.amazon.awscdk.services.iam.CfnServerCertificateProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -264,7 +265,7 @@ public interface ParallelProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.ParallelProps):
-        ParallelProps = Wrapper(cdkObject)
+        ParallelProps = CdkObjectWrappers.wrap(cdkObject) as ParallelProps
 
     internal fun unwrap(wrapped: ParallelProps):
         software.amazon.awscdk.services.stepfunctions.ParallelProps = (wrapped as

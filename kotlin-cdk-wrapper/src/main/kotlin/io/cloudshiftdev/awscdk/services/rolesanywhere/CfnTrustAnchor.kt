@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -555,7 +556,7 @@ public open class CfnTrustAnchor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty):
-          SourceDataProperty = Wrapper(cdkObject)
+          SourceDataProperty = CdkObjectWrappers.wrap(cdkObject) as SourceDataProperty
 
       internal fun unwrap(wrapped: SourceDataProperty):
           software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceDataProperty = (wrapped
@@ -768,7 +769,8 @@ public open class CfnTrustAnchor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.NotificationSettingProperty):
-          NotificationSettingProperty = Wrapper(cdkObject)
+          NotificationSettingProperty = CdkObjectWrappers.wrap(cdkObject) as
+          NotificationSettingProperty
 
       internal fun unwrap(wrapped: NotificationSettingProperty):
           software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.NotificationSettingProperty =
@@ -912,7 +914,7 @@ public open class CfnTrustAnchor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceProperty):
-          SourceProperty = Wrapper(cdkObject)
+          SourceProperty = CdkObjectWrappers.wrap(cdkObject) as SourceProperty
 
       internal fun unwrap(wrapped: SourceProperty):
           software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor.SourceProperty = (wrapped as

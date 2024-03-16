@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 
 import io.cloudshiftdev.awscdk.CfnCreationPolicy
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -57,10 +58,6 @@ public abstract class Signals internal constructor(
   public open fun renderCreationPolicy(renderOptions: RenderSignalsOptions.Builder.() -> Unit):
       CfnCreationPolicy = renderCreationPolicy(RenderSignalsOptions(renderOptions))
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.Signals,
-  ) : Signals(cdkObject)
-
   public companion object {
     public fun waitForAll(): Signals =
         software.amazon.awscdk.services.autoscaling.Signals.waitForAll().let(Signals::wrap)
@@ -97,7 +94,7 @@ public abstract class Signals internal constructor(
         waitForMinCapacity(SignalsOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.Signals): Signals =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as Signals
 
     internal fun unwrap(wrapped: Signals): software.amazon.awscdk.services.autoscaling.Signals =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.autoscaling.Signals

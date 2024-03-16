@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.sns
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.sqs.IQueue
 import io.cloudshiftdev.constructs.Construct
 import io.cloudshiftdev.constructs.IDependable
@@ -392,7 +393,7 @@ public interface TopicSubscriptionConfig : SubscriptionOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sns.TopicSubscriptionConfig):
-        TopicSubscriptionConfig = Wrapper(cdkObject)
+        TopicSubscriptionConfig = CdkObjectWrappers.wrap(cdkObject) as TopicSubscriptionConfig
 
     internal fun unwrap(wrapped: TopicSubscriptionConfig):
         software.amazon.awscdk.services.sns.TopicSubscriptionConfig = (wrapped as

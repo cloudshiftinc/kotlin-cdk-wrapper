@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -883,7 +884,7 @@ public open class CfnAssessment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty):
-          AWSAccountProperty = Wrapper(cdkObject)
+          AWSAccountProperty = CdkObjectWrappers.wrap(cdkObject) as AWSAccountProperty
 
       internal fun unwrap(wrapped: AWSAccountProperty):
           software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSAccountProperty = (wrapped
@@ -1289,7 +1290,7 @@ public open class CfnAssessment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.DelegationProperty):
-          DelegationProperty = Wrapper(cdkObject)
+          DelegationProperty = CdkObjectWrappers.wrap(cdkObject) as DelegationProperty
 
       internal fun unwrap(wrapped: DelegationProperty):
           software.amazon.awscdk.services.auditmanager.CfnAssessment.DelegationProperty = (wrapped
@@ -1401,7 +1402,8 @@ public open class CfnAssessment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty):
-          AssessmentReportsDestinationProperty = Wrapper(cdkObject)
+          AssessmentReportsDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AssessmentReportsDestinationProperty
 
       internal fun unwrap(wrapped: AssessmentReportsDestinationProperty):
           software.amazon.awscdk.services.auditmanager.CfnAssessment.AssessmentReportsDestinationProperty
@@ -1559,7 +1561,7 @@ public open class CfnAssessment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty):
-          ScopeProperty = Wrapper(cdkObject)
+          ScopeProperty = CdkObjectWrappers.wrap(cdkObject) as ScopeProperty
 
       internal fun unwrap(wrapped: ScopeProperty):
           software.amazon.awscdk.services.auditmanager.CfnAssessment.ScopeProperty = (wrapped as
@@ -1695,7 +1697,7 @@ public open class CfnAssessment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty):
-          RoleProperty = Wrapper(cdkObject)
+          RoleProperty = CdkObjectWrappers.wrap(cdkObject) as RoleProperty
 
       internal fun unwrap(wrapped: RoleProperty):
           software.amazon.awscdk.services.auditmanager.CfnAssessment.RoleProperty = (wrapped as
@@ -1777,7 +1779,7 @@ public open class CfnAssessment internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty):
-          AWSServiceProperty = Wrapper(cdkObject)
+          AWSServiceProperty = CdkObjectWrappers.wrap(cdkObject) as AWSServiceProperty
 
       internal fun unwrap(wrapped: AWSServiceProperty):
           software.amazon.awscdk.services.auditmanager.CfnAssessment.AWSServiceProperty = (wrapped

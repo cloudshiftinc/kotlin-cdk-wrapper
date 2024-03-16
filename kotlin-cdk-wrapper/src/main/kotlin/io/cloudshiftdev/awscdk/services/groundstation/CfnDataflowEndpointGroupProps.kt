@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.Unit
@@ -275,7 +276,8 @@ public interface CfnDataflowEndpointGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroupProps):
-        CfnDataflowEndpointGroupProps = Wrapper(cdkObject)
+        CfnDataflowEndpointGroupProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnDataflowEndpointGroupProps
 
     internal fun unwrap(wrapped: CfnDataflowEndpointGroupProps):
         software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroupProps = (wrapped as

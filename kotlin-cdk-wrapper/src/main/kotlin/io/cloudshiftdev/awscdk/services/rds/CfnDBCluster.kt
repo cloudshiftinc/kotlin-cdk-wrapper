@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -4415,7 +4416,7 @@ public open class CfnDBCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster.EndpointProperty):
-          EndpointProperty = Wrapper(cdkObject)
+          EndpointProperty = CdkObjectWrappers.wrap(cdkObject) as EndpointProperty
 
       internal fun unwrap(wrapped: EndpointProperty):
           software.amazon.awscdk.services.rds.CfnDBCluster.EndpointProperty = (wrapped as
@@ -4587,7 +4588,8 @@ public open class CfnDBCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster.ServerlessV2ScalingConfigurationProperty):
-          ServerlessV2ScalingConfigurationProperty = Wrapper(cdkObject)
+          ServerlessV2ScalingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ServerlessV2ScalingConfigurationProperty
 
       internal fun unwrap(wrapped: ServerlessV2ScalingConfigurationProperty):
           software.amazon.awscdk.services.rds.CfnDBCluster.ServerlessV2ScalingConfigurationProperty
@@ -4701,7 +4703,7 @@ public open class CfnDBCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster.MasterUserSecretProperty):
-          MasterUserSecretProperty = Wrapper(cdkObject)
+          MasterUserSecretProperty = CdkObjectWrappers.wrap(cdkObject) as MasterUserSecretProperty
 
       internal fun unwrap(wrapped: MasterUserSecretProperty):
           software.amazon.awscdk.services.rds.CfnDBCluster.MasterUserSecretProperty = (wrapped as
@@ -5128,7 +5130,8 @@ public open class CfnDBCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster.ScalingConfigurationProperty):
-          ScalingConfigurationProperty = Wrapper(cdkObject)
+          ScalingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ScalingConfigurationProperty
 
       internal fun unwrap(wrapped: ScalingConfigurationProperty):
           software.amazon.awscdk.services.rds.CfnDBCluster.ScalingConfigurationProperty = (wrapped
@@ -5263,7 +5266,7 @@ public open class CfnDBCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster.DBClusterRoleProperty):
-          DBClusterRoleProperty = Wrapper(cdkObject)
+          DBClusterRoleProperty = CdkObjectWrappers.wrap(cdkObject) as DBClusterRoleProperty
 
       internal fun unwrap(wrapped: DBClusterRoleProperty):
           software.amazon.awscdk.services.rds.CfnDBCluster.DBClusterRoleProperty = (wrapped as
@@ -5356,7 +5359,7 @@ public open class CfnDBCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster.ReadEndpointProperty):
-          ReadEndpointProperty = Wrapper(cdkObject)
+          ReadEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as ReadEndpointProperty
 
       internal fun unwrap(wrapped: ReadEndpointProperty):
           software.amazon.awscdk.services.rds.CfnDBCluster.ReadEndpointProperty = (wrapped as

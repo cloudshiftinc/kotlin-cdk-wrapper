@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.logs
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -402,7 +403,7 @@ public interface CfnLogGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.logs.CfnLogGroupProps):
-        CfnLogGroupProps = Wrapper(cdkObject)
+        CfnLogGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnLogGroupProps
 
     internal fun unwrap(wrapped: CfnLogGroupProps):
         software.amazon.awscdk.services.logs.CfnLogGroupProps = (wrapped as CdkObject).cdkObject as

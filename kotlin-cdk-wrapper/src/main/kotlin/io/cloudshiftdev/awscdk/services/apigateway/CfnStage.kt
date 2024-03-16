@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1021,7 +1022,7 @@ public open class CfnStage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnStage.AccessLogSettingProperty):
-          AccessLogSettingProperty = Wrapper(cdkObject)
+          AccessLogSettingProperty = CdkObjectWrappers.wrap(cdkObject) as AccessLogSettingProperty
 
       internal fun unwrap(wrapped: AccessLogSettingProperty):
           software.amazon.awscdk.services.apigateway.CfnStage.AccessLogSettingProperty = (wrapped as
@@ -1231,7 +1232,7 @@ public open class CfnStage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnStage.CanarySettingProperty):
-          CanarySettingProperty = Wrapper(cdkObject)
+          CanarySettingProperty = CdkObjectWrappers.wrap(cdkObject) as CanarySettingProperty
 
       internal fun unwrap(wrapped: CanarySettingProperty):
           software.amazon.awscdk.services.apigateway.CfnStage.CanarySettingProperty = (wrapped as
@@ -1706,7 +1707,7 @@ public open class CfnStage internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnStage.MethodSettingProperty):
-          MethodSettingProperty = Wrapper(cdkObject)
+          MethodSettingProperty = CdkObjectWrappers.wrap(cdkObject) as MethodSettingProperty
 
       internal fun unwrap(wrapped: MethodSettingProperty):
           software.amazon.awscdk.services.apigateway.CfnStage.MethodSettingProperty = (wrapped as

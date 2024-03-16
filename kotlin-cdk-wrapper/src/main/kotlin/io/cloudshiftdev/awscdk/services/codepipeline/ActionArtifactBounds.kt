@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -145,7 +146,7 @@ public interface ActionArtifactBounds {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.ActionArtifactBounds):
-        ActionArtifactBounds = Wrapper(cdkObject)
+        ActionArtifactBounds = CdkObjectWrappers.wrap(cdkObject) as ActionArtifactBounds
 
     internal fun unwrap(wrapped: ActionArtifactBounds):
         software.amazon.awscdk.services.codepipeline.ActionArtifactBounds = (wrapped as

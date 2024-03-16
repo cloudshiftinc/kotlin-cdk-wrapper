@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.pipelines
 import io.cloudshiftdev.awscdk.CfnOutput
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -384,7 +385,7 @@ public interface ShellStepProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.ShellStepProps): ShellStepProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as ShellStepProps
 
     internal fun unwrap(wrapped: ShellStepProps): software.amazon.awscdk.pipelines.ShellStepProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.pipelines.ShellStepProps

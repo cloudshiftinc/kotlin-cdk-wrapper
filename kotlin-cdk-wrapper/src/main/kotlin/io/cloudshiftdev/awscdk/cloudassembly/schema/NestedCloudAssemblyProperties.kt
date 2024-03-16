@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -101,7 +102,8 @@ public interface NestedCloudAssemblyProperties {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.NestedCloudAssemblyProperties):
-        NestedCloudAssemblyProperties = Wrapper(cdkObject)
+        NestedCloudAssemblyProperties = CdkObjectWrappers.wrap(cdkObject) as
+        NestedCloudAssemblyProperties
 
     internal fun unwrap(wrapped: NestedCloudAssemblyProperties):
         software.amazon.awscdk.cloudassembly.schema.NestedCloudAssemblyProperties = (wrapped as

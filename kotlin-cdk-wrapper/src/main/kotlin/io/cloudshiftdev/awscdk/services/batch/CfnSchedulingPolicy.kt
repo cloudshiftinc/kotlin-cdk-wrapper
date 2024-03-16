@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -446,7 +447,7 @@ public open class CfnSchedulingPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty):
-          ShareAttributesProperty = Wrapper(cdkObject)
+          ShareAttributesProperty = CdkObjectWrappers.wrap(cdkObject) as ShareAttributesProperty
 
       internal fun unwrap(wrapped: ShareAttributesProperty):
           software.amazon.awscdk.services.batch.CfnSchedulingPolicy.ShareAttributesProperty =
@@ -694,7 +695,7 @@ public open class CfnSchedulingPolicy internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnSchedulingPolicy.FairsharePolicyProperty):
-          FairsharePolicyProperty = Wrapper(cdkObject)
+          FairsharePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as FairsharePolicyProperty
 
       internal fun unwrap(wrapped: FairsharePolicyProperty):
           software.amazon.awscdk.services.batch.CfnSchedulingPolicy.FairsharePolicyProperty =

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -561,7 +562,7 @@ public open class CfnDataProvider internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty):
-          SettingsProperty = Wrapper(cdkObject)
+          SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as SettingsProperty
 
       internal fun unwrap(wrapped: SettingsProperty):
           software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty = (wrapped as
@@ -786,7 +787,8 @@ public open class CfnDataProvider internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.PostgreSqlSettingsProperty):
-          PostgreSqlSettingsProperty = Wrapper(cdkObject)
+          PostgreSqlSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          PostgreSqlSettingsProperty
 
       internal fun unwrap(wrapped: PostgreSqlSettingsProperty):
           software.amazon.awscdk.services.dms.CfnDataProvider.PostgreSqlSettingsProperty = (wrapped

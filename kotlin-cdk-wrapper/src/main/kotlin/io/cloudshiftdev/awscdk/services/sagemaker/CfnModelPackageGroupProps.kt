@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.sagemaker
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -212,7 +213,7 @@ public interface CfnModelPackageGroupProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackageGroupProps):
-        CfnModelPackageGroupProps = Wrapper(cdkObject)
+        CfnModelPackageGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnModelPackageGroupProps
 
     internal fun unwrap(wrapped: CfnModelPackageGroupProps):
         software.amazon.awscdk.services.sagemaker.CfnModelPackageGroupProps = (wrapped as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.route53recoveryreadiness
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -170,7 +171,7 @@ public interface CfnCellProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnCellProps):
-        CfnCellProps = Wrapper(cdkObject)
+        CfnCellProps = CdkObjectWrappers.wrap(cdkObject) as CfnCellProps
 
     internal fun unwrap(wrapped: CfnCellProps):
         software.amazon.awscdk.services.route53recoveryreadiness.CfnCellProps = (wrapped as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.rds
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IInterfaceVpcEndpoint
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
@@ -208,7 +209,7 @@ public interface RotationSingleUserOptions : CommonRotationUserOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.RotationSingleUserOptions):
-        RotationSingleUserOptions = Wrapper(cdkObject)
+        RotationSingleUserOptions = CdkObjectWrappers.wrap(cdkObject) as RotationSingleUserOptions
 
     internal fun unwrap(wrapped: RotationSingleUserOptions):
         software.amazon.awscdk.services.rds.RotationSingleUserOptions = (wrapped as

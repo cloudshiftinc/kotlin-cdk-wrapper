@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 import io.cloudshiftdev.awscdk.Expiration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -139,7 +140,7 @@ public interface ApiKeyConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.ApiKeyConfig): ApiKeyConfig
-        = Wrapper(cdkObject)
+        = CdkObjectWrappers.wrap(cdkObject) as ApiKeyConfig
 
     internal fun unwrap(wrapped: ApiKeyConfig): software.amazon.awscdk.services.appsync.ApiKeyConfig
         = (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.appsync.ApiKeyConfig

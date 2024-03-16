@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codedeploy
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -101,7 +102,7 @@ public interface LinearTrafficRoutingConfig {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.LinearTrafficRoutingConfig):
-        LinearTrafficRoutingConfig = Wrapper(cdkObject)
+        LinearTrafficRoutingConfig = CdkObjectWrappers.wrap(cdkObject) as LinearTrafficRoutingConfig
 
     internal fun unwrap(wrapped: LinearTrafficRoutingConfig):
         software.amazon.awscdk.services.codedeploy.LinearTrafficRoutingConfig = (wrapped as

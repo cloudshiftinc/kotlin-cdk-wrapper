@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -313,7 +314,7 @@ public interface CfnListenerProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnListenerProps):
-        CfnListenerProps = Wrapper(cdkObject)
+        CfnListenerProps = CdkObjectWrappers.wrap(cdkObject) as CfnListenerProps
 
     internal fun unwrap(wrapped: CfnListenerProps):
         software.amazon.awscdk.services.vpclattice.CfnListenerProps = (wrapped as

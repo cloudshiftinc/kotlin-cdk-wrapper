@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.Artifact
 import io.cloudshiftdev.awscdk.services.codepipeline.CommonAwsActionProps
 import io.cloudshiftdev.awscdk.services.iam.IRole
@@ -303,7 +304,7 @@ public interface S3SourceActionProps : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.S3SourceActionProps):
-        S3SourceActionProps = Wrapper(cdkObject)
+        S3SourceActionProps = CdkObjectWrappers.wrap(cdkObject) as S3SourceActionProps
 
     internal fun unwrap(wrapped: S3SourceActionProps):
         software.amazon.awscdk.services.codepipeline.actions.S3SourceActionProps = (wrapped as

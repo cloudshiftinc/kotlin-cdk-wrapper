@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.efs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import kotlin.String
 import kotlin.Unit
@@ -126,7 +127,7 @@ public interface FileSystemAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.efs.FileSystemAttributes):
-        FileSystemAttributes = Wrapper(cdkObject)
+        FileSystemAttributes = CdkObjectWrappers.wrap(cdkObject) as FileSystemAttributes
 
     internal fun unwrap(wrapped: FileSystemAttributes):
         software.amazon.awscdk.services.efs.FileSystemAttributes = (wrapped as CdkObject).cdkObject

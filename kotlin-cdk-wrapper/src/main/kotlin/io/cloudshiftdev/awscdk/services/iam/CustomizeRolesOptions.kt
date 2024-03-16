@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -159,7 +160,7 @@ public interface CustomizeRolesOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.CustomizeRolesOptions):
-        CustomizeRolesOptions = Wrapper(cdkObject)
+        CustomizeRolesOptions = CdkObjectWrappers.wrap(cdkObject) as CustomizeRolesOptions
 
     internal fun unwrap(wrapped: CustomizeRolesOptions):
         software.amazon.awscdk.services.iam.CustomizeRolesOptions = (wrapped as CdkObject).cdkObject

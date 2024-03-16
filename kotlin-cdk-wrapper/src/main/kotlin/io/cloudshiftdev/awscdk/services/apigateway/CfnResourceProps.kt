@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -129,7 +130,7 @@ public interface CfnResourceProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnResourceProps):
-        CfnResourceProps = Wrapper(cdkObject)
+        CfnResourceProps = CdkObjectWrappers.wrap(cdkObject) as CfnResourceProps
 
     internal fun unwrap(wrapped: CfnResourceProps):
         software.amazon.awscdk.services.apigateway.CfnResourceProps = (wrapped as

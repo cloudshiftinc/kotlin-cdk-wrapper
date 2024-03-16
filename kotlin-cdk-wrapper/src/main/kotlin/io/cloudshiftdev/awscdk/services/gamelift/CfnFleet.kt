@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Deprecated
 import kotlin.Number
@@ -2028,7 +2029,8 @@ public open class CfnFleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.TargetConfigurationProperty):
-          TargetConfigurationProperty = Wrapper(cdkObject)
+          TargetConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          TargetConfigurationProperty
 
       internal fun unwrap(wrapped: TargetConfigurationProperty):
           software.amazon.awscdk.services.gamelift.CfnFleet.TargetConfigurationProperty = (wrapped
@@ -2128,7 +2130,8 @@ public open class CfnFleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.AnywhereConfigurationProperty):
-          AnywhereConfigurationProperty = Wrapper(cdkObject)
+          AnywhereConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AnywhereConfigurationProperty
 
       internal fun unwrap(wrapped: AnywhereConfigurationProperty):
           software.amazon.awscdk.services.gamelift.CfnFleet.AnywhereConfigurationProperty = (wrapped
@@ -2341,7 +2344,7 @@ public open class CfnFleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.IpPermissionProperty):
-          IpPermissionProperty = Wrapper(cdkObject)
+          IpPermissionProperty = CdkObjectWrappers.wrap(cdkObject) as IpPermissionProperty
 
       internal fun unwrap(wrapped: IpPermissionProperty):
           software.amazon.awscdk.services.gamelift.CfnFleet.IpPermissionProperty = (wrapped as
@@ -2490,7 +2493,8 @@ public open class CfnFleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.ResourceCreationLimitPolicyProperty):
-          ResourceCreationLimitPolicyProperty = Wrapper(cdkObject)
+          ResourceCreationLimitPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ResourceCreationLimitPolicyProperty
 
       internal fun unwrap(wrapped: ResourceCreationLimitPolicyProperty):
           software.amazon.awscdk.services.gamelift.CfnFleet.ResourceCreationLimitPolicyProperty =
@@ -2711,7 +2715,8 @@ public open class CfnFleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.LocationConfigurationProperty):
-          LocationConfigurationProperty = Wrapper(cdkObject)
+          LocationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          LocationConfigurationProperty
 
       internal fun unwrap(wrapped: LocationConfigurationProperty):
           software.amazon.awscdk.services.gamelift.CfnFleet.LocationConfigurationProperty = (wrapped
@@ -2913,7 +2918,7 @@ public open class CfnFleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.ServerProcessProperty):
-          ServerProcessProperty = Wrapper(cdkObject)
+          ServerProcessProperty = CdkObjectWrappers.wrap(cdkObject) as ServerProcessProperty
 
       internal fun unwrap(wrapped: ServerProcessProperty):
           software.amazon.awscdk.services.gamelift.CfnFleet.ServerProcessProperty = (wrapped as
@@ -3131,7 +3136,8 @@ public open class CfnFleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.RuntimeConfigurationProperty):
-          RuntimeConfigurationProperty = Wrapper(cdkObject)
+          RuntimeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          RuntimeConfigurationProperty
 
       internal fun unwrap(wrapped: RuntimeConfigurationProperty):
           software.amazon.awscdk.services.gamelift.CfnFleet.RuntimeConfigurationProperty = (wrapped
@@ -3306,7 +3312,7 @@ public open class CfnFleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.LocationCapacityProperty):
-          LocationCapacityProperty = Wrapper(cdkObject)
+          LocationCapacityProperty = CdkObjectWrappers.wrap(cdkObject) as LocationCapacityProperty
 
       internal fun unwrap(wrapped: LocationCapacityProperty):
           software.amazon.awscdk.services.gamelift.CfnFleet.LocationCapacityProperty = (wrapped as
@@ -3938,7 +3944,7 @@ public open class CfnFleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.ScalingPolicyProperty):
-          ScalingPolicyProperty = Wrapper(cdkObject)
+          ScalingPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as ScalingPolicyProperty
 
       internal fun unwrap(wrapped: ScalingPolicyProperty):
           software.amazon.awscdk.services.gamelift.CfnFleet.ScalingPolicyProperty = (wrapped as
@@ -4044,7 +4050,8 @@ public open class CfnFleet internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.gamelift.CfnFleet.CertificateConfigurationProperty):
-          CertificateConfigurationProperty = Wrapper(cdkObject)
+          CertificateConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CertificateConfigurationProperty
 
       internal fun unwrap(wrapped: CertificateConfigurationProperty):
           software.amazon.awscdk.services.gamelift.CfnFleet.CertificateConfigurationProperty =

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ecs.patterns
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
 import kotlin.Boolean
 import kotlin.String
@@ -240,7 +241,8 @@ public interface ApplicationLoadBalancerProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancerProps):
-        ApplicationLoadBalancerProps = Wrapper(cdkObject)
+        ApplicationLoadBalancerProps = CdkObjectWrappers.wrap(cdkObject) as
+        ApplicationLoadBalancerProps
 
     internal fun unwrap(wrapped: ApplicationLoadBalancerProps):
         software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancerProps = (wrapped as

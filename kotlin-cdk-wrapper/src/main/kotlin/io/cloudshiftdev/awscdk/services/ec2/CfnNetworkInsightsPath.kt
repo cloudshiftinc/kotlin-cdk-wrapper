@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -829,7 +830,7 @@ public open class CfnNetworkInsightsPath internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.PathFilterProperty):
-          PathFilterProperty = Wrapper(cdkObject)
+          PathFilterProperty = CdkObjectWrappers.wrap(cdkObject) as PathFilterProperty
 
       internal fun unwrap(wrapped: PathFilterProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.PathFilterProperty = (wrapped
@@ -938,7 +939,7 @@ public open class CfnNetworkInsightsPath internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty):
-          FilterPortRangeProperty = Wrapper(cdkObject)
+          FilterPortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as FilterPortRangeProperty
 
       internal fun unwrap(wrapped: FilterPortRangeProperty):
           software.amazon.awscdk.services.ec2.CfnNetworkInsightsPath.FilterPortRangeProperty =

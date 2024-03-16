@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1281,7 +1282,7 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssPackageProperty):
-          MssPackageProperty = Wrapper(cdkObject)
+          MssPackageProperty = CdkObjectWrappers.wrap(cdkObject) as MssPackageProperty
 
       internal fun unwrap(wrapped: MssPackageProperty):
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssPackageProperty =
@@ -1607,7 +1608,7 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafPackageProperty):
-          CmafPackageProperty = Wrapper(cdkObject)
+          CmafPackageProperty = CdkObjectWrappers.wrap(cdkObject) as CmafPackageProperty
 
       internal fun unwrap(wrapped: CmafPackageProperty):
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafPackageProperty =
@@ -1726,7 +1727,7 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.AuthorizationProperty):
-          AuthorizationProperty = Wrapper(cdkObject)
+          AuthorizationProperty = CdkObjectWrappers.wrap(cdkObject) as AuthorizationProperty
 
       internal fun unwrap(wrapped: AuthorizationProperty):
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.AuthorizationProperty =
@@ -2062,7 +2063,7 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.SpekeKeyProviderProperty):
-          SpekeKeyProviderProperty = Wrapper(cdkObject)
+          SpekeKeyProviderProperty = CdkObjectWrappers.wrap(cdkObject) as SpekeKeyProviderProperty
 
       internal fun unwrap(wrapped: SpekeKeyProviderProperty):
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.SpekeKeyProviderProperty =
@@ -2607,7 +2608,7 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsManifestProperty):
-          HlsManifestProperty = Wrapper(cdkObject)
+          HlsManifestProperty = CdkObjectWrappers.wrap(cdkObject) as HlsManifestProperty
 
       internal fun unwrap(wrapped: HlsManifestProperty):
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsManifestProperty =
@@ -3315,7 +3316,7 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsPackageProperty):
-          HlsPackageProperty = Wrapper(cdkObject)
+          HlsPackageProperty = CdkObjectWrappers.wrap(cdkObject) as HlsPackageProperty
 
       internal fun unwrap(wrapped: HlsPackageProperty):
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsPackageProperty =
@@ -3477,7 +3478,7 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.StreamSelectionProperty):
-          StreamSelectionProperty = Wrapper(cdkObject)
+          StreamSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as StreamSelectionProperty
 
       internal fun unwrap(wrapped: StreamSelectionProperty):
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.StreamSelectionProperty =
@@ -3704,7 +3705,7 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafEncryptionProperty):
-          CmafEncryptionProperty = Wrapper(cdkObject)
+          CmafEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as CmafEncryptionProperty
 
       internal fun unwrap(wrapped: CmafEncryptionProperty):
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.CmafEncryptionProperty =
@@ -3965,7 +3966,8 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.EncryptionContractConfigurationProperty):
-          EncryptionContractConfigurationProperty = Wrapper(cdkObject)
+          EncryptionContractConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EncryptionContractConfigurationProperty
 
       internal fun unwrap(wrapped: EncryptionContractConfigurationProperty):
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.EncryptionContractConfigurationProperty
@@ -4229,7 +4231,7 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsEncryptionProperty):
-          HlsEncryptionProperty = Wrapper(cdkObject)
+          HlsEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as HlsEncryptionProperty
 
       internal fun unwrap(wrapped: HlsEncryptionProperty):
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.HlsEncryptionProperty =
@@ -5120,7 +5122,7 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashPackageProperty):
-          DashPackageProperty = Wrapper(cdkObject)
+          DashPackageProperty = CdkObjectWrappers.wrap(cdkObject) as DashPackageProperty
 
       internal fun unwrap(wrapped: DashPackageProperty):
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashPackageProperty =
@@ -5240,7 +5242,7 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssEncryptionProperty):
-          MssEncryptionProperty = Wrapper(cdkObject)
+          MssEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as MssEncryptionProperty
 
       internal fun unwrap(wrapped: MssEncryptionProperty):
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.MssEncryptionProperty =
@@ -5397,7 +5399,7 @@ public open class CfnOriginEndpoint internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashEncryptionProperty):
-          DashEncryptionProperty = Wrapper(cdkObject)
+          DashEncryptionProperty = CdkObjectWrappers.wrap(cdkObject) as DashEncryptionProperty
 
       internal fun unwrap(wrapped: DashEncryptionProperty):
           software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint.DashEncryptionProperty =

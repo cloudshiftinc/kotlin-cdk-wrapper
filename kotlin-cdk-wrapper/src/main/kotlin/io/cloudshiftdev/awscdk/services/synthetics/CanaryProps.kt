@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.synthetics
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
@@ -718,7 +719,7 @@ public interface CanaryProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.CanaryProps):
-        CanaryProps = Wrapper(cdkObject)
+        CanaryProps = CdkObjectWrappers.wrap(cdkObject) as CanaryProps
 
     internal fun unwrap(wrapped: CanaryProps):
         software.amazon.awscdk.services.synthetics.CanaryProps = (wrapped as CdkObject).cdkObject as

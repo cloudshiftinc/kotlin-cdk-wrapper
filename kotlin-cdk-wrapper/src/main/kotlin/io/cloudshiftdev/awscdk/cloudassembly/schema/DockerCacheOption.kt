@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -145,7 +146,7 @@ public interface DockerCacheOption {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.DockerCacheOption):
-        DockerCacheOption = Wrapper(cdkObject)
+        DockerCacheOption = CdkObjectWrappers.wrap(cdkObject) as DockerCacheOption
 
     internal fun unwrap(wrapped: DockerCacheOption):
         software.amazon.awscdk.cloudassembly.schema.DockerCacheOption = (wrapped as

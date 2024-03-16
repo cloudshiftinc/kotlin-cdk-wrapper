@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -1239,7 +1240,8 @@ public open class CfnAppMonitor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor.AppMonitorConfigurationProperty):
-          AppMonitorConfigurationProperty = Wrapper(cdkObject)
+          AppMonitorConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AppMonitorConfigurationProperty
 
       internal fun unwrap(wrapped: AppMonitorConfigurationProperty):
           software.amazon.awscdk.services.rum.CfnAppMonitor.AppMonitorConfigurationProperty =
@@ -1489,7 +1491,7 @@ public open class CfnAppMonitor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty):
-          MetricDestinationProperty = Wrapper(cdkObject)
+          MetricDestinationProperty = CdkObjectWrappers.wrap(cdkObject) as MetricDestinationProperty
 
       internal fun unwrap(wrapped: MetricDestinationProperty):
           software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDestinationProperty = (wrapped as
@@ -1578,7 +1580,7 @@ public open class CfnAppMonitor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor.CustomEventsProperty):
-          CustomEventsProperty = Wrapper(cdkObject)
+          CustomEventsProperty = CdkObjectWrappers.wrap(cdkObject) as CustomEventsProperty
 
       internal fun unwrap(wrapped: CustomEventsProperty):
           software.amazon.awscdk.services.rum.CfnAppMonitor.CustomEventsProperty = (wrapped as
@@ -1913,7 +1915,7 @@ public open class CfnAppMonitor internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDefinitionProperty):
-          MetricDefinitionProperty = Wrapper(cdkObject)
+          MetricDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as MetricDefinitionProperty
 
       internal fun unwrap(wrapped: MetricDefinitionProperty):
           software.amazon.awscdk.services.rum.CfnAppMonitor.MetricDefinitionProperty = (wrapped as

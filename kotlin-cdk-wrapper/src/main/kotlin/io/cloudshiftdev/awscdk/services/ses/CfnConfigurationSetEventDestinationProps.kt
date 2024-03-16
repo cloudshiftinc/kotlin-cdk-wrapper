@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ses
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -163,7 +164,8 @@ public interface CfnConfigurationSetEventDestinationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestinationProps):
-        CfnConfigurationSetEventDestinationProps = Wrapper(cdkObject)
+        CfnConfigurationSetEventDestinationProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnConfigurationSetEventDestinationProps
 
     internal fun unwrap(wrapped: CfnConfigurationSetEventDestinationProps):
         software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestinationProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.opensearchservice
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.logs.ILogGroup
 import kotlin.Boolean
 import kotlin.Unit
@@ -313,7 +314,7 @@ public interface LoggingOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.LoggingOptions):
-        LoggingOptions = Wrapper(cdkObject)
+        LoggingOptions = CdkObjectWrappers.wrap(cdkObject) as LoggingOptions
 
     internal fun unwrap(wrapped: LoggingOptions):
         software.amazon.awscdk.services.opensearchservice.LoggingOptions = (wrapped as

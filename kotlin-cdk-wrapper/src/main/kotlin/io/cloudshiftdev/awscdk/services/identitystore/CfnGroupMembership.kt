@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -329,7 +330,7 @@ public open class CfnGroupMembership internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.identitystore.CfnGroupMembership.MemberIdProperty):
-          MemberIdProperty = Wrapper(cdkObject)
+          MemberIdProperty = CdkObjectWrappers.wrap(cdkObject) as MemberIdProperty
 
       internal fun unwrap(wrapped: MemberIdProperty):
           software.amazon.awscdk.services.identitystore.CfnGroupMembership.MemberIdProperty =

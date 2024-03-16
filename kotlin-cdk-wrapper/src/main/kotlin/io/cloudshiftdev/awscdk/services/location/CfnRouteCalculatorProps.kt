@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.location
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -363,7 +364,7 @@ public interface CfnRouteCalculatorProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.location.CfnRouteCalculatorProps):
-        CfnRouteCalculatorProps = Wrapper(cdkObject)
+        CfnRouteCalculatorProps = CdkObjectWrappers.wrap(cdkObject) as CfnRouteCalculatorProps
 
     internal fun unwrap(wrapped: CfnRouteCalculatorProps):
         software.amazon.awscdk.services.location.CfnRouteCalculatorProps = (wrapped as

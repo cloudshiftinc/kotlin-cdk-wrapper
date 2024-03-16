@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.eks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -69,7 +70,7 @@ public interface KubectlProviderProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.eks.KubectlProviderProps):
-        KubectlProviderProps = Wrapper(cdkObject)
+        KubectlProviderProps = CdkObjectWrappers.wrap(cdkObject) as KubectlProviderProps
 
     internal fun unwrap(wrapped: KubectlProviderProps):
         software.amazon.awscdk.services.eks.KubectlProviderProps = (wrapped as CdkObject).cdkObject

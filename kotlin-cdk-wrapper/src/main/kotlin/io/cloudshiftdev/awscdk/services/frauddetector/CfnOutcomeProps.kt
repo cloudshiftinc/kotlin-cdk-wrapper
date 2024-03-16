@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.frauddetector
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -165,7 +166,7 @@ public interface CfnOutcomeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.frauddetector.CfnOutcomeProps):
-        CfnOutcomeProps = Wrapper(cdkObject)
+        CfnOutcomeProps = CdkObjectWrappers.wrap(cdkObject) as CfnOutcomeProps
 
     internal fun unwrap(wrapped: CfnOutcomeProps):
         software.amazon.awscdk.services.frauddetector.CfnOutcomeProps = (wrapped as

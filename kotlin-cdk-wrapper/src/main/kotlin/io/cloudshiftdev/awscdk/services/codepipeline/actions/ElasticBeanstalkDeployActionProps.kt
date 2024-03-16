@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.Artifact
 import io.cloudshiftdev.awscdk.services.codepipeline.CommonAwsActionProps
 import io.cloudshiftdev.awscdk.services.iam.IRole
@@ -234,7 +235,8 @@ public interface ElasticBeanstalkDeployActionProps : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.ElasticBeanstalkDeployActionProps):
-        ElasticBeanstalkDeployActionProps = Wrapper(cdkObject)
+        ElasticBeanstalkDeployActionProps = CdkObjectWrappers.wrap(cdkObject) as
+        ElasticBeanstalkDeployActionProps
 
     internal fun unwrap(wrapped: ElasticBeanstalkDeployActionProps):
         software.amazon.awscdk.services.codepipeline.actions.ElasticBeanstalkDeployActionProps =

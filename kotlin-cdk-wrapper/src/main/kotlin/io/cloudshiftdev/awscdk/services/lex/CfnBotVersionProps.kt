@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lex
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -193,7 +194,7 @@ public interface CfnBotVersionProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lex.CfnBotVersionProps):
-        CfnBotVersionProps = Wrapper(cdkObject)
+        CfnBotVersionProps = CdkObjectWrappers.wrap(cdkObject) as CfnBotVersionProps
 
     internal fun unwrap(wrapped: CfnBotVersionProps):
         software.amazon.awscdk.services.lex.CfnBotVersionProps = (wrapped as CdkObject).cdkObject as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.fsx
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.ISubnet
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
@@ -254,7 +255,7 @@ public interface LustreFileSystemProps : FileSystemProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.fsx.LustreFileSystemProps):
-        LustreFileSystemProps = Wrapper(cdkObject)
+        LustreFileSystemProps = CdkObjectWrappers.wrap(cdkObject) as LustreFileSystemProps
 
     internal fun unwrap(wrapped: LustreFileSystemProps):
         software.amazon.awscdk.services.fsx.LustreFileSystemProps = (wrapped as CdkObject).cdkObject

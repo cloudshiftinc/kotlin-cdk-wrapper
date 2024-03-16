@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.location
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
@@ -350,7 +351,7 @@ public interface CfnGeofenceCollectionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.location.CfnGeofenceCollectionProps):
-        CfnGeofenceCollectionProps = Wrapper(cdkObject)
+        CfnGeofenceCollectionProps = CdkObjectWrappers.wrap(cdkObject) as CfnGeofenceCollectionProps
 
     internal fun unwrap(wrapped: CfnGeofenceCollectionProps):
         software.amazon.awscdk.services.location.CfnGeofenceCollectionProps = (wrapped as

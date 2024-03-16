@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -635,7 +636,8 @@ public interface StackProps {
       return Wrapper(builderImpl.apply(block).build())
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.StackProps): StackProps = Wrapper(cdkObject)
+    internal fun wrap(cdkObject: software.amazon.awscdk.StackProps): StackProps =
+        CdkObjectWrappers.wrap(cdkObject) as StackProps
 
     internal fun unwrap(wrapped: StackProps): software.amazon.awscdk.StackProps = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.StackProps

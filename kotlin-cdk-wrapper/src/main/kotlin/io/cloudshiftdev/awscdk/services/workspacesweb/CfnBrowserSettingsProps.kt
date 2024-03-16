@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -207,7 +208,7 @@ public interface CfnBrowserSettingsProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.workspacesweb.CfnBrowserSettingsProps):
-        CfnBrowserSettingsProps = Wrapper(cdkObject)
+        CfnBrowserSettingsProps = CdkObjectWrappers.wrap(cdkObject) as CfnBrowserSettingsProps
 
     internal fun unwrap(wrapped: CfnBrowserSettingsProps):
         software.amazon.awscdk.services.workspacesweb.CfnBrowserSettingsProps = (wrapped as

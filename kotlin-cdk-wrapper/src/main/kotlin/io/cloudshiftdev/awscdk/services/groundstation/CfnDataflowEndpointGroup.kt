@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -478,7 +479,7 @@ public open class CfnDataflowEndpointGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SocketAddressProperty):
-          SocketAddressProperty = Wrapper(cdkObject)
+          SocketAddressProperty = CdkObjectWrappers.wrap(cdkObject) as SocketAddressProperty
 
       internal fun unwrap(wrapped: SocketAddressProperty):
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SocketAddressProperty
@@ -730,7 +731,7 @@ public open class CfnDataflowEndpointGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.EndpointDetailsProperty):
-          EndpointDetailsProperty = Wrapper(cdkObject)
+          EndpointDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as EndpointDetailsProperty
 
       internal fun unwrap(wrapped: EndpointDetailsProperty):
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.EndpointDetailsProperty
@@ -863,7 +864,8 @@ public open class CfnDataflowEndpointGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.RangedConnectionDetailsProperty):
-          RangedConnectionDetailsProperty = Wrapper(cdkObject)
+          RangedConnectionDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          RangedConnectionDetailsProperty
 
       internal fun unwrap(wrapped: RangedConnectionDetailsProperty):
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.RangedConnectionDetailsProperty
@@ -1103,7 +1105,8 @@ public open class CfnDataflowEndpointGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.AwsGroundStationAgentEndpointProperty):
-          AwsGroundStationAgentEndpointProperty = Wrapper(cdkObject)
+          AwsGroundStationAgentEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as
+          AwsGroundStationAgentEndpointProperty
 
       internal fun unwrap(wrapped: AwsGroundStationAgentEndpointProperty):
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.AwsGroundStationAgentEndpointProperty
@@ -1283,7 +1286,7 @@ public open class CfnDataflowEndpointGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.DataflowEndpointProperty):
-          DataflowEndpointProperty = Wrapper(cdkObject)
+          DataflowEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as DataflowEndpointProperty
 
       internal fun unwrap(wrapped: DataflowEndpointProperty):
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.DataflowEndpointProperty
@@ -1412,7 +1415,8 @@ public open class CfnDataflowEndpointGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.RangedSocketAddressProperty):
-          RangedSocketAddressProperty = Wrapper(cdkObject)
+          RangedSocketAddressProperty = CdkObjectWrappers.wrap(cdkObject) as
+          RangedSocketAddressProperty
 
       internal fun unwrap(wrapped: RangedSocketAddressProperty):
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.RangedSocketAddressProperty
@@ -1541,7 +1545,7 @@ public open class CfnDataflowEndpointGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.ConnectionDetailsProperty):
-          ConnectionDetailsProperty = Wrapper(cdkObject)
+          ConnectionDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as ConnectionDetailsProperty
 
       internal fun unwrap(wrapped: ConnectionDetailsProperty):
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.ConnectionDetailsProperty
@@ -1640,7 +1644,7 @@ public open class CfnDataflowEndpointGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.IntegerRangeProperty):
-          IntegerRangeProperty = Wrapper(cdkObject)
+          IntegerRangeProperty = CdkObjectWrappers.wrap(cdkObject) as IntegerRangeProperty
 
       internal fun unwrap(wrapped: IntegerRangeProperty):
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.IntegerRangeProperty
@@ -1821,7 +1825,7 @@ public open class CfnDataflowEndpointGroup internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SecurityDetailsProperty):
-          SecurityDetailsProperty = Wrapper(cdkObject)
+          SecurityDetailsProperty = CdkObjectWrappers.wrap(cdkObject) as SecurityDetailsProperty
 
       internal fun unwrap(wrapped: SecurityDetailsProperty):
           software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup.SecurityDetailsProperty

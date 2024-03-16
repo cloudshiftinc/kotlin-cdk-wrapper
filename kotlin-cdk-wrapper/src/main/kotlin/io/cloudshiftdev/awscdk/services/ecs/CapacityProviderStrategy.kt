@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -157,7 +158,7 @@ public interface CapacityProviderStrategy {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CapacityProviderStrategy):
-        CapacityProviderStrategy = Wrapper(cdkObject)
+        CapacityProviderStrategy = CdkObjectWrappers.wrap(cdkObject) as CapacityProviderStrategy
 
     internal fun unwrap(wrapped: CapacityProviderStrategy):
         software.amazon.awscdk.services.ecs.CapacityProviderStrategy = (wrapped as

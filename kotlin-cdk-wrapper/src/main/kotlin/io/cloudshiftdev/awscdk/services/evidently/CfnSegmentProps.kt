@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.evidently
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -254,7 +255,7 @@ public interface CfnSegmentProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.evidently.CfnSegmentProps):
-        CfnSegmentProps = Wrapper(cdkObject)
+        CfnSegmentProps = CdkObjectWrappers.wrap(cdkObject) as CfnSegmentProps
 
     internal fun unwrap(wrapped: CfnSegmentProps):
         software.amazon.awscdk.services.evidently.CfnSegmentProps = (wrapped as CdkObject).cdkObject

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lambda.eventsources
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -283,7 +284,7 @@ public interface SqsEventSourceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.eventsources.SqsEventSourceProps):
-        SqsEventSourceProps = Wrapper(cdkObject)
+        SqsEventSourceProps = CdkObjectWrappers.wrap(cdkObject) as SqsEventSourceProps
 
     internal fun unwrap(wrapped: SqsEventSourceProps):
         software.amazon.awscdk.services.lambda.eventsources.SqsEventSourceProps = (wrapped as

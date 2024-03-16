@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -183,7 +184,8 @@ public interface CfnResponseHeadersPolicyProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicyProps):
-        CfnResponseHeadersPolicyProps = Wrapper(cdkObject)
+        CfnResponseHeadersPolicyProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnResponseHeadersPolicyProps
 
     internal fun unwrap(wrapped: CfnResponseHeadersPolicyProps):
         software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicyProps = (wrapped as

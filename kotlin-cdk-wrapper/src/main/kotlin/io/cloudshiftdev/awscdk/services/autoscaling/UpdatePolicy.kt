@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.autoscaling
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -21,10 +22,6 @@ import kotlin.jvm.JvmName
 public abstract class UpdatePolicy internal constructor(
   internal override val cdkObject: software.amazon.awscdk.services.autoscaling.UpdatePolicy,
 ) : CdkObject(cdkObject) {
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.autoscaling.UpdatePolicy,
-  ) : UpdatePolicy(cdkObject)
-
   public companion object {
     public fun replacingUpdate(): UpdatePolicy =
         software.amazon.awscdk.services.autoscaling.UpdatePolicy.replacingUpdate().let(UpdatePolicy::wrap)
@@ -41,7 +38,7 @@ public abstract class UpdatePolicy internal constructor(
         rollingUpdate(RollingUpdateOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.UpdatePolicy):
-        UpdatePolicy = Wrapper(cdkObject)
+        UpdatePolicy = CdkObjectWrappers.wrap(cdkObject) as UpdatePolicy
 
     internal fun unwrap(wrapped: UpdatePolicy):
         software.amazon.awscdk.services.autoscaling.UpdatePolicy = (wrapped as CdkObject).cdkObject

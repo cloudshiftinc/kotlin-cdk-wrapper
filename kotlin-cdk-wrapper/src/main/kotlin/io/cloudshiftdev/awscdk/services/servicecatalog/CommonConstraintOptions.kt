@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.servicecatalog
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -112,7 +113,7 @@ public interface CommonConstraintOptions {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.CommonConstraintOptions):
-        CommonConstraintOptions = Wrapper(cdkObject)
+        CommonConstraintOptions = CdkObjectWrappers.wrap(cdkObject) as CommonConstraintOptions
 
     internal fun unwrap(wrapped: CommonConstraintOptions):
         software.amazon.awscdk.services.servicecatalog.CommonConstraintOptions = (wrapped as

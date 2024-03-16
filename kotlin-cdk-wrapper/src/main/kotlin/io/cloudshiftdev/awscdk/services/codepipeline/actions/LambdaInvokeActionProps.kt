@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.Artifact
 import io.cloudshiftdev.awscdk.services.codepipeline.CommonAwsActionProps
 import io.cloudshiftdev.awscdk.services.iam.IRole
@@ -395,7 +396,7 @@ public interface LambdaInvokeActionProps : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.LambdaInvokeActionProps):
-        LambdaInvokeActionProps = Wrapper(cdkObject)
+        LambdaInvokeActionProps = CdkObjectWrappers.wrap(cdkObject) as LambdaInvokeActionProps
 
     internal fun unwrap(wrapped: LambdaInvokeActionProps):
         software.amazon.awscdk.services.codepipeline.actions.LambdaInvokeActionProps = (wrapped as

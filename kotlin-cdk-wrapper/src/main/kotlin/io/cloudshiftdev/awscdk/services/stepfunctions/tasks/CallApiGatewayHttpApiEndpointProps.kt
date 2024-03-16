@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
 import io.cloudshiftdev.awscdk.services.stepfunctions.TaskInput
@@ -587,7 +588,8 @@ public interface CallApiGatewayHttpApiEndpointProps : CallApiGatewayEndpointBase
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayHttpApiEndpointProps):
-        CallApiGatewayHttpApiEndpointProps = Wrapper(cdkObject)
+        CallApiGatewayHttpApiEndpointProps = CdkObjectWrappers.wrap(cdkObject) as
+        CallApiGatewayHttpApiEndpointProps
 
     internal fun unwrap(wrapped: CallApiGatewayHttpApiEndpointProps):
         software.amazon.awscdk.services.stepfunctions.tasks.CallApiGatewayHttpApiEndpointProps =

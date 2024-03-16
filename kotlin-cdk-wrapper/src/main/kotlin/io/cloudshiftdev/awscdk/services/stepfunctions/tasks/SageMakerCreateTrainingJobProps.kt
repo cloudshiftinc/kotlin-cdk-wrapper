@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
@@ -878,7 +879,8 @@ public interface SageMakerCreateTrainingJobProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTrainingJobProps):
-        SageMakerCreateTrainingJobProps = Wrapper(cdkObject)
+        SageMakerCreateTrainingJobProps = CdkObjectWrappers.wrap(cdkObject) as
+        SageMakerCreateTrainingJobProps
 
     internal fun unwrap(wrapped: SageMakerCreateTrainingJobProps):
         software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTrainingJobProps =

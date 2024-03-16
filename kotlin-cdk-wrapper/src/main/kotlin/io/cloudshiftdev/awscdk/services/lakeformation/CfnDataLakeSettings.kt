@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -1234,7 +1235,8 @@ public open class CfnDataLakeSettings internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.PrincipalPermissionsProperty):
-          PrincipalPermissionsProperty = Wrapper(cdkObject)
+          PrincipalPermissionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          PrincipalPermissionsProperty
 
       internal fun unwrap(wrapped: PrincipalPermissionsProperty):
           software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.PrincipalPermissionsProperty
@@ -1317,7 +1319,7 @@ public open class CfnDataLakeSettings internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty):
-          DataLakePrincipalProperty = Wrapper(cdkObject)
+          DataLakePrincipalProperty = CdkObjectWrappers.wrap(cdkObject) as DataLakePrincipalProperty
 
       internal fun unwrap(wrapped: DataLakePrincipalProperty):
           software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings.DataLakePrincipalProperty

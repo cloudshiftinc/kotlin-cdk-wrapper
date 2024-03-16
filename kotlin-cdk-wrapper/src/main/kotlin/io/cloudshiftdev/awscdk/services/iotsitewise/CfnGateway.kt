@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -509,7 +510,7 @@ public open class CfnGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property):
-          GreengrassV2Property = Wrapper(cdkObject)
+          GreengrassV2Property = CdkObjectWrappers.wrap(cdkObject) as GreengrassV2Property
 
       internal fun unwrap(wrapped: GreengrassV2Property):
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassV2Property = (wrapped as
@@ -613,7 +614,7 @@ public open class CfnGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty):
-          GreengrassProperty = Wrapper(cdkObject)
+          GreengrassProperty = CdkObjectWrappers.wrap(cdkObject) as GreengrassProperty
 
       internal fun unwrap(wrapped: GreengrassProperty):
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GreengrassProperty = (wrapped as
@@ -779,7 +780,7 @@ public open class CfnGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayPlatformProperty):
-          GatewayPlatformProperty = Wrapper(cdkObject)
+          GatewayPlatformProperty = CdkObjectWrappers.wrap(cdkObject) as GatewayPlatformProperty
 
       internal fun unwrap(wrapped: GatewayPlatformProperty):
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayPlatformProperty = (wrapped
@@ -928,7 +929,8 @@ public open class CfnGateway internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayCapabilitySummaryProperty):
-          GatewayCapabilitySummaryProperty = Wrapper(cdkObject)
+          GatewayCapabilitySummaryProperty = CdkObjectWrappers.wrap(cdkObject) as
+          GatewayCapabilitySummaryProperty
 
       internal fun unwrap(wrapped: GatewayCapabilitySummaryProperty):
           software.amazon.awscdk.services.iotsitewise.CfnGateway.GatewayCapabilitySummaryProperty =

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.efs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -247,7 +248,7 @@ public interface AccessPointOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.efs.AccessPointOptions):
-        AccessPointOptions = Wrapper(cdkObject)
+        AccessPointOptions = CdkObjectWrappers.wrap(cdkObject) as AccessPointOptions
 
     internal fun unwrap(wrapped: AccessPointOptions):
         software.amazon.awscdk.services.efs.AccessPointOptions = (wrapped as CdkObject).cdkObject as

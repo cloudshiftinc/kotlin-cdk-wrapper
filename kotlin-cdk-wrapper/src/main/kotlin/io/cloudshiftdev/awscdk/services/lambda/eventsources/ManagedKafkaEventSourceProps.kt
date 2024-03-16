@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lambda.eventsources
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.lambda.IEventSourceDlq
 import io.cloudshiftdev.awscdk.services.lambda.StartingPosition
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
@@ -347,7 +348,8 @@ public interface ManagedKafkaEventSourceProps : KafkaEventSourceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.lambda.eventsources.ManagedKafkaEventSourceProps):
-        ManagedKafkaEventSourceProps = Wrapper(cdkObject)
+        ManagedKafkaEventSourceProps = CdkObjectWrappers.wrap(cdkObject) as
+        ManagedKafkaEventSourceProps
 
     internal fun unwrap(wrapped: ManagedKafkaEventSourceProps):
         software.amazon.awscdk.services.lambda.eventsources.ManagedKafkaEventSourceProps = (wrapped

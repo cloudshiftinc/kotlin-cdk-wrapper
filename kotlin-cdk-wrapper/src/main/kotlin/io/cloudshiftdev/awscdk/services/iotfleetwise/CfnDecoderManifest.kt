@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -649,7 +650,7 @@ public open class CfnDecoderManifest internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanInterfaceProperty):
-          CanInterfaceProperty = Wrapper(cdkObject)
+          CanInterfaceProperty = CdkObjectWrappers.wrap(cdkObject) as CanInterfaceProperty
 
       internal fun unwrap(wrapped: CanInterfaceProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanInterfaceProperty =
@@ -955,7 +956,7 @@ public open class CfnDecoderManifest internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalProperty):
-          ObdSignalProperty = Wrapper(cdkObject)
+          ObdSignalProperty = CdkObjectWrappers.wrap(cdkObject) as ObdSignalProperty
 
       internal fun unwrap(wrapped: ObdSignalProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalProperty =
@@ -1149,7 +1150,8 @@ public open class CfnDecoderManifest internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdNetworkInterfaceProperty):
-          ObdNetworkInterfaceProperty = Wrapper(cdkObject)
+          ObdNetworkInterfaceProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ObdNetworkInterfaceProperty
 
       internal fun unwrap(wrapped: ObdNetworkInterfaceProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdNetworkInterfaceProperty
@@ -1346,7 +1348,7 @@ public open class CfnDecoderManifest internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalDecoderProperty):
-          ObdSignalDecoderProperty = Wrapper(cdkObject)
+          ObdSignalDecoderProperty = CdkObjectWrappers.wrap(cdkObject) as ObdSignalDecoderProperty
 
       internal fun unwrap(wrapped: ObdSignalDecoderProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalDecoderProperty =
@@ -1597,7 +1599,7 @@ public open class CfnDecoderManifest internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdInterfaceProperty):
-          ObdInterfaceProperty = Wrapper(cdkObject)
+          ObdInterfaceProperty = CdkObjectWrappers.wrap(cdkObject) as ObdInterfaceProperty
 
       internal fun unwrap(wrapped: ObdInterfaceProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdInterfaceProperty =
@@ -1823,7 +1825,7 @@ public open class CfnDecoderManifest internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalDecoderProperty):
-          CanSignalDecoderProperty = Wrapper(cdkObject)
+          CanSignalDecoderProperty = CdkObjectWrappers.wrap(cdkObject) as CanSignalDecoderProperty
 
       internal fun unwrap(wrapped: CanSignalDecoderProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalDecoderProperty =
@@ -2040,7 +2042,8 @@ public open class CfnDecoderManifest internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.NetworkInterfacesItemsProperty):
-          NetworkInterfacesItemsProperty = Wrapper(cdkObject)
+          NetworkInterfacesItemsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          NetworkInterfacesItemsProperty
 
       internal fun unwrap(wrapped: NetworkInterfacesItemsProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.NetworkInterfacesItemsProperty
@@ -2319,7 +2322,7 @@ public open class CfnDecoderManifest internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalProperty):
-          CanSignalProperty = Wrapper(cdkObject)
+          CanSignalProperty = CdkObjectWrappers.wrap(cdkObject) as CanSignalProperty
 
       internal fun unwrap(wrapped: CanSignalProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanSignalProperty =
@@ -2565,7 +2568,8 @@ public open class CfnDecoderManifest internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.SignalDecodersItemsProperty):
-          SignalDecodersItemsProperty = Wrapper(cdkObject)
+          SignalDecodersItemsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SignalDecodersItemsProperty
 
       internal fun unwrap(wrapped: SignalDecodersItemsProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.SignalDecodersItemsProperty
@@ -2762,7 +2766,8 @@ public open class CfnDecoderManifest internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanNetworkInterfaceProperty):
-          CanNetworkInterfaceProperty = Wrapper(cdkObject)
+          CanNetworkInterfaceProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CanNetworkInterfaceProperty
 
       internal fun unwrap(wrapped: CanNetworkInterfaceProperty):
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.CanNetworkInterfaceProperty

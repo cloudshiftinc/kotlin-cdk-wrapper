@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.String
 import kotlin.Unit
@@ -219,7 +220,8 @@ public interface CrossAccountZoneDelegationRecordProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.route53.CrossAccountZoneDelegationRecordProps):
-        CrossAccountZoneDelegationRecordProps = Wrapper(cdkObject)
+        CrossAccountZoneDelegationRecordProps = CdkObjectWrappers.wrap(cdkObject) as
+        CrossAccountZoneDelegationRecordProps
 
     internal fun unwrap(wrapped: CrossAccountZoneDelegationRecordProps):
         software.amazon.awscdk.services.route53.CrossAccountZoneDelegationRecordProps = (wrapped as

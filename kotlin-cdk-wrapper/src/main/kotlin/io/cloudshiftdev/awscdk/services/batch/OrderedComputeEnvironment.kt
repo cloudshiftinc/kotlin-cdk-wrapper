@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.batch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -96,7 +97,7 @@ public interface OrderedComputeEnvironment {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.OrderedComputeEnvironment):
-        OrderedComputeEnvironment = Wrapper(cdkObject)
+        OrderedComputeEnvironment = CdkObjectWrappers.wrap(cdkObject) as OrderedComputeEnvironment
 
     internal fun unwrap(wrapped: OrderedComputeEnvironment):
         software.amazon.awscdk.services.batch.OrderedComputeEnvironment = (wrapped as

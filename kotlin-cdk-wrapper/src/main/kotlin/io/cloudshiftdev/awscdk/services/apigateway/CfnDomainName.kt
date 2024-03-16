@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -723,7 +724,8 @@ public open class CfnDomainName internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainName.MutualTlsAuthenticationProperty):
-          MutualTlsAuthenticationProperty = Wrapper(cdkObject)
+          MutualTlsAuthenticationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MutualTlsAuthenticationProperty
 
       internal fun unwrap(wrapped: MutualTlsAuthenticationProperty):
           software.amazon.awscdk.services.apigateway.CfnDomainName.MutualTlsAuthenticationProperty =
@@ -845,7 +847,8 @@ public open class CfnDomainName internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty):
-          EndpointConfigurationProperty = Wrapper(cdkObject)
+          EndpointConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EndpointConfigurationProperty
 
       internal fun unwrap(wrapped: EndpointConfigurationProperty):
           software.amazon.awscdk.services.apigateway.CfnDomainName.EndpointConfigurationProperty =

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -583,7 +584,8 @@ public open class CfnRoom internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ivschat.CfnRoom.MessageReviewHandlerProperty):
-          MessageReviewHandlerProperty = Wrapper(cdkObject)
+          MessageReviewHandlerProperty = CdkObjectWrappers.wrap(cdkObject) as
+          MessageReviewHandlerProperty
 
       internal fun unwrap(wrapped: MessageReviewHandlerProperty):
           software.amazon.awscdk.services.ivschat.CfnRoom.MessageReviewHandlerProperty = (wrapped as

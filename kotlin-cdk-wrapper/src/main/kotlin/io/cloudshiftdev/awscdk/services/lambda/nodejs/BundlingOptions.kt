@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.DockerRunOptions
 import io.cloudshiftdev.awscdk.DockerVolume
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -1576,7 +1577,7 @@ public interface BundlingOptions : DockerRunOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.nodejs.BundlingOptions):
-        BundlingOptions = Wrapper(cdkObject)
+        BundlingOptions = CdkObjectWrappers.wrap(cdkObject) as BundlingOptions
 
     internal fun unwrap(wrapped: BundlingOptions):
         software.amazon.awscdk.services.lambda.nodejs.BundlingOptions = (wrapped as

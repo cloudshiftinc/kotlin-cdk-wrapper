@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -858,7 +859,8 @@ public open class CfnDomainConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateConfigProperty):
-          ServerCertificateConfigProperty = Wrapper(cdkObject)
+          ServerCertificateConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ServerCertificateConfigProperty
 
       internal fun unwrap(wrapped: ServerCertificateConfigProperty):
           software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateConfigProperty
@@ -987,7 +989,7 @@ public open class CfnDomainConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration.AuthorizerConfigProperty):
-          AuthorizerConfigProperty = Wrapper(cdkObject)
+          AuthorizerConfigProperty = CdkObjectWrappers.wrap(cdkObject) as AuthorizerConfigProperty
 
       internal fun unwrap(wrapped: AuthorizerConfigProperty):
           software.amazon.awscdk.services.iot.CfnDomainConfiguration.AuthorizerConfigProperty =
@@ -1082,7 +1084,7 @@ public open class CfnDomainConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration.TlsConfigProperty):
-          TlsConfigProperty = Wrapper(cdkObject)
+          TlsConfigProperty = CdkObjectWrappers.wrap(cdkObject) as TlsConfigProperty
 
       internal fun unwrap(wrapped: TlsConfigProperty):
           software.amazon.awscdk.services.iot.CfnDomainConfiguration.TlsConfigProperty = (wrapped as
@@ -1223,7 +1225,8 @@ public open class CfnDomainConfiguration internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateSummaryProperty):
-          ServerCertificateSummaryProperty = Wrapper(cdkObject)
+          ServerCertificateSummaryProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ServerCertificateSummaryProperty
 
       internal fun unwrap(wrapped: ServerCertificateSummaryProperty):
           software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateSummaryProperty

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Deprecated
 import kotlin.Number
@@ -938,7 +939,8 @@ public open class CfnSamplingRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleUpdateProperty):
-          SamplingRuleUpdateProperty = Wrapper(cdkObject)
+          SamplingRuleUpdateProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SamplingRuleUpdateProperty
 
       internal fun unwrap(wrapped: SamplingRuleUpdateProperty):
           software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleUpdateProperty = (wrapped
@@ -1110,7 +1112,8 @@ public open class CfnSamplingRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleRecordProperty):
-          SamplingRuleRecordProperty = Wrapper(cdkObject)
+          SamplingRuleRecordProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SamplingRuleRecordProperty
 
       internal fun unwrap(wrapped: SamplingRuleRecordProperty):
           software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleRecordProperty = (wrapped
@@ -1613,7 +1616,7 @@ public open class CfnSamplingRule internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleProperty):
-          SamplingRuleProperty = Wrapper(cdkObject)
+          SamplingRuleProperty = CdkObjectWrappers.wrap(cdkObject) as SamplingRuleProperty
 
       internal fun unwrap(wrapped: SamplingRuleProperty):
           software.amazon.awscdk.services.xray.CfnSamplingRule.SamplingRuleProperty = (wrapped as

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.quicksight
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -175,7 +176,7 @@ public interface CfnRefreshScheduleProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnRefreshScheduleProps):
-        CfnRefreshScheduleProps = Wrapper(cdkObject)
+        CfnRefreshScheduleProps = CdkObjectWrappers.wrap(cdkObject) as CfnRefreshScheduleProps
 
     internal fun unwrap(wrapped: CfnRefreshScheduleProps):
         software.amazon.awscdk.services.quicksight.CfnRefreshScheduleProps = (wrapped as

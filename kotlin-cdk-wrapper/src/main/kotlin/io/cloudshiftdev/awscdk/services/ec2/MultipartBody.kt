@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -32,10 +33,6 @@ public abstract class MultipartBody internal constructor(
    */
   public open fun renderBodyPart(): List<String> = unwrap(this).renderBodyPart()
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.ec2.MultipartBody,
-  ) : MultipartBody(cdkObject)
-
   public companion object {
     public val CLOUD_BOOTHOOK: String =
         software.amazon.awscdk.services.ec2.MultipartBody.CLOUD_BOOTHOOK
@@ -58,7 +55,7 @@ public abstract class MultipartBody internal constructor(
         contentType).let(MultipartBody::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.MultipartBody): MultipartBody =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as MultipartBody
 
     internal fun unwrap(wrapped: MultipartBody): software.amazon.awscdk.services.ec2.MultipartBody =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.ec2.MultipartBody

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.apigatewayv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -349,7 +350,8 @@ public interface CfnIntegrationResponseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnIntegrationResponseProps):
-        CfnIntegrationResponseProps = Wrapper(cdkObject)
+        CfnIntegrationResponseProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnIntegrationResponseProps
 
     internal fun unwrap(wrapped: CfnIntegrationResponseProps):
         software.amazon.awscdk.services.apigatewayv2.CfnIntegrationResponseProps = (wrapped as

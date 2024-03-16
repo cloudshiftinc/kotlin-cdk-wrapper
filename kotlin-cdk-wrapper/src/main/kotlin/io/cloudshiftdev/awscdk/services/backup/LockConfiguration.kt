@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.backup
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 
 /**
@@ -208,7 +209,7 @@ public interface LockConfiguration {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.backup.LockConfiguration):
-        LockConfiguration = Wrapper(cdkObject)
+        LockConfiguration = CdkObjectWrappers.wrap(cdkObject) as LockConfiguration
 
     internal fun unwrap(wrapped: LockConfiguration):
         software.amazon.awscdk.services.backup.LockConfiguration = (wrapped as CdkObject).cdkObject

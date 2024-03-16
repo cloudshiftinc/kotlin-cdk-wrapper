@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Any
 import kotlin.Boolean
@@ -58,10 +59,6 @@ public abstract class BuildSpec internal constructor(
   public open fun toBuildSpec(scope: Construct): String =
       unwrap(this).toBuildSpec(scope.let(Construct::unwrap))
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.services.codebuild.BuildSpec,
-  ) : BuildSpec(cdkObject)
-
   public companion object {
     public fun fromAsset(path: String): BuildSpec =
         software.amazon.awscdk.services.codebuild.BuildSpec.fromAsset(path).let(BuildSpec::wrap)
@@ -76,7 +73,7 @@ public abstract class BuildSpec internal constructor(
         software.amazon.awscdk.services.codebuild.BuildSpec.fromSourceFilename(filename).let(BuildSpec::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.BuildSpec): BuildSpec =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as BuildSpec
 
     internal fun unwrap(wrapped: BuildSpec): software.amazon.awscdk.services.codebuild.BuildSpec =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.codebuild.BuildSpec

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -640,7 +641,7 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannel.IngestEndpointProperty):
-          IngestEndpointProperty = Wrapper(cdkObject)
+          IngestEndpointProperty = CdkObjectWrappers.wrap(cdkObject) as IngestEndpointProperty
 
       internal fun unwrap(wrapped: IngestEndpointProperty):
           software.amazon.awscdk.services.mediapackage.CfnChannel.IngestEndpointProperty = (wrapped
@@ -748,7 +749,7 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty):
-          HlsIngestProperty = Wrapper(cdkObject)
+          HlsIngestProperty = CdkObjectWrappers.wrap(cdkObject) as HlsIngestProperty
 
       internal fun unwrap(wrapped: HlsIngestProperty):
           software.amazon.awscdk.services.mediapackage.CfnChannel.HlsIngestProperty = (wrapped as
@@ -829,7 +830,7 @@ public open class CfnChannel internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.mediapackage.CfnChannel.LogConfigurationProperty):
-          LogConfigurationProperty = Wrapper(cdkObject)
+          LogConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as LogConfigurationProperty
 
       internal fun unwrap(wrapped: LogConfigurationProperty):
           software.amazon.awscdk.services.mediapackage.CfnChannel.LogConfigurationProperty =

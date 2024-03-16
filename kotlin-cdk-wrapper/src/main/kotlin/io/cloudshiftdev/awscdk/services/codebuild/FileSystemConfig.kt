@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codebuild
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -97,7 +98,7 @@ public interface FileSystemConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.FileSystemConfig):
-        FileSystemConfig = Wrapper(cdkObject)
+        FileSystemConfig = CdkObjectWrappers.wrap(cdkObject) as FileSystemConfig
 
     internal fun unwrap(wrapped: FileSystemConfig):
         software.amazon.awscdk.services.codebuild.FileSystemConfig = (wrapped as

@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -562,7 +563,8 @@ public open class CfnApplication internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.refactorspaces.CfnApplication.ApiGatewayProxyInputProperty):
-          ApiGatewayProxyInputProperty = Wrapper(cdkObject)
+          ApiGatewayProxyInputProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ApiGatewayProxyInputProperty
 
       internal fun unwrap(wrapped: ApiGatewayProxyInputProperty):
           software.amazon.awscdk.services.refactorspaces.CfnApplication.ApiGatewayProxyInputProperty

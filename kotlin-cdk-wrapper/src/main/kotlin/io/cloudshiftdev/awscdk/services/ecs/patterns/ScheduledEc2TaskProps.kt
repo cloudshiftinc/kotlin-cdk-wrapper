@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs.patterns
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.applicationautoscaling.Schedule
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
@@ -481,7 +482,7 @@ public interface ScheduledEc2TaskProps : ScheduledTaskBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskProps):
-        ScheduledEc2TaskProps = Wrapper(cdkObject)
+        ScheduledEc2TaskProps = CdkObjectWrappers.wrap(cdkObject) as ScheduledEc2TaskProps
 
     internal fun unwrap(wrapped: ScheduledEc2TaskProps):
         software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskProps = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.mediaconnect
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -249,7 +250,7 @@ public interface CfnFlowVpcInterfaceProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.mediaconnect.CfnFlowVpcInterfaceProps):
-        CfnFlowVpcInterfaceProps = Wrapper(cdkObject)
+        CfnFlowVpcInterfaceProps = CdkObjectWrappers.wrap(cdkObject) as CfnFlowVpcInterfaceProps
 
     internal fun unwrap(wrapped: CfnFlowVpcInterfaceProps):
         software.amazon.awscdk.services.mediaconnect.CfnFlowVpcInterfaceProps = (wrapped as

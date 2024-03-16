@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -679,7 +680,7 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.EventSourceMappingProps):
-        EventSourceMappingProps = Wrapper(cdkObject)
+        EventSourceMappingProps = CdkObjectWrappers.wrap(cdkObject) as EventSourceMappingProps
 
     internal fun unwrap(wrapped: EventSourceMappingProps):
         software.amazon.awscdk.services.lambda.EventSourceMappingProps = (wrapped as

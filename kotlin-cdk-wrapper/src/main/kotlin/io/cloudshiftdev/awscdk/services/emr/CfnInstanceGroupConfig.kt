@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -937,7 +938,8 @@ public open class CfnInstanceGroupConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.SimpleScalingPolicyConfigurationProperty):
-          SimpleScalingPolicyConfigurationProperty = Wrapper(cdkObject)
+          SimpleScalingPolicyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          SimpleScalingPolicyConfigurationProperty
 
       internal fun unwrap(wrapped: SimpleScalingPolicyConfigurationProperty):
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.SimpleScalingPolicyConfigurationProperty
@@ -1070,7 +1072,8 @@ public open class CfnInstanceGroupConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingConstraintsProperty):
-          ScalingConstraintsProperty = Wrapper(cdkObject)
+          ScalingConstraintsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ScalingConstraintsProperty
 
       internal fun unwrap(wrapped: ScalingConstraintsProperty):
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingConstraintsProperty =
@@ -1235,7 +1238,8 @@ public open class CfnInstanceGroupConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.EbsBlockDeviceConfigProperty):
-          EbsBlockDeviceConfigProperty = Wrapper(cdkObject)
+          EbsBlockDeviceConfigProperty = CdkObjectWrappers.wrap(cdkObject) as
+          EbsBlockDeviceConfigProperty
 
       internal fun unwrap(wrapped: EbsBlockDeviceConfigProperty):
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.EbsBlockDeviceConfigProperty =
@@ -1383,7 +1387,7 @@ public open class CfnInstanceGroupConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingTriggerProperty):
-          ScalingTriggerProperty = Wrapper(cdkObject)
+          ScalingTriggerProperty = CdkObjectWrappers.wrap(cdkObject) as ScalingTriggerProperty
 
       internal fun unwrap(wrapped: ScalingTriggerProperty):
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingTriggerProperty =
@@ -1643,7 +1647,7 @@ public open class CfnInstanceGroupConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingRuleProperty):
-          ScalingRuleProperty = Wrapper(cdkObject)
+          ScalingRuleProperty = CdkObjectWrappers.wrap(cdkObject) as ScalingRuleProperty
 
       internal fun unwrap(wrapped: ScalingRuleProperty):
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingRuleProperty = (wrapped
@@ -1832,7 +1836,8 @@ public open class CfnInstanceGroupConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.VolumeSpecificationProperty):
-          VolumeSpecificationProperty = Wrapper(cdkObject)
+          VolumeSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as
+          VolumeSpecificationProperty
 
       internal fun unwrap(wrapped: VolumeSpecificationProperty):
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.VolumeSpecificationProperty =
@@ -1947,7 +1952,7 @@ public open class CfnInstanceGroupConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.MetricDimensionProperty):
-          MetricDimensionProperty = Wrapper(cdkObject)
+          MetricDimensionProperty = CdkObjectWrappers.wrap(cdkObject) as MetricDimensionProperty
 
       internal fun unwrap(wrapped: MetricDimensionProperty):
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.MetricDimensionProperty =
@@ -2168,7 +2173,7 @@ public open class CfnInstanceGroupConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.AutoScalingPolicyProperty):
-          AutoScalingPolicyProperty = Wrapper(cdkObject)
+          AutoScalingPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as AutoScalingPolicyProperty
 
       internal fun unwrap(wrapped: AutoScalingPolicyProperty):
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.AutoScalingPolicyProperty =
@@ -2372,7 +2377,7 @@ public open class CfnInstanceGroupConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ConfigurationProperty):
-          ConfigurationProperty = Wrapper(cdkObject)
+          ConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as ConfigurationProperty
 
       internal fun unwrap(wrapped: ConfigurationProperty):
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ConfigurationProperty =
@@ -2749,7 +2754,8 @@ public open class CfnInstanceGroupConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.CloudWatchAlarmDefinitionProperty):
-          CloudWatchAlarmDefinitionProperty = Wrapper(cdkObject)
+          CloudWatchAlarmDefinitionProperty = CdkObjectWrappers.wrap(cdkObject) as
+          CloudWatchAlarmDefinitionProperty
 
       internal fun unwrap(wrapped: CloudWatchAlarmDefinitionProperty):
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.CloudWatchAlarmDefinitionProperty
@@ -2913,7 +2919,7 @@ public open class CfnInstanceGroupConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingActionProperty):
-          ScalingActionProperty = Wrapper(cdkObject)
+          ScalingActionProperty = CdkObjectWrappers.wrap(cdkObject) as ScalingActionProperty
 
       internal fun unwrap(wrapped: ScalingActionProperty):
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingActionProperty =
@@ -3073,7 +3079,7 @@ public open class CfnInstanceGroupConfig internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.EbsConfigurationProperty):
-          EbsConfigurationProperty = Wrapper(cdkObject)
+          EbsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as EbsConfigurationProperty
 
       internal fun unwrap(wrapped: EbsConfigurationProperty):
           software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.EbsConfigurationProperty =

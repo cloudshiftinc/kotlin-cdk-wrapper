@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.assertions
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -55,15 +56,11 @@ public abstract class Matcher internal constructor(
   public open fun test(`actual`: Any): MatchResult =
       unwrap(this).test(`actual`).let(MatchResult::wrap)
 
-  private class Wrapper(
-    override val cdkObject: software.amazon.awscdk.assertions.Matcher,
-  ) : Matcher(cdkObject)
-
   public companion object {
     public fun isMatcher(x: Any): Boolean = software.amazon.awscdk.assertions.Matcher.isMatcher(x)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.assertions.Matcher): Matcher =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as Matcher
 
     internal fun unwrap(wrapped: Matcher): software.amazon.awscdk.assertions.Matcher = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.assertions.Matcher

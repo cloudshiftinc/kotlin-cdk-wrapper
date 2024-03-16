@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -139,7 +140,8 @@ public interface CfnLogDeliveryConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.cognito.CfnLogDeliveryConfigurationProps):
-        CfnLogDeliveryConfigurationProps = Wrapper(cdkObject)
+        CfnLogDeliveryConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnLogDeliveryConfigurationProps
 
     internal fun unwrap(wrapped: CfnLogDeliveryConfigurationProps):
         software.amazon.awscdk.services.cognito.CfnLogDeliveryConfigurationProps = (wrapped as

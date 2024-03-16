@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import kotlin.Unit
@@ -125,7 +126,7 @@ public interface VpcConfig {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.VpcConfig):
-        VpcConfig = Wrapper(cdkObject)
+        VpcConfig = CdkObjectWrappers.wrap(cdkObject) as VpcConfig
 
     internal fun unwrap(wrapped: VpcConfig):
         software.amazon.awscdk.services.stepfunctions.tasks.VpcConfig = (wrapped as

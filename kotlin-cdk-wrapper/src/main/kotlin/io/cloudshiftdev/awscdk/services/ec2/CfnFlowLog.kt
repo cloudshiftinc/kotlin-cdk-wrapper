@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -826,7 +827,8 @@ public open class CfnFlowLog internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnFlowLog.DestinationOptionsProperty):
-          DestinationOptionsProperty = Wrapper(cdkObject)
+          DestinationOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as
+          DestinationOptionsProperty
 
       internal fun unwrap(wrapped: DestinationOptionsProperty):
           software.amazon.awscdk.services.ec2.CfnFlowLog.DestinationOptionsProperty = (wrapped as

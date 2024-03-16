@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.neptune
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -231,7 +232,7 @@ public interface CfnDBParameterGroupProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.neptune.CfnDBParameterGroupProps):
-        CfnDBParameterGroupProps = Wrapper(cdkObject)
+        CfnDBParameterGroupProps = CdkObjectWrappers.wrap(cdkObject) as CfnDBParameterGroupProps
 
     internal fun unwrap(wrapped: CfnDBParameterGroupProps):
         software.amazon.awscdk.services.neptune.CfnDBParameterGroupProps = (wrapped as

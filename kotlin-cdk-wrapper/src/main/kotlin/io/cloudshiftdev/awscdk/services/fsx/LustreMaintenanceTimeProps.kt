@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.fsx
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.Unit
 
@@ -115,7 +116,7 @@ public interface LustreMaintenanceTimeProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.fsx.LustreMaintenanceTimeProps):
-        LustreMaintenanceTimeProps = Wrapper(cdkObject)
+        LustreMaintenanceTimeProps = CdkObjectWrappers.wrap(cdkObject) as LustreMaintenanceTimeProps
 
     internal fun unwrap(wrapped: LustreMaintenanceTimeProps):
         software.amazon.awscdk.services.fsx.LustreMaintenanceTimeProps = (wrapped as

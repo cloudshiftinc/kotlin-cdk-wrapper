@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -3032,7 +3033,7 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnCluster.EndpointProperty):
-          EndpointProperty = Wrapper(cdkObject)
+          EndpointProperty = CdkObjectWrappers.wrap(cdkObject) as EndpointProperty
 
       internal fun unwrap(wrapped: EndpointProperty):
           software.amazon.awscdk.services.redshift.CfnCluster.EndpointProperty = (wrapped as
@@ -3201,7 +3202,7 @@ public open class CfnCluster internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.redshift.CfnCluster.LoggingPropertiesProperty):
-          LoggingPropertiesProperty = Wrapper(cdkObject)
+          LoggingPropertiesProperty = CdkObjectWrappers.wrap(cdkObject) as LoggingPropertiesProperty
 
       internal fun unwrap(wrapped: LoggingPropertiesProperty):
           software.amazon.awscdk.services.redshift.CfnCluster.LoggingPropertiesProperty = (wrapped

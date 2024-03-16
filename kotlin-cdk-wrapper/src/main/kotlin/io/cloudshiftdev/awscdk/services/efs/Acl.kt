@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.efs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -152,7 +153,8 @@ public interface Acl {
       return Wrapper(builderImpl.apply(block).build())
     }
 
-    internal fun wrap(cdkObject: software.amazon.awscdk.services.efs.Acl): Acl = Wrapper(cdkObject)
+    internal fun wrap(cdkObject: software.amazon.awscdk.services.efs.Acl): Acl =
+        CdkObjectWrappers.wrap(cdkObject) as Acl
 
     internal fun unwrap(wrapped: Acl): software.amazon.awscdk.services.efs.Acl = (wrapped as
         CdkObject).cdkObject as software.amazon.awscdk.services.efs.Acl

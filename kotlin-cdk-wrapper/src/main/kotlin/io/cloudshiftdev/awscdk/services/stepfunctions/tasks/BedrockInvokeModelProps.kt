@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.bedrock.IModel
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
@@ -666,7 +667,7 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelProps):
-        BedrockInvokeModelProps = Wrapper(cdkObject)
+        BedrockInvokeModelProps = CdkObjectWrappers.wrap(cdkObject) as BedrockInvokeModelProps
 
     internal fun unwrap(wrapped: BedrockInvokeModelProps):
         software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelProps = (wrapped as

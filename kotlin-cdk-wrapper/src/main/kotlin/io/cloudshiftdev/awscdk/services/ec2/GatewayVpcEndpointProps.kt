@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.collections.List
 
@@ -153,7 +154,7 @@ public interface GatewayVpcEndpointProps : GatewayVpcEndpointOptions {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.GatewayVpcEndpointProps):
-        GatewayVpcEndpointProps = Wrapper(cdkObject)
+        GatewayVpcEndpointProps = CdkObjectWrappers.wrap(cdkObject) as GatewayVpcEndpointProps
 
     internal fun unwrap(wrapped: GatewayVpcEndpointProps):
         software.amazon.awscdk.services.ec2.GatewayVpcEndpointProps = (wrapped as

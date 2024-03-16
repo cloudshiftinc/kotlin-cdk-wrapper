@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.iot
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -402,7 +403,8 @@ public interface CfnAccountAuditConfigurationProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnAccountAuditConfigurationProps):
-        CfnAccountAuditConfigurationProps = Wrapper(cdkObject)
+        CfnAccountAuditConfigurationProps = CdkObjectWrappers.wrap(cdkObject) as
+        CfnAccountAuditConfigurationProps
 
     internal fun unwrap(wrapped: CfnAccountAuditConfigurationProps):
         software.amazon.awscdk.services.iot.CfnAccountAuditConfigurationProps = (wrapped as

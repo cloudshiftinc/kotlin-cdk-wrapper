@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.b2bi
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -240,7 +241,7 @@ public interface CfnPartnershipProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnPartnershipProps):
-        CfnPartnershipProps = Wrapper(cdkObject)
+        CfnPartnershipProps = CdkObjectWrappers.wrap(cdkObject) as CfnPartnershipProps
 
     internal fun unwrap(wrapped: CfnPartnershipProps):
         software.amazon.awscdk.services.b2bi.CfnPartnershipProps = (wrapped as CdkObject).cdkObject

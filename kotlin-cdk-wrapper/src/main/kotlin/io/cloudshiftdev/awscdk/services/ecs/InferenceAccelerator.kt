@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 
@@ -109,7 +110,7 @@ public interface InferenceAccelerator {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.InferenceAccelerator):
-        InferenceAccelerator = Wrapper(cdkObject)
+        InferenceAccelerator = CdkObjectWrappers.wrap(cdkObject) as InferenceAccelerator
 
     internal fun unwrap(wrapped: InferenceAccelerator):
         software.amazon.awscdk.services.ecs.InferenceAccelerator = (wrapped as CdkObject).cdkObject

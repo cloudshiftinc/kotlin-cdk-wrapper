@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.ArtifactPath
 import io.cloudshiftdev.awscdk.services.codepipeline.CommonAwsActionProps
 import io.cloudshiftdev.awscdk.services.iam.IRole
@@ -268,7 +269,8 @@ public interface ServiceCatalogDeployActionBeta1Props : CommonAwsActionProps {
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.ServiceCatalogDeployActionBeta1Props):
-        ServiceCatalogDeployActionBeta1Props = Wrapper(cdkObject)
+        ServiceCatalogDeployActionBeta1Props = CdkObjectWrappers.wrap(cdkObject) as
+        ServiceCatalogDeployActionBeta1Props
 
     internal fun unwrap(wrapped: ServiceCatalogDeployActionBeta1Props):
         software.amazon.awscdk.services.codepipeline.actions.ServiceCatalogDeployActionBeta1Props =

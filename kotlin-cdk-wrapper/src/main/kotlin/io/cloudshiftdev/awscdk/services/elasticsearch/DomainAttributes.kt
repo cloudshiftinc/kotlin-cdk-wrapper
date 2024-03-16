@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.elasticsearch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
@@ -116,7 +117,7 @@ public interface DomainAttributes {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.elasticsearch.DomainAttributes):
-        DomainAttributes = Wrapper(cdkObject)
+        DomainAttributes = CdkObjectWrappers.wrap(cdkObject) as DomainAttributes
 
     internal fun unwrap(wrapped: DomainAttributes):
         software.amazon.awscdk.services.elasticsearch.DomainAttributes = (wrapped as

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.sqs
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Unit
 import kotlin.collections.List
 
@@ -189,7 +190,7 @@ public interface RedriveAllowPolicy {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sqs.RedriveAllowPolicy):
-        RedriveAllowPolicy = Wrapper(cdkObject)
+        RedriveAllowPolicy = CdkObjectWrappers.wrap(cdkObject) as RedriveAllowPolicy
 
     internal fun unwrap(wrapped: RedriveAllowPolicy):
         software.amazon.awscdk.services.sqs.RedriveAllowPolicy = (wrapped as CdkObject).cdkObject as

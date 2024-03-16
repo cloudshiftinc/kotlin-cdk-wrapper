@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -468,7 +469,8 @@ public open class CfnSimpleTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable.ProvisionedThroughputProperty):
-          ProvisionedThroughputProperty = Wrapper(cdkObject)
+          ProvisionedThroughputProperty = CdkObjectWrappers.wrap(cdkObject) as
+          ProvisionedThroughputProperty
 
       internal fun unwrap(wrapped: ProvisionedThroughputProperty):
           software.amazon.awscdk.services.sam.CfnSimpleTable.ProvisionedThroughputProperty =
@@ -565,7 +567,7 @@ public open class CfnSimpleTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty):
-          PrimaryKeyProperty = Wrapper(cdkObject)
+          PrimaryKeyProperty = CdkObjectWrappers.wrap(cdkObject) as PrimaryKeyProperty
 
       internal fun unwrap(wrapped: PrimaryKeyProperty):
           software.amazon.awscdk.services.sam.CfnSimpleTable.PrimaryKeyProperty = (wrapped as
@@ -652,7 +654,7 @@ public open class CfnSimpleTable internal constructor(
 
       internal
           fun wrap(cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable.SSESpecificationProperty):
-          SSESpecificationProperty = Wrapper(cdkObject)
+          SSESpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as SSESpecificationProperty
 
       internal fun unwrap(wrapped: SSESpecificationProperty):
           software.amazon.awscdk.services.sam.CfnSimpleTable.SSESpecificationProperty = (wrapped as

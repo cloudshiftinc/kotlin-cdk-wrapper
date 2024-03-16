@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appmesh
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.Unit
@@ -212,7 +213,7 @@ public interface TlsClientPolicy {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.TlsClientPolicy):
-        TlsClientPolicy = Wrapper(cdkObject)
+        TlsClientPolicy = CdkObjectWrappers.wrap(cdkObject) as TlsClientPolicy
 
     internal fun unwrap(wrapped: TlsClientPolicy):
         software.amazon.awscdk.services.appmesh.TlsClientPolicy = (wrapped as CdkObject).cdkObject

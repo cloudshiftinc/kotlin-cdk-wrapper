@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.sns
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Boolean
 import kotlin.Number
@@ -321,7 +322,7 @@ public interface TopicProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.sns.TopicProps): TopicProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as TopicProps
 
     internal fun unwrap(wrapped: TopicProps): software.amazon.awscdk.services.sns.TopicProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.sns.TopicProps

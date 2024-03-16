@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -318,7 +319,7 @@ public interface CfnUrlProps {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.CfnUrlProps): CfnUrlProps =
-        Wrapper(cdkObject)
+        CdkObjectWrappers.wrap(cdkObject) as CfnUrlProps
 
     internal fun unwrap(wrapped: CfnUrlProps): software.amazon.awscdk.services.lambda.CfnUrlProps =
         (wrapped as CdkObject).cdkObject as software.amazon.awscdk.services.lambda.CfnUrlProps

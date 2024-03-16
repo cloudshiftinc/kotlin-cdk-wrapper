@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.cloudassembly.schema
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -142,7 +143,7 @@ public interface LoadBalancerFilter {
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cloudassembly.schema.LoadBalancerFilter):
-        LoadBalancerFilter = Wrapper(cdkObject)
+        LoadBalancerFilter = CdkObjectWrappers.wrap(cdkObject) as LoadBalancerFilter
 
     internal fun unwrap(wrapped: LoadBalancerFilter):
         software.amazon.awscdk.cloudassembly.schema.LoadBalancerFilter = (wrapped as
