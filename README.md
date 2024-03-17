@@ -1,8 +1,8 @@
-![Maven Central](https://img.shields.io/maven-central/v/io.cloudshiftdev.awscdk-dsl-kotlin/dsl)
-![GitHub](https://img.shields.io/github/license/cloudshiftinc/awscdk-dsl-kotlin)
-# Kotlin DSL Wrapper for AWS CDK
+![latest release](https://img.shields.io/maven-central/v/io.cloudshiftdev.kotlin-cdk-wrapper/kotlin-cdk-wrapper)
+![GitHub](https://img.shields.io/github/license/cloudshiftinc/kotlin-cdk-wrapper)
+# Kotlin Wrapper for AWS CDK
 
-Use the AWS CDK with all the power of a native Kotlin DSL!
+Use the AWS CDK with all the power of Kotlin!
 
 ```kotlin
 val app = App()
@@ -18,35 +18,13 @@ bucket.addCorsRule {
 app.synth()
 ```
 
-The Kotlin DSL is fully Kotlin - no import from the Java CDK.  Any construct / object that has a builder has a corresponding DSL.
+The Kotlin DSL is fully Kotlin - no imports from the Java CDK.  Any construct / object that has a builder has a corresponding DSL.
 
 This provides the basis for powerful Kotlin extensions to the DSL to supercharge your CDK code.
 
 # Getting Started
 
-For the core DSL add this dependency to your Gradle script:
+Gradle: ![latest release](https://img.shields.io/maven-central/v/io.cloudshiftdev.kotlin-cdk-wrapper/kotlin-cdk-wrapper)
 
-`implementation("io.cloudshiftdev.kotlin-cdk-wrapper:kotlin-cdk-wrapper:0.7.1")`
+`implementation("io.cloudshiftdev.kotlin-cdk-wrapper:kotlin-cdk-wrapper:<version>")`
 
-Alternately, to use the extensions (recommended), use this dependency instead:
-
-`implementation("io.cloudshiftdev.kotlin-cdk-wrapper:kotlin-cdk-wrapper-extensions:0.7.1")`
-
-# Extensions
-
-The `kotlin-cdk-wrapper-extensions` module provides several DSL extensions to further smooth out the CDK experience:
-
-## IAM
-
-IAM extensions are provided for policy statements:
-
-```kotlin
-val policyStatements = iam.policyStatements {
-            policyStatement {
-                sid("Something")
-                action("s3:GetObject")
-                allow()
-                anyResource()
-            }
-        }
-```
