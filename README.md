@@ -1,4 +1,4 @@
-![Maven Central](https://img.shields.io/maven-central/v/io.cloudshiftdev.kotlin-cdk-wrapper/kotlin-cdk-wrapper)
+![latest release](https://img.shields.io/maven-central/v/io.cloudshiftdev.kotlin-cdk-wrapper/kotlin-cdk-wrapper)
 ![GitHub](https://img.shields.io/github/license/cloudshiftinc/kotlin-cdk-wrapper)
 # Kotlin Wrapper for AWS CDK
 
@@ -24,7 +24,7 @@ This provides the basis for powerful Kotlin extensions to the DSL to supercharge
 
 # Getting Started
 
-Gradle:
+Gradle: ![latest release](https://img.shields.io/maven-central/v/io.cloudshiftdev.kotlin-cdk-wrapper/kotlin-cdk-wrapper)
 
-`implementation("io.cloudshiftdev.kotlin-cdk-wrapper:kotlin-cdk-wrapper:0.7.6")`
+`implementation("io.cloudshiftdev.kotlin-cdk-wrapper:kotlin-cdk-wrapper:<version>")`
 
